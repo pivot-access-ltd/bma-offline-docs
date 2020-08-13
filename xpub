@@ -581,12 +581,11 @@ def dc2html(tag, files):
                 corr_width = 690
                 corr_height = int(float(img_awidth) / 690.0 * float(img_aheight))
 
-                ## re-do the image line with correct / actual dims
-                ## (aspect ratio turned off for now, it's buggy)
-                repl_img_line = "<img alt=" + img_alt_text + '" '
-                repl_img_line += 'width="690" '
-                #                repl_img_line += 'height="' + str(corr_height) + '" '
-                repl_img_line += 'src="' + img_link + '">'
+                ## replace the image line with html
+                repl_img_line = '<a href="' + img_link + '" '
+                repl_img_line += 'target = "_blank">'
+                repl_img_line += "<img alt=" + img_alt_text + '" '
+                repl_img_line += 'src="' + img_link + '"></a>'
 
                 ## replace the image line in the markdown
                 md = md.replace(x, repl_img_line)
