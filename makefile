@@ -93,36 +93,39 @@ TARGET_DEPS += adding-a-vm-host-1549.html
 TARGET_DEPS += creating-a-custom-ubuntu-image-1652.html
 TARGET_DEPS += whats-new-in-maas-2-8-1655.html
 
-OVAN = /var/www/html/maas-offline/maas-vanilla
-OCLI = /var/www/html/maas-offline/maas-cli-only
-OUI  = /var/www/html/maas-offline/maas-ui-only
-RVAN = /var/www/html/maas-rad/maas-vanilla
-RCLI = /var/www/html/maas-rad/maas-cli-only
-RUI  = /var/www/html/maas-rad/maas-ui-only
+OVAN = ~/var/www/html/maas-offline/maas-vanilla
+OCLI = ~/var/www/html/maas-offline/maas-cli-only
+OUI  = ~/var/www/html/maas-offline/maas-ui-only
+RVAN = ~/var/www/html/maas-rad/maas-vanilla
+RCLI = ~/var/www/html/maas-rad/maas-cli-only
+RUI  = ~/var/www/html/maas-rad/maas-ui-only
 
 %.html: %.md
-# offline vanilla version
+# vanilla version
 	cp templates/offline-vanilla-template.html ./template.html
+	sed -i 's/zork/$@/g' ./template.html
 	xpub convert dc2html -t vanilla $<
 	mkdir -p $(OVAN) && cp $@ $(OVAN)
-# rad vanilla version
-	cp templates/vanilla-template.html ./template.html
+	cp templates/rad-vanilla-template.html ./template.html
+	sed -i 's/zork/$@/g' ./template.html
 	xpub convert dc2html -t vanilla $<
 	mkdir -p $(RVAN) && cp $@ $(RVAN)
-# offline ui-only version
+# ui-only version
 	cp templates/offline-ui-only-template.html ./template.html
+	sed -i 's/zork/$@/g' ./template.html
 	xpub convert dc2html -t ui $<
 	mkdir -p $(OUI) && cp $@ $(OUI)	
-# rad ui-only version
-	cp templates/ui-only-template.html ./template.html
+	cp templates/rad-ui-only-template.html ./template.html
+	sed -i 's/zork/$@/g' ./template.html
 	xpub convert dc2html -t ui $<
 	mkdir -p $(RUI) && cp $@ $(RUI)	
-# offline cli-only version
+# cli-only version
 	cp templates/offline-cli-only-template.html ./template.html
+	sed -i 's/zork/$@/g' ./template.html
 	xpub convert dc2html -t cli $<
 	mkdir -p $(OCLI) && cp $@ $(OCLI)	
-# rad cli-only version
-	cp templates/cli-only-template.html ./template.html
+	cp templates/rad-cli-only-template.html ./template.html
+	sed -i 's/zork/$@/g' ./template.html
 	xpub convert dc2html -t cli $<
 	mkdir -p $(RCLI) && cp $@ $(RCLI)	
 
