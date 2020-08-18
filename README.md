@@ -4,7 +4,7 @@
 
 Install it in your path and type `xpub help` to get started.
 
------
+------
 
 **xpub** needs the following libraries:
 
