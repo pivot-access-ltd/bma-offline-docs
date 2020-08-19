@@ -4,6 +4,7 @@
 *.log
 *.snap
 *.fuse_hidden*
+*.md
 /.mypy_cache
 /.coverage
 /.coverage.*

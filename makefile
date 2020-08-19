@@ -93,41 +93,32 @@ TARGET_DEPS += adding-a-vm-host-1549.html
 TARGET_DEPS += creating-a-custom-ubuntu-image-1652.html
 TARGET_DEPS += whats-new-in-maas-2-8-1655.html
 
-OVAN = ~/var/www/html/maas-offline/maas-vanilla
-OCLI = ~/var/www/html/maas-offline/maas-cli-only
-OUI  = ~/var/www/html/maas-offline/maas-ui-only
-RVAN = ~/var/www/html/maas-rad/maas-vanilla
-RCLI = ~/var/www/html/maas-rad/maas-cli-only
-RUI  = ~/var/www/html/maas-rad/maas-ui-only
+OVAN = ./maas-offline/maas-vanilla
+OCLI = ./maas-offline/maas-cli-only
+OUI  = ./maas-offline/maas-ui-only
+RVAN = ~/var/www/html/maas-offline/maas-vanilla
+RCLI = ~/var/www/html/maas-offline/maas-cli-only
+RUI  = ~/var/www/html/maas-offline/maas-ui-only
 
 %.html: %.md
 # vanilla version
 	cp templates/offline-vanilla-template.html ./template.html
 	sed -i 's/zork/$@/g' ./template.html
-	xpub convert dc2html -t vanilla $<
+	./xpub convert dc2html -t vanilla $<
 	mkdir -p $(OVAN) && cp $@ $(OVAN)
-	cp templates/rad-vanilla-template.html ./template.html
-	sed -i 's/zork/$@/g' ./template.html
-	xpub convert dc2html -t vanilla $<
-	mkdir -p $(RVAN) && cp $@ $(RVAN)
+	mkdir -p $(RVAN) && mv $@ $(RVAN)
 # ui-only version
 	cp templates/offline-ui-only-template.html ./template.html
 	sed -i 's/zork/$@/g' ./template.html
-	xpub convert dc2html -t ui $<
+	./xpub convert dc2html -t ui $<
 	mkdir -p $(OUI) && cp $@ $(OUI)	
-	cp templates/rad-ui-only-template.html ./template.html
-	sed -i 's/zork/$@/g' ./template.html
-	xpub convert dc2html -t ui $<
-	mkdir -p $(RUI) && cp $@ $(RUI)	
+	mkdir -p $(RUI) && mv $@ $(RUI)	
 # cli-only version
 	cp templates/offline-cli-only-template.html ./template.html
 	sed -i 's/zork/$@/g' ./template.html
-	xpub convert dc2html -t cli $<
+	./xpub convert dc2html -t cli $<
 	mkdir -p $(OCLI) && cp $@ $(OCLI)	
-	cp templates/rad-cli-only-template.html ./template.html
-	sed -i 's/zork/$@/g' ./template.html
-	xpub convert dc2html -t cli $<
-	mkdir -p $(RCLI) && cp $@ $(RCLI)	
+	mkdir -p $(RCLI) && mv $@ $(RCLI)	
 
 finale: $(TARGET_DEPS)
 	xpub push github
