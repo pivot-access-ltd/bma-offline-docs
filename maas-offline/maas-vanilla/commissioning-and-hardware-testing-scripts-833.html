@@ -750,17 +750,17 @@ sudo -n stress-ng --matrix 0 --ignite-cpu --log-brief --metrics-brief --times \
 
 <p>Scripts can be uploaded to MAAS using the web UI. Select the &lsquo;User scripts&rsquo; tab of the &lsquo;Settings&rsquo; page - the &lsquo;Commissioning scripts&rsquo; section is near the top. Within the Commissioning scripts section, click the Upload script button followed by &lsquo;Choose file&rsquo; to open a requester, locate the script, and select Upload to upload it to MAAS.</p>
 <p>A status message of Commissioning script created will appear.  You&rsquo;ll then be able to select your script after selecting <a href="hardware-testing-826.html">Test hardware</a> from a machine&rsquo;s &lsquo;Take action&rsquo; menu.</p>
-<p><a href="https://assets.ubuntu.com/v1/50e08fdf-nodes-hw-scripts__2.4_select.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/50e08fdf-nodes-hw-scripts__2.4_select.png"></a></p>
+<p><a href="images/50e08fdf-nodes-hw-scripts__2.4_select.png" target = "_blank"><img src="images/50e08fdf-nodes-hw-scripts__2.4_select.png"></a>&gt;</a></p>
 <p>[note]
 MAAS executes scripts in lexicographical order. This order allows you to control when your scripts execute, and whether they run before or after the standard MAAS scripts.
 [/note]</p>
 <h2 id="heading--debugging">Debugging</h2>
 
 <p>Clicking on the title of a completed or failed script will reveal the output from that specific script.</p>
-<p><a href="https://assets.ubuntu.com/v1/855015e5-nodes-hw-scripts__2.2_fail.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/855015e5-nodes-hw-scripts__2.2_fail.png"></a></p>
+<p><a href="images/855015e5-nodes-hw-scripts__2.2_fail.png" target = "_blank"><img src="images/855015e5-nodes-hw-scripts__2.2_fail.png"></a>&gt;</a></p>
 <p>If you need further details, especially when writing and running your own scripts, you can connect to a machine and examine its logs and environment.</p>
 <p>To do this, enable Allow SSH access and prevent the machine from powering off when selecting &lsquo;Test hardware&rsquo; from the machine &lsquo;Take action&rsquo; menu.</p>
-<p><a href="https://assets.ubuntu.com/v1/da793c67-nodes-hw-scripts__2.4_ssh.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/da793c67-nodes-hw-scripts__2.4_ssh.png"></a></p>
+<p><a href="images/da793c67-nodes-hw-scripts__2.4_ssh.png" target = "_blank"><img src="images/da793c67-nodes-hw-scripts__2.4_ssh.png"></a>&gt;</a></p>
 <p>Because scripts operate within an ephemeral version of Ubuntu, enabling this option stops the machine from shutting down, allowing you to connect and probe a script&rsquo;s status.</p>
 <p>As long as you&rsquo;ve added your <a href="user-accounts-790.html#heading--ssh-keys">SSH key</a> to MAAS, you can connect with SSH to the machine&rsquo;s IP with a username of <code>ubuntu</code>. Type <code>sudo -i</code> to get root access.</p>
 <h3 id="heading--access-individual-scripts-and-log-files">Access individual scripts and log files</h3>

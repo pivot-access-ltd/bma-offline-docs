@@ -541,7 +541,33 @@ def dc2html(tag, files):
             if not os.path.isdir("./images"):
                 os.mkdir("images")
 
-            ## pull out all the png and jpeg refs in the file
+            # handle html image lines in the file
+            match = re.findall(r'.*jpeg"', md)
+            match2 = re.findall(r'.*png"', md)
+            imagelines = match + match2
+
+            ## capture image file names and properties
+            for x in imagelines:
+                img_url = x.split('"')[1].split('"')[0]
+                img_fnam = "./images/" + x.split("/")[-1].split('"')[0]
+                img_link = "images/" + x.split("/")[-1].split('"')[0]
+
+                ## download the images and store them locally
+                r = requests.get(img_url, stream=True)
+                r.raw.decode_content = True
+                with open(img_fnam, "wb") as f:
+                    shutil.copyfileobj(r.raw, f)
+
+                ## replace the image line with corrected html
+                repl_img_line = '<a href="' + img_link + '" '
+                repl_img_line += 'target = "_blank">'
+                repl_img_line += '<img src="' + img_link + '"></a>'
+
+                ## replace the image line in the markdown
+                md = md.replace(x, repl_img_line)
+
+            ### handle discourse image lines in the file
+            ## pull out all the png and jpeg markdown refs in the file
             match = re.findall(r".*png[)]+", md)
             match2 = re.findall(r".*jpeg[)]+", md)
             imagelines = match + match2

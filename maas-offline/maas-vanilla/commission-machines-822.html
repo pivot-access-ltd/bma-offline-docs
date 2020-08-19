@@ -497,7 +497,7 @@
 <p>The commissioning scripts will talk to the region API server to ensure that everything is in order and that eventual deployment will succeed.</p>
 <p>MAAS chooses the latest Ubuntu LTS release as the default image for commissioning.  If desired, you can select a different image in the &lsquo;Settings&rsquo; page of the web UI, by selecting the &lsquo;General&rsquo; tab and then scrolling down to the Commissioning section.</p>
 <p>To commission, on the &lsquo;Machines&rsquo; page, select a machine and choose &lsquo;Commission&rsquo; under the &lsquo;Take action&rsquo; drop-down menu.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a></p>
+<p><a href="images/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="images/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a>&gt;</a></p>
 <p>You have the option of selecting some extra parameters (checkboxes) and performing hardware tests.</p>
 <p>These options include:</p>
 <ul>
@@ -517,7 +517,7 @@
 <p><strong>Configure HBA</strong>: Runs scripts tagged with &lsquo;configure_hba&rsquo;. As above, see <a href="commissioning-and-hardware-testing-scripts-833.html#heading--automatic-script-selection-by-hardware-type">Testing scripts</a> for further details.</p>
 </li>
 </ul>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a></p>
+<p><a href="images/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="images/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a>&gt;</a></p>
 <p>Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See <a href="hardware-testing-826.html">Hardware testing</a>) for more information on hardware testing scripts.</p>
 <p>Finalise the directive by hitting &lsquo;Commission machine&rsquo;.</p>
 <p>While commissioning, the machine status will change to reflect this state (Commissioning).  MAAS discovers the machine&rsquo;s network topology.  MAAS then prompts a machine network interface to connect to the fabric, VLAN, and subnet combination for configuration. Usually, MAAS assigns a static IP address out of the reserved IP range for the subnet (&lsquo;Auto assign&rsquo; mode). The next section details several assignment modes.</p>
@@ -527,7 +527,7 @@
 <h3 id="heading--numa-sriov-commissioning">Commission NUMA and SR-IOV nodes</h3>
 
 <p>If you are using the NUMA architecture, MAAS version 2.7 guarantees that machines are assigned to a single NUMA node that contains all the machine&rsquo;s resoures.  Note that you must recommission NUMA/SR-IOV machines that were previously commissioned under version 2.6 or earlier.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png"></a> </p>
+<p><a href="images/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png" target = "_blank"><img src="images/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png"></a>&gt;</a> </p>
 <p>When using these nodes, you can specify a node index for interfaces and physical block devices.  MAAS will display the NUMA node index and details, depending upon your configuration, to include the count of NUMA nodes, number of CPU cores, memory, NICs, and node spaces for bonds and block devices.  You can also filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID, among others.</p>
 <h2 id="heading--commissioning-scripts">MAAS commissioning scripts</h2>
 
@@ -584,9 +584,9 @@
 
 <p>Once commissioned, you can configure the machine&rsquo;s network interface(s). Specifically, when a machine&rsquo;s status is either &lsquo;Ready&rsquo; or &lsquo;Broken&rsquo;, interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see <a href="maas-tags-834.html#heading--tags-for-network-interfaces">Tags for network interfaces</a>).</p>
 <p>From a machine&rsquo;s &lsquo;Interfaces&rsquo; page, click the menu icon for the interface to be edited and select &lsquo;Edit Physical&rsquo; from the resulting menu:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/438475b8906736b45fc809cd105a56be5052397d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/438475b8906736b45fc809cd105a56be5052397d.png"></a></p>
+<p><a href="images/438475b8906736b45fc809cd105a56be5052397d.png" target = "_blank"><img src="images/438475b8906736b45fc809cd105a56be5052397d.png"></a>&gt;</a></p>
 <p>The following window will appear:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/70b21d256df52399ac7ab09c3051f4bf011da55e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/70b21d256df52399ac7ab09c3051f4bf011da55e.png"></a></p>
+<p><a href="images/70b21d256df52399ac7ab09c3051f4bf011da55e.png" target = "_blank"><img src="images/70b21d256df52399ac7ab09c3051f4bf011da55e.png"></a>&gt;</a></p>
 <p>Four modes determine how a subnet address is assigned when MAAS deploys the machine. You can select one of these modes by clicking on the &lsquo;IP mode&rsquo; drop-down menu.</p>
 <ul>
 <li>
@@ -609,11 +609,11 @@
 <p>A bond interface is used to aggregate two or more physical interfaces into a single logical interface. Combining multiple network connections in parallel can increase network throughput beyond what a single NIC will allow.  It also provides some redundancy in case one of the NICs should fail.  More information about the theory behind bonded NICs is found in the <a href="https://1.ieee802.org/tsn/802-1ax-rev/">relevant IEEE standard</a>.</p>
 <p>In the case of our MAAS <a href="give-me-an-example-of-maas-1314.html">hospital example</a>, bond interfaces would probably be used in machines dealing with &ldquo;Prescriber controls&rdquo; and &ldquo;Nursing meds.&rdquo;  Medication administration and reconciliation can involve a significant amount of data that must be communicated in a near real-time way: prescriptions must be verified and corrected, dosages must be monitored and frequently changed or paused, and complications and side-effects checked constantly.</p>
 <p>A bond is created by selecting more than one interface and clicking the now-active &lsquo;Create bond&rsquo; button:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png"></a></p>
+<p><a href="images/7dd772c961c9f6f871f657b0397646446a4e23e7.png" target = "_blank"><img src="images/7dd772c961c9f6f871f657b0397646446a4e23e7.png"></a>&gt;</a></p>
 <p>After clicking the &lsquo;Create bond&rsquo; button, the bond configuration pane will appear.</p>
 <p>From the bond configuration pane, you can rename the bond, select a bond mode (see below), assign a MAC address to the aggregate device and attach one or more tags.</p>
 <p>The interfaces aggregated into the bond interface are listed below the &lsquo;Tags&rsquo; field. Use the &lsquo;Primary&rsquo; column to select the interface to act as the primary device.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png"></a></p>
+<p><a href="images/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png" target = "_blank"><img src="images/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png"></a>&gt;</a></p>
 <p>You can select from the following bonding modes on the &lsquo;Bond mode&rsquo; drop-down menu:</p>
 <ul>
 <li>
@@ -645,7 +645,7 @@ The MAC address defaults to the MAC address of the primary interface.
 <h3 id="heading--bridge-interfaces">Bridge interfaces and how to create one</h3>
 
 <p>A network bridge may be useful if you intend to put virtual machines or containers on the machine.  You can create a bridge by selecting an interface and clicking the now-active &lsquo;Create bridge&rsquo; button. A form will appear that allows you to configure a MAC address, STP, and an appropriate tag.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png"></a></p>
+<p><a href="images/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png" target = "_blank"><img src="images/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png"></a>&gt;</a></p>
 <p>Press the &lsquo;Save&rsquo; button when you&rsquo;re done.</p>
 <p>See <a href="cli-interface-management-798.html">CLI Interface Management</a> for details on how you can configure interfaces from the command line.</p>
 <!--

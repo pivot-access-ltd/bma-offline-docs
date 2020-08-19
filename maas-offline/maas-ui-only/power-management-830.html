@@ -480,18 +480,18 @@
 <h2 id="heading--config-power-type">Configure a machine's power type</h2>
 
 <p>To configure a machine&rsquo;s power type, click on the machine from the &lsquo;Machines&rsquo; page of the web UI, then select its &lsquo;Configuration&rsquo; tab. Scroll down until you find the Power configuration. If the power type is undefined, the following will be displayed:</p>
-<p><a href="https://assets.ubuntu.com/v1/4fae5977-nodes-power-types__2.4_undefined.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/4fae5977-nodes-power-types__2.4_undefined.png"></a></p>
+<p><a href="images/4fae5977-nodes-power-types__2.4_undefined.png" target = "_blank"><img src="images/4fae5977-nodes-power-types__2.4_undefined.png"></a>&gt;</a></p>
 <p>Choose a type in the dropdown menu that corresponds to the machine&rsquo;s underlying machine&rsquo;s BMC card.</p>
-<p><a href="https://assets.ubuntu.com/v1/b53c6613-nodes-power-types__2.4_selection.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/b53c6613-nodes-power-types__2.4_selection.png"></a></p>
+<p><a href="images/b53c6613-nodes-power-types__2.4_selection.png" target = "_blank"><img src="images/b53c6613-nodes-power-types__2.4_selection.png"></a>&gt;</a></p>
 <p>Fill in the resulting form; the information required will depends on the power type.</p>
 <p>Click &lsquo;Save changes&rsquo; to finish. Once that&rsquo;s done, MAAS performs a power check on the machine. A successful power check is a good indication that MAAS can properly communicate with the machine, that is, it should quickly result in a power status of &ldquo;Power off&rdquo;. A failed attempt will show:</p>
-<p><a href="https://assets.ubuntu.com/v1/3bd5e93b-nodes-power-types__2.4_power-error.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/3bd5e93b-nodes-power-types__2.4_power-error.png"></a></p>
+<p><a href="images/3bd5e93b-nodes-power-types__2.4_power-error.png" target = "_blank"><img src="images/3bd5e93b-nodes-power-types__2.4_power-error.png"></a>&gt;</a></p>
 <p>If you see this error, double-check your entered values by editing the power type, or  consider another power type altogether.</p>
 <p>Another possible cause for this error may be the networking: traffic may be getting filtered between the rack controller and the BMC card.</p>
 <h2 id="heading--example-virsh-kvm-power-type">An example: the Virsh power type</h2>
 
 <p>Consider a machine backed by VM. Below, a &lsquo;Power type&rsquo; of <code>Virsh</code> has been selected, and the &lsquo;Power address&rsquo; of <code>qemu+ssh://ubuntu@192.168.1.2/system</code> has been entered (replace values as appropriate).  The value of &lsquo;Power ID&rsquo; is the VM domain (guest) name, here <code>node2</code>.</p>
-<p><a href="https://assets.ubuntu.com/v1/c75e00a8-nodes-power-types__2.4_example-virsh.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/c75e00a8-nodes-power-types__2.4_example-virsh.png"></a></p>
+<p><a href="images/c75e00a8-nodes-power-types__2.4_example-virsh.png" target = "_blank"><img src="images/c75e00a8-nodes-power-types__2.4_example-virsh.png"></a>&gt;</a></p>
 <p>[note]
 The machine&rsquo;s hostname &ndash; according to MAAS &ndash; is a randomly chosen string (here <code>dear.ant</code>). You should change this hostname to something descriptive, that helps you remember why this machine is in your MAAS network.
 [/note]</p>

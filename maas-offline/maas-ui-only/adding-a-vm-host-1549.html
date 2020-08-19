@@ -486,9 +486,9 @@ You <strong>must</strong> <a href="vm-host-networking-1526.html">configure your 
 <h2 id="heading--adding-a-vm-host">Adding a VM host</h2>
 
 <p>After installing MAAS, the &lsquo;KVM&rsquo; page is typically empty:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/fa0cc573f34cb23ca0ac026e97ef5b618ff1fed3.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/fa0cc573f34cb23ca0ac026e97ef5b618ff1fed3.jpeg"></a> </p>
+<p><a href="images/fa0cc573f34cb23ca0ac026e97ef5b618ff1fed3.jpeg" target = "_blank"><img src="images/fa0cc573f34cb23ca0ac026e97ef5b618ff1fed3.jpeg"></a>&gt;</a> </p>
 <p>If you want to add a <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a> or LXD VM host to a machine which is already installed, you can do so with the &lsquo;Add KVM&rsquo; button:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/197ae57b89b32546cf054fff49452f9025354af8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/197ae57b89b32546cf054fff49452f9025354af8.jpeg"></a> </p>
+<p><a href="images/197ae57b89b32546cf054fff49452f9025354af8.jpeg" target = "_blank"><img src="images/197ae57b89b32546cf054fff49452f9025354af8.jpeg"></a>&gt;</a> </p>
 <p>Here, &lsquo;Virsh address&rsquo; typically looks like the following for libvirt:</p>
 <pre><code>qemu+ssh://&lt;vm host IP&gt;/system
 </code></pre>
@@ -506,7 +506,7 @@ MAAS will automatically discover and store the resources your VM host contains. 
 <h2 id="heading--configuration">Configuration</h2>
 
 <p>VM hosts have several configuration options. Modify these by selecting the &lsquo;Configuration&rsquo; tab and clicking &lsquo;Edit&rsquo;. Options include a VM host&rsquo;s location, password, network zone, and default resource pool.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/e6f9b3effcc9e4f44a09836cf6185449410bae7f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e6f9b3effcc9e4f44a09836cf6185449410bae7f.png"></a></p>
+<p><a href="images/e6f9b3effcc9e4f44a09836cf6185449410bae7f.png" target = "_blank"><img src="images/e6f9b3effcc9e4f44a09836cf6185449410bae7f.png"></a>&gt;</a></p>
 <h3 id="heading--overcommit-resources">Overcommit resources</h3>
 
 <p>Overcommitted resources are those allocated beyond what&rsquo;s available in the physical resource. Using sliders on the configuration page, you can limit whether MAAS will attempt to overcommit CPU and memory. The input fields to the right of the sliders accept floating-point values from 0 to 10, with a default value of 1.</p>
@@ -517,7 +517,7 @@ MAAS will automatically discover and store the resources your VM host contains. 
 <li><code>32 physical CPU cores * 10.0 multiplier  = 320 virtual CPU cores</code></li>
 <li><code>128GB physical memory  * 5.5 multiplier  = 704G virtual Memory</code></li>
 </ul>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg"></a> </p>
+<p><a href="images/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg" target = "_blank"><img src="images/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg"></a>&gt;</a> </p>
 <p>Overcommitting resources allows a user to compose many MAAS-managed machines without worrying about the physical limitations of the host. For example, on a physical host with four cores and 12 GB of memory, you could compose four libvirt machines, each using two cores and 4 GB of memory.  This arrangement overcommits the available physical resources. Provided you never run all four VMs simultaneously, you would have all the benefits of MAAS-managed VMs without over-taxing your host.</p>
     </div>
   </body>

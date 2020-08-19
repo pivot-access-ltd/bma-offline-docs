@@ -118,7 +118,7 @@ RUI  = ~/var/www/html/maas-offline/maas-ui-only
 	sed -i 's/zork/$@/g' ./template.html
 	./xpub convert dc2html -t cli $<
 	mkdir -p $(OCLI) && cp $@ $(OCLI)	
-	mkdir -p $(RCLI) && mv $@ $(RCLI)	
+	mkdir -p $(RCLI) && cp $@ $(RCLI)	
 
 finale: $(TARGET_DEPS)
 	xpub push github
