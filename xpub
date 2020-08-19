@@ -542,8 +542,8 @@ def dc2html(tag, files):
                 os.mkdir("images")
 
             # handle html image lines in the file
-            match = re.findall(r'.*jpeg"', md)
-            match2 = re.findall(r'.*png"', md)
+            match = re.findall(r'.*jpeg">', md)
+            match2 = re.findall(r'.*png">', md)
             imagelines = match + match2
 
             ## capture image file names and properties
@@ -551,7 +551,6 @@ def dc2html(tag, files):
                 img_url = x.split('"')[1].split('"')[0]
                 img_fnam = "./images/" + x.split("/")[-1].split('"')[0]
                 img_link = "images/" + x.split("/")[-1].split('"')[0]
-                print("img_link", img_link)
 
                 ## download the images and store them locally
                 r = requests.get(img_url, stream=True)
