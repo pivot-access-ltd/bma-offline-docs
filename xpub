@@ -551,6 +551,7 @@ def dc2html(tag, files):
                 img_url = x.split('"')[1].split('"')[0]
                 img_fnam = "./images/" + x.split("/")[-1].split('"')[0]
                 img_link = "images/" + x.split("/")[-1].split('"')[0]
+                print("img_link", img_link)
 
                 ## download the images and store them locally
                 r = requests.get(img_url, stream=True)
