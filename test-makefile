@@ -93,35 +93,35 @@ TARGET_DEPS += adding-a-vm-host-1549.html
 TARGET_DEPS += creating-a-custom-ubuntu-image-1652.html
 TARGET_DEPS += whats-new-in-maas-2-8-1655.html
 
-OVAN = ./maas-offline/maas-vanilla
-OCLI = ./maas-offline/maas-cli-only
-OUI  = ./maas-offline/maas-ui-only
+RVAN = ~/var/www/html/maas-offline/maas-vanilla
+RCLI = ~/var/www/html/maas-offline/maas-cli-only
+RUI  = ~/var/www/html/maas-offline/maas-ui-only
 
 %.html: %.md
 # vanilla version
 	cp templates/offline-vanilla-template.html ./template.html
 	sed -i 's/zork/$@/g' ./template.html
 	./xpub convert dc2html -t vanilla $<
-	mkdir -p $(OVAN) && cp $@ $(OVAN)
+	mkdir -p $(RVAN) && mv $@ $(RVAN)
 # ui-only version
 	cp templates/offline-ui-only-template.html ./template.html
 	sed -i 's/zork/$@/g' ./template.html
 	./xpub convert dc2html -t ui $<
-	mkdir -p $(OUI) && cp $@ $(OUI)	
+	mkdir -p $(RUI) && mv $@ $(RUI)	
 # cli-only version
 	cp templates/offline-cli-only-template.html ./template.html
 	sed -i 's/zork/$@/g' ./template.html
 	./xpub convert dc2html -t cli $<
-	mkdir -p $(OCLI) && cp $@ $(OCLI)	
+	mkdir -p $(RCLI) && cp $@ $(RCLI)	
 
 finale: $(TARGET_DEPS)
 	xpub push github
-	mkdir -p $(OVAN)/images && cp images/* $(OVAN)/images
-	mkdir -p $(OCLI)/images && cp images/* $(OCLI)/images
-	mkdir -p $(OUI)/images && cp images/* $(OUI)/images
-	mkdir -p $(OVAN)/css && cp -r css/* $(OVAN)/css
-	mkdir -p $(OCLI)/css && cp -r css/* $(OCLI)/css
-	mkdir -p $(OUI)/css && cp -r css/* $(OUI)/css
+	mkdir -p $(RVAN)/images && cp images/* $(RVAN)/images
+	mkdir -p $(RCLI)/images && cp images/* $(RCLI)/images
+	mkdir -p $(RUI)/images && cp images/* $(RUI)/images
+	mkdir -p $(RVAN)/css && cp -r css/* $(RVAN)/css
+	mkdir -p $(RCLI)/css && cp -r css/* $(RCLI)/css
+	mkdir -p $(RUI)/css && cp -r css/* $(RUI)/css
 
 
 
