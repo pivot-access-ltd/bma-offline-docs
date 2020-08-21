@@ -2,7 +2,7 @@
 
 import sys, subprocess, json, os, time, re, markdown, jinja2
 from shutil import copyfile
-import shutil
+import shutil, datetime, time
 import requests
 from yaml import load, dump
 
@@ -187,13 +187,29 @@ def discourse(start, end, category, j, banned_tag):
 
         # extract the post ID from the topic json
         post_id = topic_json["post_stream"]["posts"][0]["id"]
+
+        # extract the last updated time from the topic json, because we'll
+        # set the file's modification time to this value
+        updated_at = topic_json["post_stream"]["posts"][0]["updated_at"]
+        updated_at = re.sub(r"T", " ", updated_at)
+        updated_at = re.sub(r"Z", "", updated_at)
+        updated_at = updated_at.split(".")[0]
+        modtime = time.strptime(updated_at, "%Y-%m-%d %H:%M:%S")
+        modtime = time.localtime(time.mktime(modtime))
+        modtime = time.strftime("%Y%m%d%H%M.%S", modtime)
+
+        # extract the category ID from the topic json (for potential match)
         category_id = topic_json["category_id"]
+
+        # extract tags, if there are any, and check for a banned tag
         try:
             tags = topic_json["tags"]
             if banned_tag in tags:
                 continue
         except:
             continue
+
+        # check the category, if requested, and screen out non-matching posts
         if category != -1:
             if (category_id is None) or (category_id != category):
                 continue
@@ -243,6 +259,10 @@ def discourse(start, end, category, j, banned_tag):
         f = open(filename, "w")
         f.write(str(raw))
         f.close()
+
+        # set the file's access and mod times to last edit in discourse
+        # touch -a -m -t CCYYMMDDhhmm.SS filename
+        os.system("touch -a -m -t " + modtime + " " + filename)
 
 
 @pull.command(help="Pull files from a github repo to the working directory")
