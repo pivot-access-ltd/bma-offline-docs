@@ -2,7 +2,9 @@
 
 import sys, subprocess, json, os, time, re, markdown, jinja2
 from shutil import copyfile
-import shutil, datetime, time
+import datetime
+import pytz
+import shutil
 import requests
 from yaml import load, dump
 
@@ -191,12 +193,13 @@ def discourse(start, end, category, j, banned_tag):
         # extract the last updated time from the topic json, because we'll
         # set the file's modification time to this value
         updated_at = topic_json["post_stream"]["posts"][0]["updated_at"]
-        updated_at = re.sub(r"T", " ", updated_at)
-        updated_at = re.sub(r"Z", "", updated_at)
-        updated_at = updated_at.split(".")[0]
-        modtime = time.strptime(updated_at, "%Y-%m-%d %H:%M:%S")
-        modtime = time.localtime(time.mktime(modtime))
-        modtime = time.strftime("%Y%m%d%H%M.%S", modtime)
+        modtime_zulu = datetime.datetime.strptime(updated_at, "%Y-%m-%dT%H:%M:%S.%fZ")
+        #        print("modtime_zulu", modtime_zulu)
+        modtime_local = pytz.utc.localize(modtime_zulu).astimezone(None)
+        #        print("modtime_local", modtime_local)
+        modtime = datetime.datetime.strftime(modtime_local, "%Y%m%d%H%M.%S")
+        #        print("modtime", modtime)
+        #        sys.exit()
 
         # extract the category ID from the topic json (for potential match)
         category_id = topic_json["category_id"]
