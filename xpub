@@ -332,7 +332,39 @@ def discourse(tag, files):
         else:
             continue
 
+        # pull topic last mod time and compare to see if topic has changed
+        proc = subprocess.Popen(
+            [
+                "curl",
+                "-X",
+                "GET",
+                "-H",
+                "Api-Key: " + config_data["api_key"],
+                "-H",
+                "Api-Username: " + config_data["api_username"],
+                "-H",
+                "Content-Type: application/json",
+                config_data["base_url"] + "/t/{" + str(topic) + "}.json",
+            ],
+            stdout=subprocess.PIPE,
+        )
+        output = proc.stdout.read()
+        try:
+            topic_json = json.loads(output)
+        except:
+            print("xpub: failed to read topic for edit check")
+            print("xpub: exiting")
+            sys.exit()
+        updated_at = topic_json["post_stream"]["posts"][0]["updated_at"]
+        modtime_zulu = datetime.datetime.strptime(updated_at, "%Y-%m-%dT%H:%M:%S.%fZ")
+        modtime_local = pytz.utc.localize(modtime_zulu).astimezone(None)
+        modtime = int(datetime.datetime.strftime(modtime_local, "%s"))
         filename = mdfilename
+        f_modtime = int(os.path.getmtime(filename))
+        if modtime > f_modtime:
+            print("xpub: destination is newer than doc being published")
+            print("xpub: exiting without publishing document")
+            sys.exit()
 
         # switch in conditional sections based on tags
         if tag:
