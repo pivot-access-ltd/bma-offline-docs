@@ -369,9 +369,9 @@ def discourse(tag, files):
         # switch in conditional sections based on tags
         if tag:
             condfile = "cond_" + filename
-            grepcli = 'grep -v "<!--[ ]*' + str(tag) + '" '
+            grepcli = 'grep -v "<!--.*' + str(tag) + '.*$" '
             grepcli += filename + " | grep -v "
-            grepcli += '"' + str(tag) + '[ ]*-->" > '
+            grepcli += '".*' + str(tag) + '.*-->" > '
             grepcli += condfile
             os.system(grepcli)
             cpcli = "cp " + condfile + " tmp.md"
@@ -681,8 +681,8 @@ def dc2html(tag, files):
 
             # switch in conditional sections based on tags
             if tag:
-                md = re.sub("<!--[ ]*" + str(tag) + "[ ]*\n", "", md)
-                md = re.sub("[ ]*" + str(tag) + "[ ]*-->[ ]*\n", "", md)
+                md = re.sub("<!--.*" + str(tag) + ".*\n", "", md)
+                md = re.sub(".*" + str(tag) + ".*-->[ ]*\n", "", md)
 
             # convert the corrected markdown to html
             extensions = {"extra", "smarty"}
