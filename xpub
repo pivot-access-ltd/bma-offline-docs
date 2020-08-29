@@ -45,7 +45,11 @@ def add():
 @click.argument("filename")
 @click.argument("title")
 @click.argument("category")
-def discourse(filename, title, category):
+@click.option("-t", "tag", help="tag used to update various things")
+@click.option(
+    "-l", "autolink", is_flag=True, help="attempt to add link to url list in base doc"
+)
+def discourse(filename, title, category, tag, autolink):
     """Adds a new topic to discourse with content from a local file
     
     Must specify a category and a title for the article. The title 
@@ -66,6 +70,10 @@ def discourse(filename, title, category):
         sys.exit(4)
     config_data = load(cfile, Loader=Loader)
     cfile.close()
+
+    # if there's a tag, create the title from filename + tag
+    if tag:
+        title = filename.split(".")[0] + "-" + tag
 
     # load and convert the specified markdown file
     f = open(filename, "r")
@@ -96,8 +104,8 @@ def discourse(filename, title, category):
     apikey = "Api-Key: " + config_data["api_key"]
     apiusername = "Api-Username: " + config_data["api_username"]
 
-    # use the curl command to re-post the markdown into discourse
-    response = subprocess.check_output(
+    # use the curl command to post the markdown into discourse
+    proc = subprocess.Popen(
         [
             "curl",
             "-X",
@@ -111,8 +119,88 @@ def discourse(filename, title, category):
             "Content-Type: application/json",
             "-d",
             "@foo.json",
-        ]
+        ],
+        stdout=subprocess.PIPE,
     )
+
+    # read the result into a usable buffer
+    output = proc.stdout.read()
+
+    # convert the result to json; if it fails, skip this record
+    try:
+        topic_json = json.loads(output)
+    except:
+        print("xpub: couldn't re-read JSON input: aboring")
+        sys.exit()
+
+    # compute the filename
+    topic_id = topic_json["topic_id"]
+    topic_slug = topic_json["topic_slug"]
+    local_filename = str(topic_slug) + "-" + str(topic_id) + ".md"
+
+    # get the modification time so file matches discourse
+    # extract the last updated time from the topic json, because we'll
+    # set the file's modification time to this value
+    updated_at = topic_json["updated_at"]
+    modtime_zulu = datetime.datetime.strptime(updated_at, "%Y-%m-%dT%H:%M:%S.%fZ")
+    modtime_local = pytz.utc.localize(modtime_zulu).astimezone(None)
+    modtime = datetime.datetime.strftime(modtime_local, "%Y%m%d%H%M.%S")
+
+    # write the article markdown to the specified file
+    f = open(local_filename, "w")
+    f.write(str(markdown))
+    f.close()
+
+    # set the file's access and mod times to last edit in discourse
+    # touch -a -m -t CCYYMMDDhhmm.SS filename
+    os.system("touch -a -m -t " + modtime + " " + local_filename)
+
+    # add hints as comments to the local makefile, if requested
+    makefile = open("makefile", "a")
+    makefile.write("# originals/" + local_filename + ": " + filename + "\n")
+    makefile.write("#\tchmod 644 originals/*" + "\n")
+    makefile.write("#\tcp " + filename + " " + local_filename + "\n")
+    if tag:
+        makefile.write("#\txpub push discourse -t " + tag + " " + local_filename + "\n")
+    makefile.write(
+        "#\txpub pull discourse " + str(topic_id) + " " + str(topic_id) + "\n"
+    )
+    makefile.write("#\tcp -p " + local_filename + " originals" + "\n")
+    makefile.write("#\trm " + local_filename + "\n")
+    makefile.write("#\tchmod 444 originals/*" + "\n\n")
+    makefile.close()
+
+    # if there's a tag, add the tag to the urls in the base doc,
+    # if it isn't already there
+    if tag and autolink:
+
+        # convert the tag to a discourse friendly URL
+        subdomains = re.sub("-", "/", tag)
+        urlish = "/docs/" + subdomains + "/" + filename.split(".")[0]
+        content = ""
+        foundit = False
+
+        ## formulate what the link should look like
+        link = "https://discourse.maas.io/t/" + str(topic_slug) + "/" + str(topic_id)
+
+        ## formulate the full URL definition line
+        defline = "| " + link + " | " + urlish + " |\n"
+
+        # find the line that references the base doc
+        with open("maas-documentation.md", "r") as inF:
+            for line in inF:
+                if link in line:
+                    foundit = True
+                    break
+                elif "BOT ADD POINT" in line:
+                    content += defline
+                content += line
+
+        if foundit == False:
+            # write the whole thing back to the base doc
+            bdf = open("maas-documentation.md", "w")
+            bdf.write(content)
+            bdf.close()
 
     # remove the temporary files
     os.remove("foo.json")
