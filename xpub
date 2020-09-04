@@ -155,7 +155,7 @@ def discourse(filename, title, category, tag, autolink):
     # touch -a -m -t CCYYMMDDhhmm.SS filename
     os.system("touch -a -m -t " + modtime + " " + local_filename)
 
-    # add hints as comments to the local makefile, if requested
+    # add hints as comments to the local makefile, if requested (not used much anymore)
     makefile = open("makefile", "a")
     makefile.write("# originals/" + local_filename + ": " + filename + "\n")
     makefile.write("#\tchmod 644 originals/*" + "\n")
