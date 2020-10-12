@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+
+import glob, sys
+
+for name in glob.glob('*.md'):
+    print("name", name)
