@@ -175,7 +175,7 @@ originals/subnet-management-deb-2-8-cli-3122.md: subnet-management.md
 	rm subnet-management-snap-2-7-cli-3114.md
 	chmod 444 originals/*
  
-originals/vm-hosting-snap-2-9-ui-2747.md: vm-hosting.md
+originals/vm-hosting.md: vm-hosting.md
 	chmod 644 originals/*
 	cp vm-hosting.md vm-hosting-snap-2-9-ui-2747.md
 	xpub push discourse -t snap-2-9-ui vm-hosting-snap-2-9-ui-2747.md

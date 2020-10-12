@@ -47,10 +47,12 @@
 |Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
  snap-2-7-cli -->
 
+<!-- snap-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ UI|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|
 |Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
+ snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 ||2.7|2.8|2.9|
@@ -73,12 +75,10 @@
 |Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
  snap-2-9-cli -->
 
-<!-- snap-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ [UI](/t/vm-hosting-snap-2-7-ui/2743)|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ UI|
 |Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
- snap-2-9-ui -->
 
 MAAS VM hosts allow for the dynamic composition of nodes from a pool of available hardware resources (e.g. disk space, memory, cores).  You can create virtual machines (VMs) as needed within the limits of your resources, without concern for physical hardware.  MAAS currently supports VM hosts and VMs created via [libvirt^](https://ubuntu.com/server/docs/virtualization-libvirt).  As part of MAAS 2.8, we also support LXD VMs and VM hosts as a Beta feature.
 
@@ -144,10 +144,12 @@ This section will lead you through the creation, usage, and management of VM hos
 * [How do I add a VM host?](/t/adding-a-vm-host/2286)
  snap-2-7-cli -->
 
+<!-- snap-2-7-ui
 * [What is a VM host?](#heading--what-is-a-vm-host)
 * [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
 * [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3211#heading--set-up-ssh)
 * [How do I add a VM host?](/t/adding-a-vm-host/2287)
+ snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 * [What is a VM host?](#heading--what-is-a-vm-host)
@@ -171,13 +173,11 @@ This section will lead you through the creation, usage, and management of VM hos
 * [How do I add a VM host?](/t/adding-a-vm-host/2290)
  snap-2-9-cli -->
 
-<!-- snap-2-9-ui
 * [What is a VM host?](#heading--what-is-a-vm-host)
 * [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
 * [Tell me about VMs and NUMA.](#heading--vnuma)
 * [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3215#heading--set-up-ssh)
 * [How do I add a VM host?](/t/adding-a-vm-host/2291)
- snap-2-9-ui -->
 
 <h2 id="heading--what-is-a-vm-host">What is a VM host?</h2>
 
@@ -187,7 +187,6 @@ Simply put, a VM host is a machine which is designated to run virtual machines (
 
 Libvirt KVMs and LXD VMs are both based on the same underlying virtualisation technology, QEMU.  Unlike libvirt KVMs, though, LXD VMs can be managed without requiring SSH access to the VM host. LXD are remotely accessed via secure HTTP transport, which provides better security for LXD-based VMs.  In addition, LXD has a better API, and is part of a much larger constellation of enterprise software, offering a wider range of future features and use cases.
 
-<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
 
 <h2 id="heading--vnuma">VMs and NUMA</h2>
 
@@ -203,4 +202,3 @@ In addition, you can get a bird's-eye view of network configuration:
 * You can identify NICs that support SR-IOV and tell how many VFs are available.
 
 Finally, MAAS also shows hugepages information (if they are in use) and prevents overcommit when using them.  Hugepages essentially allow large pages of continuous memory associated with the core.  This obviously reduces the number of times a core has to access memory, but because the core must swap entire hugepages, optimizing usage of them can be complex. MAAS helps you create these optimizations by giving you a discrete view of hugepages associated with your VM, helping you decide whether you need to use them or not.
-snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
