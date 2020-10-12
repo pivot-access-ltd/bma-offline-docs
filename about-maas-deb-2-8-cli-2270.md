@@ -69,10 +69,12 @@ snap-2-9-cli -->
 |Packages|[CLI](/t/about-maas-deb-2-7-cli/2268) ~ [UI](/t/about-maas-deb-2-7-ui/2269)|[CLI](/t/about-maas-deb-2-8-cli/2270) ~ [UI](/t/about-maas-deb-2-8-ui/2271)|[CLI](/t/about-maas-deb-2-9-cli/2272) ~ [UI](/t/about-maas-deb-2-9-ui/2273)|
 snap-2-9-ui -->
 
+<!-- deb-2-9-cli
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/about-maas-snap-2-7-cli/2262) ~ [UI](/t/about-maas-snap-2-7-ui/2263)|[CLI](/t/about-maas-snap-2-8-cli/2264) ~ [UI](/t/about-maas-snap-2-8-ui/2265)|[CLI](/t/about-maas-snap-2-9-cli/2266) ~ [UI](/t/about-maas-snap-2-9-ui/2267)|
 |Packages|[CLI](/t/about-maas-deb-2-7-cli/2268) ~ [UI](/t/about-maas-deb-2-7-ui/2269)|[CLI](/t/about-maas-deb-2-8-cli/2270) ~ [UI](/t/about-maas-deb-2-8-ui/2271)|CLI ~  [UI](/t/about-maas-deb-2-9-ui/2273)|
+deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 || 2.7 | 2.8 | 2.9|
@@ -131,6 +133,7 @@ These tools can be controlled from a responsive web UI.  You can easily (re)conf
 
 deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui -->
 
+<!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli
 - Ubuntu, CentOS, Windows, and RHEL installation support
 - open-source IP address management (IPAM)
 - high availability (optional)
@@ -148,6 +151,7 @@ These tools can be controlled from a [CLI](/t/maas-cli/802) driven by a REST API
 <a href="https://discourse.maas.io/uploads/default/original/1X/40fdae53957095e5a830458dc5c7a62ea5d78c10.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/40fdae53957095e5a830458dc5c7a62ea5d78c10.jpeg"></a> 
 
 *Listing generated with [tagged machine list](/t/the-cli-cookbook/2218#heading--lsmm-t), a recipe in our [CLI cookbook](/t/the-cli-cookbook/2218) page.
+deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli -->
 
 MAAS works with any system configuration tools. Both the [Chef](https://www.chef.io/chef) and [Juju](https://jaas.ai/) teams recommend MAAS as a physical provisioning system.
 
@@ -175,7 +179,9 @@ deb-2-8-cli  -->
 See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability-deb-2-8-ui/2691), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp-deb-2-8-ui/2907) will cause problems.
 deb-2-8-ui  -->
 
+<!-- deb-2-9-cli
 See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability-deb-2-9-cli/2692), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp-deb-2-9-cli/2908) will cause problems.
+deb-2-9-cli  -->
 
 <!-- deb-2-9-ui
 See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability-deb-2-9-ui/2693), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp-deb-2-9-ui/2909) will cause problems.
@@ -225,7 +231,9 @@ deb-2-8-cli  -->
 When you [add a new machine](/t/add-machines-deb-2-8-ui/2283#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines-deb-2-8-ui/2283#heading--enlistment), MAAS [commissions](/t/commission-machines-deb-2-8-ui/2475) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
 deb-2-8-ui  -->
 
+<!-- deb-2-9-cli
 When you [add a new machine](/t/add-machines-deb-2-9-cli/2284#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines-deb-2-9-cli/2284#heading--enlistment), MAAS [commissions](/t/commission-machines-deb-2-9-cli/2476) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
+deb-2-9-cli  -->
 
 <!-- deb-2-9-ui
 When you [add a new machine](/t/add-machines-deb-2-9-ui/2285#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines-deb-2-9-ui/2285#heading--enlistment), MAAS [commissions](/t/commission-machines-deb-2-9-ui/2477) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
@@ -269,7 +277,9 @@ Commissioning means that MAAS has successfully booted the machine, scanned and r
 <a href="https://discourse.maas.io/uploads/default/original/1X/605019de31078dd70df72ff199d812de13a30d00.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/605019de31078dd70df72ff199d812de13a30d00.jpeg"></a>
 deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui  -->
 
+<!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli
 <a href="https://discourse.maas.io/uploads/default/original/1X/6aec9b567022216d80596411e689a14e1f594674.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/6aec9b567022216d80596411e689a14e1f594674.jpeg"></a>
+deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli -->
 
 MAAS controls machines through IPMI (or another BMC). It can also manage machines through a converged chassis controller, such as Cisco UCS.  You can choose how you want to control power on your machines based on what is available.  MAAS overwrites the machine's disk space with your chosen, pre-cached OS images.
 
@@ -283,9 +293,11 @@ MAAS users allocate ("acquire") machines for use when needed. The web UI also al
 <a href="https://discourse.maas.io/uploads/default/original/1X/8101d641c55d912cd66646bd99bbee9bb8f196ab.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8101d641c55d912cd66646bd99bbee9bb8f196ab.jpeg"></a>
 deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui -->
 
+<!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli
 <a href="https://discourse.maas.io/uploads/default/original/1X/ac3b251a916bb18a7e7e463d7fa3c57ef32628da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/ac3b251a916bb18a7e7e463d7fa3c57ef32628da.jpeg"></a>
 
 When acquiring machines from the API/CLI, you can specify requirements ("constraints"). Common constraints are memory, CPU cores, connected networks, and assigned physical zone.
+deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli -->
 
 An acquired MAAS machine is more flexible than a virtual instance in a cloud. You have complete control, including hardware drivers and root access. If you want to upgrade the BIOS, for example, you can allocate a machine to yourself and complete the upgrade.  Once you have completed the upgrade, you can send the machine back to the pool.
 
