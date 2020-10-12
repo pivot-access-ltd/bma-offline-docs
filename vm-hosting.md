@@ -195,7 +195,7 @@ Libvirt KVMs and LXD VMs are both based on the same underlying virtualisation te
 
 <h2 id="heading--vnuma">VMs and NUMA</h2>
 
-MAAS provides extensive optimization tools for using NUMA with virtual machines. Earlier versions of MAAS guarantee that machines are assigned to a single NUMA node that contains all the machine's resources.  As of 2.9, MAAS now allows you to see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory.  You can quickly spot a VM running in multiple NUMA nodes, and optimize accordingly, with instant updates on pinning and allocations.  You can also tell which VMs are currently running.
+MAAS provides extensive optimization tools for using NUMA with virtual machines.  MAAS allows you to see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory.  You can quickly spot a VM running in multiple NUMA nodes by reviewing pinning and allocations.  You can also tell which VMs are currently running.
 
 In addition, you can get a bird's-eye view of network configuration:
 
@@ -206,7 +206,5 @@ In addition, you can get a bird's-eye view of network configuration:
 * You can confirm that a VM has the desired network properties, such as latency and throughput.
 * You can identify NICs that support SR-IOV and tell how many VFs are available.
 
-This functionality also helps you identify cores which are have `isolcpus` set and guides you to those cores when specifying VMS, indicating when a non-isolcpus core might be unsuitable for pinning. MAAS also highlights when a VM is not pinned to a specific core.  Not using `isolcpus` cores, or using unpinned VMs, can have significant performance impacts, since those cores can be interrupted by the general scheduler and co-opted to perform non-node-related tasks, without warning.
-
-Finally, MAAS also shows hugepages information (if they are in use) and prevents overcommit when using them.  Hugepages essentially allow a much larger memory cache associated with the core.  This obviously reduces the number of times a core has to access memory, but because the core must swap entire hugepages, optimizing usage of them can be complex. MAAS helps you create these optimizations by giving you a discrete view of hugepages associated with your VM, helping you decide whether you need to use them or not.
+Finally, MAAS also shows hugepages information (if they are in use) and prevents overcommit when using them.  Hugepages essentially allow large pages of continuous memory associated with the core.  This obviously reduces the number of times a core has to access memory, but because the core must swap entire hugepages, optimizing usage of them can be complex. MAAS helps you create these optimizations by giving you a discrete view of hugepages associated with your VM, helping you decide whether you need to use them or not.
 snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->

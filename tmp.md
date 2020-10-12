@@ -47,12 +47,10 @@
 |Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
  snap-2-7-cli -->
 
-<!-- snap-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ UI|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|
 |Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
- snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 ||2.7|2.8|2.9|
@@ -61,10 +59,12 @@
 |Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
  snap-2-8-cli -->
 
+<!-- snap-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ [UI](/t/vm-hosting-snap-2-7-ui/2743)|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ UI|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|
 |Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
+ snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 ||2.7|2.8|2.9|
@@ -144,12 +144,10 @@ This section will lead you through the creation, usage, and management of VM hos
 * [How do I add a VM host?](/t/adding-a-vm-host/2286)
  snap-2-7-cli -->
 
-<!-- snap-2-7-ui
 * [What is a VM host?](#heading--what-is-a-vm-host)
 * [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
 * [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3211#heading--set-up-ssh)
 * [How do I add a VM host?](/t/adding-a-vm-host/2287)
- snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 * [What is a VM host?](#heading--what-is-a-vm-host)
@@ -158,10 +156,12 @@ This section will lead you through the creation, usage, and management of VM hos
 * [How do I add a VM host?](/t/adding-a-vm-host/2288)
  snap-2-8-cli -->
 
+<!-- snap-2-8-ui
 * [What is a VM host?](#heading--what-is-a-vm-host)
 * [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
 * [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3213#heading--set-up-ssh)
 * [How do I add a VM host?](/t/adding-a-vm-host/2289)
+ snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 * [What is a VM host?](#heading--what-is-a-vm-host)
