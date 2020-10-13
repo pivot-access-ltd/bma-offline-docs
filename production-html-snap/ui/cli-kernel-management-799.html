@@ -22,19 +22,19 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="../maas-vanilla/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+      <a href="../maas-vanilla/cli-kernel-management-799.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
 	Full
       </a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../maas-ui-only/cli-kernel-management-799.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+	UI-only
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <strong>
-	<a href="../maas-ui-only/contact-us-743.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-	  &nbsp;UI-only&nbsp;
+	<a href="../maas-cli-only/cli-kernel-management-799.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;align:center;">
+	  &nbsp;CLI-only&nbsp;
 	</a>
       </strong>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../maas-cli-only/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
-	  CLI-only
-	</a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
@@ -470,7 +470,57 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      {{content}}
+      <h1>CLI kernel management</h1><p>The following is a list of kernel tasks that you can perform with the MAAS CLI.</p>
+<h4>Quick questions you may have:</h4>
+<ul>
+<li><a href="ubuntu-kernels-828.html">What should I know about Ubuntu kernels on MAAS?</a></li>
+<li><a href="kernel-boot-options-827.html">What kernel boot options are available?</a></li>
+<li><a href="maas-cli-802.html">How do I get started with the MAAS CLI?</a></li>
+<li><a href="cli-kernel-management-799.html#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">How do I set a minimum kernel for enlistment and commisioning?</a></li>
+<li><a href="cli-kernel-management-799.html#heading--set-a-minimum-deploy-kernel-for-a-machine">How to I set a minimum deploy kernel for a machine?</a></li>
+<li><a href="cli-kernel-management-799.html#heading--set-a-specific-kernel-during-machine-deployment">How do I set a specific kernel during machine deployment?</a></li>
+</ul>
+<h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2>
+
+<p>To set a default minimum kernel for all new and commissioned machines:</p>
+<pre><code class="bash">maas $PROFILE maas set-config name=default_min_hwe_kernel value=$KERNEL
+</code></pre>
+
+<p>For example, to set it to the 16.04 GA kernel:</p>
+<pre><code class="bash">maas $PROFILE maas set-config name=default_min_hwe_kernel value=ga-16.04
+</code></pre>
+
+<p>[note]
+The command option <code>default_min_hwe_kernel</code> appears to apply to only HWE kernels but this is not the case.
+[/note]</p>
+<h2 id="heading--set-a-minimum-deploy-kernel-for-a-machine">Set a minimum deploy kernel for a machine</h2>
+
+<p>To set the minimum deploy kernel on a per-machine basis:</p>
+<pre><code class="bash">maas $PROFILE machine update $SYSTEM_ID min_hwe_kernel=$HWE_KERNEL
+</code></pre>
+
+<p>For example, to set it to the HWE 16.04 kernel:</p>
+<pre><code class="bash">maas $PROFILE machine update $SYSTEM_ID min_hwe_kernel=hwe-16.04
+</code></pre>
+
+<p>[note]
+The command option <code>default_min_hwe_kernel</code> appears to apply to only HWE kernels but this is not the case.
+[/note]</p>
+<h2 id="heading--set-a-specific-kernel-during-machine-deployment">Set a specific kernel during machine deployment</h2>
+
+<p>To set a specific kernel during the deployment of a machine:</p>
+<pre><code class="bash">maas $PROFILE machine deploy $SYSTEM_ID distro_series=$SERIES hwe_kernel=$KERNEL
+</code></pre>
+
+<p>The operation will fail if the kernel specified by <code>hwe_kernel</code> is older than the kernel (possibly) given by <code>default_min_hwe_kernel</code>. Similarly, it will not work if the kernel is not available for the given distro series (such as &lsquo;hwe-16.10&rsquo; for &lsquo;xenial&rsquo;).</p>
+<p>For example, to deploy a Xenial node with the HWE 16.04 edge kernel:</p>
+<pre><code class="bash">maas $PROFILE machine deploy $SYSTEM_ID distro_series=xenial hwe_kernel=hwe-16.04-edge
+</code></pre>
+
+<p>[note]
+The command option <code>hwe_kernel</code> appears to apply to only HWE kernels but this is not the case.
+[/note]</p>
+<!-- LINKS -->
     </div>
   </body>
 </html>

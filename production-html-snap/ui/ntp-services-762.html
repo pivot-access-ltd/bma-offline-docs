@@ -22,19 +22,19 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="../maas-vanilla/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+      <a href="../maas-vanilla/ntp-services-762.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
 	Full
       </a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../maas-ui-only/ntp-services-762.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+	UI-only
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <strong>
-	<a href="../maas-ui-only/contact-us-743.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-	  &nbsp;UI-only&nbsp;
+	<a href="../maas-cli-only/ntp-services-762.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;align:center;">
+	  &nbsp;CLI-only&nbsp;
 	</a>
       </strong>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../maas-cli-only/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
-	  CLI-only
-	</a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
@@ -470,7 +470,15 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      {{content}}
+      <h1>NTP services</h1><p>MAAS provides managed NTP services (with <a href="https://chrony.tuxfamily.org/">Chrony</a>) for all region and rack controllers. This arrangement allows MAAS to both keep its controllers synchronised, and keep deployed machines synchronised as well. You can configure NTP on the &lsquo;Network services&rsquo; tab of the &lsquo;Settings&rsquo; page.</p>
+<p>The region controller configures the NTP service to keep its time synchronised from one or more external sources. By default, the MAAS region controller uses <code>ntp.ubuntu.com</code>. Rack controllers also configure the NTP service, synchronising their time with the region controllers.  Rack controllers also configure DHCP with the correct NTP information. Any machine on the network that obtains a DHCP lease from MAAS will benefit from NTP support.</p>
+<h2 id="heading--setting-ntp-server">Setting an external NTP server</h2>
+
+<p>External sites, such as an existing NTP infrastructure, can be used directly as a time source for both rack controllers and machines. You can specify an external site by choosing the NTP server(s) and selecting the &lsquo;External Only&rsquo; option. The region controller always uses an external site.</p>
+<p>On the &lsquo;Settings&rsquo; page, select the &lsquo;Network services&rsquo; tab and scroll down to the &lsquo;NTP&rsquo; section:</p>
+<p><a href="images/69180b4a-installconfig-network-ntp__2.6-configure-ntp.png" target = "_blank"><img src="images/69180b4a-installconfig-network-ntp__2.6-configure-ntp.png"></a>&gt;</a></p>
+<p>Enter the address of the desired NTP server. Apply any changes by pressing the &lsquo;Save&rsquo; button.</p>
+<!-- LINKS -->
     </div>
   </body>
 </html>

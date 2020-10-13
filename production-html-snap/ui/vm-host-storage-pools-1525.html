@@ -22,19 +22,19 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="../maas-vanilla/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+      <a href="../maas-vanilla/vm-host-storage-pools-1525.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
 	Full
       </a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../maas-ui-only/vm-host-storage-pools-1525.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+	UI-only
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <strong>
-	<a href="../maas-ui-only/contact-us-743.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-	  &nbsp;UI-only&nbsp;
+	<a href="../maas-cli-only/vm-host-storage-pools-1525.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;align:center;">
+	  &nbsp;CLI-only&nbsp;
 	</a>
       </strong>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../maas-cli-only/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
-	  CLI-only
-	</a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
@@ -470,7 +470,12 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      {{content}}
+      <h1>VM host storage pools</h1><p>&ldquo;Storage pools” are storage resources managed by a VM host. A storage pool is a given amount of storage set aside for use by VMs. A pool can be organized into storage volumes, assigned to VMs as individual block devices. More information is available for both <a href="https://libvirt.org/storage.html">libvirt</a> and <a href="https://lxd.readthedocs.io/en/latest/storage/">LXD</a> storage pools.</p>
+<p>[note]
+For the Beta version of LXD VM hosts, each VM can be assigned a single block device from the storage pool.
+[/note]</p>
+<p>MAAS displays information about each VM host&rsquo;s storage pools so you can understand your resource usage at a glance:</p>
+<p><a href="images/3387f256f9bd02f7fc2079f119377305256973c8.jpeg" target = "_blank"><img src="images/3387f256f9bd02f7fc2079f119377305256973c8.jpeg"></a>&gt;</a></p>
     </div>
   </body>
 </html>

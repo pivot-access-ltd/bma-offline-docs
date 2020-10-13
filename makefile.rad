@@ -7,6 +7,54 @@ originals/contact-us-743.md: contact-us.md
 	cp contact-us.md contact-us-743.md
 	xpub push discourse contact-us-743.md
 	xpub pull discourse 743 743
+	cp templates/deb/2.7/cli/template.html ./template.html
+	sed -i 's/zork/contact-us-743.html/g' ./template.html
+	xpub convert dc2html -t deb-2-7-cli contact-us-743.md
+	mv contact-us-743.html ./maas-offline/deb/2.7/cli/
+	cp templates/deb/2.7/ui/template.html ./template.html
+	sed -i 's/zork/contact-us-743.html/g' ./template.html
+	xpub convert dc2html -t deb-2-7-ui contact-us-743.md
+	mv contact-us-743.html maas-offline/deb/2.7/ui/
+	cp templates/deb/2.8/cli/template.html ./template.html
+	sed -i 's/zork/contact-us-743.html/g' ./template.html
+	xpub convert dc2html -t deb-2-8-cli contact-us-743.md
+	mv contact-us-743.html maas-offline/deb/2.8/cli/
+	cp templates/deb/2.8/ui/template.html ./template.html
+	sed -i 's/zork/contact-us-743.html/g' ./template.html
+	xpub convert dc2html -t deb-2-8-ui contact-us-743.md
+	mv contact-us-743.html maas-offline/deb/2.8/ui/
+	cp templates/deb/2.9/cli/template.html ./template.html
+	sed -i 's/zork/contact-us-743.html/g' ./template.html
+	xpub convert dc2html -t deb-2-9-cli contact-us-743.md
+	mv contact-us-743.html maas-offline/deb/2.7/cli/
+	cp templates/deb/2.9/ui/template.html ./template.html
+	sed -i 's/zork/contact-us-743.html/g' ./template.html
+	xpub convert dc2html -t deb-2-9-ui contact-us-743.md
+	mv contact-us-743.html maas-offline/deb/2.9/cli/
+	cp templates/snap/2.7/cli/template.html ./template.html
+	sed -i 's/zork/contact-us-743.html/g' ./template.html
+	xpub convert dc2html -t snap-2-7-cli contact-us-743.md
+	mv contact-us-743.html maas-offline/snap/2.7/cli/
+	cp templates/snap/2.7/ui/template.html ./template.html
+	sed -i 's/zork/contact-us-743.html/g' ./template.html
+	xpub convert dc2html -t snap-2-7-ui contact-us-743.md
+	mv contact-us-743.html maas-offline/snap/2.7/ui/
+	cp templates/snap/2.8/cli/template.html ./template.html
+	sed -i 's/zork/contact-us-743.html/g' ./template.html
+	xpub convert dc2html -t snap-2-8-cli contact-us-743.md
+	mv contact-us-743.html maas-offline/snap/2.8/cli/
+	cp templates/snap/2.8/ui/template.html ./template.html
+	sed -i 's/zork/contact-us-743.html/g' ./template.html
+	xpub convert dc2html -t snap-2-8-ui contact-us-743.md
+	mv contact-us-743.html maas-offline/snap/2.8/ui/
+	cp templates/snap/2.9/cli/template.html ./template.html
+	sed -i 's/zork/contact-us-743.html/g' ./template.html
+	xpub convert dc2html -t snap-2-9-cli contact-us-743.md
+	mv contact-us-743.html maas-offline/snap/2.9/cli/
+	cp templates/snap/2.9/ui/template.html ./template.html
+	sed -i 's/zork/contact-us-743.html/g' ./template.html
+	xpub convert dc2html -t snap-2-9-ui contact-us-743.md
+	mv contact-us-743.html maas-offline/snap/2.9/cli/
 	chmod 644 originals/*
 	cp -p contact-us*.md
 	chmod 444 originals/*

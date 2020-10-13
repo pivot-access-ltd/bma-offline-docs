@@ -22,19 +22,19 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="../maas-vanilla/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+      <a href="../maas-vanilla/install-with-lxd-757.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
 	Full
       </a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../maas-ui-only/install-with-lxd-757.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+	UI-only
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <strong>
-	<a href="../maas-ui-only/contact-us-743.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-	  &nbsp;UI-only&nbsp;
+	<a href="../maas-cli-only/install-with-lxd-757.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;align:center;">
+	  &nbsp;CLI-only&nbsp;
 	</a>
       </strong>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../maas-cli-only/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
-	  CLI-only
-	</a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
@@ -470,7 +470,71 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      {{content}}
+      <h1>Install with lxd</h1><!--
+Todo:
+- Text needs a review
+-->
+
+<p><a href="https://linuxcontainers.org/lxd/">LXD</a> is a manager for Linux-based containers (LXC), offering a user experience similar to virtual machines without the same overheads.</p>
+<p>Using LXD to install MAAS into containers is a good choice for users who want to test MAAS, or who may want to continue leveraging an existing container architecture or policy.</p>
+<p>MAAS running with LXD has the following requirements:</p>
+<ul>
+<li>a network bridge on the LXD host (e.g. lxdbr0)</li>
+<li>LXD and ZFS</li>
+<li>a container profile</li>
+</ul>
+<h3 id="heading--install-lxd-and-zfs">Install LXD and ZFS</h3>
+
+<p>Begin by installing LXD and ZFS:</p>
+<pre><code class="bash">sudo apt install lxd zfsutils-linux
+sudo modprobe zfs
+sudo lxd init
+</code></pre>
+
+<p>The <em>sudo lxd init</em> command will trigger a series of configuration questions. Except in the case where the randomly chosen subnet may conflict with an existing one in your local environment, all questions can be answered with their default values.</p>
+<p>The bridge network is configured via a second round of questions and is named <em>lxdbr0</em> by default.</p>
+<h3 id="heading--create-a-lxc-profile-for-maas">Create a LXC profile for MAAS</h3>
+
+<p>First create a container profile by making use of the &lsquo;default&rsquo; profile:</p>
+<pre><code class="bash">lxc profile copy default maas
+</code></pre>
+
+<p>Second, bind the network interface inside the container (eth0) to the bridge on the physical host (lxdbr0):</p>
+<pre><code class="bash">lxc profile device set maas eth0 parent lxdbr0
+</code></pre>
+
+<p>Thirdly, the <em>maas</em> container profile needs to be edited to include a specific set of privileges. Enter the following to open the profile in your editor of choice:</p>
+<pre><code class="bash">lxc profile edit maas
+</code></pre>
+
+<p>And replace the <code>{}</code> after <em>config</em> with the following (excluding <code>config:</code>):</p>
+<pre><code class="yaml">config:
+  raw.lxc: |-
+    lxc.cgroup.devices.allow = c 10:237 rwm
+    lxc.apparmor.profile = unconfined
+    lxc.cgroup.devices.allow = b 7:* rwm
+  security.privileged: &quot;true&quot;
+</code></pre>
+
+<p>The final step adds the 8 necessary loop devices to LXC:</p>
+<pre><code class="bash">for i in `seq 0 7`; do lxc profile device add maas loop$i unix-block path=/dev/loop$i; done
+</code></pre>
+
+<p>When correctly configured, the above command outputs <code>Device loop0 added to maas</code> for each loop device.</p>
+<h3 id="heading--launch-and-access-the-lxd-container">Launch and access the LXD container</h3>
+
+<p>Launch the LXD container:</p>
+<pre><code class="bash">lxc launch -p maas ubuntu:18.04 bionic-maas
+</code></pre>
+
+<p>Once the container is running, it can be accessed with:</p>
+<pre><code class="bash">lxc exec bionic-maas bash
+</code></pre>
+
+<h3 id="heading--install-maas">Install MAAS</h3>
+
+<p>In the container (or containers),<a href="maas-installation-from-a-snap-773.html">install MAAS</a>.</p>
+<!-- LINKS -->
     </div>
   </body>
 </html>

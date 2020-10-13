@@ -22,19 +22,19 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="../maas-vanilla/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+      <a href="../maas-vanilla/api-authentication-742.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
 	Full
       </a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../maas-ui-only/api-authentication-742.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+	UI-only
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <strong>
-	<a href="../maas-ui-only/contact-us-743.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-	  &nbsp;UI-only&nbsp;
+	<a href="../maas-cli-only/api-authentication-742.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;align:center;">
+	  &nbsp;CLI-only&nbsp;
 	</a>
       </strong>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../maas-cli-only/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
-	  CLI-only
-	</a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
@@ -470,7 +470,64 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      {{content}}
+      <h1>API authentication</h1><p>MAAS&rsquo;s API uses <a href="http://en.wikipedia.org/wiki/OAuth">OAuth (external link)</a> as its authentication mechanism. This isn&rsquo;t third-party (3-legged) OAuth, so the process used is what&rsquo;s commonly referred to as 0-legged OAuth: the consumer accesses protected resources by submitting OAuth signed requests.</p>
+<p>Note that some API endpoints support unauthenticated requests (i.e. anonymous access). See the <a href="https://maas.io/docs/api">API documentation</a> for details. </p>
+<h4>Quick questions you may have:</h4>
+<ul>
+<li><a href="cli-resource-pool-management-800.html#heading--python">How can I perform authenticated requests in python?</a></li>
+<li><a href="cli-resource-pool-management-800.html#heading--ruby">How can I perform authenticated requests in ruby?</a></li>
+</ul>
+<p>Here are two examples on how to perform an authenticated GET request to retrieve the list of nodes. The &lt;key&gt;, &lt;secret&gt;, &lt;consumer_key&gt; tokens are the three elements that compose the API key (API key = &lsquo;&lt;consumer_key&gt;:&lt;key&gt;:&lt;secret&gt;&lsquo;).</p>
+<h2 id="heading--python">Python</h2>
+
+<pre><code class="python">import oauth.oauth as oauth
+import httplib2
+import uuid
+
+def perform_API_request(site, uri, method, key, secret, consumer_key):
+    resource_tok_string = &quot;oauth_token_secret=%s&amp;oauth_token=%s&quot; % (
+        secret, key)
+    resource_token = oauth.OAuthToken.from_string(resource_tok_string)
+    consumer_token = oauth.OAuthConsumer(consumer_key, &quot;&quot;)
+
+    oauth_request = oauth.OAuthRequest.from_consumer_and_token(
+        consumer_token, token=resource_token, http_url=site,
+        parameters={'oauth_nonce': uuid.uuid4().hex})
+    oauth_request.sign_request(
+        oauth.OAuthSignatureMethod_PLAINTEXT(), consumer_token,
+        resource_token)
+    headers = oauth_request.to_header()
+    url = &quot;%s%s&quot; % (site, uri)
+    http = httplib2.Http()
+    return http.request(url, method, body=None, headers=headers)
+
+# API key = '&lt;consumer_key&gt;:&lt;key&gt;:&lt;secret&gt;'
+response = perform_API_request(
+    'http://server/MAAS/api/1.0', '/nodes/?op=list', 'GET', '&lt;key&gt;', '&lt;secret&gt;',
+    '&lt;consumer_key&gt;')
+</code></pre>
+
+<h2 id="heading--ruby">Ruby</h2>
+
+<pre><code class="ruby">require 'oauth'
+require 'oauth/signature/plaintext'
+
+def perform_API_request(site, uri, key, secret, consumer_key)
+    consumer = OAuth::Consumer.new(
+        consumer_key, &quot;&quot;,
+        { :site =&gt; &quot;http://localhost/MAAS/api/1.0&quot;,
+          :scheme =&gt; :header, :signature_method =&gt; &quot;PLAINTEXT&quot;})
+    access_token = OAuth::AccessToken.new(consumer, key, secret)
+    return access_token.request(:get, &quot;/nodes/?op=list&quot;)
+end
+
+# API key = &quot;&lt;consumer_key&gt;:&lt;key&gt;:&lt;secret&gt;&quot;
+response = perform_API_request(
+     &quot;http://server/MAAS/api/1.0&quot;, &quot;/nodes/?op=list&quot;, &quot;&lt;key&gt;&quot;, &quot;&lt;secret&gt;&quot;,
+     &quot;consumer_key&gt;&quot;)
+</code></pre>
+
+<!-- LINKS -->
     </div>
   </body>
 </html>

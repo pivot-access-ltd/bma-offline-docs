@@ -22,19 +22,19 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="../maas-vanilla/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+      <a href="../maas-vanilla/vmware-images-753.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
 	Full
       </a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../maas-ui-only/vmware-images-753.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+	UI-only
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <strong>
-	<a href="../maas-ui-only/contact-us-743.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-	  &nbsp;UI-only&nbsp;
+	<a href="../maas-cli-only/vmware-images-753.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;align:center;">
+	  &nbsp;CLI-only&nbsp;
 	</a>
       </strong>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../maas-cli-only/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
-	  CLI-only
-	</a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
@@ -470,7 +470,75 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      {{content}}
+      <h1>VMware images</h1><p>MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directly deploy the VMware ESXi ISO; you must create a specialised image from an official VMWare ISO. Canonical created a <a href="https://www.packer.io/">packer</a> template to automate the image creation process.</p>
+<h4>Quick questions you may have:</h4>
+<ul>
+<li><a href="vmware-images-753.html#heading--prerequisites-to-create-the-images">What are the prerequisite requirements for creating an image?</a></li>
+<li><a href="vmware-images-753.html#heading--customizing-the-image">How can I customize these images?</a></li>
+<li><a href="vmware-images-753.html#heading--building-an-image">How do I build an image?</a></li>
+<li><a href="vmware-images-753.html#heading--uploading-an-image">How do I upload an image?</a></li>
+<li><a href="vmware-images-753.html#heading--features-and-limitations">What are the features and limitations of VMWare images in MAAS?</a></li>
+</ul>
+<h2 id="heading--prerequisites-to-create-the-images">Prerequisites to image creation</h2>
+
+<h3 id="heading--image-creation">Image creation</h3>
+
+<ul>
+<li>A physical machine running Ubuntu 18.04+</li>
+<li><strong>CPU</strong>: 4 2GHz cores</li>
+<li><strong>Memory</strong>: 8 GB RAM (16 GB RAM recommended)</li>
+<li><strong>Disk space</strong>: 11 GB</li>
+<li><a href="https://my.vmware.com/en/web/vmware/evalcenter?p=free-esxi6">The VMWare ESxi ISO</a></li>
+<li><a href="https://www.packer.io/intro/getting-started/install.html">Packer - https://www.packer.io/intro/getting-started/install.html</a></li>
+<li>Procedure was tested with precompiled 64-bit Packer 1.3.4 Linux binaries</li>
+<li><a href="https://github.com/canonical/packer-maas">Packer template</a> for MAAS custom image</li>
+</ul>
+<h3 id="heading--image-deployment">Image deployment</h3>
+
+<ul>
+<li>MAAS 2.5.0+</li>
+</ul>
+<h2 id="heading--customizing-the-image">Customizing the Image</h2>
+
+<p>The image may be customized by modifying packer-maas/vmware-esxi/http/vmware-esxi-ks.cfg see Installation and Upgrade Scripts in the <a href="https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-67-installation-setup-guide.pdf">VMware ESXi installation and Setup manual</a> for more information.</p>
+<h2 id="heading--building-an-image">Building an Image</h2>
+
+<p>Before an image is built the nbd kernel module must be loaded</p>
+<pre><code>sudo modprobe nbd
+</code></pre>
+<p>Once the nbd kernel module is loaded your current working directory must be in the packer-maas/vmware-esxi directory</p>
+<pre><code>cd /path/to/packer-maas/vmware-esxi
+</code></pre>
+<p>You can now start the image building process using packer with the following command:</p>
+<pre><code>sudo packer build -var
+'vmware_esxi_iso_path=/path/to/VMware-VMvisor-Installer-6.7.0-8169922.x86_64.iso'
+vmware-esxi.json
+</code></pre>
+<h2 id="heading--uploading-an-image">Uploading an Image</h2>
+
+<p>Once you have created the image, upload it to MAAS, using the CLI, with the following command:</p>
+<pre><code>maas $PROFILE boot-resources create name='esxi/6.7' title='VMware ESXi 6.7'
+architecture='amd64/generic' filetype='ddgz' content@=vmware-esxi.dd.gz
+</code></pre>
+<h2 id="heading--features-and-limitations">Features and Limitations</h2>
+
+<h3 id="heading--networking">Networking</h3>
+
+<ul>
+<li>VMware ESXi does not support Linux bridges</li>
+<li>Bonds - MAAS maps the following bond modes to VMware ESXi NIC team sharing with load balancing as follows:</li>
+<li>balance-rr - portid</li>
+<li>active-backup - explicit</li>
+<li>802.3ad - iphash, LACP rate and XMIT hash policy settings are ignored.</li>
+<li>No other bond modes are currently supported.</li>
+<li>VMware ESXi does not allow VMs to use a PortGroup that has a VMK attached to it. All configured devices will have a VMK attached. To use a vSwitch with VMs, you must leave a device or alias unconfigured in MAAS.</li>
+</ul>
+<h3 id="heading--storage">Storage</h3>
+
+<p>Custom storage configuration is not supported because VMware ESXi expects specific disk formats. MAAS will extend datastore1 to the full size of the deployment disk. After deployment, VMware tools may be used to access the other disks.</p>
+<h3 id="heading--esxi-hardware-support">ESXi Hardware Support</h3>
+
+<p>VMware has <a href="https://www.vmware.com/resources/compatibility/search.php">very specific hardware requirements</a>. In particular, running VMware ESXi is not supported in a virtual machine or MAAS virsh Pod.</p>
     </div>
   </body>
 </html>

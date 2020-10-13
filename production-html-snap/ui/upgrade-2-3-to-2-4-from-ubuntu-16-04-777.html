@@ -22,19 +22,19 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="../maas-vanilla/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+      <a href="../maas-vanilla/upgrade-2-3-to-2-4-from-ubuntu-16-04-777.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
 	Full
       </a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../maas-ui-only/upgrade-2-3-to-2-4-from-ubuntu-16-04-777.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+	UI-only
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <strong>
-	<a href="../maas-ui-only/contact-us-743.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-	  &nbsp;UI-only&nbsp;
+	<a href="../maas-cli-only/upgrade-2-3-to-2-4-from-ubuntu-16-04-777.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;align:center;">
+	  &nbsp;CLI-only&nbsp;
 	</a>
       </strong>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../maas-cli-only/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
-	  CLI-only
-	</a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
@@ -470,7 +470,73 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      {{content}}
+      <h1>Upgrade 2 3 to 2 4 from ubuntu</h1><p>MAAS 2.3 is the last supported version for Ubuntu 16.04 LTS. Changes in the base dependencies of Ubuntu 18.04 LTS mean that newer versions of MAAS will not be back-portable, and consequently, to upgrade to MAAS 2.4 and all future versions, you will also need to upgrade the base operating system.</p>
+<p>[note]
+MAAS 2.3 will continue to be supported on Ubuntu 16.04 LTS until the end of its support cycle. See <a href="https://wiki.ubuntu.com/Releases">Ubuntu Releases</a> for release and EOL dates for all Ubuntu versions.
+[/note]</p>
+<p>Upgrading from MAAS 2.3 to MAAS 2.4 involves two steps:</p>
+<ol>
+<li>Update Ubuntu 16.04 LTS to Ubuntu 18.04 LTS, automatically migrating both the MAAS database and the MAAS configuration for MAAS 2.4.</li>
+<li>Upgrade the PostgreSQL database used by MAAS from version 9.x to version 10.</li>
+</ol>
+<p>Prior to the upgrade all packages should be updated. It is also strongly recommended that backups be made and that a test environment that mirrors your production environment be upgraded first, to pre-empt any issues.</p>
+<h2 id="heading--upgrade-maas">Upgrade MAAS</h2>
+
+<p>To upgrade to MAAS 2.4, simply upgrade the operating system; the process that upgrades Ubuntu will also upgrade the software, including MAAS.</p>
+<p>To upgrade Ubuntu, administrators need only type:</p>
+<pre><code class="bash">sudo do-release-upgrade
+</code></pre>
+
+<p>After the upgrade process completes and the machine is rebooted, MAAS will continue to use the PostgreSQL 9.x version that came with Ubuntu 16.04 LTS. However, because Ubuntu 18.04 LTS switches to PostgreSQL 10, it is imperative we upgrade the database as well.</p>
+<h2 id="heading--upgrade-postgresql">Upgrade PostgreSQL</h2>
+
+<p>The PostgreSQL upgrade process is fairly simple.</p>
+<p>First, use the following command to verify that both version 9.x and 10 PostgreSQL clusters are available:</p>
+<pre><code class="bash">pg_lsclusters
+</code></pre>
+
+<p>The output should look similar to the following:</p>
+<pre><code class="no-highlight">Ver Cluster Port Status Owner    Data directory               Log file
+9.5 main    5432 online postgres /var/lib/postgresql/9.5/main postgresql-9.5-main.log
+10  main    5433 online postgres /var/lib/postgresql/10/main  postgresql-10-main.log
+</code></pre>
+
+<p>With both clusters verified to be online, stop MAAS and PostgreSQL:</p>
+<pre><code class="bash">sudo service maas-rackd stop 
+sudo service maas-regiond stop 
+sudo service postgresql stop
+</code></pre>
+
+<p>Next, rename the <em>main</em> cluster created by the installation of PostgreSQL 10 so that it doesn&rsquo;t conflict with the upgrade:</p>
+<pre><code class="bash">sudo pg_renamecluster 10 main main_pristine
+</code></pre>
+
+<p>The output from <code>pg_lsclusters</code> should now look like the following:</p>
+<pre><code class="no-highlight">Ver Cluster       Port Status Owner    Data directory                       Log file
+9.5 main          5432 down   postgres /var/lib/postgresql/9.5/main         postgresql-9.5-main.log
+10  main_pristine 5433 down   postgres /var/lib/postgresql/10/main_pristine postgresql-10-main_pristine.log
+</code></pre>
+
+<p>We can now safely upgrade the 9.x cluster:</p>
+<pre><code class="bash">sudo pg_upgradecluster 9.5 main
+</code></pre>
+
+<p>The final output from the previous command should show the new PostgreSQL version 10 <em>main</em> cluster is online:</p>
+<pre><code class="no-highlight">Ver Cluster Port Status Owner    Data directory              Log file
+10  main    5432 online postgres /var/lib/postgresql/10/main postgresql-10-main.log
+</code></pre>
+
+<p>With the version 10 cluster verified as running, we can now drop the other clusters:</p>
+<pre><code class="bash">sudo pg_dropcluster 9.5 main
+sudo pg_dropcluster 10 main_pristine
+</code></pre>
+
+<p>PostgreSQL has now been upgraded and you can now either reboot your machine or restart the MAAS services we stopped earlier:</p>
+<pre><code class="bash">sudo service maas-rackd start
+sudo service maas-regiond start
+</code></pre>
+
+<!-- LINKS -->
     </div>
   </body>
 </html>

@@ -22,19 +22,19 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="../maas-vanilla/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+      <a href="../maas-vanilla/upgrade-from-1-9-to-2-x-778.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
 	Full
       </a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../maas-ui-only/upgrade-from-1-9-to-2-x-778.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+	UI-only
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <strong>
-	<a href="../maas-ui-only/contact-us-743.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-	  &nbsp;UI-only&nbsp;
+	<a href="../maas-cli-only/upgrade-from-1-9-to-2-x-778.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;align:center;">
+	  &nbsp;CLI-only&nbsp;
 	</a>
       </strong>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../maas-cli-only/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
-	  CLI-only
-	</a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
@@ -470,7 +470,51 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      {{content}}
+      <h1>Upgrade from 1 9 to 2 x</h1><table width="100%"><tr>
+<td><a href="https://maas.io/docs/upgrade-from-1-9-to-2-x#heading--ip-range-changes">IP range changes</a></td>
+<td><a href="https://maas.io/docs/upgrade-from-1-9-to-2-x#heading--troubleshooting">Troubleshooting</a></td>
+</tr></table>
+
+<hr>
+
+<p>MAAS 2.4 is only supported on Ubuntu 18.04 (Bionic Beaver). This is because changes in the base dependencies of Ubuntu 18.04 LTS mean that newer versions of MAAS will not be back-portable, and consequently, to upgrade to MAAS 2.4 and all future versions, you will need to first upgrade to 2.3. This is covered below.</p>
+<p>See <a href="upgrade-2-3-to-2-4-from-ubuntu-16-04-777.html">Upgrade 2.3 to 2.4 from Ubuntu 16.04</a> for further details on upgrading from 2.3 to 2.4</p>
+<p>MAAS 2.3 is only supported on Ubuntu 16.04 LTS (Xenial Xerus). This is because 16.04 defaults to Python 3, whereas previous versions of Ubuntu defaulted to Python 2.</p>
+<p>MAAS 1.9 will continue to be supported on Ubuntu 14.04 LTS (Trusty Tahr) until the latter reaches the end of its support cycle. See <a href="https://wiki.ubuntu.com/Releases">Ubuntu Releases</a> for release and EOL dates for all Ubuntu versions.</p>
+<p>Upgrading from 1.9 to 2.3 will therefore involve upgrading the version of Ubuntu to 16.04 LTS. In so doing, the MAAS database and MAAS configuration will be migrated. See the <a href="https://wiki.ubuntu.com/XenialXerus/ReleaseNotes#Upgrading_from_Ubuntu_14.04_LTS_or_15.10">Xenial Release Notes</a> for upgrading to Xenial.</p>
+<p>Prior to the upgrade all packages should be updated (<code>sudo apt-get update &amp;&amp; sudo apt-get dist-upgrade</code>). It is recommended that backups be made and that a test environment (that mirrors your production environment) be upgraded first, to pre-empt any issues.</p>
+<h2 id="heading--ip-range-changes">IP range changes</h2>
+
+<p>The concepts and terminology used to define IP ranges within MAAS have changed significantly between 1.9 and 2.x releases of MAAS. These changes are described below.</p>
+<p>MAAS 1.9 allows users to configure their managed networks to use either <a href="https://docs.ubuntu.com/maas/1.9/en/nodes-commission">static</a> or dynamic ranges. A static range is used by MAAS to allocate automatic (static) IP addresses while a dynamic range is used solely for DHCP.</p>
+<p>Static ranges are deprecated in MAAS 2.x. Instead, MAAS assumes full control of the address space for a network it manages with two exceptions:</p>
+<ul>
+<li>When an optional <a href="ip-ranges-760.html">reserved range</a> has been defined.</li>
+<li>When <a href="subnet-management-766.html">managed allocation</a> in MAAS 2.3+ is disabled.</li>
+</ul>
+<p>Reserved ranges allow MAAS to avoid addresses already in use on the network. When upgrading from MAAS 1.9 to MAAS 2.x, static ranges are migrated to their <em>inverse</em> reserved range equivalents.</p>
+<p>For example, a dynamic range of <code>192.168.0.20 - 192.168.0.89</code> and a static range of <code>192.168.0.100 - 192.168.0.199</code> in MAAS 1.9 would be reconfigured as the following in MAAS 2.x:</p>
+<pre><code class="no-highlight">Reserved range (1): 192.168.0.1   -&gt; 192.168.0.19
+Dynamic range:      192.168.0.20  -&gt; 192.168.0.89
+Reserved range (2): 192.168.0.90  -&gt; 192.168.0.99
+Reserved range (3): 192.168.0.200 -&gt; 192.168.0.254
+</code></pre>
+
+<p>The above example shows a static range replaced by three reserved ranges to create an equivalent configuration.</p>
+<p>[note]
+With MAAS 2.1+, <a href="network-discovery-758.html">network devices discovery</a> uses the ARP protocol to determine which addresses are being used, allowing MAAS to automatically avoid assigning recently used IP addresses.
+[/note]</p>
+<h2 id="heading--troubleshooting">Troubleshooting</h2>
+
+<p>The upgrade process can be complex, and depending on your installation, may require manual intervention. You may be asked whether you want to overwrite some files, PostgreSQL files in particular, especially if you&rsquo;ve implemented high availability in PostgreSQL (see <a href="postgresql-ha-hot-standby-803.html">PostgreSQL HA</a>). If you&rsquo;ve made no modifications to these files, you can instruct the upgrade process to overwrite them. Otherwise, you&rsquo;ll need to merge the new changes into the files manually.</p>
+<p>At the end of the upgrade, if you see processing errors with the <code>maas</code>, <code>squid3</code> or <code>maas-region-controller</code> packages, or if the upgrade complains about unmet dependencies with the MAAS packages, try the following:</p>
+<pre><code class="bash">sudo apt -f install
+sudo apt autoremove
+sudo apt upgrade
+</code></pre>
+
+<p>This should fix the dependency errors, remove redundant packages and update to the latest version of MAAS.</p>
+<!-- LINKS -->
     </div>
   </body>
 </html>

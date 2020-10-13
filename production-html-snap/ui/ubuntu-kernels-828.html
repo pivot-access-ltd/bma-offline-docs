@@ -22,19 +22,19 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="../maas-vanilla/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+      <a href="../maas-vanilla/ubuntu-kernels-828.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
 	Full
       </a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../maas-ui-only/ubuntu-kernels-828.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
+	UI-only
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <strong>
-	<a href="../maas-ui-only/contact-us-743.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-	  &nbsp;UI-only&nbsp;
+	<a href="../maas-cli-only/ubuntu-kernels-828.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;align:center;">
+	  &nbsp;CLI-only&nbsp;
 	</a>
       </strong>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../maas-cli-only/contact-us-743.html" style="border-top:1px solid black; border-left:1px solid black; border-right:1px solid black;">
-	  CLI-only
-	</a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
@@ -470,7 +470,77 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      {{content}}
+      <h1>Ubuntu kernels</h1><p>MAAS supports four types of kernels for its Ubuntu machines.</p>
+<ul>
+<li>General availability kernels</li>
+<li>Hardware enablement kernels</li>
+<li>Hardware enablement kernels (pre-release)</li>
+<li>Low latency kernels</li>
+</ul>
+<p>This article explains each of these kernels, and offers instructions and further references regarding their use.</p>
+<h4>Quick questions you may have:</h4>
+<ul>
+<li><a href="ubuntu-kernels-828.html#heading--general-availability-kernels">What is a general availability kernel?</a></li>
+<li><a href="ubuntu-kernels-828.html#heading--hardware-enablement-kernels">What is a hardware enablement kernel?</a></li>
+<li><a href="ubuntu-kernels-828.html#heading--hardware-enablement-kernels-pre-release">What is a pre-release hardware enablement kernel?</a></li>
+<li><a href="ubuntu-kernels-828.html#heading--low-latency-kernels">What is a low latency kernel?</a></li>
+<li><a href="ubuntu-kernels-828.html#heading--using-kernels">How can I choose and configure my preferred kernel?</a></li>
+</ul>
+<h2 id="heading--general-availability-kernels">General availability kernels</h2>
+
+<p>The <em>general availability</em> (GA) kernel is based on the <em>generic</em> kernel that ships with a new Ubuntu version. Subsequent fixes are applied regularly by the &lsquo;daily&rsquo; <em>stream</em> used when setting up the global image source for MAAS.</p>
+<p>MAAS denotes a GA kernel like this:</p>
+<p><code>ga-&lt;version&gt;</code>: The GA kernel reflects the major kernel version of the shipped Ubuntu release. For example, &lsquo;ga-16.04&rsquo; is based on the &lsquo;generic&rsquo; 4.4 Ubuntu kernel. As per Ubuntu policy, a GA kernel will never have its major version upgraded until the underlying release is upgraded.</p>
+<h2 id="heading--hardware-enablement-kernels">Hardware enablement kernels</h2>
+
+<p>New hardware gets released all the time. If an Ubuntu host runs an older kernel, it&rsquo;s unlikely that MAAS can support the hardware. Canonical does make every effort to backport more recent kernels enabling more hardware. The acronym HWE stands for &ldquo;HardWare Enablement.&rdquo;</p>
+<p>You also gain kernel improvements and new features when installing an HWE kernel.</p>
+<p>[note]
+There is the notion of an HWE <em>stack</em>, which refers to the window manager and kernel when the Ubuntu host is running a desktop environment. HWE stacks do not apply to MAAS since machines are provisioned strictly as non-graphical servers.
+[/note]</p>
+<p>Note that these backported/HWE kernels are only available for LTS releases (e.g. Trusty, Xenial, etc.). For example, the first available HWE kernel for Ubuntu 16.04 LTS (Xenial) will be the GA kernel from Ubuntu 16.10 (Yakkety).</p>
+<p>Before MAAS 2.1 on Xenial, HWE kernels are referred to by the notation <code>hwe-&lt;release letter&gt;</code>. So, to install the Yakkety HWE kernel on Xenial, the <code>hwe-y</code> kernel is used. By default, when using the web UI, MAAS imports all available HWE kernels along with its generic boot images. So if you are importinTrusty images are imported then the following HWE kernels are included: <code>hwe-u</code>, <code>hwe-v</code>, <code>hwe-w</code>, <code>hwe-x</code> (presuming the Xenial HWE kernel is available).</p>
+<p>In MAAS 2.1, starting with Xenial kernels, the notation has changed. The following is used to refer to the latest HWE kernel available for Xenial: <code>hwe-16.04</code>.</p>
+<p>See <a href="cli-image-management-797.html#heading--hardware-enablement-hwe">MAAS CLI</a> for how to target specific HWE kernels when selecting install images.</p>
+<p>See <a href="https://wiki.ubuntu.com/Kernel/LTSEnablementStack">LTS Enablement Stack</a> (Ubuntu wiki) for the latest information on HWE.</p>
+<h2 id="heading--hardware-enablement-kernels-pre-release">Hardware enablement kernels (pre-release)</h2>
+
+<p>The pre-release HWE kernel is known as the <em>edge</em> HWE kernel.</p>
+<p>MAAS denotes the edge kernel like this: <code>hwe-&lt;version&gt;-edge</code>.</p>
+<p>So &lsquo;hwe-16.04&rsquo; is considered older than &lsquo;hwe-16.04-edge&rsquo;.</p>
+<p>See <a href="https://wiki.ubuntu.com/Kernel/RollingLTSEnablementStack#hwe-16.04-edge">Rolling LTS Enablement Stack</a> (Ubuntu wiki) for more information.</p>
+<h2 id="heading--low-latency-kernels">Low latency kernels</h2>
+
+<p>The low-latency kernel is based on the GA kernel, but uses a more aggressive configuration to reduce latency. It is categorised as a soft real-time kernel. For more information, see <a href="https://en.wikipedia.org/wiki/Real-time_computing#Criteria_for_real-time_computing">Criteria for real-time computing</a> (Wikipedia).</p>
+<p>MAAS denotes a low latency kernel in a few ways:</p>
+<ul>
+<li><code>hwe-x-lowlatency</code>: the Xenial low latency HWE kernel for Trusty</li>
+<li><code>ga-16.04-lowlatency</code>: the low latency GA kernel for Xenial</li>
+<li><code>hwe-16.04-lowlatency</code>: the low latency HWE kernel for Xenial</li>
+</ul>
+<h2 id="heading--using-kernels">Using kernels</h2>
+
+<p>The kernel installed on a machine during deployment is, by default, the Ubuntu release&rsquo;s native kernel (GA). However, it is possible to tell MAAS to use a different kernel. Via the Web UI, MAAS can help you choose one of these kernels.  There are three different contexts for your choice:</p>
+<ul>
+<li>globally (default minimum enlistment and commissioning kernel)</li>
+<li>per machine (minimum deploy kernel)</li>
+<li>per machine during deployment (specific deploy kernel)</li>
+</ul>
+<p>You can also use the <a href="cli-kernel-management-799.html#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">MAAS CLI</a> to make these choices.</p>
+<h3 id="heading--default-minimum-kernel">Default minimum kernel</h3>
+
+<p>To set the default minimum enlistment and commissioning kernel (based on Ubuntu release: GA kernel) for all machines visit the &lsquo;General&rsquo; tab of the &lsquo;Settings&rsquo; page and select a kernel in the &lsquo;Default Minimum Kernel Version&rsquo; field of the <em>Commissioning</em> section. Don&rsquo;t forget to click &lsquo;Save&rsquo;.</p>
+<p><a href="images/e0c7f298-nodes-kernels__2.6-default-minimum-kernel.png" target = "_blank"><img src="images/e0c7f298-nodes-kernels__2.6-default-minimum-kernel.png"></a>&gt;</a></p>
+<h3 id="heading--machine-minimum-kernel">Machine minimum kernel</h3>
+
+<p>To set the minimum deploy kernel on a machine basis, click on a machine from the &lsquo;Machines&rsquo; page of the web UI and switch to its &lsquo;Configuration&rsquo; page. Click &lsquo;Edit&rsquo; in the &lsquo;Machine configuration&rsquo; section, select a kernel in the &lsquo;Minimum Kernel&rsquo; field followed by &lsquo;Save changes&rsquo;.</p>
+<p><a href="images/e1016632-nodes-kernels__2.6-machine-minimum-kernel.png" target = "_blank"><img src="images/e1016632-nodes-kernels__2.6-machine-minimum-kernel.png"></a>&gt;</a></p>
+<h3 id="heading--machine-kernel-during-deployment">Machine kernel during deployment</h3>
+
+<p>To set a specific kernel during deployment, select a machine from the &lsquo;Machines&rsquo; page and choose &lsquo;Deploy&rsquo; under &lsquo;Take action&rsquo;. Then choose a kernel from the (third) kernel field. Hit &lsquo;Deploy machine&rsquo; to initiate the deployment.</p>
+<p><a href="images/0d25737f-nodes-kernels__2.6-machine-during-deploy-kernel.png" target = "_blank"><img src="images/0d25737f-nodes-kernels__2.6-machine-during-deploy-kernel.png"></a>&gt;</a></p>
+<p>MAAS verifies that the specified kernel is available for the given Ubuntu release (series) before deploying the machine.</p>
+<!-- LINKS -->
     </div>
   </body>
 </html>
