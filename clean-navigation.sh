@@ -1,2 +1,2 @@
 #!/bin/bash
-sed -i '/^## Navigation/,$d' maas-documentation-25.md
+sed -i '/^## Navigation/,$d' $1

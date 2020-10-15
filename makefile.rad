@@ -7,54 +7,6 @@ originals/contact-us-743.md: contact-us.md
 	cp contact-us.md contact-us-743.md
 	xpub push discourse contact-us-743.md
 	xpub pull discourse 743 743
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/contact-us-743.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli contact-us-743.md
-	mv contact-us-743.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/contact-us-743.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui contact-us-743.md
-	mv contact-us-743.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/contact-us-743.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli contact-us-743.md
-	mv contact-us-743.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/contact-us-743.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui contact-us-743.md
-	mv contact-us-743.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/contact-us-743.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli contact-us-743.md
-	mv contact-us-743.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/contact-us-743.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui contact-us-743.md
-	mv contact-us-743.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/contact-us-743.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli contact-us-743.md
-	mv contact-us-743.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/contact-us-743.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui contact-us-743.md
-	mv contact-us-743.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/contact-us-743.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli contact-us-743.md
-	mv contact-us-743.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/contact-us-743.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui contact-us-743.md
-	mv contact-us-743.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/contact-us-743.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli contact-us-743.md
-	mv contact-us-743.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/contact-us-743.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui contact-us-743.md
-	mv contact-us-743.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p contact-us*.md
 	chmod 444 originals/*
@@ -64,54 +16,6 @@ originals/python-api-client-810.md: python-api-client.md
 	cp python-api-client.md python-api-client-810.md
 	xpub push discourse python-api-client-810.md
 	xpub pull discourse 810 810
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/python-api-client-810.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli python-api-client-810.md
-	mv python-api-client-810.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/python-api-client-810.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui python-api-client-810.md
-	mv python-api-client-810.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/python-api-client-810.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli python-api-client-810.md
-	mv python-api-client-810.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/python-api-client-810.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui python-api-client-810.md
-	mv python-api-client-810.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/python-api-client-810.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli python-api-client-810.md
-	mv python-api-client-810.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/python-api-client-810.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui python-api-client-810.md
-	mv python-api-client-810.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/python-api-client-810.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli python-api-client-810.md
-	mv python-api-client-810.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/python-api-client-810.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui python-api-client-810.md
-	mv python-api-client-810.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/python-api-client-810.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli python-api-client-810.md
-	mv python-api-client-810.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/python-api-client-810.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui python-api-client-810.md
-	mv python-api-client-810.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/python-api-client-810.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli python-api-client-810.md
-	mv python-api-client-810.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/python-api-client-810.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui python-api-client-810.md
-	mv python-api-client-810.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p python-api-client*.md originals
 	chmod 444 originals/*
@@ -121,54 +25,6 @@ originals/audit-event-logs-791.md: audit-event-logs.md
 	cp audit-event-logs.md audit-event-logs-791.md
 	xpub push discourse audit-event-logs-791.md
 	xpub pull discourse 791 791
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/audit-event-logs-791.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli audit-event-logs-791.md
-	mv audit-event-logs-791.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/audit-event-logs-791.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui audit-event-logs-791.md
-	mv audit-event-logs-791.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/audit-event-logs-791.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli audit-event-logs-791.md
-	mv audit-event-logs-791.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/audit-event-logs-791.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui audit-event-logs-791.md
-	mv audit-event-logs-791.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/audit-event-logs-791.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli audit-event-logs-791.md
-	mv audit-event-logs-791.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/audit-event-logs-791.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui audit-event-logs-791.md
-	mv audit-event-logs-791.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/audit-event-logs-791.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli audit-event-logs-791.md
-	mv audit-event-logs-791.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/audit-event-logs-791.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui audit-event-logs-791.md
-	mv audit-event-logs-791.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/audit-event-logs-791.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli audit-event-logs-791.md
-	mv audit-event-logs-791.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/audit-event-logs-791.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui audit-event-logs-791.md
-	mv audit-event-logs-791.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/audit-event-logs-791.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli audit-event-logs-791.md
-	mv audit-event-logs-791.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/audit-event-logs-791.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui audit-event-logs-791.md
-	mv audit-event-logs-791.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p audit-event-logs*.md originals
 	chmod 444 originals/*
@@ -178,54 +34,6 @@ originals/cli-image-management-797.md: cli-image-management.md
 	cp cli-image-management.md cli-image-management-797.md
 	xpub push discourse cli-image-management-797.md
 	xpub pull discourse 797 797
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/cli-image-management-797.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli cli-image-management-797.md
-	mv cli-image-management-797.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/cli-image-management-797.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui cli-image-management-797.md
-	mv cli-image-management-797.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/cli-image-management-797.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli cli-image-management-797.md
-	mv cli-image-management-797.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/cli-image-management-797.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui cli-image-management-797.md
-	mv cli-image-management-797.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/cli-image-management-797.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli cli-image-management-797.md
-	mv cli-image-management-797.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/cli-image-management-797.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui cli-image-management-797.md
-	mv cli-image-management-797.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/cli-image-management-797.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli cli-image-management-797.md
-	mv cli-image-management-797.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/cli-image-management-797.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui cli-image-management-797.md
-	mv cli-image-management-797.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/cli-image-management-797.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli cli-image-management-797.md
-	mv cli-image-management-797.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/cli-image-management-797.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui cli-image-management-797.md
-	mv cli-image-management-797.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/cli-image-management-797.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli cli-image-management-797.md
-	mv cli-image-management-797.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/cli-image-management-797.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui cli-image-management-797.md
-	mv cli-image-management-797.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p cli-image-management*.md originals
 	chmod 444 originals/*
@@ -235,54 +43,6 @@ originals/api-authentication-742.md: api-authentication.md
 	cp api-authentication.md api-authentication-742.md
 	xpub push discourse api-authentication-742.md
 	xpub pull discourse 742 742
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/api-authentication-742.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli api-authentication-742.md
-	mv api-authentication-742.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/api-authentication-742.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui api-authentication-742.md
-	mv api-authentication-742.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/api-authentication-742.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli api-authentication-742.md
-	mv api-authentication-742.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/api-authentication-742.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui api-authentication-742.md
-	mv api-authentication-742.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/api-authentication-742.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli api-authentication-742.md
-	mv api-authentication-742.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/api-authentication-742.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui api-authentication-742.md
-	mv api-authentication-742.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/api-authentication-742.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli api-authentication-742.md
-	mv api-authentication-742.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/api-authentication-742.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui api-authentication-742.md
-	mv api-authentication-742.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/api-authentication-742.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli api-authentication-742.md
-	mv api-authentication-742.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/api-authentication-742.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui api-authentication-742.md
-	mv api-authentication-742.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/api-authentication-742.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli api-authentication-742.md
-	mv api-authentication-742.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/api-authentication-742.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui api-authentication-742.md
-	mv api-authentication-742.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p api-authentication*.md originals
 	chmod 444 originals/*
@@ -292,54 +52,6 @@ originals/cli-advanced-tasks-793.md: cli-advanced-tasks.md
 	cp cli-advanced-tasks.md cli-advanced-tasks-793.md
 	xpub push discourse cli-advanced-tasks-793.md
 	xpub pull discourse 793 793
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/cli-advanced-tasks-793.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli cli-advanced-tasks-793.md
-	mv cli-advanced-tasks-793.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/cli-advanced-tasks-793.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui cli-advanced-tasks-793.md
-	mv cli-advanced-tasks-793.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/cli-advanced-tasks-793.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli cli-advanced-tasks-793.md
-	mv cli-advanced-tasks-793.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/cli-advanced-tasks-793.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui cli-advanced-tasks-793.md
-	mv cli-advanced-tasks-793.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/cli-advanced-tasks-793.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli cli-advanced-tasks-793.md
-	mv cli-advanced-tasks-793.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/cli-advanced-tasks-793.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui cli-advanced-tasks-793.md
-	mv cli-advanced-tasks-793.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/cli-advanced-tasks-793.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli cli-advanced-tasks-793.md
-	mv cli-advanced-tasks-793.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/cli-advanced-tasks-793.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui cli-advanced-tasks-793.md
-	mv cli-advanced-tasks-793.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/cli-advanced-tasks-793.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli cli-advanced-tasks-793.md
-	mv cli-advanced-tasks-793.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/cli-advanced-tasks-793.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui cli-advanced-tasks-793.md
-	mv cli-advanced-tasks-793.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/cli-advanced-tasks-793.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli cli-advanced-tasks-793.md
-	mv cli-advanced-tasks-793.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/cli-advanced-tasks-793.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui cli-advanced-tasks-793.md
-	mv cli-advanced-tasks-793.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p cli-advanced-tasks*.md originals
 	chmod 444 originals/*
@@ -349,54 +61,6 @@ originals/concepts-and-terms-785.md: concepts-and-terms.md
 	cp concepts-and-terms.md concepts-and-terms-785.md
 	xpub push discourse concepts-and-terms-785.md
 	xpub pull discourse 785 785
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/concepts-and-terms-785.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli concepts-and-terms-785.md
-	mv concepts-and-terms-785.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/concepts-and-terms-785.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui concepts-and-terms-785.md
-	mv concepts-and-terms-785.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/concepts-and-terms-785.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli concepts-and-terms-785.md
-	mv concepts-and-terms-785.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/concepts-and-terms-785.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui concepts-and-terms-785.md
-	mv concepts-and-terms-785.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/concepts-and-terms-785.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli concepts-and-terms-785.md
-	mv concepts-and-terms-785.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/concepts-and-terms-785.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui concepts-and-terms-785.md
-	mv concepts-and-terms-785.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/concepts-and-terms-785.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli concepts-and-terms-785.md
-	mv concepts-and-terms-785.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/concepts-and-terms-785.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui concepts-and-terms-785.md
-	mv concepts-and-terms-785.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/concepts-and-terms-785.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli concepts-and-terms-785.md
-	mv concepts-and-terms-785.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/concepts-and-terms-785.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui concepts-and-terms-785.md
-	mv concepts-and-terms-785.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/concepts-and-terms-785.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli concepts-and-terms-785.md
-	mv concepts-and-terms-785.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/concepts-and-terms-785.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui concepts-and-terms-785.md
-	mv concepts-and-terms-785.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p concepts-and-terms*.md originals
 	chmod 444 originals/*
@@ -406,54 +70,6 @@ originals/cli-composable-hardware-795.md: cli-composable-hardware.md
 	cp cli-composable-hardware.md cli-composable-hardware-795.md
 	xpub push discourse cli-composable-hardware-795.md
 	xpub pull discourse 795 795
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/cli-composable-hardware-795.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli cli-composable-hardware-795.md
-	mv cli-composable-hardware-795.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/cli-composable-hardware-795.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui cli-composable-hardware-795.md
-	mv cli-composable-hardware-795.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/cli-composable-hardware-795.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli cli-composable-hardware-795.md
-	mv cli-composable-hardware-795.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/cli-composable-hardware-795.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui cli-composable-hardware-795.md
-	mv cli-composable-hardware-795.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/cli-composable-hardware-795.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli cli-composable-hardware-795.md
-	mv cli-composable-hardware-795.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/cli-composable-hardware-795.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui cli-composable-hardware-795.md
-	mv cli-composable-hardware-795.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/cli-composable-hardware-795.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli cli-composable-hardware-795.md
-	mv cli-composable-hardware-795.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/cli-composable-hardware-795.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui cli-composable-hardware-795.md
-	mv cli-composable-hardware-795.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/cli-composable-hardware-795.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli cli-composable-hardware-795.md
-	mv cli-composable-hardware-795.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/cli-composable-hardware-795.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui cli-composable-hardware-795.md
-	mv cli-composable-hardware-795.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/cli-composable-hardware-795.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli cli-composable-hardware-795.md
-	mv cli-composable-hardware-795.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/cli-composable-hardware-795.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui cli-composable-hardware-795.md
-	mv cli-composable-hardware-795.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p cli-composable-hardware*.md originals
 	chmod 444 originals/*
@@ -463,54 +79,6 @@ originals/common-cli-tasks-794.md: common-cli-tasks.md
 	cp common-cli-tasks.md common-cli-tasks-794.md
 	xpub push discourse common-cli-tasks-794.md
 	xpub pull discourse 794 794
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/common-cli-tasks-794.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli common-cli-tasks-794.md
-	mv common-cli-tasks-794.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/common-cli-tasks-794.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui common-cli-tasks-794.md
-	mv common-cli-tasks-794.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/common-cli-tasks-794.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli common-cli-tasks-794.md
-	mv common-cli-tasks-794.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/common-cli-tasks-794.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui common-cli-tasks-794.md
-	mv common-cli-tasks-794.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/common-cli-tasks-794.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli common-cli-tasks-794.md
-	mv common-cli-tasks-794.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/common-cli-tasks-794.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui common-cli-tasks-794.md
-	mv common-cli-tasks-794.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/common-cli-tasks-794.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli common-cli-tasks-794.md
-	mv common-cli-tasks-794.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/common-cli-tasks-794.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui common-cli-tasks-794.md
-	mv common-cli-tasks-794.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/common-cli-tasks-794.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli common-cli-tasks-794.md
-	mv common-cli-tasks-794.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/common-cli-tasks-794.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui common-cli-tasks-794.md
-	mv common-cli-tasks-794.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/common-cli-tasks-794.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli common-cli-tasks-794.md
-	mv common-cli-tasks-794.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/common-cli-tasks-794.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui common-cli-tasks-794.md
-	mv common-cli-tasks-794.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p common-cli-tasks*.md originals
 	chmod 444 originals/*
@@ -520,54 +88,6 @@ originals/troubleshooting-837.md: troubleshooting.md
 	cp troubleshooting.md troubleshooting-837.md
 	xpub push discourse troubleshooting-837.md
 	xpub pull discourse 837 837
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/troubleshooting-837.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli troubleshooting-837.md
-	mv troubleshooting-837.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/troubleshooting-837.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui troubleshooting-837.md
-	mv troubleshooting-837.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/troubleshooting-837.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli troubleshooting-837.md
-	mv troubleshooting-837.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/troubleshooting-837.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui troubleshooting-837.md
-	mv troubleshooting-837.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/troubleshooting-837.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli troubleshooting-837.md
-	mv troubleshooting-837.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/troubleshooting-837.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui troubleshooting-837.md
-	mv troubleshooting-837.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/troubleshooting-837.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli troubleshooting-837.md
-	mv troubleshooting-837.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/troubleshooting-837.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui troubleshooting-837.md
-	mv troubleshooting-837.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/troubleshooting-837.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli troubleshooting-837.md
-	mv troubleshooting-837.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/troubleshooting-837.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui troubleshooting-837.md
-	mv troubleshooting-837.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/troubleshooting-837.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli troubleshooting-837.md
-	mv troubleshooting-837.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/troubleshooting-837.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui troubleshooting-837.md
-	mv troubleshooting-837.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p troubleshooting*.md originals
 	chmod 444 originals/*
@@ -577,54 +97,6 @@ originals/writing-guide-747.md: writing-guide.md
 	cp writing-guide.md writing-guide-747.md
 	xpub push discourse writing-guide-747.md
 	xpub pull discourse 747 747
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/writing-guide-747.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli writing-guide-747.md
-	mv writing-guide-747.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/writing-guide-747.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui writing-guide-747.md
-	mv writing-guide-747.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/writing-guide-747.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli writing-guide-747.md
-	mv writing-guide-747.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/writing-guide-747.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui writing-guide-747.md
-	mv writing-guide-747.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/writing-guide-747.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli writing-guide-747.md
-	mv writing-guide-747.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/writing-guide-747.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui writing-guide-747.md
-	mv writing-guide-747.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/writing-guide-747.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli writing-guide-747.md
-	mv writing-guide-747.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/writing-guide-747.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui writing-guide-747.md
-	mv writing-guide-747.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/writing-guide-747.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli writing-guide-747.md
-	mv writing-guide-747.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/writing-guide-747.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui writing-guide-747.md
-	mv writing-guide-747.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/writing-guide-747.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli writing-guide-747.md
-	mv writing-guide-747.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/writing-guide-747.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui writing-guide-747.md
-	mv writing-guide-747.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p writing*.md
 	rm writing-guide-*.md
@@ -634,54 +106,6 @@ originals/cli-interface-management-*.md: cli-interface-management.md
 	cp cli-interface-management.md cli-interface-management-798.md
 	xpub push discourse cli-interface-management-798.md
 	xpub pull discourse 798 798
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/cli-interface-management-798.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli cli-interface-management-798.md
-	mv cli-interface-management-798.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/cli-interface-management-798.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui cli-interface-management-798.md
-	mv cli-interface-management-798.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/cli-interface-management-798.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli cli-interface-management-798.md
-	mv cli-interface-management-798.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/cli-interface-management-798.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui cli-interface-management-798.md
-	mv cli-interface-management-798.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/cli-interface-management-798.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli cli-interface-management-798.md
-	mv cli-interface-management-798.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/cli-interface-management-798.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui cli-interface-management-798.md
-	mv cli-interface-management-798.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/cli-interface-management-798.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli cli-interface-management-798.md
-	mv cli-interface-management-798.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/cli-interface-management-798.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui cli-interface-management-798.md
-	mv cli-interface-management-798.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/cli-interface-management-798.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli cli-interface-management-798.md
-	mv cli-interface-management-798.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/cli-interface-management-798.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui cli-interface-management-798.md
-	mv cli-interface-management-798.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/cli-interface-management-798.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli cli-interface-management-798.md
-	mv cli-interface-management-798.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/cli-interface-management-798.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui cli-interface-management-798.md
-	mv cli-interface-management-798.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p cli-interface-management*.md originals
 	chmod 444 originals/*
@@ -691,54 +115,6 @@ originals/maas-cli-802: maas-cli.md
 	cp maas-cli.md maas-cli-802.md
 	xpub push discourse maas-cli-802.md
 	xpub pull discourse 802 802
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/maas-cli-802.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli maas-cli-802.md
-	mv maas-cli-802.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/maas-cli-802.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui maas-cli-802.md
-	mv maas-cli-802.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/maas-cli-802.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli maas-cli-802.md
-	mv maas-cli-802.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/maas-cli-802.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui maas-cli-802.md
-	mv maas-cli-802.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/maas-cli-802.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli maas-cli-802.md
-	mv maas-cli-802.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/maas-cli-802.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui maas-cli-802.md
-	mv maas-cli-802.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/maas-cli-802.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli maas-cli-802.md
-	mv maas-cli-802.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/maas-cli-802.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui maas-cli-802.md
-	mv maas-cli-802.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/maas-cli-802.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli maas-cli-802.md
-	mv maas-cli-802.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/maas-cli-802.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui maas-cli-802.md
-	mv maas-cli-802.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/maas-cli-802.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli maas-cli-802.md
-	mv maas-cli-802.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/maas-cli-802.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui maas-cli-802.md
-	mv maas-cli-802.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p maas-cli*.md originals
 	chmod 444 originals/*
@@ -748,54 +124,6 @@ originals/cli-kernel-management-799.md: cli-kernel-management.md
 	cp cli-kernel-management.md cli-kernel-management-799.md
 	xpub push discourse cli-kernel-management-799.md
 	xpub pull discourse 799 799
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/cli-kernel-management-799.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli cli-kernel-management-799.md
-	mv cli-kernel-management-799.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/cli-kernel-management-799.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui cli-kernel-management-799.md
-	mv cli-kernel-management-799.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/cli-kernel-management-799.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli cli-kernel-management-799.md
-	mv cli-kernel-management-799.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/cli-kernel-management-799.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui cli-kernel-management-799.md
-	mv cli-kernel-management-799.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/cli-kernel-management-799.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli cli-kernel-management-799.md
-	mv cli-kernel-management-799.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/cli-kernel-management-799.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui cli-kernel-management-799.md
-	mv cli-kernel-management-799.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/cli-kernel-management-799.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli cli-kernel-management-799.md
-	mv cli-kernel-management-799.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/cli-kernel-management-799.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui cli-kernel-management-799.md
-	mv cli-kernel-management-799.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/cli-kernel-management-799.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli cli-kernel-management-799.md
-	mv cli-kernel-management-799.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/cli-kernel-management-799.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui cli-kernel-management-799.md
-	mv cli-kernel-management-799.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/cli-kernel-management-799.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli cli-kernel-management-799.md
-	mv cli-kernel-management-799.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/cli-kernel-management-799.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui cli-kernel-management-799.md
-	mv cli-kernel-management-799.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p cli-kernel-management*.md originals
 	chmod 444 originals/*
@@ -806,54 +134,6 @@ originals/the-cli-cookbook-2218.md: the-cli-cookbook.md
 	xpub push discourse the-cli-cookbook-2218.md
 	xpub pull discourse 2218 2218
 	chmod 644 originals/*
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/the-cli-cookbook-2218.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli the-cli-cookbook-2218.md
-	mv the-cli-cookbook-2218.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/the-cli-cookbook-2218.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui the-cli-cookbook-2218.md
-	mv the-cli-cookbook-2218.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/the-cli-cookbook-2218.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli the-cli-cookbook-2218.md
-	mv the-cli-cookbook-2218.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/the-cli-cookbook-2218.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui the-cli-cookbook-2218.md
-	mv the-cli-cookbook-2218.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/the-cli-cookbook-2218.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli the-cli-cookbook-2218.md
-	mv the-cli-cookbook-2218.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/the-cli-cookbook-2218.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui the-cli-cookbook-2218.md
-	mv the-cli-cookbook-2218.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/the-cli-cookbook-2218.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli the-cli-cookbook-2218.md
-	mv the-cli-cookbook-2218.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/the-cli-cookbook-2218.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui the-cli-cookbook-2218.md
-	mv the-cli-cookbook-2218.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/the-cli-cookbook-2218.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli the-cli-cookbook-2218.md
-	mv the-cli-cookbook-2218.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/the-cli-cookbook-2218.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui the-cli-cookbook-2218.md
-	mv the-cli-cookbook-2218.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/the-cli-cookbook-2218.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli the-cli-cookbook-2218.md
-	mv the-cli-cookbook-2218.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/the-cli-cookbook-2218.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui the-cli-cookbook-2218.md
-	mv the-cli-cookbook-2218.html maas-offline/snap/2.9/ui/
 	cp -p the-cli-cookbook*.md originals
 	chmod 444 originals/*
 	rm the-cli-cookbook-*.md
@@ -862,54 +142,6 @@ originals/tips-tricks-and-traps-1506.md: tips-tricks-and-traps.md
 	cp tips-tricks-and-traps.md tips-tricks-and-traps-1506.md
 	xpub push discourse tips-tricks-and-traps-1506.md
 	xpub pull discourse 1506 1506
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/tips-tricks-and-traps-1506.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli tips-tricks-and-traps-1506.md
-	mv tips-tricks-and-traps-1506.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/tips-tricks-and-traps-1506.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui tips-tricks-and-traps-1506.md
-	mv tips-tricks-and-traps-1506.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/tips-tricks-and-traps-1506.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli tips-tricks-and-traps-1506.md
-	mv tips-tricks-and-traps-1506.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/tips-tricks-and-traps-1506.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui tips-tricks-and-traps-1506.md
-	mv tips-tricks-and-traps-1506.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/tips-tricks-and-traps-1506.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli tips-tricks-and-traps-1506.md
-	mv tips-tricks-and-traps-1506.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/tips-tricks-and-traps-1506.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui tips-tricks-and-traps-1506.md
-	mv tips-tricks-and-traps-1506.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/tips-tricks-and-traps-1506.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli tips-tricks-and-traps-1506.md
-	mv tips-tricks-and-traps-1506.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/tips-tricks-and-traps-1506.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui tips-tricks-and-traps-1506.md
-	mv tips-tricks-and-traps-1506.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/tips-tricks-and-traps-1506.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli tips-tricks-and-traps-1506.md
-	mv tips-tricks-and-traps-1506.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/tips-tricks-and-traps-1506.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui tips-tricks-and-traps-1506.md
-	mv tips-tricks-and-traps-1506.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/tips-tricks-and-traps-1506.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli tips-tricks-and-traps-1506.md
-	mv tips-tricks-and-traps-1506.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/tips-tricks-and-traps-1506.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui tips-tricks-and-traps-1506.md
-	mv tips-tricks-and-traps-1506.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p tips-tricks-and-traps*.md
 	chmod 444 originals/*
@@ -919,54 +151,6 @@ originals/language-details-contributing-to-maas-docs-745.md: language-details-co
 	cp language-details-contributing-to-maas-docs.md language-details-contributing-to-maas-docs-745.md
 	xpub push discourse language-details-contributing-to-maas-docs-745.md
 	xpub pull discourse 745 745
-	cp templates/deb/2.7/cli/template.html ./template.html
-	sed -i 's/zork/language-details-contributing-to-maas-docs-745.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-cli language-details-contributing-to-maas-docs-745.md
-	mv language-details-contributing-to-maas-docs-745.html ./maas-offline/deb/2.7/cli/
-	cp templates/deb/2.7/ui/template.html ./template.html
-	sed -i 's/zork/language-details-contributing-to-maas-docs-745.html/g' ./template.html
-	xpub convert dc2html -t deb-2-7-ui language-details-contributing-to-maas-docs-745.md
-	mv language-details-contributing-to-maas-docs-745.html maas-offline/deb/2.7/ui/
-	cp templates/deb/2.8/cli/template.html ./template.html
-	sed -i 's/zork/language-details-contributing-to-maas-docs-745.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-cli language-details-contributing-to-maas-docs-745.md
-	mv language-details-contributing-to-maas-docs-745.html maas-offline/deb/2.8/cli/
-	cp templates/deb/2.8/ui/template.html ./template.html
-	sed -i 's/zork/language-details-contributing-to-maas-docs-745.html/g' ./template.html
-	xpub convert dc2html -t deb-2-8-ui language-details-contributing-to-maas-docs-745.md
-	mv language-details-contributing-to-maas-docs-745.html maas-offline/deb/2.8/ui/
-	cp templates/deb/2.9/cli/template.html ./template.html
-	sed -i 's/zork/language-details-contributing-to-maas-docs-745.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-cli language-details-contributing-to-maas-docs-745.md
-	mv language-details-contributing-to-maas-docs-745.html maas-offline/deb/2.9/cli/
-	cp templates/deb/2.9/ui/template.html ./template.html
-	sed -i 's/zork/language-details-contributing-to-maas-docs-745.html/g' ./template.html
-	xpub convert dc2html -t deb-2-9-ui language-details-contributing-to-maas-docs-745.md
-	mv language-details-contributing-to-maas-docs-745.html maas-offline/deb/2.9/ui/
-	cp templates/snap/2.7/cli/template.html ./template.html
-	sed -i 's/zork/language-details-contributing-to-maas-docs-745.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-cli language-details-contributing-to-maas-docs-745.md
-	mv language-details-contributing-to-maas-docs-745.html maas-offline/snap/2.7/cli/
-	cp templates/snap/2.7/ui/template.html ./template.html
-	sed -i 's/zork/language-details-contributing-to-maas-docs-745.html/g' ./template.html
-	xpub convert dc2html -t snap-2-7-ui language-details-contributing-to-maas-docs-745.md
-	mv language-details-contributing-to-maas-docs-745.html maas-offline/snap/2.7/ui/
-	cp templates/snap/2.8/cli/template.html ./template.html
-	sed -i 's/zork/language-details-contributing-to-maas-docs-745.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-cli language-details-contributing-to-maas-docs-745.md
-	mv language-details-contributing-to-maas-docs-745.html maas-offline/snap/2.8/cli/
-	cp templates/snap/2.8/ui/template.html ./template.html
-	sed -i 's/zork/language-details-contributing-to-maas-docs-745.html/g' ./template.html
-	xpub convert dc2html -t snap-2-8-ui language-details-contributing-to-maas-docs-745.md
-	mv language-details-contributing-to-maas-docs-745.html maas-offline/snap/2.8/ui/
-	cp templates/snap/2.9/cli/template.html ./template.html
-	sed -i 's/zork/language-details-contributing-to-maas-docs-745.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-cli language-details-contributing-to-maas-docs-745.md
-	mv language-details-contributing-to-maas-docs-745.html maas-offline/snap/2.9/cli/
-	cp templates/snap/2.9/ui/template.html ./template.html
-	sed -i 's/zork/language-details-contributing-to-maas-docs-745.html/g' ./template.html
-	xpub convert dc2html -t snap-2-9-ui language-details-contributing-to-maas-docs-745.md
-	mv language-details-contributing-to-maas-docs-745.html maas-offline/snap/2.9/ui/
 	chmod 644 originals/*
 	cp -p language-details-contributing-to-maas*.md
 	rm language-details-contributing-to-maas-docs-*.md
@@ -1166,6 +350,8 @@ originals/kernel-boot-options-deb-2-7-cli-2784.md: kernel-boot-options.md
 	xpub push discourse -t snap-2-9-cli kernel-boot-options-snap-2-9-cli-2782.md
 	xpub push discourse -t snap-2-9-ui kernel-boot-options-snap-2-9-ui-2783.md
 	xpub pull discourse 2778 2789
+	mv kernel-boot-options-deb-2-7-cli-2784.html mass-offline/deb/2.7/cli/
+	cp kernel-boot-options.md kernel-boot-options-snap-2-8-cli-2780.md
 	chmod 644 originals/*
 	cp -p kernel-boot-options*.md
 	chmod 444 originals/*
@@ -1198,7 +384,7 @@ originals/event-logs-deb-2-7-cli-3388.md: event-logs.md
 	xpub push discourse -t snap-2-9-ui event-logs-snap-2-9-ui-3387.md
 	xpub pull discourse 3382 3392
 	chmod 644 originals/*
-	cp -p event-logs*.md
+	cp -p event-logs*.md originals
 	chmod 444 originals/*
 	rm event-logs-*.md
 
@@ -1229,7 +415,7 @@ originals/http-access-log-deb-2-7-cli-3400.md: http-access-log.md
 	xpub push discourse -t snap-2-9-ui http-access-log-snap-2-9-ui-3399.md
 	xpub pull discourse 3394 3405
 	chmod 644 originals/*
-	cp -p http-access-log*.md
+	cp -p http-access-log*.md originals
 	chmod 444 originals/*
 	rm http-access-log-*.md
 
@@ -1260,7 +446,7 @@ originals/http-error-log-deb-2-7-cli-3412.md: http-error-log.md
 	xpub push discourse -t snap-2-9-ui http-error-log-snap-2-9-ui-3411.md
 	xpub pull discourse 3406 3417
 	chmod 644 originals/*
-	cp -p http-error-log*.md
+	cp -p http-error-log*.md originals
 	chmod 444 originals/*
 	rm http-error-log-*.md
 
@@ -1291,7 +477,7 @@ originals/maas-log-file-deb-2-7-cli-3424.md: maas-log-file.md
 	xpub push discourse -t snap-2-9-ui maas-log-file-snap-2-9-ui-3423.md
 	xpub pull discourse 3418 3429
 	chmod 644 originals/*
-	cp -p maas-log-file*.md
+	cp -p maas-log-file*.md originals
 	chmod 444 originals/*
 	rm maas-log-file-*.md
 
@@ -1322,7 +508,7 @@ originals/maas-rsyslog-files-deb-2-7-cli-3436.md: maas-rsyslog-files.md
 	xpub push discourse -t snap-2-9-ui maas-rsyslog-files-snap-2-9-ui-3435.md
 	xpub pull discourse 3430 3441
 	chmod 644 originals/*
-	cp -p maas-rsyslog-files*.md
+	cp -p maas-rsyslog-files*.md originals
 	chmod 444 originals/*
 	rm maas-rsyslog-files-*.md
 
@@ -1353,7 +539,7 @@ originals/machine-logs-deb-2-7-cli-3448.md: machine-logs.md
 	xpub push discourse -t snap-2-9-ui machine-logs-snap-2-9-ui-3447.md
 	xpub pull discourse 3442 3453
 	chmod 644 originals/*
-	cp -p machine-logs*.md
+	cp -p machine-logs*.md originals
 	chmod 444 originals/*
 	rm machine-logs-*.md
 
@@ -1384,7 +570,7 @@ originals/proxy-log-deb-2-7-cli-3460.md: proxy-log.md
 	xpub push discourse -t snap-2-9-ui proxy-log-snap-2-9-ui-3459.md
 	xpub pull discourse 3454 3465
 	chmod 644 originals/*
-	cp -p proxy-log*.md
+	cp -p proxy-log*.md originals
 	chmod 444 originals/*
 	rm proxy-log-*.md
 
@@ -1415,7 +601,7 @@ originals/the-rackd-log-file-deb-2-7-cli-3472.md: the-rackd-log-file.md
 	xpub push discourse -t snap-2-9-ui the-rackd-log-file-snap-2-9-ui-3471.md
 	xpub pull discourse 3466 3477
 	chmod 644 originals/*
-	cp -p the-rackd-log-file*.md
+	cp -p the-rackd-log-file*.md originals
 	chmod 444 originals/*
 	rm the-rackd-log-file-*.md
 
@@ -1446,7 +632,7 @@ originals/the-regiond-log-file-deb-2-7-cli-3484.md: the-regiond-log-file.md
 	xpub push discourse -t snap-2-9-ui the-regiond-log-file-snap-2-9-ui-3483.md
 	xpub pull discourse 2478 3489
 	chmod 644 originals/*
-	cp -p the-regiond-log-file*.md
+	cp -p the-regiond-log-file*.md originals
 	chmod 444 originals/*
 	rm the-regiond-log-file-*.md
 
@@ -1477,7 +663,7 @@ originals/interactive-search-deb-2-9-ui-2717.md: interactive-search.md
 	xpub push discourse -t snap-2-9-ui interactive-search-snap-2-9-ui-2711.md
 	xpub pull discourse 2706 2717
 	chmod 644 originals/*
-	cp -p interactive-search*.md
+	cp -p interactive-search*.md originals
 	chmod 444 originals/*
 	rm interactive-search-*.md
  
@@ -1508,7 +694,7 @@ originals/controllers-deb-2-8-ui-2727.md: controllers.md
 	xpub push discourse -t snap-2-9-ui controllers-snap-2-9-ui-2723.md
 	xpub pull discourse 2718 2729
 	chmod 644 originals/*
-	cp -p controllers*.md
+	cp -p controllers*.md originals
 	chmod 444 originals/*
 	rm controllers-*.md
  
@@ -1539,7 +725,7 @@ originals/adding-a-vm-host-deb-2-9-ui-2297.md: adding-a-vm-host.md
 	xpub push discourse -t snap-2-9-ui adding-a-vm-host-snap-2-9-ui-2291.md
 	xpub pull discourse 2286 2297
 	chmod 644 originals/*
-	cp -p adding-a-vm-host*.md
+	cp -p adding-a-vm-host*.md originals
 	chmod 444 originals/*
 	rm adding-a-vm-host-*.md
  
@@ -1570,7 +756,7 @@ originals/user-accounts-deb-2-9-cli-3208.md: user-accounts.md
 	xpub push discourse -t snap-2-9-ui user-accounts-snap-2-9-ui-3203.md
 	xpub pull discourse 3198 3209
 	chmod 644 originals/*
-	cp -p user-accounts*.md
+	cp -p user-accounts*.md originals
 	chmod 444 originals/*
 	rm user-accounts-*.md
  
@@ -1601,7 +787,7 @@ originals/resource-pools-snap-2-8-cli-3080.md: resource-pools.md
 	xpub push discourse -t snap-2-9-ui resource-pools-snap-2-9-ui-3083.md
 	xpub pull discourse 3078 3089
 	chmod 644 originals/*
-	cp -p resource-pools*.md
+	cp -p resource-pools*.md originals
 	chmod 444 originals/*
 	rm resource-pools-*.md
  
@@ -1632,7 +818,7 @@ originals/network-discovery-snap-2-8-ui-2925.md: network-discovery.md
 	xpub push discourse -t snap-2-9-ui network-discovery-snap-2-9-ui-2927.md
 	xpub pull discourse 2922 2933
 	chmod 644 originals/*
-	cp -p network-discovery*.md
+	cp -p network-discovery*.md originals
 	chmod 444 originals/*
 	rm network-discovery-*.md
  
@@ -1663,7 +849,7 @@ originals/storage-snap-2-9-ui-3107.md: storage.md
 	xpub push discourse -t snap-2-9-ui storage-snap-2-9-ui-3107.md
 	xpub pull discourse 3102 3113
 	chmod 644 originals/*
-	cp -p storage*.md
+	cp -p storage*.md originals
 	chmod 444 originals/*
 	rm storage-*.md
  
@@ -1694,7 +880,7 @@ originals/local-image-mirror-snap-2-8-ui-2805.md: local-image-mirror.md
 	xpub push discourse -t snap-2-9-ui local-image-mirror-snap-2-9-ui-2807.md
 	xpub pull discourse 2802 2813
 	chmod 644 originals/*
-	cp -p local-image-mirror*.md
+	cp -p local-image-mirror*.md originals
 	chmod 444 originals/*
 	rm local-image-mirror-*.md
  
@@ -1725,7 +911,7 @@ originals/custom-machine-setup-snap-2-7-cli-2586.md: custom-machine-setup.md
 	xpub push discourse -t snap-2-9-ui custom-machine-setup-snap-2-9-ui-2591.md
 	xpub pull discourse 2586 2597
 	chmod 644 originals/*
-	cp -p custom-machine-setup*.md
+	cp -p custom-machine-setup*.md originals
 	chmod 444 originals/*
 	rm custom-machine-setup-*.md
  
@@ -1756,7 +942,7 @@ originals/managing-dhcp-snap-2-9-cli-2902.md: managing-dhcp.md
 	xpub push discourse -t snap-2-9-ui managing-dhcp-snap-2-9-ui-2903.md
 	xpub pull discourse 2898 2909
 	chmod 644 originals/*
-	cp -p managing-dhcp*.md
+	cp -p managing-dhcp*.md originals
 	chmod 444 originals/*
 	rm managing-dhcp-*.md
  
@@ -1787,7 +973,7 @@ originals/vm-host-networking-deb-2-7-cli-3216.md: vm-host-networking.md
 	xpub push discourse -t snap-2-9-ui vm-host-networking-snap-2-9-ui-3215.md
 	xpub pull discourse 3210 3221
 	chmod 644 originals/*
-	cp -p vm-host-networking*.md
+	cp -p vm-host-networking*.md originals
 	chmod 444 originals/*
 	rm vm-host-networking-*.md
  
@@ -1818,7 +1004,7 @@ originals/vmware-images-snap-2-9-cli-3238.md: vmware-images.md
 	xpub push discourse -t snap-2-9-ui vmware-images-snap-2-9-ui-3239.md
 	xpub pull discourse 3234 3245
 	chmod 644 originals/*
-	cp -p vmware-images*.md
+	cp -p vmware-images*.md originals
 	chmod 444 originals/*
 	rm vmware-images-*.md
  
@@ -1849,7 +1035,7 @@ originals/managing-stp-deb-2-8-cli-2918.md: managing-stp.md
 	xpub push discourse -t snap-2-9-ui managing-stp-snap-2-9-ui-2915.md
 	xpub pull discourse 2910 2921
 	chmod 644 originals/*
-	cp -p managing-stp*.md
+	cp -p managing-stp*.md originals
 	chmod 444 originals/*
 	rm managing-stp-*.md
  
@@ -1880,7 +1066,7 @@ originals/postgresql-ha-hot-standby-deb-2-7-cli-3000.md: postgresql-ha-hot-stand
 	xpub push discourse -t snap-2-9-ui postgresql-ha-hot-standby-snap-2-9-ui-2999.md
 	xpub pull discourse 2994 3005
 	chmod 644 originals/*
-	cp -p postgresql-ha-hot-standby*.md
+	cp -p postgresql-ha-hot-standby*.md originals
 	chmod 444 originals/*
 	rm postgresql-ha-hot-standby-*.md
  
@@ -1911,7 +1097,7 @@ originals/ntp-services-snap-2-7-ui-2959.md: ntp-services.md
 	xpub push discourse -t snap-2-9-ui ntp-services-snap-2-9-ui-2963.md
 	xpub pull discourse 2958 2969
 	chmod 644 originals/*
-	cp -p ntp-services*.md
+	cp -p ntp-services*.md originals
 	chmod 444 originals/*
 	rm ntp-services-*.md
  
@@ -1942,7 +1128,7 @@ originals/vmware-vmfs-datastores-deb-2-9-cli-3256.md: vmware-vmfs-datastores.md
 	xpub push discourse -t snap-2-9-ui vmware-vmfs-datastores-snap-2-9-ui-3251.md
 	xpub pull discourse 3246 3257
 	chmod 644 originals/*
-	cp -p vmware-vmfs-datastores*.md
+	cp -p vmware-vmfs-datastores*.md originals
 	chmod 444 originals/*
 	rm vmware-vmfs-datastores-*.md
  
@@ -1973,7 +1159,7 @@ originals/proxy-deb-2-8-cli-3038.md: proxy.md
 	xpub push discourse -t snap-2-9-ui proxy-snap-2-9-ui-3035.md
 	xpub pull discourse 3030 3041
 	chmod 644 originals/*
-	cp -p proxy*.md
+	cp -p proxy*.md originals
 	chmod 444 originals/*
 	rm proxy-*.md
  
@@ -2004,7 +1190,7 @@ originals/hardware-testing-deb-2-8-cli-2678.md: hardware-testing.md
 	xpub push discourse -t snap-2-9-ui hardware-testing-snap-2-9-ui-2675.md
 	xpub pull discourse 2670 2681
 	chmod 644 originals/*
-	cp -p hardware-testing*.md
+	cp -p hardware-testing*.md originals
 	chmod 444 originals/*
 	rm hardware-testing-*.md
  
@@ -2035,7 +1221,7 @@ originals/enabling-maas-snap-2-8-ui-2625.md: enabling-maas.md
 	xpub push discourse -t snap-2-9-ui enabling-maas-snap-2-9-ui-2627.md
 	xpub pull discourse 2622 2633
 	chmod 644 originals/*
-	cp -p enabling-maas*.md
+	cp -p enabling-maas*.md originals
 	chmod 444 originals/*
 	rm enabling-maas-*.md
  
@@ -2066,7 +1252,7 @@ originals/vm-host-storage-pools-deb-2-7-ui-3229.md: vm-host-storage-pools.md
 	xpub push discourse -t snap-2-9-ui vm-host-storage-pools-snap-2-9-ui-3227.md
 	xpub pull discourse 3222 3233
 	chmod 644 originals/*
-	cp -p vm-host-storage-pools*.md
+	cp -p vm-host-storage-pools*.md originals
 	chmod 444 originals/*
 	rm vm-host-storage-pools-*.md
  
@@ -2097,7 +1283,7 @@ originals/network-testing-snap-2-7-ui-2935.md: network-testing.md
 	xpub push discourse -t snap-2-9-ui network-testing-snap-2-9-ui-2939.md
 	xpub pull discourse 2934 2945
 	chmod 644 originals/*
-	cp -p network-testing*.md
+	cp -p network-testing*.md originals
 	chmod 444 originals/*
 	rm network-testing-*.md
  
@@ -2128,7 +1314,7 @@ originals/networking-deb-2-7-ui-2953.md: networking.md
 	xpub push discourse -t snap-2-9-ui networking-snap-2-9-ui-2951.md
 	xpub pull discourse 2946 2957
 	chmod 644 originals/*
-	cp -p networking*.md
+	cp -p networking*.md originals
 	chmod 444 originals/*
 	rm networking-*.md
  
@@ -2159,7 +1345,7 @@ originals/explore-maas-deb-2-7-ui-2641.md: explore-maas.md
 	xpub push discourse -t snap-2-9-ui explore-maas-snap-2-9-ui-2639.md
 	xpub pull discourse 2634 2645
 	chmod 644 originals/*
-	cp -p explore-maas*.md
+	cp -p explore-maas*.md originals
 	chmod 444 originals/*
 	rm explore-maas-*.md
  
@@ -2190,7 +1376,7 @@ originals/zone-examples-snap-2-7-cli-3270.md: zone-examples.md
 	xpub push discourse -t snap-2-9-ui zone-examples-snap-2-9-ui-3275.md
 	xpub pull discourse 3270 3281
 	chmod 644 originals/*
-	cp -p zone-examples*.md
+	cp -p zone-examples*.md originals
 	chmod 444 originals/*
 	rm zone-examples-*.md
  
@@ -2221,7 +1407,7 @@ originals/machines-snap-2-8-cli-2732.md: machines.md
 	xpub push discourse -t snap-2-9-ui machines-snap-2-9-ui-2735.md
 	xpub pull discourse 2730 2741
 	chmod 644 originals/*
-	cp -p machines*.md
+	cp -p machines*.md originals
 	chmod 444 originals/*
 	rm machines-*.md
  
@@ -2252,7 +1438,7 @@ originals/test-logs-snap-2-8-ui-3129.md: test-logs.md
 	xpub push discourse -t snap-2-9-ui test-logs-snap-2-9-ui-3131.md
 	xpub pull discourse 3126 3137
 	chmod 644 originals/*
-	cp -p test-logs*.md
+	cp -p test-logs*.md originals
 	chmod 444 originals/*
 	rm test-logs-*.md
  
@@ -2283,7 +1469,7 @@ originals/maas-image-builder-snap-2-9-cli-2854.md: maas-image-builder.md
 	xpub push discourse -t snap-2-9-ui maas-image-builder-snap-2-9-ui-2855.md
 	xpub pull discourse 2850 2861
 	chmod 644 originals/*
-	cp -p maas-image-builder*.md
+	cp -p maas-image-builder*.md originals
 	chmod 444 originals/*
 	rm maas-image-builder-*.md
  
@@ -2314,7 +1500,7 @@ originals/configuring-tls-encryption-deb-2-7-cli-2544.md: configuring-tls-encryp
 	xpub push discourse -t snap-2-9-ui configuring-tls-encryption-snap-2-9-ui-2543.md
 	xpub pull discourse 2538 2549
 	chmod 644 originals/*
-	cp -p configuring-tls-encryption*.md
+	cp -p configuring-tls-encryption*.md originals
 	chmod 444 originals/*
 	rm configuring-tls-encryption-*.md
  
@@ -2345,7 +1531,7 @@ originals/ipv6-addressing-deb-2-7-cli-2772.md: ipv6-addressing.md
 	xpub push discourse -t snap-2-9-ui ipv6-addressing-snap-2-9-ui-2771.md
 	xpub pull discourse 2766 2777
 	chmod 644 originals/*
-	cp -p ipv6-addressing*.md
+	cp -p ipv6-addressing*.md originals
 	chmod 444 originals/*
 	rm ipv6-addressing-*.md
  
@@ -2375,11 +1561,11 @@ originals/hardening-your-maas-installation-deb-2-7-cli-2664.md: hardening-your-m
 	xpub push discourse -t snap-2-9-ui hardening-your-maas-installation-snap-2-9-ui-2663.md
 	xpub pull discourse 2658 2669
 	chmod 644 originals/*
-	cp -p hardening-your-maas-installation*.md originals
+	cp -p hardening-your-maas-installation*.md originals originals
 	chmod 444 originals/*
 	rm hardening-your-maas-installation-*.md
  
-originals/ubuntu-kernels-snapubun-cli-3178.md: ubuntu-kernels.md
+originals/ubuntu-kernels-snap-2-9-cli-3178.md: ubuntu-kernels.md
 	cp ubuntu-kernels.md ubuntu-kernels-deb-2-7-cli-3180.md
 	cp ubuntu-kernels.md ubuntu-kernels-deb-2-7-ui-3181.md
 	cp ubuntu-kernels.md ubuntu-kernels-deb-2-8-cli-3182.md
@@ -2406,7 +1592,7 @@ originals/ubuntu-kernels-snapubun-cli-3178.md: ubuntu-kernels.md
 	xpub push discourse -t snap-2-9-ui ubuntu-kernels-snap-2-9-ui-3179.md
 	xpub pull discourse 3174 3185
 	chmod 444 originals/*
-	cp -p ubuntu-kernels*.md
+	cp -p ubuntu-kernels*.md originals
 	chmod 644 originals/*
 	rm ubuntu-kernels-*.md
  
@@ -2437,7 +1623,7 @@ originals/add-machines-deb-2-8-ui-2283.md: add-machines.md
 	xpub push discourse -t snap-2-9-ui add-machines-snap-2-9-ui-2279.md
 	xpub pull discourse 2274 2285
 	chmod 644 originals/*
-	cp -p add-machines*.md
+	cp -p add-machines*.md originals
 	chmod 444 originals/*
 	rm add-machines-*.md
  
@@ -2468,7 +1654,7 @@ originals/select-and-import-images-snap-2-8-ui-3093.md: select-and-import-images
 	xpub push discourse -t snap-2-9-ui select-and-import-images-snap-2-9-ui-3095.md
 	xpub pull discourse 3090 3101
 	chmod 644 originals/*
-	cp -p select-and-import-images*.md
+	cp -p select-and-import-images*.md originals
 	chmod 444 originals/*
 	rm select-and-import-images-*.md
  
@@ -2499,7 +1685,7 @@ originals/images-deb-2-8-cli-2702.md: images.md
 	xpub push discourse -t snap-2-9-ui images-snap-2-9-ui-2699.md
 	xpub pull discourse 2694 2705
 	chmod 644 originals/*
-	cp -p images*.md
+	cp -p images*.md originals
 	chmod 444 originals/*
 	rm images-*.md
  
@@ -2530,7 +1716,7 @@ originals/power-management-snap-2-9-ui-3011.md: power-management.md
 	xpub push discourse -t snap-2-9-ui power-management-snap-2-9-ui-3011.md
 	xpub pull discourse 3006 3017
 	chmod 644 originals/*
-	cp -p power-management*.md
+	cp -p power-management*.md originals
 	chmod 444 originals/*
 	rm power-management-*.md
  
@@ -2561,7 +1747,7 @@ originals/maas-logging-deb-2-8-cli-2870.md: maas-logging.md
 	xpub push discourse -t snap-2-9-ui maas-logging-snap-2-9-ui-2867.md
 	xpub pull discourse 2862 2873
 	chmod 644 originals/*
-	cp -p maas-logging*.md
+	cp -p maas-logging*.md originals
 	chmod 444 originals/*
 	rm maas-logging-*.md
  
@@ -2592,7 +1778,7 @@ originals/backup-deb-2-7-cli-2340.md: backup.md
 	xpub push discourse -t snap-2-9-ui backup-snap-2-9-ui-2339.md
 	xpub pull discourse 2334 2352
 	chmod 644 originals/*
-	cp -p backup*.md
+	cp -p backup*.md originals
 	chmod 444 originals/*
 	rm backup-*.md
  
@@ -2623,7 +1809,7 @@ originals/give-me-an-example-of-maas-snap-2-7-cli-2646.md: give-me-an-example-of
 	xpub push discourse -t snap-2-9-ui give-me-an-example-of-maas-snap-2-9-ui-2651.md
 	xpub pull discourse 2646 2657
 	chmod 644 originals/*
-	cp -p give-me-an-example-of-maas*.md
+	cp -p give-me-an-example-of-maas*.md originals
 	chmod 444 originals/*
 	rm give-me-an-example-of-maas-*.md
  
@@ -2654,7 +1840,7 @@ originals/ip-ranges-snap-2-7-ui-2755.md: ip-ranges.md
 	xpub push discourse -t snap-2-9-ui ip-ranges-snap-2-9-ui-2759.md
 	xpub pull discourse 2754 2765
 	chmod 644 originals/*
-	cp -p ip-ranges*.md
+	cp -p ip-ranges*.md originals
 	chmod 444 originals/*
 	rm ip-ranges-*.md
  
@@ -2685,7 +1871,7 @@ originals/creating-a-custom-ubuntu-image-snap-2-9-cli-2566.md: creating-a-custom
 	xpub push discourse -t snap-2-9-ui creating-a-custom-ubuntu-image-snap-2-9-ui-2567.md
 	xpub pull discourse 2562 2573
 	chmod 644 originals/*
-	cp -p creating-a-custom-ubuntu-image*.md
+	cp -p creating-a-custom-ubuntu-image*.md originals
 	chmod 444 originals/*
 	rm creating-a-custom-ubuntu-image-*.md
  
@@ -2716,7 +1902,7 @@ originals/creating-and-deleting-vms-deb-2-8-ui-2583.md: creating-and-deleting-vm
 	xpub push discourse -t snap-2-9-ui creating-and-deleting-vms-snap-2-9-ui-2579.md
 	xpub pull discourse 2574 2585
 	chmod 644 originals/*
-	cp -p creating-and-deleting-vms*.md
+	cp -p creating-and-deleting-vms*.md originals
 	chmod 444 originals/*
 	rm creating-and-deleting-vms-*.md
  
@@ -2747,7 +1933,7 @@ originals/region-controllers-deb-2-9-ui-3077.md: region-controllers.md
 	xpub push discourse -t snap-2-9-ui region-controllers-snap-2-9-ui-3071.md
 	xpub pull discourse 3066 3077
 	chmod 644 originals/*
-	cp -p region-controllers*.md
+	cp -p region-controllers*.md originals
 	chmod 444 originals/*
 	rm region-controllers-*.md
  
@@ -2778,7 +1964,7 @@ originals/commission-machines-deb-2-9-ui-2477.md: commission-machines.md
 	xpub push discourse -t snap-2-9-ui commission-machines-snap-2-9-ui-2471.md
 	xpub pull discourse 2466 2477
 	chmod 644 originals/*
-	cp -p commission-machines*.md
+	cp -p commission-machines*.md originals
 	chmod 444 originals/*
 	rm commission-machines-*.md
  
@@ -2809,7 +1995,7 @@ originals/availability-zones-deb-2-9-ui-2333.md: availability-zones.md
 	xpub push discourse -t snap-2-9-ui availability-zones-snap-2-9-ui-2327.md
 	xpub pull discourse 2322 2333
 	chmod 644 originals/*
-	cp -p availability-zones*.md
+	cp -p availability-zones*.md originals
 	chmod 444 originals/*
 	rm availability-zones-*.md
  
@@ -2840,7 +2026,7 @@ originals/upgrading-maas-snap-2-9-ui-3191.md: upgrading-maas.md
 	xpub push discourse -t snap-2-9-ui upgrading-maas-snap-2-9-ui-3191.md
 	xpub pull discourse 3186 3197
 	chmod 644 originals/*
-	cp -p upgrading-maas*.md
+	cp -p upgrading-maas*.md originals
 	chmod 444 originals/*
 	rm upgrading-maas-*.md
  
@@ -2871,7 +2057,7 @@ originals/configuration-journey-snap-2-9-cli-2530.md: configuration-journey.md
 	xpub push discourse -t snap-2-9-ui configuration-journey-snap-2-9-ui-2531.md
 	xpub pull discourse 2526 2537
 	chmod 644 originals/*
-	cp -p configuration-journey*.md
+	cp -p configuration-journey*.md originals
 	chmod 444 originals/*
 	rm configuration-journey-*.md
  
@@ -2902,7 +2088,7 @@ originals/maas-tags-deb-2-8-cli-2894.md: maas-tags.md
 	xpub push discourse -t snap-2-9-ui maas-tags-snap-2-9-ui-2891.md
 	xpub pull discourse 2886 2897
 	chmod 644 originals/*
-	cp -p maas-tags*.md
+	cp -p maas-tags*.md originals
 	chmod 444 originals/*
 	rm maas-tags-*.md
  
@@ -2933,7 +2119,7 @@ originals/prometheus-metrics-deb-2-7-cli-3024.md: prometheus-metrics.md
 	xpub push discourse -t snap-2-9-ui prometheus-metrics-snap-2-9-ui-3023.md
 	xpub pull discourse 3018 3029
 	chmod 644 originals/*
-	cp -p prometheus-metrics*.md
+	cp -p prometheus-metrics*.md originals
 	chmod 444 originals/*
 	rm prometheus-metrics-*.md
  
@@ -2964,7 +2150,7 @@ originals/commissioning-and-hardware-testing-scripts-deb-2-7-ui-2485.md: commiss
 	xpub push discourse -t snap-2-9-ui commissioning-and-hardware-testing-scripts-snap-2-9-ui-2483.md
 	xpub pull discourse 2478 2489
 	chmod 644 originals/*
-	cp -p commissioning-and-hardware-testing-scripts*.md
+	cp -p commissioning-and-hardware-testing-scripts*.md originals
 	chmod 444 originals/*
 	rm commissioning-and-hardware-testing-scripts-*.md
  
@@ -2995,7 +2181,7 @@ originals/about-maas-deb-2-9-cli-2272.md: about-maas.md
 	xpub push discourse -t snap-2-9-ui about-maas-snap-2-9-ui-2267.md
 	xpub pull discourse 2262 2273
 	chmod 644 originals/*
-	cp -p about-maas*.md
+	cp -p about-maas*.md originals
 	chmod 444 originals/*
 	rm about-maas-*.md
  
@@ -3039,8 +2225,9 @@ originals/maas-documentation-25.md: maas-documentation.md
 	xpub pull discourse 2838 2840
 	xpub pull discourse 2842 2849
 	chmod 644 originals/*
-	cp -p maas-documentation*.md originals
+	cp -p maas-documentation*.md originals originals
 	chmod 444 originals/*
+	./clean-navigation.sh maas-documentation-25.md
 	rm maas-documentation-*.md
  
 originals/maas-communication-deb-2-8-ui-2835.md: maas-communication.md
@@ -3070,7 +2257,7 @@ originals/maas-communication-deb-2-8-ui-2835.md: maas-communication.md
 	xpub push discourse -t snap-2-9-ui maas-communication-snap-2-9-ui-2831.md
 	xpub pull discourse 2826 2837
 	chmod 644 originals/*
-	cp -p maas-communication*.md
+	cp -p maas-communication*.md originals
 	chmod 444 originals/*
 	rm maas-communication-*.md
  
@@ -3101,7 +2288,7 @@ originals/deploy-machines-snap-2-7-cli-2598.md: deploy-machines.md
 	xpub push discourse -t snap-2-9-ui deploy-machines-snap-2-9-ui-2603.md
 	xpub pull discourse 2598 2609
 	chmod 644 originals/*
-	cp -p deploy-machines*.md
+	cp -p deploy-machines*.md originals
 	chmod 444 originals/*
 	rm deploy-machines-*.md
  
@@ -3132,7 +2319,7 @@ originals/block-devices-deb-2-8-ui-2355.md: block-devices.md
 	xpub push discourse -t snap-2-9-ui block-devices-snap-2-9-ui-2351.md
 	xpub pull discourse 2346 2357
 	chmod 644 originals/*
-	cp -p block-devices*.md
+	cp -p block-devices*.md originals
 	chmod 444 originals/*
 	rm block-devices-*.md
  
@@ -3163,7 +2350,7 @@ originals/maas-requirements-deb-2-9-ui-2885.md: maas-requirements.md
 	xpub push discourse -t snap-2-9-ui maas-requirements-snap-2-9-ui-2879.md
 	xpub pull discourse 2874 2885
 	chmod 644 originals/*
-	cp -p maas-requirements*.md
+	cp -p maas-requirements*.md originals
 	chmod 444 originals/*
 	rm maas-requirements-*.md
  
@@ -3194,7 +2381,7 @@ originals/high-availability-snap-2-9-ui-2687.md: high-availability.md
 	xpub push discourse -t snap-2-9-ui high-availability-snap-2-9-ui-2687.md
 	xpub pull discourse 2682 2693
 	chmod 644 originals/*
-	cp -p high-availability*.md
+	cp -p high-availability*.md originals
 	chmod 444 originals/*
 	rm high-availability-*.md
  
@@ -3225,7 +2412,7 @@ originals/commissioning-logs-snap-2-9-ui-2495.md: commissioning-logs.md
 	xpub push discourse -t snap-2-9-ui commissioning-logs-snap-2-9-ui-2495.md
 	xpub pull discourse 2490 2501
 	chmod 644 originals/*
-	cp -p commissioning-logs*.md
+	cp -p commissioning-logs*.md originals
 	chmod 444 originals/*
 	rm commissioning-logs-*.md
  
@@ -3256,7 +2443,7 @@ originals/disk-erasure-snap-2-7-cli-2610.md: disk-erasure.md
 	xpub push discourse -t snap-2-9-ui disk-erasure-snap-2-9-ui-2615.md
 	xpub pull discourse 2610 2621
 	chmod 644 originals/*
-	cp -p disk-erasure*.md
+	cp -p disk-erasure*.md originals
 	chmod 444 originals/*
 	rm disk-erasure-*.md
  

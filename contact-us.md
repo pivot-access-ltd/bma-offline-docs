@@ -1,4 +1,4 @@
-We would love to get your feedback on MAAS and how you're using it. You can get in touch with the team in various ways:
+We'd love to get your feedback on MAAS and how you're using it. You can get in touch with the team in various ways:
 
 -   The MAAS [IRC channel (external link)](http://webchat.freenode.net/?channels=maas) on freenode
 -   The MAAS [Discourse forum (external link)](https://discourse.maas.io)

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <strong>
+	  UI-only
+      </strong>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="cli/user-accounts.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="../maas-documentation-25.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-me-an-example-of-maas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-new-in-maas.html">
+	    What&rsquo;s new in 2.7
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-requirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-journey.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-communication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-controllers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-controllers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-availability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-machines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-machines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-testing.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-testing.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-and-hardware-testing-scripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-tags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-machine-setup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-boot-options.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-pools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-vmfs-datastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-kernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-and-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-image-mirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-images.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-management.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-ranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-services.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-discovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-addressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-tls-encryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-stp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-zones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-host-networking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-a-vm-host.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-host-storage-pools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-and-deleting-vms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-metrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-your-maas-installation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-accounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-search.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-and-terms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-and-terms.html#heading--network-tutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-cli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-kernel-management.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-image-management.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-interface-management.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-advanced-tasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-composable-hardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="https://maas.io/docs/api">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-help.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-tricks-and-traps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-docs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-new-in-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-guide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>User accounts</h1><p>Presumably, you have already created an administrative user, but MAAS can also have regular users (who log in to the interface or use the CLI). What users you create depends on how you intend to use MAAS.  An administrator can manage all aspects of MAAS, whereas a non-administrator user can perform a subset of tasks on machines they acquire and deploy.  MAAS limits the details a non-admin user can view, such as nodes allocated to other users. Also, non-admin users cannot access the global settings page in the web UI, nor any of the equivalent API calls from the command line.</p>
+<p>Additionally, in order for a user to log into a MAAS-deployed machine that user must have their public SSH key installed on it.  This article explains how to create users and add their public SSH keys to MAAS, so that every deployed machine will automatically have that key installed.</p>
+<h4>Quick questions you may have:</h4>
+<ul>
+<li><a href="#heading--add-a-user">How do I add a user?</a></li>
+<li><a href="#heading--user-preferences">How do I change a user&rsquo;s preferences?</a></li>
+<li><a href="#heading--ssh-keys">How do I add an SSH key for a user?</a></li>
+<li><a href="#heading--api-key">How do I add an API key for a user?</a></li>
+<li><a href="#heading--change-password">How do users change their password?</a></li>
+</ul>
+<p>You can manage user accounts from the &lsquo;Users&rsquo; tab of the &lsquo;Settings&rsquo; page.</p>
+<p><a href="images/76402e4b-manage-user-accounts__2.4_current-users.png" target = "_blank"><img src="images/76402e4b-manage-user-accounts__2.4_current-users.png"></a></a></p>
+<p>[note]
+A currently logged in user cannot delete themselves from the web UI.
+[/note]</p>
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+
+<pre><code>USERNAME        EMAIL                     ADMIN?
+--------        -----                     ------
+admin           admin@admin.com           true
+billwear        bwear@stormrider.io       true
+MAAS            maas@localhost            false
+maas-init-node  node-init-user@localhost  false
+</code></pre>
+
+
+You can generate a list like this with the command:
+
+
+<pre><code>maas admin users read \
+| jq -r '([&quot;USERNAME&quot;, &quot;EMAIL&quot;, &quot;ADMIN?&quot;]
+| (., map(length*&quot;-&quot;))), (.[]
+| [.username, .email, .is_superuser]) | @tsv' \
+| column -t
+</code></pre>
+
+
+Note that you do not need line continuations within the `jq` command because it's quoted for the shell.
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+<h2 id="heading--add-a-user">Add a user</h2>
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+To add a regular user, enter the following command:
+
+<pre><code>maas $PROFILE users create username=$USERNAME \
+    email=$EMAIL_ADDRESS password=$PASSWORD is_superuser=0
+</code></pre>
+
+
+All the options are necessary. Note that stipulating a password on the CLI may be a security hazard, depending on your environment.
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+<p>Clicking the &lsquo;Add user&rsquo; button will result in a form to be displayed:</p>
+<p><a href="images/1c59c2c5-manage-user-accounts__2.4_add-user.png" target = "_blank"><img src="images/1c59c2c5-manage-user-accounts__2.4_add-user.png"></a></a></p>
+<p>Fill in the fields and hit &lsquo;Add user&rsquo; when done.</p>
+<h2 id="heading--user-preferences">User preferences</h2>
+
+<p>Clicking the MAAS username in the top right corner will show that user&rsquo;s preferences.</p>
+<h3 id="heading--ssh-keys">SSH keys</h3>
+
+<p>Before a user can deploy a machine, they must import at least one public SSH key into MAAS. This key allows the user to access the deployed machine with the corresponding private key, which the user must possess. See <a href="https://www.ssh.com/ssh/public-key-authentication">Public key authentication</a> (ssh.com) if you&rsquo;re not familiar with SSH keys.</p>
+<!-- deb-2-7-cli
+[note]
+The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](configuration-journey-2532.html)).
+[/note]
+deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+[note]
+The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](configuration-journey-2533.html)).
+[/note]
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+[note]
+The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](configuration-journey-2534.html)).
+[/note]
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+[note]
+The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](configuration-journey-2535.html)).
+[/note]
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+[note]
+The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](configuration-journey-2536.html)).
+[/note]
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+[note]
+The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](configuration-journey-2537.html)).
+[/note]
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+[note]
+The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](configuration-journey-2526.html)).
+[/note]
+ snap-2-7-cli -->
+
+<p>[note]
+The user normally imports their initial SSH key on the first login to the web UI (see <a href="configuration-journey-2527.html">Configuration journey</a>).
+[/note]</p>
+<!-- snap-2-8-cli
+[note]
+The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](configuration-journey-2528.html)).
+[/note]
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+[note]
+The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](configuration-journey-2529.html)).
+[/note]
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+[note]
+The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](configuration-journey-2530.html)).
+[/note]
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+[note]
+The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](configuration-journey-2531.html)).
+[/note]
+ snap-2-9-ui -->
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+To add a public SSH key to a MAAS user account:
+
+<pre><code>maas $PROFILE sshkeys create &quot;key=$SSH_KEY&quot;
+</code></pre>
+
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+<p>To add a locally-generated public key, select &lsquo;Upload&rsquo; from the &lsquo;Source&rsquo; menu and paste the complete contents of your key file, usually called <code>id_rsa.pub</code>, into the &lsquo;Public key&rsquo; field. Click &lsquo;Import&rsquo; to add the key to MAAS.</p>
+<p>Public keys residing on either <a href="https://help.launchpad.net/YourAccount">Launchpad</a> or <a href="https://help.github.com/articles/connecting-to-github-with-ssh/">GitHub</a> can also be added. Select either from the &lsquo;Source&rsquo; menu and specify the user ID associated with the key(s). Press the &lsquo;Import&rsquo; button to add any keys MAAS discovers to the current user&rsquo;s MAAS account.</p>
+<p><a href="images/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png" target = "_blank"><img src="images/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png"></a></a></p>
+<h3 id="heading--api-key">API key</h3>
+
+<p>The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the <a href="maas-cli-802.html">MAAS CLI</a>. Other services connecting to MAAS such as <a href="https://jujucharms.com/docs/stable/clouds-maas">Juju</a> will also need this key.</p>
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+We recommend that you use the web UI to set or change a user's API key.  To see how, select the "UI" choice for your version and delivery method at the top of this page.
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+<h3 id="heading--change-password">Change password</h3>
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+We recommend that you use the web UI to change user passwords.  To see how, select the "UI" choice for your version and delivery method at the top of this page.
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+<p>The current user can change their password at the bottom of the page by entering the old password and entering the new password twice. Click &lsquo;Save password&rsquo; to finish.</p>
+<p><a href="images/289ef578-manage-user-accounts__2.4_change-user-password.png" target = "_blank"><img src="images/289ef578-manage-user-accounts__2.4_change-user-password.png"></a></a></p>
+<p>[note]
+An administrator can change any user&rsquo;s password from within the &lsquo;Users&rsquo; tab of the &lsquo;Settings&rsquo; page.
+[/note]</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <strong>
+	  UI-only
+      </strong>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/configuration-journey.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="../maas-documentation-25.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-me-an-example-of-maas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-new-in-maas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-requirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-journey.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-communication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-controllers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-controllers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-availability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-machines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-machines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-testing.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-testing.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-and-hardware-testing-scripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-tags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-machine-setup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-boot-options.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-pools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-vmfs-datastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-kernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-and-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-image-mirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-images.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-management.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-ranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-services.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-discovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-addressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-tls-encryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-stp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-zones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-host-networking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-a-vm-host.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-host-storage-pools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-and-deleting-vms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-metrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-your-maas-installation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-accounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-search.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-and-terms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-and-terms.html#heading--network-tutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-cli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-kernel-management.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-image-management.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-interface-management.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-advanced-tasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-composable-hardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="https://maas.io/docs/api">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-help.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-tricks-and-traps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-docs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-new-in-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-guide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>Configuration journey</h1><!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+Once you've successfully installed MAAS (regardless of method), you can login to the MAAS CLI via the following process.  First, generate the API-key for the user you're going to employing:
+
+<pre><code>sudo maas apikey --username=$PROFILE &gt; api-key-file
+</code></pre>
+
+
+Replace $PROFILE with whatever username you set during the `createadmin` part of the install process.  Next, login with the following command:
+
+
+<pre><code>maas login $PROFILE $MAAS_URL &lt; api-key-file
+</code></pre>
+
+
+Substitute $MAAS_URL with the URL that was returned to you when you initialised MAAS, for example, `192.168.43.251:5240/MAAS`.  Remember that, once you've logged in, you can get extensive CLI help with the command:
+
+
+<pre><code>maas admin --help
+</code></pre>
+
+
+Sample output is shown in the detail section below.
+
+<details><summary>MAAS CLI help, sample output</summary>
+usage: maas admin [-h] COMMAND ...
+
+Issue commands to the MAAS region controller at http://192.168.43.251:5240/MAAS/api/2.0/.
+
+optional arguments:
+  -h, --help            show this help message and exit
+
+drill down:
+  COMMAND
+    account             Manage the current logged-in user.
+    bcache-cache-set    Manage bcache cache set on a machine.
+    bcache-cache-sets   Manage bcache cache sets on a machine.
+    bcache              Manage bcache device on a machine.
+    bcaches             Manage bcache devices on a machine.
+    block-device        Manage a block device on a machine.
+    block-devices       Manage block devices on a machine.
+    boot-resource       Manage a boot resource.
+    boot-resources      Manage the boot resources.
+    boot-source         Manage a boot source.
+    boot-source-selection
+                        Manage a boot source selection.
+    boot-source-selections
+                        Manage the collection of boot source selections.
+    boot-sources        Manage the collection of boot sources.
+    commissioning-script
+                        Manage a custom commissioning script.
+    commissioning-scripts
+                        Manage custom commissioning scripts.
+    dhcpsnippet         Manage an individual DHCP snippet.
+    dhcpsnippets        Manage the collection of all DHCP snippets in MAAS.
+    dnsresource         Manage dnsresource.
+    dnsresource-record  Manage dnsresourcerecord.
+    dnsresource-records
+                        Manage DNS resource records (e.g. CNAME, MX, NS, SRV,
+                        TXT)
+    dnsresources        Manage dnsresources.
+    device              Manage an individual device.
+    devices             Manage the collection of all the devices in the MAAS.
+    discoveries         Query observed discoveries.
+    discovery           Read or delete an observed discovery.
+    domain              Manage domain.
+    domains             Manage domains.
+    events              Retrieve filtered node events.
+    fabric              Manage fabric.
+    fabrics             Manage fabrics.
+    fan-network         Manage Fan Network.
+    fan-networks        Manage Fan Networks.
+    file                Manage a FileStorage object.
+    files               Manage the collection of all the files in this MAAS.
+    ipaddresses         Manage IP addresses allocated by MAAS.
+    iprange             Manage IP range.
+    ipranges            Manage IP ranges.
+    interface           Manage a node's or device's interface.
+    interfaces          Manage interfaces on a node.
+    license-key         Manage a license key.
+    license-keys        Manage the license keys.
+    maas                Manage the MAAS server.
+    machine             Manage an individual machine.
+    machines            Manage the collection of all the machines in the MAAS.
+    network             Manage a network.
+    networks            Manage the networks.
+    node                Manage an individual Node.
+    node-results        Read the collection of commissioning script results.
+    node-script         Manage or view a custom script.
+    node-script-result  Manage node script results.
+    node-script-results
+                        Manage node script results.
+    node-scripts        Manage custom scripts.
+    nodes               Manage the collection of all the nodes in the MAAS.
+    notification        Manage an individual notification.
+    notifications       Manage the collection of all the notifications in
+                        MAAS.
+    package-repositories
+                        Manage the collection of all Package Repositories in
+                        MAAS.
+    package-repository  Manage an individual package repository.
+    partition           Manage partition on a block device.
+    partitions          Manage partitions on a block device.
+    pod                 Manage an individual pod.
+    pods                Manage the collection of all the pod in the MAAS.
+    rack-controller     Manage an individual rack controller.
+    rack-controllers    Manage the collection of all rack controllers in MAAS.
+    raid                Manage a specific RAID (Redundant Array of Independent
+                        Disks) on a machine.
+    raids               Manage all RAIDs (Redundant Array of Independent
+                        Disks) on a machine.
+    region-controller   Manage an individual region controller.
+    region-controllers  Manage the collection of all region controllers in
+                        MAAS.
+    resource-pool       Manage a resource pool.
+    resource-pools      Manage resource pools.
+    sshkey              Manage an SSH key.
+    sshkeys             Manage the collection of all the SSH keys in this
+                        MAAS.
+    sslkey              Manage an SSL key.
+    sslkeys             Operations on multiple keys.
+    space               Manage space.
+    spaces              Manage spaces.
+    static-route        Manage static route.
+    static-routes       Manage static routes.
+    subnet              Manage subnet.
+    subnets             Manage subnets.
+    tag                 Tags are properties that can be associated with a Node
+                        and serve as criteria for selecting and allocating
+                        nodes.
+    tags                Manage all tags known to MAAS.
+    user                Manage a user account.
+    users               Manage the user accounts of this MAAS.
+    version             Information about this MAAS instance.
+    vlan                Manage a VLAN on a fabric.
+    vlans               Manage VLANs on a fabric.
+    vm-host             Manage an individual vm-host.
+    vm-hosts            Manage the collection of all the vm-hosts in the MAAS.
+    vmfs-datastore      Manage VMFS datastore on a machine.
+    vmfs-datastores     Manage VMFS datastores on a machine.
+    volume-group        Manage volume group on a machine.
+    volume-groups       Manage volume groups on a machine.
+    zone                Manage a physical zone.
+    zones               Manage physical zones.
+
+This is a profile.  Any commands you issue on this profile will
+operate on the MAAS region server.
+
+The command information you see here comes from the region server's
+API; it may differ for different profiles.  If you believe the API may
+have changed, use the command's 'refresh' sub-command to fetch the
+latest version of this help information from the server.
+</details>
+
+<h2>Configuration</h2>
+
+Configuring MAAS consists of four broad steps:
+
+1. Setting upstream DNS
+2. Importing an SSH key for your admin user
+3. Importing images
+4. Configuring DNS
+
+This section will cover those four operations
+
+<h3>Setting DNS</h3>
+
+After logging in for the first time, you will need to set a number of system-wide configuration options.  First up, you should configure DNS.  You can check out the help for DNS settings, known in the CLI as a "DNS forwarder":
+
+
+<pre><code>maas $PROFILE maas set-config name=upstream_dns value=&quot;8.8.8.8&quot;
+</code></pre>
+
+
+Here, we've set the DNS forwarder to "8.8.8.8" (Google), which is a reliable value.
+
+<h3>Setting SSH for the admin user</h3>
+
+To add a public SSH key to a MAAS user account, type the following command:
+
+
+<pre><code>maas $PROFILE sshkeys create &quot;key=$SSH_KEY&quot;
+</code></pre>
+
+
+<h3>Importing images</h3>
+
+Before going any further, it's worthwhile to start the image import, as it can sometimes take a few minutes.  You can see what images you already have downloaded with this command:
+
+
+<pre><code>maas $PROFILE boot-resources read | jq -r '.[] | &quot;\(.name)\t\(.architecture)&quot;'
+</code></pre>
+
+
+This command will return a list similar to the following:
+
+
+<pre><code>grub-efi-signed/uefi        amd64/generic
+grub-efi/uefi           arm64/generic
+grub-ieee1275/open-firmware ppc64el/generic
+pxelinux/pxe            i386/generic
+ubuntu/bionic           amd64/ga-18.04
+ubuntu/bionic           amd64/ga-18.04-lowlatency
+ubuntu/bionic           amd64/hwe-18.04
+ubuntu/bionic           amd64/hwe-18.04-edge
+ubuntu/bionic           amd64/hwe-18.04-lowlatency
+ubuntu/bionic           amd64/hwe-18.04-lowlatency-edge
+</code></pre>
+
+
+Suppose you also want a version called "Trusty" -- you can import a new image by first selecting it for download, like this:
+
+
+<pre><code>maas $PROFILE boot-source-selections create 1 \ &gt; os=&quot;ubuntu&quot; release=&quot;trusty&quot; arches=&quot;amd64&quot; subarches=&quot;*&quot; \ &gt; labels=&quot;*&quot;
+</code></pre>
+
+
+which returns some JSON confirming your action:
+
+
+<pre><code>Success.
+Machine-readable output follows:
+{
+    &quot;os&quot;: &quot;ubuntu&quot;,
+    &quot;release&quot;: &quot;trusty&quot;,
+    &quot;arches&quot;: [
+        &quot;amd64&quot;
+    ],
+    &quot;subarches&quot;: [
+        &quot;*&quot;
+    ],
+    &quot;labels&quot;: [
+        &quot;*&quot;
+    ],
+    &quot;boot_source_id&quot;: 1,
+    &quot;id&quot;: 2,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/boot-sources/1/selections/2/&quot;
+}
+</code></pre>
+
+Once selected, you can start the image import with this command:
+
+
+<pre><code>maas admin boot-resources import
+</code></pre>
+
+
+which offers a shorter confirmation message:
+
+
+<pre><code>Success.
+Machine-readable output follows:
+Import of boot resources started
+</code></pre>
+
+
+<h3>Enabling DHCP</h3>
+
+Once your image has been imported, you'll want to get DHCP working, which means finding the untagged VLAN. In truth, it shouldn’t be too hard, because at this point, there still should only be one.
+
+In order to turn on DHCP, you need to know two things besides the VLAN name (“untagged”): the fabric ID and the primary rack controller name. To start, all the fabrics will be on the same untagged VLAN, so any fabric will do. You can find a valid fabric ID by reading it from any subnet, so just pick one  (e.g., 192.168.123.0/24) and find a usable fabric ID like this:
+
+
+<pre><code>maas $PROFILE subnet read $SUBNET_CIDR | grep fabric_id
+</code></pre>
+
+
+which returns (in this example):
+
+
+<pre><code>&quot;fabric_id&quot;: $FABRIC_ID,
+</code></pre>
+
+
+Next, find the name of the primary rack controller. It's usually fairly obvious, but for purposes of argument, assume that it's not known. You can get it this way:
+
+
+<pre><code>maas $PROFILE rack-controllers read | grep hostname | cut -d '&quot;' -f 4
+</code></pre>
+
+
+This returns a hostname, which we'll call:
+
+
+<pre><code>$RACK_CONTR_HOSTNAME
+</code></pre>
+
+
+Finally, you need to create an IP range for DHCP, in this case, a dynamic range:
+
+
+<pre><code>maas $PROFILE ipranges create type=dynamic start_ip=$START_IP end_ip=$END_IP
+</code></pre>
+
+
+This command returns something similar to this sample output:
+
+    Success.
+    Machine-readable output follows:
+    {
+        "subnet": {
+            "name": "192.168.123.0/24",
+            "description": "",
+            "vlan": {
+                "vid": 0,
+                "mtu": 1500,
+                "dhcp_on": false,
+                "external_dhcp": null,
+                "relay_vlan": null,
+                "fabric": "fabric-2",
+                "primary_rack": null,
+                "name": "untagged",
+                "id": 5003,
+                "space": "undefined",
+                "secondary_rack": null,
+                "fabric_id": 2,
+                "resource_uri": "/MAAS/api/2.0/vlans/5003/"
+            },
+            "cidr": "192.168.123.0/24",
+            "rdns_mode": 2,
+            "gateway_ip": null,
+            "dns_servers": [],
+            "allow_dns": true,
+            "allow_proxy": true,
+            "active_discovery": false,
+            "managed": true,
+            "id": 4,
+            "space": "undefined",
+            "resource_uri": "/MAAS/api/2.0/subnets/4/"
+        },
+        "type": "dynamic",
+        "start_ip": "192.168.123.190",
+        "end_ip": "192.168.123.253",
+        "user": {
+            "is_superuser": true,
+            "username": "admin",
+            "email": "admin@admin.com",
+            "is_local": true,
+            "resource_uri": "/MAAS/api/2.0/users/admin/"
+        },
+        "comment": "",
+        "id": 1,
+        "resource_uri": "/MAAS/api/2.0/ipranges/1/"
+    }
+
+So you should now be able to turn on DHCP like this:
+
+
+<pre><code>maas $PROFILE vlan update $FABRIC_ID untagged dhcp_on=True primary_rack=$RACK_CONTR_HOSTHNAME
+</code></pre>
+
+
+If you've done everything correctly, you should see JSON output similar to this sample:
+
+    Success.
+    Machine-readable output follows:
+    {
+        "vid": 0,
+        "mtu": 1500,
+        "dhcp_on": true,
+        "external_dhcp": null,
+        "relay_vlan": null,
+        "fabric": "fabric-2",
+        "space": "undefined",
+        "primary_rack": "8dwnne",
+        "secondary_rack": null,
+        "name": "untagged",
+        "fabric_id": 2,
+        "id": 5003,
+        "resource_uri": "/MAAS/api/2.0/vlans/5003/"
+    }
+
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+<p>Once you&rsquo;ve successfully installed MAAS (regardless of method), you can now login here:</p>
+<p>http://${API_HOST}:5240/MAAS</p>
+<p>where $API_HOST is the hostname or IP address of the region API server, which was set during installation.  You will see a screen like this:</p></p>
+<p><a href="images/efd8e3f150dfec28114c452c12e24e320848e075.jpeg" target = "_blank"><img src="images/efd8e3f150dfec28114c452c12e24e320848e075.jpeg"></a></a> </p>
+<p>Log in at the prompts, with the login information you created when initialising MAAS.</p>
+<h2 id="heading--configuration">Configuration</h2>
+
+<p>After a fresh MAAS installation, the web UI presents a couple of welcome  screens.  From these screens, you can set many system-wide options, including connectivity, image downloads, and authentication keys.</p>
+<p><a href="images/337aa15e178b14b0ba9a0646953268bf7adac0bb.jpeg" target = "_blank"><img src="images/337aa15e178b14b0ba9a0646953268bf7adac0bb.jpeg"></a></a>  </p>
+<p>Your main concerns for this experiment are the DNS forwarder, the Ubuntu image import section, and the SSH public key, though you might want to set the region name to something memorable, since this text will appear at the bottom of every MAAS screen in this install domain. Set the DNS forwarder to something obvious, e.g., <code>8.8.8.8</code>, Google’s DNS server.  Set this to your own internal DNS server if you know the IP address.</p>
+<p><a href="images/f9751eb857dcd0c124783edeb1aaf87b8b538127.jpeg" target = "_blank"><img src="images/f9751eb857dcd0c124783edeb1aaf87b8b538127.jpeg"></a></a>  </p>
+<p>Select an Ubuntu image to import, noting that you may be required to select at least one LTS version, depending upon the version of MAAS that snap installed.  In this example, we&rsquo;ve already chosen an image, and downloading is partially complete.</p>
+<p><a href="images/6445cde5ffc1e237a1e6d85d280f451bc0b2ab92.jpeg" target = "_blank"><img src="images/6445cde5ffc1e237a1e6d85d280f451bc0b2ab92.jpeg"></a></a>  </p>
+<p>When you click on “Continue,” the screen will shift to a screen labelled, “SSH keys for admin:”  </p>
+<p><a href="images/dbdcdce7c8f3b7181f894bdfe987758e0c8635fc.jpeg" target = "_blank"><img src="images/dbdcdce7c8f3b7181f894bdfe987758e0c8635fc.jpeg"></a></a> </p>
+<p>In the source drop-down, select “Launchpad,” “Github,” or “Upload.”  If you choose one of the first two, you will need to enter your username for that service.  For example, if you want to upload your SSH public key from Launchpad, you would enter:</p>
+<pre><code>lp:&lt;username&gt;
+</code></pre>
+<p><a href="images/0e4cbf7c8fae3f21664a4d5fe8d0f90785dd6859.jpeg" target = "_blank"><img src="images/0e4cbf7c8fae3f21664a4d5fe8d0f90785dd6859.jpeg"></a></a> </p>
+<p>Likewise, if you want to upload your github public SSH key, you would enter:</p>
+<pre><code>gh:&lt;username&gt;
+</code></pre>
+<p>If you want to use your existing public key from your home directory, you can select “Upload”and then copy your entire public key from <code>.ssh/id_rsa.pub</code> (or wherever you may have stored the key):</p>
+<p><a href="images/a94f1f68db07dd9be9e8eaed50f22828c7bb51e0.jpeg" target = "_blank"><img src="images/a94f1f68db07dd9be9e8eaed50f22828c7bb51e0.jpeg"></a></a> </p>
+<p>and paste it into the block labelled “Public key.”  Finally, press the “Import” button to import this key:</p>
+<p><a href="images/ab62bf22308343988016189fbbb851c44caf2e33.jpeg" target = "_blank"><img src="images/ab62bf22308343988016189fbbb851c44caf2e33.jpeg"></a></a> </p>
+<p>With this complete, you’ll see that MAAS has been successfully set up. Click ‘Go to the Dashboard’ to proceed.</p>
+<p>[note]
+Note that you may have to wait a few moments for your selected images to sync locally.
+[/note]</p>
+<h2 id="heading--enabling-dhcp">Enabling DHCP</h2>
+
+<p>Before moving forward with MAAS, you&rsquo;ll want to enable DHCP.  You can do this very easily from the web UI by selecting &ldquo;Subnets&rdquo; from the top menu, choosing the VLAN on which you want to enable DHCP, and select the button marked, &ldquo;Enable DHCP.&rdquo;</p>
+<h2 id="heading--networking">Networking</h2>
+
+<!-- deb-2-7-ui
+The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](network-discovery-2929.html) process allows you to easily add or map devices already connected to your network – devices that you may not necessarily want to manage with MAAS.
+ deb-2-7-ui -->
+
+<p>The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This <a href="network-discovery-2931.html">network discovery</a> process allows you to easily add or map devices already connected to your network – devices that you may not necessarily want to manage with MAAS.</p>
+<!-- deb-2-9-ui
+The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](network-discovery-2933.html) process allows you to easily add or map devices already connected to your network – devices that you may not necessarily want to manage with MAAS.
+ deb-2-9-ui -->
+
+<!-- snap-2-7-ui
+The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](network-discovery-2923.html) process allows you to easily add or map devices already connected to your network – devices that you may not necessarily want to manage with MAAS.
+ snap-2-7-ui -->
+
+<!-- snap-2-8-ui
+The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](network-discovery-2925.html) process allows you to easily add or map devices already connected to your network – devices that you may not necessarily want to manage with MAAS.
+ snap-2-8-ui -->
+
+<!-- snap-2-9-ui
+The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](network-discovery-2927.html) process allows you to easily add or map devices already connected to your network – devices that you may not necessarily want to manage with MAAS.
+ snap-2-9-ui -->
+
+<p><a href="images/902f07b6e96d06dcd072501473ce85ff3d303610.jpeg" target = "_blank"><img src="images/902f07b6e96d06dcd072501473ce85ff3d303610.jpeg"></a></a>  </p>
+<p>[note]
+Network discovery can be disabled at any time from the button on the Dashboard view.  Also note that you can get back to the dashboard at any time by clicking the MAAS logo.
+[/note]</p>
+<h3 id="heading--spaces-fabrics-zones-and-subnets">Spaces, fabrics, zones and subnets</h3>
+
+<p>Networks in large data centres can be very complex. MAAS offers comprehensive control over networking so that you have the flexibility to reconfigure racks and deploy machines as you see fit. You can isolate machine deployment not only with DNS domains, but also via <a href="concepts-and-terms-785.html#heading--subnets">subnets</a>, <a href="concepts-and-terms-785.html#heading--spaces">spaces</a>, <a href="concepts-and-terms-785.html#heading--zones">zones</a>, and <a href="concepts-and-terms-785.html#heading--fabrics">fabrics</a>.  The links provide more details, but these are all basically collections:</p>
+<ul>
+<li><strong>subnet</strong> has the traditional meaning: a range of IP addresses covering a subset of IP addresses.  Generally speaking , a subnet is a collection of IP addresses which includes at least two addresses.</li>
+<li>a <strong>space</strong> is a collection of subnets that you can create with MAAS, understanding that each subnet can belong to only one space.  Spaces allow multiple subnets to communicate without requiring a direct network path between them.</li>
+<li>a <strong>zone</strong> is also an ad-hoc collection, but one which groups individual nodes, rather than subnets.  MAAS allows you to create and edit zones at will.</li>
+<li>a <strong>fabric</strong> is essentially a collection of trunked switches, allowing you to access a group of VLANs.</li>
+</ul>
+<p>Here is a diagram that helps to illustrate these concepts:</p>
+<p><a href="images/dd60fdeba34d3cf33d4cf42db1f745ba95542b69.jpeg" target = "_blank"><img src="images/dd60fdeba34d3cf33d4cf42db1f745ba95542b69.jpeg"></a></a> </p>
+<p>Be aware that these network settings are spread across several web UI configuration pages. The Zones page, for example, enables you to see how many machines, devices and controllers are using a zone, and allows you to add and edit zones.  The Subnets page, shown below, provides access to fabric, VLAN, subnet and spaces configuration.</p>
+<p><a href="images/89d90a15e70a57e6951ee62910b503895e08251e.jpeg" target = "_blank"><img src="images/89d90a15e70a57e6951ee62910b503895e08251e.jpeg"></a></a> </p>
+<h2 id="heading--deploy-hardware">Deployment</h2>
+
+<p>MAAS-managed machines are listed – and operated on – from the Machines page, making it one of the most important screens in the MAAS web UI:</p>
+<p><a href="images/58a37e0dc29bc233f771c33d07a0e03e8d55cb87.jpeg" target = "_blank"><img src="images/58a37e0dc29bc233f771c33d07a0e03e8d55cb87.jpeg"></a></a> </p>
+<p>If you are testing MAAS using virtual machines, the machines appear here as soon as they boot. New machines are added automatically when they first connect to your network. Alternatively, the ‘Add hardware’ menu lets you add machines manually, via their MAC address.</p>
+<p>After you configure power and interfaces, MAAS must commission machines to retrieve CPU, memory and storage information. From this point, you can command MAAS to acquire, test, deploy and release these machines as you work with your MAAS cloud.</p>
+<!-- deb-2-7-ui
+While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](maas-tags-2893.html) and hardware characteristics.  You can select and manage machines in either filtered or full views.
+ deb-2-7-ui -->
+
+<p>While you are testing MAAS, be sure to check out filters, which can narrow your view based on both <a href="maas-tags-2895.html">tags</a> and hardware characteristics.  You can select and manage machines in either filtered or full views.</p>
+<!-- deb-2-9-ui
+While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](maas-tags-2897.html) and hardware characteristics.  You can select and manage machines in either filtered or full views.
+ deb-2-9-ui -->
+
+<!-- snap-2-7-ui
+While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](maas-tags-2887.html) and hardware characteristics.  You can select and manage machines in either filtered or full views.
+ snap-2-7-ui -->
+
+<!-- snap-2-8-ui
+While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](maas-tags-2889.html) and hardware characteristics.  You can select and manage machines in either filtered or full views.
+ snap-2-8-ui -->
+
+<!-- snap-2-9-ui
+While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](maas-tags-2891.html) and hardware characteristics.  You can select and manage machines in either filtered or full views.
+ snap-2-9-ui -->
+
+<h3 id="heading--images">Images</h3>
+
+<p>When it comes to running applications, MAAS can easily deploy any supported variant of Ubuntu, including LTS and non-LTR versions for x86, ARM, PPC and s390x systems. You can also deploy several other operating systems to your machines, including CentOS 7, CentOS 6, Windows, RHEL, and ESXi images, via <a href="https://www.ubuntu.com/support" rel="nofollow noopener">Ubuntu Advantage^</a>.</p>
+<p><a href="images/27c47222c1fc0e34ed70134a1007dde067d2de81.jpeg" target = "_blank"><img src="images/27c47222c1fc0e34ed70134a1007dde067d2de81.jpeg"></a></a> </p>
+<h3 id="heading--vm-hosts">VM hosts</h3>
+
+<!-- deb-2-7-cli
+[VM hosts]( introduction-to-vm-hosting-2748.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+[VM hosts]( introduction-to-vm-hosting-2749.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+[VM hosts]( introduction-to-vm-hosting-2750.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+ deb-2-8-cli -->
+
+<p><a href="introduction-to-vm-hosting-2751.html">VM hosts</a> can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!</p>
+<!-- deb-2-9-cli
+[VM hosts]( introduction-to-vm-hosting-2752.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+[VM hosts]( introduction-to-vm-hosting-2753.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+[VM hosts]( introduction-to-vm-hosting-2742.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+[VM hosts]( introduction-to-vm-hosting-2743.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+[VM hosts]( introduction-to-vm-hosting-2744.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+[VM hosts]( introduction-to-vm-hosting-2745.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+[VM hosts]( introduction-to-vm-hosting-2746.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+[VM hosts]( introduction-to-vm-hosting-2747.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+ snap-2-9-ui -->
+
+<p>It’s easy to add a VM host: click the &ldquo;Add KVM&rdquo; button on the &ldquo;KVM&rdquo; page of the web UI, give the VM host a name, and select &ldquo;Virsh&rdquo; as the VM host type.  You will also need to enter the address for the <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt^</a> controlled pool below.</p>
+<p>After you create a VM host, you compose hardware by selecting the VM host, and then selecting &ldquo;Compose&rdquo; from the Action menu. You can configure composed hardware as desired, including the number of cores, CPU speed, RAM and combined storage.  Then just click &ldquo;Compose machine&rdquo;, and MAAS will combine resources to create a new, single entity that can be used just like any other machine.  VM hosts abstract multiple resources:</p>
+<p><a href="images/c57d7cf802bfd3f968cc54a829cd1629c45e9f62.jpeg" target = "_blank"><img src="images/c57d7cf802bfd3f968cc54a829cd1629c45e9f62.jpeg"></a></a> </p>
+<p>into pools of composable hardware:</p>
+<p><a href="images/763029b5678b6f88317359d28eac3003f7298f37.jpeg" target = "_blank"><img src="images/763029b5678b6f88317359d28eac3003f7298f37.jpeg"></a></a> </p>
+<p>There you have it: A quick tour of MAAS and its capabilities.  Read on through the documentation to learn more.</p>
+    </div>
+  </body>
+</html>
