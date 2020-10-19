@@ -117,7 +117,7 @@ snap-2-7 snap-2-7-ui deb-2-7 deb-2-7-ui -->
 <!-- snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui
 <h2>MAAS 2.9 BETA release notes</h2>
 
-Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 Beta<big>**5**</big> is now available. This release offers some exciting new features.
+Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 Beta<big>**6**</big> is now available. This release offers some exciting new features.
 
 [note]
 NOTE that this is currently a Beta release, so there will be bugs, instabilities, and missing features. Please remember to [file a bug^](https://bugs.launchpad.net/maas/+filebug) if you find one, and please interact with the developers on [discourse^](https://discourse.maas.io/).
@@ -126,6 +126,8 @@ NOTE that this is currently a Beta release, so there will be bugs, instabilities
 <h4>Quick questions you may have:</h4>
 
 - [What are the new features & fixes for 2.9?](#heading--release-notes)
+  - [**MAAS image URL changes**](#heading--images-maas-io)
+  - [**BMC paramter improvements**](#heading--bmc-param-improvements)
   - [**BMC/IPMI default parameter additions**](#heading--bmc-param-additions)
   - [**New global IPMI configuration options**](#heading--new-config-options)
   - [**Addition of IPMI config options to UI**](#heading--global-config-settings)
@@ -143,6 +145,18 @@ NOTE that this is currently a Beta release, so there will be bugs, instabilities
 - [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 Beta snap?](/t/maas-installation-snap-2-9-ui/3323#heading--upgrade-maas-snap)
 - [How do I install MAAS 2.9 Beta from packages?](/t/maas-installation-deb-2-9-ui/3329)
 - [What bugs are fixed so far in this release?](#heading--bug-fixes)
+
+<h2 id="heading--release-notes">New features in 2.9 Beta6</h2>
+MAAS 2.9 Beta6 is currently scheduled for release on 16 October 2020, bringing the following updates to the BETA product.
+
+<h3 id="heading--images-maas-io">MAAS images URL change</h3>
+
+The default MAAS images URL has been changed to http://images.maas.io/ephemeral-v3/stable/. The old URL, http://images.maas.io/ephemeral-v3/daily/, is now a redirect.
+
+<h3 id="heading--bmc-param-improvements">30-maas-01-bmc-config improvements</h3>
+
+* IPMI settings are now verified and configured for secure use.
+* The IPMI cipher suite id will now be detected using both bmc-config and ipmitool.
 
 <h2 id="heading--release-notes">New features in 2.9 Beta5</h2>
 

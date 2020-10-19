@@ -56,6 +56,59 @@ originals/contact-us.html: contact-us.md
 	mv contact-us.html maas-offline/snap/2.9/ui/
 	mv contact-us-backup.md contact-us.md
 
+originals/api.html: api.md
+	cp api.md api-backup.md
+	cp templates/deb/2.7/cli/template.html ./template.html
+	sed -i 's/zork/api.html/g' ./template.html
+	xpub convert dc2html api.md
+	mv api.html ./maas-offline/deb/2.7/cli/
+	cp templates/deb/2.7/ui/template.html ./template.html
+	sed -i 's/zork/api.html/g' ./template.html
+	xpub convert dc2html api.md
+	mv api.html maas-offline/deb/2.7/ui/
+	cp templates/deb/2.8/cli/template.html ./template.html
+	sed -i 's/zork/api.html/g' ./template.html
+	xpub convert dc2html api.md
+	mv api.html maas-offline/deb/2.8/cli/
+	cp templates/deb/2.8/ui/template.html ./template.html
+	sed -i 's/zork/api.html/g' ./template.html
+	xpub convert dc2html api.md
+	mv api.html maas-offline/deb/2.8/ui/
+	cp templates/deb/2.9/cli/template.html ./template.html
+	sed -i 's/zork/api.html/g' ./template.html
+	xpub convert dc2html api.md
+	mv api.html maas-offline/deb/2.9/cli/
+	cp templates/deb/2.9/ui/template.html ./template.html
+	sed -i 's/zork/api.html/g' ./template.html
+	xpub convert dc2html api.md
+	mv api.html maas-offline/deb/2.9/ui/
+	cp templates/snap/2.7/cli/template.html ./template.html
+	sed -i 's/zork/api.html/g' ./template.html
+	xpub convert dc2html api.md
+	mv api.html maas-offline/snap/2.7/cli/
+	cp templates/snap/2.7/ui/template.html ./template.html
+	sed -i 's/zork/api.html/g' ./template.html
+	xpub convert dc2html api.md
+	mv api.html maas-offline/snap/2.7/ui/
+	cp templates/snap/2.8/cli/template.html ./template.html
+	sed -i 's/zork/api.html/g' ./template.html
+	xpub convert dc2html api.md
+	mv api.html maas-offline/snap/2.8/cli/
+	cp templates/snap/2.8/ui/template.html ./template.html
+	sed -i 's/zork/api.html/g' ./template.html
+	xpub convert dc2html api.md
+	mv api.html maas-offline/snap/2.8/ui/
+	cp templates/snap/2.9/cli/template.html ./template.html
+	sed -i 's/zork/api.html/g' ./template.html
+	xpub convert dc2html api.md
+	mv api.html maas-offline/snap/2.9/cli/
+	cp templates/snap/2.9/ui/template.html ./template.html
+	sed -i 's/zork/api.html/g' ./template.html
+	xpub convert dc2html api.md
+	cp -p api.html originals
+	mv api.html maas-offline/snap/2.9/ui/
+	mv api-backup.md api.md
+
 originals/python-api-client.html: python-api-client.md
 	cp python-api-client.md python-api-client-backup.md
 	cp templates/deb/2.7/cli/template.html ./template.html
@@ -4351,30 +4404,30 @@ originals/about-maas.html: about-maas.md
 originals/maas-documentation-25.html: maas-documentation.md
 	cp maas-documentation.md maas-documentation-backup.md
 	./clean-navigation.sh maas-documentation.md
-	cp templates/deb/2.7/ui/mp-template.html ./template.html
+	cp templates/deb/2.7/ui/template.html ./template.html
 	sed -i 's/zork/maas-documentation-25.html/g' ./template.html
 	xpub convert dc2html -t deb-2-7-ui maas-documentation.md
-	mv maas-documentation.html maas-offline/deb/2.7/maas-documentation-25.html
-	cp templates/deb/2.8/ui/mp-template.html ./template.html
+	mv maas-documentation.html maas-offline/deb/2.7/ui/maas-documentation-25.html
+	cp templates/deb/2.8/ui/template.html ./template.html
 	sed -i 's/zork/maas-documentation-25.html/g' ./template.html
 	xpub convert dc2html -t deb-2-8-ui maas-documentation.md
-	mv maas-documentation.html maas-offline/deb/2.8/maas-documentation-25.html
-	cp templates/deb/2.9/ui/mp-template.html ./template.html
+	mv maas-documentation.html maas-offline/deb/2.8/ui/maas-documentation-25.html
+	cp templates/deb/2.9/ui/template.html ./template.html
 	sed -i 's/zork/maas-documentation-25.html/g' ./template.html
 	xpub convert dc2html -t deb-2-9-ui maas-documentation.md
-	mv maas-documentation.html maas-offline/deb/2.9/maas-documentation-25.html
-	cp templates/snap/2.7/ui/mp-template.html ./template.html
+	mv maas-documentation.html maas-offline/deb/2.9/ui/maas-documentation-25.html
+	cp templates/snap/2.7/ui/template.html ./template.html
 	sed -i 's/zork/maas-documentation-25.html/g' ./template.html
 	xpub convert dc2html -t snap-2-7-ui maas-documentation.md
-	mv maas-documentation.html maas-offline/snap/2.7/maas-documentation-25.html
-	cp templates/snap/2.8/ui/mp-template.html ./template.html
+	mv maas-documentation.html maas-offline/snap/2.7/ui/maas-documentation-25.html
+	cp templates/snap/2.8/ui/template.html ./template.html
 	sed -i 's/zork/maas-documentation-25.html/g' ./template.html
 	xpub convert dc2html -t snap-2-8-ui maas-documentation.md
-	mv maas-documentation.html maas-offline/snap/2.8/maas-documentation-25.html
-	cp templates/snap/2.9/ui/mp-template.html ./template.html
+	mv maas-documentation.html maas-offline/snap/2.8/ui/maas-documentation-25.html
+	cp templates/snap/2.9/ui/template.html ./template.html
 	sed -i 's/zork/maas-documentation-25.html/g' ./template.html
 	xpub convert dc2html -t snap-2-8-ui maas-documentation.md
-	mv maas-documentation.html maas-offline/snap/2.9/maas-documentation-25.html
+	mv maas-documentation.html maas-offline/snap/2.9/ui/maas-documentation-25.html
 	cp templates/deb/2.7/cli/template.html ./template.html
 	sed -i 's/zork/\.\.\/maas-documentation-25.html/g' ./template.html
 	xpub convert dc2html -t deb-2-7-cli maas-documentation.md

@@ -383,7 +383,7 @@
 	</li>
       </ul>
       <strong>
-	<a href="https://maas.io/docs/api">
+	<a href="api.html">
 	  API documentation
 	</a>
       </strong>
@@ -432,19 +432,19 @@
       <h1>CLI advanced tasks</h1><p>This article is a list of advanced tasks you can perform with the MAAS CLI.</p>
 <h4>Quick questions you may have:</h4>
 <ul>
-<li><a href="maas-cli.html">How do I get started with the MAAS CLI?</a></li>
-<li><a href="cli-advanced-tasks.html#heading--edit-node-hostname-and-power-parameters">How do I edit machine hostname and power parameters?</a></li>
-<li><a href="cli-advanced-tasks.html#heading--relay-dhcp">How do I relay DHCP?</a></li>
-<li><a href="cli-advanced-tasks.html#heading--assign-a-network-interface-to-a-fabric">How do I assign a network interface to a fabric?</a></li>
-<li><a href="commission-machines-snap-2-8-cli.html##heading--post-commission-configuration">How do I change the IP assignment mode of a network interface?</a></li>
-<li><a href="rack-controllers-snap-2-8-cli.html#heading--install-a-rack-controller">How do I install a rack controller?</a></li>
-<li><a href="rack-controllers-snap-2-8-cli.html#heading--list-rack-controllers">How do I list rack controllers?</a></li>
-<li><a href="cli-advanced-tasks.html#heading--set-the-default-storage-layout">How do I set the default storage layout?</a></li>
-<li><a href="cli-advanced-tasks.html#heading--set-a-storage-layout">How do I set a storage layout?</a></li>
-<li><a href="cli-advanced-tasks.html#heading--create-an-a-or-aaaa-record-in-dns">How do I create an A or AAAA record in DNS?</a></li>
-<li><a href="cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns">How do I create an alias (CNAME) record in DNS?</a></li>
-<li><a href="cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns">How do I create a Mail Exchange pointer record in DNS?</a></li>
-<li><a href="cli-advanced-tasks.html#heading--add-or-update-a-remote-syslog-server">How do I add or update a remote syslog server?</a></li>
+<li><a href="maas-cli-802.html">How do I get started with the MAAS CLI?</a></li>
+<li><a href="cli-advanced-tasks-793.html#heading--edit-node-hostname-and-power-parameters">How do I edit machine hostname and power parameters?</a></li>
+<li><a href="cli-advanced-tasks-793.html#heading--relay-dhcp">How do I relay DHCP?</a></li>
+<li><a href="cli-advanced-tasks-793.html#heading--assign-a-network-interface-to-a-fabric">How do I assign a network interface to a fabric?</a></li>
+<li><a href="commission-machines-snap-2-8-cli-2468.html##heading--post-commission-configuration">How do I change the IP assignment mode of a network interface?</a></li>
+<li><a href="rack-controllers-snap-2-8-cli-3056.html#heading--install-a-rack-controller">How do I install a rack controller?</a></li>
+<li><a href="rack-controllers-snap-2-8-cli-3056.html#heading--list-rack-controllers">How do I list rack controllers?</a></li>
+<li><a href="cli-advanced-tasks-793.html#heading--set-the-default-storage-layout">How do I set the default storage layout?</a></li>
+<li><a href="cli-advanced-tasks-793.html#heading--set-a-storage-layout">How do I set a storage layout?</a></li>
+<li><a href="cli-advanced-tasks-793.html#heading--create-an-a-or-aaaa-record-in-dns">How do I create an A or AAAA record in DNS?</a></li>
+<li><a href="cli-advanced-tasks-793.html#heading--create-an-alias-cname-record-in-dns">How do I create an alias (CNAME) record in DNS?</a></li>
+<li><a href="cli-advanced-tasks-793.html#heading--create-a-mail-exchange-pointer-record-in-dns">How do I create a Mail Exchange pointer record in DNS?</a></li>
+<li><a href="cli-advanced-tasks-793.html#heading--add-or-update-a-remote-syslog-server">How do I add or update a remote syslog server?</a></li>
 </ul>
 <h2 id="heading--edit-node-hostname-and-power-parameters">Edit machine hostname and power parameters</h2>
 
@@ -464,7 +464,7 @@
     power_parameters_power_id=$HOSTNAME
 </code></pre>
 
-<p>See <a href="common-cli-tasks.html#heading--determine-a-node-system-id">Common CLI tasks</a> for how to find a machine&rsquo;s system id and <a href="power-management.html">BMC Power Types</a> for details on different power types.</p>
+<p>See <a href="common-cli-tasks-794.html#heading--determine-a-node-system-id">Common CLI tasks</a> for how to find a machine&rsquo;s system id and <a href="power-management-830.html">BMC Power Types</a> for details on different power types.</p>
 <h2 id="heading--relay-dhcp">Relay DHCP</h2>
 
 <p>To relay DHCP traffic for a VLAN (source) through another VLAN (target):</p>
@@ -475,7 +475,7 @@
 <pre><code class="bash">maas $PROFILE vlan update 2 0 relay_van=5002
 </code></pre>
 
-<p>See <a href="managing-dhcp.html#heading--dhcp-relay">DHCP relay</a> for more information.</p>
+<p>See <a href="managing-dhcp-759.html#heading--dhcp-relay">DHCP relay</a> for more information.</p>
 <h2 id="heading--assign-a-network-interface-to-a-fabric">Assign a network interface to a fabric</h2>
 
 <p>This task is made easier with the aid of the <code>jq</code> utility. It filters the <code>maas</code> command (JSON formatted) output and prints it in the desired way, which allows you to view and compare data quickly. Go ahead and install it:</p>
@@ -546,7 +546,7 @@ You can only edit an interface when the corresponding machine has a status of &l
 <p>[note type=&rdquo;caution&rdquo; status=&rdquo;Important&rdquo;]
 The new default will only apply to newly-commissioned machines.
 [/note]</p>
-<p>See <a href="storage.html">Storage</a> for more details on MAAS storage features.</p>
+<p>See <a href="storage-775.html">Storage</a> for more details on MAAS storage features.</p>
 <h2 id="heading--set-a-storage-layout">Set a storage layout</h2>
 
 <p>An administrator can set a storage layout for a machine with a status of &lsquo;Ready&rsquo; like this:</p>
