@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -383,7 +383,7 @@
 	</li>
       </ul>
       <strong>
-	<a href="https://maas.io/docs/api">
+	<a href="api.html">
 	  API documentation
 	</a>
       </strong>
@@ -488,14 +488,13 @@
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  snap-2-7-cli -->
 
-<!-- snap-2-7-ui
-* [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](introduction-to-vm-hosting.html)
-* [How do I add virtual machines?](adding-a-vm-host.html)
-* [How do I add a machine manually?](#heading--add-a-node-manually)
-* [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
- snap-2-7-ui -->
-
+<ul>
+<li><a href="#heading--enlistment">How does enlistment work?</a></li>
+<li><a href="introduction-to-vm-hosting.html">How do VM host nodes work?</a></li>
+<li><a href="adding-a-vm-host.html">How do I add virtual machines?</a></li>
+<li><a href="#heading--add-a-node-manually">How do I add a machine manually?</a></li>
+<li><a href="#heading--add-nodes-via-a-chassis">How do I add a machine via a chassis?</a></li>
+</ul>
 <!-- snap-2-8-cli
 * [How does enlistment work?](#heading--enlistment)
 * [How do VM host nodes work?](introduction-to-vm-hosting.html)
@@ -518,13 +517,14 @@
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  snap-2-9-cli -->
 
-<ul>
-<li><a href="#heading--enlistment">How does enlistment work?</a></li>
-<li><a href="introduction-to-vm-hosting.html">How do VM host nodes work?</a></li>
-<li><a href="adding-a-vm-host.html">How do I add virtual machines?</a></li>
-<li><a href="#heading--add-a-node-manually">How do I add a machine manually?</a></li>
-<li><a href="#heading--add-nodes-via-a-chassis">How do I add a machine via a chassis?</a></li>
-</ul>
+<!-- snap-2-9-ui
+* [How does enlistment work?](#heading--enlistment)
+* [How do VM host nodes work?](introduction-to-vm-hosting.html)
+* [How do I add virtual machines?](adding-a-vm-host.html)
+* [How do I add a machine manually?](#heading--add-a-node-manually)
+* [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+ snap-2-9-ui -->
+
 <p>MAAS typically adds a machine via a combination of DHCP, TFTP, and PXE. By now, you should have enabled MAAS to automatically add devices and machines to your environment. This unattended method of adding machines is called enlistment.</p>
 <p>[note]
 Configuring a computer to boot over PXE is done via its BIOS, often referred to as &ldquo;netboot&rdquo; or &ldquo;network boot&rdquo;.
@@ -567,10 +567,7 @@ The enlistment scripts send information about the machine to the region API serv
 The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](network-discovery.html).
  snap-2-7-cli -->
 
-<!-- snap-2-7-ui
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](network-discovery.html).
- snap-2-7-ui -->
-
+<p>The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as <a href="network-discovery.html">automatic discovery or network discovery</a>.</p>
 <!-- snap-2-8-cli
 The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](network-discovery.html).
  snap-2-8-cli -->
@@ -583,7 +580,10 @@ The enlistment scripts send information about the machine to the region API serv
 The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](network-discovery.html).
  snap-2-9-cli -->
 
-<p>The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as <a href="network-discovery.html">automatic discovery or network discovery</a>.</p>
+<!-- snap-2-9-ui
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](network-discovery.html).
+ snap-2-9-ui -->
+
 <p>After the enlistment process, MAAS places the machine in the &lsquo;Ready&rsquo; state.  &lsquo;Ready&rsquo; is a holding state for machines that are enlisted (or commissioned), waiting to be deployed when needed.</p>
 <!-- deb-2-7-cli
 Typically, the next step will be to [commission the machine](commission-machines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
@@ -613,10 +613,7 @@ Typically, the next step will be to [commission the machine](commission-machines
 Typically, the next step will be to [commission the machine](commission-machines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
  snap-2-7-cli -->
 
-<!-- snap-2-7-ui
-Typically, the next step will be to [commission the machine](commission-machines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- snap-2-7-ui -->
-
+<p>Typically, the next step will be to <a href="commission-machines.html">commission the machine</a>. As an alternative to enlistment, an administrator can add a machine manually (see <a href="#heading--add-a-node-manually">below</a>). Typically this is done when enlistment doesn&rsquo;t work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you&rsquo;ve added it.</p>
 <!-- snap-2-8-cli
 Typically, the next step will be to [commission the machine](commission-machines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
  snap-2-8-cli -->
@@ -629,48 +626,19 @@ Typically, the next step will be to [commission the machine](commission-machines
 Typically, the next step will be to [commission the machine](commission-machines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
  snap-2-9-cli -->
 
-<p>Typically, the next step will be to <a href="commission-machines.html">commission the machine</a>. As an alternative to enlistment, an administrator can add a machine manually (see <a href="#heading--add-a-node-manually">below</a>). Typically this is done when enlistment doesn&rsquo;t work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you&rsquo;ve added it.</p>
+<!-- snap-2-9-ui
+Typically, the next step will be to [commission the machine](commission-machines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ snap-2-9-ui -->
+
 <p>[note]
 MAAS runs built-in commissioning scripts during the enlistment phase. When you commission a machine, any customised commissioning scripts you add will have access to data collected during enlistment. Follow the link above for more information about commissioning and commission scripts.
 [/note]</p>
 <h2 id="heading--add-a-node-manually">Add a machine manually</h2>
 
 <p>Enlistment can be done manually if the hardware specifications of the underlying machine are known.</p>
-<!-- deb-2-7-ui snap-2-7-ui
-On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
-
-Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI machine:
-
-<a href="images/20aa36b2-nodes-add__2.5_add-node-manually.png" target = "_blank"><img src="images/20aa36b2-nodes-add__2.5_add-node-manually.png"></a></a>
-
-The fields on the "Add machine" screen are as follows:
-
-* **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
-
-* **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
-
-* **Architecture**: This field refers to the architecture of the machine being added.
-
-* **Minimum Kernel**: This field supplies a drop-down of possible kernels available for deployment on this machine.
-
-* **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
-
-* **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
-
-* **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
-deb-2-7-ui snap-2-7-ui -->
-
-<!-- snap-2-7-ui 
-type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-management.html) for details on the available power types and the relevant parameters for each type.
-snap-2-7-ui -->
-
-<!-- deb-2-7-ui 
-type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-management.html) for details on the available power types and the relevant parameters for each type.
-deb-2-7-ui -->
-
 <p>On the &lsquo;Machines&rsquo; page of the web UI, click the &lsquo;Add hardware&rsquo; button and then select &lsquo;Machine&rsquo;.</p>
 <p>Fill in the form and hit &lsquo;Save machine&rsquo;. In this example, you are adding an IPMI machine:</p>
-<p><a href="images/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg" target = "_blank"><img src="images/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg"></a></a></p>
+<p><a href="images/20aa36b2-nodes-add__2.5_add-node-manually.png" target = "_blank"><img src="images/20aa36b2-nodes-add__2.5_add-node-manually.png"></a></a></p>
 <p>The fields on the &ldquo;Add machine&rdquo; screen are as follows:</p>
 <ul>
 <li>
@@ -695,6 +663,35 @@ deb-2-7-ui -->
 <p><strong>MAC Address</strong>: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (&ldquo;:&rdquo;) separator, although some MAC addresses are written with dash (&ldquo;-&ldquo;) separators.</p>
 </li>
 </ul>
+<p>type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See <a href="power-management.html">Power management</a> for details on the available power types and the relevant parameters for each type.</p>
+<!-- deb-2-7-ui 
+type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-management.html) for details on the available power types and the relevant parameters for each type.
+deb-2-7-ui -->
+
+<!-- deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui
+On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
+
+Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI machine:
+
+<a href="images/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg" target = "_blank"><img src="images/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg"></a></a>
+
+The fields on the "Add machine" screen are as follows:
+
+* **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
+
+* **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
+
+* **Architecture**: This field refers to the architecture of the machine being added.
+
+* **Minimum Kernel**: This field supplies a drop-down of possible kernels available for deployment on this machine.
+
+* **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
+
+* **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
+
+* **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
+deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui -->
+
 <!-- deb-2-8-ui
 * **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-management.html) for details on the available power types and the relevant parameters for each type.
  deb-2-8-ui -->
@@ -707,9 +704,10 @@ deb-2-7-ui -->
 * **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-management.html) for details on the available power types and the relevant parameters for each type.
  snap-2-8-ui -->
 
-<ul>
-<li><strong>Power type</strong>: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See <a href="power-management.html">Power management</a> for details on the available power types and the relevant parameters for each type.</li>
-</ul>
+<!-- snap-2-9-ui
+* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-management.html) for details on the available power types and the relevant parameters for each type.
+ snap-2-9-ui -->
+
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 At the command line, enter the following information:
 
@@ -806,28 +804,27 @@ Note that in MAAS versions before 2.5, you are required to provide the MAC addre
 <p>For IPMI machines, you only need to provide IPMI credentials. MAAS automatically discovers the machine and runs enlistment configuration by matching the BMC address.</p>
 <h5>Non-IPMI machines</h5>
 <p>For non-IPMI machines, you must specify a non-PXE MAC address. MAAS automatically discovers the machine and runs enlistment configuration by matching the non-PXE MAC address.</p>
-<!-- deb-2-7-ui snap-2-7-ui
+<h2 id="heading--add-nodes-via-a-chassis">Add a machine via a chassis</h2>
+
+<p>Use the chassis feature to add multiple machines at once. To do this, instead of selecting &lsquo;Machine&rsquo; as above, choose &lsquo;Chassis&rsquo; from the drop-down menu. In the following example, MAAS will add all available VMs from the given  virsh address:</p>
+<p><a href="images/d5314a8a-nodes-add__2.4_add-node-chassis.png" target = "_blank"><img src="images/d5314a8a-nodes-add__2.4_add-node-chassis.png"></a></a></p>
+<p>The required fields will change based on the type of chassis you choose.</p>
+<p>[note]
+As with the manual method, the underlying machines will require netbooting.
+[/note]</p>
+<!-- snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui
 <h2 id="heading--add-nodes-via-a-chassis">Add a machine via a chassis</h2>
 
 Use the chassis feature to add multiple machines at once. To do this, instead of selecting 'Machine' as above, choose 'Chassis' from the drop-down menu. In the following example, MAAS will add all available VMs from the given  virsh address:
 
-<a href="images/d5314a8a-nodes-add__2.4_add-node-chassis.png" target = "_blank"><img src="images/d5314a8a-nodes-add__2.4_add-node-chassis.png"></a></a>
+<a href="images/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg" target = "_blank"><img src="images/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg"></a></a>
 
 The required fields will change based on the type of chassis you choose.
 
 [note]
 As with the manual method, the underlying machines will require netbooting.
 [/note]
-deb-2-7-ui snap-2-7-ui -->
-
-<h2 id="heading--add-nodes-via-a-chassis">Add a machine via a chassis</h2>
-
-<p>Use the chassis feature to add multiple machines at once. To do this, instead of selecting &lsquo;Machine&rsquo; as above, choose &lsquo;Chassis&rsquo; from the drop-down menu. In the following example, MAAS will add all available VMs from the given  virsh address:</p>
-<p><a href="images/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg" target = "_blank"><img src="images/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg"></a></a></p>
-<p>The required fields will change based on the type of chassis you choose.</p>
-<p>[note]
-As with the manual method, the underlying machines will require netbooting.
-[/note]</p>
+snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui -->
     </div>
   </body>
 </html>

@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -383,7 +383,7 @@
 	</li>
       </ul>
       <strong>
-	<a href="https://maas.io/docs/api">
+	<a href="api.html">
 	  API documentation
 	</a>
       </strong>
@@ -468,10 +468,7 @@ Commissioning requires 60 seconds.
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](add-machines.html)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](commissioning-and-hardware-testing-scripts.html) to meet your specific needs.
  snap-2-7-cli -->
 
-<!-- snap-2-7-ui
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](add-machines.html)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](commissioning-and-hardware-testing-scripts.html) to meet your specific needs.
- snap-2-7-ui -->
-
+<p>When you configure a machine to netboot &ndash; and turn it on while connected to the network &ndash; MAAS will enlist it, giving it a status of &ldquo;New.&rdquo;  You can also <a href="add-machines.html">add a machine manually</a>).  In either case, the next step is <em>commissioning</em>, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run <a href="commissioning-and-hardware-testing-scripts.html">custom commissioning scripts</a> to meet your specific needs.</p>
 <!-- snap-2-8-cli
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](add-machines.html)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](commissioning-and-hardware-testing-scripts.html) to meet your specific needs.
  snap-2-8-cli -->
@@ -488,10 +485,14 @@ Commissioning requires 60 seconds.
 [/note]
  snap-2-9-cli -->
 
-<p>When you configure a machine to netboot &ndash; and turn it on while connected to the network &ndash; MAAS will enlist it, giving it a status of &ldquo;New.&rdquo;  You can also <a href="add-machines.html">add a machine manually</a>).  In either case, the next step is <em>commissioning</em>, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run <a href="commissioning-and-hardware-testing-scripts.html">custom commissioning scripts</a> to meet your specific needs.</p>
-<p>[note]
+<!-- snap-2-9-ui
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](add-machines.html)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](commissioning-and-hardware-testing-scripts.html) to meet your specific needs.
+
+[note]
 Commissioning requires 60 seconds.
-[/note]</p>
+[/note]
+ snap-2-9-ui -->
+
 <h4>Questions you may have:</h4>
 <ul>
 <li><a href="#heading--commissioning-machines">How are machines commissioned?</a></li>
@@ -567,15 +568,14 @@ Commissioning requires 60 seconds.
 6.  machine shuts down
  snap-2-7-cli -->
 
-<!-- snap-2-7-ui
-1.  DHCP server is contacted
-2.  kernel and initrd are received over TFTP
-3.  machine boots
-4.  initrd mounts a Squashfs image ephemerally over HTTP
-5.  cloud-init runs built-in and [custom commissioning scripts](commissioning-and-hardware-testing-scripts.html)
-6.  machine shuts down
- snap-2-7-ui -->
-
+<ol>
+<li>DHCP server is contacted</li>
+<li>kernel and initrd are received over TFTP</li>
+<li>machine boots</li>
+<li>initrd mounts a Squashfs image ephemerally over HTTP</li>
+<li>cloud-init runs built-in and <a href="commissioning-and-hardware-testing-scripts.html">custom commissioning scripts</a></li>
+<li>machine shuts down</li>
+</ol>
 <!-- snap-2-8-cli
 1.  DHCP server is contacted
 2.  kernel and initrd are received over TFTP
@@ -603,14 +603,15 @@ Commissioning requires 60 seconds.
 6.  machine shuts down
  snap-2-9-cli -->
 
-<ol>
-<li>DHCP server is contacted</li>
-<li>kernel and initrd are received over TFTP</li>
-<li>machine boots</li>
-<li>initrd mounts a Squashfs image ephemerally over HTTP</li>
-<li>cloud-init runs built-in and <a href="commissioning-and-hardware-testing-scripts.html">custom commissioning scripts</a></li>
-<li>machine shuts down</li>
-</ol>
+<!-- snap-2-9-ui
+1.  DHCP server is contacted
+2.  kernel and initrd are received over TFTP
+3.  machine boots
+4.  initrd mounts a Squashfs image ephemerally over HTTP
+5.  cloud-init runs built-in and [custom commissioning scripts](commissioning-and-hardware-testing-scripts.html)
+6.  machine shuts down
+ snap-2-9-ui -->
+
 <p>The commissioning scripts will talk to the region API server to ensure that everything is in order and that eventual deployment will succeed.</p>
 <p>MAAS chooses the latest Ubuntu LTS release as the default image for commissioning.  If desired, you can select a different image in the &lsquo;Settings&rsquo; page of the web UI, by selecting the &lsquo;General&rsquo; tab and then scrolling down to the Commissioning section.</p>
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
@@ -686,26 +687,6 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 -   **Configure HBA**: Runs scripts tagged with 'configure_hba'. As above, see [Testing scripts](commissioning-and-hardware-testing-scripts.html#heading--automatic-script-selection-by-hardware-type) for further details.
  deb-2-9-ui -->
 
-<!-- snap-2-7-ui
--   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](networking.html) for more information.
-
--   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](storage.html) for more details.
-
--   **Update firmware**: Runs scripts tagged with 'update_firmware. See [Testing scripts](commissioning-and-hardware-testing-scripts.html#heading--automatic-script-selection-by-hardware-type) for more details.
-
--   **Configure HBA**: Runs scripts tagged with 'configure_hba'. As above, see [Testing scripts](commissioning-and-hardware-testing-scripts.html#heading--automatic-script-selection-by-hardware-type) for further details.
- snap-2-7-ui -->
-
-<!-- snap-2-8-ui
--   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](networking.html) for more information.
-
--   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](storage.html) for more details.
-
--   **Update firmware**: Runs scripts tagged with 'update_firmware. See [Testing scripts](commissioning-and-hardware-testing-scripts.html#heading--automatic-script-selection-by-hardware-type) for more details.
-
--   **Configure HBA**: Runs scripts tagged with 'configure_hba'. As above, see [Testing scripts](commissioning-and-hardware-testing-scripts.html#heading--automatic-script-selection-by-hardware-type) for further details.
- snap-2-8-ui -->
-
 <ul>
 <li>
 <p><strong>Retain network configuration</strong>: When enabled, preserves any custom network settings previously configured for the machine. See <a href="networking.html">Networking</a> for more information.</p>
@@ -720,6 +701,26 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 <p><strong>Configure HBA</strong>: Runs scripts tagged with &lsquo;configure_hba&rsquo;. As above, see <a href="commissioning-and-hardware-testing-scripts.html#heading--automatic-script-selection-by-hardware-type">Testing scripts</a> for further details.</p>
 </li>
 </ul>
+<!-- snap-2-8-ui
+-   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](networking.html) for more information.
+
+-   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](storage.html) for more details.
+
+-   **Update firmware**: Runs scripts tagged with 'update_firmware. See [Testing scripts](commissioning-and-hardware-testing-scripts.html#heading--automatic-script-selection-by-hardware-type) for more details.
+
+-   **Configure HBA**: Runs scripts tagged with 'configure_hba'. As above, see [Testing scripts](commissioning-and-hardware-testing-scripts.html#heading--automatic-script-selection-by-hardware-type) for further details.
+ snap-2-8-ui -->
+
+<!-- snap-2-9-ui
+-   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](networking.html) for more information.
+
+-   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](storage.html) for more details.
+
+-   **Update firmware**: Runs scripts tagged with 'update_firmware. See [Testing scripts](commissioning-and-hardware-testing-scripts.html#heading--automatic-script-selection-by-hardware-type) for more details.
+
+-   **Configure HBA**: Runs scripts tagged with 'configure_hba'. As above, see [Testing scripts](commissioning-and-hardware-testing-scripts.html#heading--automatic-script-selection-by-hardware-type) for further details.
+ snap-2-9-ui -->
+
 <p><a href="images/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="images/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a></a></p>
 <!-- deb-2-7-ui
 Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](hardware-testing.html)) for more information on hardware testing scripts.
@@ -733,15 +734,15 @@ Click the Hardware tests field to reveal a drop-down list of tests to add and ru
 Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](hardware-testing.html)) for more information on hardware testing scripts.
  deb-2-9-ui -->
 
-<!-- snap-2-7-ui
-Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](hardware-testing.html)) for more information on hardware testing scripts.
- snap-2-7-ui -->
-
+<p>Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See <a href="hardware-testing.html">Hardware testing</a>) for more information on hardware testing scripts.</p>
 <!-- snap-2-8-ui
 Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](hardware-testing.html)) for more information on hardware testing scripts.
  snap-2-8-ui -->
 
-<p>Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See <a href="hardware-testing.html">Hardware testing</a>) for more information on hardware testing scripts.</p>
+<!-- snap-2-9-ui
+Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](hardware-testing.html)) for more information on hardware testing scripts.
+ snap-2-9-ui -->
+
 <p>Finalise the directive by hitting &lsquo;Commission machine&rsquo;.</p>
 <p>While commissioning, the machine status will change to reflect this state (Commissioning).  MAAS discovers the machine&rsquo;s network topology.  MAAS then prompts a machine network interface to connect to the fabric, VLAN, and subnet combination for configuration. Usually, MAAS assigns a static IP address out of the reserved IP range for the subnet (&lsquo;Auto assign&rsquo; mode). The next section details several assignment modes.</p>
 <p>Once commissioned, a machine&rsquo;s status will change to Ready, and an extra tab for the machine called &lsquo;Commissioning&rsquo; will become available. This tab contains the results of the scripts executed during the commissioning process.</p>
@@ -773,10 +774,7 @@ Once commissioned, you may consider [creating or applying a tag](maas-tags.html)
 Once commissioned, you may consider [creating or applying a tag](maas-tags.html) to this machine.  The next step is [deployment](deploy-machines.html).
  snap-2-7-cli -->
 
-<!-- snap-2-7-ui
-Once commissioned, you may consider [creating or applying a tag](maas-tags.html) to this machine.  The next step is [deployment](deploy-machines.html.
- snap-2-7-ui -->
-
+<p>Once commissioned, you may consider <a href="maas-tags.html">creating or applying a tag</a> to this machine.  The next step is [deployment](deploy-machines.html.</p>
 <!-- snap-2-8-cli
 Once commissioned, you may consider [creating or applying a tag](maas-tags.html) to this machine.  The next step is [deployment](deploy-machines.html).
  snap-2-8-cli -->
@@ -789,7 +787,10 @@ Once commissioned, you may consider [creating or applying a tag](maas-tags.html)
 Once commissioned, you may consider [creating or applying a tag](maas-tags.html) to this machine.  The next step is [deployment](deploy-machines.html).
  snap-2-9-cli -->
 
-<p>Once commissioned, you may consider <a href="maas-tags.html">creating or applying a tag</a> to this machine.  The next step is <a href="deploy-machines.html">deployment</a>.</p>
+<!-- snap-2-9-ui
+Once commissioned, you may consider [creating or applying a tag](maas-tags.html) to this machine.  The next step is [deployment](deploy-machines.html).
+ snap-2-9-ui -->
+
 <h3 id="heading--numa-sriov-commissioning">Commission NUMA and SR-IOV nodes</h3>
 
 <p>If you are using the NUMA architecture, MAAS versions 2.7 and higher guarantee that machines are assigned to a single NUMA node that contains all the machine&rsquo;s resources. Node boundaries are critical, especially in vNUMA situations.  Splitting nodes can create unnecessary latency.  You want the NUMA node boundaries to match VM boundaries if at all possible.</p>
@@ -801,27 +802,67 @@ You must recommission NUMA/SR-IOV machines that were previously commissioned und
 <h2 id="heading--commissioning-scripts">MAAS commissioning scripts</h2>
 
 <p>When a machine boots, MAAS first instructs it to run cloud-init to set up SSH keys (during commissioning only), set up NTP, and execute a script that runs other commissioning scripts.  Currently, the sequence of MAAS-provided commissioning scripts proceeds like this:</p>
+<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
+* maas-support-info: MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  **Runs in parallel with other scripts.**
+
+* maas-lshw: this script pulls system BIOS and vendor info, and generates user-defined tags for later use.  **Runs in parallel with other scripts.**
+
+* 20-maas-01-install-lldpd: this script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  This script provides some extensive logging.
+
+* maas-list-modaliases: this script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.  **Runs in parallel with other scripts.**
+
+* 20-maas-02-dhcp-unconfigured-ifaces: MAAS will want to know all the ways the machine is connected to the network.  Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.  This script provides extensive logging.
+
+* maas-get-fruid-api-data: this script gathers information for the Facebook wedge power type.  **Runs in parallel with other scripts.**
+
+* maas-serial-ports: this script lists what serial ports are available on the machine.  **Runs in parallel with other scripts.**
+
+* 40-maas-01-network-interfaces: this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
+
+* 50-maas-01-commissioning: this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
+
+* maas-capture-lldp: this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  **Runs in parallel with other scripts.**
+
+* maas-kernel-cmdline: this script is used to update the boot devices; it double-checks that the right boot interface is selected. 
+
+Commissioning runs the same dozen or so scripts as enlistment, gathering all the same information, but with some additional caveats: 
+
+* Commissioning also runs user-supplied commissioning scripts, if present.  Be aware that these scripts run as root, so they can execute any system command.
+
+* Commissioning runs test scripts which are not run during enlistment.
+
+* Commissioning scripts can send BMC configuration data, and can be used to configure BMC data.
+
+* The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts; these scripts may write BMC power credentials to BMC_CONFIG_PATH in YAML format, where each key is a power parameter.  The first script to write BMC_CONFIG_PATH is the only script allowed to configure the BMC, allowing you to override MAAS' built-in BMC detection.  If the script returns 0, that value will be send to MAAS.
+
+* All built-in commissioning scripts have been migrated into the database.
+
+* `maas-run-remote-scripts` is capable of enlisting machines, so enlistment `user-data` scripts have been removed.
+
+* The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.
+snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
+
 <ul>
 <li>
-<p>maas-support-info: MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  <strong>Runs in parallel with other scripts.</strong></p>
+<p>00-maas-00-support-info: MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.</p>
 </li>
 <li>
-<p>maas-lshw: this script pulls system BIOS and vendor info, and generates user-defined tags for later use.  <strong>Runs in parallel with other scripts.</strong></p>
+<p>00-maas-01-lshw: this script pulls system BIOS and vendor info, and generates user-defined tags for later use.</p>
 </li>
 <li>
-<p>20-maas-01-install-lldpd: this script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  This script provides some extensive logging.</p>
+<p>00-maas-03-install-lldpd: this script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  The lldpd needs to be installed early because it requires about a 60-second delay before running.</p>
 </li>
 <li>
-<p>maas-list-modaliases: this script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.  <strong>Runs in parallel with other scripts.</strong></p>
+<p>00-maas-04-list-modaliases: this script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.</p>
 </li>
 <li>
-<p>20-maas-02-dhcp-unconfigured-ifaces: MAAS will want to know all the ways the machine is connected to the network.  Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.  This script provides extensive logging.</p>
+<p>00-maas-05-dhcp-unconfigured-ifaces: MAAS will want to know all the ways the machine is connected to the network.  Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.</p>
 </li>
 <li>
-<p>maas-get-fruid-api-data: this script gathers information for the Facebook wedge power type.  <strong>Runs in parallel with other scripts.</strong></p>
+<p>00-maas-06-get-fruid-api-data: this script gathers information for the Facebook wedge power type.</p>
 </li>
 <li>
-<p>maas-serial-ports: this script lists what serial ports are available on the machine.  <strong>Runs in parallel with other scripts.</strong></p>
+<p>00-maas-08-serial-ports: this script lists what serial ports are available on the machine.</p>
 </li>
 <li>
 <p>40-maas-01-network-interfaces: this script is just used to get the IP address, which can then be associated with a VLAN/subnet.</p>
@@ -830,10 +871,10 @@ You must recommission NUMA/SR-IOV machines that were previously commissioned und
 <p>50-maas-01-commissioning: this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.</p>
 </li>
 <li>
-<p>maas-capture-lldp: this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  <strong>Runs in parallel with other scripts.</strong></p>
+<p>99-maas-01-capture-lldp: this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.</p>
 </li>
 <li>
-<p>maas-kernel-cmdline: this script is used to update the boot devices; it double-checks that the right boot interface is selected. </p>
+<p>99-maas-05-kernel-cmdline: this script is used to update the boot devices; it double-checks that the right boot interface is selected.</p>
 </li>
 </ul>
 <p>Commissioning runs the same dozen or so scripts as enlistment, gathering all the same information, but with some additional caveats: </p>
@@ -844,52 +885,7 @@ You must recommission NUMA/SR-IOV machines that were previously commissioned und
 <li>
 <p>Commissioning runs test scripts which are not run during enlistment.</p>
 </li>
-<li>
-<p>Commissioning scripts can send BMC configuration data, and can be used to configure BMC data.</p>
-</li>
-<li>
-<p>The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts; these scripts may write BMC power credentials to BMC_CONFIG_PATH in YAML format, where each key is a power parameter.  The first script to write BMC_CONFIG_PATH is the only script allowed to configure the BMC, allowing you to override MAAS&rsquo; built-in BMC detection.  If the script returns 0, that value will be send to MAAS.</p>
-</li>
-<li>
-<p>All built-in commissioning scripts have been migrated into the database.</p>
-</li>
-<li>
-<p><code>maas-run-remote-scripts</code> is capable of enlisting machines, so enlistment <code>user-data</code> scripts have been removed.</p>
-</li>
-<li>
-<p>The metadata endpoints <code>http://&lt;MAAS&gt;:5240/&lt;latest or 2012-03-01&gt;/</code> and <code>http://&lt;MAAS&gt;:5240/&lt;latest or 2012-03-01&gt;/meta-data/</code> are now available anonymously for use during enlistment.</p>
-</li>
 </ul>
-<!-- snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli
-* 00-maas-00-support-info: MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.
-
-* 00-maas-01-lshw: this script pulls system BIOS and vendor info, and generates user-defined tags for later use.
-
-* 00-maas-03-install-lldpd: this script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  The lldpd needs to be installed early because it requires about a 60-second delay before running.
-
-* 00-maas-04-list-modaliases: this script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.
-
-* 00-maas-05-dhcp-unconfigured-ifaces: MAAS will want to know all the ways the machine is connected to the network.  Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.
-
-* 00-maas-06-get-fruid-api-data: this script gathers information for the Facebook wedge power type.
-
-* 00-maas-08-serial-ports: this script lists what serial ports are available on the machine.
-
-* 40-maas-01-network-interfaces: this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
-
-* 50-maas-01-commissioning: this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
-
-* 99-maas-01-capture-lldp: this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.
-
-* 99-maas-05-kernel-cmdline: this script is used to update the boot devices; it double-checks that the right boot interface is selected.
-
-Commissioning runs the same dozen or so scripts as enlistment, gathering all the same information, but with some additional caveats: 
-
-* Commissioning also runs user-supplied commissioning scripts, if present.  Be aware that these scripts run as root, so they can execute any system command.
-
-* Commissioning runs test scripts which are not run during enlistment.
-snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli -->
-
 <p>In both enlistment and commissioning, MAAS uses either the MAC address or the UUID to identify machines.  Currently, because some machine types encountered by MAAS do <strong>not</strong> use unique MAC addresses, we are trending toward using the UUID.</p>
 <h2 id="heading--post-commission-configuration">Post-commission configuration</h2>
 
@@ -921,10 +917,7 @@ Once commissioned, you can configure the machine's network interface(s). Specifi
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either 'Ready' or 'Broken', interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](maas-tags.html#heading--tags-for-network-interfaces)).
  snap-2-7-cli -->
 
-<!-- snap-2-7-ui
-Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either 'Ready' or 'Broken', interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](maas-tags.html#heading--tags-for-network-interfaces)).
- snap-2-7-ui -->
-
+<p>Once commissioned, you can configure the machine&rsquo;s network interface(s). Specifically, when a machine&rsquo;s status is either &lsquo;Ready&rsquo; or &lsquo;Broken&rsquo;, interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see <a href="maas-tags.html#heading--tags-for-network-interfaces">Tags for network interfaces</a>).</p>
 <!-- snap-2-8-cli
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either 'Ready' or 'Broken', interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](maas-tags.html#heading--tags-for-network-interfaces)).
  snap-2-8-cli -->
@@ -937,7 +930,10 @@ Once commissioned, you can configure the machine's network interface(s). Specifi
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either 'Ready' or 'Broken', interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](maas-tags.html#heading--tags-for-network-interfaces)).
  snap-2-9-cli -->
 
-<p>Once commissioned, you can configure the machine&rsquo;s network interface(s). Specifically, when a machine&rsquo;s status is either &lsquo;Ready&rsquo; or &lsquo;Broken&rsquo;, interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see <a href="maas-tags.html#heading--tags-for-network-interfaces">Tags for network interfaces</a>).</p>
+<!-- snap-2-9-ui
+Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either 'Ready' or 'Broken', interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](maas-tags.html#heading--tags-for-network-interfaces)).
+ snap-2-9-ui -->
+
 <p>From a machine&rsquo;s &lsquo;Interfaces&rsquo; page, click the menu icon for the interface to be edited and select &lsquo;Edit Physical&rsquo; from the resulting menu:</p>
 <p><a href="images/438475b8906736b45fc809cd105a56be5052397d.png" target = "_blank"><img src="images/438475b8906736b45fc809cd105a56be5052397d.png"></a></a></p>
 <p>The following window will appear:</p>

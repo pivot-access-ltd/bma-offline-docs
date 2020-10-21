@@ -26,13 +26,13 @@
 	  UI-only
       </strong>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="cli/maas-documentation-25.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	<a href="cli/maas-documentation.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
 	  CLI-only
 	</a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation-25.html">
+	<a href="ui/maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -383,7 +383,7 @@
 	</li>
       </ul>
       <strong>
-	<a href="ui/https://maas.io/docs/api">
+	<a href="ui/api.html">
 	  API documentation
 	</a>
       </strong>
@@ -429,45 +429,146 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>MAAS documentation</h1><p>MAAS is <strong>Metal As A Service</strong>, a service that lets you treat physical servers like virtual machines &ndash; instances &ndash; in the cloud.  No need for you to manage servers individually: MAAS turns your bare metal into an elastic, cloud-like resource.</p>
-<h4>Quick questions you might have:</h4>
+      <h1>MAAS documentation</h1><!-- deb-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](maas-documentation-snap-2-7-cli.html) ~ [UI](maas-documentation-snap-2-7-ui.html)|[CLI](maas-documentation-snap-2-8-cli.html) ~ [UI](maas-documentation.html)|[CLI](maas-documentation-snap-2-9-cli.html) ~ [UI](maas-documentation-snap-2-9-ui.html)|
+|Packages|CLI ~ [UI](maas-documentation-deb-2-7-ui.html)|[CLI](maas-documentation-deb-2-8-cli.html) ~ [UI](maas-documentation-deb-2-8-ui.html)|[CLI](maas-documentation-deb-2-9-cli.html) ~ [UI](maas-documentation-deb-2-9-ui.html)|
+deb-2-7-cli -->
+
+<!-- snap-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ [UI](maas-documentation-snap-2-7-ui.html)|[CLI](maas-documentation-snap-2-8-cli.html) ~ [UI](maas-documentation.html)|[CLI](maas-documentation-snap-2-9-cli.html) ~ [UI](maas-documentation-snap-2-9-ui.html)|
+|Packages|[CLI](maas-documentation-deb-2-7-cli.html) ~ [UI](maas-documentation-deb-2-7-ui.html)|[CLI](maas-documentation-deb-2-8-cli.html) ~ [UI](maas-documentation-deb-2-8-ui.html)|[CLI](maas-documentation-deb-2-9-cli.html) ~ [UI](maas-documentation-deb-2-9-ui.html)|
+snap-2-7-cli -->
+
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="center">2.7</th>
+<th align="center">2.8</th>
+<th align="center">2.9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">Snap</td>
+<td align="center"><a href="maas-documentation-snap-2-7-cli.html">CLI</a> ~ UI</td>
+<td align="center"><a href="maas-documentation-snap-2-8-cli.html">CLI</a> ~ <a href="maas-documentation.html">UI</a></td>
+<td align="center"><a href="maas-documentation-snap-2-9-cli.html">CLI</a> ~ <a href="maas-documentation-snap-2-9-ui.html">UI</a></td>
+</tr>
+<tr>
+<td align="right">Packages</td>
+<td align="center"><a href="maas-documentation-deb-2-7-cli.html">CLI</a> ~ <a href="maas-documentation-deb-2-7-ui.html">UI</a></td>
+<td align="center"><a href="maas-documentation-deb-2-8-cli.html">CLI</a> ~ <a href="maas-documentation-deb-2-8-ui.html">UI</a></td>
+<td align="center"><a href="maas-documentation-deb-2-9-cli.html">CLI</a> ~ <a href="maas-documentation-deb-2-9-ui.html">UI</a></td>
+</tr>
+</tbody>
+</table>
 <!-- deb-2-7-ui
-* [What is MAAS -- and what does it really do for me?](about-maas-deb-2-7-ui.html)
-* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas-deb-2-7-ui.html)
-* [How does MAAS work -- in detail?](about-maas-deb-2-7-ui.html#heading--how-maas-works)
-* [What concepts might I need to understand before starting?](concepts-and-terms.html)
-* [Can I just install it and try it for myself?](explore-maas-deb-2-7-ui.html)
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](maas-documentation-snap-2-7-cli/2838) ~ [UI](maas-documentation-snap-2-7-ui.html)|[CLI](maas-documentation-snap-2-8-cli.html) ~ [UI](maas-documentation.html)|[CLI](maas-documentation-snap-2-9-cli.html) ~ [UI](maas-documentation-snap-2-9-ui.html)|
+|Packages|[CLI](maas-documentation-deb-2-7-cli.html) ~ UI|[CLI](maas-documentation-deb-2-8-cli.html) ~ [UI](maas-documentation-deb-2-8-ui.html)|[CLI](maas-documentation-deb-2-9-cli.html) ~ [UI](maas-documentation-deb-2-9-ui.html)|
 deb-2-7-ui -->
 
-<!-- snap-2-7-ui
-* [What is MAAS -- and what does it really do for me?](about-maas-snap-2-7-ui.html)
-* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas-snap-2-7-ui.html)
-* [How does MAAS work -- in detail?](about-maas-snap-2-7-ui.html#heading--how-maas-works)
-* [What concepts might I need to understand before starting?](concepts-and-terms.html)
-* [Can I just install it and try it for myself?](explore-maas-snap-2-7-ui.html)
-snap-2-7-ui -->
+<!-- snap-2-8-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](maas-documentation-snap-2-7-cli.html) ~ [UI](maas-documentation-snap-2-7-ui.html) | CLI ~ [UI](maas-documentation.html) |[CLI](maas-documentation-snap-2-9-cli.html) ~ [UI](maas-documentation-snap-2-9-ui.html) |
+|Packages|[CLI](maas-documentation-deb-2-7-cli.html) ~ [UI](maas-documentation-deb-2-7-ui.html) |[CLI](maas-documentation-deb-2-8-cli.html) ~ [UI](maas-documentation-deb-2-8-ui.html) |[CLI](maas-documentation-deb-2-9-cli.html) ~ [UI](maas-documentation-deb-2-9-ui.html) |
+snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](maas-documentation-snap-2-7-cli.html) ~ [UI](maas-documentation-snap-2-7-ui.html)|[CLI](maas-documentation-snap-2-8-cli.html) ~ UI|[CLI](maas-documentation-snap-2-9-cli.html) ~ [UI](maas-documentation-snap-2-9-ui.html)|
+|Packages|[CLI](maas-documentation-deb-2-7-cli.html) ~ [UI](maas-documentation-deb-2-7-ui.html)|[CLI](maas-documentation-deb-2-8-cli.html) ~ [UI](maas-documentation-deb-2-8-ui.html)|[CLI](maas-documentation-deb-2-9-cli.html) ~ [UI](maas-documentation-deb-2-9-ui.html)|
+snap-2-8-ui -->
+
+<!-- deb-2-8-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](maas-documentation-snap-2-7-cli.html) ~ [UI](maas-documentation-snap-2-7-ui.html)|[CLI](maas-documentation-snap-2-8-cli.html) ~ [UI](maas-documentation.html)|[CLI](maas-documentation-snap-2-9-cli.html) ~ [UI](maas-documentation-snap-2-9-ui.html)|
+|Packages|[CLI](maas-documentation-deb-2-7-cli.html) ~ [UI](maas-documentation-deb-2-7-ui.html)|CLI ~  [UI](maas-documentation-deb-2-8-ui.html)|[CLI](maas-documentation-deb-2-9-cli.html) ~ [UI](maas-documentation-deb-2-9-ui.html)|
+deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-* [What is MAAS -- and what does it really do for me?](about-maas-deb-2-8-ui.html)
-* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas-deb-2-8-ui.html)
-* [How does MAAS work -- in detail?](/tabout-maas-deb-2-8-ui/2271#heading--how-maas-works)
-* [What concepts might I need to understand before starting?](concepts-and-terms.html)
-* [Can I just install it and try it for myself?](explore-maas-deb-2-8-ui.html)
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](maas-documentation-snap-2-7-cli.html) ~ [UI](maas-documentation-snap-2-7-ui.html)|[CLI](maas-documentation-snap-2-8-cli.html) ~ [UI](maas-documentation.html)|[CLI](maas-documentation-snap-2-9-cli.html) ~ [UI](maas-documentation-snap-2-9-ui.html)|
+|Packages|[CLI](maas-documentation-deb-2-7-cli.html) ~ [UI](maas-documentation-deb-2-7-ui.html)|[CLI](maas-documentation-deb-2-8-cli.html) ~ UI|[CLI](maas-documentation-deb-2-9-cli.html) ~ [UI](maas-documentation-deb-2-9-ui.html)|
 deb-2-8-ui -->
 
-<ul>
-<li><a href="about-maas-snap-2-8-ui.html">What is MAAS &ndash; and what does it really do for me?</a></li>
-<li><a href="give-me-an-example-of-maas-snap-2-8-ui.html">Can you show me an example data centre using MAAS?</a></li>
-<li><a href="about-maas-snap-2-8-ui.html#heading--how-maas-works">How does MAAS work &ndash; in detail?</a></li>
-<li><a href="concepts-and-terms.html">What concepts might I need to understand before starting?</a></li>
-<li><a href="explore-maas-snap-2-8-ui.html">Can I just install it and try it for myself?</a></li>
-</ul>
+<!-- snap-2-9-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](maas-documentation-snap-2-7-cli.html) ~ [UI](maas-documentation-snap-2-7-ui.html)|[CLI](maas-documentation-snap-2-8-cli.html) ~ [UI](maas-documentation.html)|CLI ~  [UI](maas-documentation-snap-2-9-ui.html)|
+|Packages|[CLI](maas-documentation-deb-2-7-cli.html) ~ [UI](maas-documentation-deb-2-7-ui.html)|[CLI](maas-documentation-deb-2-8-cli.html) ~ [UI](maas-documentation-deb-2-8-ui.html)|[CLI](maas-documentation-deb-2-9-cli.html) ~ [UI](maas-documentation-deb-2-9-ui.html)|
+snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](maas-documentation-snap-2-7-cli.html) ~ [UI](maas-documentation-snap-2-7-ui.html)|[CLI](maas-documentation-snap-2-8-cli.html) ~ [UI](maas-documentation.html)|[CLI](maas-documentation-snap-2-9-cli.html) ~ UI|
+|Packages|[CLI](maas-documentation-deb-2-7-cli.html) ~ [UI](maas-documentation-deb-2-7-ui.html)|[CLI](maas-documentation-deb-2-8-cli.html) ~ [UI](maas-documentation-deb-2-8-ui.html)|[CLI](maas-documentation-deb-2-9-cli.html) ~ [UI](maas-documentation-deb-2-9-ui.html)|
+snap-2-9-ui -->
+
+<!-- deb-2-9-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](maas-documentation-snap-2-7-cli.html) ~ [UI](maas-documentation-snap-2-7-ui.html)|[CLI](maas-documentation-snap-2-8-cli.html) ~ [UI](maas-documentation.html)|[CLI](maas-documentation-snap-2-9-cli.html) ~ [UI](maas-documentation-snap-2-9-ui.html)|
+|Packages|[CLI](maas-documentation-deb-2-7-cli.html) ~ [UI](maas-documentation-deb-2-7-ui.html)|[CLI](maas-documentation-deb-2-8-cli.html) ~ [UI](maas-documentation-deb-2-8-ui.html)|CLI ~  [UI](maas-documentation-deb-2-9-ui.html)|
+deb-2-9-cli -->
+
 <!-- deb-2-9-ui
-* [What is MAAS -- and what does it really do for me?](about-maas-deb-2-9-ui.html)
-* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas-deb-2-9-ui.html)
-* [How does MAAS work -- in detail?](about-maas-deb-2-9-ui.html#heading--how-maas-works)
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](maas-documentation-snap-2-7-cli.html) ~ [UI](maas-documentation-snap-2-7-ui.html)|[CLI](maas-documentation-snap-2-8-cli.html) ~ [UI](maas-documentation.html)|[CLI](maas-documentation-snap-2-9-cli.html) ~ [UI](maas-documentation-snap-2-9-ui.html)|
+|Packages|[CLI](maas-documentation-deb-2-7-cli.html) ~ [UI](maas-documentation-deb-2-7-ui.html)|[CLI](maas-documentation-deb-2-8-cli.html) ~ [UI](maas-documentation-deb-2-8-ui.html)|[CLI](maas-documentation-deb-2-9-cli.html) ~ UI|
+deb-2-9-ui -->
+
+<p>MAAS is <strong>Metal As A Service</strong>, a service that lets you treat physical servers like virtual machines &ndash; instances &ndash; in the cloud.  No need for you to manage servers individually: MAAS turns your bare metal into an elastic, cloud-like resource.</p>
+<h4>Quick questions you might have:</h4>
+<!-- deb-2-7-ui
+* [What is MAAS -- and what does it really do for me?](about-maas.html)
+* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas.html)
+* [How does MAAS work -- in detail?](about-maas.html#heading--how-maas-works)
 * [What concepts might I need to understand before starting?](concepts-and-terms.html)
-* [Can I just install it and try it for myself?](explore-maas-deb-2-9-ui.html)
+* [Can I just install it and try it for myself?](explore-maas.html)
+deb-2-7-ui -->
+
+<ul>
+<li><a href="about-maas.html">What is MAAS &ndash; and what does it really do for me?</a></li>
+<li><a href="give-me-an-example-of-maas.html">Can you show me an example data centre using MAAS?</a></li>
+<li><a href="about-maas.html#heading--how-maas-works">How does MAAS work &ndash; in detail?</a></li>
+<li><a href="concepts-and-terms.html">What concepts might I need to understand before starting?</a></li>
+<li><a href="explore-maas.html">Can I just install it and try it for myself?</a></li>
+</ul>
+<!-- deb-2-8-ui
+* [What is MAAS -- and what does it really do for me?](about-maas.html)
+* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas.html)
+* [How does MAAS work -- in detail?](/tabout-maas/2271#heading--how-maas-works)
+* [What concepts might I need to understand before starting?](concepts-and-terms.html)
+* [Can I just install it and try it for myself?](explore-maas.html)
+deb-2-8-ui -->
+
+<!-- snap-2-8-ui
+* [What is MAAS -- and what does it really do for me?](about-maas.html)
+* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas.html)
+* [How does MAAS work -- in detail?](about-maas.html#heading--how-maas-works)
+* [What concepts might I need to understand before starting?](concepts-and-terms.html)
+* [Can I just install it and try it for myself?](explore-maas.html)
+snap-2-8-ui -->
+
+<!-- deb-2-9-ui
+* [What is MAAS -- and what does it really do for me?](about-maas.html)
+* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas.html)
+* [How does MAAS work -- in detail?](about-maas.html#heading--how-maas-works)
+* [What concepts might I need to understand before starting?](concepts-and-terms.html)
+* [Can I just install it and try it for myself?](explore-maas.html)
 deb-2-9-ui -->
 
 <!-- snap-2-9-ui
@@ -479,145 +580,145 @@ deb-2-9-ui -->
 snap-2-9-ui -->
 
 <!-- deb-2-7-cli
-* [What is MAAS -- and what does it really do for me?](about-maas-deb-2-7-cli.html)
-* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas-deb-2-7-cli.html)
-* [How does MAAS work -- in detail?](about-maas-deb-2-7-cli.html#heading--how-maas-works)
+* [What is MAAS -- and what does it really do for me?](about-maas.html)
+* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas.html)
+* [How does MAAS work -- in detail?](about-maas.html#heading--how-maas-works)
 * [What concepts might I need to understand before starting?](concepts-and-terms.html)
-* [Can I just install it and try it for myself?](explore-maas-deb-2-7-cli.html)
+* [Can I just install it and try it for myself?](explore-maas.html)
 deb-2-7-cli -->
 
 <!-- snap-2-7-cli
-* [What is MAAS -- and what does it really do for me?](about-maas-snap-2-7-cli.html)
-* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas-snap-2-7-cli.html)
-* [How does MAAS work -- in detail?](about-maas-snap-2-7-cli.html#heading--how-maas-works)
+* [What is MAAS -- and what does it really do for me?](about-maas.html)
+* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas.html)
+* [How does MAAS work -- in detail?](about-maas.html#heading--how-maas-works)
 * [What concepts might I need to understand before starting?](concepts-and-terms.html)
-* [Can I just install it and try it for myself?](explore-maas-snap-2-7-cli.html)
+* [Can I just install it and try it for myself?](explore-maas.html)
 snap-2-7-cli -->
 
 <!-- deb-2-8-cli
-* [What is MAAS -- and what does it really do for me?](about-maas-deb-2-8-cli.html)
-* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas-deb-2-8-cli.html)
-* [How does MAAS work -- in detail?](about-maas-deb-2-8-cli.html#heading--how-maas-works)
+* [What is MAAS -- and what does it really do for me?](about-maas.html)
+* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas.html)
+* [How does MAAS work -- in detail?](about-maas.html#heading--how-maas-works)
 * [What concepts might I need to understand before starting?](concepts-and-terms.html)
-* [Can I just install it and try it for myself?](explore-maas-deb-2-8-cli.html)
+* [Can I just install it and try it for myself?](explore-maas.html)
 deb-2-8-cli -->
 
 <!-- snap-2-8-cli
-* [What is MAAS -- and what does it really do for me?](about-maas-snap-2-8-cli.html)
-* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas-snap-2-8-cli.html)
-* [How does MAAS work -- in detail?](about-maas-snap-2-8-cli.html#heading--how-maas-works)
+* [What is MAAS -- and what does it really do for me?](about-maas.html)
+* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas.html)
+* [How does MAAS work -- in detail?](about-maas.html#heading--how-maas-works)
 * [What concepts might I need to understand before starting?](concepts-and-terms.html)
-* [Can I just install it and try it for myself?](explore-maas-snap-2-8-cli.html)
+* [Can I just install it and try it for myself?](explore-maas.html)
 snap-2-8-cli -->
 
 <!-- deb-2-9-cli
-* [What is MAAS -- and what does it really do for me?](about-maas-deb-2-9-cli.html)
-* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas-deb-2-9-cli.html)
-* [How does MAAS work -- in detail?](about-maas-deb-2-9-cli.html#heading--how-maas-works)
+* [What is MAAS -- and what does it really do for me?](about-maas.html)
+* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas.html)
+* [How does MAAS work -- in detail?](about-maas.html#heading--how-maas-works)
 * [What concepts might I need to understand before starting?](concepts-and-terms.html)
-* [Can I just install it and try it for myself?](explore-maas-deb-2-9-cli.html)
+* [Can I just install it and try it for myself?](explore-maas.html)
 deb-2-9-cli -->
 
 <!-- snap-2-9-cli
-* [What is MAAS -- and what does it really do for me?](about-maas-snap-2-9-cli.html)
-* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas-snap-2-9-cli.html)
-* [How does MAAS work -- in detail?](about-maas-snap-2-9-cli.html#heading--how-maas-works)
+* [What is MAAS -- and what does it really do for me?](about-maas.html)
+* [Can you show me an example data centre using MAAS?](give-me-an-example-of-maas.html)
+* [How does MAAS work -- in detail?](about-maas.html#heading--how-maas-works)
 * [What concepts might I need to understand before starting?](concepts-and-terms.html)
-* [Can I just install it and try it for myself?](explore-maas-snap-2-9-cli.html)
+* [Can I just install it and try it for myself?](explore-maas.html)
 snap-2-9-cli -->
 
 <!-- deb-2-7-ui
 <a href="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a></a>
 
-*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas-deb-2-7-ui.html), our example data centre.*
+*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas.html), our example data centre.*
  deb-2-7-ui -->
 
 <!-- deb-2-8-ui
 <a href="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a></a>
 
-*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas-deb-2-8-ui.html), our example data centre.*
+*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas.html), our example data centre.*
  deb-2-8-ui -->
 
 <!-- deb-2-9-ui
 <a href="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a></a>
 
-*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas-deb-2-9-ui.html), our example data centre.*
+*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas.html), our example data centre.*
  deb-2-9-ui -->
 
-<!-- snap-2-7-ui
-<a href="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a></a>
-
-*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas-deb-2-9-ui.html), our example data centre.*
- snap-2-7-ui -->
-
+<p><a href="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a></a></p>
+<p><em>Part of the machine list from <a href="give-me-an-example-of-maas.html">Metaphorical General Hospital</a>, our example data centre.</em></p>
 <!-- pre-rad
 <a href="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a></a>
 
 *Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas.html), our example data centre.*
  pre-rad -->
 
-<p><a href="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a></a></p>
-<p><em>Part of the machine list from <a href="give-me-an-example-of-maas-snap-2-8-ui.html">Metaphorical General Hospital</a>, our example data centre.</em></p>
+<!-- snap-2-8-ui
+<a href="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a></a>
+
+*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas.html), our example data centre.*
+snap-2-8-ui -->
+
 <!-- snap-2-9-ui
 <a href="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a></a>
 
-*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas-snap-2-8-ui.html), our example data centre.*
+*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas.html), our example data centre.*
  snap-2-9-ui -->
 
 <!-- deb-2-7-cli 
 <a href="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg"></a>
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas-deb-2-7-cli.html), our example data centre, generated with the [basic machine list](the-cli-cookbook.html#heading--basic-machine-list) recipe in our [CLI cookbook](the-cli-cookbook.html).*
+*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas.html), our example data centre, generated with the [basic machine list](the-cli-cookbook.html#heading--basic-machine-list) recipe in our [CLI cookbook](the-cli-cookbook.html).*
  deb-2-7-cli -->
 
 <!-- deb-2-8-cli
 <a href="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg"></a>
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas-deb-2-8-cli.html), our example data centre, generated with the [basic machine list](the-cli-cookbook.html#heading--basic-machine-list) recipe in our [CLI cookbook](the-cli-cookbook.html).*
+*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas.html), our example data centre, generated with the [basic machine list](the-cli-cookbook.html#heading--basic-machine-list) recipe in our [CLI cookbook](the-cli-cookbook.html).*
  deb-2-8-cli -->
 
 <!-- deb-2-9-cli 
 <a href="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg"></a>
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas-deb-2-9-cli.html), our example data centre, generated with the [basic machine list](the-cli-cookbook.html#heading--basic-machine-list) recipe in our [CLI cookbook](the-cli-cookbook.html).*
+*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas.html), our example data centre, generated with the [basic machine list](the-cli-cookbook.html#heading--basic-machine-list) recipe in our [CLI cookbook](the-cli-cookbook.html).*
  deb-2-9-cli -->
 
 <!-- snap-2-7-cli
 <a href="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg"></a>
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas-snap-2-7-cli.html), our example data centre, generated with the [basic machine list](the-cli-cookbook.html#heading--basic-machine-list) recipe in our [CLI cookbook](the-cli-cookbook.html).*
+*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas.html), our example data centre, generated with the [basic machine list](the-cli-cookbook.html#heading--basic-machine-list) recipe in our [CLI cookbook](the-cli-cookbook.html).*
  snap-2-7-cli -->
 
 <!-- snap-2-8-cli 
 <a href="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg"></a>
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas-snap-2-8-cli.html), our example data centre, generated with the [basic-machine-list](the-cli-cookbook.html#heading--basic-machine-list) recipe in our [CLI cookbook](the-cli-cookbook.html).*
+*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas.html), our example data centre, generated with the [basic-machine-list](the-cli-cookbook.html#heading--basic-machine-list) recipe in our [CLI cookbook](the-cli-cookbook.html).*
  snap-2-8-cli -->
 
 <!-- snap-2-9-cli
 <a href="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg"></a>
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas-snap-2-9-cli.html), our example data centre, generated with the [basic machine list](the-cli-cookbook.html#heading--basic-machine-list) recipe in our [CLI cookbook](the-cli-cookbook.html).*
+*Part of the machine list from [Metaphorical General Hospital](give-me-an-example-of-maas.html), our example data centre, generated with the [basic machine list](the-cli-cookbook.html#heading--basic-machine-list) recipe in our [CLI cookbook](the-cli-cookbook.html).*
  snap-2-9-cli -->
 
 <hr>
+<!-- deb-2-8-cli deb-2-8-ui snap-2-8-cli snap-2-8-ui
+<h2 id="heading--whats-new">New version of MAAS</h2>
+
+- [What's new in 2.8](whats-new-in-maas-2-8.html)
+deb-2-8-cli deb-2-8-ui snap-2-8-cli snap-2-8-ui -->
+
 <h2 id="heading--whats-new">New version of MAAS</h2>
 
 <ul>
-<li><a href="whats-new-in-maas-2-8.html">What&rsquo;s new in 2.8</a></li>
+<li><a href="whats-new-in-maas-2-7.html">What&rsquo;s new in 2.7</a></li>
 </ul>
-<!-- deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-uil
-<h2 id="heading--whats-new">New version of MAAS</h2>
-
-- [What's new in 2.7](whats-new-in-maas-2-7.html)
-deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-ui -->
-
 <!-- deb-2-9-cli deb-2-9-ui snap-2-9-cli snap-2-9-ui
 <h2 id="heading--whats-new">BETA version of MAAS</h2>
 

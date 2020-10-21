@@ -1,1 +1,0 @@
-The "Events" log basically tracks the execution of state changes and basic configuration steps.

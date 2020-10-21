@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -383,7 +383,7 @@
 	</li>
       </ul>
       <strong>
-	<a href="https://maas.io/docs/api">
+	<a href="api.html">
 	  API documentation
 	</a>
       </strong>
@@ -490,13 +490,12 @@
 * [How do I add a VM host?](adding-a-vm-host.html)
  snap-2-7-cli -->
 
-<!-- snap-2-7-ui
-* [What is a VM host?](#heading--what-is-a-vm-host)
-* [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-* [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
-* [How do I add a VM host?](adding-a-vm-host.html)
- snap-2-7-ui -->
-
+<ul>
+<li><a href="#heading--what-is-a-vm-host">What is a VM host?</a></li>
+<li><a href="#heading--choosing-vm-host-type">Which VM host should I use: LXD or KVM?</a></li>
+<li><a href="vm-host-networking.html#heading--set-up-ssh">How do I set up SSH for use by libvirt?</a></li>
+<li><a href="adding-a-vm-host.html">How do I add a VM host?</a></li>
+</ul>
 <!-- snap-2-8-cli
 * [What is a VM host?](#heading--what-is-a-vm-host)
 * [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
@@ -519,33 +518,39 @@
 * [How do I add a VM host?](adding-a-vm-host.html)
  snap-2-9-cli -->
 
-<ul>
-<li><a href="#heading--what-is-a-vm-host">What is a VM host?</a></li>
-<li><a href="#heading--choosing-vm-host-type">Which VM host should I use: LXD or KVM?</a></li>
-<li><a href="#heading--vnuma">Tell me about VMs and NUMA.</a></li>
-<li><a href="vm-host-networking.html#heading--set-up-ssh">How do I set up SSH for use by libvirt?</a></li>
-<li><a href="adding-a-vm-host.html">How do I add a VM host?</a></li>
-</ul>
+<!-- snap-2-9-ui
+* [What is a VM host?](#heading--what-is-a-vm-host)
+* [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
+* [Tell me about VMs and NUMA.](#heading--vnuma)
+* [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
+* [How do I add a VM host?](adding-a-vm-host.html)
+ snap-2-9-ui -->
+
 <h2 id="heading--what-is-a-vm-host">What is a VM host?</h2>
 
 <p>Simply put, a VM host is a machine which is designated to run virtual machines (VMs).  A VM host divides its resources (CPU cores, RAM, storage) among the number of VMs you want to create, based on choices that you make when creating each VM.  It is also possible to overcommit resources &ndash; that is, use more resources than the VM host actually has available &ndash; as long as you use the VMs carefully. Once MAAS has enlisted, commissioned, and acquired a newly-added machine, you can deploy it as a VM host.</p>
 <h2 id="heading--choosing-vm-host-type">LXD VM host  (Beta) vs. libvirt</h2>
 
 <p>Libvirt KVMs and LXD VMs are both based on the same underlying virtualisation technology, QEMU.  Unlike libvirt KVMs, though, LXD VMs can be managed without requiring SSH access to the VM host. LXD are remotely accessed via secure HTTP transport, which provides better security for LXD-based VMs.  In addition, LXD has a better API, and is part of a much larger constellation of enterprise software, offering a wider range of future features and use cases.</p>
+<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
+
 <h2 id="heading--vnuma">VMs and NUMA</h2>
 
-<p>MAAS provides extensive optimization tools for using NUMA with virtual machines. Earlier versions of MAAS guarantee that machines are assigned to a single NUMA node that contains all the machine&rsquo;s resources.  As of 2.9, MAAS now allows you to see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory.  You can quickly spot a VM running in multiple NUMA nodes, and optimize accordingly, with instant updates on pinning and allocations.  You can also tell which VMs are currently running.</p>
-<p>In addition, you can get a bird&rsquo;s-eye view of network configuration:</p>
-<ul>
-<li>You can see which VM NIC/bond is connected to which NUMA node.</li>
-<li>You can tell when a NIC is connected to a different NUMA node.</li>
-<li>You can tell if one of multiple NICs is not in the correct node.</li>
-<li>You can confirm the subnet and space connecting to a VM.</li>
-<li>You can confirm that a VM has the desired network properties, such as latency and throughput.</li>
-<li>You can identify NICs that support SR-IOV and tell how many VFs are available.</li>
-</ul>
-<p>This functionality also helps you identify cores which are have <code>isolcpus</code> set and guides you to those cores when specifying VMS, indicating when a non-isolcpus core might be unsuitable for pinning. MAAS also highlights when a VM is not pinned to a specific core.  Not using <code>isolcpus</code> cores, or using unpinned VMs, can have significant performance impacts, since those cores can be interrupted by the general scheduler and co-opted to perform non-node-related tasks, without warning.</p>
-<p>Finally, MAAS also shows hugepages information (if they are in use) and prevents overcommit when using them.  Hugepages essentially allow a much larger memory cache associated with the core.  This obviously reduces the number of times a core has to access memory, but because the core must swap entire hugepages, optimizing usage of them can be complex. MAAS helps you create these optimizations by giving you a discrete view of hugepages associated with your VM, helping you decide whether you need to use them or not.</p>
+MAAS provides extensive optimization tools for using NUMA with virtual machines. Earlier versions of MAAS guarantee that machines are assigned to a single NUMA node that contains all the machine's resources.  As of 2.9, MAAS now allows you to see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory.  You can quickly spot a VM running in multiple NUMA nodes, and optimize accordingly, with instant updates on pinning and allocations.  You can also tell which VMs are currently running.
+
+In addition, you can get a bird's-eye view of network configuration:
+
+* You can see which VM NIC/bond is connected to which NUMA node.
+* You can tell when a NIC is connected to a different NUMA node.
+* You can tell if one of multiple NICs is not in the correct node.
+* You can confirm the subnet and space connecting to a VM.
+* You can confirm that a VM has the desired network properties, such as latency and throughput.
+* You can identify NICs that support SR-IOV and tell how many VFs are available.
+
+This functionality also helps you identify cores which are have `isolcpus` set and guides you to those cores when specifying VMS, indicating when a non-isolcpus core might be unsuitable for pinning. MAAS also highlights when a VM is not pinned to a specific core.  Not using `isolcpus` cores, or using unpinned VMs, can have significant performance impacts, since those cores can be interrupted by the general scheduler and co-opted to perform non-node-related tasks, without warning.
+
+Finally, MAAS also shows hugepages information (if they are in use) and prevents overcommit when using them.  Hugepages essentially allow a much larger memory cache associated with the core.  This obviously reduces the number of times a core has to access memory, but because the core must swap entire hugepages, optimizing usage of them can be complex. MAAS helps you create these optimizations by giving you a discrete view of hugepages associated with your VM, helping you decide whether you need to use them or not.
+snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
     </div>
   </body>
 </html>

@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -429,7 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Disk erasure</h1><p>Disk erasure pertains to the erasing of data on each of a machine&rsquo;s disks when the machine has been released (see <a href="concepts-and-terms-785.html#heading--release">Release action</a>) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.</p>
+      <h1>Disk erasure</h1><p>Disk erasure pertains to the erasing of data on each of a machine&rsquo;s disks when the machine has been released (see <a href="concepts-and-terms.html#heading--release">Release action</a>) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.</p>
 <h2 id="heading--erasure-types">Erasure types</h2>
 
 <p>The three types of erasure types are:</p>
@@ -473,7 +473,7 @@ deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-9-ui snap-2-7-ui -->
 
 <h2>Erasure procedure</h2>
 
-<p>When using the <a href="maas-cli-802.html">MAAS CLI</a>, you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you&rsquo;ll want to make sure you&rsquo;re using:</p>
+<p>When using the <a href="maas-cli.html">MAAS CLI</a>, you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you&rsquo;ll want to make sure you&rsquo;re using:</p>
 <pre><code>maas $PROFILE machine release...
 </code></pre>
 
@@ -481,7 +481,7 @@ deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-9-ui snap-2-7-ui -->
 <pre><code>maas $PROFILE machines release...
 </code></pre>
 
-<p>Note the difference in singular and plural &ldquo;machine/machines&rdquo; in the commands.  Releasing a machine requires that you have the <code>system_id</code> of the machine to be released, which you can obtain with a <a href="the-cli-cookbook-2218.html#heading--basic-machine-list">basic machine list</a>:</p>
+<p>Note the difference in singular and plural &ldquo;machine/machines&rdquo; in the commands.  Releasing a machine requires that you have the <code>system_id</code> of the machine to be released, which you can obtain with a <a href="the-cli-cookbook.html#heading--basic-machine-list">basic machine list</a>:</p>
 <p><a href="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg"></a>
 </a></p>
 <p>The basic form of the release command, when erasing disks on releasing, is:</p>

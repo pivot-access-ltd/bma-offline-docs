@@ -1,3 +1,87 @@
+<!-- deb-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-host-networking-snap-2-7-cli/3210) ~ [UI](/t/vm-host-networking-snap-2-7-ui/3211)|[CLI](/t/vm-host-networking-snap-2-8-cli/3212) ~ [UI](/t/vm-host-networking-snap-2-8-ui/3213)|[CLI](/t/vm-host-networking-snap-2-9-cli/3214) ~ [UI](/t/vm-host-networking-snap-2-9-ui/3215)|
+|Packages|CLI ~ [UI](/t/vm-host-networking-deb-2-7-ui/3217)|[CLI](/t/vm-host-networking-deb-2-8-cli/3218) ~ [UI](/t/vm-host-networking-deb-2-8-ui/3219)|[CLI](/t/vm-host-networking-deb-2-9-cli/3220) ~ [UI](/t/vm-host-networking-deb-2-9-ui/3221)|
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-host-networking-snap-2-7-cli/3210) ~ [UI](/t/vm-host-networking-snap-2-7-ui/3211)|[CLI](/t/vm-host-networking-snap-2-8-cli/3212) ~ [UI](/t/vm-host-networking-snap-2-8-ui/3213)|[CLI](/t/vm-host-networking-snap-2-9-cli/3214) ~ [UI](/t/vm-host-networking-snap-2-9-ui/3215)|
+|Packages|[CLI](/t/vm-host-networking-deb-2-7-cli/3216) ~ UI|[CLI](/t/vm-host-networking-deb-2-8-cli/3218) ~ [UI](/t/vm-host-networking-deb-2-8-ui/3219)|[CLI](/t/vm-host-networking-deb-2-9-cli/3220) ~ [UI](/t/vm-host-networking-deb-2-9-ui/3221)|
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-host-networking-snap-2-7-cli/3210) ~ [UI](/t/vm-host-networking-snap-2-7-ui/3211)|[CLI](/t/vm-host-networking-snap-2-8-cli/3212) ~ [UI](/t/vm-host-networking-snap-2-8-ui/3213)|[CLI](/t/vm-host-networking-snap-2-9-cli/3214) ~ [UI](/t/vm-host-networking-snap-2-9-ui/3215)|
+|Packages|[CLI](/t/vm-host-networking-deb-2-7-cli/3216) ~ [UI](/t/vm-host-networking-deb-2-7-ui/3217)|CLI ~ [UI](/t/vm-host-networking-deb-2-8-ui/3219)|[CLI](/t/vm-host-networking-deb-2-9-cli/3220) ~ [UI](/t/vm-host-networking-deb-2-9-ui/3221)|
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-host-networking-snap-2-7-cli/3210) ~ [UI](/t/vm-host-networking-snap-2-7-ui/3211)|[CLI](/t/vm-host-networking-snap-2-8-cli/3212) ~ [UI](/t/vm-host-networking-snap-2-8-ui/3213)|[CLI](/t/vm-host-networking-snap-2-9-cli/3214) ~ [UI](/t/vm-host-networking-snap-2-9-ui/3215)|
+|Packages|[CLI](/t/vm-host-networking-deb-2-7-cli/3216) ~ [UI](/t/vm-host-networking-deb-2-7-ui/3217)|[CLI](/t/vm-host-networking-deb-2-8-cli/3218) ~ UI|[CLI](/t/vm-host-networking-deb-2-9-cli/3220) ~ [UI](/t/vm-host-networking-deb-2-9-ui/3221)|
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-host-networking-snap-2-7-cli/3210) ~ [UI](/t/vm-host-networking-snap-2-7-ui/3211)|[CLI](/t/vm-host-networking-snap-2-8-cli/3212) ~ [UI](/t/vm-host-networking-snap-2-8-ui/3213)|[CLI](/t/vm-host-networking-snap-2-9-cli/3214) ~ [UI](/t/vm-host-networking-snap-2-9-ui/3215)|
+|Packages|[CLI](/t/vm-host-networking-deb-2-7-cli/3216) ~ [UI](/t/vm-host-networking-deb-2-7-ui/3217)|[CLI](/t/vm-host-networking-deb-2-8-cli/3218) ~ [UI](/t/vm-host-networking-deb-2-8-ui/3219)|CLI ~ [UI](/t/vm-host-networking-deb-2-9-ui/3221)|
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-host-networking-snap-2-7-cli/3210) ~ [UI](/t/vm-host-networking-snap-2-7-ui/3211)|[CLI](/t/vm-host-networking-snap-2-8-cli/3212) ~ [UI](/t/vm-host-networking-snap-2-8-ui/3213)|[CLI](/t/vm-host-networking-snap-2-9-cli/3214) ~ [UI](/t/vm-host-networking-snap-2-9-ui/3215)|
+|Packages|[CLI](/t/vm-host-networking-deb-2-7-cli/3216) ~ [UI](/t/vm-host-networking-deb-2-7-ui/3217)|[CLI](/t/vm-host-networking-deb-2-8-cli/3218) ~ [UI](/t/vm-host-networking-deb-2-8-ui/3219)|[CLI](/t/vm-host-networking-deb-2-9-cli/3220) ~ UI|
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ [UI](/t/vm-host-networking-snap-2-7-ui/3211)|[CLI](/t/vm-host-networking-snap-2-8-cli/3212) ~ [UI](/t/vm-host-networking-snap-2-8-ui/3213)|[CLI](/t/vm-host-networking-snap-2-9-cli/3214) ~ [UI](/t/vm-host-networking-snap-2-9-ui/3215)|
+|Packages|[CLI](/t/vm-host-networking-deb-2-7-cli/3216) ~ [UI](/t/vm-host-networking-deb-2-7-ui/3217)|[CLI](/t/vm-host-networking-deb-2-8-cli/3218) ~ [UI](/t/vm-host-networking-deb-2-8-ui/3219)|[CLI](/t/vm-host-networking-deb-2-9-cli/3220) ~ [UI](/t/vm-host-networking-deb-2-9-ui/3221)|
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-host-networking-snap-2-7-cli/3210) ~ UI|[CLI](/t/vm-host-networking-snap-2-8-cli/3212) ~ [UI](/t/vm-host-networking-snap-2-8-ui/3213)|[CLI](/t/vm-host-networking-snap-2-9-cli/3214) ~ [UI](/t/vm-host-networking-snap-2-9-ui/3215)|
+|Packages|[CLI](/t/vm-host-networking-deb-2-7-cli/3216) ~ [UI](/t/vm-host-networking-deb-2-7-ui/3217)|[CLI](/t/vm-host-networking-deb-2-8-cli/3218) ~ [UI](/t/vm-host-networking-deb-2-8-ui/3219)|[CLI](/t/vm-host-networking-deb-2-9-cli/3220) ~ [UI](/t/vm-host-networking-deb-2-9-ui/3221)|
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-host-networking-snap-2-7-cli/3210) ~ [UI](/t/vm-host-networking-snap-2-7-ui/3211)|CLI ~ [UI](/t/vm-host-networking-snap-2-8-ui/3213)|[CLI](/t/vm-host-networking-snap-2-9-cli/3214) ~ [UI](/t/vm-host-networking-snap-2-9-ui/3215)|
+|Packages|[CLI](/t/vm-host-networking-deb-2-7-cli/3216) ~ [UI](/t/vm-host-networking-deb-2-7-ui/3217)|[CLI](/t/vm-host-networking-deb-2-8-cli/3218) ~ [UI](/t/vm-host-networking-deb-2-8-ui/3219)|[CLI](/t/vm-host-networking-deb-2-9-cli/3220) ~ [UI](/t/vm-host-networking-deb-2-9-ui/3221)|
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-host-networking-snap-2-7-cli/3210) ~ [UI](/t/vm-host-networking-snap-2-7-ui/3211)|[CLI](/t/vm-host-networking-snap-2-8-cli/3212) ~ UI|[CLI](/t/vm-host-networking-snap-2-9-cli/3214) ~ [UI](/t/vm-host-networking-snap-2-9-ui/3215)|
+|Packages|[CLI](/t/vm-host-networking-deb-2-7-cli/3216) ~ [UI](/t/vm-host-networking-deb-2-7-ui/3217)|[CLI](/t/vm-host-networking-deb-2-8-cli/3218) ~ [UI](/t/vm-host-networking-deb-2-8-ui/3219)|[CLI](/t/vm-host-networking-deb-2-9-cli/3220) ~ [UI](/t/vm-host-networking-deb-2-9-ui/3221)|
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-host-networking-snap-2-7-cli/3210) ~ [UI](/t/vm-host-networking-snap-2-7-ui/3211)|[CLI](/t/vm-host-networking-snap-2-8-cli/3212) ~ [UI](/t/vm-host-networking-snap-2-8-ui/3213)|CLI ~ [UI](/t/vm-host-networking-snap-2-9-ui/3215)|
+|Packages|[CLI](/t/vm-host-networking-deb-2-7-cli/3216) ~ [UI](/t/vm-host-networking-deb-2-7-ui/3217)|[CLI](/t/vm-host-networking-deb-2-8-cli/3218) ~ [UI](/t/vm-host-networking-deb-2-8-ui/3219)|[CLI](/t/vm-host-networking-deb-2-9-cli/3220) ~ [UI](/t/vm-host-networking-deb-2-9-ui/3221)|
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-host-networking-snap-2-7-cli/3210) ~ [UI](/t/vm-host-networking-snap-2-7-ui/3211)|[CLI](/t/vm-host-networking-snap-2-8-cli/3212) ~ [UI](/t/vm-host-networking-snap-2-8-ui/3213)|[CLI](/t/vm-host-networking-snap-2-9-cli/3214) ~ UI|
+|Packages|[CLI](/t/vm-host-networking-deb-2-7-cli/3216) ~ [UI](/t/vm-host-networking-deb-2-7-ui/3217)|[CLI](/t/vm-host-networking-deb-2-8-cli/3218) ~ [UI](/t/vm-host-networking-deb-2-8-ui/3219)|[CLI](/t/vm-host-networking-deb-2-9-cli/3220) ~ [UI](/t/vm-host-networking-deb-2-9-ui/3221)|
+ snap-2-9-ui -->
+
 In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself.  This section explains several ways of accomplishing this.
 
 #### Quick questions you may have:

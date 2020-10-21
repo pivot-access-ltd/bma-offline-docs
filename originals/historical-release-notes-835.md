@@ -41,7 +41,7 @@ MAAS will automatically detect link and interface speed during commissioning and
 
 ### Network validation scripts and testing
 
-MAAS 2.7 allows you to configure network connectivity testing in a number of ways. If you’ve used MAAS, you know that if it can’t connect to the rack controller, deployment can’t complete. Now MAAS can check connectivity to the rack controller and warn you if there’s no link, long before you have to try and debug it. For example, if you can’t connect to your gateway controller, traffic can’t leave your network. MAAS can now check this link and recognize that there’s no connectivity, which alleviates a lot of annoying (and sometimes hard-to-detect) network issues.
+MAAS 2.7 allows you to configure network connectivity testing in a number of ways. If you’ve used MAAS, you know that if it can’t connect to the rack controller, deployment can’t complete. Now MAAS can check connectivity to the rack controller and warn you if there’s no link, long before you have to try and debug it. For example, if you can’t connect to your gateway controller, traffic can’t leave your network. MAAS can now check this link and recognise that there’s no connectivity, which alleviates a lot of annoying (and sometimes hard-to-detect) network issues.
 
 Users can now test their network configuration to check for:
 
@@ -59,7 +59,7 @@ Administrators can upload network tests and test scripts, as well as create test
 
 In some cases, MAAS connects with subnet which are not empty. Normally, the user has to tell MAAS about IP addresses which are already assigned on that subnet, and if that step is skipped, MAAS may assign and in-use IP address to one of the machines under its control, leading to an IP conflict.
 
-MAAS 2.7 alleviates this problem by detecting IPs in use on a subnet, so that it can avoid assigning that IP to a MAAS-managed machine. The system is not perfect; for example, if NIC on a subnet-connected machine is in a quiescent state -- or turned off -- MAAS may not detect it before duplicating the IP. Note that at least one rack controller must have access to the previously-assigned machine in order for this feature to work. MAAS 2.7 will also recognize when the subnet ARP cache is full and re-check the oldest IPs added to the cache to search for free IP addresses.
+MAAS 2.7 alleviates this problem by detecting IPs in use on a subnet, so that it can avoid assigning that IP to a MAAS-managed machine. The system is not perfect; for example, if NIC on a subnet-connected machine is in a quiescent state -- or turned off -- MAAS may not detect it before duplicating the IP. Note that at least one rack controller must have access to the previously-assigned machine in order for this feature to work. MAAS 2.7 will also recognise when the subnet ARP cache is full and re-check the oldest IPs added to the cache to search for free IP addresses.
 
 ## Introductory NUMA / SR-IOV support
 
@@ -67,7 +67,7 @@ NUMA (Non-Uniform Memory Access) is a useful way of achieving high-efficiency co
 
 MAAS will display the NUMA node index and details. Users can also see the count of available NUMA nodes, along with CPU cores, memory, NICS, and node spans for bonds and block devices (although node-spanning may not produce suitable performance). From a reporting standpoint, users can filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID.
 
-Similarly, the SR-IOV (Single Root I/O Virtualization) allows a PCIe device (e.g, a NIC) to appear to be multiple separate devices. A network adapter can be subdivided into multiple adapters by adding a Virtual Function (VF). MAAS 2.7 supports the use of multiple VF adapters to intelligently use SR-IOV edge clouds, by allowing users to see that a NIC supports SR-IOV, along with the supported VF counts.
+Similarly, the SR-IOV (Single Root I/O Virtualisation) allows a PCIe device (e.g, a NIC) to appear to be multiple separate devices. A network adaptor can be subdivided into multiple adaptors by adding a Virtual Function (VF). MAAS 2.7 supports the use of multiple VF adaptors to intelligently use SR-IOV edge clouds, by allowing users to see that a NIC supports SR-IOV, along with the supported VF counts.
 
 The goal of this feature is to help users choose the right machine to deploy an edge cloud.
 
@@ -160,7 +160,7 @@ MAAS has been optimised to reduce the amount of data loaded in the WebSocket API
 
 <h4 id="heading--kvm-pod-improvements">KVM pod improvements</h4>
 
-KVM pods were initially created to help developers quickly iterate and test new functionality while developing MAAS. But KVM pods have also become an essential tool for administrators, allowing them to make better use of resources across the datacenter. As KVM pods were initially targeted at developers, MAAS lacked features more useful for administrators. MAAS 2.4 rectifies these shortcomings with the following improvements:
+KVM pods were initially created to help developers quickly iterate and test new functionality while developing MAAS. But KVM pods have also become an essential tool for administrators, allowing them to make better use of resources across the data centre. As KVM pods were initially targeted at developers, MAAS lacked features more useful for administrators. MAAS 2.4 rectifies these shortcomings with the following improvements:
 
 **Pod AZs**
 
@@ -408,7 +408,7 @@ Historically, MAAS used tgt to provide images over iSCSI for the ephemeral envir
 
 This change means that *initrd* (run via PXE) will contact the rack controller to download the image to load in the ephemeral environment directly.
 
-Support for using 'tgt' is being phased out in MAAS 2.3 and will no longer be supported from MAAS 2.4 onwards.
+Support for using 'tgt' is being phased out in MAAS 2.3 and will no longer be supported from MAAS 2.4 onward.
 
 Users who would like to continue to use and load their ephemeral images via 'tgt' they can disable http boot with the following command.
 
@@ -591,7 +591,7 @@ The available tests are described below:
 
 <h3 id="heading--dhcp-relay-support">DHCP relay support</h3>
 
-MAAS now supports the modeling of DHCP relays in your network. For example, if an edge switch is forwarding DHCP traffic to a MAAS DHCP server, an administrator can tell MAAS that the VLAN at the edge will have its DHCP traffic forwarded to a particular destination VLAN. This allows MAAS to configure the DHCP server running on the primary and/or secondary rack controller to include a shared-network statement for that VLAN.
+MAAS now supports the modelling of DHCP relays in your network. For example, if an edge switch is forwarding DHCP traffic to a MAAS DHCP server, an administrator can tell MAAS that the VLAN at the edge will have its DHCP traffic forwarded to a particular destination VLAN. This allows MAAS to configure the DHCP server running on the primary and/or secondary rack controller to include a shared-network statement for that VLAN.
 
 Please note that MAAS does not provide a DHCP relay service. Network administrators must configure a DHCP relay service to forward DHCP traffic from edge networks to the IP addresses of of the primary and/or secondary rack controller(s), on the VLAN where DHCP is enabled.
 
@@ -777,11 +777,11 @@ MAAS 2.1 improves offline deployment by adding support for *Ubuntu derived repos
 
 <h3 id="heading--new-ntp-service">New NTP service</h3>
 
-MAAS now provides managed NTP services (with `ntpd`) for all region and rack controllers. This allows MAAS to both keep its own controllers synchronized, and keep deployed machines synchronized as well.
+MAAS now provides managed NTP services (with `ntpd`) for all region and rack controllers. This allows MAAS to both keep its own controllers synchronised, and keep deployed machines synchronised as well.
 
--   The region controller configures the NTP service (ntpd) to keep its time synchronized from one or more external sources. By default, the MAAS region controller uses ntp.ubuntu.com. This can be customised on the Settings page.
+-   The region controller configures the NTP service (ntpd) to keep its time synchronised from one or more external sources. By default, the MAAS region controller uses ntp.ubuntu.com. This can be customised on the Settings page.
 
--   The rack controllers also configure the NTP service (ntpd). They synchronize their time with the region controllers.
+-   The rack controllers also configure the NTP service (ntpd). They synchronise their time with the region controllers.
 
 -   Rack controllers also configure DHCP with the correct NTP information. Any machine on the network that obtains a DHCP lease from MAAS will benefit from NTP support.
 
@@ -799,7 +799,7 @@ Automatic bridge creation on all configured interfaces can also be performed at 
 
 <h3 id="heading--new-rescue-mode">New Rescue mode</h3>
 
-MAAS 2.1 supports a new state in the machine lifecycle: Rescue mode. This allows users to boot a Deployed or a Broken node using an ephemeral image (Ubuntu running in memory on the underlying machine). This allows administrators to SSH to the machine for maintenance purposes.
+MAAS 2.1 supports a new state in the machine life-cycle: Rescue mode. This allows users to boot a Deployed or a Broken node using an ephemeral image (Ubuntu running in memory on the underlying machine). This allows administrators to SSH to the machine for maintenance purposes.
 
 <h3 id="heading--enhanced-images-user-interface">Enhanced images user interface</h3>
 
@@ -888,7 +888,7 @@ For more information on rack controllers, refer to the Major new Features sectio
 
 <h3 id="heading--api-10-has-been-deprecated-introducing-api-20">API 1.0 has been deprecated, introducing API 2.0</h3>
 
-Starting from MAAS 2.0, the MAAS REST API version 1.0 has been deprecated. MAAS 2.0 drops support for the legacy 1.0 API, in favor of API version 2.0. With the introduction of the new API version, various endpoints have now been deprecated, and new end-points have been introduced. API users will need to update their client tools to reflect the changes.
+Starting from MAAS 2.0, the MAAS REST API version 1.0 has been deprecated. MAAS 2.0 drops support for the legacy 1.0 API, in favour of API version 2.0. With the introduction of the new API version, various endpoints have now been deprecated, and new end-points have been introduced. API users will need to update their client tools to reflect the changes.
 
 For more information on API 2.0, refer to API documentation &lt;region-controller-api&gt;.
 
@@ -1080,7 +1080,7 @@ Starting with MAAS 2.0, MAAS has now been ported to Python 3.5 (the default vers
 
 <h3 id="heading--maas-20-now-fully-supports-native-django-18-migration-system">MAAS 2.0 now fully supports native Django 1.8 migration system</h3>
 
-MAAS is now based on Django 1.8. Django 1.8 has dropped support for the South migration system in favor of the native Django migration system, which breaks backwards compatibility with previous versions of Django.
+MAAS is now based on Django 1.8. Django 1.8 has dropped support for the South migration system in favour of the native Django migration system, which breaks backwards compatibility with previous versions of Django.
 
 MAAS continues to support a full upgrade path. MAAS versions 1.5, 1.7, 1.8, and 1.9 have been tested and confirmed to upgrade seamlessly to MAAS 2.0.
 

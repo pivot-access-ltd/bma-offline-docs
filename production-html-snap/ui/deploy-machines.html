@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -383,7 +383,7 @@
 	</li>
       </ul>
       <strong>
-	<a href="https://maas.io/docs/api">
+	<a href="api.html">
 	  API documentation
 	</a>
       </strong>
@@ -457,10 +457,7 @@ Once a machine has been commissioned (see [Commission machines](commission-machi
 Once a machine has been commissioned (see [Commission machines](commission-machines.html)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
  snap-2-7-cli -->
 
-<!-- snap-2-7-ui
-Once a machine has been commissioned (see [Commission machines](commission-machines.html)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
- snap-2-7-ui -->
-
+<p>Once a machine has been commissioned (see <a href="commission-machines.html">Commission machines</a>) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.</p>
 <!-- snap-2-8-cli
 Once a machine has been commissioned (see [Commission machines](commission-machines.html)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
  snap-2-8-cli -->
@@ -473,7 +470,10 @@ Once a machine has been commissioned (see [Commission machines](commission-machi
 Once a machine has been commissioned (see [Commission machines](commission-machines.html)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
  snap-2-9-cli -->
 
-<p>Once a machine has been commissioned (see <a href="commission-machines.html">Commission machines</a>) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.</p>
+<!-- snap-2-9-ui
+Once a machine has been commissioned (see [Commission machines](commission-machines.html)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+ snap-2-9-ui -->
+
 <h4>Quick questions you may have:</h4>
 <ul>
 <li><a href="#heading--acquire">How and why do I acquire a machine?</a></li>
@@ -508,10 +508,7 @@ Machines deployed with MAAS will also be ready to accept connections via SSH, to
 Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](user-accounts.html#heading--ssh-keys).
  snap-2-7-cli -->
 
-<!-- snap-2-7-ui
-Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](user-accounts.html#heading--ssh-keys).
- snap-2-7-ui -->
-
+<p>Machines deployed with MAAS will also be ready to accept connections via SSH, to the &lsquo;ubuntu&rsquo; user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in <a href="user-accounts.html#heading--ssh-keys">SSH keys</a>.</p>
 <!-- snap-2-8-cli
 Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](user-accounts.html#heading--ssh-keys).
  snap-2-8-cli -->
@@ -524,7 +521,10 @@ Machines deployed with MAAS will also be ready to accept connections via SSH, to
 Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](user-accounts.html#heading--ssh-keys).
  snap-2-9-cli -->
 
-<p>Machines deployed with MAAS will also be ready to accept connections via SSH, to the &lsquo;ubuntu&rsquo; user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in <a href="user-accounts.html#heading--ssh-keys">SSH keys</a>.</p>
+<!-- snap-2-9-ui
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](user-accounts.html#heading--ssh-keys).
+ snap-2-9-ui -->
+
 <p>[note]
 Juju adds SSH keys to machines under its control.
 [/note]</p>
@@ -556,10 +556,7 @@ MAAS also supports machine customisation with a process called "preseeding." For
 MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](custom-machine-setup.html).
  snap-2-7-cli -->
 
-<!-- snap-2-7-ui
-MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](custom-machine-setup.html).
- snap-2-7-ui -->
-
+<p>MAAS also supports machine customisation with a process called &ldquo;preseeding.&rdquo; For more information about customising machines, see <a href="custom-machine-setup.html">Custom machine setup</a>.</p>
 <!-- snap-2-8-cli
 MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](custom-machine-setup.html).
  snap-2-8-cli -->
@@ -572,7 +569,10 @@ MAAS also supports machine customisation with a process called "preseeding." For
 MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](custom-machine-setup.html).
  snap-2-9-cli -->
 
-<p>MAAS also supports machine customisation with a process called &ldquo;preseeding.&rdquo; For more information about customising machines, see <a href="custom-machine-setup.html">Custom machine setup</a>.</p>
+<!-- snap-2-9-ui
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](custom-machine-setup.html).
+ snap-2-9-ui -->
+
 <h2 id="heading--acquire">Acquire</h2>
 
 <p>Acquiring (&ldquo;allocating&rdquo;) a machine reserves the machine for the exclusive use of the acquiring process. The machine is no longer available to any other process, including another MAAS instance, or a process such as <a href="https://jujucharms.com/docs/stable/about-juju">Juju</a>.</p>
@@ -696,17 +696,14 @@ Before deploying, you should:
 -   ensure any pertinent SSH keys are imported (see [SSH keys](user-accounts.html#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  snap-2-7-cli -->
 
-<!-- snap-2-7-ui
-[note]
-The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](custom-machine-setup.html).
-[/note]
-
-Before deploying, you should:
-
--   review and possibly set the [Ubuntu kernels](ubuntu-kernels.html) and the [Kernel boot options](kernel-boot-options.html) that will get used by deployed machines.
--   ensure any pertinent SSH keys are imported (see [SSH keys](user-accounts.html#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
- snap-2-7-ui -->
-
+<p>[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see <a href="custom-machine-setup.html">Custom machine setup</a>.
+[/note]</p>
+<p>Before deploying, you should:</p>
+<ul>
+<li>review and possibly set the <a href="ubuntu-kernels.html">Ubuntu kernels</a> and the <a href="kernel-boot-options.html">Kernel boot options</a> that will get used by deployed machines.</li>
+<li>ensure any pertinent SSH keys are imported (see <a href="user-accounts.html#heading--ssh-keys">SSH keys</a>) to MAAS so it can connect to deployed machines.</li>
+</ul>
 <!-- snap-2-8-cli
 [note]
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](custom-machine-setup.html).
@@ -740,14 +737,17 @@ Before deploying, you should:
 -   ensure any pertinent SSH keys are imported (see [SSH keys](user-accounts.html#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  snap-2-9-cli -->
 
-<p>[note]
-The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see <a href="custom-machine-setup.html">Custom machine setup</a>.
-[/note]</p>
-<p>Before deploying, you should:</p>
-<ul>
-<li>review and possibly set the <a href="ubuntu-kernels.html">Ubuntu kernels</a> and the <a href="kernel-boot-options.html">Kernel boot options</a> that will get used by deployed machines.</li>
-<li>ensure any pertinent SSH keys are imported (see <a href="user-accounts.html#heading--ssh-keys">SSH keys</a>) to MAAS so it can connect to deployed machines.</li>
-</ul>
+<!-- snap-2-9-ui
+[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](custom-machine-setup.html).
+[/note]
+
+Before deploying, you should:
+
+-   review and possibly set the [Ubuntu kernels](ubuntu-kernels.html) and the [Kernel boot options](kernel-boot-options.html) that will get used by deployed machines.
+-   ensure any pertinent SSH keys are imported (see [SSH keys](user-accounts.html#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+ snap-2-9-ui -->
+
 <p>To deploy directly from MAAS, select one or more machine(s) and press the &lsquo;Deploy&rsquo; button.</p>
 <p><a href="images/56958753-nodes-deploy__2.4_deploy.png" target = "_blank"><img src="images/56958753-nodes-deploy__2.4_deploy.png"></a></a></p>
 <p>You then have the option of deviating from the default OS, release, and kernel. When ready, press &lsquo;Deploy X machine(s)&rsquo; (where &lsquo;X&rsquo; is the number of machines selected).</p>

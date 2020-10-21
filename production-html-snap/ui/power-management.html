@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -383,7 +383,7 @@
 	</li>
       </ul>
       <strong>
-	<a href="https://maas.io/docs/api">
+	<a href="api.html">
 	  API documentation
 	</a>
       </strong>
@@ -444,29 +444,6 @@
 <p>Choose a type in the drop-down menu that corresponds to the machine&rsquo;s underlying machine&rsquo;s BMC card.</p>
 <p><a href="images/b53c6613-nodes-power-types__2.4_selection.png" target = "_blank"><img src="images/b53c6613-nodes-power-types__2.4_selection.png"></a></a></p>
 <p>Fill in the resulting form; the information required will depends on the power type:</p>
-<!-- snap-2-7-ui deb-2-7-ui
-| CLI power_type code | Description |
-|-----|-----|
-| [amt](#heading--amt) |Intel AMT |
-| [apc](#heading--apc) | American Power Conversion (APC) PDU |
-| [dli](#heading--dli) | Digital Loggers, Inc. PDU |
-| [hmc](#heading--hmc) | IBM Hardware Management Console (HMC) |
-| [ipmi](#heading--ipmi) | IPMI |
-| [manual](#heading--manual) | Manual power configuration |
-| [moonshot](#heading--moonshot) | HP Moonshot - iLO4 (IPMI) |
-| [mscm](#heading--mscm) | HP Moonshot - iLO Chassis Manager |
-| [msftocs](#heading--mscm) | Microsoft OCS - Chassis Manager |
-| [nova](#heading--nova) | OpenStack Nova |
-| [openbmc](#heading--openbmc) | OpenBMC Power Driver |
-| [recs_box](#heading--recs_box) | Christmann RECS-Box Power Driver |
-| [redfish](#heading--redfish) | Redfish |
-| [sm15k](#heading--sm15k) | SeaMicro 15000 |
-| [ucsm](#heading--ucsm) | Cisco UCS Manager |
-| [virsh](#heading--virsh) | libvirt KVM |
-| [vmware](#heading--vmware) | VMware |
-| [wedge](#heading--wedge) | Facebook's Wedge |
-snap-2-7-ui deb-2-7-ui -->
-
 <table>
 <thead>
 <tr>
@@ -490,10 +467,6 @@ snap-2-7-ui deb-2-7-ui -->
 <tr>
 <td><a href="#heading--hmc">hmc</a></td>
 <td>IBM Hardware Management Console (HMC)</td>
-</tr>
-<tr>
-<td><a href="#heading--lxd">lxd</a></td>
-<td>LXD VM</td>
 </tr>
 <tr>
 <td><a href="#heading--ipmi">ipmi</a></td>
@@ -553,6 +526,30 @@ snap-2-7-ui deb-2-7-ui -->
 </tr>
 </tbody>
 </table>
+<!-- snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui
+| CLI power_type code | Description |
+|-----|-----|
+| [amt](#heading--amt) |Intel AMT |
+| [apc](#heading--apc) | American Power Conversion (APC) PDU |
+| [dli](#heading--dli) | Digital Loggers, Inc. PDU |
+| [hmc](#heading--hmc) | IBM Hardware Management Console (HMC) |
+| [lxd](#heading--lxd) | LXD VM |
+| [ipmi](#heading--ipmi) | IPMI |
+| [manual](#heading--manual) | Manual power configuration |
+| [moonshot](#heading--moonshot) | HP Moonshot - iLO4 (IPMI) |
+| [mscm](#heading--mscm) | HP Moonshot - iLO Chassis Manager |
+| [msftocs](#heading--mscm) | Microsoft OCS - Chassis Manager |
+| [nova](#heading--nova) | OpenStack Nova |
+| [openbmc](#heading--openbmc) | OpenBMC Power Driver |
+| [recs_box](#heading--recs_box) | Christmann RECS-Box Power Driver |
+| [redfish](#heading--redfish) | Redfish |
+| [sm15k](#heading--sm15k) | SeaMicro 15000 |
+| [ucsm](#heading--ucsm) | Cisco UCS Manager |
+| [virsh](#heading--virsh) | libvirt KVM |
+| [vmware](#heading--vmware) | VMware |
+| [wedge](#heading--wedge) | Facebook's Wedge |
+snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui -->
+
 <p>Click &lsquo;Save changes&rsquo; to finish. Once that&rsquo;s done, MAAS performs a power check on the machine. A successful power check is a good indication that MAAS can properly communicate with the machine, that is, it should quickly result in a power status of &ldquo;Power off&rdquo;. A failed attempt will show:</p>
 <p><a href="images/3bd5e93b-nodes-power-types__2.4_power-error.png" target = "_blank"><img src="images/3bd5e93b-nodes-power-types__2.4_power-error.png"></a></a></p>
 <p>If you see this error, double-check your entered values by editing the power type, or  consider another power type altogether.</p>
@@ -682,52 +679,17 @@ snap-2-7-ui deb-2-7-ui -->
 </tr>
 </tbody>
 </table>
+<!-- snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui
 <h3 id="heading--lxd">LXD VMs</h3>
 
-<table>
-<thead>
-<tr>
-<th>Form field</th>
-<th>Description</th>
-<th>Required</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>LXD address</td>
-<td>IP address of unit</td>
-<td>Required</td>
-</tr>
-<tr>
-<td>Instance name</td>
-<td>LXD container instance name</td>
-<td>Required</td>
-</tr>
-<tr>
-<td>LXD password</td>
-<td>Password to access unit</td>
-<td>Optional</td>
-</tr>
-</tbody>
-</table>
+| Form field | Description | Required |
+|-----|-----|-----|
+| LXD address | IP address of unit | Required |
+| Instance name | LXD container instance name | Required |
+| LXD password | Password to access unit | Optional |
+snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui -->
+
 <h3 id="heading--ipmi">IPMI</h3>
-
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui
-
-Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
-
-| Form field | Description | Choices | Required |
-|-----|-----|-----|-----|
-| Power driver | Power driver |`LAN [IPMI 1.5]` | Required |
-| | | `LAN_2_0 [IPMI 2.0]`|
-| Power boot type | Boot type | `Automatic` | Required |
-| | | `Legacy boot` | |
-| | | `EFI boot` | |
-| IP address | IP address of unit || Required |
-| Power user | Username to login || Optional |
-| Power password | Password to access unit || Optional |
-| Power MAC | MAC address of unit || Optional |
-snap-2-8-ui deb-2-8-ui snap-2-7-ui deb-2-7-ui -->
 
 <p>Some of the fields for this power type have fixed choices, indicated in the &ldquo;Choices&rdquo; column.</p>
 <table>
@@ -794,62 +756,34 @@ snap-2-8-ui deb-2-8-ui snap-2-7-ui deb-2-7-ui -->
 <td></td>
 <td>Optional</td>
 </tr>
-<tr>
-<td>K_g</td>
-<td>K_g BMC key</td>
-<td></td>
-<td>Optional (BETA)</td>
-</tr>
-<tr>
-<td>Cipher suite</td>
-<td>Cipher suite ID</td>
-<td>- <code>17</code> <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small></td>
-<td>Optional (BETA)</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>3</code> <small>(3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128)</small></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code></code> (blank) <small>(freeipmi-tools default)</small></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>8</code> <small>(8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128)</small></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>12</code> <small>(12 - HMAC-MD5::MD5-128::AES-CBC-128)</small></td>
-<td></td>
-</tr>
-<tr>
-<td>Privilege level</td>
-<td>IPMI privilege level</td>
-<td><code>User</code></td>
-<td>Optional (BETA)</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>Operator</code></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>Administrator</code></td>
-<td></td>
-</tr>
 </tbody>
 </table>
+<!-- snap-2-9-ui deb-2-9-ui
+
+Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
+
+| Form field | Description | Choices | Required |
+|-----|-----|-----|-----|
+| Power driver | Power driver |`LAN [IPMI 1.5]` | Required |
+| | | `LAN_2_0 [IPMI 2.0]`|
+| Power boot type | Boot type | `Automatic` | Required |
+| | | `Legacy boot` | |
+| | | `EFI boot` | |
+| IP address | IP address of unit || Required |
+| Power user | Username to login || Optional |
+| Power password | Password to access unit || Optional |
+| Power MAC | MAC address of unit || Optional |
+| K_g | K_g BMC key | | Optional (BETA) |
+| Cipher suite | Cipher suite ID | - `17` <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small> | Optional (BETA) |
+| | |`3` <small>(3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128)</small> | |
+| | |` ` (blank) <small>(freeipmi-tools default)</small> | |
+| | |`8` <small>(8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128)</small> | |
+| | |`12` <small>(12 - HMAC-MD5::MD5-128::AES-CBC-128)</small> | |
+| Privilege level | IPMI privilege level | `User` | Optional (BETA) |
+| | | `Operator` | |
+| | | `Administrator` | |
+snap-2-9-ui deb-2-9-ui -->
+
 <h3 id="heading--manual">Manual power configuration</h3>
 
 <p>Manual power configuration means exactly that &ndash; manually configured at the unit &ndash; hence there are no parameters to set in the &ldquo;create machine&rdquo; UI.</p>
