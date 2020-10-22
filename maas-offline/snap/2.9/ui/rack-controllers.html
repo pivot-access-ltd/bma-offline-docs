@@ -450,14 +450,14 @@
 <!-- snap-2-7-cli
  snap-2-7-cli -->
 
+<!-- snap-2-7-ui
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
  snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
 
 <!-- snap-2-9-ui
  snap-2-9-ui -->
@@ -520,13 +520,14 @@
 * [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  snap-2-7-cli -->
 
-<ul>
-<li><a href="maas-communication.html">How does MAAS communication work?</a></li>
-<li><a href="#heading--install-a-rack-controller">How do I install a rack controller?</a></li>
-<li><a href="#heading--list-rack-controllers">How do I list rack controllers?</a></li>
-<li><a href="high-availability.html#heading--multiple-region-endpoints">How do I configure MAAS for multiple API servers?</a></li>
-<li><a href="#heading--unregister-a-rack-controller">How do I unregister a rack controller?</a></li>
-</ul>
+<!-- snap-2-7-ui
+* [How does MAAS communication work?](maas-communication.html)
+* [How do I install a rack controller?](#heading--install-a-rack-controller)
+* [How do I list rack controllers?](#heading--list-rack-controllers)
+* [How do I configure MAAS for multiple API servers?](high-availability.html#heading--multiple-region-endpoints)
+* [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
 * [How does MAAS communication work?](maas-communication.html)
 * [How do I install a rack controller?](#heading--install-a-rack-controller)
@@ -543,14 +544,13 @@
 * [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-* [How does MAAS communication work?](maas-communication.html)
-* [How do I install a rack controller?](#heading--install-a-rack-controller)
-* [How do I list rack controllers?](#heading--list-rack-controllers)
-* [How do I configure MAAS for multiple API servers?](high-availability.html#heading--multiple-region-endpoints)
-* [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
- snap-2-9-cli -->
-
+<ul>
+<li><a href="maas-communication.html">How does MAAS communication work?</a></li>
+<li><a href="#heading--install-a-rack-controller">How do I install a rack controller?</a></li>
+<li><a href="#heading--list-rack-controllers">How do I list rack controllers?</a></li>
+<li><a href="high-availability.html#heading--multiple-region-endpoints">How do I configure MAAS for multiple API servers?</a></li>
+<li><a href="#heading--unregister-a-rack-controller">How do I unregister a rack controller?</a></li>
+</ul>
 <!-- snap-2-9-ui
 * [How does MAAS communication work?](maas-communication.html)
 * [How do I install a rack controller?](#heading--install-a-rack-controller)
@@ -561,39 +561,31 @@
 
 <h2 id="heading--install-a-rack-controller">Install a rack controller</h2>
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-To install and register a rack controller with the MAAS:
-
+<p>To install and register a rack controller with the MAAS:</p>
 <pre><code class="bash">sudo apt install maas-rack-controller
 sudo maas-rack register
 </code></pre>
 
-
-<strong>NOTE:</strong> 
-The register command is not required when you are adding a rack controller to a system that already houses an API server.
-
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
-
+<p><strong>NOTE:</strong> 
+The register command is not required when you are adding a rack controller to a system that already houses an API server.</p>
 <!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli
 MAAS will ask for the URL of the region API server. If you provide a hostname, ensure it is resolvable. Next, MAAS will prompt you for the secret key, stored in file `/var/lib/maas/secret` on the API server.
 deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli
-MAAS will ask for the URL of the region API server. If you provide a hostname, ensure it is resolvable. Next, MAAS will prompt you for the secret key, stored in file `/var/snap/maas/common/maas/secret` on the API server.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli -->
-
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-Based on the above, then, we could have also entered:
-
+<p>MAAS will ask for the URL of the region API server. If you provide a hostname, ensure it is resolvable. Next, MAAS will prompt you for the secret key, stored in file <code>/var/snap/maas/common/maas/secret</code> on the API server.</p>
+<p>Based on the above, then, we could have also entered:</p>
 <pre><code class="bash">sudo maas-rack register --url http://10.5.1.5:5240/MAAS \
     --secret fa847000e7cb681101d26e3477e6e39e
 </code></pre>
 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+Installing a rack controller consists of installing the rack controller software and then registering the rack controller with the region API server.  When MAAS installs a rack controller on the same host as the region API server, registration occurs automatically.
 
-<p>Installing a rack controller consists of installing the rack controller software and then registering the rack controller with the region API server.  When MAAS installs a rack controller on the same host as the region API server, registration occurs automatically. </p>
-<p>Once registered, this extra rack controller will appear immediately alongside the primary controller in the web UI and begin to sync with it:</p>
-<p><a href="images/0a5f1d374a3e53235a83eb157163be49016e63b5.png" target = "_blank"><img src="images/0a5f1d374a3e53235a83eb157163be49016e63b5.png"></a></a> </p>
+Once registered, this extra rack controller will appear immediately alongside the primary controller in the web UI and begin to sync with it:
+
+<a href="images/0a5f1d374a3e53235a83eb157163be49016e63b5.png" target = "_blank"><img src="images/0a5f1d374a3e53235a83eb157163be49016e63b5.png"></a></a> 
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+
 <h2 id="heading--list-rack-controllers">List rack controllers</h2>
 
 <!-- deb-2-7-cli
@@ -648,7 +640,10 @@ You can also list and confirm all registered rack controllers:
 Note that you will need multiple rack controllers to achieve specific [high availability](high-availability.html) configurations.
  snap-2-7-cli -->
 
-<p>You can also list and confirm all registered rack controllers via the CLI; select the &ldquo;Snap 2.7 CLI&rdquo; link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific <a href="high-availability.html">high availability</a> configurations.</p>
+<!-- snap-2-7-ui
+You can also list and confirm all registered rack controllers via the CLI; select the "Snap 2.7 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](high-availability.html) configurations.
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
 You can also list and confirm all registered rack controllers:
 
@@ -663,16 +658,11 @@ Note that you will need multiple rack controllers to achieve specific [high avai
 You can also list and confirm all registered rack controllers via the CLI; select the "Snap 2.8 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](high-availability.html) configurations.
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-You can also list and confirm all registered rack controllers:
-
+<p>You can also list and confirm all registered rack controllers:</p>
 <pre><code class="bash">maas $PROFILE rack-controllers read | grep hostname | cut -d '&quot;' -f 4
 </code></pre>
 
-
- Note that you will need multiple rack controllers to achieve specific [high availability](high-availability.html) configurations.
- snap-2-9-cli -->
-
+<p>Note that you will need multiple rack controllers to achieve specific <a href="high-availability.html">high availability</a> configurations.</p>
 <!-- snap-2-9-ui
 You can also list and confirm all registered rack controllers via the CLI; select the "Snap 2.9 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](high-availability.html) configurations.
  snap-2-9-ui -->

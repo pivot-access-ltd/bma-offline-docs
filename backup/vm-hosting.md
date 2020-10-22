@@ -1,85 +1,85 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ [UI](/t/vm-hosting-snap-2-7-ui/2743)|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|
-|Packages|CLI ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
+|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
+|Packages|CLI ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ [UI](/t/vm-hosting-snap-2-7-ui/2743)|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|
-|Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ UI|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
+|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
+|Packages|[CLI](/t/vm-hosting/2748) ~ UI|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ [UI](/t/vm-hosting-snap-2-7-ui/2743)|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|
-|Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|CLI ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
+|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
+|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|CLI ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ [UI](/t/vm-hosting-snap-2-7-ui/2743)|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|
-|Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ UI|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
+|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
+|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ UI|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ [UI](/t/vm-hosting-snap-2-7-ui/2743)|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|
-|Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|CLI ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
+|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
+|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|CLI ~ [UI](/t/vm-hosting/2753)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ [UI](/t/vm-hosting-snap-2-7-ui/2743)|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|
-|Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ UI|
+|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
+|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/vm-hosting-snap-2-7-ui/2743)|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|
-|Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
+|Snap|CLI ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
+|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ UI|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|
-|Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
+|Snap|[CLI](/t/vm-hosting/2742) ~ UI|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
+|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ [UI](/t/vm-hosting-snap-2-7-ui/2743)|CLI ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|
-|Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
+|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|CLI ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
+|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ [UI](/t/vm-hosting-snap-2-7-ui/2743)|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ UI|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|
-|Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
+|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ UI|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
+|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ [UI](/t/vm-hosting-snap-2-7-ui/2743)|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|CLI ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|
-|Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
+|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|CLI ~ [UI](/t/vm-hosting/2747)|
+|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ [UI](/t/vm-hosting-snap-2-7-ui/2743)|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ UI|
-|Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|
+|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ UI|
+|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
  snap-2-9-ui -->
 
 MAAS VM hosts allow for the dynamic composition of nodes from a pool of available hardware resources (e.g. disk space, memory, cores).  You can create virtual machines (VMs) as needed within the limits of your resources, without concern for physical hardware.  MAAS currently supports VM hosts and VMs created via [libvirt^](https://ubuntu.com/server/docs/virtualization-libvirt).  As part of MAAS 2.8, we also support LXD VMs and VM hosts as a Beta feature.

@@ -156,11 +156,11 @@ tgt                              RUNNING   pid 8040, uptime 0:09:15
 snap-2-7-ui snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/config-journey/2527).
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2527).
 snap-2-7-ui -->
 
 <!-- snap-2-7-cli
-With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/config-journey/2526).
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2526).
 snap-2-7-cli -->
 
 <!-- snap-2-8-ui snap-2-8-cli

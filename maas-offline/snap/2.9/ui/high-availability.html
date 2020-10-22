@@ -450,14 +450,14 @@
 <!-- snap-2-7-cli
  snap-2-7-cli -->
 
+<!-- snap-2-7-ui
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
  snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
 
 <!-- snap-2-9-ui
  snap-2-9-ui -->
@@ -503,7 +503,10 @@ You need to [install multiple rack controllers](rack-controllers.html#heading--i
 You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
  snap-2-7-cli -->
 
-<p>You need to <a href="rack-controllers.html#heading--install-a-rack-controller">install multiple rack controllers</a> to achieve real high availability.  Once that&rsquo;s done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.</p>
+<!-- snap-2-7-ui
+You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
 You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
  snap-2-8-cli -->
@@ -512,10 +515,7 @@ You need to [install multiple rack controllers](rack-controllers.html#heading--i
 You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
- snap-2-9-cli -->
-
+<p>You need to <a href="rack-controllers.html#heading--install-a-rack-controller">install multiple rack controllers</a> to achieve real high availability.  Once that&rsquo;s done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.</p>
 <!-- snap-2-9-ui
 You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
  snap-2-9-ui -->
@@ -554,7 +554,10 @@ If you are enabling DHCP for the first time after adding a second rack controlle
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
  snap-2-7-cli -->
 
-<p>If you are enabling DHCP for the first time after adding a second rack controller, please read <a href="managing-dhcp.html#heading--enabling-dhcp">Enabling DHCP</a>.  On the other hand, if you have already enabled DHCP on your initial rack controller, you&rsquo;ll need to reconfigure DHCP.</p>
+<!-- snap-2-7-ui
+If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
  snap-2-8-cli -->
@@ -563,19 +566,18 @@ If you are enabling DHCP for the first time after adding a second rack controlle
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
- snap-2-9-cli -->
-
+<p>If you are enabling DHCP for the first time after adding a second rack controller, please read <a href="managing-dhcp.html#heading--enabling-dhcp">Enabling DHCP</a>.  On the other hand, if you have already enabled DHCP on your initial rack controller, you&rsquo;ll need to reconfigure DHCP.</p>
 <!-- snap-2-9-ui
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
  snap-2-9-ui -->
 
-<p>Access the appropriate VLAN (via the &lsquo;Subnets&rsquo; page) and choose action &lsquo;Reconfigure DHCP&rsquo;. There, you will see the second rack controller in the &lsquo;Secondary controller&rsquo; field. All you should have to do is press the &lsquo;Reconfigure DHCP&rsquo; button:</p>
-<p><a href="images/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg" target = "_blank"><img src="images/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg"></a></a></p>
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-To reconfigure DHCP after adding a new rack controller, use the following sequence of commands:
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+Access the appropriate VLAN (via the 'Subnets' page) and choose action 'Reconfigure DHCP'. There, you will see the second rack controller in the 'Secondary controller' field. All you should have to do is press the 'Reconfigure DHCP' button:
 
+<a href="images/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg" target = "_blank"><img src="images/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg"></a></a>
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+
+<p>To reconfigure DHCP after adding a new rack controller, use the following sequence of commands:</p>
 <pre><code>vid=$(maas maas subnets read | jq -r '.[] | select(.cidr == &quot;10.0.0.0/24&quot;) | .vlan.vid')
 fabric_name=$(maas maas subnets read | jq -r '.[] | select(.cidr == &quot;10.0.0.0/24&quot;) | .vlan.fabric')
 query=&quot;.[] | select(.name == \&quot;$fabric_name\&quot;) | .id&quot;
@@ -585,10 +587,7 @@ maas maas ipranges create type=dynamic start_ip=10.0.0.50 end_ip=10.0.0.99
 maas maas vlan update ${fabric_id} ${vid} primary_rack=$(hostname) dhcp_on=true
 </code></pre>
 
-
-Be sure to substitute the sample values for those of your own environment.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
-
+<p>Be sure to substitute the sample values for those of your own environment.</p>
 <h3 id="heading--multiple-region-endpoints">Configure multiple region endpoints</h3>
 
 <!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
@@ -645,7 +644,10 @@ A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html
 A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
  snap-2-7-cli -->
 
-<p>A quick treatment of <a href="postgresql-ha-hot-standby.html">PostgreSQL HA: hot standby</a> is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.</p>
+<!-- snap-2-7-ui
+A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
 A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
  snap-2-8-cli -->
@@ -654,10 +656,7 @@ A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html
 A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
- snap-2-9-cli -->
-
+<p>A quick treatment of <a href="postgresql-ha-hot-standby.html">PostgreSQL HA: hot standby</a> is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.</p>
 <!-- snap-2-9-ui
 A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
  snap-2-9-ui -->
@@ -669,32 +668,32 @@ A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html
 Setting up high-availability using snaps is relatively easy:
 
 1.  Set up PostgreSQL for high-availability as [explained above](high-availability.html#heading--postgresql-ha). PostgreSQL should run outside of the snap.
-2.  [Install](maas-installation-from-a-snap.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
-3.  [Initialise the snap](maas-installation-from-a-snap.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+2.  [Install](maas-installation.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](maas-installation.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
     -   `--database-host DATABASE_HOST`
     -   `--database-name DATABASE_NAME`
     -   `--database-user DATABASE_USER`
     -   `--database-pass DATABASE_PASS`
  snap-2-7-cli -->
 
-<p>Setting up high-availability using snaps is relatively easy: </p>
-<ol>
-<li>Set up PostgreSQL for high-availability as <a href="high-availability.html#heading--postgresql-ha">explained above</a>. PostgreSQL should run outside of the snap.</li>
-<li><a href="maas-installation-from-a-snap.html#heading--install-from-snap">Install</a> the MAAS snap on each machine you intend to use as a rack or region controller. You&rsquo;ll need the MAAS shared secret, located here, <code>/var/snap/maas/common/maas/secret</code>, on the first region controller you set up.</li>
-<li><a href="maas-installation-from-a-snap.html#heading--initialisation">Initialise the snap</a> as a <code>rack</code> or <code>region</code> controller. Note that if you intend to use a machine as a region controller, you&rsquo;ll need to tell MAAS how to access your PostgreSQL database host with the following arguments:<ul>
-<li><code>--database-host DATABASE_HOST</code></li>
-<li><code>--database-name DATABASE_NAME</code></li>
-<li><code>--database-user DATABASE_USER</code></li>
-<li><code>--database-pass DATABASE_PASS</code></li>
-</ul>
-</li>
-</ol>
+<!-- snap-2-7-ui
+Setting up high-availability using snaps is relatively easy:
+
+1.  Set up PostgreSQL for high-availability as [explained above](high-availability.html#heading--postgresql-ha). PostgreSQL should run outside of the snap.
+2.  [Install](maas-installation.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](maas-installation.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+    -   `--database-host DATABASE_HOST`
+    -   `--database-name DATABASE_NAME`
+    -   `--database-user DATABASE_USER`
+    -   `--database-pass DATABASE_PASS`
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
 Setting up high-availability using snaps is relatively easy:
 
 1.  Set up PostgreSQL for high-availability as [explained above](high-availability.html#heading--postgresql-ha). PostgreSQL should run outside of the snap.
-2.  [Install](maas-installation-from-a-snap.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
-3.  [Initialise the snap](maas-installation-from-a-snap.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+2.  [Install](maas-installation.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](maas-installation.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
     -   `--database-host DATABASE_HOST`
     -   `--database-name DATABASE_NAME`
     -   `--database-user DATABASE_USER`
@@ -705,32 +704,32 @@ Setting up high-availability using snaps is relatively easy:
 Setting up high-availability using snaps is relatively easy:
 
 1.  Set up PostgreSQL for high-availability as [explained above](high-availability.html#heading--postgresql-ha). PostgreSQL should run outside of the snap.
-2.  [Install](maas-installation-from-a-snap.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
-3.  [Initialise the snap](maas-installation-from-a-snap.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+2.  [Install](maas-installation.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](maas-installation.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
     -   `--database-host DATABASE_HOST`
     -   `--database-name DATABASE_NAME`
     -   `--database-user DATABASE_USER`
     -   `--database-pass DATABASE_PASS`
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-Setting up high-availability using snaps is relatively easy:
-
-1.  Set up PostgreSQL for high-availability as [explained above](high-availability.html#heading--postgresql-ha). PostgreSQL should run outside of the snap.
-2.  [Install](maas-installation-from-a-snap.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
-3.  [Initialise the snap](maas-installation-from-a-snap.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
-    -   `--database-host DATABASE_HOST`
-    -   `--database-name DATABASE_NAME`
-    -   `--database-user DATABASE_USER`
-    -   `--database-pass DATABASE_PASS`
- snap-2-9-cli -->
-
+<p>Setting up high-availability using snaps is relatively easy:</p>
+<ol>
+<li>Set up PostgreSQL for high-availability as <a href="high-availability.html#heading--postgresql-ha">explained above</a>. PostgreSQL should run outside of the snap.</li>
+<li><a href="maas-installation.html#heading--install-from-snap">Install</a> the MAAS snap on each machine you intend to use as a rack or region controller. You&rsquo;ll need the MAAS shared secret, located here, <code>/var/snap/maas/common/maas/secret</code>, on the first region controller you set up.</li>
+<li><a href="maas-installation.html#heading--initialisation">Initialise the snap</a> as a <code>rack</code> or <code>region</code> controller. Note that if you intend to use a machine as a region controller, you&rsquo;ll need to tell MAAS how to access your PostgreSQL database host with the following arguments:<ul>
+<li><code>--database-host DATABASE_HOST</code></li>
+<li><code>--database-name DATABASE_NAME</code></li>
+<li><code>--database-user DATABASE_USER</code></li>
+<li><code>--database-pass DATABASE_PASS</code></li>
+</ul>
+</li>
+</ol>
 <!-- snap-2-9-ui
 Setting up high-availability using snaps is relatively easy:
 
 1.  Set up PostgreSQL for high-availability as [explained above](high-availability.html#heading--postgresql-ha). PostgreSQL should run outside of the snap.
-2.  [Install](maas-installation-from-a-snap.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
-3.  [Initialise the snap](maas-installation-from-a-snap.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+2.  [Install](maas-installation.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](maas-installation.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
     -   `--database-host DATABASE_HOST`
     -   `--database-name DATABASE_NAME`
     -   `--database-user DATABASE_USER`

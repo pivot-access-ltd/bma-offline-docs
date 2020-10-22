@@ -1,6 +1,6 @@
 The MAAS CLI can do everything that the web UI can do, and more. The CLI uses the `maas` command exclusively which, in turn, connects to the API.  This page explains what is needed to get started with the CLI.
 
-Note that this article does not provide complete coverage of the MAAS CLI. For an exhaustive treatment, you may want to see the [API documentation](https://maas.io/docs/api).  Also note that this page represents user-entered values as uppercase variables preceded with the '$' character (e.g. $PROFILE and $EMAIL_ADDRESS). You should replace these placeholders with actual values.
+Note that this article does not provide complete coverage of the MAAS CLI. For an exhaustive treatment, you may want to check the API documentation.  Also note that this page represents user-entered values as uppercase variables preceded with the '$' character (e.g. $PROFILE and $EMAIL_ADDRESS). You should replace these placeholders with actual values.
 
 #### Quick questions you may have:
 
@@ -123,9 +123,6 @@ The following categories are now available to be explored:
 -   [Common tasks](/t/common-cli-tasks/794)
 -   [Kernel management](/t/cli-kernel-management/799)
 -   [Image management](/t/cli-image-management/797)
--   [Tag management](/t/cli-tag-management/801)
--   [DHCP snippet management](/t/cli-dhcp-snippet-management/796)
 -   [Advanced tasks](/t/cli-advanced-tasks/793)
 -   [Composable hardware](/t/cli-composable-hardware/795)
 
-<!-- LINKS -->

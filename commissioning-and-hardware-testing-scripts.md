@@ -98,51 +98,51 @@ MAAS runs scripts during enlistment, commissioning and testing to collect data a
 ---
 
 <!-- deb-2-7-cli
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2472), by [testing hardware](/t/hardware-testing/2676) or from the [command line](/t/cli-commissioning-and-hardware-testing-scripts/832). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2472), by [testing hardware](/t/hardware-testing/2676) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2473), by [testing hardware](/t/hardware-testing/2677) or from the [command line](/t/cli-commissioning-and-hardware-testing-scripts/832). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2473), by [testing hardware](/t/hardware-testing/2677) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2474), by [testing hardware](/t/hardware-testing/2678) or from the [command line](/t/cli-commissioning-and-hardware-testing-scripts/832). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2474), by [testing hardware](/t/hardware-testing/2678) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2475), by [testing hardware](/t/hardware-testing/2679) or from the [command line](/t/cli-commissioning-and-hardware-testing-scripts/832). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2475), by [testing hardware](/t/hardware-testing/2679) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2476), by [testing hardware](/t/hardware-testing/2680) or from the [command line](/t/cli-commissioning-and-hardware-testing-scripts/832). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2476), by [testing hardware](/t/hardware-testing/2680) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2677), by [testing hardware](/t/hardware-testing/2681) or from the [command line](/t/cli-commissioning-and-hardware-testing-scripts/832). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2677), by [testing hardware](/t/hardware-testing/2681) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2466), by [testing hardware](/t/hardware-testing/2670) or from the [command line](/t/cli-commissioning-and-hardware-testing-scripts/832). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2466), by [testing hardware](/t/hardware-testing/2670) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2467), by [testing hardware](/t/hardware-testing/2671) or from the [command line](/t/cli-commissioning-and-hardware-testing-scripts/832). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2467), by [testing hardware](/t/hardware-testing/2671) or from the command line (select the "CLI" option from the top menu).  Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2468), by [testing hardware](/t/hardware-testing/2672) or from the [command line](/t/cli-commissioning-and-hardware-testing-scripts/832). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2468), by [testing hardware](/t/hardware-testing/2672) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2469), by [testing hardware](/t/hardware-testing/2673) or from the [command line](/t/cli-commissioning-and-hardware-testing-scripts/832). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2469), by [testing hardware](/t/hardware-testing/2673) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2470), by [testing hardware](/t/hardware-testing/2674) or from the [command line](/t/cli-commissioning-and-hardware-testing-scripts/832). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2470), by [testing hardware](/t/hardware-testing/2674) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2471), by [testing hardware](/t/hardware-testing/2675) or from the [command line](/t/cli-commissioning-and-hardware-testing-scripts/832). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2471), by [testing hardware](/t/hardware-testing/2675) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
  snap-2-9-ui -->
 
 Add machine -&gt; Enlistment (runs built-in commissioning scripts MAAS) -&gt; New -&gt; Commission (runs built-in and custom commissioning scripts) -&gt; Ready -&gt; Deploy
@@ -414,54 +414,54 @@ This Bash script contains comment-delineated metadata, which configures the scri
 <h3 id="heading--automatic-script-selection-by-hardware-type">Automatic script selection by hardware type</h3>
 
 <!-- deb-2-7-cli
-When selecting [multiple machines](/t/introduction-to-machines/2736), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+When selecting [multiple machines](/t/machines/2736), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-When selecting [multiple machines](/t/introduction-to-machines/2737), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+When selecting [multiple machines](/t/machines/2737), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-When selecting [multiple machines](/t/introduction-to-machines/2738), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+When selecting [multiple machines](/t/machines/2738), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-When selecting [multiple machines](/t/introduction-to-machines/2739), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+When selecting [multiple machines](/t/machines/2739), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-When selecting [multiple machines](/t/introduction-to-machines/2740), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+When selecting [multiple machines](/t/machines/2740), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-When selecting [multiple machines](/t/introduction-to-machines/2741), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+When selecting [multiple machines](/t/machines/2741), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-When selecting [multiple machines](/t/introduction-to-machines/2730), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+When selecting [multiple machines](/t/machines/2730), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-When selecting [multiple machines](/t/introduction-to-machines/2731), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+When selecting [multiple machines](/t/machines/2731), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-When selecting [multiple machines](/t/introduction-to-machines/2732), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+When selecting [multiple machines](/t/machines/2732), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-When selecting [multiple machines](/t/introduction-to-machines/2733), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+When selecting [multiple machines](/t/machines/2733), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-When selecting [multiple machines](/t/introduction-to-machines/2734), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+When selecting [multiple machines](/t/machines/2734), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-When selecting [multiple machines](/t/introduction-to-machines/2735), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+When selecting [multiple machines](/t/machines/2735), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  snap-2-9-ui -->
 
-Similarly, scripts selected by tag on the [command line](/t/cli-commissioning-and-hardware-testing-scripts/832) which specify the `for_hardware` field will only run on matching hardware.
+Similarly, scripts selected by tag on the command line which specify the `for_hardware` field will only run on matching hardware.
 
 <h2 id="heading--upload-procedure">Upload procedure</h2>
 

@@ -450,14 +450,14 @@
 <!-- snap-2-7-cli
  snap-2-7-cli -->
 
+<!-- snap-2-7-ui
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
  snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
 
 <!-- snap-2-9-ui
  snap-2-9-ui -->
@@ -490,7 +490,10 @@ During machine [enlistment](add-machines.html#heading--enlistment), [deployment]
 During machine [enlistment](add-machines.html#heading--enlistment), [deployment](deploy-machines.html), [commissioning](commission-machines.html) and machine installation, MAAS sends [Tempita-derived^](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init^](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  snap-2-7-cli -->
 
-<p>During machine <a href="add-machines.html#heading--enlistment">enlistment</a>, <a href="deploy-machines.html">deployment</a>, <a href="commission-machines.html">commissioning</a> and machine installation, MAAS sends <a href="https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt">Tempita-derived^</a> configuration files to the <a href="https://launchpad.net/cloud-init">cloud-init^</a> process running on the target machine. MAAS refers to this process as <strong>preseeding</strong>.These preseed files are used to configure a machine&rsquo;s ephemeral and installation environments and can be modified or augmented to a custom machine configuration.</p>
+<!-- snap-2-7-ui
+During machine [enlistment](add-machines.html#heading--enlistment), [deployment](deploy-machines.html), [commissioning](commission-machines.html) and machine installation, MAAS sends [Tempita-derived^](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init^](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
 During machine [enlistment](add-machines.html#heading--enlistment), [deployment](deploy-machines.html), [commissioning](commission-machines.html) and machine installation, MAAS sends [Tempita-derived^](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init^](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  snap-2-8-cli -->
@@ -499,10 +502,7 @@ During machine [enlistment](add-machines.html#heading--enlistment), [deployment]
 During machine [enlistment](add-machines.html#heading--enlistment), [deployment](deploy-machines.html), [commissioning](commission-machines.html) and machine installation, MAAS sends [Tempita-derived^](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init^](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-During machine [enlistment](add-machines.html#heading--enlistment), [deployment](deploy-machines.html), [commissioning](commission-machines.html) and machine installation, MAAS sends [Tempita-derived^](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init^](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
- snap-2-9-cli -->
-
+<p>During machine <a href="add-machines.html#heading--enlistment">enlistment</a>, <a href="deploy-machines.html">deployment</a>, <a href="commission-machines.html">commissioning</a> and machine installation, MAAS sends <a href="https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt">Tempita-derived^</a> configuration files to the <a href="https://launchpad.net/cloud-init">cloud-init^</a> process running on the target machine. MAAS refers to this process as <strong>preseeding</strong>.These preseed files are used to configure a machine&rsquo;s ephemeral and installation environments and can be modified or augmented to a custom machine configuration.</p>
 <!-- snap-2-9-ui
 During machine [enlistment](add-machines.html#heading--enlistment), [deployment](deploy-machines.html), [commissioning](commission-machines.html) and machine installation, MAAS sends [Tempita-derived^](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init^](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  snap-2-9-ui -->
@@ -613,22 +613,17 @@ Any file targeting a specific machine will replace the values and configuration 
 
 <h2 id="heading--cloud-init">Cloud-init</h2>
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-Using cloud-init to customise a machine after deployment is relatively easy. If you're not familiar with the MAAS command-line interface (CLI), start by reviewing the [MAAS CLI](maas-cli.html) page.
-
-After you're logged in, use the following command to deploy a machine with a custom script you've written:
-
-    maas $PROFILE machine deploy $SYSTEM_ID user_data=<base-64-encoded-script>
-
--   `$PROFILE`: Your MAAS login. E.g. `admin`
--   `$SYSTEM_ID`: The machine's [system ID](common-cli-tasks.html#heading--determine-a-node-system-id).
--   `<base-64-encoded-script>`: A base-64 encoded copy of your customisation script. See below for an example.
-
-E.g.:
-
-Suppose you would like to import an SSH key immediately after your machine deployment. You might use this script, called `import_key.sh`:
-
-
+<p>Using cloud-init to customise a machine after deployment is relatively easy. If you&rsquo;re not familiar with the MAAS command-line interface (CLI), start by reviewing the <a href="maas-cli.html">MAAS CLI</a> page.</p>
+<p>After you&rsquo;re logged in, use the following command to deploy a machine with a custom script you&rsquo;ve written:</p>
+<pre><code>maas $PROFILE machine deploy $SYSTEM_ID user_data=&lt;base-64-encoded-script&gt;
+</code></pre>
+<ul>
+<li><code>$PROFILE</code>: Your MAAS login. E.g. <code>admin</code></li>
+<li><code>$SYSTEM_ID</code>: The machine&rsquo;s <a href="common-cli-tasks.html#heading--determine-a-node-system-id">system ID</a>.</li>
+<li><code>&lt;base-64-encoded-script&gt;</code>: A base-64 encoded copy of your customisation script. See below for an example.</li>
+</ul>
+<p>E.g.:</p>
+<p>Suppose you would like to import an SSH key immediately after your machine deployment. You might use this script, called <code>import_key.sh</code>:</p>
 <pre><code class="bash">#!/bin/bash
 (
 echo === $date ===
@@ -636,38 +631,42 @@ ssh-import-id foobar_user
 ) | tee /ssh-key-import.log
 </code></pre>
 
-
-This script echos the date in addition to the output of the `ssh-import-key` command. It also adds that output to a file, `/ssh-key-import.log`.
-
-Base-64 encoding is required because the MAAS command-line interacts with the MAAS API, and base-64 encoding allows MAAS to send the script inside a POST HTTP command.
-
-Use the `base64` command to output a base-64 encoded version of your script:
-
-    base64 -w0 ./import_key.sh
-
-Putting it together:
-
-    maas $PROFILE machine deploy $SYSTEM_ID user_data=$(base64 -w0 ./import_key.sh)
-
-After MAAS deploys the machine, you'll find `/ssh-key-import.log` on the machine you deployed.
- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
-
+<p>This script echos the date in addition to the output of the <code>ssh-import-key</code> command. It also adds that output to a file, <code>/ssh-key-import.log</code>.</p>
+<p>Base-64 encoding is required because the MAAS command-line interacts with the MAAS API, and base-64 encoding allows MAAS to send the script inside a POST HTTP command.</p>
+<p>Use the <code>base64</code> command to output a base-64 encoded version of your script:</p>
+<pre><code>base64 -w0 ./import_key.sh
+</code></pre>
+<p>Putting it together:</p>
+<pre><code>maas $PROFILE machine deploy $SYSTEM_ID user_data=$(base64 -w0 ./import_key.sh)
+</code></pre>
+<p>After MAAS deploys the machine, you&rsquo;ll find <code>/ssh-key-import.log</code> on the machine you deployed.</p>
+<!--  snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui 
 <h3 id="heading--cloud-init-ui">Customising cloud-init with the UI (v2.9++)</h3>
 
-<p>It&rsquo;s easy to customise cloud-init via the web UI.  When you&rsquo;ve selected a machine and choose &lsquo;Take action &gt;&gt; Deploy,&rsquo; you&rsquo;ll be presented with the following screen:</p>
-<p><a href="images/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg" target = "_blank"><img src="images/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"></a></a></p>
-<p>Select a viable release (in this case, &ldquo;Ubuntu 18.04&hellip;&rdquo;) and check the box labelled &ldquo;Cloud-init user-data&hellip;&rdquo;:</p>
-<p><a href="images/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg" target = "_blank"><img src="images/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg"></a></a></p>
-<p>Paste the desired script directly into the box, and select &ldquo;Start deployment for machine.&rdquo;  For example, to import an SSH key immediately after your machine deployment, you could paste this script:</p>
+It's easy to customise cloud-init via the web UI.  When you've selected a machine and choose 'Take action >> Deploy,' you'll be presented with the following screen:
+
+<a href="images/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg" target = "_blank"><img src="images/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"></a></a>
+
+Select a viable release (in this case, "Ubuntu 18.04...") and check the box labelled "Cloud-init user-data...":
+
+<a href="images/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg" target = "_blank"><img src="images/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg"></a></a>
+
+Paste the desired script directly into the box, and select "Start deployment for machine."  For example, to import an SSH key immediately after your machine deployment, you could paste this script:
+
+
 <pre><code class="bash">#cloud-config
 write_files:
   - path: /test
     content: hello
 </code></pre>
 
-<p>This script simply writes hello to a the file <code>/test</code>.</p>
-<p><strong>NOTE:</strong> 
-No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-init scripts.</p>
+
+This script simply writes hello to a the file `/test`.
+
+<strong>NOTE:</strong> 
+No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-init scripts.
+
+ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
     </div>
   </body>
 </html>

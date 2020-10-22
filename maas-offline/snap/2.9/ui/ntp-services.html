@@ -450,14 +450,14 @@
 <!-- snap-2-7-cli
  snap-2-7-cli -->
 
+<!-- snap-2-7-ui
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
  snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
 
 <!-- snap-2-9-ui
  snap-2-9-ui -->
@@ -467,25 +467,23 @@
 <h2 id="heading--setting-ntp-server">Setting an external NTP server</h2>
 
 <p>External sites, such as an existing NTP infrastructure, can be used directly as a time source for both rack controllers and machines.</p>
-<p>You can specify an external site by choosing the NTP server(s) and selecting the &lsquo;External Only&rsquo; option. The region controller always uses an external site.</p>
-<p>On the &lsquo;Settings&rsquo; page, select the &lsquo;Network services&rsquo; tab and scroll down to the &lsquo;NTP&rsquo; section:</p>
-<p><a href="images/69180b4a-installconfig-network-ntp__2.6-configure-ntp.png" target = "_blank"><img src="images/69180b4a-installconfig-network-ntp__2.6-configure-ntp.png"></a></a></p>
-<p>Enter the address of the desired NTP server. Apply any changes by pressing the &lsquo;Save&rsquo; button.</p>
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-You can specify an external NTP server with two successive commands:
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+You can specify an external site by choosing the NTP server(s) and selecting the 'External Only' option. The region controller always uses an external site.
 
+On the 'Settings' page, select the 'Network services' tab and scroll down to the 'NTP' section:
+
+<a href="images/69180b4a-installconfig-network-ntp__2.6-configure-ntp.png" target = "_blank"><img src="images/69180b4a-installconfig-network-ntp__2.6-configure-ntp.png"></a></a>
+
+Enter the address of the desired NTP server. Apply any changes by pressing the 'Save' button.
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+
+<p>You can specify an external NTP server with two successive commands:</p>
 <pre><code>maas $PROFILE maas set-config name=ntp_servers value=$NTP_IP_ADDRESS
 </code></pre>
 
-
-followed by:
-
-
+<p>followed by:</p>
 <pre><code>maas admin maas set-config name=ntp_external_only value=true
 </code></pre>
-
-
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
     </div>
   </body>
 </html>

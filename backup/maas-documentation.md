@@ -1,85 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation/2838) ~ [UI](/t/maas-documentation/2839)|[CLI](/t/maas-documentation/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation/2842) ~ [UI](/t/maas-documentation/2843)|
-|Packages|CLI ~ [UI](/t/maas-documentation/2845)|[CLI](/t/maas-documentation/2846) ~ [UI](/t/maas-documentation/2847)|[CLI](/t/maas-documentation/2848) ~ [UI](/t/maas-documentation/2849)|
 deb-2-7-cli -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/maas-documentation/2839)|[CLI](/t/maas-documentation/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation/2842) ~ [UI](/t/maas-documentation/2843)|
-|Packages|[CLI](/t/maas-documentation/2844) ~ [UI](/t/maas-documentation/2845)|[CLI](/t/maas-documentation/2846) ~ [UI](/t/maas-documentation/2847)|[CLI](/t/maas-documentation/2848) ~ [UI](/t/maas-documentation/2849)|
 snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation/2838) ~ UI|[CLI](/t/maas-documentation/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation/2842) ~ [UI](/t/maas-documentation/2843)|
-|Packages|[CLI](/t/maas-documentation/2844) ~ [UI](/t/maas-documentation/2845)|[CLI](/t/maas-documentation/2846) ~ [UI](/t/maas-documentation/2847)|[CLI](/t/maas-documentation/2848) ~ [UI](/t/maas-documentation/2849)|
 snap-2-7-ui -->
 
 <!-- deb-2-7-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](maas-documentation/2838) ~ [UI](/t/maas-documentation/2839)|[CLI](/t/maas-documentation/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation/2842) ~ [UI](/t/maas-documentation/2843)|
-|Packages|[CLI](/t/maas-documentation/2844) ~ UI|[CLI](/t/maas-documentation/2846) ~ [UI](/t/maas-documentation/2847)|[CLI](/t/maas-documentation/2848) ~ [UI](/t/maas-documentation/2849)|
 deb-2-7-ui -->
 
 <!-- snap-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation/2838) ~ [UI](/t/maas-documentation/2839) | CLI ~ [UI](/t/maas-documentation/25) |[CLI](/t/maas-documentation/2842) ~ [UI](/t/maas-documentation/2843) |
-|Packages|[CLI](/t/maas-documentation/2844) ~ [UI](/t/maas-documentation/2845) |[CLI](/t/maas-documentation/2846) ~ [UI](/t/maas-documentation/2847) |[CLI](/t/maas-documentation/2848) ~ [UI](/t/maas-documentation/2849) |
 snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation/2838) ~ [UI](/t/maas-documentation/2839)|[CLI](/t/maas-documentation/2840) ~ UI|[CLI](/t/maas-documentation/2842) ~ [UI](/t/maas-documentation/2843)|
-|Packages|[CLI](/t/maas-documentation/2844) ~ [UI](/t/maas-documentation/2845)|[CLI](/t/maas-documentation/2846) ~ [UI](/t/maas-documentation/2847)|[CLI](/t/maas-documentation/2848) ~ [UI](/t/maas-documentation/2849)|
 snap-2-8-ui -->
 
 <!-- deb-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation/2838) ~ [UI](/t/maas-documentation/2839)|[CLI](/t/maas-documentation/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation/2842) ~ [UI](/t/maas-documentation/2843)|
-|Packages|[CLI](/t/maas-documentation/2844) ~ [UI](/t/maas-documentation/2845)|CLI ~  [UI](/t/maas-documentation/2847)|[CLI](/t/maas-documentation/2848) ~ [UI](/t/maas-documentation/2849)|
 deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation/2838) ~ [UI](/t/maas-documentation/2839)|[CLI](/t/maas-documentation/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation/2842) ~ [UI](/t/maas-documentation/2843)|
-|Packages|[CLI](/t/maas-documentation/2844) ~ [UI](/t/maas-documentation/2845)|[CLI](/t/maas-documentation/2846) ~ UI|[CLI](/t/maas-documentation/2848) ~ [UI](/t/maas-documentation/2849)|
 deb-2-8-ui -->
 
 <!-- snap-2-9-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation/2838) ~ [UI](/t/maas-documentation/2839)|[CLI](/t/maas-documentation/2840) ~ [UI](/t/maas-documentation/25)|CLI ~  [UI](/t/maas-documentation/2843)|
-|Packages|[CLI](/t/maas-documentation/2844) ~ [UI](/t/maas-documentation/2845)|[CLI](/t/maas-documentation/2846) ~ [UI](/t/maas-documentation/2847)|[CLI](/t/maas-documentation/2848) ~ [UI](/t/maas-documentation/2849)|
 snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation/2838) ~ [UI](/t/maas-documentation/2839)|[CLI](/t/maas-documentation/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation/2842) ~ UI|
-|Packages|[CLI](/t/maas-documentation/2844) ~ [UI](/t/maas-documentation/2845)|[CLI](/t/maas-documentation/2846) ~ [UI](/t/maas-documentation/2847)|[CLI](/t/maas-documentation/2848) ~ [UI](/t/maas-documentation/2849)|
 snap-2-9-ui -->
 
 <!-- deb-2-9-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation/2838) ~ [UI](/t/maas-documentation/2839)|[CLI](/t/maas-documentation/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation/2842) ~ [UI](/t/maas-documentation/2843)|
-|Packages|[CLI](/t/maas-documentation/2844) ~ [UI](/t/maas-documentation/2845)|[CLI](/t/maas-documentation/2846) ~ [UI](/t/maas-documentation/2847)|CLI ~  [UI](/t/maas-documentation/2849)|
 deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation/2838) ~ [UI](/t/maas-documentation/2839)|[CLI](/t/maas-documentation/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation/2842) ~ [UI](/t/maas-documentation/2843)|
-|Packages|[CLI](/t/maas-documentation/2844) ~ [UI](/t/maas-documentation/2845)|[CLI](/t/maas-documentation/2846) ~ [UI](/t/maas-documentation/2847)|[CLI](/t/maas-documentation/2848) ~ UI|
 deb-2-9-ui -->
 
 MAAS is **Metal As A Service**, a service that lets you treat physical servers like virtual machines -- instances -- in the cloud.  No need for you to manage servers individually: MAAS turns your bare metal into an elastic, cloud-like resource.

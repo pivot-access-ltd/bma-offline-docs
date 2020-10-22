@@ -433,7 +433,7 @@
 <h4>Quick questions you may have:</h4>
 <ul>
 <li><a href="maas-cli.html">How do I get started with the MAAS CLI?</a></li>
-<li><a href="vm-hosting.html">What should I know about VM hosts?</a></li>
+<li><a href="introduction-to-vm-hosting.html">What should I know about VM hosts?</a></li>
 <li><a href="cli-composable-hardware.html#heading--add-a-vm-host">How can I add a VM host?</a></li>
 <li><a href="cli-composable-hardware.html#heading--find-vm-host-ids">How can I find VM host IDs?</a></li>
 <li><a href="cli-composable-hardware.html#heading--list-resources-of-all-vm-hosts">How can I list resources of all VM hosts?</a></li>
@@ -457,7 +457,7 @@
 
 <p><strong>NOTE:</strong> 
 Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS are optional for all VM hosts.</p>
-<p>See the <a href="/docs/api#power-types">API reference</a> for a listing of available power types.</p>
+<p>See the API reference for a listing of available power types.</p>
 <p>For example, to create an RSD VM host:</p>
 <pre><code class="bash">maas $PROFILE vm-hosts create type=rsd power_address=10.3.0.1:8443 \
     power_user=admin power_pass=admin
@@ -472,7 +472,7 @@ Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS 
         power_pass=example cpu_over_commit_ratio=0.3 memory_over_commit_ratio=4.6
 </code></pre>
 
-<p>Create a KVM host that uses a default <a href="manage-composable-machines.html#heading--configuration">storage pool</a>:</p>
+<p>Create a KVM host that uses a default storage pool:</p>
 <pre><code class="bash">maas $PROFILE vm-hosts create type=virsh power_address=qemu+ssh://ubuntu@192.168.1.2/system \
         power_pass=example default_storage_pool=pool1
 </code></pre>
@@ -646,7 +646,7 @@ maas admin partition mount $SYSTEM_ID $DISK2_ID $HOME_PARTITION_ID &quot;mount_p
 </code></pre>
 
 <p>MAAS automatically converts the <code>ip</code> constraint to a VLAN constraint (for the VLAN where its subnet can be found &ndash; e.g. <code>172.16.99.0/24</code>.) and assigns the IP address to the newly-composed machine upon allocation.</p>
-<p>See the <a href="https://maas.io/docs/api#post-maasapi20machines-opallocate">MAAS API documentation</a> for a list of all constraint keys.</p>
+<p>See the MAAS API documentation for a list of all constraint keys.</p>
 <h2 id="heading--compose-and-allocate-a-vm">Compose and allocate a VM</h2>
 
 <p>In the absence of any nodes in the &lsquo;New&rsquo; or &lsquo;Ready&rsquo; state, if a VM host of sufficient resources is available, MAAS can automatically compose (add), commission, and acquire a VM. You can accomplish this with the <code>allocate</code> sub-command:</p>

@@ -3,7 +3,7 @@ This article provides a list of examples of VM host management tasks you can per
 #### Quick questions you may have: 
 
 * [How do I get started with the MAAS CLI?](/t/maas-cli/802)
-* [What should I know about VM hosts?](/t/vm-hosting/1524)
+* [What should I know about VM hosts?](/t/introduction-to-vm-hosting/1524)
 * [How can I add a VM host?](/t/cli-composable-hardware/795#heading--add-a-vm-host)
 * [How can I find VM host IDs?](/t/cli-composable-hardware/795#heading--find-vm-host-ids)
 * [How can I list resources of all VM hosts?](/t/cli-composable-hardware/795#heading--list-resources-of-all-vm-hosts)
@@ -31,7 +31,7 @@ maas $PROFILE vm-hosts create type=$VM_HOST_TYPE power_address=$POWER_ADDRESS \
 Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS are optional for all VM hosts.
 
 
-See the [API reference](/docs/api#power-types) for a listing of available power types.
+See the API reference for a listing of available power types.
 
 For example, to create an RSD VM host:
 
@@ -53,7 +53,7 @@ maas $PROFILE vm-hosts create type=virsh power_address=qemu+ssh://ubuntu@192.168
         power_pass=example cpu_over_commit_ratio=0.3 memory_over_commit_ratio=4.6
 ```
 
-Create a KVM host that uses a default [storage pool](/t/manage-composable-machines/812#heading--configuration):
+Create a KVM host that uses a default storage pool:
 
 ``` bash
 maas $PROFILE vm-hosts create type=virsh power_address=qemu+ssh://ubuntu@192.168.1.2/system \
@@ -295,7 +295,7 @@ interfaces=eth0:ip=172.16.99.42
 
 MAAS automatically converts the `ip` constraint to a VLAN constraint (for the VLAN where its subnet can be found -- e.g. `172.16.99.0/24`.) and assigns the IP address to the newly-composed machine upon allocation.
 
-See the [MAAS API documentation](https://maas.io/docs/api#post-maasapi20machines-opallocate) for a list of all constraint keys.
+See the MAAS API documentation for a list of all constraint keys.
 
 <h2 id="heading--compose-and-allocate-a-vm">Compose and allocate a VM</h2>
 

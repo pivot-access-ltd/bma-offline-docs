@@ -45,14 +45,14 @@ This article will explain more about both methods.
 
 <!-- deb-2-7-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/vm-hosting/2748)
+* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2748)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2292)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/vm-hosting/2749)
+* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2749)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2293)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -60,14 +60,14 @@ This article will explain more about both methods.
 
 <!-- deb-2-8-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/vm-hosting/2750)
+* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2750)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2294)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/vm-hosting/2751)
+* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2751)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2295)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -75,14 +75,14 @@ This article will explain more about both methods.
 
 <!-- deb-2-9-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/vm-hosting/2752)
+* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2752)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2296)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/vm-hosting/2753)
+* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2753)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2297)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -90,14 +90,14 @@ This article will explain more about both methods.
 
 <!-- snap-2-7-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/vm-hosting/2742)
+* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2742)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2286)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/vm-hosting/2743)
+* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2743)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2287)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -105,14 +105,14 @@ This article will explain more about both methods.
 
 <!-- snap-2-8-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/vm-hosting/2744)
+* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2744)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2288)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/vm-hosting/2745)
+* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2745)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2289)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -120,14 +120,14 @@ This article will explain more about both methods.
 
 <!-- snap-2-9-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/vm-hosting/2746)
+* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2746)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2290)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/vm-hosting/2747)
+* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2747)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2291)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -412,9 +412,9 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 Normally, when you add a machine manually, MAAS will immediately attempt to commission the machine. Note that you will need to configure the underlying machine to boot over the network, or commissioning will fail. MAAS cannot handle this configuration for you.  While the correct method for configuring network boot depends heavily on your server, there are a couple of common elements:
 
-1. The network card on your server must be able to support PXE, i.e., your NIC -- whether independent or integrated on a motherboard -- must have a boot PROM that supports network booting.  You'll need to consult the documentation for the machine in question to determine this.
+* The network card on your server must be able to support PXE, i.e., your NIC -- whether independent or integrated on a motherboard -- must have a boot PROM that supports network booting.  You'll need to consult the documentation for the machine in question to determine this.
 
-2. You usually have to interrupt the boot process and enter the BIOS/UEFI menu to configure the network card's PXE stack.  Again, you may need to consult your machine's documentation to pin down this step.
+* You usually have to interrupt the boot process and enter the BIOS/UEFI menu to configure the network card's PXE stack.  Again, you may need to consult your machine's documentation to pin down this step.
 
 Additional steps will vary widely by machine type and architecture.
 

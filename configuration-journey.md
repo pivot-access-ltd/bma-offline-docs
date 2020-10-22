@@ -598,51 +598,51 @@ When it comes to running applications, MAAS can easily deploy any supported vari
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- deb-2-7-cli
-[VM hosts]( /t/introduction-to-vm-hosting/2748) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2748) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-[VM hosts]( /t/introduction-to-vm-hosting/2749) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2749) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-[VM hosts]( /t/introduction-to-vm-hosting/2750) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2750) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-[VM hosts]( /t/introduction-to-vm-hosting/2751) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2751) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-[VM hosts]( /t/introduction-to-vm-hosting/2752) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2752) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-[VM hosts]( /t/introduction-to-vm-hosting/2753) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2753) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-[VM hosts]( /t/introduction-to-vm-hosting/2742) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2742) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-[VM hosts]( /t/introduction-to-vm-hosting/2743) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2743) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-[VM hosts]( /t/introduction-to-vm-hosting/2744) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2744) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-[VM hosts]( /t/introduction-to-vm-hosting/2745) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2745) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-[VM hosts]( /t/introduction-to-vm-hosting/2746) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2746) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-[VM hosts]( /t/introduction-to-vm-hosting/2747) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2747) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
  snap-2-9-ui -->
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui

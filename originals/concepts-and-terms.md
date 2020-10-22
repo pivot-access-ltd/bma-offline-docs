@@ -94,7 +94,7 @@ Static or dynamic IP addresses and DNS names can be assigned to any device or pa
 
 <h2 id="heading--vm-hosts">VM hosts</h2>
 
-VM hosts, also called composable hardware, allow for the dynamic composition of machines from a pool of available hardware resources (e.g. disk space, memory, cores). See [Introduction to VM hosting](/t/vm-hosting/1524) for details.
+VM hosts, also called composable hardware, allow for the dynamic composition of machines from a pool of available hardware resources (e.g. disk space, memory, cores). See [Introduction to VM hosting](/t/introduction-to-vm-hosting/1524) for details.
 
 <h2 id="heading--zones">Zones</h2>
 

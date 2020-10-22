@@ -70,16 +70,16 @@ post-build: main-build
 	cp -R css $(PROD_DEB)/cli
 	cp -R css $(PROD_SNAP)/ui
 	cp -R css $(PROD_SNAP)/cli
+	rm template.html
 
 main-build: pre-build
-	scripts/strip-navigation.sh maas-documentation.md
-	cp maas-documentation.md maas-documentation-25.msd
 	@$(MAKE) --no-print-directory originals/*.md
 	@$(MAKE) --no-print-directory originals/*.msd
 
 originals/%.msd: %.msd
 	$(eval BASE = $(notdir $@))
 	cp $(BASE) backup/$(BASE)
+	scripts/strip-navigation.sh $(BASE)
 	sed -i "/|| 2.7/d" $(BASE)
 	sed -i "/||2.7/d" $(BASE)
 	sed -i "/|-----:|:-----:/d" $(BASE)
@@ -90,31 +90,54 @@ originals/%.msd: %.msd
 	cp templates/$(D27U)/msd-template.html ./template.html
 	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(D27UT) $<
+	sed -i "s/<li><a href=\"https/<li><a hruf=\"https/" $(HTML)
+	sed -i "s/<li><a href=\"/<li><a href=\"ui\//" $(HTML)
+	sed -i "s/<li><a hruf/<li><a href/" $(HTML)
 	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
 	mv $(HTML) $(MOL)/$(D27)
 	cp templates/$(D28U)/msd-template.html ./template.html
 	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(D28UT) $<
+	sed -i "s/<li><a href=\"https/<li><a hruf=\"https/" $(HTML)
+	sed -i "s/<li><a href=\"/<li><a href=\"ui\//" $(HTML)
+	sed -i "s/<li><a hruf/<li><a href/" $(HTML)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
 	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
 	mv $(HTML) $(MOL)/$(D28)
 	cp templates/$(D29U)/msd-template.html ./template.html
 	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(D29UT) $<
+	sed -i "s/<li><a href=\"https/<li><a hruf=\"https/" $(HTML)
+	sed -i "s/<li><a href=\"/<li><a href=\"ui\//" $(HTML)
+	sed -i "s/<li><a hruf/<li><a href/" $(HTML)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
 	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
 	mv $(HTML) $(MOL)/$(D29)
 	cp templates/$(S27U)/msd-template.html ./template.html
 	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(S27UT) $<
+	sed -i "s/<li><a href=\"https/<li><a hruf=\"https/" $(HTML)
+	sed -i "s/<li><a href=\"/<li><a href=\"ui\//" $(HTML)
+	sed -i "s/<li><a hruf/<li><a href/" $(HTML)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
 	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
 	mv $(HTML) $(MOL)/$(S27)
 	cp templates/$(S28U)/msd-template.html ./template.html
 	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(S28UT) $<
+	sed -i "s/<li><a href=\"https/<li><a hruf=\"https/" $(HTML)
+	sed -i "s/<li><a href=\"/<li><a href=\"ui\//" $(HTML)
+	sed -i "s/<li><a hruf/<li><a href/" $(HTML)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
 	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
 	mv $(HTML) $(MOL)/$(S28)
 	cp templates/$(S29U)/msd-template.html ./template.html
 	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(S27UT) $<
+	sed -i "s/<li><a href=\"https/<li><a hruf=\"https/" $(HTML)
+	sed -i "s/<li><a href=\"/<li><a href=\"ui\//" $(HTML)
+	sed -i "s/<li><a hruf/<li><a href/" $(HTML)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
 	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
 	cp $(BASE) originals
 	mv $(HTML) $(MOL)/$(S29)
@@ -188,7 +211,7 @@ originals/%.md: %.md
 	mv $(HTML) $(MOL)/$(S29C)
 	cp templates/$(S29U)/template.html ./template.html
 	sed -i "s|zork|$(HTML)|g" ./template.html
-	xpub convert dc2html -t $(S27UT) $(BASE)
+	xpub convert dc2html -t $(S29UT) $(BASE)
 	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
 	cp $(BASE) originals
 	mv $(HTML) $(MOL)/$(S29U)

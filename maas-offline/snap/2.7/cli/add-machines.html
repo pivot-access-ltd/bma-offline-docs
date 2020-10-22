@@ -471,14 +471,14 @@
 <h4>Quick questions you may have:</h4>
 <!-- deb-2-7-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](vm-hosting.html)
+* [How do VM host nodes work?](introduction-to-vm-hosting.html)
 * [How do I add virtual machines?](adding-a-vm-host.html)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](vm-hosting.html)
+* [How do VM host nodes work?](introduction-to-vm-hosting.html)
 * [How do I add virtual machines?](adding-a-vm-host.html)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -486,14 +486,14 @@
 
 <!-- deb-2-8-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](vm-hosting.html)
+* [How do VM host nodes work?](introduction-to-vm-hosting.html)
 * [How do I add virtual machines?](adding-a-vm-host.html)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](vm-hosting.html)
+* [How do VM host nodes work?](introduction-to-vm-hosting.html)
 * [How do I add virtual machines?](adding-a-vm-host.html)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -501,14 +501,14 @@
 
 <!-- deb-2-9-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](vm-hosting.html)
+* [How do VM host nodes work?](introduction-to-vm-hosting.html)
 * [How do I add virtual machines?](adding-a-vm-host.html)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](vm-hosting.html)
+* [How do VM host nodes work?](introduction-to-vm-hosting.html)
 * [How do I add virtual machines?](adding-a-vm-host.html)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -516,13 +516,13 @@
 
 <ul>
 <li><a href="#heading--enlistment">How does enlistment work?</a></li>
-<li><a href="vm-hosting.html">How do VM host nodes work?</a></li>
+<li><a href="introduction-to-vm-hosting.html">How do VM host nodes work?</a></li>
 <li><a href="adding-a-vm-host.html">How do I add virtual machines?</a></li>
 <li><a href="#heading--add-a-node-manually">How do I add a machine manually?</a></li>
 </ul>
 <!-- snap-2-7-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](vm-hosting.html)
+* [How do VM host nodes work?](introduction-to-vm-hosting.html)
 * [How do I add virtual machines?](adding-a-vm-host.html)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -530,14 +530,14 @@
 
 <!-- snap-2-8-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](vm-hosting.html)
+* [How do VM host nodes work?](introduction-to-vm-hosting.html)
 * [How do I add virtual machines?](adding-a-vm-host.html)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](vm-hosting.html)
+* [How do VM host nodes work?](introduction-to-vm-hosting.html)
 * [How do I add virtual machines?](adding-a-vm-host.html)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -545,14 +545,14 @@
 
 <!-- snap-2-9-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](vm-hosting.html)
+* [How do VM host nodes work?](introduction-to-vm-hosting.html)
 * [How do I add virtual machines?](adding-a-vm-host.html)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](vm-hosting.html)
+* [How do VM host nodes work?](introduction-to-vm-hosting.html)
 * [How do I add virtual machines?](adding-a-vm-host.html)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -810,14 +810,14 @@ deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui -->
 </li>
 </ul>
 <p>Normally, when you add a machine manually, MAAS will immediately attempt to commission the machine. Note that you will need to configure the underlying machine to boot over the network, or commissioning will fail. MAAS cannot handle this configuration for you.  While the correct method for configuring network boot depends heavily on your server, there are a couple of common elements:</p>
-<ol>
+<ul>
 <li>
 <p>The network card on your server must be able to support PXE, i.e., your NIC &ndash; whether independent or integrated on a motherboard &ndash; must have a boot PROM that supports network booting.  You&rsquo;ll need to consult the documentation for the machine in question to determine this.</p>
 </li>
 <li>
 <p>You usually have to interrupt the boot process and enter the BIOS/UEFI menu to configure the network card&rsquo;s PXE stack.  Again, you may need to consult your machine&rsquo;s documentation to pin down this step.</p>
 </li>
-</ol>
+</ul>
 <p>Additional steps will vary widely by machine type and architecture.</p>
 <h3 id="heading--bmc-enlistment">BMC enlistment</h3>
 

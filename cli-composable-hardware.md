@@ -31,7 +31,7 @@ maas $PROFILE vm-hosts create type=$VM_HOST_TYPE power_address=$POWER_ADDRESS \
 Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS are optional for all VM hosts.
 [/note]
 
-See the [API reference](/docs/api#power-types) for a listing of available power types.
+See the API reference for a listing of available power types.
 
 For example, to create an RSD VM host:
 
@@ -53,7 +53,7 @@ maas $PROFILE vm-hosts create type=virsh power_address=qemu+ssh://ubuntu@192.168
         power_pass=example cpu_over_commit_ratio=0.3 memory_over_commit_ratio=4.6
 ```
 
-Create a KVM host that uses a default [storage pool](/t/manage-composable-machines/812#heading--configuration):
+Create a KVM host that uses a default storage pool:
 
 ``` bash
 maas $PROFILE vm-hosts create type=virsh power_address=qemu+ssh://ubuntu@192.168.1.2/system \
@@ -295,7 +295,7 @@ interfaces=eth0:ip=172.16.99.42
 
 MAAS automatically converts the `ip` constraint to a VLAN constraint (for the VLAN where its subnet can be found -- e.g. `172.16.99.0/24`.) and assigns the IP address to the newly-composed machine upon allocation.
 
-See the [MAAS API documentation](https://maas.io/docs/api#post-maasapi20machines-opallocate) for a list of all constraint keys.
+See the MAAS API documentation for a list of all constraint keys.
 
 <h2 id="heading--compose-and-allocate-a-vm">Compose and allocate a VM</h2>
 

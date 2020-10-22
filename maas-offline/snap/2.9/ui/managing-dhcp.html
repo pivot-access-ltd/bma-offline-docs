@@ -450,14 +450,14 @@
 <!-- snap-2-7-cli
  snap-2-7-cli -->
 
+<!-- snap-2-7-ui
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
  snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
 
 <!-- snap-2-9-ui
  snap-2-9-ui -->
@@ -544,16 +544,17 @@
 * [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  snap-2-7-cli -->
 
-<ul>
-<li><a href="concepts-and-terms.html#heading--ip-ranges">What are reserved IP ranges?</a></li>
-<li><a href="commission-machines.html#heading--post-commission-configuration">What is post-commission configuration</a></li>
-<li><a href="#heading--enabling-dhcp">How and why should I enable MAAS-managed DHCP?</a></li>
-<li><a href="#heading--resolving-ip-conflicts">How do I resolve IP conflicts?</a></li>
-<li><a href="#heading--extending-a-reserved-dynamic-ip-range">How can I extend a reserved dynamic IP range?</a></li>
-<li><a href="#heading--external-dhcp-and-a-reserved-ip-range">How and why should I configure external  DHCP?</a></li>
-<li><a href="#heading--dhcp-relay">How and why should I use a DHCP relay?</a></li>
-<li><a href="#heading--dhcp-snippets">How and why should I customise MAAS with DHCP snippets?</a></li>
-</ul>
+<!-- snap-2-7-ui
+* [What are reserved IP ranges?](concepts-and-terms.html#heading--ip-ranges)
+* [What is post-commission configuration](commission-machines.html#heading--post-commission-configuration)
+* [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
+* [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
+* [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
+* [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
+* [How and why should I use a DHCP relay?](#heading--dhcp-relay)
+* [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
 * [What are reserved IP ranges?](concepts-and-terms.html#heading--ip-ranges)
 * [What is post-commission configuration](commission-machines.html#heading--post-commission-configuration)
@@ -576,17 +577,16 @@
 * [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-* [What are reserved IP ranges?](concepts-and-terms.html#heading--ip-ranges)
-* [What is post-commission configuration](commission-machines.html#heading--post-commission-configuration)
-* [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-* [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-* [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-* [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-* [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-* [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
- snap-2-9-cli -->
-
+<ul>
+<li><a href="concepts-and-terms.html#heading--ip-ranges">What are reserved IP ranges?</a></li>
+<li><a href="commission-machines.html#heading--post-commission-configuration">What is post-commission configuration</a></li>
+<li><a href="#heading--enabling-dhcp">How and why should I enable MAAS-managed DHCP?</a></li>
+<li><a href="#heading--resolving-ip-conflicts">How do I resolve IP conflicts?</a></li>
+<li><a href="#heading--extending-a-reserved-dynamic-ip-range">How can I extend a reserved dynamic IP range?</a></li>
+<li><a href="#heading--external-dhcp-and-a-reserved-ip-range">How and why should I configure external  DHCP?</a></li>
+<li><a href="#heading--dhcp-relay">How and why should I use a DHCP relay?</a></li>
+<li><a href="#heading--dhcp-snippets">How and why should I customise MAAS with DHCP snippets?</a></li>
+</ul>
 <!-- snap-2-9-ui
 * [What are reserved IP ranges?](concepts-and-terms.html#heading--ip-ranges)
 * [What is post-commission configuration](commission-machines.html#heading--post-commission-configuration)
@@ -601,44 +601,35 @@
 <h2 id="heading--enabling-dhcp">Enabling DHCP</h2>
 
 <p>MAAS-managed DHCP needs a reserved dynamic IP range enlist and commission machines. You should create such a range when you are enabling DHCP with the web UI.</p>
-<p>To enable MAAS-managed DHCP, under the &lsquo;Subnets&rsquo; page select the desired VLAN and then:</p>
-<ol>
-<li>Under the &lsquo;Take action&rsquo; button select &lsquo;Provide DHCP&rsquo;. A new window will appear.</li>
-<li>Select the primary rack controller. For DHCP HA, select both the primary and the secondary.</li>
-<li>Create a reserved, dynamic IP range. Fill in the fields &lsquo;Dynamic range start IP&rsquo; and &lsquo;Dynamic range end IP&rsquo;.</li>
-<li>Apply your changes with the &lsquo;Provide DHCP&rsquo; button.</li>
-</ol>
-<p><a href="images/6727ac9a78a11e0ec602a5cb646a5776eff67677.png" target = "_blank"><img src="images/6727ac9a78a11e0ec602a5cb646a5776eff67677.png"></a></a></p>
-<p>Now, addresses in this range will get assigned to machines that are being either enlisted or commissioned.  In addition, if you are deploying a machine that has an interface connected to the untagged VLAN, and it has an IP assignment mode set to &lsquo;DHCP,&rsquo; then it will also get an address in this range.</p>
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-To enable DHCP on a VLAN on a certain fabric:
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+To enable MAAS-managed DHCP, under the 'Subnets' page select the desired VLAN and then:
 
+1.  Under the 'Take action' button select 'Provide DHCP'. A new window will appear.
+2.  Select the primary rack controller. For DHCP HA, select both the primary and the secondary.
+3.  Create a reserved, dynamic IP range. Fill in the fields 'Dynamic range start IP' and 'Dynamic range end IP'.
+4.  Apply your changes with the 'Provide DHCP' button.
+
+<a href="images/6727ac9a78a11e0ec602a5cb646a5776eff67677.png" target = "_blank"><img src="images/6727ac9a78a11e0ec602a5cb646a5776eff67677.png"></a></a>
+
+Now, addresses in this range will get assigned to machines that are being either enlisted or commissioned.  In addition, if you are deploying a machine that has an interface connected to the untagged VLAN, and it has an IP assignment mode set to 'DHCP,' then it will also get an address in this range.
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+
+<p>To enable DHCP on a VLAN on a certain fabric:</p>
 <pre><code class="bash">maas $PROFILE vlan update $FABRIC_ID $VLAN_TAG dhcp_on=True \
     primary_rack=$PRIMARY_RACK_CONTROLLER
 </code></pre>
 
-
-To enable DHCP HA, you will need both a primary and a secondary controller:
-
-
+<p>To enable DHCP HA, you will need both a primary and a secondary controller:</p>
 <pre><code class="bash">maas $PROFILE vlan update $FABRIC_ID $VLAN_TAG dhcp_on=True \
     primary_rack=$PRIMARY_RACK_CONTROLLER \
     secondary_rack=$SECONDARY_RACK_CONTROLLER 
 </code></pre>
 
-
-<strong>NOTE:</strong> 
-You must enable DHCP for PXE booting on the 'untagged' VLAN.
-
-
-You will also need to set a default gateway:
-
-
+<p><strong>NOTE:</strong> 
+You must enable DHCP for PXE booting on the &lsquo;untagged&rsquo; VLAN.</p>
+<p>You will also need to set a default gateway:</p>
 <pre><code class="bash">maas $PROFILE subnet update $SUBNET_CIDR gateway_ip=$MY_GATEWAY
 </code></pre>
-
-
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 <h3 id="heading--resolving-ip-conflicts">Resolving IP conflicts</h3>
 
@@ -682,7 +673,10 @@ If necessary, it is possible to add further portions of the subnet to the dynami
 If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](ip-ranges.html)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
  snap-2-7-cli -->
 
-<p>If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see <a href="ip-ranges.html">IP ranges</a>). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the &lsquo;Subnets&rsquo; page and reserve a dynamic range. DHCP will be enabled automatically.</p>
+<!-- snap-2-7-ui
+If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](ip-ranges.html)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
 If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](ip-ranges.html)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
  snap-2-8-cli -->
@@ -691,10 +685,7 @@ If necessary, it is possible to add further portions of the subnet to the dynami
 If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](ip-ranges.html)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](ip-ranges.html)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
- snap-2-9-cli -->
-
+<p>If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see <a href="ip-ranges.html">IP ranges</a>). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the &lsquo;Subnets&rsquo; page and reserve a dynamic range. DHCP will be enabled automatically.</p>
 <!-- snap-2-9-ui
 If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](ip-ranges.html)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
  snap-2-9-ui -->
@@ -729,7 +720,10 @@ If an external DHCP server is used to deploy machines, then a reserved IP range 
 If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](ip-ranges.html) to create such a range. It should correspond to the lease range of the external server.
  snap-2-7-cli -->
 
-<p>If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine&rsquo;s IP assignment mode to &lsquo;Auto assign&rsquo; in the context of an external DHCP server. See <a href="ip-ranges.html">IP ranges</a> to create such a range. It should correspond to the lease range of the external server.</p>
+<!-- snap-2-7-ui
+If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](ip-ranges.html) to create such a range. It should correspond to the lease range of the external server.
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
 If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](ip-ranges.html) to create such a range. It should correspond to the lease range of the external server.
  snap-2-8-cli -->
@@ -738,10 +732,7 @@ If an external DHCP server is used to deploy machines, then a reserved IP range 
 If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](ip-ranges.html) to create such a range. It should correspond to the lease range of the external server.
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](ip-ranges.html) to create such a range. It should correspond to the lease range of the external server.
- snap-2-9-cli -->
-
+<p>If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine&rsquo;s IP assignment mode to &lsquo;Auto assign&rsquo; in the context of an external DHCP server. See <a href="ip-ranges.html">IP ranges</a> to create such a range. It should correspond to the lease range of the external server.</p>
 <!-- snap-2-9-ui
 If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](ip-ranges.html) to create such a range. It should correspond to the lease range of the external server.
  snap-2-9-ui -->
@@ -757,25 +748,20 @@ If an external DHCP server is used to deploy machines, then a reserved IP range 
 <li>
 <p>Set up the external relay. This relay is set up independently from MAAS. See <a href="concepts-and-terms.html#heading--dhcp-relay">DHCP relay</a> for software suggestions.</p>
 </li>
-<li>
-<p>Configure MAAS-managed DHCP. Navigate to the source VLAN page and select the &lsquo;Relay DHCP&rsquo; action. Fill in the fields in the resulting form. The crucial setting is the target VLAN (&lsquo;Relay VLAN&rsquo;). Press the &lsquo;Relay DHCP&rsquo; button to finish.</p>
-</li>
 </ol>
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-3. To relay DHCP traffic for a VLAN (source) through another VLAN (target):
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+3.  Configure MAAS-managed DHCP. Navigate to the source VLAN page and select the 'Relay DHCP' action. Fill in the fields in the resulting form. The crucial setting is the target VLAN ('Relay VLAN'). Press the 'Relay DHCP' button to finish.
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
+<ol>
+<li>To relay DHCP traffic for a VLAN (source) through another VLAN (target):</li>
+</ol>
 <pre><code class="bash">maas $PROFILE vlan update $FABRIC_ID $VLAN_VID_SRC relay_vlan=$VLAN_ID_TARGET
 </code></pre>
 
-
-For example, to relay VLAN with vid 0 (on fabric-2) through VLAN with id 5002 :
-
-
+<p>For example, to relay VLAN with vid 0 (on fabric-2) through VLAN with id 5002 :</p>
 <pre><code class="bash">maas $PROFILE vlan update 2 0 relay_van=5002
 </code></pre>
-
-
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 <h2 id="heading--dhcp-snippets">DHCP Snippets</h2>
 
@@ -786,99 +772,70 @@ deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 <p>When MAAS manages DHCP, you customise it through the use of DHCP snippets. These are user-defined configuration options that can be applied either globally, per subnet, or per machine. You apply a global snippet to all VLANs, subnets, and machines. All three types end up in <code>/var/snap/maas/common/maas/dhcpd.conf</code> or <code>/var/snap/maas/common/maas/dhcpd6.conf</code>. Be aware that if you edit these files directly, you will need to <code>sudo</code> to <code>root</code>, as there is no <code>maas</code> user in the snap (all relevant files are owned by <code>root</code>). For information on what options to use, refer to the <a href="http://manpages.ubuntu.com/cgi-bin/search.py?q=dhcpd.conf"><code>dhcpd.conf</code> man page</a>.</p>
 <p><strong>NOTE:</strong> 
 Modifications made directly to <code>dhcpd.conf.template</code> or <code>dhcpd6.conf.template</code> are not supported.</p>
-<p>To manage snippets, as an admin, open the &lsquo;Settings&rsquo; page and click on the &lsquo;DHCP snippets&rsquo; tab.</p>
-<p>For example, to create a new snippet press &lsquo;Add custom snippet&rsquo;. In the resulting window, choose a name and type for it and enter its associated DHCP configuration. Click &lsquo;Save snippet&rsquo; to apply the change, and make sure to activate the checkbox in the &lsquo;Enabled&rsquo; column of the snippets list.</p>
-<p><a href="images/a3247c726ed9e3e5d7a99becd89920e81aaa86f7.png" target = "_blank"><img src="images/a3247c726ed9e3e5d7a99becd89920e81aaa86f7.png"></a></a></p>
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-When you create a snippet, MAAS enables it by default.
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+To manage snippets, as an admin, open the 'Settings' page and click on the 'DHCP snippets' tab.
 
-To create a **global** snippet:
+For example, to create a new snippet press 'Add custom snippet'. In the resulting window, choose a name and type for it and enter its associated DHCP configuration. Click 'Save snippet' to apply the change, and make sure to activate the checkbox in the 'Enabled' column of the snippets list.
 
+<a href="images/a3247c726ed9e3e5d7a99becd89920e81aaa86f7.png" target = "_blank"><img src="images/a3247c726ed9e3e5d7a99becd89920e81aaa86f7.png"></a></a>
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
+<p>When you create a snippet, MAAS enables it by default.</p>
+<p>To create a <strong>global</strong> snippet:</p>
 <pre><code class="bash">maas $PROFILE dhcpsnippets create name=$DHCP_SNIPPET_NAME \
     value=$DHCP_CONFIG description=$DHCP_SNIPPET_DESCRIPTION \
     global_snippet=true
 </code></pre>
 
-
-To create a **subnet** snippet:
-
-
+<p>To create a <strong>subnet</strong> snippet:</p>
 <pre><code class="bash">maas $PROFILE dhcpsnippets create name=$DHCP_SNIPPET_NAME \
     value=$DHCP_CONFIG description=$DHCP_SNIPPET_DESCRIPTION \
     subnet=$SUBNET_ID
 </code></pre>
 
-
-You can also specify subnets in CIDR format.
-
-To create a **node** snippet:
-
-
+<p>You can also specify subnets in CIDR format.</p>
+<p>To create a <strong>node</strong> snippet:</p>
 <pre><code class="bash">maas $PROFILE dhcpsnippets create name=$DHCP_SNIPPET_NAME \
     value=$DHCP_CONFIG description=$DHCP_SNIPPET_DESCRIPTION \
     node=$NODE_ID
 </code></pre>
 
-
-You can also use a hostname instead of the node ID.
-
+<p>You can also use a hostname instead of the node ID.</p>
 <h3 id="heading--list-snippets">List snippets</h3>
 
-To list all snippets (and their characteristics) in the MAAS:
-
-
+<p>To list all snippets (and their characteristics) in the MAAS:</p>
 <pre><code class="bash">maas $PROFILE dhcpsnippets read
 </code></pre>
 
-
-To list a specific snippet:
-
-
+<p>To list a specific snippet:</p>
 <pre><code class="bash">maas $PROFILE dhcpsnippet read id=$DHCP_SNIPPET_ID
 </code></pre>
 
-
-The snippet name can also be used instead of its ID:
-
-
+<p>The snippet name can also be used instead of its ID:</p>
 <pre><code class="bash">maas $PROFILE dhcpsnippet read name=$DHCP_SNIPPET_NAME
 </code></pre>
 
-
 <h3 id="heading--update-a-snippet">Update a snippet</h3>
 
-Update a snippet attribute:
-
-
+<p>Update a snippet attribute:</p>
 <pre><code class="bash">maas $PROFILE dhcpsnippet update $DHCP_SNIPPET_ID &lt;option=value&gt;
 </code></pre>
 
-
-You can also use a snippet name instead of its ID.
-
+<p>You can also use a snippet name instead of its ID.</p>
 <h3 id="heading--enable-or-disable-a-snippet">Enable or disable a snippet</h3>
 
-Enabling and disabling a snippet is considered a snippet update and is done via a boolean option ('true' or 'false'). You can disable a snippet like this:
-
-
+<p>Enabling and disabling a snippet is considered a snippet update and is done via a boolean option (&lsquo;true&rsquo; or &lsquo;false&rsquo;). You can disable a snippet like this:</p>
 <pre><code class="bash">maas $PROFILE dhcpsnippet update $DHCP_SNIPPET_ID enabled=false
 </code></pre>
 
-
-When you disable a snippet, MAAS removes the text you added to the dhcpd.conf file when you created the snippet.
-
+<p>When you disable a snippet, MAAS removes the text you added to the dhcpd.conf file when you created the snippet.</p>
 <h3 id="heading--delete-a-snippet">Delete a snippet</h3>
 
-To delete a snippet:
-
-
+<p>To delete a snippet:</p>
 <pre><code class="bash">maas $PROFILE dhcpsnippet delete $DHCP_SNIPPET_ID
 </code></pre>
 
-
-You can also use a snippet name in place of its ID.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+<p>You can also use a snippet name in place of its ID.</p>
     </div>
   </body>
 </html>

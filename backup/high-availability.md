@@ -1,85 +1,85 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability-snap-2-7-cli/2682) ~ [UI](/t/high-availability-snap-2-7-ui/2683)|[CLI](/t/high-availability-snap-2-8-cli/2684) ~ [UI](/t/high-availability-snap-2-8-ui/2685)|[CLI](/t/high-availability-snap-2-9-cli/2686) ~ [UI](/t/high-availability-snap-2-9-ui/2687)|
-|Packages|CLI ~ [UI](/t/high-availability-deb-2-7-ui/2689)|[CLI](/t/high-availability-deb-2-8-cli/2690) ~ [UI](/t/high-availability-deb-2-8-ui/2691)|[CLI](/t/high-availability-deb-2-9-cli/2692) ~ [UI](/t/high-availability-deb-2-9-ui/2693)|
+|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
+|Packages|CLI ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability-snap-2-7-cli/2682) ~ [UI](/t/high-availability-snap-2-7-ui/2683)|[CLI](/t/high-availability-snap-2-8-cli/2684) ~ [UI](/t/high-availability-snap-2-8-ui/2685)|[CLI](/t/high-availability-snap-2-9-cli/2686) ~ [UI](/t/high-availability-snap-2-9-ui/2687)|
-|Packages|[CLI](/t/high-availability-deb-2-7-cli/2688) ~ UI|[CLI](/t/high-availability-deb-2-8-cli/2690) ~ [UI](/t/high-availability-deb-2-8-ui/2691)|[CLI](/t/high-availability-deb-2-9-cli/2692) ~ [UI](/t/high-availability-deb-2-9-ui/2693)|
+|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
+|Packages|[CLI](/t/high-availability/2688) ~ UI|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability-snap-2-7-cli/2682) ~ [UI](/t/high-availability-snap-2-7-ui/2683)|[CLI](/t/high-availability-snap-2-8-cli/2684) ~ [UI](/t/high-availability-snap-2-8-ui/2685)|[CLI](/t/high-availability-snap-2-9-cli/2686) ~ [UI](/t/high-availability-snap-2-9-ui/2687)|
-|Packages|[CLI](/t/high-availability-deb-2-7-cli/2688) ~ [UI](/t/high-availability-deb-2-7-ui/2689)|CLI ~ [UI](/t/high-availability-deb-2-8-ui/2691)|[CLI](/t/high-availability-deb-2-9-cli/2692) ~ [UI](/t/high-availability-deb-2-9-ui/2693)|
+|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
+|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|CLI ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability-snap-2-7-cli/2682) ~ [UI](/t/high-availability-snap-2-7-ui/2683)|[CLI](/t/high-availability-snap-2-8-cli/2684) ~ [UI](/t/high-availability-snap-2-8-ui/2685)|[CLI](/t/high-availability-snap-2-9-cli/2686) ~ [UI](/t/high-availability-snap-2-9-ui/2687)|
-|Packages|[CLI](/t/high-availability-deb-2-7-cli/2688) ~ [UI](/t/high-availability-deb-2-7-ui/2689)|[CLI](/t/high-availability-deb-2-8-cli/2690) ~ UI|[CLI](/t/high-availability-deb-2-9-cli/2692) ~ [UI](/t/high-availability-deb-2-9-ui/2693)|
+|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
+|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ UI|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability-snap-2-7-cli/2682) ~ [UI](/t/high-availability-snap-2-7-ui/2683)|[CLI](/t/high-availability-snap-2-8-cli/2684) ~ [UI](/t/high-availability-snap-2-8-ui/2685)|[CLI](/t/high-availability-snap-2-9-cli/2686) ~ [UI](/t/high-availability-snap-2-9-ui/2687)|
-|Packages|[CLI](/t/high-availability-deb-2-7-cli/2688) ~ [UI](/t/high-availability-deb-2-7-ui/2689)|[CLI](/t/high-availability-deb-2-8-cli/2690) ~ [UI](/t/high-availability-deb-2-8-ui/2691)|CLI ~ [UI](/t/high-availability-deb-2-9-ui/2693)|
+|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
+|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|CLI ~ [UI](/t/high-availability/2693)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability-snap-2-7-cli/2682) ~ [UI](/t/high-availability-snap-2-7-ui/2683)|[CLI](/t/high-availability-snap-2-8-cli/2684) ~ [UI](/t/high-availability-snap-2-8-ui/2685)|[CLI](/t/high-availability-snap-2-9-cli/2686) ~ [UI](/t/high-availability-snap-2-9-ui/2687)|
-|Packages|[CLI](/t/high-availability-deb-2-7-cli/2688) ~ [UI](/t/high-availability-deb-2-7-ui/2689)|[CLI](/t/high-availability-deb-2-8-cli/2690) ~ [UI](/t/high-availability-deb-2-8-ui/2691)|[CLI](/t/high-availability-deb-2-9-cli/2692) ~ UI|
+|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
+|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/high-availability-snap-2-7-ui/2683)|[CLI](/t/high-availability-snap-2-8-cli/2684) ~ [UI](/t/high-availability-snap-2-8-ui/2685)|[CLI](/t/high-availability-snap-2-9-cli/2686) ~ [UI](/t/high-availability-snap-2-9-ui/2687)|
-|Packages|[CLI](/t/high-availability-deb-2-7-cli/2688) ~ [UI](/t/high-availability-deb-2-7-ui/2689)|[CLI](/t/high-availability-deb-2-8-cli/2690) ~ [UI](/t/high-availability-deb-2-8-ui/2691)|[CLI](/t/high-availability-deb-2-9-cli/2692) ~ [UI](/t/high-availability-deb-2-9-ui/2693)|
+|Snap|CLI ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
+|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability-snap-2-7-cli/2682) ~ UI|[CLI](/t/high-availability-snap-2-8-cli/2684) ~ [UI](/t/high-availability-snap-2-8-ui/2685)|[CLI](/t/high-availability-snap-2-9-cli/2686) ~ [UI](/t/high-availability-snap-2-9-ui/2687)|
-|Packages|[CLI](/t/high-availability-deb-2-7-cli/2688) ~ [UI](/t/high-availability-deb-2-7-ui/2689)|[CLI](/t/high-availability-deb-2-8-cli/2690) ~ [UI](/t/high-availability-deb-2-8-ui/2691)|[CLI](/t/high-availability-deb-2-9-cli/2692) ~ [UI](/t/high-availability-deb-2-9-ui/2693)|
+|Snap|[CLI](/t/high-availability/2682) ~ UI|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
+|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability-snap-2-7-cli/2682) ~ [UI](/t/high-availability-snap-2-7-ui/2683)|CLI ~ [UI](/t/high-availability-snap-2-8-ui/2685)|[CLI](/t/high-availability-snap-2-9-cli/2686) ~ [UI](/t/high-availability-snap-2-9-ui/2687)|
-|Packages|[CLI](/t/high-availability-deb-2-7-cli/2688) ~ [UI](/t/high-availability-deb-2-7-ui/2689)|[CLI](/t/high-availability-deb-2-8-cli/2690) ~ [UI](/t/high-availability-deb-2-8-ui/2691)|[CLI](/t/high-availability-deb-2-9-cli/2692) ~ [UI](/t/high-availability-deb-2-9-ui/2693)|
+|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|CLI ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
+|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability-snap-2-7-cli/2682) ~ [UI](/t/high-availability-snap-2-7-ui/2683)|[CLI](/t/high-availability-snap-2-8-cli/2684) ~ UI|[CLI](/t/high-availability-snap-2-9-cli/2686) ~ [UI](/t/high-availability-snap-2-9-ui/2687)|
-|Packages|[CLI](/t/high-availability-deb-2-7-cli/2688) ~ [UI](/t/high-availability-deb-2-7-ui/2689)|[CLI](/t/high-availability-deb-2-8-cli/2690) ~ [UI](/t/high-availability-deb-2-8-ui/2691)|[CLI](/t/high-availability-deb-2-9-cli/2692) ~ [UI](/t/high-availability-deb-2-9-ui/2693)|
+|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ UI|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
+|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability-snap-2-7-cli/2682) ~ [UI](/t/high-availability-snap-2-7-ui/2683)|[CLI](/t/high-availability-snap-2-8-cli/2684) ~ [UI](/t/high-availability-snap-2-8-ui/2685)|CLI ~ [UI](/t/high-availability-snap-2-9-ui/2687)|
-|Packages|[CLI](/t/high-availability-deb-2-7-cli/2688) ~ [UI](/t/high-availability-deb-2-7-ui/2689)|[CLI](/t/high-availability-deb-2-8-cli/2690) ~ [UI](/t/high-availability-deb-2-8-ui/2691)|[CLI](/t/high-availability-deb-2-9-cli/2692) ~ [UI](/t/high-availability-deb-2-9-ui/2693)|
+|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|CLI ~ [UI](/t/high-availability/2687)|
+|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability-snap-2-7-cli/2682) ~ [UI](/t/high-availability-snap-2-7-ui/2683)|[CLI](/t/high-availability-snap-2-8-cli/2684) ~ [UI](/t/high-availability-snap-2-8-ui/2685)|[CLI](/t/high-availability-snap-2-9-cli/2686) ~ UI|
-|Packages|[CLI](/t/high-availability-deb-2-7-cli/2688) ~ [UI](/t/high-availability-deb-2-7-ui/2689)|[CLI](/t/high-availability-deb-2-8-cli/2690) ~ [UI](/t/high-availability-deb-2-8-ui/2691)|[CLI](/t/high-availability-deb-2-9-cli/2692) ~ [UI](/t/high-availability-deb-2-9-ui/2693)|
+|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ UI|
+|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  snap-2-9-ui -->
 
 This page describes how to provide high availability (HA) for MAAS at both region and rack levels.  In the context of MAAS, there are four types of HA: BMC (node power cycling); DHCP; PostgreSQL; and API services.
@@ -312,8 +312,8 @@ Each region controller uses up to 40 connections to PostgreSQL in high load situ
 Setting up high-availability using snaps is relatively easy: 
 
 1.  Set up PostgreSQL for high-availability as [explained above](/t/high-availability/2682#heading--postgresql-ha). PostgreSQL should run outside of the snap.
-2.  [Install](/t/maas-installation-from-a-snap/3318#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
-3.  [Initialise the snap](/t/maas-installation-from-a-snap/3318#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+2.  [Install](/t/maas-installation/3318#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](/t/maas-installation/3318#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
     -   `--database-host DATABASE_HOST`
     -   `--database-name DATABASE_NAME`
     -   `--database-user DATABASE_USER`
@@ -324,8 +324,8 @@ Setting up high-availability using snaps is relatively easy:
 Setting up high-availability using snaps is relatively easy: 
 
 1.  Set up PostgreSQL for high-availability as [explained above](/t/high-availability/2683#heading--postgresql-ha). PostgreSQL should run outside of the snap.
-2.  [Install](/t/maas-installation-from-a-snap/3319#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
-3.  [Initialise the snap](/t/maas-installation-from-a-snap/3319#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+2.  [Install](/t/maas-installation/3319#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](/t/maas-installation/3319#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
     -   `--database-host DATABASE_HOST`
     -   `--database-name DATABASE_NAME`
     -   `--database-user DATABASE_USER`
@@ -336,8 +336,8 @@ Setting up high-availability using snaps is relatively easy:
 Setting up high-availability using snaps is relatively easy: 
 
 1.  Set up PostgreSQL for high-availability as [explained above](/t/high-availability/2684#heading--postgresql-ha). PostgreSQL should run outside of the snap.
-2.  [Install](/t/maas-installation-from-a-snap/3320#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
-3.  [Initialise the snap](/t/maas-installation-from-a-snap/3320#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+2.  [Install](/t/maas-installation/3320#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](/t/maas-installation/3320#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
     -   `--database-host DATABASE_HOST`
     -   `--database-name DATABASE_NAME`
     -   `--database-user DATABASE_USER`
@@ -348,8 +348,8 @@ Setting up high-availability using snaps is relatively easy:
 Setting up high-availability using snaps is relatively easy: 
 
 1.  Set up PostgreSQL for high-availability as [explained above](/t/high-availability/2685#heading--postgresql-ha). PostgreSQL should run outside of the snap.
-2.  [Install](/t/maas-installation-from-a-snap/3321#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
-3.  [Initialise the snap](/t/maas-installation-from-a-snap/3321#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+2.  [Install](/t/maas-installation/3321#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](/t/maas-installation/3321#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
     -   `--database-host DATABASE_HOST`
     -   `--database-name DATABASE_NAME`
     -   `--database-user DATABASE_USER`
@@ -360,8 +360,8 @@ Setting up high-availability using snaps is relatively easy:
 Setting up high-availability using snaps is relatively easy:
 
 1.  Set up PostgreSQL for high-availability as [explained above](/t/high-availability/2686#heading--postgresql-ha). PostgreSQL should run outside of the snap.
-2.  [Install](/t/maas-installation-from-a-snap/3322#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
-3.  [Initialise the snap](/t/maas-installation-from-a-snap/3322#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+2.  [Install](/t/maas-installation/3322#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](/t/maas-installation/3322#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
     -   `--database-host DATABASE_HOST`
     -   `--database-name DATABASE_NAME`
     -   `--database-user DATABASE_USER`
@@ -372,8 +372,8 @@ Setting up high-availability using snaps is relatively easy:
 Setting up high-availability using snaps is relatively easy: 
 
 1.  Set up PostgreSQL for high-availability as [explained above](/t/high-availability/2687#heading--postgresql-ha). PostgreSQL should run outside of the snap.
-2.  [Install](/t/maas-installation-from-a-snap/3323#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
-3.  [Initialise the snap](/t/maas-installation-from-a-snap/3323#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+2.  [Install](/t/maas-installation/3323#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](/t/maas-installation/3323#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
     -   `--database-host DATABASE_HOST`
     -   `--database-name DATABASE_NAME`
     -   `--database-user DATABASE_USER`

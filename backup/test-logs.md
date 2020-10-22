@@ -1,85 +1,85 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/test-logs-snap-2-7-cli/3126) ~ [UI](/t/test-logs-snap-2-7-ui/3127)|[CLI](/t/test-logs-snap-2-8-cli/3128) ~ [UI](/t/test-logs-snap-2-8-ui/3129)|[CLI](/t/test-logs-snap-2-9-cli/3130) ~ [UI](/t/test-logs-snap-2-9-ui/3131)|
-|Packages|CLI ~ [UI](/t/test-logs-deb-2-7-ui/3133)|[CLI](/t/test-logs-deb-2-8-cli/3134) ~ [UI](/t/test-logs-deb-2-8-ui/3135)|[CLI](/t/test-logs-deb-2-9-cli/3136) ~ [UI](/t/test-logs-deb-2-9-ui/3137)|
+|Snap|[CLI](/t/test-logs/3126) ~ [UI](/t/test-logs/3127)|[CLI](/t/test-logs/3128) ~ [UI](/t/test-logs/3129)|[CLI](/t/test-logs/3130) ~ [UI](/t/test-logs/3131)|
+|Packages|CLI ~ [UI](/t/test-logs/3133)|[CLI](/t/test-logs/3134) ~ [UI](/t/test-logs/3135)|[CLI](/t/test-logs/3136) ~ [UI](/t/test-logs/3137)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/test-logs-snap-2-7-cli/3126) ~ [UI](/t/test-logs-snap-2-7-ui/3127)|[CLI](/t/test-logs-snap-2-8-cli/3128) ~ [UI](/t/test-logs-snap-2-8-ui/3129)|[CLI](/t/test-logs-snap-2-9-cli/3130) ~ [UI](/t/test-logs-snap-2-9-ui/3131)|
-|Packages|[CLI](/t/test-logs-deb-2-7-cli/3132) ~ UI|[CLI](/t/test-logs-deb-2-8-cli/3134) ~ [UI](/t/test-logs-deb-2-8-ui/3135)|[CLI](/t/test-logs-deb-2-9-cli/3136) ~ [UI](/t/test-logs-deb-2-9-ui/3137)|
+|Snap|[CLI](/t/test-logs/3126) ~ [UI](/t/test-logs/3127)|[CLI](/t/test-logs/3128) ~ [UI](/t/test-logs/3129)|[CLI](/t/test-logs/3130) ~ [UI](/t/test-logs/3131)|
+|Packages|[CLI](/t/test-logs/3132) ~ UI|[CLI](/t/test-logs/3134) ~ [UI](/t/test-logs/3135)|[CLI](/t/test-logs/3136) ~ [UI](/t/test-logs/3137)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/test-logs-snap-2-7-cli/3126) ~ [UI](/t/test-logs-snap-2-7-ui/3127)|[CLI](/t/test-logs-snap-2-8-cli/3128) ~ [UI](/t/test-logs-snap-2-8-ui/3129)|[CLI](/t/test-logs-snap-2-9-cli/3130) ~ [UI](/t/test-logs-snap-2-9-ui/3131)|
-|Packages|[CLI](/t/test-logs-deb-2-7-cli/3132) ~ [UI](/t/test-logs-deb-2-7-ui/3133)|CLI ~ [UI](/t/test-logs-deb-2-8-ui/3135)|[CLI](/t/test-logs-deb-2-9-cli/3136) ~ [UI](/t/test-logs-deb-2-9-ui/3137)|
+|Snap|[CLI](/t/test-logs/3126) ~ [UI](/t/test-logs/3127)|[CLI](/t/test-logs/3128) ~ [UI](/t/test-logs/3129)|[CLI](/t/test-logs/3130) ~ [UI](/t/test-logs/3131)|
+|Packages|[CLI](/t/test-logs/3132) ~ [UI](/t/test-logs/3133)|CLI ~ [UI](/t/test-logs/3135)|[CLI](/t/test-logs/3136) ~ [UI](/t/test-logs/3137)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/test-logs-snap-2-7-cli/3126) ~ [UI](/t/test-logs-snap-2-7-ui/3127)|[CLI](/t/test-logs-snap-2-8-cli/3128) ~ [UI](/t/test-logs-snap-2-8-ui/3129)|[CLI](/t/test-logs-snap-2-9-cli/3130) ~ [UI](/t/test-logs-snap-2-9-ui/3131)|
-|Packages|[CLI](/t/test-logs-deb-2-7-cli/3132) ~ [UI](/t/test-logs-deb-2-7-ui/3133)|[CLI](/t/test-logs-deb-2-8-cli/3134) ~ UI|[CLI](/t/test-logs-deb-2-9-cli/3136) ~ [UI](/t/test-logs-deb-2-9-ui/3137)|
+|Snap|[CLI](/t/test-logs/3126) ~ [UI](/t/test-logs/3127)|[CLI](/t/test-logs/3128) ~ [UI](/t/test-logs/3129)|[CLI](/t/test-logs/3130) ~ [UI](/t/test-logs/3131)|
+|Packages|[CLI](/t/test-logs/3132) ~ [UI](/t/test-logs/3133)|[CLI](/t/test-logs/3134) ~ UI|[CLI](/t/test-logs/3136) ~ [UI](/t/test-logs/3137)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/test-logs-snap-2-7-cli/3126) ~ [UI](/t/test-logs-snap-2-7-ui/3127)|[CLI](/t/test-logs-snap-2-8-cli/3128) ~ [UI](/t/test-logs-snap-2-8-ui/3129)|[CLI](/t/test-logs-snap-2-9-cli/3130) ~ [UI](/t/test-logs-snap-2-9-ui/3131)|
-|Packages|[CLI](/t/test-logs-deb-2-7-cli/3132) ~ [UI](/t/test-logs-deb-2-7-ui/3133)|[CLI](/t/test-logs-deb-2-8-cli/3134) ~ [UI](/t/test-logs-deb-2-8-ui/3135)|CLI ~ [UI](/t/test-logs-deb-2-9-ui/3137)|
+|Snap|[CLI](/t/test-logs/3126) ~ [UI](/t/test-logs/3127)|[CLI](/t/test-logs/3128) ~ [UI](/t/test-logs/3129)|[CLI](/t/test-logs/3130) ~ [UI](/t/test-logs/3131)|
+|Packages|[CLI](/t/test-logs/3132) ~ [UI](/t/test-logs/3133)|[CLI](/t/test-logs/3134) ~ [UI](/t/test-logs/3135)|CLI ~ [UI](/t/test-logs/3137)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/test-logs-snap-2-7-cli/3126) ~ [UI](/t/test-logs-snap-2-7-ui/3127)|[CLI](/t/test-logs-snap-2-8-cli/3128) ~ [UI](/t/test-logs-snap-2-8-ui/3129)|[CLI](/t/test-logs-snap-2-9-cli/3130) ~ [UI](/t/test-logs-snap-2-9-ui/3131)|
-|Packages|[CLI](/t/test-logs-deb-2-7-cli/3132) ~ [UI](/t/test-logs-deb-2-7-ui/3133)|[CLI](/t/test-logs-deb-2-8-cli/3134) ~ [UI](/t/test-logs-deb-2-8-ui/3135)|[CLI](/t/test-logs-deb-2-9-cli/3136) ~ UI|
+|Snap|[CLI](/t/test-logs/3126) ~ [UI](/t/test-logs/3127)|[CLI](/t/test-logs/3128) ~ [UI](/t/test-logs/3129)|[CLI](/t/test-logs/3130) ~ [UI](/t/test-logs/3131)|
+|Packages|[CLI](/t/test-logs/3132) ~ [UI](/t/test-logs/3133)|[CLI](/t/test-logs/3134) ~ [UI](/t/test-logs/3135)|[CLI](/t/test-logs/3136) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/test-logs-snap-2-7-ui/3127)|[CLI](/t/test-logs-snap-2-8-cli/3128) ~ [UI](/t/test-logs-snap-2-8-ui/3129)|[CLI](/t/test-logs-snap-2-9-cli/3130) ~ [UI](/t/test-logs-snap-2-9-ui/3131)|
-|Packages|[CLI](/t/test-logs-deb-2-7-cli/3132) ~ [UI](/t/test-logs-deb-2-7-ui/3133)|[CLI](/t/test-logs-deb-2-8-cli/3134) ~ [UI](/t/test-logs-deb-2-8-ui/3135)|[CLI](/t/test-logs-deb-2-9-cli/3136) ~ [UI](/t/test-logs-deb-2-9-ui/3137)|
+|Snap|CLI ~ [UI](/t/test-logs/3127)|[CLI](/t/test-logs/3128) ~ [UI](/t/test-logs/3129)|[CLI](/t/test-logs/3130) ~ [UI](/t/test-logs/3131)|
+|Packages|[CLI](/t/test-logs/3132) ~ [UI](/t/test-logs/3133)|[CLI](/t/test-logs/3134) ~ [UI](/t/test-logs/3135)|[CLI](/t/test-logs/3136) ~ [UI](/t/test-logs/3137)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/test-logs-snap-2-7-cli/3126) ~ UI|[CLI](/t/test-logs-snap-2-8-cli/3128) ~ [UI](/t/test-logs-snap-2-8-ui/3129)|[CLI](/t/test-logs-snap-2-9-cli/3130) ~ [UI](/t/test-logs-snap-2-9-ui/3131)|
-|Packages|[CLI](/t/test-logs-deb-2-7-cli/3132) ~ [UI](/t/test-logs-deb-2-7-ui/3133)|[CLI](/t/test-logs-deb-2-8-cli/3134) ~ [UI](/t/test-logs-deb-2-8-ui/3135)|[CLI](/t/test-logs-deb-2-9-cli/3136) ~ [UI](/t/test-logs-deb-2-9-ui/3137)|
+|Snap|[CLI](/t/test-logs/3126) ~ UI|[CLI](/t/test-logs/3128) ~ [UI](/t/test-logs/3129)|[CLI](/t/test-logs/3130) ~ [UI](/t/test-logs/3131)|
+|Packages|[CLI](/t/test-logs/3132) ~ [UI](/t/test-logs/3133)|[CLI](/t/test-logs/3134) ~ [UI](/t/test-logs/3135)|[CLI](/t/test-logs/3136) ~ [UI](/t/test-logs/3137)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/test-logs-snap-2-7-cli/3126) ~ [UI](/t/test-logs-snap-2-7-ui/3127)|CLI ~ [UI](/t/test-logs-snap-2-8-ui/3129)|[CLI](/t/test-logs-snap-2-9-cli/3130) ~ [UI](/t/test-logs-snap-2-9-ui/3131)|
-|Packages|[CLI](/t/test-logs-deb-2-7-cli/3132) ~ [UI](/t/test-logs-deb-2-7-ui/3133)|[CLI](/t/test-logs-deb-2-8-cli/3134) ~ [UI](/t/test-logs-deb-2-8-ui/3135)|[CLI](/t/test-logs-deb-2-9-cli/3136) ~ [UI](/t/test-logs-deb-2-9-ui/3137)|
+|Snap|[CLI](/t/test-logs/3126) ~ [UI](/t/test-logs/3127)|CLI ~ [UI](/t/test-logs/3129)|[CLI](/t/test-logs/3130) ~ [UI](/t/test-logs/3131)|
+|Packages|[CLI](/t/test-logs/3132) ~ [UI](/t/test-logs/3133)|[CLI](/t/test-logs/3134) ~ [UI](/t/test-logs/3135)|[CLI](/t/test-logs/3136) ~ [UI](/t/test-logs/3137)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/test-logs-snap-2-7-cli/3126) ~ [UI](/t/test-logs-snap-2-7-ui/3127)|[CLI](/t/test-logs-snap-2-8-cli/3128) ~ UI|[CLI](/t/test-logs-snap-2-9-cli/3130) ~ [UI](/t/test-logs-snap-2-9-ui/3131)|
-|Packages|[CLI](/t/test-logs-deb-2-7-cli/3132) ~ [UI](/t/test-logs-deb-2-7-ui/3133)|[CLI](/t/test-logs-deb-2-8-cli/3134) ~ [UI](/t/test-logs-deb-2-8-ui/3135)|[CLI](/t/test-logs-deb-2-9-cli/3136) ~ [UI](/t/test-logs-deb-2-9-ui/3137)|
+|Snap|[CLI](/t/test-logs/3126) ~ [UI](/t/test-logs/3127)|[CLI](/t/test-logs/3128) ~ UI|[CLI](/t/test-logs/3130) ~ [UI](/t/test-logs/3131)|
+|Packages|[CLI](/t/test-logs/3132) ~ [UI](/t/test-logs/3133)|[CLI](/t/test-logs/3134) ~ [UI](/t/test-logs/3135)|[CLI](/t/test-logs/3136) ~ [UI](/t/test-logs/3137)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/test-logs-snap-2-7-cli/3126) ~ [UI](/t/test-logs-snap-2-7-ui/3127)|[CLI](/t/test-logs-snap-2-8-cli/3128) ~ [UI](/t/test-logs-snap-2-8-ui/3129)|CLI ~ [UI](/t/test-logs-snap-2-9-ui/3131)|
-|Packages|[CLI](/t/test-logs-deb-2-7-cli/3132) ~ [UI](/t/test-logs-deb-2-7-ui/3133)|[CLI](/t/test-logs-deb-2-8-cli/3134) ~ [UI](/t/test-logs-deb-2-8-ui/3135)|[CLI](/t/test-logs-deb-2-9-cli/3136) ~ [UI](/t/test-logs-deb-2-9-ui/3137)|
+|Snap|[CLI](/t/test-logs/3126) ~ [UI](/t/test-logs/3127)|[CLI](/t/test-logs/3128) ~ [UI](/t/test-logs/3129)|CLI ~ [UI](/t/test-logs/3131)|
+|Packages|[CLI](/t/test-logs/3132) ~ [UI](/t/test-logs/3133)|[CLI](/t/test-logs/3134) ~ [UI](/t/test-logs/3135)|[CLI](/t/test-logs/3136) ~ [UI](/t/test-logs/3137)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/test-logs-snap-2-7-cli/3126) ~ [UI](/t/test-logs-snap-2-7-ui/3127)|[CLI](/t/test-logs-snap-2-8-cli/3128) ~ [UI](/t/test-logs-snap-2-8-ui/3129)|[CLI](/t/test-logs-snap-2-9-cli/3130) ~ UI|
-|Packages|[CLI](/t/test-logs-deb-2-7-cli/3132) ~ [UI](/t/test-logs-deb-2-7-ui/3133)|[CLI](/t/test-logs-deb-2-8-cli/3134) ~ [UI](/t/test-logs-deb-2-8-ui/3135)|[CLI](/t/test-logs-deb-2-9-cli/3136) ~ [UI](/t/test-logs-deb-2-9-ui/3137)|
+|Snap|[CLI](/t/test-logs/3126) ~ [UI](/t/test-logs/3127)|[CLI](/t/test-logs/3128) ~ [UI](/t/test-logs/3129)|[CLI](/t/test-logs/3130) ~ UI|
+|Packages|[CLI](/t/test-logs/3132) ~ [UI](/t/test-logs/3133)|[CLI](/t/test-logs/3134) ~ [UI](/t/test-logs/3135)|[CLI](/t/test-logs/3136) ~ [UI](/t/test-logs/3137)|
  snap-2-9-ui -->
 
 For any machine which has undergone testing, the Tests log screen -- under the "Tests" tab -- shows a list of tests that have been run for that machine, along with a timestamp and result.  You can view the detailed logs for each test script from this tab.

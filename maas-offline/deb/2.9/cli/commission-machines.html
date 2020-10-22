@@ -846,7 +846,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 <h2 id="heading--commissioning-scripts">MAAS commissioning scripts</h2>
 
 <p>When a machine boots, MAAS first instructs it to run cloud-init to set up SSH keys (during commissioning only), set up NTP, and execute a script that runs other commissioning scripts.  Currently, the sequence of MAAS-provided commissioning scripts proceeds like this:</p>
-<ol>
+<ul>
 <li>
 <p>maas-support-info: MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  <strong>Runs in parallel with other scripts.</strong></p>
 </li>
@@ -880,9 +880,9 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 <li>
 <p>maas-kernel-cmdline: this script is used to update the boot devices; it double-checks that the right boot interface is selected. </p>
 </li>
-</ol>
+</ul>
 <p>Commissioning runs the same dozen or so scripts as enlistment, gathering all the same information, but with some additional caveats: </p>
-<ol>
+<ul>
 <li>
 <p>Commissioning also runs user-supplied commissioning scripts, if present.  Be aware that these scripts run as root, so they can execute any system command.</p>
 </li>
@@ -904,7 +904,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 <li>
 <p>The metadata endpoints <code>http://&lt;MAAS&gt;:5240/&lt;latest or 2012-03-01&gt;/</code> and <code>http://&lt;MAAS&gt;:5240/&lt;latest or 2012-03-01&gt;/meta-data/</code> are now available anonymously for use during enlistment.</p>
 </li>
-</ol>
+</ul>
 <!-- snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli
 * 00-maas-00-support-info: MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.
 

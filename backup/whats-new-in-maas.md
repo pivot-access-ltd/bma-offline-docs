@@ -223,9 +223,9 @@ NOTE that this is currently a Beta release, so there will be bugs, instabilities
   - [Reader Adaptive Documentation](#heading--rad)
   - [Offline documentation](#heading--offline-docs)
 - [What known issues should I be aware of?](#heading--known-issues)
-- [How do I install MAAS 2.9 Beta?](/t/maas-installation-snap-2-9-ui/3323)
-- [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 Beta snap?](/t/maas-installation-snap-2-9-ui/3323#heading--upgrade-maas-snap)
-- [How do I install MAAS 2.9 Beta from packages?](/t/maas-installation-deb-2-9-ui/3329)
+- [How do I install MAAS 2.9 Beta?](/t/maas-installation/3323)
+- [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 Beta snap?](/t/maas-installation/3323#heading--upgrade-maas-snap)
+- [How do I install MAAS 2.9 Beta from packages?](/t/maas-installation/3329)
 - [What bugs are fixed so far in this release?](#heading--bug-fixes)
 
 <h2 id="heading--release-notes">New features in 2.9 Beta5</h2>
@@ -260,8 +260,6 @@ MAAS 2.9 Beta4 was released on 25 September 2020 and brings the following update
 <h3 id="heading--maas-power">New maas.power CLI command</h3>
 
 Available in all MAAS 2.9 Beta releases is the new `maas.power` CLI command. This command interfaces directly with the supported MAAS power drivers. This command can be used to control the power on a machine before it has been added to MAAS, for all maas supported power drivers.  You can get power status, turn machines on or off, and cycle power.  The `maas.power --help` shows usage details, including syntax for naming each power type (consistent with other MAAS CLI commands).
-
-There is also a [quick tutorial](https://discourse.maas.io/t/show-and-tell-maas-power-a-cli-tool-to-control-power-drivers/1657) available, if you would like to see the feature in action.
 
 <h3 id="heading--rad">IPMI BMC detection improvements (RAD)</h3>
 
@@ -384,9 +382,9 @@ Following on from MAAS 2.7, we are happy to announce that MAAS 2.8 is now availa
 
 - [What are the new features & fixes for 2.8?](#heading--2-8-release-notes)
 - [What known issues should I be aware of?](#heading--2-8-known-issues)
-- [How do I install MAAS 2.8 as a snap?](/t/maas-installation-snap-2-8-ui/3312)
-- [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](/t/maas-installation-snap-2-8-ui/3312#heading--upgrade-maas-snap)
-- [How do I install MAAS 2.8 from packages?](/t/maas-installation-deb-2-8-ui/3327)
+- [How do I install MAAS 2.8 as a snap?](/t/maas-installation/3312)
+- [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](/t/maas-installation/3312#heading--upgrade-maas-snap)
+- [How do I install MAAS 2.8 from packages?](/t/maas-installation/3327)
 - [What bugs were fixed in this release?](#heading--bug-fixes)
 
 <h2 id="heading--2-8-release-notes">LXD-based VM host support (Beta)</h2>

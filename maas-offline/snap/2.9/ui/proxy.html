@@ -450,14 +450,14 @@
 <!-- snap-2-7-cli
  snap-2-7-cli -->
 
+<!-- snap-2-7-ui
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
  snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
 
 <!-- snap-2-9-ui
  snap-2-9-ui -->
@@ -488,50 +488,41 @@ deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 <p>MAAS manages its proxy. So although the active configuration, located in file <code>/var/snap/maas/current/proxy</code>, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.</p>
 <h2 id="heading--configure-proxy">Configure proxy</h2>
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-Enabling and disabling proxying, in general, is done via a boolean option ('true' or 'false'). The following command will disable proxying completely:
-
+<p>Enabling and disabling proxying, in general, is done via a boolean option (&lsquo;true&rsquo; or &lsquo;false&rsquo;). The following command will disable proxying completely:</p>
 <pre><code class="bash">maas $PROFILE maas set-config name=enable_http_proxy value=false
 </code></pre>
 
-
-To set an external proxy, ensure proxying is enabled (see above) and then define it:
-
-
+<p>To set an external proxy, ensure proxying is enabled (see above) and then define it:</p>
 <pre><code class="bash">maas $PROFILE maas set-config name=http_proxy value=$EXTERNAL_PROXY
 </code></pre>
 
-
-For example,
-
-
+<p>For example,</p>
 <pre><code class="bash">maas $PROFILE maas set-config name=enable_http_proxy value=true
 maas $PROFILE maas set-config name=http_proxy value=http://squid.example.com:3128/
 </code></pre>
 
-
-Enabling and disabling proxying per subnet is done via a boolean option ('true' or 'false'). Here is how you can disable proxying on a per-subnet basis:
-
-
+<p>Enabling and disabling proxying per subnet is done via a boolean option (&lsquo;true&rsquo; or &lsquo;false&rsquo;). Here is how you can disable proxying on a per-subnet basis:</p>
 <pre><code class="bash">maas $PROFILE subnet update $SUBNET_CIDR allow_proxy=false
 </code></pre>
 
-
-For example,
-
-
+<p>For example,</p>
 <pre><code class="bash">maas $PROFILE subnet update 192.168.0.0/22 allow_proxy=false
 </code></pre>
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+In the web UI, visit the 'Settings' page and select the 'Network services' tab. The 'Proxy' section is at the top. You can apply your changes by pressing the 'Save' button.
 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+<a href="images/55800a33-installconfig-network-proxy__2.4_configure-proxy.png" target = "_blank"><img src="images/55800a33-installconfig-network-proxy__2.4_configure-proxy.png"></a></a>
 
-<p>In the web UI, visit the &lsquo;Settings&rsquo; page and select the &lsquo;Network services&rsquo; tab. The &lsquo;Proxy&rsquo; section is at the top. You can apply your changes by pressing the &lsquo;Save&rsquo; button.</p>
-<p><a href="images/55800a33-installconfig-network-proxy__2.4_configure-proxy.png" target = "_blank"><img src="images/55800a33-installconfig-network-proxy__2.4_configure-proxy.png"></a></a></p>
-<p>To enable the internal proxy, ensure that the checkbox adjacent to &lsquo;MAAS Built-in&rsquo; is selected. This internal proxy is the default configuration.</p>
-<p>To enable an external proxy, activate the &lsquo;External&rsquo; checkbox and use the new field that is displayed to define the proxy&rsquo;s URL (and port if necessary).</p>
-<p>An upstream cache peer can be defined by enabling the &lsquo;Peer&rsquo; checkbox and entering the external proxy URL into the field. With this enabled, machines will be configured to use the MAAS built-in proxy to download cached APT packages.</p>
-<p>To prevent MAAS machines from using a proxy, enable the &lsquo;Don&rsquo;t use a proxy&rsquo; checkbox.</p>
+To enable the internal proxy, ensure that the checkbox adjacent to 'MAAS Built-in' is selected. This internal proxy is the default configuration.
+
+To enable an external proxy, activate the 'External' checkbox and use the new field that is displayed to define the proxy's URL (and port if necessary).
+
+An upstream cache peer can be defined by enabling the 'Peer' checkbox and entering the external proxy URL into the field. With this enabled, machines will be configured to use the MAAS built-in proxy to download cached APT packages.
+
+To prevent MAAS machines from using a proxy, enable the 'Don't use a proxy' checkbox.
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+
 <p><strong>NOTE:</strong> </p>
     </div>
   </body>

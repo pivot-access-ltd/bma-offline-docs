@@ -261,8 +261,6 @@ MAAS 2.9 Beta4 was released on 25 September 2020 and brings the following update
 
 Available in all MAAS 2.9 Beta releases is the new `maas.power` CLI command. This command interfaces directly with the supported MAAS power drivers. This command can be used to control the power on a machine before it has been added to MAAS, for all maas supported power drivers.  You can get power status, turn machines on or off, and cycle power.  The `maas.power --help` shows usage details, including syntax for naming each power type (consistent with other MAAS CLI commands).
 
-There is also a [quick tutorial](https://discourse.maas.io/t/show-and-tell-maas-power-a-cli-tool-to-control-power-drivers/1657) available, if you would like to see the feature in action.
-
 <h3 id="heading--rad">IPMI BMC detection improvements (RAD)</h3>
 
 This release improves the IPMI BMC detection capability:

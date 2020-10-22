@@ -435,6 +435,9 @@ deb-2-7 -->
 <!-- snap-2-7
 snap-2-7 -->
 
+<!-- snap-2-7-ui
+snap-2-7-ui -->
+
 <!-- deb-2-7-ui
 deb-2-7-ui -->
 
@@ -450,9 +453,6 @@ deb-2-8-cli -->
 <!-- deb-2-8-ui
 deb-2-8-ui -->
 
-<!-- snap-2-9-cli
-snap-2-9-cli -->
-
 <!-- snap-2-9-ui
 snap-2-9-ui -->
 
@@ -462,184 +462,222 @@ deb-2-9-cli -->
 <!-- deb-2-9-ui
 deb-2-9-ui -->
 
+<!-- snap-2-7 snap-2-7-ui deb-2-7 deb-2-7-ui
 <h2>MAAS 2.7 release notes</h2>
 
 <h3>MAAS 2.7.3 released</h3>
 
-<p>On 24 August 2020, MAAS 2.7.3 was released, replacing the <code>2.7/stable</code> channel in snap and the <a href="https://launchpad.net/~maas/+archive/ubuntu/2.7">ppa:maas/2.7^</a>.  You can update your 2.7 release to 2.7.3 by with:</p>
-<pre><code>snap refresh --channel=2.7/stable
-</code></pre>
-<p>or by using the aforementioned PPA.  The focus for this release has been <a href="https://launchpad.net/maas/+milestone/2.7.3rc1">bugfixing^</a> &ndash; there were no changes to MAAS since RC1.</p>
-<p>Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.</p>
+On 24 August 2020, MAAS 2.7.3 was released, replacing the `2.7/stable` channel in snap and the [ppa:maas/2.7^](https://launchpad.net/~maas/+archive/ubuntu/2.7).  You can update your 2.7 release to 2.7.3 by with:
+
+    snap refresh --channel=2.7/stable
+
+or by using the aforementioned PPA.  The focus for this release has been [bugfixing^](https://launchpad.net/maas/+milestone/2.7.3rc1) -- there were no changes to MAAS since RC1.
+
+Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
+
 <h3>MAAS 2.7.2 released</h3>
 
-<p>On 30 July 2020, MAAS 2.7.2 was released, replacing the <code>2.7/stable</code> channel in snap and the <a href="https://launchpad.net/~maas/+archive/ubuntu/2.7">ppa:maas/2.7^</a>.  You can update your 2.7 release to 2.7.2 by with:</p>
-<pre><code>snap refresh --channel=2.7/stable
-</code></pre>
-<p>or by using the aforementioned PPA.  The focus for this release has been <a href="https://launchpad.net/maas/+milestone/2.7.2rc1">bugfixing^</a> &ndash; there were no changes to MAAS since RC1.</p>
-<p>Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.</p>
+On 30 July 2020, MAAS 2.7.2 was released, replacing the `2.7/stable` channel in snap and the [ppa:maas/2.7^](https://launchpad.net/~maas/+archive/ubuntu/2.7).  You can update your 2.7 release to 2.7.2 by with:
+
+    snap refresh --channel=2.7/stable
+
+or by using the aforementioned PPA.  The focus for this release has been [bugfixing^](https://launchpad.net/maas/+milestone/2.7.2rc1) -- there were no changes to MAAS since RC1.
+
+Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
+
 <h3>Upgrading from MAAS 2.6 snap</h3>
 
-<p>If you are using the MAAS 2.6 snap, which had to be installed with <code>--devmode</code>, you can update to 2.7 with the following parameters:</p>
-<pre><code>snap refresh maas --devmode --channel=2.7
-</code></pre>
-<p>Be aware that you will still be in <code>--devmode</code>, which means the snap won&rsquo;t automatically upgrade.  You&rsquo;ll have to check manually for updates (via <code>snap refresh</code>).  Once you’re upgraded to MAAS 2.7 using this method, future snap updates won’t require the devmode parameter. So, for example, when a later version of 2.7 (or even 2.8) is released, you will be able to <code>snap refresh</code> to those channels and get out of devmode.  Once refreshed out of devmode in this way, you&rsquo;ll get updates for point releases automatically.</p>
-<p>An alternative to avoid devmode would be to do a clean install of MAAS 2.7, that is, removing 2.6 with <code>snap remove maas</code> and reinstalling MAAS 2.7 with:</p>
-<pre><code>snap install --channel=2.7 maas
-</code></pre>
-<p>Note that you can check the devmode status of your snap with:</p>
-<pre><code>snap list maas
-</code></pre>
-<hr>
+If you are using the MAAS 2.6 snap, which had to be installed with `--devmode`, you can update to 2.7 with the following parameters:
+
+    snap refresh maas --devmode --channel=2.7
+
+Be aware that you will still be in `--devmode`, which means the snap won't automatically upgrade.  You'll have to check manually for updates (via `snap refresh`).  Once you’re upgraded to MAAS 2.7 using this method, future snap updates won’t require the devmode parameter. So, for example, when a later version of 2.7 (or even 2.8) is released, you will be able to `snap refresh` to those channels and get out of devmode.  Once refreshed out of devmode in this way, you'll get updates for point releases automatically.
+
+An alternative to avoid devmode would be to do a clean install of MAAS 2.7, that is, removing 2.6 with `snap remove maas` and reinstalling MAAS 2.7 with:
+
+    snap install --channel=2.7 maas
+
+Note that you can check the devmode status of your snap with:
+
+    snap list maas
+
+
+---
+
 <h2>MAAS 2.7 released</h2>
 
-<p>Following on from MAAS 2.6.2, we are happy to announce that MAAS 2.7 is now available. This release features some critical bug fixes, along with some exciting new features:</p>
-<h3>CentOS 8 image support</h3>
-<p>Users can now deploy CentOS 8 images in MAAS. The Images page in the MAAS UI will now offer a choice to select and download CentOS 8. Note that users of previous versions may see CentOS 8 as an available option, but cannot download or deploy it.</p>
-<h3>Network testing features</h3>
-<p>MAAS 2.7 brings a slate of new network testing and link detection features, as detailed below.</p>
-<h4>Network link disconnect detection</h4>
-<p>MAAS 2.7 can check whether links are connected or disconnected. Previously, when commissioning, you couldn’t detect unplugged cables. Now you can. You will have to take a couple of steps for existing MAAS deployments: First, you will have to upgrade to 2.7, then run commissioning again to see if a link is disconnected. But you no longer have to puzzle over what’s broken when this happens.</p>
-<p>MAAS will report disconnected network cables, and users will receive a warning when trying to configure a disconnected interface. Administrators will be able to change cable connection status through both API and UI after manually rectifying the situation.</p>
-<h4>Slow network link detection</h4>
-<p>MAAS 2.7 makes sure you’re getting the most out of your link speed. As servers and hardware get faster — 10G, 40G, even 100G NICS — the chances increase that you might plug your 10G NIC into a 1G switch, for example. Previously, with MAAS, you’d be stuck with the speed of the slowest link, but there wasn’t a way to verify your link speed without recommissioning. Depending on your physical hardware, that might still be an issue, but the MAAS UI can now warn you if your interface is connected to a link slower than what the interface supports. And all information shown in the UI is available via the API, as well. You can still replace a slow switch without recommissioning.</p>
-<p>MAAS will automatically detect link and interface speed during commissioning and report them via the API/UI. Administrators will be able to change or update the link and interface speeds via the API/UI after manual changes to the connection. MAAS 2.7 will also report link speed, allowing users to filter and list machines by their link speed in the UI. Users can also employ this information to allocate machines by their link speed in the API.</p>
-<h4>Network validation scripts and testing</h4>
-<p>MAAS 2.7 allows you to configure network connectivity testing in a number of ways. If you’ve used MAAS, you know that if it can’t connect to the rack controller, deployment can’t complete. Now MAAS can check connectivity to the rack controller and warn you if there’s no link, long before you have to try and debug it. For example, if you can’t connect to your gateway controller, traffic can’t leave your network. MAAS can now check this link and recognise that there’s no connectivity, which alleviates a lot of annoying (and sometimes hard-to-detect) network issues.</p>
-<p>Users can now test their network configuration to check for:</p>
-<ul>
-<li>Interfaces which have a broken network configuration</li>
-<li>Bonds that are not fully operational</li>
-<li>Broken gateways, rack controllers, and Internet links</li>
-</ul>
-<p>In addition, Internet connectivity testing has been greatly expanded. Previously, MAAS gave a yes/no link check during network testing. Now you can give a list of URLs or IP addresses to check. In the ephemeral environment, standard DHCP is still applied, but when network testing runs, we can apply your specific configuration for the duration of the test. While all URLs / IPs are tested with all interfaces, we do test each of your interfaces individually, including breaking apart bonded NICS and testing each side of your redundant interfaces. You can also run different tests on each pass, e.g., a different set of URLs, although each run would be a different testing cycle. For testing individual interfaces, you can use the API.</p>
-<p>Of course, the main network feature available in 2.7 is improved — and customisable — network testing. You can now create your own commissioning scripts and tests related to networking. You can create your own network tests (e.g., a network throughput test) and run them during the network testing portion of the MAAS workflow. There are no particular restrictions on these scripts, so you can test a wide variety of possible conditions and situations.</p>
-<p>Administrators can upload network tests and test scripts, as well as create tests which accept an interface parameter, or scripts which apply custom network configurations. Users can then specify (unique) parameters using the API, override machines which fail network testing (allowing their use), and suppress individual failed network tests. All users benefit from enhanced reporting, as they are now able to see the overall status of all interfaces via the API, the UI Machine list, and the UI Interfaces tab; review the health status from all interface tests; and view the interface test results by interface name and MAC.</p>
-<h4>Live IP address detection to prevent address conflicts</h4>
-<p>In some cases, MAAS connects with subnet which are not empty. Normally, the user has to tell MAAS about IP addresses which are already assigned on that subnet, and if that step is skipped, MAAS may assign and in-use IP address to one of the machines under its control, leading to an IP conflict.</p>
-<p>MAAS 2.7 alleviates this problem by detecting IPs in use on a subnet, so that it can avoid assigning that IP to a MAAS-managed machine. The system is not perfect; for example, if NIC on a subnet-connected machine is in a quiescent state &ndash; or turned off &ndash; MAAS may not detect it before duplicating the IP. Note that at least one rack controller must have access to the previously-assigned machine in order for this feature to work. MAAS 2.7 will also recognise when the subnet ARP cache is full and re-check the oldest IPs added to the cache to search for free IP addresses.</p>
-<h3>Introductory NUMA / SR-IOV support</h3>
-<p>NUMA (Non-Uniform Memory Access) is a useful way of achieving high-efficiency computing, by pairing a CPU core with a very fast connection to RAM and PCI buses. Typically the CPU socket and the closest banks of DIMM constitute a NUMA node. Obviously, if you’re deploying a MAAS machine under NUMA to get maximum performance, you would like for that machine to be confined to a single NUMA node. MAAS 2.7 introduces this capability.</p>
-<p>MAAS will display the NUMA node index and details. Users can also see the count of available NUMA nodes, along with CPU cores, memory, NICS, and node spans for bonds and block devices (although node-spanning may not produce suitable performance). From a reporting standpoint, users can filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID.</p>
-<p>Similarly, the SR-IOV (Single Root I/O Virtualisation) allows a PCIe device (e.g, a NIC) to appear to be multiple separate devices. A network adaptor can be subdivided into multiple adaptors by adding a Virtual Function (VF). MAAS 2.7 supports the use of multiple VF adaptors to intelligently use SR-IOV edge clouds, by allowing users to see that a NIC supports SR-IOV, along with the supported VF counts.</p>
-<p>The goal of this feature is to help users choose the right machine to deploy an edge cloud.</p>
-<h3>Settings and user preferences redesign</h3>
-<p>As part of our efforts to make the UI faster and more responsive, we have completely redesigned the Settings and User preferences within the MAAS UI.</p>
-<h3>Strictly-confined Snap support</h3>
-<p>With 2.7, MAAS is fully confined within the Snap container. No need for installation qualifiers (such as “&ndash;devmode”) to permit use of external resources, i.e., outside the Snap container. This means that we will begin to transition to recommending the Snap install as the default (and primary) MAAS install method. This also means that MAAS now gains the benefit of confined snap security features.</p>
-<h3>Update to hardware information gathering methods</h3>
-<p>MAAS has switched hardware information gathering from lshw/lsblk to lxd output during commissioning, because it more easily provides the information needed to complete resource discovery. Note that this information may not be particularly reliable for your use, so you may need to create your own commissioning scripts if you need something more detailed or specific.</p>
-<h3>Bug fixes</h3>
-<p>A number of bug fixes (see the <a href="https://bugs.launchpad.net/maas/+bugs?field.milestone%3Alist=87757&amp;field.milestone%3Alist=89662&amp;field.milestone%3Alist=89714&amp;field.milestone%3Alist=89840&amp;field.milestone%3Alist=89954&amp;field.milestone%3Alist=89682&amp;field.status%3Alist=FIXRELEASED">list in Launchpad^</a>).</p>
+Following on from MAAS 2.6.2, we are happy to announce that MAAS 2.7 is now available. This release features some critical bug fixes, along with some exciting new features:
+
+### CentOS 8 image support
+
+Users can now deploy CentOS 8 images in MAAS. The Images page in the MAAS UI will now offer a choice to select and download CentOS 8. Note that users of previous versions may see CentOS 8 as an available option, but cannot download or deploy it.
+
+### Network testing features
+
+MAAS 2.7 brings a slate of new network testing and link detection features, as detailed below.
+
+#### Network link disconnect detection
+
+MAAS 2.7 can check whether links are connected or disconnected. Previously, when commissioning, you couldn’t detect unplugged cables. Now you can. You will have to take a couple of steps for existing MAAS deployments: First, you will have to upgrade to 2.7, then run commissioning again to see if a link is disconnected. But you no longer have to puzzle over what’s broken when this happens.
+
+MAAS will report disconnected network cables, and users will receive a warning when trying to configure a disconnected interface. Administrators will be able to change cable connection status through both API and UI after manually rectifying the situation.
+
+#### Slow network link detection
+
+MAAS 2.7 makes sure you’re getting the most out of your link speed. As servers and hardware get faster — 10G, 40G, even 100G NICS — the chances increase that you might plug your 10G NIC into a 1G switch, for example. Previously, with MAAS, you’d be stuck with the speed of the slowest link, but there wasn’t a way to verify your link speed without recommissioning. Depending on your physical hardware, that might still be an issue, but the MAAS UI can now warn you if your interface is connected to a link slower than what the interface supports. And all information shown in the UI is available via the API, as well. You can still replace a slow switch without recommissioning.
+
+MAAS will automatically detect link and interface speed during commissioning and report them via the API/UI. Administrators will be able to change or update the link and interface speeds via the API/UI after manual changes to the connection. MAAS 2.7 will also report link speed, allowing users to filter and list machines by their link speed in the UI. Users can also employ this information to allocate machines by their link speed in the API.
+
+#### Network validation scripts and testing
+
+MAAS 2.7 allows you to configure network connectivity testing in a number of ways. If you’ve used MAAS, you know that if it can’t connect to the rack controller, deployment can’t complete. Now MAAS can check connectivity to the rack controller and warn you if there’s no link, long before you have to try and debug it. For example, if you can’t connect to your gateway controller, traffic can’t leave your network. MAAS can now check this link and recognise that there’s no connectivity, which alleviates a lot of annoying (and sometimes hard-to-detect) network issues.
+
+Users can now test their network configuration to check for:
+
+* Interfaces which have a broken network configuration
+* Bonds that are not fully operational
+* Broken gateways, rack controllers, and Internet links
+
+In addition, Internet connectivity testing has been greatly expanded. Previously, MAAS gave a yes/no link check during network testing. Now you can give a list of URLs or IP addresses to check. In the ephemeral environment, standard DHCP is still applied, but when network testing runs, we can apply your specific configuration for the duration of the test. While all URLs / IPs are tested with all interfaces, we do test each of your interfaces individually, including breaking apart bonded NICS and testing each side of your redundant interfaces. You can also run different tests on each pass, e.g., a different set of URLs, although each run would be a different testing cycle. For testing individual interfaces, you can use the API.
+
+Of course, the main network feature available in 2.7 is improved — and customisable — network testing. You can now create your own commissioning scripts and tests related to networking. You can create your own network tests (e.g., a network throughput test) and run them during the network testing portion of the MAAS workflow. There are no particular restrictions on these scripts, so you can test a wide variety of possible conditions and situations.
+
+Administrators can upload network tests and test scripts, as well as create tests which accept an interface parameter, or scripts which apply custom network configurations. Users can then specify (unique) parameters using the API, override machines which fail network testing (allowing their use), and suppress individual failed network tests. All users benefit from enhanced reporting, as they are now able to see the overall status of all interfaces via the API, the UI Machine list, and the UI Interfaces tab; review the health status from all interface tests; and view the interface test results by interface name and MAC.
+
+#### Live IP address detection to prevent address conflicts
+
+In some cases, MAAS connects with subnet which are not empty. Normally, the user has to tell MAAS about IP addresses which are already assigned on that subnet, and if that step is skipped, MAAS may assign and in-use IP address to one of the machines under its control, leading to an IP conflict.
+
+MAAS 2.7 alleviates this problem by detecting IPs in use on a subnet, so that it can avoid assigning that IP to a MAAS-managed machine. The system is not perfect; for example, if NIC on a subnet-connected machine is in a quiescent state -- or turned off -- MAAS may not detect it before duplicating the IP. Note that at least one rack controller must have access to the previously-assigned machine in order for this feature to work. MAAS 2.7 will also recognise when the subnet ARP cache is full and re-check the oldest IPs added to the cache to search for free IP addresses.
+
+### Introductory NUMA / SR-IOV support
+
+NUMA (Non-Uniform Memory Access) is a useful way of achieving high-efficiency computing, by pairing a CPU core with a very fast connection to RAM and PCI buses. Typically the CPU socket and the closest banks of DIMM constitute a NUMA node. Obviously, if you’re deploying a MAAS machine under NUMA to get maximum performance, you would like for that machine to be confined to a single NUMA node. MAAS 2.7 introduces this capability.
+
+MAAS will display the NUMA node index and details. Users can also see the count of available NUMA nodes, along with CPU cores, memory, NICS, and node spans for bonds and block devices (although node-spanning may not produce suitable performance). From a reporting standpoint, users can filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID.
+
+Similarly, the SR-IOV (Single Root I/O Virtualisation) allows a PCIe device (e.g, a NIC) to appear to be multiple separate devices. A network adaptor can be subdivided into multiple adaptors by adding a Virtual Function (VF). MAAS 2.7 supports the use of multiple VF adaptors to intelligently use SR-IOV edge clouds, by allowing users to see that a NIC supports SR-IOV, along with the supported VF counts.
+
+The goal of this feature is to help users choose the right machine to deploy an edge cloud.
+
+### Settings and user preferences redesign
+
+As part of our efforts to make the UI faster and more responsive, we have completely redesigned the Settings and User preferences within the MAAS UI.
+
+### Strictly-confined Snap support
+
+With 2.7, MAAS is fully confined within the Snap container. No need for installation qualifiers (such as “--devmode”) to permit use of external resources, i.e., outside the Snap container. This means that we will begin to transition to recommending the Snap install as the default (and primary) MAAS install method. This also means that MAAS now gains the benefit of confined snap security features.
+
+### Update to hardware information gathering methods
+
+MAAS has switched hardware information gathering from lshw/lsblk to lxd output during commissioning, because it more easily provides the information needed to complete resource discovery. Note that this information may not be particularly reliable for your use, so you may need to create your own commissioning scripts if you need something more detailed or specific.
+
+### Bug fixes
+
+A number of bug fixes (see the [list in Launchpad^](https://bugs.launchpad.net/maas/+bugs?field.milestone%3Alist=87757&field.milestone%3Alist=89662&field.milestone%3Alist=89714&field.milestone%3Alist=89840&field.milestone%3Alist=89954&field.milestone%3Alist=89682&field.status%3Alist=FIXRELEASED)).
+snap-2-7 snap-2-7-ui deb-2-7 deb-2-7-ui -->
+
 <!-- CONTRIBUTORS: ADD YOUR MAAS 2.9 RELEASE NOTES TO THIS SECTION vv -->
 
-<!-- snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui
 <h2>MAAS 2.9 BETA release notes</h2>
 
-Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 Beta<big>**5**</big> is now available. This release offers some exciting new features.
-
-<strong>NOTE:</strong> 
-NOTE that this is currently a Beta release, so there will be bugs, instabilities, and missing features. Please remember to [file a bug^](https://bugs.launchpad.net/maas/+filebug) if you find one, and please interact with the developers on [discourse^](https://discourse.maas.io/).
-
-
+<p>Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 Beta<big><strong>5</strong></big> is now available. This release offers some exciting new features.</p>
+<p><strong>NOTE:</strong> 
+NOTE that this is currently a Beta release, so there will be bugs, instabilities, and missing features. Please remember to <a href="https://bugs.launchpad.net/maas/+filebug">file a bug^</a> if you find one, and please interact with the developers on <a href="https://discourse.maas.io/">discourse^</a>.</p>
 <h4>Quick questions you may have:</h4>
 
-- [What are the new features & fixes for 2.9?](#heading--release-notes)
-  - [**BMC/IPMI default parameter additions**](#heading--bmc-param-additions)
-  - [**New global IPMI configuration options**](#heading--new-config-options)
-  - [**Addition of IPMI config options to UI**](#heading--global-config-settings)
-  - [**New MAAS CLI power command**](#heading--maas-power)
-  - [Commissioning speed improvements](#heading--commissioning-speed)
-  - [BMC improvements](#heading--bmc-improve)
-  - [IPMI power driver upgrades](#heading--ipmi-driver)
-  - [Enlistment script improvements](#heading--enlistment-scripts)
-  - [Commissioning script improvements](#heading--commissioning-scripts)
-  - [Commissioning script reordering](#heading--commissioning-reorder)
-  - [Reader Adaptive Documentation](#heading--rad)
-  - [Offline documentation](#heading--offline-docs)
-- [What known issues should I be aware of?](#heading--known-issues)
-- [How do I install MAAS 2.9 Beta?](maas-installation-snap-2-9-ui.html)
-- [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 Beta snap?](maas-installation-snap-2-9-ui.html#heading--upgrade-maas-snap)
-- [How do I install MAAS 2.9 Beta from packages?](maas-installation-deb-2-9-ui.html)
-- [What bugs are fixed so far in this release?](#heading--bug-fixes)
-
+<ul>
+<li><a href="#heading--release-notes">What are the new features &amp; fixes for 2.9?</a></li>
+<li><a href="#heading--bmc-param-additions"><strong>BMC/IPMI default parameter additions</strong></a></li>
+<li><a href="#heading--new-config-options"><strong>New global IPMI configuration options</strong></a></li>
+<li><a href="#heading--global-config-settings"><strong>Addition of IPMI config options to UI</strong></a></li>
+<li><a href="#heading--maas-power"><strong>New MAAS CLI power command</strong></a></li>
+<li><a href="#heading--commissioning-speed">Commissioning speed improvements</a></li>
+<li><a href="#heading--bmc-improve">BMC improvements</a></li>
+<li><a href="#heading--ipmi-driver">IPMI power driver upgrades</a></li>
+<li><a href="#heading--enlistment-scripts">Enlistment script improvements</a></li>
+<li><a href="#heading--commissioning-scripts">Commissioning script improvements</a></li>
+<li><a href="#heading--commissioning-reorder">Commissioning script reordering</a></li>
+<li><a href="#heading--rad">Reader Adaptive Documentation</a></li>
+<li><a href="#heading--offline-docs">Offline documentation</a></li>
+<li><a href="#heading--known-issues">What known issues should I be aware of?</a></li>
+<li><a href="maas-installation.html">How do I install MAAS 2.9 Beta?</a></li>
+<li><a href="maas-installation.html#heading--upgrade-maas-snap">How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 Beta snap?</a></li>
+<li><a href="maas-installation.html">How do I install MAAS 2.9 Beta from packages?</a></li>
+<li><a href="#heading--bug-fixes">What bugs are fixed so far in this release?</a></li>
+</ul>
 <h2 id="heading--release-notes">New features in 2.9 Beta5</h2>
 
-MAAS 2.9 Beta5 is currently scheduled for release on 02 October 2020, bringing the following updates to the BETA product.
-
+<p>MAAS 2.9 Beta5 is currently scheduled for release on 02 October 2020, bringing the following updates to the BETA product.</p>
 <h3 id="heading--bmc-param-additions">30-maas-01-bmc-config parameter additions</h3>
 
-The following additional parameters have been added for IPMI BMC configuration.  These parameters will pull from the global defaults, eliminating the need to set the corresponding parameter in each instance.
-
- * maas_auto_ipmi_user - The username for the MAAS created IPMI user. Default comes from the global configuration setting.
- * maas_auto_ipmi_user_password - The password for the MAAS created IPMI user, by default a random password is generated.
- * maas_auto_ipmi_k_g_bmc_key - he IPMI K_g preshared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting.
- * maas_auto_ipmi_user_privilege_level - The IPMI user privilege level to use when adding the MAAS IPMI user. Possible options are USER, OPERATOR, or ADMIN. Default comes from the global configuration setting.
-
+<p>The following additional parameters have been added for IPMI BMC configuration.  These parameters will pull from the global defaults, eliminating the need to set the corresponding parameter in each instance.</p>
+<ul>
+<li>maas_auto_ipmi_user - The username for the MAAS created IPMI user. Default comes from the global configuration setting.</li>
+<li>maas_auto_ipmi_user_password - The password for the MAAS created IPMI user, by default a random password is generated.</li>
+<li>maas_auto_ipmi_k_g_bmc_key - he IPMI K_g preshared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting.</li>
+<li>maas_auto_ipmi_user_privilege_level - The IPMI user privilege level to use when adding the MAAS IPMI user. Possible options are USER, OPERATOR, or ADMIN. Default comes from the global configuration setting.</li>
+</ul>
 <h3 id="heading--new-config-options">New global IPMI configuration options</h3>
 
-The following new global IPMI configuration options have been added:
-
- * maas_auto_ipmi_k_g_bmc_key - sets a global default IPMI BMC key.
-
- * maas_auto_ipmi_user_privilege_level - sets a global default IPMI BMC user privilege level.
-
+<p>The following new global IPMI configuration options have been added:</p>
+<ul>
+<li>
+<p>maas_auto_ipmi_k_g_bmc_key - sets a global default IPMI BMC key.</p>
+</li>
+<li>
+<p>maas_auto_ipmi_user_privilege_level - sets a global default IPMI BMC user privilege level.</p>
+</li>
+</ul>
 <h3 id="heading--global-config-settings">Addition of IPMI config options to UI</h3>
 
-You may now set the global configuration options `maas_auto_ipmi_user`, `maas_auto_ipmi_k_g_bmc_key`, and `maas_auto_ipmi_user_privilege_level` on the "Settings" page in the UI under "Commissioning."
-
+<p>You may now set the global configuration options <code>maas_auto_ipmi_user</code>, <code>maas_auto_ipmi_k_g_bmc_key</code>, and <code>maas_auto_ipmi_user_privilege_level</code> on the &ldquo;Settings&rdquo; page in the UI under &ldquo;Commissioning.&rdquo;</p>
 <h2 id="heading--release-notes">New features in 2.9 Beta4</h2>
 
-MAAS 2.9 Beta4 was released on 25 September 2020 and brings the following updates to the BETA product.
-
+<p>MAAS 2.9 Beta4 was released on 25 September 2020 and brings the following updates to the BETA product.</p>
 <h3 id="heading--maas-power">New maas.power CLI command</h3>
 
-Available in all MAAS 2.9 Beta releases is the new `maas.power` CLI command. This command interfaces directly with the supported MAAS power drivers. This command can be used to control the power on a machine before it has been added to MAAS, for all maas supported power drivers.  You can get power status, turn machines on or off, and cycle power.  The `maas.power --help` shows usage details, including syntax for naming each power type (consistent with other MAAS CLI commands).
-
-There is also a [quick tutorial](show-and-tell-maas-power-a-cli-tool-to-control-power-drivers.html) available, if you would like to see the feature in action.
-
+<p>Available in all MAAS 2.9 Beta releases is the new <code>maas.power</code> CLI command. This command interfaces directly with the supported MAAS power drivers. This command can be used to control the power on a machine before it has been added to MAAS, for all maas supported power drivers.  You can get power status, turn machines on or off, and cycle power.  The <code>maas.power --help</code> shows usage details, including syntax for naming each power type (consistent with other MAAS CLI commands).</p>
 <h3 id="heading--rad">IPMI BMC detection improvements (RAD)</h3>
 
-This release improves the IPMI BMC detection capability:
-
-* The IPMI cipher suite ID will now be automatically detected. MAAS tries to find the most secure cipher suite available. Preference order is 17, 3, 8, 12. If detection fails MAAS will fall back to using freeipmi-tool default, 3, which is what previous versions of MAAS use.
-
-* The IPMI K_g BMC key will now be automatically detected if previously set. 
-
+<p>This release improves the IPMI BMC detection capability:</p>
+<ul>
+<li>
+<p>The IPMI cipher suite ID will now be automatically detected. MAAS tries to find the most secure cipher suite available. Preference order is 17, 3, 8, 12. If detection fails MAAS will fall back to using freeipmi-tool default, 3, which is what previous versions of MAAS use.</p>
+</li>
+<li>
+<p>The IPMI K_g BMC key will now be automatically detected if previously set. </p>
+</li>
+</ul>
 <h2 id="heading--release-notes">New features in 2.9 Beta3</h2>
 
-MAAS 2.9 Beta3 was released on 18 September 2020 and brings the following updates to the BETA product.
-
+<p>MAAS 2.9 Beta3 was released on 18 September 2020 and brings the following updates to the BETA product.</p>
 <h3 id="heading--rad">Reader Adaptive Documentation (RAD)</h3>
 
-This release features Reader Adaptive Documentation, which allows you to adapt individual pages to your install method (Snap vs. Deb), version (2.7/2.8/2.9), and preferred interface (CLI/UI).  This documentation is rolling out in phases prior to the release, and is currently [active and usable^](https://maas.io/docs).  Note that these docs are still under active development, hence should be considered Beta until the final release, although everything for the current active version (2.8) should be correct and reliable.
-
+<p>This release features Reader Adaptive Documentation, which allows you to adapt individual pages to your install method (Snap vs. Deb), version (2.7/2.8/2.9), and preferred interface (CLI/UI).  This documentation is rolling out in phases prior to the release, and is currently <a href="https://maas.io/docs">active and usable^</a>.  Note that these docs are still under active development, hence should be considered Beta until the final release, although everything for the current active version (2.8) should be correct and reliable.</p>
 <h3 id="heading--offline-docs">Offline documentation</h3>
 
-This release will include offline documentation for those users whose MAAS installations reside behind firewalls, unable to access the online documentation.  They are currently in a very rough Beta state, but should start showing up in the releases shortly.  Note that, going forward, all links that are not part of the offline documentation set are marked with a caret, like this, [Google^](https://www.google.com), when they refer to a site that can't be reached without Internet access.
-
+<p>This release will include offline documentation for those users whose MAAS installations reside behind firewalls, unable to access the online documentation.  They are currently in a very rough Beta state, but should start showing up in the releases shortly.  Note that, going forward, all links that are not part of the offline documentation set are marked with a caret, like this, <a href="https://www.google.com">Google^</a>, when they refer to a site that can&rsquo;t be reached without Internet access.</p>
 <h2 id="heading--bmc-improve">BMC improvements</h2>
 
-A number of substantial improvements to BMC usage have been released, including the following:
-
-*  IPMI, HP Moonshot, and Facebook Wedge BMC detection and configuration scripts have been migrated to the commissioning script `30-maas-01-bmc-config `.
-* BMC detection and configuration are now logged to commissioning results.
-* If BMC configuration is skipped a ScriptResult will log this result, and indicate which user chose to skip the configuration step.
-
+<p>A number of substantial improvements to BMC usage have been released, including the following:</p>
+<ul>
+<li>IPMI, HP Moonshot, and Facebook Wedge BMC detection and configuration scripts have been migrated to the commissioning script <code>30-maas-01-bmc-config</code>.</li>
+<li>BMC detection and configuration are now logged to commissioning results.</li>
+<li>If BMC configuration is skipped a ScriptResult will log this result, and indicate which user chose to skip the configuration step.</li>
+</ul>
 <h3 id="heading--ipmi-driver">IPMI power driver upgrades</h3>
 
-Three new configuration options have been added to the IPMI power driver, including:
-
-* K_g - The BMC Key of the IPMI device. Used to encrypt all traffic to and from the device during communication.
-* Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
-* Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
-
-See the [2.9 UI](https://maas.io/docs/snap/2.9/ui/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docs/snap/2.9/cli/power-management#heading--ipmi) power management pages for details.
-
+<p>Three new configuration options have been added to the IPMI power driver, including:</p>
+<ul>
+<li>K_g - The BMC Key of the IPMI device. Used to encrypt all traffic to and from the device during communication.</li>
+<li>Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.</li>
+<li>Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.</li>
+</ul>
+<p>See the <a href="https://maas.io/docs/snap/2.9/ui/power-management#heading--ipmi">2.9 UI</a> or <a href="https://maas.io/docs/snap/2.9/cli/power-management#heading--ipmi">2.9 CLI</a> power management pages for details.</p>
 <h2 id="heading--release-notes">New features in 2.9 Beta2</h2>
 
-MAAS 2.9 Beta2 was released on 11 September 2020 and brings the following updates to the BETA product.
-
+<p>MAAS 2.9 Beta2 was released on 11 September 2020 and brings the following updates to the BETA product.</p>
 <h3 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
 
 Script flow and capabilities have been improved in the following ways:
@@ -696,7 +734,6 @@ The following improvements have been made to speed up the commissioning process,
 * **RAD LHS menu:** There is a known issue with the Reader Adaptive Documentation left-hand-side menu (navigation), in that the menu links cannot currently be adapted to the RAD parameters.  This means that selecting a different page in the LHS menu will take you the the RAD for the current recommended version (in this case, Snap/2.8/UI).  Every page that is different in RAD, though, should present you with a top menu, so that you can choose the RAD parameters matching your own preferences. 
 
 * ** Beta4 snap builds:** The Beta4 snap builds may not work on ARM64 or PPC64 architectures, due to a build issue which is currently being resolved.
-snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui -->
 
 <!-- snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui
 <h2>MAAS 2.8 release notes</h2>
@@ -719,9 +756,9 @@ Following on from MAAS 2.7, we are happy to announce that MAAS 2.8 is now availa
 
 - [What are the new features & fixes for 2.8?](#heading--2-8-release-notes)
 - [What known issues should I be aware of?](#heading--2-8-known-issues)
-- [How do I install MAAS 2.8 as a snap?](maas-installation-snap-2-8-ui.html)
-- [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](maas-installation-snap-2-8-ui.html#heading--upgrade-maas-snap)
-- [How do I install MAAS 2.8 from packages?](maas-installation-deb-2-8-ui.html)
+- [How do I install MAAS 2.8 as a snap?](maas-installation.html)
+- [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](maas-installation.html#heading--upgrade-maas-snap)
+- [How do I install MAAS 2.8 from packages?](maas-installation.html)
 - [What bugs were fixed in this release?](#heading--bug-fixes)
 
 <h2 id="heading--2-8-release-notes">LXD-based VM host support (Beta)</h2>

@@ -450,14 +450,14 @@
 <!-- snap-2-7-cli
  snap-2-7-cli -->
 
+<!-- snap-2-7-ui
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
  snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
 
 <!-- snap-2-9-ui
  snap-2-9-ui -->
@@ -527,14 +527,15 @@
 * [How can I erase a disk?](disk-erasure.html)
  snap-2-7-cli -->
 
-<ul>
-<li><a href="#heading--uefi">How does UEFI booting work?</a></li>
-<li><a href="#heading--layouts">What kind of storage layouts are available?</a></li>
-<li><a href="#heading--setting-global-layouts">How do I set global storage layouts?</a></li>
-<li><a href="#heading--per-machine-layouts">How do I set per-machine storage layouts?</a></li>
-<li><a href="#heading--final-storage-modifications">What storage modifications can I make at the filesystem level?</a></li>
-<li><a href="disk-erasure.html">How can I erase a disk?</a></li>
-</ul>
+<!-- snap-2-7-ui
+* [How does UEFI booting work?](#heading--uefi)
+* [What kind of storage layouts are available?](#heading--layouts)
+* [How do I set global storage layouts?](#heading--setting-global-layouts)
+* [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+* [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+* [How can I erase a disk?](disk-erasure.html)
+ snap-2-7-ui -->
+
 <!-- snap-2-8-cli
 * [How does UEFI booting work?](#heading--uefi)
 * [What kind of storage layouts are available?](#heading--layouts)
@@ -553,15 +554,14 @@
 * [How can I erase a disk?](disk-erasure.html)
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-* [How does UEFI booting work?](#heading--uefi)
-* [What kind of storage layouts are available?](#heading--layouts)
-* [How do I set global storage layouts?](#heading--setting-global-layouts)
-* [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-* [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-* [How can I erase a disk?](disk-erasure.html)
- snap-2-9-cli -->
-
+<ul>
+<li><a href="#heading--uefi">How does UEFI booting work?</a></li>
+<li><a href="#heading--layouts">What kind of storage layouts are available?</a></li>
+<li><a href="#heading--setting-global-layouts">How do I set global storage layouts?</a></li>
+<li><a href="#heading--per-machine-layouts">How do I set per-machine storage layouts?</a></li>
+<li><a href="#heading--final-storage-modifications">What storage modifications can I make at the filesystem level?</a></li>
+<li><a href="disk-erasure.html">How can I erase a disk?</a></li>
+</ul>
 <!-- snap-2-9-ui
 * [How does UEFI booting work?](#heading--uefi)
 * [What kind of storage layouts are available?](#heading--layouts)
@@ -840,50 +840,40 @@ Machines with the blank layout applied are not deployable; you must first config
 <h2 id="heading--setting-global-layouts">Setting layouts</h2>
 
 <p>Layouts can be set globally and on a per-machine basis.</p>
-<p>All machines will have a default layout applied when commissioned. An administrator can configure the default layout on the &lsquo;Settings&rsquo; page, under the &lsquo;Storage&rsquo; tab.</p>
-<p><a href="images/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img src="images/80de3bc701552cd00bec707830accf380c214b17.png"></a></a></p>
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-All machines will have a default layout applied when commissioned. To set the default storage layout for all machines:
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+All machines will have a default layout applied when commissioned. An administrator can configure the default layout on the 'Settings' page, under the 'Storage' tab.
 
+<a href="images/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img src="images/80de3bc701552cd00bec707830accf380c214b17.png"></a></a>
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+
+<p>All machines will have a default layout applied when commissioned. To set the default storage layout for all machines:</p>
 <pre><code>maas $PROFILE maas set-config name=default_storage_layout value=$LAYOUT_TYPE
 </code></pre>
 
-
-For example, to set the default layout to Flat:
-
-
+<p>For example, to set the default layout to Flat:</p>
 <pre><code>maas $PROFILE maas set-config name=default_storage_layout value=flat
 </code></pre>
 
-
-Important: The new default will only apply to newly-commissioned machines.
-
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
-
+<p>Important: The new default will only apply to newly-commissioned machines.</p>
 <p><strong>NOTE:</strong> 
 The new default will only apply to newly-commissioned machines.</p>
 <h3 id="heading--per-machine-layouts">Machine layout</h3>
 
-<p>An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of &lsquo;Ready&rsquo;. This is only possible via the CLI: to see how, click the &ldquo;CLI&rdquo; option for your version and delivery method above.</p>
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-An administrator can set a storage layout for a machine with a status of ‘Ready’ like this:
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of 'Ready'. This is only possible via the CLI: to see how, click the "CLI" option for your version and delivery method above.
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
+<p>An administrator can set a storage layout for a machine with a status of ‘Ready’ like this:</p>
 <pre><code>maas $PROFILE machine set-storage-layout $SYSTEM_ID storage_layout=$LAYOUT_TYPE [$OPTIONS]
 </code></pre>
 
-
-For example, to set an LVM layout where the logical volume has a size of 5 GB:
-
-
+<p>For example, to set an LVM layout where the logical volume has a size of 5 GB:</p>
 <pre><code>maas $PROFILE machine set-storage-layout $SYSTEM_ID storage_layout=lvm lv_size=5368709120
 
 </code></pre>
 
-You must specify all storage sizes in bytes.
-
-This action will remove the configuration that may exist on any block device.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
-
+<p>You must specify all storage sizes in bytes.</p>
+<p>This action will remove the configuration that may exist on any block device.</p>
 <p><strong>NOTE:</strong> 
 Only an administrator can modify storage at the block device level (providing the machine has a status of &lsquo;Ready&rsquo;).</p>
 <h2 id="heading--final-storage-modifications">Final storage modifications</h2>
