@@ -1,85 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/subnet-management-snap-2-7-cli/3114) ~ [UI](/t/subnet-management-snap-2-7-ui/3115)|[CLI](/t/subnet-management-snap-2-8-cli/3116) ~ [UI](/t/subnet-management-snap-2-8-ui/3117)|[CLI](/t/subnet-management-snap-2-9-cli/3118) ~ [UI](/t/subnet-management-snap-2-9-ui/3119)|
-|Packages|CLI ~ [UI](/t/subnet-management-deb-2-7-ui/3121)|[CLI](/t/subnet-management-deb-2-8-cli/3122) ~ [UI](/t/subnet-management-deb-2-8-ui/3123)|[CLI](/t/subnet-management-deb-2-9-cli/3124) ~ [UI](/t/subnet-management-deb-2-9-ui/3125)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/subnet-management-snap-2-7-cli/3114) ~ [UI](/t/subnet-management-snap-2-7-ui/3115)|[CLI](/t/subnet-management-snap-2-8-cli/3116) ~ [UI](/t/subnet-management-snap-2-8-ui/3117)|[CLI](/t/subnet-management-snap-2-9-cli/3118) ~ [UI](/t/subnet-management-snap-2-9-ui/3119)|
-|Packages|[CLI](/t/subnet-management-deb-2-7-cli/3120) ~ UI|[CLI](/t/subnet-management-deb-2-8-cli/3122) ~ [UI](/t/subnet-management-deb-2-8-ui/3123)|[CLI](/t/subnet-management-deb-2-9-cli/3124) ~ [UI](/t/subnet-management-deb-2-9-ui/3125)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/subnet-management-snap-2-7-cli/3114) ~ [UI](/t/subnet-management-snap-2-7-ui/3115)|[CLI](/t/subnet-management-snap-2-8-cli/3116) ~ [UI](/t/subnet-management-snap-2-8-ui/3117)|[CLI](/t/subnet-management-snap-2-9-cli/3118) ~ [UI](/t/subnet-management-snap-2-9-ui/3119)|
-|Packages|[CLI](/t/subnet-management-deb-2-7-cli/3120) ~ [UI](/t/subnet-management-deb-2-7-ui/3121)|CLI ~ [UI](/t/subnet-management-deb-2-8-ui/3123)|[CLI](/t/subnet-management-deb-2-9-cli/3124) ~ [UI](/t/subnet-management-deb-2-9-ui/3125)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/subnet-management-snap-2-7-cli/3114) ~ [UI](/t/subnet-management-snap-2-7-ui/3115)|[CLI](/t/subnet-management-snap-2-8-cli/3116) ~ [UI](/t/subnet-management-snap-2-8-ui/3117)|[CLI](/t/subnet-management-snap-2-9-cli/3118) ~ [UI](/t/subnet-management-snap-2-9-ui/3119)|
-|Packages|[CLI](/t/subnet-management-deb-2-7-cli/3120) ~ [UI](/t/subnet-management-deb-2-7-ui/3121)|[CLI](/t/subnet-management-deb-2-8-cli/3122) ~ UI|[CLI](/t/subnet-management-deb-2-9-cli/3124) ~ [UI](/t/subnet-management-deb-2-9-ui/3125)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/subnet-management-snap-2-7-cli/3114) ~ [UI](/t/subnet-management-snap-2-7-ui/3115)|[CLI](/t/subnet-management-snap-2-8-cli/3116) ~ [UI](/t/subnet-management-snap-2-8-ui/3117)|[CLI](/t/subnet-management-snap-2-9-cli/3118) ~ [UI](/t/subnet-management-snap-2-9-ui/3119)|
-|Packages|[CLI](/t/subnet-management-deb-2-7-cli/3120) ~ [UI](/t/subnet-management-deb-2-7-ui/3121)|[CLI](/t/subnet-management-deb-2-8-cli/3122) ~ [UI](/t/subnet-management-deb-2-8-ui/3123)|CLI ~ [UI](/t/subnet-management-deb-2-9-ui/3125)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/subnet-management-snap-2-7-cli/3114) ~ [UI](/t/subnet-management-snap-2-7-ui/3115)|[CLI](/t/subnet-management-snap-2-8-cli/3116) ~ [UI](/t/subnet-management-snap-2-8-ui/3117)|[CLI](/t/subnet-management-snap-2-9-cli/3118) ~ [UI](/t/subnet-management-snap-2-9-ui/3119)|
-|Packages|[CLI](/t/subnet-management-deb-2-7-cli/3120) ~ [UI](/t/subnet-management-deb-2-7-ui/3121)|[CLI](/t/subnet-management-deb-2-8-cli/3122) ~ [UI](/t/subnet-management-deb-2-8-ui/3123)|[CLI](/t/subnet-management-deb-2-9-cli/3124) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/subnet-management-snap-2-7-ui/3115)|[CLI](/t/subnet-management-snap-2-8-cli/3116) ~ [UI](/t/subnet-management-snap-2-8-ui/3117)|[CLI](/t/subnet-management-snap-2-9-cli/3118) ~ [UI](/t/subnet-management-snap-2-9-ui/3119)|
-|Packages|[CLI](/t/subnet-management-deb-2-7-cli/3120) ~ [UI](/t/subnet-management-deb-2-7-ui/3121)|[CLI](/t/subnet-management-deb-2-8-cli/3122) ~ [UI](/t/subnet-management-deb-2-8-ui/3123)|[CLI](/t/subnet-management-deb-2-9-cli/3124) ~ [UI](/t/subnet-management-deb-2-9-ui/3125)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/subnet-management-snap-2-7-cli/3114) ~ UI|[CLI](/t/subnet-management-snap-2-8-cli/3116) ~ [UI](/t/subnet-management-snap-2-8-ui/3117)|[CLI](/t/subnet-management-snap-2-9-cli/3118) ~ [UI](/t/subnet-management-snap-2-9-ui/3119)|
-|Packages|[CLI](/t/subnet-management-deb-2-7-cli/3120) ~ [UI](/t/subnet-management-deb-2-7-ui/3121)|[CLI](/t/subnet-management-deb-2-8-cli/3122) ~ [UI](/t/subnet-management-deb-2-8-ui/3123)|[CLI](/t/subnet-management-deb-2-9-cli/3124) ~ [UI](/t/subnet-management-deb-2-9-ui/3125)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/subnet-management-snap-2-7-cli/3114) ~ [UI](/t/subnet-management-snap-2-7-ui/3115)|CLI ~ [UI](/t/subnet-management-snap-2-8-ui/3117)|[CLI](/t/subnet-management-snap-2-9-cli/3118) ~ [UI](/t/subnet-management-snap-2-9-ui/3119)|
-|Packages|[CLI](/t/subnet-management-deb-2-7-cli/3120) ~ [UI](/t/subnet-management-deb-2-7-ui/3121)|[CLI](/t/subnet-management-deb-2-8-cli/3122) ~ [UI](/t/subnet-management-deb-2-8-ui/3123)|[CLI](/t/subnet-management-deb-2-9-cli/3124) ~ [UI](/t/subnet-management-deb-2-9-ui/3125)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/subnet-management-snap-2-7-cli/3114) ~ [UI](/t/subnet-management-snap-2-7-ui/3115)|[CLI](/t/subnet-management-snap-2-8-cli/3116) ~ UI|[CLI](/t/subnet-management-snap-2-9-cli/3118) ~ [UI](/t/subnet-management-snap-2-9-ui/3119)|
-|Packages|[CLI](/t/subnet-management-deb-2-7-cli/3120) ~ [UI](/t/subnet-management-deb-2-7-ui/3121)|[CLI](/t/subnet-management-deb-2-8-cli/3122) ~ [UI](/t/subnet-management-deb-2-8-ui/3123)|[CLI](/t/subnet-management-deb-2-9-cli/3124) ~ [UI](/t/subnet-management-deb-2-9-ui/3125)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/subnet-management-snap-2-7-cli/3114) ~ [UI](/t/subnet-management-snap-2-7-ui/3115)|[CLI](/t/subnet-management-snap-2-8-cli/3116) ~ [UI](/t/subnet-management-snap-2-8-ui/3117)|CLI ~ [UI](/t/subnet-management-snap-2-9-ui/3119)|
-|Packages|[CLI](/t/subnet-management-deb-2-7-cli/3120) ~ [UI](/t/subnet-management-deb-2-7-ui/3121)|[CLI](/t/subnet-management-deb-2-8-cli/3122) ~ [UI](/t/subnet-management-deb-2-8-ui/3123)|[CLI](/t/subnet-management-deb-2-9-cli/3124) ~ [UI](/t/subnet-management-deb-2-9-ui/3125)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/subnet-management-snap-2-7-cli/3114) ~ [UI](/t/subnet-management-snap-2-7-ui/3115)|[CLI](/t/subnet-management-snap-2-8-cli/3116) ~ [UI](/t/subnet-management-snap-2-8-ui/3117)|[CLI](/t/subnet-management-snap-2-9-cli/3118) ~ UI|
-|Packages|[CLI](/t/subnet-management-deb-2-7-cli/3120) ~ [UI](/t/subnet-management-deb-2-7-ui/3121)|[CLI](/t/subnet-management-deb-2-8-cli/3122) ~ [UI](/t/subnet-management-deb-2-8-ui/3123)|[CLI](/t/subnet-management-deb-2-9-cli/3124) ~ [UI](/t/subnet-management-deb-2-9-ui/3125)|
  snap-2-9-ui -->
 
 The topic of subnet management pertains to whether or not MAAS is in full control of a subnet. When a subnet is managed, MAAS handles all aspects of IP address allocation. This process includes DHCP leases and assigned static addresses. Typically MAAS would have one managed subnet, but any additional subnets can be unmanaged. This arrangement allows for more control over which subnet gets used for DHCP and which ones do not. Additionally, as detailed below, an unmanaged subnet treats reserved IP ranges differently, and in a way that some administrators find more intuitive.

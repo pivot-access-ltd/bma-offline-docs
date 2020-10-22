@@ -22,11 +22,11 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <strong>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
 	  UI-only
-      </strong>
+      </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/the-cli-cookbook.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	<a href="../cli/the-cli-cookbook.html">
 	  CLI-only
 	</a>
     </div>
@@ -566,11 +566,10 @@
 <h2 id="heading--create-kvm">Creating a KVM with confirmation</h2>
 
 <p>Note that most of these can be entered directly at the command line using copy/paste &ndash; even the <code>#!/bin/bash</code> won&rsquo;t hurt, as it will be ignored by the shell.</p>
-<p>[note]
+<p><strong>NOTE:</strong> 
 Remember to:
 1. login to the MAAS CLI before using these commands.
-2. substitute your administrator profile for &ldquo;admin&rdquo; if you&rsquo;ve assigned a different admin username.
-[/note]</p>
+2. substitute your administrator profile for &ldquo;admin&rdquo; if you&rsquo;ve assigned a different admin username.</p>
 <p><details><summary>Also, be aware of how multiple lines are parsed by the shell:</summary></p>
 <ul>
 <li>

@@ -22,11 +22,11 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <strong>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
 	  UI-only
-      </strong>
+      </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/cli-composable-hardware.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	<a href="../cli/cli-composable-hardware.html">
 	  CLI-only
 	</a>
     </div>
@@ -433,7 +433,7 @@
 <h4>Quick questions you may have:</h4>
 <ul>
 <li><a href="maas-cli.html">How do I get started with the MAAS CLI?</a></li>
-<li><a href="introduction-to-vm-hosting.html">What should I know about VM hosts?</a></li>
+<li><a href="vm-hosting.html">What should I know about VM hosts?</a></li>
 <li><a href="cli-composable-hardware.html#heading--add-a-vm-host">How can I add a VM host?</a></li>
 <li><a href="cli-composable-hardware.html#heading--find-vm-host-ids">How can I find VM host IDs?</a></li>
 <li><a href="cli-composable-hardware.html#heading--list-resources-of-all-vm-hosts">How can I list resources of all VM hosts?</a></li>
@@ -455,9 +455,8 @@
     [tags=$TAG1,$TAG2,...]
 </code></pre>
 
-<p>[note]
-Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS are optional for all VM hosts.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS are optional for all VM hosts.</p>
 <p>See the <a href="/docs/api#power-types">API reference</a> for a listing of available power types.</p>
 <p>For example, to create an RSD VM host:</p>
 <pre><code class="bash">maas $PROFILE vm-hosts create type=rsd power_address=10.3.0.1:8443 \
@@ -484,7 +483,7 @@ Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS 
 <pre><code class="bash">maas $PROFILE vm-hosts read | jq '.[] | select (.name==&quot;MyVMHost&quot;) | .name, .id'
 </code></pre>
 
-<p>[note] <code>jq</code> is a command-line JSON processor. More details at https://stedolan.github.io/jq/[/note]</p>
+<p><strong>NOTE:</strong> </p>
 <p>Example output:</p>
 <pre><code class="no-highlight">&quot;MyVMHost&quot;
 1
@@ -598,9 +597,8 @@ Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS 
 <pre><code class="bash">maas admin partition delete $VM_HOST_ID $DISK1_ID $PARTITION_ID
 </code></pre>
 
-<p>[note]
-To find <code>$DISK1_ID</code> and <code>$PARTITION_ID</code>, use <code>maas admin machine read $VM_HOST_ID</code>.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+To find <code>$DISK1_ID</code> and <code>$PARTITION_ID</code>, use <code>maas admin machine read $VM_HOST_ID</code>.</p>
 <p>Now, create a boot partition (~512MB):</p>
 <pre><code class="bash">maas admin partitions create $VM_HOST_ID $DISK1_ID size=512000000 bootable=True
 </code></pre>
@@ -613,18 +611,16 @@ To find <code>$DISK1_ID</code> and <code>$PARTITION_ID</code>, use <code>maas ad
 <pre><code class="bash">maas admin partitions create $VM_HOST_ID $DISK2_ID
 </code></pre>
 
-<p>[note]
-To find <code>$DISK2_ID</code>, use <code>maas admin machine read $VM_HOST_ID</code>.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+To find <code>$DISK2_ID</code>, use <code>maas admin machine read $VM_HOST_ID</code>.</p>
 <p>Now, format the partitions. This requires three commands:</p>
 <pre><code class="bash">maas admin partition format $VM_HOST_ID $DISK1_ID $BOOT_PARTITION_ID fstype=ext2
 maas admin partition format $VM_HOST_ID $DISK1_ID $ROOT_PARTITION_ID fstype=ext4
 maas admin partition format $VM_HOST_ID $DISK2_ID $HOME_PARTITION_ID fstype=ext4
 </code></pre>
 
-<p>[note]
-To find the partition IDs, use <code>maas admin partitions read $VM_HOST_ID $DISK1_ID</code> and <code>maas admin partitions read $VM_HOST_ID $DISK2_ID</code>
-[/note]</p>
+<p><strong>NOTE:</strong> 
+To find the partition IDs, use <code>maas admin partitions read $VM_HOST_ID $DISK1_ID</code> and <code>maas admin partitions read $VM_HOST_ID $DISK2_ID</code></p>
 <p>Before you can deploy the machine with our partition layout, you need to mount the new partitions. Here, we&rsquo;ll do that in three commands:</p>
 <pre><code class="bash">maas admin partition mount $SYSTEM_ID $DISK1_ID $BOOT_PARTITION_ID &quot;mount_point=/boot&quot;
 maas admin partition mount $SYSTEM_ID $DISK1_ID $ROOT_PARTITION_ID &quot;mount_point=/&quot;
@@ -662,9 +658,8 @@ maas admin partition mount $SYSTEM_ID $DISK2_ID $HOME_PARTITION_ID &quot;mount_p
 </code></pre>
 
 <p>Once commissioned and acquired, the new machine will be ready to deploy.</p>
-<p>[note]
-The labels (i.e. <code>mylabel1</code>, <code>mylabel2</code>) in this case can be used to associate device IDs in the information MAAS dumps about the newly created VM. Try piping the output to: <code>jq '.constraints_by_type'</code>.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+The labels (i.e. <code>mylabel1</code>, <code>mylabel2</code>) in this case can be used to associate device IDs in the information MAAS dumps about the newly created VM. Try piping the output to: <code>jq '.constraints_by_type'</code>.</p>
 <h2 id="heading--list-machine-parameters">List machine parameters</h2>
 
 <p>MAAS VM parameters, including their resources, are listed just like any other machine:</p>
@@ -776,9 +771,8 @@ Machine-readable output follows:
 <pre><code class="bash">maas $PROFILE vm-host delete $VM_HOST_ID
 </code></pre>
 
-<p>[note type=&rdquo;caution&rdquo;]
-Deleting a VM host will automatically delete all machines belonging to that VM host.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+Deleting a VM host will automatically delete all machines belonging to that VM host.</p>
 <!-- LINKS -->
     </div>
   </body>

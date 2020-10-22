@@ -1,85 +1,37 @@
 <!-- deb-2-7
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 deb-2-7 -->
 
 <!-- snap-2-7
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3335) ~ [UI](/t/whats-new-in-maas/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 snap-2-7 -->
 
 <!-- snap-2-7-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 snap-2-7-ui -->
 
 <!-- deb-2-7-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 deb-2-7-ui -->
 
 <!-- snap-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335) | CLI ~ UI |[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336) |
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335) |CLI ~ UI |[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336) |
 snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 snap-2-8-ui -->
 
 <!-- deb-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~  UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 deb-2-8-ui -->
 
 <!-- snap-2-9-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~  UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
 snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
 snap-2-9-ui -->
 
 <!-- deb-2-9-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
 deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
 deb-2-9-ui -->
 
 <!-- snap-2-7 snap-2-7-ui deb-2-7 deb-2-7-ui
@@ -203,9 +155,9 @@ snap-2-7 snap-2-7-ui deb-2-7 deb-2-7-ui -->
 
 Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 Beta<big>**5**</big> is now available. This release offers some exciting new features.
 
-[note]
+<strong>NOTE:</strong> 
 NOTE that this is currently a Beta release, so there will be bugs, instabilities, and missing features. Please remember to [file a bug^](https://bugs.launchpad.net/maas/+filebug) if you find one, and please interact with the developers on [discourse^](https://discourse.maas.io/).
-[/note]
+
 
 <h4>Quick questions you may have:</h4>
 

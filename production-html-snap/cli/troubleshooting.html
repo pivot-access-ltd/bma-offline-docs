@@ -22,13 +22,13 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../ui/troubleshooting.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	<a href="../ui/troubleshooting.html">
 	  &nbsp;UI-only&nbsp;
 	</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <strong>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
 	  CLI-only
-      </strong>
+      </span>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
@@ -519,9 +519,8 @@ Stderr: 'gpg: no valid OpenPGP data found.\n'
 sudo tar -C xenial -xpSf xenial-server-cloudimg-amd64-root.tar.gz --numeric-owner --xattrs &quot;--xattrs-include=*&quot;
 </code></pre>
 
-<p>[note]
-<code>sudo</code> is required when extracting the image filesystem and when making changes to the files extracted from the image filesystem.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+<code>sudo</code> is required when extracting the image filesystem and when making changes to the files extracted from the image filesystem.</p>
 <h3 id="heading--generate-password-hash">Generate password hash</h3>
 
 <p>Now generate a hashed password. Use the following Python 3 command, replacing <strong>ubuntu</strong> with the password you wish to use:</p>

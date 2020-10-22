@@ -22,13 +22,13 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../ui/cli-image-management.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	<a href="../ui/cli-image-management.html">
 	  &nbsp;UI-only&nbsp;
 	</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <strong>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
 	  CLI-only
-      </strong>
+      </span>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
@@ -448,9 +448,8 @@
 <pre><code class="bash">maas $PROFILE boot-sources read
 </code></pre>
 
-<p>[note]
-Although multiple boot sources may be listed, MAAS can only practically work with a single boot source.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+Although multiple boot sources may be listed, MAAS can only practically work with a single boot source.</p>
 <h2 id="heading--select-images">Select images</h2>
 
 <p>Use the <code>boot-source-selections</code> command to select images from a boot source. After selecting new images, you will need to <a href="#heading--import-newly-selected-images">import</a> them.</p>
@@ -518,9 +517,8 @@ Although multiple boot sources may be listed, MAAS can only practically work wit
 <p>KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg</p>
 <h2 id="heading--add-a-boot-source">Add a boot source</h2>
 
-<p>[note]
-To avoid unnecessary complexity, you should probably delete any existing boot sources before adding a new one.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+To avoid unnecessary complexity, you should probably delete any existing boot sources before adding a new one.</p>
 <p>Presented below are two use cases for adding a boot source:</p>
 <ol>
 <li>Use a local image mirror (official images)</li>

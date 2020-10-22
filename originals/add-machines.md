@@ -1,85 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines-snap-2-7-cli/2274) ~ [UI](/t/add-machines-snap-2-7-ui/2275)|[CLI](/t/add-machines-snap-2-8-cli/2276) ~ [UI](/t/add-machines-snap-2-8-ui/2277)|[CLI](/t/add-machines-snap-2-9-cli/2278) ~ [UI](/t/add-machines-snap-2-9-ui/2279)|
-|Packages|CLI ~ [UI](/t/add-machines-deb-2-7-ui/2281)|[CLI](/t/add-machines-deb-2-8-cli/2282) ~ [UI](/t/add-machines-deb-2-8-ui/2283)|[CLI](/t/add-machines-deb-2-9-cli/2284) ~ [UI](/t/add-machines-deb-2-9-ui/2285)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines-snap-2-7-cli/2274) ~ [UI](/t/add-machines-snap-2-7-ui/2275)|[CLI](/t/add-machines-snap-2-8-cli/2276) ~ [UI](/t/add-machines-snap-2-8-ui/2277)|[CLI](/t/add-machines-snap-2-9-cli/2278) ~ [UI](/t/add-machines-snap-2-9-ui/2279)|
-|Packages|[CLI](/t/add-machines-deb-2-7-cli/2280) ~ UI|[CLI](/t/add-machines-deb-2-8-cli/2282) ~ [UI](/t/add-machines-deb-2-8-ui/2283)|[CLI](/t/add-machines-deb-2-9-cli/2284) ~ [UI](/t/add-machines-deb-2-9-ui/2285)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines-snap-2-7-cli/2274) ~ [UI](/t/add-machines-snap-2-7-ui/2275)|[CLI](/t/add-machines-snap-2-8-cli/2276) ~ [UI](/t/add-machines-snap-2-8-ui/2277)|[CLI](/t/add-machines-snap-2-9-cli/2278) ~ [UI](/t/add-machines-snap-2-9-ui/2279)|
-|Packages|[CLI](/t/add-machines-deb-2-7-cli/2280) ~ [UI](/t/add-machines-deb-2-7-ui/2281)|CLI ~ [UI](/t/add-machines-deb-2-8-ui/2283)|[CLI](/t/add-machines-deb-2-9-cli/2284) ~ [UI](/t/add-machines-deb-2-9-ui/2285)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines-snap-2-7-cli/2274) ~ [UI](/t/add-machines-snap-2-7-ui/2275)|[CLI](/t/add-machines-snap-2-8-cli/2276) ~ [UI](/t/add-machines-snap-2-8-ui/2277)|[CLI](/t/add-machines-snap-2-9-cli/2278) ~ [UI](/t/add-machines-snap-2-9-ui/2279)|
-|Packages|[CLI](/t/add-machines-deb-2-7-cli/2280) ~ [UI](/t/add-machines-deb-2-7-ui/2281)|[CLI](/t/add-machines-deb-2-8-cli/2282) ~ UI|[CLI](/t/add-machines-deb-2-9-cli/2284) ~ [UI](/t/add-machines-deb-2-9-ui/2285)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines-snap-2-7-cli/2274) ~ [UI](/t/add-machines-snap-2-7-ui/2275)|[CLI](/t/add-machines-snap-2-8-cli/2276) ~ [UI](/t/add-machines-snap-2-8-ui/2277)|[CLI](/t/add-machines-snap-2-9-cli/2278) ~ [UI](/t/add-machines-snap-2-9-ui/2279)|
-|Packages|[CLI](/t/add-machines-deb-2-7-cli/2280) ~ [UI](/t/add-machines-deb-2-7-ui/2281)|[CLI](/t/add-machines-deb-2-8-cli/2282) ~ [UI](/t/add-machines-deb-2-8-ui/2283)|CLI ~ [UI](/t/add-machines-deb-2-9-ui/2285)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines-snap-2-7-cli/2274) ~ [UI](/t/add-machines-snap-2-7-ui/2275)|[CLI](/t/add-machines-snap-2-8-cli/2276) ~ [UI](/t/add-machines-snap-2-8-ui/2277)|[CLI](/t/add-machines-snap-2-9-cli/2278) ~ [UI](/t/add-machines-snap-2-9-ui/2279)|
-|Packages|[CLI](/t/add-machines-deb-2-7-cli/2280) ~ [UI](/t/add-machines-deb-2-7-ui/2281)|[CLI](/t/add-machines-deb-2-8-cli/2282) ~ [UI](/t/add-machines-deb-2-8-ui/2283)|[CLI](/t/add-machines-deb-2-9-cli/2284) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/add-machines-snap-2-7-ui/2275)|[CLI](/t/add-machines-snap-2-8-cli/2276) ~ [UI](/t/add-machines-snap-2-8-ui/2277)|[CLI](/t/add-machines-snap-2-9-cli/2278) ~ [UI](/t/add-machines-snap-2-9-ui/2279)|
-|Packages|[CLI](/t/add-machines-deb-2-7-cli/2280) ~ [UI](/t/add-machines-deb-2-7-ui/2281)|[CLI](/t/add-machines-deb-2-8-cli/2282) ~ [UI](/t/add-machines-deb-2-8-ui/2283)|[CLI](/t/add-machines-deb-2-9-cli/2284) ~ [UI](/t/add-machines-deb-2-9-ui/2285)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines-snap-2-7-cli/2274) ~ UI|[CLI](/t/add-machines-snap-2-8-cli/2276) ~ [UI](/t/add-machines-snap-2-8-ui/2277)|[CLI](/t/add-machines-snap-2-9-cli/2278) ~ [UI](/t/add-machines-snap-2-9-ui/2279)|
-|Packages|[CLI](/t/add-machines-deb-2-7-cli/2280) ~ [UI](/t/add-machines-deb-2-7-ui/2281)|[CLI](/t/add-machines-deb-2-8-cli/2282) ~ [UI](/t/add-machines-deb-2-8-ui/2283)|[CLI](/t/add-machines-deb-2-9-cli/2284) ~ [UI](/t/add-machines-deb-2-9-ui/2285)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines-snap-2-7-cli/2274) ~ [UI](/t/add-machines-snap-2-7-ui/2275)|CLI ~ [UI](/t/add-machines-snap-2-8-ui/2277)|[CLI](/t/add-machines-snap-2-9-cli/2278) ~ [UI](/t/add-machines-snap-2-9-ui/2279)|
-|Packages|[CLI](/t/add-machines-deb-2-7-cli/2280) ~ [UI](/t/add-machines-deb-2-7-ui/2281)|[CLI](/t/add-machines-deb-2-8-cli/2282) ~ [UI](/t/add-machines-deb-2-8-ui/2283)|[CLI](/t/add-machines-deb-2-9-cli/2284) ~ [UI](/t/add-machines-deb-2-9-ui/2285)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines-snap-2-7-cli/2274) ~ [UI](/t/add-machines-snap-2-7-ui/2275)|[CLI](/t/add-machines-snap-2-8-cli/2276) ~ UI|[CLI](/t/add-machines-snap-2-9-cli/2278) ~ [UI](/t/add-machines-snap-2-9-ui/2279)|
-|Packages|[CLI](/t/add-machines-deb-2-7-cli/2280) ~ [UI](/t/add-machines-deb-2-7-ui/2281)|[CLI](/t/add-machines-deb-2-8-cli/2282) ~ [UI](/t/add-machines-deb-2-8-ui/2283)|[CLI](/t/add-machines-deb-2-9-cli/2284) ~ [UI](/t/add-machines-deb-2-9-ui/2285)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines-snap-2-7-cli/2274) ~ [UI](/t/add-machines-snap-2-7-ui/2275)|[CLI](/t/add-machines-snap-2-8-cli/2276) ~ [UI](/t/add-machines-snap-2-8-ui/2277)|CLI ~ [UI](/t/add-machines-snap-2-9-ui/2279)|
-|Packages|[CLI](/t/add-machines-deb-2-7-cli/2280) ~ [UI](/t/add-machines-deb-2-7-ui/2281)|[CLI](/t/add-machines-deb-2-8-cli/2282) ~ [UI](/t/add-machines-deb-2-8-ui/2283)|[CLI](/t/add-machines-deb-2-9-cli/2284) ~ [UI](/t/add-machines-deb-2-9-ui/2285)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines-snap-2-7-cli/2274) ~ [UI](/t/add-machines-snap-2-7-ui/2275)|[CLI](/t/add-machines-snap-2-8-cli/2276) ~ [UI](/t/add-machines-snap-2-8-ui/2277)|[CLI](/t/add-machines-snap-2-9-cli/2278) ~ UI|
-|Packages|[CLI](/t/add-machines-deb-2-7-cli/2280) ~ [UI](/t/add-machines-deb-2-7-ui/2281)|[CLI](/t/add-machines-deb-2-8-cli/2282) ~ [UI](/t/add-machines-deb-2-8-ui/2283)|[CLI](/t/add-machines-deb-2-9-cli/2284) ~ [UI](/t/add-machines-deb-2-9-ui/2285)|
  snap-2-9-ui -->
 
 There are two ways to add a machine to MAAS:
@@ -93,14 +45,14 @@ This article will explain more about both methods.
 
 <!-- deb-2-7-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2748)
+* [How do VM host nodes work?](/t/vm-hosting/2748)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2292)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2749)
+* [How do VM host nodes work?](/t/vm-hosting/2749)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2293)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -108,14 +60,14 @@ This article will explain more about both methods.
 
 <!-- deb-2-8-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2750)
+* [How do VM host nodes work?](/t/vm-hosting/2750)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2294)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2751)
+* [How do VM host nodes work?](/t/vm-hosting/2751)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2295)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -123,14 +75,14 @@ This article will explain more about both methods.
 
 <!-- deb-2-9-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2752)
+* [How do VM host nodes work?](/t/vm-hosting/2752)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2296)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2753)
+* [How do VM host nodes work?](/t/vm-hosting/2753)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2297)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -138,14 +90,14 @@ This article will explain more about both methods.
 
 <!-- snap-2-7-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2742)
+* [How do VM host nodes work?](/t/vm-hosting/2742)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2286)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2743)
+* [How do VM host nodes work?](/t/vm-hosting/2743)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2287)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -153,14 +105,14 @@ This article will explain more about both methods.
 
 <!-- snap-2-8-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2744)
+* [How do VM host nodes work?](/t/vm-hosting/2744)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2288)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2745)
+* [How do VM host nodes work?](/t/vm-hosting/2745)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2289)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -168,14 +120,14 @@ This article will explain more about both methods.
 
 <!-- snap-2-9-cli
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2746)
+* [How do VM host nodes work?](/t/vm-hosting/2746)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2290)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
 * [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2747)
+* [How do VM host nodes work?](/t/vm-hosting/2747)
 * [How do I add virtual machines?](/t/adding-a-vm-host/2291)
 * [How do I add a machine manually?](#heading--add-a-node-manually)
 * [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
@@ -183,9 +135,9 @@ This article will explain more about both methods.
 
 MAAS typically adds a machine via a combination of DHCP, TFTP, and PXE. By now, you should have enabled MAAS to automatically add devices and machines to your environment. This unattended method of adding machines is called enlistment.
 
-[note]
+<strong>NOTE:</strong> 
 Configuring a computer to boot over PXE is done via its BIOS, often referred to as "netboot" or "network boot".
-[/note]
+
 
 Regardless of how MAAS adds a machine, there are no special requirements for the underlying machine. In particular, there is no need to install an operating system on it.
 
@@ -303,9 +255,9 @@ Typically, the next step will be to [commission the machine](/t/commission-machi
 Typically, the next step will be to [commission the machine](/t/commission-machines/2471). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
  snap-2-9-ui -->
 
-[note]
+<strong>NOTE:</strong> 
 MAAS runs built-in commissioning scripts during the enlistment phase. When you commission a machine, any customised commissioning scripts you add will have access to data collected during enlistment. Follow the link above for more information about commissioning and commission scripts.
-[/note]
+
 
 <h2 id="heading--add-a-node-manually">Add a machine manually</h2>
 
@@ -460,17 +412,17 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 Normally, when you add a machine manually, MAAS will immediately attempt to commission the machine. Note that you will need to configure the underlying machine to boot over the network, or commissioning will fail. MAAS cannot handle this configuration for you.  While the correct method for configuring network boot depends heavily on your server, there are a couple of common elements:
 
-* The network card on your server must be able to support PXE, i.e., your NIC -- whether independent or integrated on a motherboard -- must have a boot PROM that supports network booting.  You'll need to consult the documentation for the machine in question to determine this.
+1. The network card on your server must be able to support PXE, i.e., your NIC -- whether independent or integrated on a motherboard -- must have a boot PROM that supports network booting.  You'll need to consult the documentation for the machine in question to determine this.
 
-* You usually have to interrupt the boot process and enter the BIOS/UEFI menu to configure the network card's PXE stack.  Again, you may need to consult your machine's documentation to pin down this step.
+2. You usually have to interrupt the boot process and enter the BIOS/UEFI menu to configure the network card's PXE stack.  Again, you may need to consult your machine's documentation to pin down this step.
 
 Additional steps will vary widely by machine type and architecture.
 
 <h3 id="heading--bmc-enlistment">BMC enlistment</h3>
 
-[note status="2.4"]
+<strong>NOTE:</strong> 
 Note that in MAAS versions before 2.5, you are required to provide the MAC address of the PXE interface when adding a new machine manually.
-[/note]
+
 
 ##### IPMI machines
 
@@ -489,9 +441,9 @@ Use the chassis feature to add multiple machines at once. To do this, instead of
 
 The required fields will change based on the type of chassis you choose.
 
-[note]
+<strong>NOTE:</strong> 
 As with the manual method, the underlying machines will require netbooting.
-[/note]
+
 deb-2-7-ui snap-2-7-ui -->
 
 <!-- snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui
@@ -503,7 +455,7 @@ Use the chassis feature to add multiple machines at once. To do this, instead of
 
 The required fields will change based on the type of chassis you choose.
 
-[note]
+<strong>NOTE:</strong> 
 As with the manual method, the underlying machines will require netbooting.
-[/note]
+
 snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui -->

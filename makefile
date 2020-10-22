@@ -41,6 +41,19 @@ all: post-build
 
 pre-build:
 	mkdir -p backup
+	mkdir -p maas-offline
+	mkdir -p maas-offline/deb/2.7/ui
+	mkdir -p maas-offline/snap/2.7/ui
+	mkdir -p maas-offline/deb/2.8/ui
+	mkdir -p maas-offline/snap/2.8/ui
+	mkdir -p maas-offline/deb/2.9/ui
+	mkdir -p maas-offline/snap/2.9/ui
+	mkdir -p maas-offline/deb/2.7/cli
+	mkdir -p maas-offline/snap/2.7/cli
+	mkdir -p maas-offline/deb/2.8/cli
+	mkdir -p maas-offline/snap/2.8/cli
+	mkdir -p maas-offline/deb/2.9/cli
+	mkdir -p maas-offline/snap/2.9/cli
 
 post-build: main-build
 	cp -R $(MOL)/deb/$(PROD_VSN)/ui $(PROD_DEB)
@@ -61,103 +74,122 @@ post-build: main-build
 main-build: pre-build
 	scripts/strip-navigation.sh maas-documentation.md
 	cp maas-documentation.md maas-documentation-25.msd
-	@$(MAKE) --no-print-directory originals/*.html
+	@$(MAKE) --no-print-directory originals/*.md
+	@$(MAKE) --no-print-directory originals/*.msd
 
-originals/%.html: %.msd
-	cp -p $< backup/$<
+originals/%.msd: %.msd
+	$(eval BASE = $(notdir $@))
+	cp $(BASE) backup/$(BASE)
+	sed -i "/|| 2.7/d" $(BASE)
+	sed -i "/||2.7/d" $(BASE)
+	sed -i "/|-----:|:-----:/d" $(BASE)
+	sed -i "/\[CLI\]/d" $(BASE)
+	sed -i 's/\[note.*\]/<strong>NOTE:<\/strong> /g' $(BASE)
+	sed -i 's/\[\/note.*\]//g' $(BASE)
+	$(eval HTML = $(basename $(notdir $@)).html)
 	cp templates/$(D27U)/msd-template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
+	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(D27UT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(D27)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	mv $(HTML) $(MOL)/$(D27)
 	cp templates/$(D28U)/msd-template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
+	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(D28UT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(D28)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	mv $(HTML) $(MOL)/$(D28)
 	cp templates/$(D29U)/msd-template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
+	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(D29UT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(D29)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	mv $(HTML) $(MOL)/$(D29)
 	cp templates/$(S27U)/msd-template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
+	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(S27UT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(S27)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	mv $(HTML) $(MOL)/$(S27)
 	cp templates/$(S28U)/msd-template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
+	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(S28UT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(S28)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	mv $(HTML) $(MOL)/$(S28)
 	cp templates/$(S29U)/msd-template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
+	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(S27UT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	cp $(notdir $@) originals
-	mv $(notdir $@) $(MOL)/$(S29)
-	cp -p backup/$< $<
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	cp $(BASE) originals
+	mv $(HTML) $(MOL)/$(S29)
+	cp backup/$(BASE) $(BASE)
 
-originals/%.html: %.md
-	cp $< backup/$<
+originals/%.md: %.md
+	$(eval BASE = $(notdir $@))
+	cp $(BASE) backup/$(BASE)
+	sed -i "/|| 2.7/d" $(BASE)
+	sed -i "/||2.7/d" $(BASE)
+	sed -i "/|-----:|:-----:/d" $(BASE)
+	sed -i "/\[CLI\]/d" $(BASE)
+	sed -i 's/\[note.*\]/<strong>NOTE:<\/strong> /g' $(BASE)
+	sed -i 's/\[\/note.*\]//g' $(BASE)
+	$(eval HTML = $(basename $(notdir $@)).html)
 	cp templates/$(D27C)/template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
-	xpub convert dc2html -t $(D27CT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(D27C)
+	sed -i "s|zork|$(HTML)|g" ./template.html
+	xpub convert dc2html -t $(D27CT) $(BASE)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	sed -i 's/-deb-2-7-cli//g' $(BASE)
+	mv $(HTML) $(MOL)/$(D27C)
 	cp templates/$(D27U)/template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
-	xpub convert dc2html -t $(D27UT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(D27U)
+	sed -i "s|zork|$(HTML)|g" ./template.html
+	xpub convert dc2html -t $(D27UT) $(BASE)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	mv $(HTML) $(MOL)/$(D27U)
 	cp templates/$(D28C)/template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
-	xpub convert dc2html -t $(D28CT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(D28C)
+	sed -i "s|zork|$(HTML)|g" ./template.html
+	xpub convert dc2html -t $(D28CT) $(BASE)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	mv $(HTML) $(MOL)/$(D28C)
 	cp templates/$(D28U)/template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
-	xpub convert dc2html -t $(D28UT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(D28U)
+	sed -i "s|zork|$(HTML)|g" ./template.html
+	xpub convert dc2html -t $(D28UT) $(BASE)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	mv $(HTML) $(MOL)/$(D28U)
 	cp templates/$(D29C)/template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
-	xpub convert dc2html -t $(D29CT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(D29C)
+	sed -i "s|zork|$(HTML)|g" ./template.html
+	xpub convert dc2html -t $(D29CT) $(BASE)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	mv $(HTML) $(MOL)/$(D29C)
 	cp templates/$(D29U)/template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
-	xpub convert dc2html -t $(D29UT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(D29U)
+	sed -i "s|zork|$(HTML)|g" ./template.html
+	xpub convert dc2html -t $(D29UT) $(BASE)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	mv $(HTML) $(MOL)/$(D29U)
 	cp templates/$(S27C)/template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
-	xpub convert dc2html -t $(S27CT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(S27C)
+	sed -i "s|zork|$(HTML)|g" ./template.html
+	xpub convert dc2html -t $(S27CT) $(BASE)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	mv $(HTML) $(MOL)/$(S27C)
 	cp templates/$(S27U)/template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
-	xpub convert dc2html -t $(S27UT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(S27U)
+	sed -i "s|zork|$(HTML)|g" ./template.html
+	xpub convert dc2html -t $(S27UT) $(BASE)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	mv $(HTML) $(MOL)/$(S27U)
 	cp templates/$(S28C)/template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
-	xpub convert dc2html -t $(S28CT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(S28C)
+	sed -i "s|zork|$(HTML)|g" ./template.html
+	xpub convert dc2html -t $(S28CT) $(BASE)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	mv $(HTML) $(MOL)/$(S28C)
 	cp templates/$(S28U)/template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
-	xpub convert dc2html -t $(S28UT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(S28U)
+	sed -i "s|zork|$(HTML)|g" ./template.html
+	xpub convert dc2html -t $(S28UT) $(BASE)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	mv $(HTML) $(MOL)/$(S28U)
 	cp templates/$(S29C)/template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
-	xpub convert dc2html -t $(S29CT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	mv $(notdir $@) $(MOL)/$(S29C)
+	sed -i "s|zork|$(HTML)|g" ./template.html
+	xpub convert dc2html -t $(S29CT) $(BASE)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	mv $(HTML) $(MOL)/$(S29C)
 	cp templates/$(S29U)/template.html ./template.html
-	sed -i "s|zork|$(notdir $@)|g" ./template.html
-	xpub convert dc2html -t $(S27UT) $<
-	sed -i "s/-[0-9]*.html/.html/g" $(notdir $@)
-	cp $(notdir $@) originals
-	mv $(notdir $@) $(MOL)/$(S29U)
+	sed -i "s|zork|$(HTML)|g" ./template.html
+	xpub convert dc2html -t $(S27UT) $(BASE)
+	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
+	cp $(BASE) originals
+	mv $(HTML) $(MOL)/$(S29U)
+	cp backup/$(BASE) $(BASE)

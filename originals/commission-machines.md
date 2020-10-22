@@ -1,85 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines-snap-2-7-cli/2466) ~ [UI](/t/commission-machines-snap-2-7-ui/2467)|[CLI](/t/commission-machines-snap-2-8-cli/2468) ~ [UI](/t/commission-machines-snap-2-8-ui/2469)|[CLI](/t/commission-machines-snap-2-9-cli/2470) ~ [UI](/t/commission-machines-snap-2-9-ui/2471)|
-|Packages|CLI ~ [UI](/t/commission-machines-deb-2-7-ui/2473)|[CLI](/t/commission-machines-deb-2-8-cli/2474) ~ [UI](/t/commission-machines-deb-2-8-ui/2475)|[CLI](/t/commission-machines-deb-2-9-cli/2476) ~ [UI](/t/commission-machines-deb-2-9-ui/2477)|
 deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines-snap-2-7-cli/2466) ~ [UI](/t/commission-machines-snap-2-7-ui/2467)|[CLI](/t/commission-machines-snap-2-8-cli/2468) ~ [UI](/t/commission-machines-snap-2-8-ui/2469)|[CLI](/t/commission-machines-snap-2-9-cli/2470) ~ [UI](/t/commission-machines-snap-2-9-ui/2471)|
-|Packages|[CLI](/t/commission-machines-deb-2-7-cli/2472) ~ UI|[CLI](/t/commission-machines-deb-2-8-cli/2474) ~ [UI](/t/commission-machines-deb-2-8-ui/2475)|[CLI](/t/commission-machines-deb-2-9-cli/2476) ~ [UI](/t/commission-machines-deb-2-9-ui/2477)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines-snap-2-7-cli/2466) ~ [UI](/t/commission-machines-snap-2-7-ui/2467)|[CLI](/t/commission-machines-snap-2-8-cli/2468) ~ [UI](/t/commission-machines-snap-2-8-ui/2469)|[CLI](/t/commission-machines-snap-2-9-cli/2470) ~ [UI](/t/commission-machines-snap-2-9-ui/2471)|
-|Packages|[CLI](/t/commission-machines-deb-2-7-cli/2472) ~ [UI](/t/commission-machines-deb-2-7-ui/2473)|CLI ~ [UI](/t/commission-machines-deb-2-8-ui/2475)|[CLI](/t/commission-machines-deb-2-9-cli/2476) ~ [UI](/t/commission-machines-deb-2-9-ui/2477)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines-snap-2-7-cli/2466) ~ [UI](/t/commission-machines-snap-2-7-ui/2467)|[CLI](/t/commission-machines-snap-2-8-cli/2468) ~ [UI](/t/commission-machines-snap-2-8-ui/2469)|[CLI](/t/commission-machines-snap-2-9-cli/2470) ~ [UI](/t/commission-machines-snap-2-9-ui/2471)|
-|Packages|[CLI](/t/commission-machines-deb-2-7-cli/2472) ~ [UI](/t/commission-machines-deb-2-7-ui/2473)|[CLI](/t/commission-machines-deb-2-8-cli/2474) ~ UI|[CLI](/t/commission-machines-deb-2-9-cli/2476) ~ [UI](/t/commission-machines-deb-2-9-ui/2477)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines-snap-2-7-cli/2466) ~ [UI](/t/commission-machines-snap-2-7-ui/2467)|[CLI](/t/commission-machines-snap-2-8-cli/2468) ~ [UI](/t/commission-machines-snap-2-8-ui/2469)|[CLI](/t/commission-machines-snap-2-9-cli/2470) ~ [UI](/t/commission-machines-snap-2-9-ui/2471)|
-|Packages|[CLI](/t/commission-machines-deb-2-7-cli/2472) ~ [UI](/t/commission-machines-deb-2-7-ui/2473)|[CLI](/t/commission-machines-deb-2-8-cli/2474) ~ [UI](/t/commission-machines-deb-2-8-ui/2475)|CLI ~ [UI](/t/commission-machines-deb-2-9-ui/2477)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines-snap-2-7-cli/2466) ~ [UI](/t/commission-machines-snap-2-7-ui/2467)|[CLI](/t/commission-machines-snap-2-8-cli/2468) ~ [UI](/t/commission-machines-snap-2-8-ui/2469)|[CLI](/t/commission-machines-snap-2-9-cli/2470) ~ [UI](/t/commission-machines-snap-2-9-ui/2471)|
-|Packages|[CLI](/t/commission-machines-deb-2-7-cli/2472) ~ [UI](/t/commission-machines-deb-2-7-ui/2473)|[CLI](/t/commission-machines-deb-2-8-cli/2474) ~ [UI](/t/commission-machines-deb-2-8-ui/2475)|[CLI](/t/commission-machines-deb-2-9-cli/2476) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/commission-machines-snap-2-7-ui/2467)|[CLI](/t/commission-machines-snap-2-8-cli/2468) ~ [UI](/t/commission-machines-snap-2-8-ui/2469)|[CLI](/t/commission-machines-snap-2-9-cli/2470) ~ [UI](/t/commission-machines-snap-2-9-ui/2471)|
-|Packages|[CLI](/t/commission-machines-deb-2-7-cli/2472) ~ [UI](/t/commission-machines-deb-2-7-ui/2473)|[CLI](/t/commission-machines-deb-2-8-cli/2474) ~ [UI](/t/commission-machines-deb-2-8-ui/2475)|[CLI](/t/commission-machines-deb-2-9-cli/2476) ~ [UI](/t/commission-machines-deb-2-9-ui/2477)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines-snap-2-7-cli/2466) ~ UI|[CLI](/t/commission-machines-snap-2-8-cli/2468) ~ [UI](/t/commission-machines-snap-2-8-ui/2469)|[CLI](/t/commission-machines-snap-2-9-cli/2470) ~ [UI](/t/commission-machines-snap-2-9-ui/2471)|
-|Packages|[CLI](/t/commission-machines-deb-2-7-cli/2472) ~ [UI](/t/commission-machines-deb-2-7-ui/2473)|[CLI](/t/commission-machines-deb-2-8-cli/2474) ~ [UI](/t/commission-machines-deb-2-8-ui/2475)|[CLI](/t/commission-machines-deb-2-9-cli/2476) ~ [UI](/t/commission-machines-deb-2-9-ui/2477)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines-snap-2-7-cli/2466) ~ [UI](/t/commission-machines-snap-2-7-ui/2467)|CLI ~ [UI](/t/commission-machines-snap-2-8-ui/2469)|[CLI](/t/commission-machines-snap-2-9-cli/2470) ~ [UI](/t/commission-machines-snap-2-9-ui/2471)|
-|Packages|[CLI](/t/commission-machines-deb-2-7-cli/2472) ~ [UI](/t/commission-machines-deb-2-7-ui/2473)|[CLI](/t/commission-machines-deb-2-8-cli/2474) ~ [UI](/t/commission-machines-deb-2-8-ui/2475)|[CLI](/t/commission-machines-deb-2-9-cli/2476) ~ [UI](/t/commission-machines-deb-2-9-ui/2477)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines-snap-2-7-cli/2466) ~ [UI](/t/commission-machines-snap-2-7-ui/2467)|[CLI](/t/commission-machines-snap-2-8-cli/2468) ~ UI|[CLI](/t/commission-machines-snap-2-9-cli/2470) ~ [UI](/t/commission-machines-snap-2-9-ui/2471)|
-|Packages|[CLI](/t/commission-machines-deb-2-7-cli/2472) ~ [UI](/t/commission-machines-deb-2-7-ui/2473)|[CLI](/t/commission-machines-deb-2-8-cli/2474) ~ [UI](/t/commission-machines-deb-2-8-ui/2475)|[CLI](/t/commission-machines-deb-2-9-cli/2476) ~ [UI](/t/commission-machines-deb-2-9-ui/2477)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines-snap-2-7-cli/2466) ~ [UI](/t/commission-machines-snap-2-7-ui/2467)|[CLI](/t/commission-machines-snap-2-8-cli/2468) ~ [UI](/t/commission-machines-snap-2-8-ui/2469)|CLI ~ [UI](/t/commission-machines-snap-2-9-ui/2471)|
-|Packages|[CLI](/t/commission-machines-deb-2-7-cli/2472) ~ [UI](/t/commission-machines-deb-2-7-ui/2473)|[CLI](/t/commission-machines-deb-2-8-cli/2474) ~ [UI](/t/commission-machines-deb-2-8-ui/2475)|[CLI](/t/commission-machines-deb-2-9-cli/2476) ~ [UI](/t/commission-machines-deb-2-9-ui/2477)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines-snap-2-7-cli/2466) ~ [UI](/t/commission-machines-snap-2-7-ui/2467)|[CLI](/t/commission-machines-snap-2-8-cli/2468) ~ [UI](/t/commission-machines-snap-2-8-ui/2469)|[CLI](/t/commission-machines-snap-2-9-cli/2470) ~ UI|
-|Packages|[CLI](/t/commission-machines-deb-2-7-cli/2472) ~ [UI](/t/commission-machines-deb-2-7-ui/2473)|[CLI](/t/commission-machines-deb-2-8-cli/2474) ~ [UI](/t/commission-machines-deb-2-8-ui/2475)|[CLI](/t/commission-machines-deb-2-9-cli/2476) ~ [UI](/t/commission-machines-deb-2-9-ui/2477)|
  snap-2-9-ui -->
 
 MAAS is built to manage machines, including the operating systems on those machines. Enlistment and commissioning are features that make it easier to start managing a machine – as long as that machine has been configured to netboot. Enlistment enables users to simply connect a machine, configure the firmware properly, and power it on so that MAAS can find it and add it.
@@ -107,17 +59,17 @@ When you configure a machine to netboot -- and turn it on while connected to the
 <!-- deb-2-9-cli
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2284)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2488) to meet your specific needs.
 
-[note]
+<strong>NOTE:</strong> 
 Commissioning requires 60 seconds.
-[/note]
+
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2285)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2489) to meet your specific needs.
 
-[note]
+<strong>NOTE:</strong> 
 Commissioning requires 60 seconds.
-[/note]
+
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
@@ -139,17 +91,17 @@ When you configure a machine to netboot -- and turn it on while connected to the
 <!-- snap-2-9-cli
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2278)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2482) to meet your specific needs.
 
-[note]
+<strong>NOTE:</strong> 
 Commissioning requires 60 seconds.
-[/note]
+
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2279)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2483) to meet your specific needs.
 
-[note]
+<strong>NOTE:</strong> 
 Commissioning requires 60 seconds.
-[/note]
+
  snap-2-9-ui -->
 
 #### Questions you may have:
@@ -284,9 +236,9 @@ To commission a machine:
 maas $PROFILE machine commission $SYSTEM_ID
 ```
 
-[note]
+<strong>NOTE:</strong> 
 To commission a node, it must have a status of 'New'.
-[/note]
+
 
 To commission all nodes in the 'New' state:
 
@@ -473,9 +425,9 @@ Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/28
 
 If you are using the NUMA architecture, MAAS versions 2.7 and higher guarantee that machines are assigned to a single NUMA node that contains all the machine's resources. Node boundaries are critical, especially in vNUMA situations.  Splitting nodes can create unnecessary latency.  You want the NUMA node boundaries to match VM boundaries if at all possible.
 
-[note]
+<strong>NOTE:</strong> 
 You must recommission NUMA/SR-IOV machines that were previously commissioned under version 2.6 or earlier.
-[/note]
+
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png"></a> 
@@ -488,43 +440,43 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 When a machine boots, MAAS first instructs it to run cloud-init to set up SSH keys (during commissioning only), set up NTP, and execute a script that runs other commissioning scripts.  Currently, the sequence of MAAS-provided commissioning scripts proceeds like this:
 
 <!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
-* maas-support-info: MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  **Runs in parallel with other scripts.**
+1. maas-support-info: MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  **Runs in parallel with other scripts.**
 
-* maas-lshw: this script pulls system BIOS and vendor info, and generates user-defined tags for later use.  **Runs in parallel with other scripts.**
+2. maas-lshw: this script pulls system BIOS and vendor info, and generates user-defined tags for later use.  **Runs in parallel with other scripts.**
 
-* 20-maas-01-install-lldpd: this script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  This script provides some extensive logging.
+3. 20-maas-01-install-lldpd: this script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  This script provides some extensive logging.
 
-* maas-list-modaliases: this script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.  **Runs in parallel with other scripts.**
+4. maas-list-modaliases: this script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.  **Runs in parallel with other scripts.**
 
-* 20-maas-02-dhcp-unconfigured-ifaces: MAAS will want to know all the ways the machine is connected to the network.  Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.  This script provides extensive logging.
+5. 20-maas-02-dhcp-unconfigured-ifaces: MAAS will want to know all the ways the machine is connected to the network.  Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.  This script provides extensive logging.
 
-* maas-get-fruid-api-data: this script gathers information for the Facebook wedge power type.  **Runs in parallel with other scripts.**
+6. maas-get-fruid-api-data: this script gathers information for the Facebook wedge power type.  **Runs in parallel with other scripts.**
 
-* maas-serial-ports: this script lists what serial ports are available on the machine.  **Runs in parallel with other scripts.**
+7. maas-serial-ports: this script lists what serial ports are available on the machine.  **Runs in parallel with other scripts.**
 
-* 40-maas-01-network-interfaces: this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
+8. 40-maas-01-network-interfaces: this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
 
-* 50-maas-01-commissioning: this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
+9. 50-maas-01-commissioning: this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
 
-* maas-capture-lldp: this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  **Runs in parallel with other scripts.**
+10. maas-capture-lldp: this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  **Runs in parallel with other scripts.**
 
-* maas-kernel-cmdline: this script is used to update the boot devices; it double-checks that the right boot interface is selected. 
+11. maas-kernel-cmdline: this script is used to update the boot devices; it double-checks that the right boot interface is selected. 
 
 Commissioning runs the same dozen or so scripts as enlistment, gathering all the same information, but with some additional caveats: 
 
-* Commissioning also runs user-supplied commissioning scripts, if present.  Be aware that these scripts run as root, so they can execute any system command.
+1. Commissioning also runs user-supplied commissioning scripts, if present.  Be aware that these scripts run as root, so they can execute any system command.
 
-* Commissioning runs test scripts which are not run during enlistment.
+2. Commissioning runs test scripts which are not run during enlistment.
 
-* Commissioning scripts can send BMC configuration data, and can be used to configure BMC data.
+3. Commissioning scripts can send BMC configuration data, and can be used to configure BMC data.
 
-* The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts; these scripts may write BMC power credentials to BMC_CONFIG_PATH in YAML format, where each key is a power parameter.  The first script to write BMC_CONFIG_PATH is the only script allowed to configure the BMC, allowing you to override MAAS' built-in BMC detection.  If the script returns 0, that value will be send to MAAS.
+4. The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts; these scripts may write BMC power credentials to BMC_CONFIG_PATH in YAML format, where each key is a power parameter.  The first script to write BMC_CONFIG_PATH is the only script allowed to configure the BMC, allowing you to override MAAS' built-in BMC detection.  If the script returns 0, that value will be send to MAAS.
 
-* All built-in commissioning scripts have been migrated into the database.
+5. All built-in commissioning scripts have been migrated into the database.
 
-* `maas-run-remote-scripts` is capable of enlisting machines, so enlistment `user-data` scripts have been removed.
+6. `maas-run-remote-scripts` is capable of enlisting machines, so enlistment `user-data` scripts have been removed.
 
-* The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.
+7. The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.
 snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
 
 <!-- snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli
@@ -766,9 +718,9 @@ You can select from the following bonding modes on the 'Bond mode' drop-down men
 
 Press the 'Save' button when you're done.
 
-[note]
+<strong>NOTE:</strong> 
 The MAC address defaults to the MAC address of the primary interface.
-[/note]
+
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli

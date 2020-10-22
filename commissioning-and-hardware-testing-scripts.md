@@ -1,85 +1,85 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-cli/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-ui/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-cli/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-ui/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-cli/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-ui/2483)|
-|Packages|CLI ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-ui/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-cli/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-ui/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-cli/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-ui/2489)|
+|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2483)|
+|Packages|CLI ~ [UI](/t/commissioning-and-hardware-testing-scripts/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2489)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-cli/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-ui/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-cli/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-ui/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-cli/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-ui/2483)|
-|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-cli/2484) ~ UI|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-cli/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-ui/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-cli/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-ui/2489)|
+|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2483)|
+|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts/2484) ~ UI|[CLI](/t/commissioning-and-hardware-testing-scripts/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2489)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-cli/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-ui/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-cli/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-ui/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-cli/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-ui/2483)|
-|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-cli/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-ui/2485)|CLI ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-ui/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-cli/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-ui/2489)|
+|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2483)|
+|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2485)|CLI ~ [UI](/t/commissioning-and-hardware-testing-scripts/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2489)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-cli/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-ui/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-cli/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-ui/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-cli/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-ui/2483)|
-|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-cli/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-ui/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-cli/2486) ~ UI|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-cli/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-ui/2489)|
+|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2483)|
+|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts/2486) ~ UI|[CLI](/t/commissioning-and-hardware-testing-scripts/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2489)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-cli/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-ui/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-cli/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-ui/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-cli/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-ui/2483)|
-|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-cli/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-ui/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-cli/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-ui/2487)|CLI ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-ui/2489)|
+|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2483)|
+|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2487)|CLI ~ [UI](/t/commissioning-and-hardware-testing-scripts/2489)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-cli/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-ui/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-cli/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-ui/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-cli/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-ui/2483)|
-|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-cli/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-ui/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-cli/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-ui/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-cli/2488) ~ UI|
+|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2483)|
+|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts/2488) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-ui/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-cli/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-ui/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-cli/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-ui/2483)|
-|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-cli/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-ui/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-cli/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-ui/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-cli/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-ui/2489)|
+|Snap|CLI ~ [UI](/t/commissioning-and-hardware-testing-scripts/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2483)|
+|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2489)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-cli/2478) ~ UI|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-cli/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-ui/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-cli/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-ui/2483)|
-|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-cli/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-ui/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-cli/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-ui/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-cli/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-ui/2489)|
+|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts/2478) ~ UI|[CLI](/t/commissioning-and-hardware-testing-scripts/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2483)|
+|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2489)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-cli/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-ui/2479)|CLI ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-ui/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-cli/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-ui/2483)|
-|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-cli/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-ui/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-cli/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-ui/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-cli/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-ui/2489)|
+|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2479)|CLI ~ [UI](/t/commissioning-and-hardware-testing-scripts/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2483)|
+|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2489)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-cli/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-ui/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-cli/2480) ~ UI|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-cli/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-ui/2483)|
-|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-cli/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-ui/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-cli/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-ui/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-cli/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-ui/2489)|
+|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts/2480) ~ UI|[CLI](/t/commissioning-and-hardware-testing-scripts/2482) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2483)|
+|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2489)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-cli/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-ui/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-cli/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-ui/2481)|CLI ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-ui/2483)|
-|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-cli/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-ui/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-cli/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-ui/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-cli/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-ui/2489)|
+|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2481)|CLI ~ [UI](/t/commissioning-and-hardware-testing-scripts/2483)|
+|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2489)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-cli/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-7-ui/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-cli/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts-snap-2-8-ui/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts-snap-2-9-cli/2482) ~ UI|
-|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-cli/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-7-ui/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-cli/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-8-ui/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-cli/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts-deb-2-9-ui/2489)|
+|Snap|[CLI](/t/commissioning-and-hardware-testing-scripts/2478) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2479)|[CLI](/t/commissioning-and-hardware-testing-scripts/2480) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2481)|[CLI](/t/commissioning-and-hardware-testing-scripts/2482) ~ UI|
+|Packages|[CLI](/t/commissioning-and-hardware-testing-scripts/2484) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2485)|[CLI](/t/commissioning-and-hardware-testing-scripts/2486) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2487)|[CLI](/t/commissioning-and-hardware-testing-scripts/2488) ~ [UI](/t/commissioning-and-hardware-testing-scripts/2489)|
  snap-2-9-ui -->
 
 MAAS runs scripts during enlistment, commissioning and testing to collect data about nodes. Both enlistment and commissioning run all builtin commissioning scripts, though enlistment runs only built-ins. Commissioning also runs any user-uploaded commissioning scripts by default, unless the user manually provides a list of scripts to run. MAAS uses these commissioning scripts to configure hardware and perform other tasks during commissioning, such as updating the firmware. Similarly, MAAS employs hardware testing scripts to evaluate system hardware and report its status. 

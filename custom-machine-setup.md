@@ -1,85 +1,85 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup-snap-2-7-cli/2586) ~ [UI](/t/custom-machine-setup-snap-2-7-ui/2587)|[CLI](/t/custom-machine-setup-snap-2-8-cli/2588) ~ [UI](/t/custom-machine-setup-snap-2-8-ui/2589)|[CLI](/t/custom-machine-setup-snap-2-9-cli/2590) ~ [UI](/t/custom-machine-setup-snap-2-9-ui/2591)|
-|Packages|CLI ~ [UI](/t/custom-machine-setup-deb-2-7-ui/2593)|[CLI](/t/custom-machine-setup-deb-2-8-cli/2594) ~ [UI](/t/custom-machine-setup-deb-2-8-ui/2595)|[CLI](/t/custom-machine-setup-deb-2-9-cli/2596) ~ [UI](/t/custom-machine-setup-deb-2-9-ui/2597)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|CLI ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup-snap-2-7-cli/2586) ~ [UI](/t/custom-machine-setup-snap-2-7-ui/2587)|[CLI](/t/custom-machine-setup-snap-2-8-cli/2588) ~ [UI](/t/custom-machine-setup-snap-2-8-ui/2589)|[CLI](/t/custom-machine-setup-snap-2-9-cli/2590) ~ [UI](/t/custom-machine-setup-snap-2-9-ui/2591)|
-|Packages|[CLI](/t/custom-machine-setup-deb-2-7-cli/2592) ~ UI|[CLI](/t/custom-machine-setup-deb-2-8-cli/2594) ~ [UI](/t/custom-machine-setup-deb-2-8-ui/2595)|[CLI](/t/custom-machine-setup-deb-2-9-cli/2596) ~ [UI](/t/custom-machine-setup-deb-2-9-ui/2597)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ UI|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup-snap-2-7-cli/2586) ~ [UI](/t/custom-machine-setup-snap-2-7-ui/2587)|[CLI](/t/custom-machine-setup-snap-2-8-cli/2588) ~ [UI](/t/custom-machine-setup-snap-2-8-ui/2589)|[CLI](/t/custom-machine-setup-snap-2-9-cli/2590) ~ [UI](/t/custom-machine-setup-snap-2-9-ui/2591)|
-|Packages|[CLI](/t/custom-machine-setup-deb-2-7-cli/2592) ~ [UI](/t/custom-machine-setup-deb-2-7-ui/2593)|CLI ~ [UI](/t/custom-machine-setup-deb-2-8-ui/2595)|[CLI](/t/custom-machine-setup-deb-2-9-cli/2596) ~ [UI](/t/custom-machine-setup-deb-2-9-ui/2597)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|CLI ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup-snap-2-7-cli/2586) ~ [UI](/t/custom-machine-setup-snap-2-7-ui/2587)|[CLI](/t/custom-machine-setup-snap-2-8-cli/2588) ~ [UI](/t/custom-machine-setup-snap-2-8-ui/2589)|[CLI](/t/custom-machine-setup-snap-2-9-cli/2590) ~ [UI](/t/custom-machine-setup-snap-2-9-ui/2591)|
-|Packages|[CLI](/t/custom-machine-setup-deb-2-7-cli/2592) ~ [UI](/t/custom-machine-setup-deb-2-7-ui/2593)|[CLI](/t/custom-machine-setup-deb-2-8-cli/2594) ~ UI|[CLI](/t/custom-machine-setup-deb-2-9-cli/2596) ~ [UI](/t/custom-machine-setup-deb-2-9-ui/2597)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ UI|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup-snap-2-7-cli/2586) ~ [UI](/t/custom-machine-setup-snap-2-7-ui/2587)|[CLI](/t/custom-machine-setup-snap-2-8-cli/2588) ~ [UI](/t/custom-machine-setup-snap-2-8-ui/2589)|[CLI](/t/custom-machine-setup-snap-2-9-cli/2590) ~ [UI](/t/custom-machine-setup-snap-2-9-ui/2591)|
-|Packages|[CLI](/t/custom-machine-setup-deb-2-7-cli/2592) ~ [UI](/t/custom-machine-setup-deb-2-7-ui/2593)|[CLI](/t/custom-machine-setup-deb-2-8-cli/2594) ~ [UI](/t/custom-machine-setup-deb-2-8-ui/2595)|CLI ~ [UI](/t/custom-machine-setup-deb-2-9-ui/2597)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|CLI ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup-snap-2-7-cli/2586) ~ [UI](/t/custom-machine-setup-snap-2-7-ui/2587)|[CLI](/t/custom-machine-setup-snap-2-8-cli/2588) ~ [UI](/t/custom-machine-setup-snap-2-8-ui/2589)|[CLI](/t/custom-machine-setup-snap-2-9-cli/2590) ~ [UI](/t/custom-machine-setup-snap-2-9-ui/2591)|
-|Packages|[CLI](/t/custom-machine-setup-deb-2-7-cli/2592) ~ [UI](/t/custom-machine-setup-deb-2-7-ui/2593)|[CLI](/t/custom-machine-setup-deb-2-8-cli/2594) ~ [UI](/t/custom-machine-setup-deb-2-8-ui/2595)|[CLI](/t/custom-machine-setup-deb-2-9-cli/2596) ~ UI|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/custom-machine-setup-snap-2-7-ui/2587)|[CLI](/t/custom-machine-setup-snap-2-8-cli/2588) ~ [UI](/t/custom-machine-setup-snap-2-8-ui/2589)|[CLI](/t/custom-machine-setup-snap-2-9-cli/2590) ~ [UI](/t/custom-machine-setup-snap-2-9-ui/2591)|
-|Packages|[CLI](/t/custom-machine-setup-deb-2-7-cli/2592) ~ [UI](/t/custom-machine-setup-deb-2-7-ui/2593)|[CLI](/t/custom-machine-setup-deb-2-8-cli/2594) ~ [UI](/t/custom-machine-setup-deb-2-8-ui/2595)|[CLI](/t/custom-machine-setup-deb-2-9-cli/2596) ~ [UI](/t/custom-machine-setup-deb-2-9-ui/2597)|
+|Snap|CLI ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup-snap-2-7-cli/2586) ~ UI|[CLI](/t/custom-machine-setup-snap-2-8-cli/2588) ~ [UI](/t/custom-machine-setup-snap-2-8-ui/2589)|[CLI](/t/custom-machine-setup-snap-2-9-cli/2590) ~ [UI](/t/custom-machine-setup-snap-2-9-ui/2591)|
-|Packages|[CLI](/t/custom-machine-setup-deb-2-7-cli/2592) ~ [UI](/t/custom-machine-setup-deb-2-7-ui/2593)|[CLI](/t/custom-machine-setup-deb-2-8-cli/2594) ~ [UI](/t/custom-machine-setup-deb-2-8-ui/2595)|[CLI](/t/custom-machine-setup-deb-2-9-cli/2596) ~ [UI](/t/custom-machine-setup-deb-2-9-ui/2597)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ UI|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup-snap-2-7-cli/2586) ~ [UI](/t/custom-machine-setup-snap-2-7-ui/2587)|CLI ~ [UI](/t/custom-machine-setup-snap-2-8-ui/2589)|[CLI](/t/custom-machine-setup-snap-2-9-cli/2590) ~ [UI](/t/custom-machine-setup-snap-2-9-ui/2591)|
-|Packages|[CLI](/t/custom-machine-setup-deb-2-7-cli/2592) ~ [UI](/t/custom-machine-setup-deb-2-7-ui/2593)|[CLI](/t/custom-machine-setup-deb-2-8-cli/2594) ~ [UI](/t/custom-machine-setup-deb-2-8-ui/2595)|[CLI](/t/custom-machine-setup-deb-2-9-cli/2596) ~ [UI](/t/custom-machine-setup-deb-2-9-ui/2597)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|CLI ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup-snap-2-7-cli/2586) ~ [UI](/t/custom-machine-setup-snap-2-7-ui/2587)|[CLI](/t/custom-machine-setup-snap-2-8-cli/2588) ~ UI|[CLI](/t/custom-machine-setup-snap-2-9-cli/2590) ~ [UI](/t/custom-machine-setup-snap-2-9-ui/2591)|
-|Packages|[CLI](/t/custom-machine-setup-deb-2-7-cli/2592) ~ [UI](/t/custom-machine-setup-deb-2-7-ui/2593)|[CLI](/t/custom-machine-setup-deb-2-8-cli/2594) ~ [UI](/t/custom-machine-setup-deb-2-8-ui/2595)|[CLI](/t/custom-machine-setup-deb-2-9-cli/2596) ~ [UI](/t/custom-machine-setup-deb-2-9-ui/2597)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ UI|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup-snap-2-7-cli/2586) ~ [UI](/t/custom-machine-setup-snap-2-7-ui/2587)|[CLI](/t/custom-machine-setup-snap-2-8-cli/2588) ~ [UI](/t/custom-machine-setup-snap-2-8-ui/2589)|CLI ~ [UI](/t/custom-machine-setup-snap-2-9-ui/2591)|
-|Packages|[CLI](/t/custom-machine-setup-deb-2-7-cli/2592) ~ [UI](/t/custom-machine-setup-deb-2-7-ui/2593)|[CLI](/t/custom-machine-setup-deb-2-8-cli/2594) ~ [UI](/t/custom-machine-setup-deb-2-8-ui/2595)|[CLI](/t/custom-machine-setup-deb-2-9-cli/2596) ~ [UI](/t/custom-machine-setup-deb-2-9-ui/2597)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|CLI ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup-snap-2-7-cli/2586) ~ [UI](/t/custom-machine-setup-snap-2-7-ui/2587)|[CLI](/t/custom-machine-setup-snap-2-8-cli/2588) ~ [UI](/t/custom-machine-setup-snap-2-8-ui/2589)|[CLI](/t/custom-machine-setup-snap-2-9-cli/2590) ~ UI|
-|Packages|[CLI](/t/custom-machine-setup-deb-2-7-cli/2592) ~ [UI](/t/custom-machine-setup-deb-2-7-ui/2593)|[CLI](/t/custom-machine-setup-deb-2-8-cli/2594) ~ [UI](/t/custom-machine-setup-deb-2-8-ui/2595)|[CLI](/t/custom-machine-setup-deb-2-9-cli/2596) ~ [UI](/t/custom-machine-setup-deb-2-9-ui/2597)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ UI|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-9-ui -->
 
 <!-- deb-2-7-cli

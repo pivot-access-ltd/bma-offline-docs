@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/high-availability.html">
+	  &nbsp;UI-only&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  CLI-only
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-me-an-example-of-maas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-new-in-maas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-requirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-journey.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-communication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-controllers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-controllers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-availability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-machines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-machines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-testing.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-testing.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-and-hardware-testing-scripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-tags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-machine-setup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-boot-options.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-pools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-vmfs-datastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-kernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-and-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-image-mirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-images.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-management.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-ranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-services.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-discovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-addressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-tls-encryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-stp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-zones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-host-networking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-a-vm-host.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-host-storage-pools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-and-deleting-vms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-metrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-your-maas-installation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-accounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-search.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-and-terms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-and-terms.html#heading--network-tutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-cli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-kernel-management.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-image-management.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-interface-management.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-advanced-tasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-composable-hardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-help.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-tricks-and-traps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-docs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-new-in-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-guide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>High availability</h1><!-- deb-2-7-cli
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+ deb-2-7-ui -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+ snap-2-9-ui -->
+
+<p>This page describes how to provide high availability (HA) for MAAS at both region and rack levels.  In the context of MAAS, there are four types of HA: BMC (node power cycling); DHCP; PostgreSQL; and API services.</p>
+<h4>Quick questions you might have:</h4>
+<ul>
+<li><a href="#heading--rack-controller-ha">How do I make rack controllers highly available?</a></li>
+<li><a href="#heading--bmc-ha">How do I enable highly-available BMC?</a></li>
+<li><a href="#heading--dhcp-ha">How do I enable highly-available DHCP services?</a></li>
+<li><a href="#heading--region-controller-ha">How do I make region controllers highly available?</a></li>
+<li><a href="#heading--postgresql-ha">How do I enable highly-available PostgreSQL?</a></li>
+<li><a href="#heading--secondary-api-servers">How do I enable highly-available API services?</a></li>
+<li><a href="#heading--load-balancing-with-haproxy-optional">How do I enable load balancing for API services?</a></li>
+</ul>
+<h2 id="heading--rack-controller-ha">Make rack controllers highly available</h2>
+
+<!-- deb-2-7-cli
+You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
+ deb-2-7-ui -->
+
+<p>You need to <a href="rack-controllers.html#heading--install-a-rack-controller">install multiple rack controllers</a> to achieve real high availability.  Once that&rsquo;s done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.</p>
+<!-- deb-2-8-ui
+You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+You need to [install multiple rack controllers](rack-controllers.html#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
+ snap-2-9-ui -->
+
+<h3 id="heading--bmc-ha">Enable highly-available BMC</h3>
+
+<p>HA for BMC control (node power cycling) is provided out-of-the-box, once a second rack controller is present. MAAS will automatically identify which rack controller is responsible for a BMC and set up communication accordingly.</p>
+<h3 id="heading--dhcp-ha">Enable highly-available DHCP services</h3>
+
+<p>DHCP HA affects the way MAAS manages node, including enlistment, commissioning and deployment. It enables primary and secondary DHCP instances to serve the same VLAN. This VLAN replicates all lease information is between rack controllers. MAAS-managed DHCP is a requirement for DHCP HA.</p>
+<!-- deb-2-7-cli
+If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+ deb-2-7-ui -->
+
+<p>If you are enabling DHCP for the first time after adding a second rack controller, please read <a href="managing-dhcp.html#heading--enabling-dhcp">Enabling DHCP</a>.  On the other hand, if you have already enabled DHCP on your initial rack controller, you&rsquo;ll need to reconfigure DHCP.</p>
+<!-- deb-2-8-ui
+If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](managing-dhcp.html#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+ snap-2-9-ui -->
+
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+Access the appropriate VLAN (via the 'Subnets' page) and choose action 'Reconfigure DHCP'. There, you will see the second rack controller in the 'Secondary controller' field. All you should have to do is press the 'Reconfigure DHCP' button:
+
+<a href="images/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg" target = "_blank"><img src="images/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg"></a></a>
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+
+<p>To reconfigure DHCP after adding a new rack controller, use the following sequence of commands:</p>
+<pre><code>vid=$(maas maas subnets read | jq -r '.[] | select(.cidr == &quot;10.0.0.0/24&quot;) | .vlan.vid')
+fabric_name=$(maas maas subnets read | jq -r '.[] | select(.cidr == &quot;10.0.0.0/24&quot;) | .vlan.fabric')
+query=&quot;.[] | select(.name == \&quot;$fabric_name\&quot;) | .id&quot;
+fabric_id=$(maas maas fabrics read | jq &quot;$query&quot;)
+maas maas ipranges create type=reserved start_ip=10.0.0.3 end_ip=10.0.0.49
+maas maas ipranges create type=dynamic start_ip=10.0.0.50 end_ip=10.0.0.99
+maas maas vlan update ${fabric_id} ${vid} primary_rack=$(hostname) dhcp_on=true
+</code></pre>
+
+<p>Be sure to substitute the sample values for those of your own environment.</p>
+<h3 id="heading--multiple-region-endpoints">Configure multiple region endpoints</h3>
+
+<p>MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to <code>/etc/maas/rackd.conf</code>.  For example:</p>
+<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
+MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to `/var/snap/maas/current/rackd.conf`.  For example:
+snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
+
+<pre><code>.
+.
+.
+maas_url:
+  - http://&lt;ip 1&gt;:&lt;port&gt;/MAAS/
+  - http://&lt;ip 2&gt;:&lt;port&gt;/MAAS/
+.
+.
+.
+</code></pre>
+<p>The setup of highly-available DHCP is now complete.  Note that, for HA purposes, DHCP provisioning will take into account multiple DNS services when there is more than one region controller on a single region.</p>
+<h2 id="heading--region-controller-ha">Make region controllers highly available</h2>
+
+<p>Implementing highly-available region control involves setting up two highly-available services:</p>
+<ul>
+<li>PostgreSQL HA</li>
+<li>Secondary API server(s)</li>
+</ul>
+<p>Load balancing is optional, but is highly recommended.</p>
+<h3 id="heading--postgresql-ha">Enable highly-available PostgreSQL</h3>
+
+<p>MAAS stores all state information in the PostgreSQL database. It is therefore recommended to run it in HA mode. Configuring HA for PostgreSQL is external to MAAS. You will, therefore, need to study the <a href="https://www.postgresql.org/docs/9.5/static/high-availability.html">PostgreSQL documentation^</a> and implement the variant of HA that makes you feel most comfortable.</p>
+<!-- deb-2-7-cli
+A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
+ deb-2-7-ui -->
+
+<p>A quick treatment of <a href="postgresql-ha-hot-standby.html">PostgreSQL HA: hot standby</a> is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.</p>
+<!-- deb-2-8-ui
+A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+A quick treatment of [PostgreSQL HA: hot standby](postgresql-ha-hot-standby.html) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
+ snap-2-9-ui -->
+
+<p>Each region controller uses up to 40 connections to PostgreSQL in high load situations. Running two region controllers requires no modifications to the <code>max_connections</code> in <code>postgresql.conf</code>. More than two region controllers require that <code>max_connections</code> be adjusted to add 40 more connections per added region controller.</p>
+<h3 id="heading--secondary-api-servers">Enable highly-available API services</h3>
+
+<!-- snap-2-7-cli
+Setting up high-availability using snaps is relatively easy:
+
+1.  Set up PostgreSQL for high-availability as [explained above](high-availability.html#heading--postgresql-ha). PostgreSQL should run outside of the snap.
+2.  [Install](maas-installation-from-a-snap.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](maas-installation-from-a-snap.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+    -   `--database-host DATABASE_HOST`
+    -   `--database-name DATABASE_NAME`
+    -   `--database-user DATABASE_USER`
+    -   `--database-pass DATABASE_PASS`
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+Setting up high-availability using snaps is relatively easy:
+
+1.  Set up PostgreSQL for high-availability as [explained above](high-availability.html#heading--postgresql-ha). PostgreSQL should run outside of the snap.
+2.  [Install](maas-installation-from-a-snap.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](maas-installation-from-a-snap.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+    -   `--database-host DATABASE_HOST`
+    -   `--database-name DATABASE_NAME`
+    -   `--database-user DATABASE_USER`
+    -   `--database-pass DATABASE_PASS`
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+Setting up high-availability using snaps is relatively easy:
+
+1.  Set up PostgreSQL for high-availability as [explained above](high-availability.html#heading--postgresql-ha). PostgreSQL should run outside of the snap.
+2.  [Install](maas-installation-from-a-snap.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](maas-installation-from-a-snap.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+    -   `--database-host DATABASE_HOST`
+    -   `--database-name DATABASE_NAME`
+    -   `--database-user DATABASE_USER`
+    -   `--database-pass DATABASE_PASS`
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+Setting up high-availability using snaps is relatively easy:
+
+1.  Set up PostgreSQL for high-availability as [explained above](high-availability.html#heading--postgresql-ha). PostgreSQL should run outside of the snap.
+2.  [Install](maas-installation-from-a-snap.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](maas-installation-from-a-snap.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+    -   `--database-host DATABASE_HOST`
+    -   `--database-name DATABASE_NAME`
+    -   `--database-user DATABASE_USER`
+    -   `--database-pass DATABASE_PASS`
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+Setting up high-availability using snaps is relatively easy:
+
+1.  Set up PostgreSQL for high-availability as [explained above](high-availability.html#heading--postgresql-ha). PostgreSQL should run outside of the snap.
+2.  [Install](maas-installation-from-a-snap.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](maas-installation-from-a-snap.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+    -   `--database-host DATABASE_HOST`
+    -   `--database-name DATABASE_NAME`
+    -   `--database-user DATABASE_USER`
+    -   `--database-pass DATABASE_PASS`
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+Setting up high-availability using snaps is relatively easy:
+
+1.  Set up PostgreSQL for high-availability as [explained above](high-availability.html#heading--postgresql-ha). PostgreSQL should run outside of the snap.
+2.  [Install](maas-installation-from-a-snap.html#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/snap/maas/common/maas/secret`, on the first region controller you set up.
+3.  [Initialise the snap](maas-installation-from-a-snap.html#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+    -   `--database-host DATABASE_HOST`
+    -   `--database-name DATABASE_NAME`
+    -   `--database-user DATABASE_USER`
+    -   `--database-pass DATABASE_PASS`
+ snap-2-9-ui -->
+
+<!-- deb-2-7-cli
+Please see [Region controllers](region-controllers.html) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+Please see [Region controllers](region-controllers.html) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
+ deb-2-7-ui -->
+
+<p>Please see <a href="region-controllers.html">Region controllers</a> and <a href="#heading--multiple-region-endpoints">Multiple region endpoints</a> for more information about how to install and configure rack controllers for multiple region controllers.</p>
+<!-- deb-2-8-ui
+Please see [Region controllers](region-controllers.html) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+Please see [Region controllers](region-controllers.html) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+Please see [Region controllers](region-controllers.html) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
+ deb-2-9-ui -->
+
+<h3 id="heading--load-balancing-with-haproxy-optional">Load balancing with HAProxy (optional)</h3>
+
+<p>You can add load balancing with <a href="http://www.haproxy.org/">HAProxy^</a> load-balancing software to support multiple API servers. In this setup, HAProxy provides access to the MAAS web UI and API.</p>
+<p><strong>NOTE:</strong> 
+If you happen to have Apache running on the same server where you intend to install HAProxy, you will need to stop and disable <code>apache2</code>, because HAProxy binds to port 80.</p>
+<h4 id="heading--install">Install</h4>
+
+<pre><code class="bash">sudo apt install haproxy
+</code></pre>
+
+<h4 id="heading--configure">Configure</h4>
+
+<p>Configure each API server&rsquo;s load balancer by copying the following into <code>/etc/haproxy/haproxy.cfg</code> (see the <a href="http://cbonte.github.io/haproxy-dconv/1.6/configuration.html">upstream configuration manual (external link)</a> as a reference). Replace $PRIMARY_API_SERVER_IP and $SECONDARY_API_SERVER_IP with their respective IP addresses:</p>
+<pre><code class="yaml">frontend maas
+    bind    *:80
+    retries 3
+    option  redispatch
+    option  http-server-close
+    default_backend maas
+
+backend maas
+    timeout server 90s
+    balance source
+    hash-type consistent
+    server localhost localhost:5240 check
+    server maas-api-1 $PRIMARY_API_SERVER_IP:5240 check
+    server maas-api-2 $SECONDARY_API_SERVER_IP:5240 check
+</code></pre>
+
+<p>where <code>maas-api-1</code> and <code>maas-api-2</code> are arbitrary server labels.</p>
+<p>Now restart the load balancer to have these changes take effect:</p>
+<pre><code class="bash">sudo systemctl restart haproxy
+</code></pre>
+
+<p>The configuration of region controller HA is now complete.</p>
+<p><strong>The API server(s) must be now be referenced (e.g. web UI, MAAS CLI) using port 80 (as opposed to port 5240).</strong></p>
+    </div>
+  </body>
+</html>

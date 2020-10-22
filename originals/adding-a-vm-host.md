@@ -1,93 +1,45 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host-snap-2-7-cli/2286) ~ [UI](/t/adding-a-vm-host-snap-2-7-ui/2287)|[CLI](/t/adding-a-vm-host-snap-2-8-cli/2288) ~ [UI](/t/adding-a-vm-host-snap-2-8-ui/2289)|[CLI](/t/adding-a-vm-host-snap-2-9-cli/2290) ~ [UI](/t/adding-a-vm-host-snap-2-9-ui/2291)|
-|Packages|CLI ~ [UI](/t/adding-a-vm-host-deb-2-7-ui/2293)|[CLI](/t/adding-a-vm-host-deb-2-8-cli/2294) ~ [UI](/t/adding-a-vm-host-deb-2-8-ui/2295)|[CLI](/t/adding-a-vm-host-deb-2-9-cli/2296) ~ [UI](/t/adding-a-vm-host-deb-2-9-ui/2297)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host-snap-2-7-cli/2286) ~ [UI](/t/adding-a-vm-host-snap-2-7-ui/2287)|[CLI](/t/adding-a-vm-host-snap-2-8-cli/2288) ~ [UI](/t/adding-a-vm-host-snap-2-8-ui/2289)|[CLI](/t/adding-a-vm-host-snap-2-9-cli/2290) ~ [UI](/t/adding-a-vm-host-snap-2-9-ui/2291)|
-|Packages|[CLI](/t/adding-a-vm-host-deb-2-7-cli/2292) ~ UI|[CLI](/t/adding-a-vm-host-deb-2-8-cli/2294) ~ [UI](/t/adding-a-vm-host-deb-2-8-ui/2295)|[CLI](/t/adding-a-vm-host-deb-2-9-cli/2296) ~ [UI](/t/adding-a-vm-host-deb-2-9-ui/2297)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host-snap-2-7-cli/2286) ~ [UI](/t/adding-a-vm-host-snap-2-7-ui/2287)|[CLI](/t/adding-a-vm-host-snap-2-8-cli/2288) ~ [UI](/t/adding-a-vm-host-snap-2-8-ui/2289)|[CLI](/t/adding-a-vm-host-snap-2-9-cli/2290) ~ [UI](/t/adding-a-vm-host-snap-2-9-ui/2291)|
-|Packages|[CLI](/t/adding-a-vm-host-deb-2-7-cli/2292) ~ [UI](/t/adding-a-vm-host-deb-2-7-ui/2293)|CLI ~ [UI](/t/adding-a-vm-host-deb-2-8-ui/2295)|[CLI](/t/adding-a-vm-host-deb-2-9-cli/2296) ~ [UI](/t/adding-a-vm-host-deb-2-9-ui/2297)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host-snap-2-7-cli/2286) ~ [UI](/t/adding-a-vm-host-snap-2-7-ui/2287)|[CLI](/t/adding-a-vm-host-snap-2-8-cli/2288) ~ [UI](/t/adding-a-vm-host-snap-2-8-ui/2289)|[CLI](/t/adding-a-vm-host-snap-2-9-cli/2290) ~ [UI](/t/adding-a-vm-host-snap-2-9-ui/2291)|
-|Packages|[CLI](/t/adding-a-vm-host-deb-2-7-cli/2292) ~ [UI](/t/adding-a-vm-host-deb-2-7-ui/2293)|[CLI](/t/adding-a-vm-host-deb-2-8-cli/2294) ~ UI|[CLI](/t/adding-a-vm-host-deb-2-9-cli/2296) ~ [UI](/t/adding-a-vm-host-deb-2-9-ui/2297)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host-snap-2-7-cli/2286) ~ [UI](/t/adding-a-vm-host-snap-2-7-ui/2287)|[CLI](/t/adding-a-vm-host-snap-2-8-cli/2288) ~ [UI](/t/adding-a-vm-host-snap-2-8-ui/2289)|[CLI](/t/adding-a-vm-host-snap-2-9-cli/2290) ~ [UI](/t/adding-a-vm-host-snap-2-9-ui/2291)|
-|Packages|[CLI](/t/adding-a-vm-host-deb-2-7-cli/2292) ~ [UI](/t/adding-a-vm-host-deb-2-7-ui/2293)|[CLI](/t/adding-a-vm-host-deb-2-8-cli/2294) ~ [UI](/t/adding-a-vm-host-deb-2-8-ui/2295)|CLI ~ [UI](/t/adding-a-vm-host-deb-2-9-ui/2297)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host-snap-2-7-cli/2286) ~ [UI](/t/adding-a-vm-host-snap-2-7-ui/2287)|[CLI](/t/adding-a-vm-host-snap-2-8-cli/2288) ~ [UI](/t/adding-a-vm-host-snap-2-8-ui/2289)|[CLI](/t/adding-a-vm-host-snap-2-9-cli/2290) ~ [UI](/t/adding-a-vm-host-snap-2-9-ui/2291)|
-|Packages|[CLI](/t/adding-a-vm-host-deb-2-7-cli/2292) ~ [UI](/t/adding-a-vm-host-deb-2-7-ui/2293)|[CLI](/t/adding-a-vm-host-deb-2-8-cli/2294) ~ [UI](/t/adding-a-vm-host-deb-2-8-ui/2295)|[CLI](/t/adding-a-vm-host-deb-2-9-cli/2296) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/adding-a-vm-host-snap-2-7-ui/2287)|[CLI](/t/adding-a-vm-host-snap-2-8-cli/2288) ~ [UI](/t/adding-a-vm-host-snap-2-8-ui/2289)|[CLI](/t/adding-a-vm-host-snap-2-9-cli/2290) ~ [UI](/t/adding-a-vm-host-snap-2-9-ui/2291)|
-|Packages|[CLI](/t/adding-a-vm-host-deb-2-7-cli/2292) ~ [UI](/t/adding-a-vm-host-deb-2-7-ui/2293)|[CLI](/t/adding-a-vm-host-deb-2-8-cli/2294) ~ [UI](/t/adding-a-vm-host-deb-2-8-ui/2295)|[CLI](/t/adding-a-vm-host-deb-2-9-cli/2296) ~ [UI](/t/adding-a-vm-host-deb-2-9-ui/2297)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host-snap-2-7-cli/2286) ~ UI|[CLI](/t/adding-a-vm-host-snap-2-8-cli/2288) ~ [UI](/t/adding-a-vm-host-snap-2-8-ui/2289)|[CLI](/t/adding-a-vm-host-snap-2-9-cli/2290) ~ [UI](/t/adding-a-vm-host-snap-2-9-ui/2291)|
-|Packages|[CLI](/t/adding-a-vm-host-deb-2-7-cli/2292) ~ [UI](/t/adding-a-vm-host-deb-2-7-ui/2293)|[CLI](/t/adding-a-vm-host-deb-2-8-cli/2294) ~ [UI](/t/adding-a-vm-host-deb-2-8-ui/2295)|[CLI](/t/adding-a-vm-host-deb-2-9-cli/2296) ~ [UI](/t/adding-a-vm-host-deb-2-9-ui/2297)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host-snap-2-7-cli/2286) ~ [UI](/t/adding-a-vm-host-snap-2-7-ui/2287)|CLI ~ [UI](/t/adding-a-vm-host-snap-2-8-ui/2289)|[CLI](/t/adding-a-vm-host-snap-2-9-cli/2290) ~ [UI](/t/adding-a-vm-host-snap-2-9-ui/2291)|
-|Packages|[CLI](/t/adding-a-vm-host-deb-2-7-cli/2292) ~ [UI](/t/adding-a-vm-host-deb-2-7-ui/2293)|[CLI](/t/adding-a-vm-host-deb-2-8-cli/2294) ~ [UI](/t/adding-a-vm-host-deb-2-8-ui/2295)|[CLI](/t/adding-a-vm-host-deb-2-9-cli/2296) ~ [UI](/t/adding-a-vm-host-deb-2-9-ui/2297)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host-snap-2-7-cli/2286) ~ [UI](/t/adding-a-vm-host-snap-2-7-ui/2287)|[CLI](/t/adding-a-vm-host-snap-2-8-cli/2288) ~ UI|[CLI](/t/adding-a-vm-host-snap-2-9-cli/2290) ~ [UI](/t/adding-a-vm-host-snap-2-9-ui/2291)|
-|Packages|[CLI](/t/adding-a-vm-host-deb-2-7-cli/2292) ~ [UI](/t/adding-a-vm-host-deb-2-7-ui/2293)|[CLI](/t/adding-a-vm-host-deb-2-8-cli/2294) ~ [UI](/t/adding-a-vm-host-deb-2-8-ui/2295)|[CLI](/t/adding-a-vm-host-deb-2-9-cli/2296) ~ [UI](/t/adding-a-vm-host-deb-2-9-ui/2297)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host-snap-2-7-cli/2286) ~ [UI](/t/adding-a-vm-host-snap-2-7-ui/2287)|[CLI](/t/adding-a-vm-host-snap-2-8-cli/2288) ~ [UI](/t/adding-a-vm-host-snap-2-8-ui/2289)|CLI ~ [UI](/t/adding-a-vm-host-snap-2-9-ui/2291)|
-|Packages|[CLI](/t/adding-a-vm-host-deb-2-7-cli/2292) ~ [UI](/t/adding-a-vm-host-deb-2-7-ui/2293)|[CLI](/t/adding-a-vm-host-deb-2-8-cli/2294) ~ [UI](/t/adding-a-vm-host-deb-2-8-ui/2295)|[CLI](/t/adding-a-vm-host-deb-2-9-cli/2296) ~ [UI](/t/adding-a-vm-host-deb-2-9-ui/2297)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host-snap-2-7-cli/2286) ~ [UI](/t/adding-a-vm-host-snap-2-7-ui/2287)|[CLI](/t/adding-a-vm-host-snap-2-8-cli/2288) ~ [UI](/t/adding-a-vm-host-snap-2-8-ui/2289)|[CLI](/t/adding-a-vm-host-snap-2-9-cli/2290) ~ UI|
-|Packages|[CLI](/t/adding-a-vm-host-deb-2-7-cli/2292) ~ [UI](/t/adding-a-vm-host-deb-2-7-ui/2293)|[CLI](/t/adding-a-vm-host-deb-2-8-cli/2294) ~ [UI](/t/adding-a-vm-host-deb-2-8-ui/2295)|[CLI](/t/adding-a-vm-host-deb-2-9-cli/2296) ~ [UI](/t/adding-a-vm-host-deb-2-9-ui/2297)|
  snap-2-9-ui -->
 
 A VM host is simply a machine which can run virtual machines (VMs) by allocating  resources across the VMs you want to create.  If needed, you can over-commit resources, allocating more resources than actually available, so long as you don't try to use more than the VM host has available at any one time. Once MAAS has enlisted, commissioned, and acquired a newly-added machine, you can deploy it as a VM host.  Alternatively, you can create a VM host from a machine you've already got running.
 
 <!-- deb-2-7-cli
-[note type="caution" status="Warning"]
+<strong>NOTE:</strong> 
 You **must** [configure your network](/t/vm-host-networking/3216) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3216#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
-[/note]
+
 
 #### Quick questions you may have:
 
@@ -100,9 +52,9 @@ You **must** [configure your network](/t/vm-host-networking/3216) to support a V
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-[note type="caution" status="Warning"]
+<strong>NOTE:</strong> 
 You **must** [configure your network](/t/vm-host-networking/3217) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3217#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
-[/note]
+
 
 #### Quick questions you may have:
 
@@ -115,9 +67,9 @@ You **must** [configure your network](/t/vm-host-networking/3217) to support a V
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-[note type="caution" status="Warning"]
+<strong>NOTE:</strong> 
 You **must** [configure your network](/t/vm-host-networking/3218) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3218#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
-[/note]
+
 
 #### Quick questions you may have:
 
@@ -130,9 +82,9 @@ You **must** [configure your network](/t/vm-host-networking/3218) to support a V
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-[note type="caution" status="Warning"]
+<strong>NOTE:</strong> 
 You **must** [configure your network](/t/vm-host-networking/3219) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3219#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
-[/note]
+
 
 #### Quick questions you may have:
 
@@ -145,9 +97,9 @@ You **must** [configure your network](/t/vm-host-networking/3219) to support a V
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-[note type="caution" status="Warning"]
+<strong>NOTE:</strong> 
 You **must** [configure your network](/t/vm-host-networking/3220) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3220#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
-[/note]
+
 
 #### Quick questions you may have:
 
@@ -160,9 +112,9 @@ You **must** [configure your network](/t/vm-host-networking/3220) to support a V
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-[note type="caution" status="Warning"]
+<strong>NOTE:</strong> 
 You **must** [configure your network](/t/vm-host-networking/3221) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3221#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
-[/note]
+
 
 #### Quick questions you may have:
 
@@ -175,9 +127,9 @@ You **must** [configure your network](/t/vm-host-networking/3221) to support a V
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-[note type="caution" status="Warning"]
+<strong>NOTE:</strong> 
 You **must** [configure your network](/t/vm-host-networking/3210) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3210#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
-[/note]
+
 
 #### Quick questions you may have:
 
@@ -190,9 +142,9 @@ You **must** [configure your network](/t/vm-host-networking/3210) to support a V
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-[note type="caution" status="Warning"]
+<strong>NOTE:</strong> 
 You **must** [configure your network](/t/vm-host-networking/3211) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3211#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
-[/note]
+
 
 #### Quick questions you may have:
 
@@ -205,9 +157,9 @@ You **must** [configure your network](/t/vm-host-networking/3211) to support a V
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-[note type="caution" status="Warning"]
+<strong>NOTE:</strong> 
 You **must** [configure your network](/t/vm-host-networking/3212) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3212#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
-[/note]
+
 
 #### Quick questions you may have:
 
@@ -220,9 +172,9 @@ You **must** [configure your network](/t/vm-host-networking/3212) to support a V
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-[note type="caution" status="Warning"]
+<strong>NOTE:</strong> 
 You **must** [configure your network](/t/vm-host-networking/3213) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3213#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
-[/note]
+
 
 #### Quick questions you may have:
 
@@ -235,9 +187,9 @@ You **must** [configure your network](/t/vm-host-networking/3213) to support a V
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-[note type="caution" status="Warning"]
+<strong>NOTE:</strong> 
 You **must** [configure your network](/t/vm-host-networking/3214) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3214#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
-[/note]
+
 
 #### Quick questions you may have:
 
@@ -250,9 +202,9 @@ You **must** [configure your network](/t/vm-host-networking/3214) to support a V
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-[note type="caution" status="Warning"]
+<strong>NOTE:</strong> 
 You **must** [configure your network](/t/vm-host-networking/3215) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3215#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
-[/note]
+
 
 #### Quick questions you may have:
 
@@ -323,9 +275,9 @@ maas $PROFILE vm-hosts create type=virsh power_address=qemu+ssh://ubuntu@192.168
 ```
 deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli -->
 
-[note]
+<strong>NOTE:</strong> 
 MAAS will automatically discover and store the resources your VM host contains. Any existing machines will also appear on the 'Machines' page, and MAAS will automatically attempt to commission them.
-[/note]
+
 
 <h2 id="heading--configuration">Configuration</h2>
 

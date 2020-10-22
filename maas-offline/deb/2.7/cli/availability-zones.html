@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/availability-zones.html">
+	  &nbsp;UI-only&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  CLI-only
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-me-an-example-of-maas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-new-in-maas.html">
+	    What&rsquo;s new in 2.7
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-requirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-journey.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-communication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-controllers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-controllers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-availability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-machines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-machines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-testing.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-testing.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-and-hardware-testing-scripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-tags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-machine-setup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-boot-options.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-pools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-vmfs-datastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-kernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-and-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-image-mirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-images.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-management.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-ranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-services.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-discovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-addressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-tls-encryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-stp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-zones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-host-networking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-a-vm-host.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-host-storage-pools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-and-deleting-vms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-metrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-your-maas-installation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-accounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-search.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-and-terms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-and-terms.html#heading--network-tutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-cli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-kernel-management.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-image-management.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-interface-management.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-advanced-tasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-composable-hardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-help.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-tricks-and-traps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-docs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-new-in-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-guide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>Availability zones</h1><!-- flip -->
+
+<!-- deb-2-7-ui
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+ snap-2-9-ui -->
+
+<p>An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See <a href="zone-examples.html">Zone examples</a> for more details.</p>
+<!-- deb-2-7-ui
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ snap-2-9-ui -->
+
+<p>A newly installed MAAS comes with a default zone which initially contains all nodes. You cannot remove the &lsquo;default&rsquo; zone or change its name, but you can create new zones and assign machine to them.  You can safely ignore this article if you&rsquo;re not interested in leveraging zones.</p>
+<h4>Quick questions you may have:</h4>
+<ul>
+<li><a href="#heading--list-zones">How do I list availability zones?</a></li>
+<li><a href="#heading--add-a-zone">How do I add an availability zone?</a></li>
+<li><a href="#heading--edit-a-zone">How do I edit an existing availability zone?</a></li>
+<li><a href="#heading--delete-a-zone">How do I delete an existing availability zone?</a></li>
+<li><a href="#heading--assign-a-node-to-a-zone">How do I assign a machine to an availability zone?</a></li>
+<li><a href="#heading--allocate-a-node-in-a-zone">How do I allocate a machine in a particular zone?</a></li>
+</ul>
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+
+<h2 id="heading--list-zones">List availabilty zones</h2>
+
+To see a list of availability zones, choose "AZs" from the top menu:
+
+<a href="images/5ac446f2bda76276069fe5a1c302ff2acbf425a2.jpeg" target = "_blank"><img src="images/5ac446f2bda76276069fe5a1c302ff2acbf425a2.jpeg"></a></a>
+
+<h2 id="heading--add-a-zone">Add a zone</h2>
+
+To create a zone, navigate to the 'AZs' page of the web UI and use the 'Add AZ' button. Enter a name for the zone and click 'Add AZ'.
+
+<a href="images/f4032f39-manage-zones__2.4_add-zone.png" target = "_blank"><img src="images/f4032f39-manage-zones__2.4_add-zone.png"></a></a>
+
+<h2 id="heading--edit-a-zone">Edit a zone</h2>
+
+To edit a zone, on the 'AZs' page, select a zone and use the 'Edit' button:
+
+<a href="images/cf5c2b91e0c3e97ec3f5a813c8a2ed85e9139e19.jpeg" target = "_blank"><img src="images/cf5c2b91e0c3e97ec3f5a813c8a2ed85e9139e19.jpeg"></a></a>
+
+This selection allows you to change the name and description for the added (or edited) zone:
+
+<a href="images/11fb5b6c13609a7ef976aa301e02f43422080066.jpeg" target = "_blank"><img src="images/11fb5b6c13609a7ef976aa301e02f43422080066.jpeg"></a></a>
+
+<h2 id="heading--delete-a-zone">Delete a zone</h2>
+
+To delete a zone, on the 'AZs' page, select a zone and use the 'Delete AZ' button. Doing so will also move any potential machine associations to the default zone.
+
+<a href="images/afb0576940f2e20266dc907911f837378958a64a.jpeg" target = "_blank"><img src="images/afb0576940f2e20266dc907911f837378958a64a.jpeg"></a></a>
+
+<h2 id="heading--assign-a-node-to-a-zone">Assign a machine to a zone</h2>
+
+To assign a machine to a zone, from the 'Machines' page, select a machine (or multiple machines) and choose 'Set zone' using the 'Take action' button:
+
+<a href="images/97db7cbfd8059d2c67566a065e08c56a20b58071.jpeg" target = "_blank"><img src="images/97db7cbfd8059d2c67566a065e08c56a20b58071.jpeg"></a></a>
+
+After selecting a zone hit the 'Set zone...' button to apply the change.
+
+You can also edit a machine's 'Configuration' page to change its zone.
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+
+<h2 id="heading--list-zones">List availability zones</h2>
+
+<p>To see a list of availability zones, enter the following command:</p>
+<pre><code>maas $PROFILE zones read \
+| jq -r '([&quot;ZONE&quot;,&quot;NAME&quot;,&quot;DESCRIPTION&quot;]
+| (., map(length*&quot;-&quot;))), (.[] | [.id, .name, .description])
+| @tsv' | column -t
+</code></pre>
+
+<p>which produces output similar to:</p>
+<pre><code>ZONE  NAME         DESCRIPTION
+----  ----         -----------
+5     BizOffice
+1     default
+4     Inventory
+2     Medications
+3     Payroll
+6     ProServ
+</code></pre>
+
+<h2 id="heading--add-a-zone">Add a zone</h2>
+
+<p>To create a zone, enter the following command:</p>
+<pre><code>maas $PROFILE zones create name=$ZONE_NAME description=$ZONE_DESCRIPTION
+</code></pre>
+
+<h2 id="heading--edit-a-zone">Edit a zone</h2>
+
+<p>To edit a zone, enter a command similar to the following:</p>
+<pre><code>maas $PROFILE zone update $OLD_ZONE_NAME name=$NEW_ZONE_NAME \
+description=$ZONE_DESCRIPTION
+</code></pre>
+
+<h2 id="heading--delete-a-zone">Delete a zone</h2>
+
+<p>To delete a zone, enter a command like this:</p>
+<pre><code>maas $PROFILE zone delete $ZONE_NAME
+</code></pre>
+
+<h2 id="heading--assign-a-node-to-a-zone">Assign a machine to a zone</h2>
+
+<p>To assign a machine to a zone, first retrieve the machine&rsquo;s system ID like this:</p>
+<pre><code>maas PROFILE machines read | jq '.[] | .hostname, .system_id'
+</code></pre>
+
+<p>Then enter the following command, using the system ID you just retrieved:</p>
+<pre><code>maas admin machine update $SYSTEM_ID zone=$ZONE_NAME
+</code></pre>
+
+<h2 id="heading--allocate-a-node-in-a-zone">Allocate a machine in a zone</h2>
+
+<p>To deploy in a particular zone, call the <code>acquire</code> method in the region-controller API &lt;region-controller-api&gt; as before, but pass the <code>zone</code> parameter with the name of the zone. This method will allocate a machine in that zone, or fail with an HTTP 409 (&ldquo;conflict&rdquo;) error if the zone has no machines available that match your request.</p>
+<p>Alternatively, you may want to request a machine that is not in a particular zone or one that is not in any of several zones. To do that, specify the <code>not_in_zone</code> parameter to <code>acquire</code>. This parameter takes a list of zone names; the allocated machine will not be in any of them. Again, if that leaves no machines available that match your request, the call will return a &ldquo;conflict&rdquo; error.</p>
+<p>It is possible, though not usually useful, to combine the <code>zone</code> and <code>not_in_zone</code> parameters. If your choice for <code>zone</code> is also present in <code>not_in_zone</code>, no machine will ever match your request. Or if it&rsquo;s not, then the <code>not_in_zone</code> values will not affect the result of the call at all.</p>
+    </div>
+  </body>
+</html>

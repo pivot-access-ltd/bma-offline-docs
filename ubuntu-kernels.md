@@ -1,85 +1,85 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels-snap-2-7-cli/3174) ~ [UI](/t/ubuntu-kernels-snap-2-7-ui/3175)|[CLI](/t/ubuntu-kernels-snap-2-8-cli/3176) ~ [UI](/t/ubuntu-kernels-snap-2-8-ui/3177)|[CLI](/t/ubuntu-kernels-snap-2-9-cli/3178) ~ [UI](/t/ubuntu-kernels-snap-2-9-ui/3179)|
-|Packages|CLI ~ [UI](/t/ubuntu-kernels-deb-2-7-ui/3181)|[CLI](/t/ubuntu-kernels-deb-2-8-cli/3182) ~ [UI](/t/ubuntu-kernels-deb-2-8-ui/3183)|[CLI](/t/ubuntu-kernels-deb-2-9-cli/3184) ~ [UI](/t/ubuntu-kernels-deb-2-9-ui/3185)|
+|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
+|Packages|CLI ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels-snap-2-7-cli/3174) ~ [UI](/t/ubuntu-kernels-snap-2-7-ui/3175)|[CLI](/t/ubuntu-kernels-snap-2-8-cli/3176) ~ [UI](/t/ubuntu-kernels-snap-2-8-ui/3177)|[CLI](/t/ubuntu-kernels-snap-2-9-cli/3178) ~ [UI](/t/ubuntu-kernels-snap-2-9-ui/3179)|
-|Packages|[CLI](/t/ubuntu-kernels-deb-2-7-cli/3180) ~ UI|[CLI](/t/ubuntu-kernels-deb-2-8-cli/3182) ~ [UI](/t/ubuntu-kernels-deb-2-8-ui/3183)|[CLI](/t/ubuntu-kernels-deb-2-9-cli/3184) ~ [UI](/t/ubuntu-kernels-deb-2-9-ui/3185)|
+|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
+|Packages|[CLI](/t/ubuntu-kernels/3180) ~ UI|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels-snap-2-7-cli/3174) ~ [UI](/t/ubuntu-kernels-snap-2-7-ui/3175)|[CLI](/t/ubuntu-kernels-snap-2-8-cli/3176) ~ [UI](/t/ubuntu-kernels-snap-2-8-ui/3177)|[CLI](/t/ubuntu-kernels-snap-2-9-cli/3178) ~ [UI](/t/ubuntu-kernels-snap-2-9-ui/3179)|
-|Packages|[CLI](/t/ubuntu-kernels-deb-2-7-cli/3180) ~ [UI](/t/ubuntu-kernels-deb-2-7-ui/3181)|CLI ~ [UI](/t/ubuntu-kernels-deb-2-8-ui/3183)|[CLI](/t/ubuntu-kernels-deb-2-9-cli/3184) ~ [UI](/t/ubuntu-kernels-deb-2-9-ui/3185)|
+|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
+|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|CLI ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels-snap-2-7-cli/3174) ~ [UI](/t/ubuntu-kernels-snap-2-7-ui/3175)|[CLI](/t/ubuntu-kernels-snap-2-8-cli/3176) ~ [UI](/t/ubuntu-kernels-snap-2-8-ui/3177)|[CLI](/t/ubuntu-kernels-snap-2-9-cli/3178) ~ [UI](/t/ubuntu-kernels-snap-2-9-ui/3179)|
-|Packages|[CLI](/t/ubuntu-kernels-deb-2-7-cli/3180) ~ [UI](/t/ubuntu-kernels-deb-2-7-ui/3181)|[CLI](/t/ubuntu-kernels-deb-2-8-cli/3182) ~ UI|[CLI](/t/ubuntu-kernels-deb-2-9-cli/3184) ~ [UI](/t/ubuntu-kernels-deb-2-9-ui/3185)|
+|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
+|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ UI|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels-snap-2-7-cli/3174) ~ [UI](/t/ubuntu-kernels-snap-2-7-ui/3175)|[CLI](/t/ubuntu-kernels-snap-2-8-cli/3176) ~ [UI](/t/ubuntu-kernels-snap-2-8-ui/3177)|[CLI](/t/ubuntu-kernels-snap-2-9-cli/3178) ~ [UI](/t/ubuntu-kernels-snap-2-9-ui/3179)|
-|Packages|[CLI](/t/ubuntu-kernels-deb-2-7-cli/3180) ~ [UI](/t/ubuntu-kernels-deb-2-7-ui/3181)|[CLI](/t/ubuntu-kernels-deb-2-8-cli/3182) ~ [UI](/t/ubuntu-kernels-deb-2-8-ui/3183)|CLI ~ [UI](/t/ubuntu-kernels-deb-2-9-ui/3185)|
+|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
+|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|CLI ~ [UI](/t/ubuntu-kernels/3185)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels-snap-2-7-cli/3174) ~ [UI](/t/ubuntu-kernels-snap-2-7-ui/3175)|[CLI](/t/ubuntu-kernels-snap-2-8-cli/3176) ~ [UI](/t/ubuntu-kernels-snap-2-8-ui/3177)|[CLI](/t/ubuntu-kernels-snap-2-9-cli/3178) ~ [UI](/t/ubuntu-kernels-snap-2-9-ui/3179)|
-|Packages|[CLI](/t/ubuntu-kernels-deb-2-7-cli/3180) ~ [UI](/t/ubuntu-kernels-deb-2-7-ui/3181)|[CLI](/t/ubuntu-kernels-deb-2-8-cli/3182) ~ [UI](/t/ubuntu-kernels-deb-2-8-ui/3183)|[CLI](/t/ubuntu-kernels-deb-2-9-cli/3184) ~ UI|
+|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
+|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/ubuntu-kernels-snap-2-7-ui/3175)|[CLI](/t/ubuntu-kernels-snap-2-8-cli/3176) ~ [UI](/t/ubuntu-kernels-snap-2-8-ui/3177)|[CLI](/t/ubuntu-kernels-snap-2-9-cli/3178) ~ [UI](/t/ubuntu-kernels-snap-2-9-ui/3179)|
-|Packages|[CLI](/t/ubuntu-kernels-deb-2-7-cli/3180) ~ [UI](/t/ubuntu-kernels-deb-2-7-ui/3181)|[CLI](/t/ubuntu-kernels-deb-2-8-cli/3182) ~ [UI](/t/ubuntu-kernels-deb-2-8-ui/3183)|[CLI](/t/ubuntu-kernels-deb-2-9-cli/3184) ~ [UI](/t/ubuntu-kernels-deb-2-9-ui/3185)|
+|Snap|CLI ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
+|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels-snap-2-7-cli/3174) ~ UI|[CLI](/t/ubuntu-kernels-snap-2-8-cli/3176) ~ [UI](/t/ubuntu-kernels-snap-2-8-ui/3177)|[CLI](/t/ubuntu-kernels-snap-2-9-cli/3178) ~ [UI](/t/ubuntu-kernels-snap-2-9-ui/3179)|
-|Packages|[CLI](/t/ubuntu-kernels-deb-2-7-cli/3180) ~ [UI](/t/ubuntu-kernels-deb-2-7-ui/3181)|[CLI](/t/ubuntu-kernels-deb-2-8-cli/3182) ~ [UI](/t/ubuntu-kernels-deb-2-8-ui/3183)|[CLI](/t/ubuntu-kernels-deb-2-9-cli/3184) ~ [UI](/t/ubuntu-kernels-deb-2-9-ui/3185)|
+|Snap|[CLI](/t/ubuntu-kernels/3174) ~ UI|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
+|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels-snap-2-7-cli/3174) ~ [UI](/t/ubuntu-kernels-snap-2-7-ui/3175)|CLI ~ [UI](/t/ubuntu-kernels-snap-2-8-ui/3177)|[CLI](/t/ubuntu-kernels-snap-2-9-cli/3178) ~ [UI](/t/ubuntu-kernels-snap-2-9-ui/3179)|
-|Packages|[CLI](/t/ubuntu-kernels-deb-2-7-cli/3180) ~ [UI](/t/ubuntu-kernels-deb-2-7-ui/3181)|[CLI](/t/ubuntu-kernels-deb-2-8-cli/3182) ~ [UI](/t/ubuntu-kernels-deb-2-8-ui/3183)|[CLI](/t/ubuntu-kernels-deb-2-9-cli/3184) ~ [UI](/t/ubuntu-kernels-deb-2-9-ui/3185)|
+|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|CLI ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
+|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels-snap-2-7-cli/3174) ~ [UI](/t/ubuntu-kernels-snap-2-7-ui/3175)|[CLI](/t/ubuntu-kernels-snap-2-8-cli/3176) ~ UI|[CLI](/t/ubuntu-kernels-snap-2-9-cli/3178) ~ [UI](/t/ubuntu-kernels-snap-2-9-ui/3179)|
-|Packages|[CLI](/t/ubuntu-kernels-deb-2-7-cli/3180) ~ [UI](/t/ubuntu-kernels-deb-2-7-ui/3181)|[CLI](/t/ubuntu-kernels-deb-2-8-cli/3182) ~ [UI](/t/ubuntu-kernels-deb-2-8-ui/3183)|[CLI](/t/ubuntu-kernels-deb-2-9-cli/3184) ~ [UI](/t/ubuntu-kernels-deb-2-9-ui/3185)|
+|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ UI|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
+|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels-snap-2-7-cli/3174) ~ [UI](/t/ubuntu-kernels-snap-2-7-ui/3175)|[CLI](/t/ubuntu-kernels-snap-2-8-cli/3176) ~ [UI](/t/ubuntu-kernels-snap-2-8-ui/3177)|CLI ~ [UI](/t/ubuntu-kernels-snap-2-9-ui/3179)|
-|Packages|[CLI](/t/ubuntu-kernels-deb-2-7-cli/3180) ~ [UI](/t/ubuntu-kernels-deb-2-7-ui/3181)|[CLI](/t/ubuntu-kernels-deb-2-8-cli/3182) ~ [UI](/t/ubuntu-kernels-deb-2-8-ui/3183)|[CLI](/t/ubuntu-kernels-deb-2-9-cli/3184) ~ [UI](/t/ubuntu-kernels-deb-2-9-ui/3185)|
+|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|CLI ~ [UI](/t/ubuntu-kernels/3179)|
+|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels-snap-2-7-cli/3174) ~ [UI](/t/ubuntu-kernels-snap-2-7-ui/3175)|[CLI](/t/ubuntu-kernels-snap-2-8-cli/3176) ~ [UI](/t/ubuntu-kernels-snap-2-8-ui/3177)|[CLI](/t/ubuntu-kernels-snap-2-9-cli/3178) ~ UI|
-|Packages|[CLI](/t/ubuntu-kernels-deb-2-7-cli/3180) ~ [UI](/t/ubuntu-kernels-deb-2-7-ui/3181)|[CLI](/t/ubuntu-kernels-deb-2-8-cli/3182) ~ [UI](/t/ubuntu-kernels-deb-2-8-ui/3183)|[CLI](/t/ubuntu-kernels-deb-2-9-cli/3184) ~ [UI](/t/ubuntu-kernels-deb-2-9-ui/3185)|
+|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ UI|
+|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  snap-2-9-ui -->
 
 MAAS supports four types of kernels for its Ubuntu machines.

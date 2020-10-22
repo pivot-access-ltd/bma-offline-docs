@@ -1,83 +1,83 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup-snap-2-7-cli/2334) ~ [UI](/t/backup-snap-2-7-ui/2335)|[CLI](/t/backup-snap-2-8-cli/2336) ~ [UI](/t/backup-snap-2-8-ui/2337)|[CLI](/t/backup-snap-2-9-cli/2338) ~ [UI](/t/backup-snap-2-9-ui/2339)|
-|Packages|CLI ~ [UI](/t/backup-deb-2-7-ui/2341)|[CLI](/t/backup-deb-2-8-cli/2342) ~ [UI](/t/backup-deb-2-8-ui/2343)|[CLI](/t/backup-deb-2-9-cli/2344) ~ [UI](/t/backup-deb-2-9-ui/2345)|
+|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
+|Packages|CLI ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup-snap-2-7-cli/2334) ~ [UI](/t/backup-snap-2-7-ui/2335)|[CLI](/t/backup-snap-2-8-cli/2336) ~ [UI](/t/backup-snap-2-8-ui/2337)|[CLI](/t/backup-snap-2-9-cli/2338) ~ [UI](/t/backup-snap-2-9-ui/2339)|
-|Packages|[CLI](/t/backup-deb-2-7-cli/2340) ~ UI|[CLI](/t/backup-deb-2-8-cli/2342) ~ [UI](/t/backup-deb-2-8-ui/2343)|[CLI](/t/backup-deb-2-9-cli/2344) ~ [UI](/t/backup-deb-2-9-ui/2345)|
+|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
+|Packages|[CLI](/t/backup/2340) ~ UI|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup-snap-2-7-cli/2334) ~ [UI](/t/backup-snap-2-7-ui/2335)|[CLI](/t/backup-snap-2-8-cli/2336) ~ [UI](/t/backup-snap-2-8-ui/2337)|[CLI](/t/backup-snap-2-9-cli/2338) ~ [UI](/t/backup-snap-2-9-ui/2339)|
-|Packages|[CLI](/t/backup-deb-2-7-cli/2340) ~ [UI](/t/backup-deb-2-7-ui/2341)|CLI ~ [UI](/t/backup-deb-2-8-ui/2343)|[CLI](/t/backup-deb-2-9-cli/2344) ~ [UI](/t/backup-deb-2-9-ui/2345)|
+|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
+|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|CLI ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup-snap-2-7-cli/2334) ~ [UI](/t/backup-snap-2-7-ui/2335)|[CLI](/t/backup-snap-2-8-cli/2336) ~ [UI](/t/backup-snap-2-8-ui/2337)|[CLI](/t/backup-snap-2-9-cli/2338) ~ [UI](/t/backup-snap-2-9-ui/2339)|
-|Packages|[CLI](/t/backup-deb-2-7-cli/2340) ~ [UI](/t/backup-deb-2-7-ui/2341)|[CLI](/t/backup-deb-2-8-cli/2342) ~ UI|[CLI](/t/backup-deb-2-9-cli/2344) ~ [UI](/t/backup-deb-2-9-ui/2345)|
+|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
+|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ UI|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup-snap-2-7-cli/2334) ~ [UI](/t/backup-snap-2-7-ui/2335)|[CLI](/t/backup-snap-2-8-cli/2336) ~ [UI](/t/backup-snap-2-8-ui/2337)|[CLI](/t/backup-snap-2-9-cli/2338) ~ [UI](/t/backup-snap-2-9-ui/2339)|
-|Packages|[CLI](/t/backup-deb-2-7-cli/2340) ~ [UI](/t/backup-deb-2-7-ui/2341)|[CLI](/t/backup-deb-2-8-cli/2342) ~ [UI](/t/backup-deb-2-8-ui/2343)|CLI ~ [UI](/t/backup-deb-2-9-ui/2345)|
+|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
+|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|CLI ~ [UI](/t/backup/2345)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup-snap-2-7-cli/2334) ~ [UI](/t/backup-snap-2-7-ui/2335)|[CLI](/t/backup-snap-2-8-cli/2336) ~ [UI](/t/backup-snap-2-8-ui/2337)|[CLI](/t/backup-snap-2-9-cli/2338) ~ [UI](/t/backup-snap-2-9-ui/2339)|
-|Packages|[CLI](/t/backup-deb-2-7-cli/2340) ~ [UI](/t/backup-deb-2-7-ui/2341)|[CLI](/t/backup-deb-2-8-cli/2342) ~ [UI](/t/backup-deb-2-8-ui/2343)|[CLI](/t/backup-deb-2-9-cli/2344) ~ UI|
+|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
+|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/backup-snap-2-7-ui/2335)|[CLI](/t/backup-snap-2-8-cli/2336) ~ [UI](/t/backup-snap-2-8-ui/2337)|[CLI](/t/backup-snap-2-9-cli/2338) ~ [UI](/t/backup-snap-2-9-ui/2339)|
-|Packages|[CLI](/t/backup-deb-2-7-cli/2340) ~ [UI](/t/backup-deb-2-7-ui/2341)|[CLI](/t/backup-deb-2-8-cli/2342) ~ [UI](/t/backup-deb-2-8-ui/2343)|[CLI](/t/backup-deb-2-9-cli/2344) ~ [UI](/t/backup-deb-2-9-ui/2345)|
+|Snap|CLI ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
+|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup-snap-2-7-cli/2334) ~ UI|[CLI](/t/backup-snap-2-8-cli/2336) ~ [UI](/t/backup-snap-2-8-ui/2337)|[CLI](/t/backup-snap-2-9-cli/2338) ~ [UI](/t/backup-snap-2-9-ui/2339)|
-|Packages|[CLI](/t/backup-deb-2-7-cli/2340) ~ [UI](/t/backup-deb-2-7-ui/2341)|[CLI](/t/backup-deb-2-8-cli/2342) ~ [UI](/t/backup-deb-2-8-ui/2343)|[CLI](/t/backup-deb-2-9-cli/2344) ~ [UI](/t/backup-deb-2-9-ui/2345)|
+|Snap|[CLI](/t/backup/2334) ~ UI|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
+|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  snap-2-7-ui -->
 
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup-snap-2-7-cli/2334) ~ [UI](/t/backup-snap-2-7-ui/2335)|CLI ~ [UI](/t/backup-snap-2-8-ui/2337)|[CLI](/t/backup-snap-2-9-cli/2338) ~ [UI](/t/backup-snap-2-9-ui/2339)|
-|Packages|[CLI](/t/backup-deb-2-7-cli/2340) ~ [UI](/t/backup-deb-2-7-ui/2341)|[CLI](/t/backup-deb-2-8-cli/2342) ~ [UI](/t/backup-deb-2-8-ui/2343)|[CLI](/t/backup-deb-2-9-cli/2344) ~ [UI](/t/backup-deb-2-9-ui/2345)|
+|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|CLI ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
+|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
 
 <!-- snap-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup-snap-2-7-cli/2334) ~ [UI](/t/backup-snap-2-7-ui/2335)|[CLI](/t/backup-snap-2-8-cli/2336) ~ UI|[CLI](/t/backup-snap-2-9-cli/2338) ~ [UI](/t/backup-snap-2-9-ui/2339)|
-|Packages|[CLI](/t/backup-deb-2-7-cli/2340) ~ [UI](/t/backup-deb-2-7-ui/2341)|[CLI](/t/backup-deb-2-8-cli/2342) ~ [UI](/t/backup-deb-2-8-ui/2343)|[CLI](/t/backup-deb-2-9-cli/2344) ~ [UI](/t/backup-deb-2-9-ui/2345)|
+|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ UI|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
+|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup-snap-2-7-cli/2334) ~ [UI](/t/backup-snap-2-7-ui/2335)|[CLI](/t/backup-snap-2-8-cli/2336) ~ [UI](/t/backup-snap-2-8-ui/2337)|CLI ~ [UI](/t/backup-snap-2-9-ui/2339)|
-|Packages|[CLI](/t/backup-deb-2-7-cli/2340) ~ [UI](/t/backup-deb-2-7-ui/2341)|[CLI](/t/backup-deb-2-8-cli/2342) ~ [UI](/t/backup-deb-2-8-ui/2343)|[CLI](/t/backup-deb-2-9-cli/2344) ~ [UI](/t/backup-deb-2-9-ui/2345)|
+|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|CLI ~ [UI](/t/backup/2339)|
+|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup-snap-2-7-cli/2334) ~ [UI](/t/backup-snap-2-7-ui/2335)|[CLI](/t/backup-snap-2-8-cli/2336) ~ [UI](/t/backup-snap-2-8-ui/2337)|[CLI](/t/backup-snap-2-9-cli/2338) ~ UI|
-|Packages|[CLI](/t/backup-deb-2-7-cli/2340) ~ [UI](/t/backup-deb-2-7-ui/2341)|[CLI](/t/backup-deb-2-8-cli/2342) ~ [UI](/t/backup-deb-2-8-ui/2343)|[CLI](/t/backup-deb-2-9-cli/2344) ~ [UI](/t/backup-deb-2-9-ui/2345)|
+|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ UI|
+|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  snap-2-9-ui -->
 
 MAAS currently does not provide specific tools to back up and restore a working MAAS configuration. MAAS servers are part of your data centre, just like other Linux-based servers, so your current backup and disaster recovery solution should be sufficient to back up your MAAS environment.  Even so, you should know which files and actions are critical -- to ensure that you get a clean backup, and further ensure that you can restore it cleanly.

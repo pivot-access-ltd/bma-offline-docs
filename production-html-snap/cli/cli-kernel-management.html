@@ -22,13 +22,13 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../ui/cli-kernel-management.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	<a href="../ui/cli-kernel-management.html">
 	  &nbsp;UI-only&nbsp;
 	</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <strong>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
 	  CLI-only
-      </strong>
+      </span>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
@@ -449,9 +449,8 @@
 <pre><code class="bash">maas $PROFILE maas set-config name=default_min_hwe_kernel value=ga-16.04
 </code></pre>
 
-<p>[note]
-The command option <code>default_min_hwe_kernel</code> appears to apply to only HWE kernels but this is not the case.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+The command option <code>default_min_hwe_kernel</code> appears to apply to only HWE kernels but this is not the case.</p>
 <h2 id="heading--set-a-minimum-deploy-kernel-for-a-machine">Set a minimum deploy kernel for a machine</h2>
 
 <p>To set the minimum deploy kernel on a per-machine basis:</p>
@@ -462,9 +461,8 @@ The command option <code>default_min_hwe_kernel</code> appears to apply to only 
 <pre><code class="bash">maas $PROFILE machine update $SYSTEM_ID min_hwe_kernel=hwe-16.04
 </code></pre>
 
-<p>[note]
-The command option <code>default_min_hwe_kernel</code> appears to apply to only HWE kernels but this is not the case.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+The command option <code>default_min_hwe_kernel</code> appears to apply to only HWE kernels but this is not the case.</p>
 <h2 id="heading--set-a-specific-kernel-during-machine-deployment">Set a specific kernel during machine deployment</h2>
 
 <p>To set a specific kernel during the deployment of a machine:</p>
@@ -476,9 +474,8 @@ The command option <code>default_min_hwe_kernel</code> appears to apply to only 
 <pre><code class="bash">maas $PROFILE machine deploy $SYSTEM_ID distro_series=xenial hwe_kernel=hwe-16.04-edge
 </code></pre>
 
-<p>[note]
-The command option <code>hwe_kernel</code> appears to apply to only HWE kernels but this is not the case.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+The command option <code>hwe_kernel</code> appears to apply to only HWE kernels but this is not the case.</p>
 <!-- LINKS -->
     </div>
   </body>

@@ -22,13 +22,13 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../ui/maas-cli.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	<a href="../ui/maas-cli.html">
 	  &nbsp;UI-only&nbsp;
 	</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <strong>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
 	  CLI-only
-      </strong>
+      </span>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
@@ -460,9 +460,8 @@
 <pre><code class="bash">sudo maas-region apikey --username=$PROFILE &gt; $API_KEY_FILE
 </code></pre>
 
-<p>[note]
-You can obtain a user&rsquo;s API key from the web interface. Click on &lsquo;username&rsquo; in the top right corner, and select &lsquo;Account&rsquo;.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+You can obtain a user&rsquo;s API key from the web interface. Click on &lsquo;username&rsquo; in the top right corner, and select &lsquo;Account&rsquo;.</p>
 <p>Log in. MAAS will prompt you for the API key:</p>
 <pre><code class="bash">maas login $PROFILE $MAAS_URL
 </code></pre>

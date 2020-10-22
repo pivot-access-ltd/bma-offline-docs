@@ -1,85 +1,85 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|CLI ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
+|Snap|[CLI](/t/user-accounts/3198) ~ [UI](/t/user-accounts/3199)|[CLI](/t/user-accounts/3200) ~ [UI](/t/user-accounts/3201)|[CLI](/t/user-accounts/3202) ~ [UI](/t/user-accounts/3203)|
+|Packages|CLI ~ [UI](/t/user-accounts/3205)|[CLI](/t/user-accounts/3206) ~ [UI](/t/user-accounts/3207)|[CLI](/t/user-accounts/3208) ~ [UI](/t/user-accounts/3209)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ UI|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
+|Snap|[CLI](/t/user-accounts/3198) ~ [UI](/t/user-accounts/3199)|[CLI](/t/user-accounts/3200) ~ [UI](/t/user-accounts/3201)|[CLI](/t/user-accounts/3202) ~ [UI](/t/user-accounts/3203)|
+|Packages|[CLI](/t/user-accounts/3204) ~ UI|[CLI](/t/user-accounts/3206) ~ [UI](/t/user-accounts/3207)|[CLI](/t/user-accounts/3208) ~ [UI](/t/user-accounts/3209)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|CLI ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
+|Snap|[CLI](/t/user-accounts/3198) ~ [UI](/t/user-accounts/3199)|[CLI](/t/user-accounts/3200) ~ [UI](/t/user-accounts/3201)|[CLI](/t/user-accounts/3202) ~ [UI](/t/user-accounts/3203)|
+|Packages|[CLI](/t/user-accounts/3204) ~ [UI](/t/user-accounts/3205)|CLI ~ [UI](/t/user-accounts/3207)|[CLI](/t/user-accounts/3208) ~ [UI](/t/user-accounts/3209)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ UI|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
+|Snap|[CLI](/t/user-accounts/3198) ~ [UI](/t/user-accounts/3199)|[CLI](/t/user-accounts/3200) ~ [UI](/t/user-accounts/3201)|[CLI](/t/user-accounts/3202) ~ [UI](/t/user-accounts/3203)|
+|Packages|[CLI](/t/user-accounts/3204) ~ [UI](/t/user-accounts/3205)|[CLI](/t/user-accounts/3206) ~ UI|[CLI](/t/user-accounts/3208) ~ [UI](/t/user-accounts/3209)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|CLI ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
+|Snap|[CLI](/t/user-accounts/3198) ~ [UI](/t/user-accounts/3199)|[CLI](/t/user-accounts/3200) ~ [UI](/t/user-accounts/3201)|[CLI](/t/user-accounts/3202) ~ [UI](/t/user-accounts/3203)|
+|Packages|[CLI](/t/user-accounts/3204) ~ [UI](/t/user-accounts/3205)|[CLI](/t/user-accounts/3206) ~ [UI](/t/user-accounts/3207)|CLI ~ [UI](/t/user-accounts/3209)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ UI|
+|Snap|[CLI](/t/user-accounts/3198) ~ [UI](/t/user-accounts/3199)|[CLI](/t/user-accounts/3200) ~ [UI](/t/user-accounts/3201)|[CLI](/t/user-accounts/3202) ~ [UI](/t/user-accounts/3203)|
+|Packages|[CLI](/t/user-accounts/3204) ~ [UI](/t/user-accounts/3205)|[CLI](/t/user-accounts/3206) ~ [UI](/t/user-accounts/3207)|[CLI](/t/user-accounts/3208) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
+|Snap|CLI ~ [UI](/t/user-accounts/3199)|[CLI](/t/user-accounts/3200) ~ [UI](/t/user-accounts/3201)|[CLI](/t/user-accounts/3202) ~ [UI](/t/user-accounts/3203)|
+|Packages|[CLI](/t/user-accounts/3204) ~ [UI](/t/user-accounts/3205)|[CLI](/t/user-accounts/3206) ~ [UI](/t/user-accounts/3207)|[CLI](/t/user-accounts/3208) ~ [UI](/t/user-accounts/3209)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ UI|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
+|Snap|[CLI](/t/user-accounts/3198) ~ UI|[CLI](/t/user-accounts/3200) ~ [UI](/t/user-accounts/3201)|[CLI](/t/user-accounts/3202) ~ [UI](/t/user-accounts/3203)|
+|Packages|[CLI](/t/user-accounts/3204) ~ [UI](/t/user-accounts/3205)|[CLI](/t/user-accounts/3206) ~ [UI](/t/user-accounts/3207)|[CLI](/t/user-accounts/3208) ~ [UI](/t/user-accounts/3209)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|CLI ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
+|Snap|[CLI](/t/user-accounts/3198) ~ [UI](/t/user-accounts/3199)|CLI ~ [UI](/t/user-accounts/3201)|[CLI](/t/user-accounts/3202) ~ [UI](/t/user-accounts/3203)|
+|Packages|[CLI](/t/user-accounts/3204) ~ [UI](/t/user-accounts/3205)|[CLI](/t/user-accounts/3206) ~ [UI](/t/user-accounts/3207)|[CLI](/t/user-accounts/3208) ~ [UI](/t/user-accounts/3209)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ UI|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
+|Snap|[CLI](/t/user-accounts/3198) ~ [UI](/t/user-accounts/3199)|[CLI](/t/user-accounts/3200) ~ UI|[CLI](/t/user-accounts/3202) ~ [UI](/t/user-accounts/3203)|
+|Packages|[CLI](/t/user-accounts/3204) ~ [UI](/t/user-accounts/3205)|[CLI](/t/user-accounts/3206) ~ [UI](/t/user-accounts/3207)|[CLI](/t/user-accounts/3208) ~ [UI](/t/user-accounts/3209)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|CLI ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
+|Snap|[CLI](/t/user-accounts/3198) ~ [UI](/t/user-accounts/3199)|[CLI](/t/user-accounts/3200) ~ [UI](/t/user-accounts/3201)|CLI ~ [UI](/t/user-accounts/3203)|
+|Packages|[CLI](/t/user-accounts/3204) ~ [UI](/t/user-accounts/3205)|[CLI](/t/user-accounts/3206) ~ [UI](/t/user-accounts/3207)|[CLI](/t/user-accounts/3208) ~ [UI](/t/user-accounts/3209)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ UI|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
+|Snap|[CLI](/t/user-accounts/3198) ~ [UI](/t/user-accounts/3199)|[CLI](/t/user-accounts/3200) ~ [UI](/t/user-accounts/3201)|[CLI](/t/user-accounts/3202) ~ UI|
+|Packages|[CLI](/t/user-accounts/3204) ~ [UI](/t/user-accounts/3205)|[CLI](/t/user-accounts/3206) ~ [UI](/t/user-accounts/3207)|[CLI](/t/user-accounts/3208) ~ [UI](/t/user-accounts/3209)|
  snap-2-9-ui -->
 
 Presumably, you have already created an administrative user, but MAAS can also have regular users (who log in to the interface or use the CLI). What users you create depends on how you intend to use MAAS.  An administrator can manage all aspects of MAAS, whereas a non-administrator user can perform a subset of tasks on machines they acquire and deploy.  MAAS limits the details a non-admin user can view, such as nodes allocated to other users. Also, non-admin users cannot access the global settings page in the web UI, nor any of the equivalent API calls from the command line.

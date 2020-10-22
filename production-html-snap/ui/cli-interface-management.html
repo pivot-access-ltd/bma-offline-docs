@@ -22,11 +22,11 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <strong>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
 	  UI-only
-      </strong>
+      </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/cli-interface-management.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	<a href="../cli/cli-interface-management.html">
 	  CLI-only
 	</a>
     </div>
@@ -501,9 +501,8 @@ parent=$IFACE_ID
 Machine-readable output follows:
 </code></pre>
 
-<p>[note]
-There is no machine-readable output after the successful execution of the delete command.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+There is no machine-readable output after the successful execution of the delete command.</p>
 <h2 id="heading--create-a-vlan-interface">Create a VLAN interface</h2>
 
 <p>To create a VLAN interface, use the following syntax:</p>
@@ -539,9 +538,8 @@ Machine-readable output follows:
 parent=$IFACE_ID
 </code></pre>
 
-<p>[note]
-<strong>OUTPUT_VLAN_ID</strong> corresponds to the id value output when MAAS created the VLAN.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+<strong>OUTPUT_VLAN_ID</strong> corresponds to the id value output when MAAS created the VLAN.</p>
 <p>The following example contains values that correspond to the output above:</p>
 <pre><code class="bash">maas admin interfaces create-vlan 4efwb4 vlan=5004 parent=4
 </code></pre>

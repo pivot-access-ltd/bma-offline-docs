@@ -1,85 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|CLI ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ UI|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|CLI ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ UI|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|CLI ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ UI|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|CLI ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ UI|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|CLI ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ UI|
-|Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|
  snap-2-9-ui -->
 
 Presumably, you have already created an administrative user, but MAAS can also have regular users (who log in to the interface or use the CLI). What users you create depends on how you intend to use MAAS.  An administrator can manage all aspects of MAAS, whereas a non-administrator user can perform a subset of tasks on machines they acquire and deploy.  MAAS limits the details a non-admin user can view, such as nodes allocated to other users. Also, non-admin users cannot access the global settings page in the web UI, nor any of the equivalent API calls from the command line.
@@ -99,9 +51,9 @@ You can manage user accounts from the 'Users' tab of the 'Settings' page.
 
 <a href="https://assets.ubuntu.com/v1/76402e4b-manage-user-accounts__2.4_current-users.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/76402e4b-manage-user-accounts__2.4_current-users.png"></a>
 
-[note]
+<strong>NOTE:</strong> 
 A currently logged in user cannot delete themselves from the web UI.
-[/note]
+
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
@@ -157,75 +109,75 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 Before a user can deploy a machine, they must import at least one public SSH key into MAAS. This key allows the user to access the deployed machine with the corresponding private key, which the user must possess. See [Public key authentication](https://www.ssh.com/ssh/public-key-authentication) (ssh.com) if you're not familiar with SSH keys.
 
 <!-- deb-2-7-cli
-[note]
+<strong>NOTE:</strong> 
 The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2532)).
-[/note]
+
 deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-[note]
+<strong>NOTE:</strong> 
 The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2533)).
-[/note]
+
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-[note]
+<strong>NOTE:</strong> 
 The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2534)).
-[/note]
+
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-[note]
+<strong>NOTE:</strong> 
 The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2535)).
-[/note]
+
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-[note]
+<strong>NOTE:</strong> 
 The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2536)).
-[/note]
+
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-[note]
+<strong>NOTE:</strong> 
 The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2537)).
-[/note]
+
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-[note]
+<strong>NOTE:</strong> 
 The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2526)).
-[/note]
+
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-[note]
+<strong>NOTE:</strong> 
 The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2527)).
-[/note]
+
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-[note]
+<strong>NOTE:</strong> 
 The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2528)).
-[/note]
+
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-[note]
+<strong>NOTE:</strong> 
 The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2529)).
-[/note]
+
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-[note]
+<strong>NOTE:</strong> 
 The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2530)).
-[/note]
+
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-[note]
+<strong>NOTE:</strong> 
 The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2531)).
-[/note]
+
  snap-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
@@ -265,8 +217,8 @@ The current user can change their password at the bottom of the page by entering
 
 <a href="https://assets.ubuntu.com/v1/289ef578-manage-user-accounts__2.4_change-user-password.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/289ef578-manage-user-accounts__2.4_change-user-password.png"></a>
 
-[note]
+<strong>NOTE:</strong> 
 An administrator can change any user's password from within the 'Users' tab of the 'Settings' page.
-[/note]
+
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 

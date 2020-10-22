@@ -116,9 +116,9 @@ mkdir xenial
 sudo tar -C xenial -xpSf xenial-server-cloudimg-amd64-root.tar.gz --numeric-owner --xattrs "--xattrs-include=*"
 ```
 
-[note]
+<strong>NOTE:</strong> 
 `sudo` is required when extracting the image filesystem and when making changes to the files extracted from the image filesystem.
-[/note]
+
 
 <h3 id="heading--generate-password-hash">Generate password hash</h3>
 

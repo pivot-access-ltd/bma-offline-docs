@@ -1,85 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores-snap-2-7-cli/3246) ~ [UI](/t/vmware-vmfs-datastores-snap-2-7-ui/3247)|[CLI](/t/vmware-vmfs-datastores-snap-2-8-cli/3248) ~ [UI](/t/vmware-vmfs-datastores-snap-2-8-ui/3249)|[CLI](/t/vmware-vmfs-datastores-snap-2-9-cli/3250) ~ [UI](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)|
-|Packages|CLI ~ [UI](/t/vmware-vmfs-datastores-deb-2-7-ui/3253)|[CLI](/t/vmware-vmfs-datastores-deb-2-8-cli/3254) ~ [UI](/t/vmware-vmfs-datastores-deb-2-8-ui/3255)|[CLI](/t/vmware-vmfs-datastores-deb-2-9-cli/3256) ~ [UI](/t/vmware-vmfs-datastores-deb-2-9-ui/3257)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores-snap-2-7-cli/3246) ~ [UI](/t/vmware-vmfs-datastores-snap-2-7-ui/3247)|[CLI](/t/vmware-vmfs-datastores-snap-2-8-cli/3248) ~ [UI](/t/vmware-vmfs-datastores-snap-2-8-ui/3249)|[CLI](/t/vmware-vmfs-datastores-snap-2-9-cli/3250) ~ [UI](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores-deb-2-7-cli/3252) ~ UI|[CLI](/t/vmware-vmfs-datastores-deb-2-8-cli/3254) ~ [UI](/t/vmware-vmfs-datastores-deb-2-8-ui/3255)|[CLI](/t/vmware-vmfs-datastores-deb-2-9-cli/3256) ~ [UI](/t/vmware-vmfs-datastores-deb-2-9-ui/3257)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores-snap-2-7-cli/3246) ~ [UI](/t/vmware-vmfs-datastores-snap-2-7-ui/3247)|[CLI](/t/vmware-vmfs-datastores-snap-2-8-cli/3248) ~ [UI](/t/vmware-vmfs-datastores-snap-2-8-ui/3249)|[CLI](/t/vmware-vmfs-datastores-snap-2-9-cli/3250) ~ [UI](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores-deb-2-7-cli/3252) ~ [UI](/t/vmware-vmfs-datastores-deb-2-7-ui/3253)|CLI ~ [UI](/t/vmware-vmfs-datastores-deb-2-8-ui/3255)|[CLI](/t/vmware-vmfs-datastores-deb-2-9-cli/3256) ~ [UI](/t/vmware-vmfs-datastores-deb-2-9-ui/3257)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores-snap-2-7-cli/3246) ~ [UI](/t/vmware-vmfs-datastores-snap-2-7-ui/3247)|[CLI](/t/vmware-vmfs-datastores-snap-2-8-cli/3248) ~ [UI](/t/vmware-vmfs-datastores-snap-2-8-ui/3249)|[CLI](/t/vmware-vmfs-datastores-snap-2-9-cli/3250) ~ [UI](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores-deb-2-7-cli/3252) ~ [UI](/t/vmware-vmfs-datastores-deb-2-7-ui/3253)|[CLI](/t/vmware-vmfs-datastores-deb-2-8-cli/3254) ~ UI|[CLI](/t/vmware-vmfs-datastores-deb-2-9-cli/3256) ~ [UI](/t/vmware-vmfs-datastores-deb-2-9-ui/3257)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores-snap-2-7-cli/3246) ~ [UI](/t/vmware-vmfs-datastores-snap-2-7-ui/3247)|[CLI](/t/vmware-vmfs-datastores-snap-2-8-cli/3248) ~ [UI](/t/vmware-vmfs-datastores-snap-2-8-ui/3249)|[CLI](/t/vmware-vmfs-datastores-snap-2-9-cli/3250) ~ [UI](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores-deb-2-7-cli/3252) ~ [UI](/t/vmware-vmfs-datastores-deb-2-7-ui/3253)|[CLI](/t/vmware-vmfs-datastores-deb-2-8-cli/3254) ~ [UI](/t/vmware-vmfs-datastores-deb-2-8-ui/3255)|CLI ~ [UI](/t/vmware-vmfs-datastores-deb-2-9-ui/3257)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores-snap-2-7-cli/3246) ~ [UI](/t/vmware-vmfs-datastores-snap-2-7-ui/3247)|[CLI](/t/vmware-vmfs-datastores-snap-2-8-cli/3248) ~ [UI](/t/vmware-vmfs-datastores-snap-2-8-ui/3249)|[CLI](/t/vmware-vmfs-datastores-snap-2-9-cli/3250) ~ [UI](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores-deb-2-7-cli/3252) ~ [UI](/t/vmware-vmfs-datastores-deb-2-7-ui/3253)|[CLI](/t/vmware-vmfs-datastores-deb-2-8-cli/3254) ~ [UI](/t/vmware-vmfs-datastores-deb-2-8-ui/3255)|[CLI](/t/vmware-vmfs-datastores-deb-2-9-cli/3256) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/vmware-vmfs-datastores-snap-2-7-ui/3247)|[CLI](/t/vmware-vmfs-datastores-snap-2-8-cli/3248) ~ [UI](/t/vmware-vmfs-datastores-snap-2-8-ui/3249)|[CLI](/t/vmware-vmfs-datastores-snap-2-9-cli/3250) ~ [UI](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores-deb-2-7-cli/3252) ~ [UI](/t/vmware-vmfs-datastores-deb-2-7-ui/3253)|[CLI](/t/vmware-vmfs-datastores-deb-2-8-cli/3254) ~ [UI](/t/vmware-vmfs-datastores-deb-2-8-ui/3255)|[CLI](/t/vmware-vmfs-datastores-deb-2-9-cli/3256) ~ [UI](/t/vmware-vmfs-datastores-deb-2-9-ui/3257)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores-snap-2-7-cli/3246) ~ UI|[CLI](/t/vmware-vmfs-datastores-snap-2-8-cli/3248) ~ [UI](/t/vmware-vmfs-datastores-snap-2-8-ui/3249)|[CLI](/t/vmware-vmfs-datastores-snap-2-9-cli/3250) ~ [UI](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores-deb-2-7-cli/3252) ~ [UI](/t/vmware-vmfs-datastores-deb-2-7-ui/3253)|[CLI](/t/vmware-vmfs-datastores-deb-2-8-cli/3254) ~ [UI](/t/vmware-vmfs-datastores-deb-2-8-ui/3255)|[CLI](/t/vmware-vmfs-datastores-deb-2-9-cli/3256) ~ [UI](/t/vmware-vmfs-datastores-deb-2-9-ui/3257)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores-snap-2-7-cli/3246) ~ [UI](/t/vmware-vmfs-datastores-snap-2-7-ui/3247)|CLI ~ [UI](/t/vmware-vmfs-datastores-snap-2-8-ui/3249)|[CLI](/t/vmware-vmfs-datastores-snap-2-9-cli/3250) ~ [UI](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores-deb-2-7-cli/3252) ~ [UI](/t/vmware-vmfs-datastores-deb-2-7-ui/3253)|[CLI](/t/vmware-vmfs-datastores-deb-2-8-cli/3254) ~ [UI](/t/vmware-vmfs-datastores-deb-2-8-ui/3255)|[CLI](/t/vmware-vmfs-datastores-deb-2-9-cli/3256) ~ [UI](/t/vmware-vmfs-datastores-deb-2-9-ui/3257)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores-snap-2-7-cli/3246) ~ [UI](/t/vmware-vmfs-datastores-snap-2-7-ui/3247)|[CLI](/t/vmware-vmfs-datastores-snap-2-8-cli/3248) ~ UI|[CLI](/t/vmware-vmfs-datastores-snap-2-9-cli/3250) ~ [UI](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores-deb-2-7-cli/3252) ~ [UI](/t/vmware-vmfs-datastores-deb-2-7-ui/3253)|[CLI](/t/vmware-vmfs-datastores-deb-2-8-cli/3254) ~ [UI](/t/vmware-vmfs-datastores-deb-2-8-ui/3255)|[CLI](/t/vmware-vmfs-datastores-deb-2-9-cli/3256) ~ [UI](/t/vmware-vmfs-datastores-deb-2-9-ui/3257)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores-snap-2-7-cli/3246) ~ [UI](/t/vmware-vmfs-datastores-snap-2-7-ui/3247)|[CLI](/t/vmware-vmfs-datastores-snap-2-8-cli/3248) ~ [UI](/t/vmware-vmfs-datastores-snap-2-8-ui/3249)|CLI ~ [UI](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores-deb-2-7-cli/3252) ~ [UI](/t/vmware-vmfs-datastores-deb-2-7-ui/3253)|[CLI](/t/vmware-vmfs-datastores-deb-2-8-cli/3254) ~ [UI](/t/vmware-vmfs-datastores-deb-2-8-ui/3255)|[CLI](/t/vmware-vmfs-datastores-deb-2-9-cli/3256) ~ [UI](/t/vmware-vmfs-datastores-deb-2-9-ui/3257)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores-snap-2-7-cli/3246) ~ [UI](/t/vmware-vmfs-datastores-snap-2-7-ui/3247)|[CLI](/t/vmware-vmfs-datastores-snap-2-8-cli/3248) ~ [UI](/t/vmware-vmfs-datastores-snap-2-8-ui/3249)|[CLI](/t/vmware-vmfs-datastores-snap-2-9-cli/3250) ~ UI|
-|Packages|[CLI](/t/vmware-vmfs-datastores-deb-2-7-cli/3252) ~ [UI](/t/vmware-vmfs-datastores-deb-2-7-ui/3253)|[CLI](/t/vmware-vmfs-datastores-deb-2-8-cli/3254) ~ [UI](/t/vmware-vmfs-datastores-deb-2-8-ui/3255)|[CLI](/t/vmware-vmfs-datastores-deb-2-9-cli/3256) ~ [UI](/t/vmware-vmfs-datastores-deb-2-9-ui/3257)|
  snap-2-9-ui -->
 
 <!-- deb-2-7-cli

@@ -452,9 +452,9 @@ To deploy a rack controller, users can do so via the API (or CLI), e.g:
 maas $PROFILE machine deploy $SYSTEM_ID install_rackd=True
 ```
 
-[note]
+<strong>NOTE:</strong> 
 This features makes use of the MAAS snap to configure the rack controller on the deployed machine. 'snap store' mirrors are not yet available, which means the machine will need access to the internet.
-[/note]
+
 
 <h3 id="heading--improved-dns-reloading">Improved DNS reloading</h3>
 
@@ -835,9 +835,9 @@ Starting with Ubuntu 16.04 LTS, low latency kernels are available on i386 and am
 -   ga-16.04-lowlatency: the low latency GA kernel for Xenial
 -   hwe-16.04-lowlatency: the low latency HWE kernel for Xenial
 
-[note]
+<strong>NOTE:</strong> 
 As time of writing, the last 2 kernels are the same.
-[/note]
+
 
 <h3 id="heading--bootloaders-are-now-provided-in-the-image-stream">Bootloaders are now provided in the image stream</h3>
 

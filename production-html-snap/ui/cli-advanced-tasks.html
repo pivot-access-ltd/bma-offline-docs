@@ -22,11 +22,11 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <strong>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
 	  UI-only
-      </strong>
+      </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/cli-advanced-tasks.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	<a href="../cli/cli-advanced-tasks.html">
 	  CLI-only
 	</a>
     </div>
@@ -495,9 +495,8 @@
 {&quot;hostname&quot;:&quot;machine3&quot;,&quot;system_id&quot;:&quot;qwkmar&quot;,&quot;status&quot;:4}
 </code></pre>
 
-<p>[note]
-You can only edit an interface when the corresponding machine has a status of &lsquo;Ready&rsquo;. This state is numerically denoted by the integer &lsquo;4&rsquo;.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+You can only edit an interface when the corresponding machine has a status of &lsquo;Ready&rsquo;. This state is numerically denoted by the integer &lsquo;4&rsquo;.</p>
 <p>List some information for all interfaces on the machine in question (identified by its system id &lsquo;dfgnnd&rsquo;):</p>
 <pre><code class="bash">maas $PROFILE interfaces read dfgnnd | jq &quot;.[] | \
     {id:.id, name:.name, mac:.mac_address, vid:.vlan.vid, fabric:.vlan.fabric}&quot; --compact-output
@@ -543,9 +542,8 @@ You can only edit an interface when the corresponding machine has a status of &l
 <pre><code class="bash">maas $PROFILE maas set-config name=default_storage_layout value=flat
 </code></pre>
 
-<p>[note type=&rdquo;caution&rdquo; status=&rdquo;Important&rdquo;]
-The new default will only apply to newly-commissioned machines.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+The new default will only apply to newly-commissioned machines.</p>
 <p>See <a href="storage.html">Storage</a> for more details on MAAS storage features.</p>
 <h2 id="heading--set-a-storage-layout">Set a storage layout</h2>
 
@@ -558,9 +556,8 @@ The new default will only apply to newly-commissioned machines.
 </code></pre>
 
 <p>You must specify all storage sizes in bytes.</p>
-<p>[note type=&rdquo;caution&rdquo;]
-This action will remove the configuration that may exist on any block device.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+This action will remove the configuration that may exist on any block device.</p>
 <h2 id="heading--create-an-a-or-aaaa-record-in-dns">Create an A or AAAA record in DNS</h2>
 
 <p>An administrator can create an A record when creating a DNS resource with an IPv4 address.</p>

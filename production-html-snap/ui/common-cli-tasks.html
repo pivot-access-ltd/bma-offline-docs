@@ -22,11 +22,11 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <strong>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
 	  UI-only
-      </strong>
+      </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/common-cli-tasks.html" style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	<a href="../cli/common-cli-tasks.html">
 	  CLI-only
 	</a>
     </div>
@@ -484,9 +484,8 @@
 <pre><code class="bash">maas $PROFILE machine commission $SYSTEM_ID
 </code></pre>
 
-<p>[note]
-To commission a machines, it must have a status of &lsquo;New&rsquo;.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+To commission a machines, it must have a status of &lsquo;New&rsquo;.</p>
 <p>To commission all machines in the &lsquo;New&rsquo; state:</p>
 <pre><code class="bash">maas $PROFILE machines accept-all
 </code></pre>
@@ -525,9 +524,8 @@ To commission a machines, it must have a status of &lsquo;New&rsquo;.
 <pre><code class="bash">maas $PROFILE machines allocate system_id=$SYSTEM_ID
 </code></pre>
 
-<p>[note]
-To acquire a node, it must have a status of &lsquo;Ready&rsquo;.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+To acquire a node, it must have a status of &lsquo;Ready&rsquo;.</p>
 <h2 id="heading--deploy-a-node">Deploy a node</h2>
 
 <p>To deploy a node:</p>
@@ -538,9 +536,8 @@ To acquire a node, it must have a status of &lsquo;Ready&rsquo;.
 <pre><code class="bash">maas $PROFILE machine deploy $SYSTEM_ID install_kvm=True
 </code></pre>
 
-<p>[note]
-To deploy with the CLI, the node must have a status of &lsquo;Allocated&rsquo;. See &lsquo;Acquire a node&rsquo; above (or use the <a href="deploy-machines.html#acquire-nodes">web UI</a>).
-[/note]</p>
+<p><strong>NOTE:</strong> 
+To deploy with the CLI, the node must have a status of &lsquo;Allocated&rsquo;. See &lsquo;Acquire a node&rsquo; above (or use the <a href="deploy-machines.html#acquire-nodes">web UI</a>).</p>
 <p>See <a href="deploy-machines.html">Deploy nodes</a>.</p>
 <h2 id="heading--configure-deployment-timeout">Configure deployment timeout</h2>
 
@@ -604,9 +601,8 @@ To deploy with the CLI, the node must have a status of &lsquo;Allocated&rsquo;. 
 </code></pre>
 
 <p>You will also need to set a default gateway (see <a href="#heading--set-a-default-gateway">below</a>).</p>
-<p>[note]
-You must enable DHCP for PXE booting on the &lsquo;untagged&rsquo; VLAN.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+You must enable DHCP for PXE booting on the &lsquo;untagged&rsquo; VLAN.</p>
 <p>See <a href="managing-dhcp.html">DHCP</a> for more on this subject.</p>
 <h2 id="heading--set-a-dns-forwarder">Set a DNS forwarder</h2>
 
