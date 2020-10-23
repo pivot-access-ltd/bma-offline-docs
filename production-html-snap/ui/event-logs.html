@@ -459,8 +459,8 @@
 <!-- snap-2-8-ui
  snap-2-8-ui -->
 
-<!-- snap-2-9-ui
- snap-2-9-ui -->
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
 
 <p>The events log tracks the execution of state changes and basic configuration steps, serving as a timeline for your MAAS machines.  A simple view of the events log might look something like this:</p>
 <pre><code>  Time                          Event
@@ -473,22 +473,22 @@
   Sun, 04 Oct. 2020 23:09:53    Commissioning
 </code></pre>
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-To view the Events log (for a particular machine), select a machine from the machine list and choose the "Events" tab at the top of the screen:
+<p>To view the Events log (for a particular machine), select a machine from the machine list and choose the &ldquo;Events&rdquo; tab at the top of the screen:</p>
+<p><a href="images/45ad4b968f85ef38e875e6df03d9f832fc7d4743.png" target = "_blank"><img src="images/45ad4b968f85ef38e875e6df03d9f832fc7d4743.png"></a></a></p>
+<p>You can also see a more detailed view by selecting &ldquo;View full history&rdquo; in near the upper right of the log output.</p>
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+To view the raw Events log, enter the following command:
 
-<a href="images/45ad4b968f85ef38e875e6df03d9f832fc7d4743.png" target = "_blank"><img src="images/45ad4b968f85ef38e875e6df03d9f832fc7d4743.png"></a></a>
-
-You can also see a more detailed view by selecting "View full history" in near the upper right of the log output.
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
-
-<p>To view the raw Events log, enter the following command:</p>
 <pre><code>maas $PROFILE events query
 </code></pre>
 
-<p>You can tabulate the results, sorted by machine, with the following command:</p>
-<p>```
-maas admin events query | jq -r &lsquo;([&ldquo;HOSTNAME&rdquo;,&rdquo;TIMESTAMP&rdquo;,&rdquo;TYPE&rdquo;,&rdquo;DESCRIPTION&rdquo;] | (., map(length*&rdquo;-&ldquo;))),
-(.events[] | [.hostname, .created, .type, .description // &ldquo;-&ldquo;]) | @tsv&rsquo; | column -t -s $&rsquo;\t&rsquo;</p>
+
+You can tabulate the results, sorted by machine, with the following command:
+
+```
+maas admin events query | jq -r '(["HOSTNAME","TIMESTAMP","TYPE","DESCRIPTION"] | (., map(length*"-"))),
+(.events[] | [.hostname, .created, .type, .description // "-"]) | @tsv' | column -t -s $'\t'
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
     </div>
   </body>
 </html>

@@ -237,12 +237,7 @@ A default test will be selected (`smartctl-validate`, a hard drive test) but you
 
 The following hardware testing scripts can be selected from the web UI:
 
-<table style="width:17%;">
-<colgroup>
-<col width="5%" />
-<col width="5%" />
-<col width="5%" />
-</colgroup>
+<table style="width:100%;">
 <thead>
 <tr class="header">
 <th align="center">Name</th>

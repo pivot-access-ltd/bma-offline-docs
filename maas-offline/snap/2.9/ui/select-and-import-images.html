@@ -459,27 +459,21 @@
 <!-- snap-2-8-ui
  snap-2-8-ui -->
 
-<!-- snap-2-9-ui
- snap-2-9-ui -->
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
 
 <p>MAAS is only useful once it has images available to provision its nodes. Therefore, one key post-install task is to select and import images from the boot source. Once MAAS imports images, it will update them on an hourly basis, via a default synch mechanism.  This page explains how to select and import the images that MAAS requires to provision its nodes.</p>
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-
-#### Quick questions you may have:
-
-* [How do I import standard images from maas.io?](#heading--import-maasio-image-ui)
-* [How do I use other image mirrors to download images?](#heading--image-mirrors)
-* [How do I import and provision non-Ubuntu images?](#heading--other-images)
-
-Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](maas-image-builder.html).
-
+<h4>Quick questions you may have:</h4>
+<ul>
+<li><a href="#heading--import-maasio-image-ui">How do I import standard images from maas.io?</a></li>
+<li><a href="#heading--image-mirrors">How do I use other image mirrors to download images?</a></li>
+<li><a href="#heading--other-images">How do I import and provision non-Ubuntu images?</a></li>
+</ul>
+<p>Note that it is possible to build your own images in a limited sense: see <a href="maas-image-builder.html">MAAS Image Builder</a>.</p>
 <h2 id="heading--import-maasio-image-ui">Importing images from maas.io</h2>
 
-The 'Images' page shows what images and architectures have been selected and downloaded. By default, MAAS will automatically grab the most recent Ubuntu LTS releases (and amd64 architecture). Below, we have selected two additional releases:
-
-<a href="images/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png" target = "_blank"><img src="images/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png"></a></a>
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
-
+<p>The &lsquo;Images&rsquo; page shows what images and architectures have been selected and downloaded. By default, MAAS will automatically grab the most recent Ubuntu LTS releases (and amd64 architecture). Below, we have selected two additional releases:</p>
+<p><a href="images/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png" target = "_blank"><img src="images/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png"></a></a></p>
 <!-- deb-2-7-ui
 You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](images.html#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
  deb-2-7-ui -->
@@ -500,12 +494,7 @@ You can tell MAAS to sync images hourly, at the region level, using a toggle swi
 You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](images.html#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
  snap-2-8-ui -->
 
-<!-- snap-2-9-ui
-You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](images.html#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
- snap-2-9-ui -->
-
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
-
+<p>You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See <a href="images.html#boot-image-sources">Boot image sources</a>) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.</p>
 <p>Click the &lsquo;Save selection&rsquo; button to initiate the import. MAAS will present existing images along with the newly-selected ones. The latter will have their status updated as the import is processed:</p>
 <p><a href="images/f7daa92c97f1ada61c2172044d43856ed3e14b5f.png" target = "_blank"><img src="images/f7daa92c97f1ada61c2172044d43856ed3e14b5f.png"></a></a></p>
 <p>To remove an image, unselect it and click &lsquo;Save selection&rsquo;.</p>
@@ -513,8 +502,7 @@ You can tell MAAS to sync images hourly, at the region level, using a toggle swi
 
 <p>You can also host Ubuntu images on a mirror. Configure this mirror by selecting &lsquo;Custom&rsquo; beneath &lsquo;Choose source&rsquo;. Enter the mirror URL and click &lsquo;Connect&rsquo;.</p>
 <p>Advanced options, such as using a GPG key or keyring to validate the mirror path (snap installation location: /snap/maas/current/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg), are revealed by clicking &lsquo;Show advanced options&rsquo;:</p>
-<p><a href="images/dbe44a827e70e318a6139c3e335019a6a27c4374.png" target = "_blank"><img src="images/dbe44a827e70e318a6139c3e335019a6a27c4374.png"></a></a>
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui &ndash;&gt;</p>
+<p><a href="images/dbe44a827e70e318a6139c3e335019a6a27c4374.png" target = "_blank"><img src="images/dbe44a827e70e318a6139c3e335019a6a27c4374.png"></a></a></p>
 <!-- deb-2-7-cli
 Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](local-image-mirror.html) for instructions.
  deb-2-7-cli -->
@@ -555,19 +543,15 @@ Optionally, a local mirror can be set up as the boot source. MAAS will then use 
 Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](local-image-mirror.html) for instructions.
  snap-2-8-ui -->
 
-<p>Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See <a href="local-image-mirror.html">Local image mirror</a> for instructions.</p>
-<!-- snap-2-9-ui
+<!-- snap-2-9-cli
 Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](local-image-mirror.html) for instructions.
- snap-2-9-ui -->
+ snap-2-9-cli -->
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<p>Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See <a href="local-image-mirror.html">Local image mirror</a> for instructions.</p>
 <h2 id="heading--other-images">Other images</h2>
 
-It is also possible to import and provision images other than Ubuntu. Images supported and provided by MAAS will appear beneath the 'Other Images' section. Currently, images for CentOS 6.6, CentOS 7.0, and CentOS 8.0 are available. These images can be imported and used just like the Ubuntu images above.
-
-<a href="images/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png" target = "_blank"><img src="images/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png"></a></a>
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
-
+<p>It is also possible to import and provision images other than Ubuntu. Images supported and provided by MAAS will appear beneath the &lsquo;Other Images&rsquo; section. Currently, images for CentOS 6.6, CentOS 7.0, and CentOS 8.0 are available. These images can be imported and used just like the Ubuntu images above.</p>
+<p><a href="images/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png" target = "_blank"><img src="images/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png"></a></a></p>
 <!-- deb-2-7-cli
 You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](images.html#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
  deb-2-7-cli -->
@@ -588,110 +572,164 @@ You can tell MAAS to sync images hourly, at the region level.  See [Boot image s
 You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](images.html#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
  snap-2-8-cli -->
 
-<p>You can tell MAAS to sync images hourly, at the region level.  See <a href="images.html#boot-image-sources">Boot image sources</a>) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.</p>
-<h4>Quick questions you may have:</h4>
-<ul>
-<li><a href="maas-cli.html">How do I get started with the MAAS CLI?</a></li>
-<li><a href="#heading--list-boot-sources">How do I list boot sources?</a></li>
-<li><a href="#heading--select-image">How do I select images?</a></li>
-<li><a href="#heading--list-image-selections">How do I list image selections?</a></li>
-<li><a href="#heading--import-newly-selected-images">How do I import newly-selected images?</a></li>
-<li><a href="#heading--list-currently-available-images">How do I list currently available images?</a></li>
-<li><a href="#heading--delete-a-boot-source">How do I delete a boot source?</a></li>
-<li><a href="#heading--edit-a-boot-source">How do I edit a boot source?</a></li>
-</ul>
+<!-- snap-2-9-cli
+You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](images.html#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
+ snap-2-9-cli -->
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+
+#### Quick questions you may have:
+
+* [How do I get started with the MAAS CLI?](maas-cli.html)
+* [How do I list boot sources?](#heading--list-boot-sources)
+* [How do I select images?](#heading--select-image)
+* [How do I list image selections?](#heading--list-image-selections)
+* [How do I import newly-selected images?](#heading--import-newly-selected-images)
+* [How do I list currently available images?](#heading--list-currently-available-images)
+* [How do I delete a boot source?](#heading--delete-a-boot-source)
+* [How do I edit a boot source?](#heading--edit-a-boot-source)
+
 <h2 id="heading--list-boot-sources">List boot sources</h2>
 
-<p>If you want to download boot sources, i.e., the locations from which you may download images, try the following:</p>
+If you want to download boot sources, i.e., the locations from which you may download images, try the following:
+
+
 <pre><code class="bash">maas $PROFILE boot-sources read
 </code></pre>
 
-<p><strong>NOTE:</strong> 
-Although multiple boot sources may be listed, MAAS can only practically work with a single boot source.</p>
+
+<strong>NOTE:</strong> 
+Although multiple boot sources may be listed, MAAS can only practically work with a single boot source.
+
+
 <h2 id="heading--select-images">Select images</h2>
 
-<p>Use the <code>boot-source-selections</code> command to select images from a boot source. After selecting new images, you will need to <a href="#heading--import-newly-selected-images">import</a> them.</p>
+Use the `boot-source-selections` command to select images from a boot source. After selecting new images, you will need to [import](#heading--import-newly-selected-images) them.
+
+
 <pre><code class="bash">maas $PROFILE boot-source-selections create $SOURCE_ID \
     os=&quot;ubuntu&quot; release=&quot;$SERIES&quot; arches=&quot;$ARCH&quot; \
     subarches=&quot;$KERNEL&quot; labels=&quot;*&quot;
 </code></pre>
 
-<p>For example, to select all kernels for 64-bit Trusty from a boot source with an id of &lsquo;1&rsquo;:</p>
+
+For example, to select all kernels for 64-bit Trusty from a boot source with an id of '1':
+
+
 <pre><code class="bash">maas $PROFILE boot-source-selections create 1 \
     os=&quot;ubuntu&quot; release=&quot;trusty&quot; arches=&quot;amd64&quot; \
     subarches=&quot;*&quot; labels=&quot;*&quot;
 </code></pre>
 
+
 <h3 id="heading--hardware-enablement-hwe">Hardware enablement (HWE)</h3>
 
-<p>For example, to get just the latest amd64 HWE kernel available for Trusty, which, at time of writing, is from Xenial:</p>
+For example, to get just the latest amd64 HWE kernel available for Trusty, which, at time of writing, is from Xenial:
+
+
 <pre><code class="bash">maas $PROFILE boot-source-selections create 1 \
     os=&quot;ubuntu&quot; release=&quot;trusty&quot; arches=&quot;amd64&quot; \
     subarches=&quot;hwe-x&quot; labels=&quot;*&quot;
 </code></pre>
 
-<p>For Xenial kernels (and starting with MAAS 2.1), notation has changed. To select the latest amd64 HWE kernel available for Xenial:</p>
+
+For Xenial kernels (and starting with MAAS 2.1), notation has changed. To select the latest amd64 HWE kernel available for Xenial:
+
+
 <pre><code class="bash">maas $PROFILE boot-source-selections create 1 \
     os=&quot;ubuntu&quot; release=&quot;xenial&quot; arches=&quot;amd64&quot; \
     subarches=&quot;hwe-16.04&quot; labels=&quot;*&quot;
 </code></pre>
 
+
 <h2 id="heading--list-image-selections">List image selections</h2>
 
-<p>To list image selections for a boot source:</p>
+To list image selections for a boot source:
+
+
 <pre><code class="bash">maas $PROFILE boot-source-selections read $SOURCE_ID
 </code></pre>
 
+
 <h2 id="heading--import-newly-selected-images">Import newly-selected images</h2>
 
-<p>To import newly-selected images (boot resources):</p>
+To import newly-selected images (boot resources):
+
+
 <pre><code class="bash">maas $PROFILE boot-resources import
 </code></pre>
 
-<p>Once newly-selected images are imported, a sync mechanism is enabled (by default) to keep them up to date. The refresh time interval is 60 minutes.</p>
-<p>Available images resulting from this action are reflected in the web UI.</p>
+
+Once newly-selected images are imported, a sync mechanism is enabled (by default) to keep them up to date. The refresh time interval is 60 minutes.
+
+Available images resulting from this action are reflected in the web UI.
+
 <h2 id="heading--list-currently-available-images">List currently available images</h2>
 
-<p>To list currently available/imported images (boot resources):</p>
+To list currently available/imported images (boot resources):
+
+
 <pre><code class="bash">maas $PROFILE boot-resources read
 </code></pre>
 
+
 <h2 id="heading--delete-a-boot-source">Delete a boot source</h2>
 
-<p>To delete a boot source (the location from which you can download images): </p>
+To delete a boot source (the location from which you can download images): 
+
+
 <pre><code class="bash">maas $PROFILE boot-source delete $SOURCE_ID
 </code></pre>
 
-<p>If you delete the sole boot source, then the fields &lsquo;Sync URL&rsquo; and &lsquo;Keyring Path&rsquo; in the web UI will take on null values.</p>
+
+If you delete the sole boot source, then the fields 'Sync URL' and 'Keyring Path' in the web UI will take on null values.
+
 <h2 id="heading--edit-a-boot-source">Edit a boot source</h2>
 
-<p>You can edit an existing boot source by changing the GPG keyring file ($KEYRING_FILE) and the location ($URL).</p>
-<p>Update the boot source:</p>
+You can edit an existing boot source by changing the GPG keyring file ($KEYRING_FILE) and the location ($URL).
+
+Update the boot source:
+
+
 <pre><code class="bash">maas $PROFILE boot-source update $SOURCE_ID \
     url=$URL keyring_filename=$KEYRING_FILE
 </code></pre>
 
-<p>At this time MAAS only supports a boot source containing official MAAS images. As a result, you can only edit a boot source if you have set up a mirror of its images. The location can change, but the keyring remains constant:</p>
-<p>KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg</p>
+
+At this time MAAS only supports a boot source containing official MAAS images. As a result, you can only edit a boot source if you have set up a mirror of its images. The location can change, but the keyring remains constant:
+
+KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
+
 <h2 id="heading--add-a-boot-source">Add a boot source</h2>
 
-<p><strong>NOTE:</strong> 
-To avoid unnecessary complexity, you should probably delete any existing boot sources before adding a new one.</p>
-<p>Presented below are two use cases for adding a boot source:</p>
-<ol>
-<li>Use a local image mirror (official images)</li>
-<li>If you deleted the default image, recreate it</li>
-</ol>
-<p>The general syntax is:</p>
+<strong>NOTE:</strong> 
+To avoid unnecessary complexity, you should probably delete any existing boot sources before adding a new one.
+
+
+Presented below are two use cases for adding a boot source:
+
+1.  Use a local image mirror (official images)
+2.  If you deleted the default image, recreate it
+
+The general syntax is:
+
+
 <pre><code class="bash">maas $PROFILE boot-sources create \
     url=$URL keyring_filename=$KEYRING_FILE
 </code></pre>
 
-<p>The output will include a new numeric ID that identifies the boot source ($SOURCE_ID).</p>
-<p>Since MAAS can only practically work with a single boot source, so you will need to delete any existing sources. Note that the location (URL) is the only variable. The only supported keyring is:</p>
-<p>KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg</p>
-<p>If you added a sole boot source, then the fields &lsquo;Sync URL&rsquo; and &lsquo;Keyring Path&rsquo; in the web UI will reflect its values.</p>
+
+The output will include a new numeric ID that identifies the boot source ($SOURCE_ID).
+
+Since MAAS can only practically work with a single boot source, so you will need to delete any existing sources. Note that the location (URL) is the only variable. The only supported keyring is:
+
+KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
+
+If you added a sole boot source, then the fields 'Sync URL' and 'Keyring Path' in the web UI will reflect its values.
+
 <h3 id="heading--using-a-local-image-mirror">Using a local image mirror</h3>
+
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 <!-- deb-2-7-cli
 Once the mirror is set up according to [Local image mirror](local-image-mirror.html) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
@@ -713,19 +751,24 @@ Once the mirror is set up according to [Local image mirror](local-image-mirror.h
 Once the mirror is set up according to [Local image mirror](local-image-mirror.html) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
  snap-2-8-cli -->
 
-<p>Once the mirror is set up according to <a href="local-image-mirror.html">Local image mirror</a> it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:</p>
-<ul>
-<li>URL=https://$MIRROR/maas/images/ephemeral-v3/daily/</li>
-<li>KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg</li>
-</ul>
-<p>Where $MIRROR is the mirror server&rsquo;s hostname or IP address.</p>
+<!-- snap-2-9-cli
+Once the mirror is set up according to [Local image mirror](local-image-mirror.html) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
+ snap-2-9-cli -->
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+
+-   URL=https://$MIRROR/maas/images/ephemeral-v3/daily/
+-   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
+
+Where $MIRROR is the mirror server's hostname or IP address.
+
 <h3 id="heading--recreate-the-default-boot-source">Recreate the default boot source</h3>
 
-<p>Recreate the default boot source if it was ever deleted using the following variable values:</p>
-<ul>
-<li>URL=https://images.maas.io/ephemeral-v3/daily/</li>
-<li>KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg</li>
-</ul>
+Recreate the default boot source if it was ever deleted using the following variable values:
+
+-   URL=https://images.maas.io/ephemeral-v3/daily/
+-   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
     </div>
   </body>
 </html>

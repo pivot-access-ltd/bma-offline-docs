@@ -459,8 +459,8 @@
 <!-- snap-2-8-ui
  snap-2-8-ui -->
 
-<!-- snap-2-9-ui
- snap-2-9-ui -->
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
 
 <p>MAAS runs scripts during enlistment, commissioning and testing to collect data about nodes. Both enlistment and commissioning run all builtin commissioning scripts, though enlistment runs only built-ins. Commissioning also runs any user-uploaded commissioning scripts by default, unless the user manually provides a list of scripts to run. MAAS uses these commissioning scripts to configure hardware and perform other tasks during commissioning, such as updating the firmware. Similarly, MAAS employs hardware testing scripts to evaluate system hardware and report its status. </p>
 <hr>
@@ -515,11 +515,11 @@ Scripts can be selected to run from web UI [during commissioning](commission-mac
 Scripts can be selected to run from web UI [during commissioning](commission-machines.html), by [testing hardware](hardware-testing.html) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
  snap-2-8-ui -->
 
-<p>Scripts can be selected to run from web UI <a href="commission-machines.html">during commissioning</a>, by <a href="hardware-testing.html">testing hardware</a> or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:</p>
-<!-- snap-2-9-ui
-Scripts can be selected to run from web UI [during commissioning](commission-machines.html), by [testing hardware](hardware-testing.html) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
- snap-2-9-ui -->
+<!-- snap-2-9-cli
+Scripts can be selected to run from web UI [during commissioning](commission-machines.html), by [testing hardware](hardware-testing.html) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ snap-2-9-cli -->
 
+<p>Scripts can be selected to run from web UI <a href="commission-machines.html">during commissioning</a>, by <a href="hardware-testing.html">testing hardware</a> or from the command line (select the &ldquo;CLI&rdquo; option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:</p>
 <p>Add machine -&gt; Enlistment (runs built-in commissioning scripts MAAS) -&gt; New -&gt; Commission (runs built-in and custom commissioning scripts) -&gt; Ready -&gt; Deploy</p>
 <p>NOTE: Scripts are run in alphabetical order in an ephemeral environment.  We recommend running your scripts after any MAAS built-in scripts.  This can be done by naming your scripts 99-z*.  It is possible to reboot the system during commissioning using a script, however, as the environment is ephemeral, any changes to the environment will be destroyed upon reboot (barring, of course, firmware type updates).</p>
 <p>This article explains script metadata, parameter passing, and results-reporting.  It also offers examples of both commissioning and hardware testing scripts.</p>
@@ -818,31 +818,44 @@ When selecting [multiple machines](machines.html), scripts which declare the `fo
 When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  snap-2-8-ui -->
 
-<p>When selecting <a href="machines.html">multiple machines</a>, scripts which declare the <code>for_hardware</code> field will only run on machines with matching hardware. To automatically run a script when &lsquo;Update firmware&rsquo; or &lsquo;Configure HBA&rsquo; is selected, you must tag the script with &lsquo;update_firmware&rsquo; or &lsquo;configure_hba&rsquo;.</p>
-<!-- snap-2-9-ui
+<!-- snap-2-9-cli
 When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
- snap-2-9-ui -->
+ snap-2-9-cli -->
 
+<p>When selecting <a href="machines.html">multiple machines</a>, scripts which declare the <code>for_hardware</code> field will only run on machines with matching hardware. To automatically run a script when &lsquo;Update firmware&rsquo; or &lsquo;Configure HBA&rsquo; is selected, you must tag the script with &lsquo;update_firmware&rsquo; or &lsquo;configure_hba&rsquo;.</p>
 <p>Similarly, scripts selected by tag on the command line which specify the <code>for_hardware</code> field will only run on matching hardware.</p>
 <h2 id="heading--upload-procedure">Upload procedure</h2>
 
-<p>To upload a hardware testing script to MAAS, enter the following:</p>
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+To upload a hardware testing script to MAAS, enter the following:
+
 <pre><code class="bash">maas $PROFILE node-scripts create name=$SCRIPT_NAME name&gt; \
  script=$PATH_TO_SCRIPT type=testing
 </code></pre>
 
-<p>Changing the type to commissioning adds the test script to the commissioning process.</p>
-<p>You can list all uploaded scripts with the following command:</p>
+
+Changing the type to commissioning adds the test script to the commissioning process.
+
+You can list all uploaded scripts with the following command:
+
+
 <pre><code class="bash">maas $PROFILE node-scripts read type=testing filters=$TAG
 </code></pre>
 
-<p>The optional filters argument lets you search for tags assigned to a script, such as using <code>TAG=cpu</code> with the above example.</p>
-<p>A <a href="commissioning-and-hardware-testing-scripts.html#hardware-test-script-sample">script&rsquo;s metadata</a>, and even the script itself, can be updated from the command line:</p>
+
+The optional filters argument lets you search for tags assigned to a script, such as using `TAG=cpu` with the above example.
+
+A [script's metadata](commissioning-and-hardware-testing-scripts.html#hardware-test-script-sample), and even the script itself, can be updated from the command line:
+
+
 <pre><code class="bash">maas $PROFILE node-script update \
  $SCRIPT_NAME script=$PATH_TO_SCRIPT comment=$COMMENT
 </code></pre>
 
-<p>The JSON formatted output to the above command will include &lsquo;history&rsquo; dictionary entries, detailing script modification times and associated comments:</p>
+
+The JSON formatted output to the above command will include 'history' dictionary entries, detailing script modification times and associated comments:
+
+
 <pre><code class="json">&quot;history&quot;: [
     {
         &quot;id&quot;: 40,
@@ -857,56 +870,90 @@ When selecting [multiple machines](machines.html), scripts which declare the `fo
 ]
 </code></pre>
 
-<p>MAAS keeps a history of all uploaded script versions, allowing you to easily revert to a previous version using the <code>id</code> of the version you wish to revert to:</p>
+
+MAAS keeps a history of all uploaded script versions, allowing you to easily revert to a previous version using the `id` of the version you wish to revert to:
+
+
 <pre><code class="bash">maas $PROFILE node-script revert $SCRIPT_NAME to=$VERSION_ID
 </code></pre>
 
-<p><strong>NOTE:</strong> 
-The history for later modifications will be lost when reverting to an earlier version of the script.</p>
-<p>To download a script, enter the following:</p>
+
+<strong>NOTE:</strong> 
+The history for later modifications will be lost when reverting to an earlier version of the script.
+
+
+To download a script, enter the following:
+
+
 <pre><code class="bash">maas $PROFILE node-script download $SCRIPT_NAME &gt; $LOCAL_FILENAME
 </code></pre>
 
-<p>To delete a script, use <code>delete</code>:</p>
+
+To delete a script, use `delete`:
+
+
 <pre><code class="bash">maas $PROFILE node-script delete $SCRIPT_NAME
 </code></pre>
 
+
 <h2 id="heading--tags">Tags</h2>
 
-<p>As with general <a href="cli-tag-management.html">tag management</a>, tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:</p>
+As with general [tag management](cli-tag-management.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+
+
 <pre><code class="bash">maas $PROFILE node-script add-tag $SCRIPT_NAME tag=$TAG
 maas $PROFILE node-script remove-tag $SCRIPT_NAME tag=$TAG
 </code></pre>
 
-<p>MAAS runs all commissioning scripts by default. However, you can select which custom scripts to run during commissioning by name or tag:</p>
+
+MAAS runs all commissioning scripts by default. However, you can select which custom scripts to run during commissioning by name or tag:
+
+
 <pre><code class="bash">maas $PROFILE machine commission \
  commissioning_scripts=$SCRIPT_NAME,$SCRIPT_TAG
 </code></pre>
 
-<p>You can also select which testing scripts to run by name or tag:</p>
+
+You can also select which testing scripts to run by name or tag:
+
+
 <pre><code class="bash">maas $PROFILE machine commission \
  testing_scripts=$SCRIPT_NAME,$SCRIPT_TAG
 </code></pre>
 
-<p>Any testing scripts tagged with commissioning will also run during commissioning.</p>
+
+Any testing scripts tagged with commissioning will also run during commissioning.
+
 <h2 id="heading--results">Results</h2>
 
-<p>The command line allows you to not only view the current script&rsquo;s progress but also retrieve the verbatim output from any previous runs too.</p>
-<p>If you only want to see the latest or currently-running result, you can use <code>current-commissioning</code>, <code>current-testing</code>, or <code>current-installation</code> instead of an id:</p>
+The command line allows you to not only view the current script's progress but also retrieve the verbatim output from any previous runs too.
+
+If you only want to see the latest or currently-running result, you can use `current-commissioning`, `current-testing`, or `current-installation` instead of an id:
+
+
 <pre><code class="bash">maas $PROFILE node-script-result read $SYSTEM_ID $RESULTS
 </code></pre>
 
-<p>You can also limit which results are returned by type (commissioning, testing, or installation), script name, or script run:</p>
+
+You can also limit which results are returned by type (commissioning, testing, or installation), script name, or script run:
+
+
 <pre><code class="bash">maas $PROFILE node-script-results read \
  $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS
 </code></pre>
 
-<p>You can also suppress failed results, which is useful if you want to ignore a known failure:</p>
+
+You can also suppress failed results, which is useful if you want to ignore a known failure:
+
+
 <pre><code class="bash">maas $PROFILE node-script-results update \
  $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS suppressed=$SUPPRESSED
 </code></pre>
 
-<p>where <code>$SUPPRESSED</code> is either <code>True</code> or <code>False</code>. The JSON formatted output to the above command will include &lsquo;results&rsquo; dictionary with an entry for <code>suppressed</code>:</p>
+
+where `$SUPPRESSED` is either `True` or `False`. The JSON formatted output to the above command will include 'results' dictionary with an entry for `suppressed`:
+
+
 <pre><code class="json">&quot;results&quot;: [
     {
         &quot;id&quot;: 21,
@@ -942,17 +989,22 @@ maas $PROFILE node-script remove-tag $SCRIPT_NAME tag=$TAG
 ]
 </code></pre>
 
-<p>Finally, results can be downloaded, either to stdout, stderr, as combined output or as a tar.xz:</p>
+
+Finally, results can be downloaded, either to stdout, stderr, as combined output or as a tar.xz:
+
+
 <pre><code class="bash">maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
  filetype=tar.xz &gt; $LOCAL_FILENAME
 </code></pre>
 
-<p><strong>NOTE:</strong> 
-<strong>$RUN_ID</strong> is labelled <code>id</code> in the verbose result output.</p>
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-Scripts can be uploaded to MAAS using the web UI. Select the 'User scripts' tab of the 'Settings' page - the 'Commissioning scripts' section is near the top. Within the Commissioning scripts section, click the Upload script button followed by 'Choose file' to open a requester, locate the script, and select Upload to upload it to MAAS.
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
+<strong>NOTE:</strong> 
+**$RUN_ID** is labelled `id` in the verbose result output.
+
+
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+<p>Scripts can be uploaded to MAAS using the web UI. Select the &lsquo;User scripts&rsquo; tab of the &lsquo;Settings&rsquo; page - the &lsquo;Commissioning scripts&rsquo; section is near the top. Within the Commissioning scripts section, click the Upload script button followed by &lsquo;Choose file&rsquo; to open a requester, locate the script, and select Upload to upload it to MAAS.</p>
 <!-- deb-2-7-ui
 A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-testing.html) from a machine's 'Take action' menu.
  deb-2-7-ui -->
@@ -973,32 +1025,18 @@ A status message of Commissioning script created will appear.  You'll then be ab
 A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-testing.html) from a machine's 'Take action' menu.
  snap-2-8-ui -->
 
-<!-- snap-2-9-ui
-A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-testing.html) from a machine's 'Take action' menu.
- snap-2-9-ui -->
-
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-<a href="images/50e08fdf-nodes-hw-scripts__2.4_select.png" target = "_blank"><img src="images/50e08fdf-nodes-hw-scripts__2.4_select.png"></a></a>
-
-<strong>NOTE:</strong> 
-MAAS executes scripts in lexicographical order. This order allows you to control when your scripts execute, and whether they run before or after the standard MAAS scripts.
-
-
+<p>A status message of Commissioning script created will appear.  You&rsquo;ll then be able to select your script after selecting <a href="hardware-testing.html">Test hardware</a> from a machine&rsquo;s &lsquo;Take action&rsquo; menu.</p>
+<p><a href="images/50e08fdf-nodes-hw-scripts__2.4_select.png" target = "_blank"><img src="images/50e08fdf-nodes-hw-scripts__2.4_select.png"></a></a></p>
+<p><strong>NOTE:</strong> 
+MAAS executes scripts in lexicographical order. This order allows you to control when your scripts execute, and whether they run before or after the standard MAAS scripts.</p>
 <h2 id="heading--debugging">Debugging</h2>
 
-Clicking on the title of a completed or failed script will reveal the output from that specific script.
-
-<a href="images/855015e5-nodes-hw-scripts__2.2_fail.png" target = "_blank"><img src="images/855015e5-nodes-hw-scripts__2.2_fail.png"></a></a>
-
-If you need further details, especially when writing and running your own scripts, you can connect to a machine and examine its logs and environment.
-
-To do this, enable Allow SSH access and prevent the machine from powering off when selecting 'Test hardware' from the machine 'Take action' menu.
-
-<a href="images/da793c67-nodes-hw-scripts__2.4_ssh.png" target = "_blank"><img src="images/da793c67-nodes-hw-scripts__2.4_ssh.png"></a></a>
-
-Because scripts operate within an ephemeral version of Ubuntu, enabling this option stops the machine from shutting down, allowing you to connect and probe a script's status.
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
-
+<p>Clicking on the title of a completed or failed script will reveal the output from that specific script.</p>
+<p><a href="images/855015e5-nodes-hw-scripts__2.2_fail.png" target = "_blank"><img src="images/855015e5-nodes-hw-scripts__2.2_fail.png"></a></a></p>
+<p>If you need further details, especially when writing and running your own scripts, you can connect to a machine and examine its logs and environment.</p>
+<p>To do this, enable Allow SSH access and prevent the machine from powering off when selecting &lsquo;Test hardware&rsquo; from the machine &lsquo;Take action&rsquo; menu.</p>
+<p><a href="images/da793c67-nodes-hw-scripts__2.4_ssh.png" target = "_blank"><img src="images/da793c67-nodes-hw-scripts__2.4_ssh.png"></a></a></p>
+<p>Because scripts operate within an ephemeral version of Ubuntu, enabling this option stops the machine from shutting down, allowing you to connect and probe a script&rsquo;s status.</p>
 <!-- deb-2-7-cli
 As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
  deb-2-7-cli -->
@@ -1039,11 +1077,11 @@ As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to 
 As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
  snap-2-8-ui -->
 
-<p>As long as you&rsquo;ve added your <a href="user-accounts.html#heading--ssh-keys">SSH key</a> to MAAS, you can connect with SSH to the machine&rsquo;s IP with a username of <code>ubuntu</code>. Type <code>sudo -i</code> to get root access.</p>
-<!-- snap-2-9-ui
+<!-- snap-2-9-cli
 As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
- snap-2-9-ui -->
+ snap-2-9-cli -->
 
+<p>As long as you&rsquo;ve added your <a href="user-accounts.html#heading--ssh-keys">SSH key</a> to MAAS, you can connect with SSH to the machine&rsquo;s IP with a username of <code>ubuntu</code>. Type <code>sudo -i</code> to get root access.</p>
 <h3 id="heading--access-individual-scripts-and-log-files">Access individual scripts and log files</h3>
 
 <h4 id="heading--commissioning-and-testing-script-files">Commissioning and testing script files</h4>

@@ -459,39 +459,54 @@
 <!-- snap-2-8-ui
  snap-2-8-ui -->
 
-<!-- snap-2-9-ui
- snap-2-9-ui -->
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
 
 <p>If you wish, you can tell MAAS to test machine hardware using well-known Linux utilities.  MAAS can test machines that have  a status of <strong>Ready</strong>, <strong>Broken</strong>, or <strong>Deployed</strong>.  You can include testing as part of the commissioning process. When you choose the &lsquo;Commission&rsquo; action, MAAS will display the dialog described below.  Be aware, though, that if the hardware tests fail, the machine will become unavailable for Deployment.</p>
 <p><strong>NOTE:</strong> 
 The majority of testing scripts only work with machines that are backed by physical hardware (e.g. they may be incompatible with VM-based machines).</p>
-<p>With MAAS, you can easily write, upload and execute your hardware testing scripts and see the results.</p>
-<h4>Quick questions you may have:</h4>
-<ul>
-<li><a href="cli-commissioning-and-hardware-testing-scripts.html#heading--script-management">How do I upload and manage test scripts?</a></li>
-<li><a href="cli-commissioning-and-hardware-testing-scripts.html#heading--tags">How do I use tags to help with test scripts?</a></li>
-<li><a href="cli-commissioning-and-hardware-testing-scripts.html#heading--results">How do I view test results?</a></li>
-<li><a href="commissioning-and-hardware-testing-scripts.html#heading--metadata-fields">What metadata fields are available to me for test scripts?</a></li>
-</ul>
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+With MAAS, you can easily write, upload and execute your hardware testing scripts and see the results.
+
+#### Quick questions you may have:
+
+* [How do I upload and manage test scripts?](cli-commissioning-and-hardware-testing-scripts.html#heading--script-management)
+* [How do I use tags to help with test scripts?](cli-commissioning-and-hardware-testing-scripts.html#heading--tags)
+* [How do I view test results?](cli-commissioning-and-hardware-testing-scripts.html#heading--results)
+* [What metadata fields are available to me for test scripts?](commissioning-and-hardware-testing-scripts.html#heading--metadata-fields)
+
 <h2 id="heading--script-management">Script management</h2>
 
-<p>To upload a hardware testing script to MAAS, enter the following:</p>
+To upload a hardware testing script to MAAS, enter the following:
+
+
 <pre><code class="bash">maas $PROFILE node-scripts create name=$SCRIPT_NAME name&gt; \
  script=$PATH_TO_SCRIPT type=testing
 </code></pre>
 
-<p>Changing the type to commissioning adds the test script to the commissioning process.</p>
-<p>You can list all uploaded scripts with the following command:</p>
+
+Changing the type to commissioning adds the test script to the commissioning process.
+
+You can list all uploaded scripts with the following command:
+
+
 <pre><code class="bash">maas $PROFILE node-scripts read type=testing filters=$TAG
 </code></pre>
 
-<p>The optional filters argument lets you search for tags assigned to a script, such as using <code>TAG=cpu</code> with the above example.</p>
-<p>A <a href="commissioning-and-hardware-testing-scripts.html#hardware-test-script-sample">script&rsquo;s metadata</a>, and even the script itself, can be updated from the command line:</p>
+
+The optional filters argument lets you search for tags assigned to a script, such as using `TAG=cpu` with the above example.
+
+A [script's metadata](commissioning-and-hardware-testing-scripts.html#hardware-test-script-sample), and even the script itself, can be updated from the command line:
+
+
 <pre><code class="bash">maas $PROFILE node-script update \
  $SCRIPT_NAME script=$PATH_TO_SCRIPT comment=$COMMENT
 </code></pre>
 
-<p>The JSON formatted output to the above command will include &lsquo;history&rsquo; dictionary entries, detailing script modification times and associated comments:</p>
+
+The JSON formatted output to the above command will include 'history' dictionary entries, detailing script modification times and associated comments:
+
+
 <pre><code class="json">&quot;history&quot;: [
     {
         &quot;id&quot;: 40,
@@ -506,56 +521,90 @@ The majority of testing scripts only work with machines that are backed by physi
 ]
 </code></pre>
 
-<p>MAAS keeps a history of all uploaded script versions, allowing you to easily revert to a previous version using the <code>id</code> of the version you wish to revert to:</p>
+
+MAAS keeps a history of all uploaded script versions, allowing you to easily revert to a previous version using the `id` of the version you wish to revert to:
+
+
 <pre><code class="bash">maas $PROFILE node-script revert $SCRIPT_NAME to=$VERSION_ID
 </code></pre>
 
-<p><strong>NOTE:</strong> 
-The history for later modifications will be lost when reverting to an earlier version of the script.</p>
-<p>To download a script, enter the following:</p>
+
+<strong>NOTE:</strong> 
+The history for later modifications will be lost when reverting to an earlier version of the script.
+
+
+To download a script, enter the following:
+
+
 <pre><code class="bash">maas $PROFILE node-script download $SCRIPT_NAME &gt; $LOCAL_FILENAME
 </code></pre>
 
-<p>To delete a script, use <code>delete</code>:</p>
+
+To delete a script, use `delete`:
+
+
 <pre><code class="bash">maas $PROFILE node-script delete $SCRIPT_NAME
 </code></pre>
 
+
 <h2 id="heading--tags">Tags</h2>
 
-<p>As with general <a href="cli-tag-management.html">tag management</a>, tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:</p>
+As with general [tag management](cli-tag-management.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+
+
 <pre><code class="bash">maas $PROFILE node-script add-tag $SCRIPT_NAME tag=$TAG
 maas $PROFILE node-script remove-tag $SCRIPT_NAME tag=$TAG
 </code></pre>
 
-<p>MAAS runs all commissioning scripts by default. However, you can select which custom scripts to run during commissioning by name or tag:</p>
+
+MAAS runs all commissioning scripts by default. However, you can select which custom scripts to run during commissioning by name or tag:
+
+
 <pre><code class="bash">maas $PROFILE machine commission \
  commissioning_scripts=$SCRIPT_NAME,$SCRIPT_TAG
 </code></pre>
 
-<p>You can also select which testing scripts to run by name or tag:</p>
+
+You can also select which testing scripts to run by name or tag:
+
+
 <pre><code class="bash">maas $PROFILE machine commission \
  testing_scripts=$SCRIPT_NAME,$SCRIPT_TAG
 </code></pre>
 
-<p>Any testing scripts tagged with commissioning will also run during commissioning.</p>
+
+Any testing scripts tagged with commissioning will also run during commissioning.
+
 <h2 id="heading--results">Results</h2>
 
-<p>The command line allows you to not only view the current script&rsquo;s progress but also retrieve the verbatim output from any previous runs too.</p>
-<p>If you only want to see the latest or currently-running result, you can use <code>current-commissioning</code>, <code>current-testing</code>, or <code>current-installation</code> instead of an id:</p>
+The command line allows you to not only view the current script's progress but also retrieve the verbatim output from any previous runs too.
+
+If you only want to see the latest or currently-running result, you can use `current-commissioning`, `current-testing`, or `current-installation` instead of an id:
+
+
 <pre><code class="bash">maas $PROFILE node-script-result read $SYSTEM_ID $RESULTS
 </code></pre>
 
-<p>You can also limit which results are returned by type (commissioning, testing, or installation), script name, or script run:</p>
+
+You can also limit which results are returned by type (commissioning, testing, or installation), script name, or script run:
+
+
 <pre><code class="bash">maas $PROFILE node-script-results read \
  $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS
 </code></pre>
 
-<p>You can also suppress failed results, which is useful if you want to ignore a known failure:</p>
+
+You can also suppress failed results, which is useful if you want to ignore a known failure:
+
+
 <pre><code class="bash">maas $PROFILE node-script-results update \
  $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS suppressed=$SUPPRESSED
 </code></pre>
 
-<p>where <code>$SUPPRESSED</code> is either <code>True</code> or <code>False</code>. The JSON formatted output to the above command will include &lsquo;results&rsquo; dictionary with an entry for <code>suppressed</code>:</p>
+
+where `$SUPPRESSED` is either `True` or `False`. The JSON formatted output to the above command will include 'results' dictionary with an entry for `suppressed`:
+
+
 <pre><code class="json">&quot;results&quot;: [
     {
         &quot;id&quot;: 21,
@@ -591,41 +640,36 @@ maas $PROFILE node-script remove-tag $SCRIPT_NAME tag=$TAG
 ]
 </code></pre>
 
-<p>Finally, results can be downloaded, either to stdout, stderr, as combined output or as a tar.xz:</p>
+
+Finally, results can be downloaded, either to stdout, stderr, as combined output or as a tar.xz:
+
+
 <pre><code class="bash">maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
  filetype=tar.xz &gt; $LOCAL_FILENAME
 </code></pre>
 
-<p><strong>NOTE:</strong> 
-<strong>$RUN_ID</strong> is labelled <code>id</code> in the verbose result output.</p>
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-#### Quick questions you may have:
 
-* [How do I apply a hardware test?](#heading--apply-a-hardware-test)
-* [What scripts are available for testing?](#heading--included-scripts)
+<strong>NOTE:</strong> 
+**$RUN_ID** is labelled `id` in the verbose result output.
 
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+<h4>Quick questions you may have:</h4>
+<ul>
+<li><a href="#heading--apply-a-hardware-test">How do I apply a hardware test?</a></li>
+<li><a href="#heading--included-scripts">What scripts are available for testing?</a></li>
+</ul>
 <h2 id="heading--apply-a-hardware-test">Apply a hardware test</h2>
 
-To launch a test, select the target machine from the 'Machines' page and use the 'Take action' drop-down menu to select 'Test hardware'. When ready, hit the 'Test machine' button. Here, a test is applied to a deployed machine:
-
-<a href="images/8e876889-nodes-hw-testing__2.4_deployed.png" target = "_blank"><img src="images/8e876889-nodes-hw-testing__2.4_deployed.png"></a></a>
-
-There is the option of not powering off the machine and to allow SSH access.
-
-A default test will be selected (`smartctl-validate`, a hard drive test) but you can choose others by clicking the 'Select scripts' label. Doing so will reveal the following choices:
-
-<a href="images/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png" target = "_blank"><img src="images/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png"></a></a>
-
+<p>To launch a test, select the target machine from the &lsquo;Machines&rsquo; page and use the &lsquo;Take action&rsquo; drop-down menu to select &lsquo;Test hardware&rsquo;. When ready, hit the &lsquo;Test machine&rsquo; button. Here, a test is applied to a deployed machine:</p>
+<p><a href="images/8e876889-nodes-hw-testing__2.4_deployed.png" target = "_blank"><img src="images/8e876889-nodes-hw-testing__2.4_deployed.png"></a></a></p>
+<p>There is the option of not powering off the machine and to allow SSH access.</p>
+<p>A default test will be selected (<code>smartctl-validate</code>, a hard drive test) but you can choose others by clicking the &lsquo;Select scripts&rsquo; label. Doing so will reveal the following choices:</p>
+<p><a href="images/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png" target = "_blank"><img src="images/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png"></a></a></p>
 <h2 id="heading--included-scripts">Scripts available for testing</h2>
 
-The following hardware testing scripts can be selected from the web UI:
-
-<table style="width:17%;">
-<colgroup>
-<col width="5%" />
-<col width="5%" />
-<col width="5%" />
-</colgroup>
+<p>The following hardware testing scripts can be selected from the web UI:</p>
+<table style="width:100%;">
 <thead>
 <tr class="header">
 <th align="center">Name</th>
@@ -707,11 +751,8 @@ The following hardware testing scripts can be selected from the web UI:
 </tbody>
 </table>
 
-After either commissioning, testing, or installation has started, MAAS reports in real-time which script is running.
-
-You can access the verbatim output from any test by selecting a machine, selecting the 'Hardware tests' page and clicking on the 'Log view' link in the 'Results' column for the specific test.
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
-
+<p>After either commissioning, testing, or installation has started, MAAS reports in real-time which script is running.</p>
+<p>You can access the verbatim output from any test by selecting a machine, selecting the &lsquo;Hardware tests&rsquo; page and clicking on the &lsquo;Log view&rsquo; link in the &lsquo;Results&rsquo; column for the specific test.</p>
 <!-- deb-2-7-cli
 See [Commissioning and Hardware Testing Scripts](commissioning-and-hardware-testing-scripts.html) for more details on how these scripts work and how you can write your own.
  deb-2-7-cli -->
@@ -752,10 +793,11 @@ See [Commissioning and Hardware Testing Scripts](commissioning-and-hardware-test
 See [Commissioning and Hardware Testing Scripts](commissioning-and-hardware-testing-scripts.html) for more details on how these scripts work and how you can write your own.
  snap-2-8-ui -->
 
-<p>See <a href="commissioning-and-hardware-testing-scripts.html">Commissioning and Hardware Testing Scripts</a> for more details on how these scripts work and how you can write your own.</p>
-<!-- snap-2-9-ui
+<!-- snap-2-9-cli
 See [Commissioning and Hardware Testing Scripts](commissioning-and-hardware-testing-scripts.html) for more details on how these scripts work and how you can write your own.
- snap-2-9-ui -->
+ snap-2-9-cli -->
+
+<p>See <a href="commissioning-and-hardware-testing-scripts.html">Commissioning and Hardware Testing Scripts</a> for more details on how these scripts work and how you can write your own.</p>
     </div>
   </body>
 </html>

@@ -39,10 +39,10 @@ MAAS is an open-source tool that lets you build a data centre from bare-metal se
 
 #### Quick questions you might have:
 
-* [What is MAAS?](#heading--what-is-maas)
-* [What does MAAS offer me?](#heading--what-maas-offers)
-* [Can MAAS co-locate key components to conserve  resources?](#heading--colocation-of-key-components)
-* [How does MAAS work?](#heading--how-maas-works)
+1. [What is MAAS?](#heading--what-is-maas)
+2. [What does MAAS offer me?](#heading--what-maas-offers)
+3. [Can MAAS co-locate key components to conserve  resources?](#heading--colocation-of-key-components)
+4. [How does MAAS work?](#heading--how-maas-works)
 
 <h2 id="heading--what-is-maas">What is MAAS?</h2>
 
@@ -65,19 +65,19 @@ MAAS can manage a large number of physical machines by merging them into user-de
 MAAS integrates all the tools you need into a smooth system-management experience. It includes:
 
 <!-- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui 
-- web UI (optimised for mobile devices)
-- Ubuntu, CentOS, Windows, and RHEL installation support
-- open-source IP address management (IPAM)
-- full API/CLI support
-- high availability (optional)
-- IPv6 support
-- inventory of components
-- DHCP and DNS for other devices on the network
-- DHCP relay integration
-- VLAN and fabric support
-- NTP for the entire infrastructure
-- hardware testing
-- composable hardware support
+1. web UI (optimised for mobile devices)
+2. Ubuntu, CentOS, Windows, and RHEL installation support
+3.  open-source IP address management (IPAM)
+4. full API/CLI support
+5. high availability (optional)
+6. IPv6 support
+7. inventory of components
+8. DHCP and DNS for other devices on the network
+9. DHCP relay integration
+10. VLAN and fabric support
+11. NTP for the entire infrastructure
+12. hardware testing
+13. composable hardware support
 
 These tools can be controlled from a responsive web UI.  You can easily (re)configure and scale your data centre with MAAS.
 
@@ -86,17 +86,17 @@ These tools can be controlled from a responsive web UI.  You can easily (re)conf
 deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui -->
 
 <!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli
-- Ubuntu, CentOS, Windows, and RHEL installation support
-- open-source IP address management (IPAM)
-- high availability (optional)
-- IPv6 support
-- inventory of components
-- DHCP and DNS for other devices on the network
-- DHCP relay integration
-- VLAN and fabric support
-- NTP for the entire infrastructure
-- hardware testing
-- composable hardware support
+1. Ubuntu, CentOS, Windows, and RHEL installation support
+2. open-source IP address management (IPAM)
+3. high availability (optional)
+4. IPv6 support
+5. inventory of components
+6. DHCP and DNS for other devices on the network
+7. DHCP relay integration
+8. VLAN and fabric support
+9. NTP for the entire infrastructure
+10. hardware testing
+11. composable hardware support
 
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/40fdae53957095e5a830458dc5c7a62ea5d78c10.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/40fdae53957095e5a830458dc5c7a62ea5d78c10.jpeg"></a> 

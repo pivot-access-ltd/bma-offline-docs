@@ -459,78 +459,70 @@
 <!-- snap-2-8-ui
  snap-2-8-ui -->
 
-<!-- snap-2-9-ui
- snap-2-9-ui -->
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
 
 <p>In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself.  This section explains several ways of accomplishing this.</p>
 <h4>Quick questions you may have:</h4>
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-* [How do I set up a VM host bridge with the web UI?](#heading--maas-bridge-web-ui)
-* [How do I set up a VM host bridge with netplan?](#heading--maas-bridge-netplan)
-* [How do I set up a VM host bridge with libvirt?](#heading--maas-bridge-libvirt)
-* [How do I set up SSH for use by libvirt?](#heading--set-up-ssh)
-* [What else must I do to use LXD VM hosts?](#heading--lxd-setup)
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
-
 <ul>
-<li><a href="#heading--maas-bridge-cli">How do I set up a VM host bridge with the MAAS CLI/API?</a></li>
+<li><a href="#heading--maas-bridge-web-ui">How do I set up a VM host bridge with the web UI?</a></li>
 <li><a href="#heading--maas-bridge-netplan">How do I set up a VM host bridge with netplan?</a></li>
 <li><a href="#heading--maas-bridge-libvirt">How do I set up a VM host bridge with libvirt?</a></li>
 <li><a href="#heading--set-up-ssh">How do I set up SSH for use by libvirt?</a></li>
 <li><a href="#heading--lxd-setup">What else must I do to use LXD VM hosts?</a></li>
 </ul>
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+* [How do I set up a VM host bridge with the MAAS CLI/API?](#heading--maas-bridge-cli)
+* [How do I set up a VM host bridge with netplan?](#heading--maas-bridge-netplan)
+* [How do I set up a VM host bridge with libvirt?](#heading--maas-bridge-libvirt)
+* [How do I set up SSH for use by libvirt?](#heading--set-up-ssh)
+* [What else must I do to use LXD VM hosts?](#heading--lxd-setup)
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
 <p>To enable VM host networking features, MAAS must match the VM host IP address of a potential VM host with a known device (a machine or controller). For example, if a machine not known to MAAS is set up as a VM host, enhanced interface selection features will not be available.</p>
 <p><strong>NOTE:</strong> 
 It&rsquo;s essential to enforce usage of IP addresses to avoid domain name conflicts, should different controllers resolve the same domain name with different IP addresses. You should also avoid using 127.0.0.1 when running multiple controllers, as it would confuse MAAS.</p>
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <h2 id="heading--maas-bridge-web-ui">Set up VM host bridge with MAAS UI</h2>
 
-You can use the MAAS UI to configure a bridge to connect a VM host to MAAS:
-
-1. Select the machine you want to use as a VM host.
-2. Switch to the "Network" tab.
-3. Select the network where you want to create the bridge and click "Create bridge:"
-
-<a href="images/29624d737106c5bad777aee9d2c8cad9c3de7151.jpeg" target = "_blank"><img src="images/29624d737106c5bad777aee9d2c8cad9c3de7151.jpeg"></a></a> 
-
-4. Configure the bridge on a subnet MAAS controls.  You may use any IP mode for the bridge:
-
-<a href="images/dd8567ff1cd76606c5ce1751e606fcfab2bc7ce2.jpeg" target = "_blank"><img src="images/dd8567ff1cd76606c5ce1751e606fcfab2bc7ce2.jpeg"></a></a> 
-
-When you're done, it should look something like this:
-
-<a href="images/e392d638f0acecb9d54c81bbca4ee17cbcd05445.jpeg" target = "_blank"><img src="images/e392d638f0acecb9d54c81bbca4ee17cbcd05445.jpeg"></a></a> 
-
-5. Deploy Ubuntu
-
-
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
-
+<p>You can use the MAAS UI to configure a bridge to connect a VM host to MAAS:</p>
+<ol>
+<li>Select the machine you want to use as a VM host.</li>
+<li>Switch to the &ldquo;Network&rdquo; tab.</li>
+<li>Select the network where you want to create the bridge and click &ldquo;Create bridge:&rdquo;</li>
+</ol>
+<p><a href="images/29624d737106c5bad777aee9d2c8cad9c3de7151.jpeg" target = "_blank"><img src="images/29624d737106c5bad777aee9d2c8cad9c3de7151.jpeg"></a></a> </p>
+<ol>
+<li>Configure the bridge on a subnet MAAS controls.  You may use any IP mode for the bridge:</li>
+</ol>
+<p><a href="images/dd8567ff1cd76606c5ce1751e606fcfab2bc7ce2.jpeg" target = "_blank"><img src="images/dd8567ff1cd76606c5ce1751e606fcfab2bc7ce2.jpeg"></a></a> </p>
+<p>When you&rsquo;re done, it should look something like this:</p>
+<p><a href="images/e392d638f0acecb9d54c81bbca4ee17cbcd05445.jpeg" target = "_blank"><img src="images/e392d638f0acecb9d54c81bbca4ee17cbcd05445.jpeg"></a></a> </p>
+<ol>
+<li>Deploy Ubuntu</li>
+</ol>
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 <h2 id="heading--maas-bridge-cli">Use the MAAS API to configure a bridge</h2>
 
-<p>You can also use the MAAS CLI/API to configure a VM host bridge, with the following procedure:</p>
-<ol>
-<li>
-<p>Select the interface you wish to configure the bridge on. This example uses the boot interface, since the boot interface must be connected to a MAAS controlled network &ndash; but any interface is allowed:</p>
-<pre><code>INTERFACE_ID=$(maas $PROFILE machine read $SYSTEM_ID | jq .boot_interface.id)
-</code></pre>
-</li>
-<li>
-<p>Create the bridge:</p>
-<pre><code> BRIDGE_ID=$(maas $PROFILE interfaces create-bridge $SYSTEM_ID name=br0 parent=$INTERFACE_ID | jq .id)
-</code></pre>
-</li>
-<li>
-<p>Select the subnet where you want the bridge (this should be a MAAS controlled subnet):</p>
-<pre><code>SUBNET_ID=$(maas $PROFILE subnets read | jq -r '.[] | select(.cidr == "10.0.0.0/24" and .managed == true).id')
-</code></pre>
-</li>
-<li>
-<p>Connect the bridge to the subnet:</p>
-<pre><code>  maas $PROFILE interface link-subnet $SYSTEM_ID $BRIDGE_ID subnet=$SUBNET_ID mode="STATIC" ip_address="10.0.0.101"
-</code></pre>
-</li>
-</ol>
+You can also use the MAAS CLI/API to configure a VM host bridge, with the following procedure:
+
+1. Select the interface you wish to configure the bridge on. This example uses the boot interface, since the boot interface must be connected to a MAAS controlled network -- but any interface is allowed:
+
+        INTERFACE_ID=$(maas $PROFILE machine read $SYSTEM_ID | jq .boot_interface.id)
+
+2. Create the bridge:
+
+         BRIDGE_ID=$(maas $PROFILE interfaces create-bridge $SYSTEM_ID name=br0 parent=$INTERFACE_ID | jq .id)
+
+3. Select the subnet where you want the bridge (this should be a MAAS controlled subnet):
+
+        SUBNET_ID=$(maas $PROFILE subnets read | jq -r '.[] | select(.cidr == "10.0.0.0/24" and .managed == true).id')
+
+4. Connect the bridge to the subnet:
+
+          maas $PROFILE interface link-subnet $SYSTEM_ID $BRIDGE_ID subnet=$SUBNET_ID mode="STATIC" ip_address="10.0.0.101"
+
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
 <h2 id="heading--maas-bridge-netplan">Use netplan to configure a bridge</h2>
 
 <p>You can also use netplan to configure a VM host bridge:</p>

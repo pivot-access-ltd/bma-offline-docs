@@ -166,12 +166,12 @@ maas $PROFILE vm-host compose $VM_HOST_ID $RESOURCES
 
 Where RESOURCES is a space-separated list from:
 
-**cores=** requested cores
-**cpu_speed=** requested minimum cpu speed in MHz
-**memory=** requested memory in MB
-**architecture=** See [Architecture](#heading--architecture) below
-**storage=** See [Storage](#heading--storage) below
-**interfaces=** See [Interfaces](#heading--interfaces) below
+1. **cores=** requested cores
+2. **cpu_speed=** requested minimum cpu speed in MHz
+3. **memory=** requested memory in MB
+4. **architecture=** See [Architecture](#heading--architecture) below
+5. **storage=** See [Storage](#heading--storage) below
+6. **interfaces=** See [Interfaces](#heading--interfaces) below
 
 <h4 id="heading--architecture">Architecture</h4>
 

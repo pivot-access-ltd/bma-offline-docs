@@ -754,152 +754,126 @@
 <p><a href="images/a0962e17-manage-repositories__2.4_add-ppa.png" target = "_blank"><img src="images/a0962e17-manage-repositories__2.4_add-ppa.png"></a></a></p>
 <p>Click &lsquo;Add repository&rsquo; to save the configuration.</p>
 <p>See <a href="https://help.launchpad.net/Packaging/PPA">Launchpad PPAs</a> for more information on PPAs.</p>
-<h2 id="heading--numa">NUMA/vNUMA</a>
+<h2 id="heading--numa">NUMA/vNUMA</h2>
 
-NUMA stands for "Non-Uniform Memory Access."  In this context, "non-uniform" means that any given CPU core can access its dedicated memory faster than the memory dedicated to other cores.  A NUMA configuration groups core(s) and memory as a dedicated node, which reduces memory access times, so the core won't spend a lot of time stalled in wait states -- that is, waiting for access to data in memory, either because the memory is relatively far away (proximity) or because other cores have access to the same memory (shared memory). In other words, NUMA works better when the core has dedicated memory that is relatively close by.
-
-In this context, "far away" could mean physical distance (more wire or a longer bus distance), more interceding processes (as in virtual machines), or both.  The process of optimising thread and process scheduling so that the core running the code and the required data are close together is sometimes known as "creating affinity." This affinity creates NUMA "nodes," which can be addressed as black boxes from a symmetric multi-processing (SMP) point of view.  Tasks are assigned to nodes to minimise overhead and wait states.
-
-There is more flexibility in creating affinity when using virtual machines, because memory and core are constructs overlaid on existing hardware, rather than hard silicon.  While this seems as if it might make SMP easier, in fact, it creates difficulties because of the nature of virtual machines and the potential number of interceding processes that manage virtual memory.  For optimum performance, VMs should be aligned to a single NUMA node, so that resources are not split across nodes.
-
-In practice, this means that VMs would be "pinned" to specific cores to create stability.  While the user has the choice of how to pin VMs, MAAS provides visual information that helps the user see how VMs are allocated to physical hardware, and make adjustments if that arrangement isn't (or turns out not to be) optimal.
-
-If you want to dig deeper, there is a [more through treatment of NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access) on Wikipedia.
-
+<p>NUMA stands for &ldquo;Non-Uniform Memory Access.&rdquo;  In this context, &ldquo;non-uniform&rdquo; means that any given CPU core can access its dedicated memory faster than the memory dedicated to other cores.  A NUMA configuration groups core(s) and memory as a dedicated node, which reduces memory access times, so the core won&rsquo;t spend a lot of time stalled in wait states &ndash; that is, waiting for access to data in memory, either because the memory is relatively far away (proximity) or because other cores have access to the same memory (shared memory). In other words, NUMA works better when the core has dedicated memory that is relatively close by.</p>
+<p>In this context, &ldquo;far away&rdquo; could mean physical distance (more wire or a longer bus distance), more interceding processes (as in virtual machines), or both.  The process of optimising thread and process scheduling so that the core running the code and the required data are close together is sometimes known as &ldquo;creating affinity.&rdquo; This affinity creates NUMA &ldquo;nodes,&rdquo; which can be addressed as black boxes from a symmetric multi-processing (SMP) point of view.  Tasks are assigned to nodes to minimise overhead and wait states.</p>
+<p>There is more flexibility in creating affinity when using virtual machines, because memory and core are constructs overlaid on existing hardware, rather than hard silicon.  While this seems as if it might make SMP easier, in fact, it creates difficulties because of the nature of virtual machines and the potential number of interceding processes that manage virtual memory.  For optimum performance, VMs should be aligned to a single NUMA node, so that resources are not split across nodes.</p>
+<p>In practice, this means that VMs would be &ldquo;pinned&rdquo; to specific cores to create stability.  While the user has the choice of how to pin VMs, MAAS provides visual information that helps the user see how VMs are allocated to physical hardware, and make adjustments if that arrangement isn&rsquo;t (or turns out not to be) optimal.</p>
+<p>If you want to dig deeper, there is a <a href="https://en.wikipedia.org/wiki/Non-uniform_memory_access">more through treatment of NUMA</a> on Wikipedia.</p>
 <h2 id="heading--sr-iov">SR-IOV</h2>
 
-With traditional ethernet, a packet comes into the NIC and interrupt is fired for the one core assigned to handle NIC interrupts.  That core has to go get the packet, find the destination MAC address or VLAN tag, then go interrupt the destination core -- which has to get the packet and write it to the memory of the VM it's managing. Statistically speaking, that's basically two core interrupts for every incoming packet.
-
-Many smart NICs are able to sort network packets into queues, based on MAC address or VLAN tag of the intended recipient, a technology sometimes known as "VMDq".  In these cases, each queue has its own interrupt, so each core gets interrupted only for its own packets. This arrangement is much faster than having one core assigned to handle all network interrupts.  Even so, the hypervisor still has to copy every packet from the NIC to the VM, physically touching each packet.
-
-With SR-IOV, it's possible to have no core interrupts when packets come in.  SR-IOV creates "virtual functions," with dedicated queues for transmitting and receiving.  Each VM is directly assigned hardware resources via a virtual function driver, which knows how to DMA-copy data directly between the NIC and the memory space of the relevant VM. Essentially, SR-IOV is like a "jumper wire" between the NIC and the VM, bypassing the core.  This prevents interrupting the core when packets arrive for it, and significantly reduces the core workload when sending network packets.
-
-For a deeper dive, try this [SR-IOV presentation](https://www.youtube.com/watch?v=hRHsk8Nycdg) from Intel.
-
+<p>With traditional ethernet, a packet comes into the NIC and interrupt is fired for the one core assigned to handle NIC interrupts.  That core has to go get the packet, find the destination MAC address or VLAN tag, then go interrupt the destination core &ndash; which has to get the packet and write it to the memory of the VM it&rsquo;s managing. Statistically speaking, that&rsquo;s basically two core interrupts for every incoming packet.</p>
+<p>Many smart NICs are able to sort network packets into queues, based on MAC address or VLAN tag of the intended recipient, a technology sometimes known as &ldquo;VMDq&rdquo;.  In these cases, each queue has its own interrupt, so each core gets interrupted only for its own packets. This arrangement is much faster than having one core assigned to handle all network interrupts.  Even so, the hypervisor still has to copy every packet from the NIC to the VM, physically touching each packet.</p>
+<p>With SR-IOV, it&rsquo;s possible to have no core interrupts when packets come in.  SR-IOV creates &ldquo;virtual functions,&rdquo; with dedicated queues for transmitting and receiving.  Each VM is directly assigned hardware resources via a virtual function driver, which knows how to DMA-copy data directly between the NIC and the memory space of the relevant VM. Essentially, SR-IOV is like a &ldquo;jumper wire&rdquo; between the NIC and the VM, bypassing the core.  This prevents interrupting the core when packets arrive for it, and significantly reduces the core workload when sending network packets.</p>
+<p>For a deeper dive, try this <a href="https://www.youtube.com/watch?v=hRHsk8Nycdg">SR-IOV presentation</a> from Intel.</p>
 <h2 id="heading--isolcpus">Isolating CPUs</h2>
 
-For certain operations, it's useful to shield a from having to execute general system processes and take interrupts.  These are sometimes referred to as "isolcpus," more correctly described as booting a core with the `isolcpus` boot parameter.  This parameter restricts the shielded core to processes assigned directly to it, avoiding sharing bandwidth with the general scheduler and preventing the core from taking non-specific interrupts.
-
-When used with VMs, users can maximise performance by configuring isolcpus in the kernel, to prevent the general scheduler and other tasks from using bandwidth on your VM core(s).
-
+<p>For certain operations, it&rsquo;s useful to shield a from having to execute general system processes and take interrupts.  These are sometimes referred to as &ldquo;isolcpus,&rdquo; more correctly described as booting a core with the <code>isolcpus</code> boot parameter.  This parameter restricts the shielded core to processes assigned directly to it, avoiding sharing bandwidth with the general scheduler and preventing the core from taking non-specific interrupts.</p>
+<p>When used with VMs, users can maximise performance by configuring isolcpus in the kernel, to prevent the general scheduler and other tasks from using bandwidth on your VM core(s).</p>
 <h2 id="heading--edge-clouds">Edge clouds</h2>
 
-Edge clouds are designed to minimise latency, so that your cloud computing experience is nearer to real-time.  The use of "edge" doesn't specifically refer to the edges of the cloud, but to the machines that are at the "edge of the problem," or more to the point, "the edge of the cloud that is closest to your application."  Sometimes these are separate clouds in your own data centre, though they can also be parts of a remote cloud that are closer to you in network terms.
-
-There are a number of complex decision lops and optimisation algorithms used by edge clouds, but the primary purpose is low-latency computing where possible.  If the servers closest to you (network-wise) can handle the load, they do; if not, they can call on other servers just a little further away.
-
-Edge clouds can be planned and enhanced by using NUMA and SR-IOV techniques.  NUMA can help you create SMP nodes on VM cores the shortest (network) distance away from your application.  SR-IOV can, in general, reduce network latency even more by eliminating core involvement in network traffic. You can create virtual machines and assign NUMA nodes to minimise network latency, and then ensure that   MAAS gives you NUMA tools to find out whether you're achieving this sort of optimisation, and help you make decisions about how to adjust and improve over time.
-
+<p>Edge clouds are designed to minimise latency, so that your cloud computing experience is nearer to real-time.  The use of &ldquo;edge&rdquo; doesn&rsquo;t specifically refer to the edges of the cloud, but to the machines that are at the &ldquo;edge of the problem,&rdquo; or more to the point, &ldquo;the edge of the cloud that is closest to your application.&rdquo;  Sometimes these are separate clouds in your own data centre, though they can also be parts of a remote cloud that are closer to you in network terms.</p>
+<p>There are a number of complex decision lops and optimisation algorithms used by edge clouds, but the primary purpose is low-latency computing where possible.  If the servers closest to you (network-wise) can handle the load, they do; if not, they can call on other servers just a little further away.</p>
+<p>Edge clouds can be planned and enhanced by using NUMA and SR-IOV techniques.  NUMA can help you create SMP nodes on VM cores the shortest (network) distance away from your application.  SR-IOV can, in general, reduce network latency even more by eliminating core involvement in network traffic. You can create virtual machines and assign NUMA nodes to minimise network latency, and then ensure that   MAAS gives you NUMA tools to find out whether you&rsquo;re achieving this sort of optimisation, and help you make decisions about how to adjust and improve over time.</p>
 <h2 id="Hugepages">Hugepages</h2>
 
-Computer memory is addressed not as raw RAM, but as virtual memory. Assisted by the CPU's memory management unit (MMU), the kernel maps virtual memory to a physical location. Virtual memory is divided into pages, which can be swapped in and out to disk during normal operation (hence the term "swap space").  When programs access memory, the CPU needs to know which physical page has the data, so it relies on the kernel's "page table" to find the right virtual-to-physical address mapping.
-
-Since this page table is big and slow, the CPU has a special buffer -- the Translation Lookaside Buffer (TLB) -- that caches address mapping.  This means after the first access to a page, subsequent accesses are much faster.  Since this buffer is implemented in hardware, for speed, the size is limited to, say, 4096 bytes.
-
-When the core is accessing lots of pages, the speed advantage of the TLB can be lost.  Hugepages allow one TLB entry to point to 2MB, instead of just 4096 bytes.  With 512 TLB entires, typically, you can map 1GB of memory.  Hugepages come with a catch, though: if you have to swap pages, it (obviously) takes longer.
-
-There's no tried and true formula for when to use them, but the key consideration is that you want to use most of a hugepage when you swap.  Rather than using little sections of a hugepage, which would mean losing the performance advantage from constant swapping, you want to maximize the use of each hugepage.  While there's no simple, empirical way to calculate this answer, you can do it by trial-and-error observation.
-
-MAAS provides the dashboards and tools necessary to monitor and adjust your use of hugepages, so that you can find the right balance.
-
+<p>Computer memory is addressed not as raw RAM, but as virtual memory. Assisted by the CPU&rsquo;s memory management unit (MMU), the kernel maps virtual memory to a physical location. Virtual memory is divided into pages, which can be swapped in and out to disk during normal operation (hence the term &ldquo;swap space&rdquo;).  When programs access memory, the CPU needs to know which physical page has the data, so it relies on the kernel&rsquo;s &ldquo;page table&rdquo; to find the right virtual-to-physical address mapping.</p>
+<p>Since this page table is big and slow, the CPU has a special buffer &ndash; the Translation Lookaside Buffer (TLB) &ndash; that caches address mapping.  This means after the first access to a page, subsequent accesses are much faster.  Since this buffer is implemented in hardware, for speed, the size is limited to, say, 4096 bytes.</p>
+<p>When the core is accessing lots of pages, the speed advantage of the TLB can be lost.  Hugepages allow one TLB entry to point to 2MB, instead of just 4096 bytes.  With 512 TLB entires, typically, you can map 1GB of memory.  Hugepages come with a catch, though: if you have to swap pages, it (obviously) takes longer.</p>
+<p>There&rsquo;s no tried and true formula for when to use them, but the key consideration is that you want to use most of a hugepage when you swap.  Rather than using little sections of a hugepage, which would mean losing the performance advantage from constant swapping, you want to maximize the use of each hugepage.  While there&rsquo;s no simple, empirical way to calculate this answer, you can do it by trial-and-error observation.</p>
+<p>MAAS provides the dashboards and tools necessary to monitor and adjust your use of hugepages, so that you can find the right balance.</p>
 <h2 id="heading--network-tutorial">Brief network tutorial</h2>
 
-The following is a brief network tutorial, provided as a tool to synchronise understanding.  Note that this tutorial covers mostly those terms routinely needed in the course of using MAAS.
-
+<p>The following is a brief network tutorial, provided as a tool to synchronise understanding.  Note that this tutorial covers mostly those terms routinely needed in the course of using MAAS.</p>
 <h3 id="heading--dhcp">DHCP</h3>
 
-The Dynamic Host Control Protocol is a network management system in which a server (or group of servers) dynamically assigns IP addresses and other network parameters to a network device.  This network device may or may not have the capability to provide its own IP address, although to take advantage of DHCP, the device must have been configured to seek out a DHCP server and accept an assigned IP address.  Typically, a network administrator defines a range of reserved IP addresses from which the DHCP server can pull when assigning addresses.
-
-DHCP operates using the "DORA" model: Discovery, Offer, Request, and Acknowledge:
-
-1. Potential DHCP clients broadcast a DHCPDISCOVER message on its attached subnet using destination address 255.255.255.255.
-
-2. A connected DHCP server receives the DHCPDISCOVER message and sends a DHCPOFFER message, containing an IP address that the client may use.
-
-3. The client replies with a DHCPREQUEST message, requesting the offered address.
-
-4. The DHCP server responds with a DHCPACK (acknowledgement) which includes various important configuration parameters, such as the lease duration.
-
-Of course, there is [much more to DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol), but what's covered here should be sufficient understanding for using MAAS.
-
+<p>The Dynamic Host Control Protocol is a network management system in which a server (or group of servers) dynamically assigns IP addresses and other network parameters to a network device.  This network device may or may not have the capability to provide its own IP address, although to take advantage of DHCP, the device must have been configured to seek out a DHCP server and accept an assigned IP address.  Typically, a network administrator defines a range of reserved IP addresses from which the DHCP server can pull when assigning addresses.</p>
+<p>DHCP operates using the &ldquo;DORA&rdquo; model: Discovery, Offer, Request, and Acknowledge:</p>
+<ol>
+<li>
+<p>Potential DHCP clients broadcast a DHCPDISCOVER message on its attached subnet using destination address 255.255.255.255.</p>
+</li>
+<li>
+<p>A connected DHCP server receives the DHCPDISCOVER message and sends a DHCPOFFER message, containing an IP address that the client may use.</p>
+</li>
+<li>
+<p>The client replies with a DHCPREQUEST message, requesting the offered address.</p>
+</li>
+<li>
+<p>The DHCP server responds with a DHCPACK (acknowledgement) which includes various important configuration parameters, such as the lease duration.</p>
+</li>
+</ol>
+<p>Of course, there is <a href="https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol">much more to DHCP</a>, but what&rsquo;s covered here should be sufficient understanding for using MAAS.</p>
 <h3 id="heading--client">Client</h3>
 
-In the client/server age, the lines between client and server are blurred and sometimes reversible.  For the purposes of MAAS and general networking principles, we can define a "client" as a node that uses shared resources via a network.  If that same client provides shared resources to other nodes, it could also be considered a server.  
-
+<p>In the client/server age, the lines between client and server are blurred and sometimes reversible.  For the purposes of MAAS and general networking principles, we can define a &ldquo;client&rdquo; as a node that uses shared resources via a network.  If that same client provides shared resources to other nodes, it could also be considered a server.  </p>
 <h3 id="heading--server">Server</h3>
 
-A server is a node that provides shared resources to clients via a network.  If that same server uses shared resources from other nodes, it could also be considered a client, but only in that context.  
-
+<p>A server is a node that provides shared resources to clients via a network.  If that same server uses shared resources from other nodes, it could also be considered a client, but only in that context.  </p>
 <h3 id="heading--network-interface">Network interface</h3>
 
-A network interface, often referred to as a "network interface card" or NIC, is either a separate physical card connected to a node, a set of circuits embedded on a node's motherboard, or a radio transceiver attached to a node in some way.  All network connections require a NIC.  The terms "port" and "adaptor" are also used to refer to a network interface.
-
+<p>A network interface, often referred to as a &ldquo;network interface card&rdquo; or NIC, is either a separate physical card connected to a node, a set of circuits embedded on a node&rsquo;s motherboard, or a radio transceiver attached to a node in some way.  All network connections require a NIC.  The terms &ldquo;port&rdquo; and &ldquo;adaptor&rdquo; are also used to refer to a network interface.</p>
 <h3 id="heading--mac-address">MAC address</h3>
 
-A MAC or "media access control" address is a unique address or "physical address" associated with a network interface.  They are 48 bits in length, which allows for 280 trillion devices, arranged into six hexadecimal octets, separated by colons or dashes.  Every computer in the world theoretically has a unique MAC address.  You can identify a node's IP address with the command `ipconfig /all`.
-
+<p>A MAC or &ldquo;media access control&rdquo; address is a unique address or &ldquo;physical address&rdquo; associated with a network interface.  They are 48 bits in length, which allows for 280 trillion devices, arranged into six hexadecimal octets, separated by colons or dashes.  Every computer in the world theoretically has a unique MAC address.  You can identify a node&rsquo;s IP address with the command <code>ipconfig /all</code>.</p>
 <h3 id="heading--network-cable">Network cable</h3>
 
-Network cables are special cables that connect non-wireless-based nodes.  They consist of our pairs of insulated, 24-gauge wire, colour-coded (solid/striped), usually in four colours: blue, green, orange, and brown.  The matching colour pairs are twisted together, each pair at a different turn rate to prevent electromagnetic interference between pairs.
-These twists must be maintained all the way up to the (RJ45) connector.
-
-Even with insulation, careful twisting, and connector-termination, natural losses in the cable cause the network signals to become too weak to maintain reliable data rates after a certain length.  In the case of Cat 5e cable, the maximum cable length is 100 meters to maintain 1Gb per second.  For Cat 6, the max length to maintain 10Gb per second is 55 meters.  These limits are overcome with [repeaters](concepts-and-terms.html#heading--repeater), which amplify the signal and relay it to the next repeater or NIC.
-
+<p>Network cables are special cables that connect non-wireless-based nodes.  They consist of our pairs of insulated, 24-gauge wire, colour-coded (solid/striped), usually in four colours: blue, green, orange, and brown.  The matching colour pairs are twisted together, each pair at a different turn rate to prevent electromagnetic interference between pairs.
+These twists must be maintained all the way up to the (RJ45) connector.</p>
+<p>Even with insulation, careful twisting, and connector-termination, natural losses in the cable cause the network signals to become too weak to maintain reliable data rates after a certain length.  In the case of Cat 5e cable, the maximum cable length is 100 meters to maintain 1Gb per second.  For Cat 6, the max length to maintain 10Gb per second is 55 meters.  These limits are overcome with <a href="concepts-and-terms.html#heading--repeater">repeaters</a>, which amplify the signal and relay it to the next repeater or NIC.</p>
 <h3 id="heading--repeater">Repeater</h3>
 
-Technically, a repeater is a network signal amplifier with two RJ45 connectors which adds one maximum length (for the cable type) to the network connection or "run."  In practice, repeaters usually come in the form of [hubs](concepts-and-terms.html#heading--hub) or [switches](concepts-and-terms.html#heading--switch), which can usually perform other functions as well.
-
+<p>Technically, a repeater is a network signal amplifier with two RJ45 connectors which adds one maximum length (for the cable type) to the network connection or &ldquo;run.&rdquo;  In practice, repeaters usually come in the form of <a href="concepts-and-terms.html#heading--hub">hubs</a> or <a href="concepts-and-terms.html#heading--switch">switches</a>, which can usually perform other functions as well.</p>
 <h3 id="heading--packet">Packet</h3>
 
-A packet is a unit of network traffic.  It may or may not represent a complete message.
-
+<p>A packet is a unit of network traffic.  It may or may not represent a complete message.</p>
 <h3 id="heading--hub">Hub</h3>
 
-Hubs essentially started as repeaters.  While they may be able to connect more than two computers together (i.e., multiple RJ45 ports), they provide no improvement over simple bus networks, since every connected NIC must examine every packet.  They are rarely used anymore.
-
+<p>Hubs essentially started as repeaters.  While they may be able to connect more than two computers together (i.e., multiple RJ45 ports), they provide no improvement over simple bus networks, since every connected NIC must examine every packet.  They are rarely used anymore.</p>
 <h3 id="heading--switch">Switch</h3>
 
-A switch is a "smart" device that connects cables from nodes to make networks.  Like a hub, a switch amplifies signals, that is, it acts as a repeater.  Switches learn by induction which cables receive which IP addresses.  Over time a switch will direct each packet only to devices which indicate that they will accept the addresses associated with those packets.
-
+<p>A switch is a &ldquo;smart&rdquo; device that connects cables from nodes to make networks.  Like a hub, a switch amplifies signals, that is, it acts as a repeater.  Switches learn by induction which cables receive which IP addresses.  Over time a switch will direct each packet only to devices which indicate that they will accept the addresses associated with those packets.</p>
 <h3 id="heading--network-topology">Network topology</h3>
 
-Topology describes how nodes are connected to a network, specifically referring to the shapes made by the cables and the paths that packets can take.  There are probably as many topologies are there are shapes, but here are a few of the most common:
-
-* Bus topology: the most basic network topology, a group of computers connected to a single, long cable.  In this configuration, every computer sees every packet.  A [hub](concepts-and-terms.html#heading--hub) network, for instance, is still a bus topology, because every machine sees every packet.
-
-* Star or switch topology: a group of computers connected to a [switch](concepts-and-terms.html#heading--switch).  As the switch learns where packets are supposed to go, the star quickly evolves so that only packets are only seen by computers that are intended to receive the packet.
-
-* Backbone topology: a hybrid network configuration in which several stars are connected to a bus.
-
-* Daisy-chain topology: stars connected to stars, or more accurately, switches connected to switches.
-
-* Mesh topology: nodes with multiple interfaces and multiple connections.  Useful where wide-area networks ([WAN](concepts-and-terms.html#heading--wan)) where there would otherwise be lots of intermediaries.  Not popular or particularly cost effective for [LAN](concepts-and-terms.html#heading--lan) networks.
-
+<p>Topology describes how nodes are connected to a network, specifically referring to the shapes made by the cables and the paths that packets can take.  There are probably as many topologies are there are shapes, but here are a few of the most common:</p>
+<ul>
+<li>
+<p>Bus topology: the most basic network topology, a group of computers connected to a single, long cable.  In this configuration, every computer sees every packet.  A <a href="concepts-and-terms.html#heading--hub">hub</a> network, for instance, is still a bus topology, because every machine sees every packet.</p>
+</li>
+<li>
+<p>Star or switch topology: a group of computers connected to a <a href="concepts-and-terms.html#heading--switch">switch</a>.  As the switch learns where packets are supposed to go, the star quickly evolves so that only packets are only seen by computers that are intended to receive the packet.</p>
+</li>
+<li>
+<p>Backbone topology: a hybrid network configuration in which several stars are connected to a bus.</p>
+</li>
+<li>
+<p>Daisy-chain topology: stars connected to stars, or more accurately, switches connected to switches.</p>
+</li>
+<li>
+<p>Mesh topology: nodes with multiple interfaces and multiple connections.  Useful where wide-area networks (<a href="concepts-and-terms.html#heading--wan">WAN</a>) where there would otherwise be lots of intermediaries.  Not popular or particularly cost effective for <a href="concepts-and-terms.html#heading--lan">LAN</a> networks.</p>
+</li>
+</ul>
 <h3 id="heading--patch-panel">Patch panel</h3>
 
-A patch panel is simply a 24- to 48-port panel of connectors that can link together three- to ten-foot cables.  A patch panel allows jumpers from network runs to devices in racks, without putting strain and "cable creep" on long runs.
-
+<p>A patch panel is simply a 24- to 48-port panel of connectors that can link together three- to ten-foot cables.  A patch panel allows jumpers from network runs to devices in racks, without putting strain and &ldquo;cable creep&rdquo; on long runs.</p>
 <h3 id="heading--lan">LAN</h3>
 
-Besides topology, networks can also be classified by their size, range, or "reach."  One such classification is the Local Area Network (LAN), which connects computers in close proximity (about 300 feet).
-
+<p>Besides topology, networks can also be classified by their size, range, or &ldquo;reach.&rdquo;  One such classification is the Local Area Network (LAN), which connects computers in close proximity (about 300 feet).</p>
 <h3 id="heading--WAN">WAN</h3>
 
-A WAN (wide area network) is a network which connects LANs across large geographic distances, e.g., thousands of miles.
-
+<p>A WAN (wide area network) is a network which connects LANs across large geographic distances, e.g., thousands of miles.</p>
 <h3 id="heading--MAN">MAN</h3>
 
-A metro area network or MAN connects LANs over a smaller area, like a city or urban footprint.  Basically, if it isn't really a WAN, but you can't connect it with cables, it's usually considered a MAN.
-
+<p>A metro area network or MAN connects LANs over a smaller area, like a city or urban footprint.  Basically, if it isn&rsquo;t really a WAN, but you can&rsquo;t connect it with cables, it&rsquo;s usually considered a MAN.</p>
 <h3 id="heading--network-infrastructure">Network infrastructure</h3>
 
-Network infrastructure is a catch-all term covering the physical components of a network, include cables, patch panels, switches, routers, hubs, and other associated network gear.
-
+<p>Network infrastructure is a catch-all term covering the physical components of a network, include cables, patch panels, switches, routers, hubs, and other associated network gear.</p>
 <h3 id="heading--router">Router</h3>
 
-A router is a device that transfers packets from one network to another.  Unlike switches, which only ensure that pre-addressed packets get to the correct recipient machines, routers actually modify or encapsulate packets to ensure that they can travel on other networks to reach a remote destination.
-
+<p>A router is a device that transfers packets from one network to another.  Unlike switches, which only ensure that pre-addressed packets get to the correct recipient machines, routers actually modify or encapsulate packets to ensure that they can travel on other networks to reach a remote destination.</p>
 <!-- IMAGES -->
+
 <!-- LINKS -->
     </div>
   </body>

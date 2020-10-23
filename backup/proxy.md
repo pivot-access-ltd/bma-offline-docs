@@ -163,4 +163,4 @@ An upstream cache peer can be defined by enabling the 'Peer' checkbox and enteri
 To prevent MAAS machines from using a proxy, enable the 'Don't use a proxy' checkbox.
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-[note type="caution"]Note that the proxy service will still be running[/note]
+**NOTE** that the proxy service will still be running.

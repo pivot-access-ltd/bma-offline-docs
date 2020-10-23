@@ -459,8 +459,8 @@ deb-2-7-cli -->
 <!-- snap-2-8-ui
  snap-2-8-ui -->
 
-<!-- snap-2-9-ui
- snap-2-9-ui -->
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
 
 <p>MAAS has a robust logging capability, which presents several different views, including a number of node-specific log files and several syslogd-style text logs.  Each of these logs provides different information, or at the very least, different views of the same information.  MAAS gathers logging information about the various MAAS states and records both automated and user-driven actions.</p>
 <h4>Quick questions you may have:</h4>
@@ -544,6 +544,14 @@ deb-2-7-cli -->
 * [What are event logs?](event-logs.html)
  snap-2-8-ui -->
 
+<!-- snap-2-9-cli
+* [What is the syslog logging path?](#heading--path)
+* [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
+* [What are commissioning logs?](commissioning-logs.html)
+* [What are test logs?](test-logs.html)
+* [What are event logs?](event-logs.html)
+ snap-2-9-cli -->
+
 <ul>
 <li><a href="#heading--path">What is the syslog logging path?</a></li>
 <li><a href="#heading--using-a-remote-syslog-server">How do I use a remote syslog server?</a></li>
@@ -551,14 +559,6 @@ deb-2-7-cli -->
 <li><a href="test-logs.html">What are test logs?</a></li>
 <li><a href="event-logs.html">What are event logs?</a></li>
 </ul>
-<!-- snap-2-9-ui
-* [What is the syslog logging path?](#heading--path)
-* [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-* [What are commissioning logs?](commissioning-logs.html)
-* [What are test logs?](test-logs.html)
-* [What are event logs?](event-logs.html)
- snap-2-9-ui -->
-
 <p>The discussion of these logs and their contents can be very extensive, so each type of logging has its own documentation section, reachable from the left-hand menu &ndash; or from the list of questions above.</p>
 <h2 id="heading--path">The syslog logging path</h2>
 
@@ -569,29 +569,36 @@ deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 <p>Syslog data is kept in <code>/var/snap/maas/common/log/rsyslog/&lt;machine-name&gt;&lt;yyyy-mm-dd&gt;/messages</code>. Every machine known to MAAS will have corresponding syslogs.</p>
 <h2 id="heading--using-a-remote-syslog-server">Using a remote syslog server</h2>
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-To add a remote syslog server, click the Settings tab and then click the Network services tab. Scroll down to the Syslog section, where you can add a syslog URL or IP:
+<p>To add a remote syslog server, click the Settings tab and then click the Network services tab. Scroll down to the Syslog section, where you can add a syslog URL or IP:</p>
+<p><a href="images/e139d4e9-installconfig-syslog__2.6-remote-syslog.png" target = "_blank"><img src="images/e139d4e9-installconfig-syslog__2.6-remote-syslog.png"></a></a></p>
+<p>Click the Save button to save your changes.</p>
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+To add or update a remote syslog server in your MAAS environment:
 
-<a href="images/e139d4e9-installconfig-syslog__2.6-remote-syslog.png" target = "_blank"><img src="images/e139d4e9-installconfig-syslog__2.6-remote-syslog.png"></a></a>
-
-Click the Save button to save your changes.
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
-
-<p>To add or update a remote syslog server in your MAAS environment:</p>
 <pre><code class="bash">maas $PROFILE maas set-config name=&quot;remote_syslog&quot; value=&quot;$SYSLOG_FQDN&quot;
 </code></pre>
 
-<p>For example, to set your syslog server to <code>192.168.100.11</code>:</p>
+
+For example, to set your syslog server to `192.168.100.11`:
+
+
 <pre><code class="bash">maas $PROFILE maas set-config name=&quot;remote_syslog&quot; value=192.168.100.11
 </code></pre>
 
-<p>If you clear the <code>remote_syslog</code> value, MAAS will revert to the default behaviour, which is to send all syslog information to all MAAS region controllers.</p>
-<p>For example:</p>
+
+If you clear the `remote_syslog` value, MAAS will revert to the default behaviour, which is to send all syslog information to all MAAS region controllers.
+
+For example:
+
+
 <pre><code class="bash">maas $PROFILE maas set-config name=&quot;remote_syslog&quot; value=&quot;&quot;
 </code></pre>
 
-<p><strong>NOTE:</strong> 
-Note that MAAS controllers&rsquo; syslogs are not forwarded to the external syslog server &ndash; only machine syslog information is forwarded.</p>
+
+<strong>NOTE:</strong> 
+Note that MAAS controllers' syslogs are not forwarded to the external syslog server -- only machine syslog information is forwarded.
+
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
     </div>
   </body>
 </html>

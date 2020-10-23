@@ -27,7 +27,7 @@ S27UT := snap-2-7-ui
 S28CT := snap-2-8-cli
 S28UT := snap-2-8-ui
 S29CT := snap-2-9-cli
-S29UT := snap-2-9-cli
+S29UT := snap-2-9-ui
 PROD_VSN := 2.9
 TEMP := templates
 MOL := maas-offline
@@ -90,7 +90,7 @@ originals/%.msd: %.msd
 	cp templates/$(D27U)/msd-template.html ./template.html
 	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(D27UT) $<
-	sed -i "s/<li><a href=\"https/<li><a hruf=\"https/" $(HTML)
+	sed -i "s/<li><a href=\"http/<li><a hruf=\"http/" $(HTML)
 	sed -i "s/<li><a href=\"/<li><a href=\"ui\//" $(HTML)
 	sed -i "s/<li><a hruf/<li><a href/" $(HTML)
 	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
@@ -98,7 +98,7 @@ originals/%.msd: %.msd
 	cp templates/$(D28U)/msd-template.html ./template.html
 	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(D28UT) $<
-	sed -i "s/<li><a href=\"https/<li><a hruf=\"https/" $(HTML)
+	sed -i "s/<li><a href=\"http/<li><a hruf=\"http/" $(HTML)
 	sed -i "s/<li><a href=\"/<li><a href=\"ui\//" $(HTML)
 	sed -i "s/<li><a hruf/<li><a href/" $(HTML)
 	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
@@ -107,7 +107,7 @@ originals/%.msd: %.msd
 	cp templates/$(D29U)/msd-template.html ./template.html
 	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(D29UT) $<
-	sed -i "s/<li><a href=\"https/<li><a hruf=\"https/" $(HTML)
+	sed -i "s/<li><a href=\"http/<li><a hruf=\"http/" $(HTML)
 	sed -i "s/<li><a href=\"/<li><a href=\"ui\//" $(HTML)
 	sed -i "s/<li><a hruf/<li><a href/" $(HTML)
 	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
@@ -116,7 +116,7 @@ originals/%.msd: %.msd
 	cp templates/$(S27U)/msd-template.html ./template.html
 	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(S27UT) $<
-	sed -i "s/<li><a href=\"https/<li><a hruf=\"https/" $(HTML)
+	sed -i "s/<li><a href=\"http/<li><a hruf=\"http/" $(HTML)
 	sed -i "s/<li><a href=\"/<li><a href=\"ui\//" $(HTML)
 	sed -i "s/<li><a hruf/<li><a href/" $(HTML)
 	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
@@ -125,7 +125,7 @@ originals/%.msd: %.msd
 	cp templates/$(S28U)/msd-template.html ./template.html
 	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(S28UT) $<
-	sed -i "s/<li><a href=\"https/<li><a hruf=\"https/" $(HTML)
+	sed -i "s/<li><a href=\"http/<li><a hruf=\"http/" $(HTML)
 	sed -i "s/<li><a href=\"/<li><a href=\"ui\//" $(HTML)
 	sed -i "s/<li><a hruf/<li><a href/" $(HTML)
 	sed -i "s/-[0-9]*.html/.html/g" $(HTML)
@@ -134,7 +134,7 @@ originals/%.msd: %.msd
 	cp templates/$(S29U)/msd-template.html ./template.html
 	sed -i "s|zork|$(HTML)|g" ./template.html
 	xpub convert dc2html -t $(S27UT) $<
-	sed -i "s/<li><a href=\"https/<li><a hruf=\"https/" $(HTML)
+	sed -i "s/<li><a href=\"http/<li><a hruf=\"http/" $(HTML)
 	sed -i "s/<li><a href=\"/<li><a href=\"ui\//" $(HTML)
 	sed -i "s/<li><a hruf/<li><a href/" $(HTML)
 	sed -i "s/-[0-9]*.html/.html/g" $(HTML)

@@ -459,25 +459,38 @@
 <!-- snap-2-8-ui
  snap-2-8-ui -->
 
-<!-- snap-2-9-ui
- snap-2-9-ui -->
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
 
-<p>The command line allows you to retrieve the verbatim logs of commissioning script runs, including those that are currently in progress.</p>
-<p>If you only want to see the latest or currently-running result, you can use <code>current-commissioning</code>, <code>current-testing</code>, or <code>current-installation</code> instead of an id:</p>
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+The command line allows you to retrieve the verbatim logs of commissioning script runs, including those that are currently in progress.
+
+If you only want to see the latest or currently-running result, you can use `current-commissioning`, `current-testing`, or `current-installation` instead of an id:
+
+
 <pre><code class="bash">maas $PROFILE node-script-result read $SYSTEM_ID $RESULTS
 </code></pre>
 
-<p>You can also limit which results are returned by type (commissioning, testing, or installation), script name, or script run:</p>
+
+You can also limit which results are returned by type (commissioning, testing, or installation), script name, or script run:
+
+
 <pre><code class="bash">maas $PROFILE node-script-results read \
  $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS
 </code></pre>
 
-<p>You can also suppress failed results, which is useful if you want to ignore a known failure:</p>
+
+You can also suppress failed results, which is useful if you want to ignore a known failure:
+
+
 <pre><code class="bash">maas $PROFILE node-script-results update \
  $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS suppressed=$SUPPRESSED
 </code></pre>
 
-<p>where <code>$SUPPRESSED</code> is either <code>True</code> or <code>False</code>. The JSON formatted output to the above command will include &lsquo;results&rsquo; dictionary with an entry for <code>suppressed</code>:</p>
+
+where `$SUPPRESSED` is either `True` or `False`. The JSON formatted output to the above command will include 'results' dictionary with an entry for `suppressed`:
+
+
 <pre><code class="json">&quot;results&quot;: [
     {
         &quot;id&quot;: 21,
@@ -513,21 +526,23 @@
 ]
 </code></pre>
 
-<p>Finally, results can be downloaded, either to stdout, stderr, as combined output or as a tar.xz:</p>
+
+Finally, results can be downloaded, either to stdout, stderr, as combined output or as a tar.xz:
+
+
 <pre><code class="bash">maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
  filetype=tar.xz &gt; $LOCAL_FILENAME
 </code></pre>
 
-<p><strong>NOTE:</strong> 
-<strong>$RUN_ID</strong> is labelled <code>id</code> in the verbose result output.</p>
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-Commissioning logs, which are presented on the "Commissioning" tab for any machine in the "Ready" state, contain a list of commissioning scripts with a timestamp and result.  You can view the detailed logs for each of these scripts from this tab.
 
-When you click on the "Commissioning" tab under a given machine, you will see a screen similar to this one:
+<strong>NOTE:</strong> 
+**$RUN_ID** is labelled `id` in the verbose result output.
 
-<a href="images/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg" target = "_blank"><img src="images/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg"></a></a> 
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
+<p>Commissioning logs, which are presented on the &ldquo;Commissioning&rdquo; tab for any machine in the &ldquo;Ready&rdquo; state, contain a list of commissioning scripts with a timestamp and result.  You can view the detailed logs for each of these scripts from this tab.</p>
+<p>When you click on the &ldquo;Commissioning&rdquo; tab under a given machine, you will see a screen similar to this one:</p>
+<p><a href="images/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg" target = "_blank"><img src="images/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg"></a></a> </p>
 <!-- deb-2-7-ui
 Each of the items in the "NAME" column is the name of a [commissioning script](commission-machines.html#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
  deb-2-7-ui -->
@@ -548,10 +563,7 @@ Each of the items in the "NAME" column is the name of a [commissioning script](c
 Each of the items in the "NAME" column is the name of a [commissioning script](commission-machines.html#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
  snap-2-8-ui -->
 
-<!-- snap-2-9-ui
-Each of the items in the "NAME" column is the name of a [commissioning script](commission-machines.html#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
- snap-2-9-ui -->
-
+<p>Each of the items in the &ldquo;NAME&rdquo; column is the name of a <a href="commission-machines.html#heading--commissioning-scripts">commissioning script</a>.  Each entry gives a timestamp and a result (e.g. passed, failed, &hellip;). At the end of each line is a link to view the log. It&rsquo;s worth taking a look at each of the script logs and their typical output.</p>
 <!-- snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli
 <h2>00-maas-00-support-info</h2>
 

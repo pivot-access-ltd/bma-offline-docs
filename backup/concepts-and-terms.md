@@ -445,7 +445,7 @@ Click 'Add repository' to save the configuration.
 
 See [Launchpad PPAs](https://help.launchpad.net/Packaging/PPA) for more information on PPAs.
 
-<h2 id="heading--numa">NUMA/vNUMA</a>
+<h2 id="heading--numa">NUMA/vNUMA</h2>
 
 NUMA stands for "Non-Uniform Memory Access."  In this context, "non-uniform" means that any given CPU core can access its dedicated memory faster than the memory dedicated to other cores.  A NUMA configuration groups core(s) and memory as a dedicated node, which reduces memory access times, so the core won't spend a lot of time stalled in wait states -- that is, waiting for access to data in memory, either because the memory is relatively far away (proximity) or because other cores have access to the same memory (shared memory). In other words, NUMA works better when the core has dedicated memory that is relatively close by.
 
