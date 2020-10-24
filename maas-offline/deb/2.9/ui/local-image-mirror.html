@@ -463,11 +463,6 @@
  snap-2-9-ui -->
 
 <p>Mirroring images is worthy of consideration.  The SimpleStreams protocol delivers Images to MAAS, which is especially useful when your Internet link is slow or unreliable. In this mirrored configuration, images will be instantly available when MAAS requests them.</p>
-<h4>Quick questions you may have:</h4>
-<ul>
-<li><a href="maas-cli.html">How do I get started with the MAAS CLI?</a></li>
-<li><a href="#heading--set-up-local-mirror">How do I set up a local mirror?</a></li>
-</ul>
 <h2 id="heading--set-up-local-mirror">Setting up a local mirror</h2>
 
 <p>To use mirroring, you begin by installing the necessary software on the host that will house the mirror:</p>
@@ -476,22 +471,20 @@
 
 <p>First define some variables to unclutter eventual CLI commands:</p>
 <pre><code class="bash">KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
-IMAGE_SRC=https://images.maas.io/ephemeral-v3/daily/
-IMAGE_DIR=/var/www/html/maas/images/ephemeral-v3/daily
+IMAGE_SRC=https://images.maas.io/ephemeral-v3/stable
+IMAGE_DIR=/var/www/html/maas/images/ephemeral-v3/stable
 </code></pre>
 
-<p><strong>NOTE:</strong> 
-The v3 format offers only a &lsquo;daily&rsquo; stream whereas in previous versions a &lsquo;releases&rsquo; stream was available. The latter changes far less frequently but lacks security and bug fixes.</p>
-<p>The below example selects all available kernels that are compatible with either Ubuntu 14.04 (Trusty) and Ubuntu 16.04 (Xenial) for the amd64 architecture, resulting in a download of approximately 3.1 GB. The second command mirrors the bootloaders.</p>
+<p>The below example selects all available kernels that are compatible with either Ubuntu 18.04 (Bionic) and Ubuntu 20.04 (Focal) for the amd64 architecture, resulting in a download of approximately 3.1 GB. The second command mirrors the bootloaders.</p>
 <pre><code class="bash">sudo sstream-mirror --keyring=$KEYRING_FILE $IMAGE_SRC $IMAGE_DIR \
-    'arch=amd64' 'release~(trusty|xenial)' --max=1 --progress
+    'arch=amd64' 'release~(bionic|focal)' --max=1 --progress
 sudo sstream-mirror --keyring=$KEYRING_FILE $IMAGE_SRC $IMAGE_DIR \
     'os~(grub*|pxelinux)' --max=1 --progress
 </code></pre>
 
 <p>To know in advance what the <code>sstream-mirror</code> command will grab, or if you want to save bandwidth and time by avoiding bad selections, include the <code>--dry-run</code> option. When you are satisfied, remove that option to initiate the download.</p>
 <p>MAAS will write the images to disk in the directory defined by the variable &lsquo;IMAGE_DIR&rsquo; above, and the &lsquo;location&rsquo; of the new boot source will be:</p>
-<p><code>URL=http://&lt;myserver&gt;/maas/images/ephemeral-v3/daily/</code></p>
+<p><code>URL=http://&lt;myserver&gt;/maas/images/ephemeral-v3/stable/</code></p>
 <p>Where <code>&lt;myserver&gt;</code> identifies your server&rsquo;s hostname or IP address.</p>
 <p>Verify the availability of the images by visiting the above URL.</p>
 <p>The final <code>sstream-mirror</code> command should be invoked at regular intervals (i.e. with <code>cron</code>) to ensure the mirror contains the latest images.</p>

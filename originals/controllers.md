@@ -108,31 +108,31 @@ Note that both region and rack controllers can be scaled out, as well as made [h
 
 snap-2-9-ui -->
 
-#### Quick questions you might have:
+#### Two questions you might have:
 
-* [What does a region controller do?](#heading--region-controller)
-* [What does a rack controller do?](#heading--rack-controllers)
+1. [What does a region controller do?](#heading--region-controller)
+2. [What does a rack controller do?](#heading--rack-controllers)
 
 <h2 id="heading--region-controller">What a region controller does</h2>
 
-A region controller consists of:
+A region controller consists of five components:
 
--   REST API server (TCP port 5240)
--   PostgreSQL database
--   DNS
--   caching HTTP proxy
--   web UI
+1.   REST API server (TCP port 5240)
+2.   PostgreSQL database
+3.   DNS
+4.   caching HTTP proxy
+5.   web UI
 
 Region controllers are responsible for either a data centre or a single region. Multiple fabrics are used by MAAS to accommodate subdivisions within a single region, such as multiple floors in a data centre.
 
 <h2 id="heading--rack-controllers">What a rack controller does</h2>
 
-A rack controller provides:
+A rack controller provides four services:
 
--   DHCP
--   TFTP
--   HTTP (for images)
--   power management
+1.   DHCP
+2.   TFTP
+3.   HTTP (for images)
+4.   power management
 
 A rack controller is attached to each "fabric". As the name implies, a typical setup is to have a rack controller in each data centre server rack. The rack controller will cache large items for performance, such as operating system install images, but maintains no independent state other than the credentials required to talk to the region controller.
 

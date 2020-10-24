@@ -551,57 +551,31 @@ You can handle this lowest level with individual [machines](machines.html).  Wit
 </summary>
 <h4>Creating some sample VMs</h4></p>
 <p>Assuming you&rsquo;ve <a href="https://help.ubuntu.com/lts/serverguide/libvirt.html">installed libvirt</a> on the machine where you&rsquo;ll be running MAAS, you can create virtual machines like this:</p>
-<ol>
-<li>Open the Virtual Machine Manager application.  You&rsquo;ll see a screen that looks something like this:</li>
-</ol>
+<p>Open the Virtual Machine Manager application.  You&rsquo;ll see a screen that looks something like this:</p>
 <p><a href="images/f66940a21313a27734bcaef6c539d36a720a6834.jpeg" target = "_blank"><img src="images/f66940a21313a27734bcaef6c539d36a720a6834.jpeg"></a></a> </p>
-<ol>
-<li>Choose File &ndash;&gt; New Virtual Machine, which brings you to a corresponding dialog:</li>
-</ol>
+<p>Choose File &ndash;&gt; New Virtual Machine, which brings you to a corresponding dialog:</p>
 <p><a href="images/0702d9f2ab4c3659d13be553449093548a9e2f10.jpeg" target = "_blank"><img src="images/0702d9f2ab4c3659d13be553449093548a9e2f10.jpeg"></a></a> </p>
-<ol>
-<li>Select the &ldquo;Network Boot (PXE)&rdquo; option and click the &ldquo;Forward&rdquo; button:</li>
-</ol>
+<p>Select the &ldquo;Network Boot (PXE)&rdquo; option and click the &ldquo;Forward&rdquo; button:</p>
 <p><a href="images/0000fb5f072f2b3668465753ae6a713859d8a444.jpeg" target = "_blank"><img src="images/0000fb5f072f2b3668465753ae6a713859d8a444.jpeg"></a></a></p>
-<ol>
-<li>Choose the &ldquo;Generic&hellip;&rdquo; operating system by typing the first letters of &ldquo;Generic&rdquo; in the text box and selecting the relevant choice when it becomes available, then go Forward:</li>
-</ol>
+<p>Choose the &ldquo;Generic&hellip;&rdquo; operating system by typing the first letters of &ldquo;Generic&rdquo; in the text box and selecting the relevant choice when it becomes available, then go Forward:</p>
 <p><a href="images/041914a0718633fce685ac7919e2478da0e62c1b.jpeg" target = "_blank"><img src="images/041914a0718633fce685ac7919e2478da0e62c1b.jpeg"></a></a> </p>
-<ol>
-<li>For CPU and memory, you can usually accept the defaults:</li>
-</ol>
+<p>For CPU and memory, you can usually accept the defaults:</p>
 <p><a href="images/5a46262e3573aae7252951b3331ac9e3f3ef69c4.jpeg" target = "_blank"><img src="images/5a46262e3573aae7252951b3331ac9e3f3ef69c4.jpeg"></a></a> </p>
-<ol>
-<li>whereas the storage values have a noticeable effect on local disk usage, so note that, generally, a VM only requires about 5.0 GiB, given an example exercise like this:</li>
-</ol>
+<p>The storage values have a noticeable effect on local disk usage, so note that, generally, a VM only requires about 5.0 GiB, given an example exercise like this:</p>
 <p><a href="images/15f5e344c03bd1469c00333d466027e403c00ee8.jpeg" target = "_blank"><img src="images/15f5e344c03bd1469c00333d466027e403c00ee8.jpeg"></a></a> </p>
-<ol>
-<li>In the next screen, you&rsquo;ll have the chance to set a name; here, we&rsquo;ve used a pseudo-MAC address, although you can name the machine whatever you want (and then return later to set the name to match the MAC address, if desired):</li>
-</ol>
+<p>In the next screen, you&rsquo;ll have the chance to set a name; here, we&rsquo;ve used a pseudo-MAC address, although you can name the machine whatever you want (and then return later to set the name to match the MAC address, if desired):</p>
 <p><a href="images/d4191b100d963032d47fed1f198aea76e8de273e.jpeg" target = "_blank"><img src="images/d4191b100d963032d47fed1f198aea76e8de273e.jpeg"></a></a> </p>
-<ol>
-<li>Selecting &ldquo;Finish&rdquo; will create the virtual machine and attempt to boot it &ndash; which will fail, since no device currently knows about this VM (and hence can&rsquo;t boot it).  Not to worry; you&rsquo;re not done yet:</li>
-</ol>
+<p>Selecting &ldquo;Finish&rdquo; will create the virtual machine and attempt to boot it &ndash; which will fail, since no device currently knows about this VM (and hence can&rsquo;t boot it).  Not to worry; you&rsquo;re not done yet:</p>
 <p><a href="images/09b4e50049c2a251d100113e50a241d0c4a06f51.jpeg" target = "_blank"><img src="images/09b4e50049c2a251d100113e50a241d0c4a06f51.jpeg"></a></a> </p>
-<ol>
-<li>Select the &ldquo;information&rdquo; button (blue circle, white lowercase &ldquo;i&rdquo;) to switch to the VM configuration screens, then select the &ldquo;Boot Options&rdquo; choice from the left-hand menu:</li>
-</ol>
+<p>Select the &ldquo;information&rdquo; button (blue circle, white lowercase &ldquo;i&rdquo;) to switch to the VM configuration screens, then select the &ldquo;Boot Options&rdquo; choice from the left-hand menu:</p>
 <p><a href="images/7b6cd37f7663db53571845da0159977092898fa4.jpeg" target = "_blank"><img src="images/7b6cd37f7663db53571845da0159977092898fa4.jpeg"></a></a> </p>
-<ol>
-<li>Turn off the &ldquo;IDE&rdquo; item under &ldquo;Boot device order:&rdquo;</li>
-</ol>
+<p>Turn off the &ldquo;IDE&rdquo; item under &ldquo;Boot device order:&rdquo;</p>
 <p><a href="images/54a8d6a77d9660e13aa1c0e278048ed1c751d65e.jpeg" target = "_blank"><img src="images/54a8d6a77d9660e13aa1c0e278048ed1c751d65e.jpeg"></a></a> </p>
-<ol>
-<li>When you select &ldquo;Apply,&rdquo; a dialog will pop up to remind you that you need to restart this VM for changes to take effect:</li>
-</ol>
+<p>When you select &ldquo;Apply,&rdquo; a dialog will pop up to remind you that you need to restart this VM for changes to take effect:</p>
 <p><a href="images/6f4ab26216cc2951a202851869f7c7efc5691129.jpeg" target = "_blank"><img src="images/6f4ab26216cc2951a202851869f7c7efc5691129.jpeg"></a></a> </p>
-<ol>
-<li>Switch to the &ldquo;NIC&hellip;&rdquo; option and set the &ldquo;Network source&rdquo; and &ldquo;Device model&rdquo; as shown, then select &ldquo;Apply&rdquo; and respond to the dialog:</li>
-</ol>
+<p>Switch to the &ldquo;NIC&hellip;&rdquo; option and set the &ldquo;Network source&rdquo; and &ldquo;Device model&rdquo; as shown, then select &ldquo;Apply&rdquo; and respond to the dialog:</p>
 <p><a href="images/26fe981020c03e46c81e2bceed840bea7b2f14d6.jpeg" target = "_blank"><img src="images/26fe981020c03e46c81e2bceed840bea7b2f14d6.jpeg"></a></a> </p>
-<ol>
-<li>You&rsquo;ll next select the drop-down arrow next to the &ldquo;on/off&rdquo; menu bar option and select &ldquo;Force reset,&rdquo; then answer the prompt in the affirmative:</li>
-</ol>
+<p>You&rsquo;ll next select the drop-down arrow next to the &ldquo;on/off&rdquo; menu bar option and select &ldquo;Force reset,&rdquo; then answer the prompt in the affirmative:</p>
 <p><a href="images/537a485f0ff014aeb82afc71bc09b2988bf5cb56.jpeg" target = "_blank"><img src="images/537a485f0ff014aeb82afc71bc09b2988bf5cb56.jpeg"></a></a> </p>
 <p>You now have a VM that you can add to MAAS.  If you want more than one, you can simply right-click on the one you&rsquo;ve just created and select &ldquo;Clone:&rdquo;</p>
 <p>[Note] <strong>Pro Tip</strong>: Cloned VMs tend to use considerably less host disk space than newly-created ones. [/Note]</p>
@@ -694,16 +668,15 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <p><details>
 <summary><em>Try it!</em></summary></p>
-<p>Creating a machine from a VM requires a few pieces of information:</p>
-<ul>
+<p>Creating a machine from a VM requires six pieces of information:</p>
+<ol>
 <li>the machine architecture (e.g., amd64)</li>
 <li>the machine&rsquo;s MAC address</li>
 <li>the power type (in this case, &ldquo;virsh&rdquo;)</li>
-<li>the parameters needed by the power type, in this case:</li>
 <li>the power ID</li>
 <li>the power address (which also contains a username)</li>
 <li>the power password</li>
-</ul>
+</ol>
 <p>Once you&rsquo;ve collected this information, you&rsquo;ll want to create a new KVM like this:</p>
 <pre><code>maas admin machines create \
 architecture=amd64 hostname=52-54-00-15-36-f2 \ 

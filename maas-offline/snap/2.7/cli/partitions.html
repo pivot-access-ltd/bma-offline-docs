@@ -642,13 +642,13 @@ Machine-readable output follows:
 
 <h2 id="heading--restrictions">Restrictions</h2>
 
-<p>There are only a couple of restrictions that exists in the storage configuration. These restrictions are only in place because they are known to not allow a successful deployment.</p>
-<ul>
+<p>There are three restrictions for the storage configuration:</p>
+<ol>
 <li>An EFI partition is required to be on the boot disk for UEFI.</li>
 <li>You cannot place partitions on logical volumes.</li>
 <li>You cannot use a logical volume as a Bcache backing device.</li>
-</ul>
-<!-- LINKS -->
+</ol>
+<p>Violating these restrictions will prevent a successful deployment.</p>
     </div>
   </body>
 </html>

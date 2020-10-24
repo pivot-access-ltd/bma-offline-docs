@@ -49,11 +49,11 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 
 A node is a general term that refers to multiple, more specific objects. Nodes are managed by MAAS through a life cycle, from adding and enlistment into MAAS, through commissioning, allocation and deployment. Nodes are then either released back into the pool of nodes or retired.
 
-Nodes include:
+Nodes include three classes of objects:
 
--   Controllers
--   Machines
--   Devices
+1.   Controllers
+2.   Machines
+3.   Devices
 
 See [Machine actions](#heading--machine-actions) and [Machine statuses](#heading--machine-statuses) below for an overview of a node's life cycle.
 
@@ -61,22 +61,22 @@ See [Machine actions](#heading--machine-actions) and [Machine statuses](#heading
 
 There are two types of controllers: a region controller and a rack controller. The region controller deals with operator requests while one or more rack controllers provide the high-bandwidth services to multiple server racks, as typically found in a data centre.
 
-A region controller consists of:
+A region controller consists of five components:
 
--   REST API server (TCP port 5240)
--   PostgreSQL database
--   DNS
--   caching HTTP proxy
--   web UI
+1.   REST API server (TCP port 5240)
+2.   PostgreSQL database
+3.   DNS
+4.   caching HTTP proxy
+5.   web UI
 
 Think of a region controller can as being responsible for a data centre, or a single region. Multiple fabrics are used by MAAS to accommodate subdivisions within a single region, such as multiple floors in a data centre.
 
-A rack controller provides:
+A rack controller provides four services:
 
--   DHCP
--   TFTP
--   HTTP (for images)
--   power management
+1.   DHCP
+2.   TFTP
+3.   HTTP (for images)
+4.   power management
 
 A rack controller is attached to each "fabric". As the name implies, a typical setup is to have a rack controller in each data centre server rack. The rack controller will cache large items for performance, such as operating system install images, but maintains no independent state other than the credentials required to talk to the region controller.
 
@@ -323,10 +323,10 @@ This action releases a machine from a locked state.
 
 Node statuses are labels used to describe the general state of a node as known to MAAS. A node will undergo various manipulations during their time spent in MAAS, and its status will change accordingly. Actions applied to a node are the most common cause of a status change (see section above.)  Below is the full list of status values and their meaning, arranged alphabetically.
 
-Some aspects of a node can only be modified when a node has a certain status. Examples:
+Some aspects of a node can only be modified when a node has a certain status. Here are two typical examples:
 
--   you cannot modify a network interfaces unless the node has a status of either 'Ready' or 'Broken'.
--   you cannot modify storage unless the node has a status of either 'Ready' or 'Allocated'.
+1.   you cannot modify a network interfaces unless the node has a status of either 'Ready' or 'Broken'.
+2.   you cannot modify storage unless the node has a status of either 'Ready' or 'Allocated'.
 
 <h3 id="heading--allocated">Allocated</h3>
 
@@ -388,8 +388,8 @@ The node is in rescue mode and is ready to accept SSH connections. See node acti
 
 Package repositories managed within MAAS can be of two types:
 
--   Ubuntu package repositories
--   Personal Package Archives (PPA)
+1.   Ubuntu package repositories
+2.   Personal Package Archives (PPA)
 
 You can configure repositories in the 'Package repositories' tab on the 'Settings' page. Any enabled repository listed on this page will become automatically available to any subsequently deployed nodes.
 
@@ -501,7 +501,7 @@ The following is a brief network tutorial, provided as a tool to synchronise und
 
 The Dynamic Host Control Protocol is a network management system in which a server (or group of servers) dynamically assigns IP addresses and other network parameters to a network device.  This network device may or may not have the capability to provide its own IP address, although to take advantage of DHCP, the device must have been configured to seek out a DHCP server and accept an assigned IP address.  Typically, a network administrator defines a range of reserved IP addresses from which the DHCP server can pull when assigning addresses.
 
-DHCP operates using the "DORA" model: Discovery, Offer, Request, and Acknowledge:
+DHCP operates using the four-step "DORA" model -- Discovery, Offer, Request, and Acknowledge:
 
 1. Potential DHCP clients broadcast a DHCPDISCOVER message on its attached subnet using destination address 255.255.255.255.
 
@@ -554,17 +554,17 @@ A switch is a "smart" device that connects cables from nodes to make networks.  
 
 <h3 id="heading--network-topology">Network topology</h3>
 
-Topology describes how nodes are connected to a network, specifically referring to the shapes made by the cables and the paths that packets can take.  There are probably as many topologies are there are shapes, but here are a few of the most common:
+Topology describes how nodes are connected to a network, specifically referring to the shapes made by the cables and the paths that packets can take.  There are probably as many topologies are there are shapes, but here are five of the most common:
 
-* Bus topology: the most basic network topology, a group of computers connected to a single, long cable.  In this configuration, every computer sees every packet.  A [hub](/t/concepts-and-terms/785#heading--hub) network, for instance, is still a bus topology, because every machine sees every packet.
+1. Bus topology: the most basic network topology, a group of computers connected to a single, long cable.  In this configuration, every computer sees every packet.  A [hub](/t/concepts-and-terms/785#heading--hub) network, for instance, is still a bus topology, because every machine sees every packet.
 
-* Star or switch topology: a group of computers connected to a [switch](/t/concepts-and-terms/785#heading--switch).  As the switch learns where packets are supposed to go, the star quickly evolves so that only packets are only seen by computers that are intended to receive the packet.
+2. Star or switch topology: a group of computers connected to a [switch](/t/concepts-and-terms/785#heading--switch).  As the switch learns where packets are supposed to go, the star quickly evolves so that only packets are only seen by computers that are intended to receive the packet.
 
-* Backbone topology: a hybrid network configuration in which several stars are connected to a bus.
+3. Backbone topology: a hybrid network configuration in which several stars are connected to a bus.
 
-* Daisy-chain topology: stars connected to stars, or more accurately, switches connected to switches.
+4. Daisy-chain topology: stars connected to stars, or more accurately, switches connected to switches.
 
-* Mesh topology: nodes with multiple interfaces and multiple connections.  Useful where wide-area networks ([WAN](/t/concepts-and-terms/785#heading--wan)) where there would otherwise be lots of intermediaries.  Not popular or particularly cost effective for [LAN](/t/concepts-and-terms/785#heading--lan) networks.
+5. Mesh topology: nodes with multiple interfaces and multiple connections.  Useful where wide-area networks ([WAN](/t/concepts-and-terms/785#heading--wan)) where there would otherwise be lots of intermediaries.  Not popular or particularly cost effective for [LAN](/t/concepts-and-terms/785#heading--lan) networks.
 
 <h3 id="heading--patch-panel">Patch panel</h3>
 
@@ -589,6 +589,3 @@ Network infrastructure is a catch-all term covering the physical components of a
 <h3 id="heading--router">Router</h3>
 
 A router is a device that transfers packets from one network to another.  Unlike switches, which only ensure that pre-addressed packets get to the correct recipient machines, routers actually modify or encapsulate packets to ensure that they can travel on other networks to reach a remote destination.
-
-<!-- IMAGES -->
-<!-- LINKS -->

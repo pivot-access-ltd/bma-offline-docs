@@ -36,14 +36,14 @@
 
 As a MAAS administrator, you have the critical responsibility of hardening your installation to help repudiate attacks and malicious actors.  While there are too many variables to make meaningful suggestions for your deployed machines, there are a number of steps you can take to improve the overall security of your MASS setup.  This article provides a few suggestions.
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
-* [How do I setup a firewall for MAAS?](#heading--firewalls)
-* [How do I configure a TLS-terminating load balancer (and what's the impact on my MAAS setup?)](#heading--tls)
-* [How do I use logs to identify security issues?](#heading--using-logs-for-security)
-* [How do I implement PostgreSQL security?](#heading--postgres-security)
-* [What else can I do to harden MAAS?](#heading--what-else-to-do)
-* [Whom do I contact for MAAS security consulting?](#heading--security-consulting)
+1. [How do I setup a firewall for MAAS?](#heading--firewalls)
+2. [How do I configure a TLS-terminating load balancer (and what's the impact on my MAAS setup?)](#heading--tls)
+3. [How do I use logs to identify security issues?](#heading--using-logs-for-security)
+4. [How do I implement PostgreSQL security?](#heading--postgres-security)
+5. [What else can I do to harden MAAS?](#heading--what-else-to-do)
+6. [Whom do I contact for MAAS security consulting?](#heading--security-consulting)
 
 <h2 id="heading--firewalls">Use a firewall</h2>
 <p>Each rack controller must be able to initiate TCP connections on the following ports:</p>
@@ -267,10 +267,10 @@ If desired, you can [bypass the use of SSL](/t/high-availability/2687#heading--l
 
 There are four categories of log files that you can use to help identify security issues:
 
-* firewall logs
-* Web server logs
-* MAAS log files
-* system log files
+1. firewall logs
+2. Web server logs
+3. MAAS log files
+4. system log files
 
 This section will offer some advice, as well as links to more detailed information on these categories.
 
@@ -313,21 +313,21 @@ There are many other firewall log analysis techniques, and a number of good open
 
 <h3 id="heading--web-server-logs-subsection">Web server logs</h3>
 
-Detecting malicious activity directed toward your Web server is best done with a log analysis tool.  If you want to review the raw logs directly, you can look for them in:
+Detecting malicious activity directed toward your Web server is best done with a log analysis tool.  If you want to review the raw logs directly, you can look for them in two places:
 
-* `/var/log/httpd/`, `/var/log/apache`, or `/var/log/apache2` (in the case of Apache), or
+1. `/var/log/httpd/`, `/var/log/apache`, or `/var/log/apache2` (in the case of Apache), or
 
-* the path given in `/etc/nginx/nginx.conf` or given in your site configuration file, which itself is found at the path `/etc/nginx/sites-available` (in the case of nginx -- look for the `access_log` directive).
+2. the path given in `/etc/nginx/nginx.conf` or given in your site configuration file, which itself is found at the path `/etc/nginx/sites-available` (in the case of nginx -- look for the `access_log` directive).
 
 Web server log analysis is also an art form, so we don't plan to offer a comprehensive tutorial here, but here are few examples of things to look for in your logs:
 
-* multiple requests in less than one second, or some other appropriate time-frame.
+1. multiple requests in less than one second, or some other appropriate time-frame.
 
-* multiple secure/login page accesses in a one-minute window, especially when they fail.
+2. multiple secure/login page accesses in a one-minute window, especially when they fail.
 
-* attempts to access non-existent pages using different paths or query parameters (e.g., `135.25.48.19:5250/maas/index.html`).
+3. attempts to access non-existent pages using different paths or query parameters (e.g., `135.25.48.19:5250/maas/index.html`).
 
-* look out for SQL injection attacks, for example:
+4. look out for SQL injection attacks, for example:
 
     84.55.41.57- - [14/Apr/2016:08:22:13 0100]
     "GET /wordpress/wp-content/plugins/custom_plugin/check_user.php?userid=1 
@@ -337,7 +337,7 @@ Web server log analysis is also an art form, so we don't plan to offer a compreh
     (Windows; U; Windows NT 6.1; ru; rv:1.9.2.3) Gecko/20100401 Firefox/4.0 (.NET CLR 
     3.5.30729)"
 
-* attempts to run a Web shell, for instance:
+5. attempts to run a Web shell, for instance:
 
     192.168.1.102 29/Oct/2018:14:52:16 GET /b374k.php HTTP/1.1 200 2125 Mozilla/5.0
 

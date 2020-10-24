@@ -94,7 +94,7 @@ You can access the Web UI and the [MAAS CLI](/t/maas-cli/802) (logging in to the
 MAAS can only control most BMCs using IPv4.
 [/note]
 
-#### Quick questions you may have:
+#### Three questions you may have:
 
 * [What should I know about enabling IPv6?](#heading--enable-ipv6)
 * [How do I configure an IPv6 subnet?](#heading--configure-an-ipv6-subnet)

@@ -90,11 +90,11 @@ A reserved dynamic range is used by MAAS for enlisting, commissioning and, if en
 
 This article gives specific instructions about creating and managing IP ranges.
 
-#### Quick questions you may have:
+#### Three questions you may have:
 
-* [How do I create an IP range?](#heading--create-a-range)
-* [How do I edit an existing IP range?](#heading--edit-a-range)
-* [How do I delete an existing IP range?](#heading--delete-a-range)
+1. [How do I create an IP range?](#heading--create-a-range)
+2. [How do I edit an existing IP range?](#heading--edit-a-range)
+3. [How do I delete an existing IP range?](#heading--delete-a-range)
 
 <h2 id="heading--create-a-range">Create a range</h2>
 

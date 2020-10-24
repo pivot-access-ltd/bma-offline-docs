@@ -2,11 +2,11 @@ This section contains a collection of tips, tricks, and traps which may help sol
 
 #### What would you like to do?
 
-* [Migrate an existing snap installation to use a local PostgreSQL server](/t/tips-tricks-and-traps/1506#heading--migrating-maas)
-* [Manually export the MAAS database](/t/tips-tricks-and-traps/1506#heading--manual-export)
-* [Network boot an IBM Power server](/t/tips-tricks-and-traps/1506#heading--ibm-power-server-pxe-boot)
-* [Eliminate MAAS and LXD DNS & DHCP conflicts](/t/tips-tricks-and-traps/1506#heading--maas-lxd-network-conflicts)
-* [Try jq recipes using the CLI](/t/tips-tricks-and-traps/1506#heading--jq-machine-list)
+1. [Migrate an existing snap installation to use a local PostgreSQL server](/t/tips-tricks-and-traps/1506#heading--migrating-maas)
+2. [Manually export the MAAS database](/t/tips-tricks-and-traps/1506#heading--manual-export)
+3. [Network boot an IBM Power server](/t/tips-tricks-and-traps/1506#heading--ibm-power-server-pxe-boot)
+4. [Eliminate MAAS and LXD DNS & DHCP conflicts](/t/tips-tricks-and-traps/1506#heading--maas-lxd-network-conflicts)
+5. [Try jq recipes using the CLI](/t/tips-tricks-and-traps/1506#heading--jq-machine-list)
 
 <h2 id="heading--migrating-maas">Migrating an existing snap installation</h2>
 
@@ -51,8 +51,8 @@ Be sure to replace `0/0`, above, with the proper CIDR to restrict access to a sp
 
 To finish the process, you'll need to update the MAAS snap config to:
 
-* update the database config in `/var/snap/maas/current/regiond.conf` with the proper `database_host` and `database_pass`
-* change the content of `/var/snap/maas/common/snap_mode` from `all` to `region+rack`
+1. update the database config in `/var/snap/maas/current/regiond.conf` with the proper `database_host` and `database_pass`
+2. change the content of `/var/snap/maas/common/snap_mode` from `all` to `region+rack`
 
 Using a local PostgreSQL server is a little bit of work, but it provides great benefits in terms of MAAS scalability and performance.
 

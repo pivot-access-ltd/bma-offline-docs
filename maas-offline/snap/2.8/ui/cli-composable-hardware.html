@@ -430,8 +430,8 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>CLI composable hardware</h1><p>This article provides a list of examples of VM host management tasks you can perform with the MAAS CLI.</p>
-<h4>Quick questions you may have:</h4>
-<ul>
+<h4>Fourteen questions you may have:</h4>
+<ol>
 <li><a href="maas-cli.html">How do I get started with the MAAS CLI?</a></li>
 <li><a href="introduction-to-vm-hosting.html">What should I know about VM hosts?</a></li>
 <li><a href="cli-composable-hardware.html#heading--add-a-vm-host">How can I add a VM host?</a></li>
@@ -446,7 +446,7 @@
 <li><a href="cli-composable-hardware.html#heading--libvirt-storage-pools">How can I use libvirt storage pools?</a></li>
 <li><a href="cli-composable-hardware.html#heading--delete-a-vm">How can I delete a VM?</a></li>
 <li><a href="cli-composable-hardware.html#heading--delete-a-vm-host">How can I delete a VM host?</a></li>
-</ul>
+</ol>
 <h2 id="heading--add-a-vm-host">Add a VM host</h2>
 
 <p>To add a VM host:</p>
@@ -557,7 +557,7 @@ Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS 
 <pre><code class="bash">maas $PROFILE vm-host compose $VM_HOST_ID $RESOURCES
 </code></pre>
 
-<p>Where RESOURCES is a space-separated list from:</p>
+<p>Where RESOURCES is a space-separated list containing any combination of the following six items:</p>
 <ol>
 <li><strong>cores=</strong> requested cores</li>
 <li><strong>cpu_speed=</strong> requested minimum cpu speed in MHz</li>
@@ -775,7 +775,6 @@ Machine-readable output follows:
 
 <p><strong>NOTE:</strong> 
 Deleting a VM host will automatically delete all machines belonging to that VM host.</p>
-<!-- LINKS -->
     </div>
   </body>
 </html>

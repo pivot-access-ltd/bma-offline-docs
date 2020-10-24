@@ -507,14 +507,14 @@ MAAS can configure custom local VMware VMFS Datastore layouts to maximise the us
  snap-2-9-cli -->
 
 <p>MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the <a href="storage.html#heading--vmfs6-layout">VMFS6 storage layout</a>. This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.</p>
-<h4>Quick questions you may have:</h4>
-<ul>
+<h4>Five questions you may have:</h4>
+<ol>
 <li><a href="#heading--listing-vmfs-datastores">How do I list the VMFS datastores on a machine?</a></li>
 <li><a href="#heading--viewing-vmfs-datastores">How do I view a specific datastore on a machine?</a></li>
 <li><a href="#heading--creating-vmfs-datastores">How do I create a new datastore?</a></li>
 <li><a href="#heading--editing-vmfs-datastores">How do I edit a datastore?</a></li>
 <li><a href="#heading--deleting-vmfs-datastores">How do I delete a datastore?</a></li>
-</ul>
+</ol>
 <h2 id="heading--listing-vmfs-datastores">Listing VMFS datastores</h2>
 
 <p>To view all VMFS Datastores on a machine, use the &lsquo;vmfs-datastores read&rsquo; API call:</p>

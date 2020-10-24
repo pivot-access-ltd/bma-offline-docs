@@ -84,102 +84,105 @@
 
 MAAS provides supported images for stable Ubuntu releases, and for CentOS 6.6, CentOS 7, and CentOS 8.0 releases.  [Ubuntu Advantage](https://www.ubuntu.com/support) is needed to build customer Windows, RHEL and ESXi images.
 
-#### Quick questions you may have:
+#### Four questions you may have:
 
 <!-- deb-2-7-cli
-* [What are boot sources, and why do they matter?](#heading--boot-sources)
-* [How do I select and import an image?](/t/select-and-import-images/3096)
-* [How do I set up and use a local image mirror?](/t/local-image-mirror/2808)
-* [How do I use and manage VMWare images?](/t/vmware-images/3240)
+1. [What are boot sources, and why do they matter?](#heading--boot-sources)
+2. [How do I select and import an image?](/t/select-and-import-images/3096)
+3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2808)
+4. [How do I use and manage VMWare images?](/t/vmware-images/3240)
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-* [What are boot sources, and why do they matter?](#heading--boot-sources)
-* [How do I select and import an image?](/t/select-and-import-images/3097)
-* [How do I set up and use a local image mirror?](/t/local-image-mirror/2809)
-* [How do I use and manage VMWare images?](/t/vmware-images/3241)
+1. [What are boot sources, and why do they matter?](#heading--boot-sources)
+2. [How do I select and import an image?](/t/select-and-import-images/3097)
+3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2809)
+4. [How do I use and manage VMWare images?](/t/vmware-images/3241)
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-* [What are boot sources, and why do they matter?](#heading--boot-sources)
-* [How do I select and import an image?](/t/select-and-import-images/3098)
-* [How do I set up and use a local image mirror?](/t/local-image-mirror/2810)
-* [How do I use and manage VMWare images?](/t/vmware-images/3242)
+1. [What are boot sources, and why do they matter?](#heading--boot-sources)
+2. [How do I select and import an image?](/t/select-and-import-images/3098)
+3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2810)
+4. [How do I use and manage VMWare images?](/t/vmware-images/3242)
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-* [What are boot sources, and why do they matter?](#heading--boot-sources)
-* [How do I select and import an image?](/t/select-and-import-images/3099)
-* [How do I set up and use a local image mirror?](/t/local-image-mirror/2811)
-* [How do I use and manage VMWare images?](/t/vmware-images/3243)
+1. [What are boot sources, and why do they matter?](#heading--boot-sources)
+2. [How do I select and import an image?](/t/select-and-import-images/3099)
+3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2811)
+4. [How do I use and manage VMWare images?](/t/vmware-images/3243)
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-* [What are boot sources, and why do they matter?](#heading--boot-sources)
-* [How do I select and import an image?](/t/select-and-import-images/3100)
-* [How do I set up and use a local image mirror?](/t/local-image-mirror/2812)
-* [How do I use and manage VMWare images?](/t/vmware-images/3244)
+1. [What are boot sources, and why do they matter?](#heading--boot-sources)
+2. [How do I select and import an image?](/t/select-and-import-images/3100)
+3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2812)
+4. [How do I use and manage VMWare images?](/t/vmware-images/3244)
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-* [What are boot sources, and why do they matter?](#heading--boot-sources)
-* [How do I select and import an image?](/t/select-and-import-images/3101)
-* [How do I set up and use a local image mirror?](/t/local-image-mirror/2813)
-* [How do I use and manage VMWare images?](/t/vmware-images/3245)
+1. [What are boot sources, and why do they matter?](#heading--boot-sources)
+2. [How do I select and import an image?](/t/select-and-import-images/3101)
+3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2813)
+4. [How do I use and manage VMWare images?](/t/vmware-images/3245)
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-* [What are boot sources, and why do they matter?](#heading--boot-sources)
-* [How do I select and import an image?](/t/select-and-import-images/3090)
-* [How do I set up and use a local image mirror?](/t/local-image-mirror/2802)
-* [How do I use and manage VMWare images?](/t/vmware-images/3234)
+1. [What are boot sources, and why do they matter?](#heading--boot-sources)
+2. [How do I select and import an image?](/t/select-and-import-images/3090)
+3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2802)
+4. [How do I use and manage VMWare images?](/t/vmware-images/3234)
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-* [What are boot sources, and why do they matter?](#heading--boot-sources)
-* [How do I select and import an image?](/t/select-and-import-images/3091)
-* [How do I set up and use a local image mirror?](/t/local-image-mirror/2803)
-* [How do I use and manage VMWare images?](/t/vmware-images/3235)
+1. [What are boot sources, and why do they matter?](#heading--boot-sources)
+2. [How do I select and import an image?](/t/select-and-import-images/3091)
+3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2803)
+4. [How do I use and manage VMWare images?](/t/vmware-images/3235)
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-* [What are boot sources, and why do they matter?](#heading--boot-sources)
-* [How do I select and import an image?](/t/select-and-import-images/3092)
-* [How do I set up and use a local image mirror?](/t/local-image-mirror/2804)
-* [How do I use and manage VMWare images?](/t/vmware-images/3236)
+1. [What are boot sources, and why do they matter?](#heading--boot-sources)
+2. [How do I select and import an image?](/t/select-and-import-images/3092)
+3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2804)
+4. [How do I use and manage VMWare images?](/t/vmware-images/3236)
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-* [What are boot sources, and why do they matter?](#heading--boot-sources)
-* [How do I select and import an image?](/t/select-and-import-images/3093)
-* [How do I set up and use a local image mirror?](/t/local-image-mirror/2805)
-* [How do I use and manage VMWare images?](/t/vmware-images/3237)
+1. [What are boot sources, and why do they matter?](#heading--boot-sources)
+2. [How do I select and import an image?](/t/select-and-import-images/3093)
+3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2805)
+4. [How do I use and manage VMWare images?](/t/vmware-images/3237)
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-* [What are boot sources, and why do they matter?](#heading--boot-sources)
-* [How do I select and import an image?](/t/select-and-import-images/3094)
-* [How do I set up and use a local image mirror?](/t/local-image-mirror/2806)
-* [How do I use and manage VMWare images?](/t/vmware-images/3238)
+1. [What are boot sources, and why do they matter?](#heading--boot-sources)
+2. [How do I select and import an image?](/t/select-and-import-images/3094)
+3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2806)
+4. [How do I use and manage VMWare images?](/t/vmware-images/3238)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-* [What are boot sources, and why do they matter?](#heading--boot-sources)
-* [How do I select and import an image?](/t/select-and-import-images/3095)
-* [How do I set up and use a local image mirror?](/t/local-image-mirror/2807)
-* [How do I use and manage VMWare images?](/t/vmware-images/3239)
+1. [What are boot sources, and why do they matter?](#heading--boot-sources)
+2. [How do I select and import an image?](/t/select-and-import-images/3095)
+3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2807)
+4. [How do I use and manage VMWare images?](/t/vmware-images/3239)
  snap-2-9-ui -->
 
-MAAS stores images in the region controller's database, from where the rack controller proxies them to the individual machines.  It's important to note that for ESXi images, network configuration includes only:
+MAAS stores images in the region controller's database, from where the rack controller proxies them to the individual machines.  It's important to note that for ESXi images, network configuration includes only these five parameters:
 
--   DHCP
--   Static/auto IP assignments
--   Aliases
--   VLANs
--   Bonds -- bonds are mapped to NIC teaming as follows:
-    -   balance-rr -- portid
-    -   active-backup -- explicit
-    -   802.3ad -- iphash, LACP rate and XMIT hash policy settings ignored
+1.   DHCP
+2.   Static/auto IP assignments
+3.   Aliases
+4.   VLANs
+5.   Bonds
+
+Bonds are mapped to NIC teaming in only three ways:
+
+1.   balance-rr -- portid
+2.   active-backup -- explicit
+3.   802.3ad -- iphash, LACP rate and XMIT hash policy settings ignored
 
 <h2 id="heading--boot-sources">Boot sources</h2>
 
@@ -242,5 +245,3 @@ The above URL points to the 'daily' stream (for the v3 format). See [Local image
  snap-2-9-ui -->
 
 Although the backend supports multiple boot sources, MAAS itself uses a single source. If multiple sources are detected, the web UI will print a warning and will be unable to manage images.
-
-<!-- LINKS -->

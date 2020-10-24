@@ -465,13 +465,13 @@
 <p>Tags are a convenient way to assign descriptive words to machines, interfaces, and storage devices. Using MAAS tags, you can easily select machines that meet certain criteria, helping you to remember that you&rsquo;ve defined or reserved certain machines for certain functions. </p>
 <p><strong>NOTE:</strong> 
  Tag names can include any combination of letters, numbers, dashes (-) and underscores (_), and be a maximum of 256 characters in length.</p>
-<h4>Quick questions you may have:</h4>
-<ul>
+<h4>Four questions you may have:</h4>
+<ol>
 <li><a href="#heading--tag-definitions">How are tags defined?</a></li>
 <li><a href="#heading--tag-listing-and-tags-as-search-filters">How can I see and filter the tag list?</a></li>
 <li><a href="#heading--tag-assignment">How do I see and change which tags are assigned?</a></li>
 <li><a href="#heading--tag-management">How do I manage tags?</a></li>
-</ul>
+</ol>
 <p>MAAS supports binding an XPath expressions to a tag using <em>tag definitions</em> (see below). This makes auto-assigning tags to matching hardware possible. For instance, you could tag machines that possess fast GPUs and then deploy software that used GPU-accelerated CUDA or OpenCL libraries.</p>
 <p>Because <a href="https://jujucharms.com/docs/stable/about-juju.html">Juju</a> is the recommended way to deploy services on machines managed by MAAS (see <a href="#heading--tag-management">below</a>), it supports MAAS tags for application deployments. By specifying MAAS tags as Juju &ldquo;constraints&rdquo;, services can be deployed to machines that have particular user-defined characteristics.</p>
 <h2 id="heading--tag-definitions">Tag definitions</h2>
@@ -501,13 +501,13 @@
       &lt;/lshw:node&gt;
 </code></pre>
 
-<p>MAAS machines will be selected based on these XPath <em>predicates</em>:</p>
-<ul>
+<p>MAAS machines will be selected based on these four XPath <em>predicates</em>:</p>
+<ol>
 <li><em>element</em> of &lsquo;node&rsquo;</li>
 <li>with an <em>attribute</em> of &lsquo;id&rsquo;</li>
 <li>whose <em>value</em> is &lsquo;display&rsquo;</li>
 <li>and has a <em>child element</em> of &lsquo;clock units=&rdquo;Hz&rdquo;&rsquo;</li>
-</ul>
+</ol>
 <p>After adding the speed criteria via an XPath <em>operator</em> we end up with this as our tag definition:</p>
 <pre><code class="nohighlight">//node[@id=&quot;display&quot;]/'clock units=&quot;Hz&quot;' &gt; 1000000000
 </code></pre>
@@ -523,11 +523,11 @@
 
 <p>To view a machine&rsquo;s currently assigned tags, stay on the &lsquo;Machines&rsquo; page and click on the machine in question. MAAS will display currently-assigned tags in the <em>Tags</em> pane of the &lsquo;Machine summary&rsquo;.</p>
 <p>Select the &lsquo;Configuration&rsquo; tab and then the &lsquo;Edit&rsquo; button alongside &lsquo;Machine configuration&rsquo; to edit tags:</p>
-<ul>
+<ol>
 <li>To unassign a tag hit the &lsquo;x&rsquo; character alongside a tag.</li>
 <li>To create a basic tag, type the name of the new tag in the &lsquo;Add a tag&rsquo; field and hit Enter. The tag will be created and automatically assigned to the machine. Repeat if desired.</li>
 <li>To assign an existing tag, type at least three characters to trigger a real-time search. Any resulting tags will show up in a drop-down menu. Select as desired.</li>
-</ul>
+</ol>
 <p><a href="images/250050ee-nodes-tags__2.6-tags-add-remove.png" target = "_blank"><img src="images/250050ee-nodes-tags__2.6-tags-add-remove.png"></a></a></p>
 <p>You can apply changes by pressing the &lsquo;Save changes&rsquo; button.</p>
 <p><strong>NOTE:</strong> 
@@ -548,17 +548,17 @@ New tags become available as a filter in the &lsquo;Machines&rsquo; page in the 
 <p>To add a tag, type its name into the &lsquo;Tags&rsquo; field and press Enter. Repeat as desired. Use the small &lsquo;x&rsquo; next to a tag to unassign the tag.</p>
 <p>You can apply changes by pressing the &lsquo;Save&rsquo; button.</p>
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-#### Quick questions you may have:
+#### Nine questions you may have:
 
-* [How do I get started with the MAAS CLI?](maas-cli.html)
-* [How do I create tags?](#heading--rudimentary-tag-creation)
-* [How do I do tag creation and auto-assignment?](#heading--tag-creation-and-auto-assignment)
-* [How do I delete a tag?](#heading--delete-a-tag)
-* [How do I list all tags?](#heading--list-all-tags)
-* [How do I list nodes/machines labelled with a tag?](#heading--list-nodesmachines-labelled-with-a-tag)
-* [How do I handle Juju integration?](#heading--juju-integration)
-* [How do I effect manual tag assignment?](#heading--manual-tag-assignment)
-* [How do I effect hybrid tag assignment?](#heading--hybrid-tag-assignment)
+1. [How do I get started with the MAAS CLI?](maas-cli.html)
+2. [How do I create tags?](#heading--rudimentary-tag-creation)
+3. [How do I do tag creation and auto-assignment?](#heading--tag-creation-and-auto-assignment)
+4. [How do I delete a tag?](#heading--delete-a-tag)
+5. [How do I list all tags?](#heading--list-all-tags)
+6. [How do I list nodes/machines labelled with a tag?](#heading--list-nodesmachines-labelled-with-a-tag)
+7. [How do I handle Juju integration?](#heading--juju-integration)
+8. [How do I effect manual tag assignment?](#heading--manual-tag-assignment)
+9. [How do I effect hybrid tag assignment?](#heading--hybrid-tag-assignment)
 
 <h2 id="heading--rudimentary-tag-creation">Tag creation</h2>
 

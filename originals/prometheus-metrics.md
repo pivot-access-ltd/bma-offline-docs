@@ -34,21 +34,21 @@
 <!-- snap-2-9-ui
  snap-2-9-ui -->
 
-MAAS services can provide [Prometheus](https://prometheus.io/) endpoints for collecting performance metrics.  These include:
+MAAS services can provide [Prometheus](https://prometheus.io/) endpoints for collecting performance metrics.  These include five endpoints of particular interest to MAAS users:
 
--   TFTP server file transfer latency
--   HTTP requests latency
--   Websocket requests latency
--   RPC calls (between MAAS services) latency
--   Per request DB queries counts
+1.   TFTP server file transfer latency
+2.   HTTP requests latency
+3.   Websocket requests latency
+4.   RPC calls (between MAAS services) latency
+5.   Per request DB queries counts
 
 All available metrics are prefixed with `maas_`, to make it easier to look them up in Prometheus and Grafana UIs.
 
-#### Quick questions you may have:
+#### Three questions you may have:
 
-* [How do I enable Prometheus endpoints?](#heading--enabling-prometheus-endpoints)
-* [How do I configure Prometheus endpoints?](#heading--configuring-prometheus)
-* [How can I deploy Prometheus and Grafana?](#heading--deploying-prometheus-and-grafana)
+1. [How do I enable Prometheus endpoints?](#heading--enabling-prometheus-endpoints)
+2. [How do I configure Prometheus endpoints?](#heading--configuring-prometheus)
+3. [How can I deploy Prometheus and Grafana?](#heading--deploying-prometheus-and-grafana)
 
 <h2 id="heading--enabling-prometheus-endpoints">Enabling Prometheus endpoints</h2>
 
@@ -69,14 +69,12 @@ For a Debian-based MAAS installation, install the library and restart MAAS servi
     sudo systemctl restart maas-rackd
     sudo systemctl restart maas-regiond
 
-MAAS also provides optional stats about resources registered with the MAAS server itself.
+MAAS also provides optional stats about resources registered with the MAAS server itself.  These include four broad categories of information:
 
-These include:
-
--   The number of nodes by type, arch, ...
--   Number of networks, spaces, fabrics, VLANs and subnets
--   Total counts for machines CPU cores, memory and storage
--   Counters for VM host resources
+1.   The number of nodes by type, arch, ...
+2.   Number of networks, spaces, fabrics, VLANs and subnets
+3.   Total counts for machines CPU cores, memory and storage
+4.   Counters for VM host resources
 
 After installing the `python3-prometheus-client` library as describe above, run the following to enable stats:
 

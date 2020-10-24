@@ -41,12 +41,12 @@ Tags are a convenient way to assign descriptive words to machines, interfaces, a
 
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-#### Quick questions you may have:
+#### Four questions you may have:
 
-* [How are tags defined?](#heading--tag-definitions)
-* [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
-* [How do I see and change which tags are assigned?](#heading--tag-assignment)
-* [How do I manage tags?](#heading--tag-management)
+1. [How are tags defined?](#heading--tag-definitions)
+2. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
+3. [How do I see and change which tags are assigned?](#heading--tag-assignment)
+4. [How do I manage tags?](#heading--tag-management)
 
 MAAS supports binding an XPath expressions to a tag using *tag definitions* (see below). This makes auto-assigning tags to matching hardware possible. For instance, you could tag machines that possess fast GPUs and then deploy software that used GPU-accelerated CUDA or OpenCL libraries.
 
@@ -82,12 +82,12 @@ The collected data for each machine, viewable (in both XML and YAML) in the web 
       </lshw:node>
 ```
 
-MAAS machines will be selected based on these XPath *predicates*:
+MAAS machines will be selected based on these four XPath *predicates*:
 
--   *element* of 'node'
--   with an *attribute* of 'id'
--   whose *value* is 'display'
--   and has a *child element* of 'clock units="Hz"'
+1.   *element* of 'node'
+2.   with an *attribute* of 'id'
+3.   whose *value* is 'display'
+4.   and has a *child element* of 'clock units="Hz"'
 
 After adding the speed criteria via an XPath *operator* we end up with this as our tag definition:
 
@@ -113,9 +113,9 @@ To view a machine's currently assigned tags, stay on the 'Machines' page and cli
 
 Select the 'Configuration' tab and then the 'Edit' button alongside 'Machine configuration' to edit tags:
 
--   To unassign a tag hit the 'x' character alongside a tag.
--   To create a basic tag, type the name of the new tag in the 'Add a tag' field and hit Enter. The tag will be created and automatically assigned to the machine. Repeat if desired.
--   To assign an existing tag, type at least three characters to trigger a real-time search. Any resulting tags will show up in a drop-down menu. Select as desired.
+1.   To unassign a tag hit the 'x' character alongside a tag.
+2.   To create a basic tag, type the name of the new tag in the 'Add a tag' field and hit Enter. The tag will be created and automatically assigned to the machine. Repeat if desired.
+3.   To assign an existing tag, type at least three characters to trigger a real-time search. Any resulting tags will show up in a drop-down menu. Select as desired.
 
 <a href="https://assets.ubuntu.com/v1/250050ee-nodes-tags__2.6-tags-add-remove.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/250050ee-nodes-tags__2.6-tags-add-remove.png"></a>
 
@@ -153,17 +153,17 @@ You can apply changes by pressing the 'Save' button.
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-#### Quick questions you may have:
+#### Nine questions you may have:
 
-* [How do I get started with the MAAS CLI?](/t/maas-cli/802)
-* [How do I create tags?](#heading--rudimentary-tag-creation)
-* [How do I do tag creation and auto-assignment?](#heading--tag-creation-and-auto-assignment)
-* [How do I delete a tag?](#heading--delete-a-tag)
-* [How do I list all tags?](#heading--list-all-tags)
-* [How do I list nodes/machines labelled with a tag?](#heading--list-nodesmachines-labelled-with-a-tag)
-* [How do I handle Juju integration?](#heading--juju-integration)
-* [How do I effect manual tag assignment?](#heading--manual-tag-assignment)
-* [How do I effect hybrid tag assignment?](#heading--hybrid-tag-assignment)
+1. [How do I get started with the MAAS CLI?](/t/maas-cli/802)
+2. [How do I create tags?](#heading--rudimentary-tag-creation)
+3. [How do I do tag creation and auto-assignment?](#heading--tag-creation-and-auto-assignment)
+4. [How do I delete a tag?](#heading--delete-a-tag)
+5. [How do I list all tags?](#heading--list-all-tags)
+6. [How do I list nodes/machines labelled with a tag?](#heading--list-nodesmachines-labelled-with-a-tag)
+7. [How do I handle Juju integration?](#heading--juju-integration)
+8. [How do I effect manual tag assignment?](#heading--manual-tag-assignment)
+9. [How do I effect hybrid tag assignment?](#heading--hybrid-tag-assignment)
 
 <h2 id="heading--rudimentary-tag-creation">Tag creation</h2>
 

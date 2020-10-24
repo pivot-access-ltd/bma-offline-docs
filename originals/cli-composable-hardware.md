@@ -1,21 +1,21 @@
 This article provides a list of examples of VM host management tasks you can perform with the MAAS CLI.
 
-#### Quick questions you may have: 
+#### Fourteen questions you may have: 
 
-* [How do I get started with the MAAS CLI?](/t/maas-cli/802)
-* [What should I know about VM hosts?](/t/introduction-to-vm-hosting/1524)
-* [How can I add a VM host?](/t/cli-composable-hardware/795#heading--add-a-vm-host)
-* [How can I find VM host IDs?](/t/cli-composable-hardware/795#heading--find-vm-host-ids)
-* [How can I list resources of all VM hosts?](/t/cli-composable-hardware/795#heading--list-resources-of-all-vm-hosts)
-* [How can I list resources of a VM host?](/t/cli-composable-hardware/795#heading--list-resources-of-a-vm-host)
-* [How can I update a VM host's configuration?](/t/cli-composable-hardware/795#heading--update-vm-host-configuration)
-* [How can I list a VM host's connection parameters?](/t/cli-composable-hardware/795#heading--list-vm-host-connection-parameters)
-* [How can I compose VMs?](/t/cli-composable-hardware/795#heading--compose-virtual-machines)
-* [How can I compose and allocate a VM?](/t/cli-composable-hardware/795#heading--compose-and-allocate-a-vm)
-* [How can I list machine parameters?](/t/cli-composable-hardware/795#heading--list-machine-parameters)
-* [How can I use libvirt storage pools?](/t/cli-composable-hardware/795#heading--libvirt-storage-pools)
-* [How can I delete a VM?](/t/cli-composable-hardware/795#heading--delete-a-vm)
-* [How can I delete a VM host?](/t/cli-composable-hardware/795#heading--delete-a-vm-host)
+1. [How do I get started with the MAAS CLI?](/t/maas-cli/802)
+2. [What should I know about VM hosts?](/t/introduction-to-vm-hosting/1524)
+3. [How can I add a VM host?](/t/cli-composable-hardware/795#heading--add-a-vm-host)
+4. [How can I find VM host IDs?](/t/cli-composable-hardware/795#heading--find-vm-host-ids)
+5. [How can I list resources of all VM hosts?](/t/cli-composable-hardware/795#heading--list-resources-of-all-vm-hosts)
+6. [How can I list resources of a VM host?](/t/cli-composable-hardware/795#heading--list-resources-of-a-vm-host)
+7. [How can I update a VM host's configuration?](/t/cli-composable-hardware/795#heading--update-vm-host-configuration)
+8. [How can I list a VM host's connection parameters?](/t/cli-composable-hardware/795#heading--list-vm-host-connection-parameters)
+9. [How can I compose VMs?](/t/cli-composable-hardware/795#heading--compose-virtual-machines)
+10. [How can I compose and allocate a VM?](/t/cli-composable-hardware/795#heading--compose-and-allocate-a-vm)
+11. [How can I list machine parameters?](/t/cli-composable-hardware/795#heading--list-machine-parameters)
+12. [How can I use libvirt storage pools?](/t/cli-composable-hardware/795#heading--libvirt-storage-pools)
+13. [How can I delete a VM?](/t/cli-composable-hardware/795#heading--delete-a-vm)
+14. [How can I delete a VM host?](/t/cli-composable-hardware/795#heading--delete-a-vm-host)
 
 <h2 id="heading--add-a-vm-host">Add a VM host</h2>
 
@@ -164,7 +164,7 @@ Compose with resources specified:
 maas $PROFILE vm-host compose $VM_HOST_ID $RESOURCES
 ```
 
-Where RESOURCES is a space-separated list from:
+Where RESOURCES is a space-separated list containing any combination of the following six items:
 
 1. **cores=** requested cores
 2. **cpu_speed=** requested minimum cpu speed in MHz
@@ -441,5 +441,3 @@ maas $PROFILE vm-host delete $VM_HOST_ID
 <strong>NOTE:</strong> 
 Deleting a VM host will automatically delete all machines belonging to that VM host.
 
-
-<!-- LINKS -->

@@ -89,7 +89,7 @@ A VM host is simply a machine which can run virtual machines (VMs) by allocating
 You **must** [configure your network](/t/vm-host-networking/3216) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3216#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3216)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3216#heading--set-up-ssh)
@@ -104,7 +104,7 @@ You **must** [configure your network](/t/vm-host-networking/3216) to support a V
 You **must** [configure your network](/t/vm-host-networking/3217) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3217#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3217)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3217#heading--set-up-ssh)
@@ -119,7 +119,7 @@ You **must** [configure your network](/t/vm-host-networking/3217) to support a V
 You **must** [configure your network](/t/vm-host-networking/3218) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3218#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3218)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3218#heading--set-up-ssh)
@@ -134,7 +134,7 @@ You **must** [configure your network](/t/vm-host-networking/3218) to support a V
 You **must** [configure your network](/t/vm-host-networking/3219) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3219#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3219)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3219#heading--set-up-ssh)
@@ -149,7 +149,7 @@ You **must** [configure your network](/t/vm-host-networking/3219) to support a V
 You **must** [configure your network](/t/vm-host-networking/3220) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3220#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3220)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3220#heading--set-up-ssh)
@@ -164,7 +164,7 @@ You **must** [configure your network](/t/vm-host-networking/3220) to support a V
 You **must** [configure your network](/t/vm-host-networking/3221) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3221#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3221)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3221#heading--set-up-ssh)
@@ -179,7 +179,7 @@ You **must** [configure your network](/t/vm-host-networking/3221) to support a V
 You **must** [configure your network](/t/vm-host-networking/3210) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3210#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3210)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3210#heading--set-up-ssh)
@@ -194,7 +194,7 @@ You **must** [configure your network](/t/vm-host-networking/3210) to support a V
 You **must** [configure your network](/t/vm-host-networking/3211) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3211#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3211)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3211#heading--set-up-ssh)
@@ -209,7 +209,7 @@ You **must** [configure your network](/t/vm-host-networking/3211) to support a V
 You **must** [configure your network](/t/vm-host-networking/3212) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3212#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3212)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3212#heading--set-up-ssh)
@@ -224,7 +224,7 @@ You **must** [configure your network](/t/vm-host-networking/3212) to support a V
 You **must** [configure your network](/t/vm-host-networking/3213) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3213#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3213)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3213#heading--set-up-ssh)
@@ -239,7 +239,7 @@ You **must** [configure your network](/t/vm-host-networking/3213) to support a V
 You **must** [configure your network](/t/vm-host-networking/3214) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3214#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3214)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3214#heading--set-up-ssh)
@@ -254,7 +254,7 @@ You **must** [configure your network](/t/vm-host-networking/3214) to support a V
 You **must** [configure your network](/t/vm-host-networking/3215) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3215#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3215)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3215#heading--set-up-ssh)
@@ -353,7 +353,7 @@ This command is in the [CLI cookbook](/t/the-cli-cookbook/2218) as [lsvmh](/t/th
 
 <h3>List configurable VM host parameters</h3>
 
-There are just a few parameters that you can change for a VM host.  You can list these, on a per-host basis, using the following procedure:
+There are just a few parameters that you can change for a VM host.  You can list these, on a per-host basis, using the following two-step procedure:
 
 1. Run the command above[lsvmh](/t/the-cli-cookbook/2218#heading--vm-host-list)) to get the VM host ID (different from the System ID, see the first column in the listing).
 
@@ -411,7 +411,7 @@ deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli -->
 
 Over-committed resources are those allocated beyond what's available in the physical resource. Using sliders on the configuration page, you can limit whether MAAS will attempt to overcommit CPU and memory. The input fields to the right of the sliders accept floating-point values from 0 to 10, with a default value of 1.
 
-The following shows theoretical examples of these ratios and how they affect physical resource allocation:
+The following shows four theoretical examples of these ratios and how they affect physical resource allocation:
 
 1.  `8 physical CPU cores  * 1 multiplier     = 8 virtual CPU cores`
 2.  `8 physical CPU cores  * 0.5 multiplier   = 4 virtual CPU cores`

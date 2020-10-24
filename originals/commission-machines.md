@@ -104,14 +104,14 @@ Commissioning requires 60 seconds.
 
  snap-2-9-ui -->
 
-#### Questions you may have:
+#### Six questions you may have:
 
-* [How are machines commissioned?](#heading--commissioning-machines)
-* [How can I commission NUMA and SR-IOV nodes?](#heading--numa-sriov-commissioning)
-* [What are MAAS commissioning scripts?](#heading--commissioning-scripts)
-* [What post-commission configuration is possible?](#heading--post-commission-configuration)
-* [What is a bond interface and how do I create one?](#heading--bond-interfaces)
-* [What is a bridge interface and how do I create one?](#heading--bridge-interfaces)
+1. [How are machines commissioned?](#heading--commissioning-machines)
+2. [How can I commission NUMA and SR-IOV nodes?](#heading--numa-sriov-commissioning)
+3. [What are MAAS commissioning scripts?](#heading--commissioning-scripts)
+4. [What post-commission configuration is possible?](#heading--post-commission-configuration)
+5. [What is a bond interface and how do I create one?](#heading--bond-interfaces)
+6. [What is a bridge interface and how do I create one?](#heading--bridge-interfaces)
 
 <h2 id="heading--commissioning-machines">How machines are commissioned</h2>
 
@@ -246,21 +246,21 @@ To commission all nodes in the 'New' state:
 maas $PROFILE machines accept-all
 ```
 
-You have the option of setting some parameters to change how commission runs:
+You have the option of setting some parameters to change how commissioning runs:
 
-* `enable_ssh`: Optional integer. Controls whether to enable SSH for the commissioning environment using the user's SSH key(s). '1' == True, '0' == False. Roughly equivalent to the **Allow SSH access and prevent machine powering off** in the web UI.
+1. `enable_ssh`: Optional integer. Controls whether to enable SSH for the commissioning environment using the user's SSH key(s). '1' == True, '0' == False. Roughly equivalent to the **Allow SSH access and prevent machine powering off** in the web UI.
 
-* `skip_bmc_config`: Optional integer.  Controls whether to skip re-configuration of the BMC for IPMI based machines. '1' == True, '0' == False.
+2. `skip_bmc_config`: Optional integer.  Controls whether to skip re-configuration of the BMC for IPMI based machines. '1' == True, '0' == False.
 
-* `skip_networking`: Optional integer.  Controls whether to skip re-configuring the networking on the machine after the commissioning has completed. '1' == True, '0' == False. Roughly equivalent to **Retain network configuration** in the web UI.
+3. `skip_networking`: Optional integer.  Controls whether to skip re-configuring the networking on the machine after the commissioning has completed. '1' == True, '0' == False. Roughly equivalent to **Retain network configuration** in the web UI.
 
-* `skip_storage`: Optional integer.  Controls hether to skip re-configuring the storage on the machine after the commissioning has completed. '1' == True, '0' == False.  Roughly equivalent to **Retain storage configuration** in the web UI.
+4. `skip_storage`: Optional integer.  Controls hether to skip re-configuring the storage on the machine after the commissioning has completed. '1' == True, '0' == False.  Roughly equivalent to **Retain storage configuration** in the web UI.
 
-* `commissioning_scripts`: Optional string.  A comma seperated list of commissioning script names and tags to be run. By default all custom commissioning scripts are run. Built-in commissioning scripts always run. Selecting 'update_firmware' or 'configure_hba' will run firmware updates or configure HBA's on matching machines.
+5. `commissioning_scripts`: Optional string.  A comma seperated list of commissioning script names and tags to be run. By default all custom commissioning scripts are run. Built-in commissioning scripts always run. Selecting 'update_firmware' or 'configure_hba' will run firmware updates or configure HBA's on matching machines.
 
-* `testing_scripts`: Optional string.  A comma seperated list of testing script names and tags to be run. By default all tests tagged 'commissioning' will be run. Set to 'none' to disable running tests.
+6. `testing_scripts`: Optional string.  A comma seperated list of testing script names and tags to be run. By default all tests tagged 'commissioning' will be run. Set to 'none' to disable running tests.
 
-* `parameters`: Optional string.  Scripts selected to run may define their own parameters. These parameters may be passed using the parameter name. Optionally a parameter may have the script name prepended to have that parameter only apply to that specific script.
+7. `parameters`: Optional string.  Scripts selected to run may define their own parameters. These parameters may be passed using the parameter name. Optionally a parameter may have the script name prepended to have that parameter only apply to that specific script.
 
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
@@ -440,73 +440,73 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 When a machine boots, MAAS first instructs it to run cloud-init to set up SSH keys (during commissioning only), set up NTP, and execute a script that runs other commissioning scripts.  Currently, the sequence of MAAS-provided commissioning scripts proceeds like this:
 
 <!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
-* maas-support-info: MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  **Runs in parallel with other scripts.**
+* **maas-support-info:** MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  **Runs in parallel with other scripts.**
 
-* maas-lshw: this script pulls system BIOS and vendor info, and generates user-defined tags for later use.  **Runs in parallel with other scripts.**
+* **maas-lshw:** this script pulls system BIOS and vendor info, and generates user-defined tags for later use.  **Runs in parallel with other scripts.**
 
-* 20-maas-01-install-lldpd: this script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  This script provides some extensive logging.
+* **20-maas-01-install-lldpd:** this script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  This script provides some extensive logging.
 
-* maas-list-modaliases: this script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.  **Runs in parallel with other scripts.**
+* **maas-list-modaliases:** this script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.  **Runs in parallel with other scripts.**
 
-* 20-maas-02-dhcp-unconfigured-ifaces: MAAS will want to know all the ways the machine is connected to the network.  Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.  This script provides extensive logging.
+* **20-maas-02-dhcp-unconfigured-ifaces:** MAAS will want to know all the ways the machine is connected to the network.  Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.  This script provides extensive logging.
 
-* maas-get-fruid-api-data: this script gathers information for the Facebook wedge power type.  **Runs in parallel with other scripts.**
+* **maas-get-fruid-api-data:** this script gathers information for the Facebook wedge power type.  **Runs in parallel with other scripts.**
 
-* maas-serial-ports: this script lists what serial ports are available on the machine.  **Runs in parallel with other scripts.**
+* **maas-serial-ports:** this script lists what serial ports are available on the machine.  **Runs in parallel with other scripts.**
 
-* 40-maas-01-network-interfaces: this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
+* **40-maas-01-network-interfaces:** this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
 
-* 50-maas-01-commissioning: this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
+* **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
 
-* maas-capture-lldp: this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  **Runs in parallel with other scripts.**
+* **maas-capture-lldp:** this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  **Runs in parallel with other scripts.**
 
-* maas-kernel-cmdline: this script is used to update the boot devices; it double-checks that the right boot interface is selected. 
+* **maas-kernel-cmdline:** this script is used to update the boot devices; it double-checks that the right boot interface is selected. 
 
-Commissioning runs the same dozen or so scripts as enlistment, gathering all the same information, but with some additional caveats: 
+Commissioning runs the same dozen or so scripts as enlistment, gathering all the same information, but with these seven caveats: 
 
-* Commissioning also runs user-supplied commissioning scripts, if present.  Be aware that these scripts run as root, so they can execute any system command.
+1. Commissioning also runs user-supplied commissioning scripts, if present.  Be aware that these scripts run as root, so they can execute any system command.
 
-* Commissioning runs test scripts which are not run during enlistment.
+2. Commissioning runs test scripts which are not run during enlistment.
 
-* Commissioning scripts can send BMC configuration data, and can be used to configure BMC data.
+3. Commissioning scripts can send BMC configuration data, and can be used to configure BMC data.
 
-* The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts; these scripts may write BMC power credentials to BMC_CONFIG_PATH in YAML format, where each key is a power parameter.  The first script to write BMC_CONFIG_PATH is the only script allowed to configure the BMC, allowing you to override MAAS' built-in BMC detection.  If the script returns 0, that value will be send to MAAS.
+4. The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts; these scripts may write BMC power credentials to BMC_CONFIG_PATH in YAML format, where each key is a power parameter.  The first script to write BMC_CONFIG_PATH is the only script allowed to configure the BMC, allowing you to override MAAS' built-in BMC detection.  If the script returns 0, that value will be send to MAAS.
 
-* All built-in commissioning scripts have been migrated into the database.
+5. All built-in commissioning scripts have been migrated into the database.
 
-* `maas-run-remote-scripts` is capable of enlisting machines, so enlistment `user-data` scripts have been removed.
+6. `maas-run-remote-scripts` is capable of enlisting machines, so enlistment `user-data` scripts have been removed.
 
-* The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.
+7. The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.
 snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
 
 <!-- snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli
-* 00-maas-00-support-info: MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.
+* **00-maas-00-support-info:** MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.
 
-* 00-maas-01-lshw: this script pulls system BIOS and vendor info, and generates user-defined tags for later use.
+* **00-maas-01-lshw:** this script pulls system BIOS and vendor info, and generates user-defined tags for later use.
 
-* 00-maas-03-install-lldpd: this script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  The lldpd needs to be installed early because it requires about a 60-second delay before running.
+* **00-maas-03-install-lldpd:** this script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  The lldpd needs to be installed early because it requires about a 60-second delay before running.
 
-* 00-maas-04-list-modaliases: this script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.
+* **00-maas-04-list-modaliases:** this script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.
 
-* 00-maas-05-dhcp-unconfigured-ifaces: MAAS will want to know all the ways the machine is connected to the network.  Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.
+* **00-maas-05-dhcp-unconfigured-ifaces:** MAAS will want to know all the ways the machine is connected to the network.  Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.
 
-* 00-maas-06-get-fruid-api-data: this script gathers information for the Facebook wedge power type.
+* **00-maas-06-get-fruid-api-data:** this script gathers information for the Facebook wedge power type.
 
-* 00-maas-08-serial-ports: this script lists what serial ports are available on the machine.
+* **00-maas-08-serial-ports:** this script lists what serial ports are available on the machine.
 
-* 40-maas-01-network-interfaces: this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
+* **40-maas-01-network-interfaces:** this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
 
-* 50-maas-01-commissioning: this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
+* **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
 
-* 99-maas-01-capture-lldp: this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.
+* **99-maas-01-capture-lldp:** this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.
 
-* 99-maas-05-kernel-cmdline: this script is used to update the boot devices; it double-checks that the right boot interface is selected.
+* **99-maas-05-kernel-cmdline:** this script is used to update the boot devices; it double-checks that the right boot interface is selected.
 
-Commissioning runs the same dozen or so scripts as enlistment, gathering all the same information, but with some additional caveats: 
+Commissioning runs the same dozen or so scripts as enlistment, gathering all the same information, but with these two caveats: 
 
-* Commissioning also runs user-supplied commissioning scripts, if present.  Be aware that these scripts run as root, so they can execute any system command.
+1. Commissioning also runs user-supplied commissioning scripts, if present.  Be aware that these scripts run as root, so they can execute any system command.
 
-* Commissioning runs test scripts which are not run during enlistment.
+2. Commissioning runs test scripts which are not run during enlistment.
 snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli -->
 
 In both enlistment and commissioning, MAAS uses either the MAC address or the UUID to identify machines.  Currently, because some machine types encountered by MAAS do **not** use unique MAC addresses, we are trending toward using the UUID.
@@ -643,47 +643,34 @@ bond_updelay=200 bond_downdelay=200 mtu=9000
 
 There are a wide range of bond parameters you can choose when creating a bond:
 
-* `mac_address`: Optional string.  MAC address of the interface.
+| No. | Parameter | Type and description |
+|----:|:----------|:---------------------|
+| 1. | `mac_address`| Optional string.  MAC address of the interface. |
+| 2. | `tags`| Optional string.  Tags for the interface. |
+| 3. | `vlan`| Optional string.  VLAN the interface is connected to. If not provided then the interface is considered disconnected. |
+| 4. | `parents`| Required integer.  Parent interface ids that make this bond. |
+| 5. | `bond_miimon`| Optional integer.  The link monitoring freqeuncy in milliseconds. (Default: 100). |
+| 6. | `bond_downdelay`| Optional integer.  Specifies the time, in milliseconds, to wait before disabling a slave after a link failure has been detected. |
+| 7. | `bond_updelay`| Optional integer.  Specifies the time, in milliseconds, to wait before enabling a slave after a link recovery has been detected. |
+| 8. | `bond_lacp_rate`| Optional string.  Option specifying the rate at which to ask the link partner to transmit LACPDU packets in 802.3ad mode. Available options are ``fast`` or ``slow``. (Default: ``slow``). |
+| 9. | `bond_xmit_hash_policy`| Optional string.  The transmit hash policy to use for slave selection in balance-xor, 802.3ad, and tlb modes. Possible values are: ``layer2``, ``layer2+3``, ``layer3+4``, ``encap2+3``, ``encap3+4``. (Default: ``layer2``) |
+| 10. | `bond_num_grat_arp`| Optional integer.  The number of peer notifications (IPv4 ARP or IPv6 Neighbour Advertisements) to be issued after a failover. (Default: 1) |
+| 11. | `mtu`| Optional integer.  Maximum transmission unit. |
+| 12. | `accept_ra`| Optional boolen.  Accept router advertisements. (IPv6 only) |
+| 13. | `autoconf`| Optional boolean.  Perform stateless autoconfiguration. (IPv6 only) |
+| 14. | `bond_mode`| Optional string.  The operating mode of the bond.  (Default: active-backup). |
 
-* `tags`: Optional string.  Tags for the interface.
+Supported bonding modes include:
 
-* `vlan`: Optional string.  VLAN the interface is connected to. If not provided then the interface is considered disconnected.
-
-* `parents`: Required integer.  Parent interface ids that make this bond.
-
-* `bond_miimon`: Optional integer.  The link monitoring freqeuncy in milliseconds. (Default: 100).
-
-* `bond_downdelay`: Optional integer.  Specifies the time, in milliseconds, to wait before disabling a slave after a link failure has been detected.
-
-* `bond_updelay`: Optional integer.  Specifies the time, in milliseconds, to wait before enabling a slave after a link recovery has been detected.
-
-* `bond_lacp_rate`: Optional string.  Option specifying the rate at which to ask the link partner to transmit LACPDU packets in 802.3ad mode. Available options are ``fast`` or ``slow``. (Default: ``slow``).
-
-* `bond_xmit_hash_policy`: Optional string.  The transmit hash policy to use for slave selection in balance-xor, 802.3ad, and tlb modes. Possible values are: ``layer2``, ``layer2+3``, ``layer3+4``, ``encap2+3``, ``encap3+4``. (Default: ``layer2``)
-
-* `bond_num_grat_arp`: Optional integer.  The number of peer notifications (IPv4 ARP or IPv6 Neighbour Advertisements) to be issued after a failover. (Default: 1)
-
-* `mtu`: Optional integer.  Maximum transmission unit.
-
-* `accept_ra`: Optional boolen.  Accept router advertisements. (IPv6 only)
-
-* `autoconf`: Optional boolean.  Perform stateless autoconfiguration. (IPv6 only)
-
-* `bond_mode`: Optional string.  The operating mode of the bond.  (Default: active-backup). Supported bonding modes include:
-
-  `balance-rr`: Transmit packets in sequential order from the first available slave through the last. This mode provides load balancing and fault tolerance.
-
-  `active-backup`: Only one slave in the bond is active. A different slave becomes active if, and only if, the active slave fails. The bond's MAC address is externally visible on only one port (network adapter) to avoid confusing the switch.
-
-  `balance-xor`: Transmit based on the selected transmit hash policy. The default policy is a simple [(source MAC address XOR'd with destination MAC address XOR packet type ID) modulo slave count].
-
-  `broadcast`: Transmits everything on all slave interfaces. This mode provides fault tolerance.
-
-  `802.3ad`: IEEE 802.3ad dynamic link aggregation. Creates aggregation groups that share the same speed and duplex settings. Uses all slaves in the active aggregator according to the 802.3ad specification.
-
-  `balance-tlb`: Adaptive transmit load balancing: channel bonding that does not require any special switch support.
-
-  `balance-alb`: Adaptive load balancing: includes balance-tlb plus receive load balancing (rlb) for IPV4 traffic, and does not require any special switch support. The receive load balancing is achieved by ARP negotiation.
+| Mode | Behavior |
+|:-----|:---------|
+|  `balance-rr`:| Transmit packets in sequential order from the first available slave through the last. This mode provides load balancing and fault tolerance. |
+|  `active-backup`| Only one slave in the bond is active. A different slave becomes active if, and only if, the active slave fails. The bond's MAC address is externally visible on only one port (network adapter) to avoid confusing the switch. |
+|  `balance-xor`| Transmit based on the selected transmit hash policy. The default policy is a simple [(source MAC address XOR'd with destination MAC address XOR packet type ID) modulo slave count]. |
+|  `broadcast`| Transmits everything on all slave interfaces. This mode provides fault tolerance. |
+|  `802.3ad`| IEEE 802.3ad dynamic link aggregation. Creates aggregation groups that share the same speed and duplex settings. Uses all slaves in the active aggregator according to the 802.3ad specification. |
+|  `balance-tlb`| Adaptive transmit load balancing: channel bonding that does not require any special switch support. |
+|  `balance-alb`| Adaptive load balancing: includes balance-tlb plus receive load balancing (rlb) for IPV4 traffic, and does not require any special switch support. The receive load balancing is achieved by ARP negotiation. |
 
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
@@ -739,31 +726,31 @@ maas admin interfaces create-bridge 4efwb4 name=bridged0 parent=4
 
 The following parameters may be applied when creating a bridge:
 
-* `name`: Optional string.  Name of the interface.
+1. `name`: Optional string.  Name of the interface.
 
-* `mac_address`: Optional string.  MAC address of the interface.
+2. `mac_address`: Optional string.  MAC address of the interface.
 
-* `tags`: Optional string.  Tags for the interface.
+3. `tags`: Optional string.  Tags for the interface.
 
-* `vlan`: Optional string.  VLAN the interface is connected to.
+4. `vlan`: Optional string.  VLAN the interface is connected to.
 
-* `parent`: Optional integer.  Parent interface id for this bridge interface.
+5. `parent`: Optional integer.  Parent interface id for this bridge interface.
 
-* `bridge_type`: Optional string.  The type of bridge to create. Possible values are: ``standard``, ``ovs``.
+6. `bridge_type`: Optional string.  The type of bridge to create. Possible values are: ``standard``, ``ovs``.
 
-* `bridge_stp`: Optional boolean.  Turn spanning tree protocol on or off. (Default: False).
+7. `bridge_stp`: Optional boolean.  Turn spanning tree protocol on or off. (Default: False).
 
-* `bridge_fd`: Optional integer.  Set bridge forward delay to time seconds. (Default: 15).
+8. `bridge_fd`: Optional integer.  Set bridge forward delay to time seconds. (Default: 15).
 
-* `mtu`: Optional integer.  Maximum transmission unit.
+9. `mtu`: Optional integer.  Maximum transmission unit.
 
-* `accept_ra`: Optional boolean.  Accept router advertisements. (IPv6 only)
+10. `accept_ra`: Optional boolean.  Accept router advertisements. (IPv6 only)
 
-* `autoconf`: Optional boolean.  Perform stateless autoconfiguration. (IPv6 only)
+11. `autoconf`: Optional boolean.  Perform stateless autoconfiguration. (IPv6 only)
 
 <h3>Delete a bridge interface</h3>
 
-The ‘delete’ command can be used to delete a bridge interface, a bond interface or a physical interface:
+The "delete" command can be used to delete a bridge interface, a bond interface or a physical interface:
 
 ```
 maas $PROFILE interface delete $SYSTEM_ID $IFACE_ID

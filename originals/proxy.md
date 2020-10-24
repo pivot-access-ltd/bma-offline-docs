@@ -38,16 +38,16 @@ MAAS provides a way for its managed machines to use a proxy server when they nee
 
 There are three possible options:
 
--   internal proxy (default)
--   external proxy
--   no proxy
+1.   internal proxy (default)
+2.   external proxy
+3.   no proxy
 
 Configuring a proxy with MAAS consists of enabling/disabling one of the above three options and enabling/disabling proxying on a specific subnet.
 
-#### Quick questions you may have:
+#### Two questions you may have:
 
-* [How and why should I create an internal proxy?](#heading--internal-proxy-maas-proxy)
-* [How and why should I create an external proxy?](#heading--configure-proxy)
+1. [How and why should I create an internal proxy?](#heading--internal-proxy-maas-proxy)
+2. [How and why should I create an external proxy?](#heading--configure-proxy)
 
 <h2 id="heading--internal-proxy-maas-proxy">Internal proxy (MAAS proxy)</h2>
 

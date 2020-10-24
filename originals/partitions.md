@@ -245,10 +245,10 @@ Machine-readable output follows:
 
 <h2 id="heading--restrictions">Restrictions</h2>
 
-There are only a couple of restrictions that exists in the storage configuration. These restrictions are only in place because they are known to not allow a successful deployment.
+There are three restrictions for the storage configuration:
 
--   An EFI partition is required to be on the boot disk for UEFI.
--   You cannot place partitions on logical volumes.
--   You cannot use a logical volume as a Bcache backing device.
+1.   An EFI partition is required to be on the boot disk for UEFI.
+2.   You cannot place partitions on logical volumes.
+3.   You cannot use a logical volume as a Bcache backing device.
 
-<!-- LINKS -->
+Violating these restrictions will prevent a successful deployment.

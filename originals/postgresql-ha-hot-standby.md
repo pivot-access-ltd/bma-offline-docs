@@ -36,13 +36,13 @@
 
 **Disclaimer: These *notes* give an idea of what is involved in setting up 'hot standby' HA mode in PostgreSQL. The below procedures are not regularly tested. Please use the [PostgreSQL documentation](https://www.postgresql.org/docs/9.5/static/high-availability.html) when setting up HA on PostgreSQL.**
 
-The following variables are used on this page:
+Five variables are used on this page:
 
--   PRIMARY_PG_IP: The IP address of the host that contains the primary database.
--   SECONDARY_PG_IP: The IP address of the host that contains the secondary database.
--   REP_USER: The internal database user that manages replication on the primary.
--   REP_USER_PW: The password of the replication user.
--   REP_ARCHIVE: The directory where the database will place files to be replicated.
+1.   PRIMARY_PG_IP: The IP address of the host that contains the primary database.
+2.   SECONDARY_PG_IP: The IP address of the host that contains the secondary database.
+3.   REP_USER: The internal database user that manages replication on the primary.
+4.   REP_USER_PW: The password of the replication user.
+5.   REP_ARCHIVE: The directory where the database will place files to be replicated.
 
 Their values are represented when they are preceded with the '$' character (e.g. $REP_USER_PW). These are to be replaced with actual values in the commands and files below.
 
@@ -106,9 +106,9 @@ Perform these actions on the secondary host.
 
 This host should ideally match the primary host in terms of:
 
--   CPU architecture
--   OS type and version
--   PostgreSQL version
+1.   CPU architecture
+2.   OS type and version
+3.   PostgreSQL version
 
 Replication has been known to fail due to an architecture mismatch.
 
@@ -198,5 +198,3 @@ This includes any hosts that are being used for API servers or rack controllers 
 To quickly check that replication is working simply (temporarily) rename a node's hostname in the web UI and re-invoke the above command to see if the change is reflected.
 
 Another test could be to change the status of a node, for example, by Commissioning or Deploying (a status of '4' is 'Ready' and a status of '6' is 'Deployed').
-
-<!-- LINKS -->

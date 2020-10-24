@@ -84,102 +84,102 @@
 
 A rack controller can connect to multiple VLANs, each from a different network interface. This configuration provides a scaling factor that can help as a network architecture grows in size.
 
-#### Quick questions you may have:
+#### Five questions you may have:
 
 <!-- deb-2-7-cli
-* [How does MAAS communication work?](/t/maas-communication/2832)
-* [How do I install a rack controller?](#heading--install-a-rack-controller)
-* [How do I list rack controllers?](#heading--list-rack-controllers)
-* [How do I configure MAAS for multiple API servers?](/t/high-availability/2688#heading--multiple-region-endpoints)
-* [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
+1. [How does MAAS communication work?](/t/maas-communication/2832)
+2. [How do I install a rack controller?](#heading--install-a-rack-controller)
+3. [How do I list rack controllers?](#heading--list-rack-controllers)
+4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2688#heading--multiple-region-endpoints)
+5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-* [How does MAAS communication work?](/t/maas-communication/2833)
-* [How do I install a rack controller?](#heading--install-a-rack-controller)
-* [How do I list rack controllers?](#heading--list-rack-controllers)
-* [How do I configure MAAS for multiple API servers?](/t/high-availability/2689#heading--multiple-region-endpoints)
-* [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
+1. [How does MAAS communication work?](/t/maas-communication/2833)
+2. [How do I install a rack controller?](#heading--install-a-rack-controller)
+3. [How do I list rack controllers?](#heading--list-rack-controllers)
+4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2689#heading--multiple-region-endpoints)
+5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-* [How does MAAS communication work?](/t/maas-communication/2834)
-* [How do I install a rack controller?](#heading--install-a-rack-controller)
-* [How do I list rack controllers?](#heading--list-rack-controllers)
-* [How do I configure MAAS for multiple API servers?](/t/high-availability/2690#heading--multiple-region-endpoints)
-* [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
+1. [How does MAAS communication work?](/t/maas-communication/2834)
+2. [How do I install a rack controller?](#heading--install-a-rack-controller)
+3. [How do I list rack controllers?](#heading--list-rack-controllers)
+4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2690#heading--multiple-region-endpoints)
+5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-* [How does MAAS communication work?](/t/maas-communication/2835)
-* [How do I install a rack controller?](#heading--install-a-rack-controller)
-* [How do I list rack controllers?](#heading--list-rack-controllers)
-* [How do I configure MAAS for multiple API servers?](/t/high-availability/2691#heading--multiple-region-endpoints)
-* [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
+1. [How does MAAS communication work?](/t/maas-communication/2835)
+2. [How do I install a rack controller?](#heading--install-a-rack-controller)
+3. [How do I list rack controllers?](#heading--list-rack-controllers)
+4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2691#heading--multiple-region-endpoints)
+5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-* [How does MAAS communication work?](/t/maas-communication/2836)
-* [How do I install a rack controller?](#heading--install-a-rack-controller)
-* [How do I list rack controllers?](#heading--list-rack-controllers)
-* [How do I configure MAAS for multiple API servers?](/t/high-availability/2692#heading--multiple-region-endpoints)
-* [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
+1. [How does MAAS communication work?](/t/maas-communication/2836)
+2. [How do I install a rack controller?](#heading--install-a-rack-controller)
+3. [How do I list rack controllers?](#heading--list-rack-controllers)
+4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2692#heading--multiple-region-endpoints)
+5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-* [How does MAAS communication work?](/t/maas-communication/2837)
-* [How do I install a rack controller?](#heading--install-a-rack-controller)
-* [How do I list rack controllers?](#heading--list-rack-controllers)
-* [How do I configure MAAS for multiple API servers?](/t/high-availability/2683#heading--multiple-region-endpoints)
-* [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
+1. [How does MAAS communication work?](/t/maas-communication/2837)
+2. [How do I install a rack controller?](#heading--install-a-rack-controller)
+3. [How do I list rack controllers?](#heading--list-rack-controllers)
+4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2683#heading--multiple-region-endpoints)
+5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-* [How does MAAS communication work?](/t/maas-communication/2826)
-* [How do I install a rack controller?](#heading--install-a-rack-controller)
-* [How do I list rack controllers?](#heading--list-rack-controllers)
-* [How do I configure MAAS for multiple API servers?](/t/high-availability/2682#heading--multiple-region-endpoints)
-* [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
+1. [How does MAAS communication work?](/t/maas-communication/2826)
+2. [How do I install a rack controller?](#heading--install-a-rack-controller)
+3. [How do I list rack controllers?](#heading--list-rack-controllers)
+4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2682#heading--multiple-region-endpoints)
+5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-* [How does MAAS communication work?](/t/maas-communication/2827)
-* [How do I install a rack controller?](#heading--install-a-rack-controller)
-* [How do I list rack controllers?](#heading--list-rack-controllers)
-* [How do I configure MAAS for multiple API servers?](/t/high-availability/2683#heading--multiple-region-endpoints)
-* [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
+1. [How does MAAS communication work?](/t/maas-communication/2827)
+2. [How do I install a rack controller?](#heading--install-a-rack-controller)
+3. [How do I list rack controllers?](#heading--list-rack-controllers)
+4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2683#heading--multiple-region-endpoints)
+5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-* [How does MAAS communication work?](/t/maas-communication/2828)
-* [How do I install a rack controller?](#heading--install-a-rack-controller)
-* [How do I list rack controllers?](#heading--list-rack-controllers)
-* [How do I configure MAAS for multiple API servers?](/t/high-availability/2684#heading--multiple-region-endpoints)
-* [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
+1. [How does MAAS communication work?](/t/maas-communication/2828)
+2. [How do I install a rack controller?](#heading--install-a-rack-controller)
+3. [How do I list rack controllers?](#heading--list-rack-controllers)
+4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2684#heading--multiple-region-endpoints)
+5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-* [How does MAAS communication work?](/t/maas-communication/2829)
-* [How do I install a rack controller?](#heading--install-a-rack-controller)
-* [How do I list rack controllers?](#heading--list-rack-controllers)
-* [How do I configure MAAS for multiple API servers?](/t/high-availability/2685#heading--multiple-region-endpoints)
-* [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
+1. [How does MAAS communication work?](/t/maas-communication/2829)
+2. [How do I install a rack controller?](#heading--install-a-rack-controller)
+3. [How do I list rack controllers?](#heading--list-rack-controllers)
+4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2685#heading--multiple-region-endpoints)
+5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-* [How does MAAS communication work?](/t/maas-communication/2830)
-* [How do I install a rack controller?](#heading--install-a-rack-controller)
-* [How do I list rack controllers?](#heading--list-rack-controllers)
-* [How do I configure MAAS for multiple API servers?](/t/high-availability/2686#heading--multiple-region-endpoints)
-* [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
+1. [How does MAAS communication work?](/t/maas-communication/2830)
+2. [How do I install a rack controller?](#heading--install-a-rack-controller)
+3. [How do I list rack controllers?](#heading--list-rack-controllers)
+4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2686#heading--multiple-region-endpoints)
+5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-* [How does MAAS communication work?](/t/maas-communication/2831)
-* [How do I install a rack controller?](#heading--install-a-rack-controller)
-* [How do I list rack controllers?](#heading--list-rack-controllers)
-* [How do I configure MAAS for multiple API servers?](/t/high-availability/2687#heading--multiple-region-endpoints)
-* [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
+1. [How does MAAS communication work?](/t/maas-communication/2831)
+2. [How do I install a rack controller?](#heading--install-a-rack-controller)
+3. [How do I list rack controllers?](#heading--list-rack-controllers)
+4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2687#heading--multiple-region-endpoints)
+5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  snap-2-9-ui -->
 
 <h2 id="heading--install-a-rack-controller">Install a rack controller</h2>

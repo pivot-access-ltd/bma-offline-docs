@@ -84,19 +84,19 @@
 
 The topic of subnet management pertains to whether or not MAAS is in full control of a subnet. When a subnet is managed, MAAS handles all aspects of IP address allocation. This process includes DHCP leases and assigned static addresses. Typically MAAS would have one managed subnet, but any additional subnets can be unmanaged. This arrangement allows for more control over which subnet gets used for DHCP and which ones do not. Additionally, as detailed below, an unmanaged subnet treats reserved IP ranges differently, and in a way that some administrators find more intuitive.
 
-#### Quick questions you may have:
+#### Four questions you may have:
 
-* [What are managed subnets?](#heading--managed-subnets)
-* [What are unmanaged subnets?](#heading--unmanaged-subnets)
-* [What is IP address tracking?](#heading--ip-address-tracking)
-* [How do I control subnet management](#heading--controlling-subnet-management)
+1. [What are managed subnets?](#heading--managed-subnets)
+2. [What are unmanaged subnets?](#heading--unmanaged-subnets)
+3. [What is IP address tracking?](#heading--ip-address-tracking)
+4. [How do I control subnet management](#heading--controlling-subnet-management)
 
 <h2 id="heading--managed-subnets">Managed subnets</h2>
 
 When you enable management for a subnet, MAAS will:
 
--   Lease addresses for DHCP from a reserved dynamic IP range
--   Assign static addresses not included in a reserved IP range, typically via 'Auto assign' IP allocation mode for a node.
+1.   Lease addresses for DHCP from a reserved dynamic IP range
+2.   Assign static addresses not included in a reserved IP range, typically via 'Auto assign' IP allocation mode for a node.
 
 <!-- deb-2-7-cli
 See [Concepts and terms](/t/concepts-and-terms/785#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses and [Post-commission configuration](/t/commission-machines/2472#heading--post-commission-configuration) for information on IP allocation modes.

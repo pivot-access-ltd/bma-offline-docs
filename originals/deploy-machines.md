@@ -82,10 +82,10 @@ Once a machine has been commissioned (see [Commission machines](/t/commission-ma
 Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2471)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
  snap-2-9-ui -->
 
-#### Quick questions you may have:
+#### Two questions you may have:
 
-* [How and why do I acquire a machine?](#heading--acquire)
-* [How do I deploy a machine?](#heading--deploy)
+1. [How and why do I acquire a machine?](#heading--acquire)
+2. [How do I deploy a machine?](#heading--deploy)
 
 The agent that triggers deployment may vary. For instance, if the machines are destined to run complex, inter-related services that scale up or down frequently, like a "cloud" resource, then [Juju](https://jujucharms.com/docs/stable/about-juju) is the recommended deployment agent. Juju will also install and configure services on the deployed machines. If you want to use MAAS to install a base operating system and work on the machines manually, then you can deploy a machine directly with MAAS.
 
@@ -240,18 +240,18 @@ To deploy, you must configure the underlying machine to netboot.  Such a machine
 3.  machine boots
 4.  initrd mounts a Squashfs image ephemerally over HTTP
 5.  cloud-init triggers deployment process
-    1.  curtin installation script runs
-    2.  Squashfs image (same as above) is placed on disk
+6.  curtin installation script runs
+7.  Squashfs image (same as above) is placed on disk
 
 <!-- deb-2-7-cli
 <strong>NOTE:</strong> 
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2592).
 
 
-Before deploying, you should:
+Before deploying, you should take two key actions:
 
--   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3180) and the [Kernel boot options](/t/kernel-boot-options/2784) that will get used by deployed machines.
--   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3204#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3180) and the [Kernel boot options](/t/kernel-boot-options/2784) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3204#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
@@ -259,10 +259,10 @@ Before deploying, you should:
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2593).
 
 
-Before deploying, you should:
+Before deploying, you should take two key actions:
 
--   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3181) and the [Kernel boot options](/t/kernel-boot-options/2785) that will get used by deployed machines.
--   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3205#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3181) and the [Kernel boot options](/t/kernel-boot-options/2785) that will get used by deployed machines.
+2.  ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3205#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
@@ -270,10 +270,10 @@ Before deploying, you should:
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2594).
 
 
-Before deploying, you should:
+Before deploying, you should take two key actions:
 
--   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3182) and the [Kernel boot options](/t/kernel-boot-options/2786) that will get used by deployed machines.
--   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3206#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3182) and the [Kernel boot options](/t/kernel-boot-options/2786) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3206#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
@@ -281,10 +281,10 @@ Before deploying, you should:
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2595).
 
 
-Before deploying, you should:
+Before deploying, you should take two key actions:
 
--   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3183) and the [Kernel boot options](/t/kernel-boot-options/2787) that will get used by deployed machines.
--   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3207#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3183) and the [Kernel boot options](/t/kernel-boot-options/2787) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3207#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
@@ -292,10 +292,10 @@ Before deploying, you should:
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2596).
 
 
-Before deploying, you should:
+Before deploying, you should take two key actions:
 
--   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3184) and the [Kernel boot options](/t/kernel-boot-options/2788) that will get used by deployed machines.
--   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3208#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3184) and the [Kernel boot options](/t/kernel-boot-options/2788) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3208#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
@@ -303,10 +303,10 @@ Before deploying, you should:
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2597).
 
 
-Before deploying, you should:
+Before deploying, you should take two key actions:
 
--   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3185) and the [Kernel boot options](/t/kernel-boot-options/2789) that will get used by deployed machines.
--   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3209#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3185) and the [Kernel boot options](/t/kernel-boot-options/2789) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3209#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
@@ -314,10 +314,10 @@ Before deploying, you should:
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2586).
 
 
-Before deploying, you should:
+Before deploying, you should take two key actions:
 
--   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3174) and the [Kernel boot options](/t/kernel-boot-options/2778) that will get used by deployed machines.
--   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3198#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3174) and the [Kernel boot options](/t/kernel-boot-options/2778) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3198#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
@@ -325,10 +325,10 @@ Before deploying, you should:
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2587).
 
 
-Before deploying, you should:
+Before deploying, you should take two key actions:
 
--   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3175) and the [Kernel boot options](/t/kernel-boot-options/2779) that will get used by deployed machines.
--   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3199#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3175) and the [Kernel boot options](/t/kernel-boot-options/2779) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3199#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
@@ -336,10 +336,10 @@ Before deploying, you should:
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2588).
 
 
-Before deploying, you should:
+Before deploying, you should take two key actions:
 
--   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3176) and the [Kernel boot options](/t/kernel-boot-options/2780) that will get used by deployed machines.
--   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3200#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3176) and the [Kernel boot options](/t/kernel-boot-options/2780) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3200#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
@@ -347,10 +347,10 @@ Before deploying, you should:
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2589).
 
 
-Before deploying, you should:
+Before deploying, you should take two key actions:
 
--   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3177) and the [Kernel boot options](/t/kernel-boot-options/2781) that will get used by deployed machines.
--   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3201#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3177) and the [Kernel boot options](/t/kernel-boot-options/2781) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3201#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
@@ -358,10 +358,10 @@ Before deploying, you should:
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2590).
 
 
-Before deploying, you should:
+Before deploying, you should take two key actions:
 
--   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3178) and the [Kernel boot options](/t/kernel-boot-options/2782) that will get used by deployed machines.
--   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3202#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3178) and the [Kernel boot options](/t/kernel-boot-options/2782) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3202#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
@@ -369,10 +369,10 @@ Before deploying, you should:
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2591).
 
 
-Before deploying, you should:
+Before deploying, you should take two key actions:
 
--   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3179) and the [Kernel boot options](/t/kernel-boot-options/2783) that will get used by deployed machines.
--   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3203#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3179) and the [Kernel boot options](/t/kernel-boot-options/2783) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3203#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  snap-2-9-ui -->
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
@@ -404,5 +404,6 @@ maas $PROFILE machine deploy $SYSTEM_ID install_kvm=True
 
 <strong>NOTE:</strong> 
 To deploy with the CLI, the node must have a status of 'Allocated'. See 'Acquire a node' above.
+
 
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->

@@ -82,14 +82,15 @@ During machine [enlistment](/t/add-machines/2278#heading--enlistment), [deployme
 During machine [enlistment](/t/add-machines/2279#heading--enlistment), [deployment](/t/deploy-machines/2603), [commissioning](/t/commission-machines/2471) and machine installation, MAAS sends [Tempita-derived^](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init^](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  snap-2-9-ui -->
 
-#### Quick questions you may have:
+#### Two questions you may have:
 
-* [How do I customise machine setup with curtin?](#heading--curtin)
-* [How do I customise machine setup with cloud-init?](#heading--cloud-init)
+1. [How do I customise machine setup with curtin?](#heading--curtin)
+2. [How do I customise machine setup with cloud-init?](#heading--cloud-init)
 
 Customisation in MAAS happens in two ways:
 
 1.  [Curtin^](https://launchpad.net/curtin), a preseeding system similar to Kickstart or d-i (Debian Installer), applies customisation during operating system (OS) image installation. MAAS performs these changes on deployment, during OS installation, but before the machine reboots into the installed OS. Curtin customisations are perfect for administrators who want their deployments to have identical setups all the time, every time. [This blog post^](https://blog.ubuntu.com/2017/06/02/customising-maas-installs) contains an excellent high-level overview of custom MAAS installs using Curtin.
+
 2.  [Cloud-init^](https://launchpad.net/cloud-init), a system for setting up machines immediately after instantiation. cloud-init applies customisations after the first boot, when MAAS changes a machine's status to 'Deployed.' Customisations are per-instances, meaning that user-supplied scripts must be re-specified on redeployment. Cloud-init customisations are the best way for MAAS users to customise their deployments, similar to how the various cloud services prepare VMs when launching instances.
 
 <h2 id="heading--curtin">Curtin</h2>
@@ -105,11 +106,11 @@ The [Tempita^](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/i
 deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 
 
-|       Phase       |                 Filename prefix                 |
-|:-----------------:|:-----------------------------------------------:|
-|   1\. Enlistment  |                      enlist                     |
-| 2\. Commissioning |                  commissioning                  |
-|  3\. Installation | curtin ([Curtin^](https://launchpad.net/curtin)) |
+| No. |       Phase       |                 Filename prefix                 |
+|----:|:-----------------|:-----------------------------------------------|
+| 1. | Enlistment  |                      enlist                     |
+| 2. | Commissioning |                  commissioning                  |
+| 3. | Installation | curtin ([Curtin^](https://launchpad.net/curtin)) |
 
 Additionally, the template for each phase typically consists of two files. The first is a higher-level file that often contains little more than a URL or a link to further credentials, while a second file contains the executable logic.
 
@@ -197,9 +198,11 @@ After you're logged in, use the following command to deploy a machine with a cus
 
     maas $PROFILE machine deploy $SYSTEM_ID user_data=<base-64-encoded-script>
 
--   `$PROFILE`: Your MAAS login. E.g. `admin`
--   `$SYSTEM_ID`: The machine's [system ID](/t/common-cli-tasks/794#heading--determine-a-node-system-id).
--   `<base-64-encoded-script>`: A base-64 encoded copy of your customisation script. See below for an example.
+The three replacable parameters shown above decode to:
+
+1.   `$PROFILE`: Your MAAS login. E.g. `admin`
+2.   `$SYSTEM_ID`: The machine's [system ID](/t/common-cli-tasks/794#heading--determine-a-node-system-id).
+3.   `<base-64-encoded-script>`: A base-64 encoded copy of your customisation script. See below for an example.
 
 E.g.:
 

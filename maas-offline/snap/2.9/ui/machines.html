@@ -463,8 +463,8 @@
  snap-2-9-cli -->
 
 <p>Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers. MAAS manages their transit through a life-cycle, from adding and enlistment, through commissioning, allocation, and deployment, finally being released back to the pool, or retired altogether.  You can move them around, create redundant versions (even in other geographies you can access), and basically rearrange them to the extent that your network allows.</p>
-<h4>Quick questions you may have:</h4>
-<ul>
+<h4>Eleven questions you may have:</h4>
+<ol>
 <li><a href="#heading--machine-life-cycle">How are the machine states and actions related?</a></li>
 <li><a href="#heading--machine-list">How can I view the machine list?</a></li>
 <li><a href="#heading--machine-summary">How can I view a machine summary?</a> </li>
@@ -476,14 +476,14 @@
 <li><a href="#heading--raw-log-output-h3">Where can I find raw log output for a machine?</a></li>
 <li><a href="#heading--event-logs-h3">Where can I find a machine&rsquo;s event log?</a></li>
 <li><a href="#heading--machine-config-h3">Where can I find machine configuration info?</a></li>
-</ul>
+</ol>
 <p>For example, in the illustration below, you see a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:</p>
 <p><a href="images/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg" target = "_blank"><img src="images/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg"></a></a> </p>
 <p>These example machines would typically be duplicated in several different geographies, with a quick way to switch to a redundant node, should anything go wrong (e.g., high availability).  We used the word node there because, In the network language of MAAS, machines are one of several different types of nodes.  A node is simply a network-connected object or, more specifically, an object that can independently communicate on a network. MAAS nodes include controllers, network devices, and of course, machines.   </p>
 <p>Looking back at the example above, you can see that there are several columns in the machine list:</p>
 <p><a href="images/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg" target = "_blank"><img src="images/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg"></a></a> </p>
-<p>The columns list the following details for each machine:</p>
-<ul>
+<p>The columns list eight details for each machine:</p>
+<ol>
 <li><strong>FQDN | MAC</strong>: The fully qualified domain name or the MAC address of the machine.</li>
 <li><strong>Power</strong>: &lsquo;On&rsquo;, &lsquo;Off&rsquo; or &lsquo;Error&rsquo; to highlight an error state.</li>
 <li><strong>Status</strong>: The current status of the machine, such as &lsquo;Ready&rsquo;, &lsquo;Commissioning&rsquo; or &lsquo;Failed testing&rsquo;.</li>
@@ -492,12 +492,12 @@
 <li><strong>RAM</strong>: The amount of RAM, in GiB, discovered on the machine.</li>
 <li><strong>Disks</strong>: The number of drives detected on the machine.</li>
 <li><strong>Storage</strong>: The amount of storage, in GB, identified on the machine.</li>
-</ul>
+</ol>
 <h2 id="heading--machine-life-cycle">Machine life-cycle</h2>
 
 <p>One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, acquired, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.</p>
 <p>All of these states and actions represent the possible life-cycle of a machine.  This life-cycle isn&rsquo;t strict or linear &ndash; it depends on how you use a machine &ndash; but it&rsquo;s useful to give a general overview of how machines tend to change states.  In the discussion that follows, states and actions are shown in <strong>bold</strong> type.</p>
-<ul>
+<ol>
 <li>
 <p>Machines start as servers in your environment, attached to a network or subnet MAAS can manage.</p>
 </li>
@@ -528,7 +528,7 @@
 <li>
 <p>You also have the option to set tags, availability zone, or resource pool at various stages along the way.</p>
 </li>
-</ul>
+</ol>
 <p>Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it&rsquo;s not very useful to make a state diagram or flowchart.  Instead, consider the following table:</p>
 <table>
 <thead>
@@ -742,17 +742,39 @@ The &lsquo;Filter by&rsquo; section limits the machines listed in the table to s
 <p><a href="images/c9684bf883d01d3fe610ec27e95618075c44b324.jpeg" target = "_blank"><img src="images/c9684bf883d01d3fe610ec27e95618075c44b324.jpeg"></a></a></p>
 <p>The first card presents some basics of the machine resources and configuration:</p>
 <p><a href="images/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg" target = "_blank"><img src="images/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg"></a></a> </p>
-<p>Here are some details on what this card presents, with details on in-card links described in following sections:
- - <strong>OVERVIEW</strong> the machine status (in this case &ldquo;Deployed&rdquo;), and lists OS version information.<br>
- - <strong>CPU</strong> shows the specifics of the CPU(s), including a link to test the processor(s).
- - <strong>MEMORY</strong> gives the total available RAM for this machine, along with a test link.
- - <strong>STORAGE</strong> presents the total amount of storage available and the number of disks that provide that storage.  There are two links here: one gives the storage layout (with the opportunity to change it for devices that are in &lsquo;Ready&rsquo; or &lsquo;Allocated&rsquo; states.
- - <strong>Owner</strong> identifies the owner of the machine.
- - <strong>Domain</strong> indicates the domain in which the machine exists.
- - <strong>Zone</strong> shows the AZ in which this machine resides, along with a link to edit the machine configuration (to change the AZ, if desired).
- - <strong>Resource pool</strong> shows the pool to which this machine has been assigned, and an edit link.
- - <strong>Power type</strong> gives the current power type, which links to the relevant edit form.
- - <strong>Tags</strong> presents the list of tags associated with this machine, editable via the link.</p>
+<p>Here are some details on what this card presents, with details on in-card links described in following sections:</p>
+<ul>
+<li>
+<p><strong>OVERVIEW</strong> the machine status (in this case &ldquo;Deployed&rdquo;), and lists OS version information.  </p>
+</li>
+<li>
+<p><strong>CPU</strong> shows the specifics of the CPU(s), including a link to test the processor(s).</p>
+</li>
+<li>
+<p><strong>MEMORY</strong> gives the total available RAM for this machine, along with a test link.</p>
+</li>
+<li>
+<p><strong>STORAGE</strong> presents the total amount of storage available and the number of disks that provide that storage.  There are two links here: one gives the storage layout (with the opportunity to change it for devices that are in &lsquo;Ready&rsquo; or &lsquo;Allocated&rsquo; states.</p>
+</li>
+<li>
+<p><strong>Owner</strong> identifies the owner of the machine.</p>
+</li>
+<li>
+<p><strong>Domain</strong> indicates the domain in which the machine exists.</p>
+</li>
+<li>
+<p><strong>Zone</strong> shows the AZ in which this machine resides, along with a link to edit the machine configuration (to change the AZ, if desired).</p>
+</li>
+<li>
+<p><strong>Resource pool</strong> shows the pool to which this machine has been assigned, and an edit link.</p>
+</li>
+<li>
+<p><strong>Power type</strong> gives the current power type, which links to the relevant edit form.</p>
+</li>
+<li>
+<p><strong>Tags</strong> presents the list of tags associated with this machine, editable via the link.</p>
+</li>
+</ul>
 <p>Note that clicking any of the links in this card will either present a pop-up form or take you to another item in the machine menu &ndash; so using the browser &ldquo;back&rdquo; button will take you completely away from this machine&rsquo;s page.  For example, you can choose the &ldquo;Test CPU&rdquo; option, which brings up this overlay:</p>
 <p><a href="images/4fe98db93dd34f3b167b56286b06ec6d244d5848.jpeg" target = "_blank"><img src="images/4fe98db93dd34f3b167b56286b06ec6d244d5848.jpeg"></a></a> </p>
 <p>From this screen, you can choose test scripts and run the tests (in the background) as the interface returns to the Machine summary.  A linked note in the CPU block lets you know that the tests are in progress:</p>
@@ -1161,7 +1183,6 @@ More information on Power configuration will be found in the [Power management](
 <h2>Summary</h2>
 
 <p>This article has offered you a cursory glimpse into machines and how they are configured and managed in MAAS.  Read on through this section of the documentation to learn more.</p>
-<!-- LINKS -->
     </div>
   </body>
 </html>

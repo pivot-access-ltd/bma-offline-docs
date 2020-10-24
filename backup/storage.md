@@ -84,114 +84,114 @@
 
 You have significant latitude when choosing the final storage configuration of a deployed machine. MAAS supports traditional disk partitioning, as well as more complex options such as LVM, RAID, and bcache. MAAS also supports UEFI as a boot mechanism.  This article explains boot mechanisms and layouts, and offers some advice on how to configure layouts and manage storage.
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
 <!-- deb-2-7-cli
-* [How does UEFI booting work?](#heading--uefi)
-* [What kind of storage layouts are available?](#heading--layouts)
-* [How do I set global storage layouts?](#heading--setting-global-layouts)
-* [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-* [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-* [How can I erase a disk?](/t/disk-erasure/2616)
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](/t/disk-erasure/2616)
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-* [How does UEFI booting work?](#heading--uefi)
-* [What kind of storage layouts are available?](#heading--layouts)
-* [How do I set global storage layouts?](#heading--setting-global-layouts)
-* [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-* [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-* [How can I erase a disk?](/t/disk-erasure/2617)
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](/t/disk-erasure/2617)
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-* [How does UEFI booting work?](#heading--uefi)
-* [What kind of storage layouts are available?](#heading--layouts)
-* [How do I set global storage layouts?](#heading--setting-global-layouts)
-* [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-* [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-* [How can I erase a disk?](/t/disk-erasure/2618)
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](/t/disk-erasure/2618)
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-* [How does UEFI booting work?](#heading--uefi)
-* [What kind of storage layouts are available?](#heading--layouts)
-* [How do I set global storage layouts?](#heading--setting-global-layouts)
-* [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-* [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-* [How can I erase a disk?](/t/disk-erasure/2619)
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](/t/disk-erasure/2619)
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-* [How does UEFI booting work?](#heading--uefi)
-* [What kind of storage layouts are available?](#heading--layouts)
-* [How do I set global storage layouts?](#heading--setting-global-layouts)
-* [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-* [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-* [How can I erase a disk?](/t/disk-erasure/2620)
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](/t/disk-erasure/2620)
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-* [How does UEFI booting work?](#heading--uefi)
-* [What kind of storage layouts are available?](#heading--layouts)
-* [How do I set global storage layouts?](#heading--setting-global-layouts)
-* [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-* [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-* [How can I erase a disk?](/t/disk-erasure/2621)
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](/t/disk-erasure/2621)
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-* [How does UEFI booting work?](#heading--uefi)
-* [What kind of storage layouts are available?](#heading--layouts)
-* [How do I set global storage layouts?](#heading--setting-global-layouts)
-* [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-* [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-* [How can I erase a disk?](/t/disk-erasure/2610)
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](/t/disk-erasure/2610)
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-* [How does UEFI booting work?](#heading--uefi)
-* [What kind of storage layouts are available?](#heading--layouts)
-* [How do I set global storage layouts?](#heading--setting-global-layouts)
-* [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-* [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-* [How can I erase a disk?](/t/disk-erasure/2611)
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](/t/disk-erasure/2611)
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-* [How does UEFI booting work?](#heading--uefi)
-* [What kind of storage layouts are available?](#heading--layouts)
-* [How do I set global storage layouts?](#heading--setting-global-layouts)
-* [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-* [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-* [How can I erase a disk?](/t/disk-erasure/2612)
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](/t/disk-erasure/2612)
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-* [How does UEFI booting work?](#heading--uefi)
-* [What kind of storage layouts are available?](#heading--layouts)
-* [How do I set global storage layouts?](#heading--setting-global-layouts)
-* [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-* [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-* [How can I erase a disk?](/t/disk-erasure/2613)
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](/t/disk-erasure/2613)
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-* [How does UEFI booting work?](#heading--uefi)
-* [What kind of storage layouts are available?](#heading--layouts)
-* [How do I set global storage layouts?](#heading--setting-global-layouts)
-* [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-* [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-* [How can I erase a disk?](/t/disk-erasure/2614)
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](/t/disk-erasure/2614)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-* [How does UEFI booting work?](#heading--uefi)
-* [What kind of storage layouts are available?](#heading--layouts)
-* [How do I set global storage layouts?](#heading--setting-global-layouts)
-* [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-* [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-* [How can I erase a disk?](/t/disk-erasure/2615)
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](/t/disk-erasure/2615)
  snap-2-9-ui -->
 
 A machine's storage is dependant upon the underlying system's disks, but its configuration (i.e., disk usage) is the result of a storage template. In MAAS, this template is called a layout, and MAAS applies it to a machine during commissioning.  Once a layout is applied, a regular user can make modifications to a machine at the filesystem level to arrive at the machine's final storage configuration.  When a machine is no longer needed, a user can choose from among several disk erasure types before releasing it.
@@ -214,9 +214,9 @@ The EFI partition, if created, will be the first partition (`sda1`) and will hav
 
 There are three layout types:
 
--   Flat layout
--   LVM layout
--   bcache layout
+1.   Flat layout
+2.   LVM layout
+3.   bcache layout
 
 The layout descriptions below will include the EFI partition. If your system is not using UEFI, regard `sda2` as `sda1` (with an additional 512 MB available to it).
 
@@ -230,13 +230,13 @@ With the Flat layout, a partition spans the entire boot disk. The partition is f
 | sda1 | 512 MB      | part | FAT32      | /boot/efi   |
 | sda2 | rest of sda | part | ext4       | /           |
 
-The following options are supported:
+The following three options are supported:
 
-`boot_size`: Size of the boot partition on the boot disk. Default is 0, meaning not to create the boot partition. The '/boot' will be placed on the root filesystem.
+1. `boot_size`: Size of the boot partition on the boot disk. Default is 0, meaning not to create the boot partition. The '/boot' will be placed on the root filesystem.
 
-`root_device`: The block device on which to place the root partition. The default is the boot disk.
+2. `root_device`: The block device on which to place the root partition. The default is the boot disk.
 
-`root_size`: Size of the root partition. Default is 100%, meaning the entire size of the root device.
+3. `root_size`: Size of the root partition. Default is 100%, meaning the entire size of the root device.
 
 <h3 id="heading--lvm-layout">LVM layout</h3>
 
@@ -250,19 +250,14 @@ The LVM layout creates the volume group `vgroot` on a partition that spans the e
 | lvroot | rest of sda | lvm  | ext4           | /           |
 | vgroot | rest of sda | lvm  |                |             |
 
-The following options are supported:
+The following six options are supported:
 
-`boot_size`: Size of the boot partition on the boot disk. Default is 0, meaning not to create the boot partition. The '/boot' will be placed on the root filesystem.
-
-`root_device`: The block device on which to place the root partition. The default is the boot disk.
-
-`root_size`: Size of the root partition. Default is 100%, meaning the entire size of the root device.
-
-`vg_name`: Name of the created volume group. Default is `vgroot`.
-
-`lv_name`: Name of the created logical volume. Default is `lvroot`.
-
-`lv_size`: Size of the created logical volume. Default is 100%, meaning the entire size of the volume group.
+1. `boot_size`: Size of the boot partition on the boot disk. Default is 0, meaning not to create the boot partition. The '/boot' will be placed on the root filesystem.
+2. `root_device`: The block device on which to place the root partition. The default is the boot disk.
+3. `root_size`: Size of the root partition. Default is 100%, meaning the entire size of the root device.
+4. `vg_name`: Name of the created volume group. Default is `vgroot`.
+5. `lv_name`: Name of the created logical volume. Default is `lvroot`.
+6. `lv_size`: Size of the created logical volume. Default is 100%, meaning the entire size of the volume group.
 
 <h3 id="heading--bcache-layout">bcache layout</h3>
 
@@ -277,21 +272,15 @@ A bcache layout will create a partition that spans the entire boot disk as the b
 | sdb1      | 100% of sdb | part | bc-cache   |             |
 | bcache0   | per sda2    | disk | ext4       | /           |
 
-The following options are supported:
+The following seven options are supported:
 
-`boot_size`: Size of the boot partition on the boot disk. Default is 0, meaning not to create the boot partition. The '/boot' will be placed on the root filesystem.
-
-`root_device`: The block device upon which to place the root partition. The default is the boot disk.
-
-`root_size`: Size of the root partition. Default is 100%, meaning the entire size of the root device.
-
-`cache_device`: The block device to use as the cache device. Default is the smallest block device tagged ssd.
-
-`cache_mode`: The cache mode to which MAAS should set the created bcache device. The default is `writethrough`.
-
-`cache_size`: The size of the partition on the cache device. Default is 100%, meaning the entire size of the cache device.
-
-`cache_no_part`: Whether or not to create a partition on the cache device. Default is false, meaning to create a partition using the given `cache_size`. If set to true, no partition will be created, and the raw cache device will be used as the cache.
+1. `boot_size`: Size of the boot partition on the boot disk. Default is 0, meaning not to create the boot partition. The '/boot' will be placed on the root filesystem.
+2. `root_device`: The block device upon which to place the root partition. The default is the boot disk.
+3. `root_size`: Size of the root partition. Default is 100%, meaning the entire size of the root device.
+4. `cache_device`: The block device to use as the cache device. Default is the smallest block device tagged ssd.
+5. `cache_mode`: The cache mode to which MAAS should set the created bcache device. The default is `writethrough`.
+6. `cache_size`: The size of the partition on the cache device. Default is 100%, meaning the entire size of the cache device.
+7. `cache_no_part`: Whether or not to create a partition on the cache device. Default is false, meaning to create a partition using the given `cache_size`. If set to true, no partition will be created, and the raw cache device will be used as the cache.
 
 <h3 id="heading--vmfs6-layout">VMFS6 layout</h3>
 
@@ -312,9 +301,9 @@ The VMFS6 layout is used for VMware ESXi deployments only. It is required when c
 
 The following options are supported:
 
-`root_device`: The block device upon which to place the root partition. Default is the boot disk.
+1. `root_device`: The block device upon which to place the root partition. Default is the boot disk.
 
-`root_size`: Size of the default VMFS Datastore. Default is 100%, meaning the remaining size of the root disk.
+2. `root_size`: Size of the default VMFS Datastore. Default is 100%, meaning the remaining size of the root disk.
 
 <h3 id="heading--blank-layout">Blank layout</h3>
 

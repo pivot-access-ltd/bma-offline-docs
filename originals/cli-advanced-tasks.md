@@ -1,20 +1,20 @@
 This article is a list of advanced tasks you can perform with the MAAS CLI.
 
-#### Quick questions you may have:
+#### Thirteen questions you may have:
 
-* [How do I get started with the MAAS CLI?](/t/maas-cli/802)
-* [How do I edit machine hostname and power parameters?](/t/cli-advanced-tasks/793#heading--edit-node-hostname-and-power-parameters)
-* [How do I relay DHCP?](/t/cli-advanced-tasks/793#heading--relay-dhcp)
-* [How do I assign a network interface to a fabric?](/t/cli-advanced-tasks/793#heading--assign-a-network-interface-to-a-fabric)
-* [How do I change the IP assignment mode of a network interface?](/t/commission-machines/2468##heading--post-commission-configuration)
-* [How do I install a rack controller?](/t/rack-controllers/3056#heading--install-a-rack-controller)
-* [How do I list rack controllers?](/t/rack-controllers/3056#heading--list-rack-controllers)
-* [How do I set the default storage layout?](/t/cli-advanced-tasks/793#heading--set-the-default-storage-layout)
-* [How do I set a storage layout?](/t/cli-advanced-tasks/793#heading--set-a-storage-layout)
-* [How do I create an A or AAAA record in DNS?](/t/cli-advanced-tasks/793#heading--create-an-a-or-aaaa-record-in-dns)
-* [How do I create an alias (CNAME) record in DNS?](/t/cli-advanced-tasks/793#heading--create-an-alias-cname-record-in-dns)
-* [How do I create a Mail Exchange pointer record in DNS?](/t/cli-advanced-tasks/793#heading--create-a-mail-exchange-pointer-record-in-dns)
-* [How do I add or update a remote syslog server?](/t/cli-advanced-tasks/793#heading--add-or-update-a-remote-syslog-server)
+1. [How do I get started with the MAAS CLI?](/t/maas-cli/802)
+2. [How do I edit machine hostname and power parameters?](/t/cli-advanced-tasks/793#heading--edit-node-hostname-and-power-parameters)
+3.[How do I relay DHCP?](/t/cli-advanced-tasks/793#heading--relay-dhcp)
+4. [How do I assign a network interface to a fabric?](/t/cli-advanced-tasks/793#heading--assign-a-network-interface-to-a-fabric)
+5. [How do I change the IP assignment mode of a network interface?](/t/commission-machines/2468##heading--post-commission-configuration)
+6. [How do I install a rack controller?](/t/rack-controllers/3056#heading--install-a-rack-controller)
+7. [How do I list rack controllers?](/t/rack-controllers/3056#heading--list-rack-controllers)
+8. [How do I set the default storage layout?](/t/cli-advanced-tasks/793#heading--set-the-default-storage-layout)
+9. [How do I set a storage layout?](/t/cli-advanced-tasks/793#heading--set-a-storage-layout)
+10. [How do I create an A or AAAA record in DNS?](/t/cli-advanced-tasks/793#heading--create-an-a-or-aaaa-record-in-dns)
+11. [How do I create an alias (CNAME) record in DNS?](/t/cli-advanced-tasks/793#heading--create-an-alias-cname-record-in-dns)
+12. [How do I create a Mail Exchange pointer record in DNS?](/t/cli-advanced-tasks/793#heading--create-a-mail-exchange-pointer-record-in-dns)
+13. [How do I add or update a remote syslog server?](/t/cli-advanced-tasks/793#heading--add-or-update-a-remote-syslog-server)
 
 <h2 id="heading--edit-node-hostname-and-power-parameters">Edit machine hostname and power parameters</h2>
 
@@ -239,4 +239,3 @@ For example:
 maas $PROFILE maas set-config name="remote_syslog" value=""
 ```
 
-<!-- LINKS -->

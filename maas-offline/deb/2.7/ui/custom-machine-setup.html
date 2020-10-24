@@ -507,15 +507,19 @@ During machine [enlistment](add-machines.html#heading--enlistment), [deployment]
 During machine [enlistment](add-machines.html#heading--enlistment), [deployment](deploy-machines.html), [commissioning](commission-machines.html) and machine installation, MAAS sends [Tempita-derived^](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init^](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  snap-2-9-ui -->
 
-<h4>Quick questions you may have:</h4>
-<ul>
+<h4>Two questions you may have:</h4>
+<ol>
 <li><a href="#heading--curtin">How do I customise machine setup with curtin?</a></li>
 <li><a href="#heading--cloud-init">How do I customise machine setup with cloud-init?</a></li>
-</ul>
+</ol>
 <p>Customisation in MAAS happens in two ways:</p>
 <ol>
-<li><a href="https://launchpad.net/curtin">Curtin^</a>, a preseeding system similar to Kickstart or d-i (Debian Installer), applies customisation during operating system (OS) image installation. MAAS performs these changes on deployment, during OS installation, but before the machine reboots into the installed OS. Curtin customisations are perfect for administrators who want their deployments to have identical setups all the time, every time. <a href="https://blog.ubuntu.com/2017/06/02/customising-maas-installs">This blog post^</a> contains an excellent high-level overview of custom MAAS installs using Curtin.</li>
-<li><a href="https://launchpad.net/cloud-init">Cloud-init^</a>, a system for setting up machines immediately after instantiation. cloud-init applies customisations after the first boot, when MAAS changes a machine&rsquo;s status to &lsquo;Deployed.&rsquo; Customisations are per-instances, meaning that user-supplied scripts must be re-specified on redeployment. Cloud-init customisations are the best way for MAAS users to customise their deployments, similar to how the various cloud services prepare VMs when launching instances.</li>
+<li>
+<p><a href="https://launchpad.net/curtin">Curtin^</a>, a preseeding system similar to Kickstart or d-i (Debian Installer), applies customisation during operating system (OS) image installation. MAAS performs these changes on deployment, during OS installation, but before the machine reboots into the installed OS. Curtin customisations are perfect for administrators who want their deployments to have identical setups all the time, every time. <a href="https://blog.ubuntu.com/2017/06/02/customising-maas-installs">This blog post^</a> contains an excellent high-level overview of custom MAAS installs using Curtin.</p>
+</li>
+<li>
+<p><a href="https://launchpad.net/cloud-init">Cloud-init^</a>, a system for setting up machines immediately after instantiation. cloud-init applies customisations after the first boot, when MAAS changes a machine&rsquo;s status to &lsquo;Deployed.&rsquo; Customisations are per-instances, meaning that user-supplied scripts must be re-specified on redeployment. Cloud-init customisations are the best way for MAAS users to customise their deployments, similar to how the various cloud services prepare VMs when launching instances.</p>
+</li>
 </ol>
 <h2 id="heading--curtin">Curtin</h2>
 
@@ -529,22 +533,26 @@ snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
 <table>
 <thead>
 <tr>
-<th align="center">Phase</th>
-<th align="center">Filename prefix</th>
+<th align="right">No.</th>
+<th align="left">Phase</th>
+<th align="left">Filename prefix</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">1. Enlistment</td>
-<td align="center">enlist</td>
+<td align="right">1.</td>
+<td align="left">Enlistment</td>
+<td align="left">enlist</td>
 </tr>
 <tr>
-<td align="center">2. Commissioning</td>
-<td align="center">commissioning</td>
+<td align="right">2.</td>
+<td align="left">Commissioning</td>
+<td align="left">commissioning</td>
 </tr>
 <tr>
-<td align="center">3. Installation</td>
-<td align="center">curtin (<a href="https://launchpad.net/curtin">Curtin^</a>)</td>
+<td align="right">3.</td>
+<td align="left">Installation</td>
+<td align="left">curtin (<a href="https://launchpad.net/curtin">Curtin^</a>)</td>
 </tr>
 </tbody>
 </table>
@@ -620,9 +628,11 @@ After you're logged in, use the following command to deploy a machine with a cus
 
     maas $PROFILE machine deploy $SYSTEM_ID user_data=<base-64-encoded-script>
 
--   `$PROFILE`: Your MAAS login. E.g. `admin`
--   `$SYSTEM_ID`: The machine's [system ID](common-cli-tasks.html#heading--determine-a-node-system-id).
--   `<base-64-encoded-script>`: A base-64 encoded copy of your customisation script. See below for an example.
+The three replacable parameters shown above decode to:
+
+1.   `$PROFILE`: Your MAAS login. E.g. `admin`
+2.   `$SYSTEM_ID`: The machine's [system ID](common-cli-tasks.html#heading--determine-a-node-system-id).
+3.   `<base-64-encoded-script>`: A base-64 encoded copy of your customisation script. See below for an example.
 
 E.g.:
 

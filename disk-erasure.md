@@ -88,9 +88,9 @@ Disk erasure pertains to the erasing of data on each of a machine's disks when t
 
 The three types of erasure types are:
 
--   Standard erase
--   Secure erase
--   Quick erase
+1.   Standard erase
+2.   Secure erase
+3.   Quick erase
 
 Each of these are explained below.
 

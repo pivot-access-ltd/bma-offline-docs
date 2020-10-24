@@ -2,14 +2,14 @@ The MAAS CLI can do everything that the web UI can do, and more. The CLI uses th
 
 Note that this article does not provide complete coverage of the MAAS CLI. For an exhaustive treatment, you may want to check the API documentation.  Also note that this page represents user-entered values as uppercase variables preceded with the '$' character (e.g. $PROFILE and $EMAIL_ADDRESS). You should replace these placeholders with actual values.
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
-* [How do I access the MAAS CLI?](/t/maas-cli/802#heading--the-maas-command)
-* [How do I create an administrator account?](/t/maas-cli/802#heading--create-an-administrator)
-* [How do I complete the required login?](/t/maas-cli/802#heading--log-in-required)
-* [How do I get help via the CLI?](/t/maas-cli/802#heading--get-help)
-* [How do I log out?](/t/maas-cli/802#heading--log-out)
-* [What are some the next steps I can take with the CLI?](/t/maas-cli/802#heading--next-steps)
+1. [How do I access the MAAS CLI?](/t/maas-cli/802#heading--the-maas-command)
+2. [How do I create an administrator account?](/t/maas-cli/802#heading--create-an-administrator)
+3. [How do I complete the required login?](/t/maas-cli/802#heading--log-in-required)
+4. [How do I get help via the CLI?](/t/maas-cli/802#heading--get-help)
+5. [How do I log out?](/t/maas-cli/802#heading--log-out)
+6. [What are some the next steps I can take with the CLI?](/t/maas-cli/802#heading--next-steps)
 
 <h2 id="heading--the-maas-command">The maas command</h2>
 
@@ -118,11 +118,11 @@ maas logout $PROFILE
 
 <h2 id="heading--next-steps">Next steps</h2>
 
-The following categories are now available to be explored:
+The following five categories are now available to be explored:
 
--   [Common tasks](/t/common-cli-tasks/794)
--   [Kernel management](/t/cli-kernel-management/799)
--   [Image management](/t/cli-image-management/797)
--   [Advanced tasks](/t/cli-advanced-tasks/793)
--   [Composable hardware](/t/cli-composable-hardware/795)
+1.   [Common tasks](/t/common-cli-tasks/794)
+2.   [Kernel management](/t/cli-kernel-management/799)
+3.   [Image management](/t/cli-image-management/797)
+4.   [Advanced tasks](/t/cli-advanced-tasks/793)
+5.   [Composable hardware](/t/cli-composable-hardware/795)
 

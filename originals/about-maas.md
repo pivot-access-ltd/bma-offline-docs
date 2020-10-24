@@ -37,7 +37,7 @@ deb-2-9-ui -->
 
 MAAS is an open-source tool that lets you build a data centre from bare-metal servers. You can discover, commission, deploy, and dynamically reconfigure a large network of individual units.  MAAS converts your hardware investment into a cohesive, flexible, distributed data centre, with a minimum of time and effort.
 
-#### Quick questions you might have:
+#### Four questions you might have:
 
 1. [What is MAAS?](#heading--what-is-maas)
 2. [What does MAAS offer me?](#heading--what-maas-offers)
@@ -62,9 +62,9 @@ PXE stands for "Preboot Execution Environment," usually pronounced "pixie."  The
 
 MAAS can manage a large number of physical machines by merging them into user-defined resource pools. MAAS automatically provisions participating machines and makes them available for use. You can return unused machines to the assigned pool at any time. 
 
-MAAS integrates all the tools you need into a smooth system-management experience. It includes:
-
 <!-- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui 
+MAAS integrates all the tools you need into a smooth system-management experience. It includes the following thirteen features:
+
 1. web UI (optimised for mobile devices)
 2. Ubuntu, CentOS, Windows, and RHEL installation support
 3.  open-source IP address management (IPAM)
@@ -86,6 +86,8 @@ These tools can be controlled from a responsive web UI.  You can easily (re)conf
 deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui -->
 
 <!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli
+MAAS integrates all the tools you need into a smooth system-management experience. It includes the following eleven features:
+
 1. Ubuntu, CentOS, Windows, and RHEL installation support
 2. open-source IP address management (IPAM)
 3. high availability (optional)

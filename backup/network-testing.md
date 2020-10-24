@@ -86,12 +86,12 @@ MAAS provides a comprehensive suite of network and link testing capabilities.  M
 
 Network testing also includes customisable network testing and commissioning scripts. There are no particular restrictions on these scripts, allowing you to test a wide variety of possible conditions and situations.
 
-#### Quick questions you may have:
+#### Four questions you may have:
 
-* [How do I use network link testing?](#heading--network-link-testing)
-* [How can I detect slow network links?](#heading--slow-link-detection)
-* [How do I use network validation and testing scripts?](#heading--network-validation-scripts-and-testing)
-* [How can I customise network testing?](#heading--customisable-network-testing)
+1. [How do I use network link testing?](#heading--network-link-testing)
+2. [How can I detect slow network links?](#heading--slow-link-detection)
+3. [How do I use network validation and testing scripts?](#heading--network-validation-scripts-and-testing)
+4. [How can I customise network testing?](#heading--customisable-network-testing)
 
 <h2 id="heading--network-link-testing">Network link testing</h2>
 
@@ -186,9 +186,9 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 Users can now test their network configuration to check for:
 
-* Interfaces which have a broken network configuration
-* Bonds that are not fully operational
-* Broken gateways, rack controllers, and Internet links
+1. Interfaces which have a broken network configuration
+2. Bonds that are not fully operational
+3. Broken gateways, rack controllers, and Internet links
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 In addition, MAAS can comprehensively test Internet connectivity testing. You can give a list of URLs or IP addresses to check:

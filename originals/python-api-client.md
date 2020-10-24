@@ -1,41 +1,42 @@
 The `python-libmaas` client library is an asyncio-based client library whose purpose is to allow developers, integrators and administrators to better interact with MAAS.  This software is in development and does not yet support all MAAS endpoints (nor all operations). It currently supports MAAS versions 2.1 and 2.2-beta3.
 
-* [What should I know about library endpoints?](/t/cli-resource-pool-management/800#heading--library-endpoints)
-* [How can I install and use  python-libmaas?](/t/cli-resource-pool-management/800#heading--installation-and-usage-of-python-libmaas)
+#### Two questions you may have:
+
+1. [What should I know about library endpoints?](/t/cli-resource-pool-management/800#heading--library-endpoints)
+2. [How can I install and use  python-libmaas?](/t/cli-resource-pool-management/800#heading--installation-and-usage-of-python-libmaas)
 
 <h2 id="heading--library-endpoints">Library endpoints</h2>
 
-At this time, the client library supports these endpoints:
+At this time, the client library supports these eight endpoints:
 
--   account
--   boot-sources, boot-resources
--   machines, devices, region controllers, rack controllers
--   events
--   configuration
--   tags
--   version
--   zones
+1.   account
+2.   boot-sources, boot-resources
+3.   machines, devices, region controllers, rack controllers
+4.   events
+5.   configuration
+6.   tags
+7.   version
+8.   zones
 
-See the below resources to better understand the above terms and how they are used:
+Three resources will help you better understand the above terms and how they are used:
 
--   [Concepts and terms](/t/concepts-and-terms/785)
--   [MAAS CLI](/t/maas-cli/802)
--   [API documentation](https://maas.io/docs/api)
+1.   [Concepts and terms](/t/concepts-and-terms/785)
+2.   [MAAS CLI](/t/maas-cli/802)
+3.   [API documentation](https://maas.io/docs/api)
 
 <h2 id="heading--installation-and-usage-of-python-libmaas">Installation and usage of python-libmaas</h2>
 
 For installation and initial steps, see these external links:
 
--   `https://github.com/maas/python-libmaas`
--   `http://maas.github.io/python-libmaas/index.html`
+1.   `https://github.com/maas/python-libmaas`
+2.   `http://maas.github.io/python-libmaas/index.html`
 
 For examples, see these external links:
 
--   `http://maas.github.io/python-libmaas/client/index.html`
--   `http://maas.github.io/python-libmaas/client/nodes/index.html`
+1.   `http://maas.github.io/python-libmaas/client/index.html`
+2.   `http://maas.github.io/python-libmaas/client/nodes/index.html`
 
 For pypi information, see this external link:
 
 `https://pypi.python.org/pypi/python-libmaas`
 
-<!-- LINKS -->

@@ -38,11 +38,11 @@ MAAS is only useful once it has images available to provision its nodes. Therefo
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 
-#### Quick questions you may have:
+#### Three questions you may have:
 
-* [How do I import standard images from maas.io?](#heading--import-maasio-image-ui)
-* [How do I use other image mirrors to download images?](#heading--image-mirrors)
-* [How do I import and provision non-Ubuntu images?](#heading--other-images)
+1. [How do I import standard images from maas.io?](#heading--import-maasio-image-ui)
+2. [How do I use other image mirrors to download images?](#heading--image-mirrors)
+3. [How do I import and provision non-Ubuntu images?](#heading--other-images)
 
 Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/1112).
 
@@ -175,16 +175,16 @@ You can tell MAAS to sync images hourly, at the region level.  See [Boot image s
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 
-#### Quick questions you may have:
+#### Eight questions you may have:
 
-* [How do I get started with the MAAS CLI?](/t/maas-cli/802)
-* [How do I list boot sources?](#heading--list-boot-sources)
-* [How do I select images?](#heading--select-image)
-* [How do I list image selections?](#heading--list-image-selections)
-* [How do I import newly-selected images?](#heading--import-newly-selected-images)
-* [How do I list currently available images?](#heading--list-currently-available-images)
-* [How do I delete a boot source?](#heading--delete-a-boot-source)
-* [How do I edit a boot source?](#heading--edit-a-boot-source)
+1. [How do I get started with the MAAS CLI?](/t/maas-cli/802)
+2. [How do I list boot sources?](#heading--list-boot-sources)
+3. [How do I select images?](#heading--select-image)
+4. [How do I list image selections?](#heading--list-image-selections)
+5. [How do I import newly-selected images?](#heading--import-newly-selected-images)
+6. [How do I list currently available images?](#heading--list-currently-available-images)
+7. [How do I delete a boot source?](#heading--delete-a-boot-source)
+8. [How do I edit a boot source?](#heading--edit-a-boot-source)
 
 <h2 id="heading--list-boot-sources">List boot sources</h2>
 
@@ -343,8 +343,8 @@ Once the mirror is set up according to [Local image mirror](/t/local-image-mirro
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 
--   URL=https://$MIRROR/maas/images/ephemeral-v3/daily/
--   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
+1.   URL=https://$MIRROR/maas/images/ephemeral-v3/daily/
+2.   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
 
 Where $MIRROR is the mirror server's hostname or IP address.
 
@@ -352,6 +352,6 @@ Where $MIRROR is the mirror server's hostname or IP address.
 
 Recreate the default boot source if it was ever deleted using the following variable values:
 
--   URL=https://images.maas.io/ephemeral-v3/daily/
--   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
+1.   URL=https://images.maas.io/ephemeral-v3/daily/
+2.   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->

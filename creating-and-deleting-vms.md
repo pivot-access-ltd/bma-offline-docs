@@ -84,11 +84,12 @@
 
 If you have already created a VM host, you will want to create and delete virtual machines (VMs); this article explains how to do so.
 
-#### Quick questions you may have:
-
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-* [How do I add a VM?](#heading--add-vm-from-ui)
-* [How do I delete a VM?](#heading--delete-a-machine)
+
+#### Two questions you may have:
+
+1. [How do I add a VM?](#heading--add-vm-from-ui)
+2. [How do I delete a VM?](#heading--delete-a-machine)
 
 <h2 id="heading--add-vm-from-ui">Adding a VM from the Web UI</h2>
 
@@ -112,13 +113,16 @@ To delete a VM, delete it as you would any other MAAS machine. Select the desire
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-* [How do I add a VM?](#heading--adding-a-vm-from-the-cli)
-* [How do I set resources while adding a VM?](#heading--set-resources)
-* [How do I set the architecture while adding a VM?](#heading--architecture)
-* [How do I set storage while adding a VM?](#heading--storage)
-* [How do I specify interfaces while adding a VM?](#heading--interfaces)
-* [How do I find a VM host ID?](#heading--find-vm-host-ids)
-* [How do I delete a VM?](#heading--delete-a-vm)
+
+#### Seven questions you may have:
+
+1. [How do I add a VM?](#heading--adding-a-vm-from-the-cli)
+2. [How do I set resources while adding a VM?](#heading--set-resources)
+3. [How do I set the architecture while adding a VM?](#heading--architecture)
+4. [How do I set storage while adding a VM?](#heading--storage)
+5. [How do I specify interfaces while adding a VM?](#heading--interfaces)
+6. [How do I find a VM host ID?](#heading--find-vm-host-ids)
+7. [How do I delete a VM?](#heading--delete-a-vm)
 
 <h2 id="heading--adding-a-vm-from-the-cli">Adding a VM from the CLI</h2>
 
@@ -139,14 +143,14 @@ Compose with resources specified:
 
     maas $PROFILE vm-host compose $VM_HOST_ID $RESOURCES
 
-Where $RESOURCES is a space-separated list of constraints:
+Where $RESOURCES is a space-separated list of six constraints:
 
-* *cores=* requested cores
-* *cpu_speed=* requested minimum cpu speed in MHz
-* *memory=* requested memory in MB
-* *architecture=* See [Architecture](#heading--architecture) below 
-* *storage=* See [Storage](#heading--storage) below
-* *interfaces=* See [Interfaces](#heading--interfaces) below
+1. *cores=* requested cores
+2. *cpu_speed=* requested minimum cpu speed in MHz
+3. *memory=* requested memory in MB
+4. *architecture=* See [Architecture](#heading--architecture) below 
+5. *storage=* See [Storage](#heading--storage) below
+6. *interfaces=* See [Interfaces](#heading--interfaces) below
 
 <h3 id="heading--architecture">Setting the architecture while adding a VM</h3>
 
@@ -165,10 +169,10 @@ Storage parameters look like this:
 
     storage="<label>:<size in GB>(<storage pool name>),<label>:<size in GB>(<storage pool name>)"
 
-For example, to compose a machine with the following disks:
+For example, let's examine how to compose a machine with the following two disks:
 
--   32 GB disk from storage pool `pool1`
--   64 GB disk from storage pool `pool2`
+1.   32 GB disk from storage pool `pool1`
+2.   64 GB disk from storage pool `pool2`
 
 where we want the first disk to be a bootable root partition `/` and the second to be a home directory.
 

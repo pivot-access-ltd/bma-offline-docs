@@ -84,10 +84,10 @@
 
 The minimum requirements for the machines that run MAAS vary widely depending on local implementation and usage.  Below, you will find resource estimates based on MAAS components and operating system (Ubuntu Server). We consider both a test configuration (for proof of concept) and a production environment.
 
-#### Quick questions you might have:
+#### Two questions you might have:
 
-* [What are the requirements for a test environment?](#heading--test-environment)
-* [What are the requirements for a production environment?](#heading--production-environment)
+1. [What are the requirements for a test environment?](#heading--test-environment)
+2. [What are the requirements for a production environment?](#heading--production-environment)
 
 <h2 id="heading--test-environment">Requirements for a test environment</h2>
 
@@ -115,10 +115,10 @@ Here is a production scenario designed to handle a high number of sustained clie
 
 So, based on the above, the approximate requirements for this scenario are:
 
-* A region controller (including PostgreSQL) installed on one host, with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.
-* A duplicate region controller (including PostgreSQL) on a second host, also with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.
-* A rack controller installed on a third host, with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
-* A duplicate rack controller on a fourth host, also with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
+1. A region controller (including PostgreSQL) installed on one host, with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.
+2. A duplicate region controller (including PostgreSQL) on a second host, also with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.
+3. A rack controller installed on a third host, with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
+4. A duplicate rack controller on a fourth host, also with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
 
 <!-- deb-2-7-cli
 [note]
@@ -127,10 +127,10 @@ The tables above refer to MAAS infrastructure only. They do not cover the resour
 
 Some examples of factors that influence hardware specifications include:
 
-* the number of connecting clients (client activity)
-* how you decide to distribute services
-* whether or not you use [high availability/load balancing](/t/high-availability/2588).
-* the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/2588).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
@@ -140,10 +140,10 @@ The tables above refer to MAAS infrastructure only. They do not cover the resour
 
 Some examples of factors that influence hardware specifications include:
 
-* the number of connecting clients (client activity)
-* how you decide to distribute services
-* whether or not you use [high availability/load balancing](/t/high-availability/2689).
-* the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/2689).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
@@ -153,10 +153,10 @@ The tables above refer to MAAS infrastructure only. They do not cover the resour
 
 Some examples of factors that influence hardware specifications include:
 
-* the number of connecting clients (client activity)
-* how you decide to distribute services
-* whether or not you use [high availability/load balancing](/t/high-availability/2690).
-* the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/2690).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
@@ -166,10 +166,10 @@ The tables above refer to MAAS infrastructure only. They do not cover the resour
 
 Some examples of factors that influence hardware specifications include:
 
-* the number of connecting clients (client activity)
-* how you decide to distribute services
-* whether or not you use [high availability/load balancing](/t/high-availability/2691).
-* the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/2691).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
@@ -179,10 +179,10 @@ The tables above refer to MAAS infrastructure only. They do not cover the resour
 
 Some examples of factors that influence hardware specifications include:
 
-* the number of connecting clients (client activity)
-* how you decide to distribute services
-* whether or not you use [high availability/load balancing](/t/high-availability/2692).
-* the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/2692).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
@@ -192,10 +192,10 @@ The tables above refer to MAAS infrastructure only. They do not cover the resour
 
 Some examples of factors that influence hardware specifications include:
 
-* the number of connecting clients (client activity)
-* how you decide to distribute services
-* whether or not you use [high availability/load balancing](/t/high-availability/2693).
-* the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/2693).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
@@ -205,10 +205,10 @@ The tables above refer to MAAS infrastructure only. They do not cover the resour
 
 Some examples of factors that influence hardware specifications include:
 
-* the number of connecting clients (client activity)
-* how you decide to distribute services
-* whether or not you use [high availability/load balancing](/t/high-availability/2682).
-* the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/2682).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
@@ -218,10 +218,10 @@ The tables above refer to MAAS infrastructure only. They do not cover the resour
 
 Some examples of factors that influence hardware specifications include:
 
-* the number of connecting clients (client activity)
-* how you decide to distribute services
-* whether or not you use [high availability/load balancing](/t/high-availability/2683).
-* the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/2683).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
@@ -231,10 +231,10 @@ The tables above refer to MAAS infrastructure only. They do not cover the resour
 
 Some examples of factors that influence hardware specifications include:
 
-* the number of connecting clients (client activity)
-* how you decide to distribute services
-* whether or not you use [high availability/load balancing](/t/high-availability/2684).
-* the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/2684).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
@@ -244,10 +244,10 @@ The tables above refer to MAAS infrastructure only. They do not cover the resour
 
 Some examples of factors that influence hardware specifications include:
 
-* the number of connecting clients (client activity)
-* how you decide to distribute services
-* whether or not you use [high availability/load balancing](/t/high-availability/2685).
-* the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/2685).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
@@ -257,10 +257,10 @@ The tables above refer to MAAS infrastructure only. They do not cover the resour
 
 Some examples of factors that influence hardware specifications include:
 
-* the number of connecting clients (client activity)
-* how you decide to distribute services
-* whether or not you use [high availability/load balancing](/t/high-availability/2686).
-* the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/2686).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
@@ -270,10 +270,10 @@ The tables above refer to MAAS infrastructure only. They do not cover the resour
 
 Some examples of factors that influence hardware specifications include:
 
-* the number of connecting clients (client activity)
-* how you decide to distribute services
-* whether or not you use [high availability/load balancing](/t/high-availability/2687).
-* the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/2687).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
  snap-2-9-ui -->
 
 Also, this discussion does not take into account a possible local image mirror, which would be a large consumer of disk space.

@@ -759,19 +759,45 @@ processor-frequency=2000 MHz
 <p></details></p>
 <p>Here&rsquo;s a quick breakdown of what you see in the script output:</p>
 <ul>
-<li><strong>KERNEL INFO:</strong> this is the output of <code>uname -a</code> &ndash; the MAC address is the machine name in this case.</li>
-<li><strong>KERNEL COMMAND LINE:</strong> these are the kernel command line parameters, directed at various modules built into the kernel.  The function <code>modprobe</code> parses this kernel command line and collects the relevant module parameters when it loads a module.  Note that this command line could also be used to pull in loadable modules.</li>
-<li><strong>CLOUD CONFIG QUERY:</strong> a cloud-init query is used to retrieve cloud instance metadata used by cloud-init when booting an instance.  This section shows the specific metadata retrieved during cloud-init query for this machine.</li>
-<li><strong>CPU CORE COUNT AND MODEL:</strong> the data produced here is similar to the output you could retrieve by running <code>nproc</code> and then attempting a <code>cat /sys/devices/cpu/caps/pmu_name</code> &ndash; and so on.  There several ways to retrieve this info, but all can produce the number and type of CPU(s) available.</li>
-<li><strong>PCI INFO:</strong> the devices, real or virtual, that are connected to the machine via PCI (Peripheral Component Interconnect) bus.</li>
-<li><strong>USB INFO:</strong> the devices, real or virtual, that are connected to the machine via USB bus.</li>
-<li><strong>MODALIASES:</strong> a modalias is a sysfs technique to capture the information that a hardware item exposes to the kernel, with the file basically providing a template or structure for this information.  Each of the entries in this list describe one particular part of the machine&rsquo;s (real or virtual) hardware, down to the level of alarm timers, framebuffers, and even speakers.  In the event of a bug, this information can help your support engineer (or yourself) understand exactly what hardware is configured for this machine.</li>
-<li><strong>SERIAL PORTS:</strong> this section just lists the serial devices made available on this machine.</li>
-<li><strong>NETWORK INTERFACES:</strong> summarises the network interfaces available on this machine &ndash; essentially an abbreviated version of the output from some form of an <code>ip</code> command.</li>
-<li><strong>BLOCK DEVICE SUMMARY:</strong> a thumbnail sketch of the block devices (usually storage) available on this machine.</li>
-<li><strong>#dmidecode&hellip;:</strong> this section presents the basic DMI data, including the BIOS type, extent, size, and table location.</li>
-<li><strong>DMI DATA:</strong> the raw (undecoded) DMI table for this machine, presented for verification of the following DMI data sections, if desired.</li>
-<li><strong>DMI KEYPAIRS:</strong> the individual machine specifications, as decoded from the DMI table.  The manpage <strong>dmidecode (8)</strong> gives more details on each of these keypairs.</li>
+<li>
+<p><strong>KERNEL INFO:</strong> this is the output of <code>uname -a</code> &ndash; the MAC address is the machine name in this case.</p>
+</li>
+<li>
+<p><strong>KERNEL COMMAND LINE:</strong> these are the kernel command line parameters, directed at various modules built into the kernel.  The function <code>modprobe</code> parses this kernel command line and collects the relevant module parameters when it loads a module.  Note that this command line could also be used to pull in loadable modules.</p>
+</li>
+<li>
+<p><strong>CLOUD CONFIG QUERY:</strong> a cloud-init query is used to retrieve cloud instance metadata used by cloud-init when booting an instance.  This section shows the specific metadata retrieved during cloud-init query for this machine.</p>
+</li>
+<li>
+<p><strong>CPU CORE COUNT AND MODEL:</strong> the data produced here is similar to the output you could retrieve by running <code>nproc</code> and then attempting a <code>cat /sys/devices/cpu/caps/pmu_name</code> &ndash; and so on.  There several ways to retrieve this info, but all can produce the number and type of CPU(s) available.</p>
+</li>
+<li>
+<p><strong>PCI INFO:</strong> the devices, real or virtual, that are connected to the machine via PCI (Peripheral Component Interconnect) bus.</p>
+</li>
+<li>
+<p><strong>USB INFO:</strong> the devices, real or virtual, that are connected to the machine via USB bus.</p>
+</li>
+<li>
+<p><strong>MODALIASES:</strong> a modalias is a sysfs technique to capture the information that a hardware item exposes to the kernel, with the file basically providing a template or structure for this information.  Each of the entries in this list describe one particular part of the machine&rsquo;s (real or virtual) hardware, down to the level of alarm timers, framebuffers, and even speakers.  In the event of a bug, this information can help your support engineer (or yourself) understand exactly what hardware is configured for this machine.</p>
+</li>
+<li>
+<p><strong>SERIAL PORTS:</strong> this section just lists the serial devices made available on this machine.</p>
+</li>
+<li>
+<p><strong>NETWORK INTERFACES:</strong> summarises the network interfaces available on this machine &ndash; essentially an abbreviated version of the output from some form of an <code>ip</code> command.</p>
+</li>
+<li>
+<p><strong>BLOCK DEVICE SUMMARY:</strong> a thumbnail sketch of the block devices (usually storage) available on this machine.</p>
+</li>
+<li>
+<p><strong>#dmidecode&hellip;:</strong> this section presents the basic DMI data, including the BIOS type, extent, size, and table location.</p>
+</li>
+<li>
+<p><strong>DMI DATA:</strong> the raw (undecoded) DMI table for this machine, presented for verification of the following DMI data sections, if desired.</p>
+</li>
+<li>
+<p><strong>DMI KEYPAIRS:</strong> the individual machine specifications, as decoded from the DMI table.  The manpage <strong>dmidecode (8)</strong> gives more details on each of these keypairs.</p>
+</li>
 </ul>
 <h2>00-maas-01-lshw</h2>
 
@@ -1410,22 +1436,54 @@ snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
 <p></details></p>
 <p>This output is roughly equivalent to the output of <code>lshw -xml</code> on the machine in question.  There are many references to decode this information, so for now, here is a short glossary of most the terms (essentially, the tags) that typically appear in a listing like this:</p>
 <ul>
-<li><strong>businfo</strong> - the bus information for this device.</li>
-<li><strong>capacity</strong> - the maximum capacity reported by the device.</li>
-<li><strong>class</strong> - the device&rsquo;s class.</li>
-<li><strong>clock</strong> - the bus clock of the device (in Hz).</li>
-<li><strong>description</strong> - a human-readable description of the hardware node.</li>
-<li><strong>dev</strong> - the device number (major.minor).</li>
-<li><strong>id</strong> - the internal identifier used by <code>lshw</code>.</li>
-<li><strong>logicalname</strong> - the logical node name used by the system.</li>
-<li><strong>physid</strong> - the physical id of the device.</li>
-<li><strong>product</strong> - the specific product name of the device.</li>
-<li><strong>serial</strong> - the serial number of the device.</li>
-<li><strong>size</strong> - the actual size of the device.</li>
-<li><strong>slot</strong> - location of the physical (or virtual) connection.</li>
-<li><strong>vendor</strong> - the name of the vendor or manufacturer of the device.</li>
-<li><strong>version</strong> - the version or release information associated with the device.</li>
-<li><strong>width</strong> - the address width of the device (32/64 bits).</li>
+<li>
+<p><strong>businfo</strong> - the bus information for this device.</p>
+</li>
+<li>
+<p><strong>capacity</strong> - the maximum capacity reported by the device.</p>
+</li>
+<li>
+<p><strong>class</strong> - the device&rsquo;s class.</p>
+</li>
+<li>
+<p><strong>clock</strong> - the bus clock of the device (in Hz).</p>
+</li>
+<li>
+<p><strong>description</strong> - a human-readable description of the hardware node.</p>
+</li>
+<li>
+<p><strong>dev</strong> - the device number (major.minor).</p>
+</li>
+<li>
+<p><strong>id</strong> - the internal identifier used by <code>lshw</code>.</p>
+</li>
+<li>
+<p><strong>logicalname</strong> - the logical node name used by the system.</p>
+</li>
+<li>
+<p><strong>physid</strong> - the physical id of the device.</p>
+</li>
+<li>
+<p><strong>product</strong> - the specific product name of the device.</p>
+</li>
+<li>
+<p><strong>serial</strong> - the serial number of the device.</p>
+</li>
+<li>
+<p><strong>size</strong> - the actual size of the device.</p>
+</li>
+<li>
+<p><strong>slot</strong> - location of the physical (or virtual) connection.</p>
+</li>
+<li>
+<p><strong>vendor</strong> - the name of the vendor or manufacturer of the device.</p>
+</li>
+<li>
+<p><strong>version</strong> - the version or release information associated with the device.</p>
+</li>
+<li>
+<p><strong>width</strong> - the address width of the device (32/64 bits).</p>
+</li>
 </ul>
 <p>Some additional fields may be present in this output.  These will be identified and described as necessary for specific instances and situations.</p>
 <h2>00-maas-02-virtuality</h2>
@@ -1517,13 +1575,27 @@ virtio:d00000005v00001AF4
 <p></details></p>
 <p>The output is similar to the modaliases output shown in the <code>00-maas-00-support-info</code> output.  Here, we can decode some of the fields for a PCI entry, for example, set off my one or more consecutive letters:</p>
 <ul>
-<li><strong>v</strong> marks a vendor code.</li>
-<li><strong>d</strong> indicates a device code.</li>
-<li><strong>sv</strong> precedes a subvendor code.</li>
-<li><strong>sd</strong> sets off a subdevice code.</li>
-<li><strong>bc</strong> indicates a bus class code.</li>
-<li><strong>sc</strong> denotes a bus subclass code.</li>
-<li><strong>i</strong> is followed by an interface code.</li>
+<li>
+<p><strong>v</strong> marks a vendor code.</p>
+</li>
+<li>
+<p><strong>d</strong> indicates a device code.</p>
+</li>
+<li>
+<p><strong>sv</strong> precedes a subvendor code.</p>
+</li>
+<li>
+<p><strong>sd</strong> sets off a subdevice code.</p>
+</li>
+<li>
+<p><strong>bc</strong> indicates a bus class code.</p>
+</li>
+<li>
+<p><strong>sc</strong> denotes a bus subclass code.</p>
+</li>
+<li>
+<p><strong>i</strong> is followed by an interface code.</p>
+</li>
 </ul>
 <p>There are many more fields, depending upon the device type, and a wide variety of codes for every field for every device.  Every bus has its own schema for modalias &ndash; hence, cataloguing these combinations is beyond the scope of this document set.  Understanding the way these codes are constructed, though, may help you know how to find needed information for a specific situation.</p>
 <h2>00-maas-05-dhcp-unconfigured-ifaces</h2>

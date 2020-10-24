@@ -462,16 +462,16 @@
 <!-- snap-2-9-ui
  snap-2-9-ui -->
 
-<p>MAAS supports four types of kernels for its Ubuntu machines.</p>
-<ul>
+<p>MAAS supports four types of kernels for its Ubuntu machines:</p>
+<ol>
 <li>General availability kernels</li>
 <li>Hardware enablement kernels</li>
 <li>Hardware enablement kernels (pre-release)</li>
 <li>Low latency kernels</li>
-</ul>
+</ol>
 <p>This article explains each of these kernels, and offers instructions and further references regarding their use.</p>
-<h4>Quick questions you may have:</h4>
-<ul>
+<h4>Seven questions you may have:</h4>
+<ol>
 <li><a href="#heading--general-availability-kernels">What is a general availability kernel?</a></li>
 <li><a href="#heading--hardware-enablement-kernels">What is a hardware enablement kernel?</a></li>
 <li><a href="#heading--hardware-enablement-kernels-pre-release">What is a pre-release hardware enablement kernel?</a></li>
@@ -479,7 +479,7 @@
 <li><a href="#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">How do I set a minimum kernel for enlistment and commissioning?</a></li>
 <li><a href="#heading--set-a-minimum-deploy-kernel-for-a-machine">How to I set a minimum deploy kernel for a machine?</a></li>
 <li><a href="#heading--set-a-specific-kernel-during-machine-deployment">How do I set a specific kernel during machine deployment?</a></li>
-</ul>
+</ol>
 <h2 id="heading--general-availability-kernels">General availability kernels</h2>
 
 <p>The <em>general availability</em> (GA) kernel is based on the <em>generic</em> kernel that ships with a new Ubuntu version. Subsequent fixes are applied regularly by the &lsquo;daily&rsquo; <em>stream</em> used when setting up the global image source for MAAS.</p>
@@ -504,20 +504,20 @@ There is the notion of an HWE <em>stack</em>, which refers to the window manager
 <h2 id="heading--low-latency-kernels">Low latency kernels</h2>
 
 <p>The low-latency kernel is based on the GA kernel, but uses a more aggressive configuration to reduce latency. It is categorised as a soft real-time kernel. For more information, see <a href="https://en.wikipedia.org/wiki/Real-time_computing#Criteria_for_real-time_computing">Criteria for real-time computing^</a> (Wikipedia).</p>
-<p>MAAS denotes a low latency kernel in a few ways:</p>
-<ul>
+<p>MAAS denotes a low latency kernel in three ways:</p>
+<ol>
 <li><code>hwe-x-lowlatency</code>: the Xenial low latency HWE kernel for Trusty</li>
 <li><code>ga-16.04-lowlatency</code>: the low latency GA kernel for Xenial</li>
 <li><code>hwe-16.04-lowlatency</code>: the low latency HWE kernel for Xenial</li>
-</ul>
+</ol>
 <h2 id="heading--using-kernels">Using kernels</h2>
 
 <p>The kernel installed on a machine during deployment is, by default, the Ubuntu release&rsquo;s native kernel (GA). However, it is possible to tell MAAS to use a different kernel. Via the Web UI, MAAS can help you choose one of these kernels.  There are three different contexts for your choice:</p>
-<ul>
+<ol>
 <li>globally (default minimum enlistment and commissioning kernel)</li>
 <li>per machine (minimum deploy kernel)</li>
 <li>per machine during deployment (specific deploy kernel)</li>
-</ul>
+</ol>
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2>
 

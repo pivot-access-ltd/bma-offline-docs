@@ -1,7 +1,3 @@
-<!--
-Todo:
-- critical: review needed
--->
 This section covers some of the most commonly encountered problems and attempts to resolve them.
 
 <h2 id="heading--nodes-hang-on-commissioning">Nodes hang on "Commissioning"</h2>
@@ -182,5 +178,3 @@ You can now use this image to commission or deploy a node and access the root ac
 
 <a href="https://assets.ubuntu.com/v1/f622d104-troulbeshoot-faq__2.3_deploy.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/f622d104-troulbeshoot-faq__2.3_deploy.png"></a>
 
-<!-- IMAGES -->
-<!-- LINKS -->

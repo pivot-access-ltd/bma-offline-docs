@@ -1,9 +1,9 @@
 The best place to get help with your MAAS issue is on the [MAAS Discourse forum (external link)](https://discourse.maas.io/). There, you can interact with the MAAS team as well as search for issues similar to your own.
 
-You might also try:
+You might also try these two channels:
 
--   [Ask Ubuntu (external link)](http://askubuntu.com/questions/ask?tags=maas) web site
--   [Freenode #maas (external link)](http://webchat.freenode.net/?channels=maas) IRC channel
+1.   [Ask Ubuntu (external link)](http://askubuntu.com/questions/ask?tags=maas) web site
+2.   [Freenode #maas (external link)](http://webchat.freenode.net/?channels=maas) IRC channel
 
 <h2 id="heading--gathering-debugging-information">Gathering debugging information</h2>
 
@@ -20,4 +20,3 @@ This will create a tarball containing MAAS log files, MAAS configuration files a
 
 The last step is to make this file available by any means at your disposal (openly accessible FTP server, Dropbox, etc.) in order for helpers to be able to get their hands on it.
 
-<!-- LINKS -->

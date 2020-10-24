@@ -531,31 +531,31 @@ snap-2-9-cli -->
 
 <p><strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made <a href="high-availability.html">highly available</a>.</p>
-<h4>Quick questions you might have:</h4>
-<ul>
+<h4>Two questions you might have:</h4>
+<ol>
 <li><a href="#heading--region-controller">What does a region controller do?</a></li>
 <li><a href="#heading--rack-controllers">What does a rack controller do?</a></li>
-</ul>
+</ol>
 <h2 id="heading--region-controller">What a region controller does</h2>
 
-<p>A region controller consists of:</p>
-<ul>
+<p>A region controller consists of five components:</p>
+<ol>
 <li>REST API server (TCP port 5240)</li>
 <li>PostgreSQL database</li>
 <li>DNS</li>
 <li>caching HTTP proxy</li>
 <li>web UI</li>
-</ul>
+</ol>
 <p>Region controllers are responsible for either a data centre or a single region. Multiple fabrics are used by MAAS to accommodate subdivisions within a single region, such as multiple floors in a data centre.</p>
 <h2 id="heading--rack-controllers">What a rack controller does</h2>
 
-<p>A rack controller provides:</p>
-<ul>
+<p>A rack controller provides four services:</p>
+<ol>
 <li>DHCP</li>
 <li>TFTP</li>
 <li>HTTP (for images)</li>
 <li>power management</li>
-</ul>
+</ol>
 <p>A rack controller is attached to each &ldquo;fabric&rdquo;. As the name implies, a typical setup is to have a rack controller in each data centre server rack. The rack controller will cache large items for performance, such as operating system install images, but maintains no independent state other than the credentials required to talk to the region controller.</p>
 <p><details><summary>Tell me about fabrics</summary></p>
 <p>A fabric is simply a way of linking <a href="concepts-and-terms.html#heading--vlans">VLANs</a> (Virtual LANs) together.  If you&rsquo;re familiar with a VLAN, you know that it&rsquo;s designed to limit network traffic to specific ports (e.g., on a <a href="concepts-and-terms.html#heading--switch">switch</a>) or by evaluating labels called &ldquo;tags&rdquo; (unrelated to MAAS tags).  By definition, this would mean that two VLANs can&rsquo;t communicate with each other &ndash; it would defeat the purpose of the VLAN &ndash; unless you implement some extraordinary measures.</p>

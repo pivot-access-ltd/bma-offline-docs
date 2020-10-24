@@ -36,11 +36,11 @@
 
 A region controller manages communication with the user, via the Web UI/API, as well as managing the rack controller(s) in your system.  The MAAS postgres database is also managed by the region controller.  Typical region-level responsibilities include requesting that a rack controller boot a machine, and providing the ephemeral Ubuntu image needed to commission or enlist a machine.  
 
-#### Quick questions you might have:
+#### Three questions you might have:
 
-* [How do I set up PostgreSQL for the region?](#heading--postgresql-setup)
-* [How do I add a new region host?](#heading--adding-a-new-region-host)
-* [How can I improve region controller performance?](#heading--increasing-regiond-daemon-workers)
+1. [How do I set up PostgreSQL for the region?](#heading--postgresql-setup)
+2. [How do I add a new region host?](#heading--adding-a-new-region-host)
+3. [How can I improve region controller performance?](#heading--increasing-regiond-daemon-workers)
 
 <h2 id="heading--postgresql-setup">Set up PostgreSQL for the region</h2>
 
@@ -75,11 +75,11 @@ You will need the <code>/etc/maas/regiond.conf</code> file from the primary API 
     sudo systemctl restart bind9
     sudo systemctl start maas-regiond
 
-Check the log files for any errors:
+Check three log files for any errors:
 
-* <code>/var/log/maas/regiond.log</code></li>
-* <code>/var/log/maas/maas.log</code></li>
-* <code>/var/log/syslog</code></li>
+1. <code>/var/log/maas/regiond.log</code></li>
+2. <code>/var/log/maas/maas.log</code></li>
+3. <code>/var/log/syslog</code></li>
 
 <h2 id="heading--increasing-regiond-daemon-workers">Improving region controller performance</h2>
 

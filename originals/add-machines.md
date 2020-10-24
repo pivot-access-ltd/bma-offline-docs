@@ -41,96 +41,96 @@ There are two ways to add a machine to MAAS:
 
 This article will explain more about both methods.
 
-#### Quick questions you may have:
+#### Four or five questions you may have:
 
 <!-- deb-2-7-cli
-* [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2748)
-* [How do I add virtual machines?](/t/adding-a-vm-host/2292)
-* [How do I add a machine manually?](#heading--add-a-node-manually)
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2748)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2292)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-* [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2749)
-* [How do I add virtual machines?](/t/adding-a-vm-host/2293)
-* [How do I add a machine manually?](#heading--add-a-node-manually)
-* [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2749)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2293)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-* [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2750)
-* [How do I add virtual machines?](/t/adding-a-vm-host/2294)
-* [How do I add a machine manually?](#heading--add-a-node-manually)
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2750)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2294)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-* [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2751)
-* [How do I add virtual machines?](/t/adding-a-vm-host/2295)
-* [How do I add a machine manually?](#heading--add-a-node-manually)
-* [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2751)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2295)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-* [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2752)
-* [How do I add virtual machines?](/t/adding-a-vm-host/2296)
-* [How do I add a machine manually?](#heading--add-a-node-manually)
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2752)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2296)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-* [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2753)
-* [How do I add virtual machines?](/t/adding-a-vm-host/2297)
-* [How do I add a machine manually?](#heading--add-a-node-manually)
-* [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2753)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2297)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-* [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2742)
-* [How do I add virtual machines?](/t/adding-a-vm-host/2286)
-* [How do I add a machine manually?](#heading--add-a-node-manually)
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2742)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2286)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-* [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2743)
-* [How do I add virtual machines?](/t/adding-a-vm-host/2287)
-* [How do I add a machine manually?](#heading--add-a-node-manually)
-* [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2743)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2287)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-* [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2744)
-* [How do I add virtual machines?](/t/adding-a-vm-host/2288)
-* [How do I add a machine manually?](#heading--add-a-node-manually)
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2744)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2288)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-* [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2745)
-* [How do I add virtual machines?](/t/adding-a-vm-host/2289)
-* [How do I add a machine manually?](#heading--add-a-node-manually)
-* [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2745)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2289)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-* [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2746)
-* [How do I add virtual machines?](/t/adding-a-vm-host/2290)
-* [How do I add a machine manually?](#heading--add-a-node-manually)
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2746)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2290)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-* [How does enlistment work?](#heading--enlistment)
-* [How do VM host nodes work?](/t/introduction-to-vm-hosting/2747)
-* [How do I add virtual machines?](/t/adding-a-vm-host/2291)
-* [How do I add a machine manually?](#heading--add-a-node-manually)
-* [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2747)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2291)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
  snap-2-9-ui -->
 
 MAAS typically adds a machine via a combination of DHCP, TFTP, and PXE. By now, you should have enabled MAAS to automatically add devices and machines to your environment. This unattended method of adding machines is called enlistment.
@@ -270,21 +270,21 @@ Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI
 
 <a href="https://assets.ubuntu.com/v1/20aa36b2-nodes-add__2.5_add-node-manually.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/20aa36b2-nodes-add__2.5_add-node-manually.png"></a>
 
-The fields on the "Add machine" screen are as follows:
+The fields on the "Add machine" screen include the following seven items:
 
-* **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
+1. **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
 
-* **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
+2. **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
 
-* **Architecture**: This field refers to the architecture of the machine being added.
+3. **Architecture**: This field refers to the architecture of the machine being added.
 
-* **Minimum Kernel**: This field supplies a drop-down of possible kernels available for deployment on this machine.
+4. **Minimum Kernel**: This field supplies a drop-down of possible kernels available for deployment on this machine.
 
-* **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
+5. **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
 
-* **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
+6. **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
 
-* **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
+7. **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
 deb-2-7-ui snap-2-7-ui -->
 
 <!-- snap-2-7-ui 
@@ -302,7 +302,7 @@ Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg"></a>
 
-The fields on the "Add machine" screen are as follows:
+The fields on the "Add machine" screen include the following items:
 
 * **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
 
@@ -410,11 +410,11 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 * `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types) in the API reference for details on the available power types and the relevant parameters for each type.
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-Normally, when you add a machine manually, MAAS will immediately attempt to commission the machine. Note that you will need to configure the underlying machine to boot over the network, or commissioning will fail. MAAS cannot handle this configuration for you.  While the correct method for configuring network boot depends heavily on your server, there are a couple of common elements:
+Normally, when you add a machine manually, MAAS will immediately attempt to commission the machine. Note that you will need to configure the underlying machine to boot over the network, or commissioning will fail. MAAS cannot handle this configuration for you.  While the correct method for configuring network boot depends heavily on your server, there are two common elements:
 
-* The network card on your server must be able to support PXE, i.e., your NIC -- whether independent or integrated on a motherboard -- must have a boot PROM that supports network booting.  You'll need to consult the documentation for the machine in question to determine this.
+1. The network card on your server must be able to support PXE, i.e., your NIC -- whether independent or integrated on a motherboard -- must have a boot PROM that supports network booting.  You'll need to consult the documentation for the machine in question to determine this.
 
-* You usually have to interrupt the boot process and enter the BIOS/UEFI menu to configure the network card's PXE stack.  Again, you may need to consult your machine's documentation to pin down this step.
+2. You usually have to interrupt the boot process and enter the BIOS/UEFI menu to configure the network card's PXE stack.  Again, you may need to consult your machine's documentation to pin down this step.
 
 Additional steps will vary widely by machine type and architecture.
 

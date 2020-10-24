@@ -463,8 +463,8 @@
  snap-2-9-ui -->
 
 <p>Resource pools allow administrators to logically group resources &ndash; machines and VM hosts &ndash; into pools. Pools can help you budget machines for a particular set of functions.  For example, if you&rsquo;re using MAAS to manage a hospital data centre, you may want to keep a certain number of machines reserved for provider use, whether that be for the charts, documentation, or orders application.  You can use resource pools to reserve those machines, regardless of which of the three applications you end up loading onto a particular machine at any given time. </p>
-<h4>Quick questions you may have:</h4>
-<ul>
+<h4>Seven questions you may have:</h4>
+<ol>
 <li><a href="#heading--creating-a-resource-pool">How can I create a resource pool?</a></li>
 <li><a href="#heading--list-available-resource-pools">How can I list available resource pools?</a></li>
 <li><a href="#heading--list-a-single-resource-pool">How can I list a single resource pool?</a></li>
@@ -472,7 +472,7 @@
 <li><a href="#heading--delete-a-resource-pool">How can I delete a resource pool?</a></li>
 <li><a href="#heading--add-a-machine-to-a-resource-pool">How can I add a machine to a resource pool?</a></li>
 <li><a href="maas-cli.html">How can I get started with MAAS CLI?</a></li>
-</ul>
+</ol>
 <h2 id="heading--creating-a-resource-pool">Creating a resource pool</h2>
 
 <p>Here&rsquo;s an example that demonstrates how to create a new resource pool named <code>myresource</code>.</p>
@@ -509,14 +509,14 @@ The <code>name</code> and <code>description</code> fields are optional.</p>
 </code></pre>
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-#### Quick questions you may have:
+#### Six questions you may have:
 
-* [How can I add a resource pool?](#heading--add-a-resource-pool)
-* [How can I delete a resource pool?](#heading--deleting-a-resource-pool)
-* [How do I add a node to a resource pool?](#heading--add-a-node-to-a-resource-pool)
-* [How do I remove a node from a resource pool?](#heading--removing-a-node-from-a-resource-pool)
-* [How do I add a VM host to a resource pool?](#heading--add-a-vm-host-to-a-resource-pool)
-* [How do I remove a VM host from a resource pool?](#heading--removing-a-vm-host-from-a-resource-pool)
+1. [How can I add a resource pool?](#heading--add-a-resource-pool)
+2. [How can I delete a resource pool?](#heading--deleting-a-resource-pool)
+3. [How do I add a node to a resource pool?](#heading--add-a-node-to-a-resource-pool)
+4. [How do I remove a node from a resource pool?](#heading--removing-a-node-from-a-resource-pool)
+5. [How do I add a VM host to a resource pool?](#heading--add-a-vm-host-to-a-resource-pool)
+6. [How do I remove a VM host from a resource pool?](#heading--removing-a-vm-host-from-a-resource-pool)
 
 Administrators can manage resource pools on the Machines page in the web UI, under the Resource pools tab.   Also note that all MAAS installations have a resource pool named "default." MAAS automatically adds new machines to the default resource pool.
 

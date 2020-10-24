@@ -84,18 +84,18 @@
 
 MAAS currently does not provide specific tools to back up and restore a working MAAS configuration. MAAS servers are part of your data centre, just like other Linux-based servers, so your current backup and disaster recovery solution should be sufficient to back up your MAAS environment.  Even so, you should know which files and actions are critical -- to ensure that you get a clean backup, and further ensure that you can restore it cleanly.
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
-* [What configuration files should I capture in my backup?](#heading--configuration-files)
-* [How should I prepare PostgreSQL data for backup?](#heading--postgresql-export)
-* [What services should I stop before backing up?](#heading--stop-critical-services)
-* [How should I archive files to make the backup more efficient?](#heading--archive-configuration-files)
-* [How do I restore my system, should the need arise?](#heading--restore-files)
-* [What steps should I take to restore the database to normal operation?](#heading--recreatingupdating-the-db)
+1. [What configuration files should I capture in my backup?](#heading--configuration-files)
+2. [How should I prepare PostgreSQL data for backup?](#heading--postgresql-export)
+3. [What services should I stop before backing up?](#heading--stop-critical-services)
+4. [How should I archive files to make the backup more efficient?](#heading--archive-configuration-files)
+5. [How do I restore my system, should the need arise?](#heading--restore-files)
+6. [What steps should I take to restore the database to normal operation?](#heading--recreatingupdating-the-db)
 
 <h2 id="heading--configuration-files">Configuration files</h2>
 
-The following MAAS components need to be backed-up and restored, on each region and rack controller, to recreate a working environment:
+The following three MAAS components need to be backed-up and restored, on each region and rack controller, to recreate a working environment:
 
 <!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 1.  The PostgreSQL database
@@ -117,11 +117,11 @@ Other configuration files, such as those used by your network configuration (`/e
 
 <h2 id="heading--postgresql-export">PostgreSQL export</h2>
 
-The following procedure involves some assumptions: 
+The following procedure involves three assumptions: 
 
-* you have installed region and rack controllers on the same machine. 
-* you have installed MAAS on Ubuntu 18.04 LTS (Bionic).
-* you are restoring software an identical hardware and network configuration.
+1. you have installed region and rack controllers on the same machine. 
+2. you have installed MAAS on Ubuntu 18.04 LTS (Bionic).
+3. you are restoring software an identical hardware and network configuration.
 
 To backup your PostgreSQL database to a file called `dump.sql` in your home directories, enter the following:
 
@@ -139,12 +139,12 @@ Running sessions, such as pg_dumpall, will appear in the `application_name` colu
 
 <h2 id="heading--stop-critical-services">Stop critical services</h2>
 
-To avoid conflicting updates during a backup, stop the following services with the `sudo systemctl stop <service>` command:
+To avoid conflicting updates during a backup, stop the following four services with the `sudo systemctl stop <service>` command:
 
--   postgresql.service
--   maas-dhcpd.service
--   maas-rackd.service
--   maas-regiond.service
+1.   postgresql.service
+2.   maas-dhcpd.service
+3.   maas-rackd.service
+4.   maas-regiond.service
 
 <h2 id="heading--archive-configuration-files">Archive configuration files</h2>
 
@@ -168,11 +168,11 @@ We've now backed up all the components necessary to recreate a MAAS deployment. 
 
 <h2 id="heading--restore-files">Restore files</h2>
 
-Start with a freshly-updated installation of Ubuntu on identical hardware. Reinstall MAAS via the standard procedure (`sudo apt install maas`), then stop the following services (PostgreSQL needs to keep running):
+Start with a freshly-updated installation of Ubuntu on identical hardware. Reinstall MAAS via the standard procedure (`sudo apt install maas`), then stop the following three services (PostgreSQL needs to keep running):
 
--   maas-dhcpd.service
--   maas-rackd.service
--   maas-regiond.service
+1.   maas-dhcpd.service
+2.   maas-rackd.service
+3.   maas-regiond.service
 
 Copy the backup file to the new machine and untar its contents (`sudo tar xvzpf backup.tgz`).
 

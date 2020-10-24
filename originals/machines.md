@@ -36,19 +36,19 @@
 
 Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers. MAAS manages their transit through a life-cycle, from adding and enlistment, through commissioning, allocation, and deployment, finally being released back to the pool, or retired altogether.  You can move them around, create redundant versions (even in other geographies you can access), and basically rearrange them to the extent that your network allows.
 
-#### Quick questions you may have:
+#### Eleven questions you may have:
 
-* [How are the machine states and actions related?](#heading--machine-life-cycle)
-* [How can I view the machine list?](#heading--machine-list)
-* [How can I view a machine summary?](#heading--machine-summary) 
-* [How can I view machine details?](#heading--node-details)
-* [Where can I find network info for a machine?](#heading--machine-interfaces-h3)
-* [Where can I find storage info for a machine?](#heading--machine-storage-h3)
-* [Where can I find the commissioning log for a machine?](#heading--commissioning-log-h3)
-* [Where can I find machine hardware & test logs?](#heading--hardware-tests-h3)
-* [Where can I find raw log output for a machine?](#heading--raw-log-output-h3)
-* [Where can I find a machine's event log?](#heading--event-logs-h3)
-* [Where can I find machine configuration info?](#heading--machine-config-h3)
+1. [How are the machine states and actions related?](#heading--machine-life-cycle)
+2. [How can I view the machine list?](#heading--machine-list)
+3. [How can I view a machine summary?](#heading--machine-summary) 
+4. [How can I view machine details?](#heading--node-details)
+5. [Where can I find network info for a machine?](#heading--machine-interfaces-h3)
+6. [Where can I find storage info for a machine?](#heading--machine-storage-h3)
+7. [Where can I find the commissioning log for a machine?](#heading--commissioning-log-h3)
+8. [Where can I find machine hardware & test logs?](#heading--hardware-tests-h3)
+9. [Where can I find raw log output for a machine?](#heading--raw-log-output-h3)
+10. [Where can I find a machine's event log?](#heading--event-logs-h3)
+11. [Where can I find machine configuration info?](#heading--machine-config-h3)
 
 For example, in the illustration below, you see a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:
 
@@ -60,16 +60,16 @@ Looking back at the example above, you can see that there are several columns in
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg"></a> 
 
-The columns list the following details for each machine:
+The columns list eight details for each machine:
 
--   **FQDN | MAC**: The fully qualified domain name or the MAC address of the machine.
--   **Power**: 'On', 'Off' or 'Error' to highlight an error state.
--   **Status**: The current status of the machine, such as 'Ready', 'Commissioning' or 'Failed testing'.
--   **Owner**: The MAAS account responsible for the machine.
--   **Cores**: The number of CPU cores detected on the machine.
--   **RAM**: The amount of RAM, in GiB, discovered on the machine.
--   **Disks**: The number of drives detected on the machine.
--   **Storage**: The amount of storage, in GB, identified on the machine.
+1.   **FQDN | MAC**: The fully qualified domain name or the MAC address of the machine.
+2.   **Power**: 'On', 'Off' or 'Error' to highlight an error state.
+3.   **Status**: The current status of the machine, such as 'Ready', 'Commissioning' or 'Failed testing'.
+4.   **Owner**: The MAAS account responsible for the machine.
+5.   **Cores**: The number of CPU cores detected on the machine.
+6.   **RAM**: The amount of RAM, in GiB, discovered on the machine.
+7.   **Disks**: The number of drives detected on the machine.
+8.   **Storage**: The amount of storage, in GB, identified on the machine.
 
 <h2 id="heading--machine-life-cycle">Machine life-cycle</h2>
 
@@ -77,25 +77,25 @@ One of the most important things to understand about machines is their life-cycl
 
 All of these states and actions represent the possible life-cycle of a machine.  This life-cycle isn't strict or linear -- it depends on how you use a machine -- but it's useful to give a general overview of how machines tend to change states.  In the discussion that follows, states and actions are shown in **bold** type.
 
-* Machines start as servers in your environment, attached to a network or subnet MAAS can manage.
+1. Machines start as servers in your environment, attached to a network or subnet MAAS can manage.
 
-* If machines are configured to netboot, MAAS can **discover** them and present them to you for possible commissioning, changing their state to **New**.
+2. If machines are configured to netboot, MAAS can **discover** them and present them to you for possible commissioning, changing their state to **New**.
 
-* When you select a machine that is marked **New**, you can choose to **commission** it.  If you add a machine manually, it is automatically **commissioned**.
+3. When you select a machine that is marked **New**, you can choose to **commission** it.  If you add a machine manually, it is automatically **commissioned**.
 
-* Machines that have successfully commissioned can be **acquired** and **deployed**.  Machines that don't successfully commission can be **marked broken** (and later recovered when the issues are resolved).
+4. Machines that have successfully commissioned can be **acquired** and **deployed**.  Machines that don't successfully commission can be **marked broken** (and later recovered when the issues are resolved).
 
-* Resolving problems with machines usually involve **testing** the machine.
+5. Resolving problems with machines usually involve **testing** the machine.
 
-* Once you've deployed a machine, and you're done with it, you can **release** it.
+6. Once you've deployed a machine, and you're done with it, you can **release** it.
 
-* You can place a machine in **rescue mode**, which allows you to SSH to a machine to make configuration changes or do other maintenance. Once you're done, you can **exit rescue mode***.
+7. You can place a machine in **rescue mode**, which allows you to SSH to a machine to make configuration changes or do other maintenance. Once you're done, you can **exit rescue mode***.
 
-* Any time a machine is on, you have the option to select it and **power off** that machine.
+8. Any time a machine is on, you have the option to select it and **power off** that machine.
 
-* You can **abort** any operation that's in progress.
+9. You can **abort** any operation that's in progress.
 
-* You also have the option to set tags, availability zone, or resource pool at various stages along the way.
+10. You also have the option to set tags, availability zone, or resource pool at various stages along the way.
 
 Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it's not very useful to make a state diagram or flowchart.  Instead, consider the following table:
 
@@ -165,16 +165,26 @@ The first card presents some basics of the machine resources and configuration:
 <a href="https://discourse.maas.io/uploads/default/original/1X/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg"></a> 
 
 Here are some details on what this card presents, with details on in-card links described in following sections:
- - **OVERVIEW** the machine status (in this case "Deployed"), and lists OS version information.  
- - **CPU** shows the specifics of the CPU(s), including a link to test the processor(s).
- - **MEMORY** gives the total available RAM for this machine, along with a test link.
- - **STORAGE** presents the total amount of storage available and the number of disks that provide that storage.  There are two links here: one gives the storage layout (with the opportunity to change it for devices that are in 'Ready' or 'Allocated' states.
- - **Owner** identifies the owner of the machine.
- - **Domain** indicates the domain in which the machine exists.
- - **Zone** shows the AZ in which this machine resides, along with a link to edit the machine configuration (to change the AZ, if desired).
- - **Resource pool** shows the pool to which this machine has been assigned, and an edit link.
- - **Power type** gives the current power type, which links to the relevant edit form.
- - **Tags** presents the list of tags associated with this machine, editable via the link.
+
+- **OVERVIEW** the machine status (in this case "Deployed"), and lists OS version information.  
+
+- **CPU** shows the specifics of the CPU(s), including a link to test the processor(s).
+
+- **MEMORY** gives the total available RAM for this machine, along with a test link.
+
+- **STORAGE** presents the total amount of storage available and the number of disks that provide that storage.  There are two links here: one gives the storage layout (with the opportunity to change it for devices that are in 'Ready' or 'Allocated' states.
+
+- **Owner** identifies the owner of the machine.
+
+- **Domain** indicates the domain in which the machine exists.
+
+- **Zone** shows the AZ in which this machine resides, along with a link to edit the machine configuration (to change the AZ, if desired).
+
+- **Resource pool** shows the pool to which this machine has been assigned, and an edit link.
+
+- **Power type** gives the current power type, which links to the relevant edit form.
+
+- **Tags** presents the list of tags associated with this machine, editable via the link.
 
 Note that clicking any of the links in this card will either present a pop-up form or take you to another item in the machine menu -- so using the browser "back" button will take you completely away from this machine's page.  For example, you can choose the "Test CPU" option, which brings up this overlay:
 
@@ -639,5 +649,3 @@ More information on Power configuration will be found in the [Power management](
 <h2>Summary</h2>
 
 This article has offered you a cursory glimpse into machines and how they are configured and managed in MAAS.  Read on through this section of the documentation to learn more.
-
-<!-- LINKS -->

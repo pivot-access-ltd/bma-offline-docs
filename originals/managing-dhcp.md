@@ -42,138 +42,138 @@ This documentation presupposes that MAAS-managed DHCP is used to enlist and comm
 
 This article delves into these issues, offering guidance on setting up and managing your DHCP configuration.
 
-#### Quick questions you may have: 
+#### Eight questions you may have: 
 
 <!-- deb-2-7-cli
-* [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-* [What is post-commission configuration](/t/commission-machines/2472#heading--post-commission-configuration)
-* [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-* [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-* [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-* [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-* [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-* [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
+1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
+2. [What is post-commission configuration](/t/commission-machines/2472#heading--post-commission-configuration)
+3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
+4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
+5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
+6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
+7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
+8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-* [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-* [What is post-commission configuration](/t/commission-machines/2473#heading--post-commission-configuration)
-* [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-* [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-* [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-* [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-* [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-* [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
+1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
+2. [What is post-commission configuration](/t/commission-machines/2473#heading--post-commission-configuration)
+3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
+4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
+5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
+6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
+7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
+8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-* [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-* [What is post-commission configuration](/t/commission-machines/2474#heading--post-commission-configuration)
-* [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-* [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-* [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-* [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-* [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-* [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
+1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
+2. [What is post-commission configuration](/t/commission-machines/2474#heading--post-commission-configuration)
+3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
+4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
+5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
+6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
+7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
+8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-* [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-* [What is post-commission configuration](/t/commission-machines/2475#heading--post-commission-configuration)
-* [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-* [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-* [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-* [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-* [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-* [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
+1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
+2. [What is post-commission configuration](/t/commission-machines/2475#heading--post-commission-configuration)
+3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
+4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
+5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
+6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
+7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
+8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-* [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-* [What is post-commission configuration](/t/commission-machines/2476#heading--post-commission-configuration)
-* [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-* [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-* [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-* [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-* [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-* [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
+1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
+2. [What is post-commission configuration](/t/commission-machines/2476#heading--post-commission-configuration)
+3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
+4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
+5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
+6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
+7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
+8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-* [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-* [What is post-commission configuration](/t/commission-machines/2477#heading--post-commission-configuration)
-* [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-* [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-* [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-* [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-* [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-* [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
+1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
+2. [What is post-commission configuration](/t/commission-machines/2477#heading--post-commission-configuration)
+3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
+4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
+5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
+6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
+7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
+8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-* [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-* [What is post-commission configuration](/t/commission-machines/2466#heading--post-commission-configuration)
-* [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-* [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-* [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-* [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-* [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-* [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
+1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
+2. [What is post-commission configuration](/t/commission-machines/2466#heading--post-commission-configuration)
+3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
+4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
+5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
+6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
+7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
+8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-* [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-* [What is post-commission configuration](/t/commission-machines/2467#heading--post-commission-configuration)
-* [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-* [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-* [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-* [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-* [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-* [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
+1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
+2. [What is post-commission configuration](/t/commission-machines/2467#heading--post-commission-configuration)
+3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
+4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
+5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
+6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
+7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
+8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-* [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-* [What is post-commission configuration](/t/commission-machines/2468#heading--post-commission-configuration)
-* [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-* [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-* [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-* [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-* [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-* [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
+1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
+2. [What is post-commission configuration](/t/commission-machines/2468#heading--post-commission-configuration)
+3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
+4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
+5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
+6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
+7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
+8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-* [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-* [What is post-commission configuration](/t/commission-machines/2469#heading--post-commission-configuration)
-* [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-* [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-* [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-* [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-* [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-* [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
+1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
+2. [What is post-commission configuration](/t/commission-machines/2469#heading--post-commission-configuration)
+3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
+4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
+5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
+6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
+7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
+8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-* [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-* [What is post-commission configuration](/t/commission-machines/2470#heading--post-commission-configuration)
-* [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-* [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-* [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-* [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-* [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-* [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
+1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
+2. [What is post-commission configuration](/t/commission-machines/2470#heading--post-commission-configuration)
+3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
+4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
+5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
+6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
+7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
+8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-* [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-* [What is post-commission configuration](/t/commission-machines/2471#heading--post-commission-configuration)
-* [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-* [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-* [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-* [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-* [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-* [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
+1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
+2. [What is post-commission configuration](/t/commission-machines/2471#heading--post-commission-configuration)
+3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
+4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
+5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
+6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
+7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
+8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  snap-2-9-ui -->
 
 <h2 id="heading--enabling-dhcp">Enabling DHCP</h2>
@@ -223,11 +223,11 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 <h3 id="heading--resolving-ip-conflicts">Resolving IP conflicts</h3>
 
-In some cases, MAAS manages a subnet that is not empty, which could result in MAAS assigning a duplicate IP address.  MAAS is capable of detecting IPs in use on a subnet.  Be aware that there are a couple of caveats:
+In some cases, MAAS manages a subnet that is not empty, which could result in MAAS assigning a duplicate IP address.  MAAS is capable of detecting IPs in use on a subnet.  Be aware that there are two caveats:
 
-* If a previously-assigned NIC is in a quiescent state or turned off, MAAS may not detect it before duplicating an IP address.
+1. If a previously-assigned NIC is in a quiescent state or turned off, MAAS may not detect it before duplicating an IP address.
 
-* At least one rack controller must have access to the IP-assigned machine in order for this feature to work.
+2/ At least one rack controller must have access to the IP-assigned machine in order for this feature to work.
 
 MAAS also recognises when the subnet ARP cache is full, so that it can re-check the oldest IPs added to the cache to search for free IP addresses.
 

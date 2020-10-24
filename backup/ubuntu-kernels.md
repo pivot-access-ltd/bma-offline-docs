@@ -82,24 +82,24 @@
 |Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  snap-2-9-ui -->
 
-MAAS supports four types of kernels for its Ubuntu machines.
+MAAS supports four types of kernels for its Ubuntu machines:
 
--   General availability kernels
--   Hardware enablement kernels
--   Hardware enablement kernels (pre-release)
--   Low latency kernels
+1.   General availability kernels
+2.   Hardware enablement kernels
+3.   Hardware enablement kernels (pre-release)
+4.   Low latency kernels
 
 This article explains each of these kernels, and offers instructions and further references regarding their use.
 
-#### Quick questions you may have:
+#### Seven questions you may have:
 
-* [What is a general availability kernel?](#heading--general-availability-kernels)
-* [What is a hardware enablement kernel?](#heading--hardware-enablement-kernels)
-* [What is a pre-release hardware enablement kernel?](#heading--hardware-enablement-kernels-pre-release)
-* [What is a low latency kernel?](#heading--low-latency-kernels)
-* [How do I set a minimum kernel for enlistment and commissioning?](#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning)
-* [How to I set a minimum deploy kernel for a machine?](#heading--set-a-minimum-deploy-kernel-for-a-machine)
-* [How do I set a specific kernel during machine deployment?](#heading--set-a-specific-kernel-during-machine-deployment)
+1. [What is a general availability kernel?](#heading--general-availability-kernels)
+2. [What is a hardware enablement kernel?](#heading--hardware-enablement-kernels)
+3. [What is a pre-release hardware enablement kernel?](#heading--hardware-enablement-kernels-pre-release)
+4. [What is a low latency kernel?](#heading--low-latency-kernels)
+5. [How do I set a minimum kernel for enlistment and commissioning?](#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning)
+6. [How to I set a minimum deploy kernel for a machine?](#heading--set-a-minimum-deploy-kernel-for-a-machine)
+7. [How do I set a specific kernel during machine deployment?](#heading--set-a-specific-kernel-during-machine-deployment)
 
 <h2 id="heading--general-availability-kernels">General availability kernels</h2>
 
@@ -141,19 +141,19 @@ See [Rolling LTS Enablement Stack^](https://wiki.ubuntu.com/Kernel/RollingLTSEna
 
 The low-latency kernel is based on the GA kernel, but uses a more aggressive configuration to reduce latency. It is categorised as a soft real-time kernel. For more information, see [Criteria for real-time computing^](https://en.wikipedia.org/wiki/Real-time_computing#Criteria_for_real-time_computing) (Wikipedia).
 
-MAAS denotes a low latency kernel in a few ways:
+MAAS denotes a low latency kernel in three ways:
 
--   `hwe-x-lowlatency`: the Xenial low latency HWE kernel for Trusty
--   `ga-16.04-lowlatency`: the low latency GA kernel for Xenial
--   `hwe-16.04-lowlatency`: the low latency HWE kernel for Xenial
+1.   `hwe-x-lowlatency`: the Xenial low latency HWE kernel for Trusty
+2.   `ga-16.04-lowlatency`: the low latency GA kernel for Xenial
+3.   `hwe-16.04-lowlatency`: the low latency HWE kernel for Xenial
 
 <h2 id="heading--using-kernels">Using kernels</h2>
 
 The kernel installed on a machine during deployment is, by default, the Ubuntu release's native kernel (GA). However, it is possible to tell MAAS to use a different kernel. Via the Web UI, MAAS can help you choose one of these kernels.  There are three different contexts for your choice:
 
--   globally (default minimum enlistment and commissioning kernel)
--   per machine (minimum deploy kernel)
--   per machine during deployment (specific deploy kernel)
+1.   globally (default minimum enlistment and commissioning kernel)
+2.   per machine (minimum deploy kernel)
+3.   per machine during deployment (specific deploy kernel)
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2>

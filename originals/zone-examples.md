@@ -36,8 +36,6 @@
 
 This page provides several useful examples of MAAS zone usage.
 
-See [Concepts and terms](/t/concepts-and-terms/785#heading--zones) to understand more about zones and [Zones](/t/availability-zones/820) for how to work with them.
-
 <h2 id="heading--fault-tolerance">Fault tolerance</h2>
 
 Fault tolerance is "the property that enables a system to continue operating properly in the event of the failure of (or one or more faults within) some of its components". To help create better fault tolerance, multiple MAAS zones can be employed.
@@ -60,4 +58,3 @@ Power management is concerned with power usage density and cooling. This topic c
 
 Nodes can be distributed in such a way that power-hungry and/or "hot" systems are located in different zones. This can help mitigate power consumption and heat problems.
 
-<!-- LINKS -->

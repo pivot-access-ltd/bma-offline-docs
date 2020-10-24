@@ -2,10 +2,10 @@ hMAAS's API uses [OAuth (external link)](http://en.wikipedia.org/wiki/OAuth) as 
 
 Note that some API endpoints support unauthenticated requests (i.e. anonymous access). See the [API documentation](https://maas.io/docs/api) for details. 
 
-#### Quick questions you may have:
+#### Two questions you may have:
 
-* [How can I perform authenticated requests in python?](/t/cli-resource-pool-management/800#heading--python)
-* [How can I perform authenticated requests in ruby?](/t/cli-resource-pool-management/800#heading--ruby)
+1. [How can I perform authenticated requests in python?](/t/cli-resource-pool-management/800#heading--python)
+2. [How can I perform authenticated requests in ruby?](/t/cli-resource-pool-management/800#heading--ruby)
 
 Here are two examples on how to perform an authenticated GET request to retrieve the list of nodes. The &lt;key&gt;, &lt;secret&gt;, &lt;consumer_key&gt; tokens are the three elements that compose the API key (API key = '&lt;consumer_key&gt;:&lt;key&gt;:&lt;secret&gt;').
 
@@ -60,4 +60,3 @@ response = perform_API_request(
      "consumer_key>")
 ```
 
-<!-- LINKS -->

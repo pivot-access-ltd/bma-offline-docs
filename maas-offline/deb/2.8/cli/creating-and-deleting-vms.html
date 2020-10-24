@@ -463,10 +463,12 @@
  snap-2-9-ui -->
 
 <p>If you have already created a VM host, you will want to create and delete virtual machines (VMs); this article explains how to do so.</p>
-<h4>Quick questions you may have:</h4>
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-* [How do I add a VM?](#heading--add-vm-from-ui)
-* [How do I delete a VM?](#heading--delete-a-machine)
+
+#### Two questions you may have:
+
+1. [How do I add a VM?](#heading--add-vm-from-ui)
+2. [How do I delete a VM?](#heading--delete-a-machine)
 
 <h2 id="heading--add-vm-from-ui">Adding a VM from the Web UI</h2>
 
@@ -489,7 +491,8 @@ To delete a VM, delete it as you would any other MAAS machine. Select the desire
 <a href="images/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg" target = "_blank"><img src="images/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg"></a></a> 
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<ul>
+<h4>Seven questions you may have:</h4>
+<ol>
 <li><a href="#heading--adding-a-vm-from-the-cli">How do I add a VM?</a></li>
 <li><a href="#heading--set-resources">How do I set resources while adding a VM?</a></li>
 <li><a href="#heading--architecture">How do I set the architecture while adding a VM?</a></li>
@@ -497,7 +500,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 <li><a href="#heading--interfaces">How do I specify interfaces while adding a VM?</a></li>
 <li><a href="#heading--find-vm-host-ids">How do I find a VM host ID?</a></li>
 <li><a href="#heading--delete-a-vm">How do I delete a VM?</a></li>
-</ul>
+</ol>
 <h2 id="heading--adding-a-vm-from-the-cli">Adding a VM from the CLI</h2>
 
 <p>To compose a basic VM:</p>
@@ -514,15 +517,15 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 <p>Compose with resources specified:</p>
 <pre><code>maas $PROFILE vm-host compose $VM_HOST_ID $RESOURCES
 </code></pre>
-<p>Where $RESOURCES is a space-separated list of constraints:</p>
-<ul>
+<p>Where $RESOURCES is a space-separated list of six constraints:</p>
+<ol>
 <li><em>cores=</em> requested cores</li>
 <li><em>cpu_speed=</em> requested minimum cpu speed in MHz</li>
 <li><em>memory=</em> requested memory in MB</li>
 <li><em>architecture=</em> See <a href="#heading--architecture">Architecture</a> below </li>
 <li><em>storage=</em> See <a href="#heading--storage">Storage</a> below</li>
 <li><em>interfaces=</em> See <a href="#heading--interfaces">Interfaces</a> below</li>
-</ul>
+</ol>
 <h3 id="heading--architecture">Setting the architecture while adding a VM</h3>
 
 <p>To list available architectures:</p>
@@ -537,11 +540,11 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 <p>Storage parameters look like this:</p>
 <pre><code>storage="&lt;label&gt;:&lt;size in GB&gt;(&lt;storage pool name&gt;),&lt;label&gt;:&lt;size in GB&gt;(&lt;storage pool name&gt;)"
 </code></pre>
-<p>For example, to compose a machine with the following disks:</p>
-<ul>
+<p>For example, let&rsquo;s examine how to compose a machine with the following two disks:</p>
+<ol>
 <li>32 GB disk from storage pool <code>pool1</code></li>
 <li>64 GB disk from storage pool <code>pool2</code></li>
-</ul>
+</ol>
 <p>where we want the first disk to be a bootable root partition <code>/</code> and the second to be a home directory.</p>
 <p>First, create the VM:</p>
 <pre><code>maas $PROFILE vm-host compose $VM_HOST_ID "storage=mylabel:32(pool1),mylabel:64(pool2)"

@@ -146,7 +146,7 @@ Currently MAAS only allows custom images to be loaded as a single TGZ or DD.GZ, 
 
 # How to create a custom Ubuntu image for MAAS
 
-Note: LXD may prevent device files from being created when extracting the rootfs, it is suggested to do this on metal or on a VM
+Note: LXD may prevent device files from being created when extracting the rootfs, it is suggested to do this on metal or on a VM:
 
 1. Download the rootfs from images.maas.io
     `wget http://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64-root.tar.xz`

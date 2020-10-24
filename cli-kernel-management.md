@@ -1,13 +1,13 @@
 The following is a list of kernel tasks that you can perform with the MAAS CLI.
 
-#### Quick questions you may have:
+#### Six questions you may have:
 
-* [What should I know about Ubuntu kernels on MAAS?](/t/ubuntu-kernels/828)
-* [What kernel boot options are available?](/t/kernel-boot-options/827)
-* [How do I get started with the MAAS CLI?](/t/maas-cli/802)
-* [How do I set a minimum kernel for enlistment and commissioning?](/t/cli-kernel-management/799#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning)
-* [How to I set a minimum deploy kernel for a machine?](/t/cli-kernel-management/799#heading--set-a-minimum-deploy-kernel-for-a-machine)
-* [How do I set a specific kernel during machine deployment?](/t/cli-kernel-management/799#heading--set-a-specific-kernel-during-machine-deployment)
+1. [What should I know about Ubuntu kernels on MAAS?](/t/ubuntu-kernels/828)
+2. [What kernel boot options are available?](/t/kernel-boot-options/827)
+3. [How do I get started with the MAAS CLI?](/t/maas-cli/802)
+4. [How do I set a minimum kernel for enlistment and commissioning?](/t/cli-kernel-management/799#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning)
+5. [How to I set a minimum deploy kernel for a machine?](/t/cli-kernel-management/799#heading--set-a-minimum-deploy-kernel-for-a-machine)
+6. [How do I set a specific kernel during machine deployment?](/t/cli-kernel-management/799#heading--set-a-specific-kernel-during-machine-deployment)
 
 <h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2>
 
@@ -65,4 +65,3 @@ maas $PROFILE machine deploy $SYSTEM_ID distro_series=xenial hwe_kernel=hwe-16.0
 The command option `hwe_kernel` appears to apply to only HWE kernels but this is not the case.
 [/note]
 
-<!-- LINKS -->

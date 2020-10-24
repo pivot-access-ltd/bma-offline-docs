@@ -43,12 +43,12 @@ The majority of testing scripts only work with machines that are backed by physi
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 With MAAS, you can easily write, upload and execute your hardware testing scripts and see the results.
 
-#### Quick questions you may have:
+#### Four questions you may have:
 
-* [How do I upload and manage test scripts?](/t/cli-commissioning-and-hardware-testing-scripts/832#heading--script-management)
-* [How do I use tags to help with test scripts?](/t/cli-commissioning-and-hardware-testing-scripts/832#heading--tags)
-* [How do I view test results?](/t/cli-commissioning-and-hardware-testing-scripts/832#heading--results)
-* [What metadata fields are available to me for test scripts?](/t/commissioning-and-hardware-testing-scripts/833#heading--metadata-fields)
+1. [How do I upload and manage test scripts?](/t/cli-commissioning-and-hardware-testing-scripts/832#heading--script-management)
+2. [How do I use tags to help with test scripts?](/t/cli-commissioning-and-hardware-testing-scripts/832#heading--tags)
+3. [How do I view test results?](/t/cli-commissioning-and-hardware-testing-scripts/832#heading--results)
+4. [What metadata fields are available to me for test scripts?](/t/commissioning-and-hardware-testing-scripts/833#heading--metadata-fields)
 
 <h2 id="heading--script-management">Script management</h2>
 
@@ -216,10 +216,10 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-#### Quick questions you may have: 
+#### Two questions you may have: 
 
-* [How do I apply a hardware test?](#heading--apply-a-hardware-test)
-* [What scripts are available for testing?](#heading--included-scripts)
+1. [How do I apply a hardware test?](#heading--apply-a-hardware-test)
+2. [What scripts are available for testing?](#heading--included-scripts)
 
 <h2 id="heading--apply-a-hardware-test">Apply a hardware test</h2>
 

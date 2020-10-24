@@ -464,17 +464,17 @@
 
 <p>MAAS provides a way for its managed machines to use a proxy server when they need to access HTTP/HTTPS-based resources, such as the Ubuntu package archive.</p>
 <p>There are three possible options:</p>
-<ul>
+<ol>
 <li>internal proxy (default)</li>
 <li>external proxy</li>
 <li>no proxy</li>
-</ul>
+</ol>
 <p>Configuring a proxy with MAAS consists of enabling/disabling one of the above three options and enabling/disabling proxying on a specific subnet.</p>
-<h4>Quick questions you may have:</h4>
-<ul>
+<h4>Two questions you may have:</h4>
+<ol>
 <li><a href="#heading--internal-proxy-maas-proxy">How and why should I create an internal proxy?</a></li>
 <li><a href="#heading--configure-proxy">How and why should I create an external proxy?</a></li>
-</ul>
+</ol>
 <h2 id="heading--internal-proxy-maas-proxy">Internal proxy (MAAS proxy)</h2>
 
 <p>MAAS provides an internal proxy server. Although it is set up to work well with APT/package requests, it is effectively an HTTP caching proxy server. If you configure the MAAS region controller as the default gateway for the machines it manages then the proxy will work transparently (on TCP port 3128). Otherwise, machines will need to access it on TCP port 8000.</p>

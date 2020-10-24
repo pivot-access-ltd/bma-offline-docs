@@ -84,12 +84,12 @@
 
 To manage a machine, MAAS must be able to power cycle it, usually through the machine's [BMC^](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller) card.  Until you configure the power type, a newly-added machine can't be enlisted and used by MAAS.
 
-#### Quick questions you may have:
+#### Four questions you may have:
 
-* [How do I configure a machine's power type?](#heading--config-power-type)
-* [Show me a catalogue of power parameters, by type.](#heading--power-catalogue)
-* [Can you give me an example of the virsh power type?](#heading--example-virsh-kvm-power-type)
-* [Which BMC drivers are supported?](#heading--bmc-driver-support)
+1. [How do I configure a machine's power type?](#heading--config-power-type)
+2. [Show me a catalogue of power parameters, by type.](#heading--power-catalogue)
+3. [Can you give me an example of the virsh power type?](#heading--example-virsh-kvm-power-type)
+4. [Which BMC drivers are supported?](#heading--bmc-driver-support)
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9 ui
 <h2 id="heading--config-power-type">Configure a machine's power type</h2>

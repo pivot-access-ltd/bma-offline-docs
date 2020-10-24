@@ -463,12 +463,12 @@
  snap-2-9-cli -->
 
 <p>There are many user-initiated events in MAAS that an administrator or a user may want to audit. These include someone updating the settings or changing a user&rsquo;s permissions. This page details how to query these events and includes examples of how to perform a query, and the type of data logs can provide.</p>
-<h4>Quick questions you may have:</h4>
-<ul>
+<h4>Three questions you may have:</h4>
+<ol>
 <li><a href="audit-event-logs.html#heading--list-audit-events-for-all-users">How do I list audit events for all users?</a></li>
 <li><a href="audit-event-logs.html#heading--list-audit-events-for-a-specific-user">How do I list audit events for a specific user?</a></li>
 <li><a href="audit-event-logs.html#heading--types-of-audit-event-logs">What are the types of audit event logs available?</a></li>
-</ul>
+</ol>
 <h2 id="heading--list-audit-events-for-all-users">List audit events for all users</h2>
 
 <p>To list events for all users, use the following syntax:</p>
@@ -505,13 +505,13 @@ Machine-readable output follows:
 <pre><code class="bash">maas $PROFILE events query level=AUDIT owner=$USERNAME
 </code></pre>
 
-<p>As there is only one audit event log in the database (as seen above), generate some more by performing these actions:</p>
-<ul>
-<li>create new non-administrator user <code>johnnybegood</code> with <code>admin</code> user</li>
-<li>logout of web UI as <code>admin</code> user and login with <code>johnnybegood</code> user</li>
-<li>change password of the <code>johnnybegood</code> user</li>
-<li>log back into the web UI (Django forces a re-login when currently logged in user changes their password).</li>
-</ul>
+<p>As there is only one audit event log in the database (as seen above), generate some more by performing these four actions:</p>
+<ol>
+<li>Create new non-administrator user <code>johnnybegood</code> with <code>admin</code> user</li>
+<li>Logout of web UI as <code>admin</code> user and login with <code>johnnybegood</code> user</li>
+<li>Change password of the <code>johnnybegood</code> user</li>
+<li>Log back into the web UI (Django forces a re-login when currently logged in user changes their password).</li>
+</ol>
 <p>Let&rsquo;s take a look and see what type of audit event logs we have now, filtering with <code>owner=johnnybegood</code> as shown in the following command:</p>
 <pre><code class="bash">maas admin events query level=AUDIT owner=johnnybegood
 </code></pre>
@@ -557,21 +557,21 @@ Machine-readable output follows:
 }
 </code></pre>
 
-<p>As we can see above, only audit event logs for the user <code>johnnybegood</code> are generated. These events show the following:</p>
-<ul>
-<li>user for the event</li>
-<li>whether the event is associated with a particular node</li>
-<li>node&rsquo;s hostname</li>
-<li>event id</li>
-<li>level of the event</li>
-<li>when MAAS creates the event</li>
-<li>event type</li>
-<li>event description</li>
-</ul>
+<p>As we can see above, only audit event logs for the user <code>johnnybegood</code> are generated. These events show the following eight items:</p>
+<ol>
+<li>The user for the event</li>
+<li>Whether or not the event is associated with a particular node</li>
+<li>The node&rsquo;s hostname</li>
+<li>The event id</li>
+<li>The level of the event</li>
+<li>when MAAS created the event</li>
+<li>The event type</li>
+<li>The event description</li>
+</ol>
 <h2 id="heading--types-of-audit-event-logs">Types of audit event logs available</h2>
 
-<p>Here is a list of the types of audit event logs that are currently supported by MAAS:</p>
-<ul>
+<p>Here is a list of the nine types of audit event logs that are currently supported by MAAS:</p>
+<ol>
 <li>Password changes</li>
 <li>Permission changes</li>
 <li>API (OAuth) tokens created/deleted</li>
@@ -581,7 +581,7 @@ Machine-readable output follows:
 <li>User profile changes</li>
 <li>Commissioning script changes</li>
 <li>Test script changes</li>
-</ul>
+</ol>
     </div>
   </body>
 </html>

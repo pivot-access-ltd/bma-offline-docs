@@ -36,20 +36,16 @@
 
 The Machines and Devices pages contain a powerful interactive search bar that lets you filter machines and devices.  This article is designed to help you understand how to use this resource.
 
----
+#### Eight  questions you may have:
 
-Quick questions you may have:
-
-* [How can I do simple searches?](#heading--simple-searches)
-* [How can I do filtered searches?](#heading--filtered-searches)
-* [How can I create manual filters?](#heading--manual-filters)
-* [How do I set up exact matching?](#heading--exact-matching)
-* [How do I set up partial matching?](#heading--partial-matching)
-* [How can I include multiple search terms?](#heading--multiple-search-terms)
-* [What filter properties are available to me?](#heading--filter-properties)
-* [How can I search with the CLI?](#heading--cli)
-
----
+1. [How can I do simple searches?](#heading--simple-searches)
+2. [How can I do filtered searches?](#heading--filtered-searches)
+3. [How can I create manual filters?](#heading--manual-filters)
+4. [How do I set up exact matching?](#heading--exact-matching)
+5. [How do I set up partial matching?](#heading--partial-matching)
+6. [How can I include multiple search terms?](#heading--multiple-search-terms)
+7. [What filter properties are available to me?](#heading--filter-properties)
+8. [How can I search with the CLI?](#heading--cli)
 
 <h2 id="heading--simple-searches">Simple searches</h2>
 
@@ -102,29 +98,29 @@ MAAS uses boolean AND logic to evaluate multiple search terms. For example, when
 
 <h4 id="heading--filter-properties">Filter properties</h4>
 
-In addition to the major filtering categories available in the Filter drop-down menu, the following machine properties are available as filters:
+In addition to the major filtering categories available in the Filter drop-down menu, twenty-one machine properties are available as filters:
 
--   architecture
--   cores
--   cpu
--   distro_series
--   fqdn
--   ip_addresses
--   mac
--   pod
--   pod-id
--   pool
--   power
--   pxe_mac
--   pxe_mac_vendor
--   ram
--   release
--   spaces
--   status
--   storage
--   storage_tags
--   tags
--   zone
+1.   architecture
+2.   cores
+3.   cpu
+4.   distro_series
+5.   fqdn
+6.   ip_addresses
+7.   mac
+8.   pod
+9.   pod-id
+10.   pool
+11.   power
+12.   pxe_mac
+13.   pxe_mac_vendor
+14.   ram
+15.   release
+16.   spaces
+17.   status
+18.   storage
+19.   storage_tags
+20.   tags
+21.   zone
 
 For example, the following will search for a machine that has an interface with a specific MAC address marked for PXE booting:
 

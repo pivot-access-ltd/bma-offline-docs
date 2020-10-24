@@ -88,13 +88,13 @@ MAAS Image Builder is an alternative to [packer](https://www.packer.io/) for cre
 In order to use MAAS Image Builder, you must purchase [Ubuntu Advantage for Infrastructure](https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool).
 [/note]
 
-With the MAAS Image Builder, you can:
+With the MAAS Image Builder, you can do five key operations:
 
-* <a href="#imib">install MAAS Image Builder</a> via a private Canonical PPA (which you can request)
-* <a href="#bci">create custom CentOS images</a>
-* <a href="#bri">create custom RHEL images</a>
-* <a href="#bwi">create Windows images</a>
-* <a href="#doci">create other kinds of custom images</a>
+1. <a href="#imib">install MAAS Image Builder</a> via a private Canonical PPA (which you can request)
+2. <a href="#bci">create custom CentOS images</a>
+3. <a href="#bri">create custom RHEL images</a>
+4. <a href="#bwi">create Windows images</a>
+5. <a href="#doci">create other kinds of custom images</a>
 
 You can customise most images as much or as little as you wish, then use them to commission machines with MAAS. 
 
@@ -123,11 +123,11 @@ MAAS already provides the latest available CentOS 6, CentOS 7, and CentOS 8 for 
 
 <h4>Network Requirements</h4>
 
-Access to the Internet is required, since you will need to start with one of these:
+Access to the Internet is required, since you will need to start with one of these three sites:
 
- - https://mirror.centos.org  - OS, updates, and extra repositories
- - https://download.fedoraproject.org  - EPEL
- - https://copr-be.cloud.fedoraproject.org - Canonical maintained cloud-init repository
+1. https://mirror.centos.org  - OS, updates, and extra repositories
+2. https://download.fedoraproject.org  - EPEL
+3. https://copr-be.cloud.fedoraproject.org - Canonical maintained cloud-init repository
 
 <h4>Creating images behind a proxy</h4>
 
@@ -161,11 +161,11 @@ Currently, MAAS _only_ supports RHEL as a custom image. In future versions of MA
 
 <h4>Some Requirements</h4>
 
-In order to create RHEL images, you will need access to:
+In order to create RHEL images, you will need access to these three sites:
 
-* A RHEL DVD ISO - Contains all RHEL archives which are not available without a license
-* https://download.fedoraproject.org - Access to the EPEL repository to install required deps
-* https://copr-be.cloud.fedoraproject.org - Access to the Canonical maintained cloud-init copr repository
+1. A RHEL DVD ISO - Contains all RHEL archives which are not available without a license
+2. https://download.fedoraproject.org - Access to the EPEL repository to install required deps
+3. https://copr-be.cloud.fedoraproject.org - Access to the Canonical maintained cloud-init copr repository
 
 <h4>Creating images behind a proxy</h4>
 
@@ -192,14 +192,14 @@ In this example, Windows Hyper-V 2012 R2 is used, but rest assured that multiple
 
 http://technet.microsoft.com/en-US/evalcenter/dn205299.aspx
 
-Other supported versions include (for --windows-edition):
+There are six other supported versions (for --windows-edition):
 
-* win2012
-* win2012r2
-* win2012hv
-* win2012hvr2
-* win2016
-* win2016hv
+1. win2012
+2. win2012r2
+3. win2012hv
+4. win2012hvr2
+5. win2016
+6. win2016hv
 
 <h4>Image Builder</h4>
 

@@ -36,103 +36,125 @@
 
 MAAS VM hosts allow for the dynamic composition of nodes from a pool of available hardware resources (e.g. disk space, memory, cores).  You can create virtual machines (VMs) as needed within the limits of your resources, without concern for physical hardware.  MAAS currently supports VM hosts and VMs created via [libvirt^](https://ubuntu.com/server/docs/virtualization-libvirt).  As part of MAAS 2.8, we also support LXD VMs and VM hosts as a Beta feature.
 
-VM hosts are particularly useful for Juju integration, allowing for dynamic allocation of VMs with custom interface constraints. Alternatively, if you would like to use MAAS to manage a collection of VMs, the robust web UI allows you to easily create and manage VMs, logically grouped by VM host.  Conspicuous features include:
+VM hosts are particularly useful for Juju integration, allowing for dynamic allocation of VMs with custom interface constraints. Alternatively, if you would like to use MAAS to manage a collection of VMs, the robust web UI allows you to easily create and manage VMs, logically grouped by VM host.  Six conspicuous features include:
 
--   Juju integration
--   At-a-glance visual tools for easy resource management
--   Set overcommit ratios for physical resources such as CPU and RAM
--   Assign VMs to resource pools to segregate your VMs into logical groupings
--   Track VM host storage pool usage and assign default storage pools
--   Create VMs on multiple networks, specified by space, subnet, VLAN, or IP address
+1.   Juju integration
+2.   At-a-glance visual tools for easy resource management
+3.   Set overcommit ratios for physical resources such as CPU and RAM
+4.   Assign VMs to resource pools to segregate your VMs into logical groupings
+5.   Track VM host storage pool usage and assign default storage pools
+6.   Create VMs on multiple networks, specified by space, subnet, VLAN, or IP address
 
 This section will lead you through the creation, usage, and management of VM hosts.  Note that, as LXD VM hosts are still in Beta, some screen terminology has not yet been changed to reflect "VM host" instead of "KVM."  You will still use the "KVM" tab on the top of the MAAS dashboard to reach the VM host functionality, and you may see buttons which refer to "Add KVM," for example, instead of "Add VM host."  Rest assured that the Beta LXD VM host functionality is fully available through these channels.
 
-#### Quick questions you may have:
-
 <!-- deb-2-7-cli
-* [What is a VM host?](#heading--what-is-a-vm-host)
-* [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-* [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3216#heading--set-up-ssh)
-* [How do I add a VM host?](/t/adding-a-vm-host/2292)
+#### Four questions you may have:
+
+1. [What is a VM host?](#heading--what-is-a-vm-host)
+2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
+3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3216#heading--set-up-ssh)
+4. [How do I add a VM host?](/t/adding-a-vm-host/2292)
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-* [What is a VM host?](#heading--what-is-a-vm-host)
-* [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-* [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3217#heading--set-up-ssh)
-* [How do I add a VM host?](/t/adding-a-vm-host/2293)
+#### Four questions you may have:
+
+1. [What is a VM host?](#heading--what-is-a-vm-host)
+2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
+3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3217#heading--set-up-ssh)
+4. [How do I add a VM host?](/t/adding-a-vm-host/2293)
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-* [What is a VM host?](#heading--what-is-a-vm-host)
-* [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-* [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3218#heading--set-up-ssh)
-* [How do I add a VM host?](/t/adding-a-vm-host/2294)
+#### Four questions you may have:
+
+1. [What is a VM host?](#heading--what-is-a-vm-host)
+2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
+3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3218#heading--set-up-ssh)
+4. [How do I add a VM host?](/t/adding-a-vm-host/2294)
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-* [What is a VM host?](#heading--what-is-a-vm-host)
-* [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-* [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3219#heading--set-up-ssh)
-* [How do I add a VM host?](/t/adding-a-vm-host/2295)
+#### Four questions you may have:
+
+1. [What is a VM host?](#heading--what-is-a-vm-host)
+2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
+3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3219#heading--set-up-ssh)
+4. [How do I add a VM host?](/t/adding-a-vm-host/2295)
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-* [What is a VM host?](#heading--what-is-a-vm-host)
-* [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-* [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3220#heading--set-up-ssh)
-* [How do I add a VM host?](/t/adding-a-vm-host/2296)
+#### Four questions you may have:
+
+1. [What is a VM host?](#heading--what-is-a-vm-host)
+2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
+3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3220#heading--set-up-ssh)
+4. [How do I add a VM host?](/t/adding-a-vm-host/2296)
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-* [What is a VM host?](#heading--what-is-a-vm-host)
-* [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-* [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3221#heading--set-up-ssh)
-* [How do I add a VM host?](/t/adding-a-vm-host/2297)
+#### Four questions you may have:
+
+1. [What is a VM host?](#heading--what-is-a-vm-host)
+2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
+3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3221#heading--set-up-ssh)
+4. [How do I add a VM host?](/t/adding-a-vm-host/2297)
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-* [What is a VM host?](#heading--what-is-a-vm-host)
-* [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-* [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3210#heading--set-up-ssh)
-* [How do I add a VM host?](/t/adding-a-vm-host/2286)
+#### Four questions you may have:
+
+1. [What is a VM host?](#heading--what-is-a-vm-host)
+2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
+3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3210#heading--set-up-ssh)
+4. [How do I add a VM host?](/t/adding-a-vm-host/2286)
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-* [What is a VM host?](#heading--what-is-a-vm-host)
-* [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-* [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3211#heading--set-up-ssh)
-* [How do I add a VM host?](/t/adding-a-vm-host/2287)
+#### Four questions you may have:
+
+1. [What is a VM host?](#heading--what-is-a-vm-host)
+2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
+3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3211#heading--set-up-ssh)
+4. [How do I add a VM host?](/t/adding-a-vm-host/2287)
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-* [What is a VM host?](#heading--what-is-a-vm-host)
-* [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-* [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3212#heading--set-up-ssh)
-* [How do I add a VM host?](/t/adding-a-vm-host/2288)
+#### Four questions you may have:
+
+1. [What is a VM host?](#heading--what-is-a-vm-host)
+2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
+3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3212#heading--set-up-ssh)
+4. [How do I add a VM host?](/t/adding-a-vm-host/2288)
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-* [What is a VM host?](#heading--what-is-a-vm-host)
-* [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-* [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3213#heading--set-up-ssh)
-* [How do I add a VM host?](/t/adding-a-vm-host/2289)
+#### Four questions you may have:
+
+1. [What is a VM host?](#heading--what-is-a-vm-host)
+2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
+3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3213#heading--set-up-ssh)
+4. [How do I add a VM host?](/t/adding-a-vm-host/2289)
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-* [What is a VM host?](#heading--what-is-a-vm-host)
-* [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-* [Tell me about VMs and NUMA.](#heading--vnuma)
-* [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3214#heading--set-up-ssh)
-* [How do I add a VM host?](/t/adding-a-vm-host/2290)
+#### Five questions you may have:
+
+1. [What is a VM host?](#heading--what-is-a-vm-host)
+2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
+3. [Tell me about VMs and NUMA.](#heading--vnuma)
+4. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3214#heading--set-up-ssh)
+5. [How do I add a VM host?](/t/adding-a-vm-host/2290)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-* [What is a VM host?](#heading--what-is-a-vm-host)
-* [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-* [Tell me about VMs and NUMA.](#heading--vnuma)
-* [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3215#heading--set-up-ssh)
-* [How do I add a VM host?](/t/adding-a-vm-host/2291)
+#### Five questions you may have:
+
+1. [What is a VM host?](#heading--what-is-a-vm-host)
+2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
+3. [Tell me about VMs and NUMA.](#heading--vnuma)
+4. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3215#heading--set-up-ssh)
+5. [How do I add a VM host?](/t/adding-a-vm-host/2291)
  snap-2-9-ui -->
 
 <h2 id="heading--what-is-a-vm-host">What is a VM host?</h2>
@@ -151,12 +173,12 @@ MAAS provides extensive optimization tools for using NUMA with virtual machines.
 
 In addition, you can get a bird's-eye view of network configuration:
 
-* You can see which VM NIC/bond is connected to which NUMA node.
-* You can tell when a NIC is connected to a different NUMA node.
-* You can tell if one of multiple NICs is not in the correct node.
-* You can confirm the subnet and space connecting to a VM.
-* You can confirm that a VM has the desired network properties, such as latency and throughput.
-* You can identify NICs that support SR-IOV and tell how many VFs are available.
+1. You can see which VM NIC/bond is connected to which NUMA node.
+2. You can tell when a NIC is connected to a different NUMA node.
+3. You can tell if one of multiple NICs is not in the correct node.
+4. You can confirm the subnet and space connecting to a VM.
+5. You can confirm that a VM has the desired network properties, such as latency and throughput.
+6. You can identify NICs that support SR-IOV and tell how many VFs are available.
 
 This functionality also helps you identify cores which are have `isolcpus` set and guides you to those cores when specifying VMS, indicating when a non-isolcpus core might be unsuitable for pinning. MAAS also highlights when a VM is not pinned to a specific core.  Not using `isolcpus` cores, or using unpinned VMs, can have significant performance impacts, since those cores can be interrupted by the general scheduler and co-opted to perform non-node-related tasks, without warning.
 

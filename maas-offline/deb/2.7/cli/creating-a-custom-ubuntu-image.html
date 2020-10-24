@@ -519,7 +519,7 @@ MAAS supports deploying custom DD or TGZ images. Canonical provides both [lp:maa
 <li>All GNU/Linux custom images should be created as a TGZ to enable storage customisation. When a DD.GZ is used MAAS/Curtin simply writes the file to the filesystem.</li>
 </ol>
 <h1>How to create a custom Ubuntu image for MAAS</h1>
-<p>Note: LXD may prevent device files from being created when extracting the rootfs, it is suggested to do this on metal or on a VM</p>
+<p>Note: LXD may prevent device files from being created when extracting the rootfs, it is suggested to do this on metal or on a VM:</p>
 <ol>
 <li>Download the rootfs from images.maas.io
     <code>wget http://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64-root.tar.xz</code></li>

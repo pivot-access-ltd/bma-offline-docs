@@ -185,55 +185,55 @@ You can handle this lowest level with individual [machines](/t/machines/2735).  
 
 Assuming you've [installed libvirt](https://help.ubuntu.com/lts/serverguide/libvirt.html) on the machine where you'll be running MAAS, you can create virtual machines like this:
 
-1. Open the Virtual Machine Manager application.  You'll see a screen that looks something like this:
+Open the Virtual Machine Manager application.  You'll see a screen that looks something like this:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/f66940a21313a27734bcaef6c539d36a720a6834.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f66940a21313a27734bcaef6c539d36a720a6834.jpeg"></a> 
 
-2. Choose File --> New Virtual Machine, which brings you to a corresponding dialog:
+Choose File --> New Virtual Machine, which brings you to a corresponding dialog:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/0702d9f2ab4c3659d13be553449093548a9e2f10.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0702d9f2ab4c3659d13be553449093548a9e2f10.jpeg"></a> 
 
-3. Select the "Network Boot (PXE)" option and click the "Forward" button:
+Select the "Network Boot (PXE)" option and click the "Forward" button:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/0000fb5f072f2b3668465753ae6a713859d8a444.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0000fb5f072f2b3668465753ae6a713859d8a444.jpeg"></a>
 
-4.  Choose the "Generic..." operating system by typing the first letters of "Generic" in the text box and selecting the relevant choice when it becomes available, then go Forward:
+Choose the "Generic..." operating system by typing the first letters of "Generic" in the text box and selecting the relevant choice when it becomes available, then go Forward:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/041914a0718633fce685ac7919e2478da0e62c1b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/041914a0718633fce685ac7919e2478da0e62c1b.jpeg"></a> 
 
-5. For CPU and memory, you can usually accept the defaults:
+For CPU and memory, you can usually accept the defaults:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/5a46262e3573aae7252951b3331ac9e3f3ef69c4.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5a46262e3573aae7252951b3331ac9e3f3ef69c4.jpeg"></a> 
 
-6. whereas the storage values have a noticeable effect on local disk usage, so note that, generally, a VM only requires about 5.0 GiB, given an example exercise like this:
+The storage values have a noticeable effect on local disk usage, so note that, generally, a VM only requires about 5.0 GiB, given an example exercise like this:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/15f5e344c03bd1469c00333d466027e403c00ee8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/15f5e344c03bd1469c00333d466027e403c00ee8.jpeg"></a> 
 
-7. In the next screen, you'll have the chance to set a name; here, we've used a pseudo-MAC address, although you can name the machine whatever you want (and then return later to set the name to match the MAC address, if desired):
+In the next screen, you'll have the chance to set a name; here, we've used a pseudo-MAC address, although you can name the machine whatever you want (and then return later to set the name to match the MAC address, if desired):
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/d4191b100d963032d47fed1f198aea76e8de273e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/d4191b100d963032d47fed1f198aea76e8de273e.jpeg"></a> 
 
-8. Selecting "Finish" will create the virtual machine and attempt to boot it -- which will fail, since no device currently knows about this VM (and hence can't boot it).  Not to worry; you're not done yet:
+Selecting "Finish" will create the virtual machine and attempt to boot it -- which will fail, since no device currently knows about this VM (and hence can't boot it).  Not to worry; you're not done yet:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/09b4e50049c2a251d100113e50a241d0c4a06f51.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/09b4e50049c2a251d100113e50a241d0c4a06f51.jpeg"></a> 
 
-9. Select the "information" button (blue circle, white lowercase "i") to switch to the VM configuration screens, then select the "Boot Options" choice from the left-hand menu:
+Select the "information" button (blue circle, white lowercase "i") to switch to the VM configuration screens, then select the "Boot Options" choice from the left-hand menu:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/7b6cd37f7663db53571845da0159977092898fa4.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7b6cd37f7663db53571845da0159977092898fa4.jpeg"></a> 
 
-10. Turn off the "IDE" item under "Boot device order:"
+Turn off the "IDE" item under "Boot device order:"
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/54a8d6a77d9660e13aa1c0e278048ed1c751d65e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/54a8d6a77d9660e13aa1c0e278048ed1c751d65e.jpeg"></a> 
 
-11. When you select "Apply," a dialog will pop up to remind you that you need to restart this VM for changes to take effect:
+When you select "Apply," a dialog will pop up to remind you that you need to restart this VM for changes to take effect:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/6f4ab26216cc2951a202851869f7c7efc5691129.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/6f4ab26216cc2951a202851869f7c7efc5691129.jpeg"></a> 
 
-12. Switch to the "NIC..." option and set the "Network source" and "Device model" as shown, then select "Apply" and respond to the dialog:
+Switch to the "NIC..." option and set the "Network source" and "Device model" as shown, then select "Apply" and respond to the dialog:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/26fe981020c03e46c81e2bceed840bea7b2f14d6.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/26fe981020c03e46c81e2bceed840bea7b2f14d6.jpeg"></a> 
 
-13. You'll next select the drop-down arrow next to the "on/off" menu bar option and select "Force reset," then answer the prompt in the affirmative:
+You'll next select the drop-down arrow next to the "on/off" menu bar option and select "Force reset," then answer the prompt in the affirmative:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/537a485f0ff014aeb82afc71bc09b2988bf5cb56.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/537a485f0ff014aeb82afc71bc09b2988bf5cb56.jpeg"></a> 
 
@@ -346,15 +346,14 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 <summary><em>Try it!</em></summary>
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-Creating a machine from a VM requires a few pieces of information:
+Creating a machine from a VM requires six pieces of information:
 
- - the machine architecture (e.g., amd64)
- - the machine's MAC address
- - the power type (in this case, "virsh")
- - the parameters needed by the power type, in this case:
-   - the power ID
-   - the power address (which also contains a username)
-   - the power password
+1. the machine architecture (e.g., amd64)
+2. the machine's MAC address
+3. the power type (in this case, "virsh")
+4. the power ID
+5. the power address (which also contains a username)
+6. the power password
 
 Once you've collected this information, you'll want to create a new KVM like this:
 

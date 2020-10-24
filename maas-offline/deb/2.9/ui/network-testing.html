@@ -464,13 +464,13 @@
 
 <p>MAAS provides a comprehensive suite of network and link testing capabilities.  MAAS can check whether or not links are connected, detect slow links, and report link and interface speeds via UI or API.  In addition, you can test Internet connectivity against a user-provided list of URLs or IP addresses.  Bonded NICS will be separated during this testing, so that each side of a redundant interface is fully evaluated.</p>
 <p>Network testing also includes customisable network testing and commissioning scripts. There are no particular restrictions on these scripts, allowing you to test a wide variety of possible conditions and situations.</p>
-<h4>Quick questions you may have:</h4>
-<ul>
+<h4>Four questions you may have:</h4>
+<ol>
 <li><a href="#heading--network-link-testing">How do I use network link testing?</a></li>
 <li><a href="#heading--slow-link-detection">How can I detect slow network links?</a></li>
 <li><a href="#heading--network-validation-scripts-and-testing">How do I use network validation and testing scripts?</a></li>
 <li><a href="#heading--customisable-network-testing">How can I customise network testing?</a></li>
-</ul>
+</ol>
 <h2 id="heading--network-link-testing">Network link testing</h2>
 
 <p>MAAS can check whether links are connected or disconnected, so that you can detect unplugged cables.  If you are not running MAAS 2.7, you must first upgrade and then recommission your machines to find disconnected links.  MAAS not only reports unplugged cables, but also gives a warning when trying to configure a disconnected interface.  In addition, administrators can change the cable connection status after manually resolving the issue.</p>
@@ -546,11 +546,11 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 <p>MAAS can check this link and recognise that there’s no connectivity, which alleviates hard-to-detect network issues:</p>
 <p><a href="images/c4f81cb3ef1a90f0a46fb62c893a4cc9f7e5f45a.jpeg" target = "_blank"><img src="images/c4f81cb3ef1a90f0a46fb62c893a4cc9f7e5f45a.jpeg"></a></a> </p>
 <p>Users can now test their network configuration to check for:</p>
-<ul>
+<ol>
 <li>Interfaces which have a broken network configuration</li>
 <li>Bonds that are not fully operational</li>
 <li>Broken gateways, rack controllers, and Internet links</li>
-</ul>
+</ol>
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 In addition, MAAS can comprehensively test Internet connectivity testing. You can give a list of URLs or IP addresses to check:
 

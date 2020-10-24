@@ -49,10 +49,10 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 
-#### Quick questions you may have:
+#### Two questions you may have:
 
-* [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
-* [How can I set kernel boot options for a specific machine?](#heading--per-node-kernel-boot-options)
+1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](#heading--per-node-kernel-boot-options)
 
 <h2 id="heading--cli">Global kernel boot options</h2>
 

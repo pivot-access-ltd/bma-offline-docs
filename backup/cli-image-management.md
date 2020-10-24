@@ -1,16 +1,16 @@
 The following is a list of image management tasks to perform with the MAAS CLI.
 
-#### Quick questions you may have:
+#### Nine questions you may have:
 
-* [How do I get started with the MAAS CLI?](/t/maas-cli/802)
-* [What might I need to know about images?](/t/images/754)
-* [How do I list boot sources?](/t/cli-image-management/797#heading--list-boot-sources)
-* [How do I select images?](/t/cli-image-management/797#heading--select-image)
-* [How do I list image selections?](/t/cli-image-management/797#heading--list-image-selections)
-* [How do I import newly-selected images?](/t/cli-image-management/797#heading--import-newly-selected-images)
-* [How do I list currently available images?](/t/cli-image-management/797#heading--list-currently-available-images)
-* [How do I delete a boot source?](/t/cli-image-management/797#heading--delete-a-boot-source)
-* [How do I edit a boot source?](/t/cli-image-management/797#heading--edit-a-boot-source)
+1. [How do I get started with the MAAS CLI?](/t/maas-cli/802)
+2. [What might I need to know about images?](/t/images/754)
+3. [How do I list boot sources?](/t/cli-image-management/797#heading--list-boot-sources)
+4. [How do I select images?](/t/cli-image-management/797#heading--select-image)
+5. [How do I list image selections?](/t/cli-image-management/797#heading--list-image-selections)
+6. [How do I import newly-selected images?](/t/cli-image-management/797#heading--import-newly-selected-images)
+7. [How do I list currently available images?](/t/cli-image-management/797#heading--list-currently-available-images)
+8. [How do I delete a boot source?](/t/cli-image-management/797#heading--delete-a-boot-source)
+9. [How do I edit a boot source?](/t/cli-image-management/797#heading--edit-a-boot-source)
 
 <h2 id="heading--list-boot-sources">List boot sources</h2>
 
@@ -145,8 +145,8 @@ Once the source is added, proceed to the [Select and import](/t/select-and-impor
 
 Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/752) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
 
--   URL=https://$MIRROR/maas/images/ephemeral-v3/daily/
--   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
+1.   URL=https://$MIRROR/maas/images/ephemeral-v3/daily/
+2.   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
 
 Where $MIRROR is the mirror server's hostname or IP address.
 
@@ -154,7 +154,5 @@ Where $MIRROR is the mirror server's hostname or IP address.
 
 Recreate the default boot source if it was ever deleted using the following variable values:
 
--   URL=https://images.maas.io/ephemeral-v3/daily/
--   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
-
-<!-- LINKS -->
+1.   URL=https://images.maas.io/ephemeral-v3/daily/
+2.   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg

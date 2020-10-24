@@ -352,17 +352,29 @@ processor-frequency=2000 MHz
 Here's a quick breakdown of what you see in the script output:
 
 * **KERNEL INFO:** this is the output of `uname -a` -- the MAC address is the machine name in this case.
+
 * **KERNEL COMMAND LINE:** these are the kernel command line parameters, directed at various modules built into the kernel.  The function `modprobe` parses this kernel command line and collects the relevant module parameters when it loads a module.  Note that this command line could also be used to pull in loadable modules.
+
 * **CLOUD CONFIG QUERY:** a cloud-init query is used to retrieve cloud instance metadata used by cloud-init when booting an instance.  This section shows the specific metadata retrieved during cloud-init query for this machine.
+
 * **CPU CORE COUNT AND MODEL:** the data produced here is similar to the output you could retrieve by running `nproc` and then attempting a `cat /sys/devices/cpu/caps/pmu_name` -- and so on.  There several ways to retrieve this info, but all can produce the number and type of CPU(s) available.
+
 * **PCI INFO:** the devices, real or virtual, that are connected to the machine via PCI (Peripheral Component Interconnect) bus.
+
 * **USB INFO:** the devices, real or virtual, that are connected to the machine via USB bus.
+
 * **MODALIASES:** a modalias is a sysfs technique to capture the information that a hardware item exposes to the kernel, with the file basically providing a template or structure for this information.  Each of the entries in this list describe one particular part of the machine's (real or virtual) hardware, down to the level of alarm timers, framebuffers, and even speakers.  In the event of a bug, this information can help your support engineer (or yourself) understand exactly what hardware is configured for this machine.
+
 * **SERIAL PORTS:** this section just lists the serial devices made available on this machine.
+
 * **NETWORK INTERFACES:** summarises the network interfaces available on this machine -- essentially an abbreviated version of the output from some form of an `ip` command.
+
 * **BLOCK DEVICE SUMMARY:** a thumbnail sketch of the block devices (usually storage) available on this machine.
+
 * **#dmidecode...:** this section presents the basic DMI data, including the BIOS type, extent, size, and table location.
+
 * **DMI DATA:** the raw (undecoded) DMI table for this machine, presented for verification of the following DMI data sections, if desired.
+
 * **DMI KEYPAIRS:** the individual machine specifications, as decoded from the DMI table.  The manpage **dmidecode (8)** gives more details on each of these keypairs.
 
 <!-- snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli
@@ -1007,20 +1019,35 @@ snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
 This output is roughly equivalent to the output of `lshw -xml` on the machine in question.  There are many references to decode this information, so for now, here is a short glossary of most the terms (essentially, the tags) that typically appear in a listing like this:
 
 * **businfo** - the bus information for this device.
+
 * **capacity** - the maximum capacity reported by the device.
+
 * **class** - the device's class.
+
 * **clock** - the bus clock of the device (in Hz).
+
 * **description** - a human-readable description of the hardware node.
+
 * **dev** - the device number (major.minor).
+
 * **id** - the internal identifier used by `lshw`.
+
 * **logicalname** - the logical node name used by the system.
+
 * **physid** - the physical id of the device.
+
 * **product** - the specific product name of the device.
+
 * **serial** - the serial number of the device.
+
 * **size** - the actual size of the device.
+
 * **slot** - location of the physical (or virtual) connection.
+
 * **vendor** - the name of the vendor or manufacturer of the device.
+
 * **version** - the version or release information associated with the device.
+
 * **width** - the address width of the device (32/64 bits).
 
 Some additional fields may be present in this output.  These will be identified and described as necessary for specific instances and situations.
@@ -1130,11 +1157,17 @@ virtio:d00000005v00001AF4
 The output is similar to the modaliases output shown in the `00-maas-00-support-info` output.  Here, we can decode some of the fields for a PCI entry, for example, set off my one or more consecutive letters:
 
 * **v** marks a vendor code.
+
 * **d** indicates a device code.
+
 * **sv** precedes a subvendor code.
+
 * **sd** sets off a subdevice code.
+
 * **bc** indicates a bus class code.
+
 * **sc** denotes a bus subclass code.
+
 * **i** is followed by an interface code.
 
 There are many more fields, depending upon the device type, and a wide variety of codes for every field for every device.  Every bus has its own schema for modalias -- hence, cataloguing these combinations is beyond the scope of this document set.  Understanding the way these codes are constructed, though, may help you know how to find needed information for a specific situation.

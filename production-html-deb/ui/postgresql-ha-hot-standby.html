@@ -463,14 +463,14 @@
  snap-2-9-ui -->
 
 <p><strong>Disclaimer: These <em>notes</em> give an idea of what is involved in setting up &lsquo;hot standby&rsquo; HA mode in PostgreSQL. The below procedures are not regularly tested. Please use the <a href="https://www.postgresql.org/docs/9.5/static/high-availability.html">PostgreSQL documentation</a> when setting up HA on PostgreSQL.</strong></p>
-<p>The following variables are used on this page:</p>
-<ul>
+<p>Five variables are used on this page:</p>
+<ol>
 <li>PRIMARY_PG_IP: The IP address of the host that contains the primary database.</li>
 <li>SECONDARY_PG_IP: The IP address of the host that contains the secondary database.</li>
 <li>REP_USER: The internal database user that manages replication on the primary.</li>
 <li>REP_USER_PW: The password of the replication user.</li>
 <li>REP_ARCHIVE: The directory where the database will place files to be replicated.</li>
-</ul>
+</ol>
 <p>Their values are represented when they are preceded with the &lsquo;$&rsquo; character (e.g. $REP_USER_PW). These are to be replaced with actual values in the commands and files below.</p>
 <h2 id="heading--primary">Primary</h2>
 
@@ -517,11 +517,11 @@ max_wal_senders = 3
 
 <p>Perform these actions on the secondary host.</p>
 <p>This host should ideally match the primary host in terms of:</p>
-<ul>
+<ol>
 <li>CPU architecture</li>
 <li>OS type and version</li>
 <li>PostgreSQL version</li>
-</ul>
+</ol>
 <p>Replication has been known to fail due to an architecture mismatch.</p>
 <h3 id="heading--install-postgresql-and-stop-the-service">Install PostgreSQL and stop the service</h3>
 
@@ -587,7 +587,6 @@ primary_conninfo = 'host=$PRIMARY_PG_IP port=5432 user=$REP_USER password=$REP_U
 <p>This includes any hosts that are being used for API servers or rack controllers (&lsquo;pmatulis-imp-maas&rsquo; in this example). There are 4 regular MAAS nodes.</p>
 <p>To quickly check that replication is working simply (temporarily) rename a node&rsquo;s hostname in the web UI and re-invoke the above command to see if the change is reflected.</p>
 <p>Another test could be to change the status of a node, for example, by Commissioning or Deploying (a status of &lsquo;4&rsquo; is &lsquo;Ready&rsquo; and a status of &lsquo;6&rsquo; is &lsquo;Deployed&rsquo;).</p>
-<!-- LINKS -->
     </div>
   </body>
 </html>

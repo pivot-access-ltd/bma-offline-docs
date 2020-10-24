@@ -537,9 +537,9 @@ MAAS 2.7 allows you to configure network connectivity testing in a number of way
 
 Users can now test their network configuration to check for:
 
-* Interfaces which have a broken network configuration
-* Bonds that are not fully operational
-* Broken gateways, rack controllers, and Internet links
+1. Interfaces which have a broken network configuration
+2. Bonds that are not fully operational
+3. Broken gateways, rack controllers, and Internet links
 
 In addition, Internet connectivity testing has been greatly expanded. Previously, MAAS gave a yes/no link check during network testing. Now you can give a list of URLs or IP addresses to check. In the ephemeral environment, standard DHCP is still applied, but when network testing runs, we can apply your specific configuration for the duration of the test. While all URLs / IPs are tested with all interfaces, we do test each of your interfaces individually, including breaking apart bonded NICS and testing each side of your redundant interfaces. You can also run different tests on each pass, e.g., a different set of URLs, although each run would be a different testing cycle. For testing individual interfaces, you can use the API.
 
@@ -591,26 +591,28 @@ Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 Beta<big>**5*
 NOTE that this is currently a Beta release, so there will be bugs, instabilities, and missing features. Please remember to [file a bug^](https://bugs.launchpad.net/maas/+filebug) if you find one, and please interact with the developers on [discourse^](https://discourse.maas.io/).
 
 
-<h4>Quick questions you may have:</h4>
+#### What are the new features & fixes for MAAS 2.9?
 
-- [What are the new features & fixes for 2.9?](#heading--release-notes)
-  - [**BMC/IPMI default parameter additions**](#heading--bmc-param-additions)
-  - [**New global IPMI configuration options**](#heading--new-config-options)
-  - [**Addition of IPMI config options to UI**](#heading--global-config-settings)
-  - [**New MAAS CLI power command**](#heading--maas-power)
-  - [Commissioning speed improvements](#heading--commissioning-speed)
-  - [BMC improvements](#heading--bmc-improve)
-  - [IPMI power driver upgrades](#heading--ipmi-driver)
-  - [Enlistment script improvements](#heading--enlistment-scripts)
-  - [Commissioning script improvements](#heading--commissioning-scripts)
-  - [Commissioning script reordering](#heading--commissioning-reorder)
-  - [Reader Adaptive Documentation](#heading--rad)
-  - [Offline documentation](#heading--offline-docs)
-- [What known issues should I be aware of?](#heading--known-issues)
-- [How do I install MAAS 2.9 Beta?](maas-installation.html)
-- [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 Beta snap?](maas-installation.html#heading--upgrade-maas-snap)
-- [How do I install MAAS 2.9 Beta from packages?](maas-installation.html)
-- [What bugs are fixed so far in this release?](#heading--bug-fixes)
+1. [**BMC/IPMI default parameter additions**](#heading--bmc-param-additions)
+2. [**New global IPMI configuration options**](#heading--new-config-options)
+3. [**Addition of IPMI config options to UI**](#heading--global-config-settings)
+4. [**New MAAS CLI power command**](#heading--maas-power)
+5. [Commissioning speed improvements](#heading--commissioning-speed)
+6. [BMC improvements](#heading--bmc-improve)
+7. [IPMI power driver upgrades](#heading--ipmi-driver)
+8. [Enlistment script improvements](#heading--enlistment-scripts)
+9. [Commissioning script improvements](#heading--commissioning-scripts)
+10. [Commissioning script reordering](#heading--commissioning-reorder)
+11. [Reader Adaptive Documentation](#heading--rad)
+12. [Offline documentation](#heading--offline-docs)
+
+<h4>Five other questions you may have:</h4>
+
+1. [What known issues should I be aware of?](#heading--known-issues)
+2. [How do I install MAAS 2.9 Beta?](maas-installation.html)
+3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 Beta snap?](maas-installation.html#heading--upgrade-maas-snap)
+4. [How do I install MAAS 2.9 Beta from packages?](maas-installation.html)
+5. [What bugs are fixed so far in this release?](#heading--bug-fixes)
 
 <h2 id="heading--release-notes">New features in 2.9 Beta5</h2>
 
@@ -618,20 +620,19 @@ MAAS 2.9 Beta5 is currently scheduled for release on 02 October 2020, bringing t
 
 <h3 id="heading--bmc-param-additions">30-maas-01-bmc-config parameter additions</h3>
 
-The following additional parameters have been added for IPMI BMC configuration.  These parameters will pull from the global defaults, eliminating the need to set the corresponding parameter in each instance.
+Four new parameters have been added for IPMI BMC configuration.  These parameters will pull from the global defaults, eliminating the need to set the corresponding parameter in each instance.
 
- * maas_auto_ipmi_user - The username for the MAAS created IPMI user. Default comes from the global configuration setting.
- * maas_auto_ipmi_user_password - The password for the MAAS created IPMI user, by default a random password is generated.
- * maas_auto_ipmi_k_g_bmc_key - he IPMI K_g preshared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting.
- * maas_auto_ipmi_user_privilege_level - The IPMI user privilege level to use when adding the MAAS IPMI user. Possible options are USER, OPERATOR, or ADMIN. Default comes from the global configuration setting.
+1. maas_auto_ipmi_user - The username for the MAAS created IPMI user. Default comes from the global configuration setting.
+2. maas_auto_ipmi_user_password - The password for the MAAS created IPMI user, by default a random password is generated.
+3. maas_auto_ipmi_k_g_bmc_key - he IPMI K_g preshared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting.
+4. maas_auto_ipmi_user_privilege_level - The IPMI user privilege level to use when adding the MAAS IPMI user. Possible options are USER, OPERATOR, or ADMIN. Default comes from the global configuration setting.
 
 <h3 id="heading--new-config-options">New global IPMI configuration options</h3>
 
-The following new global IPMI configuration options have been added:
+Two new global IPMI configuration options have been added:
 
- * maas_auto_ipmi_k_g_bmc_key - sets a global default IPMI BMC key.
-
- * maas_auto_ipmi_user_privilege_level - sets a global default IPMI BMC user privilege level.
+1. maas_auto_ipmi_k_g_bmc_key - sets a global default IPMI BMC key.
+2. maas_auto_ipmi_user_privilege_level - sets a global default IPMI BMC user privilege level.
 
 <h3 id="heading--global-config-settings">Addition of IPMI config options to UI</h3>
 
@@ -647,11 +648,10 @@ Available in all MAAS 2.9 Beta releases is the new `maas.power` CLI command. Thi
 
 <h3 id="heading--rad">IPMI BMC detection improvements (RAD)</h3>
 
-This release improves the IPMI BMC detection capability:
+This release adds two improvements to IPMI BMC detection capability:
 
-* The IPMI cipher suite ID will now be automatically detected. MAAS tries to find the most secure cipher suite available. Preference order is 17, 3, 8, 12. If detection fails MAAS will fall back to using freeipmi-tool default, 3, which is what previous versions of MAAS use.
-
-* The IPMI K_g BMC key will now be automatically detected if previously set. 
+1. The IPMI cipher suite ID will now be automatically detected. MAAS tries to find the most secure cipher suite available. Preference order is 17, 3, 8, 12. If detection fails MAAS will fall back to using freeipmi-tool default, 3, which is what previous versions of MAAS use.
+2. The IPMI K_g BMC key will now be automatically detected if previously set. 
 
 <h2 id="heading--release-notes">New features in 2.9 Beta3</h2>
 
@@ -667,19 +667,19 @@ This release will include offline documentation for those users whose MAAS insta
 
 <h2 id="heading--bmc-improve">BMC improvements</h2>
 
-A number of substantial improvements to BMC usage have been released, including the following:
+Three substantial improvements to BMC usage have been released:
 
-*  IPMI, HP Moonshot, and Facebook Wedge BMC detection and configuration scripts have been migrated to the commissioning script `30-maas-01-bmc-config `.
-* BMC detection and configuration are now logged to commissioning results.
-* If BMC configuration is skipped a ScriptResult will log this result, and indicate which user chose to skip the configuration step.
+1. IPMI, HP Moonshot, and Facebook Wedge BMC detection and configuration scripts have been migrated to the commissioning script `30-maas-01-bmc-config `.
+2. BMC detection and configuration are now logged to commissioning results.
+3. If BMC configuration is skipped a ScriptResult will log this result, and indicate which user chose to skip the configuration step.
 
 <h3 id="heading--ipmi-driver">IPMI power driver upgrades</h3>
 
-Three new configuration options have been added to the IPMI power driver, including:
+Three new configuration options have been added to the IPMI power driver:
 
-* K_g - The BMC Key of the IPMI device. Used to encrypt all traffic to and from the device during communication.
-* Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
-* Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
+1. K_g - The BMC Key of the IPMI device. Used to encrypt all traffic to and from the device during communication.
+2. Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
+3. Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
 
 See the [2.9 UI](https://maas.io/docs/snap/2.9/ui/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docs/snap/2.9/cli/power-management#heading--ipmi) power management pages for details.
 
@@ -689,11 +689,13 @@ MAAS 2.9 Beta2 was released on 11 September 2020 and brings the following update
 
 <h3 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
 
-Script flow and capabilities have been improved in the following ways:
+Script flow and capabilities have been improved in three ways:
 
-* `maas-run-remote-scripts` can now enlist machines.
-* Enlistment `user_data` scripts have been removed.
-* The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.
+<ol>
+<li>`maas-run-remote-scripts` can now enlist machines.</li>
+<li>Enlistment `user_data` scripts have been removed.</li>
+<li> The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.</li>
+</ol>
 
 <h2 id="heading--release-notes">New features in 2.9 Beta1</h2>
 
@@ -701,48 +703,64 @@ MAAS 2.9 Beta1 was released on 08 September 2020 and brings the following update
 
 <h3 id="heading--commissioning-scripts">Major improvements to commissioning script capabilities</h3>
 
-The following major changes were made to commissioning script flow and capabilities:
+Seven major improvements were made to commissioning script flow and capabilities:
 
-* Commissioning scripts can now send BMC configuration data:
-* Commissioning scripts can now be used to configure BMC data. 
-* The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts.   
-* These scripts may write BMC power credentials to BMC_CONFIG_PATH in a YAML format where each key is the power parameter. 
-* If the commissioning script returns 0, it will be sent to MAAS. 
-* The first script to write BMC_CONFIG_PATH is the only script that may configure the BMC, allowing you to override MAAS's builtin BMC detection.
-* All builtin commissioning scripts have been migrated into the database.
+<ol>
+<li>Commissioning scripts can now send BMC configuration data</li>
+<li>Commissioning scripts can now be used to configure BMC data. </li>
+<li>The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts. </li>
+<li>These scripts may write BMC power credentials to BMC_CONFIG_PATH in a YAML format where each key is the power parameter. </li>
+<li>If the commissioning script returns 0, it will be sent to MAAS. </li>
+<li>The first script to write BMC_CONFIG_PATH is the only script that may configure the BMC, allowing you to override MAAS's builtin BMC detection.</li>
+<li>All builtin commissioning scripts have been migrated into the database.</li>
+</ol>
 
 <h3 id="heading--commissioning-reorder">Commissioning script reordering</h3>
 
-Commissioning scripts have been reordered and some are now set to run in parallel. You can now easily set a script to run before the builtin MAAS commissioning scripts.  Here are the changes:
+Commissioning scripts have been reordered and some are now set to run in parallel. You can now easily set a script to run before the builtin MAAS commissioning scripts. There are nine signficant changes:
 
-* 00-maas-03-install-lldpd -> 20-maas-01-install-lldpd
-* 00-maas-05-dhcp-unconfigured-ifaces -> 20-maas-02-dhcp-unconfigured-ifaces
-* 99-maas-05-kernel-cmdline -> maas -kernel-cmdline
-* 00-maas-00-support-info -> maas-support-info(now runs in parallel)
-* 00-maas-01-lshw -> maas-lshw(now runs in parallel)
-* 00-maas-04-list-modaliases -> maas-list-modaliases(now runs in parallel)
-* 00-maas-06-get-fruid-api-data -> maas-get-fruid-api-data(now runs in parallel)
-* 00-maas-08-serial-ports -> maas-serial-ports(now runs in parallel)
-* 99-maas-01-capture-lldp -> maas-capture-lldp(now runs in parallel)
+<ol>
+<li>00-maas-03-install-lldpd -> 20-maas-01-install-lldpd</li>
+
+<li>00-maas-05-dhcp-unconfigured-ifaces -> 20-maas-02-dhcp-unconfigured-ifaces</li>
+
+<li>99-maas-05-kernel-cmdline -> maas -kernel-cmdline</li>
+
+<li>00-maas-00-support-info -> maas-support-info(now runs in parallel)</li>
+
+<li>00-maas-01-lshw -> maas-lshw(now runs in parallel)</li>
+
+<li>00-maas-04-list-modaliases -> maas-list-modaliases(now runs in parallel)</li>
+
+<li>00-maas-06-get-fruid-api-data -> maas-get-fruid-api-data(now runs in parallel)</li>
+
+<li>00-maas-08-serial-ports -> maas-serial-ports(now runs in parallel)</li>
+
+<li>99-maas-01-capture-lldp -> maas-capture-lldp(now runs in parallel)</li>
+</ol>
 
 See the [commissioning logs page](https://maas.io/docs/snap/2.9/ui/commissioning-logs) for more details on these changes.
 
 <h3 id="heading--commissioning-speed">Improvements in commissioning speed and logging</h3>
 
-The following improvements have been made to speed up the commissioning process, mostly by running scripts in parallel (see above):
+Four improvements have been made to speed up the commissioning process, mostly by running scripts in parallel (see above):
 
-* Commissioning should now take 60s.
-* Logging has been added to 20-maas-01-install-lldpd  (commissioning log output).
-* Logging added to 20-maas-02-dhcp-unconfigured-ifaces (commissioning log output).
-* `user_data` can now be input directly into the UI.
+<ol>
+<li>Commissioning should now take 60s.</li>
+<li>Logging has been added to 20-maas-01-install-lldpd  (commissioning log output).</li>
+<li>Logging added to 20-maas-02-dhcp-unconfigured-ifaces (commissioning log output).</li>
+<li>`user_data` can now be input directly into the UI.</li>
+</ol>
 
 <h2 id="heading--bug-fixes">Bug fixes</h2>
 
 <h2 id="heading--known-issues">Known issues</h2>
 
-* **RAD LHS menu:** There is a known issue with the Reader Adaptive Documentation left-hand-side menu (navigation), in that the menu links cannot currently be adapted to the RAD parameters.  This means that selecting a different page in the LHS menu will take you the the RAD for the current recommended version (in this case, Snap/2.8/UI).  Every page that is different in RAD, though, should present you with a top menu, so that you can choose the RAD parameters matching your own preferences. 
+<ol>
+<li><strong>RAD LHS menu:</strong> There is a known issue with the Reader Adaptive Documentation left-hand-side menu (navigation), in that the menu links cannot currently be adapted to the RAD parameters.  This means that selecting a different page in the LHS menu will take you the the RAD for the current recommended version (in this case, Snap/2.8/UI).  Every page that is different in RAD, though, should present you with a top menu, so that you can choose the RAD parameters matching your own preferences. </li>
 
-* ** Beta4 snap builds:** The Beta4 snap builds may not work on ARM64 or PPC64 architectures, due to a build issue which is currently being resolved.
+<li><strong>Beta4 snap builds:</strong>The Beta4 snap builds may not work on ARM64 or PPC64 architectures, due to a build issue which is currently being resolved.</li>
+<ol>
 snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui -->
 
 <!-- snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui
@@ -762,14 +780,14 @@ Thanks to everyone who reported the issues with previous 2.7 releases and helped
 
 Following on from MAAS 2.7, we are happy to announce that MAAS 2.8 is now available. This release features some critical bug fixes, along with some exciting new features.
 
-<h4>Quick questions you may have:</h4>
+<h4>Six questions you may have:</h4>
 
-- [What are the new features & fixes for 2.8?](#heading--2-8-release-notes)
-- [What known issues should I be aware of?](#heading--2-8-known-issues)
-- [How do I install MAAS 2.8 as a snap?](maas-installation.html)
-- [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](maas-installation.html#heading--upgrade-maas-snap)
-- [How do I install MAAS 2.8 from packages?](maas-installation.html)
-- [What bugs were fixed in this release?](#heading--bug-fixes)
+1. [What are the new features & fixes for 2.8?](#heading--2-8-release-notes)
+2. [What known issues should I be aware of?](#heading--2-8-known-issues)
+3. [How do I install MAAS 2.8 as a snap?](maas-installation.html)
+4. [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](maas-installation.html#heading--upgrade-maas-snap)
+5. [How do I install MAAS 2.8 from packages?](maas-installation.html)
+6. [What bugs were fixed in this release?](#heading--bug-fixes)
 
 <h2 id="heading--2-8-release-notes">LXD-based VM host support (Beta)</h2>
 

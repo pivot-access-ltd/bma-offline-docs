@@ -463,22 +463,22 @@
  snap-2-9-ui -->
 
 <p>In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself.  This section explains several ways of accomplishing this.</p>
-<h4>Quick questions you may have:</h4>
+<h4>Five questions you may have:</h4>
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-* [How do I set up a VM host bridge with the web UI?](#heading--maas-bridge-web-ui)
-* [How do I set up a VM host bridge with netplan?](#heading--maas-bridge-netplan)
-* [How do I set up a VM host bridge with libvirt?](#heading--maas-bridge-libvirt)
-* [How do I set up SSH for use by libvirt?](#heading--set-up-ssh)
-* [What else must I do to use LXD VM hosts?](#heading--lxd-setup)
+1. [How do I set up a VM host bridge with the web UI?](#heading--maas-bridge-web-ui)
+2. [How do I set up a VM host bridge with netplan?](#heading--maas-bridge-netplan)
+3. [How do I set up a VM host bridge with libvirt?](#heading--maas-bridge-libvirt)
+4. [How do I set up SSH for use by libvirt?](#heading--set-up-ssh)
+5. [What else must I do to use LXD VM hosts?](#heading--lxd-setup)
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<ul>
+<ol>
 <li><a href="#heading--maas-bridge-cli">How do I set up a VM host bridge with the MAAS CLI/API?</a></li>
 <li><a href="#heading--maas-bridge-netplan">How do I set up a VM host bridge with netplan?</a></li>
 <li><a href="#heading--maas-bridge-libvirt">How do I set up a VM host bridge with libvirt?</a></li>
 <li><a href="#heading--set-up-ssh">How do I set up SSH for use by libvirt?</a></li>
 <li><a href="#heading--lxd-setup">What else must I do to use LXD VM hosts?</a></li>
-</ul>
+</ol>
 <p>To enable VM host networking features, MAAS must match the VM host IP address of a potential VM host with a known device (a machine or controller). For example, if a machine not known to MAAS is set up as a VM host, enhanced interface selection features will not be available.</p>
 <p><strong>NOTE:</strong> 
 It&rsquo;s essential to enforce usage of IP addresses to avoid domain name conflicts, should different controllers resolve the same domain name with different IP addresses. You should also avoid using 127.0.0.1 when running multiple controllers, as it would confuse MAAS.</p>
@@ -487,13 +487,11 @@ It&rsquo;s essential to enforce usage of IP addresses to avoid domain name confl
 
 You can use the MAAS UI to configure a bridge to connect a VM host to MAAS:
 
-1. Select the machine you want to use as a VM host.
-2. Switch to the "Network" tab.
-3. Select the network where you want to create the bridge and click "Create bridge:"
+Select the machine you want to use as a VM host, switch to the "Network" tab. Select the network where you want to create the bridge and click "Create bridge:"
 
 <a href="images/29624d737106c5bad777aee9d2c8cad9c3de7151.jpeg" target = "_blank"><img src="images/29624d737106c5bad777aee9d2c8cad9c3de7151.jpeg"></a></a> 
 
-4. Configure the bridge on a subnet MAAS controls.  You may use any IP mode for the bridge:
+Configure the bridge on a subnet MAAS controls.  You may use any IP mode for the bridge:
 
 <a href="images/dd8567ff1cd76606c5ce1751e606fcfab2bc7ce2.jpeg" target = "_blank"><img src="images/dd8567ff1cd76606c5ce1751e606fcfab2bc7ce2.jpeg"></a></a> 
 
@@ -501,8 +499,7 @@ When you're done, it should look something like this:
 
 <a href="images/e392d638f0acecb9d54c81bbca4ee17cbcd05445.jpeg" target = "_blank"><img src="images/e392d638f0acecb9d54c81bbca4ee17cbcd05445.jpeg"></a></a> 
 
-5. Deploy Ubuntu
-
+Then you can deploy Ubuntu.
 
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
@@ -534,14 +531,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 <h2 id="heading--maas-bridge-netplan">Use netplan to configure a bridge</h2>
 
 <p>You can also use netplan to configure a VM host bridge:</p>
-<ol>
-<li>
-<p>Open your netplan configuration file.  This should be in <code>/etc/netplan</code>.  It could be called <code>50-cloud-init.yaml</code>, <code>netplan.yaml</code>, or something else.</p>
-</li>
-<li>
-<p>Modify the file to add a bridge, using the example below to guide you.</p>
-</li>
-</ol>
+<p>Open your netplan configuration file.  This should be in <code>/etc/netplan</code>.  It could be called <code>50-cloud-init.yaml</code>, <code>netplan.yaml</code>, or something else.  Modify the file to add a bridge, using the example below to guide you:</p>
 <pre><code>network:
     bridges:
         br0:
@@ -579,9 +569,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
     version: 2
 </code></pre>
 
-<ol>
-<li>Apply the configuration with <code>netplan apply</code>.</li>
-</ol>
+<p>Apply the new configuration with <code>netplan apply</code>.</p>
 <h2 id="heading--maas-bridge-libvirt">Use libvirt to configure a bridge</h2>
 
 <p>It is also possible to use <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a> to configure a virtual bridge.  This method will also work for LXD VM hosts running on Ubuntu.  Be aware that other methods may be required if you are configuring LXD on an OS other than Ubuntu.</p>

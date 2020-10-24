@@ -146,6 +146,7 @@ originals/%.msd: %.msd
 originals/%.md: %.md
 	$(eval BASE = $(notdir $@))
 	cp $(BASE) backup/$(BASE)
+	scripts/strip-navigation.sh $(BASE)
 	sed -i "/|| 2.7/d" $(BASE)
 	sed -i "/||2.7/d" $(BASE)
 	sed -i "/|-----:|:-----:/d" $(BASE)

@@ -1,16 +1,16 @@
 The following document provides a list of interface management tasks which can be performed by the MAAS CLI.
 
-#### Quick questions you may have:
+#### Nine questions you may have:
 
-* [How do I use the MAAS CLI?](/t/maas-cli/802)
-* [What might I need to know about networking?](/t/networking/768)
-* [How do I commission machines?](/t/commission-machines/822)
-* [How do I discover interface identifiers?](/t/cli-interface-management/798#heading--interface-identifiers)
-* [How do I create a bond interface?](/t/cli-interface-management/798#heading--create-a-bond-interface)
-* [How do I create a bridge interface?](/t/cli-interface-management/798#heading--create-a-bridge-interface)
-* [How do I delete an interface?](/t/cli-interface-management/798#heading--delete-an-interface)
-* [How do I create a VLAN interface?](/t/cli-interface-management/798#heading--create-a-vlan-interface)
-* [How do I delete a VLAN interface?](/t/cli-interface-management/798#heading--delete-a-vlan-interface)
+1. [How do I use the MAAS CLI?](/t/maas-cli/802)
+2. [What might I need to know about networking?](/t/networking/768)
+3. [How do I commission machines?](/t/commission-machines/822)
+4. [How do I discover interface identifiers?](/t/cli-interface-management/798#heading--interface-identifiers)
+5. [How do I create a bond interface?](/t/cli-interface-management/798#heading--create-a-bond-interface)
+6. [How do I create a bridge interface?](/t/cli-interface-management/798#heading--create-a-bridge-interface)
+7. [How do I delete an interface?](/t/cli-interface-management/798#heading--delete-an-interface)
+8. [How do I create a VLAN interface?](/t/cli-interface-management/798#heading--create-a-vlan-interface)
+9. [How do I delete a VLAN interface?](/t/cli-interface-management/798#heading--delete-a-vlan-interface)
 
 <h2 id="heading--interface-identifiers">Interface identifiers</h2>
 
@@ -207,5 +207,3 @@ Using the values from previous examples, you executed this step as follows:
 ``` bash
 maas admin vlan delete 0 100
 ```
-
-<!-- LINKS -->
