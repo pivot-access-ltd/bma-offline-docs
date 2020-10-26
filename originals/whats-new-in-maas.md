@@ -161,18 +161,24 @@ NOTE that this is currently a Beta release, so there will be bugs, instabilities
 
 #### What are the new features & fixes for MAAS 2.9?
 
-1. [**BMC/IPMI default parameter additions**](#heading--bmc-param-additions)
-2. [**New global IPMI configuration options**](#heading--new-config-options)
-3. [**Addition of IPMI config options to UI**](#heading--global-config-settings)
-4. [**New MAAS CLI power command**](#heading--maas-power)
-5. [Commissioning speed improvements](#heading--commissioning-speed)
-6. [BMC improvements](#heading--bmc-improve)
-7. [IPMI power driver upgrades](#heading--ipmi-driver)
-8. [Enlistment script improvements](#heading--enlistment-scripts)
-9. [Commissioning script improvements](#heading--commissioning-scripts)
-10. [Commissioning script reordering](#heading--commissioning-reorder)
-11. [Reader Adaptive Documentation](#heading--rad)
-12. [Offline documentation](#heading--offline-docs)
+1. [**New release notifications**](#heading--new-release-notifications)
+2. [**IPMI configuration screens**](#heading--ipmi-config-screens)
+3. [**Descriptions when marking machines broken**](#heading--descrip-mark-mach-broken)
+4. [**Curtin 20.2 now included**](#heading--curtin-20-2-included)
+5. [**HTTP boot disabled**](#heading--http-boot-disabled)
+6. [BMC/IPMI default parameter additions](#heading--bmc-param-additions)
+7. [New global IPMI configuration options](#heading--new-config-options)
+8. [Addition of IPMI config options to UI](#heading--global-config-settings)
+9. [New MAAS CLI power command](#heading--maas-power)
+10. [Commissioning speed improvements](#heading--commissioning-speed)
+11. [BMC improvements](#heading--bmc-improve)
+12. [IPMI power driver upgrades](#heading--ipmi-driver)
+13. [Enlistment script improvements](#heading--enlistment-scripts)
+14. [Commissioning script improvements](#heading--commissioning-scripts)
+15. [Commissioning script reordering](#heading--commissioning-reorder)
+16. [Reader Adaptive Documentation](#heading--rad)
+17. [Offline documentation](#heading--offline-docs)
+
 
 <h4>Five other questions you may have:</h4>
 
@@ -181,6 +187,40 @@ NOTE that this is currently a Beta release, so there will be bugs, instabilities
 3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 Beta snap?](/t/maas-installation/3323#heading--upgrade-maas-snap)
 4. [How do I install MAAS 2.9 Beta from packages?](/t/maas-installation/3329)
 5. [What bugs are fixed so far in this release?](#heading--bug-fixes)
+
+<h2 id="heading--maas-2-9-beta-7">New features in 2.9 Beta7</h2>
+
+<h2 id="#heading--new-release-notifications">New release notifications</h2>
+
+MAAS now includes new release notifications for users and administrators.  These appear when a new release is available:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/c4f426b9f493a970efcc59c4d948d24fa5f12860.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c4f426b9f493a970efcc59c4d948d24fa5f12860.png"></a>
+
+Both regular and administrative users can snooze these notifications for two weeks at a time.  Administrative users can opt out of new release notifications completely, preventing notifications for any user of that MAAS.
+
+<h2 id="#heading--ipmi-config-screens">IPMI configuration screens</h2>
+
+MAAS now includes UI panels corresponding to the [IPMI power driver upgrades](#heading--ipmi-driver) mentioned earlier:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/433b28f5dd807caef7c7382f9a877607c2ea2dac.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/433b28f5dd807caef7c7382f9a877607c2ea2dac.png"></a>
+
+This screen can be reached from `Settings | Configuration | Commissioning`.
+
+<h2 id="#heading--descrip-mark-mach-broken">Descriptions when marking machines broken</h2>
+
+When marking a machine broken, a description can now included:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png"></a>
+
+This description appears in that machine's row on the machine list.
+
+<h2 id="#heading--curtin-20-2-included">Curtin 20.2 now included</h2>
+
+A number of MAAS issues have actually been issues with an older version of Curtin.  MAAS now includes Curtin 20.2, which fixes many of these issues, including [MAAS is changing my boot order!](https://discourse.maas.io/t/maas-is-changing-my-boot-order/3491].
+
+<h2 id="#heading--http-boot-disabled">HTTP boot disabled</h2>
+
+MAAS 2.9 Beta 7 disables HTTP boot. There are known issues with HTTP boot in MAAS, as well as known issues for HTTP boot with grub (e.g. https://bugs.launchpad.net/maas/+bug/1899581)  This shouldn’t affect machine boot, as machines will normally try PXE as a fallback boot method if HTTP boot fails.  Be aware, though, that machine boot will fail if the BIOS is configured to boot only over HTTP; those machines need to be reconfigured to use PXE.
 
 <h2 id="heading--release-notes">New features in 2.9 Beta5</h2>
 
