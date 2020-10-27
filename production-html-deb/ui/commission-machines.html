@@ -1052,22 +1052,22 @@ bond_updelay=200 bond_downdelay=200 mtu=9000
 
 There are a wide range of bond parameters you can choose when creating a bond:
 
-| No. | Parameter | Type and description |
-|----:|:----------|:---------------------|
-| 1. | `mac_address`| Optional string.  MAC address of the interface. |
-| 2. | `tags`| Optional string.  Tags for the interface. |
-| 3. | `vlan`| Optional string.  VLAN the interface is connected to. If not provided then the interface is considered disconnected. |
-| 4. | `parents`| Required integer.  Parent interface ids that make this bond. |
-| 5. | `bond_miimon`| Optional integer.  The link monitoring freqeuncy in milliseconds. (Default: 100). |
-| 6. | `bond_downdelay`| Optional integer.  Specifies the time, in milliseconds, to wait before disabling a slave after a link failure has been detected. |
-| 7. | `bond_updelay`| Optional integer.  Specifies the time, in milliseconds, to wait before enabling a slave after a link recovery has been detected. |
-| 8. | `bond_lacp_rate`| Optional string.  Option specifying the rate at which to ask the link partner to transmit LACPDU packets in 802.3ad mode. Available options are ``fast`` or ``slow``. (Default: ``slow``). |
-| 9. | `bond_xmit_hash_policy`| Optional string.  The transmit hash policy to use for slave selection in balance-xor, 802.3ad, and tlb modes. Possible values are: ``layer2``, ``layer2+3``, ``layer3+4``, ``encap2+3``, ``encap3+4``. (Default: ``layer2``) |
-| 10. | `bond_num_grat_arp`| Optional integer.  The number of peer notifications (IPv4 ARP or IPv6 Neighbour Advertisements) to be issued after a failover. (Default: 1) |
-| 11. | `mtu`| Optional integer.  Maximum transmission unit. |
-| 12. | `accept_ra`| Optional boolen.  Accept router advertisements. (IPv6 only) |
-| 13. | `autoconf`| Optional boolean.  Perform stateless autoconfiguration. (IPv6 only) |
-| 14. | `bond_mode`| Optional string.  The operating mode of the bond.  (Default: active-backup). |
+| Parameter | Type and description |
+|:----------|:---------------------|
+| `mac_address`| Optional string.  MAC address of the interface. |
+| `tags`| Optional string.  Tags for the interface. |
+| `vlan`| Optional string.  VLAN the interface is connected to. If not provided then the interface is considered disconnected. |
+| `parents`| Required integer.  Parent interface ids that make this bond. |
+| `bond_miimon`| Optional integer.  The link monitoring freqeuncy in milliseconds. (Default: 100). |
+| `bond_downdelay`| Optional integer.  Specifies the time, in milliseconds, to wait before disabling a slave after a link failure has been detected. |
+| `bond_updelay`| Optional integer.  Specifies the time, in milliseconds, to wait before enabling a slave after a link recovery has been detected. |
+| `bond_lacp_rate`| Optional string.  Option specifying the rate at which to ask the link partner to transmit LACPDU packets in 802.3ad mode. Available options are ``fast`` or ``slow``. (Default: ``slow``). |
+| `bond_xmit_hash_policy`| Optional string.  The transmit hash policy to use for slave selection in balance-xor, 802.3ad, and tlb modes. Possible values are: ``layer2``, ``layer2+3``, ``layer3+4``, ``encap2+3``, ``encap3+4``. (Default: ``layer2``) |
+| `bond_num_grat_arp`| Optional integer.  The number of peer notifications (IPv4 ARP or IPv6 Neighbour Advertisements) to be issued after a failover. (Default: 1) |
+| `mtu`| Optional integer.  Maximum transmission unit. |
+| `accept_ra`| Optional boolen.  Accept router advertisements. (IPv6 only) |
+| `autoconf`| Optional boolean.  Perform stateless autoconfiguration. (IPv6 only) |
+| `bond_mode`| Optional string.  The operating mode of the bond.  (Default: active-backup). |
 
 Supported bonding modes include:
 

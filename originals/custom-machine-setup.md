@@ -106,11 +106,11 @@ The [Tempita^](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/i
 deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 
 
-| No. |       Phase       |                 Filename prefix                 |
-|----:|:-----------------|:-----------------------------------------------|
-| 1. | Enlistment  |                      enlist                     |
-| 2. | Commissioning |                  commissioning                  |
-| 3. | Installation | curtin ([Curtin^](https://launchpad.net/curtin)) |
+|       Phase       |                 Filename prefix                 |
+|:-----------------|:-----------------------------------------------|
+| Enlistment  |                      enlist                     |
+| Commissioning |                  commissioning                  |
+| Installation | curtin ([Curtin^](https://launchpad.net/curtin)) |
 
 Additionally, the template for each phase typically consists of two files. The first is a higher-level file that often contains little more than a URL or a link to further credentials, while a second file contains the executable logic.
 

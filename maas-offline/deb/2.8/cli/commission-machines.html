@@ -1044,79 +1044,64 @@ bond_updelay=200 bond_downdelay=200 mtu=9000
 <table>
 <thead>
 <tr>
-<th align="right">No.</th>
 <th align="left">Parameter</th>
 <th align="left">Type and description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="right">1.</td>
 <td align="left"><code>mac_address</code></td>
 <td align="left">Optional string.  MAC address of the interface.</td>
 </tr>
 <tr>
-<td align="right">2.</td>
 <td align="left"><code>tags</code></td>
 <td align="left">Optional string.  Tags for the interface.</td>
 </tr>
 <tr>
-<td align="right">3.</td>
 <td align="left"><code>vlan</code></td>
 <td align="left">Optional string.  VLAN the interface is connected to. If not provided then the interface is considered disconnected.</td>
 </tr>
 <tr>
-<td align="right">4.</td>
 <td align="left"><code>parents</code></td>
 <td align="left">Required integer.  Parent interface ids that make this bond.</td>
 </tr>
 <tr>
-<td align="right">5.</td>
 <td align="left"><code>bond_miimon</code></td>
 <td align="left">Optional integer.  The link monitoring freqeuncy in milliseconds. (Default: 100).</td>
 </tr>
 <tr>
-<td align="right">6.</td>
 <td align="left"><code>bond_downdelay</code></td>
 <td align="left">Optional integer.  Specifies the time, in milliseconds, to wait before disabling a slave after a link failure has been detected.</td>
 </tr>
 <tr>
-<td align="right">7.</td>
 <td align="left"><code>bond_updelay</code></td>
 <td align="left">Optional integer.  Specifies the time, in milliseconds, to wait before enabling a slave after a link recovery has been detected.</td>
 </tr>
 <tr>
-<td align="right">8.</td>
 <td align="left"><code>bond_lacp_rate</code></td>
 <td align="left">Optional string.  Option specifying the rate at which to ask the link partner to transmit LACPDU packets in 802.3ad mode. Available options are <code>fast</code> or <code>slow</code>. (Default: <code>slow</code>).</td>
 </tr>
 <tr>
-<td align="right">9.</td>
 <td align="left"><code>bond_xmit_hash_policy</code></td>
 <td align="left">Optional string.  The transmit hash policy to use for slave selection in balance-xor, 802.3ad, and tlb modes. Possible values are: <code>layer2</code>, <code>layer2+3</code>, <code>layer3+4</code>, <code>encap2+3</code>, <code>encap3+4</code>. (Default: <code>layer2</code>)</td>
 </tr>
 <tr>
-<td align="right">10.</td>
 <td align="left"><code>bond_num_grat_arp</code></td>
 <td align="left">Optional integer.  The number of peer notifications (IPv4 ARP or IPv6 Neighbour Advertisements) to be issued after a failover. (Default: 1)</td>
 </tr>
 <tr>
-<td align="right">11.</td>
 <td align="left"><code>mtu</code></td>
 <td align="left">Optional integer.  Maximum transmission unit.</td>
 </tr>
 <tr>
-<td align="right">12.</td>
 <td align="left"><code>accept_ra</code></td>
 <td align="left">Optional boolen.  Accept router advertisements. (IPv6 only)</td>
 </tr>
 <tr>
-<td align="right">13.</td>
 <td align="left"><code>autoconf</code></td>
 <td align="left">Optional boolean.  Perform stateless autoconfiguration. (IPv6 only)</td>
 </tr>
 <tr>
-<td align="right">14.</td>
 <td align="left"><code>bond_mode</code></td>
 <td align="left">Optional string.  The operating mode of the bond.  (Default: active-backup).</td>
 </tr>

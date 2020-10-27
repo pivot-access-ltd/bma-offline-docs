@@ -529,189 +529,152 @@ Scripts can be selected to run from web UI [during commissioning](commission-mac
 <table>
 <thead>
 <tr>
-<th align="right">No.</th>
 <th align="left">Field</th>
 <th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="right">1.</td>
 <td align="left"><code>name</code></td>
 <td align="left">The name of the script.</td>
 </tr>
 <tr>
-<td align="right">2.</td>
 <td align="left"><code>title</code></td>
 <td align="left">Human-friendly descriptive version of the name, used within the web UI.</td>
 </tr>
 <tr>
-<td align="right">3.</td>
 <td align="left"><code>description</code></td>
 <td align="left">Brief outline of what the script does.</td>
 </tr>
 <tr>
-<td align="right">4.</td>
 <td align="left"><code>tags</code></td>
 <td align="left">List of tags associated with the script.</td>
 </tr>
 <tr>
-<td align="right">5.</td>
 <td align="left"><code>type</code></td>
 <td align="left">Either commissioning or testing.</td>
 </tr>
 <tr>
-<td align="right">6.</td>
 <td align="left"><code>timeout</code></td>
 <td align="left">Length of time before MAAS automatically fails and kills execution of the script. The time may be specified in seconds or using the HH:MM:SS format.</td>
 </tr>
 <tr>
-<td align="right">7.</td>
 <td align="left"><code>destructive</code></td>
 <td align="left">True or False, depending on whether the script will overwrite system data. You can&rsquo;t run destructive tests on a deployed machine.</td>
 </tr>
 <tr>
-<td align="right">8.</td>
 <td align="left"><code>comment</code></td>
 <td align="left">Describes changes made in this revision of the script.  A comment can be passed via the API when uploading the script.  MAAS doesn’t look at the script metadata for this field.</td>
 </tr>
 <tr>
-<td align="right">9.</td>
 <td align="left"><code>hardware_type</code></td>
 <td align="left">Defines the type of hardware the script configures or tests. If the script returns results, hardware types associate the results with specific hardware. The following types are valid:</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>node</code>: Not associated with any hardware type; this is the default.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>cpu</code>: Configures or tests the CPUs on the machine.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>memory</code>: Configures or tests memory on the machine.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>storage</code>: Configures or tests storage on the machine.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>network</code>: Configures or tests network on the machine.</td>
 </tr>
 <tr>
-<td align="right">10.</td>
 <td align="left"><code>parallel</code></td>
 <td align="left">Enables scripts to be run in parallel and can be one of the following:</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>disabled</code>: The script will run serially on its own.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>instance</code>: Runs in parallel only with other instances of the same script.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>any</code>: Runs in parallel alongside any other scripts with parallel set to any.</td>
 </tr>
 <tr>
-<td align="right">11.</td>
 <td align="left"><code>parameters</code></td>
 <td align="left">What <a href="#heading--parameters">parameters</a> the script accepts.</td>
 </tr>
 <tr>
-<td align="right">12.</td>
 <td align="left"><code>results</code></td>
 <td align="left">What <a href="#heading--results">results</a> the script will return.</td>
 </tr>
 <tr>
-<td align="right">13.</td>
 <td align="left"><code>packages</code></td>
 <td align="left">List of packages to be installed or extracted before running the script. Packages must be specified as a dictionary. For example, <code>packages: {apt: stress-ng}</code>, would ask <code>apt</code> to install stress-ng. Package sources can be any of the following:</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>apt</code>: Use the Ubuntu apt repositories as configured by MAAS to install a package.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>snap</code>: Installs packages using [snap][snapcraft]. May also be a list of dictionaries. The dictionary must define the name of the  package to be installed, and optionally, the <code>channel</code>, <code>mode</code> and <code>revision</code>.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>url</code>: The archive will be downloaded and, if possible, extracted or installed when a Debian package or [snap][snapcraft].</td>
 </tr>
 <tr>
-<td align="right">14.</td>
 <td align="left"><code>for_hardware</code></td>
 <td align="left">Specifies the hardware that must be on the machine for the script to run. May be a single string or list of strings of the following:</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>modalias</code>: Starts with &lsquo;modalias:&rsquo; may optionally contain wild cards.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>PCI ID</code>: Must be in the format of &lsquo;pci:VVVV:PPPP&rsquo; where VVVV is the vendor ID, and PPPP is the product ID.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>USB ID</code>: Must be in the format of &lsquo;usb:VVVV:PPPP&rsquo; where VVVV is the vendor ID, and PPPP is the product ID.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>System Vendor</code>: Starts with &lsquo;system_vendor:&rsquo;.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>System Product</code>: Starts with &lsquo;system_product:&rsquo;.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>System Version</code>: Starts with &lsquo;system_version:&rsquo;.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>Mainboard Vendor</code>: Starts with &lsquo;mainboard_vendor:&rsquo;.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>Mainboard Product</code>: Starts with &lsquo;mainboard_product:&rsquo;.</td>
 </tr>
 <tr>
-<td align="right">15.</td>
 <td align="left"><code>may_reboot</code></td>
 <td align="left">When True, indicates to MAAS that the script may reboot the machine. MAAS will allow up to 20 minutes between heartbeats while running a script with <code>may_reboot</code> set to True.</td>
 </tr>
 <tr>
-<td align="right">16.</td>
 <td align="left"><code>recommission</code></td>
 <td align="left">After all commissioning scripts have finished running rerun</td>
 </tr>
 <tr>
-<td align="right">17.</td>
 <td align="left"><code>script_type</code></td>
 <td align="left">commissioning or test. Indicates whether the script should run during commissioning or hardware testing.</td>
 </tr>
@@ -731,99 +694,80 @@ Scripts can be selected to run from web UI [during commissioning](commission-mac
 <table>
 <thead>
 <tr>
-<th align="right">No.</th>
 <th align="left">Field</th>
 <th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="right">1.</td>
 <td align="left"><code>type</code>: Every parameter must contain a type field, which describes what the parameter may accept and its default values. It may be one of the following:</td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>storage</code>: Allows the selection of a storage device on the currently running machine.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>interface</code>: Allows the selection of an interface on the currently running machine.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>url</code>: Allows the the passing of a valid URL.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>runtime</code>: Specifies how long the script may run. This overrides the timeout value. It is currently only passed as the environment variable RUNTIME.</td>
 </tr>
 <tr>
-<td align="right">2.</td>
 <td align="left"><code>title</code>: The title of the parameter field when displayed in the UI. The following types have the following default values:</td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>storage</code>: storage device.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>interface</code>: interface specifier.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>url</code>: valid URL.</td>
 </tr>
 <tr>
-<td align="right">3.</td>
 <td align="left"><code>argument-format</code>: Specifies how the argument should be passed to the script. Input is described as <code>{input}</code>. The storage type may also use <code>{name}</code>, <code>{path}</code>, <code>{model}</code> or <code>{serial}</code>. MAAS will look up the values of path, model, and serial based on user selection. For storage, <code>{input}</code> is synonymous with <code>{path}</code>. The interface type may also use <code>{name}</code>, <code>{mac_address}</code>, <code>{product}</code>, or <code>{vendor}</code>. For interface <code>{input}</code> is synonymous with <code>{name}</code>. The following types have the following default values:</td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>storage</code>: <code>--storage={path}</code></td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>interface</code>: <code>--interface={name}</code></td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>url</code>: <code>--url={input}</code></td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"><code>default</code>: The default value of the parameter. The following types have the following default values. Setting these to &lsquo;&rsquo; or None will override these values:</td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>storage</code>: all.</td>
 </tr>
 <tr>
-<td align="right"></td>
 <td align="left"></td>
 <td align="left"><code>interface</code>: all.</td>
 </tr>
 <tr>
-<td align="right">4.</td>
 <td align="left"><code>required</code>: Whether or not user input is required. A value of false sets no default, and no user input will mean no parameters passed to the script. Defaults to <code>true</code>.</td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="right">5.</td>
 <td align="left"><code>results</code>: What results the script will return on completion. You can only define this parameter within the embedded YAML of the script. Results may be a list of strings or a dictionary of dictionaries.</td>
 <td align="left"></td>
 </tr>
