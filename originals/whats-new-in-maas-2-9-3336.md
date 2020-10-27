@@ -206,23 +206,24 @@ NOTE that this is currently a Beta release, so there will be bugs, instabilities
 
 #### What are the new features & fixes for MAAS 2.9?
 
-1. [**New release notifications**](#heading--new-release-notifications)
-2. [**IPMI configuration screens**](#heading--ipmi-config-screens)
-3. [**Descriptions when marking machines broken**](#heading--descrip-mark-mach-broken)
-4. [**Curtin 20.2 now included**](#heading--curtin-20-2-included)
-5. [**HTTP boot disabled**](#heading--http-boot-disabled)
-6. [BMC/IPMI default parameter additions](#heading--bmc-param-additions)
-7. [New global IPMI configuration options](#heading--new-config-options)
-8. [Addition of IPMI config options to UI](#heading--global-config-settings)
-9. [New MAAS CLI power command](#heading--maas-power)
-10. [Commissioning speed improvements](#heading--commissioning-speed)
-11. [BMC improvements](#heading--bmc-improve)
-12. [IPMI power driver upgrades](#heading--ipmi-driver)
-13. [Enlistment script improvements](#heading--enlistment-scripts)
-14. [Commissioning script improvements](#heading--commissioning-scripts)
-15. [Commissioning script reordering](#heading--commissioning-reorder)
-16. [Reader Adaptive Documentation](#heading--rad)
-17. [Offline documentation](#heading--offline-docs)
+2. [Improved performance for large MAAS installations](#heading--improved-perf-large-maas)
+2. [New release notifications](#heading--new-release-notifications)
+3. [IPMI configuration screens](#heading--ipmi-config-screens)
+4. [Descriptions when marking machines broken](#heading--descrip-mark-mach-broken)
+5. [Curtin 20.2 now included](#heading--curtin-20-2-included)
+6. [HTTP boot disabled](#heading--http-boot-disabled)
+7. [BMC/IPMI default parameter additions](#heading--bmc-param-additions)
+8. [New global IPMI configuration options](#heading--new-config-options)
+9. [Addition of IPMI config options to UI](#heading--global-config-settings)
+10. [New MAAS CLI power command](#heading--maas-power)
+11. [Commissioning speed improvements](#heading--commissioning-speed)
+12. [BMC improvements](#heading--bmc-improve)
+13. [IPMI power driver upgrades](#heading--ipmi-driver)
+14. [Enlistment script improvements](#heading--enlistment-scripts)
+15. [Commissioning script improvements](#heading--commissioning-scripts)
+16. [Commissioning script reordering](#heading--commissioning-reorder)
+17. [Reader Adaptive Documentation](#heading--rad)
+18. [Offline documentation](#heading--offline-docs)
 
 
 <h4>Five other questions you may have:</h4>
@@ -234,6 +235,12 @@ NOTE that this is currently a Beta release, so there will be bugs, instabilities
 5. [What bugs are fixed so far in this release?](#heading--bug-fixes)
 
 <h2 id="heading--maas-2-9-beta-7">New features in 2.9 Beta7</h2>
+
+<h3 id="heading--improved-perf-large-maas">Improved performance for large MAAS installations</h3>
+
+MAAS 2.9 Beta 7 includes changes to the machine batch size that the UI loads. Previously the UI loaded machines in batches of 25; it now pulls in 25 for the first call, then 100 at a time in subsequent batches.
+
+You can see the results of the investigation in [this video podcast](https://discourse.maas.io/t/maas-show-and-tell-improving-ui-performance-for-large-maas-installs/3515).
 
 <h2 id="#heading--new-release-notifications">New release notifications</h2>
 

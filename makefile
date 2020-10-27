@@ -217,3 +217,11 @@ originals/%.md: %.md
 	cp $(BASE) originals
 	mv $(HTML) $(MOL)/$(S29U)
 	cp backup/$(BASE) $(BASE)
+# originals/using-image-streams-3523.md: image-streams.md
+#	chmod 644 originals/*
+#	cp image-streams.md using-image-streams-3523.md
+#	xpub pull discourse 3523 3523
+#	cp -p using-image-streams-3523.md originals
+#	rm using-image-streams-3523.md
+#	chmod 444 originals/*
+

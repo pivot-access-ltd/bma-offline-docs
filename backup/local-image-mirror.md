@@ -84,6 +84,11 @@
 
 Mirroring images is worthy of consideration.  The SimpleStreams protocol delivers Images to MAAS, which is especially useful when your Internet link is slow or unreliable. In this mirrored configuration, images will be instantly available when MAAS requests them.
 
+#### Two questions you may have:
+
+1. [What SimpleStreams are available for MAAS, and how do I select them?](/t/using-image-streams/3523)
+2. [How do I set up a local image mirror?](#heading--set-up-local-mirror)
+
 <h2 id="heading--set-up-local-mirror">Setting up a local mirror</h2>
 
 To use mirroring, you begin by installing the necessary software on the host that will house the mirror:

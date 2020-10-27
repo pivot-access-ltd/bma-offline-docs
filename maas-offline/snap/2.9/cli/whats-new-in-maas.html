@@ -586,11 +586,12 @@ snap-2-7 snap-2-7-ui deb-2-7 deb-2-7-ui -->
 NOTE that this is currently a Beta release, so there will be bugs, instabilities, and missing features. Please remember to <a href="https://bugs.launchpad.net/maas/+filebug">file a bug^</a> if you find one, and please interact with the developers on <a href="https://discourse.maas.io/">discourse^</a>.</p>
 <h4>What are the new features &amp; fixes for MAAS 2.9?</h4>
 <ol>
-<li><a href="#heading--new-release-notifications"><strong>New release notifications</strong></a></li>
-<li><a href="#heading--ipmi-config-screens"><strong>IPMI configuration screens</strong></a></li>
-<li><a href="#heading--descrip-mark-mach-broken"><strong>Descriptions when marking machines broken</strong></a></li>
-<li><a href="#heading--curtin-20-2-included"><strong>Curtin 20.2 now included</strong></a></li>
-<li><a href="#heading--http-boot-disabled"><strong>HTTP boot disabled</strong></a></li>
+<li><a href="#heading--improved-perf-large-maas">Improved performance for large MAAS installations</a></li>
+<li><a href="#heading--new-release-notifications">New release notifications</a></li>
+<li><a href="#heading--ipmi-config-screens">IPMI configuration screens</a></li>
+<li><a href="#heading--descrip-mark-mach-broken">Descriptions when marking machines broken</a></li>
+<li><a href="#heading--curtin-20-2-included">Curtin 20.2 now included</a></li>
+<li><a href="#heading--http-boot-disabled">HTTP boot disabled</a></li>
 <li><a href="#heading--bmc-param-additions">BMC/IPMI default parameter additions</a></li>
 <li><a href="#heading--new-config-options">New global IPMI configuration options</a></li>
 <li><a href="#heading--global-config-settings">Addition of IPMI config options to UI</a></li>
@@ -615,6 +616,10 @@ NOTE that this is currently a Beta release, so there will be bugs, instabilities
 </ol>
 <h2 id="heading--maas-2-9-beta-7">New features in 2.9 Beta7</h2>
 
+<h3 id="heading--improved-perf-large-maas">Improved performance for large MAAS installations</h3>
+
+<p>MAAS 2.9 Beta 7 includes changes to the machine batch size that the UI loads. Previously the UI loaded machines in batches of 25; it now pulls in 25 for the first call, then 100 at a time in subsequent batches.</p>
+<p>You can see the results of the investigation in <a href="maas-show-and-tell-improving-ui-performance-for-large-maas-installs.html">this video podcast</a>.</p>
 <h2 id="#heading--new-release-notifications">New release notifications</h2>
 
 <p>MAAS now includes new release notifications for users and administrators.  These appear when a new release is available:</p>

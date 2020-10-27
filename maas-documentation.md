@@ -1326,6 +1326,7 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/1561|/docs/markdown-test|
 |https://discourse.maas.io/t/-/1112|/docs/image-builder|
 |https://discourse.maas.io/t/-/745/|/docs/language-details-contributing-to-maas-docs|
+|https://discourse.maas.io/t/-/3523/|/docs/using-maas-images|
 |DEPRECATED TOPIC (MAY NEED MARKING AS SUCH)|PRESERVED PATH|
 |https://discourse.maas.io/t/-/744/|/docs/building-the-docs|
 |https://discourse.maas.io/t/-/746/|/docs/working-with-git-and-github|

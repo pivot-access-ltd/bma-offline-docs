@@ -853,7 +853,7 @@ originals/storage-snap-2-9-ui-3107.md: storage.md
 	chmod 444 originals/*
 	rm storage-*.md
  
-originals/local-image-mirror-snap-2-8-ui-2805.md: local-image-mirror.md
+originals/local-image-mirror.md: local-image-mirror.md
 	cp local-image-mirror.md local-image-mirror-deb-2-7-cli-2808.md
 	cp local-image-mirror.md local-image-mirror-deb-2-7-ui-2809.md
 	cp local-image-mirror.md local-image-mirror-deb-2-8-cli-2810.md
@@ -2198,17 +2198,17 @@ originals/maas-documentation-25.md: maas-documentation.md
 	cp maas-documentation.md maas-documentation-snap-2-8-cli-2840.md
 	cp maas-documentation.md maas-documentation-snap-2-9-cli-2842.md
 	cp maas-documentation.md maas-documentation-snap-2-9-ui-2843.md
-	./clean-navigation.sh maas-documentation-deb-2-7-cli-2844.md
-	./clean-navigation.sh maas-documentation-deb-2-7-ui-2845.md
-	./clean-navigation.sh maas-documentation-deb-2-8-cli-2846.md
-	./clean-navigation.sh maas-documentation-deb-2-8-ui-2847.md
-	./clean-navigation.sh maas-documentation-deb-2-9-cli-2848.md
-	./clean-navigation.sh maas-documentation-deb-2-9-ui-2849.md
-	./clean-navigation.sh maas-documentation-snap-2-7-cli-2838.md
-	./clean-navigation.sh maas-documentation-snap-2-7-ui-2839.md
-	./clean-navigation.sh maas-documentation-snap-2-8-cli-2840.md
-	./clean-navigation.sh maas-documentation-snap-2-9-cli-2842.md
-	./clean-navigation.sh maas-documentation-snap-2-9-ui-2843.md
+	./scripts/strip-navigation.sh maas-documentation-deb-2-7-cli-2844.md
+	./scripts/strip-navigation.sh maas-documentation-deb-2-7-ui-2845.md
+	./scripts/strip-navigation.sh maas-documentation-deb-2-8-cli-2846.md
+	./scripts/strip-navigation.sh maas-documentation-deb-2-8-ui-2847.md
+	./scripts/strip-navigation.sh maas-documentation-deb-2-9-cli-2848.md
+	./scripts/strip-navigation.sh maas-documentation-deb-2-9-ui-2849.md
+	./scripts/strip-navigation.sh maas-documentation-snap-2-7-cli-2838.md
+	./scripts/strip-navigation.sh maas-documentation-snap-2-7-ui-2839.md
+	./scripts/strip-navigation.sh maas-documentation-snap-2-8-cli-2840.md
+	./scripts/strip-navigation.sh maas-documentation-snap-2-9-cli-2842.md
+	./scripts/strip-navigation.sh maas-documentation-snap-2-9-ui-2843.md
 	xpub push discourse -t deb-2-7-cli maas-documentation-deb-2-7-cli-2844.md
 	xpub push discourse -t deb-2-7-ui maas-documentation-deb-2-7-ui-2845.md
 	xpub push discourse -t deb-2-8-cli maas-documentation-deb-2-8-cli-2846.md
@@ -2227,7 +2227,7 @@ originals/maas-documentation-25.md: maas-documentation.md
 	chmod 644 originals/*
 	cp -p maas-documentation*.md originals originals
 	chmod 444 originals/*
-	./clean-navigation.sh maas-documentation-25.md
+	./scripts/strip-navigation.sh maas-documentation-25.md
 	rm maas-documentation-*.md
  
 originals/maas-communication-deb-2-8-ui-2835.md: maas-communication.md
