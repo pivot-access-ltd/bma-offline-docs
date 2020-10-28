@@ -1,37 +1,85 @@
 <!-- deb-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/kernel-boot-options/2778) ~ [UI](/t/kernel-boot-options/2779)|[CLI](/t/kernel-boot-options/2780) ~ [UI](/t/kernel-boot-options/2781)|[CLI](/t/kernel-boot-options/2782) ~ [UI](/t/kernel-boot-options/2783)|
+|Packages|CLI ~ [UI](/t/kernel-boot-options/2785)|[CLI](/t/kernel-boot-options/2786) ~ [UI](/t/kernel-boot-options/2787)|[CLI](/t/kernel-boot-options/2788) ~ [UI](/t/kernel-boot-options/2789)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/kernel-boot-options/2778) ~ [UI](/t/kernel-boot-options/2779)|[CLI](/t/kernel-boot-options/2780) ~ [UI](/t/kernel-boot-options/2781)|[CLI](/t/kernel-boot-options/2782) ~ [UI](/t/kernel-boot-options/2783)|
+|Packages|[CLI](/t/kernel-boot-options/2784) ~ UI|[CLI](/t/kernel-boot-options/2786) ~ [UI](/t/kernel-boot-options/2787)|[CLI](/t/kernel-boot-options/2788) ~ [UI](/t/kernel-boot-options/2789)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/kernel-boot-options/2778) ~ [UI](/t/kernel-boot-options/2779)|[CLI](/t/kernel-boot-options/2780) ~ [UI](/t/kernel-boot-options/2781)|[CLI](/t/kernel-boot-options/2782) ~ [UI](/t/kernel-boot-options/2783)|
+|Packages|[CLI](/t/kernel-boot-options/2784) ~ [UI](/t/kernel-boot-options/2785)|CLI ~ [UI](/t/kernel-boot-options/2787)|[CLI](/t/kernel-boot-options/2788) ~ [UI](/t/kernel-boot-options/2789)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/kernel-boot-options/2778) ~ [UI](/t/kernel-boot-options/2779)|[CLI](/t/kernel-boot-options/2780) ~ [UI](/t/kernel-boot-options/2781)|[CLI](/t/kernel-boot-options/2782) ~ [UI](/t/kernel-boot-options/2783)|
+|Packages|[CLI](/t/kernel-boot-options/2784) ~ [UI](/t/kernel-boot-options/2785)|[CLI](/t/kernel-boot-options/2786) ~ UI|[CLI](/t/kernel-boot-options/2788) ~ [UI](/t/kernel-boot-options/2789)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/kernel-boot-options/2778) ~ [UI](/t/kernel-boot-options/2779)|[CLI](/t/kernel-boot-options/2780) ~ [UI](/t/kernel-boot-options/2781)|[CLI](/t/kernel-boot-options/2782) ~ [UI](/t/kernel-boot-options/2783)|
+|Packages|[CLI](/t/kernel-boot-options/2784) ~ [UI](/t/kernel-boot-options/2785)|[CLI](/t/kernel-boot-options/2786) ~ [UI](/t/kernel-boot-options/2787)|CLI ~ [UI](/t/kernel-boot-options/2789)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/kernel-boot-options/2778) ~ [UI](/t/kernel-boot-options/2779)|[CLI](/t/kernel-boot-options/2780) ~ [UI](/t/kernel-boot-options/2781)|[CLI](/t/kernel-boot-options/2782) ~ [UI](/t/kernel-boot-options/2783)|
+|Packages|[CLI](/t/kernel-boot-options/2784) ~ [UI](/t/kernel-boot-options/2785)|[CLI](/t/kernel-boot-options/2786) ~ [UI](/t/kernel-boot-options/2787)|[CLI](/t/kernel-boot-options/2788) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ [UI](/t/kernel-boot-options/2779)|[CLI](/t/kernel-boot-options/2780) ~ [UI](/t/kernel-boot-options/2781)|[CLI](/t/kernel-boot-options/2782) ~ [UI](/t/kernel-boot-options/2783)|
+|Packages|[CLI](/t/kernel-boot-options/2784) ~ [UI](/t/kernel-boot-options/2785)|[CLI](/t/kernel-boot-options/2786) ~ [UI](/t/kernel-boot-options/2787)|[CLI](/t/kernel-boot-options/2788) ~ [UI](/t/kernel-boot-options/2789)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/kernel-boot-options/2778) ~ UI|[CLI](/t/kernel-boot-options/2780) ~ [UI](/t/kernel-boot-options/2781)|[CLI](/t/kernel-boot-options/2782) ~ [UI](/t/kernel-boot-options/2783)|
+|Packages|[CLI](/t/kernel-boot-options/2784) ~ [UI](/t/kernel-boot-options/2785)|[CLI](/t/kernel-boot-options/2786) ~ [UI](/t/kernel-boot-options/2787)|[CLI](/t/kernel-boot-options/2788) ~ [UI](/t/kernel-boot-options/2789)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/kernel-boot-options/2778) ~ [UI](/t/kernel-boot-options/2779)|CLI ~ [UI](/t/kernel-boot-options/2781)|[CLI](/t/kernel-boot-options/2782) ~ [UI](/t/kernel-boot-options/2783)|
+|Packages|[CLI](/t/kernel-boot-options/2784) ~ [UI](/t/kernel-boot-options/2785)|[CLI](/t/kernel-boot-options/2786) ~ [UI](/t/kernel-boot-options/2787)|[CLI](/t/kernel-boot-options/2788) ~ [UI](/t/kernel-boot-options/2789)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/kernel-boot-options/2778) ~ [UI](/t/kernel-boot-options/2779)|[CLI](/t/kernel-boot-options/2780) ~ UI|[CLI](/t/kernel-boot-options/2782) ~ [UI](/t/kernel-boot-options/2783)|
+|Packages|[CLI](/t/kernel-boot-options/2784) ~ [UI](/t/kernel-boot-options/2785)|[CLI](/t/kernel-boot-options/2786) ~ [UI](/t/kernel-boot-options/2787)|[CLI](/t/kernel-boot-options/2788) ~ [UI](/t/kernel-boot-options/2789)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/kernel-boot-options/2778) ~ [UI](/t/kernel-boot-options/2779)|[CLI](/t/kernel-boot-options/2780) ~ [UI](/t/kernel-boot-options/2781)|CLI ~ [UI](/t/kernel-boot-options/2783)|
+|Packages|[CLI](/t/kernel-boot-options/2784) ~ [UI](/t/kernel-boot-options/2785)|[CLI](/t/kernel-boot-options/2786) ~ [UI](/t/kernel-boot-options/2787)|[CLI](/t/kernel-boot-options/2788) ~ [UI](/t/kernel-boot-options/2789)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/kernel-boot-options/2778) ~ [UI](/t/kernel-boot-options/2779)|[CLI](/t/kernel-boot-options/2780) ~ [UI](/t/kernel-boot-options/2781)|[CLI](/t/kernel-boot-options/2782) ~ UI|
+|Packages|[CLI](/t/kernel-boot-options/2784) ~ [UI](/t/kernel-boot-options/2785)|[CLI](/t/kernel-boot-options/2786) ~ [UI](/t/kernel-boot-options/2787)|[CLI](/t/kernel-boot-options/2788) ~ [UI](/t/kernel-boot-options/2789)|
  snap-2-9-ui -->
 
 MAAS can specify kernel boot options to machines on both a global basis (UI and CLI) and a per-machine basis (CLI-only). A full catalogue of available options can be found in the [Linux kernel parameters list^](https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html) at [kernel.org^](https://www.kernel.org).
@@ -66,9 +114,9 @@ maas $PROFILE maas set-config name=kernel_opts value='$KERNEL_OPTIONS'
 
 Per-machine kernel boot options are set using the CLI.
 
-<strong>NOTE:</strong> 
+[note]
 Per-machine boot options take precedence to global ones.
-
+[/note]
 
 To specify kernel boot options for an individual machine, first create a tag:
 

@@ -1,37 +1,85 @@
 <!-- deb-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/region-controllers/3066) ~ [UI](/t/region-controllers/3067)|[CLI](/t/region-controllers/3068) ~ [UI](/t/region-controllers/3069)|[CLI](/t/region-controllers/3070) ~ [UI](/t/region-controllers/3071)|
+|Packages|CLI ~ [UI](/t/region-controllers/3073)|[CLI](/t/region-controllers/3074) ~ [UI](/t/region-controllers/3075)|[CLI](/t/region-controllers/3076) ~ [UI](/t/region-controllers/3077)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/region-controllers/3066) ~ [UI](/t/region-controllers/3067)|[CLI](/t/region-controllers/3068) ~ [UI](/t/region-controllers/3069)|[CLI](/t/region-controllers/3070) ~ [UI](/t/region-controllers/3071)|
+|Packages|[CLI](/t/region-controllers/3072) ~ UI|[CLI](/t/region-controllers/3074) ~ [UI](/t/region-controllers/3075)|[CLI](/t/region-controllers/3076) ~ [UI](/t/region-controllers/3077)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/region-controllers/3066) ~ [UI](/t/region-controllers/3067)|[CLI](/t/region-controllers/3068) ~ [UI](/t/region-controllers/3069)|[CLI](/t/region-controllers/3070) ~ [UI](/t/region-controllers/3071)|
+|Packages|[CLI](/t/region-controllers/3072) ~ [UI](/t/region-controllers/3073)|CLI ~ [UI](/t/region-controllers/3075)|[CLI](/t/region-controllers/3076) ~ [UI](/t/region-controllers/3077)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/region-controllers/3066) ~ [UI](/t/region-controllers/3067)|[CLI](/t/region-controllers/3068) ~ [UI](/t/region-controllers/3069)|[CLI](/t/region-controllers/3070) ~ [UI](/t/region-controllers/3071)|
+|Packages|[CLI](/t/region-controllers/3072) ~ [UI](/t/region-controllers/3073)|[CLI](/t/region-controllers/3074) ~ UI|[CLI](/t/region-controllers/3076) ~ [UI](/t/region-controllers/3077)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/region-controllers/3066) ~ [UI](/t/region-controllers/3067)|[CLI](/t/region-controllers/3068) ~ [UI](/t/region-controllers/3069)|[CLI](/t/region-controllers/3070) ~ [UI](/t/region-controllers/3071)|
+|Packages|[CLI](/t/region-controllers/3072) ~ [UI](/t/region-controllers/3073)|[CLI](/t/region-controllers/3074) ~ [UI](/t/region-controllers/3075)|CLI ~ [UI](/t/region-controllers/3077)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/region-controllers/3066) ~ [UI](/t/region-controllers/3067)|[CLI](/t/region-controllers/3068) ~ [UI](/t/region-controllers/3069)|[CLI](/t/region-controllers/3070) ~ [UI](/t/region-controllers/3071)|
+|Packages|[CLI](/t/region-controllers/3072) ~ [UI](/t/region-controllers/3073)|[CLI](/t/region-controllers/3074) ~ [UI](/t/region-controllers/3075)|[CLI](/t/region-controllers/3076) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ [UI](/t/region-controllers/3067)|[CLI](/t/region-controllers/3068) ~ [UI](/t/region-controllers/3069)|[CLI](/t/region-controllers/3070) ~ [UI](/t/region-controllers/3071)|
+|Packages|[CLI](/t/region-controllers/3072) ~ [UI](/t/region-controllers/3073)|[CLI](/t/region-controllers/3074) ~ [UI](/t/region-controllers/3075)|[CLI](/t/region-controllers/3076) ~ [UI](/t/region-controllers/3077)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/region-controllers/3066) ~ UI|[CLI](/t/region-controllers/3068) ~ [UI](/t/region-controllers/3069)|[CLI](/t/region-controllers/3070) ~ [UI](/t/region-controllers/3071)|
+|Packages|[CLI](/t/region-controllers/3072) ~ [UI](/t/region-controllers/3073)|[CLI](/t/region-controllers/3074) ~ [UI](/t/region-controllers/3075)|[CLI](/t/region-controllers/3076) ~ [UI](/t/region-controllers/3077)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/region-controllers/3066) ~ [UI](/t/region-controllers/3067)|CLI ~ [UI](/t/region-controllers/3069)|[CLI](/t/region-controllers/3070) ~ [UI](/t/region-controllers/3071)|
+|Packages|[CLI](/t/region-controllers/3072) ~ [UI](/t/region-controllers/3073)|[CLI](/t/region-controllers/3074) ~ [UI](/t/region-controllers/3075)|[CLI](/t/region-controllers/3076) ~ [UI](/t/region-controllers/3077)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/region-controllers/3066) ~ [UI](/t/region-controllers/3067)|[CLI](/t/region-controllers/3068) ~ UI|[CLI](/t/region-controllers/3070) ~ [UI](/t/region-controllers/3071)|
+|Packages|[CLI](/t/region-controllers/3072) ~ [UI](/t/region-controllers/3073)|[CLI](/t/region-controllers/3074) ~ [UI](/t/region-controllers/3075)|[CLI](/t/region-controllers/3076) ~ [UI](/t/region-controllers/3077)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/region-controllers/3066) ~ [UI](/t/region-controllers/3067)|[CLI](/t/region-controllers/3068) ~ [UI](/t/region-controllers/3069)|CLI ~ [UI](/t/region-controllers/3071)|
+|Packages|[CLI](/t/region-controllers/3072) ~ [UI](/t/region-controllers/3073)|[CLI](/t/region-controllers/3074) ~ [UI](/t/region-controllers/3075)|[CLI](/t/region-controllers/3076) ~ [UI](/t/region-controllers/3077)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/region-controllers/3066) ~ [UI](/t/region-controllers/3067)|[CLI](/t/region-controllers/3068) ~ [UI](/t/region-controllers/3069)|[CLI](/t/region-controllers/3070) ~ UI|
+|Packages|[CLI](/t/region-controllers/3072) ~ [UI](/t/region-controllers/3073)|[CLI](/t/region-controllers/3074) ~ [UI](/t/region-controllers/3075)|[CLI](/t/region-controllers/3076) ~ [UI](/t/region-controllers/3077)|
  snap-2-9-ui -->
 
 A region controller manages communication with the user, via the Web UI/API, as well as managing the rack controller(s) in your system.  The MAAS postgres database is also managed by the region controller.  Typical region-level responsibilities include requesting that a rack controller boot a machine, and providing the ephemeral Ubuntu image needed to commission or enlist a machine.  
@@ -51,9 +99,9 @@ On the primary database host, edit file <code>/etc/postgresql/9.5/main/pg_hba.co
 
     host maasdb maas $SECONDARY_API_SERVER_IP/32 md5
 
-<strong>NOTE:</strong> 
+[note]
 The primary database and API servers often reside on the same host.
-
+[/note]
 
 Apply this change by restarting the database:
 
@@ -83,9 +131,9 @@ Check three log files for any errors:
 
 <h2 id="heading--increasing-regiond-daemon-workers">Improving region controller performance</h2>
 
-<strong>NOTE:</strong> 
+[note]
 This functionality is available starting from MAAS 2.4.
-
+[/note]
 
 The MAAS Region Controller is a daemon collection of 4 workers that are in charge of handling all the internals of MAAS. The regiond workers handle the UI, API and the internal communication between Region and Rack controllers.
 

@@ -1,37 +1,85 @@
 <!-- deb-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/machines/2730) ~ [UI](/t/machines/2731)|[CLI](/t/machines/2732) ~ [UI](/t/machines/2733)|[CLI](/t/machines/2734) ~ [UI](/t/machines/2735)|
+|Packages|CLI ~ [UI](/t/machines/2737)|[CLI](/t/machines/2738) ~ [UI](/t/machines/2739)|[CLI](/t/machines/2740) ~ [UI](/t/machines/2741)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/machines/2730) ~ [UI](/t/machines/2731)|[CLI](/t/machines/2732) ~ [UI](/t/machines/2733)|[CLI](/t/machines/2734) ~ [UI](/t/machines/2735)|
+|Packages|[CLI](/t/machines/2736) ~ UI|[CLI](/t/machines/2738) ~ [UI](/t/machines/2739)|[CLI](/t/machines/2740) ~ [UI](/t/machines/2741)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/machines/2730) ~ [UI](/t/machines/2731)|[CLI](/t/machines/2732) ~ [UI](/t/machines/2733)|[CLI](/t/machines/2734) ~ [UI](/t/machines/2735)|
+|Packages|[CLI](/t/machines/2736) ~ [UI](/t/machines/2737)|CLI ~ [UI](/t/machines/2739)|[CLI](/t/machines/2740) ~ [UI](/t/machines/2741)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/machines/2730) ~ [UI](/t/machines/2731)|[CLI](/t/machines/2732) ~ [UI](/t/machines/2733)|[CLI](/t/machines/2734) ~ [UI](/t/machines/2735)|
+|Packages|[CLI](/t/machines/2736) ~ [UI](/t/machines/2737)|[CLI](/t/machines/2738) ~ UI|[CLI](/t/machines/2740) ~ [UI](/t/machines/2741)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/machines/2730) ~ [UI](/t/machines/2731)|[CLI](/t/machines/2732) ~ [UI](/t/machines/2733)|[CLI](/t/machines/2734) ~ [UI](/t/machines/2735)|
+|Packages|[CLI](/t/machines/2736) ~ [UI](/t/machines/2737)|[CLI](/t/machines/2738) ~ [UI](/t/machines/2739)|CLI ~ [UI](/t/machines/2741)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/machines/2730) ~ [UI](/t/machines/2731)|[CLI](/t/machines/2732) ~ [UI](/t/machines/2733)|[CLI](/t/machines/2734) ~ [UI](/t/machines/2735)|
+|Packages|[CLI](/t/machines/2736) ~ [UI](/t/machines/2737)|[CLI](/t/machines/2738) ~ [UI](/t/machines/2739)|[CLI](/t/machines/2740) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ [UI](/t/machines/2731)|[CLI](/t/machines/2732) ~ [UI](/t/machines/2733)|[CLI](/t/machines/2734) ~ [UI](/t/machines/2735)|
+|Packages|[CLI](/t/machines/2736) ~ [UI](/t/machines/2737)|[CLI](/t/machines/2738) ~ [UI](/t/machines/2739)|[CLI](/t/machines/2740) ~ [UI](/t/machines/2741)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/machines/2730) ~ UI|[CLI](/t/machines/2732) ~ [UI](/t/machines/2733)|[CLI](/t/machines/2734) ~ [UI](/t/machines/2735)|
+|Packages|[CLI](/t/machines/2736) ~ [UI](/t/machines/2737)|[CLI](/t/machines/2738) ~ [UI](/t/machines/2739)|[CLI](/t/machines/2740) ~ [UI](/t/machines/2741)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/machines/2730) ~ [UI](/t/machines/2731)|CLI ~ [UI](/t/machines/2733)|[CLI](/t/machines/2734) ~ [UI](/t/machines/2735)|
+|Packages|[CLI](/t/machines/2736) ~ [UI](/t/machines/2737)|[CLI](/t/machines/2738) ~ [UI](/t/machines/2739)|[CLI](/t/machines/2740) ~ [UI](/t/machines/2741)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/machines/2730) ~ [UI](/t/machines/2731)|[CLI](/t/machines/2732) ~ UI|[CLI](/t/machines/2734) ~ [UI](/t/machines/2735)|
+|Packages|[CLI](/t/machines/2736) ~ [UI](/t/machines/2737)|[CLI](/t/machines/2738) ~ [UI](/t/machines/2739)|[CLI](/t/machines/2740) ~ [UI](/t/machines/2741)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/machines/2730) ~ [UI](/t/machines/2731)|[CLI](/t/machines/2732) ~ [UI](/t/machines/2733)|CLI ~ [UI](/t/machines/2735)|
+|Packages|[CLI](/t/machines/2736) ~ [UI](/t/machines/2737)|[CLI](/t/machines/2738) ~ [UI](/t/machines/2739)|[CLI](/t/machines/2740) ~ [UI](/t/machines/2741)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/machines/2730) ~ [UI](/t/machines/2731)|[CLI](/t/machines/2732) ~ [UI](/t/machines/2733)|[CLI](/t/machines/2734) ~ UI|
+|Packages|[CLI](/t/machines/2736) ~ [UI](/t/machines/2737)|[CLI](/t/machines/2738) ~ [UI](/t/machines/2739)|[CLI](/t/machines/2740) ~ [UI](/t/machines/2741)|
  snap-2-9-ui -->
 
 Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers. MAAS manages their transit through a life-cycle, from adding and enlistment, through commissioning, allocation, and deployment, finally being released back to the pool, or retired altogether.  You can move them around, create redundant versions (even in other geographies you can access), and basically rearrange them to the extent that your network allows.
@@ -139,9 +187,9 @@ With one or more machines selected, the 'Add hardware' drop-down menu moves to t
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/e03d5ac8de9ea4f4827ed057bb2dd83e241aac3b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e03d5ac8de9ea4f4827ed057bb2dd83e241aac3b.jpeg"></a> 
 
-<strong>NOTE:</strong> 
+[note]
 The 'Filter by' section limits the machines listed in the table to selected keywords and machine attributes.
-
+[/note]
 
 <h2 id="heading--node-details">View machine details</h2>
 

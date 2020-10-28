@@ -1,38 +1,86 @@
 <!-- flip -->
 <!-- deb-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
+|Packages|CLI ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
+|Packages|[CLI](/t/availability-zones/2328) ~ UI|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
+|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|CLI ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
+|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ UI|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
+|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|CLI ~ [UI](/t/availability-zones/2333)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
+|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
+|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/availability-zones/2322) ~ UI|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
+|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|CLI ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
+|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ UI|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
+|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|CLI ~ [UI](/t/availability-zones/2327)|
+|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ UI|
+|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
  snap-2-9-ui -->
 
 <!-- deb-2-7-cli

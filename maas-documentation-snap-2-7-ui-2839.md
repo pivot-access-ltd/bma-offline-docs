@@ -12,10 +12,12 @@ deb-2-7-cli -->
 |Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
 snap-2-7-cli -->
 
+<!-- snap-2-7-ui
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ UI|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
 |Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
+snap-2-7-ui -->
 
 <!-- deb-2-7-ui
 || 2.7 | 2.8 | 2.9|
@@ -92,11 +94,13 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 5. [Can I just install it and try it for myself?](/t/explore-maas-deb-2-7-ui/2641)
 deb-2-7-ui -->
 
+<!-- snap-2-7-ui
 1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-7-ui/2263)
 2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-7-ui/2647)
 3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-7-ui/2263#heading--how-maas-works)
 4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
 5. [Can I just install it and try it for myself?](/t/explore-maas-snap-2-7-ui/2635)
+snap-2-7-ui -->
 
 <!-- deb-2-8-ui
 1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-8-ui/2271)
@@ -196,9 +200,11 @@ snap-2-9-cli -->
 *Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-ui/2657), our example data centre.*
  deb-2-9-ui -->
 
+<!-- snap-2-7-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
 *Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-ui/2647), our example data centre.*
+ snap-2-7-ui -->
 
 <!-- pre-rad
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
@@ -268,9 +274,11 @@ snap-2-8-ui -->
 - [What's new in 2.8](/t/whats-new-in-maas/3335)
 deb-2-8-cli deb-2-8-ui snap-2-8-cli snap-2-8-ui -->
 
+<!-- deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-uil
 <h2 id="heading--whats-new">New version of MAAS</h2>
 
 - [What's new in 2.7](/t/whats-new-in-maas/3334)
+deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-ui -->
 
 <!-- deb-2-9-cli deb-2-9-ui snap-2-9-cli snap-2-9-ui
 <h2 id="heading--whats-new">BETA version of MAAS</h2>
@@ -298,3 +306,4 @@ There are (at least) three ways you can contribute to MAAS:
 1. [Guide to contributing](/t/writing-guide/747)
 2. [Push some code (external link)](https://launchpad.net/maas)
 3. [File an issue (external link)](https://bugs.launchpad.net/maas/+filebug)
+
