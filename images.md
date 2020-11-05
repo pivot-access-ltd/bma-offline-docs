@@ -194,54 +194,54 @@ A boot resource is another name for an image. So boot resources are found within
 
 MAAS comes configured with a boot source that should suffice for most users:
 
-[`https://images.maas.io/ephemeral-v3/daily/`](https://images.maas.io/ephemeral-v3/daily/)
+[`https://images.maas.io/ephemeral-v3/stable/`](https://images.maas.io/ephemeral-v3/stable/)
 
 <!-- deb-2-7-cli
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2808) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2808) for some explanation regarding the availability of other streams.
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2809) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2809) for some explanation regarding the availability of other streams.
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2810) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2810) for some explanation regarding the availability of other streams.
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2811) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2811) for some explanation regarding the availability of other streams.
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2812) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2812) for some explanation regarding the availability of other streams.
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2813) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2813) for some explanation regarding the availability of other streams.
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2802) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2802) for some explanation regarding the availability of other streams.
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2803) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2803) for some explanation regarding the availability of other streams.
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2804) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2804) for some explanation regarding the availability of other streams.
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2805) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2805) for some explanation regarding the availability of other streams.
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2806) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2806) for some explanation regarding the availability of other streams.
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2807) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2807) for some explanation regarding the availability of other streams.
  snap-2-9-ui -->
 
 Although the backend supports multiple boot sources, MAAS itself uses a single source. If multiple sources are detected, the web UI will print a warning and will be unable to manage images.

@@ -97,12 +97,12 @@ First, download the cloud image that corresponds to the architecture of your nod
 
 <a href="https://assets.ubuntu.com/v1/130aa580-troulbeshoot-faq__2.3_images.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/130aa580-troulbeshoot-faq__2.3_images.png"></a>
 
-Images can be downloaded from [https://cloud-images.ubuntu.com/daily/server](https://cloud-images.ubuntu.com/daily/server/).
+Images can be downloaded from [https://cloud-images.ubuntu.com/stable/server](https://cloud-images.ubuntu.com/stable/server/).
 
 For example:
 
 ``` bash
-wget https://cloud-images.ubuntu.com/daily/server/xenial/current/xenial-server-cloudimg-amd64-root.tar.gz
+wget https://cloud-images.ubuntu.com/stable/server/xenial/current/xenial-server-cloudimg-amd64-root.tar.gz
 ```
 
 With the image downloaded, extract its contents so that the *shadow* password file can be edited:
@@ -163,7 +163,7 @@ Images are synchronised by the region controller and stored on the rack controll
 For example, the latest low-latency Ubuntu 16.04 image can be found in the following directory:
 
 ``` bash
-cd /var/lib/maas/boot-resources/current/ubuntu/amd64/ga-16.04-lowlatency/xenial/daily
+cd /var/lib/maas/boot-resources/current/ubuntu/amd64/ga-16.04-lowlatency/xenial/stable
 ```
 
 To replace the original, substitute the *squashfs* file with the custom image generated earlier, making sure the new owner is *maas*:

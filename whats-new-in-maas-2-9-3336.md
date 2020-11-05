@@ -206,7 +206,8 @@ NOTE that this is currently a Beta release, so there will be bugs, instabilities
 
 #### What are the new features & fixes for MAAS 2.9?
 
-2. [Improved performance for large MAAS installations](#heading--improved-perf-large-maas)
+1. [Support for NUMA, SR-IOV, and hugepages](#heading--numa)
+1. [Improved performance for large MAAS installations](#heading--improved-perf-large-maas)
 2. [New release notifications](#heading--new-release-notifications)
 3. [IPMI configuration screens](#heading--ipmi-config-screens)
 4. [Descriptions when marking machines broken](#heading--descrip-mark-mach-broken)
@@ -233,6 +234,26 @@ NOTE that this is currently a Beta release, so there will be bugs, instabilities
 3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 Beta snap?](/t/maas-installation/3323#heading--upgrade-maas-snap)
 4. [How do I install MAAS 2.9 Beta from packages?](/t/maas-installation/3329)
 5. [What bugs are fixed so far in this release?](#heading--bug-fixes)
+
+<h2 id="heading--maas-2-9-rc-1">New features in MAAS 2.9 RC1</h2>
+
+<h3 id="heading--numa">Support for NUMA, SR-IOV, and hugepages</h3>
+
+MAAS 2.9 adds extensive optimisation tools for using NUMA with virtual machines. You can now see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory. You can quickly spot a VM running in multiple NUMA nodes, and optimise accordingly, with instant updates on pinning and allocations. You can also tell which VMs are currently running.  Using the CLI, you can also pin nodes to specific cores, and configure hugepages for use by VMs.
+
+Specifically, there are five new features available to support NUMA, SR-IOV, and hugepages:
+
+1. You can examine resources on a per-NUMA-node basis.
+2. You can pin nodes to specific cores (CLI only).
+3. You can see resources for VM hosts supporting NUMA nodes.
+4. You can see the alignment between VM host interfaces and NUMA nodes.
+5. You can configure and use hugepages (configurable in CLI only).
+
+This functionality comes with an enhanced panel in the "KVM" details section:
+
+<a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
+
+See the [VM hosting](/t/vm-hosting-snap-2-9-ui/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
 
 <h2 id="heading--maas-2-9-beta-7">New features in 2.9 Beta7</h2>
 

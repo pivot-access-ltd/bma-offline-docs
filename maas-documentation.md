@@ -403,6 +403,7 @@ There are (at least) three ways you can contribute to MAAS:
 
 - [Getting help](/t/getting-help/838)
 - [Tips, tricks, and traps](/t/tips-tricks-and-traps/1506)
+  - [Using MAAS in an air-gapped environment](/t/-/3539)
 - [Non-snap MAAS installs](/t/non-snap-maas-installs/1308)
 - [MAAS 2.5 (and earlier) documentation](https://old-docs.maas.io/2.5/en/)
 - [Upgrading MAAS](/t/upgrading-maas/779)
@@ -420,6 +421,7 @@ There are (at least) three ways you can contribute to MAAS:
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/3539|/docs/air-gapped-maas|
 |https://discourse.maas.io/t/-/3335|/docs/2.7/release-notes|
 |https://discourse.maas.io/t/-/3334|/docs/2.8/release-notes|
 |https://discourse.maas.io/t/-/3336|/docs/2.9/release-notes|
@@ -1360,7 +1362,7 @@ There are (at least) three ways you can contribute to MAAS:
 |/docs/installconfig-images-vmware|/docs/vmware-images|
 |/docs/installconfig-images|/docs/images|
 |/docs/installconfig-install|/docs/install-from-a-snap|
-|/docs/installation|/docs/install-from-a-snap|
+|/docs/installation|/docs/snap/2.8/ui/installation|
 |/docs/installconfig-iso-install|/docs/install-from-iso|
 |/docs/installconfig-lxd-install|/docs/install-with-lxd|
 |/docs/installconfig-network-dev-discovery|/docs/network-discovery|
