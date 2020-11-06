@@ -1295,7 +1295,12 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/810/|/docs/api-client|
 |https://discourse.maas.io/t/-/1381|/docs/security|
 |https://discourse.maas.io/t/-/813/|/docs/prometheus-metrics|
-|https://discourse.maas.io/t/-/814/|/docs/package-repositories|
+|https://discourse.maas.io/t/-/2976/|/docs/deb/2.7/cli/package-repositories|
+|https://discourse.maas.io/t/-/2977/|/docs/deb/2.7/ui/package-repositories|
+|https://discourse.maas.io/t/-/2978/|/docs/deb/2.8/cli/package-repositories|
+|https://discourse.maas.io/t/-/2979/|/docs/package-repositories|
+|https://discourse.maas.io/t/-/2980/|/docs/deb/2.9/cli/package-repositories|
+|https://discourse.maas.io/t/-/2981/|/docs/deb/2.9/ui/package-repositories|
 |https://discourse.maas.io/t/-/815/|/docs/add-an-rsd-host|
 |https://discourse.maas.io/t/-/816/|/docs/creating-and-deleting-machines|
 |https://discourse.maas.io/t/-/817/|/docs/intel-rack-scale-design-rsd-introduction|
@@ -1450,4 +1455,4 @@ There are (at least) three ways you can contribute to MAAS:
 |/docs/release-notes|/docs/maas-2-7-release-notes|
 |/docs/troubleshoot-faq|/docs/troubleshooting|
 |/docs/troubleshoot-getting-help|/docs/getting-help|
-[/details]
+[/details]>

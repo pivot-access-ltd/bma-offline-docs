@@ -271,6 +271,24 @@ originals/vm-hosting.md: vm-hosting.md
 	cp -p vm-hosting.md originals
 	chmod 444 originals/*
  
+originals/package-repositories.md: package-repositories.md
+	cp package-repositories.md package-repositories-deb-2-7-cli-2976.md
+	cp package-repositories.md package-repositories-deb-2-7-ui-2977.md
+	cp package-repositories.md package-repositories-deb-2-8-cli-2978.md
+	cp package-repositories.md package-repositories-deb-2-8-ui-2979.md
+	cp package-repositories.md package-repositories-deb-2-9-cli-2980.md
+	cp package-repositories.md package-repositories-deb-2-9-ui-2981.md
+	xpub push discourse -t deb-2-7-cli package-repositories-deb-2-7-cli-2976.md
+	xpub push discourse -t deb-2-7-ui package-repositories-deb-2-7-ui-2977.md
+	xpub push discourse -t deb-2-8-cli package-repositories-deb-2-8-cli-2978.md
+	xpub push discourse -t deb-2-8-ui package-repositories-deb-2-8-ui-2979.md
+	xpub push discourse -t deb-2-9-cli package-repositories-deb-2-9-cli-2980.md
+	xpub push discourse -t deb-2-9-ui package-repositories-deb-2-9-ui-2981.md
+	xpub pull discourse 2982 2993
+	chmod 644 originals/*
+	cp -p package-repositories.md originals
+	chmod 444 originals/*
+
 originals/partitions.md: partitions.md
 	cp partitions.md partitions-deb-2-7-cli-2988.md
 	cp partitions.md partitions-deb-2-7-ui-2989.md

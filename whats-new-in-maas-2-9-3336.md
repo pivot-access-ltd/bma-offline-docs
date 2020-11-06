@@ -206,26 +206,26 @@ NOTE that this is currently a Beta release, so there will be bugs, instabilities
 
 #### What are the new features & fixes for MAAS 2.9?
 
-1. [Support for NUMA, SR-IOV, and hugepages](#heading--numa)
-1. [Improved performance for large MAAS installations](#heading--improved-perf-large-maas)
-2. [New release notifications](#heading--new-release-notifications)
-3. [IPMI configuration screens](#heading--ipmi-config-screens)
-4. [Descriptions when marking machines broken](#heading--descrip-mark-mach-broken)
-5. [Curtin 20.2 now included](#heading--curtin-20-2-included)
-6. [HTTP boot disabled](#heading--http-boot-disabled)
-7. [BMC/IPMI default parameter additions](#heading--bmc-param-additions)
-8. [New global IPMI configuration options](#heading--new-config-options)
-9. [Addition of IPMI config options to UI](#heading--global-config-settings)
-10. [New MAAS CLI power command](#heading--maas-power)
-11. [Commissioning speed improvements](#heading--commissioning-speed)
-12. [BMC improvements](#heading--bmc-improve)
-13. [IPMI power driver upgrades](#heading--ipmi-driver)
-14. [Enlistment script improvements](#heading--enlistment-scripts)
-15. [Commissioning script improvements](#heading--commissioning-scripts)
-16. [Commissioning script reordering](#heading--commissioning-reorder)
-17. [Reader Adaptive Documentation](#heading--rad)
-18. [Offline documentation](#heading--offline-docs)
-
+1. [Support for OpenVswitch bridge type](#heading--openvswitch)
+2. [Support for NUMA, SR-IOV, and hugepages](#heading--numa)
+3. [Improved performance for large MAAS installations](#heading--improved-perf-large-maas)
+4. [New release notifications](#heading--new-release-notifications)
+5. [IPMI configuration screens](#heading--ipmi-config-screens)
+6. [Descriptions when marking machines broken](#heading--descrip-mark-mach-broken)
+7. [Curtin 20.2 now included](#heading--curtin-20-2-included)
+8. [HTTP boot disabled](#heading--http-boot-disabled)
+9. [BMC/IPMI default parameter additions](#heading--bmc-param-additions)
+10. [New global IPMI configuration options](#heading--new-config-options)
+11. [Addition of IPMI config options to UI](#heading--global-config-settings)
+12. [New MAAS CLI power command](#heading--maas-power)
+13. [Commissioning speed improvements](#heading--commissioning-speed)
+14. [BMC improvements](#heading--bmc-improve)
+15. [IPMI power driver upgrades](#heading--ipmi-driver)
+16. [Enlistment script improvements](#heading--enlistment-scripts)
+17. [Commissioning script improvements](#heading--commissioning-scripts)
+18. [Commissioning script reordering](#heading--commissioning-reorder)
+19. [Reader Adaptive Documentation](#heading--rad)
+20. [Offline documentation](#heading--offline-docs)
 
 <h4>Five other questions you may have:</h4>
 
@@ -236,6 +236,10 @@ NOTE that this is currently a Beta release, so there will be bugs, instabilities
 5. [What bugs are fixed so far in this release?](#heading--bug-fixes)
 
 <h2 id="heading--maas-2-9-rc-1">New features in MAAS 2.9 RC1</h2>
+
+<h3 id="heading--openvswitch">Support for OpenVswitch bridge type</h3>
+
+MAAS 2.9 allows you to create an OpenVswitch bridge type when creating a bridge.
 
 <h3 id="heading--numa">Support for NUMA, SR-IOV, and hugepages</h3>
 

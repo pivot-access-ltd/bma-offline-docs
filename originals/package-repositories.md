@@ -1,3 +1,39 @@
+<!-- deb-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Packages|CLI ~ [UI](/t/-/2977)|[CLI](/t/-/2978) ~ [UI](/t/-/2979)|[CLI](/t/-/2980) ~ [UI](/t/-/2981)|
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Packages|[CLI](/t/-/2976) ~ UI|[CLI](/t/-/2978) ~ [UI](/t/-/2979)|[CLI](/t/-/2980) ~ [UI](/t/-/2981)|
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Packages|[CLI](/t/-/2976) ~ [UI](/t/-/2977)|CLI ~ [UI](/t/-/2979)|[CLI](/t/-/2980) ~ [UI](/t/-/2981)|
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Packages|[CLI](/t/-/2976) ~ [UI](/t/-/2977)|[CLI](/t/-/2978) ~ UI|[CLI](/t/-/2980) ~ [UI](/t/-/2981)|
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Packages|[CLI](/t/-/2976) ~ [UI](/t/-/2977)|[CLI](/t/-/2978) ~ [UI](/t/-/2979)|CLI ~ [UI](/t/-/2981)|
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Packages|[CLI](/t/-/2976) ~ [UI](/t/-/2977)|[CLI](/t/-/2978) ~ [UI](/t/-/2979)|[CLI](/t/-/2980) ~ UI|
+ deb-2-9-ui -->
+
 Package repositories managed within MAAS can be of two types:
 
 -   Ubuntu package repositories
@@ -56,5 +92,3 @@ To add this PPA, then, hit the 'Add repository' button and fill in the fields. B
 Click 'Add repository' to save the configuration.
 
 See [Launchpad PPAs](https://help.launchpad.net/Packaging/PPA) for more information on PPAs.
-
-<!-- LINKS -->
