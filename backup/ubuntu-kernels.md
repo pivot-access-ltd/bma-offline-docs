@@ -103,7 +103,7 @@ This article explains each of these kernels, and offers instructions and further
 
 <h2 id="heading--general-availability-kernels">General availability kernels</h2>
 
-The *general availability* (GA) kernel is based on the *generic* kernel that ships with a new Ubuntu version. Subsequent fixes are applied regularly by the 'daily' *stream* used when setting up the global image source for MAAS.
+The *general availability* (GA) kernel is based on the *generic* kernel that ships with a new Ubuntu version. Subsequent fixes are applied regularly by the 'stable' *stream* used when setting up the global image source for MAAS.
 
 MAAS denotes a GA kernel like this:
 

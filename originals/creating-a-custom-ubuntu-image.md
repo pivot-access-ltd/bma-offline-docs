@@ -1,85 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-a-custom-ubuntu-image/2562) ~ [UI](/t/creating-a-custom-ubuntu-image/2563)|[CLI](/t/creating-a-custom-ubuntu-image/2564) ~ [UI](/t/creating-a-custom-ubuntu-image/2565)|[CLI](/t/creating-a-custom-ubuntu-image/2566) ~ [UI](/t/creating-a-custom-ubuntu-image/2567)|
-|Packages|CLI ~ [UI](/t/creating-a-custom-ubuntu-image/2569)|[CLI](/t/creating-a-custom-ubuntu-image/2570) ~ [UI](/t/creating-a-custom-ubuntu-image/2571)|[CLI](/t/creating-a-custom-ubuntu-image/2572) ~ [UI](/t/creating-a-custom-ubuntu-image/2573)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-a-custom-ubuntu-image/2562) ~ [UI](/t/creating-a-custom-ubuntu-image/2563)|[CLI](/t/creating-a-custom-ubuntu-image/2564) ~ [UI](/t/creating-a-custom-ubuntu-image/2565)|[CLI](/t/creating-a-custom-ubuntu-image/2566) ~ [UI](/t/creating-a-custom-ubuntu-image/2567)|
-|Packages|[CLI](/t/creating-a-custom-ubuntu-image/2568) ~ UI|[CLI](/t/creating-a-custom-ubuntu-image/2570) ~ [UI](/t/creating-a-custom-ubuntu-image/2571)|[CLI](/t/creating-a-custom-ubuntu-image/2572) ~ [UI](/t/creating-a-custom-ubuntu-image/2573)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-a-custom-ubuntu-image/2562) ~ [UI](/t/creating-a-custom-ubuntu-image/2563)|[CLI](/t/creating-a-custom-ubuntu-image/2564) ~ [UI](/t/creating-a-custom-ubuntu-image/2565)|[CLI](/t/creating-a-custom-ubuntu-image/2566) ~ [UI](/t/creating-a-custom-ubuntu-image/2567)|
-|Packages|[CLI](/t/creating-a-custom-ubuntu-image/2568) ~ [UI](/t/creating-a-custom-ubuntu-image/2569)|CLI ~ [UI](/t/creating-a-custom-ubuntu-image/2571)|[CLI](/t/creating-a-custom-ubuntu-image/2572) ~ [UI](/t/creating-a-custom-ubuntu-image/2573)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-a-custom-ubuntu-image/2562) ~ [UI](/t/creating-a-custom-ubuntu-image/2563)|[CLI](/t/creating-a-custom-ubuntu-image/2564) ~ [UI](/t/creating-a-custom-ubuntu-image/2565)|[CLI](/t/creating-a-custom-ubuntu-image/2566) ~ [UI](/t/creating-a-custom-ubuntu-image/2567)|
-|Packages|[CLI](/t/creating-a-custom-ubuntu-image/2568) ~ [UI](/t/creating-a-custom-ubuntu-image/2569)|[CLI](/t/creating-a-custom-ubuntu-image/2570) ~ UI|[CLI](/t/creating-a-custom-ubuntu-image/2572) ~ [UI](/t/creating-a-custom-ubuntu-image/2573)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-a-custom-ubuntu-image/2562) ~ [UI](/t/creating-a-custom-ubuntu-image/2563)|[CLI](/t/creating-a-custom-ubuntu-image/2564) ~ [UI](/t/creating-a-custom-ubuntu-image/2565)|[CLI](/t/creating-a-custom-ubuntu-image/2566) ~ [UI](/t/creating-a-custom-ubuntu-image/2567)|
-|Packages|[CLI](/t/creating-a-custom-ubuntu-image/2568) ~ [UI](/t/creating-a-custom-ubuntu-image/2569)|[CLI](/t/creating-a-custom-ubuntu-image/2570) ~ [UI](/t/creating-a-custom-ubuntu-image/2571)|CLI ~ [UI](/t/creating-a-custom-ubuntu-image/2573)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-a-custom-ubuntu-image/2562) ~ [UI](/t/creating-a-custom-ubuntu-image/2563)|[CLI](/t/creating-a-custom-ubuntu-image/2564) ~ [UI](/t/creating-a-custom-ubuntu-image/2565)|[CLI](/t/creating-a-custom-ubuntu-image/2566) ~ [UI](/t/creating-a-custom-ubuntu-image/2567)|
-|Packages|[CLI](/t/creating-a-custom-ubuntu-image/2568) ~ [UI](/t/creating-a-custom-ubuntu-image/2569)|[CLI](/t/creating-a-custom-ubuntu-image/2570) ~ [UI](/t/creating-a-custom-ubuntu-image/2571)|[CLI](/t/creating-a-custom-ubuntu-image/2572) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/creating-a-custom-ubuntu-image/2563)|[CLI](/t/creating-a-custom-ubuntu-image/2564) ~ [UI](/t/creating-a-custom-ubuntu-image/2565)|[CLI](/t/creating-a-custom-ubuntu-image/2566) ~ [UI](/t/creating-a-custom-ubuntu-image/2567)|
-|Packages|[CLI](/t/creating-a-custom-ubuntu-image/2568) ~ [UI](/t/creating-a-custom-ubuntu-image/2569)|[CLI](/t/creating-a-custom-ubuntu-image/2570) ~ [UI](/t/creating-a-custom-ubuntu-image/2571)|[CLI](/t/creating-a-custom-ubuntu-image/2572) ~ [UI](/t/creating-a-custom-ubuntu-image/2573)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-a-custom-ubuntu-image/2562) ~ UI|[CLI](/t/creating-a-custom-ubuntu-image/2564) ~ [UI](/t/creating-a-custom-ubuntu-image/2565)|[CLI](/t/creating-a-custom-ubuntu-image/2566) ~ [UI](/t/creating-a-custom-ubuntu-image/2567)|
-|Packages|[CLI](/t/creating-a-custom-ubuntu-image/2568) ~ [UI](/t/creating-a-custom-ubuntu-image/2569)|[CLI](/t/creating-a-custom-ubuntu-image/2570) ~ [UI](/t/creating-a-custom-ubuntu-image/2571)|[CLI](/t/creating-a-custom-ubuntu-image/2572) ~ [UI](/t/creating-a-custom-ubuntu-image/2573)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-a-custom-ubuntu-image/2562) ~ [UI](/t/creating-a-custom-ubuntu-image/2563)|CLI ~ [UI](/t/creating-a-custom-ubuntu-image/2565)|[CLI](/t/creating-a-custom-ubuntu-image/2566) ~ [UI](/t/creating-a-custom-ubuntu-image/2567)|
-|Packages|[CLI](/t/creating-a-custom-ubuntu-image/2568) ~ [UI](/t/creating-a-custom-ubuntu-image/2569)|[CLI](/t/creating-a-custom-ubuntu-image/2570) ~ [UI](/t/creating-a-custom-ubuntu-image/2571)|[CLI](/t/creating-a-custom-ubuntu-image/2572) ~ [UI](/t/creating-a-custom-ubuntu-image/2573)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-a-custom-ubuntu-image/2562) ~ [UI](/t/creating-a-custom-ubuntu-image/2563)|[CLI](/t/creating-a-custom-ubuntu-image/2564) ~ UI|[CLI](/t/creating-a-custom-ubuntu-image/2566) ~ [UI](/t/creating-a-custom-ubuntu-image/2567)|
-|Packages|[CLI](/t/creating-a-custom-ubuntu-image/2568) ~ [UI](/t/creating-a-custom-ubuntu-image/2569)|[CLI](/t/creating-a-custom-ubuntu-image/2570) ~ [UI](/t/creating-a-custom-ubuntu-image/2571)|[CLI](/t/creating-a-custom-ubuntu-image/2572) ~ [UI](/t/creating-a-custom-ubuntu-image/2573)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-a-custom-ubuntu-image/2562) ~ [UI](/t/creating-a-custom-ubuntu-image/2563)|[CLI](/t/creating-a-custom-ubuntu-image/2564) ~ [UI](/t/creating-a-custom-ubuntu-image/2565)|CLI ~ [UI](/t/creating-a-custom-ubuntu-image/2567)|
-|Packages|[CLI](/t/creating-a-custom-ubuntu-image/2568) ~ [UI](/t/creating-a-custom-ubuntu-image/2569)|[CLI](/t/creating-a-custom-ubuntu-image/2570) ~ [UI](/t/creating-a-custom-ubuntu-image/2571)|[CLI](/t/creating-a-custom-ubuntu-image/2572) ~ [UI](/t/creating-a-custom-ubuntu-image/2573)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-a-custom-ubuntu-image/2562) ~ [UI](/t/creating-a-custom-ubuntu-image/2563)|[CLI](/t/creating-a-custom-ubuntu-image/2564) ~ [UI](/t/creating-a-custom-ubuntu-image/2565)|[CLI](/t/creating-a-custom-ubuntu-image/2566) ~ UI|
-|Packages|[CLI](/t/creating-a-custom-ubuntu-image/2568) ~ [UI](/t/creating-a-custom-ubuntu-image/2569)|[CLI](/t/creating-a-custom-ubuntu-image/2570) ~ [UI](/t/creating-a-custom-ubuntu-image/2571)|[CLI](/t/creating-a-custom-ubuntu-image/2572) ~ [UI](/t/creating-a-custom-ubuntu-image/2573)|
  snap-2-9-ui -->
 
 # Introduction
@@ -133,7 +85,7 @@ MAAS supports deploying custom DD or TGZ images. Canonical provides both [lp:maa
  snap-2-9-ui -->
 
 # Why customised Ubuntu deployments aren't supported
-When the [MAAS stream^](https://images.maas.io/ephemeral-v3/daily/) is generated by [lp:maas-images^](https://launchpad.net/maas-images) it starts by downloading the base SquashFS rootfs from cloud-images.ubuntu.com that is used for all clouds. The SquashFS does not contain a kernel so [lp:maas-images^](https://launchpad.net/maas-images) mounts the SquashFS with an overlay and chroots in. It then  installs a kernel and extra initramfs scripts from the cloud-initramfs-rooturl and cloud-initramfs-copymods packages to allow network booting. Once everything is installed the kernel and newly generated initramfs are pulled out of the overlay and everything is unmounted. [lp:maas-images^](https://launchpad.net/maas-images) provides the unmodified SquashFS, installed kernel, and generated initramfs as separate files on images.maas.io.
+When the [MAAS stream^](https://images.maas.io/ephemeral-v3/stable/) is generated by [lp:maas-images^](https://launchpad.net/maas-images) it starts by downloading the base SquashFS rootfs from cloud-images.ubuntu.com that is used for all clouds. The SquashFS does not contain a kernel so [lp:maas-images^](https://launchpad.net/maas-images) mounts the SquashFS with an overlay and chroots in. It then  installs a kernel and extra initramfs scripts from the cloud-initramfs-rooturl and cloud-initramfs-copymods packages to allow network booting. Once everything is installed the kernel and newly generated initramfs are pulled out of the overlay and everything is unmounted. [lp:maas-images^](https://launchpad.net/maas-images) provides the unmodified SquashFS, installed kernel, and generated initramfs as separate files on images.maas.io.
 
 MAAS uses the kernel, initramfs, and SquashFS to perform network booting which allows commissioning, testing, and deployments. When deploying Ubuntu MAAS uses the same version of Ubuntu to network boot into and perform the deployment. This ensures there are no compatibility issues. Other operating systems use the Ubuntu version selected for the ephemeral environment for deployment.
 

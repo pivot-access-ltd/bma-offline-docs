@@ -538,7 +538,7 @@ To avoid unnecessary complexity, you should probably delete any existing boot so
 
 <p>Once the mirror is set up according to <a href="local-image-mirror.html">Local image mirror</a> it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:</p>
 <ol>
-<li>URL=https://$MIRROR/maas/images/ephemeral-v3/daily/</li>
+<li>URL=https://$MIRROR/maas/images/ephemeral-v3/stable/</li>
 <li>KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg</li>
 </ol>
 <p>Where $MIRROR is the mirror server&rsquo;s hostname or IP address.</p>
@@ -546,7 +546,7 @@ To avoid unnecessary complexity, you should probably delete any existing boot so
 
 <p>Recreate the default boot source if it was ever deleted using the following variable values:</p>
 <ol>
-<li>URL=https://images.maas.io/ephemeral-v3/daily/</li>
+<li>URL=https://images.maas.io/ephemeral-v3/stable/</li>
 <li>KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg</li>
 </ol>
     </div>

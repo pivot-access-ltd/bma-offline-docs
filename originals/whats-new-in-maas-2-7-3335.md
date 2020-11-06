@@ -1,83 +1,35 @@
 <!-- deb-2-7
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 deb-2-7 -->
 
 <!-- snap-2-7
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3335) ~ [UI](/t/whats-new-in-maas/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 snap-2-7 -->
 
 <!-- snap-2-7-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 snap-2-7-ui -->
 
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 
 <!-- snap-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335) | CLI ~ UI |[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336) |
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335) |CLI ~ UI |[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336) |
 snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 snap-2-8-ui -->
 
 <!-- deb-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~  UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 deb-2-8-ui -->
 
 <!-- snap-2-9-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~  UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
 snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
 snap-2-9-ui -->
 
 <!-- deb-2-9-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
 deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
 deb-2-9-ui -->
 
 <h2>MAAS 2.7 release notes</h2>
@@ -199,31 +151,32 @@ A number of bug fixes (see the [list in Launchpad^](https://bugs.launchpad.net/m
 
 Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 Beta<big>**5**</big> is now available. This release offers some exciting new features.
 
-[note]
+<strong>NOTE:</strong> 
 NOTE that this is currently a Beta release, so there will be bugs, instabilities, and missing features. Please remember to [file a bug^](https://bugs.launchpad.net/maas/+filebug) if you find one, and please interact with the developers on [discourse^](https://discourse.maas.io/).
-[/note]
+
 
 #### What are the new features & fixes for MAAS 2.9?
 
-2. [Improved performance for large MAAS installations](#heading--improved-perf-large-maas)
-2. [New release notifications](#heading--new-release-notifications)
-3. [IPMI configuration screens](#heading--ipmi-config-screens)
-4. [Descriptions when marking machines broken](#heading--descrip-mark-mach-broken)
-5. [Curtin 20.2 now included](#heading--curtin-20-2-included)
-6. [HTTP boot disabled](#heading--http-boot-disabled)
-7. [BMC/IPMI default parameter additions](#heading--bmc-param-additions)
-8. [New global IPMI configuration options](#heading--new-config-options)
-9. [Addition of IPMI config options to UI](#heading--global-config-settings)
-10. [New MAAS CLI power command](#heading--maas-power)
-11. [Commissioning speed improvements](#heading--commissioning-speed)
-12. [BMC improvements](#heading--bmc-improve)
-13. [IPMI power driver upgrades](#heading--ipmi-driver)
-14. [Enlistment script improvements](#heading--enlistment-scripts)
-15. [Commissioning script improvements](#heading--commissioning-scripts)
-16. [Commissioning script reordering](#heading--commissioning-reorder)
-17. [Reader Adaptive Documentation](#heading--rad)
-18. [Offline documentation](#heading--offline-docs)
-
+1. [Support for OpenVswitch bridge type](#heading--openvswitch)
+2. [Support for NUMA, SR-IOV, and hugepages](#heading--numa)
+3. [Improved performance for large MAAS installations](#heading--improved-perf-large-maas)
+4. [New release notifications](#heading--new-release-notifications)
+5. [IPMI configuration screens](#heading--ipmi-config-screens)
+6. [Descriptions when marking machines broken](#heading--descrip-mark-mach-broken)
+7. [Curtin 20.2 now included](#heading--curtin-20-2-included)
+8. [HTTP boot disabled](#heading--http-boot-disabled)
+9. [BMC/IPMI default parameter additions](#heading--bmc-param-additions)
+10. [New global IPMI configuration options](#heading--new-config-options)
+11. [Addition of IPMI config options to UI](#heading--global-config-settings)
+12. [New MAAS CLI power command](#heading--maas-power)
+13. [Commissioning speed improvements](#heading--commissioning-speed)
+14. [BMC improvements](#heading--bmc-improve)
+15. [IPMI power driver upgrades](#heading--ipmi-driver)
+16. [Enlistment script improvements](#heading--enlistment-scripts)
+17. [Commissioning script improvements](#heading--commissioning-scripts)
+18. [Commissioning script reordering](#heading--commissioning-reorder)
+19. [Reader Adaptive Documentation](#heading--rad)
+20. [Offline documentation](#heading--offline-docs)
 
 <h4>Five other questions you may have:</h4>
 
@@ -232,6 +185,30 @@ NOTE that this is currently a Beta release, so there will be bugs, instabilities
 3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 Beta snap?](/t/maas-installation/3323#heading--upgrade-maas-snap)
 4. [How do I install MAAS 2.9 Beta from packages?](/t/maas-installation/3329)
 5. [What bugs are fixed so far in this release?](#heading--bug-fixes)
+
+<h2 id="heading--maas-2-9-rc-1">New features in MAAS 2.9 RC1</h2>
+
+<h3 id="heading--openvswitch">Support for OpenVswitch bridge type</h3>
+
+MAAS 2.9 allows you to create an OpenVswitch bridge type when creating a bridge.
+
+<h3 id="heading--numa">Support for NUMA, SR-IOV, and hugepages</h3>
+
+MAAS 2.9 adds extensive optimisation tools for using NUMA with virtual machines. You can now see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory. You can quickly spot a VM running in multiple NUMA nodes, and optimise accordingly, with instant updates on pinning and allocations. You can also tell which VMs are currently running.  Using the CLI, you can also pin nodes to specific cores, and configure hugepages for use by VMs.
+
+Specifically, there are five new features available to support NUMA, SR-IOV, and hugepages:
+
+1. You can examine resources on a per-NUMA-node basis.
+2. You can pin nodes to specific cores (CLI only).
+3. You can see resources for VM hosts supporting NUMA nodes.
+4. You can see the alignment between VM host interfaces and NUMA nodes.
+5. You can configure and use hugepages (configurable in CLI only).
+
+This functionality comes with an enhanced panel in the "KVM" details section:
+
+<a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
+
+See the [VM hosting](/t/vm-hosting-snap-2-9-ui/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
 
 <h2 id="heading--maas-2-9-beta-7">New features in 2.9 Beta7</h2>
 

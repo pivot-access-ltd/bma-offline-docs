@@ -1,85 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/images/2694) ~ [UI](/t/images/2695)|[CLI](/t/images/2696) ~ [UI](/t/images/2697)|[CLI](/t/images/2698) ~ [UI](/t/images/2699)|
-|Packages|CLI ~ [UI](/t/images/2701)|[CLI](/t/images/2702) ~ [UI](/t/images/2703)|[CLI](/t/images/2704) ~ [UI](/t/images/2705)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/images/2694) ~ [UI](/t/images/2695)|[CLI](/t/images/2696) ~ [UI](/t/images/2697)|[CLI](/t/images/2698) ~ [UI](/t/images/2699)|
-|Packages|[CLI](/t/images/2700) ~ UI|[CLI](/t/images/2702) ~ [UI](/t/images/2703)|[CLI](/t/images/2704) ~ [UI](/t/images/2705)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/images/2694) ~ [UI](/t/images/2695)|[CLI](/t/images/2696) ~ [UI](/t/images/2697)|[CLI](/t/images/2698) ~ [UI](/t/images/2699)|
-|Packages|[CLI](/t/images/2700) ~ [UI](/t/images/2701)|CLI ~ [UI](/t/images/2703)|[CLI](/t/images/2704) ~ [UI](/t/images/2705)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/images/2694) ~ [UI](/t/images/2695)|[CLI](/t/images/2696) ~ [UI](/t/images/2697)|[CLI](/t/images/2698) ~ [UI](/t/images/2699)|
-|Packages|[CLI](/t/images/2700) ~ [UI](/t/images/2701)|[CLI](/t/images/2702) ~ UI|[CLI](/t/images/2704) ~ [UI](/t/images/2705)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/images/2694) ~ [UI](/t/images/2695)|[CLI](/t/images/2696) ~ [UI](/t/images/2697)|[CLI](/t/images/2698) ~ [UI](/t/images/2699)|
-|Packages|[CLI](/t/images/2700) ~ [UI](/t/images/2701)|[CLI](/t/images/2702) ~ [UI](/t/images/2703)|CLI ~ [UI](/t/images/2705)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/images/2694) ~ [UI](/t/images/2695)|[CLI](/t/images/2696) ~ [UI](/t/images/2697)|[CLI](/t/images/2698) ~ [UI](/t/images/2699)|
-|Packages|[CLI](/t/images/2700) ~ [UI](/t/images/2701)|[CLI](/t/images/2702) ~ [UI](/t/images/2703)|[CLI](/t/images/2704) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/images/2695)|[CLI](/t/images/2696) ~ [UI](/t/images/2697)|[CLI](/t/images/2698) ~ [UI](/t/images/2699)|
-|Packages|[CLI](/t/images/2700) ~ [UI](/t/images/2701)|[CLI](/t/images/2702) ~ [UI](/t/images/2703)|[CLI](/t/images/2704) ~ [UI](/t/images/2705)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/images/2694) ~ UI|[CLI](/t/images/2696) ~ [UI](/t/images/2697)|[CLI](/t/images/2698) ~ [UI](/t/images/2699)|
-|Packages|[CLI](/t/images/2700) ~ [UI](/t/images/2701)|[CLI](/t/images/2702) ~ [UI](/t/images/2703)|[CLI](/t/images/2704) ~ [UI](/t/images/2705)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/images/2694) ~ [UI](/t/images/2695)|CLI ~ [UI](/t/images/2697)|[CLI](/t/images/2698) ~ [UI](/t/images/2699)|
-|Packages|[CLI](/t/images/2700) ~ [UI](/t/images/2701)|[CLI](/t/images/2702) ~ [UI](/t/images/2703)|[CLI](/t/images/2704) ~ [UI](/t/images/2705)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/images/2694) ~ [UI](/t/images/2695)|[CLI](/t/images/2696) ~ UI|[CLI](/t/images/2698) ~ [UI](/t/images/2699)|
-|Packages|[CLI](/t/images/2700) ~ [UI](/t/images/2701)|[CLI](/t/images/2702) ~ [UI](/t/images/2703)|[CLI](/t/images/2704) ~ [UI](/t/images/2705)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/images/2694) ~ [UI](/t/images/2695)|[CLI](/t/images/2696) ~ [UI](/t/images/2697)|CLI ~ [UI](/t/images/2699)|
-|Packages|[CLI](/t/images/2700) ~ [UI](/t/images/2701)|[CLI](/t/images/2702) ~ [UI](/t/images/2703)|[CLI](/t/images/2704) ~ [UI](/t/images/2705)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/images/2694) ~ [UI](/t/images/2695)|[CLI](/t/images/2696) ~ [UI](/t/images/2697)|[CLI](/t/images/2698) ~ UI|
-|Packages|[CLI](/t/images/2700) ~ [UI](/t/images/2701)|[CLI](/t/images/2702) ~ [UI](/t/images/2703)|[CLI](/t/images/2704) ~ [UI](/t/images/2705)|
  snap-2-9-ui -->
 
 MAAS provides supported images for stable Ubuntu releases, and for CentOS 6.6, CentOS 7, and CentOS 8.0 releases.  [Ubuntu Advantage](https://www.ubuntu.com/support) is needed to build customer Windows, RHEL and ESXi images.
@@ -188,60 +140,60 @@ Bonds are mapped to NIC teaming in only three ways:
 
 The place from where a region controller downloads its images is known as a boot source. The main characteristics of a boot source are its location (URL) and its associated GPG public keyring.
 
-[note]
+<strong>NOTE:</strong> 
 A boot resource is another name for an image. So boot resources are found within a boot source.
-[/note]
+
 
 MAAS comes configured with a boot source that should suffice for most users:
 
-[`https://images.maas.io/ephemeral-v3/daily/`](https://images.maas.io/ephemeral-v3/daily/)
+[`https://images.maas.io/ephemeral-v3/stable/`](https://images.maas.io/ephemeral-v3/stable/)
 
 <!-- deb-2-7-cli
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2808) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2808) for some explanation regarding the availability of other streams.
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2809) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2809) for some explanation regarding the availability of other streams.
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2810) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2810) for some explanation regarding the availability of other streams.
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2811) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2811) for some explanation regarding the availability of other streams.
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2812) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2812) for some explanation regarding the availability of other streams.
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2813) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2813) for some explanation regarding the availability of other streams.
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2802) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2802) for some explanation regarding the availability of other streams.
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2803) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2803) for some explanation regarding the availability of other streams.
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2804) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2804) for some explanation regarding the availability of other streams.
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2805) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2805) for some explanation regarding the availability of other streams.
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2806) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2806) for some explanation regarding the availability of other streams.
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2807) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2807) for some explanation regarding the availability of other streams.
  snap-2-9-ui -->
 
 Although the backend supports multiple boot sources, MAAS itself uses a single source. If multiple sources are detected, the web UI will print a warning and will be unable to manage images.

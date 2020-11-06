@@ -504,9 +504,9 @@ Stderr: 'gpg: no valid OpenPGP data found.\n'
 
 <p>First, download the cloud image that corresponds to the architecture of your node. The <em>Images</em> page of the web UI lists the images currently being cached by MAAS:</p>
 <p><a href="images/130aa580-troulbeshoot-faq__2.3_images.png" target = "_blank"><img src="images/130aa580-troulbeshoot-faq__2.3_images.png"></a></a></p>
-<p>Images can be downloaded from <a href="https://cloud-images.ubuntu.com/daily/server/">https://cloud-images.ubuntu.com/daily/server</a>.</p>
+<p>Images can be downloaded from <a href="https://cloud-images.ubuntu.com/stable/server/">https://cloud-images.ubuntu.com/stable/server</a>.</p>
 <p>For example:</p>
-<pre><code class="bash">wget https://cloud-images.ubuntu.com/daily/server/xenial/current/xenial-server-cloudimg-amd64-root.tar.gz
+<pre><code class="bash">wget https://cloud-images.ubuntu.com/stable/server/xenial/current/xenial-server-cloudimg-amd64-root.tar.gz
 </code></pre>
 
 <p>With the image downloaded, extract its contents so that the <em>shadow</em> password file can be edited:</p>
@@ -548,7 +548,7 @@ Creating 4.0 filesystem on xenial-customized.squashfs, block size 131072.
 
 <p>Images are synchronised by the region controller and stored on the rack controller in <code>/var/lib/maas/boot-resources/</code>, with the <em>current</em> directory linking to the latest synchronised images.</p>
 <p>For example, the latest low-latency Ubuntu 16.04 image can be found in the following directory:</p>
-<pre><code class="bash">cd /var/lib/maas/boot-resources/current/ubuntu/amd64/ga-16.04-lowlatency/xenial/daily
+<pre><code class="bash">cd /var/lib/maas/boot-resources/current/ubuntu/amd64/ga-16.04-lowlatency/xenial/stable
 </code></pre>
 
 <p>To replace the original, substitute the <em>squashfs</em> file with the custom image generated earlier, making sure the new owner is <em>maas</em>:</p>
