@@ -237,6 +237,20 @@ NOTE that this is currently a Beta release, so there will be bugs, instabilities
 
 <h2 id="heading--maas-2-9-rc-1">New features in MAAS 2.9 RC1</h2>
 
+<h3 id="heading--focal-default">Focal Fossa (Ubuntu 20.04 LTS) as default release</h3>
+
+Ubuntu 20.04 LTS (Focal Fossa) is now the default commissioning and deployment release for new MAAS installations.  Machines deployed with Focal may now be registered as KVM hosts.
+
+<h3 id="heading--bmc-fixes">Two minor BMC fixes</h3>
+
+MAAS 2.9 RC1 brings a couple of minor adjustments to previous BMC work in this release:
+
+1. MAAS will not capture the BMC MAC address when detecting IPMI BMCs.
+
+2. If an IPMI K_g key is set but the key is rejected by the BMC MAAS will automatically retry without the K_g key. This works around an edge case where some BMCs will allow you to set an K_g key but don’t allow it to be used.
+
+Other adjustments and minor fixes will be considered going forward, based on user bug reports and feature requests.
+
 <h3 id="heading--openvswitch">Support for OpenVswitch bridge type</h3>
 
 MAAS 2.9 allows you to create an OpenVswitch bridge type when creating a bridge.
@@ -438,6 +452,8 @@ Four improvements have been made to speed up the commissioning process, mostly b
 </ol>
 
 <h2 id="heading--bug-fixes">Bug fixes</h2>
+
+1. 2.9.0 Beta 8 includes a fix for [Bug #1894727: Admin uses cannot change other user's passwords via the UI](https://bugs.launchpad.net/maas/+bug/1894727).
 
 <h2 id="heading--known-issues">Known issues</h2>
 
