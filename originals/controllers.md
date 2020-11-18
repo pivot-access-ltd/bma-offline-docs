@@ -161,7 +161,7 @@ snap-2-9-ui -->
 1. [What does a region controller do?](#heading--region-controller)
 2. [What does a rack controller do?](#heading--rack-controllers)
 
-<h2 id="heading--region-controller">What a region controller does</h2>
+<a href="#heading--region-controller"><h2 id="heading--region-controller">What a region controller does</h2></a>
 
 A region controller consists of five components:
 
@@ -173,7 +173,7 @@ A region controller consists of five components:
 
 Region controllers are responsible for either a data centre or a single region. Multiple fabrics are used by MAAS to accommodate subdivisions within a single region, such as multiple floors in a data centre.
 
-<h2 id="heading--rack-controllers">What a rack controller does</h2>
+<a href="#heading--rack-controllers"><h2 id="heading--rack-controllers">What a rack controller does</h2></a>
 
 A rack controller provides four services:
 

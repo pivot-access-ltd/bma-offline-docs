@@ -224,7 +224,7 @@ This article delves into these issues, offering guidance on setting up and manag
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  snap-2-9-ui -->
 
-<h2 id="heading--enabling-dhcp">Enabling DHCP</h2>
+<a href="#heading--enabling-dhcp"><h2 id="heading--enabling-dhcp">Enabling DHCP</h2></a>
 
 MAAS-managed DHCP needs a reserved dynamic IP range enlist and commission machines. You should create such a range when you are enabling DHCP with the web UI.
 
@@ -269,7 +269,7 @@ maas $PROFILE subnet update $SUBNET_CIDR gateway_ip=$MY_GATEWAY
 
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-<h3 id="heading--resolving-ip-conflicts">Resolving IP conflicts</h3>
+<a href="#heading--resolving-ip-conflicts"><h3 id="heading--resolving-ip-conflicts">Resolving IP conflicts</h3></a>
 
 In some cases, MAAS manages a subnet that is not empty, which could result in MAAS assigning a duplicate IP address.  MAAS is capable of detecting IPs in use on a subnet.  Be aware that there are two caveats:
 
@@ -279,7 +279,7 @@ In some cases, MAAS manages a subnet that is not empty, which could result in MA
 
 MAAS also recognises when the subnet ARP cache is full, so that it can re-check the oldest IPs added to the cache to search for free IP addresses.
 
-<h2 id="heading--extending-a-reserved-dynamic-ip-range">Extending a reserved dynamic IP range</h2>
+<a href="#heading--extending-a-reserved-dynamic-ip-range"><h2 id="heading--extending-a-reserved-dynamic-ip-range">Extending a reserved dynamic IP range</h2></a>
 
 <!-- deb-2-7-cli
 If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/ip-ranges/2760)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
@@ -329,7 +329,7 @@ If necessary, it is possible to add further portions of the subnet to the dynami
 If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/ip-ranges/2759)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
  snap-2-9-ui -->
 
-<h2 id="heading--external-dhcp-and-a-reserved-ip-range">External DHCP and a reserved IP range</h2>
+<a href="#heading--external-dhcp-and-a-reserved-ip-range"><h2 id="heading--external-dhcp-and-a-reserved-ip-range">External DHCP and a reserved IP range</h2></a>
 
 <!-- deb-2-7-cli
 If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/ip-ranges/2760) to create such a range. It should correspond to the lease range of the external server.
@@ -379,7 +379,7 @@ If an external DHCP server is used to deploy machines, then a reserved IP range 
 If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/ip-ranges/2759) to create such a range. It should correspond to the lease range of the external server.
  snap-2-9-ui -->
 
-<h2 id="heading--dhcp-relay">DHCP relay</h2>
+<a href="#heading--dhcp-relay"><h2 id="heading--dhcp-relay">DHCP relay</h2></a>
 
 You should not enable DHCP relays in MAAS without sufficient planning.  In particular, MAAS does not provide the actual relay. It must be set up as an external service by the administrator. What MAAS does provide is the DHCP configuration that MAAS-managed DHCP requires in order to satisfy any client requests relayed from another VLAN.
 
@@ -408,7 +408,7 @@ maas $PROFILE vlan update 2 0 relay_van=5002
 
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-<h2 id="heading--dhcp-snippets">DHCP Snippets</h2>
+<a href="#heading--dhcp-snippets"><h2 id="heading--dhcp-snippets">DHCP Snippets</h2></a>
 
 <!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 When MAAS manages DHCP, you customise it through the use of DHCP snippets. These are user-defined configuration options that can be applied either globally, per subnet, or per machine. You apply a global snippet to all VLANs, subnets, and machines. All three types end up in `/var/lib/maas/dhcpd.conf` or `/var/lib/maas/dhcpd6.conf`. For information on what options to use, refer to the [`dhcpd.conf` man page](http://manpages.ubuntu.com/cgi-bin/search.py?q=dhcpd.conf).
@@ -461,7 +461,7 @@ maas $PROFILE dhcpsnippets create name=$DHCP_SNIPPET_NAME \
 
 You can also use a hostname instead of the node ID.
 
-<h3 id="heading--list-snippets">List snippets</h3>
+<a href="#heading--list-snippets"><h3 id="heading--list-snippets">List snippets</h3></a>
 
 To list all snippets (and their characteristics) in the MAAS:
 
@@ -481,7 +481,7 @@ The snippet name can also be used instead of its ID:
 maas $PROFILE dhcpsnippet read name=$DHCP_SNIPPET_NAME
 ```
 
-<h3 id="heading--update-a-snippet">Update a snippet</h3>
+<a href="#heading--update-a-snippet"><h3 id="heading--update-a-snippet">Update a snippet</h3></a>
 
 Update a snippet attribute:
 
@@ -491,7 +491,7 @@ maas $PROFILE dhcpsnippet update $DHCP_SNIPPET_ID <option=value>
 
 You can also use a snippet name instead of its ID.
 
-<h3 id="heading--enable-or-disable-a-snippet">Enable or disable a snippet</h3>
+<a href="#heading--enable-or-disable-a-snippet"><h3 id="heading--enable-or-disable-a-snippet">Enable or disable a snippet</h3></a>
 
 Enabling and disabling a snippet is considered a snippet update and is done via a boolean option ('true' or 'false'). You can disable a snippet like this:
 
@@ -501,7 +501,7 @@ maas $PROFILE dhcpsnippet update $DHCP_SNIPPET_ID enabled=false
 
 When you disable a snippet, MAAS removes the text you added to the dhcpd.conf file when you created the snippet.
 
-<h3 id="heading--delete-a-snippet">Delete a snippet</h3>
+<a href="#heading--delete-a-snippet"><h3 id="heading--delete-a-snippet">Delete a snippet</h3></a>
 
 To delete a snippet:
 

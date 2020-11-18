@@ -16,7 +16,7 @@ This article is a list of advanced tasks you can perform with the MAAS CLI.
 12. [How do I create a Mail Exchange pointer record in DNS?](/t/cli-advanced-tasks/793#heading--create-a-mail-exchange-pointer-record-in-dns)
 13. [How do I add or update a remote syslog server?](/t/cli-advanced-tasks/793#heading--add-or-update-a-remote-syslog-server)
 
-<h2 id="heading--edit-node-hostname-and-power-parameters">Edit machine hostname and power parameters</h2>
+<a href="#heading--edit-node-hostname-and-power-parameters"><h2 id="heading--edit-node-hostname-and-power-parameters">Edit machine hostname and power parameters</h2></a>
 
 To edit the hostname and power parameters of a machine:
 
@@ -40,7 +40,7 @@ maas $PROFILE machine update $SYSTEM_ID \
 
 See [Common CLI tasks](/t/common-cli-tasks/794#heading--determine-a-node-system-id) for how to find a machine's system id and [BMC Power Types](/t/power-management/830) for details on different power types.
 
-<h2 id="heading--relay-dhcp">Relay DHCP</h2>
+<a href="#heading--relay-dhcp"><h2 id="heading--relay-dhcp">Relay DHCP</h2></a>
 
 To relay DHCP traffic for a VLAN (source) through another VLAN (target):
 
@@ -56,7 +56,7 @@ maas $PROFILE vlan update 2 0 relay_van=5002
 
 See [DHCP relay](/t/managing-dhcp/759#heading--dhcp-relay) for more information.
 
-<h2 id="heading--assign-a-network-interface-to-a-fabric">Assign a network interface to a fabric</h2>
+<a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">Assign a network interface to a fabric</h2></a>
 
 This task is made easier with the aid of the `jq` utility. It filters the `maas` command (JSON formatted) output and prints it in the desired way, which allows you to view and compare data quickly. Go ahead and install it:
 
@@ -135,7 +135,7 @@ The output shows that the interface is now on fabric-0:
 {"id":9,"name":"eth1","mac":"52:54:00:01:01:02","vid":null,"fabric":null}
 ```
 
-<h2 id="heading--set-the-default-storage-layout">Set the default storage layout</h2>
+<a href="#heading--set-the-default-storage-layout"><h2 id="heading--set-the-default-storage-layout">Set the default storage layout</h2></a>
 
 To set the default storage layout for all machines:
 
@@ -155,7 +155,7 @@ The new default will only apply to newly-commissioned machines.
 
 See [Storage](/t/storage/775) for more details on MAAS storage features.
 
-<h2 id="heading--set-a-storage-layout">Set a storage layout</h2>
+<a href="#heading--set-a-storage-layout"><h2 id="heading--set-a-storage-layout">Set a storage layout</h2></a>
 
 An administrator can set a storage layout for a machine with a status of 'Ready' like this:
 
@@ -175,7 +175,7 @@ You must specify all storage sizes in bytes.
 This action will remove the configuration that may exist on any block device.
 [/note]
 
-<h2 id="heading--create-an-a-or-aaaa-record-in-dns">Create an A or AAAA record in DNS</h2>
+<a href="#heading--create-an-a-or-aaaa-record-in-dns"><h2 id="heading--create-an-a-or-aaaa-record-in-dns">Create an A or AAAA record in DNS</h2></a>
 
 An administrator can create an A record when creating a DNS resource with an IPv4 address.
 
@@ -189,7 +189,7 @@ An administrator can create an AAAA record when creating a DNS resource with an 
 mass $PROFILE dnsresources create fqdn=$HOSTNAME.$DOMAIN ip_addresses=$IPV6ADDRESS
 ```
 
-<h2 id="heading--create-an-alias-cname-record-in-dns">Create an alias (CNAME) record in DNS</h2>
+<a href="#heading--create-an-alias-cname-record-in-dns"><h2 id="heading--create-an-alias-cname-record-in-dns">Create an alias (CNAME) record in DNS</h2></a>
 
 An administrator can set a DNS Alias (CNAME record) to an already existing DNS entry of a machine.
 
@@ -203,7 +203,7 @@ For example, to set webserver.maas.io to alias to www.maas.io:
 maas $PROFILE dnsresource-records create fqdn=webserver.maas.io rrtype=cname rrdata=www
 ```
 
-<h2 id="heading--create-a-mail-exchange-pointer-record-in-dns">Create a Mail Exchange pointer record in DNS</h2>
+<a href="#heading--create-a-mail-exchange-pointer-record-in-dns"><h2 id="heading--create-a-mail-exchange-pointer-record-in-dns">Create a Mail Exchange pointer record in DNS</h2></a>
 
 An administrator can set a DNS Mail Exchange pointer record (MX and value) to a domain.
 
@@ -217,7 +217,7 @@ For example, to set the domain.name managed by MAAS to have an MX record and tha
 maas $PROFILE dnsresource-records create fqdn=maas.io rrtype=mx rrdata='10 smtp.maas.io'
 ```
 
-<h2 id="heading--add-or-update-a-remote-syslog-server">Add or update a remote syslog server</h2>
+<a href="#heading--add-or-update-a-remote-syslog-server"><h2 id="heading--add-or-update-a-remote-syslog-server">Add or update a remote syslog server</h2></a>
 
 To add or update a remote syslog server in your MAAS environment:
 

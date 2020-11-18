@@ -222,7 +222,7 @@ HOSTNAME           SYSID   POWER  STATUS     OWNER  TAGS     POOL     VLAN      
  deb-2-7-cli snap-2-7-cli deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli -->
 
 
-<h2 id="heading--machine-life-cycle">Machine life-cycle</h2>
+<a href="#heading--machine-life-cycle"><h2 id="heading--machine-life-cycle">Machine life-cycle</h2></a>
 
 One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, acquired, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
 
@@ -272,7 +272,7 @@ Since these actions are not necessarily sequential, and the available actions ch
 
 When a machine is in the state listed in a column, it is possible to take the row actions marked with an "X."  You access these actions from the "Take action" menu in the upper right corner of the machine listing.  Note that some actions, such as "Mark broken" or "Lock," may be hidden when they are not available.
 
-<h2 id="heading--machine-list">View the machine list</h2>
+<a href="#heading--machine-list"><h2 id="heading--machine-list">View the machine list</h2></a>
 
 <!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui
 You can view the list of machines from the choice "Machines" on the top menu of the MAAS web UI.  This action will display a table like the one above, listing all the machines that are currently visible to your MAAS installation.  During commissioning and deployment, MAAS updates the table to reflect the changing state of each machine. These values are augmented with green, amber and red icons to represent successful, in-progress and failed transitions, respectively. The MAAS web UI employs similar icons and colours throughout the interface to reflect a machine's status. 
@@ -421,7 +421,7 @@ maas $PROFILE machine deploy $SYSTEM_ID
 These commands are described in more detail later on in this section of articles.
  snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli -->
 
-<h2 id="heading--node-details">View machine details</h2>
+<a href="#heading--node-details"><h2 id="heading--node-details">View machine details</h2></a>
 
 <!-- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli
 Enter a command similar to the following to get a detailed view of a machine's status and configuration:
@@ -471,7 +471,7 @@ The default view is 'Machine summary', presented as a series of cards detailing 
 
 The menu includes links to a number of additional forms and controls, as described in the following sections.
 
-<h3 id="heading--machine-summary-h3">View a machine summary</h3>
+<a href="#heading--machine-summary-h3"><h3 id="heading--machine-summary-h3">View a machine summary</h3></a>
 
 As shown above, the Machine summary presents an overview of CPU, memory, storage, tags, and general settings:
 
@@ -541,7 +541,7 @@ The rest of the cards on the Machine summary are either self-explanatory, or the
  snap-2-9-ui -->
 
 <!-- snap-2-8-ui deb-2-8-ui snap-2-7-ui deb-2-7-ui snap-2-9-ui deb-2-9-ui
-<h3 id="heading--machine-interfaces-h3">Find network info for a machine</h3>
+<a href="#heading--machine-interfaces-h3"><h3 id="heading--machine-interfaces-h3">Find network info for a machine</h3></a>
 
 The Network "tab" provides you with a way to view/edit the network and interface configuration for a machine: 
 
@@ -577,7 +577,7 @@ Options on this tab are described in the introduction to [Networking](/t/network
  snap-2-9-ui -->
 
 <!-- deb-2-7-ui
-<h3 id="heading--machine-storage-h3">Find storage info for a machine</h3>
+<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
 
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
 
@@ -587,7 +587,7 @@ This tab describes the filesystem(s) in use, as well as the available and used p
  deb-2-7-ui -->
 
 <!-- deb-2-8-ui
-<h3 id="heading--machine-storage-h3">Find storage info for a machine</h3>
+<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
 
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
 
@@ -597,7 +597,7 @@ This tab describes the filesystem(s) in use, as well as the available and used p
  deb-2-8-ui -->
 
 <!-- deb-2-9-ui
-<h3 id="heading--machine-storage-h3">Find storage info for a machine</h3>
+<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
 
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
 
@@ -607,7 +607,7 @@ This tab describes the filesystem(s) in use, as well as the available and used p
  deb-2-9-ui -->
 
 <!-- snap-2-7-ui
-<h3 id="heading--machine-storage-h3">Find storage info for a machine</h3>
+<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
 
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
 
@@ -617,7 +617,7 @@ This tab describes the filesystem(s) in use, as well as the available and used p
  snap-2-7-ui -->
 
 <!-- snap-2-8-ui
-<h3 id="heading--machine-storage-h3">Find storage info for a machine</h3>
+<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
 
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
 
@@ -627,7 +627,7 @@ This tab describes the filesystem(s) in use, as well as the available and used p
  snap-2-8-ui -->
 
 <!-- snap-2-9-ui
-<h3 id="heading--machine-storage-h3">Find storage info for a machine</h3>
+<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
 
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
 
@@ -637,7 +637,7 @@ This tab describes the filesystem(s) in use, as well as the available and used p
  snap-2-9-ui -->
 
 <!-- deb-2-7-ui
-<h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3>
+<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
 
 The "Commissioning" tab brings up a summary log of commissioning events:
 
@@ -651,7 +651,7 @@ These logs present an extremely detailed, timestamped record of completion and s
  deb-2-7-ui -->
 
 <!-- deb-2-8-ui
-<h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3>
+<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
 
 The "Commissioning" tab brings up a summary log of commissioning events:
 
@@ -665,7 +665,7 @@ These logs present an extremely detailed, timestamped record of completion and s
  deb-2-8-ui -->
 
 <!-- deb-2-9-ui
-<h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3>
+<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
 
 The "Commissioning" tab brings up a summary log of commissioning events:
 
@@ -679,7 +679,7 @@ These logs present an extremely detailed, timestamped record of completion and s
  deb-2-9-ui -->
 
 <!-- snap-2-7-ui
-<h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3>
+<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
 
 The "Commissioning" tab brings up a summary log of commissioning events:
 
@@ -693,7 +693,7 @@ These logs present an extremely detailed, timestamped record of completion and s
  snap-2-7-ui -->
 
 <!-- snap-2-8-ui
-<h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3>
+<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
 
 The "Commissioning" tab brings up a summary log of commissioning events:
 
@@ -707,7 +707,7 @@ These logs present an extremely detailed, timestamped record of completion and s
  snap-2-8-ui -->
 
 <!-- snap-2-9-ui
-<h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3>
+<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
 
 The "Commissioning" tab brings up a summary log of commissioning events:
 
@@ -721,7 +721,7 @@ These logs present an extremely detailed, timestamped record of completion and s
  snap-2-9-ui -->
 
 <!-- deb-2-7-ui
-<h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3>
+<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
 
 This tab presents a summary of tests run against this particular machine:  
 
@@ -735,7 +735,7 @@ The format of these screens is very similar to the Configuration logs shown abov
  deb-2-7-ui -->
 
 <!-- deb-2-8-ui
-<h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3>
+<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
 
 This tab presents a summary of tests run against this particular machine:  
 
@@ -749,7 +749,7 @@ The format of these screens is very similar to the Configuration logs shown abov
  deb-2-8-ui -->
 
 <!-- deb-2-9-ui
-<h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3>
+<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
 
 This tab presents a summary of tests run against this particular machine:  
 
@@ -763,7 +763,7 @@ The format of these screens is very similar to the Configuration logs shown abov
  deb-2-9-ui -->
 
 <!-- snap-2-7-ui
-<h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3>
+<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
 
 This tab presents a summary of tests run against this particular machine:  
 
@@ -777,7 +777,7 @@ The format of these screens is very similar to the Configuration logs shown abov
  snap-2-7-ui -->
 
 <!-- snap-2-8-ui
-<h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3>
+<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
 
 This tab presents a summary of tests run against this particular machine:  
 
@@ -791,7 +791,7 @@ The format of these screens is very similar to the Configuration logs shown abov
  snap-2-8-ui -->
 
 <!-- snap-2-9-ui
-<h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3>
+<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
 
 This tab presents a summary of tests run against this particular machine:  
 
@@ -805,7 +805,7 @@ The format of these screens is very similar to the Configuration logs shown abov
  snap-2-9-ui -->
 
 <!-- deb-2-7-ui
-<h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3>
+<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
 
 The "Logs" tab shows raw log output, switchable between YAML and XML formats:
 
@@ -815,7 +815,7 @@ Help interpreting these logs can be found under the [Logging](/t/maas-logging/28
  deb-2-7-ui -->
 
 <!-- deb-2-8-ui
-<h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3>
+<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
 
 The "Logs" tab shows raw log output, switchable between YAML and XML formats:
 
@@ -825,7 +825,7 @@ Help interpreting these logs can be found under the [Logging](/t/maas-logging/28
  deb-2-8-ui -->
 
 <!-- deb-2-9-ui
-<h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3>
+<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
 
 The "Logs" tab shows raw log output, switchable between YAML and XML formats:
 
@@ -835,7 +835,7 @@ Help interpreting these logs can be found under the [Logging](/t/maas-logging/28
  deb-2-9-ui -->
 
 <!-- snap-2-7-ui
-<h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3>
+<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
 
 The "Logs" tab shows raw log output, switchable between YAML and XML formats:
 
@@ -845,7 +845,7 @@ Help interpreting these logs can be found under the [Logging](/t/maas-logging/28
  snap-2-7-ui -->
 
 <!-- snap-2-8-ui
-<h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3>
+<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
 
 The "Logs" tab shows raw log output, switchable between YAML and XML formats:
 
@@ -855,7 +855,7 @@ Help interpreting these logs can be found under the [Logging](/t/maas-logging/28
  snap-2-8-ui -->
 
 <!-- snap-2-9-ui
-<h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3>
+<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
 
 The "Logs" tab shows raw log output, switchable between YAML and XML formats:
 
@@ -865,7 +865,7 @@ Help interpreting these logs can be found under the [Logging](/t/maas-logging/28
  snap-2-9-ui -->
 
 <!-- deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui
-<h3 id="heading--event-logs-h3">Find a machine's event logs</h3>
+<a href="#heading--event-logs-h3"><h3 id="heading--event-logs-h3">Find a machine's event logs</h3></a>
 
 The "Event" tab displays a list of timestamped status updates for events and actions performed on the machine:
 
@@ -897,7 +897,7 @@ There is a button that allows you to see the next 10 events, and a link to show 
  snap-2-9-ui -->
 
 <!-- deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui
-<h3 id="heading--machine-config-h3">Find machine configuration info</h3>
+<a href="#heading--machine-config-h3"><h3 id="heading--machine-config-h3">Find machine configuration info</h3></a>
 
 The final tab from the Machine menu allows you to update machine and power configuration options: 
 

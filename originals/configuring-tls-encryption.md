@@ -132,7 +132,7 @@ MAAS doesn't support TLS encryption natively.  If you are not interested in [set
 
 Note that MAAS doesn't bind to port 80; instead, MAAS binds to port 5240.
 
-<h2 id="heading--nginx">nginx example config</h2>
+<a href="#heading--nginx"><h2 id="heading--nginx">nginx example config</h2></a>
 
     server {
      listen 443 ssl;
@@ -154,7 +154,7 @@ Note that MAAS doesn't bind to port 80; instead, MAAS binds to port 5240.
      }
     }
 
-<h2 id="heading--apache2">apache2 example config</h2>
+<a href="#heading--apache2"><h2 id="heading--apache2">apache2 example config</h2></a>
 
     <VirtualHost *:443>
      SSLEngine On

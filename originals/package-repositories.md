@@ -45,7 +45,7 @@ MAAS further simplifies the addition of third-party repositories by also allowin
 
 An added repository can be disabled and re-enabled using a toggle switch to the right of it.
 
-<h2 id="heading--ubuntu-package-repositories">Ubuntu package repositories</h2>
+<a href="#heading--ubuntu-package-repositories"><h2 id="heading--ubuntu-package-repositories">Ubuntu package repositories</h2></a>
 
 An Ubuntu package repository is a repository that makes available Ubuntu packages to computers able to connect to it over the network, whether that network is private or public (e.g. the Internet).
 
@@ -75,7 +75,7 @@ Click 'Add repository' to save the configuration.
 
 A private repository can be built to assist with offline operations, based on the official repository. This repository can also contain custom packages.
 
-<h2 id="heading--personal-package-archives-ppa">Personal Package Archives (PPA)</h2>
+<a href="#heading--personal-package-archives-ppa"><h2 id="heading--personal-package-archives-ppa">Personal Package Archives (PPA)</h2></a>
 
 A Personal Package Archive (PPA) is a [Launchpad](https://launchpad.net)-based method for any individual (or team) to build and distribute packages for Ubuntu.
 

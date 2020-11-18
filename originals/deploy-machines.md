@@ -237,7 +237,7 @@ MAAS also supports machine customisation with a process called "preseeding." For
 MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2591).
  snap-2-9-ui -->
 
-<h2 id="heading--acquire">Acquire</h2>
+<a href="#heading--acquire"><h2 id="heading--acquire">Acquire</h2></a>
 
 Acquiring ("allocating") a machine reserves the machine for the exclusive use of the acquiring process. The machine is no longer available to any other process, including another MAAS instance, or a process such as [Juju](https://jujucharms.com/docs/stable/about-juju).
 
@@ -279,7 +279,7 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 To acquire a node, it must have a status of 'Ready'.
 [/note]
 
-<h2 id="heading--deploy">Deploy</h2>
+<a href="#heading--deploy"><h2 id="heading--deploy">Deploy</h2></a>
 
 To deploy, you must configure the underlying machine to netboot.  Such a machine will undergo the following process:
 

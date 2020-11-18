@@ -89,7 +89,7 @@ The minimum requirements for the machines that run MAAS vary widely depending on
 1. [What are the requirements for a test environment?](#heading--test-environment)
 2. [What are the requirements for a production environment?](#heading--production-environment)
 
-<h2 id="heading--test-environment">Requirements for a test environment</h2>
+<a href="#heading--test-environment"><h2 id="heading--test-environment">Requirements for a test environment</h2></a>
 
 Here is a proof-of-concept scenario, with all MAAS components installed on a single host. This scenario assumes two complete sets of images (latest two Ubuntu LTS releases) for a single architecture (amd64).
 
@@ -102,7 +102,7 @@ Here is a proof-of-concept scenario, with all MAAS components installed on a sin
 
 Based on this table, the approximate requirements for this scenario are 2 GB memory, 2 GHz CPU, and 20 GB of disk space.
 
-<h2 id="heading--production-environment">Requirements for a production environment</h2>
+<a href="#heading--production-environment"><h2 id="heading--production-environment">Requirements for a production environment</h2></a>
 
 Here is a production scenario designed to handle a high number of sustained client connections. This scenario implements both high availability (region and rack) and load balancing (region). MAAS reserves extra space for images (database and rack controller), while some images, such as those for Microsoft Windows, may require a lot more -- so plan accordingly.
 

@@ -93,7 +93,7 @@ Network testing also includes customisable network testing and commissioning scr
 3. [How do I use network validation and testing scripts?](#heading--network-validation-scripts-and-testing)
 4. [How can I customise network testing?](#heading--customisable-network-testing)
 
-<h2 id="heading--network-link-testing">Network link testing</h2>
+<a href="#heading--network-link-testing"><h2 id="heading--network-link-testing">Network link testing</h2></a>
 
 MAAS can check whether links are connected or disconnected, so that you can detect unplugged cables.  If you are not running MAAS 2.7, you must first upgrade and then recommission your machines to find disconnected links.  MAAS not only reports unplugged cables, but also gives a warning when trying to configure a disconnected interface.  In addition, administrators can change the cable connection status after manually resolving the issue.
 
@@ -138,7 +138,7 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 <a href="https://discourse.maas.io/uploads/default/original/1X/b8b24a2e5fbc40b6469a24733a518b510cf0d955.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/b8b24a2e5fbc40b6469a24733a518b510cf0d955.jpeg"></a> 
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<h2 id="heading--slow-link-detection">Detect slow network links</h2>
+<a href="#heading--slow-link-detection"><h2 id="heading--slow-link-detection">Detect slow network links</h2></a>
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 As servers and hardware get faster, the chances increase that you might encounter a speed mismatch when connecting your NIC to a network device.  MAAS can warn you if your interface is connected to a link slower than what the interface supports, when you run the above command:
@@ -174,7 +174,7 @@ interface_speed=$NEW_INTERFACE_SPEED
 
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-<h2 id="heading--network-validation-scripts-and-testing">Network validation and testing scripts</h2>
+<a href="#heading--network-validation-scripts-and-testing"><h2 id="heading--network-validation-scripts-and-testing">Network validation and testing scripts</h2></a>
 
 MAAS allows you to configure network connectivity testing in a number of ways. If MAAS can’t connect to the rack controller, deployment can’t complete.  MAAS can check connectivity to the rack controller and warn you if there’s no link, long before you have to try and debug it. For example, if you can’t connect to your gateway controller, traffic can’t leave your network. 
 
@@ -212,7 +212,7 @@ To test individual interfaces, for example, you could issue the following comman
 Note that in this command, we are testing internet connectivity to the single interface "br0."
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-<h2 id="heading--customisable-network-testing">Customise network testing</h2>
+<a href="#heading--customisable-network-testing"><h2 id="heading--customisable-network-testing">Customise network testing</h2></a>
 
 MAAS allow you to customise network testing according to your needs.  You can create your own commissioning scripts and tests related to networking, and you can run them during the network testing portion of the MAAS workflow.
 
