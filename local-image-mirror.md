@@ -89,7 +89,7 @@ Mirroring images is worthy of consideration.  The SimpleStreams protocol deliver
 1. [What SimpleStreams are available for MAAS, and how do I select them?](/t/using-image-streams/3523)
 2. [How do I set up a local image mirror?](#heading--set-up-local-mirror)
 
-<h2 id="heading--set-up-local-mirror">Setting up a local mirror</h2>
+<a href="#heading--set-up-local-mirror">x<h2 id="heading--set-up-local-mirror">Setting up a local mirror</h2></a>
 
 To use mirroring, you begin by installing the necessary software on the host that will house the mirror:
 

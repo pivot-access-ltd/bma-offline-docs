@@ -136,7 +136,7 @@ snap-2-9-ui -->
 2. [How do rack and region controllers communicate?](#heading--rackregion)
 3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/1381#heading--firewalls)
 
-<h2 id="heading--machinerack">How machines communicate with the rack controller</h2>
+<a href="#heading--machinerack"><h2 id="heading--machinerack">How machines communicate with the rack controller</h2></a>
 
 All machine communication with MAAS is proxied through rack controllers, including HTTP metadata, DNS, syslog and APT (cache-and-forward proxies via Squid). 
 
@@ -152,7 +152,7 @@ Zone management and maintenance still happen within the region controller.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg"></a>
 
-<h2 id="heading--rackregion">How region and rack controllers communicate</h2>
+<a href="#heading--rackregion"><h2 id="heading--rackregion">How region and rack controllers communicate</h2></a>
 
 The MAAS region and rack controllers interact in a number of different ways, depending upon the operation you've requested.  Consider the process of commissioning a machine, that is, taking over the machine and gathering information on its available resources, including CPU, RAM, storage, and MIB information (obtainable via LLDP requests).  Here's a rough idea of what that sequence looks like -- a sequence that is representative of the communication between rack and region controllers:
 

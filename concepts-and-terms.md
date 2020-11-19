@@ -45,7 +45,7 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 
 </details>
 
-<h2 id="heading--nodes">Nodes</h2>
+<a href="#heading--nodes"><h2 id="heading--nodes">Nodes</h2></a>
 
 A node is a general term that refers to multiple, more specific objects. Nodes are managed by MAAS through a life cycle, from adding and enlistment into MAAS, through commissioning, allocation and deployment. Nodes are then either released back into the pool of nodes or retired.
 
@@ -57,7 +57,7 @@ Nodes include three classes of objects:
 
 See [Machine actions](#heading--machine-actions) and [Machine statuses](#heading--machine-statuses) below for an overview of a node's life cycle.
 
-<h3 id="heading--controllers">Controllers</h3>
+<a href="#heading--controllers"><h3 id="heading--controllers">Controllers</h3></a>
 
 There are two types of controllers: a region controller and a rack controller. The region controller deals with operator requests while one or more rack controllers provide the high-bandwidth services to multiple server racks, as typically found in a data centre.
 
@@ -82,21 +82,21 @@ A rack controller is attached to each "fabric". As the name implies, a typical s
 
 Both the region controller and the rack controller can be scaled-out as well as made highly available. See [MAAS HA](/t/high-availability/804) for high availability.
 
-<h3 id="heading--machines">Machines</h3>
+<a href="#heading--machines"><h3 id="heading--machines">Machines</h3></a>
 
 A machine is a node that can be deployed by MAAS.
 
-<h3 id="heading--devices">Devices</h3>
+<a href="#heading--devices"><h3 id="heading--devices">Devices</h3></a>
 
 A device is a non-deployable node. This entity can be used to track routers, for example.
 
 Static or dynamic IP addresses and DNS names can be assigned to any device or parent node.  These addresses will be automatically deleted when the parent node is deleted or released, along with any IP address reservations.  This arrangement is designed to model and manage the virtual machines or containers running inside a MAAS-deployed node.
 
-<h2 id="heading--vm-hosts">VM hosts</h2>
+<a href="#heading--vm-hosts"><h2 id="heading--vm-hosts">VM hosts</h2></a>
 
 VM hosts, also called composable hardware, allow for the dynamic composition of machines from a pool of available hardware resources (e.g. disk space, memory, cores). See [Introduction to VM hosting](/t/introduction-to-vm-hosting/1524) for details.
 
-<h2 id="heading--zones">Zones</h2>
+<a href="#heading--zones"><h2 id="heading--zones">Zones</h2></a>
 
 A physical zone, or just zone, is an organisational unit that contains nodes where each node is in one, and only one, zone. Later, while in production, a node can be taken (allocated) from a specific zone (or not from a specific zone). Since zones, by nature, are custom-designed (except for the 'default' zone), they provide more flexibility than a similar feature offered by a public cloud service (ex: availability zones).
 
@@ -106,19 +106,19 @@ A newly installed MAAS comes with a default zone which contains all nodes unless
 
 You cannot remove the 'default' zone or change its name.
 
-<h2 id="heading--regions">Regions</h2>
+<a href="#heading--regions"><h2 id="heading--regions">Regions</h2></a>
 
 A region is an organisational unit one level above a zone. It contains all information about all machines running in any possible zones. In particular, the PostgreSQL database runs at this level and maintains state for all these machines.
 
-<h2 id="heading--series">Series</h2>
+<a href="#heading--series"><h2 id="heading--series">Series</h2></a>
 
 A series is essentially an operating system version. For Ubuntu, a series takes into account HWE kernels. In practical terms, a series manifests itself in the form of install images that are used to provision MAAS machines. The MAAS administrator can select series as desired.
 
-<h2 id="heading--images">Images</h2>
+<a href="#heading--images"><h2 id="heading--images">Images</h2></a>
 
 An image is used to provision a machine. As soon as you install MAAS, images are imported based on what series you have selected.  MAAS won't work until it has imported the necessary images.
 
-<h2 id="heading--fabrics">Fabrics</h2>
+<a href="#heading--fabrics"><h2 id="heading--fabrics">Fabrics</h2></a>
 
 A **fabric** connects VLANs.  If you understand a VLAN, you know that they permit network connections only between specific switch ports or specifically identified ports ("tagged" ports). Consequently, it would be impossible for two VLANs to communicate with each other.  A fabric makes these VLAN-to-VLAN connections possible.
 
@@ -147,17 +147,17 @@ The following conceptual diagram shows two fabrics in the same data centre or re
 <a href="https://discourse.maas.io/uploads/default/original/1X/46177305128bf7f3190f8a7bbd037c33e96f6a9e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/46177305128bf7f3190f8a7bbd037c33e96f6a9e.png"></a>
 
 
-<h2 id="heading--spaces">Spaces</h2>
+<a href="#heading--spaces"><h2 id="heading--spaces">Spaces</h2></a>
 
 A space is a logical grouping of subnets that can communicate with one another. Spaces can be arranged to group subnets according to various parameters.  One of the most common examples is a DMZ space, which might group subnets presenting a web interface to the public Internet.  Behind this DMZ would be specific applications that aren't allowed to interact directly with the user, but instead must interact with a Web UI in the DMZ space.  MAAS does not create a default space during installation.
 
 Spaces facilitate machine acquisition for [Juju](https://jaas.ai/). See [Juju network spaces](https://jaas.ai/docs/spaces) for more details.
 
-<h2 id="heading--tags">Tags</h2>
+<a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
 A tag (not to be confused with VLAN tags) is user-created and associated with nodes based on their physical properties. These can then be used to identify nodes with particular abilities which can be useful during the deployment of services.
 
-<h2 id="heading--subnets">Subnets</h2>
+<a href="#heading--subnets"><h2 id="heading--subnets">Subnets</h2></a>
 
 A subnet is a "layer 3" network, defined by a network address and a network mask length (in bits) and usually written in "CIDR" format. MAAS supports IPv4 and IPv6 subnets. Examples include:
 
@@ -168,7 +168,7 @@ A subnet is a "layer 3" network, defined by a network address and a network mask
 2001:db8:4d41:4153::/64
 ```
 
-<h3 id="heading--ip-ranges">IP ranges</h3>
+<a href="#heading--ip-ranges"><h3 id="heading--ip-ranges">IP ranges</h3></a>
 
 You can reserve IP addresses by adding one or more reserved ranges to a subnet configuration. You can define two types of ranges:
 
@@ -179,7 +179,7 @@ You can reserve IP addresses by adding one or more reserved ranges to a subnet c
 
 See [IP ranges](/t/ip-ranges/760) for how these ranges get created and [Commission nodes](/t/commission-machines/822#heading--post-commission-configuration) for how they get used and [Subnet management](/t/subnet-management/766) for information on managed vs. unmanaged subnets.
 
-<h2 id="heading--vlans">VLANs</h2>
+<a href="#heading--vlans"><h2 id="heading--vlans">VLANs</h2></a>
 
 VLANs (Virtual LANs) are a common way to create logically separate networks using the same physical infrastructure.
 
@@ -189,15 +189,15 @@ You can use also use tagged VLANs with MAAS nodes. If a switch port is configure
 
 A "Default VLAN" is created for every fabric, to which every new VLAN-aware object in the fabric will be associated with by default (unless specified otherwise).
 
-<h2 id="heading--dhcp-relay">DHCP relay</h2>
+<a href="#heading--dhcp-relay"><h2 id="heading--dhcp-relay">DHCP relay</h2></a>
 
 A DHCP relay, or relay agent, is a network device that forwards requests and replies between a DHCP client and a DHCP server when both are not on the same physical subnet.
 
 Two common software implementations are [isc-dhcp-relay](http://packages.ubuntu.com/xenial/isc-dhcp-relay) and [dhcp-helper](http://packages.ubuntu.com/xenial/dhcp-helper).
 
-<h2 id="heading--interfaces">Interfaces</h2>
+<a href="#heading--interfaces"><h2 id="heading--interfaces">Interfaces</h2></a>
 
-<h3 id="heading--physical">Physical</h3>
+<a href="#heading--physical"><h3 id="heading--physical">Physical</h3></a>
 
 After a node is commissioned, MAAS discovers its physical interfaces.
 
@@ -205,33 +205,33 @@ MAAS always creates a device with at least one physical interface.
 
 Before deployment, a MAAS administrator can configure additional interfaces on the node, including one or more of the types mentioned below.
 
-<h3 id="heading--bond">Bond</h3>
+<a href="#heading--bond"><h3 id="heading--bond">Bond</h3></a>
 
 A bond interface is capable of aggregating two or more physical interfaces into a single logical interface.  You can use bonds in conjunction with a managed switch (using Link Aggregation and Control Protocol, or LACP), or independently (software bonds).
 
-<h3 id="heading--vlan">VLAN</h3>
+<a href="#heading--vlan"><h3 id="heading--vlan">VLAN</h3></a>
 
 A VLAN interface can be used to connect to a tagged VLAN, if the node is connected to an authorised port.
 
-<h3 id="heading--unknown">Unknown</h3>
+<a href="#heading--unknown"><h3 id="heading--unknown">Unknown</h3></a>
 
 Unknown interfaces are sometimes discovered by MAAS. For example, a new DHCP lease that is not associated with any known node or device. Such an interface cannot be user-created.
 
-<h2 id="heading--machine-actions">Machine actions</h2>
+<a href="#heading--machine-actions"><h2 id="heading--machine-actions">Machine actions</h2></a>
 
 Machine actions are essentially "things you can do with nodes". You can trigger them via the web UI or the MAAS CLI. In the web UI, you manage them with the 'Take action' button in the top right corner. An action usually changes the status (see next section) of a node. Below is the full list of possible actions and their meaning, arranged alphabetically.
 
-<h3 id="heading--abort">Abort</h3>
+<a href="#heading--abort"><h3 id="heading--abort">Abort</h3></a>
 
 You can abort any action that permits retries. Currently, only commissioning and deployment permit retries.
 
-<h3 id="heading--acquire">Acquire</h3>
+<a href="#heading--acquire"><h3 id="heading--acquire">Acquire</h3></a>
 
 Allocates (reserves) a node to the MAAS user performing the action (and currently logged in). Changes a node's status from 'Ready' to 'Allocated'.
 
 With the CLI, it is necessary to perform this action before deploying. With the web UI, it is done automatically for the user. Acquiring in the web UI is used for machine reservation.
 
-<h3 id="heading--commission">Commission</h3>
+<a href="#heading--commission"><h3 id="heading--commission">Commission</h3></a>
 
 This action commissions a node, changing a node's status from 'New' to 'Commissioning' to 'Ready'.
 
@@ -241,11 +241,11 @@ If commissioning is unsuccessful, the status becomes 'Failed commissioning'.
 
 Any time a node's underlying networking or disk subsystem has changed, it should be re-commissioned. Typically, you would mark the node as 'Broken' (see below), implement maintenance, and then Commission.
 
-<h3 id="heading--delete">Delete</h3>
+<a href="#heading--delete"><h3 id="heading--delete">Delete</h3></a>
 
 This action removes a node from MAAS. The underlying machine remains unaffected. Upon rebooting, it will be enlisted once more (status 'New').
 
-<h3 id="heading--deploy">Deploy</h3>
+<a href="#heading--deploy"><h3 id="heading--deploy">Deploy</h3></a>
 
 This action, which includes 'Power on,' deploys a node, changing a node's status from 'Ready' (or 'Allocated') to a deployed status. 
 
@@ -255,11 +255,11 @@ If the deployment is unsuccessful, the status becomes 'Failed deployment'.
 
 Note that Juju, often used in conjunction with MAAS, also uses the term "deploy" to mean "deploy an application".
 
-<h3 id="heading--exit-rescue-mode">Exit rescue mode</h3>
+<a href="#heading--exit-rescue-mode"><h3 id="heading--exit-rescue-mode">Exit rescue mode</h3></a>
 
 This action changes a node's status from 'Rescue mode' to the 'Exiting rescue mode' transitory status and then back to its original status when the operation is complete.
 
-<h3 id="heading--mark-broken">Mark broken</h3>
+<a href="#heading--mark-broken"><h3 id="heading--mark-broken">Mark broken</h3></a>
 
 Marks a node as broken. Changes a node's status to 'Broken'. Includes action 'Power off'.
 
@@ -269,11 +269,11 @@ By marking a node broken, you can also flag it for hardware maintenance that wou
 
 You can also mark a newly-commissioned node ('Ready') as 'Broken.'
 
-<h3 id="heading--mark-fixed">Mark fixed</h3>
+<a href="#heading--mark-fixed"><h3 id="heading--mark-fixed">Mark fixed</h3></a>
 
 This action fixes a broken node, changing its status from 'Broken' to 'Ready'.
 
-<h3 id="heading--lock">Lock</h3>
+<a href="#heading--lock"><h3 id="heading--lock">Lock</h3></a>
 
 This action marks a machine as locked, preventing the user from performing actions on machines that could change their state. For example, a locked machine cannot be mistakenly powered off or released.
 
@@ -281,25 +281,25 @@ A locked machine has a padlock symbol next to its name.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/7d1f0928fb599d465916e43e731535dfee60e65a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7d1f0928fb599d465916e43e731535dfee60e65a.png"></a>
 
-<h3 id="heading--override-failed">Override failed</h3>
+<a href="#heading--override-failed"><h3 id="heading--override-failed">Override failed</h3></a>
 
 Allows a machine marked as ‘Failed testing’ to be usable.
 
-<h3 id="heading--power-off">Power off</h3>
+<a href="#heading--power-off"><h3 id="heading--power-off">Power off</h3></a>
 
 This action turns off a node's underlying machine.
 
-<h3 id="heading--power-on">Power on</h3>
+<a href="#heading--power-on"><h3 id="heading--power-on">Power on</h3></a>
 
 This action turns on a node's underlying machine.
 
-<h3 id="heading--release">Release</h3>
+<a href="#heading--release"><h3 id="heading--release">Release</h3></a>
 
 This action, which includes the 'Power off' action, releases a node back into the pool of available nodes, changing a node's status from 'Deployed' (or 'Allocated') to 'Ready'.
 
 The user has the opportunity to erase the node's storage (disks) before confirming the action. You can configure a default erasure setting on the 'Storage' tab of the 'Settings' page. See [Disk erasure](/t/disk-erasure/774) for details.
 
-<h3 id="heading--rescue-mode">Rescue mode</h3>
+<a href="#heading--rescue-mode"><h3 id="heading--rescue-mode">Rescue mode</h3></a>
 
 This action allows you to boot a node ephemerally (Ubuntu running in memory on the underlying machine). By doing so, you can SSH to the machine for maintenance purposes. This action works for a Deployed or Broken node, as well as for a node that failed to deploy.
 
@@ -307,19 +307,19 @@ Authentication and access to the node's storage work the same way it would if th
 
 The node status is changed to the 'Entering rescue mode' transitory status and then to 'Rescue mode' when the operation is complete.
 
-<h3 id="heading--set-zone">Set Zone</h3>
+<a href="#heading--set-zone"><h3 id="heading--set-zone">Set Zone</h3></a>
 
 This action puts the node in a specific zone.
 
-<h3 id="heading--test-hardware">Test hardware</h3>
+<a href="#heading--test-hardware"><h3 id="heading--test-hardware">Test hardware</h3></a>
 
 This action allows the user to select and run scripts to test a machine's underlying hardware. See [Hardware testing](/t/hardware-testing/826) for further details.
 
-<h3 id="heading--unlock">Unlock</h3>
+<a href="#heading--unlock"><h3 id="heading--unlock">Unlock</h3></a>
 
 This action releases a machine from a locked state.
 
-<h2 id="heading--machine-statuses">Node statuses</h2>
+<a href="#heading--machine-statuses"><h2 id="heading--machine-statuses">Node statuses</h2></a>
 
 Node statuses are labels used to describe the general state of a node as known to MAAS. A node will undergo various manipulations during their time spent in MAAS, and its status will change accordingly. Actions applied to a node are the most common cause of a status change (see section above.)  Below is the full list of status values and their meaning, arranged alphabetically.
 
@@ -328,63 +328,63 @@ Some aspects of a node can only be modified when a node has a certain status. He
 1.   you cannot modify a network interfaces unless the node has a status of either 'Ready' or 'Broken'.
 2.   you cannot modify storage unless the node has a status of either 'Ready' or 'Allocated'.
 
-<h3 id="heading--allocated">Allocated</h3>
+<a href="#heading--allocated"><h3 id="heading--allocated">Allocated</h3></a>
 
 The node is allocated (reserved) to a MAAS user. See node action 'Acquire'.
 
-<h3 id="heading--broken">Broken</h3>
+<a href="#heading--broken"><h3 id="heading--broken">Broken</h3></a>
 
 The node is broken. See node action 'Mark broken'.
 
-<h3 id="heading--commissioning">Commissioning</h3>
+<a href="#heading--commissioning"><h3 id="heading--commissioning">Commissioning</h3></a>
 
 The node is in the process of commissioning. See node action 'Commission'.
 
-<h3 id="heading--deployed">Deployed</h3>
+<a href="#heading--deployed"><h3 id="heading--deployed">Deployed</h3></a>
 
 The node is deployed. See node action 'Deploy'.
 
 The visible status will be the name of the chosen OS (e.g. 'Ubuntu 16.04 LTS').
 
-<h3 id="heading--deploying">Deploying</h3>
+<a href="#heading--deploying"><h3 id="heading--deploying">Deploying</h3></a>
 
 The node is in the process of deploying. See node action 'Deploy'.
 
 The visible status will be Deploying to 'OS', where 'OS' is the name of the OS being deployed (e.g. 'Deploying to Ubuntu 16.04 LTS').
 
-<h3 id="heading--entering-rescue-mode">Entering rescue mode</h3>
+<a href="#heading--entering-rescue-mode"><h3 id="heading--entering-rescue-mode">Entering rescue mode</h3></a>
 
 The node is in the process of entering rescue mode. See node action 'Rescue mode'.
 
-<h3 id="heading--exiting-rescue-mode">Exiting rescue mode</h3>
+<a href="#heading--exiting-rescue-mode"><h3 id="heading--exiting-rescue-mode">Exiting rescue mode</h3></a>
 
 The node is in the process of exiting rescue mode. See node action 'Exit rescue mode'.
 
-<h3 id="heading--failed-commissioning">Failed Commissioning</h3>
+<a href="#heading--failed-commissioning"><h3 id="heading--failed-commissioning">Failed Commissioning</h3></a>
 
 The node failed to commission.
 
-<h3 id="heading--failed-deployment">Failed Deployment</h3>
+<a href="#heading--failed-deployment"><h3 id="heading--failed-deployment">Failed Deployment</h3></a>
 
 The node failed to deploy.
 
-<h3 id="heading--locked">Locked</h3>
+<a href="#heading--locked"><h3 id="heading--locked">Locked</h3></a>
 
 It's not strictly a status, but a machine showing a 'padlock' symbol adjacent to its name is in a locked state.
 
-<h3 id="heading--new">New</h3>
+<a href="#heading--new"><h3 id="heading--new">New</h3></a>
 
 This status represents the first stage of a node's life in MAAS. Typically, a node with this status has just been added to MAAS.
 
-<h3 id="heading--ready">Ready</h3>
+<a href="#heading--ready"><h3 id="heading--ready">Ready</h3></a>
 
 A node bearing this status has been commissioned and is ready for use, including the necessary BMC credentials. MAAS can start or stop this machine, and allocate or (re)deploy it with a fresh operating system.
 
-<h3 id="heading--rescue-mode">Rescue mode</h3>
+<a href="#heading--rescue-mode"><h3 id="heading--rescue-mode">Rescue mode</h3></a>
 
 The node is in rescue mode and is ready to accept SSH connections. See node action 'Rescue mode'.
 
-<h2 id-"heading--package-repositories">Package repositories</h2>
+<a href="#heading--package-repositories"><h2 id-"heading--package-repositories">Package repositories</h2></a>
 
 Package repositories managed within MAAS can be of two types:
 
@@ -397,7 +397,7 @@ MAAS further simplifies the addition of third-party repositories by also allowin
 
 An added repository can be disabled and re-enabled using a toggle switch to the right of it.
 
-<h2 id="heading--ubuntu-package-repositories">Ubuntu package repositories</h2>
+<a href="#heading--ubuntu-package-repositories"><h2 id="heading--ubuntu-package-repositories">Ubuntu package repositories</h2></a>
 
 An Ubuntu package repository is a repository that makes available Ubuntu packages to computers able to connect to it over the network, whether that network is private or public (e.g. the Internet).
 
@@ -427,7 +427,7 @@ Click 'Add repository' to save the configuration.
 
 A private repository can be built to assist with offline operations, based on the official repository. This repository can also contain custom packages.
 
-<h2 id="heading--personal-package-archives-ppa">Personal Package Archives (PPA)</h2>
+<a href="#heading--personal-package-archives-ppa"><h2 id="heading--personal-package-archives-ppa">Personal Package Archives (PPA)</h2></a>
 
 A Personal Package Archive (PPA) is a [Launchpad](https://launchpad.net)-based method for any individual (or team) to build and distribute packages for Ubuntu.
 
@@ -445,7 +445,7 @@ Click 'Add repository' to save the configuration.
 
 See [Launchpad PPAs](https://help.launchpad.net/Packaging/PPA) for more information on PPAs.
 
-<h2 id="heading--numa">NUMA/vNUMA</h2>
+<a href="#heading--numa"><h2 id="heading--numa">NUMA/vNUMA</h2></a>
 
 NUMA stands for "Non-Uniform Memory Access."  In this context, "non-uniform" means that any given CPU core can access its dedicated memory faster than the memory dedicated to other cores.  A NUMA configuration groups core(s) and memory as a dedicated node, which reduces memory access times, so the core won't spend a lot of time stalled in wait states -- that is, waiting for access to data in memory, either because the memory is relatively far away (proximity) or because other cores have access to the same memory (shared memory). In other words, NUMA works better when the core has dedicated memory that is relatively close by.
 
@@ -457,7 +457,7 @@ In practice, this means that VMs would be "pinned" to specific cores to create s
 
 If you want to dig deeper, there is a [more through treatment of NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access) on Wikipedia.
 
-<h2 id="heading--sr-iov">SR-IOV</h2>
+<a href="#heading--sr-iov"><h2 id="heading--sr-iov">SR-IOV</h2></a>
 
 With traditional ethernet, a packet comes into the NIC and interrupt is fired for the one core assigned to handle NIC interrupts.  That core has to go get the packet, find the destination MAC address or VLAN tag, then go interrupt the destination core -- which has to get the packet and write it to the memory of the VM it's managing. Statistically speaking, that's basically two core interrupts for every incoming packet.
 
@@ -467,13 +467,13 @@ With SR-IOV, it's possible to have no core interrupts when packets come in.  SR-
 
 For a deeper dive, try this [SR-IOV presentation](https://www.youtube.com/watch?v=hRHsk8Nycdg) from Intel.
 
-<h2 id="heading--isolcpus">Isolating CPUs</h2>
+<a href="#heading--isolcpus"><h2 id="heading--isolcpus">Isolating CPUs</h2></a>
 
 For certain operations, it's useful to shield a from having to execute general system processes and take interrupts.  These are sometimes referred to as "isolcpus," more correctly described as booting a core with the `isolcpus` boot parameter.  This parameter restricts the shielded core to processes assigned directly to it, avoiding sharing bandwidth with the general scheduler and preventing the core from taking non-specific interrupts.
 
 When used with VMs, users can maximise performance by configuring isolcpus in the kernel, to prevent the general scheduler and other tasks from using bandwidth on your VM core(s).
 
-<h2 id="heading--edge-clouds">Edge clouds</h2>
+<a href="#heading--edge-clouds"><h2 id="heading--edge-clouds">Edge clouds</h2></a>
 
 Edge clouds are designed to minimise latency, so that your cloud computing experience is nearer to real-time.  The use of "edge" doesn't specifically refer to the edges of the cloud, but to the machines that are at the "edge of the problem," or more to the point, "the edge of the cloud that is closest to your application."  Sometimes these are separate clouds in your own data centre, though they can also be parts of a remote cloud that are closer to you in network terms.
 
@@ -481,7 +481,7 @@ There are a number of complex decision lops and optimisation algorithms used by 
 
 Edge clouds can be planned and enhanced by using NUMA and SR-IOV techniques.  NUMA can help you create SMP nodes on VM cores the shortest (network) distance away from your application.  SR-IOV can, in general, reduce network latency even more by eliminating core involvement in network traffic. You can create virtual machines and assign NUMA nodes to minimise network latency, and then ensure that   MAAS gives you NUMA tools to find out whether you're achieving this sort of optimisation, and help you make decisions about how to adjust and improve over time.
 
-<h2 id="Hugepages">Hugepages</h2>
+<a href="#Hugepages"><h2 id="Hugepages">Hugepages</h2></a>
 
 Computer memory is addressed not as raw RAM, but as virtual memory. Assisted by the CPU's memory management unit (MMU), the kernel maps virtual memory to a physical location. Virtual memory is divided into pages, which can be swapped in and out to disk during normal operation (hence the term "swap space").  When programs access memory, the CPU needs to know which physical page has the data, so it relies on the kernel's "page table" to find the right virtual-to-physical address mapping.
 
@@ -493,11 +493,11 @@ There's no tried and true formula for when to use them, but the key consideratio
 
 MAAS provides the dashboards and tools necessary to monitor and adjust your use of hugepages, so that you can find the right balance.
 
-<h2 id="heading--network-tutorial">Brief network tutorial</h2>
+<a href="#heading--network-tutorial"><h2 id="heading--network-tutorial">Brief network tutorial</h2></a>
 
 The following is a brief network tutorial, provided as a tool to synchronise understanding.  Note that this tutorial covers mostly those terms routinely needed in the course of using MAAS.
 
-<h3 id="heading--dhcp">DHCP</h3>
+<a href="#heading--dhcp"><h3 id="heading--dhcp">DHCP</h3></a>
 
 The Dynamic Host Control Protocol is a network management system in which a server (or group of servers) dynamically assigns IP addresses and other network parameters to a network device.  This network device may or may not have the capability to provide its own IP address, although to take advantage of DHCP, the device must have been configured to seek out a DHCP server and accept an assigned IP address.  Typically, a network administrator defines a range of reserved IP addresses from which the DHCP server can pull when assigning addresses.
 
@@ -513,46 +513,46 @@ DHCP operates using the four-step "DORA" model -- Discovery, Offer, Request, and
 
 Of course, there is [much more to DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol), but what's covered here should be sufficient understanding for using MAAS.
 
-<h3 id="heading--client">Client</h3>
+<a href="#heading--client"><h3 id="heading--client">Client</h3></a>
 
 In the client/server age, the lines between client and server are blurred and sometimes reversible.  For the purposes of MAAS and general networking principles, we can define a "client" as a node that uses shared resources via a network.  If that same client provides shared resources to other nodes, it could also be considered a server.  
 
-<h3 id="heading--server">Server</h3>
+<a href="#heading--server"><h3 id="heading--server">Server</h3></a>
 
 A server is a node that provides shared resources to clients via a network.  If that same server uses shared resources from other nodes, it could also be considered a client, but only in that context.  
 
-<h3 id="heading--network-interface">Network interface</h3>
+<a href="#heading--network-interface"><h3 id="heading--network-interface">Network interface</h3></a>
 
 A network interface, often referred to as a "network interface card" or NIC, is either a separate physical card connected to a node, a set of circuits embedded on a node's motherboard, or a radio transceiver attached to a node in some way.  All network connections require a NIC.  The terms "port" and "adaptor" are also used to refer to a network interface.
 
-<h3 id="heading--mac-address">MAC address</h3>
+<a href="#heading--mac-address"><h3 id="heading--mac-address">MAC address</h3></a>
 
 A MAC or "media access control" address is a unique address or "physical address" associated with a network interface.  They are 48 bits in length, which allows for 280 trillion devices, arranged into six hexadecimal octets, separated by colons or dashes.  Every computer in the world theoretically has a unique MAC address.  You can identify a node's IP address with the command `ipconfig /all`.
 
-<h3 id="heading--network-cable">Network cable</h3>
+<a href="#heading--network-cable"><h3 id="heading--network-cable">Network cable</h3></a>
 
 Network cables are special cables that connect non-wireless-based nodes.  They consist of our pairs of insulated, 24-gauge wire, colour-coded (solid/striped), usually in four colours: blue, green, orange, and brown.  The matching colour pairs are twisted together, each pair at a different turn rate to prevent electromagnetic interference between pairs.
 These twists must be maintained all the way up to the (RJ45) connector.
 
 Even with insulation, careful twisting, and connector-termination, natural losses in the cable cause the network signals to become too weak to maintain reliable data rates after a certain length.  In the case of Cat 5e cable, the maximum cable length is 100 meters to maintain 1Gb per second.  For Cat 6, the max length to maintain 10Gb per second is 55 meters.  These limits are overcome with [repeaters](/t/concepts-and-terms/785#heading--repeater), which amplify the signal and relay it to the next repeater or NIC.
 
-<h3 id="heading--repeater">Repeater</h3>
+<a href="#heading--repeater"><h3 id="heading--repeater">Repeater</h3></a>
 
 Technically, a repeater is a network signal amplifier with two RJ45 connectors which adds one maximum length (for the cable type) to the network connection or "run."  In practice, repeaters usually come in the form of [hubs](/t/concepts-and-terms/785#heading--hub) or [switches](/t/concepts-and-terms/785#heading--switch), which can usually perform other functions as well.
 
-<h3 id="heading--packet">Packet</h3>
+<a href="#heading--packet"><h3 id="heading--packet">Packet</h3></a>
 
 A packet is a unit of network traffic.  It may or may not represent a complete message.
 
-<h3 id="heading--hub">Hub</h3>
+<a href="#heading--hub"><h3 id="heading--hub">Hub</h3></a>
 
 Hubs essentially started as repeaters.  While they may be able to connect more than two computers together (i.e., multiple RJ45 ports), they provide no improvement over simple bus networks, since every connected NIC must examine every packet.  They are rarely used anymore.
 
-<h3 id="heading--switch">Switch</h3>
+<a href="#heading--switch"><h3 id="heading--switch">Switch</h3></a>
 
 A switch is a "smart" device that connects cables from nodes to make networks.  Like a hub, a switch amplifies signals, that is, it acts as a repeater.  Switches learn by induction which cables receive which IP addresses.  Over time a switch will direct each packet only to devices which indicate that they will accept the addresses associated with those packets.
 
-<h3 id="heading--network-topology">Network topology</h3>
+<a href="#heading--network-topology"><h3 id="heading--network-topology">Network topology</h3></a>
 
 Topology describes how nodes are connected to a network, specifically referring to the shapes made by the cables and the paths that packets can take.  There are probably as many topologies are there are shapes, but here are five of the most common:
 
@@ -566,26 +566,26 @@ Topology describes how nodes are connected to a network, specifically referring 
 
 5. Mesh topology: nodes with multiple interfaces and multiple connections.  Useful where wide-area networks ([WAN](/t/concepts-and-terms/785#heading--wan)) where there would otherwise be lots of intermediaries.  Not popular or particularly cost effective for [LAN](/t/concepts-and-terms/785#heading--lan) networks.
 
-<h3 id="heading--patch-panel">Patch panel</h3>
+<a href="#heading--patch-panel"><h3 id="heading--patch-panel">Patch panel</h3></a>
 
 A patch panel is simply a 24- to 48-port panel of connectors that can link together three- to ten-foot cables.  A patch panel allows jumpers from network runs to devices in racks, without putting strain and "cable creep" on long runs.
 
-<h3 id="heading--lan">LAN</h3>
+<a href="#heading--lan"><h3 id="heading--lan">LAN</h3></a>
 
 Besides topology, networks can also be classified by their size, range, or "reach."  One such classification is the Local Area Network (LAN), which connects computers in close proximity (about 300 feet).
 
-<h3 id="heading--WAN">WAN</h3>
+<a href="#heading--WAN"><h3 id="heading--WAN">WAN</h3></a>
 
 A WAN (wide area network) is a network which connects LANs across large geographic distances, e.g., thousands of miles.
 
-<h3 id="heading--MAN">MAN</h3>
+<a href="#heading--MAN"><h3 id="heading--MAN">MAN</h3></a>
 
 A metro area network or MAN connects LANs over a smaller area, like a city or urban footprint.  Basically, if it isn't really a WAN, but you can't connect it with cables, it's usually considered a MAN.
 
-<h3 id="heading--network-infrastructure">Network infrastructure</h3>
+<a href="#heading--network-infrastructure"><h3 id="heading--network-infrastructure">Network infrastructure</h3></a>
 
 Network infrastructure is a catch-all term covering the physical components of a network, include cables, patch panels, switches, routers, hubs, and other associated network gear.
 
-<h3 id="heading--router">Router</h3>
+<a href="#heading--router"><h3 id="heading--router">Router</h3></a>
 
 A router is a device that transfers packets from one network to another.  Unlike switches, which only ensure that pre-addressed packets get to the correct recipient machines, routers actually modify or encapsulate packets to ensure that they can travel on other networks to reach a remote destination.

@@ -84,7 +84,7 @@
 
 As with block devices (see [Block devices](/t/block-devices/749)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
 
-<h3 id="heading--list-partitions">List Partitions</h3>
+<a href="#heading--list-partitions"><h3 id="heading--list-partitions">List Partitions</h3></a>
 
 To view all the partitions on a block device, use the 'partitions read' API call:
 
@@ -123,7 +123,7 @@ To view the metadata for a specific partition on a block device, rather than all
 maas admin partition read <node-id> 10 9
 ```
 
-<h3 id="heading--create-partition">Create Partition</h3>
+<a href="#heading--create-partition"><h3 id="heading--create-partition">Create Partition</h3></a>
 
 To create a new partition on a block device, use the 'create' API call:
 
@@ -149,7 +149,7 @@ Machine-readable output follows:
 }
 ```
 
-<h3 id="heading--delete-partition">Delete Partition</h3>
+<a href="#heading--delete-partition"><h3 id="heading--delete-partition">Delete Partition</h3></a>
 
 Partitions can be deleted from a block device with the 'delete' API call. Make sure you double check the partition details as the partition is deleted immediately, with no further confirmation:
 
@@ -164,7 +164,7 @@ Success.
 Machine-readable output follows:
 ```
 
-<h3 id="heading--format-partition">Format Partition</h3>
+<a href="#heading--format-partition"><h3 id="heading--format-partition">Format Partition</h3></a>
 
 Partitions can be formatted in a similar way to block devices:
 
@@ -200,7 +200,7 @@ Machine-readable output follows:
 You cannot format partitions that are used to make another virtual block device.
 [/note]
 
-<h3 id="heading--unformat-partition">Unformat Partition</h3>
+<a href="#heading--unformat-partition"><h3 id="heading--unformat-partition">Unformat Partition</h3></a>
 
 You can also remove the filesystem from a partition with the 'unformat' API call:
 
@@ -224,7 +224,7 @@ Machine-readable output follows:
 }
 ```
 
-<h3 id="heading--mount-partition">Mount Partition</h3>
+<a href="#heading--mount-partition"><h3 id="heading--mount-partition">Mount Partition</h3></a>
 
 A formatted partition can be mounted at a given mount point with the 'mount' command.
 
@@ -256,7 +256,7 @@ Machine-readable output follows:
 }
 ```
 
-<h3 id="heading--unmount-partition">Unmount Partition</h3>
+<a href="#heading--unmount-partition"><h3 id="heading--unmount-partition">Unmount Partition</h3></a>
 
 A previous mounted partition can be unmounted with the 'unmount' command:
 
@@ -291,7 +291,7 @@ Machine-readable output follows:
 }
 ```
 
-<h2 id="heading--restrictions">Restrictions</h2>
+<a href="#heading--restrictions"><h2 id="heading--restrictions">Restrictions</h2></a>
 
 There are three restrictions for the storage configuration:
 

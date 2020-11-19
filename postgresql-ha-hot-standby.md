@@ -94,11 +94,11 @@ Five variables are used on this page:
 
 Their values are represented when they are preceded with the '$' character (e.g. $REP_USER_PW). These are to be replaced with actual values in the commands and files below.
 
-<h2 id="heading--primary">Primary</h2>
+<a href="#heading--primary"><h2 id="heading--primary">Primary</h2></a>
 
 Perform these actions on the primary host.
 
-<h3 id="heading--create-internal-database-user">Create internal database user</h3>
+<a href="#heading--create-internal-database-user"><h3 id="heading--create-internal-database-user">Create internal database user</h3></a>
 
 Create an internal database user to manage replication. You will be prompted to supply a password ($REP_USER_PW) for this new user:
 
@@ -106,7 +106,7 @@ Create an internal database user to manage replication. You will be prompted to 
 sudo -u postgres createuser -U postgres $REP_USER -P -c 5 --replication
 ```
 
-<h3 id="heading--set-up-replication-file-storage">Set up replication file storage</h3>
+<a href="#heading--set-up-replication-file-storage"><h3 id="heading--set-up-replication-file-storage">Set up replication file storage</h3></a>
 
 Set up a place to store replication files:
 
@@ -116,7 +116,7 @@ sudo mkdir -p $REP_ARCHIVE
 sudo chown postgres $REP_ARCHIVE
 ```
 
-<h3 id="heading--allow-secondary-host-to-connect">Allow secondary host to connect</h3>
+<a href="#heading--allow-secondary-host-to-connect"><h3 id="heading--allow-secondary-host-to-connect">Allow secondary host to connect</h3></a>
 
 Edit `/etc/postgresql/9.5/main/pg_hba.conf` to allow the secondary host to contact this primary host.
 
@@ -124,7 +124,7 @@ Edit `/etc/postgresql/9.5/main/pg_hba.conf` to allow the secondary host to conta
 host    replication     $REP_USER   $SECONDARY_PG_IP/32         md5
 ```
 
-<h3 id="heading--configure-for-replication">Configure for replication</h3>
+<a href="#heading--configure-for-replication"><h3 id="heading--configure-for-replication">Configure for replication</h3></a>
 
 Edit `/etc/postgresql/9.5/main/postgresql.conf` to listen on more than just its localhost interface, turn on replication, and point to the archive directory:
 
@@ -136,7 +136,7 @@ archive_command = 'test ! -f $REP_ARCHIVE/%f && cp %p $REP_ARCHIVE/%f'
 max_wal_senders = 3
 ```
 
-<h3 id="heading--restart-the-database">Restart the database</h3>
+<a href="#heading--restart-the-database"><h3 id="heading--restart-the-database">Restart the database</h3></a>
 
 Restart the database to apply the above changes:
 
@@ -148,7 +148,7 @@ Check log file `/var/log/postgresql/postgresql-9.5-main.log` on this primary hos
 
 The primary database is now ready to accept replication requests from the secondary database (that will be set up below).
 
-<h2 id="heading--secondary">Secondary</h2>
+<a href="#heading--secondary"><h2 id="heading--secondary">Secondary</h2></a>
 
 Perform these actions on the secondary host.
 
@@ -160,7 +160,7 @@ This host should ideally match the primary host in terms of:
 
 Replication has been known to fail due to an architecture mismatch.
 
-<h3 id="heading--install-postgresql-and-stop-the-service">Install PostgreSQL and stop the service</h3>
+<a href="#heading--install-postgresql-and-stop-the-service"><h3 id="heading--install-postgresql-and-stop-the-service">Install PostgreSQL and stop the service</h3></a>
 
 Install PostgreSQL and stop the service:
 
@@ -169,7 +169,7 @@ sudo apt install postgresql
 sudo systemctl stop postgresql
 ```
 
-<h3 id="heading--copy-over-primary-database-files">Copy over primary database files</h3>
+<a href="#heading--copy-over-primary-database-files"><h3 id="heading--copy-over-primary-database-files">Copy over primary database files</h3></a>
 
 Move the default database files out of the way and replace them with a copy of the primary database files. You will be prompted for the password of the remote replication user.
 
@@ -181,7 +181,7 @@ Password:
 
 Once a copy of the primary database is transferred, proceed to configure actual replication.
 
-<h3 id="heading--place-database-in-hot-standby-mode">Place database in hot standby mode</h3>
+<a href="#heading--place-database-in-hot-standby-mode"><h3 id="heading--place-database-in-hot-standby-mode">Place database in hot standby mode</h3></a>
 
 Edit `/etc/postgresql/9.5/main/postgresql.conf` and put this secondary host in hot standby mode:
 
@@ -189,7 +189,7 @@ Edit `/etc/postgresql/9.5/main/postgresql.conf` and put this secondary host in h
 hot_standby = on
 ```
 
-<h3 id="heading--set-up-recovery-configuration-file">Set up recovery configuration file</h3>
+<a href="#heading--set-up-recovery-configuration-file"><h3 id="heading--set-up-recovery-configuration-file">Set up recovery configuration file</h3></a>
 
 Copy a sample recovery configuration file into place:
 
@@ -197,7 +197,7 @@ Copy a sample recovery configuration file into place:
 sudo cp /usr/share/postgresql/9.5/recovery.conf.sample /var/lib/postgresql/9.5/main/recovery.conf
 ```
 
-<h3 id="heading--configure-for-recovery">Configure for recovery</h3>
+<a href="#heading--configure-for-recovery"><h3 id="heading--configure-for-recovery">Configure for recovery</h3></a>
 
 Edit `/var/lib/postgresql/9.5/main/recovery.conf`. Specify hot standby mode and enter the information necessary for contacting the primary:
 
@@ -206,7 +206,7 @@ standby_mode = on
 primary_conninfo = 'host=$PRIMARY_PG_IP port=5432 user=$REP_USER password=$REP_USER_PW'
 ```
 
-<h3 id="heading--start-the-database">Start the database</h3>
+<a href="#heading--start-the-database"><h3 id="heading--start-the-database">Start the database</h3></a>
 
 Start the database:
 
@@ -218,7 +218,7 @@ Check log file `/var/log/postgresql/postgresql-9.5-main.log` on this secondary h
 
 The secondary database is now replicating the primary database.
 
-<h2 id="heading--verification-of-replication">Verification of replication</h2>
+<a href="#heading--verification-of-replication"><h2 id="heading--verification-of-replication">Verification of replication</h2></a>
 
 This section includes a raw test that will show whether replication is functioning.
 

@@ -1,0 +1,143 @@
+1,6d0
+< about-maas-deb-2-7-cli-2268.md
+< about-maas-deb-2-7-ui-2269.md
+< about-maas-deb-2-8-cli-2270.md
+< about-maas-deb-2-8-ui-2271.md
+< about-maas-deb-2-9-cli-2272.md
+< about-maas-deb-2-9-ui-2273.md
+8,19d1
+< about-maas-snap-2-7-cli-2262.md
+< about-maas-snap-2-7-ui-2263.md
+< about-maas-snap-2-8-cli-2264.md
+< about-maas-snap-2-8-ui-2265.md
+< about-maas-snap-2-9-cli-2266.md
+< about-maas-snap-2-9-ui-2267.md
+< adding-a-vm-host-deb-2-7-cli-2292.md
+< adding-a-vm-host-deb-2-7-ui-2293.md
+< adding-a-vm-host-deb-2-8-cli-2294.md
+< adding-a-vm-host-deb-2-8-ui-2295.md
+< adding-a-vm-host-deb-2-9-cli-2296.md
+< adding-a-vm-host-deb-2-9-ui-2297.md
+21,32d2
+< adding-a-vm-host-snap-2-7-cli-2286.md
+< adding-a-vm-host-snap-2-7-ui-2287.md
+< adding-a-vm-host-snap-2-8-cli-2288.md
+< adding-a-vm-host-snap-2-8-ui-2289.md
+< adding-a-vm-host-snap-2-9-cli-2290.md
+< adding-a-vm-host-snap-2-9-ui-2291.md
+< add-machines-deb-2-7-cli-2280.md
+< add-machines-deb-2-7-ui-2281.md
+< add-machines-deb-2-8-cli-2282.md
+< add-machines-deb-2-8-ui-2283.md
+< add-machines-deb-2-9-cli-2284.md
+< add-machines-deb-2-9-ui-2285.md
+34,40d3
+< add-machines-snap-2-7-cli-2274.md
+< add-machines-snap-2-7-ui-2275.md
+< add-machines-snap-2-8-cli-2276.md
+< add-machines-snap-2-8-ui-2277.md
+< add-machines-snap-2-9-cli-2278.md
+< add-machines-snap-2-9-ui-2279.md
+< api-authentication-742.md
+43d5
+< audit-event-logs-791.md
+45,50d6
+< availability-zones-deb-2-7-cli-2328.md
+< availability-zones-deb-2-7-ui-2329.md
+< availability-zones-deb-2-8-cli-2330.md
+< availability-zones-deb-2-8-ui-2331.md
+< availability-zones-deb-2-9-cli-2332.md
+< availability-zones-deb-2-9-ui-2333.md
+52,63d7
+< availability-zones-snap-2-7-cli-2322.md
+< availability-zones-snap-2-7-ui-2323.md
+< availability-zones-snap-2-8-cli-2324.md
+< availability-zones-snap-2-8-ui-2325.md
+< availability-zones-snap-2-9-cli-2326.md
+< availability-zones-snap-2-9-ui-2327.md
+< backup-deb-2-7-cli-2340.md
+< backup-deb-2-7-ui-2341.md
+< backup-deb-2-8-cli-2342.md
+< backup-deb-2-8-ui-2343.md
+< backup-deb-2-9-cli-2344.md
+< backup-deb-2-9-ui-2345.md
+65,77d8
+< backup-snap-2-7-cli-2334.md
+< backup-snap-2-7-ui-2335.md
+< backup-snap-2-8-cli-2336.md
+< backup-snap-2-8-cli-2352.md
+< backup-snap-2-8-ui-2337.md
+< backup-snap-2-9-cli-2338.md
+< backup-snap-2-9-ui-2339.md
+< block-devices-deb-2-7-cli-2352.md
+< block-devices-deb-2-7-ui-2353.md
+< block-devices-deb-2-8-cli-2354.md
+< block-devices-deb-2-8-ui-2355.md
+< block-devices-deb-2-9-cli-2356.md
+< block-devices-deb-2-9-ui-2357.md
+79,84d9
+< block-devices-snap-2-7-cli-2346.md
+< block-devices-snap-2-7-ui-2347.md
+< block-devices-snap-2-8-cli-2348.md
+< block-devices-snap-2-8-ui-2349.md
+< block-devices-snap-2-9-cli-2350.md
+< block-devices-snap-2-9-ui-2351.md
+86d10
+< cli-advanced-tasks-793.md
+88d11
+< cli-composable-hardware-795.md
+90d12
+< cli-image-management-797.md
+92d13
+< cli-interface-management-798.md
+94d14
+< cli-kernel-management-799.md
+96,101d15
+< commissioning-and-hardware-testing-scripts-deb-2-7-cli-2484.md
+< commissioning-and-hardware-testing-scripts-deb-2-7-ui-2485.md
+< commissioning-and-hardware-testing-scripts-deb-2-8-cli-2486.md
+< commissioning-and-hardware-testing-scripts-deb-2-8-ui-2487.md
+< commissioning-and-hardware-testing-scripts-deb-2-9-cli-2488.md
+< commissioning-and-hardware-testing-scripts-deb-2-9-ui-2489.md
+103,114d16
+< commissioning-and-hardware-testing-scripts-snap-2-7-cli-2478.md
+< commissioning-and-hardware-testing-scripts-snap-2-7-ui-2479.md
+< commissioning-and-hardware-testing-scripts-snap-2-8-cli-2480.md
+< commissioning-and-hardware-testing-scripts-snap-2-8-ui-2481.md
+< commissioning-and-hardware-testing-scripts-snap-2-9-cli-2482.md
+< commissioning-and-hardware-testing-scripts-snap-2-9-ui-2483.md
+< commissioning-logs-deb-2-7-cli-2496.md
+< commissioning-logs-deb-2-7-ui-2497.md
+< commissioning-logs-deb-2-8-cli-2498.md
+< commissioning-logs-deb-2-8-ui-2499.md
+< commissioning-logs-deb-2-9-cli-2500.md
+< commissioning-logs-deb-2-9-ui-2501.md
+116,127d17
+< commissioning-logs-snap-2-7-cli-2490.md
+< commissioning-logs-snap-2-7-ui-2491.md
+< commissioning-logs-snap-2-8-cli-2492.md
+< commissioning-logs-snap-2-8-ui-2493.md
+< commissioning-logs-snap-2-9-cli-2494.md
+< commissioning-logs-snap-2-9-ui-2495.md
+< commission-machines-deb-2-7-cli-2472.md
+< commission-machines-deb-2-7-ui-2473.md
+< commission-machines-deb-2-8-cli-2474.md
+< commission-machines-deb-2-8-ui-2475.md
+< commission-machines-deb-2-9-cli-2476.md
+< commission-machines-deb-2-9-ui-2477.md
+129,135d18
+< commission-machines-snap-2-7-cli-2466.md
+< commission-machines-snap-2-7-ui-2467.md
+< commission-machines-snap-2-8-cli-2468.md
+< commission-machines-snap-2-8-ui-2469.md
+< commission-machines-snap-2-9-cli-2470.md
+< commission-machines-snap-2-9-ui-2471.md
+< common-cli-tasks.md
+152d34
+< historical-release-notes-835.md
+199d80
+< the-cli-cookbook.md
+213,215d93
+< whats-new-in-maas-2-7-3335.md
+< whats-new-in-maas-2-8-3334.md
+< whats-new-in-maas-2-9-3336.md

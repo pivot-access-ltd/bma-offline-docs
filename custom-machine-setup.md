@@ -141,9 +141,9 @@ Customisation in MAAS happens in two ways:
 
 2.  [Cloud-init^](https://launchpad.net/cloud-init), a system for setting up machines immediately after instantiation. cloud-init applies customisations after the first boot, when MAAS changes a machine's status to 'Deployed.' Customisations are per-instances, meaning that user-supplied scripts must be re-specified on redeployment. Cloud-init customisations are the best way for MAAS users to customise their deployments, similar to how the various cloud services prepare VMs when launching instances.
 
-<h2 id="heading--curtin">Curtin</h2>
+<a href="#heading--curtin"><h2 id="heading--curtin">Curtin</h2></a>
 
-<h3 id="heading--templates">Templates</h3>
+<a href="#heading--templates"><h3 id="heading--templates">Templates</h3></a>
 
 <!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 The [Tempita^](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) template files are found in the `/var/snap/maas/current/preseeds/` directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:
@@ -168,7 +168,7 @@ The `enlist` template, for example, contains only minimal variables, whereas `en
 Tempita’s inheritance mechanism is the reverse of what you might expect. Inherited files, such as `enlist_userdata`, become the new template which can then reference variables from the higher-level file, such as `enlist`.
 [/note]
 
-<h3 id="heading--template-naming">Template naming</h3>
+<a href="#heading--template-naming"><h3 id="heading--template-naming">Template naming</h3></a>
 
 MAAS interprets templates in lexical order by their filename.  This order allows for base configuration options and parameters to be overridden based on a combination of operating system, architecture, sub-architecture, release, and machine name.
 
@@ -202,7 +202,7 @@ To create the equivalent template for curtin_userdata, the file would be called 
 Any file targeting a specific machine will replace the values and configuration held within any generic files. If those values are needed, you will need to copy these generic template values into your new file.
 [/note]
 
-<h3 id="heading--configuration">Configuration</h3>
+<a href="#heading--configuration"><h3 id="heading--configuration">Configuration</h3></a>
 
 You can customise the Curtin installation by either editing the existing `curtin_userdata` template or by adding a custom file as described above.
 
@@ -237,7 +237,7 @@ late_commands:
   custom: ["curtin", "in-target", "--", "sh", "-c", "/bin/echo -en 'Installed ' > /tmp/maas_system_id"]
 ```
 
-<h2 id="heading--cloud-init">Cloud-init</h2>
+<a href="#heading--cloud-init"><h2 id="heading--cloud-init">Cloud-init</h2></a>
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 Using cloud-init to customise a machine after deployment is relatively easy. If you're not familiar with the MAAS command-line interface (CLI), start by reviewing the [MAAS CLI](/t/maas-cli/802) page.
@@ -280,7 +280,7 @@ After MAAS deploys the machine, you'll find `/ssh-key-import.log` on the machine
  snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 <!--  snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui 
-<h3 id="heading--cloud-init-ui">Customising cloud-init with the UI (v2.9++)</h3>
+<a href="#heading--cloud-init-ui"><h3 id="heading--cloud-init-ui">Customising cloud-init with the UI (v2.9++)</h3></a>
 
 It's easy to customise cloud-init via the web UI.  When you've selected a machine and choose 'Take action >> Deploy,' you'll be presented with the following screen:
 

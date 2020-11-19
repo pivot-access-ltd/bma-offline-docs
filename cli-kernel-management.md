@@ -9,7 +9,7 @@ The following is a list of kernel tasks that you can perform with the MAAS CLI.
 5. [How to I set a minimum deploy kernel for a machine?](/t/cli-kernel-management/799#heading--set-a-minimum-deploy-kernel-for-a-machine)
 6. [How do I set a specific kernel during machine deployment?](/t/cli-kernel-management/799#heading--set-a-specific-kernel-during-machine-deployment)
 
-<h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2>
+<a href="#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning"><h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2></a>
 
 To set a default minimum kernel for all new and commissioned machines:
 
@@ -27,7 +27,7 @@ maas $PROFILE maas set-config name=default_min_hwe_kernel value=ga-16.04
 The command option `default_min_hwe_kernel` appears to apply to only HWE kernels but this is not the case.
 [/note]
 
-<h2 id="heading--set-a-minimum-deploy-kernel-for-a-machine">Set a minimum deploy kernel for a machine</h2>
+<a href="#heading--set-a-minimum-deploy-kernel-for-a-machine"><h2 id="heading--set-a-minimum-deploy-kernel-for-a-machine">Set a minimum deploy kernel for a machine</h2></a>
 
 To set the minimum deploy kernel on a per-machine basis:
 
@@ -45,7 +45,7 @@ maas $PROFILE machine update $SYSTEM_ID min_hwe_kernel=hwe-16.04
 The command option `default_min_hwe_kernel` appears to apply to only HWE kernels but this is not the case.
 [/note]
 
-<h2 id="heading--set-a-specific-kernel-during-machine-deployment">Set a specific kernel during machine deployment</h2>
+<a href="#heading--set-a-specific-kernel-during-machine-deployment"><h2 id="heading--set-a-specific-kernel-during-machine-deployment">Set a specific kernel during machine deployment</h2></a>
 
 To set a specific kernel during the deployment of a machine:
 

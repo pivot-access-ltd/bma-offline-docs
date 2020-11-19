@@ -95,7 +95,7 @@ You can use the CLI to manage the networking elements of MAAS, including subnets
 6. [How do I set up a bridge with the MAAS CLI/API?](#heading--maas-bridge-cli)
 7. [How do I set up a bridge with netplan?](#heading--maas-bridge-netplan)
 
-<h2 id="heading--cli-list-available-subnets">List available subnets</h2>
+<a href="#heading--cli-list-available-subnets"><h2 id="heading--cli-list-available-subnets">List available subnets</h2></a>
 
 To view the list of available subnets, enter the following command:
 
@@ -142,7 +142,7 @@ You can use the Web UI to manage the networking elements of MAAS, including subn
 9. [How do I set up a bridge with the web UI?](#heading--maas-bridge-web-ui)
 10. [How do I set up a bridge with netplan?](#heading--maas-bridge-netplan)
 
-<h2 id="heading--ui-main-view">Main networking view</h2>
+<a href="#heading--ui-main-view"><h2 id="heading--ui-main-view">Main networking view</h2></a>
 
 To access the main networking view visit the 'Subnets' page:
 
@@ -202,7 +202,7 @@ Fabrics, VLANs, and spaces do not require much configuration beyond names and de
  snap-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-<h2 id="heading--cli-managing-subnets">Managing subnets</h3>
+<a href="#heading--cli-managing-subnets"><h2 id="heading--cli-managing-subnets">Managing subnets</h3></a>
 
 You can view the details of an individual subnet with the command:
 
@@ -242,11 +242,11 @@ Subnets support the following configurable values:
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-<h2 id="heading--ui-subnet-window">Subnet window</h3>
+<a href="#heading--ui-subnet-window"><h2 id="heading--ui-subnet-window">Subnet window</h3></a>
 
 Clicking a subnet (here `192.168.100.0/24`) will display its detail screen, which presents several vertical sections.  Let's take them one by one.
 
-<h3 id="heading--ui-subnet-summary>Subnet summary</h4>
+<a href="#heading--ui-subnet-summary"><h3 id="heading--ui-subnet-summary">Subnet summary</h3></a>
 
 The **Subnet summary** section is the largest and most complex of the subnet configuration screens:
 
@@ -326,7 +326,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 * **Space** is presented for clarity, though spaces are managed at the VLAN level.
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-<h3 id="heading--ui-utilisation">Utilisation</h3>
+<a href="#heading--ui-utilisation"><h3 id="heading--ui-utilisation">Utilisation</h3></a>
 
 This section of the subnet page presents metrics regarding address usage by this subnet.
 
@@ -335,7 +335,7 @@ This section of the subnet page presents metrics regarding address usage by this
 'Subnet addresses' shows the total number of addresses associated with the subnet, here 254. 'Availability' shows how many of those addresses are unused, and therefore "available", here 189, which corresponds to a percentage of roughly 74% of the total. Finally, 'Used' shows the percentage that is used, here roughly 26%.
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<h2 id="heading--static-routes">Static Routes</h2>
+<a href="#heading--static-routes"><h2 id="heading--static-routes">Static Routes</h2></a>
 
 This section can be used to define a static route between two subnets. A route is defined on a per-subnet basis to use a particular gateway, using a configured destination and metric.
 
@@ -354,7 +354,7 @@ To create a static route, click the 'Add static route' button to reveal the edit
 <a href="https://assets.ubuntu.com/v1/49f5e240-installconfig-networking__2.4_subnets-routes.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/49f5e240-installconfig-networking__2.4_subnets-routes.png"></a>
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<h2 id="heading--reserved-ranges">Reserved ranges</h2>
+<a href="#heading--reserved-ranges"><h2 id="heading--reserved-ranges">Reserved ranges</h2></a>
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 The reserved ranges section of the subnet screen looks like this:
@@ -411,14 +411,14 @@ This subject is treated separately in [IP ranges](/t/ip-ranges/2759).
  snap-2-9-ui -->
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-<h2 id="heading--ui-used-addresses">Used</h2>
+<a href="#heading--ui-used-addresses"><h2 id="heading--ui-used-addresses">Used</h2></a>
 
 This section displays hosts (including controllers) associated with the used addresses along with related bits of host information.
 
 <a href="https://assets.ubuntu.com/v1/b9e69b0b-installconfig-networking__2.4_subnets-used.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/b9e69b0b-installconfig-networking__2.4_subnets-used.png"></a>
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<h2 id="heading--setting-up-a-bridge">Setting up a bridge</h2>
+<a href="#heading--setting-up-a-bridge"><h2 id="heading--setting-up-a-bridge">Setting up a bridge</h2></a>
 
 At various times in your MAAS network, you may need to set up a bridge to connect between your machines and MAAS.  This section explains several ways of accomplishing this.
 
@@ -427,7 +427,7 @@ It's essential to enforce usage of IP addresses to avoid domain name conflicts, 
 [/note]
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-<h2 id="heading--maas-bridge-web-ui">Set up a bridge with MAAS UI</h2>
+<a href="#heading--maas-bridge-web-ui"><h2 id="heading--maas-bridge-web-ui">Set up a bridge with MAAS UI</h2></a>
 
 You can use the MAAS UI to configure a bridge. Select the machine you want to bridge and switch to the "Network" tab. Select the network where you want to create the bridge and click "Create bridge:"
 
@@ -450,7 +450,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
  snap-2-9-ui deb-2-9-ui --> 
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-<h2 id="heading--maas-bridge-cli">Use the MAAS API to configure a bridge</h2>
+<a href="#heading--maas-bridge-cli"><h2 id="heading--maas-bridge-cli">Use the MAAS API to configure a bridge</h2></a>
 
 You can use the MAAS CLI/API to configure a bridge, with the following procedure:
 
@@ -472,7 +472,7 @@ You can use the MAAS CLI/API to configure a bridge, with the following procedure
 
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-<h2 id="heading--maas-bridge-netplan">Use netplan to configure a bridge</h2>
+<a href="#heading--maas-bridge-netplan"><h2 id="heading--maas-bridge-netplan">Use netplan to configure a bridge</h2></a>
 
 You can also use netplan to configure a bridge:
 

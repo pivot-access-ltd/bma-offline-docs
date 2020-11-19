@@ -225,3 +225,111 @@ originals/%.md: %.md
 #	rm using-image-streams-3523.md
 #	chmod 444 originals/*
 
+# originals/using-rbac-with-maas-snap-2-7-cli-3592.md: using-rbac-with-maas.md
+#	chmod 644 originals/*
+#	cp using-rbac-with-maas.md using-rbac-with-maas-snap-2-7-cli-3592.md
+#	xpub push discourse -t snap-2-7-cli using-rbac-with-maas-snap-2-7-cli-3592.md
+#	xpub pull discourse 3592 3592
+#	cp -p using-rbac-with-maas-snap-2-7-cli-3592.md originals
+#	rm using-rbac-with-maas-snap-2-7-cli-3592.md
+#	chmod 444 originals/*
+
+# originals/using-rbac-with-maas-snap-2-7-ui-3593.md: using-rbac-with-maas.md
+#	chmod 644 originals/*
+#	cp using-rbac-with-maas.md using-rbac-with-maas-snap-2-7-ui-3593.md
+#	xpub push discourse -t snap-2-7-ui using-rbac-with-maas-snap-2-7-ui-3593.md
+#	xpub pull discourse 3593 3593
+#	cp -p using-rbac-with-maas-snap-2-7-ui-3593.md originals
+#	rm using-rbac-with-maas-snap-2-7-ui-3593.md
+#	chmod 444 originals/*
+
+# originals/using-rbac-with-maas-snap-2-8-cli-3594.md: using-rbac-with-maas.md
+#	chmod 644 originals/*
+#	cp using-rbac-with-maas.md using-rbac-with-maas-snap-2-8-cli-3594.md
+#	xpub push discourse -t snap-2-8-cli using-rbac-with-maas-snap-2-8-cli-3594.md
+#	xpub pull discourse 3594 3594
+#	cp -p using-rbac-with-maas-snap-2-8-cli-3594.md originals
+#	rm using-rbac-with-maas-snap-2-8-cli-3594.md
+#	chmod 444 originals/*
+
+# originals/using-rbac-with-maas-snap-2-8-ui-3595.md: using-rbac-with-maas.md
+#	chmod 644 originals/*
+#	cp using-rbac-with-maas.md using-rbac-with-maas-snap-2-8-ui-3595.md
+#	xpub push discourse -t snap-2-8-ui using-rbac-with-maas-snap-2-8-ui-3595.md
+#	xpub pull discourse 3595 3595
+#	cp -p using-rbac-with-maas-snap-2-8-ui-3595.md originals
+#	rm using-rbac-with-maas-snap-2-8-ui-3595.md
+#	chmod 444 originals/*
+
+# originals/using-rbac-with-maas-snap-2-9-cli-3596.md: using-rbac-with-maas.md
+#	chmod 644 originals/*
+#	cp using-rbac-with-maas.md using-rbac-with-maas-snap-2-9-cli-3596.md
+#	xpub push discourse -t snap-2-9-cli using-rbac-with-maas-snap-2-9-cli-3596.md
+#	xpub pull discourse 3596 3596
+#	cp -p using-rbac-with-maas-snap-2-9-cli-3596.md originals
+#	rm using-rbac-with-maas-snap-2-9-cli-3596.md
+#	chmod 444 originals/*
+
+# originals/using-rbac-with-maas-snap-2-9-ui-3597.md: using-rbac-with-maas.md
+#	chmod 644 originals/*
+#	cp using-rbac-with-maas.md using-rbac-with-maas-snap-2-9-ui-3597.md
+#	xpub push discourse -t snap-2-9-ui using-rbac-with-maas-snap-2-9-ui-3597.md
+#	xpub pull discourse 3597 3597
+#	cp -p using-rbac-with-maas-snap-2-9-ui-3597.md originals
+#	rm using-rbac-with-maas-snap-2-9-ui-3597.md
+#	chmod 444 originals/*
+
+# originals/using-rbac-with-maas-deb-2-7-cli-3598.md: using-rbac-with-maas.md
+#	chmod 644 originals/*
+#	cp using-rbac-with-maas.md using-rbac-with-maas-deb-2-7-cli-3598.md
+#	xpub push discourse -t deb-2-7-cli using-rbac-with-maas-deb-2-7-cli-3598.md
+#	xpub pull discourse 3598 3598
+#	cp -p using-rbac-with-maas-deb-2-7-cli-3598.md originals
+#	rm using-rbac-with-maas-deb-2-7-cli-3598.md
+#	chmod 444 originals/*
+
+# originals/using-rbac-with-maas-deb-2-7-ui-3599.md: using-rbac-with-maas.md
+#	chmod 644 originals/*
+#	cp using-rbac-with-maas.md using-rbac-with-maas-deb-2-7-ui-3599.md
+#	xpub push discourse -t deb-2-7-ui using-rbac-with-maas-deb-2-7-ui-3599.md
+#	xpub pull discourse 3599 3599
+#	cp -p using-rbac-with-maas-deb-2-7-ui-3599.md originals
+#	rm using-rbac-with-maas-deb-2-7-ui-3599.md
+#	chmod 444 originals/*
+
+# originals/using-rbac-with-maas-deb-2-8-cli-3600.md: using-rbac-with-maas.md
+#	chmod 644 originals/*
+#	cp using-rbac-with-maas.md using-rbac-with-maas-deb-2-8-cli-3600.md
+#	xpub push discourse -t deb-2-8-cli using-rbac-with-maas-deb-2-8-cli-3600.md
+#	xpub pull discourse 3600 3600
+#	cp -p using-rbac-with-maas-deb-2-8-cli-3600.md originals
+#	rm using-rbac-with-maas-deb-2-8-cli-3600.md
+#	chmod 444 originals/*
+
+# originals/using-rbac-with-maas-deb-2-8-ui-3601.md: using-rbac-with-maas.md
+#	chmod 644 originals/*
+#	cp using-rbac-with-maas.md using-rbac-with-maas-deb-2-8-ui-3601.md
+#	xpub push discourse -t deb-2-8-ui using-rbac-with-maas-deb-2-8-ui-3601.md
+#	xpub pull discourse 3601 3601
+#	cp -p using-rbac-with-maas-deb-2-8-ui-3601.md originals
+#	rm using-rbac-with-maas-deb-2-8-ui-3601.md
+#	chmod 444 originals/*
+
+# originals/using-rbac-with-maas-deb-2-9-cli-3602.md: using-rbac-with-maas.md
+#	chmod 644 originals/*
+#	cp using-rbac-with-maas.md using-rbac-with-maas-deb-2-9-cli-3602.md
+#	xpub push discourse -t deb-2-9-cli using-rbac-with-maas-deb-2-9-cli-3602.md
+#	xpub pull discourse 3602 3602
+#	cp -p using-rbac-with-maas-deb-2-9-cli-3602.md originals
+#	rm using-rbac-with-maas-deb-2-9-cli-3602.md
+#	chmod 444 originals/*
+
+# originals/using-rbac-with-maas-deb-2-9-ui-3603.md: using-rbac-with-maas.md
+#	chmod 644 originals/*
+#	cp using-rbac-with-maas.md using-rbac-with-maas-deb-2-9-ui-3603.md
+#	xpub push discourse -t deb-2-9-ui using-rbac-with-maas-deb-2-9-ui-3603.md
+#	xpub pull discourse 3603 3603
+#	cp -p using-rbac-with-maas-deb-2-9-ui-3603.md originals
+#	rm using-rbac-with-maas-deb-2-9-ui-3603.md
+#	chmod 444 originals/*
+

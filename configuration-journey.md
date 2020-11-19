@@ -233,7 +233,7 @@ have changed, use the command's 'refresh' sub-command to fetch the
 latest version of this help information from the server.
 </details>
 
-<h2>Configuration</h2>
+<a href="#heading--configuration"><h2 id="heading--configuration">Configuration</h2></a>
 
 Configuring MAAS consists of four broad steps:
 
@@ -244,7 +244,7 @@ Configuring MAAS consists of four broad steps:
 
 This section will cover those four operations
 
-<h3>Setting DNS</h3>
+<a href="#heading--setting-dns"><h3 id="heading--setting-dns">Setting DNS</h3></a>
 
 After logging in for the first time, you will need to set a number of system-wide configuration options.  First up, you should configure DNS.  You can check out the help for DNS settings, known in the CLI as a "DNS forwarder":
 
@@ -254,7 +254,7 @@ maas $PROFILE maas set-config name=upstream_dns value="8.8.8.8"
 
 Here, we've set the DNS forwarder to "8.8.8.8" (Google), which is a reliable value.
 
-<h3>Setting SSH for the admin user</h3>
+<a href="#heading--setting-ssh"><h3 id="heading--setting-ssh">Setting SSH for the admin user</h3></a>
 
 To add a public SSH key to a MAAS user account, type the following command:
 
@@ -262,7 +262,7 @@ To add a public SSH key to a MAAS user account, type the following command:
 maas $PROFILE sshkeys create "key=$SSH_KEY"
 ```
 
-<h3>Importing images</h3>
+<a href="#heading--importing-images"><h3 id="heading--importing-images">Importing images</h3></a>
 
 Before going any further, it's worthwhile to start the image import, as it can sometimes take a few minutes.  You can see what images you already have downloaded with this command:
 
@@ -327,7 +327,7 @@ Machine-readable output follows:
 Import of boot resources started
 ```
 
-<h3>Enabling DHCP</h3>
+<a href="#heading--enabling-dhcp"><h3 id="heading--enabling-dhcp">Enabling DHCP</h3></a>
 
 Once your image has been imported, you'll want to get DHCP working, which means finding the untagged VLAN. In truth, it shouldn’t be too hard, because at this point, there still should only be one.
 
@@ -450,7 +450,7 @@ where $API_HOST is the hostname or IP address of the region API server, which wa
 
 Log in at the prompts, with the login information you created when initialising MAAS.
 
-<h2 id="heading--configuration">Configuration</h2>
+<a href="#heading--configuration"><h2 id="heading--configuration">Configuration</h2></a>
 
 After a fresh MAAS installation, the web UI presents a couple of welcome  screens.  From these screens, you can set many system-wide options, including connectivity, image downloads, and authentication keys.
 
@@ -493,11 +493,11 @@ With this complete, you’ll see that MAAS has been successfully set up. Click �
 Note that you may have to wait a few moments for your selected images to sync locally.
 [/note]
 
-<h2 id="heading--enabling-dhcp">Enabling DHCP</h2>
+<a href="#heading--enabling-dhcp"><h2 id="heading--enabling-dhcp">Enabling DHCP</h2></a>
 
 Before moving forward with MAAS, you'll want to enable DHCP.  You can do this very easily from the web UI by selecting "Subnets" from the top menu, choosing the VLAN on which you want to enable DHCP, and select the button marked, "Enable DHCP."
 
-<h2 id="heading--networking">Networking</h2>
+<a href="#heading--networking"><h2 id="heading--networking">Networking</h2></a>
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- deb-2-7-ui
@@ -532,7 +532,7 @@ Network discovery can be disabled at any time from the button on the Dashboard v
 [/note]
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<h3 id="heading--spaces-fabrics-zones-and-subnets">Spaces, fabrics, zones and subnets</h3>
+<a href="#heading--spaces-fabrics-zones-and-subnets"><h3 id="heading--spaces-fabrics-zones-and-subnets">Spaces, fabrics, zones and subnets</h3></a>
 
 Networks in large data centres can be very complex. MAAS offers comprehensive control over networking so that you have the flexibility to reconfigure racks and deploy machines as you see fit. You can isolate machine deployment not only with DNS domains, but also via [subnets](/t/concepts-and-terms/785#heading--subnets), [spaces](/t/concepts-and-terms/785#heading--spaces), [zones](/t/concepts-and-terms/785#heading--zones), and [fabrics](/t/concepts-and-terms/785#heading--fabrics).  The links provide more details, but these are all basically collections:
 
@@ -550,7 +550,7 @@ Be aware that these network settings are spread across several web UI configurat
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/89d90a15e70a57e6951ee62910b503895e08251e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/89d90a15e70a57e6951ee62910b503895e08251e.jpeg"></a> 
 
-<h2 id="heading--deploy-hardware">Deployment</h2>
+<a href="#heading--deploy-hardware"><h2 id="heading--deploy-hardware">Deployment</h2></a>
 
 MAAS-managed machines are listed – and operated on – from the Machines page, making it one of the most important screens in the MAAS web UI:
 
@@ -587,13 +587,13 @@ While you are testing MAAS, be sure to check out filters, which can narrow your 
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 
-<h3 id="heading--images">Images</h3>
+<a href="#heading--images"><h3 id="heading--images">Images</h3></a>
 
 When it comes to running applications, MAAS can easily deploy any supported variant of Ubuntu, including LTS and non-LTR versions for x86, ARM, PPC and s390x systems. You can also deploy several other operating systems to your machines, including CentOS 7, CentOS 6, Windows, RHEL, and ESXi images, via <a href="https://www.ubuntu.com/support" rel="nofollow noopener">Ubuntu Advantage^</a>.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/27c47222c1fc0e34ed70134a1007dde067d2de81.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/27c47222c1fc0e34ed70134a1007dde067d2de81.jpeg"></a> 
 
-<h3 id="heading--vm-hosts">VM hosts</h3>
+<a href="#heading--vm-hosts"><h3 id="heading--vm-hosts">VM hosts</h3></a>
 
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 

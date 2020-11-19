@@ -95,13 +95,13 @@ The Machines and Devices pages contain a powerful interactive search bar that le
 7. [What filter properties are available to me?](#heading--filter-properties)
 8. [How can I search with the CLI?](#heading--cli)
 
-<h2 id="heading--simple-searches">Simple searches</h2>
+<a href="#heading--simple-searches"><h2 id="heading--simple-searches">Simple searches</h2></a>
 
 To begin searching, enter your search text. As you type, MAAS will update search results in real time. You can search across virtually every parameter, including domain, name, tag, power type, IP, status, zone, and so on.
 
 <a href="https://assets.ubuntu.com/v1/ccb90c91-manage-search__2.5_searchbar.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/ccb90c91-manage-search__2.5_searchbar.png"></a>
 
-<h2 id="heading--filtered-searches">Filtered searches</h2>
+<a href="#heading--filtered-searches"><h2 id="heading--filtered-searches">Filtered searches</h2></a>
 
 Filter your searches to major categories by selecting one from the Filters drop-down menu next to the search bar.
 
@@ -111,7 +111,7 @@ For example, to find all "New" machines containing the name or tag 'quail', sele
 
 <a href="https://assets.ubuntu.com/v1/7b5d8e86-manage-search__2.5_filtered-search.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/7b5d8e86-manage-search__2.5_filtered-search.png"></a>
 
-<h3 id="heading--manual-filters">Manual filters</h3>
+<a href="#heading--manual-filters"><h3 id="heading--manual-filters">Manual filters</h3></a>
 
 Enter filters manually in the search bar to more precisely control your searches:
 
@@ -176,7 +176,7 @@ For example, the following will search for a machine that has an interface with 
 pxe_mac:=9e:b0:e4:15:ae:1e
 ```
 
-<h2 id="heading--cli">CLI</h2>
+<a href="#heading--cli"><h2 id="heading--cli">CLI</h2></a>
 
 See [List nodes](/t/common-cli-tasks/794#heading--list-nodes) for more information about how to use the MAAS CLI to perform similar searches or [CLI](/t/maas-cli/802) for how to get started with the MAAS CLI.
 

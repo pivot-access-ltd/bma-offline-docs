@@ -96,7 +96,7 @@ This article gives specific instructions about creating and managing IP ranges.
 2. [How do I edit an existing IP range?](#heading--edit-a-range)
 3. [How do I delete an existing IP range?](#heading--delete-a-range)
 
-<h2 id="heading--create-a-range">Create a range</h2>
+<a href="#heading--create-a-range"><h2 id="heading--create-a-range">Create a range</h2></a>
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 To create a range with the web UI, choose the "Subnets" option across the top:
@@ -180,7 +180,7 @@ maas $PROFILE ipaddresses release ip=$IP_STATIC_SINGLE
 
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-<h2 id="heading--edit-a-range">Edit a range</h2>
+<a href="#heading--edit-a-range"><h2 id="heading--edit-a-range">Edit a range</h2></a>
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 To edit an IP range, first find the ID of the desired IP range with the command:
@@ -201,7 +201,7 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 Click the 'Menu' button at the far right of the row corresponding to the subnet in question and select 'Edit reserved range' from the menu that appears. Edit the fields as desired and click the 'Save' button.
 
-<h2 id="heading--delete-a-range">Delete a range</h2>
+<a href="#heading--delete-a-range"><h2 id="heading--delete-a-range">Delete a range</h2></a>
 
 Select 'Remove range' from the menu that appears when clicking the 'Menu' button at the far right of the row corresponding to the subnet in question.
 

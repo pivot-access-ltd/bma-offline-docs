@@ -12,7 +12,7 @@ The following is a list of image management tasks to perform with the MAAS CLI.
 8. [How do I delete a boot source?](/t/cli-image-management/797#heading--delete-a-boot-source)
 9. [How do I edit a boot source?](/t/cli-image-management/797#heading--edit-a-boot-source)
 
-<h2 id="heading--list-boot-sources">List boot sources</h2>
+<a href="#heading--list-boot-sources"><h2 id="heading--list-boot-sources">List boot sources</h2></a>
 
 If you want to download boot sources, i.e., the locations from which you may download images, try the following:
 
@@ -20,11 +20,11 @@ If you want to download boot sources, i.e., the locations from which you may dow
 maas $PROFILE boot-sources read
 ```
 
-[note]
+<strong>NOTE:</strong> 
 Although multiple boot sources may be listed, MAAS can only practically work with a single boot source.
-[/note]
 
-<h2 id="heading--select-images">Select images</h2>
+
+<a href="#heading--select-images"><h2 id="heading--select-images">Select images</h2></a>
 
 Use the `boot-source-selections` command to select images from a boot source. After selecting new images, you will need to [import](#heading--import-newly-selected-images) them.
 
@@ -42,7 +42,7 @@ maas $PROFILE boot-source-selections create 1 \
     subarches="*" labels="*"
 ```
 
-<h3 id="heading--hardware-enablement-hwe">Hardware enablement (HWE)</h3>
+<a href="#heading--hardware-enablement-hwe"><h3 id="heading--hardware-enablement-hwe">Hardware enablement (HWE)</h3></a>
 
 For example, to get just the latest amd64 HWE kernel available for Trusty, which, at time of writing, is from Xenial:
 
@@ -60,7 +60,7 @@ maas $PROFILE boot-source-selections create 1 \
     subarches="hwe-16.04" labels="*"
 ```
 
-<h2 id="heading--list-image-selections">List image selections</h2>
+<a href="#heading--list-image-selections"><h2 id="heading--list-image-selections">List image selections</h2></a>
 
 To list image selections for a boot source:
 
@@ -68,7 +68,7 @@ To list image selections for a boot source:
 maas $PROFILE boot-source-selections read $SOURCE_ID
 ```
 
-<h2 id="heading--import-newly-selected-images">Import newly-selected images</h2>
+<a href="#heading--import-newly-selected-images"><h2 id="heading--import-newly-selected-images">Import newly-selected images</h2></a>
 
 To import newly-selected images (boot resources):
 
@@ -80,7 +80,7 @@ Once newly-selected images are imported, a sync mechanism is enabled (by default
 
 Available images resulting from this action are reflected in the web UI.
 
-<h2 id="heading--list-currently-available-images">List currently available images</h2>
+<a href="#heading--list-currently-available-images"><h2 id="heading--list-currently-available-images">List currently available images</h2></a>
 
 To list currently available/imported images (boot resources):
 
@@ -88,7 +88,7 @@ To list currently available/imported images (boot resources):
 maas $PROFILE boot-resources read
 ```
 
-<h2 id="heading--delete-a-boot-source">Delete a boot source</h2>
+<a href="#heading--delete-a-boot-source"><h2 id="heading--delete-a-boot-source">Delete a boot source</h2></a>
 
 To delete a boot source (the location from which you can download images): 
 
@@ -98,7 +98,7 @@ maas $PROFILE boot-source delete $SOURCE_ID
 
 If you delete the sole boot source, then the fields 'Sync URL' and 'Keyring Path' in the web UI will take on null values.
 
-<h2 id="heading--edit-a-boot-source">Edit a boot source</h2>
+<a href="#heading--edit-a-boot-source"><h2 id="heading--edit-a-boot-source">Edit a boot source</h2></a>
 
 You can edit an existing boot source by changing the GPG keyring file ($KEYRING_FILE) and the location ($URL).
 
@@ -113,11 +113,11 @@ At this time MAAS only supports a boot source containing official MAAS images. A
 
 KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
 
-<h2 id="heading--add-a-boot-source">Add a boot source</h2>
+<a href="#heading--add-a-boot-source"><h2 id="heading--add-a-boot-source">Add a boot source</h2></a>
 
-[note]
+<strong>NOTE:</strong> 
 To avoid unnecessary complexity, you should probably delete any existing boot sources before adding a new one.
-[/note]
+
 
 Presented below are two use cases for adding a boot source:
 
@@ -141,7 +141,7 @@ If you added a sole boot source, then the fields 'Sync URL' and 'Keyring Path' i
 
 Once the source is added, proceed to the [Select and import](/t/select-and-import-images/751) images step.
 
-<h3 id="heading--using-a-local-image-mirror">Using a local image mirror</h3>
+<a href="#heading--using-a-local-image-mirror"><h3 id="heading--using-a-local-image-mirror">Using a local image mirror</h3></a>
 
 Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/752) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
 
@@ -150,7 +150,7 @@ Once the mirror is set up according to [Local image mirror](/t/local-image-mirro
 
 Where $MIRROR is the mirror server's hostname or IP address.
 
-<h3 id="heading--recreate-the-default-boot-source">Recreate the default boot source</h3>
+<a href="#heading--recreate-the-default-boot-source"><h3 id="heading--recreate-the-default-boot-source">Recreate the default boot source</h3></a>
 
 Recreate the default boot source if it was ever deleted using the following variable values:
 

@@ -12,7 +12,7 @@ The following document provides a list of interface management tasks which can b
 8. [How do I create a VLAN interface?](/t/cli-interface-management/798#heading--create-a-vlan-interface)
 9. [How do I delete a VLAN interface?](/t/cli-interface-management/798#heading--delete-a-vlan-interface)
 
-<h2 id="heading--interface-identifiers">Interface identifiers</h2>
+<a href="#heading--interface-identifiers"><h2 id="heading--interface-identifiers">Interface identifiers</h2></a>
 
 The MAAS CLI uses a numeric interface identifier for many interface operations. Use the following command to retrieve the identifier(s):
 
@@ -31,7 +31,7 @@ Look for either id or the number at the end of an interface's resource URI, such
 "resource_uri": "/MAAS/api/2.0/nodes/4efwb4/interfaces/15/"
 ```
 
-<h2 id="heading--create-a-bond-interface">Create a Bond interface</h2>
+<a href="#heading--create-a-bond-interface"><h2 id="heading--create-a-bond-interface">Create a Bond interface</h2></a>
 
 A bond interface is used to aggregate two or more more physical interfaces into a single logical interface. A bond can be created with the following command:
 
@@ -56,7 +56,7 @@ bond_updelay=200 bond_downdelay=200 mtu=9000
 
 See [Bond interfaces](/t/commission-machines/822#heading--bond-interfaces) for details on supported bond modes and their actions.
 
-<h2 id="heading--create-a-bridge-interface">Create a Bridge interface</h2>
+<a href="#heading--create-a-bridge-interface"><h2 id="heading--create-a-bridge-interface">Create a Bridge interface</h2></a>
 
 A bridge interface is created with the following syntax:
 
@@ -71,7 +71,7 @@ Use 'parent' to define the primary interface used for the bridge:
 maas admin interfaces create-bridge 4efwb4 name=bridged0 parent=4
 ```
 
-<h2 id="heading--delete-an-interface">Delete an interface</h2>
+<a href="#heading--delete-an-interface"><h2 id="heading--delete-an-interface">Delete an interface</h2></a>
 
 The 'delete' command can be used to delete a bridge interface, a bond interface or a physical interface:
 
@@ -96,7 +96,7 @@ Machine-readable output follows:
 There is no machine-readable output after the successful execution of the delete command.
 [/note]
 
-<h2 id="heading--create-a-vlan-interface">Create a VLAN interface</h2>
+<a href="#heading--create-a-vlan-interface"><h2 id="heading--create-a-vlan-interface">Create a VLAN interface</h2></a>
 
 To create a VLAN interface, use the following syntax:
 
@@ -194,7 +194,7 @@ Machine-readable output follows:
 }
 ```
 
-<h2 id="heading--delete-a-vlan-interface">Delete a VLAN interface</h2>
+<a href="#heading--delete-a-vlan-interface"><h2 id="heading--delete-a-vlan-interface">Delete a VLAN interface</h2></a>
 
 The following command outlines the syntax required to delete a VLAN interface from the command line:
 

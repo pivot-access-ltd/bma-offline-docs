@@ -33,12 +33,10 @@ deb-2-7-ui -->
 |Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845) |[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847) |[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849) |
 snap-2-8-cli -->
 
-<!-- snap-2-8-ui
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ UI|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
 |Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-snap-2-8-ui -->
 
 <!-- deb-2-8-cli
 || 2.7 | 2.8 | 2.9|
@@ -110,13 +108,11 @@ snap-2-7-ui -->
 5. [Can I just install it and try it for myself?](/t/explore-maas-deb-2-8-ui/2643)
 deb-2-8-ui -->
 
-<!-- snap-2-8-ui
 1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-8-ui/2265)
 2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-8-ui/2649)
 3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-8-ui/2265#heading--how-maas-works)
 4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
 5. [Can I just install it and try it for myself?](/t/explore-maas-snap-2-8-ui/2637)
-snap-2-8-ui -->
 
 <!-- deb-2-9-ui
 1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-9-ui/2273)
@@ -212,11 +208,9 @@ snap-2-9-cli -->
 *Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas/1314), our example data centre.*
  pre-rad -->
 
-<!-- snap-2-8-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
 *Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-8-ui/2649), our example data centre.*
-snap-2-8-ui -->
 
 <!-- snap-2-9-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
@@ -268,11 +262,9 @@ snap-2-8-ui -->
 
 ---
 
-<!-- deb-2-8-cli deb-2-8-ui snap-2-8-cli snap-2-8-ui
 <h2 id="heading--whats-new">New version of MAAS</h2>
 
 - [What's new in 2.8](/t/whats-new-in-maas/3335)
-deb-2-8-cli deb-2-8-ui snap-2-8-cli snap-2-8-ui -->
 
 <!-- deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-uil
 <h2 id="heading--whats-new">New version of MAAS</h2>
@@ -438,6 +430,18 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/3327|/docs/deb/2.8/ui/installation|
 |https://discourse.maas.io/t/-/3328|/docs/deb/2.9/cli/installation|
 |https://discourse.maas.io/t/-/3329|/docs/deb/2.9/ui/installation|
+|https://discourse.maas.io/t/-/3592|/docs/snap/2.7/cli/using-maas-with-rbac|
+|https://discourse.maas.io/t/-/3593|/docs/snap/2.7/ui/using-maas-with-rbac|
+|https://discourse.maas.io/t/-/3594|/docs/snap/2.8/cli/using-maas-with-rbac|
+|https://discourse.maas.io/t/-/3595|/docs/snap/2.8/ui/using-maas-with-rbac|
+|https://discourse.maas.io/t/-/3596|/docs/snap/2.9/cli/using-maas-with-rbac|
+|https://discourse.maas.io/t/-/3597|/docs/snap/2.9/ui/using-maas-with-rbac|
+|https://discourse.maas.io/t/-/3598|/docs/deb/2.7/cli/using-maas-with-rbac|
+|https://discourse.maas.io/t/-/3599|/docs/deb/2.7/ui/using-maas-with-rbac|
+|https://discourse.maas.io/t/-/3600|/docs/deb/2.8/cli/using-maas-with-rbac|
+|https://discourse.maas.io/t/-/3601|/docs/deb/2.8/ui/using-maas-with-rbac|
+|https://discourse.maas.io/t/-/3602|/docs/deb/2.9/cli/using-maas-with-rbac|
+|https://discourse.maas.io/t/-/3603|/docs/deb/2.9/ui/using-maas-with-rbac|
 |https://discourse.maas.io/t/-/2262|/docs/snap/2.7/cli/about-maas|
 |https://discourse.maas.io/t/-/2263|/docs/snap/2.7/ui/about-maas|
 |https://discourse.maas.io/t/-/2264|/docs/snap/2.8/cli/about-maas|

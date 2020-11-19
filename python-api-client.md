@@ -5,7 +5,7 @@ The `python-libmaas` client library is an asyncio-based client library whose pur
 1. [What should I know about library endpoints?](/t/cli-resource-pool-management/800#heading--library-endpoints)
 2. [How can I install and use  python-libmaas?](/t/cli-resource-pool-management/800#heading--installation-and-usage-of-python-libmaas)
 
-<h2 id="heading--library-endpoints">Library endpoints</h2>
+<a href="#heading--library-endpoints"><h2 id="heading--library-endpoints">Library endpoints</h2></a>
 
 At this time, the client library supports these eight endpoints:
 
@@ -24,7 +24,7 @@ Three resources will help you better understand the above terms and how they are
 2.   [MAAS CLI](/t/maas-cli/802)
 3.   [API documentation](https://maas.io/docs/api)
 
-<h2 id="heading--installation-and-usage-of-python-libmaas">Installation and usage of python-libmaas</h2>
+<a href="#heading--installation-and-usage-of-python-libmaas"><h2 id="heading--installation-and-usage-of-python-libmaas">Installation and usage of python-libmaas</h2></a>
 
 For installation and initial steps, see these external links:
 
