@@ -432,21 +432,22 @@ virsh -c qemu+ssh://$USER@$VM_HOST_IP/system list --all
 
 Here, `$USER` is a user on your VM host who is a member of the `libvirtd` Unix group on the VM host, and `$VM_HOST_IP` is the IP of your VM host.  **Note** that insufficient permissions for `$USER` may cause the `virsh` command to fail with an error such as `failed to connect to the hypervisor`. Check the `$USER` group membership to make sure `$USER` is a member of the `libvirtd` group.
 
-There are two different methods for setting up SSH, depending whether you installed MAAS via package or snap.
-
-<h3>Set up SSH (libvirt only) using the package</h3>
+<a href="#heading--libvirt-ssh"><h3 id="heading--libvirt-ssh">Set up SSH (libvirt only)</h3></a>
 
 The `maas` user on your rack controllers will issue all libvirt commands. Therefore, you'll need to set up SSH public keys on every rack controller for user `maas`.  First create SSH keys on all rack controllers:
 
 ``` bash
-sudo chsh -s /bin/bash maas
-sudo su - maas
-ssh-keygen -t rsa -N ''
+$ sudo -i
+root@maas:~$ mkdir -p /var/snap/maas/current/root/.ssh
+root@maas:~$ cd /var/snap/maas/current/root/.ssh
+root@maas:~$ ssh-keygen -f id_rsa
 ```
+
 
 Next, add the contents of `~maas/.ssh/id_rsa.pub` to the VM host user's `~$USER/.ssh/authorized_keys`. To accomplish this, log into your VM host node, via SSH, from a host for which MAAS has a matching public SSH key.
 
-<a href="#heading--set-up-ssah-lv"><h2 id="heading--set-up-ssah-lv">Set up SSH (libvirt only) with the snap</h2></a>
+<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
+<a href="#heading--set-up-ssah-lv"><h3 id="heading--set-up-ssah-lv">Set up SSH (libvirt only)</h3></a>
 
 If you installed MAAS via snap, then create the needed SSH keys this way:
 
@@ -457,3 +458,4 @@ sudo ssh-keygen -f id_rsa
 ```
 
 Finally, you'll need to add `id_rsa.pub` to the `authorized_keys` file in `/home/<vm-host-user-homedir-name>/.ssh/`,  where `<vm-host-user-homedir-name>` is the name of your VM host user.
+ snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->

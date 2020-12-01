@@ -3,6 +3,12 @@ TARGET_DEPS := originals/*.md
 all: $(TARGET_DEPS)
 .PHONY: all
 
+candid-tutorial.md: ../candid-tutorial.md
+	cp ../candid-tutorial.md candid-tutorial-3610.md
+	xpub push discourse candid-tutorial-3610.md
+	xpub pull discourse 3610 3610
+	cp -p candid-tutorial-3610.md candid-tutorial.md
+
 contact-us.md: ../contact-us.md
 	cp ../contact-us.md contact-us-743.md
 	xpub push discourse contact-us-743.md

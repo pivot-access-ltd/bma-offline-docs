@@ -201,7 +201,7 @@ snap-2-7 snap-2-7-ui deb-2-7 deb-2-7-ui -->
 <!-- snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui
 <h2>MAAS 2.9 release notes</h2>
 
-Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 **RC1** is now available. This release offers a number of new, very useful features.
+Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 **RC3** is now available.
 
 [note]
 NOTE that this is currently a release candidate, so there will be bugs, instabilities, and missing features. Please remember to [file a bug^](https://bugs.launchpad.net/maas/+filebug) if you find one, and please interact with the developers on [discourse^](https://discourse.maas.io/).
@@ -234,9 +234,9 @@ NOTE that this is currently a release candidate, so there will be bugs, instabil
 <h4>Five other questions you may have:</h4>
 
 1. [What known issues should I be aware of?](#heading--known-issues)
-2. [How do I install MAAS 2.9 RC1?](/t/maas-installation/3323)
-3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 RC1 snap?](/t/maas-installation/3323#heading--upgrade-maas-snap)
-4. [How do I install MAAS 2.9 RC1 from packages?](/t/maas-installation/3329)
+2. [How do I install MAAS 2.9 RC3?](/t/maas-installation/3323)
+3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 RC3 snap?](/t/maas-installation/3323#heading--upgrade-maas-snap)
+4. [How do I install MAAS 2.9 RC3 from packages?](/t/maas-installation/3329)
 5. [What bugs are fixed so far in this release?](#heading--bug-fixes)
 
 <h2 id="heading--maas-2-9-rc-1">New features in MAAS 2.9 RC1</h2>

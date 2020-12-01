@@ -333,3 +333,19 @@ originals/%.md: %.md
 #	rm using-rbac-with-maas-deb-2-9-ui-3603.md
 #	chmod 444 originals/*
 
+# originals/test-file-3609.md: maas-log-file.md
+#	chmod 644 originals/*
+#	cp maas-log-file.md test-file-3609.md
+#	xpub pull discourse 3609 3609
+#	cp -p test-file-3609.md originals
+#	rm test-file-3609.md
+#	chmod 444 originals/*
+
+# originals/candid-tutorial-3610.md: candid-tutorial.md
+#	chmod 644 originals/*
+#	cp candid-tutorial.md candid-tutorial-3610.md
+#	xpub pull discourse 3610 3610
+#	cp -p candid-tutorial-3610.md originals
+#	rm candid-tutorial-3610.md
+#	chmod 444 originals/*
+
