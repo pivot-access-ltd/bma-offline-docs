@@ -1421,8 +1421,8 @@ backup.md: ../backup.md
 	xpub push discourse -t snap-2-8-ui backup-snap-2-8-ui-2337.md
 	xpub push discourse -t snap-2-9-cli backup-snap-2-9-cli-2338.md
 	xpub push discourse -t snap-2-9-ui backup-snap-2-9-ui-2339.md
-	xpub pull discourse 2352 2352
-	cp -p backup-deb-2-9-ui-2352.md backup.md
+	xpub pull discourse 2345 2345
+	cp -p backup-deb-2-9-ui-2345.md backup.md
  
 give-me-an-example-of-maas.md: ../give-me-an-example-of-maas.md
 	cp ../give-me-an-example-of-maas.md give-me-an-example-of-maas-deb-2-7-cli-2652.md

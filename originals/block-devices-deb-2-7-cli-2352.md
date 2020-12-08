@@ -33,10 +33,12 @@
 |Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|CLI ~ [UI](/t/backup/2345)|
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
 |Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ UI|
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
@@ -52,12 +54,10 @@
 |Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  snap-2-7-ui -->
 
-<!-- snap-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|CLI ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
 |Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
- snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 ||2.7|2.8|2.9|
@@ -95,19 +95,19 @@ MAAS currently does not provide specific tools to back up and restore a working 
 
 The following three MAAS components need to be backed-up and restored, on each region and rack controller, to recreate a working environment:
 
+<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 1.  The PostgreSQL database
 2.  The configuration files in `/etc/maas`
 3.  The configuration files in `/var/lib/maas`
 
 `/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
+deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 1.  The PostgreSQL database
 2.  The configuration files in `/snap/maas/current/etc/maas`
 3.  The configuration files in `/var/snap/maas/common/maas/`
 
 `/var/snap/maas/common/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
-snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
 
 Other configuration files, such as those used by your network configuration (`/etc/network/interfaces`, for example) will need to be backed-up and restored according to your specific deployment requirements.
 
@@ -148,15 +148,15 @@ Stopping these services will avoid conflicting updates during the remaining back
 
 Archive the database and the required configuration files with a command similar to the following:
 
+<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 ``` bash
 sudo tar cvpzf ~/backup.tgz --exclude=/var/lib/maas/boot-resources /etc/maas /var/lib/maas ~/dump.sql
 ```
+deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 ``` bash
 sudo tar cvpzf ~/backup.tgz --exclude=/var/snap/maas/common/maas/boot-resources /snap/maas/current/etc/maas /var/snap/maas/common/maas ~/dump.sql
 ```
-snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
 
 Make sure you move the resulting `backup.tgz` to some external storage you can access when restoring the system.  Also, make sure to restart the services you stopped prior to completing the backup.
 
@@ -180,14 +180,15 @@ sudo -u postgres psql -f dump.sql postgres
 
 Next, copy across the old configuration files to their new locations, taking care to move the originals aside just in case:
 
+<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 ``` bash
 sudo mv /etc/maas /etc/_maas; mv /var/lib/maas /var/lib/_maas
 essudo cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/
 ```
 
 If your restore process regenerated the `/var/lib/maas/secret` file, make sure update this secret on any additional rack controllers.
+deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 ``` bash
 sudo mv /snap/maas/current/etc/maas /snap/maas/current/etc/_maas
 sudo mv /var/snap/maas/common/maas /var/snap/maas/common/_maas
@@ -196,7 +197,6 @@ sudo cp -prf /var/snap/maas/common/maas /var/snap/maas/common/
 ```
 
 If your restore process regenerated the `/var/snap/maas/common/maas/secret` file, make sure update this secret on any additional rack controllers.
-snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
 
 [note]
 Take care to preserve the correct permissions when restoring files and directories.
