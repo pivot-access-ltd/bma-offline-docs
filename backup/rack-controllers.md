@@ -182,7 +182,7 @@ A rack controller can connect to multiple VLANs, each from a different network i
 5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  snap-2-9-ui -->
 
-<h2 id="heading--install-a-rack-controller">Install a rack controller</h2>
+<a href="#heading--install-a-rack-controller"><h2 id="heading--install-a-rack-controller">Install a rack controller</h2></a>
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 To install and register a rack controller with the MAAS:
@@ -222,7 +222,7 @@ Once registered, this extra rack controller will appear immediately alongside th
 <a href="https://discourse.maas.io/uploads/default/original/1X/0a5f1d374a3e53235a83eb157163be49016e63b5.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0a5f1d374a3e53235a83eb157163be49016e63b5.png"></a> 
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<h2 id="heading--list-rack-controllers">List rack controllers</h2>
+<a href="#heading--list-rack-controllers"><h2 id="heading--list-rack-controllers">List rack controllers</h2></a>
 
 <!-- deb-2-7-cli
 You can also list and confirm all registered rack controllers:
@@ -312,7 +312,7 @@ You can also list and confirm all registered rack controllers via the CLI; selec
 <p class="p-notification__response">If you are using VM nodes, you must ensure that the new rack controller can communicate with the VM host.</p>
 </div>
 
-<h2 id="heading--unregister-a-rack-controller">Unregister a rack controller</h2>
+<a href="#heading--unregister-a-rack-controller"><h2 id="heading--unregister-a-rack-controller">Unregister a rack controller</h2></a>
 
 Most likely, you would only “unregister” an extra, unnecessary rack controller.  In this case, you need to <em>delete</em> it from the region API server; there is no ‘unregister’ command.
 

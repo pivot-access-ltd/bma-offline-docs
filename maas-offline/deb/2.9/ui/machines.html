@@ -467,8 +467,8 @@
 <ol>
 <li><a href="#heading--machine-life-cycle">How are the machine states and actions related?</a></li>
 <li><a href="#heading--machine-list">How can I view the machine list?</a></li>
-<li><a href="#heading--machine-summary">How can I view a machine summary?</a> </li>
 <li><a href="#heading--node-details">How can I view machine details?</a></li>
+<li><a href="#heading--machine-summary">How can I view a machine summary?</a> </li>
 <li><a href="#heading--machine-interfaces-h3">Where can I find network info for a machine?</a></li>
 <li><a href="#heading--machine-storage-h3">Where can I find storage info for a machine?</a></li>
 <li><a href="#heading--commissioning-log-h3">Where can I find the commissioning log for a machine?</a></li>
@@ -477,8 +477,32 @@
 <li><a href="#heading--event-logs-h3">Where can I find a machine&rsquo;s event log?</a></li>
 <li><a href="#heading--machine-config-h3">Where can I find machine configuration info?</a></li>
 </ol>
+<!-- deb-2-7-cli snap-2-7-cli deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli
+#### Three questions you may have:
+
+1. [How are the machine states and actions related?](#heading--machine-life-cycle)
+2. [How can I view the machine list?](#heading--machine-list)
+3. [How can I view machine details?](#heading--node-details)
+ deb-2-7-cli snap-2-7-cli deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli -->
+
 <p>For example, in the illustration below, you see a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:</p>
 <p><a href="images/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg" target = "_blank"><img src="images/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg"></a></a> </p>
+<!-- deb-2-7-cli snap-2-7-cli deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli
+
+<pre><code>FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
+----               -----  ------  -----  ----     ----       ----  ----
+52-54-00-15-36-f2  off    Ready   -      Orders   Prescrbr   -     default
+52-54-00-17-64-c8  off    Ready   -      HRMgmt   StaffComp  -     default
+52-54-00-1d-47-95  off    Ready   -      MedSupp  SuppServ   -     default
+52-54-00-1e-06-41  off    Ready   -      PatPrtl  BusOfc     -     default
+52-54-00-1e-a5-7e  off    Ready   -      Pharm    Prescrbr   -     default
+52-54-00-2e-b7-1e  off    Ready   admin  NursOrd  NurServ    -     default
+52-54-00-2e-c4-40  off    Ready   admin  MedAdmn  NurServ    -     default
+52-54-00-2e-ee-17  off    Ready   admin  Charts   ProServ    -     default
+</code></pre>
+
+ deb-2-7-cli snap-2-7-cli deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli -->
+
 <p>These example machines would typically be duplicated in several different geographies, with a quick way to switch to a redundant node, should anything go wrong (e.g., high availability).  We used the word node there because, In the network language of MAAS, machines are one of several different types of nodes.  A node is simply a network-connected object or, more specifically, an object that can independently communicate on a network. MAAS nodes include controllers, network devices, and of course, machines.   </p>
 <p>Looking back at the example above, you can see that there are several columns in the machine list:</p>
 <p><a href="images/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg" target = "_blank"><img src="images/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg"></a></a> </p>
@@ -493,8 +517,83 @@
 <li><strong>Disks</strong>: The number of drives detected on the machine.</li>
 <li><strong>Storage</strong>: The amount of storage, in GB, identified on the machine.</li>
 </ol>
-<h2 id="heading--machine-life-cycle">Machine life-cycle</h2>
+<!-- deb-2-7-cli snap-2-7-cli deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli
 
+<pre><code>FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
+----               -----  ------  -----  ----     ----       ----  ----
+52-54-00-15-36-f2  off    Ready   -      Orders   Prescrbr   -     default
+52-54-00-17-64-c8  off    Ready   -      HRMgmt   StaffComp  -     default
+</code></pre>
+
+
+These particular columns list eight details for each machine:
+
+1.   **FQDN | MAC**: The fully qualified domain name or the MAC address of the machine.
+2.   **Power**: 'On', 'Off' or 'Error' to highlight an error state.
+3.   **Status**: The current status of the machine, such as 'Ready', 'Commissioning' or 'Failed testing'.
+4.   **Owner**: The MAAS account responsible for the machine.
+5.   **Tags**: Any tags assigned to a machine; these tags not only help identify how the machine is being used, they can also be used to modify kernel parameters as the machine is being (re-)deployed.
+6.   **Pool**: The resource pool to which this machine is assigned; these help to reserve machines for specific functions or groups of functions.
+7.   **Note**: Any notes you've elected to assign to this machine.
+8.   **Zone**: The availabilty zone in which this machine is placed.
+
+You can change the visible columns by changing the way you execute the relevant CLI command; for example, this listing can be generated with the following command:
+
+
+<pre><code>maas $PROFILE machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
+&quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;NOTE&quot;,&quot;ZONE&quot;] | (., map(length*&quot;-&quot;))),
+(.[] | [.hostname, .power_state, .status_name, .owner // &quot;-&quot;, 
+.tag_names[0] // &quot;-&quot;, .pool.name, .note, .zone.name]) | @tsv' | column -t
+</code></pre>
+
+
+You could easily produce a different set of columns by using this command, for example:
+
+
+<pre><code>maas $PROFILE machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
+&quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),
+(.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;, 
+.tag_names[0] // &quot;-&quot;, .pool.name,
+.boot_interface.vlan.name, .boot_interface.vlan.fabric,
+.boot_interface.links[0].subnet.name]) | @tsv' | column -t
+</code></pre>
+
+
+producing a listing something like this:
+
+
+<pre><code>HOSTNAME           SYSID   POWER  STATUS     OWNER  TAGS     POOL     VLAN      FABRIC   SUBNET
+--------           -----   -----  ------     -----  ----     ----     ----      ------   ------
+52-54-00-15-36-f2  hfqgmw  off    Allocated  admin  virtual  default  untagged  default  192.168.123.0/24
+52-54-00-17-64-c8  bdn3qn  off    Allocated  admin  virtual  default
+52-54-00-1d-47-95  8d8bxk  off    Allocated  admin  virtual  default  untagged  default  192.168.123.0/24
+52-54-00-1e-06-41  wennwm  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-1e-a5-7e  ekf7ae  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-2e-b7-1e  y47pka  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-2e-c4-40  cbgkxg  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-2e-ee-17  ap3ttw  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-2f-6d-3c  c3aybg  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-4a-2a-30  4a33wk  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-4e-60-b2  a488pw  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-52-93-10  hhnq8x  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-5d-b5-a1  hxy44m  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-60-1e-6f  bk7mck  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-60-8d-4b  typh3r  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-62-22-e3  774dk8  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-65-2e-20  t8me3x  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-6a-ac-23  tybxhr  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-6f-b4-af  bs7ye8  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-71-0c-53  hp7pp4  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-77-4e-53  nq36ky  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-98-42-ef  gagbqp  off    Broken     -      -        default  untagged  default
+52-54-00-9b-e4-9a  apkp4n  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-9c-51-00  rxfkqt  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+</code></pre>
+
+
+ deb-2-7-cli snap-2-7-cli deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli -->
+
+<p><a href="#heading--machine-life-cycle"><h2 id="heading--machine-life-cycle">Machine life-cycle</h2></a></p>
 <p>One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, acquired, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.</p>
 <p>All of these states and actions represent the possible life-cycle of a machine.  This life-cycle isn&rsquo;t strict or linear &ndash; it depends on how you use a machine &ndash; but it&rsquo;s useful to give a general overview of how machines tend to change states.  In the discussion that follows, states and actions are shown in <strong>bold</strong> type.</p>
 <ol>
@@ -717,9 +816,8 @@
 </tbody>
 </table>
 <p>When a machine is in the state listed in a column, it is possible to take the row actions marked with an &ldquo;X.&rdquo;  You access these actions from the &ldquo;Take action&rdquo; menu in the upper right corner of the machine listing.  Note that some actions, such as &ldquo;Mark broken&rdquo; or &ldquo;Lock,&rdquo; may be hidden when they are not available.</p>
-<h2 id="heading--machine-list">View the machine list</h2>
-
-<p>Incidentally, you can get to this list of machines from the choice &ldquo;Machines&rdquo; on the top menu of the MAAS web UI.  This action will display a table like the one above, listing all the machines that are currently visible to your MAAS installation.  During commissioning and deployment, MAAS updates the table to reflect the changing state of each machine. These values are augmented with green, amber and red icons to represent successful, in-progress and failed transitions, respectively. The MAAS web UI employs similar icons and colours throughout the interface to reflect a machine&rsquo;s status. </p>
+<p><a href="#heading--machine-list"><h2 id="heading--machine-list">View the machine list</h2></a></p>
+<p>You can view the list of machines from the choice &ldquo;Machines&rdquo; on the top menu of the MAAS web UI.  This action will display a table like the one above, listing all the machines that are currently visible to your MAAS installation.  During commissioning and deployment, MAAS updates the table to reflect the changing state of each machine. These values are augmented with green, amber and red icons to represent successful, in-progress and failed transitions, respectively. The MAAS web UI employs similar icons and colours throughout the interface to reflect a machine&rsquo;s status. </p>
 <p><a href="images/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg" target = "_blank"><img src="images/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg"></a></a> </p>
 <p>Rolling the cursor over status icons often reveals more details. For example, a failed hardware test script will place a warning icon alongside the hardware type tested by the script. Rolling the cursor over this will reveal which test failed.  Likewise, you can find some immediate options by rolling over the column data items in the machines table.</p>
 <p><a href="images/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg" target = "_blank"><img src="images/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg"></a></a> </p>
@@ -729,15 +827,183 @@
 <p><a href="images/e03d5ac8de9ea4f4827ed057bb2dd83e241aac3b.jpeg" target = "_blank"><img src="images/e03d5ac8de9ea4f4827ed057bb2dd83e241aac3b.jpeg"></a></a> </p>
 <p><strong>NOTE:</strong> 
 The &lsquo;Filter by&rsquo; section limits the machines listed in the table to selected keywords and machine attributes.</p>
-<h2 id="heading--node-details">View machine details</h2>
+<!-- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli
+You can view a basic machine list with a command such as this one:
+
+<pre><code>maas $PROFILE machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
+&quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),
+(.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;, 
+.tag_names[0] // &quot;-&quot;, .pool.name,
+.boot_interface.vlan.name, .boot_interface.vlan.fabric,
+.boot_interface.links[0].subnet.name]) | @tsv' | column -t \
+| sort -k 1
+</code></pre>
+
+
+This action will display a table similar to this one, listing all the machines that are currently visible to your MAAS installation:
+
+
+<pre><code>HOSTNAME           SYSID   POWER  STATUS     OWNER  TAGS     POOL     VLAN      FABRIC   SUBNET
+--------           -----   -----  ------     -----  ----     ----     ----      ------   ------
+52-54-00-15-36-f2  hfqgmw  off    Allocated  admin  virtual  default  untagged  default  192.168.123.0/24
+52-54-00-17-64-c8  bdn3qn  off    Allocated  admin  virtual  default
+52-54-00-1d-47-95  8d8bxk  off    Allocated  admin  virtual  default  untagged  default  192.168.123.0/24
+52-54-00-1e-06-41  wennwm  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-1e-a5-7e  ekf7ae  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-2e-b7-1e  y47pka  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-2e-c4-40  cbgkxg  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-2e-ee-17  ap3ttw  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-2f-6d-3c  c3aybg  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-4a-2a-30  4a33wk  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-4e-60-b2  a488pw  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-52-93-10  hhnq8x  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-5d-b5-a1  hxy44m  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-60-1e-6f  bk7mck  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-60-8d-4b  typh3r  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-62-22-e3  774dk8  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-65-2e-20  t8me3x  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-6a-ac-23  tybxhr  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-6f-b4-af  bs7ye8  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-71-0c-53  hp7pp4  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-77-4e-53  nq36ky  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-98-42-ef  gagbqp  off    Broken     -      -        default  untagged  default
+52-54-00-9b-e4-9a  apkp4n  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-9c-51-00  rxfkqt  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
+</code></pre>
+
+
+During commissioning and deployment, you can re-read the table to reflect the changing state of each machine:
+
+
+<pre><code>HOSTNAME           SYSID   POWER  STATUS         OWNER  TAGS     POOL     VLAN      FABRIC   SUBNET
+--------           -----   -----  ------         -----  ----     ----     ----      ------   ------
+52-54-00-15-36-f2  hfqgmw  off    Allocated      admin  virtual  default  untagged  default  192.168.123.0/24
+52-54-00-17-64-c8  bdn3qn  off    Allocated      admin  virtual  default
+52-54-00-1d-47-95  8d8bxk  off    Allocated      admin  virtual  default  untagged  default  192.168.123.0/24
+52-54-00-1e-06-41  wennwm  off    Commissioning  -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-1e-a5-7e  ekf7ae  off    Commissioning  -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-2e-b7-1e  y47pka  off    Deployed       -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-2e-c4-40  cbgkxg  off    Deploying      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-2e-ee-17  ap3ttw  off    Deploying      -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-2f-6d-3c  c3aybg  off    Ready          -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-4a-2a-30  4a33wk  off    Ready          -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-4e-60-b2  a488pw  off    Ready          -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-52-93-10  hhnq8x  off    Ready          -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-5d-b5-a1  hxy44m  off    Ready          -      virtual  default  untagged  default  192.168.123.0/24
+52-54-00-60-1e-6f  bk7mck  off    Ready          -      virtual  default  untagged  default  192.168.123.0/24
+</code></pre>
+
+
+You can also add machines; at the command line, enter the following information:
+
+
+<pre><code>maas $PROFILE machines create \
+&gt; architecture=$ARCH \
+&gt; max_addresses=$MAC_ADDRESS \
+&gt; power_type=$POWER_TYPE \
+&gt; power_parameters_power_id=$POWER_ID \
+&gt; power_parameters_power_address=$POWER_ADDRESS \
+&gt; power_parameters_power_pass=$POWER_PASSWORD
+</code></pre>
+
+
+When you enter the command (substituting the $... parameters for your own particulars), the screen will pause for a moment, and then return a stream of JSON relating to the added machine.
+
+Here’s an example with a local laptop MAAS install, using KVMs as virtual machines:
+
+
+<pre><code>stormrider@wintermute:~$ maas admin machines create \
+&gt; architecture=amd64 \
+&gt; max_addresses=52:54:00:6f:b4:af \
+&gt; power_type=virsh \
+&gt; power_parameters_power_id=50f6cca2-5d89-43b9-941c-90c9fcd7c156 \
+&gt; power_parameters_power_address=qemu+ssh://stormrider@192.168.123.1/system \
+&gt; power_parameters_power_pass=xxxxxxx
+</code></pre>
+
+
+The variable fields in the machines create command (the $... items) are as follows, in this example:
+
+
+<pre><code>&gt; architecture=$ARCH \
+&gt; mac_addresses=$MAC_ADDRESS \
+&gt; power_type=$POWER_TYPE \
+&gt; power_parameters_power_id=$POWER_ID \
+&gt; power_parameters_power_address=$POWER_ADDRESS \
+&gt; power_parameters_power_pass=$POWER_PASSWORD
+</code></pre>
+
+
+**$ARCH:** This field refers to the architecture of the machine being added, amd64 in the local laptop example.
+
+**$MAC_ADDRESS:** This is the MAC address of the boot-enabled NIC for the machine being added. Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
+
+**$POWER_TYPE:** You must select the power type supported by the machine you are adding, and fill in additional required fields that appear. See Power management for details on the available power types and the relevant parameters for each type. In this example, we’ve used a “virsh” power type (a libvirt KVM), but your choice will depend on your hardware.
+
+**$POWER_ID:** This is generally the UUID of the machine being added.
+
+**$POWER_ADDRESS/$POWER_PASSWORD:** In the case of a KVM, these are the only parameters that need to be entered. See Power types in the API reference for details on the available power types and the relevant parameters for each type.
+
+You can commission, acquire, or deploy a machine these commands:
+
+
+<pre><code>maas $PROFILE machine commission $SYSTEM_ID
+
+maas $PROFILE machines allocate system_id=$SYSTEM_ID
+
+maas $PROFILE machine deploy $SYSTEM_ID
+</code></pre>
+
+
+These commands are described in more detail later on in this section of articles.
+ snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli -->
+
+<p><a href="#heading--node-details"><h2 id="heading--node-details">View machine details</h2></a></p>
+<!-- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli
+Enter a command similar to the following to get a detailed view of a machine's status and configuration:
+
+<pre><code>maas $PROFILE machine read $SYSTEM_ID | \
+jq -r '([.hostname, .status_name, &quot;Power&quot;, .power_state]),
+[(120*&quot;-&quot;)],
+([&quot;OVERVIEW&quot;, &quot;|&quot;, &quot;CPU&quot;, &quot;&quot;, &quot;&quot;, .architecture, &quot;|&quot;, &quot;MEMORY&quot;, &quot;|&quot;, &quot;STORAGE&quot;]),
+([.status_name, &quot;|&quot;, &quot;\(.cpu_count) core(s)&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;|&quot;, &quot;\(.memory) MB&quot;, &quot;|&quot;,
+&quot;\(.blockdevice_set[].partitions[].size/(1024*1024*1024)) GiB&quot;]),
+([&quot;&quot;, &quot;&quot;, &quot;|&quot;, .hardware_info.cpu_model, &quot;|&quot;,&quot;&quot;,&quot;|&quot;]), ([(120*&quot;-&quot;)]),
+([&quot;Owner&quot;, &quot;&quot;, &quot;Domain&quot;, &quot;&quot;, &quot;Zone&quot;, &quot;&quot;, &quot;Resource pool&quot;, &quot;&quot;, &quot;Power type&quot;, &quot;&quot;, &quot;Tags&quot;]),
+([.owner // &quot;-&quot;, &quot;&quot;, .domain.name, &quot;&quot;, .zone.name, &quot;&quot;, .pool.name,
+&quot;&quot;, &quot;&quot;, .power_type, &quot;&quot;, &quot;&quot;, .tag_names[0]]) | @tsv'
+</code></pre>
+
+
+The above command produces output similar to this:
+
+
+<pre><code>52-54-00-15-36-f2   Allocated   Power: off
+---------------------------------------------------------------------------------------
+OVERVIEW        | CPU                    amd64/generic  | MEMORY   | STORAGE
+Allocated       | 1 core(s)                             | 1024 MB  | 4.9921875 GiB
+                | Intel Core Processor (Skylake, IBRS)  |          |
+---------------------------------------------------------------------------------------
+Owner        Domain       Zone        Resource pool        Power type        Tags
+admin        maas         default     default              virsh             virtual
+</code></pre>
+
+
+You can customize this command at length by examining the entire JSON output stream, like this:
+
+
+<pre><code>maas $PROFILE machine read $SYSTEM_ID | jq .
+</code></pre>
+
+
+snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli -->
 
 <p>Click a machine&rsquo;s FQDN or MAC address to open a detailed view of a machine&rsquo;s status and configuration.</p>
 <p><a href="images/c9684bf883d01d3fe610ec27e95618075c44b324.jpeg" target = "_blank"><img src="images/c9684bf883d01d3fe610ec27e95618075c44b324.jpeg"></a></a></p>
-<p>The default view is &lsquo;Machine summary&rsquo;, presented as a series of cards detailing the CPU, memory, storage and tag characteristics of the machine, as well as an overview of its current status. When relevant, &lsquo;Edit&rsquo; links take you directly to the settings pane for the configuration referenced within the card.  The machine menu bar within the web UI also includes links to logs, events, and configuration options:
-<a href="images/2efac92fca2c90f53ac86bd98485d8e98a1f91d4.jpeg" target = "_blank"><img src="images/2efac92fca2c90f53ac86bd98485d8e98a1f91d4.jpeg"></a></a> </p>
+<p>The default view is &lsquo;Machine summary&rsquo;, presented as a series of cards detailing the CPU, memory, storage and tag characteristics of the machine, as well as an overview of its current status. When relevant, &lsquo;Edit&rsquo; links take you directly to the settings pane for the configuration referenced within the card.  The machine menu bar within the web UI also includes links to logs, events, and configuration options:</p>
+<p><a href="images/2efac92fca2c90f53ac86bd98485d8e98a1f91d4.jpeg" target = "_blank"><img src="images/2efac92fca2c90f53ac86bd98485d8e98a1f91d4.jpeg"></a></a> </p>
 <p>The menu includes links to a number of additional forms and controls, as described in the following sections.</p>
-<h3 id="heading--machine-summary-h3">View a machine summary</h3>
-
+<p><a href="#heading--machine-summary-h3"><h3 id="heading--machine-summary-h3">View a machine summary</h3></a></p>
 <p>As shown above, the Machine summary presents an overview of CPU, memory, storage, tags, and general settings:</p>
 <p><a href="images/c9684bf883d01d3fe610ec27e95618075c44b324.jpeg" target = "_blank"><img src="images/c9684bf883d01d3fe610ec27e95618075c44b324.jpeg"></a></a></p>
 <p>The first card presents some basics of the machine resources and configuration:</p>
@@ -781,353 +1047,338 @@ The &lsquo;Filter by&rsquo; section limits the machines listed in the table to s
 <p><a href="images/3d6996b32a5193dab76b112c864a216c845aa985.jpeg" target = "_blank"><img src="images/3d6996b32a5193dab76b112c864a216c845aa985.jpeg"></a></a> </p>
 <p>And you can watch the results under the &ldquo;Tests&rdquo; option in the Machine menu:</p>
 <p><a href="images/89d287347928d6adb039ca582d4a94c3b54588e1.jpeg" target = "_blank"><img src="images/89d287347928d6adb039ca582d4a94c3b54588e1.jpeg"></a></a> </p>
-<!-- deb-2-7-cli
-The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
- deb-2-7-cli -->
-
 <!-- deb-2-7-ui
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
  deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
- deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
  deb-2-8-ui -->
 
-<!-- deb-2-9-cli
-The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
- deb-2-9-cli -->
-
 <p>The rest of the cards on the Machine summary are either self-explanatory, or they&rsquo;re covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu&rsquo;s &ldquo;Machines&rdquo; option.  Incidentally, you can learn more about testing by visiting the <a href="hardware-testing.html">Hardware testing</a> page.</p>
-<!-- snap-2-7-cli
-The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
- snap-2-7-cli -->
-
 <!-- snap-2-7-ui
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
  snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
- snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
- snap-2-9-cli -->
-
 <!-- snap-2-9-ui
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
  snap-2-9-ui -->
 
-<h3 id="heading--machine-interfaces-h3">Find network info for a machine</h3>
-
+<p><a href="#heading--machine-interfaces-h3"><h3 id="heading--machine-interfaces-h3">Find network info for a machine</h3></a></p>
 <p>The Network &ldquo;tab&rdquo; provides you with a way to view/edit the network and interface configuration for a machine: </p>
 <p><a href="images/7a7b22ee7202b50df09c7bef598250db0eb1cc15.jpeg" target = "_blank"><img src="images/7a7b22ee7202b50df09c7bef598250db0eb1cc15.jpeg"></a></a> </p>
 <p>In the case of this deployed machine, there are not many editing options.  If the machine is in a &lsquo;Ready&rsquo; state, though, altering the network configuration is possible:</p>
 <p><a href="images/01d53759105647d71786154e99ff210f8c71d2e7.jpeg" target = "_blank"><img src="images/01d53759105647d71786154e99ff210f8c71d2e7.jpeg"></a></a> </p>
-<!-- deb-2-7-cli
-Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
- deb-2-7-cli -->
-
 <!-- deb-2-7-ui
 Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
  deb-2-7-ui -->
 
-<!-- deb-2-8-cli
-Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
- deb-2-8-cli -->
-
 <!-- deb-2-8-ui
 Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
  deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
- deb-2-9-cli -->
 
 <p>Options on this tab are described in the introduction to <a href="networking.html">Networking</a> article in this documentation set.</p>
-<!-- snap-2-7-cli
-Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
- snap-2-7-cli -->
-
 <!-- snap-2-7-ui
 Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
  snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
- snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
- snap-2-9-cli -->
-
 <!-- snap-2-9-ui
 Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
  snap-2-9-ui -->
 
-<h3 id="heading--machine-storage-h3">Find storage info for a machine</h3>
-
-<p>The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:</p>
-<p><a href="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a></a> </p>
-<!-- deb-2-7-cli
-This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
- deb-2-7-cli -->
-
 <!-- deb-2-7-ui
+<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
+
+The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
+
+<a href="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a></a> 
+
 This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
  deb-2-7-ui -->
 
-<!-- deb-2-8-cli
-This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
- deb-2-8-cli -->
-
 <!-- deb-2-8-ui
+<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
+
+The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
+
+<a href="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a></a> 
+
 This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
  deb-2-8-ui -->
 
-<!-- deb-2-9-cli
-This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
- deb-2-9-cli -->
-
+<p><a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a></p>
+<p>The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:</p>
+<p><a href="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a></a> </p>
 <p>This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article <a href="storage.html">Storage</a> for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.</p>
-<!-- snap-2-7-cli
-This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
- snap-2-7-cli -->
-
 <!-- snap-2-7-ui
+<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
+
+The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
+
+<a href="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a></a> 
+
 This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
  snap-2-7-ui -->
 
-<!-- snap-2-8-cli
-This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
- snap-2-8-cli -->
-
 <!-- snap-2-8-ui
+<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
+
+The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
+
+<a href="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a></a> 
+
 This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
- snap-2-9-cli -->
-
 <!-- snap-2-9-ui
+<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
+
+The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
+
+<a href="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a></a> 
+
 This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
  snap-2-9-ui -->
 
-<h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3>
+<!-- deb-2-7-ui
+<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
 
+The "Commissioning" tab brings up a summary log of commissioning events:
+
+<a href="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg" target = "_blank"><img src="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg"></a></a> 
+
+Clicking on any of the "View log" links will take you to specific, detailed logs for that particular event or milestone:
+
+<a href="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg" target = "_blank"><img src="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg"></a></a> 
+
+These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
+ deb-2-7-ui -->
+
+<!-- deb-2-8-ui
+<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
+
+The "Commissioning" tab brings up a summary log of commissioning events:
+
+<a href="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg" target = "_blank"><img src="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg"></a></a> 
+
+Clicking on any of the "View log" links will take you to specific, detailed logs for that particular event or milestone:
+
+<a href="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg" target = "_blank"><img src="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg"></a></a> 
+
+These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
+ deb-2-8-ui -->
+
+<p><a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a></p>
 <p>The &ldquo;Commissioning&rdquo; tab brings up a summary log of commissioning events:</p>
 <p><a href="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg" target = "_blank"><img src="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg"></a></a> </p>
 <p>Clicking on any of the &ldquo;View log&rdquo; links will take you to specific, detailed logs for that particular event or milestone:</p>
 <p><a href="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg" target = "_blank"><img src="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg"></a></a> </p>
-<!-- deb-2-7-cli
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
- deb-2-9-cli -->
-
 <p>These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on <a href="maas-logging.html">Logging</a> for more details on how to read and interpret these logs.</p>
-<!-- snap-2-7-cli
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
- snap-2-7-cli -->
-
 <!-- snap-2-7-ui
+<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
+
+The "Commissioning" tab brings up a summary log of commissioning events:
+
+<a href="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg" target = "_blank"><img src="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg"></a></a> 
+
+Clicking on any of the "View log" links will take you to specific, detailed logs for that particular event or milestone:
+
+<a href="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg" target = "_blank"><img src="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg"></a></a> 
+
 These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
  snap-2-7-ui -->
 
-<!-- snap-2-8-cli
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
- snap-2-8-cli -->
-
 <!-- snap-2-8-ui
+<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
+
+The "Commissioning" tab brings up a summary log of commissioning events:
+
+<a href="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg" target = "_blank"><img src="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg"></a></a> 
+
+Clicking on any of the "View log" links will take you to specific, detailed logs for that particular event or milestone:
+
+<a href="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg" target = "_blank"><img src="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg"></a></a> 
+
 These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
- snap-2-9-cli -->
-
 <!-- snap-2-9-ui
+<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
+
+The "Commissioning" tab brings up a summary log of commissioning events:
+
+<a href="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg" target = "_blank"><img src="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg"></a></a> 
+
+Clicking on any of the "View log" links will take you to specific, detailed logs for that particular event or milestone:
+
+<a href="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg" target = "_blank"><img src="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg"></a></a> 
+
 These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
  snap-2-9-ui -->
 
-<h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3>
+<!-- deb-2-7-ui
+<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
 
+This tab presents a summary of tests run against this particular machine:  
+
+<a href="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg" target = "_blank"><img src="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg"></a></a> 
+
+You can view the summary report, or click on a "View log" link to get details on any particular tests:
+
+<a href="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg" target = "_blank"><img src="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg"></a></a> 
+
+The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
+ deb-2-7-ui -->
+
+<!-- deb-2-8-ui
+<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
+
+This tab presents a summary of tests run against this particular machine:  
+
+<a href="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg" target = "_blank"><img src="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg"></a></a> 
+
+You can view the summary report, or click on a "View log" link to get details on any particular tests:
+
+<a href="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg" target = "_blank"><img src="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg"></a></a> 
+
+The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
+ deb-2-8-ui -->
+
+<p><a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware &amp; test logs</h3></a></p>
 <p>This tab presents a summary of tests run against this particular machine:  </p>
 <p><a href="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg" target = "_blank"><img src="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg"></a></a> </p>
 <p>You can view the summary report, or click on a &ldquo;View log&rdquo; link to get details on any particular tests:</p>
 <p><a href="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg" target = "_blank"><img src="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg"></a></a> </p>
-<!-- deb-2-7-cli
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
- deb-2-9-cli -->
-
 <p>The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on <a href="hardware-testing.html">Hardware testing</a>.</p>
-<!-- snap-2-7-cli
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
- snap-2-7-cli -->
-
 <!-- snap-2-7-ui
+<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
+
+This tab presents a summary of tests run against this particular machine:  
+
+<a href="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg" target = "_blank"><img src="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg"></a></a> 
+
+You can view the summary report, or click on a "View log" link to get details on any particular tests:
+
+<a href="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg" target = "_blank"><img src="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg"></a></a> 
+
 The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
  snap-2-7-ui -->
 
-<!-- snap-2-8-cli
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
- snap-2-8-cli -->
-
 <!-- snap-2-8-ui
+<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
+
+This tab presents a summary of tests run against this particular machine:  
+
+<a href="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg" target = "_blank"><img src="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg"></a></a> 
+
+You can view the summary report, or click on a "View log" link to get details on any particular tests:
+
+<a href="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg" target = "_blank"><img src="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg"></a></a> 
+
 The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
- snap-2-9-cli -->
-
 <!-- snap-2-9-ui
+<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
+
+This tab presents a summary of tests run against this particular machine:  
+
+<a href="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg" target = "_blank"><img src="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg"></a></a> 
+
+You can view the summary report, or click on a "View log" link to get details on any particular tests:
+
+<a href="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg" target = "_blank"><img src="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg"></a></a> 
+
 The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
  snap-2-9-ui -->
 
-<h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3>
+<!-- deb-2-7-ui
+<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
 
+The "Logs" tab shows raw log output, switchable between YAML and XML formats:
+
+<a href="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a></a> 
+
+Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
+ deb-2-7-ui -->
+
+<!-- deb-2-8-ui
+<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
+
+The "Logs" tab shows raw log output, switchable between YAML and XML formats:
+
+<a href="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a></a> 
+
+Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
+ deb-2-8-ui -->
+
+<p><a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a></p>
 <p>The &ldquo;Logs&rdquo; tab shows raw log output, switchable between YAML and XML formats:</p>
 <p><a href="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a></a> </p>
-<!-- deb-2-7-cli
-Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
- deb-2-9-cli -->
-
 <p>Help interpreting these logs can be found under the <a href="maas-logging.html">Logging</a> section of this documentation.</p>
-<!-- snap-2-7-cli
-Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
- snap-2-7-cli -->
-
 <!-- snap-2-7-ui
+<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
+
+The "Logs" tab shows raw log output, switchable between YAML and XML formats:
+
+<a href="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a></a> 
+
 Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
  snap-2-7-ui -->
 
-<!-- snap-2-8-cli
-Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
- snap-2-8-cli -->
-
 <!-- snap-2-8-ui
+<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
+
+The "Logs" tab shows raw log output, switchable between YAML and XML formats:
+
+<a href="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a></a> 
+
 Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
- snap-2-9-cli -->
-
 <!-- snap-2-9-ui
+<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
+
+The "Logs" tab shows raw log output, switchable between YAML and XML formats:
+
+<a href="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a></a> 
+
 Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
  snap-2-9-ui -->
 
-<h3 id="heading--event-logs-h3">Find a machine's event logs</h3>
-
+<p><a href="#heading--event-logs-h3"><h3 id="heading--event-logs-h3">Find a machine&rsquo;s event logs</h3></a></p>
 <p>The &ldquo;Event&rdquo; tab displays a list of timestamped status updates for events and actions performed on the machine:</p>
 <p><a href="images/114ada7188f8ebf12883a54c0976ad8abda1d211.jpeg" target = "_blank"><img src="images/114ada7188f8ebf12883a54c0976ad8abda1d211.jpeg"></a></a> </p>
-<!-- deb-2-7-cli
-There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
- deb-2-7-cli -->
-
 <!-- deb-2-7-ui
 There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
  deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
- deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
  deb-2-8-ui -->
 
-<!-- deb-2-9-cli
-There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
- deb-2-9-cli -->
-
 <p>There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the <a href="maas-logging.html">Logging</a> section of this documentation.</p>
-<!-- snap-2-7-cli
-There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
- snap-2-7-cli -->
-
 <!-- snap-2-7-ui
 There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
  snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
- snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
- snap-2-9-cli -->
-
 <!-- snap-2-9-ui
 There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
  snap-2-9-ui -->
 
-<h3 id="heading--machine-config-h3">Find machine configuration info</h3>
-
+<p><a href="#heading--machine-config-h3"><h3 id="heading--machine-config-h3">Find machine configuration info</h3></a></p>
 <p>The final tab from the Machine menu allows you to update machine and power configuration options: </p>
 <p><img alt="machine-config-tab-failed-testing|690x412" src="https://discourse.maas.io/uploads/default/original/1X/13bb1352103c759365fc6b923672f021982a10c3.jpeg&quot;"> </p>
 <p>There are two sections to this tab.  The &ldquo;Machine configuration&rdquo; section offers some general parameters, mostly related to how this machine is grouped and categorised.  More information on these options are found in the relevant sections of the documentation (e.g., tags, resource pools, and so forth). </p>
@@ -1135,46 +1386,22 @@ There is a button that allows you to see the next 10 events, and a link to show 
 <a href="images/8f4c4ae8ec07f42551bad654375f513debc53ef1.jpeg" target = "_blank"><img src="images/8f4c4ae8ec07f42551bad654375f513debc53ef1.jpeg"></a></a> </p>
 <p>After entering the correct password and recycling things, the problem goes away:</p>
 <p><a href="images/635e27e87bcac0c3cb3ce3085bd2fa55f60ff137.jpeg" target = "_blank"><img src="images/635e27e87bcac0c3cb3ce3085bd2fa55f60ff137.jpeg"></a></a> </p>
-<!-- deb-2-7-cli
-More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
- deb-2-7-cli -->
-
 <!-- deb-2-7-ui
 More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
  deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
- deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
  deb-2-8-ui -->
 
-<!-- deb-2-9-cli
-More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
- deb-2-9-cli -->
-
 <p>More information on Power configuration will be found in the <a href="power-management.html">Power management</a> section of this documentation.</p>
-<!-- snap-2-7-cli
-More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
- snap-2-7-cli -->
-
 <!-- snap-2-7-ui
 More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
  snap-2-7-ui -->
 
-<!-- snap-2-8-cli
-More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
- snap-2-8-cli -->
-
 <!-- snap-2-8-ui
 More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
  snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
- snap-2-9-cli -->
 
 <!-- snap-2-9-ui
 More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.

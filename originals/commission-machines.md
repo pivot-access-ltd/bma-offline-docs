@@ -1,85 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|CLI ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
 deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ UI|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|CLI ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ UI|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|CLI ~ [UI](/t/commission-machines/2477)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ UI|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|CLI ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ UI|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|CLI ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ UI|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
  snap-2-9-ui -->
 
 MAAS is built to manage machines, including the operating systems on those machines. Enlistment and commissioning are features that make it easier to start managing a machine – as long as that machine has been configured to netboot. Enlistment enables users to simply connect a machine, configure the firmware properly, and power it on so that MAAS can find it and add it.
@@ -107,17 +59,17 @@ When you configure a machine to netboot -- and turn it on while connected to the
 <!-- deb-2-9-cli
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2284)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2488) to meet your specific needs.
 
-[note]
+<strong>NOTE:</strong> 
 Commissioning requires 60 seconds.
-[/note]
+
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2285)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2489) to meet your specific needs.
 
-[note]
+<strong>NOTE:</strong> 
 Commissioning requires 60 seconds.
-[/note]
+
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
@@ -139,17 +91,17 @@ When you configure a machine to netboot -- and turn it on while connected to the
 <!-- snap-2-9-cli
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2278)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2482) to meet your specific needs.
 
-[note]
+<strong>NOTE:</strong> 
 Commissioning requires 60 seconds.
-[/note]
+
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2279)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2483) to meet your specific needs.
 
-[note]
+<strong>NOTE:</strong> 
 Commissioning requires 60 seconds.
-[/note]
+
  snap-2-9-ui -->
 
 #### Six questions you may have:
@@ -161,7 +113,7 @@ Commissioning requires 60 seconds.
 5. [What is a bond interface and how do I create one?](#heading--bond-interfaces)
 6. [What is a bridge interface and how do I create one?](#heading--bridge-interfaces)
 
-<h2 id="heading--commissioning-machines">How machines are commissioned</h2>
+<a href="#heading--commissioning-machines"><h2 id="heading--commissioning-machines">How machines are commissioned</h2></a>
 
 When MAAS commissions a machine, the following sequence of events takes place:
 
@@ -284,9 +236,9 @@ To commission a machine:
 maas $PROFILE machine commission $SYSTEM_ID
 ```
 
-[note]
+<strong>NOTE:</strong> 
 To commission a node, it must have a status of 'New'.
-[/note]
+
 
 To commission all nodes in the 'New' state:
 
@@ -469,13 +421,13 @@ Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/28
  snap-2-9-ui -->
 
 
-<h3 id="heading--numa-sriov-commissioning">Commission NUMA and SR-IOV nodes</h3>
+<a href="#heading--numa-sriov-commissioning"><h3 id="heading--numa-sriov-commissioning">Commission NUMA and SR-IOV nodes</h3></a>
 
 If you are using the NUMA architecture, MAAS versions 2.7 and higher guarantee that machines are assigned to a single NUMA node that contains all the machine's resources. Node boundaries are critical, especially in vNUMA situations.  Splitting nodes can create unnecessary latency.  You want the NUMA node boundaries to match VM boundaries if at all possible.
 
-[note]
+<strong>NOTE:</strong> 
 You must recommission NUMA/SR-IOV machines that were previously commissioned under version 2.6 or earlier.
-[/note]
+
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png"></a> 
@@ -483,7 +435,7 @@ You must recommission NUMA/SR-IOV machines that were previously commissioned und
 When using these nodes, you can specify a node index for interfaces and physical block devices.  MAAS will display the NUMA node index and details, depending upon your configuration, to include the count of NUMA nodes, number of CPU cores, memory, NICs, and node spaces for bonds and block devices.  You can also filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID, among others.
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<h2 id="heading--commissioning-scripts">MAAS commissioning scripts</h2>
+<a href="#heading--commissioning-scripts"><h2 id="heading--commissioning-scripts">MAAS commissioning scripts</h2></a>
 
 When a machine boots, MAAS first instructs it to run cloud-init to set up SSH keys (during commissioning only), set up NTP, and execute a script that runs other commissioning scripts.  Currently, the sequence of MAAS-provided commissioning scripts proceeds like this:
 
@@ -559,7 +511,7 @@ snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7
 
 In both enlistment and commissioning, MAAS uses either the MAC address or the UUID to identify machines.  Currently, because some machine types encountered by MAAS do **not** use unique MAC addresses, we are trending toward using the UUID.
 
-<h2 id="heading--post-commission-configuration">Post-commission configuration</h2>
+<a href="#heading--post-commission-configuration"><h2 id="heading--post-commission-configuration">Post-commission configuration</h2></a>
 
 <!-- deb-2-7-cli
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either 'Ready' or 'Broken', interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2892#heading--tags-for-network-interfaces)).
@@ -663,7 +615,7 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 See [Concepts and terms](/t/concepts-and-terms/785#heading--ip-ranges) for the definitions of reserved range types.
 
-<h3 id="heading--bond-interfaces">Bond interfaces and how to create one</h3>
+<a href="#heading--bond-interfaces"><h3 id="heading--bond-interfaces">Bond interfaces and how to create one</h3></a>
 
 A bond interface is used to aggregate two or more physical interfaces into a single logical interface. Combining multiple network connections in parallel can increase network throughput beyond what a single NIC will allow.  It also provides some redundancy in case one of the NICs should fail.  More information about the theory behind bonded NICs is found in the [relevant IEEE standard](https://1.ieee802.org/tsn/802-1ax-rev/).
 
@@ -753,9 +705,9 @@ You can select from the following bonding modes on the 'Bond mode' drop-down men
 
 Press the 'Save' button when you're done.
 
-[note]
+<strong>NOTE:</strong> 
 The MAC address defaults to the MAC address of the primary interface.
-[/note]
+
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
@@ -796,7 +748,7 @@ The following parameters may be applied when creating a bridge:
 
 11. `autoconf`: Optional boolean.  Perform stateless autoconfiguration. (IPv6 only)
 
-<h3>Delete a bridge interface</h3>
+<a href="#heading--delete-bridge-interface"><h3 id="heading--delete-bridge-interface">Delete a bridge interface</h3></a>
 
 The "delete" command can be used to delete a bridge interface, a bond interface or a physical interface:
 
@@ -822,7 +774,7 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 
-<h3 id="heading--bridge-interfaces">Bridge interfaces and how to create one</h3>
+<a href="#heading--bridge-interfaces"><h3 id="heading--bridge-interfaces">Bridge interfaces and how to create one</h3></a>
 
 A network bridge may be useful if you intend to put virtual machines or containers on the machine.  You can create a bridge by selecting an interface and clicking the now-active 'Create bridge' button. A form will appear that allows you to configure a MAC address, STP, and an appropriate tag.
 

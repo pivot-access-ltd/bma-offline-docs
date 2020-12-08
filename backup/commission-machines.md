@@ -161,7 +161,7 @@ Commissioning requires 60 seconds.
 5. [What is a bond interface and how do I create one?](#heading--bond-interfaces)
 6. [What is a bridge interface and how do I create one?](#heading--bridge-interfaces)
 
-<h2 id="heading--commissioning-machines">How machines are commissioned</h2>
+<a href="#heading--commissioning-machines"><h2 id="heading--commissioning-machines">How machines are commissioned</h2></a>
 
 When MAAS commissions a machine, the following sequence of events takes place:
 
@@ -469,7 +469,7 @@ Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/28
  snap-2-9-ui -->
 
 
-<h3 id="heading--numa-sriov-commissioning">Commission NUMA and SR-IOV nodes</h3>
+<a href="#heading--numa-sriov-commissioning"><h3 id="heading--numa-sriov-commissioning">Commission NUMA and SR-IOV nodes</h3></a>
 
 If you are using the NUMA architecture, MAAS versions 2.7 and higher guarantee that machines are assigned to a single NUMA node that contains all the machine's resources. Node boundaries are critical, especially in vNUMA situations.  Splitting nodes can create unnecessary latency.  You want the NUMA node boundaries to match VM boundaries if at all possible.
 
@@ -483,7 +483,7 @@ You must recommission NUMA/SR-IOV machines that were previously commissioned und
 When using these nodes, you can specify a node index for interfaces and physical block devices.  MAAS will display the NUMA node index and details, depending upon your configuration, to include the count of NUMA nodes, number of CPU cores, memory, NICs, and node spaces for bonds and block devices.  You can also filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID, among others.
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<h2 id="heading--commissioning-scripts">MAAS commissioning scripts</h2>
+<a href="#heading--commissioning-scripts"><h2 id="heading--commissioning-scripts">MAAS commissioning scripts</h2></a>
 
 When a machine boots, MAAS first instructs it to run cloud-init to set up SSH keys (during commissioning only), set up NTP, and execute a script that runs other commissioning scripts.  Currently, the sequence of MAAS-provided commissioning scripts proceeds like this:
 
@@ -559,7 +559,7 @@ snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7
 
 In both enlistment and commissioning, MAAS uses either the MAC address or the UUID to identify machines.  Currently, because some machine types encountered by MAAS do **not** use unique MAC addresses, we are trending toward using the UUID.
 
-<h2 id="heading--post-commission-configuration">Post-commission configuration</h2>
+<a href="#heading--post-commission-configuration"><h2 id="heading--post-commission-configuration">Post-commission configuration</h2></a>
 
 <!-- deb-2-7-cli
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either 'Ready' or 'Broken', interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2892#heading--tags-for-network-interfaces)).
@@ -663,7 +663,7 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 See [Concepts and terms](/t/concepts-and-terms/785#heading--ip-ranges) for the definitions of reserved range types.
 
-<h3 id="heading--bond-interfaces">Bond interfaces and how to create one</h3>
+<a href="#heading--bond-interfaces"><h3 id="heading--bond-interfaces">Bond interfaces and how to create one</h3></a>
 
 A bond interface is used to aggregate two or more physical interfaces into a single logical interface. Combining multiple network connections in parallel can increase network throughput beyond what a single NIC will allow.  It also provides some redundancy in case one of the NICs should fail.  More information about the theory behind bonded NICs is found in the [relevant IEEE standard](https://1.ieee802.org/tsn/802-1ax-rev/).
 
@@ -796,7 +796,7 @@ The following parameters may be applied when creating a bridge:
 
 11. `autoconf`: Optional boolean.  Perform stateless autoconfiguration. (IPv6 only)
 
-<h3>Delete a bridge interface</h3>
+<a href="#heading--delete-bridge-interface"><h3 id="heading--delete-bridge-interface">Delete a bridge interface</h3></a>
 
 The "delete" command can be used to delete a bridge interface, a bond interface or a physical interface:
 
@@ -822,7 +822,7 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 
-<h3 id="heading--bridge-interfaces">Bridge interfaces and how to create one</h3>
+<a href="#heading--bridge-interfaces"><h3 id="heading--bridge-interfaces">Bridge interfaces and how to create one</h3></a>
 
 A network bridge may be useful if you intend to put virtual machines or containers on the machine.  You can create a bridge by selecting an interface and clicking the now-active 'Create bridge' button. A form will appear that allows you to configure a MAC address, STP, and an appropriate tag.
 

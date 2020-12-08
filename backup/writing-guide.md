@@ -1,6 +1,6 @@
 This page contains detailed information on how to become a successful MAAS documentation writer. Welcome to the club.
 
-<h2>Update: Editing RAD/offline documentation</h2>
+<h2 id="heading--edit-rad">Update: Editing RAD/offline documentation</h2>
 
 After 20 September 2020, many documents in the [MAAS documentation set^](https://maas.io/docs) have been converted to the RAD (Reader Adapative Documentation) style, and enabled for conversion to offline documentation.  Editing RAD documentation is a bit different from standard doc, so it's worth explaining how to do it correctly.
 

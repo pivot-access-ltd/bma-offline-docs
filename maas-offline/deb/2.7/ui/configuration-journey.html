@@ -615,7 +615,7 @@ have changed, use the command's 'refresh' sub-command to fetch the
 latest version of this help information from the server.
 </details>
 
-<h2>Configuration</h2>
+<a href="#heading--configuration"><h2 id="heading--configuration">Configuration</h2></a>
 
 Configuring MAAS consists of four broad steps:
 
@@ -626,7 +626,7 @@ Configuring MAAS consists of four broad steps:
 
 This section will cover those four operations
 
-<h3>Setting DNS</h3>
+<a href="#heading--setting-dns"><h3 id="heading--setting-dns">Setting DNS</h3></a>
 
 After logging in for the first time, you will need to set a number of system-wide configuration options.  First up, you should configure DNS.  You can check out the help for DNS settings, known in the CLI as a "DNS forwarder":
 
@@ -637,7 +637,7 @@ After logging in for the first time, you will need to set a number of system-wid
 
 Here, we've set the DNS forwarder to "8.8.8.8" (Google), which is a reliable value.
 
-<h3>Setting SSH for the admin user</h3>
+<a href="#heading--setting-ssh"><h3 id="heading--setting-ssh">Setting SSH for the admin user</h3></a>
 
 To add a public SSH key to a MAAS user account, type the following command:
 
@@ -646,7 +646,7 @@ To add a public SSH key to a MAAS user account, type the following command:
 </code></pre>
 
 
-<h3>Importing images</h3>
+<a href="#heading--importing-images"><h3 id="heading--importing-images">Importing images</h3></a>
 
 Before going any further, it's worthwhile to start the image import, as it can sometimes take a few minutes.  You can see what images you already have downloaded with this command:
 
@@ -717,7 +717,7 @@ Import of boot resources started
 </code></pre>
 
 
-<h3>Enabling DHCP</h3>
+<a href="#heading--enabling-dhcp"><h3 id="heading--enabling-dhcp">Enabling DHCP</h3></a>
 
 Once your image has been imported, you'll want to get DHCP working, which means finding the untagged VLAN. In truth, it shouldn’t be too hard, because at this point, there still should only be one.
 
@@ -840,8 +840,7 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 <p>where $API_HOST is the hostname or IP address of the region API server, which was set during installation.  You will see a screen like this:</p></p>
 <p><a href="images/efd8e3f150dfec28114c452c12e24e320848e075.jpeg" target = "_blank"><img src="images/efd8e3f150dfec28114c452c12e24e320848e075.jpeg"></a></a> </p>
 <p>Log in at the prompts, with the login information you created when initialising MAAS.</p>
-<h2 id="heading--configuration">Configuration</h2>
-
+<p><a href="#heading--configuration"><h2 id="heading--configuration">Configuration</h2></a></p>
 <p>After a fresh MAAS installation, the web UI presents a couple of welcome  screens.  From these screens, you can set many system-wide options, including connectivity, image downloads, and authentication keys.</p>
 <p><a href="images/337aa15e178b14b0ba9a0646953268bf7adac0bb.jpeg" target = "_blank"><img src="images/337aa15e178b14b0ba9a0646953268bf7adac0bb.jpeg"></a></a>  </p>
 <p>Your main concerns for this experiment are the DNS forwarder, the Ubuntu image import section, and the SSH public key, though you might want to set the region name to something memorable, since this text will appear at the bottom of every MAAS screen in this install domain. Set the DNS forwarder to something obvious, e.g., <code>8.8.8.8</code>, Google’s DNS server.  Set this to your own internal DNS server if you know the IP address.</p>
@@ -864,11 +863,9 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 <p>With this complete, you’ll see that MAAS has been successfully set up. Click ‘Go to the Dashboard’ to proceed.</p>
 <p><strong>NOTE:</strong> 
 Note that you may have to wait a few moments for your selected images to sync locally.</p>
-<h2 id="heading--enabling-dhcp">Enabling DHCP</h2>
-
+<p><a href="#heading--enabling-dhcp"><h2 id="heading--enabling-dhcp">Enabling DHCP</h2></a></p>
 <p>Before moving forward with MAAS, you&rsquo;ll want to enable DHCP.  You can do this very easily from the web UI by selecting &ldquo;Subnets&rdquo; from the top menu, choosing the VLAN on which you want to enable DHCP, and select the button marked, &ldquo;Enable DHCP.&rdquo;</p>
-<h2 id="heading--networking">Networking</h2>
-
+<p><a href="#heading--networking"><h2 id="heading--networking">Networking</h2></a></p>
 <p>The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This <a href="network-discovery.html">network discovery</a> process allows you to easily add or map devices already connected to your network – devices that you may not necessarily want to manage with MAAS.</p>
 <!-- deb-2-8-ui
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](network-discovery.html) process allows you to easily add or map devices already connected to your network – devices that you may not necessarily want to manage with MAAS.
@@ -893,8 +890,7 @@ The Dashboard landing page lists non-registered devices that MAAS detected autom
 <p><a href="images/902f07b6e96d06dcd072501473ce85ff3d303610.jpeg" target = "_blank"><img src="images/902f07b6e96d06dcd072501473ce85ff3d303610.jpeg"></a></a>  </p>
 <p><strong>NOTE:</strong> 
 Network discovery can be disabled at any time from the button on the Dashboard view.  Also note that you can get back to the dashboard at any time by clicking the MAAS logo.</p>
-<h3 id="heading--spaces-fabrics-zones-and-subnets">Spaces, fabrics, zones and subnets</h3>
-
+<p><a href="#heading--spaces-fabrics-zones-and-subnets"><h3 id="heading--spaces-fabrics-zones-and-subnets">Spaces, fabrics, zones and subnets</h3></a></p>
 <p>Networks in large data centres can be very complex. MAAS offers comprehensive control over networking so that you have the flexibility to reconfigure racks and deploy machines as you see fit. You can isolate machine deployment not only with DNS domains, but also via <a href="concepts-and-terms.html#heading--subnets">subnets</a>, <a href="concepts-and-terms.html#heading--spaces">spaces</a>, <a href="concepts-and-terms.html#heading--zones">zones</a>, and <a href="concepts-and-terms.html#heading--fabrics">fabrics</a>.  The links provide more details, but these are all basically collections:</p>
 <ul>
 <li><strong>subnet</strong> has the traditional meaning: a range of IP addresses covering a subset of IP addresses.  Generally speaking , a subnet is a collection of IP addresses which includes at least two addresses.</li>
@@ -906,8 +902,7 @@ Network discovery can be disabled at any time from the button on the Dashboard v
 <p><a href="images/dd60fdeba34d3cf33d4cf42db1f745ba95542b69.jpeg" target = "_blank"><img src="images/dd60fdeba34d3cf33d4cf42db1f745ba95542b69.jpeg"></a></a> </p>
 <p>Be aware that these network settings are spread across several web UI configuration pages. The Zones page, for example, enables you to see how many machines, devices and controllers are using a zone, and allows you to add and edit zones.  The Subnets page, shown below, provides access to fabric, VLAN, subnet and spaces configuration.</p>
 <p><a href="images/89d90a15e70a57e6951ee62910b503895e08251e.jpeg" target = "_blank"><img src="images/89d90a15e70a57e6951ee62910b503895e08251e.jpeg"></a></a> </p>
-<h2 id="heading--deploy-hardware">Deployment</h2>
-
+<p><a href="#heading--deploy-hardware"><h2 id="heading--deploy-hardware">Deployment</h2></a></p>
 <p>MAAS-managed machines are listed – and operated on – from the Machines page, making it one of the most important screens in the MAAS web UI:</p>
 <p><a href="images/58a37e0dc29bc233f771c33d07a0e03e8d55cb87.jpeg" target = "_blank"><img src="images/58a37e0dc29bc233f771c33d07a0e03e8d55cb87.jpeg"></a></a> </p>
 <p>If you are testing MAAS using virtual machines, the machines appear here as soon as they boot. New machines are added automatically when they first connect to your network. Alternatively, the ‘Add hardware’ menu lets you add machines manually, via their MAC address.</p>
@@ -933,12 +928,10 @@ While you are testing MAAS, be sure to check out filters, which can narrow your 
 While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](maas-tags.html) and hardware characteristics.  You can select and manage machines in either filtered or full views.
  snap-2-9-ui -->
 
-<h3 id="heading--images">Images</h3>
-
+<p><a href="#heading--images"><h3 id="heading--images">Images</h3></a></p>
 <p>When it comes to running applications, MAAS can easily deploy any supported variant of Ubuntu, including LTS and non-LTR versions for x86, ARM, PPC and s390x systems. You can also deploy several other operating systems to your machines, including CentOS 7, CentOS 6, Windows, RHEL, and ESXi images, via <a href="https://www.ubuntu.com/support" rel="nofollow noopener">Ubuntu Advantage^</a>.</p>
 <p><a href="images/27c47222c1fc0e34ed70134a1007dde067d2de81.jpeg" target = "_blank"><img src="images/27c47222c1fc0e34ed70134a1007dde067d2de81.jpeg"></a></a> </p>
-<h3 id="heading--vm-hosts">VM hosts</h3>
-
+<p><a href="#heading--vm-hosts"><h3 id="heading--vm-hosts">VM hosts</h3></a></p>
 <!-- deb-2-7-cli
 [VM hosts]( vm-hosting.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
  deb-2-7-cli -->

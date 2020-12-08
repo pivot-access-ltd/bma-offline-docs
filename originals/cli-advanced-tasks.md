@@ -82,9 +82,9 @@ Example output:
 {"hostname":"machine3","system_id":"qwkmar","status":4}
 ```
 
-[note]
+<strong>NOTE:</strong> 
 You can only edit an interface when the corresponding machine has a status of 'Ready'. This state is numerically denoted by the integer '4'.
-[/note]
+
 
 List some information for all interfaces on the machine in question (identified by its system id 'dfgnnd'):
 
@@ -149,9 +149,9 @@ For example, to set the default layout to Flat:
 maas $PROFILE maas set-config name=default_storage_layout value=flat
 ```
 
-[note type="caution" status="Important"]
+<strong>NOTE:</strong> 
 The new default will only apply to newly-commissioned machines.
-[/note]
+
 
 See [Storage](/t/storage/775) for more details on MAAS storage features.
 
@@ -171,9 +171,9 @@ maas $PROFILE machine set-storage-layout $SYSTEM_ID storage_layout=lvm lv_size=5
 
 You must specify all storage sizes in bytes.
 
-[note type="caution"]
+<strong>NOTE:</strong> 
 This action will remove the configuration that may exist on any block device.
-[/note]
+
 
 <a href="#heading--create-an-a-or-aaaa-record-in-dns"><h2 id="heading--create-an-a-or-aaaa-record-in-dns">Create an A or AAAA record in DNS</h2></a>
 

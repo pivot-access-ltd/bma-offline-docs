@@ -598,8 +598,7 @@
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
  snap-2-9-ui -->
 
-<h2 id="heading--enabling-dhcp">Enabling DHCP</h2>
-
+<p><a href="#heading--enabling-dhcp"><h2 id="heading--enabling-dhcp">Enabling DHCP</h2></a></p>
 <p>MAAS-managed DHCP needs a reserved dynamic IP range enlist and commission machines. You should create such a range when you are enabling DHCP with the web UI.</p>
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 To enable MAAS-managed DHCP, under the 'Subnets' page select the desired VLAN and then:
@@ -631,16 +630,14 @@ You must enable DHCP for PXE booting on the &lsquo;untagged&rsquo; VLAN.</p>
 <pre><code class="bash">maas $PROFILE subnet update $SUBNET_CIDR gateway_ip=$MY_GATEWAY
 </code></pre>
 
-<h3 id="heading--resolving-ip-conflicts">Resolving IP conflicts</h3>
-
+<p><a href="#heading--resolving-ip-conflicts"><h3 id="heading--resolving-ip-conflicts">Resolving IP conflicts</h3></a></p>
 <p>In some cases, MAAS manages a subnet that is not empty, which could result in MAAS assigning a duplicate IP address.  MAAS is capable of detecting IPs in use on a subnet.  Be aware that there are two caveats:</p>
 <ol>
 <li>If a previously-assigned NIC is in a quiescent state or turned off, MAAS may not detect it before duplicating an IP address.</li>
 </ol>
 <p>2/ At least one rack controller must have access to the IP-assigned machine in order for this feature to work.</p>
 <p>MAAS also recognises when the subnet ARP cache is full, so that it can re-check the oldest IPs added to the cache to search for free IP addresses.</p>
-<h2 id="heading--extending-a-reserved-dynamic-ip-range">Extending a reserved dynamic IP range</h2>
-
+<p><a href="#heading--extending-a-reserved-dynamic-ip-range"><h2 id="heading--extending-a-reserved-dynamic-ip-range">Extending a reserved dynamic IP range</h2></a></p>
 <!-- deb-2-7-cli
 If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](ip-ranges.html)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
  deb-2-7-cli -->
@@ -686,8 +683,7 @@ If necessary, it is possible to add further portions of the subnet to the dynami
 If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](ip-ranges.html)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
  snap-2-9-ui -->
 
-<h2 id="heading--external-dhcp-and-a-reserved-ip-range">External DHCP and a reserved IP range</h2>
-
+<p><a href="#heading--external-dhcp-and-a-reserved-ip-range"><h2 id="heading--external-dhcp-and-a-reserved-ip-range">External DHCP and a reserved IP range</h2></a></p>
 <!-- deb-2-7-cli
 If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](ip-ranges.html) to create such a range. It should correspond to the lease range of the external server.
  deb-2-7-cli -->
@@ -733,8 +729,7 @@ If an external DHCP server is used to deploy machines, then a reserved IP range 
 If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](ip-ranges.html) to create such a range. It should correspond to the lease range of the external server.
  snap-2-9-ui -->
 
-<h2 id="heading--dhcp-relay">DHCP relay</h2>
-
+<p><a href="#heading--dhcp-relay"><h2 id="heading--dhcp-relay">DHCP relay</h2></a></p>
 <p>You should not enable DHCP relays in MAAS without sufficient planning.  In particular, MAAS does not provide the actual relay. It must be set up as an external service by the administrator. What MAAS does provide is the DHCP configuration that MAAS-managed DHCP requires in order to satisfy any client requests relayed from another VLAN.</p>
 <p>To relay from one VLAN (source) to another VLAN (target):</p>
 <ol>
@@ -759,8 +754,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 <pre><code class="bash">maas $PROFILE vlan update 2 0 relay_van=5002
 </code></pre>
 
-<h2 id="heading--dhcp-snippets">DHCP Snippets</h2>
-
+<p><a href="#heading--dhcp-snippets"><h2 id="heading--dhcp-snippets">DHCP Snippets</h2></a></p>
 <p>When MAAS manages DHCP, you customise it through the use of DHCP snippets. These are user-defined configuration options that can be applied either globally, per subnet, or per machine. You apply a global snippet to all VLANs, subnets, and machines. All three types end up in <code>/var/lib/maas/dhcpd.conf</code> or <code>/var/lib/maas/dhcpd6.conf</code>. For information on what options to use, refer to the <a href="http://manpages.ubuntu.com/cgi-bin/search.py?q=dhcpd.conf"><code>dhcpd.conf</code> man page</a>.</p>
 <!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 When MAAS manages DHCP, you customise it through the use of DHCP snippets. These are user-defined configuration options that can be applied either globally, per subnet, or per machine. You apply a global snippet to all VLANs, subnets, and machines. All three types end up in `/var/snap/maas/common/maas/dhcpd.conf` or `/var/snap/maas/common/maas/dhcpd6.conf`. Be aware that if you edit these files directly, you will need to `sudo` to `root`, as there is no `maas` user in the snap (all relevant files are owned by `root`). For information on what options to use, refer to the [`dhcpd.conf` man page](http://manpages.ubuntu.com/cgi-bin/search.py?q=dhcpd.conf).
@@ -797,8 +791,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 </code></pre>
 
 <p>You can also use a hostname instead of the node ID.</p>
-<h3 id="heading--list-snippets">List snippets</h3>
-
+<p><a href="#heading--list-snippets"><h3 id="heading--list-snippets">List snippets</h3></a></p>
 <p>To list all snippets (and their characteristics) in the MAAS:</p>
 <pre><code class="bash">maas $PROFILE dhcpsnippets read
 </code></pre>
@@ -811,22 +804,19 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 <pre><code class="bash">maas $PROFILE dhcpsnippet read name=$DHCP_SNIPPET_NAME
 </code></pre>
 
-<h3 id="heading--update-a-snippet">Update a snippet</h3>
-
+<p><a href="#heading--update-a-snippet"><h3 id="heading--update-a-snippet">Update a snippet</h3></a></p>
 <p>Update a snippet attribute:</p>
 <pre><code class="bash">maas $PROFILE dhcpsnippet update $DHCP_SNIPPET_ID &lt;option=value&gt;
 </code></pre>
 
 <p>You can also use a snippet name instead of its ID.</p>
-<h3 id="heading--enable-or-disable-a-snippet">Enable or disable a snippet</h3>
-
+<p><a href="#heading--enable-or-disable-a-snippet"><h3 id="heading--enable-or-disable-a-snippet">Enable or disable a snippet</h3></a></p>
 <p>Enabling and disabling a snippet is considered a snippet update and is done via a boolean option (&lsquo;true&rsquo; or &lsquo;false&rsquo;). You can disable a snippet like this:</p>
 <pre><code class="bash">maas $PROFILE dhcpsnippet update $DHCP_SNIPPET_ID enabled=false
 </code></pre>
 
 <p>When you disable a snippet, MAAS removes the text you added to the dhcpd.conf file when you created the snippet.</p>
-<h3 id="heading--delete-a-snippet">Delete a snippet</h3>
-
+<p><a href="#heading--delete-a-snippet"><h3 id="heading--delete-a-snippet">Delete a snippet</h3></a></p>
 <p>To delete a snippet:</p>
 <pre><code class="bash">maas $PROFILE dhcpsnippet delete $DHCP_SNIPPET_ID
 </code></pre>

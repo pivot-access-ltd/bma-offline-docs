@@ -471,8 +471,7 @@
 <li><a href="#heading--network-validation-scripts-and-testing">How do I use network validation and testing scripts?</a></li>
 <li><a href="#heading--customisable-network-testing">How can I customise network testing?</a></li>
 </ol>
-<h2 id="heading--network-link-testing">Network link testing</h2>
-
+<p><a href="#heading--network-link-testing"><h2 id="heading--network-link-testing">Network link testing</h2></a></p>
 <p>MAAS can check whether links are connected or disconnected, so that you can detect unplugged cables.  If you are not running MAAS 2.7, you must first upgrade and then recommission your machines to find disconnected links.  MAAS not only reports unplugged cables, but also gives a warning when trying to configure a disconnected interface.  In addition, administrators can change the cable connection status after manually resolving the issue.</p>
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 To check network testing results, enter the following command:
@@ -508,8 +507,7 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 <p><a href="images/b8b24a2e5fbc40b6469a24733a518b510cf0d955.jpeg" target = "_blank"><img src="images/b8b24a2e5fbc40b6469a24733a518b510cf0d955.jpeg"></a></a> </p>
-<h2 id="heading--slow-link-detection">Detect slow network links</h2>
-
+<p><a href="#heading--slow-link-detection"><h2 id="heading--slow-link-detection">Detect slow network links</h2></a></p>
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 As servers and hardware get faster, the chances increase that you might encounter a speed mismatch when connecting your NIC to a network device.  MAAS can warn you if your interface is connected to a link slower than what the interface supports, when you run the above command:
 
@@ -540,8 +538,7 @@ interface_speed=$NEW_INTERFACE_SPEED
 
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-<h2 id="heading--network-validation-scripts-and-testing">Network validation and testing scripts</h2>
-
+<p><a href="#heading--network-validation-scripts-and-testing"><h2 id="heading--network-validation-scripts-and-testing">Network validation and testing scripts</h2></a></p>
 <p>MAAS allows you to configure network connectivity testing in a number of ways. If MAAS can’t connect to the rack controller, deployment can’t complete.  MAAS can check connectivity to the rack controller and warn you if there’s no link, long before you have to try and debug it. For example, if you can’t connect to your gateway controller, traffic can’t leave your network. </p>
 <p>MAAS can check this link and recognise that there’s no connectivity, which alleviates hard-to-detect network issues:</p>
 <p><a href="images/c4f81cb3ef1a90f0a46fb62c893a4cc9f7e5f45a.jpeg" target = "_blank"><img src="images/c4f81cb3ef1a90f0a46fb62c893a4cc9f7e5f45a.jpeg"></a></a> </p>
@@ -568,8 +565,7 @@ To test individual interfaces, for example, you could issue the following comman
 Note that in this command, we are testing internet connectivity to the single interface "br0."
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-<h2 id="heading--customisable-network-testing">Customise network testing</h2>
-
+<p><a href="#heading--customisable-network-testing"><h2 id="heading--customisable-network-testing">Customise network testing</h2></a></p>
 <p>MAAS allow you to customise network testing according to your needs.  You can create your own commissioning scripts and tests related to networking, and you can run them during the network testing portion of the MAAS workflow.</p>
 <p><a href="images/0dcf089dbd8efc2fc9d0782d3b15f47647e950b8.jpeg" target = "_blank"><img src="images/0dcf089dbd8efc2fc9d0782d3b15f47647e950b8.jpeg"></a></a> </p>
 <p>There are no particular restrictions on these scripts, so you can test a wide variety of possible conditions and situations.  Administrators can upload network tests and test scripts.  Administrators can also create tests which accept an interface parameter, or scripts which apply custom network configurations.  </p>

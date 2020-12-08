@@ -477,8 +477,7 @@
 <li><a href="#heading--configuring-prometheus">How do I configure Prometheus endpoints?</a></li>
 <li><a href="#heading--deploying-prometheus-and-grafana">How can I deploy Prometheus and Grafana?</a></li>
 </ol>
-<h2 id="heading--enabling-prometheus-endpoints">Enabling Prometheus endpoints</h2>
-
+<p><a href="#heading--enabling-prometheus-endpoints"><h2 id="heading--enabling-prometheus-endpoints">Enabling Prometheus endpoints</h2></a></p>
 <p>Whenever you install the <code>python3-prometheus-client</code> library, Prometheus endpoints are exposed over HTTP by the <code>rackd</code> and <code>regiond</code> processes under the default <code>/metrics</code> path.</p>
 <p><strong>NOTE:</strong> 
 Currently, prometheus metrics are shared when rack and region controllers are running on the same machine, even though each service provides its own port.  You can safely only query one of the two ports if you&rsquo;re running both controllers.</p>
@@ -501,8 +500,7 @@ sudo systemctl restart maas-regiond
 <p>After installing the <code>python3-prometheus-client</code> library as describe above, run the following to enable stats:</p>
 <pre><code>maas $PROFILE maas set-config name=prometheus_enabled value=true
 </code></pre>
-<h2 id="heading--configuring-prometheus">Configuring Prometheus</h2>
-
+<p><a href="#heading--configuring-prometheus"><h2 id="heading--configuring-prometheus">Configuring Prometheus</h2></a></p>
 <p>Once the <code>/metrics</code> endpoint is available in MAAS services, Prometheus can be configured to scrape metric values from these. You can configure this by adding a stanza like the following to the <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/">prometheus configuration^</a>:</p>
 <pre><code class="yaml">    - job_name: maas
       static_configs:
@@ -523,8 +521,7 @@ sudo systemctl restart maas-regiond
 </code></pre>
 
 <p>In case of a multi-host deploy, adding a single IP for any of the MAAS hosts running <code>regiond</code> will suffice.</p>
-<h2 id="heading--deploying-prometheus-and-grafana">Deploying Prometheus and Grafana</h2>
-
+<p><a href="#heading--deploying-prometheus-and-grafana"><h2 id="heading--deploying-prometheus-and-grafana">Deploying Prometheus and Grafana</h2></a></p>
 <p><a href="https://grafana.com/">Grafana^</a> and Prometheus can be easily deployed using <a href="https://jujucharms.com/">Juju^</a>.</p>
 <p>The <a href="https://git.launchpad.net/~maas-committers/maas/+git/maas-performance">MAAS performance repo^</a> repository provides a sample <code>deploy-stack</code> script that will deploy and configure the stack on LXD containers.</p>
 <p>First, you must install juju via:</p>

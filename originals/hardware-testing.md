@@ -1,92 +1,44 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|CLI ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ UI|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|CLI ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ UI|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|CLI ~ [UI](/t/hardware-testing/2681)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ UI|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|CLI ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ UI|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|CLI ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ UI|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
  snap-2-9-ui -->
 
 If you wish, you can tell MAAS to test machine hardware using well-known Linux utilities.  MAAS can test machines that have  a status of **Ready**, **Broken**, or **Deployed**.  You can include testing as part of the commissioning process. When you choose the 'Commission' action, MAAS will display the dialog described below.  Be aware, though, that if the hardware tests fail, the machine will become unavailable for Deployment.
 
-[note]
+<strong>NOTE:</strong> 
 The majority of testing scripts only work with machines that are backed by physical hardware (e.g. they may be incompatible with VM-based machines).
-[/note]
+
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 With MAAS, you can easily write, upload and execute your hardware testing scripts and see the results.
@@ -147,9 +99,9 @@ MAAS keeps a history of all uploaded script versions, allowing you to easily rev
 maas $PROFILE node-script revert $SCRIPT_NAME to=$VERSION_ID
 ```
 
-[note type="negative" status="Warning"]
+<strong>NOTE:</strong> 
 The history for later modifications will be lost when reverting to an earlier version of the script.
-[/note]
+
 
 To download a script, enter the following:
 
@@ -257,9 +209,9 @@ maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
  filetype=tar.xz > $LOCAL_FILENAME
 ```
 
-[note]
+<strong>NOTE:</strong> 
 **$RUN_ID** is labelled `id` in the verbose result output.
-[/note]
+
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 

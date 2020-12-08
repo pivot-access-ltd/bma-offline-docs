@@ -1,159 +1,111 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/controllers/2718) ~ [UI](/t/controllers/2719)|[CLI](/t/controllers/2720) ~ [UI](/t/controllers/2721)|[CLI](/t/controllers/2722) ~ [UI](/t/controllers/2723)|
-|Packages|CLI ~ [UI](/t/controllers/2725)|[CLI](/t/controllers/2726) ~ [UI](/t/controllers/2727)|[CLI](/t/controllers/2728) ~ [UI](/t/controllers/2729)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/controllers/2718) ~ [UI](/t/controllers/2719)|[CLI](/t/controllers/2720) ~ [UI](/t/controllers/2721)|[CLI](/t/controllers/2722) ~ [UI](/t/controllers/2723)|
-|Packages|[CLI](/t/controllers/2724) ~ UI|[CLI](/t/controllers/2726) ~ [UI](/t/controllers/2727)|[CLI](/t/controllers/2728) ~ [UI](/t/controllers/2729)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/controllers/2718) ~ [UI](/t/controllers/2719)|[CLI](/t/controllers/2720) ~ [UI](/t/controllers/2721)|[CLI](/t/controllers/2722) ~ [UI](/t/controllers/2723)|
-|Packages|[CLI](/t/controllers/2724) ~ [UI](/t/controllers/2725)|CLI ~ [UI](/t/controllers/2727)|[CLI](/t/controllers/2728) ~ [UI](/t/controllers/2729)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/controllers/2718) ~ [UI](/t/controllers/2719)|[CLI](/t/controllers/2720) ~ [UI](/t/controllers/2721)|[CLI](/t/controllers/2722) ~ [UI](/t/controllers/2723)|
-|Packages|[CLI](/t/controllers/2724) ~ [UI](/t/controllers/2725)|[CLI](/t/controllers/2726) ~ UI|[CLI](/t/controllers/2728) ~ [UI](/t/controllers/2729)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/controllers/2718) ~ [UI](/t/controllers/2719)|[CLI](/t/controllers/2720) ~ [UI](/t/controllers/2721)|[CLI](/t/controllers/2722) ~ [UI](/t/controllers/2723)|
-|Packages|[CLI](/t/controllers/2724) ~ [UI](/t/controllers/2725)|[CLI](/t/controllers/2726) ~ [UI](/t/controllers/2727)|CLI ~ [UI](/t/controllers/2729)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/controllers/2718) ~ [UI](/t/controllers/2719)|[CLI](/t/controllers/2720) ~ [UI](/t/controllers/2721)|[CLI](/t/controllers/2722) ~ [UI](/t/controllers/2723)|
-|Packages|[CLI](/t/controllers/2724) ~ [UI](/t/controllers/2725)|[CLI](/t/controllers/2726) ~ [UI](/t/controllers/2727)|[CLI](/t/controllers/2728) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/controllers/2719)|[CLI](/t/controllers/2720) ~ [UI](/t/controllers/2721)|[CLI](/t/controllers/2722) ~ [UI](/t/controllers/2723)|
-|Packages|[CLI](/t/controllers/2724) ~ [UI](/t/controllers/2725)|[CLI](/t/controllers/2726) ~ [UI](/t/controllers/2727)|[CLI](/t/controllers/2728) ~ [UI](/t/controllers/2729)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/controllers/2718) ~ UI|[CLI](/t/controllers/2720) ~ [UI](/t/controllers/2721)|[CLI](/t/controllers/2722) ~ [UI](/t/controllers/2723)|
-|Packages|[CLI](/t/controllers/2724) ~ [UI](/t/controllers/2725)|[CLI](/t/controllers/2726) ~ [UI](/t/controllers/2727)|[CLI](/t/controllers/2728) ~ [UI](/t/controllers/2729)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/controllers/2718) ~ [UI](/t/controllers/2719)|CLI ~ [UI](/t/controllers/2721)|[CLI](/t/controllers/2722) ~ [UI](/t/controllers/2723)|
-|Packages|[CLI](/t/controllers/2724) ~ [UI](/t/controllers/2725)|[CLI](/t/controllers/2726) ~ [UI](/t/controllers/2727)|[CLI](/t/controllers/2728) ~ [UI](/t/controllers/2729)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/controllers/2718) ~ [UI](/t/controllers/2719)|[CLI](/t/controllers/2720) ~ UI|[CLI](/t/controllers/2722) ~ [UI](/t/controllers/2723)|
-|Packages|[CLI](/t/controllers/2724) ~ [UI](/t/controllers/2725)|[CLI](/t/controllers/2726) ~ [UI](/t/controllers/2727)|[CLI](/t/controllers/2728) ~ [UI](/t/controllers/2729)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/controllers/2718) ~ [UI](/t/controllers/2719)|[CLI](/t/controllers/2720) ~ [UI](/t/controllers/2721)|CLI ~ [UI](/t/controllers/2723)|
-|Packages|[CLI](/t/controllers/2724) ~ [UI](/t/controllers/2725)|[CLI](/t/controllers/2726) ~ [UI](/t/controllers/2727)|[CLI](/t/controllers/2728) ~ [UI](/t/controllers/2729)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/controllers/2718) ~ [UI](/t/controllers/2719)|[CLI](/t/controllers/2720) ~ [UI](/t/controllers/2721)|[CLI](/t/controllers/2722) ~ UI|
-|Packages|[CLI](/t/controllers/2724) ~ [UI](/t/controllers/2725)|[CLI](/t/controllers/2726) ~ [UI](/t/controllers/2727)|[CLI](/t/controllers/2728) ~ [UI](/t/controllers/2729)|
  snap-2-9-ui -->
 
 Most of the functionality of MAAS is contained in a series of controllers.  There are two basic types: a region controller and one or more rack controllers. The region controller deals with operator requests, while the rack controller(s) provides high-bandwidth services to the individual machines.  In essence, the region controller interacts with the user, while the rack controllers manage the bare metal.
 
 <!-- deb-2-7-cli
-[note]
+<strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/-/2688).
-[/note]
+
 deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-[note]
+<strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/-/2689).
-[/note]
+
 deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-[note]
+<strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2690).
-[/note]
+
 deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-[note]
+<strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2691).
-[/note]
+
 deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-[note]
+<strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2692).
-[/note]
+
 deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-[note]
+<strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2693).
-[/note]
+
 deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-[note]
+<strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2682).
-[/note]
+
 snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-[note]
+<strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2683).
-[/note]
+
 snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-[note]
+<strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2684).
-[/note]
+
 snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-[note]
+<strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2685).
-[/note]
+
 snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-[note]
+<strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2686).
-[/note]
+
 snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-[note]
+<strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2687).
-[/note]
+
 snap-2-9-ui -->
 
 #### Two questions you might have:

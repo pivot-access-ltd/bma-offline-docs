@@ -467,8 +467,7 @@
 <p>A physical block device is a physically attached block device such as a 100GB hard drive connected to a server.</p>
 <p><strong>Virtual</strong></p>
 <p>A virtual block device is a block device that is exposed by the Linux kernel when an operation is performed. Almost all the operations on a physical block device can be performed on a virtual block device, such as a RAID device exposed as md0.</p>
-<h3 id="heading--list-block-devices">List Block Devices</h3>
-
+<p><a href="#heading--list-block-devices"><h3 id="heading--list-block-devices">List Block Devices</h3></a></p>
 <p>To view all block devices on a machine use the read operation. This list both physical and virtual block devices, as you can see in the output from the following command:</p>
 <pre><code class="bash">maas admin block-devices read &lt;node-id&gt;
 </code></pre>
@@ -546,8 +545,7 @@ Machine-readable output follows:
 ]
 </code></pre>
 
-<h3 id="heading--read-block-device">Read Block Device</h3>
-
+<p><a href="#heading--read-block-device"><h3 id="heading--read-block-device">Read Block Device</h3></a></p>
 <p>If you want to read just one block device instead of listing all block devices the read operation on the block device endpoint provides that information. To display the details on device &lsquo;11&rsquo; from the previous output, for example, we could enter:</p>
 <pre><code class="bash">maas admin block-device read &lt;node-id&gt; 11
 </code></pre>
@@ -591,8 +589,7 @@ Machine-readable output follows:
 MAAS allows the name of a block device to be changed. If the block device name has changed then the API call needs to use the new name.</p>
 <pre><code>Using the ID is safer as it never changes.
 </code></pre>
-<h3 id="heading--create-block-device">Create Block Device</h3>
-
+<p><a href="#heading--create-block-device"><h3 id="heading--create-block-device">Create Block Device</h3></a></p>
 <p>MAAS gathers the required information itself on block devices when re- commissioning a machine. If this doesn&rsquo;t provide the required information, it is also possible - though not recommended - for an administrator to use the API to manually add a physical block device to a machine.</p>
 <pre><code class="bash">maas admin block-devices create &lt;node-id&gt; name=vdb model=&quot;QEMU&quot; serial=&quot;QM00001&quot; size=21474836480 block_size=4096
 </code></pre>
@@ -624,8 +621,7 @@ Machine-readable output follows:
 
 <p><strong>NOTE:</strong> 
 The serial number is what MAAS will use when a machine is deployed to find the specific block device. It&rsquo;s important that this be correct. In a rare chance that your block device does not provide a model or serial number you can provide an id_path. The id_path should be a path that is always the same, no matter the kernel version.</p>
-<h3 id="heading--update-block-device">Update Block Device</h3>
-
+<p><a href="#heading--update-block-device"><h3 id="heading--update-block-device">Update Block Device</h3></a></p>
 <p>An administrator can also update the details held on a physical block device, such as its name, from the API:</p>
 <pre><code class="bash">maas admin block-device update &lt;node-id&gt; 12 name=newroot
 </code></pre>
@@ -655,14 +651,12 @@ Machine-readable output follows:
 }
 </code></pre>
 
-<h3 id="heading--delete-block-device">Delete Block Device</h3>
-
+<p><a href="#heading--delete-block-device"><h3 id="heading--delete-block-device">Delete Block Device</h3></a></p>
 <p>Physical and virtual block devices can be deleted by an administrator, while ordinary users can only delete virtual block devices:</p>
 <pre><code class="bash">maas admin block-device delete &lt;node-id&gt; 12
 </code></pre>
 
-<h3 id="heading--format-block-device">Format Block Device</h3>
-
+<p><a href="#heading--format-block-device"><h3 id="heading--format-block-device">Format Block Device</h3></a></p>
 <p>An entire block device can be formatted by defining a filesystem with the &lsquo;format&rsquo; API call:</p>
 <pre><code class="bash">maas admin block-device format &lt;node-id&gt; 11 fstype=ext4
 </code></pre>
@@ -700,8 +694,7 @@ Machine-readable output follows:
 
 <p><strong>NOTE:</strong> 
 You cannot format a block device that contains partitions or is used to make another virtual block device.</p>
-<h3 id="heading--unformat-block-device">Unformat Block Device</h3>
-
+<p><a href="#heading--unformat-block-device"><h3 id="heading--unformat-block-device">Unformat Block Device</h3></a></p>
 <p>You can remove the filesystem from a block device with the &lsquo;unformat&rsquo; API call:</p>
 <pre><code class="bash">maas admin block-device unformat &lt;node-id&gt; 11
 </code></pre>
@@ -731,8 +724,7 @@ Machine-readable output follows:
 }
 </code></pre>
 
-<h3 id="heading--mount-block-device">Mount Block Device</h3>
-
+<p><a href="#heading--mount-block-device"><h3 id="heading--mount-block-device">Mount Block Device</h3></a></p>
 <p>If a block device has a filesystem, you can use the &lsquo;maas&rsquo; command to mount a block devices at a given mount point:</p>
 <pre><code class="bash">maas admin block-device mount &lt;node-id&gt; 11 mount_point=/srv
 </code></pre>
@@ -768,8 +760,7 @@ Machine-readable output follows:
 }
 </code></pre>
 
-<h3 id="heading--unmount-block-device">Unmount Block Device</h3>
-
+<p><a href="#heading--unmount-block-device"><h3 id="heading--unmount-block-device">Unmount Block Device</h3></a></p>
 <p>To remove the mount point from the block device, use the &lsquo;unmount&rsquo; call:</p>
 <pre><code class="bash">maas admin block-device unmount &lt;node-id&gt; 11 mount_point=/srv
 </code></pre>
@@ -805,8 +796,7 @@ Machine-readable output follows:
 }
 </code></pre>
 
-<h3 id="heading--set-as-boot-disk">Set as Boot Disk</h3>
-
+<p><a href="#heading--set-as-boot-disk"><h3 id="heading--set-as-boot-disk">Set as Boot Disk</h3></a></p>
 <p>By default, MAAS picks the first added block device to the machine as the boot disk. In most cases this works as expected as the BIOS usually enumerates the boot disk as the first block device. There are cases where this fails and the boot disk needs to be set to another disk. This API allow setting which block device on a machine MAAS should use as the boot disk.:</p>
 <pre><code class="bash">maas admin block-device set-boot-disk &lt;node-id&gt; 10
 </code></pre>

@@ -513,8 +513,7 @@ snap-2-9-ui -->
 <li><a href="#heading--rackregion">How do rack and region controllers communicate?</a></li>
 <li><a href="hardening-your-maas-installation.html#heading--firewalls">What are rack controller port requirements?</a></li>
 </ol>
-<h2 id="heading--machinerack">How machines communicate with the rack controller</h2>
-
+<p><a href="#heading--machinerack"><h2 id="heading--machinerack">How machines communicate with the rack controller</h2></a></p>
 <p>All machine communication with MAAS is proxied through rack controllers, including HTTP metadata, DNS, syslog and APT (cache-and-forward proxies via Squid). </p>
 <p>MAAS creates an internal DNS domain, not manageable by the user, and a unique DNS resource for each subnet that is managed by MAAS. Each subnet includes all rack controllers that have an IP on that subnet. Booting machines use the subnet DNS resource to resolve the rack controller available for communication. If multiple rack controllers belong to the same subnet, MAAS uses a round-robin algorithm to balance the load across numerous rack controllers. This arrangement ensures that machines always have a rack controller.</p>
 <p>Machines use this internal domain for HTTP metadata queries, APT (proxying via Squid), and Syslog. DNS queries, PXE booting, and NTP polls use IP addresses.</p>
@@ -522,8 +521,7 @@ snap-2-9-ui -->
 <p><strong>NOTE:</strong> 
 Zone management and maintenance still happen within the region controller.</p>
 <p><a href="images/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg" target = "_blank"><img src="images/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg"></a></a></p>
-<h2 id="heading--rackregion">How region and rack controllers communicate</h2>
-
+<p><a href="#heading--rackregion"><h2 id="heading--rackregion">How region and rack controllers communicate</h2></a></p>
 <p>The MAAS region and rack controllers interact in a number of different ways, depending upon the operation you&rsquo;ve requested.  Consider the process of commissioning a machine, that is, taking over the machine and gathering information on its available resources, including CPU, RAM, storage, and MIB information (obtainable via LLDP requests).  Here&rsquo;s a rough idea of what that sequence looks like &ndash; a sequence that is representative of the communication between rack and region controllers:</p>
 <ol>
 <li>An operator makes a request of MAAS, either via the Web UI or the API.  </li>

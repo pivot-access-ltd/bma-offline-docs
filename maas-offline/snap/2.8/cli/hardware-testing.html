@@ -473,8 +473,7 @@ The majority of testing scripts only work with machines that are backed by physi
 <li><a href="cli-commissioning-and-hardware-testing-scripts.html#heading--results">How do I view test results?</a></li>
 <li><a href="commissioning-and-hardware-testing-scripts.html#heading--metadata-fields">What metadata fields are available to me for test scripts?</a></li>
 </ol>
-<h2 id="heading--script-management">Script management</h2>
-
+<p><a href="#heading--script-management"><h2 id="heading--script-management">Script management</h2></a></p>
 <p>To upload a hardware testing script to MAAS, enter the following:</p>
 <pre><code class="bash">maas $PROFILE node-scripts create name=$SCRIPT_NAME name&gt; \
  script=$PATH_TO_SCRIPT type=testing
@@ -520,8 +519,7 @@ The history for later modifications will be lost when reverting to an earlier ve
 <pre><code class="bash">maas $PROFILE node-script delete $SCRIPT_NAME
 </code></pre>
 
-<h2 id="heading--tags">Tags</h2>
-
+<p><a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a></p>
 <p>As with general <a href="cli-tag-management.html">tag management</a>, tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:</p>
 <pre><code class="bash">maas $PROFILE node-script add-tag $SCRIPT_NAME tag=$TAG
 maas $PROFILE node-script remove-tag $SCRIPT_NAME tag=$TAG
@@ -538,8 +536,7 @@ maas $PROFILE node-script remove-tag $SCRIPT_NAME tag=$TAG
 </code></pre>
 
 <p>Any testing scripts tagged with commissioning will also run during commissioning.</p>
-<h2 id="heading--results">Results</h2>
-
+<p><a href="#heading--results"><h2 id="heading--results">Results</h2></a></p>
 <p>The command line allows you to not only view the current script&rsquo;s progress but also retrieve the verbatim output from any previous runs too.</p>
 <p>If you only want to see the latest or currently-running result, you can use <code>current-commissioning</code>, <code>current-testing</code>, or <code>current-installation</code> instead of an id:</p>
 <pre><code class="bash">maas $PROFILE node-script-result read $SYSTEM_ID $RESULTS
@@ -604,7 +601,7 @@ maas $PROFILE node-script remove-tag $SCRIPT_NAME tag=$TAG
 1. [How do I apply a hardware test?](#heading--apply-a-hardware-test)
 2. [What scripts are available for testing?](#heading--included-scripts)
 
-<h2 id="heading--apply-a-hardware-test">Apply a hardware test</h2>
+<a href="#heading--apply-a-hardware-test"><h2 id="heading--apply-a-hardware-test">Apply a hardware test</h2></a>
 
 To launch a test, select the target machine from the 'Machines' page and use the 'Take action' drop-down menu to select 'Test hardware'. When ready, hit the 'Test machine' button. Here, a test is applied to a deployed machine:
 
@@ -616,7 +613,7 @@ A default test will be selected (`smartctl-validate`, a hard drive test) but you
 
 <a href="images/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png" target = "_blank"><img src="images/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png"></a></a>
 
-<h2 id="heading--included-scripts">Scripts available for testing</h2>
+<a href="#heading--included-scripts"><h2 id="heading--included-scripts">Scripts available for testing</h2></a>
 
 The following hardware testing scripts can be selected from the web UI:
 

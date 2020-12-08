@@ -97,7 +97,7 @@ Configuring a proxy with MAAS consists of enabling/disabling one of the above th
 1. [How and why should I create an internal proxy?](#heading--internal-proxy-maas-proxy)
 2. [How and why should I create an external proxy?](#heading--configure-proxy)
 
-<h2 id="heading--internal-proxy-maas-proxy">Internal proxy (MAAS proxy)</h2>
+<a href="#heading--internal-proxy-maas-proxy"><h2 id="heading--internal-proxy-maas-proxy">Internal proxy (MAAS proxy)</h2></a>
 
 MAAS provides an internal proxy server. Although it is set up to work well with APT/package requests, it is effectively an HTTP caching proxy server. If you configure the MAAS region controller as the default gateway for the machines it manages then the proxy will work transparently (on TCP port 3128). Otherwise, machines will need to access it on TCP port 8000.
 
@@ -113,7 +113,7 @@ deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
 snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
 
-<h2 id="heading--configure-proxy">Configure proxy</h2>
+<a href="#heading--configure-proxy"><h2 id="heading--configure-proxy">Configure proxy</h2></a>
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 Enabling and disabling proxying, in general, is done via a boolean option ('true' or 'false'). The following command will disable proxying completely:

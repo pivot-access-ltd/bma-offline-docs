@@ -200,7 +200,7 @@ A machine's storage is dependant upon the underlying system's disks, but its con
 MAAS supports storage configuration for CentOS and RHEL deployments. Support includes RAID, LVM, and custom partitioning with different file systems (ZFS and bcache excluded). This support requires a newer version of Curtin, [available as a PPA^](https://launchpad.net/ubuntu/+source/curtin).
 [/note]
 
-<h2 id="heading--uefi">UEFI</h2>
+<a href="#heading--uefi"><h2 id="heading--uefi">UEFI</h2></a>
 
 Every layout type supports a machine booting with UEFI. In such a case, MAAS automatically creates an EFI boot partition (`/boot/efi`). Other than setting the machine to boot from UEFI, the user does not need to take any additional action.
 
@@ -210,7 +210,7 @@ UEFI must be enabled or disabled for the lifespan of the machine. For example, d
 
 The EFI partition, if created, will be the first partition (`sda1`) and will have a FAT32 filesystem with a size of 512 MB.
 
-<h2 id="heading--layouts">Layouts</h2>
+<a href="#heading--layouts"><h2 id="heading--layouts">Layouts</h2></a>
 
 There are three layout types:
 
@@ -220,7 +220,7 @@ There are three layout types:
 
 The layout descriptions below will include the EFI partition. If your system is not using UEFI, regard `sda2` as `sda1` (with an additional 512 MB available to it).
 
-<h3 id="heading--flat-layout">Flat layout</h3>
+<a href="#heading--flat-layout"><h3 id="heading--flat-layout">Flat layout</h3></a>
 
 With the Flat layout, a partition spans the entire boot disk. The partition is formatted with the ext4 filesystem and uses the `/` mount point:
 
@@ -238,7 +238,7 @@ The following three options are supported:
 
 3. `root_size`: Size of the root partition. Default is 100%, meaning the entire size of the root device.
 
-<h3 id="heading--lvm-layout">LVM layout</h3>
+<a href="#heading--lvm-layout"><h3 id="heading--lvm-layout">LVM layout</h3></a>
 
 The LVM layout creates the volume group `vgroot` on a partition that spans the entire boot disk. A logical volume `lvroot` is created for the full size of the volume group; is formatted with the ext4 filesystem; and uses the `/` mount point:
 
@@ -259,7 +259,7 @@ The following six options are supported:
 5. `lv_name`: Name of the created logical volume. Default is `lvroot`.
 6. `lv_size`: Size of the created logical volume. Default is 100%, meaning the entire size of the volume group.
 
-<h3 id="heading--bcache-layout">bcache layout</h3>
+<a href="#heading--bcache-layout"><h3 id="heading--bcache-layout">bcache layout</h3></a>
 
 A bcache layout will create a partition that spans the entire boot disk as the backing device. It uses the smallest block device tagged with 'ssd' as the cache device. The bcache device is formatted with the ext4 filesystem and uses the `/` mount point. If there are no 'ssd' tagged block devices on the machine, then the bcache device will not be created, and the Flat layout will be used instead:
 
@@ -282,7 +282,7 @@ The following seven options are supported:
 6. `cache_size`: The size of the partition on the cache device. Default is 100%, meaning the entire size of the cache device.
 7. `cache_no_part`: Whether or not to create a partition on the cache device. Default is false, meaning to create a partition using the given `cache_size`. If set to true, no partition will be created, and the raw cache device will be used as the cache.
 
-<h3 id="heading--vmfs6-layout">VMFS6 layout</h3>
+<a href="#heading--vmfs6-layout"><h3 id="heading--vmfs6-layout">VMFS6 layout</h3></a>
 
 The VMFS6 layout is used for VMware ESXi deployments only. It is required when configuring VMware VMFS Datastores. This layout creates all operating system partitions, in addition to the default datastore. The datastore may be modified.  New datastores may be created or extended to include other storage devices. The base operating system partitions may not be modified because VMware ESXi requires them. Once applied another storage layout must be applied to remove the operating system partitions.
 
@@ -305,7 +305,7 @@ The following options are supported:
 
 2. `root_size`: Size of the default VMFS Datastore. Default is 100%, meaning the remaining size of the root disk.
 
-<h3 id="heading--blank-layout">Blank layout</h3>
+<a href="#heading--blank-layout"><h3 id="heading--blank-layout">Blank layout</h3></a>
 
 The blank layout removes all storage configuration from all storage devices. It is useful when needing to apply a custom storage configuration.
 
@@ -313,7 +313,7 @@ The blank layout removes all storage configuration from all storage devices. It 
 Machines with the blank layout applied are not deployable; you must first configure storage manually.
 [/note]
 
-<h2 id="heading--setting-global-layouts">Setting layouts</h2>
+<a href="#heading--setting-global-layouts"><h2 id="heading--setting-global-layouts">Setting layouts</h2></a>
 
 Layouts can be set globally and on a per-machine basis.
 
@@ -344,7 +344,7 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 The new default will only apply to newly-commissioned machines.
 [/note]
 
-<h3 id="heading--per-machine-layouts">Machine layout</h3>
+<a href="#heading--per-machine-layouts"><h3 id="heading--per-machine-layouts">Machine layout</h3></a>
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of 'Ready'. This is only possible via the CLI: to see how, click the "CLI" option for your version and delivery method above.
@@ -372,6 +372,6 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 Only an administrator can modify storage at the block device level (providing the machine has a status of 'Ready').
 [/note]
 
-<h2 id="heading--final-storage-modifications">Final storage modifications</h2>
+<a href="#heading--final-storage-modifications"><h2 id="heading--final-storage-modifications">Final storage modifications</h2></a>
 
 Once MAAS provisions a machine with block devices, via a layout or administrator customisation, a regular user can modify the resulting storage configuration at the filesystem level.

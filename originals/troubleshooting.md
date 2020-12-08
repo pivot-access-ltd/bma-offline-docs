@@ -112,9 +112,9 @@ mkdir xenial
 sudo tar -C xenial -xpSf xenial-server-cloudimg-amd64-root.tar.gz --numeric-owner --xattrs "--xattrs-include=*"
 ```
 
-[note]
+<strong>NOTE:</strong> 
 `sudo` is required when extracting the image filesystem and when making changes to the files extracted from the image filesystem.
-[/note]
+
 
 <a href="#heading--generate-password-hash"><h3 id="heading--generate-password-hash">Generate password hash</h3></a>
 
@@ -177,3 +177,4 @@ chown maas:maas squashfs
 You can now use this image to commission or deploy a node and access the root account with the backdoor password, such as by deploying the same specific image from the web UI to the node you wish to troubleshoot.
 
 <a href="https://assets.ubuntu.com/v1/f622d104-troulbeshoot-faq__2.3_deploy.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/f622d104-troulbeshoot-faq__2.3_deploy.png"></a>
+

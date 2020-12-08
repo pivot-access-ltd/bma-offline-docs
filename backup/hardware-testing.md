@@ -98,7 +98,7 @@ With MAAS, you can easily write, upload and execute your hardware testing script
 3. [How do I view test results?](/t/cli-commissioning-and-hardware-testing-scripts/832#heading--results)
 4. [What metadata fields are available to me for test scripts?](/t/commissioning-and-hardware-testing-scripts/833#heading--metadata-fields)
 
-<h2 id="heading--script-management">Script management</h2>
+<a href="#heading--script-management"><h2 id="heading--script-management">Script management</h2></a>
 
 To upload a hardware testing script to MAAS, enter the following:
 
@@ -163,7 +163,7 @@ To delete a script, use `delete`:
 maas $PROFILE node-script delete $SCRIPT_NAME
 ```
 
-<h2 id="heading--tags">Tags</h2>
+<a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
 As with general [tag management](/t/cli-tag-management/801), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
 
@@ -188,7 +188,7 @@ maas $PROFILE machine commission \
 
 Any testing scripts tagged with commissioning will also run during commissioning.
 
-<h2 id="heading--results">Results</h2>
+<a href="#heading--results"><h2 id="heading--results">Results</h2></a>
 
 The command line allows you to not only view the current script's progress but also retrieve the verbatim output from any previous runs too.
 
@@ -269,7 +269,7 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 1. [How do I apply a hardware test?](#heading--apply-a-hardware-test)
 2. [What scripts are available for testing?](#heading--included-scripts)
 
-<h2 id="heading--apply-a-hardware-test">Apply a hardware test</h2>
+<a href="#heading--apply-a-hardware-test"><h2 id="heading--apply-a-hardware-test">Apply a hardware test</h2></a>
 
 To launch a test, select the target machine from the 'Machines' page and use the 'Take action' drop-down menu to select 'Test hardware'. When ready, hit the 'Test machine' button. Here, a test is applied to a deployed machine:
 
@@ -281,7 +281,7 @@ A default test will be selected (`smartctl-validate`, a hard drive test) but you
 
 <a href="https://assets.ubuntu.com/v1/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png"></a>
 
-<h2 id="heading--included-scripts">Scripts available for testing</h2>
+<a href="#heading--included-scripts"><h2 id="heading--included-scripts">Scripts available for testing</h2></a>
 
 The following hardware testing scripts can be selected from the web UI:
 

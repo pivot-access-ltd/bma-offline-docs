@@ -468,16 +468,14 @@
 <li><a href="#heading--add-vm-from-ui">How do I add a VM?</a></li>
 <li><a href="#heading--delete-a-machine">How do I delete a VM?</a></li>
 </ol>
-<h2 id="heading--add-vm-from-ui">Adding a VM from the Web UI</h2>
-
+<p><a href="#heading--add-vm-from-ui"><h2 id="heading--add-vm-from-ui">Adding a VM from the Web UI</h2></a></p>
 <p>While on VM host&rsquo;s details view, select &lsquo;Compose&rsquo; from the &lsquo;Take action&rsquo; drop-down menu to compose a machine.</p>
 <p><a href="images/937726bb839eefb28e9297e8f97bd48556c1014c.jpeg" target = "_blank"><img src="images/937726bb839eefb28e9297e8f97bd48556c1014c.jpeg"></a></a> </p>
 <p>You can choose which storage pool to use from a drop-down list. </p>
 <p>Click the &lsquo;Compose machine&rsquo; button when you&rsquo;re finished. MAAS will present the VM host detail view. In a few moments, your new machine will be auto-commissioned. The &lsquo;Machines&rsquo; page will reflect this as well.</p>
 <p>MAAS will deduct the new machine&rsquo;s resources from the VM host&rsquo;s resources:</p>
 <p><a href="images/3b621ab0e7b4f6a86963d2b7c50b677b815956ab.jpeg" target = "_blank"><img src="images/3b621ab0e7b4f6a86963d2b7c50b677b815956ab.jpeg"></a></a> </p>
-<h2 id="heading--delete-a-machine">Deleting a VM from the Web UI</h2>
-
+<p><a href="#heading--delete-a-machine"><h2 id="heading--delete-a-machine">Deleting a VM from the Web UI</h2></a></p>
 <p>To delete a VM, delete it as you would any other MAAS machine. Select the desired machine from the list of machines and select &lsquo;Delete&rsquo; from the &lsquo;Take Action&rsquo; menu.</p>
 <p><a href="images/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg" target = "_blank"><img src="images/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg"></a></a> </p>
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
@@ -492,7 +490,7 @@
 6. [How do I find a VM host ID?](#heading--find-vm-host-ids)
 7. [How do I delete a VM?](#heading--delete-a-vm)
 
-<h2 id="heading--adding-a-vm-from-the-cli">Adding a VM from the CLI</h2>
+<a href="#heading--adding-a-vm-from-the-cli"><h2 id="heading--adding-a-vm-from-the-cli">Adding a VM from the CLI</h2></a>
 
 To compose a basic VM:
 
@@ -505,7 +503,7 @@ Example output for default composing:
         "resource_uri": "/MAAS/api/2.0/machines/73yxmc/"
     }
 
-<h3 id="heading--set-resources">Set resources while adding a VM</h3>
+<a href="#heading--set-resources"><h3 id="heading--set-resources">Set resources while adding a VM</h3></a>
 
 Compose with resources specified:
 
@@ -520,7 +518,7 @@ Where $RESOURCES is a space-separated list of six constraints:
 5. *storage=* See [Storage](#heading--storage) below
 6. *interfaces=* See [Interfaces](#heading--interfaces) below
 
-<h3 id="heading--architecture">Setting the architecture while adding a VM</h3>
+<a href="#heading--architecture"><h3 id="heading--architecture">Setting the architecture while adding a VM</h3></a>
 
 To list available architectures:
 
@@ -531,7 +529,8 @@ Then, for example:
     maas $PROFILE vm-host compose $VM_HOST_ID \
         cores=40 cpu_speed=2000 memory=7812 architecture="amd64/generic"
 
-<h3 id="heading--storage">Setting storage parameters while adding a VM</h3>
+<a href="#heading--storage"><h3 id="heading--storage">Setting storage parameters while adding a VM</h3></a>
+
 
 Storage parameters look like this:
 
@@ -596,7 +595,7 @@ Finally, we deploy the machine. MAAS will use the partitions as we have defined 
 
     maas admin machine deploy $SYSTEM_ID
 
-<h3 id="heading--interfaces">Specifying interfaces while adding a VM</h3>
+<a href="#heading--interfaces"><h3 id="heading--interfaces">Specifying interfaces while adding a VM</h3></a>
 
 Using the `interfaces` constraint, you can compose virtual machines with interfaces, allowing the selection of VM host NICs.
 
@@ -606,7 +605,7 @@ If you specify an `interfaces` constraint, MAAS creates a `bridge` or `macvlan` 
 
 Consider the following interfaces constraint:
 
-    interfaces=eth0:space=maas,eth1:space=storage
+    interfaces=eth0:space=maas;eth1:space=storage
 
 Assuming you deploy the VM host on a machine or controller with access to the `maas` and `storage` [spaces](concepts-and-terms.html#heading--spaces), MAAS will create an `eth0` interface bound to the `maas` space and an `eth1` interface bound to the `storage` space.
 
@@ -618,7 +617,7 @@ MAAS automatically converts the `ip` constraint to a VLAN constraint (matching t
 
 See the Machines [MAAS API documentation](https://maas.io/docs/api#machines) for a list of all constraint keys.
 
-<h3 id="heading--find-vm-host-ids">Find VM host IDs</h3>
+<a href="#heading--find-vm-host-ids"><h3 id="heading--find-vm-host-ids">Find VM host IDs</h3></a>
 
 Here's a simple way to find a VM host's ID by name using `jq`:
 
@@ -629,7 +628,7 @@ Example output:
     "MyVMHost"
     1
 
-<h2 id="heading--delete-a-vm">Deleting a VM with the CLI</h2>
+<a href="#heading--delete-a-vm"><h2 id="heading--delete-a-vm">Deleting a VM with the CLI</h2></a>
 
     maas $PROFILE machine delete $SYSTEM_ID
 

@@ -1,3 +1,39 @@
+<!-- deb-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Packages|CLI ~ [UI](/t/-/2977)|[CLI](/t/-/2978) ~ [UI](/t/-/2979)|[CLI](/t/-/2980) ~ [UI](/t/-/2981)|
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Packages|[CLI](/t/-/2976) ~ UI|[CLI](/t/-/2978) ~ [UI](/t/-/2979)|[CLI](/t/-/2980) ~ [UI](/t/-/2981)|
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Packages|[CLI](/t/-/2976) ~ [UI](/t/-/2977)|CLI ~ [UI](/t/-/2979)|[CLI](/t/-/2980) ~ [UI](/t/-/2981)|
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Packages|[CLI](/t/-/2976) ~ [UI](/t/-/2977)|[CLI](/t/-/2978) ~ UI|[CLI](/t/-/2980) ~ [UI](/t/-/2981)|
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Packages|[CLI](/t/-/2976) ~ [UI](/t/-/2977)|[CLI](/t/-/2978) ~ [UI](/t/-/2979)|CLI ~ [UI](/t/-/2981)|
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Packages|[CLI](/t/-/2976) ~ [UI](/t/-/2977)|[CLI](/t/-/2978) ~ [UI](/t/-/2979)|[CLI](/t/-/2980) ~ UI|
+ deb-2-9-ui -->
+
 Package repositories managed within MAAS can be of two types:
 
 -   Ubuntu package repositories
@@ -9,7 +45,7 @@ MAAS further simplifies the addition of third-party repositories by also allowin
 
 An added repository can be disabled and re-enabled using a toggle switch to the right of it.
 
-<h2 id="heading--ubuntu-package-repositories">Ubuntu package repositories</h2>
+<a href="#heading--ubuntu-package-repositories"><h2 id="heading--ubuntu-package-repositories">Ubuntu package repositories</h2></a>
 
 An Ubuntu package repository is a repository that makes available Ubuntu packages to computers able to connect to it over the network, whether that network is private or public (e.g. the Internet).
 
@@ -39,7 +75,7 @@ Click 'Add repository' to save the configuration.
 
 A private repository can be built to assist with offline operations, based on the official repository. This repository can also contain custom packages.
 
-<h2 id="heading--personal-package-archives-ppa">Personal Package Archives (PPA)</h2>
+<a href="#heading--personal-package-archives-ppa"><h2 id="heading--personal-package-archives-ppa">Personal Package Archives (PPA)</h2></a>
 
 A Personal Package Archive (PPA) is a [Launchpad](https://launchpad.net)-based method for any individual (or team) to build and distribute packages for Ubuntu.
 
@@ -56,5 +92,3 @@ To add this PPA, then, hit the 'Add repository' button and fill in the fields. B
 Click 'Add repository' to save the configuration.
 
 See [Launchpad PPAs](https://help.launchpad.net/Packaging/PPA) for more information on PPAs.
-
-<!-- LINKS -->

@@ -16,6 +16,7 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 * [Interfaces](/t/concepts-and-terms/785#heading--interfaces)
 * [isolcpus](/t/concepts-and-terms/785#heading--isolcpus)
 * [LAN](/t/concepts-and-terms/785#heading--lan)
+* [lxd (tutorials)](/t/concepts-and-terms/785#heading--lxd-tutorials)
 * [MAC address](/t/concepts-and-terms/785#heading--mac-address)
 * [Machine](/t/concepts-and-terms/785#heading--machines)
 * [Machine actions](/t/concepts-and-terms/785#heading--machine-actions)
@@ -614,3 +615,18 @@ These four steps combine (at least) four general datasources to bring an instanc
 3. User data - data provided by end users or cloud administrators to initialise the instance.  This completely optional data can be anything from shellscripts to highly-structured cloud-config data that trigger cloud-init's built-ins.
 
 4. Vendor data - data provided by cloud platform vendors; this is identical (in principle) to user data, but derived from a different source.  In practice, vendor data usually handle things that users wouldn't normally specify, such as mirror setup, NTP service management, etc.
+
+<a href="#heading--lxd-tutorials"><h2 id="heading--lxd-tutorials">An extended LXD tutorial</h2></a>
+
+<a href="#heading--lxd-basic-install"><h3 id="heading--lxd-basic-install">Basic LXD installation</h3></a>
+
+<a href="#heading--lxd-basic-network-config"><h3 id="heading--lxd-basic-network-config">LXD basic network configuration</h3></a>
+
+1. make sure lxdbr0 IP address is captured
+2. go edit the *container's* /etc/netplan file
+3. netplan apply
+4. set up a new user same name as one on host who has an ssh public key
+5. make sure sshd is running on the container
+6. copy id_rsa.pub to .ssh dir on user's homedir on container
+7. copy id_rsa.pub to authorized_keys in .ssh dir in user's homedir on container
+8. test ssh

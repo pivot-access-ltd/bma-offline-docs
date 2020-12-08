@@ -127,7 +127,7 @@ maas admin users read \
 Note that you do not need line continuations within the `jq` command because it's quoted for the shell.
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-<h2 id="heading--add-a-user">Add a user</h2>
+<a href="#heading--add-a-user"><h2 id="heading--add-a-user">Add a user</h2></a>
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 To add a regular user, enter the following command:
@@ -147,12 +147,12 @@ Clicking the 'Add user' button will result in a form to be displayed:
 
 Fill in the fields and hit 'Add user' when done.
 
-<h2 id="heading--user-preferences">User preferences</h2>
+<a href="#heading--user-preferences"><h2 id="heading--user-preferences">User preferences</h2></a>
 
 Clicking the MAAS username in the top right corner will show that user's preferences.
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<h3 id="heading--ssh-keys">SSH keys</h3>
+<a href="#heading--ssh-keys"><h3 id="heading--ssh-keys">SSH keys</h3></a>
 
 Before a user can deploy a machine, they must import at least one public SSH key into MAAS. This key allows the user to access the deployed machine with the corresponding private key, which the user must possess. See [Public key authentication](https://www.ssh.com/ssh/public-key-authentication) (ssh.com) if you're not familiar with SSH keys.
 
@@ -244,7 +244,7 @@ Public keys residing on either [Launchpad](https://help.launchpad.net/YourAccoun
 <a href="https://assets.ubuntu.com/v1/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png"></a>
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<h3 id="heading--api-key">API key</h3>
+<a href="#heading--api-key"><h3 id="heading--api-key">API key</h3></a>
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/802). Other services connecting to MAAS such as [Juju](https://jujucharms.com/docs/stable/clouds-maas) will also need this key.
@@ -254,7 +254,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 We recommend that you use the web UI to set or change a user's API key.  To see how, select the "UI" choice for your version and delivery method at the top of this page.
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-<h3 id="heading--change-password">Change password</h3>
+<a href="#heading--change-password"><h3 id="heading--change-password">Change password</h3></a>
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 We recommend that you use the web UI to change user passwords.  To see how, select the "UI" choice for your version and delivery method at the top of this page.

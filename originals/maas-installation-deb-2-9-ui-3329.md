@@ -485,7 +485,7 @@ MAAS can be installed in either of two configurations:  test or production.  The
 If you have installed `bind9` or have it running, you will need to uninstall it before installing MAAS.  You can check with `ps aux | grep named` to see if it's running. The `bind9` daemon interferes with MAAS operation and creates a number of unusual, hard-to-debug errors -- but don't worry, MAAS provides DNS and can work with existing DNS servers.
 [/note]
 
-<a href="#heading--install-maas-snap"><h2 id="heading--install-maas-snap">Installing MAAS RC from the snap</h2></a>
+<a href="#heading--install-maas-snap"><h2 id="heading--install-maas-snap">Installing MAAS from the snap</h2></a>
 
 [Snaps^](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
 

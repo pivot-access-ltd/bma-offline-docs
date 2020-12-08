@@ -463,8 +463,7 @@
  snap-2-9-cli -->
 
 <p>Disk erasure pertains to the erasing of data on each of a machine&rsquo;s disks when the machine has been released (see <a href="concepts-and-terms.html#heading--release">Release action</a>) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.</p>
-<h2 id="heading--erasure-types">Erasure types</h2>
-
+<p><a href="#heading--erasure-types"><h2 id="heading--erasure-types">Erasure types</h2></a></p>
 <p>The three types of erasure types are:</p>
 <ol>
 <li>Standard erase</li>
@@ -472,25 +471,20 @@
 <li>Quick erase</li>
 </ol>
 <p>Each of these are explained below.</p>
-<h3 id="heading--standard-erase">Standard erase</h3>
-
+<p><a href="#heading--standard-erase"><h3 id="heading--standard-erase">Standard erase</h3></a></p>
 <p>Overwrites all data with zeros.</p>
-<h3 id="heading--secure-erase">Secure erase</h3>
-
+<p><a href="#heading--secure-erase"><h3 id="heading--secure-erase">Secure erase</h3></a></p>
 <p>Although effectively equivalent to Standard erase, Secure erase is much faster because the disk&rsquo;s firmware performs the operation. Because of this, however, some disks may not be able to perform this erasure type (SCSI, SAS, and FC disks in particular).</p>
-<h3 id="heading--quick-erase">Quick erase</h3>
-
+<p><a href="#heading--quick-erase"><h3 id="heading--quick-erase">Quick erase</h3></a></p>
 <p>Same as Standard erase but only targets the first 1 MB and the last 1 MB of each disk. This removes the partition tables and/or superblock from the disk, making data recovery difficult but not impossible.</p>
-<h2 id="heading--default-configuration">Default configuration</h2>
-
+<p><a href="#heading--default-configuration"><h2 id="heading--default-configuration">Default configuration</h2></a></p>
 <p>A default erasure configuration can be set on the &lsquo;Settings&rsquo; page by selecting the &lsquo;Storage&rsquo; tab.</p>
 <p><a href="images/4e90c4c7-installconfig-storage-erasure__defaults.png" target = "_blank"><img src="images/4e90c4c7-installconfig-storage-erasure__defaults.png"></a></a></p>
 <p>If option &lsquo;Erase machines&rsquo; disks prior to releasing&rsquo; is chosen then users will be compelled to use disk erasure. That option will be pre-filled in the machine&rsquo;s view and the user will be unable to remove the option.</p>
 <p>With the above defaults, the machine&rsquo;s view will look like this when the Release action is chosen:</p>
 <p><a href="images/66e1dcc2-installconfig-storage-erasure__defaults-node.png" target = "_blank"><img src="images/66e1dcc2-installconfig-storage-erasure__defaults-node.png"></a></a></p>
 <p>Where &lsquo;secure erase&rsquo; and &lsquo;quick erase&rsquo; can then be configured by the user.</p>
-<h2 id="heading--order-of-preference">Order of preference</h2>
-
+<p><a href="#heading--order-of-preference"><h2 id="heading--order-of-preference">Order of preference</h2></a></p>
 <p>If all three options are checked when the machine is released the following order of preference is applied:</p>
 <ol>
 <li>Use &lsquo;secure erase&rsquo; if the disk supports it</li>
@@ -498,7 +492,7 @@
 </ol>
 <!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli snap-2-7-cli
 
-<h2>Erasure procedure</h2>
+<a href="#heading--erasure-procedure"><h2 id="heading--erasure-procedure">Erasure procedure</h2></a>
 
 When using the [MAAS CLI](maas-cli.html), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
 
@@ -532,7 +526,7 @@ Secure erasure uses the drive's secure erase feature, if it has one.  In some ca
 
 Quick erasure wipes 2MB at the start and end of the drive to make recovery both inconvenient and unlikely to happen by accident.  Note, though, that quick erasure is not secure.
 
-<h3>Specifying both erasure types</h3>
+<a href="#heading--specifying-both-types"><h3 id="heading--specifying-both-types">Specifying both erasure types</h3></a>
 
 If you specify both erasure types, like this:
 

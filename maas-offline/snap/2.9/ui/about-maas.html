@@ -472,16 +472,14 @@ deb-2-9-ui -->
 <li><a href="#heading--colocation-of-key-components">Can MAAS co-locate key components to conserve  resources?</a></li>
 <li><a href="#heading--how-maas-works">How does MAAS work?</a></li>
 </ol>
-<h2 id="heading--what-is-maas">What is MAAS?</h2>
-
+<p><a href="#heading--what-is-maas"><h2 id="heading--what-is-maas">What is MAAS?</h2></a></p>
 <p>MAAS expands to &ldquo;Metal As A Service&rdquo; &ndash; it converts bare-metal servers into cloud instances of virtual machines. There is no need to manage individual units. You can quickly provision or destroy machines, as if they were instances hosted in a public cloud like Amazon AWS, Google GCE, or Microsoft Azure.</p>
 <p>MAAS can act as a standalone PXE/preseed service or integrate with other technologies. It works exceptionally well with <a href="https://jaas.ai/docs/maas-cloud">Juju</a>, the service and model management tool. MAAS manages the machines and Juju manages the services running on those machines &ndash; a perfect arrangement.  Virtual machines (VMs) can even act as MAAS machines if they boot from the network via PXE.</p>
 <p><a href="images/d19eff9ef45c554d085ee1d657e4ddd810eac6df.jpeg" target = "_blank"><img src="images/d19eff9ef45c554d085ee1d657e4ddd810eac6df.jpeg"></a></a></p>
 <p><details><summary>Tell me about PXE booting</summary></p>
 <p>PXE stands for &ldquo;Preboot Execution Environment,&rdquo; usually pronounced &ldquo;pixie.&rdquo;  The term refers to a way of booting an OS image (or other software assembly) downloaded to a client via a NIC.  The NIC must be PXE-capable for this to work.  Many NICs can be configured to support PXE boot with a software switch.</p>
 <p></details></p>
-<h2 id="heading--what-maas-offers">What MAAS offers</h2>
-
+<p><a href="#heading--what-maas-offers"><h2 id="heading--what-maas-offers">What MAAS offers</h2></a></p>
 <p>MAAS can manage a large number of physical machines by merging them into user-defined resource pools. MAAS automatically provisions participating machines and makes them available for use. You can return unused machines to the assigned pool at any time. </p>
 <p>MAAS integrates all the tools you need into a smooth system-management experience. It includes the following thirteen features:</p>
 <ol>
@@ -525,8 +523,7 @@ deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli -->
 <p>MAAS works with any system configuration tools. Both the <a href="https://www.chef.io/chef">Chef</a> and <a href="https://jaas.ai/">Juju</a> teams recommend MAAS as a physical provisioning system.</p>
 <p><strong>NOTE:</strong> 
 Please note that Windows and RHEL images require <a href="https://www.ubuntu.com/support">Ubuntu Advantage</a> to work correctly with MAAS.</p>
-<h3 id="heading--colocation-of-key-components">Colocation of key components</h3>
-
+<p><a href="#heading--colocation-of-key-components"><h3 id="heading--colocation-of-key-components">Colocation of key components</h3></a></p>
 <p>MAAS relies on two key components: the <em>region controller</em> and the <em>rack controller</em>. The region controller handles operator requests; the rack controller provides high-bandwidth services to multiple racks. In essence, rack controllers manage racks, while the region controller manages the data centre. We generally recommended installing both controllers on the same system.  The default MAAS install delivers this co-located configuration automatically. This all-in-one solution also provides DHCP. </p>
 <!-- deb-2-7-cli
 See [Concepts and terms](concepts-and-terms.html#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](high-availability.html), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](managing-dhcp.html) will cause problems.
@@ -574,8 +571,7 @@ snap-2-9-cli  -->
 
 <p>See <a href="concepts-and-terms.html#heading--controllers">Concepts and terms</a> for a deeper understanding of these components. Note that in special cases, such as <a href="high-availability.html">high availability or load balancing</a>, you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether <a href="managing-dhcp.html">MAAS-managed DHCP</a> will cause problems.</p>
 <p><a href="images/3ad2b128fbc034e9f575f21c0415a6e6c55baea3.jpeg" target = "_blank"><img src="images/3ad2b128fbc034e9f575f21c0415a6e6c55baea3.jpeg"></a></a></p>
-<h2 id="heading--how-maas-works">How MAAS works</h2>
-
+<p><a href="#heading--how-maas-works"><h2 id="heading--how-maas-works">How MAAS works</h2></a></p>
 <!-- deb-2-7-cli
 When you [add a new machine](add-machines.html#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](add-machines.html#heading--enlistment), MAAS [commissions](commission-machines.html) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
 deb-2-7-cli  -->

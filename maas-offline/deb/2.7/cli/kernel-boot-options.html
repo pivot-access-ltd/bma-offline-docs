@@ -465,7 +465,7 @@
 <p>MAAS can specify kernel boot options to machines on both a global basis (UI and CLI) and a per-machine basis (CLI-only). A full catalogue of available options can be found in the <a href="https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html">Linux kernel parameters list^</a> at <a href="https://www.kernel.org">kernel.org^</a>.</p>
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 
-<h2 id="heading--global-kernel-boot-options">Global kernel boot options</h2>
+<a href="#heading--global-kernel-boot-options"><h2 id="heading--global-kernel-boot-options">Global kernel boot options</h2></a>
 
 To set kernel boot options globally, as an admin, open the 'Settings' page and on the 'General' tab scroll down to the 'Global Kernel Parameters' section:
 
@@ -479,14 +479,12 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 <li><a href="#heading--global-kernel-boot-options">How can I set global kernel boot options for all machines?</a></li>
 <li><a href="#heading--per-node-kernel-boot-options">How can I set kernel boot options for a specific machine?</a></li>
 </ol>
-<h2 id="heading--cli">Global kernel boot options</h2>
-
+<p><a href="#heading--cli"><h2 id="heading--cli">Global kernel boot options</h2></a></p>
 <p>You can set kernel boot options and apply them to all machines with the CLI command:</p>
 <pre><code class="bash">maas $PROFILE maas set-config name=kernel_opts value='$KERNEL_OPTIONS'
 </code></pre>
 
-<h2 id="heading--per-node-kernel-boot-options">Per-machine kernel boot options</h2>
-
+<p><a href="#heading--per-node-kernel-boot-options"><h2 id="heading--per-node-kernel-boot-options">Per-machine kernel boot options</h2></a></p>
 <p>Per-machine kernel boot options are set using the CLI.</p>
 <p><strong>NOTE:</strong> 
 Per-machine boot options take precedence to global ones.</p>

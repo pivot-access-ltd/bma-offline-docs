@@ -138,7 +138,7 @@ MAAS can configure custom local VMware VMFS Datastore layouts to maximise the us
 4. [How do I edit a datastore?](#heading--editing-vmfs-datastores)
 5. [How do I delete a datastore?](#heading--deleting-vmfs-datastores)
 
-<h2 id="heading--listing-vmfs-datastores">Listing VMFS datastores</h2>
+<a href="#heading--listing-vmfs-datastores"><h2 id="heading--listing-vmfs-datastores">Listing VMFS datastores</h2></a>
 
 To view all VMFS Datastores on a machine, use the 'vmfs-datastores read' API call:
 
@@ -206,7 +206,7 @@ maas $PROFILE vmfs-datastores read $SYSTEM_ID
 ]
 ```
 
-<h2 id="heading--viewing-vmfs-datastores">Viewing a specific datastore</h2>
+<a href="#heading--viewing-vmfs-datastores"><h2 id="heading--viewing-vmfs-datastores">Viewing a specific datastore</h2></a>
 
 To view a specific VMFS Datastores on a machine, use the 'vmfs-datastore read' API call:
 
@@ -252,7 +252,7 @@ maas $PROFILE vmfs-datastore read $SYSTEM_ID $VMFS_DATASTORE_ID
 }
 ```
 
-<h2 id="heading--creating-vmfs-datastores">Creating a new VMFS Datastore</h2>
+<a href="#heading--creating-vmfs-datastores"><h2 id="heading--creating-vmfs-datastores">Creating a new VMFS Datastore</h2></a>
 
 <!-- deb-2-7-cli
 A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/2352) or [partitions](/t/partitions/2988)
@@ -346,7 +346,7 @@ maas $PROFILE vmfs-datastores create $SYSTEM_ID name=$VMFS_NAME block_devices=$B
 }
 ```
 
-<h2 id="heading--editing-vmfs-datastores">Edit an existing VMFS Datastore</h2>
+<a href="#heading--editing-vmfs-datastores"><h2 id="heading--editing-vmfs-datastores">Edit an existing VMFS Datastore</h2></a>
 
 To edit an existing VMFS Datastores on a machine use the 'vmfs-datastore update' API call:
 
@@ -412,7 +412,7 @@ maas $PROFILE vmfs-datastore update $SYSTEM_ID $VMFS_ID name=$NEW_VMFS_NAME add_
 }
 ```
 
-<h2 id="heading--deleting-vmfs-datastores">Deleting a VMFS Datastore</h2>
+<a href="#heading--deleting-vmfs-datastores"><h2 id="heading--deleting-vmfs-datastores">Deleting a VMFS Datastore</h2></a>
 
 To delete a VMFS Datastores on a machine use the 'vmfs-datastore delete' API call:
 

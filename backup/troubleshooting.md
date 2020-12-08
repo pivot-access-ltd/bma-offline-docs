@@ -1,20 +1,20 @@
 This section covers some of the most commonly encountered problems and attempts to resolve them.
 
-<h2 id="heading--nodes-hang-on-commissioning">Nodes hang on "Commissioning"</h2>
+<a href="#heading--nodes-hang-on-commissioning"><h2 id="heading--nodes-hang-on-commissioning">Nodes hang on "Commissioning"</h2></a>
 
-<h3 id="heading--possible-cause-timing-issues">Possible Cause: Timing issues</h3>
+<a href="#heading--possible-cause-timing-issues"><h3 id="heading--possible-cause-timing-issues">Possible Cause: Timing issues</h3></a>
 
 Various parts of MAAS rely on OAuth to negotiate a connection to nodes. If the current time reported by the hardware clock on your node differs significantly from that on the MAAS server, the connection will not be made.
 
 **SOLUTION:** Check that the hardware clocks are consistent, and if necessary, adjust them. This can usually be done from within the system BIOS, without needing to install an OS.
 
-<h3 id="heading--possible-cause-network-drivers">Possible Cause: Network drivers</h3>
+<a href="#heading--possible-cause-network-drivers"><h3 id="heading--possible-cause-network-drivers">Possible Cause: Network drivers</h3></a>
 
 Sometimes the hardware can boot from PXE, but fail to load correct drivers when booting the received image. This is sometimes the case when no open source drivers are available for the network hardware.
 
 **SOLUTION:** The best fix for this problem is to install a Linux-friendly network adaptor. It *is* theoretically possible to modify the boot image to include proprietary drivers, but it is not a straightforward task.
 
-<h2 id="heading--node-deployment-fails">Node deployment fails</h2>
+<a href="#heading--node-deployment-fails"><h2 id="heading--node-deployment-fails">Node deployment fails</h2></a>
 
 When deployment fails the [Rescue mode](/t/concepts-and-terms/785#heading--rescue-mode) action can be used to boot ephemerally into the node, followed by an investigation.
 
@@ -39,25 +39,25 @@ Stderr: 'gpg: no valid OpenPGP data found.\n'
 
 In this instance, the GPG fingerprint was used instead of the GPG key. After rectifying this oversight, nodes were again able to successfully deploy.
 
-<h2 id="heading--nodes-fail-to-pxe-boot">Nodes fail to PXE boot</h2>
+<a href="#heading--nodes-fail-to-pxe-boot"><h2 id="heading--nodes-fail-to-pxe-boot">Nodes fail to PXE boot</h2></a>
 
-<h3 id="heading--possible-cause-using-an-incorrectly-configured-vm">Possible Cause: Using an incorrectly configured VM</h3>
+<a href="#heading--possible-cause-using-an-incorrectly-configured-vm"><h3 id="heading--possible-cause-using-an-incorrectly-configured-vm">Possible Cause: Using an incorrectly</a> configured VM</h3>
 
 Some virtual machine setups include emulation of network hardware that does not support PXE booting, and in most setups, you will need to explicitly set the VM to boot via PXE.
 
 **SOLUTION**: Consult the VM docs for details on PXE booting.
 
-<h3 id="heading--possible-cause-dhcp-conflict">Possible Cause: DHCP conflict</h3>
+<a href="#heading--possible-cause-dhcp-conflict"><h3 id="heading--possible-cause-dhcp-conflict">Possible Cause: DHCP conflict</h3></a>
 
 If you are using MAAS in a setup with an existing DHCP, *DO NOT SET UP THE MAAS DHCP SERVER* as this will cause no end of confusion to the rest of your network and most likely won't discover any nodes either.
 
 **SOLUTION**: You will need to configure your existing DHCP server to point to the MAAS server.
 
-<h2 id="heading--cant-log-in-to-node">Can't log in to node</h2>
+<a href="#heading--cant-log-in-to-node"><h2 id="heading--cant-log-in-to-node">Can't log in to node</h2></a>
 
 Sometimes you may wish to log in directly to a node on your system. If you have set up Juju and MAAS, the node will automatically have SSH authentication enabled (and public keys installed) allowing you to log in. There is also an option in the MAAS web interface to add new SSH keys to the nodes (via Preferences in the drop down menu which appears when clicking your username in the top-right of the page).
 
-<h2 id="heading--forgot-maas-administrator-password">Forgot MAAS administrator password</h2>
+<a href="#heading--forgot-maas-administrator-password"><h2 id="heading--forgot-maas-administrator-password">Forgot MAAS administrator password</h2></a>
 
 As long as you have sudo privileges the `maas` command can be used to change the password for a MAAS administrator on the MAAS region controller:
 
@@ -67,7 +67,7 @@ sudo maas changepassword $PROFILE
 
 where $PROFILE is the name of the user.
 
-<h2 id="heading--need-to-reconfigure-server-ip-address">Need to reconfigure server IP address</h2>
+<a href="#heading--need-to-reconfigure-server-ip-address"><h2 id="heading--need-to-reconfigure-server-ip-address">Need to reconfigure server IP address</h2></a>
 
 If you made a mistake during setup or you just need to reconfigure your MAAS server, you can simply run the setup again:
 
@@ -75,7 +75,7 @@ If you made a mistake during setup or you just need to reconfigure your MAAS ser
 sudo dpkg-reconfigure maas-region-controller
 ```
 
-<h2 id="heading--cant-find-maas-web-ui">Can't find MAAS web UI</h2>
+<a href="#heading--cant-find-maas-web-ui"><h2 id="heading--cant-find-maas-web-ui">Can't find MAAS web UI</h2></a>
 
 By default, the web UI is located at `http://<hostname>:5240/MAAS/`. If you can't access it, there are a few things to try:
 
@@ -83,7 +83,7 @@ By default, the web UI is located at `http://<hostname>:5240/MAAS/`. If you can'
 2.  Check that the hostname is correct - It may seem obvious, but check that the hostname is being resolved properly. Try running a browser (even a text mode one like `elinks`) on the same box as the MAAS server and navigating to the page. If that doesn't work, try `http://127.0.0.1:5240/MAAS/`, which will always point at the local server.
 3.  If you are still getting "404 - Page not found" errors, check that the MAAS web interface has been installed in the right place. There should be a file present called `/usr/share/maas/maas/urls.py`.
 
-<h2 id="heading--backdoor-image-login">Backdoor image login</h2>
+<a href="#heading--backdoor-image-login"><h2 id="heading--backdoor-image-login">Backdoor image login</h2></a>
 
 Ephemeral images are used by MAAS to boot nodes during commissioning, as well as during deployment. By design, these images are not built to be edited or tampered with, instead they're used to probe the hardware and launch [cloud-init](https://launchpad.net/cloud-init).
 
@@ -91,7 +91,7 @@ However, if you find yourself with no other way to access a node, especially if 
 
 As images are constantly updated and refreshed, the backdoor will only ever be temporary, but it should help you login to see what may be going wrong with your node.
 
-<h3 id="heading--extract-the-cloud-image">Extract the cloud image</h3>
+<a href="#heading--extract-the-cloud-image"><h3 id="heading--extract-the-cloud-image">Extract the cloud image</h3></a>
 
 First, download the cloud image that corresponds to the architecture of your node. The *Images* page of the web UI lists the images currently being cached by MAAS:
 
@@ -116,7 +116,7 @@ sudo tar -C xenial -xpSf xenial-server-cloudimg-amd64-root.tar.gz --numeric-owne
 `sudo` is required when extracting the image filesystem and when making changes to the files extracted from the image filesystem.
 [/note]
 
-<h3 id="heading--generate-password-hash">Generate password hash</h3>
+<a href="#heading--generate-password-hash"><h3 id="heading--generate-password-hash">Generate password hash</h3></a>
 
 Now generate a hashed password. Use the following Python 3 command, replacing **ubuntu** with the password you wish to use:
 
@@ -138,7 +138,7 @@ root:$6$AaHblHl5KGrWBmPV$20ssynyY0EhcT9AwZgA2sTdYt4Bvd97bX7PjeyqVLKun2Hk3NBa8r7e
 
 Save the file and exit the text editor.
 
-<h3 id="heading--rebuild-squashfs-image">Rebuild SquashFS image</h3>
+<a href="#heading--rebuild-squashfs-image"><h3 id="heading--rebuild-squashfs-image">Rebuild SquashFS image</h3></a>
 
 Recent versions of MAAS use SquashFS to hold the ephemeral image filesystem. The final step is to use the following command to create a SquashFS file called `xenial-customized.squashfs` that contains the modified shadow file:
 
@@ -156,7 +156,7 @@ Creating 4.0 filesystem on xenial-customized.squashfs, block size 131072.
 
 You now have an ephemeral image with a working root login that can replace an image locally cached by MAAS.
 
-<h3 id="heading--use-the-custom-image">Use the custom image</h3>
+<a href="#heading--use-the-custom-image"><h3 id="heading--use-the-custom-image">Use the custom image</h3></a>
 
 Images are synchronised by the region controller and stored on the rack controller in `/var/lib/maas/boot-resources/`, with the *current* directory linking to the latest synchronised images.
 

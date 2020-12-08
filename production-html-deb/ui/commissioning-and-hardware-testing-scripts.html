@@ -523,8 +523,7 @@ Scripts can be selected to run from web UI [during commissioning](commission-mac
 <p>Add machine -&gt; Enlistment (runs built-in commissioning scripts MAAS) -&gt; New -&gt; Commission (runs built-in and custom commissioning scripts) -&gt; Ready -&gt; Deploy</p>
 <p>NOTE: Scripts are run in alphabetical order in an ephemeral environment.  We recommend running your scripts after any MAAS built-in scripts.  This can be done by naming your scripts 99-z*.  It is possible to reboot the system during commissioning using a script, however, as the environment is ephemeral, any changes to the environment will be destroyed upon reboot (barring, of course, firmware type updates).</p>
 <p>This article explains script metadata, parameter passing, and results-reporting.  It also offers examples of both commissioning and hardware testing scripts.</p>
-<h2 id="heading--metadata-fields">Metadata fields</h2>
-
+<p><a href="#heading--metadata-fields"><h2 id="heading--metadata-fields">Metadata fields</h2></a></p>
 <p>Metadata fields tell MAAS when to use the script, how it should run, and what information it&rsquo;s gathering. A script can employ some combination of the following seventeen fields:</p>
 <table>
 <thead>
@@ -680,8 +679,7 @@ Scripts can be selected to run from web UI [during commissioning](commission-mac
 </tr>
 </tbody>
 </table>
-<h2 id="heading--parameters">Parameters</h2>
-
+<p><a href="#heading--parameters"><h2 id="heading--parameters">Parameters</h2></a></p>
 <p>Scripts can accept exactly three types of parameters, and only three types:</p>
 <ol>
 <li>storage.</li>
@@ -810,8 +808,7 @@ echo &quot;Model: $1&quot;
 echo &quot;Serial: $2&quot;
 </code></pre>
 
-<h2 id="heading--environment-variables">Environment variables</h2>
-
+<p><a href="#heading--environment-variables"><h2 id="heading--environment-variables">Environment variables</h2></a></p>
 <p>The following seven environment variables are available when a script runs within the MAAS environment:</p>
 <ol>
 <li><code>OUTPUT_STDOUT_PATH</code>: The path to the log of STDOUT from the script.</li>
@@ -822,8 +819,7 @@ echo &quot;Serial: $2&quot;
 <li><code>RUNTIME</code>: The amount of time the script has to run in seconds.</li>
 <li><code>HAS_STARTED</code>: When &lsquo;True&rsquo;, MAAS has run the script once before but not to completion. Indicates the machine has rebooted.</li>
 </ol>
-<h2 id="heading--results">Results</h2>
-
+<p><a href="#heading--results"><h2 id="heading--results">Results</h2></a></p>
 <p>A script can output its results to a YAML file, and those results will be associated with the hardware type defined within the script. MAAS provides the path for the results file in an environment variable, <code>RESULT_PATH</code>. Scripts should write YAML to this file before exiting.</p>
 <p>If the hardware type is storage, for example, and the script accepts a storage type parameter, the result will be associated with a specific storage device.</p>
 <p>The YAML file must represent a dictionary with these two fields:</p>
@@ -868,17 +864,14 @@ if result_path is not None:
         yaml.safe_dump(results, results_file)
 </code></pre>
 
-<h2 id="heading--script-examples">Script examples</h2>
-
-<h3 id="heading--built-in-scripts">Built-in scripts</h3>
-
+<p><a href="#heading--script-examples"><h2 id="heading--script-examples">Script examples</h2></a></p>
+<p><a href="#heading--built-in-scripts"><h3 id="heading--built-in-scripts">Built-in scripts</h3></a></p>
 <p>You can download the source for all commissioning and test scripts via the API with the following command:</p>
 <pre><code class="bash">maas $PROFILE node-script download $SCRIPT_NAME
 </code></pre>
 
 <p>The source code to all built-in scripts is available on <a href="https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts">launchpad^</a>.</p>
-<h3 id="heading--commissioning-script-configure-hpa">Commissioning script: Configure HPA</h3>
-
+<p><a href="#heading--commissioning-script-configure-hpa"><h3 id="heading--commissioning-script-configure-hpa">Commissioning script: Configure HPA</h3></a></p>
 <p>Below is a sample script to configure an Intel C610/X99 HPA controller on an HP system. The script will only run on systems with an Intel C610/X99 controller identified by the PCI ID 8086:8d06.</p>
 <p>Before the scrixpt runs, MAAS will download and install the <a href="https://downloads.linux.hpe.com/SDR/project/hprest/">HP RESTful Interface Tool^</a> package from HP. After the script completes, the built-in commissioning scripts will be re-run to capture the new configuration.</p>
 <pre><code class="bash">#!/bin/bash -ex
@@ -903,8 +896,7 @@ else:
 fi
 </code></pre>
 
-<h3 id="heading--commissioning-script-update-firmware">Commissioning script: Update firmware</h3>
-
+<p><a href="#heading--commissioning-script-update-firmware"><h3 id="heading--commissioning-script-update-firmware">Commissioning script: Update firmware</h3></a></p>
 <p>Below is a sample script to update the mainboard firmware on an ASUS P8P67 Pro using a vendor-provided tool. The tool will is automatically downloaded and extracted by MAAS. The script reboots the system to complete the update. The system will boot back into the MAAS ephemeral environment to finish commissioning and optionally testing.</p>
 <p><strong>NOTE:</strong> 
 Vendor tools which use UEFI boot capsules or need to store resource files on disk while rebooting are not currently supported.</p>
@@ -924,8 +916,7 @@ $DOWNLOAD_PATH/update_firmware
 reboot
 </code></pre>
 
-<h3 id="heading--hardware-test-script-cpu-stress-test">Hardware test script: CPU stress test</h3>
-
+<p><a href="#heading--hardware-test-script-cpu-stress-test"><h3 id="heading--hardware-test-script-cpu-stress-test">Hardware test script: CPU stress test</h3></a></p>
 <p>As a simple example, here&rsquo;s a functional Bash script replicating part of the stress-ng script bundled with MAAS:</p>
 <pre><code class="bash">#!/bin/bash -e
 # --- Start MAAS 1.0 script metadata ---
@@ -944,8 +935,7 @@ sudo -n stress-ng --matrix 0 --ignite-cpu --log-brief --metrics-brief --times \
 </code></pre>
 
 <p>This Bash script contains comment-delineated metadata, which configures the script environment and installs any dependencies.  There is also a single line that runs <strong>stress-ng</strong> (a CPU stress-test utility) with various arguments.</p>
-<h3 id="heading--automatic-script-selection-by-hardware-type">Automatic script selection by hardware type</h3>
-
+<p><a href="#heading--automatic-script-selection-by-hardware-type"><h3 id="heading--automatic-script-selection-by-hardware-type">Automatic script selection by hardware type</h3></a></p>
 <!-- deb-2-7-cli
 When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  deb-2-7-cli -->
@@ -992,8 +982,7 @@ When selecting [multiple machines](machines.html), scripts which declare the `fo
  snap-2-9-ui -->
 
 <p>Similarly, scripts selected by tag on the command line which specify the <code>for_hardware</code> field will only run on matching hardware.</p>
-<h2 id="heading--upload-procedure">Upload procedure</h2>
-
+<p><a href="#heading--upload-procedure"><h2 id="heading--upload-procedure">Upload procedure</h2></a></p>
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 To upload a hardware testing script to MAAS, enter the following:
 
@@ -1064,7 +1053,7 @@ To delete a script, use `delete`:
 </code></pre>
 
 
-<h2 id="heading--tags">Tags</h2>
+<a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
 As with general [tag management](cli-tag-management.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
 
@@ -1092,7 +1081,7 @@ You can also select which testing scripts to run by name or tag:
 
 Any testing scripts tagged with commissioning will also run during commissioning.
 
-<h2 id="heading--results">Results</h2>
+<a href="#heading--results"><h2 id="heading--results">Results</h2></a>
 
 The command line allows you to not only view the current script's progress but also retrieve the verbatim output from any previous runs too.
 
@@ -1197,8 +1186,7 @@ A status message of Commissioning script created will appear.  You'll then be ab
 <p><a href="images/50e08fdf-nodes-hw-scripts__2.4_select.png" target = "_blank"><img src="images/50e08fdf-nodes-hw-scripts__2.4_select.png"></a></a></p>
 <p><strong>NOTE:</strong> 
 MAAS executes scripts in lexicographical order. This order allows you to control when your scripts execute, and whether they run before or after the standard MAAS scripts.</p>
-<h2 id="heading--debugging">Debugging</h2>
-
+<p><a href="#heading--debugging"><h2 id="heading--debugging">Debugging</h2></a></p>
 <p>Clicking on the title of a completed or failed script will reveal the output from that specific script.</p>
 <p><a href="images/855015e5-nodes-hw-scripts__2.2_fail.png" target = "_blank"><img src="images/855015e5-nodes-hw-scripts__2.2_fail.png"></a></a></p>
 <p>If you need further details, especially when writing and running your own scripts, you can connect to a machine and examine its logs and environment.</p>
@@ -1250,23 +1238,19 @@ As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to 
 As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
  snap-2-9-ui -->
 
-<h3 id="heading--access-individual-scripts-and-log-files">Access individual scripts and log files</h3>
-
-<h4 id="heading--commissioning-and-testing-script-files">Commissioning and testing script files</h4>
-
+<p><a href="#heading--access-individual-scripts-and-log-files"><h3 id="heading--access-individual-scripts-and-log-files">Access individual scripts and log files</h3></a></p>
+<p><a href="#heading--commissioning-and-testing-script-files"><h4 id="heading--commissioning-and-testing-script-files">Commissioning and testing script files</h4></a></p>
 <ol>
 <li><code>/tmp/user_data.sh.*/scripts/commissioning/</code>: Commissioning scripts</li>
 <li><code>/tmp/user_data.sh.*/scripts/testing/</code>: Hardware testing scripts</li>
 </ol>
-<h4 id="heading--log-files">Log files</h4>
-
+<p><a href="#heading--log-files"><h4 id="heading--log-files">Log files</h4></a></p>
 <ol>
 <li><code>/tmp/user_data.sh*/out/</code></li>
 <li><code>/var/log/cloud-init-output.log</code></li>
 <li><code>/var/log/cloud-init.log</code></li>
 </ol>
-<h3 id="heading--run-all-scripts-manually">Run all scripts manually</h3>
-
+<p><a href="#heading--run-all-scripts-manually"><h3 id="heading--run-all-scripts-manually">Run all scripts manually</h3></a></p>
 <p>You can also run all commissioning and hardware-testing scripts on a machine for debugging.</p>
 <pre><code class="bash">/tmp/user_data.sh.*/bin/maas-run-remote-scripts \
     [--no-download] \

@@ -429,7 +429,22 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Package repositories</h1><p>Package repositories managed within MAAS can be of two types:</p>
+      <h1>Package repositories</h1><!-- deb-2-7-cli
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+ deb-2-7-ui -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<p>Package repositories managed within MAAS can be of two types:</p>
 <ul>
 <li>Ubuntu package repositories</li>
 <li>Personal Package Archives (PPA)</li>
@@ -437,8 +452,7 @@
 <p>You can configure repositories in the &lsquo;Package repositories&rsquo; tab on the &lsquo;Settings&rsquo; page. Any enabled repository listed on this page will become automatically available to any subsequently deployed nodes.</p>
 <p>MAAS further simplifies the addition of third-party repositories by also allowing the administrator to input their respective GPG keys here. This arrangement means that nodes will have instant access to these repositories (i.e. no need to import the keys into APT).</p>
 <p>An added repository can be disabled and re-enabled using a toggle switch to the right of it.</p>
-<h2 id="heading--ubuntu-package-repositories">Ubuntu package repositories</h2>
-
+<p><a href="#heading--ubuntu-package-repositories"><h2 id="heading--ubuntu-package-repositories">Ubuntu package repositories</h2></a></p>
 <p>An Ubuntu package repository is a repository that makes available Ubuntu packages to computers able to connect to it over the network, whether that network is private or public (e.g. the Internet).</p>
 <p>MAAS comes equipped with the official Ubuntu repository <code>archive.ubuntu.com</code> as well as the equivalent for architectures other than i386 and amd64: <code>ports.ubuntu.com</code> as is evident in the default configuration below:</p>
 <p><a href="images/77b93794-manage-repositories__2.4_default-repo-config.png" target = "_blank"><img src="images/77b93794-manage-repositories__2.4_default-repo-config.png"></a></a></p>
@@ -454,8 +468,7 @@
 <p><a href="images/1aa1c512-manage-repositories__2.4_add-repo.png" target = "_blank"><img src="images/1aa1c512-manage-repositories__2.4_add-repo.png"></a></a></p>
 <p>Click &lsquo;Add repository&rsquo; to save the configuration.</p>
 <p>A private repository can be built to assist with offline operations, based on the official repository. This repository can also contain custom packages.</p>
-<h2 id="heading--personal-package-archives-ppa">Personal Package Archives (PPA)</h2>
-
+<p><a href="#heading--personal-package-archives-ppa"><h2 id="heading--personal-package-archives-ppa">Personal Package Archives (PPA)</h2></a></p>
 <p>A Personal Package Archive (PPA) is a <a href="https://launchpad.net">Launchpad</a>-based method for any individual (or team) to build and distribute packages for Ubuntu.</p>
 <p>Adding a PPA is equally straightforward. Using the <a href="https://launchpad.net/~canonical-support/+archive/ubuntu/support-tools"><code>sosreport</code> PPA</a> as an example, first acquire the PPA&rsquo;s address from its page on Launchpad:</p>
 <p><code>ppa:canonical-support/support-tools</code></p>
@@ -464,7 +477,6 @@
 <p><a href="images/a0962e17-manage-repositories__2.4_add-ppa.png" target = "_blank"><img src="images/a0962e17-manage-repositories__2.4_add-ppa.png"></a></a></p>
 <p>Click &lsquo;Add repository&rsquo; to save the configuration.</p>
 <p>See <a href="https://help.launchpad.net/Packaging/PPA">Launchpad PPAs</a> for more information on PPAs.</p>
-<!-- LINKS -->
     </div>
   </body>
 </html>

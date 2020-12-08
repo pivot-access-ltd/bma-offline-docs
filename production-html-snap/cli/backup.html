@@ -472,8 +472,7 @@
 <li><a href="#heading--restore-files">How do I restore my system, should the need arise?</a></li>
 <li><a href="#heading--recreatingupdating-the-db">What steps should I take to restore the database to normal operation?</a></li>
 </ol>
-<h2 id="heading--configuration-files">Configuration files</h2>
-
+<p><a href="#heading--configuration-files"><h2 id="heading--configuration-files">Configuration files</h2></a></p>
 <p>The following three MAAS components need to be backed-up and restored, on each region and rack controller, to recreate a working environment:</p>
 <!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 1.  The PostgreSQL database
@@ -490,8 +489,7 @@ deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 </ol>
 <p><code>/var/snap/maas/common/maas/boot-resources</code> can safely be excluded as this contains images easily re-downloaded within MAAS.</p>
 <p>Other configuration files, such as those used by your network configuration (<code>/etc/network/interfaces</code>, for example) will need to be backed-up and restored according to your specific deployment requirements.</p>
-<h2 id="heading--postgresql-export">PostgreSQL export</h2>
-
+<p><a href="#heading--postgresql-export"><h2 id="heading--postgresql-export">PostgreSQL export</h2></a></p>
 <p>The following procedure involves three assumptions: </p>
 <ol>
 <li>you have installed region and rack controllers on the same machine. </li>
@@ -507,8 +505,7 @@ deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 </code></pre>
 
 <p>Running sessions, such as pg_dumpall, will appear in the <code>application_name</code> column of the output alongside <code>psql</code> running the above <code>pg_stat_activity</code> query. Excepting psql, if <code>application_name</code> is empty, you can safely stop the database service.</p>
-<h2 id="heading--stop-critical-services">Stop critical services</h2>
-
+<p><a href="#heading--stop-critical-services"><h2 id="heading--stop-critical-services">Stop critical services</h2></a></p>
 <p>To avoid conflicting updates during a backup, stop the following four services with the <code>sudo systemctl stop &lt;service&gt;</code> command:</p>
 <ol>
 <li>postgresql.service</li>
@@ -516,8 +513,7 @@ deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 <li>maas-rackd.service</li>
 <li>maas-regiond.service</li>
 </ol>
-<h2 id="heading--archive-configuration-files">Archive configuration files</h2>
-
+<p><a href="#heading--archive-configuration-files"><h2 id="heading--archive-configuration-files">Archive configuration files</h2></a></p>
 <p>Archive the database and the required configuration files with a command similar to the following:</p>
 <!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 
@@ -531,8 +527,7 @@ deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 
 <p>Make sure you move the resulting <code>backup.tgz</code> to some external storage you can access when restoring the system.</p>
 <p>We&rsquo;ve now backed up all the components necessary to recreate a MAAS deployment. Next, we&rsquo;ll discuss how to restore this configuration.</p>
-<h2 id="heading--restore-files">Restore files</h2>
-
+<p><a href="#heading--restore-files"><h2 id="heading--restore-files">Restore files</h2></a></p>
 <p>Start with a freshly-updated installation of Ubuntu on identical hardware. Reinstall MAAS via the standard procedure (<code>sudo apt install maas</code>), then stop the following three services (PostgreSQL needs to keep running):</p>
 <ol>
 <li>maas-dhcpd.service</li>
@@ -564,8 +559,7 @@ sudo cp -prf /var/snap/maas/common/maas /var/snap/maas/common/
 <p>If your restore process regenerated the <code>/var/snap/maas/common/maas/secret</code> file, make sure update this secret on any additional rack controllers.</p>
 <p><strong>NOTE:</strong> 
 Take care to preserve the correct permissions when restoring files and directories.</p>
-<h2 id="heading--recreatingupdating-the-db">Recreating/updating the DB</h2>
-
+<p><a href="#heading--recreatingupdating-the-db"><h2 id="heading--recreatingupdating-the-db">Recreating/updating the DB</h2></a></p>
 <p>When you restore a backup, you&rsquo;ll have to &ldquo;upgrade&rdquo; the DB schema to re-create DB triggers or ensure that the schema matches the currently-running version.</p>
 <p>MAAS relies on various DB triggers for multiple operations. As such, it is always required to re-create those after restoring from a backup. Similarly, newer versions of MAAS may have new or missing migrations, and merely restoring a backup may not be enough to restore normal operation.</p>
 <p>As such, it is required to re-create the DB triggers (or upgrade the DB and run new/missing migrations) with the following command:</p>

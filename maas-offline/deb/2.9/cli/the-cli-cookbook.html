@@ -446,8 +446,7 @@
 <li><a href="the-cli-cookbook.html#heading--vm-host-list">VM host list</a></li>
 <li><a href="the-cli-cookbook.html#heading--create-kvm">Creating KVMs &amp; getting feedback</a></li>
 </ul>
-<h2 id="heading--basic-machine-list">Basic machine list</h2>
-
+<p><a href="#heading--basic-machine-list"><h2 id="heading--basic-machine-list">Basic machine list</h2></a></p>
 <pre><code>maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
 &quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),
 (.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;, 
@@ -456,8 +455,7 @@
 .boot_interface.links[0].subnet.name]) | @tsv' | column -t
 </code></pre>
 
-<h3 id="heading--sorted-by-machine-name">Machine list sorted by machine name</h3>
-
+<p><a href="#heading--sorted-by-machine-name"><h3 id="heading--sorted-by-machine-name">Machine list sorted by machine name</h3></a></p>
 <pre><code>maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
 &quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),
 (.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;, 
@@ -467,8 +465,7 @@
 | sort -k 1
 </code></pre>
 
-<h3 id="heading--sorted-by-system-id">Machine list sorted by system ID</h3>
-
+<p><a href="#heading--sorted-by-system-id"><h3 id="heading--sorted-by-system-id">Machine list sorted by system ID</h3></a></p>
 <pre><code>maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
 &quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),
 (.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;, 
@@ -478,8 +475,7 @@
 | sort -k 1
 </code></pre>
 
-<h3 id="heading--sorted-by-power-state">Machine list sorted by power state</h3>
-
+<p><a href="#heading--sorted-by-power-state"><h3 id="heading--sorted-by-power-state">Machine list sorted by power state</h3></a></p>
 <pre><code>maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
 &quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),
 (.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;, 
@@ -489,8 +485,7 @@
 | sort -k 1
 </code></pre>
 
-<h3 id="heading--sorted-by-machine-status">Machine list sorted by machine status</h3>
-
+<p><a href="#heading--sorted-by-machine-status"><h3 id="heading--sorted-by-machine-status">Machine list sorted by machine status</h3></a></p>
 <pre><code>maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
 &quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),
 (.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;, 
@@ -500,8 +495,7 @@
 | sort -k 1
 </code></pre>
 
-<h3 id="heading--sorted-by-first-tag">Machine list sorted by first tag</h3>
-
+<p><a href="#heading--sorted-by-first-tag"><h3 id="heading--sorted-by-first-tag">Machine list sorted by first tag</h3></a></p>
 <pre><code>maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
 &quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),
 (.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;, 
@@ -511,8 +505,7 @@
 | sort -k 1
 </code></pre>
 
-<h3 id="heading--sorted-by-pool">Machine list sorted by pool</h3>
-
+<p><a href="#heading--sorted-by-pool"><h3 id="heading--sorted-by-pool">Machine list sorted by pool</h3></a></p>
 <pre><code>maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
 &quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),
 (.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;, 
@@ -522,8 +515,7 @@
 | sort -k 1
 </code></pre>
 
-<h3 id="heading--sorted-by-vlan">Machine list sorted by VLAN</h3>
-
+<p><a href="#heading--sorted-by-vlan"><h3 id="heading--sorted-by-vlan">Machine list sorted by VLAN</h3></a></p>
 <pre><code>maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
 &quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),
 (.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;, 
@@ -533,8 +525,7 @@
 | sort -k 1
 </code></pre>
 
-<h3 id="heading--sorted-by-fabric">Machine list sorted by fabric</h3>
-
+<p><a href="#heading--sorted-by-fabric"><h3 id="heading--sorted-by-fabric">Machine list sorted by fabric</h3></a></p>
 <pre><code>maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
 &quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),
 (.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;, 
@@ -544,8 +535,7 @@
 | sort -k 1
 </code></pre>
 
-<h3 id="heading--sorted-by-subnet">Machine list sorted by subnet</h3>
-
+<p><a href="#heading--sorted-by-subnet"><h3 id="heading--sorted-by-subnet">Machine list sorted by subnet</h3></a></p>
 <pre><code>maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
 &quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),
 (.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;, 
@@ -555,16 +545,14 @@
 | sort -k 1
 </code></pre>
 
-<h2 id="heading--vm-host-list">List of VM hosts</h2>
-
+<p><a href="#heading--vm-host-list"><h2 id="heading--vm-host-list">List of VM hosts</h2></a></p>
 <pre><code>maas admin vm-hosts read | jq -r '([&quot;ID&quot;,&quot;VM-HOST&quot;,&quot;SYSID&quot;,&quot;CORES&quot;,&quot;USED&quot;,&quot;RAM&quot;,
 &quot;USED&quot;,&quot;STORAGE&quot;, &quot;USED&quot;] | (., map(length*&quot;-&quot;))), (.[]| [.id,.name,.host.system_id,
 .total.cores, .used.cores, .total.memory, .used.memory,.total.local_storage,
 .used.local_storage]) | @tsv' | column -t
 </code></pre>
 
-<h2 id="heading--create-kvm">Creating a KVM with confirmation</h2>
-
+<p><a href="#heading--create-kvm"><h2 id="heading--create-kvm">Creating a KVM with confirmation</h2></a></p>
 <p>Note that most of these can be entered directly at the command line using copy/paste &ndash; even the <code>#!/bin/bash</code> won&rsquo;t hurt, as it will be ignored by the shell.</p>
 <p><strong>NOTE:</strong> 
 Remember to:
@@ -593,8 +581,7 @@ Remember to:
 <h2>lsmm series: Listing MAAS machines</h2>
 
 <p>The <code>lsmm</code> script, defined below, is something we use to quickly get machine information from the command line.  For those of us who prefer the CLI, it&rsquo;s an easy way to gather the same information you&rsquo;d get in the web UI machine list, but more focused in each option.</p>
-<h3 id="heading--lsmm">lsmm: List MAAS machines</h3>
-
+<p><a href="#heading--lsmm"><a href="#heading--lsmm"><h3 id="heading--lsmm">lsmm: List MAAS machines</h3></a></a></p>
 <p>This recipe prints a basic machine list.  Here&rsquo;s the command to paste into the command line:</p>
 <pre><code>maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 "OWNER", "POOL", "VLAN","FABRIC","SUBNET"] | (., map(length*"-"))),
@@ -614,8 +601,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 .boot_interface.links[0].subnet.name]) | @tsv' | column -t
 </code></pre>
 <p>If you save this to a file, make sure to <code>chmod</code> the file so it will execute.  You might also add it to your path, or perhaps even place it in <code>/usr/bin</code> if desired.</p>
-<h3 id="heading--lsmm-t">lsmm -t: List MAAS machines with first tag</h3>
-
+<p><a href="#heading--lsmm-t"><h3 id="heading--lsmm-t">lsmm -t: List MAAS machines with first tag</h3></a></p>
 <p>It&rsquo;s a good idea to keep your most important machine tag first, as it&rsquo;s the first one you&rsquo;ll see.  It makes scanning your list (UI or CLI/jq) much more efficient.  Here&rsquo;s a recipe that adds the first tag to the console-printed machine list:</p>
 <pre><code>maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 "OWNER", "TAGS", "POOL", "VLAN","FABRIC","SUBNET"] | (., map(length*"-"))),
@@ -650,8 +636,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 fi
 </code></pre>
 <p>Note that with no option (e.g., just <code>lsmm</code> on the command line), this script will print the basic machine list from the previous recipe.</p>
-<h3 id="heading--lsmm-vmh">lsmm --vmhost: List VM hosts</h3>
-
+<p><a href="#heading--lsmm-vmh"><h3 id="heading--lsmm-vmh">lsmm &ndash;vmhost: List VM hosts</h3></a></p>
 <p>Here&rsquo;s a recipe that gives a quick overview of your existing VM hosts:</p>
 <pre><code>maas admin vm-hosts read | jq -r '(["ID","VM-HOST","SYSID","CORES","USED","RAM",
 "USED","STORAGE", "USED"] | (., map(length*"-"))), (.[]| [.id,.name,.host.system_id,
@@ -692,8 +677,7 @@ maas admin vm-hosts read | jq -r '(["ID","VM-HOST","SYSID","CORES","USED","RAM",
 fi
 </code></pre>
 <p>Remember to chmod and path the script so it will run.</p>
-<h3 id="heading--lsmm-vmhc">lsmm --vmhost -c: List VM host configurable parameters</h3>
-
+<p><a href="#heading--lsmm-vmhc"><h3 id="heading--lsmm-vmhc">lsmm &ndash;vmhost -c: List VM host configurable parameters</h3></a></p>
 <p>Here&rsquo;s a command line recipe to list the configurable parameters of a specific host:</p>
 <pre><code>maas admin vm-host read $ID | jq -r '([&quot;ID&quot;,&quot;NAME&quot;,&quot;POOL&quot;,&quot;ZONE&quot;,
 &quot;CPU-O/C&quot;, &quot;RAM-O/C&quot;, &quot;TAGS&quot;] | (., map(length*&quot;-&quot;))), (.| [.id,.name,
@@ -750,8 +734,8 @@ fi
 <h2>Recipes for creating MAAS machines</h2>
 
 <p>The following scripts walk you through creating MAAS machines of various types.  In these simple recipes, there&rsquo;s <strong>no validation</strong> of input, so use at your own risk &ndash; although it would be trivial to add validation for your favourite machine types.</p>
-<h3 id="heading--make-machines">Make a libvirt VM</h3>
-
+<p>&lt;a href=&rdquo;#ion** of input, so use at your own risk &ndash; although it would be trivial to add validation for your favourite machine types.</p>
+<p><a href="#><h3 id="><h3 id="><h3 id="heading--make-machines">Make a libvirt VM</h3></a></a></p>
 <p>This very basic recipe creates a libvirt virtual machine.  The parameters can be entered interactively (<code>&lt;scriptname&gt; --kvm -i</code>) or in &ldquo;batch&rdquo; mode (for scripting commands in a batch shellscript) by using <code>&lt;scriptname&gt; --kvm -b</code>, where <scriptname> is up to you:</p>
 <pre><code>#!/bin/bash
 #

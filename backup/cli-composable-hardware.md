@@ -17,7 +17,7 @@ This article provides a list of examples of VM host management tasks you can per
 13. [How can I delete a VM?](/t/cli-composable-hardware/795#heading--delete-a-vm)
 14. [How can I delete a VM host?](/t/cli-composable-hardware/795#heading--delete-a-vm-host)
 
-<h2 id="heading--add-a-vm-host">Add a VM host</h2>
+<a href="#heading--add-a-vm-host"><h2 id="heading--add-a-vm-host">Add a VM host</h2></a>
 
 To add a VM host:
 
@@ -60,7 +60,7 @@ maas $PROFILE vm-hosts create type=virsh power_address=qemu+ssh://ubuntu@192.168
         power_pass=example default_storage_pool=pool1
 ```
 
-<h2 id="heading--find-vm-host-ids">Find VM host IDs</h2>
+<a href="#heading--find-vm-host-ids"><h2 id="heading--find-vm-host-ids">Find VM host IDs</h2></a>
 
 Here's a simple way to find a VM host's ID by name using `jq`:
 
@@ -77,7 +77,7 @@ Example output:
 1
 ```
 
-<h2 id="heading--list-resources-of-all-vm-hosts">List resources of all VM hosts</h2>
+<a href="#heading--list-resources-of-all-vm-hosts"><h2 id="heading--list-resources-of-all-vm-hosts">List resources of all VM hosts</h2></a>
 
 ``` bash
 maas $PROFILE vm-hosts read
@@ -95,7 +95,7 @@ A portion of the sample output:
         "name": "civil-hermit",
 ```
 
-<h2 id="heading--list-resources-of-a-vm-host">List resources of a VM host</h2>
+<a href="#heading--list-resources-of-a-vm-host"><h2 id="heading--list-resources-of-a-vm-host">List resources of a VM host</h2></a>
 
 To list an individual VM host's resources:
 
@@ -103,7 +103,7 @@ To list an individual VM host's resources:
 maas $PROFILE vm-host read $VM_HOST_ID
 ```
 
-<h2 id="heading--update-vm-host-configuration">Update VM host configuration</h2>
+<a href="#heading--update-vm-host-configuration"><h2 id="heading--update-vm-host-configuration">Update VM host configuration</h2></a>
 
 Update overcommit ratios for a KVM host:
 
@@ -119,7 +119,7 @@ maas $PROFILE vm-host update $VM_HOST_ID power_address=qemu+ssh://ubuntu@192.168
         power_pass=example default_storage_pool=pool2
 ```
 
-<h2 id="heading--list-vm-host-connection-parameters">List VM host connection parameters</h2>
+<a href="#heading--list-vm-host-connection-parameters"><h2 id="heading--list-vm-host-connection-parameters">List VM host connection parameters</h2></a>
 
 To list a VM host's connection parameters:
 
@@ -137,9 +137,9 @@ Example output:
 }
 ```
 
-<h2 id="heading--compose-virtual-machines">Compose VMs</h2>
+<a href="#heading--compose-virtual-machines"><h2 id="heading--compose-virtual-machines">Compose VMs</h2></a>
 
-<h3 id="heading--basic">Basic</h3>
+<a href="#heading--basic"><h3 id="heading--basic">Basic</h3></a>
 
 To compose a basic VM:
 
@@ -156,7 +156,7 @@ Example output for default composing:
 }
 ```
 
-<h3 id="heading--set-resources">Set resources</h3>
+<a href="#heading--set-resources"><h3 id="heading--set-resources">Set resources</h3></a>
 
 Compose with resources specified:
 
@@ -173,7 +173,7 @@ Where RESOURCES is a space-separated list containing any combination of the foll
 5. **storage=** See [Storage](#heading--storage) below
 6. **interfaces=** See [Interfaces](#heading--interfaces) below
 
-<h4 id="heading--architecture">Architecture</h4>
+<a href="#heading--architecture"><h4 id="heading--architecture">Architecture</h4></a>
 
 To list available architectures:
 
@@ -188,7 +188,7 @@ maas $PROFILE vm-host compose $VM_HOST_ID \
     cores=40 cpu_speed=2000 memory=7812 architecture="amd64/generic"
 ```
 
-<h4 id="heading--storage">Storage</h4>
+<a href="#heading--storage"><h4 id="heading--storage">Storage</h4></a>
 
 Storage parameters look like this:
 
@@ -271,7 +271,7 @@ Finally, we deploy the machine. MAAS will use the partitions as we have defined 
 maas admin machine deploy $SYSTEM_ID
 ```
 
-<h4 id="heading--interfaces">Interfaces</h4>
+<a href="#heading--interfaces"><h4 id="heading--interfaces">Interfaces</h4></a>
 
 Using the `interfaces` constraint, you can compose virtual machines with interfaces, allowing the selection of VM host NICs.
 
@@ -297,7 +297,7 @@ MAAS automatically converts the `ip` constraint to a VLAN constraint (for the VL
 
 See the MAAS API documentation for a list of all constraint keys.
 
-<h2 id="heading--compose-and-allocate-a-vm">Compose and allocate a VM</h2>
+<a href="#heading--compose-and-allocate-a-vm"><h2 id="heading--compose-and-allocate-a-vm">Compose and allocate a VM</h2></a>
 
 In the absence of any nodes in the 'New' or 'Ready' state, if a VM host of sufficient resources is available, MAAS can automatically compose (add), commission, and acquire a VM. You can accomplish this with the `allocate` sub-command:
 
@@ -317,7 +317,7 @@ Once commissioned and acquired, the new machine will be ready to deploy.
 The labels (i.e. `mylabel1`, `mylabel2`) in this case can be used to associate device IDs in the information MAAS dumps about the newly created VM. Try piping the output to: `jq '.constraints_by_type'`.
 [/note]
 
-<h2 id="heading--list-machine-parameters">List machine parameters</h2>
+<a href="#heading--list-machine-parameters"><h2 id="heading--list-machine-parameters">List machine parameters</h2></a>
 
 MAAS VM parameters, including their resources, are listed just like any other machine:
 
@@ -325,13 +325,13 @@ MAAS VM parameters, including their resources, are listed just like any other ma
 maas $PROFILE machine read $SYSTEM_ID
 ```
 
-<h2 id="heading--libvirt-storage-pools">Libvirt storage pools</h2>
+<a href="#heading--libvirt-storage-pools"><h2 id="heading--libvirt-storage-pools">Libvirt storage pools</h2></a>
 
-<h3 id="heading--composing-vms-with-storage-pool-constraints">Composing VMs with storage pool constraints</h3>
+<a href="#heading--composing-vms-with-storage-pool-constraints"><h3 id="heading--composing-vms-with-storage-pool-constraints">Composing VMs with storage pool constraints</h3></a>
 
 See [Compose virtual machines](#heading--compose-virtual-machines).
 
-<h3 id="heading--usage">Usage</h3>
+<a href="#heading--usage"><h3 id="heading--usage">Usage</h3></a>
 
 Retrieve VM host storage pool information with the following command:
 
@@ -424,7 +424,7 @@ Machine-readable output follows:
 }
 ```
 
-<h2 id="heading--delete-a-vm">Delete a VM</h2>
+<a href="#heading--delete-a-vm"><h2 id="heading--delete-a-vm">Delete a VM</h2></a>
 
 ``` bash
 maas $PROFILE machine delete $SYSTEM_ID
@@ -432,7 +432,7 @@ maas $PROFILE machine delete $SYSTEM_ID
 
 After you delete a machine, the machine's resources will be available for other VMs.
 
-<h2 id="heading--delete-a-vm-host">Delete a VM host</h2>
+<a href="#heading--delete-a-vm-host"><h2 id="heading--delete-a-vm-host">Delete a VM host</h2></a>
 
 ``` bash
 maas $PROFILE vm-host delete $VM_HOST_ID

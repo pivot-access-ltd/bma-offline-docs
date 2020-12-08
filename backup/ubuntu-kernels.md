@@ -101,7 +101,7 @@ This article explains each of these kernels, and offers instructions and further
 6. [How to I set a minimum deploy kernel for a machine?](#heading--set-a-minimum-deploy-kernel-for-a-machine)
 7. [How do I set a specific kernel during machine deployment?](#heading--set-a-specific-kernel-during-machine-deployment)
 
-<h2 id="heading--general-availability-kernels">General availability kernels</h2>
+<a href="#heading--general-availability-kernels"><h2 id="heading--general-availability-kernels">General availability kernels</h2></a>
 
 The *general availability* (GA) kernel is based on the *generic* kernel that ships with a new Ubuntu version. Subsequent fixes are applied regularly by the 'stable' *stream* used when setting up the global image source for MAAS.
 
@@ -109,7 +109,7 @@ MAAS denotes a GA kernel like this:
 
 `ga-<version>`: The GA kernel reflects the major kernel version of the shipped Ubuntu release. For example, 'ga-16.04' is based on the 'generic' 4.4 Ubuntu kernel. As per Ubuntu policy, a GA kernel will never have its major version upgraded until the underlying release is upgraded.
 
-<h2 id="heading--hardware-enablement-kernels">Hardware enablement kernels</h2>
+<a href="#heading--hardware-enablement-kernels"><h2 id="heading--hardware-enablement-kernels">Hardware enablement kernels</h2></a>
 
 New hardware gets released all the time. If an Ubuntu host runs an older kernel, it's unlikely that MAAS can support the hardware. Canonical does make every effort to back-port more recent kernels enabling more hardware. The acronym HWE stands for "Hardware Enablement."
 
@@ -127,7 +127,7 @@ In MAAS 2.1, starting with Xenial kernels, the notation has changed. The followi
 
 See [LTS Enablement Stack^](https://wiki.ubuntu.com/Kernel/LTSEnablementStack) (Ubuntu wiki) for the latest information on HWE.
 
-<h2 id="heading--hardware-enablement-kernels-pre-release">Hardware enablement kernels (pre-release)</h2>
+<a href="#heading--hardware-enablement-kernels-pre-release"><h2 id="heading--hardware-enablement-kernels-pre-release">Hardware enablement kernels (pre-release)</h2></a>
 
 The pre-release HWE kernel is known as the *edge* HWE kernel.
 
@@ -137,7 +137,7 @@ So 'hwe-16.04' is considered older than 'hwe-16.04-edge'.
 
 See [Rolling LTS Enablement Stack^](https://wiki.ubuntu.com/Kernel/RollingLTSEnablementStack#hwe-16.04-edge) (Ubuntu wiki) for more information.
 
-<h2 id="heading--low-latency-kernels">Low latency kernels</h2>
+<a href="#heading--low-latency-kernels"><h2 id="heading--low-latency-kernels">Low latency kernels</h2></a>
 
 The low-latency kernel is based on the GA kernel, but uses a more aggressive configuration to reduce latency. It is categorised as a soft real-time kernel. For more information, see [Criteria for real-time computing^](https://en.wikipedia.org/wiki/Real-time_computing#Criteria_for_real-time_computing) (Wikipedia).
 
@@ -147,7 +147,7 @@ MAAS denotes a low latency kernel in three ways:
 2.   `ga-16.04-lowlatency`: the low latency GA kernel for Xenial
 3.   `hwe-16.04-lowlatency`: the low latency HWE kernel for Xenial
 
-<h2 id="heading--using-kernels">Using kernels</h2>
+<a href="#heading--using-kernels"><h2 id="heading--using-kernels">Using kernels</h2></a>
 
 The kernel installed on a machine during deployment is, by default, the Ubuntu release's native kernel (GA). However, it is possible to tell MAAS to use a different kernel. Via the Web UI, MAAS can help you choose one of these kernels.  There are three different contexts for your choice:
 
@@ -156,19 +156,19 @@ The kernel installed on a machine during deployment is, by default, the Ubuntu r
 3.   per machine during deployment (specific deploy kernel)
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-<h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2>
+<a href="#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning"><h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2></a>
 
 To set the default minimum enlistment and commissioning kernel (based on Ubuntu release: GA kernel) for all machines visit the 'General' tab of the 'Settings' page and select a kernel in the 'Default Minimum Kernel Version' field of the *Commissioning* section. Don't forget to click 'Save'.
 
 <a href="https://assets.ubuntu.com/v1/e0c7f298-nodes-kernels__2.6-default-minimum-kernel.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/e0c7f298-nodes-kernels__2.6-default-minimum-kernel.png"></a>
 
-<h2 id="heading--set-a-minimum-deploy-kernel-for-a-machine">Set a minimum deploy kernel for a machine</h2>
+<a href="#heading--set-a-minimum-deploy-kernel-for-a-machine"><h2 id="heading--set-a-minimum-deploy-kernel-for-a-machine">Set a minimum deploy kernel for a machine</h2></a>
 
 To set the minimum deploy kernel on a machine basis, click on a machine from the 'Machines' page of the web UI and switch to its 'Configuration' page. Click 'Edit' in the 'Machine configuration' section, select a kernel in the 'Minimum Kernel' field followed by 'Save changes'.
 
 <a href="https://assets.ubuntu.com/v1/e1016632-nodes-kernels__2.6-machine-minimum-kernel.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/e1016632-nodes-kernels__2.6-machine-minimum-kernel.png"></a>
 
-<h2 id="heading--set-a-specific-kernel-during-machine-deployment">Set a specific kernel during machine deployment</h2>
+<a href="#heading--set-a-specific-kernel-during-machine-deployment"><h2 id="heading--set-a-specific-kernel-during-machine-deployment">Set a specific kernel during machine deployment</h2></a>
 
 To set a specific kernel during deployment, select a machine from the 'Machines' page and choose 'Deploy' under 'Take action'. Then choose a kernel from the (third) kernel field. Hit 'Deploy machine' to initiate the deployment.
 
@@ -178,7 +178,7 @@ MAAS verifies that the specified kernel is available for the given Ubuntu releas
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-<h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2>
+<a href="#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning"><h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2></a>
 
 To set a default minimum kernel for all new and commissioned machines:
 
@@ -196,7 +196,7 @@ maas $PROFILE maas set-config name=default_min_hwe_kernel value=ga-16.04
 The command option `default_min_hwe_kernel` appears to apply to only HWE kernels but this is not the case.
 [/note]
 
-<h2 id="heading--set-a-minimum-deploy-kernel-for-a-machine">Set a minimum deploy kernel for a machine</h2>
+<a href="#heading--set-a-minimum-deploy-kernel-for-a-machine"><h2 id="heading--set-a-minimum-deploy-kernel-for-a-machine">Set a minimum deploy kernel for a machine</h2></a>
 
 To set the minimum deploy kernel on a per-machine basis:
 
@@ -214,7 +214,7 @@ maas $PROFILE machine update $SYSTEM_ID min_hwe_kernel=hwe-16.04
 The command option `default_min_hwe_kernel` appears to apply to only HWE kernels but this is not the case.
 [/note]
 
-<h2 id="heading--set-a-specific-kernel-during-machine-deployment">Set a specific kernel during machine deployment</h2>
+<a href="#heading--set-a-specific-kernel-during-machine-deployment"><h2 id="heading--set-a-specific-kernel-during-machine-deployment">Set a specific kernel during machine deployment</h2></a>
 
 To set a specific kernel during the deployment of a machine:
 

@@ -442,8 +442,7 @@
 <li><a href="cli-interface-management.html#heading--create-a-vlan-interface">How do I create a VLAN interface?</a></li>
 <li><a href="cli-interface-management.html#heading--delete-a-vlan-interface">How do I delete a VLAN interface?</a></li>
 </ol>
-<h2 id="heading--interface-identifiers">Interface identifiers</h2>
-
+<p><a href="#heading--interface-identifiers"><h2 id="heading--interface-identifiers">Interface identifiers</h2></a></p>
 <p>The MAAS CLI uses a numeric interface identifier for many interface operations. Use the following command to retrieve the identifier(s):</p>
 <pre><code class="bash">maas $PROFILE interfaces read $SYSTEM_ID
 </code></pre>
@@ -457,8 +456,7 @@
 &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4efwb4/interfaces/15/&quot;
 </code></pre>
 
-<h2 id="heading--create-a-bond-interface">Create a Bond interface</h2>
-
+<p><a href="#heading--create-a-bond-interface"><h2 id="heading--create-a-bond-interface">Create a Bond interface</h2></a></p>
 <p>A bond interface is used to aggregate two or more more physical interfaces into a single logical interface. A bond can be created with the following command:</p>
 <pre><code class="bash">maas $PROFILE interfaces create-bond $SYSTEM_ID name=$BOND_NAME \
 parents=$IFACE1_ID mac_address=$MAC_ADDR \ 
@@ -475,8 +473,7 @@ bond_updelay=200 bond_downdelay=200 mtu=9000
 </code></pre>
 
 <p>See <a href="commission-machines.html#heading--bond-interfaces">Bond interfaces</a> for details on supported bond modes and their actions.</p>
-<h2 id="heading--create-a-bridge-interface">Create a Bridge interface</h2>
-
+<p><a href="#heading--create-a-bridge-interface"><h2 id="heading--create-a-bridge-interface">Create a Bridge interface</h2></a></p>
 <p>A bridge interface is created with the following syntax:</p>
 <pre><code class="bash">maas $PROFILE interfaces create-bridge $SYSTEM_ID name=$BRIDGE_NAME \
 parent=$IFACE_ID
@@ -486,8 +483,7 @@ parent=$IFACE_ID
 <pre><code class="bash">maas admin interfaces create-bridge 4efwb4 name=bridged0 parent=4
 </code></pre>
 
-<h2 id="heading--delete-an-interface">Delete an interface</h2>
-
+<p><a href="#heading--delete-an-interface"><h2 id="heading--delete-an-interface">Delete an interface</h2></a></p>
 <p>The &lsquo;delete&rsquo; command can be used to delete a bridge interface, a bond interface or a physical interface:</p>
 <pre><code class="bash">maas $PROFILE interface delete $SYSTEM_ID $IFACE_ID
 </code></pre>
@@ -503,8 +499,7 @@ Machine-readable output follows:
 
 <p><strong>NOTE:</strong> 
 There is no machine-readable output after the successful execution of the delete command.</p>
-<h2 id="heading--create-a-vlan-interface">Create a VLAN interface</h2>
-
+<p><a href="#heading--create-a-vlan-interface"><h2 id="heading--create-a-vlan-interface">Create a VLAN interface</h2></a></p>
 <p>To create a VLAN interface, use the following syntax:</p>
 <pre><code class="bash">maas $PROFILE vlans create $FABRIC_ID name=$NAME vid=$VLAN_ID
 </code></pre>
@@ -587,8 +582,7 @@ Machine-readable output follows:
 }
 </code></pre>
 
-<h2 id="heading--delete-a-vlan-interface">Delete a VLAN interface</h2>
-
+<p><a href="#heading--delete-a-vlan-interface"><h2 id="heading--delete-a-vlan-interface">Delete a VLAN interface</h2></a></p>
 <p>The following command outlines the syntax required to delete a VLAN interface from the command line:</p>
 <pre><code class="bash">maas $PROFILE vlan delete $FABRIC__ID $VLAN_ID
 </code></pre>

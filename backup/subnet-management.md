@@ -91,7 +91,7 @@ The topic of subnet management pertains to whether or not MAAS is in full contro
 3. [What is IP address tracking?](#heading--ip-address-tracking)
 4. [How do I control subnet management](#heading--controlling-subnet-management)
 
-<h2 id="heading--managed-subnets">Managed subnets</h2>
+<a href="#heading--managed-subnets"><h2 id="heading--managed-subnets">Managed subnets</h2></a>
 
 When you enable management for a subnet, MAAS will:
 
@@ -146,11 +146,11 @@ See [Concepts and terms](/t/concepts-and-terms/785#heading--ip-ranges) for an ex
 See [Concepts and terms](/t/concepts-and-terms/785#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses and [Post-commission configuration](/t/commission-machines/2471#heading--post-commission-configuration) for information on IP allocation modes.
  snap-2-9-ui -->
 
-<h2 id="heading--unmanaged-subnets">Unmanaged subnets</h2>
+<a href="#heading--unmanaged-subnets"><h2 id="heading--unmanaged-subnets">Unmanaged subnets</h2></a>
 
 When management is disabled for a subnet, the definition of a reserved IP range differs from the managed mode. Here, a reserved IP range tells MAAS to **only allocate addresses from this range** (via 'Auto assign'). Also, DHCP will never lease addresses from an unmanaged subnet.
 
-<h2 id="heading--controlling-subnet-management">Controlling subnet management</h2>
+<a href="#heading--controlling-subnet-management"><h2 id="heading--controlling-subnet-management">Controlling subnet management</h2></a>
 
 By default, MAAS manages subnets in your configuration, but it is easy to change this.
 
@@ -177,7 +177,7 @@ maas $PROFILE subnet update 192.168.1.0/24 managed=false
 You can use the subnet's ID in place of the CIDR address.
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-<h2 id="heading--ip-address-tracking">IP address tracking</h2>
+<a href="#heading--ip-address-tracking"><h2 id="heading--ip-address-tracking">IP address tracking</h2></a>
 
 MAAS will keep track of all assigned addresses, regardless of whether they come from managed or unmanaged subnets.
 

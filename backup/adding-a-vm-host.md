@@ -264,7 +264,7 @@ You **must** [configure your network](/t/vm-host-networking/3215) to support a V
 6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
  snap-2-9-ui -->
 
-<h2 id="heading--adding-a-vm-host">Adding a VM host</h2>
+<a href="#heading--adding-a-vm-host"><h2 id="heading--adding-a-vm-host">Adding a VM host</h2></a>
 
 <!-- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui
 After installing MAAS, the 'KVM' page is typically empty:
@@ -327,7 +327,7 @@ deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli -->
 MAAS will automatically discover and store the resources your VM host contains. Any existing machines will also appear on the 'Machines' page, and MAAS will automatically attempt to commission them.
 [/note]
 
-<h2 id="heading--configuration">Configuration</h2>
+<a href="#heading--configuration"><h2 id="heading--configuration">Configuration</h2></a>
 
 <!-- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui
 VM hosts have several configuration options. Modify these by selecting the 'Configuration' tab and clicking 'Edit'. Options include a VM host's location, password, network zone, and default resource pool.
@@ -338,7 +338,7 @@ deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui -->
 <!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli
 Using the CLI, it's possible to update the configuration of a VM host.  You can change these configurable parameters with an `update` command -- but first, you'll want to know how to check the values of configurable parameters, both before and after the change.
 
-<h3>List VM-hosts</h3>
+<a href="#heading--list-vm-hosts"><h3 id="heading--list-vm-hosts">List VM-hosts</h3></a>
 
 To begin, you can list your available KVM-hosts with the following command:
 
@@ -351,7 +351,7 @@ maas admin vm-hosts read | jq -r '(["ID, "VM-HOST","SYSID","CORES",
 
 This command is in the [CLI cookbook](/t/the-cli-cookbook/2218) as [lsvmh](/t/the-cli-cookbook/2218#heading--vm-host-list)
 
-<h3>List configurable VM host parameters</h3>
+<a href="#heading--list-config-params"><h3 id="heading--list-config-params">List configurable VM host parameters</h3></a>
 
 There are just a few parameters that you can change for a VM host.  You can list these, on a per-host basis, using the following two-step procedure:
 
@@ -368,7 +368,7 @@ maas admin vm-host read $ID | jq -r '(["ID","NAME","POOL","ZONE",
 
 where $ID is the ID (not System ID) of the VM-host.
 
-<h3>Change the VM host's name</h3>
+<a href="#heading--change-vm-host-name"><h3 id="heading--change-vm-host-name">Change the VM host's name</h3></a>
 
 You can change the VM host's name very simply, with this command:
 
@@ -384,7 +384,7 @@ maas admin vm-host read $ID | jq -r '(["ID","NAME"]
 
 You can find this script at [catvmname](/t/the-cli-cookbook-2218#heading--jq-check-vm-host-name).
 
-<h3>Change the VM host's pool</h3>
+<a href="#heading--change-vm-host-pool"><h3 id="heading--change-vm-host-pool">Change the VM host's pool</h3></a>
 
 You can also change the VM host's pool with a simple command:
 
@@ -407,7 +407,7 @@ If you really want to set your VM host to a new one, you just need to create a n
 Then double-check it with `catvmpools`, and assign your VM host to it using the earlier command. 
 deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli -->
 
-<h3 id="heading--overcommit-resources">Over-commit resources</h3>
+<a href="#heading--overcommit-resources"><h3 id="heading--overcommit-resources">Over-commit resources</h3></a>
 
 Over-committed resources are those allocated beyond what's available in the physical resource. Using sliders on the configuration page, you can limit whether MAAS will attempt to overcommit CPU and memory. The input fields to the right of the sliders accept floating-point values from 0 to 10, with a default value of 1.
 

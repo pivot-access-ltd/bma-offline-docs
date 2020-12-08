@@ -446,8 +446,7 @@
 <li><a href="cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns">How do I create a Mail Exchange pointer record in DNS?</a></li>
 <li><a href="cli-advanced-tasks.html#heading--add-or-update-a-remote-syslog-server">How do I add or update a remote syslog server?</a></li>
 </ol>
-<h2 id="heading--edit-node-hostname-and-power-parameters">Edit machine hostname and power parameters</h2>
-
+<p><a href="#heading--edit-node-hostname-and-power-parameters"><h2 id="heading--edit-node-hostname-and-power-parameters">Edit machine hostname and power parameters</h2></a></p>
 <p>To edit the hostname and power parameters of a machine:</p>
 <pre><code class="bash">maas $PROFILE machine update $SYSTEM_ID \
     hostname=$HOSTNAME \
@@ -465,8 +464,7 @@
 </code></pre>
 
 <p>See <a href="common-cli-tasks.html#heading--determine-a-node-system-id">Common CLI tasks</a> for how to find a machine&rsquo;s system id and <a href="power-management.html">BMC Power Types</a> for details on different power types.</p>
-<h2 id="heading--relay-dhcp">Relay DHCP</h2>
-
+<p><a href="#heading--relay-dhcp"><h2 id="heading--relay-dhcp">Relay DHCP</h2></a></p>
 <p>To relay DHCP traffic for a VLAN (source) through another VLAN (target):</p>
 <pre><code class="bash">maas $PROFILE vlan update $FABRIC_ID $VLAN_VID_SRC relay_vlan=$VLAN_ID_TARGET
 </code></pre>
@@ -476,8 +474,7 @@
 </code></pre>
 
 <p>See <a href="managing-dhcp.html#heading--dhcp-relay">DHCP relay</a> for more information.</p>
-<h2 id="heading--assign-a-network-interface-to-a-fabric">Assign a network interface to a fabric</h2>
-
+<p><a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">Assign a network interface to a fabric</h2></a></p>
 <p>This task is made easier with the aid of the <code>jq</code> utility. It filters the <code>maas</code> command (JSON formatted) output and prints it in the desired way, which allows you to view and compare data quickly. Go ahead and install it:</p>
 <pre><code class="bash">sudo apt install jq
 </code></pre>
@@ -532,8 +529,7 @@ You can only edit an interface when the corresponding machine has a status of &l
 {&quot;id&quot;:9,&quot;name&quot;:&quot;eth1&quot;,&quot;mac&quot;:&quot;52:54:00:01:01:02&quot;,&quot;vid&quot;:null,&quot;fabric&quot;:null}
 </code></pre>
 
-<h2 id="heading--set-the-default-storage-layout">Set the default storage layout</h2>
-
+<p><a href="#heading--set-the-default-storage-layout"><h2 id="heading--set-the-default-storage-layout">Set the default storage layout</h2></a></p>
 <p>To set the default storage layout for all machines:</p>
 <pre><code class="bash">maas $PROFILE maas set-config name=default_storage_layout value=$LAYOUT_TYPE
 </code></pre>
@@ -545,8 +541,7 @@ You can only edit an interface when the corresponding machine has a status of &l
 <p><strong>NOTE:</strong> 
 The new default will only apply to newly-commissioned machines.</p>
 <p>See <a href="storage.html">Storage</a> for more details on MAAS storage features.</p>
-<h2 id="heading--set-a-storage-layout">Set a storage layout</h2>
-
+<p><a href="#heading--set-a-storage-layout"><h2 id="heading--set-a-storage-layout">Set a storage layout</h2></a></p>
 <p>An administrator can set a storage layout for a machine with a status of &lsquo;Ready&rsquo; like this:</p>
 <pre><code class="bash">maas $PROFILE machine set-storage-layout $SYSTEM_ID storage_layout=$LAYOUT_TYPE [$OPTIONS]
 </code></pre>
@@ -558,8 +553,7 @@ The new default will only apply to newly-commissioned machines.</p>
 <p>You must specify all storage sizes in bytes.</p>
 <p><strong>NOTE:</strong> 
 This action will remove the configuration that may exist on any block device.</p>
-<h2 id="heading--create-an-a-or-aaaa-record-in-dns">Create an A or AAAA record in DNS</h2>
-
+<p><a href="#heading--create-an-a-or-aaaa-record-in-dns"><h2 id="heading--create-an-a-or-aaaa-record-in-dns">Create an A or AAAA record in DNS</h2></a></p>
 <p>An administrator can create an A record when creating a DNS resource with an IPv4 address.</p>
 <pre><code class="bash">mass $PROFILE dnsresources create fqdn=$HOSTNAME.$DOMAIN ip_addresses=$IPV4ADDRESS
 </code></pre>
@@ -568,8 +562,7 @@ This action will remove the configuration that may exist on any block device.</p
 <pre><code class="bash">mass $PROFILE dnsresources create fqdn=$HOSTNAME.$DOMAIN ip_addresses=$IPV6ADDRESS
 </code></pre>
 
-<h2 id="heading--create-an-alias-cname-record-in-dns">Create an alias (CNAME) record in DNS</h2>
-
+<p><a href="#heading--create-an-alias-cname-record-in-dns"><h2 id="heading--create-an-alias-cname-record-in-dns">Create an alias (CNAME) record in DNS</h2></a></p>
 <p>An administrator can set a DNS Alias (CNAME record) to an already existing DNS entry of a machine.</p>
 <pre><code class="bash">mass $PROFILE dnsresource-records create fqdn=$HOSTNAME.$DOMAIN rrtype=cname rrdata=$ALIAS
 </code></pre>
@@ -578,8 +571,7 @@ This action will remove the configuration that may exist on any block device.</p
 <pre><code class="bash">maas $PROFILE dnsresource-records create fqdn=webserver.maas.io rrtype=cname rrdata=www
 </code></pre>
 
-<h2 id="heading--create-a-mail-exchange-pointer-record-in-dns">Create a Mail Exchange pointer record in DNS</h2>
-
+<p><a href="#heading--create-a-mail-exchange-pointer-record-in-dns"><h2 id="heading--create-a-mail-exchange-pointer-record-in-dns">Create a Mail Exchange pointer record in DNS</h2></a></p>
 <p>An administrator can set a DNS Mail Exchange pointer record (MX and value) to a domain.</p>
 <pre><code class="bash">maas $PROFILE dnsresource-records create fqdn=$DOMAIN rrtype=mx rrdata='10 $MAIL_SERVER.$DOMAIN'
 </code></pre>
@@ -588,8 +580,7 @@ This action will remove the configuration that may exist on any block device.</p
 <pre><code class="bash">maas $PROFILE dnsresource-records create fqdn=maas.io rrtype=mx rrdata='10 smtp.maas.io'
 </code></pre>
 
-<h2 id="heading--add-or-update-a-remote-syslog-server">Add or update a remote syslog server</h2>
-
+<p><a href="#heading--add-or-update-a-remote-syslog-server"><h2 id="heading--add-or-update-a-remote-syslog-server">Add or update a remote syslog server</h2></a></p>
 <p>To add or update a remote syslog server in your MAAS environment:</p>
 <pre><code class="bash">maas $PROFILE maas set-config name=&quot;remote_syslog&quot; value=&quot;$SYSLOG_FQDN&quot;
 </code></pre>

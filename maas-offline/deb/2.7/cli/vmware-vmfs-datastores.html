@@ -515,8 +515,7 @@ MAAS can configure custom local VMware VMFS Datastore layouts to maximise the us
 <li><a href="#heading--editing-vmfs-datastores">How do I edit a datastore?</a></li>
 <li><a href="#heading--deleting-vmfs-datastores">How do I delete a datastore?</a></li>
 </ol>
-<h2 id="heading--listing-vmfs-datastores">Listing VMFS datastores</h2>
-
+<p><a href="#heading--listing-vmfs-datastores"><h2 id="heading--listing-vmfs-datastores">Listing VMFS datastores</h2></a></p>
 <p>To view all VMFS Datastores on a machine, use the &lsquo;vmfs-datastores read&rsquo; API call:</p>
 <pre><code class="bash">maas $PROFILE vmfs-datastores read $SYSTEM_ID
 </code></pre>
@@ -580,8 +579,7 @@ MAAS can configure custom local VMware VMFS Datastore layouts to maximise the us
 ]
 </code></pre>
 
-<h2 id="heading--viewing-vmfs-datastores">Viewing a specific datastore</h2>
-
+<p><a href="#heading--viewing-vmfs-datastores"><h2 id="heading--viewing-vmfs-datastores">Viewing a specific datastore</h2></a></p>
 <p>To view a specific VMFS Datastores on a machine, use the &lsquo;vmfs-datastore read&rsquo; API call:</p>
 <pre><code class="bash">maas $PROFILE vmfs-datastore read $SYSTEM_ID $VMFS_DATASTORE_ID
 </code></pre>
@@ -623,8 +621,7 @@ MAAS can configure custom local VMware VMFS Datastore layouts to maximise the us
 }
 </code></pre>
 
-<h2 id="heading--creating-vmfs-datastores">Creating a new VMFS Datastore</h2>
-
+<p><a href="#heading--creating-vmfs-datastores"><h2 id="heading--creating-vmfs-datastores">Creating a new VMFS Datastore</h2></a></p>
 <p>A VMware VMFS datastore is created on one or more <a href="block-devices.html">block devices</a> or <a href="partitions.html">partitions</a></p>
 <!-- deb-2-7-ui
 A VMware VMFS datastore is created on one or more [block devices](block-devices.html) or [partitions](partitions.html)
@@ -711,8 +708,7 @@ A VMware VMFS datastore is created on one or more [block devices](block-devices.
 }
 </code></pre>
 
-<h2 id="heading--editing-vmfs-datastores">Edit an existing VMFS Datastore</h2>
-
+<p><a href="#heading--editing-vmfs-datastores"><h2 id="heading--editing-vmfs-datastores">Edit an existing VMFS Datastore</h2></a></p>
 <p>To edit an existing VMFS Datastores on a machine use the &lsquo;vmfs-datastore update&rsquo; API call:</p>
 <pre><code class="bash">maas $PROFILE vmfs-datastore update $SYSTEM_ID $VMFS_ID name=$NEW_VMFS_NAME add_block_devices=$NEW_BLOCK_ID_1,$NEW_BLOCK_ID_2 add_partitions=$NEW_PARTITION_ID_1,$NEW_PARTITION_ID_2 remove_partitions=$EXISTING_PARTITION_ID1,$EXISTING_PARTITION_ID2
 </code></pre>
@@ -774,8 +770,7 @@ A VMware VMFS datastore is created on one or more [block devices](block-devices.
 }
 </code></pre>
 
-<h2 id="heading--deleting-vmfs-datastores">Deleting a VMFS Datastore</h2>
-
+<p><a href="#heading--deleting-vmfs-datastores"><h2 id="heading--deleting-vmfs-datastores">Deleting a VMFS Datastore</h2></a></p>
 <p>To delete a VMFS Datastores on a machine use the &lsquo;vmfs-datastore delete&rsquo; API call:</p>
 <pre><code class="bash">maas $PROFILE vmfs-datastore delete $SYSTEM_ID $VMFS_ID
 </code></pre>

@@ -1,85 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|CLI ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ UI|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|CLI ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ UI|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|CLI ~ [UI](/t/prometheus-metrics/3029)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ UI|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|CLI ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ UI|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|CLI ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ UI|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
  snap-2-9-ui -->
 
 MAAS services can provide [Prometheus](https://prometheus.io/) endpoints for collecting performance metrics.  These include five endpoints of particular interest to MAAS users:
@@ -102,9 +54,9 @@ All available metrics are prefixed with `maas_`, to make it easier to look them 
 
 Whenever you install the `python3-prometheus-client` library, Prometheus endpoints are exposed over HTTP by the `rackd` and `regiond` processes under the default `/metrics` path.
 
-[note]
+<strong>NOTE:</strong> 
 Currently, prometheus metrics are shared when rack and region controllers are running on the same machine, even though each service provides its own port.  You can safely only query one of the two ports if you're running both controllers.
-[/note]
+
 
 <!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 For a snap-based MAAS installation, the libraries already included in the snap so that metrics will be available out of the box.

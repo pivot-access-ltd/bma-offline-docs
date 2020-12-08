@@ -184,7 +184,7 @@ Bonds are mapped to NIC teaming in only three ways:
 2.   active-backup -- explicit
 3.   802.3ad -- iphash, LACP rate and XMIT hash policy settings ignored
 
-<h2 id="heading--boot-sources">Boot sources</h2>
+<a href="#heading--boot-sources"><h2 id="heading--boot-sources">Boot sources</h2></a>
 
 The place from where a region controller downloads its images is known as a boot source. The main characteristics of a boot source are its location (URL) and its associated GPG public keyring.
 

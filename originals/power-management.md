@@ -1,85 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|CLI ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ UI|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|CLI ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ UI|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|CLI ~ [UI](/t/power-management/3017)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ UI|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|CLI ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ UI|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|CLI ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ UI|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
  snap-2-9-ui -->
 
 To manage a machine, MAAS must be able to power cycle it, usually through the machine's [BMC^](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller) card.  Until you configure the power type, a newly-added machine can't be enlisted and used by MAAS.
@@ -389,9 +341,9 @@ Consider a machine backed by VM. Below, a 'Power type' of `Virsh` has been selec
 
 <a href="https://assets.ubuntu.com/v1/c75e00a8-nodes-power-types__2.4_example-virsh.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/c75e00a8-nodes-power-types__2.4_example-virsh.png"></a>
 
-[note]
+<strong>NOTE:</strong> 
 The machine's hostname -- according to MAAS -- is a randomly chosen string (here `dear.ant`). You should change this hostname to something descriptive, that helps you remember why this machine is in your MAAS network.
-[/note]
+
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli

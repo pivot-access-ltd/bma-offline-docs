@@ -447,8 +447,7 @@
 <li><a href="cli-composable-hardware.html#heading--delete-a-vm">How can I delete a VM?</a></li>
 <li><a href="cli-composable-hardware.html#heading--delete-a-vm-host">How can I delete a VM host?</a></li>
 </ol>
-<h2 id="heading--add-a-vm-host">Add a VM host</h2>
-
+<p><a href="#heading--add-a-vm-host"><h2 id="heading--add-a-vm-host">Add a VM host</h2></a></p>
 <p>To add a VM host:</p>
 <pre><code class="bash">maas $PROFILE vm-hosts create type=$VM_HOST_TYPE power_address=$POWER_ADDRESS \
     [power_user=$USERNAME] [power_pass=$PASSWORD] [zone=$ZONE] \
@@ -477,8 +476,7 @@ Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS 
         power_pass=example default_storage_pool=pool1
 </code></pre>
 
-<h2 id="heading--find-vm-host-ids">Find VM host IDs</h2>
-
+<p><a href="#heading--find-vm-host-ids"><h2 id="heading--find-vm-host-ids">Find VM host IDs</h2></a></p>
 <p>Here&rsquo;s a simple way to find a VM host&rsquo;s ID by name using <code>jq</code>:</p>
 <pre><code class="bash">maas $PROFILE vm-hosts read | jq '.[] | select (.name==&quot;MyVMHost&quot;) | .name, .id'
 </code></pre>
@@ -489,8 +487,7 @@ Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS 
 1
 </code></pre>
 
-<h2 id="heading--list-resources-of-all-vm-hosts">List resources of all VM hosts</h2>
-
+<p><a href="#heading--list-resources-of-all-vm-hosts"><h2 id="heading--list-resources-of-all-vm-hosts">List resources of all VM hosts</h2></a></p>
 <pre><code class="bash">maas $PROFILE vm-hosts read
 </code></pre>
 
@@ -504,14 +501,12 @@ Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS 
         &quot;name&quot;: &quot;civil-hermit&quot;,
 </code></pre>
 
-<h2 id="heading--list-resources-of-a-vm-host">List resources of a VM host</h2>
-
+<p><a href="#heading--list-resources-of-a-vm-host"><h2 id="heading--list-resources-of-a-vm-host">List resources of a VM host</h2></a></p>
 <p>To list an individual VM host&rsquo;s resources:</p>
 <pre><code class="bash">maas $PROFILE vm-host read $VM_HOST_ID
 </code></pre>
 
-<h2 id="heading--update-vm-host-configuration">Update VM host configuration</h2>
-
+<p><a href="#heading--update-vm-host-configuration"><h2 id="heading--update-vm-host-configuration">Update VM host configuration</h2></a></p>
 <p>Update overcommit ratios for a KVM host:</p>
 <pre><code class="bash">maas $PROFILE vm-host update $VM_HOST_ID power_address=qemu+ssh://ubuntu@192.168.1.2/system \
         power_pass=example cpu_over_commit_ratio=2.5 memory_over_commit_ratio=10.0
@@ -522,8 +517,7 @@ Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS 
         power_pass=example default_storage_pool=pool2
 </code></pre>
 
-<h2 id="heading--list-vm-host-connection-parameters">List VM host connection parameters</h2>
-
+<p><a href="#heading--list-vm-host-connection-parameters"><h2 id="heading--list-vm-host-connection-parameters">List VM host connection parameters</h2></a></p>
 <p>To list a VM host&rsquo;s connection parameters:</p>
 <pre><code class="bash">maas $PROFILE vm-host parameters $VM_HOST_ID
 </code></pre>
@@ -536,10 +530,8 @@ Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS 
 }
 </code></pre>
 
-<h2 id="heading--compose-virtual-machines">Compose VMs</h2>
-
-<h3 id="heading--basic">Basic</h3>
-
+<p><a href="#heading--compose-virtual-machines"><h2 id="heading--compose-virtual-machines">Compose VMs</h2></a></p>
+<p><a href="#heading--basic"><h3 id="heading--basic">Basic</h3></a></p>
 <p>To compose a basic VM:</p>
 <pre><code class="bash">maas $PROFILE vm-host compose $VM_HOST_ID
 </code></pre>
@@ -551,8 +543,7 @@ Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS 
 }
 </code></pre>
 
-<h3 id="heading--set-resources">Set resources</h3>
-
+<p><a href="#heading--set-resources"><h3 id="heading--set-resources">Set resources</h3></a></p>
 <p>Compose with resources specified:</p>
 <pre><code class="bash">maas $PROFILE vm-host compose $VM_HOST_ID $RESOURCES
 </code></pre>
@@ -566,8 +557,7 @@ Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS 
 <li><strong>storage=</strong> See <a href="#heading--storage">Storage</a> below</li>
 <li><strong>interfaces=</strong> See <a href="#heading--interfaces">Interfaces</a> below</li>
 </ol>
-<h4 id="heading--architecture">Architecture</h4>
-
+<p><a href="#heading--architecture"><h4 id="heading--architecture">Architecture</h4></a></p>
 <p>To list available architectures:</p>
 <pre><code class="bash">maas $PROFILE boot-resources read
 </code></pre>
@@ -577,8 +567,7 @@ Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS 
     cores=40 cpu_speed=2000 memory=7812 architecture=&quot;amd64/generic&quot;
 </code></pre>
 
-<h4 id="heading--storage">Storage</h4>
-
+<p><a href="#heading--storage"><h4 id="heading--storage">Storage</h4></a></p>
 <p>Storage parameters look like this:</p>
 <pre><code class="no-highlight">storage=&quot;&lt;label&gt;:&lt;size in GB&gt;(&lt;storage pool name&gt;),&lt;label&gt;:&lt;size in GB&gt;(&lt;storage pool name&gt;)&quot;
 </code></pre>
@@ -633,8 +622,7 @@ maas admin partition mount $SYSTEM_ID $DISK2_ID $HOME_PARTITION_ID &quot;mount_p
 <pre><code class="bash">maas admin machine deploy $SYSTEM_ID
 </code></pre>
 
-<h4 id="heading--interfaces">Interfaces</h4>
-
+<p><a href="#heading--interfaces"><h4 id="heading--interfaces">Interfaces</h4></a></p>
 <p>Using the <code>interfaces</code> constraint, you can compose virtual machines with interfaces, allowing the selection of VM host NICs.</p>
 <p>If you don&rsquo;t specify an <code>interfaces</code> constraint, MAAS maintains backward compatibility by checking for a <code>maas</code> network, then a <code>default</code> network to which to connect the virtual machine.</p>
 <p>If you specify an <code>interfaces</code> constraint, MAAS creates a <code>bridge</code> or <code>macvlan</code> attachment to the networks that match the given constraint. MAAS prefers <code>bridge</code> interface attachments when possible since this typically results in successful communication.</p>
@@ -649,8 +637,7 @@ maas admin partition mount $SYSTEM_ID $DISK2_ID $HOME_PARTITION_ID &quot;mount_p
 
 <p>MAAS automatically converts the <code>ip</code> constraint to a VLAN constraint (for the VLAN where its subnet can be found &ndash; e.g. <code>172.16.99.0/24</code>.) and assigns the IP address to the newly-composed machine upon allocation.</p>
 <p>See the MAAS API documentation for a list of all constraint keys.</p>
-<h2 id="heading--compose-and-allocate-a-vm">Compose and allocate a VM</h2>
-
+<p><a href="#heading--compose-and-allocate-a-vm"><h2 id="heading--compose-and-allocate-a-vm">Compose and allocate a VM</h2></a></p>
 <p>In the absence of any nodes in the &lsquo;New&rsquo; or &lsquo;Ready&rsquo; state, if a VM host of sufficient resources is available, MAAS can automatically compose (add), commission, and acquire a VM. You can accomplish this with the <code>allocate</code> sub-command:</p>
 <pre><code class="bash">maas $PROFILE machines allocate
 </code></pre>
@@ -662,19 +649,15 @@ maas admin partition mount $SYSTEM_ID $DISK2_ID $HOME_PARTITION_ID &quot;mount_p
 <p>Once commissioned and acquired, the new machine will be ready to deploy.</p>
 <p><strong>NOTE:</strong> 
 The labels (i.e. <code>mylabel1</code>, <code>mylabel2</code>) in this case can be used to associate device IDs in the information MAAS dumps about the newly created VM. Try piping the output to: <code>jq '.constraints_by_type'</code>.</p>
-<h2 id="heading--list-machine-parameters">List machine parameters</h2>
-
+<p><a href="#heading--list-machine-parameters"><h2 id="heading--list-machine-parameters">List machine parameters</h2></a></p>
 <p>MAAS VM parameters, including their resources, are listed just like any other machine:</p>
 <pre><code class="bash">maas $PROFILE machine read $SYSTEM_ID
 </code></pre>
 
-<h2 id="heading--libvirt-storage-pools">Libvirt storage pools</h2>
-
-<h3 id="heading--composing-vms-with-storage-pool-constraints">Composing VMs with storage pool constraints</h3>
-
+<p><a href="#heading--libvirt-storage-pools"><h2 id="heading--libvirt-storage-pools">Libvirt storage pools</h2></a></p>
+<p><a href="#heading--composing-vms-with-storage-pool-constraints"><h3 id="heading--composing-vms-with-storage-pool-constraints">Composing VMs with storage pool constraints</h3></a></p>
 <p>See <a href="#heading--compose-virtual-machines">Compose virtual machines</a>.</p>
-<h3 id="heading--usage">Usage</h3>
-
+<p><a href="#heading--usage"><h3 id="heading--usage">Usage</h3></a></p>
 <p>Retrieve VM host storage pool information with the following command:</p>
 <pre><code class="bash">maas $PROFILE vm-host read $VM_HOST_ID
 </code></pre>
@@ -762,14 +745,12 @@ Machine-readable output follows:
 }
 </code></pre>
 
-<h2 id="heading--delete-a-vm">Delete a VM</h2>
-
+<p><a href="#heading--delete-a-vm"><h2 id="heading--delete-a-vm">Delete a VM</h2></a></p>
 <pre><code class="bash">maas $PROFILE machine delete $SYSTEM_ID
 </code></pre>
 
 <p>After you delete a machine, the machine&rsquo;s resources will be available for other VMs.</p>
-<h2 id="heading--delete-a-vm-host">Delete a VM host</h2>
-
+<p><a href="#heading--delete-a-vm-host"><h2 id="heading--delete-a-vm-host">Delete a VM host</h2></a></p>
 <pre><code class="bash">maas $PROFILE vm-host delete $VM_HOST_ID
 </code></pre>
 

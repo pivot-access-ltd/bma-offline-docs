@@ -1,85 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/configuration-journey/2526) ~ [UI](/t/configuration-journey/2527)|[CLI](/t/configuration-journey/2528) ~ [UI](/t/configuration-journey/2529)|[CLI](/t/configuration-journey/2530) ~ [UI](/t/configuration-journey/2531)|
-|Packages|CLI ~ [UI](/t/configuration-journey/2533)|[CLI](/t/configuration-journey/2534) ~ [UI](/t/configuration-journey/2535)|[CLI](/t/configuration-journey/2536) ~ [UI](/t/configuration-journey/2537)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/configuration-journey/2526) ~ [UI](/t/configuration-journey/2527)|[CLI](/t/configuration-journey/2528) ~ [UI](/t/configuration-journey/2529)|[CLI](/t/configuration-journey/2530) ~ [UI](/t/configuration-journey/2531)|
-|Packages|[CLI](/t/configuration-journey/2532) ~ UI|[CLI](/t/configuration-journey/2534) ~ [UI](/t/configuration-journey/2535)|[CLI](/t/configuration-journey/2536) ~ [UI](/t/configuration-journey/2537)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/configuration-journey/2526) ~ [UI](/t/configuration-journey/2527)|[CLI](/t/configuration-journey/2528) ~ [UI](/t/configuration-journey/2529)|[CLI](/t/configuration-journey/2530) ~ [UI](/t/configuration-journey/2531)|
-|Packages|[CLI](/t/configuration-journey/2532) ~ [UI](/t/configuration-journey/2533)|CLI ~ [UI](/t/configuration-journey/2535)|[CLI](/t/configuration-journey/2536) ~ [UI](/t/configuration-journey/2537)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/configuration-journey/2526) ~ [UI](/t/configuration-journey/2527)|[CLI](/t/configuration-journey/2528) ~ [UI](/t/configuration-journey/2529)|[CLI](/t/configuration-journey/2530) ~ [UI](/t/configuration-journey/2531)|
-|Packages|[CLI](/t/configuration-journey/2532) ~ [UI](/t/configuration-journey/2533)|[CLI](/t/configuration-journey/2534) ~ UI|[CLI](/t/configuration-journey/2536) ~ [UI](/t/configuration-journey/2537)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/configuration-journey/2526) ~ [UI](/t/configuration-journey/2527)|[CLI](/t/configuration-journey/2528) ~ [UI](/t/configuration-journey/2529)|[CLI](/t/configuration-journey/2530) ~ [UI](/t/configuration-journey/2531)|
-|Packages|[CLI](/t/configuration-journey/2532) ~ [UI](/t/configuration-journey/2533)|[CLI](/t/configuration-journey/2534) ~ [UI](/t/configuration-journey/2535)|CLI ~ [UI](/t/configuration-journey/2537)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/configuration-journey/2526) ~ [UI](/t/configuration-journey/2527)|[CLI](/t/configuration-journey/2528) ~ [UI](/t/configuration-journey/2529)|[CLI](/t/configuration-journey/2530) ~ [UI](/t/configuration-journey/2531)|
-|Packages|[CLI](/t/configuration-journey/2532) ~ [UI](/t/configuration-journey/2533)|[CLI](/t/configuration-journey/2534) ~ [UI](/t/configuration-journey/2535)|[CLI](/t/configuration-journey/2536) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/configuration-journey/2527)|[CLI](/t/configuration-journey/2528) ~ [UI](/t/configuration-journey/2529)|[CLI](/t/configuration-journey/2530) ~ [UI](/t/configuration-journey/2531)|
-|Packages|[CLI](/t/configuration-journey/2532) ~ [UI](/t/configuration-journey/2533)|[CLI](/t/configuration-journey/2534) ~ [UI](/t/configuration-journey/2535)|[CLI](/t/configuration-journey/2536) ~ [UI](/t/configuration-journey/2537)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/configuration-journey/2526) ~ UI|[CLI](/t/configuration-journey/2528) ~ [UI](/t/configuration-journey/2529)|[CLI](/t/configuration-journey/2530) ~ [UI](/t/configuration-journey/2531)|
-|Packages|[CLI](/t/configuration-journey/2532) ~ [UI](/t/configuration-journey/2533)|[CLI](/t/configuration-journey/2534) ~ [UI](/t/configuration-journey/2535)|[CLI](/t/configuration-journey/2536) ~ [UI](/t/configuration-journey/2537)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/configuration-journey/2526) ~ [UI](/t/configuration-journey/2527)|CLI ~ [UI](/t/configuration-journey/2529)|[CLI](/t/configuration-journey/2530) ~ [UI](/t/configuration-journey/2531)|
-|Packages|[CLI](/t/configuration-journey/2532) ~ [UI](/t/configuration-journey/2533)|[CLI](/t/configuration-journey/2534) ~ [UI](/t/configuration-journey/2535)|[CLI](/t/configuration-journey/2536) ~ [UI](/t/configuration-journey/2537)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/configuration-journey/2526) ~ [UI](/t/configuration-journey/2527)|[CLI](/t/configuration-journey/2528) ~ UI|[CLI](/t/configuration-journey/2530) ~ [UI](/t/configuration-journey/2531)|
-|Packages|[CLI](/t/configuration-journey/2532) ~ [UI](/t/configuration-journey/2533)|[CLI](/t/configuration-journey/2534) ~ [UI](/t/configuration-journey/2535)|[CLI](/t/configuration-journey/2536) ~ [UI](/t/configuration-journey/2537)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/configuration-journey/2526) ~ [UI](/t/configuration-journey/2527)|[CLI](/t/configuration-journey/2528) ~ [UI](/t/configuration-journey/2529)|CLI ~ [UI](/t/configuration-journey/2531)|
-|Packages|[CLI](/t/configuration-journey/2532) ~ [UI](/t/configuration-journey/2533)|[CLI](/t/configuration-journey/2534) ~ [UI](/t/configuration-journey/2535)|[CLI](/t/configuration-journey/2536) ~ [UI](/t/configuration-journey/2537)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/configuration-journey/2526) ~ [UI](/t/configuration-journey/2527)|[CLI](/t/configuration-journey/2528) ~ [UI](/t/configuration-journey/2529)|[CLI](/t/configuration-journey/2530) ~ UI|
-|Packages|[CLI](/t/configuration-journey/2532) ~ [UI](/t/configuration-journey/2533)|[CLI](/t/configuration-journey/2534) ~ [UI](/t/configuration-journey/2535)|[CLI](/t/configuration-journey/2536) ~ [UI](/t/configuration-journey/2537)|
  snap-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
@@ -489,9 +441,9 @@ and paste it into the block labelled “Public key.”  Finally, press the “Im
 
 With this complete, you’ll see that MAAS has been successfully set up. Click ‘Go to the Dashboard’ to proceed.
 
-[note]
+<strong>NOTE:</strong> 
 Note that you may have to wait a few moments for your selected images to sync locally.
-[/note]
+
 
 <a href="#heading--enabling-dhcp"><h2 id="heading--enabling-dhcp">Enabling DHCP</h2></a>
 
@@ -527,9 +479,9 @@ The Dashboard landing page lists non-registered devices that MAAS detected autom
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/902f07b6e96d06dcd072501473ce85ff3d303610.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/902f07b6e96d06dcd072501473ce85ff3d303610.jpeg"></a>  
 
-[note]
+<strong>NOTE:</strong> 
 Network discovery can be disabled at any time from the button on the Dashboard view.  Also note that you can get back to the dashboard at any time by clicking the MAAS logo.
-[/note]
+
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <a href="#heading--spaces-fabrics-zones-and-subnets"><h3 id="heading--spaces-fabrics-zones-and-subnets">Spaces, fabrics, zones and subnets</h3></a>

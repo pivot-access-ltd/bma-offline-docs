@@ -144,19 +144,19 @@ A newly installed MAAS comes with a default zone which initially contains all no
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 
-<h2 id="heading--list-zones">List availabilty zones</h2>
+<a href="#heading--list-zones"><h2 id="heading--list-zones">List availabilty zones</h2></a>
 
 To see a list of availability zones, choose "AZs" from the top menu:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/5ac446f2bda76276069fe5a1c302ff2acbf425a2.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5ac446f2bda76276069fe5a1c302ff2acbf425a2.jpeg"></a>
 
-<h2 id="heading--add-a-zone">Add a zone</h2>
+<a href="#heading--add-a-zone"><h2 id="heading--add-a-zone">Add a zone</h2></a>
 
 To create a zone, navigate to the 'AZs' page of the web UI and use the 'Add AZ' button. Enter a name for the zone and click 'Add AZ'.
 
 <a href="https://assets.ubuntu.com/v1/f4032f39-manage-zones__2.4_add-zone.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/f4032f39-manage-zones__2.4_add-zone.png"></a>
 
-<h2 id="heading--edit-a-zone">Edit a zone</h2>
+<a href="#heading--edit-a-zone"><h2 id="heading--edit-a-zone">Edit a zone</h2></a>
 
 To edit a zone, on the 'AZs' page, select a zone and use the 'Edit' button:
 
@@ -166,13 +166,13 @@ This selection allows you to change the name and description for the added (or e
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/11fb5b6c13609a7ef976aa301e02f43422080066.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/11fb5b6c13609a7ef976aa301e02f43422080066.jpeg"></a>
 
-<h2 id="heading--delete-a-zone">Delete a zone</h2>
+<a href="#heading--delete-a-zone"><h2 id="heading--delete-a-zone">Delete a zone</h2></a>
 
 To delete a zone, on the 'AZs' page, select a zone and use the 'Delete AZ' button. Doing so will also move any potential machine associations to the default zone.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/afb0576940f2e20266dc907911f837378958a64a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/afb0576940f2e20266dc907911f837378958a64a.jpeg"></a>
 
-<h2 id="heading--assign-a-node-to-a-zone">Assign a machine to a zone</h2>
+<a href="#heading--assign-a-node-to-a-zone"><h2 id="heading--assign-a-node-to-a-zone">Assign a machine to a zone</h2></a>
 
 To assign a machine to a zone, from the 'Machines' page, select a machine (or multiple machines) and choose 'Set zone' using the 'Take action' button:
 
@@ -185,7 +185,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 
-<h2 id="heading--list-zones">List availability zones</h2>
+<a href="#heading--list-zones"><h2 id="heading--list-zones">List availability zones</h2></a>
 
 To see a list of availability zones, enter the following command:
 
@@ -209,7 +209,7 @@ ZONE  NAME         DESCRIPTION
 6     ProServ
 ```
 
-<h2 id="heading--add-a-zone">Add a zone</h2>
+<a href="#heading--add-a-zone"><h2 id="heading--add-a-zone">Add a zone</h2></a>
 
 To create a zone, enter the following command:
 
@@ -217,7 +217,7 @@ To create a zone, enter the following command:
 maas $PROFILE zones create name=$ZONE_NAME description=$ZONE_DESCRIPTION
 ```
 
-<h2 id="heading--edit-a-zone">Edit a zone</h2>
+<a href="#heading--edit-a-zone"><h2 id="heading--edit-a-zone">Edit a zone</h2></a>
 
 To edit a zone, enter a command similar to the following:
 
@@ -226,7 +226,7 @@ maas $PROFILE zone update $OLD_ZONE_NAME name=$NEW_ZONE_NAME \
 description=$ZONE_DESCRIPTION
 ```
 
-<h2 id="heading--delete-a-zone">Delete a zone</h2>
+<a href="#heading--delete-a-zone"><h2 id="heading--delete-a-zone">Delete a zone</h2></a>
 
 To delete a zone, enter a command like this:
 
@@ -234,7 +234,7 @@ To delete a zone, enter a command like this:
 maas $PROFILE zone delete $ZONE_NAME
 ```
 
-<h2 id="heading--assign-a-node-to-a-zone">Assign a machine to a zone</h2>
+<a href="#heading--assign-a-node-to-a-zone"><h2 id="heading--assign-a-node-to-a-zone">Assign a machine to a zone</h2></a>
 
 To assign a machine to a zone, first retrieve the machine's system ID like this:
 
@@ -248,7 +248,7 @@ Then enter the following command, using the system ID you just retrieved:
 maas admin machine update $SYSTEM_ID zone=$ZONE_NAME
 ```
 
-<h2 id="heading--allocate-a-node-in-a-zone">Allocate a machine in a zone</h2>
+<a href="#heading--allocate-a-node-in-a-zone"><h2 id="heading--allocate-a-node-in-a-zone">Allocate a machine in a zone</h2></a>
 
 To deploy in a particular zone, call the `acquire` method in the region-controller API &lt;region-controller-api&gt; as before, but pass the `zone` parameter with the name of the zone. This method will allocate a machine in that zone, or fail with an HTTP 409 ("conflict") error if the zone has no machines available that match your request.
 

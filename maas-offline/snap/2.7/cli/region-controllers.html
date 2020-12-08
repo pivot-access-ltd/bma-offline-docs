@@ -469,8 +469,7 @@
 <li><a href="#heading--adding-a-new-region-host">How do I add a new region host?</a></li>
 <li><a href="#heading--increasing-regiond-daemon-workers">How can I improve region controller performance?</a></li>
 </ol>
-<h2 id="heading--postgresql-setup">Set up PostgreSQL for the region</h2>
-
+<p><a href="#heading--postgresql-setup"><h2 id="heading--postgresql-setup">Set up PostgreSQL for the region</h2></a></p>
 <p>Any number of API servers (region controllers) can be present as long as each connects to the same PostgreSQL database and allows the required number of connections.</p>
 <p>On the primary database host, edit file <code>/etc/postgresql/9.5/main/pg_hba.conf</code> to allow the eventual secondary API server to contact the primary PostgreSQL database. Include the below line, replacing
 <code>$SECONDARY_API_SERVER_IP</code> with the IP address of the host that will contain the secondary API server:</p>
@@ -481,8 +480,7 @@ The primary database and API servers often reside on the same host.</p>
 <p>Apply this change by restarting the database:</p>
 <pre><code>sudo systemctl restart postgresql
 </code></pre>
-<h2 id="heading--adding-a-new-region-host">Add a new region host</h2>
-
+<p><a href="#heading--adding-a-new-region-host"><h2 id="heading--adding-a-new-region-host">Add a new region host</h2></a></p>
 <p>On a secondary host, add the new region controller by installing <code>maas-region-api</code>:</p>
 <pre><code>sudo apt install maas-region-api
 </code></pre>
@@ -501,8 +499,7 @@ sudo systemctl start maas-regiond
 <li><code>/var/log/maas/maas.log</code></li></li>
 <li><code>/var/log/syslog</code></li></li>
 </ol>
-<h2 id="heading--increasing-regiond-daemon-workers">Improving region controller performance</h2>
-
+<p><a href="#heading--increasing-regiond-daemon-workers"><h2 id="heading--increasing-regiond-daemon-workers">Improving region controller performance</h2></a></p>
 <p><strong>NOTE:</strong> 
 This functionality is available starting from MAAS 2.4.</p>
 <p>The MAAS Region Controller is a daemon collection of 4 workers that are in charge of handling all the internals of MAAS. The regiond workers handle the UI, API and the internal communication between Region and Rack controllers.</p>

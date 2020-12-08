@@ -470,7 +470,7 @@
 1. [How do I add a VM?](#heading--add-vm-from-ui)
 2. [How do I delete a VM?](#heading--delete-a-machine)
 
-<h2 id="heading--add-vm-from-ui">Adding a VM from the Web UI</h2>
+<a href="#heading--add-vm-from-ui"><h2 id="heading--add-vm-from-ui">Adding a VM from the Web UI</h2></a>
 
 While on VM host's details view, select 'Compose' from the 'Take action' drop-down menu to compose a machine.
 
@@ -484,7 +484,7 @@ MAAS will deduct the new machine's resources from the VM host's resources:
 
 <a href="images/3b621ab0e7b4f6a86963d2b7c50b677b815956ab.jpeg" target = "_blank"><img src="images/3b621ab0e7b4f6a86963d2b7c50b677b815956ab.jpeg"></a></a> 
 
-<h2 id="heading--delete-a-machine">Deleting a VM from the Web UI</h2>
+<a href="#heading--delete-a-machine"><h2 id="heading--delete-a-machine">Deleting a VM from the Web UI</h2></a>
 
 To delete a VM, delete it as you would any other MAAS machine. Select the desired machine from the list of machines and select 'Delete' from the 'Take Action' menu.
 
@@ -501,8 +501,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 <li><a href="#heading--find-vm-host-ids">How do I find a VM host ID?</a></li>
 <li><a href="#heading--delete-a-vm">How do I delete a VM?</a></li>
 </ol>
-<h2 id="heading--adding-a-vm-from-the-cli">Adding a VM from the CLI</h2>
-
+<p><a href="#heading--adding-a-vm-from-the-cli"><h2 id="heading--adding-a-vm-from-the-cli">Adding a VM from the CLI</h2></a></p>
 <p>To compose a basic VM:</p>
 <pre><code>maas $PROFILE vm-host compose $VM_HOST_ID
 </code></pre>
@@ -512,8 +511,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
     "resource_uri": "/MAAS/api/2.0/machines/73yxmc/"
 }
 </code></pre>
-<h3 id="heading--set-resources">Set resources while adding a VM</h3>
-
+<p><a href="#heading--set-resources"><h3 id="heading--set-resources">Set resources while adding a VM</h3></a></p>
 <p>Compose with resources specified:</p>
 <pre><code>maas $PROFILE vm-host compose $VM_HOST_ID $RESOURCES
 </code></pre>
@@ -526,8 +524,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 <li><em>storage=</em> See <a href="#heading--storage">Storage</a> below</li>
 <li><em>interfaces=</em> See <a href="#heading--interfaces">Interfaces</a> below</li>
 </ol>
-<h3 id="heading--architecture">Setting the architecture while adding a VM</h3>
-
+<p><a href="#heading--architecture"><h3 id="heading--architecture">Setting the architecture while adding a VM</h3></a></p>
 <p>To list available architectures:</p>
 <pre><code>maas $PROFILE boot-resources read
 </code></pre>
@@ -535,8 +532,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 <pre><code>maas $PROFILE vm-host compose $VM_HOST_ID \
     cores=40 cpu_speed=2000 memory=7812 architecture="amd64/generic"
 </code></pre>
-<h3 id="heading--storage">Setting storage parameters while adding a VM</h3>
-
+<p><a href="#heading--storage"><h3 id="heading--storage">Setting storage parameters while adding a VM</h3></a></p>
 <p>Storage parameters look like this:</p>
 <pre><code>storage="&lt;label&gt;:&lt;size in GB&gt;(&lt;storage pool name&gt;),&lt;label&gt;:&lt;size in GB&gt;(&lt;storage pool name&gt;)"
 </code></pre>
@@ -582,13 +578,12 @@ maas admin partition mount $SYSTEM_ID $DISK2_ID $HOME_PARTITION_ID "mount_point=
 <p>Finally, we deploy the machine. MAAS will use the partitions as we have defined them, similar to a normal Ubuntu desktop install:</p>
 <pre><code>maas admin machine deploy $SYSTEM_ID
 </code></pre>
-<h3 id="heading--interfaces">Specifying interfaces while adding a VM</h3>
-
+<p><a href="#heading--interfaces"><h3 id="heading--interfaces">Specifying interfaces while adding a VM</h3></a></p>
 <p>Using the <code>interfaces</code> constraint, you can compose virtual machines with interfaces, allowing the selection of VM host NICs.</p>
 <p>If you don&rsquo;t specify an <code>interfaces</code> constraint, MAAS maintains backward compatibility by checking for a <code>maas</code> network, then a <code>default</code> network to which to connect the virtual machine.</p>
 <p>If you specify an <code>interfaces</code> constraint, MAAS creates a <code>bridge</code> or <code>macvlan</code> attachment to the networks that match the given constraint. MAAS prefers <code>bridge</code> interface attachments when possible since this typically results in successful communication.</p>
 <p>Consider the following interfaces constraint:</p>
-<pre><code>interfaces=eth0:space=maas,eth1:space=storage
+<pre><code>interfaces=eth0:space=maas;eth1:space=storage
 </code></pre>
 <p>Assuming you deploy the VM host on a machine or controller with access to the <code>maas</code> and <code>storage</code> <a href="concepts-and-terms.html#heading--spaces">spaces</a>, MAAS will create an <code>eth0</code> interface bound to the <code>maas</code> space and an <code>eth1</code> interface bound to the <code>storage</code> space.</p>
 <p>Another example tells MAAS to assign unallocated IP addresses:</p>
@@ -596,8 +591,7 @@ maas admin partition mount $SYSTEM_ID $DISK2_ID $HOME_PARTITION_ID "mount_point=
 </code></pre>
 <p>MAAS automatically converts the <code>ip</code> constraint to a VLAN constraint (matching the VLAN which corresponds to the subnet can be found &ndash; e.g. <code>172.16.99.0/24</code>.) and assigns the IP address to the newly-composed machine upon allocation.</p>
 <p>See the Machines <a href="https://maas.io/docs/api#machines">MAAS API documentation</a> for a list of all constraint keys.</p>
-<h3 id="heading--find-vm-host-ids">Find VM host IDs</h3>
-
+<p><a href="#heading--find-vm-host-ids"><h3 id="heading--find-vm-host-ids">Find VM host IDs</h3></a></p>
 <p>Here&rsquo;s a simple way to find a VM host&rsquo;s ID by name using <code>jq</code>:</p>
 <pre><code>maas $PROFILE vm-hosts read | jq '.[] | select (.name=="MyVMHost") | .name, .id'
 </code></pre>
@@ -605,8 +599,7 @@ maas admin partition mount $SYSTEM_ID $DISK2_ID $HOME_PARTITION_ID "mount_point=
 <pre><code>"MyVMHost"
 1
 </code></pre>
-<h2 id="heading--delete-a-vm">Deleting a VM with the CLI</h2>
-
+<p><a href="#heading--delete-a-vm"><h2 id="heading--delete-a-vm">Deleting a VM with the CLI</h2></a></p>
 <pre><code>maas $PROFILE machine delete $SYSTEM_ID
 </code></pre>
 <p>After you delete a machine, its resources will be available for other VMs.</p>

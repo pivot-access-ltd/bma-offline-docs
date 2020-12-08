@@ -440,21 +440,18 @@
 <li><a href="maas-cli.html#heading--log-out">How do I log out?</a></li>
 <li><a href="maas-cli.html#heading--next-steps">What are some the next steps I can take with the CLI?</a></li>
 </ol>
-<h2 id="heading--the-maas-command">The maas command</h2>
-
+<p><a href="#heading--the-maas-command"><h2 id="heading--the-maas-command">The maas command</h2></a></p>
 <p>You can obtain the <code>maas</code> command via the <code>maas-cli</code> Ubuntu package installed on every region API server and rack controller. To manage MAAS at the CLI level from a remote workstation, you will need to install this package:</p>
 <pre><code class="bash">sudo apt install maas-cli
 </code></pre>
 
-<h2 id="heading--create-an-administrator">Create an administrator</h2>
-
+<p><a href="#heading--create-an-administrator"><h2 id="heading--create-an-administrator">Create an administrator</h2></a></p>
 <p>MAAS requires an initial administrator, sometimes called a MAAS &ldquo;superuser&rdquo;. When you access the web UI for the first time, you will be prompted to create this user:</p>
 <pre><code class="bash">sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
 </code></pre>
 
 <p>You can create extra administrators in the same way. See <a href="common-cli-tasks.html#heading--create-a-regular-user">MAAS CLI - common tasks</a> for instructions on creating regular users with the CLI.</p>
-<h2 id="heading--log-in-required">Log in (required)</h2>
-
+<p><a href="#heading--log-in-required"><h2 id="heading--log-in-required">Log in (required)</h2></a></p>
 <p>To use the CLI you must first log in to the API server (region controller).</p>
 <p>You will need the API key that MAAS generated when creating your MAAS account. To obtain it, run this command on the region controller (i.e. wherever you installed the &lsquo;maas-region-controller&rsquo; package):</p>
 <pre><code class="bash">sudo maas-region apikey --username=$PROFILE &gt; $API_KEY_FILE
@@ -487,8 +484,7 @@ MAAS_URL=http://$API_SERVER/MAAS/api/2.0
 maas login $PROFILE $MAAS_URL - &lt; $API_KEY_FILE
 </code></pre>
 
-<h2 id="heading--get-help">Get help</h2>
-
+<p><a href="#heading--get-help"><h2 id="heading--get-help">Get help</h2></a></p>
 <p>MAAS has a thorough built-in help reference, which you can access in stages to understand how to build commands.</p>
 <p>The <code>maas</code> command accepts the <code>-h</code> or <code>--help</code> argument after every keyword and will display results with increasing detail.</p>
 <p>For example, suppose you were interested in tag management but didn&rsquo;t know where to start. You might try this:</p>
@@ -508,14 +504,12 @@ maas login $PROFILE $MAAS_URL - &lt; $API_KEY_FILE
 </code></pre>
 
 <p>In this way, you can discover all that the MAAS CLI has to offer.</p>
-<h2 id="heading--log-out">Log out</h2>
-
+<p><a href="#heading--log-out"><h2 id="heading--log-out">Log out</h2></a></p>
 <p>Once you finish with the CLI, you can log out from the given profile, flushing the stored credentials.</p>
 <pre><code class="bash">maas logout $PROFILE
 </code></pre>
 
-<h2 id="heading--next-steps">Next steps</h2>
-
+<p><a href="#heading--next-steps"><h2 id="heading--next-steps">Next steps</h2></a></p>
 <p>The following five categories are now available to be explored:</p>
 <ol>
 <li><a href="common-cli-tasks.html">Common tasks</a></li>

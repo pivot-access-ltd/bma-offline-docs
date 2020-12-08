@@ -16,7 +16,7 @@ The following recipes may help you make better use of the [MAAS CLI](/t/maas-cli
 * [VM host list](/t/the-cli-cookbook/2218#heading--vm-host-list)
 * [Creating KVMs & getting feedback](/t/the-cli-cookbook/2218#heading--create-kvm)
 
-<a href="#heading--basic-machine-list"><h2 id="heading--basic-machine-list">Basic machine list</h2></a>
+<h2 id="heading--basic-machine-list">Basic machine list</h2>
 
 ```
 maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
@@ -27,7 +27,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 .boot_interface.links[0].subnet.name]) | @tsv' | column -t
 ```
 
-<a href="#heading--sorted-by-machine-name"><h3 id="heading--sorted-by-machine-name">Machine list sorted by machine name</h3></a>
+<h3 id="heading--sorted-by-machine-name">Machine list sorted by machine name</h3>
 
 ```
 maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
@@ -39,7 +39,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 | sort -k 1
 ```
 
-<a href="#heading--sorted-by-system-id"><h3 id="heading--sorted-by-system-id">Machine list sorted by system ID</h3></a>
+<h3 id="heading--sorted-by-system-id">Machine list sorted by system ID</h3>
 
 ```
 maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
@@ -51,7 +51,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 | sort -k 1
 ```
 
-<a href="#heading--sorted-by-power-state"><h3 id="heading--sorted-by-power-state">Machine list sorted by power state</h3></a>
+<h3 id="heading--sorted-by-power-state">Machine list sorted by power state</h3>
 
 ```
 maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
@@ -63,7 +63,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 | sort -k 1
 ```
 
-<a href="#heading--sorted-by-machine-status"><h3 id="heading--sorted-by-machine-status">Machine list sorted by machine status</h3></a>
+<h3 id="heading--sorted-by-machine-status">Machine list sorted by machine status</h3>
 
 ```
 maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
@@ -75,7 +75,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 | sort -k 1
 ```
 
-<a href="#heading--sorted-by-first-tag"><h3 id="heading--sorted-by-first-tag">Machine list sorted by first tag</h3></a>
+<h3 id="heading--sorted-by-first-tag">Machine list sorted by first tag</h3>
 
 ```
 maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
@@ -87,7 +87,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 | sort -k 1
 ```
 
-<a href="#heading--sorted-by-pool"><h3 id="heading--sorted-by-pool">Machine list sorted by pool</h3></a>
+<h3 id="heading--sorted-by-pool">Machine list sorted by pool</h3>
 
 ```
 maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
@@ -99,7 +99,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 | sort -k 1
 ```
 
-<a href="#heading--sorted-by-vlan"><h3 id="heading--sorted-by-vlan">Machine list sorted by VLAN</h3></a>
+<h3 id="heading--sorted-by-vlan">Machine list sorted by VLAN</h3>
 
 ```
 maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
@@ -111,7 +111,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 | sort -k 1
 ```
 
-<a href="#heading--sorted-by-fabric"><h3 id="heading--sorted-by-fabric">Machine list sorted by fabric</h3></a>
+<h3 id="heading--sorted-by-fabric">Machine list sorted by fabric</h3>
 
 ```
 maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
@@ -123,7 +123,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 | sort -k 1
 ```
 
-<a href="#heading--sorted-by-subnet"><h3 id="heading--sorted-by-subnet">Machine list sorted by subnet</h3></a>
+<h3 id="heading--sorted-by-subnet">Machine list sorted by subnet</h3>
 
 ```
 maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
@@ -135,7 +135,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 | sort -k 1
 ```
 
-<a href="#heading--vm-host-list"><h2 id="heading--vm-host-list">List of VM hosts</h2></a>
+<h2 id="heading--vm-host-list">List of VM hosts</h2>
 
 ```
 maas admin vm-hosts read | jq -r '(["ID","VM-HOST","SYSID","CORES","USED","RAM",
@@ -144,15 +144,15 @@ maas admin vm-hosts read | jq -r '(["ID","VM-HOST","SYSID","CORES","USED","RAM",
 .used.local_storage]) | @tsv' | column -t
 ```
 
-<a href="#heading--create-kvm"><h2 id="heading--create-kvm">Creating a KVM with confirmation</h2></a>
+<h2 id="heading--create-kvm">Creating a KVM with confirmation</h2>
 
 Note that most of these can be entered directly at the command line using copy/paste -- even the `#!/bin/bash` won't hurt, as it will be ignored by the shell.
 
-[note]
+<strong>NOTE:</strong> 
 Remember to:
 1. login to the MAAS CLI before using these commands.
 2. substitute your administrator profile for "admin" if you've assigned a different admin username.
-[/note]
+
 
 <details><summary>Also, be aware of how multiple lines are parsed by the shell:</summary>
 
@@ -179,7 +179,7 @@ We've tried to break them so that they fit on an average terminal line, but your
 
 The `lsmm` script, defined below, is something we use to quickly get machine information from the command line.  For those of us who prefer the CLI, it's an easy way to gather the same information you'd get in the web UI machine list, but more focused in each option.
 
-<a href="#heading--lsmm"><a href="#heading--lsmm"><h3 id="heading--lsmm">lsmm: List MAAS machines</h3></a></a>
+<h3 id="heading--lsmm">lsmm: List MAAS machines</h3>
 
 This recipe prints a basic machine list.  Here's the command to paste into the command line:
 
@@ -203,7 +203,7 @@ And here's the command as part of the `lsmm` shellscript:
 
 If you save this to a file, make sure to `chmod` the file so it will execute.  You might also add it to your path, or perhaps even place it in `/usr/bin` if desired.
 
-<a href="#heading--lsmm-t"><h3 id="heading--lsmm-t">lsmm -t: List MAAS machines with first tag</h3></a>
+<h3 id="heading--lsmm-t">lsmm -t: List MAAS machines with first tag</h3>
 
 It's a good idea to keep your most important machine tag first, as it's the first one you'll see.  It makes scanning your list (UI or CLI/jq) much more efficient.  Here's a recipe that adds the first tag to the console-printed machine list:
 
@@ -242,7 +242,7 @@ And here's an expanded version of `lsmm` that takes a `-t` options, for "tags:"
 
 Note that with no option (e.g., just `lsmm` on the command line), this script will print the basic machine list from the previous recipe.
 
-<a href="#heading--lsmm-vmh"><h3 id="heading--lsmm-vmh">lsmm --vmhost: List VM hosts</h3></a>
+<h3 id="heading--lsmm-vmh">lsmm --vmhost: List VM hosts</h3>
 
 Here's a recipe that gives a quick overview of your existing VM hosts:
 
@@ -287,7 +287,7 @@ And here it is as part of an expanded `lsmm` script, under the new option `-vmh`
 
 Remember to chmod and path the script so it will run.
 
-<a href="#heading--lsmm-vmhc"><h3 id="heading--lsmm-vmhc">lsmm --vmhost -c: List VM host configurable parameters</h3></a>
+<h3 id="heading--lsmm-vmhc">lsmm --vmhost -c: List VM host configurable parameters</h3>
 
 Here's a command line recipe to list the configurable parameters of a specific host:
 
@@ -354,9 +354,7 @@ lsmm --vmhost -c 4
 
 The following scripts walk you through creating MAAS machines of various types.  In these simple recipes, there's **no validation** of input, so use at your own risk -- although it would be trivial to add validation for your favourite machine types.
 
-<a href="#ion** of input, so use at your own risk -- although it would be trivial to add validation for your favourite machine types.
-
-<a href="#><h3 id="><h3 id="><h3 id="heading--make-machines">Make a libvirt VM</h3></a></a>
+<h3 id="heading--make-machines">Make a libvirt VM</h3>
 
 This very basic recipe creates a libvirt virtual machine.  The parameters can be entered interactively (`<scriptname> --kvm -i`) or in "batch" mode (for scripting commands in a batch shellscript) by using `<scriptname> --kvm -b`, where <scriptname> is up to you:
 

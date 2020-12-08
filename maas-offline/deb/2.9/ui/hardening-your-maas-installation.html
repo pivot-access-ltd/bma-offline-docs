@@ -472,10 +472,8 @@
 <li><a href="#heading--what-else-to-do">What else can I do to harden MAAS?</a></li>
 <li><a href="#heading--security-consulting">Whom do I contact for MAAS security consulting?</a></li>
 </ol>
-<h2 id="heading--firewalls">Use a firewall</h2>
-
+<p><a href="#heading--firewalls"><h2 id="heading--firewalls">Use a firewall</h2></a>
 <p>Each rack controller must be able to initiate TCP connections on the following ports:</p>
-
 <table>
 <thead>
 <tr>
@@ -505,8 +503,7 @@
 <td>Reserved for region workers (RPC).</td>
 </tr>
 </tbody>
-</table>
-
+</table></p>
 <p>Consider setting your <a href="https://help.ubuntu.com/lts/serverguide/firewall.html#firewall-logs">firewall (external link)</a> on your rack and region controllers to disallow communication on all ports except those used by MAAS. For example, assuming you have installed <code>ufw</code>, you could execute:</p>
 <pre><code>sudo ufw enable
 sudo ufw default deny incoming
@@ -520,8 +517,7 @@ sudo ufw allow 5250:5270/tcp
 sudo ufw allow 5250:5270/udp
 </code></pre>
 <p>Recognise that your particular configuration and version may vary, so consult the appropriate firewall manual pages for your specific MAAS host system.</p>
-<h2 id="heading--tls">Configure a TLS-terminating load balancer</h2>
-
+<p><a href="#heading--tls"><h2 id="heading--tls">Configure a TLS-terminating load balancer</h2></a></p>
 <p>One of the best steps you can take to improve both security and availability of your MAAS installation is to install TLS-terminating load balancer.  For MAAS, we recommend using <a href="https://www.haproxy.com">HAProxy (external link)</a>.  This section explains how to set one up.</p>
 <p><details><summary>What is a TLS-terminated load balancer?</summary></p>
 <!-- deb-2-7-cli
@@ -572,15 +568,13 @@ In the context of MAAS, a [load balancer (external link)](https://www.nginx.com/
 <p>A TLS-terminated load balancer is a load balancer that carries encryption and decryption as far down the pipe as possible, in this case, all the way to the load balancer itself. Note that, even though the &ldquo;SSL&rdquo; keyword may be used to enable operation, the term SSL is considered obsolete.  Hence we choose to use the term &ldquo;TLS&rdquo; instead, referring to <strong>Transport Layer Security</strong>.</p>
 <p>TLS is meant to provide privacy and data integrity between two or more applications.  Privacy is provided by <a href="https://en.wikipedia.org/wiki/Symmetric-key_algorithm">symmetric cryptography (external link)</a>, based on a shared secret and uniquely-generated keys negotiated at the start of a session (during the <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_handshake">TLS handshake (external link)</a>).  Identity of each app can be authenticated, though this feature can be optional.  Authenticity of messages is ensured by using <a href="https://en.wikipedia.org/wiki/Message_authentication_code">message authentication codes (external link)</a> to detect tampering.</p>
 <p></details></p>
-<h3 id="heading--pem-file">PEM file</h3>
-
+<p><a href="#heading--pem-file"><h3 id="heading--pem-file">PEM file</h3></a></p>
 <p>As a first step, you&rsquo;ll need an SSL certificate (<code>mysite.com.crt</code>) with a key pair (<code>mysite.com.key</code>), combined into a PEM file:</p>
 <pre><code>cat mysite.com.crt mysite.com.key &gt; mysite.com.pem
 sudo cp mysite.com.pem /etc/ssl/private/
 </code></pre>
 <p>Depending upon your chosen certificate authority, you may also need to copy your CA root certificate and one or more intermediate CA certificates into the same PEM file.</p>
-<h3 id="heading--install-ha-proxy">Install and configure HA proxy</h3>
-
+<p><a href="#heading--install-ha-proxy"><h3 id="heading--install-ha-proxy">Install and configure HA proxy</h3></a></p>
 <p>To install HAProxy, execute the following commands:</p>
 <pre><code>sudo apt-get update
 sudo apt-get install haproxy
@@ -664,8 +658,7 @@ If desired, you can [bypass the use of SSL](high-availability.html#heading--load
 If desired, you can [bypass the use of SSL](high-availability.html#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](configuring-tls-encryption.html) without implementing HAProxy.
  snap-2-9-ui -->
 
-<h2 id="heading--using-logs-for-security">Use logs to identify security issues</h2>
-
+<p><a href="#heading--using-logs-for-security"><h2 id="heading--using-logs-for-security">Use logs to identify security issues</h2></a></p>
 <p>There are four categories of log files that you can use to help identify security issues:</p>
 <ol>
 <li>firewall logs</li>
@@ -674,8 +667,7 @@ If desired, you can [bypass the use of SSL](high-availability.html#heading--load
 <li>system log files</li>
 </ol>
 <p>This section will offer some advice, as well as links to more detailed information on these categories.</p>
-<h3 id="heading--firewall-logs-subsection">Firewall logs</h3>
-
+<p><a href="#heading--firewall-logs-subsection"><h3 id="heading--firewall-logs-subsection">Firewall logs</h3></a></p>
 <p>The Ubuntu firewall, <a href="https://wiki.ubuntu.com/UncomplicatedFirewall">UFW (external link)</a>, is a front-end for <a href="https://help.ubuntu.com/community/IptablesHowTo">iptables (external link)</a>, so the UFW log output is very similar to what you&rsquo;ll encounter in iptables itself.  If you want to secure your MAAS installation, it&rsquo;s very important to periodically review your UFW logs, found in <code>/var/log/ufw*</code>.</p>
 <p>Learning to recognise issues in the UFW/iptables log is an art form, so we&rsquo;re not going to give an extended tutorial here.  Still, there are some key indicators that might help you spot security issues.</p>
 <p>You might look for something probing a port that&rsquo;s not supporting an application service.  Attackers use port scanners to look for openings.  You might see entries like these:</p>
@@ -701,8 +693,7 @@ blocked incoming tcp connection request from 96.39.208.208:49343 to 64.242.119.1
 <p>Look for source-routed packets, that is, packets with a source address internal to your network, but which originate from outside your network, indicating that someone is trying to spoof one of your internal addresses.</p>
 <p>Review the IP addresses that are being rejected and dropped.  Try to identify them with a <code>ping -a &lt;IP address&gt;</code>.  Spoofed addresses won&rsquo;t have an owner (and you can block them).  Real addresses have a <a href="http://www.internic.net/whois.html">whois (external link)</a> entry, so it&rsquo;s possible you can contact the ISP to report and resolve this issue.</p>
 <p>There are many other firewall log analysis techniques, and a number of good open-source and commercial log analysis programs.  If you decide to analyse directly, though, you&rsquo;re basically looking for blocked connection issues, connections to (potentially) open ports you&rsquo;re not using, and suspicious-looking outbound connections.</p>
-<h3 id="heading--web-server-logs-subsection">Web server logs</h3>
-
+<p><a href="#heading--web-server-logs-subsection"><h3 id="heading--web-server-logs-subsection">Web server logs</h3></a></p>
 <p>Detecting malicious activity directed toward your Web server is best done with a log analysis tool.  If you want to review the raw logs directly, you can look for them in two places:</p>
 <ol>
 <li>
@@ -739,8 +730,7 @@ INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a) HTTP/1.1&rdquo; 200 166 &ldquo;-
 </li>
 </ol>
 <p>As mentioned above, there are a large number of Web server exploits, and this document does not propose to enumerate them all.  If you want to ensure secure operation, though, it&rsquo;s useful to familiarise yourself with these kinds of Web server attacks.</p>
-<h3 id="heading--maas-log-file-subsection">MAAS log files</h3>
-
+<p><a href="#heading--maas-log-file-subsection"><h3 id="heading--maas-log-file-subsection">MAAS log files</h3></a></p>
 <p>Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the <code>regiond.log</code> file, found at <code>/var/log/maas/regiond.log</code>.  For reference, a valid login request looks like this entry: </p>
 <!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/snap/maas/common/log/regiond.log`.  For reference, a valid login request looks like this entry: 
@@ -764,8 +754,7 @@ Chrome/80.0.3987.149 Safari/537.36)````
 Safari/537.36)````
 </code></pre>
 <p>The key differentiator to distinguish problems from routine failures is the frequency.  If you notice a lot of these last two entries in a given period of time, you may want to investigate more thoroughly.</p>
-<h3 id="heading--system-log-file-subsection">System log files</h3>
-
+<p><a href="#heading--system-log-file-subsection"><h3 id="heading--system-log-file-subsection">System log files</h3></a></p>
 <p>You can also use the standard system logs to detect malicious activity, though this subject is largely beyond the scope of this document.  As a simple example, consider using <code>journalctl</code> to detect and source an SSH brute force attack:</p>
 <pre><code>[root@maasserver ~]# journalctl -u sshd | grep "Failed password"
 Jun 06 13:45:19 router sshd[2487]: Failed password for root from 234.19.184.6 port 42258 ssh2
@@ -775,33 +764,22 @@ Jun 06 13:45:48 router sshd[2487]: Failed password for root from 234.19.184.6 po
 </code></pre>
 <p>From here, you can either use <code>whois</code> to locate the attacker and work with the ISP to block them, or simply use your UFW firewall to block them directly.</p>
 <p>As mentioned, this subject is far too complex for a detailed tutorial in this section.  For more information, try the <a href="http://manpages.ubuntu.com/manpages/cosmic/man1/journalctl.1.html">Ubuntu journalctl manpage (external link)</a> or <a href="https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs">another, similar source (external link)</a>.  </p>
-<h2 id="heading--postgres-security">Implement PostgreSQL security</h2>
-
+<p><a href="#heading--postgres-security"><h2 id="heading--postgres-security">Implement PostgreSQL security</h2></a></p>
 <p>PostgreSQL contains secrets, and should be encrypted for maximum protection.  You should consider <a href="https://help.ubuntu.com/community/Full_Disk_Encryption_Howto_2019">full disk encryption (external link)</a>.  Also recommended is <a href="https://www.postgresql.org/docs/current/ssl-tcp.html">TLS encryption between MAAS and PostgreSQL (external link)</a>.</p>
-<h2 id="heading--what-else-to-do">Other things you can do to harden MAAS</h2>
-
+<p><a href="#heading--what-else-to-do"><h2 id="heading--what-else-to-do">Other things you can do to harden MAAS</h2></a></p>
 <p>In addition to the items mentioned above, you should be aware of a few other points about hardening MAAS.</p>
-<h3 id="heading--maas-and-root-users">Good passwords</h2>
-
-You should pick good passwords and store them securely (e.g. in a KeePassX password database). Perform user administration only via the web UI. Only share the `maas` and `root` user passwords with administrators.
-
-<h3 id="heading--conf-file-permissions">File permissions</h2>
-
-MAAS configuration files should be set to have permission `640`: readable by logins belonging to the `maas` group and writeable only by the `root` user. Currently, the `regiond.conf` file contains the login credentials for the PostgreSQL database used by MAAS to keep track of all machines, networks, and configuration.
-
-
+<p><a href="#heading--maas-and-root-users"><h3 id="heading--maas-and-root-users">Good passwords</h2></a></p>
+<p>You should pick good passwords and store them securely (e.g. in a KeePassX password database). Perform user administration only via the web UI. Only share the <code>maas</code> and <code>root</code> user passwords with administrators.</p>
+<p><a href="#heading--conf-file-permissions"><h3 id="heading--conf-file-permissions">File permissions</h2></a></p>
+<p>MAAS configuration files should be set to have permission <code>640</code>: readable by logins belonging to the <code>maas</code> group and writeable only by the <code>root</code> user. Currently, the <code>regiond.conf</code> file contains the login credentials for the PostgreSQL database used by MAAS to keep track of all machines, networks, and configuration.</p>
 <pre><code class="bash">chmod 640 /etc/maas/rackd.conf
 chmod 640 /etc/maas/regiond.conf
 </code></pre>
 
-
-After:
-
-
+<p>After:</p>
 <pre><code class="no-highlight">-rw-r----- 1 root maas   90 Sep 27 14:13 rackd.conf
 -rw-r----- 1 root maas  157 Sep 27 14:14 regiond.conf
 </code></pre>
-
 
 <!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 
@@ -817,18 +795,15 @@ After:
 -rw-r----- 1 root maas  157 Sep 27 14:14 regiond.conf
 </code></pre>
 
-<h3 id="heading--snaps-and-security">About snap security</h3>
+<a href="#heading--snaps-and-security"><h3 id="heading--snaps-and-security">About snap security</h3></a>
 
 Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog (external link)](https://snapcraft.io/blog/where-eagles-snap-snap-security-overview).
 snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
 
-<h3 id="heading--shared-secrets">Shared secrets</h2>
-
-When you add a new rack or region controller, MAAS asks for a shared secret it will use to communicate with the rest of MAAS. This secret is also exposed in the web UI when you click the 'Add rack controller' button on the Controllers page.  MAAS automatically generates this secret when your first region controller installed, and stores the secret in a plain text file.  This file is automatically protected with the correct permissions, so there is no need for any action on your part.
-
-<h2 id="heading--security-consulting">Whom to contact about MAAS security consulting</h2>
-
-If you need help implementing MAAS security, please [contact us (external link)](https://maas.io/contact-us).  We will be happy to assist you in arranging security consulting appropriate to your needs.
+<p><a href="#heading--shared-secrets"><h3 id="heading--shared-secrets">Shared secrets</h2></a></p>
+<p>When you add a new rack or region controller, MAAS asks for a shared secret it will use to communicate with the rest of MAAS. This secret is also exposed in the web UI when you click the &lsquo;Add rack controller&rsquo; button on the Controllers page.  MAAS automatically generates this secret when your first region controller installed, and stores the secret in a plain text file.  This file is automatically protected with the correct permissions, so there is no need for any action on your part.</p>
+<p><a href="#heading--security-consulting"><h2 id="heading--security-consulting">Whom to contact about MAAS security consulting</h2></a></p>
+<p>If you need help implementing MAAS security, please <a href="https://maas.io/contact-us">contact us (external link)</a>.  We will be happy to assist you in arranging security consulting appropriate to your needs.</p>
     </div>
   </body>
 </html>

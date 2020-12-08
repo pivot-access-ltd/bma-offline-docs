@@ -99,7 +99,7 @@ This page describes how to provide high availability (HA) for MAAS at both regio
 6. [How do I enable highly-available API services?](#heading--secondary-api-servers)
 7. [How do I enable load balancing for API services?](#heading--load-balancing-with-haproxy-optional)
 
-<h2 id="heading--rack-controller-ha">Make rack controllers highly available</h2>
+<a href="#heading--rack-controller-ha"><h2 id="heading--rack-controller-ha">Make rack controllers highly available</h2></a>
 
 <!-- deb-2-7-cli
 You need to [install multiple rack controllers](/t/rack-controllers/3060#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
@@ -149,11 +149,11 @@ You need to [install multiple rack controllers](/t/rack-controllers/3058#heading
 You need to [install multiple rack controllers](/t/rack-controllers/3059#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
  snap-2-9-ui -->
 
-<h3 id="heading--bmc-ha">Enable highly-available BMC</h3>
+<a href="#heading--bmc-ha"><h3 id="heading--bmc-ha">Enable highly-available BMC</h3></a>
 
 HA for BMC control (node power cycling) is provided out-of-the-box, once a second rack controller is present. MAAS will automatically identify which rack controller is responsible for a BMC and set up communication accordingly.
 
-<h3 id="heading--dhcp-ha">Enable highly-available DHCP services</h3>
+<a href="#heading--dhcp-ha"><h3 id="heading--dhcp-ha">Enable highly-available DHCP services</h3></a>
 
 DHCP HA affects the way MAAS manages node, including enlistment, commissioning and deployment. It enables primary and secondary DHCP instances to serve the same VLAN. This VLAN replicates all lease information is between rack controllers. MAAS-managed DHCP is a requirement for DHCP HA.
 
@@ -227,7 +227,7 @@ maas maas vlan update ${fabric_id} ${vid} primary_rack=$(hostname) dhcp_on=true
 Be sure to substitute the sample values for those of your own environment.
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-<h3 id="heading--multiple-region-endpoints">Configure multiple region endpoints</h3>
+<a href="#heading--multiple-region-endpoints"><h3 id="heading--multiple-region-endpoints">Configure multiple region endpoints</h3></a>
 
 <!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to `/etc/maas/rackd.conf`.  For example:
@@ -248,7 +248,7 @@ snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
 
 The setup of highly-available DHCP is now complete.  Note that, for HA purposes, DHCP provisioning will take into account multiple DNS services when there is more than one region controller on a single region.
 
-<h2 id="heading--region-controller-ha">Make region controllers highly available</h2>
+<a href="#heading--region-controller-ha"><h2 id="heading--region-controller-ha">Make region controllers highly available</h2></a>
 
 Implementing highly-available region control involves setting up two highly-available services:
 
@@ -257,7 +257,7 @@ Implementing highly-available region control involves setting up two highly-avai
 
 Load balancing is optional, but is highly recommended.
 
-<h3 id="heading--postgresql-ha">Enable highly-available PostgreSQL</h3>
+<a href="#heading--postgresql-ha"><h3 id="heading--postgresql-ha">Enable highly-available PostgreSQL</h3></a>
 
 MAAS stores all state information in the PostgreSQL database. It is therefore recommended to run it in HA mode. Configuring HA for PostgreSQL is external to MAAS. You will, therefore, need to study the [PostgreSQL documentation^](https://www.postgresql.org/docs/9.5/static/high-availability.html) and implement the variant of HA that makes you feel most comfortable.
 
@@ -311,7 +311,7 @@ A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/2
 
 Each region controller uses up to 40 connections to PostgreSQL in high load situations. Running two region controllers requires no modifications to the `max_connections` in `postgresql.conf`. More than two region controllers require that `max_connections` be adjusted to add 40 more connections per added region controller.
 
-<h3 id="heading--secondary-api-servers">Enable highly-available API services</h3>
+<a href="#heading--secondary-api-servers"><h3 id="heading--secondary-api-servers">Enable highly-available API services</h3></a>
 
 <!-- snap-2-7-cli
 Setting up high-availability using snaps is relatively easy: 
@@ -413,7 +413,7 @@ Please see [Region controllers](/t/region-controllers/3076) and [Multiple region
 Please see [Region controllers](/t/region-controllers/3077) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
  deb-2-9-ui -->
 
-<h3 id="heading--load-balancing-with-haproxy-optional">Load balancing with HAProxy (optional)</h3>
+<a href="#heading--load-balancing-with-haproxy-optional"><h3 id="heading--load-balancing-with-haproxy-optional">Load balancing with HAProxy (optional)</h3></a>
 
 You can add load balancing with [HAProxy^](http://www.haproxy.org/) load-balancing software to support multiple API servers. In this setup, HAProxy provides access to the MAAS web UI and API.
 
@@ -421,13 +421,13 @@ You can add load balancing with [HAProxy^](http://www.haproxy.org/) load-balanci
 If you happen to have Apache running on the same server where you intend to install HAProxy, you will need to stop and disable `apache2`, because HAProxy binds to port 80.
 [/note]
 
-<h4 id="heading--install">Install</h4>
+<a href="#heading--install"><h4 id="heading--install">Install</h4></a>
 
 ``` bash
 sudo apt install haproxy
 ```
 
-<h4 id="heading--configure">Configure</h4>
+<a href="#heading--configure"><h4 id="heading--configure">Configure</h4></a>
 
 Configure each API server's load balancer by copying the following into `/etc/haproxy/haproxy.cfg` (see the [upstream configuration manual (external link)](http://cbonte.github.io/haproxy-dconv/1.6/configuration.html) as a reference). Replace $PRIMARY_API_SERVER_IP and $SECONDARY_API_SERVER_IP with their respective IP addresses:
 

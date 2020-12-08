@@ -488,8 +488,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <p>Be aware that newly-created machines will only have default settings for tags, resource pools, zones, and notes, and will probably all be in the &ldquo;Ready&rdquo; state, with no owner.</p>
 <p>So imagine that you&rsquo;re the IT administrator for a new, 100-bed hospital that&rsquo;s under construction, intended to serve a suburban community of 5,000 people.  Call it &ldquo;Metaphorical General Hospital&rdquo; (MGH).   Your job is to design a flexible data centre for this facility.  You&rsquo;ve decided to start with MAAS as your tool of choice, and for this planning exercise, you&rsquo;ll use VMs in a VM host.</p>
-<h2>Machines</h2>
-
+<p><a href="#heading--machines"><h2 id="heading--machines">Machines</h2></a></p>
 <p>You&rsquo;ll need to start with a little network thinking (and design).  Talking through requirements with the staff, you come up with a random list of functions:
 <table width="100%">
 <tr><td>Charts</td><td>Provider orders</td><td>Provider documentation</td></tr>
@@ -587,8 +586,7 @@ You can handle this lowest level with individual [machines](machines.html).  Wit
 <p>Let&rsquo;s assume that once you&rsquo;re done adding VMs, you have around 20 up and ready, all named after their assigned MAC address:</p>
 <p><a href="images/f9f302d8de9344908758a433dae9abfada0b0db3.jpeg" target = "_blank"><img src="images/f9f302d8de9344908758a433dae9abfada0b0db3.jpeg"></a></a> </p>
 <p>No need to create a lot of VMs for this example (unless you just want to do so).  </p>
-<h3>Manually adding machines</h3>
-
+<p><a href="#heading--manually-add-machines"><h3 id="heading--manually-add-machines">Manually adding machines</h3></a></p>
 <p>Once you&rsquo;ve created the necessary VMs, you&rsquo;ll want to <a href="add-machines.html#heading--add-a-node-manually">manually add machines</a> to MAAS that correspond to your VMs.</p>
 <!-- deb-2-7-ui
 Once you've created the necessary VMs, you'll want to [manually add machines](add-machines.html#heading--add-a-node-manually) to MAAS that correspond to your VMs.
@@ -718,8 +716,7 @@ As you add machines, they automatically commission:
 When finished, the commissioned machines with be at the "Ready" state.
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<h2>Tags</h2>
-
+<p><a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a></p>
 <p>Assigning machines to specific functions is something you can do after you <a href="commission-machines.html">commission</a> and <a href="deploy-machines.html">deploy</a> them.  (Later on, we&rsquo;ll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you&rsquo;ve got machines running apps, you want to keep up-to-date about which machine is doing what, when you&rsquo;re looking at the machine list.  You&rsquo;ll want to assign <a href="maas-tags.html">tags</a> to machines.  </p>
 <!-- deb-2-7-ui
 Assigning machines to specific functions is something you can do after you [commission](commission-machines.html) and [deploy](deploy-machines.html) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](maas-tags.html) to machines.  
@@ -819,8 +816,7 @@ Select "Save changes" to add the tag(s) to the machine.  When you return to the 
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <p>Tags can will help you keep up with which machine(s) are covering which functions as you apply your apps.  You can search and filter by tags, and you can utilise tags from within the API, as well.</p>
-<h2>Resource pools</h2>
-
+<p><a href="#heading--resource-pools"><h2 id="heading--resource-pools">Resource pools</h2></a></p>
 <p>As you look at the list of functions you&rsquo;ve created, and talk more with the staff, you discover that some of these functions fit together more closely than others.  With some effort, you work out the following update to your network design:</p>
 <table width="100%">
 <tr><td><strong>Provider services</strong></td><td></td><td></td></tr>
@@ -946,8 +942,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <p>Resource pools are mostly for your use, helping you to budget servers within a given category.  Untagged servers can be in a pool, so if you&rsquo;ve got five servers in the &ldquo;Prescriber controls&rdquo; resource pool, you can tag them with &ldquo;Pharmacy,&rdquo; &ldquo;Medication reconciliation,&rdquo; etc., as you use them.  It will also be obvious when you&rsquo;re running low on servers for that pool, and need to either provision more or move some unused ones from another pool.</p>
-<h2>Notes</h2>
-
+<p><a href="#heading--notes"><h2 id="heading--notes">Notes</h2></a></p>
 <p>Another optional identifier for machines is the &ldquo;Note&rdquo; field.  While it can be long, a portion of it shows up on the machine list, which makes it useful for adding special identifiers or groupings.  In this example, we&rsquo;ve added a vague identifier which might help an IT admin remember server locations or access rights.</p>
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <a href="images/8724395dfe9fc4d3f4a10a05687c33c6a3dded07.jpeg" target = "_blank"><img src="images/8724395dfe9fc4d3f4a10a05687c33c6a3dded07.jpeg"></a></a> 
@@ -987,8 +982,7 @@ When you save the changes and return to the machine list, you'll notice that the
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <p></details></p>
-<h2>VLANs</h2>
-
+<p><a href="#heading--vlans"><h2 id="heading--vlans">VLANs</h2></a></p>
 <p>Looking over your design, you notice that some of these resource pools must have their network traffic &ldquo;fire-walled&rdquo; from others &ndash; for example, Provider services and Nursing services shouldn&rsquo;t be readily visible to Staff compensation or Food service.  Likewise, the relevant monitoring agencies require that facilities manage medications as a separate activity. The traditional way to separate these networks (other than creating entirely <em>separate</em> networks) would be a VLAN.  Luckily, MAAS supports multiple VLANS.  Adding one higher level to your design, you find yourself with this updated network topology:</p>
 <table width="100%">
 <tr><td><strong>Caregiver services</strong></td><td></td></tr>
@@ -1058,8 +1052,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <p></details></p>
 <p>Ignoring the networking aspects (for now), these VLANs should help isolate major functions and provide a level of data integrity and access control for your new hospital network.</p>
-<h2>Fabrics</h2>
-
+<p><a href="#heading--fabrics"><h2 id="heading--fabrics">Fabrics</h2></a></p>
 <p>Considering your network design so far, you notice that some of the VLANs need to be able to communicate with each other some of the time.  In fact, you decide on three pairs of VLANs to cover this new networking situation:</p>
 <table>
 <tr><td><strong>Patient management</strong></td><td></td></tr>

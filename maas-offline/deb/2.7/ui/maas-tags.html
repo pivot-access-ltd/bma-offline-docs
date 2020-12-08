@@ -474,8 +474,7 @@
 </ol>
 <p>MAAS supports binding an XPath expressions to a tag using <em>tag definitions</em> (see below). This makes auto-assigning tags to matching hardware possible. For instance, you could tag machines that possess fast GPUs and then deploy software that used GPU-accelerated CUDA or OpenCL libraries.</p>
 <p>Because <a href="https://jujucharms.com/docs/stable/about-juju.html">Juju</a> is the recommended way to deploy services on machines managed by MAAS (see <a href="#heading--tag-management">below</a>), it supports MAAS tags for application deployments. By specifying MAAS tags as Juju &ldquo;constraints&rdquo;, services can be deployed to machines that have particular user-defined characteristics.</p>
-<h2 id="heading--tag-definitions">Tag definitions</h2>
-
+<p><a href="#heading--tag-definitions"><h2 id="heading--tag-definitions">Tag definitions</h2></a></p>
 <p>A <em>tag definition</em> is the criteria by which machines are auto-labelled by the corresponding tag. During machine enlistment, MAAS collects hardware information (using the <a href="http://ezix.org/project/wiki/HardwareLiSter">lshw</a> utility). The definition used in creating a tag is then constructed using an <em>XPath expression</em> based on that information. See <a href="https://www.w3schools.com/xml/xpath_intro.asp">w3schools documentation</a> for details on XPath.</p>
 <p>The collected data for each machine, viewable (in both XML and YAML) in the web UI, is inspected by you for the desired property. Building on the example alluded to above, a property can be a GPU with a clock speed greater than 1GHz. In this case, the following excerpt from a machine&rsquo;s data (in XML format) is pertinent:</p>
 <pre><code class="nohighlight">      &lt;lshw:node id=&quot;display&quot; class=&quot;display&quot; handle=&quot;PCI:0000:00:02.0&quot;&gt;
@@ -512,15 +511,13 @@
 <pre><code class="nohighlight">//node[@id=&quot;display&quot;]/'clock units=&quot;Hz&quot;' &gt; 1000000000
 </code></pre>
 
-<h2 id="heading--tag-listing-and-tags-as-search-filters">Tag listing and tags as search filters</h2>
-
+<p><a href="#heading--tag-listing-and-tags-as-search-filters"><h2 id="heading--tag-listing-and-tags-as-search-filters">Tag listing and tags as search filters</h2></a></p>
 <p>To list all tags, visit the &lsquo;Machines&rsquo; tab and expand the &lsquo;Tags&rsquo; subsection in the left pane.</p>
 <p>In this view, you can use tags as machine search filters. Select one or several tags. The machines that satisfy all selected tags will display on the right pane. Notice there is a search field at the top of the right pane. You can type a search expression into this field.</p>
 <p>Below, tag &lsquo;virtual&rsquo; has been selected (with the mouse), and the search field automatically reflects this. Five machines satisfy this search filter.</p>
 <p><a href="images/69aa9997-nodes-tags__2.6-tags-filter.png" target = "_blank"><img src="images/69aa9997-nodes-tags__2.6-tags-filter.png"></a></a></p>
 <p>Remove a tag from the search filter by either hitting the &lsquo;x&rsquo; character alongside a tag or editing the search expression.</p>
-<h2 id="heading--tag-assignment">Tag assignment</h2>
-
+<p><a href="#heading--tag-assignment"><h2 id="heading--tag-assignment">Tag assignment</h2></a></p>
 <p>To view a machine&rsquo;s currently assigned tags, stay on the &lsquo;Machines&rsquo; page and click on the machine in question. MAAS will display currently-assigned tags in the <em>Tags</em> pane of the &lsquo;Machine summary&rsquo;.</p>
 <p>Select the &lsquo;Configuration&rsquo; tab and then the &lsquo;Edit&rsquo; button alongside &lsquo;Machine configuration&rsquo; to edit tags:</p>
 <ol>
@@ -532,16 +529,14 @@
 <p>You can apply changes by pressing the &lsquo;Save changes&rsquo; button.</p>
 <p><strong>NOTE:</strong> 
 New tags become available as a filter in the &lsquo;Machines&rsquo; page in the web UI immediately after you add them.</p>
-<h3 id="heading--tags-for-network-interfaces">Tags for network interfaces</h3>
-
+<p><a href="#heading--tags-for-network-interfaces"><h3 id="heading--tags-for-network-interfaces">Tags for network interfaces</h3></a></p>
 <p>It&rsquo;s also possible to assign tags to specific network interfaces. You can use these tags when searching for machines within the web UI and when allocating machines from the API.</p>
 <p>Network interface tags can only be assigned when a machine is in either a &lsquo;Ready&rsquo; or a &lsquo;Broken&rsquo; state.</p>
 <p>With the machine selected from the &lsquo;Machines&rsquo; page, on the &lsquo;Interfaces&rsquo; tab use the &lsquo;Edit Physical&rsquo; button from the &lsquo;Actions&rsquo; menu icon to the right of an interface:</p>
 <p><a href="images/dd9cf996-nodes-tags__2.6-tag-net-interfaces.png" target = "_blank"><img src="images/dd9cf996-nodes-tags__2.6-tag-net-interfaces.png"></a></a></p>
 <p>To add a tag, type its name into the &lsquo;Tags&rsquo; field and press Enter. Repeat as desired. Use the small &lsquo;x&rsquo; next to a tag to unassign the tag.</p>
 <p>You can apply changes by pressing the &lsquo;Save&rsquo; button.</p>
-<h3 id="heading--tags-for-storage-configuration">Tags for storage configuration</h3>
-
+<p><a href="#heading--tags-for-storage-configuration"><h3 id="heading--tags-for-storage-configuration">Tags for storage configuration</h3></a></p>
 <p>Alongside tags for an entire machine and network interfaces, you can also define tags for storage devices. You can use these tags like any other, when searching for machines within the web UI, where they appear beneath the &lsquo;Storage tag&rsquo; filter, and when allocating machines from the API.</p>
 <p>To add a tag to a storage device, click on the machine with the storage you wish to tag on the &lsquo;Machines&rsquo; page of the web UI and open the &lsquo;Storage&rsquo; tab. Use the menu in the &lsquo;Actions&rsquo; column beneath &lsquo;Available disks and partitions&rsquo; to select &lsquo;Edit disk&rsquo; for your chosen device:</p>
 <p><a href="images/43dd9f9d-nodes-tags__2.6-tag-storage.png" target = "_blank"><img src="images/43dd9f9d-nodes-tags__2.6-tag-storage.png"></a></a></p>
@@ -560,14 +555,14 @@ New tags become available as a filter in the &lsquo;Machines&rsquo; page in the 
 8. [How do I effect manual tag assignment?](#heading--manual-tag-assignment)
 9. [How do I effect hybrid tag assignment?](#heading--hybrid-tag-assignment)
 
-<h2 id="heading--rudimentary-tag-creation">Tag creation</h2>
+<a href="#heading--rudimentary-tag-creation"><h2 id="heading--rudimentary-tag-creation">Tag creation</h2></a>
 
 
 <pre><code class="bash">maas $PROFILE tags create name=$TAG_NAME
 </code></pre>
 
 
-<h2 id="heading--tag-creation-and-auto-assignment">Tag creation and auto-assignment</h2>
+<a href="#heading--tag-creation-and-auto-assignment"><h2 id="heading--tag-creation-and-auto-assignment">Tag creation and auto-assignment</h2></a>
 
 When you supply a [definition](maas-tags.html#heading--tag-definitions) during a tag's creation, MAAS automatically applies the tag o all the nodes that satisfy the definition:
 
@@ -608,14 +603,34 @@ To delete a tag from a network interface:
 </code></pre>
 
 
-<h2 id="heading--delete-a-tag">Delete a tag</h2>
+<a href="#heading--tags-for-network-interfaces</h2>
+
+It's also possible to assign tags to specific network interfaces. You can use these tags when searching for machines within the web UI and when allocating machines from the API.
+
+Network interface tags can only be assigned when a machine is in either a 'Ready' or a 'Broken' state.
+
+To add a tag to a network interface, use the following command:
+
+
+<pre><code>maas $PROFILE interface add-tag $SYSTEM_ID $INTERFACE_ID tag=$TAG_STRING
+</code></pre>
+
+
+To delete a tag from a network interface:
+
+
+<pre><code>maas $PROFILE interface remove-tag $SYSTEM_ID $INTERFACE_ID tag=$TAG_STRING
+</code></pre>
+
+
+<h2 id="><h2 id="heading--delete-a-tag">Delete a tag</h2></a>
 
 
 <pre><code class="bash">maas $PROFILE tag delete $TAG_NAME
 </code></pre>
 
 
-<h2 id="heading--list-all-tags">List all tags</h2>
+<a href="#heading--list-all-tags"><h2 id="heading--list-all-tags">List all tags</h2></a>
 
 To list all tags present on the region controller:
 
@@ -624,7 +639,7 @@ To list all tags present on the region controller:
 </code></pre>
 
 
-<h2 id="heading--list-nodesmachines-labelled-with-a-tag">List nodes/machines labelled with a tag</h2>
+<a href="#heading--list-nodesmachines-labelled-with-a-tag"><h2 id="heading--list-nodesmachines-labelled-with-a-tag">List nodes/machines labelled with a tag</h2></a>
 
 To list what nodes (or machines) a tag applies to:
 
@@ -634,7 +649,7 @@ maas $PROFILE tag machines $TAG_NAME
 </code></pre>
 
 
-<h2 id="heading--juju-integration">Juju integration</h2>
+<a href="#heading--juju-integration"><h2 id="heading--juju-integration">Juju integration</h2></a>
 
 Although you can use a tag in the web UI (as a node search filter), you realise most of the benefit when you're deploying applications with Juju.
 
@@ -652,7 +667,7 @@ You can also use multiple tags in addition to the normal Juju constraints:
 </code></pre>
 
 
-<h2 id="heading--manual-tag-assignment">Manual tag assignment</h2>
+<a href="#heading--manual-tag-assignment"><h2 id="heading--manual-tag-assignment">Manual tag assignment</h2></a>
 
 It is possible to assign tags to nodes manually by simply omitting the definition and applying the tag to a node by referencing its system id:
 
@@ -677,7 +692,7 @@ In the same operation, a tag can be added to some nodes and removed from others:
 </code></pre>
 
 
-<h2 id="heading--hybrid-tag-assignment">Hybrid tag assignment</h2>
+<a href="#heading--hybrid-tag-assignment"><h2 id="heading--hybrid-tag-assignment">Hybrid tag assignment</h2></a>
 
 You can also create a tag with a definition (thereby map to certain nodes), remove the definition (but retain the mapping), and then add the tag manually to specific nodes. This action is useful for hardware which is conceptually similar but does not all satisfy a single tag definition. Here are the commands you would use to do this:
 

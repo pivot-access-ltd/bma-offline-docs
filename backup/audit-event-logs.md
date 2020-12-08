@@ -90,7 +90,7 @@ There are many user-initiated events in MAAS that an administrator or a user may
 2. [How do I list audit events for a specific user?](/t/audit-event-logs/791#heading--list-audit-events-for-a-specific-user)
 3. [What are the types of audit event logs available?](/t/audit-event-logs/791#heading--types-of-audit-event-logs)
 
-<h2 id="heading--list-audit-events-for-all-users">List audit events for all users</h2>
+<a href="#heading--list-audit-events-for-all-users"><h2 id="heading--list-audit-events-for-all-users">List audit events for all users</h2></a>
 
 To list events for all users, use the following syntax:
 
@@ -126,7 +126,7 @@ Machine-readable output follows:
 
 The above output shows that there is currently only one audit event log for the user `admin`, and that MAAS created this log when they logged into the web UI.
 
-<h2 id="heading--list-audit-events-for-a-specific-user">List audit events for a specific user</h2>
+<a href="#heading--list-audit-events-for-a-specific-user"><h2 id="heading--list-audit-events-for-a-specific-user">List audit events for a specific user</h2></a>
 
 To list the audit event logs for a specific user that you have permissions for, supply the `owner=$USERNAME` parameter to the query command:
 
@@ -200,7 +200,7 @@ As we can see above, only audit event logs for the user `johnnybegood` are gener
 7. The event type
 8. The event description
 
-<h2 id="heading--types-of-audit-event-logs">Types of audit event logs available</h2>
+<a href="#heading--types-of-audit-event-logs"><h2 id="heading--types-of-audit-event-logs">Types of audit event logs available</h2></a>
 
 Here is a list of the nine types of audit event logs that are currently supported by MAAS:
 

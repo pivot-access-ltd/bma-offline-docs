@@ -1,92 +1,44 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-image-builder/2850) ~ [UI](/t/maas-image-builder/2851)|[CLI](/t/maas-image-builder/2852) ~ [UI](/t/maas-image-builder/2853)|[CLI](/t/maas-image-builder/2854) ~ [UI](/t/maas-image-builder/2855)|
-|Packages|CLI ~ [UI](/t/maas-image-builder/2857)|[CLI](/t/maas-image-builder/2858) ~ [UI](/t/maas-image-builder/2859)|[CLI](/t/maas-image-builder/2860) ~ [UI](/t/maas-image-builder/2861)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-image-builder/2850) ~ [UI](/t/maas-image-builder/2851)|[CLI](/t/maas-image-builder/2852) ~ [UI](/t/maas-image-builder/2853)|[CLI](/t/maas-image-builder/2854) ~ [UI](/t/maas-image-builder/2855)|
-|Packages|[CLI](/t/maas-image-builder/2856) ~ UI|[CLI](/t/maas-image-builder/2858) ~ [UI](/t/maas-image-builder/2859)|[CLI](/t/maas-image-builder/2860) ~ [UI](/t/maas-image-builder/2861)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-image-builder/2850) ~ [UI](/t/maas-image-builder/2851)|[CLI](/t/maas-image-builder/2852) ~ [UI](/t/maas-image-builder/2853)|[CLI](/t/maas-image-builder/2854) ~ [UI](/t/maas-image-builder/2855)|
-|Packages|[CLI](/t/maas-image-builder/2856) ~ [UI](/t/maas-image-builder/2857)|CLI ~ [UI](/t/maas-image-builder/2859)|[CLI](/t/maas-image-builder/2860) ~ [UI](/t/maas-image-builder/2861)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-image-builder/2850) ~ [UI](/t/maas-image-builder/2851)|[CLI](/t/maas-image-builder/2852) ~ [UI](/t/maas-image-builder/2853)|[CLI](/t/maas-image-builder/2854) ~ [UI](/t/maas-image-builder/2855)|
-|Packages|[CLI](/t/maas-image-builder/2856) ~ [UI](/t/maas-image-builder/2857)|[CLI](/t/maas-image-builder/2858) ~ UI|[CLI](/t/maas-image-builder/2860) ~ [UI](/t/maas-image-builder/2861)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-image-builder/2850) ~ [UI](/t/maas-image-builder/2851)|[CLI](/t/maas-image-builder/2852) ~ [UI](/t/maas-image-builder/2853)|[CLI](/t/maas-image-builder/2854) ~ [UI](/t/maas-image-builder/2855)|
-|Packages|[CLI](/t/maas-image-builder/2856) ~ [UI](/t/maas-image-builder/2857)|[CLI](/t/maas-image-builder/2858) ~ [UI](/t/maas-image-builder/2859)|CLI ~ [UI](/t/maas-image-builder/2861)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-image-builder/2850) ~ [UI](/t/maas-image-builder/2851)|[CLI](/t/maas-image-builder/2852) ~ [UI](/t/maas-image-builder/2853)|[CLI](/t/maas-image-builder/2854) ~ [UI](/t/maas-image-builder/2855)|
-|Packages|[CLI](/t/maas-image-builder/2856) ~ [UI](/t/maas-image-builder/2857)|[CLI](/t/maas-image-builder/2858) ~ [UI](/t/maas-image-builder/2859)|[CLI](/t/maas-image-builder/2860) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/maas-image-builder/2851)|[CLI](/t/maas-image-builder/2852) ~ [UI](/t/maas-image-builder/2853)|[CLI](/t/maas-image-builder/2854) ~ [UI](/t/maas-image-builder/2855)|
-|Packages|[CLI](/t/maas-image-builder/2856) ~ [UI](/t/maas-image-builder/2857)|[CLI](/t/maas-image-builder/2858) ~ [UI](/t/maas-image-builder/2859)|[CLI](/t/maas-image-builder/2860) ~ [UI](/t/maas-image-builder/2861)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-image-builder/2850) ~ UI|[CLI](/t/maas-image-builder/2852) ~ [UI](/t/maas-image-builder/2853)|[CLI](/t/maas-image-builder/2854) ~ [UI](/t/maas-image-builder/2855)|
-|Packages|[CLI](/t/maas-image-builder/2856) ~ [UI](/t/maas-image-builder/2857)|[CLI](/t/maas-image-builder/2858) ~ [UI](/t/maas-image-builder/2859)|[CLI](/t/maas-image-builder/2860) ~ [UI](/t/maas-image-builder/2861)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-image-builder/2850) ~ [UI](/t/maas-image-builder/2851)|CLI ~ [UI](/t/maas-image-builder/2853)|[CLI](/t/maas-image-builder/2854) ~ [UI](/t/maas-image-builder/2855)|
-|Packages|[CLI](/t/maas-image-builder/2856) ~ [UI](/t/maas-image-builder/2857)|[CLI](/t/maas-image-builder/2858) ~ [UI](/t/maas-image-builder/2859)|[CLI](/t/maas-image-builder/2860) ~ [UI](/t/maas-image-builder/2861)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-image-builder/2850) ~ [UI](/t/maas-image-builder/2851)|[CLI](/t/maas-image-builder/2852) ~ UI|[CLI](/t/maas-image-builder/2854) ~ [UI](/t/maas-image-builder/2855)|
-|Packages|[CLI](/t/maas-image-builder/2856) ~ [UI](/t/maas-image-builder/2857)|[CLI](/t/maas-image-builder/2858) ~ [UI](/t/maas-image-builder/2859)|[CLI](/t/maas-image-builder/2860) ~ [UI](/t/maas-image-builder/2861)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-image-builder/2850) ~ [UI](/t/maas-image-builder/2851)|[CLI](/t/maas-image-builder/2852) ~ [UI](/t/maas-image-builder/2853)|CLI ~ [UI](/t/maas-image-builder/2855)|
-|Packages|[CLI](/t/maas-image-builder/2856) ~ [UI](/t/maas-image-builder/2857)|[CLI](/t/maas-image-builder/2858) ~ [UI](/t/maas-image-builder/2859)|[CLI](/t/maas-image-builder/2860) ~ [UI](/t/maas-image-builder/2861)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-image-builder/2850) ~ [UI](/t/maas-image-builder/2851)|[CLI](/t/maas-image-builder/2852) ~ [UI](/t/maas-image-builder/2853)|[CLI](/t/maas-image-builder/2854) ~ UI|
-|Packages|[CLI](/t/maas-image-builder/2856) ~ [UI](/t/maas-image-builder/2857)|[CLI](/t/maas-image-builder/2858) ~ [UI](/t/maas-image-builder/2859)|[CLI](/t/maas-image-builder/2860) ~ [UI](/t/maas-image-builder/2861)|
  snap-2-9-ui -->
 
 MAAS Image Builder is an alternative to [packer](https://www.packer.io/) for creating MAAS images.  
 
-[note]
+<strong>NOTE:</strong> 
 In order to use MAAS Image Builder, you must purchase [Ubuntu Advantage for Infrastructure](https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool).
-[/note]
+
 
 With the MAAS Image Builder, you can do five key operations:
 
