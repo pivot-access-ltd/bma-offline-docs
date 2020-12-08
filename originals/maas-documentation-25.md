@@ -33,10 +33,12 @@ deb-2-7-ui -->
 |Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845) |[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847) |[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849) |
 snap-2-8-cli -->
 
+<!-- snap-2-8-ui
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ UI|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
 |Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
+snap-2-8-ui -->
 
 <!-- deb-2-8-cli
 || 2.7 | 2.8 | 2.9|
@@ -59,12 +61,10 @@ deb-2-8-ui -->
 |Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
 snap-2-9-cli -->
 
-<!-- snap-2-9-ui
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ UI|
 |Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-snap-2-9-ui -->
 
 <!-- deb-2-9-cli
 || 2.7 | 2.8 | 2.9|
@@ -108,11 +108,13 @@ snap-2-7-ui -->
 5. [Can I just install it and try it for myself?](/t/explore-maas-deb-2-8-ui/2643)
 deb-2-8-ui -->
 
+<!-- snap-2-8-ui
 1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-8-ui/2265)
 2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-8-ui/2649)
 3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-8-ui/2265#heading--how-maas-works)
 4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
 5. [Can I just install it and try it for myself?](/t/explore-maas-snap-2-8-ui/2637)
+snap-2-8-ui -->
 
 <!-- deb-2-9-ui
 1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-9-ui/2273)
@@ -122,13 +124,11 @@ deb-2-8-ui -->
 5. [Can I just install it and try it for myself?](/t/explore-maas-deb-2-9-ui/2645)
 deb-2-9-ui -->
 
-<!-- snap-2-9-ui
 1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-9-ui/2267)
 2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-9-ui/2651)
 3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-9-ui/2267#heading--how-maas-works)
 4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
 5. [Can I just install it and try it for myself?](/t/explore-maas-snap-2-9-ui/2639)
-snap-2-9-ui -->
 
 <!-- deb-2-7-cli
 1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-7-cli/2268)
@@ -208,15 +208,15 @@ snap-2-9-cli -->
 *Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas/1314), our example data centre.*
  pre-rad -->
 
+<!-- snap-2-8-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
 *Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-8-ui/2649), our example data centre.*
+snap-2-8-ui -->
 
-<!-- snap-2-9-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
 *Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-8-ui/2651), our example data centre.*
- snap-2-9-ui -->
 
 <!-- deb-2-7-cli 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
@@ -262,9 +262,11 @@ snap-2-9-cli -->
 
 ---
 
+<!-- deb-2-8-cli deb-2-8-ui snap-2-8-cli snap-2-8-ui
 <h2 id="heading--whats-new">New version of MAAS</h2>
 
 - [What's new in 2.8](/t/whats-new-in-maas/3335)
+deb-2-8-cli deb-2-8-ui snap-2-8-cli snap-2-8-ui -->
 
 <!-- deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-uil
 <h2 id="heading--whats-new">New version of MAAS</h2>
@@ -272,11 +274,9 @@ snap-2-9-cli -->
 - [What's new in 2.7](/t/whats-new-in-maas/3334)
 deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-ui -->
 
-<!-- deb-2-9-cli deb-2-9-ui snap-2-9-cli snap-2-9-ui
 <h2 id="heading--whats-new">BETA version of MAAS</h2>
 
-- [What's new in 2.9 (Beta4)](/t/whats-new-in-maas/3336)
-deb-2-9-cli deb-2-9-ui snap-2-9-cli snap-2-9-ui -->
+- [What's new in 2.9](/t/whats-new-in-maas/3336)
 
 ---
 
@@ -303,73 +303,73 @@ There are (at least) three ways you can contribute to MAAS:
 
 ### [Introduction](/t/maas-documentation/25)
 
-- [About MAAS](/t/about-maas-snap-2-8-ui/2265)
-- ["Give me an example"](/t/give-me-an-example-of-maas-snap-2-8-ui/2649)
-- [What's new in 2.8](/t/whats-new-in-maas-2-8/3334)
-- [Requirements](/t/maas-requirements-snap-2-8-ui/2877)
-- [Installation](/t/maas-installation-snap-2-8-ui/3321)
-- [Configuration journey](/t/configuration-journey-snap-2-8-ui/2529)
+- [About MAAS](/t/about-maas-snap-2-9-ui/2267)
+- ["Give me an example"](/t/give-me-an-example-of-maas-snap-2-9-ui/2651)
+- [What's new in 2.8](/t/whats-new-in-maas-2-9/3336)
+- [Requirements](/t/maas-requirements-snap-2-9-ui/2879)
+- [Installation](/t/maas-installation-snap-2-9-ui/3323)
+- [Configuration journey](/t/configuration-journey-snap-2-9-ui/2531)
 
-### [Controllers](/t/controllers-snap-2-8-ui/2721)
+### [Controllers](/t/controllers-snap-2-9-ui/2723)
 
-- [Communication](/t/maas-communication-snap-2-8-ui/2829)
-- [Rack controllers](/t/rack-controllers-snap-2-8-ui/3057)
-- [Region controllers](/t/region-controllers-snap-2-8-ui/3069)
-- [High availability](/t/high-availability-snap-2-8-ui/2685)
+- [Communication](/t/maas-communication-snap-2-9-ui/2831)
+- [Rack controllers](/t/rack-controllers-snap-2-9-ui/3059)
+- [Region controllers](/t/region-controllers-snap-2-9-ui/3071)
+- [High availability](/t/high-availability-snap-2-9-ui/2687)
 
-### [Machines](/t/machines-snap-2-8-ui/2733)
+### [Machines](/t/machines-snap-2-9-ui/2735)
 
-- [Add machines](/t/add-machines-snap-2-8-ui/2277)
-- [Power management](/t/power-management-snap-2-8-ui/3009)
-- [Commission machines](/t/commission-machines-snap-2-8-ui/2469)
+- [Add machines](/t/add-machines-snap-2-9-ui/2279)
+- [Power management](/t/power-management-snap-2-9-ui/3011)
+- [Commission machines](/t/commission-machines-snap-2-9-ui/2469)
 - Testing
-  - [Hardware testing](/t/hardware-testing-snap-2-8-ui/2673)
-  - [Network testing](/t/network-testing-snap-2-8-ui/2937)
-  - [Commissioning and hardware testing scripts](/t/commissioning-and-hardware-testing-scripts-snap-2-8-ui/2481)
-- [Deploy machines](/t/deploy-machines-snap-2-8-ui/2601)
-- [Tags](/t/maas-tags-snap-2-8-ui/2889)
-- [Custom machine setup](/t/custom-machine-setup-snap-2-8-ui/2589)
-- [Kernel boot options](/t/kernel-boot-options-snap-2-8-ui/2781)
-- [Resource pools](/t/resource-pools-snap-2-8-ui/3081)
-- [Storage](/t/storage-snap-2-8-ui/3105)
-- [VMware VMFS datastores](/t/vmware-vmfs-datastores-snap-2-8-ui/3249)
-- [Ubuntu kernels](/t/ubuntu-kernels-snap-2-8-ui/3177)
+  - [Hardware testing](/t/hardware-testing-snap-2-9-ui/2671)
+  - [Network testing](/t/network-testing-snap-2-9-ui/2939)
+  - [Commissioning and hardware testing scripts](/t/commissioning-and-hardware-testing-scripts-snap-2-9-ui/2483)
+- [Deploy machines](/t/deploy-machines-snap-2-9-ui/2603)
+- [Tags](/t/maas-tags-snap-2-9-ui/2891)
+- [Custom machine setup](/t/custom-machine-setup-snap-2-9-ui/2591)
+- [Kernel boot options](/t/kernel-boot-options-snap-2-9-ui/2783)
+- [Resource pools](/t/resource-pools-snap-2-9-ui/3083)
+- [Storage](/t/storage-snap-2-9-ui/3107)
+- [VMware VMFS datastores](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)
+- [Ubuntu kernels](/t/ubuntu-kernels-snap-2-9-ui/3179)
 
-### [Images](/t/images-snap-2-8-ui/2697)
+### [Images](/t/images-snap-2-9-ui/2699)
 
-- [Select and import images](/t/select-and-import-images-snap-2-8-ui/3093)
-- [Local image mirror](/t/local-image-mirror-snap-2-8-ui/2805)
-- [VMWare images](/t/vmware-images-snap-2-8-ui/3237)
+- [Select and import images](/t/select-and-import-images-snap-2-9-ui/3095)
+- [Local image mirror](/t/local-image-mirror-snap-2-9-ui/2807)
+- [VMWare images](/t/vmware-images-snap-2-9-ui/3239)
 
-### [Networking](/t/networking-snap-2-8-ui/2949)
+### [Networking](/t/networking-snap-2-9-ui/2951)
 
-- [Subnet management](/t/subnet-management-snap-2-8-ui/3117)
-- [DHCP](/t/managing-dhcp-snap-2-8-ui/2901)
-- [IP ranges](/t/ip-ranges-snap-2-8-ui/2757)
-- [Proxy](/t/proxy-snap-2-8-ui/3033)
-- [NTP](/t/ntp-services-snap-2-8-ui/2961)
-- [Network discovery](/t/network-discovery-snap-2-8-ui/2925)
-- [IPv6](/t/ipv6-addressing-snap-2-8-ui/2769)
-- [TLS encryption](/t/configuring-tls-encryption-snap-2-8-ui/2541)
-- [STP](/t/managing-stp-snap-2-8-ui/2913)
-- [Availability zones (AZs)](/t/availability-zones-snap-2-8-ui/2325)
+- [Subnet management](/t/subnet-management-snap-2-9-ui/3119)
+- [DHCP](/t/managing-dhcp-snap-2-9-ui/2903)
+- [IP ranges](/t/ip-ranges-snap-2-9-ui/2759)
+- [Proxy](/t/proxy-snap-2-9-ui/3035)
+- [NTP](/t/ntp-services-snap-2-9-ui/2963)
+- [Network discovery](/t/network-discovery-snap-2-9-ui/2927)
+- [IPv6](/t/ipv6-addressing-snap-2-9-ui/2771)
+- [TLS encryption](/t/configuring-tls-encryption-snap-2-9-ui/2543)
+- [STP](/t/managing-stp-snap-2-9-ui/2915)
+- [Availability zones (AZs)](/t/availability-zones-snap-2-9-ui/2327)
 
-### [VM hosting](/t/vm-hosting-snap-2-8-ui/2745)
+### [VM hosting](/t/vm-hosting-snap-2-9-ui/2747)
 
-- [VM host networking](/t/vm-host-networking-snap-2-8-ui/3213)
-- [Add a VM host](/t/adding-a-vm-host-snap-2-8-ui/2289)
-- [VM host storage pools](/t/vm-host-storage-pools-snap-2-8-ui/3225)
-- [Creating and deleting VMs](/t/creating-and-deleting-vms-snap-2-8-ui/2577)
+- [VM host networking](/t/vm-host-networking-snap-2-9-ui/3215)
+- [Add a VM host](/t/adding-a-vm-host-snap-2-9-ui/2291)
+- [VM host storage pools](/t/vm-host-storage-pools-snap-2-9-ui/3227)
+- [Creating and deleting VMs](/t/creating-and-deleting-vms-snap-2-9-ui/2579)
 
 ### Operations
 
-- [Prometheus metrics](/t/prometheus-metrics-snap-2-8-ui/3021)
-- [Backup](/t/backup-snap-2-8-ui/2337)
-- [MAAS security](/t/hardening-your-maas-installation-snap-2-8-ui/2661)
-- [Logging](/t/maas-logging-snap-2-8-ui/2865)
-  - [Commissioning logs](/t/commissioning-logs-snap-2-8-ui/2493)
-- [User accounts](/t/user-accounts-snap-2-8-ui/3201)
-- [Interactive search](/t/interactive-search-snap-2-8-ui/2709)
+- [Prometheus metrics](/t/prometheus-metrics-snap-2-9-ui/3023)
+- [Backup](/t/backup-snap-2-9-ui/2339)
+- [MAAS security](/t/hardening-your-maas-installation-snap-2-9-ui/2663)
+- [Logging](/t/maas-logging-snap-2-9-ui/2867)
+  - [Commissioning logs](/t/commissioning-logs-snap-2-9-ui/2495)
+- [User accounts](/t/user-accounts-snap-2-9-ui/3203)
+- [Interactive search](/t/interactive-search-snap-2-9-ui/2711)
 
 ### [Concepts & terms](/t/concepts-and-terms/785)
 

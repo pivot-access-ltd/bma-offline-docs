@@ -491,21 +491,17 @@ If you have installed `bind9` or have it running, you will need to uninstall it 
 
 [Snaps^](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
 
-    $ sudo snap install --channel=2.9/candidate maas
+    $ sudo snap install --channel=2.9/stable maas
 
-After entering your password, the snap will download and install from the 2.9 candidate channel -- though MAAS needs initialising before it's ready to go.
+After entering your password, the snap will download and install from the 2.9 stable channel -- though MAAS needs initialising before it's ready to go.
 
 <a href="#heading--upgrade-maas-snap"><h2 id="heading--upgrade-maas-snap">Upgrading MAAS from 2.8</h2></a>
 
 If you want to upgrade from a 2.8 snap to 2.9, and you are using a `region+rack` configuration, use this command:
 
-    $ sudo snap refresh --channel=2.9/candidate maas
+    $ sudo snap refresh --channel=2.9/stable maas
 
-After entering your password, the snap will refresh from the 2.9 candidate channel.  You will **not** need to re-initialise MAAS.
-
-[note]
-Remember that 2.9 is a Release Candidate version, and hence may be unstable or present bugs.  Please be sure to [file any bugs](https://bugs.launchpad.net/maas/+filebug) you find, and please feel free to interact with the development team via [discourse](https://discourse.maas.io/).
-[/note]
+After entering your password, the snap will refresh from the 2.9 stable channel.  You will **not** need to re-initialise MAAS.
 
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 

@@ -4,6 +4,7 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 
 * [Availability zones](/t/concepts-and-terms/785#heading--zones)
 * [Client](/t/concepts-and-terms/785#heading--client)
+* [cloud-init](/t/concepts-and-terms/785#heading--cloud-init)
 * [Controller](/t/concepts-and-terms/785#heading--controllers)
 * [Device](/t/concepts-and-terms/785#heading--devices)
 * [DHCP](/t/concepts-and-terms/785#heading--dhcp)
@@ -15,6 +16,7 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 * [Interfaces](/t/concepts-and-terms/785#heading--interfaces)
 * [isolcpus](/t/concepts-and-terms/785#heading--isolcpus)
 * [LAN](/t/concepts-and-terms/785#heading--lan)
+* [lxd (tutorials)](/t/concepts-and-terms/785#heading--lxd-tutorials)
 * [MAC address](/t/concepts-and-terms/785#heading--mac-address)
 * [Machine](/t/concepts-and-terms/785#heading--machines)
 * [Machine actions](/t/concepts-and-terms/785#heading--machine-actions)
@@ -589,3 +591,42 @@ Network infrastructure is a catch-all term covering the physical components of a
 <a href="#heading--router"><h3 id="heading--router">Router</h3></a>
 
 A router is a device that transfers packets from one network to another.  Unlike switches, which only ensure that pre-addressed packets get to the correct recipient machines, routers actually modify or encapsulate packets to ensure that they can travel on other networks to reach a remote destination.
+
+<a href="#heading--cloud-init"><h2 id="heading--cloud-init">Cloud-init</h2></a>
+
+Cloud-init is the industry-standard method for initialising cloud instances, independent of platform.  It allows you to automatically provision operating system images, bringing them to a fully running state.  It also allows you to customize networking, storage, user space, applications, and various other components of a functioning system.
+
+There are four stages of cloud-init action:
+
+1. Local initialisation - this "as-early-as-possible" stage configures system elements that must be set up before the system can be made fully operational, such as networking configuration, including bridges, VLANs, bonds, and so forth.
+
+2. Initialization - this second stage runs as soon as the network connections are up and running, taking care of custom storage configurations, disk volume expansion, block device setup and filesystem allocations.
+
+3. Module configuration - stage three configures the necessary meta-tools to allow full system configuration, such as SSH, apt/yum, and NTP.
+
+4. Module finalisation - stage four is the very end of the boot process, installing packages and executing any user-supplied configuration scripts.
+
+These four steps combine (at least) four general datasources to bring an instance into being:
+
+1. Disk image - the operating system for the instance; this is a bare-bones, uncustomized version of the chosen OS.
+
+2. Metadata - this configuration information is supplied by the cloud provider, specifying things like disk images storage, networking, default users, and other basic customizations.
+
+3. User data - data provided by end users or cloud administrators to initialise the instance.  This completely optional data can be anything from shellscripts to highly-structured cloud-config data that trigger cloud-init's built-ins.
+
+4. Vendor data - data provided by cloud platform vendors; this is identical (in principle) to user data, but derived from a different source.  In practice, vendor data usually handle things that users wouldn't normally specify, such as mirror setup, NTP service management, etc.
+
+<a href="#heading--lxd-tutorials"><h2 id="heading--lxd-tutorials">An extended LXD tutorial</h2></a>
+
+<a href="#heading--lxd-basic-install"><h3 id="heading--lxd-basic-install">Basic LXD installation</h3></a>
+
+<a href="#heading--lxd-basic-network-config"><h3 id="heading--lxd-basic-network-config">LXD basic network configuration</h3></a>
+
+1. make sure lxdbr0 IP address is captured
+2. go edit the *container's* /etc/netplan file
+3. netplan apply
+4. set up a new user same name as one on host who has an ssh public key
+5. make sure sshd is running on the container
+6. copy id_rsa.pub to .ssh dir on user's homedir on container
+7. copy id_rsa.pub to authorized_keys in .ssh dir in user's homedir on container
+8. test ssh

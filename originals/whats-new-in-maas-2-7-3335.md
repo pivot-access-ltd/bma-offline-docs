@@ -197,15 +197,10 @@ MAAS has switched hardware information gathering from lshw/lsblk to lxd output d
 A number of bug fixes (see the [list in Launchpad^](https://bugs.launchpad.net/maas/+bugs?field.milestone%3Alist=87757&field.milestone%3Alist=89662&field.milestone%3Alist=89714&field.milestone%3Alist=89840&field.milestone%3Alist=89954&field.milestone%3Alist=89682&field.status%3Alist=FIXRELEASED)).
 snap-2-7 snap-2-7-ui deb-2-7 deb-2-7-ui -->
 
-<!-- CONTRIBUTORS: ADD YOUR MAAS 2.9 RELEASE NOTES TO THIS SECTION vv -->
 <!-- snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui
 <h2>MAAS 2.9 release notes</h2>
 
-Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 **RC3** is now available.
-
-[note]
-NOTE that this is currently a release candidate, so there will be bugs, instabilities, and missing features. Please remember to [file a bug^](https://bugs.launchpad.net/maas/+filebug) if you find one, and please interact with the developers on [discourse^](https://discourse.maas.io/).
-[/note]
+Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now available.
 
 #### What are the new features & fixes for MAAS 2.9?
 
@@ -234,32 +229,20 @@ NOTE that this is currently a release candidate, so there will be bugs, instabil
 <h4>Five other questions you may have:</h4>
 
 1. [What known issues should I be aware of?](#heading--known-issues)
-2. [How do I install MAAS 2.9 RC3?](/t/maas-installation/3323)
-3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 RC3 snap?](/t/maas-installation/3323#heading--upgrade-maas-snap)
-4. [How do I install MAAS 2.9 RC3 from packages?](/t/maas-installation/3329)
+2. [How do I install MAAS 2.9?](/t/maas-installation/3323)
+3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?](/t/maas-installation/3323#heading--upgrade-maas-snap)
+4. [How do I install MAAS 2.9 from packages?](/t/maas-installation/3329)
 5. [What bugs are fixed so far in this release?](#heading--bug-fixes)
 
-<h2 id="heading--maas-2-9-rc-1">New features in MAAS 2.9 RC1</h2>
-
-<h3 id="heading--focal-default">Focal Fossa (Ubuntu 20.04 LTS) as default release</h3>
+<h2 id="heading--focal-default">Focal Fossa (Ubuntu 20.04 LTS) as default release</h2>
 
 Ubuntu 20.04 LTS (Focal Fossa) is now the default commissioning and deployment release for new MAAS installations.  Machines deployed with Focal may now be registered as KVM hosts.
 
-<h3 id="heading--bmc-fixes">Two minor BMC fixes</h3>
-
-MAAS 2.9 RC1 brings a couple of minor adjustments to previous BMC work in this release:
-
-1. MAAS will not capture the BMC MAC address when detecting IPMI BMCs.
-
-2. If an IPMI K_g key is set but the key is rejected by the BMC MAAS will automatically retry without the K_g key. This works around an edge case where some BMCs will allow you to set an K_g key but don’t allow it to be used.
-
-Other adjustments and minor fixes will be considered going forward, based on user bug reports and feature requests.
-
-<h3 id="heading--openvswitch">Support for OpenVswitch bridge type</h3>
+<h2 id="heading--openvswitch">Support for OpenVswitch bridge type</h2>
 
 MAAS 2.9 allows you to create an OpenVswitch bridge type when creating a bridge.
 
-<h3 id="heading--numa">Support for NUMA, SR-IOV, and hugepages</h3>
+<h2 id="heading--numa">Support for NUMA, SR-IOV, and hugepages</h2>
 
 MAAS 2.9 adds extensive optimisation tools for using NUMA with virtual machines. You can now see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory. You can quickly spot a VM running in multiple NUMA nodes, and optimise accordingly, with instant updates on pinning and allocations. You can also tell which VMs are currently running.  Using the CLI, you can also pin nodes to specific cores, and configure hugepages for use by VMs.
 
@@ -277,11 +260,9 @@ This functionality comes with an enhanced panel in the "KVM" details section:
 
 See the [VM hosting](/t/vm-hosting-snap-2-9-ui/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
 
-<h2 id="heading--maas-2-9-beta-7">New features in 2.9 Beta7</h2>
+<h2 id="heading--improved-perf-large-maas">Improved performance for large MAAS installations</h2>
 
-<h3 id="heading--improved-perf-large-maas">Improved performance for large MAAS installations</h3>
-
-MAAS 2.9 Beta 7 includes changes to the machine batch size that the UI loads. Previously the UI loaded machines in batches of 25; it now pulls in 25 for the first call, then 100 at a time in subsequent batches.
+MAAS 2.9 includes changes to the machine batch size that the UI loads. Previously the UI loaded machines in batches of 25; it now pulls in 25 for the first call, then 100 at a time in subsequent batches.
 
 You can see the results of the investigation in [this video podcast](https://discourse.maas.io/t/maas-show-and-tell-improving-ui-performance-for-large-maas-installs/3515).
 
@@ -315,58 +296,48 @@ A number of MAAS issues have actually been issues with an older version of Curti
 
 <h2 id="#heading--http-boot-disabled">HTTP boot disabled</h2>
 
-MAAS 2.9 Beta 7 disables HTTP boot. There are known issues with HTTP boot in MAAS, as well as known issues for HTTP boot with grub (e.g. https://bugs.launchpad.net/maas/+bug/1899581)  This shouldn’t affect machine boot, as machines will normally try PXE as a fallback boot method if HTTP boot fails.  Be aware, though, that machine boot will fail if the BIOS is configured to boot only over HTTP; those machines need to be reconfigured to use PXE.
+MAAS 2.9 disables HTTP boot. There are known issues with HTTP boot in MAAS, as well as known issues for HTTP boot with grub (e.g. https://bugs.launchpad.net/maas/+bug/1899581)  This shouldn’t affect machine boot, as machines will normally try PXE as a fallback boot method if HTTP boot fails.  Be aware, though, that machine boot will fail if the BIOS is configured to boot only over HTTP; those machines need to be reconfigured to use PXE.
 
-<h2 id="heading--release-notes">New features in 2.9 Beta5</h2>
-
-MAAS 2.9 Beta5 is currently scheduled for release on 02 October 2020, bringing the following updates to the BETA product.
-
-<h3 id="heading--bmc-param-additions">30-maas-01-bmc-config parameter additions</h3>
+<h2 id="heading--bmc-param-additions">30-maas-01-bmc-config parameter additions</h2>
 
 Four new parameters have been added for IPMI BMC configuration.  These parameters will pull from the global defaults, eliminating the need to set the corresponding parameter in each instance.
 
 1. maas_auto_ipmi_user - The username for the MAAS created IPMI user. Default comes from the global configuration setting.
 2. maas_auto_ipmi_user_password - The password for the MAAS created IPMI user, by default a random password is generated.
-3. maas_auto_ipmi_k_g_bmc_key - he IPMI K_g preshared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting.
+3. maas_auto_ipmi_k_g_bmc_key - he IPMI K_g preshared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting. If an IPMI K_g key is set but the key is rejected by the BMC MAAS will automatically retry without the K_g key. This works around an edge case where some BMCs will allow you to set an K_g key but don’t allow it to be used.
 4. maas_auto_ipmi_user_privilege_level - The IPMI user privilege level to use when adding the MAAS IPMI user. Possible options are USER, OPERATOR, or ADMIN. Default comes from the global configuration setting.
 
-<h3 id="heading--new-config-options">New global IPMI configuration options</h3>
+Note that MAAS will not capture the BMC MAC address when detecting IPMI BMCs.
+
+<h2 id="heading--new-config-options">New global IPMI configuration options</h2>
 
 Two new global IPMI configuration options have been added:
 
 1. maas_auto_ipmi_k_g_bmc_key - sets a global default IPMI BMC key.
 2. maas_auto_ipmi_user_privilege_level - sets a global default IPMI BMC user privilege level.
     
-<h3 id="heading--global-config-settings">Addition of IPMI config options to UI</h3>
+<h2 id="heading--global-config-settings">Addition of IPMI config options to UI</h2>
 
 You may now set the global configuration options `maas_auto_ipmi_user`, `maas_auto_ipmi_k_g_bmc_key`, and `maas_auto_ipmi_user_privilege_level` on the "Settings" page in the UI under "Commissioning."
 
-<h2 id="heading--release-notes">New features in 2.9 Beta4</h2>
+<h2 id="heading--maas-power">New maas.power CLI command</h2>
 
-MAAS 2.9 Beta4 was released on 25 September 2020 and brings the following updates to the BETA product.
+Available in all MAAS 2.9 releases is the new `maas.power` CLI command. This command interfaces directly with the supported MAAS power drivers. This command can be used to control the power on a machine before it has been added to MAAS, for all maas supported power drivers.  You can get power status, turn machines on or off, and cycle power.  The `maas.power --help` shows usage details, including syntax for naming each power type (consistent with other MAAS CLI commands).
 
-<h3 id="heading--maas-power">New maas.power CLI command</h3>
-
-Available in all MAAS 2.9 Beta releases is the new `maas.power` CLI command. This command interfaces directly with the supported MAAS power drivers. This command can be used to control the power on a machine before it has been added to MAAS, for all maas supported power drivers.  You can get power status, turn machines on or off, and cycle power.  The `maas.power --help` shows usage details, including syntax for naming each power type (consistent with other MAAS CLI commands).
-
-<h3 id="heading--rad">IPMI BMC detection improvements (RAD)</h3>
+<h2 id="heading--rad">IPMI BMC detection improvements (RAD)</h2>
 
 This release adds two improvements to IPMI BMC detection capability:
 
 1. The IPMI cipher suite ID will now be automatically detected. MAAS tries to find the most secure cipher suite available. Preference order is 17, 3, 8, 12. If detection fails MAAS will fall back to using freeipmi-tool default, 3, which is what previous versions of MAAS use.
 2. The IPMI K_g BMC key will now be automatically detected if previously set. 
 
-<h2 id="heading--release-notes">New features in 2.9 Beta3</h2>
-
-MAAS 2.9 Beta3 was released on 18 September 2020 and brings the following updates to the BETA product.
-
 <h3 id="heading--rad">Reader Adaptive Documentation (RAD)</h3>
 
-This release features Reader Adaptive Documentation, which allows you to adapt individual pages to your install method (Snap vs. Deb), version (2.7/2.8/2.9), and preferred interface (CLI/UI).  This documentation is rolling out in phases prior to the release, and is currently [active and usable^](https://maas.io/docs).  Note that these docs are still under active development, hence should be considered Beta until the final release, although everything for the current active version (2.8) should be correct and reliable.
+This release features Reader Adaptive Documentation, which allows you to adapt individual pages to your install method (Snap vs. Deb), version (2.7/2.8/2.9), and preferred interface (CLI/UI). 
 
-<h3 id="heading--offline-docs">Offline documentation</h3>
+<h2 id="heading--offline-docs">Offline documentation</h2>
 
-This release will include offline documentation for those users whose MAAS installations reside behind firewalls, unable to access the online documentation.  They are currently in a very rough Beta state, but should start showing up in the releases shortly.  Note that, going forward, all links that are not part of the offline documentation set are marked with a caret, like this, [Google^](https://www.google.com), when they refer to a site that can't be reached without Internet access.
+This release will include offline documentation for those users whose MAAS installations reside behind firewalls, unable to access the online documentation.
 
 <h2 id="heading--bmc-improve">BMC improvements</h2>
 
@@ -386,11 +357,7 @@ Three new configuration options have been added to the IPMI power driver:
 
 See the [2.9 UI](https://maas.io/docs/snap/2.9/ui/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docs/snap/2.9/cli/power-management#heading--ipmi) power management pages for details.
 
-<h2 id="heading--release-notes">New features in 2.9 Beta2</h2>
-
-MAAS 2.9 Beta2 was released on 11 September 2020 and brings the following updates to the BETA product.
-
-<h3 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
+<h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
 
 Script flow and capabilities have been improved in three ways:
 
@@ -400,11 +367,7 @@ Script flow and capabilities have been improved in three ways:
 <li> The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.</li>
 </ol>
 
-<h2 id="heading--release-notes">New features in 2.9 Beta1</h2>
-
-MAAS 2.9 Beta1 was released on 08 September 2020 and brings the following updates to the BETA product.
-
-<h3 id="heading--commissioning-scripts">Major improvements to commissioning script capabilities</h3>
+<h2 id="heading--commissioning-scripts">Major improvements to commissioning script capabilities</h2>
 
 Seven major improvements were made to commissioning script flow and capabilities:
 
@@ -418,7 +381,7 @@ Seven major improvements were made to commissioning script flow and capabilities
 <li>All builtin commissioning scripts have been migrated into the database.</li>
 </ol>
 
-<h3 id="heading--commissioning-reorder">Commissioning script reordering</h3>
+<h2 id="heading--commissioning-reorder">Commissioning script reordering</h2>
 
 Commissioning scripts have been reordered and some are now set to run in parallel. You can now easily set a script to run before the builtin MAAS commissioning scripts. There are nine signficant changes:
 
@@ -444,7 +407,7 @@ Commissioning scripts have been reordered and some are now set to run in paralle
 
 See the [commissioning logs page](https://maas.io/docs/snap/2.9/ui/commissioning-logs) for more details on these changes.
 
-<h3 id="heading--commissioning-speed">Improvements in commissioning speed and logging</h3>
+<h2 id="heading--commissioning-speed">Improvements in commissioning speed and logging</h2>
 
 Four improvements have been made to speed up the commissioning process, mostly by running scripts in parallel (see above):
 
@@ -457,15 +420,13 @@ Four improvements have been made to speed up the commissioning process, mostly b
 
 <h2 id="heading--bug-fixes">Bug fixes</h2>
 
-1. 2.9.0 Beta 8 includes a fix for [Bug #1894727: Admin uses cannot change other user's passwords via the UI](https://bugs.launchpad.net/maas/+bug/1894727).
+1. MAAS 2.9 includes a fix for [Bug #1894727: Admin uses cannot change other user's passwords via the UI](https://bugs.launchpad.net/maas/+bug/1894727).
 
 <h2 id="heading--known-issues">Known issues</h2>
 
 <ol>
 <li><strong>RAD LHS menu:</strong> There is a known issue with the Reader Adaptive Documentation left-hand-side menu (navigation), in that the menu links cannot currently be adapted to the RAD parameters.  This means that selecting a different page in the LHS menu will take you the the RAD for the current recommended version (in this case, Snap/2.8/UI).  Every page that is different in RAD, though, should present you with a top menu, so that you can choose the RAD parameters matching your own preferences. </li>
 
-<li><strong>Beta4 snap builds:</strong>The Beta4 snap builds may not work on ARM64 or PPC64 architectures, due to a build issue which is currently being resolved.</li>
-<ol>
 snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui -->
 
 <!-- snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui

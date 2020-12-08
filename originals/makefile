@@ -175,7 +175,7 @@ whats-new-in-maas.md: ../whats-new-in-maas.md
 	xpub push discourse -t deb-2-8-cli whats-new-in-maas-2-8-3334.md
 	xpub push discourse -t deb-2-9-cli whats-new-in-maas-2-9-3336.md
 	xpub pull discourse 3336 3336
-	cp -p whats-new-in-maas-deb-2-9-ui-3336.md whats-new-in-maas.md
+	cp -p whats-new-in-maas-2-9-3336.md whats-new-in-maas.md
 
 maas-installation.md: ../maas-installation.md
 	cp ../maas-installation.md maas-installation-deb-2-7-cli-3324.md
@@ -1799,8 +1799,8 @@ maas-documentation.md: ../maas-documentation.md
 	cp ../maas-documentation.md maas-documentation-snap-2-7-cli-2838.md
 	cp ../maas-documentation.md maas-documentation-snap-2-7-ui-2839.md
 	cp ../maas-documentation.md maas-documentation-snap-2-8-cli-2840.md
+	cp ../maas-documentation.md maas-documentation-snap-2-8-ui-2841.md
 	cp ../maas-documentation.md maas-documentation-snap-2-9-cli-2842.md
-	cp ../maas-documentation.md maas-documentation-snap-2-9-ui-2843.md
 	./scripts/strip-navigation.sh maas-documentation-deb-2-7-cli-2844.md
 	./scripts/strip-navigation.sh maas-documentation-deb-2-7-ui-2845.md
 	./scripts/strip-navigation.sh maas-documentation-deb-2-8-cli-2846.md
@@ -1810,8 +1810,8 @@ maas-documentation.md: ../maas-documentation.md
 	./scripts/strip-navigation.sh maas-documentation-snap-2-7-cli-2838.md
 	./scripts/strip-navigation.sh maas-documentation-snap-2-7-ui-2839.md
 	./scripts/strip-navigation.sh maas-documentation-snap-2-8-cli-2840.md
+	./scripts/strip-navigation.sh maas-documentation-snap-2-8-ui-2841.md
 	./scripts/strip-navigation.sh maas-documentation-snap-2-9-cli-2842.md
-	./scripts/strip-navigation.sh maas-documentation-snap-2-9-ui-2843.md
 	xpub push discourse -t deb-2-7-cli maas-documentation-deb-2-7-cli-2844.md
 	xpub push discourse -t deb-2-7-ui maas-documentation-deb-2-7-ui-2845.md
 	xpub push discourse -t deb-2-8-cli maas-documentation-deb-2-8-cli-2846.md
@@ -1821,12 +1821,12 @@ maas-documentation.md: ../maas-documentation.md
 	xpub push discourse -t snap-2-7-cli maas-documentation-snap-2-7-cli-2838.md
 	xpub push discourse -t snap-2-7-ui maas-documentation-snap-2-7-ui-2839.md
 	xpub push discourse -t snap-2-8-cli maas-documentation-snap-2-8-cli-2840.md
-	xpub push discourse -t snap-2-8-ui maas-documentation-25.md
+	xpub push discourse -t snap-2-8-ui maas-documentation-snap-2-8-ui-2841.md
+	xpub push discourse -t snap-2-9-ui maas-documentation-25.md
 	xpub push discourse -t snap-2-9-cli maas-documentation-snap-2-9-cli-2842.md
-	xpub push discourse -t snap-2-9-ui maas-documentation-snap-2-9-ui-2843.md
 	xpub pull discourse 25 25
-	xpub pull discourse 2838 2840
-	xpub pull discourse 2842 2849
+	xpub pull discourse 2838 2842
+	xpub pull discourse 2844 2849
 	cp -p maas-documentation-25.md maas-documentation.md
  
 maas-communication.md: ../maas-communication.md

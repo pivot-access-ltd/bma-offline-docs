@@ -276,7 +276,7 @@ deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-ui -->
 
 <h2 id="heading--whats-new">BETA version of MAAS</h2>
 
-- [What's new in 2.9 (Beta4)](/t/whats-new-in-maas/3336)
+- [What's new in 2.9](/t/whats-new-in-maas/3336)
 
 ---
 
