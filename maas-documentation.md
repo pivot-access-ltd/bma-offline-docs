@@ -281,7 +281,7 @@ deb-2-8-cli deb-2-8-ui snap-2-8-cli snap-2-8-ui -->
 deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-ui -->
 
 <!-- deb-2-9-cli deb-2-9-ui snap-2-9-cli snap-2-9-ui
-<h2 id="heading--whats-new">BETA version of MAAS</h2>
+<h2 id="heading--whats-new">New version of MAAS</h2>
 
 - [What's new in 2.9](/t/whats-new-in-maas/3336)
 deb-2-9-cli deb-2-9-ui snap-2-9-cli snap-2-9-ui -->
@@ -313,7 +313,7 @@ There are (at least) three ways you can contribute to MAAS:
 
 - [About MAAS](/t/about-maas-snap-2-9-ui/2267)
 - ["Give me an example"](/t/give-me-an-example-of-maas-snap-2-9-ui/2651)
-- [What's new in 2.8](/t/whats-new-in-maas-2-9/3336)
+- [What's new in 2.9](/t/whats-new-in-maas-2-9/3336)
 - [Requirements](/t/maas-requirements-snap-2-9-ui/2879)
 - [Installation](/t/maas-installation-snap-2-9-ui/3323)
 - [Configuration journey](/t/configuration-journey-snap-2-9-ui/2531)
@@ -1367,7 +1367,7 @@ There are (at least) three ways you can contribute to MAAS:
 |/docs/installconfig-images-vmware|/docs/vmware-images|
 |/docs/installconfig-images|/docs/images|
 |/docs/installconfig-install|/docs/install-from-a-snap|
-|/docs/installation|/docs/snap/2.8/ui/installation|
+|/docs/installation|/docs/snap/2.9/ui/installation|
 |/docs/installconfig-iso-install|/docs/install-from-iso|
 |/docs/installconfig-lxd-install|/docs/install-with-lxd|
 |/docs/installconfig-network-dev-discovery|/docs/network-discovery|

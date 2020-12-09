@@ -274,7 +274,7 @@ deb-2-8-cli deb-2-8-ui snap-2-8-cli snap-2-8-ui -->
 - [What's new in 2.7](/t/whats-new-in-maas/3334)
 deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-ui -->
 
-<h2 id="heading--whats-new">BETA version of MAAS</h2>
+<h2 id="heading--whats-new">New version of MAAS</h2>
 
 - [What's new in 2.9](/t/whats-new-in-maas/3336)
 

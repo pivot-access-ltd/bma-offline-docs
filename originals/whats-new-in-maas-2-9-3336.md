@@ -263,7 +263,7 @@ MAAS 2.9 includes changes to the machine batch size that the UI loads. Previousl
 
 You can see the results of the investigation in [this video podcast](https://discourse.maas.io/t/maas-show-and-tell-improving-ui-performance-for-large-maas-installs/3515).
 
-<h2 id="#heading--new-release-notifications">New release notifications</h2>
+<h2 id="heading--new-release-notifications">New release notifications</h2>
 
 MAAS now includes new release notifications for users and administrators.  These appear when a new release is available:
 
@@ -271,7 +271,7 @@ MAAS now includes new release notifications for users and administrators.  These
 
 Both regular and administrative users can snooze these notifications for two weeks at a time.  Administrative users can opt out of new release notifications completely, preventing notifications for any user of that MAAS.
 
-<h2 id="#heading--ipmi-config-screens">IPMI configuration screens</h2>
+<h2 id="heading--ipmi-config-screens">IPMI configuration screens</h2>
 
 MAAS now includes UI panels corresponding to the [IPMI power driver upgrades](#heading--ipmi-driver) mentioned earlier:
 
@@ -279,7 +279,7 @@ MAAS now includes UI panels corresponding to the [IPMI power driver upgrades](#h
 
 This screen can be reached from `Settings | Configuration | Commissioning`.
 
-<h2 id="#heading--descrip-mark-mach-broken">Descriptions when marking machines broken</h2>
+<h2 id="heading--descrip-mark-mach-broken">Descriptions when marking machines broken</h2>
 
 When marking a machine broken, a description can now included:
 
@@ -287,11 +287,11 @@ When marking a machine broken, a description can now included:
 
 This description appears in that machine's row on the machine list.
 
-<h2 id="#heading--curtin-20-2-included">Curtin 20.2 now included</h2>
+<h2 id="heading--curtin-20-2-included">Curtin 20.2 now included</h2>
 
 A number of MAAS issues have actually been issues with an older version of Curtin.  MAAS now includes Curtin 20.2, which fixes many of these issues, including [MAAS is changing my boot order!](https://discourse.maas.io/t/maas-is-changing-my-boot-order/3491].
 
-<h2 id="#heading--http-boot-disabled">HTTP boot disabled</h2>
+<h2 id="heading--http-boot-disabled">HTTP boot disabled</h2>
 
 MAAS 2.9 disables HTTP boot. There are known issues with HTTP boot in MAAS, as well as known issues for HTTP boot with grub (e.g. https://bugs.launchpad.net/maas/+bug/1899581)  This shouldn’t affect machine boot, as machines will normally try PXE as a fallback boot method if HTTP boot fails.  Be aware, though, that machine boot will fail if the BIOS is configured to boot only over HTTP; those machines need to be reconfigured to use PXE.
 
