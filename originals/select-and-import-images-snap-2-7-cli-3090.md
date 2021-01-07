@@ -1,85 +1,35 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images/3090) ~ [UI](/t/select-and-import-images/3091)|[CLI](/t/select-and-import-images/3092) ~ [UI](/t/select-and-import-images/3093)|[CLI](/t/select-and-import-images/3094) ~ [UI](/t/select-and-import-images/3095)|
-|Packages|CLI ~ [UI](/t/select-and-import-images/3097)|[CLI](/t/select-and-import-images/3098) ~ [UI](/t/select-and-import-images/3099)|[CLI](/t/select-and-import-images/3100) ~ [UI](/t/select-and-import-images/3101)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images/3090) ~ [UI](/t/select-and-import-images/3091)|[CLI](/t/select-and-import-images/3092) ~ [UI](/t/select-and-import-images/3093)|[CLI](/t/select-and-import-images/3094) ~ [UI](/t/select-and-import-images/3095)|
-|Packages|[CLI](/t/select-and-import-images/3096) ~ UI|[CLI](/t/select-and-import-images/3098) ~ [UI](/t/select-and-import-images/3099)|[CLI](/t/select-and-import-images/3100) ~ [UI](/t/select-and-import-images/3101)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images/3090) ~ [UI](/t/select-and-import-images/3091)|[CLI](/t/select-and-import-images/3092) ~ [UI](/t/select-and-import-images/3093)|[CLI](/t/select-and-import-images/3094) ~ [UI](/t/select-and-import-images/3095)|
-|Packages|[CLI](/t/select-and-import-images/3096) ~ [UI](/t/select-and-import-images/3097)|CLI ~ [UI](/t/select-and-import-images/3099)|[CLI](/t/select-and-import-images/3100) ~ [UI](/t/select-and-import-images/3101)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images/3090) ~ [UI](/t/select-and-import-images/3091)|[CLI](/t/select-and-import-images/3092) ~ [UI](/t/select-and-import-images/3093)|[CLI](/t/select-and-import-images/3094) ~ [UI](/t/select-and-import-images/3095)|
-|Packages|[CLI](/t/select-and-import-images/3096) ~ [UI](/t/select-and-import-images/3097)|[CLI](/t/select-and-import-images/3098) ~ UI|[CLI](/t/select-and-import-images/3100) ~ [UI](/t/select-and-import-images/3101)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images/3090) ~ [UI](/t/select-and-import-images/3091)|[CLI](/t/select-and-import-images/3092) ~ [UI](/t/select-and-import-images/3093)|[CLI](/t/select-and-import-images/3094) ~ [UI](/t/select-and-import-images/3095)|
-|Packages|[CLI](/t/select-and-import-images/3096) ~ [UI](/t/select-and-import-images/3097)|[CLI](/t/select-and-import-images/3098) ~ [UI](/t/select-and-import-images/3099)|CLI ~ [UI](/t/select-and-import-images/3101)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images/3090) ~ [UI](/t/select-and-import-images/3091)|[CLI](/t/select-and-import-images/3092) ~ [UI](/t/select-and-import-images/3093)|[CLI](/t/select-and-import-images/3094) ~ [UI](/t/select-and-import-images/3095)|
-|Packages|[CLI](/t/select-and-import-images/3096) ~ [UI](/t/select-and-import-images/3097)|[CLI](/t/select-and-import-images/3098) ~ [UI](/t/select-and-import-images/3099)|[CLI](/t/select-and-import-images/3100) ~ UI|
  deb-2-9-ui -->
 
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/select-and-import-images/3091)|[CLI](/t/select-and-import-images/3092) ~ [UI](/t/select-and-import-images/3093)|[CLI](/t/select-and-import-images/3094) ~ [UI](/t/select-and-import-images/3095)|
-|Packages|[CLI](/t/select-and-import-images/3096) ~ [UI](/t/select-and-import-images/3097)|[CLI](/t/select-and-import-images/3098) ~ [UI](/t/select-and-import-images/3099)|[CLI](/t/select-and-import-images/3100) ~ [UI](/t/select-and-import-images/3101)|
- snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images/3090) ~ UI|[CLI](/t/select-and-import-images/3092) ~ [UI](/t/select-and-import-images/3093)|[CLI](/t/select-and-import-images/3094) ~ [UI](/t/select-and-import-images/3095)|
-|Packages|[CLI](/t/select-and-import-images/3096) ~ [UI](/t/select-and-import-images/3097)|[CLI](/t/select-and-import-images/3098) ~ [UI](/t/select-and-import-images/3099)|[CLI](/t/select-and-import-images/3100) ~ [UI](/t/select-and-import-images/3101)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images/3090) ~ [UI](/t/select-and-import-images/3091)|CLI ~ [UI](/t/select-and-import-images/3093)|[CLI](/t/select-and-import-images/3094) ~ [UI](/t/select-and-import-images/3095)|
-|Packages|[CLI](/t/select-and-import-images/3096) ~ [UI](/t/select-and-import-images/3097)|[CLI](/t/select-and-import-images/3098) ~ [UI](/t/select-and-import-images/3099)|[CLI](/t/select-and-import-images/3100) ~ [UI](/t/select-and-import-images/3101)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images/3090) ~ [UI](/t/select-and-import-images/3091)|[CLI](/t/select-and-import-images/3092) ~ UI|[CLI](/t/select-and-import-images/3094) ~ [UI](/t/select-and-import-images/3095)|
-|Packages|[CLI](/t/select-and-import-images/3096) ~ [UI](/t/select-and-import-images/3097)|[CLI](/t/select-and-import-images/3098) ~ [UI](/t/select-and-import-images/3099)|[CLI](/t/select-and-import-images/3100) ~ [UI](/t/select-and-import-images/3101)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images/3090) ~ [UI](/t/select-and-import-images/3091)|[CLI](/t/select-and-import-images/3092) ~ [UI](/t/select-and-import-images/3093)|CLI ~ [UI](/t/select-and-import-images/3095)|
-|Packages|[CLI](/t/select-and-import-images/3096) ~ [UI](/t/select-and-import-images/3097)|[CLI](/t/select-and-import-images/3098) ~ [UI](/t/select-and-import-images/3099)|[CLI](/t/select-and-import-images/3100) ~ [UI](/t/select-and-import-images/3101)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images/3090) ~ [UI](/t/select-and-import-images/3091)|[CLI](/t/select-and-import-images/3092) ~ [UI](/t/select-and-import-images/3093)|[CLI](/t/select-and-import-images/3094) ~ UI|
-|Packages|[CLI](/t/select-and-import-images/3096) ~ [UI](/t/select-and-import-images/3097)|[CLI](/t/select-and-import-images/3098) ~ [UI](/t/select-and-import-images/3099)|[CLI](/t/select-and-import-images/3100) ~ [UI](/t/select-and-import-images/3101)|
  snap-2-9-ui -->
 
 MAAS is only useful once it has images available to provision its nodes. Therefore, one key post-install task is to select and import images from the boot source. Once MAAS imports images, it will update them on an hourly basis, via a default synch mechanism.  This page explains how to select and import the images that MAAS requires to provision its nodes.
@@ -165,9 +115,7 @@ Optionally, a local mirror can be set up as the boot source. MAAS will then use 
 Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/2813) for instructions.
  deb-2-9-ui -->
 
-<!-- snap-2-7-cli
 Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/2802) for instructions.
- snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/2803) for instructions.
@@ -209,9 +157,7 @@ You can tell MAAS to sync images hourly, at the region level.  See [Boot image s
 You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/2704#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
  deb-2-9-cli -->
  
-<!-- snap-2-7-cli
 You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/2694#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
- snap-2-7-cli -->
  
 <!-- snap-2-8-cli
 You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/2696#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
@@ -221,7 +167,6 @@ You can tell MAAS to sync images hourly, at the region level.  See [Boot image s
 You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/2698#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
  snap-2-9-cli -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 
 #### Eight questions you may have:
 
@@ -242,9 +187,9 @@ If you want to download boot sources, i.e., the locations from which you may dow
 maas $PROFILE boot-sources read
 ```
 
-[note]
+<strong>NOTE:</strong> 
 Although multiple boot sources may be listed, MAAS can only practically work with a single boot source.
-[/note]
+
 
 <a href="#heading--select-images"><h2 id="heading--select-images">Select images</h2></a>
 
@@ -337,9 +282,9 @@ KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
 
 <a href="#heading--add-a-boot-source"><h2 id="heading--add-a-boot-source">Add a boot source</h2></a>
 
-[note]
+<strong>NOTE:</strong> 
 To avoid unnecessary complexity, you should probably delete any existing boot sources before adding a new one.
-[/note]
+
 
 Presented below are two use cases for adding a boot source:
 
@@ -363,7 +308,6 @@ If you added a sole boot source, then the fields 'Sync URL' and 'Keyring Path' i
 
 <a href="#heading--using-a-local-image-mirror"><h3 id="heading--using-a-local-image-mirror">Using a local image mirror</h3></a>
 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 <!-- deb-2-7-cli
 Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/2808) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
@@ -377,9 +321,7 @@ Once the mirror is set up according to [Local image mirror](/t/local-image-mirro
 Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/2812) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
  deb-2-9-cli -->
 
-<!-- snap-2-7-cli
 Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/2802) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
- snap-2-7-cli -->
 
 <!-- snap-2-8-cli
 Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/2804) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
@@ -389,7 +331,6 @@ Once the mirror is set up according to [Local image mirror](/t/local-image-mirro
 Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/2806) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
  snap-2-9-cli -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 
 1.   URL=https://$MIRROR/maas/images/ephemeral-v3/stable/
 2.   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
@@ -402,4 +343,3 @@ Recreate the default boot source if it was ever deleted using the following vari
 
 1.   URL=https://images.maas.io/ephemeral-v3/stable/
 2.   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->

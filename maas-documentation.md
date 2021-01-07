@@ -206,12 +206,6 @@ snap-2-9-cli -->
 *Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-ui/2647), our example data centre.*
  snap-2-7-ui -->
 
-<!-- pre-rad
-<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
-
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas/1314), our example data centre.*
- pre-rad -->
-
 <!-- snap-2-8-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
@@ -221,8 +215,8 @@ snap-2-8-ui -->
 <!-- snap-2-9-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-8-ui/2651), our example data centre.*
- snap-2-9-ui -->
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-9-ui/2651), our example data centre.*
+snap-2-9-ui -->
 
 <!-- deb-2-7-cli 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
@@ -271,13 +265,13 @@ snap-2-8-ui -->
 <!-- deb-2-8-cli deb-2-8-ui snap-2-8-cli snap-2-8-ui
 <h2 id="heading--whats-new">New version of MAAS</h2>
 
-- [What's new in 2.8](/t/whats-new-in-maas/3335)
+- [What's new in 2.8](/t/whats-new-in-maas/3334)
 deb-2-8-cli deb-2-8-ui snap-2-8-cli snap-2-8-ui -->
 
 <!-- deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-uil
 <h2 id="heading--whats-new">New version of MAAS</h2>
 
-- [What's new in 2.7](/t/whats-new-in-maas/3334)
+- [What's new in 2.7](/t/whats-new-in-maas/3335)
 deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-ui -->
 
 <!-- deb-2-9-cli deb-2-9-ui snap-2-9-cli snap-2-9-ui
@@ -410,7 +404,7 @@ There are (at least) three ways you can contribute to MAAS:
   - [Upgrade from 2.3 to 2.4](/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777)
   - [Upgrade from 1.9 to 2.x](/t/upgrade-from-1-9-to-2-x/778)
 
-### [Release notes](https://discourse.maas.io/t/whats-new-in-maas-2-8/3334)
+### [Release notes](/t/-/3336)
 
 ### [Help improve these docs](/t/writing-guide/747)
 
@@ -425,7 +419,7 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/3335|/docs/2.7/release-notes|
 |https://discourse.maas.io/t/-/3334|/docs/2.8/release-notes|
 |https://discourse.maas.io/t/-/3336|/docs/2.9/release-notes|
-|https://discourse.maas.io/t/-/1506|/docs/tips/tricks.and/traps/|
+|https://discourse.maas.io/t/-/1506|/docs/tips-tricks-and-traps|
 |https://discourse.maas.io/t/-/3318|/docs/snap/2.7/cli/installation|
 |https://discourse.maas.io/t/-/3319|/docs/snap/2.7/ui/installation|
 |https://discourse.maas.io/t/-/3320|/docs/snap/2.8/cli/installation|
@@ -1328,7 +1322,7 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/835/ |/docs/whats-new-in-2-6|
 |https://discourse.maas.io/t/whats-new-in-maas-2-7/1306 |/docs/whats-new-in-2-7|
 |https://discourse.maas.io/t/-/835/ |/docs/maas-2-7-release-notes|
-|https://discourse.maas.io/t/whats-new-in-maas-2-8/1655|/docs/release-notes|
+|https://discourse.maas.io/t/whats-new-in-maas-2-9/3336|/docs/release-notes|
 |https://discourse.maas.io/t/-/1267|/docs/network-testing|
 |https://discourse.maas.io/t/-/1561|/docs/markdown-test|
 |https://discourse.maas.io/t/-/1112|/docs/image-builder|
@@ -1452,7 +1446,7 @@ There are (at least) three ways you can contribute to MAAS:
 |/docs/syslog|/docs/logging|
 |/docs/nodes-tags|/docs/tags|
 |/docs/release-notes-all|/docs/historical-release-notes|
-|/docs/release-notes|/docs/maas-2-7-release-notes|
 |/docs/troubleshoot-faq|/docs/troubleshooting|
 |/docs/troubleshoot-getting-help|/docs/getting-help|
-[/details]>
+[/details]
+>

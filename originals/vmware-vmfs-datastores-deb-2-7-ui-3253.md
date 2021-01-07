@@ -1,94 +1,42 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores/3246) ~ [UI](/t/vmware-vmfs-datastores/3247)|[CLI](/t/vmware-vmfs-datastores/3248) ~ [UI](/t/vmware-vmfs-datastores/3249)|[CLI](/t/vmware-vmfs-datastores/3250) ~ [UI](/t/vmware-vmfs-datastores/3251)|
-|Packages|CLI ~ [UI](/t/vmware-vmfs-datastores/3253)|[CLI](/t/vmware-vmfs-datastores/3254) ~ [UI](/t/vmware-vmfs-datastores/3255)|[CLI](/t/vmware-vmfs-datastores/3256) ~ [UI](/t/vmware-vmfs-datastores/3257)|
  deb-2-7-cli -->
 
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores/3246) ~ [UI](/t/vmware-vmfs-datastores/3247)|[CLI](/t/vmware-vmfs-datastores/3248) ~ [UI](/t/vmware-vmfs-datastores/3249)|[CLI](/t/vmware-vmfs-datastores/3250) ~ [UI](/t/vmware-vmfs-datastores/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores/3252) ~ UI|[CLI](/t/vmware-vmfs-datastores/3254) ~ [UI](/t/vmware-vmfs-datastores/3255)|[CLI](/t/vmware-vmfs-datastores/3256) ~ [UI](/t/vmware-vmfs-datastores/3257)|
- deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores/3246) ~ [UI](/t/vmware-vmfs-datastores/3247)|[CLI](/t/vmware-vmfs-datastores/3248) ~ [UI](/t/vmware-vmfs-datastores/3249)|[CLI](/t/vmware-vmfs-datastores/3250) ~ [UI](/t/vmware-vmfs-datastores/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores/3252) ~ [UI](/t/vmware-vmfs-datastores/3253)|CLI ~ [UI](/t/vmware-vmfs-datastores/3255)|[CLI](/t/vmware-vmfs-datastores/3256) ~ [UI](/t/vmware-vmfs-datastores/3257)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores/3246) ~ [UI](/t/vmware-vmfs-datastores/3247)|[CLI](/t/vmware-vmfs-datastores/3248) ~ [UI](/t/vmware-vmfs-datastores/3249)|[CLI](/t/vmware-vmfs-datastores/3250) ~ [UI](/t/vmware-vmfs-datastores/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores/3252) ~ [UI](/t/vmware-vmfs-datastores/3253)|[CLI](/t/vmware-vmfs-datastores/3254) ~ UI|[CLI](/t/vmware-vmfs-datastores/3256) ~ [UI](/t/vmware-vmfs-datastores/3257)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores/3246) ~ [UI](/t/vmware-vmfs-datastores/3247)|[CLI](/t/vmware-vmfs-datastores/3248) ~ [UI](/t/vmware-vmfs-datastores/3249)|[CLI](/t/vmware-vmfs-datastores/3250) ~ [UI](/t/vmware-vmfs-datastores/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores/3252) ~ [UI](/t/vmware-vmfs-datastores/3253)|[CLI](/t/vmware-vmfs-datastores/3254) ~ [UI](/t/vmware-vmfs-datastores/3255)|CLI ~ [UI](/t/vmware-vmfs-datastores/3257)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores/3246) ~ [UI](/t/vmware-vmfs-datastores/3247)|[CLI](/t/vmware-vmfs-datastores/3248) ~ [UI](/t/vmware-vmfs-datastores/3249)|[CLI](/t/vmware-vmfs-datastores/3250) ~ [UI](/t/vmware-vmfs-datastores/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores/3252) ~ [UI](/t/vmware-vmfs-datastores/3253)|[CLI](/t/vmware-vmfs-datastores/3254) ~ [UI](/t/vmware-vmfs-datastores/3255)|[CLI](/t/vmware-vmfs-datastores/3256) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/vmware-vmfs-datastores/3247)|[CLI](/t/vmware-vmfs-datastores/3248) ~ [UI](/t/vmware-vmfs-datastores/3249)|[CLI](/t/vmware-vmfs-datastores/3250) ~ [UI](/t/vmware-vmfs-datastores/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores/3252) ~ [UI](/t/vmware-vmfs-datastores/3253)|[CLI](/t/vmware-vmfs-datastores/3254) ~ [UI](/t/vmware-vmfs-datastores/3255)|[CLI](/t/vmware-vmfs-datastores/3256) ~ [UI](/t/vmware-vmfs-datastores/3257)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores/3246) ~ UI|[CLI](/t/vmware-vmfs-datastores/3248) ~ [UI](/t/vmware-vmfs-datastores/3249)|[CLI](/t/vmware-vmfs-datastores/3250) ~ [UI](/t/vmware-vmfs-datastores/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores/3252) ~ [UI](/t/vmware-vmfs-datastores/3253)|[CLI](/t/vmware-vmfs-datastores/3254) ~ [UI](/t/vmware-vmfs-datastores/3255)|[CLI](/t/vmware-vmfs-datastores/3256) ~ [UI](/t/vmware-vmfs-datastores/3257)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores/3246) ~ [UI](/t/vmware-vmfs-datastores/3247)|CLI ~ [UI](/t/vmware-vmfs-datastores/3249)|[CLI](/t/vmware-vmfs-datastores/3250) ~ [UI](/t/vmware-vmfs-datastores/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores/3252) ~ [UI](/t/vmware-vmfs-datastores/3253)|[CLI](/t/vmware-vmfs-datastores/3254) ~ [UI](/t/vmware-vmfs-datastores/3255)|[CLI](/t/vmware-vmfs-datastores/3256) ~ [UI](/t/vmware-vmfs-datastores/3257)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores/3246) ~ [UI](/t/vmware-vmfs-datastores/3247)|[CLI](/t/vmware-vmfs-datastores/3248) ~ UI|[CLI](/t/vmware-vmfs-datastores/3250) ~ [UI](/t/vmware-vmfs-datastores/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores/3252) ~ [UI](/t/vmware-vmfs-datastores/3253)|[CLI](/t/vmware-vmfs-datastores/3254) ~ [UI](/t/vmware-vmfs-datastores/3255)|[CLI](/t/vmware-vmfs-datastores/3256) ~ [UI](/t/vmware-vmfs-datastores/3257)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores/3246) ~ [UI](/t/vmware-vmfs-datastores/3247)|[CLI](/t/vmware-vmfs-datastores/3248) ~ [UI](/t/vmware-vmfs-datastores/3249)|CLI ~ [UI](/t/vmware-vmfs-datastores/3251)|
-|Packages|[CLI](/t/vmware-vmfs-datastores/3252) ~ [UI](/t/vmware-vmfs-datastores/3253)|[CLI](/t/vmware-vmfs-datastores/3254) ~ [UI](/t/vmware-vmfs-datastores/3255)|[CLI](/t/vmware-vmfs-datastores/3256) ~ [UI](/t/vmware-vmfs-datastores/3257)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-vmfs-datastores/3246) ~ [UI](/t/vmware-vmfs-datastores/3247)|[CLI](/t/vmware-vmfs-datastores/3248) ~ [UI](/t/vmware-vmfs-datastores/3249)|[CLI](/t/vmware-vmfs-datastores/3250) ~ UI|
-|Packages|[CLI](/t/vmware-vmfs-datastores/3252) ~ [UI](/t/vmware-vmfs-datastores/3253)|[CLI](/t/vmware-vmfs-datastores/3254) ~ [UI](/t/vmware-vmfs-datastores/3255)|[CLI](/t/vmware-vmfs-datastores/3256) ~ [UI](/t/vmware-vmfs-datastores/3257)|
  snap-2-9-ui -->
 
 <!-- deb-2-7-cli
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/3108#heading--vmfs6-layout). This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
  deb-2-7-cli -->
 
-<!-- deb-2-7-ui
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/3109#heading--vmfs6-layout). This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
- deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/3110#heading--vmfs6-layout). This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
@@ -258,9 +206,7 @@ maas $PROFILE vmfs-datastore read $SYSTEM_ID $VMFS_DATASTORE_ID
 A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/2352) or [partitions](/t/partitions/2988)
  deb-2-7-cli -->
 
-<!-- deb-2-7-ui
 A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/2353) or [partitions](/t/partitions/2989)
- deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/2354) or [partitions](/t/partitions/2990)
@@ -295,6 +241,7 @@ A VMware VMFS datastore is created on one or more [block devices](/t/block-devic
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
+
 A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/2350) or [partitions](/t/partitions/2986)
  snap-2-9-cli -->
 

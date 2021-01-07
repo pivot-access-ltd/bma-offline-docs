@@ -1,177 +1,495 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|CLI ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
+|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
+|Packages|CLI ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ UI|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
+|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
+|Packages|[CLI](/t/add-machines/2280) ~ UI|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|CLI ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
+|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
+|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|CLI ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ UI|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
+|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
+|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ UI|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|CLI ~ [UI](/t/prometheus-metrics/3029)|
+|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
+|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|CLI ~ [UI](/t/add-machines/2285)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ UI|
+|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
+|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
+|Snap|CLI ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
+|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ UI|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
+|Snap|[CLI](/t/add-machines/2274) ~ UI|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
+|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|CLI ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
+|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|CLI ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
+|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ UI|[CLI](/t/prometheus-metrics/3022) ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
+|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ UI|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
+|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|CLI ~ [UI](/t/prometheus-metrics/3023)|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
+|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|CLI ~ [UI](/t/add-machines/2279)|
+|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  snap-2-9-cli -->
 
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/prometheus-metrics/3018) ~ [UI](/t/prometheus-metrics/3019)|[CLI](/t/prometheus-metrics/3020) ~ [UI](/t/prometheus-metrics/3021)|[CLI](/t/prometheus-metrics/3022) ~ UI|
-|Packages|[CLI](/t/prometheus-metrics/3024) ~ [UI](/t/prometheus-metrics/3025)|[CLI](/t/prometheus-metrics/3026) ~ [UI](/t/prometheus-metrics/3027)|[CLI](/t/prometheus-metrics/3028) ~ [UI](/t/prometheus-metrics/3029)|
+|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ UI|
+|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
 
-MAAS services can provide [Prometheus](https://prometheus.io/) endpoints for collecting performance metrics.  These include five endpoints of particular interest to MAAS users:
+There are two ways to add a machine to MAAS:
 
-1.   TFTP server file transfer latency
-2.   HTTP requests latency
-3.   Websocket requests latency
-4.   RPC calls (between MAAS services) latency
-5.   Per request DB queries counts
+1. If you place the machine on a connected network, and the machine is configured to netboot, MAAS will automatically enlist it.
+2. If you add a machine manually, MAAS will automatically commission it.
 
-All available metrics are prefixed with `maas_`, to make it easier to look them up in Prometheus and Grafana UIs.
+This article will explain more about both methods.
 
-#### Three questions you may have:
+#### Four or five questions you may have:
 
-1. [How do I enable Prometheus endpoints?](#heading--enabling-prometheus-endpoints)
-2. [How do I configure Prometheus endpoints?](#heading--configuring-prometheus)
-3. [How can I deploy Prometheus and Grafana?](#heading--deploying-prometheus-and-grafana)
+<!-- deb-2-7-cli
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2748)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2292)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+ deb-2-7-cli -->
 
-<a href="#heading--enabling-prometheus-endpoints"><h2 id="heading--enabling-prometheus-endpoints">Enabling Prometheus endpoints</h2></a>
+<!-- deb-2-7-ui
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2749)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2293)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+ deb-2-7-ui -->
 
-Whenever you install the `python3-prometheus-client` library, Prometheus endpoints are exposed over HTTP by the `rackd` and `regiond` processes under the default `/metrics` path.
+<!-- deb-2-8-cli
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2750)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2294)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2751)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2295)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2752)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2296)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2753)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2297)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2742)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2286)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2743)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2287)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2744)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2288)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2745)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2289)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2746)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2290)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+ snap-2-9-cli -->
+
+1. [How does enlistment work?](#heading--enlistment)
+2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2747)
+3. [How do I add virtual machines?](/t/adding-a-vm-host/2291)
+4. [How do I add a machine manually?](#heading--add-a-node-manually)
+5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+
+MAAS typically adds a machine via a combination of DHCP, TFTP, and PXE. By now, you should have enabled MAAS to automatically add devices and machines to your environment. This unattended method of adding machines is called enlistment.
 
 [note]
-Currently, prometheus metrics are shared when rack and region controllers are running on the same machine, even though each service provides its own port.  You can safely only query one of the two ports if you're running both controllers.
+Configuring a computer to boot over PXE is done via its BIOS, often referred to as "netboot" or "network boot".
 [/note]
 
-For a snap-based MAAS installation, the libraries already included in the snap so that metrics will be available out of the box.
+Regardless of how MAAS adds a machine, there are no special requirements for the underlying machine. In particular, there is no need to install an operating system on it.
 
-<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
-For a Debian-based MAAS installation, install the library and restart MAAS services as follows:
+Once MAAS is working to the point of adding machines, you'll probably want to understand statuses and actions. See [Node statuses](/t/concepts-and-terms/785#heading--node-statuses) and [Machine actions](/t/concepts-and-terms/785#heading--machine-actions) respectively.
 
-    sudo apt install python3-prometheus-client
-    sudo systemctl restart maas-rackd
-    sudo systemctl restart maas-regiond
+<a href="#heading--enlistment"><h2 id="heading--enlistment">How enlistment works</h2></a>
 
-MAAS also provides optional stats about resources registered with the MAAS server itself.  These include four broad categories of information:
+When MAAS enlists a machine, it first contacts the DHCP server, so that the machine can be assigned an IP address.  An IP address is necessary to download a kernel and initrd via TFTP, since these functions can't accept domain names.  Once the machine has a bootable kernel, MAAS boots it:
 
-1.   The number of nodes by type, arch, ...
-2.   Number of networks, spaces, fabrics, VLANs and subnets
-3.   Total counts for machines CPU cores, memory and storage
-4.   Counters for VM host resources
+<a href="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg"></a> 
 
-After installing the `python3-prometheus-client` library as describe above, run the following to enable stats:
+Next, initrd mounts a Squashfs image, ephemerally via HTTP, so that cloud-init can execute:
 
-    maas $PROFILE maas set-config name=prometheus_enabled value=true
-deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
+<a href="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg"></a> 
 
-<a href="#heading--configuring-prometheus"><h2 id="heading--configuring-prometheus">Configuring Prometheus</h2></a>
+Finally, cloud-init runs enlistment and setup scripts:
 
-Once the `/metrics` endpoint is available in MAAS services, Prometheus can be configured to scrape metric values from these. You can configure this by adding a stanza like the following to the [prometheus configuration^](https://prometheus.io/docs/prometheus/latest/configuration/configuration/):
+<a href="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg"></a> 
 
-``` yaml
-    - job_name: maas
-      static_configs:
-        - targets:
-          - <maas-host1-IP>:5239  # for regiond
-          - <maas-host1-IP>:5249  # for rackd
-          - <maas-host2-IP>:5239  # regiond-only
-          - <maas-host3-IP>:5249  # rackd-only
+<!-- deb-2-7-cli
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2928).
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2929).
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2930).
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2931).
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2932).
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2933).
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2922).
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2923).
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2924).
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2925).
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2926).
+ snap-2-9-cli -->
+
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2927).
+
+After the enlistment process, MAAS places the machine in the 'Ready' state.  'Ready' is a holding state for machines that are enlisted (or commissioned), waiting to be deployed when needed.
+
+<!-- deb-2-7-cli
+Typically, the next step will be to [commission the machine](/t/commission-machines/2472). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+Typically, the next step will be to [commission the machine](/t/commission-machines/2473). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+Typically, the next step will be to [commission the machine](/t/commission-machines/2474). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+Typically, the next step will be to [commission the machine](/t/commission-machines/2475). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+Typically, the next step will be to [commission the machine](/t/commission-machines/2476). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+Typically, the next step will be to [commission the machine](/t/commission-machines/2477). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+Typically, the next step will be to [commission the machine](/t/commission-machines/2466). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+Typically, the next step will be to [commission the machine](/t/commission-machines/2467). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+Typically, the next step will be to [commission the machine](/t/commission-machines/2468). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+Typically, the next step will be to [commission the machine](/t/commission-machines/2469). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+Typically, the next step will be to [commission the machine](/t/commission-machines/2470). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ snap-2-9-cli -->
+
+Typically, the next step will be to [commission the machine](/t/commission-machines/2471). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+
+[note]
+MAAS runs built-in commissioning scripts during the enlistment phase. When you commission a machine, any customised commissioning scripts you add will have access to data collected during enlistment. Follow the link above for more information about commissioning and commission scripts.
+[/note]
+
+<a href="#heading--add-a-node-manually"><h2 id="heading--add-a-node-manually">Add a machine manually</h2></a>
+
+Enlistment can be done manually if the hardware specifications of the underlying machine are known.
+
+<!-- deb-2-7-ui snap-2-7-ui
+On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
+
+Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI machine:
+
+<a href="https://assets.ubuntu.com/v1/20aa36b2-nodes-add__2.5_add-node-manually.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/20aa36b2-nodes-add__2.5_add-node-manually.png"></a>
+
+The fields on the "Add machine" screen include the following seven items:
+
+1. **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
+
+2. **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
+
+3. **Architecture**: This field refers to the architecture of the machine being added.
+
+4. **Minimum Kernel**: This field supplies a drop-down of possible kernels available for deployment on this machine.
+
+5. **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
+
+6. **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
+
+7. **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
+deb-2-7-ui snap-2-7-ui -->
+
+<!-- snap-2-7-ui 
+type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3007) for details on the available power types and the relevant parameters for each type.
+snap-2-7-ui -->
+
+<!-- deb-2-7-ui 
+type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3103) for details on the available power types and the relevant parameters for each type.
+deb-2-7-ui -->
+
+On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
+
+Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI machine:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg"></a>
+
+The fields on the "Add machine" screen include the following items:
+
+* **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
+
+* **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
+
+* **Architecture**: This field refers to the architecture of the machine being added.
+
+* **Minimum Kernel**: This field supplies a drop-down of possible kernels available for deployment on this machine.
+
+* **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
+
+* **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
+
+* **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
+
+<!-- deb-2-8-ui
+* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3015) for details on the available power types and the relevant parameters for each type.
+ deb-2-8-ui -->
+
+<!-- deb-2-9-ui
+* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3017) for details on the available power types and the relevant parameters for each type.
+ deb-2-9-ui -->
+
+<!-- snap-2-8-ui
+* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3007) for details on the available power types and the relevant parameters for each type.
+ snap-2-8-ui -->
+
+* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3009) for details on the available power types and the relevant parameters for each type.
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+At the command line, enter the following information:
+
+```
+stormrider@wintermute:~$ maas admin machines create \
+> architecture=$ARCH \
+> max_addresses=$MAC_ADDRESS \
+> power_type=$POWER_TYPE \
+> power_parameters_power_id=$POWER_ID \
+> power_parameters_power_address=$POWER_ADDRESS \
+> power_parameters_power_pass=$POWER_PASSWORD
 ```
 
-If the MAAS installation includes multiple nodes, the `targets` entries must be adjusted accordingly, to match services deployed on each node.
+When you enter the command (substituting the `$...` parameters for your own particulars), the screen will pause for a moment, and then return a stream of JSON relating to the added machine.
 
-If  you have enabled MAAS stats,  you must add an additional Prometheus job to the config:
+Here's an example with a local laptop MAAS install, using KVMs as virtual machines:
 
-``` yaml
-    - job_name: maas
-      metrics_path: /MAAS/metrics
-      static_configs:
-        - targets:
-          - <maas-host-IP>:5240
+```
+stormrider@wintermute:~$ maas admin machines create \
+> architecture=amd64 \
+> max_addresses=52:54:00:6f:b4:af \
+> power_type=virsh \
+> power_parameters_power_id=50f6cca2-5d89-43b9-941c-90c9fcd7c156 \
+> power_parameters_power_address=qemu+ssh://stormrider@192.168.123.1/system \
+> power_parameters_power_pass=xxxxxxx
 ```
 
-In case of a multi-host deploy, adding a single IP for any of the MAAS hosts running `regiond` will suffice.
+There's also a CLI recipe to [make machines in a script](/t/the-cli-cookbook/2218#heading--make-machines) in the [CLI cookbook](/t/the-cli-cookbook/2218).
 
-<a href="#heading--deploying-prometheus-and-grafana"><h2 id="heading--deploying-prometheus-and-grafana">Deploying Prometheus and Grafana</h2></a>
+The variable fields in the `machines create` command (the `$...` items) are as follows, in this example: 
 
-[Grafana^](https://grafana.com/) and Prometheus can be easily deployed using [Juju^](https://jujucharms.com/).
+```
+> architecture=$ARCH \
+> mac_addresses=$MAC_ADDRESS \
+> power_type=$POWER_TYPE \
+> power_parameters_power_id=$POWER_ID \
+> power_parameters_power_address=$POWER_ADDRESS \
+> power_parameters_power_pass=$POWER_PASSWORD
+```
 
-The [MAAS performance repo^](https://git.launchpad.net/~maas-committers/maas/+git/maas-performance) repository provides a sample `deploy-stack` script that will deploy and configure the stack on LXD containers.
+* `$ARCH`: This field refers to the architecture of the machine being added, `amd64` in the local laptop example.
 
-First, you must install juju via:
+* `$MAC_ADDRESS`: This is the MAC address of the boot-enabled NIC for the machine being added.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-    sudo snap install --classic juju
+<!-- deb-2-7-cli
+* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3012) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+ deb-2-7-cli -->
 
-Then you can run the script from the repo:
+<!-- deb-2-8-cli
+* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3014) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+ deb-2-8-cli -->
 
-    grafana/deploy-stack <MAAS-IP>
+<!-- deb-2-9-cli
+* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3016) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+ deb-2-9-cli -->
 
-To follow the progress of the deployment, run the following:
+<!-- snap-2-7-cli
+* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3006) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+ snap-2-7-cli -->
 
-    watch -c juju status --color
+<!-- snap-2-8-cli
+* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3008) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+ snap-2-8-cli -->
 
-Once you deploy everything, the Grafana UI is accessible on port `3000` with the credentials `admin`/`grafana`. The Prometheus UI will be available on port `9090`.
+<!-- snap-2-9-cli
+* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3010) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+ snap-2-9-cli -->
 
-The repository also provides some sample dashboard covering the most common use cases for graphs. These are available under `grafana/dashboards`.  You can import them from the Grafana UI or API.
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+* `$POWER_ID`: This is generally the UUID of the machine being added.
 
+* `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types) in the API reference for details on the available power types and the relevant parameters for each type.
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+Normally, when you add a machine manually, MAAS will immediately attempt to commission the machine. Note that you will need to configure the underlying machine to boot over the network, or commissioning will fail. MAAS cannot handle this configuration for you.  While the correct method for configuring network boot depends heavily on your server, there are two common elements:
+
+1. The network card on your server must be able to support PXE, i.e., your NIC -- whether independent or integrated on a motherboard -- must have a boot PROM that supports network booting.  You'll need to consult the documentation for the machine in question to determine this.
+
+2. You usually have to interrupt the boot process and enter the BIOS/UEFI menu to configure the network card's PXE stack.  Again, you may need to consult your machine's documentation to pin down this step.
+
+Additional steps will vary widely by machine type and architecture.
+
+<a href="#heading--bmc-enlistment"><h3 id="heading--bmc-enlistment">BMC enlistment</h3></a>
+
+[note status="2.4"]
+Note that in MAAS versions before 2.5, you are required to provide the MAC address of the PXE interface when adding a new machine manually.
+[/note]
+
+##### IPMI machines
+
+For IPMI machines, you only need to provide IPMI credentials. MAAS automatically discovers the machine and runs enlistment configuration by matching the BMC address.
+
+##### Non-IPMI machines
+
+For non-IPMI machines, you must specify a non-PXE MAC address. MAAS automatically discovers the machine and runs enlistment configuration by matching the non-PXE MAC address.
+
+<!-- deb-2-7-ui snap-2-7-ui
+<a href="#heading--add-nodes-via-a-chassis"><h2 id="heading--add-nodes-via-a-chassis">Add a machine via a chassis</h2></a>
+
+Use the chassis feature to add multiple machines at once. To do this, instead of selecting 'Machine' as above, choose 'Chassis' from the drop-down menu. In the following example, MAAS will add all available VMs from the given  virsh address:
+
+<a href="https://assets.ubuntu.com/v1/d5314a8a-nodes-add__2.4_add-node-chassis.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/d5314a8a-nodes-add__2.4_add-node-chassis.png"></a>
+
+The required fields will change based on the type of chassis you choose.
+
+[note]
+As with the manual method, the underlying machines will require netbooting.
+[/note]
+deb-2-7-ui snap-2-7-ui -->
+
+<a href="#heading--add-nodes-via-a-chassis"><h2 id="heading--add-nodes-via-a-chassis">Add a machine via a chassis</h2></a>
+
+Use the chassis feature to add multiple machines at once. To do this, instead of selecting 'Machine' as above, choose 'Chassis' from the drop-down menu. In the following example, MAAS will add all available VMs from the given  virsh address:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg"></a>
+
+The required fields will change based on the type of chassis you choose.
+
+[note]
+As with the manual method, the underlying machines will require netbooting.
+[/note]

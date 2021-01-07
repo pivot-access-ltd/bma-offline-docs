@@ -1,37 +1,85 @@
 <!-- deb-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
+|Packages|CLI ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
+|Packages|[CLI](/t/maas-requirements/2880) ~ UI|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
+|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|CLI ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
+|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ UI|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
+|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|CLI ~ [UI](/t/maas-requirements/2885)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
+|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
+|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-requirements/2874) ~ UI|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
+|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|CLI ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
+|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ UI|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
+|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|CLI ~ [UI](/t/maas-requirements/2879)|
+|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ UI|
+|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
  snap-2-9-ui -->
 
 The minimum requirements for the machines that run MAAS vary widely depending on local implementation and usage.  Below, you will find resource estimates based on MAAS components and operating system (Ubuntu Server). We consider both a test configuration (for proof of concept) and a production environment.
@@ -73,9 +121,9 @@ So, based on the above, the approximate requirements for this scenario are:
 4. A duplicate rack controller on a fourth host, also with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
 
 <!-- deb-2-7-cli
-<strong>NOTE:</strong> 
+[note]
 The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3012) for more details.
-
+[/note]
 
 Some examples of factors that influence hardware specifications include:
 
@@ -86,9 +134,9 @@ Some examples of factors that influence hardware specifications include:
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-<strong>NOTE:</strong> 
+[note]
 The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3013) for more details.
-
+[/note]
 
 Some examples of factors that influence hardware specifications include:
 
@@ -99,9 +147,9 @@ Some examples of factors that influence hardware specifications include:
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-<strong>NOTE:</strong> 
+[note]
 The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3014) for more details.
-
+[/note]
 
 Some examples of factors that influence hardware specifications include:
 
@@ -112,9 +160,9 @@ Some examples of factors that influence hardware specifications include:
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-<strong>NOTE:</strong> 
+[note]
 The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3015) for more details.
-
+[/note]
 
 Some examples of factors that influence hardware specifications include:
 
@@ -125,9 +173,9 @@ Some examples of factors that influence hardware specifications include:
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-<strong>NOTE:</strong> 
+[note]
 The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3016) for more details.
-
+[/note]
 
 Some examples of factors that influence hardware specifications include:
 
@@ -138,9 +186,9 @@ Some examples of factors that influence hardware specifications include:
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-<strong>NOTE:</strong> 
+[note]
 The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3017) for more details.
-
+[/note]
 
 Some examples of factors that influence hardware specifications include:
 
@@ -151,9 +199,9 @@ Some examples of factors that influence hardware specifications include:
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-<strong>NOTE:</strong> 
+[note]
 The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3006) for more details.
-
+[/note]
 
 Some examples of factors that influence hardware specifications include:
 
@@ -164,9 +212,9 @@ Some examples of factors that influence hardware specifications include:
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-<strong>NOTE:</strong> 
+[note]
 The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3007) for more details.
-
+[/note]
 
 Some examples of factors that influence hardware specifications include:
 
@@ -177,9 +225,9 @@ Some examples of factors that influence hardware specifications include:
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-<strong>NOTE:</strong> 
+[note]
 The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3008) for more details.
-
+[/note]
 
 Some examples of factors that influence hardware specifications include:
 
@@ -190,9 +238,9 @@ Some examples of factors that influence hardware specifications include:
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-<strong>NOTE:</strong> 
+[note]
 The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3009) for more details.
-
+[/note]
 
 Some examples of factors that influence hardware specifications include:
 
@@ -203,9 +251,9 @@ Some examples of factors that influence hardware specifications include:
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-<strong>NOTE:</strong> 
+[note]
 The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3010) for more details.
-
+[/note]
 
 Some examples of factors that influence hardware specifications include:
 
@@ -216,9 +264,9 @@ Some examples of factors that influence hardware specifications include:
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-<strong>NOTE:</strong> 
+[note]
 The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3011) for more details.
-
+[/note]
 
 Some examples of factors that influence hardware specifications include:
 

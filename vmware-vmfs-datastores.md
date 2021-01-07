@@ -295,6 +295,7 @@ A VMware VMFS datastore is created on one or more [block devices](/t/block-devic
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
+
 A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/2350) or [partitions](/t/partitions/2986)
  snap-2-9-cli -->
 

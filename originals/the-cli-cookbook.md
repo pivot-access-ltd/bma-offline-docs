@@ -148,11 +148,11 @@ maas admin vm-hosts read | jq -r '(["ID","VM-HOST","SYSID","CORES","USED","RAM",
 
 Note that most of these can be entered directly at the command line using copy/paste -- even the `#!/bin/bash` won't hurt, as it will be ignored by the shell.
 
-<strong>NOTE:</strong> 
+[note]
 Remember to:
 1. login to the MAAS CLI before using these commands.
 2. substitute your administrator profile for "admin" if you've assigned a different admin username.
-
+[/note]
 
 <details><summary>Also, be aware of how multiple lines are parsed by the shell:</summary>
 

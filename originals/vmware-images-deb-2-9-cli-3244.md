@@ -1,85 +1,35 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-images/3234) ~ [UI](/t/vmware-images/3235)|[CLI](/t/vmware-images/3236) ~ [UI](/t/vmware-images/3237)|[CLI](/t/vmware-images/3238) ~ [UI](/t/vmware-images/3239)|
-|Packages|CLI ~ [UI](/t/vmware-images/3241)|[CLI](/t/vmware-images/3242) ~ [UI](/t/vmware-images/3243)|[CLI](/t/vmware-images/3244) ~ [UI](/t/vmware-images/3245)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-images/3234) ~ [UI](/t/vmware-images/3235)|[CLI](/t/vmware-images/3236) ~ [UI](/t/vmware-images/3237)|[CLI](/t/vmware-images/3238) ~ [UI](/t/vmware-images/3239)|
-|Packages|[CLI](/t/vmware-images/3240) ~ UI|[CLI](/t/vmware-images/3242) ~ [UI](/t/vmware-images/3243)|[CLI](/t/vmware-images/3244) ~ [UI](/t/vmware-images/3245)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-images/3234) ~ [UI](/t/vmware-images/3235)|[CLI](/t/vmware-images/3236) ~ [UI](/t/vmware-images/3237)|[CLI](/t/vmware-images/3238) ~ [UI](/t/vmware-images/3239)|
-|Packages|[CLI](/t/vmware-images/3240) ~ [UI](/t/vmware-images/3241)|CLI ~ [UI](/t/vmware-images/3243)|[CLI](/t/vmware-images/3244) ~ [UI](/t/vmware-images/3245)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-images/3234) ~ [UI](/t/vmware-images/3235)|[CLI](/t/vmware-images/3236) ~ [UI](/t/vmware-images/3237)|[CLI](/t/vmware-images/3238) ~ [UI](/t/vmware-images/3239)|
-|Packages|[CLI](/t/vmware-images/3240) ~ [UI](/t/vmware-images/3241)|[CLI](/t/vmware-images/3242) ~ UI|[CLI](/t/vmware-images/3244) ~ [UI](/t/vmware-images/3245)|
  deb-2-8-ui -->
 
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-images/3234) ~ [UI](/t/vmware-images/3235)|[CLI](/t/vmware-images/3236) ~ [UI](/t/vmware-images/3237)|[CLI](/t/vmware-images/3238) ~ [UI](/t/vmware-images/3239)|
-|Packages|[CLI](/t/vmware-images/3240) ~ [UI](/t/vmware-images/3241)|[CLI](/t/vmware-images/3242) ~ [UI](/t/vmware-images/3243)|CLI ~ [UI](/t/vmware-images/3245)|
- deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-images/3234) ~ [UI](/t/vmware-images/3235)|[CLI](/t/vmware-images/3236) ~ [UI](/t/vmware-images/3237)|[CLI](/t/vmware-images/3238) ~ [UI](/t/vmware-images/3239)|
-|Packages|[CLI](/t/vmware-images/3240) ~ [UI](/t/vmware-images/3241)|[CLI](/t/vmware-images/3242) ~ [UI](/t/vmware-images/3243)|[CLI](/t/vmware-images/3244) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/vmware-images/3235)|[CLI](/t/vmware-images/3236) ~ [UI](/t/vmware-images/3237)|[CLI](/t/vmware-images/3238) ~ [UI](/t/vmware-images/3239)|
-|Packages|[CLI](/t/vmware-images/3240) ~ [UI](/t/vmware-images/3241)|[CLI](/t/vmware-images/3242) ~ [UI](/t/vmware-images/3243)|[CLI](/t/vmware-images/3244) ~ [UI](/t/vmware-images/3245)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-images/3234) ~ UI|[CLI](/t/vmware-images/3236) ~ [UI](/t/vmware-images/3237)|[CLI](/t/vmware-images/3238) ~ [UI](/t/vmware-images/3239)|
-|Packages|[CLI](/t/vmware-images/3240) ~ [UI](/t/vmware-images/3241)|[CLI](/t/vmware-images/3242) ~ [UI](/t/vmware-images/3243)|[CLI](/t/vmware-images/3244) ~ [UI](/t/vmware-images/3245)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-images/3234) ~ [UI](/t/vmware-images/3235)|CLI ~ [UI](/t/vmware-images/3237)|[CLI](/t/vmware-images/3238) ~ [UI](/t/vmware-images/3239)|
-|Packages|[CLI](/t/vmware-images/3240) ~ [UI](/t/vmware-images/3241)|[CLI](/t/vmware-images/3242) ~ [UI](/t/vmware-images/3243)|[CLI](/t/vmware-images/3244) ~ [UI](/t/vmware-images/3245)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-images/3234) ~ [UI](/t/vmware-images/3235)|[CLI](/t/vmware-images/3236) ~ UI|[CLI](/t/vmware-images/3238) ~ [UI](/t/vmware-images/3239)|
-|Packages|[CLI](/t/vmware-images/3240) ~ [UI](/t/vmware-images/3241)|[CLI](/t/vmware-images/3242) ~ [UI](/t/vmware-images/3243)|[CLI](/t/vmware-images/3244) ~ [UI](/t/vmware-images/3245)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-images/3234) ~ [UI](/t/vmware-images/3235)|[CLI](/t/vmware-images/3236) ~ [UI](/t/vmware-images/3237)|CLI ~ [UI](/t/vmware-images/3239)|
-|Packages|[CLI](/t/vmware-images/3240) ~ [UI](/t/vmware-images/3241)|[CLI](/t/vmware-images/3242) ~ [UI](/t/vmware-images/3243)|[CLI](/t/vmware-images/3244) ~ [UI](/t/vmware-images/3245)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vmware-images/3234) ~ [UI](/t/vmware-images/3235)|[CLI](/t/vmware-images/3236) ~ [UI](/t/vmware-images/3237)|[CLI](/t/vmware-images/3238) ~ UI|
-|Packages|[CLI](/t/vmware-images/3240) ~ [UI](/t/vmware-images/3241)|[CLI](/t/vmware-images/3242) ~ [UI](/t/vmware-images/3243)|[CLI](/t/vmware-images/3244) ~ [UI](/t/vmware-images/3245)|
  snap-2-9-ui -->
 
 MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directly deploy the VMware ESXi ISO; you must create a specialised image from an official VMWare ISO. Canonical created a [packer](https://www.packer.io/) template to automate the image creation process.

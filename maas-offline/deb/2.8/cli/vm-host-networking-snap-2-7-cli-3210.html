@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/vm-host-networking-snap-2-7-cli.html">
+	  &nbsp;UI-only&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  CLI-only
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-me-an-example-of-maas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-new-in-maas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-requirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-journey.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-communication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-controllers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-controllers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-availability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-machines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-machines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-testing.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-testing.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-and-hardware-testing-scripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-tags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-machine-setup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-boot-options.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-pools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-vmfs-datastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-kernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-and-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-image-mirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-images.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-management.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-ranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-services.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-discovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-addressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-tls-encryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-stp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-zones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-host-networking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-a-vm-host.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-host-storage-pools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-and-deleting-vms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-metrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-your-maas-installation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-accounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-search.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-and-terms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-and-terms.html#heading--network-tutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-cli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-kernel-management.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-image-management.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-interface-management.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-advanced-tasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-composable-hardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-help.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-tricks-and-traps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-docs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-new-in-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-guide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>VM host networking snap 2 7 CLI</h1><!-- deb-2-7-cli
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+ deb-2-7-ui -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- snap-2-7-ui
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+ snap-2-9-ui -->
+
+<p>In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself.  This section explains several ways of accomplishing this.</p>
+<h4>Five questions you may have:</h4>
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+1. [How do I set up a VM host bridge with the web UI?](#heading--maas-bridge-web-ui)
+2. [How do I set up a VM host bridge with netplan?](#heading--maas-bridge-netplan)
+3. [How do I set up a VM host bridge with libvirt?](#heading--maas-bridge-libvirt)
+4. [How do I set up SSH for use by libvirt?](#heading--set-up-ssh)
+5. [What else must I do to use LXD VM hosts?](#heading--lxd-setup)
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+
+<ol>
+<li><a href="#heading--maas-bridge-cli">How do I set up a VM host bridge with the MAAS CLI/API?</a></li>
+<li><a href="#heading--maas-bridge-netplan">How do I set up a VM host bridge with netplan?</a></li>
+<li><a href="#heading--maas-bridge-libvirt">How do I set up a VM host bridge with libvirt?</a></li>
+<li><a href="#heading--set-up-ssh">How do I set up SSH for use by libvirt?</a></li>
+<li><a href="#heading--lxd-setup">What else must I do to use LXD VM hosts?</a></li>
+</ol>
+<p>To enable VM host networking features, MAAS must match the VM host IP address of a potential VM host with a known device (a machine or controller). For example, if a machine not known to MAAS is set up as a VM host, enhanced interface selection features will not be available.</p>
+<p><strong>NOTE:</strong> 
+It&rsquo;s essential to enforce usage of IP addresses to avoid domain name conflicts, should different controllers resolve the same domain name with different IP addresses. You should also avoid using 127.0.0.1 when running multiple controllers, as it would confuse MAAS.</p>
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<a href="#heading--maas-bridge-web-ui"><h2 id="heading--maas-bridge-web-ui">Set up VM host bridge with MAAS UI</h2></a>
+
+You can use the MAAS UI to configure a bridge to connect a VM host to MAAS:
+
+Select the machine you want to use as a VM host, switch to the "Network" tab. Select the network where you want to create the bridge and click "Create bridge:"
+
+<a href="images/29624d737106c5bad777aee9d2c8cad9c3de7151.jpeg" target = "_blank"><img src="images/29624d737106c5bad777aee9d2c8cad9c3de7151.jpeg"></a></a> 
+
+Configure the bridge on a subnet MAAS controls.  You may use any IP mode for the bridge:
+
+<a href="images/dd8567ff1cd76606c5ce1751e606fcfab2bc7ce2.jpeg" target = "_blank"><img src="images/dd8567ff1cd76606c5ce1751e606fcfab2bc7ce2.jpeg"></a></a> 
+
+When you're done, it should look something like this:
+
+<a href="images/e392d638f0acecb9d54c81bbca4ee17cbcd05445.jpeg" target = "_blank"><img src="images/e392d638f0acecb9d54c81bbca4ee17cbcd05445.jpeg"></a></a> 
+
+Then you can deploy Ubuntu.
+
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+
+<p><a href="#heading--maas-bridge-cli"><h2 id="heading--maas-bridge-cli">Use the MAAS API to configure a bridge</h2></a></p>
+<p>You can also use the MAAS CLI/API to configure a VM host bridge, with the following procedure:</p>
+<ol>
+<li>
+<p>Select the interface you wish to configure the bridge on. This example uses the boot interface, since the boot interface must be connected to a MAAS controlled network &ndash; but any interface is allowed:</p>
+<pre><code>INTERFACE_ID=$(maas $PROFILE machine read $SYSTEM_ID | jq .boot_interface.id)
+</code></pre>
+</li>
+<li>
+<p>Create the bridge:</p>
+<pre><code> BRIDGE_ID=$(maas $PROFILE interfaces create-bridge $SYSTEM_ID name=br0 parent=$INTERFACE_ID | jq .id)
+</code></pre>
+</li>
+<li>
+<p>Select the subnet where you want the bridge (this should be a MAAS controlled subnet):</p>
+<pre><code>SUBNET_ID=$(maas $PROFILE subnets read | jq -r '.[] | select(.cidr == "10.0.0.0/24" and .managed == true).id')
+</code></pre>
+</li>
+<li>
+<p>Connect the bridge to the subnet:</p>
+<pre><code>  maas $PROFILE interface link-subnet $SYSTEM_ID $BRIDGE_ID subnet=$SUBNET_ID mode="STATIC" ip_address="10.0.0.101"
+</code></pre>
+</li>
+</ol>
+<p><a href="#heading--maas-bridge-netplan"><h2 id="heading--maas-bridge-netplan">Use netplan to configure a bridge</h2></a></p>
+<p>You can also use netplan to configure a VM host bridge:</p>
+<p>Open your netplan configuration file.  This should be in <code>/etc/netplan</code>.  It could be called <code>50-cloud-init.yaml</code>, <code>netplan.yaml</code>, or something else.  Modify the file to add a bridge, using the example below to guide you:</p>
+<pre><code>network:
+    bridges:
+        br0:
+            addresses:
+            - 10.0.0.101/24
+            gateway4: 10.0.0.1
+            interfaces:
+            - enp1s0
+            macaddress: 52:54:00:39:9d:f9
+            mtu: 1500
+            nameservers:
+                addresses:
+                - 10.0.0.2
+                search:
+                - maas
+            parameters:
+                forward-delay: 15
+                stp: false
+    ethernets:
+        enp1s0:
+            match:
+                macaddress: 52:54:00:39:9d:f9
+            mtu: 1500
+            set-name: enp1s0
+        enp2s0:
+            match:
+                macaddress: 52:54:00:df:87:ac
+            mtu: 1500
+            set-name: enp2s0
+        enp3s0:
+            match:
+                macaddress: 52:54:00:a7:ac:46
+            mtu: 1500
+            set-name: enp3s0
+    version: 2
+</code></pre>
+
+<p>Apply the new configuration with <code>netplan apply</code>.</p>
+<p><a href="#heading--maas-bridge-libvirt"><h2 id="heading--maas-bridge-libvirt">Use libvirt to configure a bridge</h2></a></p>
+<p>It is also possible to use <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a> to configure a virtual bridge.  This method will also work for LXD VM hosts running on Ubuntu.  Be aware that other methods may be required if you are configuring LXD on an OS other than Ubuntu.</p>
+<p>By default, libvirt creates a virtual bridge, <code>virbr0</code>, through which VMs communicate with each other and the Internet. DHCP, supplied by libvirt, automatically assigns an IP address to each VM.  However, to enable network booting in MAAS, you’ll need to provide DHCP in MAAS and either:</p>
+<ol>
+<li>Disable DHCP on libvirt’s <code>default</code> network, or</li>
+<li>Create a new libvirt network <code>maas</code> with DHCP disabled.</li>
+</ol>
+<p>You can set up such a <code>maas</code> network like this:</p>
+<pre><code class="bash">cat &lt;&lt; EOF &gt; maas.xml
+&lt;network&gt;
+ &lt;name&gt;maas&lt;/name&gt;
+ &lt;forward mode='nat'&gt;
+   &lt;nat&gt;
+     &lt;port start='1024' end='65535'/&gt;
+   &lt;/nat&gt;
+ &lt;/forward&gt;
+ &lt;dns enable=&quot;no&quot; /&gt;
+ &lt;bridge name='virbr1' stp='off' delay='0'/&gt;
+ &lt;domain name='testnet'/&gt;
+ &lt;ip address='172.16.99.1' netmask='255.255.255.0'&gt;
+ &lt;/ip&gt;
+&lt;/network&gt;
+EOF
+virsh net-define maas.xml
+</code></pre>
+
+<p>Note that this network also has NAT port forwarding enabled to allow VMs to communicate with the Internet at large. Port forwarding is very useful in test environments.</p>
+<p><a href="#heading--lxd-setup"><h2 id="heading--lxd-setup">Make LXD available for VM hosting (Beta)</h2></a></p>
+<p>Assuming that you want to use LXD VM hosts &ndash;currently a Beta feature &ndash; then once a bridge is set up, you need to install the correct version of LXD. Prior to the release of Ubuntu 20.04 LXD was installed using Debian packages. The Debian packaged version of LXD is too old to use with MAAS. If this is the case, you’ll need to remove the LXD Debian packages and install the Snap version.  Note that you cannot install both Debian and snap versions, as this creates a conflict.</p>
+<p><a href="#heading--reinstalling-lxd"><h3 id="heading--reinstalling-lxd">Removing older versions of LXD</h3></a></p>
+<p>If you&rsquo;re on a version of Ubuntu older than 20.04, or you have the Debian version of LXD, start the uninstall process with the following command:</p>
+<pre><code class="bash">sudo apt-get purge -y *lxd* *lxc*
+</code></pre>
+
+<p>This command should result in output that looks something like this:</p>
+<pre><code class="bash">Reading package lists... Done
+Building dependency tree      
+Reading state information... Done
+Note, selecting 'lxde-core' for glob '*lxd*'
+Note, selecting 'python-pylxd-doc' for glob '*lxd*'
+Note, selecting 'python3-pylxd' for glob '*lxd*'
+Note, selecting 'python-nova-lxd' for glob '*lxd*'
+Note, selecting 'lxde-common' for glob '*lxd*'
+Note, selecting 'lxde-icon-theme' for glob '*lxd*'
+Note, selecting 'lxde-settings-daemon' for glob '*lxd*'
+Note, selecting 'lxde' for glob '*lxd*'
+Note, selecting 'lxdm' for glob '*lxd*'
+Note, selecting 'lxd' for glob '*lxd*'
+Note, selecting 'lxd-tools' for glob '*lxd*'
+Note, selecting 'python-pylxd' for glob '*lxd*'
+Note, selecting 'lxdm-dbg' for glob '*lxd*'
+Note, selecting 'lxde-session' for glob '*lxd*'
+Note, selecting 'nova-compute-lxd' for glob '*lxd*'
+Note, selecting 'openbox-lxde-session' for glob '*lxd*'
+Note, selecting 'python-nova.lxd' for glob '*lxd*'
+Note, selecting 'lxd-client' for glob '*lxd*'
+Note, selecting 'openbox-lxde-session' instead of 'lxde-session'
+Note, selecting 'lxctl' for glob '*lxc*'
+Note, selecting 'lxc-common' for glob '*lxc*'
+Note, selecting 'python3-lxc' for glob '*lxc*'
+Note, selecting 'libclxclient-dev' for glob '*lxc*'
+Note, selecting 'lxc-templates' for glob '*lxc*'
+Note, selecting 'lxc1' for glob '*lxc*'
+Note, selecting 'lxc-dev' for glob '*lxc*'
+Note, selecting 'lxc' for glob '*lxc*'
+Note, selecting 'liblxc1' for glob '*lxc*'
+Note, selecting 'lxc-utils' for glob '*lxc*'
+Note, selecting 'vagrant-lxc' for glob '*lxc*'
+Note, selecting 'libclxclient3' for glob '*lxc*'
+Note, selecting 'liblxc-dev' for glob '*lxc*'
+Note, selecting 'nova-compute-lxc' for glob '*lxc*'
+Note, selecting 'python-lxc' for glob '*lxc*'
+Note, selecting 'liblxc-common' for glob '*lxc*'
+Note, selecting 'golang-gopkg-lxc-go-lxc.v2-dev' for glob '*lxc*'
+Note, selecting 'lxcfs' for glob '*lxc*'
+Note, selecting 'liblxc-common' instead of 'lxc-common'
+Package 'golang-gopkg-lxc-go-lxc.v2-dev' is not installed, so not removed
+Package 'libclxclient-dev' is not installed, so not removed
+Package 'libclxclient3' is not installed, so not removed
+Package 'lxc-templates' is not installed, so not removed
+Package 'lxctl' is not installed, so not removed
+Package 'lxde' is not installed, so not removed
+Package 'lxde-common' is not installed, so not removed
+Package 'lxde-core' is not installed, so not removed
+Package 'lxde-icon-theme' is not installed, so not removed
+Package 'lxde-settings-daemon' is not installed, so not removed
+Package 'lxdm' is not installed, so not removed
+Package 'lxdm-dbg' is not installed, so not removed
+Package 'openbox-lxde-session' is not installed, so not removed
+Package 'python-lxc' is not installed, so not removed
+Package 'python3-lxc' is not installed, so not removed
+Package 'vagrant-lxc' is not installed, so not removed
+Package 'liblxc-dev' is not installed, so not removed
+Package 'lxc-dev' is not installed, so not removed
+Package 'nova-compute-lxc' is not installed, so not removed
+Package 'nova-compute-lxd' is not installed, so not removed
+Package 'python-nova-lxd' is not installed, so not removed
+Package 'python-pylxd' is not installed, so not removed
+Package 'python-pylxd-doc' is not installed, so not removed
+Package 'lxc' is not installed, so not removed
+Package 'lxc-utils' is not installed, so not removed
+Package 'lxc1' is not installed, so not removed
+Package 'lxd-tools' is not installed, so not removed
+Package 'python-nova.lxd' is not installed, so not removed
+Package 'python3-pylxd' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  dns-root-data dnsmasq-base ebtables libuv1 uidmap xdelta3
+Use 'sudo apt autoremove' to remove them.
+The following packages will be REMOVED:
+  liblxc-common* liblxc1* lxcfs* lxd* lxd-client*
+0 upgraded, 0 newly installed, 5 to remove and 21 not upgraded.
+pAfter this operation, 34.1 MB disk space will be freed.
+(Reading database ... 67032 files and directories currently installed.)
+Removing lxd (3.0.3-0ubuntu1~18.04.1) ...
+Removing lxd dnsmasq configuration
+Removing lxcfs (3.0.3-0ubuntu1~18.04.2) ...
+Removing lxd-client (3.0.3-0ubuntu1~18.04.1) ...
+Removing liblxc-common (3.0.3-0ubuntu1~18.04.1) ...
+Removing liblxc1 (3.0.3-0ubuntu1~18.04.1) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+(Reading database ... 66786 files and directories currently installed.)
+Purging configuration files for liblxc-common (3.0.3-0ubuntu1~18.04.1) ...
+Purging configuration files for lxd (3.0.3-0ubuntu1~18.04.1) ...
+Purging configuration files for lxcfs (3.0.3-0ubuntu1~18.04.2) ...
+Processing triggers for systemd (237-3ubuntu10.40) ...
+Processing triggers for ureadahead (0.100.0-21) ...
+</code></pre>
+
+<p>You should also autoremove packages no longer needed by LXD:</p>
+<pre><code class="bash">$ sudo apt-get autoremove -y
+</code></pre>
+
+<p>Output from this command should be similar to:</p>
+<pre><code class="bash">Reading package lists... Done
+Building dependency tree      
+Reading state information... Done
+The following packages will be REMOVED:
+  dns-root-data dnsmasq-base ebtables libuv1 uidmap xdelta3
+0 upgraded, 0 newly installed, 6 to remove and 21 not upgraded.
+After this operation, 1860 kB disk space will be freed.
+(Reading database ... 66769 files and directories currently installed.)
+Removing dns-root-data (2018013001) ...
+Removing dnsmasq-base (2.79-1) ...
+Removing ebtables (2.0.10.4-3.5ubuntu2.18.04.3) ...
+Removing libuv1:amd64 (1.18.0-3) ...
+Removing uidmap (1:4.5-1ubuntu2) ...
+Removing xdelta3 (3.0.11-dfsg-1ubuntu1) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+</code></pre>
+
+<p>Now install LXD from the Snap:</p>
+<pre><code class="bash">$ sudo snap install lxd
+2020-05-20T22:02:57Z INFO Waiting for restart...
+lxd 4.1 from Canonical✓ installed
+</code></pre>
+
+<p><a href="#heading--newer-lxd"><h3 id="heading--newer-lxd">Refreshing LXD on 20.04</h3></a></p>
+<p>If you are on 20.04 or above LXD should be installed by default, but it&rsquo;s a good idea to make sure it&rsquo;s up to date:</p>
+<pre><code class="bash">$ sudo snap refresh
+All snaps up to date.
+</code></pre>
+
+<p><a href="#heading--lxd-init"><h3 id="heading--lxd-init">Initialise LXD prior to use</h3></a></p>
+<p>Once LXD is installed it needs to be configured with <code>lxd init</code> before first use:</p>
+<pre><code class="bash">$ sudo lxd init
+</code></pre>
+
+<p>Your interactive output should look something like the following. Note a few points important points about these questions:</p>
+<ol>
+<li>
+<p><code>Would you like to use LXD clustering? (yes/no) [default=no]: no</code> - MAAS does not support LXD clusters in this Beta version.</p>
+</li>
+<li>
+<p><code>Name of the storage back-end to use (btrfs, dir, lvm, zfs, ceph) [default=zfs]: dir</code> - Beta testing has primarily been with dir; other options should work, but less testing has been done, so use at your own risk.</p>
+</li>
+<li>
+<p><code>Would you like to connect to a MAAS server? (yes/no) [default=no]: no</code> - When LXD is connected to MAAS containers or virtual machines created by LXD will be automatically added to MAAS as devices.  This feature should work, but has limited testing in this Beta version.</p>
+</li>
+<li>
+<p><code>Would you like to configure LXD to use an existing bridge or host interface? (yes/no) [default=no]: yes</code> - The bridge LXD creates is isolated and not managed by MAAS. If this bridge is used, you would be able to add the LXD VM host and compose virtual machines, but commissioning, deploying, and any other MAAS action which uses the network will fail &ndash; so <code>yes</code> is the correct answer here.</p>
+</li>
+<li>
+<p><code>Name of the existing bridge or host interface: br0</code> - br0 is the name of the bridge the user configured (see sections above) which is connected to a MAAS-managed network.</p>
+</li>
+<li>
+<p><code>Trust password for new clients:</code> - This is the password the user will enter when connecting with MAAS.</p>
+</li>
+</ol>
+<pre><code class="bash">Would you like to use LXD clustering? (yes/no) [default=no]: no
+Do you want to configure a new storage pool? (yes/no) [default=yes]: yes
+Name of the new storage pool [default=default]:  
+Name of the storage back-end to use (btrfs, dir, lvm, zfs, ceph) [default=zfs]: dir
+Would you like to connect to a MAAS server? (yes/no) [default=no]: no
+Would you like to create a new local network bridge? (yes/no) [default=yes]: no
+Would you like to configure LXD to use an existing bridge or host interface? (yes/no) [default=no]: yes
+Name of the existing bridge or host interface: br0
+Would you like LXD to be available over the network? (yes/no) [default=no]: yes
+pAddress to bind LXD to (not including port) [default=all]:
+Port to bind LXD to [default=8443]:
+Trust password for new clients:
+Again:
+Would you like stale cached images to be updated automatically? (yes/no) [default=yes]
+Would you like a YAML &quot;lxd init&quot; preseed to be printed? (yes/no) [default=no]:
+</code></pre>
+
+<p>The host is now ready to be added to MAAS as an LXD VM host. Upon adding the VM host, its own commissioning information will be refreshed.</p>
+<p>When composing a virtual machine with LXD, MAAS uses either the &lsquo;maas&rsquo; LXD profile, or (if that doesn&rsquo;t exist) the &lsquo;default&rsquo; LXD profile. The profile is used to determine which bridge to use. Users may also add additional LXD options to the profile which are not yet supported in MAAS.</p>
+<p><a href="#heading--set-up-ssh"><h2 id="heading--set-up-ssh">Set up SSH</h2></a></p>
+<p>For MAAS to successfully communicate with libvirt on your VM host machine &ndash; whether you&rsquo;re running from snap or package, or running rack controllers in LXD containers or on localhost &ndash; this example command must succeed from every rack controller:</p>
+<pre><code class="bash">virsh -c qemu+ssh://$USER@$VM_HOST_IP/system list --all
+</code></pre>
+
+<p>Here, <code>$USER</code> is a user on your VM host who is a member of the <code>libvirtd</code> Unix group on the VM host, and <code>$VM_HOST_IP</code> is the IP of your VM host.  <strong>Note</strong> that insufficient permissions for <code>$USER</code> may cause the <code>virsh</code> command to fail with an error such as <code>failed to connect to the hypervisor</code>. Check the <code>$USER</code> group membership to make sure <code>$USER</code> is a member of the <code>libvirtd</code> group.</p>
+<p><a href="#heading--libvirt-ssh"><h3 id="heading--libvirt-ssh">Set up SSH (libvirt only)</h3></a></p>
+<p>The <code>maas</code> user on your rack controllers will issue all libvirt commands. Therefore, you&rsquo;ll need to set up SSH public keys on every rack controller for user <code>maas</code>.  First create SSH keys on all rack controllers:</p>
+<pre><code class="bash">$ sudo -i
+root@maas:~$ mkdir -p /var/snap/maas/current/root/.ssh
+root@maas:~$ cd /var/snap/maas/current/root/.ssh
+root@maas:~$ ssh-keygen -f id_rsa
+</code></pre>
+
+<p>Next, add the contents of <code>~maas/.ssh/id_rsa.pub</code> to the VM host user&rsquo;s <code>~$USER/.ssh/authorized_keys</code>. To accomplish this, log into your VM host node, via SSH, from a host for which MAAS has a matching public SSH key.</p>
+<p><a href="#heading--set-up-ssah-lv"><h3 id="heading--set-up-ssah-lv">Set up SSH (libvirt only)</h3></a></p>
+<p>If you installed MAAS via snap, then create the needed SSH keys this way:</p>
+<pre><code class="bash">sudo mkdir -p /var/snap/maas/current/root/.ssh
+cd /var/snap/maas/current/root/.ssh
+sudo ssh-keygen -f id_rsa
+</code></pre>
+
+<p>Finally, you&rsquo;ll need to add <code>id_rsa.pub</code> to the <code>authorized_keys</code> file in <code>/home/&lt;vm-host-user-homedir-name&gt;/.ssh/</code>,  where <code>&lt;vm-host-user-homedir-name&gt;</code> is the name of your VM host user.</p>
+    </div>
+  </body>
+</html>

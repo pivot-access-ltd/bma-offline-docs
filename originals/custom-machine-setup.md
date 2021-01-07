@@ -1,37 +1,85 @@
 <!-- deb-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|CLI ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ UI|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|CLI ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ UI|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|CLI ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ UI|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|CLI ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ UI|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|CLI ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ UI|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-9-ui -->
 
 <!-- deb-2-7-cli
@@ -116,9 +164,9 @@ Additionally, the template for each phase typically consists of two files. The f
 
 The `enlist` template, for example, contains only minimal variables, whereas `enlist_userdata` includes both user variables and initialisation logic.
 
-<strong>NOTE:</strong> 
+[note]
 Tempita’s inheritance mechanism is the reverse of what you might expect. Inherited files, such as `enlist_userdata`, become the new template which can then reference variables from the higher-level file, such as `enlist`.
-
+[/note]
 
 <a href="#heading--template-naming"><h3 id="heading--template-naming">Template naming</h3></a>
 
@@ -150,9 +198,9 @@ For example, to create a generic configuration template for Ubuntu 16.04 Xenial 
 
 To create the equivalent template for curtin_userdata, the file would be called `curtin_userdata_ubuntu_amd64_generic_xenial_node`.
 
-<strong>NOTE:</strong> 
+[note]
 Any file targeting a specific machine will replace the values and configuration held within any generic files. If those values are needed, you will need to copy these generic template values into your new file.
-
+[/note]
 
 <a href="#heading--configuration"><h3 id="heading--configuration">Configuration</h3></a>
 
@@ -253,7 +301,7 @@ write_files:
 
 This script simply writes hello to a the file `/test`.
 
-<strong>NOTE:</strong> 
+[note]
 No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-init scripts.
-
+[/note]
  snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->

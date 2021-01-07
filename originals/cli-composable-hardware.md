@@ -27,9 +27,9 @@ maas $PROFILE vm-hosts create type=$VM_HOST_TYPE power_address=$POWER_ADDRESS \
     [tags=$TAG1,$TAG2,...]
 ```
 
-<strong>NOTE:</strong> 
+[note]
 Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS are optional for all VM hosts.
-
+[/note]
 
 See the API reference for a listing of available power types.
 
@@ -68,7 +68,7 @@ Here's a simple way to find a VM host's ID by name using `jq`:
 maas $PROFILE vm-hosts read | jq '.[] | select (.name=="MyVMHost") | .name, .id'
 ```
 
-<strong>NOTE:</strong> 
+[note] `jq` is a command-line JSON processor. More details at https://stedolan.github.io/jq/[/note]
 
 Example output:
 
@@ -219,9 +219,9 @@ We'll start by deleting the `/` partition MAAS created because we want a separat
 maas admin partition delete $VM_HOST_ID $DISK1_ID $PARTITION_ID
 ```
 
-<strong>NOTE:</strong> 
+[note]
 To find `$DISK1_ID` and `$PARTITION_ID`, use `maas admin machine read $VM_HOST_ID`.
-
+[/note]
 
 Now, create a boot partition (~512MB):
 
@@ -241,9 +241,9 @@ Finally, create a partition to use as the home directory. Here we'll use the ent
 maas admin partitions create $VM_HOST_ID $DISK2_ID
 ```
 
-<strong>NOTE:</strong> 
+[note]
 To find `$DISK2_ID`, use `maas admin machine read $VM_HOST_ID`.
-
+[/note]
 
 Now, format the partitions. This requires three commands:
 
@@ -253,9 +253,9 @@ maas admin partition format $VM_HOST_ID $DISK1_ID $ROOT_PARTITION_ID fstype=ext4
 maas admin partition format $VM_HOST_ID $DISK2_ID $HOME_PARTITION_ID fstype=ext4
 ```
 
-<strong>NOTE:</strong> 
+[note]
 To find the partition IDs, use `maas admin partitions read $VM_HOST_ID $DISK1_ID` and `maas admin partitions read $VM_HOST_ID $DISK2_ID`
-
+[/note]
 
 Before you can deploy the machine with our partition layout, you need to mount the new partitions. Here, we'll do that in three commands:
 
@@ -313,9 +313,9 @@ maas $PROFILE machines allocate "storage=mylabel1:32(pool1),mylabel2:64(pool2)"
 
 Once commissioned and acquired, the new machine will be ready to deploy.
 
-<strong>NOTE:</strong> 
+[note]
 The labels (i.e. `mylabel1`, `mylabel2`) in this case can be used to associate device IDs in the information MAAS dumps about the newly created VM. Try piping the output to: `jq '.constraints_by_type'`.
-
+[/note]
 
 <a href="#heading--list-machine-parameters"><h2 id="heading--list-machine-parameters">List machine parameters</h2></a>
 
@@ -438,6 +438,6 @@ After you delete a machine, the machine's resources will be available for other 
 maas $PROFILE vm-host delete $VM_HOST_ID
 ```
 
-<strong>NOTE:</strong> 
+[note type="caution"]
 Deleting a VM host will automatically delete all machines belonging to that VM host.
-
+[/note]

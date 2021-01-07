@@ -1,5 +1,15 @@
 This section covers some of the most commonly encountered problems and attempts to resolve them.
 
+<a href="#heading--django-subarch-error"><h2 id="heading--django-subarch-error">Subarchitecture error thrown by django</h2></a>
+
+Occassionally, you may encounter an error similar to this one:
+
+```
+django.core.exceptions.ValidationError: ['Subarchitecture(<value>) must be generic when setting hwe_kernel.']
+```
+
+One potential solution for this problem is to specify a different commissioning kernel, such as upgrading from Xenial to Focal, etc.  
+
 <a href="#heading--nodes-hang-on-commissioning"><h2 id="heading--nodes-hang-on-commissioning">Nodes hang on "Commissioning"</h2></a>
 
 <a href="#heading--possible-cause-timing-issues"><h3 id="heading--possible-cause-timing-issues">Possible Cause: Timing issues</h3></a>

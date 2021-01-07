@@ -447,9 +447,6 @@
 <!-- deb-2-9-ui
  deb-2-9-ui -->
 
-<!-- snap-2-7-ui
- snap-2-7-ui -->
-
 <!-- snap-2-8-cli
  snap-2-8-cli -->
 
@@ -463,13 +460,35 @@
  snap-2-9-ui -->
 
 <p>Mirroring images is worthy of consideration.  The SimpleStreams protocol delivers Images to MAAS, which is especially useful when your Internet link is slow or unreliable. In this mirrored configuration, images will be instantly available when MAAS requests them.</p>
-<h4>Two questions you may have:</h4>
+<p>Canonical provides two SimpleStreams for MAAS images: candidate and stable. Both streams contain Ubuntu images, CentOS images, bootloaders extracted from the Ubuntu archive, and release notifications. Either stream can be used in any version of MAAS greater than 2.1, but not all images are supported in older versions.</p>
+<h4>Six questions you may have:</h4>
 <ol>
-<li><a href="using-image-streams.html">What SimpleStreams are available for MAAS, and how do I select them?</a></li>
+<li><a href="#heading--candidate-stream">What is the candidate stream?</a></li>
+<li><a href="#heading--stable-stream">What is the stable stream?</a></li>
+<li><a href="#heading--daily-stream">What happened to the daily stream?</a></li>
+<li><a href="#heading--changing-the-stream">How do I change the stream with the UI?</a></li>
+<li><a href="#heading--changing-stream-with-cli">How do I change the stream with the CLI?</a></li>
 <li><a href="#heading--set-up-local-mirror">How do I set up a local image mirror?</a></li>
 </ol>
-<h2 id="heading--set-up-local-mirror">Setting up a local mirror</h2>
+<p><a href="#heading--candidate-stream"><h2 id="heading--candidate-stream">Candidate stream</h2></a></p>
+<p>The candidate stream contains images and bootloaders which have not been explicitly tested with MAAS. Canonical&rsquo;s automated build process dumps all images and bootloaders here before they are tested with MAAS. This stream is useful when testing a bug fix before an image or bootloader has been promoted to stable. Think of the candidate stream as a preview: it should never be used in a production environment; and users are encouraged to provide feedback on any issues they find with this stream.</p>
+<p>This stream is available <a href="http://images.maas.io/ephemeral-v3/candidate">here</a>.</p>
+<p><a href="#heading--stable-stream"><h2 id="heading--stable-stream">Stable stream</h2></a></p>
+<p>The stable stream contains images and bootloaders which have been tested with the latest version of MAAS. This is the default stream which should be used in production environments.  This stream is available <a href="http://images.maas.io/ephemeral-v3/stable">here</a>.</p>
+<p><a href="#heading--daily-stream"><h2 id="heading--daily-stream">Sunset of &ldquo;daily&rdquo; stream</h2></a></p>
+<p>Previously there was only one MAAS stream available, daily. This stream has been replaced by the stable stream. Any client using this stream will be automtically redirected to the stable stream.</p>
+<p><a href="#heading--changing-the-stream"><h2 id="heading--changing-the-stream">Changing the stream - UI</h2></a></p>
+<p>To switch to the candidate stream simply select &ldquo;custom&rdquo; on the images page, set the URL to <code>http://images.maas.io/ephemeral-v3/candidate</code>, and click &ldquo;Connect&rdquo;</p>
+<p><a href="images/0588c8d2e5792edad3f53e90e38e9990a6d86d9a.jpeg" target = "_blank"><img src="images/0588c8d2e5792edad3f53e90e38e9990a6d86d9a.jpeg"></a></a></p>
+<p>MAAS uses the stable stream by default. To switch back to it simply select <code>maas.io</code> on the images page</p>
+<p><a href="images/5e20342f04e30f96ac0e29a5bd3117aa71dacd40.jpeg" target = "_blank"><img src="images/5e20342f04e30f96ac0e29a5bd3117aa71dacd40.jpeg"></a></a></p>
+<p><a href="#heading--changing-stream-with-cli"><h2 id="heading--changing-stream-with-cli">Changing the stream - API/CLI</h2></a></p>
+<p>To switch to a stream with the CLI, enter the following commands:</p>
+<pre><code>BOOT_SOURCE_ID=$(maas $PROFILE boot-sources read | jq '.[] | select(.url | contains(&quot;images.maas.io/ephemeral-v3&quot;)) | .id')
+maas $PROFILE boot-source update $BOOT_SOURCE_ID url=$STREAM_URL
+</code></pre>
 
+<p><a href="#heading--set-up-local-mirror"><h2 id="heading--set-up-local-mirror">Setting up a local mirror</h2></a></p>
 <p>To use mirroring, you begin by installing the necessary software on the host that will house the mirror:</p>
 <pre><code class="bash">sudo apt install simplestreams
 </code></pre>

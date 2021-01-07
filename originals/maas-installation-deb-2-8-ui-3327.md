@@ -1,85 +1,35 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/25)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|CLI ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 deb-2-7-cli -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ UI|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 snap-2-7-ui -->
 
 <!-- deb-2-7-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ UI|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 deb-2-7-ui -->
 
 <!-- snap-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319) | CLI ~ [UI](/t/maas-installation/3321) |[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323) |
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325) |[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327) |[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329) |
 snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ UI|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 snap-2-8-ui -->
 
 <!-- deb-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|CLI ~  [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 deb-2-8-cli -->
 
-<!-- deb-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ UI|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
-deb-2-8-ui -->
 
 <!-- snap-2-9-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|CLI ~  [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ UI|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 snap-2-9-ui -->
 
 <!-- deb-2-9-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|CLI ~  [UI](/t/maas-installation/3329)|
 deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ UI|
 deb-2-9-ui -->
 
 <!-- snap-2-7-ui snap-2-7-cli 
@@ -103,9 +53,9 @@ The next step involves initialising MAAS with a *run mode*. Selecting one of the
 | `region+rack` | X      | X    |          | Region API server and rack controller |
 | `none`        |        |      |          | Reinitialises MAAS and stops services |
 
-[note type="Warning" status="all mode being deprecated"]
+<strong>NOTE:</strong> 
 Configuring the MAAS snap in "all" mode will be [deprecated in MAAS version 2.8.0 and removed in MAAS version 2.9.0](https://maas.io/deprecations/MD1).
-[/note]
+
 
 To initialise MAAS and select a run mode, use the `maas init` command with the *--mode* argument.
 
@@ -129,9 +79,9 @@ Email: admin@example.com
 Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
 ```
 
-[note]
+<strong>NOTE:</strong> 
 You will use the username and password to access the web UI.  If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
-[/note]
+
 
 <a href="#heading--maas-url"><h3 id="heading--maas-url">MAAS URL</h3></a>
 
@@ -230,9 +180,9 @@ MAAS can be installed in either of two configurations:  test or production.  The
 12. [Tell me about the MAAS URL](#heading--maas-url)
 13. [Tell me about the shared secret](#heading--shared-secret)
 
-[note]
+<strong>NOTE:</strong> 
 If you have installed `bind9` or have it running, you will need to uninstall it before installing MAAS.  You can check with `ps aux | grep named` to see if it's running. The `bind9` daemon interferes with MAAS operation and creates a number of unusual, hard-to-debug errors -- but don't worry, MAAS provides DNS and can work with existing DNS servers.
-[/note]
+
 
 <a href="#heading--install-maas-snap"><h2 id="heading--install-maas-snap">Installing MAAS from the snap</h2></a>
 
@@ -264,9 +214,9 @@ MAAS supports the following modes, which dictate what services will run on the l
 | `region+rack` | X      | X    |          | Region API server and rack controller |
 | `none`        |        |      |          | Reinitialises MAAS and stops services |
 
-[note type="Warning" status="all mode being deprecated"]
+<strong>NOTE:</strong> 
 The MAAS initialisation mode "all" is [deprecated in MAAS version 2.8.0 and will be removed in MAAS version 2.9.0^](https://maas.io/deprecations/MD1).
-[/note]
+
 
 <a href="#heading--init-poc"><h2 id="heading--init-poc">Initialising MAAS as a test configuration</h2></a>
 
@@ -376,7 +326,7 @@ To set up PostgreSQL, even if it's running on a different machine, you can use t
 
         sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
 
-[note] You should use `localhost` for `$HOSTNAME` if you're running PostgreSQL on the same box as MAAS.[/note]
+<strong>NOTE:</strong> 
 
 Don't worry; if you leave out any of the database parameters, you'll be prompted for those details.
 
@@ -435,9 +385,9 @@ which takes you through the following exchange:
     Email: admin@example.com
     Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
 
-[note]
+<strong>NOTE:</strong> 
 You will use the username and password created above to access the web UI.  If you enter a [Launchpad^](https://launchpad.net/) or [GitHub^](https://github.com) account name with associated SSH key, MAAS will import them automatically.
-[/note]
+
 
 <a href="#heading--maas-url"><h2 id="heading--maas-url">MAAS URL</h2></a>
 
@@ -483,9 +433,9 @@ MAAS can be installed in either of two configurations:  test or production.  The
 12. [Tell me about the MAAS URL](#heading--maas-url)
 13. [Tell me about the shared secret](#heading--shared-secret)
 
-[note]
+<strong>NOTE:</strong> 
 If you have installed `bind9` or have it running, you will need to uninstall it before installing MAAS.  You can check with `ps aux | grep named` to see if it's running. The `bind9` daemon interferes with MAAS operation and creates a number of unusual, hard-to-debug errors -- but don't worry, MAAS provides DNS and can work with existing DNS servers.
-[/note]
+
 
 <a href="#heading--install-maas-snap"><h2 id="heading--install-maas-snap">Installing MAAS from the snap</h2></a>
 
@@ -624,7 +574,7 @@ To set up PostgreSQL, even if it's running on a different machine, you can use t
 
         sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
 
-[note] You should use `localhost` for `$HOSTNAME` if you're running PostgreSQL on the same box as MAAS.[/note]
+<strong>NOTE:</strong> 
 
 Don't worry; if you leave out any of the database parameters, you'll be prompted for those details.
 
@@ -683,9 +633,9 @@ which takes you through the following exchange:
     Email: admin@example.com
     Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
 
-[note]
+<strong>NOTE:</strong> 
 You will use the username and password created above to access the web UI.  If you enter a [Launchpad^](https://launchpad.net/) or [GitHub^](https://github.com) account name with associated SSH key, MAAS will import them automatically.
-[/note]
+
 
 <a href="#heading--maas-url"><h2 id="heading--maas-url">MAAS URL</h2></a>
 
@@ -712,7 +662,6 @@ The `init` command can takes optional arguments. To list them, as well as read a
 
 snap-2-9-ui snap-2-9-cli -->
 
-<!-- deb-2-8-cli deb-2-8-ui
 <a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS from packages</h2></a>
 
 You can install a 2.8 stable version of MAAS via the PPA listed on the [MAAS launchpad](https://launchpad.net/~maas), specifically:
@@ -785,15 +734,12 @@ href="https://discourse.maas.io/uploads/default/original/1X/472ce8e0227318737056
 
 <a href="#heading--next-steps"><h3 id="heading--next-steps">Next steps</h3></a>
 
-deb-2-8-cli deb-2-8-ui -->
 
 <!-- deb-2-8-cli
 Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2534).
 deb-2-8-cli -->
 
-<!-- deb-2-8-ui
 Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2535).
-deb-2-8-ui -->
 
 <!-- deb-2-7-cli deb-2-7-ui
 <a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS from packages</h2></a>
@@ -887,9 +833,9 @@ You can install a 2.9 stable Beta version of MAAS from the Beta PPA this way:
 sudo apt-add-repository ppa:maas/2.9
 sudo apt-get update
 ```
-[note]
+<strong>NOTE:</strong> 
 Remember that 2.9 is a Beta version, and hence may be unstable or present bugs.  Please be sure to [file any bugs^](https://bugs.launchpad.net/maas/+filebug) you find, and please feel free to interact with the development team via [discourse^](https://discourse.maas.io/).
-[/note]
+
 
 <a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installation scenarios</h3></a>
 
@@ -960,4 +906,3 @@ deb-2-9-cli -->
 <!-- deb-2-9-ui
 Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2537).
 deb-2-9-ui -->
-

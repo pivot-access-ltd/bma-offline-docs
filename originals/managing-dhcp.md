@@ -1,37 +1,85 @@
 <!-- deb-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/managing-dhcp/2898) ~ [UI](/t/managing-dhcp/2899)|[CLI](/t/managing-dhcp/2900) ~ [UI](/t/managing-dhcp/2901)|[CLI](/t/managing-dhcp/2902) ~ [UI](/t/managing-dhcp/2903)|
+|Packages|CLI ~ [UI](/t/managing-dhcp/2905)|[CLI](/t/managing-dhcp/2906) ~ [UI](/t/managing-dhcp/2907)|[CLI](/t/managing-dhcp/2908) ~ [UI](/t/managing-dhcp/2909)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/managing-dhcp/2898) ~ [UI](/t/managing-dhcp/2899)|[CLI](/t/managing-dhcp/2900) ~ [UI](/t/managing-dhcp/2901)|[CLI](/t/managing-dhcp/2902) ~ [UI](/t/managing-dhcp/2903)|
+|Packages|[CLI](/t/managing-dhcp/2904) ~ UI|[CLI](/t/managing-dhcp/2906) ~ [UI](/t/managing-dhcp/2907)|[CLI](/t/managing-dhcp/2908) ~ [UI](/t/managing-dhcp/2909)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/managing-dhcp/2898) ~ [UI](/t/managing-dhcp/2899)|[CLI](/t/managing-dhcp/2900) ~ [UI](/t/managing-dhcp/2901)|[CLI](/t/managing-dhcp/2902) ~ [UI](/t/managing-dhcp/2903)|
+|Packages|[CLI](/t/managing-dhcp/2904) ~ [UI](/t/managing-dhcp/2905)|CLI ~ [UI](/t/managing-dhcp/2907)|[CLI](/t/managing-dhcp/2908) ~ [UI](/t/managing-dhcp/2909)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/managing-dhcp/2898) ~ [UI](/t/managing-dhcp/2899)|[CLI](/t/managing-dhcp/2900) ~ [UI](/t/managing-dhcp/2901)|[CLI](/t/managing-dhcp/2902) ~ [UI](/t/managing-dhcp/2903)|
+|Packages|[CLI](/t/managing-dhcp/2904) ~ [UI](/t/managing-dhcp/2905)|[CLI](/t/managing-dhcp/2906) ~ UI|[CLI](/t/managing-dhcp/2908) ~ [UI](/t/managing-dhcp/2909)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/managing-dhcp/2898) ~ [UI](/t/managing-dhcp/2899)|[CLI](/t/managing-dhcp/2900) ~ [UI](/t/managing-dhcp/2901)|[CLI](/t/managing-dhcp/2902) ~ [UI](/t/managing-dhcp/2903)|
+|Packages|[CLI](/t/managing-dhcp/2904) ~ [UI](/t/managing-dhcp/2905)|[CLI](/t/managing-dhcp/2906) ~ [UI](/t/managing-dhcp/2907)|CLI ~ [UI](/t/managing-dhcp/2909)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/managing-dhcp/2898) ~ [UI](/t/managing-dhcp/2899)|[CLI](/t/managing-dhcp/2900) ~ [UI](/t/managing-dhcp/2901)|[CLI](/t/managing-dhcp/2902) ~ [UI](/t/managing-dhcp/2903)|
+|Packages|[CLI](/t/managing-dhcp/2904) ~ [UI](/t/managing-dhcp/2905)|[CLI](/t/managing-dhcp/2906) ~ [UI](/t/managing-dhcp/2907)|[CLI](/t/managing-dhcp/2908) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ [UI](/t/managing-dhcp/2899)|[CLI](/t/managing-dhcp/2900) ~ [UI](/t/managing-dhcp/2901)|[CLI](/t/managing-dhcp/2902) ~ [UI](/t/managing-dhcp/2903)|
+|Packages|[CLI](/t/managing-dhcp/2904) ~ [UI](/t/managing-dhcp/2905)|[CLI](/t/managing-dhcp/2906) ~ [UI](/t/managing-dhcp/2907)|[CLI](/t/managing-dhcp/2908) ~ [UI](/t/managing-dhcp/2909)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/managing-dhcp/2898) ~ UI|[CLI](/t/managing-dhcp/2900) ~ [UI](/t/managing-dhcp/2901)|[CLI](/t/managing-dhcp/2902) ~ [UI](/t/managing-dhcp/2903)|
+|Packages|[CLI](/t/managing-dhcp/2904) ~ [UI](/t/managing-dhcp/2905)|[CLI](/t/managing-dhcp/2906) ~ [UI](/t/managing-dhcp/2907)|[CLI](/t/managing-dhcp/2908) ~ [UI](/t/managing-dhcp/2909)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/managing-dhcp/2898) ~ [UI](/t/managing-dhcp/2899)|CLI ~ [UI](/t/managing-dhcp/2901)|[CLI](/t/managing-dhcp/2902) ~ [UI](/t/managing-dhcp/2903)|
+|Packages|[CLI](/t/managing-dhcp/2904) ~ [UI](/t/managing-dhcp/2905)|[CLI](/t/managing-dhcp/2906) ~ [UI](/t/managing-dhcp/2907)|[CLI](/t/managing-dhcp/2908) ~ [UI](/t/managing-dhcp/2909)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/managing-dhcp/2898) ~ [UI](/t/managing-dhcp/2899)|[CLI](/t/managing-dhcp/2900) ~ UI|[CLI](/t/managing-dhcp/2902) ~ [UI](/t/managing-dhcp/2903)|
+|Packages|[CLI](/t/managing-dhcp/2904) ~ [UI](/t/managing-dhcp/2905)|[CLI](/t/managing-dhcp/2906) ~ [UI](/t/managing-dhcp/2907)|[CLI](/t/managing-dhcp/2908) ~ [UI](/t/managing-dhcp/2909)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/managing-dhcp/2898) ~ [UI](/t/managing-dhcp/2899)|[CLI](/t/managing-dhcp/2900) ~ [UI](/t/managing-dhcp/2901)|CLI ~ [UI](/t/managing-dhcp/2903)|
+|Packages|[CLI](/t/managing-dhcp/2904) ~ [UI](/t/managing-dhcp/2905)|[CLI](/t/managing-dhcp/2906) ~ [UI](/t/managing-dhcp/2907)|[CLI](/t/managing-dhcp/2908) ~ [UI](/t/managing-dhcp/2909)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/managing-dhcp/2898) ~ [UI](/t/managing-dhcp/2899)|[CLI](/t/managing-dhcp/2900) ~ [UI](/t/managing-dhcp/2901)|[CLI](/t/managing-dhcp/2902) ~ UI|
+|Packages|[CLI](/t/managing-dhcp/2904) ~ [UI](/t/managing-dhcp/2905)|[CLI](/t/managing-dhcp/2906) ~ [UI](/t/managing-dhcp/2907)|[CLI](/t/managing-dhcp/2908) ~ [UI](/t/managing-dhcp/2909)|
  snap-2-9-ui -->
 
 MAAS enlists and commissions machines through the use of its DHCP server running on an untagged VLAN. Although this MAAS-managed DHCP can also be part of the deploy phase, an external DHCP server can optionally be used instead for this purpose. If MAAS detects an external DHCP server, it will display it on the rack controller's page, accessible by selecting 'Controllers' from the top menu in the web UI.
@@ -209,9 +257,9 @@ maas $PROFILE vlan update $FABRIC_ID $VLAN_TAG dhcp_on=True \
     secondary_rack=$SECONDARY_RACK_CONTROLLER 
 ```
 
-<strong>NOTE:</strong> 
+[note]
 You must enable DHCP for PXE booting on the 'untagged' VLAN.
-
+[/note]
 
 You will also need to set a default gateway:
 
@@ -370,9 +418,9 @@ deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 When MAAS manages DHCP, you customise it through the use of DHCP snippets. These are user-defined configuration options that can be applied either globally, per subnet, or per machine. You apply a global snippet to all VLANs, subnets, and machines. All three types end up in `/var/snap/maas/common/maas/dhcpd.conf` or `/var/snap/maas/common/maas/dhcpd6.conf`. Be aware that if you edit these files directly, you will need to `sudo` to `root`, as there is no `maas` user in the snap (all relevant files are owned by `root`). For information on what options to use, refer to the [`dhcpd.conf` man page](http://manpages.ubuntu.com/cgi-bin/search.py?q=dhcpd.conf).
 snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
 
-<strong>NOTE:</strong> 
+[note]
 Modifications made directly to `dhcpd.conf.template` or `dhcpd6.conf.template` are not supported.
-
+[/note]
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 To manage snippets, as an admin, open the 'Settings' page and click on the 'DHCP snippets' tab.

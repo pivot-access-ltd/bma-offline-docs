@@ -96,11 +96,11 @@ Use a &lt;code&gt; tag to mark <code>inline filenames and other literals</code> 
 
 <h2 id="heading--notes">Admonishments</h2>
 
-An admonishment distinguishes information from the rest of the text. The syntax begins with the markup tag <code><strong>NOTE:</strong> </code>:
+An admonishment distinguishes information from the rest of the text. The syntax begins with the markup tag <code>[note]</code> and ends with the corresponding closure <code>[/note]</code>:
 
-    <strong>NOTE:</strong> 
+    [note type="admonishment-type" status="Admonishment title"]
     Admonishment text.
-    
+    [/note]
 
 Where:
 
@@ -115,62 +115,62 @@ Where:
 A 'Note' type admonishment is marked up like this:
 
 ```
-<strong>NOTE:</strong> 
+[note status="Note"]
 If KVM-backed nodes are used, ensure that the 'maas' user on the rack
 controller can connect to the KVM host using a passphraseless private SSH
 key.
-
+[/note]
 ```
 
 And it will appear as:
-<strong>NOTE:</strong> 
+[note status="Note"]
 If KVM-backed nodes are used, ensure that the 'maas' user on the rack controller can connect to the KVM host using a passphraseless private SSH key.
-
+[/note]
 
 <strong><em>Warning Admonishment</em></strong>
 
 Mark up a standard 'Warning' type admonishment this way:
 
 ``` no-highlight
-<strong>NOTE:</strong> 
+[note type="caution" status="Warning"]
 Data will be lost unless you do the right thing.
-
+[/note]
 ```
 And it will appear like this:
 
-<strong>NOTE:</strong> 
+[note type="caution" status="Warning"]
 Data will be lost unless you do the right thing.
-
+[/note]
 
 <strong><em>Positive Admonishment</em></strong>
 
 A 'Positive' type admonishment should be entered as follows:
 
 ```
-<strong>NOTE:</strong> 
+[note type="positive" status="High score"]
 A positive note that should include a title.
-
+[/note]
 ```
 It will show up in the document like this:
 
-<strong>NOTE:</strong> 
+[note type="positive" status="High score"]
 A positive note that should include a title.
-
+[/note]
 
 <strong><em>Negative Admonishment</em></strong>
 
 Finally, a 'Negative' type admonishment, with its title, could be marked up like this:
 
 ```
-<strong>NOTE:</strong> 
+[note type="negative" status="Game over"]
 A negative note that should include a title.
-
+[/note]
 ```
 And will look this way to the reader:
 
-<strong>NOTE:</strong> 
+[note type="negative" status="Game over"]
 A negative note that should include a title.
-
+[/note]
 
 <h2 id="heading--comments">Comments</h2>
 

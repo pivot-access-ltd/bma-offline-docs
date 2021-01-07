@@ -1,37 +1,85 @@
 <!-- deb-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
+|Packages|CLI ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
+|Packages|[CLI](/t/block-devices/2352) ~ UI|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
+|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|CLI ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
+|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ UI|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
+|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|CLI ~ [UI](/t/block-devices/2357)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
+|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
+|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/block-devices/2346) ~ UI|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
+|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|CLI ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
+|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ UI|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
+|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|CLI ~ [UI](/t/block-devices/2351)|
+|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ UI|
+|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
  snap-2-9-ui -->
 
 Once the initial storage layout has been configured on a machine, you can perform many operations to view and adjust the entire storage layout for the machine. In MAAS there are two different types of block devices.
@@ -174,9 +222,9 @@ It is also possible to use the name of the block device, such as 'sda' or 'vda',
 s admin block-device read <node-id> vda
 ```
 
-<strong>NOTE:</strong> 
+[note]
 MAAS allows the name of a block device to be changed. If the block device name has changed then the API call needs to use the new name.
-
+[/note]
 
     Using the ID is safer as it never changes.
 
@@ -215,9 +263,9 @@ Machine-readable output follows:
 }
 ```
 
-<strong>NOTE:</strong> 
+[note]
 The serial number is what MAAS will use when a machine is deployed to find the specific block device. It's important that this be correct. In a rare chance that your block device does not provide a model or serial number you can provide an id_path. The id_path should be a path that is always the same, no matter the kernel version.
-
+[/note]
 
 <a href="#heading--update-block-device"><h3 id="heading--update-block-device">Update Block Device</h3></a>
 
@@ -303,9 +351,9 @@ Machine-readable output follows:
 }
 ```
 
-<strong>NOTE:</strong> 
+[note]
 You cannot format a block device that contains partitions or is used to make another virtual block device.
-
+[/note]
 
 <a href="#heading--unformat-block-device"><h3 id="heading--unformat-block-device">Unformat Block Device</h3></a>
 
@@ -432,5 +480,6 @@ By default, MAAS picks the first added block device to the machine as the boot d
 maas admin block-device set-boot-disk <node-id> 10
 ```
 
-<strong>NOTE:</strong> 
+[note]
 Only an administrator can set which block device should be used as the boot disk and only a physical block device can be set as as the boot disk. This operation should be done before a machine is acquired or the storage layout will be applied to the previous boot disk.
+[/note]

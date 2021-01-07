@@ -1,85 +1,35 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|CLI ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ UI|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|CLI ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ UI|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
  deb-2-8-ui -->
 
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|CLI ~ [UI](/t/rack-controllers/3065)|
- deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ UI|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|CLI ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ UI|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|CLI ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ UI|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
  snap-2-9-ui -->
 
 A rack controller can connect to multiple VLANs, each from a different network interface. This configuration provides a scaling factor that can help as a network architecture grows in size.
@@ -118,13 +68,11 @@ A rack controller can connect to multiple VLANs, each from a different network i
 5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
  deb-2-8-ui -->
 
-<!-- deb-2-9-cli
 1. [How does MAAS communication work?](/t/maas-communication/2836)
 2. [How do I install a rack controller?](#heading--install-a-rack-controller)
 3. [How do I list rack controllers?](#heading--list-rack-controllers)
 4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2692#heading--multiple-region-endpoints)
 5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
- deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 1. [How does MAAS communication work?](/t/maas-communication/2837)
@@ -184,7 +132,6 @@ A rack controller can connect to multiple VLANs, each from a different network i
 
 <a href="#heading--install-a-rack-controller"><h2 id="heading--install-a-rack-controller">Install a rack controller</h2></a>
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 To install and register a rack controller with the MAAS:
 
 ``` bash
@@ -192,27 +139,22 @@ sudo apt install maas-rack-controller
 sudo maas-rack register
 ```
 
-[note]
+<strong>NOTE:</strong> 
 The register command is not required when you are adding a rack controller to a system that already houses an API server.
-[/note]
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-<!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli
+
 MAAS will ask for the URL of the region API server. If you provide a hostname, ensure it is resolvable. Next, MAAS will prompt you for the secret key, stored in file `/var/lib/maas/secret` on the API server.
-deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli
 MAAS will ask for the URL of the region API server. If you provide a hostname, ensure it is resolvable. Next, MAAS will prompt you for the secret key, stored in file `/var/snap/maas/common/maas/secret` on the API server.
 snap-2-7-cli snap-2-8-cli snap-2-9-cli -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 Based on the above, then, we could have also entered:
 
 ``` bash
 sudo maas-rack register --url http://10.5.1.5:5240/MAAS \
     --secret fa847000e7cb681101d26e3477e6e39e
 ```
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 Installing a rack controller consists of installing the rack controller software and then registering the rack controller with the region API server.  When MAAS installs a rack controller on the same host as the region API server, registration occurs automatically. 
@@ -252,7 +194,6 @@ Note that you will need multiple rack controllers to achieve specific [high avai
 You can also list and confirm all registered rack controllers via the CLI; select the "Packages 2.8 CLI" link at the top of the page to find out how. Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/2691) configurations.
  deb-2-8-ui -->
 
-<!-- deb-2-9-cli
 You can also list and confirm all registered rack controllers:
 
 ``` bash
@@ -260,7 +201,6 @@ maas $PROFILE rack-controllers read | grep hostname | cut -d '"' -f 4
 ```
 
 Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/2692) configurations.
- deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 You can also list and confirm all registered rack controllers via the CLI; select the "Packages 2.9 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/2693) configurations.

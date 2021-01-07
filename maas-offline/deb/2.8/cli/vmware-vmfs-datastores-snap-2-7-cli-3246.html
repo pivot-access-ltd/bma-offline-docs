@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/vmware-vmfs-datastores-snap-2-7-cli.html">
+	  &nbsp;UI-only&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  CLI-only
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-me-an-example-of-maas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-new-in-maas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-requirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-journey.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-communication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-controllers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-controllers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-availability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-machines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-machines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-testing.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-testing.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-and-hardware-testing-scripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-tags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-machine-setup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-boot-options.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-pools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-vmfs-datastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-kernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-and-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-image-mirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-images.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-management.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-ranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-services.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-discovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-addressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-tls-encryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-stp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-zones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-host-networking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-a-vm-host.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-host-storage-pools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-and-deleting-vms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-metrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-your-maas-installation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-accounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-search.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-and-terms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-and-terms.html#heading--network-tutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-cli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-kernel-management.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-image-management.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-interface-management.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-advanced-tasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-composable-hardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-help.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-tricks-and-traps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-docs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-new-in-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-guide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>VMware VMFS datastores snap 2 7 CLI</h1><!-- deb-2-7-cli
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+ deb-2-7-ui -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- snap-2-7-ui
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+ snap-2-9-ui -->
+
+<!-- deb-2-7-cli
+MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](storage.html#heading--vmfs6-layout). This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](storage.html#heading--vmfs6-layout). This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
+ deb-2-7-ui -->
+
+<p>MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the <a href="storage.html#heading--vmfs6-layout">VMFS6 storage layout</a>. This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.</p>
+<!-- deb-2-8-ui
+MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](storage.html#heading--vmfs6-layout). This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](storage.html#heading--vmfs6-layout). This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](storage.html#heading--vmfs6-layout). This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
+ deb-2-9-ui -->
+
+<p>MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the <a href="storage.html#heading--vmfs6-layout">VMFS6 storage layout</a>. This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.</p>
+<!-- snap-2-7-ui
+MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](storage.html#heading--vmfs6-layout). This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](storage.html#heading--vmfs6-layout). This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](storage.html#heading--vmfs6-layout). This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](storage.html#heading--vmfs6-layout). This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](storage.html#heading--vmfs6-layout). This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
+ snap-2-9-ui -->
+
+<h4>Five questions you may have:</h4>
+<ol>
+<li><a href="#heading--listing-vmfs-datastores">How do I list the VMFS datastores on a machine?</a></li>
+<li><a href="#heading--viewing-vmfs-datastores">How do I view a specific datastore on a machine?</a></li>
+<li><a href="#heading--creating-vmfs-datastores">How do I create a new datastore?</a></li>
+<li><a href="#heading--editing-vmfs-datastores">How do I edit a datastore?</a></li>
+<li><a href="#heading--deleting-vmfs-datastores">How do I delete a datastore?</a></li>
+</ol>
+<p><a href="#heading--listing-vmfs-datastores"><h2 id="heading--listing-vmfs-datastores">Listing VMFS datastores</h2></a></p>
+<p>To view all VMFS Datastores on a machine, use the &lsquo;vmfs-datastores read&rsquo; API call:</p>
+<pre><code class="bash">maas $PROFILE vmfs-datastores read $SYSTEM_ID
+</code></pre>
+
+<pre><code class="nohighlight">[
+    {
+        &quot;human_size&quot;: &quot;45.8 GB&quot;,
+        &quot;filesystem&quot;: {
+            &quot;fstype&quot;: &quot;vmfs6&quot;,
+            &quot;mount_point&quot;: &quot;/vmfs/volumes/datastore1&quot;
+        },
+        &quot;uuid&quot;: &quot;2779a745-1db3-4fd7-b06e-455b728fffd4&quot;,
+        &quot;name&quot;: &quot;datastore1&quot;,
+        &quot;system_id&quot;: &quot;4qxaga&quot;,
+        &quot;devices&quot;: [
+            {
+                &quot;uuid&quot;: &quot;c55fe657-689d-4570-8492-683dd5fa1c40&quot;,
+                &quot;size&quot;: 35026632704,
+                &quot;bootable&quot;: false,
+                &quot;tags&quot;: [],
+                &quot;used_for&quot;: &quot;VMFS extent for datastore1&quot;,
+                &quot;filesystem&quot;: {
+                    &quot;fstype&quot;: &quot;vmfs6&quot;,
+                    &quot;label&quot;: null,
+                    &quot;uuid&quot;: &quot;55ac6422-68b5-440e-ba65-153032605b51&quot;,
+                    &quot;mount_point&quot;: null,
+                    &quot;mount_options&quot;: null
+                },
+                &quot;type&quot;: &quot;partition&quot;,
+                &quot;device_id&quot;: 5,
+                &quot;path&quot;: &quot;/dev/disk/by-dname/sda-part3&quot;,
+                &quot;system_id&quot;: &quot;4qxaga&quot;,
+                &quot;id&quot;: 71,
+                &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4qxaga/blockdevices/5/partition/71&quot;
+            },
+            {
+                &quot;uuid&quot;: &quot;5182e503-4ad4-446e-9660-fd5052b41cc5&quot;,
+                &quot;size&quot;: 10729029632,
+                &quot;bootable&quot;: false,
+                &quot;tags&quot;: [],
+                &quot;used_for&quot;: &quot;VMFS extent for datastore1&quot;,
+                &quot;filesystem&quot;: {
+                    &quot;fstype&quot;: &quot;vmfs6&quot;,
+                    &quot;label&quot;: null,
+                    &quot;uuid&quot;: &quot;a5949b18-d591-4627-be94-346d0fdaf816&quot;,
+                    &quot;mount_point&quot;: null,
+                    &quot;mount_options&quot;: null
+                },
+                &quot;type&quot;: &quot;partition&quot;,
+                &quot;device_id&quot;: 6,
+                &quot;path&quot;: &quot;/dev/disk/by-dname/sdb-part1&quot;,
+                &quot;system_id&quot;: &quot;4qxaga&quot;,
+                &quot;id&quot;: 77,
+                &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4qxaga/blockdevices/6/partition/77&quot;
+            }
+        ],
+        &quot;id&quot;: 17,
+        &quot;size&quot;: 45755662336,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4qxaga/vmfs-datastore/17/&quot;
+    }
+]
+</code></pre>
+
+<p><a href="#heading--viewing-vmfs-datastores"><h2 id="heading--viewing-vmfs-datastores">Viewing a specific datastore</h2></a></p>
+<p>To view a specific VMFS Datastores on a machine, use the &lsquo;vmfs-datastore read&rsquo; API call:</p>
+<pre><code class="bash">maas $PROFILE vmfs-datastore read $SYSTEM_ID $VMFS_DATASTORE_ID
+</code></pre>
+
+<pre><code class="nohighlight">{
+    &quot;uuid&quot;: &quot;fb6fedc2-f711-40de-ab83-77eddc3e19ac&quot;,
+    &quot;name&quot;: &quot;datastore1&quot;,
+    &quot;system_id&quot;: &quot;b66fn6&quot;,
+    &quot;id&quot;: 18,
+    &quot;filesystem&quot;: {
+        &quot;fstype&quot;: &quot;vmfs6&quot;,
+        &quot;mount_point&quot;: &quot;/vmfs/volumes/datastore1&quot;
+    },
+    &quot;human_size&quot;: &quot;2.8 GB&quot;,
+    &quot;devices&quot;: [
+        {
+            &quot;uuid&quot;: &quot;b91df576-ba02-4acb-914f-03ba9a2865b7&quot;,
+            &quot;size&quot;: 2814377984,
+            &quot;bootable&quot;: false,
+            &quot;tags&quot;: [],
+            &quot;system_id&quot;: &quot;b66fn6&quot;,
+            &quot;used_for&quot;: &quot;VMFS extent for datastore1&quot;,
+            &quot;type&quot;: &quot;partition&quot;,
+            &quot;id&quot;: 80,
+            &quot;filesystem&quot;: {
+                &quot;fstype&quot;: &quot;vmfs6&quot;,
+                &quot;label&quot;: null,
+                &quot;uuid&quot;: &quot;4a098d71-1e59-4b5f-932d-fc30a1c0dc96&quot;,
+                &quot;mount_point&quot;: null,
+                &quot;mount_options&quot;: null
+            },
+            &quot;device_id&quot;: 1,
+            &quot;path&quot;: &quot;/dev/disk/by-dname/vda-part3&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/b66fn6/blockdevices/1/partition/80&quot;
+        }
+    ],
+    &quot;size&quot;: 2814377984,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/b66fn6/vmfs-datastore/18/&quot;
+}
+</code></pre>
+
+<p><a href="#heading--creating-vmfs-datastores"><h2 id="heading--creating-vmfs-datastores">Creating a new VMFS Datastore</h2></a></p>
+<!-- deb-2-7-cli
+A VMware VMFS datastore is created on one or more [block devices](block-devices.html) or [partitions](partitions.html)
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+A VMware VMFS datastore is created on one or more [block devices](block-devices.html) or [partitions](partitions.html)
+ deb-2-7-ui -->
+
+<p>A VMware VMFS datastore is created on one or more <a href="block-devices.html">block devices</a> or <a href="partitions.html">partitions</a></p>
+<!-- deb-2-8-ui
+A VMware VMFS datastore is created on one or more [block devices](block-devices.html) or [partitions](partitions.html)
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+A VMware VMFS datastore is created on one or more [block devices](block-devices.html) or [partitions](partitions.html)
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+A VMware VMFS datastore is created on one or more [block devices](block-devices.html) or [partitions](partitions.html)
+ deb-2-9-ui -->
+
+<p>A VMware VMFS datastore is created on one or more <a href="block-devices.html">block devices</a> or <a href="partitions.html">partitions</a></p>
+<!-- snap-2-7-ui
+A VMware VMFS datastore is created on one or more [block devices](block-devices.html) or [partitions](partitions.html)
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+A VMware VMFS datastore is created on one or more [block devices](block-devices.html) or [partitions](partitions.html)
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+A VMware VMFS datastore is created on one or more [block devices](block-devices.html) or [partitions](partitions.html)
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+
+A VMware VMFS datastore is created on one or more [block devices](block-devices.html) or [partitions](partitions.html)
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+A VMware VMFS datastore is created on one or more [block devices](block-devices.html) or [partitions](partitions.html)
+ snap-2-9-ui -->
+
+<p>To create a VMFS Datastores on a machine use the &lsquo;vmfs-datastores create&rsquo; API call:</p>
+<pre><code class="bash">maas $PROFILE vmfs-datastores create $SYSTEM_ID name=$VMFS_NAME block_devices=$BLOCK_ID_1,$BLOCK_ID_2 partitions=$PARTITION_ID_1,$PARTITION_ID_2
+</code></pre>
+
+<pre><code class="nohighlight">{
+    &quot;system_id&quot;: &quot;b66fn6&quot;,
+    &quot;devices&quot;: [
+        {
+            &quot;uuid&quot;: &quot;b91df576-ba02-4acb-914f-03ba9a2865b7&quot;,
+            &quot;size&quot;: 2814377984,
+            &quot;bootable&quot;: false,
+            &quot;tags&quot;: [],
+            &quot;device_id&quot;: 1,
+            &quot;system_id&quot;: &quot;b66fn6&quot;,
+            &quot;type&quot;: &quot;partition&quot;,
+            &quot;used_for&quot;: &quot;VMFS extent for datastore42&quot;,
+            &quot;filesystem&quot;: {
+                &quot;fstype&quot;: &quot;vmfs6&quot;,
+                &quot;label&quot;: null,
+                &quot;uuid&quot;: &quot;fc374367-a2fb-4e50-9377-768bfe9705b6&quot;,
+                &quot;mount_point&quot;: null,
+                &quot;mount_options&quot;: null
+            },
+            &quot;path&quot;: &quot;/dev/disk/by-dname/vda-part3&quot;,
+            &quot;id&quot;: 80,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/b66fn6/blockdevices/1/partition/80&quot;
+        }
+    ],
+    &quot;name&quot;: &quot;datastore42&quot;,
+    &quot;filesystem&quot;: {
+        &quot;fstype&quot;: &quot;vmfs6&quot;,
+        &quot;mount_point&quot;: &quot;/vmfs/volumes/datastore42&quot;
+    },
+    &quot;id&quot;: 19,
+    &quot;size&quot;: 2814377984,
+    &quot;uuid&quot;: &quot;2711566c-2df4-4cc4-8c06-7392bb1f9532&quot;,
+    &quot;human_size&quot;: &quot;2.8 GB&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/b66fn6/vmfs-datastore/19/&quot;
+}
+</code></pre>
+
+<p><a href="#heading--editing-vmfs-datastores"><h2 id="heading--editing-vmfs-datastores">Edit an existing VMFS Datastore</h2></a></p>
+<p>To edit an existing VMFS Datastores on a machine use the &lsquo;vmfs-datastore update&rsquo; API call:</p>
+<pre><code class="bash">maas $PROFILE vmfs-datastore update $SYSTEM_ID $VMFS_ID name=$NEW_VMFS_NAME add_block_devices=$NEW_BLOCK_ID_1,$NEW_BLOCK_ID_2 add_partitions=$NEW_PARTITION_ID_1,$NEW_PARTITION_ID_2 remove_partitions=$EXISTING_PARTITION_ID1,$EXISTING_PARTITION_ID2
+</code></pre>
+
+<pre><code class="nohighlight">{
+    &quot;uuid&quot;: &quot;2711566c-2df4-4cc4-8c06-7392bb1f9532&quot;,
+    &quot;name&quot;: &quot;datastore42&quot;,
+    &quot;system_id&quot;: &quot;b66fn6&quot;,
+    &quot;id&quot;: 19,
+    &quot;filesystem&quot;: {
+        &quot;fstype&quot;: &quot;vmfs6&quot;,
+        &quot;mount_point&quot;: &quot;/vmfs/volumes/datastore42&quot;
+    },
+    &quot;human_size&quot;: &quot;13.5 GB&quot;,
+    &quot;devices&quot;: [
+        {
+            &quot;uuid&quot;: &quot;b91df576-ba02-4acb-914f-03ba9a2865b7&quot;,
+            &quot;size&quot;: 2814377984,
+            &quot;bootable&quot;: false,
+            &quot;tags&quot;: [],
+            &quot;system_id&quot;: &quot;b66fn6&quot;,
+            &quot;used_for&quot;: &quot;VMFS extent for datastore42&quot;,
+            &quot;type&quot;: &quot;partition&quot;,
+            &quot;id&quot;: 80,
+            &quot;filesystem&quot;: {
+                &quot;fstype&quot;: &quot;vmfs6&quot;,
+                &quot;label&quot;: null,
+                &quot;uuid&quot;: &quot;fc374367-a2fb-4e50-9377-768bfe9705b6&quot;,
+                &quot;mount_point&quot;: null,
+                &quot;mount_options&quot;: null
+            },
+            &quot;device_id&quot;: 1,
+            &quot;path&quot;: &quot;/dev/disk/by-dname/vda-part3&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/b66fn6/blockdevices/1/partition/80&quot;
+        },
+        {
+            &quot;uuid&quot;: &quot;f21fe54e-b5b1-4562-ab6b-e699e99f002f&quot;,
+            &quot;size&quot;: 10729029632,
+            &quot;bootable&quot;: false,
+            &quot;tags&quot;: [],
+            &quot;system_id&quot;: &quot;b66fn6&quot;,
+            &quot;used_for&quot;: &quot;VMFS extent for datastore42&quot;,
+            &quot;type&quot;: &quot;partition&quot;,
+            &quot;id&quot;: 86,
+            &quot;filesystem&quot;: {
+                &quot;fstype&quot;: &quot;vmfs6&quot;,
+                &quot;label&quot;: null,
+                &quot;uuid&quot;: &quot;f3d9b6a3-bab3-4677-becb-bf5a421bfcc2&quot;,
+                &quot;mount_point&quot;: null,
+                &quot;mount_options&quot;: null
+            },
+            &quot;device_id&quot;: 2,
+            &quot;path&quot;: &quot;/dev/disk/by-dname/vdb-part1&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/b66fn6/blockdevices/2/partition/86&quot;
+        }
+    ],
+    &quot;size&quot;: 13543407616,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/b66fn6/vmfs-datastore/19/&quot;
+}
+</code></pre>
+
+<p><a href="#heading--deleting-vmfs-datastores"><h2 id="heading--deleting-vmfs-datastores">Deleting a VMFS Datastore</h2></a></p>
+<p>To delete a VMFS Datastores on a machine use the &lsquo;vmfs-datastore delete&rsquo; API call:</p>
+<pre><code class="bash">maas $PROFILE vmfs-datastore delete $SYSTEM_ID $VMFS_ID
+</code></pre>
+    </div>
+  </body>
+</html>

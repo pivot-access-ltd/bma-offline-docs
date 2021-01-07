@@ -1,85 +1,35 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
-|Packages|CLI ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
-|Packages|[CLI](/t/ubuntu-kernels/3180) ~ UI|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
-|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|CLI ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
-|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ UI|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
-|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|CLI ~ [UI](/t/ubuntu-kernels/3185)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
-|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ UI|
  deb-2-9-ui -->
 
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
-|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
- snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels/3174) ~ UI|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
-|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|CLI ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
-|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ UI|[CLI](/t/ubuntu-kernels/3178) ~ [UI](/t/ubuntu-kernels/3179)|
-|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|CLI ~ [UI](/t/ubuntu-kernels/3179)|
-|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/ubuntu-kernels/3174) ~ [UI](/t/ubuntu-kernels/3175)|[CLI](/t/ubuntu-kernels/3176) ~ [UI](/t/ubuntu-kernels/3177)|[CLI](/t/ubuntu-kernels/3178) ~ UI|
-|Packages|[CLI](/t/ubuntu-kernels/3180) ~ [UI](/t/ubuntu-kernels/3181)|[CLI](/t/ubuntu-kernels/3182) ~ [UI](/t/ubuntu-kernels/3183)|[CLI](/t/ubuntu-kernels/3184) ~ [UI](/t/ubuntu-kernels/3185)|
  snap-2-9-ui -->
 
 MAAS supports four types of kernels for its Ubuntu machines:
@@ -115,9 +65,9 @@ New hardware gets released all the time. If an Ubuntu host runs an older kernel,
 
 You also gain kernel improvements and new features when installing an HWE kernel.
 
-[note]
+<strong>NOTE:</strong> 
 There is the notion of an HWE *stack*, which refers to the window manager and kernel when the Ubuntu host is running a desktop environment. HWE stacks do not apply to MAAS since machines are provisioned strictly as non-graphical servers.
-[/note]
+
 
 Note that these back-ported/HWE kernels are only available for LTS releases (e.g. Trusty, Xenial, etc.). For example, the first available HWE kernel for Ubuntu 16.04 LTS (Xenial) will be the GA kernel from Ubuntu 16.10 (Yakkety).
 
@@ -177,7 +127,6 @@ To set a specific kernel during deployment, select a machine from the 'Machines'
 MAAS verifies that the specified kernel is available for the given Ubuntu release (series) before deploying the machine.
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 <a href="#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning"><h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2></a>
 
 To set a default minimum kernel for all new and commissioned machines:
@@ -192,9 +141,9 @@ For example, to set it to the 16.04 GA kernel:
 maas $PROFILE maas set-config name=default_min_hwe_kernel value=ga-16.04
 ```
 
-[note]
+<strong>NOTE:</strong> 
 The command option `default_min_hwe_kernel` appears to apply to only HWE kernels but this is not the case.
-[/note]
+
 
 <a href="#heading--set-a-minimum-deploy-kernel-for-a-machine"><h2 id="heading--set-a-minimum-deploy-kernel-for-a-machine">Set a minimum deploy kernel for a machine</h2></a>
 
@@ -210,9 +159,9 @@ For example, to set it to the HWE 16.04 kernel:
 maas $PROFILE machine update $SYSTEM_ID min_hwe_kernel=hwe-16.04
 ```
 
-[note]
+<strong>NOTE:</strong> 
 The command option `default_min_hwe_kernel` appears to apply to only HWE kernels but this is not the case.
-[/note]
+
 
 <a href="#heading--set-a-specific-kernel-during-machine-deployment"><h2 id="heading--set-a-specific-kernel-during-machine-deployment">Set a specific kernel during machine deployment</h2></a>
 
@@ -230,7 +179,5 @@ For example, to deploy a Xenial node with the HWE 16.04 edge kernel:
 maas $PROFILE machine deploy $SYSTEM_ID distro_series=xenial hwe_kernel=hwe-16.04-edge
 ```
 
-[note]
+<strong>NOTE:</strong> 
 The command option `hwe_kernel` appears to apply to only HWE kernels but this is not the case.
-[/note]
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->

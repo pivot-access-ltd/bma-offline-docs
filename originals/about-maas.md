@@ -1,38 +1,86 @@
 <!-- flip -->
 <!-- snap-2-7-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ [UI](/t/about-maas/2263)|[CLI](/t/about-maas/2264) ~ [UI](/t/about-maas/2265)|[CLI](/t/about-maas/2266) ~ [UI](/t/about-maas/2267)|
+|Packages|[CLI](/t/about-maas/2268) ~ [UI](/t/about-maas/2269)|[CLI](/t/about-maas/2270) ~ [UI](/t/about-maas/2271)|[CLI](/t/about-maas/2272) ~ [UI](/t/about-maas/2273)|
 snap-2-7-cli  -->
 
 <!-- deb-2-7-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](about-maas/2262) ~ [UI](/t/about-maas/2263) |[CLI](/t/about-maas/2264) ~ [UI](/t/about-maas/2265) |[CLI](/t/about-maas/2266) ~ [UI](/t/about-maas/2267)|
+|Packages|CLI ~  [UI](/t/about-maas/2269)|[CLI](/t/about-maas/2270) ~ [UI](/t/about-maas/2271)|[CLI](/t/about-maas/2272) ~ [UI](/t/about-maas/2273)|
 deb-2-7-cli -->
 
 <!-- snap-2-7-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/about-maas/2262) ~ UI|[CLI](/t/about-maas/2264) ~ [UI](/t/about-maas/2265)|[CLI](/t/about-maas/2266) ~ [UI](/t/about-maas/2267)|
+|Packages|[CLI](/t/about-maas/2268) ~ [UI](/t/about-maas/2269)|[CLI](/t/about-maas/2270) ~ [UI](/t/about-maas/2271)|[CLI](/t/about-maas/2272) ~ [UI](/t/about-maas/2273)|
 snap-2-7-ui -->
 
 <!-- deb-2-8-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](about-maas/2262) ~ [UI](/t/about-maas/2263) |[CLI](/t/about-maas/2264) ~ [UI](/t/about-maas/2265) |[CLI](/t/about-maas/2266) ~ [UI](/t/about-maas/2267)|
+|Packages|[CLI](/t/about-maas/2268) ~  [UI](/t/about-maas/2269)|CLI ~ [UI](/t/about-maas/2271)|[CLI](/t/about-maas/2272) ~ [UI](/t/about-maas/2273)|
 deb-2-8-cli -->
 
 <!-- deb-2-7-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](about-maas/2262) ~ [UI](/t/about-maas/2263)|[CLI](/t/about-maas/2264) ~ [UI](/t/about-maas/2265)|[CLI](/t/about-maas/2266) ~ [UI](/t/about-maas/2267)|
+|Packages|[CLI](/t/about-maas/2268) ~ UI|[CLI](/t/about-maas/2270) ~ [UI](/t/about-maas/2271)|[CLI](/t/about-maas/2272) ~ [UI](/t/about-maas/2273)|
 deb-2-7-ui -->
 
 <!-- snap-2-8-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/about-maas/2262) ~ [UI](/t/about-maas/2263) | CLI ~ [UI](/t/about-maas/2265) |[CLI](/t/about-maas/2266) ~ [UI](/t/about-maas/2267) |
+|Packages|[CLI](/t/about-maas/2268) ~ [UI](/t/about-maas/2269) |[CLI](/t/about-maas/2270) ~ [UI](/t/about-maas/2271) |[CLI](/t/about-maas/2272) ~ [UI](/t/about-maas/2273) |
 snap-2-8-cli -->
 
 <!-- snap-2-8-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/about-maas/2262) ~ [UI](/t/about-maas/2263)|[CLI](/t/about-maas/2264) ~ UI|[CLI](/t/about-maas/2266) ~ [UI](/t/about-maas/2267)|
+|Packages|[CLI](/t/about-maas/2268) ~ [UI](/t/about-maas/2269)|[CLI](/t/about-maas/2270) ~ [UI](/t/about-maas/2271)|[CLI](/t/about-maas/2272) ~ [UI](/t/about-maas/2273)|
 snap-2-8-ui -->
 
 <!-- deb-2-8-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/about-maas/2262) ~ [UI](/t/about-maas/2263)|[CLI](/t/about-maas/2264) ~ [UI](/t/about-maas/2265)|[CLI](/t/about-maas/2266) ~ [UI](/t/about-maas/2267)|
+|Packages|[CLI](/t/about-maas/2268) ~ [UI](/t/about-maas/2269)|[CLI](/t/about-maas/2270) ~ UI|[CLI](/t/about-maas/2272) ~ [UI](/t/about-maas/2273)|
 deb-2-8-ui -->
 
 <!-- snap-2-9-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/about-maas/2262) ~ [UI](/t/about-maas/2263)|[CLI](/t/about-maas/2264) ~ [UI](/t/about-maas/2265)|CLI ~  [UI](/t/about-maas/2267)|
+|Packages|[CLI](/t/about-maas/2268) ~ [UI](/t/about-maas/2269)|[CLI](/t/about-maas/2270) ~ [UI](/t/about-maas/2271)|[CLI](/t/about-maas/2272) ~ [UI](/t/about-maas/2273)|
 snap-2-9-cli -->
 
 <!-- snap-2-9-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/about-maas/2262) ~ [UI](/t/about-maas/2263)|[CLI](/t/about-maas/2264) ~ [UI](/t/about-maas/2265)|[CLI](/t/about-maas/2266) ~ UI|
+|Packages|[CLI](/t/about-maas/2268) ~ [UI](/t/about-maas/2269)|[CLI](/t/about-maas/2270) ~ [UI](/t/about-maas/2271)|[CLI](/t/about-maas/2272) ~ [UI](/t/about-maas/2273)|
 snap-2-9-ui -->
 
 <!-- deb-2-9-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/about-maas/2262) ~ [UI](/t/about-maas/2263)|[CLI](/t/about-maas/2264) ~ [UI](/t/about-maas/2265)|[CLI](/t/about-maas/2266) ~ [UI](/t/about-maas/2267)|
+|Packages|[CLI](/t/about-maas/2268) ~ [UI](/t/about-maas/2269)|[CLI](/t/about-maas/2270) ~ [UI](/t/about-maas/2271)|CLI ~  [UI](/t/about-maas/2273)|
 deb-2-9-cli -->
 
 <!-- deb-2-9-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/about-maas/2262) ~ [UI](/t/about-maas/2263)|[CLI](/t/about-maas/2264) ~ [UI](/t/about-maas/2265)|[CLI](/t/about-maas/2266) ~ [UI](/t/about-maas/2267)|
+|Packages|[CLI](/t/about-maas/2268) ~ [UI](/t/about-maas/2269)|[CLI](/t/about-maas/2270) ~ [UI](/t/about-maas/2271)|[CLI](/t/about-maas/2272) ~ UI|
 deb-2-9-ui -->
 
 MAAS is an open-source tool that lets you build a data centre from bare-metal servers. You can discover, commission, deploy, and dynamically reconfigure a large network of individual units.  MAAS converts your hardware investment into a cohesive, flexible, distributed data centre, with a minimum of time and effort.
@@ -100,6 +148,7 @@ MAAS integrates all the tools you need into a smooth system-management experienc
 10. hardware testing
 11. composable hardware support
 
+These tools can be controlled from a [CLI](/t/maas-cli/802) driven by a REST API.  You can easily (re)configure and scale your data centre with MAAS.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/40fdae53957095e5a830458dc5c7a62ea5d78c10.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/40fdae53957095e5a830458dc5c7a62ea5d78c10.jpeg"></a> 
 
@@ -108,9 +157,9 @@ deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli -->
 
 MAAS works with any system configuration tools. Both the [Chef](https://www.chef.io/chef) and [Juju](https://jaas.ai/) teams recommend MAAS as a physical provisioning system.
 
-<strong>NOTE:</strong> 
+[note]
 Please note that Windows and RHEL images require [Ubuntu Advantage](https://www.ubuntu.com/support) to work correctly with MAAS.
-
+[/note]
 
 <a href="#heading--colocation-of-key-components"><h3 id="heading--colocation-of-key-components">Colocation of key components</h3></a>
 
@@ -236,9 +285,9 @@ deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli -->
 
 MAAS controls machines through IPMI (or another BMC). It can also manage machines through a converged chassis controller, such as Cisco UCS.  You can choose how you want to control power on your machines based on what is available.  MAAS overwrites the machine's disk space with your chosen, pre-cached OS images.
 
-<strong>NOTE:</strong> 
+[note type="negative" status="Warning"]
 *The above comment about disk space bears repeating: MAAS will overwrite the disk space of all machines it enlists. All pool machines are under the control of MAAS; you should provision them using other methods.*
-
+[/note]
 
 MAAS users allocate ("acquire") machines for use when needed. The web UI also allows you to acquire machines manually, such as when you are reserving specific hardware for certain users. You can remotely access and customise the installed operating system via SSH.
 

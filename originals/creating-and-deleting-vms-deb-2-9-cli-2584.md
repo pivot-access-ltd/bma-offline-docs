@@ -1,85 +1,35 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|CLI ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ UI|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|CLI ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ UI|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
  deb-2-8-ui -->
 
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|CLI ~ [UI](/t/creating-and-deleting-vms/2585)|
- deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ UI|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|CLI ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ UI|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|CLI ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ UI|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
  snap-2-9-ui -->
 
 If you have already created a VM host, you will want to create and delete virtual machines (VMs); this article explains how to do so.
@@ -112,7 +62,6 @@ To delete a VM, delete it as you would any other MAAS machine. Select the desire
 <a href="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg"></a> 
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 
 #### Seven questions you may have:
 
@@ -189,9 +138,9 @@ We'll start by deleting the `/` partition MAAS created because we want a separat
 
     maas admin partition delete $VM_HOST_ID $DISK1_ID $PARTITION_ID
 
-[note]
+<strong>NOTE:</strong> 
 To find `$DISK1_ID` and `$PARTITION_ID`, use `maas admin machine read $VM_HOST_ID`.
-[/note]
+
 
 Now, create a boot partition (~512MB):
 
@@ -205,9 +154,9 @@ Finally, create a partition to use as the home directory. Here we'll use the ent
 
     maas admin partitions create $VM_HOST_ID $DISK2_ID
 
-[note]
+<strong>NOTE:</strong> 
 To find `$DISK2_ID`, use `maas admin machine read $VM_HOST_ID`.
-[/note]
+
 
 Now, format the partitions. This requires three commands:
 
@@ -215,9 +164,9 @@ Now, format the partitions. This requires three commands:
     maas admin partition format $VM_HOST_ID $DISK1_ID $ROOT_PARTITION_ID fstype=ext4
     maas admin partition format $VM_HOST_ID $DISK2_ID $HOME_PARTITION_ID fstype=ext4
 
-[note]
+<strong>NOTE:</strong> 
 To find the partition IDs, use `maas admin partitions read $VM_HOST_ID $DISK1_ID` and `maas admin partitions read $VM_HOST_ID $DISK2_ID`
-[/note]
+
 
 Before you can deploy the machine with our partition layout, you need to mount the new partitions. Here, we'll do that in three commands:
 
@@ -267,4 +216,3 @@ Example output:
     maas $PROFILE machine delete $SYSTEM_ID
 
 After you delete a machine, its resources will be available for other VMs.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->

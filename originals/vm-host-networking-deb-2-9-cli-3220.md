@@ -1,85 +1,35 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-host-networking/3210) ~ [UI](/t/vm-host-networking/3211)|[CLI](/t/vm-host-networking/3212) ~ [UI](/t/vm-host-networking/3213)|[CLI](/t/vm-host-networking/3214) ~ [UI](/t/vm-host-networking/3215)|
-|Packages|CLI ~ [UI](/t/vm-host-networking/3217)|[CLI](/t/vm-host-networking/3218) ~ [UI](/t/vm-host-networking/3219)|[CLI](/t/vm-host-networking/3220) ~ [UI](/t/vm-host-networking/3221)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-host-networking/3210) ~ [UI](/t/vm-host-networking/3211)|[CLI](/t/vm-host-networking/3212) ~ [UI](/t/vm-host-networking/3213)|[CLI](/t/vm-host-networking/3214) ~ [UI](/t/vm-host-networking/3215)|
-|Packages|[CLI](/t/vm-host-networking/3216) ~ UI|[CLI](/t/vm-host-networking/3218) ~ [UI](/t/vm-host-networking/3219)|[CLI](/t/vm-host-networking/3220) ~ [UI](/t/vm-host-networking/3221)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-host-networking/3210) ~ [UI](/t/vm-host-networking/3211)|[CLI](/t/vm-host-networking/3212) ~ [UI](/t/vm-host-networking/3213)|[CLI](/t/vm-host-networking/3214) ~ [UI](/t/vm-host-networking/3215)|
-|Packages|[CLI](/t/vm-host-networking/3216) ~ [UI](/t/vm-host-networking/3217)|CLI ~ [UI](/t/vm-host-networking/3219)|[CLI](/t/vm-host-networking/3220) ~ [UI](/t/vm-host-networking/3221)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-host-networking/3210) ~ [UI](/t/vm-host-networking/3211)|[CLI](/t/vm-host-networking/3212) ~ [UI](/t/vm-host-networking/3213)|[CLI](/t/vm-host-networking/3214) ~ [UI](/t/vm-host-networking/3215)|
-|Packages|[CLI](/t/vm-host-networking/3216) ~ [UI](/t/vm-host-networking/3217)|[CLI](/t/vm-host-networking/3218) ~ UI|[CLI](/t/vm-host-networking/3220) ~ [UI](/t/vm-host-networking/3221)|
  deb-2-8-ui -->
 
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-host-networking/3210) ~ [UI](/t/vm-host-networking/3211)|[CLI](/t/vm-host-networking/3212) ~ [UI](/t/vm-host-networking/3213)|[CLI](/t/vm-host-networking/3214) ~ [UI](/t/vm-host-networking/3215)|
-|Packages|[CLI](/t/vm-host-networking/3216) ~ [UI](/t/vm-host-networking/3217)|[CLI](/t/vm-host-networking/3218) ~ [UI](/t/vm-host-networking/3219)|CLI ~ [UI](/t/vm-host-networking/3221)|
- deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-host-networking/3210) ~ [UI](/t/vm-host-networking/3211)|[CLI](/t/vm-host-networking/3212) ~ [UI](/t/vm-host-networking/3213)|[CLI](/t/vm-host-networking/3214) ~ [UI](/t/vm-host-networking/3215)|
-|Packages|[CLI](/t/vm-host-networking/3216) ~ [UI](/t/vm-host-networking/3217)|[CLI](/t/vm-host-networking/3218) ~ [UI](/t/vm-host-networking/3219)|[CLI](/t/vm-host-networking/3220) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/vm-host-networking/3211)|[CLI](/t/vm-host-networking/3212) ~ [UI](/t/vm-host-networking/3213)|[CLI](/t/vm-host-networking/3214) ~ [UI](/t/vm-host-networking/3215)|
-|Packages|[CLI](/t/vm-host-networking/3216) ~ [UI](/t/vm-host-networking/3217)|[CLI](/t/vm-host-networking/3218) ~ [UI](/t/vm-host-networking/3219)|[CLI](/t/vm-host-networking/3220) ~ [UI](/t/vm-host-networking/3221)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-host-networking/3210) ~ UI|[CLI](/t/vm-host-networking/3212) ~ [UI](/t/vm-host-networking/3213)|[CLI](/t/vm-host-networking/3214) ~ [UI](/t/vm-host-networking/3215)|
-|Packages|[CLI](/t/vm-host-networking/3216) ~ [UI](/t/vm-host-networking/3217)|[CLI](/t/vm-host-networking/3218) ~ [UI](/t/vm-host-networking/3219)|[CLI](/t/vm-host-networking/3220) ~ [UI](/t/vm-host-networking/3221)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-host-networking/3210) ~ [UI](/t/vm-host-networking/3211)|CLI ~ [UI](/t/vm-host-networking/3213)|[CLI](/t/vm-host-networking/3214) ~ [UI](/t/vm-host-networking/3215)|
-|Packages|[CLI](/t/vm-host-networking/3216) ~ [UI](/t/vm-host-networking/3217)|[CLI](/t/vm-host-networking/3218) ~ [UI](/t/vm-host-networking/3219)|[CLI](/t/vm-host-networking/3220) ~ [UI](/t/vm-host-networking/3221)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-host-networking/3210) ~ [UI](/t/vm-host-networking/3211)|[CLI](/t/vm-host-networking/3212) ~ UI|[CLI](/t/vm-host-networking/3214) ~ [UI](/t/vm-host-networking/3215)|
-|Packages|[CLI](/t/vm-host-networking/3216) ~ [UI](/t/vm-host-networking/3217)|[CLI](/t/vm-host-networking/3218) ~ [UI](/t/vm-host-networking/3219)|[CLI](/t/vm-host-networking/3220) ~ [UI](/t/vm-host-networking/3221)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-host-networking/3210) ~ [UI](/t/vm-host-networking/3211)|[CLI](/t/vm-host-networking/3212) ~ [UI](/t/vm-host-networking/3213)|CLI ~ [UI](/t/vm-host-networking/3215)|
-|Packages|[CLI](/t/vm-host-networking/3216) ~ [UI](/t/vm-host-networking/3217)|[CLI](/t/vm-host-networking/3218) ~ [UI](/t/vm-host-networking/3219)|[CLI](/t/vm-host-networking/3220) ~ [UI](/t/vm-host-networking/3221)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-host-networking/3210) ~ [UI](/t/vm-host-networking/3211)|[CLI](/t/vm-host-networking/3212) ~ [UI](/t/vm-host-networking/3213)|[CLI](/t/vm-host-networking/3214) ~ UI|
-|Packages|[CLI](/t/vm-host-networking/3216) ~ [UI](/t/vm-host-networking/3217)|[CLI](/t/vm-host-networking/3218) ~ [UI](/t/vm-host-networking/3219)|[CLI](/t/vm-host-networking/3220) ~ [UI](/t/vm-host-networking/3221)|
  snap-2-9-ui -->
 
 In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself.  This section explains several ways of accomplishing this.
@@ -94,19 +44,17 @@ In order to  deploy a VM host in your MAAS network, you first need to set up a b
 5. [What else must I do to use LXD VM hosts?](#heading--lxd-setup)
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 1. [How do I set up a VM host bridge with the MAAS CLI/API?](#heading--maas-bridge-cli)
 2. [How do I set up a VM host bridge with netplan?](#heading--maas-bridge-netplan)
 3. [How do I set up a VM host bridge with libvirt?](#heading--maas-bridge-libvirt)
 4. [How do I set up SSH for use by libvirt?](#heading--set-up-ssh)
 5. [What else must I do to use LXD VM hosts?](#heading--lxd-setup)
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 To enable VM host networking features, MAAS must match the VM host IP address of a potential VM host with a known device (a machine or controller). For example, if a machine not known to MAAS is set up as a VM host, enhanced interface selection features will not be available.
 
-[note]
+<strong>NOTE:</strong> 
 It's essential to enforce usage of IP addresses to avoid domain name conflicts, should different controllers resolve the same domain name with different IP addresses. You should also avoid using 127.0.0.1 when running multiple controllers, as it would confuse MAAS.
-[/note]
+
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <a href="#heading--maas-bridge-web-ui"><h2 id="heading--maas-bridge-web-ui">Set up VM host bridge with MAAS UI</h2></a>
@@ -129,7 +77,6 @@ Then you can deploy Ubuntu.
 
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 <a href="#heading--maas-bridge-cli"><h2 id="heading--maas-bridge-cli">Use the MAAS API to configure a bridge</h2></a>
 
 You can also use the MAAS CLI/API to configure a VM host bridge, with the following procedure:
@@ -150,7 +97,6 @@ You can also use the MAAS CLI/API to configure a VM host bridge, with the follow
 
           maas $PROFILE interface link-subnet $SYSTEM_ID $BRIDGE_ID subnet=$SUBNET_ID mode="STATIC" ip_address="10.0.0.101"
 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 <a href="#heading--maas-bridge-netplan"><h2 id="heading--maas-bridge-netplan">Use netplan to configure a bridge</h2></a>
 
@@ -438,7 +384,6 @@ virsh -c qemu+ssh://$USER@$VM_HOST_IP/system list --all
 
 Here, `$USER` is a user on your VM host who is a member of the `libvirtd` Unix group on the VM host, and `$VM_HOST_IP` is the IP of your VM host.  **Note** that insufficient permissions for `$USER` may cause the `virsh` command to fail with an error such as `failed to connect to the hypervisor`. Check the `$USER` group membership to make sure `$USER` is a member of the `libvirtd` group.
 
-<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 <a href="#heading--libvirt-ssh"><h3 id="heading--libvirt-ssh">Set up SSH (libvirt only)</h3></a>
 
 The `maas` user on your rack controllers will issue all libvirt commands. Therefore, you'll need to set up SSH public keys on every rack controller for user `maas`.  First create SSH keys on all rack controllers:
@@ -452,7 +397,6 @@ root@maas:~$ ssh-keygen -f id_rsa
 
 
 Next, add the contents of `~maas/.ssh/id_rsa.pub` to the VM host user's `~$USER/.ssh/authorized_keys`. To accomplish this, log into your VM host node, via SSH, from a host for which MAAS has a matching public SSH key.
- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 
 <!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 <a href="#heading--set-up-ssah-lv"><h3 id="heading--set-up-ssah-lv">Set up SSH (libvirt only)</h3></a>

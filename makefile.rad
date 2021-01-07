@@ -67,13 +67,13 @@ originals/cli-composable-hardware.md: cli-composable-hardware.md
 	cp -p cli-composable-hardware.md originals
 	chmod 444 originals/*
  
-originals/common-cli-tasks.md: common-cli-tasks.md
-	cp common-cli-tasks.md common-cli-tasks-794.md
-	xpub push discourse common-cli-tasks-794.md
-	xpub pull discourse 794 794
-	chmod 644 originals/*
-	cp -p common-cli-tasks.md originals
-	chmod 444 originals/*
+#originals/common-cli-tasks.md: common-cli-tasks.md
+#	cp common-cli-tasks.md common-cli-tasks-794.md
+#	xpub push discourse common-cli-tasks-794.md
+#	xpub pull discourse 794 794
+#	chmod 644 originals/*
+#	cp -p common-cli-tasks.md originals
+#	chmod 444 originals/*
  
 originals/troubleshooting.md: troubleshooting.md
 	cp troubleshooting.md troubleshooting-837.md
@@ -107,13 +107,13 @@ originals/maas-cli.md: maas-cli.md
 	cp -p maas-cli.md originals
 	chmod 444 originals/*
  
-originals/cli-kernel-management.md: cli-kernel-management.md
-	cp cli-kernel-management.md cli-kernel-management-799.md
-	xpub push discourse cli-kernel-management-799.md
-	xpub pull discourse 799 799
-	chmod 644 originals/*
-	cp -p cli-kernel-management.md originals
-	chmod 444 originals/*
+#originals/cli-kernel-management.md: cli-kernel-management.md
+#	cp cli-kernel-management.md cli-kernel-management-799.md
+#	xpub push discourse cli-kernel-management-799.md
+#	xpub pull discourse 799 799
+#	chmod 644 originals/*
+#	cp -p cli-kernel-management.md originals
+#	chmod 444 originals/*
  
 originals/the-cli-cookbook.md: the-cli-cookbook.md
 	cp the-cli-cookbook.md the-cli-cookbook-2218.md
@@ -379,35 +379,35 @@ originals/event-logs.md: event-logs.md
 	cp -p event-logs.md originals
 	chmod 444 originals/*
 
-originals/machine-logs.md: machine-logs.md
-	cp machine-logs.md machine-logs-deb-2-7-cli-3448.md
-	cp machine-logs.md machine-logs-deb-2-7-ui-3449.md
-	cp machine-logs.md machine-logs-deb-2-8-cli-3450.md
-	cp machine-logs.md machine-logs-deb-2-8-ui-3451.md
-	cp machine-logs.md machine-logs-deb-2-9-cli-3453.md
-	cp machine-logs.md machine-logs-deb-2-9-ui-3452.md
-	cp machine-logs.md machine-logs-snap-2-7-cli-3442.md
-	cp machine-logs.md machine-logs-snap-2-7-ui-3443.md
-	cp machine-logs.md machine-logs-snap-2-8-cli-3444.md
-	cp machine-logs.md machine-logs-snap-2-8-ui-3445.md
-	cp machine-logs.md machine-logs-snap-2-9-cli-3446.md
-	cp machine-logs.md machine-logs-snap-2-9-ui-3447.md
-	xpub push discourse -t deb-2-7-cli machine-logs-deb-2-7-cli-3448.md
-	xpub push discourse -t deb-2-7-ui machine-logs-deb-2-7-ui-3449.md
-	xpub push discourse -t deb-2-8-cli machine-logs-deb-2-8-cli-3450.md
-	xpub push discourse -t deb-2-8-ui machine-logs-deb-2-8-ui-3451.md
-	xpub push discourse -t deb-2-9-cli machine-logs-deb-2-9-cli-3453.md
-	xpub push discourse -t deb-2-9-ui machine-logs-deb-2-9-ui-3452.md
-	xpub push discourse -t snap-2-7-cli machine-logs-snap-2-7-cli-3442.md
-	xpub push discourse -t snap-2-7-ui machine-logs-snap-2-7-ui-3443.md
-	xpub push discourse -t snap-2-8-cli machine-logs-snap-2-8-cli-3444.md
-	xpub push discourse -t snap-2-8-ui machine-logs-snap-2-8-ui-3445.md
-	xpub push discourse -t snap-2-9-cli machine-logs-snap-2-9-cli-3446.md
-	xpub push discourse -t snap-2-9-ui machine-logs-snap-2-9-ui-3447.md
-	xpub pull discourse 3442 3453
-	chmod 644 originals/*
-	cp -p machine-logs.md originals
-	chmod 444 originals/*
+#originals/machine-logs.md: machine-logs.md
+#	cp machine-logs.md machine-logs-deb-2-7-cli-3448.md
+#	cp machine-logs.md machine-logs-deb-2-7-ui-3449.md
+#	cp machine-logs.md machine-logs-deb-2-8-cli-3450.md
+#	cp machine-logs.md machine-logs-deb-2-8-ui-3451.md
+#	cp machine-logs.md machine-logs-deb-2-9-cli-3453.md
+#	cp machine-logs.md machine-logs-deb-2-9-ui-3452.md
+#	cp machine-logs.md machine-logs-snap-2-7-cli-3442.md
+#	cp machine-logs.md machine-logs-snap-2-7-ui-3443.md
+#	cp machine-logs.md machine-logs-snap-2-8-cli-3444.md
+#	cp machine-logs.md machine-logs-snap-2-8-ui-3445.md
+#	cp machine-logs.md machine-logs-snap-2-9-cli-3446.md
+#	cp machine-logs.md machine-logs-snap-2-9-ui-3447.md
+#	xpub push discourse -t deb-2-7-cli machine-logs-deb-2-7-cli-3448.md
+#	xpub push discourse -t deb-2-7-ui machine-logs-deb-2-7-ui-3449.md
+#	xpub push discourse -t deb-2-8-cli machine-logs-deb-2-8-cli-3450.md
+#	xpub push discourse -t deb-2-8-ui machine-logs-deb-2-8-ui-3451.md
+#	xpub push discourse -t deb-2-9-cli machine-logs-deb-2-9-cli-3453.md
+#	xpub push discourse -t deb-2-9-ui machine-logs-deb-2-9-ui-3452.md
+#	xpub push discourse -t snap-2-7-cli machine-logs-snap-2-7-cli-3442.md
+#	xpub push discourse -t snap-2-7-ui machine-logs-snap-2-7-ui-3443.md
+#	xpub push discourse -t snap-2-8-cli machine-logs-snap-2-8-cli-3444.md
+#	xpub push discourse -t snap-2-8-ui machine-logs-snap-2-8-ui-3445.md
+#	xpub push discourse -t snap-2-9-cli machine-logs-snap-2-9-cli-3446.md
+#	xpub push discourse -t snap-2-9-ui machine-logs-snap-2-9-ui-3447.md
+#	xpub pull discourse 3442 3453
+#	chmod 644 originals/*
+#	cp -p machine-logs.md originals
+#	chmod 444 originals/*
 
 originals/proxy-log.md: proxy-log.md
 	cp proxy-log.md proxy-log-deb-2-7-cli-3460.md
@@ -1249,35 +1249,35 @@ originals/configuring-tls-encryption.md: configuring-tls-encryption.md
 	cp -p configuring-tls-encryption.md originals
 	chmod 444 originals/*
  
-originals/ipv6-addressing.md: ipv6-addressing.md
-	cp ipv6-addressing.md ipv6-addressing-deb-2-7-cli-2772.md
-	cp ipv6-addressing.md ipv6-addressing-deb-2-7-ui-2773.md
-	cp ipv6-addressing.md ipv6-addressing-deb-2-8-cli-2774.md
-	cp ipv6-addressing.md ipv6-addressing-deb-2-8-ui-2775.md
-	cp ipv6-addressing.md ipv6-addressing-deb-2-9-cli-2776.md
-	cp ipv6-addressing.md ipv6-addressing-deb-2-9-ui-2777.md
-	cp ipv6-addressing.md ipv6-addressing-snap-2-7-cli-2766.md
-	cp ipv6-addressing.md ipv6-addressing-snap-2-7-ui-2767.md
-	cp ipv6-addressing.md ipv6-addressing-snap-2-8-cli-2768.md
-	cp ipv6-addressing.md ipv6-addressing-snap-2-8-ui-2769.md
-	cp ipv6-addressing.md ipv6-addressing-snap-2-9-cli-2770.md
-	cp ipv6-addressing.md ipv6-addressing-snap-2-9-ui-2771.md
-	xpub push discourse -t deb-2-7-cli ipv6-addressing-deb-2-7-cli-2772.md
-	xpub push discourse -t deb-2-7-ui ipv6-addressing-deb-2-7-ui-2773.md
-	xpub push discourse -t deb-2-8-cli ipv6-addressing-deb-2-8-cli-2774.md
-	xpub push discourse -t deb-2-8-ui ipv6-addressing-deb-2-8-ui-2775.md
-	xpub push discourse -t deb-2-9-cli ipv6-addressing-deb-2-9-cli-2776.md
-	xpub push discourse -t deb-2-9-ui ipv6-addressing-deb-2-9-ui-2777.md
-	xpub push discourse -t snap-2-7-cli ipv6-addressing-snap-2-7-cli-2766.md
-	xpub push discourse -t snap-2-7-ui ipv6-addressing-snap-2-7-ui-2767.md
-	xpub push discourse -t snap-2-8-cli ipv6-addressing-snap-2-8-cli-2768.md
-	xpub push discourse -t snap-2-8-ui ipv6-addressing-snap-2-8-ui-2769.md
-	xpub push discourse -t snap-2-9-cli ipv6-addressing-snap-2-9-cli-2770.md
-	xpub push discourse -t snap-2-9-ui ipv6-addressing-snap-2-9-ui-2771.md
-	xpub pull discourse 2766 2777
-	chmod 644 originals/*
-	cp -p ipv6-addressing.md originals
-	chmod 444 originals/*
+#originals/ipv6-addressing.md: ipv6-addressing.md
+#	cp ipv6-addressing.md ipv6-addressing-deb-2-7-cli-2772.md
+#	cp ipv6-addressing.md ipv6-addressing-deb-2-7-ui-2773.md
+#	cp ipv6-addressing.md ipv6-addressing-deb-2-8-cli-2774.md
+#	cp ipv6-addressing.md ipv6-addressing-deb-2-8-ui-2775.md
+#	cp ipv6-addressing.md ipv6-addressing-deb-2-9-cli-2776.md
+#	cp ipv6-addressing.md ipv6-addressing-deb-2-9-ui-2777.md
+#	cp ipv6-addressing.md ipv6-addressing-snap-2-7-cli-2766.md
+#	cp ipv6-addressing.md ipv6-addressing-snap-2-7-ui-2767.md
+#	cp ipv6-addressing.md ipv6-addressing-snap-2-8-cli-2768.md
+#	cp ipv6-addressing.md ipv6-addressing-snap-2-8-ui-2769.md
+#	cp ipv6-addressing.md ipv6-addressing-snap-2-9-cli-2770.md
+#	cp ipv6-addressing.md ipv6-addressing-snap-2-9-ui-2771.md
+#	xpub push discourse -t deb-2-7-cli ipv6-addressing-deb-2-7-cli-2772.md
+#	xpub push discourse -t deb-2-7-ui ipv6-addressing-deb-2-7-ui-2773.md
+#	xpub push discourse -t deb-2-8-cli ipv6-addressing-deb-2-8-cli-2774.md
+#	xpub push discourse -t deb-2-8-ui ipv6-addressing-deb-2-8-ui-2775.md
+#	xpub push discourse -t deb-2-9-cli ipv6-addressing-deb-2-9-cli-2776.md
+#	xpub push discourse -t deb-2-9-ui ipv6-addressing-deb-2-9-ui-2777.md
+#	xpub push discourse -t snap-2-7-cli ipv6-addressing-snap-2-7-cli-2766.md
+#	xpub push discourse -t snap-2-7-ui ipv6-addressing-snap-2-7-ui-2767.md
+#	xpub push discourse -t snap-2-8-cli ipv6-addressing-snap-2-8-cli-2768.md
+#	xpub push discourse -t snap-2-8-ui ipv6-addressing-snap-2-8-ui-2769.md
+#	xpub push discourse -t snap-2-9-cli ipv6-addressing-snap-2-9-cli-2770.md
+#	xpub push discourse -t snap-2-9-ui ipv6-addressing-snap-2-9-ui-2771.md
+#	xpub pull discourse 2766 2777
+#	chmod 644 originals/*
+#	cp -p ipv6-addressing.md originals
+#	chmod 444 originals/*
  
 originals/hardening-your-maas-installation.md: hardening-your-maas-installation.md
 	cp hardening-your-maas-installation.md hardening-your-maas-installation-deb-2-7-cli-2664.md
@@ -1908,48 +1908,48 @@ originals/about-maas.md: about-maas.md
 	cp -p about-maas.md originals
 	chmod 444 originals/*
  
-originals/maas-documentation-25.md: maas-documentation.md
-	cp maas-documentation.md maas-documentation-25.md
-	cp maas-documentation.md maas-documentation-deb-2-7-cli-2844.md
-	cp maas-documentation.md maas-documentation-deb-2-7-ui-2845.md
-	cp maas-documentation.md maas-documentation-deb-2-8-cli-2846.md
-	cp maas-documentation.md maas-documentation-deb-2-8-ui-2847.md
-	cp maas-documentation.md maas-documentation-deb-2-9-cli-2848.md
-	cp maas-documentation.md maas-documentation-deb-2-9-ui-2849.md
-	cp maas-documentation.md maas-documentation-snap-2-7-cli-2838.md
-	cp maas-documentation.md maas-documentation-snap-2-7-ui-2839.md
-	cp maas-documentation.md maas-documentation-snap-2-8-cli-2840.md
-	cp maas-documentation.md maas-documentation-snap-2-9-cli-2842.md
-	cp maas-documentation.md maas-documentation-snap-2-9-ui-2843.md
-	./scripts/strip-navigation.sh maas-documentation-deb-2-7-cli-2844.md
-	./scripts/strip-navigation.sh maas-documentation-deb-2-7-ui-2845.md
-	./scripts/strip-navigation.sh maas-documentation-deb-2-8-cli-2846.md
-	./scripts/strip-navigation.sh maas-documentation-deb-2-8-ui-2847.md
-	./scripts/strip-navigation.sh maas-documentation-deb-2-9-cli-2848.md
-	./scripts/strip-navigation.sh maas-documentation-deb-2-9-ui-2849.md
-	./scripts/strip-navigation.sh maas-documentation-snap-2-7-cli-2838.md
-	./scripts/strip-navigation.sh maas-documentation-snap-2-7-ui-2839.md
-	./scripts/strip-navigation.sh maas-documentation-snap-2-8-cli-2840.md
-	./scripts/strip-navigation.sh maas-documentation-snap-2-9-cli-2842.md
-	./scripts/strip-navigation.sh maas-documentation-snap-2-9-ui-2843.md
-	xpub push discourse -t deb-2-7-cli maas-documentation-deb-2-7-cli-2844.md
-	xpub push discourse -t deb-2-7-ui maas-documentation-deb-2-7-ui-2845.md
-	xpub push discourse -t deb-2-8-cli maas-documentation-deb-2-8-cli-2846.md
-	xpub push discourse -t deb-2-8-ui maas-documentation-deb-2-8-ui-2847.md
-	xpub push discourse -t deb-2-9-cli maas-documentation-deb-2-9-cli-2848.md
-	xpub push discourse -t deb-2-9-ui maas-documentation-deb-2-9-ui-2849.md
-	xpub push discourse -t snap-2-7-cli maas-documentation-snap-2-7-cli-2838.md
-	xpub push discourse -t snap-2-7-ui maas-documentation-snap-2-7-ui-2839.md
-	xpub push discourse -t snap-2-8-cli maas-documentation-snap-2-8-cli-2840.md
-	xpub push discourse -t snap-2-8-ui maas-documentation-25.md
-	xpub push discourse -t snap-2-9-cli maas-documentation-snap-2-9-cli-2842.md
-	xpub push discourse -t snap-2-9-ui maas-documentation-snap-2-9-ui-2843.md
-	xpub pull discourse 25 25
-	xpub pull discourse 2838 2840
-	xpub pull discourse 2842 2849
-	chmod 644 originals/*
-	cp -p maas-documentation.md originals
-	chmod 444 originals/*
+#originals/maas-documentation-25.md: maas-documentation.md
+#	cp maas-documentation.md maas-documentation-25.md
+#	cp maas-documentation.md maas-documentation-deb-2-7-cli-2844.md
+#	cp maas-documentation.md maas-documentation-deb-2-7-ui-2845.md
+#	cp maas-documentation.md maas-documentation-deb-2-8-cli-2846.md
+#	cp maas-documentation.md maas-documentation-deb-2-8-ui-2847.md
+#	cp maas-documentation.md maas-documentation-deb-2-9-cli-2848.md
+#	cp maas-documentation.md maas-documentation-deb-2-9-ui-2849.md
+#	cp maas-documentation.md maas-documentation-snap-2-7-cli-2838.md
+#	cp maas-documentation.md maas-documentation-snap-2-7-ui-2839.md
+#	cp maas-documentation.md maas-documentation-snap-2-8-cli-2840.md
+#	cp maas-documentation.md maas-documentation-snap-2-9-cli-2842.md
+#	cp maas-documentation.md maas-documentation-snap-2-9-ui-2843.md
+#	./scripts/strip-navigation.sh maas-documentation-deb-2-7-cli-2844.md
+#	./scripts/strip-navigation.sh maas-documentation-deb-2-7-ui-2845.md
+#	./scripts/strip-navigation.sh maas-documentation-deb-2-8-cli-2846.md
+#	./scripts/strip-navigation.sh maas-documentation-deb-2-8-ui-2847.md
+#	./scripts/strip-navigation.sh maas-documentation-deb-2-9-cli-2848.md
+#	./scripts/strip-navigation.sh maas-documentation-deb-2-9-ui-2849.md
+#	./scripts/strip-navigation.sh maas-documentation-snap-2-7-cli-2838.md
+#	./scripts/strip-navigation.sh maas-documentation-snap-2-7-ui-2839.md
+#	./scripts/strip-navigation.sh maas-documentation-snap-2-8-cli-2840.md
+#	./scripts/strip-navigation.sh maas-documentation-snap-2-9-cli-2842.md
+#	./scripts/strip-navigation.sh maas-documentation-snap-2-9-ui-2843.md
+#	xpub push discourse -t deb-2-7-cli maas-documentation-deb-2-7-cli-2844.md
+#	xpub push discourse -t deb-2-7-ui maas-documentation-deb-2-7-ui-2845.md
+#	xpub push discourse -t deb-2-8-cli maas-documentation-deb-2-8-cli-2846.md
+#	xpub push discourse -t deb-2-8-ui maas-documentation-deb-2-8-ui-2847.md
+#	xpub push discourse -t deb-2-9-cli maas-documentation-deb-2-9-cli-2848.md
+#	xpub push discourse -t deb-2-9-ui maas-documentation-deb-2-9-ui-2849.md
+#	xpub push discourse -t snap-2-7-cli maas-documentation-snap-2-7-cli-2838.md
+#	xpub push discourse -t snap-2-7-ui maas-documentation-snap-2-7-ui-2839.md
+#	xpub push discourse -t snap-2-8-cli maas-documentation-snap-2-8-cli-2840.md
+#	xpub push discourse -t snap-2-8-ui maas-documentation-25.md
+#	xpub push discourse -t snap-2-9-cli maas-documentation-snap-2-9-cli-2842.md
+#	xpub push discourse -t snap-2-9-ui maas-documentation-snap-2-9-ui-2843.md
+#	xpub pull discourse 25 25
+#	xpub pull discourse 2838 2840
+#	xpub pull discourse 2842 2849
+#	chmod 644 originals/*
+#	cp -p maas-documentation.md originals
+#	chmod 443 originals/*
  
 originals/maas-communication.md: maas-communication.md
 	cp maas-communication.md maas-communication-deb-2-7-cli-2832.md
