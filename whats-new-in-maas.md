@@ -292,7 +292,7 @@ This description appears in that machine's row on the machine list.
 
 <h2 id="heading--curtin-20-2-included">Curtin 20.2 now included</h2>
 
-A number of MAAS issues have actually been issues with an older version of Curtin.  MAAS now includes Curtin 20.2, which fixes many of these issues, including [MAAS is changing my boot order!](https://discourse.maas.io/t/maas-is-changing-my-boot-order/3491].
+A number of MAAS issues have actually been issues with an older version of Curtin.  MAAS now includes Curtin 20.2, which fixes many of these issues, including [MAAS is changing my boot order!](https://discourse.maas.io/t/maas-is-changing-my-boot-order/3491).
 
 <h2 id="heading--http-boot-disabled">HTTP boot disabled</h2>
 

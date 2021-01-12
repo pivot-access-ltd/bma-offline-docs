@@ -234,7 +234,7 @@ If you have installed `bind9` or have it running, you will need to uninstall it 
 
 <a href="#heading--install-maas-snap"><h2 id="heading--install-maas-snap">Installing MAAS from the snap</h2></a>
 
-[Snaps^](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
+[Snaps](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
 
     $ sudo snap install maas --channel=2.8
 
@@ -263,7 +263,7 @@ MAAS supports the following modes, which dictate what services will run on the l
 | `none`        |        |      |          | Reinitialises MAAS and stops services |
 
 [note type="Warning" status="all mode being deprecated"]
-The MAAS initialisation mode "all" is [deprecated in MAAS version 2.8.0 and will be removed in MAAS version 2.9.0^](https://maas.io/deprecations/MD1).
+The MAAS initialisation mode "all" is [deprecated in MAAS version 2.8.0 and will be removed in MAAS version 2.9.0](https://maas.io/deprecations/MD1).
 [/note]
 
 <a href="#heading--init-poc"><h2 id="heading--init-poc">Initialising MAAS as a test configuration</h2></a>
@@ -434,7 +434,7 @@ which takes you through the following exchange:
     Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
 
 [note]
-You will use the username and password created above to access the web UI.  If you enter a [Launchpad^](https://launchpad.net/) or [GitHub^](https://github.com) account name with associated SSH key, MAAS will import them automatically.
+You will use the username and password created above to access the web UI.  If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
 [/note]
 
 <a href="#heading--maas-url"><h2 id="heading--maas-url">MAAS URL</h2></a>
@@ -487,7 +487,7 @@ If you have installed `bind9` or have it running, you will need to uninstall it 
 
 <a href="#heading--install-maas-snap"><h2 id="heading--install-maas-snap">Installing MAAS from the snap</h2></a>
 
-[Snaps^](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
+[Snaps](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
 
     $ sudo snap install --channel=2.9/stable maas
 
@@ -682,7 +682,7 @@ which takes you through the following exchange:
     Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
 
 [note]
-You will use the username and password created above to access the web UI.  If you enter a [Launchpad^](https://launchpad.net/) or [GitHub^](https://github.com) account name with associated SSH key, MAAS will import them automatically.
+You will use the username and password created above to access the web UI.  If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
 [/note]
 
 <a href="#heading--maas-url"><h2 id="heading--maas-url">MAAS URL</h2></a>
@@ -798,7 +798,7 @@ deb-2-8-ui -->
 
 You can install a 2.7 stable version of MAAS via the PPA listed on the [MAAS launchpad](https://launchpad.net/~maas), specifically:
 
--   [ppa:maas/2.7^](https://launchpad.net/~maas/+archive/ubuntu/2.7)
+-   [ppa:maas/2.7](https://launchpad.net/~maas/+archive/ubuntu/2.7)
 
 To add the 2.7 PPA, type:
 

@@ -1,524 +1,952 @@
-<!-- deb-2-7
+<!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-deb-2-7 -->
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/25)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|CLI ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+deb-2-7-cli -->
 
-<!-- snap-2-7
+<!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3335) ~ [UI](/t/whats-new-in-maas/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-snap-2-7 -->
+|Snap|CLI ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
+|Snap|[CLI](/t/maas-installation/3318) ~ UI|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 snap-2-7-ui -->
 
 <!-- deb-2-7-ui
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
+|Snap|[CLI](maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ UI|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 deb-2-7-ui -->
 
 <!-- snap-2-8-cli
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335) | CLI ~ UI |[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336) |
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335) |CLI ~ UI |[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336) |
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319) | CLI ~ [UI](/t/maas-installation/3321) |[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323) |
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325) |[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327) |[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329) |
 snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ UI|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 snap-2-8-ui -->
 
 <!-- deb-2-8-cli
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~  UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|CLI ~  [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ UI|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 deb-2-8-ui -->
 
 <!-- snap-2-9-cli
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~  UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|CLI ~  [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 snap-2-9-cli -->
 
-<!-- snap-2-9-ui
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-snap-2-9-ui -->
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ UI|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 
+<!-- deb-2-9-cli
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|CLI ~  [UI](/t/maas-installation/3329)|
+deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ UI|
 deb-2-9-ui -->
 
-<!-- snap-2-7 snap-2-7-ui deb-2-7 deb-2-7-ui
-<h2>MAAS 2.7 release notes</h2>
-
-<h3>MAAS 2.7.3 released</h3>
-
-On 24 August 2020, MAAS 2.7.3 was released, replacing the `2.7/stable` channel in snap and the [ppa:maas/2.7^](https://launchpad.net/~maas/+archive/ubuntu/2.7).  You can update your 2.7 release to 2.7.3 by with:
-
-    snap refresh --channel=2.7/stable
-
-or by using the aforementioned PPA.  The focus for this release has been [bugfixing^](https://launchpad.net/maas/+milestone/2.7.3rc1) -- there were no changes to MAAS since RC1.
-
-Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
-
-<h3>MAAS 2.7.2 released</h3>
-
-On 30 July 2020, MAAS 2.7.2 was released, replacing the `2.7/stable` channel in snap and the [ppa:maas/2.7^](https://launchpad.net/~maas/+archive/ubuntu/2.7).  You can update your 2.7 release to 2.7.2 by with:
-
-    snap refresh --channel=2.7/stable
-
-or by using the aforementioned PPA.  The focus for this release has been [bugfixing^](https://launchpad.net/maas/+milestone/2.7.2rc1) -- there were no changes to MAAS since RC1.
-
-Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
-
-<h3>Upgrading from MAAS 2.6 snap</h3>
-
-If you are using the MAAS 2.6 snap, which had to be installed with `--devmode`, you can update to 2.7 with the following parameters:
-
-    snap refresh maas --devmode --channel=2.7
-
-Be aware that you will still be in `--devmode`, which means the snap won't automatically upgrade.  You'll have to check manually for updates (via `snap refresh`).  Once you’re upgraded to MAAS 2.7 using this method, future snap updates won’t require the devmode parameter. So, for example, when a later version of 2.7 (or even 2.8) is released, you will be able to `snap refresh` to those channels and get out of devmode.  Once refreshed out of devmode in this way, you'll get updates for point releases automatically.
-
-An alternative to avoid devmode would be to do a clean install of MAAS 2.7, that is, removing 2.6 with `snap remove maas` and reinstalling MAAS 2.7 with:
-
-    snap install --channel=2.7 maas
-
-Note that you can check the devmode status of your snap with:
-
-    snap list maas
-
-
----
-
-<h2>MAAS 2.7 released</h2>
-
-Following on from MAAS 2.6.2, we are happy to announce that MAAS 2.7 is now available. This release features some critical bug fixes, along with some exciting new features:
-
-### CentOS 8 image support
-
-Users can now deploy CentOS 8 images in MAAS. The Images page in the MAAS UI will now offer a choice to select and download CentOS 8. Note that users of previous versions may see CentOS 8 as an available option, but cannot download or deploy it.
-
-### Network testing features
-
-MAAS 2.7 brings a slate of new network testing and link detection features, as detailed below.
-
-#### Network link disconnect detection
-
-MAAS 2.7 can check whether links are connected or disconnected. Previously, when commissioning, you couldn’t detect unplugged cables. Now you can. You will have to take a couple of steps for existing MAAS deployments: First, you will have to upgrade to 2.7, then run commissioning again to see if a link is disconnected. But you no longer have to puzzle over what’s broken when this happens.
-
-MAAS will report disconnected network cables, and users will receive a warning when trying to configure a disconnected interface. Administrators will be able to change cable connection status through both API and UI after manually rectifying the situation.
-
-#### Slow network link detection
-
-MAAS 2.7 makes sure you’re getting the most out of your link speed. As servers and hardware get faster — 10G, 40G, even 100G NICS — the chances increase that you might plug your 10G NIC into a 1G switch, for example. Previously, with MAAS, you’d be stuck with the speed of the slowest link, but there wasn’t a way to verify your link speed without recommissioning. Depending on your physical hardware, that might still be an issue, but the MAAS UI can now warn you if your interface is connected to a link slower than what the interface supports. And all information shown in the UI is available via the API, as well. You can still replace a slow switch without recommissioning.
-
-MAAS will automatically detect link and interface speed during commissioning and report them via the API/UI. Administrators will be able to change or update the link and interface speeds via the API/UI after manual changes to the connection. MAAS 2.7 will also report link speed, allowing users to filter and list machines by their link speed in the UI. Users can also employ this information to allocate machines by their link speed in the API.
-
-#### Network validation scripts and testing
-
-MAAS 2.7 allows you to configure network connectivity testing in a number of ways. If you’ve used MAAS, you know that if it can’t connect to the rack controller, deployment can’t complete. Now MAAS can check connectivity to the rack controller and warn you if there’s no link, long before you have to try and debug it. For example, if you can’t connect to your gateway controller, traffic can’t leave your network. MAAS can now check this link and recognise that there’s no connectivity, which alleviates a lot of annoying (and sometimes hard-to-detect) network issues.
-
-Users can now test their network configuration to check for:
-
-1. Interfaces which have a broken network configuration
-2. Bonds that are not fully operational
-3. Broken gateways, rack controllers, and Internet links
-
-In addition, Internet connectivity testing has been greatly expanded. Previously, MAAS gave a yes/no link check during network testing. Now you can give a list of URLs or IP addresses to check. In the ephemeral environment, standard DHCP is still applied, but when network testing runs, we can apply your specific configuration for the duration of the test. While all URLs / IPs are tested with all interfaces, we do test each of your interfaces individually, including breaking apart bonded NICS and testing each side of your redundant interfaces. You can also run different tests on each pass, e.g., a different set of URLs, although each run would be a different testing cycle. For testing individual interfaces, you can use the API.
-
-Of course, the main network feature available in 2.7 is improved — and customisable — network testing. You can now create your own commissioning scripts and tests related to networking. You can create your own network tests (e.g., a network throughput test) and run them during the network testing portion of the MAAS workflow. There are no particular restrictions on these scripts, so you can test a wide variety of possible conditions and situations.
-
-Administrators can upload network tests and test scripts, as well as create tests which accept an interface parameter, or scripts which apply custom network configurations. Users can then specify (unique) parameters using the API, override machines which fail network testing (allowing their use), and suppress individual failed network tests. All users benefit from enhanced reporting, as they are now able to see the overall status of all interfaces via the API, the UI Machine list, and the UI Interfaces tab; review the health status from all interface tests; and view the interface test results by interface name and MAC.
-
-#### Live IP address detection to prevent address conflicts
-
-In some cases, MAAS connects with subnet which are not empty. Normally, the user has to tell MAAS about IP addresses which are already assigned on that subnet, and if that step is skipped, MAAS may assign and in-use IP address to one of the machines under its control, leading to an IP conflict.
-
-MAAS 2.7 alleviates this problem by detecting IPs in use on a subnet, so that it can avoid assigning that IP to a MAAS-managed machine. The system is not perfect; for example, if NIC on a subnet-connected machine is in a quiescent state -- or turned off -- MAAS may not detect it before duplicating the IP. Note that at least one rack controller must have access to the previously-assigned machine in order for this feature to work. MAAS 2.7 will also recognise when the subnet ARP cache is full and re-check the oldest IPs added to the cache to search for free IP addresses.
-
-### Introductory NUMA / SR-IOV support
-
-NUMA (Non-Uniform Memory Access) is a useful way of achieving high-efficiency computing, by pairing a CPU core with a very fast connection to RAM and PCI buses. Typically the CPU socket and the closest banks of DIMM constitute a NUMA node. Obviously, if you’re deploying a MAAS machine under NUMA to get maximum performance, you would like for that machine to be confined to a single NUMA node. MAAS 2.7 introduces this capability.
-
-MAAS will display the NUMA node index and details. Users can also see the count of available NUMA nodes, along with CPU cores, memory, NICS, and node spans for bonds and block devices (although node-spanning may not produce suitable performance). From a reporting standpoint, users can filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID.
-
-Similarly, the SR-IOV (Single Root I/O Virtualisation) allows a PCIe device (e.g, a NIC) to appear to be multiple separate devices. A network adaptor can be subdivided into multiple adaptors by adding a Virtual Function (VF). MAAS 2.7 supports the use of multiple VF adaptors to intelligently use SR-IOV edge clouds, by allowing users to see that a NIC supports SR-IOV, along with the supported VF counts.
-
-The goal of this feature is to help users choose the right machine to deploy an edge cloud.
-
-### Settings and user preferences redesign
-
-As part of our efforts to make the UI faster and more responsive, we have completely redesigned the Settings and User preferences within the MAAS UI.
-
-### Strictly-confined Snap support
-
-With 2.7, MAAS is fully confined within the Snap container. No need for installation qualifiers (such as “--devmode”) to permit use of external resources, i.e., outside the Snap container. This means that we will begin to transition to recommending the Snap install as the default (and primary) MAAS install method. This also means that MAAS now gains the benefit of confined snap security features.
-
-### Update to hardware information gathering methods
-
-MAAS has switched hardware information gathering from lshw/lsblk to lxd output during commissioning, because it more easily provides the information needed to complete resource discovery. Note that this information may not be particularly reliable for your use, so you may need to create your own commissioning scripts if you need something more detailed or specific.
-
-### Bug fixes
-
-A number of bug fixes (see the [list in Launchpad^](https://bugs.launchpad.net/maas/+bugs?field.milestone%3Alist=87757&field.milestone%3Alist=89662&field.milestone%3Alist=89714&field.milestone%3Alist=89840&field.milestone%3Alist=89954&field.milestone%3Alist=89682&field.status%3Alist=FIXRELEASED)).
-snap-2-7-cli snap-2-7-ui deb-2-7 deb-2-7-ui -->
-
-<h2>MAAS 2.9 release notes</h2>
-
-Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now available.
-
-#### What are the new features & fixes for MAAS 2.9?
-
-1. [Focal Fossa (20.04) as default commissioning/deployment release](#heading--focal-default)
-2. [Support for OpenVswitch bridge type](#heading--openvswitch)
-3. [Support for NUMA, SR-IOV, and hugepages](#heading--numa)
-4. [Improved performance for large MAAS installations](#heading--improved-perf-large-maas)
-5. [New release notifications](#heading--new-release-notifications)
-6. [IPMI configuration screens](#heading--ipmi-config-screens)
-7. [Descriptions when marking machines broken](#heading--descrip-mark-mach-broken)
-8. [Curtin 20.2 now included](#heading--curtin-20-2-included)
-9. [HTTP boot disabled](#heading--http-boot-disabled)
-10. [BMC/IPMI default parameter additions](#heading--bmc-param-additions)
-11. [New global IPMI configuration options](#heading--new-config-options)
-12. [Addition of IPMI config options to UI](#heading--global-config-settings)
-13. [New MAAS CLI power command](#heading--maas-power)
-14. [Commissioning speed improvements](#heading--commissioning-speed)
-15. [BMC improvements](#heading--bmc-improve)
-16. [IPMI power driver upgrades](#heading--ipmi-driver)
-17. [Enlistment script improvements](#heading--enlistment-scripts)
-18. [Commissioning script improvements](#heading--commissioning-scripts)
-19. [Commissioning script reordering](#heading--commissioning-reorder)
-20. [Reader Adaptive Documentation](#heading--rad)
-21. [Offline documentation](#heading--offline-docs)
-
-<h4>Five other questions you may have:</h4>
-
-1. [What known issues should I be aware of?](#heading--known-issues)
-2. [How do I install MAAS 2.9?](/t/maas-installation/3323)
-3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?](/t/maas-installation/3323#heading--upgrade-maas-snap)
-4. [How do I install MAAS 2.9 from packages?](/t/maas-installation/3329)
-5. [What bugs are fixed so far in this release?](#heading--bug-fixes)
-
-<h2 id="heading--focal-default">Focal Fossa (Ubuntu 20.04 LTS) as default release</h2>
-
-Ubuntu 20.04 LTS (Focal Fossa) is now the default commissioning and deployment release for new MAAS installations.  Machines deployed with Focal may now be registered as KVM hosts.
-
-<h2 id="heading--openvswitch">Support for OpenVswitch bridge type</h2>
-
-MAAS 2.9 allows you to create an OpenVswitch bridge type when creating a bridge.
-
-<h2 id="heading--numa">Support for NUMA, SR-IOV, and hugepages</h2>
-
-MAAS 2.9 adds extensive optimisation tools for using NUMA with virtual machines. You can now see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory. You can quickly spot a VM running in multiple NUMA nodes, and optimise accordingly, with instant updates on pinning and allocations. You can also tell which VMs are currently running.  Using the CLI, you can also pin nodes to specific cores, and configure hugepages for use by VMs.
-
-Specifically, there are five new features available to support NUMA, SR-IOV, and hugepages:
-
-1. You can examine resources on a per-NUMA-node basis.
-2. You can pin nodes to specific cores (CLI only).
-3. You can see resources for VM hosts supporting NUMA nodes.
-4. You can see the alignment between VM host interfaces and NUMA nodes.
-5. You can configure and use hugepages (configurable in CLI only).
-
-This functionality comes with an enhanced panel in the "KVM" details section:
-
-<a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
-
-See the [VM hosting](/t/vm-hosting-snap-2-9-ui/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
-
-<h2 id="heading--improved-perf-large-maas">Improved performance for large MAAS installations</h2>
-
-MAAS 2.9 includes changes to the machine batch size that the UI loads. Previously the UI loaded machines in batches of 25; it now pulls in 25 for the first call, then 100 at a time in subsequent batches.
-
-You can see the results of the investigation in [this video podcast](https://discourse.maas.io/t/maas-show-and-tell-improving-ui-performance-for-large-maas-installs/3515).
-
-<h2 id="heading--new-release-notifications">New release notifications</h2>
-
-MAAS now includes new release notifications for users and administrators.  These appear when a new release is available:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/c4f426b9f493a970efcc59c4d948d24fa5f12860.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c4f426b9f493a970efcc59c4d948d24fa5f12860.png"></a>
-
-Both regular and administrative users can snooze these notifications for two weeks at a time.  Administrative users can opt out of new release notifications completely, preventing notifications for any user of that MAAS.
-
-<h2 id="heading--ipmi-config-screens">IPMI configuration screens</h2>
-
-MAAS now includes UI panels corresponding to the [IPMI power driver upgrades](#heading--ipmi-driver) mentioned earlier:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/433b28f5dd807caef7c7382f9a877607c2ea2dac.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/433b28f5dd807caef7c7382f9a877607c2ea2dac.png"></a>
-
-This screen can be reached from `Settings | Configuration | Commissioning`.
-
-<h2 id="heading--descrip-mark-mach-broken">Descriptions when marking machines broken</h2>
-
-When marking a machine broken, a description can now included:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png"></a>
-
-This description appears in that machine's row on the machine list.
-
-<h2 id="heading--curtin-20-2-included">Curtin 20.2 now included</h2>
-
-A number of MAAS issues have actually been issues with an older version of Curtin.  MAAS now includes Curtin 20.2, which fixes many of these issues, including [MAAS is changing my boot order!](https://discourse.maas.io/t/maas-is-changing-my-boot-order/3491).
-
-<h2 id="heading--http-boot-disabled">HTTP boot disabled</h2>
-
-MAAS 2.9 disables HTTP boot. There are known issues with HTTP boot in MAAS, as well as known issues for HTTP boot with grub (e.g. https://bugs.launchpad.net/maas/+bug/1899581)  This shouldn’t affect machine boot, as machines will normally try PXE as a fallback boot method if HTTP boot fails.  Be aware, though, that machine boot will fail if the BIOS is configured to boot only over HTTP; those machines need to be reconfigured to use PXE.
-
-<h2 id="heading--bmc-param-additions">30-maas-01-bmc-config parameter additions</h2>
-
-Four new parameters have been added for IPMI BMC configuration.  These parameters will pull from the global defaults, eliminating the need to set the corresponding parameter in each instance.
-
-1. maas_auto_ipmi_user - The username for the MAAS created IPMI user. Default comes from the global configuration setting.
-2. maas_auto_ipmi_user_password - The password for the MAAS created IPMI user, by default a random password is generated.
-3. maas_auto_ipmi_k_g_bmc_key - he IPMI K_g preshared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting. If an IPMI K_g key is set but the key is rejected by the BMC MAAS will automatically retry without the K_g key. This works around an edge case where some BMCs will allow you to set an K_g key but don’t allow it to be used.
-4. maas_auto_ipmi_user_privilege_level - The IPMI user privilege level to use when adding the MAAS IPMI user. Possible options are USER, OPERATOR, or ADMIN. Default comes from the global configuration setting.
-
-Note that MAAS will not capture the BMC MAC address when detecting IPMI BMCs.
-
-<h2 id="heading--new-config-options">New global IPMI configuration options</h2>
-
-Two new global IPMI configuration options have been added:
-
-1. maas_auto_ipmi_k_g_bmc_key - sets a global default IPMI BMC key.
-2. maas_auto_ipmi_user_privilege_level - sets a global default IPMI BMC user privilege level.
-    
-<h2 id="heading--global-config-settings">Addition of IPMI config options to UI</h2>
-
-You may now set the global configuration options `maas_auto_ipmi_user`, `maas_auto_ipmi_k_g_bmc_key`, and `maas_auto_ipmi_user_privilege_level` on the "Settings" page in the UI under "Commissioning."
-
-<h2 id="heading--maas-power">New maas.power CLI command</h2>
-
-Available in all MAAS 2.9 releases is the new `maas.power` CLI command. This command interfaces directly with the supported MAAS power drivers. This command can be used to control the power on a machine before it has been added to MAAS, for all maas supported power drivers.  You can get power status, turn machines on or off, and cycle power.  The `maas.power --help` shows usage details, including syntax for naming each power type (consistent with other MAAS CLI commands).
-
-<h2 id="heading--rad">IPMI BMC detection improvements (RAD)</h2>
-
-This release adds two improvements to IPMI BMC detection capability:
-
-1. The IPMI cipher suite ID will now be automatically detected. MAAS tries to find the most secure cipher suite available. Preference order is 17, 3, 8, 12. If detection fails MAAS will fall back to using freeipmi-tool default, 3, which is what previous versions of MAAS use.
-2. The IPMI K_g BMC key will now be automatically detected if previously set. 
-
-<h3 id="heading--rad">Reader Adaptive Documentation (RAD)</h3>
-
-This release features Reader Adaptive Documentation, which allows you to adapt individual pages to your install method (Snap vs. Deb), version (2.7/2.8/2.9), and preferred interface (CLI/UI). 
-
-<h2 id="heading--offline-docs">Offline documentation</h2>
-
-This release will include offline documentation for those users whose MAAS installations reside behind firewalls, unable to access the online documentation.
-
-<h2 id="heading--bmc-improve">BMC improvements</h2>
-
-Three substantial improvements to BMC usage have been released:
-
-1. IPMI, HP Moonshot, and Facebook Wedge BMC detection and configuration scripts have been migrated to the commissioning script `30-maas-01-bmc-config `.
-2. BMC detection and configuration are now logged to commissioning results.
-3. If BMC configuration is skipped a ScriptResult will log this result, and indicate which user chose to skip the configuration step.
-
-<h3 id="heading--ipmi-driver">IPMI power driver upgrades</h3>
-
-Three new configuration options have been added to the IPMI power driver:
-
-1. K_g - The BMC Key of the IPMI device. Used to encrypt all traffic to and from the device during communication.
-2. Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
-3. Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
-
-See the [2.9 UI](https://maas.io/docs/snap/2.9/ui/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docs/snap/2.9/cli/power-management#heading--ipmi) power management pages for details.
-
-<h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
-
-Script flow and capabilities have been improved in three ways:
-
-<ol>
-<li>`maas-run-remote-scripts` can now enlist machines.</li>
-<li>Enlistment `user_data` scripts have been removed.</li>
-<li> The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.</li>
-</ol>
-
-<h2 id="heading--commissioning-scripts">Major improvements to commissioning script capabilities</h2>
-
-Seven major improvements were made to commissioning script flow and capabilities:
-
-<ol>
-<li>Commissioning scripts can now send BMC configuration data</li>
-<li>Commissioning scripts can now be used to configure BMC data. </li>
-<li>The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts. </li>
-<li>These scripts may write BMC power credentials to BMC_CONFIG_PATH in a YAML format where each key is the power parameter. </li>
-<li>If the commissioning script returns 0, it will be sent to MAAS. </li>
-<li>The first script to write BMC_CONFIG_PATH is the only script that may configure the BMC, allowing you to override MAAS's builtin BMC detection.</li>
-<li>All builtin commissioning scripts have been migrated into the database.</li>
-</ol>
-
-<h2 id="heading--commissioning-reorder">Commissioning script reordering</h2>
-
-Commissioning scripts have been reordered and some are now set to run in parallel. You can now easily set a script to run before the builtin MAAS commissioning scripts. There are nine signficant changes:
-
-<ol>
-<li>00-maas-03-install-lldpd -> 20-maas-01-install-lldpd</li>
-
-<li>00-maas-05-dhcp-unconfigured-ifaces -> 20-maas-02-dhcp-unconfigured-ifaces</li>
-
-<li>99-maas-05-kernel-cmdline -> maas -kernel-cmdline</li>
-
-<li>00-maas-00-support-info -> maas-support-info(now runs in parallel)</li>
-
-<li>00-maas-01-lshw -> maas-lshw(now runs in parallel)</li>
-
-<li>00-maas-04-list-modaliases -> maas-list-modaliases(now runs in parallel)</li>
-
-<li>00-maas-06-get-fruid-api-data -> maas-get-fruid-api-data(now runs in parallel)</li>
-
-<li>00-maas-08-serial-ports -> maas-serial-ports(now runs in parallel)</li>
-
-<li>99-maas-01-capture-lldp -> maas-capture-lldp(now runs in parallel)</li>
-</ol>
-
-See the [commissioning logs page](https://maas.io/docs/snap/2.9/ui/commissioning-logs) for more details on these changes.
-
-<h2 id="heading--commissioning-speed">Improvements in commissioning speed and logging</h2>
-
-Four improvements have been made to speed up the commissioning process, mostly by running scripts in parallel (see above):
-
-<ol>
-<li>Commissioning should now take 60s.</li>
-<li>Logging has been added to 20-maas-01-install-lldpd  (commissioning log output).</li>
-<li>Logging added to 20-maas-02-dhcp-unconfigured-ifaces (commissioning log output).</li>
-<li>`user_data` can now be input directly into the UI.</li>
-</ol>
-
-<h2 id="heading--bug-fixes">Bug fixes</h2>
-
-1. MAAS 2.9 includes a fix for [Bug #1894727: Admin uses cannot change other user's passwords via the UI](https://bugs.launchpad.net/maas/+bug/1894727).
-
-<h2 id="heading--known-issues">Known issues</h2>
-
-### RAD LHS menu
-
-There is a known issue with the Reader Adaptive Documentation left-hand-side menu (navigation), in that the menu links cannot currently be adapted to the RAD parameters.  This means that selecting a different page in the LHS menu will take you the the RAD for the current recommended version (in this case, Snap/2.8/UI).  Every page that is different in RAD, though, should present you with a top menu, so that you can choose the RAD parameters matching your own preferences.
-
-### Erroneous message about "missing migration"
-
-When upgrading to any release above 2.8, using packages, you may receive a warning about missing migration(s) -- specifically something that looks like this:
-
-```
-Setting up maas-common (2.8.3~rc1-8583-g.9ddc8051f-0ubuntu1~18.04.1) ...
-Setting up maas-region-api (2.8.3~rc1-8583-g.9ddc8051f-0ubuntu1~18.04.1) ...
-Setting up maas-region-controller (2.8.3~rc1-8583-g.9ddc8051f-0ubuntu1~18.04.1) ...
-Operations to perform:
-  Apply all migrations: auth, contenttypes, maasserver, metadataserver, piston3, sessions, sites
-Running migrations:
-  No migrations to apply.
-  Your models have changes that are not yet reflected in a migration, and so won't be applied.
-  Run 'manage.py makemigrations' to make new migrations, and then re-run 'manage.py migrate' to apply them.
+<!-- snap-2-7-ui snap-2-7-cli 
+[Snaps](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
+
+``` bash
+sudo snap install maas --channel=2.7
 ```
 
-This warning message has no effect on the installation or operation of MAAS, so it can be safely ignored.
+After entering your password, the snap will download and install from the 2.7 channel. However, MAAS needs initialising before it's ready to go.
+
+<a href="#heading--initialisation"><h2 id="heading--initialisation">Initialisation</h2></a>
+
+The next step involves initialising MAAS with a *run mode*. Selecting one of the following modes dictates what services will run on the local system:
+
+| Mode          | Region | Rack | Database | Description                           |
+|---------------|--------|------|----------|---------------------------------------|
+| `all`*        | X      | X    | X        | All services (see warning below)      |
+| `region`      | X      |      |          | Region API server only                |
+| `rack`        |        | X    |          | Rack controller only                  |
+| `region+rack` | X      | X    |          | Region API server and rack controller |
+| `none`        |        |      |          | Reinitialises MAAS and stops services |
+
+[note type="Warning" status="all mode being deprecated"]
+Configuring the MAAS snap in "all" mode will be [deprecated in MAAS version 2.8.0 and removed in MAAS version 2.9.0](https://maas.io/deprecations/MD1).
+[/note]
+
+To initialise MAAS and select a run mode, use the `maas init` command with the *--mode* argument.
+
+<a href="#heading--example"><h3 id="heading--example">Example</h3></a>
+
+The following demonstrates the `all` mode, a popular initialisation choice for MAAS:
+
+``` bash
+sudo maas init --mode all
+```
+
+A dialog will appear that will gather some basic information:
+
+``` no-highlight
+MAAS URL [default=http://10.55.60.1:5240/MAAS]: http://192.168.122.1:5240/MAAS
+Create first admin account:       
+Username: admin
+Password: ******
+Again: ******
+Email: admin@example.com
+Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
+```
+
+[note]
+You will use the username and password to access the web UI.  If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
+[/note]
+
+<a href="#heading--maas-url"><h3 id="heading--maas-url">MAAS URL</h3></a>
+
+All run modes (except `none`) prompt for a MAAS URL, interpreted differently depending on the mode:
+
+-   `all`, `region+rack`: Used to create a new region controller as well as to tell the rack controller how to find the region controller.
+-   `region`: Used to create a new region controller.
+-   `rack`: Used to locate the region controller.
+
+<a href="#heading--shared-secret"><h3 id="heading--shared-secret">Shared secret</h3></a>
+
+The 'rack' and 'region+rack' modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.
+
+<a href="#heading--reinitialising-maas"><h3 id="heading--reinitialising-maas">Reinitialising MAAS</h3></a>
+
+To re-initialise MAAS, for example, to switch from `rack` to `region`:
+
+``` bash
+sudo maas init --mode region
+```
+
+<a href="#heading--additional-init-options"><h3 id="heading--additional-init-options">Additional `init` options</h3></a>
+
+The `init` command can take a number of optional arguments. To list them all as well as read a brief description of each:
+
+``` bash
+sudo maas init --help
+```
+
+<a href="#heading--configuration-verification"><h2 id="heading--configuration-verification">Configuration verification</h2></a>
+
+After a *snap* installation of MAAS, you can verify the currently-running configuration with:
+
+``` bash
+sudo maas config
+```
+
+Sample output (for mode 'all'):
+
+``` no-highlight
+Mode: all
+Settings:
+maas_url=http://192.168.122.1:5240/MAAS
+```
+
+<a href="#heading--service-statuses"><h2 id="heading--service-statuses">Service statuses</h2></a>
+
+You can check the status of running services with:
+
+``` bash
+sudo maas status
+```
+
+Sample output (for mode 'all'):
+
+``` no-highlight
+bind9                            RUNNING   pid 7999, uptime 0:09:17
+dhcpd                            STOPPED   Not started
+dhcpd6                           STOPPED   Not started
+ntp                              RUNNING   pid 8598, uptime 0:05:42
+postgresql                       RUNNING   pid 8001, uptime 0:09:17
+proxy                            STOPPED   Not started
+rackd                            RUNNING   pid 8000, uptime 0:09:17
+regiond:regiond-0                RUNNING   pid 8003, uptime 0:09:17
+regiond:regiond-1                RUNNING   pid 8008, uptime 0:09:17
+regiond:regiond-2                RUNNING   pid 8005, uptime 0:09:17
+regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
+tgt                              RUNNING   pid 8040, uptime 0:09:15
+```
+snap-2-7-ui snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2527).
+snap-2-7-ui -->
+
+<!-- snap-2-7-cli
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2526).
+snap-2-7-cli -->
+
+<!-- snap-2-8-ui snap-2-8-cli
+MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.  This article will walk you through both install methods.
+
+#### Thirteen questions you may have:
+
+1. [How do I install (but not initialise) the MAAS snap?](#heading--install-maas-snap)
+2. [How do I upgrade my 2.7 snap to version 2.8?](#heading--upgrade-maas-snap)
+3. [What are MAAS initialisation modes?](#heading--maas-init-modes)
+4. [How do I initialise MAAS for a test or proof-of-concept configuration?](#heading--init-poc)
+5. [How do I initialise MAAS for a production configuration?](#heading--init-prod)
+6. [How do I migrate an existing snap install?](/t/tips-tricks-and-traps/1506#heading--migrate-maas)
+7. [What if I want to manually export the MAAS database to an existing PostgreSQL server?](/t/tips-tricks-and-traps/1506#heading--manual-export)
+8. [How can I check the service status of my MAAS configuration?](#heading--service-status)
+9. [How do I re-initialise MAAS, if I want to?](#heading--reinitialising-maas)
+10. [How can I discover additional init options?](#heading--additional-init-options)
+11. [Give me an example of initialising MAAS](#heading--example)
+12. [Tell me about the MAAS URL](#heading--maas-url)
+13. [Tell me about the shared secret](#heading--shared-secret)
+
+[note]
+If you have installed `bind9` or have it running, you will need to uninstall it before installing MAAS.  You can check with `ps aux | grep named` to see if it's running. The `bind9` daemon interferes with MAAS operation and creates a number of unusual, hard-to-debug errors -- but don't worry, MAAS provides DNS and can work with existing DNS servers.
+[/note]
+
+<a href="#heading--install-maas-snap"><h2 id="heading--install-maas-snap">Installing MAAS from the snap</h2></a>
+
+[Snaps](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
+
+    $ sudo snap install maas --channel=2.8
+
+After entering your password, the snap will download and install from the 2.8 channel -- though MAAS needs initialising before it's ready to go.
+
+<a href="#heading--upgrade-maas-snap"><h2 id="heading--upgrade-maas-snap">Upgrading MAAS from 2.7</h2></a>
+
+If you want to upgrade from a 2.7 snap to 2.8, and you are using a `region+rack` configuration, use this command:
+
+    $ sudo snap refresh --channel=2.8 maas
+
+After entering your password, the snap will refresh from the 2.8 channel.  You will **not** need to re-initialise MAAS.
+
+If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
+
+<a href="#heading--maas-init-modes"><h2 id="heading--maas-init-modes">MAAS initialisation modes</h2></a>
+
+MAAS supports the following modes, which dictate what services will run on the local system:
+
+| Mode          | Region | Rack | Database | Description                           |
+|---------------|--------|------|----------|---------------------------------------|
+| `all`*        | X      | X    | X        | Deprecated (see warning below)        |
+| `region`      | X      |      |          | Region API server only                |
+| `rack`        |        | X    |          | Rack controller only                  |
+| `region+rack` | X      | X    |          | Region API server and rack controller |
+| `none`        |        |      |          | Reinitialises MAAS and stops services |
+
+[note type="Warning" status="all mode being deprecated"]
+The MAAS initialisation mode "all" is [deprecated in MAAS version 2.8.0 and will be removed in MAAS version 2.9.0](https://maas.io/deprecations/MD1).
+[/note]
+
+<a href="#heading--init-poc"><h2 id="heading--init-poc">Initialising MAAS as a test configuration</h2></a>
+
+We want to provide a more compact version for those who may be testing MAAS.  To achieve this, we're providing a separate snap, called `maas-test-db`, which provides a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.
+
+Once MAAS is installed, you can use the `--help` flag with `maas init` to get relevant instructions:
+ 
+    $ sudo maas init --help
+    usage: maas init [-h] {region+rack,region,rack} . . .
+
+    Initialise MAAS in the specified run mode.
+
+    optional arguments:
+      -h, --help            show this help message and exit
+
+    run modes:
+      {region+rack,region,rack}
+        region+rack         Both region and rack controllers
+        region              Region controller only
+        rack                Rack controller only
+
+    When installing region or rack+region modes, MAAS needs a
+    PostgreSQL database to connect to.
+
+    If you want to set up PostgreSQL for a non-production deployment on
+    this machine, and configure it for use with MAAS, you can install
+    the maas-test-db snap before running 'maas init':
+        sudo snap install maas-test-db
+        sudo maas init region+rack --database-uri maas-test-db:///
+
+We'll quickly walk through these instructions to confirm your understanding.  First, install the `maas-test-db` snap:
+ 
+    sudo snap install maas-test-db
+
+Note that this step installs a a running PostgreSQL and a MAAS-ready database instantiation.  When it's done, you can double check with a built-in PostgreSQL shell:
+
+    $ maas-test-db.psql
+    psql (10.6)
+    Type "help" for help.
+
+    postgres=# \l
+
+This will produce a list of databases, one of which will be `maasdb`, owned by `maas`.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the `maas init` command:
+
+    sudo maas init region+rack --database-uri maas-test-db:///
+
+After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:
+ 
+    MAAS URL [default=http://10.45.222.159:5240/MAAS]:
+
+When you've entered a suitable URL, or accepted the default, the following prompt will appear:
+ 
+    MAAS has been set up.
+
+    If you want to configure external authentication or use
+    MAAS with Canonical RBAC, please run
+
+      sudo maas configauth
+
+    To create admins when not using external authentication, run
+
+      sudo maas createadmin
+
+Let's assume you just want a local testing user named `admin`:
+
+    $ sudo maas createadmin
+    Username: admin
+    Password: ******
+    Again: ******
+    Email: admin@example.com
+    Import SSH keys [] (lp:user-id or gh:user-id): gh:yourusername
+
+At this point, MAAS is basically set up and running.  You can confirm this with `sudo maas status`.  If you need an API key, you can obtain this with `sudo maas apikey --username yourusername`.  Now you will be able to test and evaluate MAAS by going to the URL you entered or accepted above and entering your `admin` username and password.
+
+<a href="#heading--configuration-verification"><h2 id="heading--configuration-verification">Configuration verification</h2></a>
+
+After a snap installation of MAAS, you can verify the currently-running configuration with:
+
+    sudo maas config
+
+<a href="#heading--init-prod"><h2 id="heading--init-prod">Initialise MAAS for a production configuration</h2></a>
+
+To install MAAS in a production configuration, you need to setup PostgreSQL, as described below.
+
+<a href="#heading--pg-setup"><h3 id="heading--pg-setup">Setting up PostgreSQL from scratch</h3></a>
+
+To set up PostgreSQL, even if it's running on a different machine, you can use the following procedure:
+
+1. You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 10 or better) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:
+
+        sudo apt update -y
+        sudo apt install -y postgresql
+
+2. You want to make sure you have a suitable PostgreSQL user, which can be accomplished with the following command, where `$MAAS_DBUSER` is your desired database username, and `$MAAS_DBPASS` is the intended password for that username.  Note that if you're executing this step in a LXD container (as root, which is the default), you may get a minor error, but the operation will still complete correctly.
+
+        sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
+
+3. Create the MAAS database with the following command, where `$MAAS_DBNAME` is your desired name for the MAAS database (typically known as `maas`). Again, if you're executing this step in a LXD container as root, you can ignore the minor error that results.
+
+        sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
+
+4. Edit `/etc/postgresql/10/main/pg_hba.conf` and add a line for the newly created database, replacing the variables with actual  names. You can limit access to a specific network by using a different CIDR than `0/0`.
+
+        host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
+
+5. You can then initialise MAAS via the following command:
+
+        sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
+
+[note] You should use `localhost` for `$HOSTNAME` if you're running PostgreSQL on the same box as MAAS.[/note]
+
+Don't worry; if you leave out any of the database parameters, you'll be prompted for those details.
+
+<a href="#heading--service-status"><h2 id="heading--service-status">Checking MAAS service status</h2></a>
+
+You can check the status of running services with:
+
+    sudo maas status
+
+Typically, the output looks something like this:
+
+    bind9                            RUNNING   pid 7999, uptime 0:09:17
+    dhcpd                            STOPPED   Not started
+    dhcpd6                           STOPPED   Not started
+    ntp                              RUNNING   pid 8598, uptime 0:05:42
+    postgresql                       RUNNING   pid 8001, uptime 0:09:17
+    proxy                            STOPPED   Not started
+    rackd                            RUNNING   pid 8000, uptime 0:09:17
+    regiond:regiond-0                RUNNING   pid 8003, uptime 0:09:17
+    regiond:regiond-1                RUNNING   pid 8008, uptime 0:09:17
+    regiond:regiond-2                RUNNING   pid 8005, uptime 0:09:17
+    regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
+    tgt                              RUNNING   pid 8040, uptime 0:09:15
+
+snap-2-8-cli snap-2-8-ui -->
+
+<!-- snap-2-8-cli
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2528).
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2529).
+ snap-2-8-ui -->
+
+<!-- snap-2-8-cli snap-2-8-ui
+<a href="#heading--example"><h2 id="heading--example">Example of MAAS initialisation</h2></a>
+
+The following demonstrates the `region+rack` mode, a popular initialisation choice for MAAS:
+
+    sudo maas init region+rack
+
+`maas` will ask for the MAAS URL:
+
+    MAAS URL [default=http://10.55.60.1:5240/MAAS]: http://192.168.122.1:5240/MAAS
+
+If you also need to create an admin user, you can use:
+
+    sudo maas createadmin
+
+which takes you through the following exchange:
+
+    Create first admin account:       
+    Username: admin
+    Password: ******
+    Again: ******
+    Email: admin@example.com
+    Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
+
+[note]
+You will use the username and password created above to access the web UI.  If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
+[/note]
+
+<a href="#heading--maas-url"><h2 id="heading--maas-url">MAAS URL</h2></a>
+
+All run modes (except `none`) prompt for a MAAS URL, interpreted differently depending on the mode:
+
+-   `region`: Used to create a new region controller.
+-   `rack`: Used to locate the region controller.
+
+<a href="#heading--shared-secret"><h2 id="heading--shared-secret">Shared secret</h2></a>
+
+The 'rack' and 'region+rack' modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.
+
+<a href="#heading--reinitialising-maas"><h2 id="heading--reinitialising-maas">Reinitialising MAAS</h2></a>
+
+It is also possible to re-initialise MAAS to switch modes.  For example, to switch from `rack` to `region`:
+ 
+    sudo maas init region
+
+<a href="#heading--additional-init-options"><h2 id="heading--additional-init-options">Additional `init` options</h2></a>
+
+The `init` command can takes optional arguments. To list them, as well as read a brief description of each, you can enter:
+
+    sudo maas init --help
+
+snap-2-8-ui snap-2-8-cli -->
+
+MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.  This article will walk you through both install methods.
+
+#### Thirteen questions you may have:
+
+1. [How do I install (but not initialise) the MAAS 2.9 snap?](#heading--install-maas-snap)
+2. [How do I upgrade my 2.8 snap to version 2.9?](#heading--upgrade-maas-snap)
+3. [What are MAAS initialisation modes?](#heading--maas-init-modes)
+4. [How do I initialise MAAS for a test or proof-of-concept configuration?](#heading--init-poc)
+5. [How do I initialise MAAS for a production configuration?](#heading--init-prod)
+6. [How do I migrate an existing snap install?](/t/tips-tricks-and-traps/1506#heading--migrate-maas)
+7. [What if I want to manually export the MAAS database to an existing PostgreSQL server?](/t/tips-tricks-and-traps/1506#heading--manual-export)
+8. [How can I check the service status of my MAAS configuration?](#heading--service-status)
+9. [How do I re-initialise MAAS, if I want to?](#heading--reinitialising-maas)
+10. [How can I discover additional init options?](#heading--additional-init-options)
+11. [Give me an example of initialising MAAS](#heading--example)
+12. [Tell me about the MAAS URL](#heading--maas-url)
+13. [Tell me about the shared secret](#heading--shared-secret)
+
+[note]
+If you have installed `bind9` or have it running, you will need to uninstall it before installing MAAS.  You can check with `ps aux | grep named` to see if it's running. The `bind9` daemon interferes with MAAS operation and creates a number of unusual, hard-to-debug errors -- but don't worry, MAAS provides DNS and can work with existing DNS servers.
+[/note]
+
+<a href="#heading--install-maas-snap"><h2 id="heading--install-maas-snap">Installing MAAS from the snap</h2></a>
+
+[Snaps](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
+
+    $ sudo snap install --channel=2.9/stable maas
+
+After entering your password, the snap will download and install from the 2.9 stable channel -- though MAAS needs initialising before it's ready to go.
+
+<a href="#heading--upgrade-maas-snap"><h2 id="heading--upgrade-maas-snap">Upgrading MAAS from 2.8</h2></a>
+
+If you want to upgrade from a 2.8 snap to 2.9, and you are using a `region+rack` configuration, use this command:
+
+    $ sudo snap refresh --channel=2.9/stable maas
+
+After entering your password, the snap will refresh from the 2.9 stable channel.  You will **not** need to re-initialise MAAS.
+
+If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
+
+<a href="#heading--maas-init-modes"><h2 id="heading--maas-init-modes">MAAS initialisation modes</h2></a>
+
+MAAS supports the following modes, which dictate what services will run on the local system:
+
+| Mode          | Region | Rack | Database | Description                           |
+|---------------|--------|------|----------|---------------------------------------|
+| `region`      | X      |      |          | Region API server only                |
+| `rack`        |        | X    |          | Rack controller only                  |
+| `region+rack` | X      | X    |          | Region API server and rack controller |
+| `none`        |        |      |          | Reinitialises MAAS and stops services |
+
+<a href="#heading--init-poc"><h2 id="heading--init-poc">Initialising MAAS as a test configuration</h2></a>
+
+We want to provide a more compact version for those who may be testing MAAS.  To achieve this, we're providing a separate snap, called `maas-test-db`, which provides a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.
+
+Once MAAS is installed, you can use the `--help` flag with `maas init` to get relevant instructions:
+ 
+    $ sudo maas init --help
+    usage: maas init [-h] {region+rack,region,rack} . . .
+
+    Initialise MAAS in the specified run mode.
+
+    optional arguments:
+      -h, --help            show this help message and exit
+
+    run modes:
+      {region+rack,region,rack}
+        region+rack         Both region and rack controllers
+        region              Region controller only
+        rack                Rack controller only
+
+    When installing region or rack+region modes, MAAS needs a
+    PostgreSQL database to connect to.
+
+    If you want to set up PostgreSQL for a non-production deployment on
+    this machine, and configure it for use with MAAS, you can install
+    the maas-test-db snap before running 'maas init':
+        sudo snap install maas-test-db
+        sudo maas init region+rack --database-uri maas-test-db:///
+
+We'll quickly walk through these instructions to confirm your understanding.  First, install the `maas-test-db` snap:
+ 
+    sudo snap install maas-test-db
+
+Note that this step installs a a running PostgreSQL and a MAAS-ready database instantiation.  When it's done, you can double check with a built-in PostgreSQL shell:
+
+    $ maas-test-db.psql
+    psql (10.6)
+    Type "help" for help.
+
+    postgres=# \l
+
+This will produce a list of databases, one of which will be `maasdb`, owned by `maas`.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the `maas init` command:
+
+    sudo maas init region+rack --database-uri maas-test-db:///
+
+After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:
+ 
+    MAAS URL [default=http://10.45.222.159:5240/MAAS]:
+
+When you've entered a suitable URL, or accepted the default, the following prompt will appear:
+ 
+    MAAS has been set up.
+
+    If you want to configure external authentication or use
+    MAAS with Canonical RBAC, please run
+
+      sudo maas configauth
+
+    To create admins when not using external authentication, run
+
+      sudo maas createadmin
+
+Let's assume you just want a local testing user named `admin`:
+
+    $ sudo maas createadmin
+    Username: admin
+    Password: ******
+    Again: ******
+    Email: admin@example.com
+    Import SSH keys [] (lp:user-id or gh:user-id): gh:yourusername
+
+At this point, MAAS is basically set up and running.  You can confirm this with `sudo maas status`.  If you need an API key, you can obtain this with `sudo maas apikey --username yourusername`.  Now you will be able to test and evaluate MAAS by going to the URL you entered or accepted above and entering your `admin` username and password.
+
+<a href="#heading--configuration-verification"><h2 id="heading--configuration-verification">Configuration verification</h2></a>
+
+After a snap installation of MAAS, you can verify the currently-running configuration with:
+
+    sudo maas config
+
+<a href="#heading--init-prod"><h2 id="heading--init-prod">Initialise MAAS for a production configuration</h2></a>
+
+To install MAAS in a production configuration, you need to setup PostgreSQL, as described below.
+
+<a href="#heading--pg-setup"><h3 id="heading--pg-setup">Setting up PostgreSQL from scratch</h3></a>
+
+To set up PostgreSQL, even if it's running on a different machine, you can use the following procedure:
+
+1. You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 10 or better) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:
+
+        sudo apt update -y
+        sudo apt install -y postgresql
+
+2. You want to make sure you have a suitable PostgreSQL user, which can be accomplished with the following command, where `$MAAS_DBUSER` is your desired database username, and `$MAAS_DBPASS` is the intended password for that username.  Note that if you're executing this step in a LXD container (as root, which is the default), you may get a minor error, but the operation will still complete correctly.
+
+        sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
+
+3. Create the MAAS database with the following command, where `$MAAS_DBNAME` is your desired name for the MAAS database (typically known as `maas`). Again, if you're executing this step in a LXD container as root, you can ignore the minor error that results.
+
+        sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
+
+4. Edit `/etc/postgresql/10/main/pg_hba.conf` and add a line for the newly created database, replacing the variables with actual  names. You can limit access to a specific network by using a different CIDR than `0/0`.
+
+        host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
+
+5. You can then initialise MAAS via the following command:
+
+        sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
+
+[note] You should use `localhost` for `$HOSTNAME` if you're running PostgreSQL on the same box as MAAS.[/note]
+
+Don't worry; if you leave out any of the database parameters, you'll be prompted for those details.
+
+<a href="#heading--service-status"><h2 id="heading--service-status">Checking MAAS service status</h2></a>
+
+You can check the status of running services with:
+
+    sudo maas status
+
+Typically, the output looks something like this:
+
+    bind9                            RUNNING   pid 7999, uptime 0:09:17
+    dhcpd                            STOPPED   Not started
+    dhcpd6                           STOPPED   Not started
+    ntp                              RUNNING   pid 8598, uptime 0:05:42
+    postgresql                       RUNNING   pid 8001, uptime 0:09:17
+    proxy                            STOPPED   Not started
+    rackd                            RUNNING   pid 8000, uptime 0:09:17
+    regiond:regiond-0                RUNNING   pid 8003, uptime 0:09:17
+    regiond:regiond-1                RUNNING   pid 8008, uptime 0:09:17
+    regiond:regiond-2                RUNNING   pid 8005, uptime 0:09:17
+    regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
+    tgt                              RUNNING   pid 8040, uptime 0:09:15
 
 
-<!-- snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui
-<h2>MAAS 2.8 release notes</h2>
+<!-- snap-2-9-cli
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2530).
+ snap-2-9-cli -->
 
-<h3>MAAS 2.8.2 released</h3>
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2531).
 
-On 1 September 2020, MAAS 2.8.2 was released, replacing the `2.8/stable` channel in snap and the [ppa:maas/2.8^](https://launchpad.net/~maas/+archive/ubuntu/2.8).  You can update your 2.8 release to 2.8.2 by with:
+<a href="#heading--example"><h2 id="heading--example">Example of MAAS initialisation</h2></a>
 
-    snap refresh --channel=2.8/stable
+The following demonstrates the `region+rack` mode, a popular initialisation choice for MAAS:
 
-or by using the aforementioned PPA.  The focus for this release has been [bugfixing^](https://launchpad.net/maas/+milestone/2.8.2rc1) -- there were no changes to MAAS since RC1.
+    sudo maas init region+rack
 
-Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
+`maas` will ask for the MAAS URL:
 
-<h3>MAAS 2.8 released</h3>
+    MAAS URL [default=http://10.55.60.1:5240/MAAS]: http://192.168.122.1:5240/MAAS
 
-Following on from MAAS 2.7, we are happy to announce that MAAS 2.8 is now available. This release features some critical bug fixes, along with some exciting new features.
+If you also need to create an admin user, you can use:
 
-<h4>Six questions you may have:</h4>
+    sudo maas createadmin
 
-1. [What are the new features & fixes for 2.8?](#heading--2-8-release-notes)
-2. [What known issues should I be aware of?](#heading--2-8-known-issues)
-3. [How do I install MAAS 2.8 as a snap?](/t/maas-installation/3312)
-4. [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](/t/maas-installation/3312#heading--upgrade-maas-snap)
-5. [How do I install MAAS 2.8 from packages?](/t/maas-installation/3327)
-6. [What bugs were fixed in this release?](#heading--bug-fixes)
+which takes you through the following exchange:
 
-<h2 id="heading--2-8-release-notes">LXD-based VM host support (Beta)</h2>
+    Create first admin account:       
+    Username: admin
+    Password: ******
+    Again: ******
+    Email: admin@example.com
+    Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
 
-MAAS 2.8 adds the beta capability to use LXD-based VM hosts and virtual machines (VMs), in addition to the [libvirt^](https://ubuntu.com/server/docs/virtualization-libvirt)-based VM hosts/VMs already available.  These new LXD VM hosts use the same underlying technology as libvirt (QEMU). Unlike libvirt KVMs, though, LXD VMs can be managed without requiring SSH access to the VM host. LXD are remotely accessed via secure HTTP transport, which provides better security for LXD-based VMs. In addition, LXD has a better API, and is part of a much larger constellation of enterprise software, offering a wider range of future features and use cases.
+[note]
+You will use the username and password created above to access the web UI.  If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
+[/note]
 
-## UI performance improvements for the machine listing page
+<a href="#heading--maas-url"><h2 id="heading--maas-url">MAAS URL</h2></a>
 
-Within MAAS 2.8, we have made a number of performance improvements to everything related to the machine listing.  Some of the most visible changes involve the way that long lists are presented within categories (see the example below), but there are a number of other changes that make the list easier and more efficient to use.
+All run modes (except `none`) prompt for a MAAS URL, interpreted differently depending on the mode:
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg"></a> 
+-   `region`: Used to create a new region controller.
+-   `rack`: Used to locate the region controller.
 
-Among those other changes are persisting UI state for grouping, new grouping options, bookmark-able URLs with filter and search parameters, and many other performance improvements. If you're interested in more details, see this [blog post](https://ubuntu.com/blog/building-a-cross-framework-ui-with-single-spa-in-maas-2-8).
+<a href="#heading--shared-secret"><h2 id="heading--shared-secret">Shared secret</h2></a>
 
-## Support for using an external/remote PostgreSQL MAAS database with the snap version of MAAS
+The 'rack' and 'region+rack' modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.
 
-In order to make MAAS more scalable, we have separated the MAAS database from the MAAS snap, so that the DB can be situated separately.  MAAS 2.8 now allows the MAAS DB to be located outside the snap on localhost, or on a separate, external or remote server.  We complement this capability with extensive instructions for setting up and managing this configuration.  To support those who are testing MAAS, we've also provided a test DB configuration that embeds the database in a separate snap that can easily be connected to MAAS.
+<a href="#heading--reinitialising-maas"><h2 id="heading--reinitialising-maas">Reinitialising MAAS</h2></a>
 
-<h2 id="heading--bug-fixes">Bug fixes</h2>
+It is also possible to re-initialise MAAS to switch modes.  For example, to switch from `rack` to `region`:
+ 
+    sudo maas init region
 
-We've also fixed number of bugs (see the [list in Launchpad^](https://bugs.launchpad.net/bugs/+bugs?field.milestone%3Alist=89978&field.milestone%3Alist=90576&field.milestone%3Alist=90599&field.milestone%3Alist=90640&field.milestone%3Alist=90645&field.milestone%3Alist=90722&field.milestone%3Alist=91005&field.milestone%3Alist=91123&field.milestone%3Alist=91124&field.milestone%3Alist=91180&field.status%3Alist=FIXRELEASED)).  Notable among these are the following:
+<a href="#heading--additional-init-options"><h2 id="heading--additional-init-options">Additional `init` options</h2></a>
 
-- [MAAS event table^](https://bugs.launchpad.net/maas/+bug/1860619): Power events are now being logged differently to reduce log sizes and improve performance.
+The `init` command can takes optional arguments. To list them, as well as read a brief description of each, you can enter:
 
-- [Unprivileged users controlling services^](https://bugs.launchpad.net/maas/+bug/1864201): Unprivileged users can no longer start, stop, or restart services via HTTP channels.
+    sudo maas init --help
 
-- [Adding KVMs to snap-installed MAAS^](https://bugs.launchpad.net/maas/+bug/1852405): SSH key usage has been updated so that KVMs can now be added to snap-installed MAAS without difficulty.
 
-- [Trouble editing physical interfaces in GUI^](https://bugs.launchpad.net/maas/+bug/1864241): It is now possible to edit physical interface parameters, when appropriate, from the web UI.
+<!-- deb-2-8-cli deb-2-8-ui
+<a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS from packages</h2></a>
 
-- [Subnet pages slow to load^](https://bugs.launchpad.net/maas/+bug/1873430): Subnet pages now load more quickly and efficiently.
+You can install a 2.8 stable version of MAAS via the PPA listed on the [MAAS launchpad](https://launchpad.net/~maas), specifically:
 
-- [Trouble loading multiple MAC addresses^](https://bugs.launchpad.net/maas/+bug/1865122): You can now reliably load multiple MAC addresses using the web UI.
+-   [ppa:maas/2.8](https://launchpad.net/~maas/+archive/ubuntu/2.8)
 
-- [Disabling DNS on regiond subnet breaks DNS^](https://bugs.launchpad.net/maas/+bug/1871584): This problem has been resolved.
+To add the 2.8 PPA, type:
 
-<h2 id="heading--2-8-known-issues">Known issues</h2>
+``` bash
+sudo apt-add-repository -yu ppa:maas/2.8
+```
 
-* **Browser caching issue:** There is a known issue with browser caching on some MAAS pages.  If you initially encounter a page which does not appear to be correctly formatted, please manually clear your browser cache (**not Ctrl-F5**) and it should restore the page to normal.  You manually clear your browser cache, for example, in the "History" section of the menu on a Chrome browser.
+<a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installation scenarios</h3></a>
 
-* **Extra power types when adding chassis:** ([see bug report^](https://bugs.launchpad.net/maas/+bug/1883743)) When adding a chassis, the "Power type" drop-down will show power types not supported by a chassis.  Selecting one of the non-supported power types will result in the UI blocking the action.  Here is a list of power types supported for chassis creation:
-  * `mscm` - Moonshot Chassis Manager
-  * `msftocs` - Microsoft OCS Chassis Manager
-  * `powerkvm` - Virtual Machines on Power KVM, managed by Virsh
-  * `recs_box` - Christmann RECS|Box servers
-  * `sm15k` - SeaMicro 1500 Chassis
-  * `ucsm` - Cisco UCS Manager
-  * `virsh` - virtual machines managed by Virsh
-  * `vmware` - virtual machines managed by VMware
+The recommended way to set up an initial MAAS environment is to put everything on one machine:
 
-* **MAAS keys count in user list is bogus:** ([see bug report^](https://bugs.launchpad.net/maas/+bug/1884112)) The count of keys shown in the User list in the UI is wrong.
+``` bash
+sudo apt install maas
+```
 
-* **Leftover lock files may be present under some conditions:** Even if you purge an old MAAS Debian package, it can leave lock files in `/run/lock/maas*`.  This can cause issues if you later reinstall MAAS, and the previous MAAS user UID has been reassigned.  At that point, MAAS can't remove those files and create new ones.  If this occurs, it is easily fixed by removing those files manually before reinstalling.
-snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
+Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
+
+Choosing "Y" proceeds with a standard <code>apt</code> package install.
+
+<h4>Distributed environment</h4> 
+
+<p>For a more distributed environment, you can place the region controller on one machine:</p>
+
+``` bash
+sudo apt install maas-region-controller
+```
+
+and the rack controller (see [Rack controller](/t/rack-controller/771) for details) on another:
+
+``` bash
+sudo apt install maas-rack-controller
+sudo maas-rack register
+```
+
+These two steps will lead you through two similar <code>apt</code> install sequences.
+
+<a href="#heading--creating-a-maas-user"><h3 id="heading--creating-a-maas-user">Creating a MAAS user</h3></a>
+
+<p>Finally, you will need to create a MAAS administrator user to access the web UI:</p>
+
+``` bash
+sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
+```
+
+<p>For example, the process might go like this:</p>
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg"></a>
+
+<p>The username can be anything. You will also be prompted to supply a password for the user. The command option <code>--password=$PASSWORD</code> can be used to specify one but, depending on your environment, this may pose a security risk.</p>
+
+<div class="p-notification">
+<p class="p-notification__response">At this time, MAAS does not make use of the email address. However, it may do so in the future.</p>
+</div>
+
+Finally, the <code>createadmin</code> option asks for an SSH key:
+
+<a
+href="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg"></a>
+
+<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to include the key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gp:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
+
+<p>If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.</p>
+
+<a href="#heading--next-steps"><h3 id="heading--next-steps">Next steps</h3></a>
+
+deb-2-8-cli deb-2-8-ui -->
+
+<!-- deb-2-8-cli
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2534).
+deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2535).
+deb-2-8-ui -->
+
+<!-- deb-2-7-cli deb-2-7-ui
+<a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS from packages</h2></a>
+
+You can install a 2.7 stable version of MAAS via the PPA listed on the [MAAS launchpad](https://launchpad.net/~maas), specifically:
+
+-   [ppa:maas/2.7](https://launchpad.net/~maas/+archive/ubuntu/2.7)
+
+To add the 2.7 PPA, type:
+
+``` bash
+sudo apt-add-repository -yu ppa:maas/2.7
+```
+
+<a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installation scenarios</h3></a>
+
+The recommended way to set up an initial MAAS environment is to put everything on one machine:
+
+``` bash
+sudo apt install maas
+```
+
+Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
+
+Choosing "Y" proceeds with a standard <code>apt</code> package install.
+
+<h4>Distributed environment</h4> 
+
+<p>For a more distributed environment, you can place the region controller on one machine:</p>
+
+``` bash
+sudo apt install maas-region-controller
+```
+
+and the rack controller (see [Rack controller](/t/rack-controller/771) for details) on another:
+
+``` bash
+sudo apt install maas-rack-controller
+sudo maas-rack register
+```
+
+These two steps will lead you through two similar <code>apt</code> install sequences.
+
+<a href="#heading--creating-a-maas-user"><h3 id="heading--creating-a-maas-user">Creating a MAAS user</h3></a>
+
+<p>Finally, you will need to create a MAAS administrator user to access the web UI:</p>
+
+``` bash
+sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
+```
+
+<p>For example, the process might go like this:</p>
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg"></a>
+
+<p>The username can be anything. You will also be prompted to supply a password for the user. The command option <code>--password=$PASSWORD</code> can be used to specify one but, depending on your environment, this may pose a security risk.</p>
+
+<div class="p-notification">
+<p class="p-notification__response">At this time, MAAS does not make use of the email address. However, it may do so in the future.</p>
+</div>
+
+Finally, the <code>createadmin</code> option asks for an SSH key:
+
+<a
+href="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg"></a>
+
+<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to include the key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gp:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
+
+<p>If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.</p>
+
+<a href="#heading--next-steps"><h3 id="heading--next-steps">Next steps</h3></a>
+
+deb-2-7-cli deb-2-7-ui -->
+
+<!-- deb-2-7-cli
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2532).
+deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2533).
+deb-2-7-ui -->
+
+<!-- deb-2-9-cli deb-2-9-ui
+<a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS from packages</h2></a>
+
+You can install a 2.9 stable version of MAAS from the PPA this way:
+
+``` bash
+sudo apt-add-repository ppa:maas/2.9
+sudo apt-get update
+```
+
+<a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installation scenarios</h3></a>
+
+The recommended way to set up an initial MAAS environment is to put everything on one machine:
+
+``` bash
+sudo apt-get -y install maas
+```
+
+Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
+
+Choosing "Y" proceeds with a standard <code>apt</code> package install.
+
+<h4>Distributed environment</h4> 
+
+<p>For a more distributed environment, you can place the region controller on one machine:</p>
+
+``` bash
+sudo apt install maas-region-controller
+```
+
+and the rack controller (see [Rack controller](/t/rack-controller/771) for details) on another:
+
+``` bash
+sudo apt install maas-rack-controller
+sudo maas-rack register
+```
+
+These two steps will lead you through two similar <code>apt</code> install sequences.
+
+<a href="#heading--creating-a-maas-user"><h3 id="heading--creating-a-maas-user">Creating a MAAS user</h3></a>
+
+<p>Finally, you will need to create a MAAS administrator user to access the web UI:</p>
+
+``` bash
+sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
+```
+
+<p>For example, the process might go like this:</p>
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg"></a>
+
+<p>The username can be anything. You will also be prompted to supply a password for the user. The command option <code>--password=$PASSWORD</code> can be used to specify one but, depending on your environment, this may pose a security risk.</p>
+
+<div class="p-notification">
+<p class="p-notification__response">At this time, MAAS does not make use of the email address. However, it may do so in the future.</p>
+</div>
+
+Finally, the <code>createadmin</code> option asks for an SSH key:
+
+<a
+href="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg"></a>
+
+<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to include the key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gp:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
+
+<p>If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.</p>
+
+<a href="#heading--next-steps"><h3 id="heading--next-steps">Next steps</h3></a>
+
+deb-2-9-cli deb-2-9-ui -->
+
+<!-- deb-2-9-cli
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2536).
+deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2537).
+deb-2-9-ui -->
+
