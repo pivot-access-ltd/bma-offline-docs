@@ -2,19 +2,11 @@ This page contains detailed information on how to become a successful MAAS docum
 
 <h2 id="heading--edit-rad">Update: Editing RAD/offline documentation</h2>
 
-After 20 September 2020, many documents in the [MAAS documentation set^](https://maas.io/docs) have been converted to the RAD (Reader Adapative Documentation) style, and enabled for conversion to offline documentation.  Editing RAD documentation is a bit different from standard doc, so it's worth explaining how to do it correctly.
+After 20 September 2020, many documents in the [MAAS documentation set](https://maas.io/docs) have been converted to the RAD (Reader Adapative Documentation) style, and enabled for conversion to offline documentation.  Editing RAD documentation is a bit different from standard doc, so it's worth explaining how to do it correctly.
 
 First, some assurance: RAD is generated from a separate set of masters, published by a special tool called `xpub`, which prevents overwriting files that have been changed and warns the user that changes have been made.  Any changes you make to the doc will be noticed, at the latest, when an update is attempted, and your changes will be evaluated and, if reasonable, very likely added to the masters.  So don't worry about losing edits; we are trying to be very careful to make sure that doesn't happen.
 
-That said, there is a bit of art to editing RAD pages and making sure your edits are suitable for offline doc conversion, namely:
-
-1. Use carets (^) at the end of the link text when linking to a site that isn't directly part of `maas.io/docs/...`.  This helps differentiate which links won't work for readers who are offline.  This even applies to launchpad and discourse links, so, for example, if you're referring to a list of bugs on launchpad, you want to present the link like this:
-
-[open bugs^](https://bugs.launchpad.net/maas/+bugs?field.tag=doc&orderby=status&start=0)
-
-so that offline users know they need a live Internet connection to follow this link.
-
-2. Throughout RAD documents, you'll see HTML comments like this one:
+That said, there is a bit of art to editing RAD pages and making sure your edits are suitable for offline doc conversion, namely, throughout RAD documents, you'll see HTML comments like this one:
 
     <!-- snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui
 
