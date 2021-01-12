@@ -315,9 +315,9 @@ There are (at least) three ways you can contribute to MAAS:
 
 - [Add machines](/t/add-machines-snap-2-9-ui/2279)
 - [Power management](/t/power-management-snap-2-9-ui/3011)
-- [Commission machines](/t/commission-machines-snap-2-9-ui/2469)
+- [Commission machines](/t/commission-machines-snap-2-9-ui/2471)
 - Testing
-  - [Hardware testing](/t/hardware-testing-snap-2-9-ui/2671)
+  - [Hardware testing](/t/hardware-testing-snap-2-9-ui/2675)
   - [Network testing](/t/network-testing-snap-2-9-ui/2939)
   - [Commissioning and hardware testing scripts](/t/commissioning-and-hardware-testing-scripts-snap-2-9-ui/2483)
 - [Deploy machines](/t/deploy-machines-snap-2-9-ui/2603)
