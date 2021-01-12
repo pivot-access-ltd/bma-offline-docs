@@ -75,10 +75,12 @@
 |Packages|[CLI](/t/maas-communication/2832) ~ [UI](/t/maas-communication/2833)|[CLI](/t/maas-communication/2834) ~ [UI](/t/maas-communication/2835)|[CLI](/t/maas-communication/2836) ~ [UI](/t/maas-communication/2837)|
  snap-2-9-cli -->
 
+<!-- snap-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/maas-communication/2826) ~ [UI](/t/maas-communication/2827)|[CLI](/t/maas-communication/2828) ~ [UI](/t/maas-communication/2829)|[CLI](/t/maas-communication/2830) ~ UI|
 |Packages|[CLI](/t/maas-communication/2832) ~ [UI](/t/maas-communication/2833)|[CLI](/t/maas-communication/2834) ~ [UI](/t/maas-communication/2835)|[CLI](/t/maas-communication/2836) ~ [UI](/t/maas-communication/2837)|
+ snap-2-9-ui -->
 
 <!-- deb-2-7-cli
 MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/2688) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
@@ -124,7 +126,9 @@ snap-2-8-ui -->
 MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/2686) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
 snap-2-9-cli -->
 
+<!-- snap-2-9-ui
 MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/2687) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
+snap-2-9-ui -->
 
 #### Three questions you might have:
 
@@ -194,9 +198,11 @@ MAAS communication happens in a strict hierarchy, flowing from the UI/API throug
 3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2662#heading--firewalls)
  snap-2-9-cli -->
 
+<!-- snap-2-9-ui
 1. [How do machines communicate with the rack controller?](#heading--machinerack)
 2. [How do rack and region controllers communicate?](#heading--rackregion)
 3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2663#heading--firewalls)
+ snap-2-9-ui -->
 
 
 
