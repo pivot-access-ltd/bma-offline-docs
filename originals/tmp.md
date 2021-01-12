@@ -1,447 +1,952 @@
 <!-- deb-2-7-cli
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/25)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|CLI ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+deb-2-7-cli -->
 
 <!-- snap-2-7-cli
- snap-2-7-cli -->
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+snap-2-7-cli -->
 
 <!-- snap-2-7-ui
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
-
-
-There are two ways to add a machine to MAAS:
-
-1. If you place the machine on a connected network, and the machine is configured to netboot, MAAS will automatically enlist it.
-2. If you add a machine manually, MAAS will automatically commission it.
-
-This article will explain more about both methods.
-
-#### Four or five questions you may have:
-
-<!-- deb-2-7-cli
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2748)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2292)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2749)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2293)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
-5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2750)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2294)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2751)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2295)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
-5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2752)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2296)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2753)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2297)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
-5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2742)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2286)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2743)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2287)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
-5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2744)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2288)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2745)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2289)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
-5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2746)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2290)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
- snap-2-9-cli -->
-
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2747)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2291)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
-5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
-
-MAAS typically adds a machine via a combination of DHCP, TFTP, and PXE. By now, you should have enabled MAAS to automatically add devices and machines to your environment. This unattended method of adding machines is called enlistment.
-
-<strong>NOTE:</strong> 
-Configuring a computer to boot over PXE is done via its BIOS, often referred to as "netboot" or "network boot".
-
-
-Regardless of how MAAS adds a machine, there are no special requirements for the underlying machine. In particular, there is no need to install an operating system on it.
-
-Once MAAS is working to the point of adding machines, you'll probably want to understand statuses and actions. See [Node statuses](/t/concepts-and-terms/785#heading--node-statuses) and [Machine actions](/t/concepts-and-terms/785#heading--machine-actions) respectively.
-
-<a href="#heading--enlistment"><h2 id="heading--enlistment">How enlistment works</h2></a>
-
-When MAAS enlists a machine, it first contacts the DHCP server, so that the machine can be assigned an IP address.  An IP address is necessary to download a kernel and initrd via TFTP, since these functions can't accept domain names.  Once the machine has a bootable kernel, MAAS boots it:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg"></a> 
-
-Next, initrd mounts a Squashfs image, ephemerally via HTTP, so that cloud-init can execute:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg"></a> 
-
-Finally, cloud-init runs enlistment and setup scripts:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg"></a> 
-
-<!-- deb-2-7-cli
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2928).
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2929).
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2930).
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2931).
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2932).
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2933).
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2922).
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2923).
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2924).
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2925).
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2926).
- snap-2-9-cli -->
-
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2927).
-
-After the enlistment process, MAAS places the machine in the 'Ready' state.  'Ready' is a holding state for machines that are enlisted (or commissioned), waiting to be deployed when needed.
-
-<!-- deb-2-7-cli
-Typically, the next step will be to [commission the machine](/t/commission-machines/2472). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-Typically, the next step will be to [commission the machine](/t/commission-machines/2473). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-Typically, the next step will be to [commission the machine](/t/commission-machines/2474). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-Typically, the next step will be to [commission the machine](/t/commission-machines/2475). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-Typically, the next step will be to [commission the machine](/t/commission-machines/2476). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-Typically, the next step will be to [commission the machine](/t/commission-machines/2477). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-Typically, the next step will be to [commission the machine](/t/commission-machines/2466). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-Typically, the next step will be to [commission the machine](/t/commission-machines/2467). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-Typically, the next step will be to [commission the machine](/t/commission-machines/2468). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-Typically, the next step will be to [commission the machine](/t/commission-machines/2469). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-Typically, the next step will be to [commission the machine](/t/commission-machines/2470). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- snap-2-9-cli -->
-
-Typically, the next step will be to [commission the machine](/t/commission-machines/2471). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
-
-<strong>NOTE:</strong> 
-MAAS runs built-in commissioning scripts during the enlistment phase. When you commission a machine, any customised commissioning scripts you add will have access to data collected during enlistment. Follow the link above for more information about commissioning and commission scripts.
-
-
-<a href="#heading--add-a-node-manually"><h2 id="heading--add-a-node-manually">Add a machine manually</h2></a>
-
-Enlistment can be done manually if the hardware specifications of the underlying machine are known.
-
-<!-- deb-2-7-ui snap-2-7-ui
-On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
-
-Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI machine:
-
-<a href="https://assets.ubuntu.com/v1/20aa36b2-nodes-add__2.5_add-node-manually.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/20aa36b2-nodes-add__2.5_add-node-manually.png"></a>
-
-The fields on the "Add machine" screen include the following seven items:
-
-1. **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
-
-2. **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
-
-3. **Architecture**: This field refers to the architecture of the machine being added.
-
-4. **Minimum Kernel**: This field supplies a drop-down of possible kernels available for deployment on this machine.
-
-5. **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
-
-6. **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
-
-7. **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
-deb-2-7-ui snap-2-7-ui -->
-
-<!-- snap-2-7-ui 
-type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3007) for details on the available power types and the relevant parameters for each type.
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-installation/3318) ~ UI|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 snap-2-7-ui -->
 
-<!-- deb-2-7-ui 
-type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3103) for details on the available power types and the relevant parameters for each type.
+<!-- deb-2-7-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ UI|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 deb-2-7-ui -->
 
-On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
-
-Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI machine:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg"></a>
-
-The fields on the "Add machine" screen include the following items:
-
-* **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
-
-* **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
-
-* **Architecture**: This field refers to the architecture of the machine being added.
-
-* **Minimum Kernel**: This field supplies a drop-down of possible kernels available for deployment on this machine.
-
-* **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
-
-* **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
-
-* **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
-
-<!-- deb-2-8-ui
-* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3015) for details on the available power types and the relevant parameters for each type.
- deb-2-8-ui -->
-
-<!-- deb-2-9-ui
-* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3017) for details on the available power types and the relevant parameters for each type.
- deb-2-9-ui -->
+<!-- snap-2-8-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319) | CLI ~ [UI](/t/maas-installation/3321) |[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323) |
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325) |[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327) |[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329) |
+snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3007) for details on the available power types and the relevant parameters for each type.
- snap-2-8-ui -->
-
-* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3009) for details on the available power types and the relevant parameters for each type.
-
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-At the command line, enter the following information:
-
-```
-stormrider@wintermute:~$ maas admin machines create \
-> architecture=$ARCH \
-> max_addresses=$MAC_ADDRESS \
-> power_type=$POWER_TYPE \
-> power_parameters_power_id=$POWER_ID \
-> power_parameters_power_address=$POWER_ADDRESS \
-> power_parameters_power_pass=$POWER_PASSWORD
-```
-
-When you enter the command (substituting the `$...` parameters for your own particulars), the screen will pause for a moment, and then return a stream of JSON relating to the added machine.
-
-Here's an example with a local laptop MAAS install, using KVMs as virtual machines:
-
-```
-stormrider@wintermute:~$ maas admin machines create \
-> architecture=amd64 \
-> max_addresses=52:54:00:6f:b4:af \
-> power_type=virsh \
-> power_parameters_power_id=50f6cca2-5d89-43b9-941c-90c9fcd7c156 \
-> power_parameters_power_address=qemu+ssh://stormrider@192.168.123.1/system \
-> power_parameters_power_pass=xxxxxxx
-```
-
-There's also a CLI recipe to [make machines in a script](/t/the-cli-cookbook/2218#heading--make-machines) in the [CLI cookbook](/t/the-cli-cookbook/2218).
-
-The variable fields in the `machines create` command (the `$...` items) are as follows, in this example: 
-
-```
-> architecture=$ARCH \
-> mac_addresses=$MAC_ADDRESS \
-> power_type=$POWER_TYPE \
-> power_parameters_power_id=$POWER_ID \
-> power_parameters_power_address=$POWER_ADDRESS \
-> power_parameters_power_pass=$POWER_PASSWORD
-```
-
-* `$ARCH`: This field refers to the architecture of the machine being added, `amd64` in the local laptop example.
-
-* `$MAC_ADDRESS`: This is the MAC address of the boot-enabled NIC for the machine being added.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
-
-<!-- deb-2-7-cli
-* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3012) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
- deb-2-7-cli -->
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ UI|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+snap-2-8-ui -->
 
 <!-- deb-2-8-cli
-* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3014) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
- deb-2-8-cli -->
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|CLI ~  [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+deb-2-8-cli -->
 
-<!-- deb-2-9-cli
-* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3016) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
- deb-2-9-cli -->
-
-<!-- snap-2-7-cli
-* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3006) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
- snap-2-7-cli -->
-
-<!-- snap-2-8-cli
-* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3008) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
- snap-2-8-cli -->
+<!-- deb-2-8-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ UI|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+deb-2-8-ui -->
 
 <!-- snap-2-9-cli
-* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3010) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|CLI ~  [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+snap-2-9-cli -->
+
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ UI|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+
+<!-- deb-2-9-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|CLI ~  [UI](/t/maas-installation/3329)|
+deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ UI|
+deb-2-9-ui -->
+
+<!-- snap-2-7-ui snap-2-7-cli 
+[Snaps](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
+
+``` bash
+sudo snap install maas --channel=2.7
+```
+
+After entering your password, the snap will download and install from the 2.7 channel. However, MAAS needs initialising before it's ready to go.
+
+<a href="#heading--initialisation"><h2 id="heading--initialisation">Initialisation</h2></a>
+
+The next step involves initialising MAAS with a *run mode*. Selecting one of the following modes dictates what services will run on the local system:
+
+| Mode          | Region | Rack | Database | Description                           |
+|---------------|--------|------|----------|---------------------------------------|
+| `all`*        | X      | X    | X        | All services (see warning below)      |
+| `region`      | X      |      |          | Region API server only                |
+| `rack`        |        | X    |          | Rack controller only                  |
+| `region+rack` | X      | X    |          | Region API server and rack controller |
+| `none`        |        |      |          | Reinitialises MAAS and stops services |
+
+[note type="Warning" status="all mode being deprecated"]
+Configuring the MAAS snap in "all" mode will be [deprecated in MAAS version 2.8.0 and removed in MAAS version 2.9.0](https://maas.io/deprecations/MD1).
+[/note]
+
+To initialise MAAS and select a run mode, use the `maas init` command with the *--mode* argument.
+
+<a href="#heading--example"><h3 id="heading--example">Example</h3></a>
+
+The following demonstrates the `all` mode, a popular initialisation choice for MAAS:
+
+``` bash
+sudo maas init --mode all
+```
+
+A dialog will appear that will gather some basic information:
+
+``` no-highlight
+MAAS URL [default=http://10.55.60.1:5240/MAAS]: http://192.168.122.1:5240/MAAS
+Create first admin account:       
+Username: admin
+Password: ******
+Again: ******
+Email: admin@example.com
+Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
+```
+
+[note]
+You will use the username and password to access the web UI.  If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
+[/note]
+
+<a href="#heading--maas-url"><h3 id="heading--maas-url">MAAS URL</h3></a>
+
+All run modes (except `none`) prompt for a MAAS URL, interpreted differently depending on the mode:
+
+-   `all`, `region+rack`: Used to create a new region controller as well as to tell the rack controller how to find the region controller.
+-   `region`: Used to create a new region controller.
+-   `rack`: Used to locate the region controller.
+
+<a href="#heading--shared-secret"><h3 id="heading--shared-secret">Shared secret</h3></a>
+
+The 'rack' and 'region+rack' modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.
+
+<a href="#heading--reinitialising-maas"><h3 id="heading--reinitialising-maas">Reinitialising MAAS</h3></a>
+
+To re-initialise MAAS, for example, to switch from `rack` to `region`:
+
+``` bash
+sudo maas init --mode region
+```
+
+<a href="#heading--additional-init-options"><h3 id="heading--additional-init-options">Additional `init` options</h3></a>
+
+The `init` command can take a number of optional arguments. To list them all as well as read a brief description of each:
+
+``` bash
+sudo maas init --help
+```
+
+<a href="#heading--configuration-verification"><h2 id="heading--configuration-verification">Configuration verification</h2></a>
+
+After a *snap* installation of MAAS, you can verify the currently-running configuration with:
+
+``` bash
+sudo maas config
+```
+
+Sample output (for mode 'all'):
+
+``` no-highlight
+Mode: all
+Settings:
+maas_url=http://192.168.122.1:5240/MAAS
+```
+
+<a href="#heading--service-statuses"><h2 id="heading--service-statuses">Service statuses</h2></a>
+
+You can check the status of running services with:
+
+``` bash
+sudo maas status
+```
+
+Sample output (for mode 'all'):
+
+``` no-highlight
+bind9                            RUNNING   pid 7999, uptime 0:09:17
+dhcpd                            STOPPED   Not started
+dhcpd6                           STOPPED   Not started
+ntp                              RUNNING   pid 8598, uptime 0:05:42
+postgresql                       RUNNING   pid 8001, uptime 0:09:17
+proxy                            STOPPED   Not started
+rackd                            RUNNING   pid 8000, uptime 0:09:17
+regiond:regiond-0                RUNNING   pid 8003, uptime 0:09:17
+regiond:regiond-1                RUNNING   pid 8008, uptime 0:09:17
+regiond:regiond-2                RUNNING   pid 8005, uptime 0:09:17
+regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
+tgt                              RUNNING   pid 8040, uptime 0:09:15
+```
+snap-2-7-ui snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2527).
+snap-2-7-ui -->
+
+<!-- snap-2-7-cli
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2526).
+snap-2-7-cli -->
+
+<!-- snap-2-8-ui snap-2-8-cli
+MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.  This article will walk you through both install methods.
+
+#### Thirteen questions you may have:
+
+1. [How do I install (but not initialise) the MAAS snap?](#heading--install-maas-snap)
+2. [How do I upgrade my 2.7 snap to version 2.8?](#heading--upgrade-maas-snap)
+3. [What are MAAS initialisation modes?](#heading--maas-init-modes)
+4. [How do I initialise MAAS for a test or proof-of-concept configuration?](#heading--init-poc)
+5. [How do I initialise MAAS for a production configuration?](#heading--init-prod)
+6. [How do I migrate an existing snap install?](/t/tips-tricks-and-traps/1506#heading--migrate-maas)
+7. [What if I want to manually export the MAAS database to an existing PostgreSQL server?](/t/tips-tricks-and-traps/1506#heading--manual-export)
+8. [How can I check the service status of my MAAS configuration?](#heading--service-status)
+9. [How do I re-initialise MAAS, if I want to?](#heading--reinitialising-maas)
+10. [How can I discover additional init options?](#heading--additional-init-options)
+11. [Give me an example of initialising MAAS](#heading--example)
+12. [Tell me about the MAAS URL](#heading--maas-url)
+13. [Tell me about the shared secret](#heading--shared-secret)
+
+[note]
+If you have installed `bind9` or have it running, you will need to uninstall it before installing MAAS.  You can check with `ps aux | grep named` to see if it's running. The `bind9` daemon interferes with MAAS operation and creates a number of unusual, hard-to-debug errors -- but don't worry, MAAS provides DNS and can work with existing DNS servers.
+[/note]
+
+<a href="#heading--install-maas-snap"><h2 id="heading--install-maas-snap">Installing MAAS from the snap</h2></a>
+
+[Snaps^](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
+
+    $ sudo snap install maas --channel=2.8
+
+After entering your password, the snap will download and install from the 2.8 channel -- though MAAS needs initialising before it's ready to go.
+
+<a href="#heading--upgrade-maas-snap"><h2 id="heading--upgrade-maas-snap">Upgrading MAAS from 2.7</h2></a>
+
+If you want to upgrade from a 2.7 snap to 2.8, and you are using a `region+rack` configuration, use this command:
+
+    $ sudo snap refresh --channel=2.8 maas
+
+After entering your password, the snap will refresh from the 2.8 channel.  You will **not** need to re-initialise MAAS.
+
+If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
+
+<a href="#heading--maas-init-modes"><h2 id="heading--maas-init-modes">MAAS initialisation modes</h2></a>
+
+MAAS supports the following modes, which dictate what services will run on the local system:
+
+| Mode          | Region | Rack | Database | Description                           |
+|---------------|--------|------|----------|---------------------------------------|
+| `all`*        | X      | X    | X        | Deprecated (see warning below)        |
+| `region`      | X      |      |          | Region API server only                |
+| `rack`        |        | X    |          | Rack controller only                  |
+| `region+rack` | X      | X    |          | Region API server and rack controller |
+| `none`        |        |      |          | Reinitialises MAAS and stops services |
+
+[note type="Warning" status="all mode being deprecated"]
+The MAAS initialisation mode "all" is [deprecated in MAAS version 2.8.0 and will be removed in MAAS version 2.9.0^](https://maas.io/deprecations/MD1).
+[/note]
+
+<a href="#heading--init-poc"><h2 id="heading--init-poc">Initialising MAAS as a test configuration</h2></a>
+
+We want to provide a more compact version for those who may be testing MAAS.  To achieve this, we're providing a separate snap, called `maas-test-db`, which provides a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.
+
+Once MAAS is installed, you can use the `--help` flag with `maas init` to get relevant instructions:
+ 
+    $ sudo maas init --help
+    usage: maas init [-h] {region+rack,region,rack} . . .
+
+    Initialise MAAS in the specified run mode.
+
+    optional arguments:
+      -h, --help            show this help message and exit
+
+    run modes:
+      {region+rack,region,rack}
+        region+rack         Both region and rack controllers
+        region              Region controller only
+        rack                Rack controller only
+
+    When installing region or rack+region modes, MAAS needs a
+    PostgreSQL database to connect to.
+
+    If you want to set up PostgreSQL for a non-production deployment on
+    this machine, and configure it for use with MAAS, you can install
+    the maas-test-db snap before running 'maas init':
+        sudo snap install maas-test-db
+        sudo maas init region+rack --database-uri maas-test-db:///
+
+We'll quickly walk through these instructions to confirm your understanding.  First, install the `maas-test-db` snap:
+ 
+    sudo snap install maas-test-db
+
+Note that this step installs a a running PostgreSQL and a MAAS-ready database instantiation.  When it's done, you can double check with a built-in PostgreSQL shell:
+
+    $ maas-test-db.psql
+    psql (10.6)
+    Type "help" for help.
+
+    postgres=# \l
+
+This will produce a list of databases, one of which will be `maasdb`, owned by `maas`.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the `maas init` command:
+
+    sudo maas init region+rack --database-uri maas-test-db:///
+
+After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:
+ 
+    MAAS URL [default=http://10.45.222.159:5240/MAAS]:
+
+When you've entered a suitable URL, or accepted the default, the following prompt will appear:
+ 
+    MAAS has been set up.
+
+    If you want to configure external authentication or use
+    MAAS with Canonical RBAC, please run
+
+      sudo maas configauth
+
+    To create admins when not using external authentication, run
+
+      sudo maas createadmin
+
+Let's assume you just want a local testing user named `admin`:
+
+    $ sudo maas createadmin
+    Username: admin
+    Password: ******
+    Again: ******
+    Email: admin@example.com
+    Import SSH keys [] (lp:user-id or gh:user-id): gh:yourusername
+
+At this point, MAAS is basically set up and running.  You can confirm this with `sudo maas status`.  If you need an API key, you can obtain this with `sudo maas apikey --username yourusername`.  Now you will be able to test and evaluate MAAS by going to the URL you entered or accepted above and entering your `admin` username and password.
+
+<a href="#heading--configuration-verification"><h2 id="heading--configuration-verification">Configuration verification</h2></a>
+
+After a snap installation of MAAS, you can verify the currently-running configuration with:
+
+    sudo maas config
+
+<a href="#heading--init-prod"><h2 id="heading--init-prod">Initialise MAAS for a production configuration</h2></a>
+
+To install MAAS in a production configuration, you need to setup PostgreSQL, as described below.
+
+<a href="#heading--pg-setup"><h3 id="heading--pg-setup">Setting up PostgreSQL from scratch</h3></a>
+
+To set up PostgreSQL, even if it's running on a different machine, you can use the following procedure:
+
+1. You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 10 or better) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:
+
+        sudo apt update -y
+        sudo apt install -y postgresql
+
+2. You want to make sure you have a suitable PostgreSQL user, which can be accomplished with the following command, where `$MAAS_DBUSER` is your desired database username, and `$MAAS_DBPASS` is the intended password for that username.  Note that if you're executing this step in a LXD container (as root, which is the default), you may get a minor error, but the operation will still complete correctly.
+
+        sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
+
+3. Create the MAAS database with the following command, where `$MAAS_DBNAME` is your desired name for the MAAS database (typically known as `maas`). Again, if you're executing this step in a LXD container as root, you can ignore the minor error that results.
+
+        sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
+
+4. Edit `/etc/postgresql/10/main/pg_hba.conf` and add a line for the newly created database, replacing the variables with actual  names. You can limit access to a specific network by using a different CIDR than `0/0`.
+
+        host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
+
+5. You can then initialise MAAS via the following command:
+
+        sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
+
+[note] You should use `localhost` for `$HOSTNAME` if you're running PostgreSQL on the same box as MAAS.[/note]
+
+Don't worry; if you leave out any of the database parameters, you'll be prompted for those details.
+
+<a href="#heading--service-status"><h2 id="heading--service-status">Checking MAAS service status</h2></a>
+
+You can check the status of running services with:
+
+    sudo maas status
+
+Typically, the output looks something like this:
+
+    bind9                            RUNNING   pid 7999, uptime 0:09:17
+    dhcpd                            STOPPED   Not started
+    dhcpd6                           STOPPED   Not started
+    ntp                              RUNNING   pid 8598, uptime 0:05:42
+    postgresql                       RUNNING   pid 8001, uptime 0:09:17
+    proxy                            STOPPED   Not started
+    rackd                            RUNNING   pid 8000, uptime 0:09:17
+    regiond:regiond-0                RUNNING   pid 8003, uptime 0:09:17
+    regiond:regiond-1                RUNNING   pid 8008, uptime 0:09:17
+    regiond:regiond-2                RUNNING   pid 8005, uptime 0:09:17
+    regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
+    tgt                              RUNNING   pid 8040, uptime 0:09:15
+
+snap-2-8-cli snap-2-8-ui -->
+
+<!-- snap-2-8-cli
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2528).
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2529).
+ snap-2-8-ui -->
+
+<!-- snap-2-8-cli snap-2-8-ui
+<a href="#heading--example"><h2 id="heading--example">Example of MAAS initialisation</h2></a>
+
+The following demonstrates the `region+rack` mode, a popular initialisation choice for MAAS:
+
+    sudo maas init region+rack
+
+`maas` will ask for the MAAS URL:
+
+    MAAS URL [default=http://10.55.60.1:5240/MAAS]: http://192.168.122.1:5240/MAAS
+
+If you also need to create an admin user, you can use:
+
+    sudo maas createadmin
+
+which takes you through the following exchange:
+
+    Create first admin account:       
+    Username: admin
+    Password: ******
+    Again: ******
+    Email: admin@example.com
+    Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
+
+[note]
+You will use the username and password created above to access the web UI.  If you enter a [Launchpad^](https://launchpad.net/) or [GitHub^](https://github.com) account name with associated SSH key, MAAS will import them automatically.
+[/note]
+
+<a href="#heading--maas-url"><h2 id="heading--maas-url">MAAS URL</h2></a>
+
+All run modes (except `none`) prompt for a MAAS URL, interpreted differently depending on the mode:
+
+-   `region`: Used to create a new region controller.
+-   `rack`: Used to locate the region controller.
+
+<a href="#heading--shared-secret"><h2 id="heading--shared-secret">Shared secret</h2></a>
+
+The 'rack' and 'region+rack' modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.
+
+<a href="#heading--reinitialising-maas"><h2 id="heading--reinitialising-maas">Reinitialising MAAS</h2></a>
+
+It is also possible to re-initialise MAAS to switch modes.  For example, to switch from `rack` to `region`:
+ 
+    sudo maas init region
+
+<a href="#heading--additional-init-options"><h2 id="heading--additional-init-options">Additional `init` options</h2></a>
+
+The `init` command can takes optional arguments. To list them, as well as read a brief description of each, you can enter:
+
+    sudo maas init --help
+
+snap-2-8-ui snap-2-8-cli -->
+
+MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.  This article will walk you through both install methods.
+
+#### Thirteen questions you may have:
+
+1. [How do I install (but not initialise) the MAAS 2.9 snap?](#heading--install-maas-snap)
+2. [How do I upgrade my 2.8 snap to version 2.9?](#heading--upgrade-maas-snap)
+3. [What are MAAS initialisation modes?](#heading--maas-init-modes)
+4. [How do I initialise MAAS for a test or proof-of-concept configuration?](#heading--init-poc)
+5. [How do I initialise MAAS for a production configuration?](#heading--init-prod)
+6. [How do I migrate an existing snap install?](/t/tips-tricks-and-traps/1506#heading--migrate-maas)
+7. [What if I want to manually export the MAAS database to an existing PostgreSQL server?](/t/tips-tricks-and-traps/1506#heading--manual-export)
+8. [How can I check the service status of my MAAS configuration?](#heading--service-status)
+9. [How do I re-initialise MAAS, if I want to?](#heading--reinitialising-maas)
+10. [How can I discover additional init options?](#heading--additional-init-options)
+11. [Give me an example of initialising MAAS](#heading--example)
+12. [Tell me about the MAAS URL](#heading--maas-url)
+13. [Tell me about the shared secret](#heading--shared-secret)
+
+[note]
+If you have installed `bind9` or have it running, you will need to uninstall it before installing MAAS.  You can check with `ps aux | grep named` to see if it's running. The `bind9` daemon interferes with MAAS operation and creates a number of unusual, hard-to-debug errors -- but don't worry, MAAS provides DNS and can work with existing DNS servers.
+[/note]
+
+<a href="#heading--install-maas-snap"><h2 id="heading--install-maas-snap">Installing MAAS from the snap</h2></a>
+
+[Snaps^](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
+
+    $ sudo snap install --channel=2.9/stable maas
+
+After entering your password, the snap will download and install from the 2.9 stable channel -- though MAAS needs initialising before it's ready to go.
+
+<a href="#heading--upgrade-maas-snap"><h2 id="heading--upgrade-maas-snap">Upgrading MAAS from 2.8</h2></a>
+
+If you want to upgrade from a 2.8 snap to 2.9, and you are using a `region+rack` configuration, use this command:
+
+    $ sudo snap refresh --channel=2.9/stable maas
+
+After entering your password, the snap will refresh from the 2.9 stable channel.  You will **not** need to re-initialise MAAS.
+
+If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
+
+<a href="#heading--maas-init-modes"><h2 id="heading--maas-init-modes">MAAS initialisation modes</h2></a>
+
+MAAS supports the following modes, which dictate what services will run on the local system:
+
+| Mode          | Region | Rack | Database | Description                           |
+|---------------|--------|------|----------|---------------------------------------|
+| `region`      | X      |      |          | Region API server only                |
+| `rack`        |        | X    |          | Rack controller only                  |
+| `region+rack` | X      | X    |          | Region API server and rack controller |
+| `none`        |        |      |          | Reinitialises MAAS and stops services |
+
+<a href="#heading--init-poc"><h2 id="heading--init-poc">Initialising MAAS as a test configuration</h2></a>
+
+We want to provide a more compact version for those who may be testing MAAS.  To achieve this, we're providing a separate snap, called `maas-test-db`, which provides a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.
+
+Once MAAS is installed, you can use the `--help` flag with `maas init` to get relevant instructions:
+ 
+    $ sudo maas init --help
+    usage: maas init [-h] {region+rack,region,rack} . . .
+
+    Initialise MAAS in the specified run mode.
+
+    optional arguments:
+      -h, --help            show this help message and exit
+
+    run modes:
+      {region+rack,region,rack}
+        region+rack         Both region and rack controllers
+        region              Region controller only
+        rack                Rack controller only
+
+    When installing region or rack+region modes, MAAS needs a
+    PostgreSQL database to connect to.
+
+    If you want to set up PostgreSQL for a non-production deployment on
+    this machine, and configure it for use with MAAS, you can install
+    the maas-test-db snap before running 'maas init':
+        sudo snap install maas-test-db
+        sudo maas init region+rack --database-uri maas-test-db:///
+
+We'll quickly walk through these instructions to confirm your understanding.  First, install the `maas-test-db` snap:
+ 
+    sudo snap install maas-test-db
+
+Note that this step installs a a running PostgreSQL and a MAAS-ready database instantiation.  When it's done, you can double check with a built-in PostgreSQL shell:
+
+    $ maas-test-db.psql
+    psql (10.6)
+    Type "help" for help.
+
+    postgres=# \l
+
+This will produce a list of databases, one of which will be `maasdb`, owned by `maas`.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the `maas init` command:
+
+    sudo maas init region+rack --database-uri maas-test-db:///
+
+After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:
+ 
+    MAAS URL [default=http://10.45.222.159:5240/MAAS]:
+
+When you've entered a suitable URL, or accepted the default, the following prompt will appear:
+ 
+    MAAS has been set up.
+
+    If you want to configure external authentication or use
+    MAAS with Canonical RBAC, please run
+
+      sudo maas configauth
+
+    To create admins when not using external authentication, run
+
+      sudo maas createadmin
+
+Let's assume you just want a local testing user named `admin`:
+
+    $ sudo maas createadmin
+    Username: admin
+    Password: ******
+    Again: ******
+    Email: admin@example.com
+    Import SSH keys [] (lp:user-id or gh:user-id): gh:yourusername
+
+At this point, MAAS is basically set up and running.  You can confirm this with `sudo maas status`.  If you need an API key, you can obtain this with `sudo maas apikey --username yourusername`.  Now you will be able to test and evaluate MAAS by going to the URL you entered or accepted above and entering your `admin` username and password.
+
+<a href="#heading--configuration-verification"><h2 id="heading--configuration-verification">Configuration verification</h2></a>
+
+After a snap installation of MAAS, you can verify the currently-running configuration with:
+
+    sudo maas config
+
+<a href="#heading--init-prod"><h2 id="heading--init-prod">Initialise MAAS for a production configuration</h2></a>
+
+To install MAAS in a production configuration, you need to setup PostgreSQL, as described below.
+
+<a href="#heading--pg-setup"><h3 id="heading--pg-setup">Setting up PostgreSQL from scratch</h3></a>
+
+To set up PostgreSQL, even if it's running on a different machine, you can use the following procedure:
+
+1. You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 10 or better) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:
+
+        sudo apt update -y
+        sudo apt install -y postgresql
+
+2. You want to make sure you have a suitable PostgreSQL user, which can be accomplished with the following command, where `$MAAS_DBUSER` is your desired database username, and `$MAAS_DBPASS` is the intended password for that username.  Note that if you're executing this step in a LXD container (as root, which is the default), you may get a minor error, but the operation will still complete correctly.
+
+        sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
+
+3. Create the MAAS database with the following command, where `$MAAS_DBNAME` is your desired name for the MAAS database (typically known as `maas`). Again, if you're executing this step in a LXD container as root, you can ignore the minor error that results.
+
+        sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
+
+4. Edit `/etc/postgresql/10/main/pg_hba.conf` and add a line for the newly created database, replacing the variables with actual  names. You can limit access to a specific network by using a different CIDR than `0/0`.
+
+        host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
+
+5. You can then initialise MAAS via the following command:
+
+        sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
+
+[note] You should use `localhost` for `$HOSTNAME` if you're running PostgreSQL on the same box as MAAS.[/note]
+
+Don't worry; if you leave out any of the database parameters, you'll be prompted for those details.
+
+<a href="#heading--service-status"><h2 id="heading--service-status">Checking MAAS service status</h2></a>
+
+You can check the status of running services with:
+
+    sudo maas status
+
+Typically, the output looks something like this:
+
+    bind9                            RUNNING   pid 7999, uptime 0:09:17
+    dhcpd                            STOPPED   Not started
+    dhcpd6                           STOPPED   Not started
+    ntp                              RUNNING   pid 8598, uptime 0:05:42
+    postgresql                       RUNNING   pid 8001, uptime 0:09:17
+    proxy                            STOPPED   Not started
+    rackd                            RUNNING   pid 8000, uptime 0:09:17
+    regiond:regiond-0                RUNNING   pid 8003, uptime 0:09:17
+    regiond:regiond-1                RUNNING   pid 8008, uptime 0:09:17
+    regiond:regiond-2                RUNNING   pid 8005, uptime 0:09:17
+    regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
+    tgt                              RUNNING   pid 8040, uptime 0:09:15
+
+
+<!-- snap-2-9-cli
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2530).
  snap-2-9-cli -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-* `$POWER_ID`: This is generally the UUID of the machine being added.
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2531).
 
-* `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types) in the API reference for details on the available power types and the relevant parameters for each type.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+<a href="#heading--example"><h2 id="heading--example">Example of MAAS initialisation</h2></a>
 
-Normally, when you add a machine manually, MAAS will immediately attempt to commission the machine. Note that you will need to configure the underlying machine to boot over the network, or commissioning will fail. MAAS cannot handle this configuration for you.  While the correct method for configuring network boot depends heavily on your server, there are two common elements:
+The following demonstrates the `region+rack` mode, a popular initialisation choice for MAAS:
 
-1. The network card on your server must be able to support PXE, i.e., your NIC -- whether independent or integrated on a motherboard -- must have a boot PROM that supports network booting.  You'll need to consult the documentation for the machine in question to determine this.
+    sudo maas init region+rack
 
-2. You usually have to interrupt the boot process and enter the BIOS/UEFI menu to configure the network card's PXE stack.  Again, you may need to consult your machine's documentation to pin down this step.
+`maas` will ask for the MAAS URL:
 
-Additional steps will vary widely by machine type and architecture.
+    MAAS URL [default=http://10.55.60.1:5240/MAAS]: http://192.168.122.1:5240/MAAS
 
-<a href="#heading--bmc-enlistment"><h3 id="heading--bmc-enlistment">BMC enlistment</h3></a>
+If you also need to create an admin user, you can use:
 
-<strong>NOTE:</strong> 
-Note that in MAAS versions before 2.5, you are required to provide the MAC address of the PXE interface when adding a new machine manually.
+    sudo maas createadmin
+
+which takes you through the following exchange:
+
+    Create first admin account:       
+    Username: admin
+    Password: ******
+    Again: ******
+    Email: admin@example.com
+    Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
+
+[note]
+You will use the username and password created above to access the web UI.  If you enter a [Launchpad^](https://launchpad.net/) or [GitHub^](https://github.com) account name with associated SSH key, MAAS will import them automatically.
+[/note]
+
+<a href="#heading--maas-url"><h2 id="heading--maas-url">MAAS URL</h2></a>
+
+All run modes (except `none`) prompt for a MAAS URL, interpreted differently depending on the mode:
+
+-   `region`: Used to create a new region controller.
+-   `rack`: Used to locate the region controller.
+
+<a href="#heading--shared-secret"><h2 id="heading--shared-secret">Shared secret</h2></a>
+
+The 'rack' and 'region+rack' modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.
+
+<a href="#heading--reinitialising-maas"><h2 id="heading--reinitialising-maas">Reinitialising MAAS</h2></a>
+
+It is also possible to re-initialise MAAS to switch modes.  For example, to switch from `rack` to `region`:
+ 
+    sudo maas init region
+
+<a href="#heading--additional-init-options"><h2 id="heading--additional-init-options">Additional `init` options</h2></a>
+
+The `init` command can takes optional arguments. To list them, as well as read a brief description of each, you can enter:
+
+    sudo maas init --help
 
 
-##### IPMI machines
+<!-- deb-2-8-cli deb-2-8-ui
+<a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS from packages</h2></a>
 
-For IPMI machines, you only need to provide IPMI credentials. MAAS automatically discovers the machine and runs enlistment configuration by matching the BMC address.
+You can install a 2.8 stable version of MAAS via the PPA listed on the [MAAS launchpad](https://launchpad.net/~maas), specifically:
 
-##### Non-IPMI machines
+-   [ppa:maas/2.8](https://launchpad.net/~maas/+archive/ubuntu/2.8)
 
-For non-IPMI machines, you must specify a non-PXE MAC address. MAAS automatically discovers the machine and runs enlistment configuration by matching the non-PXE MAC address.
+To add the 2.8 PPA, type:
 
-<!-- deb-2-7-ui snap-2-7-ui
-<a href="#heading--add-nodes-via-a-chassis"><h2 id="heading--add-nodes-via-a-chassis">Add a machine via a chassis</h2></a>
+``` bash
+sudo apt-add-repository -yu ppa:maas/2.8
+```
 
-Use the chassis feature to add multiple machines at once. To do this, instead of selecting 'Machine' as above, choose 'Chassis' from the drop-down menu. In the following example, MAAS will add all available VMs from the given  virsh address:
+<a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installation scenarios</h3></a>
 
-<a href="https://assets.ubuntu.com/v1/d5314a8a-nodes-add__2.4_add-node-chassis.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/d5314a8a-nodes-add__2.4_add-node-chassis.png"></a>
+The recommended way to set up an initial MAAS environment is to put everything on one machine:
 
-The required fields will change based on the type of chassis you choose.
+``` bash
+sudo apt install maas
+```
 
-<strong>NOTE:</strong> 
-As with the manual method, the underlying machines will require netbooting.
+Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
 
-deb-2-7-ui snap-2-7-ui -->
+<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
 
-<a href="#heading--add-nodes-via-a-chassis"><h2 id="heading--add-nodes-via-a-chassis">Add a machine via a chassis</h2></a>
+Choosing "Y" proceeds with a standard <code>apt</code> package install.
 
-Use the chassis feature to add multiple machines at once. To do this, instead of selecting 'Machine' as above, choose 'Chassis' from the drop-down menu. In the following example, MAAS will add all available VMs from the given  virsh address:
+<h4>Distributed environment</h4> 
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg"></a>
+<p>For a more distributed environment, you can place the region controller on one machine:</p>
 
-The required fields will change based on the type of chassis you choose.
+``` bash
+sudo apt install maas-region-controller
+```
 
-<strong>NOTE:</strong> 
-As with the manual method, the underlying machines will require netbooting.
+and the rack controller (see [Rack controller](/t/rack-controller/771) for details) on another:
+
+``` bash
+sudo apt install maas-rack-controller
+sudo maas-rack register
+```
+
+These two steps will lead you through two similar <code>apt</code> install sequences.
+
+<a href="#heading--creating-a-maas-user"><h3 id="heading--creating-a-maas-user">Creating a MAAS user</h3></a>
+
+<p>Finally, you will need to create a MAAS administrator user to access the web UI:</p>
+
+``` bash
+sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
+```
+
+<p>For example, the process might go like this:</p>
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg"></a>
+
+<p>The username can be anything. You will also be prompted to supply a password for the user. The command option <code>--password=$PASSWORD</code> can be used to specify one but, depending on your environment, this may pose a security risk.</p>
+
+<div class="p-notification">
+<p class="p-notification__response">At this time, MAAS does not make use of the email address. However, it may do so in the future.</p>
+</div>
+
+Finally, the <code>createadmin</code> option asks for an SSH key:
+
+<a
+href="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg"></a>
+
+<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to include the key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gp:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
+
+<p>If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.</p>
+
+<a href="#heading--next-steps"><h3 id="heading--next-steps">Next steps</h3></a>
+
+deb-2-8-cli deb-2-8-ui -->
+
+<!-- deb-2-8-cli
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2534).
+deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2535).
+deb-2-8-ui -->
+
+<!-- deb-2-7-cli deb-2-7-ui
+<a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS from packages</h2></a>
+
+You can install a 2.7 stable version of MAAS via the PPA listed on the [MAAS launchpad](https://launchpad.net/~maas), specifically:
+
+-   [ppa:maas/2.7^](https://launchpad.net/~maas/+archive/ubuntu/2.7)
+
+To add the 2.7 PPA, type:
+
+``` bash
+sudo apt-add-repository -yu ppa:maas/2.7
+```
+
+<a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installation scenarios</h3></a>
+
+The recommended way to set up an initial MAAS environment is to put everything on one machine:
+
+``` bash
+sudo apt install maas
+```
+
+Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
+
+Choosing "Y" proceeds with a standard <code>apt</code> package install.
+
+<h4>Distributed environment</h4> 
+
+<p>For a more distributed environment, you can place the region controller on one machine:</p>
+
+``` bash
+sudo apt install maas-region-controller
+```
+
+and the rack controller (see [Rack controller](/t/rack-controller/771) for details) on another:
+
+``` bash
+sudo apt install maas-rack-controller
+sudo maas-rack register
+```
+
+These two steps will lead you through two similar <code>apt</code> install sequences.
+
+<a href="#heading--creating-a-maas-user"><h3 id="heading--creating-a-maas-user">Creating a MAAS user</h3></a>
+
+<p>Finally, you will need to create a MAAS administrator user to access the web UI:</p>
+
+``` bash
+sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
+```
+
+<p>For example, the process might go like this:</p>
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg"></a>
+
+<p>The username can be anything. You will also be prompted to supply a password for the user. The command option <code>--password=$PASSWORD</code> can be used to specify one but, depending on your environment, this may pose a security risk.</p>
+
+<div class="p-notification">
+<p class="p-notification__response">At this time, MAAS does not make use of the email address. However, it may do so in the future.</p>
+</div>
+
+Finally, the <code>createadmin</code> option asks for an SSH key:
+
+<a
+href="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg"></a>
+
+<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to include the key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gp:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
+
+<p>If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.</p>
+
+<a href="#heading--next-steps"><h3 id="heading--next-steps">Next steps</h3></a>
+
+deb-2-7-cli deb-2-7-ui -->
+
+<!-- deb-2-7-cli
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2532).
+deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2533).
+deb-2-7-ui -->
+
+<!-- deb-2-9-cli deb-2-9-ui
+<a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS from packages</h2></a>
+
+You can install a 2.9 stable version of MAAS from the PPA this way:
+
+``` bash
+sudo apt-add-repository ppa:maas/2.9
+sudo apt-get update
+```
+
+<a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installation scenarios</h3></a>
+
+The recommended way to set up an initial MAAS environment is to put everything on one machine:
+
+``` bash
+sudo apt-get -y install maas
+```
+
+Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
+
+Choosing "Y" proceeds with a standard <code>apt</code> package install.
+
+<h4>Distributed environment</h4> 
+
+<p>For a more distributed environment, you can place the region controller on one machine:</p>
+
+``` bash
+sudo apt install maas-region-controller
+```
+
+and the rack controller (see [Rack controller](/t/rack-controller/771) for details) on another:
+
+``` bash
+sudo apt install maas-rack-controller
+sudo maas-rack register
+```
+
+These two steps will lead you through two similar <code>apt</code> install sequences.
+
+<a href="#heading--creating-a-maas-user"><h3 id="heading--creating-a-maas-user">Creating a MAAS user</h3></a>
+
+<p>Finally, you will need to create a MAAS administrator user to access the web UI:</p>
+
+``` bash
+sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
+```
+
+<p>For example, the process might go like this:</p>
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg"></a>
+
+<p>The username can be anything. You will also be prompted to supply a password for the user. The command option <code>--password=$PASSWORD</code> can be used to specify one but, depending on your environment, this may pose a security risk.</p>
+
+<div class="p-notification">
+<p class="p-notification__response">At this time, MAAS does not make use of the email address. However, it may do so in the future.</p>
+</div>
+
+Finally, the <code>createadmin</code> option asks for an SSH key:
+
+<a
+href="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg"></a>
+
+<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to include the key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gp:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
+
+<p>If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.</p>
+
+<a href="#heading--next-steps"><h3 id="heading--next-steps">Next steps</h3></a>
+
+deb-2-9-cli deb-2-9-ui -->
+
+<!-- deb-2-9-cli
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2536).
+deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2537).
+deb-2-9-ui -->
 

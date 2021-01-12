@@ -8,108 +8,144 @@ candid-tutorial.md: ../candid-tutorial.md
 	xpub push discourse candid-tutorial-3610.md
 	xpub pull discourse 3610 3610
 	cp -p candid-tutorial-3610.md candid-tutorial.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 contact-us.md: ../contact-us.md
 	cp ../contact-us.md contact-us-743.md
 	xpub push discourse contact-us-743.md
 	xpub pull discourse 743 743
 	cp -p contact-us-743.md contact-us.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 python-api-client.md: ../python-api-client.md
 	cp ../python-api-client.md python-api-client-810.md
 	xpub push discourse python-api-client-810.md
 	xpub pull discourse 810 810
 	cp -p python-api-client-810.md python-api-client.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 audit-event-logs.md: ../audit-event-logs.md
 	cp ../audit-event-logs.md audit-event-logs-791.md
 	xpub push discourse audit-event-logs-791.md
 	xpub pull discourse 791 791
 	cp -p audit-event-logs-791.md audit-event-logs.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 cli-image-management.md: ../cli-image-management.md
 	cp ../cli-image-management.md cli-image-management-797.md
 	xpub push discourse cli-image-management-797.md
 	xpub pull discourse 797 797
 	cp -p cli-image-management-797.md cli-image-management.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 api-authentication.md: ../api-authentication.md
 	cp ../api-authentication.md api-authentication-742.md
 	xpub push discourse api-authentication-742.md
 	xpub pull discourse 742 742
 	cp -p api-authentication-742.md api-authentication.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 cli-advanced-tasks.md: ../cli-advanced-tasks.md
 	cp ../cli-advanced-tasks.md cli-advanced-tasks-793.md
 	xpub push discourse cli-advanced-tasks-793.md
 	xpub pull discourse 793 793
 	cp -p cli-advanced-tasks-793.md cli-advanced-tasks.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 concepts-and-terms.md: ../concepts-and-terms.md
 	cp ../concepts-and-terms.md concepts-and-terms-785.md
 	xpub push discourse concepts-and-terms-785.md
 	xpub pull discourse 785 785
 	cp -p concepts-and-terms-785.md concepts-and-terms.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 cli-composable-hardware.md: ../cli-composable-hardware.md
 	cp ../cli-composable-hardware.md cli-composable-hardware-795.md
 	xpub push discourse cli-composable-hardware-795.md
 	xpub pull discourse 795 795
 	cp -p cli-composable-hardware-795.md cli-composable-hardware.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 common-cli-tasks.md: ../common-cli-tasks.md
 	cp ../common-cli-tasks.md common-cli-tasks-794.md
 	xpub push discourse common-cli-tasks-794.md
 	xpub pull discourse 794 794
 	cp -p common-cli-tasks-794.md common-cli-tasks.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 troubleshooting.md: ../troubleshooting.md
 	cp ../troubleshooting.md troubleshooting-837.md
 	xpub push discourse troubleshooting-837.md
 	xpub pull discourse 837 837
 	cp -p troubleshooting-837.md troubleshooting.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 writing-guide.md: ../writing-guide.md
 	cp ../writing-guide.md writing-guide-747.md
 	xpub push discourse writing-guide-747.md
 	xpub pull discourse 747 747
 	cp -p writing-guide-747.md writing-guide.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 cli-interface-management.md: ../cli-interface-management.md
 	cp ../cli-interface-management.md cli-interface-management-798.md
 	xpub push discourse cli-interface-management-798.md
 	xpub pull discourse 798 798
 	cp -p cli-interface-management-798.md cli-interface-management.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 maas-cli.md: ../maas-cli.md
 	cp ../maas-cli.md maas-cli-802.md
 	xpub push discourse maas-cli-802.md
 	xpub pull discourse 802 802
 	cp -p maas-cli-802.md maas-cli.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 cli-kernel-management.md: ../cli-kernel-management.md
 	cp ../cli-kernel-management.md cli-kernel-management-799.md
 	xpub push discourse cli-kernel-management-799.md
 	xpub pull discourse 799 799
 	cp -p cli-kernel-management-799.md cli-kernel-management.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 the-cli-cookbook.md: ../the-cli-cookbook.md
 	cp ../the-cli-cookbook.md the-cli-cookbook-2218.md
 	xpub push discourse the-cli-cookbook-2218.md
 	xpub pull discourse 2218 2218
 	cp -p the-cli-cookbook-2218.md the-cli-cookbook.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
   
 tips-tricks-and-traps.md: ../tips-tricks-and-traps.md
 	cp ../tips-tricks-and-traps.md tips-tricks-and-traps-1506.md
 	xpub push discourse tips-tricks-and-traps-1506.md
 	xpub pull discourse 1506 1506
 	cp -p tips-tricks-and-traps-1506.md tips-tricks-and-traps.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 language-details-contributing-to-maas-docs.md: ../language-details-contributing-to-maas-docs.md
 	cp ../language-details-contributing-to-maas-docs.md language-details-contributing-to-maas-docs-745.md
 	xpub push discourse language-details-contributing-to-maas-docs-745.md
 	xpub pull discourse 745 745
 	cp -p language-details-contributing-to-maas-docs-745.md language-details-contributing-to-maas-docs.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 using-rbac-with-maas.md: ../using-rbac-with-maas.md
 	cp ../using-rbac-with-maas.md using-rbac-with-maas-snap-2-7-cli-3592.md
@@ -138,6 +174,8 @@ using-rbac-with-maas.md: ../using-rbac-with-maas.md
 	xpub push discourse -t deb-2-9-ui using-rbac-with-maas-deb-2-9-ui-3603.md
 	xpub pull discourse 3603 3603
 	cp -p using-rbac-with-maas-deb-2-9-ui-3603.md using-rbac-with-maas.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 rack-controllers.md: ../rack-controllers.md
 	cp ../rack-controllers.md rack-controllers-snap-2-7-cli-3054.md
@@ -166,6 +204,8 @@ rack-controllers.md: ../rack-controllers.md
 	xpub push discourse -t deb-2-9-ui rack-controllers-deb-2-9-ui-3065.md
 	xpub pull discourse 3065 3065
 	cp -p rack-controllers-deb-2-9-ui-3065.md rack-controllers.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 whats-new-in-maas.md: ../whats-new-in-maas.md
 	cp ../whats-new-in-maas.md whats-new-in-maas-2-7-3335.md
@@ -176,6 +216,8 @@ whats-new-in-maas.md: ../whats-new-in-maas.md
 	xpub push discourse -t deb-2-9-cli whats-new-in-maas-2-9-3336.md
 	xpub pull discourse 3336 3336
 	cp -p whats-new-in-maas-2-9-3336.md whats-new-in-maas.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 maas-installation.md: ../maas-installation.md
 	cp ../maas-installation.md maas-installation-deb-2-7-cli-3324.md
@@ -204,6 +246,8 @@ maas-installation.md: ../maas-installation.md
 	xpub push discourse -t snap-2-9-ui maas-installation-snap-2-9-ui-3323.md
 	xpub pull discourse 3329 3329
 	cp -p maas-installation-deb-2-9-ui-3329.md maas-installation.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 subnet-management.md: ../subnet-management.md
 	cp ../subnet-management.md subnet-management-deb-2-7-cli-3120.md
@@ -232,6 +276,8 @@ subnet-management.md: ../subnet-management.md
 	xpub push discourse -t snap-2-9-ui subnet-management-snap-2-9-ui-3119.md
 	xpub pull discourse 3125 3125
 	cp -p subnet-management-deb-2-9-ui-3125.md subnet-management.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 vm-hosting.md: ../vm-hosting.md
 	cp ../vm-hosting.md vm-hosting-deb-2-7-cli-2748.md
@@ -260,6 +306,8 @@ vm-hosting.md: ../vm-hosting.md
 	xpub push discourse -t snap-2-9-ui vm-hosting-snap-2-9-ui-2747.md
 	xpub pull discourse 2753 2753
 	cp -p vm-hosting-deb-2-9-ui-2753.md vm-hosting.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 package-repositories.md: ../package-repositories.md
 	cp ../package-repositories.md package-repositories-deb-2-7-cli-2976.md
@@ -276,6 +324,8 @@ package-repositories.md: ../package-repositories.md
 	xpub push discourse -t deb-2-9-ui package-repositories-deb-2-9-ui-2981.md
 	xpub pull discourse 2993 2993
 	cp -p package-repositpackage-deb-2-9-ui-repositories.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 partitions.md: ../partitions.md
 	cp ../partitions.md partitions-deb-2-7-cli-2988.md
@@ -304,6 +354,8 @@ partitions.md: ../partitions.md
 	xpub push discourse -t snap-2-9-ui partitions-snap-2-9-ui-2987.md
 	xpub pull discourse 2993 2993
 	cp -p partitions-deb-2-9-ui-2993.md partitions.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 kernel-boot-options.md: ../kernel-boot-options.md
 	cp ../kernel-boot-options.md kernel-boot-options-deb-2-7-cli-2784.md
@@ -332,6 +384,8 @@ kernel-boot-options.md: ../kernel-boot-options.md
 	xpub push discourse -t snap-2-9-ui kernel-boot-options-snap-2-9-ui-2783.md
 	xpub pull discourse 2789 2789
 	cp -p kernel-boot-options-deb-2-9-ui-2789.md kernel-boot-options.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 event-logs.md: ../event-logs.md
 	cp ../event-logs.md event-logs-deb-2-7-cli-3388.md
@@ -360,6 +414,8 @@ event-logs.md: ../event-logs.md
 	xpub push discourse -t snap-2-9-ui event-logs-snap-2-9-ui-3387.md
 	xpub pull discourse 3392 3392
 	cp -p event-logs-deb-2-9-ui-3392.md event-logs.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 machine-logs.md: ../machine-logs.md
 	cp ../machine-logs.md machine-logs-deb-2-7-cli-3448.md
@@ -388,6 +444,8 @@ machine-logs.md: ../machine-logs.md
 	xpub push discourse -t snap-2-9-ui machine-logs-snap-2-9-ui-3447.md
 	xpub pull discourse 3453 3453
 	cp -p machine-logs-deb-2-9-ui-3453.md machine-logs.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 proxy-log.md: ../proxy-log.md
 	cp ../proxy-log.md proxy-log-deb-2-7-cli-3460.md
@@ -416,6 +474,8 @@ proxy-log.md: ../proxy-log.md
 	xpub push discourse -t snap-2-9-ui proxy-log-snap-2-9-ui-3459.md
 	xpub pull discourse 3465 3465
 	cp -p proxy-log-deb-2-9-ui-3465.md proxy-log.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
 
 interactive-search.md: ../interactive-search.md
 	cp ../interactive-search.md interactive-search-deb-2-7-cli-2712.md
@@ -444,6 +504,8 @@ interactive-search.md: ../interactive-search.md
 	xpub push discourse -t snap-2-9-ui interactive-search-snap-2-9-ui-2711.md
 	xpub pull discourse 2717 2717
 	cp -p interactive-search-deb-2-9-ui-2717.md interactive-search.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 controllers.md: ../controllers.md
 	cp ../controllers.md controllers-deb-2-7-cli-2724.md
@@ -472,6 +534,8 @@ controllers.md: ../controllers.md
 	xpub push discourse -t snap-2-9-ui controllers-snap-2-9-ui-2723.md
 	xpub pull discourse 2729 2729
 	cp -p controllers-deb-2-9-ui-2729.md controllers.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 adding-a-vm-host.md: ../adding-a-vm-host.md
 	cp ../adding-a-vm-host.md adding-a-vm-host-deb-2-7-cli-2292.md
@@ -500,6 +564,8 @@ adding-a-vm-host.md: ../adding-a-vm-host.md
 	xpub push discourse -t snap-2-9-ui adding-a-vm-host-snap-2-9-ui-2291.md
 	xpub pull discourse 2297 2297
 	cp -p adding-a-vm-host-deb-2-9-ui-2297.md adding-a-vm-host.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 user-accounts.md: ../user-accounts.md
 	cp ../user-accounts.md user-accounts-deb-2-7-cli-3204.md
@@ -528,6 +594,8 @@ user-accounts.md: ../user-accounts.md
 	xpub push discourse -t snap-2-9-ui user-accounts-snap-2-9-ui-3203.md
 	xpub pull discourse 3209 3209
 	cp -p user-accounts-deb-2-9-ui-3209.md user-accounts.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 resource-pools.md: ../resource-pools.md
 	cp ../resource-pools.md resource-pools-deb-2-7-cli-3084.md
@@ -556,6 +624,8 @@ resource-pools.md: ../resource-pools.md
 	xpub push discourse -t snap-2-9-ui resource-pools-snap-2-9-ui-3083.md
 	xpub pull discourse 3089 3089
 	cp -p resource-pools-deb-2-9-ui-3089.md resource-pools.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 network-discovery.md: ../network-discovery.md
 	cp ../network-discovery.md network-discovery-deb-2-7-cli-2928.md
@@ -584,6 +654,8 @@ network-discovery.md: ../network-discovery.md
 	xpub push discourse -t snap-2-9-ui network-discovery-snap-2-9-ui-2927.md
 	xpub pull discourse 2933 2933
 	cp -p network-discovery-deb-2-9-ui-2933.md network-discovery.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 storage.md: ../storage.md
 	cp ../storage.md storage-deb-2-7-cli-3108.md
@@ -612,6 +684,8 @@ storage.md: ../storage.md
 	xpub push discourse -t snap-2-9-ui storage-snap-2-9-ui-3107.md
 	xpub pull discourse 3113 3113
 	cp -p storage-deb-2-9-ui-3113.md storage.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 local-image-mirror.md: ../local-image-mirror.md
 	cp ../local-image-mirror.md local-image-mirror-deb-2-7-cli-2808.md
@@ -640,6 +714,8 @@ local-image-mirror.md: ../local-image-mirror.md
 	xpub push discourse -t snap-2-9-ui local-image-mirror-snap-2-9-ui-2807.md
 	xpub pull discourse 2813 2813
 	cp -p local-image-mirror-deb-2-9-ui-2813.md local-image-mirror.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 custom-machine-setup.md: ../custom-machine-setup.md
 	cp ../custom-machine-setup.md custom-machine-setup-deb-2-7-cli-2592.md
@@ -668,6 +744,8 @@ custom-machine-setup.md: ../custom-machine-setup.md
 	xpub push discourse -t snap-2-9-ui custom-machine-setup-snap-2-9-ui-2591.md
 	xpub pull discourse 2597 2597
 	cp -p custom-machine-setup-deb-2-9-ui-2597.md custom-machine-setup.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 managing-dhcp.md: ../managing-dhcp.md
 	cp ../managing-dhcp.md managing-dhcp-deb-2-7-cli-2904.md
@@ -696,6 +774,8 @@ managing-dhcp.md: ../managing-dhcp.md
 	xpub push discourse -t snap-2-9-ui managing-dhcp-snap-2-9-ui-2903.md
 	xpub pull discourse 2909 2909
 	cp -p managing-dhcp-deb-2-9-ui-2909.md managing-dhcp.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 vm-host-networking.md: ../vm-host-networking.md
 	cp ../vm-host-networking.md vm-host-networking-deb-2-7-cli-3216.md
@@ -724,6 +804,8 @@ vm-host-networking.md: ../vm-host-networking.md
 	xpub push discourse -t snap-2-9-ui vm-host-networking-snap-2-9-ui-3215.md
 	xpub pull discourse 3221 3221
 	cp -p vm-host-networking-deb-2-9-ui-3221.md vm-host-networking.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 vmware-images.md: ../vmware-images.md
 	cp ../vmware-images.md vmware-images-deb-2-7-cli-3240.md
@@ -752,6 +834,8 @@ vmware-images.md: ../vmware-images.md
 	xpub push discourse -t snap-2-9-ui vmware-images-snap-2-9-ui-3239.md
 	xpub pull discourse 3245 3245
 	cp -p vmware-images-deb-2-9-ui-3245.md vmware-images.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 managing-stp.md: ../managing-stp.md
 	cp ../managing-stp.md managing-stp-deb-2-7-cli-2916.md
@@ -780,6 +864,8 @@ managing-stp.md: ../managing-stp.md
 	xpub push discourse -t snap-2-9-ui managing-stp-snap-2-9-ui-2915.md
 	xpub pull discourse 2921 2921
 	cp -p managing-stp-deb-2-9-ui-2921.md managing-stp.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 postgresql-ha-hot-standby.md: ../postgresql-ha-hot-standby.md
 	cp ../postgresql-ha-hot-standby.md postgresql-ha-hot-standby-deb-2-7-cli-3000.md
@@ -808,6 +894,8 @@ postgresql-ha-hot-standby.md: ../postgresql-ha-hot-standby.md
 	xpub push discourse -t snap-2-9-ui postgresql-ha-hot-standby-snap-2-9-ui-2999.md
 	xpub pull discourse 3005 3005
 	cp -p postgresql-ha-hot-standby-deb-2-9-ui-3005.md postgresql-ha-hot-standby.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 ntp-services.md: ../ntp-services.md
 	cp ../ntp-services.md ntp-services-deb-2-7-cli-2964.md
@@ -836,6 +924,8 @@ ntp-services.md: ../ntp-services.md
 	xpub push discourse -t snap-2-9-ui ntp-services-snap-2-9-ui-2963.md
 	xpub pull discourse 2969 2969
 	cp -p ntp-services-deb-2-9-ui-2969.md ntp-services.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 vmware-vmfs-datastores.md: ../vmware-vmfs-datastores.md
 	cp ../vmware-vmfs-datastores.md vmware-vmfs-datastores-deb-2-7-cli-3252.md
@@ -864,6 +954,8 @@ vmware-vmfs-datastores.md: ../vmware-vmfs-datastores.md
 	xpub push discourse -t snap-2-9-ui vmware-vmfs-datastores-snap-2-9-ui-3251.md
 	xpub pull discourse 3257 3257
 	cp -p vmware-vmfs-datastores-deb-2-9-ui-3257.md vmware-vmfs-datastores.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 proxy.md: ../proxy.md
 	cp ../proxy.md proxy-deb-2-7-cli-3036.md
@@ -892,6 +984,8 @@ proxy.md: ../proxy.md
 	xpub push discourse -t snap-2-9-ui proxy-snap-2-9-ui-3035.md
 	xpub pull discourse 3041 3041
 	cp -p proxy-deb-2-9-ui-deb-2-9-ui-3041.md proxy.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 hardware-testing.md: ../hardware-testing.md
 	cp ../hardware-testing.md hardware-testing-deb-2-7-cli-2676.md
@@ -920,6 +1014,8 @@ hardware-testing.md: ../hardware-testing.md
 	xpub push discourse -t snap-2-9-ui hardware-testing-snap-2-9-ui-2675.md
 	xpub pull discourse 2681 2681
 	cp -p hardware-testing-deb-2-9-ui-2681.md hardware-testing.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 vm-host-storage-pools.md: ../vm-host-storage-pools.md
 	cp ../vm-host-storage-pools.md vm-host-storage-pools-deb-2-7-cli-3228.md
@@ -948,6 +1044,8 @@ vm-host-storage-pools.md: ../vm-host-storage-pools.md
 	xpub push discourse -t snap-2-9-ui vm-host-storage-pools-snap-2-9-ui-3227.md
 	xpub pull discourse 3233 3233
 	cp -p vm-host-storage-pools-deb-2-9-ui-3233.md vm-host-storage-pools.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 network-testing.md: ../network-testing.md
 	cp ../network-testing.md network-testing-deb-2-7-cli-2940.md
@@ -976,6 +1074,8 @@ network-testing.md: ../network-testing.md
 	xpub push discourse -t snap-2-9-ui network-testing-snap-2-9-ui-2939.md
 	xpub pull discourse 2945 2945
 	cp -p network-testing-deb-2-9-ui-2945.md network-testing.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 networking.md: ../networking.md
 	cp ../networking.md networking-deb-2-7-cli-2952.md
@@ -1004,6 +1104,8 @@ networking.md: ../networking.md
 	xpub push discourse -t snap-2-9-ui networking-snap-2-9-ui-2951.md
 	xpub pull discourse 2957 2957
 	cp -p networking-deb-2-9-ui-2957.md networking.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 explore-maas.md: ../explore-maas.md
 	cp ../explore-maas.md explore-maas-deb-2-7-cli-2640.md
@@ -1032,6 +1134,8 @@ explore-maas.md: ../explore-maas.md
 	xpub push discourse -t snap-2-9-ui explore-maas-snap-2-9-ui-2639.md
 	xpub pull discourse 2645 2645
 	cp -p explore-maas-deb-2-9-ui-2645.md explore-maas.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 zone-examples.md: ../zone-examples.md
 	cp ../zone-examples.md zone-examples-deb-2-7-cli-3276.md
@@ -1060,6 +1164,8 @@ zone-examples.md: ../zone-examples.md
 	xpub push discourse -t snap-2-9-ui zone-examples-snap-2-9-ui-3275.md
 	xpub pull discourse 3281 3281
 	cp -p zone-examples-deb-2-9-ui-3281.md zone-examples.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 machines.md: ../machines.md
 	cp ../machines.md machines-deb-2-7-cli-2736.md
@@ -1088,6 +1194,8 @@ machines.md: ../machines.md
 	xpub push discourse -t snap-2-9-ui machines-snap-2-9-ui-2735.md
 	xpub pull discourse 2741 2741
 	cp -p machines-deb-2-9-ui-2741.md machines.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 test-logs.md: ../test-logs.md
 	cp ../test-logs.md test-logs-deb-2-7-cli-3132.md
@@ -1116,6 +1224,8 @@ test-logs.md: ../test-logs.md
 	xpub push discourse -t snap-2-9-ui test-logs-snap-2-9-ui-3131.md
 	xpub pull discourse 3137 3137
 	cp -p test-logs-deb-2-9-ui-3137.md test-logs.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 maas-image-builder.md: ../maas-image-builder.md
 	cp ../maas-image-builder.md maas-image-builder-deb-2-7-cli-2856.md
@@ -1144,6 +1254,8 @@ maas-image-builder.md: ../maas-image-builder.md
 	xpub push discourse -t snap-2-9-ui maas-image-builder-snap-2-9-ui-2855.md
 	xpub pull discourse 2861 2861
 	cp -p maas-image-builder-deb-2-9-ui-2861.md maas-image-builder.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 configuring-tls-encryption.md: ../configuring-tls-encryption.md
 	cp ../configuring-tls-encryption.md configuring-tls-encryption-deb-2-7-cli-2544.md
@@ -1172,6 +1284,8 @@ configuring-tls-encryption.md: ../configuring-tls-encryption.md
 	xpub push discourse -t snap-2-9-ui configuring-tls-encryption-snap-2-9-ui-2543.md
 	xpub pull discourse 2549 2549
 	cp -p configuring-tls-encryption-deb-2-9-ui-2549.md configuring-tls-encryption.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 ipv6-addressing.md: ../ipv6-addressing.md
 	cp ../ipv6-addressing.md ipv6-addressing-deb-2-7-cli-2772.md
@@ -1200,6 +1314,8 @@ ipv6-addressing.md: ../ipv6-addressing.md
 	xpub push discourse -t snap-2-9-ui ipv6-addressing-snap-2-9-ui-2771.md
 	xpub pull discourse 2777 2777
 	cp -p ipv6-addressing-deb-2-9-ui-2777.md ipv6-addressing.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 hardening-your-maas-installation.md: ../hardening-your-maas-installation.md
 	cp ../hardening-your-maas-installation.md hardening-your-maas-installation-deb-2-7-cli-2664.md
@@ -1227,6 +1343,8 @@ hardening-your-maas-installation.md: ../hardening-your-maas-installation.md
 	xpub push discourse -t snap-2-9-ui hardening-your-maas-installation-snap-2-9-ui-2663.md
 	xpub pull discourse 2669 2669
 	cp -p hardening-your-maas-installation-deb-2-9-ui-2669.md hardening-your-maas-installation.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 ubuntu-kernels.md: ../ubuntu-kernels.md
 	cp ../ubuntu-kernels.md ubuntu-kernels-deb-2-7-cli-3180.md
@@ -1255,6 +1373,8 @@ ubuntu-kernels.md: ../ubuntu-kernels.md
 	xpub push discourse -t snap-2-9-ui ubuntu-kernels-snap-2-9-ui-3179.md
 	xpub pull discourse 3185 3185
 	cp -p ubuntu-kernels-deb-2-9-ui-3185.md ubuntu-kernels.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 add-machines.md: ../add-machines.md
 	cp ../add-machines.md add-machines-deb-2-7-cli-2280.md
@@ -1283,6 +1403,8 @@ add-machines.md: ../add-machines.md
 	xpub push discourse -t snap-2-9-ui add-machines-snap-2-9-ui-2279.md
 	xpub pull discourse 2285 2285
 	cp -p add-machines-deb-2-9-ui-2285.md add-machines.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 select-and-import-images.md: ../select-and-import-images.md
 	cp ../select-and-import-images.md select-and-import-images-deb-2-7-cli-3096.md
@@ -1311,6 +1433,8 @@ select-and-import-images.md: ../select-and-import-images.md
 	xpub push discourse -t snap-2-9-ui select-and-import-images-snap-2-9-ui-3095.md
 	xpub pull discourse 3101 3101
 	cp -p select-and-import-images-deb-2-9-ui-3101.md select-and-import-images.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 images.md: ../images.md
 	cp ../images.md images-deb-2-7-cli-2700.md
@@ -1339,6 +1463,8 @@ images.md: ../images.md
 	xpub push discourse -t snap-2-9-ui images-snap-2-9-ui-2699.md
 	xpub pull discourse 2705 2705
 	cp -p images-deb-2-9-ui-2705.md images.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 power-management.md: ../power-management.md
 	cp ../power-management.md power-management-deb-2-7-cli-3012.md
@@ -1367,6 +1493,8 @@ power-management.md: ../power-management.md
 	xpub push discourse -t snap-2-9-ui power-management-snap-2-9-ui-3011.md
 	xpub pull discourse 3017 3017
 	cp -p power-management-deb-2-9-ui-3017.md power-management.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 maas-logging.md: ../maas-logging.md
 	cp ../maas-logging.md maas-logging-deb-2-7-cli-2868.md
@@ -1395,6 +1523,8 @@ maas-logging.md: ../maas-logging.md
 	xpub push discourse -t snap-2-9-ui maas-logging-snap-2-9-ui-2867.md
 	xpub pull discourse 2873 2873
 	cp -p maas-logging-deb-2-9-ui-2873.md maas-logging.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 backup.md: ../backup.md
 	cp ../backup.md backup-deb-2-7-cli-2340.md
@@ -1423,6 +1553,8 @@ backup.md: ../backup.md
 	xpub push discourse -t snap-2-9-ui backup-snap-2-9-ui-2339.md
 	xpub pull discourse 2345 2345
 	cp -p backup-deb-2-9-ui-2345.md backup.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 give-me-an-example-of-maas.md: ../give-me-an-example-of-maas.md
 	cp ../give-me-an-example-of-maas.md give-me-an-example-of-maas-deb-2-7-cli-2652.md
@@ -1451,6 +1583,8 @@ give-me-an-example-of-maas.md: ../give-me-an-example-of-maas.md
 	xpub push discourse -t snap-2-9-ui give-me-an-example-of-maas-snap-2-9-ui-2651.md
 	xpub pull discourse 2657 2657
 	cp -p give-me-an-example-of-maas-deb-2-9-ui-2657.md give-me-an-example-of-maas.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 ip-ranges.md: ../ip-ranges.md
 	cp ../ip-ranges.md ip-ranges-deb-2-7-cli-2760.md
@@ -1479,6 +1613,8 @@ ip-ranges.md: ../ip-ranges.md
 	xpub push discourse -t snap-2-9-ui ip-ranges-snap-2-9-ui-2759.md
 	xpub pull discourse 2765 2765
 	cp -p ip-ranges-deb-2-9-ui-2765.md ip-ranges.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 creating-a-custom-ubuntu-image.md: ../creating-a-custom-ubuntu-image.md
 	cp ../creating-a-custom-ubuntu-image.md creating-a-custom-ubuntu-image-deb-2-7-cli-2568.md
@@ -1507,6 +1643,8 @@ creating-a-custom-ubuntu-image.md: ../creating-a-custom-ubuntu-image.md
 	xpub push discourse -t snap-2-9-ui creating-a-custom-ubuntu-image-snap-2-9-ui-2567.md
 	xpub pull discourse 2573 2573
 	cp -p creating-a-custom-ubuntu-image-deb-2-9-ui-2573.md creating-a-custom-ubuntu-image.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 creating-and-deleting-vms.md: ../creating-and-deleting-vms.md
 	cp ../creating-and-deleting-vms.md creating-and-deleting-vms-deb-2-7-cli-2580.md
@@ -1535,6 +1673,8 @@ creating-and-deleting-vms.md: ../creating-and-deleting-vms.md
 	xpub push discourse -t snap-2-9-ui creating-and-deleting-vms-snap-2-9-ui-2579.md
 	xpub pull discourse 2585 2585
 	cp -p creating-and-deleting-vms-deb-2-9-ui-2585.md creating-and-deleting-vms.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 region-controllers.md: ../region-controllers.md
 	cp ../region-controllers.md region-controllers-deb-2-7-cli-3072.md
@@ -1563,6 +1703,8 @@ region-controllers.md: ../region-controllers.md
 	xpub push discourse -t snap-2-9-ui region-controllers-snap-2-9-ui-3071.md
 	xpub pull discourse 3077 3077
 	cp -p region-controllers-deb-2-9-ui-3077.md region-controllers.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 commission-machines.md: ../commission-machines.md
 	cp ../commission-machines.md commission-machines-deb-2-7-cli-2472.md
@@ -1591,6 +1733,8 @@ commission-machines.md: ../commission-machines.md
 	xpub push discourse -t snap-2-9-ui commission-machines-snap-2-9-ui-2471.md
 	xpub pull discourse 2477 2477
 	cp -p commission-machines-deb-2-9-ui-2477.md commission-machines.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 availability-zones.md: ../availability-zones.md
 	cp ../availability-zones.md availability-zones-deb-2-7-cli-2328.md
@@ -1619,6 +1763,8 @@ availability-zones.md: ../availability-zones.md
 	xpub push discourse -t snap-2-9-ui availability-zones-snap-2-9-ui-2327.md
 	xpub pull discourse 2333 2333
 	cp -p availability-zones-deb-2-9-ui-2333.md availability-zones.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 upgrading-maas.md: ../upgrading-maas.md
 	cp ../upgrading-maas.md upgrading-maas-deb-2-7-cli-3192.md
@@ -1647,6 +1793,8 @@ upgrading-maas.md: ../upgrading-maas.md
 	xpub push discourse -t snap-2-9-ui upgrading-maas-snap-2-9-ui-3191.md
 	xpub pull discourse 3197 3197
 	cp -p upgrading-maas-deb-2-9-ui-3197.md upgrading-maas.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 configuration-journey.md: ../configuration-journey.md
 	cp ../configuration-journey.md configuration-journey-deb-2-7-cli-2532.md
@@ -1675,6 +1823,8 @@ configuration-journey.md: ../configuration-journey.md
 	xpub push discourse -t snap-2-9-ui configuration-journey-snap-2-9-ui-2531.md
 	xpub pull discourse 2537 2537
 	cp -p configuration-journey-deb-2-9-ui-2537.md configuration-journey.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 maas-tags.md: ../maas-tags.md
 	cp ../maas-tags.md maas-tags-deb-2-7-cli-2892.md
@@ -1703,6 +1853,8 @@ maas-tags.md: ../maas-tags.md
 	xpub push discourse -t snap-2-9-ui maas-tags-snap-2-9-ui-2891.md
 	xpub pull discourse 2897 2897
 	cp -p maas-tags-deb-2-9-ui-2897.md maas-tags.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 prometheus-metrics.md: ../prometheus-metrics.md
 	cp ../prometheus-metrics.md prometheus-metrics-deb-2-7-cli-3024.md
@@ -1731,6 +1883,8 @@ prometheus-metrics.md: ../prometheus-metrics.md
 	xpub push discourse -t snap-2-9-ui prometheus-metrics-snap-2-9-ui-3023.md
 	xpub pull discourse 3029 3029
 	cp -p prometheus-metrics-deb-2-9-ui-3029.md prometheus-metrics.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 commissioning-and-hardware-testing-scripts.md: ../commissioning-and-hardware-testing-scripts.md
 	cp ../commissioning-and-hardware-testing-scripts.md commissioning-and-hardware-testing-scripts-deb-2-7-cli-2484.md
@@ -1759,6 +1913,8 @@ commissioning-and-hardware-testing-scripts.md: ../commissioning-and-hardware-tes
 	xpub push discourse -t snap-2-9-ui commissioning-and-hardware-testing-scripts-snap-2-9-ui-2483.md
 	xpub pull discourse 2489 2489
 	cp -p commissioning-and-hardware-testing-scripts-deb-2-9-ui-2489.md commissioning-and-hardware-testing-scripts.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 about-maas.md: ../about-maas.md
 	cp ../about-maas.md about-maas-deb-2-7-cli-2268.md
@@ -1787,6 +1943,8 @@ about-maas.md: ../about-maas.md
 	xpub push discourse -t snap-2-9-ui about-maas-snap-2-9-ui-2267.md
 	xpub pull discourse 2273 2273
 	cp -p about-maas-deb-2-9-ui-2273.md about-maas.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 maas-documentation.md: ../maas-documentation.md
 	cp ../maas-documentation.md maas-documentation-25.md
@@ -1828,6 +1986,8 @@ maas-documentation.md: ../maas-documentation.md
 	xpub pull discourse 2838 2842
 	xpub pull discourse 2844 2849
 	cp -p maas-documentation-25.md maas-documentation.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 maas-communication.md: ../maas-communication.md
 	cp ../maas-communication.md maas-communication-deb-2-7-cli-2832.md
@@ -1856,6 +2016,8 @@ maas-communication.md: ../maas-communication.md
 	xpub push discourse -t snap-2-9-ui maas-communication-snap-2-9-ui-2831.md
 	xpub pull discourse 2837 2837
 	cp -p maas-communication-deb-2-9-ui-2837.md maas-communication.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 deploy-machines.md: ../deploy-machines.md
 	cp ../deploy-machines.md deploy-machines-deb-2-7-cli-2604.md
@@ -1884,6 +2046,8 @@ deploy-machines.md: ../deploy-machines.md
 	xpub push discourse -t snap-2-9-ui deploy-machines-snap-2-9-ui-2603.md
 	xpub pull discourse 2609 2609
 	cp -p deploy-machines-deb-2-9-ui-2609.md deploy-machines.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 block-devices.md: ../block-devices.md
 	cp ../block-devices.md block-devices-deb-2-7-cli-2352.md
@@ -1912,6 +2076,8 @@ block-devices.md: ../block-devices.md
 	xpub push discourse -t snap-2-9-ui block-devices-snap-2-9-ui-2351.md
 	xpub pull discourse 2357 2357
 	cp -p block-devices-deb-2-9-ui-2357.md block-devices.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 maas-requirements.md: ../maas-requirements.md
 	cp ../maas-requirements.md maas-requirements-deb-2-7-cli-2880.md
@@ -1940,6 +2106,8 @@ maas-requirements.md: ../maas-requirements.md
 	xpub push discourse -t snap-2-9-ui maas-requirements-snap-2-9-ui-2879.md
 	xpub pull discourse 2885 2885
 	cp -p maas-requirements-deb-2-9-ui-2885.md maas-requirements.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 high-availability.md: ../high-availability.md
 	cp ../high-availability.md high-availability-deb-2-7-cli-2688.md
@@ -1968,6 +2136,8 @@ high-availability.md: ../high-availability.md
 	xpub push discourse -t snap-2-9-ui high-availability-snap-2-9-ui-2687.md
 	xpub pull discourse 2693 2693
 	cp -p high-availability-deb-2-9-ui-2693.md high-availability.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 commissioning-logs.md: ../commissioning-logs.md
 	cp ../commissioning-logs.md commissioning-logs-deb-2-7-cli-2496.md
@@ -1996,6 +2166,8 @@ commissioning-logs.md: ../commissioning-logs.md
 	xpub push discourse -t snap-2-9-ui commissioning-logs-snap-2-9-ui-2495.md
 	xpub pull discourse 2501 2501
 	cp -p commissioning-logs-deb-2-9-ui-2501.md commissioning-logs.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
 disk-erasure.md: ../disk-erasure.md
 	cp ../disk-erasure.md disk-erasure-deb-2-7-cli-2616.md
@@ -2024,4 +2196,6 @@ disk-erasure.md: ../disk-erasure.md
 	xpub push discourse -t snap-2-9-ui disk-erasure-snap-2-9-ui-2615.md
 	xpub pull discourse 2621 2621
 	cp -p disk-erasure-deb-2-9-ui-2621.md disk-erasure.md
+	mv *-deb-* ./rad-versions
+	mv *-snap-* ./rad-versions
  
