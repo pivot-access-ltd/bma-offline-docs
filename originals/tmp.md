@@ -1,177 +1,295 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|CLI ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ UI|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|CLI ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ UI|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|CLI ~ [UI](/t/interactive-search/2717)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ UI|
- deb-2-9-ui -->
+|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
+|Packages|CLI ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
+deb-2-7-cli -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
- snap-2-7-cli -->
+|Snap|CLI ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
+|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
+snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
+|| 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ UI|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
- snap-2-7-ui -->
+|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ UI|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
+|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
+snap-2-7-ui -->
+
+<!-- deb-2-7-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
+|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ UI|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
+deb-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
+|| 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|CLI ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
- snap-2-8-cli -->
+|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839) | CLI ~ [UI](/t/maas-documentation/25) |[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843) |
+|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845) |[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847) |[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849) |
+snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
+|| 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ UI|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
- snap-2-8-ui -->
+|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ UI|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
+|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
+snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
+<!-- deb-2-8-cli
+|| 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|CLI ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
- snap-2-9-cli -->
+|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
+|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|CLI ~  [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
+deb-2-8-cli -->
 
-||2.7|2.8|2.9|
+<!-- deb-2-8-ui
+|| 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ UI|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
+|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
+|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ UI|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
+deb-2-8-ui -->
 
-The Machines and Devices pages contain a powerful interactive search bar that lets you filter machines and devices.  This article is designed to help you understand how to use this resource.
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|CLI ~  [UI](/t/maas-documentation-snap-2-9-ui/2843)|
+|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
 
-#### Eight  questions you may have:
+<!-- snap-2-9-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ UI|
+|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
+snap-2-9-ui -->
 
-1. [How can I do simple searches?](#heading--simple-searches)
-2. [How can I do filtered searches?](#heading--filtered-searches)
-3. [How can I create manual filters?](#heading--manual-filters)
-4. [How do I set up exact matching?](#heading--exact-matching)
-5. [How do I set up partial matching?](#heading--partial-matching)
-6. [How can I include multiple search terms?](#heading--multiple-search-terms)
-7. [What filter properties are available to me?](#heading--filter-properties)
-8. [How can I search with the CLI?](#heading--cli)
+<!-- deb-2-9-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
+|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|CLI ~  [UI](/t/maas-documentation-deb-2-9-ui/2849)|
+deb-2-9-cli -->
 
-<a href="#heading--simple-searches"><h2 id="heading--simple-searches">Simple searches</h2></a>
+<!-- deb-2-9-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
+|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ UI|
+deb-2-9-ui -->
 
-To begin searching, enter your search text. As you type, MAAS will update search results in real time. You can search across virtually every parameter, including domain, name, tag, power type, IP, status, zone, and so on.
+MAAS is **Metal As A Service**, a service that lets you treat physical servers like virtual machines -- instances -- in the cloud.  No need for you to manage servers individually: MAAS turns your bare metal into an elastic, cloud-like resource.
 
-<a href="https://assets.ubuntu.com/v1/ccb90c91-manage-search__2.5_searchbar.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/ccb90c91-manage-search__2.5_searchbar.png"></a>
+#### Five questions you might have:
 
-<a href="#heading--filtered-searches"><h2 id="heading--filtered-searches">Filtered searches</h2></a>
+<!-- deb-2-7-ui
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-7-ui/2269)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-7-ui/2653)
+3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-7-ui/2269#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-7-ui/3325)
+deb-2-7-ui -->
 
-Filter your searches to major categories by selecting one from the Filters drop-down menu next to the search bar.
+<!-- snap-2-7-ui
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-7-ui/2263)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-7-ui/2647)
+3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-7-ui/2263#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-7-ui/3319)
+snap-2-7-ui -->
 
-<a href="https://assets.ubuntu.com/v1/6ac5b4ec-manage-search__2.5_filters.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/6ac5b4ec-manage-search__2.5_filters.png"></a>
+<!-- deb-2-8-ui
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-8-ui/2271)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-8-ui/2655)
+3. [How does MAAS work -- in detail?](/tabout-maas-deb-2-8-ui/2271#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-8-ui/3327)
+deb-2-8-ui -->
 
-For example, to find all "New" machines containing the name or tag 'quail', select Status/New from the drop-down Filters menu, and then type the word 'quail' next to it:
+<!-- snap-2-8-ui
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-8-ui/2265)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-8-ui/2649)
+3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-8-ui/2265#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-8-ui/3321)
+snap-2-8-ui -->
 
-<a href="https://assets.ubuntu.com/v1/7b5d8e86-manage-search__2.5_filtered-search.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/7b5d8e86-manage-search__2.5_filtered-search.png"></a>
+<!-- deb-2-9-ui
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-9-ui/2273)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-9-ui/2657)
+3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-9-ui/2273#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-9-ui/3329)
+deb-2-9-ui -->
 
-<a href="#heading--manual-filters"><h3 id="heading--manual-filters">Manual filters</h3></a>
+<!-- snap-2-9-ui
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-9-ui/2267)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-9-ui/2651)
+3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-9-ui/2267#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-9-ui/3323)
+snap-2-9-ui -->
 
-Enter filters manually in the search bar to more precisely control your searches:
+<!-- deb-2-7-cli
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-7-cli/2268)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-7-cli/2652)
+3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-7-cli/2268#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-7-cli/3324)
+deb-2-7-cli -->
 
-``` no-highlight
-filter-name:([=]val1,...,[=]val2)
-```
+<!-- snap-2-7-cli
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-7-cli/2262)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-7-cli/2646)
+3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-7-cli/2262#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-7-cli/3318)
+snap-2-7-cli -->
 
-**Note:** Surround search terms with parentheses when they must occur together, e.g., `status:(failed testing)`.
+<!-- deb-2-8-cli
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-8-cli/2270)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-8-cli/2654)
+3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-8-cli/2270#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-8-cli/3326)
+deb-2-8-cli -->
 
-<h4 id="heading--exact-matching">Exact matching</h4>
+<!-- snap-2-8-cli
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-8-cli/2264)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-8-cli/2648)
+3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-8-cli/2264#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-8-cli/3320)
+snap-2-8-cli -->
 
-If you need an exact match, preface the search value with an equal sign. For example, to find machines belonging to a pod named `able-cattle`:
+<!-- deb-2-9-cli
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-9-cli/2272)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-9-cli/2656)
+3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-9-cli/2272#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-9-cli/3328)
+deb-2-9-cli -->
 
-``` no-highlight
-pod:=able-cattle
-```
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-9-cli/2266)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-9-cli/2650)
+3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-9-cli/2266#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-9-cli/3322)
 
-<h4 id="heading--partial-matching">Partial matching</h4>
+<!-- deb-2-7-ui
+<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
-Without an equal sign, MAAS returns partial matches. For example, the following will display all machines belonging to pods with names containing `able` or `cattle`:
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-7-ui/2653), our example data centre.*
+ deb-2-7-ui -->
 
-``` no-highlight
-pod:able,cattle
-```
+<!-- deb-2-8-ui
+<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
-<h4 id="heading--multiple-search-terms">Multiple search terms</h4>
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-8-ui/2655), our example data centre.*
+ deb-2-8-ui -->
 
-MAAS uses boolean AND logic to evaluate multiple search terms. For example, when you type `pod:able,cattle cpu:=5`, MAAS displays machines that belong to pods with names containing `able` OR `cattle` AND having 5 CPU cores. Similarly, if you enter multiple words into the search tool, e.g., `steady able`, MAAS will display machines matching both terms (e.g., `steady` AND `able`).
+<!-- deb-2-9-ui
+<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
-<h4 id="heading--filter-properties">Filter properties</h4>
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-ui/2657), our example data centre.*
+ deb-2-9-ui -->
 
-In addition to the major filtering categories available in the Filter drop-down menu, twenty-one machine properties are available as filters:
+<!-- snap-2-7-ui
+<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
-1.   architecture
-2.   cores
-3.   cpu
-4.   distro_series
-5.   fqdn
-6.   ip_addresses
-7.   mac
-8.   pod
-9.   pod-id
-10.   pool
-11.   power
-12.   pxe_mac
-13.   pxe_mac_vendor
-14.   ram
-15.   release
-16.   spaces
-17.   status
-18.   storage
-19.   storage_tags
-20.   tags
-21.   zone
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-ui/2647), our example data centre.*
+ snap-2-7-ui -->
 
-For example, the following will search for a machine that has an interface with a specific MAC address marked for PXE booting:
+<!-- snap-2-8-ui
+<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
-``` no-highlight
-pxe_mac:=9e:b0:e4:15:ae:1e
-```
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-8-ui/2649), our example data centre.*
+snap-2-8-ui -->
 
-<a href="#heading--cli"><h2 id="heading--cli">CLI</h2></a>
+<!-- snap-2-9-ui
+<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
-See [List nodes](/t/common-cli-tasks/794#heading--list-nodes) for more information about how to use the MAAS CLI to perform similar searches or [CLI](/t/maas-cli/802) for how to get started with the MAAS CLI.
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-9-ui/2651), our example data centre.*
+snap-2-9-ui -->
+
+<!-- deb-2-7-cli 
+<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
+</a>
+
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-7-cli/2652), our example data centre, generated with the [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
+ deb-2-7-cli -->
+
+<!-- deb-2-8-cli
+<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
+</a>
+
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-8-cli/2654), our example data centre, generated with the [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
+ deb-2-8-cli -->
+
+<!-- deb-2-9-cli 
+<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
+</a>
+
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-cli/2656), our example data centre, generated with the [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
+ deb-2-9-cli -->
+
+<!-- snap-2-7-cli
+<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
+</a>
+
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-7-cli/2646), our example data centre, generated with the [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
+ snap-2-7-cli -->
+
+<!-- snap-2-8-cli 
+<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
+</a>
+
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-8-cli/2648), our example data centre, generated with the [basic-machine-list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
+ snap-2-8-cli -->
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
+</a>
+
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-9-cli/2650), our example data centre, generated with the [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
+
+---
+
+<!-- deb-2-8-cli deb-2-8-ui snap-2-8-cli snap-2-8-ui
+<h2 id="heading--whats-new">New version of MAAS</h2>
+
+- [What's new in 2.8](/t/whats-new-in-maas/3334)
+deb-2-8-cli deb-2-8-ui snap-2-8-cli snap-2-8-ui -->
+
+<!-- deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-uil
+<h2 id="heading--whats-new">New version of MAAS</h2>
+
+- [What's new in 2.7](/t/whats-new-in-maas/3335)
+deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-ui -->
+
+<h2 id="heading--whats-new">New version of MAAS</h2>
+
+- [What's new in 2.9](/t/whats-new-in-maas/3336)
+
+---
+
+<h2 id="heading--getting-support">Getting support</h2>
+
+There are four ways you can get support for MAAS:
+
+1. [Professional support](https://maas.io/contact-us)
+2. [Ask a question (external link)](http://askubuntu.com/questions/tagged/maas)
+3. [IRC (external link)](http://webchat.freenode.net/?channels=maas)
+4. [MAAS 2.5 (and earlier) documentation (external link)](https://old-docs.maas.io/2.5/en/)
+
+---
+
+<h2 id="heading--contribute">Contribute</h2>
+
+There are (at least) three ways you can contribute to MAAS:
+
+1. [Guide to contributing](/t/writing-guide/747)
+2. [Push some code (external link)](https://launchpad.net/maas)
+3. [File an issue (external link)](https://bugs.launchpad.net/maas/+filebug)
 
