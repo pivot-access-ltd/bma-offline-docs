@@ -11,6 +11,13 @@ candid-tutorial.md: ../candid-tutorial.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
 
+getting-help.md: ../getting-help.md
+	cp ../getting-help.md getting-help-838.md
+	xpub push discourse getting-help-838.md
+	xpub pull discourse 838 838
+	cp -p getting-help-838.md getting-help.md
+	mv getting-help-838.md ./rad-versions
+
 contact-us.md: ../contact-us.md
 	cp ../contact-us.md contact-us-743.md
 	xpub push discourse contact-us-743.md
