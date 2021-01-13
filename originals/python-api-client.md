@@ -2,8 +2,8 @@ The `python-libmaas` client library is an asyncio-based client library whose pur
 
 #### Two questions you may have:
 
-1. [What should I know about library endpoints?](/t/cli-resource-pool-management/800#heading--library-endpoints)
-2. [How can I install and use  python-libmaas?](/t/cli-resource-pool-management/800#heading--installation-and-usage-of-python-libmaas)
+1. [What should I know about library endpoints?](/t/python-api-client/810#heading--library-endpoints)
+2. [How can I install and use  python-libmaas?](/t/python-api-client/810#heading--installation-and-usage-of-python-libmaas)
 
 <a href="#heading--library-endpoints"><h2 id="heading--library-endpoints">Library endpoints</h2></a>
 
@@ -39,4 +39,3 @@ For examples, see these external links:
 For pypi information, see this external link:
 
 `https://pypi.python.org/pypi/python-libmaas`
-
