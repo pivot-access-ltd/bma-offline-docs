@@ -620,7 +620,53 @@ The following window will appear:
 
 Four modes determine how a subnet address is assigned when MAAS deploys the machine. You can select one of these modes by clicking on the 'IP mode' drop-down menu.
 
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/766)).
+<!-- deb-2-7-cli
+-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3120)).
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3121)).
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3122)).
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3123)).
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3124)). 
+deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3125)).
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3114)).
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3115)).
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3116)).
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3117)).
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3118)).
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3119)).
+ snap-2-9-ui -->
 
 -   **Static assign**: The administrator will specify a static address using a secondary field.
 

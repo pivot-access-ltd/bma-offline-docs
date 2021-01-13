@@ -376,11 +376,11 @@ deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui -->
  deb-2-9-ui -->
 
 <!-- snap-2-8-ui
-* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3007) for details on the available power types and the relevant parameters for each type.
+* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3009) for details on the available power types and the relevant parameters for each type.
  snap-2-8-ui -->
 
 <!-- snap-2-9-ui
-* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3009) for details on the available power types and the relevant parameters for each type.
+* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3011) for details on the available power types and the relevant parameters for each type.
  snap-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli

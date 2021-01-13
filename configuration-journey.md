@@ -442,7 +442,9 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 Once you've successfully installed MAAS (regardless of method), you can now login here:
 
+```
 http://${API_HOST}:5240/MAAS
+```
 
 where $API_HOST is the hostname or IP address of the region API server, which was set during installation.  You will see a screen like this:</p>
 

@@ -131,7 +131,7 @@ deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 
 <a href="#heading--configuring-prometheus"><h2 id="heading--configuring-prometheus">Configuring Prometheus</h2></a>
 
-Once the `/metrics` endpoint is available in MAAS services, Prometheus can be configured to scrape metric values from these. You can configure this by adding a stanza like the following to the [prometheus configuration^](https://prometheus.io/docs/prometheus/latest/configuration/configuration/):
+Once the `/metrics` endpoint is available in MAAS services, Prometheus can be configured to scrape metric values from these. You can configure this by adding a stanza like the following to the [prometheus configuration](https://prometheus.io/docs/prometheus/latest/configuration/configuration/):
 
 ``` yaml
     - job_name: maas
@@ -159,9 +159,9 @@ In case of a multi-host deploy, adding a single IP for any of the MAAS hosts run
 
 <a href="#heading--deploying-prometheus-and-grafana"><h2 id="heading--deploying-prometheus-and-grafana">Deploying Prometheus and Grafana</h2></a>
 
-[Grafana^](https://grafana.com/) and Prometheus can be easily deployed using [Juju^](https://jujucharms.com/).
+[Grafana](https://grafana.com/) and Prometheus can be easily deployed using [Juju](https://jujucharms.com/).
 
-The [MAAS performance repo^](https://git.launchpad.net/~maas-committers/maas/+git/maas-performance) repository provides a sample `deploy-stack` script that will deploy and configure the stack on LXD containers.
+The [MAAS performance repo](https://git.launchpad.net/~maas-committers/maas/+git/maas-performance) repository provides a sample `deploy-stack` script that will deploy and configure the stack on LXD containers.
 
 First, you must install juju via:
 

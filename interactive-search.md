@@ -119,10 +119,7 @@ Enter filters manually in the search bar to more precisely control your searches
 filter-name:([=]val1,...,[=]val2)
 ```
 
-!!! Note:
-
-    Surround search terms with parentheses when they must occur together,
-    E.g.  `status:(failed testing)`.
+**Note:** Surround search terms with parentheses when they must occur together, e.g., `status:(failed testing)`.
 
 <h4 id="heading--exact-matching">Exact matching</h4>
 

@@ -132,9 +132,79 @@ snap-2-9-ui -->
 
 #### Three questions you might have:
 
+<!-- deb-2-7-cli
 1. [How do machines communicate with the rack controller?](#heading--machinerack)
 2. [How do rack and region controllers communicate?](#heading--rackregion)
-3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/1381#heading--firewalls)
+3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2664#heading--firewalls)
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+1. [How do machines communicate with the rack controller?](#heading--machinerack)
+2. [How do rack and region controllers communicate?](#heading--rackregion)
+3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2665#heading--firewalls)
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+1. [How do machines communicate with the rack controller?](#heading--machinerack)
+2. [How do rack and region controllers communicate?](#heading--rackregion)
+3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2666#heading--firewalls)
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+1. [How do machines communicate with the rack controller?](#heading--machinerack)
+2. [How do rack and region controllers communicate?](#heading--rackregion)
+3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2667#heading--firewalls)
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+1. [How do machines communicate with the rack controller?](#heading--machinerack)
+2. [How do rack and region controllers communicate?](#heading--rackregion)
+3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2668#heading--firewalls)
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+1. [How do machines communicate with the rack controller?](#heading--machinerack)
+2. [How do rack and region controllers communicate?](#heading--rackregion)
+3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2669#heading--firewalls)
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+1. [How do machines communicate with the rack controller?](#heading--machinerack)
+2. [How do rack and region controllers communicate?](#heading--rackregion)
+3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2658#heading--firewalls)
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+1. [How do machines communicate with the rack controller?](#heading--machinerack)
+2. [How do rack and region controllers communicate?](#heading--rackregion)
+3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2659#heading--firewalls)
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+1. [How do machines communicate with the rack controller?](#heading--machinerack)
+2. [How do rack and region controllers communicate?](#heading--rackregion)
+3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2660#heading--firewalls)
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+1. [How do machines communicate with the rack controller?](#heading--machinerack)
+2. [How do rack and region controllers communicate?](#heading--rackregion)
+3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2661#heading--firewalls)
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+1. [How do machines communicate with the rack controller?](#heading--machinerack)
+2. [How do rack and region controllers communicate?](#heading--rackregion)
+3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2662#heading--firewalls)
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+1. [How do machines communicate with the rack controller?](#heading--machinerack)
+2. [How do rack and region controllers communicate?](#heading--rackregion)
+3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2663#heading--firewalls)
+ snap-2-9-ui -->
+
+
 
 <a href="#heading--machinerack"><h2 id="heading--machinerack">How machines communicate with the rack controller</h2></a>
 

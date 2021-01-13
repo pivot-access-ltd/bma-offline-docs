@@ -123,10 +123,10 @@ maas $PROFILE machine deploy $SYSTEM_ID install_kvm=True
 ```
 
 [note]
-To deploy with the CLI, the node must have a status of 'Allocated'. See 'Acquire a node' above (or use the [web UI](/t/deploy-machines/825#acquire-nodes)).
+To deploy with the CLI, the node must have a status of 'Allocated'. See 'Acquire a node' above (or use the [web UI](/t/deploy-machines-snap-2-9-ui/2603#heading--acquire)).
 [/note]
 
-See [Deploy nodes](/t/deploy-machines/825).
+See [Deploy nodes](/t/deploy-machines-snap-2-9-ui/2603).
 
 <h2 id="heading--configure-deployment-timeout">Configure deployment timeout</h2>
 
@@ -153,7 +153,7 @@ maas $PROFILE subnet update 192.168.1.0/24 managed=false
 
 You can use the subnet's ID in place of the CIDR address.
 
-See [Subnet management](/t/subnet-management/766).
+See [Subnet management](/t/subnet-management/3119).
 
 <h2 id="heading--create-a-reserved-ip-range">Create a reserved IP range</h2>
 
@@ -219,7 +219,7 @@ You will also need to set a default gateway (see [below](#heading--set-a-default
 You must enable DHCP for PXE booting on the 'untagged' VLAN.
 [/note]
 
-See [DHCP](/t/managing-dhcp/759) for more on this subject.
+See [DHCP](/t/managing-dhcp/2903) for more on this subject.
 
 <h2 id="heading--set-a-dns-forwarder">Set a DNS forwarder</h2>
 
@@ -262,7 +262,7 @@ For example,
 maas $PROFILE subnet update 192.168.0.0/22 allow_proxy=false
 ```
 
-See [Proxy](/t/proxy/763) for detailed information on how proxying works with MAAS.
+See [Proxy](/t/proxy/3035) for detailed information on how proxying works with MAAS.
 
 <h2 id="heading--set-a-default-gateway">Set a default gateway</h2>
 
@@ -289,7 +289,7 @@ maas $PROFILE zone update default \
     description="This zone was configured by a script."
 ```
 
-See [Zones](/t/availability-zones/820) for more information on this topic.
+See [Zones](/t/availability-zones/2327) for more information on this topic.
 
 <h2 id="heading--add-a-public-ssh-key">Add a public SSH key</h2>
 
@@ -299,7 +299,7 @@ To add a public SSH key to a MAAS user account:
 maas $PROFILE sshkeys create "key=$SSH_KEY"
 ```
 
-See [SSH keys](/t/user-accounts/790#heading--ssh-keys).
+See [SSH keys](/t/user-accounts/3203#heading--ssh-keys).
 
 <h2 id="heading--determine-a-node-hostname">Determine a node hostname</h2>
 
@@ -319,6 +319,4 @@ maas $PROFILE users create username=$USERNAME \
     email=$EMAIL_ADDRESS password=$PASSWORD is_superuser=0
 ```
 
-All the options are necessary. Note that stipulating a password on the CLI may be a security hazard, depending on your environment. If unsure, use the web UI. See [User Accounts](/t/user-accounts/790) for the latter.
-
-<!-- LINKS -->
+All the options are necessary. Note that stipulating a password on the CLI may be a security hazard, depending on your environment. If unsure, use the web UI. See [User Accounts](/t/user-accounts/3203) for the latter.
