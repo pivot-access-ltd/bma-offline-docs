@@ -16,11 +16,10 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 * [Interfaces](/t/concepts-and-terms/785#heading--interfaces)
 * [isolcpus](/t/concepts-and-terms/785#heading--isolcpus)
 * [LAN](/t/concepts-and-terms/785#heading--lan)
-* [lxd (tutorials)](/t/concepts-and-terms/785#heading--lxd-tutorials)
 * [MAC address](/t/concepts-and-terms/785#heading--mac-address)
 * [Machine](/t/concepts-and-terms/785#heading--machines)
 * [Machine actions](/t/concepts-and-terms/785#heading--machine-actions)
-* [Machine statuses](/t/concepts-and-terms/785#heading--node-statuses)
+* [Machine statuses](/t/concepts-and-terms/785#heading--machine-statuses)
 * [MAN](/t/concepts-and-terms/785#heading--MAN)
 * [Network cable](/t/concepts-and-terms/785#heading--network-cable)
 * [Network infrastructure](/t/concepts-and-terms/785#heading--network-infrastructure)
@@ -28,7 +27,7 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 * [Network topology](/t/concepts-and-terms/785#heading--network-topology)
 * [NUMA](/t/concepts-and-terms/785#heading--numa)
 * [Nodes](/t/concepts-and-terms/785#heading--nodes)
-* [Package repositories](/t/package-repositories/814)
+* [Package repositories](/t/concepts-and-terms/785#heading--package-repositories/814)
 * [Packet](/t/concepts-and-terms/785#heading--packet)
 * [Patch panel](/t/concepts-and-terms/785#heading--patch-panel)
 * [Regions](/t/concepts-and-terms/785#heading--regions)
@@ -37,10 +36,11 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 * [Series](/t/concepts-and-terms/785#heading--series)
 * [Server](/t/concepts-and-terms/785#heading--server)
 * [Spaces](/t/concepts-and-terms/785#heading--spaces)
-* [SR-IOV](/t/concepts-and-terms/785#heading-sr-iov)
+* [SR-IOV](/t/concepts-and-terms/785#heading--sr-iov)
 * [Subnets](/t/concepts-and-terms/785#heading--subnets)
 * [Switch](/t/concepts-and-terms/785#heading--switch)
 * [Tags](/t/concepts-and-terms/785#heading--tags)
+* [Ubuntu package repositories](/t/concepts-and-terms/785#heading--ubuntu-package-repositories)
 * [VLAN](/t/concepts-and-terms/785#heading--vlans)
 * [VM hosts](/t/concepts-and-terms/785#heading--vm-hosts)
 * [WAN](/t/concepts-and-terms/785#heading--WAN)
@@ -321,7 +321,7 @@ This action allows the user to select and run scripts to test a machine's underl
 
 This action releases a machine from a locked state.
 
-<a href="#heading--machine-statuses"><h2 id="heading--machine-statuses">Node statuses</h2></a>
+<a href="#heading--machine-statuses"><h2 id="heading--machine-statuses">Machine statuses</h2></a>
 
 Node statuses are labels used to describe the general state of a node as known to MAAS. A node will undergo various manipulations during their time spent in MAAS, and its status will change accordingly. Actions applied to a node are the most common cause of a status change (see section above.)  Below is the full list of status values and their meaning, arranged alphabetically.
 
@@ -615,18 +615,3 @@ These four steps combine (at least) four general datasources to bring an instanc
 3. User data - data provided by end users or cloud administrators to initialise the instance.  This completely optional data can be anything from shellscripts to highly-structured cloud-config data that trigger cloud-init's built-ins.
 
 4. Vendor data - data provided by cloud platform vendors; this is identical (in principle) to user data, but derived from a different source.  In practice, vendor data usually handle things that users wouldn't normally specify, such as mirror setup, NTP service management, etc.
-
-<a href="#heading--lxd-tutorials"><h2 id="heading--lxd-tutorials">An extended LXD tutorial</h2></a>
-
-<a href="#heading--lxd-basic-install"><h3 id="heading--lxd-basic-install">Basic LXD installation</h3></a>
-
-<a href="#heading--lxd-basic-network-config"><h3 id="heading--lxd-basic-network-config">LXD basic network configuration</h3></a>
-
-1. make sure lxdbr0 IP address is captured
-2. go edit the *container's* /etc/netplan file
-3. netplan apply
-4. set up a new user same name as one on host who has an ssh public key
-5. make sure sshd is running on the container
-6. copy id_rsa.pub to .ssh dir on user's homedir on container
-7. copy id_rsa.pub to authorized_keys in .ssh dir in user's homedir on container
-8. test ssh
