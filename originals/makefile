@@ -26,6 +26,13 @@ contact-us.md: ../contact-us.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
 
+using-maas-in-an-air-gapped-environment.md: ../using-maas-in-an-air-gapped-environment.md
+	cp ../using-maas-in-an-air-gapped-environment.md using-maas-in-an-air-gapped-environment-3539.md
+	xpub push discourse using-maas-in-an-air-gapped-environment-3539.md
+	xpub pull discourse 3539 3539
+	cp -p using-maas-in-an-air-gapped-environment-3539.md using-maas-in-an-air-gapped-environment.md
+
+
 python-api-client.md: ../python-api-client.md
 	cp ../python-api-client.md python-api-client-810.md
 	xpub push discourse python-api-client-810.md
