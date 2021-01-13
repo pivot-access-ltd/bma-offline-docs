@@ -82,7 +82,7 @@ A rack controller provides four services:
 
 A rack controller is attached to each "fabric". As the name implies, a typical setup is to have a rack controller in each data centre server rack. The rack controller will cache large items for performance, such as operating system install images, but maintains no independent state other than the credentials required to talk to the region controller.
 
-Both the region controller and the rack controller can be scaled-out as well as made highly available. See [MAAS HA](/t/high-availability/804) for high availability.
+Both the region controller and the rack controller can be scaled-out as well as made highly available.
 
 <a href="#heading--machines"><h3 id="heading--machines">Machines</h3></a>
 
@@ -96,13 +96,13 @@ Static or dynamic IP addresses and DNS names can be assigned to any device or pa
 
 <a href="#heading--vm-hosts"><h2 id="heading--vm-hosts">VM hosts</h2></a>
 
-VM hosts, also called composable hardware, allow for the dynamic composition of machines from a pool of available hardware resources (e.g. disk space, memory, cores). See [Introduction to VM hosting](/t/introduction-to-vm-hosting/1524) for details.
+VM hosts, also called composable hardware, allow for the dynamic composition of machines from a pool of available hardware resources (e.g. disk space, memory, cores).
 
 <a href="#heading--zones"><h2 id="heading--zones">Zones</h2></a>
 
 A physical zone, or just zone, is an organisational unit that contains nodes where each node is in one, and only one, zone. Later, while in production, a node can be taken (allocated) from a specific zone (or not from a specific zone). Since zones, by nature, are custom-designed (except for the 'default' zone), they provide more flexibility than a similar feature offered by a public cloud service (ex: availability zones).
 
-Some prime examples of zone usage include fault-tolerance, service performance, and power management. See [Zone examples](/t/zone-examples/784) for an elaboration.
+Some prime examples of zone usage include fault-tolerance, service performance, and power management. 
 
 A newly installed MAAS comes with a default zone which contains all nodes unless you create a new zone. You can therefore safely ignore the entire concept if you're not interested in leveraging zones.
 
@@ -178,8 +178,6 @@ You can reserve IP addresses by adding one or more reserved ranges to a subnet c
     -   **Managed (subnet)**: MAAS will never assign IP addresses inside this range.  You can use this range for anything, such as infrastructure systems, network hardware, external DHCP, or an OpenStack namespace.
     -   **Unmanaged (subnet)**: MAAS will only assign IP addresses inside this range.
 -   **Reserved dynamic range** An IP range that MAAS will use for enlisting, commissioning and, if enabled, MAAS-managed DHCP on the node's VLAN during commissioning, deploying. An initial range is created as part of the DHCP enablement process if done with the web UI. MAAS never uses IP addresses from this range for an unmanaged subnet.
-
-See [IP ranges](/t/ip-ranges/760) for how these ranges get created and [Commission nodes](/t/commission-machines/822#heading--post-commission-configuration) for how they get used and [Subnet management](/t/subnet-management/766) for information on managed vs. unmanaged subnets.
 
 <a href="#heading--vlans"><h2 id="heading--vlans">VLANs</h2></a>
 
@@ -299,7 +297,7 @@ This action turns on a node's underlying machine.
 
 This action, which includes the 'Power off' action, releases a node back into the pool of available nodes, changing a node's status from 'Deployed' (or 'Allocated') to 'Ready'.
 
-The user has the opportunity to erase the node's storage (disks) before confirming the action. You can configure a default erasure setting on the 'Storage' tab of the 'Settings' page. See [Disk erasure](/t/disk-erasure/774) for details.
+The user has the opportunity to erase the node's storage (disks) before confirming the action. You can configure a default erasure setting on the 'Storage' tab of the 'Settings' page.
 
 <a href="#heading--rescue-mode"><h3 id="heading--rescue-mode">Rescue mode</h3></a>
 
@@ -315,7 +313,7 @@ This action puts the node in a specific zone.
 
 <a href="#heading--test-hardware"><h3 id="heading--test-hardware">Test hardware</h3></a>
 
-This action allows the user to select and run scripts to test a machine's underlying hardware. See [Hardware testing](/t/hardware-testing/826) for further details.
+This action allows the user to select and run scripts to test a machine's underlying hardware.
 
 <a href="#heading--unlock"><h3 id="heading--unlock">Unlock</h3></a>
 
