@@ -1,212 +1,177 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-logging/2862) ~ [UI](/t/maas-logging/2863)|[CLI](/t/maas-logging/2864) ~ [UI](/t/maas-logging/2865)|[CLI](/t/maas-logging/2866) ~ [UI](/t/maas-logging/2867)|
-|Packages|CLI ~ [UI](/t/maas-logging/2869)|[CLI](/t/maas-logging/2870) ~ [UI](/t/maas-logging/2871)|[CLI](/t/maas-logging/2872) ~ [UI](/t/maas-logging/2873)|
-deb-2-7-cli -->
+|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
+|Packages|CLI ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
+ deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-logging/2862) ~ [UI](/t/maas-logging/2863)|[CLI](/t/maas-logging/2864) ~ [UI](/t/maas-logging/2865)|[CLI](/t/maas-logging/2866) ~ [UI](/t/maas-logging/2867)|
-|Packages|[CLI](/t/maas-logging/2868) ~ UI|[CLI](/t/maas-logging/2870) ~ [UI](/t/maas-logging/2871)|[CLI](/t/maas-logging/2872) ~ [UI](/t/maas-logging/2873)|
+|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
+|Packages|[CLI](/t/interactive-search/2712) ~ UI|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-logging/2862) ~ [UI](/t/maas-logging/2863)|[CLI](/t/maas-logging/2864) ~ [UI](/t/maas-logging/2865)|[CLI](/t/maas-logging/2866) ~ [UI](/t/maas-logging/2867)|
-|Packages|[CLI](/t/maas-logging/2868) ~ [UI](/t/maas-logging/2869)|CLI ~ [UI](/t/maas-logging/2871)|[CLI](/t/maas-logging/2872) ~ [UI](/t/maas-logging/2873)|
+|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
+|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|CLI ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-logging/2862) ~ [UI](/t/maas-logging/2863)|[CLI](/t/maas-logging/2864) ~ [UI](/t/maas-logging/2865)|[CLI](/t/maas-logging/2866) ~ [UI](/t/maas-logging/2867)|
-|Packages|[CLI](/t/maas-logging/2868) ~ [UI](/t/maas-logging/2869)|[CLI](/t/maas-logging/2870) ~ UI|[CLI](/t/maas-logging/2872) ~ [UI](/t/maas-logging/2873)|
+|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
+|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ UI|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-logging/2862) ~ [UI](/t/maas-logging/2863)|[CLI](/t/maas-logging/2864) ~ [UI](/t/maas-logging/2865)|[CLI](/t/maas-logging/2866) ~ [UI](/t/maas-logging/2867)|
-|Packages|[CLI](/t/maas-logging/2868) ~ [UI](/t/maas-logging/2869)|[CLI](/t/maas-logging/2870) ~ [UI](/t/maas-logging/2871)|CLI ~ [UI](/t/maas-logging/2873)|
+|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
+|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|CLI ~ [UI](/t/interactive-search/2717)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-logging/2862) ~ [UI](/t/maas-logging/2863)|[CLI](/t/maas-logging/2864) ~ [UI](/t/maas-logging/2865)|[CLI](/t/maas-logging/2866) ~ [UI](/t/maas-logging/2867)|
-|Packages|[CLI](/t/maas-logging/2868) ~ [UI](/t/maas-logging/2869)|[CLI](/t/maas-logging/2870) ~ [UI](/t/maas-logging/2871)|[CLI](/t/maas-logging/2872) ~ UI|
+|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
+|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/maas-logging/2863)|[CLI](/t/maas-logging/2864) ~ [UI](/t/maas-logging/2865)|[CLI](/t/maas-logging/2866) ~ [UI](/t/maas-logging/2867)|
-|Packages|[CLI](/t/maas-logging/2868) ~ [UI](/t/maas-logging/2869)|[CLI](/t/maas-logging/2870) ~ [UI](/t/maas-logging/2871)|[CLI](/t/maas-logging/2872) ~ [UI](/t/maas-logging/2873)|
+|Snap|CLI ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
+|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-logging/2862) ~ UI|[CLI](/t/maas-logging/2864) ~ [UI](/t/maas-logging/2865)|[CLI](/t/maas-logging/2866) ~ [UI](/t/maas-logging/2867)|
-|Packages|[CLI](/t/maas-logging/2868) ~ [UI](/t/maas-logging/2869)|[CLI](/t/maas-logging/2870) ~ [UI](/t/maas-logging/2871)|[CLI](/t/maas-logging/2872) ~ [UI](/t/maas-logging/2873)|
+|Snap|[CLI](/t/interactive-search/2706) ~ UI|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
+|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-logging/2862) ~ [UI](/t/maas-logging/2863)|CLI ~ [UI](/t/maas-logging/2865)|[CLI](/t/maas-logging/2866) ~ [UI](/t/maas-logging/2867)|
-|Packages|[CLI](/t/maas-logging/2868) ~ [UI](/t/maas-logging/2869)|[CLI](/t/maas-logging/2870) ~ [UI](/t/maas-logging/2871)|[CLI](/t/maas-logging/2872) ~ [UI](/t/maas-logging/2873)|
+|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|CLI ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
+|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-logging/2862) ~ [UI](/t/maas-logging/2863)|[CLI](/t/maas-logging/2864) ~ UI|[CLI](/t/maas-logging/2866) ~ [UI](/t/maas-logging/2867)|
-|Packages|[CLI](/t/maas-logging/2868) ~ [UI](/t/maas-logging/2869)|[CLI](/t/maas-logging/2870) ~ [UI](/t/maas-logging/2871)|[CLI](/t/maas-logging/2872) ~ [UI](/t/maas-logging/2873)|
+|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ UI|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
+|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-logging/2862) ~ [UI](/t/maas-logging/2863)|[CLI](/t/maas-logging/2864) ~ [UI](/t/maas-logging/2865)|CLI ~ [UI](/t/maas-logging/2867)|
-|Packages|[CLI](/t/maas-logging/2868) ~ [UI](/t/maas-logging/2869)|[CLI](/t/maas-logging/2870) ~ [UI](/t/maas-logging/2871)|[CLI](/t/maas-logging/2872) ~ [UI](/t/maas-logging/2873)|
+|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|CLI ~ [UI](/t/interactive-search/2711)|
+|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  snap-2-9-cli -->
 
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-logging/2862) ~ [UI](/t/maas-logging/2863)|[CLI](/t/maas-logging/2864) ~ [UI](/t/maas-logging/2865)|[CLI](/t/maas-logging/2866) ~ UI|
-|Packages|[CLI](/t/maas-logging/2868) ~ [UI](/t/maas-logging/2869)|[CLI](/t/maas-logging/2870) ~ [UI](/t/maas-logging/2871)|[CLI](/t/maas-logging/2872) ~ [UI](/t/maas-logging/2873)|
+|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ UI|
+|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
 
-MAAS has a robust logging capability, which presents several different views, including a number of node-specific log files and several syslogd-style text logs.  Each of these logs provides different information, or at the very least, different views of the same information.  MAAS gathers logging information about the various MAAS states and records both automated and user-driven actions.
+The Machines and Devices pages contain a powerful interactive search bar that lets you filter machines and devices.  This article is designed to help you understand how to use this resource.
 
-#### Five questions you may have:
+#### Eight  questions you may have:
 
-<!-- deb-2-7-cli
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](/t/commissioning-logs/2496)
-4. [What are test logs?](/t/test-logs/3132)
-deb-2-7-cli -->
+1. [How can I do simple searches?](#heading--simple-searches)
+2. [How can I do filtered searches?](#heading--filtered-searches)
+3. [How can I create manual filters?](#heading--manual-filters)
+4. [How do I set up exact matching?](#heading--exact-matching)
+5. [How do I set up partial matching?](#heading--partial-matching)
+6. [How can I include multiple search terms?](#heading--multiple-search-terms)
+7. [What filter properties are available to me?](#heading--filter-properties)
+8. [How can I search with the CLI?](#heading--cli)
 
-<!-- deb-2-7-ui
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](/t/commissioning-logs/2497)
-4. [What are test logs?](/t/test-logs/3133)
- deb-2-7-ui -->
+<a href="#heading--simple-searches"><h2 id="heading--simple-searches">Simple searches</h2></a>
 
-<!-- deb-2-8-cli
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](/t/commissioning-logs/2498)
-4. [What are test logs?](/t/test-logs/3134)
- deb-2-8-cli -->
+To begin searching, enter your search text. As you type, MAAS will update search results in real time. You can search across virtually every parameter, including domain, name, tag, power type, IP, status, zone, and so on.
 
-<!-- deb-2-8-ui
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](/t/commissioning-logs/2499)
-4. [What are test logs?](/t/test-logs/3135)
- deb-2-8-ui -->
+<a href="https://assets.ubuntu.com/v1/ccb90c91-manage-search__2.5_searchbar.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/ccb90c91-manage-search__2.5_searchbar.png"></a>
 
-<!-- deb-2-9-cli
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](/t/commissioning-logs/2500)
-4. [What are test logs?](/t/test-logs/3136)
- deb-2-9-cli -->
+<a href="#heading--filtered-searches"><h2 id="heading--filtered-searches">Filtered searches</h2></a>
 
-<!-- deb-2-9-ui
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](/t/commissioning-logs/2501)
-4. [What are test logs?](/t/test-logs/3137)
- deb-2-9-ui -->
+Filter your searches to major categories by selecting one from the Filters drop-down menu next to the search bar.
 
-<!-- snap-2-7-cli
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](/t/commissioning-logs/2490)
-4. [What are test logs?](/t/test-logs/3126)
- snap-2-7-cli -->
+<a href="https://assets.ubuntu.com/v1/6ac5b4ec-manage-search__2.5_filters.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/6ac5b4ec-manage-search__2.5_filters.png"></a>
 
-<!-- snap-2-7-ui
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](/t/commissioning-logs/2491)
-4. [What are test logs?](/t/test-logs/3127)
- snap-2-7-ui -->
+For example, to find all "New" machines containing the name or tag 'quail', select Status/New from the drop-down Filters menu, and then type the word 'quail' next to it:
 
-<!-- snap-2-8-cli
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](/t/commissioning-logs/2492)
-4. [What are test logs?](/t/test-logs/3128)
- snap-2-8-cli -->
+<a href="https://assets.ubuntu.com/v1/7b5d8e86-manage-search__2.5_filtered-search.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/7b5d8e86-manage-search__2.5_filtered-search.png"></a>
 
-<!-- snap-2-8-ui
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](/t/commissioning-logs/2493)
-4. [What are test logs?](/t/test-logs/3129)
- snap-2-8-ui -->
+<a href="#heading--manual-filters"><h3 id="heading--manual-filters">Manual filters</h3></a>
 
-<!-- snap-2-9-cli
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](/t/commissioning-logs/2494)
-4. [What are test logs?](/t/test-logs/3130)
- snap-2-9-cli -->
+Enter filters manually in the search bar to more precisely control your searches:
 
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](/t/commissioning-logs/2495)
-4. [What are test logs?](/t/test-logs/3131)
-
-The discussion of these logs and their contents can be very extensive, so each type of logging has its own documentation section, reachable from the left-hand menu -- or from the list of questions above.
-
-<a href="#heading--path"><h2 id="heading--path">The syslog logging path</h2></a>
-
-<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
-Syslog data is kept in `/var/log/maas/rsyslog/<machine-name><yyyy-mm-dd>/messages`.  Every machine known to MAAS will have corresponding syslogs.
-deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
-
-Syslog data is kept in `/var/snap/maas/common/log/rsyslog/<machine-name><yyyy-mm-dd>/messages`. Every machine known to MAAS will have corresponding syslogs.
-
-<a href="#heading--using-a-remote-syslog-server"><h2 id="heading--using-a-remote-syslog-server">Using a remote syslog server</h2></a>
-
-To add a remote syslog server, click the Settings tab and then click the Network services tab. Scroll down to the Syslog section, where you can add a syslog URL or IP:
-
-<a href="https://assets.ubuntu.com/v1/e139d4e9-installconfig-syslog__2.6-remote-syslog.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/e139d4e9-installconfig-syslog__2.6-remote-syslog.png"></a>
-
-Click the Save button to save your changes.
-
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-To add or update a remote syslog server in your MAAS environment:
-
-``` bash
-maas $PROFILE maas set-config name="remote_syslog" value="$SYSLOG_FQDN"
+``` no-highlight
+filter-name:([=]val1,...,[=]val2)
 ```
 
-For example, to set your syslog server to `192.168.100.11`:
+**Note:** Surround search terms with parentheses when they must occur together, e.g., `status:(failed testing)`.
 
-``` bash
-maas $PROFILE maas set-config name="remote_syslog" value=192.168.100.11
+<h4 id="heading--exact-matching">Exact matching</h4>
+
+If you need an exact match, preface the search value with an equal sign. For example, to find machines belonging to a pod named `able-cattle`:
+
+``` no-highlight
+pod:=able-cattle
 ```
 
-If you clear the `remote_syslog` value, MAAS will revert to the default behaviour, which is to send all syslog information to all MAAS region controllers.
+<h4 id="heading--partial-matching">Partial matching</h4>
 
-For example:
+Without an equal sign, MAAS returns partial matches. For example, the following will display all machines belonging to pods with names containing `able` or `cattle`:
 
-``` bash
-maas $PROFILE maas set-config name="remote_syslog" value=""
+``` no-highlight
+pod:able,cattle
 ```
 
-[note]
-Note that MAAS controllers' syslogs are not forwarded to the external syslog server -- only machine syslog information is forwarded.
-[/note]
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+<h4 id="heading--multiple-search-terms">Multiple search terms</h4>
+
+MAAS uses boolean AND logic to evaluate multiple search terms. For example, when you type `pod:able,cattle cpu:=5`, MAAS displays machines that belong to pods with names containing `able` OR `cattle` AND having 5 CPU cores. Similarly, if you enter multiple words into the search tool, e.g., `steady able`, MAAS will display machines matching both terms (e.g., `steady` AND `able`).
+
+<h4 id="heading--filter-properties">Filter properties</h4>
+
+In addition to the major filtering categories available in the Filter drop-down menu, twenty-one machine properties are available as filters:
+
+1.   architecture
+2.   cores
+3.   cpu
+4.   distro_series
+5.   fqdn
+6.   ip_addresses
+7.   mac
+8.   pod
+9.   pod-id
+10.   pool
+11.   power
+12.   pxe_mac
+13.   pxe_mac_vendor
+14.   ram
+15.   release
+16.   spaces
+17.   status
+18.   storage
+19.   storage_tags
+20.   tags
+21.   zone
+
+For example, the following will search for a machine that has an interface with a specific MAC address marked for PXE booting:
+
+``` no-highlight
+pxe_mac:=9e:b0:e4:15:ae:1e
+```
+
+<a href="#heading--cli"><h2 id="heading--cli">CLI</h2></a>
+
+See [List nodes](/t/common-cli-tasks/794#heading--list-nodes) for more information about how to use the MAAS CLI to perform similar searches or [CLI](/t/maas-cli/802) for how to get started with the MAAS CLI.
 

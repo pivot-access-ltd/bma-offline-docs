@@ -33,10 +33,12 @@
 |Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|CLI ~ [UI](/t/interactive-search/2717)|
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
 |Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ UI|
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
@@ -174,3 +176,4 @@ pxe_mac:=9e:b0:e4:15:ae:1e
 <a href="#heading--cli"><h2 id="heading--cli">CLI</h2></a>
 
 See [List nodes](/t/common-cli-tasks/794#heading--list-nodes) for more information about how to use the MAAS CLI to perform similar searches or [CLI](/t/maas-cli/802) for how to get started with the MAAS CLI.
+
