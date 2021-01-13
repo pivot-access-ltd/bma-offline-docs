@@ -27,7 +27,7 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 * [Network topology](/t/concepts-and-terms/785#heading--network-topology)
 * [NUMA](/t/concepts-and-terms/785#heading--numa)
 * [Nodes](/t/concepts-and-terms/785#heading--nodes)
-* [Package repositories](/t/concepts-and-terms/785#heading--package-repositories/814)
+* [Package repositories](/t/concepts-and-terms/785#heading--package-repositories)
 * [Packet](/t/concepts-and-terms/785#heading--packet)
 * [Patch panel](/t/concepts-and-terms/785#heading--patch-panel)
 * [Regions](/t/concepts-and-terms/785#heading--regions)
@@ -386,7 +386,7 @@ A node bearing this status has been commissioned and is ready for use, including
 
 The node is in rescue mode and is ready to accept SSH connections. See node action 'Rescue mode'.
 
-<a href="#heading--package-repositories"><h2 id-"heading--package-repositories">Package repositories</h2></a>
+<a href="#heading--package-repositories"><h2 id="heading--package-repositories">Package repositories</h2></a>
 
 Package repositories managed within MAAS can be of two types:
 
