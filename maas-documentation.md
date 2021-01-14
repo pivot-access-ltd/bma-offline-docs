@@ -340,7 +340,7 @@ There are (at least) three ways you can contribute to MAAS:
 ### [Images](/t/images-snap-2-9-ui/2699)
 
 - [Select and import images](/t/select-and-import-images-snap-2-9-ui/3095)
-- [Local image mirror](/t/local-image-mirror-snap-2-9-ui/2807)
+- [Local image mirror](/t/local-/image-mirror-snap-2-9-ui/2807)
 - [VMWare images](/t/vmware-images-snap-2-9-ui/3239)
 
 ### [Networking](/t/networking-snap-2-9-ui/2951)
@@ -1240,49 +1240,9 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/800/|/docs/cli-resource-pool-management|
 |https://discourse.maas.io/t/-/801/|/docs/cli-tag-management|
 |https://discourse.maas.io/t/-/802/|/docs/maas-cli|
-|https://discourse.maas.io/t/-/803/|/docs/postgresql-ha-hot-standby|
 |https://discourse.maas.io/t/-/810/|/docs/api-client|
 |https://discourse.maas.io/t/-/1479|/docs/test-logs|
-|https://discourse.maas.io/t/-/1525|/docs/vm-host-storage-pools|
-|https://discourse.maas.io/t/-/1526|/docs/vm-host-networking|
-|https://discourse.maas.io/t/-/1314|/docs/maas-example-config|
-|https://discourse.maas.io/t/-/749/|/docs/block-devices|
-|https://discourse.maas.io/t/-/751/|/docs/select-and-import-images|
-|https://discourse.maas.io/t/-/753/|/docs/vmware-images|
-|https://discourse.maas.io/t/-/755/|/docs/install-from-a-snap |
 |https://discourse.maas.io/t/-/758/|/docs/network-discovery|
-|https://discourse.maas.io/t/-/759/|/docs/dhcp|
-|https://discourse.maas.io/t/-/760/|/docs/ip-ranges|
-|https://discourse.maas.io/t/-/761/|/docs/ipv6|
-|https://discourse.maas.io/t/-/762/|/docs/ntp|
-|https://discourse.maas.io/t/-/763/|/docs/proxy|
-|https://discourse.maas.io/t/-/764/|/docs/ssl|
-|https://discourse.maas.io/t/-/765/|/docs/stp|
-|https://discourse.maas.io/t/-/766/|/docs/subnet-management|
-|https://discourse.maas.io/t/-/767/|/docs/networking|
-|https://discourse.maas.io/t/-/768/|/docs/networking|
-|https://discourse.maas.io/t/-/771/|/docs/rack-controller|
-|https://discourse.maas.io/t/-/772/|/docs/region-controller|
-|https://discourse.maas.io/t/install-from-a-snap/773/|/docs/install-from-a-snap|
-|https://discourse.maas.io/t/-/774/|/docs/disk-erasure|
-|https://discourse.maas.io/t/-/775/|/docs/storage|
-|https://discourse.maas.io/t/-/1468|/docs/logging|
-|https://discourse.maas.io/t/-/1478|/docs/commissioning-logs|
-|https://discourse.maas.io/t/-/780/|/docs/vmware-vmfs-datastores|
-|https://discourse.maas.io/t/-/781/|/docs/configuration-journey|
-|https://discourse.maas.io/t/-/783/|/docs/maas-communication|
-|https://discourse.maas.io/t/-/784/|/docs/zone-examples|
-|https://discourse.maas.io/t/-/786/|/docs/introduction-to-controllers|
-|https://discourse.maas.io/t/-/787/|/docs/explore-maas|
-|https://discourse.maas.io/t/-/789/|/docs/maas-requirements|
-|https://discourse.maas.io/t/-/840/|/docs/what-is-maas|
-|https://discourse.maas.io/t/-/790/|/docs/user-accounts|
-|https://discourse.maas.io/t/-/791/|/docs/audit-event-logs|
-|https://discourse.maas.io/t/-/792/|/docs/backup|
-|https://discourse.maas.io/t/-/804/|/docs/high-availability|
-|https://discourse.maas.io/t/-/806/|/docs/creating-and-deleting-new-vms|
-|https://discourse.maas.io/t/-/1381|/docs/security|
-|https://discourse.maas.io/t/-/813/|/docs/prometheus-metrics|
 |https://discourse.maas.io/t/-/2976/|/docs/deb/2.7/cli/package-repositories|
 |https://discourse.maas.io/t/-/2977/|/docs/deb/2.7/ui/package-repositories|
 |https://discourse.maas.io/t/-/2978/|/docs/deb/2.8/cli/package-repositories|
@@ -1321,6 +1281,7 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/1561|/docs/markdown-test|
 |https://discourse.maas.io/t/-/1112|/docs/image-builder|
 |https://discourse.maas.io/t/-/745/|/docs/language-details-contributing-to-maas-docs|
+|https://discourse.maas.io/t/audit-event-logs/791|/docs/audit-event-logs|
 |DEPRECATED TOPIC (MAY NEED MARKING AS SUCH)|PRESERVED PATH|
 |https://discourse.maas.io/t/-/744/|/docs/building-the-docs|
 |https://discourse.maas.io/t/-/746/|/docs/working-with-git-and-github|
@@ -1332,33 +1293,70 @@ There are (at least) three ways you can contribute to MAAS:
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
-|/docs/local-image-mirror|/docs/deb/2.9/ui/local-image-mirror|
-|/docs/installconfig-images-mirror|/docs/deb/2.9/ui/local-image-mirror|
-|/docs/images|/docs/deb/2.9/ui/images|
-|/docs/installconfig-images|/docs/deb/2.9/ui/images|
-|/docs/add-a-vm-host|/docs/deb/2.9/ui/adding-a-vm-host|
-|/docs/intro-to-vm-hosting|/docs/deb/2.9/ui/vm-hosting|
-|/docs/pods|/docs/deb/2.9/ui/vm-hosting|
-|/docs/manage-composable-machines|/docs/deb/2.9/ui/vm-hosting|
-|/docs/kvm-introduction|/docs/deb/2.9/ui/vm-hosting|
+|/docs/installconfig-block|/docs/snap/2.9/ui/block-devices|
+|/docs/installconfig-checklist|/docs/snap/2.9/ui/installation|
+|/docs/installconfig-images-import|/docs/snap/2.9/ui/select-and-import-images|
+|/docs/installconfig-images-vmware|/docs/snap/2.9/ui/vmware-images|
+|/docs/installconfig-install|/docs/snap/2.9/ui/installation|
+|/docs/explore-maas|/docs/snap/2.9/ui/installation|
+|/docs/maas-requirements|/docs/snap/2.9/ui/maas-requirements|
+|/docs/what-is-maas|/docs/snap/2.9/ui/about-maas|
+|/docs/user-accounts|/docs/snap/2.9/ui/user-accounts|
+|/docs/backup|/docs/snap/2.9/ui/backup|
+|/docs/high-availability|/docs/snap/2.9/ui/high-availability|
+|/docs/creating-and-deleting-new-vms|/docs/snap/2.9/ui/creating-and-deleting-vms|
+|/docs/security|/docs/snap/2.9/ui/hardening-your-maas-installation|
+|/docs/prometheus-metrics|/docs/snap/2.9/ui/prometheus-metrics|
+|/docs/dhcp|/docs/snap/2.9/ui/managing-dhcp|
+|/docs/ip-ranges|/docs/snap/2.9/ui/ip-ranges|
+|/docs/ipv6|/docs/snap/2.9/ui/ipv6-addressing|
+|/docs/ntp|/docs/snap/2.9/ui/ntp-services|
+|/docs/proxy|/docs/snap/2.9/ui/proxy|
+|/docs/ssl|/docs/snap/2.9/ui/configuring-tls-encryption|
+|/docs/stp|/docs/snap/2.9/ui/managing-stp|
+|/docs/subnet-management|/docs/snap/2.9/ui/subnet-management|
+|/docs/networking|/docs/snap/2.9/ui/networking|
+|/docs/rack-controller|/docs/snap/2.9/ui/rack-controllers|
+|/docs/region-controller|/docs/snap/2.9/ui/region-controllers|
+|/docs/disk-erasure|/docs/snap/2.9/ui/disk-erasure|
+|/docs/storage|/docs/snap/2.9/ui/storage|
+|/docs/logging|/docs/snap/2.9/ui/maas-logging|
+|/docs/commissioning-logs|/docs/snap/2.9/ui/commissioning-logs|
+|/docs/vmware-vmfs-datastores|/docs/snap/2.9/ui/vmware-vmfs-datastores|
+|/docs/configuration-journey|/docs/snap/2.9/ui/configuration-journey|
+|/docs/maas-communication|/docs/snap/2.9/ui/maas-communication|
+|/docs/zone-examples|/docs/snap/2.9/ui/zone-examples|
+|/docs/introduction-to-controllers|/docs/snap/2.9/ui/controllers|
+|/docs/postgresql-ha-hot-standby|/docs/snap/2.9/ui/postgresql-ha-hot-standby|
+|/docs/manage-kvm-storage|/docs/snap/2.9/ui/vm-host-storage-pools|
+|/docs/kvm-host-storage-pools|/docs/snap/2.9/ui/vm-host-storage-pools|
+|/docs/kvm-host-networking|/docs/snap/2.9/ui/vm-host-storage-pools|
+|/docs/manage-kvm-host-networking|/docs/snap/2.9/ui/vm-host-storage-pools|
+|/docs/vm-host-storage-pools|/docs/snap/2.9/ui/vm-host-storage-pools|
+|/docs/vm-host-networking|/docs/snap/2.9/ui/vm-host-storage-pools|
+|/docs/maas-example-config|/docs/snap/2.9/ui/give-me-an-example-of-maas|
+|/docs/block-devices|/docs/snap/2.9/ui/block-devices|
+|/docs/select-and-import-images|/docs/snap/2.9/ui/select-and-import-images|
+|/docs/vmware-images|/docs/snap/2.9/ui/vmware-images|
+|/docs/install-from-a-snap |/docs/snap/2.9/ui/installation|
+|/docs/local-image-mirror|/docs/snap/2.9/ui/local-image-mirror|
+|/docs/installconfig-images-mirror|/docs/snap/2.9/ui/local-image-mirror|
+|/docs/images|/docs/snap/2.9/ui/images|
+|/docs/installconfig-images|/docs/snap/2.9/ui/images|
+|/docs/add-a-vm-host|/docs/snap/2.9/ui/adding-a-vm-host|
+|/docs/intro-to-vm-hosting|/docs/snap/2.9/ui/vm-hosting|
+|/docs/pods|/docs/snap/2.9/ui/vm-hosting|
+|/docs/manage-composable-machines|/docs/snap/2.9/ui/vm-hosting|
+|/docs/kvm-introduction|/docs/snap/2.9/ui/vm-hosting|
 |/docs/custom-node-setup-preseed|/docs/custom-machine-setup|
-|/docs/manage-kvm-intro|/docs/deb/2.9/ui/vm-hosting|
-|/docs/add-a-kvm-host|/docs/deb/2.9/ui/adding-a-vm-host|
-|/docs/manage-kvm-add-host|/docs/deb/2.9/ui/adding-a-vm-host|
-|/docs/manage-kvm-storage|/docs/vm-host-storage-pools|
-|/docs/kvm-host-storage-pools|/docs/vm-host-storage-pools|
-|/docs/kvm-host-networking|/docs/vm-host-networking|
-|/docs/manage-kvm-host-networking|/docs/vm-host-networking|
+|/docs/manage-kvm-intro|/docs/snap/2.9/ui/vm-hosting|
+|/docs/add-a-kvm-host|/docs/snap/2.9/ui/adding-a-vm-host|
+|/docs/manage-kvm-add-host|/docs/snap/2.9/ui/adding-a-vm-host|
 |/docs/language-details-contributing-to-juju-docs|/docs/language-details-contributing-to-maas-docs|
 |/docs/contributing-build|/docs/building-the-docs|
 |/docs/contributing-en-GB|/docs/language-details-contributing-to-juju-docs|
 |/docs/contributing-git|/docs/working-with-git-and-github|
 |/docs/contributing-writing|/docs/writing-guide|
-|/docs/installconfig-block|/docs/block-devices|
-|/docs/installconfig-checklist|/docs/installation-and-configuration-checklist|
-|/docs/installconfig-images-import|/docs/select-and-import-images|
-|/docs/installconfig-images-vmware|/docs/vmware-images|
-|/docs/installconfig-install|/docs/install-from-a-snap|
 |/docs/installation|/docs/snap/2.9/ui/installation|
 |/docs/installconfig-iso-install|/docs/install-from-iso|
 |/docs/installconfig-lxd-install|/docs/install-with-lxd|
