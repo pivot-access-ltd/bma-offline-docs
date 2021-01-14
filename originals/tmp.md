@@ -1,295 +1,163 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
-|Packages|CLI ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-deb-2-7-cli -->
+|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
+|Packages|CLI ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
+|Packages|[CLI](/t/local-image-mirror/2808) ~ UI|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
+|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|CLI ~ [UI](/t/local-image-mirror/2811) |[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
+|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ UI|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
+|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|CLI ~ [UI](/t/local-image-mirror/2813)|
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
+|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812)~ UI|
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ UI|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-snap-2-7-ui -->
-
-<!-- deb-2-7-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ UI|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-deb-2-7-ui -->
-
-<!-- snap-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839) | CLI ~ [UI](/t/maas-documentation/25) |[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843) |
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845) |[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847) |[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849) |
-snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ UI|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-snap-2-8-ui -->
-
-<!-- deb-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|CLI ~  [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ UI|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-deb-2-8-ui -->
-
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|CLI ~  [UI](/t/maas-documentation-snap-2-9-ui/2843)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-
-<!-- snap-2-9-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ UI|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-snap-2-9-ui -->
-
-<!-- deb-2-9-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|CLI ~  [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/25)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ UI|
-deb-2-9-ui -->
-
-MAAS is **Metal As A Service**, a service that lets you treat physical servers like virtual machines -- instances -- in the cloud.  No need for you to manage servers individually: MAAS turns your bare metal into an elastic, cloud-like resource.
-
-#### Five questions you might have:
-
-<!-- deb-2-7-ui
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-7-ui/2269)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-7-ui/2653)
-3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-7-ui/2269#heading--how-maas-works)
-4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-7-ui/3325)
-deb-2-7-ui -->
-
-<!-- snap-2-7-ui
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-7-ui/2263)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-7-ui/2647)
-3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-7-ui/2263#heading--how-maas-works)
-4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-7-ui/3319)
-snap-2-7-ui -->
-
-<!-- deb-2-8-ui
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-8-ui/2271)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-8-ui/2655)
-3. [How does MAAS work -- in detail?](/tabout-maas-deb-2-8-ui/2271#heading--how-maas-works)
-4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-8-ui/3327)
-deb-2-8-ui -->
-
-<!-- snap-2-8-ui
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-8-ui/2265)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-8-ui/2649)
-3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-8-ui/2265#heading--how-maas-works)
-4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-8-ui/3321)
-snap-2-8-ui -->
-
-<!-- deb-2-9-ui
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-9-ui/2273)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-9-ui/2657)
-3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-9-ui/2273#heading--how-maas-works)
-4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-9-ui/3329)
-deb-2-9-ui -->
-
-<!-- snap-2-9-ui
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-9-ui/2267)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-9-ui/2651)
-3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-9-ui/2267#heading--how-maas-works)
-4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-9-ui/3323)
-snap-2-9-ui -->
-
-<!-- deb-2-7-cli
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-7-cli/2268)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-7-cli/2652)
-3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-7-cli/2268#heading--how-maas-works)
-4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-7-cli/3324)
-deb-2-7-cli -->
-
-<!-- snap-2-7-cli
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-7-cli/2262)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-7-cli/2646)
-3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-7-cli/2262#heading--how-maas-works)
-4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-7-cli/3318)
-snap-2-7-cli -->
-
-<!-- deb-2-8-cli
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-8-cli/2270)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-8-cli/2654)
-3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-8-cli/2270#heading--how-maas-works)
-4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-8-cli/3326)
-deb-2-8-cli -->
-
-<!-- snap-2-8-cli
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-8-cli/2264)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-8-cli/2648)
-3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-8-cli/2264#heading--how-maas-works)
-4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-8-cli/3320)
-snap-2-8-cli -->
-
-<!-- deb-2-9-cli
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-9-cli/2272)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-9-cli/2656)
-3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-9-cli/2272#heading--how-maas-works)
-4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-9-cli/3328)
-deb-2-9-cli -->
-
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-9-cli/2266)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-9-cli/2650)
-3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-9-cli/2266#heading--how-maas-works)
-4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-9-cli/3322)
-
-<!-- deb-2-7-ui
-<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
-
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-7-ui/2653), our example data centre.*
- deb-2-7-ui -->
-
-<!-- deb-2-8-ui
-<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
-
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-8-ui/2655), our example data centre.*
- deb-2-8-ui -->
-
-<!-- deb-2-9-ui
-<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
-
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-ui/2657), our example data centre.*
- deb-2-9-ui -->
-
-<!-- snap-2-7-ui
-<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
-
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-ui/2647), our example data centre.*
- snap-2-7-ui -->
-
-<!-- snap-2-8-ui
-<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
-
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-8-ui/2649), our example data centre.*
-snap-2-8-ui -->
-
-<!-- snap-2-9-ui
-<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
-
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-9-ui/2651), our example data centre.*
-snap-2-9-ui -->
-
-<!-- deb-2-7-cli 
-<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
-</a>
-
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-7-cli/2652), our example data centre, generated with the [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
- deb-2-7-cli -->
-
-<!-- deb-2-8-cli
-<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
-</a>
-
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-8-cli/2654), our example data centre, generated with the [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
- deb-2-8-cli -->
-
-<!-- deb-2-9-cli 
-<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
-</a>
-
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-cli/2656), our example data centre, generated with the [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
- deb-2-9-cli -->
-
-<!-- snap-2-7-cli
-<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
-</a>
-
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-7-cli/2646), our example data centre, generated with the [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
+|Snap|CLI ~ [UI](/t/local-image-mirror/2803) |[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
+|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
  snap-2-7-cli -->
 
-<!-- snap-2-8-cli 
-<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
-</a>
+<!-- snap-2-7-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/local-image-mirror/2802) ~ UI|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
+|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+ snap-2-7-ui -->
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-8-cli/2648), our example data centre, generated with the [basic-machine-list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
+<!-- snap-2-8-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|CLI ~ [UI](/t/local-image-mirror/2805) |[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
+|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
  snap-2-8-cli -->
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
-</a>
+<!-- snap-2-8-ui
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ UI |[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
+|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+ snap-2-8-ui -->
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-9-cli/2650), our example data centre, generated with the [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
+<!-- snap-2-9-cli
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|CLI ~ [UI](/t/local-image-mirror/2806)|
+|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+ snap-2-9-cli -->
 
----
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2805) ~ UI|
+|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
 
-<!-- deb-2-8-cli deb-2-8-ui snap-2-8-cli snap-2-8-ui
-<h2 id="heading--whats-new">New version of MAAS</h2>
+Mirroring images is worthy of consideration.  The SimpleStreams protocol delivers Images to MAAS, which is especially useful when your Internet link is slow or unreliable. In this mirrored configuration, images will be instantly available when MAAS requests them.
 
-- [What's new in 2.8](/t/whats-new-in-maas/3334)
-deb-2-8-cli deb-2-8-ui snap-2-8-cli snap-2-8-ui -->
+Canonical provides two SimpleStreams for MAAS images: candidate and stable. Both streams contain Ubuntu images, CentOS images, bootloaders extracted from the Ubuntu archive, and release notifications. Either stream can be used in any version of MAAS greater than 2.1, but not all images are supported in older versions.
 
-<!-- deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-uil
-<h2 id="heading--whats-new">New version of MAAS</h2>
+#### Six questions you may have:
 
-- [What's new in 2.7](/t/whats-new-in-maas/3335)
-deb-2-7-cli deb-2-7-ui snap-2-7-cli snap-2-7-ui -->
+1. [What is the candidate stream?](#heading--candidate-stream)
+2. [What is the stable stream?](#heading--stable-stream)
+3. [What happened to the daily stream?](#heading--daily-stream)
+4. [How do I change the stream with the UI?](#heading--changing-the-stream)
+5. [How do I change the stream with the CLI?](#heading--changing-stream-with-cli)
+6. [How do I set up a local image mirror?](#heading--set-up-local-mirror)
 
-<h2 id="heading--whats-new">New version of MAAS</h2>
+<a href="#heading--candidate-stream"><h2 id="heading--candidate-stream">Candidate stream</h2></a>
 
-- [What's new in 2.9](/t/whats-new-in-maas/3336)
+The candidate stream contains images and bootloaders which have not been explicitly tested with MAAS. Canonical's automated build process dumps all images and bootloaders here before they are tested with MAAS. This stream is useful when testing a bug fix before an image or bootloader has been promoted to stable. Think of the candidate stream as a preview: it should never be used in a production environment; and users are encouraged to provide feedback on any issues they find with this stream.
 
----
+This stream is available [here](http://images.maas.io/ephemeral-v3/candidate).
 
-<h2 id="heading--getting-support">Getting support</h2>
+<a href="#heading--stable-stream"><h2 id="heading--stable-stream">Stable stream</h2></a>
 
-There are four ways you can get support for MAAS:
+The stable stream contains images and bootloaders which have been tested with the latest version of MAAS. This is the default stream which should be used in production environments.  This stream is available [here](http://images.maas.io/ephemeral-v3/stable).
 
-1. [Professional support](https://maas.io/contact-us)
-2. [Ask a question (external link)](http://askubuntu.com/questions/tagged/maas)
-3. [IRC (external link)](http://webchat.freenode.net/?channels=maas)
-4. [MAAS 2.5 (and earlier) documentation (external link)](https://old-docs.maas.io/2.5/en/)
+<a href="#heading--daily-stream"><h2 id="heading--daily-stream">Sunset of "daily" stream</h2></a>
 
----
+Previously there was only one MAAS stream available, daily. This stream has been replaced by the stable stream. Any client using this stream will be automtically redirected to the stable stream.
 
-<h2 id="heading--contribute">Contribute</h2>
+<a href="#heading--changing-the-stream"><h2 id="heading--changing-the-stream">Changing the stream - UI</h2></a>
 
-There are (at least) three ways you can contribute to MAAS:
+To switch to the candidate stream simply select "custom" on the images page, set the URL to `http://images.maas.io/ephemeral-v3/candidate`, and click "Connect"
 
-1. [Guide to contributing](/t/writing-guide/747)
-2. [Push some code (external link)](https://launchpad.net/maas)
-3. [File an issue (external link)](https://bugs.launchpad.net/maas/+filebug)
+<a href="https://discourse.maas.io/uploads/default/original/1X/0588c8d2e5792edad3f53e90e38e9990a6d86d9a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0588c8d2e5792edad3f53e90e38e9990a6d86d9a.jpeg"></a>
 
+MAAS uses the stable stream by default. To switch back to it simply select `maas.io` on the images page
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/5e20342f04e30f96ac0e29a5bd3117aa71dacd40.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5e20342f04e30f96ac0e29a5bd3117aa71dacd40.jpeg"></a>
+
+<a href="#heading--changing-stream-with-cli"><h2 id="heading--changing-stream-with-cli">Changing the stream - API/CLI</h2></a>
+
+To switch to a stream with the CLI, enter the following commands:
+
+```
+BOOT_SOURCE_ID=$(maas $PROFILE boot-sources read | jq '.[] | select(.url | contains("images.maas.io/ephemeral-v3")) | .id')
+maas $PROFILE boot-source update $BOOT_SOURCE_ID url=$STREAM_URL
+```
+<a href="#heading--set-up-local-mirror"><h2 id="heading--set-up-local-mirror">Setting up a local mirror</h2></a>
+
+To use mirroring, you begin by installing the necessary software on the host that will house the mirror:
+
+``` bash
+sudo apt install simplestreams
+```
+
+First define some variables to unclutter eventual CLI commands:
+
+``` bash
+KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
+IMAGE_SRC=https://images.maas.io/ephemeral-v3/stable
+IMAGE_DIR=/var/www/html/maas/images/ephemeral-v3/stable
+```
+
+The below example selects all available kernels that are compatible with either Ubuntu 18.04 (Bionic) and Ubuntu 20.04 (Focal) for the amd64 architecture, resulting in a download of approximately 3.1 GB. The second command mirrors the bootloaders.
+
+``` bash
+sudo sstream-mirror --keyring=$KEYRING_FILE $IMAGE_SRC $IMAGE_DIR \
+    'arch=amd64' 'release~(bionic|focal)' --max=1 --progress
+sudo sstream-mirror --keyring=$KEYRING_FILE $IMAGE_SRC $IMAGE_DIR \
+    'os~(grub*|pxelinux)' --max=1 --progress
+```
+
+To know in advance what the `sstream-mirror` command will grab, or if you want to save bandwidth and time by avoiding bad selections, include the `--dry-run` option. When you are satisfied, remove that option to initiate the download.
+
+MAAS will write the images to disk in the directory defined by the variable 'IMAGE_DIR' above, and the 'location' of the new boot source will be:
+
+`URL=http://<myserver>/maas/images/ephemeral-v3/stable/`
+
+Where `<myserver>` identifies your server's hostname or IP address.
+
+Verify the availability of the images by visiting the above URL.
+
+The final `sstream-mirror` command should be invoked at regular intervals (i.e. with `cron`) to ensure the mirror contains the latest images.
