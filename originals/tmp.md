@@ -1,163 +1,345 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|CLI ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+|Snap|[CLI](/t/partitions/2982) ~ [UI](/t/partitions/2983)|[CLI](/t/partitions/2984) ~ [UI](/t/partitions/2985)|[CLI](/t/partitions/2986) ~ [UI](/t/partitions/2987)|
+|Packages|CLI ~ [UI](/t/partitions/2989)|[CLI](/t/partitions/2990) ~ [UI](/t/partitions/2991)|[CLI](/t/partitions/2992) ~ [UI](/t/partitions/2993)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ UI|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+|Snap|[CLI](/t/partitions/2982) ~ [UI](/t/partitions/2983)|[CLI](/t/partitions/2984) ~ [UI](/t/partitions/2985)|[CLI](/t/partitions/2986) ~ [UI](/t/partitions/2987)|
+|Packages|[CLI](/t/partitions/2988) ~ UI|[CLI](/t/partitions/2990) ~ [UI](/t/partitions/2991)|[CLI](/t/partitions/2992) ~ [UI](/t/partitions/2993)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|CLI ~ [UI](/t/local-image-mirror/2811) |[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+|Snap|[CLI](/t/partitions/2982) ~ [UI](/t/partitions/2983)|[CLI](/t/partitions/2984) ~ [UI](/t/partitions/2985)|[CLI](/t/partitions/2986) ~ [UI](/t/partitions/2987)|
+|Packages|[CLI](/t/partitions/2988) ~ [UI](/t/partitions/2989)|CLI ~ [UI](/t/partitions/2991)|[CLI](/t/partitions/2992) ~ [UI](/t/partitions/2993)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ UI|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+|Snap|[CLI](/t/partitions/2982) ~ [UI](/t/partitions/2983)|[CLI](/t/partitions/2984) ~ [UI](/t/partitions/2985)|[CLI](/t/partitions/2986) ~ [UI](/t/partitions/2987)|
+|Packages|[CLI](/t/partitions/2988) ~ [UI](/t/partitions/2989)|[CLI](/t/partitions/2990) ~ UI|[CLI](/t/partitions/2992) ~ [UI](/t/partitions/2993)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|CLI ~ [UI](/t/local-image-mirror/2813)|
+|Snap|[CLI](/t/partitions/2982) ~ [UI](/t/partitions/2983)|[CLI](/t/partitions/2984) ~ [UI](/t/partitions/2985)|[CLI](/t/partitions/2986) ~ [UI](/t/partitions/2987)|
+|Packages|[CLI](/t/partitions/2988) ~ [UI](/t/partitions/2989)|[CLI](/t/partitions/2990) ~ [UI](/t/partitions/2991)|CLI ~ [UI](/t/partitions/2993)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812)~ UI|
+|Snap|[CLI](/t/partitions/2982) ~ [UI](/t/partitions/2983)|[CLI](/t/partitions/2984) ~ [UI](/t/partitions/2985)|[CLI](/t/partitions/2986) ~ [UI](/t/partitions/2987)|
+|Packages|[CLI](/t/partitions/2988) ~ [UI](/t/partitions/2989)|[CLI](/t/partitions/2990) ~ [UI](/t/partitions/2991)|[CLI](/t/partitions/2992) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/local-image-mirror/2803) |[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+|Snap|CLI ~ [UI](/t/partitions/2983)|[CLI](/t/partitions/2984) ~ [UI](/t/partitions/2985)|[CLI](/t/partitions/2986) ~ [UI](/t/partitions/2987)|
+|Packages|[CLI](/t/partitions/2988) ~ [UI](/t/partitions/2989)|[CLI](/t/partitions/2990) ~ [UI](/t/partitions/2991)|[CLI](/t/partitions/2992) ~ [UI](/t/partitions/2993)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ UI|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+|Snap|[CLI](/t/partitions/2982) ~ UI|[CLI](/t/partitions/2984) ~ [UI](/t/partitions/2985)|[CLI](/t/partitions/2986) ~ [UI](/t/partitions/2987)|
+|Packages|[CLI](/t/partitions/2988) ~ [UI](/t/partitions/2989)|[CLI](/t/partitions/2990) ~ [UI](/t/partitions/2991)|[CLI](/t/partitions/2992) ~ [UI](/t/partitions/2993)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|CLI ~ [UI](/t/local-image-mirror/2805) |[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+|Snap|[CLI](/t/partitions/2982) ~ [UI](/t/partitions/2983)|CLI ~ [UI](/t/partitions/2985)|[CLI](/t/partitions/2986) ~ [UI](/t/partitions/2987)|
+|Packages|[CLI](/t/partitions/2988) ~ [UI](/t/partitions/2989)|[CLI](/t/partitions/2990) ~ [UI](/t/partitions/2991)|[CLI](/t/partitions/2992) ~ [UI](/t/partitions/2993)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ UI |[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+|Snap|[CLI](/t/partitions/2982) ~ [UI](/t/partitions/2983)|[CLI](/t/partitions/2984) ~ UI|[CLI](/t/partitions/2986) ~ [UI](/t/partitions/2987)|
+|Packages|[CLI](/t/partitions/2988) ~ [UI](/t/partitions/2989)|[CLI](/t/partitions/2990) ~ [UI](/t/partitions/2991)|[CLI](/t/partitions/2992) ~ [UI](/t/partitions/2993)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|CLI ~ [UI](/t/local-image-mirror/2806)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+|Snap|[CLI](/t/partitions/2982) ~ [UI](/t/partitions/2983)|[CLI](/t/partitions/2984) ~ [UI](/t/partitions/2985)|CLI ~ [UI](/t/partitions/2987)|
+|Packages|[CLI](/t/partitions/2988) ~ [UI](/t/partitions/2989)|[CLI](/t/partitions/2990) ~ [UI](/t/partitions/2991)|[CLI](/t/partitions/2992) ~ [UI](/t/partitions/2993)|
  snap-2-9-cli -->
 
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2805) ~ UI|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
+|Snap|[CLI](/t/partitions/2982) ~ [UI](/t/partitions/2983)|[CLI](/t/partitions/2984) ~ [UI](/t/partitions/2985)|[CLI](/t/partitions/2986) ~ UI|
+|Packages|[CLI](/t/partitions/2988) ~ [UI](/t/partitions/2989)|[CLI](/t/partitions/2990) ~ [UI](/t/partitions/2991)|[CLI](/t/partitions/2992) ~ [UI](/t/partitions/2993)|
 
-Mirroring images is worthy of consideration.  The SimpleStreams protocol delivers Images to MAAS, which is especially useful when your Internet link is slow or unreliable. In this mirrored configuration, images will be instantly available when MAAS requests them.
+<!-- deb-2-7-cli
+As with block devices (see [Block devices](/t/block-devices/2352)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
+ deb-2-7-cli -->
 
-Canonical provides two SimpleStreams for MAAS images: candidate and stable. Both streams contain Ubuntu images, CentOS images, bootloaders extracted from the Ubuntu archive, and release notifications. Either stream can be used in any version of MAAS greater than 2.1, but not all images are supported in older versions.
+<!-- deb-2-7-ui
+As with block devices (see [Block devices](/t/block-devices/2353)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
+ deb-2-7-ui -->
 
-#### Six questions you may have:
+<!-- deb-2-8-cli
+As with block devices (see [Block devices](/t/block-devices/2354)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
+ deb-2-8-cli -->
 
-1. [What is the candidate stream?](#heading--candidate-stream)
-2. [What is the stable stream?](#heading--stable-stream)
-3. [What happened to the daily stream?](#heading--daily-stream)
-4. [How do I change the stream with the UI?](#heading--changing-the-stream)
-5. [How do I change the stream with the CLI?](#heading--changing-stream-with-cli)
-6. [How do I set up a local image mirror?](#heading--set-up-local-mirror)
+<!-- deb-2-8-ui
+As with block devices (see [Block devices](/t/block-devices/2355)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
+ deb-2-8-ui -->
 
-<a href="#heading--candidate-stream"><h2 id="heading--candidate-stream">Candidate stream</h2></a>
+<!-- deb-2-9-cli
+As with block devices (see [Block devices](/t/block-devices/2356)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
+ deb-2-9-cli -->
 
-The candidate stream contains images and bootloaders which have not been explicitly tested with MAAS. Canonical's automated build process dumps all images and bootloaders here before they are tested with MAAS. This stream is useful when testing a bug fix before an image or bootloader has been promoted to stable. Think of the candidate stream as a preview: it should never be used in a production environment; and users are encouraged to provide feedback on any issues they find with this stream.
+<!-- deb-2-9-ui
+As with block devices (see [Block devices](/t/block-devices/2357)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
+ deb-2-9-ui -->
 
-This stream is available [here](http://images.maas.io/ephemeral-v3/candidate).
+<!-- snap-2-7-cli
+As with block devices (see [Block devices](/t/block-devices/2346)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
+ snap-2-7-cli -->
 
-<a href="#heading--stable-stream"><h2 id="heading--stable-stream">Stable stream</h2></a>
+<!-- snap-2-7-ui
+As with block devices (see [Block devices](/t/block-devices/2347)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
+ snap-2-7-ui -->
 
-The stable stream contains images and bootloaders which have been tested with the latest version of MAAS. This is the default stream which should be used in production environments.  This stream is available [here](http://images.maas.io/ephemeral-v3/stable).
+<!-- snap-2-8-cli
+As with block devices (see [Block devices](/t/block-devices/2348)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
+ snap-2-8-cli -->
 
-<a href="#heading--daily-stream"><h2 id="heading--daily-stream">Sunset of "daily" stream</h2></a>
+<!-- snap-2-8-ui
+As with block devices (see [Block devices](/t/block-devices/2349)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
+ snap-2-8-ui -->
 
-Previously there was only one MAAS stream available, daily. This stream has been replaced by the stable stream. Any client using this stream will be automtically redirected to the stable stream.
+<!-- snap-2-9-cli
+As with block devices (see [Block devices](/t/block-devices/2350)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
+ snap-2-9-cli -->
 
-<a href="#heading--changing-the-stream"><h2 id="heading--changing-the-stream">Changing the stream - UI</h2></a>
+As with block devices (see [Block devices](/t/block-devices/2351)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
 
-To switch to the candidate stream simply select "custom" on the images page, set the URL to `http://images.maas.io/ephemeral-v3/candidate`, and click "Connect"
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/0588c8d2e5792edad3f53e90e38e9990a6d86d9a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0588c8d2e5792edad3f53e90e38e9990a6d86d9a.jpeg"></a>
+<a href="#heading--list-partitions"><h3 id="heading--list-partitions">List Partitions</h3></a>
 
-MAAS uses the stable stream by default. To switch back to it simply select `maas.io` on the images page
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/5e20342f04e30f96ac0e29a5bd3117aa71dacd40.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5e20342f04e30f96ac0e29a5bd3117aa71dacd40.jpeg"></a>
-
-<a href="#heading--changing-stream-with-cli"><h2 id="heading--changing-stream-with-cli">Changing the stream - API/CLI</h2></a>
-
-To switch to a stream with the CLI, enter the following commands:
-
-```
-BOOT_SOURCE_ID=$(maas $PROFILE boot-sources read | jq '.[] | select(.url | contains("images.maas.io/ephemeral-v3")) | .id')
-maas $PROFILE boot-source update $BOOT_SOURCE_ID url=$STREAM_URL
-```
-<a href="#heading--set-up-local-mirror"><h2 id="heading--set-up-local-mirror">Setting up a local mirror</h2></a>
-
-To use mirroring, you begin by installing the necessary software on the host that will house the mirror:
-
-``` bash
-sudo apt install simplestreams
-```
-
-First define some variables to unclutter eventual CLI commands:
+To view all the partitions on a block device, use the 'partitions read' API call:
 
 ``` bash
-KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
-IMAGE_SRC=https://images.maas.io/ephemeral-v3/stable
-IMAGE_DIR=/var/www/html/maas/images/ephemeral-v3/stable
+maas admin partitions read <node-id> 10
 ```
 
-The below example selects all available kernels that are compatible with either Ubuntu 18.04 (Bionic) and Ubuntu 20.04 (Focal) for the amd64 architecture, resulting in a download of approximately 3.1 GB. The second command mirrors the bootloaders.
+``` nohighlight
+Success.
+Machine-readable output follows:
+[
+    {
+        "bootable": false,
+        "id": 9,
+        "resource_uri":
+"/MAAS/api/2.0/nodes/4y3h8a/blockdevices/10/partition/9",
+        "path": "/dev/disk/by-dname/vda-part1",
+        "uuid": "aae082cd-8be0-4a64-ab49-e998abd6ea43",
+        "used_for": "LVM volume for vgroot",
+        "size": 5360320512,
+        "type": "partition",
+        "filesystem": {
+            "uuid": "a56ebfa6-8ef4-48b5-b6bc-9f9d27065d24",
+            "mount_options": null,
+            "label": null,
+            "fstype": "lvm-pv",
+            "mount_point": null
+        }
+    }
+]
+```
+
+To view the metadata for a specific partition on a block device, rather than all partitions, use the singular 'partition' API call with an endpoint:
 
 ``` bash
-sudo sstream-mirror --keyring=$KEYRING_FILE $IMAGE_SRC $IMAGE_DIR \
-    'arch=amd64' 'release~(bionic|focal)' --max=1 --progress
-sudo sstream-mirror --keyring=$KEYRING_FILE $IMAGE_SRC $IMAGE_DIR \
-    'os~(grub*|pxelinux)' --max=1 --progress
+maas admin partition read <node-id> 10 9
 ```
 
-To know in advance what the `sstream-mirror` command will grab, or if you want to save bandwidth and time by avoiding bad selections, include the `--dry-run` option. When you are satisfied, remove that option to initiate the download.
+<a href="#heading--create-partition"><h3 id="heading--create-partition">Create Partition</h3></a>
 
-MAAS will write the images to disk in the directory defined by the variable 'IMAGE_DIR' above, and the 'location' of the new boot source will be:
+To create a new partition on a block device, use the 'create' API call:
 
-`URL=http://<myserver>/maas/images/ephemeral-v3/stable/`
+``` bash
+maas admin partitions create <node-id> 10 size=5360320512
+```
 
-Where `<myserver>` identifies your server's hostname or IP address.
+In addition to bytes, as shown above, the 'size' of a partition can also be defined with a 'G' for gigabytes or 'M' for megabytes. The output from the previous command will look like this:
 
-Verify the availability of the images by visiting the above URL.
+``` nohighlight
+Success.
+Machine-readable output follows:
+{
+    "bootable": false,
+    "path": "/dev/disk/by-dname/vda-part1",
+    "filesystem": null,
+    "used_for": "Unused",
+    "type": "partition",
+    "id": 10,
+    "size": 5360320512,
+    "resource_uri": "/MAAS/api/2.0/nodes/4y3h8a/blockdevices/10/partition/10",
+    "uuid": "3d32adbf-9943-4785-ab38-963758338c6c"
+}
+```
 
-The final `sstream-mirror` command should be invoked at regular intervals (i.e. with `cron`) to ensure the mirror contains the latest images.
+<a href="#heading--delete-partition"><h3 id="heading--delete-partition">Delete Partition</h3></a>
+
+Partitions can be deleted from a block device with the 'delete' API call. Make sure you double check the partition details as the partition is deleted immediately, with no further confirmation:
+
+``` bash
+maas admin partition delete <node-id> 10 9
+```
+
+Successful output from the 'delete' command will look like this:
+
+``` bash
+Success.
+Machine-readable output follows:
+```
+
+<a href="#heading--format-partition"><h3 id="heading--format-partition">Format Partition</h3></a>
+
+Partitions can be formatted in a similar way to block devices:
+
+``` bash
+maas admin partition format <node-id> 10 9 fstype=ext4
+```
+
+The output from the 'format' command will be similar to the following:
+
+``` nohighlight
+Success.
+Machine-readable output follows:
+{
+    "id": 9,
+    "used_for": "Unmounted ext4 formatted filesystem",
+    "resource_uri": "/MAAS/api/2.0/nodes/4y3h8a/blockdevices/10/partition/9",
+    "path": "/dev/disk/by-dname/vda-part1",
+    "uuid": "aae082cd-8be0-4a64-ab49-e998abd6ea43",
+    "size": 5360320512,
+    "bootable": false,
+    "type": "partition",
+    "filesystem": {
+        "uuid": "ea593366-be43-4ea3-b2d5-0adf82085a62",
+        "mount_point": null,
+        "mount_options": null,
+        "fstype": "ext4",
+        "label": ""
+    }
+}
+```
+
+[note]
+You cannot format partitions that are used to make another virtual block device.
+[/note]
+
+<a href="#heading--unformat-partition"><h3 id="heading--unformat-partition">Unformat Partition</h3></a>
+
+You can also remove the filesystem from a partition with the 'unformat' API call:
+
+``` bash
+maas admin partition unformat <node-id> 10 10 fstype=ext4
+```
+
+``` nohighlight
+Success.
+Machine-readable output follows:
+{
+    "bootable": false,
+    "path": "/dev/disk/by-dname/vda-part1",
+    "filesystem": null,
+    "used_for": "Unused",
+    "type": "partition",
+    "id": 10,
+    "size": 5360320512,
+    "resource_uri": "/MAAS/api/2.0/nodes/4y3h8a/blockdevices/10/partition/10",
+    "uuid": "3d32adbf-9943-4785-ab38-963758338c6c"
+}
+```
+
+<a href="#heading--mount-partition"><h3 id="heading--mount-partition">Mount Partition</h3></a>
+
+A formatted partition can be mounted at a given mount point with the 'mount' command.
+
+``` bash
+maas admin partition mount <node-id> 10 10 mount_point=/srv
+```
+
+The mount point and the filesystem is visible in the output from the command:
+
+``` nohighlight
+Success.
+Machine-readable output follows:
+{
+    "bootable": false,
+    "id": 10,
+    "resource_uri": "/MAAS/api/2.0/nodes/4y3h8a/blockdevices/10/partition/10",
+    "path": "/dev/disk/by-dname/vda-part1",
+    "uuid": "3d32adbf-9943-4785-ab38-963758338c6c",
+    "used_for": "ext4 formatted filesystem mounted at /srv",
+    "size": 5360320512,
+    "type": "partition",
+    "filesystem": {
+        "uuid": "1949a5fb-f7bd-4ada-8ba5-d06d3f5857a8",
+        "mount_options": "",
+        "label": "",
+        "fstype": "ext4",
+        "mount_point": "/srv"
+    }
+}
+```
+
+<a href="#heading--unmount-partition"><h3 id="heading--unmount-partition">Unmount Partition</h3></a>
+
+A previous mounted partition can be unmounted with the 'unmount' command:
+
+``` bash
+maas admin partition unmount 4y3h8a 10 10
+```
+
+After successfully running this command, the mount point will show as 'null' in the output:
+
+``` nohighlight
+Success.
+Machine-readable output follows:
+{
+    "bootable": false,
+    "id": 10,
+    "resource_uri": "/MAAS/api/2.0/nodes/4y3h8a/blockdevices/10/partition/10",
+    "path": "/dev/disk/by-dname/vda-part1",
+    "uuid": "3d32adbf-9943-4785-ab38-963758338c6c",
+    "used_for": "Unmounted ext4 formatted filesystem",
+    "size": 5360320512,
+    "type": "partition",
+    "filesystem": {
+        "uuid": "1949a5fb-f7bd-4ada-8ba5-d06d3f5857a8",
+        "mount_options": null,
+        "label": "",
+        "fstype": "ext4",
+        "mount_point": null
+    }
+    "type": "partition",
+    "id": 3,
+    "size": 2000003072
+}
+```
+
+<a href="#heading--restrictions"><h2 id="heading--restrictions">Restrictions</h2></a>
+
+There are three restrictions for the storage configuration:
+
+1.   An EFI partition is required to be on the boot disk for UEFI.
+2.   You cannot place partitions on logical volumes.
+3.   You cannot use a logical volume as a Bcache backing device.
+
+Violating these restrictions will prevent a successful deployment.
