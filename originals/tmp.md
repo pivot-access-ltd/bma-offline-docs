@@ -1,345 +1,443 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|CLI ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
+|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
+|Packages|CLI ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ UI|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
+|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
+|Packages|[CLI](/t/deploy-machines/2604) ~ UI|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|CLI ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
+|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
+|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|CLI ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ UI|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
+|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
+|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ UI|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|CLI ~ [UI](/t/maas-tags/2897)|
+|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
+|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|CLI ~ [UI](/t/deploy-machines/2609)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ UI|
+|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
+|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
+|Snap|CLI ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
+|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ UI|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
+|Snap|[CLI](/t/deploy-machines/2598) ~ UI|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
+|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|CLI ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
+|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|CLI ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
+|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ UI|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
+|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ UI|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
+|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|CLI ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
+|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|CLI ~ [UI](/t/deploy-machines/2603)|
+|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  snap-2-9-cli -->
 
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ UI|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
+|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ UI|
+|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
 
-Tags are a convenient way to assign descriptive words to machines, interfaces, and storage devices. Using MAAS tags, you can easily select machines that meet certain criteria, helping you to remember that you've defined or reserved certain machines for certain functions. 
+<!-- deb-2-7-cli
+Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2472)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2473)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2474)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2475)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2476)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2477)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2466)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2467)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2468)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2469)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2470)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+ snap-2-9-cli -->
+
+Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2471)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+
+#### Two questions you may have:
+
+1. [How and why do I acquire a machine?](#heading--acquire)
+2. [How do I deploy a machine?](#heading--deploy)
+
+The agent that triggers deployment may vary. For instance, if the machines are destined to run complex, inter-related services that scale up or down frequently, like a "cloud" resource, then [Juju](https://jujucharms.com/docs/stable/about-juju) is the recommended deployment agent. Juju will also install and configure services on the deployed machines. If you want to use MAAS to install a base operating system and work on the machines manually, then you can deploy a machine directly with MAAS.
+
+<!-- deb-2-7-cli
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3204#heading--ssh-keys).
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3205#heading--ssh-keys).
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3206#heading--ssh-keys).
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3207#heading--ssh-keys).
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3208#heading--ssh-keys).
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3209#heading--ssh-keys).
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3198#heading--ssh-keys).
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3199#heading--ssh-keys).
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3200#heading--ssh-keys).
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3201#heading--ssh-keys).
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3202#heading--ssh-keys).
+ snap-2-9-cli -->
+
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3203#heading--ssh-keys).
 
 [note]
- Tag names can include any combination of letters, numbers, dashes (-) and underscores (_), and be a maximum of 256 characters in length.
+Juju adds SSH keys to machines under its control.
 [/note]
 
-#### Four questions you may have:
+<!-- deb-2-7-cli
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2592).
+ deb-2-7-cli -->
 
-1. [How are tags defined?](#heading--tag-definitions)
-2. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
-3. [How do I see and change which tags are assigned?](#heading--tag-assignment)
-4. [How do I manage tags?](#heading--tag-management)
+<!-- deb-2-7-ui
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2593).
+ deb-2-7-ui -->
 
-MAAS supports binding an XPath expressions to a tag using *tag definitions* (see below). This makes auto-assigning tags to matching hardware possible. For instance, you could tag machines that possess fast GPUs and then deploy software that used GPU-accelerated CUDA or OpenCL libraries.
+<!-- deb-2-8-cli
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2594).
+ deb-2-8-cli -->
 
-Because [Juju](https://jujucharms.com/docs/stable/about-juju.html) is the recommended way to deploy services on machines managed by MAAS (see [below](#heading--tag-management)), it supports MAAS tags for application deployments. By specifying MAAS tags as Juju "constraints", services can be deployed to machines that have particular user-defined characteristics.
+<!-- deb-2-8-ui
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2595).
+ deb-2-8-ui -->
 
-<a href="#heading--tag-definitions"><h2 id="heading--tag-definitions">Tag definitions</h2></a>
+<!-- deb-2-9-cli
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2596).
+ deb-2-9-cli -->
 
-A *tag definition* is the criteria by which machines are auto-labelled by the corresponding tag. During machine enlistment, MAAS collects hardware information (using the [lshw](http://ezix.org/project/wiki/HardwareLiSter) utility). The definition used in creating a tag is then constructed using an *XPath expression* based on that information. See [w3schools documentation](https://www.w3schools.com/xml/xpath_intro.asp) for details on XPath.
+<!-- deb-2-9-ui
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2597).
+ deb-2-9-ui -->
 
-The collected data for each machine, viewable (in both XML and YAML) in the web UI, is inspected by you for the desired property. Building on the example alluded to above, a property can be a GPU with a clock speed greater than 1GHz. In this case, the following excerpt from a machine's data (in XML format) is pertinent:
+<!-- snap-2-7-cli
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2586).
+ snap-2-7-cli -->
 
-``` nohighlight
-      <lshw:node id="display" class="display" handle="PCI:0000:00:02.0">
-       <lshw:description>VGA compatible controller</lshw:description>
-       <lshw:product>GD 5446</lshw:product>
-       <lshw:vendor>Cirrus Logic</lshw:vendor>
-       <lshw:physid>2</lshw:physid>
-       <lshw:businfo>pci@0000:00:02.0</lshw:businfo>
-       <lshw:version>00</lshw:version>
-       <lshw:width units="bits">32</lshw:width>
-       <lshw:clock units="Hz">33000000</lshw:clock>
-       <lshw:configuration>
-        <lshw:setting id="latency" value="0"/>
-       </lshw:configuration>
-       <lshw:capabilities>
-        <lshw:capability id="vga_controller"/>
-       </lshw:capabilities>
-       <lshw:resources>
-        <lshw:resource type="memory" value="fc000000-fdffffff"/>
-        <lshw:resource type="memory" value="febd0000-febd0fff"/>
-        <lshw:resource type="memory" value="febc0000-febcffff"/>
-       </lshw:resources>
-      </lshw:node>
-```
+<!-- snap-2-7-ui
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2587).
+ snap-2-7-ui -->
 
-MAAS machines will be selected based on these four XPath *predicates*:
+<!-- snap-2-8-cli
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2588).
+ snap-2-8-cli -->
 
-1.   *element* of 'node'
-2.   with an *attribute* of 'id'
-3.   whose *value* is 'display'
-4.   and has a *child element* of 'clock units="Hz"'
+<!-- snap-2-8-ui
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2589).
+ snap-2-8-ui -->
 
-After adding the speed criteria via an XPath *operator* we end up with this as our tag definition:
+<!-- snap-2-9-cli
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2590).
+ snap-2-9-cli -->
 
-``` nohighlight
-//node[@id="display"]/'clock units="Hz"' > 1000000000
-```
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2591).
 
-<a href="#heading--tag-listing-and-tags-as-search-filters"><h2 id="heading--tag-listing-and-tags-as-search-filters">Tag listing and tags as search filters</h2></a>
+<a href="#heading--acquire"><h2 id="heading--acquire">Acquire</h2></a>
 
-To list all tags, visit the 'Machines' tab and expand the 'Tags' subsection in the left pane.
+Acquiring ("allocating") a machine reserves the machine for the exclusive use of the acquiring process. The machine is no longer available to any other process, including another MAAS instance, or a process such as [Juju](https://jujucharms.com/docs/stable/about-juju).
 
-In this view, you can use tags as machine search filters. Select one or several tags. The machines that satisfy all selected tags will display on the right pane. Notice there is a search field at the top of the right pane. You can type a search expression into this field.
+Before deploying a machine, MAAS must acquire it (status 'Allocated'). When deploying from the web UI, this action is performed automatically (and invisibly).
 
-Below, tag 'virtual' has been selected (with the mouse), and the search field automatically reflects this. Five machines satisfy this search filter.
+The action remains useful in terms of reserving a machine for later use. To acquire a machine explicitly select the machine and apply the 'Acquire' action.
 
-<a href="https://assets.ubuntu.com/v1/69aa9997-nodes-tags__2.6-tags-filter.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/69aa9997-nodes-tags__2.6-tags-filter.png"></a>
+To acquire/allocate a node with the web UI, select a machine which is in the "Ready" state, and drop down the "Take action" menu:
 
-Remove a tag from the search filter by either hitting the 'x' character alongside a tag or editing the search expression.
+<a href="https://discourse.maas.io/uploads/default/original/1X/3724346e052c865f4e865d1caf2778b115f0798f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3724346e052c865f4e865d1caf2778b115f0798f.jpeg"></a>
 
-<a href="#heading--tag-assignment"><h2 id="heading--tag-assignment">Tag assignment</h2></a>
+Select "Acquire" from the drop-down menu, which will bring you to a confirmation screen:
 
-To view a machine's currently assigned tags, stay on the 'Machines' page and click on the machine in question. MAAS will display currently-assigned tags in the *Tags* pane of the 'Machine summary'.
+<a href="https://discourse.maas.io/uploads/default/original/1X/a0ece8bf58c03db3c89ad71afcaeb9101bd34e24.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a0ece8bf58c03db3c89ad71afcaeb9101bd34e24.jpeg"></a>
 
-Select the 'Configuration' tab and then the 'Edit' button alongside 'Machine configuration' to edit tags:
+MAAS will acquire the selected machine; you can now find it in the list of "Allocated" machines:
 
-1.   To unassign a tag hit the 'x' character alongside a tag.
-2.   To create a basic tag, type the name of the new tag in the 'Add a tag' field and hit Enter. The tag will be created and automatically assigned to the machine. Repeat if desired.
-3.   To assign an existing tag, type at least three characters to trigger a real-time search. Any resulting tags will show up in a drop-down menu. Select as desired.
-
-<a href="https://assets.ubuntu.com/v1/250050ee-nodes-tags__2.6-tags-add-remove.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/250050ee-nodes-tags__2.6-tags-add-remove.png"></a>
-
-You can apply changes by pressing the 'Save changes' button.
-
-[note]
-New tags become available as a filter in the 'Machines' page in the web UI immediately after you add them.
-[/note]
-
-<a href="#heading--tags-for-network-interfaces"><h3 id="heading--tags-for-network-interfaces">Tags for network interfaces</h3></a>
-
-It's also possible to assign tags to specific network interfaces. You can use these tags when searching for machines within the web UI and when allocating machines from the API.
-
-Network interface tags can only be assigned when a machine is in either a 'Ready' or a 'Broken' state.
-
-With the machine selected from the 'Machines' page, on the 'Interfaces' tab use the 'Edit Physical' button from the 'Actions' menu icon to the right of an interface:
-
-<a href="https://assets.ubuntu.com/v1/dd9cf996-nodes-tags__2.6-tag-net-interfaces.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/dd9cf996-nodes-tags__2.6-tag-net-interfaces.png"></a>
-
-To add a tag, type its name into the 'Tags' field and press Enter. Repeat as desired. Use the small 'x' next to a tag to unassign the tag.
-
-You can apply changes by pressing the 'Save' button.
-
-<a href="#heading--tags-for-storage-configuration"><h3 id="heading--tags-for-storage-configuration">Tags for storage configuration</h3></a>
-
-Alongside tags for an entire machine and network interfaces, you can also define tags for storage devices. You can use these tags like any other, when searching for machines within the web UI, where they appear beneath the 'Storage tag' filter, and when allocating machines from the API.
-
-To add a tag to a storage device, click on the machine with the storage you wish to tag on the 'Machines' page of the web UI and open the 'Storage' tab. Use the menu in the 'Actions' column beneath 'Available disks and partitions' to select 'Edit disk' for your chosen device:
-
-<a href="https://assets.ubuntu.com/v1/43dd9f9d-nodes-tags__2.6-tag-storage.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/43dd9f9d-nodes-tags__2.6-tag-storage.png"></a>
-
-To add a tag, type its name into the 'Tags' field and press Enter. Repeat as desired. Use the small 'x' next to a tag to unassign the tag.
-
-You can apply changes by pressing the 'Save' button.
+<a href="https://discourse.maas.io/uploads/default/original/1X/a2bdb8b7b7c5705daee14bdea5caed223537917d.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a2bdb8b7b7c5705daee14bdea5caed223537917d.jpeg"></a>
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-#### Nine questions you may have:
 
-1. [How do I get started with the MAAS CLI?](/t/maas-cli/802)
-2. [How do I create tags?](#heading--rudimentary-tag-creation)
-3. [How do I do tag creation and auto-assignment?](#heading--tag-creation-and-auto-assignment)
-4. [How do I delete a tag?](#heading--delete-a-tag)
-5. [How do I list all tags?](#heading--list-all-tags)
-6. [How do I list nodes/machines labelled with a tag?](#heading--list-nodesmachines-labelled-with-a-tag)
-7. [How do I handle Juju integration?](#heading--juju-integration)
-8. [How do I effect manual tag assignment?](#heading--manual-tag-assignment)
-9. [How do I effect hybrid tag assignment?](#heading--hybrid-tag-assignment)
-
-<a href="#heading--rudimentary-tag-creation"><h2 id="heading--rudimentary-tag-creation">Tag creation</h2></a>
+To acquire/allocate a random node:
 
 ``` bash
-maas $PROFILE tags create name=$TAG_NAME
+maas $PROFILE machines allocate
 ```
 
-<a href="#heading--tag-creation-and-auto-assignment"><h2 id="heading--tag-creation-and-auto-assignment">Tag creation and auto-assignment</h2></a>
-
-When you supply a [definition](/t/maas-tags/834#heading--tag-definitions) during a tag's creation, MAAS automatically applies the tag o all the nodes that satisfy the definition:
+To acquire/allocate a specific node:
 
 ``` bash
-maas $PROFILE tags create name=$TAG_NAME \
-    comment='$TAG_COMMENT' definition='$TAG_DEFINITION'
+maas $PROFILE machines allocate system_id=$SYSTEM_ID
 ```
 
-For example,
-
-``` bash
-maas $PROFILE tags create name='gpu' \
-    comment='GPU with clock speed >1GHz for running CUDA type operations.' \
-    definition='//node[@id="display"]/'clock units="Hz"' > 1000000000'
-```
-
-We recommend that each tag have a short name and a comment that adequately describes it. You should make sure to create both of these because they will help you identify and use the tag later.
-
-<h2 id="heading--tags-for-network-interfaces">Tags for network interfaces</h2>
-
-It's also possible to assign tags to specific network interfaces. You can use these tags when searching for machines within the web UI and when allocating machines from the API.
-
-Network interface tags can only be assigned when a machine is in either a 'Ready' or a 'Broken' state.
-
-To add a tag to a network interface, use the following command:
-
-```
-maas $PROFILE interface add-tag $SYSTEM_ID $INTERFACE_ID tag=$TAG_STRING
-```
-
-To delete a tag from a network interface:
-
-```
-maas $PROFILE interface remove-tag $SYSTEM_ID $INTERFACE_ID tag=$TAG_STRING
-```
-
-<a href="#heading--tags-for-network-interfaces</h2>
-
-It's also possible to assign tags to specific network interfaces. You can use these tags when searching for machines within the web UI and when allocating machines from the API.
-
-Network interface tags can only be assigned when a machine is in either a 'Ready' or a 'Broken' state.
-
-To add a tag to a network interface, use the following command:
-
-```
-maas $PROFILE interface add-tag $SYSTEM_ID $INTERFACE_ID tag=$TAG_STRING
-```
-
-To delete a tag from a network interface:
-
-```
-maas $PROFILE interface remove-tag $SYSTEM_ID $INTERFACE_ID tag=$TAG_STRING
-```
-
-<h2 id="><h2 id="heading--delete-a-tag">Delete a tag</h2></a>
-
-``` bash
-maas $PROFILE tag delete $TAG_NAME
-```
-
-<a href="#heading--list-all-tags"><h2 id="heading--list-all-tags">List all tags</h2></a>
-
-To list all tags present on the region controller:
-
-``` bash
-maas $PROFILE tags read
-```
-
-<a href="#heading--list-nodesmachines-labelled-with-a-tag"><h2 id="heading--list-nodesmachines-labelled-with-a-tag">List nodes/machines labelled with a tag</h2></a>
-
-To list what nodes (or machines) a tag applies to:
-
-``` bash
-maas $PROFILE tag nodes $TAG_NAME
-maas $PROFILE tag machines $TAG_NAME
-```
-
-<a href="#heading--juju-integration"><h2 id="heading--juju-integration">Juju integration</h2></a>
-
-Although you can use a tag in the web UI (as a node search filter), you realise most of the benefit when you're deploying applications with Juju.
-
-For example, to use the 'gpu' tag to deploy a (hypothetical) service called 'cuda':
-
-``` bash
-juju deploy --constraints tags=gpu cuda
-```
-
-You can also use multiple tags in addition to the normal Juju constraints:
-
-``` bash
-juju deploy --constraints "mem=1024 tags=gpu,intel" cuda
-```
-
-<a href="#heading--manual-tag-assignment"><h2 id="heading--manual-tag-assignment">Manual tag assignment</h2></a>
-
-It is possible to assign tags to nodes manually by simply omitting the definition and applying the tag to a node by referencing its system id:
-
-``` bash
-maas $PROFILE tags create name=$TAG_NAME comment='$TAG_COMMENT'
-maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
-```
-
-To remove a tag:
-
-``` bash
-maas $PROFILE tag update-nodes $TAG_NAME remove=$SYSTEM_ID
-```
-
-In the same operation, a tag can be added to some nodes and removed from others:
-
-``` bash
-maas $PROFILE tag update-nodes $TAG_NAME \
-    add=$SYSTEM_ID_1 add=$SYSTEM_ID_2 remove=$SYSTEM_ID_3
-```
-
-<a href="#heading--hybrid-tag-assignment"><h2 id="heading--hybrid-tag-assignment">Hybrid tag assignment</h2></a>
-
-You can also create a tag with a definition (thereby map to certain nodes), remove the definition (but retain the mapping), and then add the tag manually to specific nodes. This action is useful for hardware which is conceptually similar but does not all satisfy a single tag definition. Here are the commands you would use to do this:
-
-``` bash
-maas $PROFILE tags create name=$TAG_NAME \
-    comment='$TAG_COMMENT' definition='$TAG_DEFINITION'
-maas $PROFILE tag update $TAG_NAME definition=''
-maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
-```
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
+[note]
+To acquire a node, it must have a status of 'Ready'.
+[/note]
+
+<a href="#heading--deploy"><h2 id="heading--deploy">Deploy</h2></a>
+
+To deploy, you must configure the underlying machine to netboot.  Such a machine will undergo the following process:
+
+1.  DHCP server is contacted
+2.  kernel and initrd are received over TFTP
+3.  machine boots
+4.  initrd mounts a Squashfs image ephemerally over HTTP
+5.  cloud-init triggers deployment process
+6.  curtin installation script runs
+7.  Squashfs image (same as above) is placed on disk
+
+<!-- deb-2-7-cli
+[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2592).
+[/note]
+
+Before deploying, you should take two key actions:
+
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3180) and the [Kernel boot options](/t/kernel-boot-options/2784) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3204#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2593).
+[/note]
+
+Before deploying, you should take two key actions:
+
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3181) and the [Kernel boot options](/t/kernel-boot-options/2785) that will get used by deployed machines.
+2.  ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3205#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2594).
+[/note]
+
+Before deploying, you should take two key actions:
+
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3182) and the [Kernel boot options](/t/kernel-boot-options/2786) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3206#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2595).
+[/note]
+
+Before deploying, you should take two key actions:
+
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3183) and the [Kernel boot options](/t/kernel-boot-options/2787) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3207#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2596).
+[/note]
+
+Before deploying, you should take two key actions:
+
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3184) and the [Kernel boot options](/t/kernel-boot-options/2788) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3208#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2597).
+[/note]
+
+Before deploying, you should take two key actions:
+
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3185) and the [Kernel boot options](/t/kernel-boot-options/2789) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3209#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2586).
+[/note]
+
+Before deploying, you should take two key actions:
+
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3174) and the [Kernel boot options](/t/kernel-boot-options/2778) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3198#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2587).
+[/note]
+
+Before deploying, you should take two key actions:
+
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3175) and the [Kernel boot options](/t/kernel-boot-options/2779) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3199#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2588).
+[/note]
+
+Before deploying, you should take two key actions:
+
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3176) and the [Kernel boot options](/t/kernel-boot-options/2780) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3200#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2589).
+[/note]
+
+Before deploying, you should take two key actions:
+
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3177) and the [Kernel boot options](/t/kernel-boot-options/2781) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3201#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2590).
+[/note]
+
+Before deploying, you should take two key actions:
+
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3178) and the [Kernel boot options](/t/kernel-boot-options/2782) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3202#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+ snap-2-9-cli -->
+
+[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2591).
+[/note]
+
+Before deploying, you should take two key actions:
+
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3179) and the [Kernel boot options](/t/kernel-boot-options/2783) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3203#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+
+To deploy directly from MAAS, select one or more machine(s) and press the 'Deploy' button.
+
+<a href="https://assets.ubuntu.com/v1/56958753-nodes-deploy__2.4_deploy.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/56958753-nodes-deploy__2.4_deploy.png"></a>
+
+You then have the option of deviating from the default OS, release, and kernel. When ready, press 'Deploy X machine(s)' (where 'X' is the number of machines selected).
+
+<a href="https://assets.ubuntu.com/v1/d65b9884-nodes-deploy__2.6-deploy-confirm.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/d65b9884-nodes-deploy__2.6-deploy-confirm.png"></a>
+
+While a machine is deploying its status will change to Deploying to 'OS', where 'OS' is the name of the OS being deployed (e.g. 'Deploying to Ubuntu 16.04 LTS').
+
+Once a machine has finished deploying its status will change to just the name of the OS (e.g. 'Ubuntu 18.04 LTS').
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+To deploy a node:
+
+``` bash
+maas $PROFILE machine deploy $SYSTEM_ID
+```
+
+To deploy a node as a KVM host:
+
+``` bash
+maas $PROFILE machine deploy $SYSTEM_ID install_kvm=True
+```
+
+[note]
+To deploy with the CLI, the node must have a status of 'Allocated'. See 'Acquire a node' above.
+[/note]
+
+ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
