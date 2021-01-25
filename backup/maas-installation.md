@@ -236,7 +236,7 @@ If you have installed `bind9` or have it running, you will need to uninstall it 
 
 <a href="#heading--install-maas-snap"><h2 id="heading--install-maas-snap">Installing MAAS from the snap</h2></a>
 
-[Snaps^](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
+[Snaps](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
 
     $ sudo snap install maas --channel=2.8
 
@@ -265,7 +265,7 @@ MAAS supports the following modes, which dictate what services will run on the l
 | `none`        |        |      |          | Reinitialises MAAS and stops services |
 
 [note type="Warning" status="all mode being deprecated"]
-The MAAS initialisation mode "all" is [deprecated in MAAS version 2.8.0 and will be removed in MAAS version 2.9.0^](https://maas.io/deprecations/MD1).
+The MAAS initialisation mode "all" is [deprecated in MAAS version 2.8.0 and will be removed in MAAS version 2.9.0](https://maas.io/deprecations/MD1).
 [/note]
 
 <a href="#heading--init-poc"><h2 id="heading--init-poc">Initialising MAAS as a test configuration</h2></a>
@@ -436,7 +436,7 @@ which takes you through the following exchange:
     Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
 
 [note]
-You will use the username and password created above to access the web UI.  If you enter a [Launchpad^](https://launchpad.net/) or [GitHub^](https://github.com) account name with associated SSH key, MAAS will import them automatically.
+You will use the username and password created above to access the web UI.  If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
 [/note]
 
 <a href="#heading--maas-url"><h2 id="heading--maas-url">MAAS URL</h2></a>
@@ -489,7 +489,7 @@ If you have installed `bind9` or have it running, you will need to uninstall it 
 
 <a href="#heading--install-maas-snap"><h2 id="heading--install-maas-snap">Installing MAAS from the snap</h2></a>
 
-[Snaps^](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
+[Snaps](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
 
     $ sudo snap install --channel=2.9/stable maas
 
@@ -684,7 +684,7 @@ which takes you through the following exchange:
     Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
 
 [note]
-You will use the username and password created above to access the web UI.  If you enter a [Launchpad^](https://launchpad.net/) or [GitHub^](https://github.com) account name with associated SSH key, MAAS will import them automatically.
+You will use the username and password created above to access the web UI.  If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
 [/note]
 
 <a href="#heading--maas-url"><h2 id="heading--maas-url">MAAS URL</h2></a>
@@ -779,7 +779,7 @@ Finally, the <code>createadmin</code> option asks for an SSH key:
 <a
 href="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg"></a>
 
-<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to include the key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gp:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
+<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to use the associated key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gh:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
 
 <p>If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.</p>
 
@@ -800,7 +800,7 @@ deb-2-8-ui -->
 
 You can install a 2.7 stable version of MAAS via the PPA listed on the [MAAS launchpad](https://launchpad.net/~maas), specifically:
 
--   [ppa:maas/2.7^](https://launchpad.net/~maas/+archive/ubuntu/2.7)
+-   [ppa:maas/2.7](https://launchpad.net/~maas/+archive/ubuntu/2.7)
 
 To add the 2.7 PPA, type:
 
@@ -862,7 +862,7 @@ Finally, the <code>createadmin</code> option asks for an SSH key:
 <a
 href="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg"></a>
 
-<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to include the key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gp:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
+<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to include the key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gh:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
 
 <p>If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.</p>
 
@@ -879,19 +879,72 @@ Once you have installed your MAAS environment (region + rack controller) and any
 deb-2-7-ui -->
 
 <!-- deb-2-9-cli deb-2-9-ui
-<a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS Beta from packages</h2></a>
+<a href="#heading--upgrade-via-packages"><h2 id="heading--upgrade-via-packages">Upgrade MAAS 2.8 to MAAS 2.9</h2></a>
 
-You can install a 2.9 stable Beta version of MAAS from the Beta PPA this way:
+MAAS 2.8 is the last supported version for Ubuntu 18.04 LTS.  Newer versions of MAAS will not be back-portable, and consequently, to upgrade to MAAS 2.9 and all future versions, you will also need to upgrade the base operating system to Ubuntu 20.04.  You do these two operations all at once, with the following procedure:
 
-``` bash
-sudo apt-add-repository ppa:maas/2.9
-sudo apt-get update
 ```
-[note]
-Remember that 2.9 is a Beta version, and hence may be unstable or present bugs.  Please be sure to [file any bugs^](https://bugs.launchpad.net/maas/+filebug) you find, and please feel free to interact with the development team via [discourse^](https://discourse.maas.io/).
-[/note]
+sudo apt-add-repository ppa:maas/2.9
+```
 
-<a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installation scenarios</h3></a>
+You will get a message similar to this:
+
+```
+ For stable releases of 2.9.x
+ More info: https://launchpad.net/~maas/+archive/ubuntu/2.9
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
+
+Hit:1 http://security.ubuntu.com/ubuntu bionic-security InRelease
+Hit:2 http://ppa.launchpad.net/maas/2.8/ubuntu bionic InRelease          
+Hit:3 http://archive.ubuntu.com/ubuntu bionic InRelease                  
+Hit:4 http://archive.ubuntu.com/ubuntu bionic-updates InRelease                                     
+Ign:5 http://ppa.launchpad.net/maas/2.9/ubuntu bionic InRelease          
+Hit:6 http://archive.ubuntu.com/ubuntu bionic-backports InRelease        
+Err:7 http://ppa.launchpad.net/maas/2.9/ubuntu bionic Release                 
+  404  Not Found [IP: 91.189.95.85 80]
+Reading package lists... Done
+E: The repository 'http://ppa.launchpad.net/maas/2.9/ubuntu bionic Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+```
+
+This message seems to indicate that nothing happened, but, in fact, this command still creates the file:
+
+```
+/etc/apt/sources.list.d/maas-ubuntu-2_9-bionic.list
+```
+
+This file identifies the path to the 2.9 PPA, even though it incorrectly implies there's a Bionic release there:
+
+```
+deb http://ppa.launchpad.net/maas/2.9/ubuntu bionic main
+```
+
+Still, that's enough for `do-release-upgrade` to figure out that there is a 2.9 PPA, and when it checks, it will find a Focal version of MAAS, which it will bring over and install in place of 2.8.  It isn't necessary to stop MAAS or do anything else, except go ahead and run the upgrade:
+
+```
+sudo do-release-upgrade --allow-third-parties
+```
+
+This command will produce a lot of output, ask you a few questions (for which the defaults are usually fine), and eventually ask you to reboot.  Once your machine has come back up, you can check whether your upgrade has been successful by entering:
+
+```
+lsb_release -a
+```
+
+If the ugprade was successful, this command should yield output similar to the following:
+
+```
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.1 LTS
+Release:	20.04
+Codename:	focal
+```
+
+You have now upgraded to the Ubuntu 20.04 LTS base, and if you check your running MAAS install, you should see that the version has been updated to the latest stable 2.9 release.
+
+<a href="#heading--installation-scenarios"><h2 id="heading--installation-scenarios">Installing MAAS 2.9 fresh</h2></a>
 
 The recommended way to set up an initial MAAS environment is to put everything on one machine:
 
@@ -945,7 +998,7 @@ Finally, the <code>createadmin</code> option asks for an SSH key:
 <a
 href="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg"></a>
 
-<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to include the key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gp:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
+<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to include the key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gh:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
 
 <p>If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.</p>
 

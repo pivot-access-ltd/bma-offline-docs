@@ -6,9 +6,9 @@ This article is a list of advanced tasks you can perform with the MAAS CLI.
 2. [How do I edit machine hostname and power parameters?](/t/cli-advanced-tasks/793#heading--edit-node-hostname-and-power-parameters)
 3.[How do I relay DHCP?](/t/cli-advanced-tasks/793#heading--relay-dhcp)
 4. [How do I assign a network interface to a fabric?](/t/cli-advanced-tasks/793#heading--assign-a-network-interface-to-a-fabric)
-5. [How do I change the IP assignment mode of a network interface?](/t/commission-machines/2468##heading--post-commission-configuration)
-6. [How do I install a rack controller?](/t/rack-controllers/3056#heading--install-a-rack-controller)
-7. [How do I list rack controllers?](/t/rack-controllers/3056#heading--list-rack-controllers)
+5. [How do I change the IP assignment mode of a network interface?](/t/commission-machines/2471#heading--post-commission-configuration)
+6. [How do I install a rack controller?](/t/rack-controllers/3059#heading--install-a-rack-controller)
+7. [How do I list rack controllers?](/t/rack-controllers/3059#heading--list-rack-controllers)
 8. [How do I set the default storage layout?](/t/cli-advanced-tasks/793#heading--set-the-default-storage-layout)
 9. [How do I set a storage layout?](/t/cli-advanced-tasks/793#heading--set-a-storage-layout)
 10. [How do I create an A or AAAA record in DNS?](/t/cli-advanced-tasks/793#heading--create-an-a-or-aaaa-record-in-dns)
@@ -38,7 +38,7 @@ maas $PROFILE machine update $SYSTEM_ID \
     power_parameters_power_id=$HOSTNAME
 ```
 
-See [Common CLI tasks](/t/common-cli-tasks/794#heading--determine-a-node-system-id) for how to find a machine's system id and [BMC Power Types](/t/power-management/830) for details on different power types.
+See [Common CLI tasks](/t/common-cli-tasks/794#heading--determine-a-node-system-id) for how to find a machine's system id and [BMC Power Types](/t/power-management/3011#heading--power-catalogue) for details on different power types.
 
 <a href="#heading--relay-dhcp"><h2 id="heading--relay-dhcp">Relay DHCP</h2></a>
 
@@ -54,7 +54,7 @@ For example, to relay VLAN with vid 0 (on fabric-2) through VLAN with id 5002 :
 maas $PROFILE vlan update 2 0 relay_van=5002
 ```
 
-See [DHCP relay](/t/managing-dhcp/759#heading--dhcp-relay) for more information.
+See [DHCP relay](/t/managing-dhcp/2903#heading--dhcp-relay) for more information.
 
 <a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">Assign a network interface to a fabric</h2></a>
 
@@ -153,7 +153,7 @@ maas $PROFILE maas set-config name=default_storage_layout value=flat
 The new default will only apply to newly-commissioned machines.
 [/note]
 
-See [Storage](/t/storage/775) for more details on MAAS storage features.
+See [Storage](/t/storage/3107) for more details on MAAS storage features.
 
 <a href="#heading--set-a-storage-layout"><h2 id="heading--set-a-storage-layout">Set a storage layout</h2></a>
 
@@ -197,7 +197,7 @@ An administrator can set a DNS Alias (CNAME record) to an already existing DNS e
 mass $PROFILE dnsresource-records create fqdn=$HOSTNAME.$DOMAIN rrtype=cname rrdata=$ALIAS
 ```
 
-For example, to set webserver.maas.io to alias to www.maas.io:
+For example, to set `webserver.maas.io` to alias to `www.maas.io`:
 
 ``` bash
 maas $PROFILE dnsresource-records create fqdn=webserver.maas.io rrtype=cname rrdata=www

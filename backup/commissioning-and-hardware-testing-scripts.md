@@ -342,13 +342,13 @@ You can download the source for all commissioning and test scripts via the API w
 maas $PROFILE node-script download $SCRIPT_NAME
 ```
 
-The source code to all built-in scripts is available on [launchpad^](https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts).
+The source code to all built-in scripts is available on [launchpad](https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts).
 
 <a href="#heading--commissioning-script-configure-hpa"><h3 id="heading--commissioning-script-configure-hpa">Commissioning script: Configure HPA</h3></a>
 
 Below is a sample script to configure an Intel C610/X99 HPA controller on an HP system. The script will only run on systems with an Intel C610/X99 controller identified by the PCI ID 8086:8d06.
 
-Before the scrixpt runs, MAAS will download and install the [HP RESTful Interface Tool^](https://downloads.linux.hpe.com/SDR/project/hprest/) package from HP. After the script completes, the built-in commissioning scripts will be re-run to capture the new configuration.
+Before the scrixpt runs, MAAS will download and install the [HP RESTful Interface Tool](https://downloads.linux.hpe.com/SDR/project/hprest/) package from HP. After the script completes, the built-in commissioning scripts will be re-run to capture the new configuration.
 
 ``` bash
 #!/bin/bash -ex

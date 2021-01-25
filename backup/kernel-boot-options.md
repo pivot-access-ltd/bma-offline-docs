@@ -82,7 +82,7 @@
 |Packages|[CLI](/t/kernel-boot-options/2784) ~ [UI](/t/kernel-boot-options/2785)|[CLI](/t/kernel-boot-options/2786) ~ [UI](/t/kernel-boot-options/2787)|[CLI](/t/kernel-boot-options/2788) ~ [UI](/t/kernel-boot-options/2789)|
  snap-2-9-ui -->
 
-MAAS can specify kernel boot options to machines on both a global basis (UI and CLI) and a per-machine basis (CLI-only). A full catalogue of available options can be found in the [Linux kernel parameters list^](https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html) at [kernel.org^](https://www.kernel.org).
+MAAS can specify kernel boot options to machines on both a global basis (UI and CLI) and a per-machine basis (CLI-only). A full catalogue of available options can be found in the [Linux kernel parameters list](https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html) at [kernel.org](https://www.kernel.org).
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 

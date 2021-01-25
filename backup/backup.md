@@ -117,7 +117,7 @@ Other configuration files, such as those used by your network configuration (`/e
 
 <a href="#heading--postgresql-export"><h2 id="heading--postgresql-export">PostgreSQL export</h2></a>
 
-The following procedure involves three assumptions: 
+Prior to stopping services (as described in the next section), export your PostgreSQL database with a database dump.  This process is described in the following procedure, which involves three assumptions: 
 
 1. you have installed region and rack controllers on the same machine. 
 2. you have installed MAAS on Ubuntu 18.04 LTS (Bionic).
@@ -139,12 +139,14 @@ Running sessions, such as pg_dumpall, will appear in the `application_name` colu
 
 <a href="#heading--stop-critical-services"><h2 id="heading--stop-critical-services">Stop critical services</h2></a>
 
-To avoid conflicting updates during a backup, stop the following four services with the `sudo systemctl stop <service>` command:
+After you have dumped your PostgreSQL database, and verified that the dump has finished, you should stop the following four services with the `sudo systemctl stop <service>` command:
 
 1.   postgresql.service
 2.   maas-dhcpd.service
 3.   maas-rackd.service
 4.   maas-regiond.service
+
+Stopping these services will avoid conflicting updates during the remaining backup steps.
 
 <a href="#heading--archive-configuration-files"><h2 id="heading--archive-configuration-files">Archive configuration files</h2></a>
 
@@ -162,7 +164,7 @@ sudo tar cvpzf ~/backup.tgz --exclude=/var/snap/maas/common/maas/boot-resources 
 ```
 snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
 
-Make sure you move the resulting `backup.tgz` to some external storage you can access when restoring the system.
+Make sure you move the resulting `backup.tgz` to some external storage you can access when restoring the system.  Also, make sure to restart the services you stopped prior to completing the backup.
 
 We've now backed up all the components necessary to recreate a MAAS deployment. Next, we'll discuss how to restore this configuration.
 

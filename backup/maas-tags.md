@@ -238,7 +238,7 @@ maas $PROFILE tags create name='gpu' \
 
 We recommend that each tag have a short name and a comment that adequately describes it. You should make sure to create both of these because they will help you identify and use the tag later.
 
-<h2 id="heading--tags-for-network-interfaces</h2>
+<h2 id="heading--tags-for-network-interfaces">Tags for network interfaces</h2>
 
 It's also possible to assign tags to specific network interfaces. You can use these tags when searching for machines within the web UI and when allocating machines from the API.
 

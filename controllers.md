@@ -86,13 +86,13 @@ Most of the functionality of MAAS is contained in a series of controllers.  Ther
 
 <!-- deb-2-7-cli
 [note]
-Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/-/2688).
+Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2688).
 [/note]
 deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 [note]
-Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/-/2689).
+Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2689).
 [/note]
 deb-2-7-ui -->
 

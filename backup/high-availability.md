@@ -259,7 +259,7 @@ Load balancing is optional, but is highly recommended.
 
 <a href="#heading--postgresql-ha"><h3 id="heading--postgresql-ha">Enable highly-available PostgreSQL</h3></a>
 
-MAAS stores all state information in the PostgreSQL database. It is therefore recommended to run it in HA mode. Configuring HA for PostgreSQL is external to MAAS. You will, therefore, need to study the [PostgreSQL documentation^](https://www.postgresql.org/docs/9.5/static/high-availability.html) and implement the variant of HA that makes you feel most comfortable.
+MAAS stores all state information in the PostgreSQL database. It is therefore recommended to run it in HA mode. Configuring HA for PostgreSQL is external to MAAS. You will, therefore, need to study the [PostgreSQL documentation](https://www.postgresql.org/docs/9.5/static/high-availability.html) and implement the variant of HA that makes you feel most comfortable.
 
 <!-- deb-2-7-cli
 A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/3000) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
@@ -415,7 +415,7 @@ Please see [Region controllers](/t/region-controllers/3077) and [Multiple region
 
 <a href="#heading--load-balancing-with-haproxy-optional"><h3 id="heading--load-balancing-with-haproxy-optional">Load balancing with HAProxy (optional)</h3></a>
 
-You can add load balancing with [HAProxy^](http://www.haproxy.org/) load-balancing software to support multiple API servers. In this setup, HAProxy provides access to the MAAS web UI and API.
+You can add load balancing with [HAProxy](http://www.haproxy.org/) load-balancing software to support multiple API servers. In this setup, HAProxy provides access to the MAAS web UI and API.
 
 [note]
 If you happen to have Apache running on the same server where you intend to install HAProxy, you will need to stop and disable `apache2`, because HAProxy binds to port 80.

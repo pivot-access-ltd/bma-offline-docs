@@ -3,9 +3,9 @@ The following is a list of image management tasks to perform with the MAAS CLI.
 #### Nine questions you may have:
 
 1. [How do I get started with the MAAS CLI?](/t/maas-cli/802)
-2. [What might I need to know about images?](/t/images/754)
+2. [What might I need to know about images?](/t/images/2699)
 3. [How do I list boot sources?](/t/cli-image-management/797#heading--list-boot-sources)
-4. [How do I select images?](/t/cli-image-management/797#heading--select-image)
+4. [How do I select images?](/t/cli-image-management/797#heading--select-images)
 5. [How do I list image selections?](/t/cli-image-management/797#heading--list-image-selections)
 6. [How do I import newly-selected images?](/t/cli-image-management/797#heading--import-newly-selected-images)
 7. [How do I list currently available images?](/t/cli-image-management/797#heading--list-currently-available-images)
@@ -139,11 +139,11 @@ KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
 
 If you added a sole boot source, then the fields 'Sync URL' and 'Keyring Path' in the web UI will reflect its values.
 
-Once the source is added, proceed to the [Select and import](/t/select-and-import-images/751) images step.
+Once the source is added, proceed to the [Select and import](/t/select-and-import-images/3095) images step.
 
 <a href="#heading--using-a-local-image-mirror"><h3 id="heading--using-a-local-image-mirror">Using a local image mirror</h3></a>
 
-Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/752) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
+Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/2807) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
 
 1.   URL=https://$MIRROR/maas/images/ephemeral-v3/stable/
 2.   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg

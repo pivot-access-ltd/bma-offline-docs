@@ -901,7 +901,7 @@ There is a button that allows you to see the next 10 events, and a link to show 
 
 The final tab from the Machine menu allows you to update machine and power configuration options: 
 
-![machine-config-tab-failed-testing|690x412](https://discourse.maas.io/uploads/default/original/1X/13bb1352103c759365fc6b923672f021982a10c3.jpeg") 
+<a href="https://discourse.maas.io/uploads/default/original/1X/13bb1352103c759365fc6b923672f021982a10c3.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/13bb1352103c759365fc6b923672f021982a10c3.jpeg"></a> 
 
 There are two sections to this tab.  The "Machine configuration" section offers some general parameters, mostly related to how this machine is grouped and categorised.  More information on these options are found in the relevant sections of the documentation (e.g., tags, resource pools, and so forth). 
 
