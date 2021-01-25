@@ -1,85 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|CLI ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ UI|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|CLI ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ UI|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|CLI ~ [UI](/t/give-me-an-example-of-maas/2657)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ UI|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|CLI ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ UI|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|CLI ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ UI|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
  snap-2-9-ui -->
 
 An evolving example may be useful to introduce you to MAAS, and it doesn't have to be comprehensive --  just coherent and plausible.  This example will continue to expand and update over time.

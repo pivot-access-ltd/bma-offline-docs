@@ -1,83 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|CLI ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ UI|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|CLI ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ UI|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|CLI ~ [UI](/t/disk-erasure/2621)|
  deb-2-9-cli -->
 
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ UI|
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ UI|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|CLI ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ UI|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|CLI ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ UI|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
  snap-2-9-ui -->
 
 Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/concepts-and-terms/785#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
@@ -104,6 +58,7 @@ Although effectively equivalent to Standard erase, Secure erase is much faster b
 
 Same as Standard erase but only targets the first 1 MB and the last 1 MB of each disk. This removes the partition tables and/or superblock from the disk, making data recovery difficult but not impossible.
 
+<!-- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-9-ui snap-2-7-ui
 <a href="#heading--default-configuration"><h2 id="heading--default-configuration">Default configuration</h2></a>
 
 A default erasure configuration can be set on the 'Settings' page by selecting the 'Storage' tab.
@@ -124,6 +79,7 @@ If all three options are checked when the machine is released the following orde
 
 1.  Use 'secure erase' if the disk supports it
 2.  If it does not then use 'quick erase'
+deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-9-ui snap-2-7-ui -->
 
 <!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli snap-2-7-cli
 

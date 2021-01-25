@@ -1,83 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-communication/2826) ~ [UI](/t/maas-communication/2827)|[CLI](/t/maas-communication/2828) ~ [UI](/t/maas-communication/2829)|[CLI](/t/maas-communication/2830) ~ [UI](/t/maas-communication/2831)|
-|Packages|CLI ~ [UI](/t/maas-communication/2833)|[CLI](/t/maas-communication/2834) ~ [UI](/t/maas-communication/2835)|[CLI](/t/maas-communication/2836) ~ [UI](/t/maas-communication/2837)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-communication/2826) ~ [UI](/t/maas-communication/2827)|[CLI](/t/maas-communication/2828) ~ [UI](/t/maas-communication/2829)|[CLI](/t/maas-communication/2830) ~ [UI](/t/maas-communication/2831)|
-|Packages|[CLI](/t/maas-communication/2832) ~ UI|[CLI](/t/maas-communication/2834) ~ [UI](/t/maas-communication/2835)|[CLI](/t/maas-communication/2836) ~ [UI](/t/maas-communication/2837)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-communication/2826) ~ [UI](/t/maas-communication/2827)|[CLI](/t/maas-communication/2828) ~ [UI](/t/maas-communication/2829)|[CLI](/t/maas-communication/2830) ~ [UI](/t/maas-communication/2831)|
-|Packages|[CLI](/t/maas-communication/2832) ~ [UI](/t/maas-communication/2833)|CLI ~ [UI](/t/maas-communication/2835)|[CLI](/t/maas-communication/2836) ~ [UI](/t/maas-communication/2837)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-communication/2826) ~ [UI](/t/maas-communication/2827)|[CLI](/t/maas-communication/2828) ~ [UI](/t/maas-communication/2829)|[CLI](/t/maas-communication/2830) ~ [UI](/t/maas-communication/2831)|
-|Packages|[CLI](/t/maas-communication/2832) ~ [UI](/t/maas-communication/2833)|[CLI](/t/maas-communication/2834) ~ UI|[CLI](/t/maas-communication/2836) ~ [UI](/t/maas-communication/2837)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-communication/2826) ~ [UI](/t/maas-communication/2827)|[CLI](/t/maas-communication/2828) ~ [UI](/t/maas-communication/2829)|[CLI](/t/maas-communication/2830) ~ [UI](/t/maas-communication/2831)|
-|Packages|[CLI](/t/maas-communication/2832) ~ [UI](/t/maas-communication/2833)|[CLI](/t/maas-communication/2834) ~ [UI](/t/maas-communication/2835)|CLI ~ [UI](/t/maas-communication/2837)|
  deb-2-9-cli -->
 
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-communication/2826) ~ [UI](/t/maas-communication/2827)|[CLI](/t/maas-communication/2828) ~ [UI](/t/maas-communication/2829)|[CLI](/t/maas-communication/2830) ~ [UI](/t/maas-communication/2831)|
-|Packages|[CLI](/t/maas-communication/2832) ~ [UI](/t/maas-communication/2833)|[CLI](/t/maas-communication/2834) ~ [UI](/t/maas-communication/2835)|[CLI](/t/maas-communication/2836) ~ UI|
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/maas-communication/2827)|[CLI](/t/maas-communication/2828) ~ [UI](/t/maas-communication/2829)|[CLI](/t/maas-communication/2830) ~ [UI](/t/maas-communication/2831)|
-|Packages|[CLI](/t/maas-communication/2832) ~ [UI](/t/maas-communication/2833)|[CLI](/t/maas-communication/2834) ~ [UI](/t/maas-communication/2835)|[CLI](/t/maas-communication/2836) ~ [UI](/t/maas-communication/2837)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-communication/2826) ~ UI|[CLI](/t/maas-communication/2828) ~ [UI](/t/maas-communication/2829)|[CLI](/t/maas-communication/2830) ~ [UI](/t/maas-communication/2831)|
-|Packages|[CLI](/t/maas-communication/2832) ~ [UI](/t/maas-communication/2833)|[CLI](/t/maas-communication/2834) ~ [UI](/t/maas-communication/2835)|[CLI](/t/maas-communication/2836) ~ [UI](/t/maas-communication/2837)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-communication/2826) ~ [UI](/t/maas-communication/2827)|CLI ~ [UI](/t/maas-communication/2829)|[CLI](/t/maas-communication/2830) ~ [UI](/t/maas-communication/2831)|
-|Packages|[CLI](/t/maas-communication/2832) ~ [UI](/t/maas-communication/2833)|[CLI](/t/maas-communication/2834) ~ [UI](/t/maas-communication/2835)|[CLI](/t/maas-communication/2836) ~ [UI](/t/maas-communication/2837)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-communication/2826) ~ [UI](/t/maas-communication/2827)|[CLI](/t/maas-communication/2828) ~ UI|[CLI](/t/maas-communication/2830) ~ [UI](/t/maas-communication/2831)|
-|Packages|[CLI](/t/maas-communication/2832) ~ [UI](/t/maas-communication/2833)|[CLI](/t/maas-communication/2834) ~ [UI](/t/maas-communication/2835)|[CLI](/t/maas-communication/2836) ~ [UI](/t/maas-communication/2837)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-communication/2826) ~ [UI](/t/maas-communication/2827)|[CLI](/t/maas-communication/2828) ~ [UI](/t/maas-communication/2829)|CLI ~ [UI](/t/maas-communication/2831)|
-|Packages|[CLI](/t/maas-communication/2832) ~ [UI](/t/maas-communication/2833)|[CLI](/t/maas-communication/2834) ~ [UI](/t/maas-communication/2835)|[CLI](/t/maas-communication/2836) ~ [UI](/t/maas-communication/2837)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-communication/2826) ~ [UI](/t/maas-communication/2827)|[CLI](/t/maas-communication/2828) ~ [UI](/t/maas-communication/2829)|[CLI](/t/maas-communication/2830) ~ UI|
-|Packages|[CLI](/t/maas-communication/2832) ~ [UI](/t/maas-communication/2833)|[CLI](/t/maas-communication/2834) ~ [UI](/t/maas-communication/2835)|[CLI](/t/maas-communication/2836) ~ [UI](/t/maas-communication/2837)|
  snap-2-9-ui -->
 
 <!-- deb-2-7-cli
@@ -100,7 +54,9 @@ deb-2-8-ui -->
 MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/2692) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
 deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/2693) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
+deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/2682) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
@@ -158,9 +114,11 @@ snap-2-9-ui -->
 3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2668#heading--firewalls)
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 1. [How do machines communicate with the rack controller?](#heading--machinerack)
 2. [How do rack and region controllers communicate?](#heading--rackregion)
 3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2669#heading--firewalls)
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 1. [How do machines communicate with the rack controller?](#heading--machinerack)
@@ -210,9 +168,9 @@ Machines use this internal domain for HTTP metadata queries, APT (proxying via S
 
 The rack controller installs and configures `bind` as a forwarder. All machines communicate via the rack controller directly.
 
-[note]
+<strong>NOTE:</strong> 
 Zone management and maintenance still happen within the region controller.
-[/note]
+
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg"></a>
 

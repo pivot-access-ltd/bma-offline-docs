@@ -64,9 +64,9 @@ To commission a machine:
 maas $PROFILE machine commission $SYSTEM_ID
 ```
 
-[note]
+<strong>NOTE:</strong> 
 To commission a machines, it must have a status of 'New'.
-[/note]
+
 
 To commission all machines in the 'New' state:
 
@@ -104,9 +104,9 @@ To acquire/allocate a specific node:
 maas $PROFILE machines allocate system_id=$SYSTEM_ID
 ```
 
-[note]
+<strong>NOTE:</strong> 
 To acquire a node, it must have a status of 'Ready'.
-[/note]
+
 
 <h2 id="heading--deploy-a-node">Deploy a node</h2>
 
@@ -122,9 +122,9 @@ To deploy a node as a KVM host:
 maas $PROFILE machine deploy $SYSTEM_ID install_kvm=True
 ```
 
-[note]
+<strong>NOTE:</strong> 
 To deploy with the CLI, the node must have a status of 'Allocated'. See 'Acquire a node' above (or use the [web UI](/t/deploy-machines-snap-2-9-ui/2603#heading--acquire)).
-[/note]
+
 
 See [Deploy nodes](/t/deploy-machines-snap-2-9-ui/2603).
 
@@ -215,9 +215,9 @@ maas $PROFILE vlan update $FABRIC_ID $VLAN_TAG dhcp_on=True \
 
 You will also need to set a default gateway (see [below](#heading--set-a-default-gateway)).
 
-[note]
+<strong>NOTE:</strong> 
 You must enable DHCP for PXE booting on the 'untagged' VLAN.
-[/note]
+
 
 See [DHCP](/t/managing-dhcp/2903) for more on this subject.
 

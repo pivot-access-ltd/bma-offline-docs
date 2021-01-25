@@ -1,83 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|CLI ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ UI|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|CLI ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ UI|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|CLI ~ [UI](/t/add-machines/2285)|
  deb-2-9-cli -->
 
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ UI|
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ UI|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|CLI ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ UI|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|CLI ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ UI|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
  snap-2-9-ui -->
 
 There are two ways to add a machine to MAAS:
@@ -126,11 +80,13 @@ This article will explain more about both methods.
 4. [How do I add a machine manually?](#heading--add-a-node-manually)
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 1. [How does enlistment work?](#heading--enlistment)
 2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2753)
 3. [How do I add virtual machines?](/t/adding-a-vm-host/2297)
 4. [How do I add a machine manually?](#heading--add-a-node-manually)
 5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 1. [How does enlistment work?](#heading--enlistment)
@@ -179,9 +135,9 @@ This article will explain more about both methods.
 
 MAAS typically adds a machine via a combination of DHCP, TFTP, and PXE. By now, you should have enabled MAAS to automatically add devices and machines to your environment. This unattended method of adding machines is called enlistment.
 
-[note]
+<strong>NOTE:</strong> 
 Configuring a computer to boot over PXE is done via its BIOS, often referred to as "netboot" or "network boot".
-[/note]
+
 
 Regardless of how MAAS adds a machine, there are no special requirements for the underlying machine. In particular, there is no need to install an operating system on it.
 
@@ -221,7 +177,9 @@ The enlistment scripts send information about the machine to the region API serv
 The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2932).
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2933).
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2922).
@@ -269,7 +227,9 @@ Typically, the next step will be to [commission the machine](/t/commission-machi
 Typically, the next step will be to [commission the machine](/t/commission-machines/2476). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 Typically, the next step will be to [commission the machine](/t/commission-machines/2477). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 Typically, the next step will be to [commission the machine](/t/commission-machines/2466). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
@@ -295,9 +255,9 @@ Typically, the next step will be to [commission the machine](/t/commission-machi
 Typically, the next step will be to [commission the machine](/t/commission-machines/2471). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
  snap-2-9-ui -->
 
-[note]
+<strong>NOTE:</strong> 
 MAAS runs built-in commissioning scripts during the enlistment phase. When you commission a machine, any customised commissioning scripts you add will have access to data collected during enlistment. Follow the link above for more information about commissioning and commission scripts.
-[/note]
+
 
 <a href="#heading--add-a-node-manually"><h2 id="heading--add-a-node-manually">Add a machine manually</h2></a>
 
@@ -335,6 +295,7 @@ snap-2-7-ui -->
 type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3103) for details on the available power types and the relevant parameters for each type.
 deb-2-7-ui -->
 
+<!-- deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui
 On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
 
 Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI machine:
@@ -356,12 +317,15 @@ The fields on the "Add machine" screen include the following items:
 * **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
 
 * **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
+deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui -->
 
 <!-- deb-2-8-ui
 * **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3015) for details on the available power types and the relevant parameters for each type.
  deb-2-8-ui -->
 
+<!-- deb-2-9-ui
 * **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3017) for details on the available power types and the relevant parameters for each type.
+ deb-2-9-ui -->
 
 <!-- snap-2-8-ui
 * **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3009) for details on the available power types and the relevant parameters for each type.
@@ -456,9 +420,9 @@ Additional steps will vary widely by machine type and architecture.
 
 <a href="#heading--bmc-enlistment"><h3 id="heading--bmc-enlistment">BMC enlistment</h3></a>
 
-[note status="2.4"]
+<strong>NOTE:</strong> 
 Note that in MAAS versions before 2.5, you are required to provide the MAC address of the PXE interface when adding a new machine manually.
-[/note]
+
 
 ##### IPMI machines
 
@@ -477,11 +441,12 @@ Use the chassis feature to add multiple machines at once. To do this, instead of
 
 The required fields will change based on the type of chassis you choose.
 
-[note]
+<strong>NOTE:</strong> 
 As with the manual method, the underlying machines will require netbooting.
-[/note]
+
 deb-2-7-ui snap-2-7-ui -->
 
+<!-- snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui
 <a href="#heading--add-nodes-via-a-chassis"><h2 id="heading--add-nodes-via-a-chassis">Add a machine via a chassis</h2></a>
 
 Use the chassis feature to add multiple machines at once. To do this, instead of selecting 'Machine' as above, choose 'Chassis' from the drop-down menu. In the following example, MAAS will add all available VMs from the given  virsh address:
@@ -490,6 +455,7 @@ Use the chassis feature to add multiple machines at once. To do this, instead of
 
 The required fields will change based on the type of chassis you choose.
 
-[note]
+<strong>NOTE:</strong> 
 As with the manual method, the underlying machines will require netbooting.
-[/note]
+
+snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui -->

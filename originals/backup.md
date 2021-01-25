@@ -1,83 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
-|Packages|CLI ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
-|Packages|[CLI](/t/backup/2340) ~ UI|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
-|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|CLI ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
-|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ UI|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
-|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|CLI ~ [UI](/t/backup/2345)|
  deb-2-9-cli -->
 
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
-|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ UI|
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
-|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup/2334) ~ UI|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
-|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|CLI ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
-|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ UI|[CLI](/t/backup/2338) ~ [UI](/t/backup/2339)|
-|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|CLI ~ [UI](/t/backup/2339)|
-|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/backup/2334) ~ [UI](/t/backup/2335)|[CLI](/t/backup/2336) ~ [UI](/t/backup/2337)|[CLI](/t/backup/2338) ~ UI|
-|Packages|[CLI](/t/backup/2340) ~ [UI](/t/backup/2341)|[CLI](/t/backup/2342) ~ [UI](/t/backup/2343)|[CLI](/t/backup/2344) ~ [UI](/t/backup/2345)|
  snap-2-9-ui -->
 
 MAAS currently does not provide specific tools to back up and restore a working MAAS configuration. MAAS servers are part of your data centre, just like other Linux-based servers, so your current backup and disaster recovery solution should be sufficient to back up your MAAS environment.  Even so, you should know which files and actions are critical -- to ensure that you get a clean backup, and further ensure that you can restore it cleanly.
@@ -95,11 +49,13 @@ MAAS currently does not provide specific tools to back up and restore a working 
 
 The following three MAAS components need to be backed-up and restored, on each region and rack controller, to recreate a working environment:
 
+<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 1.  The PostgreSQL database
 2.  The configuration files in `/etc/maas`
 3.  The configuration files in `/var/lib/maas`
 
 `/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
+deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 
 <!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 1.  The PostgreSQL database
@@ -148,9 +104,11 @@ Stopping these services will avoid conflicting updates during the remaining back
 
 Archive the database and the required configuration files with a command similar to the following:
 
+<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 ``` bash
 sudo tar cvpzf ~/backup.tgz --exclude=/var/lib/maas/boot-resources /etc/maas /var/lib/maas ~/dump.sql
 ```
+deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 
 <!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 ``` bash
@@ -180,12 +138,14 @@ sudo -u postgres psql -f dump.sql postgres
 
 Next, copy across the old configuration files to their new locations, taking care to move the originals aside just in case:
 
+<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 ``` bash
 sudo mv /etc/maas /etc/_maas; mv /var/lib/maas /var/lib/_maas
 essudo cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/
 ```
 
 If your restore process regenerated the `/var/lib/maas/secret` file, make sure update this secret on any additional rack controllers.
+deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 
 <!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 ``` bash
@@ -198,9 +158,9 @@ sudo cp -prf /var/snap/maas/common/maas /var/snap/maas/common/
 If your restore process regenerated the `/var/snap/maas/common/maas/secret` file, make sure update this secret on any additional rack controllers.
 snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
 
-[note]
+<strong>NOTE:</strong> 
 Take care to preserve the correct permissions when restoring files and directories.
-[/note]
+
 
 <a href="#heading--recreatingupdating-the-db"><h2 id="heading--recreatingupdating-the-db">Recreating/updating the DB</h2></a>
 
@@ -214,8 +174,8 @@ As such, it is required to re-create the DB triggers (or upgrade the DB and run 
 sudo maas-region dbupgrade
 ```
 
-[note]
+<strong>NOTE:</strong> 
 Please note to run this command on one of the Region Controllers (if this is a multi-region MAAS cluster).
-[/note]
+
 
 Now either restart your system(s) or the stopped services. You'll find your MAAS deployment fully restored.

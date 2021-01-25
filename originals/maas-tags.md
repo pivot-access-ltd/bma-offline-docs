@@ -1,91 +1,46 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|CLI ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ UI|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|CLI ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ UI|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|CLI ~ [UI](/t/maas-tags/2897)|
  deb-2-9-cli -->
 
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ UI|
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ UI|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|CLI ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ UI|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|CLI ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ UI|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
  snap-2-9-ui -->
 
 Tags are a convenient way to assign descriptive words to machines, interfaces, and storage devices. Using MAAS tags, you can easily select machines that meet certain criteria, helping you to remember that you've defined or reserved certain machines for certain functions. 
 
-[note]
+<strong>NOTE:</strong> 
  Tag names can include any combination of letters, numbers, dashes (-) and underscores (_), and be a maximum of 256 characters in length.
-[/note]
 
+
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 #### Four questions you may have:
 
 1. [How are tags defined?](#heading--tag-definitions)
@@ -166,9 +121,9 @@ Select the 'Configuration' tab and then the 'Edit' button alongside 'Machine con
 
 You can apply changes by pressing the 'Save changes' button.
 
-[note]
+<strong>NOTE:</strong> 
 New tags become available as a filter in the 'Machines' page in the web UI immediately after you add them.
-[/note]
+
 
 <a href="#heading--tags-for-network-interfaces"><h3 id="heading--tags-for-network-interfaces">Tags for network interfaces</h3></a>
 
@@ -195,6 +150,7 @@ To add a tag to a storage device, click on the machine with the storage you wish
 To add a tag, type its name into the 'Tags' field and press Enter. Repeat as desired. Use the small 'x' next to a tag to unassign the tag.
 
 You can apply changes by pressing the 'Save' button.
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 #### Nine questions you may have:
@@ -342,3 +298,4 @@ maas $PROFILE tag update $TAG_NAME definition=''
 maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
 ```
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+

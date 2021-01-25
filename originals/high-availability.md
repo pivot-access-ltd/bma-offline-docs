@@ -1,83 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|CLI ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ UI|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|CLI ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ UI|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|CLI ~ [UI](/t/high-availability/2693)|
  deb-2-9-cli -->
 
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ UI|
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ UI|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|CLI ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ UI|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|CLI ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ UI|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
  snap-2-9-ui -->
 
 This page describes how to provide high availability (HA) for MAAS at both region and rack levels.  In the context of MAAS, there are four types of HA:
@@ -119,7 +73,9 @@ You need to [install multiple rack controllers](/t/rack-controllers/3063#heading
 You need to [install multiple rack controllers](/t/rack-controllers/3064#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 You need to [install multiple rack controllers](/t/rack-controllers/3065#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 You need to [install multiple rack controllers](/t/rack-controllers/3054#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
@@ -173,7 +129,9 @@ If you are enabling DHCP for the first time after adding a second rack controlle
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/managing-dhcp/2908#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/managing-dhcp/2909#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/managing-dhcp/2898#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
@@ -199,9 +157,11 @@ If you are enabling DHCP for the first time after adding a second rack controlle
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/managing-dhcp/2903#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
  snap-2-9-ui -->
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 Access the appropriate VLAN (via the 'Subnets' page) and choose action 'Reconfigure DHCP'. There, you will see the second rack controller in the 'Secondary controller' field. All you should have to do is press the 'Reconfigure DHCP' button:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg"></a>
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 To reconfigure DHCP after adding a new rack controller, use the following sequence of commands:
@@ -221,7 +181,9 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 <a href="#heading--multiple-region-endpoints"><h3 id="heading--multiple-region-endpoints">Configure multiple region endpoints</h3></a>
 
+<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to `/etc/maas/rackd.conf`.  For example:
+deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 
 <!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to `/var/snap/maas/current/rackd.conf`.  For example:
@@ -271,7 +233,9 @@ A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/3
 A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/3004) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/3005) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/2994) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
@@ -397,15 +361,17 @@ Please see [Region controllers](/t/region-controllers/3075) and [Multiple region
 Please see [Region controllers](/t/region-controllers/3076) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 Please see [Region controllers](/t/region-controllers/3077) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
+ deb-2-9-ui -->
 
 <a href="#heading--load-balancing-with-haproxy-optional"><h3 id="heading--load-balancing-with-haproxy-optional">Load balancing with HAProxy (optional)</h3></a>
 
 You can add load balancing with [HAProxy](http://www.haproxy.org/) load-balancing software to support multiple API servers. In this setup, HAProxy provides access to the MAAS web UI and API.
 
-[note]
+<strong>NOTE:</strong> 
 If you happen to have Apache running on the same server where you intend to install HAProxy, you will need to stop and disable `apache2`, because HAProxy binds to port 80.
-[/note]
+
 
 <a href="#heading--install"><h4 id="heading--install">Install</h4></a>
 
@@ -445,3 +411,6 @@ sudo systemctl restart haproxy
 The configuration of region controller HA is now complete.
 
 **The API server(s) must be now be referenced (e.g. web UI, MAAS CLI) using port 80 (as opposed to port 5240).**
+
+
+

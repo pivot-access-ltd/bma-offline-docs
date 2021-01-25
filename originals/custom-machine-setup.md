@@ -1,83 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
-|Packages|CLI ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
-|Packages|[CLI](/t/custom-machine-setup/2592) ~ UI|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
-|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|CLI ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
-|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ UI|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
-|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|CLI ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-9-cli -->
 
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
-|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ UI|
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
-|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup/2586) ~ UI|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
-|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|CLI ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
-|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ UI|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
-|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|CLI ~ [UI](/t/custom-machine-setup/2591)|
-|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ UI|
-|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-9-ui -->
 
 <!-- deb-2-7-cli
@@ -100,7 +54,9 @@ During machine [enlistment](/t/add-machines/2283#heading--enlistment), [deployme
 During machine [enlistment](/t/add-machines/2284#heading--enlistment), [deployment](/t/deploy-machines/2608), [commissioning](/t/commission-machines/2476) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 During machine [enlistment](/t/add-machines/2285#heading--enlistment), [deployment](/t/deploy-machines/2609), [commissioning](/t/commission-machines/2477) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 During machine [enlistment](/t/add-machines/2274#heading--enlistment), [deployment](/t/deploy-machines/2598), [commissioning](/t/commission-machines/2466) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
@@ -145,7 +101,9 @@ Customisation in MAAS happens in two ways:
 The [Tempita](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) template files are found in the `/var/snap/maas/current/preseeds/` directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:
 snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
 
+<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 The [Tempita](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) template files are found in the `/etc/maas/preseeds/` directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:
+deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 
 
 |       Phase       |                 Filename prefix                 |
@@ -158,9 +116,9 @@ Additionally, the template for each phase typically consists of two files. The f
 
 The `enlist` template, for example, contains only minimal variables, whereas `enlist_userdata` includes both user variables and initialisation logic.
 
-[note]
+<strong>NOTE:</strong> 
 Tempita’s inheritance mechanism is the reverse of what you might expect. Inherited files, such as `enlist_userdata`, become the new template which can then reference variables from the higher-level file, such as `enlist`.
-[/note]
+
 
 <a href="#heading--template-naming"><h3 id="heading--template-naming">Template naming</h3></a>
 
@@ -192,9 +150,9 @@ For example, to create a generic configuration template for Ubuntu 16.04 Xenial 
 
 To create the equivalent template for curtin_userdata, the file would be called `curtin_userdata_ubuntu_amd64_generic_xenial_node`.
 
-[note]
+<strong>NOTE:</strong> 
 Any file targeting a specific machine will replace the values and configuration held within any generic files. If those values are needed, you will need to copy these generic template values into your new file.
-[/note]
+
 
 <a href="#heading--configuration"><h3 id="heading--configuration">Configuration</h3></a>
 
@@ -273,6 +231,7 @@ Putting it together:
 After MAAS deploys the machine, you'll find `/ssh-key-import.log` on the machine you deployed.
  snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
+<!--  snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui 
 <a href="#heading--cloud-init-ui"><h3 id="heading--cloud-init-ui">Customising cloud-init with the UI (v2.9++)</h3></a>
 
 It's easy to customise cloud-init via the web UI.  When you've selected a machine and choose 'Take action >> Deploy,' you'll be presented with the following screen:
@@ -294,6 +253,7 @@ write_files:
 
 This script simply writes hello to a the file `/test`.
 
-[note]
+<strong>NOTE:</strong> 
 No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-init scripts.
-[/note]
+
+ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->

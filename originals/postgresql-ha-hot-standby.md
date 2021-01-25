@@ -33,12 +33,10 @@
 |Packages|[CLI](/t/postgresql-ha-hot-standby/3000) ~ [UI](/t/postgresql-ha-hot-standby/3001)|[CLI](/t/postgresql-ha-hot-standby/3002) ~ [UI](/t/postgresql-ha-hot-standby/3003)|CLI ~ [UI](/t/postgresql-ha-hot-standby/3005)|
  deb-2-9-cli -->
 
-<!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/postgresql-ha-hot-standby/2994) ~ [UI](/t/postgresql-ha-hot-standby/2995)|[CLI](/t/postgresql-ha-hot-standby/2996) ~ [UI](/t/postgresql-ha-hot-standby/2997)|[CLI](/t/postgresql-ha-hot-standby/2998) ~ [UI](/t/postgresql-ha-hot-standby/2999)|
 |Packages|[CLI](/t/postgresql-ha-hot-standby/3000) ~ [UI](/t/postgresql-ha-hot-standby/3001)|[CLI](/t/postgresql-ha-hot-standby/3002) ~ [UI](/t/postgresql-ha-hot-standby/3003)|[CLI](/t/postgresql-ha-hot-standby/3004) ~ UI|
- deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|

@@ -1,83 +1,37 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
-|Packages|CLI ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
-|Packages|[CLI](/t/deploy-machines/2604) ~ UI|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
-|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|CLI ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
-|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ UI|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
-|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|CLI ~ [UI](/t/deploy-machines/2609)|
  deb-2-9-cli -->
 
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
-|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ UI|
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
-|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/deploy-machines/2598) ~ UI|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
-|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|CLI ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
-|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ UI|[CLI](/t/deploy-machines/2602) ~ [UI](/t/deploy-machines/2603)|
-|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|CLI ~ [UI](/t/deploy-machines/2603)|
-|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/deploy-machines/2598) ~ [UI](/t/deploy-machines/2599)|[CLI](/t/deploy-machines/2600) ~ [UI](/t/deploy-machines/2601)|[CLI](/t/deploy-machines/2602) ~ UI|
-|Packages|[CLI](/t/deploy-machines/2604) ~ [UI](/t/deploy-machines/2605)|[CLI](/t/deploy-machines/2606) ~ [UI](/t/deploy-machines/2607)|[CLI](/t/deploy-machines/2608) ~ [UI](/t/deploy-machines/2609)|
  snap-2-9-ui -->
 
 <!-- deb-2-7-cli
@@ -100,7 +54,9 @@ Once a machine has been commissioned (see [Commission machines](/t/commission-ma
 Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2476)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2477)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2466)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
@@ -153,7 +109,9 @@ Machines deployed with MAAS will also be ready to accept connections via SSH, to
 Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3208#heading--ssh-keys).
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3209#heading--ssh-keys).
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3198#heading--ssh-keys).
@@ -179,9 +137,9 @@ Machines deployed with MAAS will also be ready to accept connections via SSH, to
 Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3203#heading--ssh-keys).
  snap-2-9-ui -->
 
-[note]
+<strong>NOTE:</strong> 
 Juju adds SSH keys to machines under its control.
-[/note]
+
 
 <!-- deb-2-7-cli
 MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2592).
@@ -203,7 +161,9 @@ MAAS also supports machine customisation with a process called "preseeding." For
 MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2596).
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2597).
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2586).
@@ -237,6 +197,7 @@ Before deploying a machine, MAAS must acquire it (status 'Allocated'). When depl
 
 The action remains useful in terms of reserving a machine for later use. To acquire a machine explicitly select the machine and apply the 'Acquire' action.
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 To acquire/allocate a node with the web UI, select a machine which is in the "Ready" state, and drop down the "Take action" menu:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/3724346e052c865f4e865d1caf2778b115f0798f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3724346e052c865f4e865d1caf2778b115f0798f.jpeg"></a>
@@ -248,6 +209,7 @@ Select "Acquire" from the drop-down menu, which will bring you to a confirmation
 MAAS will acquire the selected machine; you can now find it in the list of "Allocated" machines:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a2bdb8b7b7c5705daee14bdea5caed223537917d.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a2bdb8b7b7c5705daee14bdea5caed223537917d.jpeg"></a>
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 
@@ -265,9 +227,9 @@ maas $PROFILE machines allocate system_id=$SYSTEM_ID
 
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
-[note]
+<strong>NOTE:</strong> 
 To acquire a node, it must have a status of 'Ready'.
-[/note]
+
 
 <a href="#heading--deploy"><h2 id="heading--deploy">Deploy</h2></a>
 
@@ -282,9 +244,9 @@ To deploy, you must configure the underlying machine to netboot.  Such a machine
 7.  Squashfs image (same as above) is placed on disk
 
 <!-- deb-2-7-cli
-[note]
+<strong>NOTE:</strong> 
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2592).
-[/note]
+
 
 Before deploying, you should take two key actions:
 
@@ -293,9 +255,9 @@ Before deploying, you should take two key actions:
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-[note]
+<strong>NOTE:</strong> 
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2593).
-[/note]
+
 
 Before deploying, you should take two key actions:
 
@@ -304,9 +266,9 @@ Before deploying, you should take two key actions:
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-[note]
+<strong>NOTE:</strong> 
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2594).
-[/note]
+
 
 Before deploying, you should take two key actions:
 
@@ -315,9 +277,9 @@ Before deploying, you should take two key actions:
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-[note]
+<strong>NOTE:</strong> 
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2595).
-[/note]
+
 
 Before deploying, you should take two key actions:
 
@@ -326,9 +288,9 @@ Before deploying, you should take two key actions:
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-[note]
+<strong>NOTE:</strong> 
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2596).
-[/note]
+
 
 Before deploying, you should take two key actions:
 
@@ -336,19 +298,21 @@ Before deploying, you should take two key actions:
 2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3208#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  deb-2-9-cli -->
 
-[note]
+<!-- deb-2-9-ui
+<strong>NOTE:</strong> 
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2597).
-[/note]
+
 
 Before deploying, you should take two key actions:
 
 1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3185) and the [Kernel boot options](/t/kernel-boot-options/2789) that will get used by deployed machines.
 2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3209#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-[note]
+<strong>NOTE:</strong> 
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2586).
-[/note]
+
 
 Before deploying, you should take two key actions:
 
@@ -357,9 +321,9 @@ Before deploying, you should take two key actions:
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-[note]
+<strong>NOTE:</strong> 
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2587).
-[/note]
+
 
 Before deploying, you should take two key actions:
 
@@ -368,9 +332,9 @@ Before deploying, you should take two key actions:
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-[note]
+<strong>NOTE:</strong> 
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2588).
-[/note]
+
 
 Before deploying, you should take two key actions:
 
@@ -379,9 +343,9 @@ Before deploying, you should take two key actions:
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-[note]
+<strong>NOTE:</strong> 
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2589).
-[/note]
+
 
 Before deploying, you should take two key actions:
 
@@ -390,9 +354,9 @@ Before deploying, you should take two key actions:
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-[note]
+<strong>NOTE:</strong> 
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2590).
-[/note]
+
 
 Before deploying, you should take two key actions:
 
@@ -401,9 +365,9 @@ Before deploying, you should take two key actions:
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-[note]
+<strong>NOTE:</strong> 
 The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2591).
-[/note]
+
 
 Before deploying, you should take two key actions:
 
@@ -411,6 +375,7 @@ Before deploying, you should take two key actions:
 2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3203#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
  snap-2-9-ui -->
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 To deploy directly from MAAS, select one or more machine(s) and press the 'Deploy' button.
 
 <a href="https://assets.ubuntu.com/v1/56958753-nodes-deploy__2.4_deploy.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/56958753-nodes-deploy__2.4_deploy.png"></a>
@@ -422,6 +387,7 @@ You then have the option of deviating from the default OS, release, and kernel. 
 While a machine is deploying its status will change to Deploying to 'OS', where 'OS' is the name of the OS being deployed (e.g. 'Deploying to Ubuntu 16.04 LTS').
 
 Once a machine has finished deploying its status will change to just the name of the OS (e.g. 'Ubuntu 18.04 LTS').
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 To deploy a node:
@@ -436,8 +402,8 @@ To deploy a node as a KVM host:
 maas $PROFILE machine deploy $SYSTEM_ID install_kvm=True
 ```
 
-[note]
+<strong>NOTE:</strong> 
 To deploy with the CLI, the node must have a status of 'Allocated'. See 'Acquire a node' above.
-[/note]
+
 
  snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
