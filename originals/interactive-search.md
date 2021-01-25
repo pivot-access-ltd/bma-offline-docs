@@ -1,88 +1,42 @@
 <!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|CLI ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ UI|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|CLI ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ UI|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|CLI ~ [UI](/t/interactive-search/2717)|
  deb-2-9-cli -->
 
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ UI|
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ UI|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|CLI ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ UI|[CLI](/t/interactive-search/2710) ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|CLI ~ [UI](/t/interactive-search/2711)|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/interactive-search/2706) ~ [UI](/t/interactive-search/2707)|[CLI](/t/interactive-search/2708) ~ [UI](/t/interactive-search/2709)|[CLI](/t/interactive-search/2710) ~ UI|
-|Packages|[CLI](/t/interactive-search/2712) ~ [UI](/t/interactive-search/2713)|[CLI](/t/interactive-search/2714) ~ [UI](/t/interactive-search/2715)|[CLI](/t/interactive-search/2716) ~ [UI](/t/interactive-search/2717)|
  snap-2-9-ui -->
 
 The Machines and Devices pages contain a powerful interactive search bar that lets you filter machines and devices.  This article is designed to help you understand how to use this resource.
 
-#### Eight  questions you may have:
+#### Eight questions you may have:
 
 1. [How can I do simple searches?](#heading--simple-searches)
 2. [How can I do filtered searches?](#heading--filtered-searches)
@@ -171,6 +125,3 @@ For example, the following will search for a machine that has an interface with 
 pxe_mac:=9e:b0:e4:15:ae:1e
 ```
 
-<a href="#heading--cli"><h2 id="heading--cli">CLI</h2></a>
-
-See [List nodes](/t/common-cli-tasks/794#heading--list-nodes) for more information about how to use the MAAS CLI to perform similar searches or [CLI](/t/maas-cli/802) for how to get started with the MAAS CLI.

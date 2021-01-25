@@ -879,16 +879,72 @@ Once you have installed your MAAS environment (region + rack controller) and any
 deb-2-7-ui -->
 
 <!-- deb-2-9-cli deb-2-9-ui
-<a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS from packages</h2></a>
+<a href="#heading--upgrade-via-packages"><h2 id="heading--upgrade-via-packages">Upgrade MAAS 2.8 to MAAS 2.9</h2></a>
 
-You can install a 2.9 stable version of MAAS from the PPA this way:
+MAAS 2.8 is the last supported version for Ubuntu 18.04 LTS.  Newer versions of MAAS will not be back-portable, and consequently, to upgrade to MAAS 2.9 and all future versions, you will also need to upgrade the base operating system to Ubuntu 20.04.  You do these two operations all at once, with the following procedure:
 
-``` bash
+```
 sudo apt-add-repository ppa:maas/2.9
-sudo apt-get update
 ```
 
-<a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installation scenarios</h3></a>
+You will get a message similar to this:
+
+```
+ For stable releases of 2.9.x
+ More info: https://launchpad.net/~maas/+archive/ubuntu/2.9
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
+
+Hit:1 http://security.ubuntu.com/ubuntu bionic-security InRelease
+Hit:2 http://ppa.launchpad.net/maas/2.8/ubuntu bionic InRelease          
+Hit:3 http://archive.ubuntu.com/ubuntu bionic InRelease                  
+Hit:4 http://archive.ubuntu.com/ubuntu bionic-updates InRelease                                     
+Ign:5 http://ppa.launchpad.net/maas/2.9/ubuntu bionic InRelease          
+Hit:6 http://archive.ubuntu.com/ubuntu bionic-backports InRelease        
+Err:7 http://ppa.launchpad.net/maas/2.9/ubuntu bionic Release                 
+  404  Not Found [IP: 91.189.95.85 80]
+Reading package lists... Done
+E: The repository 'http://ppa.launchpad.net/maas/2.9/ubuntu bionic Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+```
+
+This message seems to indicate that nothing happened, but, in fact, this command still creates the file:
+
+```
+/etc/apt/sources.list.d/maas-ubuntu-2_9-bionic.list
+```
+
+This file identifies the path to the 2.9 PPA, even though it incorrectly implies there's a Bionic release there:
+
+```
+deb http://ppa.launchpad.net/maas/2.9/ubuntu bionic main
+```
+
+Still, that's enough for `do-release-upgrade` to figure out that there is a 2.9 PPA, and when it checks, it will find a Focal version of MAAS, which it will bring over and install in place of 2.8.  It isn't necessary to stop MAAS or do anything else, except go ahead and run the upgrade:
+
+```
+sudo do-release-upgrade --allow-third-parties
+```
+
+This command will produce a lot of output, ask you a few questions (for which the defaults are usually fine), and eventually ask you to reboot.  Once your machine has come back up, you can check whether your upgrade has been successful by entering:
+
+```
+lsb_release -a
+```
+
+If the ugprade was successful, this command should yield output similar to the following:
+
+```
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.1 LTS
+Release:	20.04
+Codename:	focal
+```
+
+You have now upgraded to the Ubuntu 20.04 LTS base, and if you check your running MAAS install, you should see that the version has been updated to the latest stable 2.9 release.
+
+<a href="#heading--installation-scenarios"><h2 id="heading--installation-scenarios">Installing MAAS 2.9 fresh</h2></a>
 
 The recommended way to set up an initial MAAS environment is to put everything on one machine:
 

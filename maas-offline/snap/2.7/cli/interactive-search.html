@@ -463,7 +463,7 @@
  snap-2-9-ui -->
 
 <p>The Machines and Devices pages contain a powerful interactive search bar that lets you filter machines and devices.  This article is designed to help you understand how to use this resource.</p>
-<h4>Eight  questions you may have:</h4>
+<h4>Eight questions you may have:</h4>
 <ol>
 <li><a href="#heading--simple-searches">How can I do simple searches?</a></li>
 <li><a href="#heading--filtered-searches">How can I do filtered searches?</a></li>
@@ -487,10 +487,7 @@
 <pre><code class="no-highlight">filter-name:([=]val1,...,[=]val2)
 </code></pre>
 
-<p>!!! Note:</p>
-<pre><code>Surround search terms with parentheses when they must occur together,
-E.g.  `status:(failed testing)`.
-</code></pre>
+<p><strong>Note:</strong> Surround search terms with parentheses when they must occur together, e.g., <code>status:(failed testing)</code>.</p>
 <h4 id="heading--exact-matching">Exact matching</h4>
 
 <p>If you need an exact match, preface the search value with an equal sign. For example, to find machines belonging to a pod named <code>able-cattle</code>:</p>
@@ -535,8 +532,6 @@ E.g.  `status:(failed testing)`.
 <p>For example, the following will search for a machine that has an interface with a specific MAC address marked for PXE booting:</p>
 <pre><code class="no-highlight">pxe_mac:=9e:b0:e4:15:ae:1e
 </code></pre>
-
-<p><a href="#heading--cli"><h2 id="heading--cli">CLI</h2></a></p>
     </div>
   </body>
 </html>

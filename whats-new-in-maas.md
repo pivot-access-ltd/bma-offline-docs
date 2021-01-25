@@ -226,13 +226,14 @@ Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now availa
 20. [Reader Adaptive Documentation](#heading--rad)
 21. [Offline documentation](#heading--offline-docs)
 
-<h4>Five other questions you may have:</h4>
+<h4>Six other questions you may have:</h4>
 
 1. [What known issues should I be aware of?](#heading--known-issues)
 2. [How do I install MAAS 2.9?](/t/maas-installation/3323)
 3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?](/t/maas-installation/3323#heading--upgrade-maas-snap)
-4. [How do I install MAAS 2.9 from packages?](/t/maas-installation/3329)
-5. [What bugs are fixed so far in this release?](#heading--bug-fixes)
+4. [How do I install MAAS 2.9 from packages?](/t/maas-installation/3329#heading--install-from-packages)
+5. [How do I upgrade MAAS 2.8 to MAAS 2.9 using packages?](/t/maas-installation/3329#heading--upgrade-via-packages)
+6. [What bugs are fixed so far in this release?](#heading--bug-fixes)
 
 <h2 id="heading--focal-default">Focal Fossa (Ubuntu 20.04 LTS) as default release</h2>
 

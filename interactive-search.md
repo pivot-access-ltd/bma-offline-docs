@@ -84,7 +84,7 @@
 
 The Machines and Devices pages contain a powerful interactive search bar that lets you filter machines and devices.  This article is designed to help you understand how to use this resource.
 
-#### Eight  questions you may have:
+#### Eight questions you may have:
 
 1. [How can I do simple searches?](#heading--simple-searches)
 2. [How can I do filtered searches?](#heading--filtered-searches)
@@ -172,8 +172,4 @@ For example, the following will search for a machine that has an interface with 
 ``` no-highlight
 pxe_mac:=9e:b0:e4:15:ae:1e
 ```
-
-<a href="#heading--cli"><h2 id="heading--cli">CLI</h2></a>
-
-See [List nodes](/t/common-cli-tasks/794#heading--list-nodes) for more information about how to use the MAAS CLI to perform similar searches or [CLI](/t/maas-cli/802) for how to get started with the MAAS CLI.
 
