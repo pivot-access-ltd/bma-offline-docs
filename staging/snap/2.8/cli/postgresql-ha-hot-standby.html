@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/postgresql-ha-hot-standby.html">
+	  &nbsp;UI-only&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  CLI-only
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-me-an-example-of-maas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-new-in-maas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-requirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-journey.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-communication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-controllers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-controllers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-availability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-machines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-machines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-testing.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-testing.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-and-hardware-testing-scripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-tags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-machine-setup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-boot-options.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-pools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-vmfs-datastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-kernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-and-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-image-mirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-images.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-management.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-ranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-services.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-discovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-addressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-tls-encryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-stp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-zones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-host-networking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-a-vm-host.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-host-storage-pools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-and-deleting-vms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-metrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-your-maas-installation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-accounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-search.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-and-terms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-and-terms.html#heading--network-tutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-cli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-kernel-management.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-image-management.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-interface-management.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-advanced-tasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-composable-hardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-help.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-tricks-and-traps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-docs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-new-in-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-guide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>Postgresql ha hot standby</h1><!-- deb-2-7-cli
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+ snap-2-7-ui -->
+
+<!-- snap-2-8-ui
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+ snap-2-9-ui -->
+
+<p><strong>Disclaimer: These <em>notes</em> give an idea of what is involved in setting up &lsquo;hot standby&rsquo; HA mode in PostgreSQL. The below procedures are not regularly tested. Please use the <a href="https://www.postgresql.org/docs/9.5/static/high-availability.html">PostgreSQL documentation</a> when setting up HA on PostgreSQL.</strong></p>
+<p>Five variables are used on this page:</p>
+<ol>
+<li>PRIMARY_PG_IP: The IP address of the host that contains the primary database.</li>
+<li>SECONDARY_PG_IP: The IP address of the host that contains the secondary database.</li>
+<li>REP_USER: The internal database user that manages replication on the primary.</li>
+<li>REP_USER_PW: The password of the replication user.</li>
+<li>REP_ARCHIVE: The directory where the database will place files to be replicated.</li>
+</ol>
+<p>Their values are represented when they are preceded with the &lsquo;$&rsquo; character (e.g. $REP_USER_PW). These are to be replaced with actual values in the commands and files below.</p>
+<p><a href="#heading--primary"><h2 id="heading--primary">Primary</h2></a></p>
+<p>Perform these actions on the primary host.</p>
+<p><a href="#heading--create-internal-database-user"><h3 id="heading--create-internal-database-user">Create internal database user</h3></a></p>
+<p>Create an internal database user to manage replication. You will be prompted to supply a password ($REP_USER_PW) for this new user:</p>
+<pre><code class="bash">sudo -u postgres createuser -U postgres $REP_USER -P -c 5 --replication
+</code></pre>
+
+<p><a href="#heading--set-up-replication-file-storage"><h3 id="heading--set-up-replication-file-storage">Set up replication file storage</h3></a></p>
+<p>Set up a place to store replication files:</p>
+<pre><code class="bash">REP_ARCHIVE=/var/backups/pgsql/archive
+sudo mkdir -p $REP_ARCHIVE
+sudo chown postgres $REP_ARCHIVE
+</code></pre>
+
+<p><a href="#heading--allow-secondary-host-to-connect"><h3 id="heading--allow-secondary-host-to-connect">Allow secondary host to connect</h3></a></p>
+<p>Edit <code>/etc/postgresql/9.5/main/pg_hba.conf</code> to allow the secondary host to contact this primary host.</p>
+<pre><code class="no-highlight">host    replication     $REP_USER   $SECONDARY_PG_IP/32         md5
+</code></pre>
+
+<p><a href="#heading--configure-for-replication"><h3 id="heading--configure-for-replication">Configure for replication</h3></a></p>
+<p>Edit <code>/etc/postgresql/9.5/main/postgresql.conf</code> to listen on more than just its localhost interface, turn on replication, and point to the archive directory:</p>
+<pre><code class="no-highlight">listen_addresses = '*'
+wal_level = hot_standby
+archive_mode = on
+archive_command = 'test ! -f $REP_ARCHIVE/%f &amp;&amp; cp %p $REP_ARCHIVE/%f'
+max_wal_senders = 3
+</code></pre>
+
+<p><a href="#heading--restart-the-database"><h3 id="heading--restart-the-database">Restart the database</h3></a></p>
+<p>Restart the database to apply the above changes:</p>
+<pre><code class="bash">sudo systemctl restart postgresql
+</code></pre>
+
+<p>Check log file <code>/var/log/postgresql/postgresql-9.5-main.log</code> on this primary host for any errors.</p>
+<p>The primary database is now ready to accept replication requests from the secondary database (that will be set up below).</p>
+<p><a href="#heading--secondary"><h2 id="heading--secondary">Secondary</h2></a></p>
+<p>Perform these actions on the secondary host.</p>
+<p>This host should ideally match the primary host in terms of:</p>
+<ol>
+<li>CPU architecture</li>
+<li>OS type and version</li>
+<li>PostgreSQL version</li>
+</ol>
+<p>Replication has been known to fail due to an architecture mismatch.</p>
+<p><a href="#heading--install-postgresql-and-stop-the-service"><h3 id="heading--install-postgresql-and-stop-the-service">Install PostgreSQL and stop the service</h3></a></p>
+<p>Install PostgreSQL and stop the service:</p>
+<pre><code class="bash">sudo apt install postgresql
+sudo systemctl stop postgresql
+</code></pre>
+
+<p><a href="#heading--copy-over-primary-database-files"><h3 id="heading--copy-over-primary-database-files">Copy over primary database files</h3></a></p>
+<p>Move the default database files out of the way and replace them with a copy of the primary database files. You will be prompted for the password of the remote replication user.</p>
+<pre><code class="bash">sudo mv /var/lib/postgresql/9.5/main /var/lib/postgresql/9.5/main.old
+sudo -u postgres pg_basebackup -h $PRIMARY_PG_IP -D /var/lib/postgresql/9.5/main -U $REP_USER -v -P --xlog-method=stream
+Password: 
+</code></pre>
+
+<p>Once a copy of the primary database is transferred, proceed to configure actual replication.</p>
+<p><a href="#heading--place-database-in-hot-standby-mode"><h3 id="heading--place-database-in-hot-standby-mode">Place database in hot standby mode</h3></a></p>
+<p>Edit <code>/etc/postgresql/9.5/main/postgresql.conf</code> and put this secondary host in hot standby mode:</p>
+<pre><code class="no-highlight">hot_standby = on
+</code></pre>
+
+<p><a href="#heading--set-up-recovery-configuration-file"><h3 id="heading--set-up-recovery-configuration-file">Set up recovery configuration file</h3></a></p>
+<p>Copy a sample recovery configuration file into place:</p>
+<pre><code class="bash">sudo cp /usr/share/postgresql/9.5/recovery.conf.sample /var/lib/postgresql/9.5/main/recovery.conf
+</code></pre>
+
+<p><a href="#heading--configure-for-recovery"><h3 id="heading--configure-for-recovery">Configure for recovery</h3></a></p>
+<p>Edit <code>/var/lib/postgresql/9.5/main/recovery.conf</code>. Specify hot standby mode and enter the information necessary for contacting the primary:</p>
+<pre><code class="no-highlight">standby_mode = on
+primary_conninfo = 'host=$PRIMARY_PG_IP port=5432 user=$REP_USER password=$REP_USER_PW'
+</code></pre>
+
+<p><a href="#heading--start-the-database"><h3 id="heading--start-the-database">Start the database</h3></a></p>
+<p>Start the database:</p>
+<pre><code class="bash">sudo systemctl start postgresql
+</code></pre>
+
+<p>Check log file <code>/var/log/postgresql/postgresql-9.5-main.log</code> on this secondary host for any errors.</p>
+<p>The secondary database is now replicating the primary database.</p>
+<p><a href="#heading--verification-of-replication"><h2 id="heading--verification-of-replication">Verification of replication</h2></a></p>
+<p>This section includes a raw test that will show whether replication is functioning.</p>
+<p>On the <strong>secondary</strong> database host, perform a query on the &lsquo;maasserver_node&rsquo; table in the &lsquo;maasdb&rsquo; database:</p>
+<pre><code class="bash">sudo -u postgres psql maasdb -c 'SELECT hostname,status,power_state FROM maasserver_node'
+</code></pre>
+
+<p>The output will look something like:</p>
+<pre><code class="no-highlight">     hostname      | status | power_state 
+-------------------+--------+-------------
+ pmatulis-imp-maas |      0 | unknown
+ node3             |      4 | off
+ node1             |      6 | on
+ node2             |      4 | off
+ node4             |      6 | on
+(5 rows)
+</code></pre>
+
+<p>This includes any hosts that are being used for API servers or rack controllers (&lsquo;pmatulis-imp-maas&rsquo; in this example). There are 4 regular MAAS nodes.</p>
+<p>To quickly check that replication is working simply (temporarily) rename a node&rsquo;s hostname in the web UI and re-invoke the above command to see if the change is reflected.</p>
+<p>Another test could be to change the status of a node, for example, by Commissioning or Deploying (a status of &lsquo;4&rsquo; is &lsquo;Ready&rsquo; and a status of &lsquo;6&rsquo; is &lsquo;Deployed&rsquo;).</p>
+    </div>
+  </body>
+</html>

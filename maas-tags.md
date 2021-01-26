@@ -256,7 +256,7 @@ To delete a tag from a network interface:
 maas $PROFILE interface remove-tag $SYSTEM_ID $INTERFACE_ID tag=$TAG_STRING
 ```
 
-<a href="#heading--tags-for-network-interfaces</h2>
+<a href="#heading--tags-for-network-interfaces"><h3 id="heading--tags-for-network-interfaces">Tags for network interfaces</h3></a>
 
 It's also possible to assign tags to specific network interfaces. You can use these tags when searching for machines within the web UI and when allocating machines from the API.
 

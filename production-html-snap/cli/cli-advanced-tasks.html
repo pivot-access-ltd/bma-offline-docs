@@ -436,7 +436,7 @@
 <li><a href="cli-advanced-tasks.html#heading--edit-node-hostname-and-power-parameters">How do I edit machine hostname and power parameters?</a>
 3.<a href="cli-advanced-tasks.html#heading--relay-dhcp">How do I relay DHCP?</a></li>
 <li><a href="cli-advanced-tasks.html#heading--assign-a-network-interface-to-a-fabric">How do I assign a network interface to a fabric?</a></li>
-<li><a href="commission-machines.html##heading--post-commission-configuration">How do I change the IP assignment mode of a network interface?</a></li>
+<li><a href="commission-machines.html#heading--post-commission-configuration">How do I change the IP assignment mode of a network interface?</a></li>
 <li><a href="rack-controllers.html#heading--install-a-rack-controller">How do I install a rack controller?</a></li>
 <li><a href="rack-controllers.html#heading--list-rack-controllers">How do I list rack controllers?</a></li>
 <li><a href="cli-advanced-tasks.html#heading--set-the-default-storage-layout">How do I set the default storage layout?</a></li>
@@ -463,7 +463,7 @@
     power_parameters_power_id=$HOSTNAME
 </code></pre>
 
-<p>See <a href="common-cli-tasks.html#heading--determine-a-node-system-id">Common CLI tasks</a> for how to find a machine&rsquo;s system id and <a href="power-management.html">BMC Power Types</a> for details on different power types.</p>
+<p>See <a href="common-cli-tasks.html#heading--determine-a-node-system-id">Common CLI tasks</a> for how to find a machine&rsquo;s system id and <a href="power-management.html#heading--power-catalogue">BMC Power Types</a> for details on different power types.</p>
 <p><a href="#heading--relay-dhcp"><h2 id="heading--relay-dhcp">Relay DHCP</h2></a></p>
 <p>To relay DHCP traffic for a VLAN (source) through another VLAN (target):</p>
 <pre><code class="bash">maas $PROFILE vlan update $FABRIC_ID $VLAN_VID_SRC relay_vlan=$VLAN_ID_TARGET
@@ -567,7 +567,7 @@ This action will remove the configuration that may exist on any block device.</p
 <pre><code class="bash">mass $PROFILE dnsresource-records create fqdn=$HOSTNAME.$DOMAIN rrtype=cname rrdata=$ALIAS
 </code></pre>
 
-<p>For example, to set webserver.maas.io to alias to www.maas.io:</p>
+<p>For example, to set <code>webserver.maas.io</code> to alias to <code>www.maas.io</code>:</p>
 <pre><code class="bash">maas $PROFILE dnsresource-records create fqdn=webserver.maas.io rrtype=cname rrdata=www
 </code></pre>
 

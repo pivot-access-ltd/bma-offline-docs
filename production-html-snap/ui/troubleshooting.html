@@ -430,6 +430,12 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>Troubleshooting</h1><p>This section covers some of the most commonly encountered problems and attempts to resolve them.</p>
+<p><a href="#heading--django-subarch-error"><h2 id="heading--django-subarch-error">Subarchitecture error thrown by django</h2></a></p>
+<p>Occassionally, you may encounter an error similar to this one:</p>
+<pre><code>django.core.exceptions.ValidationError: ['Subarchitecture(&lt;value&gt;) must be generic when setting hwe_kernel.']
+</code></pre>
+
+<p>One potential solution for this problem is to specify a different commissioning kernel, such as upgrading from Xenial to Focal, etc.  </p>
 <p><a href="#heading--nodes-hang-on-commissioning"><h2 id="heading--nodes-hang-on-commissioning">Nodes hang on &ldquo;Commissioning&rdquo;</h2></a></p>
 <p><a href="#heading--possible-cause-timing-issues"><h3 id="heading--possible-cause-timing-issues">Possible Cause: Timing issues</h3></a></p>
 <p>Various parts of MAAS rely on OAuth to negotiate a connection to nodes. If the current time reported by the hardware clock on your node differs significantly from that on the MAAS server, the connection will not be made.</p>

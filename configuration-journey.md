@@ -503,27 +503,27 @@ Before moving forward with MAAS, you'll want to enable DHCP.  You can do this ve
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- deb-2-7-ui
-The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2929) process allows you to easily add or map devices already connected to your network – devices that you may not necessarily want to manage with MAAS.
+The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2929) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
  deb-2-7-ui -->
 
 <!-- deb-2-8-ui
-The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2931) process allows you to easily add or map devices already connected to your network – devices that you may not necessarily want to manage with MAAS.
+The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2931) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
  deb-2-8-ui -->
 
 <!-- deb-2-9-ui
-The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2933) process allows you to easily add or map devices already connected to your network – devices that you may not necessarily want to manage with MAAS.
+The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2933) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
  deb-2-9-ui -->
 
 <!-- snap-2-7-ui
-The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2923) process allows you to easily add or map devices already connected to your network – devices that you may not necessarily want to manage with MAAS.
+The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2923) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
  snap-2-7-ui -->
 
 <!-- snap-2-8-ui
-The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2925) process allows you to easily add or map devices already connected to your network – devices that you may not necessarily want to manage with MAAS.
+The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2925) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
  snap-2-8-ui -->
 
 <!-- snap-2-9-ui
-The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2927) process allows you to easily add or map devices already connected to your network – devices that you may not necessarily want to manage with MAAS.
+The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2927) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
  snap-2-9-ui -->
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
@@ -554,7 +554,7 @@ Be aware that these network settings are spread across several web UI configurat
 
 <a href="#heading--deploy-hardware"><h2 id="heading--deploy-hardware">Deployment</h2></a>
 
-MAAS-managed machines are listed – and operated on – from the Machines page, making it one of the most important screens in the MAAS web UI:
+MAAS-managed machines are listed -- and operated on -- from the Machines page, making it one of the most important screens in the MAAS web UI:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/58a37e0dc29bc233f771c33d07a0e03e8d55cb87.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/58a37e0dc29bc233f771c33d07a0e03e8d55cb87.jpeg"></a> 
 
@@ -600,51 +600,51 @@ When it comes to running applications, MAAS can easily deploy any supported vari
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- deb-2-7-cli
-[VM hosts]( /t/vm-hosting/2748) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2748) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-[VM hosts]( /t/vm-hosting/2749) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2749) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-[VM hosts]( /t/vm-hosting/2750) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2750) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-[VM hosts]( /t/vm-hosting/2751) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2751) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-[VM hosts]( /t/vm-hosting/2752) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2752) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-[VM hosts]( /t/vm-hosting/2753) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2753) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-[VM hosts]( /t/vm-hosting/2742) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2742) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-[VM hosts]( /t/vm-hosting/2743) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2743) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-[VM hosts]( /t/vm-hosting/2744) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2744) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-[VM hosts]( /t/vm-hosting/2745) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2745) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-[VM hosts]( /t/vm-hosting/2746) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2746) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-[VM hosts]( /t/vm-hosting/2747) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one!
+[VM hosts]( /t/vm-hosting/2747) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
  snap-2-9-ui -->
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
