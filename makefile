@@ -311,7 +311,7 @@ originals/about-maas.md: about-maas.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-adding-a-vm-host.md: adding-a-vm-host.md
+originals/adding-a-vm-host.md: adding-a-vm-host.md
 	cp adding-a-vm-host.md adding-a-vm-host-deb-2-7-cli-2292.md
 	cp adding-a-vm-host.md adding-a-vm-host-deb-2-7-ui-2293.md
 	cp adding-a-vm-host.md adding-a-vm-host-deb-2-8-cli-2294.md
@@ -341,7 +341,7 @@ adding-a-vm-host.md: adding-a-vm-host.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-add-machines.md: add-machines.md
+originals/add-machines.md: add-machines.md
 	cp add-machines.md add-machines-deb-2-7-cli-2280.md
 	cp add-machines.md add-machines-deb-2-7-ui-2281.md
 	cp add-machines.md add-machines-deb-2-8-cli-2282.md
@@ -371,21 +371,21 @@ add-machines.md: add-machines.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-api-authentication.md: api-authentication.md
+originals/api-authentication.md: api-authentication.md
 	cp api-authentication.md api-authentication-742.md
 	xpub push discourse api-authentication-742.md
 	cd ./originals && xpub pull discourse 742 742
 	cd ./originals && cp -p api-authentication-742.md api-authentication.md
 	mv api-authentication-742.md ./rad-versions
 
-audit-event-logs.md: audit-event-logs.md
+originals/audit-event-logs.md: audit-event-logs.md
 	cp audit-event-logs.md audit-event-logs-791.md
 	xpub push discourse audit-event-logs-791.md
 	cd ./originals && xpub pull discourse 791 791
 	cd ./originals && cp -p audit-event-logs-791.md audit-event-logs.md
 	mv audit-event-logs-791.md ./rad-versions
 
-availability-zones.md: availability-zones.md
+originals/availability-zones.md: availability-zones.md
 	cp availability-zones.md availability-zones-deb-2-7-cli-2328.md
 	cp availability-zones.md availability-zones-deb-2-7-ui-2329.md
 	cp availability-zones.md availability-zones-deb-2-8-cli-2330.md
@@ -417,7 +417,7 @@ availability-zones.md: availability-zones.md
 
 #b
 
-backup.md: backup.md
+originals/backup.md: backup.md
 	cp backup.md backup-deb-2-7-cli-2340.md
 	cp backup.md backup-deb-2-7-ui-2341.md
 	cp backup.md backup-deb-2-8-cli-2342.md
@@ -447,7 +447,7 @@ backup.md: backup.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-block-devices.md: block-devices.md
+originals/block-devices.md: block-devices.md
 	cp block-devices.md block-devices-deb-2-7-cli-2352.md
 	cp block-devices.md block-devices-deb-2-7-ui-2353.md
 	cp block-devices.md block-devices-deb-2-8-cli-2354.md
@@ -479,49 +479,49 @@ block-devices.md: block-devices.md
 
 #c
 
-candid-tutorial.md: candid-tutorial.md
+originals/candid-tutorial.md: candid-tutorial.md
 	cp candid-tutorial.md candid-tutorial-3610.md
 	xpub push discourse candid-tutorial-3610.md
 	cd ./originals && xpub pull discourse 3610 3610
 	cd ./originals && cp -p candid-tutorial-3610.md candid-tutorial.md
 	mv candid-tutorial-3510.md ./rad-versions
 
-cli-advanced-tasks.md: cli-advanced-tasks.md
+originals/cli-advanced-tasks.md: cli-advanced-tasks.md
 	cp cli-advanced-tasks.md cli-advanced-tasks-793.md
 	xpub push discourse cli-advanced-tasks-793.md
 	cd ./originals && xpub pull discourse 793 793
 	cd ./originals && cp -p cli-advanced-tasks-793.md cli-advanced-tasks.md
 	mv cli-advanced-tasks-793.md ./rad-versions
 
-cli-composable-hardware.md: cli-composable-hardware.md
+originals/cli-composable-hardware.md: cli-composable-hardware.md
 	cp cli-composable-hardware.md cli-composable-hardware-795.md
 	xpub push discourse cli-composable-hardware-795.md
 	cd ./originals && xpub pull discourse 795 795
 	cd ./originals && cp -p cli-composable-hardware-795.md cli-composable-hardware.md
 	mv cli-composable-hardware-795.md ./rad-versions
  
-cli-image-management.md: cli-image-management.md
+originals/cli-image-management.md: cli-image-management.md
 	cp cli-image-management.md cli-image-management-797.md
 	xpub push discourse cli-image-management-797.md
 	cd ./originals && xpub pull discourse 797 797
 	cd ./originals && cp -p cli-image-management-797.md cli-image-management.md
 	mv cli-image-management-797.md ./rad-versions
 
-cli-interface-management.md: cli-interface-management.md
+originals/cli-interface-management.md: cli-interface-management.md
 	cp cli-interface-management.md cli-interface-management-798.md
 	xpub push discourse cli-interface-management-798.md
 	cd ./originals && xpub pull discourse 798 798
 	cd ./originals && cp -p cli-interface-management-798.md cli-interface-management.md
 	mv cli-interface-management-798.md ./rad-versions
  
-cli-kernel-management.md: cli-kernel-management.md
+originals/cli-kernel-management.md: cli-kernel-management.md
 	cp cli-kernel-management.md cli-kernel-management-799.md
 	xpub push discourse cli-kernel-management-799.md
 	cd ./originals && xpub pull discourse 799 799
 	cd ./originals && cp -p cli-kernel-management-799.md cli-kernel-management.md
 	mv cli-kernel-management-799.md ./rad-versions
  
-commissioning-and-hardware-testing-scripts.md: commissioning-and-hardware-testing-scripts.md
+originals/commissioning-and-hardware-testing-scripts.md: commissioning-and-hardware-testing-scripts.md
 	cp commissioning-and-hardware-testing-scripts.md commissioning-and-hardware-testing-scripts-deb-2-7-cli-2484.md
 	cp commissioning-and-hardware-testing-scripts.md commissioning-and-hardware-testing-scripts-deb-2-7-ui-2485.md
 	cp commissioning-and-hardware-testing-scripts.md commissioning-and-hardware-testing-scripts-deb-2-8-cli-2486.md
@@ -551,7 +551,7 @@ commissioning-and-hardware-testing-scripts.md: commissioning-and-hardware-testin
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-commissioning-logs.md: commissioning-logs.md
+originals/commissioning-logs.md: commissioning-logs.md
 	cp commissioning-logs.md commissioning-logs-deb-2-7-cli-2496.md
 	cp commissioning-logs.md commissioning-logs-deb-2-7-ui-2497.md
 	cp commissioning-logs.md commissioning-logs-deb-2-8-cli-2498.md
@@ -611,21 +611,21 @@ originals/commission-machines.md: commission-machines.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-common-cli-tasks.md: common-cli-tasks.md
+originals/common-cli-tasks.md: common-cli-tasks.md
 	cp common-cli-tasks.md common-cli-tasks-794.md
 	xpub push discourse common-cli-tasks-794.md
 	cd ./originals && xpub pull discourse 794 794
 	cd ./originals && cp -p common-cli-tasks-794.md common-cli-tasks.md
 	mv common-cli-tasks-794.md ./rad-versions
  
-concepts-and-terms.md: concepts-and-terms.md
+originals/concepts-and-terms.md: concepts-and-terms.md
 	cp concepts-and-terms.md concepts-and-terms-785.md
 	xpub push discourse concepts-and-terms-785.md
 	cd ./originals && xpub pull discourse 785 785
 	cd ./originals && cp -p concepts-and-terms-785.md concepts-and-terms.md
 	mv concepts-and-terms-785.md ./rad-versions
  
-configuration-journey.md: configuration-journey.md
+originals/configuration-journey.md: configuration-journey.md
 	cp configuration-journey.md configuration-journey-deb-2-7-cli-2532.md
 	cp configuration-journey.md configuration-journey-deb-2-7-ui-2533.md
 	cp configuration-journey.md configuration-journey-deb-2-8-cli-2534.md
@@ -655,7 +655,7 @@ configuration-journey.md: configuration-journey.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-configuring-tls-encryption.md: configuring-tls-encryption.md
+originals/configuring-tls-encryption.md: configuring-tls-encryption.md
 	cp configuring-tls-encryption.md configuring-tls-encryption-deb-2-7-cli-2544.md
 	cp configuring-tls-encryption.md configuring-tls-encryption-deb-2-7-ui-2545.md
 	cp configuring-tls-encryption.md configuring-tls-encryption-deb-2-8-cli-2546.md
@@ -685,14 +685,14 @@ configuring-tls-encryption.md: configuring-tls-encryption.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-contact-us.md: contact-us.md
+originals/contact-us.md: contact-us.md
 	cp contact-us.md contact-us-743.md
 	xpub push discourse contact-us-743.md
 	cd ./originals && xpub pull discourse 743 743
 	cd ./originals && cp -p contact-us-743.md contact-us.md
 	mv contact-us-743.md ./rad-versions
 
-controllers.md: controllers.md
+originals/controllers.md: controllers.md
 	cp controllers.md controllers-deb-2-7-cli-2724.md
 	cp controllers.md controllers-deb-2-7-ui-2725.md
 	cp controllers.md controllers-deb-2-8-cli-2726.md
@@ -722,7 +722,7 @@ controllers.md: controllers.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-creating-a-custom-ubuntu-image.md: creating-a-custom-ubuntu-image.md
+originals/creating-a-custom-ubuntu-image.md: creating-a-custom-ubuntu-image.md
 	cp creating-a-custom-ubuntu-image.md creating-a-custom-ubuntu-image-deb-2-7-cli-2568.md
 	cp creating-a-custom-ubuntu-image.md creating-a-custom-ubuntu-image-deb-2-7-ui-2569.md
 	cp creating-a-custom-ubuntu-image.md creating-a-custom-ubuntu-image-deb-2-8-cli-2570.md
@@ -752,7 +752,7 @@ creating-a-custom-ubuntu-image.md: creating-a-custom-ubuntu-image.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-creating-and-deleting-vms.md: creating-and-deleting-vms.md
+originals/creating-and-deleting-vms.md: creating-and-deleting-vms.md
 	cp creating-and-deleting-vms.md creating-and-deleting-vms-deb-2-7-cli-2580.md
 	cp creating-and-deleting-vms.md creating-and-deleting-vms-deb-2-7-ui-2581.md
 	cp creating-and-deleting-vms.md creating-and-deleting-vms-deb-2-8-cli-2582.md
@@ -782,7 +782,7 @@ creating-and-deleting-vms.md: creating-and-deleting-vms.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-custom-machine-setup.md: custom-machine-setup.md
+originals/custom-machine-setup.md: custom-machine-setup.md
 	cp custom-machine-setup.md custom-machine-setup-deb-2-7-cli-2592.md
 	cp custom-machine-setup.md custom-machine-setup-deb-2-7-ui-2593.md
 	cp custom-machine-setup.md custom-machine-setup-deb-2-8-cli-2594.md
@@ -814,7 +814,7 @@ custom-machine-setup.md: custom-machine-setup.md
 
 #d
 
-deploy-machines.md: deploy-machines.md
+originals/deploy-machines.md: deploy-machines.md
 	cp deploy-machines.md deploy-machines-deb-2-7-cli-2604.md
 	cp deploy-machines.md deploy-machines-deb-2-7-ui-2605.md
 	cp deploy-machines.md deploy-machines-deb-2-8-cli-2606.md
@@ -844,7 +844,7 @@ deploy-machines.md: deploy-machines.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-disk-erasure.md: disk-erasure.md
+originals/disk-erasure.md: disk-erasure.md
 	cp disk-erasure.md disk-erasure-deb-2-7-cli-2616.md
 	cp disk-erasure.md disk-erasure-deb-2-7-ui-2617.md
 	cp disk-erasure.md disk-erasure-deb-2-8-cli-2618.md
@@ -877,7 +877,7 @@ disk-erasure.md: disk-erasure.md
 
 #e
 
-event-logs.md: event-logs.md
+originals/event-logs.md: event-logs.md
 	cp event-logs.md event-logs-deb-2-7-cli-3388.md
 	cp event-logs.md event-logs-deb-2-7-ui-3389.md
 	cp event-logs.md event-logs-deb-2-8-cli-3390.md
@@ -909,14 +909,14 @@ event-logs.md: event-logs.md
 
 #g
 
-getting-help.md: getting-help.md
+originals/getting-help.md: getting-help.md
 	cp getting-help.md getting-help-838.md
 	xpub push discourse getting-help-838.md
 	cd ./originals && xpub pull discourse 838 838
 	cd ./originals && cp -p getting-help-838.md getting-help.md
 	mv getting-help-838.md ./rad-versions
 
-give-me-an-example-of-maas.md: give-me-an-example-of-maas.md
+originals/give-me-an-example-of-maas.md: give-me-an-example-of-maas.md
 	cp give-me-an-example-of-maas.md give-me-an-example-of-maas-deb-2-7-cli-2652.md
 	cp give-me-an-example-of-maas.md give-me-an-example-of-maas-deb-2-7-ui-2653.md
 	cp give-me-an-example-of-maas.md give-me-an-example-of-maas-deb-2-8-cli-2654.md
@@ -948,7 +948,7 @@ give-me-an-example-of-maas.md: give-me-an-example-of-maas.md
 
 #h
 
-hardening-your-maas-installation.md: hardening-your-maas-installation.md
+originals/hardening-your-maas-installation.md: hardening-your-maas-installation.md
 	cp hardening-your-maas-installation.md hardening-your-maas-installation-deb-2-7-cli-2664.md
 	cp hardening-your-maas-installation.md hardening-your-maas-installation-deb-2-7-ui-2665.md
 	cp hardening-your-maas-installation.md hardening-your-maas-installation-deb-2-8-cli-2666.md
@@ -977,7 +977,7 @@ hardening-your-maas-installation.md: hardening-your-maas-installation.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-hardware-testing.md: hardware-testing.md
+originals/hardware-testing.md: hardware-testing.md
 	cp hardware-testing.md hardware-testing-deb-2-7-cli-2676.md
 	cp hardware-testing.md hardware-testing-deb-2-7-ui-2677.md
 	cp hardware-testing.md hardware-testing-deb-2-8-cli-2678.md
@@ -1007,7 +1007,7 @@ hardware-testing.md: hardware-testing.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-high-availability.md: high-availability.md
+originals/high-availability.md: high-availability.md
 	cp high-availability.md high-availability-deb-2-7-cli-2688.md
 	cp high-availability.md high-availability-deb-2-7-ui-2689.md
 	cp high-availability.md high-availability-deb-2-8-cli-2690.md
@@ -1039,7 +1039,7 @@ high-availability.md: high-availability.md
 
 #i
 
-images.md: images.md
+originals/images.md: images.md
 	cp images.md images-deb-2-7-cli-2700.md
 	cp images.md images-deb-2-7-ui-2701.md
 	cp images.md images-deb-2-8-cli-2702.md
@@ -1069,7 +1069,7 @@ images.md: images.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-interactive-search.md: interactive-search.md
+originals/interactive-search.md: interactive-search.md
 	cp interactive-search.md interactive-search-deb-2-7-cli-2712.md
 	cp interactive-search.md interactive-search-deb-2-7-ui-2713.md
 	cp interactive-search.md interactive-search-deb-2-8-cli-2714.md
@@ -1099,7 +1099,7 @@ interactive-search.md: interactive-search.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-ip-ranges.md: ip-ranges.md
+originals/ip-ranges.md: ip-ranges.md
 	cp ip-ranges.md ip-ranges-deb-2-7-cli-2760.md
 	cp ip-ranges.md ip-ranges-deb-2-7-ui-2761.md
 	cp ip-ranges.md ip-ranges-deb-2-8-cli-2762.md
@@ -1129,7 +1129,7 @@ ip-ranges.md: ip-ranges.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-ipv6-addressing.md: ipv6-addressing.md
+originals/ipv6-addressing.md: ipv6-addressing.md
 	cp ipv6-addressing.md ipv6-addressing-deb-2-7-cli-2772.md
 	cp ipv6-addressing.md ipv6-addressing-deb-2-7-ui-2773.md
 	cp ipv6-addressing.md ipv6-addressing-deb-2-8-cli-2774.md
@@ -1161,7 +1161,7 @@ ipv6-addressing.md: ipv6-addressing.md
 
 #k
 
-kernel-boot-options.md: kernel-boot-options.md
+originals/kernel-boot-options.md: kernel-boot-options.md
 	cp kernel-boot-options.md kernel-boot-options-deb-2-7-cli-2784.md
 	cp kernel-boot-options.md kernel-boot-options-deb-2-7-ui-2785.md
 	cp kernel-boot-options.md kernel-boot-options-deb-2-8-cli-2786.md
@@ -1193,14 +1193,14 @@ kernel-boot-options.md: kernel-boot-options.md
 
 #l
 
-language-details-contributing-to-maas-docs.md: language-details-contributing-to-maas-docs.md
+originals/language-details-contributing-to-maas-docs.md: language-details-contributing-to-maas-docs.md
 	cp language-details-contributing-to-maas-docs.md language-details-contributing-to-maas-docs-745.md
 	xpub push discourse language-details-contributing-to-maas-docs-745.md
 	cd ./originals && xpub pull discourse 745 745
 	cd ./originals && cp -p language-details-contributing-to-maas-docs-745.md language-details-contributing-to-maas-docs.md
 	mv language-details-contributing-to-maas-docs-745.md ./rad-versions
 
-local-image-mirror.md: local-image-mirror.md
+originals/local-image-mirror.md: local-image-mirror.md
 	cp local-image-mirror.md local-image-mirror-deb-2-7-cli-2808.md
 	cp local-image-mirror.md local-image-mirror-deb-2-7-ui-2809.md
 	cp local-image-mirror.md local-image-mirror-deb-2-8-cli-2810.md
@@ -1232,14 +1232,14 @@ local-image-mirror.md: local-image-mirror.md
 
 #m
 
-maas-cli.md: maas-cli.md
+originals/maas-cli.md: maas-cli.md
 	cp maas-cli.md maas-cli-802.md
 	xpub push discourse maas-cli-802.md
 	cd ./originals && xpub pull discourse 802 802
 	cd ./originals && cp -p maas-cli-802.md maas-cli.md
 	mv maas-cli-802.md ./rad-versions
  
-maas-communication.md: maas-communication.md
+originals/maas-communication.md: maas-communication.md
 	cp maas-communication.md maas-communication-deb-2-7-cli-2832.md
 	cp maas-communication.md maas-communication-deb-2-7-ui-2833.md
 	cp maas-communication.md maas-communication-deb-2-8-cli-2834.md
@@ -1269,7 +1269,7 @@ maas-communication.md: maas-communication.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-maas-documentation.md: maas-documentation.md
+originals/maas-documentation.md: maas-documentation.md
 	cp maas-documentation.md maas-documentation-25.md
 	cp maas-documentation.md maas-documentation-deb-2-7-cli-2844.md
 	cp maas-documentation.md maas-documentation-deb-2-7-ui-2845.md
@@ -1312,7 +1312,7 @@ maas-documentation.md: maas-documentation.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-maas-image-builder.md: maas-image-builder.md
+originals/maas-image-builder.md: maas-image-builder.md
 	cp maas-image-builder.md maas-image-builder-deb-2-7-cli-2856.md
 	cp maas-image-builder.md maas-image-builder-deb-2-7-ui-2857.md
 	cp maas-image-builder.md maas-image-builder-deb-2-8-cli-2858.md
@@ -1342,7 +1342,7 @@ maas-image-builder.md: maas-image-builder.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-maas-installation.md: maas-installation.md
+originals/maas-installation.md: maas-installation.md
 	cp maas-installation.md maas-installation-deb-2-7-cli-3324.md
 	cp maas-installation.md maas-installation-deb-2-7-ui-3325.md
 	cp maas-installation.md maas-installation-deb-2-8-cli-3326.md
@@ -1372,7 +1372,7 @@ maas-installation.md: maas-installation.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
 
-maas-logging.md: maas-logging.md
+originals/maas-logging.md: maas-logging.md
 	cp maas-logging.md maas-logging-deb-2-7-cli-2868.md
 	cp maas-logging.md maas-logging-deb-2-7-ui-2869.md
 	cp maas-logging.md maas-logging-deb-2-8-cli-2870.md
@@ -1402,7 +1402,7 @@ maas-logging.md: maas-logging.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-maas-requirements.md: maas-requirements.md
+originals/maas-requirements.md: maas-requirements.md
 	cp maas-requirements.md maas-requirements-deb-2-7-cli-2880.md
 	cp maas-requirements.md maas-requirements-deb-2-7-ui-2881.md
 	cp maas-requirements.md maas-requirements-deb-2-8-cli-2882.md
@@ -1432,7 +1432,7 @@ maas-requirements.md: maas-requirements.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
 
-maas-tags.md: maas-tags.md
+originals/maas-tags.md: maas-tags.md
 	cp maas-tags.md maas-tags-deb-2-7-cli-2892.md
 	cp maas-tags.md maas-tags-deb-2-7-ui-2893.md
 	cp maas-tags.md maas-tags-deb-2-8-cli-2894.md
@@ -1462,7 +1462,7 @@ maas-tags.md: maas-tags.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-machine-logs.md: machine-logs.md
+originals/machine-logs.md: machine-logs.md
 	cp machine-logs.md machine-logs-deb-2-7-cli-3448.md
 	cp machine-logs.md machine-logs-deb-2-7-ui-3449.md
 	cp machine-logs.md machine-logs-deb-2-8-cli-3450.md
@@ -1492,7 +1492,7 @@ machine-logs.md: machine-logs.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
 
-machines.md: machines.md
+originals/machines.md: machines.md
 	cp machines.md machines-deb-2-7-cli-2736.md
 	cp machines.md machines-deb-2-7-ui-2737.md
 	cp machines.md machines-deb-2-8-cli-2738.md
@@ -1522,7 +1522,7 @@ machines.md: machines.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-managing-dhcp.md: managing-dhcp.md
+originals/managing-dhcp.md: managing-dhcp.md
 	cp managing-dhcp.md managing-dhcp-deb-2-7-cli-2904.md
 	cp managing-dhcp.md managing-dhcp-deb-2-7-ui-2905.md
 	cp managing-dhcp.md managing-dhcp-deb-2-8-cli-2906.md
@@ -1552,7 +1552,7 @@ managing-dhcp.md: managing-dhcp.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-managing-stp.md: managing-stp.md
+originals/managing-stp.md: managing-stp.md
 	cp managing-stp.md managing-stp-deb-2-7-cli-2916.md
 	cp managing-stp.md managing-stp-deb-2-7-ui-2917.md
 	cp managing-stp.md managing-stp-deb-2-8-cli-2918.md
@@ -1584,7 +1584,7 @@ managing-stp.md: managing-stp.md
 
 #n
 
-network-discovery.md: network-discovery.md
+originals/network-discovery.md: network-discovery.md
 	cp network-discovery.md network-discovery-deb-2-7-cli-2928.md
 	cp network-discovery.md network-discovery-deb-2-7-ui-2929.md
 	cp network-discovery.md network-discovery-deb-2-8-cli-2930.md
@@ -1614,7 +1614,7 @@ network-discovery.md: network-discovery.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-networking.md: networking.md
+originals/networking.md: networking.md
 	cp networking.md networking-deb-2-7-cli-2952.md
 	cp networking.md networking-deb-2-7-ui-2953.md
 	cp networking.md networking-deb-2-8-cli-2954.md
@@ -1644,7 +1644,7 @@ networking.md: networking.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-network-testing.md: network-testing.md
+originals/network-testing.md: network-testing.md
 	cp network-testing.md network-testing-deb-2-7-cli-2940.md
 	cp network-testing.md network-testing-deb-2-7-ui-2941.md
 	cp network-testing.md network-testing-deb-2-8-cli-2942.md
@@ -1674,7 +1674,7 @@ network-testing.md: network-testing.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-ntp-services.md: ntp-services.md
+originals/ntp-services.md: ntp-services.md
 	cp ntp-services.md ntp-services-deb-2-7-cli-2964.md
 	cp ntp-services.md ntp-services-deb-2-7-ui-2965.md
 	cp ntp-services.md ntp-services-deb-2-8-cli-2966.md
@@ -1706,7 +1706,7 @@ ntp-services.md: ntp-services.md
 
 #p
 
-package-repositories.md: package-repositories.md
+originals/package-repositories.md: package-repositories.md
 	cp package-repositories.md package-repositories-deb-2-7-cli-2976.md
 	cp package-repositories.md package-repositories-deb-2-7-ui-2977.md
 	cp package-repositories.md package-repositories-deb-2-8-cli-2978.md
@@ -1724,7 +1724,7 @@ package-repositories.md: package-repositories.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
 
-partitions.md: partitions.md
+originals/partitions.md: partitions.md
 	cp partitions.md partitions-deb-2-7-cli-2988.md
 	cp partitions.md partitions-deb-2-7-ui-2989.md
 	cp partitions.md partitions-deb-2-8-cli-2990.md
@@ -1754,7 +1754,7 @@ partitions.md: partitions.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-postgresql-ha-hot-standby.md: postgresql-ha-hot-standby.md
+originals/postgresql-ha-hot-standby.md: postgresql-ha-hot-standby.md
 	cp postgresql-ha-hot-standby.md postgresql-ha-hot-standby-deb-2-7-cli-3000.md
 	cp postgresql-ha-hot-standby.md postgresql-ha-hot-standby-deb-2-7-ui-3001.md
 	cp postgresql-ha-hot-standby.md postgresql-ha-hot-standby-deb-2-8-cli-3002.md
@@ -1784,7 +1784,7 @@ postgresql-ha-hot-standby.md: postgresql-ha-hot-standby.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-power-management.md: power-management.md
+originals/power-management.md: power-management.md
 	cp power-management.md power-management-deb-2-7-cli-3012.md
 	cp power-management.md power-management-deb-2-7-ui-3013.md
 	cp power-management.md power-management-deb-2-8-cli-3014.md
@@ -1814,7 +1814,7 @@ power-management.md: power-management.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-prometheus-metrics.md: prometheus-metrics.md
+originals/prometheus-metrics.md: prometheus-metrics.md
 	cp prometheus-metrics.md prometheus-metrics-deb-2-7-cli-3024.md
 	cp prometheus-metrics.md prometheus-metrics-deb-2-7-ui-3025.md
 	cp prometheus-metrics.md prometheus-metrics-deb-2-8-cli-3026.md
@@ -1844,7 +1844,7 @@ prometheus-metrics.md: prometheus-metrics.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-proxy.md: proxy.md
+originals/proxy.md: proxy.md
 	cp proxy.md proxy-deb-2-7-cli-3036.md
 	cp proxy.md proxy-deb-2-7-ui-3037.md
 	cp proxy.md proxy-deb-2-8-cli-3038.md
@@ -1874,7 +1874,7 @@ proxy.md: proxy.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
 
-proxy-log.md: proxy-log.md
+originals/proxy-log.md: proxy-log.md
 	cp proxy-log.md proxy-log-deb-2-7-cli-3460.md
 	cp proxy-log.md proxy-log-deb-2-7-ui-3461.md
 	cp proxy-log.md proxy-log-deb-2-8-cli-3462.md
@@ -1904,7 +1904,7 @@ proxy-log.md: proxy-log.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
 
-python-api-client.md: python-api-client.md
+originals/python-api-client.md: python-api-client.md
 	cp python-api-client.md python-api-client-810.md
 	xpub push discourse python-api-client-810.md
 	cd ./originals && xpub pull discourse 810 810
@@ -1913,7 +1913,7 @@ python-api-client.md: python-api-client.md
 
 #r
 
-rack-controllers.md: rack-controllers.md
+originals/rack-controllers.md: rack-controllers.md
 	cp rack-controllers.md rack-controllers-snap-2-7-cli-3054.md
 	cp rack-controllers.md rack-controllers-snap-2-7-ui-3055.md
 	cp rack-controllers.md rack-controllers-snap-2-8-cli-3056.md
@@ -1943,7 +1943,7 @@ rack-controllers.md: rack-controllers.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
 
-region-controllers.md: region-controllers.md
+originals/region-controllers.md: region-controllers.md
 	cp region-controllers.md region-controllers-deb-2-7-cli-3072.md
 	cp region-controllers.md region-controllers-deb-2-7-ui-3073.md
 	cp region-controllers.md region-controllers-deb-2-8-cli-3074.md
@@ -1973,7 +1973,7 @@ region-controllers.md: region-controllers.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-resource-pools.md: resource-pools.md
+originals/resource-pools.md: resource-pools.md
 	cp resource-pools.md resource-pools-deb-2-7-cli-3084.md
 	cp resource-pools.md resource-pools-deb-2-7-ui-3085.md
 	cp resource-pools.md resource-pools-deb-2-8-cli-3086.md
@@ -2005,7 +2005,7 @@ resource-pools.md: resource-pools.md
 
 #s
 
-select-and-import-images.md: select-and-import-images.md
+originals/select-and-import-images.md: select-and-import-images.md
 	cp select-and-import-images.md select-and-import-images-deb-2-7-cli-3096.md
 	cp select-and-import-images.md select-and-import-images-deb-2-7-ui-3097.md
 	cp select-and-import-images.md select-and-import-images-deb-2-8-cli-3098.md
@@ -2035,7 +2035,7 @@ select-and-import-images.md: select-and-import-images.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-storage.md: storage.md
+originals/storage.md: storage.md
 	cp storage.md storage-deb-2-7-cli-3108.md
 	cp storage.md storage-deb-2-7-ui-3109.md
 	cp storage.md storage-deb-2-8-cli-3110.md
@@ -2065,7 +2065,7 @@ storage.md: storage.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
 
-subnet-management.md: subnet-management.md
+originals/subnet-management.md: subnet-management.md
 	cp subnet-management.md subnet-management-deb-2-7-cli-3120.md
 	cp subnet-management.md subnet-management-deb-2-7-ui-3121.md
 	cp subnet-management.md subnet-management-deb-2-8-cli-3122.md
@@ -2097,7 +2097,7 @@ subnet-management.md: subnet-management.md
  
 #t
 
-test-logs.md: test-logs.md
+originals/test-logs.md: test-logs.md
 	cp test-logs.md test-logs-deb-2-7-cli-3132.md
 	cp test-logs.md test-logs-deb-2-7-ui-3133.md
 	cp test-logs.md test-logs-deb-2-8-cli-3134.md
@@ -2127,21 +2127,21 @@ test-logs.md: test-logs.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
 
-the-cli-cookbook.md: the-cli-cookbook.md
+originals/the-cli-cookbook.md: the-cli-cookbook.md
 	cp the-cli-cookbook.md the-cli-cookbook-2218.md
 	xpub push discourse the-cli-cookbook-2218.md
 	cd ./originals && xpub pull discourse 2218 2218
 	cd ./originals && cp -p the-cli-cookbook-2218.md the-cli-cookbook.md
 	mv the-cli-cookbook-2218.md ./rad-versions
   
-tips-tricks-and-traps.md: tips-tricks-and-traps.md
+originals/tips-tricks-and-traps.md: tips-tricks-and-traps.md
 	cp tips-tricks-and-traps.md tips-tricks-and-traps-1506.md
 	xpub push discourse tips-tricks-and-traps-1506.md
 	cd ./originals && xpub pull discourse 1506 1506
 	cd ./originals && cp -p tips-tricks-and-traps-1506.md tips-tricks-and-traps.md
 	mv tips-tricks-and-traps-1506.md ./rad-versions
  
-troubleshooting.md: troubleshooting.md
+originals/troubleshooting.md: troubleshooting.md
 	cp troubleshooting.md troubleshooting-837.md
 	xpub push discourse troubleshooting-837.md
 	cd ./originals && xpub pull discourse 837 837
@@ -2150,7 +2150,7 @@ troubleshooting.md: troubleshooting.md
  
 #u
 
-ubuntu-kernels.md: ubuntu-kernels.md
+originals/ubuntu-kernels.md: ubuntu-kernels.md
 	cp ubuntu-kernels.md ubuntu-kernels-deb-2-7-cli-3180.md
 	cp ubuntu-kernels.md ubuntu-kernels-deb-2-7-ui-3181.md
 	cp ubuntu-kernels.md ubuntu-kernels-deb-2-8-cli-3182.md
@@ -2180,7 +2180,7 @@ ubuntu-kernels.md: ubuntu-kernels.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-upgrading-maas.md: upgrading-maas.md
+originals/upgrading-maas.md: upgrading-maas.md
 	cp upgrading-maas.md upgrading-maas-deb-2-7-cli-3192.md
 	cp upgrading-maas.md upgrading-maas-deb-2-7-ui-3193.md
 	cp upgrading-maas.md upgrading-maas-deb-2-8-cli-3194.md
@@ -2210,7 +2210,7 @@ upgrading-maas.md: upgrading-maas.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
 
-user-accounts.md: user-accounts.md
+originals/user-accounts.md: user-accounts.md
 	cp user-accounts.md user-accounts-deb-2-7-cli-3204.md
 	cp user-accounts.md user-accounts-deb-2-7-ui-3205.md
 	cp user-accounts.md user-accounts-deb-2-8-cli-3206.md
@@ -2240,14 +2240,14 @@ user-accounts.md: user-accounts.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
 
-using-maas-in-an-air-gapped-environment.md: using-maas-in-an-air-gapped-environment.md
+originals/using-maas-in-an-air-gapped-environment.md: using-maas-in-an-air-gapped-environment.md
 	cp using-maas-in-an-air-gapped-environment.md using-maas-in-an-air-gapped-environment-3539.md
 	xpub push discourse using-maas-in-an-air-gapped-environment-3539.md
 	cd ./originals && xpub pull discourse 3539 3539
 	cd ./originals && cp -p using-maas-in-an-air-gapped-environment-3539.md using-maas-in-an-air-gapped-environment.md
 	mv using-maas-in-an-air-gapped-environment-3539.md ./rad-versions
 
-using-rbac-with-maas.md: using-rbac-with-maas.md
+originals/using-rbac-with-maas.md: using-rbac-with-maas.md
 	cp using-rbac-with-maas.md using-rbac-with-maas-snap-2-7-cli-3592.md
 	cp using-rbac-with-maas.md using-rbac-with-maas-snap-2-7-ui-3593.md
 	cp using-rbac-with-maas.md using-rbac-with-maas-snap-2-8-cli-3594.md
@@ -2279,7 +2279,7 @@ using-rbac-with-maas.md: using-rbac-with-maas.md
 
 #v
 
-vm-hosting.md: vm-hosting.md
+originals/vm-hosting.md: vm-hosting.md
 	cp vm-hosting.md vm-hosting-deb-2-7-cli-2748.md
 	cp vm-hosting.md vm-hosting-deb-2-7-ui-2749.md
 	cp vm-hosting.md vm-hosting-deb-2-8-cli-2750.md
@@ -2309,7 +2309,7 @@ vm-hosting.md: vm-hosting.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-vm-host-networking.md: vm-host-networking.md
+originals/vm-host-networking.md: vm-host-networking.md
 	cp vm-host-networking.md vm-host-networking-deb-2-7-cli-3216.md
 	cp vm-host-networking.md vm-host-networking-deb-2-7-ui-3217.md
 	cp vm-host-networking.md vm-host-networking-deb-2-8-cli-3218.md
@@ -2339,7 +2339,7 @@ vm-host-networking.md: vm-host-networking.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-vm-host-storage-pools.md: vm-host-storage-pools.md
+originals/vm-host-storage-pools.md: vm-host-storage-pools.md
 	cp vm-host-storage-pools.md vm-host-storage-pools-deb-2-7-cli-3228.md
 	cp vm-host-storage-pools.md vm-host-storage-pools-deb-2-7-ui-3229.md
 	cp vm-host-storage-pools.md vm-host-storage-pools-deb-2-8-cli-3230.md
@@ -2369,7 +2369,7 @@ vm-host-storage-pools.md: vm-host-storage-pools.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-vmware-images.md: vmware-images.md
+originals/vmware-images.md: vmware-images.md
 	cp vmware-images.md vmware-images-deb-2-7-cli-3240.md
 	cp vmware-images.md vmware-images-deb-2-7-ui-3241.md
 	cp vmware-images.md vmware-images-deb-2-8-cli-3242.md
@@ -2399,7 +2399,7 @@ vmware-images.md: vmware-images.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
-vmware-vmfs-datastores.md: vmware-vmfs-datastores.md
+originals/vmware-vmfs-datastores.md: vmware-vmfs-datastores.md
 	cp vmware-vmfs-datastores.md vmware-vmfs-datastores-deb-2-7-cli-3252.md
 	cp vmware-vmfs-datastores.md vmware-vmfs-datastores-deb-2-7-ui-3253.md
 	cp vmware-vmfs-datastores.md vmware-vmfs-datastores-deb-2-8-cli-3254.md
@@ -2432,7 +2432,7 @@ vmware-vmfs-datastores.md: vmware-vmfs-datastores.md
 
 #w
 
-whats-new-in-maas.md: whats-new-in-maas.md
+originals/whats-new-in-maas.md: whats-new-in-maas.md
 	cp whats-new-in-maas.md whats-new-in-maas-2-7-3335.md
 	cp whats-new-in-maas.md whats-new-in-maas-2-8-3334.md
 	cp whats-new-in-maas.md whats-new-in-maas-2-9-3336.md
@@ -2443,7 +2443,7 @@ whats-new-in-maas.md: whats-new-in-maas.md
 	cd ./originals && cp -p whats-new-in-maas-2-9-3336.md whats-new-in-maas.md
 	mv whats-new-in-maas-* ./rad-versions
 
-writing-guide.md: writing-guide.md
+originals/writing-guide.md: writing-guide.md
 	cp writing-guide.md writing-guide-747.md
 	xpub push discourse writing-guide-747.md
 	cd ./originals && xpub pull discourse 747 747
@@ -2452,7 +2452,7 @@ writing-guide.md: writing-guide.md
  
 #z
 
-zone-examples.md: zone-examples.md
+originals/zone-examples.md: zone-examples.md
 	cp zone-examples.md zone-examples-deb-2-7-cli-3276.md
 	cp zone-examples.md zone-examples-deb-2-7-ui-3277.md
 	cp zone-examples.md zone-examples-deb-2-8-cli-3278.md
@@ -2482,4 +2482,12 @@ zone-examples.md: zone-examples.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
  
+
+# originals/supported-versions-3771.md: supported-versions.md
+#	chmod 644 originals/*
+#	cp supported-versions.md supported-versions-3771.md
+#	xpub pull discourse 3771 3771
+#	cp -p supported-versions-3771.md originals
+#	rm supported-versions-3771.md
+#	chmod 444 originals/*
 

@@ -1,535 +1,202 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
-    <style>
-      #selector a:link{color:black;}
-      #selector a:visited{color:black;}
-      #selector a:active{color:black;}
-      #selector a:hover{color:blue;}
-      #sidebar a:link{color:black;}
-      #sidebar a:visited{color:black;}
-      #sidebar a:active{color:black;}
-      #sidebar a:hover{color:blue;}
-      ul {margin-left:0;list-style-type:none;}
-      li {margin: 4px 0;}
-    </style>
-  </head>
-  <body>
-    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
-      &nbsp;&nbsp;<strong>Offline docs</strong>
-      <a href="https://maas.io/docs">(switch to live docs)</a>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-	  UI-only
-      </span>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="cli/whats-new-in-maas.html">
-	  CLI-only
-	</a>
-    </div>
-    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
-      <strong>
-	<a href="../maas-documentation.html">
-	  Introduction
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="about-maas.html">
-	    About MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="give-me-an-example-of-maas.html">
-	    &ldquo;Give me an example&rdquo;
-	  </a>
-	</li>
-	<li>
-	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.7
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-requirements.html">
-	    Requirements
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-installation.html">
-	    Installation
-	  </a>
-	</li>
-	<li>
-	  <a href="configuration-journey.html">
-	    Configuration journey
-	  </a>
-	</li>
-      <strong>
-	<a href="controllers.html">
-	  Controllers
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="maas-communication.html">
-	    Communication
-	  </a>
-	</li>
-	<li>
-	  <a href="rack-controllers.html">
-	    Rack controllers
-	  </a>
-	</li>
-	<li>
-	  <a href="region-controllers.html">
-	    Region controllers
-	  </a>
-	</li>
-	<li>
-	  <a href="high-availability.html">
-	    High availability
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="machines.html">
-	  Machines
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="add-machines.html">
-	    Add machines
-	  </a>
-	</li>
-	<li>
-	  <a href="power-management.html">
-	    Power management
-	  </a>
-	</li>
-	<li>
-	  <a href="commission-machines.html">
-	    Commission machines
-	  </a>
-	</li>
-	<li>Testing
-	</li>
-	<li>
-	  <a href="hardware-testing.html">
-	    Hardware testing
-	  </a>
-	</li>
-	<li>
-	  <a href="network-testing.html">
-	    Network testing
-	  </a>
-	</li>
-	<li>
-	  <a href="commissioning-and-hardware-testing-scripts.html">
-	    Commissioning and hardware testing scripts
-	  </a>
-	</li>
-	<li>
-	  <a href="deploy-machines.html">
-	    Deploy machines
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-tags.html">
-	    Tags
-	  </a>
-	</li>
-	<li>
-	  <a href="custom-machine-setup.html">
-	    Custom machine setup
-	  </a>
-	</li>
-	<li>
-	  <a href="kernel-boot-options.html">
-	    Kernel boot options
-	  </a>
-	</li>
-	<li>
-	  <a href="resource-pools.html">
-	    Resource pools
-	  </a>
-	</li>
-	<li>
-	  <a href="storage.html">
-	    Storage
-	  </a>
-	</li>
-	<li>
-	  <a href="vmware-vmfs-datastores.html">
-	    VMware VMFS datastores
-	  </a>
-	</li>
-	<li>
-	  <a href="ubuntu-kernels.html">
-	    Ubuntu kernels
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="images.html">
-	  Images
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="select-and-import-images.html">
-	    Select and import images
-	  </a>
-	</li>
-	<li>
-	  <a href="local-image-mirror.html">
-	    Local image mirror
-	  </a>
-	</li>
-	<li>
-	  <a href="vmware-images.html">
-	    VMWare images
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="networking.html">
-	  Networking
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="subnet-management.html">
-	    Subnet management
-	  </a>
-	</li>
-	<li>
-	  <a href="managing-dhcp.html">
-	    DHCP
-	  </a>
-	</li>
-	<li>
-	  <a href="ip-ranges.html">
-	    IP ranges
-	  </a>
-	</li>
-	<li>
-	  <a href="proxy.html">
-	    Proxy
-	  </a>
-	</li>
-	<li>
-	  <a href="ntp-services.html">
-	    NTP
-	  </a>
-	</li>
-	<li>
-	  <a href="network-discovery.html">
-	    Network discovery
-	  </a>
-	</li>
-	<li>
-	  <a href="ipv6-addressing.html">
-	    IPv6
-	  </a>
-	</li>
-	<li>
-	  <a href="configuring-tls-encryption.html">
-	    SSL
-	  </a>
-	</li>
-	<li>
-	  <a href="managing-stp.html">
-	    STP
-	  </a>
-	</li>
-	<li>
-	  <a href="availability-zones.html">
-	    Availability zones (AZs)
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="vm-hosting.html">
-	  VM hosting
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="vm-host-networking.html">
-	    VM host networking
-	  </a>
-	</li>
-	<li>
-	  <a href="adding-a-vm-host.html">
-	    Add a VM host
-	  </a>
-	</li>
-	<li>
-	  <a href="vm-host-storage-pools.html">
-	    VM host storage pools
-	  </a>
-	</li>
-	<li>
-	  <a href="creating-and-deleting-vms.html">
-	    Creating and deleting VMs
-	  </a>
-	</li>
-      </ul>
-      <strong>Operations
-      </strong>
-      <ul>
-	<li>
-	  <a href="prometheus-metrics.html">
-	    Prometheus metrics
-	  </a>
-	</li>
-	<li>
-	  <a href="backup.html">
-	    Backup
-	  </a>
-	</li>
-	<li>
-	  <a href="hardening-your-maas-installation.html">
-	    MAAS security
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-logging.html">
-	    Logging
-	  </a>
-	</li>
-	<li>
-	  <a href="commissioning-logs.html">
-	    Commissioning logs
-	  </a>
-	</li>
-	<li>
-	  <a href="user-accounts.html">
-	    User accounts
-	  </a>
-	</li>
-	<li>
-	  <a href="interactive-search.html">
-	    Interactive search
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="concepts-and-terms.html">
-	  Concepts &amp; terms
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="concepts-and-terms.html#heading--network-tutorial">
-	    Brief network tutorial
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="maas-cli.html">
-	  CLI
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="common-cli-tasks.html">
-	    The CLI cookbook
-	  </a>
-	</li>
-	<li>
-	  <a href="common-cli-tasks.html">
-	    Common tasks
-	  </a>
-	</li>
-	<li>
-	  <a href="audit-event-logs.html">
-	    Audit event logs
-	  </a>
-	</li>
-	<li>
-	  <a href="cli-kernel-management.html">
-	    Kernel management
-	  </a>
-	</li>
-	<li>
-	  <a href="cli-image-management.html">
-	    Image management
-	  </a>
-	</li>
-	<li>
-	  <a href="cli-interface-management.html">
-	    Interface management
-	  </a>
-	</li>
-	<li>
-	  <a href="cli-advanced-tasks.html">
-	    Advanced tasks
-	  </a>
-	</li>
-	<li>
-	  <a href="cli-composable-hardware.html">
-	    Composable hardware
-	  </a>
-	</li>
-	<li>
-	  <a href="python-api-client.html">
-	    API client
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="api.html">
-	  API documentation
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="api-authentication.html">
-	    API authentication
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="troubleshooting.html">
-	  Troubleshoot
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="getting-help.html">
-	    Getting help
-	  </a>
-	</li>
-	<li>
-	  <a href="tips-tricks-and-traps.html">
-	    Tips, tricks, and traps
-	  </a>
-	</li>
-	<li>
-	  <a href="https://old-docs.maas.io/2.5/en/">
-	    MAAS 2.5 (+ earlier) doc
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="whats-new-in-maas.html">
-	  Release notes
-	</a>
-      </strong>
-      <p/>
-      <strong>
-	<a href="writing-guide.html">
-	  Help improve these docs
-	</a>
-      </strong>
-    </div>
-    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Whats new in MAAS</h1><!-- deb-2-7
+<!-- deb-2-7
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
+|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 deb-2-7 -->
 
 <!-- snap-2-7
+||2.7|2.8|2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3335) ~ [UI](/t/whats-new-in-maas/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
+|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 snap-2-7 -->
 
+<!-- snap-2-7-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
+|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
+snap-2-7-ui -->
+
 <!-- deb-2-7-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
+|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 deb-2-7-ui -->
 
 <!-- snap-2-8-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335) | CLI ~ UI |[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336) |
+|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335) |CLI ~ UI |[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336) |
 snap-2-8-cli -->
 
 <!-- snap-2-8-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
+|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 snap-2-8-ui -->
 
 <!-- deb-2-8-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
+|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~  UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 deb-2-8-cli -->
 
 <!-- deb-2-8-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
+|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
 deb-2-8-ui -->
 
 <!-- snap-2-9-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~  UI|
+|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
 snap-2-9-cli -->
 
 <!-- snap-2-9-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
+|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
 snap-2-9-ui -->
 
 <!-- deb-2-9-cli
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
+|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
 deb-2-9-cli -->
 
 <!-- deb-2-9-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
+|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
 deb-2-9-ui -->
 
+<!-- snap-2-7 snap-2-7-ui deb-2-7 deb-2-7-ui
 <h2>MAAS 2.7 release notes</h2>
 
 <h3>MAAS 2.7.3 released</h3>
 
-<p>On 24 August 2020, MAAS 2.7.3 was released, replacing the <code>2.7/stable</code> channel in snap and the <a href="https://launchpad.net/~maas/+archive/ubuntu/2.7">ppa:maas/2.7</a>.  You can update your 2.7 release to 2.7.3 by with:</p>
-<pre><code>snap refresh --channel=2.7/stable
-</code></pre>
-<p>or by using the aforementioned PPA.  The focus for this release has been <a href="https://launchpad.net/maas/+milestone/2.7.3rc1">bugfixing</a> &ndash; there were no changes to MAAS since RC1.</p>
-<p>Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.</p>
+On 24 August 2020, MAAS 2.7.3 was released, replacing the `2.7/stable` channel in snap and the [ppa:maas/2.7](https://launchpad.net/~maas/+archive/ubuntu/2.7).  You can update your 2.7 release to 2.7.3 by with:
+
+    snap refresh --channel=2.7/stable
+
+or by using the aforementioned PPA.  The focus for this release has been [bugfixing](https://launchpad.net/maas/+milestone/2.7.3rc1) -- there were no changes to MAAS since RC1.
+
+Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
+
 <h3>MAAS 2.7.2 released</h3>
 
-<p>On 30 July 2020, MAAS 2.7.2 was released, replacing the <code>2.7/stable</code> channel in snap and the <a href="https://launchpad.net/~maas/+archive/ubuntu/2.7">ppa:maas/2.7</a>.  You can update your 2.7 release to 2.7.2 by with:</p>
-<pre><code>snap refresh --channel=2.7/stable
-</code></pre>
-<p>or by using the aforementioned PPA.  The focus for this release has been <a href="https://launchpad.net/maas/+milestone/2.7.2rc1">bugfixing</a> &ndash; there were no changes to MAAS since RC1.</p>
-<p>Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.</p>
-<p><a href="#heading--upgrade-2-6-to-2-7-snap"><h3 id="heading--upgrade-2-6-to-2-7-snap">Upgrading from MAAS 2.6 snap</h3></a> </p>
-<p>If you are using the MAAS 2.6 snap, which had to be installed with <code>--devmode</code>, you can update to 2.7 with the following parameters:</p>
-<pre><code>snap refresh maas --devmode --channel=2.7
-</code></pre>
-<p>Be aware that you will still be in <code>--devmode</code>, which means the snap won&rsquo;t automatically upgrade.  You&rsquo;ll have to check manually for updates (via <code>snap refresh</code>).  Once you’re upgraded to MAAS 2.7 using this method, future snap updates won’t require the devmode parameter. So, for example, when a later version of 2.7 (or even 2.8) is released, you will be able to <code>snap refresh</code> to those channels and get out of devmode.  Once refreshed out of devmode in this way, you&rsquo;ll get updates for point releases automatically.</p>
-<p>An alternative to avoid devmode would be to do a clean install of MAAS 2.7, that is, removing 2.6 with <code>snap remove maas</code> and reinstalling MAAS 2.7 with:</p>
-<pre><code>snap install --channel=2.7 maas
-</code></pre>
-<p>Note that you can check the devmode status of your snap with:</p>
-<pre><code>snap list maas
-</code></pre>
-<hr>
+On 30 July 2020, MAAS 2.7.2 was released, replacing the `2.7/stable` channel in snap and the [ppa:maas/2.7](https://launchpad.net/~maas/+archive/ubuntu/2.7).  You can update your 2.7 release to 2.7.2 by with:
+
+    snap refresh --channel=2.7/stable
+
+or by using the aforementioned PPA.  The focus for this release has been [bugfixing](https://launchpad.net/maas/+milestone/2.7.2rc1) -- there were no changes to MAAS since RC1.
+
+Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
+
+<a href="#heading--upgrade-2-6-to-2-7-snap"><h3 id="heading--upgrade-2-6-to-2-7-snap">Upgrading from MAAS 2.6 snap</h3></a> 
+
+If you are using the MAAS 2.6 snap, which had to be installed with `--devmode`, you can update to 2.7 with the following parameters:
+
+    snap refresh maas --devmode --channel=2.7
+
+Be aware that you will still be in `--devmode`, which means the snap won't automatically upgrade.  You'll have to check manually for updates (via `snap refresh`).  Once you’re upgraded to MAAS 2.7 using this method, future snap updates won’t require the devmode parameter. So, for example, when a later version of 2.7 (or even 2.8) is released, you will be able to `snap refresh` to those channels and get out of devmode.  Once refreshed out of devmode in this way, you'll get updates for point releases automatically.
+
+An alternative to avoid devmode would be to do a clean install of MAAS 2.7, that is, removing 2.6 with `snap remove maas` and reinstalling MAAS 2.7 with:
+
+    snap install --channel=2.7 maas
+
+Note that you can check the devmode status of your snap with:
+
+    snap list maas
+
+
+---
+
 <h2>MAAS 2.7 released</h2>
 
-<p>Following on from MAAS 2.6.2, we are happy to announce that MAAS 2.7 is now available. This release features some critical bug fixes, along with some exciting new features:</p>
-<h3>CentOS 8 image support</h3>
-<p>Users can now deploy CentOS 8 images in MAAS. The Images page in the MAAS UI will now offer a choice to select and download CentOS 8. Note that users of previous versions may see CentOS 8 as an available option, but cannot download or deploy it.</p>
-<h3>Network testing features</h3>
-<p>MAAS 2.7 brings a slate of new network testing and link detection features, as detailed below.</p>
-<h4>Network link disconnect detection</h4>
-<p>MAAS 2.7 can check whether links are connected or disconnected. Previously, when commissioning, you couldn’t detect unplugged cables. Now you can. You will have to take a couple of steps for existing MAAS deployments: First, you will have to upgrade to 2.7, then run commissioning again to see if a link is disconnected. But you no longer have to puzzle over what’s broken when this happens.</p>
-<p>MAAS will report disconnected network cables, and users will receive a warning when trying to configure a disconnected interface. Administrators will be able to change cable connection status through both API and UI after manually rectifying the situation.</p>
-<h4>Slow network link detection</h4>
-<p>MAAS 2.7 makes sure you’re getting the most out of your link speed. As servers and hardware get faster — 10G, 40G, even 100G NICS — the chances increase that you might plug your 10G NIC into a 1G switch, for example. Previously, with MAAS, you’d be stuck with the speed of the slowest link, but there wasn’t a way to verify your link speed without recommissioning. Depending on your physical hardware, that might still be an issue, but the MAAS UI can now warn you if your interface is connected to a link slower than what the interface supports. And all information shown in the UI is available via the API, as well. You can still replace a slow switch without recommissioning.</p>
-<p>MAAS will automatically detect link and interface speed during commissioning and report them via the API/UI. Administrators will be able to change or update the link and interface speeds via the API/UI after manual changes to the connection. MAAS 2.7 will also report link speed, allowing users to filter and list machines by their link speed in the UI. Users can also employ this information to allocate machines by their link speed in the API.</p>
-<h4>Network validation scripts and testing</h4>
-<p>MAAS 2.7 allows you to configure network connectivity testing in a number of ways. If you’ve used MAAS, you know that if it can’t connect to the rack controller, deployment can’t complete. Now MAAS can check connectivity to the rack controller and warn you if there’s no link, long before you have to try and debug it. For example, if you can’t connect to your gateway controller, traffic can’t leave your network. MAAS can now check this link and recognise that there’s no connectivity, which alleviates a lot of annoying (and sometimes hard-to-detect) network issues.</p>
-<p>Users can now test their network configuration to check for:</p>
-<ol>
-<li>Interfaces which have a broken network configuration</li>
-<li>Bonds that are not fully operational</li>
-<li>Broken gateways, rack controllers, and Internet links</li>
-</ol>
-<p>In addition, Internet connectivity testing has been greatly expanded. Previously, MAAS gave a yes/no link check during network testing. Now you can give a list of URLs or IP addresses to check. In the ephemeral environment, standard DHCP is still applied, but when network testing runs, we can apply your specific configuration for the duration of the test. While all URLs / IPs are tested with all interfaces, we do test each of your interfaces individually, including breaking apart bonded NICS and testing each side of your redundant interfaces. You can also run different tests on each pass, e.g., a different set of URLs, although each run would be a different testing cycle. For testing individual interfaces, you can use the API.</p>
-<p>Of course, the main network feature available in 2.7 is improved — and customisable — network testing. You can now create your own commissioning scripts and tests related to networking. You can create your own network tests (e.g., a network throughput test) and run them during the network testing portion of the MAAS workflow. There are no particular restrictions on these scripts, so you can test a wide variety of possible conditions and situations.</p>
-<p>Administrators can upload network tests and test scripts, as well as create tests which accept an interface parameter, or scripts which apply custom network configurations. Users can then specify (unique) parameters using the API, override machines which fail network testing (allowing their use), and suppress individual failed network tests. All users benefit from enhanced reporting, as they are now able to see the overall status of all interfaces via the API, the UI Machine list, and the UI Interfaces tab; review the health status from all interface tests; and view the interface test results by interface name and MAC.</p>
-<h4>Live IP address detection to prevent address conflicts</h4>
-<p>In some cases, MAAS connects with subnet which are not empty. Normally, the user has to tell MAAS about IP addresses which are already assigned on that subnet, and if that step is skipped, MAAS may assign and in-use IP address to one of the machines under its control, leading to an IP conflict.</p>
-<p>MAAS 2.7 alleviates this problem by detecting IPs in use on a subnet, so that it can avoid assigning that IP to a MAAS-managed machine. The system is not perfect; for example, if NIC on a subnet-connected machine is in a quiescent state &ndash; or turned off &ndash; MAAS may not detect it before duplicating the IP. Note that at least one rack controller must have access to the previously-assigned machine in order for this feature to work. MAAS 2.7 will also recognise when the subnet ARP cache is full and re-check the oldest IPs added to the cache to search for free IP addresses.</p>
-<h3>Introductory NUMA / SR-IOV support</h3>
-<p>NUMA (Non-Uniform Memory Access) is a useful way of achieving high-efficiency computing, by pairing a CPU core with a very fast connection to RAM and PCI buses. Typically the CPU socket and the closest banks of DIMM constitute a NUMA node. Obviously, if you’re deploying a MAAS machine under NUMA to get maximum performance, you would like for that machine to be confined to a single NUMA node. MAAS 2.7 introduces this capability.</p>
-<p>MAAS will display the NUMA node index and details. Users can also see the count of available NUMA nodes, along with CPU cores, memory, NICS, and node spans for bonds and block devices (although node-spanning may not produce suitable performance). From a reporting standpoint, users can filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID.</p>
-<p>Similarly, the SR-IOV (Single Root I/O Virtualisation) allows a PCIe device (e.g, a NIC) to appear to be multiple separate devices. A network adaptor can be subdivided into multiple adaptors by adding a Virtual Function (VF). MAAS 2.7 supports the use of multiple VF adaptors to intelligently use SR-IOV edge clouds, by allowing users to see that a NIC supports SR-IOV, along with the supported VF counts.</p>
-<p>The goal of this feature is to help users choose the right machine to deploy an edge cloud.</p>
-<h3>Settings and user preferences redesign</h3>
-<p>As part of our efforts to make the UI faster and more responsive, we have completely redesigned the Settings and User preferences within the MAAS UI.</p>
-<h3>Strictly-confined Snap support</h3>
-<p>With 2.7, MAAS is fully confined within the Snap container. No need for installation qualifiers (such as “&ndash;devmode”) to permit use of external resources, i.e., outside the Snap container. This means that we will begin to transition to recommending the Snap install as the default (and primary) MAAS install method. This also means that MAAS now gains the benefit of confined snap security features.</p>
-<h3>Update to hardware information gathering methods</h3>
-<p>MAAS has switched hardware information gathering from lshw/lsblk to lxd output during commissioning, because it more easily provides the information needed to complete resource discovery. Note that this information may not be particularly reliable for your use, so you may need to create your own commissioning scripts if you need something more detailed or specific.</p>
-<h3>Bug fixes</h3>
-<p>A number of bug fixes (see the <a href="https://bugs.launchpad.net/maas/+bugs?field.milestone%3Alist=87757&amp;field.milestone%3Alist=89662&amp;field.milestone%3Alist=89714&amp;field.milestone%3Alist=89840&amp;field.milestone%3Alist=89954&amp;field.milestone%3Alist=89682&amp;field.status%3Alist=FIXRELEASED">list in Launchpad</a>).</p>
+Following on from MAAS 2.6.2, we are happy to announce that MAAS 2.7 is now available. This release features some critical bug fixes, along with some exciting new features:
+
+### CentOS 8 image support
+
+Users can now deploy CentOS 8 images in MAAS. The Images page in the MAAS UI will now offer a choice to select and download CentOS 8. Note that users of previous versions may see CentOS 8 as an available option, but cannot download or deploy it.
+
+### Network testing features
+
+MAAS 2.7 brings a slate of new network testing and link detection features, as detailed below.
+
+#### Network link disconnect detection
+
+MAAS 2.7 can check whether links are connected or disconnected. Previously, when commissioning, you couldn’t detect unplugged cables. Now you can. You will have to take a couple of steps for existing MAAS deployments: First, you will have to upgrade to 2.7, then run commissioning again to see if a link is disconnected. But you no longer have to puzzle over what’s broken when this happens.
+
+MAAS will report disconnected network cables, and users will receive a warning when trying to configure a disconnected interface. Administrators will be able to change cable connection status through both API and UI after manually rectifying the situation.
+
+#### Slow network link detection
+
+MAAS 2.7 makes sure you’re getting the most out of your link speed. As servers and hardware get faster — 10G, 40G, even 100G NICS — the chances increase that you might plug your 10G NIC into a 1G switch, for example. Previously, with MAAS, you’d be stuck with the speed of the slowest link, but there wasn’t a way to verify your link speed without recommissioning. Depending on your physical hardware, that might still be an issue, but the MAAS UI can now warn you if your interface is connected to a link slower than what the interface supports. And all information shown in the UI is available via the API, as well. You can still replace a slow switch without recommissioning.
+
+MAAS will automatically detect link and interface speed during commissioning and report them via the API/UI. Administrators will be able to change or update the link and interface speeds via the API/UI after manual changes to the connection. MAAS 2.7 will also report link speed, allowing users to filter and list machines by their link speed in the UI. Users can also employ this information to allocate machines by their link speed in the API.
+
+#### Network validation scripts and testing
+
+MAAS 2.7 allows you to configure network connectivity testing in a number of ways. If you’ve used MAAS, you know that if it can’t connect to the rack controller, deployment can’t complete. Now MAAS can check connectivity to the rack controller and warn you if there’s no link, long before you have to try and debug it. For example, if you can’t connect to your gateway controller, traffic can’t leave your network. MAAS can now check this link and recognise that there’s no connectivity, which alleviates a lot of annoying (and sometimes hard-to-detect) network issues.
+
+Users can now test their network configuration to check for:
+
+1. Interfaces which have a broken network configuration
+2. Bonds that are not fully operational
+3. Broken gateways, rack controllers, and Internet links
+
+In addition, Internet connectivity testing has been greatly expanded. Previously, MAAS gave a yes/no link check during network testing. Now you can give a list of URLs or IP addresses to check. In the ephemeral environment, standard DHCP is still applied, but when network testing runs, we can apply your specific configuration for the duration of the test. While all URLs / IPs are tested with all interfaces, we do test each of your interfaces individually, including breaking apart bonded NICS and testing each side of your redundant interfaces. You can also run different tests on each pass, e.g., a different set of URLs, although each run would be a different testing cycle. For testing individual interfaces, you can use the API.
+
+Of course, the main network feature available in 2.7 is improved — and customisable — network testing. You can now create your own commissioning scripts and tests related to networking. You can create your own network tests (e.g., a network throughput test) and run them during the network testing portion of the MAAS workflow. There are no particular restrictions on these scripts, so you can test a wide variety of possible conditions and situations.
+
+Administrators can upload network tests and test scripts, as well as create tests which accept an interface parameter, or scripts which apply custom network configurations. Users can then specify (unique) parameters using the API, override machines which fail network testing (allowing their use), and suppress individual failed network tests. All users benefit from enhanced reporting, as they are now able to see the overall status of all interfaces via the API, the UI Machine list, and the UI Interfaces tab; review the health status from all interface tests; and view the interface test results by interface name and MAC.
+
+#### Live IP address detection to prevent address conflicts
+
+In some cases, MAAS connects with subnet which are not empty. Normally, the user has to tell MAAS about IP addresses which are already assigned on that subnet, and if that step is skipped, MAAS may assign and in-use IP address to one of the machines under its control, leading to an IP conflict.
+
+MAAS 2.7 alleviates this problem by detecting IPs in use on a subnet, so that it can avoid assigning that IP to a MAAS-managed machine. The system is not perfect; for example, if NIC on a subnet-connected machine is in a quiescent state -- or turned off -- MAAS may not detect it before duplicating the IP. Note that at least one rack controller must have access to the previously-assigned machine in order for this feature to work. MAAS 2.7 will also recognise when the subnet ARP cache is full and re-check the oldest IPs added to the cache to search for free IP addresses.
+
+### Introductory NUMA / SR-IOV support
+
+NUMA (Non-Uniform Memory Access) is a useful way of achieving high-efficiency computing, by pairing a CPU core with a very fast connection to RAM and PCI buses. Typically the CPU socket and the closest banks of DIMM constitute a NUMA node. Obviously, if you’re deploying a MAAS machine under NUMA to get maximum performance, you would like for that machine to be confined to a single NUMA node. MAAS 2.7 introduces this capability.
+
+MAAS will display the NUMA node index and details. Users can also see the count of available NUMA nodes, along with CPU cores, memory, NICS, and node spans for bonds and block devices (although node-spanning may not produce suitable performance). From a reporting standpoint, users can filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID.
+
+Similarly, the SR-IOV (Single Root I/O Virtualisation) allows a PCIe device (e.g, a NIC) to appear to be multiple separate devices. A network adaptor can be subdivided into multiple adaptors by adding a Virtual Function (VF). MAAS 2.7 supports the use of multiple VF adaptors to intelligently use SR-IOV edge clouds, by allowing users to see that a NIC supports SR-IOV, along with the supported VF counts.
+
+The goal of this feature is to help users choose the right machine to deploy an edge cloud.
+
+### Settings and user preferences redesign
+
+As part of our efforts to make the UI faster and more responsive, we have completely redesigned the Settings and User preferences within the MAAS UI.
+
+### Strictly-confined Snap support
+
+With 2.7, MAAS is fully confined within the Snap container. No need for installation qualifiers (such as “--devmode”) to permit use of external resources, i.e., outside the Snap container. This means that we will begin to transition to recommending the Snap install as the default (and primary) MAAS install method. This also means that MAAS now gains the benefit of confined snap security features.
+
+### Update to hardware information gathering methods
+
+MAAS has switched hardware information gathering from lshw/lsblk to lxd output during commissioning, because it more easily provides the information needed to complete resource discovery. Note that this information may not be particularly reliable for your use, so you may need to create your own commissioning scripts if you need something more detailed or specific.
+
+### Bug fixes
+
+A number of bug fixes (see the [list in Launchpad](https://bugs.launchpad.net/maas/+bugs?field.milestone%3Alist=87757&field.milestone%3Alist=89662&field.milestone%3Alist=89714&field.milestone%3Alist=89840&field.milestone%3Alist=89954&field.milestone%3Alist=89682&field.status%3Alist=FIXRELEASED)).
+snap-2-7-cli snap-2-7-ui deb-2-7 deb-2-7-ui -->
+
 <!-- snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui
 <h2>MAAS 2.9 release notes</h2>
 
@@ -562,10 +229,10 @@ Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now availa
 <h4>Six other questions you may have:</h4>
 
 1. [What known issues should I be aware of?](#heading--known-issues)
-2. [How do I install MAAS 2.9?](maas-installation.html)
-3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?](maas-installation.html#heading--upgrade-maas-snap)
-4. [How do I install MAAS 2.9 from packages?](maas-installation.html#heading--install-from-packages)
-5. [How do I upgrade MAAS 2.8 to MAAS 2.9 using packages?](maas-installation.html#heading--upgrade-via-packages)
+2. [How do I install MAAS 2.9?](/t/maas-installation/3323)
+3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?](/t/maas-installation/3323#heading--upgrade-maas-snap)
+4. [How do I install MAAS 2.9 from packages?](/t/maas-installation/3329#heading--install-from-packages)
+5. [How do I upgrade MAAS 2.8 to MAAS 2.9 using packages?](/t/maas-installation/3329#heading--upgrade-via-packages)
 6. [What bugs are fixed so far in this release?](#heading--bug-fixes)
 
 <h2 id="heading--focal-default">Focal Fossa (Ubuntu 20.04 LTS) as default release</h2>
@@ -590,21 +257,21 @@ Specifically, there are five new features available to support NUMA, SR-IOV, and
 
 This functionality comes with an enhanced panel in the "KVM" details section:
 
-<a href="images/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="images/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a></a>
+<a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
 
-See the [VM hosting](vm-hosting-snap-2-9-ui.html) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
+See the [VM hosting](/t/vm-hosting-snap-2-9-ui/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
 
 <h2 id="heading--improved-perf-large-maas">Improved performance for large MAAS installations</h2>
 
 MAAS 2.9 includes changes to the machine batch size that the UI loads. Previously the UI loaded machines in batches of 25; it now pulls in 25 for the first call, then 100 at a time in subsequent batches.
 
-You can see the results of the investigation in [this video podcast](maas-show-and-tell-improving-ui-performance-for-large-maas-installs.html).
+You can see the results of the investigation in [this video podcast](https://discourse.maas.io/t/maas-show-and-tell-improving-ui-performance-for-large-maas-installs/3515).
 
 <h2 id="heading--new-release-notifications">New release notifications</h2>
 
 MAAS now includes new release notifications for users and administrators.  These appear when a new release is available:
 
-<a href="images/c4f426b9f493a970efcc59c4d948d24fa5f12860.png" target = "_blank"><img src="images/c4f426b9f493a970efcc59c4d948d24fa5f12860.png"></a></a>
+<a href="https://discourse.maas.io/uploads/default/original/1X/c4f426b9f493a970efcc59c4d948d24fa5f12860.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c4f426b9f493a970efcc59c4d948d24fa5f12860.png"></a>
 
 Both regular and administrative users can snooze these notifications for two weeks at a time.  Administrative users can opt out of new release notifications completely, preventing notifications for any user of that MAAS.
 
@@ -612,7 +279,7 @@ Both regular and administrative users can snooze these notifications for two wee
 
 MAAS now includes UI panels corresponding to the [IPMI power driver upgrades](#heading--ipmi-driver) mentioned earlier:
 
-<a href="images/433b28f5dd807caef7c7382f9a877607c2ea2dac.png" target = "_blank"><img src="images/433b28f5dd807caef7c7382f9a877607c2ea2dac.png"></a></a>
+<a href="https://discourse.maas.io/uploads/default/original/1X/433b28f5dd807caef7c7382f9a877607c2ea2dac.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/433b28f5dd807caef7c7382f9a877607c2ea2dac.png"></a>
 
 This screen can be reached from `Settings | Configuration | Commissioning`.
 
@@ -620,13 +287,13 @@ This screen can be reached from `Settings | Configuration | Commissioning`.
 
 When marking a machine broken, a description can now included:
 
-<a href="images/69df48044c964d27caf59b60dcf5bf5210894c15.png" target = "_blank"><img src="images/69df48044c964d27caf59b60dcf5bf5210894c15.png"></a></a>
+<a href="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png"></a>
 
 This description appears in that machine's row on the machine list.
 
 <h2 id="heading--curtin-20-2-included">Curtin 20.2 now included</h2>
 
-A number of MAAS issues have actually been issues with an older version of Curtin.  MAAS now includes Curtin 20.2, which fixes many of these issues, including [MAAS is changing my boot order!](maas-is-changing-my-boot-order.html).
+A number of MAAS issues have actually been issues with an older version of Curtin.  MAAS now includes Curtin 20.2, which fixes many of these issues, including [MAAS is changing my boot order!](https://discourse.maas.io/t/maas-is-changing-my-boot-order/3491).
 
 <h2 id="heading--http-boot-disabled">HTTP boot disabled</h2>
 
@@ -649,7 +316,7 @@ Two new global IPMI configuration options have been added:
 
 1. maas_auto_ipmi_k_g_bmc_key - sets a global default IPMI BMC key.
 2. maas_auto_ipmi_user_privilege_level - sets a global default IPMI BMC user privilege level.
-
+    
 <h2 id="heading--global-config-settings">Addition of IPMI config options to UI</h2>
 
 You may now set the global configuration options `maas_auto_ipmi_user`, `maas_auto_ipmi_k_g_bmc_key`, and `maas_auto_ipmi_user_privilege_level` on the "Settings" page in the UI under "Commissioning."
@@ -766,8 +433,8 @@ There is a known issue with the Reader Adaptive Documentation left-hand-side men
 
 When upgrading to any release above 2.8, using packages, you may receive a warning about missing migration(s) -- specifically something that looks like this:
 
-
-<pre><code>Setting up maas-common (2.8.3~rc1-8583-g.9ddc8051f-0ubuntu1~18.04.1) ...
+```
+Setting up maas-common (2.8.3~rc1-8583-g.9ddc8051f-0ubuntu1~18.04.1) ...
 Setting up maas-region-api (2.8.3~rc1-8583-g.9ddc8051f-0ubuntu1~18.04.1) ...
 Setting up maas-region-controller (2.8.3~rc1-8583-g.9ddc8051f-0ubuntu1~18.04.1) ...
 Operations to perform:
@@ -776,11 +443,11 @@ Running migrations:
   No migrations to apply.
   Your models have changes that are not yet reflected in a migration, and so won't be applied.
   Run 'manage.py makemigrations' to make new migrations, and then re-run 'manage.py migrate' to apply them.
-</code></pre>
-
+```
 
 This warning message has no effect on the installation or operation of MAAS, so it can be safely ignored.
 snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui -->
+
 
 <!-- snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui
 <h2>MAAS 2.8 release notes</h2>
@@ -803,9 +470,9 @@ Following on from MAAS 2.7, we are happy to announce that MAAS 2.8 is now availa
 
 1. [What are the new features & fixes for 2.8?](#heading--2-8-release-notes)
 2. [What known issues should I be aware of?](#heading--2-8-known-issues)
-3. [How do I install MAAS 2.8 as a snap?](maas-installation.html)
-4. [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](maas-installation.html#heading--upgrade-maas-snap)
-5. [How do I install MAAS 2.8 from packages?](maas-installation.html)
+3. [How do I install MAAS 2.8 as a snap?](/t/maas-installation/3312)
+4. [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](/t/maas-installation/3312#heading--upgrade-maas-snap)
+5. [How do I install MAAS 2.8 from packages?](/t/maas-installation/3327)
 6. [What bugs were fixed in this release?](#heading--bug-fixes)
 
 <h2 id="heading--2-8-release-notes">LXD-based VM host support (Beta)</h2>
@@ -816,7 +483,7 @@ MAAS 2.8 adds the beta capability to use LXD-based VM hosts and virtual machines
 
 Within MAAS 2.8, we have made a number of performance improvements to everything related to the machine listing.  Some of the most visible changes involve the way that long lists are presented within categories (see the example below), but there are a number of other changes that make the list easier and more efficient to use.
 
-<a href="images/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg" target = "_blank"><img src="images/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg"></a></a> 
+<a href="https://discourse.maas.io/uploads/default/original/1X/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg"></a> 
 
 Among those other changes are persisting UI state for grouping, new grouping options, bookmark-able URLs with filter and search parameters, and many other performance improvements. If you're interested in more details, see this [blog post](https://ubuntu.com/blog/building-a-cross-framework-ui-with-single-spa-in-maas-2-8).
 
@@ -860,6 +527,3 @@ We've also fixed number of bugs (see the [list in Launchpad](https://bugs.launch
 
 * **Leftover lock files may be present under some conditions:** Even if you purge an old MAAS Debian package, it can leave lock files in `/run/lock/maas*`.  This can cause issues if you later reinstall MAAS, and the previous MAAS user UID has been reassigned.  At that point, MAAS can't remove those files and create new ones.  If this occurs, it is easily fixed by removing those files manually before reinstalling.
 snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
-    </div>
-  </body>
-</html>
