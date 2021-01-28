@@ -1,846 +1,1030 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|CLI ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/25)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|CLI ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 deb-2-7-cli -->
 
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ UI|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|CLI ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ UI|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|CLI ~ [UI](/t/commission-machines/2477)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ UI|
- deb-2-9-ui -->
-
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- snap-2-7-cli -->
+|Snap|CLI ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-||2.7|2.8|2.9|
+|| 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ UI|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- snap-2-7-ui -->
+|Snap|[CLI](/t/maas-installation/3318) ~ UI|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+snap-2-7-ui -->
+
+<!-- deb-2-7-ui
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ UI|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+deb-2-7-ui -->
 
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
+|| 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|CLI ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- snap-2-8-cli -->
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319) | CLI ~ [UI](/t/maas-installation/3321) |[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323) |
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325) |[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327) |[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329) |
+snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
+|| 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ UI|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- snap-2-8-ui -->
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ UI|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+snap-2-8-ui -->
 
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
+<!-- deb-2-8-cli
+|| 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|CLI ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- snap-2-9-cli -->
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|CLI ~  [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+deb-2-8-cli -->
 
-||2.7|2.8|2.9|
+<!-- deb-2-8-ui
+|| 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ UI|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
-
-MAAS is built to manage machines, including the operating systems on those machines. Enlistment and commissioning are features that make it easier to start managing a machine -- as long as that machine has been configured to netboot. Enlistment enables users to simply connect a machine, configure the firmware properly, and power it on so that MAAS can find it and add it.
-
-Enlistment happens when MAAS starts; it reaches out on connected subnets to locate any nodes -- that is, devices and machines -- that reside on those subnets. MAAS finds a machine that's configured to netboot (e.g., via PXE), boots that machine into Ubuntu, and then sends cloud-init user data which runs standard (i.e., built-in) commissioning scripts. The machine actually adds itself over the MAAS API, and then requests permission to send commissioning data.
-
-Since MAAS doesn't know whether you might intend to actually include these discovered machines in your cloud configuration, it won't automatically take them over, but it will read them to get an idea how they're set up. MAAS then presents these machines to you with a MAAS state of "New." This allows you to examine them and decide whether or not you want MAAS to manage them.
-
-<!-- deb-2-7-cli
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2280)). In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2484) to meet your specific needs.
-deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2281)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2485) to meet your specific needs.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2282)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2486) to meet your specific needs.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2283)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2487) to meet your specific needs.
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2284)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2488) to meet your specific needs.
-
-[note]
-Commissioning requires 60 seconds.
-[/note]
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2285)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2489) to meet your specific needs.
-
-[note]
-Commissioning requires 60 seconds.
-[/note]
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2274)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2478) to meet your specific needs.
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2275)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2479) to meet your specific needs.
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2276)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2480) to meet your specific needs.
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2277)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2481) to meet your specific needs.
- snap-2-8-ui -->
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ UI|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+deb-2-8-ui -->
 
 <!-- snap-2-9-cli
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2278)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2482) to meet your specific needs.
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|CLI ~  [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
+snap-2-9-cli -->
 
-[note]
-Commissioning requires 60 seconds.
-[/note]
- snap-2-9-cli -->
-
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2279)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2483) to meet your specific needs.
-
-[note]
-Commissioning requires 60 seconds.
-[/note]
-
-#### Six questions you may have:
-
-1. [How are machines commissioned?](#heading--commissioning-machines)
-2. [How can I commission NUMA and SR-IOV nodes?](#heading--numa-sriov-commissioning)
-3. [What are MAAS commissioning scripts?](#heading--commissioning-scripts)
-4. [What post-commission configuration is possible?](#heading--post-commission-configuration)
-5. [What is a bond interface and how do I create one?](#heading--bond-interfaces)
-6. [What is a bridge interface and how do I create one?](#heading--bridge-interfaces)
-
-<a href="#heading--commissioning-machines"><h2 id="heading--commissioning-machines">How machines are commissioned</h2></a>
-
-When MAAS commissions a machine, the following sequence of events takes place:
-
-<!-- deb-2-7-cli
-1.  DHCP server is contacted
-2.  kernel and initrd are received over TFTP
-3.  machine boots
-4.  initrd mounts a Squashfs image ephemerally over HTTP
-5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2484)
-6.  machine shuts down
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-1.  DHCP server is contacted
-2.  kernel and initrd are received over TFTP
-3.  machine boots
-4.  initrd mounts a Squashfs image ephemerally over HTTP
-5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2585)
-6.  machine shuts down
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-1.  DHCP server is contacted
-2.  kernel and initrd are received over TFTP
-3.  machine boots
-4.  initrd mounts a Squashfs image ephemerally over HTTP
-5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2486)
-6.  machine shuts down
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-1.  DHCP server is contacted
-2.  kernel and initrd are received over TFTP
-3.  machine boots
-4.  initrd mounts a Squashfs image ephemerally over HTTP
-5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2487)
-6.  machine shuts down
- deb-2-8-ui -->
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ UI|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
 
 <!-- deb-2-9-cli
-1.  DHCP server is contacted
-2.  kernel and initrd are received over TFTP
-3.  machine boots
-4.  initrd mounts a Squashfs image ephemerally over HTTP
-5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2488)
-6.  machine shuts down
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-1.  DHCP server is contacted
-2.  kernel and initrd are received over TFTP
-3.  machine boots
-4.  initrd mounts a Squashfs image ephemerally over HTTP
-5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2489)
-6.  machine shuts down
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-1.  DHCP server is contacted
-2.  kernel and initrd are received over TFTP
-3.  machine boots
-4.  initrd mounts a Squashfs image ephemerally over HTTP
-5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2478)
-6.  machine shuts down
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-1.  DHCP server is contacted
-2.  kernel and initrd are received over TFTP
-3.  machine boots
-4.  initrd mounts a Squashfs image ephemerally over HTTP
-5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2479)
-6.  machine shuts down
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-1.  DHCP server is contacted
-2.  kernel and initrd are received over TFTP
-3.  machine boots
-4.  initrd mounts a Squashfs image ephemerally over HTTP
-5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2480)
-6.  machine shuts down
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-1.  DHCP server is contacted
-2.  kernel and initrd are received over TFTP
-3.  machine boots
-4.  initrd mounts a Squashfs image ephemerally over HTTP
-5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2481)
-6.  machine shuts down
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-1.  DHCP server is contacted
-2.  kernel and initrd are received over TFTP
-3.  machine boots
-4.  initrd mounts a Squashfs image ephemerally over HTTP
-5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2482)
-6.  machine shuts down
- snap-2-9-cli -->
-
-1.  DHCP server is contacted
-2.  kernel and initrd are received over TFTP
-3.  machine boots
-4.  initrd mounts a Squashfs image ephemerally over HTTP
-5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2483)
-6.  machine shuts down
-
-The commissioning scripts will talk to the region API server to ensure that everything is in order and that eventual deployment will succeed.
-
-MAAS chooses the latest Ubuntu LTS release as the default image for commissioning.  If desired, you can select a different image in the "Settings" page of the web UI, by selecting the "General" tab and then scrolling down to the Commissioning section.
-
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-To commission a machine:
-
-``` bash
-maas $PROFILE machine commission $SYSTEM_ID
-```
-
-[note]
-To commission a node, it must have a status of "New".
-[/note]
-
-To commission all nodes in the "New" state:
-
-``` bash
-maas $PROFILE machines accept-all
-```
-
-You have the option of setting some parameters to change how commissioning runs:
-
-1. `enable_ssh`: Optional integer. Controls whether to enable SSH for the commissioning environment using the user's SSH key(s). '1' == True, '0' == False. Roughly equivalent to the **Allow SSH access and prevent machine powering off** in the web UI.
-
-2. `skip_bmc_config`: Optional integer.  Controls whether to skip re-configuration of the BMC for IPMI based machines. '1' == True, '0' == False.
-
-3. `skip_networking`: Optional integer.  Controls whether to skip re-configuring the networking on the machine after the commissioning has completed. '1' == True, '0' == False. Roughly equivalent to **Retain network configuration** in the web UI.
-
-4. `skip_storage`: Optional integer.  Controls hether to skip re-configuring the storage on the machine after the commissioning has completed. '1' == True, '0' == False.  Roughly equivalent to **Retain storage configuration** in the web UI.
-
-5. `commissioning_scripts`: Optional string.  A comma separated list of commissioning script names and tags to be run. By default all custom commissioning scripts are run. Built-in commissioning scripts always run. Selecting `update_firmware` or `configure_hba` will run firmware updates or configure HBA's on matching machines.
-
-6. `testing_scripts`: Optional string.  A comma seperated list of testing script names and tags to be run. By default all tests tagged `commissioning` will be run. Set to `none` to disable running tests.
-
-7. `parameters`: Optional string.  Scripts selected to run may define their own parameters. These parameters may be passed using the parameter name. Optionally a parameter may have the script name prepended to have that parameter only apply to that specific script.
-
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
-
-To commission, on the "Machines" page, select a machine and choose "Commission" under the "Take action" drop-down menu.
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a>
-
-You have the option of selecting some extra parameters (checkboxes) and performing hardware tests.
-
-These options include:
-
--   **Allow SSH access and prevent machine powering off**: Machines are normally powered off after commissioning. This option keeps the machine on and enables SSH so you can access the machine.
-
-<!-- deb-2-7-ui
--   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/networking/2953) for more information.
-
--   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/storage/3109) for more details.
-
--   **Update firmware**: Runs scripts tagged with `update_firmware`. See [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2485#heading--automatic-script-selection-by-hardware-type) for more details.
-
--   **Configure HBA**: Runs scripts tagged with `configure_hba`. As above, see [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2485#heading--automatic-script-selection-by-hardware-type) for further details.
- deb-2-7-ui -->
-
-<!-- deb-2-8-ui
--   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/networking/2955) for more information.
-
--   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/storage/3111) for more details.
-
--   **Update firmware**: Runs scripts tagged with `update_firmware`. See [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2487#heading--automatic-script-selection-by-hardware-type) for more details.
-
--   **Configure HBA**: Runs scripts tagged with `configure_hba`. As above, see [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2487#heading--automatic-script-selection-by-hardware-type) for further details.
- deb-2-8-ui -->
-
-<!-- deb-2-9-ui
--   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/networking/2957) for more information.
-
--   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/storage/3113) for more details.
-
--   **Update firmware**: Runs scripts tagged with `update_firmware`. See [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2489#heading--automatic-script-selection-by-hardware-type) for more details.
-
--   **Configure HBA**: Runs scripts tagged with `configure_hba`. As above, see [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2489#heading--automatic-script-selection-by-hardware-type) for further details.
- deb-2-9-ui -->
-
-<!-- snap-2-7-ui
--   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/networking/2947) for more information.
-
--   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/storage/3103) for more details.
-
--   **Update firmware**: Runs scripts tagged with `update_firmware`. See [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2479#heading--automatic-script-selection-by-hardware-type) for more details.
-
--   **Configure HBA**: Runs scripts tagged with `configure_hba`. As above, see [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2479#heading--automatic-script-selection-by-hardware-type) for further details.
- snap-2-7-ui -->
-
-<!-- snap-2-8-ui
--   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/networking/2949) for more information.
-
--   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/storage/3105) for more details.
-
--   **Update firmware**: Runs scripts tagged with `update_firmware`. See [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2481#heading--automatic-script-selection-by-hardware-type) for more details.
-
--   **Configure HBA**: Runs scripts tagged with `configure_hba`. As above, see [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2481#heading--automatic-script-selection-by-hardware-type) for further details.
- snap-2-8-ui -->
-
--   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/networking/2951) for more information.
-
--   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/storage/3107) for more details.
-
--   **Update firmware**: Runs scripts tagged with `update_firmware`. See [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2483#heading--automatic-script-selection-by-hardware-type) for more details.
-
--   **Configure HBA**: Runs scripts tagged with `configure_hba`. As above, see [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2483#heading--automatic-script-selection-by-hardware-type) for further details.
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a>
-
-<!-- deb-2-7-ui
-Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/hardware-testing/2677)) for more information on hardware testing scripts.
- deb-2-7-ui -->
-
-<!-- deb-2-8-ui
-Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/hardware-testing/2679)) for more information on hardware testing scripts.
- deb-2-8-ui -->
-
-<!-- deb-2-9-ui
-Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/hardware-testing/2681)) for more information on hardware testing scripts.
- deb-2-9-ui -->
-
-<!-- snap-2-7-ui
-Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/hardware-testing/2671)) for more information on hardware testing scripts.
- snap-2-7-ui -->
-
-<!-- snap-2-8-ui
-Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/hardware-testing/2673)) for more information on hardware testing scripts.
- snap-2-8-ui -->
-
-Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/hardware-testing/2675)) for more information on hardware testing scripts.
-
-Finalise the directive by hitting "Commission machine".
-
-While commissioning, the machine status will change to reflect this state (Commissioning).  MAAS discovers the machine's network topology.  MAAS then prompts a machine network interface to connect to the fabric, VLAN, and subnet combination for configuration. Usually, MAAS assigns a static IP address out of the reserved IP range for the subnet ("Auto assign" mode). The next section details several assignment modes.
-
-Once commissioned, a machine's status will change to Ready, and an extra tab for the machine called "Commissioning" will become available. This tab contains the results of the scripts executed during the commissioning process.
-
-<!-- deb-2-7-cli
-Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2892) to this machine.  The next step is [deployment](/t/deploy-machines/2604).
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2893) to this machine.  The next step is [deployment](/t/deploy-machines/2605).
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2894) to this machine.  The next step is [deployment](/t/deploy-machines/2606).
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2895) to this machine.  The next step is [deployment](/t/deploy-machines/2607).
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2896) to this machine.  The next step is [deployment](/t/deploy-machines/2608).
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2897) to this machine.  The next step is [deployment](/t/deploy-machines/2609).
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2886) to this machine.  The next step is [deployment](/t/deploy-machines/2598).
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2887) to this machine.  The next step is [deployment](/t/deploy-machines/2599.
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2888) to this machine.  The next step is [deployment](/t/deploy-machines/2600).
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2889) to this machine.  The next step is [deployment](/t/deploy-machines/2601).
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2890) to this machine.  The next step is [deployment](/t/deploy-machines/2602).
- snap-2-9-cli -->
-
-Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2891) to this machine.  The next step is [deployment](/t/deploy-machines/2603).
-
-
-<a href="#heading--numa-sriov-commissioning"><h3 id="heading--numa-sriov-commissioning">Commission NUMA and SR-IOV nodes</h3></a>
-
-If you are using the NUMA architecture, MAAS versions 2.7 and higher guarantee that machines are assigned to a single NUMA node that contains all the machine's resources. Node boundaries are critical, especially in vNUMA situations.  Splitting nodes can create unnecessary latency.  You want the NUMA node boundaries to match VM boundaries if at all possible.
-
-[note]
-You must recommission NUMA/SR-IOV machines that were previously commissioned under version 2.6 or earlier.
-[/note]
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png"></a> 
-
-When using these nodes, you can specify a node index for interfaces and physical block devices.  MAAS will display the NUMA node index and details, depending upon your configuration, to include the count of NUMA nodes, number of CPU cores, memory, NICs, and node spaces for bonds and block devices.  You can also filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID, among others.
-
-<a href="#heading--commissioning-scripts"><h2 id="heading--commissioning-scripts">MAAS commissioning scripts</h2></a>
-
-When a machine boots, MAAS first instructs it to run cloud-init to set up SSH keys (during commissioning only), set up NTP, and execute a script that runs other commissioning scripts.  Currently, the sequence of MAAS-provided commissioning scripts proceeds like this:
-
-* **maas-support-info:** MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  **Runs in parallel with other scripts.**
-
-* **maas-lshw:** this script pulls system BIOS and vendor info, and generates user-defined tags for later use.  **Runs in parallel with other scripts.**
-
-* **20-maas-01-install-lldpd:** this script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  This script provides some extensive logging.
-
-* **maas-list-modaliases:** this script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.  **Runs in parallel with other scripts.**
-
-* **20-maas-02-dhcp-unconfigured-ifaces:** MAAS will want to know all the ways the machine is connected to the network.  Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.  This script provides extensive logging.
-
-* **maas-get-fruid-api-data:** this script gathers information for the Facebook wedge power type.  **Runs in parallel with other scripts.**
-
-* **maas-serial-ports:** this script lists what serial ports are available on the machine.  **Runs in parallel with other scripts.**
-
-* **40-maas-01-network-interfaces:** this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
-
-* **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
-
-* **maas-capture-lldp:** this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  **Runs in parallel with other scripts.**
-
-* **maas-kernel-cmdline:** this script is used to update the boot devices; it double-checks that the right boot interface is selected. 
-
-Commissioning runs the same dozen or so scripts as enlistment, gathering all the same information, but with these seven caveats: 
-
-1. Commissioning also runs user-supplied commissioning scripts, if present.  Be aware that these scripts run as root, so they can execute any system command.
-
-2. Commissioning runs test scripts which are not run during enlistment.
-
-3. Commissioning scripts can send BMC configuration data, and can be used to configure BMC data.
-
-4. The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts; these scripts may write BMC power credentials to BMC_CONFIG_PATH in YAML format, where each key is a power parameter.  The first script to write BMC_CONFIG_PATH is the only script allowed to configure the BMC, allowing you to override MAAS' built-in BMC detection.  If the script returns 0, that value will be send to MAAS.
-
-5. All built-in commissioning scripts have been migrated into the database.
-
-6. `maas-run-remote-scripts` is capable of enlisting machines, so enlistment `user-data` scripts have been removed.
-
-7. The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.
-
-<!-- snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli
-* **00-maas-00-support-info:** MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.
-
-* **00-maas-01-lshw:** this script pulls system BIOS and vendor info, and generates user-defined tags for later use.
-
-* **00-maas-03-install-lldpd:** this script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  The lldpd needs to be installed early because it requires about a 60-second delay before running.
-
-* **00-maas-04-list-modaliases:** this script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.
-
-* **00-maas-05-dhcp-unconfigured-ifaces:** MAAS will want to know all the ways the machine is connected to the network.  Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.
-
-* **00-maas-06-get-fruid-api-data:** this script gathers information for the Facebook wedge power type.
-
-* **00-maas-08-serial-ports:** this script lists what serial ports are available on the machine.
-
-* **40-maas-01-network-interfaces:** this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
-
-* **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
-
-* **99-maas-01-capture-lldp:** this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.
-
-* **99-maas-05-kernel-cmdline:** this script is used to update the boot devices; it double-checks that the right boot interface is selected.
-
-Commissioning runs the same dozen or so scripts as enlistment, gathering all the same information, but with these two caveats: 
-
-1. Commissioning also runs user-supplied commissioning scripts, if present.  Be aware that these scripts run as root, so they can execute any system command.
-
-2. Commissioning runs test scripts which are not run during enlistment.
-snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli -->
-
-In both enlistment and commissioning, MAAS uses either the MAC address or the UUID to identify machines.  Currently, because some machine types encountered by MAAS do **not** use unique MAC addresses, we are trending toward using the UUID.
-
-<a href="#heading--post-commission-configuration"><h2 id="heading--post-commission-configuration">Post-commission configuration</h2></a>
-
-<!-- deb-2-7-cli
-Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2892#heading--tags-for-network-interfaces)).
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2893#heading--tags-for-network-interfaces)).
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2894#heading--tags-for-network-interfaces)).
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2895#heading--tags-for-network-interfaces)).
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2896#heading--tags-for-network-interfaces)).
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2897#heading--tags-for-network-interfaces)).
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2886#heading--tags-for-network-interfaces)).
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2887#heading--tags-for-network-interfaces)).
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2888#heading--tags-for-network-interfaces)).
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2889#heading--tags-for-network-interfaces)).
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2890#heading--tags-for-network-interfaces)).
- snap-2-9-cli -->
-
-Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2891#heading--tags-for-network-interfaces)).
-
-From a machine's "Interfaces" page, click the menu icon for the interface to be edited and select "Edit Physical" from the resulting menu:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/438475b8906736b45fc809cd105a56be5052397d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/438475b8906736b45fc809cd105a56be5052397d.png"></a>
-
-The following window will appear:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/70b21d256df52399ac7ab09c3051f4bf011da55e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/70b21d256df52399ac7ab09c3051f4bf011da55e.png"></a>
-
-Four modes determine how a subnet address is assigned when MAAS deploys the machine. You can select one of these modes by clicking on the "IP mode" drop-down menu.
-
-<!-- deb-2-7-cli
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3120)).
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3121)).
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3122)).
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3123)).
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3124)). 
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|CLI ~  [UI](/t/maas-installation/3329)|
 deb-2-9-cli -->
 
 <!-- deb-2-9-ui
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3125)).
- deb-2-9-ui -->
+|| 2.7 | 2.8 | 2.9|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
+|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ UI|
+deb-2-9-ui -->
 
-<!-- snap-2-7-cli
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3114)).
- snap-2-7-cli -->
+<!-- snap-2-7-ui snap-2-7-cli 
+[Snaps](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
+
+``` bash
+sudo snap install maas --channel=2.7
+```
+
+After entering your password, the snap will download and install from the 2.7 channel. However, MAAS needs initialising before it's ready to go.
+
+<a href="#heading--initialisation"><h2 id="heading--initialisation">Initialisation</h2></a>
+
+The next step involves initialising MAAS with a *run mode*. Selecting one of the following modes dictates what services will run on the local system:
+
+| Mode          | Region | Rack | Database | Description                           |
+|---------------|--------|------|----------|---------------------------------------|
+| `all`*        | X      | X    | X        | All services (see warning below)      |
+| `region`      | X      |      |          | Region API server only                |
+| `rack`        |        | X    |          | Rack controller only                  |
+| `region+rack` | X      | X    |          | Region API server and rack controller |
+| `none`        |        |      |          | Reinitialises MAAS and stops services |
+
+[note type="Warning" status="all mode being deprecated"]
+Configuring the MAAS snap in "all" mode will be [deprecated in MAAS version 2.8.0 and removed in MAAS version 2.9.0](https://maas.io/deprecations/MD1).
+[/note]
+
+To initialise MAAS and select a run mode, use the `maas init` command with the *--mode* argument.
+
+<a href="#heading--example"><h3 id="heading--example">Example</h3></a>
+
+The following demonstrates the `all` mode, a popular initialisation choice for MAAS:
+
+``` bash
+sudo maas init --mode all
+```
+
+A dialog will appear that will gather some basic information:
+
+``` no-highlight
+MAAS URL [default=http://10.55.60.1:5240/MAAS]: http://192.168.122.1:5240/MAAS
+Create first admin account:       
+Username: admin
+Password: ******
+Again: ******
+Email: admin@example.com
+Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
+```
+
+[note]
+You will use the username and password to access the web UI.  If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
+[/note]
+
+<a href="#heading--maas-url"><h3 id="heading--maas-url">MAAS URL</h3></a>
+
+All run modes (except `none`) prompt for a MAAS URL, interpreted differently depending on the mode:
+
+-   `all`, `region+rack`: Used to create a new region controller as well as to tell the rack controller how to find the region controller.
+-   `region`: Used to create a new region controller.
+-   `rack`: Used to locate the region controller.
+
+<a href="#heading--shared-secret"><h3 id="heading--shared-secret">Shared secret</h3></a>
+
+The 'rack' and 'region+rack' modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.
+
+<a href="#heading--reinitialising-maas"><h3 id="heading--reinitialising-maas">Reinitialising MAAS</h3></a>
+
+To re-initialise MAAS, for example, to switch from `rack` to `region`:
+
+``` bash
+sudo maas init --mode region
+```
+
+<a href="#heading--additional-init-options"><h3 id="heading--additional-init-options">Additional `init` options</h3></a>
+
+The `init` command can take a number of optional arguments. To list them all as well as read a brief description of each:
+
+``` bash
+sudo maas init --help
+```
+
+<a href="#heading--configuration-verification"><h2 id="heading--configuration-verification">Configuration verification</h2></a>
+
+After a *snap* installation of MAAS, you can verify the currently-running configuration with:
+
+``` bash
+sudo maas config
+```
+
+Sample output (for mode 'all'):
+
+``` no-highlight
+Mode: all
+Settings:
+maas_url=http://192.168.122.1:5240/MAAS
+```
+
+<a href="#heading--service-statuses"><h2 id="heading--service-statuses">Service statuses</h2></a>
+
+You can check the status of running services with:
+
+``` bash
+sudo maas status
+```
+
+Sample output (for mode 'all'):
+
+``` no-highlight
+bind9                            RUNNING   pid 7999, uptime 0:09:17
+dhcpd                            STOPPED   Not started
+dhcpd6                           STOPPED   Not started
+ntp                              RUNNING   pid 8598, uptime 0:05:42
+postgresql                       RUNNING   pid 8001, uptime 0:09:17
+proxy                            STOPPED   Not started
+rackd                            RUNNING   pid 8000, uptime 0:09:17
+regiond:regiond-0                RUNNING   pid 8003, uptime 0:09:17
+regiond:regiond-1                RUNNING   pid 8008, uptime 0:09:17
+regiond:regiond-2                RUNNING   pid 8005, uptime 0:09:17
+regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
+tgt                              RUNNING   pid 8040, uptime 0:09:15
+```
+snap-2-7-ui snap-2-7-cli -->
 
 <!-- snap-2-7-ui
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3115)).
- snap-2-7-ui -->
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2527).
+snap-2-7-ui -->
+
+<!-- snap-2-7-cli
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2526).
+snap-2-7-cli -->
+
+<!-- snap-2-8-ui snap-2-8-cli
+MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.  This article will walk you through both install methods.
+
+#### Thirteen questions you may have:
+
+1. [How do I install (but not initialise) the MAAS snap?](#heading--install-maas-snap)
+2. [How do I upgrade my 2.7 snap to version 2.8?](#heading--upgrade-maas-snap)
+3. [What are MAAS initialisation modes?](#heading--maas-init-modes)
+4. [How do I initialise MAAS for a test or proof-of-concept configuration?](#heading--init-poc)
+5. [How do I initialise MAAS for a production configuration?](#heading--init-prod)
+6. [How do I migrate an existing snap install?](/t/tips-tricks-and-traps/1506#heading--migrate-maas)
+7. [What if I want to manually export the MAAS database to an existing PostgreSQL server?](/t/tips-tricks-and-traps/1506#heading--manual-export)
+8. [How can I check the service status of my MAAS configuration?](#heading--service-status)
+9. [How do I re-initialise MAAS, if I want to?](#heading--reinitialising-maas)
+10. [How can I discover additional init options?](#heading--additional-init-options)
+11. [Give me an example of initialising MAAS](#heading--example)
+12. [Tell me about the MAAS URL](#heading--maas-url)
+13. [Tell me about the shared secret](#heading--shared-secret)
+
+[note]
+If you have installed `bind9` or have it running, you will need to uninstall it before installing MAAS.  You can check with `ps aux | grep named` to see if it's running. The `bind9` daemon interferes with MAAS operation and creates a number of unusual, hard-to-debug errors -- but don't worry, MAAS provides DNS and can work with existing DNS servers.
+[/note]
+
+<a href="#heading--install-maas-snap"><h2 id="heading--install-maas-snap">Installing MAAS from the snap</h2></a>
+
+[Snaps](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
+
+    $ sudo snap install maas --channel=2.8
+
+After entering your password, the snap will download and install from the 2.8 channel -- though MAAS needs initialising before it's ready to go.
+
+<a href="#heading--upgrade-maas-snap"><h2 id="heading--upgrade-maas-snap">Upgrading MAAS from 2.7</h2></a>
+
+If you want to upgrade from a 2.7 snap to 2.8, and you are using a `region+rack` configuration, use this command:
+
+    $ sudo snap refresh --channel=2.8 maas
+
+After entering your password, the snap will refresh from the 2.8 channel.  You will **not** need to re-initialise MAAS.
+
+If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
+
+<a href="#heading--maas-init-modes"><h2 id="heading--maas-init-modes">MAAS initialisation modes</h2></a>
+
+MAAS supports the following modes, which dictate what services will run on the local system:
+
+| Mode          | Region | Rack | Database | Description                           |
+|---------------|--------|------|----------|---------------------------------------|
+| `all`*        | X      | X    | X        | Deprecated (see warning below)        |
+| `region`      | X      |      |          | Region API server only                |
+| `rack`        |        | X    |          | Rack controller only                  |
+| `region+rack` | X      | X    |          | Region API server and rack controller |
+| `none`        |        |      |          | Reinitialises MAAS and stops services |
+
+[note type="Warning" status="all mode being deprecated"]
+The MAAS initialisation mode "all" is [deprecated in MAAS version 2.8.0 and will be removed in MAAS version 2.9.0](https://maas.io/deprecations/MD1).
+[/note]
+
+<a href="#heading--init-poc"><h2 id="heading--init-poc">Initialising MAAS as a test configuration</h2></a>
+
+We want to provide a more compact version for those who may be testing MAAS.  To achieve this, we're providing a separate snap, called `maas-test-db`, which provides a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.
+
+Once MAAS is installed, you can use the `--help` flag with `maas init` to get relevant instructions:
+ 
+    $ sudo maas init --help
+    usage: maas init [-h] {region+rack,region,rack} . . .
+
+    Initialise MAAS in the specified run mode.
+
+    optional arguments:
+      -h, --help            show this help message and exit
+
+    run modes:
+      {region+rack,region,rack}
+        region+rack         Both region and rack controllers
+        region              Region controller only
+        rack                Rack controller only
+
+    When installing region or rack+region modes, MAAS needs a
+    PostgreSQL database to connect to.
+
+    If you want to set up PostgreSQL for a non-production deployment on
+    this machine, and configure it for use with MAAS, you can install
+    the maas-test-db snap before running 'maas init':
+        sudo snap install maas-test-db
+        sudo maas init region+rack --database-uri maas-test-db:///
+
+We'll quickly walk through these instructions to confirm your understanding.  First, install the `maas-test-db` snap:
+ 
+    sudo snap install maas-test-db
+
+Note that this step installs a a running PostgreSQL and a MAAS-ready database instantiation.  When it's done, you can double check with a built-in PostgreSQL shell:
+
+    $ maas-test-db.psql
+    psql (10.6)
+    Type "help" for help.
+
+    postgres=# \l
+
+This will produce a list of databases, one of which will be `maasdb`, owned by `maas`.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the `maas init` command:
+
+    sudo maas init region+rack --database-uri maas-test-db:///
+
+After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:
+ 
+    MAAS URL [default=http://10.45.222.159:5240/MAAS]:
+
+When you've entered a suitable URL, or accepted the default, the following prompt will appear:
+ 
+    MAAS has been set up.
+
+    If you want to configure external authentication or use
+    MAAS with Canonical RBAC, please run
+
+      sudo maas configauth
+
+    To create admins when not using external authentication, run
+
+      sudo maas createadmin
+
+Let's assume you just want a local testing user named `admin`:
+
+    $ sudo maas createadmin
+    Username: admin
+    Password: ******
+    Again: ******
+    Email: admin@example.com
+    Import SSH keys [] (lp:user-id or gh:user-id): gh:yourusername
+
+At this point, MAAS is basically set up and running.  You can confirm this with `sudo maas status`.  If you need an API key, you can obtain this with `sudo maas apikey --username yourusername`.  Now you will be able to test and evaluate MAAS by going to the URL you entered or accepted above and entering your `admin` username and password.
+
+<a href="#heading--configuration-verification"><h2 id="heading--configuration-verification">Configuration verification</h2></a>
+
+After a snap installation of MAAS, you can verify the currently-running configuration with:
+
+    sudo maas config
+
+<a href="#heading--init-prod"><h2 id="heading--init-prod">Initialise MAAS for a production configuration</h2></a>
+
+To install MAAS in a production configuration, you need to setup PostgreSQL, as described below.
+
+<a href="#heading--pg-setup"><h3 id="heading--pg-setup">Setting up PostgreSQL from scratch</h3></a>
+
+To set up PostgreSQL, even if it's running on a different machine, you can use the following procedure:
+
+1. You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 10 or better) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:
+
+        sudo apt update -y
+        sudo apt install -y postgresql
+
+2. You want to make sure you have a suitable PostgreSQL user, which can be accomplished with the following command, where `$MAAS_DBUSER` is your desired database username, and `$MAAS_DBPASS` is the intended password for that username.  Note that if you're executing this step in a LXD container (as root, which is the default), you may get a minor error, but the operation will still complete correctly.
+
+        sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
+
+3. Create the MAAS database with the following command, where `$MAAS_DBNAME` is your desired name for the MAAS database (typically known as `maas`). Again, if you're executing this step in a LXD container as root, you can ignore the minor error that results.
+
+        sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
+
+4. Edit `/etc/postgresql/10/main/pg_hba.conf` and add a line for the newly created database, replacing the variables with actual  names. You can limit access to a specific network by using a different CIDR than `0/0`.
+
+        host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
+
+5. You can then initialise MAAS via the following command:
+
+        sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
+
+[note] You should use `localhost` for `$HOSTNAME` if you're running PostgreSQL on the same box as MAAS.[/note]
+
+Don't worry; if you leave out any of the database parameters, you'll be prompted for those details.
+
+<a href="#heading--service-status"><h2 id="heading--service-status">Checking MAAS service status</h2></a>
+
+You can check the status of running services with:
+
+    sudo maas status
+
+Typically, the output looks something like this:
+
+    bind9                            RUNNING   pid 7999, uptime 0:09:17
+    dhcpd                            STOPPED   Not started
+    dhcpd6                           STOPPED   Not started
+    ntp                              RUNNING   pid 8598, uptime 0:05:42
+    postgresql                       RUNNING   pid 8001, uptime 0:09:17
+    proxy                            STOPPED   Not started
+    rackd                            RUNNING   pid 8000, uptime 0:09:17
+    regiond:regiond-0                RUNNING   pid 8003, uptime 0:09:17
+    regiond:regiond-1                RUNNING   pid 8008, uptime 0:09:17
+    regiond:regiond-2                RUNNING   pid 8005, uptime 0:09:17
+    regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
+    tgt                              RUNNING   pid 8040, uptime 0:09:15
+
+snap-2-8-cli snap-2-8-ui -->
 
 <!-- snap-2-8-cli
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3116)).
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2528).
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3117)).
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2529).
  snap-2-8-ui -->
 
-<!-- snap-2-9-cli
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3118)).
- snap-2-9-cli -->
+<!-- snap-2-8-cli snap-2-8-ui
+<a href="#heading--example"><h2 id="heading--example">Example of MAAS initialisation</h2></a>
 
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3119)).
+The following demonstrates the `region+rack` mode, a popular initialisation choice for MAAS:
 
--   **Static assign**: The administrator will specify a static address using a secondary field.
+    sudo maas init region+rack
 
--   **DHCP**: The machine leases a dynamic IP address, via either MAAS-managed DHCP or an external DHCP server.
+`maas` will ask for the MAAS URL:
 
--   **Unconfigured**: The interface is not configured.
+    MAAS URL [default=http://10.55.60.1:5240/MAAS]: http://192.168.122.1:5240/MAAS
 
-Press the "Save" button to apply the changes.
+If you also need to create an admin user, you can use:
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-If you want to edit the IP assignment mode of a network interface, the existing subnet link first needs to be removed.
+    sudo maas createadmin
 
-Begin by finding the interface ID as well as the interface's subnet link ID with the command:
+which takes you through the following exchange:
 
-``` bash
-maas $PROFILE node read $SYSTEM_ID
-```
-
-Once that's done, proceed to unlink and link:
-
-``` bash
-maas $PROFILE interface unlink-subnet $SYSTEM_ID $INTERFACE_ID id=$SUBNET_LINK_ID
-maas $PROFILE interface link-subnet $SYSTEM_ID $INTERFACE_ID mode=$IP_MODE subnet=$SUBNET_CIDR [$OPTIONS]
-```
-
-For instance, to have interface `58`, with subnet link `146`, on machine `exqn37` use DHCP on subnet `192.168.1.0/24`:
-
-``` bash
-maas $PROFILE interface unlink-subnet exqn37 58 id=146
-maas $PROFILE interface link-subnet exqn37 58 mode=dhcp subnet=192.168.1.0/24
-```
-
-If instead of DHCP, you desire a static address, then the second command would look like this:
-
-``` bash
-maas $PROFILE interface link-subnet exqn37 58 mode=static subnet=192.168.1.0/24 ip_address=192.168.1.113
-```
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
-
-See [Concepts and terms](/t/concepts-and-terms/785#heading--ip-ranges) for the definitions of reserved range types.
-
-<a href="#heading--bond-interfaces"><h3 id="heading--bond-interfaces">Bond interfaces and how to create one</h3></a>
-
-A bond interface is used to aggregate two or more physical interfaces into a single logical interface. Combining multiple network connections in parallel can increase network throughput beyond what a single NIC will allow.  It also provides some redundancy in case one of the NICs should fail.  More information about the theory behind bonded NICs is found in the [relevant IEEE standard](https://1.ieee802.org/tsn/802-1ax-rev/).
-
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-A bond can be created with the following command:
-
-```
-maas $PROFILE interfaces create-bond $SYSTEM_ID name=$BOND_NAME \
-parents=$IFACE1_ID mac_address=$MAC_ADDR \ 
-parents=$IFACE2_ID bond_mode=$BOND_MODE \
-bond_updelay=$BOND_UP bond_downdelay=$BOND_DOWN mtu=$MTU
-```
-
-Use the `parents` parameters to define which interfaces form the aggregate interface.
-
-The `bond_updelay` and `bond_downdelay` parameters specify the number of milliseconds to wait before either enabling or disabling a slave after a failure has been detected.
-
-The following is an example of `create-bond` in action:
-
-```
-maas admin interfaces create-bond 4efwb4 name=bond0 parents=4 \
-mac_address=52:52:00:00:00:00 parents=15 bond_mode=802.3ad \
-bond_updelay=200 bond_downdelay=200 mtu=9000
-```
-
-There are a wide range of bond parameters you can choose when creating a bond:
-
-| Parameter | Type and description |
-|:----------|:---------------------|
-| `mac_address`| Optional string.  MAC address of the interface. |
-| `tags`| Optional string.  Tags for the interface. |
-| `vlan`| Optional string.  VLAN the interface is connected to. If not provided then the interface is considered disconnected. |
-| `parents`| Required integer.  Parent interface ids that make this bond. |
-| `bond_miimon`| Optional integer.  The link monitoring freqeuncy in milliseconds. (Default: 100). |
-| `bond_downdelay`| Optional integer.  Specifies the time, in milliseconds, to wait before disabling a slave after a link failure has been detected. |
-| `bond_updelay`| Optional integer.  Specifies the time, in milliseconds, to wait before enabling a slave after a link recovery has been detected. |
-| `bond_lacp_rate`| Optional string.  Option specifying the rate at which to ask the link partner to transmit LACPDU packets in 802.3ad mode. Available options are ``fast`` or ``slow``. (Default: ``slow``). |
-| `bond_xmit_hash_policy`| Optional string.  The transmit hash policy to use for slave selection in balance-xor, 802.3ad, and tlb modes. Possible values are: ``layer2``, ``layer2+3``, ``layer3+4``, ``encap2+3``, ``encap3+4``. (Default: ``layer2``) |
-| `bond_num_grat_arp`| Optional integer.  The number of peer notifications (IPv4 ARP or IPv6 Neighbour Advertisements) to be issued after a failover. (Default: 1) |
-| `mtu`| Optional integer.  Maximum transmission unit. |
-| `accept_ra`| Optional boolen.  Accept router advertisements. (IPv6 only) |
-| `autoconf`| Optional boolean.  Perform stateless autoconfiguration. (IPv6 only) |
-| `bond_mode`| Optional string.  The operating mode of the bond.  (Default: active-backup). |
-
-Supported bonding modes include:
-
-| Mode | Behavior |
-|:-----|:---------|
-|  `balance-rr`:| Transmit packets in sequential order from the first available slave through the last. This mode provides load balancing and fault tolerance. |
-|  `active-backup`| Only one slave in the bond is active. A different slave becomes active if, and only if, the active slave fails. The bond's MAC address is externally visible on only one port (network adapter) to avoid confusing the switch. |
-|  `balance-xor`| Transmit based on the selected transmit hash policy. The default policy is a simple [(source MAC address XOR'd with destination MAC address XOR packet type ID) modulo slave count]. |
-|  `broadcast`| Transmits everything on all slave interfaces. This mode provides fault tolerance. |
-|  `802.3ad`| IEEE 802.3ad dynamic link aggregation. Creates aggregation groups that share the same speed and duplex settings. Uses all slaves in the active aggregator according to the 802.3ad specification. |
-|  `balance-tlb`| Adaptive transmit load balancing: channel bonding that does not require any special switch support. |
-|  `balance-alb`| Adaptive load balancing: includes balance-tlb plus receive load balancing (rlb) for IPV4 traffic, and does not require any special switch support. The receive load balancing is achieved by ARP negotiation. |
-
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
-
-A bond is created by selecting more than one interface and clicking the now-active "Create bond" button:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png"></a>
-
-After clicking the "Create bond" button, the bond configuration pane will appear.
-
-From the bond configuration pane, you can rename the bond, select a bond mode (see below), assign a MAC address to the aggregate device and attach one or more tags.
-
-The interfaces aggregated into the bond interface are listed below the "Tags" field. Use the "Primary" column to select the interface to act as the primary device.
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png"></a>
-
-You can select from the following bonding modes on the "Bond mode" drop-down menu:
-
--   **balance-rr**: Transmit packets in sequential order from the first available slave through to the last. This mode provides load balancing and fault tolerance.
-
--   **active-backup**: Only one slave in the bond is active. A different slave becomes active if, and only if, the active slave fails. The bond's MAC address is externally visible on only one port (network adaptor) to avoid confusing the switch.
-
--   **balance-xor**: Transmit based on the selected transmit hash policy. The default policy is simple, which means that an XOR operation selects packages.  This XOR compares the source MAC address and the resultant XOR between the destination MAC address, the packet type identifier, and the modulo slave count.
-
--   **broadcast**: Transmit everything on all slave interfaces. This mode provides fault tolerance.
-
--   **802.3ad**: Creates aggregation groups that share the same speed and duplex settings. This mode utilises all slaves in the active aggregation, following the IEEE 802.3ad specification.
-
--   **balance-tlb**: Adaptive transmit load balancing, channel bonding that does not require any special switch support.
-
--   **balance-alb**: Adaptive load balancing, includes balance-tlb plus receive load balancing (rlb) for IPV4 traffic. This mode does not require any special switch support.  ARP negotiation achieves load balancing in this case.
-
-Press the "Save" button when you're done.
+    Create first admin account:       
+    Username: admin
+    Password: ******
+    Again: ******
+    Email: admin@example.com
+    Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
 
 [note]
-The MAC address defaults to the MAC address of the primary interface.
+You will use the username and password created above to access the web UI.  If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
 [/note]
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-A bridge interface is created with the following syntax:
+<a href="#heading--maas-url"><h2 id="heading--maas-url">MAAS URL</h2></a>
+
+All run modes (except `none`) prompt for a MAAS URL, interpreted differently depending on the mode:
+
+-   `region`: Used to create a new region controller.
+-   `rack`: Used to locate the region controller.
+
+<a href="#heading--shared-secret"><h2 id="heading--shared-secret">Shared secret</h2></a>
+
+The 'rack' and 'region+rack' modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.
+
+<a href="#heading--reinitialising-maas"><h2 id="heading--reinitialising-maas">Reinitialising MAAS</h2></a>
+
+It is also possible to re-initialise MAAS to switch modes.  For example, to switch from `rack` to `region`:
+ 
+    sudo maas init region
+
+<a href="#heading--additional-init-options"><h2 id="heading--additional-init-options">Additional `init` options</h2></a>
+
+The `init` command can takes optional arguments. To list them, as well as read a brief description of each, you can enter:
+
+    sudo maas init --help
+
+snap-2-8-ui snap-2-8-cli -->
+
+MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.  This article will walk you through both install methods.
+
+#### Thirteen questions you may have:
+
+1. [How do I install (but not initialise) the MAAS 2.9 snap?](#heading--install-maas-snap)
+2. [How do I upgrade my 2.8 snap to version 2.9?](#heading--upgrade-maas-snap)
+3. [What are MAAS initialisation modes?](#heading--maas-init-modes)
+4. [How do I initialise MAAS for a test or proof-of-concept configuration?](#heading--init-poc)
+5. [How do I initialise MAAS for a production configuration?](#heading--init-prod)
+6. [How do I migrate an existing snap install?](/t/tips-tricks-and-traps/1506#heading--migrate-maas)
+7. [What if I want to manually export the MAAS database to an existing PostgreSQL server?](/t/tips-tricks-and-traps/1506#heading--manual-export)
+8. [How can I check the service status of my MAAS configuration?](#heading--service-status)
+9. [How do I re-initialise MAAS, if I want to?](#heading--reinitialising-maas)
+10. [How can I discover additional init options?](#heading--additional-init-options)
+11. [Give me an example of initialising MAAS](#heading--example)
+12. [Tell me about the MAAS URL](#heading--maas-url)
+13. [Tell me about the shared secret](#heading--shared-secret)
+
+[note]
+If you have installed `bind9` or have it running, you will need to uninstall it before installing MAAS.  You can check with `ps aux | grep named` to see if it's running. The `bind9` daemon interferes with MAAS operation and creates a number of unusual, hard-to-debug errors -- but don't worry, MAAS provides DNS and can work with existing DNS servers.
+[/note]
+
+<a href="#heading--install-maas-snap"><h2 id="heading--install-maas-snap">Installing MAAS from the snap</h2></a>
+
+[Snaps](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
+
+    $ sudo snap install --channel=2.9/stable maas
+
+After entering your password, the snap will download and install from the 2.9 stable channel -- though MAAS needs initialising before it's ready to go.
+
+<a href="#heading--upgrade-maas-snap"><h2 id="heading--upgrade-maas-snap">Upgrading MAAS from 2.8</h2></a>
+
+If you want to upgrade from a 2.8 snap to 2.9, and you are using a `region+rack` configuration, use this command:
+
+    $ sudo snap refresh --channel=2.9/stable maas
+
+After entering your password, the snap will refresh from the 2.9 stable channel.  You will **not** need to re-initialise MAAS.
+
+If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
+
+<a href="#heading--maas-init-modes"><h2 id="heading--maas-init-modes">MAAS initialisation modes</h2></a>
+
+MAAS supports the following modes, which dictate what services will run on the local system:
+
+| Mode          | Region | Rack | Database | Description                           |
+|---------------|--------|------|----------|---------------------------------------|
+| `region`      | X      |      |          | Region API server only                |
+| `rack`        |        | X    |          | Rack controller only                  |
+| `region+rack` | X      | X    |          | Region API server and rack controller |
+| `none`        |        |      |          | Reinitialises MAAS and stops services |
+
+<a href="#heading--init-poc"><h2 id="heading--init-poc">Initialising MAAS as a test configuration</h2></a>
+
+We want to provide a more compact version for those who may be testing MAAS.  To achieve this, we're providing a separate snap, called `maas-test-db`, which provides a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.
+
+Once MAAS is installed, you can use the `--help` flag with `maas init` to get relevant instructions:
+ 
+    $ sudo maas init --help
+    usage: maas init [-h] {region+rack,region,rack} . . .
+
+    Initialise MAAS in the specified run mode.
+
+    optional arguments:
+      -h, --help            show this help message and exit
+
+    run modes:
+      {region+rack,region,rack}
+        region+rack         Both region and rack controllers
+        region              Region controller only
+        rack                Rack controller only
+
+    When installing region or rack+region modes, MAAS needs a
+    PostgreSQL database to connect to.
+
+    If you want to set up PostgreSQL for a non-production deployment on
+    this machine, and configure it for use with MAAS, you can install
+    the maas-test-db snap before running 'maas init':
+        sudo snap install maas-test-db
+        sudo maas init region+rack --database-uri maas-test-db:///
+
+We'll quickly walk through these instructions to confirm your understanding.  First, install the `maas-test-db` snap:
+ 
+    sudo snap install maas-test-db
+
+Note that this step installs a a running PostgreSQL and a MAAS-ready database instantiation.  When it's done, you can double check with a built-in PostgreSQL shell:
+
+    $ maas-test-db.psql
+    psql (10.6)
+    Type "help" for help.
+
+    postgres=# \l
+
+This will produce a list of databases, one of which will be `maasdb`, owned by `maas`.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the `maas init` command:
+
+    sudo maas init region+rack --database-uri maas-test-db:///
+
+After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:
+ 
+    MAAS URL [default=http://10.45.222.159:5240/MAAS]:
+
+When you've entered a suitable URL, or accepted the default, the following prompt will appear:
+ 
+    MAAS has been set up.
+
+    If you want to configure external authentication or use
+    MAAS with Canonical RBAC, please run
+
+      sudo maas configauth
+
+    To create admins when not using external authentication, run
+
+      sudo maas createadmin
+
+Let's assume you just want a local testing user named `admin`:
+
+    $ sudo maas createadmin
+    Username: admin
+    Password: ******
+    Again: ******
+    Email: admin@example.com
+    Import SSH keys [] (lp:user-id or gh:user-id): gh:yourusername
+
+At this point, MAAS is basically set up and running.  You can confirm this with `sudo maas status`.  If you need an API key, you can obtain this with `sudo maas apikey --username yourusername`.  Now you will be able to test and evaluate MAAS by going to the URL you entered or accepted above and entering your `admin` username and password.
+
+<a href="#heading--configuration-verification"><h2 id="heading--configuration-verification">Configuration verification</h2></a>
+
+After a snap installation of MAAS, you can verify the currently-running configuration with:
+
+    sudo maas config
+
+<a href="#heading--init-prod"><h2 id="heading--init-prod">Initialise MAAS for a production configuration</h2></a>
+
+To install MAAS in a production configuration, you need to setup PostgreSQL, as described below.
+
+<a href="#heading--pg-setup"><h3 id="heading--pg-setup">Setting up PostgreSQL from scratch</h3></a>
+
+To set up PostgreSQL, even if it's running on a different machine, you can use the following procedure:
+
+1. You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 10 or better) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:
+
+        sudo apt update -y
+        sudo apt install -y postgresql
+
+2. You want to make sure you have a suitable PostgreSQL user, which can be accomplished with the following command, where `$MAAS_DBUSER` is your desired database username, and `$MAAS_DBPASS` is the intended password for that username.  Note that if you're executing this step in a LXD container (as root, which is the default), you may get a minor error, but the operation will still complete correctly.
+
+        sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
+
+3. Create the MAAS database with the following command, where `$MAAS_DBNAME` is your desired name for the MAAS database (typically known as `maas`). Again, if you're executing this step in a LXD container as root, you can ignore the minor error that results.
+
+        sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
+
+4. Edit `/etc/postgresql/10/main/pg_hba.conf` and add a line for the newly created database, replacing the variables with actual  names. You can limit access to a specific network by using a different CIDR than `0/0`.
+
+        host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
+
+5. You can then initialise MAAS via the following command:
+
+        sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
+
+[note] You should use `localhost` for `$HOSTNAME` if you're running PostgreSQL on the same box as MAAS.[/note]
+
+Don't worry; if you leave out any of the database parameters, you'll be prompted for those details.
+
+<a href="#heading--service-status"><h2 id="heading--service-status">Checking MAAS service status</h2></a>
+
+You can check the status of running services with:
+
+    sudo maas status
+
+Typically, the output looks something like this:
+
+    bind9                            RUNNING   pid 7999, uptime 0:09:17
+    dhcpd                            STOPPED   Not started
+    dhcpd6                           STOPPED   Not started
+    ntp                              RUNNING   pid 8598, uptime 0:05:42
+    postgresql                       RUNNING   pid 8001, uptime 0:09:17
+    proxy                            STOPPED   Not started
+    rackd                            RUNNING   pid 8000, uptime 0:09:17
+    regiond:regiond-0                RUNNING   pid 8003, uptime 0:09:17
+    regiond:regiond-1                RUNNING   pid 8008, uptime 0:09:17
+    regiond:regiond-2                RUNNING   pid 8005, uptime 0:09:17
+    regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
+    tgt                              RUNNING   pid 8040, uptime 0:09:15
+
+
+<!-- snap-2-9-cli
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2530).
+ snap-2-9-cli -->
+
+With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](/t/configuration-journey/2531).
+
+<a href="#heading--example"><h2 id="heading--example">Example of MAAS initialisation</h2></a>
+
+The following demonstrates the `region+rack` mode, a popular initialisation choice for MAAS:
+
+    sudo maas init region+rack
+
+`maas` will ask for the MAAS URL:
+
+    MAAS URL [default=http://10.55.60.1:5240/MAAS]: http://192.168.122.1:5240/MAAS
+
+If you also need to create an admin user, you can use:
+
+    sudo maas createadmin
+
+which takes you through the following exchange:
+
+    Create first admin account:       
+    Username: admin
+    Password: ******
+    Again: ******
+    Email: admin@example.com
+    Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
+
+[note]
+You will use the username and password created above to access the web UI.  If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
+[/note]
+
+<a href="#heading--maas-url"><h2 id="heading--maas-url">MAAS URL</h2></a>
+
+All run modes (except `none`) prompt for a MAAS URL, interpreted differently depending on the mode:
+
+-   `region`: Used to create a new region controller.
+-   `rack`: Used to locate the region controller.
+
+<a href="#heading--shared-secret"><h2 id="heading--shared-secret">Shared secret</h2></a>
+
+The 'rack' and 'region+rack' modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.
+
+<a href="#heading--reinitialising-maas"><h2 id="heading--reinitialising-maas">Reinitialising MAAS</h2></a>
+
+It is also possible to re-initialise MAAS to switch modes.  For example, to switch from `rack` to `region`:
+ 
+    sudo maas init region
+
+<a href="#heading--additional-init-options"><h2 id="heading--additional-init-options">Additional `init` options</h2></a>
+
+The `init` command can takes optional arguments. To list them, as well as read a brief description of each, you can enter:
+
+    sudo maas init --help
+
+
+<!-- deb-2-8-cli deb-2-8-ui
+
+<a href="#heading--upgrade-2-7-to-2-8"><h2 id="heading--upgrade-2-7-to-2-8">Upgrading from MAAS 2.7</h2></a>
+
+Upgrading from MAAS 2.7 to MAAS 2.8 is accomplished via the following command sequence:
 
 ```
-maas $PROFILE interfaces create-bridge $SYSTEM_ID name=$BRIDGE_NAME \
-parent=$IFACE_ID
+sudo apt-add-repository ppa:maas/2.8
+sudo apt update
+sudo apt upgrade maas
 ```
 
-Use `parent` to define the primary interface used for the bridge:
+<a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS from packages</h2></a>
 
-```
-maas admin interfaces create-bridge 4efwb4 name=bridged0 parent=4
-```
+You can install a 2.8 stable version of MAAS via the PPA listed on the [MAAS launchpad](https://launchpad.net/~maas), specifically:
 
-The following parameters may be applied when creating a bridge:
+-   [ppa:maas/2.8](https://launchpad.net/~maas/+archive/ubuntu/2.8)
 
-1. `name`: Optional string.  Name of the interface.
+To add the 2.8 PPA, type:
 
-2. `mac_address`: Optional string.  MAC address of the interface.
-
-3. `tags`: Optional string.  Tags for the interface.
-
-4. `vlan`: Optional string.  VLAN the interface is connected to.
-
-5. `parent`: Optional integer.  Parent interface id for this bridge interface.
-
-6. `bridge_type`: Optional string.  The type of bridge to create. Possible values are: ``standard``, ``ovs``.
-
-7. `bridge_stp`: Optional boolean.  Turn spanning tree protocol on or off. (Default: False).
-
-8. `bridge_fd`: Optional integer.  Set bridge forward delay to time seconds. (Default: 15).
-
-9. `mtu`: Optional integer.  Maximum transmission unit.
-
-10. `accept_ra`: Optional boolean.  Accept router advertisements. (IPv6 only)
-
-11. `autoconf`: Optional boolean.  Perform stateless autoconfiguration. (IPv6 only)
-
-<a href="#heading--delete-bridge-interface"><h3 id="heading--delete-bridge-interface">Delete a bridge interface</h3></a>
-
-The "delete" command can be used to delete a bridge interface, a bond interface or a physical interface:
-
-```
-maas $PROFILE interface delete $SYSTEM_ID $IFACE_ID
+``` bash
+sudo apt-add-repository -yu ppa:maas/2.8
 ```
 
-For example:
+<a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installation scenarios</h3></a>
 
-```
-maas admin interface delete 4efwb4 15
-```
+The recommended way to set up an initial MAAS environment is to put everything on one machine:
 
-The following is output after the successful deletion of an interface:
-
-```
-Success.
-Machine-readable output follows:
+``` bash
+sudo apt install maas
 ```
 
-Note that while the label is presented, there is no machine-readable output expected after the successful execution of the delete command.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
 
+<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
 
-<a href="#heading--bridge-interfaces"><h3 id="heading--bridge-interfaces">Bridge interfaces and how to create one</h3></a>
+Choosing "Y" proceeds with a standard <code>apt</code> package install.
 
-A network bridge may be useful if you intend to put virtual machines or containers on the machine.  You can create a bridge by selecting an interface and clicking the now-active "Create bridge" button. A form will appear that allows you to configure a MAC address, STP, and an appropriate tag.
+<h4>Distributed environment</h4> 
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png"></a>
+<p>For a more distributed environment, you can place the region controller on one machine:</p>
 
-Press the "Save" button when you're done.
+``` bash
+sudo apt install maas-region-controller
+```
+
+and the rack controller (see [Rack controller](/t/rack-controller/771) for details) on another:
+
+``` bash
+sudo apt install maas-rack-controller
+sudo maas-rack register
+```
+
+These two steps will lead you through two similar <code>apt</code> install sequences.
+
+<a href="#heading--creating-a-maas-user"><h3 id="heading--creating-a-maas-user">Creating a MAAS user</h3></a>
+
+<p>Finally, you will need to create a MAAS administrator user to access the web UI:</p>
+
+``` bash
+sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
+```
+
+<p>For example, the process might go like this:</p>
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg"></a>
+
+<p>The username can be anything. You will also be prompted to supply a password for the user. The command option <code>--password=$PASSWORD</code> can be used to specify one but, depending on your environment, this may pose a security risk.</p>
+
+<div class="p-notification">
+<p class="p-notification__response">At this time, MAAS does not make use of the email address. However, it may do so in the future.</p>
+</div>
+
+Finally, the <code>createadmin</code> option asks for an SSH key:
+
+<a
+href="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg"></a>
+
+<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to use the associated key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gh:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
+
+<p>If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.</p>
+
+<a href="#heading--next-steps"><h3 id="heading--next-steps">Next steps</h3></a>
+
+deb-2-8-cli deb-2-8-ui -->
+
+<!-- deb-2-8-cli
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2534).
+deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2535).
+deb-2-8-ui -->
+
+<!-- deb-2-7-cli deb-2-7-ui
+
+<a href="#heading--upgrade-2-6-to-2-7"><h2 id="heading--upgrade-2-6-to-2-7">Upgrading from MAAS 2.6</h2></a>
+
+Upgrading from MAAS 2.6 to MAAS 2.7 is accomplished via the following command sequence:
+
+```
+sudo apt-add-repository ppa:maas/2.7
+sudo apt update
+sudo apt upgrade maas
+```
+
+<a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS from packages</h2></a>
+
+You can install a 2.7 stable version of MAAS via the PPA listed on the [MAAS launchpad](https://launchpad.net/~maas), specifically:
+
+-   [ppa:maas/2.7](https://launchpad.net/~maas/+archive/ubuntu/2.7)
+
+To add the 2.7 PPA, type:
+
+``` bash
+sudo apt-add-repository -yu ppa:maas/2.7
+```
+
+<a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installation scenarios</h3></a>
+
+The recommended way to set up an initial MAAS environment is to put everything on one machine:
+
+``` bash
+sudo apt install maas
+```
+
+Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
+
+Choosing "Y" proceeds with a standard <code>apt</code> package install.
+
+<h4>Distributed environment</h4> 
+
+<p>For a more distributed environment, you can place the region controller on one machine:</p>
+
+``` bash
+sudo apt install maas-region-controller
+```
+
+and the rack controller (see [Rack controller](/t/rack-controller/771) for details) on another:
+
+``` bash
+sudo apt install maas-rack-controller
+sudo maas-rack register
+```
+
+These two steps will lead you through two similar <code>apt</code> install sequences.
+
+<a href="#heading--creating-a-maas-user"><h3 id="heading--creating-a-maas-user">Creating a MAAS user</h3></a>
+
+<p>Finally, you will need to create a MAAS administrator user to access the web UI:</p>
+
+``` bash
+sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
+```
+
+<p>For example, the process might go like this:</p>
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg"></a>
+
+<p>The username can be anything. You will also be prompted to supply a password for the user. The command option <code>--password=$PASSWORD</code> can be used to specify one but, depending on your environment, this may pose a security risk.</p>
+
+<div class="p-notification">
+<p class="p-notification__response">At this time, MAAS does not make use of the email address. However, it may do so in the future.</p>
+</div>
+
+Finally, the <code>createadmin</code> option asks for an SSH key:
+
+<a
+href="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg"></a>
+
+<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to include the key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gh:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
+
+<p>If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.</p>
+
+<a href="#heading--next-steps"><h3 id="heading--next-steps">Next steps</h3></a>
+
+deb-2-7-cli deb-2-7-ui -->
+
+<!-- deb-2-7-cli
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2532).
+deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2533).
+deb-2-7-ui -->
+
+<!-- deb-2-9-cli deb-2-9-ui
+<a href="#heading--upgrade-via-packages"><h2 id="heading--upgrade-via-packages">Upgrade MAAS 2.8 to MAAS 2.9</h2></a>
+
+MAAS 2.8 is the last supported version for Ubuntu 18.04 LTS.  Newer versions of MAAS will not be back-portable, and consequently, to upgrade to MAAS 2.9 and all future versions, you will also need to upgrade the base operating system to Ubuntu 20.04.  You do these two operations all at once, with the following procedure:
+
+```
+sudo apt-add-repository ppa:maas/2.9
+```
+
+You will get a message similar to this:
+
+```
+ For stable releases of 2.9.x
+ More info: https://launchpad.net/~maas/+archive/ubuntu/2.9
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
+
+Hit:1 http://security.ubuntu.com/ubuntu bionic-security InRelease
+Hit:2 http://ppa.launchpad.net/maas/2.8/ubuntu bionic InRelease          
+Hit:3 http://archive.ubuntu.com/ubuntu bionic InRelease                  
+Hit:4 http://archive.ubuntu.com/ubuntu bionic-updates InRelease                                     
+Ign:5 http://ppa.launchpad.net/maas/2.9/ubuntu bionic InRelease          
+Hit:6 http://archive.ubuntu.com/ubuntu bionic-backports InRelease        
+Err:7 http://ppa.launchpad.net/maas/2.9/ubuntu bionic Release                 
+  404  Not Found [IP: 91.189.95.85 80]
+Reading package lists... Done
+E: The repository 'http://ppa.launchpad.net/maas/2.9/ubuntu bionic Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+```
+
+This message seems to indicate that nothing happened, but, in fact, this command still creates the file:
+
+```
+/etc/apt/sources.list.d/maas-ubuntu-2_9-bionic.list
+```
+
+This file identifies the path to the 2.9 PPA, even though it incorrectly implies there's a Bionic release there:
+
+```
+deb http://ppa.launchpad.net/maas/2.9/ubuntu bionic main
+```
+
+Still, that's enough for `do-release-upgrade` to figure out that there is a 2.9 PPA, and when it checks, it will find a Focal version of MAAS, which it will bring over and install in place of 2.8.  It isn't necessary to stop MAAS or do anything else, except go ahead and run the upgrade:
+
+```
+sudo do-release-upgrade --allow-third-parties
+```
+
+This command will produce a lot of output, ask you a few questions (for which the defaults are usually fine), and eventually ask you to reboot.  Once your machine has come back up, you can check whether your upgrade has been successful by entering:
+
+```
+lsb_release -a
+```
+
+If the ugprade was successful, this command should yield output similar to the following:
+
+```
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.1 LTS
+Release:	20.04
+Codename:	focal
+```
+
+You have now upgraded to the Ubuntu 20.04 LTS base, and if you check your running MAAS install, you should see that the version has been updated to the latest stable 2.9 release.
+
+<a href="#heading--installation-scenarios"><h2 id="heading--installation-scenarios">Installing MAAS 2.9 fresh</h2></a>
+
+The recommended way to set up an initial MAAS environment is to put everything on one machine:
+
+``` bash
+sudo apt-get -y install maas
+```
+
+Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
+
+Choosing "Y" proceeds with a standard <code>apt</code> package install.
+
+<h4>Distributed environment</h4> 
+
+<p>For a more distributed environment, you can place the region controller on one machine:</p>
+
+``` bash
+sudo apt install maas-region-controller
+```
+
+and the rack controller (see [Rack controller](/t/rack-controller/771) for details) on another:
+
+``` bash
+sudo apt install maas-rack-controller
+sudo maas-rack register
+```
+
+These two steps will lead you through two similar <code>apt</code> install sequences.
+
+<a href="#heading--creating-a-maas-user"><h3 id="heading--creating-a-maas-user">Creating a MAAS user</h3></a>
+
+<p>Finally, you will need to create a MAAS administrator user to access the web UI:</p>
+
+``` bash
+sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
+```
+
+<p>For example, the process might go like this:</p>
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg"></a>
+
+<p>The username can be anything. You will also be prompted to supply a password for the user. The command option <code>--password=$PASSWORD</code> can be used to specify one but, depending on your environment, this may pose a security risk.</p>
+
+<div class="p-notification">
+<p class="p-notification__response">At this time, MAAS does not make use of the email address. However, it may do so in the future.</p>
+</div>
+
+Finally, the <code>createadmin</code> option asks for an SSH key:
+
+<a
+href="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg"></a>
+
+<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to include the key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gh:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
+
+<p>If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.</p>
+
+<a href="#heading--next-steps"><h3 id="heading--next-steps">Next steps</h3></a>
+
+deb-2-9-cli deb-2-9-ui -->
+
+<!-- deb-2-9-cli
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2536).
+deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2537).
+deb-2-9-ui -->
+

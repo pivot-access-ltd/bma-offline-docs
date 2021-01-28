@@ -713,6 +713,17 @@ The `init` command can takes optional arguments. To list them, as well as read a
 snap-2-9-ui snap-2-9-cli -->
 
 <!-- deb-2-8-cli deb-2-8-ui
+
+<a href="#heading--upgrade-2-7-to-2-8"><h2 id="heading--upgrade-2-7-to-2-8">Upgrading from MAAS 2.7</h2></a>
+
+Upgrading from MAAS 2.7 to MAAS 2.8 is accomplished via the following command sequence:
+
+```
+sudo apt-add-repository ppa:maas/2.8
+sudo apt update
+sudo apt upgrade maas
+```
+
 <a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS from packages</h2></a>
 
 You can install a 2.8 stable version of MAAS via the PPA listed on the [MAAS launchpad](https://launchpad.net/~maas), specifically:
@@ -796,6 +807,17 @@ Once you have installed your MAAS environment (region + rack controller) and any
 deb-2-8-ui -->
 
 <!-- deb-2-7-cli deb-2-7-ui
+
+<a href="#heading--upgrade-2-6-to-2-7"><h2 id="heading--upgrade-2-6-to-2-7">Upgrading from MAAS 2.6</h2></a>
+
+Upgrading from MAAS 2.6 to MAAS 2.7 is accomplished via the following command sequence:
+
+```
+sudo apt-add-repository ppa:maas/2.7
+sudo apt update
+sudo apt upgrade maas
+```
+
 <a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS from packages</h2></a>
 
 You can install a 2.7 stable version of MAAS via the PPA listed on the [MAAS launchpad](https://launchpad.net/~maas), specifically:

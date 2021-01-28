@@ -105,7 +105,7 @@ or by using the aforementioned PPA.  The focus for this release has been [bugfix
 
 Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
 
-<h3>Upgrading from MAAS 2.6 snap</h3>
+<a href="#heading--upgrade-2-6-to-2-7-snap"><h3 id="heading--upgrade-2-6-to-2-7-snap">Upgrading from MAAS 2.6 snap</h3></a> 
 
 If you are using the MAAS 2.6 snap, which had to be installed with `--devmode`, you can update to 2.7 with the following parameters:
 
