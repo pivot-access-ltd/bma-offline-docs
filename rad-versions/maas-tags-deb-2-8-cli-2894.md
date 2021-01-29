@@ -33,10 +33,12 @@
 |Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|CLI ~ [UI](/t/maas-tags/2897)|
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
 |Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ UI|
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
@@ -86,7 +88,9 @@ Tags are a convenient way to assign descriptive words to machines, interfaces, a
  Tag names can include any combination of letters, numbers, dashes (-) and underscores (_), and be a maximum of 256 characters in length.
 [/note]
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 #### Five questions you may have:
+ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 
 <!-- deb-2-7-ui
@@ -105,11 +109,13 @@ Tags are a convenient way to assign descriptive words to machines, interfaces, a
 5. [How do I manage tags?](#heading--tag-management)
  deb-2-8-ui -->
 
+<!-- deb-2-9-ui
 1. [How are tags defined?](#heading--tag-definitions)
 2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-deb-2-9-cli/2896#heading--per-node-kernel-boot-options)
 3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
 4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
 5. [How do I manage tags?](#heading--tag-management)
+ deb-2-9-ui -->
 
 <!-- snap-2-7-ui
 1. [How are tags defined?](#heading--tag-definitions)
@@ -135,6 +141,7 @@ Tags are a convenient way to assign descriptive words to machines, interfaces, a
 5. [How do I manage tags?](#heading--tag-management)
  snap-2-9-ui -->
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 MAAS supports binding an XPath expressions to a tag using *tag definitions* (see below). This makes auto-assigning tags to matching hardware possible. For instance, you could tag machines that possess fast GPUs and then deploy software that used GPU-accelerated CUDA or OpenCL libraries.
 
 Because [Juju](https://jujucharms.com/docs/stable/about-juju.html) is the recommended way to deploy services on machines managed by MAAS (see [below](#heading--tag-management)), it supports MAAS tags for application deployments. By specifying MAAS tags as Juju "constraints", services can be deployed to machines that have particular user-defined characteristics.
@@ -237,6 +244,7 @@ To add a tag to a storage device, click on the machine with the storage you wish
 To add a tag, type its name into the 'Tags' field and press Enter. Repeat as desired. Use the small 'x' next to a tag to unassign the tag.
 
 You can apply changes by pressing the 'Save' button.
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 #### Ten questions you may have:
@@ -417,3 +425,4 @@ If multiple tags attached to a machine have the `kernel_opts` defined, MAAS uses
 
 See the [CLI tag management](/t/cli-tag-management/801) section for more information about using the CLI to manage tags.
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
