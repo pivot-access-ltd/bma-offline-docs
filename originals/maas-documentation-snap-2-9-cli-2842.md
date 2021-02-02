@@ -293,4 +293,3 @@ There are (at least) three ways you can contribute to MAAS:
 1. [Guide to contributing](/t/writing-guide/747)
 2. [Push some code (external link)](https://launchpad.net/maas)
 3. [File an issue (external link)](https://bugs.launchpad.net/maas/+filebug)
-

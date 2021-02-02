@@ -2094,7 +2094,13 @@ originals/subnet-management.md: subnet-management.md
 	cd ./originals && cp -p subnet-management-deb-2-9-ui-3125.md subnet-management.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
- 
+
+originals/supported-versions.md: supported-versions.md
+	cp subnet-management.md supported-versions-3771.md
+	xpub push discourse supported-versions-3771.md
+	cd ./originals && xpub pull discourse 3771 3771
+	cd ./originals && cp -p supported-versions-3771.md supported-versions.md
+  
 #t
 
 originals/test-logs.md: test-logs.md
