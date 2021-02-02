@@ -719,7 +719,7 @@ snap-2-9-ui snap-2-9-cli -->
 Upgrading from MAAS 2.7 to MAAS 2.8 is accomplished via the following command sequence:
 
 ```
-sudo apt-add-repository ppa:maas/2.8
+sudo add-apt-repository ppa:maas/2.8
 sudo apt update
 sudo apt upgrade maas
 ```
@@ -733,7 +733,7 @@ You can install a 2.8 stable version of MAAS via the PPA listed on the [MAAS lau
 To add the 2.8 PPA, type:
 
 ``` bash
-sudo apt-add-repository -yu ppa:maas/2.8
+sudo add-apt-repository -yu ppa:maas/2.8
 ```
 
 <a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installation scenarios</h3></a>
@@ -813,7 +813,7 @@ deb-2-8-ui -->
 Upgrading from MAAS 2.6 to MAAS 2.7 is accomplished via the following command sequence:
 
 ```
-sudo apt-add-repository ppa:maas/2.7
+sudo add-apt-repository ppa:maas/2.7
 sudo apt update
 sudo apt upgrade maas
 ```
@@ -827,7 +827,7 @@ You can install a 2.7 stable version of MAAS via the PPA listed on the [MAAS lau
 To add the 2.7 PPA, type:
 
 ``` bash
-sudo apt-add-repository -yu ppa:maas/2.7
+sudo add-apt-repository -yu ppa:maas/2.7
 ```
 
 <a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installation scenarios</h3></a>
@@ -906,7 +906,7 @@ deb-2-7-ui -->
 MAAS 2.8 is the last supported version for Ubuntu 18.04 LTS.  Newer versions of MAAS will not be back-portable, and consequently, to upgrade to MAAS 2.9 and all future versions, you will also need to upgrade the base operating system to Ubuntu 20.04.  You do these two operations all at once, with the following procedure:
 
 ```
-sudo apt-add-repository ppa:maas/2.9
+sudo add-apt-repository ppa:maas/2.9
 ```
 
 You will get a message similar to this:

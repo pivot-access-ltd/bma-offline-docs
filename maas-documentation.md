@@ -309,6 +309,7 @@ There are (at least) three ways you can contribute to MAAS:
 - [About MAAS](/t/about-maas-snap-2-9-ui/2267)
 - ["Give me an example"](/t/give-me-an-example-of-maas-snap-2-9-ui/2651)
 - [What's new in 2.9](/t/whats-new-in-maas-2-9/3336)
+- [Supported versions](/t/supported-versions/3771)
 - [Requirements](/t/maas-requirements-snap-2-9-ui/2879)
 - [Installation](/t/maas-installation-snap-2-9-ui/3323)
 - [Configuration journey](/t/configuration-journey-snap-2-9-ui/2531)
@@ -1261,6 +1262,8 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/744/|/docs/building-the-docs|
 |https://discourse.maas.io/t/-/746/|/docs/working-with-git-and-github|
 |https://discourse.maas.io/t/-/2218/|/docs/cli-cookbook|
+|https://discourse.maas.io/t/-/3771/|/docs/supported-versions|
+
 [/details]
 
 ## Redirects

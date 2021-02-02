@@ -4,7 +4,7 @@ This document explains what versions of MAAS are supported, and how they are sup
 
 The following table summarises the support provided for various MAAS versions.  Explanations of the terms used in the table are provided below.
 
-| Version | Support Level | Professional Support | Debian pkg support  |
+| Version | Support Level | Professional Support | On Ubuntu base |
 |:-------:|:-------------:|:--------------------:|:----------------:|
 | 2.9     | COMMUNITY     |  Available           | Ubuntu 20.04 LTS |
 | 2.8     | COMMUNITY     |  Available           | Ubuntu 18.04 LTS |
@@ -36,11 +36,10 @@ The following support levels are defined for MAAS.  They cover MAAS major versio
 
 3. Not all versions of MAAS are supported on all Ubuntu releases, depending upon how the version is delivered.
 
-4. Snap versions should function on any Ubuntu version that supports snap.  Support on non-Ubuntu Debian releases is not guaranteed for any release.
+4. Snap versions should function on any Ubuntu version that supports snap.  Support on non-Ubuntu is not guaranteed for any release.
 
-5. Each Debian package is supported on a specific version(s) of the Ubuntu OS.  For example, currently, the MAAS 2.9 Debian package is only supported on Ubuntu 20.04 (Focal), while MAAS 2.8 is only supported on Ubuntu 18.04 (Bionic).
+5. Each Debian package is supported on a specific version(s) of the Ubuntu OS.  For example, currently, the MAAS 2.9 Debian package is only supported on Ubuntu 20.04 LTS (Focal), while MAAS 2.8 is only supported on Ubuntu 18.04 LTS (Bionic).
 
-6. Debian package versions will eventually be phased out. 
 			
 ## Upgrade guide
 
@@ -58,8 +57,7 @@ The following table links to upgrade instructions, indexed by the target release
 MAAS 2.6 and MAAS 2.7 both run on Ubuntu 18.04 LTS (Bionic), so the upgrade is trivial:
 
 ```
-sudo apt-add-repository ppa:maas/2.7
-sudo apt update
+sudo add-apt-repository -u ppa:maas/2.7
 sudo apt upgrade maas
 ```
 
@@ -68,8 +66,6 @@ sudo apt upgrade maas
 MAAS 2.5 and MAAS 2.6 both run on Ubuntu 18.04 LTS (Bionic), so the upgrade should be trivial:
 
 ```
-sudo apt-add-repository ppa:maas/2.6
-sudo apt update
+sudo add-apt-repository -u ppa:maas/2.6
 sudo apt upgrade maas
 ```
-
