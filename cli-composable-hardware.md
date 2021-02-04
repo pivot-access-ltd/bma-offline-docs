@@ -65,7 +65,7 @@ maas $PROFILE vm-hosts create type=virsh power_address=qemu+ssh://ubuntu@192.168
 Here's a simple way to find a VM host's ID by name using `jq`:
 
 ``` bash
-maas $PROFILE vm-hosts read | jq '.[] | select (.name=="MyVMHost") | .name, .id'
+maas $PROFILE vm-hosts read | jq '.[] | select (.name=="$VM_HOST_NAME") | .name, .id'
 ```
 
 [note] `jq` is a command-line JSON processor. More details at https://stedolan.github.io/jq/[/note]
@@ -172,6 +172,8 @@ Where RESOURCES is a space-separated list containing any combination of the foll
 4. **architecture=** See [Architecture](#heading--architecture) below
 5. **storage=** See [Storage](#heading--storage) below
 6. **interfaces=** See [Interfaces](#heading--interfaces) below
+7. **hugepages_backed=** set to True to request hugepages backing for the machine. **Valid only for MAAS 2.9 and above**
+8. **pinned_cores=** list of host CPU cores to pin the VM vCPUs to. If this parameter is passed, the "cores" parameter is ignored. **Valid only for MAAS 2.9 and above**
 
 <a href="#heading--architecture"><h4 id="heading--architecture">Architecture</h4></a>
 
