@@ -463,6 +463,66 @@
  snap-2-9-ui -->
 
 <p>MAAS can specify kernel boot options to machines on both a global basis (UI and CLI) and a per-machine basis (CLI-only). A full catalogue of available options can be found in the <a href="https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html">Linux kernel parameters list</a> at <a href="https://www.kernel.org">kernel.org</a>.</p>
+<h4>Two questions you may have:</h4>
+<!-- deb-2-7-cli
+1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-deb-2-7-cli.html#heading--per-node-kernel-boot-options)
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-deb-2-7-cli.html#heading--per-node-kernel-boot-options)
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-deb-2-8-cli.html#heading--per-node-kernel-boot-options)
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-deb-2-8-cli.html#heading--per-node-kernel-boot-options)
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-deb-2-9-cli.html#heading--per-node-kernel-boot-options)
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-deb-2-9-cli.html#heading--per-node-kernel-boot-options)
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-snap-2-7-cli.html#heading--per-node-kernel-boot-options)
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-snap-2-7-cli.html#heading--per-node-kernel-boot-options)
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-snap-2-8-cli.html#heading--per-node-kernel-boot-options)
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-snap-2-8-cli.html#heading--per-node-kernel-boot-options)
+ snap-2-8-ui -->
+
+<ol>
+<li><a href="#heading--global-kernel-boot-options">How can I set global kernel boot options for all machines?</a></li>
+<li><a href="maas-tags.html#heading--per-node-kernel-boot-options">How can I set kernel boot options for a specific machine?</a></li>
+</ol>
+<!-- snap-2-9-ui
+1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](maas-tags.html#heading--per-node-kernel-boot-options)
+ snap-2-9-ui -->
+
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 
 <a href="#heading--global-kernel-boot-options"><h2 id="heading--global-kernel-boot-options">Global kernel boot options</h2></a>
@@ -474,36 +534,10 @@ To set kernel boot options globally, as an admin, open the 'Settings' page and o
 Type in the desired (space separated) options and click 'Save'. The contents of the field will be used as-is. Do not use extra characters.
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<h4>Two questions you may have:</h4>
-<ol>
-<li><a href="#heading--global-kernel-boot-options">How can I set global kernel boot options for all machines?</a></li>
-<li><a href="#heading--per-node-kernel-boot-options">How can I set kernel boot options for a specific machine?</a></li>
-</ol>
 <p><a href="#heading--cli"><h2 id="heading--cli">Global kernel boot options</h2></a></p>
 <p>You can set kernel boot options and apply them to all machines with the CLI command:</p>
 <pre><code class="bash">maas $PROFILE maas set-config name=kernel_opts value='$KERNEL_OPTIONS'
 </code></pre>
-
-<p><a href="#heading--per-node-kernel-boot-options"><h2 id="heading--per-node-kernel-boot-options">Per-machine kernel boot options</h2></a></p>
-<p>Per-machine kernel boot options are set using the CLI.</p>
-<p><strong>NOTE:</strong> 
-Per-machine boot options take precedence to global ones.</p>
-<p>To specify kernel boot options for an individual machine, first create a tag:</p>
-<pre><code class="bash">maas $PROFILE tags create name='$TAG_NAME' \
-    comment='$COMMENT' kernel_opts='$KERNEL_OPTIONS'
-</code></pre>
-
-<p>For example:</p>
-<pre><code class="bash">maas $PROFILE tags create name='nomodeset' \
-    comment='nomodeset kernel option' kernel_opts='nomodeset vga'
-</code></pre>
-
-<p>Next, assign the tag to the machine in question:</p>
-<pre><code class="bash">maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
-</code></pre>
-
-<p>If multiple tags attached to a machine have the <code>kernel_opts</code> defined, MAAS uses the first one found, in alphabetical order.</p>
-<p>See the <a href="cli-tag-management.html">CLI tag management</a> section for more information about using the CLI to manage tags.</p>
     </div>
   </body>
 </html>

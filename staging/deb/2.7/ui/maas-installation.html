@@ -1101,6 +1101,18 @@ The `init` command can takes optional arguments. To list them, as well as read a
 snap-2-9-ui snap-2-9-cli -->
 
 <!-- deb-2-8-cli deb-2-8-ui
+
+<a href="#heading--upgrade-2-7-to-2-8"><h2 id="heading--upgrade-2-7-to-2-8">Upgrading from MAAS 2.7</h2></a>
+
+Upgrading from MAAS 2.7 to MAAS 2.8 is accomplished via the following command sequence:
+
+
+<pre><code>sudo add-apt-repository ppa:maas/2.8
+sudo apt update
+sudo apt upgrade maas
+</code></pre>
+
+
 <a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS from packages</h2></a>
 
 You can install a 2.8 stable version of MAAS via the PPA listed on the [MAAS launchpad](https://launchpad.net/~maas), specifically:
@@ -1110,7 +1122,7 @@ You can install a 2.8 stable version of MAAS via the PPA listed on the [MAAS lau
 To add the 2.8 PPA, type:
 
 
-<pre><code class="bash">sudo apt-add-repository -yu ppa:maas/2.8
+<pre><code class="bash">sudo add-apt-repository -yu ppa:maas/2.8
 </code></pre>
 
 
@@ -1188,13 +1200,20 @@ deb-2-8-cli -->
 Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](configuration-journey.html).
 deb-2-8-ui -->
 
+<p><a href="#heading--upgrade-2-6-to-2-7"><h2 id="heading--upgrade-2-6-to-2-7">Upgrading from MAAS 2.6</h2></a></p>
+<p>Upgrading from MAAS 2.6 to MAAS 2.7 is accomplished via the following command sequence:</p>
+<pre><code>sudo add-apt-repository ppa:maas/2.7
+sudo apt update
+sudo apt upgrade maas
+</code></pre>
+
 <p><a href="#heading--install-from-packages"><h2 id="heading--install-from-packages">Install MAAS from packages</h2></a></p>
 <p>You can install a 2.7 stable version of MAAS via the PPA listed on the <a href="https://launchpad.net/~maas">MAAS launchpad</a>, specifically:</p>
 <ul>
 <li><a href="https://launchpad.net/~maas/+archive/ubuntu/2.7">ppa:maas/2.7</a></li>
 </ul>
 <p>To add the 2.7 PPA, type:</p>
-<pre><code class="bash">sudo apt-add-repository -yu ppa:maas/2.7
+<pre><code class="bash">sudo add-apt-repository -yu ppa:maas/2.7
 </code></pre>
 
 <p><a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installation scenarios</h3></a></p>
@@ -1252,7 +1271,7 @@ deb-2-7-cli -->
 MAAS 2.8 is the last supported version for Ubuntu 18.04 LTS.  Newer versions of MAAS will not be back-portable, and consequently, to upgrade to MAAS 2.9 and all future versions, you will also need to upgrade the base operating system to Ubuntu 20.04.  You do these two operations all at once, with the following procedure:
 
 
-<pre><code>sudo apt-add-repository ppa:maas/2.9
+<pre><code>sudo add-apt-repository ppa:maas/2.9
 </code></pre>
 
 

@@ -1,11 +1,11 @@
-hMAAS's API uses [OAuth (external link)](http://en.wikipedia.org/wiki/OAuth) as its authentication mechanism. This isn't third-party (3-legged) OAuth, so the process used is what's commonly referred to as 0-legged OAuth: the consumer accesses protected resources by submitting OAuth signed requests.
+MAAS's API uses [OAuth](http://en.wikipedia.org/wiki/OAuth) as its authentication mechanism. This isn't third-party (3-legged) OAuth, so the process used is what's commonly referred to as 0-legged OAuth: the consumer accesses protected resources by submitting OAuth signed requests.
 
 Note that some API endpoints support unauthenticated requests (i.e. anonymous access). See the [API documentation](https://maas.io/docs/api) for details. 
 
 #### Two questions you may have:
 
-1. [How can I perform authenticated requests in python?](/t/cli-resource-pool-management/800#heading--python)
-2. [How can I perform authenticated requests in ruby?](/t/cli-resource-pool-management/800#heading--ruby)
+1. [How can I perform authenticated requests in python?](/t/api-authentication/742#heading--python)
+2. [How can I perform authenticated requests in ruby?](/t/api-authentication/742#heading--ruby)
 
 Here are two examples on how to perform an authenticated GET request to retrieve the list of nodes. The &lt;key&gt;, &lt;secret&gt;, &lt;consumer_key&gt; tokens are the three elements that compose the API key (API key = '&lt;consumer_key&gt;:&lt;key&gt;:&lt;secret&gt;').
 
@@ -59,3 +59,4 @@ response = perform_API_request(
      "http://server/MAAS/api/1.0", "/nodes/?op=list", "<key>", "<secret>",
      "consumer_key>")
 ```
+

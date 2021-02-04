@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="../maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.9
+	    What&rsquo;s new in 2.8
 	  </a>
 	</li>
 	<li>
@@ -465,13 +465,54 @@
 <p>Tags are a convenient way to assign descriptive words to machines, interfaces, and storage devices. Using MAAS tags, you can easily select machines that meet certain criteria, helping you to remember that you&rsquo;ve defined or reserved certain machines for certain functions. </p>
 <p><strong>NOTE:</strong> 
  Tag names can include any combination of letters, numbers, dashes (-) and underscores (_), and be a maximum of 256 characters in length.</p>
-<h4>Four questions you may have:</h4>
+<h4>Five questions you may have:</h4>
+<!-- deb-2-7-ui
+1. [How are tags defined?](#heading--tag-definitions)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-deb-2-7-cli.html#heading--per-node-kernel-boot-options)
+3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
+4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
+5. [How do I manage tags?](#heading--tag-management)
+ deb-2-7-ui -->
+
 <ol>
 <li><a href="#heading--tag-definitions">How are tags defined?</a></li>
+<li><a href="maas-tags-deb-2-8-cli.html#heading--per-node-kernel-boot-options">How can I set kernel boot options for a specific machine?</a></li>
 <li><a href="#heading--tag-listing-and-tags-as-search-filters">How can I see and filter the tag list?</a></li>
 <li><a href="#heading--tag-assignment">How do I see and change which tags are assigned?</a></li>
 <li><a href="#heading--tag-management">How do I manage tags?</a></li>
 </ol>
+<!-- deb-2-9-ui
+1. [How are tags defined?](#heading--tag-definitions)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-deb-2-9-cli.html#heading--per-node-kernel-boot-options)
+3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
+4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
+5. [How do I manage tags?](#heading--tag-management)
+ deb-2-9-ui -->
+
+<!-- snap-2-7-ui
+1. [How are tags defined?](#heading--tag-definitions)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-snap-2-7-cli.html#heading--per-node-kernel-boot-options)
+3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
+4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
+5. [How do I manage tags?](#heading--tag-management)
+ snap-2-7-ui -->
+
+<!-- snap-2-8-ui
+1. [How are tags defined?](#heading--tag-definitions)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-snap-2-8-cli.html#heading--per-node-kernel-boot-options)
+3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
+4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
+5. [How do I manage tags?](#heading--tag-management)
+ snap-2-8-ui -->
+
+<!-- snap-2-9-ui
+1. [How are tags defined?](#heading--tag-definitions)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-snap-2-9-cli.html#heading--per-node-kernel-boot-options)
+3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
+4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
+5. [How do I manage tags?](#heading--tag-management)
+ snap-2-9-ui -->
+
 <p>MAAS supports binding an XPath expressions to a tag using <em>tag definitions</em> (see below). This makes auto-assigning tags to matching hardware possible. For instance, you could tag machines that possess fast GPUs and then deploy software that used GPU-accelerated CUDA or OpenCL libraries.</p>
 <p>Because <a href="https://jujucharms.com/docs/stable/about-juju.html">Juju</a> is the recommended way to deploy services on machines managed by MAAS (see <a href="#heading--tag-management">below</a>), it supports MAAS tags for application deployments. By specifying MAAS tags as Juju &ldquo;constraints&rdquo;, services can be deployed to machines that have particular user-defined characteristics.</p>
 <p><a href="#heading--tag-definitions"><h2 id="heading--tag-definitions">Tag definitions</h2></a></p>
@@ -543,17 +584,18 @@ New tags become available as a filter in the &lsquo;Machines&rsquo; page in the 
 <p>To add a tag, type its name into the &lsquo;Tags&rsquo; field and press Enter. Repeat as desired. Use the small &lsquo;x&rsquo; next to a tag to unassign the tag.</p>
 <p>You can apply changes by pressing the &lsquo;Save&rsquo; button.</p>
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-#### Nine questions you may have:
+#### Ten questions you may have:
 
 1. [How do I get started with the MAAS CLI?](maas-cli.html)
-2. [How do I create tags?](#heading--rudimentary-tag-creation)
-3. [How do I do tag creation and auto-assignment?](#heading--tag-creation-and-auto-assignment)
-4. [How do I delete a tag?](#heading--delete-a-tag)
-5. [How do I list all tags?](#heading--list-all-tags)
-6. [How do I list nodes/machines labelled with a tag?](#heading--list-nodesmachines-labelled-with-a-tag)
-7. [How do I handle Juju integration?](#heading--juju-integration)
-8. [How do I effect manual tag assignment?](#heading--manual-tag-assignment)
-9. [How do I effect hybrid tag assignment?](#heading--hybrid-tag-assignment)
+2. [How can I set kernel boot options for a specific machine?](#heading--per-node-kernel-boot-options)
+3. [How do I create tags?](#heading--rudimentary-tag-creation)
+4. [How do I do tag creation and auto-assignment?](#heading--tag-creation-and-auto-assignment)
+5. [How do I delete a tag?](#heading--delete-a-tag)
+6. [How do I list all tags?](#heading--list-all-tags)
+7. [How do I list nodes/machines labelled with a tag?](#heading--list-nodesmachines-labelled-with-a-tag)
+8. [How do I handle Juju integration?](#heading--juju-integration)
+9. [How do I effect manual tag assignment?](#heading--manual-tag-assignment)
+10. [How do I effect hybrid tag assignment?](#heading--hybrid-tag-assignment)
 
 <a href="#heading--rudimentary-tag-creation"><h2 id="heading--rudimentary-tag-creation">Tag creation</h2></a>
 
@@ -564,7 +606,7 @@ New tags become available as a filter in the &lsquo;Machines&rsquo; page in the 
 
 <a href="#heading--tag-creation-and-auto-assignment"><h2 id="heading--tag-creation-and-auto-assignment">Tag creation and auto-assignment</h2></a>
 
-When you supply a [definition](maas-tags.html#heading--tag-definitions) during a tag's creation, MAAS automatically applies the tag o all the nodes that satisfy the definition:
+When you supply a [definition](#heading--tag-definitions) during a tag's creation, MAAS automatically applies the tag to all the nodes that satisfy the definition:
 
 
 <pre><code class="bash">maas $PROFILE tags create name=$TAG_NAME \
@@ -603,7 +645,7 @@ To delete a tag from a network interface:
 </code></pre>
 
 
-<a href="#heading--tags-for-network-interfaces</h2>
+<a href="#heading--tags-for-network-interfaces"><h3 id="heading--tags-for-network-interfaces">Tags for network interfaces</h3></a>
 
 It's also possible to assign tags to specific network interfaces. You can use these tags when searching for machines within the web UI and when allocating machines from the API.
 
@@ -703,6 +745,41 @@ maas $PROFILE tag update $TAG_NAME definition=''
 maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
 </code></pre>
 
+
+<a href="#heading--per-node-kernel-boot-options"><h2 id="heading--per-node-kernel-boot-options">Per-machine kernel boot options</h2></a>
+
+Per-machine kernel boot options are set using the CLI.
+
+<strong>NOTE:</strong> 
+Per-machine boot options take precedence to global ones. Please also note that, even though a deployed machine has a `kernel_opt` tag applied, MAAS won't apply the `kernel_opt` associated with that tag until the next deployment.  This means that a machine that has been deployed for a long time can (possibly) inherit kernel options that were applied in the distant past.
+
+
+To specify kernel boot options for an individual machine, first create a tag:
+
+
+<pre><code class="bash">maas $PROFILE tags create name='$TAG_NAME' \
+    comment='$COMMENT' kernel_opts='$KERNEL_OPTIONS'
+</code></pre>
+
+
+For example:
+
+
+<pre><code class="bash">maas $PROFILE tags create name='nomodeset' \
+    comment='nomodeset kernel option' kernel_opts='nomodeset vga'
+</code></pre>
+
+
+Next, assign the tag to the machine in question:
+
+
+<pre><code class="bash">maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
+</code></pre>
+
+
+If multiple tags attached to a machine have the `kernel_opts` defined, MAAS uses the first one found, in alphabetical order.
+
+See the [CLI tag management](cli-tag-management.html) section for more information about using the CLI to manage tags.
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
     </div>
   </body>

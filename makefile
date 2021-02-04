@@ -1720,7 +1720,7 @@ originals/package-repositories.md: package-repositories.md
 	xpub push discourse -t deb-2-9-cli package-repositories-deb-2-9-cli-2980.md
 	xpub push discourse -t deb-2-9-ui package-repositories-deb-2-9-ui-2981.md
 	cd ./originals && xpub pull discourse 2993 2993
-	cd ./originals && cp -p package-repositpackage-deb-2-9-ui-repositories.md
+	cd ./originals && cp -p package-repositories.md package-deb-2-9-ui-repositories.md
 	mv *-deb-* ./rad-versions
 	mv *-snap-* ./rad-versions
 

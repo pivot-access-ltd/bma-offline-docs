@@ -577,10 +577,13 @@ MAAS has switched hardware information gathering from lshw/lsblk to lxd output d
 A number of bug fixes (see the [list in Launchpad](https://bugs.launchpad.net/maas/+bugs?field.milestone%3Alist=87757&field.milestone%3Alist=89662&field.milestone%3Alist=89714&field.milestone%3Alist=89840&field.milestone%3Alist=89954&field.milestone%3Alist=89682&field.status%3Alist=FIXRELEASED)).
 snap-2-7-cli snap-2-7-ui deb-2-7 deb-2-7-ui -->
 
+<h2>MAAS 2.9.1 release notes</h2>
+
+<p>Building upon MAAS 2.9, we have released 2.9.1, which contains some notable <a href="https://launchpad.net/maas/+milestone/2.9.1">bug fixes</a>.  You can find a <a href="#heading--bug-fixes">digest</a> of these fixes below.</p>
 <h2>MAAS 2.9 release notes</h2>
 
 <p>Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now available.</p>
-<h4>What are the new features &amp; fixes for MAAS 2.9?</h4>
+<h4>What are the new features &amp; fixes for MAAS 2.9 and MAAS 2.9.1?</h4>
 <ol>
 <li><a href="#heading--focal-default">Focal Fossa (20.04) as default commissioning/deployment release</a></li>
 <li><a href="#heading--openvswitch">Support for OpenVswitch bridge type</a></li>
@@ -768,8 +771,16 @@ snap-2-7-cli snap-2-7-ui deb-2-7 deb-2-7-ui -->
 <li>`user_data` can now be input directly into the UI.</li>
 </ol>
 
-<h2 id="heading--bug-fixes">Bug fixes</h2>
-
+<p><a href="#heading--bug-fixes"><h2 id="heading--bug-fixes">Bug fixes</h2></a></p>
+<p><a href="#heading--bug-fixes-2-9-1"><h3 id="heading--bug-fixes-2-9-1">Bugs fixed in 2.9.1 release</h3></a></p>
+<ol>
+<li>It is now possible to <a href="https://bugs.launchpad.net/maas/+bug/1908434">delete an LXD VM in an offline state</a>.</li>
+<li>MAAS now handles multiple NUMA nodes even when there are <a href="https://bugs.launchpad.net/maas/+bug/1910473">gaps in the numbering</a>.</li>
+<li>A <a href="https://bugs.launchpad.net/maas/+bug/1910909">snap install issue</a> was fixed.</li>
+<li>The way MAAS handles <a href="https://bugs.launchpad.net/maas/+bug/1910909">gateways WRT DHCP</a> was adjusted.</li>
+<li>A majority of the document <a href="https://bugs.launchpad.net/maas/+bug/1900010">headings have been converted to links</a> for easy bookmarking.</li>
+</ol>
+<p><a href="#heading--bug-fixes-2-9"><h3 id="heading--bug-fixes-2-9">Bugs fixed in 2.9 release</h3></a></p>
 <ol>
 <li>MAAS 2.9 includes a fix for <a href="https://bugs.launchpad.net/maas/+bug/1894727">Bug #1894727: Admin uses cannot change other user&rsquo;s passwords via the UI</a>.</li>
 </ol>

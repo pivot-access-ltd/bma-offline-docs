@@ -478,7 +478,7 @@ Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS 
 
 <p><a href="#heading--find-vm-host-ids"><h2 id="heading--find-vm-host-ids">Find VM host IDs</h2></a></p>
 <p>Here&rsquo;s a simple way to find a VM host&rsquo;s ID by name using <code>jq</code>:</p>
-<pre><code class="bash">maas $PROFILE vm-hosts read | jq '.[] | select (.name==&quot;MyVMHost&quot;) | .name, .id'
+<pre><code class="bash">maas $PROFILE vm-hosts read | jq '.[] | select (.name==&quot;$VM_HOST_NAME&quot;) | .name, .id'
 </code></pre>
 
 <p><strong>NOTE:</strong> </p>
@@ -556,6 +556,8 @@ Both USERNAME and PASSWORD are optional for the virsh power type. ZONE and TAGS 
 <li><strong>architecture=</strong> See <a href="#heading--architecture">Architecture</a> below</li>
 <li><strong>storage=</strong> See <a href="#heading--storage">Storage</a> below</li>
 <li><strong>interfaces=</strong> See <a href="#heading--interfaces">Interfaces</a> below</li>
+<li><strong>hugepages_backed=</strong> set to True to request hugepages backing for the machine. <strong>Valid only for MAAS 2.9 and above</strong></li>
+<li><strong>pinned_cores=</strong> list of host CPU cores to pin the VM vCPUs to. If this parameter is passed, the &ldquo;cores&rdquo; parameter is ignored. <strong>Valid only for MAAS 2.9 and above</strong></li>
 </ol>
 <p><a href="#heading--architecture"><h4 id="heading--architecture">Architecture</h4></a></p>
 <p>To list available architectures:</p>
