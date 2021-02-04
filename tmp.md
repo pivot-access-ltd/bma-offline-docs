@@ -1,495 +1,298 @@
 <!-- deb-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|CLI ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|CLI ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ UI|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ UI|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|CLI ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|CLI ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ UI|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ UI|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|CLI ~ [UI](/t/add-machines/2285)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|CLI ~ [UI](/t/custom-machine-setup/2597)|
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ UI|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ UI|
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
+|Snap|CLI ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-7-cli -->
 
+<!-- snap-2-7-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ UI|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ UI|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
+ snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|CLI ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|CLI ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ UI|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ UI|[CLI](/t/custom-machine-setup/2590) ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|CLI ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|CLI ~ [UI](/t/custom-machine-setup/2591)|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
  snap-2-9-cli -->
 
-<!-- snap-2-9-ui
 ||2.7|2.8|2.9|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ UI|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
- snap-2-9-ui -->
-
-There are two ways to add a machine to MAAS:
-
-1. If you place the machine on a connected network, and the machine is configured to netboot, MAAS will automatically enlist it.
-2. If you add a machine manually, MAAS will automatically commission it.
-
-This article will explain more about both methods.
-
-#### Four or five questions you may have:
+|Snap|[CLI](/t/custom-machine-setup/2586) ~ [UI](/t/custom-machine-setup/2587)|[CLI](/t/custom-machine-setup/2588) ~ [UI](/t/custom-machine-setup/2589)|[CLI](/t/custom-machine-setup/2590) ~ UI|
+|Packages|[CLI](/t/custom-machine-setup/2592) ~ [UI](/t/custom-machine-setup/2593)|[CLI](/t/custom-machine-setup/2594) ~ [UI](/t/custom-machine-setup/2595)|[CLI](/t/custom-machine-setup/2596) ~ [UI](/t/custom-machine-setup/2597)|
 
 <!-- deb-2-7-cli
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2748)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2292)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
+During machine [enlistment](/t/add-machines/2280#heading--enlistment), [deployment](/t/deploy-machines/2604), [commissioning](/t/commission-machines/2472) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2749)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2293)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
-5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+During machine [enlistment](/t/add-machines/2281#heading--enlistment), [deployment](/t/deploy-machines/2605), [commissioning](/t/commission-machines/2473) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2750)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2294)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
+During machine [enlistment](/t/add-machines/2282#heading--enlistment), [deployment](/t/deploy-machines/2606), [commissioning](/t/commission-machines/2474) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2751)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2295)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
-5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+During machine [enlistment](/t/add-machines/2283#heading--enlistment), [deployment](/t/deploy-machines/2607), [commissioning](/t/commission-machines/2475) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2752)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2296)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
+During machine [enlistment](/t/add-machines/2284#heading--enlistment), [deployment](/t/deploy-machines/2608), [commissioning](/t/commission-machines/2476) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2753)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2297)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
-5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+During machine [enlistment](/t/add-machines/2285#heading--enlistment), [deployment](/t/deploy-machines/2609), [commissioning](/t/commission-machines/2477) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2742)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2286)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
+During machine [enlistment](/t/add-machines/2274#heading--enlistment), [deployment](/t/deploy-machines/2598), [commissioning](/t/commission-machines/2466) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  snap-2-7-cli -->
 
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2743)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2287)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
-5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+<!-- snap-2-7-ui
+During machine [enlistment](/t/add-machines/2275#heading--enlistment), [deployment](/t/deploy-machines/2599), [commissioning](/t/commission-machines/2467) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+ snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2744)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2288)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
+During machine [enlistment](/t/add-machines/2276#heading--enlistment), [deployment](/t/deploy-machines/2600), [commissioning](/t/commission-machines/2468) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2745)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2289)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
-5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+During machine [enlistment](/t/add-machines/2277#heading--enlistment), [deployment](/t/deploy-machines/2601), [commissioning](/t/commission-machines/2469) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2746)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2290)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
+During machine [enlistment](/t/add-machines/2278#heading--enlistment), [deployment](/t/deploy-machines/2602), [commissioning](/t/commission-machines/2470) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  snap-2-9-cli -->
 
-<!-- snap-2-9-ui
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/introduction-to-vm-hosting/2747)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/2291)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
-5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
- snap-2-9-ui -->
+During machine [enlistment](/t/add-machines/2279#heading--enlistment), [deployment](/t/deploy-machines/2603), [commissioning](/t/commission-machines/2471) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
 
-MAAS typically adds a machine via a combination of DHCP, TFTP, and PXE. By now, you should have enabled MAAS to automatically add devices and machines to your environment. This unattended method of adding machines is called enlistment.
+#### Two questions you may have:
+
+1. [How do I customise machine setup with curtin?](#heading--curtin)
+2. [How do I customise machine setup with cloud-init?](#heading--cloud-init)
+
+Customisation in MAAS happens in two ways:
+
+1.  [Curtin](https://launchpad.net/curtin), a preseeding system similar to Kickstart or d-i (Debian Installer), applies customisation during operating system (OS) image installation. MAAS performs these changes on deployment, during OS installation, but before the machine reboots into the installed OS. Curtin customisations are perfect for administrators who want their deployments to have identical setups all the time, every time. [This blog post](https://blog.ubuntu.com/2017/06/02/customising-maas-installs) contains an excellent high-level overview of custom MAAS installs using Curtin.
+
+2.  [Cloud-init](https://launchpad.net/cloud-init), a system for setting up machines immediately after instantiation. cloud-init applies customisations after the first boot, when MAAS changes a machine's status to 'Deployed.' Customisations are per-instances, meaning that user-supplied scripts must be re-specified on redeployment. Cloud-init customisations are the best way for MAAS users to customise their deployments, similar to how the various cloud services prepare VMs when launching instances.
+
+<a href="#heading--curtin"><h2 id="heading--curtin">Curtin</h2></a>
+
+<a href="#heading--templates"><h3 id="heading--templates">Templates</h3></a>
+
+The [Tempita](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) template files are found in the `/var/snap/maas/current/preseeds/` directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:
+
+<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
+The [Tempita](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) template files are found in the `/etc/maas/preseeds/` directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:
+deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
+
+
+|       Phase       |                 Filename prefix                 |
+|:-----------------|:-----------------------------------------------|
+| Enlistment  |                      enlist                     |
+| Commissioning |                  commissioning                  |
+| Installation | curtin ([Curtin](https://launchpad.net/curtin)) |
+
+Additionally, the template for each phase typically consists of two files. The first is a higher-level file that often contains little more than a URL or a link to further credentials, while a second file contains the executable logic.
+
+The `enlist` template, for example, contains only minimal variables, whereas `enlist_userdata` includes both user variables and initialisation logic.
 
 [note]
-Configuring a computer to boot over PXE is done via its BIOS, often referred to as "netboot" or "network boot".
+Tempita’s inheritance mechanism is the reverse of what you might expect. Inherited files, such as `enlist_userdata`, become the new template which can then reference variables from the higher-level file, such as `enlist`.
 [/note]
 
-Regardless of how MAAS adds a machine, there are no special requirements for the underlying machine. In particular, there is no need to install an operating system on it.
+<a href="#heading--template-naming"><h3 id="heading--template-naming">Template naming</h3></a>
 
-Once MAAS is working to the point of adding machines, you'll probably want to understand statuses and actions. See [Node statuses](/t/concepts-and-terms/785#heading--node-statuses) and [Machine actions](/t/concepts-and-terms/785#heading--machine-actions) respectively.
+MAAS interprets templates in lexical order by their filename.  This order allows for base configuration options and parameters to be overridden based on a combination of operating system, architecture, sub-architecture, release, and machine name.
 
-<a href="#heading--enlistment"><h2 id="heading--enlistment">How enlistment works</h2></a>
+Some earlier versions of MAAS only support Ubuntu. If the machine operating system is Ubuntu, then filenames without `{os}` will also be tried, to maintain backward compatibility.
 
-When MAAS enlists a machine, it first contacts the DHCP server, so that the machine can be assigned an IP address.  An IP address is necessary to download a kernel and initrd via TFTP, since these functions can't accept domain names.  Once the machine has a bootable kernel, MAAS boots it:
+Consequently, template files are interpreted in the following order:
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg"></a> 
+1.  `{prefix}_{os}_{node_arch}_{node_subarch}_{release}_{node_name}` or `{prefix}_{node_arch}_{node_subarch}_{release}_{node_name}`
 
-Next, initrd mounts a Squashfs image, ephemerally via HTTP, so that cloud-init can execute:
+2.  `{prefix}_{os}_{node_arch}_{node_subarch}_{release}` or `{prefix}_{node_arch}_{node_subarch}_{release}`
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg"></a> 
+3.  `{prefix}_{os}_{node_arch}_{node_subarch}` or `{prefix}_{node_arch}_{node_subarch}`
 
-Finally, cloud-init runs enlistment and setup scripts:
+4.  `{prefix}_{os}_{node_arch}` or `{prefix}_{node_arch}`
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg"></a> 
+5.  `{prefix}_{os}`
 
-<!-- deb-2-7-cli
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2928).
- deb-2-7-cli -->
+6.  `{prefix}`
 
-<!-- deb-2-7-ui
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2929).
- deb-2-7-ui -->
+7.  `generic`
 
-<!-- deb-2-8-cli
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2930).
- deb-2-8-cli -->
+The machine needs to be the machine name, as shown in the web UI URL.
 
-<!-- deb-2-8-ui
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2931).
- deb-2-8-ui -->
+The prefix can be either `enlist`, `enlist_userdata`, `commissioning`, `curtin`, `curtin_userdata` or `preseed_master`. Alternatively, you can omit the prefix and the following underscore.
 
-<!-- deb-2-9-cli
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2932).
- deb-2-9-cli -->
+For example, to create a generic configuration template for Ubuntu 16.04 Xenial running on an x64 architecture, the file would need to be called `ubuntu_amd64_generic_xenial_node`.
 
-<!-- deb-2-9-ui
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2933).
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2922).
- snap-2-7-cli -->
-
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2923).
-
-<!-- snap-2-8-cli
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2924).
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2925).
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2926).
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/2927).
- snap-2-9-ui -->
-
-After the enlistment process, MAAS places the machine in the 'Ready' state.  'Ready' is a holding state for machines that are enlisted (or commissioned), waiting to be deployed when needed.
-
-<!-- deb-2-7-cli
-Typically, the next step will be to [commission the machine](/t/commission-machines/2472). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-Typically, the next step will be to [commission the machine](/t/commission-machines/2473). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-Typically, the next step will be to [commission the machine](/t/commission-machines/2474). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-Typically, the next step will be to [commission the machine](/t/commission-machines/2475). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-Typically, the next step will be to [commission the machine](/t/commission-machines/2476). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-Typically, the next step will be to [commission the machine](/t/commission-machines/2477). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-Typically, the next step will be to [commission the machine](/t/commission-machines/2466). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- snap-2-7-cli -->
-
-Typically, the next step will be to [commission the machine](/t/commission-machines/2467). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
-
-<!-- snap-2-8-cli
-Typically, the next step will be to [commission the machine](/t/commission-machines/2468). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-Typically, the next step will be to [commission the machine](/t/commission-machines/2469). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-Typically, the next step will be to [commission the machine](/t/commission-machines/2470). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-Typically, the next step will be to [commission the machine](/t/commission-machines/2471). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
- snap-2-9-ui -->
+To create the equivalent template for curtin_userdata, the file would be called `curtin_userdata_ubuntu_amd64_generic_xenial_node`.
 
 [note]
-MAAS runs built-in commissioning scripts during the enlistment phase. When you commission a machine, any customised commissioning scripts you add will have access to data collected during enlistment. Follow the link above for more information about commissioning and commission scripts.
+Any file targeting a specific machine will replace the values and configuration held within any generic files. If those values are needed, you will need to copy these generic template values into your new file.
 [/note]
 
-<a href="#heading--add-a-node-manually"><h2 id="heading--add-a-node-manually">Add a machine manually</h2></a>
+<a href="#heading--configuration"><h3 id="heading--configuration">Configuration</h3></a>
 
-Enlistment can be done manually if the hardware specifications of the underlying machine are known.
+You can customise the Curtin installation by either editing the existing `curtin_userdata` template or by adding a custom file as described above.
 
-On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
+Curtin provides hooks to execute custom code before and after installation takes place. These hooks are named `early` and `late` respectively, and they can both be overridden to execute the Curtin configuration in the ephemeral environment. Additionally, the `late` hook can be used to execute a configuration for a machine being installed, a state known as in-target.
 
-Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI machine:
+Curtin commands look like this:
 
-<a href="https://assets.ubuntu.com/v1/20aa36b2-nodes-add__2.5_add-node-manually.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/20aa36b2-nodes-add__2.5_add-node-manually.png"></a>
+    foo: ["command", "--command-arg", "command-arg-value"]
 
-The fields on the "Add machine" screen include the following seven items:
+Each component of the given command makes up an item in an array. Note, however, that the following won't work:
 
-1. **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
+    foo: ["sh", "-c", "/bin/echo", "foobar"]
 
-2. **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
+This syntax won't work because the value of `sh`'s `-c` argument is itself an entire command. The correct way to express this is:
 
-3. **Architecture**: This field refers to the architecture of the machine being added.
+    foo: ["sh", "-c", "/bin/echo foobar"]
 
-4. **Minimum Kernel**: This field supplies a drop-down of possible kernels available for deployment on this machine.
+The following is an example of an early command that will run before the installation takes place in the ephemeral environment. The command pings an external machine to signal that the installation is about to start:
 
-5. **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
+``` bash
+early_commands:
+  signal: ["wget", "--no-proxy", "http://example.com/", "--post-data", "system_id=&signal=starting_install", "-O", "/dev/null"]
+```
 
-6. **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
+The following is an example of two late commands that run after installation is complete. Both run in-target, on the machine being installed.
 
-7. **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
+The first command adds a PPA to the machine. The second command creates a file containing the machine’s system ID:
 
-type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3007) for details on the available power types and the relevant parameters for each type.
+``` bash
+late_commands:
+  add_repo: ["curtin", "in-target", "--", "add-apt-repository", "-y", "ppa:my/ppa"]
+  custom: ["curtin", "in-target", "--", "sh", "-c", "/bin/echo -en 'Installed ' > /tmp/maas_system_id"]
+```
 
-<!-- deb-2-7-ui 
-type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3103) for details on the available power types and the relevant parameters for each type.
-deb-2-7-ui -->
-
-<!-- deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui
-On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
-
-Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI machine:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg"></a>
-
-The fields on the "Add machine" screen include the following items:
-
-* **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
-
-* **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
-
-* **Architecture**: This field refers to the architecture of the machine being added.
-
-* **Minimum Kernel**: This field supplies a drop-down of possible kernels available for deployment on this machine.
-
-* **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
-
-* **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
-
-* **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
-deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui -->
-
-<!-- deb-2-8-ui
-* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3015) for details on the available power types and the relevant parameters for each type.
- deb-2-8-ui -->
-
-<!-- deb-2-9-ui
-* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3017) for details on the available power types and the relevant parameters for each type.
- deb-2-9-ui -->
-
-<!-- snap-2-8-ui
-* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3009) for details on the available power types and the relevant parameters for each type.
- snap-2-8-ui -->
-
-<!-- snap-2-9-ui
-* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3011) for details on the available power types and the relevant parameters for each type.
- snap-2-9-ui -->
+<a href="#heading--cloud-init"><h2 id="heading--cloud-init">Cloud-init</h2></a>
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-At the command line, enter the following information:
+Using cloud-init to customise a machine after deployment is relatively easy. If you're not familiar with the MAAS command-line interface (CLI), start by reviewing the [MAAS CLI](/t/maas-cli/802) page.
 
-```
-stormrider@wintermute:~$ maas admin machines create \
-> architecture=$ARCH \
-> max_addresses=$MAC_ADDRESS \
-> power_type=$POWER_TYPE \
-> power_parameters_power_id=$POWER_ID \
-> power_parameters_power_address=$POWER_ADDRESS \
-> power_parameters_power_pass=$POWER_PASSWORD
-```
+After you're logged in, use the following command to deploy a machine with a custom script you've written:
 
-When you enter the command (substituting the `$...` parameters for your own particulars), the screen will pause for a moment, and then return a stream of JSON relating to the added machine.
+    maas $PROFILE machine deploy $SYSTEM_ID user_data=<base-64-encoded-script>
 
-Here's an example with a local laptop MAAS install, using KVMs as virtual machines:
+The three replacable parameters shown above decode to:
 
-```
-stormrider@wintermute:~$ maas admin machines create \
-> architecture=amd64 \
-> max_addresses=52:54:00:6f:b4:af \
-> power_type=virsh \
-> power_parameters_power_id=50f6cca2-5d89-43b9-941c-90c9fcd7c156 \
-> power_parameters_power_address=qemu+ssh://stormrider@192.168.123.1/system \
-> power_parameters_power_pass=xxxxxxx
+1.   `$PROFILE`: Your MAAS login. E.g. `admin`
+2.   `$SYSTEM_ID`: The machine's [system ID](/t/common-cli-tasks/794#heading--determine-a-node-system-id).
+3.   `<base-64-encoded-script>`: A base-64 encoded copy of your customisation script. See below for an example.
+
+E.g.:
+
+Suppose you would like to import an SSH key immediately after your machine deployment. You might use this script, called `import_key.sh`:
+
+``` bash
+#!/bin/bash
+(
+echo === $date ===
+ssh-import-id foobar_user
+) | tee /ssh-key-import.log
 ```
 
-There's also a CLI recipe to [make machines in a script](/t/the-cli-cookbook/2218#heading--make-machines) in the [CLI cookbook](/t/the-cli-cookbook/2218).
+This script echos the date in addition to the output of the `ssh-import-key` command. It also adds that output to a file, `/ssh-key-import.log`.
 
-The variable fields in the `machines create` command (the `$...` items) are as follows, in this example: 
+Base-64 encoding is required because the MAAS command-line interacts with the MAAS API, and base-64 encoding allows MAAS to send the script inside a POST HTTP command.
 
+Use the `base64` command to output a base-64 encoded version of your script:
+
+    base64 -w0 ./import_key.sh
+
+Putting it together:
+
+    maas $PROFILE machine deploy $SYSTEM_ID user_data=$(base64 -w0 ./import_key.sh)
+
+After MAAS deploys the machine, you'll find `/ssh-key-import.log` on the machine you deployed.
+ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+<a href="#heading--cloud-init-ui"><h3 id="heading--cloud-init-ui">Customising cloud-init with the UI (v2.9++)</h3></a>
+
+It's easy to customise cloud-init via the web UI.  When you've selected a machine and choose 'Take action >> Deploy,' you'll be presented with the following screen:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"><img src="https://discourse.maas.io/uploads/default/original/1X/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"></a>
+
+Select a viable release (in this case, "Ubuntu 18.04...") and check the box labelled "Cloud-init user-data...":
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg"><img src="https://discourse.maas.io/uploads/default/original/1X/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg"></a>
+
+Paste the desired script directly into the box, and select "Start deployment for machine."  For example, to import an SSH key immediately after your machine deployment, you could paste this script:
+
+``` bash
+#!/bin/bash
+(
+echo === $date ===
+ssh-import-id foobar_user
+) | tee /ssh-key-import.log
 ```
-> architecture=$ARCH \
-> mac_addresses=$MAC_ADDRESS \
-> power_type=$POWER_TYPE \
-> power_parameters_power_id=$POWER_ID \
-> power_parameters_power_address=$POWER_ADDRESS \
-> power_parameters_power_pass=$POWER_PASSWORD
-```
-
-* `$ARCH`: This field refers to the architecture of the machine being added, `amd64` in the local laptop example.
-
-* `$MAC_ADDRESS`: This is the MAC address of the boot-enabled NIC for the machine being added.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
-
-<!-- deb-2-7-cli
-* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3012) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
- deb-2-7-cli -->
-
-<!-- deb-2-8-cli
-* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3014) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
- deb-2-8-cli -->
-
-<!-- deb-2-9-cli
-* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3016) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
- deb-2-9-cli -->
-
-<!-- snap-2-7-cli
-* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3006) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
- snap-2-7-cli -->
-
-<!-- snap-2-8-cli
-* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3008) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
- snap-2-8-cli -->
-
-<!-- snap-2-9-cli
-* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/3010) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
- snap-2-9-cli -->
-
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-* `$POWER_ID`: This is generally the UUID of the machine being added.
-
-* `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types) in the API reference for details on the available power types and the relevant parameters for each type.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
-
-Normally, when you add a machine manually, MAAS will immediately attempt to commission the machine. Note that you will need to configure the underlying machine to boot over the network, or commissioning will fail. MAAS cannot handle this configuration for you.  While the correct method for configuring network boot depends heavily on your server, there are two common elements:
-
-1. The network card on your server must be able to support PXE, i.e., your NIC -- whether independent or integrated on a motherboard -- must have a boot PROM that supports network booting.  You'll need to consult the documentation for the machine in question to determine this.
-
-2. You usually have to interrupt the boot process and enter the BIOS/UEFI menu to configure the network card's PXE stack.  Again, you may need to consult your machine's documentation to pin down this step.
-
-Additional steps will vary widely by machine type and architecture.
-
-<a href="#heading--bmc-enlistment"><h3 id="heading--bmc-enlistment">BMC enlistment</h3></a>
-
-[note status="2.4"]
-Note that in MAAS versions before 2.5, you are required to provide the MAC address of the PXE interface when adding a new machine manually.
-[/note]
-
-##### IPMI machines
-
-For IPMI machines, you only need to provide IPMI credentials. MAAS automatically discovers the machine and runs enlistment configuration by matching the BMC address.
-
-##### Non-IPMI machines
-
-For non-IPMI machines, you must specify a non-PXE MAC address. MAAS automatically discovers the machine and runs enlistment configuration by matching the non-PXE MAC address.
-
-<a href="#heading--add-nodes-via-a-chassis"><h2 id="heading--add-nodes-via-a-chassis">Add a machine via a chassis</h2></a>
-
-Use the chassis feature to add multiple machines at once. To do this, instead of selecting 'Machine' as above, choose 'Chassis' from the drop-down menu. In the following example, MAAS will add all available VMs from the given  virsh address:
-
-<a href="https://assets.ubuntu.com/v1/d5314a8a-nodes-add__2.4_add-node-chassis.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/d5314a8a-nodes-add__2.4_add-node-chassis.png"></a>
-
-The required fields will change based on the type of chassis you choose.
 
 [note]
-As with the manual method, the underlying machines will require netbooting.
+No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-init scripts.
 [/note]
-
-<!-- snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui
-<a href="#heading--add-nodes-via-a-chassis"><h2 id="heading--add-nodes-via-a-chassis">Add a machine via a chassis</h2></a>
-
-Use the chassis feature to add multiple machines at once. To do this, instead of selecting 'Machine' as above, choose 'Chassis' from the drop-down menu. In the following example, MAAS will add all available VMs from the given  virsh address:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg"></a>
-
-The required fields will change based on the type of chassis you choose.
-
-[note]
-As with the manual method, the underlying machines will require netbooting.
-[/note]
-snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui -->
