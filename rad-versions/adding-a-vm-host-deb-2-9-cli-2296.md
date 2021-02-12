@@ -270,7 +270,9 @@ You **must** [configure your network](/t/vm-host-networking/3215) to support a V
 After installing MAAS, the 'KVM' page is typically empty:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/fa0cc573f34cb23ca0ac026e97ef5b618ff1fed3.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/fa0cc573f34cb23ca0ac026e97ef5b618ff1fed3.jpeg"></a> 
+ deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui -->
 
+<!-- deb-2-8-ui deb-2-9-ui snap-2-8-ui nap-2-9-ui
 If you want to add a [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) or LXD VM host to a machine which is already installed, you can do so with the 'Add KVM' button:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/197ae57b89b32546cf054fff49452f9025354af8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/197ae57b89b32546cf054fff49452f9025354af8.jpeg"></a> 
@@ -282,7 +284,18 @@ Here, 'Virsh address' typically looks like the following for libvirt:
 of like this for LXD (Beta):
 
     https://10.0.0.100:8443
-deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui -->
+ deb-2-8-ui deb-2-9-ui snap-2-8-ui nap-2-9-ui -->
+    
+<!-- deb-2-7-ui snap-2-7-ui
+If you want to add a [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) to a machine which is already installed, you can do so with the 'Add KVM' button:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/197ae57b89b32546cf054fff49452f9025354af8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/197ae57b89b32546cf054fff49452f9025354af8.jpeg"></a> 
+
+Here, 'Virsh address' typically looks like the following for libvirt:
+
+    qemu+ssh://<vm host IP>/system
+
+ deb-2-7-ui snap-2-7-ui -->
 
 <!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli
 To add a VM host:

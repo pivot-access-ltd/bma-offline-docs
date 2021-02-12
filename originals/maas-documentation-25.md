@@ -364,6 +364,8 @@ There are (at least) three ways you can contribute to MAAS:
 - [MAAS security](/t/hardening-your-maas-installation-snap-2-9-ui/2663)
 - [Logging](/t/maas-logging-snap-2-9-ui/2867)
   - [Commissioning logs](/t/commissioning-logs-snap-2-9-ui/2495)
+  - [Test logs](/t/test-logs-snap-2-9-ui/3131)
+  - [Audit event logs](/t/audit-event-logs/791)
 - [User accounts](/t/user-accounts-snap-2-9-ui/3203)
 - [Interactive search](/t/interactive-search-snap-2-9-ui/2711)
 
@@ -375,7 +377,6 @@ There are (at least) three ways you can contribute to MAAS:
 
 - [The CLI cookbook](/t/the-cli-cookbook/2218/)
 - [Common tasks](/t/common-cli-tasks/794)
-- [Audit event logs](/t/audit-event-logs/791)
 - [Kernel management](/t/cli-kernel-management/799)
 - [Image management](/t/cli-image-management/797)
 - [Interface management](/t/cli-interface-management/798)
