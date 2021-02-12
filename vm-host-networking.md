@@ -84,22 +84,46 @@
 
 In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself.  This section explains several ways of accomplishing this.
 
-#### Five questions you may have:
+<!-- snap-2-7-ui deb-2-7-ui
+#### Four questions you may have:
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 1. [How do I set up a VM host bridge with the web UI?](#heading--maas-bridge-web-ui)
 2. [How do I set up a VM host bridge with netplan?](#heading--maas-bridge-netplan)
 3. [How do I set up a VM host bridge with libvirt?](#heading--maas-bridge-libvirt)
 4. [How do I set up SSH for use by libvirt?](#heading--set-up-ssh)
-5. [What else must I do to use LXD VM hosts?](#heading--lxd-setup)
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+ snap-2-7-ui deb-2-7-ui -->
+ 
+<!-- snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui
+#### Five questions you may have:
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+1. [How do I set up a VM host bridge with the web UI?](#heading--maas-bridge-web-ui)
+2. [How do I set up a VM host bridge with netplan?](#heading--maas-bridge-netplan)
+3. [How do I set up a VM host bridge with libvirt?](#heading--maas-bridge-libvirt)
+4. [How do I set up SSH for use by libvirt?](#heading--set-up-ssh)
+5. [How do I make LXD available for hosting?](#heading--lxd-setup)
+
+Note that LXD sets up a bridge as part of the [initialization process](#heading--lxd-setup), so you shouldn't have to worry about explicitly setting up networks if you're using an LXD VM host.
+ snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui -->
+
+<!-- snap-2-7-cli deb-2-7-cli 
+#### Four questions you may have:
+
 1. [How do I set up a VM host bridge with the MAAS CLI/API?](#heading--maas-bridge-cli)
 2. [How do I set up a VM host bridge with netplan?](#heading--maas-bridge-netplan)
 3. [How do I set up a VM host bridge with libvirt?](#heading--maas-bridge-libvirt)
 4. [How do I set up SSH for use by libvirt?](#heading--set-up-ssh)
-5. [What else must I do to use LXD VM hosts?](#heading--lxd-setup)
+ snap-2-7-cli deb-2-7-cli -->
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+#### Five questions you may have:
+
+1. [How do I set up a VM host bridge with the MAAS CLI/API?](#heading--maas-bridge-cli)
+2. [How do I set up a VM host bridge with netplan?](#heading--maas-bridge-netplan)
+3. [How do I set up a VM host bridge with libvirt?](#heading--maas-bridge-libvirt)
+4. [How do I set up SSH for use by libvirt?](#heading--set-up-ssh)
+5. [How do I make LXD available for hosting?](#heading--lxd-setup)
+
+Note that LXD sets up a bridge as part of the [initialization process](#heading--lxd-setup), so you shouldn't have to worry about explicitly setting up networks if you're using an LXD VM host.
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 To enable VM host networking features, MAAS must match the VM host IP address of a potential VM host with a known device (a machine or controller). For example, if a machine not known to MAAS is set up as a VM host, enhanced interface selection features will not be available.
@@ -230,9 +254,49 @@ virsh net-define maas.xml
 
 Note that this network also has NAT port forwarding enabled to allow VMs to communicate with the Internet at large. Port forwarding is very useful in test environments.
 
+<a href="#heading--set-up-ssh"><h2 id="heading--set-up-ssh">Set up SSH</h2></a>
+
+For MAAS to successfully communicate with libvirt on your VM host machine -- whether you're running from snap or package, or running rack controllers in LXD containers or on localhost -- this example command must succeed from every rack controller:
+
+``` bash
+virsh -c qemu+ssh://$USER@$VM_HOST_IP/system list --all
+```
+
+Here, `$USER` is a user on your VM host who is a member of the `libvirtd` Unix group on the VM host, and `$VM_HOST_IP` is the IP of your VM host.  **Note** that insufficient permissions for `$USER` may cause the `virsh` command to fail with an error such as `failed to connect to the hypervisor`. Check the `$USER` group membership to make sure `$USER` is a member of the `libvirtd` group.
+
+<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
+<a href="#heading--libvirt-ssh"><h3 id="heading--libvirt-ssh">Set up SSH (libvirt only)</h3></a>
+
+The `maas` user on your rack controllers will issue all libvirt commands. Therefore, you'll need to set up SSH public keys on every rack controller for user `maas`.  First create SSH keys on all rack controllers:
+
+``` bash
+$ sudo -i
+root@maas:~$ mkdir -p /var/snap/maas/current/root/.ssh
+root@maas:~$ cd /var/snap/maas/current/root/.ssh
+root@maas:~$ ssh-keygen -f id_rsa
+```
+
+Next, add the contents of `~maas/.ssh/id_rsa.pub` to the VM host user's `~$USER/.ssh/authorized_keys`. To accomplish this, log into your VM host node, via SSH, from a host for which MAAS has a matching public SSH key.
+ deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
+
+<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
+<a href="#heading--set-up-ssah-lv"><h3 id="heading--set-up-ssah-lv">Set up SSH (libvirt only)</h3></a>
+
+If you installed MAAS via snap, then create the needed SSH keys this way:
+
+``` bash
+sudo mkdir -p /var/snap/maas/current/root/.ssh
+cd /var/snap/maas/current/root/.ssh
+sudo ssh-keygen -f id_rsa
+```
+
+Finally, you'll need to add `id_rsa.pub` to the `authorized_keys` file in `/home/<vm-host-user-homedir-name>/.ssh/`,  where `<vm-host-user-homedir-name>` is the name of your VM host user.
+ snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
+
+<!-- snap-2-8-ui snap-2-8-cli deb-2-8-ui deb-2-8-cli snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
 <a href="#heading--lxd-setup"><h2 id="heading--lxd-setup">Make LXD available for VM hosting (Beta)</h2></a>
 
-Assuming that you want to use LXD VM hosts --currently a Beta feature -- then once a bridge is set up, you need to install the correct version of LXD. Prior to the release of Ubuntu 20.04 LXD was installed using Debian packages. The Debian packaged version of LXD is too old to use with MAAS. If this is the case, you’ll need to remove the LXD Debian packages and install the Snap version.  Note that you cannot install both Debian and snap versions, as this creates a conflict.
+Assuming that you want to use LXD VM hosts --currently a Beta feature -- you need to install the correct version of LXD. Prior to the release of Ubuntu 20.04 LXD was installed using Debian packages. The Debian packaged version of LXD is too old to use with MAAS. If this is the case, you’ll need to remove the LXD Debian packages and install the Snap version.  Note that you cannot install both Debian and snap versions, as this creates a conflict.
 
 <a href="#heading--reinstalling-lxd"><h3 id="heading--reinstalling-lxd">Removing older versions of LXD</h3></a>
 
@@ -430,42 +494,4 @@ Once that's done, the LXD host is now ready to be added to MAAS as an LXD VM hos
 
 When composing a virtual machine with LXD, MAAS uses either the 'maas' LXD profile, or (if that doesn't exist) the 'default' LXD profile. The profile is used to determine which bridge to use. Users may also add additional LXD options to the profile which are not yet supported in MAAS.
 
-<a href="#heading--set-up-ssh"><h2 id="heading--set-up-ssh">Set up SSH</h2></a>
-
-For MAAS to successfully communicate with libvirt on your VM host machine -- whether you're running from snap or package, or running rack controllers in LXD containers or on localhost -- this example command must succeed from every rack controller:
-
-``` bash
-virsh -c qemu+ssh://$USER@$VM_HOST_IP/system list --all
-```
-
-Here, `$USER` is a user on your VM host who is a member of the `libvirtd` Unix group on the VM host, and `$VM_HOST_IP` is the IP of your VM host.  **Note** that insufficient permissions for `$USER` may cause the `virsh` command to fail with an error such as `failed to connect to the hypervisor`. Check the `$USER` group membership to make sure `$USER` is a member of the `libvirtd` group.
-
-<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
-<a href="#heading--libvirt-ssh"><h3 id="heading--libvirt-ssh">Set up SSH (libvirt only)</h3></a>
-
-The `maas` user on your rack controllers will issue all libvirt commands. Therefore, you'll need to set up SSH public keys on every rack controller for user `maas`.  First create SSH keys on all rack controllers:
-
-``` bash
-$ sudo -i
-root@maas:~$ mkdir -p /var/snap/maas/current/root/.ssh
-root@maas:~$ cd /var/snap/maas/current/root/.ssh
-root@maas:~$ ssh-keygen -f id_rsa
-```
-
-
-Next, add the contents of `~maas/.ssh/id_rsa.pub` to the VM host user's `~$USER/.ssh/authorized_keys`. To accomplish this, log into your VM host node, via SSH, from a host for which MAAS has a matching public SSH key.
- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
-
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
-<a href="#heading--set-up-ssah-lv"><h3 id="heading--set-up-ssah-lv">Set up SSH (libvirt only)</h3></a>
-
-If you installed MAAS via snap, then create the needed SSH keys this way:
-
-``` bash
-sudo mkdir -p /var/snap/maas/current/root/.ssh
-cd /var/snap/maas/current/root/.ssh
-sudo ssh-keygen -f id_rsa
-```
-
-Finally, you'll need to add `id_rsa.pub` to the `authorized_keys` file in `/home/<vm-host-user-homedir-name>/.ssh/`,  where `<vm-host-user-homedir-name>` is the name of your VM host user.
- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
+ snap-2-8-ui snap-2-8-cli deb-2-8-ui deb-2-8-cli snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
