@@ -577,9 +577,21 @@ MAAS has switched hardware information gathering from lshw/lsblk to lxd output d
 A number of bug fixes (see the [list in Launchpad](https://bugs.launchpad.net/maas/+bugs?field.milestone%3Alist=87757&field.milestone%3Alist=89662&field.milestone%3Alist=89714&field.milestone%3Alist=89840&field.milestone%3Alist=89954&field.milestone%3Alist=89682&field.status%3Alist=FIXRELEASED)).
 snap-2-7-cli snap-2-7-ui deb-2-7 deb-2-7-ui -->
 
+<h2>MAAS 2.9.2 release notes</h2>
+
+<p>We have released MAAS 2.9.2, which contains two new features, and some notable <a href="https://launchpad.net/maas/+milestone/2.9.2">bug fixes</a>. The two new features are:</p>
+<ol>
+<li>
+<p>Proxmox driver: A driver has been added to MAAS 2.9.2 which intereacts with the Proxmox API.  Only one URL is needed, though a username and credentials are required.  Credentials can be either a password or an API token.  Note that if you use a token, you have to configure the permissions for the token.  Newly-created Proxmox tokens don&rsquo;t assign any permissions by default, so you must add <code>power on</code>, <code>power off</code>, and <code>query power</code> permissions to the token before using it.</p>
+</li>
+<li>
+<p>Power driver Webhook:  A webhook was added to 2.9.2, which allows MAAS to interface with another web service that&rsquo;s running the power commands.  This webhook is provided for interacting with objects that MAAS does not support, that is, the MAAS team supports the driver itself, but whatever is interfacing to the driver is not supported.  This webhook as three URLs, one each for power on, power off, and power query.  Optionally, this webhook also supports a power user and password or token (RFC 6717).  This gives you a way to add your own power drivers without waiting for the driver to be added to MAAS.  There is a <a href="maas-show-and-tell-proxmox-and-webhook.html/3">video tutorial</a> available on this new feature.</p>
+</li>
+</ol>
+<p>You can also find a <a href="#heading--bug-fixes-2-9-2">digest</a> of the 2.9.2 bug fixes below.</p>
 <h2>MAAS 2.9.1 release notes</h2>
 
-<p>Building upon MAAS 2.9, we have released 2.9.1, which contains some notable <a href="https://launchpad.net/maas/+milestone/2.9.1">bug fixes</a>.  You can find a <a href="#heading--bug-fixes">digest</a> of these fixes below.</p>
+<p>Building upon MAAS 2.9, we have released 2.9.1, which contains some notable <a href="https://launchpad.net/maas/+milestone/2.9.1">bug fixes</a>.  You can find a <a href="#heading--bug-fixes-2-9-1">digest</a> of these fixes below.</p>
 <h2>MAAS 2.9 release notes</h2>
 
 <p>Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now available.</p>
@@ -772,6 +784,33 @@ snap-2-7-cli snap-2-7-ui deb-2-7 deb-2-7-ui -->
 </ol>
 
 <p><a href="#heading--bug-fixes"><h2 id="heading--bug-fixes">Bug fixes</h2></a></p>
+<p><a href="#heading--bug-fixes-2-9-2"><h3 id="heading--bug-fixes-2-9-2">Bugs fixed in 2.9.2 release</h3></a></p>
+<ol>
+<li>
+<p>In the MAAS UI, ARM servers based on the <a href="https://bugs.launchpad.net/maas/+bug/1897946">Hi1620 ARM SoC appear as an &ldquo;Unknown model&rdquo;</a>.  A fix was added to <a href="https://discuss.linuxcontainers.orglxd-4-11-has-been-released.html">lxd-4.11</a>, released 2021-02-05.</p>
+</li>
+<li>
+<p>Debian package installs of MAAS <a href="https://bugs.launchpad.net/maas/+bug/1910910">reached an &ldquo;impossible situation&rdquo;</a> trying to install the MAAS region controller. This is caused because of an unsupported move from the transitional MAAS PPA to the latest PPA.  The workaround is to purge the MAAS packages (and the snap, if installed), and install clean with the latest PPA enabled, which will install the correct versions.</p>
+</li>
+<li>
+<p>CentOS/RHEL 7+ ship with an unsigned version of GRUB <a href="https://bugs.launchpad.net/curtin/+bug/1895067">which breaks UEFI secure boot</a>.  This bug is believed to be fixed in curtin version 21.1, which is now supported by MAAS 2.9.2.</p>
+</li>
+<li>
+<p>Debug <a href="https://bugs.launchpad.net/maas/+bug/1914588">could not be properly enabled for MAAS snap version 2.9.1</a>.  This has been remedied.</p>
+</li>
+<li>
+<p>The MAAS <a href="https://maas.io/docs/snap/2.9/ui/backup">Backup doc article</a> <a href="https://bugs.launchpad.net/maas/+bug/1892998">was not clearly written with respect to stopping critical services</a>.  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.</p>
+</li>
+<li>
+<p>Deselecting all architectures in the Ubuntu extra archtectures repo <a href="https://bugs.launchpad.net/maas/+bug/1894116">blocks all deployments</a>.  The default architectures have been changed to prevent this issue.</p>
+</li>
+<li>
+<p>MAAS does not allow <a href="https://bugs.launchpad.net/maas/+bug/1911825">FQDNs to be used in place of IPs</a> when a BMC extracts the address ffrom the <code>power_address</code>.  This incorrect behavior was changed in 2.9.2.</p>
+</li>
+<li>
+<p>The Proxmox driver <a href="https://bugs.launchpad.net/maas/+bug/1914165">uses a hard-coded port that cannot be customized</a>.  This port is now customisable in 2.9.2.</p>
+</li>
+</ol>
 <p><a href="#heading--bug-fixes-2-9-1"><h3 id="heading--bug-fixes-2-9-1">Bugs fixed in 2.9.1 release</h3></a></p>
 <ol>
 <li>It is now possible to <a href="https://bugs.launchpad.net/maas/+bug/1908434">delete an LXD VM in an offline state</a>.</li>

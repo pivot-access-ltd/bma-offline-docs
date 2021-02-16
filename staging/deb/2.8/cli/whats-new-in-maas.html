@@ -578,9 +578,19 @@ A number of bug fixes (see the [list in Launchpad](https://bugs.launchpad.net/ma
 snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7 deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
 
 <!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+<h2>MAAS 2.9.2 release notes</h2>
+
+We have released MAAS 2.9.2, which contains two new features, and some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.2). The two new features are:
+
+1. Proxmox driver: A driver has been added to MAAS 2.9.2 which intereacts with the Proxmox API.  Only one URL is needed, though a username and credentials are required.  Credentials can be either a password or an API token.  Note that if you use a token, you have to configure the permissions for the token.  Newly-deb-2-8-clicreated Proxmox tokens don't assign any permissions by default, so you must add `power on`, `power off`, and `query power` permissions to the token before using it.
+
+2. Power driver Webhook:  A webhook was added to 2.9.2, which allows MAAS to interface with another web service that's running the power commands.  This webhook is provided for interacting with objects that MAAS does not support, that is, the MAAS team supports the driver itself, but whatever is interfacing to the driver is not supported.  This webhook as three URLs, one each for power on, power off, and power query.  Optionally, this webhook also supports a power user and password or token (RFC 6717).  This gives you a way to add your own power drivers without waiting for the driver to be added to MAAS.  There is a [video tutorial](maas-deb-2-8-clishow-deb-2-8-cliand-deb-2-8-clitell-deb-2-8-cliproxmox-deb-2-8-cliand-deb-2-8-cliwebhook.html/3) available on this new feature.
+
+You can also find a [digest](#heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cli2) of the 2.9.2 bug fixes below.
+
 <h2>MAAS 2.9.1 release notes</h2>
 
-Building upon MAAS 2.9, we have released 2.9.1, which contains some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.1).  You can find a [digest](#heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes) of these fixes below.
+Building upon MAAS 2.9, we have released 2.9.1, which contains some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.1).  You can find a [digest](#heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cli1) of these fixes below.
 
 <h2>MAAS 2.9 release notes</h2>
 
@@ -804,6 +814,24 @@ Four improvements have been made to speed up the commissioning process, mostly b
 </ol>
 
 <a href="#heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes"><h2 id="heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes">Bug fixes</h2></a>
+
+<a href="#heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cli2"><h3 id="heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cli2">Bugs fixed in 2.9.2 release</h3></a>
+
+1. In the MAAS UI, ARM servers based on the [Hi1620 ARM SoC appear as an "Unknown model"](https://bugs.launchpad.net/maas/+bug/1897946).  A fix was added to [lxd-deb-2-8-cli4.11]( https://discuss.linuxcontainers.orglxd-deb-2-8-cli4-deb-2-8-cli11-deb-2-8-clihas-deb-2-8-clibeen-deb-2-8-clireleased.html), released 2021-deb-2-8-cli02-deb-2-8-cli05.
+
+2. Debian package installs of MAAS [reached an "impossible situation"](https://bugs.launchpad.net/maas/+bug/1910910) trying to install the MAAS region controller. This is caused because of an unsupported move from the transitional MAAS PPA to the latest PPA.  The workaround is to purge the MAAS packages (and the snap, if installed), and install clean with the latest PPA enabled, which will install the correct versions.
+
+3. CentOS/RHEL 7+ ship with an unsigned version of GRUB [which breaks UEFI secure boot](https://bugs.launchpad.net/curtin/+bug/1895067).  This bug is believed to be fixed in curtin version 21.1, which is now supported by MAAS 2.9.2.
+
+4. Debug [could not be properly enabled for MAAS snap version 2.9.1](https://bugs.launchpad.net/maas/+bug/1914588).  This has been remedied.
+
+5. The MAAS [Backup doc article](https://maas.io/docs/snap/2.9/ui/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
+
+6. Deselecting all architectures in the Ubuntu extra archtectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue.
+
+7. MAAS does not allow [FQDNs to be used in place of IPs](https://bugs.launchpad.net/maas/+bug/1911825) when a BMC extracts the address ffrom the `power_address`.  This incorrect behavior was changed in 2.9.2.
+
+8. The Proxmox driver [uses a hard-deb-2-8-clicoded port that cannot be customized](https://bugs.launchpad.net/maas/+bug/1914165).  This port is now customisable in 2.9.2.
 
 <a href="#heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cli1"><h3 id="heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cli1">Bugs fixed in 2.9.1 release</h3></a>
 
