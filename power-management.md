@@ -128,7 +128,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9 ui -->
 | [wedge](#heading--wedge) | Facebook's Wedge |
 snap-2-7-ui deb-2-7-ui -->
 
-<!-- snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui
+<!-- snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui 
 | CLI power_type code | Description |
 |-----|-----|
 | [amt](#heading--amt) |Intel AMT |
@@ -151,6 +151,32 @@ snap-2-7-ui deb-2-7-ui -->
 | [vmware](#heading--vmware) | VMware |
 | [wedge](#heading--wedge) | Facebook's Wedge |
 snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui -->
+
+<!-- holding on more data
+| CLI power_type code | Description |
+|-----|-----|
+| [amt](#heading--amt) |Intel AMT |
+| [apc](#heading--apc) | American Power Conversion (APC) PDU |
+| [dli](#heading--dli) | Digital Loggers, Inc. PDU |
+| [hmc](#heading--hmc) | IBM Hardware Management Console (HMC) |
+| [lxd](#heading--lxd) | LXD VM |
+| [ipmi](#heading--ipmi) | IPMI |
+| [manual](#heading--manual) | Manual power configuration |
+| [moonshot](#heading--moonshot) | HP Moonshot - iLO4 (IPMI) |
+| [mscm](#heading--mscm) | HP Moonshot - iLO Chassis Manager |
+| [msftocs](#heading--mscm) | Microsoft OCS - Chassis Manager |
+| [nova](#heading--nova) | OpenStack Nova |
+| [openbmc](#heading--openbmc) | OpenBMC Power Driver |
+| [proxmox](#heading--proxmox) | ProxMox Power Driver |
+| [recs_box](#heading--recs_box) | Christmann RECS-Box Power Driver |
+| [redfish](#heading--redfish) | Redfish |
+| [sm15k](#heading--sm15k) | SeaMicro 15000 |
+| [ucsm](#heading--ucsm) | Cisco UCS Manager |
+| [virsh](#heading--virsh) | libvirt KVM |
+| [vmware](#heading--vmware) | VMware |
+| [webhook](#heading--webhook) | Webhook |
+| [wedge](#heading--wedge) | Facebook's Wedge |
+ holding on more data -->
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 Click 'Save changes' to finish. Once that's done, MAAS performs a power check on the machine. A successful power check is a good indication that MAAS can properly communicate with the machine, that is, it should quickly result in a power status of "Power off". A failed attempt will show:

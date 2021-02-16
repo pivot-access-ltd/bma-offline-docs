@@ -12,10 +12,12 @@ snap-2-7-cli  -->
 |Packages|CLI ~  [UI](/t/about-maas/2269)|[CLI](/t/about-maas/2270) ~ [UI](/t/about-maas/2271)|[CLI](/t/about-maas/2272) ~ [UI](/t/about-maas/2273)|
 deb-2-7-cli -->
 
+<!-- snap-2-7-ui
 || 2.7 | 2.8 | 2.9|
 |-----:|:-----:|:-----:|:-----:|
 |Snap|[CLI](/t/about-maas/2262) ~ UI|[CLI](/t/about-maas/2264) ~ [UI](/t/about-maas/2265)|[CLI](/t/about-maas/2266) ~ [UI](/t/about-maas/2267)|
 |Packages|[CLI](/t/about-maas/2268) ~ [UI](/t/about-maas/2269)|[CLI](/t/about-maas/2270) ~ [UI](/t/about-maas/2271)|[CLI](/t/about-maas/2272) ~ [UI](/t/about-maas/2273)|
+snap-2-7-ui -->
 
 <!-- deb-2-8-cli
 || 2.7 | 2.8 | 2.9|
@@ -107,6 +109,7 @@ PXE stands for "Preboot Execution Environment," usually pronounced "pixie."  The
 
 MAAS can manage a large number of physical machines by merging them into user-defined resource pools. MAAS automatically provisions participating machines and makes them available for use. You can return unused machines to the assigned pool at any time. 
 
+<!-- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui 
 MAAS integrates all the tools you need into a smooth system-management experience. It includes the following thirteen features:
 
 1. web UI (optimised for mobile devices)
@@ -127,6 +130,7 @@ These tools can be controlled from a responsive web UI.  You can easily (re)conf
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/00968a71b82ce01c45ae3b345ed6b1270d0927bf.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/00968a71b82ce01c45ae3b345ed6b1270d0927bf.jpeg"></a> 
 
+deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui -->
 
 <!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli
 MAAS integrates all the tools you need into a smooth system-management experience. It includes the following eleven features:
@@ -188,7 +192,9 @@ deb-2-9-ui  -->
 See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability/2682), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp/2898) will cause problems.
 snap-2-7-cli  -->
 
+<!-- snap-2-7-ui
 See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability/2683), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp/2899) will cause problems.
+snap-2-7-ui  -->
 
 <!-- snap-2-8-cli
 See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability/2684), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp/2900) will cause problems.
@@ -238,7 +244,9 @@ deb-2-9-ui  -->
 When you [add a new machine](/t/add-machines-2-7-cli/2274#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines-2-7-cli/2274#heading--enlistment), MAAS [commissions](/t/commission-machines/2466) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
 snap-2-7-cli  -->
 
+<!-- snap-2-7-ui
 When you [add a new machine](/t/add-machines/2275#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines/2275#heading--enlistment), MAAS [commissions](/t/commission-machines/2467) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
+snap-2-7-ui  -->
 
 <!-- snap-2-8-cli
 When you [add a new machine](/t/add-machines/2276#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines/2276#heading--enlistment), MAAS [commissions](/t/commission-machines/2468) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
@@ -266,7 +274,9 @@ Commissioning means that MAAS has successfully booted the machine, scanned and r
 
 </details>
 
+<!-- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui 
 <a href="https://discourse.maas.io/uploads/default/original/1X/605019de31078dd70df72ff199d812de13a30d00.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/605019de31078dd70df72ff199d812de13a30d00.jpeg"></a>
+deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui  -->
 
 <!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli
 <a href="https://discourse.maas.io/uploads/default/original/1X/6aec9b567022216d80596411e689a14e1f594674.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/6aec9b567022216d80596411e689a14e1f594674.jpeg"></a>
@@ -280,7 +290,9 @@ MAAS controls machines through IPMI (or another BMC). It can also manage machine
 
 MAAS users allocate ("acquire") machines for use when needed. The web UI also allows you to acquire machines manually, such as when you are reserving specific hardware for certain users. You can remotely access and customise the installed operating system via SSH.
 
+<!-- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui 
 <a href="https://discourse.maas.io/uploads/default/original/1X/8101d641c55d912cd66646bd99bbee9bb8f196ab.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8101d641c55d912cd66646bd99bbee9bb8f196ab.jpeg"></a>
+deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui -->
 
 <!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli
 <a href="https://discourse.maas.io/uploads/default/original/1X/ac3b251a916bb18a7e7e463d7fa3c57ef32628da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/ac3b251a916bb18a7e7e463d7fa3c57ef32628da.jpeg"></a>
