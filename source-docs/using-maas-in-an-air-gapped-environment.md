@@ -80,3 +80,8 @@ If you don't wish to disturb the default configurations for Ubuntu and MAAS, you
 5. Configure DNS to point to the local mirrors for both of those URLs.
 
 This avoids any need to change the default settings for MAAS or Ubuntu.
+
+
+------
+****
+------

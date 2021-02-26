@@ -179,3 +179,8 @@ Once you deploy everything, the Grafana UI is accessible on port `3000` with the
 
 The repository also provides some sample dashboard covering the most common use cases for graphs. These are available under `grafana/dashboards`.  You can import them from the Grafana UI or API.
 
+
+
+------
+****
+------

@@ -777,3 +777,8 @@ Here, all the scripts are run again after downloading from MAAS, but no output d
 ``` bash
 /tmp/user_data.sh.*/bin/maas-run-remote-scripts --no-send /tmp/user_data.sh.*
 ```
+
+
+------
+****
+------

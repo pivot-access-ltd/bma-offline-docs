@@ -472,3 +472,8 @@ The charm parameters that must be configured for each deployment are:
     location
 
 Most deployments will probably also want to configure the identity-providers unless the default ones are being used.
+
+
+------
+****
+------

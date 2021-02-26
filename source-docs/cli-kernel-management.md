@@ -65,3 +65,8 @@ maas $PROFILE machine deploy $SYSTEM_ID distro_series=xenial hwe_kernel=hwe-16.0
 The command option `hwe_kernel` appears to apply to only HWE kernels but this is not the case.
 [/note]
 
+
+
+------
+****
+------

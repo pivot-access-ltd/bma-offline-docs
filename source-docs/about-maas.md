@@ -82,7 +82,7 @@ deb-2-9-cli -->
 |Packages|[CLI](/t/about-maas/2268) ~ [UI](/t/about-maas/2269)|[CLI](/t/about-maas/2270) ~ [UI](/t/about-maas/2271)|[CLI](/t/about-maas/2272) ~ UI|
 deb-2-9-ui -->
 
-MAAS is an open-source tool that lets you build a data centre from bare-metal servers. You can discover, commission, deploy, and dynamically reconfigure a large network of individual units.  MAAS converts your hardware investment into a cohesive, flexible, distributed data centre, with a minimum of time and effort.
+MAAS is an open-source tool that lets you create a data centre from bare-metal servers. You can discover, commission, deploy, and dynamically reconfigure a large network of individual units.  MAAS converts your hardware investment into a cohesive, flexible, distributed data centre, with a minimum of time and effort.
 
 #### Four questions you might have:
 
@@ -303,3 +303,8 @@ deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli -->
 An acquired MAAS machine is more flexible than a virtual instance in a cloud. You have complete control, including hardware drivers and root access. If you want to upgrade the BIOS, for example, you can allocate a machine to yourself and complete the upgrade.  Once you have completed the upgrade, you can send the machine back to the pool.
 
 Note that [Juju](https://jaas.ai/docs/maas-cloud) is designed to work with MAAS. MAAS becomes a back-end Juju resource pool with all functionality fully available. For instance, if Juju removes a machine, then MAAS will release that machine to the pool.  With Juju, MAAS can become an integral part of your data centre strategy and operations.
+
+
+------
+****
+------

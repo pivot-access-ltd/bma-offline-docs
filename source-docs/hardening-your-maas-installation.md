@@ -490,3 +490,8 @@ When you add a new rack or region controller, MAAS asks for a shared secret it w
 <a href="#heading--security-consulting"><h2 id="heading--security-consulting">Whom to contact about MAAS security consulting</h2></a>
 
 If you need help implementing MAAS security, please [contact us ](https://maas.io/contact-us).  We will be happy to assist you in arranging security consulting appropriate to your needs.
+
+
+------
+****
+------

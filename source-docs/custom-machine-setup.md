@@ -304,3 +304,8 @@ ssh-import-id foobar_user
 No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-init scripts.
 [/note]
  snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+
+
+------
+****
+------

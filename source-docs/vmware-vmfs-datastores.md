@@ -420,3 +420,7 @@ To delete a VMFS Datastores on a machine use the 'vmfs-datastore delete' API cal
 ``` bash
 maas $PROFILE vmfs-datastore delete $SYSTEM_ID $VMFS_ID
 ```
+
+------
+****
+------

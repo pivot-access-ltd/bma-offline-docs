@@ -279,3 +279,7 @@ Some examples of factors that influence hardware specifications include:
 Also, this discussion does not take into account a possible local image mirror, which would be a large consumer of disk space.
 
 One rack controller should only service 1000 machines or less, regardless of how you distribute them across subnets. There is no load balancing at the rack level, so you will need additional, independent rack controllers. Each controller must service its own subnet(s).
+
+------
+****
+------

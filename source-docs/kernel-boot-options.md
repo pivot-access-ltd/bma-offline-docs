@@ -168,3 +168,8 @@ You can set kernel boot options and apply them to all machines with the CLI comm
 maas $PROFILE maas set-config name=kernel_opts value='$KERNEL_OPTIONS'
 ```
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+
+------
+****
+------

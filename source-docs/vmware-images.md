@@ -155,3 +155,7 @@ Custom storage configuration is not supported because VMware ESXi expects specif
 <a href="#heading--esxi-hardware-support"><h3 id="heading--esxi-hardware-support">ESXi Hardware Support</h3></a>
 
 VMware has [very specific hardware requirements](https://www.vmware.com/resources/compatibility/search.php). In particular, running VMware ESXi is not supported in a virtual machine or MAAS virsh Pod.
+
+------
+****
+------

@@ -507,3 +507,8 @@ The required fields will change based on the type of chassis you choose.
 As with the manual method, the underlying machines will require netbooting.
 [/note]
 snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui -->
+
+
+------
+****
+------

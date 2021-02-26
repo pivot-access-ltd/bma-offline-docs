@@ -100,3 +100,8 @@ It's a good idea to keep your most important machine tag first, as it's the firs
      .tag_names[0] // "-", .pool.name,
      .boot_interface.vlan.name, .boot_interface.vlan.fabric,
      .boot_interface.links[0].subnet.name]) | @tsv' | column -t
+
+
+------
+****
+------

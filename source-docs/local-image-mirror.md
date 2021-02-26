@@ -163,3 +163,8 @@ Where `<myserver>` identifies your server's hostname or IP address.
 Verify the availability of the images by visiting the above URL.
 
 The final `sstream-mirror` command should be invoked at regular intervals (i.e. with `cron`) to ensure the mirror contains the latest images.
+
+
+------
+****
+------

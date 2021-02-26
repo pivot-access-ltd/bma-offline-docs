@@ -17,3 +17,7 @@ If you're running MAAS 1.9, please start with [the following](/t/upgrade-from-1-
 See the [Releases](https://wiki.ubuntu.com/Releases) section on the Ubuntu wiki for more information about the Ubuntu release schedule.
 
 <!-- LINKS -->
+
+------
+****
+------

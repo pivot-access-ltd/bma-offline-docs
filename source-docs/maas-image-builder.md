@@ -246,3 +246,7 @@ As an example:
     maas admin boot-resources create name=custom1 \
     title=”Ubuntu Custom Image” architecture=amd64/generic \
     content@=/home/ubuntu/ubuntu-custom-root-tgz
+
+------
+****
+------

@@ -246,3 +246,8 @@ This includes any hosts that are being used for API servers or rack controllers 
 To quickly check that replication is working simply (temporarily) rename a node's hostname in the web UI and re-invoke the above command to see if the change is reflected.
 
 Another test could be to change the status of a node, for example, by Commissioning or Deploying (a status of '4' is 'Ready' and a status of '6' is 'Deployed').
+
+
+------
+****
+------

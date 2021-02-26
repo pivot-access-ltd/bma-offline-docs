@@ -41,3 +41,8 @@ BOOT_SOURCE_ID=$(maas $PROFILE boot-sources read | jq '.[] | select(.url | conta
 maas $PROFILE boot-source update $BOOT_SOURCE_ID url=$STREAM_URL
 ```
 
+
+
+------
+****
+------

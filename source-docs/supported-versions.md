@@ -69,3 +69,7 @@ MAAS 2.5 and MAAS 2.6 both run on Ubuntu 18.04 LTS (Bionic), so the upgrade shou
 sudo add-apt-repository -u ppa:maas/2.6
 sudo apt upgrade maas
 ```
+
+------
+****
+------

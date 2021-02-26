@@ -940,3 +940,8 @@ More information on Power configuration will be found in the [Power management](
 <h2>Summary</h2>
 
 This article has offered you a cursory glimpse into machines and how they are configured and managed in MAAS.  Read on through this section of the documentation to learn more.
+
+
+------
+****
+------

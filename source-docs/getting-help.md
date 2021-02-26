@@ -20,3 +20,8 @@ This will create a tarball containing MAAS log files, MAAS configuration files a
 
 The last step is to make this file available by any means at your disposal (openly accessible FTP server, Dropbox, etc.) in order for helpers to be able to get their hands on it.
 
+
+
+------
+****
+------

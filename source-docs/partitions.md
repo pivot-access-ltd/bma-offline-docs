@@ -347,3 +347,8 @@ There are three restrictions for the storage configuration:
 3.   You cannot use a logical volume as a Bcache backing device.
 
 Violating these restrictions will prevent a successful deployment.
+
+
+------
+****
+------

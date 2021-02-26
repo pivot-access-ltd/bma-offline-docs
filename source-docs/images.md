@@ -245,3 +245,8 @@ The above URL points to the 'stable' stream (for the v3 format). See [Local imag
  snap-2-9-ui -->
 
 Although the backend supports multiple boot sources, MAAS itself uses a single source. If multiple sources are detected, the web UI will print a warning and will be unable to manage images.
+
+
+------
+****
+------

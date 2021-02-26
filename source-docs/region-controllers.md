@@ -193,3 +193,7 @@ To increase the number of workers, simply edit <code>regiond.conf (/etc/maas/reg
     num_workers: 8
 
 Keep in mind that adding too many workers may <em>reduce</em> performance. We recommended one worker per CPU, up to eight workers in total. Increasing beyond that is possible but use at your own risk.
+
+------
+****
+------

@@ -96,3 +96,7 @@ Candid is an identity service which extends macaroon-based authentication. The c
 <a href="#heading--ldap"><h2 id="heading--ldap">LDAP</h2></a>
 
 <a href="#heading--rbac-with-maas"><h2 id="heading--rbac-with-maas">Using RBAC with MAAS</h2></a>
+
+------
+****
+------

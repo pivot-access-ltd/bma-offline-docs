@@ -660,3 +660,8 @@ into pools of composable hardware:
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 There you have it: A quick tour of MAAS and its capabilities.  Read on through the documentation to learn more.
+
+
+------
+****
+------

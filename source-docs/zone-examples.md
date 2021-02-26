@@ -106,3 +106,8 @@ Power management is concerned with power usage density and cooling. This topic c
 
 Nodes can be distributed in such a way that power-hungry and/or "hot" systems are located in different zones. This can help mitigate power consumption and heat problems.
 
+
+
+------
+****
+------

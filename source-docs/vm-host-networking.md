@@ -495,3 +495,8 @@ Once that's done, the LXD host is now ready to be added to MAAS as an LXD VM hos
 When composing a virtual machine with LXD, MAAS uses either the 'maas' LXD profile, or (if that doesn't exist) the 'default' LXD profile. The profile is used to determine which bridge to use. Users may also add additional LXD options to the profile which are not yet supported in MAAS.
 
  snap-2-8-ui snap-2-8-cli deb-2-8-ui deb-2-8-cli snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
+
+
+------
+****
+------

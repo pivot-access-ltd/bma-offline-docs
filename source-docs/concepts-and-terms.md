@@ -614,3 +614,8 @@ These four steps combine (at least) four general datasources to bring an instanc
 
 4. Vendor data - data provided by cloud platform vendors; this is identical (in principle) to user data, but derived from a different source.  In practice, vendor data usually handle things that users wouldn't normally specify, such as mirror setup, NTP service management, etc.
 
+
+
+------
+****
+------

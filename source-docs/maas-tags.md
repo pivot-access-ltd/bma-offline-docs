@@ -426,3 +426,8 @@ If multiple tags attached to a machine have the `kernel_opts` defined, MAAS uses
 See the [CLI tag management](/t/cli-tag-management/801) section for more information about using the CLI to manage tags.
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
+
+
+------
+****
+------

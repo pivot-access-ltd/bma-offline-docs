@@ -227,3 +227,7 @@ Please note to run this command on one of the Region Controllers (if this is a m
 [/note]
 
 Now either restart your system(s) or the stopped services. You'll find your MAAS deployment fully restored.
+
+------
+****
+------

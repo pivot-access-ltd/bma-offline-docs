@@ -443,3 +443,8 @@ maas $PROFILE vm-host delete $VM_HOST_ID
 [note type="caution"]
 Deleting a VM host will automatically delete all machines belonging to that VM host.
 [/note]
+
+
+------
+****
+------

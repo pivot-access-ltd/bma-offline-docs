@@ -633,3 +633,8 @@ We've also fixed number of bugs (see the [list in Launchpad](https://bugs.launch
 
 * **Leftover lock files may be present under some conditions:** Even if you purge an old MAAS Debian package, it can leave lock files in `/run/lock/maas*`.  This can cause issues if you later reinstall MAAS, and the previous MAAS user UID has been reassigned.  At that point, MAAS can't remove those files and create new ones.  If this occurs, it is easily fixed by removing those files manually before reinstalling.
 snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
+
+
+------
+****
+------

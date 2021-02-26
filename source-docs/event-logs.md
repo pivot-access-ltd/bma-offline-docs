@@ -116,3 +116,8 @@ You can tabulate the results, sorted by machine, with the following command:
 maas admin events query | jq -r '(["HOSTNAME","TIMESTAMP","TYPE","DESCRIPTION"] | (., map(length*"-"))),
 (.events[] | [.hostname, .created, .type, .description // "-"]) | @tsv' | column -t -s $'\t'
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+
+------
+****
+------

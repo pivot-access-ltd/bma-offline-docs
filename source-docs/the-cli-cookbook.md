@@ -414,3 +414,7 @@ foo --kvm -b amd64 52:54:00:1e:a5:7e e9f84356-5106-40ee-9088-3e35ec7d50cf qemu+s
 ```
 
 This mode allows you to add a number of lines to a longer shellscript, facilitating automatic creation or even the use of a makefile (if you're creative).
+
+------
+****
+------

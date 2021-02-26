@@ -375,3 +375,8 @@ Only an administrator can modify storage at the block device level (providing th
 <a href="#heading--final-storage-modifications"><h2 id="heading--final-storage-modifications">Final storage modifications</h2></a>
 
 Once MAAS provisions a machine with block devices, via a layout or administrator customisation, a regular user can modify the resulting storage configuration at the filesystem level.
+
+
+------
+****
+------

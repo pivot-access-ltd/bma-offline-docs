@@ -320,3 +320,8 @@ maas $PROFILE users create username=$USERNAME \
 ```
 
 All the options are necessary. Note that stipulating a password on the CLI may be a security hazard, depending on your environment. If unsure, use the web UI. See [User Accounts](/t/user-accounts/3203) for the latter.
+
+
+------
+****
+------

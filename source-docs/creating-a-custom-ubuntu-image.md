@@ -184,3 +184,8 @@ Note: LXD may prevent device files from being created when extracting the rootfs
     Note: Ubuntu release names and versions are reserved
     `maas $PROFILE boot-resources create name='custom/focal-custom' title='Ubuntu 20.04 Custom Image' architecture='amd64/generic' filetype='tgz' content@=focal-custom.tgz`
 10. Configure and deploy as normal
+
+
+------
+****
+------
