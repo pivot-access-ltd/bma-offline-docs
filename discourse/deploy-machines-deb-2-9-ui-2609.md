@@ -444,5 +444,5 @@ To deploy with the CLI, the node must have a status of 'Allocated'. See 'Acquire
 
 
 ------
-**source verified**
+****
 ------

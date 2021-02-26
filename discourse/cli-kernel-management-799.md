@@ -68,5 +68,5 @@ The command option `hwe_kernel` appears to apply to only HWE kernels but this is
 
 
 ------
-**source verified**
+****
 ------

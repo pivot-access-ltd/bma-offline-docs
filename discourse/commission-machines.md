@@ -847,5 +847,5 @@ Press the "Save" button when you're done.
 
 
 ------
-**source verified**
+****
 ------

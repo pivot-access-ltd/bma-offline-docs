@@ -242,5 +242,5 @@ maas $PROFILE maas set-config name="remote_syslog" value=""
 
 
 ------
-**source verified**
+****
 ------

@@ -13,5 +13,5 @@ As you can see, it can be rather tricky. And that is only the ize/ize issue. The
 This will change the spelling highlight options for the local buffer only, so you won't have to worry about whatever language you normally use. Do not worry about your atrocious grammar (in either variant of the language) as the developer advocates are used to tidying that up!
 
 ------
-**source verified**
+****
 ------

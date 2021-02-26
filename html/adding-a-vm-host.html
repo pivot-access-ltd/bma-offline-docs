@@ -631,14 +631,31 @@ You <strong>must</strong> <a href="vm-host-networking.html">configure your netwo
 <p><a href="#heading--adding-a-vm-host"><h2 id="heading--adding-a-vm-host">Adding a VM host</h2></a></p>
 <p>After installing MAAS, the &lsquo;KVM&rsquo; page is typically empty:</p>
 <p><a href="images/fa0cc573f34cb23ca0ac026e97ef5b618ff1fed3.jpeg" target = "_blank"><img src="images/fa0cc573f34cb23ca0ac026e97ef5b618ff1fed3.jpeg"></a></a> </p>
-<p>If you want to add a <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a> or LXD VM host to a machine which is already installed, you can do so with the &lsquo;Add KVM&rsquo; button:</p>
-<p><a href="images/197ae57b89b32546cf054fff49452f9025354af8.jpeg" target = "_blank"><img src="images/197ae57b89b32546cf054fff49452f9025354af8.jpeg"></a></a> </p>
-<p>Here, &lsquo;Virsh address&rsquo; typically looks like the following for libvirt:</p>
-<pre><code>qemu+ssh://&lt;vm host IP&gt;/system
-</code></pre>
-<p>of like this for LXD (Beta):</p>
-<pre><code>https://10.0.0.100:8443
-</code></pre>
+<!-- deb-2-8-ui deb-2-9-ui snap-2-8-ui nap-2-9-ui
+If you want to add a [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) or LXD VM host to a machine which is already installed, you can do so with the 'Add KVM' button:
+
+<a href="images/197ae57b89b32546cf054fff49452f9025354af8.jpeg" target = "_blank"><img src="images/197ae57b89b32546cf054fff49452f9025354af8.jpeg"></a></a> 
+
+Here, 'Virsh address' typically looks like the following for libvirt:
+
+    qemu+ssh://<vm host IP>/system
+
+of like this for LXD (Beta):
+
+    https://10.0.0.100:8443
+ deb-2-8-ui deb-2-9-ui snap-2-8-ui nap-2-9-ui -->
+
+<!-- deb-2-7-ui snap-2-7-ui
+If you want to add a [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) to a machine which is already installed, you can do so with the 'Add KVM' button:
+
+<a href="images/197ae57b89b32546cf054fff49452f9025354af8.jpeg" target = "_blank"><img src="images/197ae57b89b32546cf054fff49452f9025354af8.jpeg"></a></a> 
+
+Here, 'Virsh address' typically looks like the following for libvirt:
+
+    qemu+ssh://<vm host IP>/system
+
+ deb-2-7-ui snap-2-7-ui -->
+
 <!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli
 To add a VM host:
 
@@ -772,6 +789,8 @@ deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli -->
 </ol>
 <p><a href="images/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg" target = "_blank"><img src="images/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg"></a></a> </p>
 <p>Over-committing resources allows a user to compose many MAAS-managed machines without worrying about the physical limitations of the host. For example, on a physical host with four cores and 12 GB of memory, you could compose four libvirt machines, each using two cores and 4 GB of memory.  This arrangement over commits the available physical resources. Provided you never run all four VMs simultaneously, you would have all the benefits of MAAS-managed VMs without over-taxing your host.</p>
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>

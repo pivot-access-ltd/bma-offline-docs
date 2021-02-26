@@ -645,5 +645,5 @@ There you have it: A quick tour of MAAS and its capabilities.  Read on through t
 
 
 ------
-**source verified**
+****
 ------

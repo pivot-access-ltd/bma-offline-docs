@@ -23,5 +23,5 @@ The last step is to make this file available by any means at your disposal (open
 
 
 ------
-**source verified**
+****
 ------

@@ -312,6 +312,7 @@ pre-build-discourse:
 	@echo "\n*** Running discourse pre-build recipe"
 	cp -p $(SRC)/maas-documentation.msd $(SRC)/maas-documenation.md
 	cp -p $(SRC)/maas-documentation.msd $(SRC)/index.md
+	cp $(SCRP)/strip-navigation.sh $(MODWD)
 #
 # pre-build-html
 #
@@ -1774,62 +1775,70 @@ $(DISC)/maas-communication.md: $(SRC)/maas-communication.md
 	cp -p maas-communication-deb-2-9-ui-2837.md maas-communication.md
  
 $(DISC)/maas-documentation.md: $(SRC)/maas-documentation.md
+	cp $(SCRP)/strip-navigation.sh $(MODWD)
 	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-25.md
-	./scripts/strip-navigation.sh maas-documentation-deb-2-7-cli-2844.md
-	./scripts/strip-navigation.sh maas-documentation-deb-2-7-ui-2845.md
-	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-deb-2-7-cli-2844.md
-	./scripts/strip-navigation.sh maas-documentation-deb-2-8-cli-2846.md
-	./scripts/strip-navigation.sh maas-documentation-deb-2-8-ui-2847.md
-	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-deb-2-7-ui-2845.md
-	./scripts/strip-navigation.sh maas-documentation-deb-2-9-cli-2848.md
-	./scripts/strip-navigation.sh maas-documentation-deb-2-9-ui-2849.md
-	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-deb-2-8-cli-2846.md
-	./scripts/strip-navigation.sh maas-documentation-snap-2-7-cli-2838.md
-	./scripts/strip-navigation.sh maas-documentation-snap-2-7-ui-2839.md
-	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-deb-2-8-ui-2847.md
-	./scripts/strip-navigation.sh maas-documentation-snap-2-8-cli-2840.md
-	./scripts/strip-navigation.sh maas-documentation-snap-2-8-ui-2841.md
-	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-deb-2-9-cli-2848.md
-	./scripts/strip-navigation.sh maas-documentation-snap-2-9-cli-2842.md
-	cd $(MODWD) &&\
-	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-deb-2-9-ui-2849.md
-	xpub push $(DISC) -t deb-2-7-cli maas-documentation-deb-2-7-cli-2844.md
-	cd $(MODWD) &&\
-	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-snap-2-7-cli-2838.md
-	xpub push $(DISC) -t deb-2-7-ui maas-documentation-deb-2-7-ui-2845.md
-	cd $(MODWD) &&\
-	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-snap-2-7-ui-2839.md
-	xpub push $(DISC) -t deb-2-8-cli maas-documentation-deb-2-8-cli-2846.md
-	cd $(MODWD) &&\
-	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-snap-2-8-cli-2840.md
-	xpub push $(DISC) -t deb-2-8-ui maas-documentation-deb-2-8-ui-2847.md
-	cd $(MODWD) &&\
-	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-snap-2-8-ui-2841.md
-	xpub push $(DISC) -t deb-2-9-cli maas-documentation-deb-2-9-cli-2848.md
-	cd $(MODWD) &&\
-	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-snap-2-9-cli-2842.md
-	xpub push $(DISC) -t deb-2-9-ui maas-documentation-deb-2-9-ui-2849.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-7-cli maas-documentation-snap-2-7-cli-2838.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-7-ui maas-documentation-snap-2-7-ui-2839.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-8-cli maas-documentation-snap-2-8-cli-2840.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-8-ui maas-documentation-snap-2-8-ui-2841.md
 	cd $(MODWD) &&\
 	xpub push $(DISC) -t snap-2-9-ui maas-documentation-25.md
+	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-deb-2-7-cli-2844.md
+	cd $(MODWD) &&\
+	./strip-navigation.sh maas-documentation-deb-2-7-cli-2844.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-7-cli maas-documentation-deb-2-7-cli-2844.md
+	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-deb-2-7-ui-2845.md
+	cd $(MODWD) &&\
+	./strip-navigation.sh maas-documentation-deb-2-7-ui-2845.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-7-ui maas-documentation-deb-2-7-ui-2845.md
+	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-deb-2-8-cli-2846.md
+	cd $(MODWD) &&\
+	./strip-navigation.sh maas-documentation-deb-2-8-cli-2846.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-8-cli maas-documentation-deb-2-8-cli-2846.md
+	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-deb-2-8-ui-2847.md
+	cd $(MODWD) &&\
+	./strip-navigation.sh maas-documentation-deb-2-8-ui-2847.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-8-ui maas-documentation-deb-2-8-ui-2847.md
+	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-deb-2-9-cli-2848.md
+	cd $(MODWD) &&\
+	./strip-navigation.sh maas-documentation-deb-2-9-cli-2848.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-9-cli maas-documentation-deb-2-9-cli-2848.md
+	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-deb-2-9-ui-2849.md
+	cd $(MODWD) &&\
+	./strip-navigation.sh maas-documentation-deb-2-9-ui-2849.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-9-ui maas-documentation-deb-2-9-ui-2849.md
+	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-snap-2-7-cli-2838.md
+	cd $(MODWD) &&\
+	./strip-navigation.sh maas-documentation-snap-2-7-cli-2838.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-7-cli maas-documentation-snap-2-7-cli-2838.md
+	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-snap-2-7-ui-2839.md
+	cd $(MODWD) &&\
+	./strip-navigation.sh maas-documentation-snap-2-7-ui-2839.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-7-ui maas-documentation-snap-2-7-ui-2839.md
+	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-snap-2-8-cli-2840.md
+	cd $(MODWD) &&\
+	./strip-navigation.sh maas-documentation-snap-2-8-cli-2840.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-8-cli maas-documentation-snap-2-8-cli-2840.md
+	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-snap-2-8-ui-2841.md
+	cd $(MODWD) &&\
+	./strip-navigation.sh maas-documentation-snap-2-8-ui-2841.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-8-ui maas-documentation-snap-2-8-ui-2841.md
+	cp $(SRC)/maas-documentation.md $(MODWD)/maas-documentation-snap-2-9-cli-2842.md
+	cd $(MODWD) &&\
+	./strip-navigation.sh maas-documentation-snap-2-9-cli-2842.md
 	cd $(MODWD) &&\
 	xpub push $(DISC) -t snap-2-9-cli maas-documentation-snap-2-9-cli-2842.md
 	cd $(DISC) &&\
 	xpub pull $(DISC) 25 25
 	cd $(DISC) &&\
-	xpub pull $(DISC) 2838 2842
-	cd $(DISC) &&\
-	xpub pull $(DISC) 2844 2849
-	cd $(DISC) &&\
 	cp -p maas-documentation-25.md maas-documentation.md
- 
+
 $(DISC)/maas-image-builder.md: $(SRC)/maas-image-builder.md
 	cp $(SRC)/maas-image-builder.md $(MODWD)/maas-image-builder-deb-2-7-cli-2856.md
 	cd $(MODWD) &&\
@@ -2040,47 +2049,47 @@ $(DISC)/maas-tags.md: $(SRC)/maas-tags.md
 	cd $(DISC) &&\
 	cp -p maas-tags-deb-2-9-ui-2897.md maas-tags.md
  
-$(DISC)/machine-logs.md: $(SRC)/machine-logs.md
-	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-deb-2-7-cli-3448.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-7-cli machine-logs-deb-2-7-cli-3448.md
-	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-deb-2-7-ui-3449.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-7-ui machine-logs-deb-2-7-ui-3449.md
-	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-deb-2-8-cli-3450.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-8-cli machine-logs-deb-2-8-cli-3450.md
-	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-deb-2-8-ui-3451.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-8-ui machine-logs-deb-2-8-ui-3451.md
-	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-deb-2-9-cli-3453.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-9-cli machine-logs-deb-2-9-cli-3453.md
-	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-deb-2-9-ui-3452.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-9-ui machine-logs-deb-2-9-ui-3452.md
-	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-snap-2-7-cli-3442.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-7-cli machine-logs-snap-2-7-cli-3442.md
-	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-snap-2-7-ui-3443.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-7-ui machine-logs-snap-2-7-ui-3443.md
-	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-snap-2-8-cli-3444.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-8-cli machine-logs-snap-2-8-cli-3444.md
-	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-snap-2-8-ui-3445.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-8-ui machine-logs-snap-2-8-ui-3445.md
-	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-snap-2-9-cli-3446.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-9-cli machine-logs-snap-2-9-cli-3446.md
-	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-snap-2-9-ui-3447.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-9-ui machine-logs-snap-2-9-ui-3447.md
-	cd $(DISC) &&\
-	xpub pull $(DISC) 3453 3453
-	cd $(DISC) &&\
-	cp -p machine-logs-deb-2-9-ui-3452.md machine-logs.md
+# $(DISC)/machine-logs.md: $(SRC)/machine-logs.md
+# 	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-deb-2-7-cli-3448.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-7-cli machine-logs-deb-2-7-cli-3448.md
+# 	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-deb-2-7-ui-3449.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-7-ui machine-logs-deb-2-7-ui-3449.md
+# 	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-deb-2-8-cli-3450.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-8-cli machine-logs-deb-2-8-cli-3450.md
+# 	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-deb-2-8-ui-3451.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-8-ui machine-logs-deb-2-8-ui-3451.md
+# 	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-deb-2-9-cli-3453.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-9-cli machine-logs-deb-2-9-cli-3453.md
+# 	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-deb-2-9-ui-3452.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-9-ui machine-logs-deb-2-9-ui-3452.md
+# 	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-snap-2-7-cli-3442.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-7-cli machine-logs-snap-2-7-cli-3442.md
+# 	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-snap-2-7-ui-3443.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-7-ui machine-logs-snap-2-7-ui-3443.md
+# 	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-snap-2-8-cli-3444.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-8-cli machine-logs-snap-2-8-cli-3444.md
+# 	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-snap-2-8-ui-3445.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-8-ui machine-logs-snap-2-8-ui-3445.md
+# 	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-snap-2-9-cli-3446.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-9-cli machine-logs-snap-2-9-cli-3446.md
+# 	cp $(SRC)/machine-logs.md $(MODWD)/machine-logs-snap-2-9-ui-3447.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-9-ui machine-logs-snap-2-9-ui-3447.md
+# 	cd $(DISC) &&\
+# 	xpub pull $(DISC) 3453 3453
+# 	cd $(DISC) &&\
+# 	cp -p machine-logs-deb-2-9-ui-3452.md machine-logs.md
 
 $(DISC)/machines.md: $(SRC)/machines.md
 	cp $(SRC)/machines.md $(MODWD)/machines-deb-2-7-cli-2736.md
@@ -2612,7 +2621,7 @@ $(DISC)/proxy.md: $(SRC)/proxy.md
 	cd $(DISC) &&\
 	xpub pull $(DISC) 3041 3041
 	cd $(DISC) &&\
-	cp -p proxy-deb-2-9-ui-deb-2-9-ui-3041.md proxy.md
+	cp -p proxy-deb-2-9-ui-3041.md proxy.md
 
 $(DISC)/proxy-log.md: $(SRC)/proxy-log.md
 	cp $(SRC)/proxy-log.md $(MODWD)/proxy-log-deb-2-7-cli-3460.md

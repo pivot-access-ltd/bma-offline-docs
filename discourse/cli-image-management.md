@@ -159,5 +159,5 @@ Recreate the default boot source if it was ever deleted using the following vari
 
 
 ------
-**source verified**
+****
 ------

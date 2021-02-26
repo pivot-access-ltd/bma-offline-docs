@@ -152,5 +152,5 @@ In practice, machines may not be functional without IPv4 networking.  A few thin
 <!-- LINKS -->
 
 ------
-**source verified**
+****
 ------

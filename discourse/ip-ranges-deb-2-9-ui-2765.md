@@ -199,5 +199,5 @@ Select 'Remove range' from the menu that appears when clicking the 'Menu' button
 
 
 ------
-**source verified**
+****
 ------

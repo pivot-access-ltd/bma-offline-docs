@@ -164,5 +164,5 @@ The final `sstream-mirror` command should be invoked at regular intervals (i.e. 
 
 
 ------
-**source verified**
+****
 ------

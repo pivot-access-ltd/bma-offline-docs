@@ -483,5 +483,5 @@ Only an administrator can set which block device should be used as the boot disk
 [/note]
 
 ------
-**source verified**
+****
 ------

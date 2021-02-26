@@ -16,7 +16,7 @@ except ImportError:
 
 import click
 
-def do_curl_get(config_data, topic):
+def get_topic(config_data, topic):
     rate_limit_error = True
     while rate_limit_error == True:
         proc = subprocess.Popen(
@@ -52,7 +52,45 @@ def do_curl_get(config_data, topic):
                 time.sleep(wait_time + 5)
         except:
             return topic_json
-            
+
+def get_post(config_data, post_id):
+    rate_limit_error = True
+    while rate_limit_error == True:
+        proc = subprocess.Popen(
+            [
+                "curl",
+                "-X",
+                "GET",
+                "-H",
+                "Api-Key: " + config_data["api_key"],
+                "-H",
+                "Api-Username: " + config_data["api_username"],
+                "-H",
+                "Content-Type: application/json",
+                config_data["base_url"] + "/posts/{" + str(post_id) + "}.json",
+            ],
+            stdout=subprocess.PIPE,
+        )
+        
+        # read the result into a usable buffer
+        output = proc.stdout.read()
+        
+        # convert the result to json
+        try:
+            post_json = json.loads(output)
+        except:
+            print("topic " + str(topic) + " doesn't exist; exiting")
+            sys.exit(4)
+        try:
+            if post_json["error_type"] == "rate_limit":
+                wait_time = post_json["extras"]["wait_seconds"]
+                print("waiting for rate limit to pass")
+                rate_limit_error = True
+                time.sleep(wait_time + 5)
+        except:
+            return post_json
+
+
 
 @click.group(help="Publish and convert files")
 def xpub():
@@ -274,34 +312,8 @@ def discourse(start, end, category, j, banned_tag):
     # giant for loop to get the topic range specified
     for tn in range(start, end + 1):
 
-        # sleep for 2.5 seconds - prevents discourse DDOS rejection
-        time.sleep(2.5)
-
-        # run the shell command to get the topic and retain the result
-        proc = subprocess.Popen(
-            [
-                "curl",
-                "-X",
-                "GET",
-                "-H",
-                "Api-Key: " + config_data["api_key"],
-                "-H",
-                "Api-Username: " + config_data["api_username"],
-                "-H",
-                "Content-Type: application/json",
-                config_data["base_url"] + "/t/{" + str(tn) + "}.json",
-            ],
-            stdout=subprocess.PIPE,
-        )
-
-        # read the result into a usable buffer
-        output = proc.stdout.read()
-
-        # convert the result to json; if it fails, skip this record
-        try:
-            topic_json = json.loads(output)
-        except:
-            continue
+        # get the JSON data from the API with rate_limit management
+        topic_json = get_topic(config_data, tn)
 
         # if requested, save the intermediate topic json to a file
         if j == True:
@@ -367,29 +379,8 @@ def discourse(start, end, category, j, banned_tag):
             print("post deleted: not pulled from discourse")
             continue
 
-        # read the post using the api, retaining the return value
-        proc2 = subprocess.Popen(
-            [
-                "curl",
-                "-X",
-                "GET",
-                "-H",
-                "Api-Key: " + config_data["api_key"],
-                "-H",
-                "Api-Username: " + config_data["api_username"],
-                "-H",
-                "Content-Type: application/json",
-                config_data["base_url"] + "/posts/{" + str(post_id) + "}.json",
-            ],
-            stdout=subprocess.PIPE,
-        )
-
-        # copy the return value to a suitable buffer
-        output2 = proc2.stdout.read()
-
-        # convert the returned post to json
-        post_json = json.loads(output2)
-
+        # read the post using the api, handling rate_limit events
+        post_json = get_post(config_data, post_id)
         # if requested, write the intermediate post json to a file
         if j == True:
             f2 = open("post-" + str(tn) + ".json", "w")
@@ -474,47 +465,8 @@ def discourse(tag, files):
             continue
 
         # pull topic last mod time and compare to see if topic has changed
-        rate_limit_error = True
-        while rate_limit_error == True:
+        topic_json = get_topic(config_data, topic)
 
-            # attempt the read
-            proc = subprocess.Popen(
-                [
-                    "curl",
-                    "-X",
-                    "GET",
-                    "-H",
-                    "Api-Key: " + config_data["api_key"],
-                    "-H",
-                    "Api-Username: " + config_data["api_username"],
-                    "-H",
-                    "Content-Type: application/json",
-                    config_data["base_url"] + "/t/{" + str(topic) + "}.json",
-                ],
-                stdout=subprocess.PIPE,
-            )
-
-            # read the result into a usable buffer
-            output = proc.stdout.read()
-
-            # convert the result to json
-            try:
-                topic_json = json.loads(output)
-            except:
-                print("xpub: failed to read topic for edit check, point 2")
-                print("xpub: exiting")
-                sys.exit(459)
-
-            try:
-                if topic_json["error_type"] == "rate_limit":
-                    wait_time = topic_json["extras"]["wait_seconds"]
-                    print("saw error_type")
-                    rate_limit_error = True
-                    sleep(wait_time + 5)
-            except:
-                rate_limit_error = False
-                break;
-            
         try:
             updated_at = topic_json["post_stream"]["posts"][0]["updated_at"]
         except:
@@ -546,7 +498,7 @@ def discourse(tag, files):
             os.system("rm " + condfile)
 
         # run the shell command to get the topic and retain the result
-        topic_json = do_curl_get(config_data, topic)
+        topic_json = get_topic(config_data, topic)
 
         # extract the post ID from the topic json
         try:

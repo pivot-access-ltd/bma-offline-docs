@@ -446,5 +446,5 @@ Deleting a VM host will automatically delete all machines belonging to that VM h
 
 
 ------
-**source verified**
+****
 ------

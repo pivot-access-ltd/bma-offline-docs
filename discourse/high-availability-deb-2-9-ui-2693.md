@@ -506,5 +506,5 @@ Take these warnings to heart.  It may seem like a faster approach to "bridge" yo
 
 
 ------
-**source verified**
+****
 ------

@@ -11,5 +11,5 @@ Alternatively, if you need some professional support, visit the [Ubuntu Advantag
 Finally, if you find a problem with the documentation you can [create an issue](https://github.com/CanonicalLtd/maas-docs/issues/new) or contribute directly within the [Docs Discourse category](https://discourse.maas.io/c/docs) (the source of the documentation).
 
 ------
-**source verified**
+****
 ------

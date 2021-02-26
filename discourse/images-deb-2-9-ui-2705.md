@@ -242,5 +242,5 @@ Although the backend supports multiple boot sources, MAAS itself uses a single s
 
 
 ------
-**source verified**
+****
 ------

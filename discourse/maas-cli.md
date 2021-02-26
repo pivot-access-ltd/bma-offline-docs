@@ -129,5 +129,5 @@ The following five categories are now available to be explored:
 
 
 ------
-**source verified**
+****
 ------

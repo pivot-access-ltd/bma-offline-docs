@@ -242,5 +242,5 @@ The `next-server` directive is used to specify the host address from which an in
 
 
 ------
-**source verified**
+****
 ------

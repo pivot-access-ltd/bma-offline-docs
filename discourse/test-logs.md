@@ -184,4 +184,8 @@ Device Statistics (GP/SMART Log 0x04) not supported
 SATA Phy Event Counters (GP Log 0x11) not supported
 ```
 
-source verified
+
+
+------
+****
+------
