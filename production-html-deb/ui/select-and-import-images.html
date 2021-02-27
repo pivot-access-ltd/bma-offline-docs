@@ -438,11 +438,11 @@
 <!-- deb-2-8-cli
  deb-2-8-cli -->
 
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
  deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
 
 <!-- snap-2-7-cli
  snap-2-7-cli -->
@@ -477,11 +477,11 @@
 You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](images.html#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
  deb-2-7-ui -->
 
-<p>You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See <a href="images.html#boot-image-sources">Boot image sources</a>) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.</p>
-<!-- deb-2-9-ui
+<!-- deb-2-8-ui
 You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](images.html#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
- deb-2-9-ui -->
+ deb-2-8-ui -->
 
+<p>You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See <a href="images.html#boot-image-sources">Boot image sources</a>) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.</p>
 <!-- snap-2-7-ui
 You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](images.html#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
  snap-2-7-ui -->
@@ -513,15 +513,15 @@ Optionally, a local mirror can be set up as the boot source. MAAS will then use 
 Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](local-image-mirror.html) for instructions.
  deb-2-8-cli -->
 
-<p>Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See <a href="local-image-mirror.html">Local image mirror</a> for instructions.</p>
+<!-- deb-2-8-ui
+Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](local-image-mirror.html) for instructions.
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
 Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](local-image-mirror.html) for instructions.
  deb-2-9-cli -->
 
-<!-- deb-2-9-ui
-Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](local-image-mirror.html) for instructions.
- deb-2-9-ui -->
-
+<p>Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See <a href="local-image-mirror.html">Local image mirror</a> for instructions.</p>
 <!-- snap-2-7-cli
 Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](local-image-mirror.html) for instructions.
  snap-2-7-cli -->
@@ -766,6 +766,9 @@ Recreate the default boot source if it was ever deleted using the following vari
 1.   URL=https://images.maas.io/ephemeral-v3/stable/
 2.   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>

@@ -120,7 +120,6 @@ HTARG += $(HTML)/hardening-your-maas-installation.html
 HTARG += $(HTML)/hardware-testing.html
 HTARG += $(HTML)/high-availability.html
 HTARG += $(HTML)/images.html
-HTARG += $(HTML)/index.html
 HTARG += $(HTML)/interactive-search.html
 HTARG += $(HTML)/ip-ranges.html
 HTARG += $(HTML)/ipv6-addressing.html
@@ -334,10 +333,20 @@ post-build-html: build-html
 	@echo "\n*** Running HTML post-build recipe"
 	cp -R $(STAGING)/$(DEB)/$(PROD_VSN)/$(UI) $(PROD_DEB)
 	cp -R $(STAGING)/$(DEB)/$(PROD_VSN)/$(CLI) $(PROD_DEB)
-	cp $(STAGING)/$(DEB)/$(PROD_VSN)/$(UI)/index.html $(PROD_DEB)/index.html
+	cp $(STAGING)/$(DEB)/$(PROD_VSN)/$(UI)/maas-documentation.html $(PROD_DEB)/index.html
+	sed -i -e 's/href=\"https/hreg=\"https/g' $(PROD_DEB)/index.html
+	sed -i -e 's/href=\"..\/cli/hreg=\"cli/g' $(PROD_DEB)/index.html
+	sed -i -e 's/href=\"/href=\"ui\//g' $(PROD_DEB)/index.html
+	sed -i -e 's/hreg/href/g' $(PROD_DEB)/index.html
+	sed -i -e 's/<h1>Index<\/h1>/<h1>MAAS Documentation<\/h1>/g' $(PROD_DEB)/index.html
 	cp -R $(STAGING)/$(SNAP)/$(PROD_VSN)/$(UI) $(PROD_SNAP)
 	cp -R $(STAGING)/$(SNAP)/$(PROD_VSN)/$(CLI) $(PROD_SNAP)
 	cp $(STAGING)/$(SNAP)/$(PROD_VSN)/$(UI)/index.html $(PROD_SNAP)/index.html
+	sed -i -e 's/href=\"https/hreg=\"https/g' $(PROD_SNAP)/index.html
+	sed -i -e 's/href=\"..\/cli/hreg=\"cli/g' $(PROD_SNAP)/index.html
+	sed -i -e 's/href=\"/href=\"ui\//g' $(PROD_SNAP)/index.html
+	sed -i -e 's/hreg/href/g' $(PROD_SNAP)/index.html
+	sed -i -e 's/<h1>Index<\/h1>/<h1>MAAS Documentation<\/h1>/g' $(PROD_SNAP)/index.html
 	@echo "\n***********************************************"
 	@echo "***           HTML build complete           ***"
 	@echo "***********************************************"

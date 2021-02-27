@@ -438,11 +438,11 @@
 <!-- deb-2-8-cli
  deb-2-8-cli -->
 
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
  deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
 
 <!-- snap-2-7-cli
  snap-2-7-cli -->
@@ -485,12 +485,13 @@
 4. [How do I use and manage VMWare images?](vmware-images.html)
  deb-2-8-cli -->
 
-<ol>
-<li><a href="#heading--boot-sources">What are boot sources, and why do they matter?</a></li>
-<li><a href="select-and-import-images.html">How do I select and import an image?</a></li>
-<li><a href="local-image-mirror.html">How do I set up and use a local image mirror?</a></li>
-<li><a href="vmware-images.html">How do I use and manage VMWare images?</a></li>
-</ol>
+<!-- deb-2-8-ui
+1. [What are boot sources, and why do they matter?](#heading--boot-sources)
+2. [How do I select and import an image?](select-and-import-images.html)
+3. [How do I set up and use a local image mirror?](local-image-mirror.html)
+4. [How do I use and manage VMWare images?](vmware-images.html)
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
 1. [What are boot sources, and why do they matter?](#heading--boot-sources)
 2. [How do I select and import an image?](select-and-import-images.html)
@@ -498,13 +499,12 @@
 4. [How do I use and manage VMWare images?](vmware-images.html)
  deb-2-9-cli -->
 
-<!-- deb-2-9-ui
-1. [What are boot sources, and why do they matter?](#heading--boot-sources)
-2. [How do I select and import an image?](select-and-import-images.html)
-3. [How do I set up and use a local image mirror?](local-image-mirror.html)
-4. [How do I use and manage VMWare images?](vmware-images.html)
- deb-2-9-ui -->
-
+<ol>
+<li><a href="#heading--boot-sources">What are boot sources, and why do they matter?</a></li>
+<li><a href="select-and-import-images.html">How do I select and import an image?</a></li>
+<li><a href="local-image-mirror.html">How do I set up and use a local image mirror?</a></li>
+<li><a href="vmware-images.html">How do I use and manage VMWare images?</a></li>
+</ol>
 <!-- snap-2-7-cli
 1. [What are boot sources, and why do they matter?](#heading--boot-sources)
 2. [How do I select and import an image?](select-and-import-images.html)
@@ -579,15 +579,15 @@ The above URL points to the 'stable' stream (for the v3 format). See [Local imag
 The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](local-image-mirror.html) for some explanation regarding the availability of other streams.
  deb-2-8-cli -->
 
-<p>The above URL points to the &lsquo;stable&rsquo; stream (for the v3 format). See <a href="local-image-mirror.html">Local image mirror</a> for some explanation regarding the availability of other streams.</p>
+<!-- deb-2-8-ui
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](local-image-mirror.html) for some explanation regarding the availability of other streams.
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
 The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](local-image-mirror.html) for some explanation regarding the availability of other streams.
  deb-2-9-cli -->
 
-<!-- deb-2-9-ui
-The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](local-image-mirror.html) for some explanation regarding the availability of other streams.
- deb-2-9-ui -->
-
+<p>The above URL points to the &lsquo;stable&rsquo; stream (for the v3 format). See <a href="local-image-mirror.html">Local image mirror</a> for some explanation regarding the availability of other streams.</p>
 <!-- snap-2-7-cli
 The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](local-image-mirror.html) for some explanation regarding the availability of other streams.
  snap-2-7-cli -->
@@ -613,6 +613,8 @@ The above URL points to the 'stable' stream (for the v3 format). See [Local imag
  snap-2-9-ui -->
 
 <p>Although the backend supports multiple boot sources, MAAS itself uses a single source. If multiple sources are detected, the web UI will print a warning and will be unable to manage images.</p>
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>

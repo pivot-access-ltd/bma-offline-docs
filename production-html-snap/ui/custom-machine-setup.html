@@ -659,15 +659,17 @@ After MAAS deploys the machine, you'll find `/ssh-key-import.log` on the machine
 <p>Select a viable release (in this case, &ldquo;Ubuntu 18.04&hellip;&rdquo;) and check the box labelled &ldquo;Cloud-init user-data&hellip;&rdquo;:</p>
 <p><a href="images/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg" target = "_blank"><img src="images/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg"></a></a></p>
 <p>Paste the desired script directly into the box, and select &ldquo;Start deployment for machine.&rdquo;  For example, to import an SSH key immediately after your machine deployment, you could paste this script:</p>
-<pre><code class="bash">#cloud-config
-write_files:
-  - path: /test
-    content: hello
+<pre><code class="bash">#!/bin/bash
+(
+echo === $date ===
+ssh-import-id foobar_user
+) | tee /ssh-key-import.log
 </code></pre>
 
-<p>This script simply writes hello to a the file <code>/test</code>.</p>
 <p><strong>NOTE:</strong> 
 No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-init scripts.</p>
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>

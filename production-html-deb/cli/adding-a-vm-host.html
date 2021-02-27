@@ -633,7 +633,9 @@ You **must** [configure your network](vm-host-networking.html) to support a VM h
 After installing MAAS, the 'KVM' page is typically empty:
 
 <a href="images/fa0cc573f34cb23ca0ac026e97ef5b618ff1fed3.jpeg" target = "_blank"><img src="images/fa0cc573f34cb23ca0ac026e97ef5b618ff1fed3.jpeg"></a></a> 
+ deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui -->
 
+<!-- deb-2-8-ui deb-2-9-ui snap-2-8-ui nap-2-9-ui
 If you want to add a [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) or LXD VM host to a machine which is already installed, you can do so with the 'Add KVM' button:
 
 <a href="images/197ae57b89b32546cf054fff49452f9025354af8.jpeg" target = "_blank"><img src="images/197ae57b89b32546cf054fff49452f9025354af8.jpeg"></a></a> 
@@ -645,7 +647,18 @@ Here, 'Virsh address' typically looks like the following for libvirt:
 of like this for LXD (Beta):
 
     https://10.0.0.100:8443
-deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui -->
+ deb-2-8-ui deb-2-9-ui snap-2-8-ui nap-2-9-ui -->
+
+<!-- deb-2-7-ui snap-2-7-ui
+If you want to add a [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) to a machine which is already installed, you can do so with the 'Add KVM' button:
+
+<a href="images/197ae57b89b32546cf054fff49452f9025354af8.jpeg" target = "_blank"><img src="images/197ae57b89b32546cf054fff49452f9025354af8.jpeg"></a></a> 
+
+Here, 'Virsh address' typically looks like the following for libvirt:
+
+    qemu+ssh://<vm host IP>/system
+
+ deb-2-7-ui snap-2-7-ui -->
 
 <p>To add a VM host:</p>
 <pre><code class="bash">maas $PROFILE vm-hosts create type=$VM_HOST_TYPE power_address=$POWER_ADDRESS \
@@ -749,6 +762,8 @@ deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui -->
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <p>Over-committing resources allows a user to compose many MAAS-managed machines without worrying about the physical limitations of the host. For example, on a physical host with four cores and 12 GB of memory, you could compose four libvirt machines, each using two cores and 4 GB of memory.  This arrangement over commits the available physical resources. Provided you never run all four VMs simultaneously, you would have all the benefits of MAAS-managed VMs without over-taxing your host.</p>
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>

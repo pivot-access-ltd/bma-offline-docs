@@ -466,6 +466,13 @@ To switch to a stream with the CLI, enter the following commands:
 <pre><code>BOOT_SOURCE_ID=$(maas $PROFILE boot-sources read | jq '.[] | select(.url | contains(&quot;images.maas.io/ephemeral-v3&quot;)) | .id')
 maas $PROFILE boot-source update $BOOT_SOURCE_ID url=$STREAM_URL
 </code></pre>
+
+
+
+
+------
+****
+------
     </div>
   </body>
 </html>

@@ -438,11 +438,11 @@
 <!-- deb-2-8-cli
  deb-2-8-cli -->
 
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
  deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
 
 <!-- snap-2-7-cli
  snap-2-7-cli -->
@@ -474,15 +474,15 @@ During machine [enlistment](add-machines.html#heading--enlistment), [deployment]
 During machine [enlistment](add-machines.html#heading--enlistment), [deployment](deploy-machines.html), [commissioning](commission-machines.html) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  deb-2-8-cli -->
 
-<p>During machine <a href="add-machines.html#heading--enlistment">enlistment</a>, <a href="deploy-machines.html">deployment</a>, <a href="commission-machines.html">commissioning</a> and machine installation, MAAS sends <a href="https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt">Tempita-derived</a> configuration files to the <a href="https://launchpad.net/cloud-init">cloud-init</a> process running on the target machine. MAAS refers to this process as <strong>preseeding</strong>.These preseed files are used to configure a machine&rsquo;s ephemeral and installation environments and can be modified or augmented to a custom machine configuration.</p>
+<!-- deb-2-8-ui
+During machine [enlistment](add-machines.html#heading--enlistment), [deployment](deploy-machines.html), [commissioning](commission-machines.html) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
 During machine [enlistment](add-machines.html#heading--enlistment), [deployment](deploy-machines.html), [commissioning](commission-machines.html) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  deb-2-9-cli -->
 
-<!-- deb-2-9-ui
-During machine [enlistment](add-machines.html#heading--enlistment), [deployment](deploy-machines.html), [commissioning](commission-machines.html) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
- deb-2-9-ui -->
-
+<p>During machine <a href="add-machines.html#heading--enlistment">enlistment</a>, <a href="deploy-machines.html">deployment</a>, <a href="commission-machines.html">commissioning</a> and machine installation, MAAS sends <a href="https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt">Tempita-derived</a> configuration files to the <a href="https://launchpad.net/cloud-init">cloud-init</a> process running on the target machine. MAAS refers to this process as <strong>preseeding</strong>.These preseed files are used to configure a machine&rsquo;s ephemeral and installation environments and can be modified or augmented to a custom machine configuration.</p>
 <!-- snap-2-7-cli
 During machine [enlistment](add-machines.html#heading--enlistment), [deployment](deploy-machines.html), [commissioning](commission-machines.html) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  snap-2-7-cli -->
@@ -659,15 +659,17 @@ After MAAS deploys the machine, you'll find `/ssh-key-import.log` on the machine
 <p>Select a viable release (in this case, &ldquo;Ubuntu 18.04&hellip;&rdquo;) and check the box labelled &ldquo;Cloud-init user-data&hellip;&rdquo;:</p>
 <p><a href="images/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg" target = "_blank"><img src="images/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg"></a></a></p>
 <p>Paste the desired script directly into the box, and select &ldquo;Start deployment for machine.&rdquo;  For example, to import an SSH key immediately after your machine deployment, you could paste this script:</p>
-<pre><code class="bash">#cloud-config
-write_files:
-  - path: /test
-    content: hello
+<pre><code class="bash">#!/bin/bash
+(
+echo === $date ===
+ssh-import-id foobar_user
+) | tee /ssh-key-import.log
 </code></pre>
 
-<p>This script simply writes hello to a the file <code>/test</code>.</p>
 <p><strong>NOTE:</strong> 
 No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-init scripts.</p>
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>

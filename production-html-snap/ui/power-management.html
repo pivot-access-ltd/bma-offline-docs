@@ -499,6 +499,30 @@
 | [wedge](#heading--wedge) | Facebook's Wedge |
 snap-2-7-ui deb-2-7-ui -->
 
+<!-- snap-2-8-ui deb-2-8-ui 
+| CLI power_type code | Description |
+|-----|-----|
+| [amt](#heading--amt) |Intel AMT |
+| [apc](#heading--apc) | American Power Conversion (APC) PDU |
+| [dli](#heading--dli) | Digital Loggers, Inc. PDU |
+| [hmc](#heading--hmc) | IBM Hardware Management Console (HMC) |
+| [lxd](#heading--lxd) | LXD VM |
+| [ipmi](#heading--ipmi) | IPMI |
+| [manual](#heading--manual) | Manual power configuration |
+| [moonshot](#heading--moonshot) | HP Moonshot - iLO4 (IPMI) |
+| [mscm](#heading--mscm) | HP Moonshot - iLO Chassis Manager |
+| [msftocs](#heading--mscm) | Microsoft OCS - Chassis Manager |
+| [nova](#heading--nova) | OpenStack Nova |
+| [openbmc](#heading--openbmc) | OpenBMC Power Driver |
+| [recs_box](#heading--recs_box) | Christmann RECS-Box Power Driver |
+| [redfish](#heading--redfish) | Redfish |
+| [sm15k](#heading--sm15k) | SeaMicro 15000 |
+| [ucsm](#heading--ucsm) | Cisco UCS Manager |
+| [virsh](#heading--virsh) | libvirt KVM |
+| [vmware](#heading--vmware) | VMware |
+| [wedge](#heading--wedge) | Facebook's Wedge |
+snap-2-8-ui deb-2-8-ui -->
+
 <table>
 <thead>
 <tr>
@@ -556,6 +580,10 @@ snap-2-7-ui deb-2-7-ui -->
 <td>OpenBMC Power Driver</td>
 </tr>
 <tr>
+<td><a href="#heading--proxmox">proxmox</a></td>
+<td>ProxMox Power Driver</td>
+</tr>
+<tr>
 <td><a href="#heading--recs_box">recs_box</a></td>
 <td>Christmann RECS-Box Power Driver</td>
 </tr>
@@ -578,6 +606,10 @@ snap-2-7-ui deb-2-7-ui -->
 <tr>
 <td><a href="#heading--vmware">vmware</a></td>
 <td>VMware</td>
+</tr>
+<tr>
+<td><a href="#heading--webhook">webhook</a></td>
+<td>Webhook</td>
 </tr>
 <tr>
 <td><a href="#heading--wedge">wedge</a></td>
@@ -1025,6 +1057,58 @@ snap-2-8-ui deb-2-8-ui snap-2-7-ui deb-2-7-ui -->
 </tr>
 </tbody>
 </table>
+<p><a href="#heading--proxmox"><h3 id="heading--proxmox">Proxmox</h3></a></p>
+<table>
+<thead>
+<tr>
+<th>Form field</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power type</td>
+<td>Proxmox</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Host name or IP</td>
+<td>Power address for the Proxmox driver</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Username, including realm</td>
+<td>Power user, along with realm (i.e., Username@Realm</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>Required if a token name and secret aren&rsquo;t given</td>
+<td>Provisional</td>
+</tr>
+<tr>
+<td>API token name</td>
+<td>Token name: must include Username without realm (i.e., Username!Token-name</td>
+<td>Provisional</td>
+</tr>
+<tr>
+<td>API token secret</td>
+<td>Token secret</td>
+<td>Provisional</td>
+</tr>
+<tr>
+<td>Node ID</td>
+<td>VM name or ID</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Verify SSL connections&hellip;</td>
+<td>Boolean, whether or not to verify SSL connections with the system&rsquo;s root CA certificate</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
 <p><a href="#heading--openbmc"><h3 id="heading--openbmc">OpenBMC Power Driver</h3></a></p>
 <table>
 <thead>
@@ -1315,6 +1399,70 @@ snap-2-8-ui deb-2-8-ui snap-2-7-ui deb-2-7-ui -->
 <p><a href="images/c75e00a8-nodes-power-types__2.4_example-virsh.png" target = "_blank"><img src="images/c75e00a8-nodes-power-types__2.4_example-virsh.png"></a></a></p>
 <p><strong>NOTE:</strong> 
 The machine&rsquo;s hostname &ndash; according to MAAS &ndash; is a randomly chosen string (here <code>dear.ant</code>). You should change this hostname to something descriptive, that helps you remember why this machine is in your MAAS network.</p>
+<p><a href="#heading--webhook"><h3 id="heading--webhook">Webhook</h3></a></p>
+<p>It&rsquo;s important to understand that the Webhook power driver is more generic than other drivers, so it has some flexibility that the underlying power driver may not support.  For example, Webhook doesn&rsquo;t require a username or password for the power driver, because not all power drivers work that way.  Nevertheless, the power driver you&rsquo;re connecting to Webhook may actually require a username and/or password.  Understanding and implementing these fields correctly for the chosen back-end power driver is the user&rsquo;s responsbility.</p>
+<p>To that end, the &ldquo;Required&rdquo; column for this driver refers only to whether Webhook requires a value in each field.  Just because a field is optional for Webhook itself does not mean that the underlying power driver will ultimately allow that field to be unspecified.</p>
+<table>
+<thead>
+<tr>
+<th>Form field</th>
+<th>Description</th>
+<th>Required (by Webhook)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power type</td>
+<td>Webhook (from dropdown list)</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>URI to power on the node</td>
+<td>URI to access power driver&rsquo;s API for power on</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>URI to power off the node</td>
+<td>URI to access power driver&rsquo;s API for power off</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>URI to query the nodes power status</td>
+<td>URI to access power driver&rsquo;s API for power status</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Regex to confirm the node is on</td>
+<td>Regex expression that will return a string if the power is on, and no string if the power is off</td>
+<td>Required, defaults supplied</td>
+</tr>
+<tr>
+<td>Regex to confirm the node is off</td>
+<td>Regex expression that will return a string if the power is off, and no string if the power is on</td>
+<td>Required, defaults supplied</td>
+</tr>
+<tr>
+<td>Power user</td>
+<td>Username to log into the power driver</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Power password</td>
+<td>Password to access unit</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Power token</td>
+<td>Power driver API token (used instead of user and password, if set)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Verify SSL connections&hellip;</td>
+<td>Boolean, whether or not to verify SSL connections with the system&rsquo;s root CA certificate</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
 
@@ -1373,6 +1521,31 @@ snap-2-7-cli deb-2-7-cli -->
 | [vmware](#heading--vmware) | VMware |
 | [wedge](#heading--wedge) | Facebook's Wedge |
 snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli -->
+
+<!-- snap-2-9-cli deb-2-9-cli
+| CLI power_type code | Description |
+|-----|-----|
+| [amt](#heading--amt) |Intel AMT |
+| [apc](#heading--apc) | American Power Conversion (APC) PDU |
+| [dli](#heading--dli) | Digital Loggers, Inc. PDU |
+| [eaton](#heading--eaton) | Eaton PDU |
+| [hmc](#heading--hmc) | IBM Hardware Management Console (HMC) |
+| [lxd](#heading--lxd) | LXD VM |
+| [ipmi](#heading--ipmi) | IPMI |
+| [manual](#heading--manual) | Manual power configuration |
+| [moonshot](#heading--moonshot) | HP Moonshot - iLO4 (IPMI) |
+| [mscm](#heading--mscm) | HP Moonshot - iLO Chassis Manager |
+| [msftocs](#heading--mscm) | Microsoft OCS - Chassis Manager |
+| [nova](#heading--nova) | OpenStack Nova |
+| [openbmc](#heading--openbmc) | OpenBMC Power Driver |
+| [recs_box](#heading--recs_box) | Christmann RECS-Box Power Driver |
+| [redfish](#heading--redfish) | Redfish |
+| [sm15k](#heading--sm15k) | SeaMicro 15000 |
+| [ucsm](#heading--ucsm) | Cisco UCS Manager |
+| [virsh](#heading--virsh) | libvirt KVM |
+| [vmware](#heading--vmware) | VMware |
+| [wedge](#heading--wedge) | Facebook's Wedge |
+ snap-2-9-cli deb-2-9-cli -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 Note the required and optional parameters associated with each power type.
@@ -2035,6 +2208,8 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 </table>
 
 <p><code>*</code> The &lsquo;Facebook&rsquo;s Wedge&rsquo; OpenBMC power driver is considered experimental at this time.</p>
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>

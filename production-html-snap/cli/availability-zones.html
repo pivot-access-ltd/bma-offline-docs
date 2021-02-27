@@ -608,6 +608,8 @@ description=$ZONE_DESCRIPTION
 <p>To deploy in a particular zone, call the <code>acquire</code> method in the region-controller API &lt;region-controller-api&gt; as before, but pass the <code>zone</code> parameter with the name of the zone. This method will allocate a machine in that zone, or fail with an HTTP 409 (&ldquo;conflict&rdquo;) error if the zone has no machines available that match your request.</p>
 <p>Alternatively, you may want to request a machine that is not in a particular zone or one that is not in any of several zones. To do that, specify the <code>not_in_zone</code> parameter to <code>acquire</code>. This parameter takes a list of zone names; the allocated machine will not be in any of them. Again, if that leaves no machines available that match your request, the call will return a &ldquo;conflict&rdquo; error.</p>
 <p>It is possible, though not usually useful, to combine the <code>zone</code> and <code>not_in_zone</code> parameters. If your choice for <code>zone</code> is also present in <code>not_in_zone</code>, no machine will ever match your request. Or if it&rsquo;s not, then the <code>not_in_zone</code> values will not affect the result of the call at all.</p>
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>

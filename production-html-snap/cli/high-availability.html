@@ -469,7 +469,7 @@
 <li>PostgreSQL</li>
 <li>API services</li>
 </ol>
-<h4>Four questions you might have:</h4>
+<h4>Nine questions you might have:</h4>
 <ol>
 <li><a href="#heading--rack-controller-ha">How do I make rack controllers highly available?</a></li>
 <li><a href="#heading--bmc-ha">How do I enable highly-available BMC?</a></li>
@@ -478,6 +478,8 @@
 <li><a href="#heading--postgresql-ha">How do I enable highly-available PostgreSQL?</a></li>
 <li><a href="#heading--secondary-api-servers">How do I enable highly-available API services?</a></li>
 <li><a href="#heading--load-balancing-with-haproxy-optional">How do I enable load balancing for API services?</a></li>
+<li><a href="#heading--move-rack-controller">How do I move a rack controller from one MAAS instance to another?</a></li>
+<li><a href="#heading--dangers-moving-rack-controller">What are the potential dangers of moving a rack controller?</a></li>
 </ol>
 <p><a href="#heading--rack-controller-ha"><h2 id="heading--rack-controller-ha">Make rack controllers highly available</h2></a></p>
 <!-- deb-2-7-cli
@@ -797,6 +799,56 @@ backend maas
 
 <p>The configuration of region controller HA is now complete.</p>
 <p><strong>The API server(s) must be now be referenced (e.g. web UI, MAAS CLI) using port 80 (as opposed to port 5240).</strong></p>
+<p><a href="#heading--move-rack-controller"><h2 id="heading--move-rack-controller">Move a rack controller from one MAAS instance to another</h2></a></p>
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller.  In the "Controllers" tab in the UI, select the rack controller you with to delete, choose "Take action" and select "Delete."  You will be asked to confirm with a red button, entitled "Delete 1 controller."
+ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+
+<p>In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller, with the command:</p>
+<pre><code>maas $PROFILE rack-controller delete $SYSTEM_ID
+</code></pre>
+
+<p>where <code>$PROFILE</code> is your admin profile name, and <code>$SYSTEM_ID</code> can be found by examining the output of the command:</p>
+<pre><code>maas $PROFILE rack-controllers read
+</code></pre>
+
+<p>There is no confirmation step, so make sure you have the right rack controller before proceeding.</p>
+<p>Next, you must register a new rack controller, which is always done from the command line.</p>
+<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
+For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
+
+<pre><code>sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
+</code></pre>
+
+
+where the secret is found in `/var/lib/maas/secret`.
+ deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
+
+<p>For this exercise, we&rsquo;re assuming you are using the already installed rack controller code that was previously running on the &ldquo;from&rdquo; MAAS instance.  All that&rsquo;s necessary is that you register a new rack controller with the &ldquo;to&rdquo; MAAS instance, like this:</p>
+<pre><code>sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
+</code></pre>
+
+<p>where the secret is found in <code>/var/snap/maas/common/maas/secret</code>.</p>
+<!-- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui
+Note that in the UI, if you go to the "Controllers" tab and press the button entitled, "Add rack controller," at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.
+ deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui -->
+
+<p><a href="#heading--move-rack-controller"><h3 id="heading--dangers-moving-rack-controller">Dangers of moving a rack controller</h3></a></p>
+<p>There are dangers associate with moving a rack controller &ndash; dangers that may generate errors, get you into a non-working state, or cause you significant data loss.  These dangers are precipitated by one caveat and two potential mistakes:</p>
+<ul>
+<li>
+<p><strong>Using the same system as a rack controller and a VM host:</strong> While not forbidden or inherently dangerous, using the same machine as both a rack controller and a VM host may cause resource contention and poor performance.  If the resources on the system are not more than adequate to cover both tasks, you may see slowdowns (or even apparent &ldquo;freeze&rdquo; events) on the system.</p>
+</li>
+<li>
+<p><strong>Moving a rack controller from one version of MAAS to another:</strong> MAAS rack controller software is an integral part of each version of MAAS.  If you delete a rack controller from, say, a 2.6 version of MAAS, and attempt to register that 2.6 version of the rack controller code to, say, a 2.9 version of MAAS, you may experience errors and potential data loss.  Using the above example, if you are running both a VM host and a rack controller for MAAS 2.6 on one system, and you suddenly decide to delete that rack controller from 2.6 and attempt to register the same code to a 2.9 MAAS, the VM host may fail or disappear.  This will possibly delete all the VMs you have created or connected to that VM host &ndash; which may result in data loss.  This action is not supported.</p>
+</li>
+<li>
+<p><strong>Connecting one instance of a rack controller to two instances of MAAS, regardless of version:</strong> Trying to connect a single rack controller to two different instances of MAAS can result in all sorts of unpredictable (and potentially catastrophic) behavior.  It is not a supported configuration.</p>
+</li>
+</ul>
+<p>Take these warnings to heart.  It may seem like a faster approach to &ldquo;bridge&rdquo; your existing rack controllers from one MAAS to another &ndash; or from one version of MAAS to another &ndash; while they&rsquo;re running.  Ultimately, though, it will probably result in more work than just following the recommended approach.</p>
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>

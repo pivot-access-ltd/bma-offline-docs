@@ -507,7 +507,7 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9 ui -->
 | [wedge](#heading--wedge) | Facebook's Wedge |
 snap-2-7-ui deb-2-7-ui -->
 
-<!-- snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui
+<!-- snap-2-8-ui deb-2-8-ui 
 | CLI power_type code | Description |
 |-----|-----|
 | [amt](#heading--amt) |Intel AMT |
@@ -529,7 +529,33 @@ snap-2-7-ui deb-2-7-ui -->
 | [virsh](#heading--virsh) | libvirt KVM |
 | [vmware](#heading--vmware) | VMware |
 | [wedge](#heading--wedge) | Facebook's Wedge |
-snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui -->
+snap-2-8-ui deb-2-8-ui -->
+
+<!-- snap-2-9-ui deb-2-9-ui
+| CLI power_type code | Description |
+|-----|-----|
+| [amt](#heading--amt) |Intel AMT |
+| [apc](#heading--apc) | American Power Conversion (APC) PDU |
+| [dli](#heading--dli) | Digital Loggers, Inc. PDU |
+| [hmc](#heading--hmc) | IBM Hardware Management Console (HMC) |
+| [lxd](#heading--lxd) | LXD VM |
+| [ipmi](#heading--ipmi) | IPMI |
+| [manual](#heading--manual) | Manual power configuration |
+| [moonshot](#heading--moonshot) | HP Moonshot - iLO4 (IPMI) |
+| [mscm](#heading--mscm) | HP Moonshot - iLO Chassis Manager |
+| [msftocs](#heading--mscm) | Microsoft OCS - Chassis Manager |
+| [nova](#heading--nova) | OpenStack Nova |
+| [openbmc](#heading--openbmc) | OpenBMC Power Driver |
+| [proxmox](#heading--proxmox) | ProxMox Power Driver |
+| [recs_box](#heading--recs_box) | Christmann RECS-Box Power Driver |
+| [redfish](#heading--redfish) | Redfish |
+| [sm15k](#heading--sm15k) | SeaMicro 15000 |
+| [ucsm](#heading--ucsm) | Cisco UCS Manager |
+| [virsh](#heading--virsh) | libvirt KVM |
+| [vmware](#heading--vmware) | VMware |
+| [webhook](#heading--webhook) | Webhook |
+| [wedge](#heading--wedge) | Facebook's Wedge |
+ snap-2-9-ui deb-2-9-ui -->
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 Click 'Save changes' to finish. Once that's done, MAAS performs a power check on the machine. A successful power check is a good indication that MAAS can properly communicate with the machine, that is, it should quickly result in a power status of "Power off". A failed attempt will show:
@@ -684,94 +710,334 @@ Manual power configuration means exactly that -- manually configured at the unit
 | Password | Password to access unit | Required |
 | Auth URL | URL to access unit | Required |
 
-<a href="#heading--openbmc"><h3 id="heading--openbmc">OpenBMC Power Driver</h3></a>
+<!-- snap-2-9-ui deb-2-9-ui
+<a href="#heading--proxmox"><h3 id="heading--proxmox">Proxmox</h3></a>
 
 | Form field | Description | Required |
 |-----|-----|-----|
-| OpenBMC address | IP address of unit | Required |
-| OpenBMC user | Username to login | Required |
-| OpenBMC password | Password to access unit | Required |
+| Power type | Proxmox | Required |
+| Host name or IP | Power address for the Proxmox driver | Required |
+| Username, including realm | Power user, along with realm (i.e., Username@Realm | Required |
+| Password | Required if a token name and secret aren't given | Provisional |
+| API token name | Token name: must include Username without realm (i.e., Username!Token-name | Provisional |
+| API token secret | Token secret | Provisional |
+| Node ID | VM name or ID | Optional |
+| Verify SSL connections... | Boolean, whether or not to verify SSL connections with the system's root CA certificate | Required |
 
-<a href="#heading--recs_box"><h3 id="heading--recs_box">Christmann RECS-Box Power Driver</h3></a>
+ snap-2-9-ui deb-2-9-ui -->
 
-| Form field | Description | Required |
+<p><a href="#heading--openbmc"><h3 id="heading--openbmc">OpenBMC Power Driver</h3></a></p>
+<table>
+<thead>
+<tr>
+<th>Form field</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenBMC address</td>
+<td>IP address of unit</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>OpenBMC user</td>
+<td>Username to login</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>OpenBMC password</td>
+<td>Password to access unit</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--recs_box"><h3 id="heading--recs_box">Christmann RECS-Box Power Driver</h3></a></p>
+<table>
+<thead>
+<tr>
+<th>Form field</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node ID</td>
+<td>Node ID</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Power address</td>
+<td>IP address of unit</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Power port</td>
+<td>Port where unit is attached</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Power user</td>
+<td>Username to login</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Power password</td>
+<td>Password to access unit</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--redfish"><h3 id="heading--redfish">Redfish</h3></a></p>
+<table>
+<thead>
+<tr>
+<th>Form field</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Redfish address</td>
+<td>IP address of unit</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Redfish user</td>
+<td>Username to login</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Redfish password</td>
+<td>Password to access unit</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Node ID</td>
+<td>Node ID</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--sm15k"><h3 id="heading--sm15k">SeaMicro 15000</h3></a></p>
+<p>Some of the fields for this power type have fixed choices, indicated in the &ldquo;Choices&rdquo; column.</p>
+<table>
+<thead>
+<tr>
+<th>Form field</th>
+<th>Description</th>
+<th>Choices</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>System ID</td>
+<td>System ID</td>
+<td></td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Power address</td>
+<td>IP address of unit</td>
+<td></td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Power user</td>
+<td>Username to login</td>
+<td></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Power password</td>
+<td>Password to access unit</td>
+<td></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Power control type</td>
+<td>Password to access unit</td>
+<td>IPMI</td>
+<td>Required</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>REST API v0.9</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>REST API v2.0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--ucsm"><h3 id="heading--ucsm">Cisco UCS Manager</h3></a></p>
+<table>
+<thead>
+<tr>
+<th>Form field</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Server UUID</td>
+<td>Server UUID</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>URL for XML API</td>
+<td>XML API URL</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>API user</td>
+<td>API user</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>API password</td>
+<td>API password</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--virsh"><h3 id="heading--virsh">virsh - libvirt KVM</h3></a></p>
+<table>
+<thead>
+<tr>
+<th>Form field</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Address</td>
+<td>URL of VM</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>API password</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Virsh VM ID</td>
+<td>libvirt VM UUID</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--vmware"><h3 id="heading--vmware">VMware</h3></a></p>
+<table>
+<thead>
+<tr>
+<th>Form field</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VM Name</td>
+<td>VM name (if UUID unknown)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>VM UUID</td>
+<td>VM UUID (if known)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>VMware IP</td>
+<td>IP address of VM</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>VMware username</td>
+<td>Username to access VM</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>VMware password</td>
+<td>Password to access VM</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>VMware API port</td>
+<td>VMware API port number</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>VMware API protocol</td>
+<td>VMware API protocol</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--wedge"><h3 id="heading--wedge">Facebook&rsquo;s Wedge</h3></a></p>
+<table>
+<thead>
+<tr>
+<th>Form field</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IP address</td>
+<td>IP address of unit</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Power user</td>
+<td>Username to access unit</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Power password</td>
+<td>Password to access unit</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--example-virsh-kvm-power-type"><h2 id="heading--example-virsh-kvm-power-type">An example: the Virsh power type</h2></a></p>
+<p>Consider a machine backed by VM. Below, a &lsquo;Power type&rsquo; of <code>Virsh</code> has been selected, and the &lsquo;Power address&rsquo; of <code>qemu+ssh://ubuntu@192.168.1.2/system</code> has been entered (replace values as appropriate).  The value of &lsquo;Power ID&rsquo; is the VM domain (guest) name, here <code>node2</code>.</p>
+<p><a href="images/c75e00a8-nodes-power-types__2.4_example-virsh.png" target = "_blank"><img src="images/c75e00a8-nodes-power-types__2.4_example-virsh.png"></a></a></p>
+<p><strong>NOTE:</strong> 
+The machine&rsquo;s hostname &ndash; according to MAAS &ndash; is a randomly chosen string (here <code>dear.ant</code>). You should change this hostname to something descriptive, that helps you remember why this machine is in your MAAS network.</p>
+<p>snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui &ndash;&gt;</p>
+<!-- snap-2-9-ui deb-2-9-ui
+<a href="#heading--webhook"><h3 id="heading--webhook">Webhook</h3></a>
+
+It's important to understand that the Webhook power driver is more generic than other drivers, so it has some flexibility that the underlying power driver may not support.  For example, Webhook doesn't require a username or password for the power driver, because not all power drivers work that way.  Nevertheless, the power driver you're connecting to Webhook may actually require a username and/or password.  Understanding and implementing these fields correctly for the chosen back-end power driver is the user's responsbility.
+
+To that end, the "Required" column for this driver refers only to whether Webhook requires a value in each field.  Just because a field is optional for Webhook itself does not mean that the underlying power driver will ultimately allow that field to be unspecified.
+
+| Form field | Description | Required (by Webhook) |
 |-----|-----|-----|
-| Node ID | Node ID | Required |
-| Power address | IP address of unit | Required |
-| Power port | Port where unit is attached | Optional |
-| Power user | Username to login | Optional |
+| Power type | Webhook (from dropdown list) | Required |
+| URI to power on the node | URI to access power driver's API for power on | Required |
+| URI to power off the node | URI to access power driver's API for power off | Required |
+| URI to query the nodes power status | URI to access power driver's API for power status | Required |
+| Regex to confirm the node is on | Regex expression that will return a string if the power is on, and no string if the power is off | Required, defaults supplied |
+| Regex to confirm the node is off | Regex expression that will return a string if the power is off, and no string if the power is on | Required, defaults supplied |
+| Power user | Username to log into the power driver | Optional |
 | Power password | Password to access unit | Optional |
+| Power token | Power driver API token (used instead of user and password, if set) | Optional |
+| Verify SSL connections... | Boolean, whether or not to verify SSL connections with the system's root CA certificate | Required |
 
-<a href="#heading--redfish"><h3 id="heading--redfish">Redfish</h3></a>
-
-| Form field | Description | Required |
-|-----|-----|-----|
-| Redfish address | IP address of unit | Required |
-| Redfish user | Username to login | Required |
-| Redfish password | Password to access unit | Required |
-| Node ID | Node ID | Optional |
-
-<a href="#heading--sm15k"><h3 id="heading--sm15k">SeaMicro 15000</h3></a>
-
-Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
-
-| Form field | Description | Choices | Required |
-|-----|-----|-----|-----|
-| System ID | System ID || Required |
-| Power address | IP address of unit || Required |
-| Power user | Username to login || Optional |
-| Power password | Password to access unit || Optional |
-| Power control type | Password to access unit| IPMI | Required |
-|  |  | REST API v0.9 | |
-|  |  | REST API v2.0 | |
-
-<a href="#heading--ucsm"><h3 id="heading--ucsm">Cisco UCS Manager</h3></a>
-
-| Form field | Description | Required |
-|-----|-----|-----|
-| Server UUID | Server UUID | Required |
-| URL for XML API | XML API URL | Required |
-| API user | API user | Optional |
-| API password | API password | Optional |
-
-<a href="#heading--virsh"><h3 id="heading--virsh">virsh - libvirt KVM</h3></a>
-
-| Form field | Description | Required |
-|-----|-----|-----|
-| Address | URL of VM | Required |
-| Password | API password | Optional |
-| Virsh VM ID | libvirt VM UUID | Required |
-
-<a href="#heading--vmware"><h3 id="heading--vmware">VMware</h3></a>
-
-| Form field | Description | Required |
-|-----|-----|-----|
-| VM Name | VM name (if UUID unknown) | Optional |
-| VM UUID | VM UUID (if known) | Optional |
-| VMware IP | IP address of VM | Required |
-| VMware username | Username to access VM | Required |
-| VMware password | Password to access VM | Required |
-| VMware API port | VMware API port number | Optional |
-| VMware API protocol | VMware API protocol | Optional |
-
-<a href="#heading--wedge"><h3 id="heading--wedge">Facebook's Wedge</h3></a>
-
-| Form field | Description | Required |
-|-----|-----|-----|
-| IP address | IP address of unit | Required |
-| Power user | Username to access unit | Optional |
-| Power password | Password to access unit | Optional |
-
-<a href="#heading--example-virsh-kvm-power-type"><h2 id="heading--example-virsh-kvm-power-type">An example: the Virsh power type</h2></a>
-
-Consider a machine backed by VM. Below, a 'Power type' of `Virsh` has been selected, and the 'Power address' of `qemu+ssh://ubuntu@192.168.1.2/system` has been entered (replace values as appropriate).  The value of 'Power ID' is the VM domain (guest) name, here `node2`.
-
-<a href="images/c75e00a8-nodes-power-types__2.4_example-virsh.png" target = "_blank"><img src="images/c75e00a8-nodes-power-types__2.4_example-virsh.png"></a></a>
-
-<strong>NOTE:</strong> 
-The machine's hostname -- according to MAAS -- is a randomly chosen string (here `dear.ant`). You should change this hostname to something descriptive, that helps you remember why this machine is in your MAAS network.
-
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+ snap-2-9-ui deb-2-9-ui -->
 
 <p><a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine&rsquo;s power type</h2></a></p>
 <p>To (re)configure a machine&rsquo;s power type, first find the machine&rsquo;s $SYSTEM_ID with the <a href="the-cli-cookbook.html#heading--basic-machine-list">basic machine-list</a> recipe.  Next, use the <a href="maas-cli.html">MAAS CLI</a> command <code>maas machines...</code> to (re)set the machine&rsquo;s power type, like this:</p>
@@ -802,6 +1068,96 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 | [wedge](#heading--wedge) | Facebook's Wedge |
 snap-2-7-cli deb-2-7-cli -->
 
+<table>
+<thead>
+<tr>
+<th>CLI power_type code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#heading--amt">amt</a></td>
+<td>Intel AMT</td>
+</tr>
+<tr>
+<td><a href="#heading--apc">apc</a></td>
+<td>American Power Conversion (APC) PDU</td>
+</tr>
+<tr>
+<td><a href="#heading--dli">dli</a></td>
+<td>Digital Loggers, Inc. PDU</td>
+</tr>
+<tr>
+<td><a href="#heading--eaton">eaton</a></td>
+<td>Eaton PDU</td>
+</tr>
+<tr>
+<td><a href="#heading--hmc">hmc</a></td>
+<td>IBM Hardware Management Console (HMC)</td>
+</tr>
+<tr>
+<td><a href="#heading--lxd">lxd</a></td>
+<td>LXD VM</td>
+</tr>
+<tr>
+<td><a href="#heading--ipmi">ipmi</a></td>
+<td>IPMI</td>
+</tr>
+<tr>
+<td><a href="#heading--manual">manual</a></td>
+<td>Manual power configuration</td>
+</tr>
+<tr>
+<td><a href="#heading--moonshot">moonshot</a></td>
+<td>HP Moonshot - iLO4 (IPMI)</td>
+</tr>
+<tr>
+<td><a href="#heading--mscm">mscm</a></td>
+<td>HP Moonshot - iLO Chassis Manager</td>
+</tr>
+<tr>
+<td><a href="#heading--mscm">msftocs</a></td>
+<td>Microsoft OCS - Chassis Manager</td>
+</tr>
+<tr>
+<td><a href="#heading--nova">nova</a></td>
+<td>OpenStack Nova</td>
+</tr>
+<tr>
+<td><a href="#heading--openbmc">openbmc</a></td>
+<td>OpenBMC Power Driver</td>
+</tr>
+<tr>
+<td><a href="#heading--recs_box">recs_box</a></td>
+<td>Christmann RECS-Box Power Driver</td>
+</tr>
+<tr>
+<td><a href="#heading--redfish">redfish</a></td>
+<td>Redfish</td>
+</tr>
+<tr>
+<td><a href="#heading--sm15k">sm15k</a></td>
+<td>SeaMicro 15000</td>
+</tr>
+<tr>
+<td><a href="#heading--ucsm">ucsm</a></td>
+<td>Cisco UCS Manager</td>
+</tr>
+<tr>
+<td><a href="#heading--virsh">virsh</a></td>
+<td>libvirt KVM</td>
+</tr>
+<tr>
+<td><a href="#heading--vmware">vmware</a></td>
+<td>VMware</td>
+</tr>
+<tr>
+<td><a href="#heading--wedge">wedge</a></td>
+<td>Facebook&rsquo;s Wedge</td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
@@ -2124,6 +2480,8 @@ power_parameters_power_pass=xxxxxxxx
 </table>
 
 <p><code>*</code> The &lsquo;Facebook&rsquo;s Wedge&rsquo; OpenBMC power driver is considered experimental at this time.</p>
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>

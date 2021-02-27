@@ -438,11 +438,11 @@
 <!-- deb-2-8-cli
  deb-2-8-cli -->
 
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
  deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
 
 <!-- snap-2-7-cli
  snap-2-7-cli -->
@@ -474,15 +474,15 @@ MAAS doesn't support TLS encryption natively.  If you are not interested in [set
 MAAS doesn't support TLS encryption natively.  If you are not interested in [setting up an HAProxy](high-availability.html#heading--load-balancing-with-haproxy-optional), you can enable TLS independently in the web server software (e.g. Apache, Nginx) which users access directly.  The examples below explain how to create this configuration.
  deb-2-8-cli -->
 
-<p>MAAS doesn&rsquo;t support TLS encryption natively.  If you are not interested in <a href="high-availability.html#heading--load-balancing-with-haproxy-optional">setting up an HAProxy</a>, you can enable TLS independently in the web server software (e.g. Apache, Nginx) which users access directly.  The examples below explain how to create this configuration.</p>
+<!-- deb-2-8-ui
+MAAS doesn't support TLS encryption natively.  If you are not interested in [setting up an HAProxy](high-availability.html#heading--load-balancing-with-haproxy-optional), you can enable TLS independently in the web server software (e.g. Apache, Nginx) which users access directly.  The examples below explain how to create this configuration.
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
 MAAS doesn't support TLS encryption natively.  If you are not interested in [setting up an HAProxy](high-availability.html#heading--load-balancing-with-haproxy-optional), you can enable TLS independently in the web server software (e.g. Apache, Nginx) which users access directly.  The examples below explain how to create this configuration.
  deb-2-9-cli -->
 
-<!-- deb-2-9-ui
-MAAS doesn't support TLS encryption natively.  If you are not interested in [setting up an HAProxy](high-availability.html#heading--load-balancing-with-haproxy-optional), you can enable TLS independently in the web server software (e.g. Apache, Nginx) which users access directly.  The examples below explain how to create this configuration.
- deb-2-9-ui -->
-
+<p>MAAS doesn&rsquo;t support TLS encryption natively.  If you are not interested in <a href="high-availability.html#heading--load-balancing-with-haproxy-optional">setting up an HAProxy</a>, you can enable TLS independently in the web server software (e.g. Apache, Nginx) which users access directly.  The examples below explain how to create this configuration.</p>
 <!-- snap-2-7-cli
 MAAS doesn't support TLS encryption natively.  If you are not interested in [setting up an HAProxy](high-availability.html#heading--load-balancing-with-haproxy-optional), you can enable TLS independently in the web server software (e.g. Apache, Nginx) which users access directly.  The examples below explain how to create this configuration.
  snap-2-7-cli -->
@@ -545,6 +545,8 @@ MAAS doesn't support TLS encryption natively.  If you are not interested in [set
         ProxyPassReverse / http://localhost:5240/
 &lt;/VirtualHost&gt;
 </code></pre>
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>

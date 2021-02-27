@@ -438,11 +438,11 @@
 <!-- deb-2-8-cli
  deb-2-8-cli -->
 
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
  deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
 
 <!-- snap-2-7-cli
  snap-2-7-cli -->
@@ -470,12 +470,20 @@
 <li><a href="#heading--example-virsh-kvm-power-type">Can you give me an example of the virsh power type?</a></li>
 <li><a href="#heading--bmc-driver-support">Which BMC drivers are supported?</a></li>
 </ol>
-<p><a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine&rsquo;s power type</h2></a></p>
-<p>To configure a machine&rsquo;s power type, click on the machine from the &lsquo;Machines&rsquo; page of the web UI, then select its &lsquo;Configuration&rsquo; tab. Scroll down until you find the Power configuration. If the power type is undefined, the following will be displayed:</p>
-<p><a href="images/4fae5977-nodes-power-types__2.4_undefined.png" target = "_blank"><img src="images/4fae5977-nodes-power-types__2.4_undefined.png"></a></a></p>
-<p>Choose a type in the drop-down menu that corresponds to the machine&rsquo;s underlying machine&rsquo;s BMC card.</p>
-<p><a href="images/b53c6613-nodes-power-types__2.4_selection.png" target = "_blank"><img src="images/b53c6613-nodes-power-types__2.4_selection.png"></a></a></p>
-<p>Fill in the resulting form; the information required will depends on the power type:</p>
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9 ui
+<a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
+
+To configure a machine's power type, click on the machine from the 'Machines' page of the web UI, then select its 'Configuration' tab. Scroll down until you find the Power configuration. If the power type is undefined, the following will be displayed:
+
+<a href="images/4fae5977-nodes-power-types__2.4_undefined.png" target = "_blank"><img src="images/4fae5977-nodes-power-types__2.4_undefined.png"></a></a>
+
+Choose a type in the drop-down menu that corresponds to the machine's underlying machine's BMC card.
+
+<a href="images/b53c6613-nodes-power-types__2.4_selection.png" target = "_blank"><img src="images/b53c6613-nodes-power-types__2.4_selection.png"></a></a>
+
+Fill in the resulting form; the information required will depends on the power type:
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9 ui -->
+
 <!-- snap-2-7-ui deb-2-7-ui
 | CLI power_type code | Description |
 |-----|-----|
@@ -498,6 +506,30 @@
 | [vmware](#heading--vmware) | VMware |
 | [wedge](#heading--wedge) | Facebook's Wedge |
 snap-2-7-ui deb-2-7-ui -->
+
+<!-- snap-2-8-ui deb-2-8-ui 
+| CLI power_type code | Description |
+|-----|-----|
+| [amt](#heading--amt) |Intel AMT |
+| [apc](#heading--apc) | American Power Conversion (APC) PDU |
+| [dli](#heading--dli) | Digital Loggers, Inc. PDU |
+| [hmc](#heading--hmc) | IBM Hardware Management Console (HMC) |
+| [lxd](#heading--lxd) | LXD VM |
+| [ipmi](#heading--ipmi) | IPMI |
+| [manual](#heading--manual) | Manual power configuration |
+| [moonshot](#heading--moonshot) | HP Moonshot - iLO4 (IPMI) |
+| [mscm](#heading--mscm) | HP Moonshot - iLO Chassis Manager |
+| [msftocs](#heading--mscm) | Microsoft OCS - Chassis Manager |
+| [nova](#heading--nova) | OpenStack Nova |
+| [openbmc](#heading--openbmc) | OpenBMC Power Driver |
+| [recs_box](#heading--recs_box) | Christmann RECS-Box Power Driver |
+| [redfish](#heading--redfish) | Redfish |
+| [sm15k](#heading--sm15k) | SeaMicro 15000 |
+| [ucsm](#heading--ucsm) | Cisco UCS Manager |
+| [virsh](#heading--virsh) | libvirt KVM |
+| [vmware](#heading--vmware) | VMware |
+| [wedge](#heading--wedge) | Facebook's Wedge |
+snap-2-8-ui deb-2-8-ui -->
 
 <table>
 <thead>
@@ -556,6 +588,10 @@ snap-2-7-ui deb-2-7-ui -->
 <td>OpenBMC Power Driver</td>
 </tr>
 <tr>
+<td><a href="#heading--proxmox">proxmox</a></td>
+<td>ProxMox Power Driver</td>
+</tr>
+<tr>
 <td><a href="#heading--recs_box">recs_box</a></td>
 <td>Christmann RECS-Box Power Driver</td>
 </tr>
@@ -578,6 +614,10 @@ snap-2-7-ui deb-2-7-ui -->
 <tr>
 <td><a href="#heading--vmware">vmware</a></td>
 <td>VMware</td>
+</tr>
+<tr>
+<td><a href="#heading--webhook">webhook</a></td>
+<td>Webhook</td>
 </tr>
 <tr>
 <td><a href="#heading--wedge">wedge</a></td>
@@ -737,6 +777,23 @@ snap-2-7-ui deb-2-7-ui -->
 </tbody>
 </table>
 <p><a href="#heading--ipmi"><h3 id="heading--ipmi">IPMI</h3></a></p>
+<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui
+
+Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
+
+| Form field | Description | Choices | Required |
+|-----|-----|-----|-----|
+| Power driver | Power driver |`LAN [IPMI 1.5]` | Required |
+| | | `LAN_2_0 [IPMI 2.0]`|
+| Power boot type | Boot type | `Automatic` | Required |
+| | | `Legacy boot` | |
+| | | `EFI boot` | |
+| IP address | IP address of unit || Required |
+| Power user | Username to login || Optional |
+| Power password | Password to access unit || Optional |
+| Power MAC | MAC address of unit || Optional |
+snap-2-8-ui deb-2-8-ui snap-2-7-ui deb-2-7-ui -->
+
 <p>Some of the fields for this power type have fixed choices, indicated in the &ldquo;Choices&rdquo; column.</p>
 <table>
 <thead>
@@ -802,34 +859,62 @@ snap-2-7-ui deb-2-7-ui -->
 <td></td>
 <td>Optional</td>
 </tr>
+<tr>
+<td>K_g</td>
+<td>K_g BMC key</td>
+<td></td>
+<td>Optional (BETA)</td>
+</tr>
+<tr>
+<td>Cipher suite</td>
+<td>Cipher suite ID</td>
+<td>- <code>17</code> <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small></td>
+<td>Optional (BETA)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>3</code> <small>(3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128)</small></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code></code> (blank) <small>(freeipmi-tools default)</small></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>8</code> <small>(8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128)</small></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>12</code> <small>(12 - HMAC-MD5::MD5-128::AES-CBC-128)</small></td>
+<td></td>
+</tr>
+<tr>
+<td>Privilege level</td>
+<td>IPMI privilege level</td>
+<td><code>User</code></td>
+<td>Optional (BETA)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>Operator</code></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>Administrator</code></td>
+<td></td>
+</tr>
 </tbody>
 </table>
-<!-- snap-2-9-ui deb-2-9-ui
-
-Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
-
-| Form field | Description | Choices | Required |
-|-----|-----|-----|-----|
-| Power driver | Power driver |`LAN [IPMI 1.5]` | Required |
-| | | `LAN_2_0 [IPMI 2.0]`|
-| Power boot type | Boot type | `Automatic` | Required |
-| | | `Legacy boot` | |
-| | | `EFI boot` | |
-| IP address | IP address of unit || Required |
-| Power user | Username to login || Optional |
-| Power password | Password to access unit || Optional |
-| Power MAC | MAC address of unit || Optional |
-| K_g | K_g BMC key | | Optional (BETA) |
-| Cipher suite | Cipher suite ID | - `17` <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small> | Optional (BETA) |
-| | |`3` <small>(3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128)</small> | |
-| | |` ` (blank) <small>(freeipmi-tools default)</small> | |
-| | |`8` <small>(8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128)</small> | |
-| | |`12` <small>(12 - HMAC-MD5::MD5-128::AES-CBC-128)</small> | |
-| Privilege level | IPMI privilege level | `User` | Optional (BETA) |
-| | | `Operator` | |
-| | | `Administrator` | |
-snap-2-9-ui deb-2-9-ui -->
-
 <p><a href="#heading--manual"><h3 id="heading--manual">Manual power configuration</h3></a></p>
 <p>Manual power configuration means exactly that &ndash; manually configured at the unit &ndash; hence there are no parameters to set in the &ldquo;create machine&rdquo; UI.</p>
 <p><a href="#heading--moonshot"><h3 id="heading--moonshot">HP Moonshot - iLO4 (IPMI)</h3></a></p>
@@ -976,6 +1061,58 @@ snap-2-9-ui deb-2-9-ui -->
 <tr>
 <td>Auth URL</td>
 <td>URL to access unit</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--proxmox"><h3 id="heading--proxmox">Proxmox</h3></a></p>
+<table>
+<thead>
+<tr>
+<th>Form field</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power type</td>
+<td>Proxmox</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Host name or IP</td>
+<td>Power address for the Proxmox driver</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Username, including realm</td>
+<td>Power user, along with realm (i.e., Username@Realm</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>Required if a token name and secret aren&rsquo;t given</td>
+<td>Provisional</td>
+</tr>
+<tr>
+<td>API token name</td>
+<td>Token name: must include Username without realm (i.e., Username!Token-name</td>
+<td>Provisional</td>
+</tr>
+<tr>
+<td>API token secret</td>
+<td>Token secret</td>
+<td>Provisional</td>
+</tr>
+<tr>
+<td>Node ID</td>
+<td>VM name or ID</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Verify SSL connections&hellip;</td>
+<td>Boolean, whether or not to verify SSL connections with the system&rsquo;s root CA certificate</td>
 <td>Required</td>
 </tr>
 </tbody>
@@ -1270,6 +1407,70 @@ snap-2-9-ui deb-2-9-ui -->
 <p><a href="images/c75e00a8-nodes-power-types__2.4_example-virsh.png" target = "_blank"><img src="images/c75e00a8-nodes-power-types__2.4_example-virsh.png"></a></a></p>
 <p><strong>NOTE:</strong> 
 The machine&rsquo;s hostname &ndash; according to MAAS &ndash; is a randomly chosen string (here <code>dear.ant</code>). You should change this hostname to something descriptive, that helps you remember why this machine is in your MAAS network.</p>
+<p><a href="#heading--webhook"><h3 id="heading--webhook">Webhook</h3></a></p>
+<p>It&rsquo;s important to understand that the Webhook power driver is more generic than other drivers, so it has some flexibility that the underlying power driver may not support.  For example, Webhook doesn&rsquo;t require a username or password for the power driver, because not all power drivers work that way.  Nevertheless, the power driver you&rsquo;re connecting to Webhook may actually require a username and/or password.  Understanding and implementing these fields correctly for the chosen back-end power driver is the user&rsquo;s responsbility.</p>
+<p>To that end, the &ldquo;Required&rdquo; column for this driver refers only to whether Webhook requires a value in each field.  Just because a field is optional for Webhook itself does not mean that the underlying power driver will ultimately allow that field to be unspecified.</p>
+<table>
+<thead>
+<tr>
+<th>Form field</th>
+<th>Description</th>
+<th>Required (by Webhook)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power type</td>
+<td>Webhook (from dropdown list)</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>URI to power on the node</td>
+<td>URI to access power driver&rsquo;s API for power on</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>URI to power off the node</td>
+<td>URI to access power driver&rsquo;s API for power off</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>URI to query the nodes power status</td>
+<td>URI to access power driver&rsquo;s API for power status</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Regex to confirm the node is on</td>
+<td>Regex expression that will return a string if the power is on, and no string if the power is off</td>
+<td>Required, defaults supplied</td>
+</tr>
+<tr>
+<td>Regex to confirm the node is off</td>
+<td>Regex expression that will return a string if the power is off, and no string if the power is on</td>
+<td>Required, defaults supplied</td>
+</tr>
+<tr>
+<td>Power user</td>
+<td>Username to log into the power driver</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Power password</td>
+<td>Password to access unit</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Power token</td>
+<td>Power driver API token (used instead of user and password, if set)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Verify SSL connections&hellip;</td>
+<td>Boolean, whether or not to verify SSL connections with the system&rsquo;s root CA certificate</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
 
@@ -1328,6 +1529,31 @@ snap-2-7-cli deb-2-7-cli -->
 | [vmware](#heading--vmware) | VMware |
 | [wedge](#heading--wedge) | Facebook's Wedge |
 snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli -->
+
+<!-- snap-2-9-cli deb-2-9-cli
+| CLI power_type code | Description |
+|-----|-----|
+| [amt](#heading--amt) |Intel AMT |
+| [apc](#heading--apc) | American Power Conversion (APC) PDU |
+| [dli](#heading--dli) | Digital Loggers, Inc. PDU |
+| [eaton](#heading--eaton) | Eaton PDU |
+| [hmc](#heading--hmc) | IBM Hardware Management Console (HMC) |
+| [lxd](#heading--lxd) | LXD VM |
+| [ipmi](#heading--ipmi) | IPMI |
+| [manual](#heading--manual) | Manual power configuration |
+| [moonshot](#heading--moonshot) | HP Moonshot - iLO4 (IPMI) |
+| [mscm](#heading--mscm) | HP Moonshot - iLO Chassis Manager |
+| [msftocs](#heading--mscm) | Microsoft OCS - Chassis Manager |
+| [nova](#heading--nova) | OpenStack Nova |
+| [openbmc](#heading--openbmc) | OpenBMC Power Driver |
+| [recs_box](#heading--recs_box) | Christmann RECS-Box Power Driver |
+| [redfish](#heading--redfish) | Redfish |
+| [sm15k](#heading--sm15k) | SeaMicro 15000 |
+| [ucsm](#heading--ucsm) | Cisco UCS Manager |
+| [virsh](#heading--virsh) | libvirt KVM |
+| [vmware](#heading--vmware) | VMware |
+| [wedge](#heading--wedge) | Facebook's Wedge |
+ snap-2-9-cli deb-2-9-cli -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 Note the required and optional parameters associated with each power type.
@@ -1990,6 +2216,8 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 </table>
 
 <p><code>*</code> The &lsquo;Facebook&rsquo;s Wedge&rsquo; OpenBMC power driver is considered experimental at this time.</p>
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>

@@ -440,11 +440,11 @@
 <!-- deb-2-8-cli
  deb-2-8-cli -->
 
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
  deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
 
 <!-- snap-2-7-cli
  snap-2-7-cli -->
@@ -476,15 +476,15 @@ An availability zone is an organisational unit containing nodes, where each node
 An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
  deb-2-8-cli -->
 
-<p>An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See <a href="zone-examples.html">Zone examples</a> for more details.</p>
+<!-- deb-2-8-ui
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
 An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
  deb-2-9-cli -->
 
-<!-- deb-2-9-ui
-An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
- deb-2-9-ui -->
-
+<p>An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See <a href="zone-examples.html">Zone examples</a> for more details.</p>
 <!-- snap-2-7-cli
 An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
  snap-2-7-cli -->
@@ -618,6 +618,9 @@ Alternatively, you may want to request a machine that is not in a particular zon
 
 It is possible, though not usually useful, to combine the `zone` and `not_in_zone` parameters. If your choice for `zone` is also present in `not_in_zone`, no machine will ever match your request. Or if it's not, then the `not_in_zone` values will not affect the result of the call at all.
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>

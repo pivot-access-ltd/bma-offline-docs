@@ -438,11 +438,11 @@
 <!-- deb-2-8-cli
  deb-2-8-cli -->
 
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
  deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
 
 <!-- snap-2-7-cli
  snap-2-7-cli -->
@@ -491,14 +491,15 @@
 6. [How can I erase a disk?](disk-erasure.html)
  deb-2-8-cli -->
 
-<ol>
-<li><a href="#heading--uefi">How does UEFI booting work?</a></li>
-<li><a href="#heading--layouts">What kind of storage layouts are available?</a></li>
-<li><a href="#heading--setting-global-layouts">How do I set global storage layouts?</a></li>
-<li><a href="#heading--per-machine-layouts">How do I set per-machine storage layouts?</a></li>
-<li><a href="#heading--final-storage-modifications">What storage modifications can I make at the filesystem level?</a></li>
-<li><a href="disk-erasure.html">How can I erase a disk?</a></li>
-</ol>
+<!-- deb-2-8-ui
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](disk-erasure.html)
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
 1. [How does UEFI booting work?](#heading--uefi)
 2. [What kind of storage layouts are available?](#heading--layouts)
@@ -508,15 +509,14 @@
 6. [How can I erase a disk?](disk-erasure.html)
  deb-2-9-cli -->
 
-<!-- deb-2-9-ui
-1. [How does UEFI booting work?](#heading--uefi)
-2. [What kind of storage layouts are available?](#heading--layouts)
-3. [How do I set global storage layouts?](#heading--setting-global-layouts)
-4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-6. [How can I erase a disk?](disk-erasure.html)
- deb-2-9-ui -->
-
+<ol>
+<li><a href="#heading--uefi">How does UEFI booting work?</a></li>
+<li><a href="#heading--layouts">What kind of storage layouts are available?</a></li>
+<li><a href="#heading--setting-global-layouts">How do I set global storage layouts?</a></li>
+<li><a href="#heading--per-machine-layouts">How do I set per-machine storage layouts?</a></li>
+<li><a href="#heading--final-storage-modifications">What storage modifications can I make at the filesystem level?</a></li>
+<li><a href="disk-erasure.html">How can I erase a disk?</a></li>
+</ol>
 <!-- snap-2-7-cli
 1. [How does UEFI booting work?](#heading--uefi)
 2. [What kind of storage layouts are available?](#heading--layouts)
@@ -897,6 +897,8 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 Only an administrator can modify storage at the block device level (providing the machine has a status of &lsquo;Ready&rsquo;).</p>
 <p><a href="#heading--final-storage-modifications"><h2 id="heading--final-storage-modifications">Final storage modifications</h2></a></p>
 <p>Once MAAS provisions a machine with block devices, via a layout or administrator customisation, a regular user can modify the resulting storage configuration at the filesystem level.</p>
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>

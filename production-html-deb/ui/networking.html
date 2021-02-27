@@ -438,11 +438,11 @@
 <!-- deb-2-8-cli
  deb-2-8-cli -->
 
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
  deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
 
 <!-- snap-2-7-cli
  snap-2-7-cli -->
@@ -539,15 +539,15 @@ Fabrics, VLANs, and spaces do not require much configuration beyond names and de
 Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
  deb-2-8-cli -->
 
-<p>Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as <a href="managing-dhcp.html#heading--enabling-dhcp">enable DHCP</a> (see &lsquo;Take action&rsquo; button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.</p>
+<!-- deb-2-8-ui
+Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
 Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
  deb-2-9-cli -->
 
-<!-- deb-2-9-ui
-Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
- deb-2-9-ui -->
-
+<p>Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as <a href="managing-dhcp.html#heading--enabling-dhcp">enable DHCP</a> (see &lsquo;Take action&rsquo; button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.</p>
 <!-- snap-2-7-cli
 Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
  snap-2-7-cli -->
@@ -651,17 +651,17 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 * **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
  deb-2-8-cli -->
 
-<ul>
-<li><strong>Managed allocation</strong> refers to the ability of MAAS to completely manage a subnet. See <a href="subnet-management.html">Subnet management</a>.</li>
-</ul>
+<!-- deb-2-8-ui
+* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
 * **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
  deb-2-9-cli -->
 
-<!-- deb-2-9-ui
-* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
- deb-2-9-ui -->
-
+<ul>
+<li><strong>Managed allocation</strong> refers to the ability of MAAS to completely manage a subnet. See <a href="subnet-management.html">Subnet management</a>.</li>
+</ul>
 <!-- snap-2-7-cli
 * **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
  snap-2-7-cli -->
@@ -738,15 +738,15 @@ This subject is treated separately in [IP ranges](ip-ranges.html).
 This subject is treated separately in [IP ranges](ip-ranges.html).
  deb-2-8-cli -->
 
-<p>This subject is treated separately in <a href="ip-ranges.html">IP ranges</a>.</p>
+<!-- deb-2-8-ui
+This subject is treated separately in [IP ranges](ip-ranges.html).
+ deb-2-8-ui -->
+
 <!-- deb-2-9-cli
 This subject is treated separately in [IP ranges](ip-ranges.html).
  deb-2-9-cli -->
 
-<!-- deb-2-9-ui
-This subject is treated separately in [IP ranges](ip-ranges.html).
- deb-2-9-ui -->
-
+<p>This subject is treated separately in <a href="ip-ranges.html">IP ranges</a>.</p>
 <!-- snap-2-7-cli
 This subject is treated separately in [IP ranges](ip-ranges.html).
  snap-2-7-cli -->
@@ -786,10 +786,7 @@ It&rsquo;s essential to enforce usage of IP addresses to avoid domain name confl
 <p>When you&rsquo;re done, it should look something like this:</p>
 <p><a href="images/e392d638f0acecb9d54c81bbca4ee17cbcd05445.jpeg" target = "_blank"><img src="images/e392d638f0acecb9d54c81bbca4ee17cbcd05445.jpeg"></a></a> </p>
 <p>Then you can deploy using the bridge.</p>
-<!-- snap-2-9-ui deb-2-9-ui
-**NOTE** that you can create an "OpenVswitch" bridge if desired, and MAAS will create the netplan model for you.
- snap-2-9-ui deb-2-9-ui -->
-
+<p><strong>NOTE</strong> that you can create an &ldquo;OpenVswitch&rdquo; bridge if desired, and MAAS will create the netplan model for you.</p>
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 <a href="#heading--maas-bridge-cli"><h2 id="heading--maas-bridge-cli">Use the MAAS API to configure a bridge</h2></a>
 
@@ -854,6 +851,8 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 </code></pre>
 
 <p>Apply the new configuration with <code>netplan apply</code>.</p>
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>

@@ -462,17 +462,8 @@
 <!-- snap-2-9-cli
  snap-2-9-cli -->
 
-<p>MAAS VM hosts allow for the dynamic composition of nodes from a pool of available hardware resources (e.g. disk space, memory, cores).  You can create virtual machines (VMs) as needed within the limits of your resources, without concern for physical hardware.  MAAS currently supports VM hosts and VMs created via <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt^</a>.  As part of MAAS 2.8, we also support LXD VMs and VM hosts as a Beta feature.</p>
-<p>VM hosts are particularly useful for Juju integration, allowing for dynamic allocation of VMs with custom interface constraints. Alternatively, if you would like to use MAAS to manage a collection of VMs, the robust web UI allows you to easily create and manage VMs, logically grouped by VM host.  Six conspicuous features include:</p>
-<ol>
-<li>Juju integration</li>
-<li>At-a-glance visual tools for easy resource management</li>
-<li>Set overcommit ratios for physical resources such as CPU and RAM</li>
-<li>Assign VMs to resource pools to segregate your VMs into logical groupings</li>
-<li>Track VM host storage pool usage and assign default storage pools</li>
-<li>Create VMs on multiple networks, specified by space, subnet, VLAN, or IP address</li>
-</ol>
-<p>This section will lead you through the creation, usage, and management of VM hosts.  Note that, as LXD VM hosts are still in Beta, some screen terminology has not yet been changed to reflect &ldquo;VM host&rdquo; instead of &ldquo;KVM.&rdquo;  You will still use the &ldquo;KVM&rdquo; tab on the top of the MAAS dashboard to reach the VM host functionality, and you may see buttons which refer to &ldquo;Add KVM,&rdquo; for example, instead of &ldquo;Add VM host.&rdquo;  Rest assured that the Beta LXD VM host functionality is fully available through these channels.</p>
+<p>MAAS VM hosts allow for the dynamic composition of nodes from a pool of available hardware resources (e.g. disk space, memory, cores).  You can create virtual machines (VMs) as needed within the limits of your resources, without concern for physical hardware.  MAAS currently supports VM hosts and VMs created via <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a>.</p>
+<p>As of MAAS 2.8, we also support LXD VMs and VM hosts as a Beta feature.</p>
 <!-- deb-2-7-cli
 #### Four questions you may have:
 
@@ -492,47 +483,51 @@
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-#### Four questions you may have:
+#### Five questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-3. [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
-4. [How do I add a VM host?](adding-a-vm-host.html)
+3. [How do I make LXD available for hosting?](#heading--lxd-setup)
+4. [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
+5. [How do I add a VM host?](adding-a-vm-host.html)
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-#### Four questions you may have:
+#### Five questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-3. [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
-4. [How do I add a VM host?](adding-a-vm-host.html)
+3. [How do I make LXD available for hosting?](#heading--lxd-setup)
+4. [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
+5. [How do I add a VM host?](adding-a-vm-host.html)
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-#### Nine questions you may have:
+#### Ten questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-3. [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
-4. [How do I add a VM host?](adding-a-vm-host.html)
-5. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
-6. [How do I pin NUMA nodes to specific cores?](#heading--pin-numa-nodes)
-7. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
-8. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
-9. [How do I configure and use hugepages on my VMs?](#heading--configure-hugepages)
+3. [How do I make LXD available for hosting?](#heading--lxd-setup)
+4. [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
+5. [How do I add a VM host?](adding-a-vm-host.html)
+6. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
+7. [How do I pin NUMA nodes to specific cores?](#heading--pin-numa-nodes)
+8. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
+9. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
+10. [How do I configure and use hugepages on my VMs?](#heading--configure-hugepages)
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-#### Seven questions you may have:
+#### Eight questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-3. [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
-4. [How do I add a VM host?](adding-a-vm-host.html)
-5. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
-6. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
-7. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
+3. [How do I make LXD available for hosting?](#heading--lxd-setup)
+4. [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
+5. [How do I add a VM host?](adding-a-vm-host.html)
+6. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
+7. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
+8. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
  deb-2-9-ui -->
 
 <!-- snap-2-7-cli
@@ -554,46 +549,60 @@
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-#### Four questions you may have:
+#### Five questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-3. [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
-4. [How do I add a VM host?](adding-a-vm-host.html)
+3. [How do I make LXD available for hosting?](#heading--lxd-setup)
+4. [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
+5. [How do I add a VM host?](adding-a-vm-host.html)
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-#### Four questions you may have:
+#### Five questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-3. [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
-4. [How do I add a VM host?](adding-a-vm-host.html)
+3. [How do I make LXD available for hosting?](#heading--lxd-setup)
+4. [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
+5. [How do I add a VM host?](adding-a-vm-host.html)
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-#### Nine questions you may have:
+#### Ten questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-3. [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
-4. [How do I add a VM host?](adding-a-vm-host.html)
-5. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
-6. [How do I pin NUMA nodes to specific cores?](#heading--pin-numa-nodes)
-7. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
-8. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
-9. [How do I configure and use hugepages on my VMs?](#heading--configure-hugepages)
+3. [How do I make LXD available for hosting?](#heading--lxd-setup)
+4. [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
+5. [How do I add a VM host?](adding-a-vm-host.html)
+6. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
+7. [How do I pin NUMA nodes to specific cores?](#heading--pin-numa-nodes)
+8. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
+9. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
+10. [How do I configure and use hugepages on my VMs?](#heading--configure-hugepages)
  snap-2-9-cli -->
 
 <h4>Seven questions you may have:</h4>
 <ol>
 <li><a href="#heading--what-is-a-vm-host">What is a VM host?</a></li>
 <li><a href="#heading--choosing-vm-host-type">Which VM host should I use: LXD or KVM?</a></li>
+<li><a href="#heading--lxd-setup">How do I make LXD available for hosting?</a></li>
 <li><a href="vm-host-networking.html#heading--set-up-ssh">How do I set up SSH for use by libvirt?</a></li>
 <li><a href="adding-a-vm-host.html">How do I add a VM host?</a></li>
 <li><a href="#heading--numa-node-resources">How do I see resources for a specific NUMA node?</a></li>
 <li><a href="#heading--numa-alignment">How do I see the alignment between VM host interfaces and NUMA nodes?</a></li>
 </ol>
+<p>VM hosts are particularly useful for Juju integration, allowing for dynamic allocation of VMs with custom interface constraints. Alternatively, if you would like to use MAAS to manage a collection of VMs, the robust web UI allows you to easily create and manage VMs, logically grouped by VM host.  Six conspicuous features include:</p>
+<ol>
+<li>Juju integration</li>
+<li>At-a-glance visual tools for easy resource management</li>
+<li>Set overcommit ratios for physical resources such as CPU and RAM</li>
+<li>Assign VMs to resource pools to segregate your VMs into logical groupings</li>
+<li>Track VM host storage pool usage and assign default storage pools</li>
+<li>Create VMs on multiple networks, specified by space, subnet, VLAN, or IP address</li>
+</ol>
+<p>This section will lead you through the creation, usage, and management of VM hosts.  Note that, as LXD VM hosts are still in Beta, some screen terminology has not yet been changed to reflect &ldquo;VM host&rdquo; instead of &ldquo;KVM.&rdquo;  You will still use the &ldquo;KVM&rdquo; tab on the top of the MAAS dashboard to reach the VM host functionality, and you may see buttons which refer to &ldquo;Add KVM,&rdquo; for example, instead of &ldquo;Add VM host.&rdquo;  Rest assured that the Beta LXD VM host functionality is fully available through these channels.</p>
 <p><a href="#heading--what-is-a-vm-host"><h2 id="heading--what-is-a-vm-host">What is a VM host?</h2></a></p>
 <p>Simply put, a VM host is a machine which is designated to run virtual machines (VMs).  A VM host divides its resources (CPU cores, RAM, storage) among the number of VMs you want to create, based on choices that you make when creating each VM.  It is also possible to overcommit resources &ndash; that is, use more resources than the VM host actually has available &ndash; as long as you use the VMs carefully. Once MAAS has enlisted, commissioned, and acquired a newly-added machine, you can deploy it as a VM host.</p>
 <p><a href="#heading--choosing-vm-host-type"><h2 id="heading--choosing-vm-host-type">LXD VM host  (Beta) vs. libvirt</h2></a></p>
@@ -721,6 +730,192 @@ maas $PROFILE vm-host compose $VM_HOST_ID pinned_cores=$CORE_NUMBER hugepages_ba
 <p>To reach this view, simply select the &ldquo;KVM&rdquo; item at the menu along the top, select a specific VM host, and select the &ldquo;View by NUMA node&rdquo; switch near the top right.</p>
 <p><a href="#heading--numa-alignment"><h3 id="heading--numa-alignment">Examine the alignment between VM host interfaces and NUMA nodes</h3></a></p>
 <p>To examine the alignment between VM host interfaces and NUMA nodes &ndash; that is, the SR-IOV configuration &ndash; simply consult the &ldquo;Virtual Functions&rdquo; section of the NUMA resources diagram shown above, noting which network interfaces are mentioned.</p>
+<p><a href="#heading--lxd-setup"><h2 id="heading--lxd-setup">Make LXD available for VM hosting (Beta)</h2></a></p>
+<p>Assuming that you want to use LXD VM hosts &ndash; currently a Beta feature &ndash; you need to install the correct version of LXD. Prior to the release of Ubuntu 20.04 LXD was installed using Debian packages. The Debian packaged version of LXD is too old to use with MAAS. If this is the case, you’ll need to remove the LXD Debian packages and install the Snap version.  Note that you cannot install both Debian and snap versions, as this creates a conflict.</p>
+<p><a href="#heading--reinstalling-lxd"><h3 id="heading--reinstalling-lxd">Removing older versions of LXD</h3></a></p>
+<p>If you&rsquo;re on a version of Ubuntu older than 20.04, or you have the Debian version of LXD, start the uninstall process with the following command:</p>
+<pre><code class="bash">sudo apt-get purge -y *lxd* *lxc*
+</code></pre>
+
+<p>This command should result in output that looks something like this:</p>
+<pre><code class="bash">Reading package lists... Done
+Building dependency tree      
+Reading state information... Done
+Note, selecting 'lxde-core' for glob '*lxd*'
+Note, selecting 'python-pylxd-doc' for glob '*lxd*'
+Note, selecting 'python3-pylxd' for glob '*lxd*'
+Note, selecting 'python-nova-lxd' for glob '*lxd*'
+Note, selecting 'lxde-common' for glob '*lxd*'
+Note, selecting 'lxde-icon-theme' for glob '*lxd*'
+Note, selecting 'lxde-settings-daemon' for glob '*lxd*'
+Note, selecting 'lxde' for glob '*lxd*'
+Note, selecting 'lxdm' for glob '*lxd*'
+Note, selecting 'lxd' for glob '*lxd*'
+Note, selecting 'lxd-tools' for glob '*lxd*'
+Note, selecting 'python-pylxd' for glob '*lxd*'
+Note, selecting 'lxdm-dbg' for glob '*lxd*'
+Note, selecting 'lxde-session' for glob '*lxd*'
+Note, selecting 'nova-compute-lxd' for glob '*lxd*'
+Note, selecting 'openbox-lxde-session' for glob '*lxd*'
+Note, selecting 'python-nova.lxd' for glob '*lxd*'
+Note, selecting 'lxd-client' for glob '*lxd*'
+Note, selecting 'openbox-lxde-session' instead of 'lxde-session'
+Note, selecting 'lxctl' for glob '*lxc*'
+Note, selecting 'lxc-common' for glob '*lxc*'
+Note, selecting 'python3-lxc' for glob '*lxc*'
+Note, selecting 'libclxclient-dev' for glob '*lxc*'
+Note, selecting 'lxc-templates' for glob '*lxc*'
+Note, selecting 'lxc1' for glob '*lxc*'
+Note, selecting 'lxc-dev' for glob '*lxc*'
+Note, selecting 'lxc' for glob '*lxc*'
+Note, selecting 'liblxc1' for glob '*lxc*'
+Note, selecting 'lxc-utils' for glob '*lxc*'
+Note, selecting 'vagrant-lxc' for glob '*lxc*'
+Note, selecting 'libclxclient3' for glob '*lxc*'
+Note, selecting 'liblxc-dev' for glob '*lxc*'
+Note, selecting 'nova-compute-lxc' for glob '*lxc*'
+Note, selecting 'python-lxc' for glob '*lxc*'
+Note, selecting 'liblxc-common' for glob '*lxc*'
+Note, selecting 'golang-gopkg-lxc-go-lxc.v2-dev' for glob '*lxc*'
+Note, selecting 'lxcfs' for glob '*lxc*'
+Note, selecting 'liblxc-common' instead of 'lxc-common'
+Package 'golang-gopkg-lxc-go-lxc.v2-dev' is not installed, so not removed
+Package 'libclxclient-dev' is not installed, so not removed
+Package 'libclxclient3' is not installed, so not removed
+Package 'lxc-templates' is not installed, so not removed
+Package 'lxctl' is not installed, so not removed
+Package 'lxde' is not installed, so not removed
+Package 'lxde-common' is not installed, so not removed
+Package 'lxde-core' is not installed, so not removed
+Package 'lxde-icon-theme' is not installed, so not removed
+Package 'lxde-settings-daemon' is not installed, so not removed
+Package 'lxdm' is not installed, so not removed
+Package 'lxdm-dbg' is not installed, so not removed
+Package 'openbox-lxde-session' is not installed, so not removed
+Package 'python-lxc' is not installed, so not removed
+Package 'python3-lxc' is not installed, so not removed
+Package 'vagrant-lxc' is not installed, so not removed
+Package 'liblxc-dev' is not installed, so not removed
+Package 'lxc-dev' is not installed, so not removed
+Package 'nova-compute-lxc' is not installed, so not removed
+Package 'nova-compute-lxd' is not installed, so not removed
+Package 'python-nova-lxd' is not installed, so not removed
+Package 'python-pylxd' is not installed, so not removed
+Package 'python-pylxd-doc' is not installed, so not removed
+Package 'lxc' is not installed, so not removed
+Package 'lxc-utils' is not installed, so not removed
+Package 'lxc1' is not installed, so not removed
+Package 'lxd-tools' is not installed, so not removed
+Package 'python-nova.lxd' is not installed, so not removed
+Package 'python3-pylxd' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  dns-root-data dnsmasq-base ebtables libuv1 uidmap xdelta3
+Use 'sudo apt autoremove' to remove them.
+The following packages will be REMOVED:
+  liblxc-common* liblxc1* lxcfs* lxd* lxd-client*
+0 upgraded, 0 newly installed, 5 to remove and 21 not upgraded.
+pAfter this operation, 34.1 MB disk space will be freed.
+(Reading database ... 67032 files and directories currently installed.)
+Removing lxd (3.0.3-0ubuntu1~18.04.1) ...
+Removing lxd dnsmasq configuration
+Removing lxcfs (3.0.3-0ubuntu1~18.04.2) ...
+Removing lxd-client (3.0.3-0ubuntu1~18.04.1) ...
+Removing liblxc-common (3.0.3-0ubuntu1~18.04.1) ...
+Removing liblxc1 (3.0.3-0ubuntu1~18.04.1) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+(Reading database ... 66786 files and directories currently installed.)
+Purging configuration files for liblxc-common (3.0.3-0ubuntu1~18.04.1) ...
+Purging configuration files for lxd (3.0.3-0ubuntu1~18.04.1) ...
+Purging configuration files for lxcfs (3.0.3-0ubuntu1~18.04.2) ...
+Processing triggers for systemd (237-3ubuntu10.40) ...
+Processing triggers for ureadahead (0.100.0-21) ...
+</code></pre>
+
+<p>You should also autoremove packages no longer needed by LXD:</p>
+<pre><code class="bash">$ sudo apt-get autoremove -y
+</code></pre>
+
+<p>Output from this command should be similar to:</p>
+<pre><code class="bash">Reading package lists... Done
+Building dependency tree      
+Reading state information... Done
+The following packages will be REMOVED:
+  dns-root-data dnsmasq-base ebtables libuv1 uidmap xdelta3
+0 upgraded, 0 newly installed, 6 to remove and 21 not upgraded.
+After this operation, 1860 kB disk space will be freed.
+(Reading database ... 66769 files and directories currently installed.)
+Removing dns-root-data (2018013001) ...
+Removing dnsmasq-base (2.79-1) ...
+Removing ebtables (2.0.10.4-3.5ubuntu2.18.04.3) ...
+Removing libuv1:amd64 (1.18.0-3) ...
+Removing uidmap (1:4.5-1ubuntu2) ...
+Removing xdelta3 (3.0.11-dfsg-1ubuntu1) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+</code></pre>
+
+<p>Now install LXD from the Snap:</p>
+<pre><code class="bash">$ sudo snap install lxd
+2020-05-20T22:02:57Z INFO Waiting for restart...
+lxd 4.1 from Canonical✓ installed
+</code></pre>
+
+<p><a href="#heading--newer-lxd"><h3 id="heading--newer-lxd">Refreshing LXD on 20.04</h3></a></p>
+<p>If you are on 20.04 or above LXD should be installed by default, but it&rsquo;s a good idea to make sure it&rsquo;s up to date:</p>
+<pre><code class="bash">$ sudo snap refresh
+All snaps up to date.
+</code></pre>
+
+<p><a href="#heading--lxd-init"><h3 id="heading--lxd-init">Initialise LXD prior to use</h3></a></p>
+<p>Once LXD is installed it needs to be configured with <code>lxd init</code> before first use:</p>
+<pre><code class="bash">$ sudo lxd init
+</code></pre>
+
+<p>Your interactive output should look something like the following. Note a few points important points about these questions:</p>
+<ol>
+<li>
+<p><code>Would you like to use LXD clustering? (yes/no) [default=no]: no</code> - MAAS does not support LXD clusters in this Beta version.</p>
+</li>
+<li>
+<p><code>Name of the storage back-end to use (btrfs, dir, lvm, zfs, ceph) [default=zfs]: dir</code> - Beta testing has primarily been with dir; other options should work, but less testing has been done, so use at your own risk.</p>
+</li>
+<li>
+<p><code>Would you like to connect to a MAAS server? (yes/no) [default=no]: no</code> - When LXD is connected to MAAS containers or virtual machines created by LXD will be automatically added to MAAS as devices.  This feature should work, but has limited testing in this Beta version.</p>
+</li>
+<li>
+<p><code>Would you like to configure LXD to use an existing bridge or host interface? (yes/no) [default=no]: yes</code> - The bridge LXD creates is isolated and not managed by MAAS. If this bridge is used, you would be able to add the LXD VM host and compose virtual machines, but commissioning, deploying, and any other MAAS action which uses the network will fail &ndash; so <code>yes</code> is the correct answer here.</p>
+</li>
+<li>
+<p><code>Name of the existing bridge or host interface: br0</code> - br0 is the name of the bridge the user configured (see sections above) which is connected to a MAAS-managed network.</p>
+</li>
+<li>
+<p><code>Trust password for new clients:</code> - This is the password the user will enter when connecting with MAAS.</p>
+</li>
+</ol>
+<pre><code class="bash">Would you like to use LXD clustering? (yes/no) [default=no]: no
+Do you want to configure a new storage pool? (yes/no) [default=yes]: yes
+Name of the new storage pool [default=default]:  
+Name of the storage back-end to use (btrfs, dir, lvm, zfs, ceph) [default=zfs]: dir
+Would you like to connect to a MAAS server? (yes/no) [default=no]: no
+Would you like to create a new local network bridge? (yes/no) [default=yes]: no
+Would you like to configure LXD to use an existing bridge or host interface? (yes/no) [default=no]: yes
+Name of the existing bridge or host interface: br0
+Would you like LXD to be available over the network? (yes/no) [default=no]: yes
+pAddress to bind LXD to (not including port) [default=all]:
+Port to bind LXD to [default=8443]:
+Trust password for new clients:
+Again:
+Would you like stale cached images to be updated automatically? (yes/no) [default=yes]
+Would you like a YAML &quot;lxd init&quot; preseed to be printed? (yes/no) [default=no]:
+</code></pre>
+
+<!-- You usually need to reboot to bring up the network between localhost and LXD. -->
+
+<p>Once that&rsquo;s done, the LXD host is now ready to be added to MAAS as an LXD VM host. Upon adding the VM host, its own commissioning information will be refreshed.</p>
+<p>When composing a virtual machine with LXD, MAAS uses either the &lsquo;maas&rsquo; LXD profile, or (if that doesn&rsquo;t exist) the &lsquo;default&rsquo; LXD profile. The profile is used to determine which bridge to use. Users may also add additional LXD options to the profile which are not yet supported in MAAS.</p>
+<hr>
+<h2>****</h2>
     </div>
   </body>
 </html>
