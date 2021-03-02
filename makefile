@@ -63,7 +63,7 @@ CSS := $(HTML)/css
 #
 # scripts
 #
-SCRP := modbin
+SCRP := bin
 #
 # temporary html staging directory
 #
