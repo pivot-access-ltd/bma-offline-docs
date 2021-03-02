@@ -309,6 +309,8 @@ pre-build-discourse:
 	@echo "***       start discourse build        ***"
 	@echo "******************************************"
 	@echo "\n*** Running discourse pre-build recipe"
+	mkdir -p $(STAGING)
+	mkdir -p $(MODWD)
 	cp -p $(SRC)/maas-documentation.msd $(SRC)/maas-documenation.md
 	cp -p $(SRC)/maas-documentation.msd $(SRC)/index.md
 	cp $(SCRP)/strip-navigation.sh $(MODWD)
@@ -320,8 +322,6 @@ pre-build-html:
 	@echo "***          start HTML build          ***"
 	@echo "******************************************"
 	@echo "\n*** Running HTML pre-build recipe"
-	mkdir -p $(STAGING)
-	mkdir -p $(MODWD)
 	mkdir -p $(STAGING)/$(DEB)/$(PROD_VSN)/$(UI)
 	mkdir -p $(STAGING)/$(DEB)/$(PROD_VSN)/$(CLI)
 	mkdir -p $(STAGING)/$(SNAP)/$(PROD_VSN)/$(UI)
