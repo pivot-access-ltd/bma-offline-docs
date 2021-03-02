@@ -196,7 +196,6 @@ A number of bug fixes (see the [list in Launchpad](https://bugs.launchpad.net/ma
 snap-2-7-cli snap-2-7-ui deb-2-7 deb-2-7-ui -->
 
 
-<!-- redacted
 <h2>MAAS 2.9.2 release notes</h2>
 
 We have released MAAS 2.9.2, which contains two new features, and some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.2). The two new features are:
@@ -206,7 +205,6 @@ We have released MAAS 2.9.2, which contains two new features, and some notable [
 2. Power driver Webhook:  A webhook was added to 2.9.2, which allows MAAS to interface with another web service that's running the power commands.  This webhook is provided for interacting with objects that MAAS does not support, that is, the MAAS team supports the driver itself, but whatever is interfacing to the driver is not supported.  This webhook as three URLs, one each for power on, power off, and power query.  Optionally, this webhook also supports a power user and password or token (RFC 6717).  This gives you a way to add your own power drivers without waiting for the driver to be added to MAAS.  There is a [video tutorial](https://discourse.maas.io/t/maas-show-and-tell-proxmox-and-webhook/3754/3) available on this new feature.
 
 You can also find a [digest](#heading--bug-fixes-2-9-2) of the 2.9.2 bug fixes below.
- redacted -->
 
 <h2>MAAS 2.9.1 release notes</h2>
 
@@ -435,7 +433,6 @@ Four improvements have been made to speed up the commissioning process, mostly b
 
 <a href="#heading--bug-fixes"><h2 id="heading--bug-fixes">Bug fixes</h2></a>
 
-<!-- redacted
 <a href="#heading--bug-fixes-2-9-2"><h3 id="heading--bug-fixes-2-9-2">Bugs fixed in 2.9.2 release</h3></a>
 
 1. In the MAAS UI, ARM servers based on the [Hi1620 ARM SoC appear as an "Unknown model"](https://bugs.launchpad.net/maas/+bug/1897946).  A fix was added to [lxd-4.11]( https://discuss.linuxcontainers.org/t/lxd-4-11-has-been-released/10135), released 2021-02-05.
@@ -453,7 +450,6 @@ Four improvements have been made to speed up the commissioning process, mostly b
 7. MAAS does not allow [FQDNs to be used in place of IPs](https://bugs.launchpad.net/maas/+bug/1911825) when a BMC extracts the address ffrom the `power_address`.  This incorrect behavior was changed in 2.9.2.
 
 8. The Proxmox driver [uses a hard-coded port that cannot be customized](https://bugs.launchpad.net/maas/+bug/1914165).  This port is now customisable in 2.9.2.
- redacted -->
 
 <a href="#heading--bug-fixes-2-9-1"><h3 id="heading--bug-fixes-2-9-1">Bugs fixed in 2.9.1 release</h3></a>
 
@@ -495,7 +491,6 @@ This warning message has no effect on the installation or operation of MAAS, so 
 <!-- snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui
 <h2>MAAS 2.8 release notes</h2>
 
-<!-- embargoed till 2.8.3 release
 <h3>MAAS 2.8.3 released</h3>
 
 MAAS 2.8.3 has been released, replacing the `2.8/stable` channel in snap and the [ppa:maas/2.8](https://launchpad.net/~maas/+archive/ubuntu/2.8).  You can update your 2.8 release to 2.8.3 with the command:
@@ -552,8 +547,6 @@ Note that there is a workaround for those not ready to upgrade to 2.8.3, specifi
 * [all rack addresses in vlan are included in list of nameservers sent to deployed server (backport)](https://bugs.launchpad.net/maas/+bug/1896684): From the Bug Description: "MAAS forces all rack addresses for all subnets in a single vlan to any system deployed into any of those subnets. If the deployed systems are isolated, with no gateway configured, they may end up with broken DNS due to having nameservers configured which are not reachable."
 This was fixed in 2.9 and backported to 2.8.3.
 
- embargoed till 2.8.3 release -->
- 
 <h3>MAAS 2.8.2 released</h3>
 
 On 1 September 2020, MAAS 2.8.2 was released, replacing the `2.8/stable` channel in snap and the [ppa:maas/2.8](https://launchpad.net/~maas/+archive/ubuntu/2.8).  You can update your 2.8 release to 2.8.2 with the command:
@@ -629,8 +622,3 @@ We've also fixed number of bugs (see the [list in Launchpad](https://bugs.launch
 
 * **Leftover lock files may be present under some conditions:** Even if you purge an old MAAS Debian package, it can leave lock files in `/run/lock/maas*`.  This can cause issues if you later reinstall MAAS, and the previous MAAS user UID has been reassigned.  At that point, MAAS can't remove those files and create new ones.  If this occurs, it is easily fixed by removing those files manually before reinstalling.
 snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
-
-
-------
-****
-------

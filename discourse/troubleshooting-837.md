@@ -1,5 +1,13 @@
 This section covers some of the most commonly encountered problems and attempts to resolve them.
 
+<a href="#heading--machine-login-issues"><h2 id="heading--machine-login-issues">Can't login to machine after deployment</h2></a>
+
+When everything seems to be right about your machine deployment, but you can't login, there's a chance you might not be using the right username.  You may have added your personal SSH key to MAAS, but your corresponding login doesn't seem to work; that's because the logins for the machines are generally related to the operating system, e.g.:
+
+* For machines deploying Ubuntu, the username is `ubuntu`, and the login would be `ubuntu@$MACHINE_IP`.
+
+* For machines deploying CentOS, the username is `centos`, and the login would be `centos@$MACHINE_IP'.
+
 <a href="#heading--django-subarch-error"><h2 id="heading--django-subarch-error">Subarchitecture error thrown by django</h2></a>
 
 Occassionally, you may encounter an error similar to this one:
