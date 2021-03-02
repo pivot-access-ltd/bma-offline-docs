@@ -3,7 +3,7 @@
 ## development files:
 
 * README.md   - this file.
-* modbin      - all scripts and programs needed to generate MAAS discourse and offline docs.
+* bin         - all scripts and programs needed to generate MAAS discourse and offline docs.
 * discourse   - latest discourse versions, needed by `make discourse` command in makefile.
 * html        - latest html versions, needed by `make html` command in makefile.
 *  /css       - the css files for the offline docs, incorporating vanilla style.
