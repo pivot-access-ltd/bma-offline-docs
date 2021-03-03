@@ -6,7 +6,11 @@ When everything seems to be right about your machine deployment, but you can't l
 
 * For machines deploying Ubuntu, the username is `ubuntu`, and the login would be `ubuntu@$MACHINE_IP`.
 
-* For machines deploying CentOS, the username is `centos`, and the login would be `centos@$MACHINE_IP'.
+* For machines deploying CentOS 7, the username is `centos`, and the login would be `centos@$MACHINE_IP`.
+
+* For machines deploying CentOS 8, the username is `cloud-user`, and the login would be `cloud-user@$MACHINE_IP`.
+
+Note there is a trick for determining the correct machine login, which works on many different versions of Linux.  If you attempt to `ssh root@$MACHINE_IP`, this will fail, but often tells you which user you should be using. 
 
 <a href="#heading--django-subarch-error"><h2 id="heading--django-subarch-error">Subarchitecture error thrown by django</h2></a>
 

@@ -437,9 +437,13 @@
 <p>For machines deploying Ubuntu, the username is <code>ubuntu</code>, and the login would be <code>ubuntu@$MACHINE_IP</code>.</p>
 </li>
 <li>
-<p>For machines deploying CentOS, the username is <code>centos</code>, and the login would be `centos@$MACHINE_IP&rsquo;.</p>
+<p>For machines deploying CentOS 7, the username is <code>centos</code>, and the login would be <code>centos@$MACHINE_IP</code>.</p>
+</li>
+<li>
+<p>For machines deploying CentOS 8, the username is <code>cloud-user</code>, and the login would be <code>cloud-user@$MACHINE_IP</code>.</p>
 </li>
 </ul>
+<p>Note there is a trick for determining the correct machine login, which works on many different versions of Linux.  If you attempt to <code>ssh root@$MACHINE_IP</code>, this will fail, but often tells you which user you should be using. </p>
 <p><a href="#heading--django-subarch-error"><h2 id="heading--django-subarch-error">Subarchitecture error thrown by django</h2></a></p>
 <p>Occassionally, you may encounter an error similar to this one:</p>
 <pre><code>django.core.exceptions.ValidationError: ['Subarchitecture(&lt;value&gt;) must be generic when setting hwe_kernel.']
