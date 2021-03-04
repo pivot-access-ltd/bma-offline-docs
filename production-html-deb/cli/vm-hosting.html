@@ -502,7 +502,7 @@
 5. [How do I add a VM host?](adding-a-vm-host.html)
  deb-2-8-ui -->
 
-<h4>Ten questions you may have:</h4>
+<h4>Nine questions you may have:</h4>
 <ol>
 <li><a href="#heading--what-is-a-vm-host">What is a VM host?</a></li>
 <li><a href="#heading--choosing-vm-host-type">Which VM host should I use: LXD or KVM?</a></li>
@@ -510,7 +510,6 @@
 <li><a href="vm-host-networking.html#heading--set-up-ssh">How do I set up SSH for use by libvirt?</a></li>
 <li><a href="adding-a-vm-host.html">How do I add a VM host?</a></li>
 <li><a href="#heading--numa-node-resources">How do I see resources for a specific NUMA node?</a></li>
-<li><a href="#heading--pin-numa-nodes">How do I pin NUMA nodes to specific cores?</a></li>
 <li><a href="#heading--numa-vm-host-resources">How do I see resources for NUMA-node-bearing VM hosts?</a></li>
 <li><a href="#heading--numa-alignment">How do I see the alignment between VM host interfaces and NUMA nodes?</a></li>
 <li><a href="#heading--configure-hugepages">How do I configure and use hugepages on my VMs?</a></li>
@@ -567,7 +566,7 @@
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-#### Ten questions you may have:
+#### Nine questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
@@ -575,10 +574,9 @@
 4. [How do I set up SSH for use by libvirt?](vm-host-networking.html#heading--set-up-ssh)
 5. [How do I add a VM host?](adding-a-vm-host.html)
 6. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
-7. [How do I pin NUMA nodes to specific cores?](#heading--pin-numa-nodes)
-8. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
-9. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
-10. [How do I configure and use hugepages on my VMs?](#heading--configure-hugepages)
+7. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
+8. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
+9. [How do I configure and use hugepages on my VMs?](#heading--configure-hugepages)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
@@ -623,7 +621,6 @@
 <p>VM host management has been redesigned to support NUMA/SR-IOV configurations and hugepages from the API/CLI.  Users can:</p>
 <ol>
 <li>See resources per NUMA node.</li>
-<li>Pin nodes to specific cores.</li>
 <li>See resources for VM hosts bearing NUMA nodes.</li>
 <li>See the alignment between VM host interfaces and NUMA nodes.</li>
 <li>Configure and use hugepages.</li>
@@ -638,7 +635,7 @@ VM host management has been redesigned to support NUMA/SR-IOV configurations and
 2. See resources for VM hosts bearing NUMA nodes.
 3. See the alignment between VM host interfaces and NUMA nodes.
 
-Via the CLI, users can also pin nodes to specific cores, see more details about NUMA-bearing VM host resources, and configure hugepages; select the relevant "CLI" link in the top menu to access this information.
+Via the CLI, users can see more details about NUMA-bearing VM host resources and configure hugepages. Select the relevant "CLI" link in the top menu to access this information.
 
 This section explains how to access this new functionality.
  snap-2-9-ui deb-2-9-ui -->
@@ -667,11 +664,6 @@ This section explains how to access this new functionality.
       ]
      }
 ]
-</code></pre>
-
-<p><a href="#heading--pin-numa-nodes"><h3 id="heading--pin-numa-nodes">Pin NUMA nodes to specific cores</h3></a></p>
-<p>With the MAAS CLI, you can pin NUMA nodes to specific cores when composing a virtual machine.  For example, you can enter a command like this for a VM host you&rsquo;ve already created:</p>
-<pre><code>maas $PROFILE vm-host compose $VM_HOST_ID pinned_cores=1 pinned_cores=2
 </code></pre>
 
 <p><a href="#heading--numa-vm-host-resources"><h3 id="heading--numa-vm-host-resources">Examine resources for NUMA-node-bearing VM hosts</h3></a></p>

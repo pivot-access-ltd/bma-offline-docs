@@ -123,7 +123,7 @@ As of MAAS 2.8, we also support LXD VMs and VM hosts as a Beta feature.
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-#### Ten questions you may have:
+#### Nine questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
@@ -131,10 +131,9 @@ As of MAAS 2.8, we also support LXD VMs and VM hosts as a Beta feature.
 4. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3220#heading--set-up-ssh)
 5. [How do I add a VM host?](/t/adding-a-vm-host/2296)
 6. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
-7. [How do I pin NUMA nodes to specific cores?](#heading--pin-numa-nodes)
-8. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
-9. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
-10. [How do I configure and use hugepages on my VMs?](#heading--configure-hugepages)
+7. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
+8. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
+9. [How do I configure and use hugepages on my VMs?](#heading--configure-hugepages)
  deb-2-9-cli -->
 
 #### Eight questions you may have:
@@ -187,7 +186,7 @@ As of MAAS 2.8, we also support LXD VMs and VM hosts as a Beta feature.
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-#### Ten questions you may have:
+#### Nine questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
@@ -195,10 +194,9 @@ As of MAAS 2.8, we also support LXD VMs and VM hosts as a Beta feature.
 4. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3220#heading--set-up-ssh)
 5. [How do I add a VM host?](/t/adding-a-vm-host/2296)
 6. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
-7. [How do I pin NUMA nodes to specific cores?](#heading--pin-numa-nodes)
-8. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
-9. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
-10. [How do I configure and use hugepages on my VMs?](#heading--configure-hugepages)
+7. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
+8. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
+9. [How do I configure and use hugepages on my VMs?](#heading--configure-hugepages)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
@@ -254,10 +252,9 @@ MAAS also shows hugepages information (if they are in use) and prevents overcomm
 VM host management has been redesigned to support NUMA/SR-IOV configurations and hugepages from the API/CLI.  Users can:
 
 1. See resources per NUMA node.
-2. Pin nodes to specific cores.
-3. See resources for VM hosts bearing NUMA nodes.
-4. See the alignment between VM host interfaces and NUMA nodes.
-5. Configure and use hugepages.
+2. See resources for VM hosts bearing NUMA nodes.
+3. See the alignment between VM host interfaces and NUMA nodes.
+4. Configure and use hugepages.
 
 This section explains how to access this new functionality.
  snap-2-9-cli deb-2-9-cli -->
@@ -270,7 +267,7 @@ VM host management has been redesigned to support NUMA/SR-IOV configurations and
 2. See resources for VM hosts bearing NUMA nodes.
 3. See the alignment between VM host interfaces and NUMA nodes.
 
-Via the CLI, users can also pin nodes to specific cores, see more details about NUMA-bearing VM host resources, and configure hugepages; select the relevant "CLI" link in the top menu to access this information.
+Via the CLI, users can see more details about NUMA-bearing VM host resources and configure hugepages. Select the relevant "CLI" link in the top menu to access this information.
 
 This section explains how to access this new functionality.
 
@@ -304,14 +301,6 @@ In the resulting JSON output, look for the array entry ```numanode_set```, which
 	  ]
      }
 ]
-```
-
-<a href="#heading--pin-numa-nodes"><h3 id="heading--pin-numa-nodes">Pin NUMA nodes to specific cores</h3></a>
-
-With the MAAS CLI, you can pin NUMA nodes to specific cores when composing a virtual machine.  For example, you can enter a command like this for a VM host you've already created:
-
-```
-maas $PROFILE vm-host compose $VM_HOST_ID pinned_cores=1 pinned_cores=2
 ```
 
 <a href="#heading--numa-vm-host-resources"><h3 id="heading--numa-vm-host-resources">Examine resources for NUMA-node-bearing VM hosts</h3></a>
