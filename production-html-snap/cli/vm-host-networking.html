@@ -828,12 +828,59 @@ Would you like stale cached images to be updated automatically? (yes/no) [defaul
 Would you like a YAML &quot;lxd init&quot; preseed to be printed? (yes/no) [default=no]:
 </code></pre>
 
-<!-- You usually need to reboot to bring up the network between localhost and LXD. -->
+<p>After initialising LXD, you will also want to make sure that LXD is not trying to provide DHCP for the new local network bridge.  You can check this with the following command:</p>
+<pre><code>lxc network show lxdbr0
+</code></pre>
+
+<p>If you didn&rsquo;t accept the default bridge name (lxdbr0), substitute your name for that new bridge in the command above. This will produce output something like this:</p>
+<pre><code>config:
+  dns.mode: managed
+  ipv4.address: 10.146.214.1/24
+  ipv4.dhcp: &quot;true&quot;
+  ipv4.nat: &quot;true&quot;
+  ipv6.address: fd42:c560:ee59:bb2::1/64
+  ipv6.dhcp: &quot;true&quot;
+  ipv6.nat: &quot;true&quot;
+description: &quot;&quot;
+name: lxdbr0
+type: bridge
+used_by:
+- /1.0/profiles/default
+managed: true
+status: Created
+locations:
+- none
+</code></pre>
+
+<p>There is a <a href="https://github.com/lxc/lxd/blob/master/doc/networks.md">quick tutorial</a> on the possible settings here.  For simplicity, to turn off LXD-provided DHCP, you need to change three settings, as follows:</p>
+<pre><code>lxc network set lxdbr0 dns.mode=none
+lxc network set lxdbr0 ipv4.dhcp=false
+lxc network set lxdbr0 ipv6.dhcp=false
+</code></pre>
+
+<p>You can check your work by repeating the <code>show</code> command:</p>
+<pre><code>$ lxc network show lxdbr0
+config:
+  dns.mode: none
+  ipv4.address: 10.146.214.1/24
+  ipv4.dhcp: &quot;false&quot;
+  ipv4.nat: &quot;true&quot;
+  ipv6.address: fd42:c560:ee59:bb2::1/64
+  ipv6.dhcp: &quot;false&quot;
+  ipv6.nat: &quot;true&quot;
+description: &quot;&quot;
+name: lxdbr0
+type: bridge
+used_by:
+- /1.0/profiles/default
+managed: true
+status: Created
+locations:
+- none
+</code></pre>
 
 <p>Once that&rsquo;s done, the LXD host is now ready to be added to MAAS as an LXD VM host. Upon adding the VM host, its own commissioning information will be refreshed.</p>
 <p>When composing a virtual machine with LXD, MAAS uses either the &lsquo;maas&rsquo; LXD profile, or (if that doesn&rsquo;t exist) the &lsquo;default&rsquo; LXD profile. The profile is used to determine which bridge to use. Users may also add additional LXD options to the profile which are not yet supported in MAAS.</p>
-<hr>
-<h2>****</h2>
     </div>
   </body>
 </html>

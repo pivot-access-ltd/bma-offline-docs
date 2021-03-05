@@ -488,7 +488,64 @@ Would you like stale cached images to be updated automatically? (yes/no) [defaul
 Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]:
 ```
 
-<!-- You usually need to reboot to bring up the network between localhost and LXD. -->
+After initialising LXD, you will also want to make sure that LXD is not trying to provide DHCP for the new local network bridge.  You can check this with the following command:
+
+```
+lxc network show lxdbr0
+```
+
+If you didn't accept the default bridge name (lxdbr0), substitute your name for that new bridge in the command above. This will produce output something like this:
+
+```
+config:
+  dns.mode: managed
+  ipv4.address: 10.146.214.1/24
+  ipv4.dhcp: "true"
+  ipv4.nat: "true"
+  ipv6.address: fd42:c560:ee59:bb2::1/64
+  ipv6.dhcp: "true"
+  ipv6.nat: "true"
+description: ""
+name: lxdbr0
+type: bridge
+used_by:
+- /1.0/profiles/default
+managed: true
+status: Created
+locations:
+- none
+```
+
+There is a [quick tutorial](https://github.com/lxc/lxd/blob/master/doc/networks.md) on the possible settings here.  For simplicity, to turn off LXD-provided DHCP, you need to change three settings, as follows:
+
+```
+lxc network set lxdbr0 dns.mode=none
+lxc network set lxdbr0 ipv4.dhcp=false
+lxc network set lxdbr0 ipv6.dhcp=false
+```
+
+You can check your work by repeating the `show` command:
+
+```
+$ lxc network show lxdbr0
+config:
+  dns.mode: none
+  ipv4.address: 10.146.214.1/24
+  ipv4.dhcp: "false"
+  ipv4.nat: "true"
+  ipv6.address: fd42:c560:ee59:bb2::1/64
+  ipv6.dhcp: "false"
+  ipv6.nat: "true"
+description: ""
+name: lxdbr0
+type: bridge
+used_by:
+- /1.0/profiles/default
+managed: true
+status: Created
+locations:
+- none
+```
 
 Once that's done, the LXD host is now ready to be added to MAAS as an LXD VM host. Upon adding the VM host, its own commissioning information will be refreshed.
 
@@ -497,6 +554,3 @@ When composing a virtual machine with LXD, MAAS uses either the 'maas' LXD profi
  snap-2-8-ui snap-2-8-cli deb-2-8-ui deb-2-8-cli snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
 
 
-------
-****
-------
