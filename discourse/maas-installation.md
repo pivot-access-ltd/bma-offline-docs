@@ -956,3 +956,7 @@ deb-2-9-cli -->
 <!-- deb-2-9-ui
 Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2537).
 deb-2-9-ui -->
+
+<h2>Installation instructions pending BETA release</h2>
+
+Installation instructions for MAAS 3.0 will be available when the MAAS 3.0 Beta 1 is released in the near future.
