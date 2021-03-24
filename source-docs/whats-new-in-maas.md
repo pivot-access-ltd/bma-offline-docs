@@ -12,7 +12,7 @@ On 24 August 2020, MAAS 2.7.3 was released, replacing the `2.7/stable` channel i
 
     snap refresh --channel=2.7/stable
 
-or by using the aforementioned PPA.  The focus for this release has been [bugfixing](https://launchpad.net/maas/+milestone/2.7.3rc1) -- there were no changes to MAAS since RC1.
+or by using the aforementioned PPA.  The focus for this release has been [bug-fixing](https://launchpad.net/maas/+milestone/2.7.3rc1) -- there were no changes to MAAS since RC1.
 
 Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
 
@@ -22,7 +22,7 @@ On 30 July 2020, MAAS 2.7.2 was released, replacing the `2.7/stable` channel in 
 
     snap refresh --channel=2.7/stable
 
-or by using the aforementioned PPA.  The focus for this release has been [bugfixing](https://launchpad.net/maas/+milestone/2.7.2rc1) -- there were no changes to MAAS since RC1.
+or by using the aforementioned PPA.  The focus for this release has been [bug-fixing](https://launchpad.net/maas/+milestone/2.7.2rc1) -- there were no changes to MAAS since RC1.
 
 Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
 
@@ -241,7 +241,7 @@ Four new parameters have been added for IPMI BMC configuration.  These parameter
 
 1. maas_auto_ipmi_user - The username for the MAAS created IPMI user. Default comes from the global configuration setting.
 2. maas_auto_ipmi_user_password - The password for the MAAS created IPMI user, by default a random password is generated.
-3. maas_auto_ipmi_k_g_bmc_key - he IPMI K_g preshared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting. If an IPMI K_g key is set but the key is rejected by the BMC MAAS will automatically retry without the K_g key. This works around an edge case where some BMCs will allow you to set an K_g key but don’t allow it to be used.
+3. maas_auto_ipmi_k_g_bmc_key - he IPMI K_g pre-shared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting. If an IPMI K_g key is set but the key is rejected by the BMC MAAS will automatically retry without the K_g key. This works around an edge case where some BMCs will allow you to set an K_g key but don’t allow it to be used.
 4. maas_auto_ipmi_user_privilege_level - The IPMI user privilege level to use when adding the MAAS IPMI user. Possible options are USER, OPERATOR, or ADMIN. Default comes from the global configuration setting.
 
 Note that MAAS will not capture the BMC MAC address when detecting IPMI BMCs.
@@ -320,7 +320,7 @@ Seven major improvements were made to commissioning script flow and capabilities
 
 <h2 id="heading--commissioning-reorder">Commissioning script reordering</h2>
 
-Commissioning scripts have been reordered and some are now set to run in parallel. You can now easily set a script to run before the builtin MAAS commissioning scripts. There are nine signficant changes:
+Commissioning scripts have been reordered and some are now set to run in parallel. You can now easily set a script to run before the builtin MAAS commissioning scripts. There are nine significant changes:
 
 <ol>
 <li>00-maas-03-install-lldpd -> 20-maas-01-install-lldpd</li>
@@ -369,11 +369,11 @@ Four improvements have been made to speed up the commissioning process, mostly b
 
 5. The MAAS [Backup doc article](https://maas.io/docs/snap/2.9/ui/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
 
-6. Deselecting all architectures in the Ubuntu extra archtectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue.
+6. Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue.
 
-7. MAAS does not allow [FQDNs to be used in place of IPs](https://bugs.launchpad.net/maas/+bug/1911825) when a BMC extracts the address ffrom the `power_address`.  This incorrect behavior was changed in 2.9.2.
+7. MAAS does not allow [FQDNs to be used in place of IPs](https://bugs.launchpad.net/maas/+bug/1911825) when a BMC extracts the address from the `power_address`.  This incorrect behaviour was changed in 2.9.2.
 
-8. The Proxmox driver [uses a hard-coded port that cannot be customized](https://bugs.launchpad.net/maas/+bug/1914165).  This port is now customisable in 2.9.2.
+8. The Proxmox driver [uses a hard-coded port that cannot be customised](https://bugs.launchpad.net/maas/+bug/1914165).  This port is now customisable in 2.9.2.
 
 <a href="#heading--bug-fixes-2-9-1"><h3 id="heading--bug-fixes-2-9-1">Bugs fixed in 2.9.1 release</h3></a>
 
@@ -432,7 +432,7 @@ Here's a summary of the bugs that were fixed in 2.8.3:
 
 * [an unlogged chown permission error leaves a temporary file behind](https://bugs.launchpad.net/maas/+bug/1883748): Fixed in MAAS 2.8.3.
 
-* [smartctl-validate fails to detect that NVME device is SMART-capable](https://bugs.launchpad.net/maas/+bug/1904329): MAAS 2.8.2 fails to realize that WD Black gaming NVMEs are smart devices, hence MAAS doesn't display attributes.  This is fixed in 2.8.3.
+* [smartctl-validate fails to detect that NVME device is SMART-capable](https://bugs.launchpad.net/maas/+bug/1904329): MAAS 2.8.2 fails to realise that WD Black gaming NVMEs are smart devices, hence MAAS doesn't display attributes.  This is fixed in 2.8.3.
 
 * [cannot use release API on stuck observed IPs](https://bugs.launchpad.net/maas/+bug/1898122): The CLI/API provide commands for forcing the release of an IP, but MAAS 2.8.2 was not allowing these commands to run successfully.  This was fixed.  There is also a workaround for those who cannot upgrade to 2.8.3 right away:
 
@@ -451,26 +451,26 @@ When trying to PXE install Ubuntu 20.04, the installation fails with "no such fi
 
 * [Failed to allocate the required AUTO IP addresses after 2 retries](https://bugs.launchpad.net/maas/+bug/1902425): MAAS incorrectly perceives that there are no available IP addresses, when in fact, there are plenty still available.  This is fixed in 2.8.3.
 
-* [maas 2.9 rc1 machines create error (backport)](https://bugs.launchpad.net/maas/+bug/1904398): Adding `commission=true` to a CLI machine creation command produces an error.  This was fixed in 2.9 and backported to 2.8.3.
+* [maas 2.9 rc1 machines create error (backport)](https://bugs.launchpad.net/maas/+bug/1904398): Adding `commission=true` to a CLI machine creation command produces an error.  This was fixed in 2.9 and back-ported to 2.8.3.
 
 * [Lists of LXD nodes are represented in an incompatible data structure](https://bugs.launchpad.net/maas/+bug/1910473): Fixed in 2.8.3.
 
-* Deselecting all architectures in the Ubuntu extra archtectures repo [blocks all deployments (backport)](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue. This was fixed in 2.9 and backported to 2.8.3.
+* Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments (backport)](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue. This was fixed in 2.9 and back-ported to 2.8.3.
 
-* [Can't commission without a test (backport)](https://bugs.launchpad.net/maas/+bug/1884278): MAAS 2.8 does not allow machines to be commissioned with zero tests selected; this occurs only for multiple machines, and only when commissioning from the UI.  This was fixed in 2.9 and backported to 2.8.3.
+* [Can't commission without a test (backport)](https://bugs.launchpad.net/maas/+bug/1884278): MAAS 2.8 does not allow machines to be commissioned with zero tests selected; this occurs only for multiple machines, and only when commissioning from the UI.  This was fixed in 2.9 and back-ported to 2.8.3.
 
 Note that there is a workaround for those not ready to upgrade to 2.8.3, specifically, using the CLI to commission machines without testing them:
 
     maas $PROFILE machine commission $SYSTEM_ID testing_scripts=none
 
-* [UI should not autoselect noauto commissioning scripts (backport)](https://bugs.launchpad.net/maas/+bug/1884827): Previously, users gained the ability to upload commissioning scripts which do not automatically run, but the UI ignores the "noauto" tag and runs the script anyway.  This was fixed in 2.9 and backported to 2.8.3.
+* [UI should not autoselect noauto commissioning scripts (backport)](https://bugs.launchpad.net/maas/+bug/1884827): Previously, users gained the ability to upload commissioning scripts which do not automatically run, but the UI ignores the "noauto" tag and runs the script anyway.  This was fixed in 2.9 and back-ported to 2.8.3.
 
-* [ipmi-config command not found in snap (backport)](https://bugs.launchpad.net/maas/+bug/1891331): The `ipmi-config` cannot be found in a MAAS snap, due to path confusion in the wrapper script. This was fixed in 2.9 and backported to 2.8.3.
+* [ipmi-config command not found in snap (backport)](https://bugs.launchpad.net/maas/+bug/1891331): The `ipmi-config` cannot be found in a MAAS snap, due to path confusion in the wrapper script. This was fixed in 2.9 and back-ported to 2.8.3.
 
-* [Admin users cannot change other user's passwords via UI (backport)](https://bugs.launchpad.net/maas/+bug/1894727): An administrator is unable to change users passwords via the UI.  This was fixed in 2.9 and backported to 2.8.3.
+* [Admin users cannot change other user's passwords via UI (backport)](https://bugs.launchpad.net/maas/+bug/1894727): An administrator is unable to change users passwords via the UI.  This was fixed in 2.9 and back-ported to 2.8.3.
 
-* [all rack addresses in vlan are included in list of nameservers sent to deployed server (backport)](https://bugs.launchpad.net/maas/+bug/1896684): From the Bug Description: "MAAS forces all rack addresses for all subnets in a single vlan to any system deployed into any of those subnets. If the deployed systems are isolated, with no gateway configured, they may end up with broken DNS due to having nameservers configured which are not reachable."
-This was fixed in 2.9 and backported to 2.8.3.
+* [all rack addresses in VLAN are included in list of nameservers sent to deployed server (backport)](https://bugs.launchpad.net/maas/+bug/1896684): From the Bug Description: "MAAS forces all rack addresses for all subnets in a single VLAN to any system deployed into any of those subnets. If the deployed systems are isolated, with no gateway configured, they may end up with broken DNS due to having nameservers configured which are not reachable."
+This was fixed in 2.9 and back-ported to 2.8.3.
 
 <h3>MAAS 2.8.2 released</h3>
 
@@ -551,13 +551,17 @@ snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
 <!-- snap-3-0-cli snap-3-0-ui deb-3-0-cli deb-3-0-ui
 <h3>MAAS 3.0 BETA release notes</h3>
 
-Following on from MAAS 2.9, we are happy to announce that MAAS 3.0 Beta 1 is now available. This pending release should provide some new features, along with critical bug fixes.
+MAAS 3.0 Beta 1 will be released in the near future. This pending release should provide some new features, along with critical bug fixes.
 
 NOTE that this is currently a BETA release, so there will be bugs, instabilities, and missing or incomplete features.  Please remember to [file bugs](https://bugs.launchpad.net/maas/+filebug) as you find them, and please feel free to interact with the developers on [discourse](https://discourse.maas.io/).
 
+<h2>Significant changes</h2>
+
+With the advent of MAAS 3.0, we are removing support for RSD pods.  Registered pods and their machines will be removed by MAAS upon upgrading to MAAS 3.0.
+
 <h4>New features in MAAS 3.0 Beta 1</h4>
 
-1. [PCI and USB devices are now modeled in MAAS](#heading--pci-usb-devices)
+1. [PCI and USB devices are now modelled in MAAS](#heading--pci-usb-devices)
 2. [IBM Z DPM partition support](#heading--ibm-z-dpm)
 3. [Proxmox support](#heading--proxmox-support)
 4. [LXD projects support](#heading--lxd-projects-support)
@@ -565,11 +569,11 @@ NOTE that this is currently a BETA release, so there will be bugs, instabilities
 6. [Workload annotations](#heading--workload-annotations)
 7. [Fixed status bar](#heading--fixed-status-bar)
 
-<h2 id="heading--pci-usb-devices">PCI and USB devices are now modeled in MAAS</h2>
+<h2 id="heading--pci-usb-devices">PCI and USB devices are now modelled in MAAS</h2>
 
-MAAS will now model all PCI and USB devices detected during commissioning:
+MAAS 3.0 will model all PCI and USB devices detected during commissioning:
 
-* Existing machines will have to be recommissioned to have PCI and USB devices modeled
+* Existing machines will have to be recommissioned to have PCI and USB devices modelled
 
 * PCI and USB devices are shown in the UI and on the API using the node-devices endpoint
 
@@ -579,11 +583,11 @@ On the API using the allocate operation on the machines endpoint a machine may a
 
 <h2 id="heading--ibm-z-dpm">IBM Z DPM partition support</h2>
 
-IBM Z14 and above mainframe partitions are now supported.  Note that partitions must use HyperV sockets and properly-defined storage groups.  IBM Z DPM Partitions can be added as a chassis, which allows you to add all partitions in an HMC at once.
+IBM Z14 and above mainframe partitions will be supported in MAAS 3.0.  Note that partitions must use HyperV sockets and properly-defined storage groups.  IBM Z DPM Partitions can be added as a chassis, which allows you to add all partitions in an HMC at once.
 
 <h2 id="heading--proxmox-support">Proxmox support</h2>
 
-MAAS now supports Proxmox as a power driver:
+MAAS 3.0 will support Proxmox as a power driver:
 
 * Only Proxmox VMs are supported
 
@@ -593,15 +597,15 @@ MAAS now supports Proxmox as a power driver:
 
 * Proxmox VMs can be added as a chassis; this allows you to add all VMs in Proxmox at once.
 
-Note that proxmox support has also been backported to MAAS 2.9
+Note that proxmox support has also been back-ported to MAAS 2.9
 
 <h2 id="heading--lxd-projects-support">LXD projects support</h2>
 
-MAAS 3.0 now supports the use of LXD projects:
+MAAS 3.0 will support the use of LXD projects:
 
 * LXD VM hosts registered in MAAS are now tied to a specific LXD project which MAAS uses to manage VMs
 
-* MAAS doesn’t create or managemachines for VMs in other projects
+* MAAS doesn’t create or manage machines for VMs in other projects
 
 * MAAS creates the specified project when the VM host is registered, if it doesn't exist
 
@@ -611,7 +615,7 @@ MAAS 3.0 now supports the use of LXD projects:
 
 <h2 id="heading--pci-usb-device-tabs">PCI and USB device tabs in UI machine details</h2>
 
-Tables for detected PCI and USB devices have been added to the machine details page:
+Tables for detected PCI and USB devices will be added to the machine details page for MAAS 3.0:
 
 <a  href="https://discourse.maas.io/uploads/default/original/2X/8/87f42bafe321d45af94d73216f933a9067f01df2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/87f42bafe321d45af94d73216f933a9067f01df2.png"></a>
 
@@ -623,7 +627,7 @@ The user is prompted to commission the machine if no devices are detected.
 
 <h2 id="heading--workload-annotations">Workload annotations</h2>
 
-Workload annotations have been added to the machine summary page.  These allow you to apply `owner_data` to a machine and make it visible while the machine is in allocated or deployed state:
+Workload annotations will be added to the machine summary page in MAAS 3.0.  These allow you to apply `owner_data` to a machine and make it visible while the machine is in allocated or deployed state:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/5/54682ae5f9c7bb449a1ad222679be0156f27d109.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/54682ae5f9c7bb449a1ad222679be0156f27d109.png"></a>
 
@@ -631,7 +635,7 @@ This data is cleared once the machine state changes to something other than "all
 
 <h2 id="heading--fixed-status-bar">Fixed status bar</h2>
 
-A fixed status bar has been added to the bottom of the screen, which will always display the MAAS name and version on the left.  The right side of the status bar is intended to show contextual data, depending on the UI panel currently displayed. For now, the only data shown is a “last commissioned” timestamp when the user is on a machine details page:
+In MAAS 3.0, a fixed status bar will be added to the bottom of the screen, which will always display the MAAS name and version on the left.  The right side of the status bar is intended to show contextual data, depending on the UI panel currently displayed. For now, the only data shown is a “last commissioned” timestamp when the user is on a machine details page:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png"></a>
 
