@@ -119,6 +119,32 @@ Some examples of factors that influence hardware specifications include:
 4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
  deb-2-9-ui -->
 
+<!-- deb-3-0-cli
+[note]
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/4071) for more details.
+[/note]
+
+Some examples of factors that influence hardware specifications include:
+
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/3947).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+ deb-3-0-cli -->
+
+<!-- deb-3-0-ui
+[note]
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/4070) for more details.
+[/note]
+
+Some examples of factors that influence hardware specifications include:
+
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/3948).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+ deb-3-0-ui -->
+
 <!-- snap-2-7-cli
 [note]
 The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3006) for more details.
@@ -196,6 +222,32 @@ Some examples of factors that influence hardware specifications include:
 3. whether or not you use [high availability/load balancing](/t/high-availability/2687).
 4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
  snap-2-9-ui -->
+
+<!-- snap-3-0-cli
+[note]
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/4069) for more details.
+[/note]
+
+Some examples of factors that influence hardware specifications include:
+
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/3945).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+ snap-3-0-cli -->
+
+<!-- snap-3-0-ui
+[note]
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/4070) for more details.
+[/note]
+
+Some examples of factors that influence hardware specifications include:
+
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](/t/high-availability/3946).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+ snap-3-0-ui -->
 
 Also, this discussion does not take into account a possible local image mirror, which would be a large consumer of disk space.
 
