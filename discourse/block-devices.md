@@ -1,84 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
-|Packages|CLI ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
-|Packages|[CLI](/t/block-devices/2352) ~ UI|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
-|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|CLI ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
-|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ UI|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
-|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|CLI ~ [UI](/t/block-devices/2357)|
- deb-2-9-cli -->
-
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
-|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ UI|
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
-|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/block-devices/2346) ~ UI|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
-|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|CLI ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
-|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ UI|[CLI](/t/block-devices/2350) ~ [UI](/t/block-devices/2351)|
-|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|CLI ~ [UI](/t/block-devices/2351)|
-|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/block-devices/2346) ~ [UI](/t/block-devices/2347)|[CLI](/t/block-devices/2348) ~ [UI](/t/block-devices/2349)|[CLI](/t/block-devices/2350) ~ UI|
-|Packages|[CLI](/t/block-devices/2352) ~ [UI](/t/block-devices/2353)|[CLI](/t/block-devices/2354) ~ [UI](/t/block-devices/2355)|[CLI](/t/block-devices/2356) ~ [UI](/t/block-devices/2357)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/block-devices-snap-2-7-cli/2346) ~ [UI](/t/block-devices-snap-2-7-ui/2347)|[CLI](/t/block-devices-snap-2-8-cli/2348) ~ [UI](/t/block-devices-snap-2-8-ui/2349)|[CLI](/t/block-devices-snap-2-9-cli/2350) ~ [UI](/t/block-devices-snap-2-9-ui/2351)|[CLI](/t/block-devices-snap-3-0-cli/3841) ~ [UI](/t/block-devices-snap-3-0-ui/3842)|
+Packages|[CLI](/t/block-devices-deb-2-7-cli/2352) ~ [UI](/t/block-devices-deb-2-7-ui/2353)|[CLI](/t/block-devices-deb-2-8-cli/2354) ~ [UI](/t/block-devices-deb-2-8-ui/2355)|[CLI](/t/block-devices-deb-2-9-cli/2356) ~ [UI](/t/block-devices-deb-2-9-ui/2357)|[CLI](/t/block-devices-deb-3-0-cli/3843) ~ [UI](/t/block-devices-deb-3-0-ui/3844)|
 
 Once the initial storage layout has been configured on a machine, you can perform many operations to view and adjust the entire storage layout for the machine. In MAAS there are two different types of block devices.
 
@@ -481,7 +404,3 @@ maas admin block-device set-boot-disk <node-id> 10
 [note]
 Only an administrator can set which block device should be used as the boot disk and only a physical block device can be set as as the boot disk. This operation should be done before a machine is acquired or the storage layout will be applied to the previous boot disk.
 [/note]
-
-------
-****
-------

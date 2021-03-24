@@ -1,3 +1,7 @@
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/writing-guide-snap-2-7-cli/3258) ~ [UI](/t/writing-guide-snap-2-7-ui/3259)|[CLI](/t/writing-guide-snap-2-8-cli/3260) ~ [UI](/t/writing-guide-snap-2-8-ui/3261)|[CLI](/t/writing-guide-snap-2-9-cli/3262) ~ [UI](/t/writing-guide-snap-2-9-ui/3263)|[CLI](/t/writing-guide-snap-3-0-cli/4185) ~ [UI](/t/writing-guide-snap-3-0-ui/4186)|
+Packages|[CLI](/t/writing-guide-deb-2-7-cli/3264) ~ [UI](/t/writing-guide-deb-2-7-ui/3265)|[CLI](/t/writing-guide-deb-2-8-cli/3266) ~ [UI](/t/writing-guide-deb-2-8-ui/3267)|[CLI](/t/writing-guide-deb-2-9-cli/3268) ~ [UI](/t/writing-guide-deb-2-9-ui/3269)|[CLI](/t/writing-guide-deb-3-0-cli/4187) ~ [UI](/t/writing-guide-deb-3-0-ui/4188)|
 This page contains detailed information on how to become a successful MAAS documentation writer. Welcome to the club.
 
 <h2 id="heading--edit-rad">Update: Editing RAD/offline documentation</h2>
@@ -8,13 +12,15 @@ First, some assurance: RAD is generated from a separate set of masters, publishe
 
 That said, there is a bit of art to editing RAD pages and making sure your edits are suitable for offline doc conversion, namely, throughout RAD documents, you'll see HTML comments like this one:
 
-    <!-- snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui
+    <!-- snap-2-11-cli snap-2-11-ui deb-2-11-cli deb-2-11-ui
 
-Sometimes, they have multiple "tags" (e.g., `snap-2-9-cli` is a tag), and sometimes they only have one, like this:
+Sometimes, they have multiple "tags" (e.g., `snap-2-6-cli` is a tag), and sometimes they only have one, like this:
 
-    <!-- snap-2-9-cli
+    <!-- snap-2-11-cli
 
-The tags should generally be self-explantory.  For example, the tag above refers to the snap delivery of MAAS version 2.9, specifically for someone using the CLI interface.
+The tags should generally be self-explantory.  For example, the tag above refers to the snap delivery of MAAS version 2.11, specifically for someone using the CLI interface.
+
+NOTE that is there no 2.11 version of MAAS: we've used an example that won't be accidentally processed by the RAD tools, but any version from 2.7 - 3.0 and beyond can be represented.
 
 
 <h2 id="heading--contribution-overview">Contribution overview</h2>

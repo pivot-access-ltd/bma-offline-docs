@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-deb-2-8-clileft:0;list-deb-2-8-clistyle-deb-2-8-clitype:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-deb-2-8-clicolor:#d9d9d9; width:100%;border-deb-2-8-clibottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/custom-deb-2-8-climachine-deb-2-8-clisetup.html">
+	  &nbsp;UI-deb-2-8-clionly&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-deb-2-8-clicolor:white;border-deb-2-8-clitop:1px solid black; border-deb-2-8-clileft:1px solid black; border-deb-2-8-cliright:1px solid black; border-deb-2-8-clibottom:5px solid white;">
+	  CLI-deb-2-8-clionly
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-deb-2-8-clitop:40px; margin-deb-2-8-clileft:20px">
+      <strong>
+	<a href="maas-deb-2-8-clidocumentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-deb-2-8-climaas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clirequirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-cliinstallation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-deb-2-8-clijourney.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-deb-2-8-clicommunication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-deb-2-8-clicontrollers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-deb-2-8-clicontrollers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-deb-2-8-cliavailability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-deb-2-8-climachines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-deb-2-8-climanagement.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-deb-2-8-climachines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-deb-2-8-clitesting.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clitesting.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-deb-2-8-climachines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clitags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-deb-2-8-climachine-deb-2-8-clisetup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-deb-2-8-cliboot-deb-2-8-clioptions.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-deb-2-8-clipools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-clivmfs-deb-2-8-clidatastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-deb-2-8-clikernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-deb-2-8-cliand-deb-2-8-cliimport-deb-2-8-cliimages.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-deb-2-8-cliimage-deb-2-8-climirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-cliimages.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-deb-2-8-climanagement.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clidhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-deb-2-8-cliranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-deb-2-8-cliservices.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clidiscovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-deb-2-8-cliaddressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-deb-2-8-clitls-deb-2-8-cliencryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clistp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-deb-2-8-clizones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-deb-2-8-clihosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clinetworking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clistorage-deb-2-8-clipools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-deb-2-8-cliand-deb-2-8-clideleting-deb-2-8-clivms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-deb-2-8-climetrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-deb-2-8-cliyour-deb-2-8-climaas-deb-2-8-cliinstallation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clilogging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-clilogs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-deb-2-8-cliaccounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-deb-2-8-clisearch.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-clinetwork-deb-2-8-clitutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-deb-2-8-clicli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-deb-2-8-clievent-deb-2-8-clilogs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clikernel-deb-2-8-climanagement.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliimage-deb-2-8-climanagement.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliinterface-deb-2-8-climanagement.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliadvanced-deb-2-8-clitasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clicomposable-deb-2-8-clihardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-deb-2-8-cliapi-deb-2-8-cliclient.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-deb-2-8-cliauthentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-deb-2-8-clihelp.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-deb-2-8-clitricks-deb-2-8-cliand-deb-2-8-clitraps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-deb-2-8-clidocs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-deb-2-8-cliguide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-deb-2-8-clitop:40px; margin-deb-2-8-cliright:30px">
+      <h1>Custom machine setup</h1><!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+During machine [enlistment](add-deb-2-8-climachines.html#heading-deb-2-8-cli-deb-2-8-clienlistment), [deployment](deploy-deb-2-8-climachines.html), [commissioning](commission-deb-2-8-climachines.html) and machine installation, MAAS sends [Tempita-deb-2-8-cliderived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-deb-2-8-cliinit](https://launchpad.net/cloud-deb-2-8-cliinit) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+During machine [enlistment](add-deb-2-8-climachines.html#heading-deb-2-8-cli-deb-2-8-clienlistment), [deployment](deploy-deb-2-8-climachines.html), [commissioning](commission-deb-2-8-climachines.html) and machine installation, MAAS sends [Tempita-deb-2-8-cliderived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-deb-2-8-cliinit](https://launchpad.net/cloud-deb-2-8-cliinit) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>During machine <a href="add-deb-2-8-climachines.html#heading-deb-2-8-cli-deb-2-8-clienlistment">enlistment</a>, <a href="deploy-deb-2-8-climachines.html">deployment</a>, <a href="commission-deb-2-8-climachines.html">commissioning</a> and machine installation, MAAS sends <a href="https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt">Tempita-deb-2-8-cliderived</a> configuration files to the <a href="https://launchpad.net/cloud-deb-2-8-cliinit">cloud-deb-2-8-cliinit</a> process running on the target machine. MAAS refers to this process as <strong>preseeding</strong>.These preseed files are used to configure a machine&rsquo;s ephemeral and installation environments and can be modified or augmented to a custom machine configuration.</p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+During machine [enlistment](add-deb-2-8-climachines.html#heading-deb-2-8-cli-deb-2-8-clienlistment), [deployment](deploy-deb-2-8-climachines.html), [commissioning](commission-deb-2-8-climachines.html) and machine installation, MAAS sends [Tempita-deb-2-8-cliderived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-deb-2-8-cliinit](https://launchpad.net/cloud-deb-2-8-cliinit) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+During machine [enlistment](add-deb-2-8-climachines.html#heading-deb-2-8-cli-deb-2-8-clienlistment), [deployment](deploy-deb-2-8-climachines.html), [commissioning](commission-deb-2-8-climachines.html) and machine installation, MAAS sends [Tempita-deb-2-8-cliderived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-deb-2-8-cliinit](https://launchpad.net/cloud-deb-2-8-cliinit) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+During machine [enlistment](add-deb-2-8-climachines.html#heading-deb-2-8-cli-deb-2-8-clienlistment), [deployment](deploy-deb-2-8-climachines.html), [commissioning](commission-deb-2-8-climachines.html) and machine installation, MAAS sends [Tempita-deb-2-8-cliderived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-deb-2-8-cliinit](https://launchpad.net/cloud-deb-2-8-cliinit) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+During machine [enlistment](add-deb-2-8-climachines.html#heading-deb-2-8-cli-deb-2-8-clienlistment), [deployment](deploy-deb-2-8-climachines.html), [commissioning](commission-deb-2-8-climachines.html) and machine installation, MAAS sends [Tempita-deb-2-8-cliderived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-deb-2-8-cliinit](https://launchpad.net/cloud-deb-2-8-cliinit) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+During machine [enlistment](add-deb-2-8-climachines.html#heading-deb-2-8-cli-deb-2-8-clienlistment), [deployment](deploy-deb-2-8-climachines.html), [commissioning](commission-deb-2-8-climachines.html) and machine installation, MAAS sends [Tempita-deb-2-8-cliderived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-deb-2-8-cliinit](https://launchpad.net/cloud-deb-2-8-cliinit) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+During machine [enlistment](add-deb-2-8-climachines.html#heading-deb-2-8-cli-deb-2-8-clienlistment), [deployment](deploy-deb-2-8-climachines.html), [commissioning](commission-deb-2-8-climachines.html) and machine installation, MAAS sends [Tempita-deb-2-8-cliderived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-deb-2-8-cliinit](https://launchpad.net/cloud-deb-2-8-cliinit) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+During machine [enlistment](add-deb-2-8-climachines.html#heading-deb-2-8-cli-deb-2-8-clienlistment), [deployment](deploy-deb-2-8-climachines.html), [commissioning](commission-deb-2-8-climachines.html) and machine installation, MAAS sends [Tempita-deb-2-8-cliderived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-deb-2-8-cliinit](https://launchpad.net/cloud-deb-2-8-cliinit) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+During machine [enlistment](add-deb-2-8-climachines.html#heading-deb-2-8-cli-deb-2-8-clienlistment), [deployment](deploy-deb-2-8-climachines.html), [commissioning](commission-deb-2-8-climachines.html) and machine installation, MAAS sends [Tempita-deb-2-8-cliderived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-deb-2-8-cliinit](https://launchpad.net/cloud-deb-2-8-cliinit) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+During machine [enlistment](add-deb-2-8-climachines.html#heading-deb-2-8-cli-deb-2-8-clienlistment), [deployment](deploy-deb-2-8-climachines.html), [commissioning](commission-deb-2-8-climachines.html) and machine installation, MAAS sends [Tempita-deb-2-8-cliderived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-deb-2-8-cliinit](https://launchpad.net/cloud-deb-2-8-cliinit) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<h4>Two questions you may have:</h4>
+<ol>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-clicurtin">How do I customise machine setup with curtin?</a></li>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-clicloud-deb-2-8-cliinit">How do I customise machine setup with cloud-deb-2-8-cliinit?</a></li>
+</ol>
+<p>Customisation in MAAS happens in two ways:</p>
+<ol>
+<li>
+<p><a href="https://launchpad.net/curtin">Curtin</a>, a preseeding system similar to Kickstart or d-deb-2-8-clii (Debian Installer), applies customisation during operating system (OS) image installation. MAAS performs these changes on deployment, during OS installation, but before the machine reboots into the installed OS. Curtin customisations are perfect for administrators who want their deployments to have identical setups all the time, every time. <a href="https://blog.ubuntu.com/2017/06/02/customising-deb-2-8-climaas-deb-2-8-cliinstalls">This blog post</a> contains an excellent high-deb-2-8-clilevel overview of custom MAAS installs using Curtin.</p>
+</li>
+<li>
+<p><a href="https://launchpad.net/cloud-deb-2-8-cliinit">Cloud-deb-2-8-cliinit</a>, a system for setting up machines immediately after instantiation. cloud-deb-2-8-cliinit applies customisations after the first boot, when MAAS changes a machine&rsquo;s status to &lsquo;Deployed.&rsquo; Customisations are per-deb-2-8-cliinstances, meaning that user-deb-2-8-clisupplied scripts must be re-deb-2-8-clispecified on redeployment. Cloud-deb-2-8-cliinit customisations are the best way for MAAS users to customise their deployments, similar to how the various cloud services prepare VMs when launching instances.</p>
+</li>
+</ol>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clicurtin"><h2 id="heading-deb-2-8-cli-deb-2-8-clicurtin">Curtin</h2></a></p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clitemplates"><h3 id="heading-deb-2-8-cli-deb-2-8-clitemplates">Templates</h3></a></p>
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+The [Tempita](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) template files are found in the `/var/snap/maas/current/preseeds/` directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:
+snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<p>The <a href="https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt">Tempita</a> template files are found in the <code>/etc/maas/preseeds/</code> directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Phase</th>
+<th align="left">Filename prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Enlistment</td>
+<td align="left">enlist</td>
+</tr>
+<tr>
+<td align="left">Commissioning</td>
+<td align="left">commissioning</td>
+</tr>
+<tr>
+<td align="left">Installation</td>
+<td align="left">curtin (<a href="https://launchpad.net/curtin">Curtin</a>)</td>
+</tr>
+</tbody>
+</table>
+<p>Additionally, the template for each phase typically consists of two files. The first is a higher-deb-2-8-clilevel file that often contains little more than a URL or a link to further credentials, while a second file contains the executable logic.</p>
+<p>The <code>enlist</code> template, for example, contains only minimal variables, whereas <code>enlist_userdata</code> includes both user variables and initialisation logic.</p>
+<p><strong>NOTE:</strong> 
+Tempita’s inheritance mechanism is the reverse of what you might expect. Inherited files, such as <code>enlist_userdata</code>, become the new template which can then reference variables from the higher-deb-2-8-clilevel file, such as <code>enlist</code>.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clitemplate-deb-2-8-clinaming"><h3 id="heading-deb-2-8-cli-deb-2-8-clitemplate-deb-2-8-clinaming">Template naming</h3></a></p>
+<p>MAAS interprets templates in lexical order by their filename.  This order allows for base configuration options and parameters to be overridden based on a combination of operating system, architecture, sub-deb-2-8-cliarchitecture, release, and machine name.</p>
+<p>Some earlier versions of MAAS only support Ubuntu. If the machine operating system is Ubuntu, then filenames without <code>{os}</code> will also be tried, to maintain backward compatibility.</p>
+<p>Consequently, template files are interpreted in the following order:</p>
+<ol>
+<li>
+<p><code>{prefix}_{os}_{node_arch}_{node_subarch}_{release}_{node_name}</code> or <code>{prefix}_{node_arch}_{node_subarch}_{release}_{node_name}</code></p>
+</li>
+<li>
+<p><code>{prefix}_{os}_{node_arch}_{node_subarch}_{release}</code> or <code>{prefix}_{node_arch}_{node_subarch}_{release}</code></p>
+</li>
+<li>
+<p><code>{prefix}_{os}_{node_arch}_{node_subarch}</code> or <code>{prefix}_{node_arch}_{node_subarch}</code></p>
+</li>
+<li>
+<p><code>{prefix}_{os}_{node_arch}</code> or <code>{prefix}_{node_arch}</code></p>
+</li>
+<li>
+<p><code>{prefix}_{os}</code></p>
+</li>
+<li>
+<p><code>{prefix}</code></p>
+</li>
+<li>
+<p><code>generic</code></p>
+</li>
+</ol>
+<p>The machine needs to be the machine name, as shown in the web UI URL.</p>
+<p>The prefix can be either <code>enlist</code>, <code>enlist_userdata</code>, <code>commissioning</code>, <code>curtin</code>, <code>curtin_userdata</code> or <code>preseed_master</code>. Alternatively, you can omit the prefix and the following underscore.</p>
+<p>For example, to create a generic configuration template for Ubuntu 16.04 Xenial running on an x64 architecture, the file would need to be called <code>ubuntu_amd64_generic_xenial_node</code>.</p>
+<p>To create the equivalent template for curtin_userdata, the file would be called <code>curtin_userdata_ubuntu_amd64_generic_xenial_node</code>.</p>
+<p><strong>NOTE:</strong> 
+Any file targeting a specific machine will replace the values and configuration held within any generic files. If those values are needed, you will need to copy these generic template values into your new file.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliconfiguration"><h3 id="heading-deb-2-8-cli-deb-2-8-cliconfiguration">Configuration</h3></a></p>
+<p>You can customise the Curtin installation by either editing the existing <code>curtin_userdata</code> template or by adding a custom file as described above.</p>
+<p>Curtin provides hooks to execute custom code before and after installation takes place. These hooks are named <code>early</code> and <code>late</code> respectively, and they can both be overridden to execute the Curtin configuration in the ephemeral environment. Additionally, the <code>late</code> hook can be used to execute a configuration for a machine being installed, a state known as in-deb-2-8-clitarget.</p>
+<p>Curtin commands look like this:</p>
+<pre><code>foo: ["command", "-deb-2-8-cli-deb-2-8-clicommand-deb-2-8-cliarg", "command-deb-2-8-cliarg-deb-2-8-clivalue"]
+</code></pre>
+<p>Each component of the given command makes up an item in an array. Note, however, that the following won&rsquo;t work:</p>
+<pre><code>foo: ["sh", "-deb-2-8-clic", "/bin/echo", "foobar"]
+</code></pre>
+<p>This syntax won&rsquo;t work because the value of <code>sh</code>&lsquo;s <code>-deb-2-8-clic</code> argument is itself an entire command. The correct way to express this is:</p>
+<pre><code>foo: ["sh", "-deb-2-8-clic", "/bin/echo foobar"]
+</code></pre>
+<p>The following is an example of an early command that will run before the installation takes place in the ephemeral environment. The command pings an external machine to signal that the installation is about to start:</p>
+<pre><code class="bash">early_commands:
+  signal: [&quot;wget&quot;, &quot;-deb-2-8-cli-deb-2-8-clino-deb-2-8-cliproxy&quot;, &quot;http://example.com/&quot;, &quot;-deb-2-8-cli-deb-2-8-clipost-deb-2-8-clidata&quot;, &quot;system_id=&amp;signal=starting_install&quot;, &quot;-deb-2-8-cliO&quot;, &quot;/dev/null&quot;]
+</code></pre>
+
+<p>The following is an example of two late commands that run after installation is complete. Both run in-deb-2-8-clitarget, on the machine being installed.</p>
+<p>The first command adds a PPA to the machine. The second command creates a file containing the machine’s system ID:</p>
+<pre><code class="bash">late_commands:
+  add_repo: [&quot;curtin&quot;, &quot;in-deb-2-8-clitarget&quot;, &quot;-deb-2-8-cli-deb-2-8-cli&quot;, &quot;add-deb-2-8-cliapt-deb-2-8-clirepository&quot;, &quot;-deb-2-8-cliy&quot;, &quot;ppa:my/ppa&quot;]
+  custom: [&quot;curtin&quot;, &quot;in-deb-2-8-clitarget&quot;, &quot;-deb-2-8-cli-deb-2-8-cli&quot;, &quot;sh&quot;, &quot;-deb-2-8-clic&quot;, &quot;/bin/echo -deb-2-8-clien 'Installed ' &gt; /tmp/maas_system_id&quot;]
+</code></pre>
+
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clicloud-deb-2-8-cliinit"><h2 id="heading-deb-2-8-cli-deb-2-8-clicloud-deb-2-8-cliinit">Cloud-deb-2-8-cliinit</h2></a></p>
+<p>Using cloud-deb-2-8-cliinit to customise a machine after deployment is relatively easy. If you&rsquo;re not familiar with the MAAS command-deb-2-8-cliline interface (CLI), start by reviewing the <a href="maas-deb-2-8-clicli.html">MAAS CLI</a> page.</p>
+<p>After you&rsquo;re logged in, use the following command to deploy a machine with a custom script you&rsquo;ve written:</p>
+<pre><code>maas $PROFILE machine deploy $SYSTEM_ID user_data=&lt;base-deb-2-8-cli64-deb-2-8-cliencoded-deb-2-8-cliscript&gt;
+</code></pre>
+<p>The three replacable parameters shown above decode to:</p>
+<ol>
+<li><code>$PROFILE</code>: Your MAAS login. E.g. <code>admin</code></li>
+<li><code>$SYSTEM_ID</code>: The machine&rsquo;s <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-clidetermine-deb-2-8-clia-deb-2-8-clinode-deb-2-8-clisystem-deb-2-8-cliid">system ID</a>.</li>
+<li><code>&lt;base-deb-2-8-cli64-deb-2-8-cliencoded-deb-2-8-cliscript&gt;</code>: A base-deb-2-8-cli64 encoded copy of your customisation script. See below for an example.</li>
+</ol>
+<p>E.g.:</p>
+<p>Suppose you would like to import an SSH key immediately after your machine deployment. You might use this script, called <code>import_key.sh</code>:</p>
+<pre><code class="bash">#!/bin/bash
+(
+echo === $date ===
+ssh-deb-2-8-cliimport-deb-2-8-cliid foobar_user
+) | tee /ssh-deb-2-8-clikey-deb-2-8-cliimport.log
+</code></pre>
+
+<p>This script echos the date in addition to the output of the <code>ssh-deb-2-8-cliimport-deb-2-8-clikey</code> command. It also adds that output to a file, <code>/ssh-deb-2-8-clikey-deb-2-8-cliimport.log</code>.</p>
+<p>Base-deb-2-8-cli64 encoding is required because the MAAS command-deb-2-8-cliline interacts with the MAAS API, and base-deb-2-8-cli64 encoding allows MAAS to send the script inside a POST HTTP command.</p>
+<p>Use the <code>base64</code> command to output a base-deb-2-8-cli64 encoded version of your script:</p>
+<pre><code>base64 -deb-2-8-cliw0 ./import_key.sh
+</code></pre>
+<p>Putting it together:</p>
+<pre><code>maas $PROFILE machine deploy $SYSTEM_ID user_data=$(base64 -deb-2-8-cliw0 ./import_key.sh)
+</code></pre>
+<p>After MAAS deploys the machine, you&rsquo;ll find <code>/ssh-deb-2-8-clikey-deb-2-8-cliimport.log</code> on the machine you deployed.</p>
+<!-deb-2-8-cli-deb-2-8-cli  snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui 
+<a href="#heading-deb-2-8-cli-deb-2-8-clicloud-deb-2-8-cliinit-deb-2-8-cliui"><h3 id="heading-deb-2-8-cli-deb-2-8-clicloud-deb-2-8-cliinit-deb-2-8-cliui">Customising cloud-deb-2-8-cliinit with the UI (v2.9++)</h3></a>
+
+It's easy to customise cloud-deb-2-8-cliinit via the web UI.  When you've selected a machine and choose 'Take action >> Deploy,' you'll be presented with the following screen:
+
+<a href="images/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg" target = "_blank"><img src="images/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"></a></a>
+
+Select a viable release (in this case, "Ubuntu 18.04...") and check the box labelled "Cloud-deb-2-8-cliinit user-deb-2-8-clidata...":
+
+<a href="images/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg" target = "_blank"><img src="images/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg"></a></a>
+
+Paste the desired script directly into the box, and select "Start deployment for machine."  For example, to import an SSH key immediately after your machine deployment, you could paste this script:
+
+
+<pre><code class="bash">#!/bin/bash
+(
+echo === $date ===
+ssh-deb-2-8-cliimport-deb-2-8-cliid foobar_user
+) | tee /ssh-deb-2-8-clikey-deb-2-8-cliimport.log
+</code></pre>
+
+
+<strong>NOTE:</strong> 
+No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-deb-2-8-cliinit scripts.
+
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+    </div>
+  </body>
+</html>

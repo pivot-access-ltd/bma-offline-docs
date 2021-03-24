@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-deb-2-8-clileft:0;list-deb-2-8-clistyle-deb-2-8-clitype:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-deb-2-8-clicolor:#d9d9d9; width:100%;border-deb-2-8-clibottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/proxy.html">
+	  &nbsp;UI-deb-2-8-clionly&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-deb-2-8-clicolor:white;border-deb-2-8-clitop:1px solid black; border-deb-2-8-clileft:1px solid black; border-deb-2-8-cliright:1px solid black; border-deb-2-8-clibottom:5px solid white;">
+	  CLI-deb-2-8-clionly
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-deb-2-8-clitop:40px; margin-deb-2-8-clileft:20px">
+      <strong>
+	<a href="maas-deb-2-8-clidocumentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-deb-2-8-climaas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clirequirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-cliinstallation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-deb-2-8-clijourney.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-deb-2-8-clicommunication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-deb-2-8-clicontrollers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-deb-2-8-clicontrollers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-deb-2-8-cliavailability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-deb-2-8-climachines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-deb-2-8-climanagement.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-deb-2-8-climachines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-deb-2-8-clitesting.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clitesting.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-deb-2-8-climachines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clitags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-deb-2-8-climachine-deb-2-8-clisetup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-deb-2-8-cliboot-deb-2-8-clioptions.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-deb-2-8-clipools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-clivmfs-deb-2-8-clidatastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-deb-2-8-clikernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-deb-2-8-cliand-deb-2-8-cliimport-deb-2-8-cliimages.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-deb-2-8-cliimage-deb-2-8-climirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-cliimages.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-deb-2-8-climanagement.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clidhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-deb-2-8-cliranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-deb-2-8-cliservices.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clidiscovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-deb-2-8-cliaddressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-deb-2-8-clitls-deb-2-8-cliencryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clistp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-deb-2-8-clizones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-deb-2-8-clihosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clinetworking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clistorage-deb-2-8-clipools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-deb-2-8-cliand-deb-2-8-clideleting-deb-2-8-clivms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-deb-2-8-climetrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-deb-2-8-cliyour-deb-2-8-climaas-deb-2-8-cliinstallation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clilogging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-clilogs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-deb-2-8-cliaccounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-deb-2-8-clisearch.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-clinetwork-deb-2-8-clitutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-deb-2-8-clicli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-deb-2-8-clievent-deb-2-8-clilogs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clikernel-deb-2-8-climanagement.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliimage-deb-2-8-climanagement.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliinterface-deb-2-8-climanagement.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliadvanced-deb-2-8-clitasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clicomposable-deb-2-8-clihardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-deb-2-8-cliapi-deb-2-8-cliclient.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-deb-2-8-cliauthentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-deb-2-8-clihelp.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-deb-2-8-clitricks-deb-2-8-cliand-deb-2-8-clitraps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-deb-2-8-clidocs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-deb-2-8-cliguide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-deb-2-8-clitop:40px; margin-deb-2-8-cliright:30px">
+      <h1>Proxy</h1><!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>MAAS provides a way for its managed machines to use a proxy server when they need to access HTTP/HTTPS-deb-2-8-clibased resources, such as the Ubuntu package archive.</p>
+<p>There are three possible options:</p>
+<ol>
+<li>internal proxy (default)</li>
+<li>external proxy</li>
+<li>no proxy</li>
+</ol>
+<p>Configuring a proxy with MAAS consists of enabling/disabling one of the above three options and enabling/disabling proxying on a specific subnet.</p>
+<h4>Two questions you may have:</h4>
+<ol>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-cliinternal-deb-2-8-cliproxy-deb-2-8-climaas-deb-2-8-cliproxy">How and why should I create an internal proxy?</a></li>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-cliconfigure-deb-2-8-cliproxy">How and why should I create an external proxy?</a></li>
+</ol>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliinternal-deb-2-8-cliproxy-deb-2-8-climaas-deb-2-8-cliproxy"><h2 id="heading-deb-2-8-cli-deb-2-8-cliinternal-deb-2-8-cliproxy-deb-2-8-climaas-deb-2-8-cliproxy">Internal proxy (MAAS proxy)</h2></a></p>
+<p>MAAS provides an internal proxy server. Although it is set up to work well with APT/package requests, it is effectively an HTTP caching proxy server. If you configure the MAAS region controller as the default gateway for the machines it manages then the proxy will work transparently (on TCP port 3128). Otherwise, machines will need to access it on TCP port 8000.</p>
+<p>By default, the proxy is available to all hosts residing in any subnet detected by MAAS, not just MAAS-deb-2-8-climanaged machines. It is therefore recommended to disable access to those subnets that represent untrusted networks.</p>
+<p>MAAS manages its proxy. So although the active configuration, located in file <code>/var/lib/maas/maas-deb-2-8-cliproxy.conf</code>, can be inspected, it is not to be hand-deb-2-8-cliedited.</p>
+<p>You must install the proxy on the same host as the region controller (via the &lsquo;maas-deb-2-8-cliproxy&rsquo; package).</p>
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-deb-2-8-cliedited. The proxy is automatically installed with the MAAS snap.
+snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliconfigure-deb-2-8-cliproxy"><h2 id="heading-deb-2-8-cli-deb-2-8-cliconfigure-deb-2-8-cliproxy">Configure proxy</h2></a></p>
+<p>Enabling and disabling proxying, in general, is done via a boolean option (&lsquo;true&rsquo; or &lsquo;false&rsquo;). The following command will disable proxying completely:</p>
+<pre><code class="bash">maas $PROFILE maas set-deb-2-8-cliconfig name=enable_http_proxy value=false
+</code></pre>
+
+<p>To set an external proxy, ensure proxying is enabled (see above) and then define it:</p>
+<pre><code class="bash">maas $PROFILE maas set-deb-2-8-cliconfig name=http_proxy value=$EXTERNAL_PROXY
+</code></pre>
+
+<p>For example,</p>
+<pre><code class="bash">maas $PROFILE maas set-deb-2-8-cliconfig name=enable_http_proxy value=true
+maas $PROFILE maas set-deb-2-8-cliconfig name=http_proxy value=http://squid.example.com:3128/
+</code></pre>
+
+<p>Enabling and disabling proxying per subnet is done via a boolean option (&lsquo;true&rsquo; or &lsquo;false&rsquo;). Here is how you can disable proxying on a per-deb-2-8-clisubnet basis:</p>
+<pre><code class="bash">maas $PROFILE subnet update $SUBNET_CIDR allow_proxy=false
+</code></pre>
+
+<p>For example,</p>
+<pre><code class="bash">maas $PROFILE subnet update 192.168.0.0/22 allow_proxy=false
+</code></pre>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+In the web UI, visit the 'Settings' page and select the 'Network services' tab. The 'Proxy' section is at the top. You can apply your changes by pressing the 'Save' button.
+
+<a href="images/55800a33-deb-2-8-cliinstallconfig-deb-2-8-clinetwork-deb-2-8-cliproxy__2.4_configure-deb-2-8-cliproxy.png" target = "_blank"><img src="images/55800a33-deb-2-8-cliinstallconfig-deb-2-8-clinetwork-deb-2-8-cliproxy__2.4_configure-deb-2-8-cliproxy.png"></a></a>
+
+To enable the internal proxy, ensure that the checkbox adjacent to 'MAAS Built-deb-2-8-cliin' is selected. This internal proxy is the default configuration.
+
+To enable an external proxy, activate the 'External' checkbox and use the new field that is displayed to define the proxy's URL (and port if necessary).
+
+An upstream cache peer can be defined by enabling the 'Peer' checkbox and entering the external proxy URL into the field. With this enabled, machines will be configured to use the MAAS built-deb-2-8-cliin proxy to download cached APT packages.
+
+To prevent MAAS machines from using a proxy, enable the 'Don't use a proxy' checkbox.
+snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p><strong>NOTE</strong> that the proxy service will still be running.</p>
+    </div>
+  </body>
+</html>

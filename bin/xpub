@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import sys, subprocess, json, os, time, re, markdown, jinja2
-import time
 from shutil import copyfile
 import datetime
 import pytz
@@ -15,81 +14,6 @@ except ImportError:
     from yaml import Loader, Dumper
 
 import click
-
-def get_topic(config_data, topic):
-    rate_limit_error = True
-    while rate_limit_error == True:
-        proc = subprocess.Popen(
-            [
-                "curl",
-                "-X",
-                "GET",
-                "-H",
-                "Api-Key: " + config_data["api_key"],
-                "-H",
-                "Api-Username: " + config_data["api_username"],
-                "-H",
-                "Content-Type: application/json",
-                config_data["base_url"] + "/t/{" + str(topic) + "}.json",
-            ],
-            stdout=subprocess.PIPE,
-        )
-        
-        # read the result into a usable buffer
-        output = proc.stdout.read()
-        
-        # convert the result to json
-        try:
-            topic_json = json.loads(output)
-        except:
-            print("topic " + str(topic) + " doesn't exist; exiting")
-            sys.exit(4)
-        try:
-            if topic_json["error_type"] == "rate_limit":
-                wait_time = topic_json["extras"]["wait_seconds"]
-                print("waiting for rate limit to pass")
-                rate_limit_error = True
-                time.sleep(wait_time + 5)
-        except:
-            return topic_json
-
-def get_post(config_data, post_id):
-    rate_limit_error = True
-    while rate_limit_error == True:
-        proc = subprocess.Popen(
-            [
-                "curl",
-                "-X",
-                "GET",
-                "-H",
-                "Api-Key: " + config_data["api_key"],
-                "-H",
-                "Api-Username: " + config_data["api_username"],
-                "-H",
-                "Content-Type: application/json",
-                config_data["base_url"] + "/posts/{" + str(post_id) + "}.json",
-            ],
-            stdout=subprocess.PIPE,
-        )
-        
-        # read the result into a usable buffer
-        output = proc.stdout.read()
-        
-        # convert the result to json
-        try:
-            post_json = json.loads(output)
-        except:
-            print("topic " + str(topic) + " doesn't exist; exiting")
-            sys.exit(4)
-        try:
-            if post_json["error_type"] == "rate_limit":
-                wait_time = post_json["extras"]["wait_seconds"]
-                print("waiting for rate limit to pass")
-                rate_limit_error = True
-                time.sleep(wait_time + 5)
-        except:
-            return post_json
-
 
 
 @click.group(help="Publish and convert files")
@@ -146,6 +70,10 @@ def discourse(filename, title, category, tag, autolink):
         sys.exit(4)
     config_data = load(cfile, Loader=Loader)
     cfile.close()
+
+    # if there's a tag, create the title from filename + tag
+    if tag:
+        title = filename.split(".")[0] + "-" + tag
 
     # load and convert the specified markdown file
     f = open(filename, "r")
@@ -227,7 +155,7 @@ def discourse(filename, title, category, tag, autolink):
     # touch -a -m -t CCYYMMDDhhmm.SS filename
     os.system("touch -a -m -t " + modtime + " " + local_filename)
 
-    # add hints as comments to the local makefile, if requested
+    # add hints as comments to the local makefile, if requested (not used much anymore)
     makefile = open("makefile", "a")
     makefile.write("# originals/" + local_filename + ": " + filename + "\n")
     makefile.write("#\tchmod 644 originals/*" + "\n")
@@ -312,8 +240,34 @@ def discourse(start, end, category, j, banned_tag):
     # giant for loop to get the topic range specified
     for tn in range(start, end + 1):
 
-        # get the JSON data from the API with rate_limit management
-        topic_json = get_topic(config_data, tn)
+        # sleep for 2.5 seconds - prevents discourse DDOS rejection
+        time.sleep(2.5)
+
+        # run the shell command to get the topic and retain the result
+        proc = subprocess.Popen(
+            [
+                "curl",
+                "-X",
+                "GET",
+                "-H",
+                "Api-Key: " + config_data["api_key"],
+                "-H",
+                "Api-Username: " + config_data["api_username"],
+                "-H",
+                "Content-Type: application/json",
+                config_data["base_url"] + "/t/{" + str(tn) + "}.json",
+            ],
+            stdout=subprocess.PIPE,
+        )
+
+        # read the result into a usable buffer
+        output = proc.stdout.read()
+
+        # convert the result to json; if it fails, skip this record
+        try:
+            topic_json = json.loads(output)
+        except:
+            continue
 
         # if requested, save the intermediate topic json to a file
         if j == True:
@@ -322,31 +276,18 @@ def discourse(start, end, category, j, banned_tag):
             f2.close()
 
         # extract the post ID from the topic json
-        try:
-            post_id = topic_json["post_stream"]["posts"][0]["id"]
-        except:
-            print(topic_json)
-            print('xpub: error trying to read post_id, point 4')
-            print("xpub: exiting")
-            sys.exit(281)
-
+        post_id = topic_json["post_stream"]["posts"][0]["id"]
 
         # extract the last updated time from the topic json, because we'll
         # set the file's modification time to this value
-        try:
-            updated_at = topic_json["post_stream"]["posts"][0]["updated_at"]
-            modtime_zulu = datetime.datetime.strptime(updated_at, "%Y-%m-%dT%H:%M:%S.%fZ")
-            # print("modtime_zulu", modtime_zulu)
-            modtime_local = pytz.utc.localize(modtime_zulu).astimezone(None)
-            # print("modtime_local", modtime_local)
-            modtime = datetime.datetime.strftime(modtime_local, "%Y%m%d%H%M.%S")
-            # print("modtime", modtime)
-            # sys.exit()
-        except:
-            print(topic_json)
-            print('xpub: error trying to read last update time')
-            print('xpub: exiting')
-            sys.exit(299)
+        updated_at = topic_json["post_stream"]["posts"][0]["updated_at"]
+        modtime_zulu = datetime.datetime.strptime(updated_at, "%Y-%m-%dT%H:%M:%S.%fZ")
+        #        print("modtime_zulu", modtime_zulu)
+        modtime_local = pytz.utc.localize(modtime_zulu).astimezone(None)
+        #        print("modtime_local", modtime_local)
+        modtime = datetime.datetime.strftime(modtime_local, "%Y%m%d%H%M.%S")
+        #        print("modtime", modtime)
+        #        sys.exit()
 
         # extract the category ID from the topic json (for potential match)
         category_id = topic_json["category_id"]
@@ -365,22 +306,37 @@ def discourse(start, end, category, j, banned_tag):
                 continue
 
         # compute the filename
-        try:
-            filename = (
-                topic_json["post_stream"]["posts"][0]["topic_slug"] + "-" + str(tn) + ".md"
-            )
-        except:
-            print("filename could not be retrieved from topic_json", topic_json)
-            print("xpub: exiting")
-            exit(324)
-            
+        filename = (
+            topic_json["post_stream"]["posts"][0]["topic_slug"] + "-" + str(tn) + ".md"
+        )
         deleted_at = topic_json["deleted_at"]
         if deleted_at:
             print("post deleted: not pulled from discourse")
             continue
 
-        # read the post using the api, handling rate_limit events
-        post_json = get_post(config_data, post_id)
+        # read the post using the api, retaining the return value
+        proc2 = subprocess.Popen(
+            [
+                "curl",
+                "-X",
+                "GET",
+                "-H",
+                "Api-Key: " + config_data["api_key"],
+                "-H",
+                "Api-Username: " + config_data["api_username"],
+                "-H",
+                "Content-Type: application/json",
+                config_data["base_url"] + "/posts/{" + str(post_id) + "}.json",
+            ],
+            stdout=subprocess.PIPE,
+        )
+
+        # copy the return value to a suitable buffer
+        output2 = proc2.stdout.read()
+
+        # convert the returned post to json
+        post_json = json.loads(output2)
+
         # if requested, write the intermediate post json to a file
         if j == True:
             f2 = open("post-" + str(tn) + ".json", "w")
@@ -465,15 +421,29 @@ def discourse(tag, files):
             continue
 
         # pull topic last mod time and compare to see if topic has changed
-        topic_json = get_topic(config_data, topic)
-
+        proc = subprocess.Popen(
+            [
+                "curl",
+                "-X",
+                "GET",
+                "-H",
+                "Api-Key: " + config_data["api_key"],
+                "-H",
+                "Api-Username: " + config_data["api_username"],
+                "-H",
+                "Content-Type: application/json",
+                config_data["base_url"] + "/t/{" + str(topic) + "}.json",
+            ],
+            stdout=subprocess.PIPE,
+        )
+        output = proc.stdout.read()
         try:
-            updated_at = topic_json["post_stream"]["posts"][0]["updated_at"]
+            topic_json = json.loads(output)
         except:
-            print("xpub: could not read update time from topic_json, point 1",topic_json)
+            print("xpub: failed to read topic for edit check")
             print("xpub: exiting")
-            exit(465)
-            
+            sys.exit()
+        updated_at = topic_json["post_stream"]["posts"][0]["updated_at"]
         modtime_zulu = datetime.datetime.strptime(updated_at, "%Y-%m-%dT%H:%M:%S.%fZ")
         modtime_local = pytz.utc.localize(modtime_zulu).astimezone(None)
         modtime = int(datetime.datetime.strftime(modtime_local, "%s"))
@@ -498,17 +468,34 @@ def discourse(tag, files):
             os.system("rm " + condfile)
 
         # run the shell command to get the topic and retain the result
-        topic_json = get_topic(config_data, topic)
+        proc = subprocess.Popen(
+            [
+                "curl",
+                "-X",
+                "GET",
+                "-H",
+                "Api-Key: " + config_data["api_key"],
+                "-H",
+                "Api-Username: " + config_data["api_username"],
+                "-H",
+                "Content-Type: application/json",
+                config_data["base_url"] + "/t/{" + str(topic) + "}.json",
+            ],
+            stdout=subprocess.PIPE,
+        )
+
+        # read the result into a usable buffer
+        output = proc.stdout.read()
+
+        # convert the result to json
+        try:
+            topic_json = json.loads(output)
+        except:
+            print("topic " + str(topic) + " doesn't exist; exiting")
+            sys.exit(4)
 
         # extract the post ID from the topic json
-        try:
-            post_id = topic_json["post_stream"]["posts"][0]["id"]
-        except:
-            print(topic_json)
-            print('xpub: error trying to read post_id, point 3')
-            print("error type should be:",topic_json["error_type"])
-            print("xpub: exiting")
-            sys.exit(551)
+        post_id = topic_json["post_stream"]["posts"][0]["id"]
         category_id = topic_json["category_id"]
         deleted_at = topic_json["deleted_at"]
         tags = topic_json["tags"]
@@ -660,7 +647,7 @@ def dc2html(tag, files):
     """
 
     for mdfilename in files:
-        if mdfilename.endswith(".md") or mdfilename.endswith(".msd"):
+        if mdfilename.endswith(".md"):
 
             # read in the markdown file
             mdfile = open(mdfilename, "r")

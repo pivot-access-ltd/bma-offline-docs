@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-deb-2-8-clileft:0;list-deb-2-8-clistyle-deb-2-8-clitype:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-deb-2-8-clicolor:#d9d9d9; width:100%;border-deb-2-8-clibottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/maas-deb-2-8-cliimage-deb-2-8-clibuilder.html">
+	  &nbsp;UI-deb-2-8-clionly&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-deb-2-8-clicolor:white;border-deb-2-8-clitop:1px solid black; border-deb-2-8-clileft:1px solid black; border-deb-2-8-cliright:1px solid black; border-deb-2-8-clibottom:5px solid white;">
+	  CLI-deb-2-8-clionly
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-deb-2-8-clitop:40px; margin-deb-2-8-clileft:20px">
+      <strong>
+	<a href="maas-deb-2-8-clidocumentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-deb-2-8-climaas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clirequirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-cliinstallation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-deb-2-8-clijourney.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-deb-2-8-clicommunication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-deb-2-8-clicontrollers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-deb-2-8-clicontrollers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-deb-2-8-cliavailability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-deb-2-8-climachines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-deb-2-8-climanagement.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-deb-2-8-climachines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-deb-2-8-clitesting.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clitesting.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-deb-2-8-climachines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clitags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-deb-2-8-climachine-deb-2-8-clisetup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-deb-2-8-cliboot-deb-2-8-clioptions.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-deb-2-8-clipools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-clivmfs-deb-2-8-clidatastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-deb-2-8-clikernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-deb-2-8-cliand-deb-2-8-cliimport-deb-2-8-cliimages.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-deb-2-8-cliimage-deb-2-8-climirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-cliimages.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-deb-2-8-climanagement.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clidhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-deb-2-8-cliranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-deb-2-8-cliservices.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clidiscovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-deb-2-8-cliaddressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-deb-2-8-clitls-deb-2-8-cliencryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clistp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-deb-2-8-clizones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-deb-2-8-clihosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clinetworking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clistorage-deb-2-8-clipools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-deb-2-8-cliand-deb-2-8-clideleting-deb-2-8-clivms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-deb-2-8-climetrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-deb-2-8-cliyour-deb-2-8-climaas-deb-2-8-cliinstallation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clilogging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-clilogs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-deb-2-8-cliaccounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-deb-2-8-clisearch.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-clinetwork-deb-2-8-clitutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-deb-2-8-clicli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-deb-2-8-clievent-deb-2-8-clilogs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clikernel-deb-2-8-climanagement.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliimage-deb-2-8-climanagement.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliinterface-deb-2-8-climanagement.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliadvanced-deb-2-8-clitasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clicomposable-deb-2-8-clihardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-deb-2-8-cliapi-deb-2-8-cliclient.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-deb-2-8-cliauthentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-deb-2-8-clihelp.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-deb-2-8-clitricks-deb-2-8-cliand-deb-2-8-clitraps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-deb-2-8-clidocs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-deb-2-8-cliguide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-deb-2-8-clitop:40px; margin-deb-2-8-cliright:30px">
+      <h1>MAAS image builder</h1><!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>MAAS Image Builder is an alternative to <a href="https://www.packer.io/">packer</a> for creating MAAS images.  </p>
+<p><strong>NOTE:</strong> 
+In order to use MAAS Image Builder, you must purchase <a href="https://support.canonical.com/ua/s/article/How-deb-2-8-clito-deb-2-8-cliaccess-deb-2-8-clithe-deb-2-8-cliMAAS-deb-2-8-cliImage-deb-2-8-cliBuilder-deb-2-8-clitool">Ubuntu Advantage for Infrastructure</a>.</p>
+<p>With the MAAS Image Builder, you can do five key operations:</p>
+<ol>
+<li><a href="#imib">install MAAS Image Builder</a> via a private Canonical PPA (which you can request)</li>
+<li><a href="#bci">create custom CentOS images</a></li>
+<li><a href="#bri">create custom RHEL images</a></li>
+<li><a href="#bwi">create Windows images</a></li>
+<li><a href="#doci">create other kinds of custom images</a></li>
+</ol>
+<p>You can customise most images as much or as little as you wish, then use them to commission machines with MAAS. </p>
+<h2 id="heading-deb-2-8-cli-deb-2-8-cliinstall-deb-2-8-climib">Install MAAS Image Builder</h2>
+
+<p></a></p>
+<p>To get MAAS Image Builder, you must be subscribed to a private PPA provided by Canonical Support to those customers who have purchased <a href="https://support.canonical.com/ua/s/article/How-deb-2-8-clito-deb-2-8-cliaccess-deb-2-8-clithe-deb-2-8-cliMAAS-deb-2-8-cliImage-deb-2-8-cliBuilder-deb-2-8-clitool">Ubuntu Advantage for Infrastructure</a>.  Note that the steps below will fail if you have not purchased Ubuntu Advantage and been subscribed to the private PPA by your Canonical support rep.</p>
+<p>Once subscribed, you need to obtain your credentials at this external link:</p>
+<p>https://launchpad.net/~/+archivesubscriptions</p>
+<p>Also, you must add the repository with the <code>add-deb-2-8-cliapt-deb-2-8-clirepository</code> command.  Note: Be sure to substitute your unique URL in the command below:</p>
+<pre><code>$ sudo add-deb-2-8-cliapt-deb-2-8-clirepository \
+“https://LaunchpadID:Password@private-deb-2-8-clippa.launchpad.net/maas-deb-2-8-cliimage-deb-2-8-clibuilder-deb-2-8-clipartners/stable/ubuntu"
+</code></pre>
+<p>Once you have added the private PPA, you can install the Image Builder like this:</p>
+<pre><code>$ sudo apt-deb-2-8-cliget install maas-deb-2-8-cliimage-deb-2-8-clibuilder
+</code></pre>
+<p>All done? Great!  Now you can build and customise images for MAAS machines, as shown in the sections below.</p>
+<h2 id="heading-deb-2-8-cli-deb-2-8-clicustom-deb-2-8-clicentos-deb-2-8-cliimages">Create custom CentOS images</h2>
+
+<p></a></p>
+<p>MAAS already provides the latest available CentOS 6, CentOS 7, and CentOS 8 for automatic download. If you need something else, though, MAAS Image Builder supports the ability to create various CentOS images.</p>
+<h3 id="heading-deb-2-8-cli-deb-2-8-clicentos-deb-2-8-clinw-deb-2-8-clirqmts">Network Requirements</h3>
+
+<p>Access to the Internet is required, since you will need to start with one of these three sites:</p>
+<ol>
+<li>https://mirror.centos.org  -deb-2-8-cli OS, updates, and extra repositories</li>
+<li>https://download.fedoraproject.org  -deb-2-8-cli EPEL</li>
+<li>https://copr-deb-2-8-clibe.cloud.fedoraproject.org -deb-2-8-cli Canonical maintained cloud-deb-2-8-cliinit repository</li>
+</ol>
+<h3 id="heading-deb-2-8-cli-deb-2-8-cliimages-deb-2-8-clibehind-deb-2-8-cliproxy">Creating images behind a proxy</h3>
+
+<p>MAAS Image Builder can create CentOS images behind a proxy &ndash; just set the ‘http_proxy’ environment variable to <em>your</em> particular proxy. Once deployed, <code>yum</code> will use this MAAS-deb-2-8-cliconfigured proxy.</p>
+<h3 id="heading-deb-2-8-cli-deb-2-8-clicentos-deb-2-8-clicreate-deb-2-8-cliimages">Creating the images</h3>
+
+<p><code>maas-deb-2-8-cliimage-deb-2-8-clibuilder</code> is designed to automate the process of generating the images for MAAS and <code>curtin</code>.  Here are some specific examples:</p>
+<pre><code>$ sudo maas-deb-2-8-cliimage-deb-2-8-clibuilder -deb-2-8-clio centos6-deb-2-8-cliamd64-deb-2-8-cliroot-deb-2-8-clitgz -deb-2-8-cli-deb-2-8-cliarch amd64 centos -deb-2-8-cli-deb-2-8-cliedition 6 
+$ sudo maas-deb-2-8-cliimage-deb-2-8-clibuilder -deb-2-8-clio centos6-deb-2-8-clii386-deb-2-8-cliroot-deb-2-8-clitgz -deb-2-8-cli-deb-2-8-cliarch i386 centos -deb-2-8-cli-deb-2-8-cliedition 6
+$ sudo maas-deb-2-8-cliimage-deb-2-8-clibuilder -deb-2-8-clio centos7-deb-2-8-cliamd64-deb-2-8-cliroot-deb-2-8-clitgz -deb-2-8-cli-deb-2-8-cliarch amd64 centos -deb-2-8-cli-deb-2-8-cliedition 7
+</code></pre>
+<h3 id="heading-deb-2-8-cli-deb-2-8-clicentos-deb-2-8-clicustomize-deb-2-8-cliimages">Customising CentOS images</h3>
+
+<p>Starting from MAAS Image Builder 1.0.4, customisation of CentOS images is now supported.  You can provide a custom kickstart, in <em>addition</em> to the kickstart that MAAS Image Builder uses to create the images. You can customise your image like this:</p>
+<pre><code>$ sudo maas-deb-2-8-cliimage-deb-2-8-clibuilder -deb-2-8-clio centos7-deb-2-8-cliamd64-deb-2-8-cliroot-deb-2-8-clitgz -deb-2-8-cli-deb-2-8-cliarch amd64 centos -deb-2-8-cli-deb-2-8-cliedition 7 -deb-2-8-cli-deb-2-8-clicustom-deb-2-8-clikickstart ./custom.ks
+</code></pre>
+<h3 id="heading-deb-2-8-cli-deb-2-8-clicentos-deb-2-8-cliupload-deb-2-8-cliimages">Uploading the image into MAAS</h3>
+
+<p>Custom CentOS images can be uploaded to MAAS as shown in the command below.  <em>Do note</em> that the name <strong>must</strong> start with ‘centos’ and <strong>must</strong> be one line:</p>
+<pre><code>maas admin boot-deb-2-8-cliresources create name=centos/centos6-deb-2-8-clicustom architecture=amd64/generic content@=./build-deb-2-8-clioutput/centos-deb-2-8-cliamd64-deb-2-8-cliroot-deb-2-8-clitgz
+</code></pre>
+<p>You can use the MAAS WebUI to check that your custom CentOS image is valid and selectable for deployment.</p>
+<h2 id="heading-deb-2-8-cli-deb-2-8-clicustom-deb-2-8-clirhel-deb-2-8-cliimages">Building RHEL images</h2>
+
+<p></a></p>
+<p>Currently, MAAS <em>only</em> supports RHEL as a custom image. In future versions of MAAS, RHEL will be natively supported.</p>
+<h3 id="heading-deb-2-8-cli-deb-2-8-clirhel-deb-2-8-clirequirements">Some Requirements</h3>
+
+<p>In order to create RHEL images, you will need access to these three sites:</p>
+<ol>
+<li>A RHEL DVD ISO -deb-2-8-cli Contains all RHEL archives which are not available without a license</li>
+<li>https://download.fedoraproject.org -deb-2-8-cli Access to the EPEL repository to install required deps</li>
+<li>https://copr-deb-2-8-clibe.cloud.fedoraproject.org -deb-2-8-cli Access to the Canonical maintained cloud-deb-2-8-cliinit copr repository</li>
+</ol>
+<h3 id="heading-deb-2-8-cli-deb-2-8-clirhel-deb-2-8-clibehind-deb-2-8-cliproxy">Creating images behind a proxy</h3>
+
+<p>MAAS image builder supports creating RHEL images behind a proxy. To use a proxy when building a RHEL image, just set the ‘http_proxy’ environment variable to <em>your</em> local proxy. Once deployed, <code>yum</code> will use the MAAS-deb-2-8-cliconfigured proxy.</p>
+<h3 id="heading-deb-2-8-cli-deb-2-8-clirhel-deb-2-8-clicreate-deb-2-8-cliimages">Creating the images</h3>
+
+<p>To generate a usable RHEL image, <code>maas-deb-2-8-cliimage-deb-2-8-clibuilder</code> automates image generation; these images can be used by MAAS and <code>curtin</code>.</p>
+<pre><code> $ sudo maas-deb-2-8-cliimage-deb-2-8-clibuilder -deb-2-8-clia amd64 -deb-2-8-clio rhel7-deb-2-8-cliamd64-deb-2-8-cliroot-deb-2-8-clitgz rhel -deb-2-8-cli-deb-2-8-clirhel-deb-2-8-cliiso blah.iso
+</code></pre>
+<h3 id="heading-deb-2-8-cli-deb-2-8-clirhel-deb-2-8-cliinstall">Install into MAAS</h3>
+
+<p>The custom RHEL image can be uploaded to MAAS, but note that the name <strong>must</strong> start with ‘rhel’ and <strong>must</strong> be expressed as a single line, like this:</p>
+<pre><code>maas admin boot-deb-2-8-cliresources create name=rhel/7 title="RedHat Enterprise Linux 7" architecture=amd64/generic content@=rhel7-deb-2-8-cliamd64-deb-2-8-cliroot-deb-2-8-clitgz
+</code></pre>
+<h2 id="heading-deb-2-8-cli-deb-2-8-clicustom-deb-2-8-cliwindows-deb-2-8-cliimages">Building Windows Images</h2>
+
+<p></a></p>
+<p>Since Windows is a proprietary operating system, MAAS can&rsquo;t download these images. You need to manually generate images to use with MAAS.  On the upside, the end result will be much simpler, since there are CLI and WebUI tools to upload a Windows ISO &ndash; which <em>helps</em> automate the process.</p>
+<p><b>Hyper-deb-2-8-cliV 2012 R2</b>
+In this example, Windows Hyper-deb-2-8-cliV 2012 R2 is used, but rest assured that multiple versions are supported. Download the Hyper-deb-2-8-cliV 2012 R2 ISO from Microsoft, so it can be used in the image generation process.  You can obtain the download at:</p>
+<p>http://technet.microsoft.com/en-deb-2-8-cliUS/evalcenter/dn205299.aspx</p>
+<p>There are six other supported versions (for &ndash;windows-deb-2-8-cliedition):</p>
+<ol>
+<li>win2012</li>
+<li>win2012r2</li>
+<li>win2012hv</li>
+<li>win2012hvr2</li>
+<li>win2016</li>
+<li>win2016hv</li>
+</ol>
+<h3 id="heading-deb-2-8-cli-deb-2-8-climib-deb-2-8-cliwindows">Image Builder</h3>
+
+<p>MAAS Image builder can automate the process of generating images for MAAS and <code>curtin</code>.  In this instance,  though, you need Windows drivers for your specific hardware.  You can obtain these windows drivers with the following command:</p>
+<pre><code>sudo maas-deb-2-8-cliimage-deb-2-8-clibuilder -deb-2-8-clio windows-deb-2-8-cliwin2012hvr2-deb-2-8-cliamd64-deb-2-8-cliroot-deb-2-8-clidd  windows \
+-deb-2-8-cli-deb-2-8-cliwindows-deb-2-8-cliiso ~/Downloads/2012hvr2.ISO \
+-deb-2-8-cli-deb-2-8-cliwindows-deb-2-8-cliedition win2012hvr2 [-deb-2-8-cli-deb-2-8-cliwindows-deb-2-8-cliupdates] \
+[-deb-2-8-cli-deb-2-8-cliwindows-deb-2-8-clidrivers &lt;folder/&gt;]  [-deb-2-8-cli-deb-2-8-cliwindows-deb-2-8-clilanguage en-deb-2-8-cliUS]
+</code></pre>
+<p>As an example, consider:</p>
+<pre><code>sudo maas-deb-2-8-cliimage-deb-2-8-clibuilder -deb-2-8-clio windows-deb-2-8-cliwin2012hvr2-deb-2-8-cliamd64-deb-2-8-cliroot-deb-2-8-clidd windows \
+-deb-2-8-cli-deb-2-8-cliwindows-deb-2-8-cliiso win2012hvr2.iso  -deb-2-8-cli-deb-2-8-cliwindows-deb-2-8-cliedition win2012hvr2 \
+-deb-2-8-cli-deb-2-8-cliwindows-deb-2-8-cliupdates -deb-2-8-cli-deb-2-8-cliwindows-deb-2-8-clidrivers ~/Win2012hvr2_x64/DRIVERS/  -deb-2-8-cli-deb-2-8-cliwindows-deb-2-8-clilanguage en-deb-2-8-cliUS
+</code></pre>
+<p>Please note that this will not <em>install</em> any Windows updates. In order to obtain an up-deb-2-8-clito-deb-2-8-clidate image of Windows, be sure provide the <code>&ndash;windows-deb-2-8-cliupdates</code> flag. This requires access to a bridged connection with a DHCP server, an interface that can be specified with <code>-deb-2-8-clii</code>.</p>
+<p>Also note that you may be required to have specific Windows drivers for this image to work in your hardware. Be sure you inject those drivers when installing them. Those drivers are the default <code>*.inf</code> files.</p>
+<h3 id="heading-deb-2-8-cli-deb-2-8-climib-deb-2-8-clidebug-deb-2-8-cliwindows">Debug</h3>
+
+<p>You can debug the Windows installation process by connecting to <code>localhost:5901</code> using a VNC client.</p>
+<h3 id="heading-deb-2-8-cli-deb-2-8-cliwindows-deb-2-8-cliimage-deb-2-8-cliinstall">Install into MAAS</h3>
+
+<p>The generated images need to be placed into the correct directories so MAAS can deploy them onto a node:</p>
+<pre><code>maas admin boot-deb-2-8-cliresources create name=windows/win2012hvr2 \
+architecture=amd64/generic filetype=ddtgz \ 
+content@=./build-deb-2-8-clioutput/windows-deb-2-8-cliwin2012hvr2-deb-2-8-cliamd64-deb-2-8-cliroot-deb-2-8-clidd
+</code></pre>
+<p>Now, using the MAAS WebUI, a node can be selected to use Windows Hyper-deb-2-8-cliV 2012 R2. This selection gets reset when a node is stopped, so make sure to set it <em>before</em> starting nodes. You can also set the default operating system (and release) in the settings menu, which removes the need to set it per-deb-2-8-clinode.</p>
+<h2 id="heading-deb-2-8-cli-deb-2-8-cliother-deb-2-8-clicustom-deb-2-8-cliimages">Dealing with other custom images</h2>
+
+<p></a></p>
+<p>To install other custom images, use the following command sequence:</p>
+<pre><code>maas &lt;user&gt; boot-deb-2-8-cliresources create name=&lt;custom-deb-2-8-cliimage-deb-2-8-clicodename&gt; title="Ubuntu Custom Image" \
+architecture=amd64/generic content@=/location/of/custom/image/ubuntu-deb-2-8-clicustom-deb-2-8-cliroot-deb-2-8-clitgz
+</code></pre>
+<p>As an example:</p>
+<pre><code>maas admin boot-deb-2-8-cliresources create name=custom1 \
+title=”Ubuntu Custom Image” architecture=amd64/generic \
+content@=/home/ubuntu/ubuntu-deb-2-8-clicustom-deb-2-8-cliroot-deb-2-8-clitgz
+</code></pre>
+    </div>
+  </body>
+</html>

@@ -1,12 +1,16 @@
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/tips-tricks-and-traps-snap-2-7-cli/3150) ~ [UI](/t/tips-tricks-and-traps-snap-2-7-ui/3151)|[CLI](/t/tips-tricks-and-traps-snap-2-8-cli/3152) ~ [UI](/t/tips-tricks-and-traps-snap-2-8-ui/3153)|[CLI](/t/tips-tricks-and-traps-snap-2-9-cli/3154) ~ [UI](/t/tips-tricks-and-traps-snap-2-9-ui/3155)|[CLI](/t/tips-tricks-and-traps-snap-3-0-cli/4129) ~ [UI](/t/tips-tricks-and-traps-snap-3-0-ui/4130)|
+Packages|[CLI](/t/tips-tricks-and-traps-deb-2-7-cli/3156) ~ [UI](/t/tips-tricks-and-traps-deb-2-7-ui/3157)|[CLI](/t/tips-tricks-and-traps-deb-2-8-cli/3158) ~ [UI](/t/tips-tricks-and-traps-deb-2-8-ui/3159)|[CLI](/t/tips-tricks-and-traps-deb-2-9-cli/3160) ~ [UI](/t/tips-tricks-and-traps-deb-2-9-ui/3161)|[CLI](/t/tips-tricks-and-traps-deb-3-0-cli/4131) ~ [UI](/t/tips-tricks-and-traps-deb-3-0-ui/4132)|
 This section contains a collection of tips, tricks, and traps which may help solve unusual or infrequent issues that come up.
 
 #### What would you like to do?
 
-1. [Migrate an existing snap installation to use a local PostgreSQL server](/t/tips-tricks-and-traps/1506#heading--migrating-maas)
-2. [Manually export the MAAS database](/t/tips-tricks-and-traps/1506#heading--manual-export)
-3. [Network boot an IBM Power server](/t/tips-tricks-and-traps/1506#heading--ibm-power-server-pxe-boot)
-4. [Eliminate MAAS and LXD DNS & DHCP conflicts](/t/tips-tricks-and-traps/1506#heading--maas-lxd-network-conflicts)
-5. [Try jq recipes using the CLI](/t/tips-tricks-and-traps/1506#heading--jq-machine-list)
+1. [Migrate an existing snap installation to use a local PostgreSQL server](#heading--migrating-maas)
+2. [Manually export the MAAS database](#heading--manual-export)
+3. [Network boot an IBM Power server](#heading--ibm-power-server-pxe-boot)
+4. [Eliminate MAAS and LXD DNS & DHCP conflicts](#heading--maas-lxd-network-conflicts)
+5. [Try jq recipes using the CLI](#heading--jq-machine-list)
 
 <h2 id="heading--migrating-maas">Migrating an existing snap installation</h2>
 
@@ -100,8 +104,3 @@ It's a good idea to keep your most important machine tag first, as it's the firs
      .tag_names[0] // "-", .pool.name,
      .boot_interface.vlan.name, .boot_interface.vlan.fabric,
      .boot_interface.links[0].subnet.name]) | @tsv' | column -t
-
-
-------
-****
-------

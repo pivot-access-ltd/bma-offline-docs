@@ -1,88 +1,9 @@
-<!-- deb-2-7
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-deb-2-7 -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/whats-new-in-maas-snap-2-7-cli/4300) ~ [UI](/t/whats-new-in-maas-snap-2-7-ui/4301)|[CLI](/t/whats-new-in-maas-snap-2-8-cli/4298) ~ [UI](/t/whats-new-in-maas-snap-2-8-ui/4299)|[CLI](/t/whats-new-in-maas-snap-2-9-cli/4296) ~ [UI](/t/whats-new-in-maas-snap-2-9-ui/4297)|[CLI](/t/whats-new-in-maas-snap-3-0-cli/4181) ~ [UI](/t/whats-new-in-maas-snap-3-0-ui/4182)|
+Packages|[CLI](/t/whats-new-in-maas-deb-2-7-cli/4294) ~ [UI](/t/whats-new-in-maas-deb-2-7-ui/4295)|[CLI](/t/whats-new-in-maas-deb-2-8-cli/4292) ~ [UI](/t/whats-new-in-maas-deb-2-8-ui/4293)|[CLI](/t/whats-new-in-maas-deb-2-9-cli/4290) ~ [UI](/t/whats-new-in-maas-deb-2-9-ui/4291)|[CLI](/t/whats-new-in-maas-deb-3-0-cli/4289) ~ [UI](/t/whats-new-in-maas-deb-3-0-ui/4184)|
 
-<!-- snap-2-7
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3335) ~ [UI](/t/whats-new-in-maas/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-snap-2-7 -->
-
-<!-- snap-2-7-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-snap-2-7-ui -->
-
-<!-- deb-2-7-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-deb-2-7-ui -->
-
-<!-- snap-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335) | CLI ~ UI |[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336) |
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335) |CLI ~ UI |[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336) |
-snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-snap-2-8-ui -->
-
-<!-- deb-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~  UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI ~ UI|[CLI](/t/whats-new-in-maas-2-9/3336) ~ [UI](/t/whats-new-in-maas-2-9/3336)|
-deb-2-8-ui -->
-
-<!-- snap-2-9-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~  UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-snap-2-9-ui -->
-
-<!-- deb-2-9-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-|Packages|[CLI](/t/whats-new-in-maas-2-7/3335) ~ [UI](/t/whats-new-in-maas-2-7/3335)|[CLI](/t/whats-new-in-maas-2-8/3334) ~ [UI](/t/whats-new-in-maas-2-8/3334)|CLI ~ UI|
-deb-2-9-ui -->
-
-<!-- snap-2-7 snap-2-7-ui deb-2-7 deb-2-7-ui
+<!-- snap-2-7-cli snap-2-7-ui deb-2-7-cli deb-2-7-ui
 <h2>MAAS 2.7 release notes</h2>
 
 <h3>MAAS 2.7.3 released</h3>
@@ -627,3 +548,91 @@ We've also fixed number of bugs (see the [list in Launchpad](https://bugs.launch
 * **Leftover lock files may be present under some conditions:** Even if you purge an old MAAS Debian package, it can leave lock files in `/run/lock/maas*`.  This can cause issues if you later reinstall MAAS, and the previous MAAS user UID has been reassigned.  At that point, MAAS can't remove those files and create new ones.  If this occurs, it is easily fixed by removing those files manually before reinstalling.
 snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
 
+<!-- snap-3-0-cli snap-3-0-ui deb-3-0-cli deb-3-0-ui
+<h3>MAAS 3.0 BETA release notes</h3>
+
+Following on from MAAS 2.9, we are happy to announce that MAAS 3.0 Beta 1 is now available. This pending release should provide some new features, along with critical bug fixes.
+
+NOTE that this is currently a BETA release, so there will be bugs, instabilities, and missing or incomplete features.  Please remember to [file bugs](https://bugs.launchpad.net/maas/+filebug) as you find them, and please feel free to interact with the developers on [discourse](https://discourse.maas.io/).
+
+<h4>New features in MAAS 3.0 Beta 1</h4>
+
+1. [PCI and USB devices are now modeled in MAAS](#heading--pci-usb-devices)
+2. [IBM Z DPM partition support](#heading--ibm-z-dpm)
+3. [Proxmox support](#heading--proxmox-support)
+4. [LXD projects support](#heading--lxd-projects-support)
+5. [PCI and USB device tabs in machine details](#heading--pci-usb-device-tabs)
+6. [Workload annotations](#heading--workload-annotations)
+7. [Fixed status bar](#heading--fixed-status-bar)
+
+<h2 id="heading--pci-usb-devices">PCI and USB devices are now modeled in MAAS</h2>
+
+MAAS will now model all PCI and USB devices detected during commissioning:
+
+* Existing machines will have to be recommissioned to have PCI and USB devices modeled
+
+* PCI and USB devices are shown in the UI and on the API using the node-devices endpoint
+
+* Node devices may be deleted on the API only
+
+On the API using the allocate operation on the machines endpoint a machine may allocated by a device vendor_id, product_id, vendor_name, product_name, or commissioning_driver.
+
+<h2 id="heading--ibm-z-dpm">IBM Z DPM partition support</h2>
+
+IBM Z14 and above mainframe partitions are now supported.  Note that partitions must use HyperV sockets and properly-defined storage groups.  IBM Z DPM Partitions can be added as a chassis, which allows you to add all partitions in an HMC at once.
+
+<h2 id="heading--proxmox-support">Proxmox support</h2>
+
+MAAS now supports Proxmox as a power driver:
+
+* Only Proxmox VMs are supported
+
+* You may authenticate with Proxmox using a username and password or a username and API token
+
+* If an API token is used, it must be given permission to query, start and stop VMs.
+
+* Proxmox VMs can be added as a chassis; this allows you to add all VMs in Proxmox at once.
+
+Note that proxmox support has also been backported to MAAS 2.9
+
+<h2 id="heading--lxd-projects-support">LXD projects support</h2>
+
+MAAS 3.0 now supports the use of LXD projects:
+
+* LXD VM hosts registered in MAAS are now tied to a specific LXD project which MAAS uses to manage VMs
+
+* MAAS doesn’t create or managemachines for VMs in other projects
+
+* MAAS creates the specified project when the VM host is registered, if it doesn't exist
+
+* All existing VMs in the specified project are commissioned on registration
+
+* Resource usage is reported at both project and global levels
+
+<h2 id="heading--pci-usb-device-tabs">PCI and USB device tabs in UI machine details</h2>
+
+Tables for detected PCI and USB devices have been added to the machine details page:
+
+<a  href="https://discourse.maas.io/uploads/default/original/2X/8/87f42bafe321d45af94d73216f933a9067f01df2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/87f42bafe321d45af94d73216f933a9067f01df2.png"></a>
+
+These tables include a new skeleton loading state while node devices are being fetched:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/4/4faa1d8cd996a25ee5089ada924b405bc8903aa4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/4faa1d8cd996a25ee5089ada924b405bc8903aa4.png"></a>
+
+The user is prompted to commission the machine if no devices are detected.
+
+<h2 id="heading--workload-annotations">Workload annotations</h2>
+
+Workload annotations have been added to the machine summary page.  These allow you to apply `owner_data` to a machine and make it visible while the machine is in allocated or deployed state:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/5/54682ae5f9c7bb449a1ad222679be0156f27d109.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/54682ae5f9c7bb449a1ad222679be0156f27d109.png"></a>
+
+This data is cleared once the machine state changes to something other than "allocated" or "deployed."  The machine list can be filtered by these workload annotations.  MAAS will warn you on the release page to remind you that workload annotations will be cleared upon releasing the machine.
+
+<h2 id="heading--fixed-status-bar">Fixed status bar</h2>
+
+A fixed status bar has been added to the bottom of the screen, which will always display the MAAS name and version on the left.  The right side of the status bar is intended to show contextual data, depending on the UI panel currently displayed. For now, the only data shown is a “last commissioned” timestamp when the user is on a machine details page:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/3/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png"></a>
+
+snap-3-0-cli snap-3-0-ui deb-3-0-cli deb-3-0-ui -->

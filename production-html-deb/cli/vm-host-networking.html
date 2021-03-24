@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.9
+	    What&rsquo;s new in 2.10
 	  </a>
 	</li>
 	<li>
@@ -429,26 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>VM host networking</h1><!-- deb-2-7-cli
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
- snap-2-7-ui -->
+      <h1>VM host networking</h1><!-- begin-rad-menu -->
 
 <!-- snap-2-8-cli
  snap-2-8-cli -->
@@ -462,17 +443,33 @@
 <!-- snap-2-9-ui
  snap-2-9-ui -->
 
+<!-- snap-2-10-cli
+ snap-2-10-cli -->
+
+<!-- snap-2-10-ui
+ snap-2-10-ui -->
+
+<!-- deb-2-8-cli
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- deb-2-10-ui
+ deb-2-10-ui -->
+
+<!-- end-rad-menu -->
+
+<!-- end-rad-menu -->
+
 <p>In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself.  This section explains several ways of accomplishing this.</p>
-<!-- snap-2-7-ui deb-2-7-ui
-#### Four questions you may have:
-
-1. [How do I set up a VM host bridge with the web UI?](#heading--maas-bridge-web-ui)
-2. [How do I set up a VM host bridge with netplan?](#heading--maas-bridge-netplan)
-3. [How do I set up a VM host bridge with libvirt?](#heading--maas-bridge-libvirt)
-4. [How do I set up SSH for use by libvirt?](#heading--set-up-ssh)
- snap-2-7-ui deb-2-7-ui -->
-
-<!-- snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui snap-2-10-ui deb-2-10-ui
 #### Five questions you may have:
 
 1. [How do I set up a VM host bridge with the web UI?](#heading--maas-bridge-web-ui)
@@ -482,16 +479,7 @@
 5. [How do I make LXD available for hosting?](#heading--lxd-setup)
 
 Note that LXD sets up a bridge as part of the [initialization process](#heading--lxd-setup), so you shouldn't have to worry about explicitly setting up networks if you're using an LXD VM host.
- snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui -->
-
-<!-- snap-2-7-cli deb-2-7-cli 
-#### Four questions you may have:
-
-1. [How do I set up a VM host bridge with the MAAS CLI/API?](#heading--maas-bridge-cli)
-2. [How do I set up a VM host bridge with netplan?](#heading--maas-bridge-netplan)
-3. [How do I set up a VM host bridge with libvirt?](#heading--maas-bridge-libvirt)
-4. [How do I set up SSH for use by libvirt?](#heading--set-up-ssh)
- snap-2-7-cli deb-2-7-cli -->
+ snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui snap-2-10-ui deb-2-10-ui -->
 
 <h4>Five questions you may have:</h4>
 <ol>
@@ -505,7 +493,7 @@ Note that LXD sets up a bridge as part of the [initialization process](#heading-
 <p>To enable VM host networking features, MAAS must match the VM host IP address of a potential VM host with a known device (a machine or controller). For example, if a machine not known to MAAS is set up as a VM host, enhanced interface selection features will not be available.</p>
 <p><strong>NOTE:</strong> 
 It&rsquo;s essential to enforce usage of IP addresses to avoid domain name conflicts, should different controllers resolve the same domain name with different IP addresses. You should also avoid using 127.0.0.1 when running multiple controllers, as it would confuse MAAS.</p>
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
 <a href="#heading--maas-bridge-web-ui"><h2 id="heading--maas-bridge-web-ui">Set up VM host bridge with MAAS UI</h2></a>
 
 You can use the MAAS UI to configure a bridge to connect a VM host to MAAS:
@@ -524,7 +512,7 @@ When you're done, it should look something like this:
 
 Then you can deploy Ubuntu.
 
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
 
 <p><a href="#heading--maas-bridge-cli"><h2 id="heading--maas-bridge-cli">Use the MAAS API to configure a bridge</h2></a></p>
 <p>You can also use the MAAS CLI/API to configure a VM host bridge, with the following procedure:</p>
@@ -633,7 +621,7 @@ root@maas:~$ ssh-keygen -f id_rsa
 </code></pre>
 
 <p>Next, add the contents of <code>~maas/.ssh/id_rsa.pub</code> to the VM host user&rsquo;s <code>~$USER/.ssh/authorized_keys</code>. To accomplish this, log into your VM host node, via SSH, from a host for which MAAS has a matching public SSH key.</p>
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
+<!-- snap-2-10-ui snap-2-10-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 <a href="#heading--set-up-ssah-lv"><h3 id="heading--set-up-ssah-lv">Set up SSH (libvirt only)</h3></a>
 
 If you installed MAAS via snap, then create the needed SSH keys this way:
@@ -646,7 +634,7 @@ sudo ssh-keygen -f id_rsa
 
 
 Finally, you'll need to add `id_rsa.pub` to the `authorized_keys` file in `/home/<vm-host-user-homedir-name>/.ssh/`,  where `<vm-host-user-homedir-name>` is the name of your VM host user.
- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
+ snap-2-10-ui snap-2-10-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
 
 <p><a href="#heading--lxd-setup"><h2 id="heading--lxd-setup">Make LXD available for VM hosting (Beta)</h2></a></p>
 <p>Assuming that you want to use LXD VM hosts &ndash;currently a Beta feature &ndash; you need to install the correct version of LXD. Prior to the release of Ubuntu 20.04 LXD was installed using Debian packages. The Debian packaged version of LXD is too old to use with MAAS. If this is the case, you’ll need to remove the LXD Debian packages and install the Snap version.  Note that you cannot install both Debian and snap versions, as this creates a conflict.</p>
@@ -828,56 +816,7 @@ Would you like stale cached images to be updated automatically? (yes/no) [defaul
 Would you like a YAML &quot;lxd init&quot; preseed to be printed? (yes/no) [default=no]:
 </code></pre>
 
-<p>After initialising LXD, you will also want to make sure that LXD is not trying to provide DHCP for the new local network bridge.  You can check this with the following command:</p>
-<pre><code>lxc network show lxdbr0
-</code></pre>
-
-<p>If you didn&rsquo;t accept the default bridge name (lxdbr0), substitute your name for that new bridge in the command above. This will produce output something like this:</p>
-<pre><code>config:
-  dns.mode: managed
-  ipv4.address: 10.146.214.1/24
-  ipv4.dhcp: &quot;true&quot;
-  ipv4.nat: &quot;true&quot;
-  ipv6.address: fd42:c560:ee59:bb2::1/64
-  ipv6.dhcp: &quot;true&quot;
-  ipv6.nat: &quot;true&quot;
-description: &quot;&quot;
-name: lxdbr0
-type: bridge
-used_by:
-- /1.0/profiles/default
-managed: true
-status: Created
-locations:
-- none
-</code></pre>
-
-<p>There is a <a href="https://github.com/lxc/lxd/blob/master/doc/networks.md">quick tutorial</a> on the possible settings here.  For simplicity, to turn off LXD-provided DHCP, you need to change three settings, as follows:</p>
-<pre><code>lxc network set lxdbr0 dns.mode=none
-lxc network set lxdbr0 ipv4.dhcp=false
-lxc network set lxdbr0 ipv6.dhcp=false
-</code></pre>
-
-<p>You can check your work by repeating the <code>show</code> command:</p>
-<pre><code>$ lxc network show lxdbr0
-config:
-  dns.mode: none
-  ipv4.address: 10.146.214.1/24
-  ipv4.dhcp: &quot;false&quot;
-  ipv4.nat: &quot;true&quot;
-  ipv6.address: fd42:c560:ee59:bb2::1/64
-  ipv6.dhcp: &quot;false&quot;
-  ipv6.nat: &quot;true&quot;
-description: &quot;&quot;
-name: lxdbr0
-type: bridge
-used_by:
-- /1.0/profiles/default
-managed: true
-status: Created
-locations:
-- none
-</code></pre>
+<!-- You usually need to reboot to bring up the network between localhost and LXD. -->
 
 <p>Once that&rsquo;s done, the LXD host is now ready to be added to MAAS as an LXD VM host. Upon adding the VM host, its own commissioning information will be refreshed.</p>
 <p>When composing a virtual machine with LXD, MAAS uses either the &lsquo;maas&rsquo; LXD profile, or (if that doesn&rsquo;t exist) the &lsquo;default&rsquo; LXD profile. The profile is used to determine which bridge to use. Users may also add additional LXD options to the profile which are not yet supported in MAAS.</p>

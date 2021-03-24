@@ -1,86 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|CLI ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ UI|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|CLI ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ UI|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|CLI ~ [UI](/t/hardware-testing/2681)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ UI|
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ UI|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|CLI ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ UI|[CLI](/t/hardware-testing/2674) ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|CLI ~ [UI](/t/hardware-testing/2675)|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardware-testing/2670) ~ [UI](/t/hardware-testing/2671)|[CLI](/t/hardware-testing/2672) ~ [UI](/t/hardware-testing/2673)|[CLI](/t/hardware-testing/2674) ~ UI|
-|Packages|[CLI](/t/hardware-testing/2676) ~ [UI](/t/hardware-testing/2677)|[CLI](/t/hardware-testing/2678) ~ [UI](/t/hardware-testing/2679)|[CLI](/t/hardware-testing/2680) ~ [UI](/t/hardware-testing/2681)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/hardware-testing-snap-2-7-cli/2670) ~ [UI](/t/hardware-testing-snap-2-7-ui/2671)|[CLI](/t/hardware-testing-snap-2-8-cli/2672) ~ [UI](/t/hardware-testing-snap-2-8-ui/2673)|[CLI](/t/hardware-testing-snap-2-9-cli/2674) ~ [UI](/t/hardware-testing-snap-2-9-ui/2675)|[CLI](/t/hardware-testing-snap-3-0-cli/3941) ~ [UI](/t/hardware-testing-snap-3-0-ui/3942)|
+Packages|[CLI](/t/hardware-testing-deb-2-7-cli/2676) ~ [UI](/t/hardware-testing-deb-2-7-ui/2677)|[CLI](/t/hardware-testing-deb-2-8-cli/2678) ~ [UI](/t/hardware-testing-deb-2-8-ui/2679)|[CLI](/t/hardware-testing-deb-2-9-cli/2680) ~ [UI](/t/hardware-testing-deb-2-9-ui/2681)|[CLI](/t/hardware-testing-deb-3-0-cli/3943) ~ [UI](/t/hardware-testing-deb-3-0-ui/3944)|
 
 If you wish, you can tell MAAS to test machine hardware using well-known Linux utilities.  MAAS can test machines that have  a status of **Ready**, **Broken**, or **Deployed**.  You can include testing as part of the commissioning process. When you choose the 'Commission' action, MAAS will display the dialog described below.  Be aware, though, that if the hardware tests fail, the machine will become unavailable for Deployment.
 
@@ -88,17 +9,16 @@ If you wish, you can tell MAAS to test machine hardware using well-known Linux u
 The majority of testing scripts only work with machines that are backed by physical hardware (e.g. they may be incompatible with VM-based machines).
 [/note]
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 With MAAS, you can easily write, upload and execute your hardware testing scripts and see the results.
 
-#### Four questions you may have:
+#### Three questions you may have:
 
-1. [How do I upload and manage test scripts?](/t/cli-commissioning-and-hardware-testing-scripts/832#heading--script-management)
-2. [How do I use tags to help with test scripts?](/t/cli-commissioning-and-hardware-testing-scripts/832#heading--tags)
-3. [How do I view test results?](/t/cli-commissioning-and-hardware-testing-scripts/832#heading--results)
-4. [What metadata fields are available to me for test scripts?](/t/commissioning-and-hardware-testing-scripts/833#heading--metadata-fields)
+1. [How do I upload hardware test scripts?](#heading--upload-test-scripts)
+2. [How do I use tags to help with hardware test scripts?](#heading--tags)
+3. [How do I view test results?](#heading--results)
 
-<a href="#heading--script-management"><h2 id="heading--script-management">Script management</h2></a>
+<a href="#heading--upload-test-scripts"><h2 id="heading--upload-test-scripts">Uploading hardware test scripts</h2></a>
 
 To upload a hardware testing script to MAAS, enter the following:
 
@@ -117,7 +37,7 @@ maas $PROFILE node-scripts read type=testing filters=$TAG
 
 The optional filters argument lets you search for tags assigned to a script, such as using `TAG=cpu` with the above example.
 
-A [script's metadata](/t/commissioning-and-hardware-testing-scripts/833#hardware-test-script-sample), and even the script itself, can be updated from the command line:
+A script's metadata, and even the script itself, can be updated from the command line:
 
 ``` bash
 maas $PROFILE node-script update \
@@ -165,7 +85,7 @@ maas $PROFILE node-script delete $SCRIPT_NAME
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
-As with general [tag management](/t/cli-tag-management/801), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+Tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
 
 ``` bash
 maas $PROFILE node-script add-tag $SCRIPT_NAME tag=$TAG
@@ -260,10 +180,10 @@ maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
 [note]
 **$RUN_ID** is labelled `id` in the verbose result output.
 [/note]
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
 
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 #### Two questions you may have: 
 
 1. [How do I apply a hardware test?](#heading--apply-a-hardware-test)
@@ -370,7 +290,7 @@ The following hardware testing scripts can be selected from the web UI:
 After either commissioning, testing, or installation has started, MAAS reports in real-time which script is running.
 
 You can access the verbatim output from any test by selecting a machine, selecting the 'Hardware tests' page and clicking on the 'Log view' link in the 'Results' column for the specific test.
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 
 <!-- deb-2-7-cli
 See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2484) for more details on how these scripts work and how you can write your own.
@@ -396,6 +316,14 @@ See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-t
 See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2489) for more details on how these scripts work and how you can write your own.
  deb-2-9-ui -->
 
+<!-- deb-3-0-cli
+See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/3867) for more details on how these scripts work and how you can write your own.
+ deb-3-0-cli -->
+
+<!-- deb-3-0-ui
+See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/3868) for more details on how these scripts work and how you can write your own.
+ deb-3-0-ui -->
+
 <!-- snap-2-7-cli
 See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2478) for more details on how these scripts work and how you can write your own.
  snap-2-7-cli -->
@@ -420,7 +348,10 @@ See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-t
 See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2483) for more details on how these scripts work and how you can write your own.
  snap-2-9-ui -->
 
+<!-- snap-3-0-cli
+See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/3865) for more details on how these scripts work and how you can write your own.
+ snap-3-0-cli -->
 
-------
-****
-------
+<!-- snap-3-0-ui
+See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/3866) for more details on how these scripts work and how you can write your own.
+ snap-3-0-ui -->

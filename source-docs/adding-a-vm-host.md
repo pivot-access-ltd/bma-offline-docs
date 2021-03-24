@@ -1,86 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host/2286) ~ [UI](/t/adding-a-vm-host/2287)|[CLI](/t/adding-a-vm-host/2288) ~ [UI](/t/adding-a-vm-host/2289)|[CLI](/t/adding-a-vm-host/2290) ~ [UI](/t/adding-a-vm-host/2291)|
-|Packages|CLI ~ [UI](/t/adding-a-vm-host/2293)|[CLI](/t/adding-a-vm-host/2294) ~ [UI](/t/adding-a-vm-host/2295)|[CLI](/t/adding-a-vm-host/2296) ~ [UI](/t/adding-a-vm-host/2297)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host/2286) ~ [UI](/t/adding-a-vm-host/2287)|[CLI](/t/adding-a-vm-host/2288) ~ [UI](/t/adding-a-vm-host/2289)|[CLI](/t/adding-a-vm-host/2290) ~ [UI](/t/adding-a-vm-host/2291)|
-|Packages|[CLI](/t/adding-a-vm-host/2292) ~ UI|[CLI](/t/adding-a-vm-host/2294) ~ [UI](/t/adding-a-vm-host/2295)|[CLI](/t/adding-a-vm-host/2296) ~ [UI](/t/adding-a-vm-host/2297)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host/2286) ~ [UI](/t/adding-a-vm-host/2287)|[CLI](/t/adding-a-vm-host/2288) ~ [UI](/t/adding-a-vm-host/2289)|[CLI](/t/adding-a-vm-host/2290) ~ [UI](/t/adding-a-vm-host/2291)|
-|Packages|[CLI](/t/adding-a-vm-host/2292) ~ [UI](/t/adding-a-vm-host/2293)|CLI ~ [UI](/t/adding-a-vm-host/2295)|[CLI](/t/adding-a-vm-host/2296) ~ [UI](/t/adding-a-vm-host/2297)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host/2286) ~ [UI](/t/adding-a-vm-host/2287)|[CLI](/t/adding-a-vm-host/2288) ~ [UI](/t/adding-a-vm-host/2289)|[CLI](/t/adding-a-vm-host/2290) ~ [UI](/t/adding-a-vm-host/2291)|
-|Packages|[CLI](/t/adding-a-vm-host/2292) ~ [UI](/t/adding-a-vm-host/2293)|[CLI](/t/adding-a-vm-host/2294) ~ UI|[CLI](/t/adding-a-vm-host/2296) ~ [UI](/t/adding-a-vm-host/2297)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host/2286) ~ [UI](/t/adding-a-vm-host/2287)|[CLI](/t/adding-a-vm-host/2288) ~ [UI](/t/adding-a-vm-host/2289)|[CLI](/t/adding-a-vm-host/2290) ~ [UI](/t/adding-a-vm-host/2291)|
-|Packages|[CLI](/t/adding-a-vm-host/2292) ~ [UI](/t/adding-a-vm-host/2293)|[CLI](/t/adding-a-vm-host/2294) ~ [UI](/t/adding-a-vm-host/2295)|CLI ~ [UI](/t/adding-a-vm-host/2297)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host/2286) ~ [UI](/t/adding-a-vm-host/2287)|[CLI](/t/adding-a-vm-host/2288) ~ [UI](/t/adding-a-vm-host/2289)|[CLI](/t/adding-a-vm-host/2290) ~ [UI](/t/adding-a-vm-host/2291)|
-|Packages|[CLI](/t/adding-a-vm-host/2292) ~ [UI](/t/adding-a-vm-host/2293)|[CLI](/t/adding-a-vm-host/2294) ~ [UI](/t/adding-a-vm-host/2295)|[CLI](/t/adding-a-vm-host/2296) ~ UI|
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/adding-a-vm-host/2287)|[CLI](/t/adding-a-vm-host/2288) ~ [UI](/t/adding-a-vm-host/2289)|[CLI](/t/adding-a-vm-host/2290) ~ [UI](/t/adding-a-vm-host/2291)|
-|Packages|[CLI](/t/adding-a-vm-host/2292) ~ [UI](/t/adding-a-vm-host/2293)|[CLI](/t/adding-a-vm-host/2294) ~ [UI](/t/adding-a-vm-host/2295)|[CLI](/t/adding-a-vm-host/2296) ~ [UI](/t/adding-a-vm-host/2297)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host/2286) ~ UI|[CLI](/t/adding-a-vm-host/2288) ~ [UI](/t/adding-a-vm-host/2289)|[CLI](/t/adding-a-vm-host/2290) ~ [UI](/t/adding-a-vm-host/2291)|
-|Packages|[CLI](/t/adding-a-vm-host/2292) ~ [UI](/t/adding-a-vm-host/2293)|[CLI](/t/adding-a-vm-host/2294) ~ [UI](/t/adding-a-vm-host/2295)|[CLI](/t/adding-a-vm-host/2296) ~ [UI](/t/adding-a-vm-host/2297)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host/2286) ~ [UI](/t/adding-a-vm-host/2287)|CLI ~ [UI](/t/adding-a-vm-host/2289)|[CLI](/t/adding-a-vm-host/2290) ~ [UI](/t/adding-a-vm-host/2291)|
-|Packages|[CLI](/t/adding-a-vm-host/2292) ~ [UI](/t/adding-a-vm-host/2293)|[CLI](/t/adding-a-vm-host/2294) ~ [UI](/t/adding-a-vm-host/2295)|[CLI](/t/adding-a-vm-host/2296) ~ [UI](/t/adding-a-vm-host/2297)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host/2286) ~ [UI](/t/adding-a-vm-host/2287)|[CLI](/t/adding-a-vm-host/2288) ~ UI|[CLI](/t/adding-a-vm-host/2290) ~ [UI](/t/adding-a-vm-host/2291)|
-|Packages|[CLI](/t/adding-a-vm-host/2292) ~ [UI](/t/adding-a-vm-host/2293)|[CLI](/t/adding-a-vm-host/2294) ~ [UI](/t/adding-a-vm-host/2295)|[CLI](/t/adding-a-vm-host/2296) ~ [UI](/t/adding-a-vm-host/2297)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host/2286) ~ [UI](/t/adding-a-vm-host/2287)|[CLI](/t/adding-a-vm-host/2288) ~ [UI](/t/adding-a-vm-host/2289)|CLI ~ [UI](/t/adding-a-vm-host/2291)|
-|Packages|[CLI](/t/adding-a-vm-host/2292) ~ [UI](/t/adding-a-vm-host/2293)|[CLI](/t/adding-a-vm-host/2294) ~ [UI](/t/adding-a-vm-host/2295)|[CLI](/t/adding-a-vm-host/2296) ~ [UI](/t/adding-a-vm-host/2297)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/adding-a-vm-host/2286) ~ [UI](/t/adding-a-vm-host/2287)|[CLI](/t/adding-a-vm-host/2288) ~ [UI](/t/adding-a-vm-host/2289)|[CLI](/t/adding-a-vm-host/2290) ~ UI|
-|Packages|[CLI](/t/adding-a-vm-host/2292) ~ [UI](/t/adding-a-vm-host/2293)|[CLI](/t/adding-a-vm-host/2294) ~ [UI](/t/adding-a-vm-host/2295)|[CLI](/t/adding-a-vm-host/2296) ~ [UI](/t/adding-a-vm-host/2297)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/adding-a-vm-host-snap-2-7-cli/2286) ~ [UI](/t/adding-a-vm-host-snap-2-7-ui/2287)|[CLI](/t/adding-a-vm-host-snap-2-8-cli/2288) ~ [UI](/t/adding-a-vm-host-snap-2-8-ui/2289)|[CLI](/t/adding-a-vm-host-snap-2-9-cli/2290) ~ [UI](/t/adding-a-vm-host-snap-2-9-ui/2291)|[CLI](/t/adding-a-vm-host-snap-3-0-cli/3817) ~ [UI](/t/adding-a-vm-host-snap-3-0-ui/3818)|
+Packages|[CLI](/t/adding-a-vm-host-deb-2-7-cli/2292) ~ [UI](/t/adding-a-vm-host-deb-2-7-ui/2293)|[CLI](/t/adding-a-vm-host-deb-2-8-cli/2294) ~ [UI](/t/adding-a-vm-host-deb-2-8-ui/2295)|[CLI](/t/adding-a-vm-host-deb-2-9-cli/2296) ~ [UI](/t/adding-a-vm-host-deb-2-9-ui/2297)|[CLI](/t/adding-a-vm-host-deb-3-0-cli/3819) ~ [UI](/t/adding-a-vm-host-deb-3-0-ui/3820)|
 
 A VM host is simply a machine which can run virtual machines (VMs) by allocating  resources across the VMs you want to create.  If needed, you can over-commit resources, allocating more resources than actually available, so long as you don't try to use more than the VM host has available at any one time. Once MAAS has enlisted, commissioned, and acquired a newly-added machine, you can deploy it as a VM host.  Alternatively, you can create a VM host from a machine you've already got running.
 
@@ -362,15 +283,13 @@ maas admin vm-hosts read | jq -r '(["ID, "VM-HOST","SYSID","CORES",
 | @tsv' | column -t
 ```
 
-This command is in the [CLI cookbook](/t/the-cli-cookbook/2218) as [lsvmh](/t/the-cli-cookbook/2218#heading--vm-host-list)
-
 <a href="#heading--list-config-params"><h3 id="heading--list-config-params">List configurable VM host parameters</h3></a>
 
 There are just a few parameters that you can change for a VM host.  You can list these, on a per-host basis, using the following two-step procedure:
 
-1. Run the command above[lsvmh](/t/the-cli-cookbook/2218#heading--vm-host-list)) to get the VM host ID (different from the System ID, see the first column in the listing).
+1. Run the command above to get the VM host ID (different from the System ID, see the first column in the listing).
 
-2. Enter the following command ([lsvmhc](/t/the-cli-cookbook/2218#heading--vm-host-config) to list configurable parameters:
+2. Enter the following command to list configurable parameters:
 
 ```
 maas admin vm-host read $ID | jq -r '(["ID","NAME","POOL","ZONE",
@@ -395,8 +314,6 @@ maas admin vm-host read $ID | jq -r '(["ID","NAME"]
 | @tsv' | column -t
 ```
 
-You can find this script at [catvmname](/t/the-cli-cookbook-2218#heading--jq-check-vm-host-name).
-
 <a href="#heading--change-vm-host-pool"><h3 id="heading--change-vm-host-pool">Change the VM host's pool</h3></a>
 
 You can also change the VM host's pool with a simple command:
@@ -408,8 +325,6 @@ where $ID is the VM host's ID (not System ID), and $VALID_POOL is the name of a 
 ```
 {"pool": ["Select a valid choice. That choice is not one of the available choices."]}
 ```
-
-If you want to see the available choices, you can list pools with [catvmpool](/t/the-cli-cookbook-2218#heading--list-pools):
 
     maas admin resource-pools read | jq -r '.[] | (.name)'
 
@@ -436,8 +351,3 @@ The following shows four theoretical examples of these ratios and how they affec
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 Over-committing resources allows a user to compose many MAAS-managed machines without worrying about the physical limitations of the host. For example, on a physical host with four cores and 12 GB of memory, you could compose four libvirt machines, each using two cores and 4 GB of memory.  This arrangement over commits the available physical resources. Provided you never run all four VMs simultaneously, you would have all the benefits of MAAS-managed VMs without over-taxing your host.
-
-
-------
-****
-------

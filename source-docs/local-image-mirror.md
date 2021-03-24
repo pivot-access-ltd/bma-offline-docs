@@ -1,86 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|CLI ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ UI|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|CLI ~ [UI](/t/local-image-mirror/2811) |[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ UI|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|CLI ~ [UI](/t/local-image-mirror/2813)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812)~ UI|
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/local-image-mirror/2803) |[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ UI|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|CLI ~ [UI](/t/local-image-mirror/2805) |[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ UI |[CLI](/t/local-image-mirror/2806) ~ [UI](/t/local-image-mirror/2807)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|CLI ~ [UI](/t/local-image-mirror/2806)|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/local-image-mirror/2802) ~ [UI](/t/local-image-mirror/2803)|[CLI](/t/local-image-mirror/2804) ~ [UI](/t/local-image-mirror/2805)|[CLI](/t/local-image-mirror/2805) ~ UI|
-|Packages|[CLI](/t/local-image-mirror/2808) ~ [UI](/t/local-image-mirror/2809)|[CLI](/t/local-image-mirror/2810) ~ [UI](/t/local-image-mirror/2811)|[CLI](/t/local-image-mirror/2812) ~ [UI](/t/local-image-mirror/2813)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/local-image-mirror-snap-2-7-cli/2802) ~ [UI](/t/local-image-mirror-snap-2-7-ui/2803)|[CLI](/t/local-image-mirror-snap-2-8-cli/2804) ~ [UI](/t/local-image-mirror-snap-2-8-ui/2805)|[CLI](/t/local-image-mirror-snap-2-9-cli/2806) ~ [UI](/t/local-image-mirror-snap-2-9-ui/2807)|[CLI](/t/local-image-mirror-snap-3-0-cli/3981) ~ [UI](/t/local-image-mirror-snap-3-0-ui/3982)|
+Packages|[CLI](/t/local-image-mirror-deb-2-7-cli/2808) ~ [UI](/t/local-image-mirror-deb-2-7-ui/2809)|[CLI](/t/local-image-mirror-deb-2-8-cli/2810) ~ [UI](/t/local-image-mirror-deb-2-8-ui/2811)|[CLI](/t/local-image-mirror-deb-2-9-cli/2812) ~ [UI](/t/local-image-mirror-deb-2-9-ui/2813)|[CLI](/t/local-image-mirror-deb-3-0-cli/3983) ~ [UI](/t/local-image-mirror-deb-3-0-ui/3984)|
 
 Mirroring images is worthy of consideration.  The SimpleStreams protocol delivers Images to MAAS, which is especially useful when your Internet link is slow or unreliable. In this mirrored configuration, images will be instantly available when MAAS requests them.
 
@@ -164,7 +85,3 @@ Verify the availability of the images by visiting the above URL.
 
 The final `sstream-mirror` command should be invoked at regular intervals (i.e. with `cron`) to ensure the mirror contains the latest images.
 
-
-------
-****
-------

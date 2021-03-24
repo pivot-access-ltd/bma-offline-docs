@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="../maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.9
+	    What&rsquo;s new in 2.10
 	  </a>
 	</li>
 	<li>
@@ -429,26 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Ubuntu kernels</h1><!-- deb-2-7-cli
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
- deb-2-9-cli -->
-
-<!-- snap-2-7-cli
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
- snap-2-7-ui -->
+      <h1>Ubuntu kernels</h1><!-- begin-rad-menu -->
 
 <!-- snap-2-8-cli
  snap-2-8-cli -->
@@ -461,6 +442,31 @@
 
 <!-- snap-2-9-ui
  snap-2-9-ui -->
+
+<!-- snap-2-10-cli
+ snap-2-10-cli -->
+
+<!-- snap-2-10-ui
+ snap-2-10-ui -->
+
+<!-- deb-2-8-cli
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- deb-2-10-cli
+ deb-2-10-cli -->
+
+<!-- end-rad-menu -->
+
+<!-- end-rad-menu -->
 
 <p>MAAS supports four types of kernels for its Ubuntu machines:</p>
 <ol>
@@ -523,7 +529,7 @@ There is the notion of an HWE <em>stack</em>, which refers to the window manager
 <p>To set a specific kernel during deployment, select a machine from the &lsquo;Machines&rsquo; page and choose &lsquo;Deploy&rsquo; under &lsquo;Take action&rsquo;. Then choose a kernel from the (third) kernel field. Hit &lsquo;Deploy machine&rsquo; to initiate the deployment.</p>
 <p><a href="images/0d25737f-nodes-kernels__2.6-machine-during-deploy-kernel.png" target = "_blank"><img src="images/0d25737f-nodes-kernels__2.6-machine-during-deploy-kernel.png"></a></a></p>
 <p>MAAS verifies that the specified kernel is available for the given Ubuntu release (series) before deploying the machine.</p>
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli
 <a href="#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning"><h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2></a>
 
 To set a default minimum kernel for all new and commissioned machines:
@@ -585,10 +591,7 @@ For example, to deploy a Xenial node with the HWE 16.04 edge kernel:
 <strong>NOTE:</strong> 
 The command option `hwe_kernel` appears to apply to only HWE kernels but this is not the case.
 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
-
-<hr>
-<h2>****</h2>
+snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli -->
     </div>
   </body>
 </html>

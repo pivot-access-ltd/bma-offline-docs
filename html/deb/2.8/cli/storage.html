@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-deb-2-8-clileft:0;list-deb-2-8-clistyle-deb-2-8-clitype:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-deb-2-8-clicolor:#d9d9d9; width:100%;border-deb-2-8-clibottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/storage.html">
+	  &nbsp;UI-deb-2-8-clionly&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-deb-2-8-clicolor:white;border-deb-2-8-clitop:1px solid black; border-deb-2-8-clileft:1px solid black; border-deb-2-8-cliright:1px solid black; border-deb-2-8-clibottom:5px solid white;">
+	  CLI-deb-2-8-clionly
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-deb-2-8-clitop:40px; margin-deb-2-8-clileft:20px">
+      <strong>
+	<a href="maas-deb-2-8-clidocumentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-deb-2-8-climaas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clirequirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-cliinstallation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-deb-2-8-clijourney.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-deb-2-8-clicommunication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-deb-2-8-clicontrollers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-deb-2-8-clicontrollers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-deb-2-8-cliavailability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-deb-2-8-climachines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-deb-2-8-climanagement.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-deb-2-8-climachines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-deb-2-8-clitesting.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clitesting.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-deb-2-8-climachines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clitags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-deb-2-8-climachine-deb-2-8-clisetup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-deb-2-8-cliboot-deb-2-8-clioptions.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-deb-2-8-clipools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-clivmfs-deb-2-8-clidatastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-deb-2-8-clikernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-deb-2-8-cliand-deb-2-8-cliimport-deb-2-8-cliimages.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-deb-2-8-cliimage-deb-2-8-climirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-cliimages.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-deb-2-8-climanagement.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clidhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-deb-2-8-cliranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-deb-2-8-cliservices.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clidiscovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-deb-2-8-cliaddressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-deb-2-8-clitls-deb-2-8-cliencryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clistp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-deb-2-8-clizones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-deb-2-8-clihosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clinetworking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clistorage-deb-2-8-clipools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-deb-2-8-cliand-deb-2-8-clideleting-deb-2-8-clivms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-deb-2-8-climetrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-deb-2-8-cliyour-deb-2-8-climaas-deb-2-8-cliinstallation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clilogging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-clilogs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-deb-2-8-cliaccounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-deb-2-8-clisearch.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-clinetwork-deb-2-8-clitutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-deb-2-8-clicli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-deb-2-8-clievent-deb-2-8-clilogs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clikernel-deb-2-8-climanagement.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliimage-deb-2-8-climanagement.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliinterface-deb-2-8-climanagement.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliadvanced-deb-2-8-clitasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clicomposable-deb-2-8-clihardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-deb-2-8-cliapi-deb-2-8-cliclient.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-deb-2-8-cliauthentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-deb-2-8-clihelp.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-deb-2-8-clitricks-deb-2-8-cliand-deb-2-8-clitraps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-deb-2-8-clidocs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-deb-2-8-cliguide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-deb-2-8-clitop:40px; margin-deb-2-8-cliright:30px">
+      <h1>Storage</h1><!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>You have significant latitude when choosing the final storage configuration of a deployed machine. MAAS supports traditional disk partitioning, as well as more complex options such as LVM, RAID, and bcache. MAAS also supports UEFI as a boot mechanism.  This article explains boot mechanisms and layouts, and offers some advice on how to configure layouts and manage storage.</p>
+<h4>Six questions you may have:</h4>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+1. [How does UEFI booting work?](#heading-deb-2-8-cli-deb-2-8-cliuefi)
+2. [What kind of storage layouts are available?](#heading-deb-2-8-cli-deb-2-8-clilayouts)
+3. [How do I set global storage layouts?](#heading-deb-2-8-cli-deb-2-8-clisetting-deb-2-8-cliglobal-deb-2-8-clilayouts)
+4. [How do I set per-deb-2-8-climachine storage layouts?](#heading-deb-2-8-cli-deb-2-8-cliper-deb-2-8-climachine-deb-2-8-clilayouts)
+5. [What storage modifications can I make at the filesystem level?](#heading-deb-2-8-cli-deb-2-8-clifinal-deb-2-8-clistorage-deb-2-8-climodifications)
+6. [How can I erase a disk?](disk-deb-2-8-clierasure.html)
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+1. [How does UEFI booting work?](#heading-deb-2-8-cli-deb-2-8-cliuefi)
+2. [What kind of storage layouts are available?](#heading-deb-2-8-cli-deb-2-8-clilayouts)
+3. [How do I set global storage layouts?](#heading-deb-2-8-cli-deb-2-8-clisetting-deb-2-8-cliglobal-deb-2-8-clilayouts)
+4. [How do I set per-deb-2-8-climachine storage layouts?](#heading-deb-2-8-cli-deb-2-8-cliper-deb-2-8-climachine-deb-2-8-clilayouts)
+5. [What storage modifications can I make at the filesystem level?](#heading-deb-2-8-cli-deb-2-8-clifinal-deb-2-8-clistorage-deb-2-8-climodifications)
+6. [How can I erase a disk?](disk-deb-2-8-clierasure.html)
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<ol>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-cliuefi">How does UEFI booting work?</a></li>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-clilayouts">What kind of storage layouts are available?</a></li>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-clisetting-deb-2-8-cliglobal-deb-2-8-clilayouts">How do I set global storage layouts?</a></li>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-cliper-deb-2-8-climachine-deb-2-8-clilayouts">How do I set per-deb-2-8-climachine storage layouts?</a></li>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-clifinal-deb-2-8-clistorage-deb-2-8-climodifications">What storage modifications can I make at the filesystem level?</a></li>
+<li><a href="disk-deb-2-8-clierasure.html">How can I erase a disk?</a></li>
+</ol>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+1. [How does UEFI booting work?](#heading-deb-2-8-cli-deb-2-8-cliuefi)
+2. [What kind of storage layouts are available?](#heading-deb-2-8-cli-deb-2-8-clilayouts)
+3. [How do I set global storage layouts?](#heading-deb-2-8-cli-deb-2-8-clisetting-deb-2-8-cliglobal-deb-2-8-clilayouts)
+4. [How do I set per-deb-2-8-climachine storage layouts?](#heading-deb-2-8-cli-deb-2-8-cliper-deb-2-8-climachine-deb-2-8-clilayouts)
+5. [What storage modifications can I make at the filesystem level?](#heading-deb-2-8-cli-deb-2-8-clifinal-deb-2-8-clistorage-deb-2-8-climodifications)
+6. [How can I erase a disk?](disk-deb-2-8-clierasure.html)
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+1. [How does UEFI booting work?](#heading-deb-2-8-cli-deb-2-8-cliuefi)
+2. [What kind of storage layouts are available?](#heading-deb-2-8-cli-deb-2-8-clilayouts)
+3. [How do I set global storage layouts?](#heading-deb-2-8-cli-deb-2-8-clisetting-deb-2-8-cliglobal-deb-2-8-clilayouts)
+4. [How do I set per-deb-2-8-climachine storage layouts?](#heading-deb-2-8-cli-deb-2-8-cliper-deb-2-8-climachine-deb-2-8-clilayouts)
+5. [What storage modifications can I make at the filesystem level?](#heading-deb-2-8-cli-deb-2-8-clifinal-deb-2-8-clistorage-deb-2-8-climodifications)
+6. [How can I erase a disk?](disk-deb-2-8-clierasure.html)
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+1. [How does UEFI booting work?](#heading-deb-2-8-cli-deb-2-8-cliuefi)
+2. [What kind of storage layouts are available?](#heading-deb-2-8-cli-deb-2-8-clilayouts)
+3. [How do I set global storage layouts?](#heading-deb-2-8-cli-deb-2-8-clisetting-deb-2-8-cliglobal-deb-2-8-clilayouts)
+4. [How do I set per-deb-2-8-climachine storage layouts?](#heading-deb-2-8-cli-deb-2-8-cliper-deb-2-8-climachine-deb-2-8-clilayouts)
+5. [What storage modifications can I make at the filesystem level?](#heading-deb-2-8-cli-deb-2-8-clifinal-deb-2-8-clistorage-deb-2-8-climodifications)
+6. [How can I erase a disk?](disk-deb-2-8-clierasure.html)
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+1. [How does UEFI booting work?](#heading-deb-2-8-cli-deb-2-8-cliuefi)
+2. [What kind of storage layouts are available?](#heading-deb-2-8-cli-deb-2-8-clilayouts)
+3. [How do I set global storage layouts?](#heading-deb-2-8-cli-deb-2-8-clisetting-deb-2-8-cliglobal-deb-2-8-clilayouts)
+4. [How do I set per-deb-2-8-climachine storage layouts?](#heading-deb-2-8-cli-deb-2-8-cliper-deb-2-8-climachine-deb-2-8-clilayouts)
+5. [What storage modifications can I make at the filesystem level?](#heading-deb-2-8-cli-deb-2-8-clifinal-deb-2-8-clistorage-deb-2-8-climodifications)
+6. [How can I erase a disk?](disk-deb-2-8-clierasure.html)
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+1. [How does UEFI booting work?](#heading-deb-2-8-cli-deb-2-8-cliuefi)
+2. [What kind of storage layouts are available?](#heading-deb-2-8-cli-deb-2-8-clilayouts)
+3. [How do I set global storage layouts?](#heading-deb-2-8-cli-deb-2-8-clisetting-deb-2-8-cliglobal-deb-2-8-clilayouts)
+4. [How do I set per-deb-2-8-climachine storage layouts?](#heading-deb-2-8-cli-deb-2-8-cliper-deb-2-8-climachine-deb-2-8-clilayouts)
+5. [What storage modifications can I make at the filesystem level?](#heading-deb-2-8-cli-deb-2-8-clifinal-deb-2-8-clistorage-deb-2-8-climodifications)
+6. [How can I erase a disk?](disk-deb-2-8-clierasure.html)
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+1. [How does UEFI booting work?](#heading-deb-2-8-cli-deb-2-8-cliuefi)
+2. [What kind of storage layouts are available?](#heading-deb-2-8-cli-deb-2-8-clilayouts)
+3. [How do I set global storage layouts?](#heading-deb-2-8-cli-deb-2-8-clisetting-deb-2-8-cliglobal-deb-2-8-clilayouts)
+4. [How do I set per-deb-2-8-climachine storage layouts?](#heading-deb-2-8-cli-deb-2-8-cliper-deb-2-8-climachine-deb-2-8-clilayouts)
+5. [What storage modifications can I make at the filesystem level?](#heading-deb-2-8-cli-deb-2-8-clifinal-deb-2-8-clistorage-deb-2-8-climodifications)
+6. [How can I erase a disk?](disk-deb-2-8-clierasure.html)
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+1. [How does UEFI booting work?](#heading-deb-2-8-cli-deb-2-8-cliuefi)
+2. [What kind of storage layouts are available?](#heading-deb-2-8-cli-deb-2-8-clilayouts)
+3. [How do I set global storage layouts?](#heading-deb-2-8-cli-deb-2-8-clisetting-deb-2-8-cliglobal-deb-2-8-clilayouts)
+4. [How do I set per-deb-2-8-climachine storage layouts?](#heading-deb-2-8-cli-deb-2-8-cliper-deb-2-8-climachine-deb-2-8-clilayouts)
+5. [What storage modifications can I make at the filesystem level?](#heading-deb-2-8-cli-deb-2-8-clifinal-deb-2-8-clistorage-deb-2-8-climodifications)
+6. [How can I erase a disk?](disk-deb-2-8-clierasure.html)
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+1. [How does UEFI booting work?](#heading-deb-2-8-cli-deb-2-8-cliuefi)
+2. [What kind of storage layouts are available?](#heading-deb-2-8-cli-deb-2-8-clilayouts)
+3. [How do I set global storage layouts?](#heading-deb-2-8-cli-deb-2-8-clisetting-deb-2-8-cliglobal-deb-2-8-clilayouts)
+4. [How do I set per-deb-2-8-climachine storage layouts?](#heading-deb-2-8-cli-deb-2-8-cliper-deb-2-8-climachine-deb-2-8-clilayouts)
+5. [What storage modifications can I make at the filesystem level?](#heading-deb-2-8-cli-deb-2-8-clifinal-deb-2-8-clistorage-deb-2-8-climodifications)
+6. [How can I erase a disk?](disk-deb-2-8-clierasure.html)
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+1. [How does UEFI booting work?](#heading-deb-2-8-cli-deb-2-8-cliuefi)
+2. [What kind of storage layouts are available?](#heading-deb-2-8-cli-deb-2-8-clilayouts)
+3. [How do I set global storage layouts?](#heading-deb-2-8-cli-deb-2-8-clisetting-deb-2-8-cliglobal-deb-2-8-clilayouts)
+4. [How do I set per-deb-2-8-climachine storage layouts?](#heading-deb-2-8-cli-deb-2-8-cliper-deb-2-8-climachine-deb-2-8-clilayouts)
+5. [What storage modifications can I make at the filesystem level?](#heading-deb-2-8-cli-deb-2-8-clifinal-deb-2-8-clistorage-deb-2-8-climodifications)
+6. [How can I erase a disk?](disk-deb-2-8-clierasure.html)
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>A machine&rsquo;s storage is dependant upon the underlying system&rsquo;s disks, but its configuration (i.e., disk usage) is the result of a storage template. In MAAS, this template is called a layout, and MAAS applies it to a machine during commissioning.  Once a layout is applied, a regular user can make modifications to a machine at the filesystem level to arrive at the machine&rsquo;s final storage configuration.  When a machine is no longer needed, a user can choose from among several disk erasure types before releasing it.</p>
+<p><strong>NOTE:</strong> 
+MAAS supports storage configuration for CentOS and RHEL deployments. Support includes RAID, LVM, and custom partitioning with different file systems (ZFS and bcache excluded). This support requires a newer version of Curtin, <a href="https://launchpad.net/ubuntu/+source/curtin">available as a PPA</a>.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliuefi"><h2 id="heading-deb-2-8-cli-deb-2-8-cliuefi">UEFI</h2></a></p>
+<p>Every layout type supports a machine booting with UEFI. In such a case, MAAS automatically creates an EFI boot partition (<code>/boot/efi</code>). Other than setting the machine to boot from UEFI, the user does not need to take any additional action.</p>
+<p><strong>NOTE:</strong> 
+UEFI must be enabled or disabled for the lifespan of the machine. For example, do not enlist a machine with UEFI enabled, and then disable it before commissioning. It won&rsquo;t work!</p>
+<p>The EFI partition, if created, will be the first partition (<code>sda1</code>) and will have a FAT32 filesystem with a size of 512 MB.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clilayouts"><h2 id="heading-deb-2-8-cli-deb-2-8-clilayouts">Layouts</h2></a></p>
+<p>There are three layout types:</p>
+<ol>
+<li>Flat layout</li>
+<li>LVM layout</li>
+<li>bcache layout</li>
+</ol>
+<p>The layout descriptions below will include the EFI partition. If your system is not using UEFI, regard <code>sda2</code> as <code>sda1</code> (with an additional 512 MB available to it).</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliflat-deb-2-8-clilayout"><h3 id="heading-deb-2-8-cli-deb-2-8-cliflat-deb-2-8-clilayout">Flat layout</h3></a></p>
+<p>With the Flat layout, a partition spans the entire boot disk. The partition is formatted with the ext4 filesystem and uses the <code>/</code> mount point:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th>Size</th>
+<th>Type</th>
+<th>Filesystem</th>
+<th>Mount point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">sda</td>
+<td>-deb-2-8-cli</td>
+<td>disk</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="left">sda1</td>
+<td>512 MB</td>
+<td>part</td>
+<td>FAT32</td>
+<td>/boot/efi</td>
+</tr>
+<tr>
+<td align="left">sda2</td>
+<td>rest of sda</td>
+<td>part</td>
+<td>ext4</td>
+<td>/</td>
+</tr>
+</tbody>
+</table>
+<p>The following three options are supported:</p>
+<ol>
+<li>
+<p><code>boot_size</code>: Size of the boot partition on the boot disk. Default is 0, meaning not to create the boot partition. The &lsquo;/boot&rsquo; will be placed on the root filesystem.</p>
+</li>
+<li>
+<p><code>root_device</code>: The block device on which to place the root partition. The default is the boot disk.</p>
+</li>
+<li>
+<p><code>root_size</code>: Size of the root partition. Default is 100%, meaning the entire size of the root device.</p>
+</li>
+</ol>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clilvm-deb-2-8-clilayout"><h3 id="heading-deb-2-8-cli-deb-2-8-clilvm-deb-2-8-clilayout">LVM layout</h3></a></p>
+<p>The LVM layout creates the volume group <code>vgroot</code> on a partition that spans the entire boot disk. A logical volume <code>lvroot</code> is created for the full size of the volume group; is formatted with the ext4 filesystem; and uses the <code>/</code> mount point:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th>Size</th>
+<th>Type</th>
+<th>Filesystem</th>
+<th>Mount point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">sda</td>
+<td>-deb-2-8-cli</td>
+<td>disk</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="left">sda1</td>
+<td>512 MB</td>
+<td>part</td>
+<td>FAT32</td>
+<td>/boot/efi</td>
+</tr>
+<tr>
+<td align="left">sda2</td>
+<td>rest of sda</td>
+<td>part</td>
+<td>lvm-deb-2-8-clipv(vgroot)</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">lvroot</td>
+<td>rest of sda</td>
+<td>lvm</td>
+<td>ext4</td>
+<td>/</td>
+</tr>
+<tr>
+<td align="left">vgroot</td>
+<td>rest of sda</td>
+<td>lvm</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The following six options are supported:</p>
+<ol>
+<li><code>boot_size</code>: Size of the boot partition on the boot disk. Default is 0, meaning not to create the boot partition. The &lsquo;/boot&rsquo; will be placed on the root filesystem.</li>
+<li><code>root_device</code>: The block device on which to place the root partition. The default is the boot disk.</li>
+<li><code>root_size</code>: Size of the root partition. Default is 100%, meaning the entire size of the root device.</li>
+<li><code>vg_name</code>: Name of the created volume group. Default is <code>vgroot</code>.</li>
+<li><code>lv_name</code>: Name of the created logical volume. Default is <code>lvroot</code>.</li>
+<li><code>lv_size</code>: Size of the created logical volume. Default is 100%, meaning the entire size of the volume group.</li>
+</ol>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clibcache-deb-2-8-clilayout"><h3 id="heading-deb-2-8-cli-deb-2-8-clibcache-deb-2-8-clilayout">bcache layout</h3></a></p>
+<p>A bcache layout will create a partition that spans the entire boot disk as the backing device. It uses the smallest block device tagged with &lsquo;ssd&rsquo; as the cache device. The bcache device is formatted with the ext4 filesystem and uses the <code>/</code> mount point. If there are no &lsquo;ssd&rsquo; tagged block devices on the machine, then the bcache device will not be created, and the Flat layout will be used instead:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th>Size</th>
+<th>Type</th>
+<th>Filesystem</th>
+<th>Mount point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">sda</td>
+<td>-deb-2-8-cli</td>
+<td>disk</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="left">sda1</td>
+<td>512 MB</td>
+<td>part</td>
+<td>FAT32</td>
+<td>/boot/efi</td>
+</tr>
+<tr>
+<td align="left">sda2</td>
+<td>rest of sda</td>
+<td>part</td>
+<td>bc-deb-2-8-clibacking</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">sdb (ssd)</td>
+<td>-deb-2-8-cli</td>
+<td>disk</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="left">sdb1</td>
+<td>100% of sdb</td>
+<td>part</td>
+<td>bc-deb-2-8-clicache</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">bcache0</td>
+<td>per sda2</td>
+<td>disk</td>
+<td>ext4</td>
+<td>/</td>
+</tr>
+</tbody>
+</table>
+<p>The following seven options are supported:</p>
+<ol>
+<li><code>boot_size</code>: Size of the boot partition on the boot disk. Default is 0, meaning not to create the boot partition. The &lsquo;/boot&rsquo; will be placed on the root filesystem.</li>
+<li><code>root_device</code>: The block device upon which to place the root partition. The default is the boot disk.</li>
+<li><code>root_size</code>: Size of the root partition. Default is 100%, meaning the entire size of the root device.</li>
+<li><code>cache_device</code>: The block device to use as the cache device. Default is the smallest block device tagged ssd.</li>
+<li><code>cache_mode</code>: The cache mode to which MAAS should set the created bcache device. The default is <code>writethrough</code>.</li>
+<li><code>cache_size</code>: The size of the partition on the cache device. Default is 100%, meaning the entire size of the cache device.</li>
+<li><code>cache_no_part</code>: Whether or not to create a partition on the cache device. Default is false, meaning to create a partition using the given <code>cache_size</code>. If set to true, no partition will be created, and the raw cache device will be used as the cache.</li>
+</ol>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clivmfs6-deb-2-8-clilayout"><h3 id="heading-deb-2-8-cli-deb-2-8-clivmfs6-deb-2-8-clilayout">VMFS6 layout</h3></a></p>
+<p>The VMFS6 layout is used for VMware ESXi deployments only. It is required when configuring VMware VMFS Datastores. This layout creates all operating system partitions, in addition to the default datastore. The datastore may be modified.  New datastores may be created or extended to include other storage devices. The base operating system partitions may not be modified because VMware ESXi requires them. Once applied another storage layout must be applied to remove the operating system partitions.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th>Size</th>
+<th>Type</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">sda</td>
+<td>-deb-2-8-cli</td>
+<td>disk</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">sda1</td>
+<td>3 MB</td>
+<td>part</td>
+<td>EFI</td>
+</tr>
+<tr>
+<td align="left">sda2</td>
+<td>4 GB</td>
+<td>part</td>
+<td>Basic Data</td>
+</tr>
+<tr>
+<td align="left">sda3</td>
+<td>Remaining</td>
+<td>part</td>
+<td>VMFS Datastore 1</td>
+</tr>
+<tr>
+<td align="left">sda4</td>
+<td>-deb-2-8-cli</td>
+<td>skipped</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">sda5</td>
+<td>249 MB</td>
+<td>part</td>
+<td>Basic Data</td>
+</tr>
+<tr>
+<td align="left">sda6</td>
+<td>249 MB</td>
+<td>part</td>
+<td>Basic Data</td>
+</tr>
+<tr>
+<td align="left">sda7</td>
+<td>109 MB</td>
+<td>part</td>
+<td>VMware Diagnostic</td>
+</tr>
+<tr>
+<td align="left">sda8</td>
+<td>285 MB</td>
+<td>part</td>
+<td>Basic Data</td>
+</tr>
+<tr>
+<td align="left">sda9</td>
+<td>2.5 GB</td>
+<td>part</td>
+<td>VMware Diagnostic</td>
+</tr>
+</tbody>
+</table>
+<p>The following options are supported:</p>
+<ol>
+<li>
+<p><code>root_device</code>: The block device upon which to place the root partition. Default is the boot disk.</p>
+</li>
+<li>
+<p><code>root_size</code>: Size of the default VMFS Datastore. Default is 100%, meaning the remaining size of the root disk.</p>
+</li>
+</ol>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliblank-deb-2-8-clilayout"><h3 id="heading-deb-2-8-cli-deb-2-8-cliblank-deb-2-8-clilayout">Blank layout</h3></a></p>
+<p>The blank layout removes all storage configuration from all storage devices. It is useful when needing to apply a custom storage configuration.</p>
+<p><strong>NOTE:</strong> 
+Machines with the blank layout applied are not deployable; you must first configure storage manually.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clisetting-deb-2-8-cliglobal-deb-2-8-clilayouts"><h2 id="heading-deb-2-8-cli-deb-2-8-clisetting-deb-2-8-cliglobal-deb-2-8-clilayouts">Setting layouts</h2></a></p>
+<p>Layouts can be set globally and on a per-deb-2-8-climachine basis.</p>
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+All machines will have a default layout applied when commissioned. An administrator can configure the default layout on the 'Settings' page, under the 'Storage' tab.
+
+<a href="images/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img src="images/80de3bc701552cd00bec707830accf380c214b17.png"></a></a>
+snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>All machines will have a default layout applied when commissioned. To set the default storage layout for all machines:</p>
+<pre><code>maas $PROFILE maas set-deb-2-8-cliconfig name=default_storage_layout value=$LAYOUT_TYPE
+</code></pre>
+
+<p>For example, to set the default layout to Flat:</p>
+<pre><code>maas $PROFILE maas set-deb-2-8-cliconfig name=default_storage_layout value=flat
+</code></pre>
+
+<p>Important: The new default will only apply to newly-deb-2-8-clicommissioned machines.</p>
+<p><strong>NOTE:</strong> 
+The new default will only apply to newly-deb-2-8-clicommissioned machines.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliper-deb-2-8-climachine-deb-2-8-clilayouts"><h3 id="heading-deb-2-8-cli-deb-2-8-cliper-deb-2-8-climachine-deb-2-8-clilayouts">Machine layout</h3></a></p>
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of 'Ready'. This is only possible via the CLI: to see how, click the "CLI" option for your version and delivery method above.
+snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>An administrator can set a storage layout for a machine with a status of ‘Ready’ like this:</p>
+<pre><code>maas $PROFILE machine set-deb-2-8-clistorage-deb-2-8-clilayout $SYSTEM_ID storage_layout=$LAYOUT_TYPE [$OPTIONS]
+</code></pre>
+
+<p>For example, to set an LVM layout where the logical volume has a size of 5 GB:</p>
+<pre><code>maas $PROFILE machine set-deb-2-8-clistorage-deb-2-8-clilayout $SYSTEM_ID storage_layout=lvm lv_size=5368709120
+
+</code></pre>
+
+<p>You must specify all storage sizes in bytes.</p>
+<p>This action will remove the configuration that may exist on any block device.</p>
+<p><strong>NOTE:</strong> 
+Only an administrator can modify storage at the block device level (providing the machine has a status of &lsquo;Ready&rsquo;).</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clifinal-deb-2-8-clistorage-deb-2-8-climodifications"><h2 id="heading-deb-2-8-cli-deb-2-8-clifinal-deb-2-8-clistorage-deb-2-8-climodifications">Final storage modifications</h2></a></p>
+<p>Once MAAS provisions a machine with block devices, via a layout or administrator customisation, a regular user can modify the resulting storage configuration at the filesystem level.</p>
+    </div>
+  </body>
+</html>

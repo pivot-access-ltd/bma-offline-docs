@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-deb-2-8-clileft:0;list-deb-2-8-clistyle-deb-2-8-clitype:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-deb-2-8-clicolor:#d9d9d9; width:100%;border-deb-2-8-clibottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/controllers.html">
+	  &nbsp;UI-deb-2-8-clionly&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-deb-2-8-clicolor:white;border-deb-2-8-clitop:1px solid black; border-deb-2-8-clileft:1px solid black; border-deb-2-8-cliright:1px solid black; border-deb-2-8-clibottom:5px solid white;">
+	  CLI-deb-2-8-clionly
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-deb-2-8-clitop:40px; margin-deb-2-8-clileft:20px">
+      <strong>
+	<a href="maas-deb-2-8-clidocumentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-deb-2-8-climaas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clirequirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-cliinstallation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-deb-2-8-clijourney.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-deb-2-8-clicommunication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-deb-2-8-clicontrollers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-deb-2-8-clicontrollers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-deb-2-8-cliavailability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-deb-2-8-climachines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-deb-2-8-climanagement.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-deb-2-8-climachines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-deb-2-8-clitesting.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clitesting.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-deb-2-8-climachines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clitags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-deb-2-8-climachine-deb-2-8-clisetup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-deb-2-8-cliboot-deb-2-8-clioptions.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-deb-2-8-clipools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-clivmfs-deb-2-8-clidatastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-deb-2-8-clikernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-deb-2-8-cliand-deb-2-8-cliimport-deb-2-8-cliimages.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-deb-2-8-cliimage-deb-2-8-climirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-cliimages.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-deb-2-8-climanagement.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clidhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-deb-2-8-cliranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-deb-2-8-cliservices.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clidiscovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-deb-2-8-cliaddressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-deb-2-8-clitls-deb-2-8-cliencryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clistp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-deb-2-8-clizones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-deb-2-8-clihosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clinetworking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clistorage-deb-2-8-clipools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-deb-2-8-cliand-deb-2-8-clideleting-deb-2-8-clivms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-deb-2-8-climetrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-deb-2-8-cliyour-deb-2-8-climaas-deb-2-8-cliinstallation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clilogging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-clilogs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-deb-2-8-cliaccounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-deb-2-8-clisearch.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-clinetwork-deb-2-8-clitutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-deb-2-8-clicli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-deb-2-8-clievent-deb-2-8-clilogs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clikernel-deb-2-8-climanagement.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliimage-deb-2-8-climanagement.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliinterface-deb-2-8-climanagement.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliadvanced-deb-2-8-clitasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clicomposable-deb-2-8-clihardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-deb-2-8-cliapi-deb-2-8-cliclient.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-deb-2-8-cliauthentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-deb-2-8-clihelp.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-deb-2-8-clitricks-deb-2-8-cliand-deb-2-8-clitraps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-deb-2-8-clidocs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-deb-2-8-cliguide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-deb-2-8-clitop:40px; margin-deb-2-8-cliright:30px">
+      <h1>Controllers</h1><!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>Most of the functionality of MAAS is contained in a series of controllers.  There are two basic types: a region controller and one or more rack controllers. The region controller deals with operator requests, while the rack controller(s) provides high-deb-2-8-clibandwidth services to the individual machines.  In essence, the region controller interacts with the user, while the rack controllers manage the bare metal.</p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+<strong>NOTE:</strong> 
+Note that both region and rack controllers can be scaled out, as well as made [highly available](high-deb-2-8-cliavailability.html).
+
+deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+<strong>NOTE:</strong> 
+Note that both region and rack controllers can be scaled out, as well as made [highly available](high-deb-2-8-cliavailability.html).
+
+deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p><strong>NOTE:</strong> 
+Note that both region and rack controllers can be scaled out, as well as made <a href="high-deb-2-8-cliavailability.html">highly available</a>.</p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+<strong>NOTE:</strong> 
+Note that both region and rack controllers can be scaled out, as well as made [highly available](high-deb-2-8-cliavailability.html).
+
+deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+<strong>NOTE:</strong> 
+Note that both region and rack controllers can be scaled out, as well as made [highly available](high-deb-2-8-cliavailability.html).
+
+deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+<strong>NOTE:</strong> 
+Note that both region and rack controllers can be scaled out, as well as made [highly available](high-deb-2-8-cliavailability.html).
+
+deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+<strong>NOTE:</strong> 
+Note that both region and rack controllers can be scaled out, as well as made [highly available](high-deb-2-8-cliavailability.html).
+
+snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+<strong>NOTE:</strong> 
+Note that both region and rack controllers can be scaled out, as well as made [highly available](high-deb-2-8-cliavailability.html).
+
+snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+<strong>NOTE:</strong> 
+Note that both region and rack controllers can be scaled out, as well as made [highly available](high-deb-2-8-cliavailability.html).
+
+snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+<strong>NOTE:</strong> 
+Note that both region and rack controllers can be scaled out, as well as made [highly available](high-deb-2-8-cliavailability.html).
+
+snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+<strong>NOTE:</strong> 
+Note that both region and rack controllers can be scaled out, as well as made [highly available](high-deb-2-8-cliavailability.html).
+
+snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+<strong>NOTE:</strong> 
+Note that both region and rack controllers can be scaled out, as well as made [highly available](high-deb-2-8-cliavailability.html).
+
+snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<h4>Two questions you might have:</h4>
+<ol>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-cliregion-deb-2-8-clicontroller">What does a region controller do?</a></li>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-clirack-deb-2-8-clicontrollers">What does a rack controller do?</a></li>
+</ol>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliregion-deb-2-8-clicontroller"><h2 id="heading-deb-2-8-cli-deb-2-8-cliregion-deb-2-8-clicontroller">What a region controller does</h2></a></p>
+<p>A region controller consists of five components:</p>
+<ol>
+<li>REST API server (TCP port 5240)</li>
+<li>PostgreSQL database</li>
+<li>DNS</li>
+<li>caching HTTP proxy</li>
+<li>web UI</li>
+</ol>
+<p>Region controllers are responsible for either a data centre or a single region. Multiple fabrics are used by MAAS to accommodate subdivisions within a single region, such as multiple floors in a data centre.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clirack-deb-2-8-clicontrollers"><h2 id="heading-deb-2-8-cli-deb-2-8-clirack-deb-2-8-clicontrollers">What a rack controller does</h2></a></p>
+<p>A rack controller provides four services:</p>
+<ol>
+<li>DHCP</li>
+<li>TFTP</li>
+<li>HTTP (for images)</li>
+<li>power management</li>
+</ol>
+<p>A rack controller is attached to each &ldquo;fabric&rdquo;. As the name implies, a typical setup is to have a rack controller in each data centre server rack. The rack controller will cache large items for performance, such as operating system install images, but maintains no independent state other than the credentials required to talk to the region controller.</p>
+<p><details><summary>Tell me about fabrics</summary></p>
+<p>A fabric is simply a way of linking <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-clivlans">VLANs</a> (Virtual LANs) together.  If you&rsquo;re familiar with a VLAN, you know that it&rsquo;s designed to limit network traffic to specific ports (e.g., on a <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-cliswitch">switch</a>) or by evaluating labels called &ldquo;tags&rdquo; (unrelated to MAAS tags).  By definition, this would mean that two VLANs can&rsquo;t communicate with each other &ndash; it would defeat the purpose of the VLAN &ndash; unless you implement some extraordinary measures.</p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+For example, let's say that your [hospital](give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-deb-2-8-cliVLAN access with additional software, or permissions, depending on your application software architecture.
+deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+For example, let's say that your [hospital](give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-deb-2-8-cliVLAN access with additional software, or permissions, depending on your application software architecture.
+deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>For example, let&rsquo;s say that your <a href="give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html">hospital</a> has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let&rsquo;s say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-deb-2-8-cliVLAN access with additional software, or permissions, depending on your application software architecture.</p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+For example, let's say that your [hospital](give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-deb-2-8-cliVLAN access with additional software, or permissions, depending on your application software architecture.
+deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+For example, let's say that your [hospital](give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-deb-2-8-cliVLAN access with additional software, or permissions, depending on your application software architecture.
+deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+For example, let's say that your [hospital](give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-deb-2-8-cliVLAN access with additional software, or permissions, depending on your application software architecture.
+deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+For example, let's say that your [hospital](give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-deb-2-8-cliVLAN access with additional software, or permissions, depending on your application software architecture.
+snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+For example, let's say that your [hospital](give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-deb-2-8-cliVLAN access with additional software, or permissions, depending on your application software architecture.
+snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+For example, let's say that your [hospital](give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-deb-2-8-cliVLAN access with additional software, or permissions, depending on your application software architecture.
+snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+For example, let's say that your [hospital](give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-deb-2-8-cliVLAN access with additional software, or permissions, depending on your application software architecture.
+snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+For example, let's say that your [hospital](give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-deb-2-8-cliVLAN access with additional software, or permissions, depending on your application software architecture.
+snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+For example, let's say that your [hospital](give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-deb-2-8-cliVLAN access with additional software, or permissions, depending on your application software architecture.
+snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>You can learn more about fabrics in the <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-clifabrics">Concepts and terms</a> section of this documentation.</p>
+    </div>
+  </body>
+</html>

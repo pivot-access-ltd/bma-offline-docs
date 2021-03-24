@@ -1,86 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|CLI ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ UI|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|CLI ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ UI|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|CLI ~ [UI](/t/high-availability/2693)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ UI|
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ UI|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|CLI ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ UI|[CLI](/t/high-availability/2686) ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|CLI ~ [UI](/t/high-availability/2687)|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/high-availability/2682) ~ [UI](/t/high-availability/2683)|[CLI](/t/high-availability/2684) ~ [UI](/t/high-availability/2685)|[CLI](/t/high-availability/2686) ~ UI|
-|Packages|[CLI](/t/high-availability/2688) ~ [UI](/t/high-availability/2689)|[CLI](/t/high-availability/2690) ~ [UI](/t/high-availability/2691)|[CLI](/t/high-availability/2692) ~ [UI](/t/high-availability/2693)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/high-availability-snap-2-7-cli/2682) ~ [UI](/t/high-availability-snap-2-7-ui/2683)|[CLI](/t/high-availability-snap-2-8-cli/2684) ~ [UI](/t/high-availability-snap-2-8-ui/2685)|[CLI](/t/high-availability-snap-2-9-cli/2686) ~ [UI](/t/high-availability-snap-2-9-ui/2687)|[CLI](/t/high-availability-snap-3-0-cli/3945) ~ [UI](/t/high-availability-snap-3-0-ui/3946)|
+Packages|[CLI](/t/high-availability-deb-2-7-cli/2688) ~ [UI](/t/high-availability-deb-2-7-ui/2689)|[CLI](/t/high-availability-deb-2-8-cli/2690) ~ [UI](/t/high-availability-deb-2-8-ui/2691)|[CLI](/t/high-availability-deb-2-9-cli/2692) ~ [UI](/t/high-availability-deb-2-9-ui/2693)|[CLI](/t/high-availability-deb-3-0-cli/3947) ~ [UI](/t/high-availability-deb-3-0-ui/3948)|
 
 This page describes how to provide high availability (HA) for MAAS at both region and rack levels.  In the context of MAAS, there are four types of HA:
 
@@ -521,10 +442,3 @@ There are dangers associate with moving a rack controller -- dangers that may ge
 * **Connecting one instance of a rack controller to two instances of MAAS, regardless of version:** Trying to connect a single rack controller to two different instances of MAAS can result in all sorts of unpredictable (and potentially catastrophic) behavior.  It is not a supported configuration.
 
 Take these warnings to heart.  It may seem like a faster approach to "bridge" your existing rack controllers from one MAAS to another -- or from one version of MAAS to another -- while they're running.  Ultimately, though, it will probably result in more work than just following the recommended approach.
-
-
-
-
-------
-****
-------

@@ -1,88 +1,9 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-logs/2490) ~ [UI](/t/commissioning-logs/2491)|[CLI](/t/commissioning-logs/2492) ~ [UI](/t/commissioning-logs/2493)|[CLI](/t/commissioning-logs/2494) ~ [UI](/t/commissioning-logs/2495)|
-|Packages|CLI ~ [UI](/t/commissioning-logs/2497)|[CLI](/t/commissioning-logs/2498) ~ [UI](/t/commissioning-logs/2499)|[CLI](/t/commissioning-logs/2500) ~ [UI](/t/commissioning-logs/2501)|
- deb-2-7-cli -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/commissioning-logs-snap-2-7-cli/2490) ~ [UI](/t/commissioning-logs-snap-2-7-ui/2491)|[CLI](/t/commissioning-logs-snap-2-8-cli/2492) ~ [UI](/t/commissioning-logs-snap-2-8-ui/2493)|[CLI](/t/commissioning-logs-snap-2-9-cli/2494) ~ [UI](/t/commissioning-logs-snap-2-9-ui/2495)|[CLI](/t/commissioning-logs-snap-3-0-cli/3869) ~ [UI](/t/commissioning-logs-snap-3-0-ui/3870)|
+Packages|[CLI](/t/commissioning-logs-deb-2-7-cli/2496) ~ [UI](/t/commissioning-logs-deb-2-7-ui/2497)|[CLI](/t/commissioning-logs-deb-2-8-cli/2498) ~ [UI](/t/commissioning-logs-deb-2-8-ui/2499)|[CLI](/t/commissioning-logs-deb-2-9-cli/2500) ~ [UI](/t/commissioning-logs-deb-2-9-ui/2501)|[CLI](/t/commissioning-logs-deb-3-0-cli/3871) ~ [UI](/t/commissioning-logs-deb-3-0-ui/3872)|
 
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-logs/2490) ~ [UI](/t/commissioning-logs/2491)|[CLI](/t/commissioning-logs/2492) ~ [UI](/t/commissioning-logs/2493)|[CLI](/t/commissioning-logs/2494) ~ [UI](/t/commissioning-logs/2495)|
-|Packages|[CLI](/t/commissioning-logs/2496) ~ UI|[CLI](/t/commissioning-logs/2498) ~ [UI](/t/commissioning-logs/2499)|[CLI](/t/commissioning-logs/2500) ~ [UI](/t/commissioning-logs/2501)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-logs/2490) ~ [UI](/t/commissioning-logs/2491)|[CLI](/t/commissioning-logs/2492) ~ [UI](/t/commissioning-logs/2493)|[CLI](/t/commissioning-logs/2494) ~ [UI](/t/commissioning-logs/2495)|
-|Packages|[CLI](/t/commissioning-logs/2496) ~ [UI](/t/commissioning-logs/2497)|CLI ~ [UI](/t/commissioning-logs/2499)|[CLI](/t/commissioning-logs/2500) ~ [UI](/t/commissioning-logs/2501)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-logs/2490) ~ [UI](/t/commissioning-logs/2491)|[CLI](/t/commissioning-logs/2492) ~ [UI](/t/commissioning-logs/2493)|[CLI](/t/commissioning-logs/2494) ~ [UI](/t/commissioning-logs/2495)|
-|Packages|[CLI](/t/commissioning-logs/2496) ~ [UI](/t/commissioning-logs/2497)|[CLI](/t/commissioning-logs/2498) ~ UI|[CLI](/t/commissioning-logs/2500) ~ [UI](/t/commissioning-logs/2501)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-logs/2490) ~ [UI](/t/commissioning-logs/2491)|[CLI](/t/commissioning-logs/2492) ~ [UI](/t/commissioning-logs/2493)|[CLI](/t/commissioning-logs/2494) ~ [UI](/t/commissioning-logs/2495)|
-|Packages|[CLI](/t/commissioning-logs/2496) ~ [UI](/t/commissioning-logs/2497)|[CLI](/t/commissioning-logs/2498) ~ [UI](/t/commissioning-logs/2499)|CLI ~ [UI](/t/commissioning-logs/2501)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-logs/2490) ~ [UI](/t/commissioning-logs/2491)|[CLI](/t/commissioning-logs/2492) ~ [UI](/t/commissioning-logs/2493)|[CLI](/t/commissioning-logs/2494) ~ [UI](/t/commissioning-logs/2495)|
-|Packages|[CLI](/t/commissioning-logs/2496) ~ [UI](/t/commissioning-logs/2497)|[CLI](/t/commissioning-logs/2498) ~ [UI](/t/commissioning-logs/2499)|[CLI](/t/commissioning-logs/2500) ~ UI|
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/commissioning-logs/2491)|[CLI](/t/commissioning-logs/2492) ~ [UI](/t/commissioning-logs/2493)|[CLI](/t/commissioning-logs/2494) ~ [UI](/t/commissioning-logs/2495)|
-|Packages|[CLI](/t/commissioning-logs/2496) ~ [UI](/t/commissioning-logs/2497)|[CLI](/t/commissioning-logs/2498) ~ [UI](/t/commissioning-logs/2499)|[CLI](/t/commissioning-logs/2500) ~ [UI](/t/commissioning-logs/2501)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-logs/2490) ~ UI|[CLI](/t/commissioning-logs/2492) ~ [UI](/t/commissioning-logs/2493)|[CLI](/t/commissioning-logs/2494) ~ [UI](/t/commissioning-logs/2495)|
-|Packages|[CLI](/t/commissioning-logs/2496) ~ [UI](/t/commissioning-logs/2497)|[CLI](/t/commissioning-logs/2498) ~ [UI](/t/commissioning-logs/2499)|[CLI](/t/commissioning-logs/2500) ~ [UI](/t/commissioning-logs/2501)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-logs/2490) ~ [UI](/t/commissioning-logs/2491)|CLI ~ [UI](/t/commissioning-logs/2493)|[CLI](/t/commissioning-logs/2494) ~ [UI](/t/commissioning-logs/2495)|
-|Packages|[CLI](/t/commissioning-logs/2496) ~ [UI](/t/commissioning-logs/2497)|[CLI](/t/commissioning-logs/2498) ~ [UI](/t/commissioning-logs/2499)|[CLI](/t/commissioning-logs/2500) ~ [UI](/t/commissioning-logs/2501)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-logs/2490) ~ [UI](/t/commissioning-logs/2491)|[CLI](/t/commissioning-logs/2492) ~ UI|[CLI](/t/commissioning-logs/2494) ~ [UI](/t/commissioning-logs/2495)|
-|Packages|[CLI](/t/commissioning-logs/2496) ~ [UI](/t/commissioning-logs/2497)|[CLI](/t/commissioning-logs/2498) ~ [UI](/t/commissioning-logs/2499)|[CLI](/t/commissioning-logs/2500) ~ [UI](/t/commissioning-logs/2501)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-logs/2490) ~ [UI](/t/commissioning-logs/2491)|[CLI](/t/commissioning-logs/2492) ~ [UI](/t/commissioning-logs/2493)|CLI ~ [UI](/t/commissioning-logs/2495)|
-|Packages|[CLI](/t/commissioning-logs/2496) ~ [UI](/t/commissioning-logs/2497)|[CLI](/t/commissioning-logs/2498) ~ [UI](/t/commissioning-logs/2499)|[CLI](/t/commissioning-logs/2500) ~ [UI](/t/commissioning-logs/2501)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commissioning-logs/2490) ~ [UI](/t/commissioning-logs/2491)|[CLI](/t/commissioning-logs/2492) ~ [UI](/t/commissioning-logs/2493)|[CLI](/t/commissioning-logs/2494) ~ UI|
-|Packages|[CLI](/t/commissioning-logs/2496) ~ [UI](/t/commissioning-logs/2497)|[CLI](/t/commissioning-logs/2498) ~ [UI](/t/commissioning-logs/2499)|[CLI](/t/commissioning-logs/2500) ~ [UI](/t/commissioning-logs/2501)|
- snap-2-9-ui -->
-
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 The command line allows you to retrieve the verbatim logs of commissioning script runs, including those that are currently in progress.
 
 If you only want to see the latest or currently-running result, you can use `current-commissioning`, `current-testing`, or `current-installation` instead of an id:
@@ -153,15 +74,15 @@ maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
 [note]
 **$RUN_ID** is labelled `id` in the verbose result output.
 [/note]
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 Commissioning logs, which are presented on the "Commissioning" tab for any machine in the "Ready" state, contain a list of commissioning scripts with a timestamp and result.  You can view the detailed logs for each of these scripts from this tab.
 
 When you click on the "Commissioning" tab under a given machine, you will see a screen similar to this one:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg"></a> 
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
 
 <!-- deb-2-7-ui
 Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/2473#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
@@ -175,6 +96,10 @@ Each of the items in the "NAME" column is the name of a [commissioning script](/
 Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/2477#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
  deb-2-9-ui -->
 
+<!-- deb-3-0-ui
+Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/3877#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
+ deb-3-0-ui -->
+
 <!-- snap-2-7-ui
 Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/2467#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
  snap-2-7-ui -->
@@ -187,19 +112,23 @@ Each of the items in the "NAME" column is the name of a [commissioning script](/
 Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/2471#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
  snap-2-9-ui -->
 
+<!-- snap-3-0-ui
+Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/3874#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
+ snap-3-0-ui -->
+
 <!-- snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli
 <a href="#heading--00-maas-00-support-info"><h2 id="heading--00-maas-00-support-info">00-maas-00-support-info</h2></a>
 
 MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  This script gathers this information, mostly as a bundle to be provided to a support specialist to help get the baseline for the machine in question.  Typical output, generated when a machine passes this script, is shown in the foldout below.
 snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli -->
 
-<!-- snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-cli
+<!-- snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-cli snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli 
 <a href="#heading--maas-support-info"><h2 id="heading--maas-support-info">maas-support-info</h2></a>
 
 MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  This script gathers this information, mostly as a bundle to be provided to a support specialist to help get the baseline for the machine in question.
 
 This script runs in parallel with other scripts to speed commissioning. Typical output, generated when a machine passes this script, is shown in the foldout below.
-snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-cli -->
+snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli snap-3-0-ui deb-3-0-ui -->
 
 <details><summary>Typical script output</summary>
 
@@ -431,11 +360,11 @@ Here's a quick breakdown of what you see in the script output:
 This script pulls system BIOS and vendor info, and generates user-defined tags for later use.  Typical script output from a successful run looks something like the foldout below.
 snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli -->
 
-<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
+<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli 
 <a href="#heading--maas-lshw"><h2 id="heading--maas-lshw">maas-lshw</h2></a>
 
 This script pulls system BIOS and vendor info, and generates user-defined tags for later use.  `maas-lshw` runs in parallel with other scripts to speed up the commissioning process. Typical script output from a successful run looks something like the foldout below.
-snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
+snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli -->
 
 <details><summary>Typical script output</summary>
 ````
@@ -1125,12 +1054,12 @@ snap-2-8-ui snap-2-8-cli deb-2-8-ui deb-2-8-cli -->
 This script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine. The lldpd needs to be installed early because it requires about a 60-second delay before running.  Under normal conditions, there is typically no output from this script in the logs.
 snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli -->
 
-<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
+<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-cli deb-3-0-cli snap-3-0-ui deb-3-0-ui 
 
 <a href="#heading--20-maas-01-install-lldpd"><h2 id="heading--20-maas-01-install-lldpd">20-maas-01-install-lldpd</h2></a>
 
 This script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  This logs the basic install process to the commissioning logs in real time.
-snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
+snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli -->
 
 <!-- snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli
 
@@ -1139,12 +1068,12 @@ snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
 This script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.  Successful log output looks something like the foldout below.
 snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli -->
 
-<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
+<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-cli deb-3-0-cli snap-3-0-ui deb-3-0-ui  
 
 <a href="#heading--maas-list-modaliases"><h2 id="heading--maas-list-modaliases">maas-list-modaliases</h2></a>
 
 This script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.  `maas-list-modaliases` runs in parallel with other scripts to speed up the commissioning process.  Successful log output looks something like the foldout below.
-snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
+snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli -->
 
 <details><summary>Typical script output</summary>
 
@@ -1227,11 +1156,11 @@ There are many more fields, depending upon the device type, and a wide variety o
 MAAS will want to know all the ways the machine is connected to the network. Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.  Under normal conditions, this script does not produce a significant amount of output.
 snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli -->
 
-<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
+<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-cli deb-3-0-cli snap-3-0-ui deb-3-0-ui 
 <a href="#heading--20-maas-02-dhcp-unconfigured-ifaces"><h2 id="heading--20-maas-02-dhcp-unconfigured-ifaces">20-maas-02-dhcp-unconfigured-ifaces</h2></a>
 
 MAAS will want to know all the ways the machine is connected to the network. Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.  This script logs the discovery of these networks to the commissioning logs.
-snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
+snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli -->
 
 <!-- snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli
 <a href="#heading--00-maas-06-get-fruid-api-data"><h2 id="heading--00-maas-06-get-fruid-api-data">00-maas-06-get-fruid-api-data</h2></a>
@@ -1239,12 +1168,12 @@ snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
 This script gathers information for the Facebook wedge power type.  Typical output from a successful run looks something like the foldout below.
 snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli -->
 
-<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
+<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-cli deb-3-0-cli snap-3-0-ui deb-3-0-ui 
 
 <a href="#heading--maas-get-fruid-api-data"><h2 id="heading--maas-get-fruid-api-data">maas-get-fruid-api-data</h2></a>
 
 This script gathers information for the Facebook wedge power type, and it runs in parallel with other scripts to improve commissioning speed. Typical output from a successful run looks something like the foldout below.
-snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
+snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli -->
 
 <details><summary>Typical script output</summary>
 
@@ -1269,11 +1198,11 @@ You will note that this output does not actually contain any specific informatio
 This script lists what serial ports are available on the machine.  Log output from a normal, successful run is simply a list of serial ports, something like the foldout below.
 snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli -->
 
-<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
+<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-cli deb-3-0-cli snap-3-0-ui deb-3-0-ui 
 <a href="#heading--maas-serial-ports"><h2 id="heading--maas-serial-ports">maas-serial-ports</h2></a>
 
 This script lists what serial ports are available on the machine; it runs in parallel to speed up commissioning.  Log output from a normal, successful run is simply a list of serial ports, something like the foldout below.
-snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
+snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli -->
 
 <details><summary>Typical script output</summary>
 ````
@@ -1656,7 +1585,7 @@ nomodeset ro root=squash:http://192.168.122.2:5248/images/ubuntu/amd64/generic/b
 These are the kernel command line parameters, which control the invocation of various modules built into the kernel.  The function `modprobe` parses this kernel command line and collects the relevant module parameters when it loads a module.  Note that this command line could also be used to pull in loadable modules.
 snap-2-8-ui snap-2-8-cli snap-2-7-ui snap-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-7-ui deb-2-7-cli -->
 
-<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
+<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-cli deb-3-0-cli snap-3-0-ui deb-3-0-ui 
 <a href="#heading--maas-capture-lldp"><h2 id="heading--maas-capture-lldp">maas-capture-lldp</h2></a>
 
 This script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  The script runs in parallel with other scripts for speed. Note that the log output from a successful run is uninteresting.
@@ -1671,8 +1600,3 @@ nomodeset ro root=squash:http://192.168.122.2:5248/images/ubuntu/amd64/generic/b
 
 These are the kernel command line parameters, which control the invocation of various modules built into the kernel.  The function `modprobe` parses this kernel command line and collects the relevant module parameters when it loads a module.  Note that this command line could also be used to pull in loadable modules.
 snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-cli -->
-
-
-------
-****
-------

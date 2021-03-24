@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-deb-2-8-clileft:0;list-deb-2-8-clistyle-deb-2-8-clitype:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-deb-2-8-clicolor:#d9d9d9; width:100%;border-deb-2-8-clibottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	  &nbsp;UI-deb-2-8-clionly&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-deb-2-8-clicolor:white;border-deb-2-8-clitop:1px solid black; border-deb-2-8-clileft:1px solid black; border-deb-2-8-cliright:1px solid black; border-deb-2-8-clibottom:5px solid white;">
+	  CLI-deb-2-8-clionly
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-deb-2-8-clitop:40px; margin-deb-2-8-clileft:20px">
+      <strong>
+	<a href="maas-deb-2-8-clidocumentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-deb-2-8-climaas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clirequirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-cliinstallation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-deb-2-8-clijourney.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-deb-2-8-clicommunication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-deb-2-8-clicontrollers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-deb-2-8-clicontrollers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-deb-2-8-cliavailability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-deb-2-8-climachines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-deb-2-8-climanagement.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-deb-2-8-climachines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-deb-2-8-clitesting.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clitesting.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-deb-2-8-climachines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clitags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-deb-2-8-climachine-deb-2-8-clisetup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-deb-2-8-cliboot-deb-2-8-clioptions.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-deb-2-8-clipools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-clivmfs-deb-2-8-clidatastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-deb-2-8-clikernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-deb-2-8-cliand-deb-2-8-cliimport-deb-2-8-cliimages.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-deb-2-8-cliimage-deb-2-8-climirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-cliimages.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-deb-2-8-climanagement.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clidhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-deb-2-8-cliranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-deb-2-8-cliservices.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clidiscovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-deb-2-8-cliaddressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-deb-2-8-clitls-deb-2-8-cliencryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clistp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-deb-2-8-clizones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-deb-2-8-clihosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clinetworking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clistorage-deb-2-8-clipools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-deb-2-8-cliand-deb-2-8-clideleting-deb-2-8-clivms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-deb-2-8-climetrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-deb-2-8-cliyour-deb-2-8-climaas-deb-2-8-cliinstallation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clilogging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-clilogs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-deb-2-8-cliaccounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-deb-2-8-clisearch.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-clinetwork-deb-2-8-clitutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-deb-2-8-clicli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-deb-2-8-clievent-deb-2-8-clilogs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clikernel-deb-2-8-climanagement.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliimage-deb-2-8-climanagement.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliinterface-deb-2-8-climanagement.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliadvanced-deb-2-8-clitasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clicomposable-deb-2-8-clihardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-deb-2-8-cliapi-deb-2-8-cliclient.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-deb-2-8-cliauthentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-deb-2-8-clihelp.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-deb-2-8-clitricks-deb-2-8-cliand-deb-2-8-clitraps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-deb-2-8-clidocs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-deb-2-8-cliguide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-deb-2-8-clitop:40px; margin-deb-2-8-cliright:30px">
+      <h1>Common CLI tasks</h1><p>This page presents a list of many common tasks that you can perform via the MAAS CLI. See <a href="maas-deb-2-8-clicli.html">MAAS CLI</a> for instructions to help get you started with the CLI.</p>
+<h4>Quick questions you may have:</h4>
+<ul>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-clilist-deb-2-8-clinodes">How can I list nodes?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-clidetermine-deb-2-8-clia-deb-2-8-clinode-deb-2-8-clisystem-deb-2-8-cliid">How can I determine a node system ID?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-clicommission-deb-2-8-clia-deb-2-8-clinode">How can I commission a node?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-cliacquire-deb-2-8-clia-deb-2-8-clinode">How can I acquire a node?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-clideploy-deb-2-8-clia-deb-2-8-clinode">How can I deploy a node?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-cliconfigure-deb-2-8-clideployment-deb-2-8-clitimeout">How can I configure the deployment timeout?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-clicontrol-deb-2-8-clisubnet-deb-2-8-climanagement">How can I control subnet management?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-clicreate-deb-2-8-clia-deb-2-8-clireserved-deb-2-8-cliip-deb-2-8-clirange">How can I create a reserved IP range?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-clidetermine-deb-2-8-clia-deb-2-8-clifabric-deb-2-8-cliid">How can I determine a fabric ID?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-clienable-deb-2-8-clidhcp">How can I enable DHCP?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-cliset-deb-2-8-clia-deb-2-8-clidns-deb-2-8-cliforwarder">How can I set a DNS forwarder?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-cliconfigure-deb-2-8-cliproxying">How can I configure proxying?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-cliset-deb-2-8-clia-deb-2-8-clidefault-deb-2-8-cligateway">How can I set a default gateway?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-cliset-deb-2-8-clia-deb-2-8-clidns-deb-2-8-cliserver">How can I set a DNS server?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-cliset-deb-2-8-clia-deb-2-8-clizone-deb-2-8-clidescription">How can I set a zone description?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clipublic-deb-2-8-clissh-deb-2-8-clikey">How can I add a public SSH key?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-clidetermine-deb-2-8-clia-deb-2-8-clinode-deb-2-8-clihostname">How can I determine a node hostname?</a></li>
+<li><a href="common-deb-2-8-clicli-deb-2-8-clitasks.html#heading-deb-2-8-cli-deb-2-8-clicreate-deb-2-8-clia-deb-2-8-cliregular-deb-2-8-cliuser">How can I create a regular user?</a></li>
+</ul>
+<h2 id="heading-deb-2-8-cli-deb-2-8-clilist-deb-2-8-clinodes">List nodes</h2>
+
+<p>To list all nodes (and their characteristics) in the MAAS:</p>
+
+<pre><code class="bash">maas $PROFILE nodes read
+</code></pre>
+
+<p>You can also specify various parameters to narrow your search. In the following example, MAAS will return any machines containing &lsquo;node2&rsquo; in the <code>hostname</code> parameter.</p>
+<pre><code class="bash">maas $PROFILE machines read hostname=node2
+</code></pre>
+
+<p>To see a list of all available search parameters:</p>
+<pre><code class="bash">maas $PROFILE machines read -deb-2-8-cli-deb-2-8-clihelp
+</code></pre>
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clidetermine-deb-2-8-clia-deb-2-8-clinode-deb-2-8-clisystem-deb-2-8-cliid">Determine a node system ID</h2>
+
+<p>You can uses  <code>jq</code> to determine a node&rsquo;s system ID. For example, here&rsquo;s how to output just the <code>hostname</code> and <code>system_id</code> when searching for a particular hostname:</p>
+<pre><code class="bash">maas $PROFILE machines read | jq '.[] | .hostname, .system_id'
+</code></pre>
+
+<p><a href="https://stedolan.github.io/jq/">jq</a> is a command-deb-2-8-cliline JSON processor.</p>
+<p>The output looks like this:</p>
+<pre><code class="no-deb-2-8-clihighlight">&quot;node2&quot;
+&quot;e8xa8m&quot;
+</code></pre>
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clicommission-deb-2-8-clia-deb-2-8-clinode">Commission a machine</h2>
+
+<p>To commission a machine:</p>
+<pre><code class="bash">maas $PROFILE machine commission $SYSTEM_ID
+</code></pre>
+
+<p><strong>NOTE:</strong> 
+To commission a machines, it must have a status of &lsquo;New&rsquo;.</p>
+<p>To commission all machines in the &lsquo;New&rsquo; state:</p>
+<pre><code class="bash">maas $PROFILE machines accept-deb-2-8-cliall
+</code></pre>
+
+<p>You have the option of setting some parameters to change how commission runs:</p>
+<ul>
+<li>
+<p><code>enable_ssh</code>: Optional integer. Controls whether to enable SSH for the commissioning environment using the user&rsquo;s SSH key(s). &lsquo;1&rsquo; == True, &lsquo;0&rsquo; == False. Roughly equivalent to the <strong>Allow SSH access and prevent machine powering off</strong> in the web UI.</p>
+</li>
+<li>
+<p><code>skip_bmc_config</code>: Optional integer.  Controls whether to skip re-deb-2-8-cliconfiguration of the BMC for IPMI based machines. &lsquo;1&rsquo; == True, &lsquo;0&rsquo; == False.</p>
+</li>
+<li>
+<p><code>skip_networking</code>: Optional integer.  Controls whether to skip re-deb-2-8-cliconfiguring the networking on the machine after the commissioning has completed. &lsquo;1&rsquo; == True, &lsquo;0&rsquo; == False. Roughly equivalent to <strong>Retain network configuration</strong> in the web UI.</p>
+</li>
+<li>
+<p><code>skip_storage</code>: Optional integer.  Controls hether to skip re-deb-2-8-cliconfiguring the storage on the machine after the commissioning has completed. &lsquo;1&rsquo; == True, &lsquo;0&rsquo; == False.  Roughly equivalent to <strong>Retain storage configuration</strong> in the web UI.</p>
+</li>
+<li>
+<p><code>commissioning_scripts</code>: Optional string.  A comma seperated list of commissioning script names and tags to be run. By default all custom commissioning scripts are run. Built-deb-2-8-cliin commissioning scripts always run. Selecting &lsquo;update_firmware&rsquo; or &lsquo;configure_hba&rsquo; will run firmware updates or configure HBA&rsquo;s on matching machines.</p>
+</li>
+<li>
+<p><code>testing_scripts</code>: Optional string.  A comma seperated list of testing script names and tags to be run. By default all tests tagged &lsquo;commissioning&rsquo; will be run. Set to &lsquo;none&rsquo; to disable running tests.</p>
+</li>
+<li>
+<p><code>parameters</code>: Optional string.  Scripts selected to run may define their own parameters. These parameters may be passed using the parameter name. Optionally a parameter may have the script name prepended to have that parameter only apply to that specific script.</p>
+</li>
+</ul>
+<h2 id="heading-deb-2-8-cli-deb-2-8-cliacquire-deb-2-8-clia-deb-2-8-clinode">Acquire a node</h2>
+
+<p>To acquire/allocate a random node:</p>
+<pre><code class="bash">maas $PROFILE machines allocate
+</code></pre>
+
+<p>To acquire/allocate a specific node:</p>
+<pre><code class="bash">maas $PROFILE machines allocate system_id=$SYSTEM_ID
+</code></pre>
+
+<p><strong>NOTE:</strong> 
+To acquire a node, it must have a status of &lsquo;Ready&rsquo;.</p>
+<h2 id="heading-deb-2-8-cli-deb-2-8-clideploy-deb-2-8-clia-deb-2-8-clinode">Deploy a node</h2>
+
+<p>To deploy a node:</p>
+<pre><code class="bash">maas $PROFILE machine deploy $SYSTEM_ID
+</code></pre>
+
+<p>To deploy a node as a KVM host:</p>
+<pre><code class="bash">maas $PROFILE machine deploy $SYSTEM_ID install_kvm=True
+</code></pre>
+
+<p><strong>NOTE:</strong> 
+To deploy with the CLI, the node must have a status of &lsquo;Allocated&rsquo;. See &lsquo;Acquire a node&rsquo; above (or use the <a href="deploy-deb-2-8-climachines-deb-2-8-clisnap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui.html#heading-deb-2-8-cli-deb-2-8-cliacquire">web UI</a>).</p>
+<p>See <a href="deploy-deb-2-8-climachines-deb-2-8-clisnap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui.html">Deploy nodes</a>.</p>
+<h2 id="heading-deb-2-8-cli-deb-2-8-cliconfigure-deb-2-8-clideployment-deb-2-8-clitimeout">Configure deployment timeout</h2>
+
+<p>By default, when you deploy a node, MAAS will consider the deployment a failure if it doesn&rsquo;t complete within 30 minutes. However, this timeout is configurable:</p>
+<pre><code class="bash">maas $PROFILE maas set-deb-2-8-cliconfig name=node-deb-2-8-clitimeout value=$NUMBER_OF_MINUTES
+</code></pre>
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clicontrol-deb-2-8-clisubnet-deb-2-8-climanagement">Control subnet management</h2>
+
+<p>To enable or disable subnet management:</p>
+<pre><code class="bash">maas $PROFILE subnet update $SUBNET_CIDR managed=false|true
+</code></pre>
+
+<p>For example, to disable:</p>
+<pre><code class="bash">maas $PROFILE subnet update 192.168.1.0/24 managed=false
+</code></pre>
+
+<p>You can use the subnet&rsquo;s ID in place of the CIDR address.</p>
+<p>See <a href="subnet-deb-2-8-climanagement.html">Subnet management</a>.</p>
+<h2 id="heading-deb-2-8-cli-deb-2-8-clicreate-deb-2-8-clia-deb-2-8-clireserved-deb-2-8-cliip-deb-2-8-clirange">Create a reserved IP range</h2>
+
+<p>See <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-cliip-deb-2-8-cliranges">Concepts and terms</a> for an explanation of the two kinds of reserved IP ranges MAAS uses.</p>
+<p>To create a range of dynamic IP addresses that will be used by MAAS for node enlistment, commissioning, and possibly deployment:</p>
+<pre><code class="bash">maas $PROFILE ipranges create type=dynamic \
+    start_ip=$IP_DYNAMIC_RANGE_LOW end_ip=$IP_DYNAMIC_RANGE_HIGH \
+    comment='This is a reserved dynamic range'
+</code></pre>
+
+<p>To create a range of IP addresses that will not be used by MAAS:</p>
+<pre><code class="bash">maas $PROFILE ipranges create type=reserved \
+    start_ip=$IP_STATIC_RANGE_LOW end_ip=$IP_STATIC_RANGE_HIGH \
+    comment='This is a reserved range'
+</code></pre>
+
+<p>To reserve a single IP address that will not be used by MAAS:</p>
+<pre><code class="bash">maas $PROFILE ipaddresses reserve ip_address=$IP_STATIC_SINGLE
+</code></pre>
+
+<p>To remove such a single reserved IP address:</p>
+<pre><code class="bash">maas $PROFILE ipaddresses release ip=$IP_STATIC_SINGLE
+</code></pre>
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clidetermine-deb-2-8-clia-deb-2-8-clifabric-deb-2-8-cliid">Determine a fabric ID</h2>
+
+<p>To determine a fabric ID based on a subnet address:</p>
+<pre><code class="bash">FABRIC_ID=$(maas $PROFILE subnet read $SUBNET_CIDR \
+    | grep fabric | cut -deb-2-8-clid ' ' -deb-2-8-clif 10 | cut -deb-2-8-clid '&quot;' -deb-2-8-clif 2)
+</code></pre>
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clienable-deb-2-8-clidhcp">Enable DHCP</h2>
+
+<p>To enable DHCP on a VLAN on a certain fabric:</p>
+<pre><code class="bash">maas $PROFILE vlan update $FABRIC_ID $VLAN_TAG dhcp_on=True \
+    primary_rack=$PRIMARY_RACK_CONTROLLER
+</code></pre>
+
+<p>To enable DHCP HA, you will need both a primary and a secondary controller:</p>
+<pre><code class="bash">maas $PROFILE vlan update $FABRIC_ID $VLAN_TAG dhcp_on=True \
+    primary_rack=$PRIMARY_RACK_CONTROLLER \
+    secondary_rack=$SECONDARY_RACK_CONTROLLER 
+</code></pre>
+
+<p>You will also need to set a default gateway (see <a href="#heading-deb-2-8-cli-deb-2-8-cliset-deb-2-8-clia-deb-2-8-clidefault-deb-2-8-cligateway">below</a>).</p>
+<p><strong>NOTE:</strong> 
+You must enable DHCP for PXE booting on the &lsquo;untagged&rsquo; VLAN.</p>
+<p>See <a href="managing-deb-2-8-clidhcp.html">DHCP</a> for more on this subject.</p>
+<h2 id="heading-deb-2-8-cli-deb-2-8-cliset-deb-2-8-clia-deb-2-8-clidns-deb-2-8-cliforwarder">Set a DNS forwarder</h2>
+
+<p>To set a DNS forwarder:</p>
+<pre><code class="bash">maas $PROFILE maas set-deb-2-8-cliconfig name=upstream_dns value=$MY_UPSTREAM_DNS
+</code></pre>
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-cliconfigure-deb-2-8-cliproxying">Configure proxying</h2>
+
+<p>Enabling and disabling proxying, in general, is done via a boolean option (&lsquo;true&rsquo; or &lsquo;false&rsquo;). The following command will disable proxying completely:</p>
+<pre><code class="bash">maas $PROFILE maas set-deb-2-8-cliconfig name=enable_http_proxy value=false
+</code></pre>
+
+<p>To set an external proxy, ensure proxying is enabled (see above) and then define it:</p>
+<pre><code class="bash">maas $PROFILE maas set-deb-2-8-cliconfig name=http_proxy value=$EXTERNAL_PROXY
+</code></pre>
+
+<p>For example,</p>
+<pre><code class="bash">maas $PROFILE maas set-deb-2-8-cliconfig name=enable_http_proxy value=true
+maas $PROFILE maas set-deb-2-8-cliconfig name=http_proxy value=http://squid.example.com:3128/
+</code></pre>
+
+<p>Enabling and disabling proxying per subnet is done via a boolean option (&lsquo;true&rsquo; or &lsquo;false&rsquo;). Here is how you can disable proxying on a per-deb-2-8-clisubnet basis:</p>
+<pre><code class="bash">maas $PROFILE subnet update $SUBNET_CIDR allow_proxy=false
+</code></pre>
+
+<p>For example,</p>
+<pre><code class="bash">maas $PROFILE subnet update 192.168.0.0/22 allow_proxy=false
+</code></pre>
+
+<p>See <a href="proxy.html">Proxy</a> for detailed information on how proxying works with MAAS.</p>
+<h2 id="heading-deb-2-8-cli-deb-2-8-cliset-deb-2-8-clia-deb-2-8-clidefault-deb-2-8-cligateway">Set a default gateway</h2>
+
+<p>To set the default gateway for a subnet:</p>
+<pre><code class="bash">maas $PROFILE subnet update $SUBNET_CIDR gateway_ip=$MY_GATEWAY
+</code></pre>
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-cliset-deb-2-8-clia-deb-2-8-clidns-deb-2-8-cliserver">Set a DNS server</h2>
+
+<p>To set the DNS server for a subnet:</p>
+<pre><code class="bash">maas $PROFILE subnet update $SUBNET_CIDR dns_servers=$MY_NAMESERVER
+</code></pre>
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-cliset-deb-2-8-clia-deb-2-8-clizone-deb-2-8-clidescription">Set a zone description</h2>
+
+<p>To set a description for a physical zone:</p>
+<pre><code class="bash">maas $PROFILE zone update default \
+    description=&quot;This zone was configured by a script.&quot;
+</code></pre>
+
+<p>See <a href="availability-deb-2-8-clizones.html">Zones</a> for more information on this topic.</p>
+<h2 id="heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clipublic-deb-2-8-clissh-deb-2-8-clikey">Add a public SSH key</h2>
+
+<p>To add a public SSH key to a MAAS user account:</p>
+<pre><code class="bash">maas $PROFILE sshkeys create &quot;key=$SSH_KEY&quot;
+</code></pre>
+
+<p>See <a href="user-deb-2-8-cliaccounts.html#heading-deb-2-8-cli-deb-2-8-clissh-deb-2-8-clikeys">SSH keys</a>.</p>
+<h2 id="heading-deb-2-8-cli-deb-2-8-clidetermine-deb-2-8-clia-deb-2-8-clinode-deb-2-8-clihostname">Determine a node hostname</h2>
+
+<p>To determine a node&rsquo;s hostname based on it&rsquo;s MAC address:</p>
+<pre><code class="bash">HOSTNAME=$(maas $PROFILE nodes read mac_address=$MAC \
+    | grep hostname | cut -deb-2-8-clid '&quot;' -deb-2-8-clif 4)
+</code></pre>
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clicreate-deb-2-8-clia-deb-2-8-cliregular-deb-2-8-cliuser">Create a regular user</h2>
+
+<p>To create a regular user:</p>
+<pre><code class="bash">maas $PROFILE users create username=$USERNAME \
+    email=$EMAIL_ADDRESS password=$PASSWORD is_superuser=0
+</code></pre>
+
+<p>All the options are necessary. Note that stipulating a password on the CLI may be a security hazard, depending on your environment. If unsure, use the web UI. See <a href="user-deb-2-8-cliaccounts.html">User Accounts</a> for the latter.</p>
+    </div>
+  </body>
+</html>

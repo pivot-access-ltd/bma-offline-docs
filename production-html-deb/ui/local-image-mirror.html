@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="../maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.9
+	    What&rsquo;s new in 2.10
 	  </a>
 	</li>
 	<li>
@@ -429,26 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Local image mirror</h1><!-- deb-2-7-cli
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
- deb-2-9-cli -->
-
-<!-- snap-2-7-cli
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
- snap-2-7-ui -->
+      <h1>Local image mirror</h1><!-- begin-rad-menu -->
 
 <!-- snap-2-8-cli
  snap-2-8-cli -->
@@ -461,6 +442,31 @@
 
 <!-- snap-2-9-ui
  snap-2-9-ui -->
+
+<!-- snap-2-10-cli
+ snap-2-10-cli -->
+
+<!-- snap-2-10-ui
+ snap-2-10-ui -->
+
+<!-- deb-2-8-cli
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- deb-2-10-cli
+ deb-2-10-cli -->
+
+<!-- end-rad-menu -->
+
+<!-- end-rad-menu -->
 
 <p>Mirroring images is worthy of consideration.  The SimpleStreams protocol delivers Images to MAAS, which is especially useful when your Internet link is slow or unreliable. In this mirrored configuration, images will be instantly available when MAAS requests them.</p>
 <p>Canonical provides two SimpleStreams for MAAS images: candidate and stable. Both streams contain Ubuntu images, CentOS images, bootloaders extracted from the Ubuntu archive, and release notifications. Either stream can be used in any version of MAAS greater than 2.1, but not all images are supported in older versions.</p>
@@ -515,8 +521,6 @@ sudo sstream-mirror --keyring=$KEYRING_FILE $IMAGE_SRC $IMAGE_DIR \
 <p>Where <code>&lt;myserver&gt;</code> identifies your server&rsquo;s hostname or IP address.</p>
 <p>Verify the availability of the images by visiting the above URL.</p>
 <p>The final <code>sstream-mirror</code> command should be invoked at regular intervals (i.e. with <code>cron</code>) to ensure the mirror contains the latest images.</p>
-<hr>
-<h2>****</h2>
     </div>
   </body>
 </html>

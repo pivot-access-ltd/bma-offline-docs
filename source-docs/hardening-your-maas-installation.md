@@ -1,86 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardening-your-maas-installation/2658) ~ [UI](/t/hardening-your-maas-installation/2659)|[CLI](/t/hardening-your-maas-installation/2660) ~ [UI](/t/hardening-your-maas-installation/2661)|[CLI](/t/hardening-your-maas-installation/2662) ~ [UI](/t/hardening-your-maas-installation/2663)|
-|Packages|CLI ~ [UI](/t/hardening-your-maas-installation/2665)|[CLI](/t/hardening-your-maas-installation/2666) ~ [UI](/t/hardening-your-maas-installation/2667)|[CLI](/t/hardening-your-maas-installation/2668) ~ [UI](/t/hardening-your-maas-installation/2669)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardening-your-maas-installation/2658) ~ [UI](/t/hardening-your-maas-installation/2659)|[CLI](/t/hardening-your-maas-installation/2660) ~ [UI](/t/hardening-your-maas-installation/2661)|[CLI](/t/hardening-your-maas-installation/2662) ~ [UI](/t/hardening-your-maas-installation/2663)|
-|Packages|[CLI](/t/hardening-your-maas-installation/2664) ~ UI|[CLI](/t/hardening-your-maas-installation/2666) ~ [UI](/t/hardening-your-maas-installation/2667)|[CLI](/t/hardening-your-maas-installation/2668) ~ [UI](/t/hardening-your-maas-installation/2669)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardening-your-maas-installation/2658) ~ [UI](/t/hardening-your-maas-installation/2659)|[CLI](/t/hardening-your-maas-installation/2660) ~ [UI](/t/hardening-your-maas-installation/2661)|[CLI](/t/hardening-your-maas-installation/2662) ~ [UI](/t/hardening-your-maas-installation/2663)|
-|Packages|[CLI](/t/hardening-your-maas-installation/2664) ~ [UI](/t/hardening-your-maas-installation/2665)|CLI ~ [UI](/t/hardening-your-maas-installation/2667)|[CLI](/t/hardening-your-maas-installation/2668) ~ [UI](/t/hardening-your-maas-installation/2669)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardening-your-maas-installation/2658) ~ [UI](/t/hardening-your-maas-installation/2659)|[CLI](/t/hardening-your-maas-installation/2660) ~ [UI](/t/hardening-your-maas-installation/2661)|[CLI](/t/hardening-your-maas-installation/2662) ~ [UI](/t/hardening-your-maas-installation/2663)|
-|Packages|[CLI](/t/hardening-your-maas-installation/2664) ~ [UI](/t/hardening-your-maas-installation/2665)|[CLI](/t/hardening-your-maas-installation/2666) ~ UI|[CLI](/t/hardening-your-maas-installation/2668) ~ [UI](/t/hardening-your-maas-installation/2669)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardening-your-maas-installation/2658) ~ [UI](/t/hardening-your-maas-installation/2659)|[CLI](/t/hardening-your-maas-installation/2660) ~ [UI](/t/hardening-your-maas-installation/2661)|[CLI](/t/hardening-your-maas-installation/2662) ~ [UI](/t/hardening-your-maas-installation/2663)|
-|Packages|[CLI](/t/hardening-your-maas-installation/2664) ~ [UI](/t/hardening-your-maas-installation/2665)|[CLI](/t/hardening-your-maas-installation/2666) ~ [UI](/t/hardening-your-maas-installation/2667)|CLI ~ [UI](/t/hardening-your-maas-installation/2669)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardening-your-maas-installation/2658) ~ [UI](/t/hardening-your-maas-installation/2659)|[CLI](/t/hardening-your-maas-installation/2660) ~ [UI](/t/hardening-your-maas-installation/2661)|[CLI](/t/hardening-your-maas-installation/2662) ~ [UI](/t/hardening-your-maas-installation/2663)|
-|Packages|[CLI](/t/hardening-your-maas-installation/2664) ~ [UI](/t/hardening-your-maas-installation/2665)|[CLI](/t/hardening-your-maas-installation/2666) ~ [UI](/t/hardening-your-maas-installation/2667)|[CLI](/t/hardening-your-maas-installation/2668) ~ UI|
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/hardening-your-maas-installation/2659)|[CLI](/t/hardening-your-maas-installation/2660) ~ [UI](/t/hardening-your-maas-installation/2661)|[CLI](/t/hardening-your-maas-installation/2662) ~ [UI](/t/hardening-your-maas-installation/2663)|
-|Packages|[CLI](/t/hardening-your-maas-installation/2664) ~ [UI](/t/hardening-your-maas-installation/2665)|[CLI](/t/hardening-your-maas-installation/2666) ~ [UI](/t/hardening-your-maas-installation/2667)|[CLI](/t/hardening-your-maas-installation/2668) ~ [UI](/t/hardening-your-maas-installation/2669)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardening-your-maas-installation/2658) ~ UI|[CLI](/t/hardening-your-maas-installation/2660) ~ [UI](/t/hardening-your-maas-installation/2661)|[CLI](/t/hardening-your-maas-installation/2662) ~ [UI](/t/hardening-your-maas-installation/2663)|
-|Packages|[CLI](/t/hardening-your-maas-installation/2664) ~ [UI](/t/hardening-your-maas-installation/2665)|[CLI](/t/hardening-your-maas-installation/2666) ~ [UI](/t/hardening-your-maas-installation/2667)|[CLI](/t/hardening-your-maas-installation/2668) ~ [UI](/t/hardening-your-maas-installation/2669)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardening-your-maas-installation/2658) ~ [UI](/t/hardening-your-maas-installation/2659)|CLI ~ [UI](/t/hardening-your-maas-installation/2661)|[CLI](/t/hardening-your-maas-installation/2662) ~ [UI](/t/hardening-your-maas-installation/2663)|
-|Packages|[CLI](/t/hardening-your-maas-installation/2664) ~ [UI](/t/hardening-your-maas-installation/2665)|[CLI](/t/hardening-your-maas-installation/2666) ~ [UI](/t/hardening-your-maas-installation/2667)|[CLI](/t/hardening-your-maas-installation/2668) ~ [UI](/t/hardening-your-maas-installation/2669)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardening-your-maas-installation/2658) ~ [UI](/t/hardening-your-maas-installation/2659)|[CLI](/t/hardening-your-maas-installation/2660) ~ UI|[CLI](/t/hardening-your-maas-installation/2662) ~ [UI](/t/hardening-your-maas-installation/2663)|
-|Packages|[CLI](/t/hardening-your-maas-installation/2664) ~ [UI](/t/hardening-your-maas-installation/2665)|[CLI](/t/hardening-your-maas-installation/2666) ~ [UI](/t/hardening-your-maas-installation/2667)|[CLI](/t/hardening-your-maas-installation/2668) ~ [UI](/t/hardening-your-maas-installation/2669)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardening-your-maas-installation/2658) ~ [UI](/t/hardening-your-maas-installation/2659)|[CLI](/t/hardening-your-maas-installation/2660) ~ [UI](/t/hardening-your-maas-installation/2661)|CLI ~ [UI](/t/hardening-your-maas-installation/2663)|
-|Packages|[CLI](/t/hardening-your-maas-installation/2664) ~ [UI](/t/hardening-your-maas-installation/2665)|[CLI](/t/hardening-your-maas-installation/2666) ~ [UI](/t/hardening-your-maas-installation/2667)|[CLI](/t/hardening-your-maas-installation/2668) ~ [UI](/t/hardening-your-maas-installation/2669)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/hardening-your-maas-installation/2658) ~ [UI](/t/hardening-your-maas-installation/2659)|[CLI](/t/hardening-your-maas-installation/2660) ~ [UI](/t/hardening-your-maas-installation/2661)|[CLI](/t/hardening-your-maas-installation/2662) ~ UI|
-|Packages|[CLI](/t/hardening-your-maas-installation/2664) ~ [UI](/t/hardening-your-maas-installation/2665)|[CLI](/t/hardening-your-maas-installation/2666) ~ [UI](/t/hardening-your-maas-installation/2667)|[CLI](/t/hardening-your-maas-installation/2668) ~ [UI](/t/hardening-your-maas-installation/2669)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/hardening-your-maas-installation-snap-2-7-cli/2658) ~ [UI](/t/hardening-your-maas-installation-snap-2-7-ui/2659)|[CLI](/t/hardening-your-maas-installation-snap-2-8-cli/2660) ~ [UI](/t/hardening-your-maas-installation-snap-2-8-ui/2661)|[CLI](/t/hardening-your-maas-installation-snap-2-9-cli/2662) ~ [UI](/t/hardening-your-maas-installation-snap-2-9-ui/2663)|[CLI](/t/hardening-your-maas-installation-snap-3-0-cli/3937) ~ [UI](/t/hardening-your-maas-installation-snap-3-0-ui/3938)|
+Packages|[CLI](/t/hardening-your-maas-installation-deb-2-7-cli/2664) ~ [UI](/t/hardening-your-maas-installation-deb-2-7-ui/2665)|[CLI](/t/hardening-your-maas-installation-deb-2-8-cli/2666) ~ [UI](/t/hardening-your-maas-installation-deb-2-8-ui/2667)|[CLI](/t/hardening-your-maas-installation-deb-2-9-cli/2668) ~ [UI](/t/hardening-your-maas-installation-deb-2-9-ui/2669)|[CLI](/t/hardening-your-maas-installation-deb-3-0-cli/3939) ~ [UI](/t/hardening-your-maas-installation-deb-3-0-ui/3940)|
 
 As a MAAS administrator, you have the critical responsibility of hardening your installation to help repudiate attacks and malicious actors.  While there are too many variables to make meaningful suggestions for your deployed machines, there are a number of steps you can take to improve the overall security of your MASS setup.  This article provides a few suggestions.
 
@@ -490,8 +411,3 @@ When you add a new rack or region controller, MAAS asks for a shared secret it w
 <a href="#heading--security-consulting"><h2 id="heading--security-consulting">Whom to contact about MAAS security consulting</h2></a>
 
 If you need help implementing MAAS security, please [contact us ](https://maas.io/contact-us).  We will be happy to assist you in arranging security consulting appropriate to your needs.
-
-
-------
-****
-------

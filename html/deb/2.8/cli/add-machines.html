@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-deb-2-8-clileft:0;list-deb-2-8-clistyle-deb-2-8-clitype:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-deb-2-8-clicolor:#d9d9d9; width:100%;border-deb-2-8-clibottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/add-deb-2-8-climachines.html">
+	  &nbsp;UI-deb-2-8-clionly&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-deb-2-8-clicolor:white;border-deb-2-8-clitop:1px solid black; border-deb-2-8-clileft:1px solid black; border-deb-2-8-cliright:1px solid black; border-deb-2-8-clibottom:5px solid white;">
+	  CLI-deb-2-8-clionly
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-deb-2-8-clitop:40px; margin-deb-2-8-clileft:20px">
+      <strong>
+	<a href="maas-deb-2-8-clidocumentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-deb-2-8-climaas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clirequirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-cliinstallation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-deb-2-8-clijourney.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-deb-2-8-clicommunication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-deb-2-8-clicontrollers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-deb-2-8-clicontrollers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-deb-2-8-cliavailability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-deb-2-8-climachines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-deb-2-8-climanagement.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-deb-2-8-climachines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-deb-2-8-clitesting.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clitesting.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-deb-2-8-climachines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clitags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-deb-2-8-climachine-deb-2-8-clisetup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-deb-2-8-cliboot-deb-2-8-clioptions.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-deb-2-8-clipools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-clivmfs-deb-2-8-clidatastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-deb-2-8-clikernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-deb-2-8-cliand-deb-2-8-cliimport-deb-2-8-cliimages.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-deb-2-8-cliimage-deb-2-8-climirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-cliimages.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-deb-2-8-climanagement.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clidhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-deb-2-8-cliranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-deb-2-8-cliservices.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clidiscovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-deb-2-8-cliaddressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-deb-2-8-clitls-deb-2-8-cliencryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clistp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-deb-2-8-clizones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-deb-2-8-clihosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clinetworking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clistorage-deb-2-8-clipools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-deb-2-8-cliand-deb-2-8-clideleting-deb-2-8-clivms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-deb-2-8-climetrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-deb-2-8-cliyour-deb-2-8-climaas-deb-2-8-cliinstallation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clilogging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-clilogs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-deb-2-8-cliaccounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-deb-2-8-clisearch.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-clinetwork-deb-2-8-clitutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-deb-2-8-clicli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-deb-2-8-clievent-deb-2-8-clilogs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clikernel-deb-2-8-climanagement.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliimage-deb-2-8-climanagement.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliinterface-deb-2-8-climanagement.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliadvanced-deb-2-8-clitasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clicomposable-deb-2-8-clihardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-deb-2-8-cliapi-deb-2-8-cliclient.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-deb-2-8-cliauthentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-deb-2-8-clihelp.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-deb-2-8-clitricks-deb-2-8-cliand-deb-2-8-clitraps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-deb-2-8-clidocs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-deb-2-8-cliguide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-deb-2-8-clitop:40px; margin-deb-2-8-cliright:30px">
+      <h1>Add machines</h1><!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>There are two ways to add a machine to MAAS:</p>
+<ol>
+<li>If you place the machine on a connected network, and the machine is configured to netboot, MAAS will automatically enlist it.</li>
+<li>If you add a machine manually, MAAS will automatically commission it.</li>
+</ol>
+<p>This article will explain more about both methods.</p>
+<h4>Four or five questions you may have:</h4>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+1. [How does enlistment work?](#heading-deb-2-8-cli-deb-2-8-clienlistment)
+2. [How do VM host nodes work?](introduction-deb-2-8-clito-deb-2-8-clivm-deb-2-8-clihosting.html)
+3. [How do I add virtual machines?](adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html)
+4. [How do I add a machine manually?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+1. [How does enlistment work?](#heading-deb-2-8-cli-deb-2-8-clienlistment)
+2. [How do VM host nodes work?](introduction-deb-2-8-clito-deb-2-8-clivm-deb-2-8-clihosting.html)
+3. [How do I add virtual machines?](adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html)
+4. [How do I add a machine manually?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)
+5. [How do I add a machine via a chassis?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clinodes-deb-2-8-clivia-deb-2-8-clia-deb-2-8-clichassis)
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<ol>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-clienlistment">How does enlistment work?</a></li>
+<li><a href="introduction-deb-2-8-clito-deb-2-8-clivm-deb-2-8-clihosting.html">How do VM host nodes work?</a></li>
+<li><a href="adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html">How do I add virtual machines?</a></li>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually">How do I add a machine manually?</a></li>
+</ol>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+1. [How does enlistment work?](#heading-deb-2-8-cli-deb-2-8-clienlistment)
+2. [How do VM host nodes work?](introduction-deb-2-8-clito-deb-2-8-clivm-deb-2-8-clihosting.html)
+3. [How do I add virtual machines?](adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html)
+4. [How do I add a machine manually?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)
+5. [How do I add a machine via a chassis?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clinodes-deb-2-8-clivia-deb-2-8-clia-deb-2-8-clichassis)
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+1. [How does enlistment work?](#heading-deb-2-8-cli-deb-2-8-clienlistment)
+2. [How do VM host nodes work?](introduction-deb-2-8-clito-deb-2-8-clivm-deb-2-8-clihosting.html)
+3. [How do I add virtual machines?](adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html)
+4. [How do I add a machine manually?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+1. [How does enlistment work?](#heading-deb-2-8-cli-deb-2-8-clienlistment)
+2. [How do VM host nodes work?](introduction-deb-2-8-clito-deb-2-8-clivm-deb-2-8-clihosting.html)
+3. [How do I add virtual machines?](adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html)
+4. [How do I add a machine manually?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)
+5. [How do I add a machine via a chassis?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clinodes-deb-2-8-clivia-deb-2-8-clia-deb-2-8-clichassis)
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+1. [How does enlistment work?](#heading-deb-2-8-cli-deb-2-8-clienlistment)
+2. [How do VM host nodes work?](introduction-deb-2-8-clito-deb-2-8-clivm-deb-2-8-clihosting.html)
+3. [How do I add virtual machines?](adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html)
+4. [How do I add a machine manually?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+1. [How does enlistment work?](#heading-deb-2-8-cli-deb-2-8-clienlistment)
+2. [How do VM host nodes work?](introduction-deb-2-8-clito-deb-2-8-clivm-deb-2-8-clihosting.html)
+3. [How do I add virtual machines?](adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html)
+4. [How do I add a machine manually?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)
+5. [How do I add a machine via a chassis?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clinodes-deb-2-8-clivia-deb-2-8-clia-deb-2-8-clichassis)
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+1. [How does enlistment work?](#heading-deb-2-8-cli-deb-2-8-clienlistment)
+2. [How do VM host nodes work?](introduction-deb-2-8-clito-deb-2-8-clivm-deb-2-8-clihosting.html)
+3. [How do I add virtual machines?](adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html)
+4. [How do I add a machine manually?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+1. [How does enlistment work?](#heading-deb-2-8-cli-deb-2-8-clienlistment)
+2. [How do VM host nodes work?](introduction-deb-2-8-clito-deb-2-8-clivm-deb-2-8-clihosting.html)
+3. [How do I add virtual machines?](adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html)
+4. [How do I add a machine manually?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)
+5. [How do I add a machine via a chassis?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clinodes-deb-2-8-clivia-deb-2-8-clia-deb-2-8-clichassis)
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+1. [How does enlistment work?](#heading-deb-2-8-cli-deb-2-8-clienlistment)
+2. [How do VM host nodes work?](introduction-deb-2-8-clito-deb-2-8-clivm-deb-2-8-clihosting.html)
+3. [How do I add virtual machines?](adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html)
+4. [How do I add a machine manually?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+1. [How does enlistment work?](#heading-deb-2-8-cli-deb-2-8-clienlistment)
+2. [How do VM host nodes work?](introduction-deb-2-8-clito-deb-2-8-clivm-deb-2-8-clihosting.html)
+3. [How do I add virtual machines?](adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html)
+4. [How do I add a machine manually?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)
+5. [How do I add a machine via a chassis?](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clinodes-deb-2-8-clivia-deb-2-8-clia-deb-2-8-clichassis)
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>MAAS typically adds a machine via a combination of DHCP, TFTP, and PXE. By now, you should have enabled MAAS to automatically add devices and machines to your environment. This unattended method of adding machines is called enlistment.</p>
+<p><strong>NOTE:</strong> 
+Configuring a computer to boot over PXE is done via its BIOS, often referred to as &ldquo;netboot&rdquo; or &ldquo;network boot&rdquo;.</p>
+<p>Regardless of how MAAS adds a machine, there are no special requirements for the underlying machine. In particular, there is no need to install an operating system on it.</p>
+<p>Once MAAS is working to the point of adding machines, you&rsquo;ll probably want to understand statuses and actions. See <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-clinode-deb-2-8-clistatuses">Node statuses</a> and <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-climachine-deb-2-8-cliactions">Machine actions</a> respectively.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clienlistment"><h2 id="heading-deb-2-8-cli-deb-2-8-clienlistment">How enlistment works</h2></a></p>
+<p>When MAAS enlists a machine, it first contacts the DHCP server, so that the machine can be assigned an IP address.  An IP address is necessary to download a kernel and initrd via TFTP, since these functions can&rsquo;t accept domain names.  Once the machine has a bootable kernel, MAAS boots it:</p>
+<p><a href="images/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg" target = "_blank"><img src="images/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg"></a></a> </p>
+<p>Next, initrd mounts a Squashfs image, ephemerally via HTTP, so that cloud-deb-2-8-cliinit can execute:</p>
+<p><a href="images/500f9bd2d070790a4007085705035366bee88a4a.jpeg" target = "_blank"><img src="images/500f9bd2d070790a4007085705035366bee88a4a.jpeg"></a></a> </p>
+<p>Finally, cloud-deb-2-8-cliinit runs enlistment and setup scripts:</p>
+<p><a href="images/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg" target = "_blank"><img src="images/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg"></a></a> </p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-deb-2-8-cligathering process is known as [automatic discovery or network discovery](network-deb-2-8-clidiscovery.html).
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-deb-2-8-cligathering process is known as [automatic discovery or network discovery](network-deb-2-8-clidiscovery.html).
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-deb-2-8-cligathering process is known as <a href="network-deb-2-8-clidiscovery.html">automatic discovery or network discovery</a>.</p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-deb-2-8-cligathering process is known as [automatic discovery or network discovery](network-deb-2-8-clidiscovery.html).
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-deb-2-8-cligathering process is known as [automatic discovery or network discovery](network-deb-2-8-clidiscovery.html).
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-deb-2-8-cligathering process is known as [automatic discovery or network discovery](network-deb-2-8-clidiscovery.html).
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-deb-2-8-cligathering process is known as [automatic discovery or network discovery](network-deb-2-8-clidiscovery.html).
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-deb-2-8-cligathering process is known as [automatic discovery or network discovery](network-deb-2-8-clidiscovery.html).
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-deb-2-8-cligathering process is known as [automatic discovery or network discovery](network-deb-2-8-clidiscovery.html).
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-deb-2-8-cligathering process is known as [automatic discovery or network discovery](network-deb-2-8-clidiscovery.html).
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-deb-2-8-cligathering process is known as [automatic discovery or network discovery](network-deb-2-8-clidiscovery.html).
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-deb-2-8-cligathering process is known as [automatic discovery or network discovery](network-deb-2-8-clidiscovery.html).
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>After the enlistment process, MAAS places the machine in the &lsquo;Ready&rsquo; state.  &lsquo;Ready&rsquo; is a holding state for machines that are enlisted (or commissioned), waiting to be deployed when needed.</p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+Typically, the next step will be to [commission the machine](commission-deb-2-8-climachines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+Typically, the next step will be to [commission the machine](commission-deb-2-8-climachines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>Typically, the next step will be to <a href="commission-deb-2-8-climachines.html">commission the machine</a>. As an alternative to enlistment, an administrator can add a machine manually (see <a href="#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually">below</a>). Typically this is done when enlistment doesn&rsquo;t work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you&rsquo;ve added it.</p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+Typically, the next step will be to [commission the machine](commission-deb-2-8-climachines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+Typically, the next step will be to [commission the machine](commission-deb-2-8-climachines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+Typically, the next step will be to [commission the machine](commission-deb-2-8-climachines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+Typically, the next step will be to [commission the machine](commission-deb-2-8-climachines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+Typically, the next step will be to [commission the machine](commission-deb-2-8-climachines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+Typically, the next step will be to [commission the machine](commission-deb-2-8-climachines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+Typically, the next step will be to [commission the machine](commission-deb-2-8-climachines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+Typically, the next step will be to [commission the machine](commission-deb-2-8-climachines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+Typically, the next step will be to [commission the machine](commission-deb-2-8-climachines.html). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p><strong>NOTE:</strong> 
+MAAS runs built-deb-2-8-cliin commissioning scripts during the enlistment phase. When you commission a machine, any customised commissioning scripts you add will have access to data collected during enlistment. Follow the link above for more information about commissioning and commission scripts.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually"><h2 id="heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clia-deb-2-8-clinode-deb-2-8-climanually">Add a machine manually</h2></a></p>
+<p>Enlistment can be done manually if the hardware specifications of the underlying machine are known.</p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
+
+Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI machine:
+
+<a href="images/20aa36b2-deb-2-8-clinodes-deb-2-8-cliadd__2.5_add-deb-2-8-clinode-deb-2-8-climanually.png" target = "_blank"><img src="images/20aa36b2-deb-2-8-clinodes-deb-2-8-cliadd__2.5_add-deb-2-8-clinode-deb-2-8-climanually.png"></a></a>
+
+The fields on the "Add machine" screen include the following seven items:
+
+1. **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
+
+2. **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
+
+3. **Architecture**: This field refers to the architecture of the machine being added.
+
+4. **Minimum Kernel**: This field supplies a drop-deb-2-8-clidown of possible kernels available for deployment on this machine.
+
+5. **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
+
+6. **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
+
+7. **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-deb-2-8-cli") separators.
+deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui 
+type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-deb-2-8-climanagement.html) for details on the available power types and the relevant parameters for each type.
+snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui 
+type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-deb-2-8-climanagement.html) for details on the available power types and the relevant parameters for each type.
+deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
+
+Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI machine:
+
+<a href="images/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg" target = "_blank"><img src="images/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg"></a></a>
+
+The fields on the "Add machine" screen include the following items:
+
+* **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
+
+* **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
+
+* **Architecture**: This field refers to the architecture of the machine being added.
+
+* **Minimum Kernel**: This field supplies a drop-deb-2-8-clidown of possible kernels available for deployment on this machine.
+
+* **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
+
+* **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
+
+* **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-deb-2-8-cli") separators.
+deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-deb-2-8-climanagement.html) for details on the available power types and the relevant parameters for each type.
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-deb-2-8-climanagement.html) for details on the available power types and the relevant parameters for each type.
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-deb-2-8-climanagement.html) for details on the available power types and the relevant parameters for each type.
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-deb-2-8-climanagement.html) for details on the available power types and the relevant parameters for each type.
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>At the command line, enter the following information:</p>
+<pre><code>stormrider@wintermute:~$ maas admin machines create \
+&gt; architecture=$ARCH \
+&gt; max_addresses=$MAC_ADDRESS \
+&gt; power_type=$POWER_TYPE \
+&gt; power_parameters_power_id=$POWER_ID \
+&gt; power_parameters_power_address=$POWER_ADDRESS \
+&gt; power_parameters_power_pass=$POWER_PASSWORD
+</code></pre>
+
+<p>When you enter the command (substituting the <code>$...</code> parameters for your own particulars), the screen will pause for a moment, and then return a stream of JSON relating to the added machine.</p>
+<p>Here&rsquo;s an example with a local laptop MAAS install, using KVMs as virtual machines:</p>
+<pre><code>stormrider@wintermute:~$ maas admin machines create \
+&gt; architecture=amd64 \
+&gt; max_addresses=52:54:00:6f:b4:af \
+&gt; power_type=virsh \
+&gt; power_parameters_power_id=50f6cca2-deb-2-8-cli5d89-deb-2-8-cli43b9-deb-2-8-cli941c-deb-2-8-cli90c9fcd7c156 \
+&gt; power_parameters_power_address=qemu+ssh://stormrider@192.168.123.1/system \
+&gt; power_parameters_power_pass=xxxxxxx
+</code></pre>
+
+<p>There&rsquo;s also a CLI recipe to <a href="the-deb-2-8-clicli-deb-2-8-clicookbook.html#heading-deb-2-8-cli-deb-2-8-climake-deb-2-8-climachines">make machines in a script</a> in the <a href="the-deb-2-8-clicli-deb-2-8-clicookbook.html">CLI cookbook</a>.</p>
+<p>The variable fields in the <code>machines create</code> command (the <code>$...</code> items) are as follows, in this example: </p>
+<pre><code>&gt; architecture=$ARCH \
+&gt; mac_addresses=$MAC_ADDRESS \
+&gt; power_type=$POWER_TYPE \
+&gt; power_parameters_power_id=$POWER_ID \
+&gt; power_parameters_power_address=$POWER_ADDRESS \
+&gt; power_parameters_power_pass=$POWER_PASSWORD
+</code></pre>
+
+<ul>
+<li>
+<p><code>$ARCH</code>: This field refers to the architecture of the machine being added, <code>amd64</code> in the local laptop example.</p>
+</li>
+<li>
+<p><code>$MAC_ADDRESS</code>: This is the MAC address of the boot-deb-2-8-clienabled NIC for the machine being added.  Note that the MAC address entered here must use a colon (&ldquo;:&rdquo;) separator, although some MAC addresses are written with dash (&ldquo;-deb-2-8-cli&ldquo;) separators.</p>
+</li>
+</ul>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-deb-2-8-climanagement.html) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<ul>
+<li><code>$POWER_TYPE</code>: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See <a href="power-deb-2-8-climanagement.html">Power management</a> for details on the available power types and the relevant parameters for each type. In this example, we&rsquo;ve used a &ldquo;virsh&rdquo; power type (a libvirt KVM), but your choice will depend on your hardware.</li>
+</ul>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-deb-2-8-climanagement.html) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-deb-2-8-climanagement.html) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-deb-2-8-climanagement.html) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](power-deb-2-8-climanagement.html) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<ul>
+<li>
+<p><code>$POWER_ID</code>: This is generally the UUID of the machine being added.</p>
+</li>
+<li>
+<p><code>$POWER_ADDRESS/$POWER_PASSWORD</code>: In the case of a KVM, these are the only parameters that need to be entered.  See <a href="https://maas.io/docs/api#power-deb-2-8-clitypes">Power types</a> in the API reference for details on the available power types and the relevant parameters for each type.</p>
+</li>
+</ul>
+<p>Normally, when you add a machine manually, MAAS will immediately attempt to commission the machine. Note that you will need to configure the underlying machine to boot over the network, or commissioning will fail. MAAS cannot handle this configuration for you.  While the correct method for configuring network boot depends heavily on your server, there are two common elements:</p>
+<ol>
+<li>
+<p>The network card on your server must be able to support PXE, i.e., your NIC &ndash; whether independent or integrated on a motherboard &ndash; must have a boot PROM that supports network booting.  You&rsquo;ll need to consult the documentation for the machine in question to determine this.</p>
+</li>
+<li>
+<p>You usually have to interrupt the boot process and enter the BIOS/UEFI menu to configure the network card&rsquo;s PXE stack.  Again, you may need to consult your machine&rsquo;s documentation to pin down this step.</p>
+</li>
+</ol>
+<p>Additional steps will vary widely by machine type and architecture.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clibmc-deb-2-8-clienlistment"><h3 id="heading-deb-2-8-cli-deb-2-8-clibmc-deb-2-8-clienlistment">BMC enlistment</h3></a></p>
+<p><strong>NOTE:</strong> 
+Note that in MAAS versions before 2.5, you are required to provide the MAC address of the PXE interface when adding a new machine manually.</p>
+<h5>IPMI machines</h5>
+<p>For IPMI machines, you only need to provide IPMI credentials. MAAS automatically discovers the machine and runs enlistment configuration by matching the BMC address.</p>
+<h5>Non-deb-2-8-cliIPMI machines</h5>
+<p>For non-deb-2-8-cliIPMI machines, you must specify a non-deb-2-8-cliPXE MAC address. MAAS automatically discovers the machine and runs enlistment configuration by matching the non-deb-2-8-cliPXE MAC address.</p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+<a href="#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clinodes-deb-2-8-clivia-deb-2-8-clia-deb-2-8-clichassis"><h2 id="heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clinodes-deb-2-8-clivia-deb-2-8-clia-deb-2-8-clichassis">Add a machine via a chassis</h2></a>
+
+Use the chassis feature to add multiple machines at once. To do this, instead of selecting 'Machine' as above, choose 'Chassis' from the drop-deb-2-8-clidown menu. In the following example, MAAS will add all available VMs from the given  virsh address:
+
+<a href="images/d5314a8a-deb-2-8-clinodes-deb-2-8-cliadd__2.4_add-deb-2-8-clinode-deb-2-8-clichassis.png" target = "_blank"><img src="images/d5314a8a-deb-2-8-clinodes-deb-2-8-cliadd__2.4_add-deb-2-8-clinode-deb-2-8-clichassis.png"></a></a>
+
+The required fields will change based on the type of chassis you choose.
+
+<strong>NOTE:</strong> 
+As with the manual method, the underlying machines will require netbooting.
+
+deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+<a href="#heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clinodes-deb-2-8-clivia-deb-2-8-clia-deb-2-8-clichassis"><h2 id="heading-deb-2-8-cli-deb-2-8-cliadd-deb-2-8-clinodes-deb-2-8-clivia-deb-2-8-clia-deb-2-8-clichassis">Add a machine via a chassis</h2></a>
+
+Use the chassis feature to add multiple machines at once. To do this, instead of selecting 'Machine' as above, choose 'Chassis' from the drop-deb-2-8-clidown menu. In the following example, MAAS will add all available VMs from the given  virsh address:
+
+<a href="images/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg" target = "_blank"><img src="images/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg"></a></a>
+
+The required fields will change based on the type of chassis you choose.
+
+<strong>NOTE:</strong> 
+As with the manual method, the underlying machines will require netbooting.
+
+snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+    </div>
+  </body>
+</html>

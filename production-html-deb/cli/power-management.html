@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.9
+	    What&rsquo;s new in 2.10
 	  </a>
 	</li>
 	<li>
@@ -429,26 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Power management</h1><!-- deb-2-7-cli
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
- snap-2-7-ui -->
+      <h1>Power management</h1><!-- begin-rad-menu -->
 
 <!-- snap-2-8-cli
  snap-2-8-cli -->
@@ -462,6 +443,31 @@
 <!-- snap-2-9-ui
  snap-2-9-ui -->
 
+<!-- snap-2-10-cli
+ snap-2-10-cli -->
+
+<!-- snap-2-10-ui
+ snap-2-10-ui -->
+
+<!-- deb-2-8-cli
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- deb-2-10-ui
+ deb-2-10-ui -->
+
+<!-- end-rad-menu -->
+
+<!-- end-rad-menu -->
+
 <p>To manage a machine, MAAS must be able to power cycle it, usually through the machine&rsquo;s <a href="https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller">BMC</a> card.  Until you configure the power type, a newly-added machine can&rsquo;t be enlisted and used by MAAS.</p>
 <h4>Four questions you may have:</h4>
 <ol>
@@ -470,7 +476,7 @@
 <li><a href="#heading--example-virsh-kvm-power-type">Can you give me an example of the virsh power type?</a></li>
 <li><a href="#heading--bmc-driver-support">Which BMC drivers are supported?</a></li>
 </ol>
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9 ui
+<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9 ui
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
 
 To configure a machine's power type, click on the machine from the 'Machines' page of the web UI, then select its 'Configuration' tab. Scroll down until you find the Power configuration. If the power type is undefined, the following will be displayed:
@@ -482,30 +488,7 @@ Choose a type in the drop-down menu that corresponds to the machine's underlying
 <a href="images/b53c6613-nodes-power-types__2.4_selection.png" target = "_blank"><img src="images/b53c6613-nodes-power-types__2.4_selection.png"></a></a>
 
 Fill in the resulting form; the information required will depends on the power type:
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9 ui -->
-
-<!-- snap-2-7-ui deb-2-7-ui
-| CLI power_type code | Description |
-|-----|-----|
-| [amt](#heading--amt) |Intel AMT |
-| [apc](#heading--apc) | American Power Conversion (APC) PDU |
-| [dli](#heading--dli) | Digital Loggers, Inc. PDU |
-| [hmc](#heading--hmc) | IBM Hardware Management Console (HMC) |
-| [ipmi](#heading--ipmi) | IPMI |
-| [manual](#heading--manual) | Manual power configuration |
-| [moonshot](#heading--moonshot) | HP Moonshot - iLO4 (IPMI) |
-| [mscm](#heading--mscm) | HP Moonshot - iLO Chassis Manager |
-| [msftocs](#heading--mscm) | Microsoft OCS - Chassis Manager |
-| [nova](#heading--nova) | OpenStack Nova |
-| [openbmc](#heading--openbmc) | OpenBMC Power Driver |
-| [recs_box](#heading--recs_box) | Christmann RECS-Box Power Driver |
-| [redfish](#heading--redfish) | Redfish |
-| [sm15k](#heading--sm15k) | SeaMicro 15000 |
-| [ucsm](#heading--ucsm) | Cisco UCS Manager |
-| [virsh](#heading--virsh) | libvirt KVM |
-| [vmware](#heading--vmware) | VMware |
-| [wedge](#heading--wedge) | Facebook's Wedge |
-snap-2-7-ui deb-2-7-ui -->
+snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9 ui -->
 
 <!-- snap-2-8-ui deb-2-8-ui 
 | CLI power_type code | Description |
@@ -531,7 +514,7 @@ snap-2-7-ui deb-2-7-ui -->
 | [wedge](#heading--wedge) | Facebook's Wedge |
 snap-2-8-ui deb-2-8-ui -->
 
-<!-- snap-2-9-ui deb-2-9-ui
+<!-- snap-2-9-ui deb-2-9-ui snap-2-10-ui deb-2-10-ui
 | CLI power_type code | Description |
 |-----|-----|
 | [amt](#heading--amt) |Intel AMT |
@@ -555,9 +538,9 @@ snap-2-8-ui deb-2-8-ui -->
 | [vmware](#heading--vmware) | VMware |
 | [webhook](#heading--webhook) | Webhook |
 | [wedge](#heading--wedge) | Facebook's Wedge |
- snap-2-9-ui deb-2-9-ui -->
+ snap-2-9-ui deb-2-9-ui snap-2-10-ui deb-2-10-ui -->
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
 Click 'Save changes' to finish. Once that's done, MAAS performs a power check on the machine. A successful power check is a good indication that MAAS can properly communicate with the machine, that is, it should quickly result in a power status of "Power off". A failed attempt will show:
 
 <a href="images/3bd5e93b-nodes-power-types__2.4_power-error.png" target = "_blank"><img src="images/3bd5e93b-nodes-power-types__2.4_power-error.png"></a></a>
@@ -603,7 +586,7 @@ The following catalogue helps to explain the fields in the "create machine" dial
 | HMC password | Password to access unit | Optional |
 | HMC Managed System server name | HMC managed server name | Required |
 | HMC logical partition | HMC logical partition of unit | Required |
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui
 <a href="#heading--lxd"><h3 id="heading--lxd">LXD VMs</h3></a>
@@ -615,13 +598,13 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 | LXD password | Password to access unit | Optional |
 snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui -->
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
 
 <a href="#heading--ipmi"><h3 id="heading--ipmi">IPMI</h3></a>
 
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
 
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui
+<!-- snap-2-8-ui deb-2-8-ui
 
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
 
@@ -636,9 +619,9 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | Power user | Username to login || Optional |
 | Power password | Password to access unit || Optional |
 | Power MAC | MAC address of unit || Optional |
-snap-2-8-ui deb-2-8-ui snap-2-7-ui deb-2-7-ui -->
+snap-2-8-ui deb-2-8-ui -->
 
-<!-- snap-2-9-ui deb-2-9-ui
+<!-- snap-2-9-ui deb-2-9-ui snap-2-10-ui deb-2-10-ui
 
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
 
@@ -662,9 +645,9 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | Privilege level | IPMI privilege level | `User` | Optional (BETA) |
 | | | `Operator` | |
 | | | `Administrator` | |
-snap-2-9-ui deb-2-9-ui -->
+snap-2-9-ui deb-2-9-ui snap-2-10-ui deb-2-10-ui -->
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
 
 <a href="#heading--manual"><h3 id="heading--manual">Manual power configuration</h3></a>
 
@@ -710,7 +693,7 @@ Manual power configuration means exactly that -- manually configured at the unit
 | Password | Password to access unit | Required |
 | Auth URL | URL to access unit | Required |
 
-<!-- snap-2-9-ui deb-2-9-ui
+<!-- snap-2-9-ui deb-2-9-ui snap-2-10-ui deb-2-10-ui
 <a href="#heading--proxmox"><h3 id="heading--proxmox">Proxmox</h3></a>
 
 | Form field | Description | Required |
@@ -724,7 +707,7 @@ Manual power configuration means exactly that -- manually configured at the unit
 | Node ID | VM name or ID | Optional |
 | Verify SSL connections... | Boolean, whether or not to verify SSL connections with the system's root CA certificate | Required |
 
- snap-2-9-ui deb-2-9-ui -->
+ snap-2-9-ui deb-2-9-ui snap-2-10-ui deb-2-10-ui -->
 
 <p><a href="#heading--openbmc"><h3 id="heading--openbmc">OpenBMC Power Driver</h3></a></p>
 <table>
@@ -1016,8 +999,8 @@ Manual power configuration means exactly that -- manually configured at the unit
 <p><a href="images/c75e00a8-nodes-power-types__2.4_example-virsh.png" target = "_blank"><img src="images/c75e00a8-nodes-power-types__2.4_example-virsh.png"></a></a></p>
 <p><strong>NOTE:</strong> 
 The machine&rsquo;s hostname &ndash; according to MAAS &ndash; is a randomly chosen string (here <code>dear.ant</code>). You should change this hostname to something descriptive, that helps you remember why this machine is in your MAAS network.</p>
-<p>snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui &ndash;&gt;</p>
-<!-- snap-2-9-ui deb-2-9-ui
+<p>snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui &ndash;&gt;</p>
+<!-- snap-2-9-ui deb-2-9-ui snap-2-10-ui deb-2-10-ui
 <a href="#heading--webhook"><h3 id="heading--webhook">Webhook</h3></a>
 
 It's important to understand that the Webhook power driver is more generic than other drivers, so it has some flexibility that the underlying power driver may not support.  For example, Webhook doesn't require a username or password for the power driver, because not all power drivers work that way.  Nevertheless, the power driver you're connecting to Webhook may actually require a username and/or password.  Understanding and implementing these fields correctly for the chosen back-end power driver is the user's responsbility.
@@ -1037,14 +1020,14 @@ To that end, the "Required" column for this driver refers only to whether Webhoo
 | Power token | Power driver API token (used instead of user and password, if set) | Optional |
 | Verify SSL connections... | Boolean, whether or not to verify SSL connections with the system's root CA certificate | Required |
 
- snap-2-9-ui deb-2-9-ui -->
+ snap-2-9-ui deb-2-9-ui snap-2-10-ui deb-2-10-ui -->
 
 <p><a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine&rsquo;s power type</h2></a></p>
 <p>To (re)configure a machine&rsquo;s power type, first find the machine&rsquo;s $SYSTEM_ID with the <a href="the-cli-cookbook.html#heading--basic-machine-list">basic machine-list</a> recipe.  Next, use the <a href="maas-cli.html">MAAS CLI</a> command <code>maas machines...</code> to (re)set the machine&rsquo;s power type, like this:</p>
 <pre><code>maas $PROFILE machine update $SYSTEM_ID power_type="$POWER_TYPE"
 </code></pre>
 <p>where $POWER_TYPE can have the following values:</p>
-<!-- snap-2-7-cli deb-2-7-cli
+<!-- snap-2-8-cli deb-2-8-cli 
 | CLI power_type code | Description |
 |-----|-----|
 | [amt](#heading--amt) |Intel AMT |
@@ -1052,6 +1035,7 @@ To that end, the "Required" column for this driver refers only to whether Webhoo
 | [dli](#heading--dli) | Digital Loggers, Inc. PDU |
 | [eaton](#heading--eaton) | Eaton PDU |
 | [hmc](#heading--hmc) | IBM Hardware Management Console (HMC) |
+| [lxd](#heading--lxd) | LXD VM |
 | [ipmi](#heading--ipmi) | IPMI |
 | [manual](#heading--manual) | Manual power configuration |
 | [moonshot](#heading--moonshot) | HP Moonshot - iLO4 (IPMI) |
@@ -1066,98 +1050,8 @@ To that end, the "Required" column for this driver refers only to whether Webhoo
 | [virsh](#heading--virsh) | libvirt KVM |
 | [vmware](#heading--vmware) | VMware |
 | [wedge](#heading--wedge) | Facebook's Wedge |
-snap-2-7-cli deb-2-7-cli -->
+snap-2-8-cli deb-2-8-cli -->
 
-<table>
-<thead>
-<tr>
-<th>CLI power_type code</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="#heading--amt">amt</a></td>
-<td>Intel AMT</td>
-</tr>
-<tr>
-<td><a href="#heading--apc">apc</a></td>
-<td>American Power Conversion (APC) PDU</td>
-</tr>
-<tr>
-<td><a href="#heading--dli">dli</a></td>
-<td>Digital Loggers, Inc. PDU</td>
-</tr>
-<tr>
-<td><a href="#heading--eaton">eaton</a></td>
-<td>Eaton PDU</td>
-</tr>
-<tr>
-<td><a href="#heading--hmc">hmc</a></td>
-<td>IBM Hardware Management Console (HMC)</td>
-</tr>
-<tr>
-<td><a href="#heading--lxd">lxd</a></td>
-<td>LXD VM</td>
-</tr>
-<tr>
-<td><a href="#heading--ipmi">ipmi</a></td>
-<td>IPMI</td>
-</tr>
-<tr>
-<td><a href="#heading--manual">manual</a></td>
-<td>Manual power configuration</td>
-</tr>
-<tr>
-<td><a href="#heading--moonshot">moonshot</a></td>
-<td>HP Moonshot - iLO4 (IPMI)</td>
-</tr>
-<tr>
-<td><a href="#heading--mscm">mscm</a></td>
-<td>HP Moonshot - iLO Chassis Manager</td>
-</tr>
-<tr>
-<td><a href="#heading--mscm">msftocs</a></td>
-<td>Microsoft OCS - Chassis Manager</td>
-</tr>
-<tr>
-<td><a href="#heading--nova">nova</a></td>
-<td>OpenStack Nova</td>
-</tr>
-<tr>
-<td><a href="#heading--openbmc">openbmc</a></td>
-<td>OpenBMC Power Driver</td>
-</tr>
-<tr>
-<td><a href="#heading--recs_box">recs_box</a></td>
-<td>Christmann RECS-Box Power Driver</td>
-</tr>
-<tr>
-<td><a href="#heading--redfish">redfish</a></td>
-<td>Redfish</td>
-</tr>
-<tr>
-<td><a href="#heading--sm15k">sm15k</a></td>
-<td>SeaMicro 15000</td>
-</tr>
-<tr>
-<td><a href="#heading--ucsm">ucsm</a></td>
-<td>Cisco UCS Manager</td>
-</tr>
-<tr>
-<td><a href="#heading--virsh">virsh</a></td>
-<td>libvirt KVM</td>
-</tr>
-<tr>
-<td><a href="#heading--vmware">vmware</a></td>
-<td>VMware</td>
-</tr>
-<tr>
-<td><a href="#heading--wedge">wedge</a></td>
-<td>Facebook&rsquo;s Wedge</td>
-</tr>
-</tbody>
-</table>
 <table>
 <thead>
 <tr>
@@ -1460,26 +1354,7 @@ snap-2-7-cli deb-2-7-cli -->
 </tbody>
 </table>
 <p><a href="#heading--ipmi"><h3 id="heading--ipmi">IPMI</h3></a></p>
-<!-- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli
-All parameters are entered as `key=value`, e.g., `power_type=ipmi`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
-
-Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
-
-| Parameter | Description | Choices | Required |
-|-----|-----|-----|-----|
-| `power_type` | `ipmi` | | Required |
-| `power_driver` | Power driver |`LAN [IPMI 1.5]` | Required |
-| | | `LAN_2_0 [IPMI 2.0]`|
-| `power_boot_type` | Boot type | `Automatic` | Required |
-| | | `Legacy boot` | |
-| | | `EFI boot` | |
-| `power_address` | IP address of unit || Required |
-| `power_user` | Username to login || Optional |
-| `power_pass` | Password to access unit || Optional |
-| `mac_address` | MAC address of unit || Optional |
-snap-2-8-cli deb-2-8-cli snap-2-7-cli deb-2-7-cli -->
-
-<p>All parameters are entered as <code>key=value</code>, e.g., <code>power_type=amt</code>.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.</p>
+<p>All parameters are entered as <code>key=value</code>, e.g., <code>power_type=ipmi</code>.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.</p>
 <p>Some of the fields for this power type have fixed choices, indicated in the &ldquo;Choices&rdquo; column.</p>
 <table>
 <thead>
@@ -1551,68 +1426,37 @@ snap-2-8-cli deb-2-8-cli snap-2-7-cli deb-2-7-cli -->
 <td></td>
 <td>Optional</td>
 </tr>
-<tr>
-<td><code>k_g</code></td>
-<td>K_g BMC key</td>
-<td></td>
-<td>Optional</td>
-</tr>
-<tr>
-<td><code>cipher_suite_id</code></td>
-<td>Cipher suite ID</td>
-<td>- <code>17</code> <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small></td>
-<td>Optional</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>3</code> <small>(3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128)</small></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code></code> (blank) <small>(freeipmi-tools default)</small></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>8</code> <small>(8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128)</small></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>12</code> <small>(12 - HMAC-MD5::MD5-128::AES-CBC-128)</small></td>
-<td></td>
-</tr>
-<tr>
-<td><code>privilege_level</code></td>
-<td>IPMI privilege level</td>
-<td><code>User</code></td>
-<td>Optional</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>Operator</code></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>Administrator</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>mac_address</code></td>
-<td>MAC address of unit</td>
-<td></td>
-<td>Optional</td>
-</tr>
 </tbody>
 </table>
+<!-- snap-2-9-cli deb-2-9-cli
+All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
+
+Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
+
+| Parameter | Description | Choices | Required |
+|-----|-----|-----|-----|
+| `power_type` | `ipmi` | | Required |
+| `power_driver` | Power driver |`LAN [IPMI 1.5]` | Required |
+| | | `LAN_2_0 [IPMI 2.0]`|
+| `power_boot_type` | Boot type | `Automatic` | Required |
+| | | `Legacy boot` | |
+| | | `EFI boot` | |
+| `power_address` | IP address of unit || Required |
+| `power_user` | Username to login || Optional |
+| `power_pass` | Password to access unit || Optional |
+| `mac_address` | MAC address of unit || Optional |
+| `k_g` | K_g BMC key | | Optional |
+| `cipher_suite_id` | Cipher suite ID | - `17` <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small> | Optional |
+| | |`3` <small>(3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128)</small> | |
+| | |` ` (blank) <small>(freeipmi-tools default)</small> | |
+| | |`8` <small>(8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128)</small> | |
+| | |`12` <small>(12 - HMAC-MD5::MD5-128::AES-CBC-128)</small> | |
+| `privilege_level` | IPMI privilege level | `User` | Optional |
+| | | `Operator` | |
+| | | `Administrator` | |
+| `mac_address` | MAC address of unit || Optional |
+snap-2-9-cli deb-2-9-cli -->
+
 <p><a href="#heading--manual"><h3 id="heading--manual">Manual power configuration</h3></a></p>
 <p>Manual power configuration means exactly that &ndash; manually configured at the unit.  The only MAAS CLI parameter is <code>power_type=amt</code>. </p>
 <p><a href="#heading--moonshot"><h3 id="heading--moonshot">HP Moonshot - iLO4 (IPMI)</h3></a></p>
@@ -2480,8 +2324,6 @@ power_parameters_power_pass=xxxxxxxx
 </table>
 
 <p><code>*</code> The &lsquo;Facebook&rsquo;s Wedge&rsquo; OpenBMC power driver is considered experimental at this time.</p>
-<hr>
-<h2>****</h2>
     </div>
   </body>
 </html>

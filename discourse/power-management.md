@@ -1,84 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|CLI ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ UI|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|CLI ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ UI|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|CLI ~ [UI](/t/power-management/3017)|
- deb-2-9-cli -->
-
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ UI|
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ UI|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|CLI ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ UI|[CLI](/t/power-management/3010) ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|CLI ~ [UI](/t/power-management/3011)|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/power-management/3006) ~ [UI](/t/power-management/3007)|[CLI](/t/power-management/3008) ~ [UI](/t/power-management/3009)|[CLI](/t/power-management/3010) ~ UI|
-|Packages|[CLI](/t/power-management/3012) ~ [UI](/t/power-management/3013)|[CLI](/t/power-management/3014) ~ [UI](/t/power-management/3015)|[CLI](/t/power-management/3016) ~ [UI](/t/power-management/3017)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/power-management-snap-2-7-cli/3006) ~ [UI](/t/power-management-snap-2-7-ui/3007)|[CLI](/t/power-management-snap-2-8-cli/3008) ~ [UI](/t/power-management-snap-2-8-ui/3009)|[CLI](/t/power-management-snap-2-9-cli/3010) ~ [UI](/t/power-management-snap-2-9-ui/3011)|[CLI](/t/power-management-snap-3-0-cli/4069) ~ [UI](/t/power-management-snap-3-0-ui/4070)|
+Packages|[CLI](/t/power-management-deb-2-7-cli/3012) ~ [UI](/t/power-management-deb-2-7-ui/3013)|[CLI](/t/power-management-deb-2-8-cli/3014) ~ [UI](/t/power-management-deb-2-8-ui/3015)|[CLI](/t/power-management-deb-2-9-cli/3016) ~ [UI](/t/power-management-deb-2-9-ui/3017)|[CLI](/t/power-management-deb-3-0-cli/4071) ~ [UI](/t/power-management-deb-3-0-ui/4072)|
 
 To manage a machine, MAAS must be able to power cycle it, usually through the machine's [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller) card.  Until you configure the power type, a newly-added machine can't be enlisted and used by MAAS.
 
@@ -89,7 +12,6 @@ To manage a machine, MAAS must be able to power cycle it, usually through the ma
 3. [Can you give me an example of the virsh power type?](#heading--example-virsh-kvm-power-type)
 4. [Which BMC drivers are supported?](#heading--bmc-driver-support)
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9 ui
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
 
 To configure a machine's power type, click on the machine from the 'Machines' page of the web UI, then select its 'Configuration' tab. Scroll down until you find the Power configuration. If the power type is undefined, the following will be displayed:
@@ -101,7 +23,6 @@ Choose a type in the drop-down menu that corresponds to the machine's underlying
 <a href="https://assets.ubuntu.com/v1/b53c6613-nodes-power-types__2.4_selection.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/b53c6613-nodes-power-types__2.4_selection.png"></a>
 
 Fill in the resulting form; the information required will depends on the power type:
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9 ui -->
 
 <!-- snap-2-7-ui deb-2-7-ui
 | CLI power_type code | Description |
@@ -278,6 +199,7 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 
 Manual power configuration means exactly that -- manually configured at the unit -- hence there are no parameters to set in the "create machine" UI.
 
+
 <a href="#heading--moonshot"><h3 id="heading--moonshot">HP Moonshot - iLO4 (IPMI)</h3></a>
 
 | Form field | Description | Required |
@@ -440,7 +362,7 @@ To that end, the "Required" column for this driver refers only to whether Webhoo
 | Verify SSL connections... | Boolean, whether or not to verify SSL connections with the system's root CA certificate | Required |
 
  
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
 
 To (re)configure a machine's power type, first find the machine's $SYSTEM_ID with the [basic machine-list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe.  Next, use the [MAAS CLI](/t/maas-cli/802) command `maas machines...` to (re)set the machine's power type, like this:
@@ -448,7 +370,7 @@ To (re)configure a machine's power type, first find the machine's $SYSTEM_ID wit
     maas $PROFILE machine update $SYSTEM_ID power_type="$POWER_TYPE"
 
 where $POWER_TYPE can have the following values:
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <!-- snap-2-7-cli deb-2-7-cli
 | CLI power_type code | Description |
@@ -474,7 +396,7 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 | [wedge](#heading--wedge) | Facebook's Wedge |
 snap-2-7-cli deb-2-7-cli -->
 
-<!-- snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli
+<!-- snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 | CLI power_type code | Description |
 |-----|-----|
 | [amt](#heading--amt) |Intel AMT |
@@ -497,9 +419,9 @@ snap-2-7-cli deb-2-7-cli -->
 | [virsh](#heading--virsh) | libvirt KVM |
 | [vmware](#heading--vmware) | VMware |
 | [wedge](#heading--wedge) | Facebook's Wedge |
-snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli -->
+snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<!-- snap-2-9-cli deb-2-9-cli
+<!-- snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 | CLI power_type code | Description |
 |-----|-----|
 | [amt](#heading--amt) |Intel AMT |
@@ -522,9 +444,9 @@ snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli -->
 | [virsh](#heading--virsh) | libvirt KVM |
 | [vmware](#heading--vmware) | VMware |
 | [wedge](#heading--wedge) | Facebook's Wedge |
- snap-2-9-cli deb-2-9-cli -->
+ snap-2-9-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 Note the required and optional parameters associated with each power type.
 
 Once you've successfully processed the command (as indicated by a stream of JSON, headed by "Success!"), MAAS performs a power check on the machine. A successful power check is a good indication that MAAS can properly communicate with the machine, that is, it should quickly result in a power status of "Power off". A failed attempt will return errors that should guide you to fix your power_parameters.
@@ -587,9 +509,9 @@ All parameters are entered as `key=value`, e.g., `power_type=hmc`.  The MAAS CLI
 | `lpar` | HMC logical partition of unit | Required |
 | `power_user` | Username to login | Optional |
 | `power_pass` | Password to access unit | Optional |
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<!-- snap-2-8-cli snap-2-9-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-8-cli snap-2-9-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 <a href="#heading--lxd"><h3 id="heading--lxd">LXD VMs</h3></a>
 
 All parameters are entered as `key=value`, e.g., `power_type=lxd`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
@@ -600,13 +522,13 @@ All parameters are entered as `key=value`, e.g., `power_type=lxd`.  The MAAS CLI
 | `power_address` | IP address of unit | Required |
 | `instance_name` | LXD container instance name | Required |
 | `power_pass` | Password to access unit | Optional |
-snap-2-8-cli snap-2-9-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-8-cli snap-2-9-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 
 <a href="#heading--ipmi"><h3 id="heading--ipmi">IPMI</h3></a>
 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <!-- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli
 All parameters are entered as `key=value`, e.g., `power_type=ipmi`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
@@ -627,7 +549,7 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | `mac_address` | MAC address of unit || Optional |
 snap-2-8-cli deb-2-8-cli snap-2-7-cli deb-2-7-cli -->
 
-<!-- snap-2-9-cli deb-2-9-cli
+<!-- snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
@@ -654,9 +576,9 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | | | `Operator` | |
 | | | `Administrator` | |
 | `mac_address` | MAC address of unit || Optional |
-snap-2-9-cli deb-2-9-cli -->
+snap-2-9-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 
 <a href="#heading--manual"><h3 id="heading--manual">Manual power configuration</h3></a>
 
@@ -1016,7 +938,7 @@ Machine-readable output follows this announcement.  The JSON generated by this c
 ```
 </details>
 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <a href="#heading--bmc-driver-support"><h2 id="heading--bmc-driver-support">Which BMC drivers are supported</h2></a>
 
@@ -1190,10 +1112,3 @@ In the context of MAAS, the BMC is generally controlled by SNMP commands.  Any g
 </table>
 
 `*` The 'Facebook's Wedge' OpenBMC power driver is considered experimental at this time.
-
-
-
-
-------
-****
-------

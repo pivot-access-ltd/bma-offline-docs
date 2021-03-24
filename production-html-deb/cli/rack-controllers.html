@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.9
+	    What&rsquo;s new in 2.10
 	  </a>
 	</li>
 	<li>
@@ -429,26 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Rack controllers</h1><!-- deb-2-7-cli
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
- snap-2-7-ui -->
+      <h1>Rack controllers</h1><!-- begin-rad-menu -->
 
 <!-- snap-2-8-cli
  snap-2-8-cli -->
@@ -462,9 +443,41 @@
 <!-- snap-2-9-ui
  snap-2-9-ui -->
 
+<!-- snap-2-10-cli
+ snap-2-10-cli -->
+
+<!-- snap-2-10-ui
+ snap-2-10-ui -->
+
+<!-- deb-2-8-cli
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- deb-2-10-ui
+ deb-2-10-ui -->
+
+<!-- end-rad-menu -->
+
 <p>A rack controller can connect to multiple VLANs, each from a different network interface. A rack controller can only connect to one MAAS instance at any given time, and must connect to an instance that matches its MAAS version (major and minor).  This configuration provides a scaling factor that can help as a network architecture grows in size.</p>
 <h4>Seven questions you may have:</h4>
-<!-- deb-2-7-cli
+<ol>
+<li><a href="maas-communication.html">How does MAAS communication work?</a></li>
+<li><a href="#heading--install-a-rack-controller">How do I install a rack controller?</a></li>
+<li><a href="#heading--list-rack-controllers">How do I list rack controllers?</a></li>
+<li><a href="high-availability.html#heading--multiple-region-endpoints">How do I configure MAAS for multiple API servers?</a></li>
+<li><a href="#heading--unregister-a-rack-controller">How do I unregister a rack controller?</a></li>
+<li><a href="#heading--move-rack-controller">How do I move a rack controller from one MAAS instance to another?</a></li>
+<li><a href="#heading--dangers-moving-rack-controller">What are the potential dangers of moving a rack controller?</a></li>
+</ol>
+<!-- deb-2-10-ui
 1. [How does MAAS communication work?](maas-communication.html)
 2. [How do I install a rack controller?](#heading--install-a-rack-controller)
 3. [How do I list rack controllers?](#heading--list-rack-controllers)
@@ -472,17 +485,7 @@
 5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
 6. [How do I move a rack controller from one MAAS instance to another?](#heading--move-rack-controller)
 7. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-1. [How does MAAS communication work?](maas-communication.html)
-2. [How do I install a rack controller?](#heading--install-a-rack-controller)
-3. [How do I list rack controllers?](#heading--list-rack-controllers)
-4. [How do I configure MAAS for multiple API servers?](high-availability.html#heading--multiple-region-endpoints)
-5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
-6. [How do I move a rack controller from one MAAS instance to another?](#heading--move-rack-controller)
-7. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
- deb-2-7-ui -->
+ deb-2-10-ui -->
 
 <!-- deb-2-8-cli
 1. [How does MAAS communication work?](maas-communication.html)
@@ -504,15 +507,16 @@
 7. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
  deb-2-8-ui -->
 
-<ol>
-<li><a href="maas-communication.html">How does MAAS communication work?</a></li>
-<li><a href="#heading--install-a-rack-controller">How do I install a rack controller?</a></li>
-<li><a href="#heading--list-rack-controllers">How do I list rack controllers?</a></li>
-<li><a href="high-availability.html#heading--multiple-region-endpoints">How do I configure MAAS for multiple API servers?</a></li>
-<li><a href="#heading--unregister-a-rack-controller">How do I unregister a rack controller?</a></li>
-<li><a href="#heading--move-rack-controller">How do I move a rack controller from one MAAS instance to another?</a></li>
-<li><a href="#heading--dangers-moving-rack-controller">What are the potential dangers of moving a rack controller?</a></li>
-</ol>
+<!-- deb-2-9-cli
+1. [How does MAAS communication work?](maas-communication.html)
+2. [How do I install a rack controller?](#heading--install-a-rack-controller)
+3. [How do I list rack controllers?](#heading--list-rack-controllers)
+4. [How do I configure MAAS for multiple API servers?](high-availability.html#heading--multiple-region-endpoints)
+5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
+6. [How do I move a rack controller from one MAAS instance to another?](#heading--move-rack-controller)
+7. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
+ deb-2-9-cli -->
+
 <!-- deb-2-9-ui
 1. [How does MAAS communication work?](maas-communication.html)
 2. [How do I install a rack controller?](#heading--install-a-rack-controller)
@@ -523,7 +527,7 @@
 7. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
  deb-2-9-ui -->
 
-<!-- snap-2-7-cli
+<!-- snap-2-10-cli
 1. [How does MAAS communication work?](maas-communication.html)
 2. [How do I install a rack controller?](#heading--install-a-rack-controller)
 3. [How do I list rack controllers?](#heading--list-rack-controllers)
@@ -531,9 +535,9 @@
 5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
 6. [How do I move a rack controller from one MAAS instance to another?](#heading--move-rack-controller)
 7. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
- snap-2-7-cli -->
+ snap-2-10-cli -->
 
-<!-- snap-2-7-ui
+<!-- snap-2-10-ui
 1. [How does MAAS communication work?](maas-communication.html)
 2. [How do I install a rack controller?](#heading--install-a-rack-controller)
 3. [How do I list rack controllers?](#heading--list-rack-controllers)
@@ -541,7 +545,7 @@
 5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
 6. [How do I move a rack controller from one MAAS instance to another?](#heading--move-rack-controller)
 7. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
- snap-2-7-ui -->
+ snap-2-10-ui -->
 
 <!-- snap-2-8-cli
 1. [How does MAAS communication work?](maas-communication.html)
@@ -592,7 +596,7 @@ sudo maas-rack register --url $MAAS_URL --secret $SECRET
 <p><strong>NOTE:</strong> 
 The register command is not required when you are adding a rack controller to a system that already houses an API server.</p>
 <p>The $SECRET is stored in file <code>/var/lib/maas/secret</code> on the API server.</p>
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
+<!-- snap-2-10-ui snap-2-10-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 To install and register a rack controller with the MAAS:
 
 <pre><code class="bash">sudo snap install maas
@@ -601,15 +605,14 @@ sudo maas init rack --maas-url $MAAS_URL --secret $SECRET
 
 
 The $SECRET is stored in file `/var/lib/maas/secret` on the API server.
- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
+ snap-2-10-ui snap-2-10-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
 Note that on the UI, you can find complete instructions for adding a rack controller under the "Controllers" tab.  Simply click on the button labeled, "Add rack controller" and choose the instructions relevant to your build model (snap or packages).  The commands there will already include the correct MAAS URL and secret, so you can cut and paste them at the command line.
- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+ snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
 
 <a href="#heading--list-rack-controllers"><h2 id="heading--list-rack-controllers">List rack controllers</h2></a>
 
-<!-- deb-2-7-cli
 You can also list and confirm all registered rack controllers:
 
 
@@ -618,11 +621,10 @@ You can also list and confirm all registered rack controllers:
 
 
 Note that you will need multiple rack controllers to achieve specific [high availability](high-availability.html) configurations.
- deb-2-7-cli -->
 
-<!-- deb-2-7-ui
+<!-- deb-2-10-ui
 You can also list and confirm all registered rack controllers via the CLI; select the "Packages 2.7 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](high-availability.html) configurations.
- deb-2-7-ui -->
+ deb-2-10-ui -->
 
 <!-- deb-2-8-cli
 You can also list and confirm all registered rack controllers:
@@ -638,16 +640,7 @@ Note that you will need multiple rack controllers to achieve specific [high avai
 You can also list and confirm all registered rack controllers via the CLI; select the "Packages 2.8 CLI" link at the top of the page to find out how. Note that you will need multiple rack controllers to achieve specific [high availability](high-availability.html) configurations.
  deb-2-8-ui -->
 
-<p>You can also list and confirm all registered rack controllers:</p>
-<pre><code class="bash">maas $PROFILE rack-controllers read | grep hostname | cut -d '&quot;' -f 4
-</code></pre>
-
-<p>Note that you will need multiple rack controllers to achieve specific <a href="high-availability.html">high availability</a> configurations.</p>
-<!-- deb-2-9-ui
-You can also list and confirm all registered rack controllers via the CLI; select the "Packages 2.9 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](high-availability.html) configurations.
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
+<!-- deb-2-9-cli
 You can also list and confirm all registered rack controllers:
 
 <pre><code class="bash">maas $PROFILE rack-controllers read | grep hostname | cut -d '&quot;' -f 4
@@ -655,11 +648,25 @@ You can also list and confirm all registered rack controllers:
 
 
 Note that you will need multiple rack controllers to achieve specific [high availability](high-availability.html) configurations.
- snap-2-7-cli -->
+ deb-2-9-cli -->
 
-<!-- snap-2-7-ui
+<!-- deb-2-9-ui
+You can also list and confirm all registered rack controllers via the CLI; select the "Packages 2.9 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](high-availability.html) configurations.
+ deb-2-9-ui -->
+
+<!-- snap-2-10-cli
+You can also list and confirm all registered rack controllers:
+
+<pre><code class="bash">maas $PROFILE rack-controllers read | grep hostname | cut -d '&quot;' -f 4
+</code></pre>
+
+
+Note that you will need multiple rack controllers to achieve specific [high availability](high-availability.html) configurations.
+ snap-2-10-cli -->
+
+<!-- snap-2-10-ui
 You can also list and confirm all registered rack controllers via the CLI; select the "Snap 2.7 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](high-availability.html) configurations.
- snap-2-7-ui -->
+ snap-2-10-ui -->
 
 <!-- snap-2-8-cli
 You can also list and confirm all registered rack controllers:
@@ -702,9 +709,9 @@ You can also list and confirm all registered rack controllers via the CLI; selec
 </div>
 
 <p><a href="#heading--move-rack-controller"><h2 id="heading--move-rack-controller">Move a rack controller from one MAAS instance to another</h2></a></p>
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
 In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller.  In the "Controllers" tab in the UI, select the rack controller you with to delete, choose "Take action" and select "Delete."  You will be asked to confirm with a red button, entitled "Delete 1 controller."
- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+ snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
 
 <p>In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller, with the command:</p>
 <pre><code>maas $PROFILE rack-controller delete $SYSTEM_ID
@@ -721,7 +728,7 @@ In effect, there is no such action as moving a rack controller, although you can
 </code></pre>
 
 <p>where the secret is found in <code>/var/lib/maas/secret</code>.</p>
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
+<!-- snap-2-10-ui snap-2-10-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
 <pre><code>sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
@@ -729,11 +736,11 @@ For this exercise, we're assuming you are using the already installed rack contr
 
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
+ snap-2-10-ui snap-2-10-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
 
-<!-- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui
+<!-- deb-2-10-ui deb-2-8-ui deb-2-9-ui snap-2-10-ui snap-2-8-ui snap-2-9-ui
 Note that in the UI, if you go to the "Controllers" tab and press the button entitled, "Add rack controller," at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.
- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-ui snap-2-8-ui snap-2-9-ui -->
+ deb-2-10-ui deb-2-8-ui deb-2-9-ui snap-2-10-ui snap-2-8-ui snap-2-9-ui -->
 
 <p><a href="#heading--move-rack-controller"><h3 id="heading--dangers-moving-rack-controller">Dangers of moving a rack controller</h3></a></p>
 <p>There are dangers associate with moving a rack controller &ndash; dangers that may generate errors, get you into a non-working state, or cause you significant data loss.  These dangers are precipitated by one caveat and two potential mistakes:</p>
@@ -749,8 +756,6 @@ Note that in the UI, if you go to the "Controllers" tab and press the button ent
 </li>
 </ul>
 <p>Take these warnings to heart.  It may seem like a faster approach to &ldquo;bridge&rdquo; your existing rack controllers from one MAAS to another &ndash; or from one version of MAAS to another &ndash; while they&rsquo;re running.  Ultimately, though, it will probably result in more work than just following the recommended approach.</p>
-<hr>
-<h2>****</h2>
     </div>
   </body>
 </html>

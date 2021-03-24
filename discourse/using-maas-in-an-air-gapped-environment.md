@@ -1,3 +1,7 @@
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/using-maas-in-an-air-gapped-environment-snap-2-7-cli/4286) ~ [UI](/t/using-maas-in-an-air-gapped-environment-snap-2-7-ui/4285)|[CLI](/t/using-maas-in-an-air-gapped-environment-snap-2-8-cli/4272) ~ [UI](/t/using-maas-in-an-air-gapped-environment-snap-2-8-ui/4271)|[CLI](/t/using-maas-in-an-air-gapped-environment-snap-2-9-cli/4274) ~ [UI](/t/using-maas-in-an-air-gapped-environment-snap-2-9-ui/4273)|[CLI](/t/using-maas-in-an-air-gapped-environment-snap-3-0-cli/4153) ~ [UI](/t/using-maas-in-an-air-gapped-environment-snap-3-0-ui/4154)|
+Packages|[CLI](/t/using-maas-in-an-air-gapped-environment-deb-2-7-cli/4287) ~ [UI](/t/using-maas-in-an-air-gapped-environment-deb-2-7-ui/4288)|[CLI](/t/using-maas-in-an-air-gapped-environment-deb-2-8-cli/4269) ~ [UI](/t/using-maas-in-an-air-gapped-environment-deb-2-8-ui/4268)|[CLI](/t/using-maas-in-an-air-gapped-environment-deb-2-9-cli/4270) ~ [UI](/t/using-maas-in-an-air-gapped-environment-deb-2-9-ui/4275)|[CLI](/t/using-maas-in-an-air-gapped-environment-deb-3-0-cli/4155) ~ [UI](/t/using-maas-in-an-air-gapped-environment-deb-3-0-ui/4156)|
 Many MAAS users maintain their data centres in an air-gapped environment -- that is, one that does not have an external Internet connection. MAAS runs well in this configuration, though keeping MAAS supplied with updates and images requires a bit of extra effort.
 
 There are essentially four things that must be available to an air-gapped MAAS for smooth operation:
@@ -80,8 +84,3 @@ If you don't wish to disturb the default configurations for Ubuntu and MAAS, you
 5. Configure DNS to point to the local mirrors for both of those URLs.
 
 This avoids any need to change the default settings for MAAS or Ubuntu.
-
-
-------
-****
-------

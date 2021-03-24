@@ -16,29 +16,6 @@ This article is a list of advanced tasks you can perform with the MAAS CLI.
 12. [How do I create a Mail Exchange pointer record in DNS?](/t/cli-advanced-tasks/793#heading--create-a-mail-exchange-pointer-record-in-dns)
 13. [How do I add or update a remote syslog server?](/t/cli-advanced-tasks/793#heading--add-or-update-a-remote-syslog-server)
 
-<a href="#heading--edit-node-hostname-and-power-parameters"><h2 id="heading--edit-node-hostname-and-power-parameters">Edit machine hostname and power parameters</h2></a>
-
-To edit the hostname and power parameters of a machine:
-
-``` bash
-maas $PROFILE machine update $SYSTEM_ID \
-    hostname=$HOSTNAME \
-    power_type=$POWER_TYPE \
-    power_parameters_power_address=$POWER_ADDRESS \
-    power_parameters_power_id=$HOSTNAME
-```
-
-For example, to configure a KVM-based machine:
-
-``` bash
-maas $PROFILE machine update $SYSTEM_ID \
-    hostname=$HOSTNAME \
-    power_type=virsh \
-    power_parameters_power_address=qemu+ssh://ubuntu@$KVM_HOST/system \
-    power_parameters_power_id=$HOSTNAME
-```
-
-See [Common CLI tasks](/t/common-cli-tasks/794#heading--determine-a-node-system-id) for how to find a machine's system id and [BMC Power Types](/t/power-management/3011#heading--power-catalogue) for details on different power types.
 
 <a href="#heading--relay-dhcp"><h2 id="heading--relay-dhcp">Relay DHCP</h2></a>
 

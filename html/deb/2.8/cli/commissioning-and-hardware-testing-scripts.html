@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-deb-2-8-clileft:0;list-deb-2-8-clistyle-deb-2-8-clitype:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-deb-2-8-clicolor:#d9d9d9; width:100%;border-deb-2-8-clibottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html">
+	  &nbsp;UI-deb-2-8-clionly&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-deb-2-8-clicolor:white;border-deb-2-8-clitop:1px solid black; border-deb-2-8-clileft:1px solid black; border-deb-2-8-cliright:1px solid black; border-deb-2-8-clibottom:5px solid white;">
+	  CLI-deb-2-8-clionly
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-deb-2-8-clitop:40px; margin-deb-2-8-clileft:20px">
+      <strong>
+	<a href="maas-deb-2-8-clidocumentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-deb-2-8-climaas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clirequirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-cliinstallation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-deb-2-8-clijourney.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-deb-2-8-clicommunication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-deb-2-8-clicontrollers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-deb-2-8-clicontrollers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-deb-2-8-cliavailability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-deb-2-8-climachines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-deb-2-8-climanagement.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-deb-2-8-climachines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-deb-2-8-clitesting.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clitesting.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-deb-2-8-climachines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clitags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-deb-2-8-climachine-deb-2-8-clisetup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-deb-2-8-cliboot-deb-2-8-clioptions.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-deb-2-8-clipools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-clivmfs-deb-2-8-clidatastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-deb-2-8-clikernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-deb-2-8-cliand-deb-2-8-cliimport-deb-2-8-cliimages.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-deb-2-8-cliimage-deb-2-8-climirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-cliimages.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-deb-2-8-climanagement.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clidhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-deb-2-8-cliranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-deb-2-8-cliservices.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clidiscovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-deb-2-8-cliaddressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-deb-2-8-clitls-deb-2-8-cliencryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clistp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-deb-2-8-clizones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-deb-2-8-clihosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clinetworking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clistorage-deb-2-8-clipools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-deb-2-8-cliand-deb-2-8-clideleting-deb-2-8-clivms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-deb-2-8-climetrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-deb-2-8-cliyour-deb-2-8-climaas-deb-2-8-cliinstallation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clilogging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-clilogs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-deb-2-8-cliaccounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-deb-2-8-clisearch.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-clinetwork-deb-2-8-clitutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-deb-2-8-clicli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-deb-2-8-clievent-deb-2-8-clilogs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clikernel-deb-2-8-climanagement.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliimage-deb-2-8-climanagement.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliinterface-deb-2-8-climanagement.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliadvanced-deb-2-8-clitasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clicomposable-deb-2-8-clihardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-deb-2-8-cliapi-deb-2-8-cliclient.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-deb-2-8-cliauthentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-deb-2-8-clihelp.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-deb-2-8-clitricks-deb-2-8-cliand-deb-2-8-clitraps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-deb-2-8-clidocs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-deb-2-8-cliguide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-deb-2-8-clitop:40px; margin-deb-2-8-cliright:30px">
+      <h1>Commissioning and hardware testing scripts</h1><!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>MAAS runs scripts during enlistment, commissioning and testing to collect data about nodes. Both enlistment and commissioning run all builtin commissioning scripts, though enlistment runs only built-deb-2-8-cliins. Commissioning also runs any user-deb-2-8-cliuploaded commissioning scripts by default, unless the user manually provides a list of scripts to run. MAAS uses these commissioning scripts to configure hardware and perform other tasks during commissioning, such as updating the firmware. Similarly, MAAS employs hardware testing scripts to evaluate system hardware and report its status. </p>
+<hr>
+<h4>Quick questions you may have:</h4>
+
+<ol>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-climetadata-deb-2-8-clifields">What metadata fields exist, and how do they control the scripts?</a></li>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-cliparameters">What parameters can I use to control the scripts?</a></li>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-clienvironment-deb-2-8-clivariables"> What environment variables are available to me?</a></li>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-cliresults">How can I control the results output from the scripts?</a></li>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-cliscript-deb-2-8-cliexamples">What would some example scripts look like?</a></li>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-cliupload-deb-2-8-cliprocedure">How do I upload scripts to MAAS?</a></li>
+</ol>
+<hr>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+Scripts can be selected to run from web UI [during commissioning](commission-deb-2-8-climachines.html), by [testing hardware](hardware-deb-2-8-clitesting.html) or from the command line. Note that MAAS only runs built-deb-2-8-cliin commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+Scripts can be selected to run from web UI [during commissioning](commission-deb-2-8-climachines.html), by [testing hardware](hardware-deb-2-8-clitesting.html) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-deb-2-8-cliin commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>Scripts can be selected to run from web UI <a href="commission-deb-2-8-climachines.html">during commissioning</a>, by <a href="hardware-deb-2-8-clitesting.html">testing hardware</a> or from the command line. Note that MAAS only runs built-deb-2-8-cliin commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:</p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+Scripts can be selected to run from web UI [during commissioning](commission-deb-2-8-climachines.html), by [testing hardware](hardware-deb-2-8-clitesting.html) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-deb-2-8-cliin commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+Scripts can be selected to run from web UI [during commissioning](commission-deb-2-8-climachines.html), by [testing hardware](hardware-deb-2-8-clitesting.html) or from the command line. Note that MAAS only runs built-deb-2-8-cliin commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+Scripts can be selected to run from web UI [during commissioning](commission-deb-2-8-climachines.html), by [testing hardware](hardware-deb-2-8-clitesting.html) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-deb-2-8-cliin commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+Scripts can be selected to run from web UI [during commissioning](commission-deb-2-8-climachines.html), by [testing hardware](hardware-deb-2-8-clitesting.html) or from the command line. Note that MAAS only runs built-deb-2-8-cliin commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+Scripts can be selected to run from web UI [during commissioning](commission-deb-2-8-climachines.html), by [testing hardware](hardware-deb-2-8-clitesting.html) or from the command line (select the "CLI" option from the top menu).  Note that MAAS only runs built-deb-2-8-cliin commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+Scripts can be selected to run from web UI [during commissioning](commission-deb-2-8-climachines.html), by [testing hardware](hardware-deb-2-8-clitesting.html) or from the command line. Note that MAAS only runs built-deb-2-8-cliin commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+Scripts can be selected to run from web UI [during commissioning](commission-deb-2-8-climachines.html), by [testing hardware](hardware-deb-2-8-clitesting.html) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-deb-2-8-cliin commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+Scripts can be selected to run from web UI [during commissioning](commission-deb-2-8-climachines.html), by [testing hardware](hardware-deb-2-8-clitesting.html) or from the command line. Note that MAAS only runs built-deb-2-8-cliin commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+Scripts can be selected to run from web UI [during commissioning](commission-deb-2-8-climachines.html), by [testing hardware](hardware-deb-2-8-clitesting.html) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-deb-2-8-cliin commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>Add machine -deb-2-8-cli&gt; Enlistment (runs built-deb-2-8-cliin commissioning scripts MAAS) -deb-2-8-cli&gt; New -deb-2-8-cli&gt; Commission (runs built-deb-2-8-cliin and custom commissioning scripts) -deb-2-8-cli&gt; Ready -deb-2-8-cli&gt; Deploy</p>
+<p>NOTE: Scripts are run in alphabetical order in an ephemeral environment.  We recommend running your scripts after any MAAS built-deb-2-8-cliin scripts.  This can be done by naming your scripts 99-deb-2-8-cliz*.  It is possible to reboot the system during commissioning using a script, however, as the environment is ephemeral, any changes to the environment will be destroyed upon reboot (barring, of course, firmware type updates).</p>
+<p>This article explains script metadata, parameter passing, and results-deb-2-8-clireporting.  It also offers examples of both commissioning and hardware testing scripts.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-climetadata-deb-2-8-clifields"><h2 id="heading-deb-2-8-cli-deb-2-8-climetadata-deb-2-8-clifields">Metadata fields</h2></a></p>
+<p>Metadata fields tell MAAS when to use the script, how it should run, and what information it&rsquo;s gathering. A script can employ some combination of the following seventeen fields:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>name</code></td>
+<td align="left">The name of the script.</td>
+</tr>
+<tr>
+<td align="left"><code>title</code></td>
+<td align="left">Human-deb-2-8-clifriendly descriptive version of the name, used within the web UI.</td>
+</tr>
+<tr>
+<td align="left"><code>description</code></td>
+<td align="left">Brief outline of what the script does.</td>
+</tr>
+<tr>
+<td align="left"><code>tags</code></td>
+<td align="left">List of tags associated with the script.</td>
+</tr>
+<tr>
+<td align="left"><code>type</code></td>
+<td align="left">Either commissioning or testing.</td>
+</tr>
+<tr>
+<td align="left"><code>timeout</code></td>
+<td align="left">Length of time before MAAS automatically fails and kills execution of the script. The time may be specified in seconds or using the HH:MM:SS format.</td>
+</tr>
+<tr>
+<td align="left"><code>destructive</code></td>
+<td align="left">True or False, depending on whether the script will overwrite system data. You can&rsquo;t run destructive tests on a deployed machine.</td>
+</tr>
+<tr>
+<td align="left"><code>comment</code></td>
+<td align="left">Describes changes made in this revision of the script.  A comment can be passed via the API when uploading the script.  MAAS doesn’t look at the script metadata for this field.</td>
+</tr>
+<tr>
+<td align="left"><code>hardware_type</code></td>
+<td align="left">Defines the type of hardware the script configures or tests. If the script returns results, hardware types associate the results with specific hardware. The following types are valid:</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>node</code>: Not associated with any hardware type; this is the default.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>cpu</code>: Configures or tests the CPUs on the machine.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>memory</code>: Configures or tests memory on the machine.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>storage</code>: Configures or tests storage on the machine.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>network</code>: Configures or tests network on the machine.</td>
+</tr>
+<tr>
+<td align="left"><code>parallel</code></td>
+<td align="left">Enables scripts to be run in parallel and can be one of the following:</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>disabled</code>: The script will run serially on its own.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>instance</code>: Runs in parallel only with other instances of the same script.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>any</code>: Runs in parallel alongside any other scripts with parallel set to any.</td>
+</tr>
+<tr>
+<td align="left"><code>parameters</code></td>
+<td align="left">What <a href="#heading-deb-2-8-cli-deb-2-8-cliparameters">parameters</a> the script accepts.</td>
+</tr>
+<tr>
+<td align="left"><code>results</code></td>
+<td align="left">What <a href="#heading-deb-2-8-cli-deb-2-8-cliresults">results</a> the script will return.</td>
+</tr>
+<tr>
+<td align="left"><code>packages</code></td>
+<td align="left">List of packages to be installed or extracted before running the script. Packages must be specified as a dictionary. For example, <code>packages: {apt: stress-deb-2-8-cling}</code>, would ask <code>apt</code> to install stress-deb-2-8-cling. Package sources can be any of the following:</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>apt</code>: Use the Ubuntu apt repositories as configured by MAAS to install a package.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>snap</code>: Installs packages using [snap][snapcraft]. May also be a list of dictionaries. The dictionary must define the name of the  package to be installed, and optionally, the <code>channel</code>, <code>mode</code> and <code>revision</code>.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>url</code>: The archive will be downloaded and, if possible, extracted or installed when a Debian package or [snap][snapcraft].</td>
+</tr>
+<tr>
+<td align="left"><code>for_hardware</code></td>
+<td align="left">Specifies the hardware that must be on the machine for the script to run. May be a single string or list of strings of the following:</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>modalias</code>: Starts with &lsquo;modalias:&rsquo; may optionally contain wild cards.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>PCI ID</code>: Must be in the format of &lsquo;pci:VVVV:PPPP&rsquo; where VVVV is the vendor ID, and PPPP is the product ID.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>USB ID</code>: Must be in the format of &lsquo;usb:VVVV:PPPP&rsquo; where VVVV is the vendor ID, and PPPP is the product ID.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>System Vendor</code>: Starts with &lsquo;system_vendor:&rsquo;.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>System Product</code>: Starts with &lsquo;system_product:&rsquo;.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>System Version</code>: Starts with &lsquo;system_version:&rsquo;.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>Mainboard Vendor</code>: Starts with &lsquo;mainboard_vendor:&rsquo;.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>Mainboard Product</code>: Starts with &lsquo;mainboard_product:&rsquo;.</td>
+</tr>
+<tr>
+<td align="left"><code>may_reboot</code></td>
+<td align="left">When True, indicates to MAAS that the script may reboot the machine. MAAS will allow up to 20 minutes between heartbeats while running a script with <code>may_reboot</code> set to True.</td>
+</tr>
+<tr>
+<td align="left"><code>recommission</code></td>
+<td align="left">After all commissioning scripts have finished running rerun</td>
+</tr>
+<tr>
+<td align="left"><code>script_type</code></td>
+<td align="left">commissioning or test. Indicates whether the script should run during commissioning or hardware testing.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliparameters"><h2 id="heading-deb-2-8-cli-deb-2-8-cliparameters">Parameters</h2></a></p>
+<p>Scripts can accept exactly three types of parameters, and only three types:</p>
+<ol>
+<li>storage.</li>
+<li>interface.</li>
+<li>URL.</li>
+</ol>
+<p>The values of these parameters are strictly checked against existing disks (storage), working interfaces (interface), and valid URLs (URL)  No other types of information can be passed as parameters; they are not configured to pass user-deb-2-8-clispecified data.</p>
+<p>Parameters are automatically switched by MAAS to match the device being tested, to allow one test to be run against multiple devices at the same time while keeping separate logs.  For this reason, you may only specify parameters within the embedded YAML of the script, and they must take the form of a dictionary of dictionaries.</p>
+<p>The key of the dictionary must be a string, and it&rsquo;s this string that&rsquo;s used by the UI and API when users are setting parameter values during commissioning or testing.  The value is a dictionary with the following five fields:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>type</code>: Every parameter must contain a type field, which describes what the parameter may accept and its default values. It may be one of the following:</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>storage</code>: Allows the selection of a storage device on the currently running machine.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>interface</code>: Allows the selection of an interface on the currently running machine.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>url</code>: Allows the the passing of a valid URL.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>runtime</code>: Specifies how long the script may run. This overrides the timeout value. It is currently only passed as the environment variable RUNTIME.</td>
+</tr>
+<tr>
+<td align="left"><code>title</code>: The title of the parameter field when displayed in the UI. The following types have the following default values:</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>storage</code>: storage device.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>interface</code>: interface specifier.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>url</code>: valid URL.</td>
+</tr>
+<tr>
+<td align="left"><code>argument-deb-2-8-cliformat</code>: Specifies how the argument should be passed to the script. Input is described as <code>{input}</code>. The storage type may also use <code>{name}</code>, <code>{path}</code>, <code>{model}</code> or <code>{serial}</code>. MAAS will look up the values of path, model, and serial based on user selection. For storage, <code>{input}</code> is synonymous with <code>{path}</code>. The interface type may also use <code>{name}</code>, <code>{mac_address}</code>, <code>{product}</code>, or <code>{vendor}</code>. For interface <code>{input}</code> is synonymous with <code>{name}</code>. The following types have the following default values:</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>storage</code>: <code>-deb-2-8-cli-deb-2-8-clistorage={path}</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>interface</code>: <code>-deb-2-8-cli-deb-2-8-cliinterface={name}</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>url</code>: <code>-deb-2-8-cli-deb-2-8-cliurl={input}</code></td>
+</tr>
+<tr>
+<td align="left"><code>default</code>: The default value of the parameter. The following types have the following default values. Setting these to &lsquo;&rsquo; or None will override these values:</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>storage</code>: all.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>interface</code>: all.</td>
+</tr>
+<tr>
+<td align="left"><code>required</code>: Whether or not user input is required. A value of false sets no default, and no user input will mean no parameters passed to the script. Defaults to <code>true</code>.</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>results</code>: What results the script will return on completion. You can only define this parameter within the embedded YAML of the script. Results may be a list of strings or a dictionary of dictionaries.</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>Example script using default values:</p>
+<pre><code class="python">#!/usr/bin/env python3
+
+# -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli Start MAAS 1.0 script metadata -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli
+# name: example
+# parallel: instance
+# parameters:
+#   storage: {type: storage}
+# -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli End MAAS 1.0 script metadata -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli
+
+import argparse
+
+parser = argparse.ArgumentParser(description='')
+parser.add_argument(
+    '-deb-2-8-cli-deb-2-8-clistorage', dest='storage', required=True,
+    help='path to storage device you want to test. e.g. /dev/sda')
+args = parser.parse_args()
+
+print(&quot;Testing: %s&quot; % args.storage)
+</code></pre>
+
+<p>Example script using customised parameters:</p>
+<pre><code class="bash">#!/bin/bash
+
+# -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli Start MAAS 1.0 script metadata -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli
+# name: example
+# parallel: instance
+# parameters:
+#   storage:
+#     type: storage
+#     argument-deb-2-8-cliformat: '{model}' '{serial}'
+# -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli End MAAS 1.0 script metadata -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli
+
+echo &quot;Model: $1&quot;
+echo &quot;Serial: $2&quot;
+</code></pre>
+
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clienvironment-deb-2-8-clivariables"><h2 id="heading-deb-2-8-cli-deb-2-8-clienvironment-deb-2-8-clivariables">Environment variables</h2></a></p>
+<p>The following seven environment variables are available when a script runs within the MAAS environment:</p>
+<ol>
+<li><code>OUTPUT_STDOUT_PATH</code>: The path to the log of STDOUT from the script.</li>
+<li><code>OUTPUT_STDERR_PATH</code>: The path to the log of STDERR from the script.</li>
+<li><code>OUTPUT_COMBINED_PATH</code>: The path to the log of the combined STDOUT and STDERR from the script.</li>
+<li><code>RESULT_PATH</code>: Path for the script to write a result YAML.</li>
+<li><code>DOWNLOAD_PATH</code>: The path where MAAS will download all files.</li>
+<li><code>RUNTIME</code>: The amount of time the script has to run in seconds.</li>
+<li><code>HAS_STARTED</code>: When &lsquo;True&rsquo;, MAAS has run the script once before but not to completion. Indicates the machine has rebooted.</li>
+</ol>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliresults"><h2 id="heading-deb-2-8-cli-deb-2-8-cliresults">Results</h2></a></p>
+<p>A script can output its results to a YAML file, and those results will be associated with the hardware type defined within the script. MAAS provides the path for the results file in an environment variable, <code>RESULT_PATH</code>. Scripts should write YAML to this file before exiting.</p>
+<p>If the hardware type is storage, for example, and the script accepts a storage type parameter, the result will be associated with a specific storage device.</p>
+<p>The YAML file must represent a dictionary with these two fields:</p>
+<ol>
+<li><code>result</code>: The completion status of the script. This status can be <code>passed</code>, <code>failed</code>, <code>degraded</code>, or <code>skipped</code>. If no status is defined, an exit code of <code>0</code> indicates a pass while a non-deb-2-8-clizero value indicates a failure.</li>
+<li><code>results</code>: A dictionary of results. The key may map to a results key defined as embedded YAML within the script. The value of each result must be a string or a list of strings.</li>
+</ol>
+<p>Optionally, a script may define what results to return in the YAML file in the <a href="#Metadata%20fields">Metadata fields</a>. The <code>results</code> field should contain a dictionary of dictionaries. The key for each dictionary is a name which is returned by the results YAML. Each dictionary may contain the following two fields:</p>
+<ol>
+<li><code>title</code> -deb-2-8-cli The title for the result, used in the UI.</li>
+<li><code>description</code> -deb-2-8-cli The description of the field used as a tool-deb-2-8-clitip in the UI.</li>
+</ol>
+<p>Example degrade detection:</p>
+<pre><code class="python">#!/usr/bin/env python3
+
+# -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli Start MAAS 1.0 script metadata -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli
+# name: example
+# results:
+#   memspeed:
+#     title: Memory Speed
+#     description: Bandwidth speed of memory while performing random read writes
+# -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli End MAAS 1.0 script metadata -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli
+
+import os
+import yaml
+
+memspeed = some_test()
+
+print('Memspeed: %s' % memspeed)
+results = {
+    'results': {
+        'memspeed': memspeed,
+    }
+}
+if memspeed &lt; 100:
+    print('WARN: Memory test passed but performance is low!')
+    results['status'] = 'degraded'
+
+result_path = os.environ.get(&quot;RESULT_PATH&quot;)
+if result_path is not None:
+    with open(result_path, 'w') as results_file:
+        yaml.safe_dump(results, results_file)
+</code></pre>
+
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliscript-deb-2-8-cliexamples"><h2 id="heading-deb-2-8-cli-deb-2-8-cliscript-deb-2-8-cliexamples">Script examples</h2></a></p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clibuilt-deb-2-8-cliin-deb-2-8-cliscripts"><h3 id="heading-deb-2-8-cli-deb-2-8-clibuilt-deb-2-8-cliin-deb-2-8-cliscripts">Built-deb-2-8-cliin scripts</h3></a></p>
+<p>You can download the source for all commissioning and test scripts via the API with the following command:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript download $SCRIPT_NAME
+</code></pre>
+
+<p>The source code to all built-deb-2-8-cliin scripts is available on <a href="https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts">launchpad</a>.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clicommissioning-deb-2-8-cliscript-deb-2-8-cliconfigure-deb-2-8-clihpa"><h3 id="heading-deb-2-8-cli-deb-2-8-clicommissioning-deb-2-8-cliscript-deb-2-8-cliconfigure-deb-2-8-clihpa">Commissioning script: Configure HPA</h3></a></p>
+<p>Below is a sample script to configure an Intel C610/X99 HPA controller on an HP system. The script will only run on systems with an Intel C610/X99 controller identified by the PCI ID 8086:8d06.</p>
+<p>Before the scrixpt runs, MAAS will download and install the <a href="https://downloads.linux.hpe.com/SDR/project/hprest/">HP RESTful Interface Tool</a> package from HP. After the script completes, the built-deb-2-8-cliin commissioning scripts will be re-deb-2-8-clirun to capture the new configuration.</p>
+<pre><code class="bash">#!/bin/bash -deb-2-8-cliex
+# -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli Start MAAS 1.0 script metadata -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli
+# name: hp_c610_x99_ahci
+# title: Configure Intel C610/X99 controller on HP systems
+# description: Configure Intel C610/X99 controller on HP systems to AHCI
+# script_type: commissioning
+# tags: configure_hpa
+# packages:
+#  url: http://downloads.linux.hpe.com/SDR/repo/hprest/pool/non-deb-2-8-clifree/hprest-deb-2-8-cli1.5-deb-2-8-cli26_amd64.deb
+# for_hardware: pci:8086:8d06
+# recommission: True
+# -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli End MAAS 1.0 script metadata -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli
+output=$(sudo hprest get EmbeddedSata -deb-2-8-cli-deb-2-8-cliselector HpBios.)
+echo $output
+if [ $(echo $output | grep -deb-2-8-clic 'EmbeddedSata=Raid') ]; then
+    echo &quot;Server is in Dynamic Smart Array RAID mode. Changing to SATA AHCI support mode.&quot;
+    sudo hprest set EmbeddedSata=Ahci -deb-2-8-cli-deb-2-8-cliselector HpBios. -deb-2-8-cli-deb-2-8-clicommit
+else:
+    echo &quot;No changes made to the system, Server is Already in AHCI Mode&quot;
+fi
+</code></pre>
+
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clicommissioning-deb-2-8-cliscript-deb-2-8-cliupdate-deb-2-8-clifirmware"><h3 id="heading-deb-2-8-cli-deb-2-8-clicommissioning-deb-2-8-cliscript-deb-2-8-cliupdate-deb-2-8-clifirmware">Commissioning script: Update firmware</h3></a></p>
+<p>Below is a sample script to update the mainboard firmware on an ASUS P8P67 Pro using a vendor-deb-2-8-cliprovided tool. The tool will is automatically downloaded and extracted by MAAS. The script reboots the system to complete the update. The system will boot back into the MAAS ephemeral environment to finish commissioning and optionally testing.</p>
+<p><strong>NOTE:</strong> 
+Vendor tools which use UEFI boot capsules or need to store resource files on disk while rebooting are not currently supported.</p>
+<pre><code class="bash">#!/bin/bash -deb-2-8-cliex
+# -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli Start MAAS 1.0 script metadata -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli
+# name: update_asus_p8p67_firmware
+# title: Firmware update for the ASUS P8P67 mainboard
+# description: Firmware update for the ASUS P8P67 mainboard
+# script_type: commissioning
+# tags: update_firmware
+# packages:
+#  url: http://example.com/firmware.tar.gz
+# for_hardware: mainboard_product:P8P67 PRO
+# may_reboot: True
+# -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli End MAAS 1.0 script metadata -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli
+$DOWNLOAD_PATH/update_firmware
+reboot
+</code></pre>
+
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clihardware-deb-2-8-clitest-deb-2-8-cliscript-deb-2-8-clicpu-deb-2-8-clistress-deb-2-8-clitest"><h3 id="heading-deb-2-8-cli-deb-2-8-clihardware-deb-2-8-clitest-deb-2-8-cliscript-deb-2-8-clicpu-deb-2-8-clistress-deb-2-8-clitest">Hardware test script: CPU stress test</h3></a></p>
+<p>As a simple example, here&rsquo;s a functional Bash script replicating part of the stress-deb-2-8-cling script bundled with MAAS:</p>
+<pre><code class="bash">#!/bin/bash -deb-2-8-clie
+# -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli Start MAAS 1.0 script metadata -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli
+# name: stress-deb-2-8-cling-deb-2-8-clicpu-deb-2-8-clitest
+# title: CPU validation
+# description: Run stress-deb-2-8-cling memory tests for 5 minutes.
+# script_type: test
+# hardware_type: cpu
+# packages: {apt: stress-deb-2-8-cling}
+# tags: cpu
+# timeout: 00:05:00
+# -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli End MAAS 1.0 script metadata -deb-2-8-cli-deb-2-8-cli-deb-2-8-cli
+
+sudo -deb-2-8-clin stress-deb-2-8-cling -deb-2-8-cli-deb-2-8-climatrix 0 -deb-2-8-cli-deb-2-8-cliignite-deb-2-8-clicpu -deb-2-8-cli-deb-2-8-clilog-deb-2-8-clibrief -deb-2-8-cli-deb-2-8-climetrics-deb-2-8-clibrief -deb-2-8-cli-deb-2-8-clitimes \
+    -deb-2-8-cli-deb-2-8-clitz -deb-2-8-cli-deb-2-8-cliverify -deb-2-8-cli-deb-2-8-clitimeout 2m
+</code></pre>
+
+<p>This Bash script contains comment-deb-2-8-clidelineated metadata, which configures the script environment and installs any dependencies.  There is also a single line that runs <strong>stress-deb-2-8-cling</strong> (a CPU stress-deb-2-8-clitest utility) with various arguments.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliautomatic-deb-2-8-cliscript-deb-2-8-cliselection-deb-2-8-cliby-deb-2-8-clihardware-deb-2-8-clitype"><h3 id="heading-deb-2-8-cli-deb-2-8-cliautomatic-deb-2-8-cliscript-deb-2-8-cliselection-deb-2-8-cliby-deb-2-8-clihardware-deb-2-8-clitype">Automatic script selection by hardware type</h3></a></p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>When selecting <a href="machines.html">multiple machines</a>, scripts which declare the <code>for_hardware</code> field will only run on machines with matching hardware. To automatically run a script when &lsquo;Update firmware&rsquo; or &lsquo;Configure HBA&rsquo; is selected, you must tag the script with &lsquo;update_firmware&rsquo; or &lsquo;configure_hba&rsquo;.</p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>Similarly, scripts selected by tag on the command line which specify the <code>for_hardware</code> field will only run on matching hardware.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliupload-deb-2-8-cliprocedure"><h2 id="heading-deb-2-8-cli-deb-2-8-cliupload-deb-2-8-cliprocedure">Upload procedure</h2></a></p>
+<p>To upload a hardware testing script to MAAS, enter the following:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscripts create name=$SCRIPT_NAME name&gt; \
+ script=$PATH_TO_SCRIPT type=testing
+</code></pre>
+
+<p>Changing the type to commissioning adds the test script to the commissioning process.</p>
+<p>You can list all uploaded scripts with the following command:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscripts read type=testing filters=$TAG
+</code></pre>
+
+<p>The optional filters argument lets you search for tags assigned to a script, such as using <code>TAG=cpu</code> with the above example.</p>
+<p>A <a href="commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html#hardware-deb-2-8-clitest-deb-2-8-cliscript-deb-2-8-clisample">script&rsquo;s metadata</a>, and even the script itself, can be updated from the command line:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript update \
+ $SCRIPT_NAME script=$PATH_TO_SCRIPT comment=$COMMENT
+</code></pre>
+
+<p>The JSON formatted output to the above command will include &lsquo;history&rsquo; dictionary entries, detailing script modification times and associated comments:</p>
+<pre><code class="json">&quot;history&quot;: [
+    {
+        &quot;id&quot;: 40,
+        &quot;created&quot;: &quot;Tue, 12 Sep 2017 12:12:08 -deb-2-8-cli0000&quot;,
+        &quot;comment&quot;: &quot;Updated version&quot;
+    },
+    {
+        &quot;id&quot;: 34,
+        &quot;created&quot;: &quot;Fri, 08 Sep 2017 17:07:46 -deb-2-8-cli0000&quot;,
+        &quot;comment&quot;: null
+    }
+]
+</code></pre>
+
+<p>MAAS keeps a history of all uploaded script versions, allowing you to easily revert to a previous version using the <code>id</code> of the version you wish to revert to:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript revert $SCRIPT_NAME to=$VERSION_ID
+</code></pre>
+
+<p><strong>NOTE:</strong> 
+The history for later modifications will be lost when reverting to an earlier version of the script.</p>
+<p>To download a script, enter the following:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript download $SCRIPT_NAME &gt; $LOCAL_FILENAME
+</code></pre>
+
+<p>To delete a script, use <code>delete</code>:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript delete $SCRIPT_NAME
+</code></pre>
+
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clitags"><h2 id="heading-deb-2-8-cli-deb-2-8-clitags">Tags</h2></a></p>
+<p>As with general <a href="cli-deb-2-8-clitag-deb-2-8-climanagement.html">tag management</a>, tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript add-deb-2-8-clitag $SCRIPT_NAME tag=$TAG
+maas $PROFILE node-deb-2-8-cliscript remove-deb-2-8-clitag $SCRIPT_NAME tag=$TAG
+</code></pre>
+
+<p>MAAS runs all commissioning scripts by default. However, you can select which custom scripts to run during commissioning by name or tag:</p>
+<pre><code class="bash">maas $PROFILE machine commission \
+ commissioning_scripts=$SCRIPT_NAME,$SCRIPT_TAG
+</code></pre>
+
+<p>You can also select which testing scripts to run by name or tag:</p>
+<pre><code class="bash">maas $PROFILE machine commission \
+ testing_scripts=$SCRIPT_NAME,$SCRIPT_TAG
+</code></pre>
+
+<p>Any testing scripts tagged with commissioning will also run during commissioning.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliresults"><h2 id="heading-deb-2-8-cli-deb-2-8-cliresults">Results</h2></a></p>
+<p>The command line allows you to not only view the current script&rsquo;s progress but also retrieve the verbatim output from any previous runs too.</p>
+<p>If you only want to see the latest or currently-deb-2-8-clirunning result, you can use <code>current-deb-2-8-clicommissioning</code>, <code>current-deb-2-8-clitesting</code>, or <code>current-deb-2-8-cliinstallation</code> instead of an id:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript-deb-2-8-cliresult read $SYSTEM_ID $RESULTS
+</code></pre>
+
+<p>You can also limit which results are returned by type (commissioning, testing, or installation), script name, or script run:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript-deb-2-8-cliresults read \
+ $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS
+</code></pre>
+
+<p>You can also suppress failed results, which is useful if you want to ignore a known failure:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript-deb-2-8-cliresults update \
+ $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS suppressed=$SUPPRESSED
+</code></pre>
+
+<p>where <code>$SUPPRESSED</code> is either <code>True</code> or <code>False</code>. The JSON formatted output to the above command will include &lsquo;results&rsquo; dictionary with an entry for <code>suppressed</code>:</p>
+<pre><code class="json">&quot;results&quot;: [
+    {
+        &quot;id&quot;: 21,
+        &quot;created&quot;: &quot;Tue, 02 Apr 2019 17:00:36 -deb-2-8-cli0000&quot;,
+        &quot;updated&quot;: &quot;Tue, 02 Apr 2019 20:56:41 -deb-2-8-cli0000&quot;,
+        &quot;name&quot;: &quot;smartctl-deb-2-8-clivalidate&quot;,
+        &quot;status&quot;: 5,
+        &quot;status_name&quot;: &quot;Aborted&quot;,
+        &quot;exit_status&quot;: null,
+        &quot;started&quot;: &quot;Tue, 02 Apr 2019 20:56:41 -deb-2-8-cli0000&quot;,
+        &quot;ended&quot;: &quot;Tue, 02 Apr 2019 20:56:41 -deb-2-8-cli0000&quot;,
+        &quot;runtime&quot;: &quot;0:00:00&quot;,
+        &quot;starttime&quot;: 1554238601.765214,
+        &quot;endtime&quot;: 1554238601.765214,
+        &quot;estimated_runtime&quot;: &quot;0:00:00&quot;,
+        &quot;parameters&quot;: {
+            &quot;storage&quot;: {
+                &quot;argument_format&quot;: &quot;{path}&quot;,
+                &quot;type&quot;: &quot;storage&quot;,
+                &quot;value&quot;: {
+                    &quot;id_path&quot;: &quot;/dev/vda&quot;,
+                    &quot;model&quot;: &quot;&quot;,
+                    &quot;name&quot;: &quot;sda&quot;,
+                    &quot;physical_blockdevice_id&quot;: 1,
+                    &quot;serial&quot;: &quot;&quot;
+                }
+            }
+        },
+        &quot;script_id&quot;: 1,
+        &quot;script_revision_id&quot;: null,
+        &quot;suppressed&quot;: true
+    }
+]
+</code></pre>
+
+<p>Finally, results can be downloaded, either to stdout, stderr, as combined output or as a tar.xz:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript-deb-2-8-cliresult download $SYSTEM_ID $RUN_ID output=all \
+ filetype=tar.xz &gt; $LOCAL_FILENAME
+</code></pre>
+
+<p><strong>NOTE:</strong> 
+<strong>$RUN_ID</strong> is labelled <code>id</code> in the verbose result output.</p>
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+Scripts can be uploaded to MAAS using the web UI. Select the 'User scripts' tab of the 'Settings' page -deb-2-8-cli the 'Commissioning scripts' section is near the top. Within the Commissioning scripts section, click the Upload script button followed by 'Choose file' to open a requester, locate the script, and select Upload to upload it to MAAS.
+snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-deb-2-8-clitesting.html) from a machine's 'Take action' menu.
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-deb-2-8-clitesting.html) from a machine's 'Take action' menu.
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-deb-2-8-clitesting.html) from a machine's 'Take action' menu.
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-deb-2-8-clitesting.html) from a machine's 'Take action' menu.
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-deb-2-8-clitesting.html) from a machine's 'Take action' menu.
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-deb-2-8-clitesting.html) from a machine's 'Take action' menu.
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+<a href="images/50e08fdf-deb-2-8-clinodes-deb-2-8-clihw-deb-2-8-cliscripts__2.4_select.png" target = "_blank"><img src="images/50e08fdf-deb-2-8-clinodes-deb-2-8-clihw-deb-2-8-cliscripts__2.4_select.png"></a></a>
+
+<strong>NOTE:</strong> 
+MAAS executes scripts in lexicographical order. This order allows you to control when your scripts execute, and whether they run before or after the standard MAAS scripts.
+
+
+<a href="#heading-deb-2-8-cli-deb-2-8-clidebugging"><h2 id="heading-deb-2-8-cli-deb-2-8-clidebugging">Debugging</h2></a>
+
+Clicking on the title of a completed or failed script will reveal the output from that specific script.
+
+<a href="images/855015e5-deb-2-8-clinodes-deb-2-8-clihw-deb-2-8-cliscripts__2.2_fail.png" target = "_blank"><img src="images/855015e5-deb-2-8-clinodes-deb-2-8-clihw-deb-2-8-cliscripts__2.2_fail.png"></a></a>
+
+If you need further details, especially when writing and running your own scripts, you can connect to a machine and examine its logs and environment.
+
+To do this, enable Allow SSH access and prevent the machine from powering off when selecting 'Test hardware' from the machine 'Take action' menu.
+
+<a href="images/da793c67-deb-2-8-clinodes-deb-2-8-clihw-deb-2-8-cliscripts__2.4_ssh.png" target = "_blank"><img src="images/da793c67-deb-2-8-clinodes-deb-2-8-clihw-deb-2-8-cliscripts__2.4_ssh.png"></a></a>
+
+Because scripts operate within an ephemeral version of Ubuntu, enabling this option stops the machine from shutting down, allowing you to connect and probe a script's status.
+snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+As long as you've added your [SSH key](user-deb-2-8-cliaccounts.html#heading-deb-2-8-cli-deb-2-8-clissh-deb-2-8-clikeys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -deb-2-8-clii` to get root access.
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+As long as you've added your [SSH key](user-deb-2-8-cliaccounts.html#heading-deb-2-8-cli-deb-2-8-clissh-deb-2-8-clikeys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -deb-2-8-clii` to get root access.
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>As long as you&rsquo;ve added your <a href="user-deb-2-8-cliaccounts.html#heading-deb-2-8-cli-deb-2-8-clissh-deb-2-8-clikeys">SSH key</a> to MAAS, you can connect with SSH to the machine&rsquo;s IP with a username of <code>ubuntu</code>. Type <code>sudo -deb-2-8-clii</code> to get root access.</p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+As long as you've added your [SSH key](user-deb-2-8-cliaccounts.html#heading-deb-2-8-cli-deb-2-8-clissh-deb-2-8-clikeys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -deb-2-8-clii` to get root access.
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+As long as you've added your [SSH key](user-deb-2-8-cliaccounts.html#heading-deb-2-8-cli-deb-2-8-clissh-deb-2-8-clikeys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -deb-2-8-clii` to get root access.
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+As long as you've added your [SSH key](user-deb-2-8-cliaccounts.html#heading-deb-2-8-cli-deb-2-8-clissh-deb-2-8-clikeys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -deb-2-8-clii` to get root access.
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+As long as you've added your [SSH key](user-deb-2-8-cliaccounts.html#heading-deb-2-8-cli-deb-2-8-clissh-deb-2-8-clikeys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -deb-2-8-clii` to get root access.
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+As long as you've added your [SSH key](user-deb-2-8-cliaccounts.html#heading-deb-2-8-cli-deb-2-8-clissh-deb-2-8-clikeys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -deb-2-8-clii` to get root access.
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+As long as you've added your [SSH key](user-deb-2-8-cliaccounts.html#heading-deb-2-8-cli-deb-2-8-clissh-deb-2-8-clikeys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -deb-2-8-clii` to get root access.
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+As long as you've added your [SSH key](user-deb-2-8-cliaccounts.html#heading-deb-2-8-cli-deb-2-8-clissh-deb-2-8-clikeys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -deb-2-8-clii` to get root access.
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+As long as you've added your [SSH key](user-deb-2-8-cliaccounts.html#heading-deb-2-8-cli-deb-2-8-clissh-deb-2-8-clikeys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -deb-2-8-clii` to get root access.
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+As long as you've added your [SSH key](user-deb-2-8-cliaccounts.html#heading-deb-2-8-cli-deb-2-8-clissh-deb-2-8-clikeys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -deb-2-8-clii` to get root access.
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliaccess-deb-2-8-cliindividual-deb-2-8-cliscripts-deb-2-8-cliand-deb-2-8-clilog-deb-2-8-clifiles"><h3 id="heading-deb-2-8-cli-deb-2-8-cliaccess-deb-2-8-cliindividual-deb-2-8-cliscripts-deb-2-8-cliand-deb-2-8-clilog-deb-2-8-clifiles">Access individual scripts and log files</h3></a></p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clicommissioning-deb-2-8-cliand-deb-2-8-clitesting-deb-2-8-cliscript-deb-2-8-clifiles"><h4 id="heading-deb-2-8-cli-deb-2-8-clicommissioning-deb-2-8-cliand-deb-2-8-clitesting-deb-2-8-cliscript-deb-2-8-clifiles">Commissioning and testing script files</h4></a></p>
+<ol>
+<li><code>/tmp/user_data.sh.*/scripts/commissioning/</code>: Commissioning scripts</li>
+<li><code>/tmp/user_data.sh.*/scripts/testing/</code>: Hardware testing scripts</li>
+</ol>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clilog-deb-2-8-clifiles"><h4 id="heading-deb-2-8-cli-deb-2-8-clilog-deb-2-8-clifiles">Log files</h4></a></p>
+<ol>
+<li><code>/tmp/user_data.sh*/out/</code></li>
+<li><code>/var/log/cloud-deb-2-8-cliinit-deb-2-8-clioutput.log</code></li>
+<li><code>/var/log/cloud-deb-2-8-cliinit.log</code></li>
+</ol>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clirun-deb-2-8-cliall-deb-2-8-cliscripts-deb-2-8-climanually"><h3 id="heading-deb-2-8-cli-deb-2-8-clirun-deb-2-8-cliall-deb-2-8-cliscripts-deb-2-8-climanually">Run all scripts manually</h3></a></p>
+<p>You can also run all commissioning and hardware-deb-2-8-clitesting scripts on a machine for debugging.</p>
+<pre><code class="bash">/tmp/user_data.sh.*/bin/maas-deb-2-8-clirun-deb-2-8-cliremote-deb-2-8-cliscripts \
+    [-deb-2-8-cli-deb-2-8-clino-deb-2-8-clidownload] \
+    [-deb-2-8-cli-deb-2-8-clino-deb-2-8-clisend] \
+    /tmp/user_data.sh.*
+</code></pre>
+
+<p>Where:</p>
+<ol>
+<li><code>-deb-2-8-cli-deb-2-8-clino-deb-2-8-clidownload</code>: Optional. Do not download the scripts from MAAS again.</li>
+<li><code>-deb-2-8-cli-deb-2-8-clino-deb-2-8-clisend</code>: Optional. Do not send the results to MAAS.</li>
+</ol>
+<p>For example, to run all the scripts again without downloading again from MAAS:</p>
+<pre><code class="bash">/tmp/user_data.sh.*/bin/maas-deb-2-8-clirun-deb-2-8-cliremote-deb-2-8-cliscripts -deb-2-8-cli-deb-2-8-clino-deb-2-8-clidownload /tmp/user_data.sh.*
+</code></pre>
+
+<p>Here, all the scripts are run again after downloading from MAAS, but no output data is sent to MAAS:</p>
+<pre><code class="bash">/tmp/user_data.sh.*/bin/maas-deb-2-8-clirun-deb-2-8-cliremote-deb-2-8-cliscripts -deb-2-8-cli-deb-2-8-clino-deb-2-8-clisend /tmp/user_data.sh.*
+</code></pre>
+    </div>
+  </body>
+</html>

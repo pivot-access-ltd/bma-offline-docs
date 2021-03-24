@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.9
+	    What&rsquo;s new in 2.10
 	  </a>
 	</li>
 	<li>
@@ -429,26 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Ubuntu kernels</h1><!-- deb-2-7-cli
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
- snap-2-7-ui -->
+      <h1>Ubuntu kernels</h1><!-- begin-rad-menu -->
 
 <!-- snap-2-8-cli
  snap-2-8-cli -->
@@ -461,6 +442,31 @@
 
 <!-- snap-2-9-ui
  snap-2-9-ui -->
+
+<!-- snap-2-10-cli
+ snap-2-10-cli -->
+
+<!-- snap-2-10-ui
+ snap-2-10-ui -->
+
+<!-- deb-2-8-cli
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- deb-2-10-ui
+ deb-2-10-ui -->
+
+<!-- end-rad-menu -->
+
+<!-- end-rad-menu -->
 
 <p>MAAS supports four types of kernels for its Ubuntu machines:</p>
 <ol>
@@ -513,7 +519,7 @@ There is the notion of an HWE <em>stack</em>, which refers to the window manager
 <li>per machine (minimum deploy kernel)</li>
 <li>per machine during deployment (specific deploy kernel)</li>
 </ol>
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
 <a href="#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning"><h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2></a>
 
 To set the default minimum enlistment and commissioning kernel (based on Ubuntu release: GA kernel) for all machines visit the 'General' tab of the 'Settings' page and select a kernel in the 'Default Minimum Kernel Version' field of the *Commissioning* section. Don't forget to click 'Save'.
@@ -533,7 +539,7 @@ To set a specific kernel during deployment, select a machine from the 'Machines'
 <a href="images/0d25737f-nodes-kernels__2.6-machine-during-deploy-kernel.png" target = "_blank"><img src="images/0d25737f-nodes-kernels__2.6-machine-during-deploy-kernel.png"></a></a>
 
 MAAS verifies that the specified kernel is available for the given Ubuntu release (series) before deploying the machine.
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
 
 <p><a href="#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning"><h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2></a></p>
 <p>To set a default minimum kernel for all new and commissioned machines:</p>
@@ -569,8 +575,6 @@ The command option <code>default_min_hwe_kernel</code> appears to apply to only 
 
 <p><strong>NOTE:</strong> 
 The command option <code>hwe_kernel</code> appears to apply to only HWE kernels but this is not the case.</p>
-<hr>
-<h2>****</h2>
     </div>
   </body>
 </html>

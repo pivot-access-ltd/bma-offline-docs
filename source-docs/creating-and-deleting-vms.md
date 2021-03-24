@@ -1,90 +1,11 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|CLI ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ UI|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|CLI ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ UI|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|CLI ~ [UI](/t/creating-and-deleting-vms/2585)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ UI|
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ UI|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|CLI ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ UI|[CLI](/t/creating-and-deleting-vms/2578) ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|CLI ~ [UI](/t/creating-and-deleting-vms/2579)|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/creating-and-deleting-vms/2574) ~ [UI](/t/creating-and-deleting-vms/2575)|[CLI](/t/creating-and-deleting-vms/2576) ~ [UI](/t/creating-and-deleting-vms/2577)|[CLI](/t/creating-and-deleting-vms/2578) ~ UI|
-|Packages|[CLI](/t/creating-and-deleting-vms/2580) ~ [UI](/t/creating-and-deleting-vms/2581)|[CLI](/t/creating-and-deleting-vms/2582) ~ [UI](/t/creating-and-deleting-vms/2583)|[CLI](/t/creating-and-deleting-vms/2584) ~ [UI](/t/creating-and-deleting-vms/2585)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/creating-and-deleting-vms-snap-2-7-cli/2574) ~ [UI](/t/creating-and-deleting-vms-snap-2-7-ui/2575)|[CLI](/t/creating-and-deleting-vms-snap-2-8-cli/2576) ~ [UI](/t/creating-and-deleting-vms-snap-2-8-ui/2577)|[CLI](/t/creating-and-deleting-vms-snap-2-9-cli/2578) ~ [UI](/t/creating-and-deleting-vms-snap-2-9-ui/2579)|[CLI](/t/creating-and-deleting-vms-snap-3-0-cli/3905) ~ [UI](/t/creating-and-deleting-vms-snap-3-0-ui/3906)|
+Packages|[CLI](/t/creating-and-deleting-vms-deb-2-7-cli/2580) ~ [UI](/t/creating-and-deleting-vms-deb-2-7-ui/2581)|[CLI](/t/creating-and-deleting-vms-deb-2-8-cli/2582) ~ [UI](/t/creating-and-deleting-vms-deb-2-8-ui/2583)|[CLI](/t/creating-and-deleting-vms-deb-2-9-cli/2584) ~ [UI](/t/creating-and-deleting-vms-deb-2-9-ui/2585)|[CLI](/t/creating-and-deleting-vms-deb-3-0-cli/3907) ~ [UI](/t/creating-and-deleting-vms-deb-3-0-ui/3908)|
 
 If you have already created a VM host, you will want to create and delete virtual machines (VMs); this article explains how to do so.
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 
 #### Two questions you may have:
 
@@ -110,9 +31,9 @@ MAAS will deduct the new machine's resources from the VM host's resources:
 To delete a VM, delete it as you would any other MAAS machine. Select the desired machine from the list of machines and select 'Delete' from the 'Take Action' menu.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg"></a> 
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 
 #### Seven questions you may have:
 
@@ -267,9 +188,4 @@ Example output:
     maas $PROFILE machine delete $SYSTEM_ID
 
 After you delete a machine, its resources will be available for other VMs.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
-
-
-------
-****
-------
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->

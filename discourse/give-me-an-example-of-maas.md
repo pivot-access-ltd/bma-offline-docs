@@ -1,88 +1,13 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|CLI ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ UI|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|CLI ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ UI|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|CLI ~ [UI](/t/give-me-an-example-of-maas/2657)|
- deb-2-9-cli -->
-
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ UI|
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ UI|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|CLI ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ UI|[CLI](/t/give-me-an-example-of-maas/2650) ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|CLI ~ [UI](/t/give-me-an-example-of-maas/2651)|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/give-me-an-example-of-maas/2646) ~ [UI](/t/give-me-an-example-of-maas/2647)|[CLI](/t/give-me-an-example-of-maas/2648) ~ [UI](/t/give-me-an-example-of-maas/2649)|[CLI](/t/give-me-an-example-of-maas/2650) ~ UI|
-|Packages|[CLI](/t/give-me-an-example-of-maas/2652) ~ [UI](/t/give-me-an-example-of-maas/2653)|[CLI](/t/give-me-an-example-of-maas/2654) ~ [UI](/t/give-me-an-example-of-maas/2655)|[CLI](/t/give-me-an-example-of-maas/2656) ~ [UI](/t/give-me-an-example-of-maas/2657)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/give-me-an-example-of-maas-snap-2-7-cli/2646) ~ [UI](/t/give-me-an-example-of-maas-snap-2-7-ui/2647)|[CLI](/t/give-me-an-example-of-maas-snap-2-8-cli/2648) ~ [UI](/t/give-me-an-example-of-maas-snap-2-8-ui/2649)|[CLI](/t/give-me-an-example-of-maas-snap-2-9-cli/2650) ~ [UI](/t/give-me-an-example-of-maas-snap-2-9-ui/2651)|[CLI](/t/give-me-an-example-of-maas-snap-3-0-cli/3933) ~ [UI](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)|
+Packages|[CLI](/t/give-me-an-example-of-maas-deb-2-7-cli/2652) ~ [UI](/t/give-me-an-example-of-maas-deb-2-7-ui/2653)|[CLI](/t/give-me-an-example-of-maas-deb-2-8-cli/2654) ~ [UI](/t/give-me-an-example-of-maas-deb-2-8-ui/2655)|[CLI](/t/give-me-an-example-of-maas-deb-2-9-cli/2656) ~ [UI](/t/give-me-an-example-of-maas-deb-2-9-ui/2657)|[CLI](/t/give-me-an-example-of-maas-deb-3-0-cli/3935) ~ [UI](/t/give-me-an-example-of-maas-deb-3-0-ui/3936)|
 
 An evolving example may be useful to introduce you to MAAS, and it doesn't have to be comprehensive --  just coherent and plausible.  This example will continue to expand and update over time.
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img  src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a> 
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 ```
@@ -145,7 +70,9 @@ You can handle this lowest level with individual [machines](/t/machines/2738).  
 You can handle this lowest level with individual [machines](/t/machines/2739).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 You can handle this lowest level with individual [machines](/t/machines/2740).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 You can handle this lowest level with individual [machines](/t/machines/2730).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
@@ -273,7 +200,9 @@ Once you've created the necessary VMs, you'll want to [manually add machines](/t
 Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2284#heading--add-a-node-manually) to MAAS that correspond to your VMs.
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2285#heading--add-a-node-manually) to MAAS that correspond to your VMs.
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2274#heading--add-a-node-manually) to MAAS that correspond to your VMs.
@@ -330,7 +259,9 @@ FQDN               POWER  STATUS  OWNER  TAGS     POOL     NOTE  ZONE
 ```
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg"></a> 
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <details>
 <summary><em>Try it!</em></summary>
@@ -370,6 +301,7 @@ As you add machines, they automatically commission.
 
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 Creating a machine from a VM requires about a dozen pieces of information, most of which you can gather from the VM itself:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/bc6c18c0fd31367bd4a9909fb7d954dc06f15c40.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bc6c18c0fd31367bd4a9909fb7d954dc06f15c40.jpeg"></a> 
@@ -392,6 +324,7 @@ As you add machines, they automatically commission:
 <a href="https://discourse.maas.io/uploads/default/original/1X/37f1df9e4072b29c7183d4ae8ec1768504c4f66f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/37f1df9e4072b29c7183d4ae8ec1768504c4f66f.jpeg"></a> 
 
 When finished, the commissioned machines with be at the "Ready" state.
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
@@ -415,7 +348,9 @@ Assigning machines to specific functions is something you can do after you [comm
 Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2476) and [deploy](/t/deploy-machines/2608) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2896) to machines.  
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2477) and [deploy](/t/deploy-machines/2609) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2897) to machines.  
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2466) and [deploy](/t/deploy-machines/2598) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2886) to machines.  
@@ -480,6 +415,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID"]
 </details>
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg"></a> 
 
 <details>
@@ -501,6 +437,7 @@ Select "Save changes" to add the tag(s) to the machine.  When you return to the 
 <a href="https://discourse.maas.io/uploads/default/original/1X/8a21ca291aa800440d9074270ab9d9108cff9be1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8a21ca291aa800440d9074270ab9d9108cff9be1.jpeg"></a> 
 
 </details>
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 Tags can will help you keep up with which machine(s) are covering which functions as you apply your apps.  You can search and filter by tags, and you can utilise tags from within the API, as well.
 
@@ -551,7 +488,9 @@ You're aware that the number of machines you'll need use for each of the individ
 You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3088) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3089) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
+ deb-2-9-ui -->
 
 <!-- snap-2-7-cli
 You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3078) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
@@ -595,6 +534,7 @@ maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
 ```
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 Notice at the top of the machine list, there is a tab labelled, "Resource pools:"
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/f7d4c52a176f53f29a0c1ac3190e7abb563dc993.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f7d4c52a176f53f29a0c1ac3190e7abb563dc993.jpeg"></a> 
@@ -618,6 +558,7 @@ Click on "Add pool" to add this resource pool to the list, then click on "Machin
 Just choose the one you want for this machine (in our example, ProServ) and you're done:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/0cff1cf26f28236dbabc89b14a92c69435934933.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0cff1cf26f28236dbabc89b14a92c69435934933.jpeg"></a> 
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 </details>
 
@@ -638,7 +579,9 @@ FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
 ```
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/704b6d1603f6f90fca42891d98c3bb418458b94a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/704b6d1603f6f90fca42891d98c3bb418458b94a.jpeg"></a> 
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 Resource pools are mostly for your use, helping you to budget servers within a given category.  Untagged servers can be in a pool, so if you've got five servers in the "Prescriber controls" resource pool, you can tag them with "Pharmacy," "Medication reconciliation," etc., as you use them.  It will also be obvious when you're running low on servers for that pool, and need to either provision more or move some unused ones from another pool.
 
@@ -646,7 +589,9 @@ Resource pools are mostly for your use, helping you to budget servers within a g
 
 Another optional identifier for machines is the "Note" field.  While it can be long, a portion of it shows up on the machine list, which makes it useful for adding special identifiers or groupings.  In this example, we've added a vague identifier which might help an IT admin remember server locations or access rights.
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/8724395dfe9fc4d3f4a10a05687c33c6a3dded07.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8724395dfe9fc4d3f4a10a05687c33c6a3dded07.jpeg"></a> 
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 ```
@@ -676,6 +621,7 @@ maas $PROFILE machine update $SYSTEM_ID description="note"
 It helps very much to keep your notes short, since only a few characters are visible on the machine list.
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 You can edit notes by clicking on a machine name in the machine list, switching to the "Configuration" tab, and selecting the "Edit" button.  These choices will bring you to a screen like this one:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a9d61f28a4ada7d97ff6f896d2f1e8e719ad680b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a9d61f28a4ada7d97ff6f896d2f1e8e719ad680b.jpeg"></a> 
@@ -687,6 +633,7 @@ From here, you can add free-form text into the "Note" field:
 When you save the changes and return to the machine list, you'll notice that the NOTE field for that machine now contains your changes: 
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/46cf42808ef44829f1c610e479d6dfb62af2d898.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/46cf42808ef44829f1c610e479d6dfb62af2d898.jpeg"></a> 
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 </details>
 
@@ -731,7 +678,9 @@ maas admin vlans read $FABRIC_ID | jq -r '(["FABRIC","VLAN","DHCP"] | (., map(le
 ```
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/7245ed378ce0b9000aaf6f15b16ea16dbde2fccf.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7245ed378ce0b9000aaf6f15b16ea16dbde2fccf.jpeg"></a> 
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <details>
 <summary><em>Try it!</em></summary>
@@ -752,6 +701,7 @@ maas admin vlans create 0 name="Caregiver_Services" vid=100
 ```
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 From anywhere on the MAAS page, select "Subnets" from the top menu-bar, which brings you to this screen:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/befd3a3eb5987d412477d0a076d16a50e81dae30.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/befd3a3eb5987d412477d0a076d16a50e81dae30.jpeg"></a> 
@@ -769,6 +719,7 @@ Enter the Name and ID of the VLAN, and select the fabric to enclose it (in this 
 <a href="https://discourse.maas.io/uploads/default/original/1X/961d5cae7119db1c3fb7e8d6ae6ce7015d9263d1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/961d5cae7119db1c3fb7e8d6ae6ce7015d9263d1.jpeg"></a> 
 
 When you're satisfied with your choices, select "Add VLAN" to complete the operation.
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 </details>
 
@@ -789,6 +740,7 @@ Considering your network design so far, you notice that some of the VLANs need t
 
 You want to incorporate these highest-level groupings into your network, but how?  MAAS provides the answer with fabrics.  A fabric is a set of interconnected VLANs that can communicate, so you simply create three fabrics, each covering one of these top-level categories.
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <details>
 <summary><em>Try it!</em></summary>
 
@@ -815,6 +767,7 @@ You can click "Edit" and choose the desired fabric from the drop-down list:
 Finally, click "Save summary" to move this VLAN to the desired fabric.  The end result of assigning our example VLANs to the three fabrics is shown below.
 
 </details>
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 ```
@@ -829,9 +782,6 @@ Patient_Management  Caregiver_Services     False
 ```
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/23c214cd6836dd783347f050f2cdba04da7bcaa1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/23c214cd6836dd783347f050f2cdba04da7bcaa1.jpeg"></a>
-
-
-------
-****
-------
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->

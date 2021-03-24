@@ -1,84 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/zone-examples/3270) ~ [UI](/t/zone-examples/3271)|[CLI](/t/zone-examples/3272) ~ [UI](/t/zone-examples/3273)|[CLI](/t/zone-examples/3274) ~ [UI](/t/zone-examples/3275)|
-|Packages|CLI ~ [UI](/t/zone-examples/3277)|[CLI](/t/zone-examples/3278) ~ [UI](/t/zone-examples/3279)|[CLI](/t/zone-examples/3280) ~ [UI](/t/zone-examples/3281)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/zone-examples/3270) ~ [UI](/t/zone-examples/3271)|[CLI](/t/zone-examples/3272) ~ [UI](/t/zone-examples/3273)|[CLI](/t/zone-examples/3274) ~ [UI](/t/zone-examples/3275)|
-|Packages|[CLI](/t/zone-examples/3276) ~ UI|[CLI](/t/zone-examples/3278) ~ [UI](/t/zone-examples/3279)|[CLI](/t/zone-examples/3280) ~ [UI](/t/zone-examples/3281)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/zone-examples/3270) ~ [UI](/t/zone-examples/3271)|[CLI](/t/zone-examples/3272) ~ [UI](/t/zone-examples/3273)|[CLI](/t/zone-examples/3274) ~ [UI](/t/zone-examples/3275)|
-|Packages|[CLI](/t/zone-examples/3276) ~ [UI](/t/zone-examples/3277)|CLI ~ [UI](/t/zone-examples/3279)|[CLI](/t/zone-examples/3280) ~ [UI](/t/zone-examples/3281)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/zone-examples/3270) ~ [UI](/t/zone-examples/3271)|[CLI](/t/zone-examples/3272) ~ [UI](/t/zone-examples/3273)|[CLI](/t/zone-examples/3274) ~ [UI](/t/zone-examples/3275)|
-|Packages|[CLI](/t/zone-examples/3276) ~ [UI](/t/zone-examples/3277)|[CLI](/t/zone-examples/3278) ~ UI|[CLI](/t/zone-examples/3280) ~ [UI](/t/zone-examples/3281)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/zone-examples/3270) ~ [UI](/t/zone-examples/3271)|[CLI](/t/zone-examples/3272) ~ [UI](/t/zone-examples/3273)|[CLI](/t/zone-examples/3274) ~ [UI](/t/zone-examples/3275)|
-|Packages|[CLI](/t/zone-examples/3276) ~ [UI](/t/zone-examples/3277)|[CLI](/t/zone-examples/3278) ~ [UI](/t/zone-examples/3279)|CLI ~ [UI](/t/zone-examples/3281)|
- deb-2-9-cli -->
-
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/zone-examples/3270) ~ [UI](/t/zone-examples/3271)|[CLI](/t/zone-examples/3272) ~ [UI](/t/zone-examples/3273)|[CLI](/t/zone-examples/3274) ~ [UI](/t/zone-examples/3275)|
-|Packages|[CLI](/t/zone-examples/3276) ~ [UI](/t/zone-examples/3277)|[CLI](/t/zone-examples/3278) ~ [UI](/t/zone-examples/3279)|[CLI](/t/zone-examples/3280) ~ UI|
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/zone-examples/3271)|[CLI](/t/zone-examples/3272) ~ [UI](/t/zone-examples/3273)|[CLI](/t/zone-examples/3274) ~ [UI](/t/zone-examples/3275)|
-|Packages|[CLI](/t/zone-examples/3276) ~ [UI](/t/zone-examples/3277)|[CLI](/t/zone-examples/3278) ~ [UI](/t/zone-examples/3279)|[CLI](/t/zone-examples/3280) ~ [UI](/t/zone-examples/3281)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/zone-examples/3270) ~ UI|[CLI](/t/zone-examples/3272) ~ [UI](/t/zone-examples/3273)|[CLI](/t/zone-examples/3274) ~ [UI](/t/zone-examples/3275)|
-|Packages|[CLI](/t/zone-examples/3276) ~ [UI](/t/zone-examples/3277)|[CLI](/t/zone-examples/3278) ~ [UI](/t/zone-examples/3279)|[CLI](/t/zone-examples/3280) ~ [UI](/t/zone-examples/3281)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/zone-examples/3270) ~ [UI](/t/zone-examples/3271)|CLI ~ [UI](/t/zone-examples/3273)|[CLI](/t/zone-examples/3274) ~ [UI](/t/zone-examples/3275)|
-|Packages|[CLI](/t/zone-examples/3276) ~ [UI](/t/zone-examples/3277)|[CLI](/t/zone-examples/3278) ~ [UI](/t/zone-examples/3279)|[CLI](/t/zone-examples/3280) ~ [UI](/t/zone-examples/3281)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/zone-examples/3270) ~ [UI](/t/zone-examples/3271)|[CLI](/t/zone-examples/3272) ~ UI|[CLI](/t/zone-examples/3274) ~ [UI](/t/zone-examples/3275)|
-|Packages|[CLI](/t/zone-examples/3276) ~ [UI](/t/zone-examples/3277)|[CLI](/t/zone-examples/3278) ~ [UI](/t/zone-examples/3279)|[CLI](/t/zone-examples/3280) ~ [UI](/t/zone-examples/3281)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/zone-examples/3270) ~ [UI](/t/zone-examples/3271)|[CLI](/t/zone-examples/3272) ~ [UI](/t/zone-examples/3273)|CLI ~ [UI](/t/zone-examples/3275)|
-|Packages|[CLI](/t/zone-examples/3276) ~ [UI](/t/zone-examples/3277)|[CLI](/t/zone-examples/3278) ~ [UI](/t/zone-examples/3279)|[CLI](/t/zone-examples/3280) ~ [UI](/t/zone-examples/3281)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/zone-examples/3270) ~ [UI](/t/zone-examples/3271)|[CLI](/t/zone-examples/3272) ~ [UI](/t/zone-examples/3273)|[CLI](/t/zone-examples/3274) ~ UI|
-|Packages|[CLI](/t/zone-examples/3276) ~ [UI](/t/zone-examples/3277)|[CLI](/t/zone-examples/3278) ~ [UI](/t/zone-examples/3279)|[CLI](/t/zone-examples/3280) ~ [UI](/t/zone-examples/3281)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/zone-examples-snap-2-7-cli/3270) ~ [UI](/t/zone-examples-snap-2-7-ui/3271)|[CLI](/t/zone-examples-snap-2-8-cli/3272) ~ [UI](/t/zone-examples-snap-2-8-ui/3273)|[CLI](/t/zone-examples-snap-2-9-cli/3274) ~ [UI](/t/zone-examples-snap-2-9-ui/3275)|[CLI](/t/zone-examples-snap-3-0-cli/4189) ~ [UI](/t/zone-examples-snap-3-0-ui/4190)|
+Packages|[CLI](/t/zone-examples-deb-2-7-cli/3276) ~ [UI](/t/zone-examples-deb-2-7-ui/3277)|[CLI](/t/zone-examples-deb-2-8-cli/3278) ~ [UI](/t/zone-examples-deb-2-8-ui/3279)|[CLI](/t/zone-examples-deb-2-9-cli/3280) ~ [UI](/t/zone-examples-deb-2-9-ui/3281)|[CLI](/t/zone-examples-deb-3-0-cli/4191) ~ [UI](/t/zone-examples-deb-3-0-ui/4192)|
 
 This page provides several useful examples of MAAS zone usage.
 
@@ -103,9 +26,3 @@ For example, for applications that are highly sensitive to network latency, it m
 Power management is concerned with power usage density and cooling. This topic can be addressed with the use of several MAAS zones.
 
 Nodes can be distributed in such a way that power-hungry and/or "hot" systems are located in different zones. This can help mitigate power consumption and heat problems.
-
-
-
-------
-****
-------

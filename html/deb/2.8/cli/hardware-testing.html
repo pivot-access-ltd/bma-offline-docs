@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-deb-2-8-clileft:0;list-deb-2-8-clistyle-deb-2-8-clitype:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-deb-2-8-clicolor:#d9d9d9; width:100%;border-deb-2-8-clibottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/hardware-deb-2-8-clitesting.html">
+	  &nbsp;UI-deb-2-8-clionly&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-deb-2-8-clicolor:white;border-deb-2-8-clitop:1px solid black; border-deb-2-8-clileft:1px solid black; border-deb-2-8-cliright:1px solid black; border-deb-2-8-clibottom:5px solid white;">
+	  CLI-deb-2-8-clionly
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-deb-2-8-clitop:40px; margin-deb-2-8-clileft:20px">
+      <strong>
+	<a href="maas-deb-2-8-clidocumentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-deb-2-8-climaas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clirequirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-cliinstallation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-deb-2-8-clijourney.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-deb-2-8-clicommunication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-deb-2-8-clicontrollers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-deb-2-8-clicontrollers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-deb-2-8-cliavailability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-deb-2-8-climachines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-deb-2-8-climanagement.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-deb-2-8-climachines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-deb-2-8-clitesting.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clitesting.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-deb-2-8-climachines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clitags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-deb-2-8-climachine-deb-2-8-clisetup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-deb-2-8-cliboot-deb-2-8-clioptions.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-deb-2-8-clipools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-clivmfs-deb-2-8-clidatastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-deb-2-8-clikernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-deb-2-8-cliand-deb-2-8-cliimport-deb-2-8-cliimages.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-deb-2-8-cliimage-deb-2-8-climirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-cliimages.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-deb-2-8-climanagement.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clidhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-deb-2-8-cliranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-deb-2-8-cliservices.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clidiscovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-deb-2-8-cliaddressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-deb-2-8-clitls-deb-2-8-cliencryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clistp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-deb-2-8-clizones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-deb-2-8-clihosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clinetworking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clistorage-deb-2-8-clipools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-deb-2-8-cliand-deb-2-8-clideleting-deb-2-8-clivms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-deb-2-8-climetrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-deb-2-8-cliyour-deb-2-8-climaas-deb-2-8-cliinstallation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clilogging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-clilogs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-deb-2-8-cliaccounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-deb-2-8-clisearch.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-clinetwork-deb-2-8-clitutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-deb-2-8-clicli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-deb-2-8-clievent-deb-2-8-clilogs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clikernel-deb-2-8-climanagement.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliimage-deb-2-8-climanagement.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliinterface-deb-2-8-climanagement.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliadvanced-deb-2-8-clitasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clicomposable-deb-2-8-clihardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-deb-2-8-cliapi-deb-2-8-cliclient.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-deb-2-8-cliauthentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-deb-2-8-clihelp.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-deb-2-8-clitricks-deb-2-8-cliand-deb-2-8-clitraps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-deb-2-8-clidocs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-deb-2-8-cliguide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-deb-2-8-clitop:40px; margin-deb-2-8-cliright:30px">
+      <h1>Hardware testing</h1><!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>If you wish, you can tell MAAS to test machine hardware using well-deb-2-8-cliknown Linux utilities.  MAAS can test machines that have  a status of <strong>Ready</strong>, <strong>Broken</strong>, or <strong>Deployed</strong>.  You can include testing as part of the commissioning process. When you choose the &lsquo;Commission&rsquo; action, MAAS will display the dialog described below.  Be aware, though, that if the hardware tests fail, the machine will become unavailable for Deployment.</p>
+<p><strong>NOTE:</strong> 
+The majority of testing scripts only work with machines that are backed by physical hardware (e.g. they may be incompatible with VM-deb-2-8-clibased machines).</p>
+<p>With MAAS, you can easily write, upload and execute your hardware testing scripts and see the results.</p>
+<h4>Four questions you may have:</h4>
+<ol>
+<li><a href="cli-deb-2-8-clicommissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html#heading-deb-2-8-cli-deb-2-8-cliscript-deb-2-8-climanagement">How do I upload and manage test scripts?</a></li>
+<li><a href="cli-deb-2-8-clicommissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html#heading-deb-2-8-cli-deb-2-8-clitags">How do I use tags to help with test scripts?</a></li>
+<li><a href="cli-deb-2-8-clicommissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html#heading-deb-2-8-cli-deb-2-8-cliresults">How do I view test results?</a></li>
+<li><a href="commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html#heading-deb-2-8-cli-deb-2-8-climetadata-deb-2-8-clifields">What metadata fields are available to me for test scripts?</a></li>
+</ol>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliscript-deb-2-8-climanagement"><h2 id="heading-deb-2-8-cli-deb-2-8-cliscript-deb-2-8-climanagement">Script management</h2></a></p>
+<p>To upload a hardware testing script to MAAS, enter the following:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscripts create name=$SCRIPT_NAME name&gt; \
+ script=$PATH_TO_SCRIPT type=testing
+</code></pre>
+
+<p>Changing the type to commissioning adds the test script to the commissioning process.</p>
+<p>You can list all uploaded scripts with the following command:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscripts read type=testing filters=$TAG
+</code></pre>
+
+<p>The optional filters argument lets you search for tags assigned to a script, such as using <code>TAG=cpu</code> with the above example.</p>
+<p>A <a href="commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html#hardware-deb-2-8-clitest-deb-2-8-cliscript-deb-2-8-clisample">script&rsquo;s metadata</a>, and even the script itself, can be updated from the command line:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript update \
+ $SCRIPT_NAME script=$PATH_TO_SCRIPT comment=$COMMENT
+</code></pre>
+
+<p>The JSON formatted output to the above command will include &lsquo;history&rsquo; dictionary entries, detailing script modification times and associated comments:</p>
+<pre><code class="json">&quot;history&quot;: [
+    {
+        &quot;id&quot;: 40,
+        &quot;created&quot;: &quot;Tue, 12 Sep 2017 12:12:08 -deb-2-8-cli0000&quot;,
+        &quot;comment&quot;: &quot;Updated version&quot;
+    },
+    {
+        &quot;id&quot;: 34,
+        &quot;created&quot;: &quot;Fri, 08 Sep 2017 17:07:46 -deb-2-8-cli0000&quot;,
+        &quot;comment&quot;: null
+    }
+]
+</code></pre>
+
+<p>MAAS keeps a history of all uploaded script versions, allowing you to easily revert to a previous version using the <code>id</code> of the version you wish to revert to:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript revert $SCRIPT_NAME to=$VERSION_ID
+</code></pre>
+
+<p><strong>NOTE:</strong> 
+The history for later modifications will be lost when reverting to an earlier version of the script.</p>
+<p>To download a script, enter the following:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript download $SCRIPT_NAME &gt; $LOCAL_FILENAME
+</code></pre>
+
+<p>To delete a script, use <code>delete</code>:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript delete $SCRIPT_NAME
+</code></pre>
+
+<p><a href="#heading-deb-2-8-cli-deb-2-8-clitags"><h2 id="heading-deb-2-8-cli-deb-2-8-clitags">Tags</h2></a></p>
+<p>As with general <a href="cli-deb-2-8-clitag-deb-2-8-climanagement.html">tag management</a>, tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript add-deb-2-8-clitag $SCRIPT_NAME tag=$TAG
+maas $PROFILE node-deb-2-8-cliscript remove-deb-2-8-clitag $SCRIPT_NAME tag=$TAG
+</code></pre>
+
+<p>MAAS runs all commissioning scripts by default. However, you can select which custom scripts to run during commissioning by name or tag:</p>
+<pre><code class="bash">maas $PROFILE machine commission \
+ commissioning_scripts=$SCRIPT_NAME,$SCRIPT_TAG
+</code></pre>
+
+<p>You can also select which testing scripts to run by name or tag:</p>
+<pre><code class="bash">maas $PROFILE machine commission \
+ testing_scripts=$SCRIPT_NAME,$SCRIPT_TAG
+</code></pre>
+
+<p>Any testing scripts tagged with commissioning will also run during commissioning.</p>
+<p><a href="#heading-deb-2-8-cli-deb-2-8-cliresults"><h2 id="heading-deb-2-8-cli-deb-2-8-cliresults">Results</h2></a></p>
+<p>The command line allows you to not only view the current script&rsquo;s progress but also retrieve the verbatim output from any previous runs too.</p>
+<p>If you only want to see the latest or currently-deb-2-8-clirunning result, you can use <code>current-deb-2-8-clicommissioning</code>, <code>current-deb-2-8-clitesting</code>, or <code>current-deb-2-8-cliinstallation</code> instead of an id:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript-deb-2-8-cliresult read $SYSTEM_ID $RESULTS
+</code></pre>
+
+<p>You can also limit which results are returned by type (commissioning, testing, or installation), script name, or script run:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript-deb-2-8-cliresults read \
+ $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS
+</code></pre>
+
+<p>You can also suppress failed results, which is useful if you want to ignore a known failure:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript-deb-2-8-cliresults update \
+ $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS suppressed=$SUPPRESSED
+</code></pre>
+
+<p>where <code>$SUPPRESSED</code> is either <code>True</code> or <code>False</code>. The JSON formatted output to the above command will include &lsquo;results&rsquo; dictionary with an entry for <code>suppressed</code>:</p>
+<pre><code class="json">&quot;results&quot;: [
+    {
+        &quot;id&quot;: 21,
+        &quot;created&quot;: &quot;Tue, 02 Apr 2019 17:00:36 -deb-2-8-cli0000&quot;,
+        &quot;updated&quot;: &quot;Tue, 02 Apr 2019 20:56:41 -deb-2-8-cli0000&quot;,
+        &quot;name&quot;: &quot;smartctl-deb-2-8-clivalidate&quot;,
+        &quot;status&quot;: 5,
+        &quot;status_name&quot;: &quot;Aborted&quot;,
+        &quot;exit_status&quot;: null,
+        &quot;started&quot;: &quot;Tue, 02 Apr 2019 20:56:41 -deb-2-8-cli0000&quot;,
+        &quot;ended&quot;: &quot;Tue, 02 Apr 2019 20:56:41 -deb-2-8-cli0000&quot;,
+        &quot;runtime&quot;: &quot;0:00:00&quot;,
+        &quot;starttime&quot;: 1554238601.765214,
+        &quot;endtime&quot;: 1554238601.765214,
+        &quot;estimated_runtime&quot;: &quot;0:00:00&quot;,
+        &quot;parameters&quot;: {
+            &quot;storage&quot;: {
+                &quot;argument_format&quot;: &quot;{path}&quot;,
+                &quot;type&quot;: &quot;storage&quot;,
+                &quot;value&quot;: {
+                    &quot;id_path&quot;: &quot;/dev/vda&quot;,
+                    &quot;model&quot;: &quot;&quot;,
+                    &quot;name&quot;: &quot;sda&quot;,
+                    &quot;physical_blockdevice_id&quot;: 1,
+                    &quot;serial&quot;: &quot;&quot;
+                }
+            }
+        },
+        &quot;script_id&quot;: 1,
+        &quot;script_revision_id&quot;: null,
+        &quot;suppressed&quot;: true
+    }
+]
+</code></pre>
+
+<p>Finally, results can be downloaded, either to stdout, stderr, as combined output or as a tar.xz:</p>
+<pre><code class="bash">maas $PROFILE node-deb-2-8-cliscript-deb-2-8-cliresult download $SYSTEM_ID $RUN_ID output=all \
+ filetype=tar.xz &gt; $LOCAL_FILENAME
+</code></pre>
+
+<p><strong>NOTE:</strong> 
+<strong>$RUN_ID</strong> is labelled <code>id</code> in the verbose result output.</p>
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+#### Two questions you may have:
+
+1. [How do I apply a hardware test?](#heading-deb-2-8-cli-deb-2-8-cliapply-deb-2-8-clia-deb-2-8-clihardware-deb-2-8-clitest)
+2. [What scripts are available for testing?](#heading-deb-2-8-cli-deb-2-8-cliincluded-deb-2-8-cliscripts)
+
+<a href="#heading-deb-2-8-cli-deb-2-8-cliapply-deb-2-8-clia-deb-2-8-clihardware-deb-2-8-clitest"><h2 id="heading-deb-2-8-cli-deb-2-8-cliapply-deb-2-8-clia-deb-2-8-clihardware-deb-2-8-clitest">Apply a hardware test</h2></a>
+
+To launch a test, select the target machine from the 'Machines' page and use the 'Take action' drop-deb-2-8-clidown menu to select 'Test hardware'. When ready, hit the 'Test machine' button. Here, a test is applied to a deployed machine:
+
+<a href="images/8e876889-deb-2-8-clinodes-deb-2-8-clihw-deb-2-8-clitesting__2.4_deployed.png" target = "_blank"><img src="images/8e876889-deb-2-8-clinodes-deb-2-8-clihw-deb-2-8-clitesting__2.4_deployed.png"></a></a>
+
+There is the option of not powering off the machine and to allow SSH access.
+
+A default test will be selected (`smartctl-deb-2-8-clivalidate`, a hard drive test) but you can choose others by clicking the 'Select scripts' label. Doing so will reveal the following choices:
+
+<a href="images/ccfefe25-deb-2-8-clinodes-deb-2-8-clihw-deb-2-8-clitesting__2.4_deployed-deb-2-8-clichoices.png" target = "_blank"><img src="images/ccfefe25-deb-2-8-clinodes-deb-2-8-clihw-deb-2-8-clitesting__2.4_deployed-deb-2-8-clichoices.png"></a></a>
+
+<a href="#heading-deb-2-8-cli-deb-2-8-cliincluded-deb-2-8-cliscripts"><h2 id="heading-deb-2-8-cli-deb-2-8-cliincluded-deb-2-8-cliscripts">Scripts available for testing</h2></a>
+
+The following hardware testing scripts can be selected from the web UI:
+
+<table style="width:100%;">
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Category Tags</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>smartctl-deb-2-8-clishort</strong></td>
+<td align="center">storage</td>
+<td align="center">Run the short SMART self-deb-2-8-clitest and validate SMART health on all drives in parallel</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>smartctl-deb-2-8-clilong</strong></td>
+<td align="center">storage</td>
+<td align="center">Run the long SMART self-deb-2-8-clitest and validate SMART health on all drives in parallel</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>smartctl-deb-2-8-cliconveyance</strong></td>
+<td align="center">storage</td>
+<td align="center">Run the conveyance SMART self-deb-2-8-clitest and validate SMART health on all drives in parallel</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>memtester</strong></td>
+<td align="center">memory</td>
+<td align="center">Run memtester against all available userspace memory.</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>internet-deb-2-8-cliconnectivity</strong></td>
+<td align="center">network, internet, node</td>
+<td align="center">Check if the system has access to the internet.</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>stress-deb-2-8-cling-deb-2-8-clicpu-deb-2-8-clilong</strong></td>
+<td align="center">cpu</td>
+<td align="center">Run stress-deb-2-8-cling memory tests for 12 hours.</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>stress-deb-2-8-cling-deb-2-8-clicpu-deb-2-8-clishort</strong></td>
+<td align="center">cpu</td>
+<td align="center">Run stress-deb-2-8-cling memory tests for 5 minutes.</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>stress-deb-2-8-cling-deb-2-8-climemory-deb-2-8-clilong</strong></td>
+<td align="center">memory</td>
+<td align="center">Run stress-deb-2-8-cling memory tests for 12 hours.</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>stress-deb-2-8-cling-deb-2-8-climemory-deb-2-8-clishort</strong></td>
+<td align="center">memory</td>
+<td align="center">Run stress-deb-2-8-cling memory tests for 5 minutes.</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>ntp</strong></td>
+<td align="center">network, ntp, node</td>
+<td align="center">Run ntp clock set to verify NTP connectivity.</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>badblocks</strong></td>
+<td align="center">storage</td>
+<td align="center">Run badblocks on disk in read-deb-2-8-clionly mode.</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>badblocks-deb-2-8-clidestructive</strong></td>
+<td align="center">destructive, storage</td>
+<td align="center">Run badblocks on a disk in read/write destructive mode.</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>7z</strong></td>
+<td align="center">cpu</td>
+<td align="center">Run <em>7zip</em> CPU benchmarking.</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>fio</strong></td>
+<td align="center">storage, destructive</td>
+<td align="center">Run Fio benchmarking against selected storage devices.</td>
+</tr>
+</tbody>
+</table>
+
+After either commissioning, testing, or installation has started, MAAS reports in real-deb-2-8-clitime which script is running.
+
+You can access the verbatim output from any test by selecting a machine, selecting the 'Hardware tests' page and clicking on the 'Log view' link in the 'Results' column for the specific test.
+snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+See [Commissioning and Hardware Testing Scripts](commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html) for more details on how these scripts work and how you can write your own.
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+See [Commissioning and Hardware Testing Scripts](commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html) for more details on how these scripts work and how you can write your own.
+ deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<p>See <a href="commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html">Commissioning and Hardware Testing Scripts</a> for more details on how these scripts work and how you can write your own.</p>
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+See [Commissioning and Hardware Testing Scripts](commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html) for more details on how these scripts work and how you can write your own.
+ deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+See [Commissioning and Hardware Testing Scripts](commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html) for more details on how these scripts work and how you can write your own.
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+See [Commissioning and Hardware Testing Scripts](commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html) for more details on how these scripts work and how you can write your own.
+ deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli
+See [Commissioning and Hardware Testing Scripts](commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html) for more details on how these scripts work and how you can write your own.
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+See [Commissioning and Hardware Testing Scripts](commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html) for more details on how these scripts work and how you can write your own.
+ snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+See [Commissioning and Hardware Testing Scripts](commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html) for more details on how these scripts work and how you can write your own.
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+See [Commissioning and Hardware Testing Scripts](commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html) for more details on how these scripts work and how you can write your own.
+ snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+See [Commissioning and Hardware Testing Scripts](commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html) for more details on how these scripts work and how you can write your own.
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+See [Commissioning and Hardware Testing Scripts](commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html) for more details on how these scripts work and how you can write your own.
+ snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+    </div>
+  </body>
+</html>

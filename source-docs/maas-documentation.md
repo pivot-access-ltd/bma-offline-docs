@@ -1,86 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/2841)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/25)|
-|Packages|CLI ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-deb-2-7-cli -->
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/2841)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/25)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ UI|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/2841)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/25)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-snap-2-7-ui -->
-
-<!-- deb-2-7-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/2841)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/25)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ UI|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-deb-2-7-ui -->
-
-<!-- snap-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839) | CLI ~ [UI](/t/maas-documentation/2841) |[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/25) |
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845) |[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847) |[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849) |
-snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ UI|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-snap-2-8-ui -->
-
-<!-- deb-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/2841)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/25)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|CLI ~  [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/2841)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation/25)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ UI|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-deb-2-8-ui -->
-
-<!-- snap-2-9-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/2841)|CLI ~  [UI](/t/maas-documentation-snap-2-9-ui/25)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/2841)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ UI|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-snap-2-9-ui -->
-
-<!-- deb-2-9-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/2841)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/25)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|CLI ~  [UI](/t/maas-documentation-deb-2-9-ui/2849)|
-deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation/2841)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/25)|
-|Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ UI|
-deb-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation-snap-2-8-ui/2841)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|[CLI](/t/maas-documentation-snap-3-0-cli/3993) ~ [UI](/t/maas-documentation-snap-3-0-ui/3994)|
+Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|[CLI](/t/maas-documentation-deb-3-0-cli/3995) ~ [UI](/t/maas-documentation-deb-3-0-ui/4195)|
 
 MAAS is **Metal As A Service**, a service that lets you treat physical servers like virtual machines -- instances -- in the cloud.  No need for you to manage servers individually: MAAS turns your bare metal into an elastic, cloud-like resource.
 
@@ -134,6 +55,22 @@ deb-2-9-ui -->
 5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-9-ui/3323)
 snap-2-9-ui -->
 
+<!-- deb-3-0-ui
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-3-0-ui/3816)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-3-0-ui/3936)
+3. [How does MAAS work -- in detail?](/t/about-maas-deb-3-0-ui/3816#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-deb-3-0-ui/3940)
+deb-3-0-ui -->
+
+<!-- snap-3-0-ui
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-9-ui/2267)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)
+3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-9-ui/2267#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-9-ui/3323)
+snap-3-0-ui -->
+
 <!-- deb-2-7-cli
 1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-7-cli/2268)
 2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-7-cli/2652)
@@ -182,6 +119,22 @@ deb-2-9-cli -->
 5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-9-cli/3322)
 snap-2-9-cli -->
 
+<!-- deb-3-0-cli
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-9-cli/2272)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-9-cli/2656)
+3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-9-cli/2272#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-9-cli/3328)
+deb-3-0-cli -->
+
+<!-- snap-3-0-cli
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-9-cli/2266)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-9-cli/2650)
+3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-9-cli/2266#heading--how-maas-works)
+4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-9-cli/3322)
+snap-3-0-cli -->
+
 <!-- deb-2-7-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
@@ -199,6 +152,12 @@ snap-2-9-cli -->
 
 *Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-ui/2657), our example data centre.*
  deb-2-9-ui -->
+
+<!-- deb-3-0-ui
+<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
+
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-ui/2657), our example data centre.*
+ deb-3-0-ui -->
 
 <!-- snap-2-7-ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
@@ -218,47 +177,67 @@ snap-2-8-ui -->
 *Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-9-ui/2651), our example data centre.*
 snap-2-9-ui -->
 
+<!-- snap-3-0-ui
+<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
+
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-9-ui/2651), our example data centre.*
+snap-3-0-ui -->
+
 <!-- deb-2-7-cli 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-7-cli/2652), our example data centre, generated with the [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-7-cli/2652), our example data centre. 
  deb-2-7-cli -->
 
 <!-- deb-2-8-cli
 <a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-8-cli/2654), our example data centre, generated with the [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-8-cli/2654), our example data centre. 
  deb-2-8-cli -->
 
 <!-- deb-2-9-cli 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-cli/2656), our example data centre, generated with the [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-cli/2656), our example data centre. 
  deb-2-9-cli -->
+
+<!-- deb-3-0-cli 
+<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
+</a>
+
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-cli/2656), our example data centre. 
+ deb-3-0-cli -->
 
 <!-- snap-2-7-cli
 <a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-7-cli/2646), our example data centre, generated with the [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-7-cli/2646), our example data centre. 
  snap-2-7-cli -->
 
 <!-- snap-2-8-cli 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-8-cli/2648), our example data centre, generated with the [basic-machine-list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-8-cli/2648), our example data centre. 
  snap-2-8-cli -->
 
 <!-- snap-2-9-cli
 <a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-9-cli/2650), our example data centre, generated with the [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe in our [CLI cookbook](/t/the-cli-cookbook/2218).*
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-9-cli/2650), our example data centre.
  snap-2-9-cli -->
+
+<!-- snap-3-0-cli
+<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
+</a>
+
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-9-cli/2650), our example data centre.
+ snap-3-0-cli -->
 
 ---
 
@@ -298,7 +277,7 @@ There are four ways you can get support for MAAS:
 
 There are (at least) three ways you can contribute to MAAS:
 
-1. [Guide to contributing](/t/writing-guide/747)
+1. [Guide to contributing](/t/writing-guide-snap-2-9-ui/3263)
 2. [Push some code (external link)](https://launchpad.net/maas)
 3. [File an issue (external link)](https://bugs.launchpad.net/maas/+filebug)
 
@@ -308,11 +287,11 @@ There are (at least) three ways you can contribute to MAAS:
 
 - [About MAAS](/t/about-maas-snap-2-9-ui/2267)
 - ["Give me an example"](/t/give-me-an-example-of-maas-snap-2-9-ui/2651)
-- [What's new in 2.9](/t/whats-new-in-maas-2-9/3336)
-- [Supported versions](/t/supported-versions/3771)
+- [What's new in 2.9](/t/whats-new-in-maas-snap-2-9-ui/4297)
 - [Requirements](/t/maas-requirements-snap-2-9-ui/2879)
 - [Installation](/t/maas-installation-snap-2-9-ui/3323)
 - [Configuration journey](/t/configuration-journey-snap-2-9-ui/2531)
+- [MAAS CLI](/t/maas-cli-snap-2-9-ui/2825)
 
 ### [Controllers](/t/controllers-snap-2-9-ui/2723)
 
@@ -336,27 +315,35 @@ There are (at least) three ways you can contribute to MAAS:
 - [Kernel boot options](/t/kernel-boot-options-snap-2-9-ui/2783)
 - [Resource pools](/t/resource-pools-snap-2-9-ui/3083)
 - [Storage](/t/storage-snap-2-9-ui/3107)
+  - [Disk erasure](/t/disk-erasure-snap-2-9-ui/2615)
+  - [Block devices](/t/block-devices-snap-2-9-ui/2351)
+  - [Partitions](/t/partitions-snap-2-9-ui/2987)
 - [VMware VMFS datastores](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)
 - [Ubuntu kernels](/t/ubuntu-kernels-snap-2-9-ui/3179)
 
 ### [Images](/t/images-snap-2-9-ui/2699)
 
 - [Select and import images](/t/select-and-import-images-snap-2-9-ui/3095)
+- [MAAS image builder](/t/maas-image-builder-snap-2-9-ui/2855)
+- [Custom Ubuntu images](/t/creating-a-custom-ubuntu-image-snap-2-9-ui/2570)
+- [Using image streams](/t/using-image-streams-snap-2-9-ui/4329)
 - [Local image mirror](/t/local-image-mirror-snap-2-9-ui/2807)
 - [VMWare images](/t/vmware-images-snap-2-9-ui/3239)
 
 ### [Networking](/t/networking-snap-2-9-ui/2951)
 
+- [Network discovery](/t/network-discovery-snap-2-9-ui/2927)
 - [Subnet management](/t/subnet-management-snap-2-9-ui/3119)
 - [DHCP](/t/managing-dhcp-snap-2-9-ui/2903)
 - [IP ranges](/t/ip-ranges-snap-2-9-ui/2759)
-- [Proxy](/t/proxy-snap-2-9-ui/3035)
-- [NTP](/t/ntp-services-snap-2-9-ui/2963)
-- [Network discovery](/t/network-discovery-snap-2-9-ui/2927)
 - [IPv6](/t/ipv6-addressing-snap-2-9-ui/2771)
+- [Proxy](/t/proxy-snap-2-9-ui/3035)
 - [TLS encryption](/t/configuring-tls-encryption-snap-2-9-ui/2543)
-- [STP](/t/managing-stp-snap-2-9-ui/2915)
 - [Availability zones (AZs)](/t/availability-zones-snap-2-9-ui/2327)
+  - [Zone examples](/t/zone-examples-snap-2-9-ui/3273)
+- [STP](/t/managing-stp-snap-2-9-ui/2915)
+- [NTP](/t/ntp-services-snap-2-9-ui/2963)
+- [Air-gapped MAAS](/t/using-maas-in-an-air-gapped-environment-snap-2-9-ui/4273)
 
 ### [VM hosting](/t/vm-hosting-snap-2-9-ui/2747)
 
@@ -373,7 +360,8 @@ There are (at least) three ways you can contribute to MAAS:
 - [Logging](/t/maas-logging-snap-2-9-ui/2867)
   - [Commissioning logs](/t/commissioning-logs-snap-2-9-ui/2495)
   - [Test logs](/t/test-logs-snap-2-9-ui/3131)
-  - [Audit event logs](/t/audit-event-logs/791)
+  - [Event logs](/t/event-logs-snap-2-9-ui/3387)
+  - [Audit event logs](/t/audit-event-logs-snap-2-9-ui/2315)
 - [User accounts](/t/user-accounts-snap-2-9-ui/3203)
 - [Interactive search](/t/interactive-search-snap-2-9-ui/2711)
 
@@ -381,26 +369,24 @@ There are (at least) three ways you can contribute to MAAS:
 
 - [Brief network tutorial](/t/concepts-and-terms/785#heading--network-tutorial)
 
-### [CLI](/t/maas-cli/802)
+### The MAAS CLI 
 
-- [The CLI cookbook](/t/the-cli-cookbook/2218/)
 - [Common tasks](/t/common-cli-tasks/794)
 - [Kernel management](/t/cli-kernel-management/799)
 - [Image management](/t/cli-image-management/797)
 - [Interface management](/t/cli-interface-management/798)
 - [Advanced tasks](/t/advanced-cli-tasks/793)
 - [Composable hardware](/t/cli-composable-machines-management/795)
-- [API client](/t/api-client/810)
 
 ### [API documentation](https://maas.io/docs/api)
 
-- [API authentication](/t/api-authentication/742)
+- [API client](/t/api-client/810)
+- [API authentication](/t/api-authentication-snap-2-9-ui/2303)
 
-### [Troubleshoot](/t/troubleshooting/837)
+### [Troubleshooting](/t/troubleshooting-snap-3-0-ui/4134)
 
 - [Getting help](/t/getting-help/838)
-- [Tips, tricks, and traps](/t/tips-tricks-and-traps/1506)
-  - [Using MAAS in an air-gapped environment](/t/-/3539)
+- [Tips, tricks, and traps](/t/tips-tricks-and-traps-snap-2-9-ui/3155)
 - [Non-snap MAAS installs](/t/non-snap-maas-installs/1308)
 - [MAAS 2.5 (and earlier) documentation](https://old-docs.maas.io/2.5/en/)
 - [Upgrading MAAS](/t/upgrading-maas/779)
@@ -409,7 +395,7 @@ There are (at least) three ways you can contribute to MAAS:
 
 ### [Release notes](/t/-/3336)
 
-### [Help improve these docs](/t/writing-guide/747)
+### [Help improve these docs](/t/writing-guide-snap-2-9-ui/3263)
 
 ### [Contact us](/t/contact-us/743)
 
@@ -418,23 +404,27 @@ There are (at least) three ways you can contribute to MAAS:
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
-|https://discourse.maas.io/t/-/3539|/docs/air-gapped-maas|
-|https://discourse.maas.io/t/-/3335|/docs/2.7/release-notes|
-|https://discourse.maas.io/t/-/3334|/docs/2.8/release-notes|
-|https://discourse.maas.io/t/-/3336|/docs/2.9/release-notes|
-|https://discourse.maas.io/t/-/1506|/docs/tips-tricks-and-traps|
-|https://discourse.maas.io/t/-/3318|/docs/snap/2.7/cli/installation|
-|https://discourse.maas.io/t/-/3319|/docs/snap/2.7/ui/installation|
-|https://discourse.maas.io/t/-/3320|/docs/snap/2.8/cli/installation|
-|https://discourse.maas.io/t/-/3321|/docs/snap/2.8/ui/installation|
-|https://discourse.maas.io/t/-/3322|/docs/snap/2.9/cli/installation|
-|https://discourse.maas.io/t/-/3323|/docs/snap/2.9/ui/installation|
-|https://discourse.maas.io/t/-/3324|/docs/deb/2.7/cli/installation|
-|https://discourse.maas.io/t/-/3325|/docs/deb/2.7/ui/installation|
-|https://discourse.maas.io/t/-/3326|/docs/deb/2.8/cli/installation|
-|https://discourse.maas.io/t/-/3327|/docs/deb/2.8/ui/installation|
-|https://discourse.maas.io/t/-/3328|/docs/deb/2.9/cli/installation|
-|https://discourse.maas.io/t/-/3329|/docs/deb/2.9/ui/installation|
+|https://discourse.maas.io/t/-/832|/docs/cli-testing-scripts|
+|https://discourse.maas.io/t/-/1112|/docs/image-builder|
+|https://discourse.maas.io/t/-/1308|/docs/non-snap-maas-installs|
+|https://discourse.maas.io/t/-/1479|/docs/test-logs|
+|https://discourse.maas.io/t/-/2218/|/docs/cli-cookbook|
+|https://discourse.maas.io/t/-/4300|/docs/snap/2.7/cli/whats-new-in-maas|
+|https://discourse.maas.io/t/-/4301|/docs/snap/2.7/ui/whats-new-in-maas|
+|https://discourse.maas.io/t/-/4298|/docs/snap/2.8/cli/whats-new-in-maas|
+|https://discourse.maas.io/t/-/4299|/docs/snap/2.8/ui/whats-new-in-maas|
+|https://discourse.maas.io/t/-/4296|/docs/snap/2.9/cli/whats-new-in-maas|
+|https://discourse.maas.io/t/-/4297|/docs/snap/2.9/ui/whats-new-in-maas|
+|https://discourse.maas.io/t/-/4181|/docs/snap/3.0/cli/whats-new-in-maas|
+|https://discourse.maas.io/t/-/4182|/docs/snap/3.0/ui/whats-new-in-maas|
+|https://discourse.maas.io/t/-/4294|/docs/deb/2.7/cli/whats-new-in-maas|
+|https://discourse.maas.io/t/-/4295|/docs/deb/2.7/ui/whats-new-in-maas|
+|https://discourse.maas.io/t/-/4292|/docs/deb/2.8/cli/whats-new-in-maas|
+|https://discourse.maas.io/t/-/4293|/docs/deb/2.8/ui/whats-new-in-maas|
+|https://discourse.maas.io/t/-/4290|/docs/deb/2.9/cli/whats-new-in-maas|
+|https://discourse.maas.io/t/-/4291|/docs/deb/2.9/ui/whats-new-in-maas|
+|https://discourse.maas.io/t/-/4289|/docs/deb/3.0/cli/whats-new-in-maas|
+|https://discourse.maas.io/t/-/4184|/docs/deb/3.0/ui/whats-new-in-maas|
 |https://discourse.maas.io/t/-/2262|/docs/snap/2.7/cli/about-maas|
 |https://discourse.maas.io/t/-/2263|/docs/snap/2.7/ui/about-maas|
 |https://discourse.maas.io/t/-/2264|/docs/snap/2.8/cli/about-maas|
@@ -471,6 +461,18 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/2295|/docs/deb/2.8/ui/adding-a-vm-host|
 |https://discourse.maas.io/t/-/2296|/docs/deb/2.9/cli/adding-a-vm-host|
 |https://discourse.maas.io/t/-/2297|/docs/deb/2.9/ui/adding-a-vm-host|
+|https://discourse.maas.io/t/-/2298|/docs/snap/2.7/cli/api-authentication|
+|https://discourse.maas.io/t/-/2299|/docs/snap/2.7/ui/api-authentication|
+|https://discourse.maas.io/t/-/2300|/docs/snap/2.8/cli/api-authentication|
+|https://discourse.maas.io/t/-/2301|/docs/snap/2.8/ui/api-authentication|
+|https://discourse.maas.io/t/-/2302|/docs/snap/2.9/cli/api-authentication|
+|https://discourse.maas.io/t/-/2303|/docs/snap/2.9/ui/api-authentication|
+|https://discourse.maas.io/t/-/2304|/docs/deb/2.7/cli/api-authentication|
+|https://discourse.maas.io/t/-/2305|/docs/deb/2.7/ui/api-authentication|
+|https://discourse.maas.io/t/-/2306|/docs/deb/2.8/cli/api-authentication|
+|https://discourse.maas.io/t/-/2307|/docs/deb/2.8/ui/api-authentication|
+|https://discourse.maas.io/t/-/2308|/docs/deb/2.9/cli/api-authentication|
+|https://discourse.maas.io/t/-/2309|/docs/deb/2.9/ui/api-authentication|
 |https://discourse.maas.io/t/-/2310|/docs/snap/2.7/cli/audit-event-logs|
 |https://discourse.maas.io/t/-/2311|/docs/snap/2.7/ui/audit-event-logs|
 |https://discourse.maas.io/t/-/2312|/docs/snap/2.8/cli/audit-event-logs|
@@ -553,20 +555,9 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/2497|/docs/deb/2.7/ui/commissioning-logs|
 |https://discourse.maas.io/t/-/2498|/docs/deb/2.8/cli/commissioning-logs|
 |https://discourse.maas.io/t/-/2499|/docs/deb/2.8/ui/commissioning-logs|
+|https://discourse.maas.io/t/-/25/|/docs|
 |https://discourse.maas.io/t/-/2500|/docs/deb/2.9/cli/commissioning-logs|
 |https://discourse.maas.io/t/-/2501|/docs/deb/2.9/ui/commissioning-logs|
-|https://discourse.maas.io/t/-/2514|/docs/snap/2.7/cli/concepts-and-terms|
-|https://discourse.maas.io/t/-/2515|/docs/snap/2.7/ui/concepts-and-terms|
-|https://discourse.maas.io/t/-/2516|/docs/snap/2.8/cli/concepts-and-terms|
-|https://discourse.maas.io/t/-/2517|/docs/snap/2.8/ui/concepts-and-terms|
-|https://discourse.maas.io/t/-/2518|/docs/snap/2.9/cli/concepts-and-terms|
-|https://discourse.maas.io/t/-/2519|/docs/snap/2.9/ui/concepts-and-terms|
-|https://discourse.maas.io/t/-/2520|/docs/deb/2.7/cli/concepts-and-terms|
-|https://discourse.maas.io/t/-/2521|/docs/deb/2.7/ui/concepts-and-terms|
-|https://discourse.maas.io/t/-/2522|/docs/deb/2.8/cli/concepts-and-terms|
-|https://discourse.maas.io/t/-/2523|/docs/deb/2.8/ui/concepts-and-terms|
-|https://discourse.maas.io/t/-/2524|/docs/deb/2.9/cli/concepts-and-terms|
-|https://discourse.maas.io/t/-/2525|/docs/deb/2.9/ui/concepts-and-terms|
 |https://discourse.maas.io/t/-/2526|/docs/snap/2.7/cli/configuration-journey|
 |https://discourse.maas.io/t/-/2527|/docs/snap/2.7/ui/configuration-journey|
 |https://discourse.maas.io/t/-/2528|/docs/snap/2.8/cli/configuration-journey|
@@ -675,6 +666,18 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/2655|/docs/deb/2.8/ui/give-me-an-example-of-maas|
 |https://discourse.maas.io/t/-/2656|/docs/deb/2.9/cli/give-me-an-example-of-maas|
 |https://discourse.maas.io/t/-/2657|/docs/deb/2.9/ui/give-me-an-example-of-maas|
+|https://discourse.maas.io/t/-/2658|/docs/snap/2.7/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2659|/docs/snap/2.7/ui/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2660|/docs/snap/2.8/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2661|/docs/snap/2.8/ui/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2662|/docs/snap/2.9/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2663|/docs/snap/2.9/ui/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2664|/docs/deb/2.7/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2665|/docs/deb/2.7/ui/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2666|/docs/deb/2.8/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2667|/docs/deb/2.8/ui/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2668|/docs/deb/2.9/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2669|/docs/deb/2.9/ui/hardening-your-maas-installation|
 |https://discourse.maas.io/t/-/2670|/docs/snap/2.7/cli/hardware-testing|
 |https://discourse.maas.io/t/-/2671|/docs/snap/2.7/ui/hardware-testing|
 |https://discourse.maas.io/t/-/2672|/docs/snap/2.8/cli/hardware-testing|
@@ -735,30 +738,6 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/2727|/docs/deb/2.8/ui/controllers|
 |https://discourse.maas.io/t/-/2728|/docs/deb/2.9/cli/controllers|
 |https://discourse.maas.io/t/-/2729|/docs/deb/2.9/ui/controllers|
-|https://discourse.maas.io/t/-/3024|/docs/deb/2.7/cli/prometheus-metrics|
-|https://discourse.maas.io/t/-/3025|/docs/deb/2.7/ui/prometheus-metrics|
-|https://discourse.maas.io/t/-/3026|/docs/deb/2.8/cli/prometheus-metrics|
-|https://discourse.maas.io/t/-/3027|/docs/deb/2.8/ui/prometheus-metrics|
-|https://discourse.maas.io/t/-/3028|/docs/deb/2.9/cli/prometheus-metrics|
-|https://discourse.maas.io/t/-/3029|/docs/deb/2.9/ui/prometheus-metrics|
-|https://discourse.maas.io/t/-/3018|/docs/snap/2.7/cli/prometheus-metrics|
-|https://discourse.maas.io/t/-/3019|/docs/snap/2.7/ui/prometheus-metrics|
-|https://discourse.maas.io/t/-/3020|/docs/snap/2.8/cli/prometheus-metrics|
-|https://discourse.maas.io/t/-/3021|/docs/snap/2.8/ui/prometheus-metrics|
-|https://discourse.maas.io/t/-/3022|/docs/snap/2.9/cli/prometheus-metrics|
-|https://discourse.maas.io/t/-/3023|/docs/snap/2.9/ui/prometheus-metrics|
-|https://discourse.maas.io/t/-/2664|/docs/deb/2.7/cli/hardening-your-maas-installation|
-|https://discourse.maas.io/t/-/2665|/docs/deb/2.7/ui/hardening-your-maas-installation|
-|https://discourse.maas.io/t/-/2666|/docs/deb/2.8/cli/hardening-your-maas-installation|
-|https://discourse.maas.io/t/-/2667|/docs/deb/2.8/ui/hardening-your-maas-installation|
-|https://discourse.maas.io/t/-/2668|/docs/deb/2.9/cli/hardening-your-maas-installation|
-|https://discourse.maas.io/t/-/2669|/docs/deb/2.9/ui/hardening-your-maas-installation|
-|https://discourse.maas.io/t/-/2658|/docs/snap/2.7/cli/hardening-your-maas-installation|
-|https://discourse.maas.io/t/-/2659|/docs/snap/2.7/ui/hardening-your-maas-installation|
-|https://discourse.maas.io/t/-/2660|/docs/snap/2.8/cli/hardening-your-maas-installation|
-|https://discourse.maas.io/t/-/2661|/docs/snap/2.8/ui/hardening-your-maas-installation|
-|https://discourse.maas.io/t/-/2662|/docs/snap/2.9/cli/hardening-your-maas-installation|
-|https://discourse.maas.io/t/-/2663|/docs/snap/2.9/ui/hardening-your-maas-installation|
 |https://discourse.maas.io/t/-/2730|/docs/snap/2.7/cli/machines|
 |https://discourse.maas.io/t/-/2731|/docs/snap/2.7/ui/machines|
 |https://discourse.maas.io/t/-/2732|/docs/snap/2.8/cli/machines|
@@ -831,6 +810,18 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/2811|/docs/deb/2.8/ui/local-image-mirror|
 |https://discourse.maas.io/t/-/2812|/docs/deb/2.9/cli/local-image-mirror|
 |https://discourse.maas.io/t/-/2813|/docs/deb/2.9/ui/local-image-mirror|
+|https://discourse.maas.io/t/-/2814|/docs/snap/2.7/cli/maas-cli|
+|https://discourse.maas.io/t/-/2815|/docs/snap/2.7/ui/maas-cli|
+|https://discourse.maas.io/t/-/2816|/docs/snap/2.8/cli/maas-cli|
+|https://discourse.maas.io/t/-/2817|/docs/snap/2.8/ui/maas-cli|
+|https://discourse.maas.io/t/-/2818|/docs/snap/2.9/cli/maas-cli|
+|https://discourse.maas.io/t/-/2819|/docs/snap/2.9/ui/maas-cli|
+|https://discourse.maas.io/t/-/2820|/docs/deb/2.7/cli/maas-cli|
+|https://discourse.maas.io/t/-/2821|/docs/deb/2.7/ui/maas-cli|
+|https://discourse.maas.io/t/-/2822|/docs/deb/2.8/cli/maas-cli|
+|https://discourse.maas.io/t/-/2823|/docs/deb/2.8/ui/maas-cli|
+|https://discourse.maas.io/t/-/2824|/docs/deb/2.9/cli/maas-cli|
+|https://discourse.maas.io/t/-/2825|/docs/deb/2.9/ui/maas-cli|
 |https://discourse.maas.io/t/-/2826|/docs/snap/2.7/cli/maas-communication|
 |https://discourse.maas.io/t/-/2827|/docs/snap/2.7/ui/maas-communication|
 |https://discourse.maas.io/t/-/2828|/docs/snap/2.8/cli/maas-communication|
@@ -975,6 +966,12 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/2967|/docs/deb/2.8/ui/ntp-services|
 |https://discourse.maas.io/t/-/2968|/docs/deb/2.9/cli/ntp-services|
 |https://discourse.maas.io/t/-/2969|/docs/deb/2.9/ui/ntp-services|
+|https://discourse.maas.io/t/-/2976|/docs/deb/2.7/cli/package-repositories|
+|https://discourse.maas.io/t/-/2977|/docs/deb/2.7/ui/package-repositories|
+|https://discourse.maas.io/t/-/2978|/docs/deb/2.8/cli/package-repositories|
+|https://discourse.maas.io/t/-/2979|/docs/deb/2.8/ui/package-repositories|
+|https://discourse.maas.io/t/-/2980|/docs/deb/2.9/cli/package-repositories|
+|https://discourse.maas.io/t/-/2981|/docs/deb/2.9/ui/package-repositories|
 |https://discourse.maas.io/t/-/2982|/docs/snap/2.7/cli/partitions|
 |https://discourse.maas.io/t/-/2983|/docs/snap/2.7/ui/partitions|
 |https://discourse.maas.io/t/-/2984|/docs/snap/2.8/cli/partitions|
@@ -1011,6 +1008,18 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/3015|/docs/deb/2.8/ui/power-management|
 |https://discourse.maas.io/t/-/3016|/docs/deb/2.9/cli/power-management|
 |https://discourse.maas.io/t/-/3017|/docs/deb/2.9/ui/power-management|
+|https://discourse.maas.io/t/-/3018|/docs/snap/2.7/cli/prometheus-metrics|
+|https://discourse.maas.io/t/-/3019|/docs/snap/2.7/ui/prometheus-metrics|
+|https://discourse.maas.io/t/-/3020|/docs/snap/2.8/cli/prometheus-metrics|
+|https://discourse.maas.io/t/-/3021|/docs/snap/2.8/ui/prometheus-metrics|
+|https://discourse.maas.io/t/-/3022|/docs/snap/2.9/cli/prometheus-metrics|
+|https://discourse.maas.io/t/-/3023|/docs/snap/2.9/ui/prometheus-metrics|
+|https://discourse.maas.io/t/-/3024|/docs/deb/2.7/cli/prometheus-metrics|
+|https://discourse.maas.io/t/-/3025|/docs/deb/2.7/ui/prometheus-metrics|
+|https://discourse.maas.io/t/-/3026|/docs/deb/2.8/cli/prometheus-metrics|
+|https://discourse.maas.io/t/-/3027|/docs/deb/2.8/ui/prometheus-metrics|
+|https://discourse.maas.io/t/-/3028|/docs/deb/2.9/cli/prometheus-metrics|
+|https://discourse.maas.io/t/-/3029|/docs/deb/2.9/ui/prometheus-metrics|
 |https://discourse.maas.io/t/-/3030|/docs/snap/2.7/cli/proxy|
 |https://discourse.maas.io/t/-/3031|/docs/snap/2.7/ui/proxy|
 |https://discourse.maas.io/t/-/3032|/docs/snap/2.8/cli/proxy|
@@ -1107,6 +1116,18 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/3135|/docs/deb/2.8/ui/test-logs|
 |https://discourse.maas.io/t/-/3136|/docs/deb/2.9/cli/test-logs|
 |https://discourse.maas.io/t/-/3137|/docs/deb/2.9/ui/test-logs|
+|https://discourse.maas.io/t/-/3150|/docs/snap/2.7/cli/tips-trick-and-traps|
+|https://discourse.maas.io/t/-/3151|/docs/snap/2.7/ui/tips-trick-and-traps|
+|https://discourse.maas.io/t/-/3152|/docs/snap/2.8/cli/tips-trick-and-traps|
+|https://discourse.maas.io/t/-/3153|/docs/snap/2.8/ui/tips-trick-and-traps|
+|https://discourse.maas.io/t/-/3154|/docs/snap/2.9/cli/tips-trick-and-traps|
+|https://discourse.maas.io/t/-/3155|/docs/snap/2.9/ui/tips-trick-and-traps|
+|https://discourse.maas.io/t/-/3156|/docs/deb/2.7/cli/tips-trick-and-traps|
+|https://discourse.maas.io/t/-/3157|/docs/deb/2.7/ui/tips-trick-and-traps|
+|https://discourse.maas.io/t/-/3158|/docs/deb/2.8/cli/tips-trick-and-traps|
+|https://discourse.maas.io/t/-/3159|/docs/deb/2.8/ui/tips-trick-and-traps|
+|https://discourse.maas.io/t/-/3160|/docs/deb/2.9/cli/tips-trick-and-traps|
+|https://discourse.maas.io/t/-/3161|/docs/deb/2.9/ui/tips-trick-and-traps|
 |https://discourse.maas.io/t/-/3162|/docs/snap/2.7/cli/troubleshooting|
 |https://discourse.maas.io/t/-/3163|/docs/snap/2.7/ui/troubleshooting|
 |https://discourse.maas.io/t/-/3164|/docs/snap/2.8/cli/troubleshooting|
@@ -1203,6 +1224,18 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/3255|/docs/deb/2.8/ui/vmware-vmfs-datastores|
 |https://discourse.maas.io/t/-/3256|/docs/deb/2.9/cli/vmware-vmfs-datastores|
 |https://discourse.maas.io/t/-/3257|/docs/deb/2.9/ui/vmware-vmfs-datastores|
+|https://discourse.maas.io/t/-/3258|/docs/snap/2.7/cli/writing-guide|
+|https://discourse.maas.io/t/-/3259|/docs/snap/2.7/ui/writing-guide|
+|https://discourse.maas.io/t/-/3260|/docs/snap/2.8/cli/writing-guide|
+|https://discourse.maas.io/t/-/3261|/docs/snap/2.8/ui/writing-guide|
+|https://discourse.maas.io/t/-/3262|/docs/snap/2.9/cli/writing-guide|
+|https://discourse.maas.io/t/-/3263|/docs/snap/2.9/ui/writing-guide|
+|https://discourse.maas.io/t/-/3264|/docs/deb/2.7/cli/writing-guide|
+|https://discourse.maas.io/t/-/3265|/docs/deb/2.7/ui/writing-guide|
+|https://discourse.maas.io/t/-/3266|/docs/deb/2.8/cli/writing-guide|
+|https://discourse.maas.io/t/-/3267|/docs/deb/2.8/ui/writing-guide|
+|https://discourse.maas.io/t/-/3268|/docs/deb/2.9/cli/writing-guide|
+|https://discourse.maas.io/t/-/3269|/docs/deb/2.9/ui/writing-guide|
 |https://discourse.maas.io/t/-/3270|/docs/snap/2.7/cli/zone-examples|
 |https://discourse.maas.io/t/-/3271|/docs/snap/2.7/ui/zone-examples|
 |https://discourse.maas.io/t/-/3272|/docs/snap/2.8/cli/zone-examples|
@@ -1215,56 +1248,382 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/3279|/docs/deb/2.8/ui/zone-examples|
 |https://discourse.maas.io/t/-/3280|/docs/deb/2.9/cli/zone-examples|
 |https://discourse.maas.io/t/-/3281|/docs/deb/2.9/ui/zone-examples|
-|https://discourse.maas.io/t/-/745|/docs/contributing/to.maas/docs/language-details|
-|https://discourse.maas.io/t/-/832|/docs/and/hardware.testing/scripts/cli-commissioning|
-|https://discourse.maas.io/t/-/1308|/docs/non-snap-maas-installs|
-|https://discourse.maas.io/t/-/785#heading--network-tutorial|/docs/network-tutorial|
-|https://discourse.maas.io/t/-/25/|/docs|
-|https://discourse.maas.io/t/-/742/|/docs/api-authentication|
+|https://discourse.maas.io/t/-/3318|/docs/snap/2.7/cli/installation|
+|https://discourse.maas.io/t/-/3319|/docs/snap/2.7/ui/installation|
+|https://discourse.maas.io/t/-/3320|/docs/snap/2.8/cli/installation|
+|https://discourse.maas.io/t/-/3321|/docs/snap/2.8/ui/installation|
+|https://discourse.maas.io/t/-/3322|/docs/snap/2.9/cli/installation|
+|https://discourse.maas.io/t/-/3323|/docs/snap/2.9/ui/installation|
+|https://discourse.maas.io/t/-/3324|/docs/deb/2.7/cli/installation|
+|https://discourse.maas.io/t/-/3325|/docs/deb/2.7/ui/installation|
+|https://discourse.maas.io/t/-/3326|/docs/deb/2.8/cli/installation|
+|https://discourse.maas.io/t/-/3327|/docs/deb/2.8/ui/installation|
+|https://discourse.maas.io/t/-/3328|/docs/deb/2.9/cli/installation|
+|https://discourse.maas.io/t/-/3329|/docs/deb/2.9/ui/installation|
+|https://discourse.maas.io/t/-/3334|/docs/2.8/release-notes|
+|https://discourse.maas.io/t/-/3335|/docs/2.7/release-notes|
+|https://discourse.maas.io/t/-/3336|/docs/2.9/release-notes|
+|https://discourse.maas.io/t/-/3382|/docs/snap/2.7/cli/event-logs|
+|https://discourse.maas.io/t/-/3383|/docs/snap/2.7/ui/event-logs|
+|https://discourse.maas.io/t/-/3384|/docs/snap/2.8/cli/event-logs|
+|https://discourse.maas.io/t/-/3385|/docs/snap/2.8/ui/event-logs|
+|https://discourse.maas.io/t/-/3386|/docs/snap/2.9/cli/event-logs|
+|https://discourse.maas.io/t/-/3387|/docs/snap/2.9/ui/event-logs|
+|https://discourse.maas.io/t/-/3388|/docs/deb/2.7/cli/event-logs|
+|https://discourse.maas.io/t/-/3389|/docs/deb/2.7/ui/event-logs|
+|https://discourse.maas.io/t/-/3390|/docs/deb/2.8/cli/event-logs|
+|https://discourse.maas.io/t/-/3391|/docs/deb/2.8/ui/event-logs|
+|https://discourse.maas.io/t/-/3392|/docs/deb/2.9/ui/event-logs|
+|https://discourse.maas.io/t/-/3393|/docs/deb/2.9/cli/event-logs|
+|https://discourse.maas.io/t/-/3771/|/docs/supported-versions|
+|https://discourse.maas.io/t/-/3813|/docs/snap/3.0/ui/about-maas|
+|https://discourse.maas.io/t/-/3814|/docs/snap/3.0/cli/about-maas|
+|https://discourse.maas.io/t/-/3815|/docs/deb/3.0/cli/about-maas|
+|https://discourse.maas.io/t/-/3816|/docs/deb/3.0/ui/about-maas|
+|https://discourse.maas.io/t/-/3817|/docs/snap/3.0/cli/adding-a-vm-host|
+|https://discourse.maas.io/t/-/3818|/docs/snap/3.0/ui/adding-a-vm-host|
+|https://discourse.maas.io/t/-/3819|/docs/deb/3.0/cli/adding-a-vm-host|
+|https://discourse.maas.io/t/-/3820|/docs/deb/3.0/ui/adding-a-vm-host|
+|https://discourse.maas.io/t/-/3821|/docs/snap/3.0/cli/add-machines|
+|https://discourse.maas.io/t/-/3822|/docs/snap/3.0/ui/add-machines|
+|https://discourse.maas.io/t/-/3823|/docs/deb/3.0/cli/add-machines|
+|https://discourse.maas.io/t/-/3824|/docs/deb/3.0/ui/add-machines|
+|https://discourse.maas.io/t/-/3825|/docs/snap/3.0/cli/api-authentication|
+|https://discourse.maas.io/t/-/3826|/docs/snap/3.0/ui/api-authentication|
+|https://discourse.maas.io/t/-/3827|/docs/deb/3.0/cli/api-authentication|
+|https://discourse.maas.io/t/-/3828|/docs/deb/3.0/ui/api-authentication|
+|https://discourse.maas.io/t/-/3829|/docs/snap/3.0/cli/audit-event-logs|
+|https://discourse.maas.io/t/-/3830|/docs/snap/3.0/ui/audit-event-logs|
+|https://discourse.maas.io/t/-/3831|/docs/deb/3.0/cli/audit-event-logs|
+|https://discourse.maas.io/t/-/3832|/docs/deb/3.0/ui/audit-event-logs|
+|https://discourse.maas.io/t/-/3833|/docs/snap/3.0/cli/availability-zones|
+|https://discourse.maas.io/t/-/3834|/docs/snap/3.0/ui/availability-zones|
+|https://discourse.maas.io/t/-/3835|/docs/deb/3.0/cli/availability-zones|
+|https://discourse.maas.io/t/-/3836|/docs/deb/3.0/ui/availability-zones|
+|https://discourse.maas.io/t/-/3837|/docs/snap/3.0/cli/backup|
+|https://discourse.maas.io/t/-/3838|/docs/snap/3.0/ui/backup|
+|https://discourse.maas.io/t/-/3839|/docs/deb/3.0/cli/backup|
+|https://discourse.maas.io/t/-/3840|/docs/deb/3.0/ui/backup|
+|https://discourse.maas.io/t/-/3841|/docs/snap/3.0/cli/block-devices|
+|https://discourse.maas.io/t/-/3842|/docs/snap/3.0/ui/block-devices|
+|https://discourse.maas.io/t/-/3843|/docs/deb/3.0/cli/block-devices|
+|https://discourse.maas.io/t/-/3844|/docs/deb/3.0/ui/block-devices|
+|https://discourse.maas.io/t/-/3865|/docs/snap/3.0/cli/commissioning-and-hardware-testing-scripts|
+|https://discourse.maas.io/t/-/3866|/docs/snap/3.0/ui/commissioning-and-hardware-testing-scripts|
+|https://discourse.maas.io/t/-/3867|/docs/deb/3.0/cli/commissioning-and-hardware-testing-scripts|
+|https://discourse.maas.io/t/-/3868|/docs/deb/3.0/ui/commissioning-and-hardware-testing-scripts|
+|https://discourse.maas.io/t/-/3869|/docs/snap/3.0/cli/commissioning-logs|
+|https://discourse.maas.io/t/-/3870|/docs/snap/3.0/ui/commissioning-logs|
+|https://discourse.maas.io/t/-/3871|/docs/deb/3.0/cli/commissioning-logs|
+|https://discourse.maas.io/t/-/3872|/docs/deb/3.0/ui/commissioning-logs|
+|https://discourse.maas.io/t/-/3873|/docs/snap/3.0/cli/commission-machines|
+|https://discourse.maas.io/t/-/3874|/docs/snap/3.0/ui/commission-machines|
+|https://discourse.maas.io/t/-/3875|/docs/deb/3.0/cli/commission-machines|
+|https://discourse.maas.io/t/-/3876|/docs/deb/3.0/ui/commission-machines|
+|https://discourse.maas.io/t/-/3885|/docs/snap/3.0/cli/configuration-journey|
+|https://discourse.maas.io/t/-/3886|/docs/snap/3.0/ui/configuration-journey|
+|https://discourse.maas.io/t/-/3887|/docs/deb/3.0/cli/configuration-journey|
+|https://discourse.maas.io/t/-/3888|/docs/deb/3.0/ui/configuration-journey|
+|https://discourse.maas.io/t/-/3889|/docs/snap/3.0/cli/configuring-tls-encryption|
+|https://discourse.maas.io/t/-/3890|/docs/snap/3.0/ui/configuring-tls-encryption|
+|https://discourse.maas.io/t/-/3891|/docs/deb/3.0/cli/configuring-tls-encryption|
+|https://discourse.maas.io/t/-/3892|/docs/deb/3.0/ui/configuring-tls-encryption|
+|https://discourse.maas.io/t/-/3897|/docs/snap/3.0/cli/controllers|
+|https://discourse.maas.io/t/-/3898|/docs/snap/3.0/ui/controllers|
+|https://discourse.maas.io/t/-/3899|/docs/deb/3.0/cli/controllers|
+|https://discourse.maas.io/t/-/3900|/docs/deb/3.0/ui/controllers|
+|https://discourse.maas.io/t/-/3901|/docs/snap/3.0/cli/creating-a-custom-ubuntu-image|
+|https://discourse.maas.io/t/-/3902|/docs/snap/3.0/ui/creating-a-custom-ubuntu-image|
+|https://discourse.maas.io/t/-/3903|/docs/deb/3.0/cli/creating-a-custom-ubuntu-image|
+|https://discourse.maas.io/t/-/3904|/docs/deb/3.0/ui/creating-a-custom-ubuntu-image|
+|https://discourse.maas.io/t/-/3905|/docs/snap/3.0/cli/creating-and-deleting-vms|
+|https://discourse.maas.io/t/-/3906|/docs/snap/3.0/ui/creating-and-deleting-vms|
+|https://discourse.maas.io/t/-/3907|/docs/deb/3.0/cli/creating-and-deleting-vms|
+|https://discourse.maas.io/t/-/3908|/docs/deb/3.0/ui/creating-and-deleting-vms|
+|https://discourse.maas.io/t/-/3909|/docs/snap/3.0/cli/custom-machine-setup|
+|https://discourse.maas.io/t/-/3910|/docs/snap/3.0/ui/custom-machine-setup|
+|https://discourse.maas.io/t/-/3911|/docs/deb/3.0/cli/custom-machine-setup|
+|https://discourse.maas.io/t/-/3912|/docs/deb/3.0/ui/custom-machine-setup|
+|https://discourse.maas.io/t/-/3913|/docs/snap/3.0/cli/deploy-machines|
+|https://discourse.maas.io/t/-/3914|/docs/snap/3.0/ui/deploy-machines|
+|https://discourse.maas.io/t/-/3915|/docs/deb/3.0/cli/deploy-machines|
+|https://discourse.maas.io/t/-/3916|/docs/deb/3.0/ui/deploy-machines|
+|https://discourse.maas.io/t/-/3921|/docs/snap/3.0/cli/disk-erasure|
+|https://discourse.maas.io/t/-/3922|/docs/snap/3.0/ui/disk-erasure|
+|https://discourse.maas.io/t/-/3923|/docs/deb/3.0/cli/disk-erasure|
+|https://discourse.maas.io/t/-/3924|/docs/deb/3.0/ui/disk-erasure|
+|https://discourse.maas.io/t/-/3925|/docs/snap/3.0/cli/event-logs|
+|https://discourse.maas.io/t/-/3926|/docs/snap/3.0/ui/event-logs|
+|https://discourse.maas.io/t/-/3927|/docs/deb/3.0/cli/event-logs|
+|https://discourse.maas.io/t/-/3928|/docs/deb/3.0/ui/event-logs|
+|https://discourse.maas.io/t/-/3933|/docs/snap/3.0/cli/give-me-an-example-of-maas|
+|https://discourse.maas.io/t/-/3934|/docs/snap/3.0/ui/give-me-an-example-of-maas|
+|https://discourse.maas.io/t/-/3935|/docs/deb/3.0/cli/give-me-an-example-of-maas|
+|https://discourse.maas.io/t/-/3936|/docs/deb/3.0/ui/give-me-an-example-of-maas|
+|https://discourse.maas.io/t/-/3937|/docs/snap/3.0/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/3938|/docs/snap/3.0/ui/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/3939|/docs/deb/3.0/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/3940|/docs/deb/3.0/ui/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/3941|/docs/snap/3.0/cli/hardware-testing|
+|https://discourse.maas.io/t/-/3942|/docs/snap/3.0/ui/hardware-testing|
+|https://discourse.maas.io/t/-/3943|/docs/deb/3.0/cli/hardware-testing|
+|https://discourse.maas.io/t/-/3944|/docs/deb/3.0/ui/hardware-testing|
+|https://discourse.maas.io/t/-/3945|/docs/snap/3.0/cli/high-availability|
+|https://discourse.maas.io/t/-/3946|/docs/snap/3.0/ui/high-availability|
+|https://discourse.maas.io/t/-/3947|/docs/deb/3.0/cli/high-availability|
+|https://discourse.maas.io/t/-/3948|/docs/deb/3.0/ui/high-availability|
+|https://discourse.maas.io/t/-/3957|/docs/snap/3.0/cli/images|
+|https://discourse.maas.io/t/-/3958|/docs/snap/3.0/ui/images|
+|https://discourse.maas.io/t/-/3959|/docs/deb/3.0/cli/images|
+|https://discourse.maas.io/t/-/3960|/docs/deb/3.0/ui/images|
+|https://discourse.maas.io/t/-/3961|/docs/snap/3.0/cli/interactive-search|
+|https://discourse.maas.io/t/-/3962|/docs/snap/3.0/ui/interactive-search|
+|https://discourse.maas.io/t/-/3963|/docs/deb/3.0/cli/interactive-search|
+|https://discourse.maas.io/t/-/3964|/docs/deb/3.0/ui/interactive-search|
+|https://discourse.maas.io/t/-/3965|/docs/snap/3.0/cli/ip-ranges|
+|https://discourse.maas.io/t/-/3966|/docs/snap/3.0/ui/ip-ranges|
+|https://discourse.maas.io/t/-/3967|/docs/deb/3.0/cli/ip-ranges|
+|https://discourse.maas.io/t/-/3968|/docs/deb/3.0/ui/ip-ranges|
+|https://discourse.maas.io/t/-/3969|/docs/snap/3.0/cli/ipv6-addressing|
+|https://discourse.maas.io/t/-/3970|/docs/snap/3.0/ui/ipv6-addressing|
+|https://discourse.maas.io/t/-/3971|/docs/deb/3.0/cli/ipv6-addressing|
+|https://discourse.maas.io/t/-/3972|/docs/deb/3.0/ui/ipv6-addressing|
+|https://discourse.maas.io/t/-/3973|/docs/snap/3.0/cli/kernel-boot-options|
+|https://discourse.maas.io/t/-/3974|/docs/snap/3.0/ui/kernel-boot-options|
+|https://discourse.maas.io/t/-/3975|/docs/deb/3.0/cli/kernel-boot-options|
+|https://discourse.maas.io/t/-/3976|/docs/deb/3.0/ui/kernel-boot-options|
+|https://discourse.maas.io/t/-/3981|/docs/snap/3.0/cli/local-image-mirror|
+|https://discourse.maas.io/t/-/3982|/docs/snap/3.0/ui/local-image-mirror|
+|https://discourse.maas.io/t/-/3983|/docs/deb/3.0/cli/local-image-mirror|
+|https://discourse.maas.io/t/-/3984|/docs/deb/3.0/ui/local-image-mirror|
+|https://discourse.maas.io/t/-/3985|/docs/snap/3.0/cli/maas-cli|
+|https://discourse.maas.io/t/-/3986|/docs/snap/3.0/ui/maas-cli|
+|https://discourse.maas.io/t/-/3987|/docs/deb/3.0/cli/maas-cli|
+|https://discourse.maas.io/t/-/3988|/docs/deb/3.0/ui/maas-cli|
+|https://discourse.maas.io/t/-/3989|/docs/snap/3.0/cli/maas-communication|
+|https://discourse.maas.io/t/-/3990|/docs/snap/3.0/ui/maas-communication|
+|https://discourse.maas.io/t/-/3991|/docs/deb/3.0/cli/maas-communication|
+|https://discourse.maas.io/t/-/3992|/docs/deb/3.0/ui/maas-communication|
+|https://discourse.maas.io/t/-/3993|/docs/snap/3.0/cli/maas-documentation|
+|https://discourse.maas.io/t/-/3994|/docs/snap/3.0/ui/maas-documentation|
+|https://discourse.maas.io/t/-/3995|/docs/deb/3.0/cli/maas-documentation|
+|https://discourse.maas.io/t/-/3997|/docs/snap/3.0/cli/maas-image-builder|
+|https://discourse.maas.io/t/-/3998|/docs/snap/3.0/ui/maas-image-builder|
+|https://discourse.maas.io/t/-/3999|/docs/deb/3.0/cli/maas-image-builder|
+|https://discourse.maas.io/t/-/4000|/docs/deb/3.0/ui/maas-image-builder|
+|https://discourse.maas.io/t/-/4001|/docs/snap/3.0/cli/maas-installation|
+|https://discourse.maas.io/t/-/4002|/docs/snap/3.0/ui/maas-installation|
+|https://discourse.maas.io/t/-/4003|/docs/deb/3.0/cli/maas-installation|
+|https://discourse.maas.io/t/-/4004|/docs/deb/3.0/ui/maas-installation|
+|https://discourse.maas.io/t/-/4009|/docs/snap/3.0/cli/maas-logging|
+|https://discourse.maas.io/t/-/4010|/docs/snap/3.0/ui/maas-logging|
+|https://discourse.maas.io/t/-/4011|/docs/deb/3.0/cli/maas-logging|
+|https://discourse.maas.io/t/-/4012|/docs/deb/3.0/ui/maas-logging|
+|https://discourse.maas.io/t/-/4013|/docs/snap/3.0/cli/maas-requirements|
+|https://discourse.maas.io/t/-/4014|/docs/snap/3.0/ui/maas-requirements|
+|https://discourse.maas.io/t/-/4015|/docs/deb/3.0/cli/maas-requirements|
+|https://discourse.maas.io/t/-/4016|/docs/deb/3.0/ui/maas-requirements|
+|https://discourse.maas.io/t/-/4021|/docs/snap/3.0/cli/maas-tags|
+|https://discourse.maas.io/t/-/4022|/docs/snap/3.0/ui/maas-tags|
+|https://discourse.maas.io/t/-/4023|/docs/deb/3.0/cli/maas-tags|
+|https://discourse.maas.io/t/-/4024|/docs/deb/3.0/ui/maas-tags|
+|https://discourse.maas.io/t/-/4025|/docs/snap/3.0/cli/machine-logs|
+|https://discourse.maas.io/t/-/4026|/docs/snap/3.0/ui/machine-logs|
+|https://discourse.maas.io/t/-/4027|/docs/deb/3.0/cli/machine-logs|
+|https://discourse.maas.io/t/-/4028|/docs/deb/3.0/ui/machine-logs|
+|https://discourse.maas.io/t/-/4029|/docs/snap/3.0/cli/machines|
+|https://discourse.maas.io/t/-/4030|/docs/snap/3.0/ui/machines|
+|https://discourse.maas.io/t/-/4031|/docs/deb/3.0/cli/machines|
+|https://discourse.maas.io/t/-/4032|/docs/deb/3.0/ui/machines|
+|https://discourse.maas.io/t/-/4033|/docs/snap/3.0/cli/managing-dhcp|
+|https://discourse.maas.io/t/-/4034|/docs/snap/3.0/ui/managing-dhcp|
+|https://discourse.maas.io/t/-/4035|/docs/deb/3.0/cli/managing-dhcp|
+|https://discourse.maas.io/t/-/4036|/docs/deb/3.0/ui/managing-dhcp|
+|https://discourse.maas.io/t/-/4037|/docs/snap/3.0/cli/managing-stp|
+|https://discourse.maas.io/t/-/4038|/docs/snap/3.0/ui/managing-stp|
+|https://discourse.maas.io/t/-/4039|/docs/deb/3.0/cli/managing-stp|
+|https://discourse.maas.io/t/-/4040|/docs/deb/3.0/ui/managing-stp|
+|https://discourse.maas.io/t/-/4041|/docs/snap/3.0/cli/network-discovery|
+|https://discourse.maas.io/t/-/4042|/docs/snap/3.0/ui/network-discovery|
+|https://discourse.maas.io/t/-/4043|/docs/deb/3.0/cli/network-discovery|
+|https://discourse.maas.io/t/-/4044|/docs/deb/3.0/ui/network-discovery|
+|https://discourse.maas.io/t/-/4045|/docs/snap/3.0/cli/networking|
+|https://discourse.maas.io/t/-/4046|/docs/snap/3.0/ui/networking|
+|https://discourse.maas.io/t/-/4047|/docs/deb/3.0/cli/networking|
+|https://discourse.maas.io/t/-/4048|/docs/deb/3.0/ui/networking|
+|https://discourse.maas.io/t/-/4049|/docs/snap/3.0/cli/network-testing|
+|https://discourse.maas.io/t/-/4050|/docs/snap/3.0/ui/network-testing|
+|https://discourse.maas.io/t/-/4051|/docs/deb/3.0/cli/network-testing|
+|https://discourse.maas.io/t/-/4052|/docs/deb/3.0/ui/network-testing|
+|https://discourse.maas.io/t/-/4053|/docs/snap/3.0/cli/ntp-services|
+|https://discourse.maas.io/t/-/4054|/docs/snap/3.0/ui/ntp-services|
+|https://discourse.maas.io/t/-/4055|/docs/deb/3.0/cli/ntp-services|
+|https://discourse.maas.io/t/-/4056|/docs/deb/3.0/ui/ntp-services|
+|https://discourse.maas.io/t/-/4059|/docs/deb/3.0/cli/package-repositories|
+|https://discourse.maas.io/t/-/4060|/docs/deb/3.0/ui/package-repositories|
+|https://discourse.maas.io/t/-/4061|/docs/snap/3.0/cli/partitions|
+|https://discourse.maas.io/t/-/4062|/docs/snap/3.0/ui/partitions|
+|https://discourse.maas.io/t/-/4063|/docs/deb/3.0/cli/partitions|
+|https://discourse.maas.io/t/-/4064|/docs/deb/3.0/ui/partitions|
+|https://discourse.maas.io/t/-/4065|/docs/snap/3.0/cli/postgresql-ha-hot-standby|
+|https://discourse.maas.io/t/-/4066|/docs/snap/3.0/ui/postgresql-ha-hot-standby|
+|https://discourse.maas.io/t/-/4067|/docs/deb/3.0/cli/postgresql-ha-hot-standby|
+|https://discourse.maas.io/t/-/4068|/docs/deb/3.0/ui/postgresql-ha-hot-standby|
+|https://discourse.maas.io/t/-/4069|/docs/snap/3.0/cli/power-management|
+|https://discourse.maas.io/t/-/4070|/docs/snap/3.0/ui/power-management|
+|https://discourse.maas.io/t/-/4071|/docs/deb/3.0/cli/power-management|
+|https://discourse.maas.io/t/-/4072|/docs/deb/3.0/ui/power-management|
+|https://discourse.maas.io/t/-/4073|/docs/snap/3.0/cli/prometheus-metrics|
+|https://discourse.maas.io/t/-/4074|/docs/snap/3.0/ui/prometheus-metrics|
+|https://discourse.maas.io/t/-/4075|/docs/deb/3.0/cli/prometheus-metrics|
+|https://discourse.maas.io/t/-/4076|/docs/deb/3.0/ui/prometheus-metrics|
+|https://discourse.maas.io/t/-/4077|/docs/snap/3.0/cli/proxy-log|
+|https://discourse.maas.io/t/-/4078|/docs/snap/3.0/ui/proxy-log|
+|https://discourse.maas.io/t/-/4079|/docs/deb/3.0/cli/proxy-log|
+|https://discourse.maas.io/t/-/4080|/docs/deb/3.0/ui/proxy-log|
+|https://discourse.maas.io/t/-/4081|/docs/snap/3.0/cli/proxy|
+|https://discourse.maas.io/t/-/4082|/docs/snap/3.0/ui/proxy|
+|https://discourse.maas.io/t/-/4083|/docs/deb/3.0/cli/proxy|
+|https://discourse.maas.io/t/-/4084|/docs/deb/3.0/ui/proxy|
+|https://discourse.maas.io/t/-/4089|/docs/snap/3.0/cli/rack-controllers|
+|https://discourse.maas.io/t/-/4090|/docs/snap/3.0/ui/rack-controllers|
+|https://discourse.maas.io/t/-/4091|/docs/deb/3.0/cli/rack-controllers|
+|https://discourse.maas.io/t/-/4092|/docs/deb/3.0/ui/rack-controllers|
+|https://discourse.maas.io/t/-/4093|/docs/snap/3.0/cli/region-controllers|
+|https://discourse.maas.io/t/-/4094|/docs/snap/3.0/ui/region-controllers|
+|https://discourse.maas.io/t/-/4095|/docs/deb/3.0/cli/region-controllers|
+|https://discourse.maas.io/t/-/4096|/docs/deb/3.0/ui/region-controllers|
+|https://discourse.maas.io/t/-/4097|/docs/snap/3.0/cli/resource-pools|
+|https://discourse.maas.io/t/-/4098|/docs/snap/3.0/ui/resource-pools|
+|https://discourse.maas.io/t/-/4099|/docs/deb/3.0/cli/resource-pools|
+|https://discourse.maas.io/t/-/4100|/docs/deb/3.0/ui/resource-pools|
+|https://discourse.maas.io/t/-/4101|/docs/snap/3.0/cli/select-and-import-images|
+|https://discourse.maas.io/t/-/4102|/docs/snap/3.0/ui/select-and-import-images|
+|https://discourse.maas.io/t/-/4103|/docs/deb/3.0/cli/select-and-import-images|
+|https://discourse.maas.io/t/-/4104|/docs/deb/3.0/ui/select-and-import-images|
+|https://discourse.maas.io/t/-/4105|/docs/snap/3.0/cli/storage|
+|https://discourse.maas.io/t/-/4106|/docs/snap/3.0/ui/storage|
+|https://discourse.maas.io/t/-/4107|/docs/deb/3.0/cli/storage|
+|https://discourse.maas.io/t/-/4108|/docs/deb/3.0/ui/storage|
+|https://discourse.maas.io/t/-/4109|/docs/snap/3.0/cli/subnet-management|
+|https://discourse.maas.io/t/-/4110|/docs/snap/3.0/ui/subnet-management|
+|https://discourse.maas.io/t/-/4111|/docs/deb/3.0/cli/subnet-management|
+|https://discourse.maas.io/t/-/4112|/docs/deb/3.0/ui/subnet-management|
+|https://discourse.maas.io/t/-/4117|/docs/snap/3.0/cli/test-logs|
+|https://discourse.maas.io/t/-/4118|/docs/snap/3.0/ui/test-logs|
+|https://discourse.maas.io/t/-/4119|/docs/deb/3.0/cli/test-logs|
+|https://discourse.maas.io/t/-/4120|/docs/deb/3.0/ui/test-logs|
+|https://discourse.maas.io/t/-/4129|/docs/snap/3.0/cli/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/4130|/docs/snap/3.0/ui/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/4131|/docs/deb/3.0/cli/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/4132|/docs/deb/3.0/ui/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/4133|/docs/snap/3.0/cli/troubleshooting|
+|https://discourse.maas.io/t/-/4134|/docs/snap/3.0/ui/troubleshooting|
+|https://discourse.maas.io/t/-/4135|/docs/deb/3.0/cli/troubleshooting|
+|https://discourse.maas.io/t/-/4136|/docs/deb/3.0/ui/troubleshooting|
+|https://discourse.maas.io/t/-/4137|/docs/snap/3.0/cli/ubuntu-kernels|
+|https://discourse.maas.io/t/-/4138|/docs/snap/3.0/ui/ubuntu-kernels|
+|https://discourse.maas.io/t/-/4139|/docs/deb/3.0/cli/ubuntu-kernels|
+|https://discourse.maas.io/t/-/4140|/docs/deb/3.0/ui/ubuntu-kernels|
+|https://discourse.maas.io/t/-/4145|/docs/snap/3.0/cli/user-accounts|
+|https://discourse.maas.io/t/-/4146|/docs/snap/3.0/ui/user-accounts|
+|https://discourse.maas.io/t/-/4147|/docs/deb/3.0/cli/user-accounts|
+|https://discourse.maas.io/t/-/4148|/docs/deb/3.0/ui/user-accounts|
+|https://discourse.maas.io/t/-/4149|/docs/snap/3.0/cli/using-image-streams|
+|https://discourse.maas.io/t/-/4150|/docs/snap/3.0/ui/using-image-streams|
+|https://discourse.maas.io/t/-/4151|/docs/deb/3.0/cli/using-image-streams|
+|https://discourse.maas.io/t/-/4152|/docs/deb/3.0/ui/using-image-streams|
+|https://discourse.maas.io/t/-/4153|/docs/snap/3.0/cli/air-gapped-maas|
+|https://discourse.maas.io/t/-/4154|/docs/snap/3.0/ui/air-gapped-maas|
+|https://discourse.maas.io/t/-/4155|/docs/deb/3.0/cli/air-gapped-maas|
+|https://discourse.maas.io/t/-/4156|/docs/deb/3.0/ui/air-gapped-maas|
+|https://discourse.maas.io/t/-/4157|/docs/snap/3.0/cli/using-rbac-with-maas|
+|https://discourse.maas.io/t/-/4158|/docs/snap/3.0/ui/using-rbac-with-maas|
+|https://discourse.maas.io/t/-/4159|/docs/deb/3.0/cli/using-rbac-with-maas|
+|https://discourse.maas.io/t/-/4160|/docs/deb/3.0/ui/using-rbac-with-maas|
+|https://discourse.maas.io/t/-/4161|/docs/snap/3.0/cli/vm-hosting|
+|https://discourse.maas.io/t/-/4162|/docs/snap/3.0/ui/vm-hosting|
+|https://discourse.maas.io/t/-/4163|/docs/deb/3.0/cli/vm-hosting|
+|https://discourse.maas.io/t/-/4164|/docs/deb/3.0/ui/vm-hosting|
+|https://discourse.maas.io/t/-/4165|/docs/snap/3.0/cli/vm-host-networking|
+|https://discourse.maas.io/t/-/4166|/docs/snap/3.0/ui/vm-host-networking|
+|https://discourse.maas.io/t/-/4167|/docs/deb/3.0/cli/vm-host-networking|
+|https://discourse.maas.io/t/-/4168|/docs/deb/3.0/ui/vm-host-networking|
+|https://discourse.maas.io/t/-/4169|/docs/snap/3.0/cli/vm-host-storage-pools|
+|https://discourse.maas.io/t/-/4170|/docs/snap/3.0/ui/vm-host-storage-pools|
+|https://discourse.maas.io/t/-/4171|/docs/deb/3.0/cli/vm-host-storage-pools|
+|https://discourse.maas.io/t/-/4172|/docs/deb/3.0/ui/vm-host-storage-pools|
+|https://discourse.maas.io/t/-/4173|/docs/snap/3.0/cli/vmware-images|
+|https://discourse.maas.io/t/-/4174|/docs/snap/3.0/ui/vmware-images|
+|https://discourse.maas.io/t/-/4175|/docs/deb/3.0/cli/vmware-images|
+|https://discourse.maas.io/t/-/4176|/docs/deb/3.0/ui/vmware-images|
+|https://discourse.maas.io/t/-/4177|/docs/snap/3.0/cli/vmware-vmfs-datastores|
+|https://discourse.maas.io/t/-/4178|/docs/snap/3.0/ui/vmware-vmfs-datastores|
+|https://discourse.maas.io/t/-/4179|/docs/deb/3.0/cli/vmware-vmfs-datastores|
+|https://discourse.maas.io/t/-/4180|/docs/deb/3.0/ui/vmware-vmfs-datastores|
+|https://discourse.maas.io/t/-/4185|/docs/snap/3.0/cli/writing-guide|
+|https://discourse.maas.io/t/-/4186|/docs/snap/3.0/ui/writing-guide|
+|https://discourse.maas.io/t/-/4187|/docs/deb/3.0/cli/writing-guide|
+|https://discourse.maas.io/t/-/4188|/docs/deb/3.0/ui/writing-guide|
+|https://discourse.maas.io/t/-/4189|/docs/snap/3.0/cli/zone-examples|
+|https://discourse.maas.io/t/-/4190|/docs/snap/3.0/ui/zone-examples|
+|https://discourse.maas.io/t/-/4191|/docs/deb/3.0/cli/zone-examples|
+|https://discourse.maas.io/t/-/4192|/docs/deb/3.0/ui/zone-examples|
+|https://discourse.maas.io/t/-/4195|/docs/deb/3.0/ui/maas-documentation|
+|https://discourse.maas.io/t/-/4268|/docs/deb/2.8/ui/air-gapped-maas|
+|https://discourse.maas.io/t/-/4269|/docs/deb/2.8/cli/air-gapped-maas|
+|https://discourse.maas.io/t/-/4270|/docs/deb/2.9/cli/air-gapped-maas|
+|https://discourse.maas.io/t/-/4271|/docs/snap/2.8/ui/air-gapped-maas|
+|https://discourse.maas.io/t/-/4272|/docs/snap/2.8/cli/air-gapped-maas|
+|https://discourse.maas.io/t/-/4273|/docs/snap/2.9/ui/air-gapped-maas|
+|https://discourse.maas.io/t/-/4274|/docs/snap/2.9/cli/air-gapped-maas|
+|https://discourse.maas.io/t/-/4275|/docs/deb/2.9/ui/air-gapped-maas|
+|https://discourse.maas.io/t/-/4285|/docs/snap/2.7/ui/air-gapped-maas|
+|https://discourse.maas.io/t/-/4286|/docs/snap/2.7/cli/air-gapped-maas|
+|https://discourse.maas.io/t/-/4287|/docs/deb/2.7/cli/air-gapped-maas|
+|https://discourse.maas.io/t/-/4288|/docs/deb/2.7/ui/air-gapped-maas|
+|https://discourse.maas.io/t/-/4324|/docs/snap/2.7/cli/using-image-streams|
+|https://discourse.maas.io/t/-/4325|/docs/snap/2.7/ui/using-image-streams|
+|https://discourse.maas.io/t/-/4326|/docs/snap/2.8/cli/using-image-streams|
+|https://discourse.maas.io/t/-/4327|/docs/snap/2.8/ui/using-image-streams|
+|https://discourse.maas.io/t/-/4328|/docs/snap/2.9/cli/using-image-streams|
+|https://discourse.maas.io/t/-/4329|/docs/snap/2.9/ui/using-image-streams|
+|https://discourse.maas.io/t/-/4330|/docs/deb/2.7/cli/using-image-streams|
+|https://discourse.maas.io/t/-/4331|/docs/deb/2.7/ui/using-image-streams|
+|https://discourse.maas.io/t/-/4332|/docs/deb/2.8/cli/using-image-streams|
+|https://discourse.maas.io/t/-/4333|/docs/deb/2.8/ui/using-image-streams|
+|https://discourse.maas.io/t/-/4334|/docs/deb/2.9/cli/using-image-streams|
+|https://discourse.maas.io/t/-/4335|/docs/deb/2.9/ui/using-image-streams|
 |https://discourse.maas.io/t/-/743/|/docs/contact-us|
-|https://discourse.maas.io/t/-/747/|/docs/writing-guide|
+|https://discourse.maas.io/t/-/744/|/docs/building-the-docs|
+|https://discourse.maas.io/t/-/745/|/docs/language-details-contributing-to-maas-docs|
+|https://discourse.maas.io/t/-/746/|/docs/working-with-git-and-github|
 |https://discourse.maas.io/t/-/756/|/docs/install-from-iso|
 |https://discourse.maas.io/t/-/757/|/docs/install-with-lxd|
-|https://discourse.maas.io/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777/|/docs/upgrade-2-3-to-2-4-from-ubuntu-16-04|
-|https://discourse.maas.io/t/upgrade-from-1-9-to-2-x/778/|/docs/upgrade-from-1-9-to-2-x|
 |https://discourse.maas.io/t/-/779/|/docs/upgrading-maas|
 |https://discourse.maas.io/t/-/782/|/docs/web-ui|
+|https://discourse.maas.io/t/-/785#heading--network-tutorial|/docs/network-tutorial|
 |https://discourse.maas.io/t/-/785/|/docs/concepts-and-terms|
-|https://discourse.maas.io/t/whats-new-in-2-6/788/|/docs/whats-new-in-2-6|
 |https://discourse.maas.io/t/-/793/|/docs/advanced-cli-tasks|
 |https://discourse.maas.io/t/-/794/|/docs/common-cli-tasks|
 |https://discourse.maas.io/t/-/795/|/docs/composable-hardware|
 |https://discourse.maas.io/t/-/797/|/docs/cli-image-management|
 |https://discourse.maas.io/t/-/798/|/docs/cli-interface-management|
 |https://discourse.maas.io/t/-/799/|/docs/cli-kernel-management|
-|https://discourse.maas.io/t/-/802/|/docs/maas-cli|
 |https://discourse.maas.io/t/-/810/|/docs/api-client|
-|https://discourse.maas.io/t/-/1479|/docs/test-logs|
-|https://discourse.maas.io/t/-/2976/|/docs/deb/2.7/cli/package-repositories|
-|https://discourse.maas.io/t/-/2977/|/docs/deb/2.7/ui/package-repositories|
-|https://discourse.maas.io/t/-/2978/|/docs/deb/2.8/cli/package-repositories|
-|https://discourse.maas.io/t/-/2979/|/docs/deb/2.8/ui/package-repositories|
-|https://discourse.maas.io/t/-/2980/|/docs/deb/2.9/cli/package-repositories|
-|https://discourse.maas.io/t/-/2981/|/docs/deb/2.9/ui/package-repositories|
 |https://discourse.maas.io/t/-/815/|/docs/add-an-rsd-host|
 |https://discourse.maas.io/t/-/817/|/docs/intel-rack-scale-design-rsd-introduction|
 |https://discourse.maas.io/t/-/818/|/docs/rsd-storage|
-|https://discourse.maas.io/t/-/839/|/docs/documentation-index|
 |https://discourse.maas.io/t/-/832/|/docs/cli-testing-scripts|
-|/t/-/832|/docs/cli-testing-scripts|
-|https://discourse.maas.io/t/-/835/|/docs/historical-release-notes|
-|https://discourse.maas.io/t/-/837/|/docs/troubleshooting|
-|https://discourse.maas.io/t/-/838/|/docs/getting-help|
+|https://discourse.maas.io/t/-/832|/docs/and/hardware.testing/scripts/cli-commissioning|
 |https://discourse.maas.io/t/-/835/ |/docs/whats-new-in-2-6|
-|https://discourse.maas.io/t/-/1561|/docs/markdown-test|
-|https://discourse.maas.io/t/-/1112|/docs/image-builder|
-|https://discourse.maas.io/t/-/745/|/docs/language-details-contributing-to-maas-docs|
+|https://discourse.maas.io/t/-/835/|/docs/historical-release-notes|
+|https://discourse.maas.io/t/-/838/|/docs/getting-help|
+|https://discourse.maas.io/t/-/839/|/docs/documentation-index|
 |https://discourse.maas.io/t/audit-event-logs/791|/docs/audit-event-logs|
-|https://discourse.maas.io/t/-/744/|/docs/building-the-docs|
-|https://discourse.maas.io/t/-/746/|/docs/working-with-git-and-github|
-|https://discourse.maas.io/t/-/2218/|/docs/cli-cookbook|
-|https://discourse.maas.io/t/-/3771/|/docs/supported-versions|
-
+|https://discourse.maas.io/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777/|/docs/upgrade-2-3-to-2-4-from-ubuntu-16-04|
+|https://discourse.maas.io/t/upgrade-from-1-9-to-2-x/778/|/docs/upgrade-from-1-9-to-2-x|
+|https://discourse.maas.io/t/whats-new-in-2-6/788/|/docs/whats-new-in-2-6|
 [/details]
 
 ## Redirects
@@ -1452,9 +1811,5 @@ There are (at least) three ways you can contribute to MAAS:
 |/docs/troubleshoot-getting-help|/docs/getting-help|
 |/docs/metadata.y|/docs/documentation-index|
 [/details]
->
 
 
-------
-****
-------

@@ -26,13 +26,13 @@
 	  UI-only
       </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/hardware-testing.html">
+	<a href="cli/hardware-testing.html">
 	  CLI-only
 	</a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="../maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.9
+	    What&rsquo;s new in 2.10
 	  </a>
 	</li>
 	<li>
@@ -429,11 +429,22 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Hardware testing</h1><!-- deb-2-7-cli
- deb-2-7-cli -->
+      <h1>Hardware testing</h1><!-- begin-rad-menu -->
 
-<!-- deb-2-7-ui
- deb-2-7-ui -->
+<!-- snap-2-8-cli
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+ snap-2-9-ui -->
+
+<!-- snap-2-10-cli
+ snap-2-10-cli -->
 
 <!-- deb-2-8-cli
  deb-2-8-cli -->
@@ -447,25 +458,20 @@
 <!-- deb-2-9-ui
  deb-2-9-ui -->
 
-<!-- snap-2-7-cli
- snap-2-7-cli -->
+<!-- deb-2-10-cli
+ deb-2-10-cli -->
 
-<!-- snap-2-7-ui
- snap-2-7-ui -->
+<!-- deb-2-10-ui
+ deb-2-10-ui -->
 
-<!-- snap-2-8-cli
- snap-2-8-cli -->
+<!-- end-rad-menu -->
 
-<!-- snap-2-8-ui
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
+<!-- end-rad-menu -->
 
 <p>If you wish, you can tell MAAS to test machine hardware using well-known Linux utilities.  MAAS can test machines that have  a status of <strong>Ready</strong>, <strong>Broken</strong>, or <strong>Deployed</strong>.  You can include testing as part of the commissioning process. When you choose the &lsquo;Commission&rsquo; action, MAAS will display the dialog described below.  Be aware, though, that if the hardware tests fail, the machine will become unavailable for Deployment.</p>
 <p><strong>NOTE:</strong> 
 The majority of testing scripts only work with machines that are backed by physical hardware (e.g. they may be incompatible with VM-based machines).</p>
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli
 With MAAS, you can easily write, upload and execute your hardware testing scripts and see the results.
 
 #### Four questions you may have:
@@ -652,7 +658,7 @@ Finally, results can be downloaded, either to stdout, stderr, as combined output
 <strong>NOTE:</strong> 
 **$RUN_ID** is labelled `id` in the verbose result output.
 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli -->
 
 <h4>Two questions you may have:</h4>
 <ol>
@@ -751,13 +757,13 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
 
 <p>After either commissioning, testing, or installation has started, MAAS reports in real-time which script is running.</p>
 <p>You can access the verbatim output from any test by selecting a machine, selecting the &lsquo;Hardware tests&rsquo; page and clicking on the &lsquo;Log view&rsquo; link in the &lsquo;Results&rsquo; column for the specific test.</p>
-<!-- deb-2-7-cli
+<!-- deb-2-10-cli
 See [Commissioning and Hardware Testing Scripts](commissioning-and-hardware-testing-scripts.html) for more details on how these scripts work and how you can write your own.
- deb-2-7-cli -->
+ deb-2-10-cli -->
 
-<!-- deb-2-7-ui
+<!-- deb-2-10-ui
 See [Commissioning and Hardware Testing Scripts](commissioning-and-hardware-testing-scripts.html) for more details on how these scripts work and how you can write your own.
- deb-2-7-ui -->
+ deb-2-10-ui -->
 
 <!-- deb-2-8-cli
 See [Commissioning and Hardware Testing Scripts](commissioning-and-hardware-testing-scripts.html) for more details on how these scripts work and how you can write your own.
@@ -775,14 +781,11 @@ See [Commissioning and Hardware Testing Scripts](commissioning-and-hardware-test
 See [Commissioning and Hardware Testing Scripts](commissioning-and-hardware-testing-scripts.html) for more details on how these scripts work and how you can write your own.
  deb-2-9-ui -->
 
-<!-- snap-2-7-cli
+<!-- snap-2-10-cli
 See [Commissioning and Hardware Testing Scripts](commissioning-and-hardware-testing-scripts.html) for more details on how these scripts work and how you can write your own.
- snap-2-7-cli -->
+ snap-2-10-cli -->
 
-<!-- snap-2-7-ui
-See [Commissioning and Hardware Testing Scripts](commissioning-and-hardware-testing-scripts.html) for more details on how these scripts work and how you can write your own.
- snap-2-7-ui -->
-
+<p>See <a href="commissioning-and-hardware-testing-scripts.html">Commissioning and Hardware Testing Scripts</a> for more details on how these scripts work and how you can write your own.</p>
 <!-- snap-2-8-cli
 See [Commissioning and Hardware Testing Scripts](commissioning-and-hardware-testing-scripts.html) for more details on how these scripts work and how you can write your own.
  snap-2-8-cli -->
@@ -795,9 +798,9 @@ See [Commissioning and Hardware Testing Scripts](commissioning-and-hardware-test
 See [Commissioning and Hardware Testing Scripts](commissioning-and-hardware-testing-scripts.html) for more details on how these scripts work and how you can write your own.
  snap-2-9-cli -->
 
-<p>See <a href="commissioning-and-hardware-testing-scripts.html">Commissioning and Hardware Testing Scripts</a> for more details on how these scripts work and how you can write your own.</p>
-<hr>
-<h2>****</h2>
+<!-- snap-2-9-ui
+See [Commissioning and Hardware Testing Scripts](commissioning-and-hardware-testing-scripts.html) for more details on how these scripts work and how you can write your own.
+ snap-2-9-ui -->
     </div>
   </body>
 </html>

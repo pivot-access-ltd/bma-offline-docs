@@ -1,86 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|CLI ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ UI|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|CLI ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ UI|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|CLI ~ [UI](/t/add-machines/2285)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ UI|
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ UI|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|CLI ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ UI|[CLI](/t/add-machines/2278) ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|CLI ~ [UI](/t/add-machines/2279)|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/add-machines/2274) ~ [UI](/t/add-machines/2275)|[CLI](/t/add-machines/2276) ~ [UI](/t/add-machines/2277)|[CLI](/t/add-machines/2278) ~ UI|
-|Packages|[CLI](/t/add-machines/2280) ~ [UI](/t/add-machines/2281)|[CLI](/t/add-machines/2282) ~ [UI](/t/add-machines/2283)|[CLI](/t/add-machines/2284) ~ [UI](/t/add-machines/2285)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/add-machines-snap-2-7-cli/2274) ~ [UI](/t/add-machines-snap-2-7-ui/2275)|[CLI](/t/add-machines-snap-2-8-cli/2276) ~ [UI](/t/add-machines-snap-2-8-ui/2277)|[CLI](/t/add-machines-snap-2-9-cli/2278) ~ [UI](/t/add-machines-snap-2-9-ui/2279)|[CLI](/t/add-machines-snap-3-0-cli/3821) ~ [UI](/t/add-machines-snap-3-0-ui/3822)|
+Packages|[CLI](/t/add-machines-deb-2-7-cli/2280) ~ [UI](/t/add-machines-deb-2-7-ui/2281)|[CLI](/t/add-machines-deb-2-8-cli/2282) ~ [UI](/t/add-machines-deb-2-8-ui/2283)|[CLI](/t/add-machines-deb-2-9-cli/2284) ~ [UI](/t/add-machines-deb-2-9-ui/2285)|[CLI](/t/add-machines-deb-3-0-cli/3823) ~ [UI](/t/add-machines-deb-3-0-ui/3824)|
 
 There are two ways to add a machine to MAAS:
 
@@ -410,8 +331,6 @@ stormrider@wintermute:~$ maas admin machines create \
 > power_parameters_power_pass=xxxxxxx
 ```
 
-There's also a CLI recipe to [make machines in a script](/t/the-cli-cookbook/2218#heading--make-machines) in the [CLI cookbook](/t/the-cli-cookbook/2218).
-
 The variable fields in the `machines create` command (the `$...` items) are as follows, in this example: 
 
 ```
@@ -507,8 +426,3 @@ The required fields will change based on the type of chassis you choose.
 As with the manual method, the underlying machines will require netbooting.
 [/note]
 snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui -->
-
-
-------
-****
-------

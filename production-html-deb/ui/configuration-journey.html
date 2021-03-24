@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="../maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.9
+	    What&rsquo;s new in 2.10
 	  </a>
 	</li>
 	<li>
@@ -429,26 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Configuration journey</h1><!-- deb-2-7-cli
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
- deb-2-9-cli -->
-
-<!-- snap-2-7-cli
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
- snap-2-7-ui -->
+      <h1>Configuration journey</h1><!-- begin-rad-menu -->
 
 <!-- snap-2-8-cli
  snap-2-8-cli -->
@@ -462,7 +443,32 @@
 <!-- snap-2-9-ui
  snap-2-9-ui -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-10-cli
+ snap-2-10-cli -->
+
+<!-- snap-2-10-ui
+ snap-2-10-ui -->
+
+<!-- deb-2-8-cli
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- deb-2-10-cli
+ deb-2-10-cli -->
+
+<!-- end-rad-menu -->
+
+<!-- end-rad-menu -->
+
+<!-- snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli
 Once you've successfully installed MAAS (regardless of method), you can login to the MAAS CLI via the following process.  First, generate the API-key for the user you're going to employing:
 
 <pre><code>sudo maas apikey --username=$PROFILE &gt; api-key-file
@@ -833,7 +839,7 @@ If you've done everything correctly, you should see JSON output similar to this 
         "resource_uri": "/MAAS/api/2.0/vlans/5003/"
     }
 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli -->
 
 <p>Once you&rsquo;ve successfully installed MAAS (regardless of method), you can now login here:</p>
 <pre><code>http://${API_HOST}:5240/MAAS
@@ -868,18 +874,18 @@ Note that you may have to wait a few moments for your selected images to sync lo
 <p><a href="#heading--enabling-dhcp"><h2 id="heading--enabling-dhcp">Enabling DHCP</h2></a></p>
 <p>Before moving forward with MAAS, you&rsquo;ll want to enable DHCP.  You can do this very easily from the web UI by selecting &ldquo;Subnets&rdquo; from the top menu, choosing the VLAN on which you want to enable DHCP, and select the button marked, &ldquo;Enable DHCP.&rdquo;</p>
 <p><a href="#heading--networking"><h2 id="heading--networking">Networking</h2></a></p>
-<!-- deb-2-7-ui
-The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](network-discovery.html) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
- deb-2-7-ui -->
-
+<p>The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This <a href="network-discovery.html">network discovery</a> process allows you to easily add or map devices already connected to your network &ndash; devices that you may not necessarily want to manage with MAAS.</p>
 <!-- deb-2-8-ui
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](network-discovery.html) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
  deb-2-8-ui -->
 
-<p>The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This <a href="network-discovery.html">network discovery</a> process allows you to easily add or map devices already connected to your network &ndash; devices that you may not necessarily want to manage with MAAS.</p>
-<!-- snap-2-7-ui
+<!-- deb-2-9-ui
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](network-discovery.html) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
- snap-2-7-ui -->
+ deb-2-9-ui -->
+
+<!-- snap-2-10-ui
+The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](network-discovery.html) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
+ snap-2-10-ui -->
 
 <!-- snap-2-8-ui
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](network-discovery.html) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
@@ -909,18 +915,18 @@ Network discovery can be disabled at any time from the button on the Dashboard v
 <p><a href="images/58a37e0dc29bc233f771c33d07a0e03e8d55cb87.jpeg" target = "_blank"><img src="images/58a37e0dc29bc233f771c33d07a0e03e8d55cb87.jpeg"></a></a> </p>
 <p>If you are testing MAAS using virtual machines, the machines appear here as soon as they boot. New machines are added automatically when they first connect to your network. Alternatively, the ‘Add hardware’ menu lets you add machines manually, via their MAC address.</p>
 <p>After you configure power and interfaces, MAAS must commission machines to retrieve CPU, memory and storage information. From this point, you can command MAAS to acquire, test, deploy and release these machines as you work with your MAAS cloud.</p>
-<!-- deb-2-7-ui
-While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](maas-tags.html) and hardware characteristics.  You can select and manage machines in either filtered or full views.
- deb-2-7-ui -->
-
+<p>While you are testing MAAS, be sure to check out filters, which can narrow your view based on both <a href="maas-tags.html">tags</a> and hardware characteristics.  You can select and manage machines in either filtered or full views.</p>
 <!-- deb-2-8-ui
 While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](maas-tags.html) and hardware characteristics.  You can select and manage machines in either filtered or full views.
  deb-2-8-ui -->
 
-<p>While you are testing MAAS, be sure to check out filters, which can narrow your view based on both <a href="maas-tags.html">tags</a> and hardware characteristics.  You can select and manage machines in either filtered or full views.</p>
-<!-- snap-2-7-ui
+<!-- deb-2-9-ui
 While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](maas-tags.html) and hardware characteristics.  You can select and manage machines in either filtered or full views.
- snap-2-7-ui -->
+ deb-2-9-ui -->
+
+<!-- snap-2-10-ui
+While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](maas-tags.html) and hardware characteristics.  You can select and manage machines in either filtered or full views.
+ snap-2-10-ui -->
 
 <!-- snap-2-8-ui
 While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](maas-tags.html) and hardware characteristics.  You can select and manage machines in either filtered or full views.
@@ -934,14 +940,11 @@ While you are testing MAAS, be sure to check out filters, which can narrow your 
 <p>When it comes to running applications, MAAS can easily deploy any supported variant of Ubuntu, including LTS and non-LTR versions for x86, ARM, PPC and s390x systems. You can also deploy several other operating systems to your machines, including CentOS 7, CentOS 6, Windows, RHEL, and ESXi images, via <a href="https://www.ubuntu.com/support" rel="nofollow noopener">Ubuntu Advantage^</a>.</p>
 <p><a href="images/27c47222c1fc0e34ed70134a1007dde067d2de81.jpeg" target = "_blank"><img src="images/27c47222c1fc0e34ed70134a1007dde067d2de81.jpeg"></a></a> </p>
 <p><a href="#heading--vm-hosts"><h3 id="heading--vm-hosts">VM hosts</h3></a></p>
-<!-- deb-2-7-cli
+<!-- deb-2-10-cli
 [VM hosts]( vm-hosting.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- deb-2-7-cli -->
+ deb-2-10-cli -->
 
-<!-- deb-2-7-ui
-[VM hosts]( vm-hosting.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- deb-2-7-ui -->
-
+<p><a href="vm-hosting.html">VM hosts</a> can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine &ndash; without building one!</p>
 <!-- deb-2-8-cli
 [VM hosts]( vm-hosting.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
  deb-2-8-cli -->
@@ -954,14 +957,17 @@ While you are testing MAAS, be sure to check out filters, which can narrow your 
 [VM hosts]( vm-hosting.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
  deb-2-9-cli -->
 
-<p><a href="vm-hosting.html">VM hosts</a> can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine &ndash; without building one!</p>
-<!-- snap-2-7-cli
+<!-- deb-2-9-ui
 [VM hosts]( vm-hosting.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- snap-2-7-cli -->
+ deb-2-9-ui -->
 
-<!-- snap-2-7-ui
+<!-- snap-2-10-cli
 [VM hosts]( vm-hosting.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- snap-2-7-ui -->
+ snap-2-10-cli -->
+
+<!-- snap-2-10-ui
+[VM hosts]( vm-hosting.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
+ snap-2-10-ui -->
 
 <!-- snap-2-8-cli
 [VM hosts]( vm-hosting.html) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
@@ -985,8 +991,6 @@ While you are testing MAAS, be sure to check out filters, which can narrow your 
 <p>into pools of composable hardware:</p>
 <p><a href="images/763029b5678b6f88317359d28eac3003f7298f37.jpeg" target = "_blank"><img src="images/763029b5678b6f88317359d28eac3003f7298f37.jpeg"></a></a> </p>
 <p>There you have it: A quick tour of MAAS and its capabilities.  Read on through the documentation to learn more.</p>
-<hr>
-<h2>****</h2>
     </div>
   </body>
 </html>

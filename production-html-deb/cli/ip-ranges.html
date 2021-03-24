@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.9
+	    What&rsquo;s new in 2.10
 	  </a>
 	</li>
 	<li>
@@ -429,26 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Ip ranges</h1><!-- deb-2-7-cli
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
- snap-2-7-ui -->
+      <h1>Ip ranges</h1><!-- begin-rad-menu -->
 
 <!-- snap-2-8-cli
  snap-2-8-cli -->
@@ -462,6 +443,31 @@
 <!-- snap-2-9-ui
  snap-2-9-ui -->
 
+<!-- snap-2-10-cli
+ snap-2-10-cli -->
+
+<!-- snap-2-10-ui
+ snap-2-10-ui -->
+
+<!-- deb-2-8-cli
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- deb-2-10-ui
+ deb-2-10-ui -->
+
+<!-- end-rad-menu -->
+
+<!-- end-rad-menu -->
+
 <p>In MAAS-managed networks, you can further manage your subnets with a reserved range of IP addresses.  You can reserve IP addresses by adding one or more reserved ranges to a subnet configuration. You can define two types of ranges: reserved ranges and reserved dynamic ranges.  </p>
 <p>A reserved range operates differently depending on whether the subnet is managed or unmanaged.  For a managed (subnet), MAAS will never assign IP addresses inside this range.  You can use this range for anything, such as infrastructure systems, network hardware, external DHCP, or an OpenStack namespace.  For an unmanaged (subnet), MAAS will only assign IP addresses inside this range &ndash; but MAAS can assign any IP within this range.</p>
 <p>A reserved dynamic range is used by MAAS for enlisting, commissioning and, if enabled, MAAS-managed DHCP on the machine&rsquo;s VLAN during commissioning and deployment. If created with the Web UI, an initial range is created as part of the DHCP enablement process. MAAS never uses IP addresses from this range for an unmanaged subnet.</p>
@@ -473,7 +479,7 @@
 <li><a href="#heading--delete-a-range">How do I delete an existing IP range?</a></li>
 </ol>
 <p><a href="#heading--create-a-range"><h2 id="heading--create-a-range">Create a range</h2></a></p>
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
 To create a range with the web UI, choose the "Subnets" option across the top:
 
 <a href="images/2bc3b241b917325dac57a42771a0f9cfeb411bde.jpeg" target = "_blank"><img src="images/2bc3b241b917325dac57a42771a0f9cfeb411bde.jpeg"></a></a>
@@ -486,11 +492,11 @@ Scroll down to "Reserved ranges" on the subnet screen and click on the "Reserve 
 
 <a href="images/a76e24de7c65d3553f853bc2b6a96671d756651b.jpeg" target = "_blank"><img src="images/a76e24de7c65d3553f853bc2b6a96671d756651b.jpeg"></a></a>
 
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
 
-<!-- deb-2-7-ui
+<!-- deb-2-10-ui
 Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](managing-dhcp.html).
- deb-2-7-ui -->
+ deb-2-10-ui -->
 
 <!-- deb-2-8-ui
 Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](managing-dhcp.html).
@@ -500,9 +506,9 @@ Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAA
 Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](managing-dhcp.html).
  deb-2-9-ui -->
 
-<!-- snap-2-7-ui
+<!-- snap-2-10-ui
 Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](managing-dhcp.html).
- snap-2-7-ui -->
+ snap-2-10-ui -->
 
 <!-- snap-2-8-ui
 Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](managing-dhcp.html).
@@ -512,7 +518,7 @@ Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAA
 Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](managing-dhcp.html).
  snap-2-9-ui -->
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
 When you choose either of those two options, a window will appear allowing you to enter start and end addresses for the range as well as a comment.
 
 Below is an example window when creating a 'reserved range' (the windows are identical):
@@ -520,7 +526,7 @@ Below is an example window when creating a 'reserved range' (the windows are ide
 <a href="images/be85b7d6-installconfig-network-ipranges__2.4_add-reserved-iprange.png" target = "_blank"><img src="images/be85b7d6-installconfig-network-ipranges__2.4_add-reserved-iprange.png"></a></a>
 
 Click the 'Reserve' button when done.
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
 
 <p>See <a href="concepts-and-terms.html#heading--ip-ranges">Concepts and terms</a> for an explanation of the two kinds of reserved IP ranges MAAS uses.</p>
 <p>To create a range of dynamic IP addresses that will be used by MAAS for node enlistment, commissioning, and possibly deployment:</p>
@@ -553,17 +559,14 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 </code></pre>
 
 <p>This command will update the IP range associated with $ID.</p>
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
 Click the 'Menu' button at the far right of the row corresponding to the subnet in question and select 'Edit reserved range' from the menu that appears. Edit the fields as desired and click the 'Save' button.
 
 <a href="#heading--delete-a-range"><h2 id="heading--delete-a-range">Delete a range</h2></a>
 
 Select 'Remove range' from the menu that appears when clicking the 'Menu' button at the far right of the row corresponding to the subnet in question.
 
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
-
-<hr>
-<h2>****</h2>
+snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
     </div>
   </body>
 </html>

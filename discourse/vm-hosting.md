@@ -1,106 +1,112 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
-|Packages|CLI ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
-|Packages|[CLI](/t/vm-hosting/2748) ~ UI|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
-|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|CLI ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
-|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ UI|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
-|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|CLI ~ [UI](/t/vm-hosting/2753)|
- deb-2-9-cli -->
-
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
-|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ UI|
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
-|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting/2742) ~ UI|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
-|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
- snap-2-7-ui -->
-
+<!-- begin-rad-menu -->
 <!-- snap-2-8-cli
-||2.7|2.8|2.9|
+||2.8|2.9|2.10|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|CLI ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
-|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
+|Snap|CLI ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|[CLI](/t/vm-hosting-snap-2-10-cli/3817) ~ [UI](/t/vm-hosting-snap-2-10-ui/4162)|
+|Packages|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|[CLI](/t/vm-hosting-deb-2-10-cli/4163) ~ [UI](/t/vm-hosting-deb-2-10-ui/4164)|
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-||2.7|2.8|2.9|
+||2.8|2.9|2.10|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ UI|[CLI](/t/vm-hosting/2746) ~ [UI](/t/vm-hosting/2747)|
-|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
+|Snap|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ UI|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|[CLI](/t/vm-hosting-snap-2-10-cli/3817) ~ [UI](/t/vm-hosting-snap-2-10-ui/4162)|
+|Packages|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|[CLI](/t/vm-hosting-deb-2-10-cli/4163) ~ [UI](/t/vm-hosting-deb-2-10-ui/4164)|
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-||2.7|2.8|2.9|
+||2.8|2.9|2.10|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|CLI ~ [UI](/t/vm-hosting/2747)|
-|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
+|Snap|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|CLI ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|[CLI](/t/vm-hosting-snap-2-10-cli/3817) ~ [UI](/t/vm-hosting-snap-2-10-ui/4162)|
+|Packages|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|[CLI](/t/vm-hosting-deb-2-10-cli/4163) ~ [UI](/t/vm-hosting-deb-2-10-ui/4164)|
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-||2.7|2.8|2.9|
+||2.8|2.9|2.10|
 |-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/vm-hosting/2742) ~ [UI](/t/vm-hosting/2743)|[CLI](/t/vm-hosting/2744) ~ [UI](/t/vm-hosting/2745)|[CLI](/t/vm-hosting/2746) ~ UI|
-|Packages|[CLI](/t/vm-hosting/2748) ~ [UI](/t/vm-hosting/2749)|[CLI](/t/vm-hosting/2750) ~ [UI](/t/vm-hosting/2751)|[CLI](/t/vm-hosting/2752) ~ [UI](/t/vm-hosting/2753)|
+|Snap|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ UI|[CLI](/t/vm-hosting-snap-2-10-cli/3817) ~ [UI](/t/vm-hosting-snap-2-10-ui/4162)|
+|Packages|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|[CLI](/t/vm-hosting-deb-2-10-cli/4163) ~ [UI](/t/vm-hosting-deb-2-10-ui/4164)|
  snap-2-9-ui -->
+
+<!-- snap-2-10-cli
+||2.8|2.9|2.10|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|CLI ~ [UI](/t/vm-hosting-snap-2-10-ui/4162)|
+|Packages|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|[CLI](/t/vm-hosting-deb-2-10-cli/4163) ~ [UI](/t/vm-hosting-deb-2-10-ui/4164)|
+ snap-2-10-cli -->
+
+||2.8|2.9|2.10|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|[CLI](/t/vm-hosting-snap-2-10-cli/3817) ~ UI|
+|Packages|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|[CLI](/t/vm-hosting-deb-2-10-cli/4163) ~ [UI](/t/vm-hosting-deb-2-10-ui/4164)|
+
+<!-- deb-2-8-cli
+||2.8|2.9|2.10|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|[CLI](/t/vm-hosting-snap-2-10-cli/3817) ~ [UI](/t/vm-hosting-snap-2-10-ui/4162)|
+|Packages|CLI ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|[CLI](/t/vm-hosting-deb-2-10-cli/4163) ~ [UI](/t/vm-hosting-deb-2-10-ui/4164)|
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+||2.8|2.9|2.10|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|[CLI](/t/vm-hosting-snap-2-10-cli/3817) ~ [UI](/t/vm-hosting-snap-2-10-ui/4162)|
+|Packages|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ UI|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|[CLI](/t/vm-hosting-deb-2-10-cli/4163) ~ [UI](/t/vm-hosting-deb-2-10-ui/4164)|
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+||2.8|2.9|2.10|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|[CLI](/t/vm-hosting-snap-2-10-cli/3817) ~ [UI](/t/vm-hosting-snap-2-10-ui/4162)|
+|Packages|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|CLI ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|[CLI](/t/vm-hosting-deb-2-10-cli/4163) ~ [UI](/t/vm-hosting-deb-2-10-ui/4164)|
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+||2.8|2.9|2.10|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|[CLI](/t/vm-hosting-snap-2-10-cli/3817) ~ [UI](/t/vm-hosting-snap-2-10-ui/4162)|
+|Packages|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ UI|[CLI](/t/vm-hosting-deb-2-10-cli/4163) ~ [UI](/t/vm-hosting-deb-2-10-ui/4164)|
+ deb-2-9-ui -->
+
+<!-- deb-2-10-cli
+||2.8|2.9|2.10|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|[CLI](/t/vm-hosting-snap-2-10-cli/3817) ~ [UI](/t/vm-hosting-snap-2-10-ui/4162)|
+|Packages|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|CLI ~ [UI](/t/vm-hosting-deb-2-10-ui/4164)|
+ deb-2-10-cli -->
+
+<!-- deb-2-10-ui
+||2.8|2.9|2.10|
+|-----:|:-----:|:-----:|:-----:|
+|Snap|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|[CLI](/t/vm-hosting-snap-2-10-cli/3817) ~ [UI](/t/vm-hosting-snap-2-10-ui/4162)|
+|Packages|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|[CLI](/t/vm-hosting-deb-2-10-cli/4163) ~ UI|
+ deb-2-10-ui -->
+<!-- end-rad-menu -->
+
+<!-- end-rad-menu -->
 
 MAAS VM hosts allow for the dynamic composition of nodes from a pool of available hardware resources (e.g. disk space, memory, cores).  You can create virtual machines (VMs) as needed within the limits of your resources, without concern for physical hardware.  MAAS currently supports VM hosts and VMs created via [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt).
 
+<!-- snap-2-8-cli snap-2-9-cli snap-2-8-ui snap-2-9-ui deb-2-8-cli deb-2-9-cli deb-2-8-ui deb-2-9-ui 
 As of MAAS 2.8, we also support LXD VMs and VM hosts as a Beta feature.
+ snap-2-8-cli snap-2-9-cli snap-2-8-ui snap-2-9-ui deb-2-8-cli deb-2-9-cli deb-2-8-ui deb-2-9-ui -->
 
-<!-- deb-2-7-cli
+<!-- deb-2-10-cli
 #### Four questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3216#heading--set-up-ssh)
-4. [How do I add a VM host?](/t/adding-a-vm-host/2292)
- deb-2-7-cli -->
+3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/4167#heading--set-up-ssh)
+4. [How do I add a VM host?](/t/adding-a-vm-host/3819)
+ deb-2-10-cli -->
 
-<!-- deb-2-7-ui
+<!-- deb-2-10-ui
 #### Four questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3217#heading--set-up-ssh)
-4. [How do I add a VM host?](/t/adding-a-vm-host/2293)
- deb-2-7-ui -->
+3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/4168#heading--set-up-ssh)
+4. [How do I add a VM host?](/t/adding-a-vm-host/3820)
+ deb-2-10-ui -->
 
 <!-- deb-2-8-cli
 #### Five questions you may have:
@@ -123,7 +129,7 @@ As of MAAS 2.8, we also support LXD VMs and VM hosts as a Beta feature.
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
-#### Nine questions you may have:
+#### Ten questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
@@ -131,11 +137,13 @@ As of MAAS 2.8, we also support LXD VMs and VM hosts as a Beta feature.
 4. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3220#heading--set-up-ssh)
 5. [How do I add a VM host?](/t/adding-a-vm-host/2296)
 6. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
-7. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
-8. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
-9. [How do I configure and use hugepages on my VMs?](#heading--configure-hugepages)
+7. [How do I pin NUMA nodes to specific cores?](#heading--pin-numa-nodes)
+8. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
+9. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
+10. [How do I configure and use hugepages on my VMs?](#heading--configure-hugepages)
  deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 #### Eight questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
@@ -146,24 +154,23 @@ As of MAAS 2.8, we also support LXD VMs and VM hosts as a Beta feature.
 6. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
 7. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
 8. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
+ deb-2-9-ui -->
 
-<!-- snap-2-7-cli
+<!-- snap-2-10-cli
 #### Four questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3210#heading--set-up-ssh)
-4. [How do I add a VM host?](/t/adding-a-vm-host/2286)
- snap-2-7-cli -->
+3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/4165#heading--set-up-ssh)
+4. [How do I add a VM host?](/t/adding-a-vm-host/3817)
+ snap-2-10-cli -->
 
-<!-- snap-2-7-ui
 #### Four questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
-3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3211#heading--set-up-ssh)
-4. [How do I add a VM host?](/t/adding-a-vm-host/2287)
- snap-2-7-ui -->
+3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/4166#heading--set-up-ssh)
+4. [How do I add a VM host?](/t/adding-a-vm-host/3818)
 
 <!-- snap-2-8-cli
 #### Five questions you may have:
@@ -186,7 +193,7 @@ As of MAAS 2.8, we also support LXD VMs and VM hosts as a Beta feature.
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-#### Nine questions you may have:
+#### Ten questions you may have:
 
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
@@ -194,9 +201,10 @@ As of MAAS 2.8, we also support LXD VMs and VM hosts as a Beta feature.
 4. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3220#heading--set-up-ssh)
 5. [How do I add a VM host?](/t/adding-a-vm-host/2296)
 6. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
-7. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
-8. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
-9. [How do I configure and use hugepages on my VMs?](#heading--configure-hugepages)
+7. [How do I pin NUMA nodes to specific cores?](#heading--pin-numa-nodes)
+8. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
+9. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
+10. [How do I configure and use hugepages on my VMs?](#heading--configure-hugepages)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
@@ -230,6 +238,7 @@ Simply put, a VM host is a machine which is designated to run virtual machines (
 
 Libvirt KVMs and LXD VMs are both based on the same underlying virtualisation technology, QEMU.  Unlike libvirt KVMs, though, LXD VMs can be managed without requiring SSH access to the VM host. LXD are remotely accessed via secure HTTP transport, which provides better security for LXD-based VMs.  In addition, LXD has a better API, and is part of a much larger constellation of enterprise software, offering a wider range of future features and use cases.
 
+<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
 
 <a href="#heading--vnuma"><h2 id="heading--vnuma">VMs and NUMA</h2></a>
 
@@ -245,6 +254,7 @@ In addition, you can get a bird's-eye view of network configuration:
 6. You can identify NICs that support SR-IOV and tell how many VFs are available.
 
 MAAS also shows hugepages information (if they are in use) and prevents overcommit when using them.  Hugepages essentially allow a much larger memory cache associated with the core.  This obviously reduces the number of times a core has to access memory, but because the core must swap entire hugepages, optimising usage of them can be complex. MAAS helps you create these optimisations by giving you a discrete view of hugepages associated with your VM, helping you decide whether you need to use them or not.
+snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
 
 <!-- snap-2-9-cli deb-2-9-cli
 <a href="#heading--numa-nodes"><h2 id="heading--numa-nodes">Support for NUMA, SR-IOV, and hugepages</h2></a>
@@ -252,13 +262,15 @@ MAAS also shows hugepages information (if they are in use) and prevents overcomm
 VM host management has been redesigned to support NUMA/SR-IOV configurations and hugepages from the API/CLI.  Users can:
 
 1. See resources per NUMA node.
-2. See resources for VM hosts bearing NUMA nodes.
-3. See the alignment between VM host interfaces and NUMA nodes.
-4. Configure and use hugepages.
+2. Pin nodes to specific cores.
+3. See resources for VM hosts bearing NUMA nodes.
+4. See the alignment between VM host interfaces and NUMA nodes.
+5. Configure and use hugepages.
 
 This section explains how to access this new functionality.
  snap-2-9-cli deb-2-9-cli -->
 
+<!-- snap-2-9-ui deb-2-9-ui
 <a href="#heading--numa-nodes"><h3 id="heading--numa-nodes">Support for NUMA, SR-IOV, and hugepages</h3></a>
 
 VM host management has been redesigned to support NUMA/SR-IOV configurations and hugepages from the API/CLI.  Users can:
@@ -267,9 +279,10 @@ VM host management has been redesigned to support NUMA/SR-IOV configurations and
 2. See resources for VM hosts bearing NUMA nodes.
 3. See the alignment between VM host interfaces and NUMA nodes.
 
-Via the CLI, users can see more details about NUMA-bearing VM host resources and configure hugepages. Select the relevant "CLI" link in the top menu to access this information.
+Via the CLI, users can also pin nodes to specific cores, see more details about NUMA-bearing VM host resources, and configure hugepages; select the relevant "CLI" link in the top menu to access this information.
 
 This section explains how to access this new functionality.
+ snap-2-9-ui deb-2-9-ui -->
 
 <!-- snap-2-9-cli deb-2-9-cli
 <a href="#heading--numa-node-resources"><h3 id="heading--numa-node-resources">Examine NUMA node resources</h3></a>
@@ -301,6 +314,14 @@ In the resulting JSON output, look for the array entry ```numanode_set```, which
 	  ]
      }
 ]
+```
+
+<a href="#heading--pin-numa-nodes"><h3 id="heading--pin-numa-nodes">Pin NUMA nodes to specific cores</h3></a>
+
+With the MAAS CLI, you can pin NUMA nodes to specific cores when composing a virtual machine.  For example, you can enter a command like this for a VM host you've already created:
+
+```
+maas $PROFILE vm-host compose $VM_HOST_ID pinned_cores=1 pinned_cores=2
 ```
 
 <a href="#heading--numa-vm-host-resources"><h3 id="heading--numa-vm-host-resources">Examine resources for NUMA-node-bearing VM hosts</h3></a>
@@ -339,6 +360,7 @@ maas $PROFILE vm-host compose $VM_HOST_ID pinned_cores=$CORE_NUMBER hugepages_ba
 ```
  snap-2-9-cli deb-2-9-cli -->
 
+<!-- snap-2-9-ui deb-2-9-ui
 <a href="#heading--numa-node-resources"><h3 id="heading--numa-node-resources">Examine NUMA node resources</h3></a>
 
 Within the MAAS UI, it is possible to view NUMA node resources for VM-host-composed machines:
@@ -351,7 +373,9 @@ To reach this view, simply select the "KVM" item at the menu along the top, sele
 
 To examine the alignment between VM host interfaces and NUMA nodes -- that is, the SR-IOV configuration -- simply consult the "Virtual Functions" section of the NUMA resources diagram shown above, noting which network interfaces are mentioned.
 
+ snap-2-9-ui deb-2-9-ui -->
 
+<!-- snap-2-8-ui snap-2-8-cli deb-2-8-ui deb-2-8-cli snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
 <a href="#heading--lxd-setup"><h2 id="heading--lxd-setup">Make LXD available for VM hosting (Beta)</h2></a>
 
 Assuming that you want to use LXD VM hosts -- currently a Beta feature -- you need to install the correct version of LXD. Prior to the release of Ubuntu 20.04 LXD was installed using Debian packages. The Debian packaged version of LXD is too old to use with MAAS. If this is the case, you’ll need to remove the LXD Debian packages and install the Snap version.  Note that you cannot install both Debian and snap versions, as this creates a conflict.
@@ -552,8 +576,4 @@ Once that's done, the LXD host is now ready to be added to MAAS as an LXD VM hos
 
 When composing a virtual machine with LXD, MAAS uses either the 'maas' LXD profile, or (if that doesn't exist) the 'default' LXD profile. The profile is used to determine which bridge to use. Users may also add additional LXD options to the profile which are not yet supported in MAAS.
 
-
-
-------
-****
-------
+ snap-2-8-ui snap-2-8-cli deb-2-8-ui deb-2-8-cli snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->

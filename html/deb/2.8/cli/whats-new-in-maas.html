@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-deb-2-8-clileft:0;list-deb-2-8-clistyle-deb-2-8-clitype:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-deb-2-8-clicolor:#d9d9d9; width:100%;border-deb-2-8-clibottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	  &nbsp;UI-deb-2-8-clionly&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-deb-2-8-clicolor:white;border-deb-2-8-clitop:1px solid black; border-deb-2-8-clileft:1px solid black; border-deb-2-8-cliright:1px solid black; border-deb-2-8-clibottom:5px solid white;">
+	  CLI-deb-2-8-clionly
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-deb-2-8-clitop:40px; margin-deb-2-8-clileft:20px">
+      <strong>
+	<a href="maas-deb-2-8-clidocumentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-deb-2-8-climaas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-deb-2-8-clime-deb-2-8-clian-deb-2-8-cliexample-deb-2-8-cliof-deb-2-8-climaas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clirequirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-cliinstallation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-deb-2-8-clijourney.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-deb-2-8-clicommunication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-deb-2-8-clicontrollers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-deb-2-8-clicontrollers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-deb-2-8-cliavailability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-deb-2-8-climachines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-deb-2-8-climanagement.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-deb-2-8-climachines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-deb-2-8-clitesting.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clitesting.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-cliand-deb-2-8-clihardware-deb-2-8-clitesting-deb-2-8-cliscripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-deb-2-8-climachines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clitags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-deb-2-8-climachine-deb-2-8-clisetup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-deb-2-8-cliboot-deb-2-8-clioptions.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-deb-2-8-clipools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-clivmfs-deb-2-8-clidatastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-deb-2-8-clikernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-deb-2-8-cliand-deb-2-8-cliimport-deb-2-8-cliimages.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-deb-2-8-cliimage-deb-2-8-climirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-deb-2-8-cliimages.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-deb-2-8-climanagement.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clidhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-deb-2-8-cliranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-deb-2-8-cliservices.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-deb-2-8-clidiscovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-deb-2-8-cliaddressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-deb-2-8-clitls-deb-2-8-cliencryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-deb-2-8-clistp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-deb-2-8-clizones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-deb-2-8-clihosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clinetworking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-deb-2-8-clia-deb-2-8-clivm-deb-2-8-clihost.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-deb-2-8-clihost-deb-2-8-clistorage-deb-2-8-clipools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-deb-2-8-cliand-deb-2-8-clideleting-deb-2-8-clivms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-deb-2-8-climetrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-deb-2-8-cliyour-deb-2-8-climaas-deb-2-8-cliinstallation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-deb-2-8-clilogging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-deb-2-8-clilogs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-deb-2-8-cliaccounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-deb-2-8-clisearch.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-deb-2-8-cliand-deb-2-8-cliterms.html#heading-deb-2-8-cli-deb-2-8-clinetwork-deb-2-8-clitutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-deb-2-8-clicli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-deb-2-8-clicli-deb-2-8-clitasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-deb-2-8-clievent-deb-2-8-clilogs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clikernel-deb-2-8-climanagement.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliimage-deb-2-8-climanagement.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliinterface-deb-2-8-climanagement.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-cliadvanced-deb-2-8-clitasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-deb-2-8-clicomposable-deb-2-8-clihardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-deb-2-8-cliapi-deb-2-8-cliclient.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-deb-2-8-cliauthentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-deb-2-8-clihelp.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-deb-2-8-clitricks-deb-2-8-cliand-deb-2-8-clitraps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-deb-2-8-clidocs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-deb-2-8-clinew-deb-2-8-cliin-deb-2-8-climaas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-deb-2-8-cliguide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-deb-2-8-clitop:40px; margin-deb-2-8-cliright:30px">
+      <h1>Whats new in MAAS</h1><!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7
+deb-deb-2-8-cli2-deb-2-8-cli7 -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7
+snap-deb-2-8-cli2-deb-2-8-cli7 -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli
+snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+snap-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui
+deb-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli
+deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli7 snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7 deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui
+<h2>MAAS 2.7 release notes</h2>
+
+<h3>MAAS 2.7.3 released</h3>
+
+On 24 August 2020, MAAS 2.7.3 was released, replacing the `2.7/stable` channel in snap and the [ppa:maas/2.7](https://launchpad.net/~maas/+archive/ubuntu/2.7).  You can update your 2.7 release to 2.7.3 by with:
+
+    snap refresh -deb-2-8-cli-deb-2-8-clichannel=2.7/stable
+
+or by using the aforementioned PPA.  The focus for this release has been [bugfixing](https://launchpad.net/maas/+milestone/2.7.3rc1) -deb-2-8-cli-deb-2-8-cli there were no changes to MAAS since RC1.
+
+Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
+
+<h3>MAAS 2.7.2 released</h3>
+
+On 30 July 2020, MAAS 2.7.2 was released, replacing the `2.7/stable` channel in snap and the [ppa:maas/2.7](https://launchpad.net/~maas/+archive/ubuntu/2.7).  You can update your 2.7 release to 2.7.2 by with:
+
+    snap refresh -deb-2-8-cli-deb-2-8-clichannel=2.7/stable
+
+or by using the aforementioned PPA.  The focus for this release has been [bugfixing](https://launchpad.net/maas/+milestone/2.7.2rc1) -deb-2-8-cli-deb-2-8-cli there were no changes to MAAS since RC1.
+
+Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
+
+<a href="#heading-deb-2-8-cli-deb-2-8-cliupgrade-deb-2-8-cli2-deb-2-8-cli6-deb-2-8-clito-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clisnap"><h3 id="heading-deb-2-8-cli-deb-2-8-cliupgrade-deb-2-8-cli2-deb-2-8-cli6-deb-2-8-clito-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clisnap">Upgrading from MAAS 2.6 snap</h3></a> 
+
+If you are using the MAAS 2.6 snap, which had to be installed with `-deb-2-8-cli-deb-2-8-clidevmode`, you can update to 2.7 with the following parameters:
+
+    snap refresh maas -deb-2-8-cli-deb-2-8-clidevmode -deb-2-8-cli-deb-2-8-clichannel=2.7
+
+Be aware that you will still be in `-deb-2-8-cli-deb-2-8-clidevmode`, which means the snap won't automatically upgrade.  You'll have to check manually for updates (via `snap refresh`).  Once you’re upgraded to MAAS 2.7 using this method, future snap updates won’t require the devmode parameter. So, for example, when a later version of 2.7 (or even 2.8) is released, you will be able to `snap refresh` to those channels and get out of devmode.  Once refreshed out of devmode in this way, you'll get updates for point releases automatically.
+
+An alternative to avoid devmode would be to do a clean install of MAAS 2.7, that is, removing 2.6 with `snap remove maas` and reinstalling MAAS 2.7 with:
+
+    snap install -deb-2-8-cli-deb-2-8-clichannel=2.7 maas
+
+Note that you can check the devmode status of your snap with:
+
+    snap list maas
+
+
+-deb-2-8-cli-deb-2-8-cli-deb-2-8-cli
+
+<h2>MAAS 2.7 released</h2>
+
+Following on from MAAS 2.6.2, we are happy to announce that MAAS 2.7 is now available. This release features some critical bug fixes, along with some exciting new features:
+
+### CentOS 8 image support
+
+Users can now deploy CentOS 8 images in MAAS. The Images page in the MAAS UI will now offer a choice to select and download CentOS 8. Note that users of previous versions may see CentOS 8 as an available option, but cannot download or deploy it.
+
+### Network testing features
+
+MAAS 2.7 brings a slate of new network testing and link detection features, as detailed below.
+
+#### Network link disconnect detection
+
+MAAS 2.7 can check whether links are connected or disconnected. Previously, when commissioning, you couldn’t detect unplugged cables. Now you can. You will have to take a couple of steps for existing MAAS deployments: First, you will have to upgrade to 2.7, then run commissioning again to see if a link is disconnected. But you no longer have to puzzle over what’s broken when this happens.
+
+MAAS will report disconnected network cables, and users will receive a warning when trying to configure a disconnected interface. Administrators will be able to change cable connection status through both API and UI after manually rectifying the situation.
+
+#### Slow network link detection
+
+MAAS 2.7 makes sure you’re getting the most out of your link speed. As servers and hardware get faster — 10G, 40G, even 100G NICS — the chances increase that you might plug your 10G NIC into a 1G switch, for example. Previously, with MAAS, you’d be stuck with the speed of the slowest link, but there wasn’t a way to verify your link speed without recommissioning. Depending on your physical hardware, that might still be an issue, but the MAAS UI can now warn you if your interface is connected to a link slower than what the interface supports. And all information shown in the UI is available via the API, as well. You can still replace a slow switch without recommissioning.
+
+MAAS will automatically detect link and interface speed during commissioning and report them via the API/UI. Administrators will be able to change or update the link and interface speeds via the API/UI after manual changes to the connection. MAAS 2.7 will also report link speed, allowing users to filter and list machines by their link speed in the UI. Users can also employ this information to allocate machines by their link speed in the API.
+
+#### Network validation scripts and testing
+
+MAAS 2.7 allows you to configure network connectivity testing in a number of ways. If you’ve used MAAS, you know that if it can’t connect to the rack controller, deployment can’t complete. Now MAAS can check connectivity to the rack controller and warn you if there’s no link, long before you have to try and debug it. For example, if you can’t connect to your gateway controller, traffic can’t leave your network. MAAS can now check this link and recognise that there’s no connectivity, which alleviates a lot of annoying (and sometimes hard-deb-2-8-clito-deb-2-8-clidetect) network issues.
+
+Users can now test their network configuration to check for:
+
+1. Interfaces which have a broken network configuration
+2. Bonds that are not fully operational
+3. Broken gateways, rack controllers, and Internet links
+
+In addition, Internet connectivity testing has been greatly expanded. Previously, MAAS gave a yes/no link check during network testing. Now you can give a list of URLs or IP addresses to check. In the ephemeral environment, standard DHCP is still applied, but when network testing runs, we can apply your specific configuration for the duration of the test. While all URLs / IPs are tested with all interfaces, we do test each of your interfaces individually, including breaking apart bonded NICS and testing each side of your redundant interfaces. You can also run different tests on each pass, e.g., a different set of URLs, although each run would be a different testing cycle. For testing individual interfaces, you can use the API.
+
+Of course, the main network feature available in 2.7 is improved — and customisable — network testing. You can now create your own commissioning scripts and tests related to networking. You can create your own network tests (e.g., a network throughput test) and run them during the network testing portion of the MAAS workflow. There are no particular restrictions on these scripts, so you can test a wide variety of possible conditions and situations.
+
+Administrators can upload network tests and test scripts, as well as create tests which accept an interface parameter, or scripts which apply custom network configurations. Users can then specify (unique) parameters using the API, override machines which fail network testing (allowing their use), and suppress individual failed network tests. All users benefit from enhanced reporting, as they are now able to see the overall status of all interfaces via the API, the UI Machine list, and the UI Interfaces tab; review the health status from all interface tests; and view the interface test results by interface name and MAC.
+
+#### Live IP address detection to prevent address conflicts
+
+In some cases, MAAS connects with subnet which are not empty. Normally, the user has to tell MAAS about IP addresses which are already assigned on that subnet, and if that step is skipped, MAAS may assign and in-deb-2-8-cliuse IP address to one of the machines under its control, leading to an IP conflict.
+
+MAAS 2.7 alleviates this problem by detecting IPs in use on a subnet, so that it can avoid assigning that IP to a MAAS-deb-2-8-climanaged machine. The system is not perfect; for example, if NIC on a subnet-deb-2-8-cliconnected machine is in a quiescent state -deb-2-8-cli-deb-2-8-cli or turned off -deb-2-8-cli-deb-2-8-cli MAAS may not detect it before duplicating the IP. Note that at least one rack controller must have access to the previously-deb-2-8-cliassigned machine in order for this feature to work. MAAS 2.7 will also recognise when the subnet ARP cache is full and re-deb-2-8-clicheck the oldest IPs added to the cache to search for free IP addresses.
+
+### Introductory NUMA / SR-deb-2-8-cliIOV support
+
+NUMA (Non-deb-2-8-cliUniform Memory Access) is a useful way of achieving high-deb-2-8-cliefficiency computing, by pairing a CPU core with a very fast connection to RAM and PCI buses. Typically the CPU socket and the closest banks of DIMM constitute a NUMA node. Obviously, if you’re deploying a MAAS machine under NUMA to get maximum performance, you would like for that machine to be confined to a single NUMA node. MAAS 2.7 introduces this capability.
+
+MAAS will display the NUMA node index and details. Users can also see the count of available NUMA nodes, along with CPU cores, memory, NICS, and node spans for bonds and block devices (although node-deb-2-8-clispanning may not produce suitable performance). From a reporting standpoint, users can filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID.
+
+Similarly, the SR-deb-2-8-cliIOV (Single Root I/O Virtualisation) allows a PCIe device (e.g, a NIC) to appear to be multiple separate devices. A network adaptor can be subdivided into multiple adaptors by adding a Virtual Function (VF). MAAS 2.7 supports the use of multiple VF adaptors to intelligently use SR-deb-2-8-cliIOV edge clouds, by allowing users to see that a NIC supports SR-deb-2-8-cliIOV, along with the supported VF counts.
+
+The goal of this feature is to help users choose the right machine to deploy an edge cloud.
+
+### Settings and user preferences redesign
+
+As part of our efforts to make the UI faster and more responsive, we have completely redesigned the Settings and User preferences within the MAAS UI.
+
+### Strictly-deb-2-8-cliconfined Snap support
+
+With 2.7, MAAS is fully confined within the Snap container. No need for installation qualifiers (such as “-deb-2-8-cli-deb-2-8-clidevmode”) to permit use of external resources, i.e., outside the Snap container. This means that we will begin to transition to recommending the Snap install as the default (and primary) MAAS install method. This also means that MAAS now gains the benefit of confined snap security features.
+
+### Update to hardware information gathering methods
+
+MAAS has switched hardware information gathering from lshw/lsblk to lxd output during commissioning, because it more easily provides the information needed to complete resource discovery. Note that this information may not be particularly reliable for your use, so you may need to create your own commissioning scripts if you need something more detailed or specific.
+
+### Bug fixes
+
+A number of bug fixes (see the [list in Launchpad](https://bugs.launchpad.net/maas/+bugs?field.milestone%3Alist=87757&field.milestone%3Alist=89662&field.milestone%3Alist=89714&field.milestone%3Alist=89840&field.milestone%3Alist=89954&field.milestone%3Alist=89682&field.status%3Alist=FIXRELEASED)).
+snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-clicli snap-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli7 deb-deb-2-8-cli2-deb-2-8-cli7-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<!-deb-2-8-cli-deb-2-8-cli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui
+<h2>MAAS 2.9.2 release notes</h2>
+
+We have released MAAS 2.9.2, which contains two new features, and some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.2). The two new features are:
+
+1. Proxmox driver: A driver has been added to MAAS 2.9.2 which intereacts with the Proxmox API.  Only one URL is needed, though a username and credentials are required.  Credentials can be either a password or an API token.  Note that if you use a token, you have to configure the permissions for the token.  Newly-deb-2-8-clicreated Proxmox tokens don't assign any permissions by default, so you must add `power on`, `power off`, and `query power` permissions to the token before using it.
+
+2. Power driver Webhook:  A webhook was added to 2.9.2, which allows MAAS to interface with another web service that's running the power commands.  This webhook is provided for interacting with objects that MAAS does not support, that is, the MAAS team supports the driver itself, but whatever is interfacing to the driver is not supported.  This webhook as three URLs, one each for power on, power off, and power query.  Optionally, this webhook also supports a power user and password or token (RFC 6717).  This gives you a way to add your own power drivers without waiting for the driver to be added to MAAS.  There is a [video tutorial](maas-deb-2-8-clishow-deb-2-8-cliand-deb-2-8-clitell-deb-2-8-cliproxmox-deb-2-8-cliand-deb-2-8-cliwebhook.html/3) available on this new feature.
+
+You can also find a [digest](#heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cli2) of the 2.9.2 bug fixes below.
+
+<h2>MAAS 2.9.1 release notes</h2>
+
+Building upon MAAS 2.9, we have released 2.9.1, which contains some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.1).  You can find a [digest](#heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cli1) of these fixes below.
+
+<h2>MAAS 2.9 release notes</h2>
+
+Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now available.
+
+#### What are the new features & fixes for MAAS 2.9 and MAAS 2.9.1?
+
+1. [Focal Fossa (20.04) as default commissioning/deployment release](#heading-deb-2-8-cli-deb-2-8-clifocal-deb-2-8-clidefault)
+2. [Support for OpenVswitch bridge type](#heading-deb-2-8-cli-deb-2-8-cliopenvswitch)
+3. [Support for NUMA, SR-deb-2-8-cliIOV, and hugepages](#heading-deb-2-8-cli-deb-2-8-clinuma)
+4. [Improved performance for large MAAS installations](#heading-deb-2-8-cli-deb-2-8-cliimproved-deb-2-8-cliperf-deb-2-8-clilarge-deb-2-8-climaas)
+5. [New release notifications](#heading-deb-2-8-cli-deb-2-8-clinew-deb-2-8-clirelease-deb-2-8-clinotifications)
+6. [IPMI configuration screens](#heading-deb-2-8-cli-deb-2-8-cliipmi-deb-2-8-cliconfig-deb-2-8-cliscreens)
+7. [Descriptions when marking machines broken](#heading-deb-2-8-cli-deb-2-8-clidescrip-deb-2-8-climark-deb-2-8-climach-deb-2-8-clibroken)
+8. [Curtin 20.2 now included](#heading-deb-2-8-cli-deb-2-8-clicurtin-deb-2-8-cli20-deb-2-8-cli2-deb-2-8-cliincluded)
+9. [HTTP boot disabled](#heading-deb-2-8-cli-deb-2-8-clihttp-deb-2-8-cliboot-deb-2-8-clidisabled)
+10. [BMC/IPMI default parameter additions](#heading-deb-2-8-cli-deb-2-8-clibmc-deb-2-8-cliparam-deb-2-8-cliadditions)
+11. [New global IPMI configuration options](#heading-deb-2-8-cli-deb-2-8-clinew-deb-2-8-cliconfig-deb-2-8-clioptions)
+12. [Addition of IPMI config options to UI](#heading-deb-2-8-cli-deb-2-8-cliglobal-deb-2-8-cliconfig-deb-2-8-clisettings)
+13. [New MAAS CLI power command](#heading-deb-2-8-cli-deb-2-8-climaas-deb-2-8-clipower)
+14. [Commissioning speed improvements](#heading-deb-2-8-cli-deb-2-8-clicommissioning-deb-2-8-clispeed)
+15. [BMC improvements](#heading-deb-2-8-cli-deb-2-8-clibmc-deb-2-8-cliimprove)
+16. [IPMI power driver upgrades](#heading-deb-2-8-cli-deb-2-8-cliipmi-deb-2-8-clidriver)
+17. [Enlistment script improvements](#heading-deb-2-8-cli-deb-2-8-clienlistment-deb-2-8-cliscripts)
+18. [Commissioning script improvements](#heading-deb-2-8-cli-deb-2-8-clicommissioning-deb-2-8-cliscripts)
+19. [Commissioning script reordering](#heading-deb-2-8-cli-deb-2-8-clicommissioning-deb-2-8-clireorder)
+20. [Reader Adaptive Documentation](#heading-deb-2-8-cli-deb-2-8-clirad)
+21. [Offline documentation](#heading-deb-2-8-cli-deb-2-8-clioffline-deb-2-8-clidocs)
+
+<h4>Six other questions you may have:</h4>
+
+1. [What known issues should I be aware of?](#heading-deb-2-8-cli-deb-2-8-cliknown-deb-2-8-cliissues)
+2. [How do I install MAAS 2.9?](maas-deb-2-8-cliinstallation.html)
+3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?](maas-deb-2-8-cliinstallation.html#heading-deb-2-8-cli-deb-2-8-cliupgrade-deb-2-8-climaas-deb-2-8-clisnap)
+4. [How do I install MAAS 2.9 from packages?](maas-deb-2-8-cliinstallation.html#heading-deb-2-8-cli-deb-2-8-cliinstall-deb-2-8-clifrom-deb-2-8-clipackages)
+5. [How do I upgrade MAAS 2.8 to MAAS 2.9 using packages?](maas-deb-2-8-cliinstallation.html#heading-deb-2-8-cli-deb-2-8-cliupgrade-deb-2-8-clivia-deb-2-8-clipackages)
+6. [What bugs are fixed so far in this release?](#heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes)
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clifocal-deb-2-8-clidefault">Focal Fossa (Ubuntu 20.04 LTS) as default release</h2>
+
+Ubuntu 20.04 LTS (Focal Fossa) is now the default commissioning and deployment release for new MAAS installations.  Machines deployed with Focal may now be registered as KVM hosts.
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-cliopenvswitch">Support for OpenVswitch bridge type</h2>
+
+MAAS 2.9 allows you to create an OpenVswitch bridge type when creating a bridge.
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clinuma">Support for NUMA, SR-deb-2-8-cliIOV, and hugepages</h2>
+
+MAAS 2.9 adds extensive optimisation tools for using NUMA with virtual machines. You can now see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory. You can quickly spot a VM running in multiple NUMA nodes, and optimise accordingly, with instant updates on pinning and allocations. You can also tell which VMs are currently running.  Using the CLI, you can also pin nodes to specific cores, and configure hugepages for use by VMs.
+
+Specifically, there are five new features available to support NUMA, SR-deb-2-8-cliIOV, and hugepages:
+
+1. You can examine resources on a per-deb-2-8-cliNUMA-deb-2-8-clinode basis.
+2. You can pin nodes to specific cores (CLI only).
+3. You can see resources for VM hosts supporting NUMA nodes.
+4. You can see the alignment between VM host interfaces and NUMA nodes.
+5. You can configure and use hugepages (configurable in CLI only).
+
+This functionality comes with an enhanced panel in the "KVM" details section:
+
+<a href="images/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="images/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a></a>
+
+See the [VM hosting](vm-deb-2-8-clihosting-deb-2-8-clisnap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui.html) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-cliimproved-deb-2-8-cliperf-deb-2-8-clilarge-deb-2-8-climaas">Improved performance for large MAAS installations</h2>
+
+MAAS 2.9 includes changes to the machine batch size that the UI loads. Previously the UI loaded machines in batches of 25; it now pulls in 25 for the first call, then 100 at a time in subsequent batches.
+
+You can see the results of the investigation in [this video podcast](maas-deb-2-8-clishow-deb-2-8-cliand-deb-2-8-clitell-deb-2-8-cliimproving-deb-2-8-cliui-deb-2-8-cliperformance-deb-2-8-clifor-deb-2-8-clilarge-deb-2-8-climaas-deb-2-8-cliinstalls.html).
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clinew-deb-2-8-clirelease-deb-2-8-clinotifications">New release notifications</h2>
+
+MAAS now includes new release notifications for users and administrators.  These appear when a new release is available:
+
+<a href="images/c4f426b9f493a970efcc59c4d948d24fa5f12860.png" target = "_blank"><img src="images/c4f426b9f493a970efcc59c4d948d24fa5f12860.png"></a></a>
+
+Both regular and administrative users can snooze these notifications for two weeks at a time.  Administrative users can opt out of new release notifications completely, preventing notifications for any user of that MAAS.
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-cliipmi-deb-2-8-cliconfig-deb-2-8-cliscreens">IPMI configuration screens</h2>
+
+MAAS now includes UI panels corresponding to the [IPMI power driver upgrades](#heading-deb-2-8-cli-deb-2-8-cliipmi-deb-2-8-clidriver) mentioned earlier:
+
+<a href="images/433b28f5dd807caef7c7382f9a877607c2ea2dac.png" target = "_blank"><img src="images/433b28f5dd807caef7c7382f9a877607c2ea2dac.png"></a></a>
+
+This screen can be reached from `Settings | Configuration | Commissioning`.
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clidescrip-deb-2-8-climark-deb-2-8-climach-deb-2-8-clibroken">Descriptions when marking machines broken</h2>
+
+When marking a machine broken, a description can now included:
+
+<a href="images/69df48044c964d27caf59b60dcf5bf5210894c15.png" target = "_blank"><img src="images/69df48044c964d27caf59b60dcf5bf5210894c15.png"></a></a>
+
+This description appears in that machine's row on the machine list.
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clicurtin-deb-2-8-cli20-deb-2-8-cli2-deb-2-8-cliincluded">Curtin 20.2 now included</h2>
+
+A number of MAAS issues have actually been issues with an older version of Curtin.  MAAS now includes Curtin 20.2, which fixes many of these issues, including [MAAS is changing my boot order!](maas-deb-2-8-cliis-deb-2-8-clichanging-deb-2-8-climy-deb-2-8-cliboot-deb-2-8-cliorder.html).
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clihttp-deb-2-8-cliboot-deb-2-8-clidisabled">HTTP boot disabled</h2>
+
+MAAS 2.9 disables HTTP boot. There are known issues with HTTP boot in MAAS, as well as known issues for HTTP boot with grub (e.g. https://bugs.launchpad.net/maas/+bug/1899581)  This shouldn’t affect machine boot, as machines will normally try PXE as a fallback boot method if HTTP boot fails.  Be aware, though, that machine boot will fail if the BIOS is configured to boot only over HTTP; those machines need to be reconfigured to use PXE.
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clibmc-deb-2-8-cliparam-deb-2-8-cliadditions">30-deb-2-8-climaas-deb-2-8-cli01-deb-2-8-clibmc-deb-2-8-cliconfig parameter additions</h2>
+
+Four new parameters have been added for IPMI BMC configuration.  These parameters will pull from the global defaults, eliminating the need to set the corresponding parameter in each instance.
+
+1. maas_auto_ipmi_user -deb-2-8-cli The username for the MAAS created IPMI user. Default comes from the global configuration setting.
+2. maas_auto_ipmi_user_password -deb-2-8-cli The password for the MAAS created IPMI user, by default a random password is generated.
+3. maas_auto_ipmi_k_g_bmc_key -deb-2-8-cli he IPMI K_g preshared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting. If an IPMI K_g key is set but the key is rejected by the BMC MAAS will automatically retry without the K_g key. This works around an edge case where some BMCs will allow you to set an K_g key but don’t allow it to be used.
+4. maas_auto_ipmi_user_privilege_level -deb-2-8-cli The IPMI user privilege level to use when adding the MAAS IPMI user. Possible options are USER, OPERATOR, or ADMIN. Default comes from the global configuration setting.
+
+Note that MAAS will not capture the BMC MAC address when detecting IPMI BMCs.
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clinew-deb-2-8-cliconfig-deb-2-8-clioptions">New global IPMI configuration options</h2>
+
+Two new global IPMI configuration options have been added:
+
+1. maas_auto_ipmi_k_g_bmc_key -deb-2-8-cli sets a global default IPMI BMC key.
+2. maas_auto_ipmi_user_privilege_level -deb-2-8-cli sets a global default IPMI BMC user privilege level.
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-cliglobal-deb-2-8-cliconfig-deb-2-8-clisettings">Addition of IPMI config options to UI</h2>
+
+You may now set the global configuration options `maas_auto_ipmi_user`, `maas_auto_ipmi_k_g_bmc_key`, and `maas_auto_ipmi_user_privilege_level` on the "Settings" page in the UI under "Commissioning."
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-climaas-deb-2-8-clipower">New maas.power CLI command</h2>
+
+Available in all MAAS 2.9 releases is the new `maas.power` CLI command. This command interfaces directly with the supported MAAS power drivers. This command can be used to control the power on a machine before it has been added to MAAS, for all maas supported power drivers.  You can get power status, turn machines on or off, and cycle power.  The `maas.power -deb-2-8-cli-deb-2-8-clihelp` shows usage details, including syntax for naming each power type (consistent with other MAAS CLI commands).
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clirad">IPMI BMC detection improvements (RAD)</h2>
+
+This release adds two improvements to IPMI BMC detection capability:
+
+1. The IPMI cipher suite ID will now be automatically detected. MAAS tries to find the most secure cipher suite available. Preference order is 17, 3, 8, 12. If detection fails MAAS will fall back to using freeipmi-deb-2-8-clitool default, 3, which is what previous versions of MAAS use.
+2. The IPMI K_g BMC key will now be automatically detected if previously set. 
+
+<h3 id="heading-deb-2-8-cli-deb-2-8-clirad">Reader Adaptive Documentation (RAD)</h3>
+
+This release features Reader Adaptive Documentation, which allows you to adapt individual pages to your install method (Snap vs. Deb), version (2.7/2.8/2.9), and preferred interface (CLI/UI). 
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clioffline-deb-2-8-clidocs">Offline documentation</h2>
+
+This release will include offline documentation for those users whose MAAS installations reside behind firewalls, unable to access the online documentation.
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clibmc-deb-2-8-cliimprove">BMC improvements</h2>
+
+Three substantial improvements to BMC usage have been released:
+
+1. IPMI, HP Moonshot, and Facebook Wedge BMC detection and configuration scripts have been migrated to the commissioning script `30-deb-2-8-climaas-deb-2-8-cli01-deb-2-8-clibmc-deb-2-8-cliconfig `.
+2. BMC detection and configuration are now logged to commissioning results.
+3. If BMC configuration is skipped a ScriptResult will log this result, and indicate which user chose to skip the configuration step.
+
+<h3 id="heading-deb-2-8-cli-deb-2-8-cliipmi-deb-2-8-clidriver">IPMI power driver upgrades</h3>
+
+Three new configuration options have been added to the IPMI power driver:
+
+1. K_g -deb-2-8-cli The BMC Key of the IPMI device. Used to encrypt all traffic to and from the device during communication.
+2. Cipher Suite ID -deb-2-8-cli The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-deb-2-8-clitools default. See http://fish2.com/ipmi/bp.pdf for more information.
+3. Privilege Level -deb-2-8-cli The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
+
+See the [2.9 UI](https://maas.io/docs/snap/2.9/ui/power-deb-2-8-climanagement#heading-deb-2-8-cli-deb-2-8-cliipmi) or [2.9 CLI](https://maas.io/docs/snap/2.9/cli/power-deb-2-8-climanagement#heading-deb-2-8-cli-deb-2-8-cliipmi) power management pages for details.
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clienlistment-deb-2-8-cliscripts">Improvements in enlistment scripting</h2>
+
+Script flow and capabilities have been improved in three ways:
+
+<ol>
+<li>`maas-deb-2-8-clirun-deb-2-8-cliremote-deb-2-8-cliscripts` can now enlist machines.</li>
+<li>Enlistment `user_data` scripts have been removed.</li>
+<li> The metadata endpoints `http://<MAAS>:5240/<latest or 2012-deb-2-8-cli03-deb-2-8-cli01>/` and `http://<MAAS>:5240/<latest or 2012-deb-2-8-cli03-deb-2-8-cli01>/meta-deb-2-8-clidata/` are now available anonymously for use during enlistment.</li>
+</ol>
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clicommissioning-deb-2-8-cliscripts">Major improvements to commissioning script capabilities</h2>
+
+Seven major improvements were made to commissioning script flow and capabilities:
+
+<ol>
+<li>Commissioning scripts can now send BMC configuration data</li>
+<li>Commissioning scripts can now be used to configure BMC data. </li>
+<li>The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts. </li>
+<li>These scripts may write BMC power credentials to BMC_CONFIG_PATH in a YAML format where each key is the power parameter. </li>
+<li>If the commissioning script returns 0, it will be sent to MAAS. </li>
+<li>The first script to write BMC_CONFIG_PATH is the only script that may configure the BMC, allowing you to override MAAS's builtin BMC detection.</li>
+<li>All builtin commissioning scripts have been migrated into the database.</li>
+</ol>
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clicommissioning-deb-2-8-clireorder">Commissioning script reordering</h2>
+
+Commissioning scripts have been reordered and some are now set to run in parallel. You can now easily set a script to run before the builtin MAAS commissioning scripts. There are nine signficant changes:
+
+<ol>
+<li>00-deb-2-8-climaas-deb-2-8-cli03-deb-2-8-cliinstall-deb-2-8-clilldpd -deb-2-8-cli> 20-deb-2-8-climaas-deb-2-8-cli01-deb-2-8-cliinstall-deb-2-8-clilldpd</li>
+
+<li>00-deb-2-8-climaas-deb-2-8-cli05-deb-2-8-clidhcp-deb-2-8-cliunconfigured-deb-2-8-cliifaces -deb-2-8-cli> 20-deb-2-8-climaas-deb-2-8-cli02-deb-2-8-clidhcp-deb-2-8-cliunconfigured-deb-2-8-cliifaces</li>
+
+<li>99-deb-2-8-climaas-deb-2-8-cli05-deb-2-8-clikernel-deb-2-8-clicmdline -deb-2-8-cli> maas -deb-2-8-clikernel-deb-2-8-clicmdline</li>
+
+<li>00-deb-2-8-climaas-deb-2-8-cli00-deb-2-8-clisupport-deb-2-8-cliinfo -deb-2-8-cli> maas-deb-2-8-clisupport-deb-2-8-cliinfo(now runs in parallel)</li>
+
+<li>00-deb-2-8-climaas-deb-2-8-cli01-deb-2-8-clilshw -deb-2-8-cli> maas-deb-2-8-clilshw(now runs in parallel)</li>
+
+<li>00-deb-2-8-climaas-deb-2-8-cli04-deb-2-8-clilist-deb-2-8-climodaliases -deb-2-8-cli> maas-deb-2-8-clilist-deb-2-8-climodaliases(now runs in parallel)</li>
+
+<li>00-deb-2-8-climaas-deb-2-8-cli06-deb-2-8-cliget-deb-2-8-clifruid-deb-2-8-cliapi-deb-2-8-clidata -deb-2-8-cli> maas-deb-2-8-cliget-deb-2-8-clifruid-deb-2-8-cliapi-deb-2-8-clidata(now runs in parallel)</li>
+
+<li>00-deb-2-8-climaas-deb-2-8-cli08-deb-2-8-cliserial-deb-2-8-cliports -deb-2-8-cli> maas-deb-2-8-cliserial-deb-2-8-cliports(now runs in parallel)</li>
+
+<li>99-deb-2-8-climaas-deb-2-8-cli01-deb-2-8-clicapture-deb-2-8-clilldp -deb-2-8-cli> maas-deb-2-8-clicapture-deb-2-8-clilldp(now runs in parallel)</li>
+</ol>
+
+See the [commissioning logs page](https://maas.io/docs/snap/2.9/ui/commissioning-deb-2-8-clilogs) for more details on these changes.
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-clicommissioning-deb-2-8-clispeed">Improvements in commissioning speed and logging</h2>
+
+Four improvements have been made to speed up the commissioning process, mostly by running scripts in parallel (see above):
+
+<ol>
+<li>Commissioning should now take 60s.</li>
+<li>Logging has been added to 20-deb-2-8-climaas-deb-2-8-cli01-deb-2-8-cliinstall-deb-2-8-clilldpd  (commissioning log output).</li>
+<li>Logging added to 20-deb-2-8-climaas-deb-2-8-cli02-deb-2-8-clidhcp-deb-2-8-cliunconfigured-deb-2-8-cliifaces (commissioning log output).</li>
+<li>`user_data` can now be input directly into the UI.</li>
+</ol>
+
+<a href="#heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes"><h2 id="heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes">Bug fixes</h2></a>
+
+<a href="#heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cli2"><h3 id="heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cli2">Bugs fixed in 2.9.2 release</h3></a>
+
+1. In the MAAS UI, ARM servers based on the [Hi1620 ARM SoC appear as an "Unknown model"](https://bugs.launchpad.net/maas/+bug/1897946).  A fix was added to [lxd-deb-2-8-cli4.11]( https://discuss.linuxcontainers.orglxd-deb-2-8-cli4-deb-2-8-cli11-deb-2-8-clihas-deb-2-8-clibeen-deb-2-8-clireleased.html), released 2021-deb-2-8-cli02-deb-2-8-cli05.
+
+2. Debian package installs of MAAS [reached an "impossible situation"](https://bugs.launchpad.net/maas/+bug/1910910) trying to install the MAAS region controller. This is caused because of an unsupported move from the transitional MAAS PPA to the latest PPA.  The workaround is to purge the MAAS packages (and the snap, if installed), and install clean with the latest PPA enabled, which will install the correct versions.
+
+3. CentOS/RHEL 7+ ship with an unsigned version of GRUB [which breaks UEFI secure boot](https://bugs.launchpad.net/curtin/+bug/1895067).  This bug is believed to be fixed in curtin version 21.1, which is now supported by MAAS 2.9.2.
+
+4. Debug [could not be properly enabled for MAAS snap version 2.9.1](https://bugs.launchpad.net/maas/+bug/1914588).  This has been remedied.
+
+5. The MAAS [Backup doc article](https://maas.io/docs/snap/2.9/ui/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
+
+6. Deselecting all architectures in the Ubuntu extra archtectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue.
+
+7. MAAS does not allow [FQDNs to be used in place of IPs](https://bugs.launchpad.net/maas/+bug/1911825) when a BMC extracts the address ffrom the `power_address`.  This incorrect behavior was changed in 2.9.2.
+
+8. The Proxmox driver [uses a hard-deb-2-8-clicoded port that cannot be customized](https://bugs.launchpad.net/maas/+bug/1914165).  This port is now customisable in 2.9.2.
+
+<a href="#heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cli1"><h3 id="heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cli1">Bugs fixed in 2.9.1 release</h3></a>
+
+1. It is now possible to [delete an LXD VM in an offline state](https://bugs.launchpad.net/maas/+bug/1908434).
+2. MAAS now handles multiple NUMA nodes even when there are [gaps in the numbering](https://bugs.launchpad.net/maas/+bug/1910473).
+3. A [snap install issue](https://bugs.launchpad.net/maas/+bug/1910909) was fixed.
+4. The way MAAS handles [gateways WRT DHCP](https://bugs.launchpad.net/maas/+bug/1910909) was adjusted.
+5. A majority of the document [headings have been converted to links](https://bugs.launchpad.net/maas/+bug/1900010) for easy bookmarking.
+
+<a href="#heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes-deb-2-8-cli2-deb-2-8-cli9"><h3 id="heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes-deb-2-8-cli2-deb-2-8-cli9">Bugs fixed in 2.9 release</h3></a>
+
+1. MAAS 2.9 includes a fix for [Bug #1894727: Admin uses cannot change other user's passwords via the UI](https://bugs.launchpad.net/maas/+bug/1894727).
+
+<h2 id="heading-deb-2-8-cli-deb-2-8-cliknown-deb-2-8-cliissues">Known issues</h2>
+
+### RAD LHS menu
+
+There is a known issue with the Reader Adaptive Documentation left-deb-2-8-clihand-deb-2-8-cliside menu (navigation), in that the menu links cannot currently be adapted to the RAD parameters.  This means that selecting a different page in the LHS menu will take you the the RAD for the current recommended version (in this case, Snap/2.8/UI).  Every page that is different in RAD, though, should present you with a top menu, so that you can choose the RAD parameters matching your own preferences.
+
+### Erroneous message about "missing migration"
+
+When upgrading to any release above 2.8, using packages, you may receive a warning about missing migration(s) -deb-2-8-cli-deb-2-8-cli specifically something that looks like this:
+
+
+<pre><code>Setting up maas-deb-2-8-clicommon (2.8.3~rc1-deb-2-8-cli8583-deb-2-8-clig.9ddc8051f-deb-2-8-cli0ubuntu1~18.04.1) ...
+Setting up maas-deb-2-8-cliregion-deb-2-8-cliapi (2.8.3~rc1-deb-2-8-cli8583-deb-2-8-clig.9ddc8051f-deb-2-8-cli0ubuntu1~18.04.1) ...
+Setting up maas-deb-2-8-cliregion-deb-2-8-clicontroller (2.8.3~rc1-deb-2-8-cli8583-deb-2-8-clig.9ddc8051f-deb-2-8-cli0ubuntu1~18.04.1) ...
+Operations to perform:
+  Apply all migrations: auth, contenttypes, maasserver, metadataserver, piston3, sessions, sites
+Running migrations:
+  No migrations to apply.
+  Your models have changes that are not yet reflected in a migration, and so won't be applied.
+  Run 'manage.py makemigrations' to make new migrations, and then re-deb-2-8-clirun 'manage.py migrate' to apply them.
+</code></pre>
+
+
+This warning message has no effect on the installation or operation of MAAS, so it can be safely ignored.
+snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli snap-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-clicli deb-deb-2-8-cli2-deb-2-8-cli9-deb-2-8-cliui -deb-2-8-cli-deb-2-8-cli>
+
+<h2>MAAS 2.8 release notes</h2>
+
+<h3>MAAS 2.8.2 released</h3>
+
+<p>On 1 September 2020, MAAS 2.8.2 was released, replacing the <code>2.8/stable</code> channel in snap and the <a href="https://launchpad.net/~maas/+archive/ubuntu/2.8">ppa:maas/2.8</a>.  You can update your 2.8 release to 2.8.2 by with:</p>
+<pre><code>snap refresh -deb-2-8-cli-deb-2-8-clichannel=2.8/stable
+</code></pre>
+<p>or by using the aforementioned PPA.  The focus for this release has been <a href="https://launchpad.net/maas/+milestone/2.8.2rc1">bugfixing</a> &ndash; there were no changes to MAAS since RC1.</p>
+<p>Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.</p>
+<h3>MAAS 2.8 released</h3>
+
+<p>Following on from MAAS 2.7, we are happy to announce that MAAS 2.8 is now available. This release features some critical bug fixes, along with some exciting new features.</p>
+<h4>Six questions you may have:</h4>
+
+<ol>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clirelease-deb-2-8-clinotes">What are the new features &amp; fixes for 2.8?</a></li>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliknown-deb-2-8-cliissues">What known issues should I be aware of?</a></li>
+<li><a href="maas-deb-2-8-cliinstallation.html">How do I install MAAS 2.8 as a snap?</a></li>
+<li><a href="maas-deb-2-8-cliinstallation.html#heading-deb-2-8-cli-deb-2-8-cliupgrade-deb-2-8-climaas-deb-2-8-clisnap">How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?</a></li>
+<li><a href="maas-deb-2-8-cliinstallation.html">How do I install MAAS 2.8 from packages?</a></li>
+<li><a href="#heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes">What bugs were fixed in this release?</a></li>
+</ol>
+<h2 id="heading-deb-2-8-cli-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-clirelease-deb-2-8-clinotes">LXD-deb-2-8-clibased VM host support (Beta)</h2>
+
+<p>MAAS 2.8 adds the beta capability to use LXD-deb-2-8-clibased VM hosts and virtual machines (VMs), in addition to the <a href="https://ubuntu.com/server/docs/virtualization-deb-2-8-clilibvirt">libvirt</a>-deb-2-8-clibased VM hosts/VMs already available.  These new LXD VM hosts use the same underlying technology as libvirt (QEMU). Unlike libvirt KVMs, though, LXD VMs can be managed without requiring SSH access to the VM host. LXD are remotely accessed via secure HTTP transport, which provides better security for LXD-deb-2-8-clibased VMs. In addition, LXD has a better API, and is part of a much larger constellation of enterprise software, offering a wider range of future features and use cases.</p>
+<h2>UI performance improvements for the machine listing page</h2>
+<p>Within MAAS 2.8, we have made a number of performance improvements to everything related to the machine listing.  Some of the most visible changes involve the way that long lists are presented within categories (see the example below), but there are a number of other changes that make the list easier and more efficient to use.</p>
+<p><a href="images/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg" target = "_blank"><img src="images/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg"></a></a> </p>
+<p>Among those other changes are persisting UI state for grouping, new grouping options, bookmark-deb-2-8-cliable URLs with filter and search parameters, and many other performance improvements. If you&rsquo;re interested in more details, see this <a href="https://ubuntu.com/blog/building-deb-2-8-clia-deb-2-8-clicross-deb-2-8-cliframework-deb-2-8-cliui-deb-2-8-cliwith-deb-2-8-clisingle-deb-2-8-clispa-deb-2-8-cliin-deb-2-8-climaas-deb-2-8-cli2-deb-2-8-cli8">blog post</a>.</p>
+<h2>Support for using an external/remote PostgreSQL MAAS database with the snap version of MAAS</h2>
+<p>In order to make MAAS more scalable, we have separated the MAAS database from the MAAS snap, so that the DB can be situated separately.  MAAS 2.8 now allows the MAAS DB to be located outside the snap on localhost, or on a separate, external or remote server.  We complement this capability with extensive instructions for setting up and managing this configuration.  To support those who are testing MAAS, we&rsquo;ve also provided a test DB configuration that embeds the database in a separate snap that can easily be connected to MAAS.</p>
+<h2 id="heading-deb-2-8-cli-deb-2-8-clibug-deb-2-8-clifixes">Bug fixes</h2>
+
+<p>We&rsquo;ve also fixed number of bugs (see the <a href="https://bugs.launchpad.net/bugs/+bugs?field.milestone%3Alist=89978&amp;field.milestone%3Alist=90576&amp;field.milestone%3Alist=90599&amp;field.milestone%3Alist=90640&amp;field.milestone%3Alist=90645&amp;field.milestone%3Alist=90722&amp;field.milestone%3Alist=91005&amp;field.milestone%3Alist=91123&amp;field.milestone%3Alist=91124&amp;field.milestone%3Alist=91180&amp;field.status%3Alist=FIXRELEASED">list in Launchpad</a>).  Notable among these are the following:</p>
+<ul>
+<li>
+<p><a href="https://bugs.launchpad.net/maas/+bug/1860619">MAAS event table</a>: Power events are now being logged differently to reduce log sizes and improve performance.</p>
+</li>
+<li>
+<p><a href="https://bugs.launchpad.net/maas/+bug/1864201">Unprivileged users controlling services</a>: Unprivileged users can no longer start, stop, or restart services via HTTP channels.</p>
+</li>
+<li>
+<p><a href="https://bugs.launchpad.net/maas/+bug/1852405">Adding KVMs to snap-deb-2-8-cliinstalled MAAS</a>: SSH key usage has been updated so that KVMs can now be added to snap-deb-2-8-cliinstalled MAAS without difficulty.</p>
+</li>
+<li>
+<p><a href="https://bugs.launchpad.net/maas/+bug/1864241">Trouble editing physical interfaces in GUI</a>: It is now possible to edit physical interface parameters, when appropriate, from the web UI.</p>
+</li>
+<li>
+<p><a href="https://bugs.launchpad.net/maas/+bug/1873430">Subnet pages slow to load</a>: Subnet pages now load more quickly and efficiently.</p>
+</li>
+<li>
+<p><a href="https://bugs.launchpad.net/maas/+bug/1865122">Trouble loading multiple MAC addresses</a>: You can now reliably load multiple MAC addresses using the web UI.</p>
+</li>
+<li>
+<p><a href="https://bugs.launchpad.net/maas/+bug/1871584">Disabling DNS on regiond subnet breaks DNS</a>: This problem has been resolved.</p>
+</li>
+</ul>
+<h2 id="heading-deb-2-8-cli-deb-2-8-cli2-deb-2-8-cli8-deb-2-8-cliknown-deb-2-8-cliissues">Known issues</h2>
+
+<ul>
+<li>
+<p><strong>Browser caching issue:</strong> There is a known issue with browser caching on some MAAS pages.  If you initially encounter a page which does not appear to be correctly formatted, please manually clear your browser cache (<strong>not Ctrl-deb-2-8-cliF5</strong>) and it should restore the page to normal.  You manually clear your browser cache, for example, in the &ldquo;History&rdquo; section of the menu on a Chrome browser.</p>
+</li>
+<li>
+<p><strong>Extra power types when adding chassis:</strong> (<a href="https://bugs.launchpad.net/maas/+bug/1883743">see bug report</a>) When adding a chassis, the &ldquo;Power type&rdquo; drop-deb-2-8-clidown will show power types not supported by a chassis.  Selecting one of the non-deb-2-8-clisupported power types will result in the UI blocking the action.  Here is a list of power types supported for chassis creation:</p>
+</li>
+<li><code>mscm</code> -deb-2-8-cli Moonshot Chassis Manager</li>
+<li><code>msftocs</code> -deb-2-8-cli Microsoft OCS Chassis Manager</li>
+<li><code>powerkvm</code> -deb-2-8-cli Virtual Machines on Power KVM, managed by Virsh</li>
+<li><code>recs_box</code> -deb-2-8-cli Christmann RECS|Box servers</li>
+<li><code>sm15k</code> -deb-2-8-cli SeaMicro 1500 Chassis</li>
+<li><code>ucsm</code> -deb-2-8-cli Cisco UCS Manager</li>
+<li><code>virsh</code> -deb-2-8-cli virtual machines managed by Virsh</li>
+<li>
+<p><code>vmware</code> -deb-2-8-cli virtual machines managed by VMware</p>
+</li>
+<li>
+<p><strong>MAAS keys count in user list is bogus:</strong> (<a href="https://bugs.launchpad.net/maas/+bug/1884112">see bug report</a>) The count of keys shown in the User list in the UI is wrong.</p>
+</li>
+<li>
+<p><strong>Leftover lock files may be present under some conditions:</strong> Even if you purge an old MAAS Debian package, it can leave lock files in <code>/run/lock/maas*</code>.  This can cause issues if you later reinstall MAAS, and the previous MAAS user UID has been reassigned.  At that point, MAAS can&rsquo;t remove those files and create new ones.  If this occurs, it is easily fixed by removing those files manually before reinstalling.</p>
+</li>
+</ul>
+    </div>
+  </body>
+</html>

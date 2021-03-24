@@ -1,86 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|CLI ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
-deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ UI|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|CLI ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ UI|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|CLI ~ [UI](/t/commission-machines/2477)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ UI|
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ UI|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|CLI ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ UI|[CLI](/t/commission-machines/2470) ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|CLI ~ [UI](/t/commission-machines/2471)|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/commission-machines/2466) ~ [UI](/t/commission-machines/2467)|[CLI](/t/commission-machines/2468) ~ [UI](/t/commission-machines/2469)|[CLI](/t/commission-machines/2470) ~ UI|
-|Packages|[CLI](/t/commission-machines/2472) ~ [UI](/t/commission-machines/2473)|[CLI](/t/commission-machines/2474) ~ [UI](/t/commission-machines/2475)|[CLI](/t/commission-machines/2476) ~ [UI](/t/commission-machines/2477)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/commission-machines-snap-2-7-cli/2466) ~ [UI](/t/commission-machines-snap-2-7-ui/2467)|[CLI](/t/commission-machines-snap-2-8-cli/2468) ~ [UI](/t/commission-machines-snap-2-8-ui/2469)|[CLI](/t/commission-machines-snap-2-9-cli/2470) ~ [UI](/t/commission-machines-snap-2-9-ui/2471)|[CLI](/t/commission-machines-snap-3-0-cli/3873) ~ [UI](/t/commission-machines-snap-3-0-ui/3874)|
+Packages|[CLI](/t/commission-machines-deb-2-7-cli/2472) ~ [UI](/t/commission-machines-deb-2-7-ui/2473)|[CLI](/t/commission-machines-deb-2-8-cli/2474) ~ [UI](/t/commission-machines-deb-2-8-ui/2475)|[CLI](/t/commission-machines-deb-2-9-cli/2476) ~ [UI](/t/commission-machines-deb-2-9-ui/2477)|[CLI](/t/commission-machines-deb-3-0-cli/3875) ~ [UI](/t/commission-machines-deb-3-0-ui/3876)|
 
 MAAS is built to manage machines, including the operating systems on those machines. Enlistment and commissioning are features that make it easier to start managing a machine -- as long as that machine has been configured to netboot. Enlistment enables users to simply connect a machine, configure the firmware properly, and power it on so that MAAS can find it and add it.
 
@@ -876,8 +797,3 @@ A network bridge may be useful if you intend to put virtual machines or containe
 
 Press the "Save" button when you're done.
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
-
-
-------
-****
-------

@@ -1,84 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|CLI ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ UI|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|CLI ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ UI|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|CLI ~ [UI](/t/disk-erasure/2621)|
- deb-2-9-cli -->
-
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ UI|
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ UI|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|CLI ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ UI|[CLI](/t/disk-erasure/2614) ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|CLI ~ [UI](/t/disk-erasure/2615)|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/disk-erasure/2610) ~ [UI](/t/disk-erasure/2611)|[CLI](/t/disk-erasure/2612) ~ [UI](/t/disk-erasure/2613)|[CLI](/t/disk-erasure/2614) ~ UI|
-|Packages|[CLI](/t/disk-erasure/2616) ~ [UI](/t/disk-erasure/2617)|[CLI](/t/disk-erasure/2618) ~ [UI](/t/disk-erasure/2619)|[CLI](/t/disk-erasure/2620) ~ [UI](/t/disk-erasure/2621)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/disk-erasure-snap-2-7-cli/2610) ~ [UI](/t/disk-erasure-snap-2-7-ui/2611)|[CLI](/t/disk-erasure-snap-2-8-cli/2612) ~ [UI](/t/disk-erasure-snap-2-8-ui/2613)|[CLI](/t/disk-erasure-snap-2-9-cli/2614) ~ [UI](/t/disk-erasure-snap-2-9-ui/2615)|[CLI](/t/disk-erasure-snap-3-0-cli/3921) ~ [UI](/t/disk-erasure-snap-3-0-ui/3922)|
+Packages|[CLI](/t/disk-erasure-deb-2-7-cli/2616) ~ [UI](/t/disk-erasure-deb-2-7-ui/2617)|[CLI](/t/disk-erasure-deb-2-8-cli/2618) ~ [UI](/t/disk-erasure-deb-2-8-ui/2619)|[CLI](/t/disk-erasure-deb-2-9-cli/2620) ~ [UI](/t/disk-erasure-deb-2-9-ui/2621)|[CLI](/t/disk-erasure-deb-3-0-cli/3923) ~ [UI](/t/disk-erasure-deb-3-0-ui/3924)|
 
 Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/concepts-and-terms/785#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
 
@@ -125,11 +48,46 @@ If all three options are checked when the machine is released the following orde
 1.  Use 'secure erase' if the disk supports it
 2.  If it does not then use 'quick erase'
 
-<!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli snap-2-7-cli
+<!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli snap-2-7-cli snap-3-0-cli deb-3-0-cli 
 
 <a href="#heading--erasure-procedure"><h2 id="heading--erasure-procedure">Erasure procedure</h2></a>
 
-When using the [MAAS CLI](/t/maas-cli/802), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli snap-2-7-cli snap-3-0-cli deb-3-0-cli -->
+
+<!-- deb-2-7-cli
+When using the [MAAS CLI](/t/maas-cli/2820), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+ deb-2-7-cli -->
+
+<!-- deb-2-8-cli
+When using the [MAAS CLI](/t/maas-cli/2822), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+ deb-2-8-cli -->
+
+<!-- deb-2-9-cli
+When using the [MAAS CLI](/t/maas-cli/2824), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+ deb-2-9-cli -->
+
+<!-- snap-2-7-cli
+When using the [MAAS CLI](/t/maas-cli/2814), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+ snap-2-7-cli -->
+
+<!-- snap-2-8-cli
+When using the [MAAS CLI](/t/maas-cli/2816), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+ snap-2-8-cli -->
+
+<!-- snap-2-9-cli
+When using the [MAAS CLI](/t/maas-cli/2818), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+ snap-2-9-cli -->
+
+<!-- deb-3-0-cli
+When using the [MAAS CLI](/t/maas-cli/3987), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+ deb-3-0-cli -->
+
+<!-- snap-3-0-cli
+When using the [MAAS CLI](/t/maas-cli/3985), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+ snap-3-0-cli -->
+
+<!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli snap-2-7-cli snap-3-0-cli deb-3-0-cli 
+
 
 ```
 maas $PROFILE machine release...
@@ -141,7 +99,16 @@ and not:
 maas $PROFILE machines release...
 ```
 
-Note the difference in singular and plural "machine/machines" in the commands.  Releasing a machine requires that you have the `system_id` of the machine to be released, which you can obtain with a [basic machine list](/t/the-cli-cookbook/2218#heading--basic-machine-list):
+Note the difference in singular and plural "machine/machines" in the commands.  Releasing a machine requires that you have the `system_id` of the machine to be released, which you can obtain with a command like this one:
+
+```
+maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
+"OWNER", "TAGS", "POOL", "VLAN","FABRIC","SUBNET"] | (., map(length*"-"))),
+(.[] | [.hostname, .system_id, .power_state, .status_name, .owner // "-", 
+.tag_names[0] // "-", .pool.name,
+.boot_interface.vlan.name, .boot_interface.vlan.fabric,
+.boot_interface.links[0].subnet.name]) | @tsv' | column -t
+```
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
 </a>
@@ -172,9 +139,4 @@ then MAAS will perform a secure erasure if the drive has that feature; if not, i
 maas $PROFILE machine release $SYSTEM_ID comment="some comment" erase=true
 ```
 
-deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli snap-2-7-cli -->
-
-
-------
-****
-------
+deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli snap-2-7-cli snap-3-0-cli deb-3-0-cli -->

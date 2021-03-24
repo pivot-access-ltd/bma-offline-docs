@@ -1,3 +1,7 @@
+||2.7|2.8|2.9|2.10|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/the-cli-cookbook-snap-2-7-cli/3138) ~ [UI](/t/the-cli-cookbook-snap-2-7-ui/3139)|[CLI](/t/the-cli-cookbook-snap-2-8-cli/3140) ~ [UI](/t/the-cli-cookbook-snap-2-8-ui/3141)|[CLI](/t/the-cli-cookbook-snap-2-9-cli/3142) ~ [UI](/t/the-cli-cookbook-snap-2-9-ui/3143)|[CLI](/t/the-cli-cookbook-snap-2-10-cli/4121) ~ [UI](/t/the-cli-cookbook-snap-2-10-ui/4122)|
+Packages|[CLI](/t/the-cli-cookbook-deb-2-7-cli/3144) ~ [UI](/t/the-cli-cookbook-deb-2-7-ui/3145)|[CLI](/t/the-cli-cookbook-deb-2-8-cli/3146) ~ [UI](/t/the-cli-cookbook-deb-2-8-ui/3147)|[CLI](/t/the-cli-cookbook-deb-2-9-cli/3148) ~ [UI](/t/the-cli-cookbook-deb-2-9-ui/3149)|[CLI](/t/the-cli-cookbook-deb-2-10-cli/4123) ~ [UI](/t/the-cli-cookbook-deb-2-10-ui/4124)|
 The following recipes may help you make better use of the [MAAS CLI](/t/maas-cli/802).  Each recipe includes the relevant CLI command sequence, with the results processed through `jq` and other relevant command-line utilities to produce cleaner output.  Understand that this material isn't meant to replace the CLI, just to give you some hints about using it.
 
 #### Catalogue of recipes:

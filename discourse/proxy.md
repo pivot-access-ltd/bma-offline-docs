@@ -1,84 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/proxy/3030) ~ [UI](/t/proxy/3031)|[CLI](/t/proxy/3032) ~ [UI](/t/proxy/3033)|[CLI](/t/proxy/3034) ~ [UI](/t/proxy/3035)|
-|Packages|CLI ~ [UI](/t/proxy/3037)|[CLI](/t/proxy/3038) ~ [UI](/t/proxy/3039)|[CLI](/t/proxy/3040) ~ [UI](/t/proxy/3041)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/proxy/3030) ~ [UI](/t/proxy/3031)|[CLI](/t/proxy/3032) ~ [UI](/t/proxy/3033)|[CLI](/t/proxy/3034) ~ [UI](/t/proxy/3035)|
-|Packages|[CLI](/t/proxy/3036) ~ UI|[CLI](/t/proxy/3038) ~ [UI](/t/proxy/3039)|[CLI](/t/proxy/3040) ~ [UI](/t/proxy/3041)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/proxy/3030) ~ [UI](/t/proxy/3031)|[CLI](/t/proxy/3032) ~ [UI](/t/proxy/3033)|[CLI](/t/proxy/3034) ~ [UI](/t/proxy/3035)|
-|Packages|[CLI](/t/proxy/3036) ~ [UI](/t/proxy/3037)|CLI ~ [UI](/t/proxy/3039)|[CLI](/t/proxy/3040) ~ [UI](/t/proxy/3041)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/proxy/3030) ~ [UI](/t/proxy/3031)|[CLI](/t/proxy/3032) ~ [UI](/t/proxy/3033)|[CLI](/t/proxy/3034) ~ [UI](/t/proxy/3035)|
-|Packages|[CLI](/t/proxy/3036) ~ [UI](/t/proxy/3037)|[CLI](/t/proxy/3038) ~ UI|[CLI](/t/proxy/3040) ~ [UI](/t/proxy/3041)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/proxy/3030) ~ [UI](/t/proxy/3031)|[CLI](/t/proxy/3032) ~ [UI](/t/proxy/3033)|[CLI](/t/proxy/3034) ~ [UI](/t/proxy/3035)|
-|Packages|[CLI](/t/proxy/3036) ~ [UI](/t/proxy/3037)|[CLI](/t/proxy/3038) ~ [UI](/t/proxy/3039)|CLI ~ [UI](/t/proxy/3041)|
- deb-2-9-cli -->
-
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/proxy/3030) ~ [UI](/t/proxy/3031)|[CLI](/t/proxy/3032) ~ [UI](/t/proxy/3033)|[CLI](/t/proxy/3034) ~ [UI](/t/proxy/3035)|
-|Packages|[CLI](/t/proxy/3036) ~ [UI](/t/proxy/3037)|[CLI](/t/proxy/3038) ~ [UI](/t/proxy/3039)|[CLI](/t/proxy/3040) ~ UI|
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/proxy/3031)|[CLI](/t/proxy/3032) ~ [UI](/t/proxy/3033)|[CLI](/t/proxy/3034) ~ [UI](/t/proxy/3035)|
-|Packages|[CLI](/t/proxy/3036) ~ [UI](/t/proxy/3037)|[CLI](/t/proxy/3038) ~ [UI](/t/proxy/3039)|[CLI](/t/proxy/3040) ~ [UI](/t/proxy/3041)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/proxy/3030) ~ UI|[CLI](/t/proxy/3032) ~ [UI](/t/proxy/3033)|[CLI](/t/proxy/3034) ~ [UI](/t/proxy/3035)|
-|Packages|[CLI](/t/proxy/3036) ~ [UI](/t/proxy/3037)|[CLI](/t/proxy/3038) ~ [UI](/t/proxy/3039)|[CLI](/t/proxy/3040) ~ [UI](/t/proxy/3041)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/proxy/3030) ~ [UI](/t/proxy/3031)|CLI ~ [UI](/t/proxy/3033)|[CLI](/t/proxy/3034) ~ [UI](/t/proxy/3035)|
-|Packages|[CLI](/t/proxy/3036) ~ [UI](/t/proxy/3037)|[CLI](/t/proxy/3038) ~ [UI](/t/proxy/3039)|[CLI](/t/proxy/3040) ~ [UI](/t/proxy/3041)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/proxy/3030) ~ [UI](/t/proxy/3031)|[CLI](/t/proxy/3032) ~ UI|[CLI](/t/proxy/3034) ~ [UI](/t/proxy/3035)|
-|Packages|[CLI](/t/proxy/3036) ~ [UI](/t/proxy/3037)|[CLI](/t/proxy/3038) ~ [UI](/t/proxy/3039)|[CLI](/t/proxy/3040) ~ [UI](/t/proxy/3041)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/proxy/3030) ~ [UI](/t/proxy/3031)|[CLI](/t/proxy/3032) ~ [UI](/t/proxy/3033)|CLI ~ [UI](/t/proxy/3035)|
-|Packages|[CLI](/t/proxy/3036) ~ [UI](/t/proxy/3037)|[CLI](/t/proxy/3038) ~ [UI](/t/proxy/3039)|[CLI](/t/proxy/3040) ~ [UI](/t/proxy/3041)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/proxy/3030) ~ [UI](/t/proxy/3031)|[CLI](/t/proxy/3032) ~ [UI](/t/proxy/3033)|[CLI](/t/proxy/3034) ~ UI|
-|Packages|[CLI](/t/proxy/3036) ~ [UI](/t/proxy/3037)|[CLI](/t/proxy/3038) ~ [UI](/t/proxy/3039)|[CLI](/t/proxy/3040) ~ [UI](/t/proxy/3041)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/proxy-snap-2-7-cli/3030) ~ [UI](/t/proxy-snap-2-7-ui/3031)|[CLI](/t/proxy-snap-2-8-cli/3032) ~ [UI](/t/proxy-snap-2-8-ui/3033)|[CLI](/t/proxy-snap-2-9-cli/3034) ~ [UI](/t/proxy-snap-2-9-ui/3035)|[CLI](/t/proxy-snap-3-0-cli/4081) ~ [UI](/t/proxy-snap-3-0-ui/4082)|
+Packages|[CLI](/t/proxy-deb-2-7-cli/3036) ~ [UI](/t/proxy-deb-2-7-ui/3037)|[CLI](/t/proxy-deb-2-8-cli/3038) ~ [UI](/t/proxy-deb-2-8-ui/3039)|[CLI](/t/proxy-deb-2-9-cli/3040) ~ [UI](/t/proxy-deb-2-9-ui/3041)|[CLI](/t/proxy-deb-3-0-cli/4083) ~ [UI](/t/proxy-deb-3-0-ui/4084)|
 
 MAAS provides a way for its managed machines to use a proxy server when they need to access HTTP/HTTPS-based resources, such as the Ubuntu package archive.
 
@@ -101,17 +24,19 @@ MAAS provides an internal proxy server. Although it is set up to work well with 
 
 By default, the proxy is available to all hosts residing in any subnet detected by MAAS, not just MAAS-managed machines. It is therefore recommended to disable access to those subnets that represent untrusted networks.
 
+<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli  snap-3-0-cli deb-3-0-cli 
 MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
 
 You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
+deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
+<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-cli deb-3-0-cli 
 MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
-snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
+snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <a href="#heading--configure-proxy"><h2 id="heading--configure-proxy">Configure proxy</h2></a>
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 Enabling and disabling proxying, in general, is done via a boolean option ('true' or 'false'). The following command will disable proxying completely:
 
 ``` bash
@@ -143,7 +68,7 @@ For example,
 maas $PROFILE subnet update 192.168.0.0/22 allow_proxy=false
 ```
 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 In the web UI, visit the 'Settings' page and select the 'Network services' tab. The 'Proxy' section is at the top. You can apply your changes by pressing the 'Save' button.
 
@@ -158,8 +83,3 @@ An upstream cache peer can be defined by enabling the 'Peer' checkbox and enteri
 To prevent MAAS machines from using a proxy, enable the 'Don't use a proxy' checkbox.
 
 **NOTE** that the proxy service will still be running.
-
-
-------
-****
-------

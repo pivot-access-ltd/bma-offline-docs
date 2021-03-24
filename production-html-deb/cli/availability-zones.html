@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.9
+	    What&rsquo;s new in 2.10
 	  </a>
 	</li>
 	<li>
@@ -429,28 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Availability zones</h1><!-- flip -->
-
-<!-- deb-2-7-cli
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
- snap-2-7-ui -->
+      <h1>Availability zones</h1><!-- begin-rad-menu -->
 
 <!-- snap-2-8-cli
  snap-2-8-cli -->
@@ -464,34 +443,57 @@
 <!-- snap-2-9-ui
  snap-2-9-ui -->
 
-<!-- deb-2-7-cli
-An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
- deb-2-7-cli -->
+<!-- snap-2-10-cli
+ snap-2-10-cli -->
 
-<!-- deb-2-7-ui
-An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
- deb-2-7-ui -->
+<!-- snap-2-10-ui
+ snap-2-10-ui -->
 
 <!-- deb-2-8-cli
-An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
  deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- deb-2-10-ui
+ deb-2-10-ui -->
+
+<!-- end-rad-menu -->
 
 <p>An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See <a href="zone-examples.html">Zone examples</a> for more details.</p>
+<!-- deb-2-10-ui
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ deb-2-10-ui -->
+
+<!-- deb-2-8-cli
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
+ deb-2-9-cli -->
+
 <!-- deb-2-9-ui
 An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
  deb-2-9-ui -->
 
-<!-- snap-2-7-cli
+<!-- snap-2-10-cli
 An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
- snap-2-7-cli -->
+ snap-2-10-cli -->
 
-<!-- snap-2-7-ui
+<!-- snap-2-10-ui
 An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
- snap-2-7-ui -->
+ snap-2-10-ui -->
 
 <!-- snap-2-8-cli
 An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
@@ -508,6 +510,8 @@ An availability zone is an organisational unit containing nodes, where each node
 <!-- snap-2-9-ui
 An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](zone-examples.html) for more details.
  snap-2-9-ui -->
+
+<!-- end-rad-menu -->
 
 <p>A newly installed MAAS comes with a default zone which initially contains all nodes. You cannot remove the &lsquo;default&rsquo; zone or change its name, but you can create new zones and assign machine to them.  You can safely ignore this article if you&rsquo;re not interested in leveraging zones.</p>
 <h4>Six questions you may have:</h4>
@@ -519,7 +523,7 @@ An availability zone is an organisational unit containing nodes, where each node
 <li><a href="#heading--assign-a-node-to-a-zone">How do I assign a machine to an availability zone?</a></li>
 <li><a href="#heading--allocate-a-node-in-a-zone">How do I allocate a machine in a particular zone?</a></li>
 </ol>
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
 
 <a href="#heading--list-zones"><h2 id="heading--list-zones">List availabilty zones</h2></a>
 
@@ -558,7 +562,7 @@ To assign a machine to a zone, from the 'Machines' page, select a machine (or mu
 After selecting a zone hit the 'Set zone...' button to apply the change.
 
 You can also edit a machine's 'Configuration' page to change its zone.
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
 
 <p><a href="#heading--list-zones"><h2 id="heading--list-zones">List availability zones</h2></a></p>
 <p>To see a list of availability zones, enter the following command:</p>
@@ -608,8 +612,6 @@ description=$ZONE_DESCRIPTION
 <p>To deploy in a particular zone, call the <code>acquire</code> method in the region-controller API &lt;region-controller-api&gt; as before, but pass the <code>zone</code> parameter with the name of the zone. This method will allocate a machine in that zone, or fail with an HTTP 409 (&ldquo;conflict&rdquo;) error if the zone has no machines available that match your request.</p>
 <p>Alternatively, you may want to request a machine that is not in a particular zone or one that is not in any of several zones. To do that, specify the <code>not_in_zone</code> parameter to <code>acquire</code>. This parameter takes a list of zone names; the allocated machine will not be in any of them. Again, if that leaves no machines available that match your request, the call will return a &ldquo;conflict&rdquo; error.</p>
 <p>It is possible, though not usually useful, to combine the <code>zone</code> and <code>not_in_zone</code> parameters. If your choice for <code>zone</code> is also present in <code>not_in_zone</code>, no machine will ever match your request. Or if it&rsquo;s not, then the <code>not_in_zone</code> values will not affect the result of the call at all.</p>
-<hr>
-<h2>****</h2>
     </div>
   </body>
 </html>

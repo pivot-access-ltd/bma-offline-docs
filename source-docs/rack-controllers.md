@@ -1,86 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|CLI ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ UI|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|CLI ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ UI|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|CLI ~ [UI](/t/rack-controllers/3065)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ UI|
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ UI|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|CLI ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ UI|[CLI](/t/rack-controllers/3058) ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|CLI ~ [UI](/t/rack-controllers/3059)|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/rack-controllers/3054) ~ [UI](/t/rack-controllers/3055)|[CLI](/t/rack-controllers/3056) ~ [UI](/t/rack-controllers/3057)|[CLI](/t/rack-controllers/3058) ~ UI|
-|Packages|[CLI](/t/rack-controllers/3060) ~ [UI](/t/rack-controllers/3061)|[CLI](/t/rack-controllers/3062) ~ [UI](/t/rack-controllers/3063)|[CLI](/t/rack-controllers/3064) ~ [UI](/t/rack-controllers/3065)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/rack-controllers-snap-2-7-cli/3054) ~ [UI](/t/rack-controllers-snap-2-7-ui/3055)|[CLI](/t/rack-controllers-snap-2-8-cli/3056) ~ [UI](/t/rack-controllers-snap-2-8-ui/3057)|[CLI](/t/rack-controllers-snap-2-9-cli/3058) ~ [UI](/t/rack-controllers-snap-2-9-ui/3059)|[CLI](/t/rack-controllers-snap-3-0-cli/4089) ~ [UI](/t/rack-controllers-snap-3-0-ui/4090)|
+Packages|[CLI](/t/rack-controllers-deb-2-7-cli/3060) ~ [UI](/t/rack-controllers-deb-2-7-ui/3061)|[CLI](/t/rack-controllers-deb-2-8-cli/3062) ~ [UI](/t/rack-controllers-deb-2-8-ui/3063)|[CLI](/t/rack-controllers-deb-2-9-cli/3064) ~ [UI](/t/rack-controllers-deb-2-9-ui/3065)|[CLI](/t/rack-controllers-deb-3-0-cli/4091) ~ [UI](/t/rack-controllers-deb-3-0-ui/4092)|
 
 A rack controller can connect to multiple VLANs, each from a different network interface. A rack controller can only connect to one MAAS instance at any given time, and must connect to an instance that matches its MAAS version (major and minor).  This configuration provides a scaling factor that can help as a network architecture grows in size.
 
@@ -399,10 +320,3 @@ There are dangers associate with moving a rack controller -- dangers that may ge
 * **Connecting one instance of a rack controller to two instances of MAAS, regardless of version:** Trying to connect a single rack controller to two different instances of MAAS can result in all sorts of unpredictable (and potentially catastrophic) behavior.  It is not a supported configuration.
 
 Take these warnings to heart.  It may seem like a faster approach to "bridge" your existing rack controllers from one MAAS to another -- or from one version of MAAS to another -- while they're running.  Ultimately, though, it will probably result in more work than just following the recommended approach.
-
-
-
-
-------
-****
-------

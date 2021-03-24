@@ -1,87 +1,7 @@
-<!-- flip -->
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
-|Packages|CLI ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
-|Packages|[CLI](/t/availability-zones/2328) ~ UI|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
-|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|CLI ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
-|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ UI|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
-|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|CLI ~ [UI](/t/availability-zones/2333)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
-|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ UI|
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
-|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/availability-zones/2322) ~ UI|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
-|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|CLI ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
-|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ UI|[CLI](/t/availability-zones/2326) ~ [UI](/t/availability-zones/2327)|
-|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|CLI ~ [UI](/t/availability-zones/2327)|
-|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/availability-zones/2322) ~ [UI](/t/availability-zones/2323)|[CLI](/t/availability-zones/2324) ~ [UI](/t/availability-zones/2325)|[CLI](/t/availability-zones/2326) ~ UI|
-|Packages|[CLI](/t/availability-zones/2328) ~ [UI](/t/availability-zones/2329)|[CLI](/t/availability-zones/2330) ~ [UI](/t/availability-zones/2331)|[CLI](/t/availability-zones/2332) ~ [UI](/t/availability-zones/2333)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/availability-zones-snap-2-7-cli/2322) ~ [UI](/t/availability-zones-snap-2-7-ui/2323)|[CLI](/t/availability-zones-snap-2-8-cli/2324) ~ [UI](/t/availability-zones-snap-2-8-ui/2325)|[CLI](/t/availability-zones-snap-2-9-cli/2326) ~ [UI](/t/availability-zones-snap-2-9-ui/2327)|[CLI](/t/availability-zones-snap-3-0-cli/3833) ~ [UI](/t/availability-zones-snap-3-0-ui/3834)|
+Packages|[CLI](/t/availability-zones-deb-2-7-cli/2328) ~ [UI](/t/availability-zones-deb-2-7-ui/2329)|[CLI](/t/availability-zones-deb-2-8-cli/2330) ~ [UI](/t/availability-zones-deb-2-8-ui/2331)|[CLI](/t/availability-zones-deb-2-9-cli/2332) ~ [UI](/t/availability-zones-deb-2-9-ui/2333)|[CLI](/t/availability-zones-deb-3-0-cli/3835) ~ [UI](/t/availability-zones-deb-3-0-ui/3836)|
 
 <!-- deb-2-7-cli
 An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](/t/zone-examples/3276) for more details.
@@ -107,6 +27,14 @@ An availability zone is an organisational unit containing nodes, where each node
 An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](/t/zone-examples/3281) for more details.
  deb-2-9-ui -->
 
+<!-- deb-3-0-cli
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](/t/zone-examples/4191) for more details.
+ deb-3-0-cli -->
+
+<!-- deb-3-0-ui
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](/t/zone-examples/4192) for more details.
+ deb-3-0-ui -->
+
 <!-- snap-2-7-cli
 An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](/t/zone-examples/3270) for more details.
  snap-2-7-cli -->
@@ -131,6 +59,14 @@ An availability zone is an organisational unit containing nodes, where each node
 An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](/t/zone-examples/3275) for more details.
  snap-2-9-ui -->
 
+<!-- snap-3-0-cli
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](/t/zone-examples/4189) for more details.
+ snap-3-0-cli -->
+
+<!-- snap-3-0-ui
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](/t/zone-examples/4190) for more details.
+ snap-3-0-ui -->
+
 A newly installed MAAS comes with a default zone which initially contains all nodes. You cannot remove the 'default' zone or change its name, but you can create new zones and assign machine to them.  You can safely ignore this article if you're not interested in leveraging zones.
 
 #### Six questions you may have:
@@ -142,7 +78,7 @@ A newly installed MAAS comes with a default zone which initially contains all no
 5. [How do I assign a machine to an availability zone?](#heading--assign-a-node-to-a-zone)
 6. [How do I allocate a machine in a particular zone?](#heading--allocate-a-node-in-a-zone)
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 
 <a href="#heading--list-zones"><h2 id="heading--list-zones">List availabilty zones</h2></a>
 
@@ -181,9 +117,9 @@ To assign a machine to a zone, from the 'Machines' page, select a machine (or mu
 After selecting a zone hit the 'Set zone...' button to apply the change.
 
 You can also edit a machine's 'Configuration' page to change its zone.
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 
 <a href="#heading--list-zones"><h2 id="heading--list-zones">List availability zones</h2></a>
 
@@ -255,9 +191,4 @@ To deploy in a particular zone, call the `acquire` method in the region-controll
 Alternatively, you may want to request a machine that is not in a particular zone or one that is not in any of several zones. To do that, specify the `not_in_zone` parameter to `acquire`. This parameter takes a list of zone names; the allocated machine will not be in any of them. Again, if that leaves no machines available that match your request, the call will return a "conflict" error.
 
 It is possible, though not usually useful, to combine the `zone` and `not_in_zone` parameters. If your choice for `zone` is also present in `not_in_zone`, no machine will ever match your request. Or if it's not, then the `not_in_zone` values will not affect the result of the call at all.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
-
-
-------
-****
-------
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->

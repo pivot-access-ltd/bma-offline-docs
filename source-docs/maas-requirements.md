@@ -1,86 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
-|Packages|CLI ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
-|Packages|[CLI](/t/maas-requirements/2880) ~ UI|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
-|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|CLI ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
-|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ UI|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
-|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|CLI ~ [UI](/t/maas-requirements/2885)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
-|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ UI|
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
-|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-requirements/2874) ~ UI|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
-|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|CLI ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
-|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ UI|[CLI](/t/maas-requirements/2878) ~ [UI](/t/maas-requirements/2879)|
-|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|CLI ~ [UI](/t/maas-requirements/2879)|
-|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-requirements/2874) ~ [UI](/t/maas-requirements/2875)|[CLI](/t/maas-requirements/2876) ~ [UI](/t/maas-requirements/2877)|[CLI](/t/maas-requirements/2878) ~ UI|
-|Packages|[CLI](/t/maas-requirements/2880) ~ [UI](/t/maas-requirements/2881)|[CLI](/t/maas-requirements/2882) ~ [UI](/t/maas-requirements/2883)|[CLI](/t/maas-requirements/2884) ~ [UI](/t/maas-requirements/2885)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/maas-requirements-snap-2-7-cli/2874) ~ [UI](/t/maas-requirements-snap-2-7-ui/2875)|[CLI](/t/maas-requirements-snap-2-8-cli/2876) ~ [UI](/t/maas-requirements-snap-2-8-ui/2877)|[CLI](/t/maas-requirements-snap-2-9-cli/2878) ~ [UI](/t/maas-requirements-snap-2-9-ui/2879)|[CLI](/t/maas-requirements-snap-3-0-cli/4013) ~ [UI](/t/maas-requirements-snap-3-0-ui/4014)|
+Packages|[CLI](/t/maas-requirements-deb-2-7-cli/2880) ~ [UI](/t/maas-requirements-deb-2-7-ui/2881)|[CLI](/t/maas-requirements-deb-2-8-cli/2882) ~ [UI](/t/maas-requirements-deb-2-8-ui/2883)|[CLI](/t/maas-requirements-deb-2-9-cli/2884) ~ [UI](/t/maas-requirements-deb-2-9-ui/2885)|[CLI](/t/maas-requirements-deb-3-0-cli/4015) ~ [UI](/t/maas-requirements-deb-3-0-ui/4016)|
 
 The minimum requirements for the machines that run MAAS vary widely depending on local implementation and usage.  Below, you will find resource estimates based on MAAS components and operating system (Ubuntu Server). We consider both a test configuration (for proof of concept) and a production environment.
 
@@ -279,7 +200,3 @@ Some examples of factors that influence hardware specifications include:
 Also, this discussion does not take into account a possible local image mirror, which would be a large consumer of disk space.
 
 One rack controller should only service 1000 machines or less, regardless of how you distribute them across subnets. There is no load balancing at the rack level, so you will need additional, independent rack controllers. Each controller must service its own subnet(s).
-
-------
-****
-------

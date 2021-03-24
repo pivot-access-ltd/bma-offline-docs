@@ -1,86 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|CLI ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ UI|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|CLI ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ UI|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|CLI ~ [UI](/t/maas-tags/2897)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ UI|
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ UI|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|CLI ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ UI|[CLI](/t/maas-tags/2890) ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|CLI ~ [UI](/t/maas-tags/2891)|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-tags/2886) ~ [UI](/t/maas-tags/2887)|[CLI](/t/maas-tags/2888) ~ [UI](/t/maas-tags/2889)|[CLI](/t/maas-tags/2890) ~ UI|
-|Packages|[CLI](/t/maas-tags/2892) ~ [UI](/t/maas-tags/2893)|[CLI](/t/maas-tags/2894) ~ [UI](/t/maas-tags/2895)|[CLI](/t/maas-tags/2896) ~ [UI](/t/maas-tags/2897)|
- snap-2-9-ui -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/maas-tags-snap-2-7-cli/2886) ~ [UI](/t/maas-tags-snap-2-7-ui/2887)|[CLI](/t/maas-tags-snap-2-8-cli/2888) ~ [UI](/t/maas-tags-snap-2-8-ui/2889)|[CLI](/t/maas-tags-snap-2-9-cli/2890) ~ [UI](/t/maas-tags-snap-2-9-ui/2891)|[CLI](/t/maas-tags-snap-3-0-cli/4021) ~ [UI](/t/maas-tags-snap-3-0-ui/4022)|
+Packages|[CLI](/t/maas-tags-deb-2-7-cli/2892) ~ [UI](/t/maas-tags-deb-2-7-ui/2893)|[CLI](/t/maas-tags-deb-2-8-cli/2894) ~ [UI](/t/maas-tags-deb-2-8-ui/2895)|[CLI](/t/maas-tags-deb-2-9-cli/2896) ~ [UI](/t/maas-tags-deb-2-9-ui/2897)|[CLI](/t/maas-tags-deb-3-0-cli/4023) ~ [UI](/t/maas-tags-deb-3-0-ui/4024)|
 
 Tags are a convenient way to assign descriptive words to machines, interfaces, and storage devices. Using MAAS tags, you can easily select machines that meet certain criteria, helping you to remember that you've defined or reserved certain machines for certain functions. 
 
@@ -88,60 +9,15 @@ Tags are a convenient way to assign descriptive words to machines, interfaces, a
  Tag names can include any combination of letters, numbers, dashes (-) and underscores (_), and be a maximum of 256 characters in length.
 [/note]
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 #### Five questions you may have:
- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-
-<!-- deb-2-7-ui
 1. [How are tags defined?](#heading--tag-definitions)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-deb-2-7-cli/2892#heading--per-node-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](#heading--per-node-kernel-boot-options)
 3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
 4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
 5. [How do I manage tags?](#heading--tag-management)
- deb-2-7-ui -->
 
-<!-- deb-2-8-ui
-1. [How are tags defined?](#heading--tag-definitions)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-deb-2-8-cli/2894#heading--per-node-kernel-boot-options)
-3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
-4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
-5. [How do I manage tags?](#heading--tag-management)
- deb-2-8-ui -->
-
-<!-- deb-2-9-ui
-1. [How are tags defined?](#heading--tag-definitions)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-deb-2-9-cli/2896#heading--per-node-kernel-boot-options)
-3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
-4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
-5. [How do I manage tags?](#heading--tag-management)
- deb-2-9-ui -->
-
-<!-- snap-2-7-ui
-1. [How are tags defined?](#heading--tag-definitions)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-snap-2-7-cli/2886#heading--per-node-kernel-boot-options)
-3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
-4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
-5. [How do I manage tags?](#heading--tag-management)
- snap-2-7-ui -->
-
-<!-- snap-2-8-ui
-1. [How are tags defined?](#heading--tag-definitions)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-snap-2-8-cli/2888#heading--per-node-kernel-boot-options)
-3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
-4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
-5. [How do I manage tags?](#heading--tag-management)
- snap-2-8-ui -->
-
-<!-- snap-2-9-ui
-1. [How are tags defined?](#heading--tag-definitions)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-snap-2-9-cli/2890#heading--per-node-kernel-boot-options)
-3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
-4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
-5. [How do I manage tags?](#heading--tag-management)
- snap-2-9-ui -->
-
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 MAAS supports binding an XPath expressions to a tag using *tag definitions* (see below). This makes auto-assigning tags to matching hardware possible. For instance, you could tag machines that possess fast GPUs and then deploy software that used GPU-accelerated CUDA or OpenCL libraries.
 
 Because [Juju](https://jujucharms.com/docs/stable/about-juju.html) is the recommended way to deploy services on machines managed by MAAS (see [below](#heading--tag-management)), it supports MAAS tags for application deployments. By specifying MAAS tags as Juju "constraints", services can be deployed to machines that have particular user-defined characteristics.
@@ -244,21 +120,20 @@ To add a tag to a storage device, click on the machine with the storage you wish
 To add a tag, type its name into the 'Tags' field and press Enter. Repeat as desired. Use the small 'x' next to a tag to unassign the tag.
 
 You can apply changes by pressing the 'Save' button.
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
-#### Ten questions you may have:
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+#### Nine questions you may have:
 
-1. [How do I get started with the MAAS CLI?](/t/maas-cli/802)
-2. [How can I set kernel boot options for a specific machine?](#heading--per-node-kernel-boot-options)
-3. [How do I create tags?](#heading--rudimentary-tag-creation)
-4. [How do I do tag creation and auto-assignment?](#heading--tag-creation-and-auto-assignment)
-5. [How do I delete a tag?](#heading--delete-a-tag)
-6. [How do I list all tags?](#heading--list-all-tags)
-7. [How do I list nodes/machines labelled with a tag?](#heading--list-nodesmachines-labelled-with-a-tag)
-8. [How do I handle Juju integration?](#heading--juju-integration)
-9. [How do I effect manual tag assignment?](#heading--manual-tag-assignment)
-10. [How do I effect hybrid tag assignment?](#heading--hybrid-tag-assignment)
+1. [How can I set kernel boot options for a specific machine?](#heading--per-node-kernel-boot-options)
+2. [How do I create tags?](#heading--rudimentary-tag-creation)
+3. [How do I do tag creation and auto-assignment?](#heading--tag-creation-and-auto-assignment)
+4. [How do I delete a tag?](#heading--delete-a-tag)
+5. [How do I list all tags?](#heading--list-all-tags)
+6. [How do I list nodes/machines labelled with a tag?](#heading--list-nodesmachines-labelled-with-a-tag)
+7. [How do I handle Juju integration?](#heading--juju-integration)
+8. [How do I effect manual tag assignment?](#heading--manual-tag-assignment)
+9. [How do I effect hybrid tag assignment?](#heading--hybrid-tag-assignment)
 
 <a href="#heading--rudimentary-tag-creation"><h2 id="heading--rudimentary-tag-creation">Tag creation</h2></a>
 
@@ -423,11 +298,4 @@ maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
 
 If multiple tags attached to a machine have the `kernel_opts` defined, MAAS uses the first one found, in alphabetical order.
 
-See the [CLI tag management](/t/cli-tag-management/801) section for more information about using the CLI to manage tags.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
-
-
-
-------
-****
-------
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->

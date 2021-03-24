@@ -1,84 +1,7 @@
-<!-- deb-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/25)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|CLI ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
-deb-2-7-cli -->
-
-<!-- snap-2-7-cli
-||2.7|2.8|2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
-snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ UI|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
-snap-2-7-ui -->
-
-<!-- deb-2-7-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ UI|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
-deb-2-7-ui -->
-
-<!-- snap-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319) | CLI ~ [UI](/t/maas-installation/3321) |[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323) |
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325) |[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327) |[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329) |
-snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ UI|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
-snap-2-8-ui -->
-
-<!-- deb-2-8-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|CLI ~  [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
-deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ UI|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
-deb-2-8-ui -->
-
-<!-- snap-2-9-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|CLI ~  [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
-snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ UI|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ [UI](/t/maas-installation/3329)|
-snap-2-9-ui -->
-
-<!-- deb-2-9-cli
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|CLI ~  [UI](/t/maas-installation/3329)|
-deb-2-9-cli -->
-
-|| 2.7 | 2.8 | 2.9|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/maas-installation/3318) ~ [UI](/t/maas-installation/3319)|[CLI](/t/maas-installation/3320) ~ [UI](/t/maas-installation/3321)|[CLI](/t/maas-installation/3322) ~ [UI](/t/maas-installation/3323)|
-|Packages|[CLI](/t/maas-installation/3324) ~ [UI](/t/maas-installation/3325)|[CLI](/t/maas-installation/3326) ~ [UI](/t/maas-installation/3327)|[CLI](/t/maas-installation/3328) ~ UI|
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/maas-installation-snap-2-7-cli/3318) ~ [UI](/t/maas-installation-snap-2-7-ui/3319)|[CLI](/t/maas-installation-snap-2-8-cli/3320) ~ [UI](/t/maas-installation-snap-2-8-ui/3321)|[CLI](/t/maas-installation-snap-2-9-cli/3322) ~ [UI](/t/maas-installation-snap-2-9-ui/3323)|[CLI](/t/maas-installation-snap-3-0-cli/4001) ~ [UI](/t/maas-installation-snap-3-0-ui/4002)|
+Packages|[CLI](/t/maas-installation-deb-2-7-cli/3324) ~ [UI](/t/maas-installation-deb-2-7-ui/3325)|[CLI](/t/maas-installation-deb-2-8-cli/3326) ~ [UI](/t/maas-installation-deb-2-8-ui/3327)|[CLI](/t/maas-installation-deb-2-9-cli/3328) ~ [UI](/t/maas-installation-deb-2-9-ui/3329)|[CLI](/t/maas-installation-deb-3-0-cli/4003) ~ [UI](/t/maas-installation-deb-3-0-ui/4004)|
 
 <!-- snap-2-7-ui snap-2-7-cli 
 [Snaps](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
@@ -898,6 +821,7 @@ deb-2-7-cli -->
 Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2533).
 deb-2-7-ui -->
 
+<!-- deb-2-9-cli deb-2-9-ui
 <a href="#heading--upgrade-via-packages"><h2 id="heading--upgrade-via-packages">Upgrade MAAS 2.8 to MAAS 2.9</h2></a>
 
 MAAS 2.8 is the last supported version for Ubuntu 18.04 LTS.  Newer versions of MAAS will not be back-portable, and consequently, to upgrade to MAAS 2.9 and all future versions, you will also need to upgrade the base operating system to Ubuntu 20.04.  You do these two operations all at once, with the following procedure:
@@ -1023,15 +947,12 @@ href="https://discourse.maas.io/uploads/default/original/1X/472ce8e0227318737056
 
 <a href="#heading--next-steps"><h3 id="heading--next-steps">Next steps</h3></a>
 
+deb-2-9-cli deb-2-9-ui -->
 
 <!-- deb-2-9-cli
 Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2536).
 deb-2-9-cli -->
 
+<!-- deb-2-9-ui
 Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](/t/configuration-journey/2537).
-
-
-
-------
-****
-------
+deb-2-9-ui -->

@@ -26,7 +26,7 @@
 	  &nbsp;UI-only&nbsp;
 	</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;>"
 	  CLI-only
       </span>
     </div>
@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.9
+	    What&rsquo;s new in 2.10
 	  </a>
 	</li>
 	<li>
@@ -429,11 +429,22 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Prometheus metrics</h1><!-- deb-2-7-cli
- deb-2-7-cli -->
+      <h1>Prometheus metrics</h1><!-- begin-rad-menu -->
 
-<!-- deb-2-7-ui
- deb-2-7-ui -->
+<!-- snap-2-8-cli
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+ snap-2-9-ui -->
+
+<!-- snap-2-10-ui
+ snap-2-10-ui -->
 
 <!-- deb-2-8-cli
  deb-2-8-cli -->
@@ -447,20 +458,15 @@
 <!-- deb-2-9-ui
  deb-2-9-ui -->
 
-<!-- snap-2-7-cli
- snap-2-7-cli -->
+<!-- deb-2-10-cli
+ deb-2-10-cli -->
 
-<!-- snap-2-7-ui
- snap-2-7-ui -->
+<!-- deb-2-10-ui
+ deb-2-10-ui -->
 
-<!-- snap-2-8-cli
- snap-2-8-cli -->
+<!-- end-rad-menu -->
 
-<!-- snap-2-8-ui
- snap-2-8-ui -->
-
-<!-- snap-2-9-ui
- snap-2-9-ui -->
+<!-- end-rad-menu -->
 
 <p>MAAS services can provide <a href="https://prometheus.io/">Prometheus</a> endpoints for collecting performance metrics.  These include five endpoints of particular interest to MAAS users:</p>
 <ol>
@@ -482,7 +488,7 @@
 <p><strong>NOTE:</strong> 
 Currently, prometheus metrics are shared when rack and region controllers are running on the same machine, even though each service provides its own port.  You can safely only query one of the two ports if you&rsquo;re running both controllers.</p>
 <p>For a snap-based MAAS installation, the libraries already included in the snap so that metrics will be available out of the box.</p>
-<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
+<!-- deb-2-10-ui deb-2-10-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 For a Debian-based MAAS installation, install the library and restart MAAS services as follows:
 
     sudo apt install python3-prometheus-client
@@ -499,7 +505,7 @@ MAAS also provides optional stats about resources registered with the MAAS serve
 After installing the `python3-prometheus-client` library as describe above, run the following to enable stats:
 
     maas $PROFILE maas set-config name=prometheus_enabled value=true
-deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
+deb-2-10-ui deb-2-10-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 
 <p><a href="#heading--configuring-prometheus"><h2 id="heading--configuring-prometheus">Configuring Prometheus</h2></a></p>
 <p>Once the <code>/metrics</code> endpoint is available in MAAS services, Prometheus can be configured to scrape metric values from these. You can configure this by adding a stanza like the following to the <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/">prometheus configuration</a>:</p>
@@ -536,8 +542,6 @@ deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 </code></pre>
 <p>Once you deploy everything, the Grafana UI is accessible on port <code>3000</code> with the credentials <code>admin</code>/<code>grafana</code>. The Prometheus UI will be available on port <code>9090</code>.</p>
 <p>The repository also provides some sample dashboard covering the most common use cases for graphs. These are available under <code>grafana/dashboards</code>.  You can import them from the Grafana UI or API.</p>
-<hr>
-<h2>****</h2>
     </div>
   </body>
 </html>

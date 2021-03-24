@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  UI-only
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/maas-requirements.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-me-an-example-of-maas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-new-in-maas.html">
+	    What&rsquo;s new in 2.9
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-requirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-journey.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-communication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-controllers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-controllers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-availability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-machines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-machines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-testing.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-testing.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-and-hardware-testing-scripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-tags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-machine-setup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-boot-options.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-pools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-vmfs-datastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-kernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-and-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-image-mirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-images.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-management.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-ranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-services.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-discovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-addressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-tls-encryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-stp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-zones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-host-networking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-a-vm-host.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-host-storage-pools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-and-deleting-vms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-metrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-your-maas-installation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-accounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-search.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-and-terms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-and-terms.html#heading--network-tutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-cli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-kernel-management.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-image-management.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-interface-management.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-advanced-tasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-composable-hardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-help.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-tricks-and-traps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-docs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-new-in-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-guide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>MAAS requirements</h1><!-- deb-2-7-cli
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
+
+<p>The minimum requirements for the machines that run MAAS vary widely depending on local implementation and usage.  Below, you will find resource estimates based on MAAS components and operating system (Ubuntu Server). We consider both a test configuration (for proof of concept) and a production environment.</p>
+<h4>Two questions you might have:</h4>
+<ol>
+<li><a href="#heading--test-environment">What are the requirements for a test environment?</a></li>
+<li><a href="#heading--production-environment">What are the requirements for a production environment?</a></li>
+</ol>
+<p><a href="#heading--test-environment"><h2 id="heading--test-environment">Requirements for a test environment</h2></a></p>
+<p>Here is a proof-of-concept scenario, with all MAAS components installed on a single host. This scenario assumes two complete sets of images (latest two Ubuntu LTS releases) for a single architecture (amd64).</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="right">Memory (MB)</th>
+<th align="right">CPU (GHz)</th>
+<th align="right">Disk (GB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="concepts-and-terms.html#heading--controllers">Region controller</a> (minus PostgreSQL)</td>
+<td align="right">512</td>
+<td align="right">0.5</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td align="left">PostgreSQL</td>
+<td align="right">512</td>
+<td align="right">0.5</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td align="left"><a href="concepts-and-terms.html#heading--controllers&quot;">Rack controller</a></td>
+<td align="right">512</td>
+<td align="right">0.5</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td align="left">Ubuntu Server (including logs)</td>
+<td align="right">512</td>
+<td align="right">0.5</td>
+<td align="right">5</td>
+</tr>
+</tbody>
+</table>
+<p>Based on this table, the approximate requirements for this scenario are 2 GB memory, 2 GHz CPU, and 20 GB of disk space.</p>
+<p><a href="#heading--production-environment"><h2 id="heading--production-environment">Requirements for a production environment</h2></a></p>
+<p>Here is a production scenario designed to handle a high number of sustained client connections. This scenario implements both high availability (region and rack) and load balancing (region). MAAS reserves extra space for images (database and rack controller), while some images, such as those for Microsoft Windows, may require a lot more &ndash; so plan accordingly.</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="right">Memory (MB)</th>
+<th align="right">CPU (GHz)</th>
+<th align="right">Disk (GB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="concepts-and-terms.html#heading--controllers">Region controller</a> (minus PostgreSQL)</td>
+<td align="right">2048</td>
+<td align="right">2.0</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td align="left">PostgreSQL</td>
+<td align="right">2048</td>
+<td align="right">2.0</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td align="left"><a href="concepts-and-terms.html#heading--controllers&quot;">Rack controller</a></td>
+<td align="right">2048</td>
+<td align="right">2.0</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td align="left">Ubuntu Server (including logs)</td>
+<td align="right">512</td>
+<td align="right">0.5</td>
+<td align="right">5</td>
+</tr>
+</tbody>
+</table>
+<p>So, based on the above, the approximate requirements for this scenario are:</p>
+<ol>
+<li>A region controller (including PostgreSQL) installed on one host, with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.</li>
+<li>A duplicate region controller (including PostgreSQL) on a second host, also with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.</li>
+<li>A rack controller installed on a third host, with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.</li>
+<li>A duplicate rack controller on a fourth host, also with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.</li>
+</ol>
+<!-- deb-2-7-cli
+<strong>NOTE:</strong> 
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](power-management.html) for more details.
+
+Some examples of factors that influence hardware specifications include:
+
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](high-availability.html).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+<strong>NOTE:</strong> 
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](power-management.html) for more details.
+
+Some examples of factors that influence hardware specifications include:
+
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](high-availability.html).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+<strong>NOTE:</strong> 
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](power-management.html) for more details.
+
+Some examples of factors that influence hardware specifications include:
+
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](high-availability.html).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+<strong>NOTE:</strong> 
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](power-management.html) for more details.
+
+Some examples of factors that influence hardware specifications include:
+
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](high-availability.html).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+<strong>NOTE:</strong> 
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](power-management.html) for more details.
+
+Some examples of factors that influence hardware specifications include:
+
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](high-availability.html).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+<strong>NOTE:</strong> 
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](power-management.html) for more details.
+
+Some examples of factors that influence hardware specifications include:
+
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](high-availability.html).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+<strong>NOTE:</strong> 
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](power-management.html) for more details.
+
+Some examples of factors that influence hardware specifications include:
+
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](high-availability.html).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+<strong>NOTE:</strong> 
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](power-management.html) for more details.
+
+Some examples of factors that influence hardware specifications include:
+
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](high-availability.html).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+<strong>NOTE:</strong> 
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](power-management.html) for more details.
+
+Some examples of factors that influence hardware specifications include:
+
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](high-availability.html).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+<strong>NOTE:</strong> 
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](power-management.html) for more details.
+
+Some examples of factors that influence hardware specifications include:
+
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](high-availability.html).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+<strong>NOTE:</strong> 
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](power-management.html) for more details.
+
+Some examples of factors that influence hardware specifications include:
+
+1. the number of connecting clients (client activity)
+2. how you decide to distribute services
+3. whether or not you use [high availability/load balancing](high-availability.html).
+4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+ snap-2-9-cli -->
+
+<p><strong>NOTE:</strong> 
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see <a href="power-management.html">Power management</a> for more details.</p>
+<p>Some examples of factors that influence hardware specifications include:</p>
+<ol>
+<li>the number of connecting clients (client activity)</li>
+<li>how you decide to distribute services</li>
+<li>whether or not you use <a href="high-availability.html">high availability/load balancing</a>.</li>
+<li>the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)</li>
+</ol>
+<p>Also, this discussion does not take into account a possible local image mirror, which would be a large consumer of disk space.</p>
+<p>One rack controller should only service 1000 machines or less, regardless of how you distribute them across subnets. There is no load balancing at the rack level, so you will need additional, independent rack controllers. Each controller must service its own subnet(s).</p>
+    </div>
+  </body>
+</html>

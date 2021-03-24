@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  UI-only
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/maas-tags.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="../maas-documentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-me-an-example-of-maas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-new-in-maas.html">
+	    What&rsquo;s new in 2.8
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-requirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-journey.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-communication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-controllers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-controllers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-availability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-machines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-machines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-testing.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-testing.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-and-hardware-testing-scripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-tags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-machine-setup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-boot-options.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-pools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-vmfs-datastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-kernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-and-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-image-mirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-images.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-management.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-ranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-services.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-discovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-addressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-tls-encryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-stp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-zones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-host-networking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-a-vm-host.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-host-storage-pools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-and-deleting-vms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-metrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-your-maas-installation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-accounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-search.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-and-terms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-and-terms.html#heading--network-tutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-cli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-kernel-management.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-image-management.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-interface-management.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-advanced-tasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-composable-hardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-help.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-tricks-and-traps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-docs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-new-in-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-guide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>MAAS tags</h1><!-- deb-2-7-cli
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+ deb-2-9-ui -->
+
+<!-- snap-2-7-cli
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+ snap-2-8-cli -->
+
+<!-- snap-2-9-cli
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+ snap-2-9-ui -->
+
+<p>Tags are a convenient way to assign descriptive words to machines, interfaces, and storage devices. Using MAAS tags, you can easily select machines that meet certain criteria, helping you to remember that you&rsquo;ve defined or reserved certain machines for certain functions. </p>
+<p><strong>NOTE:</strong> 
+ Tag names can include any combination of letters, numbers, dashes (-) and underscores (_), and be a maximum of 256 characters in length.</p>
+<h4>Five questions you may have:</h4>
+<!-- deb-2-7-ui
+1. [How are tags defined?](#heading--tag-definitions)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-deb-2-7-cli.html#heading--per-node-kernel-boot-options)
+3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
+4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
+5. [How do I manage tags?](#heading--tag-management)
+ deb-2-7-ui -->
+
+<!-- deb-2-8-ui
+1. [How are tags defined?](#heading--tag-definitions)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-deb-2-8-cli.html#heading--per-node-kernel-boot-options)
+3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
+4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
+5. [How do I manage tags?](#heading--tag-management)
+ deb-2-8-ui -->
+
+<!-- deb-2-9-ui
+1. [How are tags defined?](#heading--tag-definitions)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-deb-2-9-cli.html#heading--per-node-kernel-boot-options)
+3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
+4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
+5. [How do I manage tags?](#heading--tag-management)
+ deb-2-9-ui -->
+
+<!-- snap-2-7-ui
+1. [How are tags defined?](#heading--tag-definitions)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-snap-2-7-cli.html#heading--per-node-kernel-boot-options)
+3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
+4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
+5. [How do I manage tags?](#heading--tag-management)
+ snap-2-7-ui -->
+
+<ol>
+<li><a href="#heading--tag-definitions">How are tags defined?</a></li>
+<li><a href="maas-tags-snap-2-8-cli.html#heading--per-node-kernel-boot-options">How can I set kernel boot options for a specific machine?</a></li>
+<li><a href="#heading--tag-listing-and-tags-as-search-filters">How can I see and filter the tag list?</a></li>
+<li><a href="#heading--tag-assignment">How do I see and change which tags are assigned?</a></li>
+<li><a href="#heading--tag-management">How do I manage tags?</a></li>
+</ol>
+<!-- snap-2-9-ui
+1. [How are tags defined?](#heading--tag-definitions)
+2. [How can I set kernel boot options for a specific machine?](maas-tags-snap-2-9-cli.html#heading--per-node-kernel-boot-options)
+3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
+4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
+5. [How do I manage tags?](#heading--tag-management)
+ snap-2-9-ui -->
+
+<p>MAAS supports binding an XPath expressions to a tag using <em>tag definitions</em> (see below). This makes auto-assigning tags to matching hardware possible. For instance, you could tag machines that possess fast GPUs and then deploy software that used GPU-accelerated CUDA or OpenCL libraries.</p>
+<p>Because <a href="https://jujucharms.com/docs/stable/about-juju.html">Juju</a> is the recommended way to deploy services on machines managed by MAAS (see <a href="#heading--tag-management">below</a>), it supports MAAS tags for application deployments. By specifying MAAS tags as Juju &ldquo;constraints&rdquo;, services can be deployed to machines that have particular user-defined characteristics.</p>
+<p><a href="#heading--tag-definitions"><h2 id="heading--tag-definitions">Tag definitions</h2></a></p>
+<p>A <em>tag definition</em> is the criteria by which machines are auto-labelled by the corresponding tag. During machine enlistment, MAAS collects hardware information (using the <a href="http://ezix.org/project/wiki/HardwareLiSter">lshw</a> utility). The definition used in creating a tag is then constructed using an <em>XPath expression</em> based on that information. See <a href="https://www.w3schools.com/xml/xpath_intro.asp">w3schools documentation</a> for details on XPath.</p>
+<p>The collected data for each machine, viewable (in both XML and YAML) in the web UI, is inspected by you for the desired property. Building on the example alluded to above, a property can be a GPU with a clock speed greater than 1GHz. In this case, the following excerpt from a machine&rsquo;s data (in XML format) is pertinent:</p>
+<pre><code class="nohighlight">      &lt;lshw:node id=&quot;display&quot; class=&quot;display&quot; handle=&quot;PCI:0000:00:02.0&quot;&gt;
+       &lt;lshw:description&gt;VGA compatible controller&lt;/lshw:description&gt;
+       &lt;lshw:product&gt;GD 5446&lt;/lshw:product&gt;
+       &lt;lshw:vendor&gt;Cirrus Logic&lt;/lshw:vendor&gt;
+       &lt;lshw:physid&gt;2&lt;/lshw:physid&gt;
+       &lt;lshw:businfo&gt;pci@0000:00:02.0&lt;/lshw:businfo&gt;
+       &lt;lshw:version&gt;00&lt;/lshw:version&gt;
+       &lt;lshw:width units=&quot;bits&quot;&gt;32&lt;/lshw:width&gt;
+       &lt;lshw:clock units=&quot;Hz&quot;&gt;33000000&lt;/lshw:clock&gt;
+       &lt;lshw:configuration&gt;
+        &lt;lshw:setting id=&quot;latency&quot; value=&quot;0&quot;/&gt;
+       &lt;/lshw:configuration&gt;
+       &lt;lshw:capabilities&gt;
+        &lt;lshw:capability id=&quot;vga_controller&quot;/&gt;
+       &lt;/lshw:capabilities&gt;
+       &lt;lshw:resources&gt;
+        &lt;lshw:resource type=&quot;memory&quot; value=&quot;fc000000-fdffffff&quot;/&gt;
+        &lt;lshw:resource type=&quot;memory&quot; value=&quot;febd0000-febd0fff&quot;/&gt;
+        &lt;lshw:resource type=&quot;memory&quot; value=&quot;febc0000-febcffff&quot;/&gt;
+       &lt;/lshw:resources&gt;
+      &lt;/lshw:node&gt;
+</code></pre>
+
+<p>MAAS machines will be selected based on these four XPath <em>predicates</em>:</p>
+<ol>
+<li><em>element</em> of &lsquo;node&rsquo;</li>
+<li>with an <em>attribute</em> of &lsquo;id&rsquo;</li>
+<li>whose <em>value</em> is &lsquo;display&rsquo;</li>
+<li>and has a <em>child element</em> of &lsquo;clock units=&rdquo;Hz&rdquo;&rsquo;</li>
+</ol>
+<p>After adding the speed criteria via an XPath <em>operator</em> we end up with this as our tag definition:</p>
+<pre><code class="nohighlight">//node[@id=&quot;display&quot;]/'clock units=&quot;Hz&quot;' &gt; 1000000000
+</code></pre>
+
+<p><a href="#heading--tag-listing-and-tags-as-search-filters"><h2 id="heading--tag-listing-and-tags-as-search-filters">Tag listing and tags as search filters</h2></a></p>
+<p>To list all tags, visit the &lsquo;Machines&rsquo; tab and expand the &lsquo;Tags&rsquo; subsection in the left pane.</p>
+<p>In this view, you can use tags as machine search filters. Select one or several tags. The machines that satisfy all selected tags will display on the right pane. Notice there is a search field at the top of the right pane. You can type a search expression into this field.</p>
+<p>Below, tag &lsquo;virtual&rsquo; has been selected (with the mouse), and the search field automatically reflects this. Five machines satisfy this search filter.</p>
+<p><a href="images/69aa9997-nodes-tags__2.6-tags-filter.png" target = "_blank"><img src="images/69aa9997-nodes-tags__2.6-tags-filter.png"></a></a></p>
+<p>Remove a tag from the search filter by either hitting the &lsquo;x&rsquo; character alongside a tag or editing the search expression.</p>
+<p><a href="#heading--tag-assignment"><h2 id="heading--tag-assignment">Tag assignment</h2></a></p>
+<p>To view a machine&rsquo;s currently assigned tags, stay on the &lsquo;Machines&rsquo; page and click on the machine in question. MAAS will display currently-assigned tags in the <em>Tags</em> pane of the &lsquo;Machine summary&rsquo;.</p>
+<p>Select the &lsquo;Configuration&rsquo; tab and then the &lsquo;Edit&rsquo; button alongside &lsquo;Machine configuration&rsquo; to edit tags:</p>
+<ol>
+<li>To unassign a tag hit the &lsquo;x&rsquo; character alongside a tag.</li>
+<li>To create a basic tag, type the name of the new tag in the &lsquo;Add a tag&rsquo; field and hit Enter. The tag will be created and automatically assigned to the machine. Repeat if desired.</li>
+<li>To assign an existing tag, type at least three characters to trigger a real-time search. Any resulting tags will show up in a drop-down menu. Select as desired.</li>
+</ol>
+<p><a href="images/250050ee-nodes-tags__2.6-tags-add-remove.png" target = "_blank"><img src="images/250050ee-nodes-tags__2.6-tags-add-remove.png"></a></a></p>
+<p>You can apply changes by pressing the &lsquo;Save changes&rsquo; button.</p>
+<p><strong>NOTE:</strong> 
+New tags become available as a filter in the &lsquo;Machines&rsquo; page in the web UI immediately after you add them.</p>
+<p><a href="#heading--tags-for-network-interfaces"><h3 id="heading--tags-for-network-interfaces">Tags for network interfaces</h3></a></p>
+<p>It&rsquo;s also possible to assign tags to specific network interfaces. You can use these tags when searching for machines within the web UI and when allocating machines from the API.</p>
+<p>Network interface tags can only be assigned when a machine is in either a &lsquo;Ready&rsquo; or a &lsquo;Broken&rsquo; state.</p>
+<p>With the machine selected from the &lsquo;Machines&rsquo; page, on the &lsquo;Interfaces&rsquo; tab use the &lsquo;Edit Physical&rsquo; button from the &lsquo;Actions&rsquo; menu icon to the right of an interface:</p>
+<p><a href="images/dd9cf996-nodes-tags__2.6-tag-net-interfaces.png" target = "_blank"><img src="images/dd9cf996-nodes-tags__2.6-tag-net-interfaces.png"></a></a></p>
+<p>To add a tag, type its name into the &lsquo;Tags&rsquo; field and press Enter. Repeat as desired. Use the small &lsquo;x&rsquo; next to a tag to unassign the tag.</p>
+<p>You can apply changes by pressing the &lsquo;Save&rsquo; button.</p>
+<p><a href="#heading--tags-for-storage-configuration"><h3 id="heading--tags-for-storage-configuration">Tags for storage configuration</h3></a></p>
+<p>Alongside tags for an entire machine and network interfaces, you can also define tags for storage devices. You can use these tags like any other, when searching for machines within the web UI, where they appear beneath the &lsquo;Storage tag&rsquo; filter, and when allocating machines from the API.</p>
+<p>To add a tag to a storage device, click on the machine with the storage you wish to tag on the &lsquo;Machines&rsquo; page of the web UI and open the &lsquo;Storage&rsquo; tab. Use the menu in the &lsquo;Actions&rsquo; column beneath &lsquo;Available disks and partitions&rsquo; to select &lsquo;Edit disk&rsquo; for your chosen device:</p>
+<p><a href="images/43dd9f9d-nodes-tags__2.6-tag-storage.png" target = "_blank"><img src="images/43dd9f9d-nodes-tags__2.6-tag-storage.png"></a></a></p>
+<p>To add a tag, type its name into the &lsquo;Tags&rsquo; field and press Enter. Repeat as desired. Use the small &lsquo;x&rsquo; next to a tag to unassign the tag.</p>
+<p>You can apply changes by pressing the &lsquo;Save&rsquo; button.</p>
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+#### Ten questions you may have:
+
+1. [How do I get started with the MAAS CLI?](maas-cli.html)
+2. [How can I set kernel boot options for a specific machine?](#heading--per-node-kernel-boot-options)
+3. [How do I create tags?](#heading--rudimentary-tag-creation)
+4. [How do I do tag creation and auto-assignment?](#heading--tag-creation-and-auto-assignment)
+5. [How do I delete a tag?](#heading--delete-a-tag)
+6. [How do I list all tags?](#heading--list-all-tags)
+7. [How do I list nodes/machines labelled with a tag?](#heading--list-nodesmachines-labelled-with-a-tag)
+8. [How do I handle Juju integration?](#heading--juju-integration)
+9. [How do I effect manual tag assignment?](#heading--manual-tag-assignment)
+10. [How do I effect hybrid tag assignment?](#heading--hybrid-tag-assignment)
+
+<a href="#heading--rudimentary-tag-creation"><h2 id="heading--rudimentary-tag-creation">Tag creation</h2></a>
+
+
+<pre><code class="bash">maas $PROFILE tags create name=$TAG_NAME
+</code></pre>
+
+
+<a href="#heading--tag-creation-and-auto-assignment"><h2 id="heading--tag-creation-and-auto-assignment">Tag creation and auto-assignment</h2></a>
+
+When you supply a [definition](#heading--tag-definitions) during a tag's creation, MAAS automatically applies the tag to all the nodes that satisfy the definition:
+
+
+<pre><code class="bash">maas $PROFILE tags create name=$TAG_NAME \
+    comment='$TAG_COMMENT' definition='$TAG_DEFINITION'
+</code></pre>
+
+
+For example,
+
+
+<pre><code class="bash">maas $PROFILE tags create name='gpu' \
+    comment='GPU with clock speed &gt;1GHz for running CUDA type operations.' \
+    definition='//node[@id=&quot;display&quot;]/'clock units=&quot;Hz&quot;' &gt; 1000000000'
+</code></pre>
+
+
+We recommend that each tag have a short name and a comment that adequately describes it. You should make sure to create both of these because they will help you identify and use the tag later.
+
+<h2 id="heading--tags-for-network-interfaces">Tags for network interfaces</h2>
+
+It's also possible to assign tags to specific network interfaces. You can use these tags when searching for machines within the web UI and when allocating machines from the API.
+
+Network interface tags can only be assigned when a machine is in either a 'Ready' or a 'Broken' state.
+
+To add a tag to a network interface, use the following command:
+
+
+<pre><code>maas $PROFILE interface add-tag $SYSTEM_ID $INTERFACE_ID tag=$TAG_STRING
+</code></pre>
+
+
+To delete a tag from a network interface:
+
+
+<pre><code>maas $PROFILE interface remove-tag $SYSTEM_ID $INTERFACE_ID tag=$TAG_STRING
+</code></pre>
+
+
+<a href="#heading--tags-for-network-interfaces"><h3 id="heading--tags-for-network-interfaces">Tags for network interfaces</h3></a>
+
+It's also possible to assign tags to specific network interfaces. You can use these tags when searching for machines within the web UI and when allocating machines from the API.
+
+Network interface tags can only be assigned when a machine is in either a 'Ready' or a 'Broken' state.
+
+To add a tag to a network interface, use the following command:
+
+
+<pre><code>maas $PROFILE interface add-tag $SYSTEM_ID $INTERFACE_ID tag=$TAG_STRING
+</code></pre>
+
+
+To delete a tag from a network interface:
+
+
+<pre><code>maas $PROFILE interface remove-tag $SYSTEM_ID $INTERFACE_ID tag=$TAG_STRING
+</code></pre>
+
+
+<h2 id="><h2 id="heading--delete-a-tag">Delete a tag</h2></a>
+
+
+<pre><code class="bash">maas $PROFILE tag delete $TAG_NAME
+</code></pre>
+
+
+<a href="#heading--list-all-tags"><h2 id="heading--list-all-tags">List all tags</h2></a>
+
+To list all tags present on the region controller:
+
+
+<pre><code class="bash">maas $PROFILE tags read
+</code></pre>
+
+
+<a href="#heading--list-nodesmachines-labelled-with-a-tag"><h2 id="heading--list-nodesmachines-labelled-with-a-tag">List nodes/machines labelled with a tag</h2></a>
+
+To list what nodes (or machines) a tag applies to:
+
+
+<pre><code class="bash">maas $PROFILE tag nodes $TAG_NAME
+maas $PROFILE tag machines $TAG_NAME
+</code></pre>
+
+
+<a href="#heading--juju-integration"><h2 id="heading--juju-integration">Juju integration</h2></a>
+
+Although you can use a tag in the web UI (as a node search filter), you realise most of the benefit when you're deploying applications with Juju.
+
+For example, to use the 'gpu' tag to deploy a (hypothetical) service called 'cuda':
+
+
+<pre><code class="bash">juju deploy --constraints tags=gpu cuda
+</code></pre>
+
+
+You can also use multiple tags in addition to the normal Juju constraints:
+
+
+<pre><code class="bash">juju deploy --constraints &quot;mem=1024 tags=gpu,intel&quot; cuda
+</code></pre>
+
+
+<a href="#heading--manual-tag-assignment"><h2 id="heading--manual-tag-assignment">Manual tag assignment</h2></a>
+
+It is possible to assign tags to nodes manually by simply omitting the definition and applying the tag to a node by referencing its system id:
+
+
+<pre><code class="bash">maas $PROFILE tags create name=$TAG_NAME comment='$TAG_COMMENT'
+maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
+</code></pre>
+
+
+To remove a tag:
+
+
+<pre><code class="bash">maas $PROFILE tag update-nodes $TAG_NAME remove=$SYSTEM_ID
+</code></pre>
+
+
+In the same operation, a tag can be added to some nodes and removed from others:
+
+
+<pre><code class="bash">maas $PROFILE tag update-nodes $TAG_NAME \
+    add=$SYSTEM_ID_1 add=$SYSTEM_ID_2 remove=$SYSTEM_ID_3
+</code></pre>
+
+
+<a href="#heading--hybrid-tag-assignment"><h2 id="heading--hybrid-tag-assignment">Hybrid tag assignment</h2></a>
+
+You can also create a tag with a definition (thereby map to certain nodes), remove the definition (but retain the mapping), and then add the tag manually to specific nodes. This action is useful for hardware which is conceptually similar but does not all satisfy a single tag definition. Here are the commands you would use to do this:
+
+
+<pre><code class="bash">maas $PROFILE tags create name=$TAG_NAME \
+    comment='$TAG_COMMENT' definition='$TAG_DEFINITION'
+maas $PROFILE tag update $TAG_NAME definition=''
+maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
+</code></pre>
+
+
+<a href="#heading--per-node-kernel-boot-options"><h2 id="heading--per-node-kernel-boot-options">Per-machine kernel boot options</h2></a>
+
+Per-machine kernel boot options are set using the CLI.
+
+<strong>NOTE:</strong> 
+Per-machine boot options take precedence to global ones. Please also note that, even though a deployed machine has a `kernel_opt` tag applied, MAAS won't apply the `kernel_opt` associated with that tag until the next deployment.  This means that a machine that has been deployed for a long time can (possibly) inherit kernel options that were applied in the distant past.
+
+
+To specify kernel boot options for an individual machine, first create a tag:
+
+
+<pre><code class="bash">maas $PROFILE tags create name='$TAG_NAME' \
+    comment='$COMMENT' kernel_opts='$KERNEL_OPTIONS'
+</code></pre>
+
+
+For example:
+
+
+<pre><code class="bash">maas $PROFILE tags create name='nomodeset' \
+    comment='nomodeset kernel option' kernel_opts='nomodeset vga'
+</code></pre>
+
+
+Next, assign the tag to the machine in question:
+
+
+<pre><code class="bash">maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
+</code></pre>
+
+
+If multiple tags attached to a machine have the `kernel_opts` defined, MAAS uses the first one found, in alphabetical order.
+
+See the [CLI tag management](cli-tag-management.html) section for more information about using the CLI to manage tags.
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+    </div>
+  </body>
+</html>
