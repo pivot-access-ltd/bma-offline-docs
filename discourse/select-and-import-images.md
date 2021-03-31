@@ -1,88 +1,7 @@
-<!-- begin-rad-menu -->
-<!-- snap-2-8-cli
-||2.8|2.9|2.10|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|CLI ~ [UI](/t/select-and-import-images-snap-2-8-ui/3093)|[CLI](/t/select-and-import-images-snap-2-9-cli/3094) ~ [UI](/t/select-and-import-images-snap-2-9-ui/3095)|[CLI](/t/select-and-import-images-snap-2-10-cli/4101) ~ [UI](/t/select-and-import-images-snap-2-10-ui/4102)|
-|Packages|[CLI](/t/select-and-import-images-deb-2-8-cli/3098) ~ [UI](/t/select-and-import-images-deb-2-8-ui/3099)|[CLI](/t/select-and-import-images-deb-2-9-cli/3100) ~ [UI](/t/select-and-import-images-deb-2-9-ui/3101)|[CLI](/t/select-and-import-images-deb-2-10-cli/4103) ~ [UI](/t/select-and-import-images-deb-2-10-ui/4104)|
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-||2.8|2.9|2.10|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images-snap-2-8-cli/3092) ~ UI|[CLI](/t/select-and-import-images-snap-2-9-cli/3094) ~ [UI](/t/select-and-import-images-snap-2-9-ui/3095)|[CLI](/t/select-and-import-images-snap-2-10-cli/4101) ~ [UI](/t/select-and-import-images-snap-2-10-ui/4102)|
-|Packages|[CLI](/t/select-and-import-images-deb-2-8-cli/3098) ~ [UI](/t/select-and-import-images-deb-2-8-ui/3099)|[CLI](/t/select-and-import-images-deb-2-9-cli/3100) ~ [UI](/t/select-and-import-images-deb-2-9-ui/3101)|[CLI](/t/select-and-import-images-deb-2-10-cli/4103) ~ [UI](/t/select-and-import-images-deb-2-10-ui/4104)|
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-||2.8|2.9|2.10|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images-snap-2-8-cli/3092) ~ [UI](/t/select-and-import-images-snap-2-8-ui/3093)|CLI ~ [UI](/t/select-and-import-images-snap-2-9-ui/3095)|[CLI](/t/select-and-import-images-snap-2-10-cli/4101) ~ [UI](/t/select-and-import-images-snap-2-10-ui/4102)|
-|Packages|[CLI](/t/select-and-import-images-deb-2-8-cli/3098) ~ [UI](/t/select-and-import-images-deb-2-8-ui/3099)|[CLI](/t/select-and-import-images-deb-2-9-cli/3100) ~ [UI](/t/select-and-import-images-deb-2-9-ui/3101)|[CLI](/t/select-and-import-images-deb-2-10-cli/4103) ~ [UI](/t/select-and-import-images-deb-2-10-ui/4104)|
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-||2.8|2.9|2.10|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images-snap-2-8-cli/3092) ~ [UI](/t/select-and-import-images-snap-2-8-ui/3093)|[CLI](/t/select-and-import-images-snap-2-9-cli/3094) ~ UI|[CLI](/t/select-and-import-images-snap-2-10-cli/4101) ~ [UI](/t/select-and-import-images-snap-2-10-ui/4102)|
-|Packages|[CLI](/t/select-and-import-images-deb-2-8-cli/3098) ~ [UI](/t/select-and-import-images-deb-2-8-ui/3099)|[CLI](/t/select-and-import-images-deb-2-9-cli/3100) ~ [UI](/t/select-and-import-images-deb-2-9-ui/3101)|[CLI](/t/select-and-import-images-deb-2-10-cli/4103) ~ [UI](/t/select-and-import-images-deb-2-10-ui/4104)|
- snap-2-9-ui -->
-
-<!-- snap-2-10-cli
-||2.8|2.9|2.10|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images-snap-2-8-cli/3092) ~ [UI](/t/select-and-import-images-snap-2-8-ui/3093)|[CLI](/t/select-and-import-images-snap-2-9-cli/3094) ~ [UI](/t/select-and-import-images-snap-2-9-ui/3095)|CLI ~ [UI](/t/select-and-import-images-snap-2-10-ui/4102)|
-|Packages|[CLI](/t/select-and-import-images-deb-2-8-cli/3098) ~ [UI](/t/select-and-import-images-deb-2-8-ui/3099)|[CLI](/t/select-and-import-images-deb-2-9-cli/3100) ~ [UI](/t/select-and-import-images-deb-2-9-ui/3101)|[CLI](/t/select-and-import-images-deb-2-10-cli/4103) ~ [UI](/t/select-and-import-images-deb-2-10-ui/4104)|
- snap-2-10-cli -->
-
-||2.8|2.9|2.10|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images-snap-2-8-cli/3092) ~ [UI](/t/select-and-import-images-snap-2-8-ui/3093)|[CLI](/t/select-and-import-images-snap-2-9-cli/3094) ~ [UI](/t/select-and-import-images-snap-2-9-ui/3095)|[CLI](/t/select-and-import-images-snap-2-10-cli/4101) ~ UI|
-|Packages|[CLI](/t/select-and-import-images-deb-2-8-cli/3098) ~ [UI](/t/select-and-import-images-deb-2-8-ui/3099)|[CLI](/t/select-and-import-images-deb-2-9-cli/3100) ~ [UI](/t/select-and-import-images-deb-2-9-ui/3101)|[CLI](/t/select-and-import-images-deb-2-10-cli/4103) ~ [UI](/t/select-and-import-images-deb-2-10-ui/4104)|
-
-<!-- deb-2-8-cli
-||2.8|2.9|2.10|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images-snap-2-8-cli/3092) ~ [UI](/t/select-and-import-images-snap-2-8-ui/3093)|[CLI](/t/select-and-import-images-snap-2-9-cli/3094) ~ [UI](/t/select-and-import-images-snap-2-9-ui/3095)|[CLI](/t/select-and-import-images-snap-2-10-cli/4101) ~ [UI](/t/select-and-import-images-snap-2-10-ui/4102)|
-|Packages|CLI ~ [UI](/t/select-and-import-images-deb-2-8-ui/3099)|[CLI](/t/select-and-import-images-deb-2-9-cli/3100) ~ [UI](/t/select-and-import-images-deb-2-9-ui/3101)|[CLI](/t/select-and-import-images-deb-2-10-cli/4103) ~ [UI](/t/select-and-import-images-deb-2-10-ui/4104)|
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-||2.8|2.9|2.10|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images-snap-2-8-cli/3092) ~ [UI](/t/select-and-import-images-snap-2-8-ui/3093)|[CLI](/t/select-and-import-images-snap-2-9-cli/3094) ~ [UI](/t/select-and-import-images-snap-2-9-ui/3095)|[CLI](/t/select-and-import-images-snap-2-10-cli/4101) ~ [UI](/t/select-and-import-images-snap-2-10-ui/4102)|
-|Packages|[CLI](/t/select-and-import-images-deb-2-8-cli/3098) ~ UI|[CLI](/t/select-and-import-images-deb-2-9-cli/3100) ~ [UI](/t/select-and-import-images-deb-2-9-ui/3101)|[CLI](/t/select-and-import-images-deb-2-10-cli/4103) ~ [UI](/t/select-and-import-images-deb-2-10-ui/4104)|
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-||2.8|2.9|2.10|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images-snap-2-8-cli/3092) ~ [UI](/t/select-and-import-images-snap-2-8-ui/3093)|[CLI](/t/select-and-import-images-snap-2-9-cli/3094) ~ [UI](/t/select-and-import-images-snap-2-9-ui/3095)|[CLI](/t/select-and-import-images-snap-2-10-cli/4101) ~ [UI](/t/select-and-import-images-snap-2-10-ui/4102)|
-|Packages|[CLI](/t/select-and-import-images-deb-2-8-cli/3098) ~ [UI](/t/select-and-import-images-deb-2-8-ui/3099)|CLI ~ [UI](/t/select-and-import-images-deb-2-9-ui/3101)|[CLI](/t/select-and-import-images-deb-2-10-cli/4103) ~ [UI](/t/select-and-import-images-deb-2-10-ui/4104)|
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-||2.8|2.9|2.10|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images-snap-2-8-cli/3092) ~ [UI](/t/select-and-import-images-snap-2-8-ui/3093)|[CLI](/t/select-and-import-images-snap-2-9-cli/3094) ~ [UI](/t/select-and-import-images-snap-2-9-ui/3095)|[CLI](/t/select-and-import-images-snap-2-10-cli/4101) ~ [UI](/t/select-and-import-images-snap-2-10-ui/4102)|
-|Packages|[CLI](/t/select-and-import-images-deb-2-8-cli/3098) ~ [UI](/t/select-and-import-images-deb-2-8-ui/3099)|[CLI](/t/select-and-import-images-deb-2-9-cli/3100) ~ UI|[CLI](/t/select-and-import-images-deb-2-10-cli/4103) ~ [UI](/t/select-and-import-images-deb-2-10-ui/4104)|
- deb-2-9-ui -->
-
-<!-- deb-2-10-cli
-||2.8|2.9|2.10|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images-snap-2-8-cli/3092) ~ [UI](/t/select-and-import-images-snap-2-8-ui/3093)|[CLI](/t/select-and-import-images-snap-2-9-cli/3094) ~ [UI](/t/select-and-import-images-snap-2-9-ui/3095)|[CLI](/t/select-and-import-images-snap-2-10-cli/4101) ~ [UI](/t/select-and-import-images-snap-2-10-ui/4102)|
-|Packages|[CLI](/t/select-and-import-images-deb-2-8-cli/3098) ~ [UI](/t/select-and-import-images-deb-2-8-ui/3099)|[CLI](/t/select-and-import-images-deb-2-9-cli/3100) ~ [UI](/t/select-and-import-images-deb-2-9-ui/3101)|CLI ~ [UI](/t/select-and-import-images-deb-2-10-ui/4104)|
- deb-2-10-cli -->
-
-<!-- deb-2-10-ui
-||2.8|2.9|2.10|
-|-----:|:-----:|:-----:|:-----:|
-|Snap|[CLI](/t/select-and-import-images-snap-2-8-cli/3092) ~ [UI](/t/select-and-import-images-snap-2-8-ui/3093)|[CLI](/t/select-and-import-images-snap-2-9-cli/3094) ~ [UI](/t/select-and-import-images-snap-2-9-ui/3095)|[CLI](/t/select-and-import-images-snap-2-10-cli/4101) ~ [UI](/t/select-and-import-images-snap-2-10-ui/4102)|
-|Packages|[CLI](/t/select-and-import-images-deb-2-8-cli/3098) ~ [UI](/t/select-and-import-images-deb-2-8-ui/3099)|[CLI](/t/select-and-import-images-deb-2-9-cli/3100) ~ [UI](/t/select-and-import-images-deb-2-9-ui/3101)|[CLI](/t/select-and-import-images-deb-2-10-cli/4103) ~ UI|
- deb-2-10-ui -->
-<!-- end-rad-menu -->
-
-<!-- end-rad-menu -->
+||2.7|2.8|2.9|3.0|
+|-----:|:-----:|:-----:|:-----:|:-----:|
+Snap|[CLI](/t/select-and-import-images-snap-2-7-cli/3090) ~ [UI](/t/select-and-import-images-snap-2-7-ui/3091)|[CLI](/t/select-and-import-images-snap-2-8-cli/3092) ~ [UI](/t/select-and-import-images-snap-2-8-ui/3093)|[CLI](/t/select-and-import-images-snap-2-9-cli/3094) ~ [UI](/t/select-and-import-images-snap-2-9-ui/3095)|[CLI](/t/select-and-import-images-snap-3-0-cli/4101) ~ [UI](/t/select-and-import-images-snap-3-0-ui/4102)|
+Packages|[CLI](/t/select-and-import-images-deb-2-7-cli/3096) ~ [UI](/t/select-and-import-images-deb-2-7-ui/3097)|[CLI](/t/select-and-import-images-deb-2-8-cli/3098) ~ [UI](/t/select-and-import-images-deb-2-8-ui/3099)|[CLI](/t/select-and-import-images-deb-2-9-cli/3100) ~ [UI](/t/select-and-import-images-deb-2-9-ui/3101)|[CLI](/t/select-and-import-images-deb-3-0-cli/4103) ~ [UI](/t/select-and-import-images-deb-3-0-ui/4104)|
 
 MAAS is only useful once it has images available to provision its nodes. Therefore, one key post-install task is to select and import images from the boot source. Once MAAS imports images, it will update them on an hourly basis, via a default synch mechanism.  This page explains how to select and import the images that MAAS requires to provision its nodes.
 
@@ -93,17 +12,48 @@ MAAS is only useful once it has images available to provision its nodes. Therefo
 2. [How do I use other image mirrors to download images?](#heading--image-mirrors)
 3. [How do I import and provision non-Ubuntu images?](#heading--other-images)
 
-Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/1112).
+
+<!-- deb-2-7-ui
+Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/2857).
+ deb-2-7-ui -->
+
+<!-- deb-2-8-ui
+Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/2859).
+ deb-2-8-ui -->
+
+<!-- deb-2-9-ui
+Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/2861).
+ deb-2-9-ui -->
+
+<!-- deb-3-0-ui
+Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/4000).
+ deb-3-0-ui -->
+ 
+<!-- snap-2-7-ui
+Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/2851).
+ snap-2-7-ui -->
+
+<!-- snap-2-8-ui
+Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/2853).
+ snap-2-8-ui -->
+
+<!-- snap-2-9-ui
+Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/2855).
+ snap-2-9-ui -->
+
+Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/3998).
+
 
 <a href="#heading--import-maasio-image-ui"><h2 id="heading--import-maasio-image-ui">Importing images from maas.io</h2></a>
 
 The 'Images' page shows what images and architectures have been selected and downloaded. By default, MAAS will automatically grab the most recent Ubuntu LTS releases (and amd64 architecture). Below, we have selected two additional releases:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png"></a>
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
 
-<!-- deb-2-10-ui
-You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/3960#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
- deb-2-10-ui -->
+<!-- deb-2-7-ui
+You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/2701#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
+ deb-2-7-ui -->
 
 <!-- deb-2-8-ui
 You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/2703#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
@@ -113,7 +63,13 @@ You can tell MAAS to sync images hourly, at the region level, using a toggle swi
 You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/2705#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
  deb-2-9-ui -->
 
+<!-- deb-3-0-ui
+You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/3960#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
+ deb-3-0-ui -->
+
+<!-- snap-2-7-ui
 You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/2695#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
+ snap-2-7-ui -->
 
 <!-- snap-2-8-ui
 You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/2697#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
@@ -122,6 +78,8 @@ You can tell MAAS to sync images hourly, at the region level, using a toggle swi
 <!-- snap-2-9-ui
 You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/2699#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
  snap-2-9-ui -->
+
+You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/3958#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
 
 Click the 'Save selection' button to initiate the import. MAAS will present existing images along with the newly-selected ones. The latter will have their status updated as the import is processed:
 
@@ -137,13 +95,13 @@ Advanced options, such as using a GPG key or keyring to validate the mirror path
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/dbe44a827e70e318a6139c3e335019a6a27c4374.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/dbe44a827e70e318a6139c3e335019a6a27c4374.png"></a>
 
-<!-- deb-2-10-cli
-Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/3983) for instructions.
- deb-2-10-cli -->
+<!-- deb-2-7-cli
+Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/2808) for instructions.
+ deb-2-7-cli -->
 
-<!-- deb-2-10-ui
-Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/3984) for instructions.
- deb-2-10-ui -->
+<!-- deb-2-7-ui
+Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/2809) for instructions.
+ deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/2810) for instructions.
@@ -161,11 +119,21 @@ Optionally, a local mirror can be set up as the boot source. MAAS will then use 
 Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/2813) for instructions.
  deb-2-9-ui -->
 
-<!-- snap-2-10-cli
-Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/3981) for instructions.
- snap-2-10-cli -->
+<!-- deb-3-0-cli
+Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/3983) for instructions.
+ deb-3-0-cli -->
 
-Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/3982) for instructions.
+<!-- deb-3-0-ui
+Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/3984) for instructions.
+ deb-3-0-ui -->
+
+<!-- snap-2-7-cli
+Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/2802) for instructions.
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/2803) for instructions.
+ snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/2804) for instructions.
@@ -183,15 +151,21 @@ Optionally, a local mirror can be set up as the boot source. MAAS will then use 
 Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/2807) for instructions.
  snap-2-9-ui -->
 
+<!-- snap-3-0-cli
+Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/3981) for instructions.
+ snap-3-0-cli -->
+
+Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/3982) for instructions.
+
 <a href="#heading--other-images"><h2 id="heading--other-images">Other images</h2></a>
 
 It is also possible to import and provision images other than Ubuntu. Images supported and provided by MAAS will appear beneath the 'Other Images' section. Currently, images for CentOS 6.6, CentOS 7.0, and CentOS 8.0 are available. These images can be imported and used just like the Ubuntu images above.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png"></a>
 
-<!-- deb-2-10-cli
-You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/3959#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
- deb-2-10-cli -->
+<!-- deb-2-7-cli
+You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/2700#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
+ deb-2-7-cli -->
 
 <!-- deb-2-8-cli
 You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/2702#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
@@ -201,9 +175,13 @@ You can tell MAAS to sync images hourly, at the region level.  See [Boot image s
 You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/2704#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
  deb-2-9-cli -->
  
-<!-- snap-2-10-cli
-You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/3957#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
- snap-2-10-cli -->
+<!-- deb-3-0-cli
+You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/3959#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
+ deb-3-0-cli -->
+ 
+<!-- snap-2-7-cli
+You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/2694#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
+ snap-2-7-cli -->
  
 <!-- snap-2-8-cli
 You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/2696#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
@@ -213,7 +191,11 @@ You can tell MAAS to sync images hourly, at the region level.  See [Boot image s
 You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/2698#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
  snap-2-9-cli -->
 
-<!-- snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-3-0-cli
+You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/3957#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
+ snap-3-0-cli -->
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 
 #### Eight questions you may have:
 
@@ -355,11 +337,11 @@ If you added a sole boot source, then the fields 'Sync URL' and 'Keyring Path' i
 
 <a href="#heading--using-a-local-image-mirror"><h3 id="heading--using-a-local-image-mirror">Using a local image mirror</h3></a>
 
-snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<!-- deb-2-10-cli
-Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/3983) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
- deb-2-10-cli -->
+<!-- deb-2-7-cli
+Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/2808) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
+ deb-2-7-cli -->
 
 <!-- deb-2-8-cli
 Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/2810) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
@@ -369,9 +351,13 @@ Once the mirror is set up according to [Local image mirror](/t/local-image-mirro
 Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/2812) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
  deb-2-9-cli -->
 
-<!-- snap-2-10-cli
-Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/3981) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
- snap-2-10-cli -->
+<!-- deb-3-0-cli
+Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/3983) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
+ deb-3-0-cli -->
+
+<!-- snap-2-7-cli
+Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/2802) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
+ snap-2-7-cli -->
 
 <!-- snap-2-8-cli
 Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/2804) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
@@ -381,7 +367,11 @@ Once the mirror is set up according to [Local image mirror](/t/local-image-mirro
 Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/2806) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
  snap-2-9-cli -->
 
-<!-- snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-3-0-cli
+Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/3981) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
+ snap-3-0-cli -->
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 
 1.   URL=https://$MIRROR/maas/images/ephemeral-v3/stable/
 2.   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
@@ -394,4 +384,4 @@ Recreate the default boot source if it was ever deleted using the following vari
 
 1.   URL=https://images.maas.io/ephemeral-v3/stable/
 2.   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
-snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
