@@ -16,6 +16,12 @@
 <!-- deb-2-9-ui
  deb-2-9-ui -->
 
+<!-- deb-3-0-cli
+ deb-3-0-cli -->
+
+<!-- deb-3-0-ui
+ deb-3-0-ui -->
+ 
 <!-- snap-2-7-cli
  snap-2-7-cli -->
 
@@ -33,3 +39,9 @@
 
 <!-- snap-2-9-ui
  snap-2-9-ui -->
+
+<!-- snap-3-0-cli
+ snap-3-0-cli -->
+
+<!-- snap-3-0-ui
+ snap-3-0-ui -->
