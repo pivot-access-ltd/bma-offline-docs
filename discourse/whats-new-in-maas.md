@@ -550,9 +550,41 @@ snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
 
 <h3>MAAS 3.0 BETA release notes</h3>
 
-MAAS 3.0 Beta 1 will be released in the near future. This pending release should provide some new features, along with critical bug fixes.
+We are happy to announce that MAAS 3.0 Beta 1 has been released. This release provides some new features, along with critical bug fixes.
 
-NOTE that this is currently a BETA release, so there will be bugs, instabilities, and missing or incomplete features.  Please remember to [file bugs](https://bugs.launchpad.net/maas/+filebug) as you find them, and please feel free to interact with the developers on [discourse](https://discourse.maas.io/).
+<!-- deb-3-0-ui deb-3-0-cli
+The Beta 1 can be installed by adding the `3.0-next` PPA:
+
+```
+sudo add-apt-repository ppa:maas/3.0-next
+sudo apt update
+```
+
+You can then either install MAAS 3.0 Beta1 fresh (recommended) with:
+
+```
+sudo apt-get -y install maas
+```
+
+Or, if you prefer to upgrade (remember, this is a Beta), you can do so with:
+
+```
+sudo apt upgrade maas
+```
+
+At this point, you may proceed with a normal installation.
+
+ deb-3-0-cli deb-3-0-ui -->
+
+The Beta 1 can be installed fresh (recommended) with:
+
+```
+sudo snap install --channel=3.0/beta maas
+```
+
+At this point, you may proceed with a normal installation.
+
+NOTE that this is currently a BETA release, so there will be bugs, instabilities, and missing or incomplete features.  As such, we invite you to thoroughly test this release and provide feedback.  Please remember to [file bugs](https://bugs.launchpad.net/maas/+filebug) as you find them, and please feel free to interact with the developers on [discourse](https://discourse.maas.io/).
 
 <h2>Significant changes</h2>
 
@@ -570,7 +602,7 @@ With the advent of MAAS 3.0, we are removing support for RSD pods.  Registered p
 
 <h2 id="heading--pci-usb-devices">PCI and USB devices are now modelled in MAAS</h2>
 
-MAAS 3.0 will model all PCI and USB devices detected during commissioning:
+MAAS 3.0 models all PCI and USB devices detected during commissioning:
 
 * Existing machines will have to be recommissioned to have PCI and USB devices modelled
 
@@ -582,11 +614,11 @@ On the API using the allocate operation on the machines endpoint a machine may a
 
 <h2 id="heading--ibm-z-dpm">IBM Z DPM partition support</h2>
 
-IBM Z14 and above mainframe partitions will be supported in MAAS 3.0.  Note that partitions must use HyperV sockets and properly-defined storage groups.  IBM Z DPM Partitions can be added as a chassis, which allows you to add all partitions in an HMC at once.
+IBM Z14 and above mainframe partitions are supported in MAAS 3.0.  Note that partitions must use HyperV sockets and properly-defined storage groups.  IBM Z DPM Partitions can be added as a chassis, which allows you to add all partitions in an HMC at once.
 
 <h2 id="heading--proxmox-support">Proxmox support</h2>
 
-MAAS 3.0 will support Proxmox as a power driver:
+MAAS 3.0 supports Proxmox as a power driver:
 
 * Only Proxmox VMs are supported
 
@@ -600,7 +632,7 @@ Note that proxmox support has also been back-ported to MAAS 2.9
 
 <h2 id="heading--lxd-projects-support">LXD projects support</h2>
 
-MAAS 3.0 will support the use of LXD projects:
+MAAS 3.0 supports the use of LXD projects:
 
 * LXD VM hosts registered in MAAS are now tied to a specific LXD project which MAAS uses to manage VMs
 
@@ -614,7 +646,7 @@ MAAS 3.0 will support the use of LXD projects:
 
 <h2 id="heading--pci-usb-device-tabs">PCI and USB device tabs in UI machine details</h2>
 
-Tables for detected PCI and USB devices will be added to the machine details page for MAAS 3.0:
+Tables for detected PCI and USB devices have been added to the machine details page for MAAS 3.0:
 
 <a  href="https://discourse.maas.io/uploads/default/original/2X/8/87f42bafe321d45af94d73216f933a9067f01df2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/87f42bafe321d45af94d73216f933a9067f01df2.png"></a>
 
@@ -626,7 +658,7 @@ The user is prompted to commission the machine if no devices are detected.
 
 <h2 id="heading--workload-annotations">Workload annotations</h2>
 
-Workload annotations will be added to the machine summary page in MAAS 3.0.  These allow you to apply `owner_data` to a machine and make it visible while the machine is in allocated or deployed state:
+Workload annotations have been added to the machine summary page in MAAS 3.0.  These allow you to apply `owner_data` to a machine and make it visible while the machine is in allocated or deployed state:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/5/54682ae5f9c7bb449a1ad222679be0156f27d109.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/54682ae5f9c7bb449a1ad222679be0156f27d109.png"></a>
 
@@ -634,6 +666,6 @@ This data is cleared once the machine state changes to something other than "all
 
 <h2 id="heading--fixed-status-bar">Fixed status bar</h2>
 
-In MAAS 3.0, a fixed status bar will be added to the bottom of the screen, which will always display the MAAS name and version on the left.  The right side of the status bar is intended to show contextual data, depending on the UI panel currently displayed. For now, the only data shown is a “last commissioned” timestamp when the user is on a machine details page:
+In MAAS 3.0, a fixed status bar has been added to the bottom of the screen, which will always display the MAAS name and version on the left.  The right side of the status bar is intended to show contextual data, depending on the UI panel currently displayed. For now, the only data shown is a “last commissioned” timestamp when the user is on a machine details page:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png"></a>
