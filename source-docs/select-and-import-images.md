@@ -54,7 +54,7 @@ Note that it is possible to build your own images in a limited sense: see [MAAS 
 The 'Images' page shows what images and architectures have been selected and downloaded. By default, MAAS will automatically grab the most recent Ubuntu LTS releases (and amd64 architecture). Below, we have selected two additional releases:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png"></a>
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
 
 <!-- deb-2-7-ui
 You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/2701#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.

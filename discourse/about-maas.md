@@ -69,7 +69,6 @@ MAAS integrates all the tools you need into a smooth system-management experienc
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/40fdae53957095e5a830458dc5c7a62ea5d78c10.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/40fdae53957095e5a830458dc5c7a62ea5d78c10.jpeg"></a> 
 
-*Listing generated with [tagged machine list](/t/the-cli-cookbook/2218#heading--lsmm-t), a recipe in our [CLI cookbook](/t/the-cli-cookbook/2218) page.
 deb-2-7-cli deb-2-8-cli deb-2-9-cli deb-3-0-cli snap-2-7-cli snap-2-8-cli snap-2-9-cli snap-3-0-cli -->
 
 MAAS works with any system configuration tools. Both the [Chef](https://www.chef.io/chef) and [Juju](https://jaas.ai/) teams recommend MAAS as a physical provisioning system.
