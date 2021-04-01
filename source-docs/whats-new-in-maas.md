@@ -560,6 +560,7 @@ The Beta 1 can be installed by adding the `3.0-next` PPA:
 ```
 sudo add-apt-repository ppa:maas/3.0-next
 sudo apt update
+sudo apt install maas
 ```
 
 You can then either install MAAS 3.0 Beta1 fresh (recommended) with:
