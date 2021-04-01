@@ -80,6 +80,36 @@ You **must** [configure your network](/t/vm-host-networking/3220) to support a V
 6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
  deb-2-9-cli -->
 
+<!-- deb-3-0-ui
+[note type="caution" status="Warning"]
+You **must** [configure your network](/t/vm-host-networking/4168) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/4168#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
+[/note]
+
+#### Six questions you may have:
+
+1. [How do I configure networking for VM hosts?](/t/vm-host-networking/4168)
+2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/4168#heading--set-up-ssh)
+3. [How do I add a VM host?](#heading--adding-a-vm-host)
+4.  [How do I configure a VM host after I've added it?](#heading--configuration)
+5. [How do I over-commit resources on a host?](#heading--overcommit-resources)
+6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
+ deb-3-0-ui -->
+
+<!-- deb-3-0-cli
+[note type="caution" status="Warning"]
+You **must** [configure your network](/t/vm-host-networking/4167) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/4167#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
+[/note]
+
+#### Six questions you may have:
+
+1. [How do I configure networking for VM hosts?](/t/vm-host-networking/4167)
+2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/4167#heading--set-up-ssh)
+3. [How do I add a VM host?](#heading--adding-a-vm-host)
+4.  [How do I configure a VM host after I've added it?](#heading--configuration)
+5. [How do I over-commit resources on a host?](#heading--overcommit-resources)
+6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
+ deb-3-0-cli -->
+
 <!-- deb-2-9-ui
 [note type="caution" status="Warning"]
 You **must** [configure your network](/t/vm-host-networking/3221) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3221#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
@@ -185,15 +215,45 @@ You **must** [configure your network](/t/vm-host-networking/3215) to support a V
 6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
  snap-2-9-ui -->
 
+<!-- snap-3-0-cli
+[note type="caution" status="Warning"]
+You **must** [configure your network](/t/vm-host-networking/4165) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/4165#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
+[/note]
+
+#### Six questions you may have:
+
+1. [How do I configure networking for VM hosts?](/t/vm-host-networking/4165)
+2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/4165#heading--set-up-ssh)
+3. [How do I add a VM host?](#heading--adding-a-vm-host)
+4.  [How do I configure a VM host after I've added it?](#heading--configuration)
+5. [How do I over-commit resources on a host?](#heading--overcommit-resources)
+6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
+ snap-3-0-cli -->
+
+<!-- snap-3-0-ui
+[note type="caution" status="Warning"]
+You **must** [configure your network](/t/vm-host-networking/4166) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/4166#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
+[/note]
+
+#### Six questions you may have:
+
+1. [How do I configure networking for VM hosts?](/t/vm-host-networking/4166)
+2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/4166#heading--set-up-ssh)
+3. [How do I add a VM host?](#heading--adding-a-vm-host)
+4.  [How do I configure a VM host after I've added it?](#heading--configuration)
+5. [How do I over-commit resources on a host?](#heading--overcommit-resources)
+6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
+ snap-3-0-ui -->
+
 <a href="#heading--adding-a-vm-host"><h2 id="heading--adding-a-vm-host">Adding a VM host</h2></a>
 
-<!-- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui
+<!-- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui snap-3-0-ui deb-3-0-ui 
 After installing MAAS, the 'KVM' page is typically empty:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/fa0cc573f34cb23ca0ac026e97ef5b618ff1fed3.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/fa0cc573f34cb23ca0ac026e97ef5b618ff1fed3.jpeg"></a> 
- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui -->
+ deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui  snap-3-0-ui deb-3-0-ui -->
 
-<!-- deb-2-8-ui deb-2-9-ui snap-2-8-ui nap-2-9-ui
+<!-- deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-9-ui snap-3-0-ui deb-3-0-ui 
 If you want to add a [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) or LXD VM host to a machine which is already installed, you can do so with the 'Add KVM' button:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/197ae57b89b32546cf054fff49452f9025354af8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/197ae57b89b32546cf054fff49452f9025354af8.jpeg"></a> 
@@ -205,7 +265,7 @@ Here, 'Virsh address' typically looks like the following for libvirt:
 of like this for LXD (Beta):
 
     https://10.0.0.100:8443
- deb-2-8-ui deb-2-9-ui snap-2-8-ui nap-2-9-ui -->
+ deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-9-ui  snap-3-0-ui deb-3-0-ui -->
     
 <!-- deb-2-7-ui snap-2-7-ui
 If you want to add a [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) to a machine which is already installed, you can do so with the 'Add KVM' button:
@@ -218,7 +278,7 @@ Here, 'Virsh address' typically looks like the following for libvirt:
 
  deb-2-7-ui snap-2-7-ui -->
 
-<!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli
+<!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli snap-3-0-cli deb-3-0-cli 
 To add a VM host:
 
 ``` bash
@@ -255,7 +315,7 @@ To create a KVM host, enter the following:
 ``` bash
 maas $PROFILE vm-hosts create type=virsh power_address=qemu+ssh://ubuntu@192.168.1.2/system
 ```
-deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli -->
+deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 [note]
 MAAS will automatically discover and store the resources your VM host contains. Any existing machines will also appear on the 'Machines' page, and MAAS will automatically attempt to commission them.
@@ -263,13 +323,13 @@ MAAS will automatically discover and store the resources your VM host contains. 
 
 <a href="#heading--configuration"><h2 id="heading--configuration">Configuration</h2></a>
 
-<!-- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui
+<!-- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui snap-3-0-ui deb-3-0-ui 
 VM hosts have several configuration options. Modify these by selecting the 'Configuration' tab and clicking 'Edit'. Options include a VM host's location, password, network zone, and default resource pool.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/e6f9b3effcc9e4f44a09836cf6185449410bae7f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e6f9b3effcc9e4f44a09836cf6185449410bae7f.png"></a>
-deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui -->
+deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui  snap-3-0-ui deb-3-0-ui -->
 
-<!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli
+<!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli snap-3-0-cli deb-3-0-cli 
 Using the CLI, it's possible to update the configuration of a VM host.  You can change these configurable parameters with an `update` command -- but first, you'll want to know how to check the values of configurable parameters, both before and after the change.
 
 <a href="#heading--list-vm-hosts"><h3 id="heading--list-vm-hosts">List VM-hosts</h3></a>
@@ -333,7 +393,7 @@ If you really want to set your VM host to a new one, you just need to create a n
     maas admin resource-pools create name=$NEW_POOL_NAME
 
 Then double-check it with `catvmpools`, and assign your VM host to it using the earlier command. 
-deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli -->
+deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <a href="#heading--overcommit-resources"><h3 id="heading--overcommit-resources">Over-commit resources</h3></a>
 
@@ -346,8 +406,8 @@ The following shows four theoretical examples of these ratios and how they affec
 3.  `32 physical CPU cores * 10.0 multiplier  = 320 virtual CPU cores`
 4.  `128GB physical memory  * 5.5 multiplier  = 704G virtual Memory`
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui 
 <a href="https://discourse.maas.io/uploads/default/original/1X/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg"></a> 
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
 
 Over-committing resources allows a user to compose many MAAS-managed machines without worrying about the physical limitations of the host. For example, on a physical host with four cores and 12 GB of memory, you could compose four libvirt machines, each using two cores and 4 GB of memory.  This arrangement over commits the available physical resources. Provided you never run all four VMs simultaneously, you would have all the benefits of MAAS-managed VMs without over-taxing your host.
