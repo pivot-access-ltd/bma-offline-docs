@@ -452,7 +452,6 @@ There are (at least) three ways you can contribute to MAAS:
 - [Kernel management](/t/cli-kernel-management/799)
 - [Image management](/t/cli-image-management/797)
 - [Interface management](/t/cli-interface-management/798)
-- [Composable hardware](/t/cli-composable-machines-management/795)
 
 ### [API documentation](https://maas.io/docs/api)
 

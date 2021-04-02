@@ -178,7 +178,6 @@ DTARG += $(DISC)/availability-zones.md
 DTARG += $(DISC)/backup.md
 DTARG += $(DISC)/block-devices.md
 DTARG += $(DISC)/candid-tutorial.md
-DTARG += $(DISC)/cli-composable-hardware.md
 DTARG += $(DISC)/cli-image-management.md
 DTARG += $(DISC)/cli-interface-management.md
 DTARG += $(DISC)/cli-kernel-management.md

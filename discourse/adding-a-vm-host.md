@@ -10,7 +10,7 @@ A VM host is simply a machine which can run virtual machines (VMs) by allocating
 You **must** [configure your network](/t/vm-host-networking/3216) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3216#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Six questions you may have:
+#### Eight questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3216)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3216#heading--set-up-ssh)
@@ -18,6 +18,11 @@ You **must** [configure your network](/t/vm-host-networking/3216) to support a V
 4. [How do I configure a VM host after I've added it?](#heading--configuration)
 5. [How do I over-commit resources on a host?](#heading--overcommit-resources)
 6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
+7. [How can I list resources of all VM hosts?](#heading--list-resources-of-all-vm-hosts)
+8. [How can I list resources of a VM host?](#heading--list-resources-of-a-vm-host)
+9. [How can I update a VM host's configuration?](#heading--update-vm-host-configuration)
+10. [How can I list a VM host's connection parameters?](#heading--list-vm-host-connection-parameters)
+
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
@@ -40,7 +45,7 @@ You **must** [configure your network](/t/vm-host-networking/3217) to support a V
 You **must** [configure your network](/t/vm-host-networking/3218) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3218#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Six questions you may have:
+#### Eight questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3218)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3218#heading--set-up-ssh)
@@ -48,6 +53,10 @@ You **must** [configure your network](/t/vm-host-networking/3218) to support a V
 4. [How do I configure a VM host after I've added it?](#heading--configuration)
 5. [How do I over-commit resources on a host?](#heading--overcommit-resources)
 6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
+7. [How can I list resources of all VM hosts?](#heading--list-resources-of-all-vm-hosts)
+8. [How can I list resources of a VM host?](#heading--list-resources-of-a-vm-host)
+9. [How can I update a VM host's configuration?](#heading--update-vm-host-configuration)
+10. [How can I list a VM host's connection parameters?](#heading--list-vm-host-connection-parameters)
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
@@ -70,7 +79,7 @@ You **must** [configure your network](/t/vm-host-networking/3219) to support a V
 You **must** [configure your network](/t/vm-host-networking/3220) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3220#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Six questions you may have:
+#### Eight questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3220)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3220#heading--set-up-ssh)
@@ -78,6 +87,10 @@ You **must** [configure your network](/t/vm-host-networking/3220) to support a V
 4.  [How do I configure a VM host after I've added it?](#heading--configuration)
 5. [How do I over-commit resources on a host?](#heading--overcommit-resources)
 6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
+7. [How can I list resources of all VM hosts?](#heading--list-resources-of-all-vm-hosts)
+8. [How can I list resources of a VM host?](#heading--list-resources-of-a-vm-host)
+9. [How can I update a VM host's configuration?](#heading--update-vm-host-configuration)
+10. [How can I list a VM host's connection parameters?](#heading--list-vm-host-connection-parameters)
  deb-2-9-cli -->
 
 <!-- deb-3-0-ui
@@ -100,7 +113,7 @@ You **must** [configure your network](/t/vm-host-networking/4168) to support a V
 You **must** [configure your network](/t/vm-host-networking/4167) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/4167#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Six questions you may have:
+#### Eight questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/4167)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/4167#heading--set-up-ssh)
@@ -108,7 +121,11 @@ You **must** [configure your network](/t/vm-host-networking/4167) to support a V
 4.  [How do I configure a VM host after I've added it?](#heading--configuration)
 5. [How do I over-commit resources on a host?](#heading--overcommit-resources)
 6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
- deb-3-0-cli -->
+7. [How can I list resources of all VM hosts?](#heading--list-resources-of-all-vm-hosts)
+8. [How can I list resources of a VM host?](#heading--list-resources-of-a-vm-host)
+9. [How can I update a VM host's configuration?](#heading--update-vm-host-configuration)
+10. [How can I list a VM host's connection parameters?](#heading--list-vm-host-connection-parameters)
+deb-3-0-cli -->
 
 <!-- deb-2-9-ui
 [note type="caution" status="Warning"]
@@ -130,7 +147,7 @@ You **must** [configure your network](/t/vm-host-networking/3221) to support a V
 You **must** [configure your network](/t/vm-host-networking/3210) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3210#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Six questions you may have:
+#### Eight questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3210)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3210#heading--set-up-ssh)
@@ -138,6 +155,10 @@ You **must** [configure your network](/t/vm-host-networking/3210) to support a V
 4.  [How do I configure a VM host after I've added it?](#heading--configuration)
 5. [How do I over-commit resources on a host?](#heading--overcommit-resources)
 6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
+7. [How can I list resources of all VM hosts?](#heading--list-resources-of-all-vm-hosts)
+8. [How can I list resources of a VM host?](#heading--list-resources-of-a-vm-host)
+9. [How can I update a VM host's configuration?](#heading--update-vm-host-configuration)
+10. [How can I list a VM host's connection parameters?](#heading--list-vm-host-connection-parameters)
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
@@ -160,7 +181,7 @@ You **must** [configure your network](/t/vm-host-networking/3211) to support a V
 You **must** [configure your network](/t/vm-host-networking/3212) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3212#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Six questions you may have:
+#### Eight questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3212)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3212#heading--set-up-ssh)
@@ -168,6 +189,10 @@ You **must** [configure your network](/t/vm-host-networking/3212) to support a V
 4.  [How do I configure a VM host after I've added it?](#heading--configuration)
 5. [How do I over-commit resources on a host?](#heading--overcommit-resources)
 6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
+7. [How can I list resources of all VM hosts?](#heading--list-resources-of-all-vm-hosts)
+8. [How can I list resources of a VM host?](#heading--list-resources-of-a-vm-host)
+9. [How can I update a VM host's configuration?](#heading--update-vm-host-configuration)
+10. [How can I list a VM host's connection parameters?](#heading--list-vm-host-connection-parameters)
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
@@ -190,7 +215,7 @@ You **must** [configure your network](/t/vm-host-networking/3213) to support a V
 You **must** [configure your network](/t/vm-host-networking/3214) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/3214#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Six questions you may have:
+#### Eight questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/3214)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/3214#heading--set-up-ssh)
@@ -198,6 +223,10 @@ You **must** [configure your network](/t/vm-host-networking/3214) to support a V
 4.  [How do I configure a VM host after I've added it?](#heading--configuration)
 5. [How do I over-commit resources on a host?](#heading--overcommit-resources)
 6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
+7. [How can I list resources of all VM hosts?](#heading--list-resources-of-all-vm-hosts)
+8. [How can I list resources of a VM host?](#heading--list-resources-of-a-vm-host)
+9. [How can I update a VM host's configuration?](#heading--update-vm-host-configuration)
+10. [How can I list a VM host's connection parameters?](#heading--list-vm-host-connection-parameters)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
@@ -220,7 +249,7 @@ You **must** [configure your network](/t/vm-host-networking/3215) to support a V
 You **must** [configure your network](/t/vm-host-networking/4165) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/4165#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Six questions you may have:
+#### Eight questions you may have:
 
 1. [How do I configure networking for VM hosts?](/t/vm-host-networking/4165)
 2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/4165#heading--set-up-ssh)
@@ -228,6 +257,10 @@ You **must** [configure your network](/t/vm-host-networking/4165) to support a V
 4.  [How do I configure a VM host after I've added it?](#heading--configuration)
 5. [How do I over-commit resources on a host?](#heading--overcommit-resources)
 6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
+7. [How can I list resources of all VM hosts?](#heading--list-resources-of-all-vm-hosts)
+8. [How can I list resources of a VM host?](#heading--list-resources-of-a-vm-host)
+9. [How can I update a VM host's configuration?](#heading--update-vm-host-configuration)
+10. [How can I list a VM host's connection parameters?](#heading--list-vm-host-connection-parameters)
  snap-3-0-cli -->
 
 [note type="caution" status="Warning"]
@@ -531,3 +564,66 @@ The following shows four theoretical examples of these ratios and how they affec
 <a href="https://discourse.maas.io/uploads/default/original/1X/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg"></a> 
 
 Over-committing resources allows a user to compose many MAAS-managed machines without worrying about the physical limitations of the host. For example, on a physical host with four cores and 12 GB of memory, you could compose four libvirt machines, each using two cores and 4 GB of memory.  This arrangement over commits the available physical resources. Provided you never run all four VMs simultaneously, you would have all the benefits of MAAS-managed VMs without over-taxing your host.
+
+<!-- snap-2a-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
+<a href="#heading--list-resources-of-all-vm-hosts"><h2 id="heading--list-resources-of-all-vm-hosts">List resources of all VM hosts</h2></a>
+
+``` bash
+maas $PROFILE vm-hosts read
+```
+
+A portion of the sample output:
+
+``` no-highlight
+        "id": 93,
+        "capabilities": [
+            "composable",
+            "fixed_local_storage",
+            "iscsi_storage"
+        ],
+        "name": "civil-hermit",
+```
+
+<a href="#heading--list-resources-of-a-vm-host"><h2 id="heading--list-resources-of-a-vm-host">List resources of a VM host</h2></a>
+
+To list an individual VM host's resources:
+
+``` bash
+maas $PROFILE vm-host read $VM_HOST_ID
+```
+
+<a href="#heading--update-vm-host-configuration"><h2 id="heading--update-vm-host-configuration">Update VM host configuration</h2></a>
+
+Update overcommit ratios for a KVM host:
+
+``` bash
+maas $PROFILE vm-host update $VM_HOST_ID power_address=qemu+ssh://ubuntu@192.168.1.2/system \
+        power_pass=example cpu_over_commit_ratio=2.5 memory_over_commit_ratio=10.0
+```
+
+Update the default storage pool used by a KVM host:
+
+``` bash
+maas $PROFILE vm-host update $VM_HOST_ID power_address=qemu+ssh://ubuntu@192.168.1.2/system \
+        power_pass=example default_storage_pool=pool2
+```
+
+<a href="#heading--list-vm-host-connection-parameters"><h2 id="heading--list-vm-host-connection-parameters">List VM host connection parameters</h2></a>
+
+To list a VM host's connection parameters:
+
+``` bash
+maas $PROFILE vm-host parameters $VM_HOST_ID
+```
+
+Example output:
+
+``` no-highlight
+{
+    "power_address": "10.3.0.1:8443",
+    "power_pass": "admin",
+    "power_user": "admin"
+}
+```
+
+snap-2a-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
