@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="../maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.9
+	    What&rsquo;s new in 3.0
 	  </a>
 	</li>
 	<li>
@@ -429,16 +429,17 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>MAAS CLI</h1><p>The MAAS CLI can do everything that the web UI can do, and more. The CLI uses the <code>maas</code> command exclusively which, in turn, connects to the API.  This page explains what is needed to get started with the CLI.</p>
+      <h1>MAAS CLI</h1><p>||2.7|2.8|2.9|3.0|
+The MAAS CLI can do everything that the web UI can do, and more. The CLI uses the <code>maas</code> command exclusively which, in turn, connects to the API.  This page explains what is needed to get started with the CLI.</p>
 <p>Note that this article does not provide complete coverage of the MAAS CLI. For an exhaustive treatment, you may want to check the API documentation.  Also note that this page represents user-entered values as uppercase variables preceded with the &lsquo;$&rsquo; character (e.g. $PROFILE and $EMAIL_ADDRESS). You should replace these placeholders with actual values.</p>
 <h4>Six questions you may have:</h4>
 <ol>
-<li><a href="maas-cli.html#heading--the-maas-command">How do I access the MAAS CLI?</a></li>
-<li><a href="maas-cli.html#heading--create-an-administrator">How do I create an administrator account?</a></li>
-<li><a href="maas-cli.html#heading--log-in-required">How do I complete the required login?</a></li>
-<li><a href="maas-cli.html#heading--get-help">How do I get help via the CLI?</a></li>
-<li><a href="maas-cli.html#heading--log-out">How do I log out?</a></li>
-<li><a href="maas-cli.html#heading--next-steps">What are some the next steps I can take with the CLI?</a></li>
+<li><a href="#heading--the-maas-command">How do I access the MAAS CLI?</a></li>
+<li><a href="#heading--create-an-administrator">How do I create an administrator account?</a></li>
+<li><a href="#heading--log-in-required">How do I complete the required login?</a></li>
+<li><a href="#heading--get-help">How do I get help via the CLI?</a></li>
+<li><a href="#heading--log-out">How do I log out?</a></li>
+<li><a href="#heading--next-steps">What are some the next steps I can take with the CLI?</a></li>
 </ol>
 <p><a href="#heading--the-maas-command"><h2 id="heading--the-maas-command">The maas command</h2></a></p>
 <p>You can obtain the <code>maas</code> command via the <code>maas-cli</code> Ubuntu package installed on every region API server and rack controller. To manage MAAS at the CLI level from a remote workstation, you will need to install this package:</p>
@@ -450,7 +451,67 @@
 <pre><code class="bash">sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
 </code></pre>
 
-<p>You can create extra administrators in the same way. See <a href="common-cli-tasks.html#heading--create-a-regular-user">MAAS CLI - common tasks</a> for instructions on creating regular users with the CLI.</p>
+<!-- deb-2-7-cli
+You can create extra administrators in the same way. See [User accounts](user-accounts.html#heading--add-a-user) for instructions on creating regular users.
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+You can create extra administrators in the same way. See [User accounts](user-accounts.html#heading--add-a-user) for instructions on creating regular users.
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+You can create extra administrators in the same way. See [User accounts](user-accounts.html#heading--add-a-user) for instructions on creating regular users.
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+You can create extra administrators in the same way. See [User accounts](user-accounts.html#heading--add-a-user) for instructions on creating regular users.
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+You can create extra administrators in the same way. See [User accounts](user-accounts.html#heading--add-a-user) for instructions on creating regular users.
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+You can create extra administrators in the same way. See [User accounts](user-accounts.html#heading--add-a-user) for instructions on creating regular users.
+ deb-2-9-ui -->
+
+<!-- deb-3-0-cli
+You can create extra administrators in the same way. See [User accounts](user-accounts.html#heading--add-a-user) for instructions on creating regular users.
+ deb-3-0-cli -->
+
+<p>You can create extra administrators in the same way. See <a href="user-accounts.html#heading--add-a-user">User accounts</a> for instructions on creating regular users.</p>
+<!-- snap-2-7-cli
+You can create extra administrators in the same way. See [User accounts](user-accounts.html#heading--add-a-user) for instructions on creating regular users.
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+You can create extra administrators in the same way. See [User accounts](user-accounts.html#heading--add-a-user) for instructions on creating regular users.
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+You can create extra administrators in the same way. See [User accounts](user-accounts.html#heading--add-a-user) for instructions on creating regular users.
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+You can create extra administrators in the same way. See [User accounts](user-accounts.html#heading--add-a-user) for instructions on creating regular users.
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+You can create extra administrators in the same way. See [User accounts](user-accounts.html#heading--add-a-user) for instructions on creating regular users.
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+You can create extra administrators in the same way. See [User accounts](user-accounts.html#heading--add-a-user) for instructions on creating regular users.
+ snap-2-9-ui -->
+
+<!-- snap-3-0-cli
+You can create extra administrators in the same way. See [User accounts](user-accounts.html#heading--add-a-user) for instructions on creating regular users.
+ snap-3-0-cli -->
+
+<!-- snap-3-0-ui
+You can create extra administrators in the same way. See [User accounts](user-accounts.html#heading--add-a-user) for instructions on creating regular users.
+ snap-3-0-ui -->
+
 <p><a href="#heading--log-in-required"><h2 id="heading--log-in-required">Log in (required)</h2></a></p>
 <p>To use the CLI you must first log in to the API server (region controller).</p>
 <p>You will need the API key that MAAS generated when creating your MAAS account. To obtain it, run this command on the region controller (i.e. wherever you installed the &lsquo;maas-region-controller&rsquo; package):</p>
@@ -510,14 +571,7 @@ maas login $PROFILE $MAAS_URL - &lt; $API_KEY_FILE
 </code></pre>
 
 <p><a href="#heading--next-steps"><h2 id="heading--next-steps">Next steps</h2></a></p>
-<p>The following five categories are now available to be explored:</p>
-<ol>
-<li><a href="common-cli-tasks.html">Common tasks</a></li>
-<li><a href="cli-kernel-management.html">Kernel management</a></li>
-<li><a href="cli-image-management.html">Image management</a></li>
-<li><a href="cli-advanced-tasks.html">Advanced tasks</a></li>
-<li><a href="cli-composable-hardware.html">Composable hardware</a></li>
-</ol>
+<p>To continue with your exploration of the MAAS CLI, simply choose any relevant page in the menu at left and switch to the &ldquo;CLI&rdquo; page for your particular version and build format.  You should find extensive instructions about using the CLI commands relevant to each topic.</p>
     </div>
   </body>
 </html>

@@ -26,7 +26,7 @@
 	  &nbsp;UI-only&nbsp;
 	</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;>"
 	  CLI-only
       </span>
     </div>
@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.9
+	    What&rsquo;s new in 3.0
 	  </a>
 	</li>
 	<li>
@@ -429,7 +429,22 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Troubleshooting</h1><p>This section covers some of the most commonly encountered problems and attempts to resolve them.</p>
+      <h1>Troubleshooting</h1><p>||2.7|2.8|2.9|3.0|
+This section covers some of the most commonly encountered problems and attempts to resolve them.</p>
+<p><a href="#heading--machine-login-issues"><h2 id="heading--machine-login-issues">Can&rsquo;t login to machine after deployment</h2></a></p>
+<p>When everything seems to be right about your machine deployment, but you can&rsquo;t login, there&rsquo;s a chance you might not be using the right username.  You may have added your personal SSH key to MAAS, but your corresponding login doesn&rsquo;t seem to work; that&rsquo;s because the logins for the machines are generally related to the operating system, e.g.:</p>
+<ul>
+<li>
+<p>For machines deploying Ubuntu, the username is <code>ubuntu</code>, and the login would be <code>ubuntu@$MACHINE_IP</code>.</p>
+</li>
+<li>
+<p>For machines deploying CentOS 7, the username is <code>centos</code>, and the login would be <code>centos@$MACHINE_IP</code>.</p>
+</li>
+<li>
+<p>For machines deploying CentOS 8, the username is <code>cloud-user</code>, and the login would be <code>cloud-user@$MACHINE_IP</code>.</p>
+</li>
+</ul>
+<p>Note there is a trick for determining the correct machine login, which works on many different versions of Linux.  If you attempt to <code>ssh root@$MACHINE_IP</code>, this will fail, but often tells you which user you should be using. </p>
 <p><a href="#heading--django-subarch-error"><h2 id="heading--django-subarch-error">Subarchitecture error thrown by django</h2></a></p>
 <p>Occassionally, you may encounter an error similar to this one:</p>
 <pre><code>django.core.exceptions.ValidationError: ['Subarchitecture(&lt;value&gt;) must be generic when setting hwe_kernel.']

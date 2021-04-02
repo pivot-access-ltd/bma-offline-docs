@@ -333,7 +333,7 @@ post-build-html: build-html
 	sed -i -e 's/<h1>Index<\/h1>/<h1>MAAS Documentation<\/h1>/g' $(PROD_DEB)/index.html
 	cp -R $(STAGING)/$(SNAP)/$(PROD_VSN)/$(UI) $(PROD_SNAP)
 	cp -R $(STAGING)/$(SNAP)/$(PROD_VSN)/$(CLI) $(PROD_SNAP)
-	cp $(STAGING)/$(SNAP)/$(PROD_VSN)/$(UI)/index.html $(PROD_SNAP)/index.html
+	cp $(STAGING)/$(SNAP)/$(PROD_VSN)/$(UI)/maas-documentation.html $(PROD_SNAP)/index.html
 	sed -i -e 's/href=\"https/hreg=\"https/g' $(PROD_SNAP)/index.html
 	sed -i -e 's/href=\"..\/cli/hreg=\"cli/g' $(PROD_SNAP)/index.html
 	sed -i -e 's/href=\"/href=\"ui\//g' $(PROD_SNAP)/index.html

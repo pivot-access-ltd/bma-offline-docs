@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.10
+	    What&rsquo;s new in 3.0
 	  </a>
 	</li>
 	<li>
@@ -429,45 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Ipv6 addressing</h1><!-- begin-rad-menu -->
-
-<!-- snap-2-8-cli
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
- snap-2-9-ui -->
-
-<!-- snap-2-10-cli
- snap-2-10-cli -->
-
-<!-- snap-2-10-ui
- snap-2-10-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
-
-<!-- deb-2-10-cli
- deb-2-10-cli -->
-
-<!-- end-rad-menu -->
-
-<!-- end-rad-menu -->
-
+      <h1>Ipv6 addressing</h1><p>||2.7|2.8|2.9|3.0|</p>
 <p>Support for IPv6 in MAAS is similar to support for IPv4.  A rack controller in an IPv6 context needs to have the region API server URL specified with brackets:</p>
 <pre><code class="nohighlight">http://[::1]:5240/MAAS/
 </code></pre>
@@ -498,32 +460,6 @@ MAAS can only control most BMCs using IPv4.</p>
 <p>However, when MAAS configures IPv6 networking on a machine, it does not rely on RAs. It statically configures a machine&rsquo;s default IPv6 route to use the router that is set on the cluster interface, so that the machine will know their default gateway. They do not need DHCP and will not autoconfigure global addresses.</p>
 <p>You may be planning to operate DHCPv6 clients as well, for example, on machines not managed by MAAS, or on virtual machines hosted by MAAS machines.  If this is the case, you may want to configure RAs, so that those clients obtain configuration over DHCP.</p>
 <p>If you need RAs but your gateway does not send them, install and configure <code>radvd</code> somewhere on the network to advertise its route.</p>
-<!-- LEAVE THIS OUT FOR NOW
-<a href="#heading--other-installers-and-operating-systems"><h3 id="heading--other-installers-and-operating-systems">Other installers and operating systems</h3></a>
-
-Static IPv6 addresses are currently only configured on Ubuntu when installed using the "fast" installer. Other operating systems, including Ubuntu with the classic Debian installer, will not have their IPv6 addresses configured. The
-same applies when a user manually installs an operating system on a machine or
-overwrites its networking configuration: the machine will no longer have its
-static IPv6 address configured, even if MAAS has allocated it to the machine.
-
-However, as long as the address remains allocated to the machine, you may still
-configure its operating system to use that address. The machine can then use that
-address as if MAAS had configured it.
--->
-
-<!-- LEAVE THIS OUT FOR NOW. I DO NOT SEE THIS OPTION IN THE WEB UI ANYWAY.
-<a href="#heading--disable-ipv4"><h2 id="heading--disable-ipv4">Disable IPv4</h2></a>
-
-For advanced users, there is an experimental capability to deploy machines with
-pure IPv6, with IPv4 networking disabled. To enable this on a machine, check the
-"Disable IPv4 when deployed" box on the machine's Edit page. The process of
-managing and deploying the machine will still mostly work through IPv4, but once
-deployed, the machine will have IPv6 networking only.
-
-In practice, machines may not be functional without IPv4 networking.  A few things are known to be needed in any case:
--->
-
-<!-- LINKS -->
     </div>
   </body>
 </html>

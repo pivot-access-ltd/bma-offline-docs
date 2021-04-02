@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.10
+	    What&rsquo;s new in 3.0
 	  </a>
 	</li>
 	<li>
@@ -429,45 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Networking</h1><!-- begin-rad-menu -->
-
-<!-- snap-2-8-cli
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
- snap-2-9-ui -->
-
-<!-- snap-2-10-ui
- snap-2-10-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
-
-<!-- deb-2-10-cli
- deb-2-10-cli -->
-
-<!-- deb-2-10-ui
- deb-2-10-ui -->
-
-<!-- end-rad-menu -->
-
-<!-- end-rad-menu -->
-
+      <h1>Networking</h1><p>||2.7|2.8|2.9|3.0|</p>
 <p>You can use the CLI to manage the networking elements of MAAS, including subnets, fabrics, VLANs, and spaces.  This page shows how to access and edit these elements. See <a href="concepts-and-terms.html">Concepts and terms</a> for the definitions of networking objects, along with a basic networking tutorial (if needed).</p>
 <h4>Nine questions you may have:</h4>
 <ol>
@@ -504,7 +466,7 @@ fabric-3      untagged  true       2600:100d:b109:dee0::/64
 fabric-3      untagged  true       2600:100d:b104:94c0::/64
 </code></pre>
 
-<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui deb-3-0-ui snap-3-0-ui
 You can use the Web UI to manage the networking elements of MAAS, including subnets, fabrics, VLANs, and spaces.  This page shows how to access and edit these elements. See [Concepts and terms](concepts-and-terms.html) for the definitions of networking objects, along with a basic networking tutorial (if needed).
 
 #### Ten questions you may have:
@@ -529,15 +491,15 @@ To access the main networking view visit the 'Subnets' page:
 Due to the nature of this example, we re-use elements like fabrics, VLANs, subnets, and spaces.  MAAS can automatically detect these elements -- here there are two fabrics, one VLAN, five subnets, and two spaces -- but if MAAS doesn't find them, they can be added manually using the 'Add' button.
 
 This main view can also be filtered either by fabrics or by spaces through the use of the 'Group by' drop-down.
-snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui deb-3-0-ui snap-3-0-ui -->
 
-<!-- deb-2-10-cli
+<!-- deb-2-7-cli
 Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
- deb-2-10-cli -->
+ deb-2-7-cli -->
 
-<!-- deb-2-10-ui
+<!-- deb-2-7-ui
 Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
- deb-2-10-ui -->
+ deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
@@ -555,10 +517,21 @@ Fabrics, VLANs, and spaces do not require much configuration beyond names and de
 Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
  deb-2-9-ui -->
 
-<p>Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as <a href="managing-dhcp.html#heading--enabling-dhcp">enable DHCP</a> (see &lsquo;Take action&rsquo; button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.</p>
-<!-- snap-2-10-ui
+<!-- deb-3-0-cli
 Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
- snap-2-10-ui -->
+ deb-3-0-cli -->
+
+<!-- deb-3-0-ui
+Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
+ deb-3-0-ui -->
+
+<!-- snap-2-7-cli
+Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
+ snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
@@ -575,6 +548,11 @@ Fabrics, VLANs, and spaces do not require much configuration beyond names and de
 <!-- snap-2-9-ui
 Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
  snap-2-9-ui -->
+
+<p>Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as <a href="managing-dhcp.html#heading--enabling-dhcp">enable DHCP</a> (see &lsquo;Take action&rsquo; button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.</p>
+<!-- snap-3-0-ui
+Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](managing-dhcp.html#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
+ snap-3-0-ui -->
 
 <p><a href="#heading--cli-managing-subnets"><h2 id="heading--cli-managing-subnets">Managing subnets</h3></a></p>
 <p>You can view the details of an individual subnet with the command:</p>
@@ -604,7 +582,7 @@ Fabrics, VLANs, and spaces do not require much configuration beyond names and de
 </code></pre>
 
 <p>Subnets support the following configurable values:</p>
-<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 <a href="#heading--ui-subnet-window"><h2 id="heading--ui-subnet-window">Subnet window</h3></a>
 
 Clicking a subnet (here `192.168.100.0/24`) will display its detail screen, which presents several vertical sections.  Let's take them one by one.
@@ -616,7 +594,7 @@ The **Subnet summary** section is the largest and most complex of the subnet con
 <a href="images/17617b35-installconfig-networking__2.4_subnets-summary.png" target = "_blank"><img src="images/17617b35-installconfig-networking__2.4_subnets-summary.png"></a></a>
 
 This screen presents the following configurable options:
-snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 
 <ul>
 <li>
@@ -635,13 +613,13 @@ snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
 <p><strong>Description</strong>: This field represents freeform text that you can enter to describe your subnet, as needed to keep important notes attached to the definition of the subnet.</p>
 </li>
 </ul>
-<!-- deb-2-10-cli
+<!-- deb-2-7-cli
 * **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
- deb-2-10-cli -->
+ deb-2-7-cli -->
 
-<!-- deb-2-10-ui
+<!-- deb-2-7-ui
 * **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
- deb-2-10-ui -->
+ deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 * **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
@@ -659,12 +637,21 @@ snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
 * **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
  deb-2-9-ui -->
 
-<ul>
-<li><strong>Managed allocation</strong> refers to the ability of MAAS to completely manage a subnet. See <a href="subnet-management.html">Subnet management</a>.</li>
-</ul>
-<!-- snap-2-10-ui
+<!-- deb-3-0-cli
 * **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
- snap-2-10-ui -->
+ deb-3-0-cli -->
+
+<!-- deb-3-0-ui
+* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
+ deb-3-0-ui -->
+
+<!-- snap-2-7-cli
+* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
+ snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 * **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
@@ -681,6 +668,13 @@ snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
 <!-- snap-2-9-ui
 * **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
  snap-2-9-ui -->
+
+<ul>
+<li><strong>Managed allocation</strong> refers to the ability of MAAS to completely manage a subnet. See <a href="subnet-management.html">Subnet management</a>.</li>
+</ul>
+<!-- snap-3-0-ui
+* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](subnet-management.html).
+ snap-3-0-ui -->
 
 <ul>
 <li>
@@ -702,7 +696,7 @@ snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
 <p><strong>Space</strong> is presented for clarity, though spaces are managed at the VLAN level.</p>
 </li>
 </ul>
-<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
 <a href="#heading--ui-utilisation"><h3 id="heading--ui-utilisation">Utilisation</h3></a>
 
 This section of the subnet page presents metrics regarding address usage by this subnet.
@@ -710,7 +704,7 @@ This section of the subnet page presents metrics regarding address usage by this
 <a href="images/3d3e4b61-installconfig-networking__2.4_subnets-utilisation.png" target = "_blank"><img src="images/3d3e4b61-installconfig-networking__2.4_subnets-utilisation.png"></a></a>
 
 'Subnet addresses' shows the total number of addresses associated with the subnet, here 254. 'Availability' shows how many of those addresses are unused, and therefore "available", here 189, which corresponds to a percentage of roughly 74% of the total. Finally, 'Used' shows the percentage that is used, here roughly 26%.
-snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 
 <p><a href="#heading--static-routes"><h2 id="heading--static-routes">Static Routes</h2></a></p>
 <p>This section can be used to define a static route between two subnets. A route is defined on a per-subnet basis to use a particular gateway, using a configured destination and metric.</p>
@@ -719,26 +713,26 @@ snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
 gateway_ip=$GATEWAY_IP
 </code></pre>
 
-<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
 To create a static route, click the 'Add static route' button to reveal the edit pane. Enter a Gateway IP address, select a destination subnet from the 'Destination' drop-down list, and edit the routing metric value if needed. Clicking 'Add' will activate the route. Routes can be edited and removed using the icons to the right of each entry.
 
 <a href="images/49f5e240-installconfig-networking__2.4_subnets-routes.png" target = "_blank"><img src="images/49f5e240-installconfig-networking__2.4_subnets-routes.png"></a></a>
-snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 
 <p><a href="#heading--reserved-ranges"><h2 id="heading--reserved-ranges">Reserved ranges</h2></a></p>
-<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui deb-3-0-ui snap-3-0-ui
 The reserved ranges section of the subnet screen looks like this:
 
 <a href="images/5f9f50f9-installconfig-networking__2.4_subnets-reserved.png" target = "_blank"><img src="images/5f9f50f9-installconfig-networking__2.4_subnets-reserved.png"></a></a>
-snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui deb-3-0-ui snap-3-0-ui -->
 
-<!-- deb-2-10-cli
+<!-- deb-2-7-cli
 This subject is treated separately in [IP ranges](ip-ranges.html).
- deb-2-10-cli -->
+ deb-2-7-cli -->
 
-<!-- deb-2-10-ui
+<!-- deb-2-7-ui
 This subject is treated separately in [IP ranges](ip-ranges.html).
- deb-2-10-ui -->
+ deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 This subject is treated separately in [IP ranges](ip-ranges.html).
@@ -756,10 +750,21 @@ This subject is treated separately in [IP ranges](ip-ranges.html).
 This subject is treated separately in [IP ranges](ip-ranges.html).
  deb-2-9-ui -->
 
-<p>This subject is treated separately in <a href="ip-ranges.html">IP ranges</a>.</p>
-<!-- snap-2-10-ui
+<!-- deb-3-0-cli
 This subject is treated separately in [IP ranges](ip-ranges.html).
- snap-2-10-ui -->
+ deb-3-0-cli -->
+
+<!-- deb-3-0-ui
+This subject is treated separately in [IP ranges](ip-ranges.html).
+ deb-3-0-ui -->
+
+<!-- snap-2-7-cli
+This subject is treated separately in [IP ranges](ip-ranges.html).
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+This subject is treated separately in [IP ranges](ip-ranges.html).
+ snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 This subject is treated separately in [IP ranges](ip-ranges.html).
@@ -777,19 +782,24 @@ This subject is treated separately in [IP ranges](ip-ranges.html).
 This subject is treated separately in [IP ranges](ip-ranges.html).
  snap-2-9-ui -->
 
-<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
+<p>This subject is treated separately in <a href="ip-ranges.html">IP ranges</a>.</p>
+<!-- snap-3-0-ui
+This subject is treated separately in [IP ranges](ip-ranges.html).
+ snap-3-0-ui -->
+
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
 <a href="#heading--ui-used-addresses"><h2 id="heading--ui-used-addresses">Used</h2></a>
 
 This section displays hosts (including controllers) associated with the used addresses along with related bits of host information.
 
 <a href="images/b9e69b0b-installconfig-networking__2.4_subnets-used.png" target = "_blank"><img src="images/b9e69b0b-installconfig-networking__2.4_subnets-used.png"></a></a>
-snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 
 <p><a href="#heading--setting-up-a-bridge"><h2 id="heading--setting-up-a-bridge">Setting up a bridge</h2></a></p>
 <p>At various times in your MAAS network, you may need to set up a bridge to connect between your machines and MAAS.  This section explains several ways of accomplishing this.</p>
 <p><strong>NOTE:</strong> 
 It&rsquo;s essential to enforce usage of IP addresses to avoid domain name conflicts, should different controllers resolve the same domain name with different IP addresses. You should also avoid using 127.0.0.1 when running multiple controllers, as it would confuse MAAS.</p>
-<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
 <a href="#heading--maas-bridge-web-ui"><h2 id="heading--maas-bridge-web-ui">Set up a bridge with MAAS UI</h2></a>
 
 You can use the MAAS UI to configure a bridge. Select the machine you want to bridge and switch to the "Network" tab. Select the network where you want to create the bridge and click "Create bridge:"
@@ -806,11 +816,11 @@ When you're done, it should look something like this:
 
 Then you can deploy using the bridge.
 
-snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 
-<!-- snap-2-9-ui deb-2-9-ui
+<!-- snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
 **NOTE** that you can create an "OpenVswitch" bridge if desired, and MAAS will create the netplan model for you.
- snap-2-9-ui deb-2-9-ui -->
+ snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 
 <p><a href="#heading--maas-bridge-cli"><h2 id="heading--maas-bridge-cli">Use the MAAS API to configure a bridge</h2></a></p>
 <p>You can use the MAAS CLI/API to configure a bridge, with the following procedure:</p>

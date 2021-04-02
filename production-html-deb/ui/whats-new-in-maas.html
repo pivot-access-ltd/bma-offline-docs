@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="../maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.9
+	    What&rsquo;s new in 3.0
 	  </a>
 	</li>
 	<li>
@@ -429,40 +429,8 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Whats new in MAAS</h1><!-- deb-2-7
-deb-2-7 -->
-
-<!-- snap-2-7
-snap-2-7 -->
-
-<!-- snap-2-7-ui
-snap-2-7-ui -->
-
-<!-- deb-2-7-ui
-deb-2-7-ui -->
-
-<!-- snap-2-8-cli
-snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-snap-2-8-ui -->
-
-<!-- deb-2-8-cli
-deb-2-8-cli -->
-
-<!-- snap-2-9-cli
-snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-snap-2-9-ui -->
-
-<!-- deb-2-9-cli
-deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-deb-2-9-ui -->
-
-<!-- snap-2-7 snap-2-7-ui deb-2-7 deb-2-7-ui
+      <h1>Whats new in MAAS</h1><p>||2.7|2.8|2.9|3.0|</p>
+<!-- snap-2-7-cli snap-2-7-ui deb-2-7-cli deb-2-7-ui
 <h2>MAAS 2.7 release notes</h2>
 
 <h3>MAAS 2.7.3 released</h3>
@@ -471,7 +439,7 @@ On 24 August 2020, MAAS 2.7.3 was released, replacing the `2.7/stable` channel i
 
     snap refresh --channel=2.7/stable
 
-or by using the aforementioned PPA.  The focus for this release has been [bugfixing](https://launchpad.net/maas/+milestone/2.7.3rc1) -- there were no changes to MAAS since RC1.
+or by using the aforementioned PPA.  The focus for this release has been [bug-fixing](https://launchpad.net/maas/+milestone/2.7.3rc1) -- there were no changes to MAAS since RC1.
 
 Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
 
@@ -481,7 +449,7 @@ On 30 July 2020, MAAS 2.7.2 was released, replacing the `2.7/stable` channel in 
 
     snap refresh --channel=2.7/stable
 
-or by using the aforementioned PPA.  The focus for this release has been [bugfixing](https://launchpad.net/maas/+milestone/2.7.2rc1) -- there were no changes to MAAS since RC1.
+or by using the aforementioned PPA.  The focus for this release has been [bug-fixing](https://launchpad.net/maas/+milestone/2.7.2rc1) -- there were no changes to MAAS since RC1.
 
 Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
 
@@ -577,10 +545,21 @@ MAAS has switched hardware information gathering from lshw/lsblk to lxd output d
 A number of bug fixes (see the [list in Launchpad](https://bugs.launchpad.net/maas/+bugs?field.milestone%3Alist=87757&field.milestone%3Alist=89662&field.milestone%3Alist=89714&field.milestone%3Alist=89840&field.milestone%3Alist=89954&field.milestone%3Alist=89682&field.status%3Alist=FIXRELEASED)).
 snap-2-7-cli snap-2-7-ui deb-2-7 deb-2-7-ui -->
 
-<!-- snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui
+<!-- snap-2-9-cli snap-2-9-ui deb-2-9-ui deb-2-9-cli
+
+<h2>MAAS 2.9.2 release notes</h2>
+
+We have released MAAS 2.9.2, which contains two new features, and some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.2). The two new features are:
+
+1. Proxmox driver: A driver has been added to MAAS 2.9.2 which intereacts with the Proxmox API.  Only one URL is needed, though a username and credentials are required.  Credentials can be either a password or an API token.  Note that if you use a token, you have to configure the permissions for the token.  Newly-created Proxmox tokens don't assign any permissions by default, so you must add `power on`, `power off`, and `query power` permissions to the token before using it.
+
+2. Power driver Webhook:  A webhook was added to 2.9.2, which allows MAAS to interface with another web service that's running the power commands.  This webhook is provided for interacting with objects that MAAS does not support, that is, the MAAS team supports the driver itself, but whatever is interfacing to the driver is not supported.  This webhook as three URLs, one each for power on, power off, and power query.  Optionally, this webhook also supports a power user and password or token (RFC 6717).  This gives you a way to add your own power drivers without waiting for the driver to be added to MAAS.  There is a [video tutorial](maas-show-and-tell-proxmox-and-webhook.html/3) available on this new feature.
+
+You can also find a [digest](#heading--bug-fixes-2-9-2) of the 2.9.2 bug fixes below.
+
 <h2>MAAS 2.9.1 release notes</h2>
 
-Building upon MAAS 2.9, we have released 2.9.1, which contains some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.1).  You can find a [digest](#heading--bug-fixes) of these fixes below.
+Building upon MAAS 2.9, we have released 2.9.1, which contains some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.1).  You can find a [digest](#heading--bug-fixes-2-9-1) of these fixes below.
 
 <h2>MAAS 2.9 release notes</h2>
 
@@ -689,7 +668,7 @@ Four new parameters have been added for IPMI BMC configuration.  These parameter
 
 1. maas_auto_ipmi_user - The username for the MAAS created IPMI user. Default comes from the global configuration setting.
 2. maas_auto_ipmi_user_password - The password for the MAAS created IPMI user, by default a random password is generated.
-3. maas_auto_ipmi_k_g_bmc_key - he IPMI K_g preshared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting. If an IPMI K_g key is set but the key is rejected by the BMC MAAS will automatically retry without the K_g key. This works around an edge case where some BMCs will allow you to set an K_g key but don’t allow it to be used.
+3. maas_auto_ipmi_k_g_bmc_key - he IPMI K_g pre-shared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting. If an IPMI K_g key is set but the key is rejected by the BMC MAAS will automatically retry without the K_g key. This works around an edge case where some BMCs will allow you to set an K_g key but don’t allow it to be used.
 4. maas_auto_ipmi_user_privilege_level - The IPMI user privilege level to use when adding the MAAS IPMI user. Possible options are USER, OPERATOR, or ADMIN. Default comes from the global configuration setting.
 
 Note that MAAS will not capture the BMC MAC address when detecting IPMI BMCs.
@@ -768,7 +747,7 @@ Seven major improvements were made to commissioning script flow and capabilities
 
 <h2 id="heading--commissioning-reorder">Commissioning script reordering</h2>
 
-Commissioning scripts have been reordered and some are now set to run in parallel. You can now easily set a script to run before the builtin MAAS commissioning scripts. There are nine signficant changes:
+Commissioning scripts have been reordered and some are now set to run in parallel. You can now easily set a script to run before the builtin MAAS commissioning scripts. There are nine significant changes:
 
 <ol>
 <li>00-maas-03-install-lldpd -> 20-maas-01-install-lldpd</li>
@@ -804,6 +783,24 @@ Four improvements have been made to speed up the commissioning process, mostly b
 </ol>
 
 <a href="#heading--bug-fixes"><h2 id="heading--bug-fixes">Bug fixes</h2></a>
+
+<a href="#heading--bug-fixes-2-9-2"><h3 id="heading--bug-fixes-2-9-2">Bugs fixed in 2.9.2 release</h3></a>
+
+1. In the MAAS UI, ARM servers based on the [Hi1620 ARM SoC appear as an "Unknown model"](https://bugs.launchpad.net/maas/+bug/1897946).  A fix was added to [lxd-4.11]( https://discuss.linuxcontainers.orglxd-4-11-has-been-released.html), released 2021-02-05.
+
+2. Debian package installs of MAAS [reached an "impossible situation"](https://bugs.launchpad.net/maas/+bug/1910910) trying to install the MAAS region controller. This is caused because of an unsupported move from the transitional MAAS PPA to the latest PPA.  The workaround is to purge the MAAS packages (and the snap, if installed), and install clean with the latest PPA enabled, which will install the correct versions.
+
+3. CentOS/RHEL 7+ ship with an unsigned version of GRUB [which breaks UEFI secure boot](https://bugs.launchpad.net/curtin/+bug/1895067).  This bug is believed to be fixed in curtin version 21.1, which is now supported by MAAS 2.9.2.
+
+4. Debug [could not be properly enabled for MAAS snap version 2.9.1](https://bugs.launchpad.net/maas/+bug/1914588).  This has been remedied.
+
+5. The MAAS [Backup doc article](https://maas.io/docs/snap/2.9/ui/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
+
+6. Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue.
+
+7. MAAS does not allow [FQDNs to be used in place of IPs](https://bugs.launchpad.net/maas/+bug/1911825) when a BMC extracts the address from the `power_address`.  This incorrect behaviour was changed in 2.9.2.
+
+8. The Proxmox driver [uses a hard-coded port that cannot be customised](https://bugs.launchpad.net/maas/+bug/1914165).  This port is now customisable in 2.9.2.
 
 <a href="#heading--bug-fixes-2-9-1"><h3 id="heading--bug-fixes-2-9-1">Bugs fixed in 2.9.1 release</h3></a>
 
@@ -843,89 +840,256 @@ Running migrations:
 This warning message has no effect on the installation or operation of MAAS, so it can be safely ignored.
 snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui -->
 
+<!-- snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui
 <h2>MAAS 2.8 release notes</h2>
+
+<h3>MAAS 2.8.3 released</h3>
+
+MAAS 2.8.3 has been released, replacing the `2.8/stable` channel in snap and the [ppa:maas/2.8](https://launchpad.net/~maas/+archive/ubuntu/2.8).  You can update your 2.8 release to 2.8.3 with the command:
+
+    snap refresh --channel=2.8/stable
+
+or by using the aforementioned PPA.  The focus for this release has been [bugfixing](https://bugs.launchpad.net/maas/+milestone/2.8.3rc1) and [more bugfixing](https://bugs.launchpad.net/maas/+milestone/2.8.3).  No other changes have been made to MAAS with this release.
+
+Here's a summary of the bugs that were fixed in 2.8.3:
+
+* [DNS Servers not set as expected](https://bugs.launchpad.net/maas/+bug/1881133): MAAS was using the region controller IP in dhcpd.conf when other DNS servers are present, effectively bypassing the rack controller proxy to machines.  The code was updated to use the region controller IP for DNS only if no other DNS servers are found.
+
+* [not able to import new image after MAAS upgrade](https://bugs.launchpad.net/maas/+bug/1890468): After upgrading from MAAS 2.6.2 to snap-MAAS 2.8.1, it is impossible to import a new image.  This was fixed in MAAS 2.8.3.
+
+* [an unlogged chown permission error leaves a temporary file behind](https://bugs.launchpad.net/maas/+bug/1883748): Fixed in MAAS 2.8.3.
+
+* [smartctl-validate fails to detect that NVME device is SMART-capable](https://bugs.launchpad.net/maas/+bug/1904329): MAAS 2.8.2 fails to realise that WD Black gaming NVMEs are smart devices, hence MAAS doesn't display attributes.  This is fixed in 2.8.3.
+
+* [cannot use release API on stuck observed IPs](https://bugs.launchpad.net/maas/+bug/1898122): The CLI/API provide commands for forcing the release of an IP, but MAAS 2.8.2 was not allowing these commands to run successfully.  This was fixed.  There is also a workaround for those who cannot upgrade to 2.8.3 right away:
+
+    $ sudo -iu postgres psql
+    \c $MAAS_DB \\ -- switch to $MAASDB
+    UPDATE maasserver_staticipaddress SET alloc_type = 5 where ip = '$IP_ADDRESS' AND alloc_type = 6;
+    ^D
+    $ maas $PROFILE ipaddresses release ip='$IP_ADDRESS' force=true
+
+* [MAAS is unable to handle duplicate UUIDs](https://bugs.launchpad.net/maas/+bug/1893690): The firmware for Dell servers (and possibly others) has a bug whereby they use the service number for the UUID, which is not guaranteed to be unique.  This caused MAAS commissioning to fail. The code was modified in 2.8.3 to detect and remove duplicate UUIDs, allowing MAAS to fall back to the MAC address.  There is also a database workaround for those who cannot upgrade to 2.8.3 right away:
+
+    UPDATE maasserver_node SET hardware_uuid=NULL where hardware_uuid='$DUPLICATE_UUID';
+
+* [Ubuntu 20.04 pxe installation fails...](https://bugs.launchpad.net/curtin/+bug/1876258):
+When trying to PXE install Ubuntu 20.04, the installation fails with "no such file or directory, /dev/disk/by-id exception." This was an issue with block devices being created without serial numbers, bug fixed in curtin and released with 2.8.3.
+
+* [Failed to allocate the required AUTO IP addresses after 2 retries](https://bugs.launchpad.net/maas/+bug/1902425): MAAS incorrectly perceives that there are no available IP addresses, when in fact, there are plenty still available.  This is fixed in 2.8.3.
+
+* [maas 2.9 rc1 machines create error (backport)](https://bugs.launchpad.net/maas/+bug/1904398): Adding `commission=true` to a CLI machine creation command produces an error.  This was fixed in 2.9 and back-ported to 2.8.3.
+
+* [Lists of LXD nodes are represented in an incompatible data structure](https://bugs.launchpad.net/maas/+bug/1910473): Fixed in 2.8.3.
+
+* Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments (backport)](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue. This was fixed in 2.9 and back-ported to 2.8.3.
+
+* [Can't commission without a test (backport)](https://bugs.launchpad.net/maas/+bug/1884278): MAAS 2.8 does not allow machines to be commissioned with zero tests selected; this occurs only for multiple machines, and only when commissioning from the UI.  This was fixed in 2.9 and back-ported to 2.8.3.
+
+Note that there is a workaround for those not ready to upgrade to 2.8.3, specifically, using the CLI to commission machines without testing them:
+
+    maas $PROFILE machine commission $SYSTEM_ID testing_scripts=none
+
+* [UI should not autoselect noauto commissioning scripts (backport)](https://bugs.launchpad.net/maas/+bug/1884827): Previously, users gained the ability to upload commissioning scripts which do not automatically run, but the UI ignores the "noauto" tag and runs the script anyway.  This was fixed in 2.9 and back-ported to 2.8.3.
+
+* [ipmi-config command not found in snap (backport)](https://bugs.launchpad.net/maas/+bug/1891331): The `ipmi-config` cannot be found in a MAAS snap, due to path confusion in the wrapper script. This was fixed in 2.9 and back-ported to 2.8.3.
+
+* [Admin users cannot change other user's passwords via UI (backport)](https://bugs.launchpad.net/maas/+bug/1894727): An administrator is unable to change users passwords via the UI.  This was fixed in 2.9 and back-ported to 2.8.3.
+
+* [all rack addresses in VLAN are included in list of nameservers sent to deployed server (backport)](https://bugs.launchpad.net/maas/+bug/1896684): From the Bug Description: "MAAS forces all rack addresses for all subnets in a single VLAN to any system deployed into any of those subnets. If the deployed systems are isolated, with no gateway configured, they may end up with broken DNS due to having nameservers configured which are not reachable."
+This was fixed in 2.9 and back-ported to 2.8.3.
 
 <h3>MAAS 2.8.2 released</h3>
 
-<p>On 1 September 2020, MAAS 2.8.2 was released, replacing the <code>2.8/stable</code> channel in snap and the <a href="https://launchpad.net/~maas/+archive/ubuntu/2.8">ppa:maas/2.8</a>.  You can update your 2.8 release to 2.8.2 by with:</p>
-<pre><code>snap refresh --channel=2.8/stable
-</code></pre>
-<p>or by using the aforementioned PPA.  The focus for this release has been <a href="https://launchpad.net/maas/+milestone/2.8.2rc1">bugfixing</a> &ndash; there were no changes to MAAS since RC1.</p>
-<p>Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.</p>
+On 1 September 2020, MAAS 2.8.2 was released, replacing the `2.8/stable` channel in snap and the [ppa:maas/2.8](https://launchpad.net/~maas/+archive/ubuntu/2.8).  You can update your 2.8 release to 2.8.2 with the command:
+
+    snap refresh --channel=2.8/stable
+
+or by using the aforementioned PPA.  The focus for this release has been [bugfixing](https://launchpad.net/maas/+milestone/2.8.2rc1) -- there were no changes to MAAS since RC1.
+
+Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
+
 <h3>MAAS 2.8 released</h3>
 
-<p>Following on from MAAS 2.7, we are happy to announce that MAAS 2.8 is now available. This release features some critical bug fixes, along with some exciting new features.</p>
+Following on from MAAS 2.7, we are happy to announce that MAAS 2.8 is now available. This release features some critical bug fixes, along with some exciting new features.
+
 <h4>Six questions you may have:</h4>
 
-<ol>
-<li><a href="#heading--2-8-release-notes">What are the new features &amp; fixes for 2.8?</a></li>
-<li><a href="#heading--2-8-known-issues">What known issues should I be aware of?</a></li>
-<li><a href="maas-installation.html">How do I install MAAS 2.8 as a snap?</a></li>
-<li><a href="maas-installation.html#heading--upgrade-maas-snap">How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?</a></li>
-<li><a href="maas-installation.html">How do I install MAAS 2.8 from packages?</a></li>
-<li><a href="#heading--bug-fixes">What bugs were fixed in this release?</a></li>
-</ol>
+1. [What are the new features & fixes for 2.8?](#heading--2-8-release-notes)
+2. [What known issues should I be aware of?](#heading--2-8-known-issues)
+3. [How do I install MAAS 2.8 as a snap?](maas-installation.html)
+4. [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](maas-installation.html#heading--upgrade-maas-snap)
+5. [How do I install MAAS 2.8 from packages?](maas-installation.html)
+6. [What bugs were fixed in this release?](#heading--bug-fixes)
+
 <h2 id="heading--2-8-release-notes">LXD-based VM host support (Beta)</h2>
 
-<p>MAAS 2.8 adds the beta capability to use LXD-based VM hosts and virtual machines (VMs), in addition to the <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a>-based VM hosts/VMs already available.  These new LXD VM hosts use the same underlying technology as libvirt (QEMU). Unlike libvirt KVMs, though, LXD VMs can be managed without requiring SSH access to the VM host. LXD are remotely accessed via secure HTTP transport, which provides better security for LXD-based VMs. In addition, LXD has a better API, and is part of a much larger constellation of enterprise software, offering a wider range of future features and use cases.</p>
-<h2>UI performance improvements for the machine listing page</h2>
-<p>Within MAAS 2.8, we have made a number of performance improvements to everything related to the machine listing.  Some of the most visible changes involve the way that long lists are presented within categories (see the example below), but there are a number of other changes that make the list easier and more efficient to use.</p>
-<p><a href="images/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg" target = "_blank"><img src="images/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg"></a></a> </p>
-<p>Among those other changes are persisting UI state for grouping, new grouping options, bookmark-able URLs with filter and search parameters, and many other performance improvements. If you&rsquo;re interested in more details, see this <a href="https://ubuntu.com/blog/building-a-cross-framework-ui-with-single-spa-in-maas-2-8">blog post</a>.</p>
-<h2>Support for using an external/remote PostgreSQL MAAS database with the snap version of MAAS</h2>
-<p>In order to make MAAS more scalable, we have separated the MAAS database from the MAAS snap, so that the DB can be situated separately.  MAAS 2.8 now allows the MAAS DB to be located outside the snap on localhost, or on a separate, external or remote server.  We complement this capability with extensive instructions for setting up and managing this configuration.  To support those who are testing MAAS, we&rsquo;ve also provided a test DB configuration that embeds the database in a separate snap that can easily be connected to MAAS.</p>
+MAAS 2.8 adds the beta capability to use LXD-based VM hosts and virtual machines (VMs), in addition to the [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt)-based VM hosts/VMs already available.  These new LXD VM hosts use the same underlying technology as libvirt (QEMU). Unlike libvirt KVMs, though, LXD VMs can be managed without requiring SSH access to the VM host. LXD are remotely accessed via secure HTTP transport, which provides better security for LXD-based VMs. In addition, LXD has a better API, and is part of a much larger constellation of enterprise software, offering a wider range of future features and use cases.
+
+## UI performance improvements for the machine listing page
+
+Within MAAS 2.8, we have made a number of performance improvements to everything related to the machine listing.  Some of the most visible changes involve the way that long lists are presented within categories (see the example below), but there are a number of other changes that make the list easier and more efficient to use.
+
+<a href="images/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg" target = "_blank"><img src="images/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg"></a></a> 
+
+Among those other changes are persisting UI state for grouping, new grouping options, bookmark-able URLs with filter and search parameters, and many other performance improvements. If you're interested in more details, see this [blog post](https://ubuntu.com/blog/building-a-cross-framework-ui-with-single-spa-in-maas-2-8).
+
+## Support for using an external/remote PostgreSQL MAAS database with the snap version of MAAS
+
+In order to make MAAS more scalable, we have separated the MAAS database from the MAAS snap, so that the DB can be situated separately.  MAAS 2.8 now allows the MAAS DB to be located outside the snap on localhost, or on a separate, external or remote server.  We complement this capability with extensive instructions for setting up and managing this configuration.  To support those who are testing MAAS, we've also provided a test DB configuration that embeds the database in a separate snap that can easily be connected to MAAS.
+
 <h2 id="heading--bug-fixes">Bug fixes</h2>
 
-<p>We&rsquo;ve also fixed number of bugs (see the <a href="https://bugs.launchpad.net/bugs/+bugs?field.milestone%3Alist=89978&amp;field.milestone%3Alist=90576&amp;field.milestone%3Alist=90599&amp;field.milestone%3Alist=90640&amp;field.milestone%3Alist=90645&amp;field.milestone%3Alist=90722&amp;field.milestone%3Alist=91005&amp;field.milestone%3Alist=91123&amp;field.milestone%3Alist=91124&amp;field.milestone%3Alist=91180&amp;field.status%3Alist=FIXRELEASED">list in Launchpad</a>).  Notable among these are the following:</p>
-<ul>
-<li>
-<p><a href="https://bugs.launchpad.net/maas/+bug/1860619">MAAS event table</a>: Power events are now being logged differently to reduce log sizes and improve performance.</p>
-</li>
-<li>
-<p><a href="https://bugs.launchpad.net/maas/+bug/1864201">Unprivileged users controlling services</a>: Unprivileged users can no longer start, stop, or restart services via HTTP channels.</p>
-</li>
-<li>
-<p><a href="https://bugs.launchpad.net/maas/+bug/1852405">Adding KVMs to snap-installed MAAS</a>: SSH key usage has been updated so that KVMs can now be added to snap-installed MAAS without difficulty.</p>
-</li>
-<li>
-<p><a href="https://bugs.launchpad.net/maas/+bug/1864241">Trouble editing physical interfaces in GUI</a>: It is now possible to edit physical interface parameters, when appropriate, from the web UI.</p>
-</li>
-<li>
-<p><a href="https://bugs.launchpad.net/maas/+bug/1873430">Subnet pages slow to load</a>: Subnet pages now load more quickly and efficiently.</p>
-</li>
-<li>
-<p><a href="https://bugs.launchpad.net/maas/+bug/1865122">Trouble loading multiple MAC addresses</a>: You can now reliably load multiple MAC addresses using the web UI.</p>
-</li>
-<li>
-<p><a href="https://bugs.launchpad.net/maas/+bug/1871584">Disabling DNS on regiond subnet breaks DNS</a>: This problem has been resolved.</p>
-</li>
-</ul>
+We've also fixed number of bugs (see the [list in Launchpad](https://bugs.launchpad.net/bugs/+bugs?field.milestone%3Alist=89978&field.milestone%3Alist=90576&field.milestone%3Alist=90599&field.milestone%3Alist=90640&field.milestone%3Alist=90645&field.milestone%3Alist=90722&field.milestone%3Alist=91005&field.milestone%3Alist=91123&field.milestone%3Alist=91124&field.milestone%3Alist=91180&field.status%3Alist=FIXRELEASED)).  Notable among these are the following:
+
+- [MAAS event table](https://bugs.launchpad.net/maas/+bug/1860619): Power events are now being logged differently to reduce log sizes and improve performance.
+
+- [Unprivileged users controlling services](https://bugs.launchpad.net/maas/+bug/1864201): Unprivileged users can no longer start, stop, or restart services via HTTP channels.
+
+- [Adding KVMs to snap-installed MAAS](https://bugs.launchpad.net/maas/+bug/1852405): SSH key usage has been updated so that KVMs can now be added to snap-installed MAAS without difficulty.
+
+- [Trouble editing physical interfaces in GUI](https://bugs.launchpad.net/maas/+bug/1864241): It is now possible to edit physical interface parameters, when appropriate, from the web UI.
+
+- [Subnet pages slow to load](https://bugs.launchpad.net/maas/+bug/1873430): Subnet pages now load more quickly and efficiently.
+
+- [Trouble loading multiple MAC addresses](https://bugs.launchpad.net/maas/+bug/1865122): You can now reliably load multiple MAC addresses using the web UI.
+
+- [Disabling DNS on regiond subnet breaks DNS](https://bugs.launchpad.net/maas/+bug/1871584): This problem has been resolved.
+
 <h2 id="heading--2-8-known-issues">Known issues</h2>
 
+* **Browser caching issue:** There is a known issue with browser caching on some MAAS pages.  If you initially encounter a page which does not appear to be correctly formatted, please manually clear your browser cache (**not Ctrl-F5**) and it should restore the page to normal.  You manually clear your browser cache, for example, in the "History" section of the menu on a Chrome browser.
+
+* **Extra power types when adding chassis:** ([see bug report](https://bugs.launchpad.net/maas/+bug/1883743)) When adding a chassis, the "Power type" drop-down will show power types not supported by a chassis.  Selecting one of the non-supported power types will result in the UI blocking the action.  Here is a list of power types supported for chassis creation:
+  * `mscm` - Moonshot Chassis Manager
+  * `msftocs` - Microsoft OCS Chassis Manager
+  * `powerkvm` - Virtual Machines on Power KVM, managed by Virsh
+  * `recs_box` - Christmann RECS|Box servers
+  * `sm15k` - SeaMicro 1500 Chassis
+  * `ucsm` - Cisco UCS Manager
+  * `virsh` - virtual machines managed by Virsh
+  * `vmware` - virtual machines managed by VMware
+
+* **MAAS keys count in user list is bogus:** ([see bug report](https://bugs.launchpad.net/maas/+bug/1884112)) The count of keys shown in the User list in the UI is wrong.
+
+* **Leftover lock files may be present under some conditions:** Even if you purge an old MAAS Debian package, it can leave lock files in `/run/lock/maas*`.  This can cause issues if you later reinstall MAAS, and the previous MAAS user UID has been reassigned.  At that point, MAAS can't remove those files and create new ones.  If this occurs, it is easily fixed by removing those files manually before reinstalling.
+snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
+
+<h3>MAAS 3.0 BETA release notes</h3>
+
+<p>We are happy to announce that MAAS 3.0 Beta 1 has been released. This release provides some new features, along with critical bug fixes.</p>
+<p>The Beta 1 can be installed by adding the <code>3.0-next</code> PPA:</p>
+<pre><code>sudo add-apt-repository ppa:maas/3.0-next
+sudo apt update
+sudo apt install maas
+</code></pre>
+
+<p>You can then either install MAAS 3.0 Beta1 fresh (recommended) with:</p>
+<pre><code>sudo apt-get -y install maas
+</code></pre>
+
+<p>Or, if you prefer to upgrade (remember, this is a Beta), you can do so with:</p>
+<pre><code>sudo apt upgrade maas
+</code></pre>
+
+<p>At this point, you may proceed with a normal installation.</p>
+<!-- snap-3-0-cli snap-3-0-ui
+The Beta 1 can be installed fresh (recommended) with:
+
+<pre><code>sudo snap install --channel=3.0/beta maas
+</code></pre>
+
+
+At this point, you may proceed with a normal installation.
+ snap-3-0-cli snap-3-0-ui -->
+
+<p>NOTE that this is currently a BETA release, so there will be bugs, instabilities, and missing or incomplete features.  As such, we invite you to thoroughly test this release and provide feedback.  Please remember to <a href="https://bugs.launchpad.net/maas/+filebug">file bugs</a> as you find them, and please feel free to interact with the developers on <a href="https://discourse.maas.io/">discourse</a>.</p>
+<h2>Significant changes</h2>
+
+<p>With the advent of MAAS 3.0, we are removing support for RSD pods.  Registered pods and their machines will be removed by MAAS upon upgrading to MAAS 3.0.</p>
+<h4>New features in MAAS 3.0 Beta 1</h4>
+
+<ol>
+<li><a href="#heading--pci-usb-devices">PCI and USB devices are now modelled in MAAS</a></li>
+<li><a href="#heading--ibm-z-dpm">IBM Z DPM partition support</a></li>
+<li><a href="#heading--proxmox-support">Proxmox support</a></li>
+<li><a href="#heading--lxd-projects-support">LXD projects support</a></li>
+<li><a href="#heading--pci-usb-device-tabs">PCI and USB device tabs in machine details</a></li>
+<li><a href="#heading--workload-annotations">Workload annotations</a></li>
+<li><a href="#heading--fixed-status-bar">Fixed status bar</a></li>
+</ol>
+<h2 id="heading--pci-usb-devices">PCI and USB devices are now modelled in MAAS</h2>
+
+<p>MAAS 3.0 models all PCI and USB devices detected during commissioning:</p>
 <ul>
 <li>
-<p><strong>Browser caching issue:</strong> There is a known issue with browser caching on some MAAS pages.  If you initially encounter a page which does not appear to be correctly formatted, please manually clear your browser cache (<strong>not Ctrl-F5</strong>) and it should restore the page to normal.  You manually clear your browser cache, for example, in the &ldquo;History&rdquo; section of the menu on a Chrome browser.</p>
+<p>Existing machines will have to be recommissioned to have PCI and USB devices modelled</p>
 </li>
 <li>
-<p><strong>Extra power types when adding chassis:</strong> (<a href="https://bugs.launchpad.net/maas/+bug/1883743">see bug report</a>) When adding a chassis, the &ldquo;Power type&rdquo; drop-down will show power types not supported by a chassis.  Selecting one of the non-supported power types will result in the UI blocking the action.  Here is a list of power types supported for chassis creation:</p>
-</li>
-<li><code>mscm</code> - Moonshot Chassis Manager</li>
-<li><code>msftocs</code> - Microsoft OCS Chassis Manager</li>
-<li><code>powerkvm</code> - Virtual Machines on Power KVM, managed by Virsh</li>
-<li><code>recs_box</code> - Christmann RECS|Box servers</li>
-<li><code>sm15k</code> - SeaMicro 1500 Chassis</li>
-<li><code>ucsm</code> - Cisco UCS Manager</li>
-<li><code>virsh</code> - virtual machines managed by Virsh</li>
-<li>
-<p><code>vmware</code> - virtual machines managed by VMware</p>
+<p>PCI and USB devices are shown in the UI and on the API using the node-devices endpoint</p>
 </li>
 <li>
-<p><strong>MAAS keys count in user list is bogus:</strong> (<a href="https://bugs.launchpad.net/maas/+bug/1884112">see bug report</a>) The count of keys shown in the User list in the UI is wrong.</p>
-</li>
-<li>
-<p><strong>Leftover lock files may be present under some conditions:</strong> Even if you purge an old MAAS Debian package, it can leave lock files in <code>/run/lock/maas*</code>.  This can cause issues if you later reinstall MAAS, and the previous MAAS user UID has been reassigned.  At that point, MAAS can&rsquo;t remove those files and create new ones.  If this occurs, it is easily fixed by removing those files manually before reinstalling.</p>
+<p>Node devices may be deleted on the API only</p>
 </li>
 </ul>
+<p>On the API using the allocate operation on the machines endpoint a machine may allocated by a device vendor_id, product_id, vendor_name, product_name, or commissioning_driver.</p>
+<h2 id="heading--ibm-z-dpm">IBM Z DPM partition support</h2>
+
+<p>IBM Z14 and above mainframe partitions are supported in MAAS 3.0.  Note that partitions must use HyperV sockets and properly-defined storage groups.  IBM Z DPM Partitions can be added as a chassis, which allows you to add all partitions in an HMC at once.</p>
+<h2 id="heading--proxmox-support">Proxmox support</h2>
+
+<p>MAAS 3.0 supports Proxmox as a power driver:</p>
+<ul>
+<li>
+<p>Only Proxmox VMs are supported</p>
+</li>
+<li>
+<p>You may authenticate with Proxmox using a username and password or a username and API token</p>
+</li>
+<li>
+<p>If an API token is used, it must be given permission to query, start and stop VMs.</p>
+</li>
+<li>
+<p>Proxmox VMs can be added as a chassis; this allows you to add all VMs in Proxmox at once.</p>
+</li>
+</ul>
+<p>Note that proxmox support has also been back-ported to MAAS 2.9</p>
+<h2 id="heading--lxd-projects-support">LXD projects support</h2>
+
+<p>MAAS 3.0 supports the use of LXD projects:</p>
+<ul>
+<li>
+<p>LXD VM hosts registered in MAAS are now tied to a specific LXD project which MAAS uses to manage VMs</p>
+</li>
+<li>
+<p>MAAS doesn’t create or manage machines for VMs in other projects</p>
+</li>
+<li>
+<p>MAAS creates the specified project when the VM host is registered, if it doesn&rsquo;t exist</p>
+</li>
+<li>
+<p>All existing VMs in the specified project are commissioned on registration</p>
+</li>
+<li>
+<p>Resource usage is reported at both project and global levels</p>
+</li>
+</ul>
+<h2 id="heading--pci-usb-device-tabs">PCI and USB device tabs in UI machine details</h2>
+
+<p>Tables for detected PCI and USB devices have been added to the machine details page for MAAS 3.0:</p>
+<p><a href="images/87f42bafe321d45af94d73216f933a9067f01df2.png" target = "_blank"><img src="images/87f42bafe321d45af94d73216f933a9067f01df2.png"></a></a></p>
+<p>These tables include a new skeleton loading state while node devices are being fetched:</p>
+<p><a href="images/4faa1d8cd996a25ee5089ada924b405bc8903aa4.png" target = "_blank"><img src="images/4faa1d8cd996a25ee5089ada924b405bc8903aa4.png"></a></a></p>
+<p>The user is prompted to commission the machine if no devices are detected.</p>
+<h2 id="heading--workload-annotations">Workload annotations</h2>
+
+<p>Workload annotations have been added to the machine summary page in MAAS 3.0.  These allow you to apply <code>owner_data</code> to a machine and make it visible while the machine is in allocated or deployed state:</p>
+<p><a href="images/54682ae5f9c7bb449a1ad222679be0156f27d109.png" target = "_blank"><img src="images/54682ae5f9c7bb449a1ad222679be0156f27d109.png"></a></a></p>
+<p>This data is cleared once the machine state changes to something other than &ldquo;allocated&rdquo; or &ldquo;deployed.&rdquo;  The machine list can be filtered by these workload annotations.  MAAS will warn you on the release page to remind you that workload annotations will be cleared upon releasing the machine.</p>
+<h2 id="heading--fixed-status-bar">Fixed status bar</h2>
+
+<p>In MAAS 3.0, a fixed status bar has been added to the bottom of the screen, which will always display the MAAS name and version on the left.  The right side of the status bar is intended to show contextual data, depending on the UI panel currently displayed. For now, the only data shown is a “last commissioned” timestamp when the user is on a machine details page:</p>
+<p><a href="images/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png" target = "_blank"><img src="images/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png"></a></a></p>
     </div>
   </body>
 </html>

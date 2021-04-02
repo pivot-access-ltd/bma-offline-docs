@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.10
+	    What&rsquo;s new in 3.0
 	  </a>
 	</li>
 	<li>
@@ -429,45 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Disk erasure</h1><!-- begin-rad-menu -->
-
-<!-- snap-2-8-cli
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
- snap-2-9-ui -->
-
-<!-- snap-2-10-ui
- snap-2-10-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
-
-<!-- deb-2-10-cli
- deb-2-10-cli -->
-
-<!-- deb-2-10-ui
- deb-2-10-ui -->
-
-<!-- end-rad-menu -->
-
-<!-- end-rad-menu -->
-
+      <h1>Disk erasure</h1><p>||2.7|2.8|2.9|3.0|</p>
 <p>Disk erasure pertains to the erasing of data on each of a machine&rsquo;s disks when the machine has been released (see <a href="concepts-and-terms.html#heading--release">Release action</a>) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.</p>
 <p><a href="#heading--erasure-types"><h2 id="heading--erasure-types">Erasure types</h2></a></p>
 <p>The three types of erasure types are:</p>
@@ -483,7 +445,7 @@
 <p>Although effectively equivalent to Standard erase, Secure erase is much faster because the disk&rsquo;s firmware performs the operation. Because of this, however, some disks may not be able to perform this erasure type (SCSI, SAS, and FC disks in particular).</p>
 <p><a href="#heading--quick-erase"><h3 id="heading--quick-erase">Quick erase</h3></a></p>
 <p>Same as Standard erase but only targets the first 1 MB and the last 1 MB of each disk. This removes the partition tables and/or superblock from the disk, making data recovery difficult but not impossible.</p>
-<!-- deb-2-10-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-9-ui snap-2-10-ui
+<!-- deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-9-ui snap-2-7-ui snap-3-0-ui deb-3-0-ui 
 <a href="#heading--default-configuration"><h2 id="heading--default-configuration">Default configuration</h2></a>
 
 A default erasure configuration can be set on the 'Settings' page by selecting the 'Storage' tab.
@@ -504,9 +466,37 @@ If all three options are checked when the machine is released the following orde
 
 1.  Use 'secure erase' if the disk supports it
 2.  If it does not then use 'quick erase'
-deb-2-10-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-9-ui snap-2-10-ui -->
+deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-9-ui snap-2-7-ui snap-3-0-ui deb-3-0-ui -->
 
 <p><a href="#heading--erasure-procedure"><h2 id="heading--erasure-procedure">Erasure procedure</h2></a></p>
+<!-- deb-2-7-cli
+When using the [MAAS CLI](maas-cli.html), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+ deb-2-7-cli -->
+
+<!-- deb-2-8-cli
+When using the [MAAS CLI](maas-cli.html), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+ deb-2-8-cli -->
+
+<!-- deb-2-9-cli
+When using the [MAAS CLI](maas-cli.html), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+ deb-2-9-cli -->
+
+<!-- snap-2-7-cli
+When using the [MAAS CLI](maas-cli.html), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+ snap-2-7-cli -->
+
+<!-- snap-2-8-cli
+When using the [MAAS CLI](maas-cli.html), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+ snap-2-8-cli -->
+
+<!-- snap-2-9-cli
+When using the [MAAS CLI](maas-cli.html), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+ snap-2-9-cli -->
+
+<!-- deb-3-0-cli
+When using the [MAAS CLI](maas-cli.html), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+ deb-3-0-cli -->
+
 <p>When using the <a href="maas-cli.html">MAAS CLI</a>, you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you&rsquo;ll want to make sure you&rsquo;re using:</p>
 <pre><code>maas $PROFILE machine release...
 </code></pre>
@@ -515,7 +505,15 @@ deb-2-10-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-9-ui snap-2-10-ui -->
 <pre><code>maas $PROFILE machines release...
 </code></pre>
 
-<p>Note the difference in singular and plural &ldquo;machine/machines&rdquo; in the commands.  Releasing a machine requires that you have the <code>system_id</code> of the machine to be released, which you can obtain with a <a href="the-cli-cookbook.html#heading--basic-machine-list">basic machine list</a>:</p>
+<p>Note the difference in singular and plural &ldquo;machine/machines&rdquo; in the commands.  Releasing a machine requires that you have the <code>system_id</code> of the machine to be released, which you can obtain with a command like this one:</p>
+<pre><code>maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
+&quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),
+(.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;, 
+.tag_names[0] // &quot;-&quot;, .pool.name,
+.boot_interface.vlan.name, .boot_interface.vlan.fabric,
+.boot_interface.links[0].subnet.name]) | @tsv' | column -t
+</code></pre>
+
 <p><a href="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="images/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg"></a>
 </a></p>
 <p>The basic form of the release command, when erasing disks on releasing, is:</p>

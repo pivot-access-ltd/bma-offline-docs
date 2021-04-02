@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.10
+	    What&rsquo;s new in 3.0
 	  </a>
 	</li>
 	<li>
@@ -429,47 +429,8 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Commissioning and hardware testing scripts</h1><!-- begin-rad-menu -->
-
-<!-- snap-2-8-cli
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
- snap-2-9-ui -->
-
-<!-- snap-2-10-ui
- snap-2-10-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
-
-<!-- deb-2-10-cli
- deb-2-10-cli -->
-
-<!-- deb-2-10-ui
- deb-2-10-ui -->
-
-<!-- end-rad-menu -->
-
-<!-- end-rad-menu -->
-
+      <h1>Commissioning and hardware testing scripts</h1><p>||2.7|2.8|2.9|3.0|</p>
 <p>MAAS runs scripts during enlistment, commissioning and testing to collect data about nodes. Both enlistment and commissioning run all builtin commissioning scripts, though enlistment runs only built-ins. Commissioning also runs any user-uploaded commissioning scripts by default, unless the user manually provides a list of scripts to run. MAAS uses these commissioning scripts to configure hardware and perform other tasks during commissioning, such as updating the firmware. Similarly, MAAS employs hardware testing scripts to evaluate system hardware and report its status. </p>
-<hr>
 <h4>Quick questions you may have:</h4>
 
 <ol>
@@ -481,13 +442,13 @@
 <li><a href="#heading--upload-procedure">How do I upload scripts to MAAS?</a></li>
 </ol>
 <hr>
-<!-- deb-2-10-cli
+<!-- deb-2-7-cli
 Scripts can be selected to run from web UI [during commissioning](commission-machines.html), by [testing hardware](hardware-testing.html) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
- deb-2-10-cli -->
+ deb-2-7-cli -->
 
-<!-- deb-2-10-ui
+<!-- deb-2-7-ui
 Scripts can be selected to run from web UI [during commissioning](commission-machines.html), by [testing hardware](hardware-testing.html) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
- deb-2-10-ui -->
+ deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 Scripts can be selected to run from web UI [during commissioning](commission-machines.html), by [testing hardware](hardware-testing.html) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
@@ -505,10 +466,21 @@ Scripts can be selected to run from web UI [during commissioning](commission-mac
 Scripts can be selected to run from web UI [during commissioning](commission-machines.html), by [testing hardware](hardware-testing.html) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
  deb-2-9-ui -->
 
-<p>Scripts can be selected to run from web UI <a href="commission-machines.html">during commissioning</a>, by <a href="hardware-testing.html">testing hardware</a> or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:</p>
-<!-- snap-2-10-ui
+<!-- deb-3-0-cli
+Scripts can be selected to run from web UI [during commissioning](commission-machines.html), by [testing hardware](hardware-testing.html) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ deb-3-0-cli -->
+
+<!-- deb-3-0-ui
+Scripts can be selected to run from web UI [during commissioning](commission-machines.html), by [testing hardware](hardware-testing.html) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ deb-3-0-ui -->
+
+<!-- snap-2-7-cli
+Scripts can be selected to run from web UI [during commissioning](commission-machines.html), by [testing hardware](hardware-testing.html) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
 Scripts can be selected to run from web UI [during commissioning](commission-machines.html), by [testing hardware](hardware-testing.html) or from the command line (select the "CLI" option from the top menu).  Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
- snap-2-10-ui -->
+ snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 Scripts can be selected to run from web UI [during commissioning](commission-machines.html), by [testing hardware](hardware-testing.html) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
@@ -525,6 +497,11 @@ Scripts can be selected to run from web UI [during commissioning](commission-mac
 <!-- snap-2-9-ui
 Scripts can be selected to run from web UI [during commissioning](commission-machines.html), by [testing hardware](hardware-testing.html) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
  snap-2-9-ui -->
+
+<p>Scripts can be selected to run from web UI <a href="commission-machines.html">during commissioning</a>, by <a href="hardware-testing.html">testing hardware</a> or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:</p>
+<!-- snap-3-0-ui
+Scripts can be selected to run from web UI [during commissioning](commission-machines.html), by [testing hardware](hardware-testing.html) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+ snap-3-0ui -->
 
 <p>Add machine -&gt; Enlistment (runs built-in commissioning scripts MAAS) -&gt; New -&gt; Commission (runs built-in and custom commissioning scripts) -&gt; Ready -&gt; Deploy</p>
 <p>NOTE: Scripts are run in alphabetical order in an ephemeral environment.  We recommend running your scripts after any MAAS built-in scripts.  This can be done by naming your scripts 99-z*.  It is possible to reboot the system during commissioning using a script, however, as the environment is ephemeral, any changes to the environment will be destroyed upon reboot (barring, of course, firmware type updates).</p>
@@ -942,13 +919,13 @@ sudo -n stress-ng --matrix 0 --ignite-cpu --log-brief --metrics-brief --times \
 
 <p>This Bash script contains comment-delineated metadata, which configures the script environment and installs any dependencies.  There is also a single line that runs <strong>stress-ng</strong> (a CPU stress-test utility) with various arguments.</p>
 <p><a href="#heading--automatic-script-selection-by-hardware-type"><h3 id="heading--automatic-script-selection-by-hardware-type">Automatic script selection by hardware type</h3></a></p>
-<!-- deb-2-10-cli
+<!-- deb-2-7-cli
 When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
- deb-2-10-cli -->
+ deb-2-7-cli -->
 
-<!-- deb-2-10-ui
+<!-- deb-2-7-ui
 When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
- deb-2-10-ui -->
+ deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
@@ -966,10 +943,21 @@ When selecting [multiple machines](machines.html), scripts which declare the `fo
 When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  deb-2-9-ui -->
 
-<p>When selecting <a href="machines.html">multiple machines</a>, scripts which declare the <code>for_hardware</code> field will only run on machines with matching hardware. To automatically run a script when &lsquo;Update firmware&rsquo; or &lsquo;Configure HBA&rsquo; is selected, you must tag the script with &lsquo;update_firmware&rsquo; or &lsquo;configure_hba&rsquo;.</p>
-<!-- snap-2-10-ui
+<!-- deb-3-0-cli
 When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
- snap-2-10-ui -->
+ deb-3-0-cli -->
+
+<!-- deb-3-0-ui
+When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+ deb-3-0-ui -->
+
+<!-- snap-2-7-cli
+When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+ snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
@@ -987,6 +975,11 @@ When selecting [multiple machines](machines.html), scripts which declare the `fo
 When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
  snap-2-9-ui -->
 
+<p>When selecting <a href="machines.html">multiple machines</a>, scripts which declare the <code>for_hardware</code> field will only run on machines with matching hardware. To automatically run a script when &lsquo;Update firmware&rsquo; or &lsquo;Configure HBA&rsquo; is selected, you must tag the script with &lsquo;update_firmware&rsquo; or &lsquo;configure_hba&rsquo;.</p>
+<!-- snap-3-0-ui
+When selecting [multiple machines](machines.html), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+ snap-3-0-ui -->
+
 <p>Similarly, scripts selected by tag on the command line which specify the <code>for_hardware</code> field will only run on matching hardware.</p>
 <p><a href="#heading--upload-procedure"><h2 id="heading--upload-procedure">Upload procedure</h2></a></p>
 <p>To upload a hardware testing script to MAAS, enter the following:</p>
@@ -1000,7 +993,7 @@ When selecting [multiple machines](machines.html), scripts which declare the `fo
 </code></pre>
 
 <p>The optional filters argument lets you search for tags assigned to a script, such as using <code>TAG=cpu</code> with the above example.</p>
-<p>A <a href="commissioning-and-hardware-testing-scripts.html#hardware-test-script-sample">script&rsquo;s metadata</a>, and even the script itself, can be updated from the command line:</p>
+<p>A <a href="#hardware-test-script-sample">script&rsquo;s metadata</a>, and even the script itself, can be updated from the command line:</p>
 <pre><code class="bash">maas $PROFILE node-script update \
  $SCRIPT_NAME script=$PATH_TO_SCRIPT comment=$COMMENT
 </code></pre>
@@ -1035,7 +1028,67 @@ The history for later modifications will be lost when reverting to an earlier ve
 </code></pre>
 
 <p><a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a></p>
-<p>As with general <a href="cli-tag-management.html">tag management</a>, tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:</p>
+<!-- deb-2-7-cli
+As with general [tag management](maas-tags.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+ deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+As with general [tag management](maas-tags.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+As with general [tag management](maas-tags.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+As with general [tag management](maas-tags.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+As with general [tag management](maas-tags.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+As with general [tag management](maas-tags.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+ deb-2-9-ui -->
+
+<!-- deb-3-0-cli
+As with general [tag management](maas-tags.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+ deb-3-0-cli -->
+
+<!-- deb-3-0-ui
+As with general [tag management](maas-tags.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+ deb-3-0-ui -->
+
+<!-- snap-2-7-cli
+As with general [tag management](maas-tags.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+As with general [tag management](maas-tags.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+ snap-2-7-ui -->
+
+<!-- snap-2-8-cli
+As with general [tag management](maas-tags.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+ snap-2-8-cli -->
+
+<!-- snap-2-8-ui
+As with general [tag management](maas-tags.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+ snap-2-8-ui -->
+
+<!-- snap-2-9-cli
+As with general [tag management](maas-tags.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+ snap-2-9-cli -->
+
+<!-- snap-2-9-ui
+As with general [tag management](maas-tags.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+ snap-2-9-ui -->
+
+<p>As with general <a href="maas-tags.html">tag management</a>, tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:</p>
+<!-- snap-3-0-ui
+As with general [tag management](maas-tags.html), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+ snap-3-0-ui -->
+
 <pre><code class="bash">maas $PROFILE node-script add-tag $SCRIPT_NAME tag=$TAG
 maas $PROFILE node-script remove-tag $SCRIPT_NAME tag=$TAG
 </code></pre>
@@ -1110,13 +1163,13 @@ maas $PROFILE node-script remove-tag $SCRIPT_NAME tag=$TAG
 
 <p><strong>NOTE:</strong> 
 <strong>$RUN_ID</strong> is labelled <code>id</code> in the verbose result output.</p>
-<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 Scripts can be uploaded to MAAS using the web UI. Select the 'User scripts' tab of the 'Settings' page - the 'Commissioning scripts' section is near the top. Within the Commissioning scripts section, click the Upload script button followed by 'Choose file' to open a requester, locate the script, and select Upload to upload it to MAAS.
-snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
 
-<!-- deb-2-10-ui
+<!-- deb-2-7-ui
 A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-testing.html) from a machine's 'Take action' menu.
- deb-2-10-ui -->
+ deb-2-7-ui -->
 
 <!-- deb-2-8-ui
 A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-testing.html) from a machine's 'Take action' menu.
@@ -1126,9 +1179,13 @@ A status message of Commissioning script created will appear.  You'll then be ab
 A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-testing.html) from a machine's 'Take action' menu.
  deb-2-9-ui -->
 
-<!-- snap-2-10-ui
+<!-- deb-3-0-ui
 A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-testing.html) from a machine's 'Take action' menu.
- snap-2-10-ui -->
+ deb-3-0-ui -->
+
+<!-- snap-2-7-ui
+A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-testing.html) from a machine's 'Take action' menu.
+ snap-2-7-ui -->
 
 <!-- snap-2-8-ui
 A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-testing.html) from a machine's 'Take action' menu.
@@ -1138,7 +1195,11 @@ A status message of Commissioning script created will appear.  You'll then be ab
 A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-testing.html) from a machine's 'Take action' menu.
  snap-2-9-ui -->
 
-<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-3-0-ui
+A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](hardware-testing.html) from a machine's 'Take action' menu.
+ snap-3-0-ui -->
+
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 <a href="images/50e08fdf-nodes-hw-scripts__2.4_select.png" target = "_blank"><img src="images/50e08fdf-nodes-hw-scripts__2.4_select.png"></a></a>
 
 <strong>NOTE:</strong> 
@@ -1158,15 +1219,15 @@ To do this, enable Allow SSH access and prevent the machine from powering off wh
 <a href="images/da793c67-nodes-hw-scripts__2.4_ssh.png" target = "_blank"><img src="images/da793c67-nodes-hw-scripts__2.4_ssh.png"></a></a>
 
 Because scripts operate within an ephemeral version of Ubuntu, enabling this option stops the machine from shutting down, allowing you to connect and probe a script's status.
-snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
 
-<!-- deb-2-10-cli
+<!-- deb-2-7-cli
 As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
- deb-2-10-cli -->
+ deb-2-7-cli -->
 
-<!-- deb-2-10-ui
+<!-- deb-2-7-ui
 As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
- deb-2-10-ui -->
+ deb-2-7-ui -->
 
 <!-- deb-2-8-cli
 As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
@@ -1184,10 +1245,21 @@ As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to 
 As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
  deb-2-9-ui -->
 
-<p>As long as you&rsquo;ve added your <a href="user-accounts.html#heading--ssh-keys">SSH key</a> to MAAS, you can connect with SSH to the machine&rsquo;s IP with a username of <code>ubuntu</code>. Type <code>sudo -i</code> to get root access.</p>
-<!-- snap-2-10-ui
+<!-- deb-3-0-cli
 As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
- snap-2-10-ui -->
+ deb-3-0-cli -->
+
+<!-- deb-3-0-ui
+As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
+ deb-3-0-ui -->
+
+<!-- snap-2-7-cli
+As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
+ snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
@@ -1204,6 +1276,11 @@ As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to 
 <!-- snap-2-9-ui
 As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
  snap-2-9-ui -->
+
+<p>As long as you&rsquo;ve added your <a href="user-accounts.html#heading--ssh-keys">SSH key</a> to MAAS, you can connect with SSH to the machine&rsquo;s IP with a username of <code>ubuntu</code>. Type <code>sudo -i</code> to get root access.</p>
+<!-- snap-3-0-ui
+As long as you've added your [SSH key](user-accounts.html#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
+ snap-3-0-ui -->
 
 <p><a href="#heading--access-individual-scripts-and-log-files"><h3 id="heading--access-individual-scripts-and-log-files">Access individual scripts and log files</h3></a></p>
 <p><a href="#heading--commissioning-and-testing-script-files"><h4 id="heading--commissioning-and-testing-script-files">Commissioning and testing script files</h4></a></p>

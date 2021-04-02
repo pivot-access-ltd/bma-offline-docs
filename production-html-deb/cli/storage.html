@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.10
+	    What&rsquo;s new in 3.0
 	  </a>
 	</li>
 	<li>
@@ -429,47 +429,63 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Storage</h1><!-- begin-rad-menu -->
+      <h1>Storage</h1><p>||2.7|2.8|2.9|3.0|</p>
+<p>You have significant latitude when choosing the final storage configuration of a deployed machine. MAAS supports traditional disk partitioning, as well as more complex options such as LVM, RAID, and bcache. MAAS also supports UEFI as a boot mechanism.  This article explains boot mechanisms and layouts, and offers some advice on how to configure layouts and manage storage.</p>
+<h4>Six questions you may have:</h4>
+<!-- deb-2-7-cli
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](disk-erasure.html)
+ deb-2-7-cli -->
 
-<!-- snap-2-8-cli
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
- snap-2-9-ui -->
-
-<!-- snap-2-10-cli
- snap-2-10-cli -->
-
-<!-- snap-2-10-ui
- snap-2-10-ui -->
+<!-- deb-2-7-ui
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](disk-erasure.html)
+ deb-2-7-ui -->
 
 <!-- deb-2-8-cli
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](disk-erasure.html)
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](disk-erasure.html)
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](disk-erasure.html)
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](disk-erasure.html)
  deb-2-9-ui -->
 
-<!-- deb-2-10-ui
- deb-2-10-ui -->
-
-<!-- end-rad-menu -->
-
-<!-- end-rad-menu -->
-
-<p>You have significant latitude when choosing the final storage configuration of a deployed machine. MAAS supports traditional disk partitioning, as well as more complex options such as LVM, RAID, and bcache. MAAS also supports UEFI as a boot mechanism.  This article explains boot mechanisms and layouts, and offers some advice on how to configure layouts and manage storage.</p>
-<h4>Six questions you may have:</h4>
 <ol>
 <li><a href="#heading--uefi">How does UEFI booting work?</a></li>
 <li><a href="#heading--layouts">What kind of storage layouts are available?</a></li>
@@ -478,68 +494,32 @@
 <li><a href="#heading--final-storage-modifications">What storage modifications can I make at the filesystem level?</a></li>
 <li><a href="disk-erasure.html">How can I erase a disk?</a></li>
 </ol>
-<!-- deb-2-10-ui
+<!-- deb-3-0-ui
 1. [How does UEFI booting work?](#heading--uefi)
 2. [What kind of storage layouts are available?](#heading--layouts)
 3. [How do I set global storage layouts?](#heading--setting-global-layouts)
 4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
 5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
 6. [How can I erase a disk?](disk-erasure.html)
- deb-2-10-ui -->
+ deb-3-0-ui -->
 
-<!-- deb-2-8-cli
+<!-- snap-2-7-cli
 1. [How does UEFI booting work?](#heading--uefi)
 2. [What kind of storage layouts are available?](#heading--layouts)
 3. [How do I set global storage layouts?](#heading--setting-global-layouts)
 4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
 5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
 6. [How can I erase a disk?](disk-erasure.html)
- deb-2-8-cli -->
+ snap-2-7-cli -->
 
-<!-- deb-2-8-ui
+<!-- snap-2-7-ui
 1. [How does UEFI booting work?](#heading--uefi)
 2. [What kind of storage layouts are available?](#heading--layouts)
 3. [How do I set global storage layouts?](#heading--setting-global-layouts)
 4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
 5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
 6. [How can I erase a disk?](disk-erasure.html)
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-1. [How does UEFI booting work?](#heading--uefi)
-2. [What kind of storage layouts are available?](#heading--layouts)
-3. [How do I set global storage layouts?](#heading--setting-global-layouts)
-4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-6. [How can I erase a disk?](disk-erasure.html)
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-1. [How does UEFI booting work?](#heading--uefi)
-2. [What kind of storage layouts are available?](#heading--layouts)
-3. [How do I set global storage layouts?](#heading--setting-global-layouts)
-4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-6. [How can I erase a disk?](disk-erasure.html)
- deb-2-9-ui -->
-
-<!-- snap-2-10-cli
-1. [How does UEFI booting work?](#heading--uefi)
-2. [What kind of storage layouts are available?](#heading--layouts)
-3. [How do I set global storage layouts?](#heading--setting-global-layouts)
-4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-6. [How can I erase a disk?](disk-erasure.html)
- snap-2-10-cli -->
-
-<!-- snap-2-10-ui
-1. [How does UEFI booting work?](#heading--uefi)
-2. [What kind of storage layouts are available?](#heading--layouts)
-3. [How do I set global storage layouts?](#heading--setting-global-layouts)
-4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-6. [How can I erase a disk?](disk-erasure.html)
- snap-2-10-ui -->
+ snap-2-7-ui -->
 
 <!-- snap-2-8-cli
 1. [How does UEFI booting work?](#heading--uefi)
@@ -576,6 +556,24 @@
 5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
 6. [How can I erase a disk?](disk-erasure.html)
  snap-2-9-ui -->
+
+<!-- snap-3-0-cli
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](disk-erasure.html)
+ snap-3-0-cli -->
+
+<!-- snap-3-0-ui
+1. [How does UEFI booting work?](#heading--uefi)
+2. [What kind of storage layouts are available?](#heading--layouts)
+3. [How do I set global storage layouts?](#heading--setting-global-layouts)
+4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
+5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
+6. [How can I erase a disk?](disk-erasure.html)
+ snap-3-0-ui -->
 
 <p>A machine&rsquo;s storage is dependant upon the underlying system&rsquo;s disks, but its configuration (i.e., disk usage) is the result of a storage template. In MAAS, this template is called a layout, and MAAS applies it to a machine during commissioning.  Once a layout is applied, a regular user can make modifications to a machine at the filesystem level to arrive at the machine&rsquo;s final storage configuration.  When a machine is no longer needed, a user can choose from among several disk erasure types before releasing it.</p>
 <p><strong>NOTE:</strong> 
@@ -856,11 +854,11 @@ UEFI must be enabled or disabled for the lifespan of the machine. For example, d
 Machines with the blank layout applied are not deployable; you must first configure storage manually.</p>
 <p><a href="#heading--setting-global-layouts"><h2 id="heading--setting-global-layouts">Setting layouts</h2></a></p>
 <p>Layouts can be set globally and on a per-machine basis.</p>
-<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 All machines will have a default layout applied when commissioned. An administrator can configure the default layout on the 'Settings' page, under the 'Storage' tab.
 
 <a href="images/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img src="images/80de3bc701552cd00bec707830accf380c214b17.png"></a></a>
-snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
 
 <p>All machines will have a default layout applied when commissioned. To set the default storage layout for all machines:</p>
 <pre><code>maas $PROFILE maas set-config name=default_storage_layout value=$LAYOUT_TYPE
@@ -874,9 +872,9 @@ snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
 <p><strong>NOTE:</strong> 
 The new default will only apply to newly-commissioned machines.</p>
 <p><a href="#heading--per-machine-layouts"><h3 id="heading--per-machine-layouts">Machine layout</h3></a></p>
-<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of 'Ready'. This is only possible via the CLI: to see how, click the "CLI" option for your version and delivery method above.
-snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
 
 <p>An administrator can set a storage layout for a machine with a status of ‘Ready’ like this:</p>
 <pre><code>maas $PROFILE machine set-storage-layout $SYSTEM_ID storage_layout=$LAYOUT_TYPE [$OPTIONS]

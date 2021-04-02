@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.10
+	    What&rsquo;s new in 3.0
 	  </a>
 	</li>
 	<li>
@@ -429,45 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Power management</h1><!-- begin-rad-menu -->
-
-<!-- snap-2-8-cli
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
- snap-2-9-ui -->
-
-<!-- snap-2-10-cli
- snap-2-10-cli -->
-
-<!-- snap-2-10-ui
- snap-2-10-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
-
-<!-- deb-2-10-cli
- deb-2-10-cli -->
-
-<!-- end-rad-menu -->
-
-<!-- end-rad-menu -->
-
+      <h1>Power management</h1><p>||2.7|2.8|2.9|3.0|</p>
 <p>To manage a machine, MAAS must be able to power cycle it, usually through the machine&rsquo;s <a href="https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller">BMC</a> card.  Until you configure the power type, a newly-added machine can&rsquo;t be enlisted and used by MAAS.</p>
 <h4>Four questions you may have:</h4>
 <ol>
@@ -482,6 +444,29 @@
 <p>Choose a type in the drop-down menu that corresponds to the machine&rsquo;s underlying machine&rsquo;s BMC card.</p>
 <p><a href="images/b53c6613-nodes-power-types__2.4_selection.png" target = "_blank"><img src="images/b53c6613-nodes-power-types__2.4_selection.png"></a></a></p>
 <p>Fill in the resulting form; the information required will depends on the power type:</p>
+<!-- snap-2-7-ui deb-2-7-ui
+| CLI power_type code | Description |
+|-----|-----|
+| [amt](#heading--amt) |Intel AMT |
+| [apc](#heading--apc) | American Power Conversion (APC) PDU |
+| [dli](#heading--dli) | Digital Loggers, Inc. PDU |
+| [hmc](#heading--hmc) | IBM Hardware Management Console (HMC) |
+| [ipmi](#heading--ipmi) | IPMI |
+| [manual](#heading--manual) | Manual power configuration |
+| [moonshot](#heading--moonshot) | HP Moonshot - iLO4 (IPMI) |
+| [mscm](#heading--mscm) | HP Moonshot - iLO Chassis Manager |
+| [msftocs](#heading--mscm) | Microsoft OCS - Chassis Manager |
+| [nova](#heading--nova) | OpenStack Nova |
+| [openbmc](#heading--openbmc) | OpenBMC Power Driver |
+| [recs_box](#heading--recs_box) | Christmann RECS-Box Power Driver |
+| [redfish](#heading--redfish) | Redfish |
+| [sm15k](#heading--sm15k) | SeaMicro 15000 |
+| [ucsm](#heading--ucsm) | Cisco UCS Manager |
+| [virsh](#heading--virsh) | libvirt KVM |
+| [vmware](#heading--vmware) | VMware |
+| [wedge](#heading--wedge) | Facebook's Wedge |
+snap-2-7-ui deb-2-7-ui -->
+
 <!-- snap-2-8-ui deb-2-8-ui 
 | CLI power_type code | Description |
 |-----|-----|
@@ -724,18 +709,35 @@ snap-2-8-ui deb-2-8-ui -->
 </tr>
 </tbody>
 </table>
-<!-- snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui
-<a href="#heading--lxd"><h3 id="heading--lxd">LXD VMs</h3></a>
-
-| Form field | Description | Required |
-|-----|-----|-----|
-| LXD address | IP address of unit | Required |
-| Instance name | LXD container instance name | Required |
-| LXD password | Password to access unit | Optional |
-snap-2-8-ui snap-2-9-ui deb-2-8-ui deb-2-9-ui -->
-
+<p><a href="#heading--lxd"><h3 id="heading--lxd">LXD VMs</h3></a></p>
+<table>
+<thead>
+<tr>
+<th>Form field</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LXD address</td>
+<td>IP address of unit</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Instance name</td>
+<td>LXD container instance name</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>LXD password</td>
+<td>Password to access unit</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
 <p><a href="#heading--ipmi"><h3 id="heading--ipmi">IPMI</h3></a></p>
-<!-- snap-2-8-ui deb-2-8-ui
+<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui
 
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
 
@@ -750,7 +752,7 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | Power user | Username to login || Optional |
 | Power password | Password to access unit || Optional |
 | Power MAC | MAC address of unit || Optional |
-snap-2-8-ui deb-2-8-ui -->
+snap-2-8-ui deb-2-8-ui snap-2-7-ui deb-2-7-ui -->
 
 <p>Some of the fields for this power type have fixed choices, indicated in the &ldquo;Choices&rdquo; column.</p>
 <table>
@@ -1429,17 +1431,49 @@ The machine&rsquo;s hostname &ndash; according to MAAS &ndash; is a randomly cho
 </tr>
 </tbody>
 </table>
-<!-- snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
 
-To (re)configure a machine's power type, first find the machine's $SYSTEM_ID with the [basic machine-list](the-cli-cookbook.html#heading--basic-machine-list) recipe.  Next, use the [MAAS CLI](maas-cli.html) command `maas machines...` to (re)set the machine's power type, like this:
+To (re)configure a machine's power type, first find the machine's $SYSTEM_ID with the following recipe:
+
+
+<pre><code>maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;] | (., map(length*&quot;-&quot;))),
+(.[] | [.hostname, .system_id]) | @tsv' | column -t
+</code></pre>
+
+
+Next, use the [MAAS CLI](maas-cli.html) command `maas machines...` to (re)set the machine's power type, like this:
 
     maas $PROFILE machine update $SYSTEM_ID power_type="$POWER_TYPE"
 
 where $POWER_TYPE can have the following values:
-snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<!-- snap-2-8-cli deb-2-8-cli 
+<!-- snap-2-7-cli deb-2-7-cli
+| CLI power_type code | Description |
+|-----|-----|
+| [amt](#heading--amt) |Intel AMT |
+| [apc](#heading--apc) | American Power Conversion (APC) PDU |
+| [dli](#heading--dli) | Digital Loggers, Inc. PDU |
+| [eaton](#heading--eaton) | Eaton PDU |
+| [hmc](#heading--hmc) | IBM Hardware Management Console (HMC) |
+| [ipmi](#heading--ipmi) | IPMI |
+| [manual](#heading--manual) | Manual power configuration |
+| [moonshot](#heading--moonshot) | HP Moonshot - iLO4 (IPMI) |
+| [mscm](#heading--mscm) | HP Moonshot - iLO Chassis Manager |
+| [msftocs](#heading--mscm) | Microsoft OCS - Chassis Manager |
+| [nova](#heading--nova) | OpenStack Nova |
+| [openbmc](#heading--openbmc) | OpenBMC Power Driver |
+| [recs_box](#heading--recs_box) | Christmann RECS-Box Power Driver |
+| [redfish](#heading--redfish) | Redfish |
+| [sm15k](#heading--sm15k) | SeaMicro 15000 |
+| [ucsm](#heading--ucsm) | Cisco UCS Manager |
+| [virsh](#heading--virsh) | libvirt KVM |
+| [vmware](#heading--vmware) | VMware |
+| [wedge](#heading--wedge) | Facebook's Wedge |
+snap-2-7-cli deb-2-7-cli -->
+
+<!-- snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 | CLI power_type code | Description |
 |-----|-----|
 | [amt](#heading--amt) |Intel AMT |
@@ -1462,9 +1496,9 @@ snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli -->
 | [virsh](#heading--virsh) | libvirt KVM |
 | [vmware](#heading--vmware) | VMware |
 | [wedge](#heading--wedge) | Facebook's Wedge |
-snap-2-8-cli deb-2-8-cli -->
+snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<!-- snap-2-9-cli deb-2-9-cli deb-2-10-cli snap-2-10-cli
+<!-- snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 | CLI power_type code | Description |
 |-----|-----|
 | [amt](#heading--amt) |Intel AMT |
@@ -1487,9 +1521,9 @@ snap-2-8-cli deb-2-8-cli -->
 | [virsh](#heading--virsh) | libvirt KVM |
 | [vmware](#heading--vmware) | VMware |
 | [wedge](#heading--wedge) | Facebook's Wedge |
- snap-2-9-cli deb-2-9-cli deb-2-10-cli snap-2-10-cli -->
+ snap-2-9-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<!-- snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 Note the required and optional parameters associated with each power type.
 
 Once you've successfully processed the command (as indicated by a stream of JSON, headed by "Success!"), MAAS performs a power check on the machine. A successful power check is a good indication that MAAS can properly communicate with the machine, that is, it should quickly result in a power status of "Power off". A failed attempt will return errors that should guide you to fix your power_parameters.
@@ -1552,9 +1586,9 @@ All parameters are entered as `key=value`, e.g., `power_type=hmc`.  The MAAS CLI
 | `lpar` | HMC logical partition of unit | Required |
 | `power_user` | Username to login | Optional |
 | `power_pass` | Password to access unit | Optional |
-snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<!-- snap-2-8-cli snap-2-9-cli deb-2-8-cli deb-2-9-cli snap-2-10-cli deb-2-10-cli
+<!-- snap-2-8-cli snap-2-9-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 <a href="#heading--lxd"><h3 id="heading--lxd">LXD VMs</h3></a>
 
 All parameters are entered as `key=value`, e.g., `power_type=lxd`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
@@ -1565,12 +1599,15 @@ All parameters are entered as `key=value`, e.g., `power_type=lxd`.  The MAAS CLI
 | `power_address` | IP address of unit | Required |
 | `instance_name` | LXD container instance name | Required |
 | `power_pass` | Password to access unit | Optional |
+snap-2-8-cli snap-2-9-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
 
 <a href="#heading--ipmi"><h3 id="heading--ipmi">IPMI</h3></a>
 
-snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<!-- snap-2-10-cli deb-2-10-cli snap-2-8-cli deb-2-8-cli
+<!-- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli
 All parameters are entered as `key=value`, e.g., `power_type=ipmi`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
@@ -1587,9 +1624,9 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | `power_user` | Username to login || Optional |
 | `power_pass` | Password to access unit || Optional |
 | `mac_address` | MAC address of unit || Optional |
-snap-2-8-cli deb-2-8-cli snap-2-10-cli deb-2-10-cli -->
+snap-2-8-cli deb-2-8-cli snap-2-7-cli deb-2-7-cli -->
 
-<!-- snap-2-9-cli deb-2-9-cli
+<!-- snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
@@ -1616,9 +1653,9 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | | | `Operator` | |
 | | | `Administrator` | |
 | `mac_address` | MAC address of unit || Optional |
-snap-2-9-cli deb-2-9-cli -->
+snap-2-9-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<!-- snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
 
 <a href="#heading--manual"><h3 id="heading--manual">Manual power configuration</h3></a>
 
@@ -1979,7 +2016,7 @@ Machine-readable output follows this announcement.  The JSON generated by this c
 
 </details>
 
-snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <p><a href="#heading--bmc-driver-support"><h2 id="heading--bmc-driver-support">Which BMC drivers are supported</h2></a></p>
 <p>MAAS supports many types of BMC hardware, though not all the drivers have the same capabilities. See the below table for a feature comparison of the BMC drivers currently supported by MAAS.</p>

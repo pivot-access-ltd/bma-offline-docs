@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.10
+	    What&rsquo;s new in 3.0
 	  </a>
 	</li>
 	<li>
@@ -429,45 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Proxy</h1><!-- begin-rad-menu -->
-
-<!-- snap-2-8-cli
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
- snap-2-9-ui -->
-
-<!-- snap-2-10-cli
- snap-2-10-cli -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
-
-<!-- deb-2-10-cli
- deb-2-10-cli -->
-
-<!-- deb-2-10-ui
- deb-2-10-ui -->
-
-<!-- end-rad-menu -->
-
-<!-- end-rad-menu -->
-
+      <h1>Proxy</h1><p>||2.7|2.8|2.9|3.0|</p>
 <p>MAAS provides a way for its managed machines to use a proxy server when they need to access HTTP/HTTPS-based resources, such as the Ubuntu package archive.</p>
 <p>There are three possible options:</p>
 <ol>
@@ -484,15 +446,18 @@
 <p><a href="#heading--internal-proxy-maas-proxy"><h2 id="heading--internal-proxy-maas-proxy">Internal proxy (MAAS proxy)</h2></a></p>
 <p>MAAS provides an internal proxy server. Although it is set up to work well with APT/package requests, it is effectively an HTTP caching proxy server. If you configure the MAAS region controller as the default gateway for the machines it manages then the proxy will work transparently (on TCP port 3128). Otherwise, machines will need to access it on TCP port 8000.</p>
 <p>By default, the proxy is available to all hosts residing in any subnet detected by MAAS, not just MAAS-managed machines. It is therefore recommended to disable access to those subnets that represent untrusted networks.</p>
-<!-- deb-2-10-ui deb-2-10-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
+<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli  snap-3-0-cli deb-3-0-cli 
 MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
 
 You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
-deb-2-10-ui deb-2-10-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
+deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<p>MAAS manages its proxy. So although the active configuration, located in file <code>/var/snap/maas/current/proxy</code>, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.</p>
+<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-cli deb-3-0-cli 
+MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
+snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+
 <p><a href="#heading--configure-proxy"><h2 id="heading--configure-proxy">Configure proxy</h2></a></p>
-<!-- snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 Enabling and disabling proxying, in general, is done via a boolean option ('true' or 'false'). The following command will disable proxying completely:
 
 <pre><code class="bash">maas $PROFILE maas set-config name=enable_http_proxy value=false
@@ -528,7 +493,7 @@ For example,
 </code></pre>
 
 
-snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <p>In the web UI, visit the &lsquo;Settings&rsquo; page and select the &lsquo;Network services&rsquo; tab. The &lsquo;Proxy&rsquo; section is at the top. You can apply your changes by pressing the &lsquo;Save&rsquo; button.</p>
 <p><a href="images/55800a33-installconfig-network-proxy__2.4_configure-proxy.png" target = "_blank"><img src="images/55800a33-installconfig-network-proxy__2.4_configure-proxy.png"></a></a></p>

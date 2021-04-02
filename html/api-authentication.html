@@ -22,17 +22,17 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../ui/api-authentication.html">
-	  &nbsp;UI-only&nbsp;
-	</a>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;>"
-	  CLI-only
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  UI-only
       </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="cli/api-authentication.html">
+	  CLI-only
+	</a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="../maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.7
+	    What&rsquo;s new in 3.0
 	  </a>
 	</li>
 	<li>
@@ -429,12 +429,13 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>API authentication</h1><p>hMAAS&rsquo;s API uses <a href="http://en.wikipedia.org/wiki/OAuth">OAuth</a> as its authentication mechanism. This isn&rsquo;t third-party (3-legged) OAuth, so the process used is what&rsquo;s commonly referred to as 0-legged OAuth: the consumer accesses protected resources by submitting OAuth signed requests.</p>
+      <h1>API authentication</h1><p>||2.7|2.8|2.9|3.0|
+MAAS&rsquo;s API uses <a href="http://en.wikipedia.org/wiki/OAuth">OAuth</a> as its authentication mechanism. This isn&rsquo;t third-party (3-legged) OAuth, so the process used is what&rsquo;s commonly referred to as 0-legged OAuth: the consumer accesses protected resources by submitting OAuth signed requests.</p>
 <p>Note that some API endpoints support unauthenticated requests (i.e. anonymous access). See the <a href="https://maas.io/docs/api">API documentation</a> for details. </p>
 <h4>Two questions you may have:</h4>
 <ol>
-<li><a href="api-authentication.html#heading--python">How can I perform authenticated requests in python?</a></li>
-<li><a href="api-authentication.html#heading--ruby">How can I perform authenticated requests in ruby?</a></li>
+<li><a href="#heading--python">How can I perform authenticated requests in python?</a></li>
+<li><a href="#heading--ruby">How can I perform authenticated requests in ruby?</a></li>
 </ol>
 <p>Here are two examples on how to perform an authenticated GET request to retrieve the list of nodes. The &lt;key&gt;, &lt;secret&gt;, &lt;consumer_key&gt; tokens are the three elements that compose the API key (API key = &lsquo;&lt;consumer_key&gt;:&lt;key&gt;:&lt;secret&gt;&lsquo;).</p>
 <p><a href="#heading--python"><h2 id="heading--python">Python</h2></a></p>

@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.10
+	    What&rsquo;s new in 3.0
 	  </a>
 	</li>
 	<li>
@@ -429,142 +429,172 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>MAAS logging</h1><!-- begin-rad-menu -->
+      <h1>MAAS logging</h1><p>||2.7|2.8|2.9|3.0|</p>
+<p>MAAS has a robust logging capability, which presents several different views, including a number of node-specific log files and several syslogd-style text logs.  Each of these logs provides different information, or at the very least, different views of the same information.  MAAS gathers logging information about the various MAAS states and records both automated and user-driven actions.</p>
+<h4>Five questions you may have:</h4>
+<!-- deb-2-7-cli
+1. [What is the syslog logging path?](#heading--path)
+2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
+3. [What are commissioning logs?](commissioning-logs.html)
+4. [What are test logs?](test-logs.html)
+5. [What are event logs?](event-logs.html)
+6. [What are audit event logs?](t/audit-event-logs/2316)
+deb-2-7-cli -->
+
+<!-- deb-2-7-ui
+1. [What is the syslog logging path?](#heading--path)
+2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
+3. [What are commissioning logs?](commissioning-logs.html)
+4. [What are test logs?](test-logs.html)
+5. [What are event logs?](event-logs.html)
+6. [What are audit event logs?](t/audit-event-logs/2317)
+ deb-2-7-ui -->
+
+<!-- deb-2-8-cli
+1. [What is the syslog logging path?](#heading--path)
+2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
+3. [What are commissioning logs?](commissioning-logs.html)
+4. [What are test logs?](test-logs.html)
+5. [What are event logs?](event-logs.html)
+6. [What are audit event logs?](t/audit-event-logs/2318)
+ deb-2-8-cli -->
+
+<!-- deb-2-8-ui
+1. [What is the syslog logging path?](#heading--path)
+2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
+3. [What are commissioning logs?](commissioning-logs.html)
+4. [What are test logs?](test-logs.html)
+5. [What are event logs?](event-logs.html)
+6. [What are audit event logs?](t/audit-event-logs/2319)
+ deb-2-8-ui -->
+
+<!-- deb-2-9-cli
+1. [What is the syslog logging path?](#heading--path)
+2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
+3. [What are commissioning logs?](commissioning-logs.html)
+4. [What are test logs?](test-logs.html)
+5. [What are event logs?](event-logs.html)
+6. [What are audit event logs?](t/audit-event-logs/2320)
+ deb-2-9-cli -->
+
+<!-- deb-2-9-ui
+1. [What is the syslog logging path?](#heading--path)
+2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
+3. [What are commissioning logs?](commissioning-logs.html)
+4. [What are test logs?](test-logs.html)
+5. [What are event logs?](event-logs.html)
+6. [What are audit event logs?](t/audit-event-logs/2321)
+ deb-2-9-ui -->
+
+<!-- deb-3-0-cli
+1. [What is the syslog logging path?](#heading--path)
+2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
+3. [What are commissioning logs?](commissioning-logs.html)
+4. [What are test logs?](test-logs.html)
+5. [What are event logs?](event-logs.html)
+6. [What are audit event logs?](t/audit-event-logs/3831)
+ deb-3-0-cli -->
+
+<!-- deb-3-0-ui
+1. [What is the syslog logging path?](#heading--path)
+2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
+3. [What are commissioning logs?](commissioning-logs.html)
+4. [What are test logs?](test-logs.html)
+5. [What are event logs?](event-logs.html)
+6. [What are audit event logs?](t/audit-event-logs/3832)
+ deb-3-0-ui -->
+
+<!-- snap-2-7-cli
+1. [What is the syslog logging path?](#heading--path)
+2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
+3. [What are commissioning logs?](commissioning-logs.html)
+4. [What are test logs?](test-logs.html)
+5. [What are event logs?](event-logs.html)
+6. [What are audit event logs?](t/audit-event-logs/2310)
+ snap-2-7-cli -->
+
+<!-- snap-2-7-ui
+1. [What is the syslog logging path?](#heading--path)
+2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
+3. [What are commissioning logs?](commissioning-logs.html)
+4. [What are test logs?](test-logs.html)
+5. [What are event logs?](event-logs.html)
+6. [What are audit event logs?](t/audit-event-logs/2311)
+ snap-2-7-ui -->
 
 <!-- snap-2-8-cli
+1. [What is the syslog logging path?](#heading--path)
+2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
+3. [What are commissioning logs?](commissioning-logs.html)
+4. [What are test logs?](test-logs.html)
+5. [What are event logs?](event-logs.html)
+6. [What are audit event logs?](t/audit-event-logs/2312)
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
+1. [What is the syslog logging path?](#heading--path)
+2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
+3. [What are commissioning logs?](commissioning-logs.html)
+4. [What are test logs?](test-logs.html)
+5. [What are event logs?](event-logs.html)
+6. [What are audit event logs?](t/audit-event-logs/2313)
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
+1. [What is the syslog logging path?](#heading--path)
+2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
+3. [What are commissioning logs?](commissioning-logs.html)
+4. [What are test logs?](test-logs.html)
+5. [What are event logs?](event-logs.html)
+6. [What are audit event logs?](t/audit-event-logs/2314)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
+1. [What is the syslog logging path?](#heading--path)
+2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
+3. [What are commissioning logs?](commissioning-logs.html)
+4. [What are test logs?](test-logs.html)
+5. [What are event logs?](event-logs.html)
+6. [What are audit event logs?](t/audit-event-logs/2315)
  snap-2-9-ui -->
 
-<!-- snap-2-10-cli
- snap-2-10-cli -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
-
-<!-- deb-2-10-cli
- deb-2-10-cli -->
-
-<!-- deb-2-10-ui
- deb-2-10-ui -->
-
-<!-- end-rad-menu -->
-
-<!-- end-rad-menu -->
-
-<p>MAAS has a robust logging capability, which presents several different views, including a number of node-specific log files and several syslogd-style text logs.  Each of these logs provides different information, or at the very least, different views of the same information.  MAAS gathers logging information about the various MAAS states and records both automated and user-driven actions.</p>
-<h4>Five questions you may have:</h4>
-<!-- deb-2-10-cli
+<!-- snap-3-0-cli
 1. [What is the syslog logging path?](#heading--path)
 2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
 3. [What are commissioning logs?](commissioning-logs.html)
 4. [What are test logs?](test-logs.html)
-deb-2-10-cli -->
-
-<!-- deb-2-10-ui
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](commissioning-logs.html)
-4. [What are test logs?](test-logs.html)
- deb-2-10-ui -->
-
-<!-- deb-2-8-cli
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](commissioning-logs.html)
-4. [What are test logs?](test-logs.html)
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](commissioning-logs.html)
-4. [What are test logs?](test-logs.html)
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](commissioning-logs.html)
-4. [What are test logs?](test-logs.html)
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](commissioning-logs.html)
-4. [What are test logs?](test-logs.html)
- deb-2-9-ui -->
-
-<!-- snap-2-10-cli
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](commissioning-logs.html)
-4. [What are test logs?](test-logs.html)
- snap-2-10-cli -->
+5. [What are event logs?](event-logs.html)
+6. [What are audit event logs?](t/audit-event-logs/3829)
+ snap-3-0-cli -->
 
 <ol>
 <li><a href="#heading--path">What is the syslog logging path?</a></li>
 <li><a href="#heading--using-a-remote-syslog-server">How do I use a remote syslog server?</a></li>
 <li><a href="commissioning-logs.html">What are commissioning logs?</a></li>
 <li><a href="test-logs.html">What are test logs?</a></li>
+<li><a href="event-logs.html">What are event logs?</a></li>
+<li><a href="t/audit-event-logs/3830">What are audit event logs?</a></li>
 </ol>
-<!-- snap-2-8-cli
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](commissioning-logs.html)
-4. [What are test logs?](test-logs.html)
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](commissioning-logs.html)
-4. [What are test logs?](test-logs.html)
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](commissioning-logs.html)
-4. [What are test logs?](test-logs.html)
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](commissioning-logs.html)
-4. [What are test logs?](test-logs.html)
- snap-2-9-ui -->
-
 <p>The discussion of these logs and their contents can be very extensive, so each type of logging has its own documentation section, reachable from the left-hand menu &ndash; or from the list of questions above.</p>
 <p><a href="#heading--path"><h2 id="heading--path">The syslog logging path</h2></a></p>
-<!-- deb-2-10-ui deb-2-10-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
+<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
 Syslog data is kept in `/var/log/maas/rsyslog/<machine-name><yyyy-mm-dd>/messages`.  Every machine known to MAAS will have corresponding syslogs.
-deb-2-10-ui deb-2-10-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
+deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
 
-<p>Syslog data is kept in <code>/var/snap/maas/common/log/rsyslog/&lt;machine-name&gt;&lt;yyyy-mm-dd&gt;/messages</code>. Every machine known to MAAS will have corresponding syslogs.</p>
+<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
+Syslog data is kept in `/var/snap/maas/common/log/rsyslog/<machine-name><yyyy-mm-dd>/messages`. Every machine known to MAAS will have corresponding syslogs.
+snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
+
 <p><a href="#heading--using-a-remote-syslog-server"><h2 id="heading--using-a-remote-syslog-server">Using a remote syslog server</h2></a></p>
-<p>To add a remote syslog server, click the Settings tab and then click the Network services tab. Scroll down to the Syslog section, where you can add a syslog URL or IP:</p>
-<p><a href="images/e139d4e9-installconfig-syslog__2.6-remote-syslog.png" target = "_blank"><img src="images/e139d4e9-installconfig-syslog__2.6-remote-syslog.png"></a></a></p>
-<p>Click the Save button to save your changes.</p>
-<!-- snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
+To add a remote syslog server, click the Settings tab and then click the Network services tab. Scroll down to the Syslog section, where you can add a syslog URL or IP:
+
+<a href="images/e139d4e9-installconfig-syslog__2.6-remote-syslog.png" target = "_blank"><img src="images/e139d4e9-installconfig-syslog__2.6-remote-syslog.png"></a></a>
+
+Click the Save button to save your changes.
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
 To add or update a remote syslog server in your MAAS environment:
 
 <pre><code class="bash">maas $PROFILE maas set-config name=&quot;remote_syslog&quot; value=&quot;$SYSLOG_FQDN&quot;
@@ -590,7 +620,7 @@ For example:
 <strong>NOTE:</strong> 
 Note that MAAS controllers' syslogs are not forwarded to the external syslog server -- only machine syslog information is forwarded.
 
-snap-2-10-cli snap-2-8-cli snap-2-9-cli deb-2-10-cli deb-2-8-cli deb-2-9-cli -->
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
     </div>
   </body>
 </html>

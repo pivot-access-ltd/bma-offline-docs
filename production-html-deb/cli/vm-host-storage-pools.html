@@ -49,7 +49,7 @@
 	</li>
 	<li>
 	  <a href="whats-new-in-maas.html">
-	    What&rsquo;s new in 2.10
+	    What&rsquo;s new in 3.0
 	  </a>
 	</li>
 	<li>
@@ -429,53 +429,15 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>VM host storage pools</h1><!-- begin-rad-menu -->
-
-<!-- snap-2-8-cli
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
- snap-2-9-ui -->
-
-<!-- snap-2-10-cli
- snap-2-10-cli -->
-
-<!-- snap-2-10-ui
- snap-2-10-ui -->
-
-<!-- deb-2-8-cli
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
- deb-2-9-cli -->
-
-<!-- deb-2-9-ui
- deb-2-9-ui -->
-
-<!-- deb-2-10-ui
- deb-2-10-ui -->
-
-<!-- end-rad-menu -->
-
-<!-- end-rad-menu -->
-
+      <h1>VM host storage pools</h1><p>||2.7|2.8|2.9|3.0|</p>
 <p>&ldquo;Storage pools” are storage resources managed by a VM host. A storage pool is a given amount of storage set aside for use by VMs. A pool can be organised into storage volumes, assigned to VMs as individual block devices. More information is available for both <a href="https://libvirt.org/storage.html">libvirt</a> and <a href="https://lxd.readthedocs.io/en/latest/storage/">LXD</a> storage pools.</p>
 <p><strong>NOTE:</strong> 
-For the Beta version of LXD VM hosts, each VM can be assigned a single block device from the storage pool.</p>
-<!-- snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui
+For LXD VM hosts, each VM can be assigned a single block device from the storage pool.</p>
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 The MAAS web UI displays information about each VM host's storage pools so you can understand your resource usage at a glance:
 
 <a href="images/3387f256f9bd02f7fc2079f119377305256973c8.jpeg" target = "_blank"><img src="images/3387f256f9bd02f7fc2079f119377305256973c8.jpeg"></a></a>
-snap-2-10-ui snap-2-8-ui snap-2-9-ui deb-2-10-ui deb-2-8-ui deb-2-9-ui -->
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
 
 <p>Retrieve VM host storage pool information with the following command:</p>
 <pre><code>maas $PROFILE vm-host read $VM_HOST_ID
