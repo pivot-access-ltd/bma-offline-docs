@@ -450,7 +450,6 @@ There are (at least) three ways you can contribute to MAAS:
 
 - [Common tasks](/t/common-cli-tasks/794)
 - [Kernel management](/t/cli-kernel-management/799)
-- [Image management](/t/cli-image-management/797)
 - [Interface management](/t/cli-interface-management/798)
 
 ### [API documentation](https://maas.io/docs/api)
