@@ -431,6 +431,18 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>Commission machines</h1><p>||2.7|2.8|2.9|3.0|</p>
 <p>MAAS is built to manage machines, including the operating systems on those machines. Enlistment and commissioning are features that make it easier to start managing a machine &ndash; as long as that machine has been configured to netboot. Enlistment enables users to simply connect a machine, configure the firmware properly, and power it on so that MAAS can find it and add it.</p>
+<h4>Eight questions you may have:</h4>
+<ol>
+<li><a href="#heading--enlistment-v-commissioning">Tell me about enlistment vs. commissioning.</a></li>
+<li><a href="#heading--commissioning-machines">How are machines commissioned?</a></li>
+<li><a href="#heading--numa-sriov-commissioning">How can I commission NUMA and SR-IOV nodes?</a></li>
+<li><a href="#heading--commissioning-scripts">What are MAAS commissioning scripts?</a></li>
+<li><a href="#heading--post-commission-configuration">What post-commission configuration is possible?</a></li>
+<li><a href="#heading--bond-interfaces">What is a bond interface and how do I create one?</a></li>
+<li><a href="#heading--bridge-interfaces">What is a bridge interface and how do I create one?</a></li>
+<li><a href="#heading--assign-a-network-interface-to-a-fabric">How do I assign an interface to a fabric?</a></li>
+</ol>
+<p><a href="#heading--enlistment-v-commissioning"><h2 id="heading--enlistment-v-commissioning">Enlistment versus commissioning</h2></a></p>
 <p>Enlistment happens when MAAS starts; it reaches out on connected subnets to locate any nodes &ndash; that is, devices and machines &ndash; that reside on those subnets. MAAS finds a machine that&rsquo;s configured to netboot (e.g., via PXE), boots that machine into Ubuntu, and then sends cloud-init user data which runs standard (i.e., built-in) commissioning scripts. The machine actually adds itself over the MAAS API, and then requests permission to send commissioning data.</p>
 <p>Since MAAS doesn&rsquo;t know whether you might intend to actually include these discovered machines in your cloud configuration, it won&rsquo;t automatically take them over, but it will read them to get an idea how they&rsquo;re set up. MAAS then presents these machines to you with a MAAS state of &ldquo;New.&rdquo; This allows you to examine them and decide whether or not you want MAAS to manage them.</p>
 <!-- deb-2-7-cli
@@ -524,15 +536,6 @@ Commissioning requires 60 seconds.
 
  snap-3-0-ui -->
 
-<h4>Six questions you may have:</h4>
-<ol>
-<li><a href="#heading--commissioning-machines">How are machines commissioned?</a></li>
-<li><a href="#heading--numa-sriov-commissioning">How can I commission NUMA and SR-IOV nodes?</a></li>
-<li><a href="#heading--commissioning-scripts">What are MAAS commissioning scripts?</a></li>
-<li><a href="#heading--post-commission-configuration">What post-commission configuration is possible?</a></li>
-<li><a href="#heading--bond-interfaces">What is a bond interface and how do I create one?</a></li>
-<li><a href="#heading--bridge-interfaces">What is a bridge interface and how do I create one?</a></li>
-</ol>
 <p><a href="#heading--commissioning-machines"><h2 id="heading--commissioning-machines">How machines are commissioned</h2></a></p>
 <p>When MAAS commissions a machine, the following sequence of events takes place:</p>
 <!-- deb-2-7-cli
@@ -1305,6 +1308,98 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-
 <p>A network bridge may be useful if you intend to put virtual machines or containers on the machine.  You can create a bridge by selecting an interface and clicking the now-active &ldquo;Create bridge&rdquo; button. A form will appear that allows you to configure a MAC address, STP, and an appropriate tag.</p>
 <p><a href="images/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png" target = "_blank"><img src="images/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png"></a></a></p>
 <p>Press the &ldquo;Save&rdquo; button when you&rsquo;re done.</p>
+<p><a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">Assign a network interface to a fabric</h2></a></p>
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
+
+<a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">Assign a network interface to a fabric</h2></a>
+
+This task is made easier with the aid of the `jq` utility. It filters the `maas` command (JSON formatted) output and prints it in the desired way, which allows you to view and compare data quickly. Go ahead and install it:
+
+
+<pre><code class="bash">sudo apt install jq
+</code></pre>
+
+
+In summary, MAAS assigns an interface to a fabric by assigning it to a VLAN. First, we need to gather various bits of data.
+
+List some information on all machines:
+
+
+<pre><code class="bash">maas $PROFILE machines read | jq &quot;.[] | \
+    {hostname:.hostname, system_id: .system_id, status:.status}&quot; --compact-output
+</code></pre>
+
+
+Example output:
+
+
+<pre><code class="no-highlight">{&quot;hostname&quot;:&quot;machine1&quot;,&quot;system_id&quot;:&quot;dfgnnd&quot;,&quot;status&quot;:4}
+{&quot;hostname&quot;:&quot;machine2&quot;,&quot;system_id&quot;:&quot;bkaf6e&quot;,&quot;status&quot;:6}
+{&quot;hostname&quot;:&quot;machine4&quot;,&quot;system_id&quot;:&quot;63wqky&quot;,&quot;status&quot;:6}
+{&quot;hostname&quot;:&quot;machine3&quot;,&quot;system_id&quot;:&quot;qwkmar&quot;,&quot;status&quot;:4}
+</code></pre>
+
+
+<strong>NOTE:</strong> 
+You can only edit an interface when the corresponding machine has a status of 'Ready'. This state is numerically denoted by the integer '4'.
+
+
+List some information for all interfaces on the machine in question (identified by its system id 'dfgnnd'):
+
+
+<pre><code class="bash">maas $PROFILE interfaces read dfgnnd | jq &quot;.[] | \
+    {id:.id, name:.name, mac:.mac_address, vid:.vlan.vid, fabric:.vlan.fabric}&quot; --compact-output
+</code></pre>
+
+
+Example output:
+
+
+<pre><code class="no-highlight">{&quot;id&quot;:8,&quot;name&quot;:&quot;eth0&quot;,&quot;mac&quot;:&quot;52:54:00:01:01:01&quot;,&quot;vid&quot;:0,&quot;fabric&quot;:&quot;fabric-1&quot;}
+{&quot;id&quot;:9,&quot;name&quot;:&quot;eth1&quot;,&quot;mac&quot;:&quot;52:54:00:01:01:02&quot;,&quot;vid&quot;:null,&quot;fabric&quot;:null}
+</code></pre>
+
+
+List some information for all fabrics:
+
+
+<pre><code class="bash">maas $PROFILE fabrics read | jq &quot;.[] | \
+    {name:.name, vlans:.vlans[] | {id:.id, vid:.vid}}&quot; --compact-output
+</code></pre>
+
+
+Example output:
+
+
+<pre><code class="no-highlight">{&quot;name&quot;:&quot;fabric-0&quot;,&quot;vlans&quot;:{&quot;id&quot;:5001,&quot;vid&quot;:0}}
+{&quot;name&quot;:&quot;fabric-1&quot;,&quot;vlans&quot;:{&quot;id&quot;:5002,&quot;vid&quot;:0}}
+{&quot;name&quot;:&quot;fabric-2&quot;,&quot;vlans&quot;:{&quot;id&quot;:5003,&quot;vid&quot;:0}}
+</code></pre>
+
+
+This example will show how to move interface '8' (on machine 'dfgnnd') from 'fabric-1' to 'fabric-0'. Based on the gathered information, this will consist of changing the interface's VLAN from '5002' to '5001':
+
+
+<pre><code class="bash">maas $PROFILE interface update dfgnnd 8 vlan=5001 &gt;/dev/null
+</code></pre>
+
+
+Verify the operation by relisting information for the machine's interface:
+
+
+<pre><code class="bash">maas $PROFILE interfaces read dfgnnd | jq &quot;.[] | \
+    {id:.id, name:.name, mac:.mac_address, vid:.vlan.vid, fabric:.vlan.fabric}&quot; --compact-output
+</code></pre>
+
+
+The output shows that the interface is now on fabric-0:
+
+
+<pre><code class="no-highlight">{&quot;id&quot;:8,&quot;name&quot;:&quot;eth0&quot;,&quot;mac&quot;:&quot;52:54:00:01:01:01&quot;,&quot;vid&quot;:0,&quot;fabric&quot;:&quot;fabric-0&quot;}
+{&quot;id&quot;:9,&quot;name&quot;:&quot;eth1&quot;,&quot;mac&quot;:&quot;52:54:00:01:01:02&quot;,&quot;vid&quot;:null,&quot;fabric&quot;:null}
+</code></pre>
+
+ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
     </div>
   </body>
 </html>

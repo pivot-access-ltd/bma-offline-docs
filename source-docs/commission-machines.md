@@ -5,6 +5,19 @@ Packages|[CLI](/t/commission-machines-deb-2-7-cli/2472) ~ [UI](/t/commission-mac
 
 MAAS is built to manage machines, including the operating systems on those machines. Enlistment and commissioning are features that make it easier to start managing a machine -- as long as that machine has been configured to netboot. Enlistment enables users to simply connect a machine, configure the firmware properly, and power it on so that MAAS can find it and add it.
 
+#### Eight questions you may have:
+
+1. [Tell me about enlistment vs. commissioning.](#heading--enlistment-v-commissioning)
+2. [How are machines commissioned?](#heading--commissioning-machines)
+3. [How can I commission NUMA and SR-IOV nodes?](#heading--numa-sriov-commissioning)
+4. [What are MAAS commissioning scripts?](#heading--commissioning-scripts)
+5. [What post-commission configuration is possible?](#heading--post-commission-configuration)
+6. [What is a bond interface and how do I create one?](#heading--bond-interfaces)
+7. [What is a bridge interface and how do I create one?](#heading--bridge-interfaces)
+8. [How do I assign an interface to a fabric?](#heading--assign-a-network-interface-to-a-fabric)
+
+<a href="#heading--enlistment-v-commissioning"><h2 id="heading--enlistment-v-commissioning">Enlistment versus commissioning</h2></a>
+
 Enlistment happens when MAAS starts; it reaches out on connected subnets to locate any nodes -- that is, devices and machines -- that reside on those subnets. MAAS finds a machine that's configured to netboot (e.g., via PXE), boots that machine into Ubuntu, and then sends cloud-init user data which runs standard (i.e., built-in) commissioning scripts. The machine actually adds itself over the MAAS API, and then requests permission to send commissioning data.
 
 Since MAAS doesn't know whether you might intend to actually include these discovered machines in your cloud configuration, it won't automatically take them over, but it will read them to get an idea how they're set up. MAAS then presents these machines to you with a MAAS state of "New." This allows you to examine them and decide whether or not you want MAAS to manage them.
@@ -104,15 +117,6 @@ When you configure a machine to netboot -- and turn it on while connected to the
 Commissioning requires 60 seconds.
 [/note]
  snap-3-0-ui -->
-
-#### Six questions you may have:
-
-1. [How are machines commissioned?](#heading--commissioning-machines)
-2. [How can I commission NUMA and SR-IOV nodes?](#heading--numa-sriov-commissioning)
-3. [What are MAAS commissioning scripts?](#heading--commissioning-scripts)
-4. [What post-commission configuration is possible?](#heading--post-commission-configuration)
-5. [What is a bond interface and how do I create one?](#heading--bond-interfaces)
-6. [What is a bridge interface and how do I create one?](#heading--bridge-interfaces)
 
 <a href="#heading--commissioning-machines"><h2 id="heading--commissioning-machines">How machines are commissioned</h2></a>
 
@@ -912,3 +916,91 @@ A network bridge may be useful if you intend to put virtual machines or containe
 
 Press the "Save" button when you're done.
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+
+<a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">Assign a network interface to a fabric</h2></a>
+
+ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+
+<a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">Assign a network interface to a fabric</h2></a>
+
+This task is made easier with the aid of the `jq` utility. It filters the `maas` command (JSON formatted) output and prints it in the desired way, which allows you to view and compare data quickly. Go ahead and install it:
+
+``` bash
+sudo apt install jq
+```
+
+In summary, MAAS assigns an interface to a fabric by assigning it to a VLAN. First, we need to gather various bits of data.
+
+List some information on all machines:
+
+``` bash
+maas $PROFILE machines read | jq ".[] | \
+    {hostname:.hostname, system_id: .system_id, status:.status}" --compact-output
+```
+
+Example output:
+
+``` no-highlight
+{"hostname":"machine1","system_id":"dfgnnd","status":4}
+{"hostname":"machine2","system_id":"bkaf6e","status":6}
+{"hostname":"machine4","system_id":"63wqky","status":6}
+{"hostname":"machine3","system_id":"qwkmar","status":4}
+```
+
+[note]
+You can only edit an interface when the corresponding machine has a status of 'Ready'. This state is numerically denoted by the integer '4'.
+[/note]
+
+List some information for all interfaces on the machine in question (identified by its system id 'dfgnnd'):
+
+``` bash
+maas $PROFILE interfaces read dfgnnd | jq ".[] | \
+    {id:.id, name:.name, mac:.mac_address, vid:.vlan.vid, fabric:.vlan.fabric}" --compact-output
+```
+
+Example output:
+
+``` no-highlight
+{"id":8,"name":"eth0","mac":"52:54:00:01:01:01","vid":0,"fabric":"fabric-1"}
+{"id":9,"name":"eth1","mac":"52:54:00:01:01:02","vid":null,"fabric":null}
+```
+
+List some information for all fabrics:
+
+``` bash
+maas $PROFILE fabrics read | jq ".[] | \
+    {name:.name, vlans:.vlans[] | {id:.id, vid:.vid}}" --compact-output
+```
+
+Example output:
+
+``` no-highlight
+{"name":"fabric-0","vlans":{"id":5001,"vid":0}}
+{"name":"fabric-1","vlans":{"id":5002,"vid":0}}
+{"name":"fabric-2","vlans":{"id":5003,"vid":0}}
+```
+
+This example will show how to move interface '8' (on machine 'dfgnnd') from 'fabric-1' to 'fabric-0'. Based on the gathered information, this will consist of changing the interface's VLAN from '5002' to '5001':
+
+``` bash
+maas $PROFILE interface update dfgnnd 8 vlan=5001 >/dev/null
+```
+
+Verify the operation by relisting information for the machine's interface:
+
+``` bash
+maas $PROFILE interfaces read dfgnnd | jq ".[] | \
+    {id:.id, name:.name, mac:.mac_address, vid:.vlan.vid, fabric:.vlan.fabric}" --compact-output
+```
+
+The output shows that the interface is now on fabric-0:
+
+``` no-highlight
+{"id":8,"name":"eth0","mac":"52:54:00:01:01:01","vid":0,"fabric":"fabric-0"}
+{"id":9,"name":"eth1","mac":"52:54:00:01:01:02","vid":null,"fabric":null}
+```
+ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
