@@ -5,6 +5,7 @@ Packages|[CLI](/t/commission-machines-deb-2-7-cli/2472) ~ [UI](/t/commission-mac
 
 MAAS is built to manage machines, including the operating systems on those machines. Enlistment and commissioning are features that make it easier to start managing a machine -- as long as that machine has been configured to netboot. Enlistment enables users to simply connect a machine, configure the firmware properly, and power it on so that MAAS can find it and add it.
 
+
 #### Eight questions you may have:
 
 1. [Tell me about enlistment vs. commissioning.](#heading--enlistment-v-commissioning)
@@ -15,6 +16,26 @@ MAAS is built to manage machines, including the operating systems on those machi
 6. [What is a bond interface and how do I create one?](#heading--bond-interfaces)
 7. [What is a bridge interface and how do I create one?](#heading--bridge-interfaces)
 8. [How do I assign an interface to a fabric?](#heading--assign-a-network-interface-to-a-fabric)
+
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+
+#### Twelve questions you may have:
+
+1. [Tell me about enlistment vs. commissioning.](#heading--enlistment-v-commissioning)
+2. [How are machines commissioned?](#heading--commissioning-machines)
+3. [How can I commission NUMA and SR-IOV nodes?](#heading--numa-sriov-commissioning)
+4. [What are MAAS commissioning scripts?](#heading--commissioning-scripts)
+5. [What post-commission configuration is possible?](#heading--post-commission-configuration)
+6. [What is a bond interface and how do I create one?](#heading--bond-interfaces)
+7. [What is a bridge interface and how do I create one?](#heading--bridge-interfaces)
+8. [How do I assign an interface to a fabric?](#heading--assign-a-network-interface-to-a-fabric)
+9. [How do I discover interface identifiers?](#heading--interface-identifiers)
+10. [How do I delete an interface?](#heading--delete-an-interface)
+11. [How do I create a VLAN interface?](#heading--create-a-vlan-interface)
+12. [How do I delete a VLAN interface?](#heading--delete-a-vlan-interface)
+
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
 
 <a href="#heading--enlistment-v-commissioning"><h2 id="heading--enlistment-v-commissioning">Enlistment versus commissioning</h2></a>
 
@@ -879,11 +900,31 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-
 
 <a href="#heading--bridge-interfaces"><h3 id="heading--bridge-interfaces">Bridge interfaces and how to create one</h3></a>
 
+
 A network bridge may be useful if you intend to put virtual machines or containers on the machine.  You can create a bridge by selecting an interface and clicking the now-active "Create bridge" button. A form will appear that allows you to configure a MAC address, STP, and an appropriate tag.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png"></a>
 
 Press the "Save" button when you're done.
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+
+A bridge interface is created with the following syntax:
+
+``` bash
+maas $PROFILE interfaces create-bridge $SYSTEM_ID name=$BRIDGE_NAME \
+parent=$IFACE_ID
+```
+
+Use 'parent' to define the primary interface used for the bridge:
+
+``` bash
+maas admin interfaces create-bridge 4efwb4 name=bridged0 parent=4
+```
+
+
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+
 
 
 <a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">Assign a network interface to a fabric</h2></a>
@@ -969,4 +1010,162 @@ The output shows that the interface is now on fabric-0:
 {"id":8,"name":"eth0","mac":"52:54:00:01:01:01","vid":0,"fabric":"fabric-0"}
 {"id":9,"name":"eth1","mac":"52:54:00:01:01:02","vid":null,"fabric":null}
 ```
- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+
+<a href="#heading--interface-identifiers"><h2 id="heading--interface-identifiers">Interface identifiers</h2></a>
+
+The MAAS CLI uses a numeric interface identifier for many interface operations. Use the following command to retrieve the identifier(s):
+
+``` bash
+maas $PROFILE interfaces read $SYSTEM_ID
+```
+
+Look for either id or the number at the end of an interface's resource URI, such as **15** in the following example output:
+
+``` json
+"id": 15,
+"mac_address": "52:54:00:55:06:40",
+...
+"name": "ens9",
+...
+"resource_uri": "/MAAS/api/2.0/nodes/4efwb4/interfaces/15/"
+```
+
+<a href="#heading--delete-an-interface"><h2 id="heading--delete-an-interface">Delete an interface</h2></a>
+
+The 'delete' command can be used to delete a bridge interface, a bond interface or a physical interface:
+
+``` bash
+maas $PROFILE interface delete $SYSTEM_ID $IFACE_ID
+```
+
+For example:
+
+``` bash
+maas admin interface delete 4efwb4 15
+```
+
+The following is output after the successful deletion of an interface:
+
+``` no-highlight
+Success.
+Machine-readable output follows:
+```
+
+[note]
+There is no machine-readable output after the successful execution of the delete command.
+[/note]
+
+<a href="#heading--create-a-vlan-interface"><h2 id="heading--create-a-vlan-interface">Create a VLAN interface</h2></a>
+
+To create a VLAN interface, use the following syntax:
+
+``` bash
+maas $PROFILE vlans create $FABRIC_ID name=$NAME vid=$VLAN_ID
+```
+
+For example, the following command creates a VLAN called 'Storage network:
+
+``` bash
+maas admin vlans create 0 name="Storage network" vid=100
+```
+
+The above command generates the following output:
+
+``` no-output
+Success.
+Machine-readable output follows:
+{
+    "vid": 100,
+    "mtu": 1500,
+    "dhcp_on": false,
+    "external_dhcp": null,
+    "relay_vlan": null,
+    "name": "Storage network",
+    "space": "undefined",
+    "fabric": "fabric-0",
+    "id": 5004,
+    "primary_rack": null,
+    "fabric_id": 0,
+    "secondary_rack": null,
+    "resource_uri": "/MAAS/api/2.0/vlans/5004/"
+}
+```
+
+Be aware that the $VLAN_ID parameter does not indicate a VLAN ID that corresponds to the VLAN tag. You must first create the VLAN and then associate it with the interface:
+
+``` bash
+maas $PROFILE interfaces create-vlan $SYSTEM_ID vlan=$OUTPUT_VLAN_ID \
+parent=$IFACE_ID
+```
+
+[note]
+**OUTPUT_VLAN_ID** corresponds to the id value output when MAAS created the VLAN.
+[/note]
+
+The following example contains values that correspond to the output above:
+
+``` bash
+maas admin interfaces create-vlan 4efwb4 vlan=5004 parent=4
+```
+
+The above command generates the following output:
+
+``` json
+Success.
+Machine-readable output follows:
+{
+    "tags": [],
+    "type": "vlan",
+    "enabled": true,
+    "system_id": "4efwb4",
+    "id": 21,
+    "children": [],
+    "mac_address": "52:54:00:eb:f2:29",
+    "params": {},
+    "vlan": {
+        "vid": 100,
+        "mtu": 1500,
+        "dhcp_on": false,
+        "external_dhcp": null,
+        "relay_vlan": null,
+        "id": 5004,
+        "secondary_rack": null,
+        "fabric_id": 0,
+        "space": "undefined",
+        "fabric": "fabric-0",
+        "name": "Storage network",
+        "primary_rack": null,
+        "resource_uri": "/MAAS/api/2.0/vlans/5004/"
+    },
+    "parents": [
+        "ens3"
+    ],
+    "effective_mtu": 1500,
+    "links": [
+        {
+            "id": 55,
+            "mode": "link_up"
+        }
+    ],
+    "discovered": null,
+    "name": "ens3.100",
+    "resource_uri": "/MAAS/api/2.0/nodes/4efwb4/interfaces/21/"
+}
+```
+
+<a href="#heading--delete-a-vlan-interface"><h2 id="heading--delete-a-vlan-interface">Delete a VLAN interface</h2></a>
+
+The following command outlines the syntax required to delete a VLAN interface from the command line:
+
+``` bash
+maas $PROFILE vlan delete $FABRIC__ID $VLAN_ID
+```
+
+Using the values from previous examples, you executed this step as follows:
+
+``` bash
+maas admin vlan delete 0 100
+```
+
+
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
