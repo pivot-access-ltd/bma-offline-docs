@@ -9,6 +9,12 @@ Tags are a convenient way to assign descriptive words to machines, interfaces, a
  Tag names can include any combination of letters, numbers, dashes (-) and underscores (_), and be a maximum of 256 characters in length.
 [/note]
 
+Tags are added to machines in one of three ways:
+
+* A user manually applies the tag to a machine.
+* The tag has been defined and it is applied after the machine is commissioned.
+* The tag has been defined and the user runs the CLI command `maas $PROFILE tag rebuild $TAG`, which automatically applies the tag to all machines regardless of state.
+    
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 #### Five questions you may have:
 
@@ -123,7 +129,7 @@ You can apply changes by pressing the 'Save' button.
 snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
-#### Nine questions you may have:
+#### Ten questions you may have:
 
 1. [How can I set kernel boot options for a specific machine?](#heading--per-node-kernel-boot-options)
 2. [How do I create tags?](#heading--rudimentary-tag-creation)
@@ -131,9 +137,10 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui
 4. [How do I delete a tag?](#heading--delete-a-tag)
 5. [How do I list all tags?](#heading--list-all-tags)
 6. [How do I list nodes/machines labelled with a tag?](#heading--list-nodesmachines-labelled-with-a-tag)
-7. [How do I handle Juju integration?](#heading--juju-integration)
-8. [How do I effect manual tag assignment?](#heading--manual-tag-assignment)
-9. [How do I effect hybrid tag assignment?](#heading--hybrid-tag-assignment)
+7. [How can I update a tag without recommissioning my machines?](#heading--rebuild-tags)
+8. [How do I handle Juju integration?](#heading--juju-integration)
+9. [How do I effect manual tag assignment?](#heading--manual-tag-assignment)
+10. [How do I effect hybrid tag assignment?](#heading--hybrid-tag-assignment)
 
 <a href="#heading--rudimentary-tag-creation"><h2 id="heading--rudimentary-tag-creation">Tag creation</h2></a>
 
@@ -304,3 +311,17 @@ If multiple tags attached to a machine have the `kernel_opts` defined, MAAS uses
 <!-- snap-3-0-cli deb-3-0-cli
 If multiple tags attached to a machine have the `kernel_opts` defined, MAAS combines all the specified `kernel_opts` and applies them all at once.
  snap-3-0-cli deb-3-0-cli -->
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
+<a href="#heading--rebuild-tags"><h2 id="heading--rebuild-tags">Updating tags without commissioning</h2></a>
+
+If you need to update tags for all machines -- without having to recommission them -- you can accomplish this with the `rebuild` command:
+
+```
+maas $PROFILE tag rebuild $TAG
+```
+
+This command automatically applies the tag to all machines regardless of state, even machines that are actively deployed.
+
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
+
