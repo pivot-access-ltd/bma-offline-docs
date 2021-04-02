@@ -278,11 +278,76 @@ Here, 'Virsh address' typically looks like the following for libvirt:
 
  deb-2-7-ui snap-2-7-ui -->
 
-<!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!-- deb-2-7-cli snap-2-7-cli
 To add a VM host:
 
 ``` bash
-maas $PROFILE vm-hosts create type=$VM_HOST_TYPE power_address=$POWER_ADDRESS \
+maas $PROFILE pods create type=$POD_TYPE power_address=$POWER_ADDRESS \
+    [power_user=$USERNAME] [power_pass=$PASSWORD] [zone=$ZONE] \
+    [tags=$TAG1,$TAG2,...]
+```
+
+$POD_TYPE can currently take two values: `rsd` and `virsh`.
+
+$POWER_ADDRESS typically looks like the following for libvirt:
+
+    qemu+ssh://<pod IP>/system
+
+Both $USERNAME and $PASSWORD are optional for the virsh power type. $ZONE and $TAGS are optional for all VM hosts.
+
+The `power_...` parameters will vary with power type.  See the [API reference](/docs/api#power-types) for a listing of available power types.
+
+<h3>Some examples</h3>
+
+For example, to create an RSD VM host, enter:
+
+``` bash
+maas $PROFILE pods create type=rsd power_address=10.3.0.1:8443 \
+    power_user=admin power_pass=admin
+```
+
+To create a KVM host, enter the following:
+
+``` bash
+maas $PROFILE pods create type=virsh power_address=qemu+ssh://ubuntu@192.168.1.2/system
+```
+deb-2-7-cli snap-2-7-cli -->
+
+<!-- snap-3-0-cli deb-3-0-cli
+To add a VM host:
+
+``` bash
+maas $PROFILE vm-host create type=$VM_HOST_TYPE power_address=$POWER_ADDRESS \
+    [power_user=$USERNAME] [power_pass=$PASSWORD] [zone=$ZONE] \
+    [tags=$TAG1,$TAG2,...]
+```
+
+$VM_HOST_TYPE can currently take two values: `virsh` and `lxd`.
+
+$POWER_ADDRESS typically looks like the following for libvirt:
+
+    qemu+ssh://<vm host IP>/system
+
+of like this for LXD (Beta):
+
+    https://10.0.0.100:8443
+
+Both $USERNAME and $PASSWORD are optional for the virsh power type. $ZONE and $TAGS are optional for all VM hosts.
+
+The `power_...` parameters will vary with power type.  See the [API reference](/docs/api#power-types) for a listing of available power types.
+
+For example, to create a KVM host, enter the following:
+
+``` bash
+maas $PROFILE vm-hosts create type=virsh power_address=qemu+ssh://ubuntu@192.168.1.2/system
+```
+ snap-3-0-cli deb-3-0-cli -->
+ 
+<!-- deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli 
+To add a VM host:
+
+``` bash
+maas $PROFILE vm-host create type=$VM_HOST_TYPE power_address=$POWER_ADDRESS \
     [power_user=$USERNAME] [power_pass=$PASSWORD] [zone=$ZONE] \
     [tags=$TAG1,$TAG2,...]
 ```
@@ -315,7 +380,7 @@ To create a KVM host, enter the following:
 ``` bash
 maas $PROFILE vm-hosts create type=virsh power_address=qemu+ssh://ubuntu@192.168.1.2/system
 ```
-deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli -->
 
 [note]
 MAAS will automatically discover and store the resources your VM host contains. Any existing machines will also appear on the 'Machines' page, and MAAS will automatically attempt to commission them.
@@ -329,7 +394,72 @@ VM hosts have several configuration options. Modify these by selecting the 'Conf
 <a href="https://discourse.maas.io/uploads/default/original/1X/e6f9b3effcc9e4f44a09836cf6185449410bae7f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e6f9b3effcc9e4f44a09836cf6185449410bae7f.png"></a>
 deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-8-ui snap-2-7-ui snap-2-9-ui  snap-3-0-ui deb-3-0-ui -->
 
-<!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!-- deb-2-7-cli snap-2-7-cli
+Using the CLI, it's possible to update the configuration of a VM host.  You can change these configurable parameters with an `update` command -- but first, you'll want to know how to check the values of configurable parameters, both before and after the change.
+
+<a href="#heading--list-vm-hosts"><h3 id="heading--list-vm-hosts">List VM-hosts</h3></a>
+
+To begin, you can list your available KVM-hosts with the following command:
+
+```
+maas admin pods read | jq -r '(["ID, "VM-HOST","SYSID","CORES",
+"USED","RAM", "USED","STORAGE", "USED"] | (., map(length*"-"))),
+(.[]| [.id,.name,.host.system_id,.total.cores, .used.cores, .total.memory, .used.memory,.total.local_storage, .used.local_storage])
+| @tsv' | column -t
+```
+
+<a href="#heading--list-config-params"><h3 id="heading--list-config-params">List configurable VM host parameters</h3></a>
+
+There are just a few parameters that you can change for a VM host.  You can list these, on a per-host basis, using the following two-step procedure:
+
+1. Run the command above to get the VM host ID (different from the System ID, see the first column in the listing).
+
+2. Enter the following command to list configurable parameters:
+
+```
+maas admin pods read $ID | jq -r '(["ID","NAME","POOL","ZONE",
+"CPU-O/C", "RAM-O/C", "TAGS"] | (., map(length*"-"))), (.| [.id,.name,
+.pool.name, .zone.name,.cpu_over_commit_ratio, 
+.memory_over_commit_ratio, .tags[]]) | @tsv' | column -t
+```
+
+where $ID is the ID (not System ID) of the VM-host.
+
+<a href="#heading--change-vm-host-name"><h3 id="heading--change-vm-host-name">Change the VM host's name</h3></a>
+
+You can change the VM host's name very simply, with this command:
+
+    maas admin pod update $ID name=$NEW_NAME
+
+where $ID is the VM host's ID (not System ID), and $NEW_NAME is the new name you want to assign.  You can check that the change was successful by just printing out the ID and name, like this:
+
+```
+maas admin pods read $ID | jq -r '(["ID","NAME"] 
+| (., map(length*"-"))), (.| [.id,.name]) 
+| @tsv' | column -t
+```
+
+<a href="#heading--change-vm-host-pool"><h3 id="heading--change-vm-host-pool">Change the VM host's pool</h3></a>
+
+You can also change the VM host's pool with a simple command:
+
+    maas admin pod update $ID pool=$VALID_POOL
+
+where $ID is the VM host's ID (not System ID), and $VALID_POOL is the name of a pool that already exists.  If you mention a pool you haven't created yet, you'll get an error like this:
+
+```
+{"pool": ["Select a valid choice. That choice is not one of the available choices."]}
+```
+
+    maas admin resource-pools read | jq -r '.[] | (.name)'
+
+If you really want to set your VM host to a new one, you just need to create a new one with this command:
+
+    maas admin resource-pools create name=$NEW_POOL_NAME
+
+Then double-check it with `catvmpools`, and assign your VM host to it using the earlier command.  deb-2-7-cli snap-2-7-cli -->
+
+<!-- deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli snap-3-0-cli deb-3-0-cli 
 Using the CLI, it's possible to update the configuration of a VM host.  You can change these configurable parameters with an `update` command -- but first, you'll want to know how to check the values of configurable parameters, both before and after the change.
 
 <a href="#heading--list-vm-hosts"><h3 id="heading--list-vm-hosts">List VM-hosts</h3></a>
@@ -393,7 +523,7 @@ If you really want to set your VM host to a new one, you just need to create a n
     maas admin resource-pools create name=$NEW_POOL_NAME
 
 Then double-check it with `catvmpools`, and assign your VM host to it using the earlier command. 
-deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-7-cli snap-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+ deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <a href="#heading--overcommit-resources"><h3 id="heading--overcommit-resources">Over-commit resources</h3></a>
 
