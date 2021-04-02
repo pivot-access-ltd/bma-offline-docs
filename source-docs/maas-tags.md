@@ -295,7 +295,12 @@ Next, assign the tag to the machine in question:
 ``` bash
 maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
 ```
-
-If multiple tags attached to a machine have the `kernel_opts` defined, MAAS uses the first one found, in alphabetical order.
-
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli 
+If multiple tags attached to a machine have the `kernel_opts` defined, MAAS uses the first one found, in alphabetical order.
+ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+<!-- snap-3-0-cli deb-3-0-cli
+If multiple tags attached to a machine have the `kernel_opts` defined, MAAS combines all the specified `kernel_opts` and applies them all at once.
+ snap-3-0-cli deb-3-0-cli -->

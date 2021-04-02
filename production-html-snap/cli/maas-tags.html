@@ -668,7 +668,11 @@ Per-machine boot options take precedence to global ones. Please also note that, 
 <pre><code class="bash">maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
 </code></pre>
 
-<p>If multiple tags attached to a machine have the <code>kernel_opts</code> defined, MAAS uses the first one found, in alphabetical order.</p>
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli 
+If multiple tags attached to a machine have the `kernel_opts` defined, MAAS uses the first one found, in alphabetical order.
+ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+<p>If multiple tags attached to a machine have the <code>kernel_opts</code> defined, MAAS combines all the specified <code>kernel_opts</code> and applies them all at once.</p>
     </div>
   </body>
 </html>
