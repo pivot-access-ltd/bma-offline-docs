@@ -961,8 +961,8 @@ MAAS can be installed in either of two configurations:  test or production.  The
 
 #### Thirteen questions you may have:
 
-1. [How do I install (but not initialise) the MAAS 2.9 snap?](#heading--install-maas-snap)
-2. [How do I upgrade my 2.8 snap to version 2.9?](#heading--upgrade-maas-snap)
+1. [How do I install (but not initialise) the MAAS 3.0 Beta snap?](#heading--install-maas-snap)
+2. [How do I upgrade my 2.9 snap to the MAAS 3.0 Beta?](#heading--upgrade-maas-snap)
 3. [What are MAAS initialisation modes?](#heading--maas-init-modes)
 4. [How do I initialise MAAS for a test or proof-of-concept configuration?](#heading--init-poc)
 5. [How do I initialise MAAS for a production configuration?](#heading--init-prod)
