@@ -15,13 +15,12 @@ The topic of subnet management pertains to whether or not MAAS is in full contro
 5. [How do I determine a fabric ID to use in other CLI subnet calls?](#heading--determine-fabric-id)
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
 
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 1. [What are managed subnets?](#heading--managed-subnets)
 2. [What are unmanaged subnets?](#heading--unmanaged-subnets)
 3. [What is IP address tracking?](#heading--ip-address-tracking)
 4. [How do I control subnet management](#heading--controlling-subnet-management)
-snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli -->
-
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
 
 <a href="#heading--managed-subnets"><h2 id="heading--managed-subnets">Managed subnets</h2></a>
 

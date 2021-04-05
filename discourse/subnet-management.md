@@ -7,6 +7,14 @@ The topic of subnet management pertains to whether or not MAAS is in full contro
 
 #### Four questions you may have:
 
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+1. [What are managed subnets?](#heading--managed-subnets)
+2. [What are unmanaged subnets?](#heading--unmanaged-subnets)
+3. [What is IP address tracking?](#heading--ip-address-tracking)
+4. [How do I control subnet management](#heading--controlling-subnet-management)
+5. [How do I determine a fabric ID to use in other CLI subnet calls?](#heading--determine-fabric-id)
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+
 1. [What are managed subnets?](#heading--managed-subnets)
 2. [What are unmanaged subnets?](#heading--unmanaged-subnets)
 3. [What is IP address tracking?](#heading--ip-address-tracking)
@@ -109,6 +117,20 @@ maas $PROFILE subnet update 192.168.1.0/24 managed=false
 
 You can use the subnet's ID in place of the CIDR address.
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
+<a href="#heading--determine-fabric-id"><h2 id="heading--determine-fabric-id">Determine fabric ID</h2></a>
+
+To determine a fabric ID based on a subnet address:
+
+```
+FABRIC_ID=$(maas $PROFILE subnet read $SUBNET_CIDR \
+    | grep fabric | cut -d ' ' -f 10 | cut -d '"' -f 2)
+```
+
+This may come in handy when you need a fabric ID for other CLI calls.
+
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
 
 <a href="#heading--ip-address-tracking"><h2 id="heading--ip-address-tracking">IP address tracking</h2></a>
 
