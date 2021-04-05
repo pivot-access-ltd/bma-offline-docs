@@ -469,4 +469,11 @@ To deploy with the CLI, the node must have a status of 'Allocated'. See 'Acquire
 
 <a href="#heading--configure-deployment-timeout"><h3 id="heading--configure-deployment-timeout">Configure deployment timeout</h3></a>
 
+By default, when you deploy a machine, MAAS will consider the deployment a failure if it doesn't complete within 30 minutes.  You can configure this timeout, if you wish, with the command:
+
+```
+maas $PROFILE maas set-config name=node-timeout value=$NUMBER_OF_MINUTES
+```
+
+
  snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
