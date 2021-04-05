@@ -446,10 +446,6 @@ There are (at least) three ways you can contribute to MAAS:
 
 - [Brief network tutorial](/t/concepts-and-terms/785#heading--network-tutorial)
 
-### The MAAS CLI 
-
-- [Common tasks](/t/common-cli-tasks/794)
-
 ### [API documentation](https://maas.io/docs/api)
 
 - [API client](/t/api-client/810)
