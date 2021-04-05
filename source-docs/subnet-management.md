@@ -5,17 +5,21 @@ Packages|[CLI](/t/subnet-management-deb-2-7-cli/3120) ~ [UI](/t/subnet-managemen
 
 The topic of subnet management pertains to whether or not MAAS is in full control of a subnet. When a subnet is managed, MAAS handles all aspects of IP address allocation. This process includes DHCP leases and assigned static addresses. Typically MAAS would have one managed subnet, but any additional subnets can be unmanaged. This arrangement allows for more control over which subnet gets used for DHCP and which ones do not. Additionally, as detailed below, an unmanaged subnet treats reserved IP ranges differently, and in a way that some administrators find more intuitive.
 
-#### Four questions you may have:
-
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+#### Seven questions you may have:
+
 1. [What are managed subnets?](#heading--managed-subnets)
 2. [What are unmanaged subnets?](#heading--unmanaged-subnets)
 3. [What is IP address tracking?](#heading--ip-address-tracking)
 4. [How do I control subnet management](#heading--controlling-subnet-management)
 5. [How do I determine a fabric ID to use in other CLI subnet calls?](#heading--determine-fabric-id)
+6. [How do I set a default gateway with the CLI?](#heading--default-gateway)
+7. [How do i set the DNS server with the CLI?](#heading--set-dns-server)
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+#### Four questions you may have:
+
 1. [What are managed subnets?](#heading--managed-subnets)
 2. [What are unmanaged subnets?](#heading--unmanaged-subnets)
 3. [What is IP address tracking?](#heading--ip-address-tracking)
@@ -135,6 +139,22 @@ FABRIC_ID=$(maas $PROFILE subnet read $SUBNET_CIDR \
 ```
 
 This may come in handy when you need a fabric ID for other CLI calls.
+
+<a href="#heading--default-gateway"><h2 id="heading--default-gateway">Set a default gateway</h2></a>
+
+To set the default gateway for a subnet:
+
+```
+maas $PROFILE subnet update $SUBNET_CIDR gateway_ip=$MY_GATEWAY
+```
+
+<a href="#heading--set-dns-server"><h2 id="heading--set-dns-server">Set a DNS server</h2></a>
+
+To set the DNS server for a subnet:
+
+```
+maas $PROFILE subnet update $SUBNET_CIDR dns_servers=$MY_NAMESERVER
+```
 
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
 
