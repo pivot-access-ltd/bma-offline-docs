@@ -1,3 +1,4 @@
+
 ||2.7|2.8|2.9|3.0|
 |-----:|:-----:|:-----:|:-----:|:-----:|
 Snap|[CLI](/t/configuration-journey-snap-2-7-cli/2526) ~ [UI](/t/configuration-journey-snap-2-7-ui/2527)|[CLI](/t/configuration-journey-snap-2-8-cli/2528) ~ [UI](/t/configuration-journey-snap-2-8-ui/2529)|[CLI](/t/configuration-journey-snap-2-9-cli/2530) ~ [UI](/t/configuration-journey-snap-2-9-ui/2531)|[CLI](/t/configuration-journey-snap-3-0-cli/3885) ~ [UI](/t/configuration-journey-snap-3-0-ui/3886)|
@@ -586,8 +587,8 @@ When it comes to running applications, MAAS can easily deploy any supported vari
 
 [VM hosts](/t/vm-hosting/4162) can give you greater control over your hardware.  A LXD (pronounced "lex-D") VM host is a collection of individual virtual machines.  You can use a LXD VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
-It’s easy to add a virsh VM host: click the "Add KVM" button on the "KVM" page of the web UI, give the VM host a name, and select LXD as the VM host type.  You will also need to enter the address for the [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) controlled pool below.
+<!-- deb-2-9-ui snap-2-9-ui
+It’s easy to add a virsh VM host: click the "Add KVM" button on the "KVM" page of the web UI, give the VM host a name, and select `virsh` or `lxd` as the VM host type.  You will also need to enter the address for the KVM host: in the case of `virsh`, this address looks something like `qemu+ssh://<yourusername>@10.249.0.2/system`, with password equal to the password for `<yourusername>`; if you're using `lxd`, this address will be the IP of the LXD bridge gateway (.1), with the password being the trust password you entered when initializing LXD.
 
 After you create a VM host, you compose hardware by selecting the VM host, and then selecting "Compose" from the Action menu. You can configure composed hardware as desired, including the number of cores, CPU speed, RAM and combined storage.  Then just click "Compose machine", and MAAS will combine resources to create a new, single entity that can be used just like any other machine.  VM hosts abstract multiple resources:
 
@@ -596,9 +597,21 @@ After you create a VM host, you compose hardware by selecting the VM host, and t
 into pools of composable hardware:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/763029b5678b6f88317359d28eac3003f7298f37.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/763029b5678b6f88317359d28eac3003f7298f37.jpeg"></a> 
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+ deb-2-9-ui snap-2-9-ui -->
 
-It’s easy to add a LXD VM host: click the "Add KVM" button on the "KVM" page of the web UI, give the VM host a name, and select "lxd" as the VM host type.  You will also need to enter the IP address for the gateway (.1) of the bridge you're using to connect to LXD:
+<!-- snap-2-7-ui snap-2-8-ui deb-2-7-ui deb-2-8-ui
+It’s easy to add a virsh VM host: click the "Add KVM" button on the "KVM" page of the web UI, give the VM host a name, and select as the VM host type.  You will also need to enter the address for the KVM host; this address will look something like 'qemu+ssh://<yourusername>@10.249.0.2/system`, where the paasword will be the same password `<yourusername>` uses to log into the host.
+
+After you create a VM host, you compose hardware by selecting the VM host, and then selecting "Compose" from the Action menu. You can configure composed hardware as desired, including the number of cores, CPU speed, RAM and combined storage.  Then just click "Compose machine", and MAAS will combine resources to create a new, single entity that can be used just like any other machine.  VM hosts abstract multiple resources:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/c57d7cf802bfd3f968cc54a829cd1629c45e9f62.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c57d7cf802bfd3f968cc54a829cd1629c45e9f62.jpeg"></a> 
+
+into pools of composable hardware:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/763029b5678b6f88317359d28eac3003f7298f37.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/763029b5678b6f88317359d28eac3003f7298f37.jpeg"></a> 
+snap-2-7-ui snap-2-8-ui deb-2-7-ui deb-2-8-ui -->
+
+It’s easy to add a LXD VM host: click the "Add KVM" button on the "KVM" page of the web UI, give the VM host a name, and select "lxd" as the VM host type.  You will also need to enter the IP address for the gateway (.1) of the bridge you're using to connect to LXD.  The password will be the trust password you created when initializing LXD.
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/ff398586b76154dd20e4c194e30f5c832a7dac89.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/ff398586b76154dd20e4c194e30f5c832a7dac89.png"></a>
 
