@@ -541,7 +541,9 @@ When a machine boots, MAAS first instructs it to run cloud-init to set up SSH ke
 
 * **maas-serial-ports:** this script lists what serial ports are available on the machine.  **Runs in parallel with other scripts.**
 
+<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
 * **40-maas-01-network-interfaces:** this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
+ snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
 
 * **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
 
