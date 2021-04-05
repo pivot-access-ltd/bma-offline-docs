@@ -339,7 +339,7 @@ maas $PROFILE machines allocate system_id=$SYSTEM_ID
 maas $PROFILE machine deploy $SYSTEM_ID
 ```
 
-These commands are described in more detail later on in this section of articles.
+The `$SYSTEM_ID` is the text in the "SYSID" field in the machine listing above.  These commands are described in more detail later on in this section of articles.
  snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <a href="#heading--node-details"><h2 id="heading--node-details">View machine details</h2></a>
