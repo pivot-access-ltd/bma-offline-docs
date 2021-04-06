@@ -46,19 +46,19 @@ Enlistment happens when MAAS starts; it reaches out on connected subnets to loca
 Since MAAS doesn't know whether you might intend to actually include these discovered machines in your cloud configuration, it won't automatically take them over, but it will read them to get an idea how they're set up. MAAS then presents these machines to you with a MAAS state of "New." This allows you to examine them and decide whether or not you want MAAS to manage them.
 
 <!-- deb-2-7-cli
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2280)). In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2484) to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2280)). In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered. This resource information includes (but isn't limited to) information about CPUs, memory, and storage. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2484) to meet your specific needs.
 deb-2-7-cli -->
 
 <!-- deb-2-7-ui
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2281)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2485) to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2281)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered. This resource information includes (but isn't limited to) information about CPUs, memory, and storage. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2485) to meet your specific needs.
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2282)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2486) to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2282)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered. This resource information includes (but isn't limited to) information about CPUs, memory, and storage. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2486) to meet your specific needs.
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2283)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2487) to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2283)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered. This resource information includes (but isn't limited to) information about CPUs, memory, and storage. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2487) to meet your specific needs.
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
@@ -70,7 +70,7 @@ Commissioning requires 60 seconds.
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2285)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2489) to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2285)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered. This resource information includes (but isn't limited to) information about CPUs, memory, and storage. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2489) to meet your specific needs.
 
 [note]
 Commissioning requires 60 seconds.
@@ -78,7 +78,7 @@ Commissioning requires 60 seconds.
  deb-2-9-ui -->
 
 <!-- deb-3-0-cli
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/3823)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3867) to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/3823)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  This resource information includes (but isn't limited to) information about CPUs, memory, storage, and details of any PCE and USB devices attached to the machine. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3867) to meet your specific needs.
 
 [note]
 Commissioning requires 60 seconds.
@@ -86,7 +86,7 @@ Commissioning requires 60 seconds.
  deb-3-0-cli -->
 
 <!-- deb-3-0-ui
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/3824)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3868) to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/3824)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  This resource information includes (but isn't limited to) information about CPUs, memory, storage, and details of any PCE and USB devices attached to the machine. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3868) to meet your specific needs.
 
 [note]
 Commissioning requires 60 seconds.
@@ -94,15 +94,15 @@ Commissioning requires 60 seconds.
  deb-3-0-ui -->
 
 <!-- snap-2-7-cli
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2274)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2478) to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2274)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered. This resource information includes (but isn't limited to) information about CPUs, memory, and storage. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2478) to meet your specific needs.
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2275)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2479) to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2275)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered. This resource information includes (but isn't limited to) information about CPUs, memory, and storage. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2479) to meet your specific needs.
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2276)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2480) to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2276)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered. This resource information includes (but isn't limited to) information about CPUs, memory, and storage. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2480) to meet your specific needs.
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
@@ -110,7 +110,7 @@ When you configure a machine to netboot -- and turn it on while connected to the
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2278)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2482) to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2278)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  This resource information includes (but isn't limited to) information about CPUs, memory, and storage. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2482) to meet your specific needs.
 
 [note]
 Commissioning requires 60 seconds.
@@ -118,7 +118,7 @@ Commissioning requires 60 seconds.
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2279)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2483) to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2279)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.   This resource information includes (but isn't limited to) information about CPUs, memory, and storage. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2483) to meet your specific needs.
 
 [note]
 Commissioning requires 60 seconds.
@@ -126,7 +126,7 @@ Commissioning requires 60 seconds.
  snap-2-9-ui -->
 
 <!-- snap-3-0-cli
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/3821)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3865) to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/3821)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.   This resource information includes (but isn't limited to) information about CPUs, memory, storage, and details of any PCE and USB devices attached to the machine.You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3865) to meet your specific needs.
 
 [note]
 Commissioning requires 60 seconds.
@@ -134,7 +134,7 @@ Commissioning requires 60 seconds.
  snap-3-0-cli -->
 
 <!-- snap-3-0-ui
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/3822)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3866) to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/3822)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.   This resource information includes (but isn't limited to) information about CPUs, memory, storage, and details of any PCE and USB devices attached to the machine. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3866) to meet your specific needs.
 
 [note]
 Commissioning requires 60 seconds.
@@ -567,9 +567,15 @@ snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-ui deb-3-0-ui snap-3-0-
 * **40-maas-01-network-interfaces:** this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
  snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
 
-<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli
+<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli 
 * **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
+ snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
 
+<!-- snap-3-0-ui snap-3-0-cli deb-3-0-ui deb-3-0-cli
+* **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, details about attached USB and PCI devices, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
+ snap-3-0-ui snap-3-0-cli deb-3-0-ui deb-3-0-cli -->
+
+<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli
 * **maas-capture-lldp:** this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  **Runs in parallel with other scripts.**
 
 * **maas-kernel-cmdline:** this script is used to update the boot devices; it double-checks that the right boot interface is selected. 
