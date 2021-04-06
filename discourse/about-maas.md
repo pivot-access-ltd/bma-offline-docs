@@ -28,7 +28,9 @@ PXE stands for "Preboot Execution Environment," usually pronounced "pixie."  The
 
 <a href="#heading--what-maas-offers"><h2 id="heading--what-maas-offers">What MAAS offers</h2></a>
 
-MAAS can manage a large number of physical machines by merging them into user-defined resource pools. MAAS automatically provisions participating machines and makes them available for use. You can return unused machines to the assigned pool at any time. 
+MAAS can manage a large number of physical machines by merging them into user-defined resource pools. MAAS automatically provisions participating machines and makes them available for use. You can return unused machines to the assigned pool at any time.
+
+MAAS also discovers all USB and PCI devices attached to your physical or virtual machines, and allows you to delete them from the machine's visible configuration, prior to deployment, if you so desire.
 
 MAAS integrates all the tools you need into a smooth system-management experience. It includes the following thirteen features:
 

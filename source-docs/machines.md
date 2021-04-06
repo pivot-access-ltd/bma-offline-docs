@@ -5,13 +5,13 @@ Packages|[CLI](/t/machines-deb-2-7-cli/2736) ~ [UI](/t/machines-deb-2-7-ui/2737)
 
 Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers. MAAS manages their transit through a life-cycle, from adding and enlistment, through commissioning, allocation, and deployment, finally being released back to the pool, or retired altogether.  You can move them around, create redundant versions (even in other geographies you can access), and basically rearrange them to the extent that your network allows.
 
-<!-- deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui snap-3-0-ui deb-3-0-ui 
+<!-- deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui
 #### Eleven questions you may have:
 
 1. [How are the machine states and actions related?](#heading--machine-life-cycle)
 2. [How can I view the machine list?](#heading--machine-list)
 3. [How can I view machine details?](#heading--node-details)
-4. [How can I view a machine summary?](#heading--machine-summary) 
+4. [How can I view a machine summary?](#heading--machine-summary)
 5. [Where can I find network info for a machine?](#heading--machine-interfaces-h3)
 6. [Where can I find storage info for a machine?](#heading--machine-storage-h3)
 7. [Where can I find the commissioning log for a machine?](#heading--commissioning-log-h3)
@@ -19,15 +19,41 @@ Machines are the heart of MAAS. They are the backbone of your data centre applic
 9. [Where can I find raw log output for a machine?](#heading--raw-log-output-h3)
 10. [Where can I find a machine's event log?](#heading--event-logs-h3)
 11. [Where can I find machine configuration info?](#heading--machine-config-h3)
- deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+ deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui -->
 
-<!-- deb-2-7-cli snap-2-7-cli deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!-- snap-3-0-ui deb-3-0-ui 
+#### Twelve questions you may have:
+
+1. [How are the machine states and actions related?](#heading--machine-life-cycle)
+2. [How can I view the machine list?](#heading--machine-list)
+3. [How can I view machine details?](#heading--node-details)
+4. [How can I view a machine summary?](#heading--machine-summary)
+5. [How does MAAS handle attached USB/PCI devices?](#heading--usb-pci-devices)
+6. [Where can I find network info for a machine?](#heading--machine-interfaces-h3)
+7. [Where can I find storage info for a machine?](#heading--machine-storage-h3)
+8. [Where can I find the commissioning log for a machine?](#heading--commissioning-log-h3)
+9. [Where can I find machine hardware & test logs?](#heading--hardware-tests-h3)
+10. [Where can I find raw log output for a machine?](#heading--raw-log-output-h3)
+11. [Where can I find a machine's event log?](#heading--event-logs-h3)
+12. [Where can I find machine configuration info?](#heading--machine-config-h3)
+ snap-3-0-ui deb-3-0-ui -->
+
+<!-- snap-3-0-cli deb-3-0-cli 
+#### Four questions you may have:
+
+1. [How are the machine states and actions related?](#heading--machine-life-cycle)
+2. [How can I view the machine list?](#heading--machine-list)
+3. [How can I view machine details?](#heading--node-details)
+4. [How does MAAS handle attached USB/PCI devices?](#heading--usb-pci-devices)
+ snap-3-0-cli deb-3-0-cli -->
+
+<!-- deb-2-7-cli snap-2-7-cli deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli 
 #### Three questions you may have:
 
 1. [How are the machine states and actions related?](#heading--machine-life-cycle)
 2. [How can I view the machine list?](#heading--machine-list)
 3. [How can I view machine details?](#heading--node-details)
- deb-2-7-cli snap-2-7-cli deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+ deb-2-7-cli snap-2-7-cli deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli -->
 
 For example, in the illustration below, you see a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:
 
@@ -468,6 +494,80 @@ The rest of the cards on the Machine summary are either self-explanatory, or the
 <!-- snap-3-0-ui
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](/t/hardware-testing/3942) page.
  snap-3-0-ui -->
+
+<!-- snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli
+<a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">Handling attached USB and PCI devices</h3></a>
+
+The machines in your MAAS may have devices attached to them via USB or PCI interface, such as keyboards, cameras, network cards, GPUs, etc.  MAAS will recognize these devices and make them visible to you when a machine is commissioned.
+
+ snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli-->
+
+<!-- snap-3-0-ui deb-3-0-ui
+
+For example, the machine details presents USB and PCI devices like this:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/8/87f42bafe321d45af94d73216f933a9067f01df2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/87f42bafe321d45af94d73216f933a9067f01df2.png"></a>
+
+Note that this page now includes two new tabs: "PCI devices" and "USB."  For each USB/PCI device attached to your machine, these tabs will list:
+
+* device type
+* vendor ID
+* a product description
+* a product ID
+* the driver name
+* the containing NUMA node (if any)
+* the device address
+
+If you are upgrading from a previous version of MAAS, PCI and USB devices aren't modeled, so you will have to recommission the machine to capture these devices.
+
+ snap-3-0-ui deb-3-0-ui -->
+
+<!-- snap-3-0-cli deb-3-0-cli
+Using the MAAS CLI, you can obtain a list of the USB/PCI devices available in a commissioned machine with the following command:
+
+```
+maas $PROFILE node-devices read $SYSTEM_ID
+```
+
+where:
+
+* $PROFILE   = your user profile (e.g., "admin")
+* $SYSTEM_ID = the ID of the machine in question (e.g., "ngx7ry")
+
+Note that USB/PCI devices are referred to as "node-devices" in the MAAS CLI.
+
+The JSON output that is returned from this command will contain the following information about each USB/PCI device on the machine in question:
+
+* the node-device ID
+* the bus to which the device is attached (PCIE/USB)
+* the hardware_type, which can be "node," "cpu,"" "memory," "storage," or "gpu."
+* the vendor_id
+* the product_id
+* vendor_name
+* the product_name
+* the commissioning_driver (i.e., the driver)
+ 
+These parameters may vary greatly between device types.
+
+ snap-3-0-cli deb-3-0-cli -->
+
+<!-- snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli
+Once you've commissioned the machine, you have the option of deleting PCI/USB devices from the machine in any machine state, via the CLI only, using the following command:
+
+```
+maas $PROFILE node-device delete $SYSTEM_ID $DEVICE_ID
+```
+
+where:
+
+* $PROFILE   = your user profile (e.g., "admin")
+* $SYSTEM_ID = the ID of the machine in question (e.g., "ngx7ry")
+* $DEVICE_ID = the ID of the device you want to delete 
+
+If the device is still present in the system, it will be recogized again (and thus "recreated")
+when the machine is commissioned again.
+ snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli -->
+
 
 <!-- snap-2-8-ui deb-2-8-ui snap-2-7-ui deb-2-7-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 <a href="#heading--machine-interfaces-h3"><h3 id="heading--machine-interfaces-h3">Find network info for a machine</h3></a>
