@@ -434,7 +434,7 @@
 <p>In addition, the machine subnet is usually on the untagged VLAN. If not, you will need to route DHCP packets between the subnet and the MAAS-provided DHCP subnet. It is also possible to forward DHCP traffic from one VLAN to another using an external DHCP relay service.</p>
 <p>This documentation presupposes that MAAS-managed DHCP is used to enlist and commission machines.  Using an external DHCP server for enlistment and commissioning may work, but note that this is not supported. MAAS cannot manage an external DHCP server, nor can it keep leases synchronised when you return a machine to the pool.</p>
 <p>This article delves into these issues, offering guidance on setting up and managing your DHCP configuration.</p>
-<h4>Eleven questions you may have:</h4>
+<h4>Twelve questions you may have:</h4>
 <!-- deb-2-7-cli
 1. [What are reserved IP ranges?](concepts-and-terms.html#heading--ip-ranges)
 2. [What is post-commission configuration](commission-machines.html#heading--post-commission-configuration)
@@ -445,9 +445,9 @@
 7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
 9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns)
-
+10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
+11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
+12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
@@ -459,6 +459,10 @@
 6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
 7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
+9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
+10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
+11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
+12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
@@ -471,8 +475,9 @@
 7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
 9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns)
+10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
+11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
+12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
  deb-2-8-cli -->
 
 <!-- deb-2-8-ui
@@ -485,8 +490,9 @@
 7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
 9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns)
+10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
+11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
+12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
  deb-2-8-ui -->
 
 <!-- deb-2-9-cli
@@ -499,8 +505,9 @@
 7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
 9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns)
+10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
+11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
+12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
  deb-2-9-cli -->
 
 <!-- deb-2-9-ui
@@ -513,8 +520,9 @@
 7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
 9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns)
+10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
+11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
+12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
  deb-2-9-ui -->
 
 <!-- deb-3-0-cli
@@ -527,8 +535,9 @@
 7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
 9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns)
+10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
+11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
+12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
  deb-3-0-cli -->
 
 <ol>
@@ -541,8 +550,9 @@
 <li><a href="#heading--dhcp-relay">How and why should I use a DHCP relay?</a></li>
 <li><a href="#heading--dhcp-snippets">How and why should I customise MAAS with DHCP snippets?</a></li>
 <li><a href="#heading--create-an-a-or-aaaa-record-in-dns">How do I create an A or AAAA record in DNS?</a></li>
-<li><a href="cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns">How do I create an alias (CNAME) record in DNS?</a></li>
-<li><a href="cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns">How do I create a Mail Exchange pointer record in DNS?</a></li>
+<li><a href="#heading--create-an-alias-cname-record-in-dns">How do I create an alias (CNAME) record in DNS?</a></li>
+<li><a href="#heading--create-a-mail-exchange-pointer-record-in-dns">How do I create a Mail Exchange pointer record in DNS?</a></li>
+<li><a href="#heading--set-a-dns-forwarder">How do I set a DNS forwarder?</a></li>
 </ol>
 <!-- snap-2-7-cli
 1. [What are reserved IP ranges?](concepts-and-terms.html#heading--ip-ranges)
@@ -554,8 +564,9 @@
 7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
 9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns)
+10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
+11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
+12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
@@ -568,8 +579,9 @@
 7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
 9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns)
+10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
+11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
+12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
@@ -582,8 +594,9 @@
 7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
 9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns)
+10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
+11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
+12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
@@ -596,8 +609,9 @@
 7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
 9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns)
+10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
+11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
+12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
@@ -610,8 +624,9 @@
 7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
 9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns)
+10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
+11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
+12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
@@ -624,8 +639,9 @@
 7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
 9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns)
+10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
+11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
+12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
  snap-2-9-ui -->
 
 <!-- snap-3-0-cli
@@ -638,8 +654,9 @@
 7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
 9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns)
+10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
+11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
+12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
  snap-3-0-cli -->
 
 <!-- snap-3-0-ui
@@ -652,8 +669,9 @@
 7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
 8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
 9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](cli-advanced-tasks.html#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](cli-advanced-tasks.html#heading--create-a-mail-exchange-pointer-record-in-dns)
+10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
+11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
+12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
  snap-3-0-ui -->
 
 <p><a href="#heading--enabling-dhcp"><h2 id="heading--enabling-dhcp">Enabling DHCP</h2></a></p>
@@ -987,6 +1005,11 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap
 
 <p>For example, to set the domain.name managed by MAAS to have an MX record and that you own the domain:</p>
 <pre><code class="bash">maas $PROFILE dnsresource-records create fqdn=maas.io rrtype=mx rrdata='10 smtp.maas.io'
+</code></pre>
+
+<p><a href="#heading--set-a-dns-forwarder"><h2 id="heading--set-a-dns-forwarder">Set a DNS forwarder</h2></a></p>
+<p>To set a DNS forwarder:</p>
+<pre><code class="bash">maas $PROFILE maas set-config name=upstream_dns value=$MY_UPSTREAM_DNS
 </code></pre>
     </div>
   </body>

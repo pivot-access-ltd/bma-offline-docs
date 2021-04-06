@@ -449,7 +449,7 @@
 <p>MAAS manages its proxy. So although the active configuration, located in file <code>/var/lib/maas/maas-proxy.conf</code>, can be inspected, it is not to be hand-edited.</p>
 <p>You must install the proxy on the same host as the region controller (via the &lsquo;maas-proxy&rsquo; package).</p>
 <p>MAAS manages its proxy. So although the active configuration, located in file <code>/var/snap/maas/current/proxy</code>, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.</p>
-<p><a href="#heading--configure-proxy"><h2 id="heading--configure-proxy">Configure proxy</h2></a></p>
+<p><a href="#heading--configure-proxy"><h2 id="heading--configure-proxy">Configuring an external proxy</h2></a></p>
 <p>Enabling and disabling proxying, in general, is done via a boolean option (&lsquo;true&rsquo; or &lsquo;false&rsquo;). The following command will disable proxying completely:</p>
 <pre><code class="bash">maas $PROFILE maas set-config name=enable_http_proxy value=false
 </code></pre>
