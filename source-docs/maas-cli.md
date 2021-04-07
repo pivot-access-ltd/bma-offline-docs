@@ -99,12 +99,12 @@ You can create extra administrators in the same way. See [User accounts](/t/user
 
 To use the CLI you must first log in to the API server (region controller).
 
-You will need the API key that MAAS generated when creating your MAAS account. To obtain it, run this command on the region controller (i.e. wherever you installed the 'maas-region-controller' package):
+You will need the API key that MAAS generated when creating your MAAS account. To obtain it, run this command on the region controller:
 
 ``` bash
-sudo maas-region apikey --username=$PROFILE > $API_KEY_FILE
+sudo maas apikey --username=$PROFILE > $API_KEY_FILE
 ```
-
+ 
 [note]
 You can obtain a user's API key from the web interface. Click on 'username' in the top right corner, and select 'Account'.
 [/note]

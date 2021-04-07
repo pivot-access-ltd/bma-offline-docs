@@ -514,8 +514,8 @@ You can create extra administrators in the same way. See [User accounts](user-ac
 
 <p><a href="#heading--log-in-required"><h2 id="heading--log-in-required">Log in (required)</h2></a></p>
 <p>To use the CLI you must first log in to the API server (region controller).</p>
-<p>You will need the API key that MAAS generated when creating your MAAS account. To obtain it, run this command on the region controller (i.e. wherever you installed the &lsquo;maas-region-controller&rsquo; package):</p>
-<pre><code class="bash">sudo maas-region apikey --username=$PROFILE &gt; $API_KEY_FILE
+<p>You will need the API key that MAAS generated when creating your MAAS account. To obtain it, run this command on the region controller:</p>
+<pre><code class="bash">sudo maas apikey --username=$PROFILE &gt; $API_KEY_FILE
 </code></pre>
 
 <p><strong>NOTE:</strong> 
