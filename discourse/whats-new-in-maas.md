@@ -550,10 +550,10 @@ snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
 
 <h3>MAAS 3.0 BETA release notes</h3>
 
-We are happy to announce that MAAS 3.0 Beta 1 has been released. This release provides some new features, along with critical bug fixes.
+We are happy to announce that MAAS 3.0 Beta 2 has been released. This release provides a new feature, along with [critical bug fixes](#heading--maas-3-beta-bug-fixes).
 
 <!-- deb-3-0-ui deb-3-0-cli
-The Beta 1 can be installed by adding the `3.0-next` PPA:
+The Beta can be installed by adding the `3.0-next` PPA:
 
 ```
 sudo add-apt-repository ppa:maas/3.0-next
@@ -561,7 +561,7 @@ sudo apt update
 sudo apt install maas
 ```
 
-You can then either install MAAS 3.0 Beta1 fresh (recommended) with:
+You can then either install MAAS 3.0 Beta2 fresh (recommended) with:
 
 ```
 sudo apt-get -y install maas
@@ -577,7 +577,7 @@ At this point, you may proceed with a normal installation.
 
  deb-3-0-cli deb-3-0-ui -->
 
-The Beta 1 can be installed fresh (recommended) with:
+The Beta can be installed fresh (recommended) with:
 
 ```
 sudo snap install --channel=3.0/beta maas
@@ -591,7 +591,11 @@ NOTE that this is currently a BETA release, so there will be bugs, instabilities
 
 With the advent of MAAS 3.0, we are removing support for RSD pods.  Registered pods and their machines will be removed by MAAS upon upgrading to MAAS 3.0.
 
-<h4>New features in MAAS 3.0 Beta 1</h4>
+<h2>New feature in MAAS 3.0 Beta 2</h2>
+
+When deploying a machine through the API, it’s now possible to specify `register_vmhost=True` to have LXD configured on the machine and registered as a VM host in MAAS (similar to what happens with virsh if `install_kvm=True` is provided).
+
+<h2>New features in MAAS 3.0 Beta 1</h2>
 
 1. [PCI and USB devices are now modelled in MAAS](#heading--pci-usb-devices)
 2. [IBM Z DPM partition support](#heading--ibm-z-dpm)
@@ -601,51 +605,42 @@ With the advent of MAAS 3.0, we are removing support for RSD pods.  Registered p
 6. [Workload annotations](#heading--workload-annotations)
 7. [Fixed status bar](#heading--fixed-status-bar)
 
-<h2 id="heading--pci-usb-devices">PCI and USB devices are now modelled in MAAS</h2>
+<h3 id="heading--pci-usb-devices">PCI and USB devices are now modelled in MAAS</h3>
 
 MAAS 3.0 models all PCI and USB devices detected during commissioning:
 
 * Existing machines will have to be recommissioned to have PCI and USB devices modelled
-
 * PCI and USB devices are shown in the UI and on the API using the node-devices endpoint
-
 * Node devices may be deleted on the API only
 
 On the API using the allocate operation on the machines endpoint a machine may allocated by a device vendor_id, product_id, vendor_name, product_name, or commissioning_driver.
 
-<h2 id="heading--ibm-z-dpm">IBM Z DPM partition support</h2>
+<h3 id="heading--ibm-z-dpm">IBM Z DPM partition support</h3>
 
 IBM Z14 and above mainframe partitions are supported in MAAS 3.0.  Note that partitions must use HyperV sockets and properly-defined storage groups.  IBM Z DPM Partitions can be added as a chassis, which allows you to add all partitions in an HMC at once.
 
-<h2 id="heading--proxmox-support">Proxmox support</h2>
+<h3 id="heading--proxmox-support">Proxmox support</h3>
 
 MAAS 3.0 supports Proxmox as a power driver:
 
 * Only Proxmox VMs are supported
-
 * You may authenticate with Proxmox using a username and password or a username and API token
-
 * If an API token is used, it must be given permission to query, start and stop VMs.
-
 * Proxmox VMs can be added as a chassis; this allows you to add all VMs in Proxmox at once.
 
 Note that proxmox support has also been back-ported to MAAS 2.9
 
-<h2 id="heading--lxd-projects-support">LXD projects support</h2>
+<h3 id="heading--lxd-projects-support">LXD projects support</h3>
 
 MAAS 3.0 supports the use of LXD projects:
 
 * LXD VM hosts registered in MAAS are now tied to a specific LXD project which MAAS uses to manage VMs
-
 * MAAS doesn’t create or manage machines for VMs in other projects
-
 * MAAS creates the specified project when the VM host is registered, if it doesn't exist
-
 * All existing VMs in the specified project are commissioned on registration
-
 * Resource usage is reported at both project and global levels
 
-<h2 id="heading--pci-usb-device-tabs">PCI and USB device tabs in UI machine details</h2>
+<h3 id="heading--pci-usb-device-tabs">PCI and USB device tabs in UI machine details</h3>
 
 Tables for detected PCI and USB devices have been added to the machine details page for MAAS 3.0:
 
@@ -657,7 +652,7 @@ These tables include a new skeleton loading state while node devices are being f
 
 The user is prompted to commission the machine if no devices are detected.
 
-<h2 id="heading--workload-annotations">Workload annotations</h2>
+<h3 id="heading--workload-annotations">Workload annotations</h3>
 
 Workload annotations have been added to the machine summary page in MAAS 3.0.  These allow you to apply `owner_data` to a machine and make it visible while the machine is in allocated or deployed state:
 
@@ -665,8 +660,70 @@ Workload annotations have been added to the machine summary page in MAAS 3.0.  T
 
 This data is cleared once the machine state changes to something other than "allocated" or "deployed."  The machine list can be filtered by these workload annotations.  MAAS will warn you on the release page to remind you that workload annotations will be cleared upon releasing the machine.
 
-<h2 id="heading--fixed-status-bar">Fixed status bar</h2>
+<h3 id="heading--fixed-status-bar">Fixed status bar</h3>
 
 In MAAS 3.0, a fixed status bar has been added to the bottom of the screen, which will always display the MAAS name and version on the left.  The right side of the status bar is intended to show contextual data, depending on the UI panel currently displayed. For now, the only data shown is a “last commissioned” timestamp when the user is on a machine details page:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png"></a>
+
+
+<h2 id="heading--maas-3-beta-bug-fixes">MAAS 3.0 bug fixes</h2>
+
+MAAS 3.0 incorporates a large number of bug fixes, summarized in the sections below. Please feel free to validate these fixes at your convenience and give us feedback if anything doesn't seem to work as presented in the bug request.
+
+One particular bug, [#1916860](https://bugs.launchpad.net/maas/+bug/1916860), involves failures in the IPMI cipher suite in MAAS 2.9.2 and up, on the Lenovo x3650 M5 (and others).  This particular bug is a not a MAAS bug, but a firmware issue with the subject machines.  While the MAAS team can't fix this (hence the assignment of "Won't Fix"), the team did provide a easy [workaround](https://bugs.launchpad.net/maas/+bug/1916860/comments/27) which helps circumvent this issue.
+
+<h3 id="heading--maas-3-beta-2-bug-fixes">MAAS 3.0 Beta 2 bug fixes</h3>
+
+Here are the bugs that have been `Fix Released` in MAAS 3.0 Beta 2:
+
+| Number | Description |Importance|
+|:-----|:-----|:-----:|
+|[#1922107](https://bugs.launchpad.net/bugs/1922107)| Hugepages/pinning available for virsh and lack validation |High|
+|[#1922433](https://bugs.launchpad.net/bugs/1922433)| Machine resources path set incorrectly in rackd when using snap |High|
+
+<h3 id="heading--maas-3-beta-1-bug-fixes">MAAS 3.0 Beta 1 bug fixes</h3>
+
+Here are the bugs that have been `Fix Released` in MAAS 3.0 Beta 1:
+
+| Number | Description |Importance|
+|:-----|:-----|:-----:|
+|[#1896199](https://bugs.launchpad.net/maas/+bug/1896199) |API docs link is not offline|Critical|
+|[#1904245](https://bugs.launchpad.net/bugs/1904245)|MAAS Snap fails to build on PPC64 on Launchpad |Critical|
+|[#1912727](https://bugs.launchpad.net/bugs/1912727)|KVM Page Fails to load with error "An unexpected error has occurred, please try refreshing your browser window." |Critical|
+|[#1915869](https://bugs.launchpad.net/bugs/1915869)| maas snap cli renders SyntaxWarning in the stderr |Critical|
+|[#1916093](https://bugs.launchpad.net/bugs/1916093)|Unable to add more than 3 Promox VMs |Critical| 
+|[#1883824](https://bugs.launchpad.net/bugs/1883824)|Support LXD projects in power control |High| 
+|[#1884276](https://bugs.launchpad.net/bugs/1884276)|Terrible user experience adding existing LXD host |High| 
+|[#1902425](https://bugs.launchpad.net/bugs/1902425)|Failed to allocate the required AUTO IP addresses after 2 retries |High| 
+|[#1908087](https://bugs.launchpad.net/bugs/1908087)|Reverse DNS for non-maas RFC1918 zones fails inside maas |High| 
+|[#1908356](https://bugs.launchpad.net/bugs/1908356)|Owner data websocket methods are not working |High|
+|[#1908434](https://bugs.launchpad.net/bugs/1908434)|Can't delete LXD VM in offline state |High| 
+|[#1913323](https://bugs.launchpad.net/bugs/1913323)|/MAAS/docs/ leads to 404 page |High| 
+|[#1914588](https://bugs.launchpad.net/bugs/1914588)|Enabling debug from snap traceback |High| 
+|[#1915021](https://bugs.launchpad.net/bugs/1915021)|Mapping subnet doesn't work from the MAAS snap |High| 
+|[#1915022](https://bugs.launchpad.net/bugs/1915022)|The MAAS snap doesn't include nmap |High| 
+|[#1915715](https://bugs.launchpad.net/bugs/1915715)|LXD VM additional disks all show 10Gb size |High| 
+|[#1915970](https://bugs.launchpad.net/bugs/1915970)|Facebook Wedge BMC detection fails on non-x86 architectures |High| 
+|[#1918997](https://bugs.launchpad.net/bugs/1918997)|MAAS does not set snap proxy |High| 
+|[#1919000](https://bugs.launchpad.net/bugs/1919000)|Unable to connect MAAS to an LXD VM host |High| 
+|[#1887797](https://bugs.launchpad.net/bugs/1887797)|Impossible to delete zombie LXD VM |Medium| 
+|[#1894116](https://bugs.launchpad.net/bugs/1894116)|Machines can't be deployed after deselecting all archs in the "Ubuntu extra architectures" package repo |Medium| 
+|[#1897946](https://bugs.launchpad.net/bugs/1897946)|hi1620-based ARM Servers are shown as "Unknown model" |Medium| 
+|[#1906212](https://bugs.launchpad.net/bugs/1906212)|timeout in testing scripts ignores the days if set to greater than 24 hours |Medium| Hemanth Nakkina 
+|[#1911825](https://bugs.launchpad.net/bugs/1911825)|Unable to use FQDN as power_address |Medium| 
+|[#1914165](https://bugs.launchpad.net/bugs/1914165)|Proxmox does not allow custom port |Medium| 
+|[#1917652](https://bugs.launchpad.net/bugs/1917652)|30-maas-01-bmc-config failing on commissioning Cisco UCSC-C220-M4L |Medium| 
+|[#1335175](https://bugs.launchpad.net/bugs/1335175)|maas does not combine kernel_opts when nodes have multiple tags with kernel options |Low| 
+|[#1915359](https://bugs.launchpad.net/bugs/1915359)|make sampledata can't find machine-resources |Low| 
+|[#1916844](https://bugs.launchpad.net/bugs/1916844)|Removing a machine that is a vm host tells you to remove the "pod" |Low| 
+|[#1920019](https://bugs.launchpad.net/bugs/1920019)|maas_remote_syslog_compress is unnecessarily chatty |Low| 
+|[#1887558](https://bugs.launchpad.net/bugs/1887558)|Multipath JBOD storage devices are not shown via /dev/mapper but each path as a single device. |Wishlist| 
+|[#1901944](https://bugs.launchpad.net/bugs/1901944)|tags field in machine edit page overtakes other fields |Undecided| 
+|[#1909985](https://bugs.launchpad.net/bugs/1909985)|Add commission timestamp to machine websocket api |Undecided| 
+|[#1913464](https://bugs.launchpad.net/bugs/1913464)|Drop RSD pods UI |Undecided| 
+|[#1914590](https://bugs.launchpad.net/bugs/1914590)|Support composing LXD VMs with multiple disks in the UI |Undecided| 
+|[#1915970](https://bugs.launchpad.net/bugs/1915970)|Facebook Wedge BMC detection fails on non-x86 architectures |Undecided| 
+|[#1916073](https://bugs.launchpad.net/bugs/1916073)|MAAS should install qemu-efi-aarch64 on arm64 KVM pods |Undecided| 
+|[#1916317](https://bugs.launchpad.net/bugs/1916317)|UI is using API to request scripts with full content |Undecided| 
+|[#1919381](https://bugs.launchpad.net/bugs/1919381)|typo "veryiying" in info message in smartctl-validate |Undecided|
