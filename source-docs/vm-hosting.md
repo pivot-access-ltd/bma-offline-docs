@@ -199,7 +199,13 @@ VM hosts are particularly useful for Juju integration, allowing for dynamic allo
 5.   Track VM host storage pool usage and assign default storage pools
 6.   Create VMs on multiple networks, specified by space, subnet, VLAN, or IP address
 
+<!-- deb-3-0-ui snap-3-0-ui deb-3-0-cli snap-3-0-cli
+This section will lead you through the creation, usage, and management of VM hosts.
+ deb-3-0-ui snap-3-0-ui deb-3-0-cli snap-3-0-cli -->
+
+<!-- deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli 
 This section will lead you through the creation, usage, and management of VM hosts.  Note that, as LXD VM hosts are still in Beta, some screen terminology has not yet been changed to reflect "VM host" instead of "KVM."  You will still use the "KVM" tab on the top of the MAAS dashboard to reach the VM host functionality, and you may see buttons which refer to "Add KVM," for example, instead of "Add VM host."  Rest assured that the Beta LXD VM host functionality is fully available through these channels.
+ deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli -->
 
 <a href="#heading--what-is-a-vm-host"><h2 id="heading--what-is-a-vm-host">What is a VM host?</h2></a>
 
