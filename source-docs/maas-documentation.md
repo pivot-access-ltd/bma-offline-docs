@@ -1667,7 +1667,6 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/745/|/docs/language-details-contributing-to-maas-docs|
 |https://discourse.maas.io/t/-/746/|/docs/working-with-git-and-github|
 |https://discourse.maas.io/t/-/756/|/docs/install-from-iso|
-|https://discourse.maas.io/t/-/757/|/docs/install-with-lxd|
 |https://discourse.maas.io/t/-/779/|/docs/upgrading-maas|
 |https://discourse.maas.io/t/-/782/|/docs/web-ui|
 |https://discourse.maas.io/t/-/785#heading--network-tutorial|/docs/network-tutorial|
@@ -1699,6 +1698,7 @@ There are (at least) three ways you can contribute to MAAS:
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/install-with-lxd|/docs/snap/2.9/ui/vm-host-networking#heading--lxd-setup|
 |/docs/cli-tag-management|/docs/snap/2.9/cli/maas-tags|
 |/docs/cli-resource-pool-management|/docs/snap/2.9/cli/resource-pools|
 |/docs/cli-dhcp-snippet-management|/docs/snap/2.9/cli/managing-dhcp|
