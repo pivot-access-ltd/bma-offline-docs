@@ -6,10 +6,11 @@ Packages|[CLI](/t/creating-and-deleting-vms-deb-2-7-cli/2580) ~ [UI](/t/creating
 If you have already created a VM host, you will want to create and delete virtual machines (VMs); this article explains how to do so.
 
 
-#### Two questions you may have:
+#### Three questions you may have:
 
-1. [How do I add a VM?](#heading--add-vm-from-ui)
-2. [How do I delete a VM?](#heading--delete-a-machine)
+1. [How do LXD projects work?](https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview)
+2. [How do I add a VM?](#heading--add-vm-from-ui)
+3. [How do I delete a VM?](#heading--delete-a-machine)
 
 <a href="#heading--add-vm-from-ui"><h2 id="heading--add-vm-from-ui">Adding a VM from the Web UI</h2></a>
 
@@ -33,15 +34,16 @@ To delete a VM, delete it as you would any other MAAS machine. Select the desire
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 
-#### Seven questions you may have:
+#### Eight questions you may have:
 
 1. [How do I add a VM?](#heading--adding-a-vm-from-the-cli)
-2. [How do I set resources while adding a VM?](#heading--set-resources)
-3. [How do I set the architecture while adding a VM?](#heading--architecture)
-4. [How do I set storage while adding a VM?](#heading--storage)
-5. [How do I specify interfaces while adding a VM?](#heading--interfaces)
-6. [How do I find a VM host ID?](#heading--find-vm-host-ids)
-7. [How do I delete a VM?](#heading--delete-a-vm)
+2. [How do LXD projects work?](https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview)
+3. [How do I set resources while adding a VM?](#heading--set-resources)
+4. [How do I set the architecture while adding a VM?](#heading--architecture)
+5. [How do I set storage while adding a VM?](#heading--storage)
+6. [How do I specify interfaces while adding a VM?](#heading--interfaces)
+7. [How do I find a VM host ID?](#heading--find-vm-host-ids)
+8. [How do I delete a VM?](#heading--delete-a-vm)
 
 <a href="#heading--adding-a-vm-from-the-cli"><h2 id="heading--adding-a-vm-from-the-cli">Adding a VM from the CLI</h2></a>
 

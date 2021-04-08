@@ -197,7 +197,11 @@ VM hosts are particularly useful for Juju integration, allowing for dynamic allo
 5.   Track VM host storage pool usage and assign default storage pools
 6.   Create VMs on multiple networks, specified by space, subnet, VLAN, or IP address
 
+This section will lead you through the creation, usage, and management of VM hosts.
+
+<!-- deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli 
 This section will lead you through the creation, usage, and management of VM hosts.  Note that, as LXD VM hosts are still in Beta, some screen terminology has not yet been changed to reflect "VM host" instead of "KVM."  You will still use the "KVM" tab on the top of the MAAS dashboard to reach the VM host functionality, and you may see buttons which refer to "Add KVM," for example, instead of "Add VM host."  Rest assured that the Beta LXD VM host functionality is fully available through these channels.
+ deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli -->
 
 <a href="#heading--what-is-a-vm-host"><h2 id="heading--what-is-a-vm-host">What is a VM host?</h2></a>
 
@@ -698,7 +702,7 @@ Your interactive output should look something like the following. Note a few poi
 1. `Would you like to use LXD clustering? (yes/no) [default=no]: no` - MAAS does not support LXD clusters in this version.
 
 2. `Name of the storage back-end to use (btrfs, dir, lvm, zfs, ceph) [default=zfs]: dir` - Testing has primarily been with dir; other options should work, but less testing has been done, so use at your own risk.
-
+ 
 3. `Would you like to connect to a MAAS server? (yes/no) [default=no]: no` - When LXD is connected to MAAS containers or virtual machines created by LXD will be automatically added to MAAS as devices.  This feature should work, but has limited testing in this version.
 
 4. `Would you like to configure LXD to use an existing bridge or host interface? (yes/no) [default=no]: yes` - The bridge LXD creates is isolated and not managed by MAAS. If this bridge is used, you would be able to add the LXD VM host and compose virtual machines, but commissioning, deploying, and any other MAAS action which uses the network will fail -- so `yes` is the correct answer here.
