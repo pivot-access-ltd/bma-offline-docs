@@ -713,7 +713,7 @@ Your interactive output should look something like the following. Note a few poi
 1. `Would you like to use LXD clustering? (yes/no) [default=no]: no` - MAAS does not support LXD clusters in this version.
 
 2. `Name of the storage back-end to use (btrfs, dir, lvm, zfs, ceph) [default=zfs]: dir` - Testing has primarily been with dir; other options should work, but less testing has been done, so use at your own risk.
-
+ 
 3. `Would you like to connect to a MAAS server? (yes/no) [default=no]: no` - When LXD is connected to MAAS containers or virtual machines created by LXD will be automatically added to MAAS as devices.  This feature should work, but has limited testing in this version.
 
 4. `Would you like to configure LXD to use an existing bridge or host interface? (yes/no) [default=no]: yes` - The bridge LXD creates is isolated and not managed by MAAS. If this bridge is used, you would be able to add the LXD VM host and compose virtual machines, but commissioning, deploying, and any other MAAS action which uses the network will fail -- so `yes` is the correct answer here.
