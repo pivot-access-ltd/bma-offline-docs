@@ -363,7 +363,8 @@ There are (at least) three ways you can contribute to MAAS:
 ### [Introduction](/t/maas-documentation/25)
 
 - [About MAAS](/t/about-maas-snap-2-9-ui/2267)
-- [File an issue/feature request](https://bugs.launchpad.net/maas/+filebug)
+- [Report a bug](https://bugs.launchpad.net/maas/+filebug)
+- [Request a feature](https://discourse.maas.io)
 - [What's new in 2.9](/t/whats-new-in-maas-snap-2-9-ui/4297)
 - [Requirements](/t/maas-requirements-snap-2-9-ui/2879)
 - [Installation](/t/maas-installation-snap-2-9-ui/3323)
