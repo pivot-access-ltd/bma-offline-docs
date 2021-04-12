@@ -338,9 +338,9 @@ snap-2-9-ui -->
 There are four ways you can get support for MAAS:
 
 1. [Professional support](https://maas.io/contact-us)
-2. [Ask a question (external link)](http://askubuntu.com/questions/tagged/maas)
-3. [IRC (external link)](http://webchat.freenode.net/?channels=maas)
-4. [MAAS 2.5 (and earlier) documentation (external link)](https://old-docs.maas.io/2.5/en/)
+2. [Ask a question](http://askubuntu.com/questions/tagged/maas)
+3. [IRC](http://webchat.freenode.net/?channels=maas)
+4. [MAAS 2.5 (and earlier) documentation](https://old-docs.maas.io/2.5/en/)
 
 ---
 
@@ -349,5 +349,5 @@ There are four ways you can get support for MAAS:
 There are (at least) three ways you can contribute to MAAS:
 
 1. [Guide to contributing](/t/writing-guide-snap-2-9-ui/3263)
-2. [Push some code (external link)](https://launchpad.net/maas)
-3. [File an issue (external link)](https://bugs.launchpad.net/maas/+filebug)
+2. [Push some code](https://launchpad.net/maas)
+3. [File an issue](https://bugs.launchpad.net/maas/+filebug)

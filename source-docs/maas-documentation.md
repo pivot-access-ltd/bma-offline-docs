@@ -344,9 +344,9 @@ snap-3-0-ui -->
 There are four ways you can get support for MAAS:
 
 1. [Professional support](https://maas.io/contact-us)
-2. [Ask a question (external link)](http://askubuntu.com/questions/tagged/maas)
-3. [IRC (external link)](http://webchat.freenode.net/?channels=maas)
-4. [MAAS 2.5 (and earlier) documentation (external link)](https://old-docs.maas.io/2.5/en/)
+2. [Ask a question](http://askubuntu.com/questions/tagged/maas)
+3. [IRC](http://webchat.freenode.net/?channels=maas)
+4. [MAAS 2.5 (and earlier) documentation](https://old-docs.maas.io/2.5/en/)
 
 ---
 
@@ -355,20 +355,22 @@ There are four ways you can get support for MAAS:
 There are (at least) three ways you can contribute to MAAS:
 
 1. [Guide to contributing](/t/writing-guide-snap-2-9-ui/3263)
-2. [Push some code (external link)](https://launchpad.net/maas)
-3. [File an issue (external link)](https://bugs.launchpad.net/maas/+filebug)
+2. [Push some code](https://launchpad.net/maas)
+3. [File an issue](https://bugs.launchpad.net/maas/+filebug)
 
 ## Navigation
 
 ### [Introduction](/t/maas-documentation/25)
 
 - [About MAAS](/t/about-maas-snap-2-9-ui/2267)
-- ["Give me an example"](/t/give-me-an-example-of-maas-snap-2-9-ui/2651)
+- [File an issue/feature request](https://bugs.launchpad.net/maas/+filebug)
 - [What's new in 2.9](/t/whats-new-in-maas-snap-2-9-ui/4297)
 - [Requirements](/t/maas-requirements-snap-2-9-ui/2879)
 - [Installation](/t/maas-installation-snap-2-9-ui/3323)
 - [Configuration journey](/t/configuration-journey-snap-2-9-ui/2531)
 - [MAAS CLI](/t/maas-cli-snap-2-9-ui/2825)
+
+### [Examples](/t/give-me-an-example-of-maas-snap-2-9-ui/2651)
 
 ### [Controllers](/t/controllers-snap-2-9-ui/2723)
 
@@ -1842,7 +1844,8 @@ There are (at least) three ways you can contribute to MAAS:
 |/docs/manage-cli-kernels|/docs/cli-kernel-management|
 |/docs/manage-cli-resource-pools|docs/snap/2.9/cli/resource-pools|
 |/docs/manage-cli-tags|/docs/snap/2.9/cli/maas-tags|
-|/docs/manage-cli|/docs/maas-cli|
+|/docs/manage-cli|/docs/snap/2.9/cli/maas-cli|
+|/docs/maas-cli|/docs/snap/2.9/cli/maas-cli|
 |/docs/manage-ha-postgresql|/docs/snap/2.9/ui/postgresql-ha-hot-standby|
 |/docs/manage-ha|/docs/snap/2.9/ui/high-availability|
 |/docs/manage-kvm-create-vms|/docs/snap/2.9/ui/creating-and-deleting-vms|
