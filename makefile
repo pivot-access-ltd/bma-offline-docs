@@ -4575,7 +4575,7 @@ $(DISC)/request-a-feature.md: $(SRC)/request-a-feature.md
 	cd $(DISC) &&\
 	cp -p request-a-feature-4447.md request-a-feature.md
 	cd $(DISC) && rm request-a-feature-4447.md
- 
+
 $(DISC)/resource-pools.md: $(SRC)/resource-pools.md
 ## deb 2.7 cli
 	cp $(SRC)/resource-pools.md $(MODWD)/resource-pools-deb-2-7-cli-3084.md
