@@ -350,4 +350,5 @@ There are (at least) three ways you can contribute to MAAS:
 
 1. [Guide to contributing](/t/writing-guide-snap-2-9-ui/3263)
 2. [Push some code](https://launchpad.net/maas)
-3. [File an issue](https://bugs.launchpad.net/maas/+filebug)
+3. [File an issue](/t/report-a-bug/4446)
+4. [Request a feature](/t/request-a-feature/4447)

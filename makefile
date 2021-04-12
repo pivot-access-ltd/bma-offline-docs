@@ -4555,6 +4555,26 @@ $(DISC)/region-controllers.md: $(SRC)/region-controllers.md
 	cp -p region-controllers-snap-3-0-ui-4094.md region-controllers.md
 ## remove reference version
 	cd $(DISC) && rm region-controllers-snap-3-0-ui-4094.md
+
+$(DISC)/report-a-bug.md: $(SRC)/report-a-bug.md 
+	cp $(SRC)/report-a-bug.md $(MODWD)/report-a-bug-4446.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) report-a-bug-4446.md
+	cd $(DISC) &&\
+	xpub pull $(DISC) 4446 4446
+	cd $(DISC) &&\
+	cp -p report-a-bug-4446.md report-a-bug.md
+	cd $(DISC) && rm report-a-bug-4446.md
+
+$(DISC)/request-a-feature.md: $(SRC)/request-a-feature.md 
+	cp $(SRC)/request-a-feature.md $(MODWD)/request-a-feature-4447.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) request-a-feature-4447.md
+	cd $(DISC) &&\
+	xpub pull $(DISC) 4447 4447
+	cd $(DISC) &&\
+	cp -p request-a-feature-4447.md request-a-feature.md
+	cd $(DISC) && rm request-a-feature-4447.md
  
 $(DISC)/resource-pools.md: $(SRC)/resource-pools.md
 ## deb 2.7 cli
@@ -6059,4 +6079,20 @@ $(DISC)/zone-examples.md: $(SRC)/zone-examples.md
 	cd $(DISC) && rm zone-examples-snap-3-0-ui-4190.md
  
 
+
+# originals/report-a-bug-4446.md: source-docs/about-maas.md
+#	chmod 644 originals/*
+#	cp source-docs/about-maas.md report-a-bug-4446.md
+#	xpub pull discourse 4446 4446
+#	cp -p report-a-bug-4446.md originals
+#	rm report-a-bug-4446.md
+#	chmod 444 originals/*
+
+# originals/request-a-feature-4447.md: source-docs/about-maas.md
+#	chmod 644 originals/*
+#	cp source-docs/about-maas.md request-a-feature-4447.md
+#	xpub pull discourse 4447 4447
+#	cp -p request-a-feature-4447.md originals
+#	rm request-a-feature-4447.md
+#	chmod 444 originals/*
 

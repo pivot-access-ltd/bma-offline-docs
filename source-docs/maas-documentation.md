@@ -356,15 +356,16 @@ There are (at least) three ways you can contribute to MAAS:
 
 1. [Guide to contributing](/t/writing-guide-snap-2-9-ui/3263)
 2. [Push some code](https://launchpad.net/maas)
-3. [File an issue](https://bugs.launchpad.net/maas/+filebug)
+3. [File an issue](/t/report-a-bug/4446)
+4. [Request a feature](/t/request-a-feature/4447)
 
 ## Navigation
 
 ### [Introduction](/t/maas-documentation/25)
 
 - [About MAAS](/t/about-maas-snap-2-9-ui/2267)
-- [Report a bug](https://bugs.launchpad.net/maas/+filebug)
-- [Request a feature](https://discourse.maas.io)
+- [Report a bug](/t/report-a-bug/4446)
+- [Request a feature](/t/request-a-feature/4447)
 - [What's new in 2.9](/t/whats-new-in-maas-snap-2-9-ui/4297)
 - [Requirements](/t/maas-requirements-snap-2-9-ui/2879)
 - [Installation](/t/maas-installation-snap-2-9-ui/3323)
@@ -475,6 +476,8 @@ There are (at least) three ways you can contribute to MAAS:
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/report-a-bug/4446|/docs/report-a-bug|
+|https://discourse.maas.io/t/request-a-feature/4447|/docs/request-a-feature|
 |https://discourse.maas.io/t/-/832|/docs/cli-testing-scripts|
 |https://discourse.maas.io/t/-/1112|/docs/image-builder|
 |https://discourse.maas.io/t/-/1308|/docs/non-snap-maas-installs|
