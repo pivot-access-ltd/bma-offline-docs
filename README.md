@@ -35,7 +35,7 @@ The text between the comments only appears for the RAD version(s) listed in the 
    some text in between comments
  snap-2-9-cli snap-3-0-cli -->
 
-You need to check carefully to see if text is repeated in different comments.  Sometimes this is necessary because it's hard to make a contiguous paragraph work well with different comments, due to the spacing and kerning issues.  Hence you may have to change the same text in more than one place.  My plan for the next RAD update should completely eliminate this problem, but I haven't gotten there yet.
+You need to check carefully to see if text is repeated in different comments.  Sometimes this is necessary because it's impossible to make a contiguous paragraph work well with different comments, due to the fact that markdown honors all linefeeds.  Hence you may have to change the same text in more than one place.  My plan for the next RAD update should completely eliminate this problem, but I haven't gotten there yet.
 
 # how docs are generated
 

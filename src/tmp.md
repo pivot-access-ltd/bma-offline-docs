@@ -4,9 +4,7 @@ Snap|[CLI](/t/maas-rsyslog-files-snap-2-7-cli/3430) ~ [UI](/t/maas-rsyslog-files
 Packages|[CLI](/t/maas-rsyslog-files-deb-2-7-cli/3436) ~ [UI](/t/maas-rsyslog-files-deb-2-7-ui/3437)|[CLI](/t/maas-rsyslog-files-deb-2-8-cli/3438) ~ [UI](/t/maas-rsyslog-files-deb-2-8-ui/3439)|[CLI](/t/maas-rsyslog-files-deb-2-9-cli/3441) ~ [UI](/t/maas-rsyslog-files-deb-2-9-ui/3440)|[CLI](/t/maas-rsyslog-files-deb-3-0-cli/4019) ~ [UI](/t/maas-rsyslog-files-deb-3-0-ui/4020)|
 
 The MAAS rsyslog files allow you to monitor what's going on within individual MAAS machines. They are located at
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli
 `/var/snap/maas/common/log/rsyslog/`. 
-snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli -->
 <!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli
 `/var/log/maas/rsyslog`. 
 deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
