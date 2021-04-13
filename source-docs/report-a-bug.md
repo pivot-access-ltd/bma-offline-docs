@@ -191,14 +191,14 @@ On snap, these files are located as follows:
 * /var/snap/maas/common/log/maas.log
 * /var/snap/maas/common/log/regiond.log
 * /var/snap/maas/common/log/rackd.log
-* /var/snap/maas/common/log/rsyslog/<machine-name>/<relevant-date>/messages
+* /var/snap/maas/common/log/rsyslog/$MACHINE_NAME/$RELEVANT_DATE/messages
 
 If you're using packages, you'll find the files in these locations:
 
 * /var/log/maas/maas.log
 * /var/log/maas/regiond.log
 * /var/log/maas/rackd.log
-* /var/log/maas/rsyslog/<machine-name>/<relevant-date>/messages
+* /var/log/maas/rsyslog/$MACHINE_NAME/$RELEVANT_DATE/messages
 
 <h4>How to compress these logfiles into a tar.gz file for efficient upload</h4>
 
