@@ -1,9 +1,0 @@
-adding-a-vm-host.md:For example, to create an RSD VM host, enter:
-adding-a-vm-host.md:For example, to create an RSD VM host, enter:
-historical-release-notes-835.md:The MAAS team is excited to announce the support for the Intel Rack Scale Design (RSD). Intel Rack Scale Design (RSD) is a hardware architecture that allows for the dynamic composition of physical systems from a pool of available hardware resources.
-historical-release-notes-835.md:MAAS, as a cloud-like, scale-out bare-metal provisioning system, will leverage the use of Intel RSD to compose (create) and provision systems. With the support for RSD, MAAS introduces the ability to manually or dynamically compose (create) new machines from an available pool of resources. It will allow administrators to request machines with specific resources on demand and be able to deploy their workloads on them.
-historical-release-notes-835.md:-   Physical systems with Intel RSD
-historical-release-notes-835.md:<h3 id="heading--maas-pods---intel-rsd">MAAS Pods - Intel RSD</h3>
-historical-release-notes-835.md:MAAS now supports Intel Rack Scale Design (RSD). The supported version of Intel RSD is with the Intel OEM PODM/PSME software version 1.2.5, which is APIv1 and based on Redfish.
-historical-release-notes-835.md:MAAS Intel RSD support includes the following features:
-whats-new-in-maas.md:With the advent of MAAS 3.0, we are removing support for RSD pods.  Registered pods and their machines will be removed by MAAS upon upgrading to MAAS 3.0.

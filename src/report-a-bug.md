@@ -1,4 +1,4 @@
-MAAS bugs are reported via launchpad. We'll provide the link in a moment, but first, some necessary prerequisites.
+MAAS bugs are reported via Launchpad. We'll provide the link in a moment, but first, some necessary prerequisites.
 
 Filing a good bug report makes all the difference in how quickly we can triage and address your problem.  This brief how-to guide will walk you through the steps of filing a bug.  Some of these steps are necessary preparation, and the better you prepare before you file, the better the bug report.
 
@@ -6,7 +6,7 @@ Filing a good bug report makes all the difference in how quickly we can triage a
 Note that in the examples that follow, a `>>` symbol indicates the newest line added to the draft report.  It isn't necessary for you to type these characters.
 [/note]
 
-<h2>Step 1: Understand what's required</h2>
+<a href="#heading--understand-rqmts"><h2 id="heading--understand-rqmts">Step 1: Understand what's required</h2>
 
 You need to gather or prepare some information before you file your bug report.  Here is the short list of pre-filing tasks that will smooth the process:
 
@@ -20,17 +20,17 @@ You need to gather or prepare some information before you file your bug report. 
 
 Open a text editor with a new file, so you can capture and refine this information in advance.
 
-<h3 id="heading--concise-summary">Prepare a concise summary</h3>
+<a href="#heading--concise-summary"><h3 id="heading--concise-summary">Prepare a concise summary</h3></a>
 
 Keep your bug summary short and concise.  We recommend something of the form:
 
-```
+```text
 <something specific happens> with MAAS <involved feature(s)>
 ```
 
 or
 
-```
+```text
 MAAS <behaves some unexpected way> when I <try to use a particular feature>
 ```
 
@@ -42,42 +42,22 @@ For example:
 
 Add this information to your text file.
 
-<h3 id="heading--version-and-build">Identify your version and build</h3>
+<a href="#heading--version-and-build"><h3 id="heading--version-and-build">Identify your version and build</h3></a>
 
 We need to know the version and build (and packaging format) that you're running.
 
 <h4>If you're using a snap</h4>
 
-If you're using a snap, execute `snap info maas` at the command line, which will return some lines like this:
+If you're using a snap, execute `snap listmaas` at the command line, which will return some lines like this:
 
-```
-...
- 2.9/stable:       2.9.2-9164-g.ac176b5c4        2021-02-17 (11851) 150MB -
-  2.9/candidate:    2.9.2-9165-g.c3e7848d1        2021-03-22 (12555) 149MB -
-  2.9/beta:         ↑                                                      
-  2.9/edge:         2.9.3~alpha1-9185-g.626d8924c 2021-03-30 (12691) 158MB -
-  latest/stable:    –                                                      
-  latest/candidate: –                                                      
-  latest/beta:      –                                                      
-  latest/edge:      3.0.0~beta2-9831-g.db02ee5b4  2021-04-12 (13314) 137MB -
-  3.0/stable:       –                                                      
-  3.0/candidate:    –                                                      
-  3.0/beta:         3.0.0~beta2-9796-g.2182ab55f  2021-04-07 (13107) 158MB -
-  3.0/edge:         3.0.0~beta2-9831-g.db02ee5b4  2021-04-12 (13313) 137MB -
-  2.8/stable:       2.8.4-8597-g.05313b458        2021-03-03 (12118) 138MB -
-  2.8/candidate:    2.8.5-8600-g.efb54078a        2021-03-29 (12665) 135MB -
-  2.8/beta:         ↑                                                      
-  2.8/edge:         2.8.5-8600-g.efb54078a        2021-03-29 (12665) 135MB -
-  2.7/stable:       2.7.3-8290-g.ebe2b9884        2020-08-21  (8724) 144MB -
-  2.7/candidate:    ↑                                                      
-  2.7/beta:         ↑                                                      
-  2.7/edge:         2.7.3-8297-g.68a767295        2021-02-16 (11806) 143MB -
-installed:          3.0.0~beta2-9796-g.2182ab55f             (13107) 158MB -
+```text
+Name  Version                       Rev    Tracking     Publisher   Notes
+maas  3.0.0~beta2-9796-g.2182ab55f  13292  latest/edge  canonical✓  -
 ```
 
-We want the know the first field after the "installed:" keyword; in this case, that's `3.0.0~beta2-9796-g.2182ab55f`. Add a line like this to your text file:
+We want the know the `Version` field; in this case, that's `3.0.0~beta2-9796-g.2182ab55f`. Add a line like this to your text file:
 
-```
+```text
 MAAS fails to PXE boot IBM LPAR machine as VM host
 
 >>I'm using snap version/build 3.0.0~beta2-9796-g.2182ab55f.
@@ -87,15 +67,15 @@ MAAS fails to PXE boot IBM LPAR machine as VM host
 
 If you're using a deb, execute `apt list maas` at the command line, and enter whatever it returns into your text file, as in the snap example above, being sure to specify:
 
-```
+```text
 I'm using debian package version/build...
 ```
 
-<h3 id="heading--which-interface">Using CLI, UI, or API?</h3>
+<a href="#heading--which-interface"><h3 id="heading--which-interface">Using CLI, UI, or API?</h3></a>
 
 Next, you'll need to specify which interface you're using, and generally what command(s) you were attempting.  For example:
 
-```
+```text
 MAAS fails to PXE boot IBM LPAR machine as VM host
 
 I'm using snap version/build 3.0.0~beta2-9796-g.2182ab55f.
@@ -104,11 +84,11 @@ I'm using snap version/build 3.0.0~beta2-9796-g.2182ab55f.
 using the MAAS UI.
 ```
 
-<h3 id="heading--what-happens">Explain what happens</h3>
+<a href="#heading--what-happens"><h3 id="heading--what-happens">Explain what happens</h3></a>
 
 Being as concise and specific as you can, explain what seemed to go wrong.  For example:
 
-```
+```text
 MAAS fails to PXE boot IBM LPAR machine as VM host
 
 I'm using snap version/build 3.0.0~beta2-9796-g.2182ab55f.
@@ -123,11 +103,11 @@ the commissioning process timed out trying to PXE boot the machine.  Looking
 at the machine, it had indeed been powered on, but nothing happened after that.
 ```
 
-<h3 id="heading--reproducing-your-issue">Explain how to reproduce your issue</h3>
+<a href="#heading--reproducing-your-issue"><h3 id="heading--reproducing-your-issue">Explain how to reproduce your issue</h3></a>
 
 In addition to the explanation above, you should create a step-by-step list of what you did to reproduce the problem.  For example:
 
-```
+```text
 MAAS fails to PXE boot IBM LPAR machine as VM host
 
 I'm using snap version/build 3.0.0~beta2-9796-g.2182ab55f.
@@ -173,11 +153,11 @@ stage, as normal.
 14. Examine the logfiles (see attached logfiles).
 ```
 
-<h3 id="heading--screenshots">Take relevant screenshots</h3>
+<a href="#heading--screenshots"><h3 id="heading--screenshots">Take relevant screenshots</h3></a>
 
 If you think it will help -- especially when using the UI -- try and capture screenshots of any unexpected results or ambiguous actions.  Your goal isn't to document your experience in pictures, but to provide a visual reference where verbal descriptions fall short.  Name these so you can sync them with your explanation (e.g., "screenshot-1"). You'll attach them later on in the process.
 
-<h3 id="heading--logfiles">Locate and capture logfiles</h3>
+<a href="#heading--logfiles"><h3 id="heading--logfiles">Locate and capture logfiles</h3></a>
 
 If at all possible, capture at least the following logfiles, for the time period surrounding your error situation:
 
@@ -200,17 +180,17 @@ If you're using packages, you'll find the files in these locations:
 * /var/log/maas/rackd.log
 * /var/log/maas/rsyslog/$MACHINE_NAME/$RELEVANT_DATE/messages
 
-<h4>How to compress these logfiles into a tar.gz file for efficient upload</h4>
+<a href="#heading--compress-logfiles"><h4>How to compress these logfiles into a tar.gz file for efficient upload</h4></a>
 
 The following animation shows a recommended process for creating a `tar.gz` file.  The mistakes are intentional, so that you'll know what to do if you forget an option now and then, or forget to use `sudo` in a step or two:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/c/c8e05533fc4f076774d26e592fe02418bc70ecf7.gif" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c8e05533fc4f076774d26e592fe02418bc70ecf7.gif"></a>
 
-<h2>Step 2: Filing your bug</h2>
+<a href="#heading--filing-bug"><h2 id="heading--filing-bug">Step 2: Filing your bug</h2></a>
 
 Have your prepared text file handy.  In our example, it looks like this:
 
-```
+```text
 MAAS fails to PXE boot IBM LPAR machine as VM host
 
 I'm using snap version/build 3.0.0~beta2-9796-g.2182ab55f.

@@ -47,7 +47,7 @@ DISC := discourse
 #
 # source docs
 #
-SRC := source-docs
+SRC := src
 #
 # templates
 #
@@ -145,6 +145,8 @@ HTARG += $(HTML)/proxy.html
 HTARG += $(HTML)/python-api-client.html
 HTARG += $(HTML)/rack-controllers.html
 HTARG += $(HTML)/region-controllers.html
+HTARG += $(HTML)/report-a-bug.html
+HTARG += $(HTML)/request-a-feature.html
 HTARG += $(HTML)/resource-pools.html
 HTARG += $(HTML)/select-and-import-images.html
 HTARG += $(HTML)/storage.html
@@ -233,6 +235,8 @@ DTARG += $(DISC)/proxy.md
 DTARG += $(DISC)/python-api-client.md
 DTARG += $(DISC)/rack-controllers.md
 DTARG += $(DISC)/region-controllers.md
+DTARG += $(DISC)/report-a-bug.html
+DTARG += $(DISC)/request-a-feature.html
 DTARG += $(DISC)/resource-pools.md
 DTARG += $(DISC)/select-and-import-images.md
 DTARG += $(DISC)/storage.md
@@ -6078,21 +6082,3 @@ $(DISC)/zone-examples.md: $(SRC)/zone-examples.md
 ## remove reference version
 	cd $(DISC) && rm zone-examples-snap-3-0-ui-4190.md
  
-
-
-# originals/report-a-bug-4446.md: source-docs/about-maas.md
-#	chmod 644 originals/*
-#	cp source-docs/about-maas.md report-a-bug-4446.md
-#	xpub pull discourse 4446 4446
-#	cp -p report-a-bug-4446.md originals
-#	rm report-a-bug-4446.md
-#	chmod 444 originals/*
-
-# originals/request-a-feature-4447.md: source-docs/about-maas.md
-#	chmod 644 originals/*
-#	cp source-docs/about-maas.md request-a-feature-4447.md
-#	xpub pull discourse 4447 4447
-#	cp -p request-a-feature-4447.md originals
-#	rm request-a-feature-4447.md
-#	chmod 444 originals/*
-
