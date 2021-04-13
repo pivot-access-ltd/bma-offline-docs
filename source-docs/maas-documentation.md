@@ -363,15 +363,12 @@ There are (at least) three ways you can contribute to MAAS:
 ### [Introduction](/t/maas-documentation/25)
 
 - [About MAAS](/t/about-maas-snap-2-9-ui/2267)
+- ["Give me an example of MAAS"](/t/give-me-an-example-of-maas-snap-2-9-ui/2651)
 - [What's new in 2.9](/t/whats-new-in-maas-snap-2-9-ui/4297)
-- [Requirements](/t/maas-requirements-snap-2-9-ui/2879)
 - [Installation](/t/maas-installation-snap-2-9-ui/3323)
-- [Configuration journey](/t/configuration-journey-snap-2-9-ui/2531)
+- [MAAS CLI](/t/maas-cli-snap-2-9-ui/2825)
 - [Report a bug](/t/report-a-bug/4446)
 - [Request a feature](/t/request-a-feature/4447)
-- [MAAS CLI](/t/maas-cli-snap-2-9-ui/2825)
-
-### [Examples](/t/give-me-an-example-of-maas-snap-2-9-ui/2651)
 
 ### [Controllers](/t/controllers-snap-2-9-ui/2723)
 
