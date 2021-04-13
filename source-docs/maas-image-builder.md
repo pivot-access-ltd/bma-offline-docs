@@ -3,11 +3,18 @@
 Snap|[CLI](/t/maas-image-builder-snap-2-7-cli/2850) ~ [UI](/t/maas-image-builder-snap-2-7-ui/2851)|[CLI](/t/maas-image-builder-snap-2-8-cli/2852) ~ [UI](/t/maas-image-builder-snap-2-8-ui/2853)|[CLI](/t/maas-image-builder-snap-2-9-cli/2854) ~ [UI](/t/maas-image-builder-snap-2-9-ui/2855)|[CLI](/t/maas-image-builder-snap-3-0-cli/3997) ~ [UI](/t/maas-image-builder-snap-3-0-ui/3998)|
 Packages|[CLI](/t/maas-image-builder-deb-2-7-cli/2856) ~ [UI](/t/maas-image-builder-deb-2-7-ui/2857)|[CLI](/t/maas-image-builder-deb-2-8-cli/2858) ~ [UI](/t/maas-image-builder-deb-2-8-ui/2859)|[CLI](/t/maas-image-builder-deb-2-9-cli/2860) ~ [UI](/t/maas-image-builder-deb-2-9-ui/2861)|[CLI](/t/maas-image-builder-deb-3-0-cli/3999) ~ [UI](/t/maas-image-builder-deb-3-0-ui/4000)|
 
-MAAS Image Builder is an alternative to [packer](https://www.packer.io/) for creating MAAS images.  
+MAAS Image Builder is an alternative to [Packer](https://www.packer.io/) for creating MAAS images.
 
 [note]
 In order to use MAAS Image Builder, you must purchase [Ubuntu Advantage for Infrastructure](https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool).
 [/note]
+
+<!-- awaiting review
+[note]
+In order to use MAAS Image Builder, you must purchase [Ubuntu Advantage for Infrastructure](https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool).
+That said, you may want to try Packer first, before committing to MAAS Image Builder, as Packer is free and open-source. You should note, though, that Packer is offered by another firm.  Canonical has no special channel to request features or bug fixes, and no insight into their release and maintenance schedules.  Packer is not rigorously tested with all images used by MAAS, and may not work with all images deployed by MAAS users.  We feel it's important to help you make an informed decision on this -- but we encourage you to try Packer first, with the caveat that Canonical can't make any particular guarantees about whether or not it will serve your particular needs.
+[/note]
+ -->
 
 With the MAAS Image Builder, you can do five key operations:
 

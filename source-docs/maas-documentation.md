@@ -341,12 +341,11 @@ snap-3-0-ui -->
 
 <h2 id="heading--getting-support">Getting support</h2>
 
-There are four ways you can get support for MAAS:
+There are three ways you can get support for MAAS:
 
 1. [Professional support](https://maas.io/contact-us)
-2. [Ask a question](http://askubuntu.com/questions/tagged/maas)
-3. [IRC](http://webchat.freenode.net/?channels=maas)
-4. [MAAS 2.5 (and earlier) documentation](https://old-docs.maas.io/2.5/en/)
+2. [Post a question on the MAAS discourse forum](https://discourse.maas.io)
+3. [Ask a question on askubuntu.com](http://askubuntu.com/questions/tagged/maas)
 
 ---
 

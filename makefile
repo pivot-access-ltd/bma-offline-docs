@@ -2955,7 +2955,7 @@ $(DISC)/maas-image-builder.md: $(SRC)/maas-image-builder.md
 	cd $(MODWD) &&\
 	xpub push $(DISC) -t deb-2-7-ui maas-image-builder-deb-2-7-ui-2857.md
 ## deb 2.8 cli
-	cp $(SRC)/maas-image-builder.md $(MODWD)/maas-image-builder-deb-2-7-cli-2858.md
+	cp $(SRC)/maas-image-builder.md $(MODWD)/maas-image-builder-deb-2-8-cli-2858.md
 	cd $(MODWD) &&\
 	xpub push $(DISC) -t deb-2-7-cli maas-image-builder-deb-2-8-cli-2858.md
 ## deb 2.8 ui
