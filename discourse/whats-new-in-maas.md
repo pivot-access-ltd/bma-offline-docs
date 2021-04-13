@@ -416,6 +416,26 @@ snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui -->
 <!-- snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui
 <h2>MAAS 2.8 release notes</h2>
 
+<h3>MAAS 2.8.5 released</h3>
+
+MAAS 2.8.5 has been released, replacing the 2.8/stable channel in snap and the ppa:maas/2.9.  You can update your 2.8 release to 2.8.5 with the command:
+
+```
+snap refresh --channel=2.8/stable
+```
+
+or by using the aforementioned PPA. 2.8.5 has two high-priority bug fixes, including a fix for [failing to allocate AUTO IP addresses](https://bugs.launchpad.net/maas/+bug/1902425) and a carry-along fix for [unconfigured interfaces when doing complex VM composing](https://bugs.launchpad.net/maas/+bug/1830690). No other changes have been made to MAAS with this release.
+
+<h3>MAAS 2.8.4 released</h3>
+
+MAAS 2.8.4 has been released, replacing the 2.8/stable channel in snap and the ppa:maas/2.8. You can update your 2.8 release to 2.8.4 with the command:
+
+```
+snap refresh --channel=2.8/stable
+```
+
+or by using the aforementioned PPA. 2.8.4 has a [single bug fix](https://bugs.launchpad.net/maas/+bug/1917372). No other changes have been made to MAAS with this release.
+
 <h3>MAAS 2.8.3 released</h3>
 
 MAAS 2.8.3 has been released, replacing the `2.8/stable` channel in snap and the [ppa:maas/2.8](https://launchpad.net/~maas/+archive/ubuntu/2.8).  You can update your 2.8 release to 2.8.3 with the command:

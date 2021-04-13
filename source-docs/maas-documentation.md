@@ -1334,9 +1334,6 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/3327|/docs/deb/2.8/ui/installation|
 |https://discourse.maas.io/t/-/3328|/docs/deb/2.9/cli/installation|
 |https://discourse.maas.io/t/-/3329|/docs/deb/2.9/ui/installation|
-|https://discourse.maas.io/t/-/3334|/docs/2.8/release-notes|
-|https://discourse.maas.io/t/-/3335|/docs/2.7/release-notes|
-|https://discourse.maas.io/t/-/3336|/docs/2.9/release-notes|
 |https://discourse.maas.io/t/-/3382|/docs/snap/2.7/cli/event-logs|
 |https://discourse.maas.io/t/-/3383|/docs/snap/2.7/ui/event-logs|
 |https://discourse.maas.io/t/-/3384|/docs/snap/2.8/cli/event-logs|
@@ -1712,11 +1709,12 @@ There are (at least) three ways you can contribute to MAAS:
 |/docs/install-from-packages|/docs/deb/2.9/ui/installation|
 |/docs/commissioning-and-hardware-testing-scripts|/docs/snap/2.9/ui/commissioning-and-hardware-testing-scripts|
 |/docs/tags|/docs/snap/2.9/ui/maas-tags|
-|/docs/whats-new-in-2-7|/docs/2.7/release-notes|
-|/docs/maas-2-7-release-notes|/docs/2.7/release-notes|
-|/docs/maas-2-8-release-notes|/docs/2.8/release-notes|
-|/docs/maas-2-9-release-notes|/docs/2.9/release-notes|
-|/docs/release-notes|/docs/2.9/release-notes|
+|/docs/whats-new-in-2-7||/docs/snap/2.7/ui/whats-new-in-maas|
+|/docs/2.7/release-notes|/docs/snap/2.7/ui/whats-new-in-maas|
+|/docs/2.8/release-notes|/docs/snap/2.8/ui/whats-new-in-maas|
+|/docs/2.9/release-notes|/docs/snap/2.9/ui/whats-new-in-maas|
+|/docs/3.0/release-notes|/docs/snap/3.0/ui/whats-new-in-maas|
+|/docs/release-notes|/docs/snap/2.9/ui/whats-new-in-maas|
 |/docs/network-discovery|/docs/snap/2.9/ui/network-discovery|
 |/docs/network-testing|/docs/snap/2.9/ui/network-testing|
 |/docs/package-repositories|/docs/deb/2.9/ui/package-repositories|
