@@ -455,7 +455,7 @@ There are (at least) three ways you can contribute to MAAS:
 
 - [Getting help](/t/getting-help/838)
 - [Tips, tricks, and traps](/t/tips-tricks-and-traps-snap-2-9-ui/3155)
-- [Non-snap MAAS installs](/t/non-snap-maas-installs/1308)
+
 - [MAAS 2.5 (and earlier) documentation](https://old-docs.maas.io/2.5/en/)
 - [Upgrading MAAS](/t/upgrading-maas/779)
   - [Upgrade from 2.3 to 2.4](/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777)
@@ -476,7 +476,6 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/request-a-feature/4447|/docs/request-a-feature|
 |https://discourse.maas.io/t/-/832|/docs/cli-testing-scripts|
 |https://discourse.maas.io/t/-/1112|/docs/image-builder|
-|https://discourse.maas.io/t/-/1308|/docs/non-snap-maas-installs|
 |https://discourse.maas.io/t/-/1479|/docs/test-logs|
 |https://discourse.maas.io/t/-/2218/|/docs/cli-cookbook|
 |https://discourse.maas.io/t/-/4300|/docs/snap/2.7/cli/whats-new-in-maas|
@@ -1697,6 +1696,7 @@ There are (at least) three ways you can contribute to MAAS:
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/non-snap-maas-installs|/docs/snap/2.9/ui/installation|
 |/docs/install-with-lxd|/docs/snap/2.9/ui/vm-host-networking#heading--lxd-setup|
 |/docs/cli-tag-management|/docs/snap/2.9/cli/maas-tags|
 |/docs/cli-resource-pool-management|/docs/snap/2.9/cli/resource-pools|
