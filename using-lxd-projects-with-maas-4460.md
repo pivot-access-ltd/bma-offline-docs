@@ -2,14 +2,14 @@ If you're using LXD virtual machines to meet your MAAS needs, there's no doubt y
 
 This page provides a well-rounded look at projects from four perspectives:
 
-* [LXD project use cases and examples for MAAS](#heading--projects-explanation)
-* [LXD projects tutorial](#heading--projects-tutorial)
-* [How to use LXD projects with MAAS](#heading--projects-how-to)
-* [LXD+MAAS projects reference guide](#heading--projects-tech-ref)
+* [Can you explain LXD projects with MAAS?](#heading--projects-explanation)
+* [Can you teach me how to use LXD projects?](#heading--projects-tutorial)
+* [How can I use LXD projects with MAAS?](#heading--projects-how-to)
+* [Where can I find relevant, detailed, reference material?](#heading--projects-tech-ref)
 
 These four major sections should help you quickly get up to speed on LXD projects in MAAS..
 
-<a href="#heading--projects-explanation"><h2 id="heading--projects-explanation">LXD project use case and examples for MAAS</h2></a>
+<a href="#heading--projects-explanation"><h2 id="heading--projects-explanation">Can you explain LXD projects with MAAS?</h2></a>
 
 #### Four questions you may have about LXD projects, in general:
 
@@ -24,9 +24,9 @@ These four major sections should help you quickly get up to speed on LXD project
 
 <a href="#heading--projects-big-picture")<h3 id="heading--projects-alternatives">What are some alternatives to LXD projects in MAAS?</h3></a>
 
-<a href="#heading--projects-justification")<h3 id="heading--projects-justification">The purposes for LXD projects with MAAS</h3></a>
+<a href="#heading--projects-justification")<h3 id="heading--projects-justification">Why did we implement LXD projects with MAAS?</h3></a>
 
-<a href="#heading--projects-tutorial"><h2 id="heading--projects-tutorial">Why did we implement LXD projects with MAAS?</h2></a>
+<a href="#heading--projects-tutorial"><h2 id="heading--projects-tutorial">Can you teach me how to use LXD projects?</h2></a>
 
 #### Five avenues for learning about LXD projects:
 
@@ -46,6 +46,8 @@ These four major sections should help you quickly get up to speed on LXD project
 
 <a href="#heading--projects-step-5-all-machines")<h3 id="heading--projects-step-5-all-machines">How can I do project-like things with all MAAS machines?</h3></a>
 
-<a href="#heading--projects-how-to"><h2 id="heading--projects-how-to">LXD project use case and examples for MAAS</h2></a>
+<a href="#heading--projects-how-to"><h2 id="heading--projects-how-to">How can I use LXD projects with MAAS?</h2></a>
 
-<a href="#heading--projects-tech-ref"><h2 id="heading--projects-tech-ref">LXD project use case and examples for MAAS</h2></a>
+#### {N} procedures for using LXD projects with MAAS:
+
+<a href="#heading--projects-tech-ref"><h2 id="heading--projects-tech-ref">Where can I find relevant, detailed, reference material?</h2></a>

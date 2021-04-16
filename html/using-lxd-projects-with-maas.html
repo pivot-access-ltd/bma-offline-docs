@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  UI-only
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="cli/using-lxd-projects-with-maas.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="../maas-documentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-me-an-example-of-maas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-new-in-maas.html">
+	    What&rsquo;s new in 3.0
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-requirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-journey.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-communication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-controllers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-controllers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-availability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-machines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-machines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-testing.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-testing.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-and-hardware-testing-scripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-tags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-machine-setup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-boot-options.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-pools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-vmfs-datastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-kernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-and-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-image-mirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-images.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-management.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-ranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-services.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-discovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-addressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-tls-encryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-stp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-zones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-host-networking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-a-vm-host.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-host-storage-pools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-and-deleting-vms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-metrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-your-maas-installation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-accounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-search.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-and-terms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-and-terms.html#heading--network-tutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-cli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-kernel-management.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-image-management.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-interface-management.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-advanced-tasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-composable-hardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-help.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-tricks-and-traps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-docs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-new-in-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-guide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>Using lxd projects with MAAS</h1><p>LXD and MAAS are separate products, and it&rsquo;s useful to allow them to interact as equals, covering a much wider range of use cases.  To allow each of them to follow their own operational models, but still allow them to work together, we&rsquo;ve taken advantage of LXD projects.  This page provides a well-rounded look at projects &ndash; and how they&rsquo;re used with MAAS &ndash; from four perspectives:</p>
+<ul>
+<li><a href="#heading--projects-explanation">Can you explain LXD projects with MAAS?</a></li>
+<li><a href="#heading--projects-tutorial">Can you teach me how to use LXD projects?</a></li>
+<li><a href="#heading--projects-how-to">What are the best practices for using LXD projects with MAAS?</a></li>
+<li><a href="#heading--projects-tech-ref">Where can I find relevant, detailed, reference material?</a></li>
+</ul>
+<p>These four major sections should help you quickly get up to speed on the way that projects couple LXD and MAAS, and how to use this linkage to your advantage.</p>
+<p><a href="#heading--projects-explanation"><h2 id="heading--projects-explanation">Can you explain how LXD projects work with MAAS?</h2></a></p>
+<p>It may be beneficial to understand how LXD projects fit into the overall MAAS ecosystem.  LXD projects are not intended to be MAAS projects; they are only intended to limit which LXD containers and VMs are available to MAAS.  Managing machines in projects or groups &ndash; within MAAS &ndash; is the function of <a href="links">resource pools</a>.  This section will help you understand the distinction and rationale behind our interaction with LXD projects in MAAS.</p>
+<h4>Four questions you may have about LXD projects, in general:</h4>
+<ul>
+<li><a href="#heading--projects-big-picture">What are LXD projects?</a></li>
+<li><a href="#heading--projects-history">How did we get here?</a></li>
+<li><a href="#heading--projects-alternatives">What are some alternatives to LXD projects in MAAS?</a></li>
+<li><a href="#heading--projects-justification">Why did we implement LXD projects with MAAS?</a></li>
+</ul>
+<p><a href="#heading--projects-big-picture"><h3 id="heading--projects-big-picture">What are LXD projects?</h3></a></p>
+<p><a href="https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview">LXD projects</a> are a feature of the <a href="https://ubuntu.com/server/docs/containers-lxd">LXD lightweight container hypervisor</a> &ndash; a next-generation container manager which makes containers as easy to manage as virtual machines.  With LXD, you can create lots of containers, providing different services across many different use cases.  As a result of this flexibility, it can become confusing to keep track of exactly which containers are providing what services to answer which use case.</p>
+<p>To help with this potential confusion, LXD provides a &ldquo;projects&rdquo; feature, which allows you to group one or more containers together into related projects.  These projects can be manipulated and managed with the same <code>lxc</code> tool used to manage the containers and virtual machines themselves.</p>
+<p>Since MAAS makes use of LXD as a VM host, it&rsquo;s useful to be able to manipulate and manage projects not only through MAAS, but also directly through LXD.  In fact, to properly scope MAAS access to your LXD resources, it&rsquo;s essential that you understand how to use LXD projects in some detail.</p>
+<p><a href="#heading--projects-history"><h3 id="heading--projects-history">How did we get here?</h3></a></p>
+<p>Prior versions of MAAS implemented LXD VM hosts, but did so in a strongly-coupled way; that is, MAAS essentially took control of the VMs, disallowing or overriding some direct LXD controls.  In a sense, MAAS became the owner, rather than simply a separate program, communicating interdependently with LXD to accomplish user purposes.</p>
+<p>This was less than ideal.  For example, MAAS would discover all running LXD VMs and immediatly commission them, essentially performing a &ldquo;clean install&rdquo; and wiping out their contents.  This behavior isn&rsquo;t suitable when MAAS is connected to a deployed LXD with VMs already running services that may not have been targeted for enlistment by MAAS.</p>
+<p>With the release of MAAS 3.0 version, MAAS now becomes a LXD tenant, rather than an owner.</p>
+<p><a href="#heading--maas-control-at-project-level"><h4 id="heading--maas-control-at-project-level">MAAS now controls VMs at a project level</h4></a></p>
+<p>Essentially, MAAS still commissions any VMs it discovers within a VM host, but the scope of the discovery is now limited to a single project.  That project can contain any subset of the existing VMs, from zero to all of them.  Any VM that&rsquo;s already in a project assigned to MAAS will still be re-commissioned, which is the normal behavior of MAAS upon network discovery.</p>
+<p>Here are the criteria which drove this decision:</p>
+<ul>
+<li>It should be possible for an adminstrator to select which project(s) MAAS manages, and thus which machines will be enlisted and commissioned.</li>
+<li>It should be possible for MAAS to create and self-assign a new (empty) project, so that the user can compose new VMs within LXD from within the MAAS interface.</li>
+<li>No per-project features should be enabled by default in MAAS-created projects.</li>
+<li>The project must be explicitly specified when creating the LXD VM host.</li>
+<li>When a LXD VM host is added, only the existing VMs assigned to the selected project (if any) are commissioned, and VMs in non-MAAS projects are not affected in any way.</li>
+<li>When a LXD VM host is deleted, the default behavior should be for MAAS to leave existing VMs, rather than automatically deleting them; VMs in non-MAAS projects are not affected in any way.</li>
+<li>MAAS will not create VMs in projects that it doesn&rsquo;t own.</li>
+<li>When a VM is composed in MAAS, it&rsquo;s created in the target LXD project.</li>
+</ul>
+<p>In addition, a MAAS administrator should be able to:</p>
+<ul>
+<li>refresh information about a specific LXD VM host, and receive correct, up-to-date, and timely status.</li>
+<li>explicitly specify connections between networks and VM interfaces.</li>
+<li>deploy a machine directly as an LXD VM host, connected to MAAS from the outset.</li>
+</ul>
+<p>These criteria were fully met in the MAAS LXD tenant implementation released as part of MAAS 3.0.</p>
+<p><a href="#heading--projects-big-picture"><h3 id="heading--projects-alternatives">What are some alternatives to LXD projects in MAAS?</h3></a></p>
+<p>You can see from the discussion above that LXD projects were used primarily to cordon off some LXD VMs from MAAS, to avoid them from being enlisted and commissioned by MAAS (and thus, essentially, destroyed, from an operational perspective).  These LXD project features provide some limited capabilities to group machines. Because LXD projects only deal with LXD VMs and VM hosts, they are not a complete or comprehensive set of project tools.  MAAS already has those machine grouping capabilities in the form of <a href="LINKS">resource pools</a>.</p>
+<p>We realized, though, as we were working with LXD projects, that we could vastly improve the documentation for resource pools in the area of projects and project management.  You&rsquo;ll find significant new material in the <a href="LINKS">resource pools</a> section of the doc.  We also realized that it would be helpful to have &ldquo;real-time tags&rdquo; for machines, that is, annotations that persist only while a machine is allocated or deployed.  These new &ldquo;tags&rdquo; are known as <a href="LINK">workload annoations</a>, and they have also been given a thorough treatment &ndash; and their own page in the left-hand navigation.</p>
+<p><a href="#heading--projects-justification"><h3 id="heading--projects-justification">Why did we implement LXD projects with MAAS?</h3></a></p>
+<p>As you can infer from some of the discussion above, MAAS and LXD are separate products.  It&rsquo;s beneficial for them to interact, but not if one product cannot be controlled and managed independently of the other.  The combination of MAAS and LXD can cover a much broader set of use cases between them if they act as independent tools.  While the most loosely-coupled model would have MAAS selecting individual VMs, that model isn&rsquo;t compatible with how MAAS works with other networks and devices, so we chose to implement projects as a way to section off LXD VMs for normal use by MAAS.</p>
+<p><a href="#heading--projects-tutorial"><h2 id="heading--projects-tutorial">Can you teach me how to use LXD projects?</h2></a></p>
+<p>A good understanding of LXD projects is essential for those using LXD VM hosts, especially if you plan to include non-MAAS-controlled VMs in your LXD instance.  Normally, we wouldn&rsquo;t revisit instructions <a href="https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview">found elsewhere</a>, but because the discussion flows quickly and naturally into MAAS-related usage, it seemed prudent to give a light overview of some basic feature information.</p>
+<h4>Five avenues for learning about LXD projects:</h4>
+<ul>
+<li><a href="#heading--projects-step-1-lxd-loney">How do I use LXD projects with LXD by itself?</a></li>
+<li><a href="#heading--projects-step-2-lxd-and-maas">How do I create and use LXD projects with MAAS?</a></li>
+<li><a href="#heading--projects-step-3-lxd-management-maas">How do I manage LXD projects with MAAS?</a></li>
+<li><a href="#heading--projects-step-4-finesse-lxd-maas">How do I finesse LXD projects when used with MAAS?</a></li>
+<li><a href="#heading--projects-step-5-all-machines">How can I do project-like things with all MAAS machines?</a></li>
+</ul>
+<p>These sections are arranged as tutorials, rather than simple, step-by-step how-to guides.  If you&rsquo;re looking for more concise procedures, see the <a href="#heading--projects-how-to">best practices</a> section later in this document.</p>
+<p><a href="#heading--projects-step-1-lxd-loney"><h3 id="heading--projects-step-1-lxd-loney">How do I use LXD projects with LXD by itself?</h3></a></p>
+<p>Even without considering MAAS, there are a number of steps you can take to create and manage projects in LXD, directly from the command line.  In this section, we&rsquo;ll cover the following basic activities:</p>
+<ul>
+<li><a href="#heading--projects-s1-list">How do I list projects?</a></li>
+<li><a href="#heading--projects-s1-create">How do I create an LXD project?</a></li>
+<li><a href="#heading--projects-s1-delete">How do I delete a project?</a></li>
+<li><a href="#heading--projects-s1-rename">How do I rename a project?</a></li>
+<li><a href="#heading--projects-s1-switch">How do I switch from one project to another?</a></li>
+<li><a href="#heading--projects-s1-resources">How do I get a summary of resource allocations for my projects?</a></li>
+<li><a href="#heading--projects-s1-options">How do I show project options?</a></li>
+</ul>
+<p>We won&rsquo;t cover viewing and editing project configurations, and we won&rsquo;t address theory or give overly detailed explanations.  If you need any of that information, you should consult the <a href="https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview">LXD project documentation</a> or the <a href="https://linuxcontainers.org/lxd/">Ubuntu LXD documentation</a>.</p>
+<p><a href="#heading--projects-s1-list"><h4 id="heading--projects-s1-list">How do I list LXD projects?</h4></a></p>
+<p>Before you try to manipulate projects, it&rsquo;s useful to understand how to list them, so that you can check yoru results as you go.  If you&rsquo;ve successfully <a href="https://linuxcontainers.org/lxd/getting-started-cli/">installed and initialized lxd</a>, you should be able to list projects.  A basic project list can be obtained with the following command:</p>
+<pre><code class="text">lxd project list
+</code></pre>
+
+<p>You should get a listing something like this:</p>
+<pre><code class="text">+---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+|        NAME         | IMAGES | PROFILES | STORAGE VOLUMES | NETWORKS |       DESCRIPTION       | USED BY |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| default (current)   | YES    | YES      | YES             | YES      | Default LXD project     | 7       |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| pg_basebackup-tests | NO     | YES      | NO              | NO       | Project managed by MAAS | 16      |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+</code></pre>
+
+<p>Note that this particular instantiation of LXD has two projects: the default project (which generally always exists in LXD), and a project called <code>pg_basebackup-tests</code> which is already managed by MAAS.</p>
+<p>There is a column labeled <code>USED BY</code>, which tabulates the number of entities contained within the project. There isn&rsquo;t a project-related command to get a list of the containers and VMs within a project.  Instead, you use the LXC command <code>lxc list</code>:</p>
+<pre><code class="text">lxc list
+</code></pre>
+
+<p>which yields something like the following tabulated listing:</p>
+<pre><code class="text">+-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+|      NAME       |  STATE  | IPV4 |                    IPV6                     |      TYPE       | SNAPSHOTS |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+| trusty-drake    | STOPPED |      |                                             | VIRTUAL-MACHINE | 0         |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+| upward-stallion | RUNNING |      | fd42:ec:5a53:59d2:216:3eff:febf:7fa7 (eth0) | CONTAINER       | 0         |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+| witty-lizard    | STOPPED |      |                                             | VIRTUAL-MACHINE | 0         |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+</code></pre>
+
+<p>How do you know which project you&rsquo;re listing?  The most reliable way is to first list projects and see which one is marked <code>(current)</code>, like this:</p>
+<pre><code class="text">lxc project list
+</code></pre>
+
+<p>As you see in the sample output, the currently visible and accessible project is listed as <code>(current)</code> in the project listing:</p>
+<pre><code class="text">+---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+|        NAME         | IMAGES | PROFILES | STORAGE VOLUMES | NETWORKS |       DESCRIPTION       | USED BY |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| default (current)   | YES    | YES      | YES             | YES      | Default LXD project     | 7       |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| pg_basebackup-tests | NO     | YES      | NO              | NO       | Project managed by MAAS | 16      |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+</code></pre>
+
+<p>We&rsquo;ll show you how to switch to a different project further along in this tutorial.</p>
+<p><a href="#heading--projects-s1-create"><h4 id="heading--projects-s1-create">How do I create a LXD project?</h4></a></p>
+<p>Suppose that you&rsquo;re about to create a MAAS VM host, and you want a specific project named &ldquo;maas-vm-host-1&rdquo; for this particular situation.  You can create that project with the following command:</p>
+<pre><code class="text">stormrider@wintermute:~$ lxc project create maas-vm-host-1
+Project maas-vm-host-1 created
+</code></pre>
+
+<p>When you check your work with <code>lxc project list</code>, you&rsquo;ll see that LXD did not automatically switch to the new project:</p>
+<pre><code class="text">+---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+|        NAME         | IMAGES | PROFILES | STORAGE VOLUMES | NETWORKS |       DESCRIPTION       | USED BY |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| default (current)   | YES    | YES      | YES             | YES      | Default LXD project     | 7       |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| maas-vm-host-1      | YES    | YES      | YES             | NO       |                         | 1       |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| pg_basebackup-tests | NO     | YES      | NO              | NO       | Project managed by MAAS | 16      |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+</code></pre>
+
+<p>The <code>lxc</code> tool generally does only what you ask, nothing more.  </p>
+<p><a href="#heading--projects-s1-delete"><h4 id="heading--projects-s1-delete">How do I delete a LXD project?</h4></a></p>
+<p>Now, suppose that you decide you don&rsquo;t need this project yet.  No worries: you can easily delete it like this:</p>
+<pre><code class="text">stormrider@wintermute:~$ lxc project delete maas-vm-host-1
+Project maas-vm-host-1 deleted
+</code></pre>
+
+<p>You can check that it was successfully deleted with the <code>lxc project list</code> command:</p>
+<pre><code class="text">+---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+|        NAME         | IMAGES | PROFILES | STORAGE VOLUMES | NETWORKS |       DESCRIPTION       | USED BY |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| default (current)   | YES    | YES      | YES             | YES      | Default LXD project     | 7       |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| pg_basebackup-tests | NO     | YES      | NO              | NO       | Project managed by MAAS | 16      |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+</code></pre>
+
+<p><a href="#heading--projects-s1-rename"><h4 id="heading--projects-s1-rename">How do I rename a LXD project?</h4></a></p>
+<p>On the other hand, maybe you didn&rsquo;t need to actually delete that project, just change the name to <code>maas-vm-host-001</code>, which is what you really wanted in the first place.  Starting with your original project name of <code>maas-vm-host-1</code>:</p>
+<pre><code class="text">+---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+|        NAME         | IMAGES | PROFILES | STORAGE VOLUMES | NETWORKS |       DESCRIPTION       | USED BY |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| default (current)   | YES    | YES      | YES             | YES      | Default LXD project     | 7       |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| maas-vm-host-1      | YES    | YES      | YES             | NO       |                         | 1       |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| pg_basebackup-tests | NO     | YES      | NO              | NO       | Project managed by MAAS | 16      |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+</code></pre>
+
+<p>you can quickly and easily change the project name like this:</p>
+<pre><code class="text">stormrider@wintermute:~$ lxc project rename maas-vm-host-1 maas-vm-host-001
+Project maas-vm-host-1 renamed to maas-vm-host-001
+stormrider@wintermute:~$ lxc project list
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+|        NAME         | IMAGES | PROFILES | STORAGE VOLUMES | NETWORKS |       DESCRIPTION       | USED BY |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| default (current)   | YES    | YES      | YES             | YES      | Default LXD project     | 7       |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| maas-vm-host-001    | YES    | YES      | YES             | NO       |                         | 1       |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| pg_basebackup-tests | NO     | YES      | NO              | NO       | Project managed by MAAS | 16      |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+</code></pre>
+
+<p>From now on, we&rsquo;ll be combining command output with the command invocation, most of the time.</p>
+<p><a href="#heading--projects-s1-switch"><h4 id="heading--projects-s1-switch">How do I switch LXD projects?</h4></a></p>
+<p>You can choose which LXD project is currently visible and accessible, that is, you can choose which project will be acted on by most of the other project commands.  Only the project marked <code>(current)</code> in the project listing:</p>
+<pre><code class="text">stormrider@wintermute:~$ lxc project list
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+|        NAME         | IMAGES | PROFILES | STORAGE VOLUMES | NETWORKS |       DESCRIPTION       | USED BY |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| default (current)   | YES    | YES      | YES             | YES      | Default LXD project     | 7       |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| maas-vm-host-001    | YES    | YES      | YES             | NO       |                         | 1       |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| pg_basebackup-tests | NO     | YES      | NO              | NO       | Project managed by MAAS | 16      |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+</code></pre>
+
+<p>can be manipulated, for the most part, with the obvious exceptions of command that take project names (like &ldquo;create,&rdquo; &ldquo;delete,&rdquo; and so forth).  For example, using <code>lxc list</code> to enumerate the names of containers and VMs limits its scope to the current project:</p>
+<pre><code class="text">stormrider@wintermute:~$ lxc list
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+|      NAME       |  STATE  | IPV4 |                    IPV6                     |      TYPE       | SNAPSHOTS |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+| trusty-drake    | STOPPED |      |                                             | VIRTUAL-MACHINE | 0         |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+| upward-stallion | RUNNING |      | fd42:ec:5a53:59d2:216:3eff:febf:7fa7 (eth0) | CONTAINER       | 0         |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+| witty-lizard    | STOPPED |      |                                             | VIRTUAL-MACHINE | 0         |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+</code></pre>
+
+<p>Suppose I want to know what all those &ldquo;USE BY&rdquo; things are in that <code>pg_basebackup-tests</code> project?  Well, the most straightforward way to get that list is to first switch projects, then repeat the list command, like this:</p>
+<pre><code class="text">stormrider@wintermute:~$ lxc list
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+|      NAME       |  STATE  | IPV4 |                    IPV6                     |      TYPE       | SNAPSHOTS |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+| trusty-drake    | STOPPED |      |                                             | VIRTUAL-MACHINE | 0         |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+| upward-stallion | RUNNING |      | fd42:ec:5a53:59d2:216:3eff:febf:7fa7 (eth0) | CONTAINER       | 0         |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+| witty-lizard    | STOPPED |      |                                             | VIRTUAL-MACHINE | 0         |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+</code></pre>
+
+<p>You can see in the above listing that we&rsquo;ve switched to the &ldquo;&hellip;-tests&rdquo; project.  Now when we do a container list, we&rsquo;ll see a different set:</p>
+<pre><code class="text">stormrider@wintermute:~$ lxc list
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+|      NAME       |  STATE  | IPV4 |                    IPV6                     |      TYPE       | SNAPSHOTS |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+| trusty-drake    | STOPPED |      |                                             | VIRTUAL-MACHINE | 0         |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+| upward-stallion | RUNNING |      | fd42:ec:5a53:59d2:216:3eff:febf:7fa7 (eth0) | CONTAINER       | 0         |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+| witty-lizard    | STOPPED |      |                                             | VIRTUAL-MACHINE | 0         |
++-----------------+---------+------+---------------------------------------------+-----------------+-----------+
+</code></pre>
+
+<p>It&rsquo;s good practice to always switch projects carefully, so you&rsquo;re not operating in some other project and creating chaos by accident.</p>
+<p><a href="#heading--projects-s1-resource"><h4 id="heading--projects-s1-resource">How do I get a summary of LXD project resources?</h4></a></p>
+<p>We said that <code>lxc</code> commands operate on the current project most of the time.  We gave that caveat because of commands like <code>lxc project info</code>, which requires a project name to get any usable output.  For example, if you just type <code>lxc project info</code>, you&rsquo;ll just get some &ldquo;help&rdquo; output:</p>
+<pre><code class="text">stormrider@wintermute:~$ lxc project info
+Description:
+  Get a summary of resource allocations
+
+Usage:
+  lxc project info [&lt;remote&gt;:]&lt;project&gt; &lt;key&gt; [flags]
+
+Flags:
+      --format   Format (csv|json|table|yaml) (default &quot;table&quot;)
+
+Global Flags:
+      --debug            Show all debug messages
+      --force-local      Force using the local unix socket
+  -h, --help             Print help
+      --project string   Override the source project
+  -q, --quiet            Don't show progress information
+  -v, --verbose          Show all information messages
+      --version          Print version number
+</code></pre>
+
+<p>You can see from the help listing that a project name is required.  Let&rsquo;s try that again with a fairly large project:</p>
+<pre><code class="text">stormrider@wintermute:~$ lxc project info pg_basebackup-tests
++------------------+-----------+----------+
+|     RESOURCE     |   LIMIT   |  USAGE   |
++------------------+-----------+----------+
+| CONTAINERS       | UNLIMITED | 0        |
++------------------+-----------+----------+
+| CPU              | UNLIMITED | 15       |
++------------------+-----------+----------+
+| DISK             | UNLIMITED | 120.00GB |
++------------------+-----------+----------+
+| INSTANCES        | UNLIMITED | 15       |
++------------------+-----------+----------+
+| MEMORY           | UNLIMITED | 32.21GB  |
++------------------+-----------+----------+
+| NETWORKS         | UNLIMITED | 0        |
++------------------+-----------+----------+
+| PROCESSES        | UNLIMITED | 0        |
++------------------+-----------+----------+
+| VIRTUAL-MACHINES | UNLIMITED | 15       |
++------------------+-----------+----------+
+</code></pre>
+
+<p>Here we see that the <code>pg_basebackup-tests</code> file has no containers, 15 VMs, 120GB of disk space used, etc.  You can do this for any project, even if it&rsquo;s not the current project, so from where we are here (in the <code>pg_basebackup-tests</code> project), we can still check resources in the <code>default</code> project:</p>
+<pre><code class="text">+------------------+-----------+---------+
+|     RESOURCE     |   LIMIT   |  USAGE  |
++------------------+-----------+---------+
+| CONTAINERS       | UNLIMITED | 1       |
++------------------+-----------+---------+
+| CPU              | UNLIMITED | 2       |
++------------------+-----------+---------+
+| DISK             | UNLIMITED | 16.00GB |
++------------------+-----------+---------+
+| INSTANCES        | UNLIMITED | 3       |
++------------------+-----------+---------+
+| MEMORY           | UNLIMITED | 4.29GB  |
++------------------+-----------+---------+
+| NETWORKS         | UNLIMITED | 2       |
++------------------+-----------+---------+
+| PROCESSES        | UNLIMITED | 0       |
++------------------+-----------+---------+
+| VIRTUAL-MACHINES | UNLIMITED | 2       |
++------------------+-----------+---------+
+</code></pre>
+
+<p>Note that <code>lxc project info</code> requires a project name.  As mentioned earlier, typing the command without a project name just gives you a help message, not the stats for the default or current projects.</p>
+<p><a href="#heading--projects-s1-optionste"><h4 id="heading--projects-s1-options">How do I show LXD project options?</h4></a></p>
+<p>You&rsquo;ll remember that the &ldquo;USED BY&rdquo; column seemed to list more entities than there were containers or VMs.  For example, the <code>default</code> project is &ldquo;USED BY&rdquo; seven entities, but only shows three containers or VMs:</p>
+<pre><code class="text">stormrider@wintermute:~$ lxc project list
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+|        NAME         | IMAGES | PROFILES | STORAGE VOLUMES | NETWORKS |       DESCRIPTION       | USED BY |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| default (current)   | YES    | YES      | YES             | YES      | Default LXD project     | 7       |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| maas-vm-host-001    | YES    | YES      | YES             | NO       |                         | 1       |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+| pg_basebackup-tests | NO     | YES      | NO              | NO       | Project managed by MAAS | 16      |
++---------------------+--------+----------+-----------------+----------+-------------------------+---------+
+</code></pre>
+
+<p>You can make more sense of the &ldquo;USED BY&rdquo; column, and get a lot more information about your project, by using the <code>lxc project show</code> command:</p>
+<pre><code class="text">stormrider@wintermute:~$ lxc project show default
+config:
+  features.images: &quot;true&quot;
+  features.networks: &quot;true&quot;
+  features.profiles: &quot;true&quot;
+  features.storage.volumes: &quot;true&quot;
+description: Default LXD project
+name: default
+used_by:
+- /1.0/images/9a30ffb2faeea61cce6012c63071a1f1504a76e1dbbe03e575cc313170fdaf43
+- /1.0/instances/trusty-drake
+- /1.0/instances/upward-stallion
+- /1.0/instances/witty-lizard
+- /1.0/networks/lxdbr0
+- /1.0/networks/lxdbr1
+- /1.0/profiles/default
+</code></pre>
+
+<p>Here you&rsquo;ll see several categories of information, notably as list of entities that are using this project.  For example, there are three VMs/containers, two networks, one image, and the default profile.</p>
+<p>What&rsquo;s really interesting, though, is that the <code>pg_basebackup-tests</code> project is only used by 16 entities &ndash; but there are 15 VMs in that project.  What&rsquo;s that discrepancy about?  Well, we can find out by showing the options for that project:</p>
+<pre><code class="text">stormrider@wintermute:~$ lxc project show options pg_basebackup-tests
+Description:
+  Show project options
+
+Usage:
+  lxc project show [&lt;remote&gt;:]&lt;project&gt; [flags]
+
+Global Flags:
+      --debug            Show all debug messages
+      --force-local      Force using the local unix socket
+  -h, --help             Print help
+      --project string   Override the source project
+  -q, --quiet            Don't show progress information
+  -v, --verbose          Show all information messages
+      --version          Print version number
+Error: Invalid number of arguments
+</code></pre>
+
+<p>Hmm, that&rsquo;s weird.  The project name is right, but it&rsquo;s giving an error message.  That&rsquo;s because we used dashes in the project name, and the shell is trying to pick off everything after the first dash as an option to <code>lxc project show maas</code>.  To get around this, we&rsquo;d need to put the name in quotes, like this:</p>
+<pre><code class="text">stormrider@wintermute:~$ lxc project show &quot;pg_basebackup-tests&quot;
+config:
+  features.images: &quot;false&quot;
+  features.profiles: &quot;true&quot;
+  features.storage.volumes: &quot;false&quot;
+description: Project managed by MAAS
+name: pg_basebackup-tests
+used_by:
+- /1.0/instances/able-camel?project=pg_basebackup-tests
+- /1.0/instances/alert-newt?project=pg_basebackup-tests
+- /1.0/instances/casual-swan?project=pg_basebackup-tests
+- /1.0/instances/exotic-grouse?project=pg_basebackup-tests
+- /1.0/instances/flying-vervet?project=pg_basebackup-tests
+- /1.0/instances/helped-thrush?project=pg_basebackup-tests
+- /1.0/instances/main-mite?project=pg_basebackup-tests
+- /1.0/instances/nearby-camel?project=pg_basebackup-tests
+- /1.0/instances/noble-cod?project=pg_basebackup-tests
+- /1.0/instances/poetic-parrot?project=pg_basebackup-tests
+- /1.0/instances/prime-wombat?project=pg_basebackup-tests
+- /1.0/instances/proud-raptor?project=pg_basebackup-tests
+- /1.0/instances/rapid-mule?project=pg_basebackup-tests
+- /1.0/instances/ready-mite?project=pg_basebackup-tests
+- /1.0/instances/smooth-quagga?project=pg_basebackup-tests
+- /1.0/profiles/default?project=pg_basebackup-tests
+</code></pre>
+
+<p>Here you can see that the non-default project contains only a default profile for itself, and the 15 VMs added there.  The other entities aren&rsquo;t needed here, or can be accessed in the <code>default</code> project if required.</p>
+<p><a href="#heading--projects-step-2-lxd-and-maas"><h3 id="heading--projects-step-2-lxd-and-maas">How do I create and use LXD projects with MAAS?</h3></a></p>
+<p><a href="#heading--projects-step-3-lxd-management-maas"><h3 id="heading--projects-step-3-lxd-management-maas">How do I manage LXD projects with MAAS?</h3></a></p>
+<p><a href="#heading--projects-step-4-finesse-lxd-maas"><h3 id="heading--projects-step-4-finesse-lxd-maas">How do I finesse LXD projects when used with MAAS?</h3></a></p>
+<p><a href="#heading--projects-step-5-all-machines"><h3 id="heading--projects-step-5-all-machines">How can I do project-like things with all MAAS machines?</h3></a></p>
+<p><a href="#heading--projects-how-to"><h2 id="heading--projects-how-to">What are the best practices for using LXD projects with MAAS?</h2></a></p>
+<h4>{N} procedures for using LXD projects with MAAS:</h4>
+<p><a href="#heading--projects-tech-ref"><h2 id="heading--projects-tech-ref">Where can I find relevant, detailed, reference material?</h2></a></p>
+    </div>
+  </body>
+</html>

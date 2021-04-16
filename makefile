@@ -157,6 +157,7 @@ HTARG += $(HTML)/troubleshooting.html
 HTARG += $(HTML)/ubuntu-kernels.html
 HTARG += $(HTML)/user-accounts.html
 HTARG += $(HTML)/using-image-streams.html
+HTARG += $(HTML)/using-lxd-projects-with-maas.html
 HTARG += $(HTML)/using-maas-in-an-air-gapped-environment.html
 HTARG += $(HTML)/using-rbac-with-maas.html
 HTARG += $(HTML)/vm-hosting.html
@@ -235,8 +236,8 @@ DTARG += $(DISC)/proxy.md
 DTARG += $(DISC)/python-api-client.md
 DTARG += $(DISC)/rack-controllers.md
 DTARG += $(DISC)/region-controllers.md
-DTARG += $(DISC)/report-a-bug.html
-DTARG += $(DISC)/request-a-feature.html
+DTARG += $(DISC)/report-a-bug.md
+DTARG += $(DISC)/request-a-feature.md
 DTARG += $(DISC)/resource-pools.md
 DTARG += $(DISC)/select-and-import-images.md
 DTARG += $(DISC)/storage.md
@@ -248,6 +249,7 @@ DTARG += $(DISC)/troubleshooting.md
 DTARG += $(DISC)/ubuntu-kernels.md
 DTARG += $(DISC)/user-accounts.md
 DTARG += $(DISC)/using-image-streams.md
+DTARG += $(DISC)/using-lxd-projects-with-maas.md
 DTARG += $(DISC)/using-maas-in-an-air-gapped-environment.md
 DTARG += $(DISC)/using-rbac-with-maas.md
 DTARG += $(DISC)/vm-hosting.md
@@ -2942,12 +2944,12 @@ $(DISC)/maas-documentation.md: $(SRC)/maas-documentation.md
 	xpub push $(DISC) -t snap-3-0-ui maas-documentation-snap-3-0-ui-3994.md
 ## pull reference version
 	cd $(DISC) &&\
-	xpub pull $(DISC) 3994 3994
+	xpub pull $(DISC) 25 25
 ## copy reference version to discourse master
 	cd $(DISC) &&\
-	cp -p maas-documentation-snap-3-0-ui-3994.md maas-documentation.md
+	cp -p maas-documentation-25.md maas-documentation.md
 ## remove reference version
-	cd $(DISC) && rm maas-documentation-snap-3-0-ui-3994.md
+	cd $(DISC) && rm maas-documentation-25.md
 
 $(DISC)/maas-image-builder.md: $(SRC)/maas-image-builder.md
 ## deb 2.7 cli
@@ -5262,6 +5264,11 @@ $(DISC)/user-accounts.md: $(SRC)/user-accounts.md
 ## remove reference version
 	cd $(DISC) && rm user-accounts-snap-3-0-ui-4146.md
 
+$(DISC)/using-lxd-projects-with-maas.md: $(SRC)/using-lxd-projects-with-maas.md
+	cp $(SRC)/using-lxd-projects-with-maas.md $(MODWD)/using-lxd-projects-with-maas-4460.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) using-lxd-projects-with-maas-4460.md
+
 $(DISC)/using-maas-in-an-air-gapped-environment.md: $(SRC)/using-maas-in-an-air-gapped-environment.md
 ## deb 2.7 cli
 	cp $(SRC)/using-maas-in-an-air-gapped-environment.md $(MODWD)/using-maas-in-an-air-gapped-environment-deb-2-7-cli-4287.md
@@ -6082,3 +6089,11 @@ $(DISC)/zone-examples.md: $(SRC)/zone-examples.md
 ## remove reference version
 	cd $(DISC) && rm zone-examples-snap-3-0-ui-4190.md
  
+# originals/using-lxd-projects-with-maas-4460.md: src/using-lxd-projects-with-maas.md
+#	chmod 644 originals/*
+#	cp src/using-lxd-projects-with-maas.md using-lxd-projects-with-maas-4460.md
+#	xpub pull discourse 4460 4460
+#	cp -p using-lxd-projects-with-maas-4460.md originals
+#	rm using-lxd-projects-with-maas-4460.md
+#	chmod 444 originals/*
+
