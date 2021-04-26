@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/maas-projects.html">
+	  &nbsp;UI-only&nbsp;
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  CLI-only
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="give-me-an-example-of-maas.html">
+	    &ldquo;Give me an example&rdquo;
+	  </a>
+	</li>
+	<li>
+	  <a href="whats-new-in-maas.html">
+	    What&rsquo;s new in 3.0
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-requirements.html">
+	    Requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation.html">
+	    Installation
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-journey.html">
+	    Configuration journey
+	  </a>
+	</li>
+      <strong>
+	<a href="controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-communication.html">
+	    Communication
+	  </a>
+	</li>
+	<li>
+	  <a href="rack-controllers.html">
+	    Rack controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="region-controllers.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="high-availability.html">
+	    High availability
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="add-machines.html">
+	    Add machines
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commission-machines.html">
+	    Commission machines
+	  </a>
+	</li>
+	<li>Testing
+	</li>
+	<li>
+	  <a href="hardware-testing.html">
+	    Hardware testing
+	  </a>
+	</li>
+	<li>
+	  <a href="network-testing.html">
+	    Network testing
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-and-hardware-testing-scripts.html">
+	    Commissioning and hardware testing scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-tags.html">
+	    Tags
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-machine-setup.html">
+	    Custom machine setup
+	  </a>
+	</li>
+	<li>
+	  <a href="kernel-boot-options.html">
+	    Kernel boot options
+	  </a>
+	</li>
+	<li>
+	  <a href="resource-pools.html">
+	    Resource pools
+	  </a>
+	</li>
+	<li>
+	  <a href="storage.html">
+	    Storage
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-vmfs-datastores.html">
+	    VMware VMFS datastores
+	  </a>
+	</li>
+	<li>
+	  <a href="ubuntu-kernels.html">
+	    Ubuntu kernels
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="select-and-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="local-image-mirror.html">
+	    Local image mirror
+	  </a>
+	</li>
+	<li>
+	  <a href="vmware-images.html">
+	    VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="subnet-management.html">
+	    Subnet management
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ip-ranges.html">
+	    IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="proxy.html">
+	    Proxy
+	  </a>
+	</li>
+	<li>
+	  <a href="ntp-services.html">
+	    NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="network-discovery.html">
+	    Network discovery
+	  </a>
+	</li>
+	<li>
+	  <a href="ipv6-addressing.html">
+	    IPv6
+	  </a>
+	</li>
+	<li>
+	  <a href="configuring-tls-encryption.html">
+	    SSL
+	  </a>
+	</li>
+	<li>
+	  <a href="managing-stp.html">
+	    STP
+	  </a>
+	</li>
+	<li>
+	  <a href="availability-zones.html">
+	    Availability zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="vm-host-networking.html">
+	    VM host networking
+	  </a>
+	</li>
+	<li>
+	  <a href="adding-a-vm-host.html">
+	    Add a VM host
+	  </a>
+	</li>
+	<li>
+	  <a href="vm-host-storage-pools.html">
+	    VM host storage pools
+	  </a>
+	</li>
+	<li>
+	  <a href="creating-and-deleting-vms.html">
+	    Creating and deleting VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>Operations
+      </strong>
+      <ul>
+	<li>
+	  <a href="prometheus-metrics.html">
+	    Prometheus metrics
+	  </a>
+	</li>
+	<li>
+	  <a href="backup.html">
+	    Backup
+	  </a>
+	</li>
+	<li>
+	  <a href="hardening-your-maas-installation.html">
+	    MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging.html">
+	    Logging
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="user-accounts.html">
+	    User accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="interactive-search.html">
+	    Interactive search
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="concepts-and-terms.html">
+	  Concepts &amp; terms
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="concepts-and-terms.html#heading--network-tutorial">
+	    Brief network tutorial
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-cli.html">
+	  CLI
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    The CLI cookbook
+	  </a>
+	</li>
+	<li>
+	  <a href="common-cli-tasks.html">
+	    Common tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-kernel-management.html">
+	    Kernel management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-image-management.html">
+	    Image management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-interface-management.html">
+	    Interface management
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-advanced-tasks.html">
+	    Advanced tasks
+	  </a>
+	</li>
+	<li>
+	  <a href="cli-composable-hardware.html">
+	    Composable hardware
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api.html">
+	  API documentation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication.html">
+	    API authentication
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="troubleshooting.html">
+	  Troubleshoot
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="getting-help.html">
+	    Getting help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-tricks-and-traps.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="https://old-docs.maas.io/2.5/en/">
+	    MAAS 2.5 (+ earlier) doc
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="whats-new-in-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="writing-guide.html">
+	  Help improve these docs
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>MAAS projects</h1><p>MAAS has the built-in capability to create and manage machine-related projects along several different dimensions.  There are ways to group, tag, and annotate machines, both persistent and runtime-only, including the capability of filtering machines to both limit the views and restrict actions to a specified subset of machines.  Also included is the capability to limit access against some of these project parameters with the RBAC tool.</p>
+<p>This article will provide a technical explanation of projects and how they fit into the MAAS ecosystem. For a gentler slope, try the <a href="maas-project-tutorial.html">MAAS project tutorial</a>.</p>
+<!-- commented out until finished
+  If you need just the technical details on these features, see the MAAS project technical reference.  To help you find what you need, there is also a permuted index of relevant project topics.
+ commented out until finished -->
+
+<h4>Topics you may want to pursue:</h4>
+<p><a href="#heading--projects">What are the characteristics of a project, in this context?</a>
+<a href="#heading--resource-pools">What are resource pools, and how do they work?</a>
+<a href="#heading--tags">What are tags, and how to they work?</a>
+<a href="#heading--wla">What are workload annotations, and how do they work?</a>
+<a href="#heading--notes">What are static annotations (notes), and how do they work?</a>
+<a href="#heading--lxd-projects">What are LXD projects, and how do they work?</a>
+<a href="#heading--maas-project-example">Can you tie this all together with an example?</a></p>
+<p><a href="#heading--projects"><h2 id="heading--projects">Projects in the context of MAAS</h2></a></p>
+<p>In general, a project is an activity, system, or procedural control that is carefully planned, in advance, to satisfy a particular goal or aim.  Taken in the context of MAAS, that goal might be satisfying a Service-Level Agreement (SLA), meeting throughput requirements, or budgeting limited seats to a large organisation by quotas.  Essentially, the goal of a MAAS &ldquo;project&rdquo; is to budget resources that are finite and generally interchangeable to a series of user needs over a fixed period of time.  The success of a MAAS project can be measured against performance constraints, cost management goals, per-project limitations, or any other externally verifiable criteria.</p>
+<p>To that extent, a MAAS project must be an organised effort, with a defined structure, driven by a clearly-defined opportunity, corporate goal, key performance indicator, need, or even a specific source of discomfort.  Organisation is especially important in large MAAS installations &ndash; those with 100 to 1000+ machines &ndash; where the idea of a closed structure with finite resources and limited time may seem so amorphous and malleable that machines can simply be created and destroyed at will.  Even in the largest MAAS instantiation, particular care must be taken to budget machines, to avoid unexpected conflicts and delays.</p>
+<p><a href="#heading--machines-vs-functions"><h3 id="heading--machines-vs-functions">Machines vs. functions</h3></a></p>
+<p>Matching machine functions to corporate needs is a balancing act, regardless of the apparent surplus of machines at any given moment.  Machines can be re-commissioned with different cloud-init scripts and deployed to any corporate function that their resources allow.  Machine functions, though, are driven by definite and specified requirements, over limited or prescribed life-cycles, to mutually-exclusive needs.  Once deployed, machines may not be interchangeable, and probably aren&rsquo;t available to be re-commissioned on a whim.</p>
+<p>Using project thinking, it&rsquo;s possible to create an environment that delivers one or more services against business cases, uses cases, essential corporate functions, or SLAs.  This project environment can assure that well-separated services will match authorization levels, skill sets, access times, workload demand, and a large set of other factors that define a successful operation.  None of the elements of this environment are inherent in MAAS, but MAAS does provide some annotation tools that can help you create this environment:</p>
+<ul>
+<li>Resource pools are mutually-exclusive, one-to-one, persistent groups that can filter views and restrict actions, including limiting authorisations using RBAC.</li>
+<li>Tags are short, many-to-many, persistent markers that can filter views and restrict actions, but which do not influence authorisations.</li>
+<li>Workload annotations are volatile (runtime-only), unlimited, per-machine, key-value pairs that can filter views.</li>
+<li>Static annotations (notes) are persistent markers that can be visible in machine listings, and, if structured properly, can alert administrators and users to deeper information that may need review.</li>
+</ul>
+<p>Together, these four elements combine to make a robust MAAS project-management toolbox.  This article will give you the theory behind these elements, and provide an example around which to discuss best practices.</p>
+<p><a href="#heading--resource-pools"><h2 id="heading--resource-pools">Resource pools</h2></a></p>
+<p>Resource pools are a designation, independent of machines, that can be used to logically group machine resources &ndash; that is, machines and VM hosts &ndash; around some particular category or characteristic.  These characteristics do not have to be parallel constructs, but they must be applied in a mutually-exclusive way.  Resource pools have a one-to-one relationship with machines: At any given time, a single machine can only be assigned to a single resource pool, although any number of machines can be assigned to the same resource pool.</p>
+<p>Resource pools are persistent, in that a machine remains in its assigned resource pool until the pool is dissolved or the machine is moved to a different pool.  Pools can be reassigned at will. Machines which do not have an assigned resource pool belong to the &ldquo;default&rdquo; pool.  Resource pools have a name and a description.  RBAC authorization tools use resource pools to assign users, groups, and privileges.  </p>
+<p>Resource pools are used to budget machines in whatever way makes sense to your organisation.  For example, resource pools could be assigned by function, by user population, by usage parameters, or whatever way you need to slice things up.  They can be used to filter machines, either for viewing or for applying bulk actions, making them an extremely flexible and powerful project management tool.</p>
+<p><a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a></p>
+<p>Tags are short, descriptive, persistent labels that have a many-to-many relationship to machines.  Any tag can be assigned to any machine at any time.  Tags are similar to resource pools, in that they persist until changed or removed, but they differ in that they are intentionally short and have no ancillary description to explain their purpose.</p>
+<p>Tags also differ from resource pools because they can be applied not just to machines, but also to interfaces and storage devices.  Like resource pools, tags can be used to filter views and action selections.  Tags are generally useful in representing metadata, that is, characteristics of the machine that might be important to some of your resource pools, but not unique.  For example, typical tags might include &ldquo;in-the-clinic,&rdquo; &ldquo;has_printer,&rdquo; or &ldquo;requiresHardwareKey.&rdquo;  The possibilities are limited only by your imagination and needs.</p>
+<p><a href="#heading--wla"><h2 id="heading--wla">Workload annotations</h2></a></p>
+<p>Workload annotations are volatile, key-value pairs that can be assigned to operating machines (e.g., machines in the &ldquo;deployed&rdquo; state).  The can be used to group and potentially protect operating machines, independent of tags or resource pool assigned.</p>
+<p>For example, a workload annotation might be something like, &ldquo;owned by john smith, do not release without permission,&rdquo; &ldquo;part of the Bismuth, ND, remote location,&rdquo; or &ldquo;currently used for critical hurricane operations.&rdquo;  Workload annotations are many-to-many with machines, and, although volatile, can be used to filter views and actions on deployed machines.</p>
+<p><strong>NOTE:</strong> 
+Note that workload annotations are only available in MAAS versions 3.0 and above.</p>
+<p><a href="#heading--notes"><h2 id="heading--notes">Static annotations (notes)</h2></a></p>
+<p>Static annotations, referred to as &ldquo;notes&rdquo; by MAAS, are persistent, in that they remain associated with a machine until changed.  They have a one-to-one relationship with machines: There can only be one note for a given machine, although the same note could be applied to other machines as well.  Notes can be lengthy, if desired, but only the first 10 characters or so will show up in the machine list.  For this reason, notes are best used for alerts, warnings, or other status notes (e.g., &ldquo;WARNING: Do not use this machine for purpose X as it does not have enough disk space to support that application.&rdquo;)  In this example, &ldquo;WARNING: Do&hellip;&rdquo; would show up in the machine list, on the line for the machine in question.</p>
+<p><a href="#heading--lxd-projects"><h2 id="heading--lxd-projects">LXD projects</h2></em></p>
+<p><a href="https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview">LXD projects</a> are a feature of the <a href="https://ubuntu.com/server/docs/containers-lxd">LXD lightweight container hypervisor</a> &ndash; a next-generation container manager which makes containers as easy to manage as virtual machines.  With LXD, you can create lots of containers, providing different services across many different use cases.  As a result of this flexibility, it can become confusing to keep track of exactly which containers are providing what services to answer which use case.</p>
+<p>To help with this potential confusion, LXD provides a &ldquo;projects&rdquo; feature, which allows you to group one or more containers together into related projects.  These projects can be manipulated and managed with the same <code>lxc</code> tool used to manage the containers and virtual machines themselves.</p>
+<p>Since MAAS makes use of LXD as a VM host, it&rsquo;s useful to be able to manipulate and manage projects not only through MAAS, but also directly through LXD.  In fact, to properly scope MAAS access to your LXD resources, it&rsquo;s essential that you understand how to use LXD projects in some detail.</p>
+<p><strong>NOTE:</strong> 
+Note that only MAAS versions 3.0 and above are aware of LXD projects.  Prior versions of MAAS do not work with LXD projects, and will commission all the available machines in your LXD instance.  The following section explains this in some detail.</p>
+<p><a href="#heading--projects-history"><h3 id="heading--projects-history">How did we get here?</h3></a></p>
+<p>Prior to MAAS version 3.0, MAAS implemented LXD VM hosts, but did so in a strongly-coupled way; that is, MAAS essentially took control of the VMs, disallowing or overriding some direct LXD controls.  In a sense, MAAS became the owner, rather than simply a separate program, communicating interdependently with LXD to accomplish user purposes.</p>
+<p>This was less than ideal.  For example, MAAS would discover all running LXD VMs and immediately commission them, essentially performing a &ldquo;clean install&rdquo; and wiping out their contents.  This behaviour isn&rsquo;t suitable when MAAS is connected to a deployed LXD with VMs already running services that may not have been targeted for enlistment by MAAS.</p>
+<p><a href="#heading--maas-control-at-project-level"><h4 id="heading--maas-control-at-project-level">MAAS now controls VMs at a project level</h4></a></p>
+<p>With the release of MAAS 3.0 version, MAAS now becomes a LXD tenant, rather than an owner. Essentially, MAAS 3.0 still commissions any VMs it discovers within a VM host, but the scope of the discovery is now limited to a single project.  That project can contain any subset of the existing VMs, from zero to all of them.  Any VM that&rsquo;s already in a project assigned to MAAS will still be re-commissioned, which is the normal behaviour of MAAS upon network discovery.</p>
+<p>Here are the criteria which drove this decision:</p>
+<ul>
+<li>It should be possible for an administrator to select which project(s) MAAS manages, and thus which machines will be automatically enlisted and commissioned.</li>
+<li>It should be possible for MAAS to create and self-assign a new (empty) project, so that the user can compose new VMs within LXD from within the MAAS interface.</li>
+<li>No per-project features should be enabled by default in MAAS-created projects.</li>
+<li>The project must be explicitly specified when creating the LXD VM host.</li>
+<li>When a LXD VM host is added, only the existing VMs assigned to the selected project (if any) should be visible to MAAS (and thus, automatically commissioned), and VMs in non-MAAS projects are not affected in any way.</li>
+<li>When a LXD VM host is deleted, the default behaviour should be for MAAS to leave existing VMs, rather than automatically deleting them; VMs in non-MAAS projects are not affected in any way.</li>
+<li>MAAS will not create VMs in projects that it doesn&rsquo;t own.</li>
+<li>When a VM is composed in MAAS, it&rsquo;s created in the target LXD project.</li>
+</ul>
+<p>In addition, a MAAS administrator should be able to:</p>
+<ul>
+<li>refresh information about a specific LXD VM host, and receive correct, up-to-date, and timely status.</li>
+<li>explicitly specify connections between networks and VM interfaces.</li>
+<li>deploy a machine directly as an LXD VM host, connected to MAAS from the outset.</li>
+</ul>
+<p>These criteria were fully met in the MAAS LXD tenant implementation released as part of MAAS 3.0.</p>
+<p><a href="#heading--project-example"><h2 id="heading--project-example">A MAAS project example</h2></a></p>
+<p>MAAS fits into many different industries, applications, and situations, so trying to come up with a single set of &ldquo;best practices&rdquo; just isn&rsquo;t practical.  We can, though, give you an understanding of how to use these project tools using a real-world example.  For the purposes of this explanatory section, we&rsquo;ll cover both CLI and UI approaches in the same document, since seeing both may serve to speed your understanding.</p>
+<p>Consider a new, 100-bed hospital which is being planned.  The plan must allow for flexible use of a limited number of machines, since budgets aren&rsquo;t infinite.</p>
+<p><a href="#heading--defining-resource-pools"><h2 id="heading--defining-resource-pools">Defining resource pools</h2></a></p>
+<p>Before defining machines, networks, interfaces, or anything else about this new project, the first step is to identify and label the resource pools.  Resource pools are, by nature, mutually exclusive, so a project plan might start with a random list of functions that the machines must cover:</p>
+<ul>
+<li>Provider documentation</li>
+<li>Insurance collections</li>
+<li>Med reconciliation</li>
+<li>Provider orders</li>
+<li>Narcotics control</li>
+<li>Nursing orders</li>
+<li>Patient collections</li>
+<li>Medical supplies</li>
+<li>Patient registration</li>
+<li>Insurance reconciliation</li>
+<li>Medication administration</li>
+<li>Continuing education</li>
+<li>Food service</li>
+<li>Office supplies</li>
+<li>Charts</li>
+<li>Pharmacy</li>
+<li>Housekeeping</li>
+<li>Time clock</li>
+<li>Instrumentation</li>
+<li>Information technology</li>
+</ul>
+<p>This list isn&rsquo;t comprehensive, but it&rsquo;s more than long enough to create a good example.</p>
+<p>It isn&rsquo;t clear that all of these would be independent resource pools, since there&rsquo;s commonality (and thus some implied connectivity) between some of these functions.  There&rsquo;s more than one way to group them, but one of the simplest for this example is to group functions that are likely to be performed &ndash; or at least touched &ndash; by the same people, or by people with identical or similar skill-sets.</p>
+<p>Here&rsquo;s a preliminary attempt at grouping these functions:</p>
+<ul>
+<li>Providers</li>
+<li>Provider documentation</li>
+<li>Provider orders</li>
+<li>
+<p>Charts</p>
+</li>
+<li>
+<p>Medications</p>
+</li>
+<li>Med reconciliation</li>
+<li>Pharmacy</li>
+<li>Narcotics control</li>
+<li>
+<p>Medication administration</p>
+</li>
+<li>
+<p>Nursing operations</p>
+</li>
+<li>Nursing orders</li>
+<li>Shift scheduling</li>
+<li>Shift loading</li>
+<li>
+<p>Continuing education</p>
+</li>
+<li>
+<p>Business office</p>
+</li>
+<li>Patient registration</li>
+<li>Insurance collections</li>
+<li>Insurance reconciliation</li>
+<li>
+<p>Patient collections</p>
+</li>
+<li>
+<p>Purchasing</p>
+</li>
+<li>Office supplies</li>
+<li>
+<p>Medical supplies</p>
+</li>
+<li>
+<p>Accounting</p>
+</li>
+<li>Payroll</li>
+<li>Timeclock</li>
+<li>Accounts receivable</li>
+<li>
+<p>Accounts payable</p>
+</li>
+<li>
+<p>Support functions</p>
+</li>
+<li>Instrumentation</li>
+<li>Information technology</li>
+<li>Housekeeping</li>
+<li>Food service</li>
+</ul>
+<p>Note that this exercise added a few more functions that were recognised while categorising.</p>
+<p><a href="#heading--roles"><h3 id="heading--roles">Assigning roles</h3></a></p>
+<p>Now let&rsquo;s assign some roles, so that we can work out who can write or modify data within these functions, and who has a responsibility to read and act on the data.  This will help us develop RBAC authorization structures.  Even if you don&rsquo;t use RBAC, defining these roles will help create better resource pool assignments.</p>
+<p>To verify this last statement, first consider what would happen if you simple assign resource pools at the top level:</p>
+<ul>
+<li>Providers</li>
+<li>Medications</li>
+<li>Nursing operations</li>
+<li>Business office</li>
+<li>Purchasing</li>
+<li>Accounting</li>
+<li>Support functions</li>
+</ul>
+<p>Without considering the subordinate functions, mistakes can be made, and inappropriate access granted.  For example, &ldquo;Charts&rdquo; was listed under &ldquo;Providers&rdquo; (i.e., physicians, nurse practitioners, and physician&rsquo;s assistants).  But much of the charting doesn&rsquo;t come from the providers themselves, but from nurses who monitor the patients daily &ndash; so nurses need write access to charts.  But the providers category also includes provider documentation, which nurses aren&rsquo;t supposed to read or write (in most cases), and provider orders, which are usually read-only for nurses.</p>
+<p>Under medications, providers and pharmacists can both write to the medication reconciliation records, but nurses normally have no access.  On the other hand, nurses administer a lot of the medicines, so they need write access to that particular function.  Again, &ldquo;Medications&rdquo; isn&rsquo;t a great category to assign a resource pool, because different roles have different levels of access to different components of that function.</p>
+<p>This is where the categorisation instinct breaks down: A logical, bottom-up approach seems instinctive, but it won&rsquo;t work in practice.  Instead, we need to take each of the second level functions, assign roles to them, and determine who can read, who can write, and who shouldn&rsquo;t have access.  To do that, we would need to create a few roles, or job categories, something like this:</p>
+<ul>
+<li>Provider</li>
+<li>Nurse</li>
+<li>Nursing Supervisor</li>
+<li>Pharmacist</li>
+<li>Insurance specialist</li>
+<li>Collections specialist</li>
+<li>Patient registrar</li>
+<li>Purchasing agent</li>
+<li>Accountant</li>
+<li>Payroll clerk</li>
+<li>Instrumentation specialist</li>
+<li>IT administrator</li>
+<li>Housekeeper</li>
+<li>Food service specialist</li>
+</ul>
+<p>Again, this is a simple example; in reality, there would be many more roles, and many more nuances.  The result of assigning these roles to these different functions would look something like this:</p>
+<ul>
+<li>Providers</li>
+<li>Provider documentation<ul>
+<li>Provider writes</li>
+<li>Insurance specialist reads</li>
+<li>Accountant reads</li>
+</ul>
+</li>
+<li>Provider orders<ul>
+<li>Provider writes</li>
+<li>Nurse reads</li>
+<li>Pharmacist reads</li>
+</ul>
+</li>
+<li>
+<p>Charts</p>
+<ul>
+<li>Provider writes</li>
+<li>Nurse writes</li>
+<li>Pharmacist writes</li>
+<li>Insurance specialist reads</li>
+</ul>
+</li>
+<li>
+<p>Medications</p>
+</li>
+<li>Med reconciliation<ul>
+<li>Provider writes</li>
+<li>Pharmacist writes</li>
+</ul>
+</li>
+<li>Pharmacy<ul>
+<li>Pharmacist writes</li>
+<li>Provider reads</li>
+<li>Nurse reads</li>
+</ul>
+</li>
+<li>Narcotics control<ul>
+<li>Provider writes</li>
+<li>Pharmacist writes</li>
+<li>Nurse reads (charts are the mechanism for nurses to feed back to these records)</li>
+</ul>
+</li>
+<li>
+<p>Medication administration</p>
+<ul>
+<li>Provider reads</li>
+<li>Pharmacist reads</li>
+<li>Nurse writes</li>
+</ul>
+</li>
+<li>
+<p>Nursing operations</p>
+</li>
+<li>Nursing orders<ul>
+<li>Provider writes</li>
+<li>Pharmacist writes</li>
+<li>Nursing supervisor writes
+ Nurse reads</li>
+</ul>
+</li>
+<li>Shift scheduling<ul>
+<li>Nursing supervisor writes</li>
+<li>Payroll clerk reads</li>
+<li>Nurse reads</li>
+</ul>
+</li>
+<li>Shift loading<ul>
+<li>Nursing supervisor writes</li>
+<li>Accountant reads</li>
+</ul>
+</li>
+<li>
+<p>Continuing education</p>
+<ul>
+<li>Nurse read</li>
+</ul>
+</li>
+<li>
+<p>Business office</p>
+</li>
+<li>Patient registration<ul>
+<li>Patient registrar writes</li>
+<li>Nurse reads</li>
+<li>Nursing supervisor reads</li>
+</ul>
+</li>
+<li>Insurance collections<ul>
+<li>Insurance specialist writes</li>
+<li>Collections specialist reads</li>
+</ul>
+</li>
+<li>Insurance reconciliation<ul>
+<li>Insurance specialist writes</li>
+<li>Collections specialist reads</li>
+</ul>
+</li>
+<li>
+<p>Patient collections</p>
+<ul>
+<li>Insurance specialist reads</li>
+<li>Collections specialist writes</li>
+</ul>
+</li>
+<li>
+<p>Purchasing</p>
+</li>
+<li>Office supplies<ul>
+<li>Purchasing agent writes</li>
+<li>Nursing supervisor writes</li>
+<li>Pharmacist writes</li>
+<li>Provider writes</li>
+</ul>
+</li>
+<li>
+<p>Medical supplies</p>
+<ul>
+<li>Purchasing agent writes</li>
+<li>Nursing supervisor writes</li>
+<li>Pharmacist writes</li>
+<li>Provider writes</li>
+</ul>
+</li>
+<li>
+<p>Accounting</p>
+</li>
+<li>Payroll<ul>
+<li>Payroll clerk writes</li>
+<li>All staff reads</li>
+</ul>
+</li>
+<li>Timeclock<ul>
+<li>All staff writes</li>
+<li>Payroll clerk reads</li>
+</ul>
+</li>
+<li>Accounts receivable<ul>
+<li>Accountant writes</li>
+<li>Nursing supervisor reads</li>
+</ul>
+</li>
+<li>
+<p>Accounts payable</p>
+<ul>
+<li>Accountant reads</li>
+<li>Nursing supervisor writes</li>
+</ul>
+</li>
+<li>
+<p>Support functions</p>
+</li>
+<li>Instrumentation<ul>
+<li>Nurse writes</li>
+<li>Nursing supervisor writes</li>
+<li>Pharmacist writes</li>
+<li>Instrumentation specialist writes</li>
+</ul>
+</li>
+<li>Information technology<ul>
+<li>All staff writes</li>
+</ul>
+</li>
+<li>Housekeeping<ul>
+<li>Nurses write</li>
+<li>Nursing supervisor writes</li>
+<li>Housekeeping reads</li>
+</ul>
+</li>
+<li>Food service<ul>
+<li>Provider writes</li>
+<li>Nursing supervisor writes</li>
+<li>Food service reads</li>
+</ul>
+</li>
+</ul>
+<p>It&rsquo;s possible to try different permutations, such as inverting the above list by roles, but as you can see, we won&rsquo;t come up with any more clarity or a better set of divisions.  It&rsquo;s obvious that the resource pools need to be assigned to the secondary functions, not the primary ones:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Business category</th>
+<th align="left">Resource pool</th>
+<th align="left">Pool name</th>
+<th align="left">Read/write roles</th>
+<th align="left">Read-only roles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Providers</td>
+<td align="left">Provider documentation</td>
+<td align="left">ProvDoc</td>
+<td align="left">Provider</td>
+<td align="left">Insurance specialist</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Accountant</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Provider orders</td>
+<td align="left">ProvOrd</td>
+<td align="left">Provider</td>
+<td align="left">Nurse</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Charts</td>
+<td align="left">Charts</td>
+<td align="left">Provider</td>
+<td align="left">Insurance specialist</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Nurse</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Medications</td>
+<td align="left">Med reconciliation</td>
+<td align="left">MedRec</td>
+<td align="left">Provider</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Narcotics control</td>
+<td align="left">DEACon</td>
+<td align="left">Provider</td>
+<td align="left">Nurse</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Pharmacy</td>
+<td align="left">Pharmacy</td>
+<td align="left">Pharmacist</td>
+<td align="left">Provider</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Nurse</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Medication Admin</td>
+<td align="left">MedAdmin</td>
+<td align="left">Nurse</td>
+<td align="left">Provider</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Nursing Ops</td>
+<td align="left">Nursing orders</td>
+<td align="left">NurseOrd</td>
+<td align="left">Provider</td>
+<td align="left">Nurse</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Nursing supervisor</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Shift Scheduling</td>
+<td align="left">NurseShift</td>
+<td align="left">Nursing supervisor</td>
+<td align="left">Nurse</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Payroll clerk</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Shift loading</td>
+<td align="left">ShiftLoad</td>
+<td align="left">Nursing supervisor</td>
+<td align="left">Accountant</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Continuing education</td>
+<td align="left">CE</td>
+<td align="left"></td>
+<td align="left">Nurse</td>
+</tr>
+<tr>
+<td align="left">Business office</td>
+<td align="left">Patient Registration</td>
+<td align="left">PatReg</td>
+<td align="left">Patient registrar</td>
+<td align="left">Nurse</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Nursing supervisor</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Insurance collections</td>
+<td align="left">InsColl</td>
+<td align="left">Insurance specialist</td>
+<td align="left">Collections specialist</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Insurance reconciliation</td>
+<td align="left">InsRec</td>
+<td align="left">Insurance specialist</td>
+<td align="left">Collections specialist</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Patient collections</td>
+<td align="left">PatColl</td>
+<td align="left">Collections specialist</td>
+<td align="left">Insurance specialist</td>
+</tr>
+<tr>
+<td align="left">Purchasing</td>
+<td align="left">Office Supplies</td>
+<td align="left">OfcSup</td>
+<td align="left">Purchasing agent</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Nursing supervisor</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Provider</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Medical supplies</td>
+<td align="left">MedSup</td>
+<td align="left">Purchasing agent</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Nursing supervisor</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Provider</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Accounting</td>
+<td align="left">Payroll</td>
+<td align="left">Payroll</td>
+<td align="left">Payroll clerk</td>
+<td align="left">All staff (with ID limitations)</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Timeclock</td>
+<td align="left">Timeclock</td>
+<td align="left">All Staff</td>
+<td align="left">Payroll clerk</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Accounts receivable</td>
+<td align="left">AR</td>
+<td align="left">Accountant</td>
+<td align="left">Nursing supervisor</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Accounts payable</td>
+<td align="left">AP</td>
+<td align="left">Accountant</td>
+<td align="left">Nursing supervisor</td>
+</tr>
+<tr>
+<td align="left">Support functions</td>
+<td align="left">Instrumentation</td>
+<td align="left">Inst</td>
+<td align="left">Nurse</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Nursing supervisor</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Instrumentation specialist</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Information technology</td>
+<td align="left">IT</td>
+<td align="left">All staff</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Housekeeping</td>
+<td align="left">HK</td>
+<td align="left">Nurses</td>
+<td align="left">Housekeeping</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Nursing supervisor</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Food service</td>
+<td align="left">FS</td>
+<td align="left">Provider</td>
+<td align="left">Food service staff</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Nursing supervisor</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--adding-tags"><h3 id="heading--adding-tags">Adding tags and annotations</h3></a></p>
+<p>Since the Business Category is important, but not unique, we can assign it to tags.  That will allow us to filter and operate on machines by category.  The only thing left to add, then, would be workload annotations, and we can build a completed MAAS project from the table above.</p>
+<p>Giving it some thought, we can see that machines in the same resource pool can perform identical functions, but those functions may be spread across the hospital by department.  For example, there are various wards, subdivided by type of illness, and speciality units like ICU, CCU, maternity, isolation, and rehabilitation.  Since the machines in each resource pool won&rsquo;t differ, they can be swapped in and out of these areas as needed, based on the patient load.  The correct element to track these would be workload annotations, which can be assigned when the machine is brought up in a particular department.  Remember that you can filter and operate by workload annotations, also.</p>
+<p>Returning to our table above, we can quickly document our finished project layout by changing some column headings and make the names more system-friendly, like this:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Tag</th>
+<th align="left">Pool description</th>
+<th align="left">Pool name</th>
+<th align="left">RW roles</th>
+<th align="left">RO roles</th>
+<th align="left">Workload annotations by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Provider</td>
+<td align="left">Provider documentation</td>
+<td align="left">ProvDoc</td>
+<td align="left">Provider</td>
+<td align="left">InsSpec</td>
+<td align="left">Department</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Accountant</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Provider orders</td>
+<td align="left">ProvOrd</td>
+<td align="left">Provider</td>
+<td align="left">Nurse</td>
+<td align="left">Department</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Charts</td>
+<td align="left">Charts</td>
+<td align="left">Provider</td>
+<td align="left">InsSpec</td>
+<td align="left">Department</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Nurse</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Meds</td>
+<td align="left">Med reconciliation</td>
+<td align="left">MedRec</td>
+<td align="left">Provider</td>
+<td align="left"></td>
+<td align="left">Department/Pharmacy Loc</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Narcotics control</td>
+<td align="left">DEACon</td>
+<td align="left">Provider</td>
+<td align="left">Nurse</td>
+<td align="left">Department/Pharmacy Loc</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Pharmacy</td>
+<td align="left">Pharmacy</td>
+<td align="left">Pharmacist</td>
+<td align="left">Provider</td>
+<td align="left">Pharmacy</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Nurse</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Medication Admin</td>
+<td align="left">MedAdmin</td>
+<td align="left">Nurse</td>
+<td align="left">Provider</td>
+<td align="left">Department/Pharmacy Loc</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">NursOps</td>
+<td align="left">Nursing orders</td>
+<td align="left">NurseOrd</td>
+<td align="left">Provider</td>
+<td align="left">Nurse</td>
+<td align="left">Nursing Desk</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Supervisor</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Shift Scheduling</td>
+<td align="left">NurseShift</td>
+<td align="left">Supervisor</td>
+<td align="left">Nurse</td>
+<td align="left">Supervisor</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">PayClerk</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Shift loading</td>
+<td align="left">ShiftLoad</td>
+<td align="left">Supervisor</td>
+<td align="left">Accountant</td>
+<td align="left">Supervisor</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Continuing education</td>
+<td align="left">CE</td>
+<td align="left"></td>
+<td align="left">Nurse</td>
+<td align="left">Department</td>
+</tr>
+<tr>
+<td align="left">BusOfc</td>
+<td align="left">Patient Registration</td>
+<td align="left">PatReg</td>
+<td align="left">Registrar</td>
+<td align="left">Nurse</td>
+<td align="left">Registration Point</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Supervisor</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Insurance collections</td>
+<td align="left">InsColl</td>
+<td align="left">InsSpec</td>
+<td align="left">CollSpec</td>
+<td align="left">Business Office Loc</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Insurance reconciliation</td>
+<td align="left">InsRec</td>
+<td align="left">InsSpec</td>
+<td align="left">CollSpec</td>
+<td align="left">Business Office Loc</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Patient collections</td>
+<td align="left">PatColl</td>
+<td align="left">CollSpec</td>
+<td align="left">InsSpec</td>
+<td align="left">Business Office Loc</td>
+</tr>
+<tr>
+<td align="left">Purch</td>
+<td align="left">Office Supplies</td>
+<td align="left">OfcSup</td>
+<td align="left">PurchAgent</td>
+<td align="left"></td>
+<td align="left">Purchasing Loc</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Supervisor</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Provider</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Medical supplies</td>
+<td align="left">MedSup</td>
+<td align="left">PurchAgent</td>
+<td align="left"></td>
+<td align="left">Purchasing Loc</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Supervisor</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Provider</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Accts</td>
+<td align="left">Payroll</td>
+<td align="left">Payroll</td>
+<td align="left">PayClerk</td>
+<td align="left">(All staff)</td>
+<td align="left">Business Office Loc</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Timeclock</td>
+<td align="left">Timeclock</td>
+<td align="left">(All Staff)</td>
+<td align="left">PayClerk</td>
+<td align="left">Timeclock</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Accounts receivable</td>
+<td align="left">AR</td>
+<td align="left">Accountant</td>
+<td align="left">Supervisor</td>
+<td align="left">Business Office Loc</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Accounts payable</td>
+<td align="left">AP</td>
+<td align="left">Accountant</td>
+<td align="left">Supervisor</td>
+<td align="left">Business Office Loc</td>
+</tr>
+<tr>
+<td align="left">Support</td>
+<td align="left">Instrumentation</td>
+<td align="left">Inst</td>
+<td align="left">Nurse</td>
+<td align="left"></td>
+<td align="left">Instrumentation Loc</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Supervisor</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Pharmacist</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Technician</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Information technology</td>
+<td align="left">IT</td>
+<td align="left">(All staff)</td>
+<td align="left"></td>
+<td align="left">IT Location</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Housekeeping</td>
+<td align="left">HK</td>
+<td align="left">Nurse</td>
+<td align="left">Housekeeper</td>
+<td align="left">Housekeeping Location</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Supervisor</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Food service</td>
+<td align="left">FS</td>
+<td align="left">Provider</td>
+<td align="left">FSE</td>
+<td align="left">Food Service Location</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Supervisor</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>Obviously, this example makes some assumptions.  The real project would require more access nuances, which would likely be driven &ndash; at least partly &ndash; by the software being used in the various locations.  Nevertheless, this gives a clear picture of how MAAS projects can be used to construct a usable framework for a data centre.  After gathering some initial data on the parameters of the business, a framework such as this one could serve as a strong starting point for discussion with other organisations and ongoing design.</p>
+    </div>
+  </body>
+</html>

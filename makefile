@@ -126,6 +126,7 @@ HTARG += $(HTML)/maas-documentation.html
 HTARG += $(HTML)/maas-image-builder.html
 HTARG += $(HTML)/maas-installation.html
 HTARG += $(HTML)/maas-logging.html
+HTARG += $(HTML)/maas-project-tutorial.html
 HTARG += $(HTML)/maas-requirements.html
 HTARG += $(HTML)/maas-tags.html
 HTARG += $(HTML)/machine-logs.html
@@ -157,7 +158,7 @@ HTARG += $(HTML)/troubleshooting.html
 HTARG += $(HTML)/ubuntu-kernels.html
 HTARG += $(HTML)/user-accounts.html
 HTARG += $(HTML)/using-image-streams.html
-HTARG += $(HTML)/using-lxd-projects-with-maas.html
+HTARG += $(HTML)/maas-projects.html
 HTARG += $(HTML)/using-maas-in-an-air-gapped-environment.html
 HTARG += $(HTML)/using-rbac-with-maas.html
 HTARG += $(HTML)/vm-hosting.html
@@ -217,6 +218,7 @@ DTARG += $(DISC)/maas-documentation.md
 DTARG += $(DISC)/maas-image-builder.md
 DTARG += $(DISC)/maas-installation.md
 DTARG += $(DISC)/maas-logging.md
+DTARG += $(DISC)/maas-project-tutorial.md
 DTARG += $(DISC)/maas-requirements.md
 DTARG += $(DISC)/maas-tags.md
 DTARG += $(DISC)/machine-logs.md
@@ -249,7 +251,7 @@ DTARG += $(DISC)/troubleshooting.md
 DTARG += $(DISC)/ubuntu-kernels.md
 DTARG += $(DISC)/user-accounts.md
 DTARG += $(DISC)/using-image-streams.md
-DTARG += $(DISC)/using-lxd-projects-with-maas.md
+DTARG += $(DISC)/maas-projects.md
 DTARG += $(DISC)/using-maas-in-an-air-gapped-environment.md
 DTARG += $(DISC)/using-rbac-with-maas.md
 DTARG += $(DISC)/vm-hosting.md
@@ -5264,10 +5266,15 @@ $(DISC)/user-accounts.md: $(SRC)/user-accounts.md
 ## remove reference version
 	cd $(DISC) && rm user-accounts-snap-3-0-ui-4146.md
 
-$(DISC)/using-lxd-projects-with-maas.md: $(SRC)/using-lxd-projects-with-maas.md
-	cp $(SRC)/using-lxd-projects-with-maas.md $(MODWD)/using-lxd-projects-with-maas-4460.md
+$(DISC)/maas-projects.md: $(SRC)/maas-projects.md
+	cp $(SRC)/maas-projects.md $(MODWD)/maas-projects-4460.md
 	cd $(MODWD) &&\
-	xpub push $(DISC) using-lxd-projects-with-maas-4460.md
+	xpub push $(DISC) maas-projects-4460.md
+
+$(DISC)/maas-project-tutorial.md: $(SRC)/maas-project-tutorial.md
+	cp $(SRC)/maas-project-tutorial.md $(MODWD)/maas-project-tutorial-4478.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) maas-project-tutorial-4478.md
 
 $(DISC)/using-maas-in-an-air-gapped-environment.md: $(SRC)/using-maas-in-an-air-gapped-environment.md
 ## deb 2.7 cli
@@ -6095,5 +6102,13 @@ $(DISC)/zone-examples.md: $(SRC)/zone-examples.md
 #	xpub pull discourse 4460 4460
 #	cp -p using-lxd-projects-with-maas-4460.md originals
 #	rm using-lxd-projects-with-maas-4460.md
+#	chmod 444 originals/*
+
+# originals/src-maas-project-tutorial-md-4478.md: src/maas-project-tutorial.md
+#	chmod 644 originals/*
+#	cp src/maas-project-tutorial.md src-maas-project-tutorial-md-4478.md
+#	xpub pull discourse 4478 4478
+#	cp -p src-maas-project-tutorial-md-4478.md originals
+#	rm src-maas-project-tutorial-md-4478.md
 #	chmod 444 originals/*
 

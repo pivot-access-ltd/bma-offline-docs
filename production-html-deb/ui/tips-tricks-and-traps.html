@@ -436,8 +436,8 @@ This section contains a collection of tips, tricks, and traps which may help sol
 <li><a href="#heading--migrating-maas">Migrate an existing snap installation to use a local PostgreSQL server</a></li>
 <li><a href="#heading--manual-export">Manually export the MAAS database</a></li>
 <li><a href="#heading--ibm-power-server-pxe-boot">Network boot an IBM Power server</a></li>
-<li><a href="#heading--maas-lxd-network-conflicts">Eliminate MAAS and LXD DNS &amp; DHCP conflicts</a></li>
 <li><a href="#heading--jq-machine-list">Try jq recipes using the CLI</a></li>
+<li><a href="#heading--maas-lxd-network-conflicts">Resolve MAAS/LXD DNS &amp; DHCP conflicts/network issues</a></li>
 </ol>
 <h2 id="heading--migrating-maas">Migrating an existing snap installation</h2>
 
@@ -483,8 +483,17 @@ sudo -u postgres createdb maasdb -O maas
 <p>So, when using IBM Power servers with multiple NICs that can network boot, it&rsquo;s strongly recommended to configure just a single <specific> NIC as the network boot device via <strong>Petitboot</strong>.</p>
 <h2 id="heading--maas-lxd-network-conflicts">Resolve DNS conflicts between LXD and MAAS</h2>
 
-<p>If you get into a situation where MAAS and LXD are both managing DNS on your MAAS network, there&rsquo;s a simple fix.  You can turn off LXD&rsquo;s DNS management with the following command:</p>
-<pre><code>lxc network set lxdbr0 dns.mode=none
+<p>If you get into a situation where MAAS and LXD are both managing DNS on your MAAS network, there&rsquo;s a simple fix. You can turn off LXD&rsquo;s DNS management with the following command:</p>
+<pre><code class="bash">lxc network set $LXD_BRIDGE_NAME dns.mode=none
+</code></pre>
+
+<p>You should also disable DHCP on IPv4 and IPv6 withing LXD:</p>
+<pre><code class="bash">lxc network set $LXD_BRIDGE_NAME ipv4.dncp=false
+lxc network set $LXD_BRIDGE_NAME ipv6.dhcp=false
+</code></pre>
+
+<p>Once you&rsquo;ve done this, you can check your work with the following command:</p>
+<pre><code class="bash">lxc network show $LXD_BRIDGE_NAME
 </code></pre>
 
 <h2 id="heading--jq-machine-list">jq recipes using the CLI</h2>

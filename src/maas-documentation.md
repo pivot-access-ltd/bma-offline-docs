@@ -387,16 +387,19 @@ There are (at least) three ways you can contribute to MAAS:
   - [Network testing](/t/network-testing-snap-2-9-ui/2939)
   - [Commissioning and hardware testing scripts](/t/commissioning-and-hardware-testing-scripts-snap-2-9-ui/2483)
 - [Deploy machines](/t/deploy-machines-snap-2-9-ui/2603)
-- [Tags](/t/maas-tags-snap-2-9-ui/2891)
 - [Custom machine setup](/t/custom-machine-setup-snap-2-9-ui/2591)
 - [Kernel boot options](/t/kernel-boot-options-snap-2-9-ui/2783)
-- [Resource pools](/t/resource-pools-snap-2-9-ui/3083)
 - [Storage](/t/storage-snap-2-9-ui/3107)
   - [Disk erasure](/t/disk-erasure-snap-2-9-ui/2615)
   - [Block devices](/t/block-devices-snap-2-9-ui/2351)
   - [Partitions](/t/partitions-snap-2-9-ui/2987)
 - [VMware VMFS datastores](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)
 - [Ubuntu kernels](/t/ubuntu-kernels-snap-2-9-ui/3179)
+
+### [Projects](/t/using-lxd-projects-with-maas/4460)
+- [Resource pools](/t/resource-pools-snap-2-9-ui/3083)
+- [Tags and annotations](/t/maas-tags-snap-2-9-ui/2891)
+- [LXD projects](/t/using-lxd-projects-with-maas-snap-3-0-ui/4470)
 
 ### [Images](/t/images-snap-2-9-ui/2699)
 
@@ -455,7 +458,6 @@ There are (at least) three ways you can contribute to MAAS:
 
 - [Getting help](/t/getting-help/838)
 - [Tips, tricks, and traps](/t/tips-tricks-and-traps-snap-2-9-ui/3155)
-
 - [MAAS 2.5 (and earlier) documentation](https://old-docs.maas.io/2.5/en/)
 - [Upgrading MAAS](/t/upgrading-maas/779)
   - [Upgrade from 2.3 to 2.4](/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777)
@@ -472,6 +474,12 @@ There are (at least) three ways you can contribute to MAAS:
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/4478|/docs/maas-project-tutorial|
+|https://discourse.maas.io/t/maas-projects/4460|/docs/maas-projects|
+|https://discourse.maas.io/t/-/4473|/docs/deb/3.0/ui/using-lxd-projects-with-maas|
+|https://discourse.maas.io/t/-/4472|/docs/deb/3.0/cli/using-lxd-projects-with-maas|
+|https://discourse.maas.io/t/-/4471|/docs/snap/3.0/cli/using-lxd-projects-with-maas|
+|https://discourse.maas.io/t/-/4470|/docs/snap/3.0/ui/using-lxd-projects-with-maas|
 |https://discourse.maas.io/t/report-a-bug/4446|/docs/report-a-bug|
 |https://discourse.maas.io/t/request-a-feature/4447|/docs/request-a-feature|
 |https://discourse.maas.io/t/-/832|/docs/cli-testing-scripts|

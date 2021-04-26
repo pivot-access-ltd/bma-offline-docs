@@ -1,74 +1,3 @@
-LXD and MAAS are separate products, and it's useful to allow them to interact as equals, covering a much wider range of use cases.  To allow each of them to follow their own operational models, but still allow them to work together, we've taken advantage of LXD projects.  This page provides a well-rounded look at projects -- and how they're used with MAAS -- from four perspectives:
-
-* [Can you explain LXD projects with MAAS?](#heading--projects-explanation)
-* [Can you teach me how to use LXD projects?](#heading--projects-tutorial)
-* [What are the best practices for using LXD projects with MAAS?](#heading--projects-how-to)
-* [Where can I find relevant, detailed, reference material?](#heading--projects-tech-ref)
-
-These four major sections should help you quickly get up to speed on the way that projects couple LXD and MAAS, and how to use this linkage to your advantage.
-
-<a href="#heading--projects-explanation"><h2 id="heading--projects-explanation">Can you explain how LXD projects work with MAAS?</h2></a>
-
-It may be beneficial to understand how LXD projects fit into the overall MAAS ecosystem.  LXD projects are not intended to be MAAS projects; they are only intended to limit which LXD containers and VMs are available to MAAS.  Managing machines in projects or groups -- within MAAS -- is the function of [resource pools](links).  This section will help you understand the distinction and rationale behind our interaction with LXD projects in MAAS.
-
-#### Four questions you may have about LXD projects, in general:
-
-* [What are LXD projects?](#heading--projects-big-picture)
-* [How did we get here?](#heading--projects-history)
-* [What are some alternatives to LXD projects in MAAS?](#heading--projects-alternatives)
-* [Why did we implement LXD projects with MAAS?](#heading--projects-justification)
-
-<a href="#heading--projects-big-picture"><h3 id="heading--projects-big-picture">What are LXD projects?</h3></a>
-
-[LXD projects](https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview) are a feature of the [LXD lightweight container hypervisor](https://ubuntu.com/server/docs/containers-lxd) -- a next-generation container manager which makes containers as easy to manage as virtual machines.  With LXD, you can create lots of containers, providing different services across many different use cases.  As a result of this flexibility, it can become confusing to keep track of exactly which containers are providing what services to answer which use case.
-
-To help with this potential confusion, LXD provides a "projects" feature, which allows you to group one or more containers together into related projects.  These projects can be manipulated and managed with the same `lxc` tool used to manage the containers and virtual machines themselves.
-
-Since MAAS makes use of LXD as a VM host, it's useful to be able to manipulate and manage projects not only through MAAS, but also directly through LXD.  In fact, to properly scope MAAS access to your LXD resources, it's essential that you understand how to use LXD projects in some detail.
-
-<a href="#heading--projects-history"><h3 id="heading--projects-history">How did we get here?</h3></a>
-
-Prior versions of MAAS implemented LXD VM hosts, but did so in a strongly-coupled way; that is, MAAS essentially took control of the VMs, disallowing or overriding some direct LXD controls.  In a sense, MAAS became the owner, rather than simply a separate program, communicating interdependently with LXD to accomplish user purposes.
-
-This was less than ideal.  For example, MAAS would discover all running LXD VMs and immediately commission them, essentially performing a "clean install" and wiping out their contents.  This behaviour isn't suitable when MAAS is connected to a deployed LXD with VMs already running services that may not have been targeted for enlistment by MAAS.
-
-With the release of MAAS 3.0 version, MAAS now becomes a LXD tenant, rather than an owner.
-
-<a href="#heading--maas-control-at-project-level"><h4 id="heading--maas-control-at-project-level">MAAS now controls VMs at a project level</h4></a>
-
-Essentially, MAAS still commissions any VMs it discovers within a VM host, but the scope of the discovery is now limited to a single project.  That project can contain any subset of the existing VMs, from zero to all of them.  Any VM that's already in a project assigned to MAAS will still be re-commissioned, which is the normal behaviour of MAAS upon network discovery.
-
-Here are the criteria which drove this decision:
-
-* It should be possible for an administrator to select which project(s) MAAS manages, and thus which machines will be automatically enlisted and commissioned.
-* It should be possible for MAAS to create and self-assign a new (empty) project, so that the user can compose new VMs within LXD from within the MAAS interface.
-* No per-project features should be enabled by default in MAAS-created projects.
-* The project must be explicitly specified when creating the LXD VM host.
-* When a LXD VM host is added, only the existing VMs assigned to the selected project (if any) should be visible to MAAS (and thus, automatically commissioned), and VMs in non-MAAS projects are not affected in any way.
-* When a LXD VM host is deleted, the default behaviour should be for MAAS to leave existing VMs, rather than automatically deleting them; VMs in non-MAAS projects are not affected in any way.
-* MAAS will not create VMs in projects that it doesn't own.
-* When a VM is composed in MAAS, it's created in the target LXD project.
-
-In addition, a MAAS administrator should be able to:
-
-* refresh information about a specific LXD VM host, and receive correct, up-to-date, and timely status.
-* explicitly specify connections between networks and VM interfaces.
-* deploy a machine directly as an LXD VM host, connected to MAAS from the outset.
-
-These criteria were fully met in the MAAS LXD tenant implementation released as part of MAAS 3.0.
-
-<a href="#heading--projects-big-picture"><h3 id="heading--projects-alternatives">What are some alternatives to LXD projects in MAAS?</h3></a>
-
-You can see from the discussion above that LXD projects were used primarily to cordon off some LXD VMs from MAAS, to avoid them from being enlisted and commissioned by MAAS (and thus, essentially, destroyed, from an operational perspective).  These LXD project features provide some limited capabilities to group machines. Because LXD projects only deal with LXD VMs and VM hosts, they are not a complete or comprehensive set of project tools.  MAAS already has those machine grouping capabilities in the form of [resource pools](LINKS).
-
-We realised, though, as we were working with LXD projects, that we could vastly improve the documentation for resource pools in the area of projects and project management.  You'll find significant new material in the [resource pools](LINKS) section of the doc.  We also realised that it would be helpful to have "real-time tags" for machines, that is, annotations that persist only while a machine is allocated or deployed.  These new "tags" are known as [workload annotations](LINK), and they have also been given a thorough treatment, also with their own page in the left-hand navigation.
-
-<a href="#heading--projects-justification"><h3 id="heading--projects-justification">Why did we implement LXD projects with MAAS?</h3></a>
-
-As you can infer from some of the discussion above, MAAS and LXD are separate products.  It's beneficial for them to interact, but not if one product cannot be controlled and managed independently of the other.  The combination of MAAS and LXD can cover a much broader set of use cases between them if they act as independent tools.  While the most loosely-coupled model would have MAAS selecting individual VMs, that model isn't compatible with how MAAS works with other networks and devices, so we chose to implement projects as a way to section off LXD VMs for normal use by MAAS.
-
-<a href="#heading--projects-tutorial"><h2 id="heading--projects-tutorial">Can you teach me how to use LXD projects?</h2></a>
-
 A good understanding of LXD projects is essential for those using LXD VM hosts, especially if you plan to include non-MAAS-controlled VMs in your LXD instance.  Normally, we wouldn't revisit instructions [found elsewhere](https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview), but because the discussion flows quickly and naturally into MAAS-related usage, it seemed prudent to give a light overview of some basic feature information.
 
 #### There are two avenues for learning about LXD projects:
@@ -479,7 +408,9 @@ You have several options when it comes to using LXD projects with MAAS:
 
 <a href="#heading--projects-s2-create-with-vm-host"><h4 id="heading--projects-s2-create-with-vm-host">How do I create a new project for MAAS when instantiating a VM host?</h4></a>
 
-<!-- snap-3-0-cli deb-3-0-cli
+There are two paths you can take when instantiating a VM host.  Normally, we'd separate CLI and UI via our RAD selectors, but for tutorial purposes, we'll present both methods.
+
+<a href="#heading--projects-s2-create-with-vm-host-cli"><h5 id="heading--projects-s2-create-with-vm-host-cli">Creating projects on VM instantiation with the MAAS CLI</h5></a>
 
 If you're using MAAS from the CLI, you'll want to make sure you've generated an API key and logged in before you attempt to create a VM host.  These steps are fairly simple; first, you'll need the MAAS URL, which for this example, is `http://192.168.33.91:5240/MAAS`.   You can find this URL by typing:
 
@@ -735,15 +666,12 @@ $ lxc list
 ```
 
 You'll note that, since we just created the VM host, without adding any VMs, the `keystone` project will be empty.
- snap-3-0-cli deb-3-0-cli -->
-
-<!-- snap-3-0-ui deb-3-0-ui
-
- snap-3-0-ui deb-3-0-ui -->
 
 <a href="#heading--projects-s2-create-vm-in-vm-host-project"><h4 id="heading--projects-s2-create-vm-in-vm-host-project">How do I create a new VM in the LXD project associated with a VM host -- and what happens?</h4></a>
 
-<!-- snap-3-0-cli deb-3-0-cli
+Here we present both the CLI and the UI methods for accomplishing this task.
+
+<a href="#heading--projects-s2-create-vm-in-vm-host-project-cli"><h5 id="heading--projects-s2-create-vm-in-vm-host-project-cli">Creating new VMs in a VM host project via CLI</h5></a>
 
 Let's say that you have created your VM host (called `foo`, in this case) with a new, empty project called `keystone`.  Now you want to create (that is, compose) a VM is this project.  You can accomplish this with a command similar to the following:
 
@@ -780,12 +708,6 @@ In this example, we're using the system ID returned as the `resource_uri` of the
 You can see by the several status messages that this machine was successfully commissioned, sitting now in the ready state.
 
 So from this experiment, we can see that creating (composing) a VM in a VM host causes MAAS to automatically commission the VM.
-
- snap-3-0-cli deb-3-0-cli -->
-
-<!-- snap-3-0-ui deb-3-0-ui
-
- snap-3-0-ui deb-3-0-ui -->
 
 <a href="#heading--projects-s2-move-vm-into-vm-host-project"><h4 id="heading--projects-s2-move-vm-into-vm-host-project">How do I move an existing VM into the LXD project associated with a VM host -- and what happens?</h4></a>
 
@@ -839,7 +761,6 @@ maas-support-info| 	node|	Passed|	Mon, 19 Apr. 2021 21:42:25|	0:00:01|
 
 This machine will sit in the "New" state until you assign it a power type, and enter the correct power parameters.
 
-<!-- snap-3-0-cli deb-3-0-cli
 For example, to get this new (moved) VM ready to be fully commissioned, you'll need to first find it in the machine list:
 
 ```text
@@ -848,22 +769,39 @@ maas admin machines read
   "resource_uri": "/MAAS/api/2.0/machines/r3mmsh/"
 '''
 
- snap-3-0-cli deb-3-0-cli -->
-
-<!-- snap-3-0-ui deb-3-0-ui
-
- snap-3-0-ui deb-3-0-ui -->
-
 <a href="#heading--projects-s2-delete-vm-host"><h4 id="heading--projects-s2-delete-vm-host">What happens to my new MAAS project if I delete the VM host?</h4></a>
 
 At some point, you may want to delete your MAAS VM host.  You can do so in the following way:
 
-<!-- snap-3-0-cli deb-3-0-cli
- snap-3-0-cli deb-3-0-cli -->
 
-<!-- snap-3-0-ui deb-3-0-ui
- snap-3-0-ui deb-3-0-ui -->
- 
+```bash
+maas $PROFILE vmhost delete $VM_HOST_ID
+```
+
+You can gather the $VM_HOST_ID with the command:
+
+```bash
+maas $PROFILE vmhosts read | grep "resource_uri"
+```
+
+which usually returns about three lines for each VM host:
+
+```text
+            "resource_uri": "/MAAS/api/2.0/resourcepool/0/"
+            "resource_uri": "/MAAS/api/2.0/zones/default/"
+        "resource_uri": "/MAAS/api/2.0/vm-hosts/25/"
+```
+
+The line you're interested in contains `vm-hosts`, and the $VM_HOST_ID is the terminal number, in this case, `25`.
+
+If you have more than one VM host, you can match it with a command like this, by looking at the hostname:
+
+```bash
+maas $PROFILE vmhost read $VM_HOST_ID | grep '"name"'
+```
+
+Note the use of the singular `vmhost` in this command.
+
 <a href="#heading--projects-s2-move-non-maas-items"><h4 id="heading--projects-s2-move-non-maas-items">How hard is it to move LXD entities to another project to hide them from MAAS?</h4></a>
 
 Suppose that want to use MAAS with your default LXD project, and that you have a couple of LXD entities in your default project that you don't want to use with MAAS:
@@ -966,9 +904,3 @@ $ lxc list
 ```
 
 The move succeeds this time -- with an important distinction: the compartment `upward-stallion` was `STOPPED` by `lxc` during the move.  This is an important planning consideration when you're trying to create MAAS VMs & VM hosts in an already-active LXD instantiation.  We'll cover that case in [best practices](#heading--projects-how-to), below.
-
-<a href="#heading--projects-how-to"><h2 id="heading--projects-how-to">What are the best practices for using LXD projects with MAAS?</h2></a>
-
-#### {N} procedures for using LXD projects with MAAS:
-
-<a href="#heading--projects-tech-ref"><h2 id="heading--projects-tech-ref">Where can I find relevant, detailed, reference material?</h2></a>

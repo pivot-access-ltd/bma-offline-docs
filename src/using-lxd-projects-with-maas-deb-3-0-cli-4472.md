@@ -967,7 +967,8 @@ $ lxc list
 
 The move succeeds this time -- with an important distinction: the compartment `upward-stallion` was `STOPPED` by `lxc` during the move.  This is an important planning consideration when you're trying to create MAAS VMs & VM hosts in an already-active LXD instantiation.  We'll cover that case in [best practices](#heading--projects-how-to), below.
 
-<a href="#heading--projects-how-to"><h2 id="heading--projects-how-to">What are the best practices for using LXD projects with MAAS?</h2></a>
+<a href="#heading--projects-how-to"><h2 id="heading--projects-how-to">What are the best practices for 
+using LXD projects with MAAS?</h2></a>
 
 #### {N} procedures for using LXD projects with MAAS:
 

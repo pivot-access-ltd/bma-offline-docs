@@ -9,8 +9,8 @@ This section contains a collection of tips, tricks, and traps which may help sol
 1. [Migrate an existing snap installation to use a local PostgreSQL server](#heading--migrating-maas)
 2. [Manually export the MAAS database](#heading--manual-export)
 3. [Network boot an IBM Power server](#heading--ibm-power-server-pxe-boot)
-4. [Eliminate MAAS and LXD DNS & DHCP conflicts](#heading--maas-lxd-network-conflicts)
-5. [Try jq recipes using the CLI](#heading--jq-machine-list)
+4. [Try jq recipes using the CLI](#heading--jq-machine-list)
+5. [Resolve MAAS/LXD DNS & DHCP conflicts/network issues](#heading--maas-lxd-network-conflicts)
 
 <h2 id="heading--migrating-maas">Migrating an existing snap installation</h2>
 
@@ -70,11 +70,26 @@ So, when using IBM Power servers with multiple NICs that can network boot, it's 
 
 <h2 id="heading--maas-lxd-network-conflicts">Resolve DNS conflicts between LXD and MAAS</h2>
 
-If you get into a situation where MAAS and LXD are both managing DNS on your MAAS network, there's a simple fix.  You can turn off LXD's DNS management with the following command:
+If you get into a situation where MAAS and LXD are both managing DNS on your MAAS network, there's a simple fix. You can turn off LXD's DNS management with the following command:
 
+````bash
+lxc network set $LXD_BRIDGE_NAME dns.mode=none
 ````
-lxc network set lxdbr0 dns.mode=none
+
+You should also disable DHCP on IPv4 and IPv6 withing LXD:
+
+````bash
+lxc network set $LXD_BRIDGE_NAME ipv4.dncp=false
+lxc network set $LXD_BRIDGE_NAME ipv6.dhcp=false
 ````
+
+Once you've done this, you can check your work with the following command:
+
+````bash
+lxc network show $LXD_BRIDGE_NAME
+````
+
+
 
 <h2 id="heading--jq-machine-list">jq recipes using the CLI</h2>
 

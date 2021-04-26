@@ -416,9 +416,19 @@ snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui -->
 <!-- snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui
 <h2>MAAS 2.8 release notes</h2>
 
+<h3>MAAS 2.8.6 released</h3>
+
+MAAS 2.8.6 has been released, replacing the 2.8/stable channel in snap and the ppa:maas/2.8.  You can update your 2.8 release to 2.8.6 with the command:
+
+```
+snap refresh --channel=2.8/stable
+```
+
+or by using the aforementioned PPA. 2.8.6 has [one critical bug fix](https://bugs.launchpad.net/maas/+bug/1904810), related to an inability to deploy machines with static IP addresses in MAAS 2.8. No other changes have been made to MAAS with this release.
+
 <h3>MAAS 2.8.5 released</h3>
 
-MAAS 2.8.5 has been released, replacing the 2.8/stable channel in snap and the ppa:maas/2.9.  You can update your 2.8 release to 2.8.5 with the command:
+MAAS 2.8.5 has been released, replacing the 2.8/stable channel in snap and the ppa:maas/2.8.  You can update your 2.8 release to 2.8.5 with the command:
 
 ```
 snap refresh --channel=2.8/stable
@@ -570,7 +580,18 @@ snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
 
 <h3>MAAS 3.0 BETA release notes</h3>
 
-We are happy to announce that MAAS 3.0 Beta 2 has been released. This release provides a new feature, along with [critical bug fixes](#heading--maas-3-beta-bug-fixes).
+We are happy to announce that MAAS 3.0 Beta 4 has been released. This release provides a new feature, along with [bug fixes](#heading--maas-3-beta-bug-fixes).
+
+#### Cumulative summary of new features in MAAS 3.0 Beta
+1. [PCI and USB devices are now modelled in MAAS](#heading--pci-usb-devices)
+2. [IBM Z DPM partition support](#heading--ibm-z-dpm)
+3. [Proxmox support](#heading--proxmox-support)
+4. [LXD projects support](#heading--lxd-projects-support)
+5. [PCI and USB device tabs in machine details](#heading--pci-usb-device-tabs)
+6. [Workload annotations](#heading--workload-annotations)
+7. [Fixed status bar](#heading--fixed-status-bar)
+8. [Registering a machine as a VM host during deployment](#heading--machine-register-vm-host-on-deployment)
+9. [Improvements to MAAS CLI help UX](#heading--maas-cli-ux-improved-help)
 
 <!-- deb-3-0-ui deb-3-0-cli
 The Beta can be installed by adding the `3.0-next` PPA:
@@ -611,19 +632,99 @@ NOTE that this is currently a BETA release, so there will be bugs, instabilities
 
 With the advent of MAAS 3.0, we are removing support for RSD pods.  Registered pods and their machines will be removed by MAAS upon upgrading to MAAS 3.0.
 
+<h2>New feature in MAAS 3.0 Beta 4</h2>
+
+<h3 id="heading--maas-cli-ux-improved-help">Improvements to MAAS CLI help UX</h3>
+
+The MAAS CLI will now give you help in more places, supporting a more exploration-based interaction. Specifically, we now show `help` for cases where the required arguments are not met.
+
+Say you're trying to find out how to list the details of a machine in MAAS e.g.
+
+ ```bash
+$ PROFILE=foo
+$ maas login $PROFILE http://$MY_MAAS:5240/MAAS/ $APIKEY
+$ maas $PROFILE
+usage: maas $PROFILE [-h] COMMAND ...
+
+Issue commands to the MAAS region controller at http://$MY_MAAS:5240/MAAS/api/2.0/.
+
+optional arguments:
+  -h, --help            show this help message and exit
+
+drill down:
+  COMMAND
+    account             Manage the current logged-in user.
+    bcache-cache-set    Manage bcache cache set on a machine.
+    bcache-cache-sets   Manage bcache cache sets on a machine.
+ 
+✂️--cut for brevity--✂️
+    machine             Manage an individual machine.
+    machines            Manage the collection of all the machines in the MAAS.
+    node                Manage an individual Node.
+    nodes               Manage the collection of all the nodes in the MAAS.
+✂️--cut for brevity--✂️
+
+too few arguments
+$ maas $PROFILE node 
+usage: maas $PROFILE node [-h] COMMAND ...
+
+Manage an individual Node.
+
+optional arguments:
+  -h, --help        show this help message and exit
+
+drill down:
+  COMMAND
+    details         Get system details
+    power-parameters
+                    Get power parameters
+    read            Read a node
+    delete          Delete a node
+
+The Node is identified by its system_id.
+
+too few arguments
+
+$ maas $PROFILE node read
+usage: maas $PROFILE node read [--help] [-d] [-k] system_id [data [data ...]]
+
+Read a node
+
+positional arguments:
+  system_id
+  data
+
+optional arguments:
+  --help, -h      Show this help message and exit.
+  -d, --debug     Display more information about API responses.
+  -k, --insecure  Disable SSL certificate check
+
+Reads a node with the given system_id.
+
+the following arguments are required: system_id, data
+$ maas $PROFILE node read $SYSTEM_ID
+{
+    "system_id": "$SYSTEM_ID",
+    "domain": {
+        "authoritative": true,
+        "ttl": null,
+        "is_default": true,
+        "id": 0,
+        "name": "maas",
+        "resource_record_count": 200,
+        "resource_uri": "/MAAS/api/2.0/domains/0/"
+✂️--cut for brevity--✂️
+```
+
+We can see at each stage `help` which gives us clues as to what the next step is, finally arriving at a complete CLI command.
+
 <h2>New feature in MAAS 3.0 Beta 2</h2>
+
+<h3 id="heading--machine-register-vm-host-on-deployment">Registering a machine as a VM host during deployment</h3>
 
 When deploying a machine through the API, it’s now possible to specify `register_vmhost=True` to have LXD configured on the machine and registered as a VM host in MAAS (similar to what happens with virsh if `install_kvm=True` is provided).
 
 <h2>New features in MAAS 3.0 Beta 1</h2>
-
-1. [PCI and USB devices are now modelled in MAAS](#heading--pci-usb-devices)
-2. [IBM Z DPM partition support](#heading--ibm-z-dpm)
-3. [Proxmox support](#heading--proxmox-support)
-4. [LXD projects support](#heading--lxd-projects-support)
-5. [PCI and USB device tabs in machine details](#heading--pci-usb-device-tabs)
-6. [Workload annotations](#heading--workload-annotations)
-7. [Fixed status bar](#heading--fixed-status-bar)
 
 <h3 id="heading--pci-usb-devices">PCI and USB devices are now modelled in MAAS</h3>
 
@@ -692,6 +793,47 @@ In MAAS 3.0, a fixed status bar has been added to the bottom of the screen, whic
 MAAS 3.0 incorporates a large number of bug fixes, summarized in the sections below. Please feel free to validate these fixes at your convenience and give us feedback if anything doesn't seem to work as presented in the bug request.
 
 One particular bug, [#1916860](https://bugs.launchpad.net/maas/+bug/1916860), involves failures in the IPMI cipher suite in MAAS 2.9.2 and up, on the Lenovo x3650 M5 (and others).  This particular bug is a not a MAAS bug, but a firmware issue with the subject machines.  While the MAAS team can't fix this (hence the assignment of "Won't Fix"), the team did provide a easy [workaround](https://bugs.launchpad.net/maas/+bug/1916860/comments/27) which helps circumvent this issue.
+
+<h3 id="heading--maas-3-beta-4-bug-fixes">MAAS 3.0 Beta 4 bug fixes</h3>
+
+Here are the bugs that have been `Fix Released` in MAAS 3.0 Beta 3:
+
+| Number | Description |Importance|
+|:-----|:-----|:-----:|
+|[#1923246](https://bugs.launchpad.net/bugs/1923246)|Unable to compose LXD VM with multiple NICs |High |
+|[#1918963](https://bugs.launchpad.net/bugs/1918963)|Controllers page out of sync with nodes |Undecided |
+|[#1923685](https://bugs.launchpad.net/bugs/1923685)|Unable to deploy LXD VM host on S390X |Undecided |
+|[#1923687](https://bugs.launchpad.net/bugs/1923687)|LXD VM host refresh failure is ignored |Undecided |
+|[#1774529](https://bugs.launchpad.net/bugs/1774529)|Cannot delete some instances of model 'Domain' because they are referenced through a protected foreign key |High |
+|[#1914762](https://bugs.launchpad.net/bugs/1914762)|test network configuration broken with openvswitch bridge |High |
+|[#1919001](https://bugs.launchpad.net/bugs/1919001)|Unable to network boot VM on IBM Z DPM Partition |High |
+|[#1917963](https://bugs.launchpad.net/bugs/1917963)|Add chassis lowers the case of added machines |Low |
+|[#1915087](https://bugs.launchpad.net/bugs/1915087)|2.9 UI is broken, seems to loop between user intro and machines pages endlessly |High |
+|[#1923842](https://bugs.launchpad.net/bugs/1923842)|Can't use action menu on machine details page |High |
+|[#1917667](https://bugs.launchpad.net/bugs/1917669)|Commissioning/testing scripts no longer show ETA or progress |Undecided |
+|[#1917669](https://bugs.launchpad.net/bugs/1917669)|No way to view previous commissioning or testing script results |Undecided |
+|[#1917670](https://bugs.launchpad.net/bugs/1917670)|Storage and interface tests not assoicated with a device |Undecided |
+|[#1917671](https://bugs.launchpad.net/bugs/1917671)|Commissioning/testing scripts not updated after starting commissioning or testing |Undecided |
+|[#1917794](https://bugs.launchpad.net/bugs/1917794)|Unable to view full history of events in UI |Undecided |
+|[#1918964](https://bugs.launchpad.net/bugs/1918964)|UI shows action unavailable after performing action |Undecided |
+|[#1918966](https://bugs.launchpad.net/bugs/1918966)|Tabs aren't always underscorred |Undecided |
+|[#1918971](https://bugs.launchpad.net/bugs/1918971)|UI does not autofill size on storage tab |Undecided |
+|[#1923524](https://bugs.launchpad.net/bugs/1923524)|Unable to delete LXD composed machine on KVM page |Undecided |
+
+<h3 id="heading--maas-3-beta-3-bug-fixes">MAAS 3.0 Beta 3 bug fixes</h3>
+
+Here are the bugs that have been `Fix Released` in MAAS 3.0 Beta 3:
+
+| Number | Description |Importance|
+|:-----|:-----|:-----:|
+|[#1922569](https://bugs.launchpad.net/bugs/1922569)| Create KVM fails in MAAS 3.0 Beta with a project error |High|
+|[#1923251](https://bugs.launchpad.net/bugs/1923251)| Creating an LXD VM host now requires a project name |High|
+|[#1809939](https://bugs.launchpad.net/bugs/1809939)| dhcp snippet create fail when dhcp subnet is relayed |Medium|
+|[#1913460](https://bugs.launchpad.net/bugs/1913460)| Add option to pick whether to keep or decompose machines in a VM host |Undecided|
+|[#1922787](https://bugs.launchpad.net/bugs/1922787)| make "LXD" the default VM host in MAAS UI (rather than virsh) |Undecided|
+|[#1922876](https://bugs.launchpad.net/bugs/1922876)| Deploy KVM hosts with LXD by default |Undecided|
+|[#1922972](https://bugs.launchpad.net/bugs/1922972)| MAAS 3.0 Beta2 UI says "machine cannot be deployed" while successfully deploying machine |Undecided|
+|[#1923719](https://bugs.launchpad.net/bugs/1923719)| MAAS 3.0 : snap refresh maas from 3.0.0~beta2-9826-g.13cc184d5 |Undecided|
 
 <h3 id="heading--maas-3-beta-2-bug-fixes">MAAS 3.0 Beta 2 bug fixes</h3>
 
