@@ -1010,7 +1010,7 @@ snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
 
 <h3>MAAS 3.0 BETA release notes</h3>
 
-<p>We are happy to announce that MAAS 3.0 Beta 4 has been released. This release provides a new feature, along with <a href="#heading--maas-3-beta-bug-fixes">bug fixes</a>.</p>
+<p>We are happy to announce that MAAS 3.0 Beta 5 has been released. This release provides some critical and high-priority <a href="#heading--maas-3-beta-bug-fixes">bug fixes</a>.</p>
 <h4>Cumulative summary of new features in MAAS 3.0 Beta</h4>
 <ol>
 <li><a href="#heading--pci-usb-devices">PCI and USB devices are now modelled in MAAS</a></li>
@@ -1029,7 +1029,7 @@ sudo apt update
 sudo apt install maas
 </code></pre>
 
-<p>You can then either install MAAS 3.0 Beta2 fresh (recommended) with:</p>
+<p>You can then either install MAAS 3.0 Beta5 fresh (recommended) with:</p>
 <pre><code>sudo apt-get -y install maas
 </code></pre>
 
@@ -1177,9 +1177,43 @@ $ maas $PROFILE node read $SYSTEM_ID
 
 <p>MAAS 3.0 incorporates a large number of bug fixes, summarized in the sections below. Please feel free to validate these fixes at your convenience and give us feedback if anything doesn&rsquo;t seem to work as presented in the bug request.</p>
 <p>One particular bug, <a href="https://bugs.launchpad.net/maas/+bug/1916860">#1916860</a>, involves failures in the IPMI cipher suite in MAAS 2.9.2 and up, on the Lenovo x3650 M5 (and others).  This particular bug is a not a MAAS bug, but a firmware issue with the subject machines.  While the MAAS team can&rsquo;t fix this (hence the assignment of &ldquo;Won&rsquo;t Fix&rdquo;), the team did provide a easy <a href="https://bugs.launchpad.net/maas/+bug/1916860/comments/27">workaround</a> which helps circumvent this issue.</p>
+<h3 id="heading--maas-3-beta-5-bug-fixes">MAAS 3.0 Beta 5 bug fixes</h3>
+
+<p>Here are the bugs that have been <code>Fix Released</code> in MAAS 3.0 Beta 5:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Number</th>
+<th align="left">Description</th>
+<th align="center">Importance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1925784">#1925784</a></td>
+<td align="left">Processing LXD results failure with loopback</td>
+<td align="center">Critical</td>
+</tr>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1923871">#1923871</a></td>
+<td align="left">LXD vmhost project usage includes usage for other projects</td>
+<td align="center">High</td>
+</tr>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1815084">#1815084</a></td>
+<td align="left">MAAS web ui should perform Save action when Enter/Return is pressed</td>
+<td align="center">Medium</td>
+</tr>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1923867">#1923867</a></td>
+<td align="left">Commissioning fails if NIC gets different PCI address</td>
+<td align="center">Medium</td>
+</tr>
+</tbody>
+</table>
 <h3 id="heading--maas-3-beta-4-bug-fixes">MAAS 3.0 Beta 4 bug fixes</h3>
 
-<p>Here are the bugs that have been <code>Fix Released</code> in MAAS 3.0 Beta 3:</p>
+<p>Here are the bugs that have been <code>Fix Released</code> in MAAS 3.0 Beta 4:</p>
 <table>
 <thead>
 <tr>

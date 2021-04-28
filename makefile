@@ -128,7 +128,7 @@ HTARG += $(HTML)/maas-installation.html
 HTARG += $(HTML)/maas-logging.html
 HTARG += $(HTML)/maas-project-tutorial.html
 HTARG += $(HTML)/maas-requirements.html
-HTARG += $(HTML)/maas-tags.html
+HTARG += $(HTML)/tags-and-annotations.html
 HTARG += $(HTML)/machine-logs.html
 HTARG += $(HTML)/machines.html
 HTARG += $(HTML)/managing-dhcp.html
@@ -220,7 +220,7 @@ DTARG += $(DISC)/maas-installation.md
 DTARG += $(DISC)/maas-logging.md
 DTARG += $(DISC)/maas-project-tutorial.md
 DTARG += $(DISC)/maas-requirements.md
-DTARG += $(DISC)/maas-tags.md
+DTARG += $(DISC)/tags-and-annotations.md
 DTARG += $(DISC)/machine-logs.md
 DTARG += $(DISC)/machines.md
 DTARG += $(DISC)/managing-dhcp.md
@@ -3249,79 +3249,79 @@ $(DISC)/maas-requirements.md: $(SRC)/maas-requirements.md
 ## remove reference version
 	cd $(DISC) && rm maas-requirements-snap-3-0-ui-4014.md
 
-$(DISC)/maas-tags.md: $(SRC)/maas-tags.md
-## deb 2.7 cli
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-deb-2-7-cli-2892.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-7-cli maas-tags-deb-2-7-cli-2892.md
-## deb 2.7 ui
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-deb-2-7-ui-2893.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-7-ui maas-tags-deb-2-7-ui-2893.md
-## deb 2.8 cli
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-deb-2-8-cli-2894.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-8-cli maas-tags-deb-2-8-cli-2894.md
-## deb 2.8 ui
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-deb-2-8-ui-2895.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-8-ui maas-tags-deb-2-8-ui-2895.md
-## deb 2.9 cli
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-deb-2-9-cli-2896.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-9-cli maas-tags-deb-2-9-cli-2896.md
-## deb 2.9 ui
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-deb-2-9-ui-2897.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-9-ui maas-tags-deb-2-9-ui-2897.md
-## deb 3.0 cli
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-deb-3-0-cli-4023.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-3-0-cli maas-tags-deb-3-0-cli-4023.md
-## deb 3.0 ui
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-deb-3-0-ui-4024.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-3-0-ui maas-tags-deb-3-0-ui-4024.md
-## snap 2.7 cli
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-snap-2-7-cli-2886.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-7-cli maas-tags-snap-2-7-cli-2886.md
-## snap 2.7 ui
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-snap-2-7-ui-2887.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-7-ui maas-tags-snap-2-7-ui-2887.md
-## snap 2.8 cli
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-snap-2-8-cli-2888.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-8-cli maas-tags-snap-2-8-cli-2888.md
-## snap 2.8 ui
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-snap-2-8-ui-2889.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-8-ui maas-tags-snap-2-8-ui-2889.md
-## snap 2.9 cli
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-snap-2-9-cli-2890.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-9-cli maas-tags-snap-2-9-cli-2890.md
-## snap 2.9 ui
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-snap-2-9-ui-2891.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-9-ui maas-tags-snap-2-9-ui-2891.md
-## snap 3.0 cli
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-snap-3-0-cli-4021.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-3-0-cli maas-tags-snap-3-0-cli-4021.md
-## snap 3.0 ui
-	cp $(SRC)/maas-tags.md $(MODWD)/maas-tags-snap-3-0-ui-4022.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-3-0-ui maas-tags-snap-3-0-ui-4022.md
-## pull reference version
-	cd $(DISC) &&\
-	xpub pull $(DISC) 4022 4022
-## copy reference version to discourse master
-	cd $(DISC) &&\
-	cp -p maas-tags-snap-3-0-ui-4022.md maas-tags.md
-## remove reference version
-	cd $(DISC) && rm maas-tags-snap-3-0-ui-4022.md
+# $(DISC)/tags-and-annotations.md: $(SRC)/tags-and-annotations.md
+# ## deb 2.7 cli
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-7-cli-2892.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-7-cli tags-and-annotations-deb-2-7-cli-2892.md
+# ## deb 2.7 ui
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-7-ui-2893.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-7-ui tags-and-annotations-deb-2-7-ui-2893.md
+# ## deb 2.8 cli
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-8-cli-2894.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-8-cli tags-and-annotations-deb-2-8-cli-2894.md
+# ## deb 2.8 ui
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-8-ui-2895.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-8-ui tags-and-annotations-deb-2-8-ui-2895.md
+# ## deb 2.9 cli
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-9-cli-2896.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-9-cli tags-and-annotations-deb-2-9-cli-2896.md
+# ## deb 2.9 ui
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-9-ui-2897.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-9-ui tags-and-annotations-deb-2-9-ui-2897.md
+# ## deb 3.0 cli
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-3-0-cli-4023.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-3-0-cli tags-and-annotations-deb-3-0-cli-4023.md
+# ## deb 3.0 ui
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-3-0-ui-4024.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-3-0-ui tags-and-annotations-deb-3-0-ui-4024.md
+# ## snap 2.7 cli
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-7-cli-2886.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-7-cli tags-and-annotations-snap-2-7-cli-2886.md
+# ## snap 2.7 ui
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-7-ui-2887.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-7-ui tags-and-annotations-snap-2-7-ui-2887.md
+# ## snap 2.8 cli
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-8-cli-2888.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-8-cli tags-and-annotations-snap-2-8-cli-2888.md
+# ## snap 2.8 ui
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-8-ui-2889.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-8-ui tags-and-annotations-snap-2-8-ui-2889.md
+# ## snap 2.9 cli
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-9-cli-2890.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-9-cli tags-and-annotations-snap-2-9-cli-2890.md
+# ## snap 2.9 ui
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-9-ui-2891.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-9-ui tags-and-annotations-snap-2-9-ui-2891.md
+# ## snap 3.0 cli
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-3-0-cli-4021.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-3-0-cli tags-and-annotations-snap-3-0-cli-4021.md
+# ## snap 3.0 ui
+# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-3-0-ui-4022.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-3-0-ui tags-and-annotations-snap-3-0-ui-4022.md
+# ## pull reference version
+# 	cd $(DISC) &&\
+# 	xpub pull $(DISC) 4022 4022
+# ## copy reference version to discourse master
+# 	cd $(DISC) &&\
+# 	cp -p tags-and-annotations-snap-3-0-ui-4022.md tags-and-annotations.md
+# ## remove reference version
+# 	cd $(DISC) && rm tags-and-annotations-snap-3-0-ui-4022.md
  
 $(DISC)/machine-logs.md: $(SRC)/machine-logs.md
 ## deb 2.7 cli
@@ -5267,14 +5267,34 @@ $(DISC)/user-accounts.md: $(SRC)/user-accounts.md
 	cd $(DISC) && rm user-accounts-snap-3-0-ui-4146.md
 
 $(DISC)/maas-projects.md: $(SRC)/maas-projects.md
+## copy master to discourse topic-named file
 	cp $(SRC)/maas-projects.md $(MODWD)/maas-projects-4460.md
+## push updated master to discourse
 	cd $(MODWD) &&\
 	xpub push $(DISC) maas-projects-4460.md
+## pull reference version
+	cd $(DISC) &&\
+	xpub pull $(DISC) 4460 4460
+## copy reference version to discourse master
+	cd $(DISC) &&\
+	cp -p maas-projects-4460.md maas-projects.md
+## remove reference version
+	cd $(DISC) && rm maas-projects-4460.md
 
 $(DISC)/maas-project-tutorial.md: $(SRC)/maas-project-tutorial.md
+## copy master to discourse topic-named file
 	cp $(SRC)/maas-project-tutorial.md $(MODWD)/maas-project-tutorial-4478.md
+## push updated master to discourse
 	cd $(MODWD) &&\
 	xpub push $(DISC) maas-project-tutorial-4478.md
+## pull reference version
+	cd $(DISC) &&\
+	xpub pull $(DISC) 4478 4478
+## copy reference version to discourse master
+	cd $(DISC) &&\
+	cp -p maas-project-tutorial-4478.md maas-project-tutorial.md
+## remove reference version
+	cd $(DISC) && rm maas-project-tutorial-4478.md
 
 $(DISC)/using-maas-in-an-air-gapped-environment.md: $(SRC)/using-maas-in-an-air-gapped-environment.md
 ## deb 2.7 cli

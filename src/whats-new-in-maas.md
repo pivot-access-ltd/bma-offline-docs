@@ -581,7 +581,7 @@ snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
 <!-- snap-3-0-cli snap-3-0-ui deb-3-0-cli deb-3-0-ui
 <h3>MAAS 3.0 BETA release notes</h3>
 
-We are happy to announce that MAAS 3.0 Beta 4 has been released. This release provides a new feature, along with [bug fixes](#heading--maas-3-beta-bug-fixes).
+We are happy to announce that MAAS 3.0 Beta 5 has been released. This release provides some critical and high-priority [bug fixes](#heading--maas-3-beta-bug-fixes).
 snap-3-0-cli snap-3-0-ui deb-3-0-cli deb-3-0-ui -->
 
 #### Cumulative summary of new features in MAAS 3.0 Beta
@@ -604,7 +604,7 @@ sudo apt update
 sudo apt install maas
 ```
 
-You can then either install MAAS 3.0 Beta2 fresh (recommended) with:
+You can then either install MAAS 3.0 Beta5 fresh (recommended) with:
 
 ```
 sudo apt-get -y install maas
@@ -800,9 +800,20 @@ MAAS 3.0 incorporates a large number of bug fixes, summarized in the sections be
 
 One particular bug, [#1916860](https://bugs.launchpad.net/maas/+bug/1916860), involves failures in the IPMI cipher suite in MAAS 2.9.2 and up, on the Lenovo x3650 M5 (and others).  This particular bug is a not a MAAS bug, but a firmware issue with the subject machines.  While the MAAS team can't fix this (hence the assignment of "Won't Fix"), the team did provide a easy [workaround](https://bugs.launchpad.net/maas/+bug/1916860/comments/27) which helps circumvent this issue.
 
+<h3 id="heading--maas-3-beta-5-bug-fixes">MAAS 3.0 Beta 5 bug fixes</h3>
+
+Here are the bugs that have been `Fix Released` in MAAS 3.0 Beta 5:
+
+| Number | Description |Importance|
+|:-----|:-----|:-----:|
+|[#1925784](https://bugs.launchpad.net/bugs/1925784)|Processing LXD results failure with loopback|Critical|
+|[#1923871](https://bugs.launchpad.net/bugs/1923871)|LXD vmhost project usage includes usage for other projects|High|
+|[#1815084](https://bugs.launchpad.net/bugs/1815084)|MAAS web ui should perform Save action when Enter/Return is pressed|Medium|
+|[#1923867](https://bugs.launchpad.net/bugs/1923867)|Commissioning fails if NIC gets different PCI address|Medium|
+
 <h3 id="heading--maas-3-beta-4-bug-fixes">MAAS 3.0 Beta 4 bug fixes</h3>
 
-Here are the bugs that have been `Fix Released` in MAAS 3.0 Beta 3:
+Here are the bugs that have been `Fix Released` in MAAS 3.0 Beta 4:
 
 | Number | Description |Importance|
 |:-----|:-----|:-----:|

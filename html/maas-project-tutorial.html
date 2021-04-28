@@ -450,7 +450,7 @@
 <p>We won&rsquo;t cover viewing and editing project configurations, and we won&rsquo;t address theory or give overly detailed explanations.  If you need any of that information, you should consult the <a href="https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview">LXD project documentation</a> or the <a href="https://linuxcontainers.org/lxd/">Ubuntu LXD documentation</a>.</p>
 <p><a href="#heading--projects-s1-list"><h4 id="heading--projects-s1-list">How do I list LXD projects?</h4></a></p>
 <p>Before you try to manipulate projects, it&rsquo;s useful to understand how to list them, so that you can check your results as you go.  If you&rsquo;ve successfully <a href="https://linuxcontainers.org/lxd/getting-started-cli/">installed and initialised lxd</a>, you should be able to list projects.  A basic project list can be obtained with the following command:</p>
-<pre><code class="text">lxd project list
+<pre><code class="text">lxc project list
 </code></pre>
 
 <p>You should get a listing something like this:</p>
@@ -1021,7 +1021,7 @@ $ lxc list
 <pre><code class="text">maas admin machines read wx8xcr | grep status_name
 </code></pre>
 
-<p>In this example, we&rsquo;re using the system ID returned as the <code>resource_uri</code> of the composed VM that was returned in the JSON from the <code>maas admin vmhost compose</code> command above.  We recieve output similar to the following:</p>
+<p>In this example, we&rsquo;re using the system ID returned as the <code>resource_uri</code> of the composed VM that was returned in the JSON from the <code>maas admin vmhost compose</code> command above.  We receive output similar to the following:</p>
 <pre><code class="text">    &quot;network_test_status_name&quot;: &quot;Unknown&quot;,
     &quot;testing_status_name&quot;: &quot;Passed&quot;,
     &quot;status_name&quot;: &quot;Ready&quot;,
@@ -1059,7 +1059,7 @@ $ lxc list
 +--------------+---------+------+------+-----------------+-----------+
 </code></pre>
 
-<p>We can check the status with MAAS, but we&rsquo;ll find that the machine isn&rsquo;t recognized.  If we turn it on, it will be enlisted by MAAS.  Since MAAS doesn&rsquo;t know about it yet, we need to turn it on with the following command:</p>
+<p>We can check the status with MAAS, but we&rsquo;ll find that the machine isn&rsquo;t recognised.  If we turn it on, it will be enlisted by MAAS.  Since MAAS doesn&rsquo;t know about it yet, we need to turn it on with the following command:</p>
 <pre><code class="text">lxc start trusty-drake
 </code></pre>
 

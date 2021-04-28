@@ -26,7 +26,7 @@ We won't cover viewing and editing project configurations, and we won't address 
 Before you try to manipulate projects, it's useful to understand how to list them, so that you can check your results as you go.  If you've successfully [installed and initialised lxd](https://linuxcontainers.org/lxd/getting-started-cli/), you should be able to list projects.  A basic project list can be obtained with the following command:
 
 ```text
-lxd project list
+lxc project list
 ```
 
 You should get a listing something like this:
@@ -691,7 +691,7 @@ MAAS will create (compose) the VM and immediately commission it.  You can see th
 maas admin machines read wx8xcr | grep status_name
 ```
 
-In this example, we're using the system ID returned as the `resource_uri` of the composed VM that was returned in the JSON from the `maas admin vmhost compose` command above.  We recieve output similar to the following:
+In this example, we're using the system ID returned as the `resource_uri` of the composed VM that was returned in the JSON from the `maas admin vmhost compose` command above.  We receive output similar to the following:
 
 ```text
     "network_test_status_name": "Unknown",
@@ -737,7 +737,7 @@ $ lxc list
 +--------------+---------+------+------+-----------------+-----------+
 ```
 
-We can check the status with MAAS, but we'll find that the machine isn't recognized.  If we turn it on, it will be enlisted by MAAS.  Since MAAS doesn't know about it yet, we need to turn it on with the following command:
+We can check the status with MAAS, but we'll find that the machine isn't recognised.  If we turn it on, it will be enlisted by MAAS.  Since MAAS doesn't know about it yet, we need to turn it on with the following command:
 
 ```text
 lxc start trusty-drake
