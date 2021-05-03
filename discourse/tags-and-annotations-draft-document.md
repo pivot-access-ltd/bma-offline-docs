@@ -3,31 +3,19 @@
 Snap|[CLI](/t/maas-tags-snap-2-7-cli/2886) ~ [UI](/t/maas-tags-snap-2-7-ui/2887)|[CLI](/t/maas-tags-snap-2-8-cli/2888) ~ [UI](/t/maas-tags-snap-2-8-ui/2889)|[CLI](/t/maas-tags-snap-2-9-cli/2890) ~ [UI](/t/maas-tags-snap-2-9-ui/2891)|[CLI](/t/maas-tags-snap-3-0-cli/4021) ~ [UI](/t/maas-tags-snap-3-0-ui/4022)|
 Packages|[CLI](/t/maas-tags-deb-2-7-cli/2892) ~ [UI](/t/maas-tags-deb-2-7-ui/2893)|[CLI](/t/maas-tags-deb-2-8-cli/2894) ~ [UI](/t/maas-tags-deb-2-8-ui/2895)|[CLI](/t/maas-tags-deb-2-9-cli/2896) ~ [UI](/t/maas-tags-deb-2-9-ui/2897)|[CLI](/t/maas-tags-deb-3-0-cli/4023) ~ [UI](/t/maas-tags-deb-3-0-ui/4024)|
 
-[note]
-Editorial note: i'm reading dissonance between tags in the UI and tags in the CLI.
-
-in the UI, i can set tags for machines, storage configurations (if the storage is in the available state), interfaces, and devices.
-
-in the CLI, with the tags command, i can list nodes, machines, devices, rack controllers, and region controllers by tag, but
-
- - i can't see a way to set tags for region controllers, rack controllers, devices, or "nodes."
- - i can add tags to a machine, block device, partition, VM host, or network interface.
-
-this is hard to explain to users.  i'm booking time with Lee to help sort this out, and punting until we can connect.
-[/note]
-
 Tags are a convenient way to assign descriptive words to machines, interfaces, and storage devices. Using MAAS tags, you can easily select machines that meet certain criteria, helping you to remember that you've defined or reserved certain machines for certain functions.  Annotations extend this capability considerably.  This article will tell you how to use both features.
 
-#### Eight questions you may have:
+#### Nine questions you may have:
 
-1. [What are the rules for creating a tag name?](#heading--tag-name-rules)
-2. [How do I create and assign tags?](#heading--create-a-tag)
+1. [How do I create a tag?](#heading--create-a-tag)
+2. [How do I assign a tag?](#heading--assign-a-tag)
 3. [How do I remove a tag from a node?](#heading--remove-a-tag)
 4. [How do I delete a tag?](#heading--delete-a-tag)
 5. [How do I edit a tag?](#heading--edit-a-tag)
 6. [How do I list tags?](#heading--list-tags)
 7. [How do I filter listings using tags?](#heading--filter-listings-using-tags)
 8. [How do I use tags to assign per-machine kernel boot options?](#heading--assign-per-machine-kernel-boot-options)
+9. [How do tags help me when using Juju?](#heading--tags-help-with-juju)
 <!-- commented out until fully drafted
 10. [How do I create annotations?]()
 11. [How do I remove an annotation from a node?]()
@@ -36,34 +24,9 @@ Tags are a convenient way to assign descriptive words to machines, interfaces, a
 14. [How do I view annotations?]()
  commented out until fully drafted -->
 
-<a href="#heading--tag-name-rules"><h2 id="heading--tag-name-rules">What are the rules for creating a tag name?</h2></a>
+<a href="#heading--create-a-tag"><h2 id="heading--create-a-tag">How do I create a tag?</h2></a>
 
-When creating tags, there are some universal rules that you need to follow:
-
-1. Tag names can include any combination of alphabetic letters (a-zA-Z), numbers (0-9), dashes (-) and underscores (_).
-2. Tag names can be a maximum of 256 characters in length.
-3. Tag names *cannot* include spaces.
-
-As long as you follow these three simple rules, you shouldn't have a lot of trouble creating and assigning tags.
-
-<a href="#heading--create-a-tag"><h2 id="heading--create-a-tag">How do I create and assign tags?</h2></a>
-
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
-
-With the MAAS CLI, creating and assigning tags are two distinct operations -- unlike the UI, where they are essentially part of the same operation.  On the other hand, the CLI affords more flexilibity, as it's possible to add tags to some entities and remove them from others in the same command line invocation.
-
-#### questions you may have
-
-1. [How do I create a tag?](#heading--cli-create-tag)
-2. [How do I assign a tag to a machine?](#heading--cli-assign-machine-tag)
-3. [How do I assign a tag to a block device?](#heading--cli-assign-block-device-tag)
-4. [How do I assign a tag to a partition?](#heading--cli-assign-partition-tag)
-4. [How do I assign a tag to a VM host?](#heading--cli-assign-vm-host-tag)
-5. [How do I assign a tag to a network interface?](#heading--cli-assign-interface-tag)
-6. [How do I assign a tag to a device?](#heading--cli-assign-device-tag)
-
-<a href="#heading--cli-create-tag"><h3 id="heading--cli-create-tag">How do I create a tag?</h3></a>
-
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 You can create a MAAS tag with the following command:
 
 ```bash
@@ -72,120 +35,55 @@ maas $PROFILE tags create name=$NAME
 
 This command takes the following optional parameters:
 
-* `comment`: a description of the tag in natural language free text; presumably a string that identifies how the tag will be used.
+* ```comment```: a description of the tag in natural language free text; presumably a string that identifies how the tag will be used.
 
-* `definition`: an `XPATH` query that will be evaluated against the `hardware_details` stored for all nodes, that is, the output of ```lshw -xml```; formatted as a string. Review the [explanation of XPATH bindings with tags](/t/discourse/maas-project/4460#heading--tags-and-xpath-entries) for more details about this parameter.
+* ```definition```: an `XPATH` query that will be evaluated against the ```hardware_details``` stored for all nodes, that is, the output of ```lshw -xml```; formatted as a string.
 
-* ```kernel_opts```: all nodes associated with this tag will add this string to their kernel options when booting.  This value overrides the global ```kernel_opts``` setting.  If more than one associated tag has attached kernel options, all the applied options will be concatenated for the machine, in alphabetical order.  Review the [explanation of per-machine kernel boot options](/t/discourse/maas-project/4460#heading--tags-and-kernel-boot-options), or see the section on [per-machine kernel boot options](#heading--assign-per-machine-kernel-boot-options) for more detailed instructions about using this parameter.
+* ```kernel_opts```: all nodes associated with this tag will add this string to their kernel options when booting.  This value overrides the global ```kernel_opts``` setting.  If more than one associated tag has attached kernel options, all the applied options will be concatenated for the machine, in alphabetical order.  See the section on [per-machine kernel options](#heading--assign-per-machine-kernel-boot-options) for more detailed instructions about using this parameter.
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
 
-<a href="#heading--cli-assign-machine-tag"><h3 id="heading--cli-assign-machine-tag">How do I assign a tag to a machine?</h3></a>
-
-If you want to assign a tag, you can do so with this CLI command:
-
-```
-maas $PROFILE tag update-nodes $TAG_NAME key=$VALUE
-```
-
-The various key-value pairs are somewhat optional, although at least one `add=$SYSTEM_ID` or `remove=$SYSTEM_ID` follow the `$TAG_NAME` in this command.  The possible key-value pairs are as follows:
-
-* `add=$SYSTEM_ID`: this pair causes MAAS to add $TAG_NAME to the machine $SYSTEM_ID.  You can use as many of these key-value pairs as needed, so it's possible to tag many machines at once with a single command-line invocation.
-
-* `remove=$SYSTEM_ID`: this pair causes MAAS to remove $TAG_NAME from the machine $SYSTEM_ID.  You can use as many of these key-value pairs as needed, so it's possible to remove tags from many machines at once with a single command-line invocation.
-
-[note]
-Note that both "add" and "remove" key-value pairs can be combined in a single command-line invocation, so it's possible to add and remove tags from various machines, at the same time, in a single command.
-[/note]
-
-* `definition=$XPATH_EXPRESSION`: If given, the entered XPATH expression will be validated against the current definition of the tag.  If the value does not match, MAAS assumes the worker is out of date and will not do the update.
-
-* 'rack_controller=$SYSTEM_ID`: If given, the system ID of the rack controller that processed the given tag initially is used, requiring that the requester be the rack controller.  If not given, the requester must be a MAAS admin.
-
-For example, to assign a *existing* tag named "new-tag" to a machine with system ID "xmprry," the following command would be executed:
-
-```
-maas admin tag update-nodes new-tag add=xmprry
-```
-
-A successful result should look like this:
-
-```
-Success.
-Machine-readable output follows:
-{
-    "added": 1,
-    "removed": 0
-}
-```
-
-If you try to assign a tag that hasn't been created yet, you'll get a "Not Found" error message.  For example:
-
-```
-maas admin tag update-nodes revolution add=dtanap
-Not Found
-```
-
-<a href="#heading--cli-assign-block-device-tag"><h3 id="heading--cli-assign-block-device-tag">How do I assign a tag to a block device?</h3></a>
-
-
-<a href="#heading--cli-assign-partition-tag"><h3 id="heading--cli-assign-partition-tag">How do I assign a tag to a partition?</h3></a>
-
-<a href="#heading--cli-assign-vm-host-tag"><h3 id="heading--cli-assign-vm-host-tag">How do I assign a tag to a machine?</h3></a>
-
-<a href="#heading--cli-assign-interface-tag"><h3 id="heading--cli-assign-interface-tag">How do I assign a tag to a network interface?</h3></a>
-
-<a href="#heading--remove-a-tag"><h2 id="heading--remove-a-tag">How do I remove a tag from a node?</h2></a>
-
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
-
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 There are several types of tags available to create (and simultaneously assign) via the MAAS UI.  These include machine tags, storage configuration tags, network interface tags, and device tags.  The following section will provide instructions on how you can assign these various tags in your MAAS instance.
 
-#### Five questions you may have
+#### Four questions you may have
 
-1. [How do I create and assign any tag, in general?](#heading--create-assign-tag-general)
-2. [How do I create and assign a tag to a machine?](#heading--create-assign-machine-tag)
-3. [How do I create and assign a tag to a storage configuration?](#heading--create-assign-storage-tag)
-4. [How do I create and assign a tag to a network interface?](#heading--create-assign-interface-tag)
-5. [How do I create and assign a tag to a device?](#heading--create-assign-device-tag)
-
-<a href="#heading--create-assign-tag-general"><h2 id="heading--create-assign-tag-general">How do I create and assign any tag, in general?</h2></a>
-
-1. Place the cursor in the "Tags" box, wherever it is located on the screen, and type the name of the new tag:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/7/7be5f2bebbba9a09f70a7dea092d091ef45228e2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/7be5f2bebbba9a09f70a7dea092d091ef45228e2.png"></a>
-
-Note that tag names can include any combination of alphabetic letters (a-zA-Z), numbers (0-9), dashes (-) and underscores (_), and be a maximum of 256 characters in length. Note that tag names <b>cannot</b> include spaces. A dropdown autocomplete menu appears when you enter this box, and narrows down the autocomplete list as you type.
-
-2. Hit the return key to add the new tag:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png"></a>
-
-Note that the autocomplete list will re-appear after you've entered the tag, in case you'd like to enter another tag.
-
-3. When you're done, click on the appropriate completion button to complete the operation.
-
-Note that the tag you just entered will now be added to the tag autocomplete list, in alphabetical order, for re-use with other machines.
-
-<a href="#heading--create-another-tag"><h3 id="heading--create-another-tag">Adding a tag by selecting an existing one</h3></a>
-
-If you start typing in the "Tags" box, and you see either (1) that the tag you want is already created, or (2) that you'd prefer to apply one that's already been created, just click on that tag to add it to the current machine.
-
-You can assign as many tags as you want, as long as they conform to the [tag name rules](#heading--tag-name-rules).  Don't forget to click on the completion button to complete the operation.  
+* [How do I create and assign a tag to a machine?](#heading--create-assign-machine-tag)
+* [How do I create and assign a tag to a storage configuration?](#heading--create-assign-storage-tag)
+* [How do I create and assign a tag to a network interface?](#heading--create-assign-interface-tag)
+* [How do I create and assign a tag to a device?](#heading--create-assign-device-tag)
 
 <a href="#heading--create-assign-machine-tag"><h2 id="heading--create-assign-machine-tag">How do I create and assign a tag to a machine?</h2></a>
 
 If you want to create a new tag, and simultaneously assign it to a machine, use the following steps:
 
-1. Go to the machine list and select the machine you're interested in modifying, by checking the box next to the machine name:
+##### Go to the machine list and select the machine you're interested in modifying, by checking the box next to the machine name:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/86ee8529206fcfa297865198a55b976e1002b6bf.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/86ee8529206fcfa297865198a55b976e1002b6bf.png"></a>
 
-2. Select the "Take action" dropdown menu and select "Tag":
+##### Select the "Take action" dropdown menu and select "Tag":
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/f77f19b7aef9f880c12a4d710b91cc3abdc03154.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f77f19b7aef9f880c12a4d710b91cc3abdc03154.png"></a>
 
-3. Create and/or assign the desired tag, as described in the [general tagging procedure](#heading--create-assign-tag-general) above.
+##### Place the cursor in the "Tags" box at the top of the screen, and type the name of the new tag:
 
-4. Don't forget to hit the "Tag machine" button when you're done, to apply your changes to the machine.
+<a href="https://discourse.maas.io/uploads/default/original/2X/7/7be5f2bebbba9a09f70a7dea092d091ef45228e2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/7be5f2bebbba9a09f70a7dea092d091ef45228e2.png"></a>
+
+Note that a dropdown autocomplete menu appears when you enter this box, and narrows down the autocomplete list as you type.
+
+##### Hit the return key to add the new tag:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/3/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png"></a>
+
+Note that the autocomplete list will re-appear after you've entered the tag, in case you'd like to enter another tag.
+
+##### When you're done, simply click on the "Tag machine" button to complete the operation.
+
+Note that the tag you just entered will now be added to the tag autocomplete list, in alphabetical order, for re-use with other machines.
+
+<a href="#heading--create-another-tag"><h3 id="heading--create-another-tag">Adding a tag by selecting an existing one</h3></a>
+
+
+If you start typing in the "Tags" box, and you see either (1) that the tag you want is already created, or (2) that you'd prefer to apply one that's already been created, just click on that tag to add it to the current machine.  Don't forget to click on "Tag machine" to complete the operation.
 
 <a href="#heading--tag-multiple-machines"><h3 id="heading--tag-multiple-machines">Tagging multiple machines at once</h3></a>
 
@@ -201,98 +99,24 @@ Other than the scope of the transaction (e.g., tagging three machines, in this c
 
 <a href="#heading--create-assign-storage-tag"><h2 id="heading--create-assign-storage-tag">How do I create and assign a tag to a storage configuration?</h2></a>
 
-If you want to assign a tag to a storage configuration, follow this process:
-
-1. Go to the machine listing and click on the name of the machine -- the one that contains the storage configuration that you want to tag:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png"></a>
-
-2. Select the "Storage" tab in the individual machine listing:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png"></a>
-
-3. Look for the section labeled "Available disks and partitions" (if there isn't one, you can't assign any storage tags for this machine):
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png"></a>
-
-4. For an individual logical volume or physical disk, choose the dropdown under "ACTIONS" on the end of the correct row, and select the relevant "Edit..." choice:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png"></a>
-
-Note that you can't add tags to volume groups or other storage collections.
-
-5.  In the dialog which pops up, enter the desired tags in the Tags field, as described in the [general tagging procedure](#heading--create-assign-tag-general) above.
-
-You can assign as many tags as you want, within the constraints that tag names can include any combination of alphabetic letters (a-zA-Z), numbers (0-9), dashes (-) and underscores (_); can be a maximum of 256 characters in length; and <b>cannot</b> include spaces.
-
-6. When you're done, be sure to click the "Save" button to apply your changes to the machine.
-
 <a href="#heading--create-assign-interface-tag"><h2 id="heading--create-assign-interface-tag">How do I create and assign a tag to a network interface?</h2></a>
-
-To assign a tag to a network interface, use the following procedure:
-
-1. Go to the machine list and select the machine where that interface resides, by clicking on that machine's name:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png"></a>
-
-2. Click on the "Network" tab:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/9aebbe5708683d937c682e64e22c72d537629cf8.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9aebbe5708683d937c682e64e22c72d537629cf8.png"></a>
-
-3. Choose the interface you'd like to tag, by select the checkbox next to its name:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png"></a>
-
-The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
-
-4. Select the dropdown under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png"></a>
-
-5. Edit the "Tags" field as desired, as described in the [general tagging procedure](#heading--create-assign-tag-general) above.
-
-6. Be sure to select the "Tag machine" button to apply your changes to the interface for that machine.
-
-Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next -- so autocomplete menus will be sparse or non-existent most of the time for these tag types.
 
 <a href="#heading--create-assign-device-tag"><h2 id="heading--create-assign-device-tag">How do I create and assign a tag to a device?</h2></a>
 
-To add a tag to a device, follow this procedure:
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
 
-1. Select the "Devices" tab; it may be in a dropdown labeled "Hardware," if your browser window is not very large:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/22b17d4827f82c103e958205011ca13934fe2f3f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/22b17d4827f82c103e958205011ca13934fe2f3f.png"></a>
-
-2. Select the device you'd like to tag, by clicking on its name:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/94717b99a4cea205099e3fdfd492daefe683e68d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/94717b99a4cea205099e3fdfd492daefe683e68d.png"></a>
-
-3. In the "Tags" card, select the "Edit" link, or choose the "Configuration" tab under the device name:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/901e7bd556f26560e44b4b74c41b506399e86375.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/901e7bd556f26560e44b4b74c41b506399e86375.png"></a>
-
-4. Select the "Edit" button on the "Configuration" tab which comes up:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/d80039410bfeba4b6feb35490ccf82b3be80904f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d80039410bfeba4b6feb35490ccf82b3be80904f.png"></a>
-
-5. Edit the "Tags" field, as explained in the [general tagging procedure](#heading--create-assign-tag-general) above.
-
-6. Be sure to hit the "Save changes" button to apply your changes to the device.
-
+<a href="#heading--assign-a-tag"><h2 id="heading--assign-a-tag">How do I assign a tag?</h2></a>
 <a href="#heading--remove-a-tag"><h2 id="heading--remove-a-tag">How do I remove a tag from a node?</h2></a>
-
-
-
 <a href="#heading--delete-a-tag"><h2 id="heading--delete-a-tag">How do I delete a tag?</h2></a>
-
 <a href="#heading--edit-a-tag"><h2 id="heading--edit-a-tag">How do I edit a tag?</h2></a>
-
 <a href="#heading--list-tags"><h2 id="heading--list-tags">How do I list tags?</h2></a>
-
 <a href="#heading--filter-listings-using-tags"><h2 id="heading--filter-listings-using-tags">How do I filter listings using tags?</h2></a>
-
 <a href="#heading--assign-per-machine-kernel-boot-options"><h2 id="heading--assign-per-machine-kernel-boot-options">How do I use tags to assign per-machine kernel boot options?</h2></a>
+<a href="#heading--tags-help-with-juju"><h2 id="heading--tags-help-with-juju">How do tags help me when using Juju?</h2></a>
 
+[note]
+ Tag names can include any combination of letters, numbers, dashes (-) and underscores (_), and be a maximum of 256 characters in length.
+[/note]
 
 #### Five questions you may have:
 
@@ -335,13 +159,17 @@ To add a tag to a device, follow this procedure:
 5. [How do I manage tags?](#heading--tag-management)
  snap-2-8-ui -->
 
+<!-- snap-2-9-ui
 1. [How are tags defined?](#heading--tag-definitions)
 2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-snap-2-9-cli/2890#heading--per-node-kernel-boot-options)
 3. [How can I see and filter the tag list?](#heading--tag-listing-and-tags-as-search-filters)
 4. [How do I see and change which tags are assigned?](#heading--tag-assignment)
 5. [How do I manage tags?](#heading--tag-management)
+ snap-2-9-ui -->
 
 MAAS supports binding an XPath expressions to a tag using *tag definitions* (see below). This makes auto-assigning tags to matching hardware possible. For instance, you could tag machines that possess fast GPUs and then deploy software that used GPU-accelerated CUDA or OpenCL libraries.
+
+Because [Juju](https://jujucharms.com/docs/stable/about-juju.html) is the recommended way to deploy services on machines managed by MAAS (see [below](#heading--tag-management)), it supports MAAS tags for application deployments. By specifying MAAS tags as Juju "constraints", services can be deployed to machines that have particular user-defined characteristics.
 
 <a href="#heading--tag-definitions"><h2 id="heading--tag-definitions">Tag definitions</h2></a>
 

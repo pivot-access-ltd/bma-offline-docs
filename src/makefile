@@ -30,3 +30,11 @@
 #	rm using-lxd-projects-with-maas-deb-3-0-ui-4473.md
 #	chmod 444 originals/*
 
+# originals/tags-and-annotations-draft-document-4500.md: tags-and-annotations.md
+#	chmod 644 originals/*
+#	cp tags-and-annotations.md tags-and-annotations-draft-document-4500.md
+#	xpub pull discourse 4500 4500
+#	cp -p tags-and-annotations-draft-document-4500.md originals
+#	rm tags-and-annotations-draft-document-4500.md
+#	chmod 444 originals/*
+

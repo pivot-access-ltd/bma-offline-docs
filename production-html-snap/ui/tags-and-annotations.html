@@ -430,7 +430,84 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>Tags and annotations</h1><p>||2.7|2.8|2.9|3.0|</p>
-<p>Tags are a convenient way to assign descriptive words to machines, interfaces, and storage devices. Using MAAS tags, you can easily select machines that meet certain criteria, helping you to remember that you&rsquo;ve defined or reserved certain machines for certain functions. </p>
+<p>Tags are a convenient way to assign descriptive words to machines, interfaces, and storage devices. Using MAAS tags, you can easily select machines that meet certain criteria, helping you to remember that you&rsquo;ve defined or reserved certain machines for certain functions.  Annotations extend this capability considerably.  This article will tell you how to use both features.</p>
+<h4>Nine questions you may have:</h4>
+<ol>
+<li><a href="#heading--create-a-tag">How do I create a tag?</a></li>
+<li><a href="#heading--assign-a-tag">How do I assign a tag?</a></li>
+<li><a href="#heading--remove-a-tag">How do I remove a tag from a node?</a></li>
+<li><a href="#heading--delete-a-tag">How do I delete a tag?</a></li>
+<li><a href="#heading--edit-a-tag">How do I edit a tag?</a></li>
+<li><a href="#heading--list-tags">How do I list tags?</a></li>
+<li><a href="#heading--filter-listings-using-tags">How do I filter listings using tags?</a></li>
+<li><a href="#heading--assign-per-machine-kernel-boot-options">How do I use tags to assign per-machine kernel boot options?</a></li>
+<li><a href="#heading--tags-help-with-juju">How do tags help me when using Juju?</a>
+&lt;!&ndash; commented out until fully drafted</li>
+<li><a href="">How do I create annotations?</a></li>
+<li><a href="">How do I remove an annotation from a node?</a></li>
+<li><a href="">How do I delete an annotation?</a></li>
+<li><a href="">How do I edit an annotation?</a></li>
+<li><a href="">How do I view annotations?</a>
+ commented out until fully drafted &ndash;&gt;</li>
+</ol>
+<p><a href="#heading--create-a-tag"><h2 id="heading--create-a-tag">How do I create a tag?</h2></a></p>
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+You can create a MAAS tag with the following command:
+
+<pre><code class="bash">maas $PROFILE tags create name=$NAME
+</code></pre>
+
+
+This command takes the following optional parameters:
+
+* `comment`: a description of the tag in natural language free text; presumably a string that identifies how the tag will be used.
+
+* `definition`: an `XPATH` query that will be evaluated against the `hardware_details` stored for all nodes, that is, the output of ```lshw -xml```; formatted as a string. Review the [explanation of XPATH bindings with tags](discourse.htmlmaas-project/4460#heading--tags-and-xpath-entries) for more details about this parameter.
+
+* ```kernel_opts```: all nodes associated with this tag will add this string to their kernel options when booting.  This value overrides the global ```kernel_opts``` setting.  If more than one associated tag has attached kernel options, all the applied options will be concatenated for the machine, in alphabetical order.  Review the [explanation of per-machine kernel boot options](discourse.htmlmaas-project/4460#heading--tags-and-kernel-boot-options), or see the section on [per-machine kernel boot options](#heading--assign-per-machine-kernel-boot-options) for more detailed instructions about using this parameter.
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+
+<p>There are several types of tags available to create (and simultaneously assign) via the MAAS UI.  These include machine tags, storage configuration tags, network interface tags, and device tags.  The following section will provide instructions on how you can assign these various tags in your MAAS instance.</p>
+<h4>Four questions you may have</h4>
+<ul>
+<li><a href="#heading--create-assign-machine-tag">How do I create and assign a tag to a machine?</a></li>
+<li><a href="#heading--create-assign-storage-tag">How do I create and assign a tag to a storage configuration?</a></li>
+<li><a href="#heading--create-assign-interface-tag">How do I create and assign a tag to a network interface?</a></li>
+<li><a href="#heading--create-assign-device-tag">How do I create and assign a tag to a device?</a></li>
+</ul>
+<p><a href="#heading--create-assign-machine-tag"><h2 id="heading--create-assign-machine-tag">How do I create and assign a tag to a machine?</h2></a></p>
+<p>If you want to create a new tag, and simultaneously assign it to a machine, use the following steps:</p>
+<h5>Go to the machine list and select the machine you&rsquo;re interested in modifying, by checking the box next to the machine name:</h5>
+<p><a href="images/86ee8529206fcfa297865198a55b976e1002b6bf.png" target = "_blank"><img src="images/86ee8529206fcfa297865198a55b976e1002b6bf.png"></a></a></p>
+<h5>Select the &ldquo;Take action&rdquo; dropdown menu and select &ldquo;Tag&rdquo;:</h5>
+<p><a href="images/f77f19b7aef9f880c12a4d710b91cc3abdc03154.png" target = "_blank"><img src="images/f77f19b7aef9f880c12a4d710b91cc3abdc03154.png"></a></a></p>
+<h5>Place the cursor in the &ldquo;Tags&rdquo; box at the top of the screen, and type the name of the new tag:</h5>
+<p><a href="images/7be5f2bebbba9a09f70a7dea092d091ef45228e2.png" target = "_blank"><img src="images/7be5f2bebbba9a09f70a7dea092d091ef45228e2.png"></a></a></p>
+<p>Note that a dropdown autocomplete menu appears when you enter this box, and narrows down the autocomplete list as you type.</p>
+<h5>Hit the return key to add the new tag:</h5>
+<p><a href="images/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png" target = "_blank"><img src="images/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png"></a></a></p>
+<p>Note that the autocomplete list will re-appear after you&rsquo;ve entered the tag, in case you&rsquo;d like to enter another tag.</p>
+<h5>When you&rsquo;re done, simply click on the &ldquo;Tag machine&rdquo; button to complete the operation.</h5>
+<p>Note that the tag you just entered will now be added to the tag autocomplete list, in alphabetical order, for re-use with other machines.</p>
+<p><a href="#heading--create-another-tag"><h3 id="heading--create-another-tag">Adding a tag by selecting an existing one</h3></a></p>
+<p>If you start typing in the &ldquo;Tags&rdquo; box, and you see either (1) that the tag you want is already created, or (2) that you&rsquo;d prefer to apply one that&rsquo;s already been created, just click on that tag to add it to the current machine.  Don&rsquo;t forget to click on &ldquo;Tag machine&rdquo; to complete the operation.</p>
+<p><a href="#heading--tag-multiple-machines"><h3 id="heading--tag-multiple-machines">Tagging multiple machines at once</h3></a></p>
+<p>In the first step of the above procedure, you can select more than one machine:</p>
+<p><a href="images/0c04973e76012c780035a4ea11a588f341148445.png" target = "_blank"><img src="images/0c04973e76012c780035a4ea11a588f341148445.png"></a></a></p>
+<p>Any tags you add in the &ldquo;Tags&rdquo; box will be applied to all selected machines, as noted by the change in the &ldquo;Tag machine&rdquo; button:</p>
+<p><a href="images/a503261eb7faa17478b09aa70f48f838b4b0fb87.png" target = "_blank"><img src="images/a503261eb7faa17478b09aa70f48f838b4b0fb87.png"></a></a></p>
+<p>Other than the scope of the transaction (e.g., tagging three machines, in this case), everything else about this operation remains the same as that for one tag, above.</p>
+<p><a href="#heading--create-assign-storage-tag"><h2 id="heading--create-assign-storage-tag">How do I create and assign a tag to a storage configuration?</h2></a></p>
+<p><a href="#heading--create-assign-interface-tag"><h2 id="heading--create-assign-interface-tag">How do I create and assign a tag to a network interface?</h2></a></p>
+<p><a href="#heading--create-assign-device-tag"><h2 id="heading--create-assign-device-tag">How do I create and assign a tag to a device?</h2></a></p>
+<p><a href="#heading--assign-a-tag"><h2 id="heading--assign-a-tag">How do I assign a tag?</h2></a>
+<a href="#heading--remove-a-tag"><h2 id="heading--remove-a-tag">How do I remove a tag from a node?</h2></a>
+<a href="#heading--delete-a-tag"><h2 id="heading--delete-a-tag">How do I delete a tag?</h2></a>
+<a href="#heading--edit-a-tag"><h2 id="heading--edit-a-tag">How do I edit a tag?</h2></a>
+<a href="#heading--list-tags"><h2 id="heading--list-tags">How do I list tags?</h2></a>
+<a href="#heading--filter-listings-using-tags"><h2 id="heading--filter-listings-using-tags">How do I filter listings using tags?</h2></a>
+<a href="#heading--assign-per-machine-kernel-boot-options"><h2 id="heading--assign-per-machine-kernel-boot-options">How do I use tags to assign per-machine kernel boot options?</h2></a>
+<a href="#heading--tags-help-with-juju"><h2 id="heading--tags-help-with-juju">How do tags help me when using Juju?</h2></a></p>
 <p><strong>NOTE:</strong> 
  Tag names can include any combination of letters, numbers, dashes (-) and underscores (_), and be a maximum of 256 characters in length.</p>
 <h4>Five questions you may have:</h4>

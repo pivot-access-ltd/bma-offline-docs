@@ -39,46 +39,6 @@ Because [Juju](https://jujucharms.com/docs/stable/about-juju.html) is the recomm
 
 <a href="#heading--tag-definitions"><h2 id="heading--tag-definitions">Tag definitions</h2></a>
 
-A *tag definition* is the criteria by which machines are auto-labelled by the corresponding tag. During machine enlistment, MAAS collects hardware information (using the [lshw](http://ezix.org/project/wiki/HardwareLiSter) utility). The definition used in creating a tag is then constructed using an *XPath expression* based on that information. See [w3schools documentation](https://www.w3schools.com/xml/xpath_intro.asp) for details on XPath.
-
-The collected data for each machine, viewable (in both XML and YAML) in the web UI, is inspected by you for the desired property. Building on the example alluded to above, a property can be a GPU with a clock speed greater than 1GHz. In this case, the following excerpt from a machine's data (in XML format) is pertinent:
-
-``` nohighlight
-      <lshw:node id="display" class="display" handle="PCI:0000:00:02.0">
-       <lshw:description>VGA compatible controller</lshw:description>
-       <lshw:product>GD 5446</lshw:product>
-       <lshw:vendor>Cirrus Logic</lshw:vendor>
-       <lshw:physid>2</lshw:physid>
-       <lshw:businfo>pci@0000:00:02.0</lshw:businfo>
-       <lshw:version>00</lshw:version>
-       <lshw:width units="bits">32</lshw:width>
-       <lshw:clock units="Hz">33000000</lshw:clock>
-       <lshw:configuration>
-        <lshw:setting id="latency" value="0"/>
-       </lshw:configuration>
-       <lshw:capabilities>
-        <lshw:capability id="vga_controller"/>
-       </lshw:capabilities>
-       <lshw:resources>
-        <lshw:resource type="memory" value="fc000000-fdffffff"/>
-        <lshw:resource type="memory" value="febd0000-febd0fff"/>
-        <lshw:resource type="memory" value="febc0000-febcffff"/>
-       </lshw:resources>
-      </lshw:node>
-```
-
-MAAS machines will be selected based on these four XPath *predicates*:
-
-1.   *element* of 'node'
-2.   with an *attribute* of 'id'
-3.   whose *value* is 'display'
-4.   and has a *child element* of 'clock units="Hz"'
-
-After adding the speed criteria via an XPath *operator* we end up with this as our tag definition:
-
-``` nohighlight
-//node[@id="display"]/'clock units="Hz"' > 1000000000
-```
 
 <!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui
 <a href="#heading--tag-listing-and-tags-as-search-filters"><h2 id="heading--tag-listing-and-tags-as-search-filters">Tag listing and tags as search filters</h2></a>
@@ -275,11 +235,6 @@ maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
 
 <a href="#heading--per-node-kernel-boot-options"><h2 id="heading--per-node-kernel-boot-options">Per-machine kernel boot options</h2></a>
 
-Per-machine kernel boot options are set using the CLI.
-
-[note]
-Per-machine boot options take precedence to global ones. Please also note that, even though a deployed machine has a `kernel_opt` tag applied, MAAS won't apply the `kernel_opt` associated with that tag until the next deployment.  This means that a machine that has been deployed for a long time can (possibly) inherit kernel options that were applied in the distant past.
-[/note]
 
 To specify kernel boot options for an individual machine, first create a tag:
 
@@ -301,6 +256,5 @@ Next, assign the tag to the machine in question:
 maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
 ```
 
-If multiple tags attached to a machine have the `kernel_opts` defined, MAAS uses the first one found, in alphabetical order.
 
 

@@ -10,7 +10,7 @@ This article will provide a technical explanation of projects and how they fit i
 
 [What are the characteristics of a project, in this context?](#heading--projects)
 [What are resource pools, and how do they work?](#heading--resource-pools)
-[What are tags, and how to they work?](#heading--tags)
+[What are tags, and how do they work?](#heading--tags)
 [What are workload annotations, and how do they work?](#heading--wla)
 [What are static annotations (notes), and how do they work?](#heading--notes)
 [What are LXD projects, and how do they work?](#heading--lxd-projects)
@@ -48,6 +48,59 @@ Resource pools are used to budget machines in whatever way makes sense to your o
 Tags are short, descriptive, persistent labels that have a many-to-many relationship to machines.  Any tag can be assigned to any machine at any time.  Tags are similar to resource pools, in that they persist until changed or removed, but they differ in that they are intentionally short and have no ancillary description to explain their purpose.
 
 Tags also differ from resource pools because they can be applied not just to machines, but also to interfaces and storage devices.  Like resource pools, tags can be used to filter views and action selections.  Tags are generally useful in representing metadata, that is, characteristics of the machine that might be important to some of your resource pools, but not unique.  For example, typical tags might include "in-the-clinic," "has_printer," or "requiresHardwareKey."  The possibilities are limited only by your imagination and needs.
+
+<a href="#heading--tags-and-kernel-boot-options"><h3 id="heading--tags-and-kernel-boot-options">Tags can carry kernel options</h3></a>
+
+Per-machine kernel boot options can be set, via tags, using the CLI. Per-machine boot options take precedence to global ones. Please also note that, even though a deployed machine has a `kernel_opt` tag applied, MAAS won't apply the `kernel_opt` associated with that tag until the next deployment.  This means that a machine that has been deployed for a long time can (possibly) inherit kernel options that were applied in the distant past.  If multiple tags attached to a machine have the `kernel_opts` defined, MAAS uses the first one found, in alphabetical order.
+
+<a href="#heading--tags-and-xpath-entries"><h3 id="heading--tags-and-xpath-entries">Tags can bind XPATH entries</h3></a>
+
+MAAS supports binding an XPath expressions to a tag using *tag definitions* (see below). This makes auto-assigning tags to matching hardware possible. For instance, you could tag machines that possess fast GPUs and then deploy software that used GPU-accelerated CUDA or OpenCL libraries.
+
+A *tag definition* is the criteria by which machines are auto-labelled by the corresponding tag. During machine enlistment, MAAS collects hardware information (using the [lshw](http://ezix.org/project/wiki/HardwareLiSter) utility). The definition used in creating a tag is then constructed using an *XPath expression* based on that information. See [w3schools documentation](https://www.w3schools.com/xml/xpath_intro.asp) for details on XPath.
+
+The collected data for each machine, viewable (in both XML and YAML) in the web UI, is inspected by you for the desired property. Building on the example alluded to above, a property can be a GPU with a clock speed greater than 1GHz. In this case, the following excerpt from a machine's data (in XML format) is pertinent:
+
+``` nohighlight
+      <lshw:node id="display" class="display" handle="PCI:0000:00:02.0">
+       <lshw:description>VGA compatible controller</lshw:description>
+       <lshw:product>GD 5446</lshw:product>
+       <lshw:vendor>Cirrus Logic</lshw:vendor>
+       <lshw:physid>2</lshw:physid>
+       <lshw:businfo>pci@0000:00:02.0</lshw:businfo>
+       <lshw:version>00</lshw:version>
+       <lshw:width units="bits">32</lshw:width>
+       <lshw:clock units="Hz">33000000</lshw:clock>
+       <lshw:configuration>
+        <lshw:setting id="latency" value="0"/>
+       </lshw:configuration>
+       <lshw:capabilities>
+        <lshw:capability id="vga_controller"/>
+       </lshw:capabilities>
+       <lshw:resources>
+        <lshw:resource type="memory" value="fc000000-fdffffff"/>
+        <lshw:resource type="memory" value="febd0000-febd0fff"/>
+        <lshw:resource type="memory" value="febc0000-febcffff"/>
+       </lshw:resources>
+      </lshw:node>
+```
+
+MAAS machines will be selected based on these four XPath *predicates*:
+
+1.   *element* of 'node'
+2.   with an *attribute* of 'id'
+3.   whose *value* is 'display'
+4.   and has a *child element* of 'clock units="Hz"'
+
+After adding the speed criteria via an XPath *operator* we end up with this as our tag definition:
+
+``` nohighlight
+//node[@id="display"]/'clock units="Hz"' > 1000000000
+```
+
+<a href="#heading--tags-and-juju"><h3 id="heading--tags-and-juju">Juju support for tags</h3></a>
+
+Because Juju is the recommended way to deploy services on machines managed by MAAS, it supports MAAS tags for application deployments. By specifying MAAS tags as Juju “constraints”, services can be deployed to machines that have particular user-defined characteristics.
 
 <a href="#heading--wla"><h2 id="heading--wla">Workload annotations</h2></a>
 

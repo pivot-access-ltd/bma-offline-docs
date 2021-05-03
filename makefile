@@ -128,7 +128,7 @@ HTARG += $(HTML)/maas-installation.html
 HTARG += $(HTML)/maas-logging.html
 HTARG += $(HTML)/maas-project-tutorial.html
 HTARG += $(HTML)/maas-requirements.html
-HTARG += $(HTML)/tags-and-annotations.html
+# HTARG += $(HTML)/tags-and-annotations.html
 HTARG += $(HTML)/machine-logs.html
 HTARG += $(HTML)/machines.html
 HTARG += $(HTML)/managing-dhcp.html
@@ -220,7 +220,6 @@ DTARG += $(DISC)/maas-installation.md
 DTARG += $(DISC)/maas-logging.md
 DTARG += $(DISC)/maas-project-tutorial.md
 DTARG += $(DISC)/maas-requirements.md
-DTARG += $(DISC)/tags-and-annotations.md
 DTARG += $(DISC)/machine-logs.md
 DTARG += $(DISC)/machines.md
 DTARG += $(DISC)/managing-dhcp.md
@@ -244,6 +243,7 @@ DTARG += $(DISC)/resource-pools.md
 DTARG += $(DISC)/select-and-import-images.md
 DTARG += $(DISC)/storage.md
 DTARG += $(DISC)/subnet-management.md
+DTARG += $(DISC)/tags-and-annotations-draft-document.md
 DTARG += $(DISC)/test-logs.md
 DTARG += $(DISC)/the-cli-cookbook.md
 DTARG += $(DISC)/tips-tricks-and-traps.md
@@ -3248,6 +3248,26 @@ $(DISC)/maas-requirements.md: $(SRC)/maas-requirements.md
 	cp -p maas-requirements-snap-3-0-ui-4014.md maas-requirements.md
 ## remove reference version
 	cd $(DISC) && rm maas-requirements-snap-3-0-ui-4014.md
+
+# temporary stanzas based on draft document
+#
+ $(DISC)/tags-and-annotations-draft-document.md: $(SRC)/tags-and-annotations.md
+# ui
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-draft-document-4500.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-9-ui tags-and-annotations-draft-document-4500.md
+# cli
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-draft-cli-document-4501.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-9-cli tags-and-annotations-draft-cli-document-4501.md
+# pull reference version
+	cd $(DISC) &&\
+	xpub pull $(DISC) 4500 4500
+# copy reference version to discourse master
+	cd $(DISC) &&\
+	cp -p tags-and-annotations-draft-document-4500.md tags-and-annotations.md
+# remove reference version
+	cd $(DISC) && rm tags-and-annotations-draft-document-4500.md
 
 # $(DISC)/tags-and-annotations.md: $(SRC)/tags-and-annotations.md
 # ## deb 2.7 cli
