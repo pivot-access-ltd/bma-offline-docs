@@ -5,302 +5,642 @@ Packages|[CLI](/t/maas-installation-deb-2-7-cli/3324) ~ [UI](/t/maas-installatio
 
 This article will show you how to:
 
-1. [Determine the minimum hardware requirements for MAAS](#heading--top-maas-requirements)
-2. [Install MAAS in various configurations and verify your work](#heading--top-maas-install)
-3. [Configure your MAAS installation and get it running](#heading--top-maas-config)
+1. [Prepare for MAAS installation](#heading--prepare-for-maas-installation)
+2. [Install and verify MAAS](#heading--install-and-verify-maas)
+3. [Configure MAAS](#heading--configure-maas)
 
-All of the headings in this page are anchored and linked, so that you can bookmark them.  Feel free to use these headings to customize your own bookmark folder on your browser toolbar: this may save you time working with MAAS later.
+Note that all headings are hyperlinks that can be bookmarked.
 
-<a href="#heading--top-maas-requirements"><h2 id="heading--top-mass-requirements">MAAS hardware requirements</h2></a>
+<a href="#heading--prepare-for-maas-installation"><h2 id="heading--prepare-for-maas-installation">Prepare for MAAS installation</h2></a>
 
-The minimum requirements for the machines that run MAAS vary widely depending on local implementation and usage.  Below, you will find resource estimates based on MAAS components and operating system (Ubuntu Server). We consider both a test configuration (for proof of concept) and a production environment.
-
-#### Two questions you might have about hardware requirements:
-
-1. [What are the requirements for a test environment?](#heading--test-environment)
-2. [What are the requirements for a production environment?](#heading--production-environment)
-
-<a href="#heading--test-environment"><h3 id="heading--test-environment">Requirements for a test environment</h3></a>
-
-Here is a proof-of-concept scenario, with all MAAS components installed on a single host. This scenario assumes two complete sets of images (latest two Ubuntu LTS releases) for a single architecture (amd64).
-
-| | Memory (MB) | CPU (GHz) | Disk (GB) |
-|:-----|-----:|-----:|-----:|
-| [Region controller](/t/concepts-and-terms/785#heading--controllers) (minus PostgreSQL) | 512 | 0.5 | 5 |
-| PostgreSQL | 512 | 0.5 | 5 |
-| [Rack controller](/t/concepts-and-terms/785#heading--controllers") | 512 | 0.5 | 5 |
-| Ubuntu Server (including logs)| 512 | 0.5 | 5 |
-
-Based on this table, the approximate requirements for this scenario are 2 GB memory, 2 GHz CPU, and 20 GB of disk space.
-
-<a href="#heading--production-environment"><h3 id="heading--production-environment">Requirements for a production environment</h3></a>
-
-Here is a production scenario designed to handle a high number of sustained client connections. This scenario implements both high availability (region and rack) and load balancing (region). MAAS reserves extra space for images (database and rack controller), while some images, such as those for Microsoft Windows, may require a lot more -- so plan accordingly.
-
-| | Memory (MB) | CPU (GHz) | Disk (GB) |
-|:-----|-----:|-----:|-----:|
-| [Region controller](/t/concepts-and-terms/785#heading--controllers) (minus PostgreSQL) | 2048 | 2.0 | 5 |
-| PostgreSQL | 2048 | 2.0 | 20 |
-| [Rack controller](/t/concepts-and-terms/785#heading--controllers") | 2048 | 2.0 | 20 |
-| Ubuntu Server (including logs)| 512 | 0.5 | 5 |
-
-So, based on the above, the approximate requirements for this scenario are:
-
-1. A region controller (including PostgreSQL) installed on one host, with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.
-2. A duplicate region controller (including PostgreSQL) on a second host, also with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.
-3. A rack controller installed on a third host, with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
-4. A duplicate rack controller on a fourth host, also with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
+You should take the following steps before installing MAAS for the first time on a new system:
 
 <!-- deb-2-7-cli
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3012) for more details.
-[/note]
+1. Make sure you understand [how support works](/t/-/4530#heading--support-provided) currently, for MAAS 2.7.
 
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2588).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+2. Make sure that the target system meets the [minimum hardware requirements](/t/-/4530#heading--minimum-hardware-requirements).
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
+1. Make sure you understand [how support works](/t/-/4526#heading--support-provided) currently, for MAAS 2.7.
+
+2. Make sure that the target system meets the [minimum hardware requirements](/t/-/4226#heading--minimum-hardware-requirements).
+ deb-2-7-cli -->
+ 
+<!-- deb-2-7-cli deb-2-7-ui
+3. Make sure that the target system is running Ubuntu 18.04 LTS or higher, by executing the following command:
+
+```
+lsb_release -a
+```
+
+The response should look something like this:
+
+```
+Distributor ID:	Ubuntu
+Description:	Ubuntu xx.yy
+Release:	xx.yy
+Codename:	$RELEASE_NAME
+```
+
+The minimum "xx.yy" required for MAAS 2.7 is "18.04," codenamed "bionic."
+
 [note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3013) for more details.
+If you are **upgrading** from MAAS 2.3 (or earlier) to MAAS 2.7, **do not follow Step 4 below**; instead, see [Upgrading from MAAS 2.3 - 2.6](#heading--upgrading-from-maas-2-3-to-2-6), below.
 [/note]
 
-Some examples of factors that influence hardware specifications include:
+4. If you are currently running Ubuntu 16.04, you can upgrade to bionic 18.04 LTS with the following procedure:
 
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2689).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
- deb-2-7-ui -->
+a. Upgrade the release:
+
+```
+sudo do-release-upgrade --allow-third-parties
+```
+
+b. Accept the defaults for any questions asked by the upgrade script.
+
+c. Reboot the machine when requested.
+
+d. Check whether the upgrade was successful:
+
+```
+lsb_release -a
+```
+
+A successful upgrade should respond with output similar to the following:
+
+```
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04(.nn) LTS
+Release:	18.04
+Codename:	bionic
+```
+
+<a href="#heading--upgrading-from-maas-2-3-to-2-6"><h3 id="heading--upgrading-from-maas-2-3">Upgrading from MAAS 2.3 - 2.6</h3></a>
+
+[note]
+If you're upgrading from any version less than MAAS 2.6: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.
+[/note]
+
+<a href="#heading--upgrading-from-maas-2-3-to-2-7"><h4 id="heading--upgrading-from-maas-2-3-to-2-7">Upgrading from MAAS 2.3 to 2.7</h4></a>
+
+If you are running MAAS version 2.3 and you want to upgrade to MAAS 2.7, the following (untested) procedure may work for you:
+
+1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+
+2. Add the MAAS 2.7 PPA to your repository list with the following command, ignoring any apparent error messages:
+
+```
+sudo add-apt-repository ppa:maas/2.7
+```
+
+3. Run the release upgrade like this, answering any questions with the given default values:
+
+```
+sudo do-release-upgrade --allow-third-parties
+```
+
+4. Check whether your upgrade has been successful by entering:
+
+```
+lsb_release -a
+```
+
+If the ugprade was successful, this command should yield output similar to the following:
+
+```
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04(.nn) LTS
+Release:	18.04
+Codename:	bionic
+```
+
+5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the latest stable 2.7 release.
+
+6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 2.7.
+
+<a href="#heading--upgrading-from-maas-2-4-2-5-to-2-7"><h4 id="heading--upgrading-from-maas-2-4-2-5-to-2-7">Upgrading from MAAS 2.4 or MAAS 2.5 to MAAS 2.7</h4></a>
+
+1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+
+2. Add the MAAS 2.7 PPA to your repository list with the following command, ignoring any apparent error messages:
+
+```
+sudo add-apt-repository ppa:maas/2.7
+```
+
+3. Run the MAAS upgrade like this:
+
+```
+sudo apt update
+sudo apt upgrade maas
+```
+
+4. Check whether your upgrade has been successful by looking at the information on the bottom of the machine list, in your running MAAS install, to make sure you're running the latest stable 2.7 release.
+
+5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 2.7.
+
+<a href="#heading--upgrading-from-maas-2-6-to-2-7"><h4 id="heading--upgrading-from-maas-2-6-to-2-7">Upgrading from MAAS 2.6 to MAAS 2.7</h4></a>
+
+Upgrading from MAAS 2.6 to MAAS 2.7 is standard operating procedure, completed with the following steps:
+
+1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure unexpectedly fail.
+
+2. Add the MAAS 2.7 PPA to your repository list with the following command, ignoring any apparent error messages:
+
+```
+sudo add-apt-repository ppa:maas/2.7
+```
+
+3. Run the MAAS upgrade like this:
+
+```
+sudo apt update
+sudo apt upgrade maas
+```
+
+4. Check whether your upgrade has been successful by looking at the information on the bottom of the machine list, in your running MAAS install, to make sure you're running the latest stable 2.7 release.
+
+5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 2.7. 
+
+deb-2-7-cli deb-2-7-ui -->
 
 <!-- deb-2-8-cli
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3014) for more details.
-[/note]
+1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4531#heading--minimum-hardware-requirements).
 
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2690).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+2. Make sure you understand [how support works](/t/-/4531#heading--support-provided) currently, for MAAS 2.8.
  deb-2-8-cli -->
+ 
 
 <!-- deb-2-8-ui
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3015) for more details.
-[/note]
+1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4527#heading--minimum-hardware-requirements).
 
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2691).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+2. Make sure you understand [how support works](/t/-/4527#heading--support-provided) currently, for MAAS 2.8.
  deb-2-8-ui -->
 
+<!-- deb-2-8-ui deb-2-8-cli
+3. Make sure that the target system is running Ubuntu 18.04 LTS or higher, by executing the following command:
+
+```
+lsb_release -a
+```
+
+The response should look something like this:
+
+```
+Distributor ID:	Ubuntu
+Description:	Ubuntu xx.yy
+Release:	xx.yy
+Codename:	$RELEASE_NAME
+```
+
+The minimum "xx.yy" required for MAAS 2.8 is "18.04," codenamed "bionic."
+
+[note]
+If you are **upgrading** from MAAS 2.3 (or earlier) to MAAS 2.8, **do not follow Step 4 below**; instead, see [Upgrading from MAAS 2.3](#heading--upgrading-from-maas-2-3-to-2-8), below.
+[/note]
+
+4. If you are currently running Ubuntu 16.04, you can upgrade to bionic 18.04 LTS with the following procedure:
+
+a. Upgrade the release:
+
+```
+sudo do-release-upgrade --allow-third-parties
+```
+
+b. Accept the defaults for any questions asked by the upgrade script.
+
+c. Reboot the machine when requested.
+
+d. Check whether the upgrade was successful:
+
+```
+lsb_release -a
+```
+
+A successful upgrade should respond with output similar to the following:
+
+```
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04(.nn) LTS
+Release:	18.04
+Codename:	bionic
+```
+
+<a href="#heading--upgrading-from-maas-2-3-2-8"><h3 id="heading--upgrading-from-maas-2-3">Upgrading from MAAS 2.3 - 2.8</h3></a>
+
+[note]
+If you're upgrading from any version less than MAAS 2.7: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.
+[/note]
+
+<a href="#heading--upgrading-from-maas-2-3-to-2-8"><h4 id="heading--upgrading-from-maas-2-3-to-2-8">Upgrading from MAAS 2.3 to 2.8</h4></a>
+
+If you are running MAAS version 2.3 and you want to upgrade to MAAS 2.8, the following (untested) procedure may work for you:
+
+1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+
+2. Add the MAAS 2.7 PPA to your repository list with the following command, ignoring any apparent error messages:
+
+```
+sudo add-apt-repository ppa:maas/2.8
+```
+
+3. Run the release upgrade like this, answering any questions with the given default values:
+
+```
+sudo do-release-upgrade --allow-third-parties
+```
+
+4. Check whether your upgrade has been successful by entering:
+
+```
+lsb_release -a
+```
+
+If the ugprade was successful, this command should yield output similar to the following:
+
+```
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04(.nn) LTS
+Release:	18.04
+Codename:	bionic
+```
+
+5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the latest stable 2.7 release.
+
+6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 2.8.
+
+<a href="#heading--upgrading-from-maas-2-4-2-5-2-6-to-2-8"><h4 id="heading--upgrading-from-maas-2-4-2-5-2-6-to-2-8">Upgrading from MAAS 2.4, 2.5, or 2.6 to MAAS 2.8</h4></a>
+
+1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+
+2. Add the MAAS 2.8 PPA to your repository list with the following command, ignoring any apparent error messages:
+
+```
+sudo add-apt-repository ppa:maas/2.8
+```
+
+3. Run the MAAS upgrade like this:
+
+```
+sudo apt update
+sudo apt upgrade maas
+```
+
+4. Check whether your upgrade has been successful by looking at the information on the bottom of the machine list, in your running MAAS install, to make sure you're running the latest stable 2.8 release.
+
+5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 2.8.
+
+<a href="#heading--upgrading-from-maas-2-7-to-2-8"><h4 id="heading--upgrading-from-maas-2-7-to-2-8">Upgrading from MAAS 2.7 to MAAS 2.8</h4></a>
+
+Upgrading from MAAS 2.7 to MAAS 2.8 is standard operating procedure, completed with the following steps:
+
+1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure unexpectedly fail.
+
+2. Add the MAAS 2.8 PPA to your repository list with the following command, ignoring any apparent error messages:
+
+```
+sudo add-apt-repository ppa:maas/2.8
+```
+
+3. Run the MAAS upgrade like this:
+
+```
+sudo apt update
+sudo apt upgrade maas
+```
+
+4. Check whether your upgrade has been successful by looking at the information on the bottom of the machine list, in your running MAAS install, to make sure you're running the latest stable 2.8 release.
+
+5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 2.8. 
+
+ deb-2-8-cli deb-2-8-ui -->
+
+
 <!-- deb-2-9-cli
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3016) for more details.
-[/note]
+1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4532#heading--minimum-hardware-requirements).
 
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2692).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+2. Make sure you understand [how support works](/t/-/4532#heading--support-provided) currently, for MAAS 2.9.
  deb-2-9-cli -->
-
+ 
 <!-- deb-2-9-ui
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3017) for more details.
-[/note]
+1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4528#heading--minimum-hardware-requirements).
 
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2693).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+2. Make sure you understand [how support works](/t/-/4528#heading--support-provided) currently, for MAAS 2.9.
  deb-2-9-ui -->
 
-<!-- deb-3-0-cli
+<!-- deb-2-9-ui deb-2-9-cli
+3. Make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
+
+```
+lsb_release -a
+```
+
+The response should look something like this:
+
+```
+Distributor ID:	Ubuntu
+Description:	Ubuntu xx.yy
+Release:	xx.yy
+Codename:	$RELEASE_NAME
+```
+
+The minimum "xx.yy" required for MAAS 2.9 is "20.04," codenamed "focal."
+
 [note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/4071) for more details.
+If you are **upgrading** from MAAS 2.3 (or earlier) to MAAS 2.9, **do not follow Step 4 below**; instead, see [Upgrading from MAAS 2.3 - 2.8](#heading--upgrading-from-maas-2-3-2-8), below.
 [/note]
 
-Some examples of factors that influence hardware specifications include:
+4. If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:
 
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/3947).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+a. Upgrade the release:
+
+```
+sudo do-release-upgrade --allow-third-parties
+```
+
+b. Accept the defaults for any questions asked by the upgrade script.
+
+c. Reboot the machine when requested.
+
+d. Check whether the upgrade was successful:
+
+```
+lsb_release -a
+```
+
+A successful upgrade should respond with output similar to the following:
+
+```
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04(.nn) LTS
+Release:	20.04
+Codename:	focal
+```
+
+<a href="#heading--upgrading-from-maas-2-3-2-8"><h4 id="heading--upgrading-from-maas-2-3-2-8">Upgrading from MAAS 2.3-2.8 to MAAS 2.9</h4></a>
+
+[note]
+If you're upgrading from any version less than MAAS 2.8: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.
+[/note]
+
+1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+
+2. Add the MAAS 2.9 PPA to your repository list with the following command, ignoring any apparent error messages:
+
+```
+sudo add-apt-repository ppa:maas/2.9
+```
+
+3. Run the release upgrade like this, answering any questions with the given default values:
+
+```
+sudo do-release-upgrade --allow-third-parties
+```
+
+4. Check whether your upgrade has been successful by entering:
+
+```
+lsb_release -a
+```
+
+If the ugprade was successful, this command should yield output similar to the following:
+
+```
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04(.nn) LTS
+Release:	20.04
+Codename:	focal
+```
+
+5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the latest stable 2.9 release.
+
+6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 2.9.
+
+ deb-2-9-cli deb-2-9-ui -->
+
+<!-- deb-3-0-cli
+1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4533#heading--minimum-hardware-requirements).
+
+2. Make sure you understand [how support works](/t/-/4533#heading--support-provided) currently, for MAAS 3.0.
  deb-3-0-cli -->
+ 
 
 <!-- deb-3-0-ui
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/4070) for more details.
-[/note]
+1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4529#heading--minimum-hardware-requirements).
 
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/3948).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+2. Make sure you understand [how support works](/t/-/4529#heading--support-provided) currently, for MAAS 23.0.
  deb-3-0-ui -->
 
-<!-- snap-2-7-cli
+<!-- deb-3-0-ui deb-3-0-cli
+3. Make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
+
+```
+lsb_release -a
+```
+
+The response should look something like this:
+
+```
+Distributor ID:	Ubuntu
+Description:	Ubuntu xx.yy
+Release:	xx.yy
+Codename:	$RELEASE_NAME
+```
+
+The minimum "xx.yy" required for MAAS 3.0 is "20.04," codenamed "focal."
+
 [note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3006) for more details.
+If you are **upgrading** from MAAS 2.3 (or earlier) to MAAS 3.0, **do not follow Step 4 below**; instead, see [Upgrading from MAAS 2.3-2.9](#heading--upgrading-from-maas-2-3-2-9), below.
 [/note]
 
-Some examples of factors that influence hardware specifications include:
+4. If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:
 
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2682).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+a. Upgrade the release:
+
+```
+sudo do-release-upgrade --allow-third-parties
+```
+
+b. Accept the defaults for any questions asked by the upgrade script.
+
+c. Reboot the machine when requested.
+
+d. Check whether the upgrade was successful:
+
+```
+lsb_release -a
+```
+
+A successful upgrade should respond with output similar to the following:
+
+```
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04(.nn) LTS
+Release:	20.04
+Codename:	focal
+```
+
+<a href="#heading--upgrading-from-maas-2-3-2-9"><h3 id="heading--upgrading-from-maas-2-3-2-9">Upgrading from MAAS 2.3-2.9 to MAAS 3.0</h3></a>
+
+[note]
+If you're upgrading from any version less than MAAS 2.9: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.
+[/note]
+
+<a href="#heading--upgrading-from-maas-2-3-2-8-to-3-0"><h3 id="heading--upgrading-from-maas-2-3-2-8-to-3-0">Upgrading from MAAS 2.3 - 2.8 to MAAS 3.0 Beta</h3></a>
+
+1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+
+2. Add the MAAS 3.0 Beta PPA to your repository list with the following command, ignoring any apparent error messages:
+
+```
+sudo apt-add-repository paa:maas/3.0-next
+```
+
+3. Run the release upgrade like this, answering any questions with the given default values:
+
+```
+sudo do-release-upgrade --allow-third-parties
+```
+
+4. Check whether your upgrade has been successful by entering:
+
+```
+lsb_release -a
+```
+
+If the ugprade was successful, this command should yield output similar to the following:
+
+```
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04(.nn) LTS
+Release:	20.04
+Codename:	focal
+```
+
+5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the latest Beta 3.0 release.
+
+6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS Beta 3.0.
+
+<a href="#heading--upgrading-from-maas-2-9-to-3-0"><h3 id="heading--upgrading-from-maas-2-9-to-3-0">Upgrading from MAAS 2.9 to MAAS 3.0 Beta</h3></a>
+
+1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+
+2. Add the MAAS 3.0 Beta PPA to your repository list with the following command, ignoring any apparent error messages:
+
+```
+sudo apt-add-repository paa:maas/3.0-next
+```
+
+3. Run the MAAS upgrade like this:
+
+```
+sudo apt update
+sudo apt upgrade maas
+```
+
+4. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the latest Beta 3.0 release.
+
+5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS Beta 3.0.
+
+ deb-3-0-ui deb-3-0-cli -->
+
+<!-- snap-2-7-cli
+
+1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4522#heading--minimum-hardware-requirements).
+
+2. Make sure you understand [how support works](/t/-/4522#heading--support-provided) currently, for MAAS 2.7.
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3007) for more details.
-[/note]
+1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4519#heading--minimum-hardware-requirements).
 
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2683).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+2. Make sure you understand [how support works](/t/-/4519#heading--support-provided) currently, for MAAS 2.7.
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3008) for more details.
-[/note]
+1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4523#heading--minimum-hardware-requirements).
 
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2684).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+2. Make sure you understand [how support works](/t/-/4523#heading--support-provided) currently, for MAAS 2.8.
  snap-2-8-cli -->
 
 <!-- snap-2-8-ui
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3009) for more details.
-[/note]
+1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4520#heading--minimum-hardware-requirements).
 
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2685).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+2. Make sure you understand [how support works](/t/-/4520#heading--support-provided) for the chosen version.
  snap-2-8-ui -->
 
 <!-- snap-2-9-cli
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3010) for more details.
-[/note]
+1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4524#heading--minimum-hardware-requirements).
 
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2686).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+2. Make sure you understand [how support works](/t/-/4524#heading--support-provided) for the chosen version.
  snap-2-9-cli -->
 
 <!-- snap-2-9-ui
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3011) for more details.
-[/note]
+1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4521#heading--minimum-hardware-requirements).
 
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2687).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+2. Make sure you understand [how support works](/t/-/4521#heading--support-provided) for the chosen version.
  snap-2-9-ui -->
 
 <!-- snap-3-0-cli
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/4069) for more details.
-[/note]
+1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4525#heading--minimum-hardware-requirements).
 
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/3945).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+2. Make sure you understand [how support works](/t/-/4525#heading--support-provided) for the chosen version.
  snap-3-0-cli -->
 
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/4070) for more details.
-[/note]
+1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4516#heading--minimum-hardware-requirements).
 
-Some examples of factors that influence hardware specifications include:
+2. Make sure you understand [how support works](/t/-/4516#heading--support-provided) for the chosen version.
 
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/3946).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+3. Make sure you uninstall bind9, if it's running on your system:
 
-Also, this discussion does not take into account a possible local image mirror, which would be a large consumer of disk space.
+a. Check to see if `bind9` is running:
 
-One rack controller should only service 1000 machines or less, regardless of how you distribute them across subnets. There is no load balancing at the rack level, so you will need additional, independent rack controllers. Each controller must service its own subnet(s).
+```
+ps aux | grep named
+```
 
-<a href="#heading--top-maas-install"><h2 id="heading--top-maas-install">How to install MAAS</h2></a>
+b. If bind9 is running, remove it with the following command:
 
-<!-- snap-2-7-ui snap-2-7-cli 
-MAAS 2.7 can be installed as a snap. This section will walk you through the installation.
+```
+sudo apt-get remove --auto-remove bind9
+```
 
-[Snaps](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
+<a href="#heading--install-and-verify-maas"><h2 id="heading--install-and-verify-maas">Install and verify MAAS</h2></a>
+
+This section explains how to:
+
+* [Install MAAS](#heading--install-maas)
+* [Initialise MAAS](#heading--initialise-maas)
+* [Re-initialise MAAS](#heading--reinitialising-maas)
+* [Verify MAAS installation](#heading--verify-maas-install)
+* [Check service statuses](#heading--check-service-statuses)
+
+<!-- snap-2-7-ui snap-2-7-cli
+<a href="#heading--install-maas"><h3 id="heading--install-maas">Install MAAS </h3></a>
+The following command will give you a clean install of MAAS 2.7:
 
 ``` bash
 sudo snap install maas --channel=2.7
 ```
 
-After entering your password, the snap will download and install from the 2.7 channel. However, MAAS needs initialising before it's ready to go.
+MAAS must be initialised prior to use.
 
-<a href="#heading--initialisation"><h3 id="heading--initialisation">Initialisation</h3></a>
+<a href="#heading--initialise-maas"><h3 id="heading--initialise-maas">Initialise MAAS</h3></a>
 
-The next step involves initialising MAAS with a *run mode*. Selecting one of the following modes dictates what services will run on the local system:
+To initialise MAAS with a [run mode](/t/-/4519#heading--maas-init-modes):
 
-| Mode          | Region | Rack | Database | Description                           |
-|---------------|--------|------|----------|---------------------------------------|
-| `all`*        | X      | X    | X        | All services (see warning below)      |
-| `region`      | X      |      |          | Region API server only                |
-| `rack`        |        | X    |          | Rack controller only                  |
-| `region+rack` | X      | X    |          | Region API server and rack controller |
-| `none`        |        |      |          | Reinitialises MAAS and stops services |
+1. use the `maas init` command with the specified *--mode* argument `region`, `rack`, or `region+rack`:
 
-[note type="Warning" status="all mode being deprecated"]
-Configuring the MAAS snap in "all" mode will be [deprecated in MAAS version 2.8.0 and removed in MAAS version 2.9.0](https://maas.io/deprecations/MD1).
-[/note]
-
-To initialise MAAS and select a run mode, use the `maas init` command with the *--mode* argument.
-
-<a href="#heading--example"><h4 id="heading--example">Example</h4></a>
-
-The following demonstrates the `all` mode, a popular initialisation choice for MAAS:
-
-``` bash
-sudo maas init --mode all
+```
+sudo maas init --mode region+rack
 ```
 
-A dialog will appear that will gather some basic information:
+2. Answer the prompts in the dialog that appears:
 
 ``` no-highlight
 MAAS URL [default=http://10.55.60.1:5240/MAAS]: http://192.168.122.1:5240/MAAS
@@ -312,57 +652,58 @@ Email: admin@example.com
 Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
 ```
 
-[note]
-You will use the username and password to access the web UI.  If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
-[/note]
+If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
 
-<a href="#heading--maas-url"><h4 id="heading--maas-url">MAAS URL</h4></a>
+ snap-2-7-ui snap-2-7-cli -->
 
-All run modes (except `none`) prompt for a MAAS URL, interpreted differently depending on the mode:
+<!-- snap-2-7-ui 
+The MAAS URL sets the API address of [one or more controllers](/t/-/4519#heading--maas-url). You will use the username and password to access the web UI.
 
--   `all`, `region+rack`: Used to create a new region controller as well as to tell the rack controller how to find the region controller.
--   `region`: Used to create a new region controller.
--   `rack`: Used to locate the region controller.
+Some modes will additionally ask for a [shared secret](/t/-/4519#heading--maas-url) that will allow the new rack controller to register with the region controller.
+ snap-2-7-ui -->
 
-<a href="#heading--shared-secret"><h3 id="heading--shared-secret">Shared secret</h3></a>
+<!-- snap-2-7-cli
+The MAAS URL sets the API address of [one or more controllers](/t/-/4522#heading--maas-url). You will use the username and password to access the web UI.
 
-The 'rack' and 'region+rack' modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.
+Some modes will additionally ask for a [shared secret](/t/-/4522#heading--maas-url) that will allow the new rack controller to register with the region controller.
+ snap-2-7-cli -->
 
-<a href="#heading--reinitialising-maas"><h4 id="heading--reinitialising-maas">Reinitialising MAAS</h4></a>
+<!-- snap-2-7-ui snap-2-7-cli 
+<a href="#heading--reinitialising-maas"><h3 id="heading--reinitialising-maas">Re-initialise MAAS</h3></a>
+ snap-2-7-ui snap-2-7-cli -->
 
-Re-initalising MAAS is useful to reset MAAS when the configuration changes.  For example, if you are hosting MAAS on a system that gets its IP from DHCP, and the lease sometimes gets renewed, your base MAAS IP address will need to be update.  Likewise, if you switch the MAAS configuration from `rack` to `region`, you'll need to re-initialise as well. 
+<!-- snap-2-7-ui
+To [re-initialise](/t/-/4519#heading--maas-reinit) MAAS, use the following command:
+ snap-2-7-ui -->
 
-To re-initialise MAAS:
+<!-- snap-2-7-cli
+To [re-initialise](/t/-/4522#heading--maas-reinit) MAAS, use the following command:
+ snap-2-7-cli -->
 
+<!-- snap-2-7-ui snap-2-7-cli 
 ``` bash
-sudo maas init --mode region
+sudo maas init --mode region+rack
 ```
 
-<a href="#heading--additional-init-options"><h4 id="heading--additional-init-options">Additional `init` options</h4></a>
+* [](#heading--verify-maas-install)
 
-The `init` command can take a number of optional arguments. To list them all as well as read a brief description of each:
+<a href="#heading--verify-maas-install"><h3 id="heading--verify-maas-install">Verify MAAS installation</h3></a>
 
-``` bash
-sudo maas init --help
-```
-
-<a href="#heading--configuration-verification"><h3 id="heading--configuration-verification">Configuration verification</h3></a>
-
-After a *snap* installation of MAAS, you can verify the currently-running configuration with:
+After a snap installation of MAAS, you can verify that the installation was successful with the following command:
 
 ``` bash
 sudo maas config
 ```
 
-Sample output (for mode 'all'):
+This command should return a sequence similar to the following if MAAS is operating propery:
 
 ``` no-highlight
-Mode: all
+Mode: region+rack
 Settings:
 maas_url=http://192.168.122.1:5240/MAAS
 ```
 
-<a href="#heading--service-statuses"><h3 id="heading--service-statuses">Service statuses</h3></a>
+<a href="#heading--check-service-statuses"><h3 id="heading--check-service-statuses">Check service statuses</h3></a>
 
 You can check the status of running services with:
 
@@ -370,7 +711,7 @@ You can check the status of running services with:
 sudo maas status
 ```
 
-Sample output (for mode 'all'):
+Sample output should look something like this:
 
 ``` no-highlight
 bind9                            RUNNING   pid 7999, uptime 0:09:17
@@ -387,15 +728,6 @@ regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
 tgt                              RUNNING   pid 8040, uptime 0:09:15
 ```
 snap-2-7-ui snap-2-7-cli -->
-
-
-<!-- snap-2-7-ui
-With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](#heading--top-maas-config).
-snap-2-7-ui -->
-
-<!-- snap-2-7-cli
-With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](#heading--top-maas-config).
-snap-2-7-cli -->
 
 <!-- snap-2-8-ui snap-2-8-cli
 MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.  This article will walk you through both install methods.
@@ -1222,35 +1554,33 @@ deb-2-9-cli -->
 Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](#heading--top-maas-config).
 deb-2-9-ui -->
 
-MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.  This article will walk you through both install methods.
+MAAS can be installed in either of two configurations: test or production.  These two configurations, along with MAAS install requirements and initialisation modes, are discussed in the [MAAS installation technical reference](/t/maas-installation-technical-reference-snap-3-0-ui/4516).  This section provides step-by-step instructions for installing both configurations.  If you prefer a more in-depth presentation with extended explanations, try the [MAAS installation tutorial](/t/maas-installation-tutorial-snap-3-0-ui/4517).  
 
-#### Thirteen questions you may have about installing MAAS:
+<a href="#heading--how-to-index"><h3 id="heading--how-to-index">This section will show how to:</h3></a>
 
-1. [How do I install (but not initialise) the MAAS 3.0 Beta snap?](#heading--install-maas-snap)
-2. [How do I upgrade my 2.9 snap to the MAAS 3.0 Beta?](#heading--upgrade-maas-snap)
-3. [What are MAAS initialisation modes?](#heading--maas-init-modes)
-4. [How do I initialise MAAS for a test or proof-of-concept configuration?](#heading--init-poc)
-5. [How do I initialise MAAS for a production configuration?](#heading--init-prod)
-6. [How do I migrate an existing snap install?](/t/tips-tricks-and-traps/1506#heading--migrate-maas)
-7. [What if I want to manually export the MAAS database to an existing PostgreSQL server?](/t/tips-tricks-and-traps/1506#heading--manual-export)
-8. [How can I check the service status of my MAAS configuration?](#heading--service-status)
-9. [How do I re-initialise MAAS, if I want to?](#heading--reinitialising-maas)
-10. [How can I discover additional init options?](#heading--additional-init-options)
-11. [Give me an example of initialising MAAS](#heading--example)
-12. [Tell me about the MAAS URL](#heading--maas-url)
-13. [Tell me about the shared secret](#heading--shared-secret)
+1. [Remove bind9, if installed](#heading--remove-bind9)
+2. [Install the MAAS 3.0 Beta snap](#heading--install-maas-snap)
+2. [Upgrade the 2.9 snap to the MAAS 3.0 Beta](#heading--upgrade-maas-snap)
+3. [Initialise MAAS for a test rig or proof-of-concept](#heading--init-poc)
+5. [Initialise MAAS for production](#heading--init-prod)
+6. [Migrate an existing snap install](/t/tips-tricks-and-traps/1506#heading--migrate-maas)
+7. [Manually export the MAAS database to an existing PostgreSQL server](/t/tips-tricks-and-traps/1506#heading--manual-export)
+8. [Check the service status of MAAS](#heading--service-status)
+9. [Re-initialise MAAS](#heading--reinitialising-maas)
 
-[note]
-If you have installed `bind9` or have it running, you will need to uninstall it before installing MAAS.  You can check with `ps aux | grep named` to see if it's running. The `bind9` daemon interferes with MAAS operation and creates a number of unusual, hard-to-debug errors -- but don't worry, MAAS provides DNS and can work with existing DNS servers.
-[/note]
+<a href="#heading--remove-bind9"><h3 id="heading--remove-bind9">Remove bind9, if installed</h3></a>
 
 <a href="#heading--install-maas-snap"><h3 id="heading--install-maas-snap">Installing MAAS from the snap</h3></a>
 
-[Snaps](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
+[note]
+For more information on snaps, see the [Snapcraft documentation](https://snapcraft.io/docs).
+[/note]
+
+To install MAAS from a snap, simply enter the following:
 
     $ sudo snap install --channel=3.0/beta maas
 
-After entering your password, the snap will download and install from the 3.0 beta channel -- though MAAS needs initialising before it's ready to go.
+After entering your password, the snap will download and install from the 3.0 beta channel. rMAAS will need to be [initialised](#heading--how-to-index) before first use.
 
 <a href="#heading--upgrade-maas-snap"><h3 id="heading--upgrade-maas-snap">Upgrading MAAS from 2.9</h3></a>
 
@@ -1261,17 +1591,6 @@ If you want to upgrade from a 2.9 snap to 3.0 Beta 1 snap, and you are using a `
 After entering your password, the snap will refresh from the 3.0 beta channel.  You will **not** need to re-initialise MAAS.
 
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
-
-<a href="#heading--maas-init-modes"><h3 id="heading--maas-init-modes">MAAS initialisation modes</h3></a>
-
-MAAS supports the following modes, which dictate what services will run on the local system:
-
-| Mode          | Region | Rack | Database | Description                           |
-|---------------|--------|------|----------|---------------------------------------|
-| `region`      | X      |      |          | Region API server only                |
-| `rack`        |        | X    |          | Rack controller only                  |
-| `region+rack` | X      | X    |          | Region API server and rack controller |
-| `none`        |        |      |          | Reinitialises MAAS and stops services |
 
 <a href="#heading--init-poc"><h3 id="heading--init-poc">Initialising MAAS as a test configuration</h3></a>
 
@@ -1413,43 +1732,6 @@ With MAAS installed and initialised, you can now open the web UI in your browser
 
 With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](#heading--top-maas-config).
 
-<a href="#heading--example"><h3 id="heading--example">Example of MAAS initialisation</h3></a>
-
-The following demonstrates the `region+rack` mode, a popular initialisation choice for MAAS:
-
-    sudo maas init region+rack
-
-`maas` will ask for the MAAS URL:
-
-    MAAS URL [default=http://10.55.60.1:5240/MAAS]: http://192.168.122.1:5240/MAAS
-
-If you also need to create an admin user, you can use:
-
-    sudo maas createadmin
-
-which takes you through the following exchange:
-
-    Create first admin account:       
-    Username: admin
-    Password: ******
-    Again: ******
-    Email: admin@example.com
-    Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
-
-[note]
-You will use the username and password created above to access the web UI.  If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
-[/note]
-
-<a href="#heading--maas-url"><h3 id="heading--maas-url">MAAS URL</h3></a>
-
-All run modes (except `none`) prompt for a MAAS URL, interpreted differently depending on the mode:
-
--   `region`: Used to create a new region controller.
--   `rack`: Used to locate the region controller.
-
-<a href="#heading--shared-secret"><h3 id="heading--shared-secret">Shared secret</h3></a>
-
-The 'rack' and 'region+rack' modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.
 
 <a href="#heading--reinitialising-maas"><h3 id="heading--reinitialising-maas">Reinitialising MAAS</h3></a>
 
@@ -1457,11 +1739,7 @@ It is also possible to re-initialise MAAS to switch modes.  For example, to swit
  
     sudo maas init region
 
-<a href="#heading--additional-init-options"><h3 id="heading--additional-init-options">Additional `init` options</h3></a>
-
-The `init` command can takes optional arguments. To list them, as well as read a brief description of each, you can enter:
-
-    sudo maas init --help
+The MAAS command takes additional `init` options; see the [MAAS installation technical reference](/t/maas-installation-technical-reference-snap-3-0-ui/4516#heading--additional-init-options) for details.
 
 
 <!-- deb-3-0-cli deb-3-0-ui
@@ -1986,170 +2264,3 @@ The Dashboard landing page lists non-registered devices that MAAS detected autom
  snap-2-9-ui -->
 
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/4042) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/902f07b6e96d06dcd072501473ce85ff3d303610.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/902f07b6e96d06dcd072501473ce85ff3d303610.jpeg"></a>  
-
-[note]
-Network discovery can be disabled at any time from the button on the Dashboard view.  Also note that you can get back to the dashboard at any time by clicking the MAAS logo.
-[/note]
-
-<a href="#heading--spaces-fabrics-zones-and-subnets"><h4 id="heading--spaces-fabrics-zones-and-subnets">Spaces, fabrics, zones and subnets</h4></a>
-
-Networks in large data centres can be very complex. MAAS offers comprehensive control over networking so that you have the flexibility to reconfigure racks and deploy machines as you see fit. You can isolate machine deployment not only with DNS domains, but also via [subnets](/t/concepts-and-terms/785#heading--subnets), [spaces](/t/concepts-and-terms/785#heading--spaces), [zones](/t/concepts-and-terms/785#heading--zones), and [fabrics](/t/concepts-and-terms/785#heading--fabrics).  The links provide more details, but these are all basically collections:
-
-* **subnet** has the traditional meaning: a range of IP addresses covering a subset of IP addresses.  Generally speaking , a subnet is a collection of IP addresses which includes at least two addresses.
-* a **space** is a collection of subnets that you can create with MAAS, understanding that each subnet can belong to only one space.  Spaces allow multiple subnets to communicate without requiring a direct network path between them.
-* a **zone** is also an ad-hoc collection, but one which groups individual nodes, rather than subnets.  MAAS allows you to create and edit zones at will.
-* a **fabric** is essentially a collection of trunked switches, allowing you to access a group of VLANs.
-
-Here is a diagram that helps to illustrate these concepts:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/dd60fdeba34d3cf33d4cf42db1f745ba95542b69.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/dd60fdeba34d3cf33d4cf42db1f745ba95542b69.jpeg"></a> 
-
-Be aware that these network settings are spread across several web UI configuration pages. The Zones page, for example, enables you to see how many machines, devices and controllers are using a zone, and allows you to add and edit zones.  The Subnets page, shown below, provides access to fabric, VLAN, subnet and spaces configuration.
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/89d90a15e70a57e6951ee62910b503895e08251e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/89d90a15e70a57e6951ee62910b503895e08251e.jpeg"></a> 
-
-<a href="#heading--deploy-hardware"><h3 id="heading--deploy-hardware">Deployment</h3></a>
-
-MAAS-managed machines are listed -- and operated on -- from the Machines page, making it one of the most important screens in the MAAS web UI:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/58a37e0dc29bc233f771c33d07a0e03e8d55cb87.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/58a37e0dc29bc233f771c33d07a0e03e8d55cb87.jpeg"></a> 
-
-If you are testing MAAS using virtual machines, the machines appear here as soon as they boot. New machines are added automatically when they first connect to your network. Alternatively, the ‘Add hardware’ menu lets you add machines manually, via their MAC address.
-
-After you configure power and interfaces, MAAS must commission machines to retrieve CPU, memory and storage information. From this point, you can command MAAS to acquire, test, deploy and release these machines as you work with your MAAS cloud.
-
-<!-- deb-2-7-ui
-While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](/t/maas-tags/2893) and hardware characteristics.  You can select and manage machines in either filtered or full views.
- deb-2-7-ui -->
-
-<!-- deb-2-8-ui
-While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](/t/maas-tags/2895) and hardware characteristics.  You can select and manage machines in either filtered or full views.
- deb-2-8-ui -->
-
-<!-- deb-2-9-ui
-While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](/t/maas-tags/2897) and hardware characteristics.  You can select and manage machines in either filtered or full views.
- deb-2-9-ui -->
-
-<!-- deb-3-0-ui
-While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](/t/maas-tags/4024) and hardware characteristics.  You can select and manage machines in either filtered or full views.
- deb-3-0-ui -->
-
-<!-- snap-2-7-ui
-While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](/t/maas-tags/2887) and hardware characteristics.  You can select and manage machines in either filtered or full views.
- snap-2-7-ui -->
-
-<!-- snap-2-8-ui
-While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](/t/maas-tags/2889) and hardware characteristics.  You can select and manage machines in either filtered or full views.
- snap-2-8-ui -->
-
-<!-- snap-2-9-ui
-While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](/t/maas-tags/2891) and hardware characteristics.  You can select and manage machines in either filtered or full views.
- snap-2-9-ui -->
-
-While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](/t/maas-tags/4022) and hardware characteristics.  You can select and manage machines in either filtered or full views.
-
-
-<a href="#heading--images"><h4 id="heading--images">Images</h4></a>
-
-When it comes to running applications, MAAS can easily deploy any supported variant of Ubuntu, including LTS and non-LTR versions for x86, ARM, PPC and s390x systems. You can also deploy several other operating systems to your machines, including CentOS 7, CentOS 6, Windows, RHEL, and ESXi images, via <a href="https://www.ubuntu.com/support" rel="nofollow noopener">Ubuntu Advantage^</a>.
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/27c47222c1fc0e34ed70134a1007dde067d2de81.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/27c47222c1fc0e34ed70134a1007dde067d2de81.jpeg"></a> 
-
-<a href="#heading--vm-hosts"><h4 id="heading--vm-hosts">VM hosts</h4></a>
-
-
-<!-- deb-2-7-cli
-[VM hosts]( /t/vm-hosting/2748) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-[VM hosts]( /t/vm-hosting/2749) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-[VM hosts]( /t/vm-hosting/2750) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-[VM hosts]( /t/vm-hosting/2751) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- deb-2-8-ui -->
-
-<!-- deb-2-9-cli
-[VM hosts]( /t/vm-hosting/2752) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- deb-2-9-cli -->
-
-<!-- deb-3-0-ui
-[VM hosts](/t/vm-hosting/4164) can give you greater control over your hardware.  A LXD (pronounced "lex-D") VM host is a collection of individual virtual machines.  You can use a LXD VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- deb-3-0-ui -->
-
-<!-- deb-3-0-cli
-[VM hosts](/t/vm-hosting/4163) can give you greater control over your hardware.  A LXD (pronounced "lex-D") VM host is a collection of individual virtual machines.  You can use a LXD VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- deb-3-0-cli -->
-
-<!-- deb-2-9-ui
-[VM hosts](/t/vm-hosting/2753) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-[VM hosts]( /t/vm-hosting/2742) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-[VM hosts]( /t/vm-hosting/2743) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-[VM hosts]( /t/vm-hosting/2744) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-[VM hosts]( /t/vm-hosting/2745) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- snap-2-8-ui -->
-
-<!-- snap-2-9-cli
-[VM hosts]( /t/vm-hosting/2746) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- snap-2-9-cli -->
-
-<!-- snap-2-9-ui
-[VM hosts]( /t/vm-hosting/2747) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- snap-2-9-ui -->
-
-<!-- snap-3-0-cli
-[VM hosts](/t/vm-hosting/4161) can give you greater control over your hardware.  A LXD (pronounced "lex-D") VM host is a collection of individual virtual machines.  You can use a LXD VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- snap-3-0-cli -->
-
-[VM hosts](/t/vm-hosting/4162) can give you greater control over your hardware.  A LXD (pronounced "lex-D") VM host is a collection of individual virtual machines.  You can use a LXD VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
-
-<!-- deb-2-9-ui snap-2-9-ui
-It’s easy to add a virsh VM host: click the "Add KVM" button on the "KVM" page of the web UI, give the VM host a name, and select `virsh` or `lxd` as the VM host type.  You will also need to enter the address for the KVM host: in the case of `virsh`, this address looks something like `qemu+ssh://<yourusername>@10.249.0.2/system`, with password equal to the password for `<yourusername>`; if you're using `lxd`, this address will be the IP of the LXD bridge gateway (.1), with the password being the trust password you entered when initializing LXD.
-
-After you create a VM host, you compose hardware by selecting the VM host, and then selecting "Compose" from the Action menu. You can configure composed hardware as desired, including the number of cores, CPU speed, RAM and combined storage.  Then just click "Compose machine", and MAAS will combine resources to create a new, single entity that can be used just like any other machine.  VM hosts abstract multiple resources:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/c57d7cf802bfd3f968cc54a829cd1629c45e9f62.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c57d7cf802bfd3f968cc54a829cd1629c45e9f62.jpeg"></a> 
-
-into pools of composable hardware:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/763029b5678b6f88317359d28eac3003f7298f37.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/763029b5678b6f88317359d28eac3003f7298f37.jpeg"></a> 
- deb-2-9-ui snap-2-9-ui -->
-
-<!-- snap-2-7-ui snap-2-8-ui deb-2-7-ui deb-2-8-ui
-It’s easy to add a virsh VM host: click the "Add KVM" button on the "KVM" page of the web UI, give the VM host a name, and select as the VM host type.  You will also need to enter the address for the KVM host; this address will look something like 'qemu+ssh://<yourusername>@10.249.0.2/system`, where the paasword will be the same password `<yourusername>` uses to log into the host.
-
-After you create a VM host, you compose hardware by selecting the VM host, and then selecting "Compose" from the Action menu. You can configure composed hardware as desired, including the number of cores, CPU speed, RAM and combined storage.  Then just click "Compose machine", and MAAS will combine resources to create a new, single entity that can be used just like any other machine.  VM hosts abstract multiple resources:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/c57d7cf802bfd3f968cc54a829cd1629c45e9f62.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c57d7cf802bfd3f968cc54a829cd1629c45e9f62.jpeg"></a> 
-
-into pools of composable hardware:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/763029b5678b6f88317359d28eac3003f7298f37.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/763029b5678b6f88317359d28eac3003f7298f37.jpeg"></a> 
-snap-2-7-ui snap-2-8-ui deb-2-7-ui deb-2-8-ui -->
-
-It’s easy to add a LXD VM host: click the "Add KVM" button on the "KVM" page of the web UI, give the VM host a name, and select "lxd" as the VM host type.  You will also need to enter the IP address for the gateway (.1) of the bridge you're using to connect to LXD.  The password will be the trust password you created when initializing LXD.
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/ff398586b76154dd20e4c194e30f5c832a7dac89.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/ff398586b76154dd20e4c194e30f5c832a7dac89.png"></a>
-
-After you create a VM host, you compose hardware by selecting the host, and then selecting "Compose" from the Action menu. You can configure composed hardware as desired, including the number of cores, CPU speed, RAM and combined storage.  Then just click "Compose machine", and MAAS will combine resources to create a new, single entity that can be used just like any other machine.  VM hosts abstact multiple resources into pools of composable hardware.
-
-There you have it: A quick tour of MAAS and its capabilities.  Read on through the documentation to learn more.

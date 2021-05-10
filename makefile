@@ -125,6 +125,8 @@ HTARG += $(HTML)/maas-communication.html
 HTARG += $(HTML)/maas-documentation.html
 HTARG += $(HTML)/maas-image-builder.html
 HTARG += $(HTML)/maas-installation.html
+HTARG += $(HTML)/maas-installation-technical-reference.html
+HTARG += $(HTML)/maas-installation-tutorial.html
 HTARG += $(HTML)/maas-logging.html
 HTARG += $(HTML)/maas-project-tutorial.html
 HTARG += $(HTML)/maas-requirements.html
@@ -217,6 +219,8 @@ DTARG += $(DISC)/maas-communication.md
 DTARG += $(DISC)/maas-documentation.md
 DTARG += $(DISC)/maas-image-builder.md
 DTARG += $(DISC)/maas-installation.md
+DTARG += $(HTML)/maas-installation-technical-reference.md
+DTARG += $(HTML)/maas-installation-tutorial.md
 DTARG += $(DISC)/maas-logging.md
 DTARG += $(DISC)/maas-project-tutorial.md
 DTARG += $(DISC)/maas-requirements.md
@@ -3100,6 +3104,154 @@ $(DISC)/maas-installation.md: $(SRC)/maas-installation.md
 	cp -p maas-installation-snap-3-0-ui-4002.md maas-installation.md
 ## remove reference version
 	cd $(DISC) && rm maas-installation-snap-3-0-ui-4002.md
+
+$(DISC)/maas-installation-technical-reference.md: $(SRC)/maas-installation-technical-reference.md
+## deb 2.7 cli
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-deb-2-7-cli-4530.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-7-cli maas-installation-technical-reference-deb-2-7-cli-4530.md
+## deb 2.7 ui
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-deb-2-7-ui-4526.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-7-ui maas-installation-technical-reference-deb-2-7-ui-4526.md
+## deb 2.8 cli
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-deb-2-8-cli-4531.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-8-cli maas-installation-technical-reference-deb-2-8-cli-4531.md
+## deb 2.8 ui
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-deb-2-8-ui-4527.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-8-ui maas-installation-technical-reference-deb-2-8-ui-4527.md
+## deb 2.9 cli
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-deb-2-9-cli-4532.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-9-cli maas-installation-technical-reference-deb-2-9-cli-4532.md
+## deb 2.9 ui
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-deb-2-9-ui-4528.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-9-ui maas-installation-technical-reference-deb-2-9-ui-4528.md
+## deb 3.0 cli
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-deb-3-0-cli-4533.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-3-0-cli maas-installation-technical-reference-deb-3-0-cli-4533.md
+## deb 3.0 ui
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-deb-3-0-ui-4529.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-3-0-ui maas-installation-technical-reference-deb-3-0-ui-4529.md
+## snap 2.7 cli
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-snap-2-7-cli-4522.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-7-cli maas-installation-technical-reference-snap-2-7-cli-4522.md
+## snap 2.7 ui
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-snap-2-7-ui-4519.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-7-ui maas-installation-technical-reference-snap-2-7-ui-4519.md
+## snap 2.8 cli
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-snap-2-8-cli-4523.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-8-cli maas-installation-technical-reference-snap-2-8-cli-4523.md
+## snap 2.8 ui
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-snap-2-8-ui-4520.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-8-ui maas-installation-technical-reference-snap-2-8-ui-4520.md
+## snap 2.9 cli
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-snap-2-9-cli-4524.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-9-cli maas-installation-technical-reference-snap-2-9-cli-4524.md
+## snap 2.9 ui
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-snap-2-9-ui-4521.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-9-ui maas-installation-technical-reference-snap-2-9-ui-4521.md
+## snap 3.0 cli
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-snap-3-0-cli-4525.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-3-0-cli maas-installation-technical-reference-snap-3-0-cli-4525.md
+## snap 3.0 ui
+	cp $(SRC)/maas-installation-technical-reference.md $(MODWD)/maas-installation-technical-reference-snap-3-0-ui-4516.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-3-0-ui maas-installation-technical-reference-snap-3-0-ui-4516.md
+## pull reference version
+	cd $(DISC) &&\
+	xpub pull $(DISC) 4516 4516
+## copy reference version to discourse master
+	cd $(DISC) &&\
+	cp -p maas-installation-technical-reference-snap-3-0-ui-4516.md maas-installation-technical-reference.md
+## remove reference version
+	cd $(DISC) && rm maas-installation-technical-reference-snap-3-0-ui-4516.md
+
+$(DISC)/maas-installation-tutorial.md: $(SRC)/maas-installation-tutorial.md
+## deb 2.7 cli
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-deb-2-7-cli-4545.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-7-cli maas-installation-tutorial-deb-2-7-cli-4545.md
+## deb 2.7 ui
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-deb-2-7-ui-4541.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-7-ui maas-installation-tutorial-deb-2-7-ui-4541.md
+## deb 2.8 cli
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-deb-2-8-cli-4546.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-8-cli maas-installation-tutorial-deb-2-8-cli-4546.md
+## deb 2.8 ui
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-deb-2-8-ui-4542.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-8-ui maas-installation-tutorial-deb-2-8-ui-4542.md
+## deb 2.9 cli
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-deb-2-9-cli-4547.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-9-cli maas-installation-tutorial-deb-2-9-cli-4547.md
+## deb 2.9 ui
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-deb-2-9-ui-4543.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-9-ui maas-installation-tutorial-deb-2-9-ui-4543.md
+## deb 3.0 cli
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-deb-3-0-cli-4548.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-3-0-cli maas-installation-tutorial-deb-3-0-cli-4548.md
+## deb 3.0 ui
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-deb-3-0-ui-4544.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-3-0-ui maas-installation-tutorial-deb-3-0-ui-4544.md
+## snap 2.7 cli
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-snap-2-7-cli-4537.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-7-cli maas-installation-tutorial-snap-2-7-cli-4537.md
+## snap 2.7 ui
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-snap-2-7-ui-4534.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-7-ui maas-installation-tutorial-snap-2-7-ui-4534.md
+## snap 2.8 cli
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-snap-2-8-cli-4538.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-8-cli maas-installation-tutorial-snap-2-8-cli-4538.md
+## snap 2.8 ui
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-snap-2-8-ui-4535.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-8-ui maas-installation-tutorial-snap-2-8-ui-4535.md
+## snap 2.9 cli
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-snap-2-9-cli-4539.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-9-cli maas-installation-tutorial-snap-2-9-cli-4539.md
+## snap 2.9 ui
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-snap-2-9-ui-4536.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-9-ui maas-installation-tutorial-snap-2-9-ui-4536.md
+## snap 3.0 cli
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-snap-3-0-cli-4540.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-3-0-cli maas-installation-tutorial-snap-3-0-cli-4540.md
+## snap 3.0 ui
+	cp $(SRC)/maas-installation-tutorial.md $(MODWD)/maas-installation-tutorial-snap-3-0-ui-4517.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-3-0-ui maas-installation-tutorial-snap-3-0-ui-4517.md
+## pull reference version
+	cd $(DISC) &&\
+	xpub pull $(DISC) 4517 4517
+## copy reference version to discourse master
+	cd $(DISC) &&\
+	cp -p maas-installation-tutorial-snap-3-0-ui-4517.md maas-installation-tutorial.md
+## remove reference version
+	cd $(DISC) && rm maas-installation-tutorial-snap-3-0-ui-4517.md
 
 $(DISC)/maas-logging.md: $(SRC)/maas-logging.md
 ## deb 2.7 cli

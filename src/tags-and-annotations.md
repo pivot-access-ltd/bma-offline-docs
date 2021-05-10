@@ -3,80 +3,504 @@
 Snap|[CLI](/t/maas-tags-snap-2-7-cli/2886) ~ [UI](/t/maas-tags-snap-2-7-ui/2887)|[CLI](/t/maas-tags-snap-2-8-cli/2888) ~ [UI](/t/maas-tags-snap-2-8-ui/2889)|[CLI](/t/maas-tags-snap-2-9-cli/2890) ~ [UI](/t/maas-tags-snap-2-9-ui/2891)|[CLI](/t/maas-tags-snap-3-0-cli/4021) ~ [UI](/t/maas-tags-snap-3-0-ui/4022)|
 Packages|[CLI](/t/maas-tags-deb-2-7-cli/2892) ~ [UI](/t/maas-tags-deb-2-7-ui/2893)|[CLI](/t/maas-tags-deb-2-8-cli/2894) ~ [UI](/t/maas-tags-deb-2-8-ui/2895)|[CLI](/t/maas-tags-deb-2-9-cli/2896) ~ [UI](/t/maas-tags-deb-2-9-ui/2897)|[CLI](/t/maas-tags-deb-3-0-cli/4023) ~ [UI](/t/maas-tags-deb-3-0-ui/4024)|
 
-[note]
-Editorial note: i'm reading dissonance between tags in the UI and tags in the CLI.
+Tags are a convenient way to assign descriptive words to machines, interfaces, and storage devices. Using MAAS tags, you can easily select machines that meet certain criteria, helping you to remember that you've defined or reserved certain machines for certain functions.  Annotations extend this capability considerably, offering both static annotations ("notes" in the UI, or machine "description" in the CLI) and dynamic annotations ("workload annotations" for the UI, or "owner data" in the CLI).   This article will tell you how to use both features.
 
-in the UI, i can set tags for machines, storage configurations (if the storage is in the available state), interfaces, and devices.
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+This article will show you how to:
 
-in the CLI, with the tags command, i can list nodes, machines, devices, rack controllers, and region controllers by tag, but
+* [Work with tags](#heading--work-with-tags)
+* [Work with annotations](#heading--work-with-annotations)
 
- - i can't see a way to set tags for region controllers, rack controllers, devices, or "nodes."
- - i can add tags to a machine, block device, partition, VM host, or network interface.
+For convenience, each of the headings is hyperlinked for bookmarking.
 
-this is hard to explain to users.  i'm booking time with Lee to help sort this out, and punting until we can connect.
-[/note]
+<a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a>
 
-Tags are a convenient way to assign descriptive words to machines, interfaces, and storage devices. Using MAAS tags, you can easily select machines that meet certain criteria, helping you to remember that you've defined or reserved certain machines for certain functions.  Annotations extend this capability considerably.  This article will tell you how to use both features.
-
-#### Eight questions you may have:
-
-1. [What are the rules for creating a tag name?](#heading--tag-name-rules)
-2. [How do I create and assign tags?](#heading--create-a-tag)
-3. [How do I remove a tag from a node?](#heading--remove-a-tag)
-4. [How do I delete a tag?](#heading--delete-a-tag)
-5. [How do I edit a tag?](#heading--edit-a-tag)
-6. [How do I list tags?](#heading--list-tags)
-7. [How do I filter listings using tags?](#heading--filter-listings-using-tags)
-8. [How do I use tags to assign per-machine kernel boot options?](#heading--assign-per-machine-kernel-boot-options)
-<!-- commented out until fully drafted
-10. [How do I create annotations?]()
-11. [How do I remove an annotation from a node?]()
-12. [How do I delete an annotation?]()
-13. [How do I edit an annotation?]()
-14. [How do I view annotations?]()
- commented out until fully drafted -->
-
-<a href="#heading--tag-name-rules"><h2 id="heading--tag-name-rules">What are the rules for creating a tag name?</h2></a>
-
-When creating tags, there are some universal rules that you need to follow:
+When working with tags, there are some universal rules that you need to follow:
 
 1. Tag names can include any combination of alphabetic letters (a-zA-Z), numbers (0-9), dashes (-) and underscores (_).
 2. Tag names can be a maximum of 256 characters in length.
 3. Tag names *cannot* include spaces.
 
-As long as you follow these three simple rules, you shouldn't have a lot of trouble creating and assigning tags.
+This section will show you how to:
 
-<a href="#heading--create-a-tag"><h2 id="heading--create-a-tag">How do I create and assign tags?</h2></a>
+* [Work with virtual/machine tags](#heading--work-with-virtual-slash-machine-tags)
+* [Work with controller tags](#heading--work-with-controller-tags)
+* [Work with device tags](#heading--work-with-device-tags)
+* [Work with storage tags](#heading--work-with-storage-tags)
+* [Work with network tags](#heading--work-with-network-tags)
+* [Work with node tags](#heading--work-with-node-tags)
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--work-with-virtual-slash-machine-tags"><h3 id="heading--work-with-virtual-slash-machine-tags">Work with virtual/machine tags</h3></a>
+
+This section will show you how to:
+
+* [Create tags with built-in kernel options](#heading--create-tags-with-built-in-kernel-options)
+* [Create/assign machine tags](#heading--create-slash-assign-machine-tags)
+* [Remove/delete machine tags](#heading--remove-slash-delete-machine-tags)
+* [List virtual/machine tags](#heading--list-virtual-slash-machine-tags)
+* [List VM host tags](#heading--list-virtual-machine-host-tags)
+* [View virtual/machine tags](#heading--view-virtual-slash-machine-tags)
+* [View VM host tags](#heading--view-virtual-machine-host-tags)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--create-tags-with-built-in-kernel-options"><h4 id="heading--create-tags-with-built-in-kernel-options">Create tags with built-in kernel options</h4></a>
+
+To create tags with built-in kernel options, you must use the MAAS CLI.  See the section [link] in the CLI version of this article.
+
+<a href="#heading--create-slash-assign-machine-tags"><h4 id="heading--create-slash-assign-machine-tags">Create/assign machine tags</h4></a>
+
+<a href="#heading--remove-slash-delete-machine-tags"><h4 id="heading--remove-slash-delete-machine-tags">Remove/delete machine tags</h4></a>
+
+<a href="#heading--list-virtual-slash-machine-tags"><h4 id="heading--list-virtual-slash-machine-tags">List virtual/machine tags</h4></a>
+
+<a href="#heading--list-virtual-machine-host-tags"><h4 id="heading--list-virtual-machine-host-tags">List VM host tags</h4></a>
+
+<a href="#heading--view-virtual-slash-machine-tags"><h4 id="heading--view-virtual-slash-machine-tags">View virtual/machine tags</h4></a>
+
+<a href="#heading--view-virtual-machine-host-tags"><h4 id="heading--view-virtual-machine-host-tags">View VM host tags</h4></a>
+
+<a href="#heading--work-with-controller-tags"><h3 id="heading--work-with-controller-tags">Work with controller tags</h3></a>
+
+This section will show you how to:
+
+* [Create/assign controller tags](#heading--create-slash-assign-controller-tags)
+* [Remove/delete controller tags](#heading--remove-slash-delete-controller-tags)
+* [List controller tags](#heading--list-controller-tags)
+* [View controller tags](#heading--view-controller-tags)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--create-slash-assign-controller-tags"><h4 id="heading--create-slash-assign-controller-tags">Create/assign controller tags></h4></a>
+
+<a href="#heading--remove-slash-delete-controller-tags"><h4 id="heading--remove-slash-delete-controller-tags">Remove/delete controller tags</h4></a>
+
+<a href="#heading--list-controller-tags"><h4 id="heading--list-controller-tags">List controller tags</h4></a>
+
+<a href="#heading--view-controller-tags"><h4 id="heading--view-controller-tags">View controller tags
+</h4></a>
+
+<a href="#heading--work-with-device-tags"><h3 id="heading--work-with-device-tags">Work with device tags</h3></a>
+
+This section will show you how to:
+
+* [Create/assign device tags](#heading--create-slash-assign-device-tags)
+* [Remove/delete device tags](#heading--remove-slash-delete-device-tags)
+* [List device tags](#heading--list-device-tags)
+* [View device tags](#heading--view-device-tags)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--create-slash-assign-device-tags"><h4 id="heading--create-slash-assign-device-tags">Create/assign device tags></h4></a>
+
+<a href="#heading--remove-slash-delete-device-tags"><h4 id="heading--remove-slash-delete-device-tags">Remove/delete device tags</h4></a>
+
+<a href="#heading--list-device-tags"><h4 id="heading--list-device-tags">List device tags</h4></a>
+
+<a href="#heading--view-device-tags"><h4 id="heading--view-device-tags">View device tags
+</h4></a>
+
+<a href="#heading--work-with-storage-tags"><h3 id="heading--work-with-storage-tags">Work with storage tags</h3></a>
+
+This section will show you how to:
+
+* [Work with block device tags](#heading--work-with-block-device-tags)
+* [Work with partition tags](#heading--work-with-partition-tags)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--work-with-block-device-tags"><h4 id="heading--work-with-block-device-tags">Work with block device tags</h4></a>
+
+This section will show you how to:
+
+* [Create/assign block device tags](#heading--create-slash-assign-block-device-tags)
+* [Remove/delete block device tags](#heading--remove-slash-delete-block-device-tags)
+* [List block device tags](#heading--list-block-device-tags)
+* [View block device tags](#heading--view-block-device-tags)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--create-slash-assign-block-device-tags"><h5 id="heading--create-slash-assign-block-device-tags">Create/assign block device tags</h5></a>
+
+<a href="#heading--remove-slash-delete-block-device-tags"><h5 id="heading--remove-slash-delete-block-device-tags">Remove/delete block device tags</h5></a>
+
+<a href="#heading--list-block-device-tags"><h5 id="heading--list-block-device-tags">List block device tags</h5></a>
+
+<a href="#heading--view-block-device-tags"><h5 id="heading--view-block-device-tags">View block device tags</h5></a>
+
+<a href="#heading--work-with-partition-tags"><h4 id="heading--work-with-partition-tags">Work with partition tags</h4></a>
+
+This section will show you how to:
+
+* [Create/assign partition tags](#heading--create-slash-assign-partition-tags)
+* [Remove/delete partition tags](#heading--remove-slash-delete-partition-tags)
+* [List partition tags](#heading--list-partition-tags)
+* [View partition tags](#heading--view-partition-tags)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--create-slash-assign-partition-tags"><h5 id="heading--create-slash-assign-partition-tags">Create/assign partition tags</h5></a>
+
+<a href="#heading--remove-slash-delete-partition-tags"><h5 id="heading--remove-slash-delete-partition-tags">Remove/delete partition tags</h5></a>
+
+<a href="#heading--list-partition-tags"><h5 id="heading--list-partition-tags">List partition tags</h5></a>
+
+<a href="#heading--view-partition-tags"><h5 id="heading--view-partition-tags">View partition tags</h5></a>
+
+<a href="#heading--work-with-network-tags"><h3 id="heading--work-with-network-tags">Work with network tags</h3></a>
+
+This section will show you how to:
+
+* [Create/assign network interface tags](#heading--create-slash-assign-network-interface-tags)
+* [Remove/delete network interface tags](#heading--remove-slash-delete-network-interface-tags)
+* [List network interface tags](#heading--list-network-interface-tags)
+* [View network interface tags](#heading--view-network-interface-tags)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--create-slash-assign-network-interface-tags"><h4 id="heading--create-slash-assign-network-interface-tags">Create/assign network interface tags</h4></a>
+
+<a href="#heading--remove-slash-delete-network-interface-tags"><h4 id="heading--remove-slash-delete-network-interface-tags">Remove/delete network interface tags</h4></a>
+
+<a href="#heading--list-network-interface-tags"><h4 id="heading--list-network-interface-tags">List network interface tags</h4></a>
+
+<a href="#heading--view-network-interface-tags"><h4 id="heading--view-network-interface-tags">View network interface tags</h4></a>
+
+<a href="#heading--work-with-node-tags"><h3 id="heading--work-with-node-tags">Work with node tags</h3></a>
+
+You can only manipulate node tags via the MAAS CLI.  Please see the [CLI version](link) of this page for details.
+
+<a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a>
+
+This section will show you how to:
+
+* [Work with static annotations](#heading--work-with-static-annotations)
+* [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a>
+
+Static annotations are referred to as "Notes" in the MAAS Web UI.  This section will teach you how to:
+
+* [Add/assign static annotations (notes) to machines](#heading--add-slash-assign-notes-to-machines)
+* [Remove/delete static annotations (notes) from machines](#heading--remove-slash-delete-notes-from-machines)
+* [View static annotations (notes) for a machine](#heading--view-notes-for-a-machine)
+* [List static annotations (notes) for machines](#heading--list-notes-for-machines)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+
+<a href="#heading--add-slash-assign-notes-to-machines"><h4 id="heading--add-slash-assign-notes-to-machines">Add/assign static annotations (notes) to machines</h4></a>
+
+<a href="#heading--remove-slash-delete-notes-from-machines"><h4 id="heading--remove-slash-delete-notes-from-machines">Remove/delete static annotations (notes) from machines</h4></a>
+
+<a href="#heading--view-notes-for-a-machine"><h4 id="heading--view-notes-for-a-machine">View static annotations (notes) for a machine</h4></a>
+
+<a href="#heading--list-notes-for-machines"><h4 id="heading--list-notes-for-machines">List static annotations (notes) for machines</h4></a>
+
+You can only list static annotations for multiple machines using the MAAS CLI. Please refer to the [MAAS CLI] version of this page for details.
+
+snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui 
+<a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</h3></a>
+
+Dynamic (workload) annotations are only available in the CLI.  See the [CLI version of this page](link) for detailed instructions.
+ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+
+<!-- snap-3-0-ui snap-3-0-ui
+<a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</h3></a>
+ snap-3-0-ui snap-3-0-ui -->
+
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+This article will show you how to:
+
+* [Work with tags](#heading--work-with-tags)
+* [Work with annotations](#heading--work-with-annotations)
+
+Please see the explanation, tec ref, tutorial, etc....
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a>
 
 With the MAAS CLI, creating and assigning tags are two distinct operations -- unlike the UI, where they are essentially part of the same operation.  On the other hand, the CLI affords more flexilibity, as it's possible to add tags to some entities and remove them from others in the same command line invocation.
 
-#### questions you may have
+When working with tags, there are some universal rules that you need to follow:
 
-1. [How do I create a tag?](#heading--cli-create-tag)
-2. [How do I assign a tag to a machine?](#heading--cli-assign-machine-tag)
-3. [How do I assign a tag to a block device?](#heading--cli-assign-block-device-tag)
-4. [How do I assign a tag to a partition?](#heading--cli-assign-partition-tag)
-4. [How do I assign a tag to a VM host?](#heading--cli-assign-vm-host-tag)
-5. [How do I assign a tag to a network interface?](#heading--cli-assign-interface-tag)
-6. [How do I assign a tag to a device?](#heading--cli-assign-device-tag)
+1. Tag names can include any combination of alphabetic letters (a-zA-Z), numbers (0-9), dashes (-) and underscores (_).
+2. Tag names can be a maximum of 256 characters in length.
+3. Tag names *cannot* include spaces.
 
-<a href="#heading--cli-create-tag"><h3 id="heading--cli-create-tag">How do I create a tag?</h3></a>
+This section will show you how to:
 
-You can create a MAAS tag with the following command:
+* [Work with machine tags](#heading--work-with-machine-tags)
+* [Work with virtual machine tags](#heading--work-with-virtual-machine-tags)
+* [Work with region controller tags](#heading--work-with-region-controller-tags)
+* [Work with rack controller tags](#heading--work-with-rack-controller-tags)
+* [Work with device tags](#heading--work-with-device-tags)
+* [Work with storage tags](#heading--work-with-storage-tags)
+* [Work with network tags](#heading--work-with-network-tags)
+* [Work with node tags](#heading--work-with-node-tags)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--work-with-machine-tags"><h3 id="heading--work-with-machine-tags">Work with machine tags</h3></a>
+
+This section will show you how to:
+
+* [Create machine tags](#heading--create-machine-tags)
+* [Create machine tags with built-in kernel options](#heading--create-machine-tags-with-kernel-options)
+* [Assign machine tags to machines](#heading--assign-machine-tags-to-machines)
+* [Remove machine tags from machines](#heading--remove-machine-tags-from-machines)
+* [List machine tags for many machines](#heading--list-machine-tags-for-many-machines)
+* [View machine tags for one machine](#heading--view-machine-tags)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--create-machine-tags)"><h4 id="heading--create-machine-tags)">Create machine tags</h4></a>
+
+You can create a machine MAAS tag with the following command:
 
 ```bash
 maas $PROFILE tags create name=$NAME
 ```
 
-This command takes the following optional parameters:
+This command has [additional options](/t/maas-projects-tech-ref/nnnn#heading--create-machine-tags).
 
-* `comment`: a description of the tag in natural language free text; presumably a string that identifies how the tag will be used.
+<a href="#heading--create-machine-tags-with-kernel-options)"><h4 id="heading--create-machine-tags-with-kernel-options)">Create machine tags with built-in kernel options</h4></a>
 
-* `definition`: an `XPATH` query that will be evaluated against the `hardware_details` stored for all nodes, that is, the output of ```lshw -xml```; formatted as a string. Review the [explanation of XPATH bindings with tags](/t/discourse/maas-project/4460#heading--tags-and-xpath-entries) for more details about this parameter.
+To specify [kernel boot options](/t/maas-projects-tech-reference/nnnn#heading--tags-and-kernel-parameters) for an individual machine, first create a tag:
 
-* ```kernel_opts```: all nodes associated with this tag will add this string to their kernel options when booting.  This value overrides the global ```kernel_opts``` setting.  If more than one associated tag has attached kernel options, all the applied options will be concatenated for the machine, in alphabetical order.  Review the [explanation of per-machine kernel boot options](/t/discourse/maas-project/4460#heading--tags-and-kernel-boot-options), or see the section on [per-machine kernel boot options](#heading--assign-per-machine-kernel-boot-options) for more detailed instructions about using this parameter.
+``` bash
+maas $PROFILE tags create name='$TAG_NAME' \
+    comment='$COMMENT' kernel_opts='$KERNEL_OPTIONS'
+```
+
+For example:
+
+``` bash
+maas $PROFILE tags create name='nomodeset' \
+    comment='nomodeset kernel option' kernel_opts='nomodeset vga'
+```
+
+You will then [assign the tag](#heading--assign-machine-tags-to-machines) to one or more machines.
+
+<a href="#heading--assign-machine-tags-to-machines"><h4 id="heading--assign-machine-tags-to-machines">Assign machine tags to machines</h4></a>
+
+To assign a tag to a machine, use the `update-nodes` command of the `tag` object, like this:
+
+``` bash
+maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
+```
+
+You can add tags to more than one machine by specifying more than one `add=` clause:
+
+``` bash
+maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID1 add=$SYSTEM_ID2
+```
+
+You can also add and remove tags in the same invocation:
+
+``` bash
+maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID1 remove=$SYSTEM_ID2
+```
+
+This command has [additional options, examples, and specific error messages](/t/maas-projects-tech-reference/nnnn#tag-update-nodes).
+
+<a href="#heading--remove-machine-tags-from-machines"><h4 id="heading--remove-machine-tags-from-machines">Remove machine tags from machines</h4></a>
+
+To remove a tag to a machine, use the `update-nodes` command of the `tag` object, like this:
+
+``` bash
+maas $PROFILE tag update-nodes $TAG_NAME remove=$SYSTEM_ID
+```
+
+You can remove the tag to more than one machine by specifying more than one `remove=` clause:
+
+``` bash
+maas $PROFILE tag update-nodes $TAG_NAME remove=$SYSTEM_ID1 remove=$SYSTEM_ID2
+```
+
+You can also add and remove tags in the same invocation:
+
+``` bash
+maas $PROFILE tag update-nodes $TAG_NAME remove=$SYSTEM_ID1 add=$SYSTEM_ID2
+```
+
+This command has [additional options, examples, and specific error messages](/t/maas-projects-tech-reference/nnnn#tag-update-nodes).
+
+<a href="#heading--list-machine-tags-for-many-machines"><h4 id="heading--list-machine-tags-for-many-machines">List machine tags for many machines</h4></a>
+
+To list machine tags for multiple machines:
+
+```bash
+maas admin machines read | jq -r '(["hostname","sysid","machine_tags"]|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.tag_names[]]) | @tsv' | column -t
+```
+
+<a href="#heading--view-machine-tags"><h4 id="heading--view-machine-tags">View machine tags for one machine</h4></a>
+
+To view the machine tags for one machine, enter the following command:
+
+```bash
+maas admin machine read xn8taa | jq -r '(["hostname","sysid","machine_tags"]|(.,map(length*"-"))),([.hostname,.system_id,.tag_names[]]) | @tsv' | column -t
+```
+
+<a href="#heading--work-with-virtual-machine-tags"><h3 id="heading--work-with-virtual-machine-tags">Work with virtual machine tags</h3></a>
+
+<a href="#heading--work-with-region-controller-tags"><h3 id="heading--work-with-region-controller-tags">Work with region controller tags</h3></a>
+
+<a href="#heading--work with-rack-controller-tags"><h3 id="heading--work with-rack-controller-tags">Work with rack controller tags</h3></a>
+
+<a href="#heading--work-with-device-tags"><h3 id="heading--work-with-device-tags">Work with device tags</h3></a>
+
+This section will show you how to:
+
+* [Create/assign device tags](#heading--create-slash-assign-device-tags)
+* [Remove/delete device tags](#heading--remove-slash-delete-device-tags)
+* [List device tags](#heading--list-device-tags)
+* [View device tags](#heading--view-device-tags)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--create-slash-assign-device-tags"><h4 id="heading--create-slash-assign-device-tags">Create/assign device tags></h4></a>
+
+<a href="#heading--remove-slash-delete-device-tags"><h4 id="heading--remove-slash-delete-device-tags">Remove/delete device tags</h4></a>
+
+<a href="#heading--list-device-tags"><h4 id="heading--list-device-tags">List device tags</h4></a>
+
+<a href="#heading--view-device-tags"><h4 id="heading--view-device-tags">View device tags
+</h4></a>
+
+<a href="#heading--work-with-storage-tags"><h3 id="heading--work-with-storage-tags">Work with storage tags</h3></a>
+
+
+This section will show you how to:
+
+* [Work with block device tags](#heading--work-with-block-device-tags)
+* [Work with partition tags](#heading--work-with-partition-tags)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--work-with-block-device-tags"><h4 id="heading--work-with-block-device-tags">Work with block device tags</h4></a>
+
+This section will show you how to:
+
+* [Create/assign block device tags](#heading--create-slash-assign-block-device-tags)
+* [Remove/delete block device tags](#heading--remove-slash-delete-block-device-tags)
+* [List block device tags](#heading--list-block-device-tags)
+* [View block device tags](#heading--view-block-device-tags)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--create-slash-assign-block-device-tags"><h5 id="heading--create-slash-assign-block-device-tags">Create/assign block device tags</h5></a>
+
+<a href="#heading--remove-slash-delete-block-device-tags"><h5 id="heading--remove-slash-delete-block-device-tags">Remove/delete block device tags</h5></a>
+
+<a href="#heading--list-block-device-tags"><h5 id="heading--list-block-device-tags">List block device tags</h5></a>
+
+<a href="#heading--view-block-device-tags"><h5 id="heading--view-block-device-tags">View block device tags</h5></a>
+
+<a href="#heading--work-with-partition-tags"><h4 id="heading--work-with-partition-tags">Work with partition tags</h4></a>
+
+This section will show you how to:
+
+* [Create/assign partition tags](#heading--create-slash-assign-partition-tags)
+* [Remove/delete partition tags](#heading--remove-slash-delete-partition-tags)
+* [List partition tags](#heading--list-partition-tags)
+* [View partition tags](#heading--view-partition-tags)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--create-slash-assign-partition-tags"><h5 id="heading--create-slash-assign-partition-tags">Create/assign partition tags</h5></a>
+
+<a href="#heading--remove-slash-delete-partition-tags"><h5 id="heading--remove-slash-delete-partition-tags">Remove/delete partition tags</h5></a>
+
+<a href="#heading--list-partition-tags"><h5 id="heading--list-partition-tags">List partition tags</h5></a>
+
+<a href="#heading--view-partition-tags"><h5 id="heading--view-partition-tags">View partition tags</h5></a>
+
+<a href="#heading--work-with-network-tags"><h3 id="heading--work-with-network-tags">Work with network tags</h3></a>
+
+This section will show you how to:
+
+* [Create/assign network interface tags](#heading--create-slash-assign-network-interface-tags)
+* [Remove/delete network interface tags](#heading--remove-slash-delete-network-interface-tags)
+* [List network interface tags](#heading--list-network-interface-tags)
+* [View network interface tags](#heading--view-network-interface-tags)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--create-slash-assign-network-interface-tags"><h4 id="heading--create-slash-assign-network-interface-tags">Create/assign network interface tags</h4></a>
+
+<a href="#heading--remove-slash-delete-network-interface-tags"><h4 id="heading--remove-slash-delete-network-interface-tags">Remove/delete network interface tags</h4></a>
+
+<a href="#heading--list-network-interface-tags"><h4 id="heading--list-network-interface-tags">List network interface tags</h4></a>
+
+<a href="#heading--view-network-interface-tags"><h4 id="heading--view-network-interface-tags">View network interface tags</h4></a>
+
+<a href="#heading--work-with-node-tags"><h3 id="heading--work-with-node-tags">Work with node tags</h3></a>
+
+This section will show you how to:
+
+* [Create/assign node tags](#heading--create-slash-assign-node-tags)
+* [Remove/delete node tags](#heading--remove-slash-delete-node-tags)
+* [List node tags](#heading--list-node-tags)
+* [View node tags](#heading--view-node-tags)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--create-slash-assign-node-tags"><h4 id="heading--create-slash-assign-node-tags">Create/assign node tags</h4></a>
+
+<a href="#heading--remove-slash-delete-node-tags"><h4 id="heading--remove-slash-delete-node-tags">Remove/delete node tags</h4></a>
+
+<a href="#heading--list-node-tags"><h4 id="heading--list-node-tags">List node tags</h4></a>
+
+<a href="#heading--view-node-tags"><h4 id="heading--view-node-tags">View node tags</h4></a>
+
+<a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a>
+
+This section will show you how to:
+
+* [Work with static annotations](#heading--work-with-static-annotations)
+* [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a>
+
+Static annotations are referred to as the machine "description" in the MAAS CLI.  This section will teach you how to:
+
+* [Add/assign static annotations (notes) to machines](#heading--add-slash-assign-notes-to-machines)
+* [Remove/delete static annotations (notes) from machines](#heading--remove-slash-delete-notes-from-machines)
+* [View static annotations (notes) for a machine](#heading--view-notes-for-a-machine)
+* [List static annotations (notes) for machines](#heading--list-notes-for-machines)
+
+For convenience, each of the headings is hyperlinked for bookmarking.
+
+<a href="#heading--add-slash-assign-notes-to-machines"><h4 id="heading--add-slash-assign-notes-to-machines">Add/assign static annotations (notes) to machines</h4></a>
+
+<a href="#heading--remove-slash-delete-notes-from-machines"><h4 id="heading--remove-slash-delete-notes-from-machines">Remove/delete static annotations (notes) from machines</h4></a>
+
+<a href="#heading--view-notes-for-a-machine"><h4 id="heading--view-notes-for-a-machine">View static annotations (notes) for a machine</h4></a>
+
+<a href="#heading--list-notes-for-machines"><h4 id="heading--list-notes-for-machines">List static annotations (notes) for machines</h4></a>
+
+<a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</h3></a>
+
+snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+
+
+zork
+
+<a href="#heading--create-a-tag"><h2 id="heading--create-a-tag">How do I create and assign tags?</h2></a>
+
+<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
+
+
 
 <a href="#heading--cli-assign-machine-tag"><h3 id="heading--cli-assign-machine-tag">How do I assign a tag to a machine?</h3></a>
 
@@ -86,43 +510,6 @@ If you want to assign a tag, you can do so with this CLI command:
 maas $PROFILE tag update-nodes $TAG_NAME key=$VALUE
 ```
 
-The various key-value pairs are somewhat optional, although at least one `add=$SYSTEM_ID` or `remove=$SYSTEM_ID` follow the `$TAG_NAME` in this command.  The possible key-value pairs are as follows:
-
-* `add=$SYSTEM_ID`: this pair causes MAAS to add $TAG_NAME to the machine $SYSTEM_ID.  You can use as many of these key-value pairs as needed, so it's possible to tag many machines at once with a single command-line invocation.
-
-* `remove=$SYSTEM_ID`: this pair causes MAAS to remove $TAG_NAME from the machine $SYSTEM_ID.  You can use as many of these key-value pairs as needed, so it's possible to remove tags from many machines at once with a single command-line invocation.
-
-[note]
-Note that both "add" and "remove" key-value pairs can be combined in a single command-line invocation, so it's possible to add and remove tags from various machines, at the same time, in a single command.
-[/note]
-
-* `definition=$XPATH_EXPRESSION`: If given, the entered XPATH expression will be validated against the current definition of the tag.  If the value does not match, MAAS assumes the worker is out of date and will not do the update.
-
-* 'rack_controller=$SYSTEM_ID`: If given, the system ID of the rack controller that processed the given tag initially is used, requiring that the requester be the rack controller.  If not given, the requester must be a MAAS admin.
-
-For example, to assign a *existing* tag named "new-tag" to a machine with system ID "xmprry," the following command would be executed:
-
-```
-maas admin tag update-nodes new-tag add=xmprry
-```
-
-A successful result should look like this:
-
-```
-Success.
-Machine-readable output follows:
-{
-    "added": 1,
-    "removed": 0
-}
-```
-
-If you try to assign a tag that hasn't been created yet, you'll get a "Not Found" error message.  For example:
-
-```
-maas admin tag update-nodes revolution add=dtanap
-Not Found
-```
 
 <a href="#heading--cli-assign-block-device-tag"><h3 id="heading--cli-assign-block-device-tag">How do I assign a tag to a block device?</h3></a>
 
@@ -597,31 +984,6 @@ maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
 
 Per-machine kernel boot options are set using the CLI.
 
-[note]
-Per-machine boot options take precedence to global ones. Please also note that, even though a deployed machine has a `kernel_opt` tag applied, MAAS won't apply the `kernel_opt` associated with that tag until the next deployment.  This means that a machine that has been deployed for a long time can (possibly) inherit kernel options that were applied in the distant past.
-[/note]
-
-To specify kernel boot options for an individual machine, first create a tag:
-
-``` bash
-maas $PROFILE tags create name='$TAG_NAME' \
-    comment='$COMMENT' kernel_opts='$KERNEL_OPTIONS'
-```
-
-For example:
-
-``` bash
-maas $PROFILE tags create name='nomodeset' \
-    comment='nomodeset kernel option' kernel_opts='nomodeset vga'
-```
-
-Next, assign the tag to the machine in question:
-
-``` bash
-maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
-```
-
-If multiple tags attached to a machine have the `kernel_opts` defined, MAAS uses the first one found, in alphabetical order.
 
 See the [CLI tag management](/t/cli-tag-management/801) section for more information about using the CLI to manage tags.
 snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->

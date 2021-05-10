@@ -1,3 +1,4 @@
+
 MAAS has the built-in capability to create and manage machine-related projects along several different dimensions.  There are ways to group, tag, and annotate machines, both persistent and runtime-only, including the capability of filtering machines to both limit the views and restrict actions to a specified subset of machines.  Also included is the capability to limit access against some of these project parameters with the RBAC tool.
 
 This article will provide a technical explanation of projects and how they fit into the MAAS ecosystem. For a gentler slope, try the [MAAS project tutorial](/t/maas-project-tutorial/4478).
@@ -8,21 +9,25 @@ This article will provide a technical explanation of projects and how they fit i
 
 #### Topics you may want to pursue:
 
-[What are the characteristics of a project, in this context?](#heading--projects)
-[What are resource pools, and how do they work?](#heading--resource-pools)
-[What are tags, and how do they work?](#heading--tags)
-[What are workload annotations, and how do they work?](#heading--wla)
-[What are static annotations (notes), and how do they work?](#heading--notes)
-[What are LXD projects, and how do they work?](#heading--lxd-projects)
-[Can you tie this all together with an example?](#heading--maas-project-example)
+* [Projects in the context of MAAS](#heading--projects-in-the-context-of-maas)
+* [Machines vs. functions](#heading--machines-vs.-functions)
+* [Resource pools](#heading--resource-pools)
+* [Tags](#heading--tags)
+* [Static annotations (notes)](#heading--static-annotations-(notes))
+* [Dynamic (workload) annotations](#heading--dynamic-(workload)-annotations)
+* [LXD projects](#heading--lxd-projects)
+* [A project example](#heading--a-project-example)
 
-<a href="#heading--projects"><h2 id="heading--projects">Projects in the context of MAAS</h2></a>
+
+<a href=#heading--projects-in-the-context-of-maas><h2 id="heading--projects-in-the-context-of-maas">Projects in the context of MAAS</h2></a>
 
 In general, a project is an activity, system, or procedural control that is carefully planned, in advance, to satisfy a particular goal or aim.  Taken in the context of MAAS, that goal might be satisfying a Service-Level Agreement (SLA), meeting throughput requirements, or budgeting limited seats to a large organisation by quotas.  Essentially, the goal of a MAAS "project" is to budget resources that are finite and generally interchangeable to a series of user needs over a fixed period of time.  The success of a MAAS project can be measured against performance constraints, cost management goals, per-project limitations, or any other externally verifiable criteria.
 
 To that extent, a MAAS project must be an organised effort, with a defined structure, driven by a clearly-defined opportunity, corporate goal, key performance indicator, need, or even a specific source of discomfort.  Organisation is especially important in large MAAS installations -- those with 100 to 1000+ machines -- where the idea of a closed structure with finite resources and limited time may seem so amorphous and malleable that machines can simply be created and destroyed at will.  Even in the largest MAAS instantiation, particular care must be taken to budget machines, to avoid unexpected conflicts and delays.
 
-<a href="#heading--machines-vs-functions"><h3 id="heading--machines-vs-functions">Machines vs. functions</h3></a>
+
+
+<a href=#heading--machines-vs.-functions><h2 id="heading--machines-vs.-functions">Machines vs. functions</h2></a>
 
 Matching machine functions to corporate needs is a balancing act, regardless of the apparent surplus of machines at any given moment.  Machines can be re-commissioned with different cloud-init scripts and deployed to any corporate function that their resources allow.  Machine functions, though, are driven by definite and specified requirements, over limited or prescribed life-cycles, to mutually-exclusive needs.  Once deployed, machines may not be interchangeable, and probably aren't available to be re-commissioned on a whim.
 
@@ -35,7 +40,8 @@ Using project thinking, it's possible to create an environment that delivers one
 
 Together, these four elements combine to make a robust MAAS project-management toolbox.  This article will give you the theory behind these elements, and provide an example around which to discuss best practices.
 
-<a href="#heading--resource-pools"><h2 id="heading--resource-pools">Resource pools</h2></a>
+
+<a href=#heading--resource-pools><h2 id="heading--resource-pools">Resource pools</h2></a>
 
 Resource pools are a designation, independent of machines, that can be used to logically group machine resources -- that is, machines and VM hosts -- around some particular category or characteristic.  These characteristics do not have to be parallel constructs, but they must be applied in a mutually-exclusive way.  Resource pools have a one-to-one relationship with machines: At any given time, a single machine can only be assigned to a single resource pool, although any number of machines can be assigned to the same resource pool.
 
@@ -43,17 +49,33 @@ Resource pools are persistent, in that a machine remains in its assigned resourc
 
 Resource pools are used to budget machines in whatever way makes sense to your organisation.  For example, resource pools could be assigned by function, by user population, by usage parameters, or whatever way you need to slice things up.  They can be used to filter machines, either for viewing or for applying bulk actions, making them an extremely flexible and powerful project management tool.
 
-<a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
+<a href=#heading--tags><h2 id="heading--tags">Tags</h2></a>
 
 Tags are short, descriptive, persistent labels that have a many-to-many relationship to machines.  Any tag can be assigned to any machine at any time.  Tags are similar to resource pools, in that they persist until changed or removed, but they differ in that they are intentionally short and have no ancillary description to explain their purpose.
 
 Tags also differ from resource pools because they can be applied not just to machines, but also to interfaces and storage devices.  Like resource pools, tags can be used to filter views and action selections.  Tags are generally useful in representing metadata, that is, characteristics of the machine that might be important to some of your resource pools, but not unique.  For example, typical tags might include "in-the-clinic," "has_printer," or "requiresHardwareKey."  The possibilities are limited only by your imagination and needs.
 
-<a href="#heading--tags-and-kernel-boot-options"><h3 id="heading--tags-and-kernel-boot-options">Tags can carry kernel options</h3></a>
+Some notes regarding tags you may wish to review:
+
+* [Tags can carry kernel options](#heading--tags-can-carry-kernel-options)
+* [Tags can bind XPATH entries](#heading--tags-can-bind-xpath-entries)
+* [Juju support for tags](#heading--juju-support-for-tags)
+* [Tags in the UI vs. the CLI](#heading--tags-in-the-ui-vs.-the-cli)
+* [Machine and VM tags](#heading--machine-and-vm-tags)
+* [VM host tags](#heading--vm-host-tags)
+* [Controller tags](#heading--controller-tags)
+* [Block device tags](#heading--block-device-tags)
+* [Partition tags](#heading--partition-tags)
+* [Network interface tags](#heading--network-interface-tags)
+* [Device tags](#heading--device-tags)
+* [Node tags](#heading--node-tags)
+
+<a href=#heading--tags-can-carry-kernel-options><h3 id="heading--tags-can-carry-kernel-options">Tags can carry kernel options</h3></a>
 
 Per-machine kernel boot options can be set, via tags, using the CLI. Per-machine boot options take precedence to global ones. Please also note that, even though a deployed machine has a `kernel_opt` tag applied, MAAS won't apply the `kernel_opt` associated with that tag until the next deployment.  This means that a machine that has been deployed for a long time can (possibly) inherit kernel options that were applied in the distant past.  If multiple tags attached to a machine have the `kernel_opts` defined, MAAS uses the first one found, in alphabetical order.
 
-<a href="#heading--tags-and-xpath-entries"><h3 id="heading--tags-and-xpath-entries">Tags can bind XPATH entries</h3></a>
+
+<a href=#heading--tags-can-bind-xpath-entries><h3 id="heading--tags-can-bind-xpath-entries">Tags can bind XPATH entries</h3></a>
 
 MAAS supports binding an XPath expressions to a tag using *tag definitions* (see below). This makes auto-assigning tags to matching hardware possible. For instance, you could tag machines that possess fast GPUs and then deploy software that used GPU-accelerated CUDA or OpenCL libraries.
 
@@ -98,25 +120,69 @@ After adding the speed criteria via an XPath *operator* we end up with this as o
 //node[@id="display"]/'clock units="Hz"' > 1000000000
 ```
 
-<a href="#heading--tags-and-juju"><h3 id="heading--tags-and-juju">Juju support for tags</h3></a>
+<a href=#heading--juju-support-for-tags><h3 id="heading--juju-support-for-tags">Juju support for tags</h3></a>
 
 Because Juju is the recommended way to deploy services on machines managed by MAAS, it supports MAAS tags for application deployments. By specifying MAAS tags as Juju “constraints”, services can be deployed to machines that have particular user-defined characteristics.
 
-<a href="#heading--wla"><h2 id="heading--wla">Workload annotations</h2></a>
+<a href=#heading--tags-in-the-ui-vs-the-cli><h3 id="heading--tags-in-the-ui-vs-the-cli">Tags in the UI vs. the CLI</h3></a>
 
-Workload annotations are volatile, key-value pairs that can be assigned to operating machines (e.g., machines in the "deployed" state).  The can be used to group and potentially protect operating machines, independent of tags or resource pool assigned.
+In the MAAS UI, tags are not handled as individual objects (like the CLI), but created when they are assigned, and deleted when the last assignment is removed.   In most cases, they cannot be comprehensively listed, but rather inferred from selection lists in filter tools.  More often than not, enumerating tags leads to a filtered list of machines or devices to which those filters are applied.
 
-For example, a workload annotation might be something like, "owned by john smith, do not release without permission," "part of the Bismuth, ND, remote location," or "currently used for critical hurricane operations."  Workload annotations are many-to-many with machines, and, although volatile, can be used to filter views and actions on deployed machines.
+In the MAAS CLI, tags are more often treated as direct objects (as in machine tags) or highly-visible attributes of other objects -- thus, they can be listed, viewed, and cross-sectioned into tables and charts more easily.  
 
-[note]
-Note that workload annotations are only available in MAAS versions 3.0 and above.
-[/note]
+<a href=#heading--machine-and-vm-tags><h3 id="heading--machine-and-vm-tags">Machine and VM tags</h3></a>
 
-<a href="#heading--notes"><h2 id="heading--notes">Static annotations (notes)</h2></a>
+Machine and virtual machine (VM) tags are indistinguishable in the UI.  In fact, most of the time, a tag is automatically added to virtual machines to help you identify them, since in the machine list, they behave very much like physical machines.  This `virtual` tag is very persistent, often being re-applied even when you remove it. 
+
+Apart from that, the largest difference between UI and CLI when it comes to machine tags is the ability to embed kernel options in a tag.  In the CLI, you can specify kernel options that get attached to a tag.  When you apply that tag to a machine -- from the CLI or UI -- those kernel options become part of the commissioning and deployment cycle.  They are applied to the tagged machine(s) in alphabetical order.
+
+<a href=#heading--vm-host-tags><h3 id="heading--vm-host-tags">VM host tags</h3></a>
+
+Virtual machine hosts (VM hosts) can be tagged from an independent set.  These are not machine tags, so any machine tags you've created won't be automatically visible to select for VM hosts.  
+
+In the UI, VM hosts are referred to as "KVMs," while in the CLI, they are represented by the "vmhost(s)" object.  Like most tags, VM host tags can be manipulated more freely and comprehensively in the CLI.
+
+<a href=#heading--controller-tags><h3 id="heading--controller-tags">Controller tags</h3></a>
+
+Region and rack controllers can also have tags, again, from an independent set not shared with other objects.  In the UI, tags are applied from the controllers page, where all region and rack controllers are listed, so there's no explicit distinction between them.  
+
+In the CLI, on the other hand, region and rack controllers have their own, independent identities, even if they're fundamentally the same object.  There is a set of commands for a region controller, and a similar (but different) set of commands for a rack controller.  
+
+<a href=#heading--block-device-tags><h3 id="heading--block-device-tags">Block device tags</h3></a>
+
+Block device tags are tags applied to physical disks or entire virtual disks.  These tags don't apply to a particular partition.  They are far easier to manipulate in the CLI, but they are still useful in the UI.  For example, in the UI, you can use block device tags to filter lists of machines.  With the CLI, you are limited only by your skills at interpreting JSON or using `jq`.
+
+<a href=#heading--partition-tags><h3 id="heading--partition-tags">Partition tags</h3></a>
+
+Partition tags are largely for use in the MAAS CLI. These are tags assigned to individual partitions within virtual or physical disks.  From the UI, they can be viewed (by individual storage component with in a machine) and used for filtering, while they can be manipulated much more easily within the CLI.
+
+<a href=#heading--network-interface-tags><h3 id="heading--network-interface-tags">Network interface tags</h3></a>
+
+Network interface tags, sometimes called "network tag" for short, apply to specific interfaces.  They can be created and assigned with both CLI and UI.  Within the UI, you can view them by editing a specific physical interface.  To obtain comprehensive lists of interface tags, and to view them in a less restrictive way, you'll want to use the MAAS CLI.
+
+<a href=#heading--device-tags><h3 id="heading--device-tags">Device tags</h3></a>
+
+Device tags apply to things that MAAS considers a "device," specifically, something which is network-capable and discoverable, but isn't a machine.  Sometimes this is just a matter of how you define the device.  
+
+Devices can be tagged in both the CLI and UI, and used to filter device listings in the UI.
+
+<a href=#heading--node-tags><h3 id="heading--node-tags">Node tags</h3></a>
+
+The concept of "nodes" is generally unique to the MAAS CLI.  A node is anything that MAAS can detect or interact with -- a machine, a device, a controller, and so on.  From the perspective of the CLI, nodes are not distinct objects, but representative of anything that has a system ID.
+
+<a href=#heading--static-annotations-(notes)><h2 id="heading--static-annotations-(notes)">Static annotations (notes)</h2></a>
 
 Static annotations, referred to as "notes" by MAAS, are persistent, in that they remain associated with a machine until changed.  They have a one-to-one relationship with machines: There can only be one note for a given machine, although the same note could be applied to other machines as well.  Notes can be lengthy, if desired, but only the first 10 characters or so will show up in the machine list.  For this reason, notes are best used for alerts, warnings, or other status notes (e.g., "WARNING: Do not use this machine for purpose X as it does not have enough disk space to support that application.")  In this example, "WARNING: Do..." would show up in the machine list, on the line for the machine in question.
 
-<a href="#heading--lxd-projects"><h2 id="heading--lxd-projects">LXD projects</h2></em>
+<a href=#heading--dynamic-(workload)-annotations><h2 id="heading--dynamic-(workload)-annotations">Dynamic (workload) annotations</h2></a>
+
+Dynamic annotations are volatile, key-value pairs that can be assigned to operating machines (e.g., machines in the "deployed" state).  The can be used to group and potentially protect operating machines, independent of tags or resource pool assigned.
+
+For example, a workload annotation might be something like, "owned by john smith, do not release without permission," "part of the Bismuth, ND, remote location," or "currently used for critical hurricane operations."  Workload annotations are many-to-many with machines, and, although volatile, can be used to filter views and actions on deployed machines.
+
+Dynamic annotations do not become visible in the UI until MAAS version 3.0, where they are referred to as "workload" annotations.  They have been present in the CLI for many versions; there, they're called "owner data."  
+
+<a href=#heading--lxd-projects><h2 id="heading--lxd-projects">LXD projects</h2></a>
 
 [LXD projects](https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview) are a feature of the [LXD lightweight container hypervisor](https://ubuntu.com/server/docs/containers-lxd) -- a next-generation container manager which makes containers as easy to manage as virtual machines.  With LXD, you can create lots of containers, providing different services across many different use cases.  As a result of this flexibility, it can become confusing to keep track of exactly which containers are providing what services to answer which use case.
 
@@ -128,13 +194,18 @@ Since MAAS makes use of LXD as a VM host, it's useful to be able to manipulate a
 Note that only MAAS versions 3.0 and above are aware of LXD projects.  Prior versions of MAAS do not work with LXD projects, and will commission all the available machines in your LXD instance.  The following section explains this in some detail.
 [/note]
 
-<a href="#heading--projects-history"><h3 id="heading--projects-history">How did we get here?</h3></a>
+You may wish to explore the reasoning behind these new behaviours:
+
+* [How did we get here?](#heading--how-did-we-get-here?)
+* [MAAS control of VMs](#heading--maas-control-of-vms)
+
+<a href=#heading--how-did-we-get-here?><h3 id="heading--how-did-we-get-here?">How did we get here?</h3></a>
 
 Prior to MAAS version 3.0, MAAS implemented LXD VM hosts, but did so in a strongly-coupled way; that is, MAAS essentially took control of the VMs, disallowing or overriding some direct LXD controls.  In a sense, MAAS became the owner, rather than simply a separate program, communicating interdependently with LXD to accomplish user purposes.
 
 This was less than ideal.  For example, MAAS would discover all running LXD VMs and immediately commission them, essentially performing a "clean install" and wiping out their contents.  This behaviour isn't suitable when MAAS is connected to a deployed LXD with VMs already running services that may not have been targeted for enlistment by MAAS.
 
-<a href="#heading--maas-control-at-project-level"><h4 id="heading--maas-control-at-project-level">MAAS now controls VMs at a project level</h4></a>
+<a href=#heading--maas-control-of-vms><h3 id="heading--maas-control-of-vms">MAAS control of VMs</h3></a>
 
 With the release of MAAS 3.0 version, MAAS now becomes a LXD tenant, rather than an owner. Essentially, MAAS 3.0 still commissions any VMs it discovers within a VM host, but the scope of the discovery is now limited to a single project.  That project can contain any subset of the existing VMs, from zero to all of them.  Any VM that's already in a project assigned to MAAS will still be re-commissioned, which is the normal behaviour of MAAS upon network discovery.
 
@@ -157,13 +228,18 @@ In addition, a MAAS administrator should be able to:
 
 These criteria were fully met in the MAAS LXD tenant implementation released as part of MAAS 3.0.
 
-<a href="#heading--project-example"><h2 id="heading--project-example">A MAAS project example</h2></a>
+<a href=#heading--a-project-example><h2 id="heading--a-project-example">A project example</h2></a>
 
 MAAS fits into many different industries, applications, and situations, so trying to come up with a single set of "best practices" just isn't practical.  We can, though, give you an understanding of how to use these project tools using a real-world example.  For the purposes of this explanatory section, we'll cover both CLI and UI approaches in the same document, since seeing both may serve to speed your understanding.
 
 Consider a new, 100-bed hospital which is being planned.  The plan must allow for flexible use of a limited number of machines, since budgets aren't infinite.
 
-<a href="#heading--defining-resource-pools"><h2 id="heading--defining-resource-pools">Defining resource pools</h2></a>
+In this example, we'll focus on two project-related areas:
+
+* [Defining resource pools](#heading--defining-resource-pools)
+* [Adding tags and annotations](#heading--adding-tags-and-annotations)
+
+<a href=#heading--defining-resource-pools><h3 id="heading--defining-resource-pools">Defining resource pools</h3></a>
 
 Before defining machines, networks, interfaces, or anything else about this new project, the first step is to identify and label the resource pools.  Resource pools are, by nature, mutually exclusive, so a project plan might start with a random list of functions that the machines must cover:
 
@@ -430,7 +506,7 @@ It's possible to try different permutations, such as inverting the above list by
 ||Food service|FS|Provider|Food service staff|
 ||||Nursing supervisor||
 
-<a href="#heading--adding-tags"><h3 id="heading--adding-tags">Adding tags and annotations</h3></a>
+<a href=#heading--adding-tags-and-annotations><h3 id="heading--adding-tags-and-annotations">Adding tags and annotations</h3></a>
 
 Since the Business Category is important, but not unique, we can assign it to tags.  That will allow us to filter and operate on machines by category.  The only thing left to add, then, would be workload annotations, and we can build a completed MAAS project from the table above.
 

@@ -38,3 +38,11 @@
 #	rm tags-and-annotations-draft-document-4500.md
 #	chmod 444 originals/*
 
+# originals/maas-installation-technical-reference-snap-2-7-ui-4518.md: maas-installation-technical-reference.md
+#	chmod 644 originals/*
+#	cp maas-installation-technical-reference.md maas-installation-technical-reference-snap-2-7-ui-4518.md
+#	xpub pull discourse 4518 4518
+#	cp -p maas-installation-technical-reference-snap-2-7-ui-4518.md originals
+#	rm maas-installation-technical-reference-snap-2-7-ui-4518.md
+#	chmod 444 originals/*
+
