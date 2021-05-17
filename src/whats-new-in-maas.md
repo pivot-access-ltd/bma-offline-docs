@@ -579,9 +579,9 @@ We've also fixed number of bugs (see the [list in Launchpad](https://bugs.launch
 snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
 
 <!-- snap-3-0-cli snap-3-0-ui deb-3-0-cli deb-3-0-ui
-<h3>MAAS 3.0 BETA release notes</h3>
+<h3>MAAS 3.0 RC1 release notes</h3>
 
-We are happy to announce that MAAS 3.0 Beta 5 has been released. This release provides some critical and high-priority [bug fixes](#heading--maas-3-beta-bug-fixes).
+We are happy to announce that the release of MAAS 3.0 Beta RC1 (release candidate 1) is imminent. This release provides new features, along with critical and high-priority [bug fixes](#heading--maas-3-beta-bug-fixes).
 snap-3-0-cli snap-3-0-ui deb-3-0-cli deb-3-0-ui -->
 
 #### Cumulative summary of new features in MAAS 3.0 Beta
@@ -594,6 +594,9 @@ snap-3-0-cli snap-3-0-ui deb-3-0-cli deb-3-0-ui -->
 7. [Fixed status bar](#heading--fixed-status-bar)
 8. [Registering a machine as a VM host during deployment](#heading--machine-register-vm-host-on-deployment)
 9. [Improvements to MAAS CLI help UX](#heading--maas-cli-ux-improved-help)
+10. [Disabling boot methods](#heading--disabling-boot-methods)
+11. [Consolidation of logs and events](#heading--log-consolidation)
+
 
 <!-- deb-3-0-ui deb-3-0-cli
 The Beta can be installed by adding the `3.0-next` PPA:
@@ -627,6 +630,10 @@ The Beta can be installed fresh (recommended) with:
 sudo snap install --channel=3.0/beta maas
 ```
 
+[note]
+Installation instructions for the MAAS RC1 release are pending imminent release of the bits.
+[/note]
+
 At this point, you may proceed with a normal installation.
  snap-3-0-cli snap-3-0-ui -->
 
@@ -636,6 +643,38 @@ NOTE that this is currently a BETA release, so there will be bugs, instabilities
 <h2>Significant changes</h2>
 
 With the advent of MAAS 3.0, we are removing support for RSD pods.  Registered pods and their machines will be removed by MAAS upon upgrading to MAAS 3.0.
+
+<h2>New features in MAAS 3.0 RC1</h2>
+
+<h3 id="heading--log-consolidation">Consolidation of logs and events</h3>
+
+The logs and events tabs have combined and now live under "Logs". In addition to a number of small improvements, navigating and displaying events has been made easier.
+
+![Screen Shot 2021-05-17 at 3.07.37 pm|690x465](upload://aucJWsvJwljebNdlnuBsU8pN0Zv.png) 
+
+#### Downloading logs
+
+A helpful new feature is the ability to download the machine and installation output, and if a machine has failed deployment you can now download a full tar of the curtain logs.
+
+![Screen Shot 2021-05-17 at 3.08.10 pm|690x465](upload://AkrIWr0yNzSxtAPHlFa8RTbjFWb.png)
+
+<h3 id="heading--disabling-boot-methods">Disabling boot methods</h3>
+
+Individual boot methods may now be disabled. When a boot method is disabled MAAS will configure MAAS controlled isc-dhcpd to not respond to the associated [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture). External DHCP servers must be configured manually.
+
+To allow different boot methods to be in different states on separate physical networks using the same VLAN ID configuration is done on the subnet in the UI or API. When using the API boot methods to be disabled may be specified using the MAAS internal name or [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture) in octet or hex form. For example the following disabled i386/AMD64 PXE, AMD64 UEFI TFTP, and AMD64 UEFI HTTP
+
+```
+maas $PROFILE subnet update $SUBNET disabled_boot_architectures="0x00 uefi_amd64_tftp 00:10"
+```
+
+#### GRUB
+
+* UEFI AMD64 HTTP(00:10) has been re-enabled.
+* UEFI ARM64 HTTP(00:13) has been enabled.
+* UEFI ARM64 TFTP(00:0B) and UEFI ARM64 HTTP(00:13) will now provide a shim and GRUB signed with the Microsoft boot loader keys.
+* grub.cfg for all UEFI platforms has been updated to replace the deprecated `linuxefi` and `initrdefi` commands with the standard `linux` and `initrd` commands.
+* GRUB debug may now be enabled by enabling [rackd debug logging](https://discourse.maas.io/t/running-installed-maas-in-debug-logging-mode/168).
 
 <h2>New feature in MAAS 3.0 Beta 4</h2>
 
@@ -796,10 +835,37 @@ snap-3-0-cli snap-3-0-ui deb-3-0-cli deb-3-0-ui -->
 
 <h2 id="heading--maas-3-beta-bug-fixes">MAAS 3.0 bug fixes</h2>
 
-MAAS 3.0 incorporates a large number of bug fixes, summarized in the sections below. Please feel free to validate these fixes at your convenience and give us feedback if anything doesn't seem to work as presented in the bug request.
+MAAS 3.0 incorporates a large number of bug fixes, summarised in the sections below. Please feel free to validate these fixes at your convenience and give us feedback if anything doesn't seem to work as presented in the bug request.
 
 One particular bug, [#1916860](https://bugs.launchpad.net/maas/+bug/1916860), involves failures in the IPMI cipher suite in MAAS 2.9.2 and up, on the Lenovo x3650 M5 (and others).  This particular bug is a not a MAAS bug, but a firmware issue with the subject machines.  While the MAAS team can't fix this (hence the assignment of "Won't Fix"), the team did provide a easy [workaround](https://bugs.launchpad.net/maas/+bug/1916860/comments/27) which helps circumvent this issue.
 
+<h3 id="heading--maas-3-rc-1-bug-fixes">MAAS 3.0 RC1 bug fixes</h3>
+
+Here are the bugs that have been 'Fix Released' in MAAS 3.0 RC1:
+
+| Number | Description |Importance|
+|:-----|:-----|:-----:|
+[#1774529](https://bugs.launchpad.net/bugs/1774529)|Cannot delete some instances of model 'Domain' because they are referenced through a protected foreign key|High|
+[#1919001](https://bugs.launchpad.net/bugs/1919001)|Unable to network boot VM on IBM Z DPM Partition|High|
+[#1925249](https://bugs.launchpad.net/bugs/1925249)|MAAS detects 0 cores, RAM available for KVM host, reports negative availability on pod compose|High|
+[#1927292](https://bugs.launchpad.net/bugs/1927292)|Updating controller has vlan_ids error|High|
+[#1927657](https://bugs.launchpad.net/bugs/1927657)|Global kernel command line options not passed with tags|High|
+[#1928098](https://bugs.launchpad.net/bugs/1928098)|If a workload annotation has a key with spaces in it, filtering doesn't work|High|
+[#1926140](https://bugs.launchpad.net/bugs/1926140)|maas_url not returned to the UI|Medium|
+[#1926171](https://bugs.launchpad.net/bugs/1926171)|Failure processing network information when adding a rack|Medium|
+[#1927036](https://bugs.launchpad.net/bugs/1927036)|Incorrect value "accept_ra" in interface definition|Medium|
+[#1927340](https://bugs.launchpad.net/bugs/1927340)|Deb to snap migration script should support remote Postgres|Medium|
+[#1928104](https://bugs.launchpad.net/bugs/1928104)|New workload annotations don't show up without a reload|Medium|
+[#1928115](https://bugs.launchpad.net/bugs/1928115)|API still refers to "owner data" rather than "workload annotations"|Medium|
+[#1922891](https://bugs.launchpad.net/bugs/1922891)|MAAS configures nodes with incorrect DNS server addresses when using multiple IP addresses|Undecided|
+[#1923268](https://bugs.launchpad.net/bugs/1923268)|grubnet default grub.cfg should try /grub/grub.cfg-${net_default_mac} before /grub/grub.cfg|Undecided|
+[#1926164](https://bugs.launchpad.net/bugs/1926164)|VLAN page shows odd "Rack controllers" value|Undecided|
+[#1926510](https://bugs.launchpad.net/bugs/1926510)|dhcp subnet snippets are NOT inside the pool block|Undecided|
+[#1927559](https://bugs.launchpad.net/bugs/1927559)|Default logical volume size too big in UI|Undecided|
+[#1928024](https://bugs.launchpad.net/bugs/1928024)|UI states commissioning/testing scripts were never uploaded|Undecided|
+[#1928226](https://bugs.launchpad.net/bugs/1928226)|Information "not available" indicates that it''s an error of some sort|Undecided|
+[#1928235](https://bugs.launchpad.net/bugs/1928235)|notes field won't update properly: MAAS 3.0 RC]()|Undecided|
+[#1928324](https://bugs.launchpad.net/bugs/1928324)|updating a machine zone or resource pool doesn't refresh details|Undecided|
 <h3 id="heading--maas-3-beta-5-bug-fixes">MAAS 3.0 Beta 5 bug fixes</h3>
 
 Here are the bugs that have been `Fix Released` in MAAS 3.0 Beta 5:
