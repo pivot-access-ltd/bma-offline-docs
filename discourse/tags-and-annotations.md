@@ -5,18 +5,10 @@ Packages|[CLI](/t/maas-tags-deb-2-7-cli/2892) ~ [UI](/t/maas-tags-deb-2-7-ui/289
 
 Tags are short, descriptive, searchable words that can be applied to various MAAS objects, including:
 
-* machines
-  * physical
-  * virtual
+* machines (physical and virtual)
 * VM hosts
-* controllers
-  * rack
-  * region
-* storage 
-  * block devices
-  * partitions
-  * physical
-  * virtual
+* controllers (rack and region)
+* storage (virtual and physical; block devices or partitions)
 * network interfaces
 * devices
 * nodes (in the CLI only)
@@ -36,10 +28,12 @@ This article will show you how to:
 * [Work with annotations](#heading--work-with-annotations)
  snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
 
+All headings have been hyperlinked for easy bookmarking.  Note that not all functions for tags and annotations can be accessed via one interface (UI/CLI), so you will occassionally encounter cross-links.
+
 
 <a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a>
 
-This section is devoted to procedures for working with tags.  We begin with some general operations that apply to all tags types, such as naming conventions and basic mechanics.  We then walk through the various tag types, providing procedures that will help you create, assign, remove, delete, list, view, and filter tags, covering the nuances of each type.
+This section is devoted to procedures for working with tags.  We begin with some general operations that apply to all tag types, such as naming conventions and basic mechanics.  We then walk through the various tag types, providing procedures that will help you create, assign, remove, delete, list, view, and filter tags, covering the nuances of each type.
 
 Specifically, this section will show you how to:
 
@@ -51,6 +45,8 @@ Specifically, this section will show you how to:
 * [Work with network tags](#heading--work-with-network-tags)
 * [Work with device tags](#heading--work-with-device-tags)
 * [Work with node tags (CLI only)](insert link)(#heading--work-with-node-tags)
+
+Tags for these different objects have similar purposes, but they aren't necessarily administered in the same way -- so we've included detailed sections for each tag type.
 
 <a href="#heading--work-with-tags-in-general"><h3 id="heading--work-with-tags-in-general">Work with tags in general</h3></a>
 
@@ -74,7 +70,7 @@ In general, names that do not conform to these rules cannot be created.
 
 <a href="#heading--create-and-assign-tags"><h4 id="heading--create-and-assign-tags">Create and assign tags</h4></a>
 
-In the MAAS UI, creating and assigning tags is a combined operation; that is, you create tags as you assign them, rather than creating them first.  Creating tags in the UI is a little different user experience: there is a self-loading completion menu that collects all tags of a similar type.  This completion menu helps you avoid re-spelling tags when entering them more than once; otherwise, you might not be able to group and filter tags properly. It also makes tag entry more efficient.
+In the MAAS UI, creating and assigning tags is a combined operation; that is, you create tags as you assign them, rather than creating them first.  Creating tags in the UI is a little different user experience: there is a self-loading completion menu that collects all tags of a similar type.  This completion menu helps you avoid misspelling tags when entering them more than once; otherwise, you might not be able to group and filter tags properly. It also makes tag entry more efficient.
 
 The process for creating and assigning tags in the UI is generally the same for all tag types:
 
@@ -86,16 +82,17 @@ The process for creating and assigning tags in the UI is generally the same for 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png"></a>
 
-The autocomplete list will re-appear after you've entered the tag, in case you'd like to enter another tag.
+>The autocomplete list will re-appear after you've entered the tag, in case you'd like to enter another tag.
 
 3. When you're done, click on the appropriate completion button to complete the operation.
 
-The tag you just entered will now be added to the tag autocomplete list, in alphabetical order, for re-use with other machines.
+>The tag you just entered will now be added to the tag autocomplete list, in alphabetical order, for re-use with other machines.
 
 
 <a href="#heading--delete-and-remove-tags"><h4 id="heading--delete-and-remove-tags">Delete and remove tags</h4></a>
 
 With the MAAS UI, you remove tags, rather than explicitly deleting them.  Tags are "deleted" when you have removed them from all machines.   
+
 To remove (unassign) a tag:
 
 1. Find the "Tags" box, wherever it is located on the screen:
@@ -106,7 +103,7 @@ To remove (unassign) a tag:
 
 3. When you're done, click on the appropriate completion button to complete the operation.
 
-Note that the tag you just removed will be deleted from  the tag autocomplete list when it is no longer assigned to any  machines.
+>Note that the tag you just removed will be deleted from  the tag autocomplete list when it is no longer assigned to any  machines.
 
 <a href="#heading--work-with-machine-and-vm-tags"><h3 id="heading--work-with-machine-and-vm-tags">Work with machine and VM tags</h3></a>
 
@@ -166,9 +163,9 @@ Of course, if you need to do so, you can see a list of all the tags assigned to 
 
 Here's how you can filter the machine list by machine tags, using the MAAS UI:
 
-To list all tags, visit the 'Machines' tab and expand the 'Tags' subsection in the left pane.
+1. To list all tags, visit the 'Machines' tab and expand the 'Tags' subsection in the left pane. In this view, you can use tags as machine search filters.
 
-In this view, you can use tags as machine search filters. Select one or several tags. The machines that satisfy all selected tags will display on the right pane. Notice there is a search field at the top of the right pane. You can type a search expression into this field.
+2. Select one or several tags. The machines that satisfy all selected tags will display on the right pane. Notice there is a search field at the top of the right pane. You can type a search expression into this field.
 
 Below, tag 'virtual' has been selected (with the mouse), and the search field automatically reflects this. Five machines satisfy this search filter.
 
@@ -259,9 +256,7 @@ You'll be presented with an editing screen similar to this one:
 
 <a href="#heading--list-controller-tags"><h4 id="heading--list-controller-tags">List controller tags</h4></a>
 
-There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](insert link) in the MAAS CLI to do this.
-
-If you click on a tag assigned to a controller, you will see a filtered list of machines with that matching tag.  
+There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](insert link) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
 
 <a href="#heading--view-controller-tags"><h4 id="heading--view-controller-tags">View controller tags</h4></a>
 
@@ -337,9 +332,7 @@ In order to remove tags from a block device, the device has to be in an "availab
 
 <a href="#heading--list-block-device-tags"><h4 id="heading--list-block-device-tags">List block device tags</h4></a>
 
-There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](insert link) for a more comprehensive procedure.
-
-You can list all storage links (block device and partition) by using the filter tool on the machine list.  Here's how:
+There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](insert link) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
 
 1. Go to the machine list:
 
@@ -433,7 +426,7 @@ To assign a tag to a network interface, use the following procedure:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png"></a>
 
-The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
+>The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
 
 4. Select the dropdown under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
 
@@ -461,7 +454,7 @@ To remove a tag from a network interface, use the following procedure:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png"></a>
 
-The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
+>The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
 
 4. Select the dropdown under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
 
@@ -489,7 +482,7 @@ To view the tags associated with a network interface, use the following procedur
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png"></a>
 
-The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
+>The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
 
 4. Select the dropdown under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
 
@@ -606,17 +599,17 @@ To create and assign static annotations (a note) to a machine, follow this proce
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
 
-This will bring up a machine summary for that machine:
+2. This will bring up a machine summary for that machine:
 
-<a href="<a href="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img src="<a href="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a>
+<a href="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a>
 
-2. Select "Configuration" and click the "Edit" button to the right of the "Machine configuration" section:
+3. Select "Configuration" and click the "Edit" button to the right of the "Machine configuration" section:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png"></a>
 
-3. Add free-form notes in the "Note" field, as desired.
+4. Add free-form notes in the "Note" field, as desired.
 
-4. Click "Save changes" to update the machine's configuration.
+5. Click "Save changes" to update the machine's configuration.
 
 <a href="#heading--delete-static-annotations"><h4 id="heading--delete-static-annotations">Delete static annotations</h4></a>
 
@@ -626,17 +619,17 @@ To delete static annotations (a note) from a machine, follow this procedure:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
 
-This will bring up a machine summary for that machine:
+2. This will bring up a machine summary for that machine:
 
-<a href="<a href="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img src="<a href="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a>
+<a href="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a>
 
-2. Select "Configuration" and click the "Edit" button to the right of the "Machine configuration" section:
+3. Select "Configuration" and click the "Edit" button to the right of the "Machine configuration" section:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png"></a>
 
-3. Edit the free-form notes in the "Note" field, as desired.
+4. Edit the free-form notes in the "Note" field, as desired.
 
-4. Click "Save changes" to update the machine's configuration.
+5. Click "Save changes" to update the machine's configuration.
 
 <a href="#heading--view-static-annotations"><h4 id="heading--view-static-annotations">View static annotations</h4></a>
 
@@ -1417,6 +1410,8 @@ bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
 
 <a href="#heading--work-with-rack-controller-tags"><h3 id="heading--work-with-rack-controller-tags">Work with rack controller tags</h3></a>
 
+This subsection will show you how to:
+
 * [Discover the ID of your rack controller(s)](#heading--discover-the-id-of-your-rack-controllers)
 * [Assign tags to a rack controller](#heading--assign-tags-to-a-rack-controller)
 * [Remove tags from a rack controller](#heading--remove-tags-from-a-rack-controller)
@@ -1559,6 +1554,8 @@ bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
 ```
 
 <a href="#heading--work-with-block-device-tags"><h3 id="heading--work-with-block-device-tags">Work with block device tags</h3></a>
+
+This subsection will show you how to:
 
 * [Discover the ID of your block device](#heading--discover-the-id-of-your-block-device) 
 * [Assign tags to a block device](#heading--assign-tags-to-a-block-device)
@@ -1704,6 +1701,8 @@ id  tags
 
 <a href="#heading--work-with-partition-tags"><h3 id="heading--work-with-partition-tags">Work with partition tags</h3></a>
 
+This subsection will show you how to:
+
 * [Discover the ID of your partition](#heading--discover-the-id-of-your-partition)
 * [Assign tags to a partition](#heading--assign-tags-to-a-partition)
 * [Remove tags from a partition](#heading--remove-tags-from-a-partition)
@@ -1820,91 +1819,748 @@ id  tags
 
 <a href="#heading--work-with-network-tags"><h3 id="heading--work-with-network-tags">Work with network tags</h3></a>
 
+This subsection will show you how to:
+
+* [Discover the ID of your network interface](#heading--discover-the-id-of-your-network-interface)
 * [Assign tags to a network interface](#heading--assign-tags-to-a-network-interface)
 * [Remove tags from a network interface](#heading--remove-tags-from-a-network-interface)
 * [List tags for all network interfaces](#heading--list-tags-for-all-network-interfaces)
 * [View tags for one network interface](#heading--view-tags-for-one-network-interface)
 
+<a href="#heading--discover-the-id-of-your-network-interface"><h4 id="heading--discover-the-id-of-your-network-interface">Discover the ID of your network interface</h4></a>
+
+You can use a command of the following form to identify the interfaces associated with a particular device on your MAAS:
+
+```bash
+maas $PROFILE interfaces read $SYSTEM_ID \
+| jq -r '(["mac_address","type","id","tags"]
+|(.,map(length*"-"))),(.[]|[.mac_address,.type,.id,.tags[]])
+|@tsv'| column -t
+```
+
+For example:
+
+```bash
+maas admin interfaces read xn8taa \
+| jq -r '(["mac_address","type","id","tags"]
+|(.,map(length*"-"))),(.[]|[.mac_address,.type,.id,.tags[]])
+|@tsv'| column -t
+```
+
+This would produce output similar to the following:
+
+```nohighlight
+mac_address        type      id  tags
+-----------        ----      --  ----
+00:16:3e:18:7f:ee  physical  9   andrpko  plinko  cochise
+```
+
 <a href="#heading--assign-tags-to-a-network-interface"><h4 id="heading--assign-tags-to-a-network-interface">Assign tags to a network interface</h4></a>
 
-maas admin interface add-tag xn8taa 9 tag="something"
+To assign a tag to a network interface, using both the device system ID and the interface ID, use a command of the following form:
+
+```bash
+maas $PROFILE interface add-tag $SYSTEM_ID $INTERFACE_ID tag=$TAG_NAME
+```
+
+For example:
+
+```bash
+maas admin interface add-tag xn8taa 9 tag=farquar
+```
+
+This command, if successful, will produce a long sequence of JSON describing the interface, including the changes introduced by the command above.  You can also check your work by [listing the tags](#heading--list-tags-for-all-network-interfaces) associated with the device.
 
 <a href="#heading--remove-tags-from-a-network-interface"><h4 id="heading--remove-tags-from-a-network-interface">Remove tags from a network interface</h4></a>
 
-maas admin interface remove-tag xn8taa 9 tag="prokoko"
+To remove a tag from a network interface, use both the device system ID and the interface ID in a command similar to this one:
+
+```bash
+maas $PROFILE interface remove-tag $SYSTEM_ID $INTERFACE_ID tag=$TAG_NAME
+```
+
+For example:
+
+```bash
+maas admin interface remove-tag xn8taa 9 tag=farquar
+```
+
+This command, if successful, will produce a long sequence of JSON describing the interface, including the changes introduced by the command above.  You can also check your work by [listing the tags](#heading--list-tags-for-all-network-interfaces) associated with the device.
 
 <a href="#heading--list-tags-for-all-network-interfaces"><h4 id="heading--list-tags-for-all-network-interfaces">List tags for all network interfaces</h4></a>
 
-maas admin nodes read | jq -r '(["hostname","sysid","interface_tags"]|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.interface_set[].tags[]]) | @tsv' @ column -t
+To list all the tags for a given network interface on a given device, use a command like this one:
 
-maas admin interfaces read xn8taa | jq -r '(["ID","TAGS"]|(map(length*"-"))),(.[]|[.id,.tags[]]) | @tsv' | column -t
+```bash
+maas $PROFILE interfaces read $SYSTEM_ID \
+| jq -r '(["mac_address","type","id","tags"]
+|(.,map(length*"-"))),(.[]|[.mac_address,.type,.id,.tags[]])
+|@tsv'| column -t
+```
+
+For example:
+
+```bash
+maas admin interfaces read xn8taa \
+| jq -r '(["mac_address","type","id","tags"]
+|(.,map(length*"-"))),(.[]|[.mac_address,.type,.id,.tags[]])
+|@tsv'| column -t
+```
+
+This would produce output similar to the following:
+
+```nohighlight
+mac_address        type      id  tags
+-----------        ----      --  ----
+00:16:3e:18:7f:ee  physical  9   andrpko  plinko  cochise  farquar
+```
 
 <a href="#heading--view-tags-for-one-network-interface"><h4 id="heading--view-tags-for-one-network-interface">View tags for one network interface</h4></a>
 
-maas admin interface read xn8taa 9 | jq -r '([.hostname,.tags[]])'
+To view tags for one particular network interface on a specific device, try a command formulated like this:
 
+```bash
+maas $PROFILE interface read $SYSTEM_ID $INTERFACE_ID \
+| jq -r '(["mac_address","type","id","tags"]
+|(.,map(length*"-"))),([.mac_address,.type,.id,.tags[]])
+|@tsv'| column -t
+```
+
+For example:
+
+```bash
+maas admin interface read xn8taa 9 \
+| jq -r '(["mac_address","type","id","tags"]
+|(.,map(length*"-"))),([.mac_address,.type,.id,.tags[]])
+|@tsv'| column -t
+```
+
+Typical output might look like this:
+
+```nohighlight
+mac_address        type      id  tags
+-----------        ----      --  ----
+00:16:3e:18:7f:ee  physical  9   andrpko  plinko  cochise
+```
 
 <a href="#heading--work-with-device-tags"><h3 id="heading--work-with-device-tags">Work with device tags</h3></a>
 
+This subsection will show you how to:
+
+* [Identify your devices](#heading--identify-your-devices)
 * [Assign tags to a device](#heading--assign-tags-to-a-device)
 * [Remove tags from a device](#heading--remove-tags-from-a-device)
 * [List tags for all devices](#heading--list-tags-for-all-devices)
 * [View tags for one device](#heading--view-tags-for-one-device)
 
+<a href="#heading--identify-your-devices"><h4 id="heading--identify-your-devices">Identify your devices</h4></a>
+
+You can use a command similar to the following to identify your devices:
+
+```bash
+maas $PROFILE devices read \
+| jq -r '(["hostname","system_id"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id])
+|@tsv' | column -t
+```
+
+For example:
+
+```bash
+maas admin devices read \
+| jq -r '(["hostname","system_id"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id])
+|@tsv' | column -t
+```
+
+This command produces a result similar to the following:
+
+```nohighlight
+hostname     system_id
+--------     ---------
+better-sole  t8pmrs
+light-aphid  76b6tt
+```
+
 <a href="#heading--assign-tags-to-a-device"><h4 id="heading--assign-tags-to-a-device">Assign tags to a device</h4></a>
 
+To assign tags to a device, you can use a command of the following form:
+
+```
 maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
+```
+
+For example:
+
+```bash
+maas admin tag update-nodes farquar add=t8pmrs
+```
+
+A successful command like this might produce output similar to this:
+
+```
+Success.
+Machine-readable output follows:
+{
+    "added": 1,
+    "removed": 0
+}
+```
+
+You can also check your work by [listing tags for all devices](#heading--list-tags-for-all-devices).
 
 <a href="#heading--remove-tags-from-a-device"><h4 id="heading--remove-tags-from-a-device">Remove tags from a device</h4></a>
 
+To remove tags from a device, you can use a command of the following form:
+
+```
 maas $PROFILE tag update-nodes $TAG_NAME remove=$SYSTEM_ID
+```
+
+For example:
+
+```bash
+maas admin tag update-nodes farquar remove=t8pmrs
+```
+
+A successful command like this might produce output similar to this:
+
+```nohighlight
+Success.
+Machine-readable output follows:
+{
+    "added": 0,
+    "removed": 1
+}
+```
+
+You can also check your work by [listing tags for all devices](#heading--list-tags-for-all-devices).
 
 <a href="#heading--list-tags-for-all-devices"><h4 id="heading--list-tags-for-all-devices">List tags for all devices</h4></a>
 
+If you want to list tags for all devices, you could use a command similar to this one:
+
+```bash
+maas $PROFILE devices read \
+| jq -r '(["hostname","system_id","tags"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.tag_names[]])
+|@tsv' | column -t
+```
+
+For example:
+
+```bash
+maas admin devices read \
+| jq -r '(["hostname","system_id","tags"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.tag_names[]])
+|@tsv' | column -t
+```
+
+Such a command would produce output that looks something like this:
+
+```nohighlight
+hostname     system_id  tags
+--------     ---------  ----
+better-sole  t8pmrs     farquar
+light-aphid  76b6tt
+```
 
 <a href="#heading--view-tags-for-one-device"><h4 id="heading--view-tags-for-one-device">View tags for one device</h4></a>
 
+You can view the tags for a single device with the command:
+
+```bash
+maas $PROFILE device read $SYSTEM_ID \
+| jq -r '(["hostname","system_id","tags"]
+|(.,map(length*"-"))),([.hostname,.system_id,.tag_names[]])
+|@tsv' | column -t
+```
+
+If you need to know the system ID of your device, you can [look it up](#heading--identify-your-devices).
+
+[note]
+Note that this command differs in that (1) it uses the singular "device" instead of "devices;" (2) it gives the system ID of a specific device; and (3) it uses the single-record form of the ```jq``` tag list ("([.hostname,.system_id,.tag_names[]]", rather than "(.[]|[.hostname....").
+[/note]
+
+For example:
+
+```bash
+maas admin device read t8pmrs \
+| jq -r '(["hostname","system_id","tags"]
+|(.,map(length*"-"))),([.hostname,.system_id,.tag_names[]])
+|@tsv' | column -t
+```
+
+Sample output might look like this:
+
+```nohighlight
+hostname     system_id  tags
+--------     ---------  ----
+better-sole  t8pmrs     farquar
+```
 
 <a href="#heading--work-with-node-tags"><h3 id="heading--work-with-node-tags">Work with node tags</h3></a>
 
+* [Identify your nodes](#heading--identify-your-nodes)
 * [Assign tags to a node](#heading--assign-tags-to-a-node)
-* [View tags for one node](#heading--view-tags-for-one-node)
 * [Remove tags from a node](#heading--remove-tags-from-a-node)
 * [List tags for all nodes](#heading--list-tags-for-all-nodes)
+* [View tags for one node](#heading--view-tags-for-one-node)
+
+<a href="#heading--identify-your-nodes"><h4 id="heading--identify-your-nodes">Identify your nodes</h4></a>
+
+If you need to identify the system ID of your nodes, you can do so with a command like this one:
+
+```bash
+maas $PROFILE nodes read \
+| jq -r '(["hostname","system_id"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id])
+|@tsv'|column -t
+```
+
+For example:
+
+```bash
+```
+
+When listing nodes, you should expect a large output, similar to this or larger:
+
+```nohighlight
+hostname                     system_id
+--------                     ---------
+better-sole                  t8pmrs
+light-aphid                  76b6tt
+divine-stork                 8b3ypp
+casual-prawn                 4end6r
+driven-teal                  tgaat6
+immune-beetle                43xand
+good-osprey                  napfxk
+smart-hen                    c4rwq7
+boss-satyr                   xn8taa
+golden-martin                8fxery
+crack-guinea                 qk4b3g
+finer-leech                  cy3dtr
+free-mouse                   gxtbq4
+humble-bunny                 srqnnb
+wanted-muskox                ekw7fh
+one-boa                      by477d
+great-urchin                 srnx4g
+ace-frog                     g6arwg
+alive-marlin                 gbwnfb
+picked-parrot                am77wn
+tough-kit                    ke3wc7
+legal-whale                  8nq3mt
+game-sponge                  76pdc6
+fun-ghoul                    qxfm7k
+aware-earwig                 8m8hs7
+chief-crane                  7fapx7
+select-tapir                 4ascbr
+on-slug                      snfs8d
+polite-llama                 dbqd4m
+frank-coyote                 wcmk48
+usable-condor                ed8hmy
+still-imp                    h6ra6d
+bill-Lenovo-Yoga-C740-15IML  86xya8
+```
+
+A node listing will show all the machines, controllers, and devices in the system.
 
 <a href="#heading--assign-tags-to-a-node"><h4 id="heading--assign-tags-to-a-node">Assign tags to a node</h4></a>
 
+To assign tags to any node (regardless of its type), you can use a command of this form:
+
+'''bash
 maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
+'''
 
-<a href="#heading--view-tags-for-one-node"><h4 id="heading--view-tags-for-one-node">View tags for one node</h4></a>
+For example, 
 
-maas admin node read xn8taa | jq -r '(.hostname,.tag_names[])'
+```
+maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
+```
+
+For example:
+
+```bash
+maas admin tag update-nodes farquar add=t8pmrs
+```
+
+A successful command like this might produce output similar to this:
+
+```
+Success.
+Machine-readable output follows:
+{
+    "added": 1,
+    "removed": 0
+}
+```
+
+You can also check your work by [listing tags for all devices](#heading--list-tags-for-all-nodes).
 
 <a href="#heading--remove-tags-from-a-node"><h4 id="heading--remove-tags-from-a-node">Remove tags from a node</h4></a>
 
+To remove tags from a node, regarless of type, you can use a command like this one:
+
+```
 maas $PROFILE tag update-nodes $TAG_NAME remove=$SYSTEM_ID
+```
+
+For example:
+
+```bash
+maas admin tag update-nodes farquar remove=t8pmrs
+```
+
+A successful command like this might produce output similar to this:
+
+```nohighlight
+Success.
+Machine-readable output follows:
+{
+    "added": 0,
+    "removed": 1
+}
+```
+
+You can also check your work by [listing tags for all devices](#heading--list-tags-for-all-nodes).
 
 <a href="#heading--list-tags-for-all-nodes"><h4 id="heading--list-tags-for-all-nodes">List tags for all nodes</h4></a>
 
-maas admin nodes read | jq -r '(["hostname","sysid","tags"]|(.,map(length*"-"))),(.[]|[.hostname,.sysid,.tag_names[]]) | @tsv' | column -t
+If you want to list tags for all nodes, you could use a command similar to this one:
+
+```bash
+maas $PROFILE nodes read \
+| jq -r '(["hostname","system_id","tags"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.tag_names[]])
+|@tsv' | column -t
+```
+
+For example:
+
+```bash
+maas admin nodes read \
+| jq -r '(["hostname","system_id","tags"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.tag_names[]])
+|@tsv' | column -t
+```
+
+Such a command would produce output that looks something like this:
+
+```nohighlight
+hostname                     system_id  tags
+--------                     ---------  ----
+better-sole                  t8pmrs     farquar
+light-aphid                  76b6tt
+divine-stork                 8b3ypp     pod-console-logging  virtual
+casual-prawn                 4end6r     pod-console-logging  virtual
+driven-teal                  tgaat6     pod-console-logging  virtual
+immune-beetle                43xand     pod-console-logging  virtual
+good-osprey                  napfxk     pod-console-logging  virtual
+smart-hen                    c4rwq7     pod-console-logging  virtual
+boss-satyr                   xn8taa     pod-console-logging  androko
+golden-martin                8fxery     pod-console-logging  virtual
+crack-guinea                 qk4b3g     pod-console-logging  virtual
+finer-leech                  cy3dtr     pod-console-logging  virtual
+free-mouse                   gxtbq4     pod-console-logging  virtual
+humble-bunny                 srqnnb     pod-console-logging  virtual
+wanted-muskox                ekw7fh     pod-console-logging  virtual
+one-boa                      by477d     pod-console-logging  virtual
+great-urchin                 srnx4g     pod-console-logging  virtual
+ace-frog                     g6arwg     pod-console-logging  virtual  farquar
+alive-marlin                 gbwnfb     pod-console-logging  virtual
+picked-parrot                am77wn     pod-console-logging  virtual
+tough-kit                    ke3wc7     pod-console-logging  virtual
+legal-whale                  8nq3mt     pod-console-logging  virtual
+game-sponge                  76pdc6     pod-console-logging  virtual
+fun-ghoul                    qxfm7k     pod-console-logging  virtual
+aware-earwig                 8m8hs7     pod-console-logging  virtual
+chief-crane                  7fapx7     pod-console-logging  virtual
+select-tapir                 4ascbr     pod-console-logging  virtual
+on-slug                      snfs8d     pod-console-logging  virtual
+polite-llama                 dbqd4m     pod-console-logging  virtual
+frank-coyote                 wcmk48     pod-console-logging  virtual
+usable-condor                ed8hmy     pod-console-logging  virtual
+still-imp                    h6ra6d     pod-console-logging  virtual
+bill-Lenovo-Yoga-C740-15IML  86xya8     lxd-vm-host
+```
+
+<a href="#heading--view-tags-for-one-node"><h4 id="heading--view-tags-for-one-node">View tags for one node</h4></a>
+
+You could use a command with a form like this to view the tags for one node:
+
+```bash
+maas $PROFILE node read $SYSTEM_ID \
+| jq -r '(["hostname","system_id","tags"]
+|(.,map(length*"-"))),([.hostname,.system_id,.tag_names[]])
+|@tsv' | column -t
+```
+
+For example:
+
+```bash
+maas admin node read xn8taa \
+| jq -r '(["hostname","system_id","tags"]
+|(.,map(length*"-"))),([.hostname,.system_id,.tag_names[]])
+|@tsv' | column -t
+```
+
+This command produces output that looks something like this:
+
+```nohighlight
+hostname    system_id  tags
+--------    ---------  ----
+boss-satyr  xn8taa     pod-console-logging  androko
+```
+
  snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
 <!-- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
 
 <a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a>
+
+This section will show you how to:
 
 * [Work with static annotations](#heading--work-with-static-annotations)
 * [Work with dynamic (workload) annotations](#heading--work-with-dynamic-(workload)-annotations)
 
 <a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a>
 
-* [machine description](#heading--machine-description)
+This subsection will show you how to:
 
-<a href="#heading--machine-description"><h4 id="heading--machine-description">machine description</h4></a>
+* [Identify your machines](#heading--identify-your-machines)
+* [Set a static annotation for a machine](#heading--set-a-static-annotation-for-a-machine)
+* [Change or clear a static annotation for a machine](#heading--change-or-clear-a-static-annotation-for-a-machine)
+* [List static annotations for all machines](#heading--list-static-annotations-for-all-machines)
+* [View a static annotation for one machine](#heading--view-a-static-annotation-for-one-machine)
 
+
+<a href="#heading--identify-your-machines"><h4 id="heading--identify-your-machines">Identify your machines</h4></a>
+
+To identify your available machines, use a command like this one:
+
+```bash
+maas $PROFILE machines read \
+| jq -r '(["hostname","system_id"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id])
+|@tsv' | column -t
+```
+
+For example:
+
+```bash
+maas admin machines read \
+| jq -r '(["hostname","system_id"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id])
+|@tsv' | column -t
+```
+
+Typical output might look something like this:
+
+```nohighlight
+hostname       system_id
+--------       ---------
+divine-stork   8b3ypp
+casual-prawn   4end6r
+driven-teal    tgaat6
+immune-beetle  43xand
+good-osprey    napfxk
+smart-hen      c4rwq7
+boss-satyr     xn8taa
+golden-martin  8fxery
+crack-guinea   qk4b3g
+finer-leech    cy3dtr
+free-mouse     gxtbq4
+humble-bunny   srqnnb
+wanted-muskox  ekw7fh
+one-boa        by477d
+great-urchin   srnx4g
+ace-frog       g6arwg
+alive-marlin   gbwnfb
+picked-parrot  am77wn
+tough-kit      ke3wc7
+legal-whale    8nq3mt
+game-sponge    76pdc6
+fun-ghoul      qxfm7k
+aware-earwig   8m8hs7
+chief-crane    7fapx7
+select-tapir   4ascbr
+on-slug        snfs8d
+polite-llama   dbqd4m
+frank-coyote   wcmk48
+usable-condor  ed8hmy
+still-imp      h6ra6d
+```
+
+<a href="#heading--set-a-static-annotation-for-a-machine"><h4 id="heading--set-a-static-annotation-for-a-machine">Set a static annotation for a machine</h4></a>
+
+If you want to set the static annotation for a given machine, you can do so with a command that looks like this:
+
+```bash
+maas $PROFILE machine update $SYSTEM_ID description="$STATIC_ANNOTATION"
+```
+
+For example:
+
+```bash
+maas admin machine update ke3wc7 description="kilo-echo-3-whisky-charlie-7"
+```
+
+You can check your work by [viewing the static annotations for one machine](#heading--view-a-static-annotation-for-one-machine).
+
+<a href="#heading--change-or-clear-a-static-annotation-for-a-machine"><h4 id="heading--change-or-clear-a-static-annotation-for-a-machine">Change or clear a static annotation for a machine</h4></a>
+
+If you want to set the static annotation for a given machine, use the same command you'd use to set a static annotation:
+
+```bash
+maas $PROFILE machine update $SYSTEM_ID description="$STATIC_ANNOTATION"
+```
+
+The existing annotation will be overwritten by the new one you enter.  For example:
+
+```bash
+maas admin machine update ke3wc7 description=""
+```
+
+You can check your work by [viewing the static annotations for one machine](#heading--view-a-static-annotation-for-one-machine).
+
+
+<a href="#heading--list-static-annotations-for-all-machines"><h4 id="heading--list-static-annotations-for-all-machines">List static annotations for all machines</h4></a>
+
+To list static annotations for all machines, enter a command similar to this one:
+
+```bash
+maas $PROFILE machines read \
+| jq -r '(["hostname","system_id","description"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.description])
+|@tsv' | column -t
+```
+
+For example:
+
+```bash
+maas admin machines read \
+| jq -r '(["hostname","system_id","description"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.description])
+|@tsv' | column -t
+```
+
+Output might look something like this:
+
+```nohighlight
+hostname       system_id  description
+--------       ---------  -----------
+driven-teal    tgaat6     tango-golf
+humble-bunny   srqnnb     sierra-romeo
+tough-kit      ke3wc7     kilo-echo
+```
+
+<a href="#heading--view-a-static-annotation-for-one-machine"><h4 id="heading--view-a-static-annotation-for-one-machine">View a static annotation for one machine</h4></a>
+
+To view a static annotation for one machine, try a command like this:
+
+```bash
+ maas $PROFILE machine read $SYSTEM_ID \
+| jq -r '(["hostname","system_id","description"]
+|(.,map(length*"-"))),([.hostname,.system_id,.description])
+|@tsv' | column -t
+```
+
+For example:
+
+```bash
+ maas admin machine read tgaat6 \
+| jq -r '(["hostname","system_id","description"]
+|(.,map(length*"-"))),([.hostname,.system_id,.description])
+|@tsv' | column -t
+```
+
+A command like this might produce output as follows:
+
+```nohighlight
+hostname     system_id  description
+--------     ---------  -----------
+driven-teal  tgaat6     tango-golf
+```
 
 <a href="#heading--work-with-dynamic-(workload)-annotations"><h3 id="heading--work-with-dynamic-(workload)-annotations">Work with dynamic (workload) annotations</h3></a>
 
-* [set owner data](#heading--set-owner-data)
+This section will show you how to:
+
+* [Identify machines that can receive dynamic annotations](#heading--identify-machines-that-can-receive dynamic annotations)
+* [Set dynamic annotations for a machine](#heading--set-dynamic-annotations-for-a-machine)
+* [Clear and change dynamic annotations for a machine](#heading--clear-and-change-dynamic-annotations-for-a-machine)
+* [List dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines)
+* [List dynamic allotations for one machine](#heading--list-dynamic-annotations-for-one-machine)
+
+<a href="#heading--identify-machines-that-can-receive dynamic annotations"><h4 id="heading--identify-machines-that-can-receive dynamic annotations">Identify machines that can receive dynamic annotations</h4></a>
+
+You can only set dynamic annotations for machines that are in the "Allocated" or "Deployed" state.  To identify which of your machines are in these states, you can execute the following command:
+
+```bash
+maas $PROFILE machines read \
+| jq -r '(["hostname","system_id","status"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.status_name])
+|@tsv' | column -t
+```
+
+For example:
+
+```bash
+maas admin machines read \
+| jq -r '(["hostname","system_id","status"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.status_name])
+|@tsv' | column -t
+```
+
+Output should look something like this:
+
+```nohighlight
+hostname       system_id  status
+--------       ---------  ------
+divine-stork   8b3ypp     Deployed
+casual-prawn   4end6r     Ready
+driven-teal    tgaat6     Allocated
+immune-beetle  43xand     Allocated
+good-osprey    napfxk     Allocated
+smart-hen      c4rwq7     Allocated
+boss-satyr     xn8taa     Ready
+golden-martin  8fxery     Allocated
+crack-guinea   qk4b3g     Allocated
+finer-leech    cy3dtr     Deployed
+free-mouse     gxtbq4     Allocated
+humble-bunny   srqnnb     Allocated
+wanted-muskox  ekw7fh     Deployed
+one-boa        by477d     Allocated
+great-urchin   srnx4g     Allocated
+ace-frog       g6arwg     Ready
+alive-marlin   gbwnfb     Deployed
+picked-parrot  am77wn     Allocated
+tough-kit      ke3wc7     Deployed
+legal-whale    8nq3mt     Allocated
+game-sponge    76pdc6     Allocated
+fun-ghoul      qxfm7k     Allocated
+aware-earwig   8m8hs7     Deployed
+chief-crane    7fapx7     Ready
+select-tapir   4ascbr     Allocated
+on-slug        snfs8d     Allocated
+polite-llama   dbqd4m     Allocated
+frank-coyote   wcmk48     Allocated
+usable-condor  ed8hmy     Deployed
+still-imp      h6ra6d     Allocated
+```
+
+<a href="#heading--set-dynamic-annotations-for-a-machine"><h4 id="heading--set-dynamic-annotations-for-a-machine">Set dynamic annotations for a machine</h4></a>
+
+You can set any `key=value` pair that you wish for any machine, although it's probably more useful if you standardize your key names.  To set a dynamic annotation for a machine, you can enter a command like this:
+
+
+<a href="#heading--clear-and-change-dynamic-annotations-for-a-machine"><h4 id="heading--clear-and-change-dynamic-annotations-for-a-machine">Clear and change dynamic annotations for a machine</h4></a>
+
+<a href="#heading--list-dynamic-annotations-for-all-machines"><h4 id="heading--list-dynamic-annotations-for-all-machines">List dynamic annotations for all machines</h4></a>
+
+<a href="#heading--list-dynamic-annotations-for-one-machine"><h4 id="heading--list-dynamic-annotations-for-one-machine">List dynamic allotations for one machine</h4></a>
+
+
 
 <a href="#heading--set-owner-data"><h4 id="heading--set-owner-data">set owner data</h4></a>
 
