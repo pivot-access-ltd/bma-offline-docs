@@ -5,12 +5,23 @@ Packages|[CLI](/t/power-management-deb-2-7-cli/3012) ~ [UI](/t/power-management-
 
 To manage a machine, MAAS must be able to power cycle it, usually through the machine's [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller) card.  Until you configure the power type, a newly-added machine can't be enlisted and used by MAAS.
 
+
+<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli 
 #### Four questions you may have:
 
 1. [How do I configure a machine's power type?](#heading--config-power-type)
 2. [Show me a catalogue of power parameters, by type.](#heading--power-catalogue)
 3. [Can you give me an example of the virsh power type?](#heading--example-virsh-kvm-power-type)
 4. [Which BMC drivers are supported?](#heading--bmc-driver-support)
+ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+
+#### Five questions you may have:
+
+1. [How do I configure a machine's power type?](#heading--config-power-type)
+2. [Show me a catalogue of power parameters, by type.](#heading--power-catalogue)
+3. [Can you give me an example of the virsh power type?](#heading--example-virsh-kvm-power-type)
+4. [Which BMC drivers are supported?](#heading--bmc-driver-support)
+5. [How do I configure and use IBM Z with MAAS?](#heading--configure-use-ibm-z)
 
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
 
@@ -344,13 +355,13 @@ The machine's hostname -- according to MAAS -- is a randomly chosen string (here
 
 <a href="#heading--webhook"><h3 id="heading--webhook">Webhook</h3></a>
 
-It's important to understand that the Webhook power driver is more generic than other drivers, so it has some flexibility that the underlying power driver may not support.  For example, Webhook doesn't require a username or password for the power driver, because not all power drivers work that way.  Nevertheless, the power driver you're connecting to Webhook may actually require a username and/or password.  Understanding and implementing these fields correctly for the chosen back-end power driver is the user's responsbility.
+It's important to understand that the Webhook power driver is more generic than other drivers, so it has some flexibility that the underlying power driver may not support.  For example, Webhook doesn't require a username or password for the power driver, because not all power drivers work that way.  Nevertheless, the power driver you're connecting to Webhook may actually require a username and/or password.  Understanding and implementing these fields correctly for the chosen back-end power driver is the user's responsibility.
 
 To that end, the "Required" column for this driver refers only to whether Webhook requires a value in each field.  Just because a field is optional for Webhook itself does not mean that the underlying power driver will ultimately allow that field to be unspecified.
 
 | Form field | Description | Required (by Webhook) |
 |-----|-----|-----|
-| Power type | Webhook (from dropdown list) | Required |
+| Power type | Webhook (from drop-down list) | Required |
 | URI to power on the node | URI to access power driver's API for power on | Required |
 | URI to power off the node | URI to access power driver's API for power off | Required |
 | URI to query the nodes power status | URI to access power driver's API for power status | Required |
@@ -365,7 +376,14 @@ To that end, the "Required" column for this driver refers only to whether Webhoo
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
 
-To (re)configure a machine's power type, first find the machine's $SYSTEM_ID with the [basic machine-list](/t/the-cli-cookbook/2218#heading--basic-machine-list) recipe.  Next, use the [MAAS CLI](/t/maas-cli/802) command `maas machines...` to (re)set the machine's power type, like this:
+To (re)configure a machine's power type, first find the machine's $SYSTEM_ID with the following recipe:
+
+```
+maas admin machines read | jq -r '(["HOSTNAME","SIS'S"] | (., map(length*"-"))),
+(.[] | [.hostname, .system_id]) | @tsv' | column -t
+```
+
+Next, use the [MAAS CLI](/t/maas-cli/802) command `maas machines...` to (re)set the machine's power type, like this:
 
     maas $PROFILE machine update $SYSTEM_ID power_type="$POWER_TYPE"
 
@@ -1112,3 +1130,153 @@ In the context of MAAS, the BMC is generally controlled by SNMP commands.  Any g
 </table>
 
 `*` The 'Facebook's Wedge' OpenBMC power driver is considered experimental at this time.
+
+<a href="#heading--configure-use-ibm-z"><h2 id="heading--configure-use-ibm-z">How do I configure and use IBM Z with MAAS?</h2></a>
+
+The IBM Z can host MAAS controllers, KVM host(s), and virtual machines, if the mainframe is set up properly for MAAS.  The basic architecture looks something like this:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/d/d78aec0bd5d5f485697701ed7316944f918fef94.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d78aec0bd5d5f485697701ed7316944f918fef94.png"></a>
+
+Networking would be structured something like this:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/8/841305949182ba64037f9806396a0e60fdc46d23.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/841305949182ba64037f9806396a0e60fdc46d23.png"></a>
+
+Note that net-booting the KVM guests can be problematic.  There are two options:
+
+1. Adding VNIC characteristics to enable "learning" on the network interface that's the base for bridge "br2."  This is the recommended approach.
+
+2. Enable full promiscuous bridge port mode at the network interface that's the base for bridge "br2."  This approach is not recommended because it has some built-in limitations.
+
+In order to achieve this configuration, there are a number of steps that must be executed; specifically, you must know how to:
+
+* [Determine whether your IBM Z can run MAAS](#heading--ibm-z-requirements)
+* [Login to the IBM Z](#heading--ibm-z-login)
+* [Set up a suitable partition for MAAS](#heading--set-up-ibm-z-partition)
+* [Set up networking for MAAS](#heading--set-up-ibm-z-networking)
+* [Set up storage for MAAS](#heading--set-up-ibm-z-storage)
+* [Set the partition boot parameters](#heading--set-the-boot-parameters)
+* [Set up your IBM Z virtual machines for enlistment](#heading--set-up-ibm-z-enlistment)
+
+You'll want to repeat these steps for both the MAAS partition and the KVM partition, with different parameters, depending on your planned MAAS deployment. Once these steps are complete for both partitions, IBM Z virtual machines can be managed like any other MAAS machine.
+
+<a href="#heading--ibm-z-requirements"><h3 id="heading--ibm-z-requirements">Determine whether your IBM Z can run MAAS</h3></a>
+
+The system requirements to host MAAS and its virtual machines on the IBM Z mainframe are as follows:
+
+* IBM z14 GA2 (or newer) or IBM LinuxONE III (or newer)
+* HMC running in DPM mode
+* HMC firmware level H39 - (HMC at H40 and SE at S55) (starting with driver 32 the unique MAC addresses fix was rolled out, but it was broken and needed another fix)
+* HMCs Rest-API enabled python-zhmcclient (minimal 0.28, recommended 0.29, latest is currently 0.30.1)
+* the HMC user ID for the zHMCclient access to the HMC API (must have permissions for the "Manage Web Services API Logs" role and "Manage Web Services API Logs" to the CanonicalMAAS HMC role)
+* I/O auto-configuration enabled for the LPAR for deploying into
+* zFCP (SCSI) disk storage (only), recommended are two disks, one defined as type 'boot,' the other as type 'data'
+* a dedicated storage group per managed LPAR; these must include the dedicated zFCP storage for this particular managed LPAR only ('boot' and 'data' for LPAR n) - but no additional shared storage
+* qeth network devices (OSA or Hipersockets); at least one qeth NIC, recommended two or more
+* Ubuntu Server 20.04 for IBM Z and LinuxONE (s390x) installed on a dedicated system (LPAR or PC), that acts as MAAS Controller 
+* one or more LPARs as MAAS deployment targets (aka "machines," in MAAS terms)
+
+Be aware that these are minimum system requirements.
+
+<a href="#heading--ibm-z-login"><h3 id="heading--ibm-z-login">Access the HMC and login to the IBM Z</h3></a>
+
+To login to the IBM Z, you must be a mainframe administrator.  Gaining that level of access is beyond the scope of this document.  Once you are sure that you have the necessary access, you first need to navigate to the Hardware Management Console (HMC) application in your Web browser:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/d/d085c8113e403546484778c858c27344e8986597.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d085c8113e403546484778c858c27344e8986597.png"></a>
+
+Click on the "Log on..." link, which will bring you to a login screen:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/5/5ccdfac4dc985260dcedd01284d24c5e8e5199d9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/5ccdfac4dc985260dcedd01284d24c5e8e5199d9.png"></a>
+
+Upon successfully logging on, you will land on the Welcome Screen:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/d/d18afe140a1971621ed44fa5fae36033927e293e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d18afe140a1971621ed44fa5fae36033927e293e.png"></a>
+
+Select the "Tasks Index" on the left-hand navigation:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/c/c030c8280b0a6dcfdd0365f9cf50238ae708e34b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c030c8280b0a6dcfdd0365f9cf50238ae708e34b.jpeg"></a>
+
+From here, you will be able to access the commands needed to prepare your IBM Z mainframe to host MAAS.
+
+<a href="#heading--set-up-ibm-z-partition"><h3 id="heading--set-up-ibm-z-partition">Set up a suitable IBM Z partition for a MAAS machine</h3></a>
+
+In order to prevent MAAS from taking over your entire mainframe, you must assign both the controllers and the KVM host to specific partitions, with suitable limitations.  To set up suitable IBM Z partitions for hosting MAAS, you must choose "Partition Details" from the "Tasks Index," which will bring you to a screen like this one:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/2/29e0cc00d68a5add1b13b1d50313ff6966f251a9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/29e0cc00d68a5add1b13b1d50313ff6966f251a9.png"></a>
+
+You must then choose the "target object" (in this case we've chosen TA05) to be operated upon:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/7/754c4926ecf5d9330b60c9b58bdd15bde6f24144.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/754c4926ecf5d9330b60c9b58bdd15bde6f24144.png"></a>
+
+Click "OK," and you'll arrive at a screen similar to the one below:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/0/0ecf9bd89c132fd2c7ff8b879dd6c1b4d3090a99.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0ecf9bd89c132fd2c7ff8b879dd6c1b4d3090a99.png"></a>
+
+Make sure you're on the "Partitions" tab, and select the desired object ("TA05..."):
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/0/018d8309a1a16571df56a6672cff26e60f42075a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/018d8309a1a16571df56a6672cff26e60f42075a.jpeg"></a>
+
+Right-click on the selected object and select "Partition Details:"
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/5/5a7f696435b504eb212234acdd09c928f16b1670.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/5a7f696435b504eb212234acdd09c928f16b1670.jpeg"></a>
+
+On the "General" tab, edit the partition details to suit your proposed MAAS deployment:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/6/60ff5ca98d8b615ee4a947607872c973cf2c7f41.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/60ff5ca98d8b615ee4a947607872c973cf2c7f41.png"></a>
+
+Next, you will set up the networking details for this partition, as shown in the following section.
+
+<a href="#heading--set-up-ibm-z-networking"><h3 id="heading--set-up-ibm-z-networking">Set up IBM Z networking for a MAAS machine</h3></a>
+
+To properly enable networking within the IBMZ partitions, you must change to the "Network" tab under "Partition Details:"
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/d/daf386497781df42ba7ffaa518c1f186ebef66ee.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/daf386497781df42ba7ffaa518c1f186ebef66ee.png"></a>
+
+Click on the NIC of interest to bring up the "NIC Details" screen:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/e/e9b65711cf97dd722db1b1df4b69d4f590166a99.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9b65711cf97dd722db1b1df4b69d4f590166a99.png"></a>
+
+Confirm that the parameters on this screen are consistent with your planned MAAS deployment, then bring up the Hipersockets adaptor by selecting it:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/0/0a0873d7cd40147884c861d1fcde15ddc37c8853.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0a0873d7cd40147884c861d1fcde15ddc37c8853.png"></a>
+
+Ensure that all settings on the "General" tab conform to your planned MAAS deployment; then select the "Network Interface Cards" tab on the left-hand navigation:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/0/0a0873d7cd40147884c861d1fcde15ddc37c8853.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0a0873d7cd40147884c861d1fcde15ddc37c8853.png"></a>
+
+Again, ensure that the parameters associated with the networking arrangement are consistent with your planned MAAS deployment.
+
+Next, you will set up the storage layout for your MAAS partition(s).
+
+<a href="#heading--set-up-ibm-z-storage"><h3 id="heading--set-up-ibm-z-storage">Set up IBM Z storage for a MAAS machine</h3></a>
+
+To set up suitable storage for a MAAS deployment, you should bring up the "Partition Details" for your chosen MAAS partition and select the "Storage" tab from the left-hand navigation:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/c/c25792eeacd5aef57ca74a68b203c23ed74268d7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c25792eeacd5aef57ca74a68b203c23ed74268d7.png"></a>
+
+Choose the "VOLUMES" sub-tab, and lick on the hyperlinked partition name to bring up the storage configuration tab:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/c/cf8d1427abda94ccd3b79966d06bee210ac1240b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/cf8d1427abda94ccd3b79966d06bee210ac1240b.png"></a>
+
+Click on "GET DETAILS" for the Boot Volume in the Volume list to bring up the "Configuration details" screen:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/a/a081c97b8196e708495156187b983b70c32fcdc5.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a081c97b8196e708495156187b983b70c32fcdc5.png"></a>
+
+Ensure that the Boot Volume is configured appropriately for your planned MAAS deployment, then click "Done."  Then return to the storage configuration tab and choose the Data Volume, and tune it to the appropriate parameters.
+
+Next, choose the "ADAPTERS" sub-tab to bring up information on the storage adaptors:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/8/821edff17e3fe8f2fbf9b5cb1682928dc9bb34d7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/821edff17e3fe8f2fbf9b5cb1682928dc9bb34d7.png"></a>
+
+Set any necessary parameters to conform to your planned MAAS deployment.
+
+<a href="#heading--set-the-boot-parameters"><h3 id="heading--set-the-boot-parameters">Set the partition boot parameters</h3></a>
+
+Return to the "Partition Details" screen and select the "Boot" tab in the left-hand navigation:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/c/c5df4937135c1a9a1758b20855742bd038700c65.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c5df4937135c1a9a1758b20855742bd038700c65.png"></a>
+
+Change any settings as necessary to support your planned MAAS deployment.
+
+<a href="#heading--set-up-ibm-z-enlistment"><h3 id="heading--set-up-ibm-z-enlistment">Set up your IBM Z virtual machine for enlistment</h3></a>
+
+To cause IBM Z KVM partition guests to enlist, it's necessary to manually put in the BMC information for each guest.  MAAS can then detect the guest, enlist it, and boot it as necessary.

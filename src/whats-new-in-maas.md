@@ -221,9 +221,9 @@ This screen can be reached from `Settings | Configuration | Commissioning`.
 
 <h2 id="heading--descrip-mark-mach-broken">Descriptions when marking machines broken</h2>
 
-When marking a machine broken, a description can now included:
+When marking a machine broken, a description can now be included:
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png"></a>
+<a href="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png?" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png?"></a>
 
 This description appears in that machine's row on the machine list.
 
@@ -650,13 +650,13 @@ With the advent of MAAS 3.0, we are removing support for RSD pods.  Registered p
 
 The logs and events tabs have combined and now live under "Logs". In addition to a number of small improvements, navigating and displaying events has been made easier.
 
-![Screen Shot 2021-05-17 at 3.07.37 pm|690x465](upload://aucJWsvJwljebNdlnuBsU8pN0Zv.png) 
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/4/497fd5d03ece0308648db33cf144f4cfefc6e5ed_2_690x465.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/4/497fd5d03ece0308648db33cf144f4cfefc6e5ed_2_690x465.png"></a>
 
 #### Downloading logs
 
 A helpful new feature is the ability to download the machine and installation output, and if a machine has failed deployment you can now download a full tar of the curtain logs.
 
-![Screen Shot 2021-05-17 at 3.08.10 pm|690x465](upload://AkrIWr0yNzSxtAPHlFa8RTbjFWb.png)
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fe9df81b810fa3dd502b303b08978d1c60bff933_2_690x465.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/f/fe9df81b810fa3dd502b303b08978d1c60bff933_2_690x465.png"></a>
 
 <h3 id="heading--disabling-boot-methods">Disabling boot methods</h3>
 

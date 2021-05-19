@@ -247,7 +247,7 @@ DTARG += $(DISC)/resource-pools.md
 DTARG += $(DISC)/select-and-import-images.md
 DTARG += $(DISC)/storage.md
 DTARG += $(DISC)/subnet-management.md
-DTARG += $(DISC)/tags-and-annotations-draft-document.md
+DTARG += $(DISC)/tags-and-annotations.md
 DTARG += $(DISC)/test-logs.md
 DTARG += $(DISC)/the-cli-cookbook.md
 DTARG += $(DISC)/tips-tricks-and-traps.md
@@ -3401,99 +3401,79 @@ $(DISC)/maas-requirements.md: $(SRC)/maas-requirements.md
 ## remove reference version
 	cd $(DISC) && rm maas-requirements-snap-3-0-ui-4014.md
 
-# temporary stanzas based on draft document
-#
- $(DISC)/tags-and-annotations-draft-document.md: $(SRC)/tags-and-annotations.md
-# ui
-	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-draft-document-4500.md
+$(DISC)/tags-and-annotations.md: $(SRC)/tags-and-annotations.md
+## deb 2.7 cli
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-7-cli-2892.md
 	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-9-ui tags-and-annotations-draft-document-4500.md
-# cli
-	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-draft-cli-document-4501.md
+	xpub push $(DISC) -t deb-2-7-cli tags-and-annotations-deb-2-7-cli-2892.md
+## deb 2.7 ui
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-7-ui-2893.md
 	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-9-cli tags-and-annotations-draft-cli-document-4501.md
-# pull reference version
+	xpub push $(DISC) -t deb-2-7-ui tags-and-annotations-deb-2-7-ui-2893.md
+## deb 2.8 cli
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-8-cli-2894.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-8-cli tags-and-annotations-deb-2-8-cli-2894.md
+## deb 2.8 ui
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-8-ui-2895.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-8-ui tags-and-annotations-deb-2-8-ui-2895.md
+## deb 2.9 cli
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-9-cli-2896.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-9-cli tags-and-annotations-deb-2-9-cli-2896.md
+## deb 2.9 ui
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-9-ui-2897.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-2-9-ui tags-and-annotations-deb-2-9-ui-2897.md
+## deb 3.0 cli
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-3-0-cli-4023.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-3-0-cli tags-and-annotations-deb-3-0-cli-4023.md
+## deb 3.0 ui
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-3-0-ui-4024.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t deb-3-0-ui tags-and-annotations-deb-3-0-ui-4024.md
+## snap 2.7 cli
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-7-cli-2886.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-7-cli tags-and-annotations-snap-2-7-cli-2886.md
+## snap 2.7 ui
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-7-ui-2887.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-7-ui tags-and-annotations-snap-2-7-ui-2887.md
+## snap 2.8 cli
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-8-cli-2888.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-8-cli tags-and-annotations-snap-2-8-cli-2888.md
+## snap 2.8 ui
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-8-ui-2889.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-8-ui tags-and-annotations-snap-2-8-ui-2889.md
+## snap 2.9 cli
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-9-cli-2890.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-9-cli tags-and-annotations-snap-2-9-cli-2890.md
+## snap 2.9 ui
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-9-ui-2891.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-2-9-ui tags-and-annotations-snap-2-9-ui-2891.md
+## snap 3.0 cli
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-3-0-cli-4021.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-3-0-cli tags-and-annotations-snap-3-0-cli-4021.md
+## snap 3.0 ui
+	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-3-0-ui-4022.md
+	cd $(MODWD) &&\
+	xpub push $(DISC) -t snap-3-0-ui tags-and-annotations-snap-3-0-ui-4022.md
+## pull reference version
 	cd $(DISC) &&\
-	xpub pull $(DISC) 4500 4500
-# copy reference version to discourse master
+	xpub pull $(DISC) 4022 4022
+## copy reference version to discourse master
 	cd $(DISC) &&\
-	cp -p tags-and-annotations-draft-document-4500.md tags-and-annotations.md
-# remove reference version
-	cd $(DISC) && rm tags-and-annotations-draft-document-4500.md
-
-# $(DISC)/tags-and-annotations.md: $(SRC)/tags-and-annotations.md
-# ## deb 2.7 cli
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-7-cli-2892.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t deb-2-7-cli tags-and-annotations-deb-2-7-cli-2892.md
-# ## deb 2.7 ui
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-7-ui-2893.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t deb-2-7-ui tags-and-annotations-deb-2-7-ui-2893.md
-# ## deb 2.8 cli
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-8-cli-2894.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t deb-2-8-cli tags-and-annotations-deb-2-8-cli-2894.md
-# ## deb 2.8 ui
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-8-ui-2895.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t deb-2-8-ui tags-and-annotations-deb-2-8-ui-2895.md
-# ## deb 2.9 cli
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-9-cli-2896.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t deb-2-9-cli tags-and-annotations-deb-2-9-cli-2896.md
-# ## deb 2.9 ui
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-2-9-ui-2897.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t deb-2-9-ui tags-and-annotations-deb-2-9-ui-2897.md
-# ## deb 3.0 cli
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-3-0-cli-4023.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t deb-3-0-cli tags-and-annotations-deb-3-0-cli-4023.md
-# ## deb 3.0 ui
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-deb-3-0-ui-4024.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t deb-3-0-ui tags-and-annotations-deb-3-0-ui-4024.md
-# ## snap 2.7 cli
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-7-cli-2886.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t snap-2-7-cli tags-and-annotations-snap-2-7-cli-2886.md
-# ## snap 2.7 ui
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-7-ui-2887.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t snap-2-7-ui tags-and-annotations-snap-2-7-ui-2887.md
-# ## snap 2.8 cli
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-8-cli-2888.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t snap-2-8-cli tags-and-annotations-snap-2-8-cli-2888.md
-# ## snap 2.8 ui
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-8-ui-2889.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t snap-2-8-ui tags-and-annotations-snap-2-8-ui-2889.md
-# ## snap 2.9 cli
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-9-cli-2890.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t snap-2-9-cli tags-and-annotations-snap-2-9-cli-2890.md
-# ## snap 2.9 ui
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-2-9-ui-2891.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t snap-2-9-ui tags-and-annotations-snap-2-9-ui-2891.md
-# ## snap 3.0 cli
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-3-0-cli-4021.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t snap-3-0-cli tags-and-annotations-snap-3-0-cli-4021.md
-# ## snap 3.0 ui
-# 	cp $(SRC)/tags-and-annotations.md $(MODWD)/tags-and-annotations-snap-3-0-ui-4022.md
-# 	cd $(MODWD) &&\
-# 	xpub push $(DISC) -t snap-3-0-ui tags-and-annotations-snap-3-0-ui-4022.md
-# ## pull reference version
-# 	cd $(DISC) &&\
-# 	xpub pull $(DISC) 4022 4022
-# ## copy reference version to discourse master
-# 	cd $(DISC) &&\
-# 	cp -p tags-and-annotations-snap-3-0-ui-4022.md tags-and-annotations.md
-# ## remove reference version
-# 	cd $(DISC) && rm tags-and-annotations-snap-3-0-ui-4022.md
+	cp -p tags-and-annotations-snap-3-0-ui-4022.md tags-and-annotations.md
+## remove reference version
+	cd $(DISC) && rm tags-and-annotations-snap-3-0-ui-4022.md
  
 $(DISC)/machine-logs.md: $(SRC)/machine-logs.md
 ## deb 2.7 cli

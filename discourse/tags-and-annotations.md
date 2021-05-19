@@ -1,7 +1,7 @@
 ||2.7|2.8|2.9|3.0|
 |-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/maas-tags-snap-2-7-cli/2886) ~ [UI](/t/maas-tags-snap-2-7-ui/2887)|[CLI](/t/maas-tags-snap-2-8-cli/2888) ~ [UI](/t/maas-tags-snap-2-8-ui/2889)|[CLI](/t/maas-tags-snap-2-9-cli/2890) ~ [UI](/t/maas-tags-snap-2-9-ui/2891)|[CLI](/t/maas-tags-snap-3-0-cli/4021) ~ [UI](/t/maas-tags-snap-3-0-ui/4022)|
-Packages|[CLI](/t/maas-tags-deb-2-7-cli/2892) ~ [UI](/t/maas-tags-deb-2-7-ui/2893)|[CLI](/t/maas-tags-deb-2-8-cli/2894) ~ [UI](/t/maas-tags-deb-2-8-ui/2895)|[CLI](/t/maas-tags-deb-2-9-cli/2896) ~ [UI](/t/maas-tags-deb-2-9-ui/2897)|[CLI](/t/maas-tags-deb-3-0-cli/4023) ~ [UI](/t/maas-tags-deb-3-0-ui/4024)|
+Snap|[CLI](/t/tags-and-annotations-snap-2-7-cli/2886) ~ [UI](/t/tags-and-annotations-snap-2-7-ui/2887)|[CLI](/t/tags-and-annotations-snap-2-8-cli/2888) ~ [UI](/t/tags-and-annotations-snap-2-8-ui/2889)|[CLI](/t/tags-and-annotations-snap-2-9-cli/2890) ~ [UI](/t/tags-and-annotations-snap-2-9-ui/2891)|[CLI](/t/tags-and-annotations-snap-3-0-cli/4021) ~ [UI](/t/tags-and-annotations-snap-3-0-ui/4022)|
+Packages|[CLI](/t/tags-and-annotations-deb-2-7-cli/2892) ~ [UI](/t/tags-and-annotations-deb-2-7-ui/2893)|[CLI](/t/tags-and-annotations-deb-2-8-cli/2894) ~ [UI](/t/tags-and-annotations-deb-2-8-ui/2895)|[CLI](/t/tags-and-annotations-deb-2-9-cli/2896) ~ [UI](/t/tags-and-annotations-deb-2-9-ui/2897)|[CLI](/t/tags-and-annotations-deb-3-0-cli/4023) ~ [UI](/t/tags-and-annotations-deb-3-0-ui/4024)|
 
 Tags are short, descriptive, searchable words that can be applied to various MAAS objects, including:
 
@@ -15,7 +15,7 @@ Tags are short, descriptive, searchable words that can be applied to various MAA
 
 Tags serve to help you identify, group, and find objects easily, especially when you routinely deploy hundreds of machines.
 
-Annotations are descriptive, searchable phrases that apply only to machines.  There are two types of annotations: static (always present in any machine state), and dynamic (only present in allocated or deployed states).  Annotations help you identify, characterize, and inform others about your machines.
+Annotations are descriptive, searchable phrases that apply only to machines.  There are two types of annotations: static (always present in any machine state), and dynamic (only present in allocated or deployed states).  Annotations help you identify, characterise, and inform others about your machines.
 
 This article will show you how to:
 
@@ -28,7 +28,7 @@ This article will show you how to:
 * [Work with annotations](#heading--work-with-annotations)
  snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
 
-All headings have been hyperlinked for easy bookmarking.  Note that not all functions for tags and annotations can be accessed via one interface (UI/CLI), so you will occassionally encounter cross-links.
+All headings have been hyperlinked for easy bookmarking.  Note that not all functions for tags and annotations can be accessed via one interface (UI/CLI), so you will occasionally encounter cross-links.
 
 
 <a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a>
@@ -37,6 +37,7 @@ This section is devoted to procedures for working with tags.  We begin with some
 
 Specifically, this section will show you how to:
 
+<!-- deb-2-7-ui
 * [Work with tags in general](#heading--work-with-tags-in-general)
 * [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
 * [Work with controller tags](#heading--work-with-controller-tags)
@@ -44,13 +45,82 @@ Specifically, this section will show you how to:
 * [Work with partition tags](#heading--work-with-partition-tags)
 * [Work with network tags](#heading--work-with-network-tags)
 * [Work with device tags](#heading--work-with-device-tags)
-* [Work with node tags (CLI only)](insert link)(#heading--work-with-node-tags)
+* [Work with node tags (CLI only)](/t/-/2892#heading--work-with-node-tags)
+ deb-2-7-ui -->
+<!-- deb-2-8-ui
+* [Work with tags in general](#heading--work-with-tags-in-general)
+* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
+* [Work with controller tags](#heading--work-with-controller-tags)
+* [Work with block device tags](#heading--work-with-block-device-tags)
+* [Work with partition tags](#heading--work-with-partition-tags)
+* [Work with network tags](#heading--work-with-network-tags)
+* [Work with device tags](#heading--work-with-device-tags)
+* [Work with node tags (CLI only)](/t/-/2894#heading--work-with-node-tags)
+ deb-2-8-ui -->
+<!-- deb-2-9-ui
+* [Work with tags in general](#heading--work-with-tags-in-general)
+* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
+* [Work with controller tags](#heading--work-with-controller-tags)
+* [Work with block device tags](#heading--work-with-block-device-tags)
+* [Work with partition tags](#heading--work-with-partition-tags)
+* [Work with network tags](#heading--work-with-network-tags)
+* [Work with device tags](#heading--work-with-device-tags)
+* [Work with node tags (CLI only)](/t/-/2896#heading--work-with-node-tags)
+ deb-2-9-ui -->
+<!-- deb-3-0-ui
+* [Work with tags in general](#heading--work-with-tags-in-general)
+* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
+* [Work with controller tags](#heading--work-with-controller-tags)
+* [Work with block device tags](#heading--work-with-block-device-tags)
+* [Work with partition tags](#heading--work-with-partition-tags)
+* [Work with network tags](#heading--work-with-network-tags)
+* [Work with device tags](#heading--work-with-device-tags)
+* [Work with node tags (CLI only)](/t/-/4023#heading--work-with-node-tags)
+ deb-3-0-ui -->
+<!-- snap-2-7-ui
+* [Work with tags in general](#heading--work-with-tags-in-general)
+* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
+* [Work with controller tags](#heading--work-with-controller-tags)
+* [Work with block device tags](#heading--work-with-block-device-tags)
+* [Work with partition tags](#heading--work-with-partition-tags)
+* [Work with network tags](#heading--work-with-network-tags)
+* [Work with device tags](#heading--work-with-device-tags)
+* [Work with node tags (CLI only)](/t/-/2886#heading--work-with-node-tags)
+ snap-2-7-ui -->
+<!-- snap-2-8-ui
+* [Work with tags in general](#heading--work-with-tags-in-general)
+* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
+* [Work with controller tags](#heading--work-with-controller-tags)
+* [Work with block device tags](#heading--work-with-block-device-tags)
+* [Work with partition tags](#heading--work-with-partition-tags)
+* [Work with network tags](#heading--work-with-network-tags)
+* [Work with device tags](#heading--work-with-device-tags)
+* [Work with node tags (CLI only)](/t/-/2888#heading--work-with-node-tags)
+ snap-2-8-ui -->
+<!-- snap-2-9-ui
+* [Work with tags in general](#heading--work-with-tags-in-general)
+* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
+* [Work with controller tags](#heading--work-with-controller-tags)
+* [Work with block device tags](#heading--work-with-block-device-tags)
+* [Work with partition tags](#heading--work-with-partition-tags)
+* [Work with network tags](#heading--work-with-network-tags)
+* [Work with device tags](#heading--work-with-device-tags)
+* [Work with node tags (CLI only)](/t/-/2890#heading--work-with-node-tags)
+ snap-2-9-ui -->
+* [Work with tags in general](#heading--work-with-tags-in-general)
+* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
+* [Work with controller tags](#heading--work-with-controller-tags)
+* [Work with block device tags](#heading--work-with-block-device-tags)
+* [Work with partition tags](#heading--work-with-partition-tags)
+* [Work with network tags](#heading--work-with-network-tags)
+* [Work with device tags](#heading--work-with-device-tags)
+* [Work with node tags (CLI only)](/t/-/4021#heading--work-with-node-tags)
 
 Tags for these different objects have similar purposes, but they aren't necessarily administered in the same way -- so we've included detailed sections for each tag type.
 
 <a href="#heading--work-with-tags-in-general"><h3 id="heading--work-with-tags-in-general">Work with tags in general</h3></a>
 
-There are a few general procedures for working with tags, centered around naming conventions and basic mechanics.  These procedures apply to nearly all tag types.  They will be referenced often in the subsections that follow.
+There are a few general procedures for working with tags, centred around naming conventions and basic mechanics.  These procedures apply to nearly all tag types.  They will be referenced often in the subsections that follow.
 
 As a general rule, you'll want to know how to:
 
@@ -82,11 +152,11 @@ The process for creating and assigning tags in the UI is generally the same for 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png"></a>
 
->The autocomplete list will re-appear after you've entered the tag, in case you'd like to enter another tag.
+>The auto complete list will re-appear after you've entered the tag, in case you'd like to enter another tag.
 
 3. When you're done, click on the appropriate completion button to complete the operation.
 
->The tag you just entered will now be added to the tag autocomplete list, in alphabetical order, for re-use with other machines.
+>The tag you just entered will now be added to the tag auto complete list, in alphabetical order, for re-use with other machines.
 
 
 <a href="#heading--delete-and-remove-tags"><h4 id="heading--delete-and-remove-tags">Delete and remove tags</h4></a>
@@ -103,13 +173,69 @@ To remove (unassign) a tag:
 
 3. When you're done, click on the appropriate completion button to complete the operation.
 
->Note that the tag you just removed will be deleted from  the tag autocomplete list when it is no longer assigned to any  machines.
+>Note that the tag you just removed will be deleted from  the tag auto complete list when it is no longer assigned to any  machines.
 
 <a href="#heading--work-with-machine-and-vm-tags"><h3 id="heading--work-with-machine-and-vm-tags">Work with machine and VM tags</h3></a>
 
 This subsection will show you how to:
- 
-* [Create machine tags with built-in kernel options (CLI only)](insert link)(#heading--create-machine-tags-with-built-in-kernel-options)
+
+<!-- deb-2-7-ui
+* [Create machine tags with built-in kernel options (CLI only)](/t/-/2892#heading--create-tags-with-built-in-kernel-options)
+* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
+* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
+* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
+* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
+* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
+ deb-2-7-ui -->
+<!-- deb-2-8-ui
+* [Create machine tags with built-in kernel options (CLI only)](/t/-/2894#heading--create-tags-with-built-in-kernel-options)
+* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
+* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
+* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
+* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
+* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
+ deb-2-8-ui -->
+<!-- deb-2-9-ui
+* [Create machine tags with built-in kernel options (CLI only)](/t/-/2896#heading--create-tags-with-built-in-kernel-options)
+* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
+* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
+* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
+* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
+* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
+ deb-2-9-ui -->
+<!-- deb-3-0-ui
+* [Create machine tags with built-in kernel options (CLI only)](/t/-/4023#heading--create-tags-with-built-in-kernel-options)
+* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
+* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
+* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
+* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
+* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
+ deb-3-0-ui -->
+<!-- snap-2-7-ui
+* [Create machine tags with built-in kernel options (CLI only)](/t/-/2886#heading--create-tags-with-built-in-kernel-options)
+* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
+* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
+* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
+* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
+* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
+ snap-2-7-ui -->
+<!-- snap-2-8-ui
+* [Create machine tags with built-in kernel options (CLI only)](/t/-/2888#heading--create-tags-with-built-in-kernel-options)
+* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
+* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
+* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
+* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
+* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
+ snap-2-8-ui -->
+<!-- snap-2-9-ui
+* [Create machine tags with built-in kernel options (CLI only)](/t/-/2890#heading--create-tags-with-built-in-kernel-options)
+* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
+* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
+* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
+* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
+* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
+ snap-2-9-ui -->
+* [Create machine tags with built-in kernel options (CLI only)](/t/-/4021#heading--create-tags-with-built-in-kernel-options)
 * [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
 * [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
 * [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
@@ -124,11 +250,11 @@ If you want to create a new tag, and simultaneously assign it to a machine, use 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/86ee8529206fcfa297865198a55b976e1002b6bf.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/86ee8529206fcfa297865198a55b976e1002b6bf.png"></a>
 
-2. Select the "Take action" dropdown menu and select "Tag":
+2. Select the "Take action" drop-down menu and select "Tag":
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/f77f19b7aef9f880c12a4d710b91cc3abdc03154.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f77f19b7aef9f880c12a4d710b91cc3abdc03154.png"></a>
 
-3. Create and/or assign the desired tag, as described in the [general tagging procedure](insert link) above.
+3. Create and/or assign the desired tag, as described in the [general tagging procedure](#heading--create-and-assign-tags) above.
 
 4. Don't forget to hit the "Tag machine" button when you're done, to apply your changes to the machine.
 
@@ -142,7 +268,7 @@ Any tags you add in the "Tags" box will be applied to all selected machines, as 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a503261eb7faa17478b09aa70f48f838b4b0fb87.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a503261eb7faa17478b09aa70f48f838b4b0fb87.png"></a>
 
-Other than the scope of the transaction (e.g., tagging three machines, in this case), everything else about this operation conforms to the [general tag assignment procedure](insert link).
+Other than the scope of the transaction (e.g., tagging three machines, in this case), everything else about this operation conforms to the [general tag assignment procedure](#heading--create-and-assign-tags).
 
 <a href="#heading--remove-and-delete-machine-tags-from-machines"><h4 id="heading--remove-and-delete-machine-tags-from-machines">Remove and delete machine tags from machines</h4></a>
 
@@ -152,14 +278,35 @@ To remove machine tags from a machine:
 
 2. Select the 'Configuration' tab and then the 'Edit' button alongside 'Machine configuration' to edit tags:
 
-3. Follow the [general tag removal procedure](insert link).
+3. Follow the [general tag removal procedure](#heading--delete-and-remove-tags).
 
 
 <a href="#heading--list-machine-tags-for-multiple-machines"><h4 id="heading--list-machine-tags-for-multiple-machines">List machine tags for multiple machines</h4></a>
 
-In the MAAS UI, you don't explicitly list all machine tags; instead, you filter by them using the "Filter by" dropdown.  This filtered list does not distinguish between virtual machines (VMs) and physical machines, unless you've assigned tags to help with that distinction.
+In the MAAS UI, you don't explicitly list all machine tags; instead, you filter by them using the "Filter by" drop-down.  This filtered list does not distinguish between virtual machines (VMs) and physical machines, unless you've assigned tags to help with that distinction.
 
-Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter dropdown.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](insert link), and [retrieve a list of VM host tags](insert link).
+<!-- deb-2-7-ui
+Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/2892#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/2892#heading--list-tags-for-all-vm-hosts).
+ deb-2-7-ui -->
+<!-- deb-2-8-ui
+Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/2894#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/2894#heading--list-tags-for-all-vm-hosts).
+ deb-2-8-ui -->
+<!-- deb-2-9-ui
+Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/2896#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/2896#heading--list-tags-for-all-vm-hosts).
+ deb-2-9-ui -->
+<!-- deb-3-0-ui
+Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/4023#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/4023#heading--list-tags-for-all-vm-hosts).
+ deb-3-0-ui -->
+<!-- snap-2-7-ui
+Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/2886#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/2886#heading--list-tags-for-all-vm-hosts).
+ snap-2-7-ui -->
+<!-- snap-2-8-ui
+Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/2888#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/2888#heading--list-tags-for-all-vm-hosts).
+ snap-2-8-ui -->
+<!-- snap-2-9-ui
+Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/2890#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/2890#heading--list-tags-for-all-vm-hosts).
+ snap-2-9-ui -->
+Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/4021#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/4021#heading--list-tags-for-all-vm-hosts).
 
 Here's how you can filter the machine list by machine tags, using the MAAS UI:
 
@@ -193,7 +340,7 @@ To view the machine tags assigned to a VM host, here's the procedure you'll foll
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/8c8454d576b4b49dd99c3f6c6bb2735252591010.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8c8454d576b4b49dd99c3f6c6bb2735252591010.png"></a>
 
-3. In the settings tab, you'll see a box labeled "Tags."  You can use this box to view, assign, edit, or remove tags for the KVM:
+3. In the settings tab, you'll see a box labelled "Tags."  You can use this box to view, assign, edit, or remove tags for the KVM:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e7953d2c5d153b82eac3cb1a3ba105ec194eb077.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e7953d2c5d153b82eac3cb1a3ba105ec194eb077.png"></a>
 
@@ -220,16 +367,16 @@ To create and assign a controller tag, you can use the following procedure:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
 
-3. Find the "Tags" card and click on "Edit."  You will be brought to that contoller's "Configuration" tab:
+3. Find the "Tags" card and click on "Edit."  You will be brought to that controller's "Configuration" tab:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/28874aac1eddfc130078c40ec37e0172cf57c4e9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/28874aac1eddfc130078c40ec37e0172cf57c4e9.png"></a>
+<a href="https://discourse.maas.io/uploads/default/original/2X/2/28864aac1eddfc130078c40ec37e0172cf57c4e9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/28864aac1eddfc130078c40ec37e0172cf57c4e9.png"></a>
 
 4. Click on the "Edit" button for "Controller configuration."
 You'll be presented with an editing screen similar to this one:
  
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png"></a>
 
-5.  Follow the [general procedure](insert link) to assign a tag to the controller.
+5.  Follow the [general procedure](#heading--create-and-assign-tags) to assign a tag to the controller.
 
 <a href="#heading--remove-and-delete-controller-tags"><h4 id="heading--remove-and-delete-controller-tags">Remove and delete controller tags</h4></a>
 
@@ -243,20 +390,41 @@ To remove (and possibly delete) a controller tag, you can use the following proc
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
 
-3. Find the "Tags" card and click on "Edit."  You will be brought to that contoller's "Configuration" tab:
+3. Find the "Tags" card and click on "Edit."  You will be brought to that controller's "Configuration" tab:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/28874aac1eddfc130078c40ec37e0172cf57c4e9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/28874aac1eddfc130078c40ec37e0172cf57c4e9.png"></a>
+<a href="https://discourse.maas.io/uploads/default/original/2X/2/28864aac1eddfc130078c40ec37e0172cf57c4e9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/28864aac1eddfc130078c40ec37e0172cf57c4e9.png"></a>
 
 4. Click on the "Edit" button for "Controller configuration."
 You'll be presented with an editing screen similar to this one:
  
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png"></a>
 
-5.  Follow the [general procedure](insert link) to remove a tag from the controller.
+5.  Follow the [general procedure](#heading--delete-and-remove-tags) to remove a tag from the controller.
 
 <a href="#heading--list-controller-tags"><h4 id="heading--list-controller-tags">List controller tags</h4></a>
 
-There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](insert link) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
+<!-- deb-2-7-ui
+There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/2892#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
+ deb-2-7-ui -->
+<!-- deb-2-8-ui
+There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/2894#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
+ deb-2-8-ui -->
+<!-- deb-2-9-ui
+There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/2896#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
+ deb-2-9-ui -->
+<!-- deb-3-0-ui
+There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/4023#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
+ deb-3-0-ui -->
+<!-- snap-2-7-ui
+There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/2886#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
+ snap-2-7-ui -->
+<!-- snap-2-8-ui
+There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/2888#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
+ snap-2-8-ui -->
+<!-- snap-2-9-ui
+There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/2890#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
+ snap-2-9-ui -->
+There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/4021#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
 
 <a href="#heading--view-controller-tags"><h4 id="heading--view-controller-tags">View controller tags</h4></a>
 
@@ -284,7 +452,7 @@ In the parlance of MAAS, a block device is generally an unassigned and unpartiti
 
 <a href="#heading--create-and-assign-block-device-tags"><h4 id="heading--create-and-assign-block-device-tags">Create and assign block device tags</h4></a>
 
-In order to create and assign tags to a block device, the device has to be in an "available" state, with no active paritions. To create and assign tags to block devices:
+In order to create and assign tags to a block device, the device has to be in an "available" state, with no active partitions. To create and assign tags to block devices:
 
 1. Go to the machine list:
 
@@ -294,21 +462,21 @@ In order to create and assign tags to a block device, the device has to be in an
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png"></a>
 
-3. Click on the "Storage" tab and focus on the block labeled "Available disks and paritions:"
+3. Click on the "Storage" tab and focus on the block labelled "Available disks and partitions:"
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png"></a>
 
-4. Click the dropdown arrow at the right end of the row containing the block device you want to tag. Choose the "Edit..." option (the wording may vary, e.g, "Edit physical..."). This will take you to an editing screen for that block device:
+4. Click the drop-down arrow at the right end of the row containing the block device you want to tag. Choose the "Edit..." option (the wording may vary, e.g, "Edit physical..."). This will take you to an editing screen for that block device:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/2/2912877532c3ea0b744ff3c88c7ef2046598bebc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/2912877532c3ea0b744ff3c88c7ef2046598bebc.png"></a>
 
-5. Add tags as described in the [general procedure](insert link).
+5. Add tags as described in the [general procedure](#heading--create-and-assign-tags).
 
 6. Be sure to click on the "Save" button when you're done.
 
 <a href="#heading--remove-and-delete-block-device-tags"><h4 id="heading--remove-and-delete-block-device-tags">Remove and delete block device tags</h4></a>
 
-In order to remove tags from a block device, the device has to be in an "available" state, with no active paritions. To remove and delete tags from a block devices:
+In order to remove tags from a block device, the device has to be in an "available" state, with no active partitions. To remove and delete tags from a block devices:
 
 1. Go to the machine list:
 
@@ -318,27 +486,48 @@ In order to remove tags from a block device, the device has to be in an "availab
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png"></a>
 
-3. Click on the "Storage" tab and focus on the block labeled "Available disks and paritions:"
+3. Click on the "Storage" tab and focus on the block labelled "Available disks and partitions:"
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png"></a>
 
-4. Click the dropdown arrow at the right end of the row containing the block device you want to tag. Choose the "Edit..." option (the wording may vary, e.g, "Edit physical..."). This will take you to an editing screen for that block device:
+4. Click the drop-down arrow at the right end of the row containing the block device you want to tag. Choose the "Edit..." option (the wording may vary, e.g, "Edit physical..."). This will take you to an editing screen for that block device:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/2/2912877532c3ea0b744ff3c88c7ef2046598bebc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/2912877532c3ea0b744ff3c88c7ef2046598bebc.png"></a>
 
-5. Delete tags by clicking the "X" next to them, as described in the [general procedure](insert link).
+5. Delete tags by clicking the "X" next to them, as described in the [general procedure](#heading--create-and-assign-tags).
 
 6. Be sure to click on the "Save" button when you're done.
 
 <a href="#heading--list-block-device-tags"><h4 id="heading--list-block-device-tags">List block device tags</h4></a>
 
-There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](insert link) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
+<!-- deb-2-7-ui
+There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/2892#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
+ deb-2-7-ui -->
+<!-- deb-2-8-ui
+There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/2894#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
+ deb-2-8-ui -->
+<!-- deb-2-9-ui
+There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/2896#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
+ deb-2-9-ui -->
+<!-- deb-3-0-ui
+There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/4023#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
+ deb-3-0-ui -->
+<!-- snap-2-7-ui
+There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/2886#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
+ snap-2-7-ui -->
+<!-- snap-2-8-ui
+There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/2888#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
+ snap-2-8-ui -->
+<!-- snap-2-9-ui
+There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/2890#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
+ snap-2-9-ui -->
+There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/4021#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
 
 1. Go to the machine list:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
 
-2. Select the "Filters" dropdown and open the section titled "Storage tags:"
+2. Select the "Filters" drop-down and open the section titled "Storage tags:"
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/c/c03216c0c2b6097f73b8161922b602aac4fdc3d6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c03216c0c2b6097f73b8161922b602aac4fdc3d6.png"></a>
 
@@ -363,15 +552,78 @@ To view all tags associated with block devices on a given machine:
 <a href="#heading--work-with-partition-tags"><h3 id="heading--work-with-partition-tags">Work with partition tags</h3></a>
 
 This subsection will show you how to:
- 
-* [Create and assign partition tags (CLI only)](insert link)(#heading--create-and-assign-partition-tags)
-* [Remove and delete partition tags (CLI only)](insert link)(#heading--remove-and-delete-partition-tags)
+
+<!-- deb-2-7-ui
+* [Assign partition tags (CLI only)](/t/-/2892#heading--assign-tags-to-a-partition)
+* [Remove partition tags (CLI only)](/t/-/2892#heading--remove-tags-from-a-partition)
+* [List partition tags](#heading--list-partition-tags)
+* [View partition tags](#heading--view-partition-tags)
+ deb-2-7-ui -->
+<!-- deb-2-8-ui
+* [Assign partition tags (CLI only)](/t/-/2894#heading--assign-tags-to-a-partition)
+* [Remove partition tags (CLI only)](/t/-/2894#heading--remove-tags-from-a-partition)
+* [List partition tags](#heading--list-partition-tags)
+* [View partition tags](#heading--view-partition-tags)
+ deb-2-8-ui -->
+<!-- deb-2-9-ui
+* [Assign partition tags (CLI only)](/t/-/2896#heading--assign-tags-to-a-partition)
+* [Remove partition tags (CLI only)](/t/-/2896#heading--remove-tags-from-a-partition)
+* [List partition tags](#heading--list-partition-tags)
+* [View partition tags](#heading--view-partition-tags)
+ deb-2-9-ui -->
+<!-- deb-3-0-ui
+* [Assign partition tags (CLI only)](/t/-/4023#heading--assign-tags-to-a-partition)
+* [Remove partition tags (CLI only)](/t/-/4023#heading--remove-tags-from-a-partition)
+* [List partition tags](#heading--list-partition-tags)
+* [View partition tags](#heading--view-partition-tags)
+ deb-3-0-ui -->
+<!-- snap-2-7-ui
+* [Assign partition tags (CLI only)](/t/-/2886#heading--assign-tags-to-a-partition)
+* [Remove partition tags (CLI only)](/t/-/2886#heading--remove-tags-from-a-partition)
+* [List partition tags](#heading--list-partition-tags)
+* [View partition tags](#heading--view-partition-tags)
+ snap-2-7-ui -->
+<!-- snap-2-8-ui
+* [Assign partition tags (CLI only)](/t/-/2888#heading--assign-tags-to-a-partition)
+* [Remove partition tags (CLI only)](/t/-/2888#heading--remove-tags-from-a-partition)
+* [List partition tags](#heading--list-partition-tags)
+* [View partition tags](#heading--view-partition-tags)
+ snap-2-8-ui -->
+<!-- snap-2-9-ui
+* [Assign partition tags (CLI only)](/t/-/2890#heading--assign-tags-to-a-partition)
+* [Remove partition tags (CLI only)](/t/-/2890#heading--remove-tags-from-a-partition)
+* [List partition tags](#heading--list-partition-tags)
+* [View partition tags](#heading--view-partition-tags)
+ snap-2-9-ui -->
+* [Assign partition tags (CLI only)](/t/-/4021#heading--assign-tags-to-a-partition)
+* [Remove partition tags (CLI only)](/t/-/4021#heading--remove-tags-from-a-partition)
 * [List partition tags](#heading--list-partition-tags)
 * [View partition tags](#heading--view-partition-tags)
 
 <a href="#heading--list-partition-tags"><h4 id="heading--list-partition-tags">List partition tags</h4></a>
 
-There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](insert link) for a more comprehensive procedure.
+<!-- deb-2-7-ui
+There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/2892#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
+ deb-2-7-ui -->
+<!-- deb-2-8-ui
+There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/2894#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
+ deb-2-8-ui -->
+<!-- deb-2-9-ui
+There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/2896#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
+ deb-2-9-ui -->
+<!-- deb-3-0-ui
+There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/4023#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
+ deb-3-0-ui -->
+<!-- snap-2-7-ui
+There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/2886#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
+ snap-2-7-ui -->
+<!-- snap-2-8-ui
+There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/2888#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
+ snap-2-8-ui -->
+<!-- snap-2-9-ui
+There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/2890#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
+ snap-2-9-ui -->
+There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/4021#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
 
 You can list all storage links (block device and partition) by using the filter tool on the machine list.  Here's how:
 
@@ -379,7 +631,7 @@ You can list all storage links (block device and partition) by using the filter 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
 
-2. Select the "Filters" dropdown and open the section titled "Storage tags:"
+2. Select the "Filters" drop-down and open the section titled "Storage tags:"
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/c/c03216c0c2b6097f73b8161922b602aac4fdc3d6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c03216c0c2b6097f73b8161922b602aac4fdc3d6.png"></a>
 
@@ -404,10 +656,52 @@ To view all tags associated with partitions on a given machine:
 <a href="#heading--work-with-network-tags"><h3 id="heading--work-with-network-tags">Work with network tags</h3></a>
 
 This subsection will show you how to:
- 
+
+<!-- deb-2-7-ui
 * [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
 * [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
-* [List network interface tags (CLI only)](insert link)(#heading--list-network-interface-tags)
+* [List network interface tags (CLI only)](/t/-/2892#heading--list-tags-for-all-network-interfaces)
+* [View network interface tags](#heading--view-network-interface-tags)
+ deb-2-7-ui -->
+<!-- deb-2-8-ui
+* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
+* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
+* [List network interface tags (CLI only)](/t/-/2894#heading--list-tags-for-all-network-interfaces)
+* [View network interface tags](#heading--view-network-interface-tags)
+ deb-2-8-ui -->
+<!-- deb-2-9-ui
+* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
+* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
+* [List network interface tags (CLI only)](/t/-/2896#heading--list-tags-for-all-network-interfaces)
+* [View network interface tags](#heading--view-network-interface-tags)
+ deb-2-9-ui -->
+<!-- deb-3-0-ui
+* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
+* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
+* [List network interface tags (CLI only)](/t/-/4023#heading--list-tags-for-all-network-interfaces)
+* [View network interface tags](#heading--view-network-interface-tags)
+ deb-3-0-ui -->
+<!-- snap-2-7-ui
+* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
+* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
+* [List network interface tags (CLI only)](/t/-/2886#heading--list-tags-for-all-network-interfaces)
+* [View network interface tags](#heading--view-network-interface-tags)
+ snap-2-7-ui -->
+<!-- snap-2-8-ui
+* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
+* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
+* [List network interface tags (CLI only)](/t/-/2888#heading--list-tags-for-all-network-interfaces)
+* [View network interface tags](#heading--view-network-interface-tags)
+ snap-2-8-ui -->
+<!-- snap-2-9-ui
+* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
+* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
+* [List network interface tags (CLI only)](/t/-/2890#heading--list-tags-for-all-network-interfaces)
+* [View network interface tags](#heading--view-network-interface-tags)
+ snap-2-9-ui -->
+* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
+* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
+* [List network interface tags (CLI only)](/t/-/4021#heading--list-tags-for-all-network-interfaces)
 * [View network interface tags](#heading--view-network-interface-tags)
 
 <a href="#heading--create-and-assign-network-interface-tags"><h4 id="heading--create-and-assign-network-interface-tags">Create and assign network interface tags</h4></a>
@@ -428,15 +722,15 @@ To assign a tag to a network interface, use the following procedure:
 
 >The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
 
-4. Select the dropdown under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
+4. Select the drop-down under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png"></a>
 
-5. Edit the "Tags" field as desired, as described in the [general tagging procedure](insert link) above.
+5. Edit the "Tags" field as desired, as described in the [general tagging procedure](#heading--create-and-assign-tags) above.
 
 6. Be sure to select the "Tag machine" button to apply your changes to the interface for that machine.
 
-Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next -- so autocomplete menus will be sparse or non-existent most of the time for these tag types.
+Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next -- so auto complete menus will be sparse or non-existent most of the time for these tag types.
 
 <a href="#heading--remove-and-delete-network-interface-tags"><h4 id="heading--remove-and-delete-network-interface-tags">Remove and delete network interface tags</h4></a>
 
@@ -456,15 +750,15 @@ To remove a tag from a network interface, use the following procedure:
 
 >The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
 
-4. Select the dropdown under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
+4. Select the drop-down under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png"></a>
 
-5. Edit the "Tags" field as desired, as described in the [general tagging procedure](insert link) above.
+5. Edit the "Tags" field as desired, as described in the [general tagging procedure](#heading--create-and-assign-tags) above.
 
 6. Be sure to select the "Tag machine" button to apply your changes to the interface for that machine.
 
-Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next -- so autocomplete menus will be sparse or non-existent most of the time for these tag types.
+Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next -- so auto complete menus will be sparse or non-existent most of the time for these tag types.
 
 <a href="#heading--view-network-interface-tags"><h4 id="heading--view-network-interface-tags">View network interface tags</h4></a>
 
@@ -484,7 +778,7 @@ To view the tags associated with a network interface, use the following procedur
 
 >The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
 
-4. Select the dropdown under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
+4. Select the drop-down under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png"></a>
 
@@ -505,7 +799,7 @@ This subsection will show you how to:
 
 To add a tag to a device, follow this procedure:
 
-1. Select the "Devices" tab; it may be in a dropdown labeled "Hardware," if your browser window is not very large:
+1. Select the "Devices" tab; it may be in a drop-down labelled "Hardware," if your browser window is not very large:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/2/22b17d4827f82c103e958205011ca13934fe2f3f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/22b17d4827f82c103e958205011ca13934fe2f3f.png"></a>
 
@@ -529,7 +823,7 @@ To add a tag to a device, follow this procedure:
 
 To remove a tag from a device, follow this procedure:
 
-1. Select the "Devices" tab; it may be in a dropdown labeled "Hardware," if your browser window is not very large:
+1. Select the "Devices" tab; it may be in a drop-down labelled "Hardware," if your browser window is not very large:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/2/22b17d4827f82c103e958205011ca13934fe2f3f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/22b17d4827f82c103e958205011ca13934fe2f3f.png"></a>
 
@@ -555,7 +849,7 @@ To remove a tag from a device, follow this procedure:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/8748ed53d5a24425e808698c902a22536a08f994.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8748ed53d5a24425e808698c902a22536a08f994.png"></a>
 
-2. Select the "Filters" dropdown and open the section titled "Tags:"
+2. Select the "Filters" drop-down and open the section titled "Tags:"
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/957ff8874fb8336335ec5073c14068f36a7aeeb6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/957ff8874fb8336335ec5073c14068f36a7aeeb6.png"></a>
 
@@ -573,11 +867,9 @@ Here you will see a list of all device tags currently assigned to devices in thi
 
 The "Tags" card on that screen with show you all the tags currently associated with this device.
 
-
 <a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a>
 
 This section will explain how to:
-<!-- snap-3-0-ui deb-3-0-ui 
 
 * [Work with static annotations](#heading--work-with-static-annotations)
 * [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
@@ -585,7 +877,6 @@ This section will explain how to:
 <a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a>
 
 This subsection will show you how to:
- snap-3-0-ui deb-3-0-ui -->
  
 * [Create and assign static annotations](#heading--create-and-assign-static-annotations)
 * [Delete static annotations](#heading--delete-static-annotations)
@@ -644,24 +935,41 @@ To view static annotations, you can follow this procedure:
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png"></a>
 
 
-<!-- snap-3-0-ui deb-3-0-ui
 <a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</h3></a>
  
 This subsection will show you how to:
 
-* [Create dynamic (workload) annotations (CLI only)](insert link)(#heading--create-dynamic-workload-annotations)
-* [Delete dynamic (workload) annotations (CLI only)](insert link)(#heading--delete-dynamic-workload-annotations)
+<!-- deb-3-0-ui 
+* [Create dynamic (workload) annotations (CLI only)](/t/-/4023#heading--set-dynamic-annotations-for-a-machine)
+* [Delete dynamic (workload) annotations (CLI only)](/t/-/4023#heading--clear-and-change-dynamic-annotations-for-a-machine)
+* [View dynamic (workload) annotations for one machine](#heading--view-dynamic-workload-annotations-for-one-machine)
 * [Filter on dynamic (workload) annotations](#heading--filter-on-dynamic-workload-annotations)
+ deb-3-0-ui -->
+* [Create dynamic (workload) annotations (CLI only)](/t/-/4021#heading--set-dynamic-annotations-for-a-machine)
+* [Delete dynamic (workload) annotations (CLI only)](/t/-/4021#heading--clear-and-change-dynamic-annotations-for-a-machine)
+* [View dynamic (workload) annotations for one machine](#heading--view-dynamic-workload-annotations-for-one-machine)
+* [Filter on dynamic (workload) annotations](#heading--filter-on-dynamic-workload-annotations)
+
+<a href="#heading--view-dynamic-workload-annotations-for-one-machine"><h4 id="heading--view-dynamic-workload-annotations-for-one-machine">View dynamic (workload) annotations for one machine</h4></a>
+
+To view the dynamic (workload) annotations for one machine, do the following:
+
+1. Go to the machine list and select the machine of interest by clicking on its hyperlinked name.
+
+2. In the machine summary that comes up, look for the "Workload Annotations" card, in the lower, right-hand corner:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/e/e7def7a50f9c854f7aae0efc34897338c46c32c0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e7def7a50f9c854f7aae0efc34897338c46c32c0.png"></a>
 
 <a href="#heading--filter-on-dynamic-workload-annotations"><h4 id="heading--filter-on-dynamic-workload-annotations">Filter on dynamic (workload) annotations</h4></a>
 
-1. Go to the machine list and select the "Filter" dropdown; open the "Workload" segment:
+To filter machines by dynamic (workload) annotations, use the following procedure:
+
+1. Go to the machine list and select the "Filter" drop-down; open the "Workload" segment:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/946fb41e9cefb10a0b59787ce22b70a91b248d01.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/946fb41e9cefb10a0b59787ce22b70a91b248d01.jpeg"></a>
 
 2. Select one or more values from this list to filter the machine list by these workload annotations.
 
-snap-3-0-ui deb-3-0-ui -->
 
 <!-- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
 
@@ -669,7 +977,7 @@ snap-3-0-ui deb-3-0-ui -->
 
 This section is devoted to procedures for working with tags.  We begin with some general operations that apply to all tags types, such as naming conventions and basic mechanics.  We then walk through the various tag types, providing procedures that will help you create, assign, remove, delete, list, view, and filter tags, covering the nuances of each type.
 
-Speciifically, this section will show you how to:
+Specifically, this section will show you how to:
 
 * [Work with tags, independent of application](#heading--work-with-tags-independent-of-application)
 * [Work with machine tags](#heading--work-with-machine-tags)
@@ -1744,7 +2052,7 @@ The `path` component is printed to help you confirm that you are choosing the ri
 You can only assign tags to a partition that is available.  To assign an existing tag to a partition, you would type a command formulated like this:
 
 ```bash
-maas $PROFILE block-device add-tag $SYSTEM_ID $BLOCK_DEVICE_ID $PARTITION_ID tag=$TAG_NAME
+maas $PROFILE partition add-tag $SYSTEM_ID $BLOCK_DEVICE_ID $PARTITION_ID tag=$TAG_NAME
 ```
 
 If you're not sure about the ID of your partition, you can [look it up](#heading--discover-the-id-of-your-partition).
@@ -1762,6 +2070,32 @@ Note that if you try to add a tag to a partition that is not available, that is,
 ```nohighlight
 Not Found
 ```
+
+<a href="#heading--remove-tags-from-a-partition"><h4 id="heading--remove-tags-from-a-partition">Remove tags from a partition</h4></a>
+
+You can only remove tags from a partition that is available.  To remove a existing tag from a partition, you would type a command formulated like this:
+
+```bash
+maas $PROFILE partition remove-tag $SYSTEM_ID $BLOCK_DEVICE_ID $PARTITION_ID tag=$TAG_NAME
+```
+
+If you're not sure about the ID of your partition, you can [look it up](#heading--discover-the-id-of-your-partition).
+
+For example:
+
+```bash
+maas admin partition remove-tag xn8taa 8 67 tag=farquar
+```
+
+If this command succeeds, it will display `Success`, followed by a JSON sequence describing the new state of the partition.
+
+Note that if you try to remove a tag from a partition that is not available, that is, to a partition that is in use, you will get a result like this:
+
+```nohighlight
+Not Found
+```
+
+On the other hand, if you try to remove a tag that is not assigned to the partition you've chosen, MAAS will simply return `Success`, followed by a JSON sequence describing the current state of the partition.
 
 <a href="#heading--list-tags-for-all-partitions"><h4 id="heading--list-tags-for-all-partitions">List tags for all partitions</h4></a>
 
@@ -2200,7 +2534,7 @@ You can also check your work by [listing tags for all devices](#heading--list-ta
 
 <a href="#heading--remove-tags-from-a-node"><h4 id="heading--remove-tags-from-a-node">Remove tags from a node</h4></a>
 
-To remove tags from a node, regarless of type, you can use a command like this one:
+To remove tags from a node, regardless of type, you can use a command like this one:
 
 ```
 maas $PROFILE tag update-nodes $TAG_NAME remove=$SYSTEM_ID
@@ -2321,7 +2655,7 @@ boss-satyr  xn8taa     pod-console-logging  androko
 This section will show you how to:
 
 * [Work with static annotations](#heading--work-with-static-annotations)
-* [Work with dynamic (workload) annotations](#heading--work-with-dynamic-(workload)-annotations)
+* [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
 
 <a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a>
 
@@ -2482,17 +2816,17 @@ hostname     system_id  description
 driven-teal  tgaat6     tango-golf
 ```
 
-<a href="#heading--work-with-dynamic-(workload)-annotations"><h3 id="heading--work-with-dynamic-(workload)-annotations">Work with dynamic (workload) annotations</h3></a>
+<a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</h3></a>
 
 This section will show you how to:
 
-* [Identify machines that can receive dynamic annotations](#heading--identify-machines-that-can-receive dynamic annotations)
+* [Identify machines that can receive dynamic annotations](#heading--identify-machines-that-can-receive-dynamic-annotations)
 * [Set dynamic annotations for a machine](#heading--set-dynamic-annotations-for-a-machine)
 * [Clear and change dynamic annotations for a machine](#heading--clear-and-change-dynamic-annotations-for-a-machine)
 * [List dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines)
-* [List dynamic allotations for one machine](#heading--list-dynamic-annotations-for-one-machine)
+* [List dynamic allocations for one machine](#heading--list-dynamic-annotations-for-one-machine)
 
-<a href="#heading--identify-machines-that-can-receive dynamic annotations"><h4 id="heading--identify-machines-that-can-receive dynamic annotations">Identify machines that can receive dynamic annotations</h4></a>
+<a href="#heading--identify-machines-that-can-receive-dynamic-annotations"><h4 id="heading--identify-machines-that-can-receive-dynamic-annotations">Identify machines that can receive dynamic annotations</h4></a>
 
 You can only set dynamic annotations for machines that are in the "Allocated" or "Deployed" state.  To identify which of your machines are in these states, you can execute the following command:
 
@@ -2551,17 +2885,96 @@ still-imp      h6ra6d     Allocated
 
 <a href="#heading--set-dynamic-annotations-for-a-machine"><h4 id="heading--set-dynamic-annotations-for-a-machine">Set dynamic annotations for a machine</h4></a>
 
-You can set any `key=value` pair that you wish for any machine, although it's probably more useful if you standardize your key names.  To set a dynamic annotation for a machine, you can enter a command like this:
+Dynamic annotations, otherwise known as "workload annotations" or "owner data," can be used to keep track of the runtime status of machines that are acquired or deployed.  These annotations are set using `key=value` pairs.  You can set any `key=value` pair that you wish for any machine, although it's probably more useful if you standardise your key names.
 
+To set a dynamic annotation for a machine, you can enter a command like this:
+
+```bash
+maas $PROFILE machine set-owner-data $SYSTEM_ID $KEY=$VALUE
+```
+
+For example:
+
+```bash
+maas admin machine set-owner-data tgaat6 owner=gsmith@zorko.com
+```
+
+This command will return a JSON string representative of the machine's new configuration, including the dynamic annotations you've added. You can check your work by [listing the dynamic annotations for the one machine](#heading--list-dynamic-annotations-for-one-machine) you just edited, or by [listing dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines).
 
 <a href="#heading--clear-and-change-dynamic-annotations-for-a-machine"><h4 id="heading--clear-and-change-dynamic-annotations-for-a-machine">Clear and change dynamic annotations for a machine</h4></a>
 
+You can change dynamic annotations for a machine simply by executing a new `set-owner-data` command:
+
+```bash
+maas $PROFILE machine set-owner-data $SYSTEM_ID $KEY=$NEW_VALUE
+```
+
+You can clear a dynamic annotation by entering the empty string (`""`) as the $VALUE:
+
+```bash
+maas $PROFILE machine set-owner-data $SYSTEM_ID $KEY=""
+```
+
+These commands will return a JSON string representative of the machine's new configuration, including the dynamic annotations you've changed or cleared. You can check your work by [listing the dynamic annotations for the one machine](#heading--list-dynamic-annotations-for-one-machine) you just edited, or by [listing dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines).
+
 <a href="#heading--list-dynamic-annotations-for-all-machines"><h4 id="heading--list-dynamic-annotations-for-all-machines">List dynamic annotations for all machines</h4></a>
 
-<a href="#heading--list-dynamic-annotations-for-one-machine"><h4 id="heading--list-dynamic-annotations-for-one-machine">List dynamic allotations for one machine</h4></a>
+You can list the current dynamic annotations for all machines with a command like this:
 
+```bash
+maas $PROFILE machines read \
+| jq -r '(["hostname","system_id","owner_data"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.owner_data[]])
+|@tsv' | column -t
+```
 
+For example:
 
-<a href="#heading--set-owner-data"><h4 id="heading--set-owner-data">set owner data</h4></a>
+```bash
+maas admin machines read \
+| jq -r '(["hostname","system_id","owner_data"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.owner_data[]])
+|@tsv' | column -t
+```
 
+This command output might look something like this:
+
+```nohighlight
+hostname       system_id  owner_data
+--------       ---------  ----------
+divine-stork   8b3ypp
+casual-prawn   4end6r
+driven-teal    tgaat6     farquar     foobar
+immune-beetle  43xand
+good-osprey    napfxk
+smart-hen      c4rwq7
+```
+
+<a href="#heading--list-dynamic-annotations-for-one-machine"><h4 id="heading--list-dynamic-annotations-for-one-machine">List dynamic allocations for one machine</h4></a>
+
+You can list the dynamic annotations for one machine by entering a command of the form:
+
+```bash
+maas $PROFILE machine read $SYSTEM_ID \
+| jq -r '(["hostname","system_id","owner_data"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.owner_data[]])
+|@tsv' | column -t
+```
+
+For example:
+
+```bash
+maas admin machine read tgaat6 \
+| jq -r '(["hostname","system_id","owner_data"]
+|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.owner_data[]])
+|@tsv' | column -t
+```
+
+This will produce output similar to the following:
+
+```nohighlight
+hostname     system_id  owner_data
+--------     ---------  ----------
+driven-teal  tgaat6     farquar     foobar
+```
  snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
