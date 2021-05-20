@@ -547,6 +547,7 @@
 2. [How do VM host nodes work?](introduction-to-vm-hosting.html)
 3. [How do I add virtual machines?](adding-a-vm-host.html)
 4. [How do I add a machine manually?](#heading--add-a-node-manually)
+5. [How do I disable individual boot methods?](#heading--disable-individual-boot-methods)
  snap-3-0-cli -->
 
 <ol>
@@ -555,6 +556,7 @@
 <li><a href="adding-a-vm-host.html">How do I add virtual machines?</a></li>
 <li><a href="#heading--add-a-node-manually">How do I add a machine manually?</a></li>
 <li><a href="#heading--add-nodes-via-a-chassis">How do I add a machine via a chassis?</a></li>
+<li><a href="#heading--disable-individual-boot-methods">How do I disable individual boot methods?</a></li>
 </ol>
 <p>MAAS typically adds a machine via a combination of DHCP, TFTP, and PXE. By now, you should have enabled MAAS to automatically add devices and machines to your environment. This unattended method of adding machines is called enlistment.</p>
 <p><strong>NOTE:</strong> 
@@ -899,6 +901,22 @@ deb-2-7-ui snap-2-7-ui -->
 <p>The required fields will change based on the type of chassis you choose.</p>
 <p><strong>NOTE:</strong> 
 As with the manual method, the underlying machines will require netbooting.</p>
+<p><a href="#heading--disable-individual-boot-methods"><h2 id="heading--disable-individual-boot-methods">How do I disable individual boot methods?</h2></a></p>
+<p>In MAAS 3.0, it is possible to diable individual boot methods.  This must be done via the CLI. When a boot method is disabled MAAS will configure MAAS controlled <code>isc-dhcpd</code> to not respond to the associated <a href="https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture">boot architecture code</a>. External DHCP servers must be configured manually.</p>
+<p>To allow different boot methods to be in different states on separate physical networks using the same VLAN ID configuration is done on the subnet in the UI or API. When using the API boot methods to be disabled may be specified using the MAAS internal name or <a href="https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture">boot architecture code</a> in octet or hex form. For example the following disabled i386/AMD64 PXE, AMD64 UEFI TFTP, and AMD64 UEFI HTTP</p>
+<pre><code class="bash">maas $PROFILE subnet \
+update $SUBNET \
+disabled_boot_architectures=&quot;0x00 uefi_amd64_tftp 00:10&quot;
+</code></pre>
+
+<p>Specifically, for MAAS 3.0, the following changes have been implemented:</p>
+<ul>
+<li>UEFI AMD64 HTTP(00:10) has been reenabled.</li>
+<li>UEFI ARM64 HTTP(00:13) has been enabled.</li>
+<li>UEFI ARM64 TFTP(00:0B) and UEFI ARM64 HTTP(00:13) will now provide a shim and GRUB signed with the Microsoft boot loader keys.</li>
+<li>grub.cfg for all UEFI platforms has been updated to replace the deprecated <code>linuxefi</code> and <code>initrdefi</code> commands with the standard <code>linux</code> and <code>initrd</code> commands.</li>
+<li>GRUB debug may now be enabled by enabling <a href="running-installed-maas-in-debug-logging-mode.html">rackd debug logging</a>.</li>
+</ul>
     </div>
   </body>
 </html>
