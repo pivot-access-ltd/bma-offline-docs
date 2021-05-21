@@ -53,7 +53,7 @@ MAAS already provides the latest available CentOS 6, CentOS 7, and CentOS 8 for 
 
 Access to the Internet is required, since you will need to start with one of these three sites:
 
-1. http://mirror.centos.org  - OS, updates, and extra repositories
+1. https://mirror.centos.org  - OS, updates, and extra repositories
 2. https://download.fedoraproject.org  - EPEL
 3. https://copr-be.cloud.fedoraproject.org - Canonical maintained cloud-init repository
 
