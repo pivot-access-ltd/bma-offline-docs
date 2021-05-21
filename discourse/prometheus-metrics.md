@@ -80,7 +80,7 @@ In case of a multi-host deploy, adding a single IP for any of the MAAS hosts run
 
 <a href="#heading--deploying-prometheus-and-grafana"><h2 id="heading--deploying-prometheus-and-grafana">Deploying Prometheus and Grafana</h2></a>
 
-[Grafana](https://grafana.com/) and Prometheus can be easily deployed using [Juju](https://jujucharms.com/).
+[Grafana](https://grafana.com/) and Prometheus can be easily deployed using Juju.
 
 The [MAAS performance repo](https://git.launchpad.net/~maas-committers/maas/+git/maas-performance) repository provides a sample `deploy-stack` script that will deploy and configure the stack on LXD containers.
 

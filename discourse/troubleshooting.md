@@ -123,12 +123,12 @@ First, download the cloud image that corresponds to the architecture of your nod
 
 <a href="https://assets.ubuntu.com/v1/130aa580-troulbeshoot-faq__2.3_images.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/130aa580-troulbeshoot-faq__2.3_images.png"></a>
 
-Images can be downloaded from [https://cloud-images.ubuntu.com/stable/server](https://cloud-images.ubuntu.com/stable/server/).
+Images can be downloaded from [https://cloud-images.ubuntu.com/](https://cloud-images.ubuntu.com/).
 
 For example:
 
 ``` bash
-wget https://cloud-images.ubuntu.com/stable/server/xenial/current/xenial-server-cloudimg-amd64-root.tar.gz
+wget https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-root.tar.gz
 ```
 
 With the image downloaded, extract its contents so that the *shadow* password file can be edited:

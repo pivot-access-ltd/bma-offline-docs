@@ -743,7 +743,7 @@ MAAS can be installed in either of two configurations:  test or production.  The
 3. [What are MAAS initialisation modes?](#heading--maas-init-modes)
 4. [How do I initialise MAAS for a test or proof-of-concept configuration?](#heading--init-poc)
 5. [How do I initialise MAAS for a production configuration?](#heading--init-prod)
-6. [How do I migrate an existing snap install?](/t/tips-tricks-and-traps/1506#heading--migrate-maas)
+6. [How do I migrate an existing snap install?](/t/tips-tricks-and-traps/1506#heading--migrating-maas)
 7. [What if I want to manually export the MAAS database to an existing PostgreSQL server?](/t/tips-tricks-and-traps/1506#heading--manual-export)
 8. [How can I check the service status of my MAAS configuration?](#heading--service-status)
 9. [How do I re-initialise MAAS, if I want to?](#heading--reinitialising-maas)

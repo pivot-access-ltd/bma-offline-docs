@@ -192,35 +192,35 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui
 <a href="#heading--api-key"><h3 id="heading--api-key">API key</h3></a>
 
 <!-- deb-2-7-ui
-The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/2821).  Other services connecting to MAAS such as [Juju](https://jujucharms.com/docs/stable/clouds-maas) will also need this key.
+The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/2821).  Other services connecting to MAAS such as Juju will also need this key.
  deb-2-7-ui -->
 
 <!-- deb-2-8-ui
-The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/2823).  Other services connecting to MAAS such as [Juju](https://jujucharms.com/docs/stable/clouds-maas) will also need this key.
+The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/2823).  Other services connecting to MAAS such as Juju will also need this key.
  deb-2-8-ui -->
 
 <!-- deb-2-9-ui
-The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/2825).  Other services connecting to MAAS such as [Juju](https://jujucharms.com/docs/stable/clouds-maas) will also need this key.
+The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/2825).  Other services connecting to MAAS such as Juju will also need this key.
  deb-2-9-ui -->
 
 <!-- deb-3-0-ui
-The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/3987).  Other services connecting to MAAS such as [Juju](https://jujucharms.com/docs/stable/clouds-maas) will also need this key.
+The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/3987).  Other services connecting to MAAS such as Juju will also need this key.
  deb-3-0-ui -->
  
 <!-- snap-2-7-ui
-The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/2815).  Other services connecting to MAAS such as [Juju](https://jujucharms.com/docs/stable/clouds-maas) will also need this key.
+The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/2815).  Other services connecting to MAAS such as Juju will also need this key.
  snap-2-7-ui -->
 
 <!-- snap-2-8-ui
-The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/2817).  Other services connecting to MAAS such as [Juju](https://jujucharms.com/docs/stable/clouds-maas) will also need this key.
+The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/2817).  Other services connecting to MAAS such as Juju will also need this key.
  snap-2-8-ui -->
 
 <!-- snap-2-9-ui
-The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/2819).  Other services connecting to MAAS such as [Juju](https://jujucharms.com/docs/stable/clouds-maas) will also need this key.
+The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/2819).  Other services connecting to MAAS such as Juju will also need this key.
  snap-2-9-ui -->
 
 <!-- snap-3-0-ui
-The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/3986).  Other services connecting to MAAS such as [Juju](https://jujucharms.com/docs/stable/clouds-maas) will also need this key.
+The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/3986).  Other services connecting to MAAS such as Juju will also need this key.
  snap-3-0-ui -->
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 

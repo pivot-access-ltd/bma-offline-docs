@@ -457,7 +457,7 @@ There are (at least) three ways you can contribute to MAAS:
   - [Upgrade from 2.3 to 2.4](/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777)
   - [Upgrade from 1.9 to 2.x](/t/upgrade-from-1-9-to-2-x/778)
 
-### [Release notes](/t/-/3336)
+### [Release notes](/t/whats-new-in-maas/4291)
 
 ### [Help improve these docs](/t/writing-guide-snap-2-9-ui/3263)
 
@@ -953,18 +953,18 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/2883|/docs/deb/2.8/ui/maas-requirements|
 |https://discourse.maas.io/t/-/2884|/docs/deb/2.9/cli/maas-requirements|
 |https://discourse.maas.io/t/-/2885|/docs/deb/2.9/ui/maas-requirements|
-|https://discourse.maas.io/t/-/2886|/docs/snap/2.7/cli/maas-tags|
-|https://discourse.maas.io/t/-/2887|/docs/snap/2.7/ui/maas-tags|
-|https://discourse.maas.io/t/-/2888|/docs/snap/2.8/cli/maas-tags|
-|https://discourse.maas.io/t/-/2889|/docs/snap/2.8/ui/maas-tags|
-|https://discourse.maas.io/t/-/2890|/docs/snap/2.9/cli/maas-tags|
-|https://discourse.maas.io/t/-/2891|/docs/snap/2.9/ui/maas-tags|
-|https://discourse.maas.io/t/-/2892|/docs/deb/2.7/cli/maas-tags|
-|https://discourse.maas.io/t/-/2893|/docs/deb/2.7/ui/maas-tags|
-|https://discourse.maas.io/t/-/2894|/docs/deb/2.8/cli/maas-tags|
-|https://discourse.maas.io/t/-/2895|/docs/deb/2.8/ui/maas-tags|
-|https://discourse.maas.io/t/-/2896|/docs/deb/2.9/cli/maas-tags|
-|https://discourse.maas.io/t/-/2897|/docs/deb/2.9/ui/maas-tags|
+|https://discourse.maas.io/t/-/2886|/docs/snap/2.7/cli/tags-and-annotations|
+|https://discourse.maas.io/t/-/2887|/docs/snap/2.7/ui/tags-and-annotations|
+|https://discourse.maas.io/t/-/2888|/docs/snap/2.8/cli/tags-and-annotations|
+|https://discourse.maas.io/t/-/2889|/docs/snap/2.8/ui/tags-and-annotations|
+|https://discourse.maas.io/t/-/2890|/docs/snap/2.9/cli/tags-and-annotations|
+|https://discourse.maas.io/t/-/2891|/docs/snap/2.9/ui/tags-and-annotations|
+|https://discourse.maas.io/t/-/2892|/docs/deb/2.7/cli/tags-and-annotations|
+|https://discourse.maas.io/t/-/2893|/docs/deb/2.7/ui/tags-and-annotations|
+|https://discourse.maas.io/t/-/2894|/docs/deb/2.8/cli/tags-and-annotations|
+|https://discourse.maas.io/t/-/2895|/docs/deb/2.8/ui/tags-and-annotations|
+|https://discourse.maas.io/t/-/2896|/docs/deb/2.9/cli/tags-and-annotations|
+|https://discourse.maas.io/t/-/2897|/docs/deb/2.9/ui/tags-and-annotations|
 |https://discourse.maas.io/t/-/2898|/docs/snap/2.7/cli/managing-dhcp|
 |https://discourse.maas.io/t/-/2899|/docs/snap/2.7/ui/managing-dhcp|
 |https://discourse.maas.io/t/-/2900|/docs/snap/2.8/cli/managing-dhcp|
@@ -1507,10 +1507,10 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/4014|/docs/snap/3.0/ui/maas-requirements|
 |https://discourse.maas.io/t/-/4015|/docs/deb/3.0/cli/maas-requirements|
 |https://discourse.maas.io/t/-/4016|/docs/deb/3.0/ui/maas-requirements|
-|https://discourse.maas.io/t/-/4021|/docs/snap/3.0/cli/maas-tags|
-|https://discourse.maas.io/t/-/4022|/docs/snap/3.0/ui/maas-tags|
-|https://discourse.maas.io/t/-/4023|/docs/deb/3.0/cli/maas-tags|
-|https://discourse.maas.io/t/-/4024|/docs/deb/3.0/ui/maas-tags|
+|https://discourse.maas.io/t/-/4021|/docs/snap/3.0/cli/tags-and-annotations|
+|https://discourse.maas.io/t/-/4022|/docs/snap/3.0/ui/tags-and-annotations|
+|https://discourse.maas.io/t/-/4023|/docs/deb/3.0/cli/tags-and-annotations|
+|https://discourse.maas.io/t/-/4024|/docs/deb/3.0/ui/tags-and-annotations|
 |https://discourse.maas.io/t/-/4025|/docs/snap/3.0/cli/machine-logs|
 |https://discourse.maas.io/t/-/4026|/docs/snap/3.0/ui/machine-logs|
 |https://discourse.maas.io/t/-/4027|/docs/deb/3.0/cli/machine-logs|
@@ -1683,6 +1683,8 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/745/|/docs/language-details-contributing-to-maas-docs|
 |https://discourse.maas.io/t/-/746/|/docs/working-with-git-and-github|
 |https://discourse.maas.io/t/-/756/|/docs/install-from-iso|
+|https://discourse.maas.io/t/-/760/|/docs/snap/3.0/ui/ip-ranges|
+|https://discourse.maas.io/t/-/766/|/docs/snap/3.0/ui/subnet-management|
 |https://discourse.maas.io/t/-/779/|/docs/upgrading-maas|
 |https://discourse.maas.io/t/-/782/|/docs/web-ui|
 |https://discourse.maas.io/t/-/785#heading--network-tutorial|/docs/network-tutorial|
@@ -1717,6 +1719,22 @@ There are (at least) three ways you can contribute to MAAS:
 |/docs/non-snap-maas-installs|/docs/snap/2.9/ui/installation|
 |/docs/install-with-lxd|/docs/snap/2.9/ui/vm-host-networking#heading--lxd-setup|
 |/docs/cli-tag-management|/docs/snap/2.9/cli/maas-tags|
+|/docs/snap/3.0/cli/maas-tags|/docs/snap/3.0/cli/tags-and-annotations|
+|/docs/snap/3.0/ui/maas-tags|/docs/snap/3.0/ui/tags-and-annotations|
+|/docs/deb/3.0/cli/maas-tags|/docs/deb/3.0/cli/tags-and-annotations|
+|/docs/deb/3.0/ui/maas-tags|/docs/deb/3.0/ui/tags-and-annotations|
+|/docs/snap/2.7/cli/maas-tags|/docs/snap/2.7/cli/tags-and-annotations|
+|/docs/snap/2.7/ui/maas-tags|/docs/snap/2.7/ui/tags-and-annotations|
+|/docs/snap/2.8/cli/maas-tags|/docs/snap/2.8/cli/tags-and-annotations|
+|/docs/snap/2.8/ui/maas-tags|/docs/snap/2.8/ui/tags-and-annotations|
+|/docs/snap/2.9/cli/maas-tags|/docs/snap/2.9/cli/tags-and-annotations|
+|/docs/snap/2.9/ui/maas-tags|/docs/snap/2.9/ui/tags-and-annotations|
+|/docs/deb/2.7/cli/maas-tags|/docs/deb/2.7/cli/tags-and-annotations|
+|/docs/deb/2.7/ui/maas-tags|/docs/deb/2.7/ui/tags-and-annotations|
+|/docs/deb/2.8/cli/maas-tags|/docs/deb/2.8/cli/tags-and-annotations|
+|/docs/deb/2.8/ui/maas-tags|/docs/deb/2.8/ui/tags-and-annotations|
+|/docs/deb/2.9/cli/maas-tags|/docs/deb/2.9/cli/tags-and-annotations|
+|/docs/deb/2.9/ui/maas-tags|/docs/deb/2.9/ui/tags-and-annotations|
 |/docs/cli-resource-pool-management|/docs/snap/2.9/cli/resource-pools|
 |/docs/cli-dhcp-snippet-management|/docs/snap/2.9/cli/managing-dhcp|
 |/docs/partitions|/docs/snap/2.9/ui/partitions|

@@ -72,7 +72,7 @@ Once a machine has been commissioned (see [Commission machines](/t/commission-ma
 1. [How and why do I acquire a machine?](#heading--acquire)
 2. [How do I deploy a machine?](#heading--deploy)
 
-The agent that triggers deployment may vary. For instance, if the machines are destined to run complex, inter-related services that scale up or down frequently, like a "cloud" resource, then [Juju](https://jujucharms.com/docs/stable/about-juju) is the recommended deployment agent. Juju will also install and configure services on the deployed machines. If you want to use MAAS to install a base operating system and work on the machines manually, then you can deploy a machine directly with MAAS.
+The agent that triggers deployment may vary. For instance, if the machines are destined to run complex, inter-related services that scale up or down frequently, like a "cloud" resource, then [Juju](https://jaas.ai/) is the recommended deployment agent. Juju will also install and configure services on the deployed machines. If you want to use MAAS to install a base operating system and work on the machines manually, then you can deploy a machine directly with MAAS.
 
 <!-- deb-2-7-cli
 Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3204#heading--ssh-keys).
@@ -208,7 +208,7 @@ MAAS also supports machine customisation with a process called "preseeding." For
 
 <a href="#heading--acquire"><h2 id="heading--acquire">Acquire</h2></a>
 
-Acquiring ("allocating") a machine reserves the machine for the exclusive use of the acquiring process. The machine is no longer available to any other process, including another MAAS instance, or a process such as [Juju](https://jujucharms.com/docs/stable/about-juju).
+Acquiring ("allocating") a machine reserves the machine for the exclusive use of the acquiring process. The machine is no longer available to any other process, including another MAAS instance, or a process such as Juju.
 
 Before deploying a machine, MAAS must acquire it (status 'Allocated'). When deploying from the web UI, this action is performed automatically (and invisibly).
 
