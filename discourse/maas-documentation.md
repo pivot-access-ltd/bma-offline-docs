@@ -455,7 +455,6 @@ There are (at least) three ways you can contribute to MAAS:
 - [MAAS 2.5 (and earlier) documentation](https://old-docs.maas.io/2.5/en/)
 - [Upgrading MAAS](/t/upgrading-maas/779)
   - [Upgrade from 2.3 to 2.4](/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777)
-  - [Upgrade from 1.9 to 2.x](/t/upgrade-from-1-9-to-2-x/778)
 
 ### [Release notes](/t/whats-new-in-maas/4291)
 

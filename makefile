@@ -457,11 +457,11 @@ $(DISC)/about-maas.md: $(SRC)/about-maas.md
 	cd $(MODWD) &&\
 	xpub push discourse -t snap-2-7-cli about-maas-snap-2-7-cli-2262.md
 ## snap 2.7 ui
-	cp $(SRC)/about-maas.md $(MODWD)/about-maas-snap-2-7-ui-2265.md 
+	cp $(SRC)/about-maas.md $(MODWD)/about-maas-snap-2-7-ui-2263.md 
 	cd $(MODWD) &&\
 	xpub push discourse -t snap-2-7-ui about-maas-snap-2-7-ui-2263.md 
 ## snap 2.8 cli
-	cp $(SRC)/about-maas.md $(MODWD)/about-maas-snap-2-8-cli-2263.md
+	cp $(SRC)/about-maas.md $(MODWD)/about-maas-snap-2-8-cli-2264.md
 	cd $(MODWD) &&\
 	xpub push discourse -t snap-2-8-cli about-maas-snap-2-8-cli-2264.md
 ## snap 2.8 ui

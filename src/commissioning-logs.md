@@ -97,7 +97,7 @@ Each of the items in the "NAME" column is the name of a [commissioning script](/
  deb-2-9-ui -->
 
 <!-- deb-3-0-ui
-Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/3877#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
+Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/3866#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
  deb-3-0-ui -->
 
 <!-- snap-2-7-ui

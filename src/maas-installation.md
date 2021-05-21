@@ -1280,7 +1280,7 @@ Choosing "Y" proceeds with a standard <code>apt</code> package install.
 sudo apt install maas-region-controller
 ```
 
-and the rack controller (see [Rack controller](/t/rack-controller/771) for details) on another:
+and the rack controller on another:
 
 ``` bash
 sudo apt install maas-rack-controller
