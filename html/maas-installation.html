@@ -1202,21 +1202,19 @@ snap-2-7-ui snap-2-7-cli -->
 <!-- snap-2-8-ui snap-2-8-cli
 MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.  This article will walk you through both install methods.
 
-#### Thirteen questions you may have about installing MAAS:
+#### Eleven questions you may have about installing MAAS:
 
 1. [How do I install (but not initialise) the MAAS snap?](#heading--install-maas-snap)
 2. [How do I upgrade my 2.7 snap to version 2.8?](#heading--upgrade-maas-snap)
 3. [What are MAAS initialisation modes?](#heading--maas-init-modes)
 4. [How do I initialise MAAS for a test or proof-of-concept configuration?](#heading--init-poc)
 5. [How do I initialise MAAS for a production configuration?](#heading--init-prod)
-6. [How do I migrate an existing snap install?](tips-tricks-and-traps.html#heading--migrating-maas)
-7. [What if I want to manually export the MAAS database to an existing PostgreSQL server?](tips-tricks-and-traps.html#heading--manual-export)
-8. [How can I check the service status of my MAAS configuration?](#heading--service-status)
-9. [How do I re-initialise MAAS, if I want to?](#heading--reinitialising-maas)
-10. [How can I discover additional init options?](#heading--additional-init-options)
-11. [Give me an example of initialising MAAS](#heading--example)
-12. [Tell me about the MAAS URL](#heading--maas-url)
-13. [Tell me about the shared secret](#heading--shared-secret)
+6. [How can I check the service status of my MAAS configuration?](#heading--service-status)
+7. [How do I re-initialise MAAS, if I want to?](#heading--reinitialising-maas)
+8. [How can I discover additional init options?](#heading--additional-init-options)
+9 [Give me an example of initialising MAAS](#heading--example)
+10. [Tell me about the MAAS URL](#heading--maas-url)
+11. [Tell me about the shared secret](#heading--shared-secret)
 
 <strong>NOTE:</strong> 
 If you have installed `bind9` or have it running, you will need to uninstall it before installing MAAS.  You can check with `ps aux | grep named` to see if it's running. The `bind9` daemon interferes with MAAS operation and creates a number of unusual, hard-to-debug errors -- but don't worry, MAAS provides DNS and can work with existing DNS servers.
@@ -1462,14 +1460,12 @@ MAAS can be installed in either of two configurations:  test or production.  The
 3. [What are MAAS initialisation modes?](#heading--maas-init-modes)
 4. [How do I initialise MAAS for a test or proof-of-concept configuration?](#heading--init-poc)
 5. [How do I initialise MAAS for a production configuration?](#heading--init-prod)
-6. [How do I migrate an existing snap install?](tips-tricks-and-traps.html#heading--migrate-maas)
-7. [What if I want to manually export the MAAS database to an existing PostgreSQL server?](tips-tricks-and-traps.html#heading--manual-export)
-8. [How can I check the service status of my MAAS configuration?](#heading--service-status)
-9. [How do I re-initialise MAAS, if I want to?](#heading--reinitialising-maas)
-10. [How can I discover additional init options?](#heading--additional-init-options)
-11. [Give me an example of initialising MAAS](#heading--example)
-12. [Tell me about the MAAS URL](#heading--maas-url)
-13. [Tell me about the shared secret](#heading--shared-secret)
+6. [How can I check the service status of my MAAS configuration?](#heading--service-status)
+7. [How do I re-initialise MAAS, if I want to?](#heading--reinitialising-maas)
+8. [How can I discover additional init options?](#heading--additional-init-options)
+9. [Give me an example of initialising MAAS](#heading--example)
+10. [Tell me about the MAAS URL](#heading--maas-url)
+11. [Tell me about the shared secret](#heading--shared-secret)
 
 <strong>NOTE:</strong> 
 If you have installed `bind9` or have it running, you will need to uninstall it before installing MAAS.  You can check with `ps aux | grep named` to see if it's running. The `bind9` daemon interferes with MAAS operation and creates a number of unusual, hard-to-debug errors -- but don't worry, MAAS provides DNS and can work with existing DNS servers.
@@ -1750,7 +1746,7 @@ Choosing "Y" proceeds with a standard <code>apt</code> package install.
 </code></pre>
 
 
-and the rack controller (see [Rack controller](rack-controller.html) for details) on another:
+and the rack controller on another:
 
 
 <pre><code class="bash">sudo apt install maas-rack-controller
@@ -2055,8 +2051,6 @@ deb-2-9-ui -->
 <li><a href="#heading--upgrade-maas-snap">Upgrade the 2.9 snap to the MAAS 3.0 Beta</a></li>
 <li><a href="#heading--init-poc">Initialise MAAS for a test rig or proof-of-concept</a></li>
 <li><a href="#heading--init-prod">Initialise MAAS for production</a></li>
-<li><a href="tips-tricks-and-traps.html#heading--migrate-maas">Migrate an existing snap install</a></li>
-<li><a href="tips-tricks-and-traps.html#heading--manual-export">Manually export the MAAS database to an existing PostgreSQL server</a></li>
 <li><a href="#heading--service-status">Check the service status of MAAS</a></li>
 <li><a href="#heading--reinitialising-maas">Re-initialise MAAS</a></li>
 </ol>

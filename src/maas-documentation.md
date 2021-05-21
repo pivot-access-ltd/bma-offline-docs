@@ -1504,6 +1504,7 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/4002|/docs/snap/3.0/ui/maas-installation|
 |https://discourse.maas.io/t/-/4003|/docs/deb/3.0/cli/maas-installation|
 |https://discourse.maas.io/t/-/4004|/docs/deb/3.0/ui/maas-installation|
+|https://discourse.maas.io/t/-/4517|/docs/snap/3.0/ui/maas-installation-tutorial|
 |https://discourse.maas.io/t/-/4009|/docs/snap/3.0/cli/maas-logging|
 |https://discourse.maas.io/t/-/4010|/docs/snap/3.0/ui/maas-logging|
 |https://discourse.maas.io/t/-/4011|/docs/deb/3.0/cli/maas-logging|

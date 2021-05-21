@@ -5596,79 +5596,79 @@ $(DISC)/using-image-streams.md: $(SRC)/using-image-streams.md
 ## remove reference version
 	cd $(DISC) && rm using-image-streams-snap-3-0-ui-4150.md
 
-$(DISC)/using-rbac-with-maas.md: $(SRC)/using-rbac-with-maas.md
-## deb 2.7 cli
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-2-7-cli-3592.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-7-cli using-rbac-with-maas-snap-2-7-cli-3592.md
-## deb 2.7 ui
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-2-7-ui-3593.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-7-ui using-rbac-with-maas-snap-2-7-ui-3593.md
-## deb 2.8 cli
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-2-8-cli-3594.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-8-cli using-rbac-with-maas-snap-2-8-cli-3594.md
-## deb 2.8 ui
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-2-8-ui-3595.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-8-ui using-rbac-with-maas-snap-2-8-ui-3595.md
-## deb 2.9 cli
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-2-9-cli-3596.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-9-cli using-rbac-with-maas-snap-2-9-cli-3596.md
-## deb 2.9 ui
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-2-9-ui-3597.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-2-9-ui using-rbac-with-maas-snap-2-9-ui-3597.md
-## deb 3.0 cli
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-3-0-cli-4157.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-3-0-cli using-rbac-with-maas-snap-3-0-cli-4157.md
-## deb 3.0 ui
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-3-0-ui-4158.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t snap-3-0-ui using-rbac-with-maas-snap-3-0-ui-4158.md
-## snap 2.7 cli
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-2-7-cli-3598.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-7-cli using-rbac-with-maas-deb-2-7-cli-3598.md
-## snap 2.7 ui
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-2-7-ui-3599.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-7-ui using-rbac-with-maas-deb-2-7-ui-3599.md
-## snap 2.8 cli
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-2-8-cli-3600.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-8-cli using-rbac-with-maas-deb-2-8-cli-3600.md
-## snap 2.8 ui
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-2-8-ui-3601.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-8-ui using-rbac-with-maas-deb-2-8-ui-3601.md
-## snap 2.9 cli
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-2-9-cli-3602.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-9-cli using-rbac-with-maas-deb-2-9-cli-3602.md
-## snap 2.9 ui
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-2-9-ui-3603.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-2-9-ui using-rbac-with-maas-deb-2-9-ui-3603.md
-## snap 3.0 cli
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-3-0-cli-4159.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-3-0-cli using-rbac-with-maas-deb-3-0-cli-4159.md
-## snap 3.0 ui
-	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-3-0-ui-4160.md
-	cd $(MODWD) &&\
-	xpub push $(DISC) -t deb-3-0-ui using-rbac-with-maas-deb-3-0-ui-4160.md
-## pull reference version
-	cd $(DISC) &&\
-	xpub pull $(DISC) 4160 4160
-## copy reference version to discourse master
-	cd $(DISC) &&\
-	cp -p using-rbac-with-maas-snap-3-0-ui-4160.md using-rbac-with-maas.md
-## remove reference version
-	cd $(DISC) && rm using-rbac-with-maas-snap-3-0-ui-4160.md
+# $(DISC)/using-rbac-with-maas.md: $(SRC)/using-rbac-with-maas.md
+# ## deb 2.7 cli
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-2-7-cli-3592.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-7-cli using-rbac-with-maas-snap-2-7-cli-3592.md
+# ## deb 2.7 ui
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-2-7-ui-3593.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-7-ui using-rbac-with-maas-snap-2-7-ui-3593.md
+# ## deb 2.8 cli
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-2-8-cli-3594.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-8-cli using-rbac-with-maas-snap-2-8-cli-3594.md
+# ## deb 2.8 ui
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-2-8-ui-3595.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-8-ui using-rbac-with-maas-snap-2-8-ui-3595.md
+# ## deb 2.9 cli
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-2-9-cli-3596.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-9-cli using-rbac-with-maas-snap-2-9-cli-3596.md
+# ## deb 2.9 ui
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-2-9-ui-3597.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-2-9-ui using-rbac-with-maas-snap-2-9-ui-3597.md
+# ## deb 3.0 cli
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-3-0-cli-4157.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-3-0-cli using-rbac-with-maas-snap-3-0-cli-4157.md
+# ## deb 3.0 ui
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-snap-3-0-ui-4158.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t snap-3-0-ui using-rbac-with-maas-snap-3-0-ui-4158.md
+# ## snap 2.7 cli
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-2-7-cli-3598.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-7-cli using-rbac-with-maas-deb-2-7-cli-3598.md
+# ## snap 2.7 ui
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-2-7-ui-3599.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-7-ui using-rbac-with-maas-deb-2-7-ui-3599.md
+# ## snap 2.8 cli
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-2-8-cli-3600.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-8-cli using-rbac-with-maas-deb-2-8-cli-3600.md
+# ## snap 2.8 ui
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-2-8-ui-3601.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-8-ui using-rbac-with-maas-deb-2-8-ui-3601.md
+# ## snap 2.9 cli
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-2-9-cli-3602.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-9-cli using-rbac-with-maas-deb-2-9-cli-3602.md
+# ## snap 2.9 ui
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-2-9-ui-3603.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-2-9-ui using-rbac-with-maas-deb-2-9-ui-3603.md
+# ## snap 3.0 cli
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-3-0-cli-4159.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-3-0-cli using-rbac-with-maas-deb-3-0-cli-4159.md
+# ## snap 3.0 ui
+# 	cp $(SRC)/using-rbac-with-maas.md $(MODWD)/using-rbac-with-maas-deb-3-0-ui-4160.md
+# 	cd $(MODWD) &&\
+# 	xpub push $(DISC) -t deb-3-0-ui using-rbac-with-maas-deb-3-0-ui-4160.md
+# ## pull reference version
+# 	cd $(DISC) &&\
+# 	xpub pull $(DISC) 4160 4160
+# ## copy reference version to discourse master
+# 	cd $(DISC) &&\
+# 	cp -p using-rbac-with-maas-snap-3-0-ui-4160.md using-rbac-with-maas.md
+# ## remove reference version
+# 	cd $(DISC) && rm using-rbac-with-maas-snap-3-0-ui-4160.md
 
 #v
 
