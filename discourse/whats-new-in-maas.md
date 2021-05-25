@@ -580,7 +580,7 @@ snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
 
 <h3>MAAS 3.0 RC1 release notes</h3>
 
-We are happy to announce that the release of MAAS 3.0 Beta RC1 (release candidate 1) is imminent. This release provides new features, along with critical and high-priority [bug fixes](#heading--maas-3-beta-bug-fixes).
+We are happy to announce the release of MAAS 3.0 RC1 (release candidate 1). This release provides new features, along with critical and high-priority [bug fixes](#heading--maas-3-beta-bug-fixes).
 
 #### Cumulative summary of new features in MAAS 3.0 Beta
 1. [PCI and USB devices are now modelled in MAAS](#heading--pci-usb-devices)
@@ -597,7 +597,7 @@ We are happy to announce that the release of MAAS 3.0 Beta RC1 (release candidat
 
 
 <!-- deb-3-0-ui deb-3-0-cli
-The Beta can be installed by adding the `3.0-next` PPA:
+RC1 can be installed by adding the `3.0-next` PPA:
 
 ```
 sudo add-apt-repository ppa:maas/3.0-next
@@ -605,13 +605,13 @@ sudo apt update
 sudo apt install maas
 ```
 
-You can then either install MAAS 3.0 Beta5 fresh (recommended) with:
+You can then either install MAAS 3.0 RC1 fresh (recommended) with:
 
 ```
 sudo apt-get -y install maas
 ```
 
-Or, if you prefer to upgrade (remember, this is a Beta), you can do so with:
+Or, if you prefer to upgrade, you can do so with:
 
 ```
 sudo apt upgrade maas
@@ -627,13 +627,9 @@ The Beta can be installed fresh (recommended) with:
 sudo snap install --channel=3.0/beta maas
 ```
 
-[note]
-Installation instructions for the MAAS RC1 release are pending imminent release of the bits.
-[/note]
-
 At this point, you may proceed with a normal installation.
 
-NOTE that this is currently a BETA release, so there will be bugs, instabilities, and missing or incomplete features.  As such, we invite you to thoroughly test this release and provide feedback.  Please remember to [file bugs](https://bugs.launchpad.net/maas/+filebug) as you find them, and please feel free to interact with the developers on [discourse](https://discourse.maas.io/).
+NOTE that this is currently a release candidate, so there may be bugs or instabilities.  As such, we invite you to thoroughly test this release and provide feedback.  Please remember to [file bugs](https://bugs.launchpad.net/maas/+filebug) as you find them, and please feel free to interact with the developers on [discourse](https://discourse.maas.io/).
 
 <h2>Significant changes</h2>
 

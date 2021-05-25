@@ -14,7 +14,7 @@ This article provides technical data relevant the MAAS installation.  Note that 
 
 These sections are presented for reference, so they are not intended to be read in any particular order.
 
-<a href="#heading--minimum-hardware-requirements"><h2 id="heading--minimum-hardware-requirements">Minimum hardware requirenets for using MAAS</h2></a>
+<a href="#heading--minimum-hardware-requirements"><h2 id="heading--minimum-hardware-requirements">Minimum hardware requirements for using MAAS</h2></a>
 
 This section provides the following technical data:
 
@@ -274,5 +274,5 @@ When you add a new rack or region controller, MAAS asks for a shared secret it w
 
 <a href="#heading--maas-reinit"><h3 id="heading--maas-reinit">MAAS re-initialisation</h3></a>
 
-Re-initalising MAAS resets the MAAS URL when the configuration changes.  For example, when hosting MAAS on a system that gets its IP from DHCP, you must reinitialise when the DHCP lease gets renewed, as your base MAAS IP address will need to be updated.  Likewise, if you switch the MAAS configuration from `rack` to `region`, you'll need to re-initialise as well. 
+Re-initialising MAAS resets the MAAS URL when the configuration changes.  For example, when hosting MAAS on a system that gets its IP from DHCP, you must reinitialise when the DHCP lease gets renewed, as your base MAAS IP address will need to be updated.  Likewise, if you switch the MAAS configuration from `rack` to `region`, you'll need to re-initialise as well. 
 

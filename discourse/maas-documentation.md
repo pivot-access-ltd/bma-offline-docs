@@ -399,7 +399,7 @@ There are (at least) three ways you can contribute to MAAS:
 
 - [Select and import images](/t/select-and-import-images-snap-2-9-ui/3095)
 - [MAAS image builder](/t/maas-image-builder-snap-2-9-ui/2855)
-- [Custom Ubuntu images](/t/creating-a-custom-ubuntu-image-snap-2-9-ui/2570)
+- [Custom Ubuntu images](/t/creating-a-custom-ubuntu-image-snap-2-9-ui/2567)
 - [Using image streams](/t/using-image-streams-snap-2-9-ui/4329)
 - [Local image mirror](/t/local-image-mirror-snap-2-9-ui/2807)
 - [VMWare images](/t/vmware-images-snap-2-9-ui/3239)

@@ -384,9 +384,7 @@ To create and assign a controller tag, you can use the following procedure:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
 
-3. Find the "Tags" card and click on "Edit."  You will be brought to that controller's "Configuration" tab:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/28864aac1eddfc130078c40ec37e0172cf57c4e9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/28864aac1eddfc130078c40ec37e0172cf57c4e9.png"></a>
+3. Find the "Tags" card and click on "Edit."  You will be brought to that controller's "Configuration" tab.
 
 4. Click on the "Edit" button for "Controller configuration."
 You'll be presented with an editing screen similar to this one:
@@ -407,9 +405,7 @@ To remove (and possibly delete) a controller tag, you can use the following proc
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
 
-3. Find the "Tags" card and click on "Edit."  You will be brought to that controller's "Configuration" tab:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/28864aac1eddfc130078c40ec37e0172cf57c4e9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/28864aac1eddfc130078c40ec37e0172cf57c4e9.png"></a>
+3. Find the "Tags" card and click on "Edit."  You will be brought to that controller's "Configuration" tab.
 
 4. Click on the "Edit" button for "Controller configuration."
 You'll be presented with an editing screen similar to this one:
