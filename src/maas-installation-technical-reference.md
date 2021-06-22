@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/maas-installation-technical-reference-snap-2-7-cli/4522) ~ [UI](/t/maas-installation-technical-reference-snap-2-7-ui/4519)|[CLI](/t/maas-installation-technical-reference-snap-2-8-cli/4523) ~ [UI](/t/maas-installation-technical-reference-snap-2-8-ui/4520)|[CLI](/t/maas-installation-technical-reference-snap-2-9-cli/4524) ~ [UI](/t/maas-installation-technical-reference-snap-2-9-ui/4521)|[CLI](/t/maas-installation-technical-reference-snap-3-0-cli/4525) ~ [UI](/t/maas-installation-technical-reference-snap-3-0-ui/4516)|
-Packages|[CLI](/t/maas-installation-technical-reference-deb-2-7-cli/4530) ~ [UI](/t/maas-installation-technical-reference-deb-2-7-ui/4526)|[CLI](/t/maas-installation-technical-reference-deb-2-8-cli/4531) ~ [UI](/t/maas-installation-technical-reference-deb-2-8-ui/4527)|[CLI](/t/maas-installation-technical-reference-deb-2-9-cli/4532) ~ [UI](/t/maas-installation-technical-reference-deb-2-9-ui/4528)|[CLI](/t/maas-installation-technical-reference-deb-3-0-cli/4533) ~ [UI](/t/maas-installation-technical-reference-deb-3-0-ui/4529)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/maas-installation-technical-reference-snap-2-9-cli/4524) ~ [UI](/t/maas-installation-technical-reference-snap-2-9-ui/4521)|[CLI](/t/maas-installation-technical-reference-snap-3-0-cli/4525) ~ [UI](/t/maas-installation-technical-reference-snap-3-0-ui/4516)|
+Packages|[CLI](/t/maas-installation-technical-reference-deb-2-9-cli/4532) ~ [UI](/t/maas-installation-technical-reference-deb-2-9-ui/4528)|[CLI](/t/maas-installation-technical-reference-deb-3-0-cli/4533) ~ [UI](/t/maas-installation-technical-reference-deb-3-0-ui/4529)|
 
 This article provides technical data relevant the MAAS installation.  Note that all headings are linked for easy bookmarking.
 

@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/power-management-snap-2-7-cli/3006) ~ [UI](/t/power-management-snap-2-7-ui/3007)|[CLI](/t/power-management-snap-2-8-cli/3008) ~ [UI](/t/power-management-snap-2-8-ui/3009)|[CLI](/t/power-management-snap-2-9-cli/3010) ~ [UI](/t/power-management-snap-2-9-ui/3011)|[CLI](/t/power-management-snap-3-0-cli/4069) ~ [UI](/t/power-management-snap-3-0-ui/4070)|
-Packages|[CLI](/t/power-management-deb-2-7-cli/3012) ~ [UI](/t/power-management-deb-2-7-ui/3013)|[CLI](/t/power-management-deb-2-8-cli/3014) ~ [UI](/t/power-management-deb-2-8-ui/3015)|[CLI](/t/power-management-deb-2-9-cli/3016) ~ [UI](/t/power-management-deb-2-9-ui/3017)|[CLI](/t/power-management-deb-3-0-cli/4071) ~ [UI](/t/power-management-deb-3-0-ui/4072)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/power-management-snap-2-9-cli/3010) ~ [UI](/t/power-management-snap-2-9-ui/3011)|[CLI](/t/power-management-snap-3-0-cli/4069) ~ [UI](/t/power-management-snap-3-0-ui/4070)|
+Packages|[CLI](/t/power-management-deb-2-9-cli/3016) ~ [UI](/t/power-management-deb-2-9-ui/3017)|[CLI](/t/power-management-deb-3-0-cli/4071) ~ [UI](/t/power-management-deb-3-0-ui/4072)|
 
 To manage a machine, MAAS must be able to power cycle it, usually through the machine's [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller) card.  Until you configure the power type, a newly-added machine can't be enlisted and used by MAAS.
 

@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/vm-host-networking-snap-2-7-cli/3210) ~ [UI](/t/vm-host-networking-snap-2-7-ui/3211)|[CLI](/t/vm-host-networking-snap-2-8-cli/3212) ~ [UI](/t/vm-host-networking-snap-2-8-ui/3213)|[CLI](/t/vm-host-networking-snap-2-9-cli/3214) ~ [UI](/t/vm-host-networking-snap-2-9-ui/3215)|[CLI](/t/vm-host-networking-snap-3-0-cli/4165) ~ [UI](/t/vm-host-networking-snap-3-0-ui/4166)|
-Packages|[CLI](/t/vm-host-networking-deb-2-7-cli/3216) ~ [UI](/t/vm-host-networking-deb-2-7-ui/3217)|[CLI](/t/vm-host-networking-deb-2-8-cli/3218) ~ [UI](/t/vm-host-networking-deb-2-8-ui/3219)|[CLI](/t/vm-host-networking-deb-2-9-cli/3220) ~ [UI](/t/vm-host-networking-deb-2-9-ui/3221)|[CLI](/t/vm-host-networking-deb-3-0-cli/4167) ~ [UI](/t/vm-host-networking-deb-3-0-ui/4168)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/vm-host-networking-snap-2-9-cli/3214) ~ [UI](/t/vm-host-networking-snap-2-9-ui/3215)|[CLI](/t/vm-host-networking-snap-3-0-cli/4165) ~ [UI](/t/vm-host-networking-snap-3-0-ui/4166)|
+Packages|[CLI](/t/vm-host-networking-deb-2-9-cli/3220) ~ [UI](/t/vm-host-networking-deb-2-9-ui/3221)|[CLI](/t/vm-host-networking-deb-3-0-cli/4167) ~ [UI](/t/vm-host-networking-deb-3-0-ui/4168)|
 
 In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself.  This section explains several ways of accomplishing this.
 

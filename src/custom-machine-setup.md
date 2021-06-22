@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/custom-machine-setup-snap-2-7-cli/2586) ~ [UI](/t/custom-machine-setup-snap-2-7-ui/2587)|[CLI](/t/custom-machine-setup-snap-2-8-cli/2588) ~ [UI](/t/custom-machine-setup-snap-2-8-ui/2589)|[CLI](/t/custom-machine-setup-snap-2-9-cli/2590) ~ [UI](/t/custom-machine-setup-snap-2-9-ui/2591)|[CLI](/t/custom-machine-setup-snap-3-0-cli/3909) ~ [UI](/t/custom-machine-setup-snap-3-0-ui/3910)|
-Packages|[CLI](/t/custom-machine-setup-deb-2-7-cli/2592) ~ [UI](/t/custom-machine-setup-deb-2-7-ui/2593)|[CLI](/t/custom-machine-setup-deb-2-8-cli/2594) ~ [UI](/t/custom-machine-setup-deb-2-8-ui/2595)|[CLI](/t/custom-machine-setup-deb-2-9-cli/2596) ~ [UI](/t/custom-machine-setup-deb-2-9-ui/2597)|[CLI](/t/custom-machine-setup-deb-3-0-cli/3911) ~ [UI](/t/custom-machine-setup-deb-3-0-ui/3912)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/custom-machine-setup-snap-2-9-cli/2590) ~ [UI](/t/custom-machine-setup-snap-2-9-ui/2591)|[CLI](/t/custom-machine-setup-snap-3-0-cli/3909) ~ [UI](/t/custom-machine-setup-snap-3-0-ui/3910)|
+Packages|[CLI](/t/custom-machine-setup-deb-2-9-cli/2596) ~ [UI](/t/custom-machine-setup-deb-2-9-ui/2597)|[CLI](/t/custom-machine-setup-deb-3-0-cli/3911) ~ [UI](/t/custom-machine-setup-deb-3-0-ui/3912)|
 
 <!-- deb-2-7-cli
 During machine [enlistment](/t/add-machines/2280#heading--enlistment), [deployment](/t/deploy-machines/2604), [commissioning](/t/commission-machines/2472) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.

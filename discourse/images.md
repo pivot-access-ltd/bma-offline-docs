@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/images-snap-2-7-cli/2694) ~ [UI](/t/images-snap-2-7-ui/2695)|[CLI](/t/images-snap-2-8-cli/2696) ~ [UI](/t/images-snap-2-8-ui/2697)|[CLI](/t/images-snap-2-9-cli/2698) ~ [UI](/t/images-snap-2-9-ui/2699)|[CLI](/t/images-snap-3-0-cli/3957) ~ [UI](/t/images-snap-3-0-ui/3958)|
-Packages|[CLI](/t/images-deb-2-7-cli/2700) ~ [UI](/t/images-deb-2-7-ui/2701)|[CLI](/t/images-deb-2-8-cli/2702) ~ [UI](/t/images-deb-2-8-ui/2703)|[CLI](/t/images-deb-2-9-cli/2704) ~ [UI](/t/images-deb-2-9-ui/2705)|[CLI](/t/images-deb-3-0-cli/3959) ~ [UI](/t/images-deb-3-0-ui/3960)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/images-snap-2-9-cli/2698) ~ [UI](/t/images-snap-2-9-ui/2699)|[CLI](/t/images-snap-3-0-cli/3957) ~ [UI](/t/images-snap-3-0-ui/3958)|
+Packages|[CLI](/t/images-deb-2-9-cli/2704) ~ [UI](/t/images-deb-2-9-ui/2705)|[CLI](/t/images-deb-3-0-cli/3959) ~ [UI](/t/images-deb-3-0-ui/3960)|
 
 MAAS provides supported images for stable Ubuntu releases, and for CentOS 6.6, CentOS 7, and CentOS 8.0 releases.  [Ubuntu Advantage](https://www.ubuntu.com/support) is needed to build customer Windows, RHEL and ESXi images.
 

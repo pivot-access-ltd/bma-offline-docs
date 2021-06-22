@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/writing-guide-snap-2-7-cli/3258) ~ [UI](/t/writing-guide-snap-2-7-ui/3259)|[CLI](/t/writing-guide-snap-2-8-cli/3260) ~ [UI](/t/writing-guide-snap-2-8-ui/3261)|[CLI](/t/writing-guide-snap-2-9-cli/3262) ~ [UI](/t/writing-guide-snap-2-9-ui/3263)|[CLI](/t/writing-guide-snap-3-0-cli/4185) ~ [UI](/t/writing-guide-snap-3-0-ui/4186)|
-Packages|[CLI](/t/writing-guide-deb-2-7-cli/3264) ~ [UI](/t/writing-guide-deb-2-7-ui/3265)|[CLI](/t/writing-guide-deb-2-8-cli/3266) ~ [UI](/t/writing-guide-deb-2-8-ui/3267)|[CLI](/t/writing-guide-deb-2-9-cli/3268) ~ [UI](/t/writing-guide-deb-2-9-ui/3269)|[CLI](/t/writing-guide-deb-3-0-cli/4187) ~ [UI](/t/writing-guide-deb-3-0-ui/4188)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/writing-guide-snap-2-9-cli/3262) ~ [UI](/t/writing-guide-snap-2-9-ui/3263)|[CLI](/t/writing-guide-snap-3-0-cli/4185) ~ [UI](/t/writing-guide-snap-3-0-ui/4186)|
+Packages|[CLI](/t/writing-guide-deb-2-9-cli/3268) ~ [UI](/t/writing-guide-deb-2-9-ui/3269)|[CLI](/t/writing-guide-deb-3-0-cli/4187) ~ [UI](/t/writing-guide-deb-3-0-ui/4188)|
 This page contains detailed information on how to become a successful MAAS documentation writer. Welcome to the club.
 
 <h2 id="heading--edit-rad">Update: Editing RAD/offline documentation</h2>

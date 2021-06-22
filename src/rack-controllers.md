@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/rack-controllers-snap-2-7-cli/3054) ~ [UI](/t/rack-controllers-snap-2-7-ui/3055)|[CLI](/t/rack-controllers-snap-2-8-cli/3056) ~ [UI](/t/rack-controllers-snap-2-8-ui/3057)|[CLI](/t/rack-controllers-snap-2-9-cli/3058) ~ [UI](/t/rack-controllers-snap-2-9-ui/3059)|[CLI](/t/rack-controllers-snap-3-0-cli/4089) ~ [UI](/t/rack-controllers-snap-3-0-ui/4090)|
-Packages|[CLI](/t/rack-controllers-deb-2-7-cli/3060) ~ [UI](/t/rack-controllers-deb-2-7-ui/3061)|[CLI](/t/rack-controllers-deb-2-8-cli/3062) ~ [UI](/t/rack-controllers-deb-2-8-ui/3063)|[CLI](/t/rack-controllers-deb-2-9-cli/3064) ~ [UI](/t/rack-controllers-deb-2-9-ui/3065)|[CLI](/t/rack-controllers-deb-3-0-cli/4091) ~ [UI](/t/rack-controllers-deb-3-0-ui/4092)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/rack-controllers-snap-2-9-cli/3058) ~ [UI](/t/rack-controllers-snap-2-9-ui/3059)|[CLI](/t/rack-controllers-snap-3-0-cli/4089) ~ [UI](/t/rack-controllers-snap-3-0-ui/4090)|
+Packages|[CLI](/t/rack-controllers-deb-2-9-cli/3064) ~ [UI](/t/rack-controllers-deb-2-9-ui/3065)|[CLI](/t/rack-controllers-deb-3-0-cli/4091) ~ [UI](/t/rack-controllers-deb-3-0-ui/4092)|
 
 A rack controller can connect to multiple VLANs, each from a different network interface. A rack controller can only connect to one MAAS instance at any given time, and must connect to an instance that matches its MAAS version (major and minor).  This configuration provides a scaling factor that can help as a network architecture grows in size.
 

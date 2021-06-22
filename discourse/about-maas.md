@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/about-maas-snap-2-7-cli/2262) ~ [UI](/t/about-maas-snap-2-7-ui/2263)|[CLI](/t/about-maas-snap-2-8-cli/2264) ~ [UI](/t/about-maas-snap-2-8-ui/2265)|[CLI](/t/about-maas-snap-2-9-cli/2266) ~ [UI](/t/about-maas-snap-2-9-ui/2267)|[CLI](/t/about-maas-snap-3-0-cli/3814) ~ [UI](/t/about-maas-snap-3-0-ui/3813)|
-Packages|[CLI](/t/about-maas-deb-2-7-cli/2268) ~ [UI](/t/about-maas-deb-2-7-ui/2269)|[CLI](/t/about-maas-deb-2-8-cli/2270) ~ [UI](/t/about-maas-deb-2-8-ui/2271)|[CLI](/t/about-maas-deb-2-9-cli/2272) ~ [UI](/t/about-maas-deb-2-9-ui/2273)|[CLI](/t/about-maas-deb-3-0-cli/3815) ~ [UI](/t/about-maas-deb-3-0-ui/3816)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/about-maas-snap-2-9-cli/2266) ~ [UI](/t/about-maas-snap-2-9-ui/2267)|[CLI](/t/about-maas-snap-3-0-cli/3814) ~ [UI](/t/about-maas-snap-3-0-ui/3813)|
+Packages|[CLI](/t/about-maas-deb-2-9-cli/2272) ~ [UI](/t/about-maas-deb-2-9-ui/2273)|[CLI](/t/about-maas-deb-3-0-cli/3815) ~ [UI](/t/about-maas-deb-3-0-ui/3816)|
 
 MAAS is an open-source tool that lets you create a data centre from bare-metal servers. You can discover, commission, deploy, and dynamically reconfigure a large network of individual units.  MAAS converts your hardware investment into a cohesive, flexible, distributed data centre, with a minimum of time and effort.
 
@@ -182,7 +182,7 @@ When you [add a new machine](/t/add-machines/3824#heading--add-a-node-manually) 
 deb-3-0-ui  -->
 
 <!-- snap-2-7-cli
-When you [add a new machine](/t/add-machines-2-7-cli/2274#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines-2-7-cli/2274#heading--enlistment), MAAS [commissions](/t/commission-machines/2466) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
+When you [add a new machine](#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](#heading--enlistment), MAAS [commissions](/t/commission-machines/2466) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
 snap-2-7-cli  -->
 
 <!-- snap-2-7-ui

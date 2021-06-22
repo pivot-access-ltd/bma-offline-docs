@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/maas-logging-snap-2-7-cli/2862) ~ [UI](/t/maas-logging-snap-2-7-ui/2863)|[CLI](/t/maas-logging-snap-2-8-cli/2864) ~ [UI](/t/maas-logging-snap-2-8-ui/2865)|[CLI](/t/maas-logging-snap-2-9-cli/2866) ~ [UI](/t/maas-logging-snap-2-9-ui/2867)|[CLI](/t/maas-logging-snap-3-0-cli/4009) ~ [UI](/t/maas-logging-snap-3-0-ui/4010)|
-Packages|[CLI](/t/maas-logging-deb-2-7-cli/2868) ~ [UI](/t/maas-logging-deb-2-7-ui/2869)|[CLI](/t/maas-logging-deb-2-8-cli/2870) ~ [UI](/t/maas-logging-deb-2-8-ui/2871)|[CLI](/t/maas-logging-deb-2-9-cli/2872) ~ [UI](/t/maas-logging-deb-2-9-ui/2873)|[CLI](/t/maas-logging-deb-3-0-cli/4011) ~ [UI](/t/maas-logging-deb-3-0-ui/4012)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/maas-logging-snap-2-9-cli/2866) ~ [UI](/t/maas-logging-snap-2-9-ui/2867)|[CLI](/t/maas-logging-snap-3-0-cli/4009) ~ [UI](/t/maas-logging-snap-3-0-ui/4010)|
+Packages|[CLI](/t/maas-logging-deb-2-9-cli/2872) ~ [UI](/t/maas-logging-deb-2-9-ui/2873)|[CLI](/t/maas-logging-deb-3-0-cli/4011) ~ [UI](/t/maas-logging-deb-3-0-ui/4012)|
 
 MAAS has a robust logging capability, which presents several different views, including a number of node-specific log files and several syslogd-style text logs.  Each of these logs provides different information, or at the very least, different views of the same information.  MAAS gathers logging information about the various MAAS states and records both automated and user-driven actions.
 

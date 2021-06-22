@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/deploy-machines-snap-2-7-cli/2598) ~ [UI](/t/deploy-machines-snap-2-7-ui/2599)|[CLI](/t/deploy-machines-snap-2-8-cli/2600) ~ [UI](/t/deploy-machines-snap-2-8-ui/2601)|[CLI](/t/deploy-machines-snap-2-9-cli/2602) ~ [UI](/t/deploy-machines-snap-2-9-ui/2603)|[CLI](/t/deploy-machines-snap-3-0-cli/3913) ~ [UI](/t/deploy-machines-snap-3-0-ui/3914)|
-Packages|[CLI](/t/deploy-machines-deb-2-7-cli/2604) ~ [UI](/t/deploy-machines-deb-2-7-ui/2605)|[CLI](/t/deploy-machines-deb-2-8-cli/2606) ~ [UI](/t/deploy-machines-deb-2-8-ui/2607)|[CLI](/t/deploy-machines-deb-2-9-cli/2608) ~ [UI](/t/deploy-machines-deb-2-9-ui/2609)|[CLI](/t/deploy-machines-deb-3-0-cli/3915) ~ [UI](/t/deploy-machines-deb-3-0-ui/3916)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/deploy-machines-snap-2-9-cli/2602) ~ [UI](/t/deploy-machines-snap-2-9-ui/2603)|[CLI](/t/deploy-machines-snap-3-0-cli/3913) ~ [UI](/t/deploy-machines-snap-3-0-ui/3914)|
+Packages|[CLI](/t/deploy-machines-deb-2-9-cli/2608) ~ [UI](/t/deploy-machines-deb-2-9-ui/2609)|[CLI](/t/deploy-machines-deb-3-0-cli/3915) ~ [UI](/t/deploy-machines-deb-3-0-ui/3916)|
 
 <!-- deb-2-7-cli
 Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2472)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.

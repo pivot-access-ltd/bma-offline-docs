@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/give-me-an-example-of-maas-snap-2-7-cli/2646) ~ [UI](/t/give-me-an-example-of-maas-snap-2-7-ui/2647)|[CLI](/t/give-me-an-example-of-maas-snap-2-8-cli/2648) ~ [UI](/t/give-me-an-example-of-maas-snap-2-8-ui/2649)|[CLI](/t/give-me-an-example-of-maas-snap-2-9-cli/2650) ~ [UI](/t/give-me-an-example-of-maas-snap-2-9-ui/2651)|[CLI](/t/give-me-an-example-of-maas-snap-3-0-cli/3933) ~ [UI](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)|
-Packages|[CLI](/t/give-me-an-example-of-maas-deb-2-7-cli/2652) ~ [UI](/t/give-me-an-example-of-maas-deb-2-7-ui/2653)|[CLI](/t/give-me-an-example-of-maas-deb-2-8-cli/2654) ~ [UI](/t/give-me-an-example-of-maas-deb-2-8-ui/2655)|[CLI](/t/give-me-an-example-of-maas-deb-2-9-cli/2656) ~ [UI](/t/give-me-an-example-of-maas-deb-2-9-ui/2657)|[CLI](/t/give-me-an-example-of-maas-deb-3-0-cli/3935) ~ [UI](/t/give-me-an-example-of-maas-deb-3-0-ui/3936)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/give-me-an-example-of-maas-snap-2-9-cli/2650) ~ [UI](/t/give-me-an-example-of-maas-snap-2-9-ui/2651)|[CLI](/t/give-me-an-example-of-maas-snap-3-0-cli/3933) ~ [UI](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)|
+Packages|[CLI](/t/give-me-an-example-of-maas-deb-2-9-cli/2656) ~ [UI](/t/give-me-an-example-of-maas-deb-2-9-ui/2657)|[CLI](/t/give-me-an-example-of-maas-deb-3-0-cli/3935) ~ [UI](/t/give-me-an-example-of-maas-deb-3-0-ui/3936)|
 
 An evolving example may be useful to introduce you to MAAS, and it doesn't have to be comprehensive --  just coherent and plausible.  This example will continue to expand and update over time.
 

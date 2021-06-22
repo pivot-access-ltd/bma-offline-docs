@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/controllers-snap-2-7-cli/2718) ~ [UI](/t/controllers-snap-2-7-ui/2719)|[CLI](/t/controllers-snap-2-8-cli/2720) ~ [UI](/t/controllers-snap-2-8-ui/2721)|[CLI](/t/controllers-snap-2-9-cli/2722) ~ [UI](/t/controllers-snap-2-9-ui/2723)|[CLI](/t/controllers-snap-3-0-cli/3897) ~ [UI](/t/controllers-snap-3-0-ui/3898)|
-Packages|[CLI](/t/controllers-deb-2-7-cli/2724) ~ [UI](/t/controllers-deb-2-7-ui/2725)|[CLI](/t/controllers-deb-2-8-cli/2726) ~ [UI](/t/controllers-deb-2-8-ui/2727)|[CLI](/t/controllers-deb-2-9-cli/2728) ~ [UI](/t/controllers-deb-2-9-ui/2729)|[CLI](/t/controllers-deb-3-0-cli/3899) ~ [UI](/t/controllers-deb-3-0-ui/3900)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/controllers-snap-2-9-cli/2722) ~ [UI](/t/controllers-snap-2-9-ui/2723)|[CLI](/t/controllers-snap-3-0-cli/3897) ~ [UI](/t/controllers-snap-3-0-ui/3898)|
+Packages|[CLI](/t/controllers-deb-2-9-cli/2728) ~ [UI](/t/controllers-deb-2-9-ui/2729)|[CLI](/t/controllers-deb-3-0-cli/3899) ~ [UI](/t/controllers-deb-3-0-ui/3900)|
 
 Most of the functionality of MAAS is contained in a series of controllers.  There are two basic types: a region controller and one or more rack controllers. The region controller deals with operator requests, while the rack controller(s) provides high-bandwidth services to the individual machines.  In essence, the region controller interacts with the user, while the rack controllers manage the bare metal.
 

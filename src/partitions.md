@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/partitions-snap-2-7-cli/2982) ~ [UI](/t/partitions-snap-2-7-ui/2983)|[CLI](/t/partitions-snap-2-8-cli/2984) ~ [UI](/t/partitions-snap-2-8-ui/2985)|[CLI](/t/partitions-snap-2-9-cli/2986) ~ [UI](/t/partitions-snap-2-9-ui/2987)|[CLI](/t/partitions-snap-3-0-cli/4061) ~ [UI](/t/partitions-snap-3-0-ui/4062)|
-Packages|[CLI](/t/partitions-deb-2-7-cli/2988) ~ [UI](/t/partitions-deb-2-7-ui/2989)|[CLI](/t/partitions-deb-2-8-cli/2990) ~ [UI](/t/partitions-deb-2-8-ui/2991)|[CLI](/t/partitions-deb-2-9-cli/2992) ~ [UI](/t/partitions-deb-2-9-ui/2993)|[CLI](/t/partitions-deb-3-0-cli/4063) ~ [UI](/t/partitions-deb-3-0-ui/4064)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/partitions-snap-2-9-cli/2986) ~ [UI](/t/partitions-snap-2-9-ui/2987)|[CLI](/t/partitions-snap-3-0-cli/4061) ~ [UI](/t/partitions-snap-3-0-ui/4062)|
+Packages|[CLI](/t/partitions-deb-2-9-cli/2992) ~ [UI](/t/partitions-deb-2-9-ui/2993)|[CLI](/t/partitions-deb-3-0-cli/4063) ~ [UI](/t/partitions-deb-3-0-ui/4064)|
 
 <!-- deb-2-7-cli
 As with block devices (see [Block devices](/t/block-devices/2352)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.

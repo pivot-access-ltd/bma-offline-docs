@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/interactive-search-snap-2-7-cli/2706) ~ [UI](/t/interactive-search-snap-2-7-ui/2707)|[CLI](/t/interactive-search-snap-2-8-cli/2708) ~ [UI](/t/interactive-search-snap-2-8-ui/2709)|[CLI](/t/interactive-search-snap-2-9-cli/2710) ~ [UI](/t/interactive-search-snap-2-9-ui/2711)|[CLI](/t/interactive-search-snap-3-0-cli/3961) ~ [UI](/t/interactive-search-snap-3-0-ui/3962)|
-Packages|[CLI](/t/interactive-search-deb-2-7-cli/2712) ~ [UI](/t/interactive-search-deb-2-7-ui/2713)|[CLI](/t/interactive-search-deb-2-8-cli/2714) ~ [UI](/t/interactive-search-deb-2-8-ui/2715)|[CLI](/t/interactive-search-deb-2-9-cli/2716) ~ [UI](/t/interactive-search-deb-2-9-ui/2717)|[CLI](/t/interactive-search-deb-3-0-cli/3963) ~ [UI](/t/interactive-search-deb-3-0-ui/3964)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/interactive-search-snap-2-9-cli/2710) ~ [UI](/t/interactive-search-snap-2-9-ui/2711)|[CLI](/t/interactive-search-snap-3-0-cli/3961) ~ [UI](/t/interactive-search-snap-3-0-ui/3962)|
+Packages|[CLI](/t/interactive-search-deb-2-9-cli/2716) ~ [UI](/t/interactive-search-deb-2-9-ui/2717)|[CLI](/t/interactive-search-deb-3-0-cli/3963) ~ [UI](/t/interactive-search-deb-3-0-ui/3964)|
 
 The Machines and Devices pages contain a powerful interactive search bar that lets you filter machines and devices.  This article is designed to help you understand how to use this resource. 
 

@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/whats-new-in-maas-snap-2-7-cli/4300) ~ [UI](/t/whats-new-in-maas-snap-2-7-ui/4301)|[CLI](/t/whats-new-in-maas-snap-2-8-cli/4298) ~ [UI](/t/whats-new-in-maas-snap-2-8-ui/4299)|[CLI](/t/whats-new-in-maas-snap-2-9-cli/4296) ~ [UI](/t/whats-new-in-maas-snap-2-9-ui/4297)|[CLI](/t/whats-new-in-maas-snap-3-0-cli/4181) ~ [UI](/t/whats-new-in-maas-snap-3-0-ui/4182)|
-Packages|[CLI](/t/whats-new-in-maas-deb-2-7-cli/4294) ~ [UI](/t/whats-new-in-maas-deb-2-7-ui/4295)|[CLI](/t/whats-new-in-maas-deb-2-8-cli/4292) ~ [UI](/t/whats-new-in-maas-deb-2-8-ui/4293)|[CLI](/t/whats-new-in-maas-deb-2-9-cli/4290) ~ [UI](/t/whats-new-in-maas-deb-2-9-ui/4291)|[CLI](/t/whats-new-in-maas-deb-3-0-cli/4289) ~ [UI](/t/whats-new-in-maas-deb-3-0-ui/4184)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/whats-new-in-maas-snap-2-9-cli/4296) ~ [UI](/t/whats-new-in-maas-snap-2-9-ui/4297)|[CLI](/t/whats-new-in-maas-snap-3-0-cli/4181) ~ [UI](/t/whats-new-in-maas-snap-3-0-ui/4182)|
+Packages|[CLI](/t/whats-new-in-maas-deb-2-9-cli/4290) ~ [UI](/t/whats-new-in-maas-deb-2-9-ui/4291)|[CLI](/t/whats-new-in-maas-deb-3-0-cli/4289) ~ [UI](/t/whats-new-in-maas-deb-3-0-ui/4184)|
 
 <!-- snap-2-7-cli snap-2-7-ui deb-2-7-cli deb-2-7-ui
 <h2>MAAS 2.7 release notes</h2>

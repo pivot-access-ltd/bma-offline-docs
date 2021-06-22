@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/maas-requirements-snap-2-7-cli/2874) ~ [UI](/t/maas-requirements-snap-2-7-ui/2875)|[CLI](/t/maas-requirements-snap-2-8-cli/2876) ~ [UI](/t/maas-requirements-snap-2-8-ui/2877)|[CLI](/t/maas-requirements-snap-2-9-cli/2878) ~ [UI](/t/maas-requirements-snap-2-9-ui/2879)|[CLI](/t/maas-requirements-snap-3-0-cli/4013) ~ [UI](/t/maas-requirements-snap-3-0-ui/4014)|
-Packages|[CLI](/t/maas-requirements-deb-2-7-cli/2880) ~ [UI](/t/maas-requirements-deb-2-7-ui/2881)|[CLI](/t/maas-requirements-deb-2-8-cli/2882) ~ [UI](/t/maas-requirements-deb-2-8-ui/2883)|[CLI](/t/maas-requirements-deb-2-9-cli/2884) ~ [UI](/t/maas-requirements-deb-2-9-ui/2885)|[CLI](/t/maas-requirements-deb-3-0-cli/4015) ~ [UI](/t/maas-requirements-deb-3-0-ui/4016)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/maas-requirements-snap-2-9-cli/2878) ~ [UI](/t/maas-requirements-snap-2-9-ui/2879)|[CLI](/t/maas-requirements-snap-3-0-cli/4013) ~ [UI](/t/maas-requirements-snap-3-0-ui/4014)|
+Packages|[CLI](/t/maas-requirements-deb-2-9-cli/2884) ~ [UI](/t/maas-requirements-deb-2-9-ui/2885)|[CLI](/t/maas-requirements-deb-3-0-cli/4015) ~ [UI](/t/maas-requirements-deb-3-0-ui/4016)|
 
 The minimum requirements for the machines that run MAAS vary widely depending on local implementation and usage.  Below, you will find resource estimates based on MAAS components and operating system (Ubuntu Server). We consider both a test configuration (for proof of concept) and a production environment.
 

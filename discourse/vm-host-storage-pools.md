@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/vm-host-storage-pools-snap-2-7-cli/3222) ~ [UI](/t/vm-host-storage-pools-snap-2-7-ui/3223)|[CLI](/t/vm-host-storage-pools-snap-2-8-cli/3224) ~ [UI](/t/vm-host-storage-pools-snap-2-8-ui/3225)|[CLI](/t/vm-host-storage-pools-snap-2-9-cli/3226) ~ [UI](/t/vm-host-storage-pools-snap-2-9-ui/3227)|[CLI](/t/vm-host-storage-pools-snap-3-0-cli/4169) ~ [UI](/t/vm-host-storage-pools-snap-3-0-ui/4170)|
-Packages|[CLI](/t/vm-host-storage-pools-deb-2-7-cli/3228) ~ [UI](/t/vm-host-storage-pools-deb-2-7-ui/3229)|[CLI](/t/vm-host-storage-pools-deb-2-8-cli/3230) ~ [UI](/t/vm-host-storage-pools-deb-2-8-ui/3231)|[CLI](/t/vm-host-storage-pools-deb-2-9-cli/3232) ~ [UI](/t/vm-host-storage-pools-deb-2-9-ui/3233)|[CLI](/t/vm-host-storage-pools-deb-3-0-cli/4171) ~ [UI](/t/vm-host-storage-pools-deb-3-0-ui/4172)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/vm-host-storage-pools-snap-2-9-cli/3226) ~ [UI](/t/vm-host-storage-pools-snap-2-9-ui/3227)|[CLI](/t/vm-host-storage-pools-snap-3-0-cli/4169) ~ [UI](/t/vm-host-storage-pools-snap-3-0-ui/4170)|
+Packages|[CLI](/t/vm-host-storage-pools-deb-2-9-cli/3232) ~ [UI](/t/vm-host-storage-pools-deb-2-9-ui/3233)|[CLI](/t/vm-host-storage-pools-deb-3-0-cli/4171) ~ [UI](/t/vm-host-storage-pools-deb-3-0-ui/4172)|
 
 "Storage pools” are storage resources managed by a VM host. A storage pool is a given amount of storage set aside for use by VMs. A pool can be organised into storage volumes, assigned to VMs as individual block devices. More information is available for both [libvirt](https://libvirt.org/storage.html) and [LXD](https://lxd.readthedocs.io/en/latest/storage/) storage pools.
 

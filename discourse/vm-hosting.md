@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/vm-hosting-snap-2-7-cli/2742) ~ [UI](/t/vm-hosting-snap-2-7-ui/2743)|[CLI](/t/vm-hosting-snap-2-8-cli/2744) ~ [UI](/t/vm-hosting-snap-2-8-ui/2745)|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|[CLI](/t/vm-hosting-snap-3-0-cli/4161) ~ [UI](/t/vm-hosting-snap-3-0-ui/4162)|
-Packages|[CLI](/t/vm-hosting-deb-2-7-cli/2748) ~ [UI](/t/vm-hosting-deb-2-7-ui/2749)|[CLI](/t/vm-hosting-deb-2-8-cli/2750) ~ [UI](/t/vm-hosting-deb-2-8-ui/2751)|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|[CLI](/t/vm-hosting-deb-3-0-cli/4163) ~ [UI](/t/vm-hosting-deb-3-0-ui/4164)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/vm-hosting-snap-2-9-cli/2746) ~ [UI](/t/vm-hosting-snap-2-9-ui/2747)|[CLI](/t/vm-hosting-snap-3-0-cli/4161) ~ [UI](/t/vm-hosting-snap-3-0-ui/4162)|
+Packages|[CLI](/t/vm-hosting-deb-2-9-cli/2752) ~ [UI](/t/vm-hosting-deb-2-9-ui/2753)|[CLI](/t/vm-hosting-deb-3-0-cli/4163) ~ [UI](/t/vm-hosting-deb-3-0-ui/4164)|
 
 <!-- snap-2-7-cli snap-2-7-ui deb-2-7-cli deb-2-7-ui
 MAAS VM hosts allow for the dynamic composition of nodes from a pool of available hardware resources (e.g. disk space, memory, cores).  You can create virtual machines (VMs) as needed within the limits of your resources, without concern for physical hardware.  MAAS currently supports VM hosts and VMs created via [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt).

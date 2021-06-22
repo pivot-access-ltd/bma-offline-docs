@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/ubuntu-kernels-snap-2-7-cli/3174) ~ [UI](/t/ubuntu-kernels-snap-2-7-ui/3175)|[CLI](/t/ubuntu-kernels-snap-2-8-cli/3176) ~ [UI](/t/ubuntu-kernels-snap-2-8-ui/3177)|[CLI](/t/ubuntu-kernels-snap-2-9-cli/3178) ~ [UI](/t/ubuntu-kernels-snap-2-9-ui/3179)|[CLI](/t/ubuntu-kernels-snap-3-0-cli/4137) ~ [UI](/t/ubuntu-kernels-snap-3-0-ui/4138)|
-Packages|[CLI](/t/ubuntu-kernels-deb-2-7-cli/3180) ~ [UI](/t/ubuntu-kernels-deb-2-7-ui/3181)|[CLI](/t/ubuntu-kernels-deb-2-8-cli/3182) ~ [UI](/t/ubuntu-kernels-deb-2-8-ui/3183)|[CLI](/t/ubuntu-kernels-deb-2-9-cli/3184) ~ [UI](/t/ubuntu-kernels-deb-2-9-ui/3185)|[CLI](/t/ubuntu-kernels-deb-3-0-cli/4139) ~ [UI](/t/ubuntu-kernels-deb-3-0-ui/4140)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/ubuntu-kernels-snap-2-9-cli/3178) ~ [UI](/t/ubuntu-kernels-snap-2-9-ui/3179)|[CLI](/t/ubuntu-kernels-snap-3-0-cli/4137) ~ [UI](/t/ubuntu-kernels-snap-3-0-ui/4138)|
+Packages|[CLI](/t/ubuntu-kernels-deb-2-9-cli/3184) ~ [UI](/t/ubuntu-kernels-deb-2-9-ui/3185)|[CLI](/t/ubuntu-kernels-deb-3-0-cli/4139) ~ [UI](/t/ubuntu-kernels-deb-3-0-ui/4140)|
 
 MAAS supports four types of kernels for its Ubuntu machines:
 

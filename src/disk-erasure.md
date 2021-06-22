@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/disk-erasure-snap-2-7-cli/2610) ~ [UI](/t/disk-erasure-snap-2-7-ui/2611)|[CLI](/t/disk-erasure-snap-2-8-cli/2612) ~ [UI](/t/disk-erasure-snap-2-8-ui/2613)|[CLI](/t/disk-erasure-snap-2-9-cli/2614) ~ [UI](/t/disk-erasure-snap-2-9-ui/2615)|[CLI](/t/disk-erasure-snap-3-0-cli/3921) ~ [UI](/t/disk-erasure-snap-3-0-ui/3922)|
-Packages|[CLI](/t/disk-erasure-deb-2-7-cli/2616) ~ [UI](/t/disk-erasure-deb-2-7-ui/2617)|[CLI](/t/disk-erasure-deb-2-8-cli/2618) ~ [UI](/t/disk-erasure-deb-2-8-ui/2619)|[CLI](/t/disk-erasure-deb-2-9-cli/2620) ~ [UI](/t/disk-erasure-deb-2-9-ui/2621)|[CLI](/t/disk-erasure-deb-3-0-cli/3923) ~ [UI](/t/disk-erasure-deb-3-0-ui/3924)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/disk-erasure-snap-2-9-cli/2614) ~ [UI](/t/disk-erasure-snap-2-9-ui/2615)|[CLI](/t/disk-erasure-snap-3-0-cli/3921) ~ [UI](/t/disk-erasure-snap-3-0-ui/3922)|
+Packages|[CLI](/t/disk-erasure-deb-2-9-cli/2620) ~ [UI](/t/disk-erasure-deb-2-9-ui/2621)|[CLI](/t/disk-erasure-deb-3-0-cli/3923) ~ [UI](/t/disk-erasure-deb-3-0-ui/3924)|
 
 Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/concepts-and-terms/785#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
 

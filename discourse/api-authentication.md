@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/api-authentication-snap-2-7-cli/2298) ~ [UI](/t/api-authentication-snap-2-7-ui/2299)|[CLI](/t/api-authentication-snap-2-8-cli/2300) ~ [UI](/t/api-authentication-snap-2-8-ui/2301)|[CLI](/t/api-authentication-snap-2-9-cli/2302) ~ [UI](/t/api-authentication-snap-2-9-ui/2303)|[CLI](/t/api-authentication-snap-3-0-cli/3825) ~ [UI](/t/api-authentication-snap-3-0-ui/3826)|
-Packages|[CLI](/t/api-authentication-deb-2-7-cli/2304) ~ [UI](/t/api-authentication-deb-2-7-ui/2305)|[CLI](/t/api-authentication-deb-2-8-cli/2306) ~ [UI](/t/api-authentication-deb-2-8-ui/2307)|[CLI](/t/api-authentication-deb-2-9-cli/2308) ~ [UI](/t/api-authentication-deb-2-9-ui/2309)|[CLI](/t/api-authentication-deb-3-0-cli/3827) ~ [UI](/t/api-authentication-deb-3-0-ui/3828)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/api-authentication-snap-2-9-cli/2302) ~ [UI](/t/api-authentication-snap-2-9-ui/2303)|[CLI](/t/api-authentication-snap-3-0-cli/3825) ~ [UI](/t/api-authentication-snap-3-0-ui/3826)|
+Packages|[CLI](/t/api-authentication-deb-2-9-cli/2308) ~ [UI](/t/api-authentication-deb-2-9-ui/2309)|[CLI](/t/api-authentication-deb-3-0-cli/3827) ~ [UI](/t/api-authentication-deb-3-0-ui/3828)|
 MAAS's API uses [OAuth](http://en.wikipedia.org/wiki/OAuth) as its authentication mechanism. This isn't third-party (3-legged) OAuth, so the process used is what's commonly referred to as 0-legged OAuth: the consumer accesses protected resources by submitting OAuth signed requests.
 
 Note that some API endpoints support unauthenticated requests (i.e. anonymous access). See the [API documentation](https://maas.io/docs/api) for details. 

@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/user-accounts-snap-2-7-cli/3198) ~ [UI](/t/user-accounts-snap-2-7-ui/3199)|[CLI](/t/user-accounts-snap-2-8-cli/3200) ~ [UI](/t/user-accounts-snap-2-8-ui/3201)|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|[CLI](/t/user-accounts-snap-3-0-cli/4145) ~ [UI](/t/user-accounts-snap-3-0-ui/4146)|
-Packages|[CLI](/t/user-accounts-deb-2-7-cli/3204) ~ [UI](/t/user-accounts-deb-2-7-ui/3205)|[CLI](/t/user-accounts-deb-2-8-cli/3206) ~ [UI](/t/user-accounts-deb-2-8-ui/3207)|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|[CLI](/t/user-accounts-deb-3-0-cli/4147) ~ [UI](/t/user-accounts-deb-3-0-ui/4148)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/user-accounts-snap-2-9-cli/3202) ~ [UI](/t/user-accounts-snap-2-9-ui/3203)|[CLI](/t/user-accounts-snap-3-0-cli/4145) ~ [UI](/t/user-accounts-snap-3-0-ui/4146)|
+Packages|[CLI](/t/user-accounts-deb-2-9-cli/3208) ~ [UI](/t/user-accounts-deb-2-9-ui/3209)|[CLI](/t/user-accounts-deb-3-0-cli/4147) ~ [UI](/t/user-accounts-deb-3-0-ui/4148)|
 
 Presumably, you have already created an administrative user, but MAAS can also have regular users (who log in to the interface or use the CLI). What users you create depends on how you intend to use MAAS.  An administrator can manage all aspects of MAAS, whereas a non-administrator user can perform a subset of tasks on machines they acquire and deploy.  MAAS limits the details a non-admin user can view, such as nodes allocated to other users. Also, non-admin users cannot access the global settings page in the web UI, nor any of the equivalent API calls from the command line.
 

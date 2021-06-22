@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/maas-communication-snap-2-7-cli/2826) ~ [UI](/t/maas-communication-snap-2-7-ui/2827)|[CLI](/t/maas-communication-snap-2-8-cli/2828) ~ [UI](/t/maas-communication-snap-2-8-ui/2829)|[CLI](/t/maas-communication-snap-2-9-cli/2830) ~ [UI](/t/maas-communication-snap-2-9-ui/2831)|[CLI](/t/maas-communication-snap-3-0-cli/3989) ~ [UI](/t/maas-communication-snap-3-0-ui/3990)|
-Packages|[CLI](/t/maas-communication-deb-2-7-cli/2832) ~ [UI](/t/maas-communication-deb-2-7-ui/2833)|[CLI](/t/maas-communication-deb-2-8-cli/2834) ~ [UI](/t/maas-communication-deb-2-8-ui/2835)|[CLI](/t/maas-communication-deb-2-9-cli/2836) ~ [UI](/t/maas-communication-deb-2-9-ui/2837)|[CLI](/t/maas-communication-deb-3-0-cli/3991) ~ [UI](/t/maas-communication-deb-3-0-ui/3992)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/maas-communication-snap-2-9-cli/2830) ~ [UI](/t/maas-communication-snap-2-9-ui/2831)|[CLI](/t/maas-communication-snap-3-0-cli/3989) ~ [UI](/t/maas-communication-snap-3-0-ui/3990)|
+Packages|[CLI](/t/maas-communication-deb-2-9-cli/2836) ~ [UI](/t/maas-communication-deb-2-9-ui/2837)|[CLI](/t/maas-communication-deb-3-0-cli/3991) ~ [UI](/t/maas-communication-deb-3-0-ui/3992)|
 
 <!-- deb-2-7-cli
 MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/2688) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.

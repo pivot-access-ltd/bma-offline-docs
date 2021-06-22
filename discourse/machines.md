@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/machines-snap-2-7-cli/2730) ~ [UI](/t/machines-snap-2-7-ui/2731)|[CLI](/t/machines-snap-2-8-cli/2732) ~ [UI](/t/machines-snap-2-8-ui/2733)|[CLI](/t/machines-snap-2-9-cli/2734) ~ [UI](/t/machines-snap-2-9-ui/2735)|[CLI](/t/machines-snap-3-0-cli/4029) ~ [UI](/t/machines-snap-3-0-ui/4030)|
-Packages|[CLI](/t/machines-deb-2-7-cli/2736) ~ [UI](/t/machines-deb-2-7-ui/2737)|[CLI](/t/machines-deb-2-8-cli/2738) ~ [UI](/t/machines-deb-2-8-ui/2739)|[CLI](/t/machines-deb-2-9-cli/2740) ~ [UI](/t/machines-deb-2-9-ui/2741)|[CLI](/t/machines-deb-3-0-cli/4031) ~ [UI](/t/machines-deb-3-0-ui/4032)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/machines-snap-2-9-cli/2734) ~ [UI](/t/machines-snap-2-9-ui/2735)|[CLI](/t/machines-snap-3-0-cli/4029) ~ [UI](/t/machines-snap-3-0-ui/4030)|
+Packages|[CLI](/t/machines-deb-2-9-cli/2740) ~ [UI](/t/machines-deb-2-9-ui/2741)|[CLI](/t/machines-deb-3-0-cli/4031) ~ [UI](/t/machines-deb-3-0-ui/4032)|
 
 Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers. MAAS manages their transit through a life-cycle, from adding and enlistment, through commissioning, allocation, and deployment, finally being released back to the pool, or retired altogether.  You can move them around, create redundant versions (even in other geographies you can access), and basically rearrange them to the extent that your network allows.
 

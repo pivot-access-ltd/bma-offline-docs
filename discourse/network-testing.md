@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/network-testing-snap-2-7-cli/2934) ~ [UI](/t/network-testing-snap-2-7-ui/2935)|[CLI](/t/network-testing-snap-2-8-cli/2936) ~ [UI](/t/network-testing-snap-2-8-ui/2937)|[CLI](/t/network-testing-snap-2-9-cli/2938) ~ [UI](/t/network-testing-snap-2-9-ui/2939)|[CLI](/t/network-testing-snap-3-0-cli/4049) ~ [UI](/t/network-testing-snap-3-0-ui/4050)|
-Packages|[CLI](/t/network-testing-deb-2-7-cli/2940) ~ [UI](/t/network-testing-deb-2-7-ui/2941)|[CLI](/t/network-testing-deb-2-8-cli/2942) ~ [UI](/t/network-testing-deb-2-8-ui/2943)|[CLI](/t/network-testing-deb-2-9-cli/2944) ~ [UI](/t/network-testing-deb-2-9-ui/2945)|[CLI](/t/network-testing-deb-3-0-cli/4051) ~ [UI](/t/network-testing-deb-3-0-ui/4052)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/network-testing-snap-2-9-cli/2938) ~ [UI](/t/network-testing-snap-2-9-ui/2939)|[CLI](/t/network-testing-snap-3-0-cli/4049) ~ [UI](/t/network-testing-snap-3-0-ui/4050)|
+Packages|[CLI](/t/network-testing-deb-2-9-cli/2944) ~ [UI](/t/network-testing-deb-2-9-ui/2945)|[CLI](/t/network-testing-deb-3-0-cli/4051) ~ [UI](/t/network-testing-deb-3-0-ui/4052)|
 
 MAAS provides a comprehensive suite of network and link testing capabilities.  MAAS can check whether or not links are connected, detect slow links, and report link and interface speeds via UI or API.  In addition, you can test Internet connectivity against a user-provided list of URLs or IP addresses.  Bonded NICS will be separated during this testing, so that each side of a redundant interface is fully evaluated.
 

@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/supported-versions-snap-2-7-cli/4347) ~ [UI](/t/supported-versions-snap-2-7-ui/4346)|[CLI](/t/supported-versions-snap-2-8-cli/4349) ~ [UI](/t/supported-versions-snap-2-8-ui/4348)|[CLI](/t/supported-versions-snap-2-9-cli/4351) ~ [UI](/t/supported-versions-snap-2-9-ui/4350)|[CLI](/t/supported-versions-snap-3-0-cli/4113) ~ [UI](/t/supported-versions-snap-3-0-ui/4114)|
-Packages|[CLI](/t/supported-versions-deb-2-7-cli/4353) ~ [UI](/t/supported-versions-deb-2-7-ui/4352)|[CLI](/t/supported-versions-deb-2-8-cli/4355) ~ [UI](/t/supported-versions-deb-2-8-ui/4354)|[CLI](/t/supported-versions-deb-2-9-cli/4357) ~ [UI](/t/supported-versions-deb-2-9-ui/4356)|[CLI](/t/supported-versions-deb-3-0-cli/4115) ~ [UI](/t/supported-versions-deb-3-0-ui/4116)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/supported-versions-snap-2-9-cli/4351) ~ [UI](/t/supported-versions-snap-2-9-ui/4350)|[CLI](/t/supported-versions-snap-3-0-cli/4113) ~ [UI](/t/supported-versions-snap-3-0-ui/4114)|
+Packages|[CLI](/t/supported-versions-deb-2-9-cli/4357) ~ [UI](/t/supported-versions-deb-2-9-ui/4356)|[CLI](/t/supported-versions-deb-3-0-cli/4115) ~ [UI](/t/supported-versions-deb-3-0-ui/4116)|
 This document explains what versions of MAAS are supported, and how they are supported.
 
 ## Support matrix

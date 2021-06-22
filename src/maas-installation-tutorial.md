@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/maas-installation-tutorial-snap-2-7-cli/3318) ~ [UI](/t/maas-installation-tutorial-snap-2-7-ui/3319)|[CLI](/t/maas-installation-tutorial-snap-2-8-cli/3320) ~ [UI](/t/maas-installation-tutorial-snap-2-8-ui/3321)|[CLI](/t/maas-installation-tutorial-snap-2-9-cli/3322) ~ [UI](/t/maas-installation-tutorial-snap-2-9-ui/3323)|[CLI](/t/maas-installation-tutorial-snap-3-0-cli/4001) ~ [UI](/t/maas-installation-tutorial-snap-3-0-ui/4002)|
-Packages|[CLI](/t/maas-installation-tutorial-deb-2-7-cli/4545) ~ [UI](/t/maas-installation-tutorial-deb-2-7-ui/4541)|[CLI](/t/maas-installation-tutorial-deb-2-8-cli/4546) ~ [UI](/t/maas-installation-tutorial-deb-2-8-ui/4542)|[CLI](/t/maas-installation-tutorial-deb-2-9-cli/4547) ~ [UI](/t/maas-installation-tutorial-deb-2-9-ui/4543)|[CLI](/t/maas-installation-tutorial-deb-3-0-cli/4548) ~ [UI](/t/maas-installation-tutorial-deb-3-0-ui/4544)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/maas-installation-tutorial-snap-2-9-cli/3322) ~ [UI](/t/maas-installation-tutorial-snap-2-9-ui/3323)|[CLI](/t/maas-installation-tutorial-snap-3-0-cli/4001) ~ [UI](/t/maas-installation-tutorial-snap-3-0-ui/4002)|
+Packages|[CLI](/t/maas-installation-tutorial-deb-2-9-cli/4547) ~ [UI](/t/maas-installation-tutorial-deb-2-9-ui/4543)|[CLI](/t/maas-installation-tutorial-deb-3-0-cli/4548) ~ [UI](/t/maas-installation-tutorial-deb-3-0-ui/4544)|
 
 This is the placeholder for the MAAS installation tutorial.
 

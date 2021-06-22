@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/tags-and-annotations-snap-2-7-cli/2886) ~ [UI](/t/tags-and-annotations-snap-2-7-ui/2887)|[CLI](/t/tags-and-annotations-snap-2-8-cli/2888) ~ [UI](/t/tags-and-annotations-snap-2-8-ui/2889)|[CLI](/t/tags-and-annotations-snap-2-9-cli/2890) ~ [UI](/t/tags-and-annotations-snap-2-9-ui/2891)|[CLI](/t/tags-and-annotations-snap-3-0-cli/4021) ~ [UI](/t/tags-and-annotations-snap-3-0-ui/4022)|
-Packages|[CLI](/t/tags-and-annotations-deb-2-7-cli/2892) ~ [UI](/t/tags-and-annotations-deb-2-7-ui/2893)|[CLI](/t/tags-and-annotations-deb-2-8-cli/2894) ~ [UI](/t/tags-and-annotations-deb-2-8-ui/2895)|[CLI](/t/tags-and-annotations-deb-2-9-cli/2896) ~ [UI](/t/tags-and-annotations-deb-2-9-ui/2897)|[CLI](/t/tags-and-annotations-deb-3-0-cli/4023) ~ [UI](/t/tags-and-annotations-deb-3-0-ui/4024)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/tags-and-annotations-snap-2-9-cli/2890) ~ [UI](/t/tags-and-annotations-snap-2-9-ui/2891)|[CLI](/t/tags-and-annotations-snap-3-0-cli/4021) ~ [UI](/t/tags-and-annotations-snap-3-0-ui/4022)|
+Packages|[CLI](/t/tags-and-annotations-deb-2-9-cli/2896) ~ [UI](/t/tags-and-annotations-deb-2-9-ui/2897)|[CLI](/t/tags-and-annotations-deb-3-0-cli/4023) ~ [UI](/t/tags-and-annotations-deb-3-0-ui/4024)|
 
 Tags are short, descriptive, searchable words that can be applied to various MAAS objects, including:
 

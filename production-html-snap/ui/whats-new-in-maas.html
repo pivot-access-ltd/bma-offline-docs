@@ -429,7 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>Whats new in MAAS</h1><p>||2.7|2.8|2.9|3.0|</p>
+      <h1>Whats new in MAAS</h1><p>||2.9|3.0|</p>
 <!-- snap-2-7-cli snap-2-7-ui deb-2-7-cli deb-2-7-ui
 <h2>MAAS 2.7 release notes</h2>
 
@@ -1008,10 +1008,10 @@ We've also fixed number of bugs (see the [list in Launchpad](https://bugs.launch
 * **Leftover lock files may be present under some conditions:** Even if you purge an old MAAS Debian package, it can leave lock files in `/run/lock/maas*`.  This can cause issues if you later reinstall MAAS, and the previous MAAS user UID has been reassigned.  At that point, MAAS can't remove those files and create new ones.  If this occurs, it is easily fixed by removing those files manually before reinstalling.
 snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
 
-<h3>MAAS 3.0 RC1 release notes</h3>
+<h3>MAAS 3.0 release notes</h3>
 
-<p>We are happy to announce that the release of MAAS 3.0 Beta RC1 (release candidate 1) is imminent. This release provides new features, along with critical and high-priority <a href="#heading--maas-3-beta-bug-fixes">bug fixes</a>.</p>
-<h4>Cumulative summary of new features in MAAS 3.0 Beta</h4>
+<p>We are happy to announce the release of MAAS 3.0. This release provides new features, along with critical and high-priority <a href="#heading--maas-3-bug-fixes">bug fixes</a>.</p>
+<h4>Cumulative summary of new features in MAAS 3.0</h4>
 <ol>
 <li><a href="#heading--pci-usb-devices">PCI and USB devices are now modelled in MAAS</a></li>
 <li><a href="#heading--ibm-z-dpm">IBM Z DPM partition support</a></li>
@@ -1026,22 +1026,22 @@ snap-2-8-cli snap-2-8-ui deb-2-8-cli deb-2-8-ui -->
 <li><a href="#heading--log-consolidation">Consolidation of logs and events</a></li>
 </ol>
 <!-- deb-3-0-ui deb-3-0-cli
-The Beta can be installed by adding the `3.0-next` PPA:
+MAAS 3.0 can be installed by adding the `3.0` PPA:
 
-<pre><code>sudo add-apt-repository ppa:maas/3.0-next
+<pre><code>sudo add-apt-repository ppa:maas/3.0
 sudo apt update
 sudo apt install maas
 </code></pre>
 
 
-You can then either install MAAS 3.0 Beta5 fresh (recommended) with:
+You can then either install MAAS 3.0 fresh (recommended) with:
 
 
 <pre><code>sudo apt-get -y install maas
 </code></pre>
 
 
-Or, if you prefer to upgrade (remember, this is a Beta), you can do so with:
+Or, if you prefer to upgrade, you can do so with:
 
 
 <pre><code>sudo apt upgrade maas
@@ -1052,17 +1052,15 @@ At this point, you may proceed with a normal installation.
 
  deb-3-0-cli deb-3-0-ui -->
 
-<p>The Beta can be installed fresh (recommended) with:</p>
-<pre><code>sudo snap install --channel=3.0/beta maas
+<p>MAAS 3.0 can be installed fresh (recommended) with:</p>
+<pre><code>sudo snap install --channel=3.0/stable maas
 </code></pre>
 
-<p><strong>NOTE:</strong> 
-Installation instructions for the MAAS RC1 release are pending imminent release of the bits.</p>
 <p>At this point, you may proceed with a normal installation.</p>
-<p>NOTE that this is currently a BETA release, so there will be bugs, instabilities, and missing or incomplete features.  As such, we invite you to thoroughly test this release and provide feedback.  Please remember to <a href="https://bugs.launchpad.net/maas/+filebug">file bugs</a> as you find them, and please feel free to interact with the developers on <a href="https://discourse.maas.io/">discourse</a>.</p>
 <h2>Significant changes</h2>
 
 <p>With the advent of MAAS 3.0, we are removing support for RSD pods.  Registered pods and their machines will be removed by MAAS upon upgrading to MAAS 3.0.</p>
+<p>Note that new features are categorized by the level of release at which they became accessible to users.</p>
 <h2>New features in MAAS 3.0 RC1</h2>
 
 <h3 id="heading--log-consolidation">Consolidation of logs and events</h3>
@@ -1208,12 +1206,113 @@ $ maas $PROFILE node read $SYSTEM_ID
 
 <p>In MAAS 3.0, a fixed status bar has been added to the bottom of the screen, which will always display the MAAS name and version on the left.  The right side of the status bar is intended to show contextual data, depending on the UI panel currently displayed. For now, the only data shown is a “last commissioned” timestamp when the user is on a machine details page:</p>
 <p><a href="images/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png" target = "_blank"><img src="images/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png"></a></a></p>
-<h2 id="heading--maas-3-beta-bug-fixes">MAAS 3.0 bug fixes</h2>
+<h2 id="heading--maas-3-bug-fixes">MAAS 3.0 bug fixes</h2>
 
 <p>MAAS 3.0 incorporates a large number of bug fixes, summarised in the sections below. Please feel free to validate these fixes at your convenience and give us feedback if anything doesn&rsquo;t seem to work as presented in the bug request.</p>
 <p>One particular bug, <a href="https://bugs.launchpad.net/maas/+bug/1916860">#1916860</a>, involves failures in the IPMI cipher suite in MAAS 2.9.2 and up, on the Lenovo x3650 M5 (and others).  This particular bug is a not a MAAS bug, but a firmware issue with the subject machines.  While the MAAS team can&rsquo;t fix this (hence the assignment of &ldquo;Won&rsquo;t Fix&rdquo;), the team did provide a easy <a href="https://bugs.launchpad.net/maas/+bug/1916860/comments/27">workaround</a> which helps circumvent this issue.</p>
-<h3 id="heading--maas-3-rc-1-bug-fixes">MAAS 3.0 RC1 bug fixes</h3>
+<h3 id="heading--maas-3-0-bug-fixes">MAAS 3.0 bug fixes</h3>
 
+<p>Here are the bugs that were &lsquo;Fix Released&rsquo; for the MAAS 3.0 release:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Number</th>
+<th align="left">Description</th>
+<th align="left">Importance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1932136">#1932136</a></td>
+<td align="left">interface with a warning is not configured properly</td>
+<td align="left">Critical</td>
+</tr>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1896771">#1896771</a></td>
+<td align="left">interfaces that are not connected are detected as &lsquo;connected to slow interface&rsquo;</td>
+<td align="left">Medium</td>
+</tr>
+</tbody>
+</table>
+<h3 id="heading--maas-3-rc-2-bug-fixes">MAAS 3.0 RC2 bug fixes</h3>
+
+<p>Here are the bugs that have been &lsquo;Fix Released&rsquo; in MAAS 3.0 RC2:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Number</th>
+<th align="left">Description</th>
+<th align="left">Importance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1929552">#1929552</a></td>
+<td align="left">Deb-based controller fails to run machine-resources</td>
+<td align="left">Critical</td>
+</tr>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1929576">#1929576</a></td>
+<td align="left">Machines fail to commission using the 3.0 snap due to possible? DNS issue</td>
+<td align="left">Critical</td>
+</tr>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1930227">#1930227</a></td>
+<td align="left">Failure to commission when interfaces has a /32 IP</td>
+<td align="left">Critical</td>
+</tr>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1930554">#1930554</a></td>
+<td align="left">vm-host CLI command is now named vmhosts</td>
+<td align="left">Critical</td>
+</tr>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1930587">#1930587</a></td>
+<td align="left">Different disks with same LUN detected as multipath</td>
+<td align="left">Critical</td>
+</tr>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1931215">#1931215</a></td>
+<td align="left">[.0~rc2-10023 testing] two IPs assigned to one interface</td>
+<td align="left">Critical</td>
+</tr>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1931838">#1931838</a></td>
+<td align="left">Reverse DNS lookup fails for subnets smaller than /24</td>
+<td align="left">Critical</td>
+</tr>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1835292">#1835292</a></td>
+<td align="left">UI should add button to download curtin-logs.tar on deployment failure MAAS</td>
+<td align="left">High</td>
+</tr>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1908552">#1908552</a></td>
+<td align="left">maas init fails; &lsquo;relation &ldquo;maasserver_routable_pairs&rdquo; does not exist&rsquo;</td>
+<td align="left">High</td>
+</tr>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1929086">#1929086</a></td>
+<td align="left">LXD VM hosts can&rsquo;t be refreshed if VLANs interfaces aren&rsquo;t named $parent.$vid</td>
+<td align="left">High</td>
+</tr>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1929643">#1929643</a></td>
+<td align="left">MAAS often fails and and returns a Pickled object if request header is set to Accept: <em>/</em></td>
+<td align="left">Medium</td>
+</tr>
+<tr>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1924820">#1924820</a></td>
+<td align="left">Trying to edit a disconnected NIC, then cancelling the edit and connecting the NIC via its drop-down menu, many drop-down menu options then disappear</td>
+<td align="left">Undecided</td>
+</tr>
+<tr>
+<td align="left"><h3 id="heading--maas-3-rc-1-bug-fixes">MAAS 3.0 RC1 bug fixes</h3></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 <p>Here are the bugs that have been &lsquo;Fix Released&rsquo; in MAAS 3.0 RC1:</p>
 <table>
 <thead>

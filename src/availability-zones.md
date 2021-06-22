@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/availability-zones-snap-2-7-cli/2322) ~ [UI](/t/availability-zones-snap-2-7-ui/2323)|[CLI](/t/availability-zones-snap-2-8-cli/2324) ~ [UI](/t/availability-zones-snap-2-8-ui/2325)|[CLI](/t/availability-zones-snap-2-9-cli/2326) ~ [UI](/t/availability-zones-snap-2-9-ui/2327)|[CLI](/t/availability-zones-snap-3-0-cli/3833) ~ [UI](/t/availability-zones-snap-3-0-ui/3834)|
-Packages|[CLI](/t/availability-zones-deb-2-7-cli/2328) ~ [UI](/t/availability-zones-deb-2-7-ui/2329)|[CLI](/t/availability-zones-deb-2-8-cli/2330) ~ [UI](/t/availability-zones-deb-2-8-ui/2331)|[CLI](/t/availability-zones-deb-2-9-cli/2332) ~ [UI](/t/availability-zones-deb-2-9-ui/2333)|[CLI](/t/availability-zones-deb-3-0-cli/3835) ~ [UI](/t/availability-zones-deb-3-0-ui/3836)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/availability-zones-snap-2-9-cli/2326) ~ [UI](/t/availability-zones-snap-2-9-ui/2327)|[CLI](/t/availability-zones-snap-3-0-cli/3833) ~ [UI](/t/availability-zones-snap-3-0-ui/3834)|
+Packages|[CLI](/t/availability-zones-deb-2-9-cli/2332) ~ [UI](/t/availability-zones-deb-2-9-ui/2333)|[CLI](/t/availability-zones-deb-3-0-cli/3835) ~ [UI](/t/availability-zones-deb-3-0-ui/3836)|
 
 <!-- deb-2-7-cli
 An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](/t/zone-examples/3276) for more details.

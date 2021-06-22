@@ -1,6 +1,6 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Packages|[CLI](/t/package-repositories-deb-2-7-cli/2976) ~ [UI](/t/package-repositories-deb-2-7-ui/2977)|[CLI](/t/package-repositories-deb-2-8-cli/2978) ~ [UI](/t/package-repositories-deb-2-8-ui/2979)|[CLI](/t/package-repositories-deb-2-9-cli/2980) ~ [UI](/t/package-repositories-deb-2-9-ui/2981)|[CLI](/t/package-repositories-deb-3-0-cli/4059) ~ [UI](/t/package-repositories-deb-3-0-ui/4060)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Packages|[CLI](/t/package-repositories-deb-2-9-cli/2980) ~ [UI](/t/package-repositories-deb-2-9-ui/2981)|[CLI](/t/package-repositories-deb-3-0-cli/4059) ~ [UI](/t/package-repositories-deb-3-0-ui/4060)|
 
 Package repositories managed within MAAS can be of two types:
 

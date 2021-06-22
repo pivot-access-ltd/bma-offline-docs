@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/managing-dhcp-snap-2-7-cli/2898) ~ [UI](/t/managing-dhcp-snap-2-7-ui/2899)|[CLI](/t/managing-dhcp-snap-2-8-cli/2900) ~ [UI](/t/managing-dhcp-snap-2-8-ui/2901)|[CLI](/t/managing-dhcp-snap-2-9-cli/2902) ~ [UI](/t/managing-dhcp-snap-2-9-ui/2903)|[CLI](/t/managing-dhcp-snap-3-0-cli/4033) ~ [UI](/t/managing-dhcp-snap-3-0-ui/4034)|
-Packages|[CLI](/t/managing-dhcp-deb-2-7-cli/2904) ~ [UI](/t/managing-dhcp-deb-2-7-ui/2905)|[CLI](/t/managing-dhcp-deb-2-8-cli/2906) ~ [UI](/t/managing-dhcp-deb-2-8-ui/2907)|[CLI](/t/managing-dhcp-deb-2-9-cli/2908) ~ [UI](/t/managing-dhcp-deb-2-9-ui/2909)|[CLI](/t/managing-dhcp-deb-3-0-cli/4035) ~ [UI](/t/managing-dhcp-deb-3-0-ui/4036)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/managing-dhcp-snap-2-9-cli/2902) ~ [UI](/t/managing-dhcp-snap-2-9-ui/2903)|[CLI](/t/managing-dhcp-snap-3-0-cli/4033) ~ [UI](/t/managing-dhcp-snap-3-0-ui/4034)|
+Packages|[CLI](/t/managing-dhcp-deb-2-9-cli/2908) ~ [UI](/t/managing-dhcp-deb-2-9-ui/2909)|[CLI](/t/managing-dhcp-deb-3-0-cli/4035) ~ [UI](/t/managing-dhcp-deb-3-0-ui/4036)|
 
 MAAS enlists and commissions machines through the use of its DHCP server running on an untagged VLAN. Although this MAAS-managed DHCP can also be part of the deploy phase, an external DHCP server can optionally be used instead for this purpose. If MAAS detects an external DHCP server, it will display it on the rack controller's page, accessible by selecting 'Controllers' from the top menu in the web UI.
 

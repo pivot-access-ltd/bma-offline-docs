@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/high-availability-snap-2-7-cli/2682) ~ [UI](/t/high-availability-snap-2-7-ui/2683)|[CLI](/t/high-availability-snap-2-8-cli/2684) ~ [UI](/t/high-availability-snap-2-8-ui/2685)|[CLI](/t/high-availability-snap-2-9-cli/2686) ~ [UI](/t/high-availability-snap-2-9-ui/2687)|[CLI](/t/high-availability-snap-3-0-cli/3945) ~ [UI](/t/high-availability-snap-3-0-ui/3946)|
-Packages|[CLI](/t/high-availability-deb-2-7-cli/2688) ~ [UI](/t/high-availability-deb-2-7-ui/2689)|[CLI](/t/high-availability-deb-2-8-cli/2690) ~ [UI](/t/high-availability-deb-2-8-ui/2691)|[CLI](/t/high-availability-deb-2-9-cli/2692) ~ [UI](/t/high-availability-deb-2-9-ui/2693)|[CLI](/t/high-availability-deb-3-0-cli/3947) ~ [UI](/t/high-availability-deb-3-0-ui/3948)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/high-availability-snap-2-9-cli/2686) ~ [UI](/t/high-availability-snap-2-9-ui/2687)|[CLI](/t/high-availability-snap-3-0-cli/3945) ~ [UI](/t/high-availability-snap-3-0-ui/3946)|
+Packages|[CLI](/t/high-availability-deb-2-9-cli/2692) ~ [UI](/t/high-availability-deb-2-9-ui/2693)|[CLI](/t/high-availability-deb-3-0-cli/3947) ~ [UI](/t/high-availability-deb-3-0-ui/3948)|
 
 This page describes how to provide high availability (HA) for MAAS at both region and rack levels.  In the context of MAAS, there are four types of HA:
 

@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/commissioning-logs-snap-2-7-cli/2490) ~ [UI](/t/commissioning-logs-snap-2-7-ui/2491)|[CLI](/t/commissioning-logs-snap-2-8-cli/2492) ~ [UI](/t/commissioning-logs-snap-2-8-ui/2493)|[CLI](/t/commissioning-logs-snap-2-9-cli/2494) ~ [UI](/t/commissioning-logs-snap-2-9-ui/2495)|[CLI](/t/commissioning-logs-snap-3-0-cli/3869) ~ [UI](/t/commissioning-logs-snap-3-0-ui/3870)|
-Packages|[CLI](/t/commissioning-logs-deb-2-7-cli/2496) ~ [UI](/t/commissioning-logs-deb-2-7-ui/2497)|[CLI](/t/commissioning-logs-deb-2-8-cli/2498) ~ [UI](/t/commissioning-logs-deb-2-8-ui/2499)|[CLI](/t/commissioning-logs-deb-2-9-cli/2500) ~ [UI](/t/commissioning-logs-deb-2-9-ui/2501)|[CLI](/t/commissioning-logs-deb-3-0-cli/3871) ~ [UI](/t/commissioning-logs-deb-3-0-ui/3872)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/commissioning-logs-snap-2-9-cli/2494) ~ [UI](/t/commissioning-logs-snap-2-9-ui/2495)|[CLI](/t/commissioning-logs-snap-3-0-cli/3869) ~ [UI](/t/commissioning-logs-snap-3-0-ui/3870)|
+Packages|[CLI](/t/commissioning-logs-deb-2-9-cli/2500) ~ [UI](/t/commissioning-logs-deb-2-9-ui/2501)|[CLI](/t/commissioning-logs-deb-3-0-cli/3871) ~ [UI](/t/commissioning-logs-deb-3-0-ui/3872)|
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 The command line allows you to retrieve the verbatim logs of commissioning script runs, including those that are currently in progress.

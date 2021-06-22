@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/configuring-tls-encryption-snap-2-7-cli/2538) ~ [UI](/t/configuring-tls-encryption-snap-2-7-ui/2539)|[CLI](/t/configuring-tls-encryption-snap-2-8-cli/2540) ~ [UI](/t/configuring-tls-encryption-snap-2-8-ui/2541)|[CLI](/t/configuring-tls-encryption-snap-2-9-cli/2542) ~ [UI](/t/configuring-tls-encryption-snap-2-9-ui/2543)|[CLI](/t/configuring-tls-encryption-snap-3-0-cli/3889) ~ [UI](/t/configuring-tls-encryption-snap-3-0-ui/3890)|
-Packages|[CLI](/t/configuring-tls-encryption-deb-2-7-cli/2544) ~ [UI](/t/configuring-tls-encryption-deb-2-7-ui/2545)|[CLI](/t/configuring-tls-encryption-deb-2-8-cli/2546) ~ [UI](/t/configuring-tls-encryption-deb-2-8-ui/2547)|[CLI](/t/configuring-tls-encryption-deb-2-9-cli/2548) ~ [UI](/t/configuring-tls-encryption-deb-2-9-ui/2549)|[CLI](/t/configuring-tls-encryption-deb-3-0-cli/3891) ~ [UI](/t/configuring-tls-encryption-deb-3-0-ui/3892)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/configuring-tls-encryption-snap-2-9-cli/2542) ~ [UI](/t/configuring-tls-encryption-snap-2-9-ui/2543)|[CLI](/t/configuring-tls-encryption-snap-3-0-cli/3889) ~ [UI](/t/configuring-tls-encryption-snap-3-0-ui/3890)|
+Packages|[CLI](/t/configuring-tls-encryption-deb-2-9-cli/2548) ~ [UI](/t/configuring-tls-encryption-deb-2-9-ui/2549)|[CLI](/t/configuring-tls-encryption-deb-3-0-cli/3891) ~ [UI](/t/configuring-tls-encryption-deb-3-0-ui/3892)|
 
 <!-- deb-2-7-cli
 MAAS doesn't support TLS encryption natively.  If you are not interested in [setting up an HAProxy](/t/high-availability/2688#heading--load-balancing-with-haproxy-optional), you can enable TLS independently in the web server software (e.g. Apache, Nginx) which users access directly.  The examples below explain how to create this configuration.

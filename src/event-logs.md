@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/event-logs-snap-2-7-cli/3382) ~ [UI](/t/event-logs-snap-2-7-ui/3383)|[CLI](/t/event-logs-snap-2-8-cli/3384) ~ [UI](/t/event-logs-snap-2-8-ui/3385)|[CLI](/t/event-logs-snap-2-9-cli/3386) ~ [UI](/t/event-logs-snap-2-9-ui/3387)|[CLI](/t/event-logs-snap-3-0-cli/3925) ~ [UI](/t/event-logs-snap-3-0-ui/3926)|
-Packages|[CLI](/t/event-logs-deb-2-7-cli/3388) ~ [UI](/t/event-logs-deb-2-7-ui/3389)|[CLI](/t/event-logs-deb-2-8-cli/3390) ~ [UI](/t/event-logs-deb-2-8-ui/3391)|[CLI](/t/event-logs-deb-2-9-cli/3393) ~ [UI](/t/event-logs-deb-2-9-ui/3392)|[CLI](/t/event-logs-deb-3-0-cli/3927) ~ [UI](/t/event-logs-deb-3-0-ui/3928)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/event-logs-snap-2-9-cli/3386) ~ [UI](/t/event-logs-snap-2-9-ui/3387)|[CLI](/t/event-logs-snap-3-0-cli/3925) ~ [UI](/t/event-logs-snap-3-0-ui/3926)|
+Packages|[CLI](/t/event-logs-deb-2-9-cli/3393) ~ [UI](/t/event-logs-deb-2-9-ui/3392)|[CLI](/t/event-logs-deb-3-0-cli/3927) ~ [UI](/t/event-logs-deb-3-0-ui/3928)|
 
 The events log tracks state changes and the execution of basic configuration steps, serving as a timeline for your MAAS machines.  A simple view of the events log might look something like this:
 

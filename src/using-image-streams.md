@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/using-image-streams-snap-2-7-cli/4324) ~ [UI](/t/using-image-streams-snap-2-7-ui/4325)|[CLI](/t/using-image-streams-snap-2-8-cli/4326) ~ [UI](/t/using-image-streams-snap-2-8-ui/4327)|[CLI](/t/using-image-streams-snap-2-9-cli/4328) ~ [UI](/t/using-image-streams-snap-2-9-ui/4329)|[CLI](/t/using-image-streams-snap-3-0-cli/4149) ~ [UI](/t/using-image-streams-snap-3-0-ui/4150)|
-Packages|[CLI](/t/using-image-streams-deb-2-7-cli/4330) ~ [UI](/t/using-image-streams-deb-2-7-ui/4331)|[CLI](/t/using-image-streams-deb-2-8-cli/4332) ~ [UI](/t/using-image-streams-deb-2-8-ui/4333)|[CLI](/t/using-image-streams-deb-2-9-cli/4334) ~ [UI](/t/using-image-streams-deb-2-9-ui/4335)|[CLI](/t/using-image-streams-deb-3-0-cli/4151) ~ [UI](/t/using-image-streams-deb-3-0-ui/4152)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/using-image-streams-snap-2-9-cli/4328) ~ [UI](/t/using-image-streams-snap-2-9-ui/4329)|[CLI](/t/using-image-streams-snap-3-0-cli/4149) ~ [UI](/t/using-image-streams-snap-3-0-ui/4150)|
+Packages|[CLI](/t/using-image-streams-deb-2-9-cli/4334) ~ [UI](/t/using-image-streams-deb-2-9-ui/4335)|[CLI](/t/using-image-streams-deb-3-0-cli/4151) ~ [UI](/t/using-image-streams-deb-3-0-ui/4152)|
 Canonical provides two SimpleStreams for MAAS images: candidate and stable. Both streams contain Ubuntu images, CentOS images, bootloaders extracted from the Ubuntu archive, and release notifications. Either stream can be used in any version of MAAS greater than 2.1, but not all images are supported in older versions.
 
 #### Five questions you may have:

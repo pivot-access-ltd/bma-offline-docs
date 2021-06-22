@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/commissioning-logs-snap-2-7-cli/2490) ~ [UI](/t/commissioning-logs-snap-2-7-ui/2491)|[CLI](/t/commissioning-logs-snap-2-8-cli/2492) ~ [UI](/t/commissioning-logs-snap-2-8-ui/2493)|[CLI](/t/commissioning-logs-snap-2-9-cli/2494) ~ [UI](/t/commissioning-logs-snap-2-9-ui/2495)|[CLI](/t/commissioning-logs-snap-3-0-cli/3869) ~ [UI](/t/commissioning-logs-snap-3-0-ui/3870)|
-Packages|[CLI](/t/commissioning-logs-deb-2-7-cli/2496) ~ [UI](/t/commissioning-logs-deb-2-7-ui/2497)|[CLI](/t/commissioning-logs-deb-2-8-cli/2498) ~ [UI](/t/commissioning-logs-deb-2-8-ui/2499)|[CLI](/t/commissioning-logs-deb-2-9-cli/2500) ~ [UI](/t/commissioning-logs-deb-2-9-ui/2501)|[CLI](/t/commissioning-logs-deb-3-0-cli/3871) ~ [UI](/t/commissioning-logs-deb-3-0-ui/3872)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/commissioning-logs-snap-2-9-cli/2494) ~ [UI](/t/commissioning-logs-snap-2-9-ui/2495)|[CLI](/t/commissioning-logs-snap-3-0-cli/3869) ~ [UI](/t/commissioning-logs-snap-3-0-ui/3870)|
+Packages|[CLI](/t/commissioning-logs-deb-2-9-cli/2500) ~ [UI](/t/commissioning-logs-deb-2-9-ui/2501)|[CLI](/t/commissioning-logs-deb-3-0-cli/3871) ~ [UI](/t/commissioning-logs-deb-3-0-ui/3872)|
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 The command line allows you to retrieve the verbatim logs of commissioning script runs, including those that are currently in progress.
@@ -95,7 +95,7 @@ Each of the items in the "NAME" column is the name of a [commissioning script](/
  deb-2-9-ui -->
 
 <!-- deb-3-0-ui
-Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/3877#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
+Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/3866#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
  deb-3-0-ui -->
 
 <!-- snap-2-7-ui

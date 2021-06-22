@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/networking-snap-2-7-cli/2946) ~ [UI](/t/networking-snap-2-7-ui/2947)|[CLI](/t/networking-snap-2-8-cli/2948) ~ [UI](/t/networking-snap-2-8-ui/2949)|[CLI](/t/networking-snap-2-9-cli/2950) ~ [UI](/t/networking-snap-2-9-ui/2951)|[CLI](/t/networking-snap-3-0-cli/4045) ~ [UI](/t/networking-snap-3-0-ui/4046)|
-Packages|[CLI](/t/networking-deb-2-7-cli/2952) ~ [UI](/t/networking-deb-2-7-ui/2953)|[CLI](/t/networking-deb-2-8-cli/2954) ~ [UI](/t/networking-deb-2-8-ui/2955)|[CLI](/t/networking-deb-2-9-cli/2956) ~ [UI](/t/networking-deb-2-9-ui/2957)|[CLI](/t/networking-deb-3-0-cli/4047) ~ [UI](/t/networking-deb-3-0-ui/4048)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/networking-snap-2-9-cli/2950) ~ [UI](/t/networking-snap-2-9-ui/2951)|[CLI](/t/networking-snap-3-0-cli/4045) ~ [UI](/t/networking-snap-3-0-ui/4046)|
+Packages|[CLI](/t/networking-deb-2-9-cli/2956) ~ [UI](/t/networking-deb-2-9-ui/2957)|[CLI](/t/networking-deb-3-0-cli/4047) ~ [UI](/t/networking-deb-3-0-ui/4048)|
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
 You can use the CLI to manage the networking elements of MAAS, including subnets, fabrics, VLANs, and spaces.  This page shows how to access and edit these elements. See [Concepts and terms](/t/concepts-and-terms/785) for the definitions of networking objects, along with a basic networking tutorial (if needed).

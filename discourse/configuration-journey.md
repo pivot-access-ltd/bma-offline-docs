@@ -1,8 +1,8 @@
 
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/configuration-journey-snap-2-7-cli/2526) ~ [UI](/t/configuration-journey-snap-2-7-ui/2527)|[CLI](/t/configuration-journey-snap-2-8-cli/2528) ~ [UI](/t/configuration-journey-snap-2-8-ui/2529)|[CLI](/t/configuration-journey-snap-2-9-cli/2530) ~ [UI](/t/configuration-journey-snap-2-9-ui/2531)|[CLI](/t/configuration-journey-snap-3-0-cli/3885) ~ [UI](/t/configuration-journey-snap-3-0-ui/3886)|
-Packages|[CLI](/t/configuration-journey-deb-2-7-cli/2532) ~ [UI](/t/configuration-journey-deb-2-7-ui/2533)|[CLI](/t/configuration-journey-deb-2-8-cli/2534) ~ [UI](/t/configuration-journey-deb-2-8-ui/2535)|[CLI](/t/configuration-journey-deb-2-9-cli/2536) ~ [UI](/t/configuration-journey-deb-2-9-ui/2537)|[CLI](/t/configuration-journey-deb-3-0-cli/3887) ~ [UI](/t/configuration-journey-deb-3-0-ui/3888)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/configuration-journey-snap-2-9-cli/2530) ~ [UI](/t/configuration-journey-snap-2-9-ui/2531)|[CLI](/t/configuration-journey-snap-3-0-cli/3885) ~ [UI](/t/configuration-journey-snap-3-0-ui/3886)|
+Packages|[CLI](/t/configuration-journey-deb-2-9-cli/2536) ~ [UI](/t/configuration-journey-deb-2-9-ui/2537)|[CLI](/t/configuration-journey-deb-3-0-cli/3887) ~ [UI](/t/configuration-journey-deb-3-0-ui/3888)|
 
 <!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 Once you've successfully installed MAAS (regardless of method), you can login to the MAAS CLI via the following process.  First, generate the API-key for the user you're going to employing:

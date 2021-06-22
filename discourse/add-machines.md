@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/add-machines-snap-2-7-cli/2274) ~ [UI](/t/add-machines-snap-2-7-ui/2275)|[CLI](/t/add-machines-snap-2-8-cli/2276) ~ [UI](/t/add-machines-snap-2-8-ui/2277)|[CLI](/t/add-machines-snap-2-9-cli/2278) ~ [UI](/t/add-machines-snap-2-9-ui/2279)|[CLI](/t/add-machines-snap-3-0-cli/3821) ~ [UI](/t/add-machines-snap-3-0-ui/3822)|
-Packages|[CLI](/t/add-machines-deb-2-7-cli/2280) ~ [UI](/t/add-machines-deb-2-7-ui/2281)|[CLI](/t/add-machines-deb-2-8-cli/2282) ~ [UI](/t/add-machines-deb-2-8-ui/2283)|[CLI](/t/add-machines-deb-2-9-cli/2284) ~ [UI](/t/add-machines-deb-2-9-ui/2285)|[CLI](/t/add-machines-deb-3-0-cli/3823) ~ [UI](/t/add-machines-deb-3-0-ui/3824)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/add-machines-snap-2-9-cli/2278) ~ [UI](/t/add-machines-snap-2-9-ui/2279)|[CLI](/t/add-machines-snap-3-0-cli/3821) ~ [UI](/t/add-machines-snap-3-0-ui/3822)|
+Packages|[CLI](/t/add-machines-deb-2-9-cli/2284) ~ [UI](/t/add-machines-deb-2-9-ui/2285)|[CLI](/t/add-machines-deb-3-0-cli/3823) ~ [UI](/t/add-machines-deb-3-0-ui/3824)|
 
 There are two ways to add a machine to MAAS:
 

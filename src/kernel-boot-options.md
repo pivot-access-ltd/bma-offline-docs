@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/kernel-boot-options-snap-2-7-cli/2778) ~ [UI](/t/kernel-boot-options-snap-2-7-ui/2779)|[CLI](/t/kernel-boot-options-snap-2-8-cli/2780) ~ [UI](/t/kernel-boot-options-snap-2-8-ui/2781)|[CLI](/t/kernel-boot-options-snap-2-9-cli/2782) ~ [UI](/t/kernel-boot-options-snap-2-9-ui/2783)|[CLI](/t/kernel-boot-options-snap-3-0-cli/3973) ~ [UI](/t/kernel-boot-options-snap-3-0-ui/3974)|
-Packages|[CLI](/t/kernel-boot-options-deb-2-7-cli/2784) ~ [UI](/t/kernel-boot-options-deb-2-7-ui/2785)|[CLI](/t/kernel-boot-options-deb-2-8-cli/2786) ~ [UI](/t/kernel-boot-options-deb-2-8-ui/2787)|[CLI](/t/kernel-boot-options-deb-2-9-cli/2788) ~ [UI](/t/kernel-boot-options-deb-2-9-ui/2789)|[CLI](/t/kernel-boot-options-deb-3-0-cli/3975) ~ [UI](/t/kernel-boot-options-deb-3-0-ui/3976)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/kernel-boot-options-snap-2-9-cli/2782) ~ [UI](/t/kernel-boot-options-snap-2-9-ui/2783)|[CLI](/t/kernel-boot-options-snap-3-0-cli/3973) ~ [UI](/t/kernel-boot-options-snap-3-0-ui/3974)|
+Packages|[CLI](/t/kernel-boot-options-deb-2-9-cli/2788) ~ [UI](/t/kernel-boot-options-deb-2-9-ui/2789)|[CLI](/t/kernel-boot-options-deb-3-0-cli/3975) ~ [UI](/t/kernel-boot-options-deb-3-0-ui/3976)|
 
 MAAS can specify kernel boot options to machines on both a global basis (UI and CLI) and a per-machine basis (CLI-only). A full catalogue of available options can be found in the [Linux kernel parameters list](https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html) at [kernel.org](https://www.kernel.org).
 
@@ -9,12 +9,12 @@ MAAS can specify kernel boot options to machines on both a global basis (UI and 
 
 <!-- deb-2-7-cli
 1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-deb-2-7-cli/2892#heading--per-node-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](#heading--per-node-kernel-boot-options)
  deb-2-7-cli -->
 
 <!-- deb-2-7-ui
 1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-deb-2-7-cli/2892#heading--per-node-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](#heading--per-node-kernel-boot-options)
  deb-2-7-ui -->
 
 <!-- deb-2-8-cli
@@ -49,12 +49,12 @@ MAAS can specify kernel boot options to machines on both a global basis (UI and 
 
 <!-- snap-2-7-cli
 1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-snap-2-7-cli/2886#heading--per-node-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](#heading--per-node-kernel-boot-options)
  snap-2-7-cli -->
 
 <!-- snap-2-7-ui
 1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-snap-2-7-cli/2886#heading--per-node-kernel-boot-options)
+2. [How can I set kernel boot options for a specific machine?](#heading--per-node-kernel-boot-options)
  snap-2-7-ui -->
 
 <!-- snap-2-8-cli

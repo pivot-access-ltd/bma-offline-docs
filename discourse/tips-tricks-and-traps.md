@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/tips-tricks-and-traps-snap-2-7-cli/3150) ~ [UI](/t/tips-tricks-and-traps-snap-2-7-ui/3151)|[CLI](/t/tips-tricks-and-traps-snap-2-8-cli/3152) ~ [UI](/t/tips-tricks-and-traps-snap-2-8-ui/3153)|[CLI](/t/tips-tricks-and-traps-snap-2-9-cli/3154) ~ [UI](/t/tips-tricks-and-traps-snap-2-9-ui/3155)|[CLI](/t/tips-tricks-and-traps-snap-3-0-cli/4129) ~ [UI](/t/tips-tricks-and-traps-snap-3-0-ui/4130)|
-Packages|[CLI](/t/tips-tricks-and-traps-deb-2-7-cli/3156) ~ [UI](/t/tips-tricks-and-traps-deb-2-7-ui/3157)|[CLI](/t/tips-tricks-and-traps-deb-2-8-cli/3158) ~ [UI](/t/tips-tricks-and-traps-deb-2-8-ui/3159)|[CLI](/t/tips-tricks-and-traps-deb-2-9-cli/3160) ~ [UI](/t/tips-tricks-and-traps-deb-2-9-ui/3161)|[CLI](/t/tips-tricks-and-traps-deb-3-0-cli/4131) ~ [UI](/t/tips-tricks-and-traps-deb-3-0-ui/4132)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/tips-tricks-and-traps-snap-2-9-cli/3154) ~ [UI](/t/tips-tricks-and-traps-snap-2-9-ui/3155)|[CLI](/t/tips-tricks-and-traps-snap-3-0-cli/4129) ~ [UI](/t/tips-tricks-and-traps-snap-3-0-ui/4130)|
+Packages|[CLI](/t/tips-tricks-and-traps-deb-2-9-cli/3160) ~ [UI](/t/tips-tricks-and-traps-deb-2-9-ui/3161)|[CLI](/t/tips-tricks-and-traps-deb-3-0-cli/4131) ~ [UI](/t/tips-tricks-and-traps-deb-3-0-ui/4132)|
 This section contains a collection of tips, tricks, and traps which may help solve unusual or infrequent issues that come up.
 
 #### What would you like to do?

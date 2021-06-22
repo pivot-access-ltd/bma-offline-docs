@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/region-controllers-snap-2-7-cli/3066) ~ [UI](/t/region-controllers-snap-2-7-ui/3067)|[CLI](/t/region-controllers-snap-2-8-cli/3068) ~ [UI](/t/region-controllers-snap-2-8-ui/3069)|[CLI](/t/region-controllers-snap-2-9-cli/3070) ~ [UI](/t/region-controllers-snap-2-9-ui/3071)|[CLI](/t/region-controllers-snap-3-0-cli/4093) ~ [UI](/t/region-controllers-snap-3-0-ui/4094)|
-Packages|[CLI](/t/region-controllers-deb-2-7-cli/3072) ~ [UI](/t/region-controllers-deb-2-7-ui/3073)|[CLI](/t/region-controllers-deb-2-8-cli/3074) ~ [UI](/t/region-controllers-deb-2-8-ui/3075)|[CLI](/t/region-controllers-deb-2-9-cli/3076) ~ [UI](/t/region-controllers-deb-2-9-ui/3077)|[CLI](/t/region-controllers-deb-3-0-cli/4095) ~ [UI](/t/region-controllers-deb-3-0-ui/4096)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/region-controllers-snap-2-9-cli/3070) ~ [UI](/t/region-controllers-snap-2-9-ui/3071)|[CLI](/t/region-controllers-snap-3-0-cli/4093) ~ [UI](/t/region-controllers-snap-3-0-ui/4094)|
+Packages|[CLI](/t/region-controllers-deb-2-9-cli/3076) ~ [UI](/t/region-controllers-deb-2-9-ui/3077)|[CLI](/t/region-controllers-deb-3-0-cli/4095) ~ [UI](/t/region-controllers-deb-3-0-ui/4096)|
 
 A region controller manages communication with the user, via the Web UI/API, as well as managing the rack controller(s) in your system.  The MAAS postgres database is also managed by the region controller.  Typical region-level responsibilities include requesting that a rack controller boot a machine, and providing the ephemeral Ubuntu image needed to commission or enlist a machine.  
 

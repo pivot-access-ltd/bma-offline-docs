@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/hardening-your-maas-installation-snap-2-7-cli/2658) ~ [UI](/t/hardening-your-maas-installation-snap-2-7-ui/2659)|[CLI](/t/hardening-your-maas-installation-snap-2-8-cli/2660) ~ [UI](/t/hardening-your-maas-installation-snap-2-8-ui/2661)|[CLI](/t/hardening-your-maas-installation-snap-2-9-cli/2662) ~ [UI](/t/hardening-your-maas-installation-snap-2-9-ui/2663)|[CLI](/t/hardening-your-maas-installation-snap-3-0-cli/3937) ~ [UI](/t/hardening-your-maas-installation-snap-3-0-ui/3938)|
-Packages|[CLI](/t/hardening-your-maas-installation-deb-2-7-cli/2664) ~ [UI](/t/hardening-your-maas-installation-deb-2-7-ui/2665)|[CLI](/t/hardening-your-maas-installation-deb-2-8-cli/2666) ~ [UI](/t/hardening-your-maas-installation-deb-2-8-ui/2667)|[CLI](/t/hardening-your-maas-installation-deb-2-9-cli/2668) ~ [UI](/t/hardening-your-maas-installation-deb-2-9-ui/2669)|[CLI](/t/hardening-your-maas-installation-deb-3-0-cli/3939) ~ [UI](/t/hardening-your-maas-installation-deb-3-0-ui/3940)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/hardening-your-maas-installation-snap-2-9-cli/2662) ~ [UI](/t/hardening-your-maas-installation-snap-2-9-ui/2663)|[CLI](/t/hardening-your-maas-installation-snap-3-0-cli/3937) ~ [UI](/t/hardening-your-maas-installation-snap-3-0-ui/3938)|
+Packages|[CLI](/t/hardening-your-maas-installation-deb-2-9-cli/2668) ~ [UI](/t/hardening-your-maas-installation-deb-2-9-ui/2669)|[CLI](/t/hardening-your-maas-installation-deb-3-0-cli/3939) ~ [UI](/t/hardening-your-maas-installation-deb-3-0-ui/3940)|
 
 As a MAAS administrator, you have the critical responsibility of hardening your installation to help repudiate attacks and malicious actors.  While there are too many variables to make meaningful suggestions for your deployed machines, there are a number of steps you can take to improve the overall security of your MASS setup.  This article provides a few suggestions.
 

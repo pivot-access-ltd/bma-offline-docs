@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/ip-ranges-snap-2-7-cli/2754) ~ [UI](/t/ip-ranges-snap-2-7-ui/2755)|[CLI](/t/ip-ranges-snap-2-8-cli/2756) ~ [UI](/t/ip-ranges-snap-2-8-ui/2757)|[CLI](/t/ip-ranges-snap-2-9-cli/2758) ~ [UI](/t/ip-ranges-snap-2-9-ui/2759)|[CLI](/t/ip-ranges-snap-3-0-cli/3965) ~ [UI](/t/ip-ranges-snap-3-0-ui/3966)|
-Packages|[CLI](/t/ip-ranges-deb-2-7-cli/2760) ~ [UI](/t/ip-ranges-deb-2-7-ui/2761)|[CLI](/t/ip-ranges-deb-2-8-cli/2762) ~ [UI](/t/ip-ranges-deb-2-8-ui/2763)|[CLI](/t/ip-ranges-deb-2-9-cli/2764) ~ [UI](/t/ip-ranges-deb-2-9-ui/2765)|[CLI](/t/ip-ranges-deb-3-0-cli/3967) ~ [UI](/t/ip-ranges-deb-3-0-ui/3968)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/ip-ranges-snap-2-9-cli/2758) ~ [UI](/t/ip-ranges-snap-2-9-ui/2759)|[CLI](/t/ip-ranges-snap-3-0-cli/3965) ~ [UI](/t/ip-ranges-snap-3-0-ui/3966)|
+Packages|[CLI](/t/ip-ranges-deb-2-9-cli/2764) ~ [UI](/t/ip-ranges-deb-2-9-ui/2765)|[CLI](/t/ip-ranges-deb-3-0-cli/3967) ~ [UI](/t/ip-ranges-deb-3-0-ui/3968)|
 
 In MAAS-managed networks, you can further manage your subnets with a reserved range of IP addresses.  You can reserve IP addresses by adding one or more reserved ranges to a subnet configuration. You can define two types of ranges: reserved ranges and reserved dynamic ranges.  
 

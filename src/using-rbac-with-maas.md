@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/using-rbac-with-maas-snap-2-7-cli/3592) ~ [UI](/t/using-rbac-with-maas-snap-2-7-ui/3593)|[CLI](/t/using-rbac-with-maas-snap-2-8-cli/3594) ~ [UI](/t/using-rbac-with-maas-snap-2-8-ui/3595)|[CLI](/t/using-rbac-with-maas-snap-2-9-cli/3596) ~ [UI](/t/using-rbac-with-maas-snap-2-9-ui/3597)|[CLI](/t/using-rbac-with-maas-snap-3-0-cli/4157) ~ [UI](/t/using-rbac-with-maas-snap-3-0-ui/4158)|
-Packages|[CLI](/t/using-rbac-with-maas-deb-2-7-cli/3598) ~ [UI](/t/using-rbac-with-maas-deb-2-7-ui/3599)|[CLI](/t/using-rbac-with-maas-deb-2-8-cli/3600) ~ [UI](/t/using-rbac-with-maas-deb-2-8-ui/3601)|[CLI](/t/using-rbac-with-maas-deb-2-9-cli/3602) ~ [UI](/t/using-rbac-with-maas-deb-2-9-ui/3603)|[CLI](/t/using-rbac-with-maas-deb-3-0-cli/4159) ~ [UI](/t/using-rbac-with-maas-deb-3-0-ui/4160)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/using-rbac-with-maas-snap-2-9-cli/3596) ~ [UI](/t/using-rbac-with-maas-snap-2-9-ui/3597)|[CLI](/t/using-rbac-with-maas-snap-3-0-cli/4157) ~ [UI](/t/using-rbac-with-maas-snap-3-0-ui/4158)|
+Packages|[CLI](/t/using-rbac-with-maas-deb-2-9-cli/3602) ~ [UI](/t/using-rbac-with-maas-deb-2-9-ui/3603)|[CLI](/t/using-rbac-with-maas-deb-3-0-cli/4159) ~ [UI](/t/using-rbac-with-maas-deb-3-0-ui/4160)|
 
 This page is a draft reference for using RBAC with MAAS.  It is currently in an incomplete state, but feel free to benefit from whatever is here as this page develops.  A discourse announcement will be made when this page has reached a minimally usable state.
 

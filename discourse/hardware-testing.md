@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/hardware-testing-snap-2-7-cli/2670) ~ [UI](/t/hardware-testing-snap-2-7-ui/2671)|[CLI](/t/hardware-testing-snap-2-8-cli/2672) ~ [UI](/t/hardware-testing-snap-2-8-ui/2673)|[CLI](/t/hardware-testing-snap-2-9-cli/2674) ~ [UI](/t/hardware-testing-snap-2-9-ui/2675)|[CLI](/t/hardware-testing-snap-3-0-cli/3941) ~ [UI](/t/hardware-testing-snap-3-0-ui/3942)|
-Packages|[CLI](/t/hardware-testing-deb-2-7-cli/2676) ~ [UI](/t/hardware-testing-deb-2-7-ui/2677)|[CLI](/t/hardware-testing-deb-2-8-cli/2678) ~ [UI](/t/hardware-testing-deb-2-8-ui/2679)|[CLI](/t/hardware-testing-deb-2-9-cli/2680) ~ [UI](/t/hardware-testing-deb-2-9-ui/2681)|[CLI](/t/hardware-testing-deb-3-0-cli/3943) ~ [UI](/t/hardware-testing-deb-3-0-ui/3944)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/hardware-testing-snap-2-9-cli/2674) ~ [UI](/t/hardware-testing-snap-2-9-ui/2675)|[CLI](/t/hardware-testing-snap-3-0-cli/3941) ~ [UI](/t/hardware-testing-snap-3-0-ui/3942)|
+Packages|[CLI](/t/hardware-testing-deb-2-9-cli/2680) ~ [UI](/t/hardware-testing-deb-2-9-ui/2681)|[CLI](/t/hardware-testing-deb-3-0-cli/3943) ~ [UI](/t/hardware-testing-deb-3-0-ui/3944)|
 
 If you wish, you can tell MAAS to test machine hardware using well-known Linux utilities.  MAAS can test machines that have  a status of **Ready**, **Broken**, or **Deployed**.  You can include testing as part of the commissioning process. When you choose the 'Commission' action, MAAS will display the dialog described below.  Be aware, though, that if the hardware tests fail, the machine will become unavailable for Deployment.
 

@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/resource-pools-snap-2-7-cli/3078) ~ [UI](/t/resource-pools-snap-2-7-ui/3079)|[CLI](/t/resource-pools-snap-2-8-cli/3080) ~ [UI](/t/resource-pools-snap-2-8-ui/3081)|[CLI](/t/resource-pools-snap-2-9-cli/3082) ~ [UI](/t/resource-pools-snap-2-9-ui/3083)|[CLI](/t/resource-pools-snap-3-0-cli/4097) ~ [UI](/t/resource-pools-snap-3-0-ui/4098)|
-Packages|[CLI](/t/resource-pools-deb-2-7-cli/3084) ~ [UI](/t/resource-pools-deb-2-7-ui/3085)|[CLI](/t/resource-pools-deb-2-8-cli/3086) ~ [UI](/t/resource-pools-deb-2-8-ui/3087)|[CLI](/t/resource-pools-deb-2-9-cli/3088) ~ [UI](/t/resource-pools-deb-2-9-ui/3089)|[CLI](/t/resource-pools-deb-3-0-cli/4099) ~ [UI](/t/resource-pools-deb-3-0-ui/4100)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/resource-pools-snap-2-9-cli/3082) ~ [UI](/t/resource-pools-snap-2-9-ui/3083)|[CLI](/t/resource-pools-snap-3-0-cli/4097) ~ [UI](/t/resource-pools-snap-3-0-ui/4098)|
+Packages|[CLI](/t/resource-pools-deb-2-9-cli/3088) ~ [UI](/t/resource-pools-deb-2-9-ui/3089)|[CLI](/t/resource-pools-deb-3-0-cli/4099) ~ [UI](/t/resource-pools-deb-3-0-ui/4100)|
 
 Resource pools allow administrators to logically group resources -- machines and VM hosts -- into pools. Pools can help you budget machines for a particular set of functions.  For example, if you're using MAAS to manage a hospital data centre, you may want to keep a certain number of machines reserved for provider use, whether that be for the charts, documentation, or orders application.  You can use resource pools to reserve those machines, regardless of which of the three applications you end up loading onto a particular machine at any given time. 
 

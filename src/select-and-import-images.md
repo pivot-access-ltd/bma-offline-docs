@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/select-and-import-images-snap-2-7-cli/3090) ~ [UI](/t/select-and-import-images-snap-2-7-ui/3091)|[CLI](/t/select-and-import-images-snap-2-8-cli/3092) ~ [UI](/t/select-and-import-images-snap-2-8-ui/3093)|[CLI](/t/select-and-import-images-snap-2-9-cli/3094) ~ [UI](/t/select-and-import-images-snap-2-9-ui/3095)|[CLI](/t/select-and-import-images-snap-3-0-cli/4101) ~ [UI](/t/select-and-import-images-snap-3-0-ui/4102)|
-Packages|[CLI](/t/select-and-import-images-deb-2-7-cli/3096) ~ [UI](/t/select-and-import-images-deb-2-7-ui/3097)|[CLI](/t/select-and-import-images-deb-2-8-cli/3098) ~ [UI](/t/select-and-import-images-deb-2-8-ui/3099)|[CLI](/t/select-and-import-images-deb-2-9-cli/3100) ~ [UI](/t/select-and-import-images-deb-2-9-ui/3101)|[CLI](/t/select-and-import-images-deb-3-0-cli/4103) ~ [UI](/t/select-and-import-images-deb-3-0-ui/4104)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/select-and-import-images-snap-2-9-cli/3094) ~ [UI](/t/select-and-import-images-snap-2-9-ui/3095)|[CLI](/t/select-and-import-images-snap-3-0-cli/4101) ~ [UI](/t/select-and-import-images-snap-3-0-ui/4102)|
+Packages|[CLI](/t/select-and-import-images-deb-2-9-cli/3100) ~ [UI](/t/select-and-import-images-deb-2-9-ui/3101)|[CLI](/t/select-and-import-images-deb-3-0-cli/4103) ~ [UI](/t/select-and-import-images-deb-3-0-ui/4104)|
 
 MAAS is only useful once it has images available to provision its nodes. Therefore, one key post-install task is to select and import images from the boot source. Once MAAS imports images, it will update them on an hourly basis, via a default synch mechanism.  This page explains how to select and import the images that MAAS requires to provision its nodes.
 

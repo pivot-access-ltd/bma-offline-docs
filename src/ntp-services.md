@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/ntp-services-snap-2-7-cli/2958) ~ [UI](/t/ntp-services-snap-2-7-ui/2959)|[CLI](/t/ntp-services-snap-2-8-cli/2960) ~ [UI](/t/ntp-services-snap-2-8-ui/2961)|[CLI](/t/ntp-services-snap-2-9-cli/2962) ~ [UI](/t/ntp-services-snap-2-9-ui/2963)|[CLI](/t/ntp-services-snap-3-0-cli/4053) ~ [UI](/t/ntp-services-snap-3-0-ui/4054)|
-Packages|[CLI](/t/ntp-services-deb-2-7-cli/2964) ~ [UI](/t/ntp-services-deb-2-7-ui/2965)|[CLI](/t/ntp-services-deb-2-8-cli/2966) ~ [UI](/t/ntp-services-deb-2-8-ui/2967)|[CLI](/t/ntp-services-deb-2-9-cli/2968) ~ [UI](/t/ntp-services-deb-2-9-ui/2969)|[CLI](/t/ntp-services-deb-3-0-cli/4055) ~ [UI](/t/ntp-services-deb-3-0-ui/4056)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/ntp-services-snap-2-9-cli/2962) ~ [UI](/t/ntp-services-snap-2-9-ui/2963)|[CLI](/t/ntp-services-snap-3-0-cli/4053) ~ [UI](/t/ntp-services-snap-3-0-ui/4054)|
+Packages|[CLI](/t/ntp-services-deb-2-9-cli/2968) ~ [UI](/t/ntp-services-deb-2-9-ui/2969)|[CLI](/t/ntp-services-deb-3-0-cli/4055) ~ [UI](/t/ntp-services-deb-3-0-ui/4056)|
 
 MAAS provides managed NTP services (with [Chrony](https://chrony.tuxfamily.org/)) for all region and rack controllers. This arrangement allows MAAS to both keep its controllers synchronised, and keep deployed machines synchronised as well. You can configure NTP on the 'Network services' tab of the 'Settings' page.
 

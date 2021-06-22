@@ -429,7 +429,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>NTP services</h1><p>||2.7|2.8|2.9|3.0|</p>
+      <h1>NTP services</h1><p>||2.9|3.0|</p>
 <p>MAAS provides managed NTP services (with <a href="https://chrony.tuxfamily.org/">Chrony</a>) for all region and rack controllers. This arrangement allows MAAS to both keep its controllers synchronised, and keep deployed machines synchronised as well. You can configure NTP on the &lsquo;Network services&rsquo; tab of the &lsquo;Settings&rsquo; page.</p>
 <p>The region controller configures the NTP service to keep its time synchronised from one or more external sources. By default, the MAAS region controller uses <code>ntp.ubuntu.com</code>. Rack controllers also configure the NTP service, synchronising their time with the region controllers.  Rack controllers also configure DHCP with the correct NTP information. Any machine on the network that obtains a DHCP lease from MAAS will benefit from NTP support.</p>
 <p><a href="#heading--setting-ntp-server"><h2 id="heading--setting-ntp-server">Setting an external NTP server</h2></a></p>

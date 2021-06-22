@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/maas-documentation-snap-2-7-cli/2838) ~ [UI](/t/maas-documentation-snap-2-7-ui/2839)|[CLI](/t/maas-documentation-snap-2-8-cli/2840) ~ [UI](/t/maas-documentation-snap-2-8-ui/2841)|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|[CLI](/t/maas-documentation-snap-3-0-cli/3993) ~ [UI](/t/maas-documentation-snap-3-0-ui/3994)|
-Packages|[CLI](/t/maas-documentation-deb-2-7-cli/2844) ~ [UI](/t/maas-documentation-deb-2-7-ui/2845)|[CLI](/t/maas-documentation-deb-2-8-cli/2846) ~ [UI](/t/maas-documentation-deb-2-8-ui/2847)|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|[CLI](/t/maas-documentation-deb-3-0-cli/3995) ~ [UI](/t/maas-documentation-deb-3-0-ui/4195)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|[CLI](/t/maas-documentation-snap-3-0-cli/3993) ~ [UI](/t/maas-documentation-snap-3-0-ui/3994)|
+Packages|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|[CLI](/t/maas-documentation-deb-3-0-cli/3995) ~ [UI](/t/maas-documentation-deb-3-0-ui/4195)|
 
 MAAS is **Metal As A Service**, a service that lets you treat physical servers like virtual machines -- instances -- in the cloud.  No need for you to manage servers individually: MAAS turns your bare metal into an elastic, cloud-like resource.
 
@@ -70,19 +70,19 @@ deb-3-0-ui -->
 snap-3-0-ui -->
 
 <!-- deb-2-7-cli
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-7-cli/2268)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-7-cli/2652)
-3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-7-cli/2268#heading--how-maas-works)
+1. [What is MAAS -- and what does it really do for me?]()
+2. [Can you show me an example data centre using MAAS?]()
+3. [How does MAAS work -- in detail?](#heading--how-maas-works)
 4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-7-cli/3324)
+5. [Can I just install it and try it for myself?]()
 deb-2-7-cli -->
 
 <!-- snap-2-7-cli
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-7-cli/2262)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-7-cli/2646)
-3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-7-cli/2262#heading--how-maas-works)
+1. [What is MAAS -- and what does it really do for me?]()
+2. [Can you show me an example data centre using MAAS?]()
+3. [How does MAAS work -- in detail?](#heading--how-maas-works)
 4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-7-cli/3318)
+5. [Can I just install it and try it for myself?]()
 snap-2-7-cli -->
 
 <!-- deb-2-8-cli
@@ -183,7 +183,7 @@ snap-3-0-ui -->
 <a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-7-cli/2652), our example data centre. 
+*Part of the machine list from [Metaphorical General Hospital](), our example data centre. 
  deb-2-7-cli -->
 
 <!-- deb-2-8-cli
@@ -211,7 +211,7 @@ snap-3-0-ui -->
 <a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-7-cli/2646), our example data centre. 
+*Part of the machine list from [Metaphorical General Hospital](), our example data centre. 
  snap-2-7-cli -->
 
 <!-- snap-2-8-cli 

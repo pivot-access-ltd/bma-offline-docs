@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/vmware-vmfs-datastores-snap-2-7-cli/3246) ~ [UI](/t/vmware-vmfs-datastores-snap-2-7-ui/3247)|[CLI](/t/vmware-vmfs-datastores-snap-2-8-cli/3248) ~ [UI](/t/vmware-vmfs-datastores-snap-2-8-ui/3249)|[CLI](/t/vmware-vmfs-datastores-snap-2-9-cli/3250) ~ [UI](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)|[CLI](/t/vmware-vmfs-datastores-snap-3-0-cli/4177) ~ [UI](/t/vmware-vmfs-datastores-snap-3-0-ui/4178)|
-Packages|[CLI](/t/vmware-vmfs-datastores-deb-2-7-cli/3252) ~ [UI](/t/vmware-vmfs-datastores-deb-2-7-ui/3253)|[CLI](/t/vmware-vmfs-datastores-deb-2-8-cli/3254) ~ [UI](/t/vmware-vmfs-datastores-deb-2-8-ui/3255)|[CLI](/t/vmware-vmfs-datastores-deb-2-9-cli/3256) ~ [UI](/t/vmware-vmfs-datastores-deb-2-9-ui/3257)|[CLI](/t/vmware-vmfs-datastores-deb-3-0-cli/4179) ~ [UI](/t/vmware-vmfs-datastores-deb-3-0-ui/4180)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/vmware-vmfs-datastores-snap-2-9-cli/3250) ~ [UI](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)|[CLI](/t/vmware-vmfs-datastores-snap-3-0-cli/4177) ~ [UI](/t/vmware-vmfs-datastores-snap-3-0-ui/4178)|
+Packages|[CLI](/t/vmware-vmfs-datastores-deb-2-9-cli/3256) ~ [UI](/t/vmware-vmfs-datastores-deb-2-9-ui/3257)|[CLI](/t/vmware-vmfs-datastores-deb-3-0-cli/4179) ~ [UI](/t/vmware-vmfs-datastores-deb-3-0-ui/4180)|
 
 <!-- deb-2-7-cli
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/3108#heading--vmfs6-layout). This layout creates a VMFS Datastore named `datastore1` which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.

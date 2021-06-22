@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/storage-snap-2-7-cli/3102) ~ [UI](/t/storage-snap-2-7-ui/3103)|[CLI](/t/storage-snap-2-8-cli/3104) ~ [UI](/t/storage-snap-2-8-ui/3105)|[CLI](/t/storage-snap-2-9-cli/3106) ~ [UI](/t/storage-snap-2-9-ui/3107)|[CLI](/t/storage-snap-3-0-cli/4105) ~ [UI](/t/storage-snap-3-0-ui/4106)|
-Packages|[CLI](/t/storage-deb-2-7-cli/3108) ~ [UI](/t/storage-deb-2-7-ui/3109)|[CLI](/t/storage-deb-2-8-cli/3110) ~ [UI](/t/storage-deb-2-8-ui/3111)|[CLI](/t/storage-deb-2-9-cli/3112) ~ [UI](/t/storage-deb-2-9-ui/3113)|[CLI](/t/storage-deb-3-0-cli/4107) ~ [UI](/t/storage-deb-3-0-ui/4108)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/storage-snap-2-9-cli/3106) ~ [UI](/t/storage-snap-2-9-ui/3107)|[CLI](/t/storage-snap-3-0-cli/4105) ~ [UI](/t/storage-snap-3-0-ui/4106)|
+Packages|[CLI](/t/storage-deb-2-9-cli/3112) ~ [UI](/t/storage-deb-2-9-ui/3113)|[CLI](/t/storage-deb-3-0-cli/4107) ~ [UI](/t/storage-deb-3-0-ui/4108)|
 
 You have significant latitude when choosing the final storage configuration of a deployed machine. MAAS supports traditional disk partitioning, as well as more complex options such as LVM, RAID, and bcache. MAAS also supports UEFI as a boot mechanism.  This article explains boot mechanisms and layouts, and offers some advice on how to configure layouts and manage storage.
 
