@@ -76,7 +76,7 @@ The kernel installed on a machine during deployment is, by default, the Ubuntu r
 2.   per machine (minimum deploy kernel)
 3.   per machine during deployment (specific deploy kernel)
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 <a href="#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning"><h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2></a>
 
 To set the default minimum enlistment and commissioning kernel (based on Ubuntu release: GA kernel) for all machines visit the 'General' tab of the 'Settings' page and select a kernel in the 'Default Minimum Kernel Version' field of the *Commissioning* section. Don't forget to click 'Save'.
@@ -96,9 +96,9 @@ To set a specific kernel during deployment, select a machine from the 'Machines'
 <a href="https://assets.ubuntu.com/v1/0d25737f-nodes-kernels__2.6-machine-during-deploy-kernel.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/0d25737f-nodes-kernels__2.6-machine-during-deploy-kernel.png"></a>
 
 MAAS verifies that the specified kernel is available for the given Ubuntu release (series) before deploying the machine.
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+  snap-2-9-ui   deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 <a href="#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning"><h2 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">Set a default minimum kernel for enlistment and commissioning</h2></a>
 
 To set a default minimum kernel for all new and commissioned machines:
@@ -154,4 +154,4 @@ maas $PROFILE machine deploy $SYSTEM_ID distro_series=xenial hwe_kernel=hwe-16.0
 [note]
 The command option `hwe_kernel` appears to apply to only HWE kernels but this is not the case.
 [/note]
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->

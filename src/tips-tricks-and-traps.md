@@ -10,9 +10,9 @@ This section contains a collection of tips, tricks, and traps which may help sol
 2. [Manually export the MAAS database](#heading--manual-export)
 3. [Network boot an IBM Power server](#heading--ibm-power-server-pxe-boot)
 4. [Try jq recipes using the CLI](#heading--jq-machine-list)
-<!-- snap-2-8-cli snap-2-8-ui snap-2-9-cli snap-2-9-cli snap-3-0-ui snap-3-0-cli deb-2-8-cli deb-2-8-ui deb-2-9-cli deb-2-9-cli deb-3-0-ui deb-3-0-cli
+<!--   snap-2-9-cli snap-2-9-cli snap-3-0-ui snap-3-0-cli   deb-2-9-cli deb-2-9-cli deb-3-0-ui deb-3-0-cli
 5. [Resolve MAAS/LXD DNS & DHCP conflicts/network issues](#heading--maas-lxd-network-conflicts)
- snap-2-8-cli snap-2-8-ui snap-2-9-cli snap-2-9-cli snap-3-0-ui snap-3-0-cli deb-2-8-cli deb-2-8-ui deb-2-9-cli deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
+   snap-2-9-cli snap-2-9-cli snap-3-0-ui snap-3-0-cli   deb-2-9-cli deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
 
 <h2 id="heading--migrating-maas">Migrating an existing snap installation</h2>
 
@@ -70,7 +70,7 @@ When no specific interface is assigned as the network boot device, petitboot has
 
 So, when using IBM Power servers with multiple NICs that can network boot, it's strongly recommended to configure just a single <specific> NIC as the network boot device via **Petitboot**.
 
-<!-- snap-2-8-cli snap-2-8-ui snap-2-9-cli snap-2-9-cli snap-3-0-ui snap-3-0-cli deb-2-8-cli deb-2-8-ui deb-2-9-cli deb-2-9-cli deb-3-0-ui deb-3-0-cli
+<!--   snap-2-9-cli snap-2-9-cli snap-3-0-ui snap-3-0-cli   deb-2-9-cli deb-2-9-cli deb-3-0-ui deb-3-0-cli
 <h2 id="heading--maas-lxd-network-conflicts">Resolve DNS conflicts between LXD and MAAS</h2>
 
 If you get into a situation where MAAS and LXD are both managing DNS on your MAAS network, there's a simple fix. You can turn off LXD's DNS management with the following command:
@@ -92,7 +92,7 @@ Once you've done this, you can check your work with the following command:
 lxc network show $LXD_BRIDGE_NAME
 ````
 
- snap-2-8-cli snap-2-8-ui snap-2-9-cli snap-2-9-cli snap-3-0-ui snap-3-0-cli deb-2-8-cli deb-2-8-ui deb-2-9-cli deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
+   snap-2-9-cli snap-2-9-cli snap-3-0-ui snap-3-0-cli   deb-2-9-cli deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
 
 
 <h2 id="heading--jq-machine-list">jq recipes using the CLI</h2>

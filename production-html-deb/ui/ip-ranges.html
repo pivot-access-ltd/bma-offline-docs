@@ -447,27 +447,11 @@
 <p><a href="images/051bf1e56a31c7e7dcb196b12ddf55435b3f0571.jpeg" target = "_blank"><img src="images/051bf1e56a31c7e7dcb196b12ddf55435b3f0571.jpeg"></a></a></p>
 <p>Scroll down to &ldquo;Reserved ranges&rdquo; on the subnet screen and click on the &ldquo;Reserve range&rdquo; drop-down:</p>
 <p><a href="images/a76e24de7c65d3553f853bc2b6a96671d756651b.jpeg" target = "_blank"><img src="images/a76e24de7c65d3553f853bc2b6a96671d756651b.jpeg"></a></a></p>
-<!-- deb-2-7-ui
-Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](managing-dhcp.html).
- deb-2-7-ui -->
-
-<!-- deb-2-8-ui
-Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](managing-dhcp.html).
- deb-2-8-ui -->
-
 <!-- deb-2-9-ui
 Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](managing-dhcp.html).
  deb-2-9-ui -->
 
 <p>Choose &lsquo;Reserve range&rsquo; or &lsquo;Reserve dynamic range&rsquo;. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the <a href="managing-dhcp.html">DHCP page</a>.</p>
-<!-- snap-2-7-ui
-Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](managing-dhcp.html).
- snap-2-7-ui -->
-
-<!-- snap-2-8-ui
-Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](managing-dhcp.html).
- snap-2-8-ui -->
-
 <!-- snap-2-9-ui
 Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](managing-dhcp.html).
  snap-2-9-ui -->
@@ -480,7 +464,7 @@ Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAA
 <p>Below is an example window when creating a &lsquo;reserved range&rsquo; (the windows are identical):</p>
 <p><a href="images/be85b7d6-installconfig-network-ipranges__2.4_add-reserved-iprange.png" target = "_blank"><img src="images/be85b7d6-installconfig-network-ipranges__2.4_add-reserved-iprange.png"></a></a></p>
 <p>Click the &lsquo;Reserve&rsquo; button when done.</p>
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 See [Concepts and terms](concepts-and-terms.html#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
 
 To create a range of dynamic IP addresses that will be used by MAAS for node enlistment, commissioning, and possibly deployment:
@@ -515,10 +499,10 @@ To remove such a single reserved IP address:
 </code></pre>
 
 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
 
 <p><a href="#heading--edit-a-range"><h2 id="heading--edit-a-range">Edit a range</h2></a></p>
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 To edit an IP range, first find the ID of the desired IP range with the command:
 
 <pre><code>maas admin ipranges read
@@ -533,7 +517,7 @@ Examine the JSON output to find the ID corresponding to the IP range you want to
 
 
 This command will update the IP range associated with $ID.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+  snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
 
 <p>Click the &lsquo;Menu&rsquo; button at the far right of the row corresponding to the subnet in question and select &lsquo;Edit reserved range&rsquo; from the menu that appears. Edit the fields as desired and click the &lsquo;Save&rsquo; button.</p>
 <p><a href="#heading--delete-a-range"><h2 id="heading--delete-a-range">Delete a range</h2></a></p>

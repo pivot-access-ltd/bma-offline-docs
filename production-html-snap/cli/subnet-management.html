@@ -441,14 +441,14 @@
 <li><a href="#heading--default-gateway">How do I set a default gateway with the CLI?</a></li>
 <li><a href="#heading--set-dns-server">How do i set the DNS server with the CLI?</a></li>
 </ol>
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 #### Four questions you may have:
 
 1. [What are managed subnets?](#heading--managed-subnets)
 2. [What are unmanaged subnets?](#heading--unmanaged-subnets)
 3. [What is IP address tracking?](#heading--ip-address-tracking)
 4. [How do I control subnet management](#heading--controlling-subnet-management)
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
 
 <p><a href="#heading--managed-subnets"><h2 id="heading--managed-subnets">Managed subnets</h2></a></p>
 <p>When you enable management for a subnet, MAAS will:</p>
@@ -456,22 +456,6 @@ snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui
 <li>Lease addresses for DHCP from a reserved dynamic IP range</li>
 <li>Assign static addresses not included in a reserved IP range, typically via &lsquo;Auto assign&rsquo; IP allocation mode for a node.</li>
 </ol>
-<!-- deb-2-7-cli
-See [Concepts and terms](concepts-and-terms.html#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses and [Post-commission configuration](commission-machines.html#heading--post-commission-configuration) for information on IP allocation modes.
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-See [Concepts and terms](concepts-and-terms.html#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses and [Post-commission configuration](commission-machines.html#heading--post-commission-configuration) for information on IP allocation modes.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-See [Concepts and terms](concepts-and-terms.html#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses and [Post-commission configuration](commission-machines.html#heading--post-commission-configuration) for information on IP allocation modes.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-See [Concepts and terms](concepts-and-terms.html#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses and [Post-commission configuration](commission-machines.html#heading--post-commission-configuration) for information on IP allocation modes.
- deb-2-8-ui -->
-
 <!-- deb-2-9-cli
 See [Concepts and terms](concepts-and-terms.html#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses and [Post-commission configuration](commission-machines.html#heading--post-commission-configuration) for information on IP allocation modes.
  deb-2-9-cli -->
@@ -487,22 +471,6 @@ See [Concepts and terms](concepts-and-terms.html#heading--ip-ranges) for an expl
 <!-- deb-3-0-ui
 See [Concepts and terms](concepts-and-terms.html#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses and [Post-commission configuration](commission-machines.html#heading--post-commission-configuration) for information on IP allocation modes.
  deb-3-0-ui -->
-
-<!-- snap-2-7-cli
-See [Concepts and terms](concepts-and-terms.html#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses and [Post-commission configuration](commission-machines.html#heading--post-commission-configuration) for information on IP allocation modes.
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-See [Concepts and terms](concepts-and-terms.html#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses and [Post-commission configuration](commission-machines.html#heading--post-commission-configuration) for information on IP allocation modes.
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-See [Concepts and terms](concepts-and-terms.html#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses and [Post-commission configuration](commission-machines.html#heading--post-commission-configuration) for information on IP allocation modes.
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-See [Concepts and terms](concepts-and-terms.html#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses and [Post-commission configuration](commission-machines.html#heading--post-commission-configuration) for information on IP allocation modes.
- snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 See [Concepts and terms](concepts-and-terms.html#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses and [Post-commission configuration](commission-machines.html#heading--post-commission-configuration) for information on IP allocation modes.
@@ -521,11 +489,11 @@ See [Concepts and terms](concepts-and-terms.html#heading--ip-ranges) for an expl
 <p>When management is disabled for a subnet, the definition of a reserved IP range differs from the managed mode. Here, a reserved IP range tells MAAS to <strong>only allocate addresses from this range</strong> (via &lsquo;Auto assign&rsquo;). Also, DHCP will never lease addresses from an unmanaged subnet.</p>
 <p><a href="#heading--controlling-subnet-management"><h2 id="heading--controlling-subnet-management">Controlling subnet management</h2></a></p>
 <p>By default, MAAS manages subnets in your configuration, but it is easy to change this.</p>
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 To disable (or re-enable) subnet management navigate to the 'Subnets' page and select the subnet. Press the 'Edit' button to allow changes. The 'Managed allocation' field will become a slide switch. Click the label (or the switch icon itself) to toggle between enabled (dark blue) and disabled (grey) and click 'Save summary'.
 
 <a href="images/e5d80c8c-installconfig-network-subnet-management__2.6-management-toggle.png" target = "_blank"><img src="images/e5d80c8c-installconfig-network-subnet-management__2.6-management-toggle.png"></a></a>
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
 
 <p>To enable or disable subnet management:</p>
 <pre><code class="bash">maas $PROFILE subnet update $SUBNET_CIDR managed=false|true

@@ -31,22 +31,6 @@ MAAS requires an initial administrator, sometimes called a MAAS "superuser". Whe
 sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
 ```
 
-<!-- deb-2-7-cli
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3204#heading--add-a-user) for instructions on creating regular users.
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3205#heading--add-a-user) for instructions on creating regular users.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3206#heading--add-a-user) for instructions on creating regular users.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3207#heading--add-a-user) for instructions on creating regular users.
- deb-2-8-ui -->
-
 <!-- deb-2-9-cli
 You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3208#heading--add-a-user) for instructions on creating regular users.
  deb-2-9-cli -->
@@ -62,22 +46,6 @@ You can create extra administrators in the same way. See [User accounts](/t/user
 <!-- deb-3-0-ui
 You can create extra administrators in the same way. See [User accounts](/t/user-accounts/4148#heading--add-a-user) for instructions on creating regular users.
  deb-3-0-ui -->
-
-<!-- snap-2-7-cli
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3198#heading--add-a-user) for instructions on creating regular users.
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3199#heading--add-a-user) for instructions on creating regular users.
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3200#heading--add-a-user) for instructions on creating regular users.
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3201#heading--add-a-user) for instructions on creating regular users.
- snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3202#heading--add-a-user) for instructions on creating regular users.

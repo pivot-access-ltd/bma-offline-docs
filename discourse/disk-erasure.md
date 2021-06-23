@@ -48,31 +48,15 @@ If all three options are checked when the machine is released the following orde
 1.  Use 'secure erase' if the disk supports it
 2.  If it does not then use 'quick erase'
 
-<!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli snap-2-7-cli snap-3-0-cli deb-3-0-cli 
+<!--   deb-2-9-cli  snap-2-9-cli  snap-3-0-cli deb-3-0-cli 
 
 <a href="#heading--erasure-procedure"><h2 id="heading--erasure-procedure">Erasure procedure</h2></a>
 
-deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli snap-2-7-cli snap-3-0-cli deb-3-0-cli -->
-
-<!-- deb-2-7-cli
-When using the [MAAS CLI](/t/maas-cli/2820), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
- deb-2-7-cli -->
-
-<!-- deb-2-8-cli
-When using the [MAAS CLI](/t/maas-cli/2822), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
- deb-2-8-cli -->
+  deb-2-9-cli  snap-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <!-- deb-2-9-cli
 When using the [MAAS CLI](/t/maas-cli/2824), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
  deb-2-9-cli -->
-
-<!-- snap-2-7-cli
-When using the [MAAS CLI](/t/maas-cli/2814), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
- snap-2-7-cli -->
-
-<!-- snap-2-8-cli
-When using the [MAAS CLI](/t/maas-cli/2816), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
- snap-2-8-cli -->
 
 <!-- snap-2-9-cli
 When using the [MAAS CLI](/t/maas-cli/2818), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
@@ -86,7 +70,7 @@ When using the [MAAS CLI](/t/maas-cli/3987), you can erase a disk when releasing
 When using the [MAAS CLI](/t/maas-cli/3985), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
  snap-3-0-cli -->
 
-<!-- deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli snap-2-7-cli snap-3-0-cli deb-3-0-cli 
+<!--   deb-2-9-cli  snap-2-9-cli  snap-3-0-cli deb-3-0-cli 
 
 
 ```
@@ -139,4 +123,4 @@ then MAAS will perform a secure erasure if the drive has that feature; if not, i
 maas $PROFILE machine release $SYSTEM_ID comment="some comment" erase=true
 ```
 
-deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-2-8-cli snap-2-9-cli snap-2-7-cli snap-3-0-cli deb-3-0-cli -->
+  deb-2-9-cli  snap-2-9-cli  snap-3-0-cli deb-3-0-cli -->

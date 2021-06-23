@@ -1,7 +1,7 @@
-||2.7|2.8|2.9|3.0|
-|-----:|:-----:|:-----:|:-----:|:-----:|
-Snap|[CLI](/t/audit-event-logs-snap-2-7-cli/2310) ~ [UI](/t/audit-event-logs-snap-2-7-ui/2311)|[CLI](/t/audit-event-logs-snap-2-8-cli/2312) ~ [UI](/t/audit-event-logs-snap-2-8-ui/2313)|[CLI](/t/audit-event-logs-snap-2-9-cli/2314) ~ [UI](/t/audit-event-logs-snap-2-9-ui/2315)|[CLI](/t/audit-event-logs-snap-3-0-cli/3829) ~ [UI](/t/audit-event-logs-snap-3-0-ui/3830)|
-Packages|[CLI](/t/audit-event-logs-deb-2-7-cli/2316) ~ [UI](/t/audit-event-logs-deb-2-7-ui/2317)|[CLI](/t/audit-event-logs-deb-2-8-cli/2318) ~ [UI](/t/audit-event-logs-deb-2-8-ui/2319)|[CLI](/t/audit-event-logs-deb-2-9-cli/2320) ~ [UI](/t/audit-event-logs-deb-2-9-ui/2321)|[CLI](/t/audit-event-logs-deb-3-0-cli/3831) ~ [UI](/t/audit-event-logs-deb-3-0-ui/3832)|
+||2.9|3.0|
+|-----:|:-----:|:-----:|
+Snap|[CLI](/t/audit-event-logs-snap-2-9-cli/2314) ~ [UI](/t/audit-event-logs-snap-2-9-ui/2315)|[CLI](/t/audit-event-logs-snap-3-0-cli/3829) ~ [UI](/t/audit-event-logs-snap-3-0-ui/3830)|
+Packages|[CLI](/t/audit-event-logs-deb-2-9-cli/2320) ~ [UI](/t/audit-event-logs-deb-2-9-ui/2321)|[CLI](/t/audit-event-logs-deb-3-0-cli/3831) ~ [UI](/t/audit-event-logs-deb-3-0-ui/3832)|
 
 There are many user-initiated events in MAAS that an administrator or a user may want to audit. These include someone updating the settings or changing a user's permissions. This page details how to query these events and includes examples of how to perform a query, and the type of data logs can provide.
 

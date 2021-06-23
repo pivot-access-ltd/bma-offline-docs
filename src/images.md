@@ -7,34 +7,6 @@ MAAS provides supported images for stable Ubuntu releases, and for CentOS 6.6, C
 
 #### Four questions you may have:
 
-<!-- deb-2-7-cli
-1. [What are boot sources, and why do they matter?](#heading--boot-sources)
-2. [How do I select and import an image?](/t/select-and-import-images/3096)
-3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2808)
-4. [How do I use and manage VMWare images?](/t/vmware-images/3240)
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-1. [What are boot sources, and why do they matter?](#heading--boot-sources)
-2. [How do I select and import an image?](/t/select-and-import-images/3097)
-3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2809)
-4. [How do I use and manage VMWare images?](/t/vmware-images/3241)
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-1. [What are boot sources, and why do they matter?](#heading--boot-sources)
-2. [How do I select and import an image?](/t/select-and-import-images/3098)
-3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2810)
-4. [How do I use and manage VMWare images?](/t/vmware-images/3242)
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-1. [What are boot sources, and why do they matter?](#heading--boot-sources)
-2. [How do I select and import an image?](/t/select-and-import-images/3099)
-3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2811)
-4. [How do I use and manage VMWare images?](/t/vmware-images/3243)
- deb-2-8-ui -->
-
 <!-- deb-2-9-cli
 1. [What are boot sources, and why do they matter?](#heading--boot-sources)
 2. [How do I select and import an image?](/t/select-and-import-images/3100)
@@ -62,34 +34,6 @@ MAAS provides supported images for stable Ubuntu releases, and for CentOS 6.6, C
 3. [How do I set up and use a local image mirror?](/t/local-image-mirror/3984)
 4. [How do I use and manage VMWare images?](/t/vmware-images/4176)
  deb-3-0-ui -->
-
-<!-- snap-2-7-cli
-1. [What are boot sources, and why do they matter?](#heading--boot-sources)
-2. [How do I select and import an image?](/t/select-and-import-images/3090)
-3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2802)
-4. [How do I use and manage VMWare images?](/t/vmware-images/3234)
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-1. [What are boot sources, and why do they matter?](#heading--boot-sources)
-2. [How do I select and import an image?](/t/select-and-import-images/3091)
-3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2803)
-4. [How do I use and manage VMWare images?](/t/vmware-images/3235)
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-1. [What are boot sources, and why do they matter?](#heading--boot-sources)
-2. [How do I select and import an image?](/t/select-and-import-images/3092)
-3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2804)
-4. [How do I use and manage VMWare images?](/t/vmware-images/3236)
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-1. [What are boot sources, and why do they matter?](#heading--boot-sources)
-2. [How do I select and import an image?](/t/select-and-import-images/3093)
-3. [How do I set up and use a local image mirror?](/t/local-image-mirror/2805)
-4. [How do I use and manage VMWare images?](/t/vmware-images/3237)
- snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 1. [What are boot sources, and why do they matter?](#heading--boot-sources)
@@ -145,22 +89,6 @@ MAAS comes configured with a boot source that should suffice for most users:
 
 [`https://images.maas.io/ephemeral-v3/stable/`](https://images.maas.io/ephemeral-v3/stable/)
 
-<!-- deb-2-7-cli
-The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2808) for some explanation regarding the availability of other streams.
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2809) for some explanation regarding the availability of other streams.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2810) for some explanation regarding the availability of other streams.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2811) for some explanation regarding the availability of other streams.
- deb-2-8-ui -->
-
 <!-- deb-2-9-cli
 The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2812) for some explanation regarding the availability of other streams.
  deb-2-9-cli -->
@@ -176,22 +104,6 @@ The above URL points to the 'stable' stream (for the v3 format). See [Local imag
 <!-- deb-3-0-ui
 The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/3984) for some explanation regarding the availability of other streams.
  deb-2-9-ui -->
-
-<!-- snap-2-7-cli
-The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2802) for some explanation regarding the availability of other streams.
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2803) for some explanation regarding the availability of other streams.
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2804) for some explanation regarding the availability of other streams.
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2805) for some explanation regarding the availability of other streams.
- snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/2806) for some explanation regarding the availability of other streams.

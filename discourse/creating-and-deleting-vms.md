@@ -32,7 +32,7 @@ To delete a VM, delete it as you would any other MAAS machine. Select the desire
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg"></a> 
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 
 #### Eight questions you may have:
 
@@ -188,4 +188,4 @@ Example output:
     maas $PROFILE machine delete $SYSTEM_ID
 
 After you delete a machine, its resources will be available for other VMs.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->

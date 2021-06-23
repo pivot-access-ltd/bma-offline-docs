@@ -431,30 +431,6 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>Controllers</h1><p>||2.9|3.0|</p>
 <p>Most of the functionality of MAAS is contained in a series of controllers.  There are two basic types: a region controller and one or more rack controllers. The region controller deals with operator requests, while the rack controller(s) provides high-bandwidth services to the individual machines.  In essence, the region controller interacts with the user, while the rack controllers manage the bare metal.</p>
-<!-- deb-2-7-cli
-<strong>NOTE:</strong> 
-Note that both region and rack controllers can be scaled out, as well as made [highly available](high-availability.html).
-
-deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-<strong>NOTE:</strong> 
-Note that both region and rack controllers can be scaled out, as well as made [highly available](high-availability.html).
-
-deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-<strong>NOTE:</strong> 
-Note that both region and rack controllers can be scaled out, as well as made [highly available](high-availability.html).
-
-deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-<strong>NOTE:</strong> 
-Note that both region and rack controllers can be scaled out, as well as made [highly available](high-availability.html).
-
-deb-2-8-ui -->
-
 <!-- deb-2-9-cli
 <strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made [highly available](high-availability.html).
@@ -475,30 +451,6 @@ deb-3-0-cli -->
 
 <p><strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made <a href="high-availability.html">highly available</a>.</p>
-<!-- snap-2-7-cli
-<strong>NOTE:</strong> 
-Note that both region and rack controllers can be scaled out, as well as made [highly available](high-availability.html).
-
-snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-<strong>NOTE:</strong> 
-Note that both region and rack controllers can be scaled out, as well as made [highly available](high-availability.html).
-
-snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-<strong>NOTE:</strong> 
-Note that both region and rack controllers can be scaled out, as well as made [highly available](high-availability.html).
-
-snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-<strong>NOTE:</strong> 
-Note that both region and rack controllers can be scaled out, as well as made [highly available](high-availability.html).
-
-snap-2-8-ui -->
-
 <!-- snap-2-9-cli
 <strong>NOTE:</strong> 
 Note that both region and rack controllers can be scaled out, as well as made [highly available](high-availability.html).
@@ -551,22 +503,6 @@ snap-3-0-ui -->
 <p>A rack controller is attached to each &ldquo;fabric&rdquo;. As the name implies, a typical setup is to have a rack controller in each data centre server rack. The rack controller will cache large items for performance, such as operating system install images, but maintains no independent state other than the credentials required to talk to the region controller.</p>
 <p><details><summary>Tell me about fabrics</summary></p>
 <p>A fabric is simply a way of linking <a href="concepts-and-terms.html#heading--vlans">VLANs</a> (Virtual LANs) together.  If you&rsquo;re familiar with a VLAN, you know that it&rsquo;s designed to limit network traffic to specific ports (e.g., on a <a href="concepts-and-terms.html#heading--switch">switch</a>) or by evaluating labels called &ldquo;tags&rdquo; (unrelated to MAAS tags).  By definition, this would mean that two VLANs can&rsquo;t communicate with each other &ndash; it would defeat the purpose of the VLAN &ndash; unless you implement some extraordinary measures.</p>
-<!-- deb-2-7-cli
-For example, let's say that your [hospital](give-me-an-example-of-maas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-For example, let's say that your [hospital](give-me-an-example-of-maas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-For example, let's say that your [hospital](give-me-an-example-of-maas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-For example, let's say that your [hospital](give-me-an-example-of-maas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-deb-2-8-ui -->
-
 <!-- deb-2-9-cli
 For example, let's say that your [hospital](give-me-an-example-of-maas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
 deb-2-9-cli -->
@@ -580,22 +516,6 @@ For example, let's say that your [hospital](give-me-an-example-of-maas.html) has
 deb-3-0-cli -->
 
 <p>For example, let&rsquo;s say that your <a href="give-me-an-example-of-maas.html">hospital</a> has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let&rsquo;s say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.</p>
-<!-- snap-2-7-cli
-For example, let's say that your [hospital](give-me-an-example-of-maas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-For example, let's say that your [hospital](give-me-an-example-of-maas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-For example, let's say that your [hospital](give-me-an-example-of-maas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-For example, let's say that your [hospital](give-me-an-example-of-maas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-snap-2-8-ui -->
-
 <!-- snap-2-9-cli
 For example, let's say that your [hospital](give-me-an-example-of-maas.html) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
 snap-2-9-cli -->
@@ -633,7 +553,7 @@ snap-3-0-ui -->
 <h3>Moving the controller</h3>
 
 <p>To move a rack controller using the MAAS UI, first, delete the rack controller.  In the &ldquo;Controllers&rdquo; tab in the UI, select the rack controller you with to delete, choose &ldquo;Take action&rdquo; and select &ldquo;Delete.&rdquo;  You will be asked to confirm with a red button, entitled &ldquo;Delete 1 controller.&rdquo;</p>
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller, with the command:
 
 <pre><code>maas $PROFILE rack-controller delete $SYSTEM_ID
@@ -648,10 +568,10 @@ where `$PROFILE` is your admin profile name, and `$SYSTEM_ID` can be found by ex
 
 
 There is no confirmation step, so make sure you have the right rack controller before proceeding.
- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
 
 <p>Next, you must register a new rack controller, which is always done from the command line.</p>
-<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--     deb-2-9-ui deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
 <pre><code>sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
@@ -659,9 +579,9 @@ For this exercise, we're assuming you are using the already installed rack contr
 
 
 where the secret is found in `/var/lib/maas/secret`.
- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+     deb-2-9-ui deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
 
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--     snap-2-9-ui snap-2-9-cli snap-3-0-cli deb-3-0-cli 
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
 <pre><code>sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
@@ -669,7 +589,7 @@ For this exercise, we're assuming you are using the already installed rack contr
 
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+     snap-2-9-ui snap-2-9-cli snap-3-0-cli deb-3-0-cli  -->
 
 <p>Note that in the UI, if you go to the &ldquo;Controllers&rdquo; tab and press the button entitled, &ldquo;Add rack controller,&rdquo; at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.</p>
     </div>

@@ -3,22 +3,6 @@
 Snap|[CLI](/t/custom-machine-setup-snap-2-9-cli/2590) ~ [UI](/t/custom-machine-setup-snap-2-9-ui/2591)|[CLI](/t/custom-machine-setup-snap-3-0-cli/3909) ~ [UI](/t/custom-machine-setup-snap-3-0-ui/3910)|
 Packages|[CLI](/t/custom-machine-setup-deb-2-9-cli/2596) ~ [UI](/t/custom-machine-setup-deb-2-9-ui/2597)|[CLI](/t/custom-machine-setup-deb-3-0-cli/3911) ~ [UI](/t/custom-machine-setup-deb-3-0-ui/3912)|
 
-<!-- deb-2-7-cli
-During machine [enlistment](/t/add-machines/2280#heading--enlistment), [deployment](/t/deploy-machines/2604), [commissioning](/t/commission-machines/2472) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-During machine [enlistment](/t/add-machines/2281#heading--enlistment), [deployment](/t/deploy-machines/2605), [commissioning](/t/commission-machines/2473) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-During machine [enlistment](/t/add-machines/2282#heading--enlistment), [deployment](/t/deploy-machines/2606), [commissioning](/t/commission-machines/2474) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-During machine [enlistment](/t/add-machines/2283#heading--enlistment), [deployment](/t/deploy-machines/2607), [commissioning](/t/commission-machines/2475) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
- deb-2-8-ui -->
-
 <!-- deb-2-9-cli
 During machine [enlistment](/t/add-machines/2284#heading--enlistment), [deployment](/t/deploy-machines/2608), [commissioning](/t/commission-machines/2476) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  deb-2-9-cli -->
@@ -34,22 +18,6 @@ During machine [enlistment](/t/add-machines/3823#heading--enlistment), [deployme
 <!-- deb-3-0-ui
 During machine [enlistment](/t/add-machines/3824#heading--enlistment), [deployment](/t/deploy-machines/3916), [commissioning](/t/commission-machines/3876) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
  deb-3-0-ui -->
-
-<!-- snap-2-7-cli
-During machine [enlistment](/t/add-machines/2274#heading--enlistment), [deployment](/t/deploy-machines/2598), [commissioning](/t/commission-machines/2466) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-During machine [enlistment](/t/add-machines/2275#heading--enlistment), [deployment](/t/deploy-machines/2599), [commissioning](/t/commission-machines/2467) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-During machine [enlistment](/t/add-machines/2276#heading--enlistment), [deployment](/t/deploy-machines/2600), [commissioning](/t/commission-machines/2468) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-During machine [enlistment](/t/add-machines/2277#heading--enlistment), [deployment](/t/deploy-machines/2601), [commissioning](/t/commission-machines/2469) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
- snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 During machine [enlistment](/t/add-machines/2278#heading--enlistment), [deployment](/t/deploy-machines/2602), [commissioning](/t/commission-machines/2470) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
@@ -82,13 +50,13 @@ Customisation in MAAS happens in two ways:
 
 <a href="#heading--templates"><h3 id="heading--templates">Templates</h3></a>
 
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli
+<!--     snap-2-9-ui snap-2-9-cli
 The [Tempita](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) template files are found in the `/var/snap/maas/current/preseeds/` directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:
-snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli -->
+    snap-2-9-ui snap-2-9-cli -->
 
-<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli
+<!--     deb-2-9-ui deb-2-9-cli
 The [Tempita](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) template files are found in the `/etc/maas/preseeds/` directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:
-deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli -->
+    deb-2-9-ui deb-2-9-cli -->
 
 
 |       Phase       |                 Filename prefix                 |
@@ -176,14 +144,6 @@ late_commands:
 
 <a href="#heading--cloud-init"><h2 id="heading--cloud-init">Cloud-init</h2></a>
 
-<!-- deb-2-7-cli
-Using cloud-init to customise a machine after deployment is relatively easy. If you're not familiar with the MAAS command-line interface (CLI), start by reviewing the [MAAS CLI](/t/maas-cli/2820) page.
- deb-2-7-cli -->
-
-<!-- deb-2-8-cli
-Using cloud-init to customise a machine after deployment is relatively easy. If you're not familiar with the MAAS command-line interface (CLI), start by reviewing the [MAAS CLI](/t/maas-cli/2822) page.
- deb-2-8-cli -->
-
 <!-- deb-2-9-cli
 Using cloud-init to customise a machine after deployment is relatively easy. If you're not familiar with the MAAS command-line interface (CLI), start by reviewing the [MAAS CLI](/t/maas-cli/2824) page.
  deb-2-9-cli -->
@@ -191,14 +151,6 @@ Using cloud-init to customise a machine after deployment is relatively easy. If 
 <!-- deb-3-0-cli
 Using cloud-init to customise a machine after deployment is relatively easy. If you're not familiar with the MAAS command-line interface (CLI), start by reviewing the [MAAS CLI](/t/maas-cli/3987) page.
  deb-3-0-cli -->
-
-<!-- snap-2-7-cli
-Using cloud-init to customise a machine after deployment is relatively easy. If you're not familiar with the MAAS command-line interface (CLI), start by reviewing the [MAAS CLI](/t/maas-cli/2814) page.
- snap-2-7-cli -->
-
-<!-- snap-2-8-cli
-Using cloud-init to customise a machine after deployment is relatively easy. If you're not familiar with the MAAS command-line interface (CLI), start by reviewing the [MAAS CLI](/t/maas-cli/2816) page.
- snap-2-8-cli -->
 
 <!-- snap-2-9-cli
 Using cloud-init to customise a machine after deployment is relatively easy. If you're not familiar with the MAAS command-line interface (CLI), start by reviewing the [MAAS CLI](/t/maas-cli/2818) page.
@@ -208,7 +160,7 @@ Using cloud-init to customise a machine after deployment is relatively easy. If 
 Using cloud-init to customise a machine after deployment is relatively easy. If you're not familiar with the MAAS command-line interface (CLI), start by reviewing the [MAAS CLI](/t/maas-cli/3985) page.
  snap-3-0-cli -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli
+<!--   snap-2-9-cli   deb-2-9-cli
 
 After you're logged in, use the following command to deploy a machine with a custom script you've written:
 
@@ -252,9 +204,9 @@ Putting it together:
     maas $PROFILE machine deploy $SYSTEM_ID user_data=$(base64 -w0 ./import_key.sh)
 
 After MAAS deploys the machine, you'll find `/ssh-key-import.log` on the machine you deployed.
- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli -->
+   snap-2-9-cli   deb-2-9-cli -->
 
-<!--  snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui 
+<!--    snap-2-9-ui   deb-2-9-ui 
 <a href="#heading--cloud-init-ui"><h3 id="heading--cloud-init-ui">Customising cloud-init with the UI (v2.9++)</h3></a>
 
 It's easy to customise cloud-init via the web UI.  When you've selected a machine and choose 'Take action >> Deploy,' you'll be presented with the following screen:
@@ -278,4 +230,4 @@ ssh-import-id foobar_user
 [note]
 No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-init scripts.
 [/note]
- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui -->
+   snap-2-9-ui   deb-2-9-ui -->

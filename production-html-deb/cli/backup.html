@@ -448,13 +448,13 @@
 <li>The configuration files in <code>/var/lib/maas</code></li>
 </ol>
 <p><code>/var/lib/maas/boot-resources</code> can safely be excluded as this contains images easily re-downloaded within MAAS.</p>
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli
+<!--     snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli
 1.  The PostgreSQL database
 2.  The configuration files in `/snap/maas/current/etc/maas`
 3.  The configuration files in `/var/snap/maas/common/maas/`
 
 `/var/snap/maas/common/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
-snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli -->
+    snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli -->
 
 <p>Other configuration files, such as those used by your network configuration (<code>/etc/network/interfaces</code>, for example) will need to be backed-up and restored according to your specific deployment requirements.</p>
 <p><a href="#heading--postgresql-export"><h2 id="heading--postgresql-export">PostgreSQL export</h2></a></p>
@@ -487,12 +487,12 @@ snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-
 <pre><code class="bash">sudo tar cvpzf ~/backup.tgz --exclude=/var/lib/maas/boot-resources /etc/maas /var/lib/maas ~/dump.sql
 </code></pre>
 
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli
+<!--     snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli
 
 <pre><code class="bash">sudo tar cvpzf ~/backup.tgz --exclude=/var/snap/maas/common/maas/boot-resources /snap/maas/current/etc/maas /var/snap/maas/common/maas ~/dump.sql
 </code></pre>
 
-snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli -->
+    snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli -->
 
 <p>Make sure you move the resulting <code>backup.tgz</code> to some external storage you can access when restoring the system.  Also, make sure to restart the services you stopped prior to completing the backup.</p>
 <p>We&rsquo;ve now backed up all the components necessary to recreate a MAAS deployment. Next, we&rsquo;ll discuss how to restore this configuration.</p>
@@ -514,7 +514,7 @@ essudo cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/
 </code></pre>
 
 <p>If your restore process regenerated the <code>/var/lib/maas/secret</code> file, make sure update this secret on any additional rack controllers.</p>
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli
+<!--     snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli
 
 <pre><code class="bash">sudo mv /snap/maas/current/etc/maas /snap/maas/current/etc/_maas
 sudo mv /var/snap/maas/common/maas /var/snap/maas/common/_maas
@@ -524,7 +524,7 @@ sudo cp -prf /var/snap/maas/common/maas /var/snap/maas/common/
 
 
 If your restore process regenerated the `/var/snap/maas/common/maas/secret` file, make sure update this secret on any additional rack controllers.
-snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli -->
+    snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli -->
 
 <p><strong>NOTE:</strong> 
 Take care to preserve the correct permissions when restoring files and directories.</p>

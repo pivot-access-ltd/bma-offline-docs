@@ -9,7 +9,7 @@ If you wish, you can tell MAAS to test machine hardware using well-known Linux u
 The majority of testing scripts only work with machines that are backed by physical hardware (e.g. they may be incompatible with VM-based machines).
 [/note]
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 With MAAS, you can easily write, upload and execute your hardware testing scripts and see the results.
 
 #### Three questions you may have:
@@ -180,10 +180,10 @@ maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
 [note]
 **$RUN_ID** is labelled `id` in the verbose result output.
 [/note]
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
 
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 #### Two questions you may have: 
 
 1. [How do I apply a hardware test?](#heading--apply-a-hardware-test)
@@ -290,23 +290,7 @@ The following hardware testing scripts can be selected from the web UI:
 After either commissioning, testing, or installation has started, MAAS reports in real-time which script is running.
 
 You can access the verbatim output from any test by selecting a machine, selecting the 'Hardware tests' page and clicking on the 'Log view' link in the 'Results' column for the specific test.
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
-
-<!-- deb-2-7-cli
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2484) for more details on how these scripts work and how you can write your own.
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2485) for more details on how these scripts work and how you can write your own.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2486) for more details on how these scripts work and how you can write your own.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2487) for more details on how these scripts work and how you can write your own.
- deb-2-8-ui -->
+  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 
 <!-- deb-2-9-cli
 See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2488) for more details on how these scripts work and how you can write your own.
@@ -323,22 +307,6 @@ See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-t
 <!-- deb-3-0-ui
 See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/3868) for more details on how these scripts work and how you can write your own.
  deb-3-0-ui -->
-
-<!-- snap-2-7-cli
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2478) for more details on how these scripts work and how you can write your own.
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2479) for more details on how these scripts work and how you can write your own.
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2480) for more details on how these scripts work and how you can write your own.
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2481) for more details on how these scripts work and how you can write your own.
- snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2482) for more details on how these scripts work and how you can write your own.

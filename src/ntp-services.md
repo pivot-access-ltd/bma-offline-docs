@@ -11,7 +11,7 @@ The region controller configures the NTP service to keep its time synchronised f
 
 External sites, such as an existing NTP infrastructure, can be used directly as a time source for both rack controllers and machines.
 
-<!-- snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 You can specify an external site by choosing the NTP server(s) and selecting the 'External Only' option. The region controller always uses an external site.
 
 On the 'Settings' page, select the 'Network services' tab and scroll down to the 'NTP' section:
@@ -19,9 +19,9 @@ On the 'Settings' page, select the 'Network services' tab and scroll down to the
 <a href="https://assets.ubuntu.com/v1/69180b4a-installconfig-network-ntp__2.6-configure-ntp.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/69180b4a-installconfig-network-ntp__2.6-configure-ntp.png"></a>
 
 Enter the address of the desired NTP server. Apply any changes by pressing the 'Save' button.
-snap-2-7-ui snap-2-8-ui snap-2-9-ui deb-2-7-ui deb-2-8-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+  snap-2-9-ui   deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 You can specify an external NTP server with two successive commands:
 
 ```
@@ -34,4 +34,4 @@ followed by:
 maas admin maas set-config name=ntp_external_only value=true
 ```
 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->

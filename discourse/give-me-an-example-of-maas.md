@@ -7,7 +7,7 @@ An evolving example may be useful to introduce you to MAAS, and it doesn't have 
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img  src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a> 
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 ```
 FQDN               POWER  STATUS     OWNER  TAGS     POOL       NOTE     ZONE
 ----               -----  ------     -----  ----     ----       ----     ----
@@ -31,7 +31,7 @@ maas admin machines read | jq -r '(["FQDN","POWER","STATUS",
 ```
 
 Be aware that newly-created machines will only have default settings for tags, resource pools, zones, and notes, and will probably all be in the "Ready" state, with no owner.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 So imagine that you're the IT administrator for a new, 100-bed hospital that's under construction, intended to serve a suburban community of 5,000 people.  Call it "Metaphorical General Hospital" (MGH).   Your job is to design a flexible data centre for this facility.  You've decided to start with MAAS as your tool of choice, and for this planning exercise, you'll use VMs in a VM host.
 
@@ -48,22 +48,6 @@ You'll need to start with a little network thinking (and design).  Talking throu
 <tr><td>Food service</td><td>Instrumentation</td><td>Information technology</td></tr>
 </table>
 
-<!-- deb-2-7-cli
-You can handle this lowest level with individual [machines](/t/machines/2736).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-You can handle this lowest level with individual [machines](/t/machines/2737).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-You can handle this lowest level with individual [machines](/t/machines/2738).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-You can handle this lowest level with individual [machines](/t/machines/2738).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
- deb-2-8-ui -->
-
 <!-- deb-2-9-cli
 You can handle this lowest level with individual [machines](/t/machines/2739).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
  deb-2-9-cli -->
@@ -79,22 +63,6 @@ You can handle this lowest level with individual [machines](/t/machines/4031).  
 <!-- deb-3-0-ui
 You can handle this lowest level with individual [machines](/t/machines/4032).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
  deb-3-0-ui -->
-
-<!-- snap-2-7-cli
-You can handle this lowest level with individual [machines](/t/machines/2730).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-You can handle this lowest level with individual [machines](/t/machines/2731).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-You can handle this lowest level with individual [machines](/t/machines/2732).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-You can handle this lowest level with individual [machines](/t/machines/2733).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
- snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 You can handle this lowest level with individual [machines](/t/machines/2734).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
@@ -192,22 +160,6 @@ No need to create a lot of VMs for this example (unless you just want to do so).
 
 <a href="#heading--manually-add-machines"><h3 id="heading--manually-add-machines">Manually adding machines</h3></a>
 
-<!-- deb-2-7-cli
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2280#heading--add-a-node-manually) to MAAS that correspond to your VMs.
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2281#heading--add-a-node-manually) to MAAS that correspond to your VMs.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2282#heading--add-a-node-manually) to MAAS that correspond to your VMs.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2283#heading--add-a-node-manually) to MAAS that correspond to your VMs.
- deb-2-8-ui -->
-
 <!-- deb-2-9-cli
 Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2284#heading--add-a-node-manually) to MAAS that correspond to your VMs.
  deb-2-9-cli -->
@@ -224,22 +176,6 @@ Once you've created the necessary VMs, you'll want to [manually add machines](/t
 Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/3824#heading--add-a-node-manually) to MAAS that correspond to your VMs.
  deb-3-0-ui -->
 
-<!-- snap-2-7-cli
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2274#heading--add-a-node-manually) to MAAS that correspond to your VMs.
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2275#heading--add-a-node-manually) to MAAS that correspond to your VMs.
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2276#heading--add-a-node-manually) to MAAS that correspond to your VMs.
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2277#heading--add-a-node-manually) to MAAS that correspond to your VMs.
- snap-2-8-ui -->
-
 <!-- snap-2-9-cli
 Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2278#heading--add-a-node-manually) to MAAS that correspond to your VMs.
  snap-2-9-cli -->
@@ -254,7 +190,7 @@ Once you've created the necessary VMs, you'll want to [manually add machines](/t
 
 Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/3822#heading--add-a-node-manually) to MAAS that correspond to your VMs.
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 ```
 FQDN               POWER  STATUS  OWNER  TAGS     POOL     NOTE  ZONE
 ----               -----  ------  -----  ----     ----     ----  ----
@@ -283,14 +219,14 @@ FQDN               POWER  STATUS  OWNER  TAGS     POOL     NOTE  ZONE
 52-54-00-9b-e4-9a  off    Ready   -      virtual  default  -     default
 52-54-00-9c-51-00  off    Ready   -      virtual  default  -     default
 ```
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+  snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg"></a> 
 
 <details>
 <summary><em>Try it!</em></summary>
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 Creating a machine from a VM requires six pieces of information:
 
 1. the machine architecture (e.g., amd64)
@@ -323,7 +259,7 @@ For default configurations, the Virsh Address is "qemu+ssh://[your-login-id]@192
 
 As you add machines, they automatically commission.
 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 Creating a machine from a VM requires about a dozen pieces of information, most of which you can gather from the VM itself:
 
@@ -350,22 +286,6 @@ When finished, the commissioned machines with be at the "Ready" state.
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
-<!-- deb-2-7-cli
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2472) and [deploy](/t/deploy-machines/2604) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2892) to machines.  
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2473) and [deploy](/t/deploy-machines/2605) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2893) to machines.  
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2474) and [deploy](/t/deploy-machines/2606) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2894) to machines.  
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2475) and [deploy](/t/deploy-machines/2607) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2895) to machines.  
- deb-2-8-ui -->
-
 <!-- deb-2-9-cli
 Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2476) and [deploy](/t/deploy-machines/2608) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2896) to machines.  
  deb-2-9-cli -->
@@ -382,22 +302,6 @@ Assigning machines to specific functions is something you can do after you [comm
 Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/3876) and [deploy](/t/deploy-machines/3916) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/4024) to machines.  
  deb-3-0-ui -->
 
-<!-- snap-2-7-cli
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2466) and [deploy](/t/deploy-machines/2598) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2886) to machines.  
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2467) and [deploy](/t/deploy-machines/2599) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2887) to machines.  
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2468) and [deploy](/t/deploy-machines/2600) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2888) to machines.  
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2469) and [deploy](/t/deploy-machines/2601) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2889) to machines.  
- snap-2-8-ui -->
-
 <!-- snap-2-9-cli
 Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2470) and [deploy](/t/deploy-machines/2602) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2890) to machines.  
  snap-2-9-cli -->
@@ -412,7 +316,7 @@ Assigning machines to specific functions is something you can do after you [comm
 
 Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/3874) and [deploy](/t/deploy-machines/3814) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/4022) to machines.  
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 ```
 FQDN               POWER  STATUS  OWNER  TAGS     POOL     NOTE  ZONE
 ----               -----  ------  -----  ----     ----     ----  ----
@@ -449,7 +353,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID"]
 ```
 
 </details>
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg"></a> 
 
@@ -502,22 +406,6 @@ As you look at the list of functions you've created, and talk more with the staf
 <tr><td>Instrumentation</td><td>Information technology</td><td></td></tr>
 </table>
 
-<!-- deb-2-7-cli
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3084) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3085) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3086) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3087) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
- deb-2-8-ui -->
-
 <!-- deb-2-9-cli
 You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3088) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
  deb-2-9-cli -->
@@ -533,22 +421,6 @@ You're aware that the number of machines you'll need use for each of the individ
 <!-- deb-3-0-ui
 You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/4100) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
  deb-3-0-ui -->
-
-<!-- snap-2-7-cli
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3078) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3079) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3080) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3081) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
- snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3082) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
@@ -567,7 +439,7 @@ You're aware that the number of machines you'll need use for each of the individ
 <details>
 <summary><em>Try it!</em></summary>
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 Just like tags, you must first create a resource pool before assigning a machine to it.
 Here’s an example that demonstrates how to create a new resource pool named "myresource" in a single command; note that the description field is optional, but often very helpful:
 
@@ -580,7 +452,7 @@ Once you've created the pool you want, you can add a machine that pool with the 
 ```
 maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
 ```
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 Notice at the top of the machine list, there is a tab labelled, "Resource pools:"
 
@@ -610,7 +482,7 @@ Just choose the one you want for this machine (in our example, ProServ) and you'
 
 Here's a snippet of the updated machine list, with all machines added to the appropriate resource pool:
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 ```
 FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
 ----               -----  ------  -----  ----     ----       ----  ----
@@ -623,7 +495,7 @@ FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
 52-54-00-2e-c4-40  off    Ready   admin  MedAdmn  NurServ    -     default
 52-54-00-2e-ee-17  off    Ready   admin  Charts   ProServ    -     default
 ```
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/704b6d1603f6f90fca42891d98c3bb418458b94a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/704b6d1603f6f90fca42891d98c3bb418458b94a.jpeg"></a> 
 
@@ -635,7 +507,7 @@ Another optional identifier for machines is the "Note" field.  While it can be l
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/8724395dfe9fc4d3f4a10a05687c33c6a3dded07.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8724395dfe9fc4d3f4a10a05687c33c6a3dded07.jpeg"></a> 
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 ```
 FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE     ZONE
 ----               -----  ------  -----  ----     ----       ----     ----
@@ -648,12 +520,12 @@ FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE     ZONE
 52-54-00-2e-c4-40  off    Ready   admin  MedAdmn  NurServ    @rxonly  default
 52-54-00-2e-ee-17  off    Ready   admin  Charts   ProServ    @md-all  default
 ```
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <details>
 <summary><em>Try it!</em></summary>
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 To add a note to a machine, you'll first need to determine its system ID (see above).  Once you have that, you can add or change a note like this:
 
 ```
@@ -661,7 +533,7 @@ maas $PROFILE machine update $SYSTEM_ID description="note"
 ```
 
 It helps very much to keep your notes short, since only a few characters are visible on the machine list.
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 You can edit notes by clicking on a machine name in the machine list, switching to the "Configuration" tab, and selecting the "Edit" button.  These choices will bring you to a screen like this one:
 
@@ -698,7 +570,7 @@ Looking over your design, you notice that some of these resource pools must have
 
 Each of these higher-level groupings is ideal for a VLAN, so you create six of them, one for each division:
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 ```
 FABRIC    VLAN                   DHCP
 ------    ----                   ----
@@ -716,7 +588,7 @@ You can generate this list with the command:
 ```
 maas admin vlans read $FABRIC_ID | jq -r '(["FABRIC","VLAN","DHCP"] | (., map(length*"-"))), (.[] | [.fabric, .name, .dhcp_on]) | @tsv' | column -t
 ```
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/7245ed378ce0b9000aaf6f15b16ea16dbde2fccf.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7245ed378ce0b9000aaf6f15b16ea16dbde2fccf.jpeg"></a> 
 
@@ -725,7 +597,7 @@ snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap
 
 Adding a functional VLAN requires some additional (common) networking aspects, which we'll cover later.  In the meantime, though, here's the short version of adding and naming the VLAN itself.  
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 To create additional VLANs, choose the fabric where you want them to be added, and enter the following command, once for each new VLAN:
 
 ```
@@ -737,7 +609,7 @@ For example, to create the "Caregiver Services" VLAN with VID 100 on fabric 0, e
 ```
 maas admin vlans create 0 name="Caregiver_Services" vid=100
 ```
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 From anywhere on the MAAS page, select "Subnets" from the top menu-bar, which brings you to this screen:
 
@@ -803,7 +675,7 @@ Finally, click "Save summary" to move this VLAN to the desired fabric.  The end 
 
 </details>
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 ```
 FABRIC              VLAN                   DHCP  
 ------              ----                   ----  
@@ -814,6 +686,6 @@ Facilities          Patient_Support        False
 Patient_Management  Caregiver_Services     False
                     Medication_Management  False
 ```
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/23c214cd6836dd783347f050f2cdba04da7bcaa1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/23c214cd6836dd783347f050f2cdba04da7bcaa1.jpeg"></a>

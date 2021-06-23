@@ -69,22 +69,6 @@ One of the best steps you can take to improve both security and availability of 
 
 <details><summary>What is a TLS-terminated load balancer?</summary>
 
-<!-- deb-2-7-cli
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/2688) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/2689) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/2690) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/2691) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
- deb-2-8-ui -->
-
 <!-- deb-2-9-cli
 In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/2692) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
  deb-2-9-cli -->
@@ -100,22 +84,6 @@ In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/gloss
 <!-- deb-3-0-ui
 In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/3948) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
  deb-3-0-ui -->
-
-<!-- snap-2-7-cli
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/2682) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/2683) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/2684) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/2685) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
- snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/2686) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
@@ -197,22 +165,6 @@ Finally, restart the (already-running) load balancer so that these changes can t
 
 Note that you can also [enable HAProxy logging ](https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04) if desired.  This logging is an optional feature of the HAProxy tool and is thus left to your discretion.  
 
-<!-- deb-2-7-cli
-If desired, you can [bypass the use of SSL](/t/high-availability/2688#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2544) without implementing HAProxy.
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-If desired, you can [bypass the use of SSL](/t/high-availability/2689#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2545) without implementing HAProxy.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-If desired, you can [bypass the use of SSL](/t/high-availability/2690#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2546) without implementing HAProxy.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-If desired, you can [bypass the use of SSL](/t/high-availability/2691#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2547) without implementing HAProxy.
- deb-2-8-ui -->
-
 <!-- deb-2-9-cli
 If desired, you can [bypass the use of SSL](/t/high-availability/2692#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2548) without implementing HAProxy.
  deb-2-9-cli -->
@@ -228,22 +180,6 @@ If desired, you can [bypass the use of SSL](/t/high-availability/3947#heading--l
 <!-- deb-3-0-ui
 If desired, you can [bypass the use of SSL](/t/high-availability/3948#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2549) without implementing HAProxy.
  deb-3-0-ui -->
-
-<!-- snap-2-7-cli
-If desired, you can [bypass the use of SSL](/t/high-availability/2682#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2538) without implementing HAProxy.
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-If desired, you can [bypass the use of SSL](/t/high-availability/2683#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2539) without implementing HAProxy.
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-If desired, you can [bypass the use of SSL](/t/high-availability/2684#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2540) without implementing HAProxy.
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-If desired, you can [bypass the use of SSL](/t/high-availability/2685#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2541) without implementing HAProxy.
- snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 If desired, you can [bypass the use of SSL](/t/high-availability/2686#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2542) without implementing HAProxy.
@@ -342,9 +278,9 @@ As mentioned above, there are a large number of Web server exploits, and this do
 
 <a href="#heading--maas-log-file-subsection"><h3 id="heading--maas-log-file-subsection">MAAS log files</h3></a>
 
-<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli 
+<!--     deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli 
 Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/log/maas/regiond.log`.  For reference, a valid login request looks like this entry: 
-deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
+    deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
 
 Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/snap/maas/common/log/regiond.log`.  For reference, a valid login request looks like this entry: 
 
@@ -399,7 +335,7 @@ You should pick good passwords and store them securely (e.g. in a KeePassX passw
 
 MAAS configuration files should be set to have permission `640`: readable by logins belonging to the `maas` group and writeable only by the `root` user. Currently, the `regiond.conf` file contains the login credentials for the PostgreSQL database used by MAAS to keep track of all machines, networks, and configuration.
 
-<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli
+<!--     deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli
 ``` bash
 chmod 640 /etc/maas/rackd.conf
 chmod 640 /etc/maas/regiond.conf
@@ -411,7 +347,7 @@ After:
 -rw-r----- 1 root maas   90 Sep 27 14:13 rackd.conf
 -rw-r----- 1 root maas  157 Sep 27 14:14 regiond.conf
 ```
-deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
+    deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
 
 ``` bash
 chmod 640 /var/snap/maas/current/rackd.conf

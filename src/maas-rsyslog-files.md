@@ -7,12 +7,12 @@ This is how a markdown file
 handles a newline in the middle of a paragraph.
 
 The MAAS rsyslog files allow you to monitor what's going on within individual MAAS machines. They are located at
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli
+<!--     snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli
 `/var/snap/maas/common/log/rsyslog/`. 
-snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli -->
-<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli
+    snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli -->
+<!--     deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli
 `/var/log/maas/rsyslog`. 
-deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
+    deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
 Within this directory, there is one subdirectory for each machine, and within machine subirectories, there is one directory for each date upon which logging data was collected. These files will give you a great deal of the information you need to debug issues with your machines.
 
 <a href="#heading--add-or-update-a-remote-syslog-server"><h2 id="heading--add-or-update-a-remote-syslog-server">Add or update a remote syslog server</h2></a>

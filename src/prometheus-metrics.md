@@ -27,11 +27,11 @@ Whenever you install the `python3-prometheus-client` library, Prometheus endpoin
 Currently, prometheus metrics are shared when rack and region controllers are running on the same machine, even though each service provides its own port.  You can safely only query one of the two ports if you're running both controllers.
 [/note]
 
-<!-- snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--     snap-2-9-ui snap-2-9-cli snap-3-0-cli deb-3-0-cli 
 For a snap-based MAAS installation, the libraries already included in the snap so that metrics will be available out of the box.
-snap-2-7-ui snap-2-7-cli snap-2-8-ui snap-2-8-cli snap-2-9-ui snap-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+    snap-2-9-ui snap-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
-<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--     deb-2-9-ui deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 For a Debian-based MAAS installation, install the library and restart MAAS services as follows:
 
     sudo apt install python3-prometheus-client
@@ -48,7 +48,7 @@ MAAS also provides optional stats about resources registered with the MAAS serve
 After installing the `python3-prometheus-client` library as describe above, run the following to enable stats:
 
     maas $PROFILE maas set-config name=prometheus_enabled value=true
-deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+    deb-2-9-ui deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <a href="#heading--configuring-prometheus"><h2 id="heading--configuring-prometheus">Configuring Prometheus</h2></a>
 

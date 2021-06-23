@@ -49,7 +49,7 @@ The following table links to upgrade instructions, indexed by the target release
 |:--------------:|:------------------:|:-------------|:----------------|
 | 2.9 | 2.8 | [Snap 2.8 to Snap 2.9](https://maas.io/docs/snap/2.9/ui/installation#heading--upgrade-maas-snap) | [Deb 2.8 to Deb 2.9](https://maas.io/docs/deb/2.9/ui/installation#heading--upgrade-via-packages) |
 | 2.8 | 2.7 | [Snap 2.7 to Snap 2.8](https://maas.io/docs/snap/2.8/cli/installation#heading--upgrade-maas-snap)| [Deb 2.7 to Deb 2.8](https://maas.io/docs/deb/2.9/ui/installation#heading--upgrade-via-packages)|
-| 2.7 | 2.6 | [Snap 2.6 to Snap 2.7](https://maas.io/docs/2.7/release-notes#heading--upgrade-2-6-to-2-7-snap) | [Deb 2.6 to Deb 2.7](#heading--deb-2-6-to-deb-2-7) |
+| 2.7 | 2.6 | [Snap 2.6 to Snap 2.7](https://maas.io/docs/2.7/release-notes#heading--upgrade-2-6-tosnap) | [Deb 2.6 to Deb 2.7](#heading--deb-2-6-to-deb-2-7) |
 | 2.6 | 2.5 | N/A | [Deb 2.5 to Deb 2.6](#heading--deb-2-5-to-deb-2-6) |
 
 <h3 id="heading--deb-2-6-to-deb-2-7">Upgrading packages from MAAS 2.6 to MAAS 2.7</h3>

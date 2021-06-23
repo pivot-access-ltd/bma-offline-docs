@@ -18,13 +18,13 @@ MAAS currently does not provide specific tools to back up and restore a working 
 
 The following three MAAS components need to be backed-up and restored, on each region and rack controller, to recreate a working environment:
 
-<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli
+<!--     deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli
 1.  The PostgreSQL database
 2.  The configuration files in `/etc/maas`
 3.  The configuration files in `/var/lib/maas`
 
 `/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
-deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli-->
+    deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli-->
 
 1.  The PostgreSQL database
 2.  The configuration files in `/snap/maas/current/etc/maas`
@@ -71,11 +71,11 @@ Stopping these services will avoid conflicting updates during the remaining back
 
 Archive the database and the required configuration files with a command similar to the following:
 
-<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli
+<!--     deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli
 ``` bash
 sudo tar cvpzf ~/backup.tgz --exclude=/var/lib/maas/boot-resources /etc/maas /var/lib/maas ~/dump.sql
 ```
-deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
+    deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
 
 ``` bash
 sudo tar cvpzf ~/backup.tgz --exclude=/var/snap/maas/common/maas/boot-resources /snap/maas/current/etc/maas /var/snap/maas/common/maas ~/dump.sql
@@ -103,14 +103,14 @@ sudo -u postgres psql -f dump.sql postgres
 
 Next, copy across the old configuration files to their new locations, taking care to move the originals aside just in case:
 
-<!-- deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli 
+<!--     deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli 
 ``` bash
 sudo mv /etc/maas /etc/_maas; mv /var/lib/maas /var/lib/_maas
 essudo cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/
 ```
 
 If your restore process regenerated the `/var/lib/maas/secret` file, make sure update this secret on any additional rack controllers.
-deb-2-7-ui deb-2-7-cli deb-2-8-ui deb-2-8-cli deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
+    deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
 
 ``` bash
 sudo mv /snap/maas/current/etc/maas /snap/maas/current/etc/_maas

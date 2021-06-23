@@ -9,13 +9,6 @@ MAAS Image Builder is an alternative to [Packer](https://www.packer.io/) for cre
 In order to use MAAS Image Builder, you must purchase [Ubuntu Advantage for Infrastructure](https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool).
 [/note]
 
-<!-- awaiting review
-[note]
-In order to use MAAS Image Builder, you must purchase [Ubuntu Advantage for Infrastructure](https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool).
-That said, you may want to try Packer first, before committing to MAAS Image Builder, as Packer is free and open-source. You should note, though, that Packer is offered by another firm.  Canonical has no special channel to request features or bug fixes, and no insight into their release and maintenance schedules.  Packer is not rigorously tested with all images used by MAAS, and may not work with all images deployed by MAAS users.  We feel it's important to help you make an informed decision on this -- but we encourage you to try Packer first, with the caveat that Canonical can't make any particular guarantees about whether or not it will serve your particular needs.
-[/note]
- -->
-
 With the MAAS Image Builder, you can do five key operations:
 
 1. <a href="#imib">install MAAS Image Builder</a> via a private Canonical PPA (which you can request)

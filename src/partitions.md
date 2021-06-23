@@ -3,22 +3,6 @@
 Snap|[CLI](/t/partitions-snap-2-9-cli/2986) ~ [UI](/t/partitions-snap-2-9-ui/2987)|[CLI](/t/partitions-snap-3-0-cli/4061) ~ [UI](/t/partitions-snap-3-0-ui/4062)|
 Packages|[CLI](/t/partitions-deb-2-9-cli/2992) ~ [UI](/t/partitions-deb-2-9-ui/2993)|[CLI](/t/partitions-deb-3-0-cli/4063) ~ [UI](/t/partitions-deb-3-0-ui/4064)|
 
-<!-- deb-2-7-cli
-As with block devices (see [Block devices](/t/block-devices/2352)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- deb-2-7-cli -->
-
-<!-- deb-2-7-ui
-As with block devices (see [Block devices](/t/block-devices/2353)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- deb-2-7-ui -->
-
-<!-- deb-2-8-cli
-As with block devices (see [Block devices](/t/block-devices/2354)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- deb-2-8-cli -->
-
-<!-- deb-2-8-ui
-As with block devices (see [Block devices](/t/block-devices/2355)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- deb-2-8-ui -->
-
 <!-- deb-2-9-cli
 As with block devices (see [Block devices](/t/block-devices/2356)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
  deb-2-9-cli -->
@@ -34,22 +18,6 @@ As with block devices (see [Block devices](/t/block-devices/3843)), MAAS and the
 <!-- deb-3-0-ui
 As with block devices (see [Block devices](/t/block-devices/3844)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
  deb-3-0-ui -->
-
-<!-- snap-2-7-cli
-As with block devices (see [Block devices](/t/block-devices/2346)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- snap-2-7-cli -->
-
-<!-- snap-2-7-ui
-As with block devices (see [Block devices](/t/block-devices/2347)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- snap-2-7-ui -->
-
-<!-- snap-2-8-cli
-As with block devices (see [Block devices](/t/block-devices/2348)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- snap-2-8-cli -->
-
-<!-- snap-2-8-ui
-As with block devices (see [Block devices](/t/block-devices/2349)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- snap-2-8-ui -->
 
 <!-- snap-2-9-cli
 As with block devices (see [Block devices](/t/block-devices/2350)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.

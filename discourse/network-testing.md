@@ -18,7 +18,7 @@ Network testing also includes customisable network testing and commissioning scr
 
 MAAS can check whether links are connected or disconnected, so that you can detect unplugged cables.  If you are not running MAAS 2.7, you must first upgrade and then recommission your machines to find disconnected links.  MAAS not only reports unplugged cables, but also gives a warning when trying to configure a disconnected interface.  In addition, administrators can change the cable connection status after manually resolving the issue.
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 To check network testing results, enter the following command:
 
 ```
@@ -37,7 +37,7 @@ ens3       false            -           1 Gpbs
 ```
 
 From this screen, you can see that the `ens3` link is not connected (hence an unreported link speed). 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 When MAAS detects a broken network link, users will see a screen similar to this one: 
 
@@ -47,17 +47,17 @@ If you're already using a version of MAAS less than 2.7, you will want to upgrad
 
 Once you have manually repaired the broken connection, an administrator can change cable connection status:
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 ```
 maas $PROFILE interface update $SYSTEM_ID $INTERFACE_ID link_connected=true
 ```
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/b8b24a2e5fbc40b6469a24733a518b510cf0d955.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/b8b24a2e5fbc40b6469a24733a518b510cf0d955.jpeg"></a> 
 
 <a href="#heading--slow-link-detection"><h2 id="heading--slow-link-detection">Detect slow network links</h2></a>
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 As servers and hardware get faster, the chances increase that you might encounter a speed mismatch when connecting your NIC to a network device.  MAAS can warn you if your interface is connected to a link slower than what the interface supports, when you run the above command:
 
 ```
@@ -69,7 +69,7 @@ maas $PROFILE interfaces read $SYSTEM_ID \
 
 From the resulting output, you can detect when your link/interface speeds are slower than expected. Depending on your physical hardware, the problem may not be repairable, but once you identify a slow link, you can replace a slow switch without recommissioning.  
 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 As servers and hardware get faster, the chances increase that you might encounter a speed mismatch when connecting your NIC to a network device.  MAAS can warn you if your interface is connected to a link slower than what the interface supports, by automatically detecting link and interface speed and reporting them via the UI:
 
@@ -77,7 +77,7 @@ As servers and hardware get faster, the chances increase that you might encounte
 
 Depending on your physical hardware, the problem may not be repairable, but once you identify a slow link, you can replace a slow switch without recommissioning.  
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 
 Administrators can change or update the link and interface speeds after manual changes
 to the connection:
@@ -87,7 +87,7 @@ maas $PROFILE interface update $SYSTEM_ID $INTERFACE_ID link_speed=$NEW_LINK_SPE
 interface_speed=$NEW_INTERFACE_SPEED
 ```
 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <a href="#heading--network-validation-scripts-and-testing"><h2 id="heading--network-validation-scripts-and-testing">Network validation and testing scripts</h2></a>
 
@@ -103,11 +103,11 @@ Users can now test their network configuration to check for:
 2. Bonds that are not fully operational
 3. Broken gateways, rack controllers, and Internet links
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 In addition, MAAS can comprehensively test Internet connectivity testing. You can give a list of URLs or IP addresses to check:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/b92a8ca1821bc1ccf60cf7fddcb57f3fbeda4408.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/b92a8ca1821bc1ccf60cf7fddcb57f3fbeda4408.jpeg"></a> 
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 In addition, MAAS can comprehensively test Internet connectivity testing. You can give a list of URLs or IP addresses to check from the network testing screen:
 
@@ -115,13 +115,13 @@ In addition, MAAS can comprehensively test Internet connectivity testing. You ca
 
 In the ephemeral environment, standard DHCP is still applied, but when network testing runs, MAAS can apply your specific configuration for the duration of the test.  While all URLs / IPs are tested with all interfaces, MAAS can test each of your interfaces individually, including breaking apart bonded NICS and testing each side of your redundant interfaces. You can also run different tests on each pass, e.g., a different set of URLs, although each run would be a different testing cycle.
 
-<!-- snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
 To test individual interfaces, for example, you could issue the following command:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/7fadb56a2939f7a781510a55813141de03521e0d.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7fadb56a2939f7a781510a55813141de03521e0d.jpeg"></a> 
 
 Note that in this command, we are testing internet connectivity to the single interface "br0."
-snap-2-7-cli snap-2-8-cli snap-2-9-cli deb-2-7-cli deb-2-8-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
 
 <a href="#heading--customisable-network-testing"><h2 id="heading--customisable-network-testing">Customise network testing</h2></a>
 

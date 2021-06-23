@@ -19,22 +19,23 @@ Annotations are descriptive, searchable phrases that apply only to machines.  Th
 
 This article will show you how to:
 
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
+
+<!--     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
 * [Work with tags](#heading--work-with-tags)
- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
+     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+<!--     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
 * [Work with annotations](#heading--work-with-annotations)
- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
-<!-- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
+     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+<!--     snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
 * [Work with tags](#heading--work-with-tags)
- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
-<!-- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
+     snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
+<!--     snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
 * [Work with annotations](#heading--work-with-annotations)
- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
+     snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
 
 All headings have been hyperlinked for easy bookmarking.  Note that not all functions for tags and annotations can be accessed via one interface (UI/CLI), so you will occasionally encounter cross-links.
 
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
+<!--     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
 
 <a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a>
 
@@ -42,27 +43,8 @@ This section is devoted to procedures for working with tags.  We begin with some
 
 Specifically, this section will show you how to:
 
- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
-<!-- deb-2-7-ui
-* [Work with tags in general](#heading--work-with-tags-in-general)
-* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
-* [Work with controller tags](#heading--work-with-controller-tags)
-* [Work with block device tags](#heading--work-with-block-device-tags)
-* [Work with partition tags](#heading--work-with-partition-tags)
-* [Work with network tags](#heading--work-with-network-tags)
-* [Work with device tags](#heading--work-with-device-tags)
-* [Work with node tags (CLI only)](/t/-/2892#heading--work-with-node-tags)
- deb-2-7-ui -->
-<!-- deb-2-8-ui
-* [Work with tags in general](#heading--work-with-tags-in-general)
-* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
-* [Work with controller tags](#heading--work-with-controller-tags)
-* [Work with block device tags](#heading--work-with-block-device-tags)
-* [Work with partition tags](#heading--work-with-partition-tags)
-* [Work with network tags](#heading--work-with-network-tags)
-* [Work with device tags](#heading--work-with-device-tags)
-* [Work with node tags (CLI only)](/t/-/2894#heading--work-with-node-tags)
- deb-2-8-ui -->
+     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+
 <!-- deb-2-9-ui
 * [Work with tags in general](#heading--work-with-tags-in-general)
 * [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
@@ -83,26 +65,6 @@ Specifically, this section will show you how to:
 * [Work with device tags](#heading--work-with-device-tags)
 * [Work with node tags (CLI only)](/t/-/4023#heading--work-with-node-tags)
  deb-3-0-ui -->
-<!-- snap-2-7-ui
-* [Work with tags in general](#heading--work-with-tags-in-general)
-* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
-* [Work with controller tags](#heading--work-with-controller-tags)
-* [Work with block device tags](#heading--work-with-block-device-tags)
-* [Work with partition tags](#heading--work-with-partition-tags)
-* [Work with network tags](#heading--work-with-network-tags)
-* [Work with device tags](#heading--work-with-device-tags)
-* [Work with node tags (CLI only)](/t/-/2886#heading--work-with-node-tags)
- snap-2-7-ui -->
-<!-- snap-2-8-ui
-* [Work with tags in general](#heading--work-with-tags-in-general)
-* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
-* [Work with controller tags](#heading--work-with-controller-tags)
-* [Work with block device tags](#heading--work-with-block-device-tags)
-* [Work with partition tags](#heading--work-with-partition-tags)
-* [Work with network tags](#heading--work-with-network-tags)
-* [Work with device tags](#heading--work-with-device-tags)
-* [Work with node tags (CLI only)](/t/-/2888#heading--work-with-node-tags)
- snap-2-8-ui -->
 <!-- snap-2-9-ui
 * [Work with tags in general](#heading--work-with-tags-in-general)
 * [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
@@ -123,7 +85,7 @@ Specifically, this section will show you how to:
 * [Work with device tags](#heading--work-with-device-tags)
 * [Work with node tags (CLI only)](/t/-/4021#heading--work-with-node-tags)
  snap-3-0-ui -->
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
+<!--     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
 
 Tags for these different objects have similar purposes, but they aren't necessarily administered in the same way -- so we've included detailed sections for each tag type.
 
@@ -187,24 +149,8 @@ To remove (unassign) a tag:
 <a href="#heading--work-with-machine-and-vm-tags"><h3 id="heading--work-with-machine-and-vm-tags">Work with machine and VM tags</h3></a>
 
 This subsection will show you how to:
- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 
-<!-- deb-2-7-ui
-* [Create machine tags with built-in kernel options (CLI only)](/t/-/2892#heading--create-tags-with-built-in-kernel-options)
-* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
-* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
-* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
-* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
-* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
- deb-2-7-ui -->
-<!-- deb-2-8-ui
-* [Create machine tags with built-in kernel options (CLI only)](/t/-/2894#heading--create-tags-with-built-in-kernel-options)
-* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
-* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
-* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
-* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
-* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
- deb-2-8-ui -->
 <!-- deb-2-9-ui
 * [Create machine tags with built-in kernel options (CLI only)](/t/-/2896#heading--create-tags-with-built-in-kernel-options)
 * [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
@@ -221,22 +167,6 @@ This subsection will show you how to:
 * [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
 * [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
  deb-3-0-ui -->
-<!-- snap-2-7-ui
-* [Create machine tags with built-in kernel options (CLI only)](/t/-/2886#heading--create-tags-with-built-in-kernel-options)
-* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
-* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
-* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
-* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
-* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
- snap-2-7-ui -->
-<!-- snap-2-8-ui
-* [Create machine tags with built-in kernel options (CLI only)](/t/-/2888#heading--create-tags-with-built-in-kernel-options)
-* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
-* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
-* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
-* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
-* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
- snap-2-8-ui -->
 <!-- snap-2-9-ui
 * [Create machine tags with built-in kernel options (CLI only)](/t/-/2890#heading--create-tags-with-built-in-kernel-options)
 * [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
@@ -253,7 +183,7 @@ This subsection will show you how to:
 * [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
 * [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
  snap-3-0-ui -->
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
+<!--     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
 
 <a href="#heading--create-and-assign-machine-tags-to-machines"><h4 id="heading--create-and-assign-machine-tags-to-machines">Create and assign machine tags to machines</h4></a>
 
@@ -297,33 +227,21 @@ To remove machine tags from a machine:
 <a href="#heading--list-machine-tags-for-multiple-machines"><h4 id="heading--list-machine-tags-for-multiple-machines">List machine tags for multiple machines</h4></a>
 
 In the MAAS UI, you don't explicitly list all machine tags; instead, you filter by them using the "Filter by" drop-down.  This filtered list does not distinguish between virtual machines (VMs) and physical machines, unless you've assigned tags to help with that distinction.
- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 
-<!-- deb-2-7-ui
-Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/2892#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/2892#heading--list-tags-for-all-vm-hosts).
- deb-2-7-ui -->
-<!-- deb-2-8-ui
-Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/2894#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/2894#heading--list-tags-for-all-vm-hosts).
- deb-2-8-ui -->
 <!-- deb-2-9-ui
 Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/2896#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/2896#heading--list-tags-for-all-vm-hosts).
  deb-2-9-ui -->
 <!-- deb-3-0-ui
 Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/4023#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/4023#heading--list-tags-for-all-vm-hosts).
  deb-3-0-ui -->
-<!-- snap-2-7-ui
-Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/2886#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/2886#heading--list-tags-for-all-vm-hosts).
- snap-2-7-ui -->
-<!-- snap-2-8-ui
-Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/2888#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/2888#heading--list-tags-for-all-vm-hosts).
- snap-2-8-ui -->
 <!-- snap-2-9-ui
 Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/2890#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/2890#heading--list-tags-for-all-vm-hosts).
  snap-2-9-ui -->
 <!-- snap-3-0-ui
 Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the "tags" section of the filter drop-down.  With the UI, you can't see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags [using the CLI](/t/-/4021#heading--list-machine-tags-for-all-machines), and [retrieve a list of VM host tags](/t/-/4021#heading--list-tags-for-all-vm-hosts).
  snap-3-0-ui -->
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+<!--     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 
 Here's how you can filter the machine list by machine tags, using the MAAS UI:
 
@@ -415,33 +333,21 @@ You'll be presented with an editing screen similar to this one:
 5.  Follow the [general procedure](#heading--delete-and-remove-tags) to remove a tag from the controller.
 
 <a href="#heading--list-controller-tags"><h4 id="heading--list-controller-tags">List controller tags</h4></a>
- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 
-<!-- deb-2-7-ui
-There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/2892#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
- deb-2-7-ui -->
-<!-- deb-2-8-ui
-There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/2894#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
- deb-2-8-ui -->
 <!-- deb-2-9-ui
 There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/2896#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
  deb-2-9-ui -->
 <!-- deb-3-0-ui
 There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/4023#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
  deb-3-0-ui -->
-<!-- snap-2-7-ui
-There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/2886#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
- snap-2-7-ui -->
-<!-- snap-2-8-ui
-There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/2888#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
- snap-2-8-ui -->
 <!-- snap-2-9-ui
 There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/2890#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
  snap-2-9-ui -->
 <!-- snap-3-0-ui
 There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/4021#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
  snap-3-0-ui -->
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
+<!--     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
 
 <a href="#heading--view-controller-tags"><h4 id="heading--view-controller-tags">View controller tags</h4></a>
 
@@ -517,31 +423,19 @@ In order to remove tags from a block device, the device has to be in an "availab
 
 <a href="#heading--list-block-device-tags"><h4 id="heading--list-block-device-tags">List block device tags</h4></a>
 
-<!-- deb-2-7-ui
-There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/2892#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
- deb-2-7-ui -->
-<!-- deb-2-8-ui
-There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/2894#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
- deb-2-8-ui -->
 <!-- deb-2-9-ui
 There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/2896#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
  deb-2-9-ui -->
 <!-- deb-3-0-ui
 There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/4023#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
  deb-3-0-ui -->
-<!-- snap-2-7-ui
-There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/2886#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
- snap-2-7-ui -->
-<!-- snap-2-8-ui
-There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/2888#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
- snap-2-8-ui -->
 <!-- snap-2-9-ui
 There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/2890#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
  snap-2-9-ui -->
 <!-- snap-3-0-ui
 There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/4021#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
  snap-3-0-ui -->
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
+<!--     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
 
 1. Go to the machine list:
 
@@ -573,18 +467,6 @@ To view all tags associated with block devices on a given machine:
 
 This subsection will show you how to:
 
-<!-- deb-2-7-ui
-* [Assign partition tags (CLI only)](/t/-/2892#heading--assign-tags-to-a-partition)
-* [Remove partition tags (CLI only)](/t/-/2892#heading--remove-tags-from-a-partition)
-* [List partition tags](#heading--list-partition-tags)
-* [View partition tags](#heading--view-partition-tags)
- deb-2-7-ui -->
-<!-- deb-2-8-ui
-* [Assign partition tags (CLI only)](/t/-/2894#heading--assign-tags-to-a-partition)
-* [Remove partition tags (CLI only)](/t/-/2894#heading--remove-tags-from-a-partition)
-* [List partition tags](#heading--list-partition-tags)
-* [View partition tags](#heading--view-partition-tags)
- deb-2-8-ui -->
 <!-- deb-2-9-ui
 * [Assign partition tags (CLI only)](/t/-/2896#heading--assign-tags-to-a-partition)
 * [Remove partition tags (CLI only)](/t/-/2896#heading--remove-tags-from-a-partition)
@@ -597,18 +479,6 @@ This subsection will show you how to:
 * [List partition tags](#heading--list-partition-tags)
 * [View partition tags](#heading--view-partition-tags)
  deb-3-0-ui -->
-<!-- snap-2-7-ui
-* [Assign partition tags (CLI only)](/t/-/2886#heading--assign-tags-to-a-partition)
-* [Remove partition tags (CLI only)](/t/-/2886#heading--remove-tags-from-a-partition)
-* [List partition tags](#heading--list-partition-tags)
-* [View partition tags](#heading--view-partition-tags)
- snap-2-7-ui -->
-<!-- snap-2-8-ui
-* [Assign partition tags (CLI only)](/t/-/2888#heading--assign-tags-to-a-partition)
-* [Remove partition tags (CLI only)](/t/-/2888#heading--remove-tags-from-a-partition)
-* [List partition tags](#heading--list-partition-tags)
-* [View partition tags](#heading--view-partition-tags)
- snap-2-8-ui -->
 <!-- snap-2-9-ui
 * [Assign partition tags (CLI only)](/t/-/2890#heading--assign-tags-to-a-partition)
 * [Remove partition tags (CLI only)](/t/-/2890#heading--remove-tags-from-a-partition)
@@ -621,36 +491,24 @@ This subsection will show you how to:
 * [List partition tags](#heading--list-partition-tags)
 * [View partition tags](#heading--view-partition-tags)
  snap-3-0-ui -->
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
+<!--     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
 
 <a href="#heading--list-partition-tags"><h4 id="heading--list-partition-tags">List partition tags</h4></a>
 
- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
-<!-- deb-2-7-ui
-There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/2892#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
- deb-2-7-ui -->
-<!-- deb-2-8-ui
-There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/2894#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
- deb-2-8-ui -->
+     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 <!-- deb-2-9-ui
 There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/2896#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
  deb-2-9-ui -->
 <!-- deb-3-0-ui
 There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/4023#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
  deb-3-0-ui -->
-<!-- snap-2-7-ui
-There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/2886#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
- snap-2-7-ui -->
-<!-- snap-2-8-ui
-There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/2888#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
- snap-2-8-ui -->
 <!-- snap-2-9-ui
 There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/2890#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
  snap-2-9-ui -->
 <!-- snap-3-0-ui
 There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/4021#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
  snap-3-0-ui -->
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
+<!--     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
 
 You can list all storage links (block device and partition) by using the filter tool on the machine list.  Here's how:
 
@@ -683,20 +541,7 @@ To view all tags associated with partitions on a given machine:
 <a href="#heading--work-with-network-tags"><h3 id="heading--work-with-network-tags">Work with network tags</h3></a>
 
 This subsection will show you how to:
- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
-
-<!-- deb-2-7-ui
-* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
-* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
-* [List network interface tags (CLI only)](/t/-/2892#heading--list-tags-for-all-network-interfaces)
-* [View network interface tags](#heading--view-network-interface-tags)
- deb-2-7-ui -->
-<!-- deb-2-8-ui
-* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
-* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
-* [List network interface tags (CLI only)](/t/-/2894#heading--list-tags-for-all-network-interfaces)
-* [View network interface tags](#heading--view-network-interface-tags)
- deb-2-8-ui -->
+     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 <!-- deb-2-9-ui
 * [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
 * [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
@@ -709,18 +554,6 @@ This subsection will show you how to:
 * [List network interface tags (CLI only)](/t/-/4023#heading--list-tags-for-all-network-interfaces)
 * [View network interface tags](#heading--view-network-interface-tags)
  deb-3-0-ui -->
-<!-- snap-2-7-ui
-* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
-* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
-* [List network interface tags (CLI only)](/t/-/2886#heading--list-tags-for-all-network-interfaces)
-* [View network interface tags](#heading--view-network-interface-tags)
- snap-2-7-ui -->
-<!-- snap-2-8-ui
-* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
-* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
-* [List network interface tags (CLI only)](/t/-/2888#heading--list-tags-for-all-network-interfaces)
-* [View network interface tags](#heading--view-network-interface-tags)
- snap-2-8-ui -->
 <!-- snap-2-9-ui
 * [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
 * [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
@@ -733,7 +566,7 @@ This subsection will show you how to:
 * [List network interface tags (CLI only)](/t/-/4021#heading--list-tags-for-all-network-interfaces)
 * [View network interface tags](#heading--view-network-interface-tags)
  snap-3-0-ui -->
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
+<!--     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
 
 <a href="#heading--create-and-assign-network-interface-tags"><h4 id="heading--create-and-assign-network-interface-tags">Create and assign network interface tags</h4></a>
 
@@ -901,7 +734,7 @@ The "Tags" card on that screen with show you all the tags currently associated w
 <a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a>
 
 This section will explain how to:
- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 <!-- snap-3-0-ui deb-3-0-ui 
 
 * [Work with static annotations](#heading--work-with-static-annotations)
@@ -911,7 +744,7 @@ This section will explain how to:
 
 This subsection will show you how to:
  snap-3-0-ui deb-3-0-ui -->
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
+<!--     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui
  
 * [Create and assign static annotations](#heading--create-and-assign-static-annotations)
 * [Delete static annotations](#heading--delete-static-annotations)
@@ -969,7 +802,7 @@ To view static annotations, you can follow this procedure:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png"></a>
 
- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
 
 <!-- snap-3-0-ui deb-3-0-ui
 <a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</h3></a>
@@ -1013,7 +846,7 @@ To filter machines by dynamic (workload) annotations, use the following procedur
 
 snap-3-0-ui deb-3-0-ui -->
 
-<!-- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
+<!--     snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
 
 <a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a>
 
@@ -2689,8 +2522,8 @@ hostname    system_id  tags
 boss-satyr  xn8taa     pod-console-logging  androko
 ```
 
- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
-<!-- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
+     snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
+<!--     snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli
 
 <a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a>
 
@@ -3019,5 +2852,5 @@ hostname     system_id  owner_data
 --------     ---------  ----------
 driven-teal  tgaat6     farquar     foobar
 ```
- snap-2-7-cli deb-2-7-cli snap-2-8-cli deb-2-8-cli snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
+     snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
 

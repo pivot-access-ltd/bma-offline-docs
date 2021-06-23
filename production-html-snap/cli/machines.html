@@ -431,7 +431,7 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>Machines</h1><p>||2.9|3.0|</p>
 <p>Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers. MAAS manages their transit through a life-cycle, from adding and enlistment, through commissioning, allocation, and deployment, finally being released back to the pool, or retired altogether.  You can move them around, create redundant versions (even in other geographies you can access), and basically rearrange them to the extent that your network allows.</p>
-<!-- deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui
+<!--     deb-2-9-ui snap-2-9-ui
 #### Eleven questions you may have:
 
 1. [How are the machine states and actions related?](#heading--machine-life-cycle)
@@ -445,7 +445,7 @@
 9. [Where can I find raw log output for a machine?](#heading--raw-log-output-h3)
 10. [Where can I find a machine's event log?](#heading--event-logs-h3)
 11. [Where can I find machine configuration info?](#heading--machine-config-h3)
- deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui -->
+     deb-2-9-ui snap-2-9-ui -->
 
 <!-- snap-3-0-ui deb-3-0-ui 
 #### Twelve questions you may have:
@@ -471,18 +471,18 @@
 <li><a href="#heading--node-details">How can I view machine details?</a></li>
 <li><a href="#heading--usb-pci-devices">How does MAAS handle attached USB/PCI devices?</a></li>
 </ol>
-<!-- deb-2-7-cli snap-2-7-cli deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli 
+<!--     deb-2-9-cli snap-2-9-cli 
 #### Three questions you may have:
 
 1. [How are the machine states and actions related?](#heading--machine-life-cycle)
 2. [How can I view the machine list?](#heading--machine-list)
 3. [How can I view machine details?](#heading--node-details)
- deb-2-7-cli snap-2-7-cli deb-2-8-cli snap-2-8-cli deb-2-9-cli snap-2-9-cli -->
+     deb-2-9-cli snap-2-9-cli -->
 
 <p>For example, in the illustration below, you see a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:</p>
-<!-- deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui snap-3-0-ui deb-3-0-ui 
+<!--     deb-2-9-ui snap-2-9-ui snap-3-0-ui deb-3-0-ui 
 <a href="images/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg" target = "_blank"><img src="images/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg"></a></a> 
- deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+     deb-2-9-ui snap-2-9-ui snap-3-0-ui deb-3-0-ui  -->
 
 <pre><code>FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
 ----               -----  ------  -----  ----     ----       ----  ----
@@ -498,7 +498,7 @@
 
 <p>These example machines would typically be duplicated in several different geographies, with a quick way to switch to a redundant node, should anything go wrong (e.g., high availability).  We used the word node there because, In the network language of MAAS, machines are one of several different types of nodes.  A node is simply a network-connected object or, more specifically, an object that can independently communicate on a network. MAAS nodes include controllers, network devices, and of course, machines.   </p>
 <p>Looking back at the example above, you can see that there are several columns in the machine list:</p>
-<!-- deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui snap-3-0-ui deb-3-0-ui 
+<!--     deb-2-9-ui snap-2-9-ui snap-3-0-ui deb-3-0-ui 
 <a href="images/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg" target = "_blank"><img src="images/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg"></a></a>
 
 The columns list eight details for each machine:
@@ -512,7 +512,7 @@ The columns list eight details for each machine:
 7.   **Disks**: The number of drives detected on the machine.
 8.   **Storage**: The amount of storage, in GB, identified on the machine.
 
-deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+    deb-2-9-ui snap-2-9-ui  snap-3-0-ui deb-3-0-ui -->
 
 <pre><code>FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
 ----               -----  ------  -----  ----     ----       ----  ----
@@ -800,7 +800,7 @@ deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui  snap-3-0-u
 </table>
 <p>When a machine is in the state listed in a column, it is possible to take the row actions marked with an &ldquo;X.&rdquo;  You access these actions from the &ldquo;Take action&rdquo; menu in the upper right corner of the machine listing.  Note that some actions, such as &ldquo;Mark broken&rdquo; or &ldquo;Lock,&rdquo; may be hidden when they are not available.</p>
 <p><a href="#heading--machine-list"><h2 id="heading--machine-list">View the machine list</h2></a></p>
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+<!--     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
 You can view the list of machines from the choice "Machines" on the top menu of the MAAS web UI.  This action will display a table like the one above, listing all the machines that are currently visible to your MAAS installation.  During commissioning and deployment, MAAS updates the table to reflect the changing state of each machine. These values are augmented with green, amber and red icons to represent successful, in-progress and failed transitions, respectively. The MAAS web UI employs similar icons and colours throughout the interface to reflect a machine's status.
 
 <a href="images/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg" target = "_blank"><img src="images/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg"></a></a> 
@@ -820,7 +820,7 @@ With one or more machines selected, the 'Add hardware' drop-down menu moves to t
 <strong>NOTE:</strong> 
 The 'Filter by' section limits the machines listed in the table to selected keywords and machine attributes.
 
- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+     snap-2-9-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
 
 <p>You can view a basic machine list with a command such as this one:</p>
 <pre><code>maas $PROFILE machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
@@ -953,7 +953,7 @@ admin        maas         default     default              virsh             vir
 <pre><code>maas $PROFILE machine read $SYSTEM_ID | jq .
 </code></pre>
 
-<!-- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui 
+<!--     snap-2-9-ui deb-2-9-ui 
 Click a machine's FQDN or MAC address to open a detailed view of a machine's status and configuration.
 
 <a href="images/c9684bf883d01d3fe610ec27e95618075c44b324.jpeg" target = "_blank"><img src="images/c9684bf883d01d3fe610ec27e95618075c44b324.jpeg"></a></a>
@@ -1007,7 +1007,7 @@ From this screen, you can choose test scripts and run the tests (in the backgrou
 And you can watch the results under the "Tests" option in the Machine menu:
 
 <a href="images/89d287347928d6adb039ca582d4a94c3b54588e1.jpeg" target = "_blank"><img src="images/89d287347928d6adb039ca582d4a94c3b54588e1.jpeg"></a></a> 
- snap-2-7-ui deb-2-7-ui snap-2-8-ui deb-2-8-ui snap-2-9-ui deb-2-9-ui -->
+     snap-2-9-ui deb-2-9-ui -->
 
 <!-- snap-3-0-ui deb-3-0-ui
 Click a machine's FQDN or MAC address to open a detailed view of a machine's status and configuration.
@@ -1065,14 +1065,6 @@ And you can watch the results under the "Tests" option in the Machine menu:
 <a href="images/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png" target = "_blank"><img src="images/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png"></a></a> 
  snap-3-0-ui deb-3-0-ui -->
 
-<!-- deb-2-7-ui
-The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
- deb-2-7-ui -->
-
-<!-- deb-2-8-ui
-The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
- deb-2-8-ui -->
-
 <!-- deb-2-9-ui
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
  deb-2-9-ui -->
@@ -1080,14 +1072,6 @@ The rest of the cards on the Machine summary are either self-explanatory, or the
 <!-- deb-3-0-ui
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
  deb-3-0-ui -->
-
-<!-- snap-2-7-ui
-The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
- snap-2-7-ui -->
-
-<!-- snap-2-8-ui
-The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
- snap-2-8-ui -->
 
 <!-- snap-2-9-ui
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](hardware-testing.html) page.
@@ -1161,7 +1145,7 @@ If you are upgrading from a previous version of MAAS, PCI and USB devices aren't
 </ul>
 <p>If the device is still present in the system, it will be recogized again (and thus &ldquo;recreated&rdquo;)
 when the machine is commissioned again.</p>
-<!-- snap-2-8-ui deb-2-8-ui snap-2-7-ui deb-2-7-ui snap-2-9-ui deb-2-9-ui 
+<!--     snap-2-9-ui deb-2-9-ui 
 <a href="#heading--machine-interfaces-h3"><h3 id="heading--machine-interfaces-h3">Find network info for a machine</h3></a>
 
 The Network "tab" provides you with a way to view/edit the network and interface configuration for a machine: 
@@ -1171,7 +1155,7 @@ The Network "tab" provides you with a way to view/edit the network and interface
 In the case of this deployed machine, there are not many editing options.  If the machine is in a 'Ready' state, though, altering the network configuration is possible:
 
 <a href="images/01d53759105647d71786154e99ff210f8c71d2e7.jpeg" target = "_blank"><img src="images/01d53759105647d71786154e99ff210f8c71d2e7.jpeg"></a></a> 
- snap-2-8-ui deb-2-8-ui snap-2-7-ui deb-2-7-ui snap-2-9-ui deb-2-9-ui -->
+     snap-2-9-ui deb-2-9-ui -->
 
 <!-- snap-3-0-ui deb-3-0-ui
 <a href="#heading--machine-interfaces-h3"><h3 id="heading--machine-interfaces-h3">Find network info for a machine</h3></a>
@@ -1184,14 +1168,6 @@ In the case of this deployed machine, there are not many editing options.  If th
 
  snap-3-0-ui deb-3-0-ui -->
 
-<!-- deb-2-7-ui
-Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
- deb-2-7-ui -->
-
-<!-- deb-2-8-ui
-Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
- deb-2-8-ui -->
-
 <!-- deb-2-9-ui
 Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
  deb-2-9-ui -->
@@ -1200,14 +1176,6 @@ Options on this tab are described in the introduction to [Networking](networking
 Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
  deb-3-0-ui -->
 
-<!-- snap-2-7-ui
-Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
- snap-2-7-ui -->
-
-<!-- snap-2-8-ui
-Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
- snap-2-8-ui -->
-
 <!-- snap-2-9-ui
 Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
  snap-2-9-ui -->
@@ -1215,26 +1183,6 @@ Options on this tab are described in the introduction to [Networking](networking
 <!-- snap-3-0-ui
 Options on this tab are described in the introduction to [Networking](networking.html) article in this documentation set.
  snap-3-0-ui -->
-
-<!-- deb-2-7-ui
-<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
-
-The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
-
-<a href="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a></a> 
-
-This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
- deb-2-7-ui -->
-
-<!-- deb-2-8-ui
-<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
-
-The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
-
-<a href="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a></a> 
-
-This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
- deb-2-8-ui -->
 
 <!-- deb-2-9-ui
 <a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
@@ -1256,26 +1204,6 @@ The Storage tab on the machine list brings up a form that allows you to view/edi
 This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
  deb-3-0-ui -->
 
-<!-- snap-2-7-ui
-<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
-
-The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
-
-<a href="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a></a> 
-
-This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
- snap-2-7-ui -->
-
-<!-- snap-2-8-ui
-<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
-
-The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
-
-<a href="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="images/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a></a> 
-
-This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
- snap-2-8-ui -->
-
 <!-- snap-2-9-ui
 <a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
 
@@ -1295,34 +1223,6 @@ The Storage tab on the machine list brings up a form that allows you to view/edi
 
 This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](storage.html) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
  snap-3-0-ui -->
-
-<!-- deb-2-7-ui
-<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
-
-The "Commissioning" tab brings up a summary log of commissioning events:
-
-<a href="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg" target = "_blank"><img src="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg"></a></a> 
-
-Clicking on any of the "View log" links will take you to specific, detailed logs for that particular event or milestone:
-
-<a href="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg" target = "_blank"><img src="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg"></a></a> 
-
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
- deb-2-7-ui -->
-
-<!-- deb-2-8-ui
-<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
-
-The "Commissioning" tab brings up a summary log of commissioning events:
-
-<a href="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg" target = "_blank"><img src="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg"></a></a> 
-
-Clicking on any of the "View log" links will take you to specific, detailed logs for that particular event or milestone:
-
-<a href="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg" target = "_blank"><img src="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg"></a></a> 
-
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
- deb-2-8-ui -->
 
 <!-- deb-2-9-ui
 <a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
@@ -1356,34 +1256,6 @@ This will bring up a detailed log view for that row:
 These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  
  deb-3-0-ui snap-3-0-ui -->
 
-<!-- snap-2-7-ui
-<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
-
-The "Commissioning" tab brings up a summary log of commissioning events:
-
-<a href="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg" target = "_blank"><img src="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg"></a></a> 
-
-Clicking on any of the "View log" links will take you to specific, detailed logs for that particular event or milestone:
-
-<a href="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg" target = "_blank"><img src="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg"></a></a> 
-
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
- snap-2-7-ui -->
-
-<!-- snap-2-8-ui
-<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
-
-The "Commissioning" tab brings up a summary log of commissioning events:
-
-<a href="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg" target = "_blank"><img src="images/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg"></a></a> 
-
-Clicking on any of the "View log" links will take you to specific, detailed logs for that particular event or milestone:
-
-<a href="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg" target = "_blank"><img src="images/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg"></a></a> 
-
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
- snap-2-8-ui -->
-
 <!-- snap-2-9-ui
 <a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
 
@@ -1397,34 +1269,6 @@ Clicking on any of the "View log" links will take you to specific, detailed logs
 
 These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](maas-logging.html) for more details on how to read and interpret these logs.
  snap-2-9-ui -->
-
-<!-- deb-2-7-ui
-<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
-
-This tab presents a summary of tests run against this particular machine:  
-
-<a href="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg" target = "_blank"><img src="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg"></a></a> 
-
-You can view the summary report, or click on a "View log" link to get details on any particular tests:
-
-<a href="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg" target = "_blank"><img src="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg"></a></a> 
-
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
- deb-2-7-ui -->
-
-<!-- deb-2-8-ui
-<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
-
-This tab presents a summary of tests run against this particular machine:  
-
-<a href="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg" target = "_blank"><img src="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg"></a></a> 
-
-You can view the summary report, or click on a "View log" link to get details on any particular tests:
-
-<a href="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg" target = "_blank"><img src="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg"></a></a> 
-
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
- deb-2-8-ui -->
 
 <!-- deb-2-9-ui
 <a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
@@ -1454,34 +1298,6 @@ You can view the summary report, or choose the "View details" dropdown to get de
 The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
  deb-3-0-ui -->
 
-<!-- snap-2-7-ui
-<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
-
-This tab presents a summary of tests run against this particular machine:  
-
-<a href="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg" target = "_blank"><img src="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg"></a></a> 
-
-You can view the summary report, or click on a "View log" link to get details on any particular tests:
-
-<a href="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg" target = "_blank"><img src="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg"></a></a> 
-
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
- snap-2-7-ui -->
-
-<!-- snap-2-8-ui
-<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
-
-This tab presents a summary of tests run against this particular machine:  
-
-<a href="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg" target = "_blank"><img src="images/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg"></a></a> 
-
-You can view the summary report, or click on a "View log" link to get details on any particular tests:
-
-<a href="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg" target = "_blank"><img src="images/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg"></a></a> 
-
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
- snap-2-8-ui -->
-
 <!-- snap-2-9-ui
 <a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
 
@@ -1510,26 +1326,6 @@ You can view the summary report, or choose the "View details" dropdown to get de
 The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](hardware-testing.html).
  snap-3-0-ui -->
 
-<!-- deb-2-7-ui
-<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
-
-The "Logs" tab shows raw log output, switchable between YAML and XML formats:
-
-<a href="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a></a> 
-
-Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
- deb-2-7-ui -->
-
-<!-- deb-2-8-ui
-<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
-
-The "Logs" tab shows raw log output, switchable between YAML and XML formats:
-
-<a href="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a></a> 
-
-Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
- deb-2-8-ui -->
-
 <!-- deb-2-9-ui
 <a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
 
@@ -1550,26 +1346,6 @@ By choosing "Installation output" on the "Logs" tab, you can see the "raw" log o
 Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
  deb-3-0-ui -->
 
-<!-- snap-2-7-ui
-<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
-
-The "Logs" tab shows raw log output, switchable between YAML and XML formats:
-
-<a href="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a></a> 
-
-Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
- snap-2-7-ui -->
-
-<!-- snap-2-8-ui
-<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
-
-The "Logs" tab shows raw log output, switchable between YAML and XML formats:
-
-<a href="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="images/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a></a> 
-
-Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
- snap-2-8-ui -->
-
 <!-- snap-2-9-ui
 <a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
 
@@ -1588,13 +1364,13 @@ By choosing "Installation output" on the "Logs" tab, you can see the "raw" log o
 Help interpreting these logs can be found under the [Logging](maas-logging.html) section of this documentation.
  snap-3-0-ui -->
 
-<!-- deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui 
+<!--     deb-2-9-ui snap-2-9-ui 
 <a href="#heading--event-logs-h3"><h3 id="heading--event-logs-h3">Find a machine's event logs</h3></a>
 
 The "Event" tab displays a list of timestamped status updates for events and actions performed on the machine:
 
 <a href="images/114ada7188f8ebf12883a54c0976ad8abda1d211.jpeg" target = "_blank"><img src="images/114ada7188f8ebf12883a54c0976ad8abda1d211.jpeg"></a></a> 
- deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui -->
+     deb-2-9-ui snap-2-9-ui -->
 
 <!-- snap-3-0-ui deb-3-0-ui
 <a href="#heading--event-logs-h3"><h3 id="heading--event-logs-h3">Find a machine's event logs</h3></a>
@@ -1604,14 +1380,6 @@ To view the Event log for a machine, choose the "Event" tab under "Logs."  This 
 <a href="images/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="images/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a></a> 
  snap-3-0-ui deb-3-0-ui -->
 
-<!-- deb-2-7-ui
-There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
- deb-2-7-ui -->
-
-<!-- deb-2-8-ui
-There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
- deb-2-8-ui -->
-
 <!-- deb-2-9-ui
 There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
  deb-2-9-ui -->
@@ -1619,14 +1387,6 @@ There is a button that allows you to see the next 10 events, and a link to show 
 <!-- deb-3-0-ui
 There is a dropdown on the upper right which allows you to choose how many events per page you wish to view.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
  deb-3-0-ui -->
-
-<!-- snap-2-7-ui
-There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
- snap-2-7-ui -->
-
-<!-- snap-2-8-ui
-There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
- snap-2-8-ui -->
 
 <!-- snap-2-9-ui
 There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
@@ -1636,7 +1396,7 @@ There is a button that allows you to see the next 10 events, and a link to show 
 There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](maas-logging.html) section of this documentation.
  snap-3-0-ui -->
 
-<!-- deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui 
+<!--     deb-2-9-ui snap-2-9-ui 
 <a href="#heading--machine-config-h3"><h3 id="heading--machine-config-h3">Find machine configuration info</h3></a>
 
 The final tab from the Machine menu allows you to update machine and power configuration options: 
@@ -1651,7 +1411,7 @@ The "Power configuration" supplies the parameters necessary for MAAS to access t
 After entering the correct password and recycling things, the problem goes away:
 
 <a href="images/635e27e87bcac0c3cb3ce3085bd2fa55f60ff137.jpeg" target = "_blank"><img src="images/635e27e87bcac0c3cb3ce3085bd2fa55f60ff137.jpeg"></a></a> 
- deb-2-7-ui snap-2-7-ui deb-2-8-ui snap-2-8-ui deb-2-9-ui snap-2-9-ui -->
+     deb-2-9-ui snap-2-9-ui -->
 
 <!-- snap-3-0-ui deb-3-0-ui
 <a href="#heading--machine-config-h3"><h3 id="heading--machine-config-h3">Find machine configuration info</h3></a>
@@ -1667,14 +1427,6 @@ The "Power configuration" supplies the parameters necessary for MAAS to access t
 <a href="images/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="images/198898362285e4a1308535a4aa701156a67c9616.png"></a></a> 
  snap-3-0-ui deb-3-0-ui -->
 
-<!-- deb-2-7-ui
-More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
- deb-2-7-ui -->
-
-<!-- deb-2-8-ui
-More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
- deb-2-8-ui -->
-
 <!-- deb-2-9-ui
 More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
  deb-2-9-ui -->
@@ -1682,14 +1434,6 @@ More information on Power configuration will be found in the [Power management](
 <!-- deb-3-0-ui
 More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
  deb-3-0-ui -->
-
-<!-- snap-2-7-ui
-More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
- snap-2-7-ui -->
-
-<!-- snap-2-8-ui
-More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
- snap-2-8-ui -->
 
 <!-- snap-2-9-ui
 More information on Power configuration will be found in the [Power management](power-management.html) section of this documentation.
