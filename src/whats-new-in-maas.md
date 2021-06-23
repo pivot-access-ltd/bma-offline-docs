@@ -497,7 +497,7 @@ On the API using the allocate operation on the machines endpoint a machine may a
 
 <h3 id="heading--ibm-z-dpm">IBM Z DPM partition support</h3>
 
-IBM Z14 and above mainframe partitions are supported in MAAS 3.0.  Note that partitions must use HyperV sockets and properly-defined storage groups.  IBM Z DPM Partitions can be added as a chassis, which allows you to add all partitions in an HMC at once.
+IBM Z14 GA2 (LinuxOne II) and above mainframe partitions are supported in MAAS 3.0.  Note that partitions (LPARS) must pre-configured and use qeth-based network devices (use HyperV sockets and properly-defined storage groupslike Hipersockets or OSA adapters) and properly-defined (FCP) storage groups..  IBM Z DPM Partitions can be added as a chassis, which allows you to add all partitions at once.
 
 <h3 id="heading--proxmox-support">Proxmox support</h3>
 
