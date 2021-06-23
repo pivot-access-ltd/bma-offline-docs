@@ -194,7 +194,7 @@ There are (at least) three ways you can contribute to MAAS:
 
 - [About MAAS](/t/about-maas-snap-3-0-ui/3813)
 - ["Give me an example of MAAS"](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)
-- [What's new in 2.9](/t/whats-new-in-maas-snap-3-0-ui/4182)
+- [What's new in 3.0](/t/whats-new-in-maas-snap-3-0-ui/4182)
 - [Installation](/t/maas-installation-snap-3-0-ui/4002)
 - [MAAS CLI](/t/maas-cli-snap-3-0-ui/3986)
 - [Report a bug](/t/report-a-bug/4446)
