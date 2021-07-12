@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/test-logs-snap-2-9-cli/3130) ~ [UI](/t/test-logs-snap-2-9-ui/3131)|[CLI](/t/test-logs-snap-3-0-cli/4117) ~ [UI](/t/test-logs-snap-3-0-ui/4118)|
-Packages|[CLI](/t/test-logs-deb-2-9-cli/3136) ~ [UI](/t/test-logs-deb-2-9-ui/3137)|[CLI](/t/test-logs-deb-3-0-cli/4119) ~ [UI](/t/test-logs-deb-3-0-ui/4120)|
 
 For any machine which has undergone testing, the Tests log screen -- under the "Tests" tab -- shows a list of tests that have been run for that machine, along with a timestamp and result.  You can view the detailed logs for each test script from this tab.
 

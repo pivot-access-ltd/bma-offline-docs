@@ -1,39 +1,35 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/vmware-vmfs-datastores-snap-2-9-cli/3250) ~ [UI](/t/vmware-vmfs-datastores-snap-2-9-ui/3251)|[CLI](/t/vmware-vmfs-datastores-snap-3-0-cli/4177) ~ [UI](/t/vmware-vmfs-datastores-snap-3-0-ui/4178)|
-Packages|[CLI](/t/vmware-vmfs-datastores-deb-2-9-cli/3256) ~ [UI](/t/vmware-vmfs-datastores-deb-2-9-ui/3257)|[CLI](/t/vmware-vmfs-datastores-deb-3-0-cli/4179) ~ [UI](/t/vmware-vmfs-datastores-deb-3-0-ui/4180)|
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/3112#heading--vmfs6-layout). This layout creates a VMFS Datastore named `datastore1` which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/3113#heading--vmfs6-layout). This layout creates a VMFS Datastore named `datastore1` which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/4107#heading--vmfs6-layout). This layout creates a VMFS Datastore named `datastore1` which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/4108#heading--vmfs6-layout). This layout creates a VMFS Datastore named `datastore1` which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/3106#heading--vmfs6-layout). This layout creates a VMFS Datastore named `datastore1` which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/3107#heading--vmfs6-layout). This layout creates a VMFS Datastore named `datastore1` which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/4105#heading--vmfs6-layout). This layout creates a VMFS Datastore named `datastore1` which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/4106#heading--vmfs6-layout). This layout creates a VMFS Datastore named `datastore1` which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
- snap-3-0-ui -->
+rad-end
 
 #### Five questions you may have:
 
@@ -159,37 +155,37 @@ maas $PROFILE vmfs-datastore read $SYSTEM_ID $VMFS_DATASTORE_ID
 
 <a href="#heading--creating-vmfs-datastores"><h2 id="heading--creating-vmfs-datastores">Creating a new VMFS Datastore</h2></a>
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/2356) or [partitions](/t/partitions/2992)
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/2357) or [partitions](/t/partitions/2993)
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/3843) or [partitions](/t/partitions/4063)
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/3844) or [partitions](/t/partitions/4064)
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/2350) or [partitions](/t/partitions/2986)
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/2351) or [partitions](/t/partitions/2987)
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/3841) or [partitions](/t/partitions/4061)
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/3842) or [partitions](/t/partitions/4062)
- snap-3-0-ui -->
+rad-end
 
 To create a VMFS Datastores on a machine use the 'vmfs-datastores create' API call:
 

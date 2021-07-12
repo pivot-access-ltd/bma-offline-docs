@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/supported-versions-snap-2-9-cli/4351) ~ [UI](/t/supported-versions-snap-2-9-ui/4350)|[CLI](/t/supported-versions-snap-3-0-cli/4113) ~ [UI](/t/supported-versions-snap-3-0-ui/4114)|
-Packages|[CLI](/t/supported-versions-deb-2-9-cli/4357) ~ [UI](/t/supported-versions-deb-2-9-ui/4356)|[CLI](/t/supported-versions-deb-3-0-cli/4115) ~ [UI](/t/supported-versions-deb-3-0-ui/4116)|
 This document explains what versions of MAAS are supported, and how they are supported.
 
 ## Support matrix

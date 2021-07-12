@@ -15,9 +15,3 @@ If you're running MAAS 2.3 or older, please see [the following](/t/upgrade-2-3-t
 If you're running MAAS 1.9, please start with [the following](/t/upgrade-from-1-9-to-2-x/778) and then see the section above. MAAS 1.9 was the last version to support Ubuntu 14.04 LTS.
 
 See the [Releases](https://wiki.ubuntu.com/Releases) section on the Ubuntu wiki for more information about the Ubuntu release schedule.
-
-<!-- LINKS -->
-
-------
-****
-------

@@ -1,177 +1,173 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/maas-documentation-snap-2-9-cli/2842) ~ [UI](/t/maas-documentation-snap-2-9-ui/2843)|[CLI](/t/maas-documentation-snap-3-0-cli/3993) ~ [UI](/t/maas-documentation-snap-3-0-ui/3994)|
-Packages|[CLI](/t/maas-documentation-deb-2-9-cli/2848) ~ [UI](/t/maas-documentation-deb-2-9-ui/2849)|[CLI](/t/maas-documentation-deb-3-0-cli/3995) ~ [UI](/t/maas-documentation-deb-3-0-ui/4195)|
 
 MAAS is **Metal As A Service**, a service that lets you treat physical servers like virtual machines -- instances -- in the cloud.  No need for you to manage servers individually: MAAS turns your bare metal into an elastic, cloud-like resource.
 
 #### Five questions you might have:
 
-<!-- deb-2-9-ui
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-9-ui/2273)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-9-ui/2657)
-3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-9-ui/2273#heading--how-maas-works)
+rad-begin /deb/2.9/ui
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-/deb/2.9/ui/2273)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-/deb/2.9/ui/2657)
+3. [How does MAAS work -- in detail?](/t/about-maas-/deb/2.9/ui/2273#heading--how-maas-works)
 4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-9-ui/3329)
-deb-2-9-ui -->
+5. [Can I just install it and try it for myself?](/t/maas-installation-/deb/2.9/ui/3329)
+rad-end
 
-<!-- snap-2-9-ui
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-9-ui/2267)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-9-ui/2651)
-3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-9-ui/2267#heading--how-maas-works)
+rad-begin /snap/2.9/ui
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-/snap/2.9/ui/2267)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-/snap/2.9/ui/2651)
+3. [How does MAAS work -- in detail?](/t/about-maas-/snap/2.9/ui/2267#heading--how-maas-works)
 4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-9-ui/3323)
-snap-2-9-ui -->
+5. [Can I just install it and try it for myself?](/t/maas-installation-/snap/2.9/ui/3323)
+rad-end
 
-<!-- deb-3-0-ui
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-3-0-ui/3816)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-3-0-ui/3936)
-3. [How does MAAS work -- in detail?](/t/about-maas-deb-3-0-ui/3816#heading--how-maas-works)
+rad-begin /deb/3.0/ui
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-/deb/3.0/ui/3816)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-/deb/3.0/ui/3936)
+3. [How does MAAS work -- in detail?](/t/about-maas-/deb/3.0/ui/3816#heading--how-maas-works)
 4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-deb-3-0-ui/4004)
-deb-3-0-ui -->
+5. [Can I just install it and try it for myself?](/t/maas-installation-/deb/3.0/ui/4004)
+rad-end
 
-<!-- snap-3-0-ui
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-3-0-ui/3813)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)
-3. [How does MAAS work -- in detail?](/t/about-maas-snap-3-0-ui/3813#heading--how-maas-works)
+rad-begin /snap/3.0/ui
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-/snap/3.0/ui/3813)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-/snap/3.0/ui/3934)
+3. [How does MAAS work -- in detail?](/t/about-maas-/snap/3.0/ui/3813#heading--how-maas-works)
 4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-snap-3-0-ui/4002)
-snap-3-0-ui -->
+5. [Can I just install it and try it for myself?](/t/maas-installation-/snap/3.0/ui/4002)
+rad-end
 
-<!-- deb-2-9-cli
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-2-9-cli/2272)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-2-9-cli/2656)
-3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-9-cli/2272#heading--how-maas-works)
+rad-begin /deb/2.9/cli
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-/deb/2.9/cli/2272)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-/deb/2.9/cli/2656)
+3. [How does MAAS work -- in detail?](/t/about-maas-/deb/2.9/cli/2272#heading--how-maas-works)
 4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-deb-2-9-cli/3328)
-deb-2-9-cli -->
+5. [Can I just install it and try it for myself?](/t/maas-installation-/deb/2.9/cli/3328)
+rad-end
 
-<!-- snap-2-9-cli
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-2-9-cli/2266)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-2-9-cli/2650)
-3. [How does MAAS work -- in detail?](/t/about-maas-snap-2-9-cli/2266#heading--how-maas-works)
+rad-begin /snap/2.9/cli
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-/snap/2.9/cli/2266)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-/snap/2.9/cli/2650)
+3. [How does MAAS work -- in detail?](/t/about-maas-/snap/2.9/cli/2266#heading--how-maas-works)
 4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-snap-2-9-cli/3322)
-snap-2-9-cli -->
+5. [Can I just install it and try it for myself?](/t/maas-installation-/snap/2.9/cli/3322)
+rad-end
 
-<!-- deb-3-0-cli
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-deb-3-0-cli/3815)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-deb-3-0-cli/3935)
-3. [How does MAAS work -- in detail?](/t/about-maas-deb-3-0-cli/3815#heading--how-maas-works)
+rad-begin /deb/3.0/cli
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-/deb/3.0/cli/3815)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-/deb/3.0/cli/3935)
+3. [How does MAAS work -- in detail?](/t/about-maas-/deb/3.0/cli/3815#heading--how-maas-works)
 4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-deb-3-0-cli/4003)
-deb-3-0-cli -->
+5. [Can I just install it and try it for myself?](/t/maas-installation-/deb/3.0/cli/4003)
+rad-end
 
-<!-- snap-3-0-cli
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas-snap-3-0-cli/3814)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-snap-3-0-cli/3933)
-3. [How does MAAS work -- in detail?](/t/about-maas-snap-3-0-cli/3814#heading--how-maas-works)
+rad-begin /snap/3.0/cli
+1. [What is MAAS -- and what does it really do for me?](/t/about-maas-/snap/3.0/cli/3814)
+2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas-/snap/3.0/cli/3933)
+3. [How does MAAS work -- in detail?](/t/about-maas-/snap/3.0/cli/3814#heading--how-maas-works)
 4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation-snap-3-0-cli/4001)
-snap-3-0-cli -->
+5. [Can I just install it and try it for myself?](/t/maas-installation-/snap/3.0/cli/4001)
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-ui/2657), our example data centre.*
- deb-2-9-ui -->
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-/deb/2.9/ui/2657), our example data centre.*
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-ui/3936), our example data centre.*
- deb-3-0-ui -->
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-/deb/2.9/ui/3936), our example data centre.*
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-9-ui/2651), our example data centre.*
-snap-2-9-ui -->
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-/snap/2.9/ui/2651), our example data centre.*
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-9-ui/3934), our example data centre.*
-snap-3-0-ui -->
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-/snap/2.9/ui/3934), our example data centre.*
+rad-end
 
-<!-- deb-2-9-cli 
+rad-begin /deb/2.9/cli 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-cli/2656), our example data centre. 
- deb-2-9-cli -->
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-/deb/2.9/cli/2656), our example data centre. 
+rad-end
 
-<!-- deb-3-0-cli 
+rad-begin /deb/3.0/cli 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-deb-2-9-cli/3935), our example data centre. 
- deb-3-0-cli -->
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-/deb/2.9/cli/3935), our example data centre. 
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 <a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-9-cli/2650), our example data centre.
- snap-2-9-cli -->
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-/snap/2.9/cli/2650), our example data centre.
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 <a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
 </a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-snap-2-9-cli/3933), our example data centre.
- snap-3-0-cli -->
+*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas-/snap/2.9/cli/3933), our example data centre.
+rad-end
 
 ---
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 <h2 id="heading--whats-new">New version of MAAS</h2>
 
 - [What's new in 2.9](/t/whats-new-in-maas/4290)
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 <h2 id="heading--whats-new">New version of MAAS</h2>
 
 - [What's new in 2.9](/t/whats-new-in-maas/4291)
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 <h2 id="heading--whats-new">New version of MAAS</h2>
 
 - [What's new in 3.0](/t/whats-new-in-maas/4289)
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 <h2 id="heading--whats-new">New version of MAAS</h2>
 
 - [What's new in 3.0](/t/whats-new-in-maas/4184)
- deb-3-0-ui -->
+rad-end
  
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 <h2 id="heading--whats-new">New version of MAAS</h2>
 
 - [What's new in 2.9](/t/whats-new-in-maas/4296)
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 <h2 id="heading--whats-new">New version of MAAS</h2>
 
 - [What's new in 2.9](/t/whats-new-in-maas/4297)
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 <h2 id="heading--whats-new">New version of MAAS</h2>
 
 - [What's new in 3.0](/t/whats-new-in-maas/4181)
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 <h2 id="heading--whats-new">New version of MAAS</h2>
 
 - [What's new in 3,0](/t/whats-new-in-maas/4182)
- snap-3-0-ui -->
+rad-end
 
 ---
 
@@ -189,7 +185,7 @@ There are three ways you can get support for MAAS:
 
 There are (at least) three ways you can contribute to MAAS:
 
-1. [Guide to contributing](/t/writing-guide-snap-3-0-ui/4186)
+1. [Guide to contributing](/t/writing-guide-/snap/3.0/ui/4186)
 2. [Push some code](https://launchpad.net/maas)
 3. [File an issue](/t/report-a-bug/4446)
 4. [Request a feature](/t/request-a-feature/4447)
@@ -198,88 +194,88 @@ There are (at least) three ways you can contribute to MAAS:
 
 ### [Introduction](/t/maas-documentation/25)
 
-- [About MAAS](/t/about-maas-snap-3-0-ui/3813)
-- ["Give me an example of MAAS"](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)
-- [What's new in 3.0](/t/whats-new-in-maas-snap-3-0-ui/4182)
-- [Installation](/t/maas-installation-snap-3-0-ui/4002)
-- [MAAS CLI](/t/maas-cli-snap-3-0-ui/3986)
+- [About MAAS](/t/about-maas-/snap/3.0/ui/3813)
+- ["Give me an example of MAAS"](/t/give-me-an-example-of-maas-/snap/3.0/ui/3934)
+- [What's new in 3.0](/t/whats-new-in-maas-/snap/3.0/ui/4182)
+- [Installation](/t/maas-installation-/snap/3.0/ui/4002)
+- [MAAS CLI](/t/maas-cli-/snap/3.0/ui/3986)
 - [Report a bug](/t/report-a-bug/4446)
 - [Request a feature](/t/request-a-feature/4447)
 
-### [Controllers](/t/controllers-snap-3-0-ui/3898)
+### [Controllers](/t/controllers-/snap/3.0/ui/3898)
 
-- [Communication](/t/maas-communication-snap-3-0-ui/3990)
-- [Rack controllers](/t/rack-controllers-snap-3-0-ui/4090)
-- [Region controllers](/t/region-controllers-snap-3-0-ui/4094)
-- [High availability](/t/high-availability-snap-3-0-ui/3946)
+- [Communication](/t/maas-communication-/snap/3.0/ui/3990)
+- [Rack controllers](/t/rack-controllers-/snap/3.0/ui/4090)
+- [Region controllers](/t/region-controllers-/snap/3.0/ui/4094)
+- [High availability](/t/high-availability-/snap/3.0/ui/3946)
 
-### [Machines](/t/machines-snap-3-0-ui/4030)
+### [Machines](/t/machines-/snap/3.0/ui/4030)
 
-- [Add machines](/t/add-machines-snap-3-0-ui/3822)
-- [Power management](/t/power-management-snap-3-0-ui/4070)
-- [Commission machines](/t/commission-machines-snap-3-0-ui/3874)
+- [Add machines](/t/add-machines-/snap/3.0/ui/3822)
+- [Power management](/t/power-management-/snap/3.0/ui/4070)
+- [Commission machines](/t/commission-machines-/snap/3.0/ui/3874)
 - Testing
-  - [Hardware testing](/t/hardware-testing-snap-3-0-ui/3942)
-  - [Network testing](/t/network-testing-snap-3-0-ui/4050)
-  - [Commissioning and hardware testing scripts](/t/commissioning-and-hardware-testing-scripts-snap-3-0-ui/3866)
-- [Deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
-- [Custom machine setup](/t/custom-machine-setup-snap-3-0-ui/3910)
-- [Kernel boot options](/t/kernel-boot-options-snap-3-0-ui/3974)
-- [Storage](/t/storage-snap-3-0-ui/4106)
-  - [Disk erasure](/t/disk-erasure-snap-3-0-ui/3922)
-  - [Block devices](/t/block-devices-snap-3-0-ui/3842)
-  - [Partitions](/t/partitions-snap-3-0-ui/4062)
-- [VMware VMFS datastores](/t/vmware-vmfs-datastores-snap-3-0-ui/4178)
-- [Ubuntu kernels](/t/ubuntu-kernels-snap-3-0-ui/4138)
+  - [Hardware testing](/t/hardware-testing-/snap/3.0/ui/3942)
+  - [Network testing](/t/network-testing-/snap/3.0/ui/4050)
+  - [Commissioning and hardware testing scripts](/t/commissioning-and-hardware-testing-scripts-/snap/3.0/ui/3866)
+- [Deploy machines](/t/deploy-machines-/snap/3.0/ui/3914)
+- [Custom machine setup](/t/custom-machine-setup-/snap/3.0/ui/3910)
+- [Kernel boot options](/t/kernel-boot-options-/snap/3.0/ui/3974)
+- [Storage](/t/storage-/snap/3.0/ui/4106)
+  - [Disk erasure](/t/disk-erasure-/snap/3.0/ui/3922)
+  - [Block devices](/t/block-devices-/snap/3.0/ui/3842)
+  - [Partitions](/t/partitions-/snap/3.0/ui/4062)
+- [VMware VMFS datastores](/t/vmware-vmfs-datastores-/snap/3.0/ui/4178)
+- [Ubuntu kernels](/t/ubuntu-kernels-/snap/3.0/ui/4138)
 
 ### [Projects](/t/using-lxd-projects-with-maas/4470)
-- [Resource pools](/t/resource-pools-snap-3-0-ui/4098)
-- [Tags and annotations](/t/maas-tags-snap-3-0-ui/4022)
-- [LXD projects](/t/using-lxd-projects-with-maas-snap-3-0-ui/4470)
+- [Resource pools](/t/resource-pools-/snap/3.0/ui/4098)
+- [Tags and annotations](/t/maas-tags-/snap/3.0/ui/4022)
+- [LXD projects](/t/using-lxd-projects-with-maas-/snap/3.0/ui/4470)
 
-### [Images](/t/images-snap-3-0-ui/3958)
+### [Images](/t/images-/snap/3.0/ui/3958)
 
-- [Select and import images](/t/select-and-import-images-snap-3-0-ui/4102)
-- [MAAS image builder](/t/maas-image-builder-snap-3-0-ui/3998)
-- [Custom Ubuntu images](/t/creating-a-custom-ubuntu-image-snap-3-0-ui/3902)
-- [Using image streams](/t/using-image-streams-snap-3-0-ui/4150)
-- [Local image mirror](/t/local-image-mirror-snap-3-0-ui/3982)
-- [VMWare images](/t/vmware-images-snap-3-0-ui/4174)
+- [Select and import images](/t/select-and-import-images-/snap/3.0/ui/4102)
+- [MAAS image builder](/t/maas-image-builder-/snap/3.0/ui/3998)
+- [Custom Ubuntu images](/t/creating-a-custom-ubuntu-image-/snap/3.0/ui/3902)
+- [Using image streams](/t/using-image-streams-/snap/3.0/ui/4150)
+- [Local image mirror](/t/local-image-mirror-/snap/3.0/ui/3982)
+- [VMWare images](/t/vmware-images-/snap/3.0/ui/4174)
 
-### [Networking](/t/networking-snap-3-0-ui/4046)
+### [Networking](/t/networking-/snap/3.0/ui/4046)
 
-- [Network discovery](/t/network-discovery-snap-3-0-ui/4042)
-- [Subnet management](/t/subnet-management-snap-3-0-ui/4110)
-- [DHCP](/t/managing-dhcp-snap-3-0-ui/4034)
-- [IP ranges](/t/ip-ranges-snap-3-0-ui/3966)
-- [IPv6](/t/ipv6-addressing-snap-3-0-ui/3970)
-- [Proxy](/t/proxy-snap-3-0-ui/4082)
-- [TLS encryption](/t/configuring-tls-encryption-snap-3-0-ui/3890)
-- [Availability zones (AZs)](/t/availability-zones-snap-3-0-ui/3834)
-  - [Zone examples](/t/zone-examples-snap-3-0-ui/4190)
-- [STP](/t/managing-stp-snap-3-0-ui/4038)
-- [NTP](/t/ntp-services-snap-3-0-ui/4054)
-- [Air-gapped MAAS](/t/using-maas-in-an-air-gapped-environment-snap-3-0-ui/4154)
+- [Network discovery](/t/network-discovery-/snap/3.0/ui/4042)
+- [Subnet management](/t/subnet-management-/snap/3.0/ui/4110)
+- [DHCP](/t/managing-dhcp-/snap/3.0/ui/4034)
+- [IP ranges](/t/ip-ranges-/snap/3.0/ui/3966)
+- [IPv6](/t/ipv6-addressing-/snap/3.0/ui/3970)
+- [Proxy](/t/proxy-/snap/3.0/ui/4082)
+- [TLS encryption](/t/configuring-tls-encryption-/snap/3.0/ui/3890)
+- [Availability zones (AZs)](/t/availability-zones-/snap/3.0/ui/3834)
+  - [Zone examples](/t/zone-examples-/snap/3.0/ui/4190)
+- [STP](/t/managing-stp-/snap/3.0/ui/4038)
+- [NTP](/t/ntp-services-/snap/3.0/ui/4054)
+- [Air-gapped MAAS](/t/using-maas-in-an-air-gapped-environment-/snap/3.0/ui/4154)
 
-### [VM hosting](/t/vm-hosting-snap-3-0-ui/4162)
+### [VM hosting](/t/vm-hosting-/snap/3.0/ui/4162)
 
-- [VM host networking](/t/vm-host-networking-snap-3-0-ui/4166)
-- [Add a VM host](/t/adding-a-vm-host-snap-3-0-ui/3818)
-- [VM host storage pools](/t/vm-host-storage-pools-snap-3-0-ui/4170)
-- [Creating and deleting VMs](/t/creating-and-deleting-vms-snap-3-0-ui/3906)
+- [VM host networking](/t/vm-host-networking-/snap/3.0/ui/4166)
+- [Add a VM host](/t/adding-a-vm-host-/snap/3.0/ui/3818)
+- [VM host storage pools](/t/vm-host-storage-pools-/snap/3.0/ui/4170)
+- [Creating and deleting VMs](/t/creating-and-deleting-vms-/snap/3.0/ui/3906)
 
 ### Operations
 
-- [Prometheus metrics](/t/prometheus-metrics-snap-3-0-ui/4074)
-- [Backup](/t/backup-snap-3-0-ui/3838)
-- [MAAS security](/t/hardening-your-maas-installation-snap-3-0-ui/3938)
-- [Logging](/t/maas-logging-snap-3-0-ui/4010)
-  - [Commissioning logs](/t/commissioning-logs-snap-3-0-ui/3870)
-  - [Test logs](/t/test-logs-snap-3-0-ui/4118)
-  - [Event logs](/t/event-logs-snap-3-0-ui/3926)
-  - [Audit event logs](/t/audit-event-logs-snap-3-0-ui/3830)
-- [User accounts](/t/user-accounts-snap-3-0-ui/4146)
-- [Interactive search](/t/interactive-search-snap-3-0-ui/3962)
+- [Prometheus metrics](/t/prometheus-metrics-/snap/3.0/ui/4074)
+- [Backup](/t/backup-/snap/3.0/ui/3838)
+- [MAAS security](/t/hardening-your-maas-installation-/snap/3.0/ui/3938)
+- [Logging](/t/maas-logging-/snap/3.0/ui/4010)
+  - [Commissioning logs](/t/commissioning-logs-/snap/3.0/ui/3870)
+  - [Test logs](/t/test-logs-/snap/3.0/ui/4118)
+  - [Event logs](/t/event-logs-/snap/3.0/ui/3926)
+  - [Audit event logs](/t/audit-event-logs-/snap/3.0/ui/3830)
+- [User accounts](/t/user-accounts-/snap/3.0/ui/4146)
+- [Interactive search](/t/interactive-search-/snap/3.0/ui/3962)
 
 ### [Concepts & terms](/t/concepts-and-terms/785)
 
@@ -288,19 +284,19 @@ There are (at least) three ways you can contribute to MAAS:
 ### [API documentation](https://maas.io/docs/api)
 
 - [API client](/t/api-client/810)
-- [API authentication](/t/api-authentication-snap-3-0-ui/3826)
+- [API authentication](/t/api-authentication-/snap/3.0/ui/3826)
 
-### [Troubleshooting](/t/troubleshooting-snap-3-0-ui/4134)
+### [Troubleshooting](/t/troubleshooting-/snap/3.0/ui/4134)
 
 - [Getting help](/t/getting-help/838)
-- [Tips, tricks, and traps](/t/tips-tricks-and-traps-snap-3-0-ui/4130)
+- [Tips, tricks, and traps](/t/tips-tricks-and-traps-/snap/3.0/ui/4130)
 - [MAAS 2.5 (and earlier) documentation](https://old-docs.maas.io/2.5/en/)
 - [Upgrading MAAS](/t/upgrading-maas/779)
   - [Upgrade from 2.3 to 2.4](/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777)
 
 ### [Release notes](/t/whats-new-in-maas/4291)
 
-### [Help improve these docs](/t/writing-guide-snap-3-0-ui/4186)
+### [Help improve these docs](/t/writing-guide-/snap/3.0/ui/4186)
 
 ### [Contact us](/t/contact-us/743)
 
@@ -1549,14 +1545,12 @@ There are (at least) three ways you can contribute to MAAS:
 |https://discourse.maas.io/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777/|/docs/upgrade-2-3-to-2-4-from-ubuntu-16-04|
 |https://discourse.maas.io/t/upgrade-from-1-9-to-2-x/778/|/docs/upgrade-from-1-9-to-2-x|
 |https://discourse.maas.io/t/whats-new-in-2-6/788/|/docs/whats-new-in-2-6|
-|https://discourse.maas.io/t/-/766/|/docs/snap/3.0/ui/subnet-management|
 [/details]
 
 ## Redirects
 
 [details=Mapping table]
 |PATH|LOCATION|
-|--------|--------|
 |/docs/snap/3.0/ui/maas-tags|/docs/snap/3.0/ui/tags-and-annotations|
 |/docs/3.0/release-notes|/docs/snap/3.0/ui/whats-new-in-maas|
 |/docs/non-snap-maas-installs|/docs/snap/2.9/ui/installation|

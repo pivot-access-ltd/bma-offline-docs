@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/local-image-mirror-snap-2-9-cli/2806) ~ [UI](/t/local-image-mirror-snap-2-9-ui/2807)|[CLI](/t/local-image-mirror-snap-3-0-cli/3981) ~ [UI](/t/local-image-mirror-snap-3-0-ui/3982)|
-Packages|[CLI](/t/local-image-mirror-deb-2-9-cli/2812) ~ [UI](/t/local-image-mirror-deb-2-9-ui/2813)|[CLI](/t/local-image-mirror-deb-3-0-cli/3983) ~ [UI](/t/local-image-mirror-deb-3-0-ui/3984)|
 
 Mirroring images is worthy of consideration.  The SimpleStreams protocol delivers Images to MAAS, which is especially useful when your Internet link is slow or unreliable. In this mirrored configuration, images will be instantly available when MAAS requests them.
 

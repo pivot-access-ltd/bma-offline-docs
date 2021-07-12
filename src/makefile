@@ -46,3 +46,19 @@
 #	rm maas-installation-technical-reference-snap-2-7-ui-4518.md
 #	chmod 444 originals/*
 
+# originals/maas-documentation-test-index-4726.md: maas-documentation.md
+#	chmod 644 originals/*
+#	cp maas-documentation.md maas-documentation-test-index-4726.md
+#	xpub pull discourse 4726 4726
+#	cp -p maas-documentation-test-index-4726.md originals
+#	rm maas-documentation-test-index-4726.md
+#	chmod 444 originals/*
+
+# originals/maas-documentation-test-index-62-4729.md: maas-documentation.md
+#	chmod 644 originals/*
+#	cp maas-documentation.md maas-documentation-test-index-62-4729.md
+#	xpub pull discourse 4729 4729
+#	cp -p maas-documentation-test-index-62-4729.md originals
+#	rm maas-documentation-test-index-62-4729.md
+#	chmod 444 originals/*
+

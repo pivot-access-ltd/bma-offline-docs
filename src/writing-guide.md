@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/writing-guide-snap-2-9-cli/3262) ~ [UI](/t/writing-guide-snap-2-9-ui/3263)|[CLI](/t/writing-guide-snap-3-0-cli/4185) ~ [UI](/t/writing-guide-snap-3-0-ui/4186)|
-Packages|[CLI](/t/writing-guide-deb-2-9-cli/3268) ~ [UI](/t/writing-guide-deb-2-9-ui/3269)|[CLI](/t/writing-guide-deb-3-0-cli/4187) ~ [UI](/t/writing-guide-deb-3-0-ui/4188)|
 This page contains detailed information on how to become a successful MAAS documentation writer. Welcome to the club.
 
 <h2 id="heading--edit-rad">Update: Editing RAD/offline documentation</h2>
@@ -12,11 +8,11 @@ First, some assurance: RAD is generated from a separate set of masters, publishe
 
 That said, there is a bit of art to editing RAD pages and making sure your edits are suitable for offline doc conversion, namely, throughout RAD documents, you'll see HTML comments like this one:
 
-    <!-- snap-2-11-cli snap-2-11-ui deb-2-11-cli deb-2-11-ui
+    rad-begin snap-2-11-cli snap-2-11-ui deb-2-11-cli deb-2-11-ui
 
 Sometimes, they have multiple "tags" (e.g., `snap-2-6-cli` is a tag), and sometimes they only have one, like this:
 
-    <!-- snap-2-11-cli
+    rad-begin snap-2-11-cli
 
 The tags should generally be self-explantory.  For example, the tag above refers to the snap delivery of MAAS version 2.11, specifically for someone using the CLI interface.
 
@@ -173,12 +169,6 @@ A negative note that should include a title.
 <h2 id="heading--comments">Comments</h2>
 
 Occasionally it may be appropriate to include a comment to explain or organise some text. This ends up as an HTML comment -- which can be read online, even if only in the browser inspection window -- so take it seriously:
-
-```
-<!--
-The below text may be removed soon.
--->
-```
 
 <h2 id="heading--hyperlinks">Hyperlinks</h2>
 

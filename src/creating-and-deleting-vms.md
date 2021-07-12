@@ -1,11 +1,7 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/creating-and-deleting-vms-snap-2-9-cli/2578) ~ [UI](/t/creating-and-deleting-vms-snap-2-9-ui/2579)|[CLI](/t/creating-and-deleting-vms-snap-3-0-cli/3905) ~ [UI](/t/creating-and-deleting-vms-snap-3-0-ui/3906)|
-Packages|[CLI](/t/creating-and-deleting-vms-deb-2-9-cli/2584) ~ [UI](/t/creating-and-deleting-vms-deb-2-9-ui/2585)|[CLI](/t/creating-and-deleting-vms-deb-3-0-cli/3907) ~ [UI](/t/creating-and-deleting-vms-deb-3-0-ui/3908)|
 
 If you have already created a VM host, you will want to create and delete virtual machines (VMs); this article explains how to do so.
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 
 #### Three questions you may have:
 
@@ -32,9 +28,9 @@ MAAS will deduct the new machine's resources from the VM host's resources:
 To delete a VM, delete it as you would any other MAAS machine. Select the desired machine from the list of machines and select 'Delete' from the 'Take Action' menu.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg"></a> 
-  snap-2-9-ui   deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 
 #### Eight questions you may have:
 
@@ -190,4 +186,4 @@ Example output:
     maas $PROFILE machine delete $SYSTEM_ID
 
 After you delete a machine, its resources will be available for other VMs.
-  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end

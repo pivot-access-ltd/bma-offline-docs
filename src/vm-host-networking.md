@@ -1,11 +1,7 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/vm-host-networking-snap-2-9-cli/3214) ~ [UI](/t/vm-host-networking-snap-2-9-ui/3215)|[CLI](/t/vm-host-networking-snap-3-0-cli/4165) ~ [UI](/t/vm-host-networking-snap-3-0-ui/4166)|
-Packages|[CLI](/t/vm-host-networking-deb-2-9-cli/3220) ~ [UI](/t/vm-host-networking-deb-2-9-ui/3221)|[CLI](/t/vm-host-networking-deb-3-0-cli/4167) ~ [UI](/t/vm-host-networking-deb-3-0-ui/4168)|
 
 In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself.  This section explains several ways of accomplishing this.
  
-<!--  snap-2-9-ui  deb-2-9-ui  snap-3-0-ui deb-3-0-ui 
+rad-begin  /snap/2.9/ui  /deb/2.9/ui  /snap/3.0/ui /deb/3.0/ui 
 #### Five questions you may have:
 
 1. [How do I set up a VM host bridge with the web UI?](#heading--maas-bridge-web-ui)
@@ -15,9 +11,9 @@ In order to  deploy a VM host in your MAAS network, you first need to set up a b
 5. [How do I make LXD available for hosting?](#heading--lxd-setup)
 
 LXD sets up a bridge as part of the [initialisation process](#heading--lxd-setup); note that you will have to perform a couple of additional steps to prevent LXD from offering DHCP, which will interfere with the normal operation of MAAS.  Everything you need to know is described at the initialisation link.
-  snap-2-9-ui  deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!--  snap-2-9-cli  deb-2-9-cli  snap-3-0-cli deb-3-0-cli 
+rad-begin  /snap/2.9/cli  /deb/2.9/cli  /snap/3.0/cli /deb/3.0/cli 
 #### Five questions you may have:
 
 1. [How do I set up a VM host bridge with the MAAS CLI/API?](#heading--maas-bridge-cli)
@@ -27,7 +23,7 @@ LXD sets up a bridge as part of the [initialisation process](#heading--lxd-setup
 5. [How do I make LXD available for hosting?](#heading--lxd-setup)
 
 LXD sets up a bridge as part of the [initialisation process](#heading--lxd-setup); note that you will have to perform a couple of additional steps to prevent LXD from offering DHCP, which will interfere with the normal operation of MAAS.  Everything you need to know is described at the initialisation link.
- snap-2-9-cli  deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
 To enable VM host networking features, MAAS must match the VM host IP address of a potential VM host with a known device (a machine or controller). For example, if a machine not known to MAAS is set up as a VM host, enhanced interface selection features will not be available.
 
@@ -35,7 +31,7 @@ To enable VM host networking features, MAAS must match the VM host IP address of
 It's essential to enforce usage of IP addresses to avoid domain name conflicts, should different controllers resolve the same domain name with different IP addresses. You should also avoid using 127.0.0.1 when running multiple controllers, as it would confuse MAAS.
 [/note]
 
-<!--   snap-2-9-ui   deb-2-9-ui  snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui  /snap/3.0/ui /deb/3.0/ui 
 <a href="#heading--maas-bridge-web-ui"><h2 id="heading--maas-bridge-web-ui">Set up VM host bridge with MAAS UI</h2></a>
 
 You can use the MAAS UI to configure a bridge to connect a VM host to MAAS:
@@ -54,9 +50,9 @@ When you're done, it should look something like this:
 
 Then you can deploy Ubuntu.
 
-  snap-2-9-ui   deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!--   snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli  /snap/3.0/cli /deb/3.0/cli 
 <a href="#heading--maas-bridge-cli"><h2 id="heading--maas-bridge-cli">Use the MAAS API to configure a bridge</h2></a>
 
 You can also use the MAAS CLI/API to configure a VM host bridge, with the following procedure:
@@ -77,7 +73,7 @@ You can also use the MAAS CLI/API to configure a VM host bridge, with the follow
 
           maas $PROFILE interface link-subnet $SYSTEM_ID $BRIDGE_ID subnet=$SUBNET_ID mode="STATIC" ip_address="10.0.0.101"
 
-  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
 <a href="#heading--maas-bridge-netplan"><h2 id="heading--maas-bridge-netplan">Use netplan to configure a bridge</h2></a>
 
@@ -167,7 +163,7 @@ virsh -c qemu+ssh://$USER@$VM_HOST_IP/system list --all
 
 Here, `$USER` is a user on your VM host who is a member of the `libvirtd` Unix group on the VM host, and `$VM_HOST_IP` is the IP of your VM host.  **Note** that insufficient permissions for `$USER` may cause the `virsh` command to fail with an error such as `failed to connect to the hypervisor`. Check the `$USER` group membership to make sure `$USER` is a member of the `libvirtd` group.
 
-<!--     deb-2-9-ui deb-2-9-cli deb-3-0-cli deb-3-0-ui  
+rad-begin     /deb/2.9/ui /deb/2.9/cli /deb/3.0/cli /deb/3.0/ui  
 <a href="#heading--libvirt-ssh"><h3 id="heading--libvirt-ssh">Set up SSH (libvirt only)</h3></a>
 
 The `maas` user on your rack controllers will issue all libvirt commands. Therefore, you'll need to set up SSH public keys on every rack controller for user `maas`.  First create SSH keys on all rack controllers:
@@ -180,9 +176,9 @@ root@maas:~$ ssh-keygen -f id_rsa
 ```
 
 Next, add the contents of `~maas/.ssh/id_rsa.pub` to the VM host user's `~$USER/.ssh/authorized_keys`. To accomplish this, log into your VM host node, via SSH, from a host for which MAAS has a matching public SSH key.
-     deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli -->
+rad-end
 
-<!--     snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli 
+rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli 
 <a href="#heading--set-up-ssah-lv"><h3 id="heading--set-up-ssah-lv">Set up SSH (libvirt only)</h3></a>
 
 If you installed MAAS via snap, then create the needed SSH keys this way:
@@ -194,9 +190,9 @@ sudo ssh-keygen -f id_rsa
 ```
 
 Finally, you'll need to add `id_rsa.pub` to the `authorized_keys` file in `/home/<vm-host-user-homedir-name>/.ssh/`,  where `<vm-host-user-homedir-name>` is the name of your VM host user.
-     snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli -->
+rad-end
 
-<!--     snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-cli snap-3-0-ui deb-3-0-cli deb-3-0-ui
+rad-begin     /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli /snap/3.0/cli /snap/3.0/ui /deb/3.0/cli /deb/3.0/ui
 <a href="#heading--lxd-setup"><h2 id="heading--lxd-setup">Make LXD available for VM hosting</h2></a>
 
 Assuming that you want to use LXD VM hosts, you need to install the correct version of LXD. Prior to the release of Ubuntu 20.04 LXD was installed using Debian packages. The Debian packaged version of LXD is too old to use with MAAS. If this is the case, you’ll need to remove the LXD Debian packages and install the Snap version.  Note that you cannot install both Debian and snap versions, as this creates a conflict.
@@ -454,6 +450,6 @@ Once that's done, the LXD host is now ready to be added to MAAS as an LXD VM hos
 
 When composing a virtual machine with LXD, MAAS uses either the 'maas' LXD profile, or (if that doesn't exist) the 'default' LXD profile. The profile is used to determine which bridge to use. Users may also add additional LXD options to the profile which are not yet supported in MAAS.
 
-     snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-ui snap-3-0-cli deb-3-0-ui deb-3-0-cli  -->
+rad-end
 
 

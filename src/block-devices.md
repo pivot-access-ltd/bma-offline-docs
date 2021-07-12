@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/block-devices-snap-2-9-cli/2350) ~ [UI](/t/block-devices-snap-2-9-ui/2351)|[CLI](/t/block-devices-snap-3-0-cli/3841) ~ [UI](/t/block-devices-snap-3-0-ui/3842)|
-Packages|[CLI](/t/block-devices-deb-2-9-cli/2356) ~ [UI](/t/block-devices-deb-2-9-ui/2357)|[CLI](/t/block-devices-deb-3-0-cli/3843) ~ [UI](/t/block-devices-deb-3-0-ui/3844)|
 
 Once the initial storage layout has been configured on a machine, you can perform many operations to view and adjust the entire storage layout for the machine. In MAAS there are two different types of block devices.
 

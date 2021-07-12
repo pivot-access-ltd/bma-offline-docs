@@ -1,83 +1,79 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/storage-snap-2-9-cli/3106) ~ [UI](/t/storage-snap-2-9-ui/3107)|[CLI](/t/storage-snap-3-0-cli/4105) ~ [UI](/t/storage-snap-3-0-ui/4106)|
-Packages|[CLI](/t/storage-deb-2-9-cli/3112) ~ [UI](/t/storage-deb-2-9-ui/3113)|[CLI](/t/storage-deb-3-0-cli/4107) ~ [UI](/t/storage-deb-3-0-ui/4108)|
 
 You have significant latitude when choosing the final storage configuration of a deployed machine. MAAS supports traditional disk partitioning, as well as more complex options such as LVM, RAID, and bcache. MAAS also supports UEFI as a boot mechanism.  This article explains boot mechanisms and layouts, and offers some advice on how to configure layouts and manage storage.
 
 #### Six questions you may have:
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 1. [How does UEFI booting work?](#heading--uefi)
 2. [What kind of storage layouts are available?](#heading--layouts)
 3. [How do I set global storage layouts?](#heading--setting-global-layouts)
 4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
 5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
 6. [How can I erase a disk?](/t/disk-erasure/2620)
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 1. [How does UEFI booting work?](#heading--uefi)
 2. [What kind of storage layouts are available?](#heading--layouts)
 3. [How do I set global storage layouts?](#heading--setting-global-layouts)
 4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
 5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
 6. [How can I erase a disk?](/t/disk-erasure/2621)
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 1. [How does UEFI booting work?](#heading--uefi)
 2. [What kind of storage layouts are available?](#heading--layouts)
 3. [How do I set global storage layouts?](#heading--setting-global-layouts)
 4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
 5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
 6. [How can I erase a disk?](/t/disk-erasure/3923)
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 1. [How does UEFI booting work?](#heading--uefi)
 2. [What kind of storage layouts are available?](#heading--layouts)
 3. [How do I set global storage layouts?](#heading--setting-global-layouts)
 4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
 5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
 6. [How can I erase a disk?](/t/disk-erasure/3924)
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 1. [How does UEFI booting work?](#heading--uefi)
 2. [What kind of storage layouts are available?](#heading--layouts)
 3. [How do I set global storage layouts?](#heading--setting-global-layouts)
 4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
 5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
 6. [How can I erase a disk?](/t/disk-erasure/2614)
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 1. [How does UEFI booting work?](#heading--uefi)
 2. [What kind of storage layouts are available?](#heading--layouts)
 3. [How do I set global storage layouts?](#heading--setting-global-layouts)
 4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
 5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
 6. [How can I erase a disk?](/t/disk-erasure/2615)
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 1. [How does UEFI booting work?](#heading--uefi)
 2. [What kind of storage layouts are available?](#heading--layouts)
 3. [How do I set global storage layouts?](#heading--setting-global-layouts)
 4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
 5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
 6. [How can I erase a disk?](/t/disk-erasure/3921)
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 1. [How does UEFI booting work?](#heading--uefi)
 2. [What kind of storage layouts are available?](#heading--layouts)
 3. [How do I set global storage layouts?](#heading--setting-global-layouts)
 4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
 5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
 6. [How can I erase a disk?](/t/disk-erasure/3922)
- snap-3-0-ui -->
+rad-end
 
 A machine's storage is dependant upon the underlying system's disks, but its configuration (i.e., disk usage) is the result of a storage template. In MAAS, this template is called a layout, and MAAS applies it to a machine during commissioning.  Once a layout is applied, a regular user can make modifications to a machine at the filesystem level to arrive at the machine's final storage configuration.  When a machine is no longer needed, a user can choose from among several disk erasure types before releasing it.
 
@@ -110,7 +106,6 @@ The layout descriptions below will include the EFI partition. If your system is 
 With the Flat layout, a partition spans the entire boot disk. The partition is formatted with the ext4 filesystem and uses the `/` mount point:
 
 | Name | Size        | Type | Filesystem | Mount point |
-|:-----|-------------|------|------------|-------------|
 | sda  | -           | disk |            |             |
 | sda1 | 512 MB      | part | FAT32      | /boot/efi   |
 | sda2 | rest of sda | part | ext4       | /           |
@@ -128,7 +123,6 @@ The following three options are supported:
 The LVM layout creates the volume group `vgroot` on a partition that spans the entire boot disk. A logical volume `lvroot` is created for the full size of the volume group; is formatted with the ext4 filesystem; and uses the `/` mount point:
 
 | Name   | Size        | Type | Filesystem     | Mount point |
-|:-------|-------------|------|----------------|-------------|
 | sda    | -           | disk |                |             |
 | sda1   | 512 MB      | part | FAT32          | /boot/efi   |
 | sda2   | rest of sda | part | lvm-pv(vgroot) |             |
@@ -149,7 +143,6 @@ The following six options are supported:
 A bcache layout will create a partition that spans the entire boot disk as the backing device. It uses the smallest block device tagged with 'ssd' as the cache device. The bcache device is formatted with the ext4 filesystem and uses the `/` mount point. If there are no 'ssd' tagged block devices on the machine, then the bcache device will not be created, and the Flat layout will be used instead:
 
 | Name      | Size        | Type | Filesystem | Mount point |
-|:----------|-------------|------|------------|-------------|
 | sda       | -           | disk |            |             |
 | sda1      | 512 MB      | part | FAT32      | /boot/efi   |
 | sda2      | rest of sda | part | bc-backing |             |
@@ -172,7 +165,6 @@ The following seven options are supported:
 The VMFS6 layout is used for VMware ESXi deployments only. It is required when configuring VMware VMFS Datastores. This layout creates all operating system partitions, in addition to the default datastore. The datastore may be modified.  New datastores may be created or extended to include other storage devices. The base operating system partitions may not be modified because VMware ESXi requires them. Once applied another storage layout must be applied to remove the operating system partitions.
 
 | Name | Size      | Type    | Use               |
-|:-----|-----------|---------|-------------------|
 | sda  | -         | disk    |                   |
 | sda1 | 3 MB      | part    | EFI               |
 | sda2 | 4 GB      | part    | Basic Data        |
@@ -202,13 +194,13 @@ Machines with the blank layout applied are not deployable; you must first config
 
 Layouts can be set globally and on a per-machine basis.
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 All machines will have a default layout applied when commissioned. An administrator can configure the default layout on the 'Settings' page, under the 'Storage' tab.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png"></a>
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+rad-end
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 All machines will have a default layout applied when commissioned. To set the default storage layout for all machines:
 
 ```
@@ -223,7 +215,7 @@ maas $PROFILE maas set-config name=default_storage_layout value=flat
 
 Important: The new default will only apply to newly-commissioned machines.
 
-  snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
+rad-end
 
 [note type="caution" status="Important"]
 The new default will only apply to newly-commissioned machines.
@@ -231,11 +223,11 @@ The new default will only apply to newly-commissioned machines.
 
 <a href="#heading--per-machine-layouts"><h3 id="heading--per-machine-layouts">Machine layout</h3></a>
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of 'Ready'. This is only possible via the CLI: to see how, click the "CLI" option for your version and delivery method above.
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+rad-end
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 An administrator can set a storage layout for a machine with a status of ‘Ready’ like this:
 
 ```
@@ -251,7 +243,7 @@ maas $PROFILE machine set-storage-layout $SYSTEM_ID storage_layout=lvm lv_size=5
 You must specify all storage sizes in bytes.
 
 This action will remove the configuration that may exist on any block device.
-  snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
+rad-end
 
 [note]
 Only an administrator can modify storage at the block device level (providing the machine has a status of 'Ready').

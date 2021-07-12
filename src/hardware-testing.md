@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/hardware-testing-snap-2-9-cli/2674) ~ [UI](/t/hardware-testing-snap-2-9-ui/2675)|[CLI](/t/hardware-testing-snap-3-0-cli/3941) ~ [UI](/t/hardware-testing-snap-3-0-ui/3942)|
-Packages|[CLI](/t/hardware-testing-deb-2-9-cli/2680) ~ [UI](/t/hardware-testing-deb-2-9-ui/2681)|[CLI](/t/hardware-testing-deb-3-0-cli/3943) ~ [UI](/t/hardware-testing-deb-3-0-ui/3944)|
 
 If you wish, you can tell MAAS to test machine hardware using well-known Linux utilities.  MAAS can test machines that have  a status of **Ready**, **Broken**, or **Deployed**.  You can include testing as part of the commissioning process. When you choose the 'Commission' action, MAAS will display the dialog described below.  Be aware, though, that if the hardware tests fail, the machine will become unavailable for Deployment.
 
@@ -9,7 +5,7 @@ If you wish, you can tell MAAS to test machine hardware using well-known Linux u
 The majority of testing scripts only work with machines that are backed by physical hardware (e.g. they may be incompatible with VM-based machines).
 [/note]
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 With MAAS, you can easily write, upload and execute your hardware testing scripts and see the results.
 
 #### Three questions you may have:
@@ -180,10 +176,10 @@ maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
 [note]
 **$RUN_ID** is labelled `id` in the verbose result output.
 [/note]
-  snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli -->
+rad-end
 
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 #### Two questions you may have: 
 
 1. [How do I apply a hardware test?](#heading--apply-a-hardware-test)
@@ -290,36 +286,36 @@ The following hardware testing scripts can be selected from the web UI:
 After either commissioning, testing, or installation has started, MAAS reports in real-time which script is running.
 
 You can access the verbatim output from any test by selecting a machine, selecting the 'Hardware tests' page and clicking on the 'Log view' link in the 'Results' column for the specific test.
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2488) for more details on how these scripts work and how you can write your own.
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2489) for more details on how these scripts work and how you can write your own.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/3867) for more details on how these scripts work and how you can write your own.
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/3868) for more details on how these scripts work and how you can write your own.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2482) for more details on how these scripts work and how you can write your own.
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2483) for more details on how these scripts work and how you can write your own.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/3865) for more details on how these scripts work and how you can write your own.
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/3866) for more details on how these scripts work and how you can write your own.
- snap-3-0-ui -->
+rad-end

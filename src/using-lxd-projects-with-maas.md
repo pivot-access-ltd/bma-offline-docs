@@ -479,7 +479,7 @@ You have several options when it comes to using LXD projects with MAAS:
 
 <a href="#heading--projects-s2-create-with-vm-host"><h4 id="heading--projects-s2-create-with-vm-host">How do I create a new project for MAAS when instantiating a VM host?</h4></a>
 
-<!-- snap-3-0-cli deb-3-0-cli
+rad-begin /snap/3.0/cli /deb/3.0/cli
 
 If you're using MAAS from the CLI, you'll want to make sure you've generated an API key and logged in before you attempt to create a VM host.  These steps are fairly simple; first, you'll need the MAAS URL, which for this example, is `http://192.168.33.91:5240/MAAS`.   You can find this URL by typing:
 
@@ -735,15 +735,15 @@ $ lxc list
 ```
 
 You'll note that, since we just created the VM host, without adding any VMs, the `keystone` project will be empty.
- snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui deb-3-0-ui
+rad-begin /snap/3.0/ui /deb/3.0/ui
 
- snap-3-0-ui deb-3-0-ui -->
+rad-end
 
 <a href="#heading--projects-s2-create-vm-in-vm-host-project"><h4 id="heading--projects-s2-create-vm-in-vm-host-project">How do I create a new VM in the LXD project associated with a VM host -- and what happens?</h4></a>
 
-<!-- snap-3-0-cli deb-3-0-cli
+rad-begin /snap/3.0/cli /deb/3.0/cli
 
 Let's say that you have created your VM host (called `foo`, in this case) with a new, empty project called `keystone`.  Now you want to create (that is, compose) a VM is this project.  You can accomplish this with a command similar to the following:
 
@@ -781,11 +781,11 @@ You can see by the several status messages that this machine was successfully co
 
 So from this experiment, we can see that creating (composing) a VM in a VM host causes MAAS to automatically commission the VM.
 
- snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui deb-3-0-ui
+rad-begin /snap/3.0/ui /deb/3.0/ui
 
- snap-3-0-ui deb-3-0-ui -->
+rad-end
 
 <a href="#heading--projects-s2-move-vm-into-vm-host-project"><h4 id="heading--projects-s2-move-vm-into-vm-host-project">How do I move an existing VM into the LXD project associated with a VM host -- and what happens?</h4></a>
 
@@ -824,7 +824,6 @@ lxc start trusty-drake
 Nothing happens for a while, but eventually MAAS will discover the machine and attempt to commission it.  In fact, since MAAS doesn't know what power type to use, it completes all the commissioning scripts except `30-maas-01-bmc-config`:
 
 | Name | Tags | Result | Date | Runtime |
-|:-----|:----:|:------:|:----:|--------:|
 | 20-maas-01-install-lldpd |	node|	Passed|	Mon, 19 Apr. 2021 21:42:22|	0:00:00|
 | 20-maas-02-dhcp-unconfigured-ifaces|	node|	Passed|	Mon, 19 Apr. 2021 21:42:22|	0:00:00|
 | 30-maas-01-bmc-config|	bmc-config, node|	Skipped|	Mon, 19 Apr. 2021 21:42:22|	0:00:00|
@@ -839,7 +838,7 @@ maas-support-info| 	node|	Passed|	Mon, 19 Apr. 2021 21:42:25|	0:00:01|
 
 This machine will sit in the "New" state until you assign it a power type, and enter the correct power parameters.
 
-<!-- snap-3-0-cli deb-3-0-cli
+rad-begin /snap/3.0/cli /deb/3.0/cli
 For example, to get this new (moved) VM ready to be fully commissioned, you'll need to first find it in the machine list:
 
 ```text
@@ -848,21 +847,21 @@ maas admin machines read
   "resource_uri": "/MAAS/api/2.0/machines/r3mmsh/"
 '''
 
- snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui deb-3-0-ui
+rad-begin /snap/3.0/ui /deb/3.0/ui
 
- snap-3-0-ui deb-3-0-ui -->
+rad-end
 
 <a href="#heading--projects-s2-delete-vm-host"><h4 id="heading--projects-s2-delete-vm-host">What happens to my new MAAS project if I delete the VM host?</h4></a>
 
 At some point, you may want to delete your MAAS VM host.  You can do so in the following way:
 
-<!-- snap-3-0-cli deb-3-0-cli
- snap-3-0-cli deb-3-0-cli -->
+rad-begin /snap/3.0/cli /deb/3.0/cli
+rad-end
 
-<!-- snap-3-0-ui deb-3-0-ui
- snap-3-0-ui deb-3-0-ui -->
+rad-begin /snap/3.0/ui /deb/3.0/ui
+rad-end
  
 <a href="#heading--projects-s2-move-non-maas-items"><h4 id="heading--projects-s2-move-non-maas-items">How hard is it to move LXD entities to another project to hide them from MAAS?</h4></a>
 

@@ -1,21 +1,17 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/power-management-snap-2-9-cli/3010) ~ [UI](/t/power-management-snap-2-9-ui/3011)|[CLI](/t/power-management-snap-3-0-cli/4069) ~ [UI](/t/power-management-snap-3-0-ui/4070)|
-Packages|[CLI](/t/power-management-deb-2-9-cli/3016) ~ [UI](/t/power-management-deb-2-9-ui/3017)|[CLI](/t/power-management-deb-3-0-cli/4071) ~ [UI](/t/power-management-deb-3-0-ui/4072)|
 
 To manage a machine, MAAS must be able to power cycle it, usually through the machine's [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller) card.  Until you configure the power type, a newly-added machine can't be enlisted and used by MAAS.
 
 
-<!--   snap-2-9-ui   deb-2-9-ui   snap-2-9-cli   deb-2-9-cli 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui   /snap/2.9/cli   /deb/2.9/cli 
 #### Four questions you may have:
 
 1. [How do I configure a machine's power type?](#heading--config-power-type)
 2. [Show me a catalogue of power parameters, by type.](#heading--power-catalogue)
 3. [Can you give me an example of the virsh power type?](#heading--example-virsh-kvm-power-type)
 4. [Which BMC drivers are supported?](#heading--bmc-driver-support)
-   snap-2-9-ui   deb-2-9-ui   snap-2-9-cli   deb-2-9-cli -->
+rad-end
 
-<!-- snap-3-0-ui snap-3-0-cli deb-3-0-ui deb-3-0-cli
+rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli
 #### Five questions you may have:
 
 1. [How do I configure a machine's power type?](#heading--config-power-type)
@@ -23,9 +19,9 @@ To manage a machine, MAAS must be able to power cycle it, usually through the ma
 3. [Can you give me an example of the virsh power type?](#heading--example-virsh-kvm-power-type)
 4. [Which BMC drivers are supported?](#heading--bmc-driver-support)
 5. [How do I configure and use IBM Z with MAAS?](#heading--configure-use-ibm-z)
- snap-3-0-ui snap-3-0-cli deb-3-0-ui deb-3-0-cli -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
 
 To configure a machine's power type, click on the machine from the 'Machines' page of the web UI, then select its 'Configuration' tab. Scroll down until you find the Power configuration. If the power type is undefined, the following will be displayed:
@@ -37,11 +33,10 @@ Choose a type in the drop-down menu that corresponds to the machine's underlying
 <a href="https://assets.ubuntu.com/v1/b53c6613-nodes-power-types__2.4_selection.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/b53c6613-nodes-power-types__2.4_selection.png"></a>
 
 Fill in the resulting form; the information required will depends on the power type:
-  snap-2-9-ui   deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 | CLI power_type code | Description |
-|-----|-----|
 | [amt](#heading--amt) |Intel AMT |
 | [apc](#heading--apc) | American Power Conversion (APC) PDU |
 | [dli](#heading--dli) | Digital Loggers, Inc. PDU |
@@ -63,9 +58,9 @@ Fill in the resulting form; the information required will depends on the power t
 | [vmware](#heading--vmware) | VMware |
 | [webhook](#heading--webhook) | Webhook |
 | [wedge](#heading--wedge) | Facebook's Wedge |
- snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 Click 'Save changes' to finish. Once that's done, MAAS performs a power check on the machine. A successful power check is a good indication that MAAS can properly communicate with the machine, that is, it should quickly result in a power status of "Power off". A failed attempt will show:
 
 <a href="https://assets.ubuntu.com/v1/3bd5e93b-nodes-power-types__2.4_power-error.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/3bd5e93b-nodes-power-types__2.4_power-error.png"></a>
@@ -81,14 +76,12 @@ The following catalogue helps to explain the fields in the "create machine" dial
 <a href="#heading--amt"><h3 id="heading--amt">Intel AMT</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | Power password | Password to access unit | Optional |
 | Power address | IP address of unit | Required |
 
 <a href="#heading--apc"><h3 id="heading--apc">American Power Conversion (APC) PDU</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | IP for APC PDU | IP address of unit | Required |
 | APU PDU node outlet number (1-16) | PDU node outlet number | Required |
 | Power ON outlet delay (seconds) | outlet power ON delay | Optional, default=5 |
@@ -96,7 +89,6 @@ The following catalogue helps to explain the fields in the "create machine" dial
 <a href="#heading--dli"><h3 id="heading--dli">Digital Loggers, Inc. PDU</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | Outlet ID | outlet ID | Required |
 | Power address | IP address of unit | Required |
 | Power user | Username to login | Optional |
@@ -105,36 +97,33 @@ The following catalogue helps to explain the fields in the "create machine" dial
 <a href="#heading--hmc"><h3 id="heading--hmc">IBM Hardware Management Console (HMC)</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | IP for HMC | IP address of unit | Required |
 | HMC username | Username to login | Optional |
 | HMC password | Password to access unit | Optional |
 | HMC Managed System server name | HMC managed server name | Required |
 | HMC logical partition | HMC logical partition of unit | Required |
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!--  snap-2-9-ui  deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin  /snap/2.9/ui  /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 <a href="#heading--lxd"><h3 id="heading--lxd">LXD VMs</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | LXD address | IP address of unit | Required |
 | Instance name | LXD container instance name | Required |
 | LXD password | Password to access unit | Optional |
- snap-2-9-ui  deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 
 <a href="#heading--ipmi"><h3 id="heading--ipmi">IPMI</h3></a>
 
-  snap-2-9-ui   deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
 
 | Form field | Description | Choices | Required |
-|-----|-----|-----|-----|
 | Power driver | Power driver |`LAN [IPMI 1.5]` | Required |
 | | | `LAN_2_0 [IPMI 2.0]`|
 | Power boot type | Boot type | `Automatic` | Required |
@@ -153,20 +142,19 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | Privilege level | IPMI privilege level | `User` | Optional (BETA) |
 | | | `Operator` | |
 | | | `Administrator` | |
-snap-2-9-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 
 <a href="#heading--manual"><h3 id="heading--manual">Manual power configuration</h3></a>
 
 Manual power configuration means exactly that -- manually configured at the unit -- hence there are no parameters to set in the "create machine" UI.
 
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+rad-end
 
 <a href="#heading--moonshot"><h3 id="heading--moonshot">HP Moonshot - iLO4 (IPMI)</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | Power address | IP address of unit | Required |
 | Power user | Username to login | Optional |
 | Power password | Password to access unit | Optional |
@@ -175,7 +163,6 @@ Manual power configuration means exactly that -- manually configured at the unit
 <a href="#heading--mscm"><h3 id="heading--mscm">HP Moonshot - iLO Chassis Manager</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | IP for MSCM CLI API | IP address of unit | Required |
 | MSCM CLI API user | Username to login | Optional |
 | MSCM CLI API password | Password to access unit | Optional |
@@ -186,7 +173,6 @@ Manual power configuration means exactly that -- manually configured at the unit
 <a href="#heading--mscm"><h3 id="heading--mscm">Microsoft OCS - Chassis Manager</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | Power address | IP address of unit | Required |
 | Power port | Port where unit is attached | Optional |
 | Power user | Username to login | Optional |
@@ -196,18 +182,16 @@ Manual power configuration means exactly that -- manually configured at the unit
 <a href="#heading--nova"><h3 id="heading--nova">OpenStack Nova</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | Host UUID | Host UUID | Required |
 | Tenant name | Tenant name | Required |
 | Username | Username to login | Required |
 | Password | Password to access unit | Required |
 | Auth URL | URL to access unit | Required |
 
-<!-- snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 <a href="#heading--proxmox"><h3 id="heading--proxmox">Proxmox</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | Power type | Proxmox | Required |
 | Host name or IP | Power address for the Proxmox driver | Required |
 | Username, including realm | Power user, along with realm (i.e., Username@Realm | Required |
@@ -217,12 +201,11 @@ Manual power configuration means exactly that -- manually configured at the unit
 | Node ID | VM name or ID | Optional |
 | Verify SSL connections... | Boolean, whether or not to verify SSL connections with the system's root CA certificate | Required |
 
- snap-2-9-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+rad-end
 
 <a href="#heading--openbmc"><h3 id="heading--openbmc">OpenBMC Power Driver</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | OpenBMC address | IP address of unit | Required |
 | OpenBMC user | Username to login | Required |
 | OpenBMC password | Password to access unit | Required |
@@ -230,7 +213,6 @@ Manual power configuration means exactly that -- manually configured at the unit
 <a href="#heading--recs_box"><h3 id="heading--recs_box">Christmann RECS-Box Power Driver</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | Node ID | Node ID | Required |
 | Power address | IP address of unit | Required |
 | Power port | Port where unit is attached | Optional |
@@ -240,7 +222,6 @@ Manual power configuration means exactly that -- manually configured at the unit
 <a href="#heading--redfish"><h3 id="heading--redfish">Redfish</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | Redfish address | IP address of unit | Required |
 | Redfish user | Username to login | Required |
 | Redfish password | Password to access unit | Required |
@@ -251,7 +232,6 @@ Manual power configuration means exactly that -- manually configured at the unit
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
 
 | Form field | Description | Choices | Required |
-|-----|-----|-----|-----|
 | System ID | System ID || Required |
 | Power address | IP address of unit || Required |
 | Power user | Username to login || Optional |
@@ -263,7 +243,6 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 <a href="#heading--ucsm"><h3 id="heading--ucsm">Cisco UCS Manager</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | Server UUID | Server UUID | Required |
 | URL for XML API | XML API URL | Required |
 | API user | API user | Optional |
@@ -272,7 +251,6 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 <a href="#heading--virsh"><h3 id="heading--virsh">virsh - libvirt KVM</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | Address | URL of VM | Required |
 | Password | API password | Optional |
 | Virsh VM ID | libvirt VM UUID | Required |
@@ -280,7 +258,6 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 <a href="#heading--vmware"><h3 id="heading--vmware">VMware</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | VM Name | VM name (if UUID unknown) | Optional |
 | VM UUID | VM UUID (if known) | Optional |
 | VMware IP | IP address of VM | Required |
@@ -292,12 +269,11 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 <a href="#heading--wedge"><h3 id="heading--wedge">Facebook's Wedge</h3></a>
 
 | Form field | Description | Required |
-|-----|-----|-----|
 | IP address | IP address of unit | Required |
 | Power user | Username to access unit | Optional |
 | Power password | Password to access unit | Optional |
 
-<!--   snap-2-9-ui   deb-2-9-ui  snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui  /snap/3.0/ui /deb/3.0/ui 
 <a href="#heading--example-virsh-kvm-power-type"><h2 id="heading--example-virsh-kvm-power-type">An example: the Virsh power type</h2></a>
 
 Consider a machine backed by VM. Below, a 'Power type' of `Virsh` has been selected, and the 'Power address' of `qemu+ssh://ubuntu@192.168.1.2/system` has been entered (replace values as appropriate).  The value of 'Power ID' is the VM domain (guest) name, here `node2`.
@@ -307,9 +283,9 @@ Consider a machine backed by VM. Below, a 'Power type' of `Virsh` has been selec
 [note]
 The machine's hostname -- according to MAAS -- is a randomly chosen string (here `dear.ant`). You should change this hostname to something descriptive, that helps you remember why this machine is in your MAAS network.
 [/note]
-  snap-2-9-ui   deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 <a href="#heading--webhook"><h3 id="heading--webhook">Webhook</h3></a>
 
 It's important to understand that the Webhook power driver is more generic than other drivers, so it has some flexibility that the underlying power driver may not support.  For example, Webhook doesn't require a username or password for the power driver, because not all power drivers work that way.  Nevertheless, the power driver you're connecting to Webhook may actually require a username and/or password.  Understanding and implementing these fields correctly for the chosen back-end power driver is the user's responsibility.
@@ -317,7 +293,6 @@ It's important to understand that the Webhook power driver is more generic than 
 To that end, the "Required" column for this driver refers only to whether Webhook requires a value in each field.  Just because a field is optional for Webhook itself does not mean that the underlying power driver will ultimately allow that field to be unspecified.
 
 | Form field | Description | Required (by Webhook) |
-|-----|-----|-----|
 | Power type | Webhook (from drop-down list) | Required |
 | URI to power on the node | URI to access power driver's API for power on | Required |
 | URI to power off the node | URI to access power driver's API for power off | Required |
@@ -329,9 +304,9 @@ To that end, the "Required" column for this driver refers only to whether Webhoo
 | Power token | Power driver API token (used instead of user and password, if set) | Optional |
 | Verify SSL connections... | Boolean, whether or not to verify SSL connections with the system's root CA certificate | Required |
 
- snap-2-9-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+rad-end
  
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
 
 To (re)configure a machine's power type, first find the machine's $SYSTEM_ID with the following recipe:
@@ -346,11 +321,10 @@ Next, use the [MAAS CLI](/t/maas-cli/802) command `maas machines...` to (re)set 
     maas $PROFILE machine update $SYSTEM_ID power_type="$POWER_TYPE"
 
 where $POWER_TYPE can have the following values:
-  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!--   snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 | CLI power_type code | Description |
-|-----|-----|
 | [amt](#heading--amt) |Intel AMT |
 | [apc](#heading--apc) | American Power Conversion (APC) PDU |
 | [dli](#heading--dli) | Digital Loggers, Inc. PDU |
@@ -371,11 +345,10 @@ where $POWER_TYPE can have the following values:
 | [virsh](#heading--virsh) | libvirt KVM |
 | [vmware](#heading--vmware) | VMware |
 | [wedge](#heading--wedge) | Facebook's Wedge |
-  snap-2-9-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!-- snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 | CLI power_type code | Description |
-|-----|-----|
 | [amt](#heading--amt) |Intel AMT |
 | [apc](#heading--apc) | American Power Conversion (APC) PDU |
 | [dli](#heading--dli) | Digital Loggers, Inc. PDU |
@@ -396,9 +369,9 @@ where $POWER_TYPE can have the following values:
 | [virsh](#heading--virsh) | libvirt KVM |
 | [vmware](#heading--vmware) | VMware |
 | [wedge](#heading--wedge) | Facebook's Wedge |
- snap-2-9-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 Note the required and optional parameters associated with each power type.
 
 Once you've successfully processed the command (as indicated by a stream of JSON, headed by "Success!"), MAAS performs a power check on the machine. A successful power check is a good indication that MAAS can properly communicate with the machine, that is, it should quickly result in a power status of "Power off". A failed attempt will return errors that should guide you to fix your power_parameters.
@@ -410,7 +383,6 @@ Once you've successfully processed the command (as indicated by a stream of JSON
 All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type` | `amt` | Required |
 | `power_address` | IP address of unit | Required |
 | `power_pass` | Password to access unit | Optional |
@@ -420,7 +392,6 @@ All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI
 All parameters are entered as `key=value`, e.g., `power_type=apc`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type` | `apc` | Required |
 | `power_address` | IP address of unit | Required |
 | `node_outlet` | PDU node outlet number | Required |
@@ -431,7 +402,6 @@ All parameters are entered as `key=value`, e.g., `power_type=apc`.  The MAAS CLI
 All parameters are entered as `key=value`, e.g., `power_type=dli`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type` | `dli` | Required |
 | `outlet_id` | outlet ID | Required |
 | `power_address` | IP address of unit | Required |
@@ -443,7 +413,6 @@ All parameters are entered as `key=value`, e.g., `power_type=dli`.  The MAAS CLI
 All parameters are entered as `key=value`, e.g., `power_type=eaton`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type` | `eaton` | Required |
 | `power_address` | IP address of unit | Required |
 | `node_outlet` | PDU node outlet number | Required |
@@ -454,41 +423,38 @@ All parameters are entered as `key=value`, e.g., `power_type=eaton`.  The MAAS C
 All parameters are entered as `key=value`, e.g., `power_type=hmc`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type` | `hmc` | Required |
 | `power_address` | IP address of unit | Required |
 | `server_name` | HMC managed server name | Required |
 | `lpar` | HMC logical partition of unit | Required |
 | `power_user` | Username to login | Optional |
 | `power_pass` | Password to access unit | Optional |
-  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!--  snap-2-9-cli  deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin  /snap/2.9/cli  /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 <a href="#heading--lxd"><h3 id="heading--lxd">LXD VMs</h3></a>
 
 All parameters are entered as `key=value`, e.g., `power_type=lxd`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type` | `lxd` | Required |
 | `power_address` | IP address of unit | Required |
 | `instance_name` | LXD container instance name | Required |
 | `power_pass` | Password to access unit | Optional |
- snap-2-9-cli  deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 
 <a href="#heading--ipmi"><h3 id="heading--ipmi">IPMI</h3></a>
 
-  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!-- snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
 
 | Parameter | Description | Choices | Required |
-|-----|-----|-----|-----|
 | `power_type` | `ipmi` | | Required |
 | `power_driver` | Power driver |`LAN [IPMI 1.5]` | Required |
 | | | `LAN_2_0 [IPMI 2.0]`|
@@ -509,9 +475,9 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | | | `Operator` | |
 | | | `Administrator` | |
 | `mac_address` | MAC address of unit || Optional |
-snap-2-9-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 
 <a href="#heading--manual"><h3 id="heading--manual">Manual power configuration</h3></a>
 
@@ -522,7 +488,6 @@ Manual power configuration means exactly that -- manually configured at the unit
 All parameters are entered as `key=value`, e.g., `power_type=moonshot`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type | `moonshot` | Required |
 | `power_address` | IP address of unit | Required |
 | `power_hwaddress` | Hardware address of unit | Required |
@@ -534,7 +499,6 @@ All parameters are entered as `key=value`, e.g., `power_type=moonshot`.  The MAA
 All parameters are entered as `key=value`, e.g., `power_type=mscm`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type | `mscm` | Required |
 | `power_address` | IP address of unit | Required |
 | `node_id` | cXnY | Required |
@@ -548,7 +512,6 @@ All parameters are entered as `key=value`, e.g., `power_type=mscm`.  The MAAS CL
 All parameters are entered as `key=value`, e.g., `power_type=msftocs`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type | `msftocs` | Required |
 | `power_address` | IP address of unit | Required |
 | `blade_id` | Blade ID (usu. 1-24) | Required |
@@ -561,7 +524,6 @@ All parameters are entered as `key=value`, e.g., `power_type=msftocs`.  The MAAS
 All parameters are entered as `key=value`, e.g., `power_type=nova`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type | `nova` | Required |
 | `nova_id` | Host UUID | Required |
 | `os_tenantname` | Tenant name | Required |
@@ -574,7 +536,6 @@ All parameters are entered as `key=value`, e.g., `power_type=nova`.  The MAAS CL
 All parameters are entered as `key=value`, e.g., `power_type=openbmc`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type` | `openbmc` | Required |
 | `power_address` | IP address of unit | Required |
 | `power_user` | Username to login | Required |
@@ -585,7 +546,6 @@ All parameters are entered as `key=value`, e.g., `power_type=openbmc`.  The MAAS
 All parameters are entered as `key=value`, e.g., `power_type=recs_box`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type | `recs_box` | Required |
 | `node_id` | Node ID | Required |
 | `power_address` | IP address of unit | Required |
@@ -598,7 +558,6 @@ All parameters are entered as `key=value`, e.g., `power_type=recs_box`.  The MAA
 All parameters are entered as `key=value`, e.g., `power_type=redfish`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type | `redfish` | Required |
 | `power_address` | IP address of unit | Required |
 | `power_user` | Username to login | Required |
@@ -612,7 +571,6 @@ All parameters are entered as `key=value`, e.g., `power_type=sm15k`.  The MAAS C
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
 
 | Parameter | Description | Choices | Required |
-|-----|-----|-----|-----|
 | `power_type` | `sm15k` | | Required |
 | `system_id` | System ID || Required |
 | `power_address` | IP address of unit || Required |
@@ -627,7 +585,6 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 All parameters are entered as `key=value`, e.g., `power_type=ucsm`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type` | `ucsm` | Required |
 | `uuid` | Server UUID | Required |
 | `power_address` | URL for XML API | Required |
@@ -639,7 +596,6 @@ All parameters are entered as `key=value`, e.g., `power_type=ucsm`.  The MAAS CL
 All parameters are entered as `key=value`, e.g., `power_type=virsh`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type` | `virsh` | Required |
 | `power_id` | libvirt VM UUID | Required |
 | `power_address` | URL of VM | Required |
@@ -650,7 +606,6 @@ All parameters are entered as `key=value`, e.g., `power_type=virsh`.  The MAAS C
 All parameters are entered as `key=value`, e.g., `power_type=vmware`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type` | `vmware` | Required |
 | `power_vm_name` | VM name (if UUID unknown) | Optional |
 | `power_uuid` | VM UUID (if known) | Optional |
@@ -665,7 +620,6 @@ All parameters are entered as `key=value`, e.g., `power_type=vmware`.  The MAAS 
 All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
-|-----|-----|-----|
 | `power_type` | `wedge` | Required |
 | `power_address` | IP address of unit | Required |
 | `power_user` | Username to access unit | Optional |
@@ -871,7 +825,7 @@ Machine-readable output follows this announcement.  The JSON generated by this c
 ```
 </details>
 
-  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
 <a href="#heading--bmc-driver-support"><h2 id="heading--bmc-driver-support">Which BMC drivers are supported</h2></a>
 
@@ -1046,7 +1000,7 @@ In the context of MAAS, the BMC is generally controlled by SNMP commands.  Any g
 
 `*` The 'Facebook's Wedge' OpenBMC power driver is considered experimental at this time.
 
-<!-- snap-3-0-ui snap-3-0-cli deb-3-0-ui deb-3-0-cli 
+rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli 
 <a href="#heading--configure-use-ibm-z"><h2 id="heading--configure-use-ibm-z">How do I configure and use IBM Z with MAAS?</h2></a>
 
 The IBM Z or LinuxONE system can host MAAS controllers and is able to deploy predefined logical partitions (LPARs) KVM host(s), and virtual machines, if the mainframe is set up properly for MAAS.
@@ -1208,4 +1162,4 @@ Change any settings as necessary to support your planned MAAS deployment.
 
 To cause IBM Z KVM partition guests to enlist, it’s necessary to manually put in the BMC information for each guest. MAAS can then detect the guest, enlist it, and boot it as necessary.
 
- snap-3-0-ui snap-3-0-cli deb-3-0-ui deb-3-0-cli -->
+rad-end

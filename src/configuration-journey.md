@@ -1,9 +1,5 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/configuration-journey-snap-2-9-cli/2530) ~ [UI](/t/configuration-journey-snap-2-9-ui/2531)|[CLI](/t/configuration-journey-snap-3-0-cli/3885) ~ [UI](/t/configuration-journey-snap-3-0-ui/3886)|
-Packages|[CLI](/t/configuration-journey-deb-2-9-cli/2536) ~ [UI](/t/configuration-journey-deb-2-9-ui/2537)|[CLI](/t/configuration-journey-deb-3-0-cli/3887) ~ [UI](/t/configuration-journey-deb-3-0-ui/3888)|
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 Once you've successfully installed MAAS (regardless of method), you can login to the MAAS CLI via the following process.  First, generate the API-key for the user you're going to employing:
 
 ```
@@ -358,9 +354,9 @@ If you've done everything correctly, you should see JSON output similar to this 
         "resource_uri": "/MAAS/api/2.0/vlans/5003/"
     }
 
-  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 Once you've successfully installed MAAS (regardless of method), you can now login here:
 
 ```
@@ -421,31 +417,31 @@ Note that you may have to wait a few moments for your selected images to sync lo
 Before moving forward with MAAS, you'll want to enable DHCP.  You can do this very easily from the web UI by selecting "Subnets" from the top menu, choosing the VLAN on which you want to enable DHCP, and select the button marked, "Enable DHCP."
 
 <a href="#heading--networking"><h2 id="heading--networking">Networking</h2></a>
-  snap-2-9-ui   deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2933) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/4044) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2927) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/4042) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
- snap-3-0-ui -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 <a href="https://discourse.maas.io/uploads/default/original/1X/902f07b6e96d06dcd072501473ce85ff3d303610.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/902f07b6e96d06dcd072501473ce85ff3d303610.jpeg"></a>  
 
 [note]
 Network discovery can be disabled at any time from the button on the Dashboard view.  Also note that you can get back to the dashboard at any time by clicking the MAAS logo.
 [/note]
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+rad-end
 
 <a href="#heading--spaces-fabrics-zones-and-subnets"><h3 id="heading--spaces-fabrics-zones-and-subnets">Spaces, fabrics, zones and subnets</h3></a>
 
@@ -460,7 +456,7 @@ Here is a diagram that helps to illustrate these concepts:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/dd60fdeba34d3cf33d4cf42db1f745ba95542b69.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/dd60fdeba34d3cf33d4cf42db1f745ba95542b69.jpeg"></a> 
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 Be aware that these network settings are spread across several web UI configuration pages. The Zones page, for example, enables you to see how many machines, devices and controllers are using a zone, and allows you to add and edit zones.  The Subnets page, shown below, provides access to fabric, VLAN, subnet and spaces configuration.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/89d90a15e70a57e6951ee62910b503895e08251e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/89d90a15e70a57e6951ee62910b503895e08251e.jpeg"></a> 
@@ -474,25 +470,25 @@ MAAS-managed machines are listed -- and operated on -- from the Machines page, m
 If you are testing MAAS using virtual machines, the machines appear here as soon as they boot. New machines are added automatically when they first connect to your network. Alternatively, the ‘Add hardware’ menu lets you add machines manually, via their MAC address.
 
 After you configure power and interfaces, MAAS must commission machines to retrieve CPU, memory and storage information. From this point, you can command MAAS to acquire, test, deploy and release these machines as you work with your MAAS cloud.
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](/t/maas-tags/2897) and hardware characteristics.  You can select and manage machines in either filtered or full views.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](/t/maas-tags/4024) and hardware characteristics.  You can select and manage machines in either filtered or full views.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](/t/maas-tags/2891) and hardware characteristics.  You can select and manage machines in either filtered or full views.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](/t/maas-tags/4022) and hardware characteristics.  You can select and manage machines in either filtered or full views.
- snap-3-0-ui -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 
 <a href="#heading--images"><h3 id="heading--images">Images</h3></a>
 
@@ -502,41 +498,41 @@ When it comes to running applications, MAAS can easily deploy any supported vari
 
 <a href="#heading--vm-hosts"><h3 id="heading--vm-hosts">VM hosts</h3></a>
 
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 [VM hosts]( /t/vm-hosting/2752) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 [VM hosts](/t/vm-hosting/4164) can give you greater control over your hardware.  A LXD (pronounced "lex-D") VM host is a collection of individual virtual machines.  You can use a LXD VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- deb-3-0-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 [VM hosts](/t/vm-hosting/4163) can give you greater control over your hardware.  A LXD (pronounced "lex-D") VM host is a collection of individual virtual machines.  You can use a LXD VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 [VM hosts](/t/vm-hosting/2753) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- deb-2-9-ui -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 [VM hosts]( /t/vm-hosting/2746) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 [VM hosts]( /t/vm-hosting/2747) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 [VM hosts](/t/vm-hosting/4161) can give you greater control over your hardware.  A LXD (pronounced "lex-D") VM host is a collection of individual virtual machines.  You can use a LXD VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 [VM hosts](/t/vm-hosting/4162) can give you greater control over your hardware.  A LXD (pronounced "lex-D") VM host is a collection of individual virtual machines.  You can use a LXD VM host to compose machines into an abstraction of resources that functions like a physical machine -- without building one!
- snap-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-ui snap-2-9-ui
+rad-begin /deb/2.9/ui /snap/2.9/ui
 It’s easy to add a virsh VM host: click the "Add KVM" button on the "KVM" page of the web UI, give the VM host a name, and select `virsh` or `lxd` as the VM host type.  You will also need to enter the address for the KVM host: in the case of `virsh`, this address looks something like `qemu+ssh://<yourusername>@10.249.0.2/system`, with password equal to the password for `<yourusername>`; if you're using `lxd`, this address will be the IP of the LXD bridge gateway (.1), with the password being the trust password you entered when initializing LXD.
 
 After you create a VM host, you compose hardware by selecting the VM host, and then selecting "Compose" from the Action menu. You can configure composed hardware as desired, including the number of cores, CPU speed, RAM and combined storage.  Then just click "Compose machine", and MAAS will combine resources to create a new, single entity that can be used just like any other machine.  VM hosts abstract multiple resources:
@@ -546,14 +542,14 @@ After you create a VM host, you compose hardware by selecting the VM host, and t
 into pools of composable hardware:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/763029b5678b6f88317359d28eac3003f7298f37.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/763029b5678b6f88317359d28eac3003f7298f37.jpeg"></a> 
- deb-2-9-ui snap-2-9-ui -->
+rad-end
 
-<!--  snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli 
+rad-begin  /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli 
 It’s easy to add a LXD VM host: click the "Add KVM" button on the "KVM" page of the web UI, give the VM host a name, and select "lxd" as the VM host type.  You will also need to enter the IP address for the gateway (.1) of the bridge you're using to connect to LXD.  The password will be the trust password you created when initializing LXD.
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/ff398586b76154dd20e4c194e30f5c832a7dac89.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/ff398586b76154dd20e4c194e30f5c832a7dac89.png"></a>
 
 After you create a VM host, you compose hardware by selecting the host, and then selecting "Compose" from the Action menu. You can configure composed hardware as desired, including the number of cores, CPU speed, RAM and combined storage.  Then just click "Compose machine", and MAAS will combine resources to create a new, single entity that can be used just like any other machine.  VM hosts abstact multiple resources into pools of composable hardware.
- snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli -->
+rad-end
 
 There you have it: A quick tour of MAAS and its capabilities.  Read on through the documentation to learn more.

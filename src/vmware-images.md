@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/vmware-images-snap-2-9-cli/3238) ~ [UI](/t/vmware-images-snap-2-9-ui/3239)|[CLI](/t/vmware-images-snap-3-0-cli/4173) ~ [UI](/t/vmware-images-snap-3-0-ui/4174)|
-Packages|[CLI](/t/vmware-images-deb-2-9-cli/3244) ~ [UI](/t/vmware-images-deb-2-9-ui/3245)|[CLI](/t/vmware-images-deb-3-0-cli/4175) ~ [UI](/t/vmware-images-deb-3-0-ui/4176)|
 
 MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directly deploy the VMware ESXi ISO; you must create a specialised image from an official VMWare ISO. Canonical created a [packer](https://www.packer.io/) template to automate the image creation process.
 

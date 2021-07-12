@@ -1,11 +1,7 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/machines-snap-2-9-cli/2734) ~ [UI](/t/machines-snap-2-9-ui/2735)|[CLI](/t/machines-snap-3-0-cli/4029) ~ [UI](/t/machines-snap-3-0-ui/4030)|
-Packages|[CLI](/t/machines-deb-2-9-cli/2740) ~ [UI](/t/machines-deb-2-9-ui/2741)|[CLI](/t/machines-deb-3-0-cli/4031) ~ [UI](/t/machines-deb-3-0-ui/4032)|
 
 Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers. MAAS manages their transit through a life-cycle, from adding and enlistment, through commissioning, allocation, and deployment, finally being released back to the pool, or retired altogether.  You can move them around, create redundant versions (even in other geographies you can access), and basically rearrange them to the extent that your network allows.
 
-<!--     deb-2-9-ui snap-2-9-ui
+rad-begin     /deb/2.9/ui /snap/2.9/ui
 #### Eleven questions you may have:
 
 1. [How are the machine states and actions related?](#heading--machine-life-cycle)
@@ -19,9 +15,9 @@ Machines are the heart of MAAS. They are the backbone of your data centre applic
 9. [Where can I find raw log output for a machine?](#heading--raw-log-output-h3)
 10. [Where can I find a machine's event log?](#heading--event-logs-h3)
 11. [Where can I find machine configuration info?](#heading--machine-config-h3)
-     deb-2-9-ui snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui deb-3-0-ui 
+rad-begin /snap/3.0/ui /deb/3.0/ui 
 #### Twelve questions you may have:
 
 1. [How are the machine states and actions related?](#heading--machine-life-cycle)
@@ -36,32 +32,32 @@ Machines are the heart of MAAS. They are the backbone of your data centre applic
 10. [Where can I find raw log output for a machine?](#heading--raw-log-output-h3)
 11. [Where can I find a machine's event log?](#heading--event-logs-h3)
 12. [Where can I find machine configuration info?](#heading--machine-config-h3)
- snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!-- snap-3-0-cli deb-3-0-cli 
+rad-begin /snap/3.0/cli /deb/3.0/cli 
 #### Four questions you may have:
 
 1. [How are the machine states and actions related?](#heading--machine-life-cycle)
 2. [How can I view the machine list?](#heading--machine-list)
 3. [How can I view machine details?](#heading--node-details)
 4. [How does MAAS handle attached USB/PCI devices?](#heading--usb-pci-devices)
- snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!--     deb-2-9-cli snap-2-9-cli 
+rad-begin     /deb/2.9/cli /snap/2.9/cli 
 #### Three questions you may have:
 
 1. [How are the machine states and actions related?](#heading--machine-life-cycle)
 2. [How can I view the machine list?](#heading--machine-list)
 3. [How can I view machine details?](#heading--node-details)
-     deb-2-9-cli snap-2-9-cli -->
+rad-end
 
 For example, in the illustration below, you see a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:
 
-<!--     deb-2-9-ui snap-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin     /deb/2.9/ui /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 <a href="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg"></a> 
-     deb-2-9-ui snap-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+rad-end
 
-<!--     deb-2-9-cli snap-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin     /deb/2.9/cli /snap/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 ```
 FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
 ----               -----  ------  -----  ----     ----       ----  ----
@@ -74,13 +70,13 @@ FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
 52-54-00-2e-c4-40  off    Ready   admin  MedAdmn  NurServ    -     default
 52-54-00-2e-ee-17  off    Ready   admin  Charts   ProServ    -     default
 ```
-     deb-2-9-cli snap-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
 These example machines would typically be duplicated in several different geographies, with a quick way to switch to a redundant node, should anything go wrong (e.g., high availability).  We used the word node there because, In the network language of MAAS, machines are one of several different types of nodes.  A node is simply a network-connected object or, more specifically, an object that can independently communicate on a network. MAAS nodes include controllers, network devices, and of course, machines.   
 
 Looking back at the example above, you can see that there are several columns in the machine list:
 
-<!--     deb-2-9-ui snap-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin     /deb/2.9/ui /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 <a href="https://discourse.maas.io/uploads/default/original/1X/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg"></a> 
 
 The columns list eight details for each machine:
@@ -94,9 +90,9 @@ The columns list eight details for each machine:
 7.   **Disks**: The number of drives detected on the machine.
 8.   **Storage**: The amount of storage, in GB, identified on the machine.
 
-    deb-2-9-ui snap-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!--     deb-2-9-cli snap-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin     /deb/2.9/cli /snap/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 ```
 FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
 ----               -----  ------  -----  ----     ----       ----  ----
@@ -166,7 +162,7 @@ HOSTNAME           SYSID   POWER  STATUS     OWNER  TAGS     POOL     VLAN      
 52-54-00-9c-51-00  rxfkqt  off    Ready      -      virtual  default  untagged  default  192.168.123.0/24
 ```
 
-     deb-2-9-cli snap-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+rad-end
 
 
 <a href="#heading--machine-life-cycle"><h2 id="heading--machine-life-cycle">Machine life-cycle</h2></a>
@@ -198,7 +194,6 @@ All of these states and actions represent the possible life-cycle of a machine. 
 Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it's not very useful to make a state diagram or flowchart.  Instead, consider the following table:
 
 | Action/State | New | Ready | Acquired | Deployed | Locked | Rescue | Broken |
-|--------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|
 | Commission   | X   | X     |          |          |        |        |   X    |
 | Acquire      |     | X     |          |          |        |        |        |
 | Deploy       |     | X     |   X      |          |        |        |        |
@@ -221,7 +216,7 @@ When a machine is in the state listed in a column, it is possible to take the ro
 
 <a href="#heading--machine-list"><h2 id="heading--machine-list">View the machine list</h2></a>
 
-<!--     snap-2-9-ui deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 You can view the list of machines from the choice "Machines" on the top menu of the MAAS web UI.  This action will display a table like the one above, listing all the machines that are currently visible to your MAAS installation.  During commissioning and deployment, MAAS updates the table to reflect the changing state of each machine. These values are augmented with green, amber and red icons to represent successful, in-progress and failed transitions, respectively. The MAAS web UI employs similar icons and colours throughout the interface to reflect a machine's status. 
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg"></a> 
@@ -241,9 +236,9 @@ With one or more machines selected, the 'Add hardware' drop-down menu moves to t
 [note]
 The 'Filter by' section limits the machines listed in the table to selected keywords and machine attributes.
 [/note]
-     snap-2-9-ui deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!--     snap-2-9-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli 
+rad-begin     /snap/2.9/cli /deb/2.9/cli  /snap/3.0/cli /deb/3.0/cli 
 You can view a basic machine list with a command such as this one:
 
 ```
@@ -366,11 +361,11 @@ maas $PROFILE machine deploy $SYSTEM_ID
 ```
 
 The `$SYSTEM_ID` is the text in the "SYSID" field in the machine listing above.  These commands are described in more detail later on in this section of articles.
-     snap-2-9-cli deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
 <a href="#heading--node-details"><h2 id="heading--node-details">View machine details</h2></a>
 
-<!--     snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin     /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 Enter a command similar to the following to get a detailed view of a machine's status and configuration:
 
 ```
@@ -405,9 +400,9 @@ You can customize this command at length by examining the entire JSON output str
 maas $PROFILE machine read $SYSTEM_ID | jq .
 ```
 
-    snap-2-9-cli deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+rad-end
 
-<!--     snap-2-9-ui deb-2-9-ui 
+rad-begin     /snap/2.9/ui /deb/2.9/ui 
 Click a machine's FQDN or MAC address to open a detailed view of a machine's status and configuration.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/c9684bf883d01d3fe610ec27e95618075c44b324.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c9684bf883d01d3fe610ec27e95618075c44b324.jpeg"></a>
@@ -461,9 +456,9 @@ From this screen, you can choose test scripts and run the tests (in the backgrou
 And you can watch the results under the "Tests" option in the Machine menu:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/89d287347928d6adb039ca582d4a94c3b54588e1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/89d287347928d6adb039ca582d4a94c3b54588e1.jpeg"></a> 
-     snap-2-9-ui deb-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui deb-3-0-ui
+rad-begin /snap/3.0/ui /deb/3.0/ui
 Click a machine's FQDN or MAC address to open a detailed view of a machine's status and configuration.
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png"></a>
@@ -517,32 +512,32 @@ From this screen, you can choose test scripts and run the tests (in the backgrou
 And you can watch the results under the "Tests" option in the Machine menu:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png"></a> 
- snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](/t/hardware-testing/2681) page.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](/t/hardware-testing/3844) page.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](/t/hardware-testing/2675) page.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](/t/hardware-testing/3942) page.
- snap-3-0-ui -->
+rad-end
 
-<!-- snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli
+rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli
 <a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">Handling attached USB and PCI devices</h3></a>
 
 The machines in your MAAS may have devices attached to them via USB or PCI interface, such as keyboards, cameras, network cards, GPUs, etc.  MAAS will recognize these devices and make them visible to you when a machine is commissioned.
 
- snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli-->
+rad-end
 
-<!-- snap-3-0-ui deb-3-0-ui
+rad-begin /snap/3.0/ui /deb/3.0/ui
 
 For example, the machine details presents USB and PCI devices like this:
 
@@ -568,9 +563,9 @@ The USB tab presents similar information in the same format.
 If you are upgrading from a previous version of MAAS, PCI and USB devices aren't modeled, so you will have to recommission the machine to capture these devices.
 [/note]
 
- snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!-- snap-3-0-cli deb-3-0-cli
+rad-begin /snap/3.0/cli /deb/3.0/cli
 Using the MAAS CLI, you can obtain a list of the USB/PCI devices available in a commissioned machine with the following command:
 
 ```
@@ -597,9 +592,9 @@ The JSON output that is returned from this command will contain the following in
  
 These parameters may vary greatly between device types.
 
- snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli
+rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli
 Once you've commissioned the machine, you have the option of deleting PCI/USB devices from the machine in any machine state, via the CLI only, using the following command:
 
 ```
@@ -614,10 +609,10 @@ where:
 
 If the device is still present in the system, it will be recogized again (and thus "recreated")
 when the machine is commissioned again.
- snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli -->
+rad-end
 
 
-<!--     snap-2-9-ui deb-2-9-ui 
+rad-begin     /snap/2.9/ui /deb/2.9/ui 
 <a href="#heading--machine-interfaces-h3"><h3 id="heading--machine-interfaces-h3">Find network info for a machine</h3></a>
 
 The Network "tab" provides you with a way to view/edit the network and interface configuration for a machine: 
@@ -627,9 +622,9 @@ The Network "tab" provides you with a way to view/edit the network and interface
 In the case of this deployed machine, there are not many editing options.  If the machine is in a 'Ready' state, though, altering the network configuration is possible:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/01d53759105647d71786154e99ff210f8c71d2e7.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/01d53759105647d71786154e99ff210f8c71d2e7.jpeg"></a> 
-     snap-2-9-ui deb-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui deb-3-0-ui
+rad-begin /snap/3.0/ui /deb/3.0/ui
 <a href="#heading--machine-interfaces-h3"><h3 id="heading--machine-interfaces-h3">Find network info for a machine</h3></a>
 
 The Network "tab" provides you with a way to view/edit the network and interface configuration for a machine: 
@@ -638,25 +633,25 @@ The Network "tab" provides you with a way to view/edit the network and interface
 
 In the case of this deployed machine, there are not many editing options.  If the machine is in a 'Ready' state, though, altering the network configuration is possible, as shown in the screenshot above.
 
- snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 Options on this tab are described in the introduction to [Networking](/t/networking/2957) article in this documentation set.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 Options on this tab are described in the introduction to [Networking](/t/networking/4048) article in this documentation set.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 Options on this tab are described in the introduction to [Networking](/t/networking/2951) article in this documentation set.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 Options on this tab are described in the introduction to [Networking](/t/networking/4046) article in this documentation set.
- snap-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 <a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
 
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
@@ -664,9 +659,9 @@ The Storage tab on the machine list brings up a form that allows you to view/edi
 <a href="https://discourse.maas.io/uploads/default/original/1X/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a> 
 
 This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/3113) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 <a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
 
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
@@ -674,9 +669,9 @@ The Storage tab on the machine list brings up a form that allows you to view/edi
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> 
 
 This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/4108) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 <a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
 
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
@@ -684,9 +679,9 @@ The Storage tab on the machine list brings up a form that allows you to view/edi
 <a href="https://discourse.maas.io/uploads/default/original/1X/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a> 
 
 This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/3107) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 <a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
 
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
@@ -694,9 +689,9 @@ The Storage tab on the machine list brings up a form that allows you to view/edi
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> 
 
 This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/4106) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
- snap-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 <a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
 
 The "Commissioning" tab brings up a summary log of commissioning events:
@@ -708,9 +703,9 @@ Clicking on any of the "View log" links will take you to specific, detailed logs
 <a href="https://discourse.maas.io/uploads/default/original/1X/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg"></a> 
 
 These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](/t/maas-logging/2873) for more details on how to read and interpret these logs.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-ui snap-3-0-ui
+rad-begin /deb/3.0/ui /snap/3.0/ui
 <a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
 
 The "Commissioning" tab brings up a summary log of commissioning events:
@@ -726,9 +721,9 @@ This will bring up a detailed log view for that row:
 <a href="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png"></a>
 
 These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  
- deb-3-0-ui snap-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 <a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
 
 The "Commissioning" tab brings up a summary log of commissioning events:
@@ -740,9 +735,9 @@ Clicking on any of the "View log" links will take you to specific, detailed logs
 <a href="https://discourse.maas.io/uploads/default/original/1X/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg"></a> 
 
 These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](/t/maas-logging/2867) for more details on how to read and interpret these logs.
- snap-2-9-ui -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 <a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
 
 This tab presents a summary of tests run against this particular machine:  
@@ -754,9 +749,9 @@ You can view the summary report, or click on a "View log" link to get details on
 <a href="https://discourse.maas.io/uploads/default/original/1X/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg"></a> 
 
 The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/2681).
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 <a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
 
 This tab presents a summary of tests run against this particular machine:  
@@ -768,9 +763,9 @@ You can view the summary report, or choose the "View details" dropdown to get de
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a> 
 
 The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/3944).
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 <a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
 
 This tab presents a summary of tests run against this particular machine:  
@@ -782,9 +777,9 @@ You can view the summary report, or click on a "View log" link to get details on
 <a href="https://discourse.maas.io/uploads/default/original/1X/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg"></a> 
 
 The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/2675).
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 <a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
 
 This tab presents a summary of tests run against this particular machine:  
@@ -796,9 +791,9 @@ You can view the summary report, or choose the "View details" dropdown to get de
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a> 
 
 The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/3841).
- snap-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 <a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
 
 The "Logs" tab shows raw log output, switchable between YAML and XML formats:
@@ -806,9 +801,9 @@ The "Logs" tab shows raw log output, switchable between YAML and XML formats:
 <a href="https://discourse.maas.io/uploads/default/original/1X/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a> 
 
 Help interpreting these logs can be found under the [Logging](/t/maas-logging/2873) section of this documentation.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 <a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
 
 By choosing "Installation output" on the "Logs" tab, you can see the "raw" log output:
@@ -816,9 +811,9 @@ By choosing "Installation output" on the "Logs" tab, you can see the "raw" log o
 <a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a> 
 
 Help interpreting these logs can be found under the [Logging](/t/maas-logging/4012) section of this documentation.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 <a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
 
 The "Logs" tab shows raw log output, switchable between YAML and XML formats:
@@ -826,49 +821,49 @@ The "Logs" tab shows raw log output, switchable between YAML and XML formats:
 <a href="https://discourse.maas.io/uploads/default/original/1X/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a> 
 
 Help interpreting these logs can be found under the [Logging](/t/maas-logging/2867) section of this documentation.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 By choosing "Installation output" on the "Logs" tab, you can see the "raw" log output:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a> 
 
 Help interpreting these logs can be found under the [Logging](/t/maas-logging/4010) section of this documentation.
- snap-3-0-ui -->
+rad-end
 
-<!--     deb-2-9-ui snap-2-9-ui 
+rad-begin     /deb/2.9/ui /snap/2.9/ui 
 <a href="#heading--event-logs-h3"><h3 id="heading--event-logs-h3">Find a machine's event logs</h3></a>
 
 The "Event" tab displays a list of timestamped status updates for events and actions performed on the machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/114ada7188f8ebf12883a54c0976ad8abda1d211.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/114ada7188f8ebf12883a54c0976ad8abda1d211.jpeg"></a> 
-     deb-2-9-ui snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui deb-3-0-ui
+rad-begin /snap/3.0/ui /deb/3.0/ui
 <a href="#heading--event-logs-h3"><h3 id="heading--event-logs-h3">Find a machine's event logs</h3></a>
 
 To view the Event log for a machine, choose the "Event" tab under "Logs."  This displays a list of timestamped status updates for events and actions performed on the machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a> 
- snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/2873) section of this documentation.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 There is a dropdown on the upper right which allows you to choose how many events per page you wish to view.  Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/4012) section of this documentation.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/2867) section of this documentation.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/4010) section of this documentation.
- snap-3-0-ui -->
+rad-end
 
-<!--     deb-2-9-ui snap-2-9-ui 
+rad-begin     /deb/2.9/ui /snap/2.9/ui 
 <a href="#heading--machine-config-h3"><h3 id="heading--machine-config-h3">Find machine configuration info</h3></a>
 
 The final tab from the Machine menu allows you to update machine and power configuration options: 
@@ -883,9 +878,9 @@ The "Power configuration" supplies the parameters necessary for MAAS to access t
 After entering the correct password and recycling things, the problem goes away:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/635e27e87bcac0c3cb3ce3085bd2fa55f60ff137.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/635e27e87bcac0c3cb3ce3085bd2fa55f60ff137.jpeg"></a> 
-     deb-2-9-ui snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui deb-3-0-ui
+rad-begin /snap/3.0/ui /deb/3.0/ui
 <a href="#heading--machine-config-h3"><h3 id="heading--machine-config-h3">Find machine configuration info</h3></a>
 
 The final tab from the Machine menu allows you to update machine and power configuration options: 
@@ -897,23 +892,23 @@ There are two sections to this tab.  The "Machine configuration" section, shown 
 The "Power configuration" supplies the parameters necessary for MAAS to access the machine to PXE-boot it: 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png"></a> 
- snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 More information on Power configuration will be found in the [Power management](/t/power-management/3017) section of this documentation.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 More information on Power configuration will be found in the [Power management](/t/power-management/4072) section of this documentation.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 More information on Power configuration will be found in the [Power management](/t/power-management/3011) section of this documentation.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 More information on Power configuration will be found in the [Power management](/t/power-management/4070) section of this documentation.
- snap-3-0-ui -->
+rad-end
 
 <h2>Summary</h2>
 

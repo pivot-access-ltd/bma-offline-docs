@@ -698,7 +698,6 @@ For more questions, please find us:
 -   `#maas` on freenode
 -   `maas-devel` mailing list is a good place for questions
 
-<!-- ===================================================================== -->
 # 2.1
 
 <h2 id="heading--important-announcements">Important announcements</h2>
@@ -865,7 +864,6 @@ The MAAS team would like to thank the Canonical design and web teams for their c
 
 The Networks page has been renamed to Subnets.
 
-<!-- ===================================================================== -->
 # 2.0
 
 <h2 id="heading--important-announcements">Important announcements</h2>
@@ -1104,9 +1102,3 @@ We'd love to hear about how you're using MAAS, whether it's at the smallest of s
 
 -   Join us on IRC. We can be found on the maas channel on freenode.
 -   Subscribe to the maas-devel mailing list, a great place to ask questions.
-
-<!-- LINKS -->
-
-------
-****
-------

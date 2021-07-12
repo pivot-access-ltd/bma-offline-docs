@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/proxy-snap-2-9-cli/3034) ~ [UI](/t/proxy-snap-2-9-ui/3035)|[CLI](/t/proxy-snap-3-0-cli/4081) ~ [UI](/t/proxy-snap-3-0-ui/4082)|
-Packages|[CLI](/t/proxy-deb-2-9-cli/3040) ~ [UI](/t/proxy-deb-2-9-ui/3041)|[CLI](/t/proxy-deb-3-0-cli/4083) ~ [UI](/t/proxy-deb-3-0-ui/4084)|
 
 MAAS provides a way for its managed machines to use a proxy server when they need to access HTTP/HTTPS-based resources, such as the Ubuntu package archive.
 
@@ -24,19 +20,19 @@ MAAS provides an internal proxy server. Although it is set up to work well with 
 
 By default, the proxy is available to all hosts residing in any subnet detected by MAAS, not just MAAS-managed machines. It is therefore recommended to disable access to those subnets that represent untrusted networks.
 
-<!--     deb-2-9-ui deb-2-9-cli  snap-3-0-cli deb-3-0-cli 
+rad-begin     /deb/2.9/ui /deb/2.9/cli  /snap/3.0/cli /deb/3.0/cli 
 MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
 
 You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
-    deb-2-9-ui deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!--     snap-2-9-ui snap-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
-    snap-2-9-ui snap-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
 <a href="#heading--configure-proxy"><h2 id="heading--configure-proxy">Configuring an external proxy</h2></a>
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 Enabling and disabling proxying, in general, is done via a boolean option ('true' or 'false'). The following command will disable proxying completely:
 
 ``` bash
@@ -68,9 +64,9 @@ For example,
 maas $PROFILE subnet update 192.168.0.0/22 allow_proxy=false
 ```
 
-  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 In the web UI, visit the 'Settings' page and select the 'Network services' tab. The 'Proxy' section is at the top. You can apply your changes by pressing the 'Save' button.
 
 <a href="https://assets.ubuntu.com/v1/55800a33-installconfig-network-proxy__2.4_configure-proxy.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/55800a33-installconfig-network-proxy__2.4_configure-proxy.png"></a>
@@ -82,6 +78,6 @@ To enable an external proxy, activate the 'External' checkbox and use the new fi
 An upstream cache peer can be defined by enabling the 'Peer' checkbox and entering the external proxy URL into the field. With this enabled, machines will be configured to use the MAAS built-in proxy to download cached APT packages.
 
 To prevent MAAS machines from using a proxy, enable the 'Don't use a proxy' checkbox.
-  snap-2-9-ui   deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+rad-end
 
 **NOTE** that the proxy service will still be running.

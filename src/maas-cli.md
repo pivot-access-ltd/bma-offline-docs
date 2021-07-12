@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/maas-cli-snap-2-9-cli/2818) ~ [UI](/t/maas-cli-snap-2-9-ui/2819)|[CLI](/t/maas-cli-snap-3-0-cli/3985) ~ [UI](/t/maas-cli-snap-3-0-ui/3986)|
-Packages|[CLI](/t/maas-cli-deb-2-9-cli/2824) ~ [UI](/t/maas-cli-deb-2-9-ui/2825)|[CLI](/t/maas-cli-deb-3-0-cli/3987) ~ [UI](/t/maas-cli-deb-3-0-ui/3988)|
 The MAAS CLI can do everything that the web UI can do, and more. The CLI uses the `maas` command exclusively which, in turn, connects to the API.  This page explains what is needed to get started with the CLI.
 
 Note that this article does not provide complete coverage of the MAAS CLI. For an exhaustive treatment, you may want to check the API documentation.  Also note that this page represents user-entered values as uppercase variables preceded with the '$' character (e.g. $PROFILE and $EMAIL_ADDRESS). You should replace these placeholders with actual values.
@@ -31,37 +27,37 @@ MAAS requires an initial administrator, sometimes called a MAAS "superuser". Whe
 sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
 ```
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3208#heading--add-a-user) for instructions on creating regular users.
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3209#heading--add-a-user) for instructions on creating regular users.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 You can create extra administrators in the same way. See [User accounts](/t/user-accounts/4147#heading--add-a-user) for instructions on creating regular users.
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 You can create extra administrators in the same way. See [User accounts](/t/user-accounts/4148#heading--add-a-user) for instructions on creating regular users.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3202#heading--add-a-user) for instructions on creating regular users.
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3203#heading--add-a-user) for instructions on creating regular users.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 You can create extra administrators in the same way. See [User accounts](/t/user-accounts/4145#heading--add-a-user) for instructions on creating regular users.
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 You can create extra administrators in the same way. See [User accounts](/t/user-accounts/4146#heading--add-a-user) for instructions on creating regular users.
- snap-3-0-ui -->
+rad-end
 
 <a href="#heading--log-in-required"><h2 id="heading--log-in-required">Log in (required)</h2></a>
 

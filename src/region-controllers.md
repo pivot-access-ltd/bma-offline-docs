@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/region-controllers-snap-2-9-cli/3070) ~ [UI](/t/region-controllers-snap-2-9-ui/3071)|[CLI](/t/region-controllers-snap-3-0-cli/4093) ~ [UI](/t/region-controllers-snap-3-0-ui/4094)|
-Packages|[CLI](/t/region-controllers-deb-2-9-cli/3076) ~ [UI](/t/region-controllers-deb-2-9-ui/3077)|[CLI](/t/region-controllers-deb-3-0-cli/4095) ~ [UI](/t/region-controllers-deb-3-0-ui/4096)|
 
 A region controller manages communication with the user, via the Web UI/API, as well as managing the rack controller(s) in your system.  The MAAS postgres database is also managed by the region controller.  Typical region-level responsibilities include requesting that a rack controller boot a machine, and providing the ephemeral Ubuntu image needed to commission or enlist a machine.  
 
@@ -60,37 +56,37 @@ The MAAS Region Controller is a daemon collection of 4 workers that are in charg
 
 In larger environments, which multiple rack controllers, you can easily improve performance within a region.  You can increase the number of workers, which allows faster (parallel) handling of internal communication between region and rack controllers.
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 Increasing the number of workers will also increase the number of required database connections by 11 per extra worker. This may required PostgreSQL to have an increased number of allowed connections; please see <a href="/t/high-availability/2686#heading--region-controller-ha">PostgreSQL High Availability section</a> for more information to increase the connections.
-snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 Increasing the number of workers will also increase the number of required database connections by 11 per extra worker. This may required PostgreSQL to have an increased number of allowed connections; please see <a href="/t/high-availability/2687#heading--region-controller-ha">PostgreSQL High Availability section</a> for more information to increase the connections.
-snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 Increasing the number of workers will also increase the number of required database connections by 11 per extra worker. This may required PostgreSQL to have an increased number of allowed connections; please see <a href="/t/high-availability/3945#heading--region-controller-ha">PostgreSQL High Availability section</a> for more information to increase the connections.
-snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 Increasing the number of workers will also increase the number of required database connections by 11 per extra worker. This may required PostgreSQL to have an increased number of allowed connections; please see <a href="/t/high-availability/3946#heading--region-controller-ha">PostgreSQL High Availability section</a> for more information to increase the connections.
-snap-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 Increasing the number of workers will also increase the number of required database connections by 11 per extra worker. This may required PostgreSQL to have an increased number of allowed connections; please see <a href="/t/high-availability/2692#heading--region-controller-ha">PostgreSQL High Availability section</a> for more information to increase the connections.
-deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 Increasing the number of workers will also increase the number of required database connections by 11 per extra worker. This may required PostgreSQL to have an increased number of allowed connections; please see <a href="/t/high-availability/2693#heading--region-controller-ha">PostgreSQL High Availability section</a> for more information to increase the connections.
-deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 Increasing the number of workers will also increase the number of required database connections by 11 per extra worker. This may required PostgreSQL to have an increased number of allowed connections; please see <a href="/t/high-availability/3947#heading--region-controller-ha">PostgreSQL High Availability section</a> for more information to increase the connections.
-deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 Increasing the number of workers will also increase the number of required database connections by 11 per extra worker. This may required PostgreSQL to have an increased number of allowed connections; please see <a href="/t/high-availability/3948#heading--region-controller-ha">PostgreSQL High Availability section</a> for more information to increase the connections.
-deb-3-0-ui -->
+rad-end
 
 To increase the number of workers, simply edit <code>regiond.conf (/etc/maas/regiond.conf)</code> and set <code>num_workers</code>. For example:
 

@@ -1,11 +1,7 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/maas-installation-tutorial-snap-2-9-cli/3322) ~ [UI](/t/maas-installation-tutorial-snap-2-9-ui/3323)|[CLI](/t/maas-installation-tutorial-snap-3-0-cli/4001) ~ [UI](/t/maas-installation-tutorial-snap-3-0-ui/4002)|
-Packages|[CLI](/t/maas-installation-tutorial-deb-2-9-cli/4547) ~ [UI](/t/maas-installation-tutorial-deb-2-9-ui/4543)|[CLI](/t/maas-installation-tutorial-deb-3-0-cli/4548) ~ [UI](/t/maas-installation-tutorial-deb-3-0-ui/4544)|
 
 This is the placeholder for the MAAS installation tutorial.
 
-<!-- snap-3-0-cli snap-3-0-ui
+rad-begin /snap/3.0/cli /snap/3.0/ui
 <a href="#heading--example"><h3 id="heading--example">Example of MAAS initialisation</h3></a>
 
 The following demonstrates the `region+rack` mode, a popular initialisation choice for MAAS:

@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/prometheus-metrics-snap-2-9-cli/3022) ~ [UI](/t/prometheus-metrics-snap-2-9-ui/3023)|[CLI](/t/prometheus-metrics-snap-3-0-cli/4073) ~ [UI](/t/prometheus-metrics-snap-3-0-ui/4074)|
-Packages|[CLI](/t/prometheus-metrics-deb-2-9-cli/3028) ~ [UI](/t/prometheus-metrics-deb-2-9-ui/3029)|[CLI](/t/prometheus-metrics-deb-3-0-cli/4075) ~ [UI](/t/prometheus-metrics-deb-3-0-ui/4076)|
 
 MAAS services can provide [Prometheus](https://prometheus.io/) endpoints for collecting performance metrics.  These include five endpoints of particular interest to MAAS users:
 
@@ -27,11 +23,11 @@ Whenever you install the `python3-prometheus-client` library, Prometheus endpoin
 Currently, prometheus metrics are shared when rack and region controllers are running on the same machine, even though each service provides its own port.  You can safely only query one of the two ports if you're running both controllers.
 [/note]
 
-<!--     snap-2-9-ui snap-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 For a snap-based MAAS installation, the libraries already included in the snap so that metrics will be available out of the box.
-    snap-2-9-ui snap-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!--     deb-2-9-ui deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin     /deb/2.9/ui /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 For a Debian-based MAAS installation, install the library and restart MAAS services as follows:
 
     sudo apt install python3-prometheus-client
@@ -48,7 +44,7 @@ MAAS also provides optional stats about resources registered with the MAAS serve
 After installing the `python3-prometheus-client` library as describe above, run the following to enable stats:
 
     maas $PROFILE maas set-config name=prometheus_enabled value=true
-    deb-2-9-ui deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
 <a href="#heading--configuring-prometheus"><h2 id="heading--configuring-prometheus">Configuring Prometheus</h2></a>
 

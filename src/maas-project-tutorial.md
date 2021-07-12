@@ -746,7 +746,6 @@ lxc start trusty-drake
 Nothing happens for a while, but eventually MAAS will discover the machine and attempt to commission it.  In fact, since MAAS doesn't know what power type to use, it completes all the commissioning scripts except `30-maas-01-bmc-config`:
 
 | Name | Tags | Result | Date | Runtime |
-|:-----|:----:|:------:|:----:|--------:|
 | 20-maas-01-install-lldpd |	node|	Passed|	Mon, 19 Apr. 2021 21:42:22|	0:00:00|
 | 20-maas-02-dhcp-unconfigured-ifaces|	node|	Passed|	Mon, 19 Apr. 2021 21:42:22|	0:00:00|
 | 30-maas-01-bmc-config|	bmc-config, node|	Skipped|	Mon, 19 Apr. 2021 21:42:22|	0:00:00|

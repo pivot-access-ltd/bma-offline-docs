@@ -3,10 +3,6 @@ MAAS has the built-in capability to create and manage machine-related projects a
 
 This article will provide a technical explanation of projects and how they fit into the MAAS ecosystem. For a gentler slope, try the [MAAS project tutorial](/t/maas-project-tutorial/4478).
 
-<!-- commented out until finished
-  If you need just the technical details on these features, see the MAAS project technical reference.  To help you find what you need, there is also a permuted index of relevant project topics.
- commented out until finished -->
-
 #### Topics you may want to pursue:
 
 * [Projects in the context of MAAS](#heading--projects-in-the-context-of-maas)

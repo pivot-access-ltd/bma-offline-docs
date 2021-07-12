@@ -1,39 +1,35 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/partitions-snap-2-9-cli/2986) ~ [UI](/t/partitions-snap-2-9-ui/2987)|[CLI](/t/partitions-snap-3-0-cli/4061) ~ [UI](/t/partitions-snap-3-0-ui/4062)|
-Packages|[CLI](/t/partitions-deb-2-9-cli/2992) ~ [UI](/t/partitions-deb-2-9-ui/2993)|[CLI](/t/partitions-deb-3-0-cli/4063) ~ [UI](/t/partitions-deb-3-0-ui/4064)|
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 As with block devices (see [Block devices](/t/block-devices/2356)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 As with block devices (see [Block devices](/t/block-devices/2357)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 As with block devices (see [Block devices](/t/block-devices/3843)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 As with block devices (see [Block devices](/t/block-devices/3844)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 As with block devices (see [Block devices](/t/block-devices/2350)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 As with block devices (see [Block devices](/t/block-devices/2351)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 As with block devices (see [Block devices](/t/block-devices/3841)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 As with block devices (see [Block devices](/t/block-devices/3842)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
- snap-3-0-ui -->
+rad-end
 
 
 <a href="#heading--list-partitions"><h3 id="heading--list-partitions">List Partitions</h3></a>

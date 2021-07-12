@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|(/t/ipv6-addressing-/2766) ~ [UI](/t/ipv6-addressing-/2767)|[CLI](/t/ipv6-addressing-/2768) ~ [UI](/t/ipv6-addressing-/2769)|[CLI](/t/ipv6-addressing-snap-2-9-cli/2770) ~ [UI](/t/ipv6-addressing-snap-2-9-ui/2771)|[CLI](/t/ipv6-addressing-snap-3-0-cli/3969) ~ [UI](/t/ipv6-addressing-snap-3-0-ui/3970)|
-Packages|[CLI](/t/ipv6-addressing-/2772) ~ [UI](/t/ipv6-addressing-/2773)|[CLI](/t/ipv6-addressing-/2774) ~ [UI](/t/ipv6-addressing-/2775)|[CLI](/t/ipv6-addressing-deb-2-9-cli/2776) ~ [UI](/t/ipv6-addressing-deb-2-9-ui/2777)|[CLI](/t/ipv6-addressing-deb-3-0-cli/3971) ~ [UI](/t/ipv6-addressing-deb-3-0-ui/3972)|
 
 Support for IPv6 in MAAS is similar to support for IPv4.  A rack controller in an IPv6 context needs to have the region API server URL specified with brackets:
 

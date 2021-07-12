@@ -1,11 +1,7 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/commission-machines-snap-2-9-cli/2470) ~ [UI](/t/commission-machines-snap-2-9-ui/2471)|[CLI](/t/commission-machines-snap-3-0-cli/3873) ~ [UI](/t/commission-machines-snap-3-0-ui/3874)|
-Packages|[CLI](/t/commission-machines-deb-2-9-cli/2476) ~ [UI](/t/commission-machines-deb-2-9-ui/2477)|[CLI](/t/commission-machines-deb-3-0-cli/3875) ~ [UI](/t/commission-machines-deb-3-0-ui/3876)|
 
 MAAS is built to manage machines, including the operating systems on those machines. Enlistment and commissioning are features that make it easier to start managing a machine -- as long as that machine has been configured to netboot. Enlistment enables users to simply connect a machine, configure the firmware properly, and power it on so that MAAS can find it and add it.
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 
 #### Eight questions you may have:
 
@@ -18,9 +14,9 @@ MAAS is built to manage machines, including the operating systems on those machi
 7. [What is a bridge interface and how do I create one?](#heading--bridge-interfaces)
 8. [How do I assign an interface to a fabric?](#heading--assign-a-network-interface-to-a-fabric)
 
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+rad-end
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 
 #### Twelve questions you may have:
 
@@ -37,7 +33,7 @@ MAAS is built to manage machines, including the operating systems on those machi
 11. [How do I create a VLAN interface?](#heading--create-a-vlan-interface)
 12. [How do I delete a VLAN interface?](#heading--delete-a-vlan-interface)
 
-  snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+rad-end
 
 <a href="#heading--enlistment-v-commissioning"><h2 id="heading--enlistment-v-commissioning">Enlistment versus commissioning</h2></a>
 
@@ -45,151 +41,151 @@ Enlistment happens when MAAS starts; it reaches out on connected subnets to loca
 
 Since MAAS doesn't know whether you might intend to actually include these discovered machines in your cloud configuration, it won't automatically take them over, but it will read them to get an idea how they're set up. MAAS then presents these machines to you with a MAAS state of "New." This allows you to examine them and decide whether or not you want MAAS to manage them.
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2284)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2488) to meet your specific needs.
 
 [note]
 Commissioning requires 60 seconds.
 [/note]
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2285)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered. This resource information includes (but isn't limited to) information about CPUs, memory, and storage. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2489) to meet your specific needs.
 
 [note]
 Commissioning requires 60 seconds.
 [/note]
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/3823)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  This resource information includes (but isn't limited to) information about CPUs, memory, storage, and details of any PCE and USB devices attached to the machine. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3867) to meet your specific needs.
 
 [note]
 Commissioning requires 60 seconds.
 [/note]
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/3824)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  This resource information includes (but isn't limited to) information about CPUs, memory, storage, and details of any PCE and USB devices attached to the machine. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3868) to meet your specific needs.
 
 [note]
 Commissioning requires 60 seconds.
 [/note]
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2278)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  This resource information includes (but isn't limited to) information about CPUs, memory, and storage. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2482) to meet your specific needs.
 
 [note]
 Commissioning requires 60 seconds.
 [/note]
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/2279)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.   This resource information includes (but isn't limited to) information about CPUs, memory, and storage. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2483) to meet your specific needs.
 
 [note]
 Commissioning requires 60 seconds.
 [/note]
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/3821)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.   This resource information includes (but isn't limited to) information about CPUs, memory, storage, and details of any PCE and USB devices attached to the machine.You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3865) to meet your specific needs.
 
 [note]
 Commissioning requires 60 seconds.
 [/note]
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-machines/3822)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.   This resource information includes (but isn't limited to) information about CPUs, memory, storage, and details of any PCE and USB devices attached to the machine. You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3866) to meet your specific needs.
 
 [note]
 Commissioning requires 60 seconds.
 [/note]
- snap-3-0-ui -->
+rad-end
 
 <a href="#heading--commissioning-machines"><h2 id="heading--commissioning-machines">How machines are commissioned</h2></a>
 
 When MAAS commissions a machine, the following sequence of events takes place:
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 1.  DHCP server is contacted
 2.  kernel and initrd are received over TFTP
 3.  machine boots
 4.  initrd mounts a Squashfs image ephemerally over HTTP
 5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2488)
 6.  machine shuts down
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 1.  DHCP server is contacted
 2.  kernel and initrd are received over TFTP
 3.  machine boots
 4.  initrd mounts a Squashfs image ephemerally over HTTP
 5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2489)
 6.  machine shuts down
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 1.  DHCP server is contacted
 2.  kernel and initrd are received over TFTP
 3.  machine boots
 4.  initrd mounts a Squashfs image ephemerally over HTTP
 5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3867)
 6.  machine shuts down
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 1.  DHCP server is contacted
 2.  kernel and initrd are received over TFTP
 3.  machine boots
 4.  initrd mounts a Squashfs image ephemerally over HTTP
 5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3868)
 6.  machine shuts down
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 1.  DHCP server is contacted
 2.  kernel and initrd are received over TFTP
 3.  machine boots
 4.  initrd mounts a Squashfs image ephemerally over HTTP
 5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2482)
 6.  machine shuts down
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 1.  DHCP server is contacted
 2.  kernel and initrd are received over TFTP
 3.  machine boots
 4.  initrd mounts a Squashfs image ephemerally over HTTP
 5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/2483)
 6.  machine shuts down
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 1.  DHCP server is contacted
 2.  kernel and initrd are received over TFTP
 3.  machine boots
 4.  initrd mounts a Squashfs image ephemerally over HTTP
 5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3865)
 6.  machine shuts down
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 1.  DHCP server is contacted
 2.  kernel and initrd are received over TFTP
 3.  machine boots
 4.  initrd mounts a Squashfs image ephemerally over HTTP
 5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/3866)
 6.  machine shuts down
- snap-3-0-ui -->
+rad-end
 
 The commissioning scripts will talk to the region API server to ensure that everything is in order and that eventual deployment will succeed.
 
 MAAS chooses the latest Ubuntu LTS release as the default image for commissioning.  If desired, you can select a different image in the "Settings" page of the web UI, by selecting the "General" tab and then scrolling down to the Commissioning section.
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 To commission a machine:
 
 ``` bash
@@ -222,9 +218,9 @@ You have the option of setting some parameters to change how commissioning runs:
 
 7. `parameters`: Optional string.  Scripts selected to run may define their own parameters. These parameters may be passed using the parameter name. Optionally a parameter may have the script name prepended to have that parameter only apply to that specific script.
 
-  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 To commission, on the "Machines" page, select a machine and choose "Commission" under the "Take action" drop-down menu.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a>
@@ -234,9 +230,9 @@ You have the option of selecting some extra parameters (checkboxes) and performi
 These options include:
 
 -   **Allow SSH access and prevent machine powering off**: Machines are normally powered off after commissioning. This option keeps the machine on and enables SSH so you can access the machine.
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 -   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/networking/2957) for more information.
 
 -   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/storage/3113) for more details.
@@ -244,9 +240,9 @@ These options include:
 -   **Update firmware**: Runs scripts tagged with `update_firmware`. See [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2489#heading--automatic-script-selection-by-hardware-type) for more details.
 
 -   **Configure HBA**: Runs scripts tagged with `configure_hba`. As above, see [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2489#heading--automatic-script-selection-by-hardware-type) for further details.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 -   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/networking/4048) for more information.
 
 -   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/storage/4108) for more details.
@@ -254,9 +250,9 @@ These options include:
 -   **Update firmware**: Runs scripts tagged with `update_firmware`. See [Testing scripts](/t/commissioning-and-hardware-testing-scripts/3868#heading--automatic-script-selection-by-hardware-type) for more details.
 
 -   **Configure HBA**: Runs scripts tagged with `configure_hba`. As above, see [Testing scripts](/t/commissioning-and-hardware-testing-scripts/3868#heading--automatic-script-selection-by-hardware-type) for further details.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 -   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/networking/2951) for more information.
 
 -   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/storage/3107) for more details.
@@ -264,9 +260,9 @@ These options include:
 -   **Update firmware**: Runs scripts tagged with `update_firmware`. See [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2483#heading--automatic-script-selection-by-hardware-type) for more details.
 
 -   **Configure HBA**: Runs scripts tagged with `configure_hba`. As above, see [Testing scripts](/t/commissioning-and-hardware-testing-scripts/2483#heading--automatic-script-selection-by-hardware-type) for further details.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 -   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/networking/4046) for more information.
 
 -   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/storage/4106) for more details.
@@ -274,67 +270,67 @@ These options include:
 -   **Update firmware**: Runs scripts tagged with `update_firmware`. See [Testing scripts](/t/commissioning-and-hardware-testing-scripts/3866#heading--automatic-script-selection-by-hardware-type) for more details.
 
 -   **Configure HBA**: Runs scripts tagged with `configure_hba`. As above, see [Testing scripts](/t/commissioning-and-hardware-testing-scripts/3866#heading--automatic-script-selection-by-hardware-type) for further details.
- snap-3-0-ui -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 <a href="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a>
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/hardware-testing/2681)) for more information on hardware testing scripts.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/hardware-testing/3944)) for more information on hardware testing scripts.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/hardware-testing/2675)) for more information on hardware testing scripts.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/hardware-testing/3942)) for more information on hardware testing scripts.
- snap-3-0-ui -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 Finalise the directive by hitting "Commission machine".
 
 While commissioning, the machine status will change to reflect this state (Commissioning).  MAAS discovers the machine's network topology.  MAAS then prompts a machine network interface to connect to the fabric, VLAN, and subnet combination for configuration. Usually, MAAS assigns a static IP address out of the reserved IP range for the subnet ("Auto assign" mode). The next section details several assignment modes.
 
 Once commissioned, a machine's status will change to Ready, and an extra tab for the machine called "Commissioning" will become available. This tab contains the results of the scripts executed during the commissioning process.
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+rad-end
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2896) to this machine.  The next step is [deployment](/t/deploy-machines/2608).
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2897) to this machine.  The next step is [deployment](/t/deploy-machines/2609).
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/4023) to this machine.  The next step is [deployment](/t/deploy-machines/3915).
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/4024) to this machine.  The next step is [deployment](/t/deploy-machines/3916).
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2890) to this machine.  The next step is [deployment](/t/deploy-machines/2602).
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2891) to this machine.  The next step is [deployment](/t/deploy-machines/2603).
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/4021) to this machine.  The next step is [deployment](/t/deploy-machines/3913).
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/4022) to this machine.  The next step is [deployment](/t/deploy-machines/3914).
- snap-3-0-ui -->
+rad-end
 
 
 <a href="#heading--numa-sriov-commissioning"><h3 id="heading--numa-sriov-commissioning">Commission NUMA and SR-IOV nodes</h3></a>
@@ -345,17 +341,17 @@ If you are using the NUMA architecture, MAAS versions 2.7 and higher guarantee t
 You must recommission NUMA/SR-IOV machines that were previously commissioned under version 2.6 or earlier.
 [/note]
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 <a href="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png"></a> 
 
 When using these nodes, you can specify a node index for interfaces and physical block devices.  MAAS will display the NUMA node index and details, depending upon your configuration, to include the count of NUMA nodes, number of CPU cores, memory, NICs, and node spaces for bonds and block devices.  You can also filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID, among others.
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+rad-end
 
 <a href="#heading--commissioning-scripts"><h2 id="heading--commissioning-scripts">MAAS commissioning scripts</h2></a>
 
 When a machine boots, MAAS first instructs it to run cloud-init to set up SSH keys (during commissioning only), set up NTP, and execute a script that runs other commissioning scripts.  Currently, the sequence of MAAS-provided commissioning scripts proceeds like this:
 
-<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli
+rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli
 * **maas-support-info:** MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  **Runs in parallel with other scripts.**
 
 * **maas-lshw:** this script pulls system BIOS and vendor info, and generates user-defined tags for later use.  **Runs in parallel with other scripts.**
@@ -369,21 +365,21 @@ When a machine boots, MAAS first instructs it to run cloud-init to set up SSH ke
 * **maas-get-fruid-api-data:** this script gathers information for the Facebook wedge power type.  **Runs in parallel with other scripts.**
 
 * **maas-serial-ports:** this script lists what serial ports are available on the machine.  **Runs in parallel with other scripts.**
-snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli
+rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli
 * **40-maas-01-network-interfaces:** this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli 
+rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli 
 * **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli -->
+rad-end
 
-<!-- snap-3-0-ui snap-3-0-cli deb-3-0-ui deb-3-0-cli
+rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli
 * **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, details about attached USB and PCI devices, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
- snap-3-0-ui snap-3-0-cli deb-3-0-ui deb-3-0-cli -->
+rad-end
 
-<!-- snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-ui deb-3-0-ui snap-3-0-cli deb-3-0-cli
+rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli
 * **maas-capture-lldp:** this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  **Runs in parallel with other scripts.**
 
 * **maas-kernel-cmdline:** this script is used to update the boot devices; it double-checks that the right boot interface is selected. 
@@ -403,45 +399,45 @@ Commissioning runs the same dozen or so scripts as enlistment, gathering all the
 6. `maas-run-remote-scripts` is capable of enlisting machines, so enlistment `user-data` scripts have been removed.
 
 7. The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.
-snap-2-9-ui snap-2-9-cli deb-2-9-ui deb-2-9-cli snap-3-0-cli deb-3-0-cli snap-3-0-ui deb-3-0-ui -->
+rad-end
 
 In both enlistment and commissioning, MAAS uses either the MAC address or the UUID to identify machines.  Currently, because some machine types encountered by MAAS do **not** use unique MAC addresses, we are trending toward using the UUID.
 
 <a href="#heading--post-commission-configuration"><h2 id="heading--post-commission-configuration">Post-commission configuration</h2></a>
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2896#heading--tags-for-network-interfaces)).
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2897#heading--tags-for-network-interfaces)).
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/4023#heading--tags-for-network-interfaces)).
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/4024#heading--tags-for-network-interfaces)).
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2890#heading--tags-for-network-interfaces)).
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/2891#heading--tags-for-network-interfaces)).
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/4021#heading--tags-for-network-interfaces)).
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/maas-tags/4022#heading--tags-for-network-interfaces)).
- snap-3-0-ui -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 From a machine's "Interfaces" page, click the menu icon for the interface to be edited and select "Edit Physical" from the resulting menu:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/438475b8906736b45fc809cd105a56be5052397d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/438475b8906736b45fc809cd105a56be5052397d.png"></a>
@@ -451,25 +447,25 @@ The following window will appear:
 <a href="https://discourse.maas.io/uploads/default/original/1X/70b21d256df52399ac7ab09c3051f4bf011da55e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/70b21d256df52399ac7ab09c3051f4bf011da55e.png"></a>
 
 Four modes determine how a subnet address is assigned when MAAS deploys the machine. You can select one of these modes by clicking on the "IP mode" drop-down menu.
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 -   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3125)).
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 -   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/4112)).
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 -   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/3119)).
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 -   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/4110)).
- snap-3-0-ui -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
 
 -   **Static assign**: The administrator will specify a static address using a secondary field.
 
@@ -478,9 +474,9 @@ Four modes determine how a subnet address is assigned when MAAS deploys the mach
 -   **Unconfigured**: The interface is not configured.
 
 Press the "Save" button to apply the changes.
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 If you want to edit the IP assignment mode of a network interface, the existing subnet link first needs to be removed.
 
 Begin by finding the interface ID as well as the interface's subnet link ID with the command:
@@ -508,7 +504,7 @@ If instead of DHCP, you desire a static address, then the second command would l
 ``` bash
 maas $PROFILE interface link-subnet exqn37 58 mode=static subnet=192.168.1.0/24 ip_address=192.168.1.113
 ```
-  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
 See [Concepts and terms](/t/concepts-and-terms/785#heading--ip-ranges) for the definitions of reserved range types.
 
@@ -516,7 +512,7 @@ See [Concepts and terms](/t/concepts-and-terms/785#heading--ip-ranges) for the d
 
 A bond interface is used to aggregate two or more physical interfaces into a single logical interface. Combining multiple network connections in parallel can increase network throughput beyond what a single NIC will allow.  It also provides some redundancy in case one of the NICs should fail.  More information about the theory behind bonded NICs is found in the [relevant IEEE standard](https://1.ieee802.org/tsn/802-1ax-rev/).
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 A bond can be created with the following command:
 
 ```
@@ -569,9 +565,9 @@ Supported bonding modes include:
 |  `balance-tlb`| Adaptive transmit load balancing: channel bonding that does not require any special switch support. |
 |  `balance-alb`| Adaptive load balancing: includes balance-tlb plus receive load balancing (rlb) for IPV4 traffic, and does not require any special switch support. The receive load balancing is achieved by ARP negotiation. |
 
-  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 A bond is created by selecting more than one interface and clicking the now-active "Create bond" button:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png"></a>
@@ -605,9 +601,9 @@ Press the "Save" button when you're done.
 [note]
 The MAC address defaults to the MAC address of the primary interface.
 [/note]
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+rad-end
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 A bridge interface is created with the following syntax:
 
 ```
@@ -667,21 +663,21 @@ Machine-readable output follows:
 ```
 
 Note that while the label is presented, there is no machine-readable output expected after the successful execution of the delete command.
-  snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+rad-end
 
 
 <a href="#heading--bridge-interfaces"><h3 id="heading--bridge-interfaces">Bridge interfaces and how to create one</h3></a>
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 
 A network bridge may be useful if you intend to put virtual machines or containers on the machine.  You can create a bridge by selecting an interface and clicking the now-active "Create bridge" button. A form will appear that allows you to configure a MAC address, STP, and an appropriate tag.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png"></a>
 
 Press the "Save" button when you're done.
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+rad-end
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 
 A bridge interface is created with the following syntax:
 
@@ -697,16 +693,16 @@ maas admin interfaces create-bridge 4efwb4 name=bridged0 parent=4
 ```
 
 
-  snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+rad-end
 
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 
 <a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">Assign a network interface to a fabric</h2></a>
 
-   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+rad-end
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 
 <a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">Assign a network interface to a fabric</h2></a>
 
@@ -944,4 +940,4 @@ maas admin vlan delete 0 100
 ```
 
 
-  snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+rad-end

@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/postgresql-ha-hot-standby-snap-2-9-cli/2998) ~ [UI](/t/postgresql-ha-hot-standby-snap-2-9-ui/2999)|[CLI](/t/postgresql-ha-hot-standby-snap-3-0-cli/4065) ~ [UI](/t/postgresql-ha-hot-standby-snap-3-0-ui/4066)|
-Packages|[CLI](/t/postgresql-ha-hot-standby-deb-2-9-cli/3004) ~ [UI](/t/postgresql-ha-hot-standby-deb-2-9-ui/3005)|[CLI](/t/postgresql-ha-hot-standby-deb-3-0-cli/4067) ~ [UI](/t/postgresql-ha-hot-standby-deb-3-0-ui/4068)|
 
 **Disclaimer: These *notes* give an idea of what is involved in setting up 'hot standby' HA mode in PostgreSQL. The below procedures are not regularly tested. Please use the [PostgreSQL documentation](https://www.postgresql.org/docs/9.5/static/high-availability.html) when setting up HA on PostgreSQL.**
 

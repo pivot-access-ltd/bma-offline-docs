@@ -1,9 +1,5 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/whats-new-in-maas-snap-2-9-cli/4296) ~ [UI](/t/whats-new-in-maas-snap-2-9-ui/4297)|[CLI](/t/whats-new-in-maas-snap-3-0-cli/4181) ~ [UI](/t/whats-new-in-maas-snap-3-0-ui/4182)|
-Packages|[CLI](/t/whats-new-in-maas-deb-2-9-cli/4290) ~ [UI](/t/whats-new-in-maas-deb-2-9-ui/4291)|[CLI](/t/whats-new-in-maas-deb-3-0-cli/4289) ~ [UI](/t/whats-new-in-maas-deb-3-0-ui/4184)|
 
-<!-- snap-2-9-cli snap-2-9-ui deb-2-9-ui deb-2-9-cli
+rad-begin /snap/2.9/cli /snap/2.9/ui /deb/2.9/ui /deb/2.9/cli
 
 <h2>MAAS 2.9.2 release notes</h2>
 
@@ -80,7 +76,7 @@ This functionality comes with an enhanced panel in the "KVM" details section:
 
 <a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
 
-See the [VM hosting](/t/vm-hosting-snap-2-9-ui/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
+See the [VM hosting](/t/vm-hosting-/snap/2.9/ui/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
 
 <h2 id="heading--improved-perf-large-maas">Improved performance for large MAAS installations</h2>
 
@@ -295,13 +291,13 @@ Running migrations:
 ```
 
 This warning message has no effect on the installation or operation of MAAS, so it can be safely ignored.
-snap-2-9-cli snap-2-9-ui deb-2-9-cli deb-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli snap-3-0-ui deb-3-0-cli deb-3-0-ui
+rad-begin /snap/3.0/cli /snap/3.0/ui /deb/3.0/cli /deb/3.0/ui
 <h3>MAAS 3.0 release notes</h3>
 
 We are happy to announce the release of MAAS 3.0. This release provides new features, along with critical and high-priority [bug fixes](#heading--maas-3-bug-fixes).
-snap-3-0-cli snap-3-0-ui deb-3-0-cli deb-3-0-ui -->
+rad-end
 
 #### Cumulative summary of new features in MAAS 3.0
 1. [PCI and USB devices are now modelled in MAAS](#heading--pci-usb-devices)
@@ -317,7 +313,7 @@ snap-3-0-cli snap-3-0-ui deb-3-0-cli deb-3-0-ui -->
 11. [Consolidation of logs and events](#heading--log-consolidation)
 
 
-<!-- deb-3-0-ui deb-3-0-cli
+rad-begin /deb/3.0/ui /deb/3.0/cli
 MAAS 3.0 can be installed by adding the `3.0` PPA:
 
 ```
@@ -340,9 +336,9 @@ sudo apt upgrade maas
 
 At this point, you may proceed with a normal installation.
 
- deb-3-0-cli deb-3-0-ui -->
+rad-end
 
-<!-- snap-3-0-cli snap-3-0-ui
+rad-begin /snap/3.0/cli /snap/3.0/ui
 MAAS 3.0 can be installed fresh (recommended) with:
 
 ```
@@ -350,9 +346,9 @@ sudo snap install --channel=3.0/stable maas
 ```
 
 At this point, you may proceed with a normal installation.
- snap-3-0-cli snap-3-0-ui -->
+rad-end
 
-<!-- snap-3-0-cli snap-3-0-ui deb-3-0-cli deb-3-0-ui
+rad-begin /snap/3.0/cli /snap/3.0/ui /deb/3.0/cli /deb/3.0/ui
 <h2>Significant changes</h2>
 
 With the advent of MAAS 3.0, we are removing support for RSD pods.  Registered pods and their machines will be removed by MAAS upon upgrading to MAAS 3.0.
@@ -546,7 +542,7 @@ In MAAS 3.0, a fixed status bar has been added to the bottom of the screen, whic
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png"></a>
 
-snap-3-0-cli snap-3-0-ui deb-3-0-cli deb-3-0-ui -->
+rad-end
 
 <h2 id="heading--maas-3-bug-fixes">MAAS 3.0 bug fixes</h2>
 

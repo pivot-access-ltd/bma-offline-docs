@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/troubleshooting-snap-2-9-cli/3166) ~ [UI](/t/troubleshooting-snap-2-9-ui/3167)|[CLI](/t/troubleshooting-snap-3-0-cli/4133) ~ [UI](/t/troubleshooting-snap-3-0-ui/4134)|
-Packages|[CLI](/t/troubleshooting-deb-2-9-cli/3172) ~ [UI](/t/troubleshooting-deb-2-9-ui/3173)|[CLI](/t/troubleshooting-deb-3-0-cli/4135) ~ [UI](/t/troubleshooting-deb-3-0-ui/4136)|
 This section covers some of the most commonly encountered problems and attempts to resolve them.
 
 <a href="#heading--machine-login-issues"><h2 id="heading--machine-login-issues">Can't login to machine after deployment</h2></a>

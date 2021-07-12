@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/maas-installation-snap-2-9-cli/3322) ~ [UI](/t/maas-installation-snap-2-9-ui/3323)|[CLI](/t/maas-installation-snap-3-0-cli/4001) ~ [UI](/t/maas-installation-snap-3-0-ui/4002)|
-Packages|[CLI](/t/maas-installation-deb-2-9-cli/3328) ~ [UI](/t/maas-installation-deb-2-9-ui/3329)|[CLI](/t/maas-installation-deb-3-0-cli/4003) ~ [UI](/t/maas-installation-deb-3-0-ui/4004)|
 
 This article will show you how to:
 
@@ -16,19 +12,19 @@ Note that all headings are hyperlinks that can be bookmarked.
 You should take the following steps before installing MAAS for the first time on a new system:
  
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4532#heading--minimum-hardware-requirements).
 
 2. Make sure you understand [how support works](/t/-/4532#heading--support-provided) currently, for MAAS 2.9.
- deb-2-9-cli -->
+rad-end
  
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4528#heading--minimum-hardware-requirements).
 
 2. Make sure you understand [how support works](/t/-/4528#heading--support-provided) currently, for MAAS 2.9.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-2-9-ui deb-2-9-cli
+rad-begin /deb/2.9/ui /deb/2.9/cli
 3. Make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
 
 ```
@@ -117,22 +113,22 @@ Codename:	focal
 
 6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 2.9.
 
- deb-2-9-cli deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4533#heading--minimum-hardware-requirements).
 
 2. Make sure you understand [how support works](/t/-/4533#heading--support-provided) currently, for MAAS 3.0.
- deb-3-0-cli -->
+rad-end
  
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4529#heading--minimum-hardware-requirements).
 
 2. Make sure you understand [how support works](/t/-/4529#heading--support-provided) currently, for MAAS 23.0.
- deb-3-0-ui -->
+rad-end
 
-<!-- deb-3-0-ui deb-3-0-cli
+rad-begin /deb/3.0/ui /deb/3.0/cli
 3. Make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
 
 ```
@@ -187,14 +183,14 @@ Codename:	focal
 If you're upgrading from any version less than MAAS 2.9: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.
 [/note]
 
-<a href="#heading--upgrading-from-maas-2-3to-3-0"><h3 id="heading--upgrading-from-maas-2-3to-3-0">Upgrading from MAAS 2.3 - 2.8 to MAAS 3.0 Beta</h3></a>
+<a href="#heading--upgrading-from-maas-2-3to-3-0"><h3 id="heading--upgrading-from-maas-2-3to-3-0">Upgrading from MAAS 2.3 - 2.8 to MAAS 3.0</h3></a>
 
 1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
 
-2. Add the MAAS 3.0 Beta PPA to your repository list with the following command, ignoring any apparent error messages:
+2. Add the MAAS 3.0 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```
-sudo apt-add-repository paa:maas/3.0-next
+sudo apt-add-repository paa:maas/3.0
 ```
 
 3. Run the release upgrade like this, answering any questions with the given default values:
@@ -219,18 +215,18 @@ Release:	20.04
 Codename:	focal
 ```
 
-5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the latest Beta 3.0 release.
+5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.0 release.
 
-6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS Beta 3.0.
+6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.0.
 
-<a href="#heading--upgrading-from-maas-2-9-to-3-0"><h3 id="heading--upgrading-from-maas-2-9-to-3-0">Upgrading from MAAS 2.9 to MAAS 3.0 Beta</h3></a>
+<a href="#heading--upgrading-from-maas-2-9-to-3-0"><h3 id="heading--upgrading-from-maas-2-9-to-3-0">Upgrading from MAAS 2.9 to MAAS 3.0</h3></a>
 
 1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
 
-2. Add the MAAS 3.0 Beta PPA to your repository list with the following command, ignoring any apparent error messages:
+2. Add the MAAS 3.0 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```
-sudo apt-add-repository paa:maas/3.0-next
+sudo apt-add-repository paa:maas/3.0
 ```
 
 3. Run the MAAS upgrade like this:
@@ -240,37 +236,37 @@ sudo apt update
 sudo apt upgrade maas
 ```
 
-4. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the latest Beta 3.0 release.
+4. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.0 release.
 
-5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS Beta 3.0.
+5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.0.
 
- deb-3-0-ui deb-3-0-cli -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4524#heading--minimum-hardware-requirements).
 
 2. Make sure you understand [how support works](/t/-/4524#heading--support-provided) for the chosen version.
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4521#heading--minimum-hardware-requirements).
 
 2. Make sure you understand [how support works](/t/-/4521#heading--support-provided) for the chosen version.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4525#heading--minimum-hardware-requirements).
 
 2. Make sure you understand [how support works](/t/-/4525#heading--support-provided) for the chosen version.
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4516#heading--minimum-hardware-requirements).
 
 2. Make sure you understand [how support works](/t/-/4516#heading--support-provided) for the chosen version.
- snap-3-0-ui -->
+rad-end
 
-<!--     snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli
+rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli
 3. Make sure you uninstall bind9, if it's running on your system:
 
 a. Check to see if `bind9` is running:
@@ -284,7 +280,7 @@ b. If bind9 is running, remove it with the following command:
 ```
 sudo apt-get remove --auto-remove bind9
 ```
-    snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli -->
+rad-end
 
 <a href="#heading--install-and-verify-maas"><h2 id="heading--install-and-verify-maas">Install and verify MAAS</h2></a>
 
@@ -296,7 +292,7 @@ This section explains how to:
 * [Verify MAAS installation](#heading--verify-maas-install)
 * [Check service statuses](#heading--check-service-statuses)
 
-<!-- snap-2-9-ui snap-2-9-cli
+rad-begin /snap/2.9/ui /snap/2.9/cli
 MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.  This article will walk you through both install methods.
 
 #### Thirteen questions you may have about installing MAAS:
@@ -340,7 +336,6 @@ If you are using a multi-node maas deployment with separate regions and racks, y
 MAAS supports the following modes, which dictate what services will run on the local system:
 
 | Mode          | Region | Rack | Database | Description                           |
-|---------------|--------|------|----------|---------------------------------------|
 | `region`      | X      |      |          | Region API server only                |
 | `rack`        |        | X    |          | Rack controller only                  |
 | `region+rack` | X      | X    |          | Region API server and rack controller |
@@ -479,17 +474,17 @@ Typically, the output looks something like this:
     regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
     tgt                              RUNNING   pid 8040, uptime 0:09:15
 
-snap-2-9-cli snap-2-9-ui -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](#heading--top-maas-config).
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](#heading--top-maas-config).
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-2-9-cli snap-2-9-ui
+rad-begin /snap/2.9/cli /snap/2.9/ui
 <a href="#heading--example"><h3 id="heading--example">Example of MAAS initialisation</h3></a>
 
 The following demonstrates the `region+rack` mode, a popular initialisation choice for MAAS:
@@ -540,9 +535,9 @@ The `init` command can takes optional arguments. To list them, as well as read a
 
     sudo maas init --help
 
-snap-2-9-ui snap-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-cli deb-2-9-ui
+rad-begin /deb/2.9/cli /deb/2.9/ui
 <a href="#heading--upgrade-via-packages"><h3 id="heading--upgrade-via-packages">Upgrade MAAS 2.8 to MAAS 2.9</h3></a>
 
 MAAS 2.8 is the last supported version for Ubuntu 18.04 LTS.  Newer versions of MAAS will not be back-portable, and consequently, to upgrade to MAAS 2.9 and all future versions, you will also need to upgrade the base operating system to Ubuntu 20.04.  You do these two operations all at once, with the following procedure:
@@ -668,24 +663,24 @@ href="https://discourse.maas.io/uploads/default/original/1X/472ce8e0227318737056
 
 <a href="#heading--next-steps"><h4 id="heading--next-steps">Next steps</h4></a>
 
-deb-2-9-cli deb-2-9-ui -->
+rad-end
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](#heading--top-maas-config).
-deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](#heading--top-maas-config).
-deb-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui snap-3-0-cli
-MAAS can be installed in either of two configurations: test or production.  These two configurations, along with MAAS install requirements and initialisation modes, are discussed in the [MAAS installation technical reference](/t/maas-installation-technical-reference-snap-3-0-ui/4516).  This section provides step-by-step instructions for installing both configurations.  If you prefer a more in-depth presentation with extended explanations, try the [MAAS installation tutorial](/t/maas-installation-tutorial-snap-3-0-ui/4517).  
+rad-begin /snap/3.0/ui /snap/3.0/cli
+MAAS can be installed in either of two configurations: test or production.  These two configurations, along with MAAS install requirements and initialisation modes, are discussed in the [MAAS installation technical reference](/t/maas-installation-technical-reference-/snap/3.0/ui/4516).  This section provides step-by-step instructions for installing both configurations.  If you prefer a more in-depth presentation with extended explanations, try the [MAAS installation tutorial](/t/maas-installation-tutorial-/snap/3.0/ui/4517).  
 
 <a href="#heading--how-to-index"><h3 id="heading--how-to-index">This section will show how to:</h3></a>
 
 1. [Remove bind9, if installed](#heading--remove-bind9)
-2. [Install the MAAS 3.0 Beta snap](#heading--install-maas-snap)
-3. [Upgrade the 2.9 snap to the MAAS 3.0 Beta](#heading--upgrade-maas-snap)
+2. [Install the MAAS 3.0 snap](#heading--install-maas-snap)
+3. [Upgrade the 2.9 snap to the MAAS 3.0](#heading--upgrade-maas-snap)
 4. [Initialise MAAS for a test rig or proof-of-concept](#heading--init-poc)
 5. [Initialise MAAS for production](#heading--init-prod)
 6. [Check the service status of MAAS](#heading--service-status)
@@ -701,17 +696,17 @@ For more information on snaps, see the [Snapcraft documentation](https://snapcra
 
 To install MAAS from a snap, simply enter the following:
 
-    $ sudo snap install --channel=3.0/beta maas
+    $ sudo snap install --channel=3.0/stable maas
 
-After entering your password, the snap will download and install from the 3.0 beta channel. rMAAS will need to be [initialised](#heading--how-to-index) before first use.
+After entering your password, the snap will download and install from the 3.0 channel. rMAAS will need to be [initialised](#heading--how-to-index) before first use.
 
 <a href="#heading--upgrade-maas-snap"><h3 id="heading--upgrade-maas-snap">Upgrading MAAS from 2.9</h3></a>
 
-If you want to upgrade from a 2.9 snap to 3.0 Beta 1 snap, and you are using a `region+rack` configuration, use this command:
+If you want to upgrade from a 2.9 snap to 3.0 snap, and you are using a `region+rack` configuration, use this command:
 
-    $ sudo snap refresh --channel=3.0/beta maas
+    $ sudo snap refresh --channel=3.0/stable maas
 
-After entering your password, the snap will refresh from the 3.0 beta channel.  You will **not** need to re-initialise MAAS.
+After entering your password, the snap will refresh from the 3.0 channel.  You will **not** need to re-initialise MAAS.
 
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 
@@ -848,15 +843,15 @@ Typically, the output looks something like this:
     regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
     tgt                              RUNNING   pid 8040, uptime 0:09:15
 
-snap-3-0-cli snap-3-0-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](#heading--top-maas-config).
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](#heading--top-maas-config).
- snap-3-0-ui -->
+rad-end
 
 
 <a href="#heading--reinitialising-maas"><h3 id="heading--reinitialising-maas">Reinitialising MAAS</h3></a>
@@ -865,17 +860,17 @@ It is also possible to re-initialise MAAS to switch modes.  For example, to swit
  
     sudo maas init region
 
-The MAAS command takes additional `init` options; see the [MAAS installation technical reference](/t/maas-installation-technical-reference-snap-3-0-ui/4516#heading--additional-init-options) for details.
+The MAAS command takes additional `init` options; see the [MAAS installation technical reference](/t/maas-installation-technical-reference-/snap/3.0/ui/4516#heading--additional-init-options) for details.
 
-snap-3-0-ui snap-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-cli deb-3-0-ui
-<a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installing MAAS 3.0 Beta 1</h3></a>
+rad-begin /deb/3.0/cli /deb/3.0/ui
+<a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installing MAAS 3.0</h3></a>
 
 The recommended way to set up an initial MAAS environment is to put everything on one machine:
 
 ``` bash
-sudo apt-add-repository paa:maas/3.0-next
+sudo apt-add-repository paa:maas/3.0
 sudo apt update
 sudo apt-get -y install maas
 ```
@@ -932,19 +927,19 @@ href="https://discourse.maas.io/uploads/default/original/1X/472ce8e0227318737056
 
 <a href="#heading--next-steps"><h4 id="heading--next-steps">Next steps</h4></a>
 
-deb-3-0-cli deb-3-0-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](#heading--top-maas-config).
-deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](#heading--top-maas-config).
-deb-3-0-ui -->
+rad-end
 
 <a href="#heading--top-maas-config"><h2 id="heading--top-maas-config">How to configure MAAS</h2></a>
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 Once you've successfully installed MAAS (regardless of method), you can login to the MAAS CLI via the following process.  First, generate the API-key for the user you're going to employing:
 
 ```
@@ -1299,9 +1294,9 @@ If you've done everything correctly, you should see JSON output similar to this 
         "resource_uri": "/MAAS/api/2.0/vlans/5003/"
     }
 
-  snap-2-9-cli   deb-2-9-cli  snap-3-0-cli deb-3-0-cli -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 Once you've successfully installed MAAS (regardless of method), you can now login here:
 
 ```
@@ -1362,21 +1357,21 @@ Note that you may have to wait a few moments for your selected images to sync lo
 Before moving forward with MAAS, you'll want to enable DHCP.  You can do this very easily from the web UI by selecting "Subnets" from the top menu, choosing the VLAN on which you want to enable DHCP, and select the button marked, "Enable DHCP."
 
 <a href="#heading--networking"><h3 id="heading--networking">Networking</h3></a>
-  snap-2-9-ui   deb-2-9-ui  snap-3-0-ui deb-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2933) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/4044) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2927) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/4042) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
- snap-3-0-ui -->
+rad-end
 

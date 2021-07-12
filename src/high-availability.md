@@ -1,7 +1,3 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-Snap|[CLI](/t/high-availability-snap-2-9-cli/2686) ~ [UI](/t/high-availability-snap-2-9-ui/2687)|[CLI](/t/high-availability-snap-3-0-cli/3945) ~ [UI](/t/high-availability-snap-3-0-ui/3946)|
-Packages|[CLI](/t/high-availability-deb-2-9-cli/2692) ~ [UI](/t/high-availability-deb-2-9-ui/2693)|[CLI](/t/high-availability-deb-3-0-cli/3947) ~ [UI](/t/high-availability-deb-3-0-ui/3948)|
 
 This page describes how to provide high availability (HA) for MAAS at both region and rack levels.  In the context of MAAS, there are four types of HA:
 
@@ -24,37 +20,37 @@ This page describes how to provide high availability (HA) for MAAS at both regio
 
 <a href="#heading--rack-controller-ha"><h2 id="heading--rack-controller-ha">Make rack controllers highly available</h2></a>
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 You need to [install multiple rack controllers](/t/rack-controllers/3064#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 You need to [install multiple rack controllers](/t/rack-controllers/3065#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 You need to [install multiple rack controllers](/t/rack-controllers/4091#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 You need to [install multiple rack controllers](/t/rack-controllers/4092#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 You need to [install multiple rack controllers](/t/rack-controllers/3058#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 You need to [install multiple rack controllers](/t/rack-controllers/3059#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 You need to [install multiple rack controllers](/t/rack-controllers/4089#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 You need to [install multiple rack controllers](/t/rack-controllers/4090#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
- snap-3-0-ui -->
+rad-end
 
 <a href="#heading--bmc-ha"><h3 id="heading--bmc-ha">Enable highly-available BMC</h3></a>
 
@@ -64,45 +60,45 @@ HA for BMC control (node power cycling) is provided out-of-the-box, once a secon
 
 DHCP HA affects the way MAAS manages node, including enlistment, commissioning and deployment. It enables primary and secondary DHCP instances to serve the same VLAN. This VLAN replicates all lease information is between rack controllers. MAAS-managed DHCP is a requirement for DHCP HA.
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/managing-dhcp/2908#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/managing-dhcp/2909#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/managing-dhcp/4035#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/managing-dhcp/4036#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/managing-dhcp/2902#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/managing-dhcp/2903#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/managing-dhcp/4033#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/managing-dhcp/4034#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
- snap-3-0-ui -->
+rad-end
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 Access the appropriate VLAN (via the 'Subnets' page) and choose action 'Reconfigure DHCP'. There, you will see the second rack controller in the 'Secondary controller' field. All you should have to do is press the 'Reconfigure DHCP' button:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg"></a>
-  snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+rad-end
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 To reconfigure DHCP after adding a new rack controller, use the following sequence of commands:
 
 ```
@@ -116,17 +112,17 @@ maas maas vlan update ${fabric_id} ${vid} primary_rack=$(hostname) dhcp_on=true
 ```
 
 Be sure to substitute the sample values for those of your own environment.
-  snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+rad-end
 
 <a href="#heading--multiple-region-endpoints"><h3 id="heading--multiple-region-endpoints">Configure multiple region endpoints</h3></a>
 
-<!--     deb-2-9-ui deb-2-9-cli deb-3-0-cli deb-3-0-ui
+rad-begin     /deb/2.9/ui /deb/2.9/cli /deb/3.0/cli /deb/3.0/ui
 MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to `/etc/maas/rackd.conf`.  For example:
-    deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli  -->
+rad-end
 
-<!--     snap-2-9-ui snap-2-9-cli snap-3-0-cli snap-3-0-ui
+rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/cli /snap/3.0/ui
 MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to `/var/snap/maas/current/rackd.conf`.  For example:
-    snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli -->
+rad-end
     .
     .
     .
@@ -152,43 +148,43 @@ Load balancing is optional, but is highly recommended.
 
 MAAS stores all state information in the PostgreSQL database. It is therefore recommended to run it in HA mode. Configuring HA for PostgreSQL is external to MAAS. You will, therefore, need to study the [PostgreSQL documentation](https://www.postgresql.org/docs/9.5/static/high-availability.html) and implement the variant of HA that makes you feel most comfortable.
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/3004) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/3005) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/4067) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/4068) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
- deb-3-0-ui -->
+rad-end
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/2998) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/2999) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/4065) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/4066) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
- snap-3-0-ui -->
+rad-end
 
 Each region controller uses up to 40 connections to PostgreSQL in high load situations. Running two region controllers requires no modifications to the `max_connections` in `postgresql.conf`. More than two region controllers require that `max_connections` be adjusted to add 40 more connections per added region controller.
 
 <a href="#heading--secondary-api-servers"><h3 id="heading--secondary-api-servers">Enable highly-available API services</h3></a>
 
-<!-- snap-2-9-cli
+rad-begin /snap/2.9/cli
 Setting up high-availability using snaps is relatively easy:
 
 1.  Set up PostgreSQL for high-availability as [explained above](/t/high-availability/2686#heading--postgresql-ha). PostgreSQL should run outside of the snap.
@@ -199,9 +195,9 @@ Setting up high-availability using snaps is relatively easy:
 2.   `--database-name DATABASE_NAME`
 3.   `--database-user DATABASE_USER`
 4.   `--database-pass DATABASE_PASS`
- snap-2-9-cli -->
+rad-end
 
-<!-- snap-2-9-ui
+rad-begin /snap/2.9/ui
 Setting up high-availability using snaps is relatively easy: 
 
 1.  Set up PostgreSQL for high-availability as [explained above](/t/high-availability/2687#heading--postgresql-ha). PostgreSQL should run outside of the snap.
@@ -212,9 +208,9 @@ Setting up high-availability using snaps is relatively easy:
 2.   `--database-name DATABASE_NAME`
 3.   `--database-user DATABASE_USER`
 4.   `--database-pass DATABASE_PASS`
- snap-2-9-ui -->
+rad-end
 
-<!-- snap-3-0-cli
+rad-begin /snap/3.0/cli
 Setting up high-availability using snaps is relatively easy:
 
 1.  Set up PostgreSQL for high-availability as [explained above](/t/high-availability/3945#heading--postgresql-ha). PostgreSQL should run outside of the snap.
@@ -225,9 +221,9 @@ Setting up high-availability using snaps is relatively easy:
 2.   `--database-name DATABASE_NAME`
 3.   `--database-user DATABASE_USER`
 4.   `--database-pass DATABASE_PASS`
- snap-3-0-cli -->
+rad-end
 
-<!-- snap-3-0-ui
+rad-begin /snap/3.0/ui
 Setting up high-availability using snaps is relatively easy: 
 
 1.  Set up PostgreSQL for high-availability as [explained above](/t/high-availability/3946#heading--postgresql-ha). PostgreSQL should run outside of the snap.
@@ -238,23 +234,23 @@ Setting up high-availability using snaps is relatively easy:
 2.   `--database-name DATABASE_NAME`
 3.   `--database-user DATABASE_USER`
 4.   `--database-pass DATABASE_PASS`
- snap-3-0-ui -->
+rad-end
 
-<!-- deb-2-9-cli
+rad-begin /deb/2.9/cli
 Please see [Region controllers](/t/region-controllers/3076) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
- deb-2-9-cli -->
+rad-end
 
-<!-- deb-2-9-ui
+rad-begin /deb/2.9/ui
 Please see [Region controllers](/t/region-controllers/3077) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
- deb-2-9-ui -->
+rad-end
 
-<!-- deb-3-0-cli
+rad-begin /deb/3.0/cli
 Please see [Region controllers](/t/region-controllers/4095) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
- deb-3-0-cli -->
+rad-end
 
-<!-- deb-3-0-ui
+rad-begin /deb/3.0/ui
 Please see [Region controllers](/t/region-controllers/4096) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
- deb-3-0-ui -->
+rad-end
 
 <a href="#heading--load-balancing-with-haproxy-optional"><h3 id="heading--load-balancing-with-haproxy-optional">Load balancing with HAProxy (optional)</h3></a>
 
@@ -305,11 +301,11 @@ The configuration of region controller HA is now complete.
 
 <a href="#heading--move-rack-controller"><h2 id="heading--move-rack-controller">Move a rack controller from one MAAS instance to another</h2></a>
 
-<!--   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller.  In the "Controllers" tab in the UI, select the rack controller you with to delete, choose "Take action" and select "Delete."  You will be asked to confirm with a red button, entitled "Delete 1 controller."
-   snap-2-9-ui   deb-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+rad-end
 
-<!--   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller, with the command:
 
 ```
@@ -323,11 +319,11 @@ maas $PROFILE rack-controllers read
 ```
 
 There is no confirmation step, so make sure you have the right rack controller before proceeding.
-   snap-2-9-cli   deb-2-9-cli snap-3-0-cli deb-3-0-cli  -->
+rad-end
 
 Next, you must register a new rack controller, which is always done from the command line.
 
-<!--     deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli 
+rad-begin     /deb/2.9/ui /deb/2.9/cli /deb/3.0/ui /deb/3.0/cli 
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
 ```
@@ -335,9 +331,9 @@ sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAA
 ```
 
 where the secret is found in `/var/lib/maas/secret`.
-     deb-2-9-ui deb-2-9-cli deb-3-0-ui deb-3-0-cli  -->
+rad-end
 
-<!--     snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli
+rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
 ```
@@ -345,11 +341,11 @@ sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MA
 ```
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
-     snap-2-9-ui snap-2-9-cli snap-3-0-ui snap-3-0-cli-->
+rad-end
 
-<!--   deb-2-9-ui   snap-2-9-ui snap-3-0-ui deb-3-0-ui 
+rad-begin   /deb/2.9/ui   /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 Note that in the UI, if you go to the "Controllers" tab and press the button entitled, "Add rack controller," at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.
-   deb-2-9-ui   snap-2-9-ui snap-3-0-ui deb-3-0-ui  -->
+rad-end
 
 <a href="#heading--move-rack-controller"><h3 id="heading--dangers-moving-rack-controller">Dangers of moving a rack controller</h3></a>
 
