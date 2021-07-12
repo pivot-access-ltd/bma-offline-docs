@@ -1,4 +1,3 @@
-
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 The command line allows you to retrieve the verbatim logs of commissioning script runs, including those that are currently in progress.
 
@@ -78,31 +77,15 @@ Commissioning logs, which are presented on the "Commissioning" tab for any machi
 When you click on the "Commissioning" tab under a given machine, you will see a screen similar to this one:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg"></a> 
+
+Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/nnnnb#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
 rad-end
 
-rad-begin /deb/2.9/ui
-Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/2477#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
-rad-end
-
-rad-begin /deb/3.0/ui
-Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/3866#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
-rad-end
-
-rad-begin /snap/2.9/ui
-Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/2471#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
-rad-end
-
-rad-begin /snap/3.0/ui
-Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/3874#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
-rad-end
-
-rad-begin /snap/2.9/cli /snap/2.9/ui /deb/2.9/cli /deb/2.9/cli /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli 
 <a href="#heading--maas-support-info"><h2 id="heading--maas-support-info">maas-support-info</h2></a>
 
 MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  This script gathers this information, mostly as a bundle to be provided to a support specialist to help get the baseline for the machine in question.
 
 This script runs in parallel with other scripts to speed commissioning. Typical output, generated when a machine passes this script, is shown in the foldout below.
-rad-end
 
 <details><summary>Typical script output</summary>
 
@@ -328,19 +311,13 @@ Here's a quick breakdown of what you see in the script output:
 
 * **DMI KEYPAIRS:** the individual machine specifications, as decoded from the DMI table.  The manpage **dmidecode (8)** gives more details on each of these keypairs.
 
-rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli 
 <a href="#heading--maas-lshw"><h2 id="heading--maas-lshw">maas-lshw</h2></a>
 
 This script pulls system BIOS and vendor info, and generates user-defined tags for later use.  `maas-lshw` runs in parallel with other scripts to speed up the commissioning process. Typical script output from a successful run looks something like the foldout below.
-rad-end
 
 <details><summary>Typical script output</summary>
 ````
 <?xml version="1.0" standalone="yes" ?>
-rad-end
-rad-end
-rad-end
-rad-end
 <list>
 <node id="52-54-00-0b-6d-8c" claimed="true" class="system" handle="DMI:0100">
  <description>Computer</description>
@@ -997,19 +974,13 @@ This output is roughly equivalent to the output of `lshw -xml` on the machine in
 
 Some additional fields may be present in this output.  These will be identified and described as necessary for specific instances and situations.
 
-rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.0/ui /deb/3.0/ui 
-
 <a href="#heading--20-maas-01-install-lldpd"><h2 id="heading--20-maas-01-install-lldpd">20-maas-01-install-lldpd</h2></a>
 
 This script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  This logs the basic install process to the commissioning logs in real time.
-rad-end
-
-rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.0/ui /deb/3.0/ui  
 
 <a href="#heading--maas-list-modaliases"><h2 id="heading--maas-list-modaliases">maas-list-modaliases</h2></a>
 
 This script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.  `maas-list-modaliases` runs in parallel with other scripts to speed up the commissioning process.  Successful log output looks something like the foldout below.
-rad-end
 
 <details><summary>Typical script output</summary>
 
@@ -1085,18 +1056,13 @@ The output is similar to the modaliases output shown in the `00-maas-00-support-
 
 There are many more fields, depending upon the device type, and a wide variety of codes for every field for every device.  Every bus has its own schema for modalias -- hence, cataloguing these combinations is beyond the scope of this document set.  Understanding the way these codes are constructed, though, may help you know how to find needed information for a specific situation.
 
-rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.0/ui /deb/3.0/ui 
 <a href="#heading--20-maas-02-dhcp-unconfigured-ifaces"><h2 id="heading--20-maas-02-dhcp-unconfigured-ifaces">20-maas-02-dhcp-unconfigured-ifaces</h2></a>
 
 MAAS will want to know all the ways the machine is connected to the network. Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.  This script logs the discovery of these networks to the commissioning logs.
-rad-end
-
-rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.0/ui /deb/3.0/ui 
 
 <a href="#heading--maas-get-fruid-api-data"><h2 id="heading--maas-get-fruid-api-data">maas-get-fruid-api-data</h2></a>
 
 This script gathers information for the Facebook wedge power type, and it runs in parallel with other scripts to improve commissioning speed. Typical output from a successful run looks something like the foldout below.
-rad-end
 
 <details><summary>Typical script output</summary>
 
@@ -1114,11 +1080,9 @@ rad-end
 
 You will note that this output does not actually contain any specific information, but rather the echoed commands of a script to gather the information.
 
-rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.0/ui /deb/3.0/ui 
 <a href="#heading--maas-serial-ports"><h2 id="heading--maas-serial-ports">maas-serial-ports</h2></a>
 
 This script lists what serial ports are available on the machine; it runs in parallel to speed up commissioning.  Log output from a normal, successful run is simply a list of serial ports, something like the foldout below.
-rad-end
 
 <details><summary>Typical script output</summary>
 ````
@@ -1487,7 +1451,6 @@ n                "device_path": "pci-0000:00:01.1-ata-1",
 
 This output represents a catalogue of the resources available on this machine, in a format readable by both humans and machines.  You can use this to verify that your configuration is what you expected.
 
-rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.0/ui /deb/3.0/ui 
 <a href="#heading--maas-capture-lldp"><h2 id="heading--maas-capture-lldp">maas-capture-lldp</h2></a>
 
 This script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  The script runs in parallel with other scripts for speed. Note that the log output from a successful run is uninteresting.
@@ -1501,4 +1464,3 @@ nomodeset ro root=squash:http://192.168.122.2:5248/images/ubuntu/amd64/generic/b
 ````
 
 These are the kernel command line parameters, which control the invocation of various modules built into the kernel.  The function `modprobe` parses this kernel command line and collects the relevant module parameters when it loads a module.  Note that this command line could also be used to pull in loadable modules.
-rad-end
