@@ -102,7 +102,6 @@ You have the option of selecting some extra parameters (checkboxes) and performi
 These options include:
 
 -   **Allow SSH access and prevent machine powering off**: Machines are normally powered off after commissioning. This option keeps the machine on and enables SSH so you can access the machine.
-rad-end
 
 -   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/networking/nnnn) for more information.
 
