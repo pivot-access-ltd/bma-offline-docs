@@ -1,4 +1,3 @@
-
 There are many user-initiated events in MAAS that an administrator or a user may want to audit. These include someone updating the settings or changing a user's permissions. This page details how to query these events and includes examples of how to perform a query, and the type of data logs can provide.
 
 #### Three questions you may have:
