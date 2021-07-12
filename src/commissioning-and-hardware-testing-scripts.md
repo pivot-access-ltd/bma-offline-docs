@@ -1,4 +1,3 @@
-
 MAAS runs scripts during enlistment, commissioning and testing to collect data about nodes. Both enlistment and commissioning run all builtin commissioning scripts, though enlistment runs only built-ins. Commissioning also runs any user-uploaded commissioning scripts by default, unless the user manually provides a list of scripts to run. MAAS uses these commissioning scripts to configure hardware and perform other tasks during commissioning, such as updating the firmware. Similarly, MAAS employs hardware testing scripts to evaluate system hardware and report its status. 
 
 <h4>Quick questions you may have:</h4>
@@ -10,39 +9,7 @@ MAAS runs scripts during enlistment, commissioning and testing to collect data a
 5. [What would some example scripts look like?](#heading--script-examples)
 6. [How do I upload scripts to MAAS?](#heading--upload-procedure)
 
----
-
-rad-begin /deb/2.9/cli
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2476), by [testing hardware](/t/hardware-testing/2680) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
-rad-end
-
-rad-begin /deb/2.9/ui
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2677), by [testing hardware](/t/hardware-testing/2681) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
-rad-end
-
-rad-begin /deb/3.0/cli
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/3875), by [testing hardware](/t/hardware-testing/3943) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
-rad-end
-
-rad-begin /deb/3.0/ui
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/3876), by [testing hardware](/t/hardware-testing/3944) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
-rad-end
-
-rad-begin /snap/2.9/cli
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2470), by [testing hardware](/t/hardware-testing/2674) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
-rad-end
-
-rad-begin /snap/2.9/ui
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/2471), by [testing hardware](/t/hardware-testing/2675) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
-rad-end
-
-rad-begin /snap/3.0/cli
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/3873), by [testing hardware](/t/hardware-testing/3941) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
-rad-end
-
-rad-begin /snap/3.0/ui
-Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/3874), by [testing hardware](/t/hardware-testing/3942) or from the command line (select the "CLI" option from the top menu). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
-rad-end
+Scripts can be selected to run from web UI [during commissioning](/t/commission-machines/nnnn), by [testing hardware](/t/hardware-testing/nnnn) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
 
 Add machine -&gt; Enlistment (runs built-in commissioning scripts MAAS) -&gt; New -&gt; Commission (runs built-in and custom commissioning scripts) -&gt; Ready -&gt; Deploy
 
@@ -322,43 +289,13 @@ This Bash script contains comment-delineated metadata, which configures the scri
 
 <a href="#heading--automatic-script-selection-by-hardware-type"><h3 id="heading--automatic-script-selection-by-hardware-type">Automatic script selection by hardware type</h3></a>
 
-rad-begin /deb/2.9/cli
-When selecting [multiple machines](/t/machines/2740), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
-rad-end
-
-rad-begin /deb/2.9/ui
-When selecting [multiple machines](/t/machines/2741), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
-rad-end
-
-rad-begin /deb/3.0/cli
-When selecting [multiple machines](/t/machines/4031), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
-rad-end
-
-rad-begin /deb/3.0/ui
-When selecting [multiple machines](/t/machines/4032), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
-rad-end
-
-rad-begin /snap/2.9/cli
-When selecting [multiple machines](/t/machines/2734), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
-rad-end
-
-rad-begin /snap/2.9/ui
-When selecting [multiple machines](/t/machines/2735), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
-rad-end
-
-rad-begin /snap/3.0/cli
-When selecting [multiple machines](/t/machines/4029), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
-rad-end
-
-rad-begin /snap/3.0/ui
-When selecting [multiple machines](/t/machines/4030), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
-rad-end
+When selecting [multiple machines](/t/machines/nnnn), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
 
 Similarly, scripts selected by tag on the command line which specify the `for_hardware` field will only run on matching hardware.
 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 <a href="#heading--upload-procedure"><h2 id="heading--upload-procedure">Upload procedure</h2></a>
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 To upload a hardware testing script to MAAS, enter the following:
 
 ``` bash
@@ -421,40 +358,11 @@ To delete a script, use `delete`:
 ``` bash
 maas $PROFILE node-script delete $SCRIPT_NAME
 ```
+rad-end
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
-rad-begin /deb/2.9/cli
-As with general [tag management](/t/maas-tags/2896), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
-rad-end
-
-rad-begin /deb/2.9/ui
-As with general [tag management](/t/maas-tags/2897), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
-rad-end
-
-rad-begin /deb/3.0/cli
-As with general [tag management](/t/maas-tags/4023), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
-rad-end
-
-rad-begin /deb/3.0/ui
-As with general [tag management](/t/maas-tags/4024), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
-rad-end
- 
-rad-begin /snap/2.9/cli
-As with general [tag management](/t/maas-tags/2890), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
-rad-end
-
-rad-begin /snap/2.9/ui
-As with general [tag management](/t/maas-tags/2891), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
-rad-end
-
-rad-begin /snap/3.0/cli
-As with general [tag management](/t/maas-tags/4021), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
-rad-end
-
-rad-begin /snap/3.0/ui
-As with general [tag management](/t/maas-tags/4022), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
-rad-end
+As with general tag management, tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
 
 ``` bash
 maas $PROFILE node-script add-tag $SCRIPT_NAME tag=$TAG
@@ -554,25 +462,9 @@ rad-end
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 Scripts can be uploaded to MAAS using the web UI. Select the 'User scripts' tab of the 'Settings' page - the 'Commissioning scripts' section is near the top. Within the Commissioning scripts section, click the Upload script button followed by 'Choose file' to open a requester, locate the script, and select Upload to upload it to MAAS.
-rad-end
 
-rad-begin /deb/2.9/ui
-A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](/t/hardware-testing/2681) from a machine's 'Take action' menu.
-rad-end
+A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](/t/hardware-testing/nnnn) from a machine's 'Take action' menu.
 
-rad-begin /deb/3.0/ui
-A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](/t/hardware-testing/3944) from a machine's 'Take action' menu.
-rad-end
-
-rad-begin /snap/2.9/ui
-A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](/t/hardware-testing/2675) from a machine's 'Take action' menu.
-rad-end
-
-rad-begin /snap/3.0/ui
-A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](/t/hardware-testing/3942) from a machine's 'Take action' menu.
-rad-end
-
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 <a href="https://assets.ubuntu.com/v1/50e08fdf-nodes-hw-scripts__2.4_select.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/50e08fdf-nodes-hw-scripts__2.4_select.png"></a>
 
 [note]
@@ -594,37 +486,7 @@ To do this, enable Allow SSH access and prevent the machine from powering off wh
 Because scripts operate within an ephemeral version of Ubuntu, enabling this option stops the machine from shutting down, allowing you to connect and probe a script's status.
 rad-end
 
-rad-begin /deb/2.9/cli
-As long as you've added your [SSH key](/t/user-accounts/3208#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
-rad-end
-
-rad-begin /deb/2.9/ui
-As long as you've added your [SSH key](/t/user-accounts/3209#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
-rad-end
-
-rad-begin /deb/3.0/cli
-As long as you've added your [SSH key](/t/user-accounts/4147#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
-rad-end
-
-rad-begin /deb/3.0/ui
-As long as you've added your [SSH key](/t/user-accounts/4148#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
-rad-end
-
-rad-begin /snap/2.9/cli
-As long as you've added your [SSH key](/t/user-accounts/3202#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
-rad-end
-
-rad-begin /snap/2.9/ui
-As long as you've added your [SSH key](/t/user-accounts/3203#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
-rad-end
-
-rad-begin /snap/3.0/cli
-As long as you've added your [SSH key](/t/user-accounts/4145#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
-rad-end
-
-rad-begin /snap/3.0/ui
-As long as you've added your [SSH key](/t/user-accounts/4146#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
-rad-end
+As long as you've added your [SSH key](/t/user-accounts/nnnn#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
 
 <a href="#heading--access-individual-scripts-and-log-files"><h3 id="heading--access-individual-scripts-and-log-files">Access individual scripts and log files</h3></a>
 
