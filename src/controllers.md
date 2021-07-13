@@ -1,53 +1,8 @@
-
 Most of the functionality of MAAS is contained in a series of controllers.  There are two basic types: a region controller and one or more rack controllers. The region controller deals with operator requests, while the rack controller(s) provides high-bandwidth services to the individual machines.  In essence, the region controller interacts with the user, while the rack controllers manage the bare metal.
 
-rad-begin /deb/2.9/cli
 [note]
-Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2692).
+Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/nnnn).
 [/note]
-rad-end
-
-rad-begin /deb/2.9/ui
-[note]
-Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2693).
-[/note]
-rad-end
-
-rad-begin /deb/3.0/cli
-[note]
-Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/3947).
-[/note]
-rad-end
-
-rad-begin /deb/3.0/ui
-[note]
-Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/3948).
-[/note]
-rad-end
-
-rad-begin /snap/2.9/cli
-[note]
-Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2686).
-[/note]
-rad-end
-
-rad-begin /snap/2.9/ui
-[note]
-Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/2687).
-[/note]
-rad-end
-
-rad-begin /snap/3.0/cli
-[note]
-Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/3945).
-[/note]
-rad-end
-
-rad-begin /snap/3.0/ui
-[note]
-Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/3946).
-[/note]
-rad-end
 
 #### Four questions you might have:
 
@@ -83,38 +38,7 @@ A rack controller is attached to each "fabric". As the name implies, a typical s
 
 A fabric is simply a way of linking [VLANs](/t/concepts-and-terms/785#heading--vlans) (Virtual LANs) together.  If you're familiar with a VLAN, you know that it's designed to limit network traffic to specific ports (e.g., on a [switch](/t/concepts-and-terms/785#heading--switch)) or by evaluating labels called "tags" (unrelated to MAAS tags).  By definition, this would mean that two VLANs can't communicate with each other -- it would defeat the purpose of the VLAN -- unless you implement some extraordinary measures.
 
-rad-begin /deb/2.9/cli
-For example, let's say that your [hospital](/t/give-me-an-example-of-maas/2656) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-rad-end
-
-rad-begin /deb/2.9/ui
-For example, let's say that your [hospital](/t/give-me-an-example-of-maas/2657) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-rad-end
-
-rad-begin /deb/3.0/cli
-For example, let's say that your [hospital](/t/give-me-an-example-of-maas/3947) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-rad-end
-
-rad-begin /deb/3.0/ui
-For example, let's say that your [hospital](/t/give-me-an-example-of-maas/3948) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-rad-end
-
-rad-begin /snap/2.9/cli
-For example, let's say that your [hospital](/t/give-me-an-example-of-maas/2650) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-rad-end
-
-rad-begin /snap/2.9/ui
-For example, let's say that your [hospital](/t/give-me-an-example-of-maas/2651) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-rad-end
-
-rad-begin /snap/3.0/cli
-For example, let's say that your [hospital](/t/give-me-an-example-of-maas/3945) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-rad-end
-
-rad-begin /snap/3.0/ui
-For example, let's say that your [hospital](/t/give-me-an-example-of-maas/3946) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
-rad-end
-
+For example, let's say that your [hospital](/t/give-me-an-example-of-maas/nnnn) has three key functions: Patient management, Accounting, and Facilities, each on their own VLAN.  Let's say that there are some situations in which you need to share data between all three of these functions.  To accomplish this, you can create a fabric that joins these three VLANS.  Since this fabric just makes it possible for these VLANs to communicate, you can manage the cross-VLAN access with additional software, or permissions, depending on your application software architecture.
 
 You can learn more about fabrics in the [Concepts and terms](/t/concepts-and-terms/785#heading--fabrics) section of this documentation.
 </details>
