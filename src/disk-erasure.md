@@ -1,4 +1,3 @@
-
 Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/concepts-and-terms/785#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
 
 <a href="#heading--erasure-types"><h2 id="heading--erasure-types">Erasure types</h2></a>
@@ -50,26 +49,7 @@ rad-begin   /deb/2.9/cli  /snap/2.9/cli  /snap/3.0/cli /deb/3.0/cli
 
 <a href="#heading--erasure-procedure"><h2 id="heading--erasure-procedure">Erasure procedure</h2></a>
 
-rad-end
-
-rad-begin /deb/2.9/cli
-When using the [MAAS CLI](/t/maas-cli/2824), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
-rad-end
-
-rad-begin /snap/2.9/cli
-When using the [MAAS CLI](/t/maas-cli/2818), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
-rad-end
-
-rad-begin /deb/3.0/cli
-When using the [MAAS CLI](/t/maas-cli/3987), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
-rad-end
-
-rad-begin /snap/3.0/cli
-When using the [MAAS CLI](/t/maas-cli/3985), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
-rad-end
-
-rad-begin   /deb/2.9/cli  /snap/2.9/cli  /snap/3.0/cli /deb/3.0/cli 
-
+When using the [MAAS CLI](/t/maas-cli/nnnn), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
 
 ```
 maas $PROFILE machine release...
