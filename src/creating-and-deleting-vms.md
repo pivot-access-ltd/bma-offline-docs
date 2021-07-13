@@ -1,4 +1,3 @@
-
 If you have already created a VM host, you will want to create and delete virtual machines (VMs); this article explains how to do so.
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
