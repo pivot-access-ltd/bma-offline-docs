@@ -1,85 +1,10 @@
-
-rad-begin /deb/2.9/cli
-MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/2692) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
-rad-end
-
-rad-begin /deb/2.9/ui
-MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/2693) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
-rad-end
-
-rad-begin /deb/3.0/cli
-MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/3947) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
-rad-end
-
-rad-begin /deb/3.0/ui
-MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/3948) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
-rad-end
-
-rad-begin /snap/2.9/cli
-MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/2686) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
-rad-end
-
-rad-begin /snap/2.9/ui
-MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/2687) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
-rad-end
-
-rad-begin /snap/3.0/cli
-MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/3945) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
-rad-end
-
-rad-begin /snap/3.0/ui
-MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/3946) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
-rad-end
+MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/nnnn) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
 
 #### Three questions you might have:
 
-rad-begin /deb/2.9/cli
 1. [How do machines communicate with the rack controller?](#heading--machinerack)
 2. [How do rack and region controllers communicate?](#heading--rackregion)
-3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2668#heading--firewalls)
-rad-end
-
-rad-begin /deb/2.9/ui
-1. [How do machines communicate with the rack controller?](#heading--machinerack)
-2. [How do rack and region controllers communicate?](#heading--rackregion)
-3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2669#heading--firewalls)
-rad-end
-
-rad-begin /deb/3.0/cli
-1. [How do machines communicate with the rack controller?](#heading--machinerack)
-2. [How do rack and region controllers communicate?](#heading--rackregion)
-3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/3939#heading--firewalls)
-rad-end
-
-rad-begin /deb/3.0/ui
-1. [How do machines communicate with the rack controller?](#heading--machinerack)
-2. [How do rack and region controllers communicate?](#heading--rackregion)
-3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/3940#heading--firewalls)
-rad-end
-
-rad-begin /snap/2.9/cli
-1. [How do machines communicate with the rack controller?](#heading--machinerack)
-2. [How do rack and region controllers communicate?](#heading--rackregion)
-3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2662#heading--firewalls)
-rad-end
-
-rad-begin /snap/2.9/ui
-1. [How do machines communicate with the rack controller?](#heading--machinerack)
-2. [How do rack and region controllers communicate?](#heading--rackregion)
-3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/2663#heading--firewalls)
-rad-end
-
-rad-begin /snap/3.0/cli
-1. [How do machines communicate with the rack controller?](#heading--machinerack)
-2. [How do rack and region controllers communicate?](#heading--rackregion)
-3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/3937#heading--firewalls)
-rad-end
-
-rad-begin /snap/3.0/ui
-1. [How do machines communicate with the rack controller?](#heading--machinerack)
-2. [How do rack and region controllers communicate?](#heading--rackregion)
-3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/3938#heading--firewalls)
-rad-end
+3. [What are rack controller port requirements?](/t/hardening-your-maas-installation/nnnn#heading--firewalls)
 
 <a href="#heading--machinerack"><h2 id="heading--machinerack">How machines communicate with the rack controller</h2></a>
 
