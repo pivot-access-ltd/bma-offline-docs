@@ -1,4 +1,3 @@
-
 This article will show you how to:
 
 1. [Prepare for MAAS installation](#heading--prepare-for-maas-installation)
@@ -9,23 +8,11 @@ Note that all headings are hyperlinks that can be bookmarked.
 
 <a href="#heading--prepare-for-maas-installation"><h2 id="heading--prepare-for-maas-installation">Prepare for MAAS installation</h2></a>
 
-You should take the following steps before installing MAAS for the first time on a new system:
- 
+Before installing MAAS for the first time, you should make sure that the target system meets the [minimum hardware requirements](/t/maas-requirements/nnnn#heading--minimum-hardware-requirements).
 
-rad-begin /deb/2.9/cli
-1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4532#heading--minimum-hardware-requirements).
-
-2. Make sure you understand [how support works](/t/-/4532#heading--support-provided) currently, for MAAS 2.9.
-rad-end
- 
-rad-begin /deb/2.9/ui
-1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4528#heading--minimum-hardware-requirements).
-
-2. Make sure you understand [how support works](/t/-/4528#heading--support-provided) currently, for MAAS 2.9.
-rad-end
 
 rad-begin /deb/2.9/ui /deb/2.9/cli
-3. Make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
+If you are running MAAS 2.8, you must also make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
 
 ```
 lsb_release -a
@@ -46,19 +33,19 @@ The minimum "xx.yy" required for MAAS 2.9 is "20.04," codenamed "focal."
 If you are **upgrading** from MAAS 2.3 (or earlier) to MAAS 2.9, **do not follow Step 4 below**; instead, see [Upgrading from MAAS 2.3 - 2.8](#heading--upgrading-from-maas-2-3-2-8), below.
 [/note]
 
-4. If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:
+If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:
 
-a. Upgrade the release:
+1. Upgrade the release:
 
 ```
 sudo do-release-upgrade --allow-third-parties
 ```
 
-b. Accept the defaults for any questions asked by the upgrade script.
+2. Accept the defaults for any questions asked by the upgrade script.
 
-c. Reboot the machine when requested.
+3. Reboot the machine when requested.
 
-d. Check whether the upgrade was successful:
+4. Check whether the upgrade was successful:
 
 ```
 lsb_release -a
@@ -115,21 +102,8 @@ Codename:	focal
 
 rad-end
 
-rad-begin /deb/3.0/cli
-1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4533#heading--minimum-hardware-requirements).
-
-2. Make sure you understand [how support works](/t/-/4533#heading--support-provided) currently, for MAAS 3.0.
-rad-end
- 
-
-rad-begin /deb/3.0/ui
-1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4529#heading--minimum-hardware-requirements).
-
-2. Make sure you understand [how support works](/t/-/4529#heading--support-provided) currently, for MAAS 23.0.
-rad-end
-
 rad-begin /deb/3.0/ui /deb/3.0/cli
-3. Make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
+Make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
 
 ```
 lsb_release -a
@@ -150,19 +124,19 @@ The minimum "xx.yy" required for MAAS 3.0 is "20.04," codenamed "focal."
 If you are **upgrading** from MAAS 2.3 (or earlier) to MAAS 3.0, **do not follow Step 4 below**; instead, see [Upgrading from MAAS 2.3-2.9](#heading--upgrading-from-maas-2-3-2-9), below.
 [/note]
 
-4. If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:
+If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:
 
-a. Upgrade the release:
+1. Upgrade the release:
 
 ```
 sudo do-release-upgrade --allow-third-parties
 ```
 
-b. Accept the defaults for any questions asked by the upgrade script.
+2. Accept the defaults for any questions asked by the upgrade script.
 
-c. Reboot the machine when requested.
+3. Reboot the machine when requested.
 
-d. Check whether the upgrade was successful:
+4. Check whether the upgrade was successful:
 
 ```
 lsb_release -a
@@ -240,46 +214,6 @@ sudo apt upgrade maas
 
 5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.0.
 
-rad-end
-
-rad-begin /snap/2.9/cli
-1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4524#heading--minimum-hardware-requirements).
-
-2. Make sure you understand [how support works](/t/-/4524#heading--support-provided) for the chosen version.
-rad-end
-
-rad-begin /snap/2.9/ui
-1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4521#heading--minimum-hardware-requirements).
-
-2. Make sure you understand [how support works](/t/-/4521#heading--support-provided) for the chosen version.
-rad-end
-
-rad-begin /snap/3.0/cli
-1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4525#heading--minimum-hardware-requirements).
-
-2. Make sure you understand [how support works](/t/-/4525#heading--support-provided) for the chosen version.
-rad-end
-
-rad-begin /snap/3.0/ui
-1. Make sure that the target system meets the [minimum hardware requirements](/t/-/4516#heading--minimum-hardware-requirements).
-
-2. Make sure you understand [how support works](/t/-/4516#heading--support-provided) for the chosen version.
-rad-end
-
-rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli
-3. Make sure you uninstall bind9, if it's running on your system:
-
-a. Check to see if `bind9` is running:
-
-```
-ps aux | grep named
-```
-
-b. If bind9 is running, remove it with the following command:
-
-```
-sudo apt-get remove --auto-remove bind9
-```
 rad-end
 
 <a href="#heading--install-and-verify-maas"><h2 id="heading--install-and-verify-maas">Install and verify MAAS</h2></a>
@@ -474,17 +408,8 @@ Typically, the output looks something like this:
     regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
     tgt                              RUNNING   pid 8040, uptime 0:09:15
 
-rad-end
-
-rad-begin /snap/2.9/cli
 With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](#heading--top-maas-config).
-rad-end
 
-rad-begin /snap/2.9/ui
-With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](#heading--top-maas-config).
-rad-end
-
-rad-begin /snap/2.9/cli /snap/2.9/ui
 <a href="#heading--example"><h3 id="heading--example">Example of MAAS initialisation</h3></a>
 
 The following demonstrates the `region+rack` mode, a popular initialisation choice for MAAS:
@@ -663,13 +588,6 @@ href="https://discourse.maas.io/uploads/default/original/1X/472ce8e0227318737056
 
 <a href="#heading--next-steps"><h4 id="heading--next-steps">Next steps</h4></a>
 
-rad-end
-
-rad-begin /deb/2.9/cli
-Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](#heading--top-maas-config).
-rad-end
-
-rad-begin /deb/2.9/ui
 Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](#heading--top-maas-config).
 rad-end
 
@@ -678,15 +596,12 @@ MAAS can be installed in either of two configurations: test or production.  Thes
 
 <a href="#heading--how-to-index"><h3 id="heading--how-to-index">This section will show how to:</h3></a>
 
-1. [Remove bind9, if installed](#heading--remove-bind9)
-2. [Install the MAAS 3.0 snap](#heading--install-maas-snap)
-3. [Upgrade the 2.9 snap to the MAAS 3.0](#heading--upgrade-maas-snap)
-4. [Initialise MAAS for a test rig or proof-of-concept](#heading--init-poc)
-5. [Initialise MAAS for production](#heading--init-prod)
-6. [Check the service status of MAAS](#heading--service-status)
-7. [Re-initialise MAAS](#heading--reinitialising-maas)
-
-<a href="#heading--remove-bind9"><h3 id="heading--remove-bind9">Remove bind9, if installed</h3></a>
+1. [Install the MAAS 3.0 snap](#heading--install-maas-snap)
+2. [Upgrade the 2.9 snap to the MAAS 3.0](#heading--upgrade-maas-snap)
+3. [Initialise MAAS for a test rig or proof-of-concept](#heading--init-poc)
+4. [Initialise MAAS for production](#heading--init-prod)
+5. [Check the service status of MAAS](#heading--service-status)
+6. [Re-initialise MAAS](#heading--reinitialising-maas)
 
 <a href="#heading--install-maas-snap"><h3 id="heading--install-maas-snap">Installing MAAS from the snap</h3></a>
 
@@ -843,16 +758,7 @@ Typically, the output looks something like this:
     regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
     tgt                              RUNNING   pid 8040, uptime 0:09:15
 
-rad-end
-
-rad-begin /snap/3.0/cli
 With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](#heading--top-maas-config).
-rad-end
-
-rad-begin /snap/3.0/ui
-With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](#heading--top-maas-config).
-rad-end
-
 
 <a href="#heading--reinitialising-maas"><h3 id="heading--reinitialising-maas">Reinitialising MAAS</h3></a>
 
@@ -927,13 +833,6 @@ href="https://discourse.maas.io/uploads/default/original/1X/472ce8e0227318737056
 
 <a href="#heading--next-steps"><h4 id="heading--next-steps">Next steps</h4></a>
 
-rad-end
-
-rad-begin /deb/3.0/cli
-Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](#heading--top-maas-config).
-rad-end
-
-rad-begin /deb/3.0/ui
 Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](#heading--top-maas-config).
 rad-end
 
@@ -1357,21 +1256,6 @@ Note that you may have to wait a few moments for your selected images to sync lo
 Before moving forward with MAAS, you'll want to enable DHCP.  You can do this very easily from the web UI by selecting "Subnets" from the top menu, choosing the VLAN on which you want to enable DHCP, and select the button marked, "Enable DHCP."
 
 <a href="#heading--networking"><h3 id="heading--networking">Networking</h3></a>
-rad-end
 
-rad-begin /deb/2.9/ui
-The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2933) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
+The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/nnnn) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
 rad-end
-
-rad-begin /deb/3.0/ui
-The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/4044) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
-rad-end
-
-rad-begin /snap/2.9/ui
-The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/2927) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
-rad-end
-
-rad-begin /snap/3.0/ui
-The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/4042) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
-rad-end
-
