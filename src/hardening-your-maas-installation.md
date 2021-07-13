@@ -1,4 +1,3 @@
-
 As a MAAS administrator, you have the critical responsibility of hardening your installation to help repudiate attacks and malicious actors.  While there are too many variables to make meaningful suggestions for your deployed machines, there are a number of steps you can take to improve the overall security of your MASS setup.  This article provides a few suggestions.
 
 #### Six questions you may have:
@@ -65,37 +64,7 @@ One of the best steps you can take to improve both security and availability of 
 
 <details><summary>What is a TLS-terminated load balancer?</summary>
 
-rad-begin /deb/2.9/cli
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/2692) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
-rad-end
-
-rad-begin /deb/2.9/ui
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/2693) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
-rad-end
-
-rad-begin /deb/3.0/cli
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/3947) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
-rad-end
-
-rad-begin /deb/3.0/ui
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/3948) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
-rad-end
-
-rad-begin /snap/2.9/cli
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/2686) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
-rad-end
-
-rad-begin /snap/2.9/ui
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/2687) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
-rad-end
-
-rad-begin /snap/3.0/cli
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/3945) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
-rad-end
-
-rad-begin /snap/3.0/ui
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/3946) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
-rad-end
+In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/nnnn) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
 
 A TLS-terminated load balancer is a load balancer that carries encryption and decryption as far down the pipe as possible, in this case, all the way to the load balancer itself. Note that, even though the "SSL" keyword may be used to enable operation, the term SSL is considered obsolete.  Hence we choose to use the term "TLS" instead, referring to **Transport Layer Security**.
 
@@ -163,38 +132,7 @@ Finally, restart the (already-running) load balancer so that these changes can t
 
 Note that you can also [enable HAProxy logging ](https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04) if desired.  This logging is an optional feature of the HAProxy tool and is thus left to your discretion.  
 
-rad-begin /deb/2.9/cli
-If desired, you can [bypass the use of SSL](/t/high-availability/2692#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2548) without implementing HAProxy.
-rad-end
-
-rad-begin /deb/2.9/ui
-If desired, you can [bypass the use of SSL](/t/high-availability/2693#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2549) without implementing HAProxy.
-rad-end
-
-rad-begin /deb/3.0/cli
-If desired, you can [bypass the use of SSL](/t/high-availability/3947#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2548) without implementing HAProxy.
-rad-end
-
-rad-begin /deb/3.0/ui
-If desired, you can [bypass the use of SSL](/t/high-availability/3948#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2549) without implementing HAProxy.
-rad-end
-
-rad-begin /snap/2.9/cli
-If desired, you can [bypass the use of SSL](/t/high-availability/2686#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2542) without implementing HAProxy.
-rad-end
-
-rad-begin /snap/2.9/ui
-If desired, you can [bypass the use of SSL](/t/high-availability/2687#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2543) without implementing HAProxy.
-rad-end
-
-rad-begin /snap/3.0/cli
-If desired, you can [bypass the use of SSL](/t/high-availability/3945#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2542) without implementing HAProxy.
-rad-end
-
-rad-begin /snap/3.0/ui
-If desired, you can [bypass the use of SSL](/t/high-availability/3946#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/2543) without implementing HAProxy.
-rad-end
-
+If desired, you can [bypass the use of SSL](/t/high-availability/nnnn#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/nnnn) without implementing HAProxy.
 
 <a href="#heading--using-logs-for-security"><h2 id="heading--using-logs-for-security">Use logs to identify security issues</h2></a>
 
@@ -287,21 +225,21 @@ Presently, your primary use of MAAS log files to improve security is to periodic
 rad-end
 
     2020-03-31 21:17:56 regiond: [info] 10.132.172.1 GET /MAAS/accounts/login/ HTTP/1.1
-rad-end 200 OK (referrer: http://10.132.172.231:5240/MAAS/r/; agent: Mozilla/5.0 (X11;
+    --> 200 OK (referrer: http://10.132.172.231:5240/MAAS/r/; agent: Mozilla/5.0 (X11;
     Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149
     Safari/537.36)````
 
 If a login fails due to bad input (username/password), the regiond log will contain an entry something like this one:
 
     2020-03-31 21:18:08 regiond: [info] 10.132.172.1 POST /MAAS/accounts/login/ HTTP/1.1
-rad-end 400 BAD_REQUEST (referrer: http://10.132.172.231:5240/MAAS/r/; agent:
+    --> 400 BAD_REQUEST (referrer: http://10.132.172.231:5240/MAAS/r/; agent:
     Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)
     Chrome/80.0.3987.149 Safari/537.36)````
 
 An entry like this one would also be suspect, since it involves omitting username/password entries at the login prompt:
 
     2020-03-31 21:18:45 regiond: [info] 10.132.172.1 POST /MAAS/accounts/login/ HTTP/1.1
-rad-end 204 NO_CONTENT (referrer: http://10.132.172.231:5240/MAAS/r/; agent: Mozilla/5.0
+    --> 204 NO_CONTENT (referrer: http://10.132.172.231:5240/MAAS/r/; agent: Mozilla/5.0
     (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149
     Safari/537.36)````
 
@@ -366,7 +304,7 @@ After:
 <a href="#heading--snaps-and-security"><h3 id="heading--snaps-and-security">About snap security</h3></a>
 
 Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-snap-snap-security-overview).
-rad-end
+rad-end<
 
 <a href="#heading--shared-secrets"><h3 id="heading--shared-secrets">Shared secrets</h2></a>
 
