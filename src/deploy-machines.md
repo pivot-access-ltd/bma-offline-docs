@@ -1,35 +1,4 @@
-
-rad-begin /deb/2.9/cli
-Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2476)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
-rad-end
-
-rad-begin /deb/2.9/ui
-Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2477)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
-rad-end
-
-rad-begin /deb/3.0/cli
-Once a machine has been commissioned (see [Commission machines](/t/commission-machines/3875)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
-rad-end
-
-rad-begin /deb/3.0/ui
-Once a machine has been commissioned (see [Commission machines](/t/commission-machines/3876)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
-rad-end
-
-rad-begin /snap/2.9/cli
-Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2470)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
-rad-end
-
-rad-begin /snap/2.9/ui
-Once a machine has been commissioned (see [Commission machines](/t/commission-machines/2471)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
-rad-end
-
-rad-begin /snap/3.0/cli
-Once a machine has been commissioned (see [Commission machines](/t/commission-machines/3873)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
-rad-end
-
-rad-begin /snap/3.0/ui
-Once a machine has been commissioned (see [Commission machines](/t/commission-machines/3874)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
-rad-end
+Once a machine has been commissioned (see [Commission machines](/t/commission-machines/nnnn)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
 
 #### Two questions you may have:
 
@@ -38,73 +7,13 @@ rad-end
 
 The agent that triggers deployment may vary. For instance, if the machines are destined to run complex, inter-related services that scale up or down frequently, like a "cloud" resource, then [Juju](https://jaas.ai/) is the recommended deployment agent. Juju will also install and configure services on the deployed machines. If you want to use MAAS to install a base operating system and work on the machines manually, then you can deploy a machine directly with MAAS.
 
-rad-begin /deb/2.9/cli
-Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3208#heading--ssh-keys).
-rad-end
-
-rad-begin /deb/2.9/ui
-Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3209#heading--ssh-keys).
-rad-end
-
-rad-begin /deb/3.0/cli
-Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/4147#heading--ssh-keys).
-rad-end
-
-rad-begin /deb/3.0/ui
-Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/4148#heading--ssh-keys).
-rad-end
-
-rad-begin /snap/2.9/cli
-Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3202#heading--ssh-keys).
-rad-end
-
-rad-begin /snap/2.9/ui
-Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/3203#heading--ssh-keys).
-rad-end
-
-rad-begin /snap/3.0/cli
-Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/4145#heading--ssh-keys).
-rad-end
-
-rad-begin /snap/3.0/ui
-Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/4146#heading--ssh-keys).
-rad-end
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/nnnn#heading--ssh-keys).
 
 [note]
 Juju adds SSH keys to machines under its control.
 [/note]
 
-rad-begin /deb/2.9/cli
-MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2596).
-rad-end
-
-rad-begin /deb/2.9/ui
-MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2597).
-rad-end
-
-rad-begin /deb/3.0/cli
-MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/3911).
-rad-end
-
-rad-begin /deb/3.0/ui
-MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/3912).
-rad-end
-
-rad-begin /snap/2.9/cli
-MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2590).
-rad-end
-
-rad-begin /snap/2.9/ui
-MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/2591).
-rad-end
-
-rad-begin /snap/3.0/cli
-MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/3909).
-rad-end
-
-rad-begin /snap/3.0/ui
-MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/3910).
-rad-end
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/nnnn).
 
 <a href="#heading--acquire"><h2 id="heading--acquire">Acquire</h2></a>
 
@@ -160,93 +69,14 @@ To deploy, you must configure the underlying machine to netboot.  Such a machine
 6.  curtin installation script runs
 7.  Squashfs image (same as above) is placed on disk
 
-rad-begin /deb/2.9/cli
 [note]
-The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2596).
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/nnnn).
 [/note]
 
 Before deploying, you should take two key actions:
 
-1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3184) and the [Kernel boot options](/t/kernel-boot-options/2788) that will get used by deployed machines.
-2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3208#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
-rad-end
-
-rad-begin /deb/2.9/ui
-[note]
-The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2597).
-[/note]
-
-Before deploying, you should take two key actions:
-
-1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3185) and the [Kernel boot options](/t/kernel-boot-options/2789) that will get used by deployed machines.
-2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3209#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
-rad-end
-
-rad-begin /deb/3.0/cli
-[note]
-The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/3911).
-[/note]
-
-Before deploying, you should take two key actions:
-
-1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/4139) and the [Kernel boot options](/t/kernel-boot-options/3975) that will get used by deployed machines.
-2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/4147#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
-rad-end
-
-rad-begin /deb/3.0/ui
-[note]
-The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/3912).
-[/note]
-
-Before deploying, you should take two key actions:
-
-1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/4140) and the [Kernel boot options](/t/kernel-boot-options/3976) that will get used by deployed machines.
-2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/4148#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
-rad-end
-
-rad-begin /snap/2.9/cli
-[note]
-The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2590).
-[/note]
-
-Before deploying, you should take two key actions:
-
-1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3178) and the [Kernel boot options](/t/kernel-boot-options/2782) that will get used by deployed machines.
-2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3202#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
-rad-end
-
-rad-begin /snap/2.9/ui
-[note]
-The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/2591).
-[/note]
-
-Before deploying, you should take two key actions:
-
-1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/3179) and the [Kernel boot options](/t/kernel-boot-options/2783) that will get used by deployed machines.
-2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/3203#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
-rad-end
-
-rad-begin /snap/3.0/cli
-[note]
-The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/3909).
-[/note]
-
-Before deploying, you should take two key actions:
-
-1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/4137) and the [Kernel boot options](/t/kernel-boot-options/3973) that will get used by deployed machines.
-2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/4145#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
-rad-end
-
-rad-begin /snap/3.0/ui
-[note]
-The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/3910).
-[/note]
-
-Before deploying, you should take two key actions:
-
-1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/4138) and the [Kernel boot options](/t/kernel-boot-options/3974) that will get used by deployed machines.
-2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/4146#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
-rad-end
+1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/nnnn) and the [Kernel boot options](/t/kernel-boot-options/nnnn) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/nnnn#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 To deploy directly from MAAS, select one or more machine(s) and press the 'Deploy' button.
@@ -286,6 +116,4 @@ By default, when you deploy a machine, MAAS will consider the deployment a failu
 ```
 maas $PROFILE maas set-config name=node-timeout value=$NUMBER_OF_MINUTES
 ```
-
-
 rad-end
