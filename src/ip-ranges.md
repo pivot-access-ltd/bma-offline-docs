@@ -1,4 +1,3 @@
-
 In MAAS-managed networks, you can further manage your subnets with a reserved range of IP addresses.  You can reserve IP addresses by adding one or more reserved ranges to a subnet configuration. You can define two types of ranges: reserved ranges and reserved dynamic ranges.  
 
 A reserved range operates differently depending on whether the subnet is managed or unmanaged.  For a managed (subnet), MAAS will never assign IP addresses inside this range.  You can use this range for anything, such as infrastructure systems, network hardware, external DHCP, or an OpenStack namespace.  For an unmanaged (subnet), MAAS will only assign IP addresses inside this range -- but MAAS can assign any IP within this range.
@@ -28,25 +27,8 @@ Scroll down to "Reserved ranges" on the subnet screen and click on the "Reserve 
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a76e24de7c65d3553f853bc2b6a96671d756651b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a76e24de7c65d3553f853bc2b6a96671d756651b.jpeg"></a>
 
-rad-end
+Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](/t/managing-dhcp/nnnn).
 
-rad-begin /deb/2.9/ui
-Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](/t/managing-dhcp/2909).
-rad-end
-
-rad-begin /deb/3.0/ui
-Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](/t/managing-dhcp/4035).
-rad-end
-
-rad-begin /snap/2.9/ui
-Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](/t/managing-dhcp/2903).
-rad-end
-
-rad-begin /snap/3.0/ui
-Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](/t/managing-dhcp/4033).
-rad-end
-
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 When you choose either of those two options, a window will appear allowing you to enter start and end addresses for the range as well as a comment.
 
 Below is an example window when creating a 'reserved range' (the windows are identical):
