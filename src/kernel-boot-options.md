@@ -1,47 +1,9 @@
-
 MAAS can specify kernel boot options to machines on both a global basis (UI and CLI) and a per-machine basis (CLI-only). A full catalogue of available options can be found in the [Linux kernel parameters list](https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html) at [kernel.org](https://www.kernel.org).
 
 #### Two questions you may have:
 
-rad-begin /deb/2.9/cli
 1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-/deb/2.9/cli/2896#heading--per-node-kernel-boot-options)
-rad-end
-
-rad-begin /deb/2.9/ui
-1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-/deb/2.9/ui/2897#heading--per-node-kernel-boot-options)
-rad-end
-
-rad-begin /deb/3.0/cli
-1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-/deb/3.0/cli/4023#heading--per-node-kernel-boot-options)
-rad-end
-
-rad-begin /deb/3.0/ui
-1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-/deb/3.0/cli/4024#heading--per-node-kernel-boot-options)
-rad-end
-
-rad-begin /snap/2.9/cli
-1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-/snap/2.9/cli/2890#heading--per-node-kernel-boot-options)
-rad-end
-
-rad-begin /snap/2.9/ui
-1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-/snap/2.9/ui/2891#heading--per-node-kernel-boot-options)
-rad-end
-
-rad-begin /snap/3.0/cli
-1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-/snap/3.0/cli/4021#heading--per-node-kernel-boot-options)
-rad-end
-
-rad-begin /snap/3.0/ui
-1. [How can I set global kernel boot options for all machines?](#heading--global-kernel-boot-options)
-2. [How can I set kernel boot options for a specific machine?](/t/maas-tags-/snap/3.0/ui/4022#heading--per-node-kernel-boot-options)
-rad-end
+2. [How can I set kernel boot options for a specific machine?](/t/tags-and-annotations/nnnn#heading--create-tags-with-built-in-kernel-options)
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 
