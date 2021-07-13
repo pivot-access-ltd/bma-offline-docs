@@ -1,139 +1,129 @@
-
 MAAS is **Metal As A Service**, a service that lets you treat physical servers like virtual machines -- instances -- in the cloud.  No need for you to manage servers individually: MAAS turns your bare metal into an elastic, cloud-like resource.
 
 #### Five questions you might have:
 
 1. [What is MAAS -- and what does it really do for me?](/t/about-maas/nnnn)
 2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas/nnnn)
-3. [How does MAAS work -- in detail?](/t/about-maas/nnnn#heading--how-maas-works)
+3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-9-ui/2273#heading--how-maas-works)
 4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
 5. [Can I just install it and try it for myself?](/t/maas-installation/nnnn)
 
-rad-begin /deb/2.9/ui /deb/3.0/ui /snap/2.9/ui /snap/3.0/ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
-rad-end
-
-rad-begin /deb/2.9/cli /deb/3.0/cli /snap/2.9/cli /snap/3.0/cli 
-<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
-</a>
-rad-end
 
 *Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas/nnnn), our example data centre.*
 
 ---
 
-<h2 id="heading--whats-new">New version of MAAS</h2>
+<h2 id="heading--whats-new">Latest version of MAAS</h2>
 
-- [What's new in MAAS](/t/whats-new-in-maas/nnnn)
+- [What's new in MAAS](/t/whats-new-in-maas/4182)
 
 ---
 
 <h2 id="heading--getting-support">Getting support</h2>
 
-There are three ways you can get support for MAAS:
+There are two ways you can get support for MAAS:
 
-1. [Professional support](https://maas.io/contact-us)
-2. [Post a question on the MAAS discourse forum](https://discourse.maas.io)
-3. [Ask a question on askubuntu.com](http://askubuntu.com/questions/tagged/maas)
+1. [Post a question on the MAAS discourse forum](https://discourse.maas.io)
+2. [Professional support](https://maas.io/contact-us)
 
 ---
 
 <h2 id="heading--contribute">Contribute</h2>
 
-There are (at least) three ways you can contribute to MAAS:
+There are several ways you can contribute to MAAS:
 
-1. [Guide to contributing](/t/writing-guide/nnnn)
+1. [Guide to contributing](/t/writing-guide/4186)
 2. [Push some code](https://launchpad.net/maas)
 3. [File an issue](/t/report-a-bug/4446)
 4. [Request a feature](/t/request-a-feature/4447)
 
-rad-begin /snap/3.0/ui
 ## Navigation
 
 ### [Introduction](/t/maas-documentation/25)
 
-- [About MAAS](/t/about-maas-/snap/3.0/ui/3813)
-- ["Give me an example of MAAS"](/t/give-me-an-example-of-maas-/snap/3.0/ui/3934)
-- [What's new in 3.0](/t/whats-new-in-maas-/snap/3.0/ui/4182)
-- [Installation](/t/maas-installation/snap/3.0/ui/4002)
-- [MAAS CLI](/t/maas-cli-/snap/3.0/ui/3986)
+- [About MAAS](/t/about-maas-snap-3-0-ui/3813)
+- ["Give me an example of MAAS"](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)
+- [What's new in 3.0](/t/whats-new-in-maas-snap-3-0-ui/4182)
+- [Installation](/t/maas-installation-snap-3-0-ui/4002)
+- [MAAS CLI](/t/maas-cli-snap-3-0-ui/3986)
 - [Report a bug](/t/report-a-bug/4446)
 - [Request a feature](/t/request-a-feature/4447)
 
-### [Controllers](/t/controllers-/snap/3.0/ui/3898)
+### [Controllers](/t/controllers-snap-3-0-ui/3898)
 
-- [Communication](/t/maas-communication-/snap/3.0/ui/3990)
-- [Rack controllers](/t/rack-controllers-/snap/3.0/ui/4090)
-- [Region controllers](/t/region-controllers-/snap/3.0/ui/4094)
-- [High availability](/t/high-availability-/snap/3.0/ui/3946)
+- [Communication](/t/maas-communication-snap-3-0-ui/3990)
+- [Rack controllers](/t/rack-controllers-snap-3-0-ui/4090)
+- [Region controllers](/t/region-controllers-snap-3-0-ui/4094)
+- [High availability](/t/high-availability-snap-3-0-ui/3946)
 
-### [Machines](/t/machines-/snap/3.0/ui/4030)
+### [Machines](/t/machines-snap-3-0-ui/4030)
 
-- [Add machines](/t/add-machines-/snap/3.0/ui/3822)
-- [Power management](/t/power-management-/snap/3.0/ui/4070)
-- [Commission machines](/t/commission-machines-/snap/3.0/ui/3874)
+- [Add machines](/t/add-machines-snap-3-0-ui/3822)
+- [Power management](/t/power-management-snap-3-0-ui/4070)
+- [Commission machines](/t/commission-machines-snap-3-0-ui/3874)
 - Testing
-  - [Hardware testing](/t/hardware-testing-/snap/3.0/ui/3942)
-  - [Network testing](/t/network-testing-/snap/3.0/ui/4050)
-  - [Commissioning and hardware testing scripts](/t/commissioning-and-hardware-testing-scripts-/snap/3.0/ui/3866)
-- [Deploy machines](/t/deploy-machines-/snap/3.0/ui/3914)
-- [Custom machine setup](/t/custom-machine-setup-/snap/3.0/ui/3910)
-- [Kernel boot options](/t/kernel-boot-options-/snap/3.0/ui/3974)
-- [Storage](/t/storage-/snap/3.0/ui/4106)
-  - [Disk erasure](/t/disk-erasure-/snap/3.0/ui/3922)
-  - [Block devices](/t/block-devices-/snap/3.0/ui/3842)
-  - [Partitions](/t/partitions-/snap/3.0/ui/4062)
-- [VMware VMFS datastores](/t/vmware-vmfs-datastores-/snap/3.0/ui/4178)
-- [Ubuntu kernels](/t/ubuntu-kernels-/snap/3.0/ui/4138)
+  - [Hardware testing](/t/hardware-testing-snap-3-0-ui/3942)
+  - [Network testing](/t/network-testing-snap-3-0-ui/4050)
+  - [Commissioning and hardware testing scripts](/t/commissioning-and-hardware-testing-scripts-snap-3-0-ui/3866)
+- [Deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
+- [Custom machine setup](/t/custom-machine-setup-snap-3-0-ui/3910)
+- [Kernel boot options](/t/kernel-boot-options-snap-3-0-ui/3974)
+- [Storage](/t/storage-snap-3-0-ui/4106)
+  - [Disk erasure](/t/disk-erasure-snap-3-0-ui/3922)
+  - [Block devices](/t/block-devices-snap-3-0-ui/3842)
+  - [Partitions](/t/partitions-snap-3-0-ui/4062)
+- [VMware VMFS datastores](/t/vmware-vmfs-datastores-snap-3-0-ui/4178)
+- [Ubuntu kernels](/t/ubuntu-kernels-snap-3-0-ui/4138)
 
 ### [Projects](/t/using-lxd-projects-with-maas/4470)
-- [Resource pools](/t/resource-pools-/snap/3.0/ui/4098)
-- [Tags and annotations](/t/maas-tags-/snap/3.0/ui/4022)
-- [LXD projects](/t/using-lxd-projects-with-maas-/snap/3.0/ui/4470)
+- [Resource pools](/t/resource-pools-snap-3-0-ui/4098)
+- [Tags and annotations](/t/maas-tags-snap-3-0-ui/4022)
+- [LXD projects](/t/using-lxd-projects-with-maas-snap-3-0-ui/4470)
 
-### [Images](/t/images-/snap/3.0/ui/3958)
+### [Images](/t/images-snap-3-0-ui/3958)
 
-- [Select and import images](/t/select-and-import-images-/snap/3.0/ui/4102)
-- [MAAS image builder](/t/maas-image-builder-/snap/3.0/ui/3998)
-- [Custom Ubuntu images](/t/creating-a-custom-ubuntu-image-/snap/3.0/ui/3902)
-- [Using image streams](/t/using-image-streams-/snap/3.0/ui/4150)
-- [Local image mirror](/t/local-image-mirror-/snap/3.0/ui/3982)
-- [VMWare images](/t/vmware-images-/snap/3.0/ui/4174)
+- [Select and import images](/t/select-and-import-images-snap-3-0-ui/4102)
+- [MAAS image builder](/t/maas-image-builder-snap-3-0-ui/3998)
+- [Custom Ubuntu images](/t/creating-a-custom-ubuntu-image-snap-3-0-ui/3902)
+- [Using image streams](/t/using-image-streams-snap-3-0-ui/4150)
+- [Local image mirror](/t/local-image-mirror-snap-3-0-ui/3982)
+- [VMWare images](/t/vmware-images-snap-3-0-ui/4174)
 
-### [Networking](/t/networking-/snap/3.0/ui/4046)
+### [Networking](/t/networking-snap-3-0-ui/4046)
 
-- [Network discovery](/t/network-discovery-/snap/3.0/ui/4042)
-- [Subnet management](/t/subnet-management-/snap/3.0/ui/4110)
-- [DHCP](/t/managing-dhcp-/snap/3.0/ui/4034)
-- [IP ranges](/t/ip-ranges-/snap/3.0/ui/3966)
-- [IPv6](/t/ipv6-addressing-/snap/3.0/ui/3970)
-- [Proxy](/t/proxy-/snap/3.0/ui/4082)
-- [TLS encryption](/t/configuring-tls-encryption-/snap/3.0/ui/3890)
-- [Availability zones (AZs)](/t/availability-zones-/snap/3.0/ui/3834)
-  - [Zone examples](/t/zone-examples-/snap/3.0/ui/4190)
-- [STP](/t/managing-stp-/snap/3.0/ui/4038)
-- [NTP](/t/ntp-services-/snap/3.0/ui/4054)
-- [Air-gapped MAAS](/t/using-maas-in-an-air-gapped-environment-/snap/3.0/ui/4154)
+- [Network discovery](/t/network-discovery-snap-3-0-ui/4042)
+- [Subnet management](/t/subnet-management-snap-3-0-ui/4110)
+- [DHCP](/t/managing-dhcp-snap-3-0-ui/4034)
+- [IP ranges](/t/ip-ranges-snap-3-0-ui/3966)
+- [IPv6](/t/ipv6-addressing-snap-3-0-ui/3970)
+- [Proxy](/t/proxy-snap-3-0-ui/4082)
+- [TLS encryption](/t/configuring-tls-encryption-snap-3-0-ui/3890)
+- [Availability zones (AZs)](/t/availability-zones-snap-3-0-ui/3834)
+  - [Zone examples](/t/zone-examples-snap-3-0-ui/4190)
+- [STP](/t/managing-stp-snap-3-0-ui/4038)
+- [NTP](/t/ntp-services-snap-3-0-ui/4054)
+- [Air-gapped MAAS](/t/using-maas-in-an-air-gapped-environment-snap-3-0-ui/4154)
 
-### [VM hosting](/t/vm-hosting-/snap/3.0/ui/4162)
+### [VM hosting](/t/vm-hosting-snap-3-0-ui/4162)
 
-- [VM host networking](/t/vm-host-networking-/snap/3.0/ui/4166)
-- [Add a VM host](/t/adding-a-vm-host-/snap/3.0/ui/3818)
-- [VM host storage pools](/t/vm-host-storage-pools-/snap/3.0/ui/4170)
-- [Creating and deleting VMs](/t/creating-and-deleting-vms-/snap/3.0/ui/3906)
+- [VM host networking](/t/vm-host-networking-snap-3-0-ui/4166)
+- [Add a VM host](/t/adding-a-vm-host-snap-3-0-ui/3818)
+- [VM host storage pools](/t/vm-host-storage-pools-snap-3-0-ui/4170)
+- [Creating and deleting VMs](/t/creating-and-deleting-vms-snap-3-0-ui/3906)
 
 ### Operations
 
-- [Prometheus metrics](/t/prometheus-metrics-/snap/3.0/ui/4074)
-- [Backup](/t/backup-/snap/3.0/ui/3838)
-- [MAAS security](/t/hardening-your-maas-instance/snap/3.0/ui/3938)
-- [Logging](/t/maas-logging-/snap/3.0/ui/4010)
-  - [Commissioning logs](/t/commissioning-logs-/snap/3.0/ui/3870)
-  - [Test logs](/t/test-logs-/snap/3.0/ui/4118)
-  - [Event logs](/t/event-comm-logs-/snap/3.0/ui/3926)
-  - [Audit event logs](/t/audit-event-logs-/snap/3.0/ui/3830)
-- [User accounts](/t/user-accounts-/snap/3.0/ui/4146)
-- [Interactive search](/t/interactive-search-/snap/3.0/ui/3962)
+- [Prometheus metrics](/t/prometheus-metrics-snap-3-0-ui/4074)
+- [Backup](/t/backup-snap-3-0-ui/3838)
+- [MAAS security](/t/hardening-your-maas-installation-snap-3-0-ui/3938)
+- [Logging](/t/maas-logging-snap-3-0-ui/4010)
+  - [Commissioning logs](/t/commissioning-logs-snap-3-0-ui/3870)
+  - [Test logs](/t/test-logs-snap-3-0-ui/4118)
+  - [Event logs](/t/event-logs-snap-3-0-ui/3926)
+  - [Audit event logs](/t/audit-event-logs-snap-3-0-ui/3830)
+- [User accounts](/t/user-accounts-snap-3-0-ui/4146)
+- [Interactive search](/t/interactive-search-snap-3-0-ui/3962)
 
 ### [Concepts & terms](/t/concepts-and-terms/785)
 
@@ -142,22 +132,21 @@ rad-begin /snap/3.0/ui
 ### [API documentation](https://maas.io/docs/api)
 
 - [API client](/t/api-client/810)
-- [API authentication](/t/api-authentication-/snap/3.0/ui/3826)
+- [API authentication](/t/api-authentication-snap-3-0-ui/3826)
 
-### [Troubleshooting](/t/troubleshooting-/snap/3.0/ui/4134)
+### [Troubleshooting](/t/troubleshooting-snap-3-0-ui/4134)
 
 - [Getting help](/t/getting-help/838)
-- [Tips, tricks, and traps](/t/tips-tricks-and-traps-/snap/3.0/ui/4130)
+- [Tips, tricks, and traps](/t/tips-tricks-and-traps-snap-3-0-ui/4130)
 - [MAAS 2.5 (and earlier) documentation](https://old-docs.maas.io/2.5/en/)
 - [Upgrading MAAS](/t/upgrading-maas/779)
   - [Upgrade from 2.3 to 2.4](/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777)
 
 ### [Release notes](/t/whats-new-in-maas/4291)
 
-### [Help improve these docs](/t/writing-guide-/snap/3.0/ui/4186)
+### [Help improve these docs](/t/writing-guide-snap-3-0-ui/4186)
 
 ### [Contact us](/t/contact-us/743)
-rad-end
 
 ## URLs
 
@@ -218,10 +207,10 @@ rad-end
 |https://discourse.maas.io/t/-/3906|/docs/snap/3.0/ui/creating-and-deleting-vms|
 |https://discourse.maas.io/t/-/4074|/docs/snap/3.0/ui/prometheus-metrics|
 |https://discourse.maas.io/t/-/3838|/docs/snap/3.0/ui/backup|
-|https://discourse.maas.io/t/-/3938|/docs/snap/3.0/ui/hardening-your-maas-instance|
+|https://discourse.maas.io/t/-/3938|/docs/snap/3.0/ui/hardening-your-maas-installation|
 |https://discourse.maas.io/t/-/3870|/docs/snap/3.0/ui/commissioning-logs|
 |https://discourse.maas.io/t/-/4118|/docs/snap/3.0/ui/test-logs|
-|https://discourse.maas.io/t/-/3926|/docs/snap/3.0/ui/event-comm-logs|
+|https://discourse.maas.io/t/-/3926|/docs/snap/3.0/ui/event-logs|
 |https://discourse.maas.io/t/-/3830|/docs/snap/3.0/ui/audit-event-logs|
 |https://discourse.maas.io/t/-/4146|/docs/snap/3.0/ui/user-accounts|
 |https://discourse.maas.io/t/-/3962|/docs/snap/3.0/ui/interactive-search|
@@ -240,7 +229,7 @@ rad-end
 |https://discourse.maas.io/t/-/4078|/docs/snap/3.0/ui/proxy-log|
 |https://discourse.maas.io/t/-/4158|/docs/snap/3.0/ui/using-rbac-with-maas|
 |https://discourse.maas.io/t/-/4516|/docs/snap/3.0/ui/installation-tech-reference|
-|https://discourse.maas.io/t/-/4517|/docs/snap/3.0/ui/maas-install-tutorial|
+|https://discourse.maas.io/t/-/4517|/docs/snap/3.0/ui/maas-installation-tutorial|
 |https://discourse.maas.io/t/-/4478|/docs/maas-project-tutorial|
 |https://discourse.maas.io/t/maas-projects/4460|/docs/maas-projects|
 |https://discourse.maas.io/t/-/4473|/docs/deb/3.0/ui/using-lxd-projects-with-maas|
@@ -508,18 +497,18 @@ rad-end
 |https://discourse.maas.io/t/-/2655|/docs/deb/2.8/ui/give-me-an-example-of-maas|
 |https://discourse.maas.io/t/-/2656|/docs/deb/2.9/cli/give-me-an-example-of-maas|
 |https://discourse.maas.io/t/-/2657|/docs/deb/2.9/ui/give-me-an-example-of-maas|
-|https://discourse.maas.io/t/-/2658|/docs/snap/2.7/cli/hardening-your-maas-instance|
-|https://discourse.maas.io/t/-/2659|/docs/snap/2.7/ui/hardening-your-maas-instance|
-|https://discourse.maas.io/t/-/2660|/docs/snap/2.8/cli/hardening-your-maas-instance|
-|https://discourse.maas.io/t/-/2661|/docs/snap/2.8/ui/hardening-your-maas-instance|
-|https://discourse.maas.io/t/-/2662|/docs/snap/2.9/cli/hardening-your-maas-instance|
-|https://discourse.maas.io/t/-/2663|/docs/snap/2.9/ui/hardening-your-maas-instance|
-|https://discourse.maas.io/t/-/2664|/docs/deb/2.7/cli/hardening-your-maas-instance|
-|https://discourse.maas.io/t/-/2665|/docs/deb/2.7/ui/hardening-your-maas-instance|
-|https://discourse.maas.io/t/-/2666|/docs/deb/2.8/cli/hardening-your-maas-instance|
-|https://discourse.maas.io/t/-/2667|/docs/deb/2.8/ui/hardening-your-maas-instance|
-|https://discourse.maas.io/t/-/2668|/docs/deb/2.9/cli/hardening-your-maas-instance|
-|https://discourse.maas.io/t/-/2669|/docs/deb/2.9/ui/hardening-your-maas-instance|
+|https://discourse.maas.io/t/-/2658|/docs/snap/2.7/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2659|/docs/snap/2.7/ui/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2660|/docs/snap/2.8/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2661|/docs/snap/2.8/ui/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2662|/docs/snap/2.9/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2663|/docs/snap/2.9/ui/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2664|/docs/deb/2.7/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2665|/docs/deb/2.7/ui/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2666|/docs/deb/2.8/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2667|/docs/deb/2.8/ui/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2668|/docs/deb/2.9/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/2669|/docs/deb/2.9/ui/hardening-your-maas-installation|
 |https://discourse.maas.io/t/-/2670|/docs/snap/2.7/cli/hardware-testing|
 |https://discourse.maas.io/t/-/2671|/docs/snap/2.7/ui/hardware-testing|
 |https://discourse.maas.io/t/-/2672|/docs/snap/2.8/cli/hardware-testing|
@@ -946,6 +935,7 @@ rad-end
 |https://discourse.maas.io/t/-/3123|/docs/deb/2.8/ui/subnet-management|
 |https://discourse.maas.io/t/-/3124|/docs/deb/2.9/cli/subnet-management|
 |https://discourse.maas.io/t/-/3125|/docs/deb/2.9/ui/subnet-management|
+|https://discourse.maas.io/t/-/4110|/docs/snap/3.0/ui/subnet-management|
 |https://discourse.maas.io/t/-/3126|/docs/snap/2.7/cli/test-logs|
 |https://discourse.maas.io/t/-/3127|/docs/snap/2.7/ui/test-logs|
 |https://discourse.maas.io/t/-/3128|/docs/snap/2.8/cli/test-logs|
@@ -1117,18 +1107,18 @@ rad-end
 |https://discourse.maas.io/t/-/3327|/docs/deb/2.8/ui/installation|
 |https://discourse.maas.io/t/-/3328|/docs/deb/2.9/cli/installation|
 |https://discourse.maas.io/t/-/3329|/docs/deb/2.9/ui/installation|
-|https://discourse.maas.io/t/-/3382|/docs/snap/2.7/cli/event-comm-logs|
-|https://discourse.maas.io/t/-/3383|/docs/snap/2.7/ui/event-comm-logs|
-|https://discourse.maas.io/t/-/3384|/docs/snap/2.8/cli/event-comm-logs|
-|https://discourse.maas.io/t/-/3385|/docs/snap/2.8/ui/event-comm-logs|
-|https://discourse.maas.io/t/-/3386|/docs/snap/2.9/cli/event-comm-logs|
-|https://discourse.maas.io/t/-/3387|/docs/snap/2.9/ui/event-comm-logs|
-|https://discourse.maas.io/t/-/3388|/docs/deb/2.7/cli/event-comm-logs|
-|https://discourse.maas.io/t/-/3389|/docs/deb/2.7/ui/event-comm-logs|
-|https://discourse.maas.io/t/-/3390|/docs/deb/2.8/cli/event-comm-logs|
-|https://discourse.maas.io/t/-/3391|/docs/deb/2.8/ui/event-comm-logs|
-|https://discourse.maas.io/t/-/3392|/docs/deb/2.9/ui/event-comm-logs|
-|https://discourse.maas.io/t/-/3393|/docs/deb/2.9/cli/event-comm-logs|
+|https://discourse.maas.io/t/-/3382|/docs/snap/2.7/cli/event-logs|
+|https://discourse.maas.io/t/-/3383|/docs/snap/2.7/ui/event-logs|
+|https://discourse.maas.io/t/-/3384|/docs/snap/2.8/cli/event-logs|
+|https://discourse.maas.io/t/-/3385|/docs/snap/2.8/ui/event-logs|
+|https://discourse.maas.io/t/-/3386|/docs/snap/2.9/cli/event-logs|
+|https://discourse.maas.io/t/-/3387|/docs/snap/2.9/ui/event-logs|
+|https://discourse.maas.io/t/-/3388|/docs/deb/2.7/cli/event-logs|
+|https://discourse.maas.io/t/-/3389|/docs/deb/2.7/ui/event-logs|
+|https://discourse.maas.io/t/-/3390|/docs/deb/2.8/cli/event-logs|
+|https://discourse.maas.io/t/-/3391|/docs/deb/2.8/ui/event-logs|
+|https://discourse.maas.io/t/-/3392|/docs/deb/2.9/ui/event-logs|
+|https://discourse.maas.io/t/-/3393|/docs/deb/2.9/cli/event-logs|
 |https://discourse.maas.io/t/-/3771/|/docs/supported-versions|
 |https://discourse.maas.io/t/-/3814|/docs/snap/3.0/cli/about-maas|
 |https://discourse.maas.io/t/-/3815|/docs/deb/3.0/cli/about-maas|
@@ -1187,15 +1177,15 @@ rad-end
 |https://discourse.maas.io/t/-/3921|/docs/snap/3.0/cli/disk-erasure|
 |https://discourse.maas.io/t/-/3923|/docs/deb/3.0/cli/disk-erasure|
 |https://discourse.maas.io/t/-/3924|/docs/deb/3.0/ui/disk-erasure|
-|https://discourse.maas.io/t/-/3925|/docs/snap/3.0/cli/event-comm-logs|
-|https://discourse.maas.io/t/-/3927|/docs/deb/3.0/cli/event-comm-logs|
-|https://discourse.maas.io/t/-/3928|/docs/deb/3.0/ui/event-comm-logs|
+|https://discourse.maas.io/t/-/3925|/docs/snap/3.0/cli/event-logs|
+|https://discourse.maas.io/t/-/3927|/docs/deb/3.0/cli/event-logs|
+|https://discourse.maas.io/t/-/3928|/docs/deb/3.0/ui/event-logs|
 |https://discourse.maas.io/t/-/3933|/docs/snap/3.0/cli/give-me-an-example-of-maas|
 |https://discourse.maas.io/t/-/3935|/docs/deb/3.0/cli/give-me-an-example-of-maas|
 |https://discourse.maas.io/t/-/3936|/docs/deb/3.0/ui/give-me-an-example-of-maas|
-|https://discourse.maas.io/t/-/3937|/docs/snap/3.0/cli/hardening-your-maas-instance|
-|https://discourse.maas.io/t/-/3939|/docs/deb/3.0/cli/hardening-your-maas-instance|
-|https://discourse.maas.io/t/-/3940|/docs/deb/3.0/ui/hardening-your-maas-instance|
+|https://discourse.maas.io/t/-/3937|/docs/snap/3.0/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/3939|/docs/deb/3.0/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/3940|/docs/deb/3.0/ui/hardening-your-maas-installation|
 |https://discourse.maas.io/t/-/3941|/docs/snap/3.0/cli/hardware-testing|
 |https://discourse.maas.io/t/-/3943|/docs/deb/3.0/cli/hardware-testing|
 |https://discourse.maas.io/t/-/3944|/docs/deb/3.0/ui/hardware-testing|
@@ -1234,6 +1224,10 @@ rad-end
 |https://discourse.maas.io/t/-/4001|/docs/snap/3.0/cli/maas-installation|
 |https://discourse.maas.io/t/-/4003|/docs/deb/3.0/cli/maas-installation|
 |https://discourse.maas.io/t/-/4004|/docs/deb/3.0/ui/maas-installation|
+|https://discourse.maas.io/t/-/4001|/docs/snap/2.9/cli/maas-installation|
+|https://discourse.maas.io/t/-/4003|/docs/deb/2.9/cli/maas-installation|
+|https://discourse.maas.io/t/-/4004|/docs/deb/2.9/ui/maas-installation|
+|https://discourse.maas.io/t/-/4004|/docs/snap/2.9/ui/maas-installation|
 |https://discourse.maas.io/t/-/4009|/docs/snap/3.0/cli/maas-logging|
 |https://discourse.maas.io/t/-/4011|/docs/deb/3.0/cli/maas-logging|
 |https://discourse.maas.io/t/-/4012|/docs/deb/3.0/ui/maas-logging|
@@ -1410,6 +1404,7 @@ rad-end
 
 [details=Mapping table]
 |PATH|LOCATION|
+|--------|--------|
 |/docs/snap/3.0/ui/maas-tags|/docs/snap/3.0/ui/tags-and-annotations|
 |/docs/3.0/release-notes|/docs/snap/3.0/ui/whats-new-in-maas|
 |/docs/non-snap-maas-installs|/docs/snap/2.9/ui/installation|
@@ -1469,7 +1464,7 @@ rad-end
 |/docs/backup|/docs/snap/2.9/ui/backup|
 |/docs/high-availability|/docs/snap/2.9/ui/high-availability|
 |/docs/creating-and-deleting-new-vms|/docs/snap/2.9/ui/creating-and-deleting-vms|
-|/docs/security|/docs/snap/2.9/ui/hardening-your-maas-instance|
+|/docs/security|/docs/snap/2.9/ui/hardening-your-maas-installation|
 |/docs/prometheus-metrics|/docs/snap/2.9/ui/prometheus-metrics|
 |/docs/dhcp|/docs/snap/2.9/ui/managing-dhcp|
 |/docs/ip-ranges|/docs/snap/2.9/ui/ip-ranges|
@@ -1521,7 +1516,7 @@ rad-end
 |/docs/contributing-en-GB|/docs/language-details-contributing-to-maas-docs|
 |/docs/contributing-git|/docs/working-with-git-and-github|
 |/docs/contributing-writing|/docs/writing-guide|
-|/docs/installation|/docs/snap/2.9/ui/installation|
+|/docs/installation|/docs/snap/3.0/ui/maas-installation|
 |/docs/installconfig-iso-install|/docs/install-from-iso|
 |/docs/installconfig-lxd-install|/docs/install-with-lxd|
 |/docs/installconfig-network-dev-discovery|/docs/network-discovery|
@@ -1559,7 +1554,7 @@ rad-end
 |/docs/intro-new|/docs/2.9/release-notes
 |/docs/intro-requirements|/docs/snap/2.9/ui/about-maas|
 |/docs/intro-what-is-maas|/docs/snap/2.9/ui/about-maas|
-|/docs/maas-security|/docs/snap/2.9/ui/hardening-your-maas-instance|
+|/docs/maas-security|/docs/snap/2.9/ui/hardening-your-maas-installation|
 |/docs/manage-account|/docs/snap/2.9/ui/user-accounts|
 |/docs/manage-audit-events|/docs/audit-event-logs|
 |/docs/manage-backup|/docs/snap/2.9/ui/backup|
@@ -1578,7 +1573,7 @@ rad-end
 |/docs/manage-ha|/docs/snap/2.9/ui/high-availability|
 |/docs/manage-kvm-create-vms|/docs/snap/2.9/ui/creating-and-deleting-vms|
 |/docs/manage-libmaas|/docs/api-client|
-|/docs/manage-maas-security|/docs/security|/docs/snap/2.9/ui/hardening-your-maas-instance|
+|/docs/manage-maas-security|/docs/security|/docs/snap/2.9/ui/hardening-your-maas-installation|
 |/docs/manage-pods-webui|docs/snap/2.9/ui/vm-hosting|
 |/docs/manage-prometheus-metrics|/docs/snap/2.9/ui/prometheus-metrics|
 |/docs/manage-repos|/docs/deb/2.9/ui/package-repositories|
@@ -1610,3 +1605,4 @@ rad-end
 |/docs/troubleshoot-getting-help|/docs/getting-help|
 |/docs/metadata.y|/docs/documentation-index|
 [/details]
+
