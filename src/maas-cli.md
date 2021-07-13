@@ -27,37 +27,7 @@ MAAS requires an initial administrator, sometimes called a MAAS "superuser". Whe
 sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
 ```
 
-rad-begin /deb/2.9/cli
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3208#heading--add-a-user) for instructions on creating regular users.
-rad-end
-
-rad-begin /deb/2.9/ui
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3209#heading--add-a-user) for instructions on creating regular users.
-rad-end
-
-rad-begin /deb/3.0/cli
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/4147#heading--add-a-user) for instructions on creating regular users.
-rad-end
-
-rad-begin /deb/3.0/ui
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/4148#heading--add-a-user) for instructions on creating regular users.
-rad-end
-
-rad-begin /snap/2.9/cli
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3202#heading--add-a-user) for instructions on creating regular users.
-rad-end
-
-rad-begin /snap/2.9/ui
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/3203#heading--add-a-user) for instructions on creating regular users.
-rad-end
-
-rad-begin /snap/3.0/cli
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/4145#heading--add-a-user) for instructions on creating regular users.
-rad-end
-
-rad-begin /snap/3.0/ui
-You can create extra administrators in the same way. See [User accounts](/t/user-accounts/4146#heading--add-a-user) for instructions on creating regular users.
-rad-end
+You can create extra administrators in the same way. See [User accounts](/t/user-accounts/nnnn#heading--add-a-user) for instructions on creating regular users.
 
 <a href="#heading--log-in-required"><h2 id="heading--log-in-required">Log in (required)</h2></a>
 
