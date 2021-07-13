@@ -1,4 +1,3 @@
-
 Support for IPv6 in MAAS is similar to support for IPv4.  A rack controller in an IPv6 context needs to have the region API server URL specified with brackets:
 
 ``` nohighlight
