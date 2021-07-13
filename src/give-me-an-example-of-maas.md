@@ -1,4 +1,3 @@
-
 An evolving example may be useful to introduce you to MAAS, and it doesn't have to be comprehensive --  just coherent and plausible.  This example will continue to expand and update over time.
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
@@ -46,37 +45,7 @@ You'll need to start with a little network thinking (and design).  Talking throu
 <tr><td>Food service</td><td>Instrumentation</td><td>Information technology</td></tr>
 </table>
 
-rad-begin /deb/2.9/cli
-You can handle this lowest level with individual [machines](/t/machines/2739).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
-rad-end
-
-rad-begin /deb/2.9/ui
-You can handle this lowest level with individual [machines](/t/machines/2740).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
-rad-end
-
-rad-begin /deb/3.0/cli
-You can handle this lowest level with individual [machines](/t/machines/4031).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
-rad-end
-
-rad-begin /deb/3.0/ui
-You can handle this lowest level with individual [machines](/t/machines/4032).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
-rad-end
-
-rad-begin /snap/2.9/cli
-You can handle this lowest level with individual [machines](/t/machines/2734).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
-rad-end
-
-rad-begin /snap/2.9/ui
-You can handle this lowest level with individual [machines](/t/machines/2735).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
-rad-end
-
-rad-begin /snap/3.0/cli
-You can handle this lowest level with individual [machines](/t/machines/4029).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
-rad-end
-
-rad-begin /snap/3.0/ui
-You can handle this lowest level with individual [machines](/t/machines/4030).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
-rad-end
+You can handle this lowest level with individual [machines](/t/machines/nnnn).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
 
 <details>
 <summary>
@@ -160,37 +129,7 @@ No need to create a lot of VMs for this example (unless you just want to do so).
 
 <a href="#heading--manually-add-machines"><h3 id="heading--manually-add-machines">Manually adding machines</h3></a>
 
-rad-begin /deb/2.9/cli
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2284#heading--add-a-node-manually) to MAAS that correspond to your VMs.
-rad-end
-
-rad-begin /deb/2.9/ui
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2285#heading--add-a-node-manually) to MAAS that correspond to your VMs.
-rad-end
-
-rad-begin /deb/3.0/cli
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/3823#heading--add-a-node-manually) to MAAS that correspond to your VMs.
-rad-end
-
-rad-begin /deb/3.0/ui
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/3824#heading--add-a-node-manually) to MAAS that correspond to your VMs.
-rad-end
-
-rad-begin /snap/2.9/cli
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2278#heading--add-a-node-manually) to MAAS that correspond to your VMs.
-rad-end
-
-rad-begin /snap/2.9/ui
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/2279#heading--add-a-node-manually) to MAAS that correspond to your VMs.
-rad-end
-
-rad-begin /snap/3.0/cli
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/3821#heading--add-a-node-manually) to MAAS that correspond to your VMs.
-rad-end
-
-rad-begin /snap/3.0/ui
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/3822#heading--add-a-node-manually) to MAAS that correspond to your VMs.
-rad-end
+Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/nnnn#heading--add-a-node-manually) to MAAS that correspond to your VMs.
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 ```
@@ -292,37 +231,7 @@ rad-end
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
-rad-begin /deb/2.9/cli
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2476) and [deploy](/t/deploy-machines/2608) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2896) to machines.  
-rad-end
-
-rad-begin /deb/2.9/ui
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2477) and [deploy](/t/deploy-machines/2609) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2897) to machines.  
-rad-end
-
-rad-begin /deb/3.0/cli
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/3875) and [deploy](/t/deploy-machines/3915) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/4023) to machines.  
-rad-end
-
-rad-begin /deb/3.0/ui
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/3876) and [deploy](/t/deploy-machines/3916) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/4024) to machines.  
-rad-end
-
-rad-begin /snap/2.9/cli
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2470) and [deploy](/t/deploy-machines/2602) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2890) to machines.  
-rad-end
-
-rad-begin /snap/2.9/ui
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/2471) and [deploy](/t/deploy-machines/2603) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/2891) to machines.  
-rad-end
-
-rad-begin /snap/3.0/cli
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/3873) and [deploy](/t/deploy-machines/3913) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/4021) to machines.  
-rad-end
-
-rad-begin /snap/3.0/ui
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/3874) and [deploy](/t/deploy-machines/3814) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/4022) to machines.  
-rad-end
+Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/nnnn) and [deploy](/t/deploy-machines/nnnn) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/tags-and-annotations/nnnn) to machines.  
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 ```
@@ -416,37 +325,7 @@ As you look at the list of functions you've created, and talk more with the staf
 <tr><td>Instrumentation</td><td>Information technology</td><td></td></tr>
 </table>
 
-rad-begin /deb/2.9/cli
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3088) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
-rad-end
-
-rad-begin /deb/2.9/ui
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3089) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
-rad-end
-
-rad-begin /deb/3.0/cli
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/4099) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
-rad-end
-
-rad-begin /deb/3.0/ui
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/4100) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
-rad-end
-
-rad-begin /snap/2.9/cli
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3082) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
-rad-end
-
-rad-begin /snap/2.9/ui
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/3083) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
-rad-end
-
-rad-begin /snap/3.0/cli
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/4097) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
-rad-end
-
-rad-begin /snap/3.0/ui
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/4098) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
-rad-end
+You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/nnnn) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
 
 <details>
 <summary><em>Try it!</em></summary>
