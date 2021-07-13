@@ -1,4 +1,3 @@
-
 If you wish, you can tell MAAS to test machine hardware using well-known Linux utilities.  MAAS can test machines that have  a status of **Ready**, **Broken**, or **Deployed**.  You can include testing as part of the commissioning process. When you choose the 'Commission' action, MAAS will display the dialog described below.  Be aware, though, that if the hardware tests fail, the machine will become unavailable for Deployment.
 
 [note]
@@ -288,34 +287,4 @@ After either commissioning, testing, or installation has started, MAAS reports i
 You can access the verbatim output from any test by selecting a machine, selecting the 'Hardware tests' page and clicking on the 'Log view' link in the 'Results' column for the specific test.
 rad-end
 
-rad-begin /deb/2.9/cli
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2488) for more details on how these scripts work and how you can write your own.
-rad-end
-
-rad-begin /deb/2.9/ui
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2489) for more details on how these scripts work and how you can write your own.
-rad-end
-
-rad-begin /deb/3.0/cli
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/3867) for more details on how these scripts work and how you can write your own.
-rad-end
-
-rad-begin /deb/3.0/ui
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/3868) for more details on how these scripts work and how you can write your own.
-rad-end
-
-rad-begin /snap/2.9/cli
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2482) for more details on how these scripts work and how you can write your own.
-rad-end
-
-rad-begin /snap/2.9/ui
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/2483) for more details on how these scripts work and how you can write your own.
-rad-end
-
-rad-begin /snap/3.0/cli
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/3865) for more details on how these scripts work and how you can write your own.
-rad-end
-
-rad-begin /snap/3.0/ui
-See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/3866) for more details on how these scripts work and how you can write your own.
-rad-end
+See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/nnnn) for more details on how these scripts work and how you can write your own.
