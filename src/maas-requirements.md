@@ -1,4 +1,3 @@
-
 The minimum requirements for the machines that run MAAS vary widely depending on local implementation and usage.  Below, you will find resource estimates based on MAAS components and operating system (Ubuntu Server). We consider both a test configuration (for proof of concept) and a production environment.
 
 #### Two questions you might have:
@@ -35,109 +34,15 @@ So, based on the above, the approximate requirements for this scenario are:
 3. A rack controller installed on a third host, with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
 4. A duplicate rack controller on a fourth host, also with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
 
-rad-begin /deb/2.9/cli
 [note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3016) for more details.
-[/note]
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/nnnn) for more details.
 
 Some examples of factors that influence hardware specifications include:
 
 1. the number of connecting clients (client activity)
 2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2692).
+3. whether or not you use [high availability/load balancing](/t/high-availability/nnnn).
 4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
-rad-end
-
-rad-begin /deb/2.9/ui
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3017) for more details.
-[/note]
-
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2693).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
-rad-end
-
-rad-begin /deb/3.0/cli
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/4071) for more details.
-[/note]
-
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/3947).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
-rad-end
-
-rad-begin /deb/3.0/ui
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/4070) for more details.
-[/note]
-
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/3948).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
-rad-end
-
-rad-begin /snap/2.9/cli
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3010) for more details.
-[/note]
-
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2686).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
-rad-end
-
-rad-begin /snap/2.9/ui
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/3011) for more details.
-[/note]
-
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/2687).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
-rad-end
-
-rad-begin /snap/3.0/cli
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/4069) for more details.
-[/note]
-
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/3945).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
-rad-end
-
-rad-begin /snap/3.0/ui
-[note]
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/4070) for more details.
-[/note]
-
-Some examples of factors that influence hardware specifications include:
-
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/3946).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
-rad-end
 
 Also, this discussion does not take into account a possible local image mirror, which would be a large consumer of disk space.
 
