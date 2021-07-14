@@ -1,4 +1,3 @@
-
 Tags are short, descriptive, searchable words that can be applied to various MAAS objects, including:
 
 * machines (physical and virtual)
@@ -418,6 +417,7 @@ In order to remove tags from a block device, the device has to be in an "availab
 6. Be sure to click on the "Save" button when you're done.
 
 <a href="#heading--list-block-device-tags"><h4 id="heading--list-block-device-tags">List block device tags</h4></a>
+rad-end
 
 rad-begin /deb/2.9/ui
 There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/2896#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
@@ -2849,4 +2849,3 @@ hostname     system_id  owner_data
 driven-teal  tgaat6     farquar     foobar
 ```
 rad-end
-
