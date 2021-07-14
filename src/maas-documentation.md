@@ -239,7 +239,6 @@ There are several ways you can contribute to MAAS:
 |https://discourse.maas.io/t/request-a-feature/4447|/docs/request-a-feature|
 |https://discourse.maas.io/t/-/832|/docs/cli-testing-scripts|
 |https://discourse.maas.io/t/-/1112|/docs/image-builder|
-|https://discourse.maas.io/t/-/1479|/docs/test-logs|
 |https://discourse.maas.io/t/-/2218/|/docs/cli-cookbook|
 |https://discourse.maas.io/t/-/4300|/docs/snap/2.7/cli/whats-new-in-maas|
 |https://discourse.maas.io/t/-/4301|/docs/snap/2.7/ui/whats-new-in-maas|
