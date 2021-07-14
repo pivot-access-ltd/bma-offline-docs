@@ -1,4 +1,3 @@
-
 MAAS is only useful once it has images available to provision its nodes. Therefore, one key post-install task is to select and import images from the boot source. Once MAAS imports images, it will update them on an hourly basis, via a default synch mechanism.  This page explains how to select and import the images that MAAS requires to provision its nodes.
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui  
@@ -9,50 +8,16 @@ rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
 2. [How do I use other image mirrors to download images?](#heading--image-mirrors)
 3. [How do I import and provision non-Ubuntu images?](#heading--other-images)
 
-rad-end
-
-rad-begin /deb/2.9/ui
-Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/2861).
-rad-end
-
-rad-begin /deb/3.0/ui
-Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/4000).
-rad-end
-
-rad-begin /snap/2.9/ui
-Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/2855).
-rad-end
-
-rad-begin /snap/3.0/ui
-Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/3998).
-rad-end
-
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui  
+Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/nnnn).
 
 <a href="#heading--import-maasio-image-ui"><h2 id="heading--import-maasio-image-ui">Importing images from maas.io</h2></a>
 
 The 'Images' page shows what images and architectures have been selected and downloaded. By default, MAAS will automatically grab the most recent Ubuntu LTS releases (and amd64 architecture). Below, we have selected two additional releases:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png"></a>
-rad-end
 
-rad-begin /deb/2.9/ui
-You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/2705#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
-rad-end
+You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/nnnn#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
 
-rad-begin /deb/3.0/ui
-You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/3960#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
-rad-end
-
-rad-begin /snap/2.9/ui
-You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/2699#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
-rad-end
-
-rad-begin /snap/3.0/ui
-You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/3958#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
-rad-end
-
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 Click the 'Save selection' button to initiate the import. MAAS will present existing images along with the newly-selected ones. The latter will have their status updated as the import is processed:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/f7daa92c97f1ada61c2172044d43856ed3e14b5f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f7daa92c97f1ada61c2172044d43856ed3e14b5f.png"></a>
@@ -68,37 +33,7 @@ Advanced options, such as using a GPG key or keyring to validate the mirror path
 <a href="https://discourse.maas.io/uploads/default/original/1X/dbe44a827e70e318a6139c3e335019a6a27c4374.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/dbe44a827e70e318a6139c3e335019a6a27c4374.png"></a>
 rad-end
 
-rad-begin /deb/2.9/cli
-Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/2812) for instructions.
-rad-end
-
-rad-begin /deb/2.9/ui
-Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/2813) for instructions.
-rad-end
-
-rad-begin /deb/3.0/cli
-Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/3983) for instructions.
-rad-end
-
-rad-begin /deb/3.0/ui
-Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/3984) for instructions.
-rad-end
-
-rad-begin /snap/2.9/cli
-Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/2806) for instructions.
-rad-end
-
-rad-begin /snap/2.9/ui
-Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/2807) for instructions.
-rad-end
-
-rad-begin /snap/3.0/cli
-Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/3981) for instructions.
-rad-end
-
-rad-begin /snap/3.0/ui
-Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/3982) for instructions.
-rad-end
+Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/nnnn) for instructions.
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 <a href="#heading--other-images"><h2 id="heading--other-images">Other images</h2></a>
@@ -108,23 +43,8 @@ It is also possible to import and provision images other than Ubuntu. Images sup
 <a href="https://discourse.maas.io/uploads/default/original/1X/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png"></a>
 rad-end
 
-rad-begin /deb/2.9/cli
-You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/2704#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
-rad-end
- 
-rad-begin /deb/3.0/cli
-You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/3959#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
-rad-end
-
-rad-begin /snap/2.9/cli
-You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/2698#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
-rad-end
-
-rad-begin /snap/3.0/cli
-You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/3957#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
-rad-end
-
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/images/nnnn#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
 
 #### Eight questions you may have:
 
@@ -266,25 +186,7 @@ If you added a sole boot source, then the fields 'Sync URL' and 'Keyring Path' i
 
 <a href="#heading--using-a-local-image-mirror"><h3 id="heading--using-a-local-image-mirror">Using a local image mirror</h3></a>
 
-rad-end
-
-rad-begin /deb/2.9/cli
-Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/2812) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
-rad-end
-
-rad-begin /deb/3.0/cli
-Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/3983) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
-rad-end
-
-rad-begin /snap/2.9/cli
-Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/2806) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
-rad-end
-
-rad-begin /snap/3.0/cli
-Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/3981) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
-rad-end
-
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/nnnn) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
 
 1.   URL=https://$MIRROR/maas/images/ephemeral-v3/stable/
 2.   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
