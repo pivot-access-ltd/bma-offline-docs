@@ -1,4 +1,3 @@
-
 MAAS supports four types of kernels for its Ubuntu machines:
 
 1.   General availability kernels
