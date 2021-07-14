@@ -1,4 +1,3 @@
-
 In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself.  This section explains several ways of accomplishing this.
  
 rad-begin  /snap/2.9/ui  /deb/2.9/ui  /snap/3.0/ui /deb/3.0/ui 
