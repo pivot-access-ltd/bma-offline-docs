@@ -1,4 +1,3 @@
-
 MAAS services can provide [Prometheus](https://prometheus.io/) endpoints for collecting performance metrics.  These include five endpoints of particular interest to MAAS users:
 
 1.   TFTP server file transfer latency
