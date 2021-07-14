@@ -1,79 +1,13 @@
-
 You have significant latitude when choosing the final storage configuration of a deployed machine. MAAS supports traditional disk partitioning, as well as more complex options such as LVM, RAID, and bcache. MAAS also supports UEFI as a boot mechanism.  This article explains boot mechanisms and layouts, and offers some advice on how to configure layouts and manage storage.
 
 #### Six questions you may have:
 
-rad-begin /deb/2.9/cli
 1. [How does UEFI booting work?](#heading--uefi)
 2. [What kind of storage layouts are available?](#heading--layouts)
 3. [How do I set global storage layouts?](#heading--setting-global-layouts)
 4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
 5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-6. [How can I erase a disk?](/t/disk-erasure/2620)
-rad-end
-
-rad-begin /deb/2.9/ui
-1. [How does UEFI booting work?](#heading--uefi)
-2. [What kind of storage layouts are available?](#heading--layouts)
-3. [How do I set global storage layouts?](#heading--setting-global-layouts)
-4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-6. [How can I erase a disk?](/t/disk-erasure/2621)
-rad-end
-
-rad-begin /deb/3.0/cli
-1. [How does UEFI booting work?](#heading--uefi)
-2. [What kind of storage layouts are available?](#heading--layouts)
-3. [How do I set global storage layouts?](#heading--setting-global-layouts)
-4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-6. [How can I erase a disk?](/t/disk-erasure/3923)
-rad-end
-
-rad-begin /deb/3.0/ui
-1. [How does UEFI booting work?](#heading--uefi)
-2. [What kind of storage layouts are available?](#heading--layouts)
-3. [How do I set global storage layouts?](#heading--setting-global-layouts)
-4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-6. [How can I erase a disk?](/t/disk-erasure/3924)
-rad-end
-
-rad-begin /snap/2.9/cli
-1. [How does UEFI booting work?](#heading--uefi)
-2. [What kind of storage layouts are available?](#heading--layouts)
-3. [How do I set global storage layouts?](#heading--setting-global-layouts)
-4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-6. [How can I erase a disk?](/t/disk-erasure/2614)
-rad-end
-
-rad-begin /snap/2.9/ui
-1. [How does UEFI booting work?](#heading--uefi)
-2. [What kind of storage layouts are available?](#heading--layouts)
-3. [How do I set global storage layouts?](#heading--setting-global-layouts)
-4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-6. [How can I erase a disk?](/t/disk-erasure/2615)
-rad-end
-
-rad-begin /snap/3.0/cli
-1. [How does UEFI booting work?](#heading--uefi)
-2. [What kind of storage layouts are available?](#heading--layouts)
-3. [How do I set global storage layouts?](#heading--setting-global-layouts)
-4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-6. [How can I erase a disk?](/t/disk-erasure/3921)
-rad-end
-
-rad-begin /snap/3.0/ui
-1. [How does UEFI booting work?](#heading--uefi)
-2. [What kind of storage layouts are available?](#heading--layouts)
-3. [How do I set global storage layouts?](#heading--setting-global-layouts)
-4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-6. [How can I erase a disk?](/t/disk-erasure/3922)
-rad-end
+6. [How can I erase a disk?](/t/disk-erasure/nnnn)
 
 A machine's storage is dependant upon the underlying system's disks, but its configuration (i.e., disk usage) is the result of a storage template. In MAAS, this template is called a layout, and MAAS applies it to a machine during commissioning.  Once a layout is applied, a regular user can make modifications to a machine at the filesystem level to arrive at the machine's final storage configuration.  When a machine is no longer needed, a user can choose from among several disk erasure types before releasing it.
 
@@ -106,6 +40,7 @@ The layout descriptions below will include the EFI partition. If your system is 
 With the Flat layout, a partition spans the entire boot disk. The partition is formatted with the ext4 filesystem and uses the `/` mount point:
 
 | Name | Size        | Type | Filesystem | Mount point |
+|:----:|------------:|:----:|:----------:|:------------|
 | sda  | -           | disk |            |             |
 | sda1 | 512 MB      | part | FAT32      | /boot/efi   |
 | sda2 | rest of sda | part | ext4       | /           |
@@ -123,6 +58,7 @@ The following three options are supported:
 The LVM layout creates the volume group `vgroot` on a partition that spans the entire boot disk. A logical volume `lvroot` is created for the full size of the volume group; is formatted with the ext4 filesystem; and uses the `/` mount point:
 
 | Name   | Size        | Type | Filesystem     | Mount point |
+|:----:|------------:|:----:|:----------:|:------------|
 | sda    | -           | disk |                |             |
 | sda1   | 512 MB      | part | FAT32          | /boot/efi   |
 | sda2   | rest of sda | part | lvm-pv(vgroot) |             |
@@ -143,6 +79,7 @@ The following six options are supported:
 A bcache layout will create a partition that spans the entire boot disk as the backing device. It uses the smallest block device tagged with 'ssd' as the cache device. The bcache device is formatted with the ext4 filesystem and uses the `/` mount point. If there are no 'ssd' tagged block devices on the machine, then the bcache device will not be created, and the Flat layout will be used instead:
 
 | Name      | Size        | Type | Filesystem | Mount point |
+|:----:|------------:|:----:|:----------:|:------------|
 | sda       | -           | disk |            |             |
 | sda1      | 512 MB      | part | FAT32      | /boot/efi   |
 | sda2      | rest of sda | part | bc-backing |             |
@@ -165,6 +102,7 @@ The following seven options are supported:
 The VMFS6 layout is used for VMware ESXi deployments only. It is required when configuring VMware VMFS Datastores. This layout creates all operating system partitions, in addition to the default datastore. The datastore may be modified.  New datastores may be created or extended to include other storage devices. The base operating system partitions may not be modified because VMware ESXi requires them. Once applied another storage layout must be applied to remove the operating system partitions.
 
 | Name | Size      | Type    | Use               |
+|:-----|------------:|:----:|:----------|
 | sda  | -         | disk    |                   |
 | sda1 | 3 MB      | part    | EFI               |
 | sda2 | 4 GB      | part    | Basic Data        |
