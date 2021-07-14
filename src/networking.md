@@ -1,4 +1,3 @@
-
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
 You can use the CLI to manage the networking elements of MAAS, including subnets, fabrics, VLANs, and spaces.  This page shows how to access and edit these elements. See [Concepts and terms](/t/concepts-and-terms/785) for the definitions of networking objects, along with a basic networking tutorial (if needed).
 
@@ -70,37 +69,7 @@ Due to the nature of this example, we re-use elements like fabrics, VLANs, subne
 This main view can also be filtered either by fabrics or by spaces through the use of the 'Group by' drop-down.
 rad-end
 
-rad-begin /deb/2.9/cli
-Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/managing-dhcp/2908#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
-rad-end
-
-rad-begin /deb/2.9/ui
-Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/managing-dhcp/2909#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
-rad-end
-
-rad-begin /deb/3.0/cli
-Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/managing-dhcp/4035#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
-rad-end
-
-rad-begin /deb/3.0/ui
-Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/managing-dhcp/4036#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
-rad-end
-
-rad-begin /snap/2.9/cli
-Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/managing-dhcp/2902#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
-rad-end
-
-rad-begin /snap/2.9/ui
-Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/managing-dhcp/2903#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
-rad-end
-
-rad-begin /snap/3.0/cli
-Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/managing-dhcp/4033#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
-rad-end
-
-rad-begin /snap/3.0/ui
-Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/managing-dhcp/4034#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
-rad-end
+Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/managing-dhcp/nnnn#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /deb/3.0/cli /snap/3.0/cli
 <a href="#heading--cli-managing-subnets"><h2 id="heading--cli-managing-subnets">Managing subnets</h3></a>
@@ -166,37 +135,7 @@ rad-end
 
 * **Description**: This field represents freeform text that you can enter to describe your subnet, as needed to keep important notes attached to the definition of the subnet.
 
-rad-begin /deb/2.9/cli
-* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](/t/subnet-management/3124).
-rad-end
-
-rad-begin /deb/2.9/ui
-* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](/t/subnet-management/3125).
-rad-end
-
-rad-begin /deb/3.0/cli
-* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](/t/subnet-management/4111).
-rad-end
-
-rad-begin /deb/3.0/ui
-* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](/t/subnet-management/4112).
-rad-end
-
-rad-begin /snap/2.9/cli
-* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](/t/subnet-management/3118).
-rad-end
-
-rad-begin /snap/2.9/ui
-* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](/t/subnet-management/3119).
-rad-end
-
-rad-begin /snap/3.0/cli
-* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](/t/subnet-management/4109).
-rad-end
-
-rad-begin /snap/3.0/ui
-* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](/t/subnet-management/4110).
-rad-end
+* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](/t/subnet-management/nnnn).
 
 * **Active mapping** instructs MAAS to scan the subnet every 3 hours to discover hosts that have not been discovered passively.
 
@@ -247,37 +186,7 @@ The reserved ranges section of the subnet screen looks like this:
 <a href="https://assets.ubuntu.com/v1/5f9f50f9-installconfig-networking__2.4_subnets-reserved.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/5f9f50f9-installconfig-networking__2.4_subnets-reserved.png"></a>
 rad-end
 
-rad-begin /deb/2.9/cli
-This subject is treated separately in [IP ranges](/t/ip-ranges/2764).
-rad-end
-
-rad-begin /deb/2.9/ui
-This subject is treated separately in [IP ranges](/t/ip-ranges/2765).
-rad-end
-
-rad-begin /deb/3.0/cli
-This subject is treated separately in [IP ranges](/t/ip-ranges/3967).
-rad-end
-
-rad-begin /deb/3.0/ui
-This subject is treated separately in [IP ranges](/t/ip-ranges/3968).
-rad-end
-
-rad-begin /snap/2.9/cli
-This subject is treated separately in [IP ranges](/t/ip-ranges/2758).
-rad-end
-
-rad-begin /snap/2.9/ui
-This subject is treated separately in [IP ranges](/t/ip-ranges/2759).
-rad-end
-
-rad-begin /snap/3.0/cli
-This subject is treated separately in [IP ranges](/t/ip-ranges/3965).
-rad-end
-
-rad-begin /snap/3.0/ui
-This subject is treated separately in [IP ranges](/t/ip-ranges/3966).
-rad-end
+This subject is treated separately in [IP ranges](/t/ip-ranges/nnnn).
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
 <a href="#heading--ui-used-addresses"><h2 id="heading--ui-used-addresses">Used</h2></a>
