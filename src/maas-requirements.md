@@ -10,6 +10,7 @@ The minimum requirements for the machines that run MAAS vary widely depending on
 Here is a proof-of-concept scenario, with all MAAS components installed on a single host. This scenario assumes two complete sets of images (latest two Ubuntu LTS releases) for a single architecture (amd64).
 
 | | Memory (MB) | CPU (GHz) | Disk (GB) |
+|:---|----:|----:|----:|
 | [Region controller](/t/concepts-and-terms/785#heading--controllers) (minus PostgreSQL) | 512 | 0.5 | 5 |
 | PostgreSQL | 512 | 0.5 | 5 |
 | [Rack controller](/t/concepts-and-terms/785#heading--controllers") | 512 | 0.5 | 5 |
@@ -22,6 +23,7 @@ Based on this table, the approximate requirements for this scenario are 2 GB mem
 Here is a production scenario designed to handle a high number of sustained client connections. This scenario implements both high availability (region and rack) and load balancing (region). MAAS reserves extra space for images (database and rack controller), while some images, such as those for Microsoft Windows, may require a lot more -- so plan accordingly.
 
 | | Memory (MB) | CPU (GHz) | Disk (GB) |
+|:---|----:|----:|----:|
 | [Region controller](/t/concepts-and-terms/785#heading--controllers) (minus PostgreSQL) | 2048 | 2.0 | 5 |
 | PostgreSQL | 2048 | 2.0 | 20 |
 | [Rack controller](/t/concepts-and-terms/785#heading--controllers") | 2048 | 2.0 | 20 |
