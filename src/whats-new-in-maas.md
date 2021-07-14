@@ -1,4 +1,3 @@
-
 rad-begin /snap/2.9/cli /snap/2.9/ui /deb/2.9/ui /deb/2.9/cli
 
 <h2>MAAS 2.9.2 release notes</h2>
@@ -267,37 +266,12 @@ Four improvements have been made to speed up the commissioning process, mostly b
 <a href="#heading--bug-fixes-2-9"><h3 id="heading--bug-fixes-2-9">Bugs fixed in 2.9 release</h3></a>
 
 1. MAAS 2.9 includes a fix for [Bug #1894727: Admin uses cannot change other user's passwords via the UI](https://bugs.launchpad.net/maas/+bug/1894727).
-
-<h2 id="heading--known-issues">Known issues</h2>
-
-### RAD LHS menu
-
-There is a known issue with the Reader Adaptive Documentation left-hand-side menu (navigation), in that the menu links cannot currently be adapted to the RAD parameters.  This means that selecting a different page in the LHS menu will take you the the RAD for the current recommended version (in this case, Snap/2.8/UI).  Every page that is different in RAD, though, should present you with a top menu, so that you can choose the RAD parameters matching your own preferences.
-
-### Erroneous message about "missing migration"
-
-When upgrading to any release above 2.8, using packages, you may receive a warning about missing migration(s) -- specifically something that looks like this:
-
-```
-Setting up maas-common (2.8.3~rc1-8583-g.9ddc8051f-0ubuntu1~18.04.1) ...
-Setting up maas-region-api (2.8.3~rc1-8583-g.9ddc8051f-0ubuntu1~18.04.1) ...
-Setting up maas-region-controller (2.8.3~rc1-8583-g.9ddc8051f-0ubuntu1~18.04.1) ...
-Operations to perform:
-  Apply all migrations: auth, contenttypes, maasserver, metadataserver, piston3, sessions, sites
-Running migrations:
-  No migrations to apply.
-  Your models have changes that are not yet reflected in a migration, and so won't be applied.
-  Run 'manage.py makemigrations' to make new migrations, and then re-run 'manage.py migrate' to apply them.
-```
-
-This warning message has no effect on the installation or operation of MAAS, so it can be safely ignored.
 rad-end
 
 rad-begin /snap/3.0/cli /snap/3.0/ui /deb/3.0/cli /deb/3.0/ui
 <h3>MAAS 3.0 release notes</h3>
 
 We are happy to announce the release of MAAS 3.0. This release provides new features, along with critical and high-priority [bug fixes](#heading--maas-3-bug-fixes).
-rad-end
 
 #### Cumulative summary of new features in MAAS 3.0
 1. [PCI and USB devices are now modelled in MAAS](#heading--pci-usb-devices)
@@ -311,7 +285,7 @@ rad-end
 9. [Improvements to MAAS CLI help UX](#heading--maas-cli-ux-improved-help)
 10. [Disabling boot methods](#heading--disabling-boot-methods)
 11. [Consolidation of logs and events](#heading--log-consolidation)
-
+rad-end
 
 rad-begin /deb/3.0/ui /deb/3.0/cli
 MAAS 3.0 can be installed by adding the `3.0` PPA:
@@ -542,7 +516,6 @@ In MAAS 3.0, a fixed status bar has been added to the bottom of the screen, whic
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png"></a>
 
-rad-end
 
 <h2 id="heading--maas-3-bug-fixes">MAAS 3.0 bug fixes</h2>
 
@@ -710,4 +683,31 @@ Here are the bugs that have been `Fix Released` in MAAS 3.0 Beta 1:
 |[#1916073](https://bugs.launchpad.net/bugs/1916073)|MAAS should install qemu-efi-aarch64 on arm64 KVM pods |Undecided| 
 |[#1916317](https://bugs.launchpad.net/bugs/1916317)|UI is using API to request scripts with full content |Undecided| 
 |[#1919381](https://bugs.launchpad.net/bugs/1919381)|typo "veryiying" in info message in smartctl-validate |Undecided|
+rad-end
+
+<h2 id="heading--known-issues">Known issues</h2>
+
+### RAD LHS menu
+
+There is a known issue with the Reader Adaptive Documentation left-hand-side menu (navigation), in that the menu links cannot currently be adapted to the RAD parameters.  This means that selecting a different page in the LHS menu will take you the the RAD for the current recommended version.  Every page that is different in RAD, though, should present you with a top menu, so that you can choose the RAD parameters matching your own preferences.
+
+rad-begin /snap/2.9/cli /snap/2.9/ui /deb/2.9/ui /deb/2.9/cli
+### Erroneous message about "missing migration"
+
+When upgrading to any release above 2.8, using packages, you may receive a warning about missing migration(s) -- specifically something that looks like this:
+
+```
+Setting up maas-common (2.8.3~rc1-8583-g.9ddc8051f-0ubuntu1~18.04.1) ...
+Setting up maas-region-api (2.8.3~rc1-8583-g.9ddc8051f-0ubuntu1~18.04.1) ...
+Setting up maas-region-controller (2.8.3~rc1-8583-g.9ddc8051f-0ubuntu1~18.04.1) ...
+Operations to perform:
+  Apply all migrations: auth, contenttypes, maasserver, metadataserver, piston3, sessions, sites
+Running migrations:
+  No migrations to apply.
+  Your models have changes that are not yet reflected in a migration, and so won't be applied.
+  Run 'manage.py makemigrations' to make new migrations, and then re-run 'manage.py migrate' to apply them.
+```
+
+This warning message has no effect on the installation or operation of MAAS, so it can be safely ignored.
+rad-end
 
