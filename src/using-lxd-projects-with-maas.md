@@ -737,10 +737,6 @@ $ lxc list
 You'll note that, since we just created the VM host, without adding any VMs, the `keystone` project will be empty.
 rad-end
 
-rad-begin /snap/3.0/ui /deb/3.0/ui
-
-rad-end
-
 <a href="#heading--projects-s2-create-vm-in-vm-host-project"><h4 id="heading--projects-s2-create-vm-in-vm-host-project">How do I create a new VM in the LXD project associated with a VM host -- and what happens?</h4></a>
 
 rad-begin /snap/3.0/cli /deb/3.0/cli
@@ -783,10 +779,6 @@ So from this experiment, we can see that creating (composing) a VM in a VM host 
 
 rad-end
 
-rad-begin /snap/3.0/ui /deb/3.0/ui
-
-rad-end
-
 <a href="#heading--projects-s2-move-vm-into-vm-host-project"><h4 id="heading--projects-s2-move-vm-into-vm-host-project">How do I move an existing VM into the LXD project associated with a VM host -- and what happens?</h4></a>
 
 We've seen what happens if we compose a VM in a VM host -- it's automatically commissioned.  But what if we move an existing VM into a LXD project that's associated with a MAAS VM host?  Let's try it and see.
@@ -824,6 +816,7 @@ lxc start trusty-drake
 Nothing happens for a while, but eventually MAAS will discover the machine and attempt to commission it.  In fact, since MAAS doesn't know what power type to use, it completes all the commissioning scripts except `30-maas-01-bmc-config`:
 
 | Name | Tags | Result | Date | Runtime |
+|:-----|:----:|:------:|:-----|--------:|
 | 20-maas-01-install-lldpd |	node|	Passed|	Mon, 19 Apr. 2021 21:42:22|	0:00:00|
 | 20-maas-02-dhcp-unconfigured-ifaces|	node|	Passed|	Mon, 19 Apr. 2021 21:42:22|	0:00:00|
 | 30-maas-01-bmc-config|	bmc-config, node|	Skipped|	Mon, 19 Apr. 2021 21:42:22|	0:00:00|
@@ -849,20 +842,10 @@ maas admin machines read
 
 rad-end
 
-rad-begin /snap/3.0/ui /deb/3.0/ui
-
-rad-end
-
 <a href="#heading--projects-s2-delete-vm-host"><h4 id="heading--projects-s2-delete-vm-host">What happens to my new MAAS project if I delete the VM host?</h4></a>
 
 At some point, you may want to delete your MAAS VM host.  You can do so in the following way:
 
-rad-begin /snap/3.0/cli /deb/3.0/cli
-rad-end
-
-rad-begin /snap/3.0/ui /deb/3.0/ui
-rad-end
- 
 <a href="#heading--projects-s2-move-non-maas-items"><h4 id="heading--projects-s2-move-non-maas-items">How hard is it to move LXD entities to another project to hide them from MAAS?</h4></a>
 
 Suppose that want to use MAAS with your default LXD project, and that you have a couple of LXD entities in your default project that you don't want to use with MAAS:
