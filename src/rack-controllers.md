@@ -1,87 +1,14 @@
-
 A rack controller can connect to multiple VLANs, each from a different network interface. A rack controller can only connect to one MAAS instance at any given time, and must connect to an instance that matches its MAAS version (major and minor).  This configuration provides a scaling factor that can help as a network architecture grows in size.
 
 #### Seven questions you may have:
 
-rad-begin /deb/2.9/cli
-1. [How does MAAS communication work?](/t/maas-communication/2836)
+1. [How does MAAS communication work?](/t/maas-communication/nnnn)
 2. [How do I install a rack controller?](#heading--install-a-rack-controller)
 3. [How do I list rack controllers?](#heading--list-rack-controllers)
-4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2692#heading--multiple-region-endpoints)
+4. [How do I configure MAAS for multiple API servers?](/t/high-availability/nnnn#heading--multiple-region-endpoints)
 5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
 6. [How do I move a rack controller from one MAAS instance to another?](#heading--move-rack-controller)
 7. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
-rad-end
-
-rad-begin /deb/2.9/ui
-1. [How does MAAS communication work?](/t/maas-communication/2837)
-2. [How do I install a rack controller?](#heading--install-a-rack-controller)
-3. [How do I list rack controllers?](#heading--list-rack-controllers)
-4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2683#heading--multiple-region-endpoints)
-5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
-6. [How do I move a rack controller from one MAAS instance to another?](#heading--move-rack-controller)
-7. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
-rad-end
-
-rad-begin /deb/3.0/cli
-1. [How does MAAS communication work?](/t/maas-communication/3991)
-2. [How do I install a rack controller?](#heading--install-a-rack-controller)
-3. [How do I list rack controllers?](#heading--list-rack-controllers)
-4. [How do I configure MAAS for multiple API servers?](/t/high-availability/3947#heading--multiple-region-endpoints)
-5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
-6. [How do I move a rack controller from one MAAS instance to another?](#heading--move-rack-controller)
-7. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
-rad-end
-
-rad-begin /deb/3.0/ui
-1. [How does MAAS communication work?](/t/maas-communication/3992)
-2. [How do I install a rack controller?](#heading--install-a-rack-controller)
-3. [How do I list rack controllers?](#heading--list-rack-controllers)
-4. [How do I configure MAAS for multiple API servers?](/t/high-availability/3948#heading--multiple-region-endpoints)
-5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
-6. [How do I move a rack controller from one MAAS instance to another?](#heading--move-rack-controller)
-7. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
-rad-end
-
-rad-begin /snap/2.9/cli
-1. [How does MAAS communication work?](/t/maas-communication/2830)
-2. [How do I install a rack controller?](#heading--install-a-rack-controller)
-3. [How do I list rack controllers?](#heading--list-rack-controllers)
-4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2686#heading--multiple-region-endpoints)
-5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
-6. [How do I move a rack controller from one MAAS instance to another?](#heading--move-rack-controller)
-7. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
-rad-end
-
-rad-begin /snap/2.9/ui
-1. [How does MAAS communication work?](/t/maas-communication/2831)
-2. [How do I install a rack controller?](#heading--install-a-rack-controller)
-3. [How do I list rack controllers?](#heading--list-rack-controllers)
-4. [How do I configure MAAS for multiple API servers?](/t/high-availability/2687#heading--multiple-region-endpoints)
-5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
-6. [How do I move a rack controller from one MAAS instance to another?](#heading--move-rack-controller)
-7. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
-rad-end
-
-rad-begin /snap/3.0/cli
-1. [How does MAAS communication work?](/t/maas-communication/3989)
-2. [How do I install a rack controller?](#heading--install-a-rack-controller)
-3. [How do I list rack controllers?](#heading--list-rack-controllers)
-4. [How do I configure MAAS for multiple API servers?](/t/high-availability/3945#heading--multiple-region-endpoints)
-5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
-6. [How do I move a rack controller from one MAAS instance to another?](#heading--move-rack-controller)
-7. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
-rad-end
-
-rad-begin /snap/3.0/ui
-1. [How does MAAS communication work?](/t/maas-communication/3990)
-2. [How do I install a rack controller?](#heading--install-a-rack-controller)
-3. [How do I list rack controllers?](#heading--list-rack-controllers)
-4. [How do I configure MAAS for multiple API servers?](/t/high-availability/3946#heading--multiple-region-endpoints)
-5. [How do I unregister a rack controller?](#heading--unregister-a-rack-controller)
-6. [How do I move a rack controller from one MAAS instance to another?](#heading--move-rack-controller)
-7. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
-rad-end
 
 <a href="#heading--install-a-rack-controller"><h2 id="heading--install-a-rack-controller">Install a rack controller</h2></a>
 
@@ -124,11 +51,11 @@ You can also list and confirm all registered rack controllers:
 maas $PROFILE rack-controllers read | grep hostname | cut -d '"' -f 4
 ```
 
-Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/2692) configurations.
+Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/nnnn) configurations.
 rad-end
 
 rad-begin /deb/2.9/ui
-You can also list and confirm all registered rack controllers via the CLI; select the "Packages 2.9 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/2693) configurations.
+You can also list and confirm all registered rack controllers via the CLI; select the "Packages 2.9 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/nnnn) configurations.
 rad-end
 
 rad-begin /deb/3.0/cli
@@ -142,7 +69,7 @@ Note that you will need multiple rack controllers to achieve specific [high avai
 rad-end
 
 rad-begin /deb/3.0/ui
-You can also list and confirm all registered rack controllers via the CLI; select the "Packages 2.9 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/3948) configurations.
+You can also list and confirm all registered rack controllers via the CLI; select the "Packages 2.9 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/nnnn) configurations.
 rad-end
 
 rad-begin /snap/2.9/cli
@@ -156,7 +83,7 @@ maas $PROFILE rack-controllers read | grep hostname | cut -d '"' -f 4
 rad-end
 
 rad-begin /snap/2.9/ui
-You can also list and confirm all registered rack controllers via the CLI; select the "Snap 2.9 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/2687) configurations.
+You can also list and confirm all registered rack controllers via the CLI; select the "Snap 2.9 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/nnnn) configurations.
 rad-end
 
 rad-begin /snap/3.0/cli
@@ -170,7 +97,7 @@ maas $PROFILE rack-controllers read | grep hostname | cut -d '"' -f 4
 rad-end
 
 rad-begin /snap/3.0/ui
-You can also list and confirm all registered rack controllers via the CLI; select the "Snap 2.9 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/3946) configurations.
+You can also list and confirm all registered rack controllers via the CLI; select the "Snap 2.9 CLI" link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/nnnn) configurations.
 rad-end
 
 <div class="p-notification">
