@@ -1,4 +1,3 @@
-
 Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers. MAAS manages their transit through a life-cycle, from adding and enlistment, through commissioning, allocation, and deployment, finally being released back to the pool, or retired altogether.  You can move them around, create redundant versions (even in other geographies you can access), and basically rearrange them to the extent that your network allows.
 
 rad-begin     /deb/2.9/ui /snap/2.9/ui
@@ -164,7 +163,6 @@ HOSTNAME           SYSID   POWER  STATUS     OWNER  TAGS     POOL     VLAN      
 
 rad-end
 
-
 <a href="#heading--machine-life-cycle"><h2 id="heading--machine-life-cycle">Machine life-cycle</h2></a>
 
 One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, acquired, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
@@ -194,6 +192,7 @@ All of these states and actions represent the possible life-cycle of a machine. 
 Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it's not very useful to make a state diagram or flowchart.  Instead, consider the following table:
 
 | Action/State | New | Ready | Acquired | Deployed | Locked | Rescue | Broken |
+|:-------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|	
 | Commission   | X   | X     |          |          |        |        |   X    |
 | Acquire      |     | X     |          |          |        |        |        |
 | Deploy       |     | X     |   X      |          |        |        |        |
@@ -514,20 +513,8 @@ And you can watch the results under the "Tests" option in the Machine menu:
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png"></a> 
 rad-end
 
-rad-begin /deb/2.9/ui
-The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](/t/hardware-testing/2681) page.
-rad-end
-
-rad-begin /deb/3.0/ui
-The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](/t/hardware-testing/3844) page.
-rad-end
-
-rad-begin /snap/2.9/ui
-The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](/t/hardware-testing/2675) page.
-rad-end
-
-rad-begin /snap/3.0/ui
-The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](/t/hardware-testing/3942) page.
+rad-begin /deb/2.9/ui /deb/3.0/ui /snap/2.9/ui /snap/3.0/ui
+The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](/t/hardware-testing/nnnn) page.
 rad-end
 
 rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli
@@ -635,20 +622,8 @@ In the case of this deployed machine, there are not many editing options.  If th
 
 rad-end
 
-rad-begin /deb/2.9/ui
-Options on this tab are described in the introduction to [Networking](/t/networking/2957) article in this documentation set.
-rad-end
-
-rad-begin /deb/3.0/ui
-Options on this tab are described in the introduction to [Networking](/t/networking/4048) article in this documentation set.
-rad-end
-
-rad-begin /snap/2.9/ui
-Options on this tab are described in the introduction to [Networking](/t/networking/2951) article in this documentation set.
-rad-end
-
-rad-begin /snap/3.0/ui
-Options on this tab are described in the introduction to [Networking](/t/networking/4046) article in this documentation set.
+rad-begin /deb/2.9/ui /deb/3.0/ui /snap/2.9/ui /snap/3.0/ui
+Options on this tab are described in the introduction to [Networking](/t/networking/nnnn) article in this documentation set.
 rad-end
 
 rad-begin /deb/2.9/ui
@@ -658,7 +633,7 @@ The Storage tab on the machine list brings up a form that allows you to view/edi
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a> 
 
-This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/3113) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
+This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/nnnn) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
 rad-end
 
 rad-begin /deb/3.0/ui
@@ -668,7 +643,7 @@ The Storage tab on the machine list brings up a form that allows you to view/edi
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> 
 
-This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/4108) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
+This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/nnnn) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
 rad-end
 
 rad-begin /snap/2.9/ui
@@ -678,7 +653,7 @@ The Storage tab on the machine list brings up a form that allows you to view/edi
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a> 
 
-This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/3107) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
+This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/nnnn) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
 rad-end
 
 rad-begin /snap/3.0/ui
@@ -688,7 +663,7 @@ The Storage tab on the machine list brings up a form that allows you to view/edi
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> 
 
-This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/4106) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
+This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/nnnn) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
 rad-end
 
 rad-begin /deb/2.9/ui
@@ -702,7 +677,7 @@ Clicking on any of the "View log" links will take you to specific, detailed logs
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg"></a> 
 
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](/t/maas-logging/2873) for more details on how to read and interpret these logs.
+These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs.
 rad-end
 
 rad-begin /deb/3.0/ui /snap/3.0/ui
@@ -734,7 +709,7 @@ Clicking on any of the "View log" links will take you to specific, detailed logs
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/13fce404b9bb304e08a7c5de5a395c514e98b9b0.jpeg"></a> 
 
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](/t/maas-logging/2867) for more details on how to read and interpret these logs.
+These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs.
 rad-end
 
 rad-begin /deb/2.9/ui
@@ -748,7 +723,7 @@ You can view the summary report, or click on a "View log" link to get details on
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg"></a> 
 
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/2681).
+The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/nnnn).
 rad-end
 
 rad-begin /deb/3.0/ui
@@ -756,13 +731,13 @@ rad-begin /deb/3.0/ui
 
 This tab presents a summary of tests run against this particular machine:  
 
-<a href="See the article on [Logging](/t/maas-logging/4012) for more details on how to read and interpret these logs." target = "_blank"><img src="See the article on [Logging](/t/maas-logging/4012) for more details on how to read and interpret these logs."></a> 
+<a href="See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs." target = "_blank"><img src="See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs."></a> 
 
 You can view the summary report, or choose the "View details" dropdown to get details on any particular tests:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a> 
 
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/3944).
+The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/nnnn).
 rad-end
 
 rad-begin /snap/2.9/ui
@@ -776,7 +751,7 @@ You can view the summary report, or click on a "View log" link to get details on
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8113eba28a3f08279ff2b5f7593e30db05d00824.jpeg"></a> 
 
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/2675).
+The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/nnnn).
 rad-end
 
 rad-begin /snap/3.0/ui
@@ -784,13 +759,13 @@ rad-begin /snap/3.0/ui
 
 This tab presents a summary of tests run against this particular machine:  
 
-<a href="See the article on [Logging](/t/maas-logging/4012) for more details on how to read and interpret these logs." target = "_blank"><img src="See the article on [Logging](/t/maas-logging/4012) for more details on how to read and interpret these logs."></a> 
+<a href="See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs." target = "_blank"><img src="See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs."></a> 
 
 You can view the summary report, or choose the "View details" dropdown to get details on any particular tests:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a> 
 
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/3841).
+The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/nnnn).
 rad-end
 
 rad-begin /deb/2.9/ui
@@ -800,7 +775,7 @@ The "Logs" tab shows raw log output, switchable between YAML and XML formats:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a> 
 
-Help interpreting these logs can be found under the [Logging](/t/maas-logging/2873) section of this documentation.
+Help interpreting these logs can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 rad-end
 
 rad-begin /deb/3.0/ui
@@ -810,7 +785,7 @@ By choosing "Installation output" on the "Logs" tab, you can see the "raw" log o
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a> 
 
-Help interpreting these logs can be found under the [Logging](/t/maas-logging/4012) section of this documentation.
+Help interpreting these logs can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 rad-end
 
 rad-begin /snap/2.9/ui
@@ -820,7 +795,7 @@ The "Logs" tab shows raw log output, switchable between YAML and XML formats:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a> 
 
-Help interpreting these logs can be found under the [Logging](/t/maas-logging/2867) section of this documentation.
+Help interpreting these logs can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 rad-end
 
 rad-begin /snap/3.0/ui
@@ -828,7 +803,7 @@ By choosing "Installation output" on the "Logs" tab, you can see the "raw" log o
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a> 
 
-Help interpreting these logs can be found under the [Logging](/t/maas-logging/4010) section of this documentation.
+Help interpreting these logs can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 rad-end
 
 rad-begin     /deb/2.9/ui /snap/2.9/ui 
@@ -848,19 +823,19 @@ To view the Event log for a machine, choose the "Event" tab under "Logs."  This 
 rad-end
 
 rad-begin /deb/2.9/ui
-There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/2873) section of this documentation.
+There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 rad-end
 
 rad-begin /deb/3.0/ui
-There is a dropdown on the upper right which allows you to choose how many events per page you wish to view.  Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/4012) section of this documentation.
+There is a dropdown on the upper right which allows you to choose how many events per page you wish to view.  Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 rad-end
 
 rad-begin /snap/2.9/ui
-There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/2867) section of this documentation.
+There is a button that allows you to see the next 10 events, and a link to show the entire history.  Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 rad-end
 
 rad-begin /snap/3.0/ui
-There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/4010) section of this documentation.
+There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 rad-end
 
 rad-begin     /deb/2.9/ui /snap/2.9/ui 
@@ -894,20 +869,8 @@ The "Power configuration" supplies the parameters necessary for MAAS to access t
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png"></a> 
 rad-end
 
-rad-begin /deb/2.9/ui
-More information on Power configuration will be found in the [Power management](/t/power-management/3017) section of this documentation.
-rad-end
-
-rad-begin /deb/3.0/ui
-More information on Power configuration will be found in the [Power management](/t/power-management/4072) section of this documentation.
-rad-end
-
-rad-begin /snap/2.9/ui
-More information on Power configuration will be found in the [Power management](/t/power-management/3011) section of this documentation.
-rad-end
-
-rad-begin /snap/3.0/ui
-More information on Power configuration will be found in the [Power management](/t/power-management/4070) section of this documentation.
+rad-begin /deb/2.9/ui /deb/3.0/ui /snap/2.9/ui /snap/3.0/ui
+More information on Power configuration will be found in the [Power management](/t/power-management/nnnn) section of this documentation.
 rad-end
 
 <h2>Summary</h2>
