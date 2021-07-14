@@ -1,4 +1,3 @@
-
 MAAS provides a way for its managed machines to use a proxy server when they need to access HTTP/HTTPS-based resources, such as the Ubuntu package archive.
 
 There are three possible options:
