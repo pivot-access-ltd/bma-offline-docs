@@ -1,4 +1,3 @@
-
 Presumably, you have already created an administrative user, but MAAS can also have regular users (who log in to the interface or use the CLI). What users you create depends on how you intend to use MAAS.  An administrator can manage all aspects of MAAS, whereas a non-administrator user can perform a subset of tasks on machines they acquire and deploy.  MAAS limits the details a non-admin user can view, such as nodes allocated to other users. Also, non-admin users cannot access the global settings page in the web UI, nor any of the equivalent API calls from the command line.
 
 Additionally, in order for a user to log into a MAAS-deployed machine that user must have their public SSH key installed on it.  This article explains how to create users and add their public SSH keys to MAAS, so that every deployed machine will automatically have that key installed.
@@ -73,61 +72,9 @@ rad-end
 
 Before a user can deploy a machine, they must import at least one public SSH key into MAAS. This key allows the user to access the deployed machine with the corresponding private key, which the user must possess. See [Public key authentication](https://www.ssh.com/ssh/public-key-authentication) (ssh.com) if you're not familiar with SSH keys.
 
-rad-begin /deb/2.9/cli
 [note]
-The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2536)).
+The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/nnnn)).
 [/note]
-rad-end
-
-rad-begin /deb/2.9/ui
-[note]
-The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2537)).
-[/note]
-rad-end
-
-rad-begin /deb/3.0/cli
-[note]
-The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/3887)).
-[/note]
-rad-end
-
-rad-begin /deb/3.0/ui
-[note]
-The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/3888)).
-[/note]
-rad-end
-
-rad-begin /snap/2.9/cli
-[note]
-The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2530)).
-[/note]
-rad-end
-
-rad-begin /snap/2.9/ui
-[note]
-The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/2531)).
-[/note]
-rad-end
-
-rad-begin /snap/3.0/cli
-[note]
-The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/3885)).
-[/note]
-rad-end
-
-rad-begin /snap/3.0/ui
-[note]
-The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/3886)).
-[/note]
-rad-end
-
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
-To add a public SSH key to a MAAS user account:
-
-```
-maas $PROFILE sshkeys create "key=$SSH_KEY"
-```
-rad-end
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 To add a locally-generated public key, select 'Upload' from the 'Source' menu and paste the complete contents of your key file, usually called `id_rsa.pub`, into the 'Public key' field. Click 'Import' to add the key to MAAS.
@@ -139,20 +86,8 @@ rad-end
 
 <a href="#heading--api-key"><h3 id="heading--api-key">API key</h3></a>
 
-rad-begin /deb/2.9/ui
-The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/2825).  Other services connecting to MAAS such as Juju will also need this key.
-rad-end
-
-rad-begin /deb/3.0/ui
-The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/3987).  Other services connecting to MAAS such as Juju will also need this key.
-rad-end
-
-rad-begin /snap/2.9/ui
-The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/2819).  Other services connecting to MAAS such as Juju will also need this key.
-rad-end
-
-rad-begin /snap/3.0/ui
-The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/3986).  Other services connecting to MAAS such as Juju will also need this key.
+rad-begin /deb/2.9/ui /deb/3.0/ui /snap/2.9/ui /snap/3.0/ui
+The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/nnnn).  Other services connecting to MAAS such as Juju will also need this key.
 rad-end
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
