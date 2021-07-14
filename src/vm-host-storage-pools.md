@@ -1,4 +1,3 @@
-
 "Storage pools” are storage resources managed by a VM host. A storage pool is a given amount of storage set aside for use by VMs. A pool can be organised into storage volumes, assigned to VMs as individual block devices. More information is available for both [libvirt](https://libvirt.org/storage.html) and [LXD](https://lxd.readthedocs.io/en/latest/storage/) storage pools.
 
 [note]
