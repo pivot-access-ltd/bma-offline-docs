@@ -1,4 +1,3 @@
-
 rad-begin  /snap/2.9/cli  /snap/2.9/ui  /deb/2.9/cli  /deb/2.9/ui 
 MAAS VM hosts allow for the dynamic composition of nodes from a pool of available hardware resources (e.g. disk space, memory, cores).  You can create virtual machines (VMs) as needed within the limits of your resources, without concern for physical hardware.  MAAS currently supports VM hosts and VMs created via [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt).  MAAS also supports LXD VMs and VM hosts as a Beta feature.
 rad-end
@@ -14,7 +13,7 @@ rad-begin /deb/2.9/cli
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
 3. [How do I make LXD available for hosting?](#heading--lxd-setup)
 4. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3220#heading--set-up-ssh)
-5. [How do I add a VM host?](/t/adding-a-vm-host/2296)
+5. [How do I add a VM host?](/t/adding-a-vm-host/nnnn)
 6. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
 7. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
 8. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
@@ -28,7 +27,7 @@ rad-begin /deb/2.9/ui
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
 3. [How do I make LXD available for hosting?](#heading--lxd-setup)
 4. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3221#heading--set-up-ssh)
-5. [How do I add a VM host?](/t/adding-a-vm-host/2297)
+5. [How do I add a VM host?](/t/adding-a-vm-host/nnnn)
 6. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
 7. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
 8. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
@@ -40,7 +39,7 @@ rad-begin /deb/3.0/cli
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [How do I make LXD available for hosting?](#heading--lxd-setup)
 3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/4167#heading--set-up-ssh)
-4. [How do I add a VM host?](/t/adding-a-vm-host/3819)
+4. [How do I add a VM host?](/t/adding-a-vm-host/nnnn)
 5. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
 6. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
 7. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
@@ -53,7 +52,7 @@ rad-begin /deb/3.0/ui
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [How do I make LXD available for hosting?](#heading--lxd-setup)
 3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3820#heading--set-up-ssh)
-4. [How do I add a VM host?](/t/adding-a-vm-host/2297)
+4. [How do I add a VM host?](/t/adding-a-vm-host/nnnn)
 5. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
 6. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
 7. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
@@ -66,7 +65,7 @@ rad-begin /snap/2.9/cli
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
 3. [How do I make LXD available for hosting?](#heading--lxd-setup)
 4. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3220#heading--set-up-ssh)
-5. [How do I add a VM host?](/t/adding-a-vm-host/2296)
+5. [How do I add a VM host?](/t/adding-a-vm-host/nnnn)
 6. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
 7. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
 8. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
@@ -80,7 +79,7 @@ rad-begin /snap/2.9/ui
 2. [Which VM host should I use: LXD or KVM?](#heading--choosing-vm-host-type)
 3. [How do I make LXD available for hosting?](#heading--lxd-setup)
 4. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/3221#heading--set-up-ssh)
-5. [How do I add a VM host?](/t/adding-a-vm-host/2297)
+5. [How do I add a VM host?](/t/adding-a-vm-host/nnnn)
 6. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
 7. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
 rad-end
@@ -91,7 +90,7 @@ rad-begin /snap/3.0/cli
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [How do I make LXD available for hosting?](#heading--lxd-setup)
 3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/4165#heading--set-up-ssh)
-4. [How do I add a VM host?](/t/adding-a-vm-host/3817)
+4. [How do I add a VM host?](/t/adding-a-vm-host/nnnn)
 5. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
 6. [How do I see resources for NUMA-node-bearing VM hosts?](#heading--numa-vm-host-resources)
 7. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
@@ -104,7 +103,7 @@ rad-begin /snap/3.0/ui
 1. [What is a VM host?](#heading--what-is-a-vm-host)
 2. [How do I make LXD available for hosting?](#heading--lxd-setup)
 3. [How do I set up SSH for use by libvirt?](/t/vm-host-networking/4166#heading--set-up-ssh)
-4. [How do I add a VM host?](/t/adding-a-vm-host/3818)
+4. [How do I add a VM host?](/t/adding-a-vm-host/nnnn)
 5. [How do I see resources for a specific NUMA node?](#heading--numa-node-resources)
 6. [How do I see the alignment between VM host interfaces and NUMA nodes?](#heading--numa-alignment)
 rad-end
