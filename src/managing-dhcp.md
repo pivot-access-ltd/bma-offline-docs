@@ -1,4 +1,3 @@
-
 MAAS enlists and commissions machines through the use of its DHCP server running on an untagged VLAN. Although this MAAS-managed DHCP can also be part of the deploy phase, an external DHCP server can optionally be used instead for this purpose. If MAAS detects an external DHCP server, it will display it on the rack controller's page, accessible by selecting 'Controllers' from the top menu in the web UI.
 
 In addition, the machine subnet is usually on the untagged VLAN. If not, you will need to route DHCP packets between the subnet and the MAAS-provided DHCP subnet. It is also possible to forward DHCP traffic from one VLAN to another using an external DHCP relay service.
@@ -9,9 +8,8 @@ This article delves into these issues, offering guidance on setting up and manag
 
 ####  Twelve questions you may have: 
 
-rad-begin /deb/2.9/cli
 1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-2. [What is post-commission configuration](/t/commission-machines/2476#heading--post-commission-configuration)
+2. [What is post-commission configuration](/t/commission-machines/nnnn#heading--post-commission-configuration)
 3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
 4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
 5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
@@ -22,112 +20,6 @@ rad-begin /deb/2.9/cli
 10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
 11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
 12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
-rad-end
-
-rad-begin /deb/2.9/ui
-1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-2. [What is post-commission configuration](/t/commission-machines/2477#heading--post-commission-configuration)
-3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
-9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
-12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
-rad-end
-
-rad-begin /deb/3.0/cli
-1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-2. [What is post-commission configuration](/t/commission-machines/3875#heading--post-commission-configuration)
-3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
-9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
-12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
-rad-end
-
-rad-begin /deb/3.0/ui
-1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-2. [What is post-commission configuration](/t/commission-machines/3876#heading--post-commission-configuration)
-3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
-9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
-12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
-rad-end
-
-rad-begin /snap/2.9/cli
-1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-2. [What is post-commission configuration](/t/commission-machines/2470#heading--post-commission-configuration)
-3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
-9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
-12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
-rad-end
-
-rad-begin /snap/2.9/ui
-1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-2. [What is post-commission configuration](/t/commission-machines/2471#heading--post-commission-configuration)
-3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
-9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
-12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
-rad-end
-
-rad-begin /snap/3.0/cli
-1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-2. [What is post-commission configuration](/t/commission-machines/3873#heading--post-commission-configuration)
-3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
-9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
-12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
-rad-end
-
-rad-begin /snap/3.0/ui
-1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-2. [What is post-commission configuration](/t/commission-machines/3874#heading--post-commission-configuration)
-3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
-9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
-12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
-rad-end
 
 <a href="#heading--enabling-dhcp"><h2 id="heading--enabling-dhcp">Enabling DHCP</h2></a>
 
@@ -186,71 +78,11 @@ MAAS also recognises when the subnet ARP cache is full, so that it can re-check 
 
 <a href="#heading--extending-a-reserved-dynamic-ip-range"><h2 id="heading--extending-a-reserved-dynamic-ip-range">Extending a reserved dynamic IP range</h2></a>
 
-rad-begin /deb/2.9/cli
-If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/ip-ranges/2764)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
-rad-end
-
-rad-begin /deb/2.9/ui
-If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/ip-ranges/2765)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
-rad-end
-
-rad-begin /deb/3.0/cli
-If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/ip-ranges/3967)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
-rad-end
-
-rad-begin /deb/3.0/ui
-If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/ip-ranges/3968)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
-rad-end
-
-rad-begin /snap/2.9/cli
-If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/ip-ranges/2758)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
-rad-end
-
-rad-begin /snap/2.9/ui
-If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/ip-ranges/2759)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
-rad-end
-
-rad-begin /snap/3.0/cli
-If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/ip-ranges/3965)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
-rad-end
-
-rad-begin /snap/3.0/ui
-If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/ip-ranges/3966)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
-rad-end
+If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/ip-ranges/nnnn)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
 
 <a href="#heading--external-dhcp-and-a-reserved-ip-range"><h2 id="heading--external-dhcp-and-a-reserved-ip-range">External DHCP and a reserved IP range</h2></a>
 
-rad-begin /deb/2.9/cli
-If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/ip-ranges/2764) to create such a range. It should correspond to the lease range of the external server.
-rad-end
-
-rad-begin /deb/2.9/ui
-If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/ip-ranges/2765) to create such a range. It should correspond to the lease range of the external server.
-rad-end
-
-rad-begin /deb/3.0/cli
-If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/ip-ranges/3967) to create such a range. It should correspond to the lease range of the external server.
-rad-end
-
-rad-begin /deb/3.0/ui
-If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/ip-ranges/3968) to create such a range. It should correspond to the lease range of the external server.
-rad-end
-
-rad-begin /snap/2.9/cli
-If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/ip-ranges/2758) to create such a range. It should correspond to the lease range of the external server.
-rad-end
-
-rad-begin /snap/2.9/ui
-If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/ip-ranges/2759) to create such a range. It should correspond to the lease range of the external server.
-rad-end
-
-rad-begin /snap/3.0/cli
-If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/ip-ranges/3965) to create such a range. It should correspond to the lease range of the external server.
-rad-end
-
-rad-begin /snap/3.0/ui
-If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/ip-ranges/3966) to create such a range. It should correspond to the lease range of the external server.
-rad-end
+If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/ip-ranges/nnnn) to create such a range. It should correspond to the lease range of the external server.
 
 <a href="#heading--dhcp-relay"><h2 id="heading--dhcp-relay">DHCP relay</h2></a>
 
