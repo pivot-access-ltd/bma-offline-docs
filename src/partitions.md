@@ -1,36 +1,4 @@
-
-rad-begin /deb/2.9/cli
-As with block devices (see [Block devices](/t/block-devices/2356)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
-rad-end
-
-rad-begin /deb/2.9/ui
-As with block devices (see [Block devices](/t/block-devices/2357)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
-rad-end
-
-rad-begin /deb/3.0/cli
-As with block devices (see [Block devices](/t/block-devices/3843)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
-rad-end
-
-rad-begin /deb/3.0/ui
-As with block devices (see [Block devices](/t/block-devices/3844)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
-rad-end
-
-rad-begin /snap/2.9/cli
-As with block devices (see [Block devices](/t/block-devices/2350)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
-rad-end
-
-rad-begin /snap/2.9/ui
-As with block devices (see [Block devices](/t/block-devices/2351)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
-rad-end
-
-rad-begin /snap/3.0/cli
-As with block devices (see [Block devices](/t/block-devices/3841)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
-rad-end
-
-rad-begin /snap/3.0/ui
-As with block devices (see [Block devices](/t/block-devices/3842)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
-rad-end
-
+As with block devices (see [Block devices](/t/block-devices/nnnn)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
 
 <a href="#heading--list-partitions"><h3 id="heading--list-partitions">List Partitions</h3></a>
 
