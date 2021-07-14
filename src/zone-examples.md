@@ -1,4 +1,3 @@
-
 This page provides several useful examples of MAAS zone usage.
 
 <a href="#heading--fault-tolerance"><h2 id="heading--fault-tolerance">Fault tolerance</h2></a>
