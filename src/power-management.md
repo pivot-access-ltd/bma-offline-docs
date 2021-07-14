@@ -1,4 +1,3 @@
-
 To manage a machine, MAAS must be able to power cycle it, usually through the machine's [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller) card.  Until you configure the power type, a newly-added machine can't be enlisted and used by MAAS.
 
 
@@ -37,6 +36,7 @@ rad-end
 
 rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 | CLI power_type code | Description |
+|:--------------------|:------------|
 | [amt](#heading--amt) |Intel AMT |
 | [apc](#heading--apc) | American Power Conversion (APC) PDU |
 | [dli](#heading--dli) | Digital Loggers, Inc. PDU |
@@ -76,12 +76,14 @@ The following catalogue helps to explain the fields in the "create machine" dial
 <a href="#heading--amt"><h3 id="heading--amt">Intel AMT</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | Power password | Password to access unit | Optional |
 | Power address | IP address of unit | Required |
 
 <a href="#heading--apc"><h3 id="heading--apc">American Power Conversion (APC) PDU</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | IP for APC PDU | IP address of unit | Required |
 | APU PDU node outlet number (1-16) | PDU node outlet number | Required |
 | Power ON outlet delay (seconds) | outlet power ON delay | Optional, default=5 |
@@ -89,6 +91,7 @@ The following catalogue helps to explain the fields in the "create machine" dial
 <a href="#heading--dli"><h3 id="heading--dli">Digital Loggers, Inc. PDU</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | Outlet ID | outlet ID | Required |
 | Power address | IP address of unit | Required |
 | Power user | Username to login | Optional |
@@ -97,6 +100,7 @@ The following catalogue helps to explain the fields in the "create machine" dial
 <a href="#heading--hmc"><h3 id="heading--hmc">IBM Hardware Management Console (HMC)</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | IP for HMC | IP address of unit | Required |
 | HMC username | Username to login | Optional |
 | HMC password | Password to access unit | Optional |
@@ -108,6 +112,7 @@ rad-begin  /snap/2.9/ui  /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
 <a href="#heading--lxd"><h3 id="heading--lxd">LXD VMs</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | LXD address | IP address of unit | Required |
 | Instance name | LXD container instance name | Required |
 | LXD password | Password to access unit | Optional |
@@ -124,6 +129,7 @@ rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
 
 | Form field | Description | Choices | Required |
+|:-----|:-----|:-----|:-----|:-----|
 | Power driver | Power driver |`LAN [IPMI 1.5]` | Required |
 | | | `LAN_2_0 [IPMI 2.0]`|
 | Power boot type | Boot type | `Automatic` | Required |
@@ -155,6 +161,7 @@ rad-end
 <a href="#heading--moonshot"><h3 id="heading--moonshot">HP Moonshot - iLO4 (IPMI)</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | Power address | IP address of unit | Required |
 | Power user | Username to login | Optional |
 | Power password | Password to access unit | Optional |
@@ -163,6 +170,7 @@ rad-end
 <a href="#heading--mscm"><h3 id="heading--mscm">HP Moonshot - iLO Chassis Manager</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | IP for MSCM CLI API | IP address of unit | Required |
 | MSCM CLI API user | Username to login | Optional |
 | MSCM CLI API password | Password to access unit | Optional |
@@ -173,6 +181,7 @@ rad-end
 <a href="#heading--mscm"><h3 id="heading--mscm">Microsoft OCS - Chassis Manager</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | Power address | IP address of unit | Required |
 | Power port | Port where unit is attached | Optional |
 | Power user | Username to login | Optional |
@@ -182,6 +191,7 @@ rad-end
 <a href="#heading--nova"><h3 id="heading--nova">OpenStack Nova</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | Host UUID | Host UUID | Required |
 | Tenant name | Tenant name | Required |
 | Username | Username to login | Required |
@@ -192,6 +202,7 @@ rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
 <a href="#heading--proxmox"><h3 id="heading--proxmox">Proxmox</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | Power type | Proxmox | Required |
 | Host name or IP | Power address for the Proxmox driver | Required |
 | Username, including realm | Power user, along with realm (i.e., Username@Realm | Required |
@@ -206,6 +217,7 @@ rad-end
 <a href="#heading--openbmc"><h3 id="heading--openbmc">OpenBMC Power Driver</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | OpenBMC address | IP address of unit | Required |
 | OpenBMC user | Username to login | Required |
 | OpenBMC password | Password to access unit | Required |
@@ -213,6 +225,7 @@ rad-end
 <a href="#heading--recs_box"><h3 id="heading--recs_box">Christmann RECS-Box Power Driver</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | Node ID | Node ID | Required |
 | Power address | IP address of unit | Required |
 | Power port | Port where unit is attached | Optional |
@@ -222,6 +235,7 @@ rad-end
 <a href="#heading--redfish"><h3 id="heading--redfish">Redfish</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | Redfish address | IP address of unit | Required |
 | Redfish user | Username to login | Required |
 | Redfish password | Password to access unit | Required |
@@ -232,6 +246,7 @@ rad-end
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
 
 | Form field | Description | Choices | Required |
+|:-----|:-----|:-----|:-----|
 | System ID | System ID || Required |
 | Power address | IP address of unit || Required |
 | Power user | Username to login || Optional |
@@ -243,6 +258,7 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 <a href="#heading--ucsm"><h3 id="heading--ucsm">Cisco UCS Manager</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | Server UUID | Server UUID | Required |
 | URL for XML API | XML API URL | Required |
 | API user | API user | Optional |
@@ -251,6 +267,7 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 <a href="#heading--virsh"><h3 id="heading--virsh">virsh - libvirt KVM</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | Address | URL of VM | Required |
 | Password | API password | Optional |
 | Virsh VM ID | libvirt VM UUID | Required |
@@ -258,6 +275,7 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 <a href="#heading--vmware"><h3 id="heading--vmware">VMware</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | VM Name | VM name (if UUID unknown) | Optional |
 | VM UUID | VM UUID (if known) | Optional |
 | VMware IP | IP address of VM | Required |
@@ -269,6 +287,7 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 <a href="#heading--wedge"><h3 id="heading--wedge">Facebook's Wedge</h3></a>
 
 | Form field | Description | Required |
+|:-----|:-----|:-----|
 | IP address | IP address of unit | Required |
 | Power user | Username to access unit | Optional |
 | Power password | Password to access unit | Optional |
@@ -293,6 +312,7 @@ It's important to understand that the Webhook power driver is more generic than 
 To that end, the "Required" column for this driver refers only to whether Webhook requires a value in each field.  Just because a field is optional for Webhook itself does not mean that the underlying power driver will ultimately allow that field to be unspecified.
 
 | Form field | Description | Required (by Webhook) |
+|:-----|:-----|:-----|
 | Power type | Webhook (from drop-down list) | Required |
 | URI to power on the node | URI to access power driver's API for power on | Required |
 | URI to power off the node | URI to access power driver's API for power off | Required |
@@ -325,6 +345,7 @@ rad-end
 
 rad-begin   /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 | CLI power_type code | Description |
+|:-----|:-----|
 | [amt](#heading--amt) |Intel AMT |
 | [apc](#heading--apc) | American Power Conversion (APC) PDU |
 | [dli](#heading--dli) | Digital Loggers, Inc. PDU |
@@ -349,6 +370,7 @@ rad-end
 
 rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 | CLI power_type code | Description |
+|:-----|:-----|
 | [amt](#heading--amt) |Intel AMT |
 | [apc](#heading--apc) | American Power Conversion (APC) PDU |
 | [dli](#heading--dli) | Digital Loggers, Inc. PDU |
@@ -383,6 +405,7 @@ Once you've successfully processed the command (as indicated by a stream of JSON
 All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type` | `amt` | Required |
 | `power_address` | IP address of unit | Required |
 | `power_pass` | Password to access unit | Optional |
@@ -392,6 +415,7 @@ All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI
 All parameters are entered as `key=value`, e.g., `power_type=apc`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type` | `apc` | Required |
 | `power_address` | IP address of unit | Required |
 | `node_outlet` | PDU node outlet number | Required |
@@ -402,6 +426,7 @@ All parameters are entered as `key=value`, e.g., `power_type=apc`.  The MAAS CLI
 All parameters are entered as `key=value`, e.g., `power_type=dli`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type` | `dli` | Required |
 | `outlet_id` | outlet ID | Required |
 | `power_address` | IP address of unit | Required |
@@ -413,6 +438,7 @@ All parameters are entered as `key=value`, e.g., `power_type=dli`.  The MAAS CLI
 All parameters are entered as `key=value`, e.g., `power_type=eaton`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type` | `eaton` | Required |
 | `power_address` | IP address of unit | Required |
 | `node_outlet` | PDU node outlet number | Required |
@@ -423,6 +449,7 @@ All parameters are entered as `key=value`, e.g., `power_type=eaton`.  The MAAS C
 All parameters are entered as `key=value`, e.g., `power_type=hmc`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type` | `hmc` | Required |
 | `power_address` | IP address of unit | Required |
 | `server_name` | HMC managed server name | Required |
@@ -437,6 +464,7 @@ rad-begin  /snap/2.9/cli  /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
 All parameters are entered as `key=value`, e.g., `power_type=lxd`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type` | `lxd` | Required |
 | `power_address` | IP address of unit | Required |
 | `instance_name` | LXD container instance name | Required |
@@ -455,6 +483,7 @@ All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
 
 | Parameter | Description | Choices | Required |
+|:-----|:-----|:-----|
 | `power_type` | `ipmi` | | Required |
 | `power_driver` | Power driver |`LAN [IPMI 1.5]` | Required |
 | | | `LAN_2_0 [IPMI 2.0]`|
@@ -488,6 +517,7 @@ Manual power configuration means exactly that -- manually configured at the unit
 All parameters are entered as `key=value`, e.g., `power_type=moonshot`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type | `moonshot` | Required |
 | `power_address` | IP address of unit | Required |
 | `power_hwaddress` | Hardware address of unit | Required |
@@ -499,6 +529,7 @@ All parameters are entered as `key=value`, e.g., `power_type=moonshot`.  The MAA
 All parameters are entered as `key=value`, e.g., `power_type=mscm`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type | `mscm` | Required |
 | `power_address` | IP address of unit | Required |
 | `node_id` | cXnY | Required |
@@ -512,6 +543,7 @@ All parameters are entered as `key=value`, e.g., `power_type=mscm`.  The MAAS CL
 All parameters are entered as `key=value`, e.g., `power_type=msftocs`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type | `msftocs` | Required |
 | `power_address` | IP address of unit | Required |
 | `blade_id` | Blade ID (usu. 1-24) | Required |
@@ -524,6 +556,7 @@ All parameters are entered as `key=value`, e.g., `power_type=msftocs`.  The MAAS
 All parameters are entered as `key=value`, e.g., `power_type=nova`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type | `nova` | Required |
 | `nova_id` | Host UUID | Required |
 | `os_tenantname` | Tenant name | Required |
@@ -536,6 +569,7 @@ All parameters are entered as `key=value`, e.g., `power_type=nova`.  The MAAS CL
 All parameters are entered as `key=value`, e.g., `power_type=openbmc`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type` | `openbmc` | Required |
 | `power_address` | IP address of unit | Required |
 | `power_user` | Username to login | Required |
@@ -546,6 +580,7 @@ All parameters are entered as `key=value`, e.g., `power_type=openbmc`.  The MAAS
 All parameters are entered as `key=value`, e.g., `power_type=recs_box`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type | `recs_box` | Required |
 | `node_id` | Node ID | Required |
 | `power_address` | IP address of unit | Required |
@@ -558,6 +593,7 @@ All parameters are entered as `key=value`, e.g., `power_type=recs_box`.  The MAA
 All parameters are entered as `key=value`, e.g., `power_type=redfish`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type | `redfish` | Required |
 | `power_address` | IP address of unit | Required |
 | `power_user` | Username to login | Required |
@@ -571,6 +607,7 @@ All parameters are entered as `key=value`, e.g., `power_type=sm15k`.  The MAAS C
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
 
 | Parameter | Description | Choices | Required |
+|:-----|:-----|:-----|:-----|
 | `power_type` | `sm15k` | | Required |
 | `system_id` | System ID || Required |
 | `power_address` | IP address of unit || Required |
@@ -585,6 +622,7 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 All parameters are entered as `key=value`, e.g., `power_type=ucsm`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type` | `ucsm` | Required |
 | `uuid` | Server UUID | Required |
 | `power_address` | URL for XML API | Required |
@@ -596,6 +634,7 @@ All parameters are entered as `key=value`, e.g., `power_type=ucsm`.  The MAAS CL
 All parameters are entered as `key=value`, e.g., `power_type=virsh`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type` | `virsh` | Required |
 | `power_id` | libvirt VM UUID | Required |
 | `power_address` | URL of VM | Required |
@@ -606,6 +645,7 @@ All parameters are entered as `key=value`, e.g., `power_type=virsh`.  The MAAS C
 All parameters are entered as `key=value`, e.g., `power_type=vmware`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type` | `vmware` | Required |
 | `power_vm_name` | VM name (if UUID unknown) | Optional |
 | `power_uuid` | VM UUID (if known) | Optional |
@@ -620,6 +660,7 @@ All parameters are entered as `key=value`, e.g., `power_type=vmware`.  The MAAS 
 All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 | Parameter | Description | Required |
+|:-----|:-----|:-----|
 | `power_type` | `wedge` | Required |
 | `power_address` | IP address of unit | Required |
 | `power_user` | Username to access unit | Optional |
