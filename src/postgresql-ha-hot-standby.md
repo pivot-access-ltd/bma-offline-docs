@@ -1,4 +1,3 @@
-
 **Disclaimer: These *notes* give an idea of what is involved in setting up 'hot standby' HA mode in PostgreSQL. The below procedures are not regularly tested. Please use the [PostgreSQL documentation](https://www.postgresql.org/docs/9.5/static/high-availability.html) when setting up HA on PostgreSQL.**
 
 Five variables are used on this page:
