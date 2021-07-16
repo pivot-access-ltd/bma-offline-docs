@@ -1,36 +1,23 @@
 MAAS is built to manage machines, including the operating systems on those machines. Enlistment and commissioning are features that make it easier to start managing a machine -- as long as that machine has been configured to netboot. Enlistment enables users to simply connect a machine, configure the firmware properly, and power it on so that MAAS can find it and add it.
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
-#### Eight questions you may have:
+* [About enlisting machines](#heading---about-enlising-machines)
+* [About commissioning machines](#heading--about-commissioning-machines)
+* [About commissioning NUMA and SR-IOV nodes](#heading--about-numa-sriov-commissioning)
+* [About MAAS commissioning scripts](#heading--about-maas-commissioning-scripts)
+* [About post-commission configuration](#heading--about-post-commission-configuration)
+* [About bond and bridge interfaces](#heading--about-bond-and-bridge-interfaces)
 
-1. [Tell me about enlistment vs. commissioning.](#heading--enlistment-v-commissioning)
-2. [How are machines commissioned?](#heading--commissioning-machines)
-3. [How can I commission NUMA and SR-IOV nodes?](#heading--numa-sriov-commissioning)
-4. [What are MAAS commissioning scripts?](#heading--commissioning-scripts)
-5. [What post-commission configuration is possible?](#heading--post-commission-configuration)
-6. [What is a bond interface and how do I create one?](#heading--bond-interfaces)
-7. [What is a bridge interface and how do I create one?](#heading--bridge-interfaces)
-8. [How do I assign an interface to a fabric?](#heading--assign-a-network-interface-to-a-fabric)
-rad-end
+----
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
-#### Twelve questions you may have:
+* [How to create a bond interface](#heading--bond-interfaces)
+* [How to create a bridge interface](#heading--bridge-interfaces)
+* [How to delete an interface](#heading--delete-an-interface)
+* [How to assign a network interface to a fabric](#heading--assign-a-network-interface-to-a-fabric)
+* [How to discover interface identifiers](#heading--interface-identifiers)
+* [How to create a VLAN interface](#heading--create-a-vlan-interface)
+* [How to delete a VLAN interface](#heading--delete-a-vlan-interface)
 
-1. [Tell me about enlistment vs. commissioning.](#heading--enlistment-v-commissioning)
-2. [How are machines commissioned?](#heading--commissioning-machines)
-3. [How can I commission NUMA and SR-IOV nodes?](#heading--numa-sriov-commissioning)
-4. [What are MAAS commissioning scripts?](#heading--commissioning-scripts)
-5. [What post-commission configuration is possible?](#heading--post-commission-configuration)
-6. [What is a bond interface and how do I create one?](#heading--bond-interfaces)
-7. [What is a bridge interface and how do I create one?](#heading--bridge-interfaces)
-8. [How do I assign an interface to a fabric?](#heading--assign-a-network-interface-to-a-fabric)
-9. [How do I discover interface identifiers?](#heading--interface-identifiers)
-10. [How do I delete an interface?](#heading--delete-an-interface)
-11. [How do I create a VLAN interface?](#heading--create-a-vlan-interface)
-12. [How do I delete a VLAN interface?](#heading--delete-a-vlan-interface)
-rad-end
-
-<a href="#heading--enlistment-v-commissioning"><h2 id="heading--enlistment-v-commissioning">Enlistment versus commissioning</h2></a>
+<a href="#heading---about-enlising-machines"><h2 id="heading---about-enlising-machines">About enlisting machines</h2></a>
 
 Enlistment happens when MAAS starts; it reaches out on connected subnets to locate any nodes -- that is, devices and machines -- that reside on those subnets. MAAS finds a machine that's configured to netboot (e.g., via PXE), boots that machine into Ubuntu, and then sends cloud-init user data which runs standard (i.e., built-in) commissioning scripts. The machine actually adds itself over the MAAS API, and then requests permission to send commissioning data.
 
@@ -42,7 +29,7 @@ When you configure a machine to netboot -- and turn it on while connected to the
 Commissioning requires 60 seconds.
 [/note]
 
-<a href="#heading--commissioning-machines"><h2 id="heading--commissioning-machines">How machines are commissioned</h2></a>
+<a href="#heading--about-commissioning-machines"><h2 id="heading--about-commissioning-machines">About commissioning machines</h2></a>
 
 When MAAS commissions a machine, the following sequence of events takes place:
 
@@ -124,7 +111,7 @@ rad-end
 
 Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2896) to this machine.  The next step is [deployment](/t/deploy-machines/nnnn).
 
-<a href="#heading--numa-sriov-commissioning"><h3 id="heading--numa-sriov-commissioning">Commission NUMA and SR-IOV nodes</h3></a>
+<a href="#heading--about-numa-sriov-commissioning"><h2 id="heading--about-numa-sriov-commissioning">About commissioning NUMA and SR-IOV nodes</h2></a>
 
 If you are using the NUMA architecture, MAAS versions 2.7 and higher guarantee that machines are assigned to a single NUMA node that contains all the machine's resources. Node boundaries are critical, especially in vNUMA situations.  Splitting nodes can create unnecessary latency.  You want the NUMA node boundaries to match VM boundaries if at all possible.
 
@@ -138,7 +125,7 @@ rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
 When using these nodes, you can specify a node index for interfaces and physical block devices.  MAAS will display the NUMA node index and details, depending upon your configuration, to include the count of NUMA nodes, number of CPU cores, memory, NICs, and node spaces for bonds and block devices.  You can also filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID, among others.
 rad-end
 
-<a href="#heading--commissioning-scripts"><h2 id="heading--commissioning-scripts">MAAS commissioning scripts</h2></a>
+<a href="#heading--about-maas-commissioning-scripts"><h2 id="heading--about-maas-commissioning-scripts">About MAAS commissioning scripts</h2></a>
 
 When a machine boots, MAAS first instructs it to run cloud-init to set up SSH keys (during commissioning only), set up NTP, and execute a script that runs other commissioning scripts.  Currently, the sequence of MAAS-provided commissioning scripts proceeds like this:
 
@@ -190,9 +177,15 @@ Commissioning runs the same dozen or so scripts as enlistment, gathering all the
 
 In both enlistment and commissioning, MAAS uses either the MAC address or the UUID to identify machines.  Currently, because some machine types encountered by MAAS do **not** use unique MAC addresses, we are trending toward using the UUID.
 
-<a href="#heading--post-commission-configuration"><h2 id="heading--post-commission-configuration">Post-commission configuration</h2></a>
+<a href="#heading--about-post-commission-configuration"><h2 id="heading--about-post-commission-configuration">About post-commission configuration</h2></a>
 
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces.
+
+<a href="#heading--about-bond-and-bridge-interfaces"><h2 id="heading--about-bond-and-bridge-interfaces">About bond and bridge interfaces</h2></a>
+
+A bond interface is used to aggregate two or more physical interfaces into a single logical interface. Combining multiple network connections in parallel can increase network throughput beyond what a single NIC will allow.  It also provides some redundancy in case one of the NICs should fail.  More information about the theory behind bonded NICs is found in the [relevant IEEE standard](https://1.ieee802.org/tsn/802-1ax-rev/).
+
+A network bridge may be useful if you intend to put virtual machines or containers on the machine.  You can create a bridge by selecting an interface and clicking the now-active "Create bridge" button. A form will appear that allows you to configure a MAC address, STP, and an appropriate tag.
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 From a machine's "Interfaces" page, click the menu icon for the interface to be edited and select "Edit Physical" from the resulting menu:
@@ -248,9 +241,7 @@ rad-end
 
 See [Concepts and terms](/t/concepts-and-terms/785#heading--ip-ranges) for the definitions of reserved range types.
 
-<a href="#heading--bond-interfaces"><h3 id="heading--bond-interfaces">Bond interfaces and how to create one</h3></a>
-
-A bond interface is used to aggregate two or more physical interfaces into a single logical interface. Combining multiple network connections in parallel can increase network throughput beyond what a single NIC will allow.  It also provides some redundancy in case one of the NICs should fail.  More information about the theory behind bonded NICs is found in the [relevant IEEE standard](https://1.ieee802.org/tsn/802-1ax-rev/).
+<a href="#heading--bond-interfaces"><h2 id="heading--bond-interfaces">How to create a bond interface</h2></a>
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 A bond can be created with the following command:
@@ -343,6 +334,8 @@ The MAC address defaults to the MAC address of the primary interface.
 [/note]
 rad-end
 
+<a href="#heading--bridge-interfaces"><h2 id="heading--bridge-interfaces">How to create a bridge interface</h2></a>
+
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 A bridge interface is created with the following syntax:
 
@@ -380,8 +373,19 @@ The following parameters may be applied when creating a bridge:
 10. `accept_ra`: Optional boolean.  Accept router advertisements. (IPv6 only)
 
 11. `autoconf`: Optional boolean.  Perform stateless autoconfiguration. (IPv6 only)
+rad-end
 
-<a href="#heading--delete-bridge-interface"><h3 id="heading--delete-bridge-interface">Delete a bridge interface</h3></a>
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+<a href="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png"></a>
+
+Press the "Save" button when you're done.
+rad-end
+
+<a href="#heading--delete-an-interface"><h2 id="heading--delete-an-interface">How to delete an interface</h2></a>
+
+rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui  /snap/3.0/ui
+An interface can only be deleted via the MAAS CLI.
+rad-end
 
 The "delete" command can be used to delete a bridge interface, a bond interface or a physical interface:
 
@@ -403,42 +407,12 @@ Machine-readable output follows:
 ```
 
 Note that while the label is presented, there is no machine-readable output expected after the successful execution of the delete command.
-rad-end
 
+<a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">How to assign a network interface to a fabric</h2></a>
 
-<a href="#heading--bridge-interfaces"><h3 id="heading--bridge-interfaces">Bridge interfaces and how to create one</h3></a>
-
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
-
-A network bridge may be useful if you intend to put virtual machines or containers on the machine.  You can create a bridge by selecting an interface and clicking the now-active "Create bridge" button. A form will appear that allows you to configure a MAC address, STP, and an appropriate tag.
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png"></a>
-
-Press the "Save" button when you're done.
-rad-end
-
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
-
-A bridge interface is created with the following syntax:
-
-``` bash
-maas $PROFILE interfaces create-bridge $SYSTEM_ID name=$BRIDGE_NAME \
-parent=$IFACE_ID
-```
-
-Use 'parent' to define the primary interface used for the bridge:
-
-``` bash
-maas admin interfaces create-bridge 4efwb4 name=bridged0 parent=4
-```
-
-
-rad-end
-
-
-<a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">Assign a network interface to a fabric</h2></a>
-
+rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui  /snap/3.0/ui
 A network interface may be assigned to a fabric with the MAAS CLI only.
+rad-end
 
 This task is made easier with the aid of the `jq` utility. It filters the `maas` command (JSON formatted) output and prints it in the desired way, which allows you to view and compare data quickly. Go ahead and install it:
 
@@ -517,7 +491,11 @@ The output shows that the interface is now on fabric-0:
 {"id":9,"name":"eth1","mac":"52:54:00:01:01:02","vid":null,"fabric":null}
 ```
 
-<a href="#heading--interface-identifiers"><h2 id="heading--interface-identifiers">Interface identifiers</h2></a>
+<a href="#heading--interface-identifiers"><h2 id="heading--interface-identifiers">How to discover interface identifiers</h2></a>
+
+rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui  /snap/3.0/ui
+Interface identifiers can only be discovered via the MAAS CLI.
+rad-end
 
 The MAAS CLI uses a numeric interface identifier for many interface operations. Use the following command to retrieve the identifier(s):
 
@@ -536,32 +514,11 @@ Look for either id or the number at the end of an interface's resource URI, such
 "resource_uri": "/MAAS/api/2.0/nodes/4efwb4/interfaces/15/"
 ```
 
-<a href="#heading--delete-an-interface"><h2 id="heading--delete-an-interface">Delete an interface</h2></a>
+<a href="#heading--create-a-vlan-interface"><h2 id="heading--create-a-vlan-interface">How to create a VLAN interface</h2></a>
 
-The 'delete' command can be used to delete a bridge interface, a bond interface or a physical interface:
-
-``` bash
-maas $PROFILE interface delete $SYSTEM_ID $IFACE_ID
-```
-
-For example:
-
-``` bash
-maas admin interface delete 4efwb4 15
-```
-
-The following is output after the successful deletion of an interface:
-
-``` no-highlight
-Success.
-Machine-readable output follows:
-```
-
-[note]
-There is no machine-readable output after the successful execution of the delete command.
-[/note]
-
-<a href="#heading--create-a-vlan-interface"><h2 id="heading--create-a-vlan-interface">Create a VLAN interface</h2></a>
+rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui  /snap/3.0/ui
+VLAN interfaces can only be created via the MAAS CLI.
+rad-end
 
 To create a VLAN interface, use the following syntax:
 
@@ -659,7 +616,11 @@ Machine-readable output follows:
 }
 ```
 
-<a href="#heading--delete-a-vlan-interface"><h2 id="heading--delete-a-vlan-interface">Delete a VLAN interface</h2></a>
+<a href="#heading--delete-a-vlan-interface"><h2 id="heading--delete-a-vlan-interface">How to delete a VLAN interface</h2></a>
+
+rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui  /snap/3.0/ui
+VLAN interfaces can only be deleted via the MAAS CLI.
+rad-end
 
 The following command outlines the syntax required to delete a VLAN interface from the command line:
 
