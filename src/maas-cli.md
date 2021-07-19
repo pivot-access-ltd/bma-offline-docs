@@ -28,7 +28,7 @@ To install the MAAS CLI, execute this command:
 sudo apt install maas-cli
 ```
 
-<a href="#heading--create-an-administrator"><h2 id="heading--create-an-administrator">How to reate an administrator account</h2></a>
+<a href="#heading--create-an-administrator"><h2 id="heading--create-an-administrator">How to create an administrator account</h2></a>
 
 You can create one or more MAAS CLI administrator accounts like this:
 
