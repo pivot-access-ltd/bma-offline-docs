@@ -1,170 +1,162 @@
-This article will show you how to:
+<a href="#heading--about-installing-maas"><h2 id="heading--about-installing-maas">About installing MAAS</h2></a>
 
-1. [Prepare for MAAS installation](#heading--prepare-for-maas-installation)
-2. [Install and verify MAAS](#heading--install-and-verify-maas)
-3. [Configure MAAS](#heading--configure-maas)
+MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.
 
-Note that all headings are hyperlinks that can be bookmarked.
+<a href="#heading--maas-init-modes"><h3 id="heading--maas-init-modes">MAAS initialisation modes</h3></a>
 
-<a href="#heading--prepare-for-maas-installation"><h2 id="heading--prepare-for-maas-installation">Prepare for MAAS installation</h2></a>
+MAAS supports the following modes, which dictate what services will run on the local system:
+
+| Mode          | Region | Rack | Database | Description                           |
+|:--------------|:------:|:----:|:--------:|:--------------------------------------|
+| `region`      | X      |      |          | Region API server only                |
+| `rack`        |        | X    |          | Rack controller only                  |
+| `region+rack` | X      | X    |          | Region API server and rack controller |
+| `none`        |        |      |          | Reinitialises MAAS and stops services |
+
+<a href="#heading--ssh-keys"><h3 id="heading--ssh-keys">SSH keys</h3></a>
+
+MAAS uses your Launchpad or Github SSH keys to access machines that have been deployed.  Normally, you enter this key during the initialisation of MAAS.  If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.
+
+<a href="#heading--maas-url"><h3 id="heading--maas-url">MAAS URL</h3></a>
+
+All run modes (except `none`) prompt for a MAAS URL, interpreted differently depending on the mode:
+
+-   `region`: Used to create a new region controller.
+-   `rack`: Used to locate the region controller.
+
+<a href="#heading--shared-secret"><h3 id="heading--shared-secret">Shared secret</h3></a>
+
+The 'rack' and 'region+rack' modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.
+
+<a href="#heading--how-to-install-maas-main"><h2 id="heading--how-to-install-maas-main">How to install MAAS</h2></a>
+
+This article will show you:
+
+* [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
+rad-begin /snap/3.0/ui /snap/3.0/cli
+* [How to upgrade from an earlier snap version to MAAS 3.0](#heading--upgrade-from-earlier-snap-to-3-0)
+* [How to do a fresh snap install of MAAS 3.0](#heading--fresh-install-3-0-snap)
+rad-end
+rad-begin /deb/3.0/ui /deb/3.0/cli
+* [How to ugprade from MAAS 2.9 to MAAS 3.0](#heading--upgrade-from-deb-2-9-to-3-0)
+* [How to upgrade from MAAS 2.8 or lower to MAAS 3.0](#heading--upgrade-from-deb-2-8-to-3-0)
+* [How to do a fresh install of MAAS 3.0 from packages](#heading--fresh-install-3-0-packages)
+* [How to create a MAAS user](#heading--create-a-maas-user)
+rad-end
+rad-begin /snap/2.9/ui /snap/2.9/cli 
+* [How to upgrade from an earlier snap version to MAAS 2.9](#heading--upgrade-from-earlier-snap-to-2-9)
+* [How to do a fresh snap install of MAAS 2.9](#heading--fresh-install-2-9-snap)
+rad-end
+rad-begin /deb/2.9/ui /deb/2.9/cli
+* [How to upgrade from MAAS 2.8 or lower to MAAS 2.9](#heading--upgrade-from-deb-2-8-to-2-9)
+* [How to do a fresh install of MAAS 2.9 from packages](#heading--fresh-install-2-9-packages)
+* [How to create a MAAS user](#heading--create-a-maas-user)
+rad-end
+rad-begin /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli
+* [How to initialise MAAS for a test or POC environment](#heading--init-maas-poc)
+* [How to initialise MAAS for a production configuration](#heading--init-maas-production)
+rad-end
+* [How to check the status of MAAS services](#heading--service-status)
+* [How to re-initialise MAAS](#heading--reinitialising-maas)
+* [How to list additional MAAS initialisation options](#heading--additional-init-options)
+* [How to configure MAAS](#heading--configure-maas)
+
+Note that all headings are hyperlinks for bookmarking.
+
+<a href="#heading--check-system-requirements-for-maas"><h2 id="heading--check-system-requirements-for-maas">How to check system requirements for MAAS</h2></a>
 
 Before installing MAAS for the first time, you should make sure that the target system meets the [minimum hardware requirements](/t/maas-requirements/nnnn#heading--minimum-hardware-requirements).
 
+rad-begin /snap/3.0/ui /snap/3.0/cli
+<a href="#heading--upgrade-from-earlier-snap-to-3-0"><h2 id="heading--upgrade-from-earlier-snap-to-3-0">How to upgrade from an earlier snap version to MAAS 3.0</h2></a>
 
-rad-begin /deb/2.9/ui /deb/2.9/cli
-If you are running MAAS 2.8, you must also make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
+If you want to upgrade from a earlier snap version to the 3.0 snap, and you are using a `region+rack` configuration, use this command:
 
-```
-lsb_release -a
-```
+    $ sudo snap refresh --channel=3.0/stable maas
 
-The response should look something like this:
+After entering your password, the snap will refresh from the 3.0 channel.  You will **not** need to re-initialise MAAS.
 
-```
-Distributor ID:	Ubuntu
-Description:	Ubuntu xx.yy
-Release:	xx.yy
-Codename:	$RELEASE_NAME
-```
-
-The minimum "xx.yy" required for MAAS 2.9 is "20.04," codenamed "focal."
-
-[note]
-If you are **upgrading** from MAAS 2.3 (or earlier) to MAAS 2.9, **do not follow Step 4 below**; instead, see [Upgrading from MAAS 2.3 - 2.8](#heading--upgrading-from-maas-2-3-2-8), below.
-[/note]
-
-If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:
-
-1. Upgrade the release:
-
-```
-sudo do-release-upgrade --allow-third-parties
-```
-
-2. Accept the defaults for any questions asked by the upgrade script.
-
-3. Reboot the machine when requested.
-
-4. Check whether the upgrade was successful:
-
-```
-lsb_release -a
-```
-
-A successful upgrade should respond with output similar to the following:
-
-```
-Distributor ID:	Ubuntu
-Description:	Ubuntu 20.04(.nn) LTS
-Release:	20.04
-Codename:	focal
-```
-
-<a href="#heading--upgrading-from-maas-2-3-2-8"><h4 id="heading--upgrading-from-maas-2-3-2-8">Upgrading from MAAS 2.3-2.8 to MAAS 2.9</h4></a>
-
-[note]
-If you're upgrading from any version less than MAAS 2.8: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.
-[/note]
-
-1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
-
-2. Add the MAAS 2.9 PPA to your repository list with the following command, ignoring any apparent error messages:
-
-```
-sudo add-apt-repository ppa:maas/2.9
-```
-
-3. Run the release upgrade like this, answering any questions with the given default values:
-
-```
-sudo do-release-upgrade --allow-third-parties
-```
-
-4. Check whether your upgrade has been successful by entering:
-
-```
-lsb_release -a
-```
-
-If the ugprade was successful, this command should yield output similar to the following:
-
-```
-No LSB modules are available.
-Distributor ID:	Ubuntu
-Description:	Ubuntu 20.04(.nn) LTS
-Release:	20.04
-Codename:	focal
-```
-
-5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the latest stable 2.9 release.
-
-6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 2.9.
-
+If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 rad-end
 
 rad-begin /deb/3.0/ui /deb/3.0/cli
-Make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
-
-```
-lsb_release -a
-```
-
-The response should look something like this:
-
-```
-Distributor ID:	Ubuntu
-Description:	Ubuntu xx.yy
-Release:	xx.yy
-Codename:	$RELEASE_NAME
-```
-
-The minimum "xx.yy" required for MAAS 3.0 is "20.04," codenamed "focal."
-
-[note]
-If you are **upgrading** from MAAS 2.3 (or earlier) to MAAS 3.0, **do not follow Step 4 below**; instead, see [Upgrading from MAAS 2.3-2.9](#heading--upgrading-from-maas-2-3-2-9), below.
-[/note]
-
-If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:
-
-1. Upgrade the release:
-
-```
-sudo do-release-upgrade --allow-third-parties
-```
-
-2. Accept the defaults for any questions asked by the upgrade script.
-
-3. Reboot the machine when requested.
-
-4. Check whether the upgrade was successful:
-
-```
-lsb_release -a
-```
-
-A successful upgrade should respond with output similar to the following:
-
-```
-Distributor ID:	Ubuntu
-Description:	Ubuntu 20.04(.nn) LTS
-Release:	20.04
-Codename:	focal
-```
-
-<a href="#heading--upgrading-from-maas-2-3-2-9"><h3 id="heading--upgrading-from-maas-2-3-2-9">Upgrading from MAAS 2.3-2.9 to MAAS 3.0</h3></a>
-
-[note]
-If you're upgrading from any version less than MAAS 2.9: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.
-[/note]
-
-<a href="#heading--upgrading-from-maas-2-3to-3-0"><h3 id="heading--upgrading-from-maas-2-3to-3-0">Upgrading from MAAS 2.3 - 2.8 to MAAS 3.0</h3></a>
+<a href="#heading--upgrade-from-deb-2-9-to-3-0"><h2 id="heading--upgrade-from-deb-2-9-to-3-0">How to ugprade from MAAS 2.9 to MAAS 3.0</h2></a>
 
 1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
 
 2. Add the MAAS 3.0 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```
-sudo apt-add-repository paa:maas/3.0
+sudo apt-add-repository ppa:maas/3.0
+```
+
+3. Run the MAAS upgrade like this:
+
+```
+sudo apt update
+sudo apt upgrade maas
+```
+
+4. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.0 release.
+
+5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.0.
+
+<a href="#heading--upgrade-from-deb-2-8-to-3-0"><h2 id="heading--upgrade-from-deb-2-8-to-3-0">How to upgrade from 2.8 or lower to MAAS 3.0</h2></a>
+
+If you are running MAAS 2.8 or lower, you must also make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
+
+```
+lsb_release -a
+```
+
+The response should look something like this:
+
+```
+Distributor ID:	Ubuntu
+Description:	Ubuntu xx.yy
+Release:	xx.yy
+Codename:	$RELEASE_NAME
+```
+
+The minimum "xx.yy" required for MAAS 3.0 is "20.04," code-named "focal."
+
+If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:
+
+1. Upgrade the release:
+
+```
+sudo do-release-upgrade --allow-third-parties
+```
+
+2. Accept the defaults for any questions asked by the upgrade script.
+
+3. Reboot the machine when requested.
+
+4. Check whether the upgrade was successful:
+
+```
+lsb_release -a
+```
+
+A successful upgrade should respond with output similar to the following:
+
+```
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04(.nn) LTS
+Release:	20.04
+Codename:	focal
+```
+
+[note]
+If you're upgrading from MAAS version 2.8 or lower to version 3.0: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.
+[/note]
+
+1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+
+2. Add the MAAS 3.0 PPA to your repository list with the following command, ignoring any apparent error messages:
+
+```
+sudo apt-add-repository ppa:maas/3.0
 ```
 
 3. Run the release upgrade like this, answering any questions with the given default values:
@@ -192,278 +184,22 @@ Codename:	focal
 5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.0 release.
 
 6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.0.
-
-<a href="#heading--upgrading-from-maas-2-9-to-3-0"><h3 id="heading--upgrading-from-maas-2-9-to-3-0">Upgrading from MAAS 2.9 to MAAS 3.0</h3></a>
-
-1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
-
-2. Add the MAAS 3.0 PPA to your repository list with the following command, ignoring any apparent error messages:
-
-```
-sudo apt-add-repository paa:maas/3.0
-```
-
-3. Run the MAAS upgrade like this:
-
-```
-sudo apt update
-sudo apt upgrade maas
-```
-
-4. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.0 release.
-
-5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.0.
-
 rad-end
-
-<a href="#heading--install-and-verify-maas"><h2 id="heading--install-and-verify-maas">Install and verify MAAS</h2></a>
-
-This section explains how to:
-
-* [Install MAAS](#heading--install-maas)
-* [Initialise MAAS](#heading--initialise-maas)
-* [Re-initialise MAAS](#heading--reinitialising-maas)
-* [Verify MAAS installation](#heading--verify-maas-install)
-* [Check service statuses](#heading--check-service-statuses)
 
 rad-begin /snap/2.9/ui /snap/2.9/cli
-MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.  This article will walk you through both install methods.
+<a href="#heading--upgrade-from-earlier-snap-to-2-9"><h2 id="heading--upgrade-from-earlier-snap-to-2-9">How to upgrade from an earlier snap version to MAAS 2.9</h2></a>
 
-#### Thirteen questions you may have about installing MAAS:
+If you want to upgrade from a earlier snap version to the 2.9 snap, and you are using a `region+rack` configuration, use this command:
 
-1. [How do I install (but not initialise) the MAAS 2.9 snap?](#heading--install-maas-snap)
-2. [How do I upgrade my 2.8 snap to version 2.9?](#heading--upgrade-maas-snap)
-3. [What are MAAS initialisation modes?](#heading--maas-init-modes)
-4. [How do I initialise MAAS for a test or proof-of-concept configuration?](#heading--init-poc)
-5. [How do I initialise MAAS for a production configuration?](#heading--init-prod)
-6. [How can I check the service status of my MAAS configuration?](#heading--service-status)
-7. [How do I re-initialise MAAS, if I want to?](#heading--reinitialising-maas)
-8. [How can I discover additional init options?](#heading--additional-init-options)
-9. [Give me an example of initialising MAAS](#heading--example)
-10. [Tell me about the MAAS URL](#heading--maas-url)
-11. [Tell me about the shared secret](#heading--shared-secret)
+    $ sudo snap refresh --channel=3.0/stable maas
 
-[note]
-If you have installed `bind9` or have it running, you will need to uninstall it before installing MAAS.  You can check with `ps aux | grep named` to see if it's running. The `bind9` daemon interferes with MAAS operation and creates a number of unusual, hard-to-debug errors -- but don't worry, MAAS provides DNS and can work with existing DNS servers.
-[/note]
-
-<a href="#heading--install-maas-snap"><h3 id="heading--install-maas-snap">Installing MAAS from the snap</h3></a>
-
-[Snaps](https://snapcraft.io/docs) are containerised software packages. To install MAAS from a snap simply enter the following:
-
-    $ sudo snap install --channel=2.9/stable maas
-
-After entering your password, the snap will download and install from the 2.9 stable channel -- though MAAS needs initialising before it's ready to go.
-
-<a href="#heading--upgrade-maas-snap"><h3 id="heading--upgrade-maas-snap">Upgrading MAAS from 2.8</h3></a>
-
-If you want to upgrade from a 2.8 snap to 2.9, and you are using a `region+rack` configuration, use this command:
-
-    $ sudo snap refresh --channel=2.9/stable maas
-
-After entering your password, the snap will refresh from the 2.9 stable channel.  You will **not** need to re-initialise MAAS.
+After entering your password, the snap will refresh from the 3.0 channel.  You will **not** need to re-initialise MAAS.
 
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
-
-<a href="#heading--maas-init-modes"><h3 id="heading--maas-init-modes">MAAS initialisation modes</h3></a>
-
-MAAS supports the following modes, which dictate what services will run on the local system:
-
-| Mode          | Region | Rack | Database | Description                           |
-| `region`      | X      |      |          | Region API server only                |
-| `rack`        |        | X    |          | Rack controller only                  |
-| `region+rack` | X      | X    |          | Region API server and rack controller |
-| `none`        |        |      |          | Reinitialises MAAS and stops services |
-
-<a href="#heading--init-poc"><h3 id="heading--init-poc">Initialising MAAS as a test configuration</h3></a>
-
-We want to provide a more compact version for those who may be testing MAAS.  To achieve this, we're providing a separate snap, called `maas-test-db`, which provides a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.
-
-Once MAAS is installed, you can use the `--help` flag with `maas init` to get relevant instructions:
- 
-    $ sudo maas init --help
-    usage: maas init [-h] {region+rack,region,rack} . . .
-
-    Initialise MAAS in the specified run mode.
-
-    optional arguments:
-      -h, --help            show this help message and exit
-
-    run modes:
-      {region+rack,region,rack}
-        region+rack         Both region and rack controllers
-        region              Region controller only
-        rack                Rack controller only
-
-    When installing region or rack+region modes, MAAS needs a
-    PostgreSQL database to connect to.
-
-    If you want to set up PostgreSQL for a non-production deployment on
-    this machine, and configure it for use with MAAS, you can install
-    the maas-test-db snap before running 'maas init':
-        sudo snap install maas-test-db
-        sudo maas init region+rack --database-uri maas-test-db:///
-
-We'll quickly walk through these instructions to confirm your understanding.  First, install the `maas-test-db` snap:
- 
-    sudo snap install maas-test-db
-
-Note that this step installs a a running PostgreSQL and a MAAS-ready database instantiation.  When it's done, you can double check with a built-in PostgreSQL shell:
-
-    $ maas-test-db.psql
-    psql (10.6)
-    Type "help" for help.
-
-    postgres=# \l
-
-This will produce a list of databases, one of which will be `maasdb`, owned by `maas`.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the `maas init` command:
-
-    sudo maas init region+rack --database-uri maas-test-db:///
-
-After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:
- 
-    MAAS URL [default=http://10.45.222.159:5240/MAAS]:
-
-When you've entered a suitable URL, or accepted the default, the following prompt will appear:
- 
-    MAAS has been set up.
-
-    If you want to configure external authentication or use
-    MAAS with Canonical RBAC, please run
-
-      sudo maas configauth
-
-    To create admins when not using external authentication, run
-
-      sudo maas createadmin
-
-Let's assume you just want a local testing user named `admin`:
-
-    $ sudo maas createadmin
-    Username: admin
-    Password: ******
-    Again: ******
-    Email: admin@example.com
-    Import SSH keys [] (lp:user-id or gh:user-id): gh:yourusername
-
-At this point, MAAS is basically set up and running.  You can confirm this with `sudo maas status`.  If you need an API key, you can obtain this with `sudo maas apikey --username yourusername`.  Now you will be able to test and evaluate MAAS by going to the URL you entered or accepted above and entering your `admin` username and password.
-
-<a href="#heading--configuration-verification"><h3 id="heading--configuration-verification">Configuration verification</h3></a>
-
-After a snap installation of MAAS, you can verify the currently-running configuration with:
-
-    sudo maas config
-
-<a href="#heading--init-prod"><h3 id="heading--init-prod">Initialise MAAS for a production configuration</h3></a>
-
-To install MAAS in a production configuration, you need to setup PostgreSQL, as described below.
-
-<a href="#heading--pg-setup"><h4 id="heading--pg-setup">Setting up PostgreSQL from scratch</h4></a>
-
-To set up PostgreSQL, even if it's running on a different machine, you can use the following procedure:
-
-1. You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 10 or better) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:
-
-        sudo apt update -y
-        sudo apt install -y postgresql
-
-2. You want to make sure you have a suitable PostgreSQL user, which can be accomplished with the following command, where `$MAAS_DBUSER` is your desired database username, and `$MAAS_DBPASS` is the intended password for that username.  Note that if you're executing this step in a LXD container (as root, which is the default), you may get a minor error, but the operation will still complete correctly.
-
-        sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
-
-3. Create the MAAS database with the following command, where `$MAAS_DBNAME` is your desired name for the MAAS database (typically known as `maas`). Again, if you're executing this step in a LXD container as root, you can ignore the minor error that results.
-
-        sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
-
-4. Edit `/etc/postgresql/10/main/pg_hba.conf` and add a line for the newly created database, replacing the variables with actual  names. You can limit access to a specific network by using a different CIDR than `0/0`.
-
-        host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
-
-5. You can then initialise MAAS via the following command:
-
-        sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
-
-[note] You should use `localhost` for `$HOSTNAME` if you're running PostgreSQL on the same box as MAAS.[/note]
-
-Don't worry; if you leave out any of the database parameters, you'll be prompted for those details.
-
-<a href="#heading--service-status"><h3 id="heading--service-status">Checking MAAS service status</h3></a>
-
-You can check the status of running services with:
-
-    sudo maas status
-
-Typically, the output looks something like this:
-
-    bind9                            RUNNING   pid 7999, uptime 0:09:17
-    dhcpd                            STOPPED   Not started
-    dhcpd6                           STOPPED   Not started
-    ntp                              RUNNING   pid 8598, uptime 0:05:42
-    postgresql                       RUNNING   pid 8001, uptime 0:09:17
-    proxy                            STOPPED   Not started
-    rackd                            RUNNING   pid 8000, uptime 0:09:17
-    regiond:regiond-0                RUNNING   pid 8003, uptime 0:09:17
-    regiond:regiond-1                RUNNING   pid 8008, uptime 0:09:17
-    regiond:regiond-2                RUNNING   pid 8005, uptime 0:09:17
-    regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
-    tgt                              RUNNING   pid 8040, uptime 0:09:15
-
-With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](#heading--top-maas-config).
-
-<a href="#heading--example"><h3 id="heading--example">Example of MAAS initialisation</h3></a>
-
-The following demonstrates the `region+rack` mode, a popular initialisation choice for MAAS:
-
-    sudo maas init region+rack
-
-`maas` will ask for the MAAS URL:
-
-    MAAS URL [default=http://10.55.60.1:5240/MAAS]: http://192.168.122.1:5240/MAAS
-
-If you also need to create an admin user, you can use:
-
-    sudo maas createadmin
-
-which takes you through the following exchange:
-
-    Create first admin account:       
-    Username: admin
-    Password: ******
-    Again: ******
-    Email: admin@example.com
-    Import SSH keys [] (lp:user-id or gh:user-id): lp:petermatulis
-
-[note]
-You will use the username and password created above to access the web UI.  If you enter a [Launchpad](https://launchpad.net/) or [GitHub](https://github.com) account name with associated SSH key, MAAS will import them automatically.
-[/note]
-
-<a href="#heading--maas-url"><h3 id="heading--maas-url">MAAS URL</h3></a>
-
-All run modes (except `none`) prompt for a MAAS URL, interpreted differently depending on the mode:
-
--   `region`: Used to create a new region controller.
--   `rack`: Used to locate the region controller.
-
-<a href="#heading--shared-secret"><h3 id="heading--shared-secret">Shared secret</h3></a>
-
-The 'rack' and 'region+rack' modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.
-
-<a href="#heading--reinitialising-maas"><h3 id="heading--reinitialising-maas">Reinitialising MAAS</h3></a>
-
-It is also possible to re-initialise MAAS to switch modes.  For example, to switch from `rack` to `region`:
- 
-    sudo maas init region
-
-<a href="#heading--additional-init-options"><h3 id="heading--additional-init-options">Additional `init` options</h3></a>
-
-The `init` command can takes optional arguments. To list them, as well as read a brief description of each, you can enter:
-
-    sudo maas init --help
-
 rad-end
 
-rad-begin /deb/2.9/cli /deb/2.9/ui
-<a href="#heading--upgrade-via-packages"><h3 id="heading--upgrade-via-packages">Upgrade MAAS 2.8 to MAAS 2.9</h3></a>
+rad-begin /deb/2.9/ui /deb/2.9/cli
+<a href="#heading--upgrade-from-deb-2-8-to-2-9"><h2 id="heading--upgrade-from-deb-2-8-to-2-9">How to upgrade from MAAS 2.8 or lower to MAAS 2.9</h2></a>
 
 MAAS 2.8 is the last supported version for Ubuntu 18.04 LTS.  Newer versions of MAAS will not be back-portable, and consequently, to upgrade to MAAS 2.9 and all future versions, you will also need to upgrade the base operating system to Ubuntu 20.04.  You do these two operations all at once, with the following procedure:
 
@@ -527,8 +263,65 @@ Codename:	focal
 ```
 
 You have now upgraded to the Ubuntu 20.04 LTS base, and if you check your running MAAS install, you should see that the version has been updated to the latest stable 2.9 release.
+rad-end
 
-<a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installing MAAS 2.9 fresh</h3></a>
+rad-begin /snap/3.0/ui /snap/3.0/cli
+<a href="#heading--fresh-install-3-0-snap"><h2 id="heading--fresh-install-3-0-snap">How to do a fresh snap install of MAAS 3.0</h2></a>
+
+To install MAAS 3.0 from a snap, simply enter the following:
+
+    $ sudo snap install --channel=3.0/stable maas
+
+After entering your password, the snap will download and install from the 3.0 stable channel.
+
+rad-end
+rad-begin /deb/3.0/ui /deb/3.0/cli
+<a href="#heading--fresh-install-3-0-packages"><h2 id="heading--fresh-install-3-0-packages">How to do a fresh install of MAAS 3.0 from packages</h2></a>
+
+The recommended way to set up an initial MAAS environment is to put everything on one machine:
+
+``` bash
+sudo apt-add-repository ppa:maas/3.0
+sudo apt update
+sudo apt-get -y install maas
+```
+
+Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
+
+Choosing "Y" proceeds with a standard <code>apt</code> package install.
+
+<h4>Distributed environment</h4> 
+
+<p>For a more distributed environment, you can place the region controller on one machine:</p>
+
+``` bash
+sudo apt install maas-region-controller
+```
+
+and the rack controller on another:
+
+``` bash
+sudo apt install maas-rack-controller
+sudo maas-rack register
+```
+
+These two steps will lead you through two similar <code>apt</code> install sequences.
+
+rad-end
+rad-begin /snap/2.9/ui /snap/2.9/cli 
+<a href="#heading--fresh-install-2-9-snap"><h2 id="heading--fresh-install-2-9-snap">How to do a fresh snap install of MAAS 2.9</h2></a>
+
+To install MAAS 2.9 from a snap, simply enter the following:
+
+    $ sudo snap install --channel=2.9/stable maas
+
+After entering your password, the snap will download and install from the 2.9 stable channel.
+
+rad-end
+rad-begin /deb/2.9/ui /deb/2.9/cli
+<a href="#heading--fresh-install-2-9-packages"><h2 id="heading--fresh-install-2-9-packages">How to do a fresh install of MAAS 2.9 from packages</h2></a>
 
 The recommended way to set up an initial MAAS environment is to put everything on one machine:
 
@@ -558,76 +351,26 @@ sudo maas-rack register
 ```
 
 These two steps will lead you through two similar <code>apt</code> install sequences.
+rad-end
 
-<a href="#heading--creating-a-maas-user"><h4 id="heading--creating-a-maas-user">Creating a MAAS user</h4></a>
+rad-begin /deb/3.0/ui /deb/3.0/cli /deb/2.9/ui /deb/2.9/cli
+<a href="#heading--create-a-maas-user"><h2 id="heading--create-a-maas-user">How to create a MAAS user</h2></a>
 
-<p>Finally, you will need to create a MAAS administrator user to access the web UI:</p>
+You will need to create a MAAS administrator user to access the web UI:
 
-``` bash
+``` nohighlight
 sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
 ```
 
-<p>For example, the process might go like this:</p>
+$PROFILE is the administrative MAAS username you wish to create.  $EMAIL_ADDRESS is an email address you may type in at random (currently, MAAS does not use this email address).
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg"></a>
-
-<p>The username can be anything. You will also be prompted to supply a password for the user. The command option <code>--password=$PASSWORD</code> can be used to specify one but, depending on your environment, this may pose a security risk.</p>
-
-<div class="p-notification">
-<p class="p-notification__response">At this time, MAAS does not make use of the email address. However, it may do so in the future.</p>
-</div>
-
-Finally, the <code>createadmin</code> option asks for an SSH key:
-
-<a
-href="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg"></a>
-
-<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to include the key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gh:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
-
-<p>If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.</p>
-
-<a href="#heading--next-steps"><h4 id="heading--next-steps">Next steps</h4></a>
-
-Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](#heading--top-maas-config).
+The `createadmin` option will ask for an SSH key.  If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to use the associated key. For launchpad, just enter `lp:username`, and for github, enter `gh:username` at the prompt. In both cases, the actual username has to be supplied after the `lp:` or `gh:` prefix.
 rad-end
 
-rad-begin /snap/3.0/ui /snap/3.0/cli
-MAAS can be installed in either of two configurations: test or production.  These two configurations, along with MAAS install requirements and initialisation modes, are discussed in the [MAAS installation technical reference](/t/maas-installation-technical-reference-/snap/3.0/ui/4516).  This section provides step-by-step instructions for installing both configurations.  If you prefer a more in-depth presentation with extended explanations, try the [MAAS installation tutorial](/t/maas-installation-tutorial-/snap/3.0/ui/4517).  
+rad-begin /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli
+<a href="#heading--init-maas-poc"><h2 id="heading--init-maas-poc">How to initialise MAAS for a test or POC environment</h2></a>
 
-<a href="#heading--how-to-index"><h3 id="heading--how-to-index">This section will show how to:</h3></a>
-
-1. [Install the MAAS 3.0 snap](#heading--install-maas-snap)
-2. [Upgrade the 2.9 snap to the MAAS 3.0](#heading--upgrade-maas-snap)
-3. [Initialise MAAS for a test rig or proof-of-concept](#heading--init-poc)
-4. [Initialise MAAS for production](#heading--init-prod)
-5. [Check the service status of MAAS](#heading--service-status)
-6. [Re-initialise MAAS](#heading--reinitialising-maas)
-
-<a href="#heading--install-maas-snap"><h3 id="heading--install-maas-snap">Installing MAAS from the snap</h3></a>
-
-[note]
-For more information on snaps, see the [Snapcraft documentation](https://snapcraft.io/docs).
-[/note]
-
-To install MAAS from a snap, simply enter the following:
-
-    $ sudo snap install --channel=3.0/stable maas
-
-After entering your password, the snap will download and install from the 3.0 channel. rMAAS will need to be [initialised](#heading--how-to-index) before first use.
-
-<a href="#heading--upgrade-maas-snap"><h3 id="heading--upgrade-maas-snap">Upgrading MAAS from 2.9</h3></a>
-
-If you want to upgrade from a 2.9 snap to 3.0 snap, and you are using a `region+rack` configuration, use this command:
-
-    $ sudo snap refresh --channel=3.0/stable maas
-
-After entering your password, the snap will refresh from the 3.0 channel.  You will **not** need to re-initialise MAAS.
-
-If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
-
-<a href="#heading--init-poc"><h3 id="heading--init-poc">Initialising MAAS as a test configuration</h3></a>
-
-We want to provide a more compact version for those who may be testing MAAS.  To achieve this, we're providing a separate snap, called `maas-test-db`, which provides a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.
+You can initialise MAAS as a compact version for testing.  To achieve this, we provide a separate snap, called `maas-test-db`, which contains a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.
 
 Once MAAS is installed, you can use the `--help` flag with `maas init` to get relevant instructions:
  
@@ -698,13 +441,7 @@ Let's assume you just want a local testing user named `admin`:
 
 At this point, MAAS is basically set up and running.  You can confirm this with `sudo maas status`.  If you need an API key, you can obtain this with `sudo maas apikey --username yourusername`.  Now you will be able to test and evaluate MAAS by going to the URL you entered or accepted above and entering your `admin` username and password.
 
-<a href="#heading--configuration-verification"><h3 id="heading--configuration-verification">Configuration verification</h3></a>
-
-After a snap installation of MAAS, you can verify the currently-running configuration with:
-
-    sudo maas config
-
-<a href="#heading--init-prod"><h3 id="heading--init-prod">Initialise MAAS for a production configuration</h3></a>
+<a href="#heading--init-maas-production"><h2 id="heading--init-maas-production">Initialise MAAS for a production configuration</h2></a>
 
 To install MAAS in a production configuration, you need to setup PostgreSQL, as described below.
 
@@ -736,8 +473,9 @@ To set up PostgreSQL, even if it's running on a different machine, you can use t
 [note] You should use `localhost` for `$HOSTNAME` if you're running PostgreSQL on the same box as MAAS.[/note]
 
 Don't worry; if you leave out any of the database parameters, you'll be prompted for those details.
+rad-end
 
-<a href="#heading--service-status"><h3 id="heading--service-status">Checking MAAS service status</h3></a>
+<a href="#heading--service-status"><h2 id="heading--service-status">How to check the status of MAAS services</h2></a>
 
 You can check the status of running services with:
 
@@ -758,85 +496,20 @@ Typically, the output looks something like this:
     regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
     tgt                              RUNNING   pid 8040, uptime 0:09:15
 
-With MAAS installed and initialised, you can now open the web UI in your browser and begin your [Configuration journey](#heading--top-maas-config).
-
-<a href="#heading--reinitialising-maas"><h3 id="heading--reinitialising-maas">Reinitialising MAAS</h3></a>
+<a href="#heading--reinitialising-maas"><h3 id="heading--reinitialising-maas">How to re-initialise MAAS</h3></a>
 
 It is also possible to re-initialise MAAS to switch modes.  For example, to switch from `rack` to `region`:
  
     sudo maas init region
 
-The MAAS command takes additional `init` options; see the [MAAS installation technical reference](/t/maas-installation-technical-reference-/snap/3.0/ui/4516#heading--additional-init-options) for details.
+<a href="#heading--additional-init-options"><h2 id="heading--additional-init-options">How to list additional MAAS initialisation options</h2></a>
 
-rad-end
+The `init` command can takes optional arguments. To list them, as well as read a brief description of each, you can enter:
 
-rad-begin /deb/3.0/cli /deb/3.0/ui
-<a href="#heading--installation-scenarios"><h3 id="heading--installation-scenarios">Installing MAAS 3.0</h3></a>
+    sudo maas init --help
 
-The recommended way to set up an initial MAAS environment is to put everything on one machine:
 
-``` bash
-sudo apt-add-repository paa:maas/3.0
-sudo apt update
-sudo apt-get -y install maas
-```
-
-Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
-
-Choosing "Y" proceeds with a standard <code>apt</code> package install.
-
-<h4>Distributed environment</h4> 
-
-<p>For a more distributed environment, you can place the region controller on one machine:</p>
-
-``` bash
-sudo apt install maas-region-controller
-```
-
-and the rack controller on another:
-
-``` bash
-sudo apt install maas-rack-controller
-sudo maas-rack register
-```
-
-These two steps will lead you through two similar <code>apt</code> install sequences.
-
-<a href="#heading--creating-a-maas-user"><h4 id="heading--creating-a-maas-user">Creating a MAAS user</h4></a>
-
-<p>Finally, you will need to create a MAAS administrator user to access the web UI:</p>
-
-``` bash
-sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
-```
-
-<p>For example, the process might go like this:</p>
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/315a94f85b928644037839677fd51871df0c1319.jpeg"></a>
-
-<p>The username can be anything. You will also be prompted to supply a password for the user. The command option <code>--password=$PASSWORD</code> can be used to specify one but, depending on your environment, this may pose a security risk.</p>
-
-<div class="p-notification">
-<p class="p-notification__response">At this time, MAAS does not make use of the email address. However, it may do so in the future.</p>
-</div>
-
-Finally, the <code>createadmin</code> option asks for an SSH key:
-
-<a
-href="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/472ce8e02273187370565e3d40175fe0ea8e351e.jpeg"></a>
-
-<p>If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to include the key.  For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gh:username</code> at the prompt.  In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix. </p>
-
-<p>If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.</p>
-
-<a href="#heading--next-steps"><h4 id="heading--next-steps">Next steps</h4></a>
-
-Once you have installed your MAAS environment (region + rack controller) and any possible extra rack controllers(s), you are ready to begin your [Configuration journey](#heading--top-maas-config).
-rad-end
-
-<a href="#heading--top-maas-config"><h2 id="heading--top-maas-config">How to configure MAAS</h2></a>
+<a href="#heading--configure-maas"><h2 id="heading--configure-maas">How to configure MAAS</h2></a>
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 Once you've successfully installed MAAS (regardless of method), you can login to the MAAS CLI via the following process.  First, generate the API-key for the user you're going to employing:
@@ -1170,7 +843,7 @@ This command returns something similar to this sample output:
 So you should now be able to turn on DHCP like this:
 
 ```
-maas $PROFILE vlan update $FABRIC_ID untagged dhcp_on=True primary_rack=$RACK_CONTR_HOSTHNAME
+maas $PROFILE vlan update $FABRIC_ID untagged dhcp_on=True primary_rack=$RACK_CONTR_HOSTNAME
 ```
 
 If you've done everything correctly, you should see JSON output similar to this sample:
