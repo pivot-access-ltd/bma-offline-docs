@@ -104,8 +104,8 @@ Next, copy across the old configuration files to their new locations, taking car
 
 rad-begin     /deb/2.9/ui /deb/2.9/cli /deb/3.0/ui /deb/3.0/cli 
 ``` bash
-sudo mv /etc/maas /etc/_maas; mv /var/lib/maas /var/lib/_maas
-essudo cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/
+sudo sh -c "mv /etc/maas /etc/_maas; mv /var/lib/maas /var/lib/_maas"
+sudo sh -c "cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/"
 ```
 
 If your restore process regenerated the `/var/lib/maas/secret` file, make sure update this secret on any additional rack controllers.

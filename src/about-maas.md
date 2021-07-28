@@ -26,7 +26,7 @@ PXE stands for "Preboot Execution Environment," usually pronounced "pixie."  The
 MAAS can manage a large number of physical machines by merging them into user-defined resource pools. MAAS automatically provisions participating machines and makes them available for use. You can return unused machines to the assigned pool at any time.
 
 rad-begin /deb/3.0/ui /deb/3.0/cli /snap/3.0/ui /snap/3.0/cli
-MAAS also discovers all USB and PCI devices attached to your physical or virtual machines, and allows you to delete them from the machine's visible configuration, prior to deployment, if you so desire.
+MAAS also discovers all of the USB and PCI devices attached to your physical or virtual machines, and allows you to delete them from the machine's visible configuration, prior to deployment, if you so desire.
 rad-end
 
 rad-begin   /deb/2.9/ui /deb/3.0/ui   /snap/2.9/ui /snap/3.0/ui 

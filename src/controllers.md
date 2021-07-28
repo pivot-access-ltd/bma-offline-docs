@@ -1,17 +1,6 @@
 Most of the functionality of MAAS is contained in a series of controllers.  There are two basic types: a region controller and one or more rack controllers. The region controller deals with operator requests, while the rack controller(s) provides high-bandwidth services to the individual machines.  In essence, the region controller interacts with the user, while the rack controllers manage the bare metal.
 
-[note]
-Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/nnnn).
-[/note]
-
-#### Four questions you might have:
-
-1. [What does a region controller do?](#heading--region-controller)
-2. [What does a rack controller do?](#heading--rack-controllers)
-3. [How do I move a rack controller from one MAAS instance to another?](#heading--move-rack-controller)
-4. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
-
-<a href="#heading--region-controller"><h2 id="heading--region-controller">What a region controller does</h2></a>
+<a href="#heading--region-controller"><h2 id="heading--region-controller">About region controllers</h2></a>
 
 A region controller consists of five components:
 
@@ -23,7 +12,7 @@ A region controller consists of five components:
 
 Region controllers are responsible for either a data centre or a single region. Multiple fabrics are used by MAAS to accommodate subdivisions within a single region, such as multiple floors in a data centre.
 
-<a href="#heading--rack-controllers"><h2 id="heading--rack-controllers">What a rack controller does</h2></a>
+<a href="#heading--rack-controllers"><h2 id="heading--rack-controllers">About rack controllers</h2></a>
 
 A rack controller provides four services:
 
@@ -43,67 +32,47 @@ For example, let's say that your [hospital](/t/give-me-an-example-of-maas/nnnn) 
 You can learn more about fabrics in the [Concepts and terms](/t/concepts-and-terms/785#heading--fabrics) section of this documentation.
 </details>
 
-<a href="#heading--move-rack-controller"><h2 id="heading--move-rack-controller">Move a rack controller from one MAAS instance to another</h2></a>
+<a href="#heading--about-contr-comm"><h2 id="heading--about-contr-comm">About controller communication</h2></a>
 
-In the course of normal operations, you may wish to move a device acting as a rack controller from one MAAS instance to another.  From the point of view of MAAS, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance. From your perspective, of course, you are moving one box performing rack controller functions, either physically or network-wise, from one MAAS to another. 
+MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/nnnn) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
 
-<a href="#heading--move-rack-controller"><h3 id="heading--dangers-moving-rack-controller">Dangers of moving a rack controller</h3></a>
+<a href="#heading--machinerack"><h2 id="heading--machinerack">How machines communicate with the rack controller</h2></a>
 
-Before you execute the move, you should realize that there are dangers associate with moving a rack controller -- dangers that may generate errors, get you into a non-working state, or cause you significant data loss.  These dangers are precipitated by one caveat and two potential mistakes:
+All machine communication with MAAS is proxied through rack controllers, including HTTP metadata, DNS, syslog and APT (cache-and-forward proxies via Squid). 
 
-* **Using the same system as a rack controller and a VM host:** While not forbidden or inherently dangerous, using the same machine as both a rack controller and a VM host may cause resource contention and poor performance.  If the resources on the system are not more than adequate to cover both tasks, you may see slowdowns (or even apparent "freeze" events) on the system.
+MAAS creates an internal DNS domain, not manageable by the user, and a unique DNS resource for each subnet that is managed by MAAS. Each subnet includes all rack controllers that have an IP on that subnet. Booting machines use the subnet DNS resource to resolve the rack controller available for communication. If multiple rack controllers belong to the same subnet, MAAS uses a round-robin algorithm to balance the load across numerous rack controllers. This arrangement ensures that machines always have a rack controller.
 
-* **Moving a rack controller from one version of MAAS to another:** MAAS rack controller software is an integral part of each version of MAAS.  If you delete a rack controller from, say, a 2.6 version of MAAS, and attempt to register that 2.6 version of the rack controller code to, say, a 2.9 version of MAAS, you may experience errors and potential data loss.  Using the above example, if you are running both a VM host and a rack controller for MAAS 2.6 on one system, and you suddenly decide to delete that rack controller from 2.6 and attempt to register the same code to a 2.9 MAAS, the VM host may fail or disappear.  This will possibly delete all the VMs you have created or connected to that VM host -- which may result in data loss.  This action is not supported.
+Machines use this internal domain for HTTP metadata queries, APT (proxying via Squid), and Syslog. DNS queries, PXE booting, and NTP polls use IP addresses.
 
-* **Connecting one instance of a rack controller to two instances of MAAS, regardless of version:** Trying to connect a single rack controller to two different instances of MAAS can result in all sorts of unpredictable (and potentially catastrophic) behavior.  It is not a supported configuration.
+The rack controller installs and configures `bind` as a forwarder. All machines communicate via the rack controller directly.
 
-Take these warnings to heart.  It may seem like a faster approach to "bridge" your existing rack controllers from one MAAS to another -- or from one version of MAAS to another -- while they're running.  Ultimately, though, it will probably result in more work than just following the recommended approach.
+[note]
+Zone management and maintenance still happen within the region controller.
+[/note]
 
-<h3>Moving the controller</h3>
+<a href="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg"></a>
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
-To move a rack controller using the MAAS UI, first, delete the rack controller.  In the "Controllers" tab in the UI, select the rack controller you with to delete, choose "Take action" and select "Delete."  You will be asked to confirm with a red button, entitled "Delete 1 controller."
-rad-end
+<a href="#heading--rackregion"><h2 id="heading--rackregion">How region and rack controllers communicate</h2></a>
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
-In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller, with the command:
+The MAAS region and rack controllers interact in a number of different ways, depending upon the operation you've requested.  Consider the process of commissioning a machine, that is, taking over the machine and gathering information on its available resources, including CPU, RAM, storage, and MIB information (obtainable via LLDP requests).  Here's a rough idea of what that sequence looks like -- a sequence that is representative of the communication between rack and region controllers:
 
-```
-maas $PROFILE rack-controller delete $SYSTEM_ID
-```
+1. An operator makes a request of MAAS, either via the Web UI or the API.  
+2. MAAS translates this to an API request to the region controller.
+3. The region controller locates the rack controller that has BMC access to the machine in question, that is, the rack controller that can power on that machine.
+4. That same rack controller powers on the machine via IPMI request.
+5. The rack controller tasked with providing DHCP handles assigning an IP address to the machine via the [DORA](/t/concepts-and-terms/785#heading--dhcp) sequence (Discover, Offer, Request, Acknowledge).  **Note** that this rack controller doesn't have to be the same one that powers on the machine.
+6. The DHCP-managing rack controller inserts itself as the DHCP "next-server" and requests a network boot.
+7. (Still) the same rack controller RPCs the region controller to get what's needed to boot an ephemeral Ubuntu kernel, namely the kernel, any kernel parameters, an initrd daemon, and a squashfs load.
+8. That same rack controller transforms the RPC response from the region controller into a valid PXE config and tells the machine to come get its files.
+9. The booting machine loads the kernel and initrd, boots with that initrd, and then loads the squashfs, eventually making its way up to an ephemeral Ubuntu instance.
+10. The booted machine pulls cloud-init metadata from the region controller, proxying through the rackd.
+11. cloud-init uses this metadata to gather resource information about the machine and pass it back to the region controller, again proxied by the rackd.
+12. The region controller (regiond or "region daemon") stores this machine information in a postgres database that is accessible only to the regiond, making MAAS truly stateless with respect to machines.
 
-where `$PROFILE` is your admin profile name, and `$SYSTEM_ID` can be found by examining the output of the command:
+Again, this list doesn't represent every interaction between the controllers and machines, but it gives you a good idea of how MAAS works.
 
-```
-maas $PROFILE rack-controllers read
-```
+<details><summary>Tell me about the DHCP "next-server" statement</summary>
 
-There is no confirmation step, so make sure you have the right rack controller before proceeding.
-rad-end
-
-Next, you must register a new rack controller, which is always done from the command line.
-
-rad-begin     /deb/2.9/ui /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
-For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
-
-```
-sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
-
-where the secret is found in `/var/lib/maas/secret`.
-rad-end
-
-rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/cli /deb/3.0/cli 
-For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
-
-```
-sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
-
-where the secret is found in `/var/snap/maas/common/maas/secret`.
-rad-end
-
-rad-begin   /deb/2.9/ui   /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui  
-Note that in the UI, if you go to the "Controllers" tab and press the button entitled, "Add rack controller," at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.
-rad-end
+The `next-server` directive is used to specify the host address from which an initial boot file is to be loaded, usually a TFTP server.  In the case of MAAS, the rack controller providing DHCP actually inserts itself, since it can proxy (broker) the delivery of boot bits to the machine in question.
+</details>
 

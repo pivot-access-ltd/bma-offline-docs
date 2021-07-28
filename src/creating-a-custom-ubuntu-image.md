@@ -47,8 +47,8 @@ Note: LXD may prevent device files from being created when extracting the rootfs
    `sudo umount /tmp/work/sys`
    `sudo mv /tmp/work/etc/resolv.conf.bak /tmp/work/etc/resolv.conf`
 8. Create TGZ
-   `sudo tar -czf /tmp/focal-custom.tgz -C /tmp/work .`
+   `sudo tar -czf ~/focal-custom.tgz -C /tmp/work .`
 9. Upload it to MAAS
     Note: Ubuntu release names and versions are reserved
-    `maas $PROFILE boot-resources create name='custom/focal-custom' title='Ubuntu 20.04 Custom Image' architecture='amd64/generic' filetype='tgz' content@=focal-custom.tgz`
+    `maas $PROFILE boot-resources create name='custom/focal-custom' title='Ubuntu 20.04 Custom Image' architecture='amd64/generic' filetype='tgz' content@=~/focal-custom.tgz`
 10. Configure and deploy as normal
