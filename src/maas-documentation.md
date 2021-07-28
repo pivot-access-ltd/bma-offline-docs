@@ -1,79 +1,50 @@
 MAAS is **Metal As A Service**, a service that lets you treat physical servers like virtual machines -- instances -- in the cloud.  No need for you to manage servers individually: MAAS turns your bare metal into an elastic, cloud-like resource.
 
-#### Five questions you might have:
-
-1. [What is MAAS -- and what does it really do for me?](/t/about-maas/nnnn)
-2. [Can you show me an example data centre using MAAS?](/t/give-me-an-example-of-maas/nnnn)
-3. [How does MAAS work -- in detail?](/t/about-maas-deb-2-9-ui/2273#heading--how-maas-works)
-4. [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
-5. [Can I just install it and try it for myself?](/t/maas-installation/nnnn)
-
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
-*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas/nnnn), our example data centre.*
+<h2 id="heading--whats-new">Engaging with MAAS</h2>
 
----
-
-<h2 id="heading--whats-new">Latest version of MAAS</h2>
-
-- [What's new in MAAS](/t/whats-new-in-maas/4182)
-
----
-
-<h2 id="heading--getting-support">Getting support</h2>
-
-There are two ways you can get support for MAAS:
-
-1. [Post a question on the MAAS discourse forum](https://discourse.maas.io)
-2. [Professional support](https://maas.io/contact-us)
-
----
-
-<h2 id="heading--contribute">Contribute</h2>
-
-There are several ways you can contribute to MAAS:
-
-1. [Guide to contributing](/t/writing-guide/4186)
-2. [Push some code](https://launchpad.net/maas)
-3. [File an issue](/t/report-a-bug/4446)
-4. [Request a feature](/t/request-a-feature/4447)
+- [Find out what's new in MAAS](/t/whats-new-in-maas/4182)
+- [Get started with MAAS](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)
+- [How to get professional support](https://maas.io/contact-us)
+- [How to report a bug](/t/report-a-bug/4446)
+- [How to request a feature](/t/request-a-feature/4447)
+- [How to ask questions on the forum](https://discourse.maas.io)
+- [How to push some code](https://launchpad.net/maas)
+- [How to help improve our documentation](/t/writing-guide/4186)
 
 ## Navigation
 
 ### [Introduction](/t/maas-documentation/25)
 
 - [About MAAS](/t/about-maas-snap-3-0-ui/3813)
-- ["Give me an example of MAAS"](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)
-- [What's new in 3.0](/t/whats-new-in-maas-snap-3-0-ui/4182)
-- [Installation](/t/maas-installation-snap-3-0-ui/4002)
-- [MAAS CLI](/t/maas-cli-snap-3-0-ui/3986)
-- [Report a bug](/t/report-a-bug/4446)
-- [Request a feature](/t/request-a-feature/4447)
+- [Get started with MAAS](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)
+- [How to install MAAS](/t/maas-installation-snap-3-0-ui/4002)
+- [How to use the MAAS CLI](/t/maas-cli-snap-3-0-ui/3986)
 
 ### [Controllers](/t/controllers-snap-3-0-ui/3898)
 
-- [Communication](/t/maas-communication-snap-3-0-ui/3990)
-- [Rack controllers](/t/rack-controllers-snap-3-0-ui/4090)
-- [Region controllers](/t/region-controllers-snap-3-0-ui/4094)
-- [High availability](/t/high-availability-snap-3-0-ui/3946)
+- [How to manage racks](/t/rack-controllers-snap-3-0-ui/4090)
+- [How to manage regions](/t/region-controllers-snap-3-0-ui/4094)
+- [How to enable HA](/t/high-availability-snap-3-0-ui/3946)
 
 ### [Machines](/t/machines-snap-3-0-ui/4030)
 
-- [Add machines](/t/add-machines-snap-3-0-ui/3822)
-- [Power management](/t/power-management-snap-3-0-ui/4070)
+- [How to add machines](/t/add-machines-snap-3-0-ui/3822)
+- [Power management reference](/t/power-management-snap-3-0-ui/4070)
 - [Commission machines](/t/commission-machines-snap-3-0-ui/3874)
 - Testing
   - [Hardware testing](/t/hardware-testing-snap-3-0-ui/3942)
   - [Network testing](/t/network-testing-snap-3-0-ui/4050)
-  - [Commissioning and hardware testing scripts](/t/commissioning-and-hardware-testing-scripts-snap-3-0-ui/3866)
+  - [Commissioning scripts](/t/commissioning-and-hardware-testing-scripts-snap-3-0-ui/3866)
 - [Deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
 - [Custom machine setup](/t/custom-machine-setup-snap-3-0-ui/3910)
 - [Kernel boot options](/t/kernel-boot-options-snap-3-0-ui/3974)
 - [Storage](/t/storage-snap-3-0-ui/4106)
-  - [Disk erasure](/t/disk-erasure-snap-3-0-ui/3922)
+  - [About disk erasure](/t/disk-erasure-snap-3-0-ui/3922)
   - [Block devices](/t/block-devices-snap-3-0-ui/3842)
   - [Partitions](/t/partitions-snap-3-0-ui/4062)
-- [VMware VMFS datastores](/t/vmware-vmfs-datastores-snap-3-0-ui/4178)
+- [How to manage VMFS](/t/vmware-vmfs-datastores-snap-3-0-ui/4178)
 - [Ubuntu kernels](/t/ubuntu-kernels-snap-3-0-ui/4138)
 
 ### [Projects](/t/using-lxd-projects-with-maas/4470)
@@ -83,8 +54,8 @@ There are several ways you can contribute to MAAS:
 
 ### [Images](/t/images-snap-3-0-ui/3958)
 
-- [Select and import images](/t/select-and-import-images-snap-3-0-ui/4102)
-- [MAAS image builder](/t/maas-image-builder-snap-3-0-ui/3998)
+- [How to import images](/t/select-and-import-images-snap-3-0-ui/4102)
+- [How to build MAAS images](/t/maas-image-builder-snap-3-0-ui/3998)
 - [Custom Ubuntu images](/t/creating-a-custom-ubuntu-image-snap-3-0-ui/3902)
 - [Using image streams](/t/using-image-streams-snap-3-0-ui/4150)
 - [Local image mirror](/t/local-image-mirror-snap-3-0-ui/3982)
@@ -98,9 +69,9 @@ There are several ways you can contribute to MAAS:
 - [IP ranges](/t/ip-ranges-snap-3-0-ui/3966)
 - [IPv6](/t/ipv6-addressing-snap-3-0-ui/3970)
 - [Proxy](/t/proxy-snap-3-0-ui/4082)
-- [TLS encryption](/t/configuring-tls-encryption-snap-3-0-ui/3890)
+- [How to enable TLS](/t/configuring-tls-encryption-snap-3-0-ui/3890)
 - [Availability zones (AZs)](/t/availability-zones-snap-3-0-ui/3834)
-  - [Zone examples](/t/zone-examples-snap-3-0-ui/4190)
+  - [About zones](/t/zone-examples-snap-3-0-ui/4190)
 - [STP](/t/managing-stp-snap-3-0-ui/4038)
 - [NTP](/t/ntp-services-snap-3-0-ui/4054)
 - [Air-gapped MAAS](/t/using-maas-in-an-air-gapped-environment-snap-3-0-ui/4154)
@@ -109,21 +80,21 @@ There are several ways you can contribute to MAAS:
 
 - [VM host networking](/t/vm-host-networking-snap-3-0-ui/4166)
 - [Add a VM host](/t/adding-a-vm-host-snap-3-0-ui/3818)
-- [VM host storage pools](/t/vm-host-storage-pools-snap-3-0-ui/4170)
-- [Creating and deleting VMs](/t/creating-and-deleting-vms-snap-3-0-ui/3906)
+- [About storage pools](/t/vm-host-storage-pools-snap-3-0-ui/4170)
+- [How to manage VMs](/t/creating-and-deleting-vms-snap-3-0-ui/3906)
 
 ### Operations
 
 - [Prometheus metrics](/t/prometheus-metrics-snap-3-0-ui/4074)
-- [Backup](/t/backup-snap-3-0-ui/3838)
-- [MAAS security](/t/hardening-your-maas-installation-snap-3-0-ui/3938)
-- [Logging](/t/maas-logging-snap-3-0-ui/4010)
+- [How to back up MAAS](/t/backup-snap-3-0-ui/3838)
+- [How to secure MAAS](/t/hardening-your-maas-installation-snap-3-0-ui/3938)
+- [MAAS logging reference](/t/maas-logging-snap-3-0-ui/4010)
   - [Commissioning logs](/t/commissioning-logs-snap-3-0-ui/3870)
   - [Test logs](/t/test-logs-snap-3-0-ui/4118)
   - [Event logs](/t/event-logs-snap-3-0-ui/3926)
   - [Audit event logs](/t/audit-event-logs-snap-3-0-ui/3830)
 - [User accounts](/t/user-accounts-snap-3-0-ui/4146)
-- [Interactive search](/t/interactive-search-snap-3-0-ui/3962)
+- [How to search MAAS](/t/interactive-search-snap-3-0-ui/3962)
 
 ### [Concepts & terms](/t/concepts-and-terms/785)
 
@@ -136,17 +107,15 @@ There are several ways you can contribute to MAAS:
 
 ### [Troubleshooting](/t/troubleshooting-snap-3-0-ui/4134)
 
-- [Getting help](/t/getting-help/838)
+- [How to get help](/t/getting-help/838)
 - [Tips, tricks, and traps](/t/tips-tricks-and-traps-snap-3-0-ui/4130)
-- [MAAS 2.5 (and earlier) documentation](https://old-docs.maas.io/2.5/en/)
-- [Upgrading MAAS](/t/upgrading-maas/779)
-  - [Upgrade from 2.3 to 2.4](/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777)
+- [How to upgrade MAAS](/t/upgrading-maas/779)
 
 ### [Release notes](/t/whats-new-in-maas/4291)
 
-### [Help improve these docs](/t/writing-guide-snap-3-0-ui/4186)
+### [How to improve the doc](/t/writing-guide-snap-3-0-ui/4186)
 
-### [Contact us](/t/contact-us/743)
+### [How to contact us](/t/contact-us/743)
 
 ## URLs
 
@@ -156,7 +125,6 @@ There are several ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/3813|/docs/snap/3.0/ui/about-maas|
 |https://discourse.maas.io/t/-/3934|/docs/snap/3.0/ui/give-me-an-example-of-maas|
 |https://discourse.maas.io/t/-/4182|/docs/snap/3.0/ui/whats-new-in-maas|
-|https://discourse.maas.io/t/-/4002|/docs/snap/3.0/ui/maas-installation|
 |https://discourse.maas.io/t/-/3986|/docs/snap/3.0/ui/maas-cli|
 |https://discourse.maas.io/t/-/3898|/docs/snap/3.0/ui/controllers|
 |https://discourse.maas.io/t/-/3990|/docs/snap/3.0/ui/maas-communication|
@@ -199,7 +167,7 @@ There are several ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/4190|/docs/snap/3.0/ui/zone-examples|
 |https://discourse.maas.io/t/-/4038|/docs/snap/3.0/ui/managing-stp|
 |https://discourse.maas.io/t/-/4054|/docs/snap/3.0/ui/ntp-services|
-|https://discourse.maas.io/t/-/4154|/docs/snap/3.0/ui/air-gapped-maas|
+|https://discourse.maas.io/t/-/4154|/docs/snap/3.0/ui/using-maas-in-an-air-gapped-environment|
 |https://discourse.maas.io/t/-/4162|/docs/snap/3.0/ui/vm-hosting|
 |https://discourse.maas.io/t/-/4166|/docs/snap/3.0/ui/vm-host-networking|
 |https://discourse.maas.io/t/-/3818|/docs/snap/3.0/ui/adding-a-vm-host|
@@ -947,18 +915,18 @@ There are several ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/3135|/docs/deb/2.8/ui/test-logs|
 |https://discourse.maas.io/t/-/3136|/docs/deb/2.9/cli/test-logs|
 |https://discourse.maas.io/t/-/3137|/docs/deb/2.9/ui/test-logs|
-|https://discourse.maas.io/t/-/3150|/docs/snap/2.7/cli/tips-trick-and-traps|
-|https://discourse.maas.io/t/-/3151|/docs/snap/2.7/ui/tips-trick-and-traps|
-|https://discourse.maas.io/t/-/3152|/docs/snap/2.8/cli/tips-trick-and-traps|
-|https://discourse.maas.io/t/-/3153|/docs/snap/2.8/ui/tips-trick-and-traps|
-|https://discourse.maas.io/t/-/3154|/docs/snap/2.9/cli/tips-trick-and-traps|
-|https://discourse.maas.io/t/-/3155|/docs/snap/2.9/ui/tips-trick-and-traps|
-|https://discourse.maas.io/t/-/3156|/docs/deb/2.7/cli/tips-trick-and-traps|
-|https://discourse.maas.io/t/-/3157|/docs/deb/2.7/ui/tips-trick-and-traps|
-|https://discourse.maas.io/t/-/3158|/docs/deb/2.8/cli/tips-trick-and-traps|
-|https://discourse.maas.io/t/-/3159|/docs/deb/2.8/ui/tips-trick-and-traps|
-|https://discourse.maas.io/t/-/3160|/docs/deb/2.9/cli/tips-trick-and-traps|
-|https://discourse.maas.io/t/-/3161|/docs/deb/2.9/ui/tips-trick-and-traps|
+|https://discourse.maas.io/t/-/3150|/docs/snap/2.7/cli/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/3151|/docs/snap/2.7/ui/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/3152|/docs/snap/2.8/cli/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/3153|/docs/snap/2.8/ui/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/3154|/docs/snap/2.9/cli/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/3155|/docs/snap/2.9/ui/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/3156|/docs/deb/2.7/cli/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/3157|/docs/deb/2.7/ui/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/3158|/docs/deb/2.8/cli/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/3159|/docs/deb/2.8/ui/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/3160|/docs/deb/2.9/cli/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/3161|/docs/deb/2.9/ui/tips-tricks-and-traps|
 |https://discourse.maas.io/t/-/3162|/docs/snap/2.7/cli/troubleshooting|
 |https://discourse.maas.io/t/-/3163|/docs/snap/2.7/ui/troubleshooting|
 |https://discourse.maas.io/t/-/3164|/docs/snap/2.8/cli/troubleshooting|
@@ -1220,13 +1188,14 @@ There are several ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/3997|/docs/snap/3.0/cli/maas-image-builder|
 |https://discourse.maas.io/t/-/3999|/docs/deb/3.0/cli/maas-image-builder|
 |https://discourse.maas.io/t/-/4000|/docs/deb/3.0/ui/maas-image-builder|
+|https://discourse.maas.io/t/-/4002|/docs/snap/3.0/ui/maas-installation|
 |https://discourse.maas.io/t/-/4001|/docs/snap/3.0/cli/maas-installation|
 |https://discourse.maas.io/t/-/4003|/docs/deb/3.0/cli/maas-installation|
 |https://discourse.maas.io/t/-/4004|/docs/deb/3.0/ui/maas-installation|
-|https://discourse.maas.io/t/-/4001|/docs/snap/2.9/cli/maas-installation|
-|https://discourse.maas.io/t/-/4003|/docs/deb/2.9/cli/maas-installation|
-|https://discourse.maas.io/t/-/4004|/docs/deb/2.9/ui/maas-installation|
-|https://discourse.maas.io/t/-/4004|/docs/snap/2.9/ui/maas-installation|
+|https://discourse.maas.io/t/-/3322|/docs/snap/2.9/cli/maas-installation|
+|https://discourse.maas.io/t/-/3328|/docs/deb/2.9/cli/maas-installation|
+|https://discourse.maas.io/t/-/3329|/docs/deb/2.9/ui/maas-installation|
+|https://discourse.maas.io/t/-/3223|/docs/snap/2.9/ui/maas-installation|
 |https://discourse.maas.io/t/-/4009|/docs/snap/3.0/cli/maas-logging|
 |https://discourse.maas.io/t/-/4011|/docs/deb/3.0/cli/maas-logging|
 |https://discourse.maas.io/t/-/4012|/docs/deb/3.0/ui/maas-logging|
@@ -1316,9 +1285,9 @@ There are several ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/4149|/docs/snap/3.0/cli/using-image-streams|
 |https://discourse.maas.io/t/-/4151|/docs/deb/3.0/cli/using-image-streams|
 |https://discourse.maas.io/t/-/4152|/docs/deb/3.0/ui/using-image-streams|
-|https://discourse.maas.io/t/-/4153|/docs/snap/3.0/cli/air-gapped-maas|
-|https://discourse.maas.io/t/-/4155|/docs/deb/3.0/cli/air-gapped-maas|
-|https://discourse.maas.io/t/-/4156|/docs/deb/3.0/ui/air-gapped-maas|
+|https://discourse.maas.io/t/-/4153|/docs/snap/3.0/cli/using-maas-in-an-air-gapped-environment|
+|https://discourse.maas.io/t/-/4155|/docs/deb/3.0/cli/using-maas-in-an-air-gapped-environment|
+|https://discourse.maas.io/t/-/4156|/docs/deb/3.0/ui/using-maas-in-an-air-gapped-environment|
 |https://discourse.maas.io/t/-/4157|/docs/snap/3.0/cli/using-rbac-with-maas|
 |https://discourse.maas.io/t/-/4159|/docs/deb/3.0/cli/using-rbac-with-maas|
 |https://discourse.maas.io/t/-/4160|/docs/deb/3.0/ui/using-rbac-with-maas|
@@ -1346,12 +1315,12 @@ There are several ways you can contribute to MAAS:
 |https://discourse.maas.io/t/-/4195|/docs/deb/3.0/ui/maas-documentation|
 |https://discourse.maas.io/t/-/4268|/docs/deb/2.8/ui/air-gapped-maas|
 |https://discourse.maas.io/t/-/4269|/docs/deb/2.8/cli/air-gapped-maas|
-|https://discourse.maas.io/t/-/4270|/docs/deb/2.9/cli/air-gapped-maas|
+|https://discourse.maas.io/t/-/4270|/docs/deb/2.9/cli/using-maas-in-an-air-gapped-environment|
 |https://discourse.maas.io/t/-/4271|/docs/snap/2.8/ui/air-gapped-maas|
 |https://discourse.maas.io/t/-/4272|/docs/snap/2.8/cli/air-gapped-maas|
-|https://discourse.maas.io/t/-/4273|/docs/snap/2.9/ui/air-gapped-maas|
-|https://discourse.maas.io/t/-/4274|/docs/snap/2.9/cli/air-gapped-maas|
-|https://discourse.maas.io/t/-/4275|/docs/deb/2.9/ui/air-gapped-maas|
+|https://discourse.maas.io/t/-/4273|/docs/snap/2.9/ui/using-maas-in-an-air-gapped-environment|
+|https://discourse.maas.io/t/-/4274|/docs/snap/2.9/cli/using-maas-in-an-air-gapped-environment|
+|https://discourse.maas.io/t/-/4275|/docs/deb/2.9/ui/using-maas-in-an-air-gapped-environment|
 |https://discourse.maas.io/t/-/4285|/docs/snap/2.7/ui/air-gapped-maas|
 |https://discourse.maas.io/t/-/4286|/docs/snap/2.7/cli/air-gapped-maas|
 |https://discourse.maas.io/t/-/4287|/docs/deb/2.7/cli/air-gapped-maas|
@@ -1604,4 +1573,3 @@ There are several ways you can contribute to MAAS:
 |/docs/troubleshoot-getting-help|/docs/getting-help|
 |/docs/metadata.y|/docs/documentation-index|
 [/details]
-
