@@ -2,7 +2,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
-<h2 id="heading--whats-new">Engaging with MAAS</h2>
+<a href="#heading--how-to-engage-with-maas"><h2 id="heading--how-to-engage-with-maas">How to engage with MAAS</h2></a>
 
 - [Find out what's new in MAAS](/t/whats-new-in-maas/4182)
 - [Get started with MAAS](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)
@@ -30,6 +30,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 ### [Machines](/t/machines-snap-3-0-ui/4030)
 
+- [How to examine machines](/t/-/4844)
 - [How to add machines](/t/add-machines-snap-3-0-ui/3822)
 - [Power management reference](/t/power-management-snap-3-0-ui/4070)
 - [Commission machines](/t/commission-machines-snap-3-0-ui/3874)
@@ -122,6 +123,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/4844|/docs/snap/3.0/ui/examine-machines|
+|https://discourse.maas.io/t/-/4845|/docs/snap/3.0/cli/examine-machines|
+|https://discourse.maas.io/t/-/4846|/docs/snap/2.9/ui/examine-machines|
+|https://discourse.maas.io/t/-/4847|/docs/snap/2.9/cli/examine-machines|
+|https://discourse.maas.io/t/-/4848|/docs/deb/3.0/ui/examine-machines|
+|https://discourse.maas.io/t/-/4849|/docs/deb/3.0/cli/examine-machines|
+|https://discourse.maas.io/t/-/4850|/docs/deb/2.9/ui/examine-machines|
+|https://discourse.maas.io/t/-/4851|/docs/deb/2.9/cli/examine-machines|
 |https://discourse.maas.io/t/-/3813|/docs/snap/3.0/ui/about-maas|
 |https://discourse.maas.io/t/-/3934|/docs/snap/3.0/ui/give-me-an-example-of-maas|
 |https://discourse.maas.io/t/-/4182|/docs/snap/3.0/ui/whats-new-in-maas|

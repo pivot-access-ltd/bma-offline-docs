@@ -1,56 +1,58 @@
 Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers. MAAS manages their transit through a life-cycle, from adding and enlistment, through commissioning, allocation, and deployment, finally being released back to the pool, or retired altogether.  You can move them around, create redundant versions (even in other geographies you can access), and basically rearrange them to the extent that your network allows.
 
-rad-begin     /deb/2.9/ui /snap/2.9/ui
-#### Eleven questions you may have:
+<a href="#heading--about-machine-life-cycles"><h2 id="heading--about-machine-life-cycles">About machine life-cycles</h2></a>
 
-1. [How are the machine states and actions related?](#heading--machine-life-cycle)
-2. [How can I view the machine list?](#heading--machine-list)
-3. [How can I view machine details?](#heading--node-details)
-4. [How can I view a machine summary?](#heading--machine-summary)
-5. [Where can I find network info for a machine?](#heading--machine-interfaces-h3)
-6. [Where can I find storage info for a machine?](#heading--machine-storage-h3)
-7. [Where can I find the commissioning log for a machine?](#heading--commissioning-log-h3)
-8. [Where can I find machine hardware & test logs?](#heading--hardware-tests-h3)
-9. [Where can I find raw log output for a machine?](#heading--raw-log-output-h3)
-10. [Where can I find a machine's event log?](#heading--event-logs-h3)
-11. [Where can I find machine configuration info?](#heading--machine-config-h3)
-rad-end
+One of the most important things to understand about machines -- and one of the most important reasons for consulting the machine list -- is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, acquired, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
 
-rad-begin /snap/3.0/ui /deb/3.0/ui 
-#### Twelve questions you may have:
+All of these states and actions represent the possible life-cycle of a machine.  This life-cycle isn't strict or linear; it depends on how you use a machine, but it's useful to give a general overview of how machines tend to change states.  In the discussion that follows, states and actions are shown in **bold** type.
 
-1. [How are the machine states and actions related?](#heading--machine-life-cycle)
-2. [How can I view the machine list?](#heading--machine-list)
-3. [How can I view machine details?](#heading--node-details)
-4. [How can I view a machine summary?](#heading--machine-summary)
-5. [How does MAAS handle attached USB/PCI devices?](#heading--usb-pci-devices)
-6. [Where can I find network info for a machine?](#heading--machine-interfaces-h3)
-7. [Where can I find storage info for a machine?](#heading--machine-storage-h3)
-8. [Where can I find the commissioning log for a machine?](#heading--commissioning-log-h3)
-9. [Where can I find machine hardware & test logs?](#heading--hardware-tests-h3)
-10. [Where can I find raw log output for a machine?](#heading--raw-log-output-h3)
-11. [Where can I find a machine's event log?](#heading--event-logs-h3)
-12. [Where can I find machine configuration info?](#heading--machine-config-h3)
-rad-end
+1. Machines start as servers in your environment, attached to a network or subnet MAAS can manage.
 
-rad-begin /snap/3.0/cli /deb/3.0/cli 
-#### Four questions you may have:
+2. If machines are configured to netboot, MAAS can **discover** them and present them to you for possible commissioning, changing their state to **New**.
 
-1. [How are the machine states and actions related?](#heading--machine-life-cycle)
-2. [How can I view the machine list?](#heading--machine-list)
-3. [How can I view machine details?](#heading--node-details)
-4. [How does MAAS handle attached USB/PCI devices?](#heading--usb-pci-devices)
-rad-end
+3. When you select a machine that is marked **New**, you can choose to **commission** it.  If you add a machine manually, it is automatically **commissioned**.
 
-rad-begin     /deb/2.9/cli /snap/2.9/cli 
-#### Three questions you may have:
+4. Machines that have successfully commissioned can be **acquired** and **deployed**.  Machines that don't successfully commission can be **marked broken** (and later recovered when the issues are resolved).
 
-1. [How are the machine states and actions related?](#heading--machine-life-cycle)
-2. [How can I view the machine list?](#heading--machine-list)
-3. [How can I view machine details?](#heading--node-details)
-rad-end
+5. Resolving problems with machines usually involve **testing** the machine.
 
-For example, in the illustration below, you see a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:
+6. Once you've deployed a machine, and you're done with it, you can **release** it.
+
+7. You can place a machine in **rescue mode**, which allows you to SSH to a machine to make configuration changes or do other maintenance. Once you're done, you can **exit rescue mode***.
+
+8. Any time a machine is on, you have the option to select it and **power off** that machine.
+
+9. You can **abort** any operation that's in progress.
+
+10. You also have the option to set tags, availability zone, or resource pool at various stages along the way.
+
+Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it's not very useful to make a state diagram or flowchart.  Instead, consider the following table:
+
+| Action/State | New | Ready | Acquired | Deployed | Locked | Rescue | Broken |
+|:-------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|	
+| Commission   | X   | X     |          |          |        |        |   X    |
+| Acquire      |     | X     |          |          |        |        |        |
+| Deploy       |     | X     |   X      |          |        |        |        |
+| Release      |     |       |   X      |    X     |        |        |        |
+| Power on     |     |       |          |    X     |        |        |   X    |
+| Power off    |     |       |          |          |        |        |        |
+| Test         | X   | X     |   X      |    X     |        |        |   X    |
+| Rescue mode  | X   | X     |   X      |    X     |        |        |   X    |
+| Exit rescue  |     |       |          |          |        |   X    |        |
+| Mark broken  |     |       |   X      |    X     |        |        |        |
+| Mark fixed   |     |       |          |          |        |        |   X    |
+| Lock         |     |       |          |    X     |        |        |        |
+| Unlock       |     |       |          |          |   X    |        |        |
+| Tag          | X   | X     |   X      |    X     |        |   X    |   X    |
+| Set zone     | X   | X     |   X      |    X     |        |   X    |   X    |
+| Set...pool   | X   | X     |   X      |    X     |        |   X    |   X    |
+| Delete       | X   | X     |   X      |    X     |        |   X    |   X    |
+
+When a machine is in the state listed in a column, it is possible to take the row actions marked with an "X."  You access these actions from the "Take action" menu in the upper right corner of the machine listing.  Note that some actions, such as "Mark broken" or "Lock," may be hidden when they are not available.
+
+<a href="#heading--about-machine-lists"><h2 id="heading--about-machine-lists">About machine lists</h2></a>
+
+The fundamental dashboard for MAAS is the machine list, which presents the health and status data for machines currently controlled by your MAAS instance.  For example, in the illustration below, you see a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:
 
 rad-begin     /deb/2.9/ui /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 <a href="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg"></a> 
@@ -163,55 +165,100 @@ HOSTNAME           SYSID   POWER  STATUS     OWNER  TAGS     POOL     VLAN      
 
 rad-end
 
-<a href="#heading--machine-life-cycle"><h2 id="heading--machine-life-cycle">Machine life-cycle</h2></a>
 
-One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, acquired, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
 
-All of these states and actions represent the possible life-cycle of a machine.  This life-cycle isn't strict or linear -- it depends on how you use a machine -- but it's useful to give a general overview of how machines tend to change states.  In the discussion that follows, states and actions are shown in **bold** type.
+The Machine summary presents an overview of CPU, memory, storage, tags, and general settings:
 
-1. Machines start as servers in your environment, attached to a network or subnet MAAS can manage.
+<a href="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png"></a>
 
-2. If machines are configured to netboot, MAAS can **discover** them and present them to you for possible commissioning, changing their state to **New**.
+The first card presents some basics of the machine resources and configuration:
 
-3. When you select a machine that is marked **New**, you can choose to **commission** it.  If you add a machine manually, it is automatically **commissioned**.
+<a href="https://discourse.maas.io/uploads/default/original/1X/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg"></a> 
 
-4. Machines that have successfully commissioned can be **acquired** and **deployed**.  Machines that don't successfully commission can be **marked broken** (and later recovered when the issues are resolved).
+Here are some details on what this card presents, with details on in-card links described in following sections:
 
-5. Resolving problems with machines usually involve **testing** the machine.
+- **OVERVIEW** the machine status (in this case "Deployed"), and lists OS version information.  
 
-6. Once you've deployed a machine, and you're done with it, you can **release** it.
+- **CPU** shows the specifics of the CPU(s), including a link to test the processor(s).
 
-7. You can place a machine in **rescue mode**, which allows you to SSH to a machine to make configuration changes or do other maintenance. Once you're done, you can **exit rescue mode***.
+- **MEMORY** gives the total available RAM for this machine, along with a test link.
 
-8. Any time a machine is on, you have the option to select it and **power off** that machine.
+- **STORAGE** presents the total amount of storage available and the number of disks that provide that storage.  There are two links here: one gives the storage layout (with the opportunity to change it for devices that are in 'Ready' or 'Allocated' states.
 
-9. You can **abort** any operation that's in progress.
+- **Owner** identifies the owner of the machine.
 
-10. You also have the option to set tags, availability zone, or resource pool at various stages along the way.
+- **Domain** indicates the domain in which the machine exists.
 
-Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it's not very useful to make a state diagram or flowchart.  Instead, consider the following table:
+- **Zone** shows the AZ in which this machine resides, along with a link to edit the machine configuration (to change the AZ, if desired).
 
-| Action/State | New | Ready | Acquired | Deployed | Locked | Rescue | Broken |
-|:-------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|	
-| Commission   | X   | X     |          |          |        |        |   X    |
-| Acquire      |     | X     |          |          |        |        |        |
-| Deploy       |     | X     |   X      |          |        |        |        |
-| Release      |     |       |   X      |    X     |        |        |        |
-| Power on     |     |       |          |    X     |        |        |   X    |
-| Power off    |     |       |          |          |        |        |        |
-| Test         | X   | X     |   X      |    X     |        |        |   X    |
-| Rescue mode  | X   | X     |   X      |    X     |        |        |   X    |
-| Exit rescue  |     |       |          |          |        |   X    |        |
-| Mark broken  |     |       |   X      |    X     |        |        |        |
-| Mark fixed   |     |       |          |          |        |        |   X    |
-| Lock         |     |       |          |    X     |        |        |        |
-| Unlock       |     |       |          |          |   X    |        |        |
-| Tag          | X   | X     |   X      |    X     |        |   X    |   X    |
-| Set zone     | X   | X     |   X      |    X     |        |   X    |   X    |
-| Set...pool   | X   | X     |   X      |    X     |        |   X    |   X    |
-| Delete       | X   | X     |   X      |    X     |        |   X    |   X    |
+- **Resource pool** shows the pool to which this machine has been assigned, and an edit link.
 
-When a machine is in the state listed in a column, it is possible to take the row actions marked with an "X."  You access these actions from the "Take action" menu in the upper right corner of the machine listing.  Note that some actions, such as "Mark broken" or "Lock," may be hidden when they are not available.
+- **Power type** gives the current power type, which links to the relevant edit form.
+
+- **Tags** presents the list of tags associated with this machine, editable via the link.
+
+Note that clicking any of the links in this card will either present a pop-up form or take you to another item in the machine menu -- so using the browser "back" button will take you completely away from this machine's page.  For example, you can choose the "Test CPU" option, which brings up this overlay:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/6/6d7fe50e5b296a37a03269a1f5be3d25a2a2481a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6d7fe50e5b296a37a03269a1f5be3d25a2a2481a.png"></a> 
+
+From this screen, you can choose test scripts and run the tests (in the background) as the interface returns to the Machine summary.  A linked note in the CPU block lets you know that the tests are in progress:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/3/3e140872c407e5b9eb06960b5b42353765567192.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3e140872c407e5b9eb06960b5b42353765567192.png"></a> 
+
+And you can watch the results under the "Tests" option in the Machine menu:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/f/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png"></a> 
+rad-end
+
+<a href="#heading--machine-summary"><h2 id="heading--machine-summary">About the machine summary</h2></a>
+
+As shown above, the Machine summary presents an overview of CPU, memory, storage, tags, and general settings:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/c9684bf883d01d3fe610ec27e95618075c44b324.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c9684bf883d01d3fe610ec27e95618075c44b324.jpeg"></a>
+
+The first card presents some basics of the machine resources and configuration:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg"></a> 
+
+Here are some details on what this card presents, with details on in-card links described in following sections:
+
+- **OVERVIEW** the machine status (in this case "Deployed"), and lists OS version information.  
+
+- **CPU** shows the specifics of the CPU(s), including a link to test the processor(s).
+
+- **MEMORY** gives the total available RAM for this machine, along with a test link.
+
+- **STORAGE** presents the total amount of storage available and the number of disks that provide that storage.  There are two links here: one gives the storage layout (with the opportunity to change it for devices that are in 'Ready' or 'Allocated' states.
+
+- **Owner** identifies the owner of the machine.
+
+- **Domain** indicates the domain in which the machine exists.
+
+- **Zone** shows the AZ in which this machine resides, along with a link to edit the machine configuration (to change the AZ, if desired).
+
+- **Resource pool** shows the pool to which this machine has been assigned, and an edit link.
+
+- **Power type** gives the current power type, which links to the relevant edit form.
+
+- **Tags** presents the list of tags associated with this machine, editable via the link.
+
+Note that clicking any of the links in this card will either present a pop-up form or take you to another item in the machine menu -- so using the browser "back" button will take you completely away from this machine's page.  For example, you can choose the "Test CPU" option, which brings up this overlay:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/4fe98db93dd34f3b167b56286b06ec6d244d5848.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/4fe98db93dd34f3b167b56286b06ec6d244d5848.jpeg"></a> 
+
+From this screen, you can choose test scripts and run the tests (in the background) as the interface returns to the Machine summary.  A linked note in the CPU block lets you know that the tests are in progress:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/3d6996b32a5193dab76b112c864a216c845aa985.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3d6996b32a5193dab76b112c864a216c845aa985.jpeg"></a> 
+
+And you can watch the results under the "Tests" option in the Machine menu:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/89d287347928d6adb039ca582d4a94c3b54588e1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/89d287347928d6adb039ca582d4a94c3b54588e1.jpeg"></a> 
+
+* rad-begin /deb/2.9/ui /deb/3.0/ui /snap/2.9/ui /snap/3.0/ui
+The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](/t/hardware-testing/nnnn) page.
+rad-end
+
+** rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli
 
 <a href="#heading--machine-list"><h2 id="heading--machine-list">View the machine list</h2></a>
 
@@ -410,51 +457,6 @@ The default view is 'Machine summary', presented as a series of cards detailing 
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/2efac92fca2c90f53ac86bd98485d8e98a1f91d4.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/2efac92fca2c90f53ac86bd98485d8e98a1f91d4.jpeg"></a> 
 
-The menu includes links to a number of additional forms and controls, as described in the following sections.
-
-<a href="#heading--machine-summary-h3"><h3 id="heading--machine-summary-h3">View a machine summary</h3></a>
-
-As shown above, the Machine summary presents an overview of CPU, memory, storage, tags, and general settings:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/c9684bf883d01d3fe610ec27e95618075c44b324.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c9684bf883d01d3fe610ec27e95618075c44b324.jpeg"></a>
-
-The first card presents some basics of the machine resources and configuration:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg"></a> 
-
-Here are some details on what this card presents, with details on in-card links described in following sections:
-
-- **OVERVIEW** the machine status (in this case "Deployed"), and lists OS version information.  
-
-- **CPU** shows the specifics of the CPU(s), including a link to test the processor(s).
-
-- **MEMORY** gives the total available RAM for this machine, along with a test link.
-
-- **STORAGE** presents the total amount of storage available and the number of disks that provide that storage.  There are two links here: one gives the storage layout (with the opportunity to change it for devices that are in 'Ready' or 'Allocated' states.
-
-- **Owner** identifies the owner of the machine.
-
-- **Domain** indicates the domain in which the machine exists.
-
-- **Zone** shows the AZ in which this machine resides, along with a link to edit the machine configuration (to change the AZ, if desired).
-
-- **Resource pool** shows the pool to which this machine has been assigned, and an edit link.
-
-- **Power type** gives the current power type, which links to the relevant edit form.
-
-- **Tags** presents the list of tags associated with this machine, editable via the link.
-
-Note that clicking any of the links in this card will either present a pop-up form or take you to another item in the machine menu -- so using the browser "back" button will take you completely away from this machine's page.  For example, you can choose the "Test CPU" option, which brings up this overlay:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/4fe98db93dd34f3b167b56286b06ec6d244d5848.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/4fe98db93dd34f3b167b56286b06ec6d244d5848.jpeg"></a> 
-
-From this screen, you can choose test scripts and run the tests (in the background) as the interface returns to the Machine summary.  A linked note in the CPU block lets you know that the tests are in progress:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/3d6996b32a5193dab76b112c864a216c845aa985.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3d6996b32a5193dab76b112c864a216c845aa985.jpeg"></a> 
-
-And you can watch the results under the "Tests" option in the Machine menu:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/89d287347928d6adb039ca582d4a94c3b54588e1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/89d287347928d6adb039ca582d4a94c3b54588e1.jpeg"></a> 
 rad-end
 
 rad-begin /snap/3.0/ui /deb/3.0/ui
@@ -468,63 +470,14 @@ The default view is 'Machine summary', presented as a series of cards detailing 
 
 The menu includes links to a number of additional forms and controls, as described in the following sections.
 
-<a href="#heading--machine-summary-h3"><h3 id="heading--machine-summary-h3">View a machine summary</h3></a>
-
-As shown above, the Machine summary presents an overview of CPU, memory, storage, tags, and general settings:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png"></a>
-
-The first card presents some basics of the machine resources and configuration:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg"></a> 
-
-Here are some details on what this card presents, with details on in-card links described in following sections:
-
-- **OVERVIEW** the machine status (in this case "Deployed"), and lists OS version information.  
-
-- **CPU** shows the specifics of the CPU(s), including a link to test the processor(s).
-
-- **MEMORY** gives the total available RAM for this machine, along with a test link.
-
-- **STORAGE** presents the total amount of storage available and the number of disks that provide that storage.  There are two links here: one gives the storage layout (with the opportunity to change it for devices that are in 'Ready' or 'Allocated' states.
-
-- **Owner** identifies the owner of the machine.
-
-- **Domain** indicates the domain in which the machine exists.
-
-- **Zone** shows the AZ in which this machine resides, along with a link to edit the machine configuration (to change the AZ, if desired).
-
-- **Resource pool** shows the pool to which this machine has been assigned, and an edit link.
-
-- **Power type** gives the current power type, which links to the relevant edit form.
-
-- **Tags** presents the list of tags associated with this machine, editable via the link.
-
-Note that clicking any of the links in this card will either present a pop-up form or take you to another item in the machine menu -- so using the browser "back" button will take you completely away from this machine's page.  For example, you can choose the "Test CPU" option, which brings up this overlay:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/6/6d7fe50e5b296a37a03269a1f5be3d25a2a2481a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6d7fe50e5b296a37a03269a1f5be3d25a2a2481a.png"></a> 
-
-From this screen, you can choose test scripts and run the tests (in the background) as the interface returns to the Machine summary.  A linked note in the CPU block lets you know that the tests are in progress:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/3e140872c407e5b9eb06960b5b42353765567192.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3e140872c407e5b9eb06960b5b42353765567192.png"></a> 
-
-And you can watch the results under the "Tests" option in the Machine menu:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png"></a> 
-rad-end
-
-rad-begin /deb/2.9/ui /deb/3.0/ui /snap/2.9/ui /snap/3.0/ui
-The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option.  Incidentally, you can learn more about testing by visiting the [Hardware testing](/t/hardware-testing/nnnn) page.
-rad-end
-
 rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli
-<a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">Handling attached USB and PCI devices</h3></a>
+<a href="#heading--usb-pci-devices"><h2 id="heading--usb-pci-devices">About attached USB and PCI deviceAs</h2></a>
 
 The machines in your MAAS may have devices attached to them via USB or PCI interface, such as keyboards, cameras, network cards, GPUs, etc.  MAAS will recognize these devices and make them visible to you when a machine is commissioned.
 
 rad-end
 
-rad-begin /snap/3.0/ui /deb/3.0/ui
+*rad-begin /snap/3.0/ui /deb/3.0/ui
 
 For example, the machine details presents USB and PCI devices like this:
 
@@ -532,13 +485,13 @@ For example, the machine details presents USB and PCI devices like this:
 
 Note that this page now includes two new tabs: "PCI devices" and "USB."  For each USB/PCI device attached to your machine, these tabs will list:
 
-* device type
-* vendor ID
-* a product description
-* a product ID
-* the driver name
-* the containing NUMA node (if any)
-* the device address
+- device type
+- vendor ID
+- a product description
+- a product ID
+- the driver name
+- the containing NUMA node (if any)
+- the device address
 
 A typical PCI device tab would look something like this:
 
@@ -552,7 +505,7 @@ If you are upgrading from a previous version of MAAS, PCI and USB devices aren't
 
 rad-end
 
-rad-begin /snap/3.0/cli /deb/3.0/cli
+*rad-begin /snap/3.0/cli /deb/3.0/cli
 Using the MAAS CLI, you can obtain a list of the USB/PCI devices available in a commissioned machine with the following command:
 
 ```
@@ -561,27 +514,27 @@ maas $PROFILE node-devices read $SYSTEM_ID
 
 where:
 
-* $PROFILE   = your user profile (e.g., "admin")
-* $SYSTEM_ID = the ID of the machine in question (e.g., "ngx7ry")
+- $PROFILE   = your user profile (e.g., "admin")
+- $SYSTEM_ID = the ID of the machine in question (e.g., "ngx7ry")
 
 Note that USB/PCI devices are referred to as "node-devices" in the MAAS CLI.
 
 The JSON output that is returned from this command will contain the following information about each USB/PCI device on the machine in question:
 
-* the node-device ID
-* the bus to which the device is attached (PCIE/USB)
-* the hardware_type, which can be "node," "cpu,"" "memory," "storage," or "gpu."
-* the vendor_id
-* the product_id
-* vendor_name
-* the product_name
-* the commissioning_driver (i.e., the driver)
+- the node-device ID
+- the bus to which the device is attached (PCIE/USB)
+- the hardware_type, which can be "node," "cpu,"" "memory," "storage," or "gpu."
+- the vendor_id
+- the product_id
+- vendor_name
+- the product_name
+- the commissioning_driver (i.e., the driver)
  
 These parameters may vary greatly between device types.
 
 rad-end
 
-rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli
+*rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli
 Once you've commissioned the machine, you have the option of deleting PCI/USB devices from the machine in any machine state, via the CLI only, using the following command:
 
 ```
@@ -590,17 +543,19 @@ maas $PROFILE node-device delete $SYSTEM_ID $DEVICE_ID
 
 where:
 
-* $PROFILE   = your user profile (e.g., "admin")
-* $SYSTEM_ID = the ID of the machine in question (e.g., "ngx7ry")
-* $DEVICE_ID = the ID of the device you want to delete 
+- $PROFILE   = your user profile (e.g., "admin")
+- $SYSTEM_ID = the ID of the machine in question (e.g., "ngx7ry")
+- $DEVICE_ID = the ID of the device you want to delete 
 
 If the device is still present in the system, it will be recogized again (and thus "recreated")
 when the machine is commissioned again.
 rad-end
 
 
-rad-begin     /snap/2.9/ui /deb/2.9/ui 
-<a href="#heading--machine-interfaces-h3"><h3 id="heading--machine-interfaces-h3">Find network info for a machine</h3></a>
+rad-begin /snap/3.0/ui deb/3.0/ui /snap/2.9/ui /deb/2.9/ui
+<a href="#heading--machine-interfaces"><h2 id="heading--machine-interfaces">About machines interfaces</h2></a>
+rad-end
+rad-begin /snap/2.9/ui /deb/2.9/ui
 
 The Network "tab" provides you with a way to view/edit the network and interface configuration for a machine: 
 
@@ -612,7 +567,7 @@ In the case of this deployed machine, there are not many editing options.  If th
 rad-end
 
 rad-begin /snap/3.0/ui /deb/3.0/ui
-<a href="#heading--machine-interfaces-h3"><h3 id="heading--machine-interfaces-h3">Find network info for a machine</h3></a>
+
 
 The Network "tab" provides you with a way to view/edit the network and interface configuration for a machine: 
 
@@ -626,8 +581,11 @@ rad-begin /deb/2.9/ui /deb/3.0/ui /snap/2.9/ui /snap/3.0/ui
 Options on this tab are described in the introduction to [Networking](/t/networking/nnnn) article in this documentation set.
 rad-end
 
+rad-begin /deb/2.9/ui /deb/3.0/ui /snap/2.9/ui /snap/3.0/ui
+<a href="#heading--machine-storage"><h2 id="heading--machine-storage">About machine storage info</h2></a>
+rad-end
+
 rad-begin /deb/2.9/ui
-<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
 
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
 
@@ -637,8 +595,6 @@ This tab describes the filesystem(s) in use, as well as the available and used p
 rad-end
 
 rad-begin /deb/3.0/ui
-<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
-
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> 
@@ -647,8 +603,6 @@ This tab describes the filesystem(s) in use, as well as the available and used p
 rad-end
 
 rad-begin /snap/2.9/ui
-<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
-
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/9dc30aedf5ed173bb7b474910fa9939f7f066c95.jpeg"></a> 
@@ -657,8 +611,6 @@ This tab describes the filesystem(s) in use, as well as the available and used p
 rad-end
 
 rad-begin /snap/3.0/ui
-<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
-
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> 
@@ -666,8 +618,11 @@ The Storage tab on the machine list brings up a form that allows you to view/edi
 This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/nnnn) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
 rad-end
 
+rad-begin /dev/2.9/ui /deb/3.0/ui /snap/3.0/ui /snap/2.9/ui
+<a href="#heading--commissioning-log"><h2 id="heading--commissioning-log">About commissioning logs</h2></a>
+rad-end
+
 rad-begin /deb/2.9/ui
-<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
 
 The "Commissioning" tab brings up a summary log of commissioning events:
 
@@ -681,8 +636,6 @@ These logs present an extremely detailed, timestamped record of completion and s
 rad-end
 
 rad-begin /deb/3.0/ui /snap/3.0/ui
-<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
-
 The "Commissioning" tab brings up a summary log of commissioning events:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e98766009f32972dfe29293f9bc850b99a9a941f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e98766009f32972dfe29293f9bc850b99a9a941f.png"></a> 
@@ -699,8 +652,6 @@ These logs present an extremely detailed, timestamped record of completion and s
 rad-end
 
 rad-begin /snap/2.9/ui
-<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
-
 The "Commissioning" tab brings up a summary log of commissioning events:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/b3d6248013fb5186d3ea61931816fe688b94a6a2.jpeg"></a> 
@@ -712,9 +663,11 @@ Clicking on any of the "View log" links will take you to specific, detailed logs
 These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs.
 rad-end
 
-rad-begin /deb/2.9/ui
-<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
+rad-begin /deb/2.9/ui /deb/2.9/cli /snap/3.0/ui /snap/3.0/cli
+<a href="#heading--hardware-tests"><h2 id="heading--hardware-tests">About mmachine hardware & test logs</h2></a>
+rad-end
 
+rad-begin /deb/2.9/ui
 This tab presents a summary of tests run against this particular machine:  
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg"></a> 
@@ -727,8 +680,6 @@ The format of these screens is very similar to the Configuration logs shown abov
 rad-end
 
 rad-begin /deb/3.0/ui
-<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
-
 This tab presents a summary of tests run against this particular machine:  
 
 <a href="See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs." target = "_blank"><img src="See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs."></a> 
@@ -741,8 +692,6 @@ The format of these screens is very similar to the Configuration logs shown abov
 rad-end
 
 rad-begin /snap/2.9/ui
-<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
-
 This tab presents a summary of tests run against this particular machine:  
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/b6a6ff3c8fae4a638c18a18bf65c4aa51f29e984.jpeg"></a> 
@@ -755,8 +704,6 @@ The format of these screens is very similar to the Configuration logs shown abov
 rad-end
 
 rad-begin /snap/3.0/ui
-<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
-
 This tab presents a summary of tests run against this particular machine:  
 
 <a href="See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs." target = "_blank"><img src="See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs."></a> 
@@ -768,9 +715,11 @@ You can view the summary report, or choose the "View details" dropdown to get de
 The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/nnnn).
 rad-end
 
-rad-begin /deb/2.9/ui
-<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
+rad-begin /deb/2.9/ui /deb/3.0/ui /snap/2.9/ui /snap/3.0/ui
+<a href="#heading--raw-log-output"><h2 id="heading--raw-log-output">About raw machine log output</h2></a>
+rad-end
 
+rad-begin /deb/2.9/ui
 The "Logs" tab shows raw log output, switchable between YAML and XML formats:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a> 
@@ -779,8 +728,6 @@ Help interpreting these logs can be found under the [Logging](/t/maas-logging/nn
 rad-end
 
 rad-begin /deb/3.0/ui
-<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
-
 By choosing "Installation output" on the "Logs" tab, you can see the "raw" log output:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a> 
@@ -789,8 +736,6 @@ Help interpreting these logs can be found under the [Logging](/t/maas-logging/nn
 rad-end
 
 rad-begin /snap/2.9/ui
-<a href="#heading--raw-log-output-h3"><h3 id="heading--raw-log-output-h3">Find raw log output for a machine</h3></a>
-
 The "Logs" tab shows raw log output, switchable between YAML and XML formats:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/02b4bc35c8985fe0b954d8deb0afba18866cfe66.jpeg"></a> 
@@ -804,19 +749,19 @@ By choosing "Installation output" on the "Logs" tab, you can see the "raw" log o
 <a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a> 
 
 Help interpreting these logs can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
+rad-end
+
+rad-begin     /deb/2.9/ui /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+<a href="#heading--event-logs"><h2 id="heading--event-logs">About machine event logs</h2></a>
 rad-end
 
 rad-begin     /deb/2.9/ui /snap/2.9/ui 
-<a href="#heading--event-logs-h3"><h3 id="heading--event-logs-h3">Find a machine's event logs</h3></a>
-
 The "Event" tab displays a list of timestamped status updates for events and actions performed on the machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/114ada7188f8ebf12883a54c0976ad8abda1d211.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/114ada7188f8ebf12883a54c0976ad8abda1d211.jpeg"></a> 
 rad-end
 
 rad-begin /snap/3.0/ui /deb/3.0/ui
-<a href="#heading--event-logs-h3"><h3 id="heading--event-logs-h3">Find a machine's event logs</h3></a>
-
 To view the Event log for a machine, choose the "Event" tab under "Logs."  This displays a list of timestamped status updates for events and actions performed on the machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a> 
@@ -838,9 +783,11 @@ rad-begin /snap/3.0/ui
 There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 rad-end
 
-rad-begin     /deb/2.9/ui /snap/2.9/ui 
-<a href="#heading--machine-config-h3"><h3 id="heading--machine-config-h3">Find machine configuration info</h3></a>
+rad-begin     /deb/2.9/ui /snap/2.9/ui /snap/3.0/cli /snap/3.0/ui
+<a href="#heading--machine-config"><h2 id="heading--machine-config">About machine configuration info</h2></a>
+rad-end
 
+rad-begin /deb/2.9/ui /snap/2.9/ui
 The final tab from the Machine menu allows you to update machine and power configuration options: 
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/13bb1352103c759365fc6b923672f021982a10c3.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/13bb1352103c759365fc6b923672f021982a10c3.jpeg"></a> 
@@ -856,8 +803,6 @@ After entering the correct password and recycling things, the problem goes away:
 rad-end
 
 rad-begin /snap/3.0/ui /deb/3.0/ui
-<a href="#heading--machine-config-h3"><h3 id="heading--machine-config-h3">Find machine configuration info</h3></a>
-
 The final tab from the Machine menu allows you to update machine and power configuration options: 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/7/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png"></a> 
@@ -873,6 +818,3 @@ rad-begin /deb/2.9/ui /deb/3.0/ui /snap/2.9/ui /snap/3.0/ui
 More information on Power configuration will be found in the [Power management](/t/power-management/nnnn) section of this documentation.
 rad-end
 
-<h2>Summary</h2>
-
-This article has offered you a cursory glimpse into machines and how they are configured and managed in MAAS.  Read on through this section of the documentation to learn more.
