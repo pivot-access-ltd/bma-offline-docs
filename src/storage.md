@@ -18,6 +18,69 @@ UEFI must be enabled or disabled for the lifespan of the machine. For example, d
 
 The EFI partition, if created, will be the first partition (`sda1`) and will have a FAT32 filesystem with a size of 512 MB.
 
+<a href="#heading--final-storage-modifications"><h2 id="heading--final-storage-modifications">About final storage modifications</h2></a>
+
+Once MAAS provisions a machine with block devices, via a layout or administrator customisation, a regular user can modify the resulting storage configuration at the filesystem level.
+
+<a href="#heading--how-to-set-global-storage-layouts"><h2 id="heading--how-to-set-global-storage-layouts">How to set global storage layouts</h2></a>
+
+Layouts can be set globally and on a per-machine basis.
+
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+All machines will have a default layout applied when commissioned. An administrator can configure the default layout on the 'Settings' page, under the 'Storage' tab.
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png"></a>
+rad-end
+
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+All machines will have a default layout applied when commissioned. To set the default storage layout for all machines:
+
+```
+maas $PROFILE maas set-config name=default_storage_layout value=$LAYOUT_TYPE
+```
+
+For example, to set the default layout to Flat:
+
+```
+maas $PROFILE maas set-config name=default_storage_layout value=flat
+```
+
+Important: The new default will only apply to newly-commissioned machines.
+
+rad-end
+
+[note type="caution" status="Important"]
+The new default will only apply to newly-commissioned machines.
+[/note]
+
+<a href="#heading--how-to-set-per-machine-storage-layouts"><h3 id="heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</h3></a>
+
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of 'Ready'. This is only possible via the CLI: to see how, click the "CLI" option for your version and delivery method above.
+rad-end
+
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+An administrator can set a storage layout for a machine with a status of ‘Ready’ like this:
+
+```
+maas $PROFILE machine set-storage-layout $SYSTEM_ID storage_layout=$LAYOUT_TYPE [$OPTIONS]
+```
+
+For example, to set an LVM layout where the logical volume has a size of 5 GB:
+
+```
+maas $PROFILE machine set-storage-layout $SYSTEM_ID storage_layout=lvm lv_size=5368709120
+
+```
+You must specify all storage sizes in bytes.
+
+This action will remove the configuration that may exist on any block device.
+rad-end
+
+[note]
+Only an administrator can modify storage at the block device level (providing the machine has a status of 'Ready').
+[/note]
+
 <a href="#heading--storage-layouts-reference"><h2 id="heading--storage-layouts-reference">Storage layouts reference</h2></a>
 
 There are three layout types:
@@ -113,73 +176,10 @@ The following options are supported:
 
 2. `root_size`: Size of the default VMFS Datastore. Default is 100%, meaning the remaining size of the root disk.
 
-<a href="#heading--blank-layout"><h3 id="heading--blank-layout">Blank layout</h3></a>
+<a href="#heading--blank-storage-layout-reference"><h3 id="heading--blank-storage-layout-reference">Blank storage layout reference</h3></a>
 
 The blank layout removes all storage configuration from all storage devices. It is useful when needing to apply a custom storage configuration.
 
 [note type="negative" status="Warning"]
 Machines with the blank layout applied are not deployable; you must first configure storage manually.
 [/note]
-
-<a href="#heading--how-to-set-global-storage-layouts"><h2 id="heading--how-to-set-global-storage-layouts">How to set global storage layouts</h2></a>
-
-Layouts can be set globally and on a per-machine basis.
-
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
-All machines will have a default layout applied when commissioned. An administrator can configure the default layout on the 'Settings' page, under the 'Storage' tab.
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png"></a>
-rad-end
-
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
-All machines will have a default layout applied when commissioned. To set the default storage layout for all machines:
-
-```
-maas $PROFILE maas set-config name=default_storage_layout value=$LAYOUT_TYPE
-```
-
-For example, to set the default layout to Flat:
-
-```
-maas $PROFILE maas set-config name=default_storage_layout value=flat
-```
-
-Important: The new default will only apply to newly-commissioned machines.
-
-rad-end
-
-[note type="caution" status="Important"]
-The new default will only apply to newly-commissioned machines.
-[/note]
-
-<a href="#heading--how-to-set-per-machine-storage-layouts"><h3 id="heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</h3></a>
-
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
-An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of 'Ready'. This is only possible via the CLI: to see how, click the "CLI" option for your version and delivery method above.
-rad-end
-
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
-An administrator can set a storage layout for a machine with a status of ‘Ready’ like this:
-
-```
-maas $PROFILE machine set-storage-layout $SYSTEM_ID storage_layout=$LAYOUT_TYPE [$OPTIONS]
-```
-
-For example, to set an LVM layout where the logical volume has a size of 5 GB:
-
-```
-maas $PROFILE machine set-storage-layout $SYSTEM_ID storage_layout=lvm lv_size=5368709120
-
-```
-You must specify all storage sizes in bytes.
-
-This action will remove the configuration that may exist on any block device.
-rad-end
-
-[note]
-Only an administrator can modify storage at the block device level (providing the machine has a status of 'Ready').
-[/note]
-
-<a href="#heading--final-storage-modifications"><h2 id="heading--final-storage-modifications">About final storage modifications</h2></a>
-
-Once MAAS provisions a machine with block devices, via a layout or administrator customisation, a regular user can modify the resulting storage configuration at the filesystem level.
