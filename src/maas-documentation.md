@@ -34,7 +34,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [How to add machines](/t/add-machines-snap-3-0-ui/3822)
 - [How to manage interfaces](/t/commission-machines-snap-3-0-ui/3874)
 - [How to manage storage](/t/storage-snap-3-0-ui/4106)
-  - [Partitions](/t/partitions-snap-3-0-ui/4062)
 - [How to test hardware](/t/hardware-testing-snap-3-0-ui/3942)
 - [How to test networking](/t/network-testing-snap-3-0-ui/4050)
 - [How to commission machines](/t/commissioning-and-hardware-testing-scripts-snap-3-0-ui/3866)
@@ -142,7 +141,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3910|/docs/snap/3.0/ui/custom-machine-setup|
 |https://discourse.maas.io/t/-/3974|/docs/snap/3.0/ui/kernel-boot-options|
 |https://discourse.maas.io/t/-/4106|/docs/snap/3.0/ui/storage|
-|https://discourse.maas.io/t/-/4062|/docs/snap/3.0/ui/partitions|
 |https://discourse.maas.io/t/-/4178|/docs/snap/3.0/ui/vmware-vmfs-datastores|
 |https://discourse.maas.io/t/-/4138|/docs/snap/3.0/ui/ubuntu-kernels|
 |https://discourse.maas.io/t/-/4470|/docs/snap/3.0/ui/using-lxd-projects-with-maas|
@@ -764,14 +762,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/2983|/docs/snap/2.7/ui/partitions|
 |https://discourse.maas.io/t/-/2984|/docs/snap/2.8/cli/partitions|
 |https://discourse.maas.io/t/-/2985|/docs/snap/2.8/ui/partitions|
-|https://discourse.maas.io/t/-/2986|/docs/snap/2.9/cli/partitions|
-|https://discourse.maas.io/t/-/2987|/docs/snap/2.9/ui/partitions|
 |https://discourse.maas.io/t/-/2988|/docs/deb/2.7/cli/partitions|
 |https://discourse.maas.io/t/-/2989|/docs/deb/2.7/ui/partitions|
 |https://discourse.maas.io/t/-/2990|/docs/deb/2.8/cli/partitions|
 |https://discourse.maas.io/t/-/2991|/docs/deb/2.8/ui/partitions|
-|https://discourse.maas.io/t/-/2992|/docs/deb/2.9/cli/partitions|
-|https://discourse.maas.io/t/-/2993|/docs/deb/2.9/ui/partitions|
 |https://discourse.maas.io/t/-/2994|/docs/snap/2.7/cli/postgresql-ha-hot-standby|
 |https://discourse.maas.io/t/-/2995|/docs/snap/2.7/ui/postgresql-ha-hot-standby|
 |https://discourse.maas.io/t/-/2996|/docs/snap/2.8/cli/postgresql-ha-hot-standby|
@@ -1215,9 +1209,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4056|/docs/deb/3.0/ui/ntp-services|
 |https://discourse.maas.io/t/-/4059|/docs/deb/3.0/cli/package-repositories|
 |https://discourse.maas.io/t/-/4060|/docs/deb/3.0/ui/package-repositories|
-|https://discourse.maas.io/t/-/4061|/docs/snap/3.0/cli/partitions|
-|https://discourse.maas.io/t/-/4063|/docs/deb/3.0/cli/partitions|
-|https://discourse.maas.io/t/-/4064|/docs/deb/3.0/ui/partitions|
 |https://discourse.maas.io/t/-/4065|/docs/snap/3.0/cli/postgresql-ha-hot-standby|
 |https://discourse.maas.io/t/-/4067|/docs/deb/3.0/cli/postgresql-ha-hot-standby|
 |https://discourse.maas.io/t/-/4068|/docs/deb/3.0/ui/postgresql-ha-hot-standby|
@@ -1357,6 +1348,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/snap/3.0/ui/partitions|/docs/snap/3.0/ui/storage|
+|/docs/snap/2.9/cli/partitions|/docs/snap/2.9/cli/storage|
+|/docs/snap/2.9/ui/partitions|/docs/snap/2.9/ui/storage|
+|/docs/deb/2.9/cli/partitions|/docs/deb/2.9/cli/storage|
+|/docs/deb/2.9/ui/partitions|/docs/deb/2.9/ui/storage|
+|/docs/snap/3.0/cli/partitions|/docs/snap/3.0/cli/storage|
+|/docs/deb/3.0/cli/partitions|/docs/deb/3.0/cli/storage|
+|/docs/deb/3.0/ui/partitions|/docs/deb/3.0/ui/storage|
 |/docs/snap/3.0/ui/block-devices|/docs/snap/3.0/ui/storage|
 |/docs/deb/2.9/cli/block-devices|/docs/deb/2.9/cli/storage|
 |/docs/deb/2.9/ui/block-devices|/docs/deb/2.9/ui/storage|
@@ -1395,7 +1394,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/deb/2.9/ui/maas-tags|/docs/deb/2.9/ui/tags-and-annotations|
 |/docs/cli-resource-pool-management|/docs/snap/2.9/cli/resource-pools|
 |/docs/cli-dhcp-snippet-management|/docs/snap/2.9/cli/managing-dhcp|
-|/docs/partitions|/docs/snap/2.9/ui/partitions|
+|/docs/partitions|/docs/snap/2.9/ui/storage|
 |/docs/install-from-packages|/docs/deb/2.9/ui/installation|
 |/docs/commissioning-and-hardware-testing-scripts|/docs/snap/2.9/ui/commissioning-and-hardware-testing-scripts|
 |/docs/tags|/docs/snap/2.9/ui/maas-tags|
@@ -1500,7 +1499,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/configure-networking|/docs/snap/2.9/ui/networking|
 |/docs/installconfig-networking|/docs/snap/2.9/ui/networking|
 |/docs/installconfig-package-install|/docs/deb/2.9/ui/installation|
-|/docs/installconfig-partitions|/docs/snap/2.9/ui/partitions|
+|/docs/installconfig-partitions|/docs/snap/2.9/ui/storage|
 |/docs/installconfig-rack|/docs/snap/2.9/ui/rack-controllers
 |/docs/installconfig-region|/docs/snap/2.9/ui/region-controllers|
 |/docs/installconfig-snap-install|/docs/snap/2.9/ui/installation|
