@@ -34,7 +34,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [How to add machines](/t/add-machines-snap-3-0-ui/3822)
 - [How to manage interfaces](/t/commission-machines-snap-3-0-ui/3874)
 - [How to manage storage](/t/storage-snap-3-0-ui/4106)
-  - [About disk erasure](/t/disk-erasure-snap-3-0-ui/3922)
   - [Block devices](/t/block-devices-snap-3-0-ui/3842)
   - [Partitions](/t/partitions-snap-3-0-ui/4062)
 - [How to test hardware](/t/hardware-testing-snap-3-0-ui/3942)
@@ -144,7 +143,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3910|/docs/snap/3.0/ui/custom-machine-setup|
 |https://discourse.maas.io/t/-/3974|/docs/snap/3.0/ui/kernel-boot-options|
 |https://discourse.maas.io/t/-/4106|/docs/snap/3.0/ui/storage|
-|https://discourse.maas.io/t/-/3922|/docs/snap/3.0/ui/disk-erasure|
 |https://discourse.maas.io/t/-/3842|/docs/snap/3.0/ui/block-devices|
 |https://discourse.maas.io/t/-/4062|/docs/snap/3.0/ui/partitions|
 |https://discourse.maas.io/t/-/4178|/docs/snap/3.0/ui/vmware-vmfs-datastores|
@@ -434,14 +432,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/2611|/docs/snap/2.7/ui/disk-erasure|
 |https://discourse.maas.io/t/-/2612|/docs/snap/2.8/cli/disk-erasure|
 |https://discourse.maas.io/t/-/2613|/docs/snap/2.8/ui/disk-erasure|
-|https://discourse.maas.io/t/-/2614|/docs/snap/2.9/cli/disk-erasure|
-|https://discourse.maas.io/t/-/2615|/docs/snap/2.9/ui/disk-erasure|
 |https://discourse.maas.io/t/-/2616|/docs/deb/2.7/cli/disk-erasure|
 |https://discourse.maas.io/t/-/2617|/docs/deb/2.7/ui/disk-erasure|
 |https://discourse.maas.io/t/-/2618|/docs/deb/2.8/cli/disk-erasure|
 |https://discourse.maas.io/t/-/2619|/docs/deb/2.8/ui/disk-erasure|
-|https://discourse.maas.io/t/-/2620|/docs/deb/2.9/cli/disk-erasure|
-|https://discourse.maas.io/t/-/2621|/docs/deb/2.9/ui/disk-erasure|
 |https://discourse.maas.io/t/-/2634|/docs/snap/2.7/cli/explore-maas|
 |https://discourse.maas.io/t/-/2635|/docs/snap/2.7/ui/explore-maas|
 |https://discourse.maas.io/t/-/2636|/docs/snap/2.8/cli/explore-maas|
@@ -1143,9 +1137,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3913|/docs/snap/3.0/cli/deploy-machines|
 |https://discourse.maas.io/t/-/3915|/docs/deb/3.0/cli/deploy-machines|
 |https://discourse.maas.io/t/-/3916|/docs/deb/3.0/ui/deploy-machines|
-|https://discourse.maas.io/t/-/3921|/docs/snap/3.0/cli/disk-erasure|
-|https://discourse.maas.io/t/-/3923|/docs/deb/3.0/cli/disk-erasure|
-|https://discourse.maas.io/t/-/3924|/docs/deb/3.0/ui/disk-erasure|
 |https://discourse.maas.io/t/-/3925|/docs/snap/3.0/cli/event-logs|
 |https://discourse.maas.io/t/-/3927|/docs/deb/3.0/cli/event-logs|
 |https://discourse.maas.io/t/-/3928|/docs/deb/3.0/ui/event-logs|
@@ -1375,6 +1366,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/snap/3.0/ui/disk-erasure|/docs/snap/3.0/ui/storage|
+|/docs/snap/2.9/cli/disk-erasure|/docs/snap/2.9/cli/storage|
+|/docs/snap/2.9/ui/disk-erasure|/docs/snap/2.9/ui/storage|
+|/docs/deb/2.9/cli/disk-erasure|/docs/deb/2.9/cli/storage|
+|/docs/deb/2.9/ui/disk-erasure|/docs/deb/2.9/ui/storage|
+|/docs/snap/3.0/cli/disk-erasure|/docs/snap/3.0/cli/storage|
+|/docs/deb/3.0/cli/disk-erasure|/docs/deb/3.0/cli/storage|
+|/docs/deb/3.0/ui/disk-erasure|/docs/deb/3.0/ui/storage|
 |/docs/snap/3.0/ui/maas-tags|/docs/snap/3.0/ui/tags-and-annotations|
 |/docs/3.0/release-notes|/docs/snap/3.0/ui/whats-new-in-maas|
 |/docs/non-snap-maas-installs|/docs/snap/2.9/ui/installation|
@@ -1447,7 +1446,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/networking|/docs/snap/2.9/ui/networking|
 |/docs/rack-controller|/docs/snap/2.9/ui/rack-controllers|
 |/docs/region-controller|/docs/snap/2.9/ui/region-controllers|
-|/docs/disk-erasure|/docs/snap/2.9/ui/disk-erasure|
+|/docs/disk-erasure|/docs/snap/3.0/ui/storage|
 |/docs/storage|/docs/snap/2.9/ui/storage|
 |/docs/logging|/docs/snap/2.9/ui/maas-logging|
 |/docs/commissioning-logs|/docs/snap/2.9/ui/commissioning-logs|
