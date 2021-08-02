@@ -1,3 +1,5 @@
+<a href="#heading--about-block-devices"><h2 id="heading--about-block-devices">About block devices</h2></a>
+
 Once the initial storage layout has been configured on a machine, you can perform many operations to view and adjust the entire storage layout for the machine. In MAAS there are two different types of block devices.
 
 **Physical**
@@ -8,7 +10,7 @@ A physical block device is a physically attached block device such as a 100GB ha
 
 A virtual block device is a block device that is exposed by the Linux kernel when an operation is performed. Almost all the operations on a physical block device can be performed on a virtual block device, such as a RAID device exposed as md0.
 
-<a href="#heading--list-block-devices"><h3 id="heading--list-block-devices">List Block Devices</h3></a>
+<a href="#heading--how-to-list-block-devices"><h3 id="heading--how-to-list-block-devices">How to list block devices</h3></a>
 
 To view all block devices on a machine use the read operation. This list both physical and virtual block devices, as you can see in the output from the following command:
 
@@ -91,7 +93,7 @@ Machine-readable output follows:
 ]
 ```
 
-<a href="#heading--read-block-device"><h3 id="heading--read-block-device">Read Block Device</h3></a>
+<a href="#heading--how-to-read-a-block-device"><h3 id="heading--how-to-read-a-block-device">How to read a block device</h3></a>
 
 If you want to read just one block device instead of listing all block devices the read operation on the block device endpoint provides that information. To display the details on device '11' from the previous output, for example, we could enter:
 
@@ -144,7 +146,7 @@ MAAS allows the name of a block device to be changed. If the block device name h
 
     Using the ID is safer as it never changes.
 
-<a href="#heading--create-block-device"><h3 id="heading--create-block-device">Create Block Device</h3></a>
+<a href="#heading--how-to-create-a-block-device"><h3 id="heading--how-to-create-a-block-device">How to create a block device</h3></a>
 
 MAAS gathers the required information itself on block devices when re- commissioning a machine. If this doesn't provide the required information, it is also possible - though not recommended - for an administrator to use the API to manually add a physical block device to a machine.
 
@@ -183,7 +185,7 @@ Machine-readable output follows:
 The serial number is what MAAS will use when a machine is deployed to find the specific block device. It's important that this be correct. In a rare chance that your block device does not provide a model or serial number you can provide an id_path. The id_path should be a path that is always the same, no matter the kernel version.
 [/note]
 
-<a href="#heading--update-block-device"><h3 id="heading--update-block-device">Update Block Device</h3></a>
+<a href="#heading--how-to-update-a-block-device"><h3 id="heading--how-to-update-a-block-device">How to update a block device</h3></a>
 
 An administrator can also update the details held on a physical block device, such as its name, from the API:
 
@@ -218,7 +220,7 @@ Machine-readable output follows:
 }
 ```
 
-<a href="#heading--delete-block-device"><h3 id="heading--delete-block-device">Delete Block Device</h3></a>
+<a href="#heading--how-to-delete-a-block-device"><h3 id="heading--how-to-delete-a-block-device">How to delete a block device</h3></a>
 
 Physical and virtual block devices can be deleted by an administrator, while ordinary users can only delete virtual block devices:
 
@@ -271,7 +273,7 @@ Machine-readable output follows:
 You cannot format a block device that contains partitions or is used to make another virtual block device.
 [/note]
 
-<a href="#heading--unformat-block-device"><h3 id="heading--unformat-block-device">Unformat Block Device</h3></a>
+<a href="#heading--how-to-unformat-a-block-device"><h3 id="heading--how-to-unformat-a-block-device">How to unformat a block device</h3></a>
 
 You can remove the filesystem from a block device with the 'unformat' API call:
 
@@ -306,7 +308,7 @@ Machine-readable output follows:
 }
 ```
 
-<a href="#heading--mount-block-device"><h3 id="heading--mount-block-device">Mount Block Device</h3></a>
+<a href="#heading--how-to-mount-a-block-device"><h3 id="heading--how-to-mount-a-block-device">How to mount a block device</h3></a>
 
 If a block device has a filesystem, you can use the 'maas' command to mount a block devices at a given mount point:
 
@@ -347,7 +349,7 @@ Machine-readable output follows:
 }
 ```
 
-<a href="#heading--unmount-block-device"><h3 id="heading--unmount-block-device">Unmount Block Device</h3></a>
+<a href="#heading--how-to-unmount-a-block-device"><h3 id="heading--how-to-unmount-a-block-device">How to unmount a block device</h3></a>
 
 To remove the mount point from the block device, use the 'unmount' call:
 
@@ -388,7 +390,7 @@ Machine-readable output follows:
 }
 ```
 
-<a href="#heading--set-as-boot-disk"><h3 id="heading--set-as-boot-disk">Set as Boot Disk</h3></a>
+<a href="#heading--how-to-set-a-block-device-as-a-boot-disk"><h3 id="heading--how-to-set-a-block-device-as-a-boot-disk">How to set a block device as a boot disk</h3></a>
 
 By default, MAAS picks the first added block device to the machine as the boot disk. In most cases this works as expected as the BIOS usually enumerates the boot disk as the first block device. There are cases where this fails and the boot disk needs to be set to another disk. This API allow setting which block device on a machine MAAS should use as the boot disk.:
 
