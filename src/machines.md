@@ -197,7 +197,7 @@ when the machine is commissioned again.
 
 
 
-<a href="#heading--machine-interfaces-h3"><h3 id="heading--machine-interfaces-h3">Find network info for a machine</h3></a>
+<a href="#heading--about-machine-interfaces-h3"><h3 id="heading--about-machine-interfaces-h3">About machine network info</h3></a>
 
 The Network "tab" provides you with a way to view/edit the network and interface configuration for a machine: 
 
@@ -211,7 +211,7 @@ Options on this tab are described in the introduction to [Networking](/t/network
 
 
 
-<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">Find storage info for a machine</h3></a>
+<a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">About machine storage info</h3></a>
 
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
 
@@ -220,7 +220,7 @@ The Storage tab on the machine list brings up a form that allows you to view/edi
 This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/4106) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
 
 
-<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">Find the commissioning log for you</h3></a>
+<a href="#heading--commissioning-log-h3"><h3 id="heading--commissioning-log-h3">About machine commissioning logs</h3></a>
 
 The "Commissioning" tab brings up a summary log of commissioning events:
 
@@ -240,7 +240,7 @@ These logs present an extremely detailed, timestamped record of completion and s
 
 
 
-<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">Find machine hardware & test logs</h3></a>
+<a href="#heading--hardware-tests-h3"><h3 id="heading--hardware-tests-h3">About machine hardware & test logs</h3></a>
 
 This tab presents a summary of tests run against this particular machine:  
 
@@ -262,7 +262,7 @@ By choosing "Installation output" on the "Logs" tab, you can see the "raw" log o
 Help interpreting these logs can be found under the [Logging](/t/maas-logging/4010) section of this documentation.
 
 
-<a href="#heading--event-logs-h3"><h3 id="heading--event-logs-h3">Find a machine's event logs</h3></a>
+<a href="#heading--event-logs-h3"><h3 id="heading--event-logs-h3">About machine event logs</h3></a>
 
 To view the Event log for a machine, choose the "Event" tab under "Logs."  This displays a list of timestamped status updates for events and actions performed on the machine:
 
@@ -274,7 +274,7 @@ To view the Event log for a machine, choose the "Event" tab under "Logs."  This 
 There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/4010) section of this documentation.
 
 
-<a href="#heading--machine-config-h3"><h3 id="heading--machine-config-h3">Find machine configuration info</h3></a>
+<a href="#heading--machine-config-h3"><h3 id="heading--machine-config-h3">About machine configuration info</h3></a>
 
 The final tab from the Machine menu allows you to update machine and power configuration options: 
 
