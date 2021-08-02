@@ -1,13 +1,6 @@
+<a href="#heading--about-storage"><h2 id="heading--about-storage">About storage</h2></a>
+
 You have significant latitude when choosing the final storage configuration of a deployed machine. MAAS supports traditional disk partitioning, as well as more complex options such as LVM, RAID, and bcache. MAAS also supports UEFI as a boot mechanism.  This article explains boot mechanisms and layouts, and offers some advice on how to configure layouts and manage storage.
-
-#### Six questions you may have:
-
-1. [How does UEFI booting work?](#heading--uefi)
-2. [What kind of storage layouts are available?](#heading--layouts)
-3. [How do I set global storage layouts?](#heading--setting-global-layouts)
-4. [How do I set per-machine storage layouts?](#heading--per-machine-layouts)
-5. [What storage modifications can I make at the filesystem level?](#heading--final-storage-modifications)
-6. [How can I erase a disk?](/t/disk-erasure/nnnn)
 
 A machine's storage is dependant upon the underlying system's disks, but its configuration (i.e., disk usage) is the result of a storage template. In MAAS, this template is called a layout, and MAAS applies it to a machine during commissioning.  Once a layout is applied, a regular user can make modifications to a machine at the filesystem level to arrive at the machine's final storage configuration.  When a machine is no longer needed, a user can choose from among several disk erasure types before releasing it.
 
@@ -15,7 +8,7 @@ A machine's storage is dependant upon the underlying system's disks, but its con
 MAAS supports storage configuration for CentOS and RHEL deployments. Support includes RAID, LVM, and custom partitioning with different file systems (ZFS and bcache excluded). This support requires a newer version of Curtin, [available as a PPA](https://launchpad.net/ubuntu/+source/curtin).
 [/note]
 
-<a href="#heading--uefi"><h2 id="heading--uefi">UEFI</h2></a>
+<a href="#heading--about-uefi-booting"><h3 id="heading--about-uefi-booting">About UEFI booting</h3></a>
 
 Every layout type supports a machine booting with UEFI. In such a case, MAAS automatically creates an EFI boot partition (`/boot/efi`). Other than setting the machine to boot from UEFI, the user does not need to take any additional action.
 
@@ -25,7 +18,7 @@ UEFI must be enabled or disabled for the lifespan of the machine. For example, d
 
 The EFI partition, if created, will be the first partition (`sda1`) and will have a FAT32 filesystem with a size of 512 MB.
 
-<a href="#heading--layouts"><h2 id="heading--layouts">Layouts</h2></a>
+<a href="#heading--storage-layouts-reference"><h2 id="heading--storage-layouts-reference">Storage layouts reference</h2></a>
 
 There are three layout types:
 
@@ -35,7 +28,7 @@ There are three layout types:
 
 The layout descriptions below will include the EFI partition. If your system is not using UEFI, regard `sda2` as `sda1` (with an additional 512 MB available to it).
 
-<a href="#heading--flat-layout"><h3 id="heading--flat-layout">Flat layout</h3></a>
+<a href="#heading--flat-storage-layout-reference"><h3 id="heading--flat-storage-layout-reference">Flat layout storage reference</h3></a>
 
 With the Flat layout, a partition spans the entire boot disk. The partition is formatted with the ext4 filesystem and uses the `/` mount point:
 
@@ -53,7 +46,7 @@ The following three options are supported:
 
 3. `root_size`: Size of the root partition. Default is 100%, meaning the entire size of the root device.
 
-<a href="#heading--lvm-layout"><h3 id="heading--lvm-layout">LVM layout</h3></a>
+<a href="#heading--lvm-storage-layout-reference"><h3 id="heading--lvm-storage-layout-reference">LVM storage layout reference</h3></a>
 
 The LVM layout creates the volume group `vgroot` on a partition that spans the entire boot disk. A logical volume `lvroot` is created for the full size of the volume group; is formatted with the ext4 filesystem; and uses the `/` mount point:
 
@@ -74,7 +67,7 @@ The following six options are supported:
 5. `lv_name`: Name of the created logical volume. Default is `lvroot`.
 6. `lv_size`: Size of the created logical volume. Default is 100%, meaning the entire size of the volume group.
 
-<a href="#heading--bcache-layout"><h3 id="heading--bcache-layout">bcache layout</h3></a>
+<a href="#heading--bcache-storage-layout-reference"><h3 id="heading--bcache-storage-layout-reference">bcache storage layout reference</h3></a>
 
 A bcache layout will create a partition that spans the entire boot disk as the backing device. It uses the smallest block device tagged with 'ssd' as the cache device. The bcache device is formatted with the ext4 filesystem and uses the `/` mount point. If there are no 'ssd' tagged block devices on the machine, then the bcache device will not be created, and the Flat layout will be used instead:
 
@@ -97,7 +90,7 @@ The following seven options are supported:
 6. `cache_size`: The size of the partition on the cache device. Default is 100%, meaning the entire size of the cache device.
 7. `cache_no_part`: Whether or not to create a partition on the cache device. Default is false, meaning to create a partition using the given `cache_size`. If set to true, no partition will be created, and the raw cache device will be used as the cache.
 
-<a href="#heading--vmfs6-layout"><h3 id="heading--vmfs6-layout">VMFS6 layout</h3></a>
+<a href="#heading--vmfs6-storage-layout-reference"><h3 id="heading--vmfs6-storage-layout-reference">VMFS6 storage layout reference</h3></a>
 
 The VMFS6 layout is used for VMware ESXi deployments only. It is required when configuring VMware VMFS Datastores. This layout creates all operating system partitions, in addition to the default datastore. The datastore may be modified.  New datastores may be created or extended to include other storage devices. The base operating system partitions may not be modified because VMware ESXi requires them. Once applied another storage layout must be applied to remove the operating system partitions.
 
@@ -128,7 +121,7 @@ The blank layout removes all storage configuration from all storage devices. It 
 Machines with the blank layout applied are not deployable; you must first configure storage manually.
 [/note]
 
-<a href="#heading--setting-global-layouts"><h2 id="heading--setting-global-layouts">Setting layouts</h2></a>
+<a href="#heading--how-to-set-global-storage-layouts"><h2 id="heading--how-to-set-global-storage-layouts">How to set global storage layouts</h2></a>
 
 Layouts can be set globally and on a per-machine basis.
 
@@ -159,7 +152,7 @@ rad-end
 The new default will only apply to newly-commissioned machines.
 [/note]
 
-<a href="#heading--per-machine-layouts"><h3 id="heading--per-machine-layouts">Machine layout</h3></a>
+<a href="#heading--how-to-set-per-machine-storage-layouts"><h3 id="heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</h3></a>
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of 'Ready'. This is only possible via the CLI: to see how, click the "CLI" option for your version and delivery method above.
@@ -187,6 +180,6 @@ rad-end
 Only an administrator can modify storage at the block device level (providing the machine has a status of 'Ready').
 [/note]
 
-<a href="#heading--final-storage-modifications"><h2 id="heading--final-storage-modifications">Final storage modifications</h2></a>
+<a href="#heading--final-storage-modifications"><h2 id="heading--final-storage-modifications">About final storage modifications</h2></a>
 
 Once MAAS provisions a machine with block devices, via a layout or administrator customisation, a regular user can modify the resulting storage configuration at the filesystem level.
