@@ -1,9 +1,6 @@
-During machine [enlistment](/t/add-machines/nnnn#heading--enlistment), [deployment](/t/deploy-machines/nnnn), [commissioning](/t/commission-machines/nnnn) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+<a href="#heading--about-custom-machine-setup"><h2 id="heading--about-custom-machine-setup">About custom machine setup</h2></a>
 
-#### Two questions you may have:
-
-1. [How do I customise machine setup with curtin?](#heading--curtin)
-2. [How do I customise machine setup with cloud-init?](#heading--cloud-init)
+During machine [enlistment](/t/add-machines/nnnn#heading--enlistment), [deployment](/t/deploy-machines/nnnn), commissioning and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
 
 Customisation in MAAS happens in two ways:
 
@@ -11,9 +8,11 @@ Customisation in MAAS happens in two ways:
 
 2.  [Cloud-init](https://launchpad.net/cloud-init), a system for setting up machines immediately after instantiation. cloud-init applies customisations after the first boot, when MAAS changes a machine's status to 'Deployed.' Customisations are per-instances, meaning that user-supplied scripts must be re-specified on redeployment. Cloud-init customisations are the best way for MAAS users to customise their deployments, similar to how the various cloud services prepare VMs when launching instances.
 
-<a href="#heading--curtin"><h2 id="heading--curtin">Curtin</h2></a>
+<a href="#heading--about-kerel-boot-options"><h2 id="heading--about-kernel-boot-options">About kernel boot options</h2></a>
 
-<a href="#heading--templates"><h3 id="heading--templates">Templates</h3></a>
+MAAS can specify kernel boot options to machines on both a global basis (UI and CLI) and a per-machine basis (CLI-only). A full catalogue of available options can be found in the [Linux kernel parameters list](https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html) at [kernel.org](https://www.kernel.org).
+
+<a href="#heading--templates"><h3 id="heading--templates">About templates</h3></a>
 
 rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli
 The [Tempita](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) template files are found in the `/var/snap/maas/current/preseeds/` directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:
@@ -38,7 +37,7 @@ The `enlist` template, for example, contains only minimal variables, whereas `en
 Tempita’s inheritance mechanism is the reverse of what you might expect. Inherited files, such as `enlist_userdata`, become the new template which can then reference variables from the higher-level file, such as `enlist`.
 [/note]
 
-<a href="#heading--template-naming"><h3 id="heading--template-naming">Template naming</h3></a>
+<a href="#heading--template-naming"><h3 id="heading--template-naming">About template naming</h3></a>
 
 MAAS interprets templates in lexical order by their filename.  This order allows for base configuration options and parameters to be overridden based on a combination of operating system, architecture, sub-architecture, release, and machine name.
 
@@ -72,7 +71,7 @@ To create the equivalent template for curtin_userdata, the file would be called 
 Any file targeting a specific machine will replace the values and configuration held within any generic files. If those values are needed, you will need to copy these generic template values into your new file.
 [/note]
 
-<a href="#heading--configuration"><h3 id="heading--configuration">Configuration</h3></a>
+<a href="#heading--how-to-customise-machines-with-curtin"><h2 id="heading--how-to-customise-machines-with-curtin">How to customise machines with curtin</h2></a>
 
 You can customise the Curtin installation by either editing the existing `curtin_userdata` template or by adding a custom file as described above.
 
@@ -107,7 +106,7 @@ late_commands:
   custom: ["curtin", "in-target", "--", "sh", "-c", "/bin/echo -en 'Installed ' > /tmp/maas_system_id"]
 ```
 
-<a href="#heading--cloud-init"><h2 id="heading--cloud-init">Cloud-init</h2></a>
+<a href="#heading--how-to-customise-machines-with-cloud-init"><h2 id="heading--how-to-customise-machines-with-cloud-init">How to customise machines with cloud-init</h2></a>
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /deb/3.0/cli /snap/3.0/cli
 Using cloud-init to customise a machine after deployment is relatively easy. If you're not familiar with the MAAS command-line interface (CLI), start by reviewing the [MAAS CLI](/t/maas-cli/nnnn) page.
@@ -157,7 +156,7 @@ After MAAS deploys the machine, you'll find `/ssh-key-import.log` on the machine
 rad-end
 
 rad-begin    /snap/2.9/ui   /deb/2.9/ui /deb/3.0/ui /snap/3.0/ui
-<a href="#heading--cloud-init-ui"><h3 id="heading--cloud-init-ui">Customising cloud-init with the UI (v2.9++)</h3></a>
+<a href="#heading--cloud-init-ui"><h3 id="heading--cloud-init-ui">How to customise machines using cloud-init</h3></a>
 
 It's easy to customise cloud-init via the web UI.  When you've selected a machine and choose 'Take action >> Deploy,' you'll be presented with the following screen:
 
@@ -181,5 +180,32 @@ ssh-import-id foobar_user
 No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-init scripts.
 [/note]
 rad-end
+
+
+<a href="#heading--global-kernel-boot-options"><h2 id="heading--global-kernel-boot-options">How to set global kernel boot options</h2></a>
+
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+
+
+To set kernel boot options globally, as an admin, open the 'Settings' page and on the 'General' tab scroll down to the 'Global Kernel Parameters' section:
+
+<a href="https://assets.ubuntu.com/v1/8b793b6d-nodes-kernel-options__2.2_global.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/8b793b6d-nodes-kernel-options__2.2_global.png"></a>
+
+Type in the desired (space separated) options and click 'Save'. The contents of the field will be used as-is. Do not use extra characters.
+rad-end
+
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+
+
+<a href="#heading--cli"><h2 id="heading--cli">Global kernel boot options</h2></a>
+
+You can set kernel boot options and apply them to all machines with the CLI command:
+
+``` bash
+maas $PROFILE maas set-config name=kernel_opts value='$KERNEL_OPTIONS'
+```
+rad-end
+
+See [How can I set kernel boot options for a specific machine?](/t/tags-and-annotations/nnnn#heading--create-tags-with-built-in-kernel-options) to set per-machine kernel boot options.
 
 <!-- comment -->
