@@ -1,14 +1,8 @@
+<a href="#heading--about-vmfs-datastores"><h2 id="heading--about-vmfs-datastores">About VMFS datastores</h2></a>
+
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/nnnn#heading--vmfs6-layout). This layout creates a VMFS Datastore named `datastore1` which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
 
-#### Five questions you may have:
-
-1. [How do I list the VMFS datastores on a machine?](#heading--listing-vmfs-datastores)
-2. [How do I view a specific datastore on a machine?](#heading--viewing-vmfs-datastores)
-3. [How do I create a new datastore?](#heading--creating-vmfs-datastores)
-4. [How do I edit a datastore?](#heading--editing-vmfs-datastores)
-5. [How do I delete a datastore?](#heading--deleting-vmfs-datastores)
-
-<a href="#heading--listing-vmfs-datastores"><h2 id="heading--listing-vmfs-datastores">Listing VMFS datastores</h2></a>
+<a href="#heading--how-to-list-vmfs-datastores"><h2 id="heading--how-to-list-vmfs-datastores">How to list VMFS datastores</h2></a>
 
 To view all VMFS Datastores on a machine, use the 'vmfs-datastores read' API call:
 
@@ -76,7 +70,7 @@ maas $PROFILE vmfs-datastores read $SYSTEM_ID
 ]
 ```
 
-<a href="#heading--viewing-vmfs-datastores"><h2 id="heading--viewing-vmfs-datastores">Viewing a specific datastore</h2></a>
+<a href="#heading--how-to-view-a-vmfs-datastore"><h2 id="heading--how-to-view-a-vmfs-datastore">How to view a VMFS datastore</h2></a>
 
 To view a specific VMFS Datastores on a machine, use the 'vmfs-datastore read' API call:
 
@@ -122,7 +116,7 @@ maas $PROFILE vmfs-datastore read $SYSTEM_ID $VMFS_DATASTORE_ID
 }
 ```
 
-<a href="#heading--creating-vmfs-datastores"><h2 id="heading--creating-vmfs-datastores">Creating a new VMFS Datastore</h2></a>
+<a href="#heading--how-to-create-a-vmfs-datastore"><h2 id="heading--how-to-create-a-vmfs-datastore">How to create a VMFS datastore</h2></a>
 
 A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/nnnn) or [partitions](/t/partitions/nnnn)
 
@@ -170,7 +164,7 @@ maas $PROFILE vmfs-datastores create $SYSTEM_ID name=$VMFS_NAME block_devices=$B
 }
 ```
 
-<a href="#heading--editing-vmfs-datastores"><h2 id="heading--editing-vmfs-datastores">Edit an existing VMFS Datastore</h2></a>
+<a href="#heading--how-to-edit-a-vmfs-datastore"><h2 id="heading--how-to-edit-a-vmfs-datastore">How to edit a VMFS datastore</h2></a>
 
 To edit an existing VMFS Datastores on a machine use the 'vmfs-datastore update' API call:
 
@@ -236,7 +230,7 @@ maas $PROFILE vmfs-datastore update $SYSTEM_ID $VMFS_ID name=$NEW_VMFS_NAME add_
 }
 ```
 
-<a href="#heading--deleting-vmfs-datastores"><h2 id="heading--deleting-vmfs-datastores">Deleting a VMFS Datastore</h2></a>
+<a href="#heading--how-to-delete-a-vmfs-datastore"><h2 id="heading--how-to-delete-a-vmfs-datastore">How to delete a VMFS datastore</h2></a>
 
 To delete a VMFS Datastores on a machine use the 'vmfs-datastore delete' API call:
 
