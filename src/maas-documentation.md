@@ -34,7 +34,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [How to add machines](/t/add-machines-snap-3-0-ui/3822)
 - [How to manage interfaces](/t/commission-machines-snap-3-0-ui/3874)
 - [How to manage storage](/t/storage-snap-3-0-ui/4106)
-  - [Block devices](/t/block-devices-snap-3-0-ui/3842)
   - [Partitions](/t/partitions-snap-3-0-ui/4062)
 - [How to test hardware](/t/hardware-testing-snap-3-0-ui/3942)
 - [How to test networking](/t/network-testing-snap-3-0-ui/4050)
@@ -143,7 +142,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3910|/docs/snap/3.0/ui/custom-machine-setup|
 |https://discourse.maas.io/t/-/3974|/docs/snap/3.0/ui/kernel-boot-options|
 |https://discourse.maas.io/t/-/4106|/docs/snap/3.0/ui/storage|
-|https://discourse.maas.io/t/-/3842|/docs/snap/3.0/ui/block-devices|
 |https://discourse.maas.io/t/-/4062|/docs/snap/3.0/ui/partitions|
 |https://discourse.maas.io/t/-/4178|/docs/snap/3.0/ui/vmware-vmfs-datastores|
 |https://discourse.maas.io/t/-/4138|/docs/snap/3.0/ui/ubuntu-kernels|
@@ -311,14 +309,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/2347|/docs/snap/2.7/ui/block-devices|
 |https://discourse.maas.io/t/-/2348|/docs/snap/2.8/cli/block-devices|
 |https://discourse.maas.io/t/-/2349|/docs/snap/2.8/ui/block-devices|
-|https://discourse.maas.io/t/-/2350|/docs/snap/2.9/cli/block-devices|
-|https://discourse.maas.io/t/-/2351|/docs/snap/2.9/ui/block-devices|
 |https://discourse.maas.io/t/-/2352|/docs/deb/2.7/cli/block-devices|
 |https://discourse.maas.io/t/-/2353|/docs/deb/2.7/ui/block-devices|
 |https://discourse.maas.io/t/-/2354|/docs/deb/2.8/cli/block-devices|
 |https://discourse.maas.io/t/-/2355|/docs/deb/2.8/ui/block-devices|
-|https://discourse.maas.io/t/-/2356|/docs/deb/2.9/cli/block-devices|
-|https://discourse.maas.io/t/-/2357|/docs/deb/2.9/ui/block-devices|
 |https://discourse.maas.io/t/-/2466|/docs/snap/2.7/cli/manage-machine-interfaces|
 |https://discourse.maas.io/t/-/2467|/docs/snap/2.7/ui/manage-machine-interfaces|
 |https://discourse.maas.io/t/-/2468|/docs/snap/2.8/cli/manage-machine-interfaces|
@@ -1104,9 +1098,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3837|/docs/snap/3.0/cli/backup|
 |https://discourse.maas.io/t/-/3839|/docs/deb/3.0/cli/backup|
 |https://discourse.maas.io/t/-/3840|/docs/deb/3.0/ui/backup|
-|https://discourse.maas.io/t/-/3841|/docs/snap/3.0/cli/block-devices|
-|https://discourse.maas.io/t/-/3843|/docs/deb/3.0/cli/block-devices|
-|https://discourse.maas.io/t/-/3844|/docs/deb/3.0/ui/block-devices|
 |https://discourse.maas.io/t/-/3865|/docs/snap/3.0/cli/commissioning-and-hardware-testing-scripts|
 |https://discourse.maas.io/t/-/3867|/docs/deb/3.0/cli/commissioning-and-hardware-testing-scripts|
 |https://discourse.maas.io/t/-/3868|/docs/deb/3.0/ui/commissioning-and-hardware-testing-scripts|
@@ -1366,6 +1357,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/snap/3.0/ui/block-devices|/docs/snap/3.0/ui/storage|
+|/docs/deb/2.9/cli/block-devices|/docs/deb/2.9/cli/storage|
+|/docs/deb/2.9/ui/block-devices|/docs/deb/2.9/ui/storage|
+|/docs/snap/2.9/cli/block-devices|/docs/snap/2.9/cli/storage|
+|/docs/snap/2.9/ui/block-devices|/docs/snap/2.9/ui/storage|
+|/docs/snap/3.0/cli/block-devices|/docs/snap/3.0/cli/storage|
+|/docs/deb/3.0/cli/block-devices|/docs/deb/3.0/cli/storage|
+|/docs/deb/3.0/ui/block-devices|/docs/deb/3.0/ui/storage|
 |/docs/snap/3.0/ui/disk-erasure|/docs/snap/3.0/ui/storage|
 |/docs/snap/2.9/cli/disk-erasure|/docs/snap/2.9/cli/storage|
 |/docs/snap/2.9/ui/disk-erasure|/docs/snap/2.9/ui/storage|
@@ -1421,7 +1420,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/machine-overview|/docs/snap/2.9/ui/machines|
 |/docs/bmc-power-types|/docs/snap/2.9/ui/power-management|
 |/docs/resource-pools|/docs/snap/2.9/cli/resource-pools|
-|/docs/installconfig-block|/docs/snap/2.9/ui/block-devices|
+|/docs/installconfig-block|/docs/snap/2.9/ui/storage|
 |/docs/installconfig-checklist|/docs/snap/2.9/ui/installation|
 |/docs/installconfig-images-import|/docs/snap/2.9/ui/select-and-import-images|
 |/docs/installconfig-images-vmware|/docs/snap/2.9/ui/vmware-images|
@@ -1463,7 +1462,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/vm-host-storage-pools|/docs/snap/2.9/ui/vm-host-storage-pools|
 |/docs/vm-host-networking|/docs/snap/2.9/ui/vm-host-storage-pools|
 |/docs/maas-example-config|/docs/snap/2.9/ui/give-me-an-example-of-maas|
-|/docs/block-devices|/docs/snap/2.9/ui/block-devices|
+|/docs/block-devices|/docs/snap/3.0/ui/storage|
 |/docs/select-and-import-images|/docs/snap/2.9/ui/select-and-import-images|
 |/docs/vmware-images|/docs/snap/2.9/ui/vmware-images|
 |/docs/install-from-a-snap |/docs/snap/2.9/ui/installation|
