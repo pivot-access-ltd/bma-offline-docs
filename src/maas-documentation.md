@@ -99,13 +99,8 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 ### Reference
 
 - [Power management](/t/power-management-snap-3-0-ui/4070)
-
-### [Concepts & terms](/t/concepts-and-terms/785)
-
-- [Brief network tutorial](/t/concepts-and-terms/785#heading--network-tutorial)
-
-### [API documentation](https://maas.io/docs/api)
-
+- [Concepts & terms](/t/concepts-and-terms/785)
+- [API documentation](https://maas.io/docs/api)
 - [API client](/t/api-client/810)
 - [API authentication](/t/api-authentication-snap-3-0-ui/3826)
 
