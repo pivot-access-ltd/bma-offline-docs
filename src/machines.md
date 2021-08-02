@@ -1,27 +1,4 @@
-||2.9|3.0|
-|-----:|:-----:|:-----:|
-|DEB|[CLI](/t/machines/2740) ~ [UI](/t/machines/2741)|[CLI](/t/machines/4031) ~ [UI](/t/machines/4032)|
-|SNAP|[CLI](/t/machines/2734) ~ [UI](/t/machines/2735)|[CLI](/t/machines/4029) ~ [UI](/t/machines/4030)|
-
 Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers. MAAS manages their transit through a life-cycle, from adding and enlistment, through commissioning, allocation, and deployment, finally being released back to the pool, or retired altogether.  You can move them around, create redundant versions (even in other geographies you can access), and basically rearrange them to the extent that your network allows.
-
-
-#### Twelve questions you may have:
-
-1. [How are the machine states and actions related?](#heading--machine-life-cycle)
-2. [How can I view the machine list?](#heading--machine-list)
-3. [How can I view machine details?](#heading--node-details)
-4. [How can I view a machine summary?](#heading--machine-summary)
-5. [How does MAAS handle attached USB/PCI devices?](#heading--usb-pci-devices)
-6. [Where can I find network info for a machine?](#heading--machine-interfaces-h3)
-7. [Where can I find storage info for a machine?](#heading--machine-storage-h3)
-8. [Where can I find the commissioning log for a machine?](#heading--commissioning-log-h3)
-9. [Where can I find machine hardware & test logs?](#heading--hardware-tests-h3)
-10. [Where can I find raw log output for a machine?](#heading--raw-log-output-h3)
-11. [Where can I find a machine's event log?](#heading--event-logs-h3)
-12. [Where can I find machine configuration info?](#heading--machine-config-h3)
-
-
 
 For example, in the illustration below, you see a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:
 
