@@ -1,3 +1,5 @@
+<a href="#heading--about-testing-hardware"><h2 id="heading--about-testing-hardware">About testing hardware</h2></a>
+
 If you wish, you can tell MAAS to test machine hardware using well-known Linux utilities.  MAAS can test machines that have  a status of **Ready**, **Broken**, or **Deployed**.  You can include testing as part of the commissioning process. When you choose the 'Commission' action, MAAS will display the dialog described below.  Be aware, though, that if the hardware tests fail, the machine will become unavailable for Deployment.
 
 [note]
@@ -7,13 +9,7 @@ The majority of testing scripts only work with machines that are backed by physi
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 With MAAS, you can easily write, upload and execute your hardware testing scripts and see the results.
 
-#### Three questions you may have:
-
-1. [How do I upload hardware test scripts?](#heading--upload-test-scripts)
-2. [How do I use tags to help with hardware test scripts?](#heading--tags)
-3. [How do I view test results?](#heading--results)
-
-<a href="#heading--upload-test-scripts"><h2 id="heading--upload-test-scripts">Uploading hardware test scripts</h2></a>
+<a href="#heading--upload-test-scripts"><h2 id="heading--upload-test-scripts">How to upload hardware test scripts</h2></a>
 
 To upload a hardware testing script to MAAS, enter the following:
 
@@ -78,7 +74,7 @@ To delete a script, use `delete`:
 maas $PROFILE node-script delete $SCRIPT_NAME
 ```
 
-<a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
+<a href="#heading--tags-group-scripts"><h2 id="heading--tags-group-scripts">How to use tags to group commissioning and testing scripts</h2></a>
 
 Tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
 
@@ -103,7 +99,7 @@ maas $PROFILE machine commission \
 
 Any testing scripts tagged with commissioning will also run during commissioning.
 
-<a href="#heading--results"><h2 id="heading--results">Results</h2></a>
+<a href="#heading--results"><h2 id="heading--results">How to view testing results</h2></a>
 
 The command line allows you to not only view the current script's progress but also retrieve the verbatim output from any previous runs too.
 
@@ -179,12 +175,7 @@ rad-end
 
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
-#### Two questions you may have: 
-
-1. [How do I apply a hardware test?](#heading--apply-a-hardware-test)
-2. [What scripts are available for testing?](#heading--included-scripts)
-
-<a href="#heading--apply-a-hardware-test"><h2 id="heading--apply-a-hardware-test">Apply a hardware test</h2></a>
+<a href="#heading--apply-a-hardware-test"><h2 id="heading--apply-a-hardware-test">How to apply a hardware test</h2></a>
 
 To launch a test, select the target machine from the 'Machines' page and use the 'Take action' drop-down menu to select 'Test hardware'. When ready, hit the 'Test machine' button. Here, a test is applied to a deployed machine:
 
@@ -196,7 +187,7 @@ A default test will be selected (`smartctl-validate`, a hard drive test) but you
 
 <a href="https://assets.ubuntu.com/v1/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png"></a>
 
-<a href="#heading--included-scripts"><h2 id="heading--included-scripts">Scripts available for testing</h2></a>
+<a href="#heading--included-scripts"><h2 id="heading--included-scripts">Available test scripts reference</h2></a>
 
 The following hardware testing scripts can be selected from the web UI:
 

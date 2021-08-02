@@ -33,11 +33,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [How to examine machines](/t/-/4844)
 - [How to add machines](/t/add-machines-snap-3-0-ui/3822)
 - [How to manage interfaces](/t/commission-machines-snap-3-0-ui/3874)
-- Testing
-  - [Hardware testing](/t/hardware-testing-snap-3-0-ui/3942)
-  - [Network testing](/t/network-testing-snap-3-0-ui/4050)
-  - [Commissioning scripts](/t/commissioning-and-hardware-testing-scripts-snap-3-0-ui/3866)
-- [Deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
+- [How to test hardware](/t/hardware-testing-snap-3-0-ui/3942)
+- [How to test networking](/t/network-testing-snap-3-0-ui/4050)
+- [How to commission machines](/t/commissioning-and-hardware-testing-scripts-snap-3-0-ui/3866)
+- [How to deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
 - [Custom machine setup](/t/custom-machine-setup-snap-3-0-ui/3910)
 - [Kernel boot options](/t/kernel-boot-options-snap-3-0-ui/3974)
 - [Storage](/t/storage-snap-3-0-ui/4106)
@@ -137,7 +136,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4030|/docs/snap/3.0/ui/machines|
 |https://discourse.maas.io/t/-/3822|/docs/snap/3.0/ui/add-machines|
 |https://discourse.maas.io/t/-/4070|/docs/snap/3.0/ui/power-management|
-|https://discourse.maas.io/t/-/3874|/docs/snap/3.0/ui/commission-machines|
+|https://discourse.maas.io/t/-/3874|/docs/snap/3.0/ui/manage-machine-interfaces|
 |https://discourse.maas.io/t/-/3942|/docs/snap/3.0/ui/hardware-testing|
 |https://discourse.maas.io/t/-/4050|/docs/snap/3.0/ui/network-testing|
 |https://discourse.maas.io/t/-/3866|/docs/snap/3.0/ui/commissioning-and-hardware-testing-scripts|
@@ -322,18 +321,18 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/2355|/docs/deb/2.8/ui/block-devices|
 |https://discourse.maas.io/t/-/2356|/docs/deb/2.9/cli/block-devices|
 |https://discourse.maas.io/t/-/2357|/docs/deb/2.9/ui/block-devices|
-|https://discourse.maas.io/t/-/2466|/docs/snap/2.7/cli/commission-machines|
-|https://discourse.maas.io/t/-/2467|/docs/snap/2.7/ui/commission-machines|
-|https://discourse.maas.io/t/-/2468|/docs/snap/2.8/cli/commission-machines|
-|https://discourse.maas.io/t/-/2469|/docs/snap/2.8/ui/commission-machines|
-|https://discourse.maas.io/t/-/2470|/docs/snap/2.9/cli/commission-machines|
-|https://discourse.maas.io/t/-/2471|/docs/snap/2.9/ui/commission-machines|
-|https://discourse.maas.io/t/-/2472|/docs/deb/2.7/cli/commission-machines|
-|https://discourse.maas.io/t/-/2473|/docs/deb/2.7/ui/commission-machines|
-|https://discourse.maas.io/t/-/2474|/docs/deb/2.8/cli/commission-machines|
-|https://discourse.maas.io/t/-/2475|/docs/deb/2.8/ui/commission-machines|
-|https://discourse.maas.io/t/-/2476|/docs/deb/2.9/cli/commission-machines|
-|https://discourse.maas.io/t/-/2477|/docs/deb/2.9/ui/commission-machines|
+|https://discourse.maas.io/t/-/2466|/docs/snap/2.7/cli/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/2467|/docs/snap/2.7/ui/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/2468|/docs/snap/2.8/cli/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/2469|/docs/snap/2.8/ui/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/2470|/docs/snap/2.9/cli/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/2471|/docs/snap/2.9/ui/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/2472|/docs/deb/2.7/cli/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/2473|/docs/deb/2.7/ui/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/2474|/docs/deb/2.8/cli/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/2475|/docs/deb/2.8/ui/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/2476|/docs/deb/2.9/cli/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/2477|/docs/deb/2.9/ui/manage-machine-interfaces|
 |https://discourse.maas.io/t/-/2478|/docs/snap/2.7/cli/commissioning-and-hardware-testing-scripts|
 |https://discourse.maas.io/t/-/2479|/docs/snap/2.7/ui/commissioning-and-hardware-testing-scripts|
 |https://discourse.maas.io/t/-/2480|/docs/snap/2.8/cli/commissioning-and-hardware-testing-scripts|
@@ -1120,9 +1119,9 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3869|/docs/snap/3.0/cli/commissioning-logs|
 |https://discourse.maas.io/t/-/3871|/docs/deb/3.0/cli/commissioning-logs|
 |https://discourse.maas.io/t/-/3872|/docs/deb/3.0/ui/commissioning-logs|
-|https://discourse.maas.io/t/-/3873|/docs/snap/3.0/cli/commission-machines|
-|https://discourse.maas.io/t/-/3875|/docs/deb/3.0/cli/commission-machines|
-|https://discourse.maas.io/t/-/3876|/docs/deb/3.0/ui/commission-machines|
+|https://discourse.maas.io/t/-/3873|/docs/snap/3.0/cli/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/3875|/docs/deb/3.0/cli/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/3876|/docs/deb/3.0/ui/manage-machine-interfaces|
 |https://discourse.maas.io/t/-/3885|/docs/snap/3.0/cli/configuration-journey|
 |https://discourse.maas.io/t/-/3887|/docs/deb/3.0/cli/configuration-journey|
 |https://discourse.maas.io/t/-/3888|/docs/deb/3.0/ui/configuration-journey|
@@ -1414,7 +1413,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/interactive-search|/docs/snap/2.9/ui/interactive-search|
 |/docs/availability-zones|/docs/snap/2.9/ui/availability-zones|
 |/docs/add-machines|/docs/snap/2.9/ui/add-machines|
-|/docs/commission-nodes|/docs/snap/2.9/ui/commission-machines|
+|/docs/commission-nodes|/docs/snap/2.9/ui/manage-machine-interfaces|
 |/docs/custom-machine-setup|/docs/snap/2.9/ui/custom-machine-setup|
 |/docs/deploy-nodes|/docs/snap/2.9/ui/deploy-machines|
 |/docs/hardware-testing|/docs/snap/2.9/ui/hardware-testing|
@@ -1556,7 +1555,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/manage-zones|/docs/snap/2.9/ui/availability-zones|
 |/docs/nodes-add|/docs/snap/2.9/ui/add-machines|
 |/docs/add-nodes|/docs/snap/2.9/ui/add-machines|
-|/docs/nodes-commission|/docs/snap/2.9/ui/commission-machines|
+|/docs/nodes-commission|/docs/snap/2.9/ui/manage-machine-interfaces|
 |/docs/nodes-comp-hw|/docs/snap/2.9/ui/vm-hosting|
 |/docs/nodes-custom|/docs/snap/2.9/ui/custom-machine-setup|
 |/docs/nodes-deploy|/docs/snap/2.9/ui/deploy-machines|
