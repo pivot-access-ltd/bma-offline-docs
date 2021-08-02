@@ -1,29 +1,29 @@
 Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/concepts-and-terms/785#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
 
-<a href="#heading--erasure-types"><h2 id="heading--erasure-types">Erasure types</h2></a>
+<a href="#heading--about-disk-erasure-types"><h2 id="heading--about-disk-erasure-types">About disk erasure types</h2></a>
 
-The three types of erasure types are:
+The three disk erasure types are:
 
-1.   Standard erase
-2.   Secure erase
-3.   Quick erase
+1.   Standard erasure
+2.   Secure erasure
+3.   Quick erasure
 
 Each of these are explained below.
 
-<a href="#heading--standard-erase"><h3 id="heading--standard-erase">Standard erase</h3></a>
+<a href="#heading--about-standard-erase"><h3 id="heading--about-standard-erase">Abot standard erasure</h3></a>
 
 Overwrites all data with zeros.
 
-<a href="#heading--secure-erase"><h3 id="heading--secure-erase">Secure erase</h3></a>
+<a href="#heading--about-secure-erasure"><h3 id="heading--about-secure-erasure">About secure eraseure</h3></a>
 
 Although effectively equivalent to Standard erase, Secure erase is much faster because the disk's firmware performs the operation. Because of this, however, some disks may not be able to perform this erasure type (SCSI, SAS, and FC disks in particular).
 
-<a href="#heading--quick-erase"><h3 id="heading--quick-erase">Quick erase</h3></a>
+<a href="#heading--about-quick-erasure"><h3 id="heading--about-quick-erasuree">About quick erasure</h3></a>
 
 Same as Standard erase but only targets the first 1 MB and the last 1 MB of each disk. This removes the partition tables and/or superblock from the disk, making data recovery difficult but not impossible.
 
 rad-begin   /deb/2.9/ui  /snap/2.9/ui  /snap/3.0/ui /deb/3.0/ui 
-<a href="#heading--default-configuration"><h2 id="heading--default-configuration">Default configuration</h2></a>
+<a href="#heading--how-to-set-default-erasure-configuration"><h2 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h2></a>
 
 A default erasure configuration can be set on the 'Settings' page by selecting the 'Storage' tab.
 
@@ -37,7 +37,7 @@ With the above defaults, the machine's view will look like this when the Release
 
 Where 'secure erase' and 'quick erase' can then be configured by the user.
 
-<a href="#heading--order-of-preference"><h2 id="heading--order-of-preference">Order of preference</h2></a>
+<a href="#heading--about-erasure-order-of-preference"><h2 id="heading--about-erasure-order-of-preference">About erasure order of preference</h2></a>
 
 If all three options are checked when the machine is released the following order of preference is applied:
 
@@ -47,7 +47,7 @@ rad-end
 
 rad-begin   /deb/2.9/cli  /snap/2.9/cli  /snap/3.0/cli /deb/3.0/cli 
 
-<a href="#heading--erasure-procedure"><h2 id="heading--erasure-procedure">Erasure procedure</h2></a>
+<a href="#heading--how-to-erase-disks"><h2 id="heading--how-to-erase-disks">How to erase disks</h2></a>
 
 When using the [MAAS CLI](/t/maas-cli/nnnn), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
 
@@ -87,7 +87,7 @@ Secure erasure uses the drive's secure erase feature, if it has one.  In some ca
 
 Quick erasure wipes 2MB at the start and end of the drive to make recovery both inconvenient and unlikely to happen by accident.  Note, though, that quick erasure is not secure.
 
-<a href="#heading--specifying-both-types"><h3 id="heading--specifying-both-types">Specifying both erasure types</h3></a>
+<a href="#heading--how-to-specify-conditional-erasure-types"><h3 id="heading--how-to-specify-conditional-erasure-types">How to specify conditional erasure types</h3></a>
 
 If you specify both erasure types, like this:
 
@@ -102,3 +102,5 @@ maas $PROFILE machine release $SYSTEM_ID comment="some comment" erase=true
 ```
 
 rad-end
+
+<!-- comment -->
