@@ -2,7 +2,7 @@
 A VM host is simply a machine which can run virtual machines (VMs) by allocating  resources across the VMs you want to create.  If needed, you can over-commit resources, allocating more resources than actually available, so long as you don't try to use more than the VM host has available at any one time. Once MAAS has enlisted, commissioned, and acquired a newly-added machine, you can deploy it as a VM host.  Alternatively, you can create a VM host from a machine you've already got running.
 
 [note type="caution" status="Warning"]
-You **must** [configure your network](/t/vm-host-networking/nnn) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/nnnn#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
+You **must** [configure your network](/t/vm-host-networking/nnnn) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/nnnn#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
 #### Questions you may have:
@@ -304,3 +304,5 @@ Example output:
 ```
 
 rad-end
+
+<!-- comment -->

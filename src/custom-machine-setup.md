@@ -110,7 +110,7 @@ late_commands:
 <a href="#heading--cloud-init"><h2 id="heading--cloud-init">Cloud-init</h2></a>
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /deb/3.0/cli /snap/3.0/cli
-Using cloud-init to customise a machine after deployment is relatively easy. If you're not familiar with the MAAS command-line interface (CLI), start by reviewing the [MAAS CLI](/t/maas-cli/nnn) page.
+Using cloud-init to customise a machine after deployment is relatively easy. If you're not familiar with the MAAS command-line interface (CLI), start by reviewing the [MAAS CLI](/t/maas-cli/nnnn) page.
 
 After you're logged in, use the following command to deploy a machine with a custom script you've written:
 
@@ -181,3 +181,5 @@ ssh-import-id foobar_user
 No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-init scripts.
 [/note]
 rad-end
+
+<!-- comment -->
