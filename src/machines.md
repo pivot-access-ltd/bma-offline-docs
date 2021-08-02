@@ -1,30 +1,6 @@
 Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers. MAAS manages their transit through a life-cycle, from adding and enlistment, through commissioning, allocation, and deployment, finally being released back to the pool, or retired altogether.  You can move them around, create redundant versions (even in other geographies you can access), and basically rearrange them to the extent that your network allows.
 
-For example, in the illustration below, you see a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg"></a> 
-
-
-These example machines would typically be duplicated in several different geographies, with a quick way to switch to a redundant node, should anything go wrong (e.g., high availability).  We used the word node there because, In the network language of MAAS, machines are one of several different types of nodes.  A node is simply a network-connected object or, more specifically, an object that can independently communicate on a network. MAAS nodes include controllers, network devices, and of course, machines.   
-
-Looking back at the example above, you can see that there are several columns in the machine list:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg"></a> 
-
-The columns list eight details for each machine:
-
-1.   **FQDN | MAC**: The fully qualified domain name or the MAC address of the machine.
-2.   **Power**: 'On', 'Off' or 'Error' to highlight an error state.
-3.   **Status**: The current status of the machine, such as 'Ready', 'Commissioning' or 'Failed testing'.
-4.   **Owner**: The MAAS account responsible for the machine.
-5.   **Cores**: The number of CPU cores detected on the machine.
-6.   **RAM**: The amount of RAM, in GiB, discovered on the machine.
-7.   **Disks**: The number of drives detected on the machine.
-8.   **Storage**: The amount of storage, in GB, identified on the machine.
-
-
-
-<a href="#heading--machine-life-cycle"><h2 id="heading--machine-life-cycle">Machine life-cycle</h2></a>
+<a href="#heading--about-the-machine-life-cycle"><h2 id="heading--about-the-machine-life-cycle">About the machine life-cycle</h2></a>
 
 One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, acquired, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
 
@@ -74,7 +50,29 @@ Since these actions are not necessarily sequential, and the available actions ch
 
 When a machine is in the state listed in a column, it is possible to take the row actions marked with an "X."  You access these actions from the "Take action" menu in the upper right corner of the machine listing.  Note that some actions, such as "Mark broken" or "Lock," may be hidden when they are not available.
 
-<a href="#heading--machine-list"><h2 id="heading--machine-list">View the machine list</h2></a>
+<a href="#heading--about-the-machine-list"><h2 id="heading--about-the-machine-list">About the machine list</h2></a>
+
+In the illustration below, you see the machine list for a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg"></a> 
+
+
+These example machines would typically be duplicated in several different geographies, with a quick way to switch to a redundant node, should anything go wrong (e.g., high availability).  We used the word node there because, In the network language of MAAS, machines are one of several different types of nodes.  A node is simply a network-connected object or, more specifically, an object that can independently communicate on a network. MAAS nodes include controllers, network devices, and of course, machines.   
+
+Looking back at the example above, you can see that there are several columns in the machine list:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg"></a> 
+
+The columns list eight details for each machine:
+
+1.   **FQDN | MAC**: The fully qualified domain name or the MAC address of the machine.
+2.   **Power**: 'On', 'Off' or 'Error' to highlight an error state.
+3.   **Status**: The current status of the machine, such as 'Ready', 'Commissioning' or 'Failed testing'.
+4.   **Owner**: The MAAS account responsible for the machine.
+5.   **Cores**: The number of CPU cores detected on the machine.
+6.   **RAM**: The amount of RAM, in GiB, discovered on the machine.
+7.   **Disks**: The number of drives detected on the machine.
+8.   **Storage**: The amount of storage, in GB, identified on the machine.
 
 You can view the list of machines from the choice "Machines" on the top menu of the MAAS web UI.  This action will display a table like the one above, listing all the machines that are currently visible to your MAAS installation.  During commissioning and deployment, MAAS updates the table to reflect the changing state of each machine. These values are augmented with green, amber and red icons to represent successful, in-progress and failed transitions, respectively. The MAAS web UI employs similar icons and colours throughout the interface to reflect a machine's status. 
 
@@ -96,10 +94,7 @@ With one or more machines selected, the 'Add hardware' drop-down menu moves to t
 The 'Filter by' section limits the machines listed in the table to selected keywords and machine attributes.
 [/note]
 
-
-<a href="#heading--node-details"><h2 id="heading--node-details">View machine details</h2></a>
-
-
+<a href="#heading--about-the-machine-summary-h3"><h3 id="heading--about-the-machine-summary-h3">About the machine summary</h3></a>
 
 Click a machine's FQDN or MAC address to open a detailed view of a machine's status and configuration.
 
@@ -109,11 +104,7 @@ The default view is 'Machine summary', presented as a series of cards detailing 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/2/21e9f4dca3a3e0a6657b5b2a570c9fc68a3e4961.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/21e9f4dca3a3e0a6657b5b2a570c9fc68a3e4961.png"></a> 
 
-The menu includes links to a number of additional forms and controls, as described in the following sections.
-
-<a href="#heading--machine-summary-h3"><h3 id="heading--machine-summary-h3">View a machine summary</h3></a>
-
-As shown above, the Machine summary presents an overview of CPU, memory, storage, tags, and general settings:
+The machine status card presents an overview of CPU, memory, storage, tags, and general settings:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png"></a>
 
@@ -297,6 +288,3 @@ The "Power configuration" supplies the parameters necessary for MAAS to access t
 
 More information on Power configuration will be found in the [Power management](/t/power-management/4070) section of this documentation.
 
-<h2>Summary</h2>
-
-This article has offered you a cursory glimpse into machines and how they are configured and managed in MAAS.  Read on through this section of the documentation to learn more.
