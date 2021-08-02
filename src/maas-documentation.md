@@ -88,21 +88,17 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [Prometheus metrics](/t/prometheus-metrics-snap-3-0-ui/4074)
 - [How to back up MAAS](/t/backup-snap-3-0-ui/3838)
 - [How to secure MAAS](/t/hardening-your-maas-installation-snap-3-0-ui/3938)
-- [MAAS logging reference](/t/maas-logging-snap-3-0-ui/4010)
-  - [Commissioning logs](/t/commissioning-logs-snap-3-0-ui/3870)
-  - [Test logs](/t/test-logs-snap-3-0-ui/4118)
-  - [Event logs](/t/event-logs-snap-3-0-ui/3926)
-  - [Audit event logs](/t/audit-event-logs-snap-3-0-ui/3830)
 - [User accounts](/t/user-accounts-snap-3-0-ui/4146)
 - [How to search MAAS](/t/interactive-search-snap-3-0-ui/3962)
 
 ### Reference
 
 - [Power management](/t/power-management-snap-3-0-ui/4070)
-- [Concepts & terms](/t/concepts-and-terms/785)
+- [Log files](/t/maas-logging-snap-3-0-ui/4010)
 - [API documentation](https://maas.io/docs/api)
 - [API client](/t/api-client/810)
 - [API authentication](/t/api-authentication-snap-3-0-ui/3826)
+- [Concepts & terms](/t/concepts-and-terms/785)
 
 ### [Troubleshooting](/t/troubleshooting-snap-3-0-ui/4134)
 
