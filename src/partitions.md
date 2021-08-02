@@ -2,6 +2,16 @@
 
 As with block devices (see [Block devices](/t/block-devices/nnnn)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
 
+<a href="#heading--about-storage-restrictions"><h2 id="heading--about-storage-restrictions">About storage restrictions</h2></a>
+
+There are three restrictions for the storage configuration:
+
+1.   An EFI partition is required to be on the boot disk for UEFI.
+2.   You cannot place partitions on logical volumes.
+3.   You cannot use a logical volume as a Bcache backing device.
+
+Violating these restrictions will prevent a successful deployment.
+
 <a href="#heading--how-to-list-partitions"><h3 id="heading--how-to-list-partitions">How to list partitions</h3></a>
 
 To view all the partitions on a block device, use the 'partitions read' API call:
@@ -209,12 +219,3 @@ Machine-readable output follows:
 }
 ```
 
-<a href="#heading--about-storage-restrictions"><h2 id="heading--about-storage-restrictions">About storage restrictions</h2></a>
-
-There are three restrictions for the storage configuration:
-
-1.   An EFI partition is required to be on the boot disk for UEFI.
-2.   You cannot place partitions on logical volumes.
-3.   You cannot use a logical volume as a Bcache backing device.
-
-Violating these restrictions will prevent a successful deployment.
