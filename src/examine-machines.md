@@ -1,7 +1,7 @@
 This document describes the various ways you can evaluate the health and status of your MAAS machines, using the machine list.  It will show you:
 
-- [How to view the machine list](#heading--machine-list)
-- [How to view machine details](#heading--node-details)
+- [How to view the machine list](#heading--how-to-view-the-machine-list)
+- [How to view machine details](#heading--how-to-view-machine-details)
 - [How to manage attached USB and PCI devices](#heading--usb-pci-devices)
 - [How to find network info for a machine](#heading--machine-interfaces)
 - [How to find storage info for a machine](#heading--machine-storage)
@@ -14,7 +14,7 @@ This document describes the various ways you can evaluate the health and status 
 
 Some of these may not make complete sense until you've read [about machines](/t/machines/4030).
 
-<a href="#heading--machine-list"><h2 id="heading--machine-list">View the machine list</h2></a>
+<a href="#heading--how-to-view-the-machine-list"><h2 id="heading--how-to-view-the-machine-list">How to view the machine list</h2></a>
 
 You can view the list of machines from the choice "Machines" on the top menu of the MAAS web UI.  This action will display a table like the one above, listing all the machines that are currently visible to your MAAS installation.  During commissioning and deployment, MAAS updates the table to reflect the changing state of each machine. These values are augmented with green, amber and red icons to represent successful, in-progress and failed transitions, respectively. The MAAS web UI employs similar icons and colours throughout the interface to reflect a machine's status. 
 
@@ -36,7 +36,7 @@ With one or more machines selected, the 'Add hardware' drop-down menu moves to t
 The 'Filter by' section limits the machines listed in the table to selected keywords and machine attributes.
 [/note]
 
-<a href="#heading--node-details"><h2 id="heading--node-details">View machine details</h2></a>
+<a href="#heading--how-to-view-machine-details"><h2 id="heading--how-to-view-machine-details">How to view machine details</h2></a>
 
 Click a machine's FQDN or MAC address to open a detailed view of a machine's status and configuration.
 
@@ -52,7 +52,6 @@ rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli
 <a href="#heading--usb-pci-devices"><h2 id="heading--usb-pci-devices">How to manage attached USB and PCI devices</h2></a>
 
 The machines in your MAAS may have devices attached to them via USB or PCI interface, such as keyboards, cameras, network cards, GPUs, etc.  MAAS will recognize these devices and make them visible to you when a machine is commissioned.
-
 
 
 For example, the machine details presents USB and PCI devices like this:
@@ -94,7 +93,7 @@ where:
 
 If the device is still present in the system, it will be recogized again (and thus "recreated")
 when the machine is commissioned again.
-
+rad-end
 
 <a href="#heading--machine-interfaces"><h2 id="heading--machine-interfaces">How to find network info for a machine</h2></a>
 
