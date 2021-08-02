@@ -22,6 +22,13 @@ Although effectively equivalent to Standard erase, Secure erase is much faster b
 
 Same as Standard erase but only targets the first 1 MB and the last 1 MB of each disk. This removes the partition tables and/or superblock from the disk, making data recovery difficult but not impossible.
 
+<a href="#heading--about-erasure-order-of-preference"><h2 id="heading--about-erasure-order-of-preference">About erasure order of preference</h2></a>
+
+If all three options are checked when the machine is released the following order of preference is applied:
+
+1.  Use 'secure erase' if the disk supports it
+2.  If it does not then use 'quick erase'
+
 rad-begin   /deb/2.9/ui  /snap/2.9/ui  /snap/3.0/ui /deb/3.0/ui 
 <a href="#heading--how-to-set-default-erasure-configuration"><h2 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h2></a>
 
@@ -37,12 +44,6 @@ With the above defaults, the machine's view will look like this when the Release
 
 Where 'secure erase' and 'quick erase' can then be configured by the user.
 
-<a href="#heading--about-erasure-order-of-preference"><h2 id="heading--about-erasure-order-of-preference">About erasure order of preference</h2></a>
-
-If all three options are checked when the machine is released the following order of preference is applied:
-
-1.  Use 'secure erase' if the disk supports it
-2.  If it does not then use 'quick erase'
 rad-end
 
 rad-begin   /deb/2.9/cli  /snap/2.9/cli  /snap/3.0/cli /deb/3.0/cli 
