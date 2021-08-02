@@ -40,7 +40,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [How to deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
 - [How to customise machines](/t/custom-machine-setup-snap-3-0-ui/3910)
 - [Kernel boot options](/t/kernel-boot-options-snap-3-0-ui/3974)
-- [How to manage VMFS](/t/vmware-vmfs-datastores-snap-3-0-ui/4178)
 - [Ubuntu kernels](/t/ubuntu-kernels-snap-3-0-ui/4138)
 
 ### [Projects](/t/using-lxd-projects-with-maas/4470)
@@ -141,7 +140,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3910|/docs/snap/3.0/ui/custom-machine-setup|
 |https://discourse.maas.io/t/-/3974|/docs/snap/3.0/ui/kernel-boot-options|
 |https://discourse.maas.io/t/-/4106|/docs/snap/3.0/ui/storage|
-|https://discourse.maas.io/t/-/4178|/docs/snap/3.0/ui/vmware-vmfs-datastores|
 |https://discourse.maas.io/t/-/4138|/docs/snap/3.0/ui/ubuntu-kernels|
 |https://discourse.maas.io/t/-/4470|/docs/snap/3.0/ui/using-lxd-projects-with-maas|
 |https://discourse.maas.io/t/-/4098|/docs/snap/3.0/ui/resource-pools|
@@ -1014,14 +1012,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3247|/docs/snap/2.7/ui/vmware-vmfs-datastores|
 |https://discourse.maas.io/t/-/3248|/docs/snap/2.8/cli/vmware-vmfs-datastores|
 |https://discourse.maas.io/t/-/3249|/docs/snap/2.8/ui/vmware-vmfs-datastores|
-|https://discourse.maas.io/t/-/3250|/docs/snap/2.9/cli/vmware-vmfs-datastores|
-|https://discourse.maas.io/t/-/3251|/docs/snap/2.9/ui/vmware-vmfs-datastores|
 |https://discourse.maas.io/t/-/3252|/docs/deb/2.7/cli/vmware-vmfs-datastores|
 |https://discourse.maas.io/t/-/3253|/docs/deb/2.7/ui/vmware-vmfs-datastores|
 |https://discourse.maas.io/t/-/3254|/docs/deb/2.8/cli/vmware-vmfs-datastores|
 |https://discourse.maas.io/t/-/3255|/docs/deb/2.8/ui/vmware-vmfs-datastores|
-|https://discourse.maas.io/t/-/3256|/docs/deb/2.9/cli/vmware-vmfs-datastores|
-|https://discourse.maas.io/t/-/3257|/docs/deb/2.9/ui/vmware-vmfs-datastores|
 |https://discourse.maas.io/t/-/3258|/docs/snap/2.7/cli/writing-guide|
 |https://discourse.maas.io/t/-/3259|/docs/snap/2.7/ui/writing-guide|
 |https://discourse.maas.io/t/-/3260|/docs/snap/2.8/cli/writing-guide|
@@ -1278,9 +1272,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4173|/docs/snap/3.0/cli/vmware-images|
 |https://discourse.maas.io/t/-/4175|/docs/deb/3.0/cli/vmware-images|
 |https://discourse.maas.io/t/-/4176|/docs/deb/3.0/ui/vmware-images|
-|https://discourse.maas.io/t/-/4177|/docs/snap/3.0/cli/vmware-vmfs-datastores|
-|https://discourse.maas.io/t/-/4179|/docs/deb/3.0/cli/vmware-vmfs-datastores|
-|https://discourse.maas.io/t/-/4180|/docs/deb/3.0/ui/vmware-vmfs-datastores|
 |https://discourse.maas.io/t/-/4185|/docs/snap/3.0/cli/writing-guide|
 |https://discourse.maas.io/t/-/4187|/docs/deb/3.0/cli/writing-guide|
 |https://discourse.maas.io/t/-/4188|/docs/deb/3.0/ui/writing-guide|
@@ -1348,6 +1339,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/deb/2.9/cli/vmware-vmfs-datastores|/docs/deb/2.9/cli/storage|
+|/docs/deb/2.9/ui/vmware-vmfs-datastores|/docs/deb/2.9/ui/storage|
+|/docs/deb/3.0/cli/vmware-vmfs-datastores|/docs/deb/3.0/cli/storage|
+|/docs/deb/3.0/ui/vmware-vmfs-datastores|/docs/deb/3.0/ui/storage|
+|/docs/snap/2.9/cli/vmware-vmfs-datastores|/docs/snap/2.9/cli/storage|
+|/docs/snap/2.9/ui/vmware-vmfs-datastores|/docs/snap/2.9/ui/storage|
+|/docs/snap/3.0/cli/vmware-vmfs-datastores|/docs/snap/3.0/cli/storage|
+|/docs/snap/3.0/ui/vmware-vmfs-datastores|/docs/snap/3.0/ui/storage|
 |/docs/snap/3.0/ui/partitions|/docs/snap/3.0/ui/storage|
 |/docs/snap/2.9/cli/partitions|/docs/snap/2.9/cli/storage|
 |/docs/snap/2.9/ui/partitions|/docs/snap/2.9/ui/storage|
@@ -1448,7 +1447,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/storage|/docs/snap/2.9/ui/storage|
 |/docs/logging|/docs/snap/2.9/ui/maas-logging|
 |/docs/commissioning-logs|/docs/snap/2.9/ui/commissioning-logs|
-|/docs/vmware-vmfs-datastores|/docs/snap/2.9/ui/vmware-vmfs-datastores|
+|/docs/vmware-vmfs-datastores|/docs/snap/2.9/ui/storage|
 |/docs/configuration-journey|/docs/snap/2.9/ui/configuration-journey|
 |/docs/maas-communication|/docs/snap/2.9/ui/maas-communication|
 |/docs/zone-examples|/docs/snap/2.9/ui/zone-examples|
@@ -1509,7 +1508,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/installconfig-upgrade-postgres|/docs/upgrade-2-3-to-2-4-from-ubuntu-16-04|
 |/docs/installconfig-upgrade-to-2|/docs/upgrade-from-1-9-to-2-x|
 |/docs/installconfig-upgrade|/docs/upgrading-maas|
-|/docs/installconfig-vmfs-datastores|/docs/snap/2.9/ui/vmware-vmfs-datastores|
+|/docs/installconfig-vmfs-datastores|/docs/snap/3.0/ui/storage|
 |/docs/installconfig-webui-conf-journey|/docs/snap/2.9/ui/configuration-journey|
 |/docs/installconfig-webui|/docs/web-ui|
 |/docs/intro-communication|/docs/snap/2.9/ui/maas-communication|
