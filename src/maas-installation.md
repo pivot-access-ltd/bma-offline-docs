@@ -535,7 +535,7 @@ Sample output is shown in the detail section below.
 <details><summary>MAAS CLI help, sample output</summary>
 usage: maas admin [-h] COMMAND ...
 
-Issue commands to the MAAS region controller at http://192.168.43.251:5240/MAAS/api/2.0/.
+Issue commands to the MAAS region controller at `http://192.168.43.251:5240/MAAS/api/2.0/.`
 
 optional arguments:
   -h, --help            show this help message and exit
