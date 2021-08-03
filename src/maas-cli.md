@@ -4,7 +4,6 @@ The MAAS CLI can do everything that the web UI can do, and more. The CLI uses th
 
 Immediately after installing the MAAS CLI, you will need to create an administrator account, in order to access most of the CLI features.  You can also create [regular users](/t/user-accounts/nnnn#heading--add-a-user), as desired.
 As a security measure, MAAS generates an API key when creating your MAAS account, which you must use when logging in.  This API key can be obtained via a special command to the MAAS CLI.  You can obtain a user's API key from the web interface. 
-[/note]
 
 For additional MAAS CLI commands, you can consult the MAAS CLI help or access the CLI versions of the pages listed in the left-hand navigation. MAAS has a thorough built-in help reference, which you can access in stages to understand how to build commands. The `maas` command accepts the `-h` or `--help` argument after every keyword and will display results with increasing detail as you add elements to the help request.
 
@@ -60,7 +59,7 @@ To log in to the MAAS CLI, execute the following command on the API server (the 
 maas login $PROFILE $MAAS_URL - < $API_KEY_FILE
 ```
 
-$PROFILE is the administrator username you're using to log in.  The $MAAS_URL is the URL shared with you when you initialised MAAS (e.g., http://localhost:5240/MAAS/api/2.0).  $API_KEY_FILE is the name of the file where you stored the API KEY when you requested it from the CLI.
+$PROFILE is the administrator username you're using to log in.  The $MAAS_URL is the URL shared with you when you initialised MAAS (e.g., `http://localhost:5240/MAAS/api/2.0`).  $API_KEY_FILE is the name of the file where you stored the API KEY when you requested it from the CLI.
 
 <a href="#heading--cli-login-shellscript"><h2 id="heading--cli-login-shellscript">How to create a MAAS CLI login shellscript</h2></a>
 
