@@ -39,7 +39,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [How to commission machines](/t/commissioning-and-hardware-testing-scripts-snap-3-0-ui/3866)
 - [How to deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
 - [How to customise machines](/t/custom-machine-setup-snap-3-0-ui/3910)
-- [Ubuntu kernels](/t/ubuntu-kernels-snap-3-0-ui/4138)
 
 ### [Projects](/t/using-lxd-projects-with-maas/4470)
 - [Resource pools](/t/resource-pools-snap-3-0-ui/4098)
@@ -138,7 +137,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3914|/docs/snap/3.0/ui/deploy-machines|
 |https://discourse.maas.io/t/-/3910|/docs/snap/3.0/ui/custom-machine-setup|
 |https://discourse.maas.io/t/-/4106|/docs/snap/3.0/ui/storage|
-|https://discourse.maas.io/t/-/4138|/docs/snap/3.0/ui/ubuntu-kernels|
 |https://discourse.maas.io/t/-/4470|/docs/snap/3.0/ui/using-lxd-projects-with-maas|
 |https://discourse.maas.io/t/-/4098|/docs/snap/3.0/ui/resource-pools|
 |https://discourse.maas.io/t/-/4022|/docs/snap/3.0/ui/tags-and-annotations|
@@ -918,20 +916,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3175|/docs/snap/2.7/ui/ubuntu-kernels|
 |https://discourse.maas.io/t/-/3176|/docs/snap/2.8/cli/ubuntu-kernels|
 |https://discourse.maas.io/t/-/3177|/docs/snap/2.8/ui/ubuntu-kernels|
-|https://discourse.maas.io/t/-/3178|/docs/snap/2.9/cli/ubuntu-kernels|
-|https://discourse.maas.io/t/-/3179|/docs/snap/2.9/ui/ubuntu-kernels|
 |https://discourse.maas.io/t/-/3180|/docs/deb/2.7/cli/ubuntu-kernels|
 |https://discourse.maas.io/t/-/3181|/docs/deb/2.7/ui/ubuntu-kernels|
 |https://discourse.maas.io/t/-/3182|/docs/deb/2.8/cli/ubuntu-kernels|
 |https://discourse.maas.io/t/-/3183|/docs/deb/2.8/ui/ubuntu-kernels|
-|https://discourse.maas.io/t/-/3184|/docs/deb/2.9/cli/ubuntu-kernels|
-|https://discourse.maas.io/t/-/3185|/docs/deb/2.9/ui/ubuntu-kernels|
 |https://discourse.maas.io/t/-/3186|/docs/snap/2.7/cli/upgrading-maas|
 |https://discourse.maas.io/t/-/3187|/docs/snap/2.7/ui/upgrading-maas|
 |https://discourse.maas.io/t/-/3188|/docs/snap/2.8/cli/upgrading-maas|
 |https://discourse.maas.io/t/-/3189|/docs/snap/2.8/ui/upgrading-maas|
-|https://discourse.maas.io/t/-/3190|/docs/snap/2.9/cli/upgrading-maas|
-|https://discourse.maas.io/t/-/3191|/docs/snap/2.9/ui/upgrading-maas|
 |https://discourse.maas.io/t/-/3192|/docs/deb/2.7/cli/upgrading-maas|
 |https://discourse.maas.io/t/-/3193|/docs/deb/2.7/ui/upgrading-maas|
 |https://discourse.maas.io/t/-/3194|/docs/deb/2.8/cli/upgrading-maas|
@@ -1235,9 +1227,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4133|/docs/snap/3.0/cli/troubleshooting|
 |https://discourse.maas.io/t/-/4135|/docs/deb/3.0/cli/troubleshooting|
 |https://discourse.maas.io/t/-/4136|/docs/deb/3.0/ui/troubleshooting|
-|https://discourse.maas.io/t/-/4137|/docs/snap/3.0/cli/ubuntu-kernels|
-|https://discourse.maas.io/t/-/4139|/docs/deb/3.0/cli/ubuntu-kernels|
-|https://discourse.maas.io/t/-/4140|/docs/deb/3.0/ui/ubuntu-kernels|
 |https://discourse.maas.io/t/-/4145|/docs/snap/3.0/cli/user-accounts|
 |https://discourse.maas.io/t/-/4147|/docs/deb/3.0/cli/user-accounts|
 |https://discourse.maas.io/t/-/4148|/docs/deb/3.0/ui/user-accounts|
@@ -1329,6 +1318,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/deb/2.9/cli/ubuntu-kernels|/docs/deb/2.9/cli/custom-machine-setup|
+|/docs/deb/2.9/ui/ubuntu-kernels|/docs/deb/2.9/ui/custom-machine-setup|
+|/docs/deb/3.0/cli/ubuntu-kernels|/docs/deb/3.0/cli/custom-machine-setup|
+|/docs/deb/3.0/ui/ubuntu-kernels|/docs/deb/3.0/ui/custom-machine-setup|
+|/docs/snap/2.9/cli/ubuntu-kernels|/docs/snap/2.9/cli/custom-machine-setup|
+|/docs/snap/2.9/ui/ubuntu-kernels|/docs/snap/2.9/ui/custom-machine-setup|
+|/docs/snap/3.0/cli/ubuntu-kernels|/docs/snap/3.0/cli/custom-machine-setup|
+|/docs/snap/3.0/ui/ubuntu-kernels|/docs/snap/3.0/ui/custom-machine-setup|
 |/docs/deb/2.8/ui/kernel-boot-options|/docs/deb/2.8/ui/custom-machine-setup|
 |/docs/deb/2.9/cli/kernel-boot-options|/docs/deb/2.9/cli/custom-machine-setup|
 |/docs/deb/2.9/ui/kernel-boot-options|/docs/deb/2.9/ui/custom-machine-setup|
@@ -1413,7 +1410,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/deploy-nodes|/docs/snap/2.9/ui/deploy-machines|
 |/docs/hardware-testing|/docs/snap/2.9/ui/hardware-testing|
 |/docs/kernel-boot-options|/docs/snap/2.9/ui/custom-machine-setup|
-|/docs/ubuntu-kernels|/docs/snap/2.9/cli/ubuntu-kernels|
+|/docs/ubuntu-kernels|/docs/snap/2.9/cli/custom-machine-setup|
 |/docs/machine-overview|/docs/snap/2.9/ui/machines|
 |/docs/bmc-power-types|/docs/snap/2.9/ui/power-management|
 |/docs/resource-pools|/docs/snap/2.9/cli/resource-pools|
@@ -1556,7 +1553,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/nodes-deploy|/docs/snap/2.9/ui/deploy-machines|
 |/docs/nodes-hw-testing|/docs/snap/2.9/ui/hardware-testing|
 |/docs/nodes-kernel-options|/docs/snap/3.0/ui/custom-machine-setup|
-|/docs/nodes-kernels|/docs/snap/2.9/cli/ubuntu-kernels|
+|/docs/nodes-kernels|/docs/snap/2.9/cli/custom-machine-setup|
 |/docs/nodes-overview|/docs/snap/2.9/ui/machines|
 |/docs/node-overview|/docs/snap/2.9/ui/machines|
 |/docs/nodes-power-types|/docs/snap/2.9/ui/power-management|

@@ -6,13 +6,7 @@ There are two ways to add a machine to MAAS:
 
 This article will explain more about both methods.
 
-#### Questions you may have:
-
-1. [How does enlistment work?](#heading--enlistment)
-2. [How do VM host nodes work?](/t/vm-hosting/nnnn)
-3. [How do I add virtual machines?](/t/adding-a-vm-host/nnnn)
-4. [How do I add a machine manually?](#heading--add-a-node-manually)
-5. [How do I add a machine via a chassis?](#heading--add-nodes-via-a-chassis)
+<a href="#heading--about-adding-machines"><h2 id="heading--about-adding-machines">About adding machines</h2></a>
 
 MAAS typically adds a machine via a combination of DHCP, TFTP, and PXE. By now, you should have enabled MAAS to automatically add devices and machines to your environment. This unattended method of adding machines is called enlistment.
 
@@ -24,7 +18,7 @@ Regardless of how MAAS adds a machine, there are no special requirements for the
 
 Once MAAS is working to the point of adding machines, you'll probably want to understand statuses and actions. See [Node statuses](/t/concepts-and-terms/785#heading--node-statuses) and [Machine actions](/t/concepts-and-terms/785#heading--machine-actions) respectively.
 
-<a href="#heading--enlistment"><h2 id="heading--enlistment">How enlistment works</h2></a>
+<a href="#heading--about-enlistment"><h2 id="heading--about-enlistment">About enlistment</h2></a>
 
 When MAAS enlists a machine, it first contacts the DHCP server, so that the machine can be assigned an IP address.  An IP address is necessary to download a kernel and initrd via TFTP, since these functions can't accept domain names.  Once the machine has a bootable kernel, MAAS boots it:
 
@@ -42,13 +36,13 @@ The enlistment scripts send information about the machine to the region API serv
 
 After the enlistment process, MAAS places the machine in the 'Ready' state.  'Ready' is a holding state for machines that are enlisted (or commissioned), waiting to be deployed when needed.
 
-Typically, the next step will be to [commission the machine](/t/commission-machines/nnnn). As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+Typically, the next step will be to commission the machine. As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
 
 [note]
 MAAS runs built-in commissioning scripts during the enlistment phase. When you commission a machine, any customised commissioning scripts you add will have access to data collected during enlistment. Follow the link above for more information about commissioning and commission scripts.
 [/note]
 
-<a href="#heading--add-a-node-manually"><h2 id="heading--add-a-node-manually">Add a machine manually</h2></a>
+<a href="#heading--how-to-add-a-machine-manually"><h2 id="heading--how-to-add-a-machine-manually">How to add a machine manually</h2></a>
 
 Enlistment can be done manually if the hardware specifications of the underlying machine are known.
 
@@ -135,21 +129,17 @@ Normally, when you add a machine manually, MAAS will immediately attempt to comm
 
 Additional steps will vary widely by machine type and architecture.
 
-<a href="#heading--bmc-enlistment"><h3 id="heading--bmc-enlistment">BMC enlistment</h3></a>
+<a href="#heading--about-bmc-enlistment"><h3 id="heading--about-bmc-enlistment">About BMC enlistment</h3></a>
 
 [note status="2.4"]
 Note that in MAAS versions before 2.5, you are required to provide the MAC address of the PXE interface when adding a new machine manually.
 [/note]
 
-##### IPMI machines
-
 For IPMI machines, you only need to provide IPMI credentials. MAAS automatically discovers the machine and runs enlistment configuration by matching the BMC address.
-
-##### Non-IPMI machines
 
 For non-IPMI machines, you must specify a non-PXE MAC address. MAAS automatically discovers the machine and runs enlistment configuration by matching the non-PXE MAC address.
 
-<a href="#heading--add-nodes-via-a-chassis"><h2 id="heading--add-nodes-via-a-chassis">Add a machine via a chassis</h2></a>
+<a href="#heading--how-to-add-machines-via-a-chassis"><h2 id="heading--how-to-add-machines-via-a-chassis">How to add machines via a chassis</h2></a>
 
 Use the chassis feature to add multiple machines at once. This feature can only be done via the MAAS UI.
 
@@ -165,7 +155,7 @@ As with the manual method, the underlying machines will require netbooting.
 
 rad-begin /snap/3.0/ui /snap/3.0/cli
 
-<a href="#heading--disable-individual-boot-methods"><h2 id="heading--disable-individual-boot-methods">How do I disable individual boot methods?</h2></a>
+<a href="#heading--about-disabling-individual-boot-methods"><h2 id="heading--about-disabling-individual-boot-methods">About disabling individual boot methods</h2></a>
 
 In MAAS 3.0, it is possible to diable individual boot methods.  This must be done via the CLI. When a boot method is disabled MAAS will configure MAAS controlled `isc-dhcpd` to not respond to the associated [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture). External DHCP servers must be configured manually.
 
@@ -187,3 +177,4 @@ Specifically, for MAAS 3.0, the following changes have been implemented:
 
 rad-end
 
+<!-- comment -->
