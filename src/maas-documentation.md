@@ -39,11 +39,9 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [How to commission machines](/t/commissioning-and-hardware-testing-scripts-snap-3-0-ui/3866)
 - [How to deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
 - [How to customise machines](/t/custom-machine-setup-snap-3-0-ui/3910)
-
-### [Projects](/t/using-lxd-projects-with-maas/4470)
-- [Resource pools](/t/resource-pools-snap-3-0-ui/4098)
-- [Tags and annotations](/t/maas-tags-snap-3-0-ui/4022)
-- [LXD projects](/t/using-lxd-projects-with-maas-snap-3-0-ui/4470)
+- [How to manage resource pools](/t/resource-pools-snap-3-0-ui/4098)
+- [How to manage tags and annotations](/t/maas-tags-snap-3-0-ui/4022)
+- [How to use LXD rojects](/t/using-lxd-projects-with-maas/4470)
 
 ### [Images](/t/images-snap-3-0-ui/3958)
 
