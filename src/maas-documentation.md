@@ -31,8 +31,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 ### [Machines](/t/machines-snap-3-0-ui/4030)
 
 - [How to manage machines](/t/-/4844)
-- [How to test hardware](/t/hardware-testing-snap-3-0-ui/3942)
-- [How to test networking](/t/network-testing-snap-3-0-ui/4050)
+- [How to test machines](/t/hardware-testing-snap-3-0-ui/3942)
 - [How to commission machines](/t/how-to-commissionmachines-snap-3-0-ui/3866)
 - [How to deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
 - [How to customise machines](/t/custom-machine-setup-snap-3-0-ui/3910)
@@ -86,6 +85,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 ### Reference
 
 - [Power management](/t/power-management-snap-3-0-ui/4070)
+- [Hardware test scripts](/t/-/4861)
 - [Log files](/t/maas-logging-snap-3-0-ui/4010)
 - [API documentation](https://maas.io/docs/api)
 - [API client](/t/api-client/810)
@@ -109,6 +109,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/4861|/docs/hardware-test-scripts|
 |https://discourse.maas.io/t/-/4844|/docs/snap/3.0/ui/manage-machines|
 |https://discourse.maas.io/t/-/4845|/docs/snap/3.0/cli/manage-machines|
 |https://discourse.maas.io/t/-/4846|/docs/snap/2.9/ui/manage-machines|
