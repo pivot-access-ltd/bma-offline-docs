@@ -1,5 +1,7 @@
 This document describes the various ways you can evaluate the health and status of your MAAS machines, using the machine list.  It will show you:
 
+- [How to add a machine manually](#heading--how-to-add-a-machine-manually)
+- [How to add machines via a chassis](#heading--how-to-add-machines-via-a-chassis)
 - [How to view the machine list](#heading--how-to-view-the-machine-list)
 - [How to view machine details](#heading--how-to-view-machine-details)
 - [How to manage attached USB and PCI devices](#heading--usb-pci-devices)
@@ -10,6 +12,97 @@ This document describes the various ways you can evaluate the health and status 
 - [How to find raw log output for a machine](#heading--raw-log-output)
 - [How to find a machine's event logs](#heading--event-logs)
 - [How to find machine configuration info](#heading--machine-config)
+
+<a href="#heading--how-to-add-a-machine-manually"><h2 id="heading--how-to-add-a-machine-manually">How to add a machine manually</h2></a>
+
+rad-begin   /deb/2.9/ui /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
+
+Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI machine:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg"></a>
+
+The fields on the "Add machine" screen include the following items:
+
+* **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
+
+* **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
+
+* **Architecture**: This field refers to the architecture of the machine being added.
+
+* **Minimum Kernel**: This field supplies a drop-down of possible kernels available for deployment on this machine.
+
+* **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
+
+* **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
+
+* **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
+
+* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/nnnn) for details on the available power types and the relevant parameters for each type.
+rad-end
+
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+At the command line, enter the following information:
+
+```
+stormrider@wintermute:~$ maas admin machines create \
+> architecture=$ARCH \
+> max_addresses=$MAC_ADDRESS \
+> power_type=$POWER_TYPE \
+> power_parameters_power_id=$POWER_ID \
+> power_parameters_power_address=$POWER_ADDRESS \
+> power_parameters_power_pass=$POWER_PASSWORD
+```
+
+When you enter the command (substituting the `$...` parameters for your own particulars), the screen will pause for a moment, and then return a stream of JSON relating to the added machine.
+
+Here's an example with a local laptop MAAS install, using KVMs as virtual machines:
+
+```
+stormrider@wintermute:~$ maas admin machines create \
+> architecture=amd64 \
+> max_addresses=52:54:00:6f:b4:af \
+> power_type=virsh \
+> power_parameters_power_id=50f6cca2-5d89-43b9-941c-90c9fcd7c156 \
+> power_parameters_power_address=qemu+ssh://stormrider@192.168.123.1/system \
+> power_parameters_power_pass=xxxxxxx
+```
+
+The variable fields in the `machines create` command (the `$...` items) are as follows, in this example: 
+
+```
+> architecture=$ARCH \
+> mac_addresses=$MAC_ADDRESS \
+> power_type=$POWER_TYPE \
+> power_parameters_power_id=$POWER_ID \
+> power_parameters_power_address=$POWER_ADDRESS \
+> power_parameters_power_pass=$POWER_PASSWORD
+```
+
+* `$ARCH`: This field refers to the architecture of the machine being added, `amd64` in the local laptop example.
+
+* `$MAC_ADDRESS`: This is the MAC address of the boot-enabled NIC for the machine being added.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
+
+* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/nnnn) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+
+* `$POWER_ID`: This is generally the UUID of the machine being added.
+
+* `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types) in the API reference for details on the available power types and the relevant parameters for each type.
+rad-end
+
+<a href="#heading--how-to-add-machines-via-a-chassis"><h2 id="heading--how-to-add-machines-via-a-chassis">How to add machines via a chassis</h2></a>
+
+Use the chassis feature to add multiple machines at once. This feature can only be done via the MAAS UI.
+
+To do this, instead of selecting 'Machine' as above, choose 'Chassis' from the drop-down menu. In the following example, MAAS will add all available VMs from the given  virsh address:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg"></a>
+
+The required fields will change based on the type of chassis you choose.
+
+[note]
+As with the manual method, the underlying machines will require netbooting.
+[/note]
 
 <a href="#heading--how-to-view-the-machine-list"><h2 id="heading--how-to-view-the-machine-list">How to view the machine list</h2></a>
 
