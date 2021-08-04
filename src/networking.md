@@ -1,3 +1,9 @@
+<a href="#heading--about-bond-and-bridge-interfaces"><h2 id="heading--about-bond-and-bridge-interfaces">About bond and bridge interfaces</h2></a>
+
+A bond interface is used to aggregate two or more physical interfaces into a single logical interface. Combining multiple network connections in parallel can increase network throughput beyond what a single NIC will allow.  It also provides some redundancy in case one of the NICs should fail.  More information about the theory behind bonded NICs is found in the [relevant IEEE standard](https://1.ieee802.org/tsn/802-1ax-rev/).
+
+A network bridge may be useful if you intend to put virtual machines or containers on the machine.  You can create a bridge by selecting an interface and clicking the now-active "Create bridge" button. A form will appear that allows you to configure a MAC address, STP, and an appropriate tag.
+
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
 You can use the CLI to manage the networking elements of MAAS, including subnets, fabrics, VLANs, and spaces.  This page shows how to access and edit these elements. See [Concepts and terms](/t/concepts-and-terms/785) for the definitions of networking objects, along with a basic networking tutorial (if needed).
 

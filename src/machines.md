@@ -313,8 +313,6 @@ In the case of this deployed machine, there are not many editing options.  If th
 Options on this tab are described in the introduction to [Networking](/t/networking/4046) article in this documentation set.
 
 
-
-
 <a href="#heading--machine-storage-h3"><h3 id="heading--machine-storage-h3">About machine storage info</h3></a>
 
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
@@ -367,8 +365,6 @@ To view the Event log for a machine, choose the "Event" tab under "Logs."  This 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a> 
 
 
-
-
 There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/4010) section of this documentation.
 
 
@@ -386,12 +382,19 @@ The "Power configuration" supplies the parameters necessary for MAAS to access t
 
 More information on Power configuration will be found in the [Power management](/t/power-management/4070) section of this documentation.
 
+<a href="#heading--about-testing-hardware"><h2 id="heading--about-testing-hardware">About testing hardware</h2></a>
+
+If you wish, you can tell MAAS to test machine hardware using well-known Linux utilities.  MAAS can test machines that have  a status of **Ready**, **Broken**, or **Deployed**.  You can include testing as part of the commissioning process. When you choose the 'Commission' action, MAAS will display the dialog described below.  Be aware, though, that if the hardware tests fail, the machine will become unavailable for Deployment.
+
+[note]
+The majority of testing scripts only work with machines that are backed by physical hardware (e.g. they may be incompatible with VM-based machines).
+[/note]
+
+With MAAS, you can easily write, upload and execute your hardware testing scripts and see the results.
+
 <a href="#heading--about-post-commission-configuration"><h2 id="heading--about-post-commission-configuration">About post-commission configuration</h2></a>
 
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces.
 
-<a href="#heading--about-bond-and-bridge-interfaces"><h2 id="heading--about-bond-and-bridge-interfaces">About bond and bridge interfaces</h2></a>
 
-A bond interface is used to aggregate two or more physical interfaces into a single logical interface. Combining multiple network connections in parallel can increase network throughput beyond what a single NIC will allow.  It also provides some redundancy in case one of the NICs should fail.  More information about the theory behind bonded NICs is found in the [relevant IEEE standard](https://1.ieee802.org/tsn/802-1ax-rev/).
-
-A network bridge may be useful if you intend to put virtual machines or containers on the machine.  You can create a bridge by selecting an interface and clicking the now-active "Create bridge" button. A form will appear that allows you to configure a MAC address, STP, and an appropriate tag.
+<!-- comment -->
