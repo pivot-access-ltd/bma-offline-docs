@@ -1,22 +1,8 @@
-This document describes the various ways you can evaluate the health and status of your MAAS machines, using the machine list.  It will show you:
+<a href="#heading--about-managing-machines"><h2 id="heading--about-managing-machines">About managing machines</h2></a>
 
-- [How to view the machine list](#heading--how-to-view-the-machine-list)
-- [How to view machine details](#heading--how-to-view-machine-details)
-- [How to manage attached USB and PCI devices](#heading--usb-pci-devices)
-- [How to find network info for a machine](#heading--machine-interfaces)
-- [How to find storage info for a machine](#heading--machine-storage)
-- [How to find commissioning logs](#heading--commissioning-log)
-- [How to find machine hardware & test logs](#heading--hardware-tests)
-- [How to find raw log output for a machine](#heading--raw-log-output)
-- [How to find a machine's event logs](#heading--event-logs)
-- [How to find machine configuration info](#heading--machine-config)
+<a href="#heading--about-viewing-the-machine-list"><h2 id="heading--about-viewing-the-machine-list">About viewing the machine list</h2></a>
 
-
-Some of these may not make complete sense until you've read [about machines](/t/machines/4030).
-
-<a href="#heading--how-to-view-the-machine-list"><h2 id="heading--how-to-view-the-machine-list">How to view the machine list</h2></a>
-
-You can view the list of machines from the choice "Machines" on the top menu of the MAAS web UI.  This action will display a table like the one above, listing all the machines that are currently visible to your MAAS installation.  During commissioning and deployment, MAAS updates the table to reflect the changing state of each machine. These values are augmented with green, amber and red icons to represent successful, in-progress and failed transitions, respectively. The MAAS web UI employs similar icons and colours throughout the interface to reflect a machine's status. 
+You can view the list of machines from the choice "Machines" on the top menu of the MAAS web UI.  This action will display a table listing all the machines that are currently visible to your MAAS installation.  During commissioning and deployment, MAAS updates the table to reflect the changing state of each machine. These values are augmented with green, amber and red icons to represent successful, in-progress and failed transitions, respectively. The MAAS web UI employs similar icons and colours throughout the interface to reflect a machine's status. 
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg"></a> 
 
@@ -36,9 +22,9 @@ With one or more machines selected, the 'Add hardware' drop-down menu moves to t
 The 'Filter by' section limits the machines listed in the table to selected keywords and machine attributes.
 [/note]
 
-<a href="#heading--how-to-view-machine-details"><h2 id="heading--how-to-view-machine-details">How to view machine details</h2></a>
+ <a href="#heading--about-viewing-machine-details"><h2 id="heading--about-viewing-machine-details">About viewing machine details</h2></a>
 
-Click a machine's FQDN or MAC address to open a detailed view of a machine's status and configuration.
+With MAAS, you can access ad detailed view of a machine's status and configuration:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png"></a>
 
@@ -49,10 +35,10 @@ The default view is 'Machine summary', presented as a series of cards detailing 
 The menu includes links to a number of additional forms and controls, as described in the following sections.
 
 rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli
-<a href="#heading--usb-pci-devices"><h2 id="heading--usb-pci-devices">How to manage attached USB and PCI devices</h2></a>
+
+<a href="#heading--about-pci-and-usb-devices"><h2 id="heading--about-pci-and-usb-devices">About PCI and USB devices</h2></a>
 
 The machines in your MAAS may have devices attached to them via USB or PCI interface, such as keyboards, cameras, network cards, GPUs, etc.  MAAS will recognize these devices and make them visible to you when a machine is commissioned.
-
 
 For example, the machine details presents USB and PCI devices like this:
 
@@ -77,9 +63,59 @@ The USB tab presents similar information in the same format.
 [note]
 If you are upgrading from a previous version of MAAS, PCI and USB devices aren't modeled, so you will have to recommission the machine to capture these devices.
 [/note]
+rad-end
 
+<a href="#heading--about-network-info"><h2 id="heading--about-network-info">About machine network info</h2></a>
 
-Once you've commissioned the machine, you have the option of deleting PCI/USB devices from the machine in any machine state, via the CLI only, using the following command:
+The Network "tab" provides you with a way to view/edit the network and interface configuration for a machine: 
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png"></a> 
+
+In the case of this deployed machine, there are not many editing options.  If the machine is in a 'Ready' state, though, altering the network configuration is possible, as shown in the screenshot above.  Options on this tab are described in the introduction to [Networking](/t/networking/nnnn) article in this documentation set.
+
+<a href="#heading--about-storage-info"><h2 id="heading--about-storage-info">About machine storage info</h2></a>
+
+The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> 
+
+This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/nnnn) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
+
+<a href="#heading--about-this-document"><h2 id="heading--about-this-document">About this document</h2></a>
+
+This document describes the various ways you can evaluate the health and status of your MAAS machines, using the machine list.  It will show you:
+
+- [How to view the machine list](#heading--how-to-view-the-machine-list)
+- [How to view machine details](#heading--how-to-view-machine-details)
+- [How to manage attached USB and PCI devices](#heading--usb-pci-devices)
+- [How to find network info for a machine](#heading--machine-interfaces)
+- [How to find storage info for a machine](#heading--machine-storage)
+- [How to find commissioning logs](#heading--commissioning-log)
+- [How to find machine hardware & test logs](#heading--hardware-tests)
+- [How to find raw log output for a machine](#heading--raw-log-output)
+- [How to find a machine's event logs](#heading--event-logs)
+- [How to find machine configuration info](#heading--machine-config)
+
+<a href="#heading--how-to-view-the-machine-list"><h2 id="heading--how-to-view-the-machine-list">How to view the machine list</h2></a>
+
+To view the machine list, select "Machines" on the top menu of the MAAS web UI:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg"></a> 
+
+To quickly view more details, roll the cursor over status icons:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg"></a> 
+
+<a href="#heading--how-to-view-machine-details"><h2 id="heading--how-to-view-machine-details">How to view machine details</h2></a>
+
+To open a detailed view of a machine's status and configuration, click a machine's FQDN or MAC address:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png"></a>
+
+rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli
+<a href="#heading--usb-pci-devices"><h2 id="heading--usb-pci-devices">How to manage attached USB and PCI devices</h2></a>
+
+To delete PCI/USB devices from the machine in any machine state, via the CLI only, using the following command:
 
 ```
 maas $PROFILE node-device delete $SYSTEM_ID $DEVICE_ID
@@ -97,23 +133,19 @@ rad-end
 
 <a href="#heading--machine-interfaces"><h2 id="heading--machine-interfaces">How to find network info for a machine</h2></a>
 
-
-The Network "tab" provides you with a way to view/edit the network and interface configuration for a machine: 
+To find network info for a specific machine, open that machine's "Network" tab in the machine summary:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png"></a> 
 
-In the case of this deployed machine, there are not many editing options.  If the machine is in a 'Ready' state, though, altering the network configuration is possible, as shown in the screenshot above.
+Options on this tab are described in the introduction to [Networking](/t/networking/nnnn) article in this documentation set.
 
+<a href="#heading--how-to-find-machine-storage-info"><h2 id="heading--how-to-find-machine-storage-info">How to find machine storage info</h2></a>
 
-Options on this tab are described in the introduction to [Networking](/t/networking/4046) article in this documentation set.
-
-<a href="#heading--machine-storage"><h2 id="heading--machine-storage">How to find storage info for a machine</h2></a>
-
-The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
+To view/edit machine storage info, click on the "Storage" tab in the machine summary:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> 
 
-This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  See the article [Storage](/t/storage/4106) for a detailed discussion on how to use this screen, as well as many other considerations for machine storage configurations.
+See the article [Storage](/t/storage/nnn) for a detailed instructions on how to use this screen.
 
 <a href="#heading--commissioning-log"><h2 id="heading--commissioning-log">How to find commissioning logs</h2></a>
 
@@ -129,19 +161,15 @@ This will bring up a detailed log view for that row:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png"></a>
 
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.  
+These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs.  
 
 <a href="#heading--hardware-tests"><h2 id="heading--hardware-tests">How to find machine hardware & test logs</h2></a>
 
-This tab presents a summary of tests run against this particular machine:  
-
-<a href="See the article on [Logging](/t/maas-logging/4010) for more details on how to read and interpret these logs." target = "_blank"><img src="See the article on [Logging](/t/maas-logging/4010) for more details on how to read and interpret these logs."></a> 
-
-You can view the summary report, or choose the "View details" dropdown to get details on any particular tests:
+This tab presents a summary of tests run against this particular machine.  You can view the summary report, or choose the "View details" dropdown to get details on any particular tests:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a> 
 
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/3942).
+The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/nnnn).  
 
 <a href="#heading--raw-log-output"><h2 id="heading--raw-log-output">How to find raw log output for a machine</h2></a>
 
@@ -149,7 +177,7 @@ By choosing "Installation output" on the "Logs" tab, you can see the "raw" log o
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a> 
 
-Help interpreting these logs can be found under the [Logging](/t/maas-logging/4010) section of this documentation.
+Help interpreting these logs can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 
 <a href="#heading--event-logs"><h2 id="heading--event-logs">How to find a machine's event logs</h2></a>
 
@@ -157,7 +185,7 @@ To view the Event log for a machine, choose the "Event" tab under "Logs."  This 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a> 
 
-There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/4010) section of this documentation.
+There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 
 <a href="#heading--machine-config"><h2 id="heading--machine-config">How to find machine configuration info</h2></a>
 
@@ -171,4 +199,4 @@ The "Power configuration" supplies the parameters necessary for MAAS to access t
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png"></a> 
 
-More information on Power configuration will be found in the [Power management](/t/power-management/4070) section of this documentation.
+More information on Power configuration will be found in the [Power management](/t/power-management/nnnn) section of this documentation.
