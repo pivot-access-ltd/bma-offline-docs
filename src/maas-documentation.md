@@ -31,8 +31,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 ### [Machines](/t/machines-snap-3-0-ui/4030)
 
 - [How to manage machines](/t/-/4844)
-- [How to manage interfaces](/t/commission-machines-snap-3-0-ui/3874)
-- [How to manage storage](/t/storage-snap-3-0-ui/4106)
 - [How to test hardware](/t/hardware-testing-snap-3-0-ui/3942)
 - [How to test networking](/t/network-testing-snap-3-0-ui/4050)
 - [How to commission machines](/t/how-to-commissionmachines-snap-3-0-ui/3866)
@@ -40,6 +38,25 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [How to customise machines](/t/custom-machine-setup-snap-3-0-ui/3910)
 - [How to manage resource pools](/t/resource-pools-snap-3-0-ui/4098)
 - [How to manage tags and annotations](/t/maas-tags-snap-3-0-ui/4022)
+
+### Storage
+- [How to manage storage](/t/storage-snap-3-0-ui/4106)
+
+### [Networking](/t/networking-snap-3-0-ui/4046)
+
+- [About network discovery](/t/network-discovery-snap-3-0-ui/4042)
+- [About subnets](/t/subnet-management-snap-3-0-ui/4110)
+- [About IPv6](/t/ipv6-addressing-snap-3-0-ui/3970)
+- [About STP](/t/managing-stp-snap-3-0-ui/4038)
+- [About availability zones (AZs)](/t/zone-examples-snap-3-0-ui/4190)
+- [How to manage interfaces](/t/-/3874)
+- [How to manage DHCP](/t/managing-dhcp-snap-3-0-ui/4034)
+- [How to manage IP ranges](/t/ip-ranges-snap-3-0-ui/3966)
+- [How to create proxies](/t/proxy-snap-3-0-ui/4082)
+- [How to enable TLS](/t/configuring-tls-encryption-snap-3-0-ui/3890)
+- [How to manage zones (AZs)](/t/availability-zones-snap-3-0-ui/3834)
+- [How to setup NTP](/t/ntp-services-snap-3-0-ui/4054)
+- [How to use air-gapped MAAS](/t/using-maas-in-an-air-gapped-environment-snap-3-0-ui/4154)
 
 ### [Images](/t/images-snap-3-0-ui/3958)
 
@@ -49,21 +66,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [How to use image streams](/t/using-image-streams-snap-3-0-ui/4150)
 - [How to mirror images locally](/t/local-image-mirror-snap-3-0-ui/3982)
 - [How to manage VMWare images](/t/vmware-images-snap-3-0-ui/4174)
-
-### [Networking](/t/networking-snap-3-0-ui/4046)
-
-- [About network discovery](/t/network-discovery-snap-3-0-ui/4042)
-- [About subnets](/t/subnet-management-snap-3-0-ui/4110)
-- [About IPv6](/t/ipv6-addressing-snap-3-0-ui/3970)
-- [About STP](/t/managing-stp-snap-3-0-ui/4038)
-- [About availability zones (AZs)](/t/zone-examples-snap-3-0-ui/4190)
-- [How to manage DHCP](/t/managing-dhcp-snap-3-0-ui/4034)
-- [How to manage IP ranges](/t/ip-ranges-snap-3-0-ui/3966)
-- [How to create proxies](/t/proxy-snap-3-0-ui/4082)
-- [How to enable TLS](/t/configuring-tls-encryption-snap-3-0-ui/3890)
-- [How to manage zones (AZs)](/t/availability-zones-snap-3-0-ui/3834)
-- [How to setup NTP](/t/ntp-services-snap-3-0-ui/4054)
-- [How to use air-gapped MAAS](/t/using-maas-in-an-air-gapped-environment-snap-3-0-ui/4154)
 
 ### [VM hosting](/t/vm-hosting-snap-3-0-ui/4162)
 
