@@ -1,50 +1,4 @@
-
-There are two ways to add a machine to MAAS:
-
-1. If you place the machine on a connected network, and the machine is configured to netboot, MAAS will automatically enlist it.
-2. If you add a machine manually, MAAS will automatically commission it.
-
-This article will explain more about both methods.
-
-<a href="#heading--about-adding-machines"><h2 id="heading--about-adding-machines">About adding machines</h2></a>
-
-MAAS typically adds a machine via a combination of DHCP, TFTP, and PXE. By now, you should have enabled MAAS to automatically add devices and machines to your environment. This unattended method of adding machines is called enlistment.
-
-[note]
-Configuring a computer to boot over PXE is done via its BIOS, often referred to as "netboot" or "network boot".
-[/note]
-
-Regardless of how MAAS adds a machine, there are no special requirements for the underlying machine. In particular, there is no need to install an operating system on it.
-
-Once MAAS is working to the point of adding machines, you'll probably want to understand statuses and actions. See [Node statuses](/t/concepts-and-terms/785#heading--node-statuses) and [Machine actions](/t/concepts-and-terms/785#heading--machine-actions) respectively.
-
-<a href="#heading--about-enlistment"><h2 id="heading--about-enlistment">About enlistment</h2></a>
-
-When MAAS enlists a machine, it first contacts the DHCP server, so that the machine can be assigned an IP address.  An IP address is necessary to download a kernel and initrd via TFTP, since these functions can't accept domain names.  Once the machine has a bootable kernel, MAAS boots it:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg"></a> 
-
-Next, initrd mounts a Squashfs image, ephemerally via HTTP, so that cloud-init can execute:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg"></a> 
-
-Finally, cloud-init runs enlistment and setup scripts:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg"></a> 
-
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/nnnn).
-
-After the enlistment process, MAAS places the machine in the 'Ready' state.  'Ready' is a holding state for machines that are enlisted (or commissioned), waiting to be deployed when needed.
-
-Typically, the next step will be to commission the machine. As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
-
-[note]
-MAAS runs built-in commissioning scripts during the enlistment phase. When you commission a machine, any customised commissioning scripts you add will have access to data collected during enlistment. Follow the link above for more information about commissioning and commission scripts.
-[/note]
-
 <a href="#heading--how-to-add-a-machine-manually"><h2 id="heading--how-to-add-a-machine-manually">How to add a machine manually</h2></a>
-
-Enlistment can be done manually if the hardware specifications of the underlying machine are known.
 
 rad-begin   /deb/2.9/ui /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
@@ -121,24 +75,6 @@ The variable fields in the `machines create` command (the `$...` items) are as f
 * `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types) in the API reference for details on the available power types and the relevant parameters for each type.
 rad-end
 
-Normally, when you add a machine manually, MAAS will immediately attempt to commission the machine. Note that you will need to configure the underlying machine to boot over the network, or commissioning will fail. MAAS cannot handle this configuration for you.  While the correct method for configuring network boot depends heavily on your server, there are two common elements:
-
-1. The network card on your server must be able to support PXE, i.e., your NIC -- whether independent or integrated on a motherboard -- must have a boot PROM that supports network booting.  You'll need to consult the documentation for the machine in question to determine this.
-
-2. You usually have to interrupt the boot process and enter the BIOS/UEFI menu to configure the network card's PXE stack.  Again, you may need to consult your machine's documentation to pin down this step.
-
-Additional steps will vary widely by machine type and architecture.
-
-<a href="#heading--about-bmc-enlistment"><h3 id="heading--about-bmc-enlistment">About BMC enlistment</h3></a>
-
-[note status="2.4"]
-Note that in MAAS versions before 2.5, you are required to provide the MAC address of the PXE interface when adding a new machine manually.
-[/note]
-
-For IPMI machines, you only need to provide IPMI credentials. MAAS automatically discovers the machine and runs enlistment configuration by matching the BMC address.
-
-For non-IPMI machines, you must specify a non-PXE MAC address. MAAS automatically discovers the machine and runs enlistment configuration by matching the non-PXE MAC address.
-
 <a href="#heading--how-to-add-machines-via-a-chassis"><h2 id="heading--how-to-add-machines-via-a-chassis">How to add machines via a chassis</h2></a>
 
 Use the chassis feature to add multiple machines at once. This feature can only be done via the MAAS UI.
@@ -153,28 +89,139 @@ The required fields will change based on the type of chassis you choose.
 As with the manual method, the underlying machines will require netbooting.
 [/note]
 
-rad-begin /snap/3.0/ui /snap/3.0/cli
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+To commission, on the "Machines" page, select a machine and choose "Commission" under the "Take action" drop-down menu.
 
-<a href="#heading--about-disabling-individual-boot-methods"><h2 id="heading--about-disabling-individual-boot-methods">About disabling individual boot methods</h2></a>
+<a href="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a>
 
-In MAAS 3.0, it is possible to diable individual boot methods.  This must be done via the CLI. When a boot method is disabled MAAS will configure MAAS controlled `isc-dhcpd` to not respond to the associated [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture). External DHCP servers must be configured manually.
+You have the option of selecting some extra parameters (checkboxes) and performing hardware tests.
 
-To allow different boot methods to be in different states on separate physical networks using the same VLAN ID configuration is done on the subnet in the UI or API. When using the API boot methods to be disabled may be specified using the MAAS internal name or [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture) in octet or hex form. For example the following disabled i386/AMD64 PXE, AMD64 UEFI TFTP, and AMD64 UEFI HTTP
+These options include:
 
-```bash 
-maas $PROFILE subnet \
-update $SUBNET \
-disabled_boot_architectures="0x00 uefi_amd64_tftp 00:10"
+-   **Allow SSH access and prevent machine powering off**: Machines are normally powered off after commissioning. This option keeps the machine on and enables SSH so you can access the machine.
+
+-   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/networking/nnnn) for more information.
+
+-   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/storage/nnnn) for more details.
+
+-   **Update firmware**: Runs scripts tagged with `update_firmware`. See [Testing scripts](/t/commissioning-and-hardware-testing-scripts/nnnn#heading--automatic-script-selection-by-hardware-type) for more details.
+
+-   **Configure HBA**: Runs scripts tagged with `configure_hba`. As above, see [Testing scripts](/t/commissioning-and-hardware-testing-scripts/nnnn#heading--automatic-script-selection-by-hardware-type) for further details.
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a>
+
+Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/hardware-testing/nnnn)) for more information on hardware testing scripts.
+
+Finalise the directive by hitting "Commission machine".
+
+While commissioning, the machine status will change to reflect this state (Commissioning).  MAAS discovers the machine's network topology.  MAAS then prompts a machine network interface to connect to the fabric, VLAN, and subnet combination for configuration. Usually, MAAS assigns a static IP address out of the reserved IP range for the subnet ("Auto assign" mode). The next section details several assignment modes.
+
+Once commissioned, a machine's status will change to Ready, and an extra tab for the machine called "Commissioning" will become available. This tab contains the results of the scripts executed during the commissioning process.
+rad-end
+
+Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2896) to this machine.  The next step is [deployment](/t/deploy-machines/nnnn).
+
+<a href="#heading--about-numa-sriov-commissioning"><h2 id="heading--about-numa-sriov-commissioning">About commissioning NUMA and SR-IOV nodes</h2></a>
+
+If you are using the NUMA architecture, MAAS versions 2.7 and higher guarantee that machines are assigned to a single NUMA node that contains all the machine's resources. Node boundaries are critical, especially in vNUMA situations.  Splitting nodes can create unnecessary latency.  You want the NUMA node boundaries to match VM boundaries if at all possible.
+
+[note]
+You must recommission NUMA/SR-IOV machines that were previously commissioned under version 2.6 or earlier.
+[/note]
+
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+<a href="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png"></a> 
+
+When using these nodes, you can specify a node index for interfaces and physical block devices.  MAAS will display the NUMA node index and details, depending upon your configuration, to include the count of NUMA nodes, number of CPU cores, memory, NICs, and node spaces for bonds and block devices.  You can also filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID, among others.
+rad-end
+
+<a href="#heading--about-maas-commissioning-scripts"><h2 id="heading--about-maas-commissioning-scripts">About MAAS commissioning scripts</h2></a>
+
+When a machine boots, MAAS first instructs it to run cloud-init to set up SSH keys (during commissioning only), set up NTP, and execute a script that runs other commissioning scripts.  Currently, the sequence of MAAS-provided commissioning scripts proceeds like this:
+
+* **maas-support-info:** MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  **Runs in parallel with other scripts.**
+
+* **maas-lshw:** this script pulls system BIOS and vendor info, and generates user-defined tags for later use.  **Runs in parallel with other scripts.**
+
+* **20-maas-01-install-lldpd:** this script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  This script provides some extensive logging.
+
+* **maas-list-modaliases:** this script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.  **Runs in parallel with other scripts.**
+
+* **20-maas-02-dhcp-unconfigured-ifaces:** MAAS will want to know all the ways the machine is connected to the network.  Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.  This script provides extensive logging.
+
+* **maas-get-fruid-api-data:** this script gathers information for the Facebook wedge power type.  **Runs in parallel with other scripts.**
+
+* **maas-serial-ports:** this script lists what serial ports are available on the machine.  **Runs in parallel with other scripts.**
+
+rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli
+* **40-maas-01-network-interfaces:** this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
+rad-end
+
+rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli 
+* **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
+rad-end
+
+rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli
+* **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, details about attached USB and PCI devices, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
+rad-end
+
+* **maas-capture-lldp:** this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  **Runs in parallel with other scripts.**
+
+* **maas-kernel-cmdline:** this script is used to update the boot devices; it double-checks that the right boot interface is selected. 
+
+Commissioning runs the same dozen or so scripts as enlistment, gathering all the same information, but with these seven caveats: 
+
+1. Commissioning also runs user-supplied commissioning scripts, if present.  Be aware that these scripts run as root, so they can execute any system command.
+
+2. Commissioning runs test scripts which are not run during enlistment.
+
+3. Commissioning scripts can send BMC configuration data, and can be used to configure BMC data.
+
+4. The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts; these scripts may write BMC power credentials to BMC_CONFIG_PATH in YAML format, where each key is a power parameter.  The first script to write BMC_CONFIG_PATH is the only script allowed to configure the BMC, allowing you to override MAAS' built-in BMC detection.  If the script returns 0, that value will be send to MAAS.
+
+5. All built-in commissioning scripts have been migrated into the database.
+
+6. `maas-run-remote-scripts` is capable of enlisting machines, so enlistment `user-data` scripts have been removed.
+
+7. The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.
+
+In both enlistment and commissioning, MAAS uses either the MAC address or the UUID to identify machines.  Currently, because some machine types encountered by MAAS do **not** use unique MAC addresses, we are trending toward using the UUID.
+
+
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+To commission a machine:
+
+``` bash
+maas $PROFILE machine commission $SYSTEM_ID
 ```
 
-Specifically, for MAAS 3.0, the following changes have been implemented:
+[note]
+To commission a node, it must have a status of "New".
+[/note]
 
-* UEFI AMD64 HTTP(00:10) has been reenabled.
-* UEFI ARM64 HTTP(00:13) has been enabled.
-* UEFI ARM64 TFTP(00:0B) and UEFI ARM64 HTTP(00:13) will now provide a shim and GRUB signed with the Microsoft boot loader keys.
-* grub.cfg for all UEFI platforms has been updated to replace the deprecated `linuxefi` and `initrdefi` commands with the standard `linux` and `initrd` commands.
-* GRUB debug may now be enabled by enabling [rackd debug logging](https://discourse.maas.io/t/running-installed-maas-in-debug-logging-mode/168).
+To commission all nodes in the "New" state:
+
+``` bash
+maas $PROFILE machines accept-all
+```
+
+You have the option of setting some parameters to change how commissioning runs:
+
+1. `enable_ssh`: Optional integer. Controls whether to enable SSH for the commissioning environment using the user's SSH key(s). '1' == True, '0' == False. Roughly equivalent to the **Allow SSH access and prevent machine powering off** in the web UI.
+
+2. `skip_bmc_config`: Optional integer.  Controls whether to skip re-configuration of the BMC for IPMI based machines. '1' == True, '0' == False.
+
+3. `skip_networking`: Optional integer.  Controls whether to skip re-configuring the networking on the machine after the commissioning has completed. '1' == True, '0' == False. Roughly equivalent to **Retain network configuration** in the web UI.
+
+4. `skip_storage`: Optional integer.  Controls hether to skip re-configuring the storage on the machine after the commissioning has completed. '1' == True, '0' == False.  Roughly equivalent to **Retain storage configuration** in the web UI.
+
+5. `commissioning_scripts`: Optional string.  A comma separated list of commissioning script names and tags to be run. By default all custom commissioning scripts are run. Built-in commissioning scripts always run. Selecting `update_firmware` or `configure_hba` will run firmware updates or configure HBA's on matching machines.
+
+6. `testing_scripts`: Optional string.  A comma seperated list of testing script names and tags to be run. By default all tests tagged `commissioning` will be run. Set to `none` to disable running tests.
+
+7. `parameters`: Optional string.  Scripts selected to run may define their own parameters. These parameters may be passed using the parameter name. Optionally a parameter may have the script name prepended to have that parameter only apply to that specific script.
 
 rad-end
+
 
 <!-- comment -->
