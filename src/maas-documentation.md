@@ -85,6 +85,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 ### Reference
 
 - [Power management](/t/power-management-snap-3-0-ui/4070)
+- [Commissioning scripts](/t/-/4862)
 - [Hardware test scripts](/t/-/4861)
 - [Log files](/t/maas-logging-snap-3-0-ui/4010)
 - [API documentation](https://maas.io/docs/api)
@@ -109,6 +110,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/4862|/docs/commissioning-scripts-reference|
 |https://discourse.maas.io/t/-/4861|/docs/hardware-test-scripts|
 |https://discourse.maas.io/t/-/4844|/docs/snap/3.0/ui/manage-machines|
 |https://discourse.maas.io/t/-/4845|/docs/snap/3.0/cli/manage-machines|
@@ -1318,14 +1320,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/2.9/ui/hardware-testing|/docs/snap/2.9/ui/how-to-test-machines|
 |/docs/snap/3.0/cli/hardware-testing|/docs/snap/3.0/cli/how-to-test-machines|
 |/docs/snap/3.0/ui/hardware-testing|/docs/snap/3.0/ui/how-to-test-machines|
-|/docs/deb/2.9/cli/commissioning-and-hardware-testing-scripts|/docs/deb/2.9/cli/how-to-commission-machines|
-|/docs/deb/2.9/ui/commissioning-and-hardware-testing-scripts|/docs/deb/2.9/ui/how-to-commission-machines|
-|/docs/deb/3.0/cli/commissioning-and-hardware-testing-scripts|/docs/deb/3.0/cli/how-to-commission-machines|
-|/docs/deb/3.0/ui/commissioning-and-hardware-testing-scripts|/docs/deb/3.0/ui/how-to-commission-machines|
-|/docs/snap/2.9/cli/commissioning-and-hardware-testing-scripts|/docs/snap/2.9/cli/how-to-commission-machines|
-|/docs/snap/2.9/ui/commissioning-and-hardware-testing-scripts|/docs/snap/2.9/ui/how-to-commission-machines|
-|/docs/snap/3.0/cli/commissioning-and-hardware-testing-scripts|/docs/snap/3.0/cli/how-to-commission-machines|
-|/docs/snap/3.0/ui/commissioning-and-hardware-testing-scripts|/docs/snap/3.0/ui/how-to-commission-machines|
+|/docs/deb/2.9/cli/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
+|/docs/deb/2.9/ui/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
+|/docs/deb/3.0/cli/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
+|/docs/deb/3.0/ui/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
+|/docs/snap/2.9/cli/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
+|/docs/snap/2.9/ui/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
+|/docs/snap/3.0/cli/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
+|/docs/snap/3.0/ui/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
 |/docs/deb/2.9/cli/add-machines|/docs/deb/2.9/cli/manage-machines|
 |/docs/deb/2.9/ui/add-machines|/docs/deb/2.9/ui/manage-machines|
 |/docs/deb/3.0/cli/add-machines|/docs/deb/3.0/cli/manage-machines|
@@ -1407,7 +1409,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/cli-dhcp-snippet-management|/docs/snap/2.9/cli/managing-dhcp|
 |/docs/partitions|/docs/snap/2.9/ui/storage|
 |/docs/install-from-packages|/docs/deb/2.9/ui/installation|
-|/docs/commissioning-and-hardware-testing-scripts|/docs/snap/3.0/ui/how-to-commission-machines|
+|/docs/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
 |/docs/tags|/docs/snap/2.9/ui/maas-tags|
 |/docs/whats-new-in-2-7||/docs/snap/2.7/ui/whats-new-in-maas|
 |/docs/2.7/release-notes|/docs/snap/2.7/ui/whats-new-in-maas|
