@@ -2,7 +2,7 @@
 
 MAAS runs scripts during enlistment, commissioning and testing to collect data about nodes. Both enlistment and commissioning run all builtin commissioning scripts, though enlistment runs only built-ins. Commissioning also runs any user-uploaded commissioning scripts by default, unless the user manually provides a list of scripts to run. MAAS uses these commissioning scripts to configure hardware and perform other tasks during commissioning, such as updating the firmware. Similarly, MAAS employs hardware testing scripts to evaluate system hardware and report its status. 
 
-Scripts can be selected to run from web UI during commissioning, by [testing hardware](/t/hardware-testing/nnnn) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+Scripts can be selected to run from web UI during commissioning, by [testing hardware](/t/how-to-test-machines/nnnn) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
 
 Add machine -&gt; Enlistment (runs built-in commissioning scripts MAAS) -&gt; New -&gt; Commission (runs built-in and custom commissioning scripts) -&gt; Ready -&gt; Deploy
 
@@ -78,13 +78,13 @@ These options include:
 
 -   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/storage/nnnn) for more details.
 
--   **Update firmware**: Runs scripts tagged with `update_firmware`. See [Testing scripts](/t/commissioning-and-hardware-testing-scripts/nnnn#heading--automatic-script-selection-by-hardware-type) for more details.
+-   **Update firmware**: Runs scripts tagged with `update_firmware`. See [Testing scripts](#heading--about-automatic-script-selection-by-hardware-type) for more details.
 
--   **Configure HBA**: Runs scripts tagged with `configure_hba`. As above, see [Testing scripts](/t/commissioning-and-hardware-testing-scripts/nnnn#heading--automatic-script-selection-by-hardware-type) for further details.
+-   **Configure HBA**: Runs scripts tagged with `configure_hba`. As above, see [Testing scripts](#heading--about-automatic-script-selection-by-hardware-type) for further details.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a>
 
-Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/hardware-testing/nnnn)) for more information on hardware testing scripts.
+Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/how-to-test-machines/nnnn)) for more information on hardware testing scripts.
 
 Finalise the directive by hitting "Commission machine".
 
@@ -93,7 +93,7 @@ While commissioning, the machine status will change to reflect this state (Commi
 Once commissioned, a machine's status will change to Ready, and an extra tab for the machine called "Commissioning" will become available. This tab contains the results of the scripts executed during the commissioning process.
 rad-end
 
-Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2896) to this machine.  The next step is [deployment](/t/deploy-machines/nnnn).
+Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2896) to this machine.  The next step is [deployment](/t/how-to-deploy-machines/nnnn).
 
 <a href="#heading--about-numa-sriov-commissioning"><h2 id="heading--about-numa-sriov-commissioning">About commissioning NUMA and SR-IOV nodes</h2></a>
 
@@ -463,7 +463,7 @@ rad-end
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 Scripts can be uploaded to MAAS using the web UI. Select the 'User scripts' tab of the 'Settings' page - the 'Commissioning scripts' section is near the top. Within the Commissioning scripts section, click the Upload script button followed by 'Choose file' to open a requester, locate the script, and select Upload to upload it to MAAS.
 
-A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](/t/hardware-testing/nnnn) from a machine's 'Take action' menu.
+A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](/t/how-to-test-machines/nnnn) from a machine's 'Take action' menu.
 
 <a href="https://assets.ubuntu.com/v1/50e08fdf-nodes-hw-scripts__2.4_select.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/50e08fdf-nodes-hw-scripts__2.4_select.png"></a>
 

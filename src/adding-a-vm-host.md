@@ -1,3 +1,4 @@
+<a href="#heading--about-vm-hosts"><h2 id="heading--about-vm-hosts">About VM hosts</h2></a>
 
 A VM host is simply a machine which can run virtual machines (VMs) by allocating  resources across the VMs you want to create.  If needed, you can over-commit resources, allocating more resources than actually available, so long as you don't try to use more than the VM host has available at any one time. Once MAAS has enlisted, commissioned, and acquired a newly-added machine, you can deploy it as a VM host.  Alternatively, you can create a VM host from a machine you've already got running.
 
@@ -5,16 +6,7 @@ A VM host is simply a machine which can run virtual machines (VMs) by allocating
 You **must** [configure your network](/t/vm-host-networking/nnnn) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/nnnn#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
 [/note]
 
-#### Questions you may have:
-
-1. [How do I configure networking for VM hosts?](/t/vm-host-networking/nnnn)
-2. [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/nnnn#heading--set-up-ssh)
-3. [How do I add a VM host?](#heading--adding-a-vm-host)
-4. [How do I configure a VM host after I've added it?](#heading--configuration)
-5. [How do I over-commit resources on a host?](#heading--overcommit-resources)
-6. [How do I add a VM host using MAAS versions below 2.5?](https://old-docs.maas.io/2.5/en/manage-kvm-add-host)
-
-<a href="#heading--adding-a-vm-host"><h2 id="heading--adding-a-vm-host">Add a VM host</h2></a>
+<a href="#heading--adding-a-vm-host"><h2 id="heading--adding-a-vm-host">How to add a VM host</h2></a>
 
 rad-begin  /deb/2.9/ui /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui
 After installing MAAS, the 'KVM' page is typically empty:
@@ -127,7 +119,7 @@ MAAS will automatically discover and store the resources your VM host contains. 
 
 rad-begin  /deb/2.9/ui  /snap/2.9/ui
 
-<a href="#heading--configuration"><h2 id="heading--configuration">VM host configuration</h2></a>
+<a href="#heading--configuration"><h2 id="heading--configuration">How to configure a VM host</h2></a>
 
 VM hosts have several configuration options. Modify these by selecting the 'Configuration' tab and eidting options directly.  These options include a VM host's location, password, network zone, resource pool, and memory and CPU overcommit sliders.
 
@@ -136,7 +128,7 @@ rad-end
 
 rad-begin /snap/3.0/ui /deb/3.0/ui
 
-<a href="#heading--vm-host-project-summary"><h2 id="heading--vm-host-project-summary">LXD VM host project summary</h2></a>
+<a href="#heading--vm-host-project-summary"><h2 id="heading--vm-host-project-summary">About LXD VM host project summaries</h2></a>
 
 Each LXD VM host provides a "Project" tab that summarizes the current state of the LXD KVM:
 
@@ -144,7 +136,7 @@ Each LXD VM host provides a "Project" tab that summarizes the current state of t
 
 This tab identifies the project, shows its current resource state, and provides the ability to select existing VM hosts and perform specific actions on them -- as well as being able to compose new VMs on the spot.
 
-<a href="#heading--vm-host-resource-details"><h2 id="heading--vm-host-resource-details">LXD VM host resource details</h2></a>
+<a href="#heading--vm-host-resource-details"><h2 id="heading--vm-host-resource-details">About LXD VM host resource details</h2></a>
 
 This tab presents a summary of the LXD VM host's resource usage:
 
@@ -152,7 +144,7 @@ This tab presents a summary of the LXD VM host's resource usage:
 
 The only interactive option on this tab allows you to map or unmap resource usage to NUMA nodes.
 
-<a href="#heading--configuration"><h2 id="heading--configuration">VM host settings</h2></a>
+<a href="#heading--configuration"><h2 id="heading--configuration">About VM host settings</h2></a>
 
 VM hosts have several settings. Modify these by selecting the 'Settings' tab and editing items directly. Options include a VM host's address, password, network zone, resource pool, and memory and CPU overcommit sliders.
 
@@ -162,7 +154,7 @@ rad-end
 rad-begin  /deb/2.9/cli  /snap/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 Using the CLI, it's possible to update the configuration of a VM host.  You can change these configurable parameters with an `update` command -- but first, you'll want to know how to check the values of configurable parameters, both before and after the change.
 
-<a href="#heading--list-vm-hosts"><h3 id="heading--list-vm-hosts">List VM-hosts</h3></a>
+<a href="#heading--list-vm-hosts"><h3 id="heading--list-vm-hosts">How to list VM-hosts</h3></a>
 
 To begin, you can list your available KVM-hosts with the following command:
 
@@ -173,7 +165,7 @@ maas admin vm-hosts read | jq -r '(["ID, "VM-HOST","SYSID","CORES",
 | @tsv' | column -t
 ```
 
-<a href="#heading--list-config-params"><h3 id="heading--list-config-params">List configurable VM host parameters</h3></a>
+<a href="#heading--list-config-params"><h3 id="heading--list-config-params">How to list configurable VM host parameters</h3></a>
 
 There are just a few parameters that you can change for a VM host.  You can list these, on a per-host basis, using the following two-step procedure:
 
@@ -190,7 +182,7 @@ maas admin vm-host read $ID | jq -r '(["ID","NAME","POOL","ZONE",
 
 where $ID is the ID (not System ID) of the VM-host.
 
-<a href="#heading--change-vm-host-name"><h3 id="heading--change-vm-host-name">Change the VM host's name</h3></a>
+<a href="#heading--change-vm-host-name"><h3 id="heading--change-vm-host-name">How to change a VM host's name</h3></a>
 
 You can change the VM host's name very simply, with this command:
 
@@ -204,7 +196,7 @@ maas admin vm-host read $ID | jq -r '(["ID","NAME"]
 | @tsv' | column -t
 ```
 
-<a href="#heading--change-vm-host-pool"><h3 id="heading--change-vm-host-pool">Change the VM host's pool</h3></a>
+<a href="#heading--change-vm-host-pool"><h3 id="heading--change-vm-host-pool">How to change a VM host's pool</h3></a>
 
 You can also change the VM host's pool with a simple command:
 
@@ -225,7 +217,7 @@ If you really want to set your VM host to a new one, you just need to create a n
 Then double-check it with `catvmpools`, and assign your VM host to it using the earlier command. 
 rad-end
 
-<a href="#heading--overcommit-resources"><h3 id="heading--overcommit-resources">Over-commit resources</h3></a>
+<a href="#heading--overcommit-resources"><h3 id="heading--overcommit-resources">About over-committed resources</h3></a>
 
 Over-committed resources are those allocated beyond what's available in the physical resource. Using sliders on the configuration page, you can limit whether MAAS will attempt to overcommit CPU and memory. The input fields to the right of the sliders accept floating-point values from 0 to 10, with a default value of 1.
 
@@ -243,7 +235,7 @@ rad-end
 Over-committing resources allows a user to compose many MAAS-managed machines without worrying about the physical limitations of the host. For example, on a physical host with four cores and 12 GB of memory, you could compose four libvirt machines, each using two cores and 4 GB of memory.  This arrangement over commits the available physical resources. Provided you never run all four VMs simultaneously, you would have all the benefits of MAAS-managed VMs without over-taxing your host.
 
 rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
-<a href="#heading--list-resources-of-all-vm-hosts"><h2 id="heading--list-resources-of-all-vm-hosts">List resources of all VM hosts</h2></a>
+<a href="#heading--list-resources-of-all-vm-hosts"><h2 id="heading--list-resources-of-all-vm-hosts">How to list the resources of all VM hosts</h2></a>
 
 ``` bash
 maas $PROFILE vm-hosts read
@@ -261,7 +253,7 @@ A portion of the sample output:
         "name": "civil-hermit",
 ```
 
-<a href="#heading--list-resources-of-a-vm-host"><h2 id="heading--list-resources-of-a-vm-host">List resources of a VM host</h2></a>
+<a href="#heading--list-resources-of-a-vm-host"><h2 id="heading--list-resources-of-a-vm-host">How to list the resources of a single VM host</h2></a>
 
 To list an individual VM host's resources:
 
@@ -269,7 +261,7 @@ To list an individual VM host's resources:
 maas $PROFILE vm-host read $VM_HOST_ID
 ```
 
-<a href="#heading--update-vm-host-configuration"><h2 id="heading--update-vm-host-configuration">Update VM host configuration</h2></a>
+<a href="#heading--update-vm-host-configuration"><h2 id="heading--update-vm-host-configuration">How to update a VM host's configuration</h2></a>
 
 Update overcommit ratios for a KVM host:
 
@@ -285,7 +277,7 @@ maas $PROFILE vm-host update $VM_HOST_ID power_address=qemu+ssh://ubuntu@192.168
         power_pass=example default_storage_pool=pool2
 ```
 
-<a href="#heading--list-vm-host-connection-parameters"><h2 id="heading--list-vm-host-connection-parameters">List VM host connection parameters</h2></a>
+<a href="#heading--list-vm-host-connection-parameters"><h2 id="heading--list-vm-host-connection-parameters">How to list a VM host's connection parameters</h2></a>
 
 To list a VM host's connection parameters:
 
