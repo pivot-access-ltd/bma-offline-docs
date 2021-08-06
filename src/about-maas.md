@@ -82,73 +82,13 @@ Please note that Windows and RHEL images require [Ubuntu Advantage](https://www.
 
 MAAS relies on two key components: the *region controller* and the *rack controller*. The region controller handles operator requests; the rack controller provides high-bandwidth services to multiple racks. In essence, rack controllers manage racks, while the region controller manages the data centre. We generally recommended installing both controllers on the same system.  The default MAAS install delivers this co-located configuration automatically. This all-in-one solution also provides DHCP. 
 
-rad-begin /deb/2.9/cli
-See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability/2692), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp/2908) will cause problems.
-rad-end
-
-rad-begin /deb/2.9/ui
-See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability/2693), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp/2909) will cause problems.
-rad-end
-
-rad-begin /deb/3.0/cli
-See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability/3947), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp/4035) will cause problems.
-rad-end
-
-rad-begin /deb/3.0/ui
-See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability/3948), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp/4036) will cause problems.
-rad-end
-
-rad-begin /snap/2.9/cli
-See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability/2686), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp/2902) will cause problems.
-rad-end
-
-rad-begin /snap/2.9/ui
-See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability/2687), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp/2903) will cause problems.
-rad-end
-
-rad-begin /snap/3.0/cli
-See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability/3945), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp/4033) will cause problems.
-rad-end
-
-rad-begin /snap/3.0/ui
-See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability/3946), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp/4034) will cause problems.
-rad-end
+See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability/nnnn), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp/nnnn) will cause problems.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/3ad2b128fbc034e9f575f21c0415a6e6c55baea3.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3ad2b128fbc034e9f575f21c0415a6e6c55baea3.jpeg"></a>
 
 <a href="#heading--how-maas-works"><h2 id="heading--how-maas-works">How MAAS works</h2></a>
 
-rad-begin /deb/2.9/cli
-When you [add a new machine](/t/add-machines/2284#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines/2284#heading--enlistment), MAAS [commissions](/t/commission-machines/2476) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
-rad-end
-
-rad-begin /deb/2.9/ui
-When you [add a new machine](/t/add-machines/2285#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines/2285#heading--enlistment), MAAS [commissions](/t/commission-machines/2477) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
-rad-end
-
-rad-begin /deb/3.0/cli
-When you [add a new machine](/t/add-machines/3823#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines/3823#heading--enlistment), MAAS [commissions](/t/commission-machines/3875) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
-rad-end
-
-rad-begin /deb/3.0/ui
-When you [add a new machine](/t/add-machines/3824#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines/3824#heading--enlistment), MAAS [commissions](/t/commission-machines/3876) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
-rad-end
-
-rad-begin /snap/2.9/cli
-When you [add a new machine](/t/add-machines/2278#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines/2278#heading--enlistment), MAAS [commissions](/t/commission-machines/2470) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
-rad-end
-
-rad-begin /snap/2.9/ui
-When you [add a new machine](/t/add-machines/2279#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines/2279#heading--enlistment), MAAS [commissions](/t/commission-machines/2471) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
-rad-end
-
-rad-begin /snap/3.0/cli
-When you [add a new machine](/t/add-machines/3821#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines/3821#heading--enlistment), MAAS [commissions](/t/commission-machines/3873) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
-rad-end
-
-rad-begin /snap/3.0/ui
-When you [add a new machine](/t/add-machines/3822#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines/3822#heading--enlistment), MAAS [commissions](/t/commission-machines/3874) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
-rad-end
+When you [add a new machine](/t/how-to-manage-machines/nnnn#heading--how-to-add-a-machine-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/machines/nnnn#heading--about-enlistment), MAAS [commissions](/t/machines/nnnn#heading--about-commissioning-machines) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
 
 <details><summary>Tell me, quickly, about enlistment and commissioning.</summary>
 
