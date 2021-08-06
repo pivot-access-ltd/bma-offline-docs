@@ -69,7 +69,7 @@ A virtual block device is a block device that is exposed by the Linux kernel whe
 
 <a href="#heading--about-partitions"><h2 id="heading--about-partitions">About partitions</h2></a>
 
-As with block devices (see [Block devices](/t/block-devices/nnnn)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
+As with block devices (see [Block devices](#heading--about-block-devices)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
 
 <a href="#heading--about-storage-restrictions"><h2 id="heading--about-storage-restrictions">About storage restrictions</h2></a>
 
@@ -934,7 +934,7 @@ maas $PROFILE vmfs-datastore read $SYSTEM_ID $VMFS_DATASTORE_ID
 
 <a href="#heading--how-to-create-a-vmfs-datastore"><h2 id="heading--how-to-create-a-vmfs-datastore">How to create a VMFS datastore</h2></a>
 
-A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/nnnn) or [partitions](/t/partitions/nnnn)
+A VMware VMFS datastore is created on one or more [block devices](#heading--about-block-devices) or [partitions](#heading--about-partitions).
 
 To create a VMFS Datastores on a machine use the 'vmfs-datastores create' API call:
 
