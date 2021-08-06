@@ -129,7 +129,7 @@ No need to create a lot of VMs for this example (unless you just want to do so).
 
 <a href="#heading--manually-add-machines"><h3 id="heading--manually-add-machines">Manually adding machines</h3></a>
 
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/nnnn#heading--add-a-node-manually) to MAAS that correspond to your VMs.
+Once you've created the necessary VMs, you'll want to [manually add machines](/t/how-to-manage-machines/nnnn#heading--how-to-add-a-machine-manually) to MAAS that correspond to your VMs.
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 ```
@@ -231,7 +231,7 @@ rad-end
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
-Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/nnnn) and [deploy](/t/deploy-machines/nnnn) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/tags-and-annotations/nnnn) to machines.  
+Assigning machines to specific functions is something you can do after you [commission](/t/how-to-commission-machines/nnnn) and [deploy](/t/deploy-machines/nnnn) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/tags-and-annotations/nnnn) to machines.  
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 ```
@@ -596,3 +596,5 @@ rad-end
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
 <a href="https://discourse.maas.io/uploads/default/original/1X/23c214cd6836dd783347f050f2cdba04da7bcaa1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/23c214cd6836dd783347f050f2cdba04da7bcaa1.jpeg"></a>
 rad-end
+
+<!-- comment -->
