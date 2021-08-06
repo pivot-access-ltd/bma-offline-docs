@@ -170,7 +170,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4038|/docs/snap/3.0/ui/managing-stp|
 |https://discourse.maas.io/t/-/4054|/docs/snap/3.0/ui/ntp-services|
 |https://discourse.maas.io/t/-/4154|/docs/snap/3.0/ui/using-maas-in-an-air-gapped-environment|
-|https://discourse.maas.io/t/-/4162|/docs/snap/3.0/ui/vm-hosting|
 |https://discourse.maas.io/t/-/4166|/docs/snap/3.0/ui/vm-host-networking|
 |https://discourse.maas.io/t/-/3818|/docs/snap/3.0/ui/adding-a-vm-host|
 |https://discourse.maas.io/t/-/4170|/docs/snap/3.0/ui/vm-host-storage-pools|
@@ -533,6 +532,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/2743|/docs/snap/2.7/ui/vm-hosting|
 |https://discourse.maas.io/t/-/2744|/docs/snap/2.8/cli/vm-hosting|
 |https://discourse.maas.io/t/-/2745|/docs/snap/2.8/ui/vm-hosting|
+|https://discourse.maas.io/t/-/4162|/docs/snap/3.0/ui/vm-hosting|
 |https://discourse.maas.io/t/-/2746|/docs/snap/2.9/cli/vm-hosting|
 |https://discourse.maas.io/t/-/2747|/docs/snap/2.9/ui/vm-hosting|
 |https://discourse.maas.io/t/-/2748|/docs/deb/2.7/cli/vm-hosting|

@@ -75,7 +75,7 @@ This functionality comes with an enhanced panel in the "KVM" details section:
 
 <a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
 
-See the [VM hosting](/t/vm-hosting-/snap/2.9/ui/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
+See the [VM hosting](/t/vm-hosting/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
 
 <h2 id="heading--improved-perf-large-maas">Improved performance for large MAAS installations</h2>
 
