@@ -75,7 +75,7 @@ The curtin installer uses an image-based method and is now the only installer us
 
 Before deploying, you should take two key actions:
 
-1.   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/nnnn) and the [Kernel boot options](/t/kernel-boot-options/nnnn) that will get used by deployed machines.
+1.   review and possibly set the [Ubuntu kernels](/t/how-to-customise-machines/nnnn#heading--about-ubuntu-kernels) and the [Kernel boot options](/t/how-to-customise-machines/nnnn#heading--about-kerel-boot-options) that will get used by deployed machines.
 2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/nnnn#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 

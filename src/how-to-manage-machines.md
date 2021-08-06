@@ -153,7 +153,7 @@ To view/edit machine storage info, click on the "Storage" tab in the machine sum
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> 
 
-See the article [Storage](/t/storage/nnn) for a detailed instructions on how to use this screen.
+See the article [Storage](/t/storage/nnnn) for a detailed instructions on how to use this screen.
 
 <a href="#heading--commissioning-log"><h2 id="heading--commissioning-log">How to find commissioning logs</h2></a>
 
@@ -177,7 +177,7 @@ This tab presents a summary of tests run against this particular machine.  You c
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a> 
 
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/hardware-testing/nnnn).  
+The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/how-to-test-machines/nnnn).  
 
 <a href="#heading--raw-log-output"><h2 id="heading--raw-log-output">How to find raw log output for a machine</h2></a>
 
@@ -208,3 +208,5 @@ The "Power configuration" supplies the parameters necessary for MAAS to access t
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png"></a> 
 
 More information on Power configuration will be found in the [Power management](/t/power-management/nnnn) section of this documentation.
+
+<!-- comment -->
