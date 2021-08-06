@@ -1,6 +1,6 @@
 <a href="#heading--about-custom-machine-setup"><h2 id="heading--about-custom-machine-setup">About custom machine setup</h2></a>
 
-During machine [enlistment](/t/add-machines/nnnn#heading--enlistment), [deployment](/t/deploy-machines/nnnn), commissioning and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+During machine [enlistment](/t/machines/nnnn##heading--about-enlistment), [deployment](/t/how-to-deploy-machines/nnnn), commissioning and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
 
 Customisation in MAAS happens in two ways:
 

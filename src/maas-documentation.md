@@ -32,9 +32,9 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 - [How to manage machines](/t/-/4844)
 - [How to test machines](/t/hardware-testing-snap-3-0-ui/3942)
-- [How to commission machines](/t/how-to-commissionmachines-snap-3-0-ui/3866)
+- [How to commission machines](/t/how-to-commission-machines-snap-3-0-ui/3866)
 - [How to deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
-- [How to customise machines](/t/custom-machine-setup-snap-3-0-ui/3910)
+- [How to customise machines](/t/how-to-customise-machines-snap-3-0-ui/3910)
 - [How to manage resource pools](/t/resource-pools-snap-3-0-ui/4098)
 - [How to manage tags and annotations](/t/maas-tags-snap-3-0-ui/4022)
 
@@ -110,6 +110,22 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/3914|/docs/snap/3.0/ui/how-to-deploy-machines|
+|https://discourse.maas.io/t/-/2602|/docs/snap/2.9/cli/how-to-deploy-machines|
+|https://discourse.maas.io/t/-/2603|/docs/snap/2.9/ui/how-to-deploy-machines|
+|https://discourse.maas.io/t/-/2608|/docs/deb/2.9/cli/how-to-deploy-machines|
+|https://discourse.maas.io/t/-/2609|/docs/deb/2.9/ui/how-to-deploy-machines|
+|https://discourse.maas.io/t/-/3913|/docs/snap/3.0/cli/how-to-deploy-machines|
+|https://discourse.maas.io/t/-/3915|/docs/deb/3.0/cli/how-to-deploy-machines|
+|https://discourse.maas.io/t/-/3916|/docs/deb/3.0/ui/how-to-deploy-machines|
+|https://discourse.maas.io/t/-/3910|/docs/snap/3.0/ui/how-to-customise-machines|
+|https://discourse.maas.io/t/-/2590|/docs/snap/2.9/cli/how-to-customise-machines|
+|https://discourse.maas.io/t/-/2591|/docs/snap/2.9/ui/how-to-customise-machines|
+|https://discourse.maas.io/t/-/2596|/docs/deb/2.9/cli/how-to-customise-machines|
+|https://discourse.maas.io/t/-/2597|/docs/deb/2.9/ui/how-to-customise-machines|
+|https://discourse.maas.io/t/-/3909|/docs/snap/3.0/cli/how-to-customise-machines|
+|https://discourse.maas.io/t/-/3911|/docs/deb/3.0/cli/how-to-customise-machines|
+|https://discourse.maas.io/t/-/3912|/docs/deb/3.0/ui/how-to-customise-machines|
 |https://discourse.maas.io/t/-/4862|/docs/commissioning-scripts-reference|
 |https://discourse.maas.io/t/-/4861|/docs/hardware-test-scripts|
 |https://discourse.maas.io/t/-/4844|/docs/snap/3.0/ui/how-to-manage-machines|
@@ -132,8 +148,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4030|/docs/snap/3.0/ui/machines|
 |https://discourse.maas.io/t/-/4070|/docs/snap/3.0/ui/power-management|
 |https://discourse.maas.io/t/-/3874|/docs/snap/3.0/ui/manage-machine-interfaces|
-|https://discourse.maas.io/t/-/3914|/docs/snap/3.0/ui/deploy-machines|
-|https://discourse.maas.io/t/-/3910|/docs/snap/3.0/ui/custom-machine-setup|
 |https://discourse.maas.io/t/-/4106|/docs/snap/3.0/ui/storage|
 |https://discourse.maas.io/t/-/4470|/docs/snap/3.0/ui/using-lxd-projects-with-maas|
 |https://discourse.maas.io/t/-/4098|/docs/snap/3.0/ui/resource-pools|
@@ -383,26 +397,18 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/2587|/docs/snap/2.7/ui/custom-machine-setup|
 |https://discourse.maas.io/t/-/2588|/docs/snap/2.8/cli/custom-machine-setup|
 |https://discourse.maas.io/t/-/2589|/docs/snap/2.8/ui/custom-machine-setup|
-|https://discourse.maas.io/t/-/2590|/docs/snap/2.9/cli/custom-machine-setup|
-|https://discourse.maas.io/t/-/2591|/docs/snap/2.9/ui/custom-machine-setup|
 |https://discourse.maas.io/t/-/2592|/docs/deb/2.7/cli/custom-machine-setup|
 |https://discourse.maas.io/t/-/2593|/docs/deb/2.7/ui/custom-machine-setup|
 |https://discourse.maas.io/t/-/2594|/docs/deb/2.8/cli/custom-machine-setup|
 |https://discourse.maas.io/t/-/2595|/docs/deb/2.8/ui/custom-machine-setup|
-|https://discourse.maas.io/t/-/2596|/docs/deb/2.9/cli/custom-machine-setup|
-|https://discourse.maas.io/t/-/2597|/docs/deb/2.9/ui/custom-machine-setup|
 |https://discourse.maas.io/t/-/2598|/docs/snap/2.7/cli/deploy-machines|
 |https://discourse.maas.io/t/-/2599|/docs/snap/2.7/ui/deploy-machines|
 |https://discourse.maas.io/t/-/2600|/docs/snap/2.8/cli/deploy-machines|
 |https://discourse.maas.io/t/-/2601|/docs/snap/2.8/ui/deploy-machines|
-|https://discourse.maas.io/t/-/2602|/docs/snap/2.9/cli/deploy-machines|
-|https://discourse.maas.io/t/-/2603|/docs/snap/2.9/ui/deploy-machines|
 |https://discourse.maas.io/t/-/2604|/docs/deb/2.7/cli/deploy-machines|
 |https://discourse.maas.io/t/-/2605|/docs/deb/2.7/ui/deploy-machines|
 |https://discourse.maas.io/t/-/2606|/docs/deb/2.8/cli/deploy-machines|
 |https://discourse.maas.io/t/-/2607|/docs/deb/2.8/ui/deploy-machines|
-|https://discourse.maas.io/t/-/2608|/docs/deb/2.9/cli/deploy-machines|
-|https://discourse.maas.io/t/-/2609|/docs/deb/2.9/ui/deploy-machines|
 |https://discourse.maas.io/t/-/2610|/docs/snap/2.7/cli/disk-erasure|
 |https://discourse.maas.io/t/-/2611|/docs/snap/2.7/ui/disk-erasure|
 |https://discourse.maas.io/t/-/2612|/docs/snap/2.8/cli/disk-erasure|
@@ -1086,12 +1092,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3905|/docs/snap/3.0/cli/creating-and-deleting-vms|
 |https://discourse.maas.io/t/-/3907|/docs/deb/3.0/cli/creating-and-deleting-vms|
 |https://discourse.maas.io/t/-/3908|/docs/deb/3.0/ui/creating-and-deleting-vms|
-|https://discourse.maas.io/t/-/3909|/docs/snap/3.0/cli/custom-machine-setup|
-|https://discourse.maas.io/t/-/3911|/docs/deb/3.0/cli/custom-machine-setup|
-|https://discourse.maas.io/t/-/3912|/docs/deb/3.0/ui/custom-machine-setup|
-|https://discourse.maas.io/t/-/3913|/docs/snap/3.0/cli/deploy-machines|
-|https://discourse.maas.io/t/-/3915|/docs/deb/3.0/cli/deploy-machines|
-|https://discourse.maas.io/t/-/3916|/docs/deb/3.0/ui/deploy-machines|
 |https://discourse.maas.io/t/-/3925|/docs/snap/3.0/cli/event-logs|
 |https://discourse.maas.io/t/-/3927|/docs/deb/3.0/cli/event-logs|
 |https://discourse.maas.io/t/-/3928|/docs/deb/3.0/ui/event-logs|
@@ -1304,6 +1304,22 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/deb/2.9/cli/deploy-machines|/docs/deb/2.9/cli/how-to-deploy-machines|
+|/docs/deb/2.9/ui/deploy-machines|/docs/deb/2.9/ui/how-to-deploy-machines|
+|/docs/deb/3.0/cli/deploy-machines|/docs/deb/3.0/cli/how-to-deploy-machines|
+|/docs/deb/3.0/ui/deploy-machines|/docs/deb/3.0/ui/how-to-deploy-machines|
+|/docs/snap/2.9/cli/deploy-machines|/docs/snap/2.9/cli/how-to-deploy-machines|
+|/docs/snap/2.9/ui/deploy-machines|/docs/snap/2.9/ui/how-to-deploy-machines|
+|/docs/snap/3.0/cli/deploy-machines|/docs/snap/3.0/cli/how-to-deploy-machines|
+|/docs/snap/3.0/ui/deploy-machines|/docs/snap/3.0/ui/how-to-deploy-machines|
+|/docs/deb/2.9/cli/custom-machine-setup|/docs/deb/2.9/cli/how-to-customise-machines|
+|/docs/deb/2.9/ui/custom-machine-setup|/docs/deb/2.9/ui/how-to-customise-machines|
+|/docs/deb/3.0/cli/custom-machine-setup|/docs/deb/3.0/cli/how-to-customise-machines|
+|/docs/deb/3.0/ui/custom-machine-setup|/docs/deb/3.0/ui/how-to-customise-machines|
+|/docs/snap/2.9/cli/custom-machine-setup|/docs/snap/2.9/cli/how-to-customise-machines|
+|/docs/snap/2.9/ui/custom-machine-setup|/docs/snap/2.9/ui/how-to-customise-machines|
+|/docs/snap/3.0/cli/custom-machine-setup|/docs/snap/3.0/cli/how-to-customise-machines|
+|/docs/snap/3.0/ui/custom-machine-setup|/docs/snap/3.0/ui/how-to-customise-machines|
 |/docs/deb/2.9/cli/network-testing|/docs/deb/2.9/cli/how-to-test-machines|
 |/docs/deb/2.9/ui/network-testing|/docs/deb/2.9/ui/how-to-test-machines|
 |/docs/deb/3.0/cli/network-testing|/docs/deb/3.0/cli/how-to-test-machines|
@@ -1336,23 +1352,23 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/2.9/ui/add-machines|/docs/snap/2.9/ui/manage-machines|
 |/docs/snap/3.0/cli/add-machines|/docs/snap/3.0/cli/manage-machines|
 |/docs/snap/3.0/ui/add-machines|/docs/snap/3.0/ui/manage-machines|
-|/docs/deb/2.9/cli/ubuntu-kernels|/docs/deb/2.9/cli/custom-machine-setup|
-|/docs/deb/2.9/ui/ubuntu-kernels|/docs/deb/2.9/ui/custom-machine-setup|
-|/docs/deb/3.0/cli/ubuntu-kernels|/docs/deb/3.0/cli/custom-machine-setup|
-|/docs/deb/3.0/ui/ubuntu-kernels|/docs/deb/3.0/ui/custom-machine-setup|
-|/docs/snap/2.9/cli/ubuntu-kernels|/docs/snap/2.9/cli/custom-machine-setup|
-|/docs/snap/2.9/ui/ubuntu-kernels|/docs/snap/2.9/ui/custom-machine-setup|
-|/docs/snap/3.0/cli/ubuntu-kernels|/docs/snap/3.0/cli/custom-machine-setup|
-|/docs/snap/3.0/ui/ubuntu-kernels|/docs/snap/3.0/ui/custom-machine-setup|
-|/docs/deb/2.8/ui/kernel-boot-options|/docs/deb/2.8/ui/custom-machine-setup|
-|/docs/deb/2.9/cli/kernel-boot-options|/docs/deb/2.9/cli/custom-machine-setup|
-|/docs/deb/2.9/ui/kernel-boot-options|/docs/deb/2.9/ui/custom-machine-setup|
-|/docs/deb/3.0/cli/kernel-boot-options|/docs/deb/3.0/cli/custom-machine-setup|
-|/docs/deb/3.0/ui/kernel-boot-options|/docs/deb/3.0/ui/custom-machine-setup|
-|/docs/snap/2.9/cli/kernel-boot-options|/docs/snap/2.9/cli/custom-machine-setup|
-|/docs/snap/2.9/ui/kernel-boot-options|/docs/snap/2.9/ui/custom-machine-setup|
-|/docs/snap/3.0/cli/kernel-boot-options|/docs/snap/3.0/cli/custom-machine-setup|
-|/docs/snap/3.0/ui/kernel-boot-options|/docs/snap/3.0/ui/custom-machine-setup|
+|/docs/deb/2.9/cli/ubuntu-kernels|/docs/deb/2.9/cli/how-to-customise-machines|
+|/docs/deb/2.9/ui/ubuntu-kernels|/docs/deb/2.9/ui/how-to-customise-machines|
+|/docs/deb/3.0/cli/ubuntu-kernels|/docs/deb/3.0/cli/how-to-customise-machines|
+|/docs/deb/3.0/ui/ubuntu-kernels|/docs/deb/3.0/ui/how-to-customise-machines|
+|/docs/snap/2.9/cli/ubuntu-kernels|/docs/snap/2.9/cli/how-to-customise-machines|
+|/docs/snap/2.9/ui/ubuntu-kernels|/docs/snap/2.9/ui/how-to-customise-machines|
+|/docs/snap/3.0/cli/ubuntu-kernels|/docs/snap/3.0/cli/how-to-customise-machines|
+|/docs/snap/3.0/ui/ubuntu-kernels|/docs/snap/3.0/ui/how-to-customise-machines|
+|/docs/deb/2.8/ui/kernel-boot-options|/docs/deb/2.8/ui/how-to-customise-machines|
+|/docs/deb/2.9/cli/kernel-boot-options|/docs/deb/2.9/cli/how-to-customise-machines|
+|/docs/deb/2.9/ui/kernel-boot-options|/docs/deb/2.9/ui/how-to-customise-machines|
+|/docs/deb/3.0/cli/kernel-boot-options|/docs/deb/3.0/cli/how-to-customise-machines|
+|/docs/deb/3.0/ui/kernel-boot-options|/docs/deb/3.0/ui/how-to-customise-machines|
+|/docs/snap/2.9/cli/kernel-boot-options|/docs/snap/2.9/cli/how-to-customise-machines|
+|/docs/snap/2.9/ui/kernel-boot-options|/docs/snap/2.9/ui/how-to-customise-machines|
+|/docs/snap/3.0/cli/kernel-boot-options|/docs/snap/3.0/cli/how-to-customise-machines|
+|/docs/snap/3.0/ui/kernel-boot-options|/docs/snap/3.0/ui/how-to-customise-machines|
 |/docs/deb/2.9/cli/vmware-vmfs-datastores|/docs/deb/2.9/cli/storage|
 |/docs/deb/2.9/ui/vmware-vmfs-datastores|/docs/deb/2.9/ui/storage|
 |/docs/deb/3.0/cli/vmware-vmfs-datastores|/docs/deb/3.0/cli/storage|
@@ -1424,11 +1440,11 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/availability-zones|/docs/snap/3.0/ui/availability-zones|
 |/docs/add-machines|/docs/snap/3.0/ui/manage-machines|
 |/docs/commission-nodes|/docs/snap/3.0/ui/how-to-commission-machines|
-|/docs/custom-machine-setup|/docs/snap/3.0/ui/custom-machine-setup|
-|/docs/deploy-nodes|/docs/snap/3.0/ui/deploy-machines|
+|/docs/custom-machine-setup|/docs/snap/3.0/ui/how-to-customise-machines|
+|/docs/deploy-nodes|/docs/snap/3.0/ui/how-to-deploy-machines|
 |/docs/hardware-testing|/docs/snap/3.0/ui/how-to-test-machines|
-|/docs/kernel-boot-options|/docs/snap/3.0/ui/custom-machine-setup|
-|/docs/ubuntu-kernels|/docs/snap/2.9/cli/custom-machine-setup|
+|/docs/kernel-boot-options|/docs/snap/3.0/ui/how-to-customise-machines|
+|/docs/ubuntu-kernels|/docs/snap/2.9/cli/how-to-customise-machines|
 |/docs/machine-overview|/docs/snap/3.0/ui/machines|
 |/docs/bmc-power-types|/docs/snap/3.0/ui/power-management|
 |/docs/resource-pools|/docs/snap/2.9/cli/resource-pools|
@@ -1487,7 +1503,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/pods|/docs/snap/3.0/ui/vm-hosting|
 |/docs/manage-composable-machines|/docs/snap/3.0/ui/vm-hosting|
 |/docs/kvm-introduction|/docs/snap/3.0/ui/vm-hosting|
-|/docs/custom-node-setup-preseed|/docs/custom-machine-setup|
+|/docs/custom-node-setup-preseed|/docs/how-to-customise-machines|
 |/docs/manage-kvm-intro|/docs/snap/3.0/ui/vm-hosting|
 |/docs/add-a-kvm-host|/docs/snap/3.0/ui/adding-a-vm-host|
 |/docs/manage-kvm-add-host|/docs/snap/3.0/ui/adding-a-vm-host|
@@ -1567,11 +1583,11 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/add-nodes|/docs/snap/3.0/ui/manage-machines|
 |/docs/nodes-commission|/docs/snap/3.0/ui/how-to-commission-machines|
 |/docs/nodes-comp-hw|/docs/snap/3.0/ui/vm-hosting|
-|/docs/nodes-custom|/docs/snap/3.0/ui/custom-machine-setup|
-|/docs/nodes-deploy|/docs/snap/3.0/ui/deploy-machines|
+|/docs/nodes-custom|/docs/snap/3.0/ui/how-to-customise-machines|
+|/docs/nodes-deploy|/docs/snap/3.0/ui/how-to-deploy-machines|
 |/docs/nodes-hw-testing|/docs/snap/3.0/ui/how-to-test-machines|
-|/docs/nodes-kernel-options|/docs/snap/3.0/ui/custom-machine-setup|
-|/docs/nodes-kernels|/docs/snap/2.9/cli/custom-machine-setup|
+|/docs/nodes-kernel-options|/docs/snap/3.0/ui/how-to-customise-machines|
+|/docs/nodes-kernels|/docs/snap/2.9/cli/how-to-customise-machines|
 |/docs/nodes-overview|/docs/snap/3.0/ui/machines|
 |/docs/node-overview|/docs/snap/3.0/ui/machines|
 |/docs/nodes-power-types|/docs/snap/3.0/ui/power-management|

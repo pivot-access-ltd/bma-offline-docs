@@ -1,4 +1,4 @@
-Once a machine has been commissioned (see [Commission machines](/t/commission-machines/nnnn)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+Once a machine has been commissioned (see [Commission machines](/t/how-to-commission-machines/nnnn)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
 
 #### Two questions you may have:
 
@@ -13,7 +13,7 @@ Machines deployed with MAAS will also be ready to accept connections via SSH, to
 Juju adds SSH keys to machines under its control.
 [/note]
 
-MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-machine-setup/nnnn).
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [How to customise machines](/t/how-to-customise-machines/nnnn).
 
 <a href="#heading--acquire"><h2 id="heading--acquire">Acquire</h2></a>
 
@@ -70,7 +70,7 @@ To deploy, you must configure the underlying machine to netboot.  Such a machine
 7.  Squashfs image (same as above) is placed on disk
 
 [note]
-The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-machine-setup/nnnn).
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [How to customise machines](/t/how-to-customise-machines/nnnn).
 [/note]
 
 Before deploying, you should take two key actions:
@@ -117,3 +117,5 @@ By default, when you deploy a machine, MAAS will consider the deployment a failu
 maas $PROFILE maas set-config name=node-timeout value=$NUMBER_OF_MINUTES
 ```
 rad-end
+
+<!-- comment -->
