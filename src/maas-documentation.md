@@ -163,7 +163,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3906|/docs/snap/3.0/ui/creating-and-deleting-vms|
 |https://discourse.maas.io/t/-/4074|/docs/snap/3.0/ui/prometheus-metrics|
 |https://discourse.maas.io/t/-/3838|/docs/snap/3.0/ui/backup|
-|https://discourse.maas.io/t/-/3938|/docs/snap/3.0/ui/hardening-your-maas-installation|
 |https://discourse.maas.io/t/-/3870|/docs/snap/3.0/ui/commissioning-logs|
 |https://discourse.maas.io/t/-/4118|/docs/snap/3.0/ui/test-logs|
 |https://discourse.maas.io/t/-/3926|/docs/snap/3.0/ui/event-logs|
@@ -1131,6 +1130,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3997|/docs/snap/3.0/cli/maas-image-builder|
 |https://discourse.maas.io/t/-/3999|/docs/deb/3.0/cli/maas-image-builder|
 |https://discourse.maas.io/t/-/4000|/docs/deb/3.0/ui/maas-image-builder|
+|https://discourse.maas.io/t/-/3938|/docs/snap/3.0/ui/hardening-your-maas-installation|
 |https://discourse.maas.io/t/-/4002|/docs/snap/3.0/ui/maas-installation|
 |https://discourse.maas.io/t/-/4001|/docs/snap/3.0/cli/maas-installation|
 |https://discourse.maas.io/t/-/4003|/docs/deb/3.0/cli/maas-installation|
@@ -1138,7 +1138,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3322|/docs/snap/2.9/cli/maas-installation|
 |https://discourse.maas.io/t/-/3328|/docs/deb/2.9/cli/maas-installation|
 |https://discourse.maas.io/t/-/3329|/docs/deb/2.9/ui/maas-installation|
-|https://discourse.maas.io/t/-/3223|/docs/snap/2.9/ui/maas-installation|
+|https://discourse.maas.io/t/-/3323|/docs/snap/2.9/ui/maas-installation|
 |https://discourse.maas.io/t/-/4009|/docs/snap/3.0/cli/maas-logging|
 |https://discourse.maas.io/t/-/4011|/docs/deb/3.0/cli/maas-logging|
 |https://discourse.maas.io/t/-/4012|/docs/deb/3.0/ui/maas-logging|
