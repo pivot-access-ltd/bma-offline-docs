@@ -469,7 +469,7 @@ For a deeper dive, try this [SR-IOV presentation](https://www.youtube.com/watch?
 
 <a href="#heading--isolcpus"><h2 id="heading--isolcpus">Isolating CPUs</h2></a>
 
-For certain operations, it's useful to shield a from having to execute general system processes and take interrupts.  These are sometimes referred to as "isolcpus," more correctly described as booting a core with the `isolcpus` boot parameter.  This parameter restricts the shielded core to processes assigned directly to it, avoiding sharing bandwidth with the general scheduler and preventing the core from taking non-specific interrupts.
+For certain operations, it's useful to shield a CPU from having to execute general system processes and take interrupts.  These are sometimes referred to as "isolcpus," more correctly described as booting a core with the `isolcpus` boot parameter.  This parameter restricts the shielded core to processes assigned directly to it, avoiding sharing bandwidth with the general scheduler and preventing the core from taking non-specific interrupts.
 
 When used with VMs, users can maximise performance by configuring isolcpus in the kernel, to prevent the general scheduler and other tasks from using bandwidth on your VM core(s).
 
