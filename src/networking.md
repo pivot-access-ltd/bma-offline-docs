@@ -31,6 +31,107 @@ Network discovery can be disabled or re-enabled using the switch on the Network 
 
 rad-end
 
+<a href="#heading--about-subnet-management"><h2 id="heading--about-subnet-management">About subnet management</h2></a>
+
+The topic of subnet management pertains to whether or not MAAS is in full control of a subnet. When a subnet is managed, MAAS handles all aspects of IP address allocation. This process includes DHCP leases and assigned static addresses. Typically MAAS would have one managed subnet, but any additional subnets can be unmanaged. This arrangement allows for more control over which subnet gets used for DHCP and which ones do not. Additionally, as detailed below, an unmanaged subnet treats reserved IP ranges differently, and in a way that some administrators find more intuitive.
+
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+#### Seven questions you may have:
+
+1. [What are managed subnets?](#heading--managed-subnets)
+2. [What are unmanaged subnets?](#heading--unmanaged-subnets)
+3. [What is IP address tracking?](#heading--ip-address-tracking)
+4. [How do I control subnet management](#heading--controlling-subnet-management)
+5. [How do I determine a fabric ID to use in other CLI subnet calls?](#heading--determine-fabric-id)
+6. [How do I set a default gateway with the CLI?](#heading--default-gateway)
+7. [How do i set the DNS server with the CLI?](#heading--set-dns-server)
+rad-end
+
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+#### Four questions you may have:
+
+1. [What are managed subnets?](#heading--managed-subnets)
+2. [What are unmanaged subnets?](#heading--unmanaged-subnets)
+3. [What is IP address tracking?](#heading--ip-address-tracking)
+4. [How do I control subnet management](#heading--controlling-subnet-management)
+rad-end
+
+<a href="#heading--managed-subnets"><h3 id="heading--managed-subnets">Managed subnets</h3></a>
+
+When you enable management for a subnet, MAAS will:
+
+1.   Lease addresses for DHCP from a reserved dynamic IP range
+2.   Assign static addresses not included in a reserved IP range, typically via 'Auto assign' IP allocation mode for a node.
+
+See [Concepts and terms](/t/concepts-and-terms/785#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses and [Post-commission configuration](/t/commission-machines/nnnn#heading--post-commission-configuration) for information on IP allocation modes.
+
+<a href="#heading--unmanaged-subnets"><h3 id="heading--unmanaged-subnets">Unmanaged subnets</h3></a>
+
+When management is disabled for a subnet, the definition of a reserved IP range differs from the managed mode. Here, a reserved IP range tells MAAS to **only allocate addresses from this range** (via 'Auto assign'). Also, DHCP will never lease addresses from an unmanaged subnet.
+
+<a href="#heading--controlling-subnet-management"><h3 id="heading--controlling-subnet-management">Controlling subnet management</h3></a>
+
+By default, MAAS manages subnets in your configuration, but it is easy to change this.
+
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+To disable (or re-enable) subnet management navigate to the 'Subnets' page and select the subnet. Press the 'Edit' button to allow changes. The 'Managed allocation' field will become a slide switch. Click the label (or the switch icon itself) to toggle between enabled (dark blue) and disabled (grey) and click 'Save summary'.
+
+<a href="https://assets.ubuntu.com/v1/e5d80c8c-installconfig-network-subnet-management__2.6-management-toggle.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/e5d80c8c-installconfig-network-subnet-management__2.6-management-toggle.png"></a>
+rad-end
+
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+
+To enable or disable subnet management:
+
+``` bash
+maas $PROFILE subnet update $SUBNET_CIDR managed=false|true
+```
+
+For example, to disable:
+
+``` bash
+maas $PROFILE subnet update 192.168.1.0/24 managed=false
+```
+
+You can use the subnet's ID in place of the CIDR address.
+rad-end
+
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
+<a href="#heading--determine-fabric-id"><h3 id="heading--determine-fabric-id">Determine fabric ID</h3></a>
+
+To determine a fabric ID based on a subnet address:
+
+```
+FABRIC_ID=$(maas $PROFILE subnet read $SUBNET_CIDR \
+    | grep fabric | cut -d ' ' -f 10 | cut -d '"' -f 2)
+```
+
+This may come in handy when you need a fabric ID for other CLI calls.
+
+<a href="#heading--default-gateway"><h3 id="heading--default-gateway">Set a default gateway</h3></a>
+
+To set the default gateway for a subnet:
+
+```
+maas $PROFILE subnet update $SUBNET_CIDR gateway_ip=$MY_GATEWAY
+```
+
+<a href="#heading--set-dns-server"><h3 id="heading--set-dns-server">Set a DNS server</h3></a>
+
+To set the DNS server for a subnet:
+
+```
+maas $PROFILE subnet update $SUBNET_CIDR dns_servers=$MY_NAMESERVER
+```
+
+rad-end
+
+<a href="#heading--ip-address-tracking"><h3 id="heading--ip-address-tracking">IP address tracking</h3></a>
+
+MAAS will keep track of all assigned addresses, regardless of whether they come from managed or unmanaged subnets.
+
+<a href="#heading--how-to-manage-networking"><h2 id="heading--how-to-manage-networking">How to manage networking</h2></a>
+
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
 You can use the CLI to manage the networking elements of MAAS, including subnets, fabrics, VLANs, and spaces.  This page shows how to access and edit these elements. See [Concepts and terms](/t/concepts-and-terms/785) for the definitions of networking objects, along with a basic networking tutorial.
 
