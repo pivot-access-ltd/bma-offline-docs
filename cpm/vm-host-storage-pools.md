@@ -1,0 +1,30 @@
+"Storage pools” are storage resources managed by a VM host. A storage pool is a given amount of storage set aside for use by VMs. A pool can be organised into storage volumes, assigned to VMs as individual block devices. More information is available for both [libvirt](https://libvirt.org/storage.html) and [LXD](https://lxd.readthedocs.io/en/latest/storage/) storage pools.
+
+[note]
+For LXD VM hosts, each VM can be assigned a single block device from the storage pool.
+[/note]
+
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+The MAAS web UI displays information about each VM host's storage pools so you can understand your resource usage at a glance:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/3387f256f9bd02f7fc2079f119377305256973c8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3387f256f9bd02f7fc2079f119377305256973c8.jpeg"></a>
+rad-end
+
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+Retrieve VM host storage pool information with the following command:
+
+```
+maas $PROFILE vm-host read $VM_HOST_ID
+```
+
+or, to get tabular output, try:
+
+```
+maas admin vm-host read 5 \
+| jq -r '(["NAME","TYPE","PATH","TOTAL","USED","AVAIL"]) 
+| (,. map(length*"-"))), (.storage_pools[] 
+| [.name, .type, .path, .total, used, .available]) | @tsv' \
+| column -t
+```
+
+rad-end
