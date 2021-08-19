@@ -41,10 +41,8 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 ### Storage
 - [How to manage storage](/t/storage-snap-3-0-ui/4106)
 
-### [Networking](/t/networking-snap-3-0-ui/4046)
+### [Networking](/t/about-networking-snap-3-0-ui/4046)
 
-- [About network discovery](/t/network-discovery-snap-3-0-ui/4042)
-- [About subnets](/t/subnet-management-snap-3-0-ui/4110)
 - [About IPv6](/t/ipv6-addressing-snap-3-0-ui/3970)
 - [About STP](/t/managing-stp-snap-3-0-ui/4038)
 - [About availability zones (AZs)](/t/zone-examples-snap-3-0-ui/4190)
@@ -159,8 +157,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4150|/docs/snap/3.0/ui/using-image-streams|
 |https://discourse.maas.io/t/-/3982|/docs/snap/3.0/ui/local-image-mirror|
 |https://discourse.maas.io/t/-/4174|/docs/snap/3.0/ui/vmware-images|
-|https://discourse.maas.io/t/-/4046|/docs/snap/3.0/ui/networking|
-|https://discourse.maas.io/t/-/4110|/docs/snap/3.0/ui/subnet-management|
+|https://discourse.maas.io/t/-/4046|/docs/snap/3.0/ui/about-networking|
 |https://discourse.maas.io/t/-/4034|/docs/snap/3.0/ui/managing-dhcp|
 |https://discourse.maas.io/t/-/3970|/docs/snap/3.0/ui/ipv6-addressing|
 |https://discourse.maas.io/t/-/4082|/docs/snap/3.0/ui/proxy|
@@ -193,7 +190,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4010|/docs/snap/3.0/ui/maas-logging|
 |https://discourse.maas.io/t/-/4014|/docs/snap/3.0/ui/maas-requirements|
 |https://discourse.maas.io/t/-/4026|/docs/snap/3.0/ui/machine-logs|
-|https://discourse.maas.io/t/-/4042|/docs/snap/3.0/ui/network-discovery|
 |https://discourse.maas.io/t/-/4066|/docs/snap/3.0/ui/postgresql-ha-hot-standby|
 |https://discourse.maas.io/t/-/4078|/docs/snap/3.0/ui/proxy-log|
 |https://discourse.maas.io/t/-/4158|/docs/snap/3.0/ui/using-rbac-with-maas|
@@ -696,14 +692,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/2923|/docs/snap/2.7/ui/network-discovery|
 |https://discourse.maas.io/t/-/2924|/docs/snap/2.8/cli/network-discovery|
 |https://discourse.maas.io/t/-/2925|/docs/snap/2.8/ui/network-discovery|
-|https://discourse.maas.io/t/-/2926|/docs/snap/2.9/cli/network-discovery|
-|https://discourse.maas.io/t/-/2927|/docs/snap/2.9/ui/network-discovery|
 |https://discourse.maas.io/t/-/2928|/docs/deb/2.7/cli/network-discovery|
 |https://discourse.maas.io/t/-/2929|/docs/deb/2.7/ui/network-discovery|
 |https://discourse.maas.io/t/-/2930|/docs/deb/2.8/cli/network-discovery|
 |https://discourse.maas.io/t/-/2931|/docs/deb/2.8/ui/network-discovery|
-|https://discourse.maas.io/t/-/2932|/docs/deb/2.9/cli/network-discovery|
-|https://discourse.maas.io/t/-/2933|/docs/deb/2.9/ui/network-discovery|
 |https://discourse.maas.io/t/-/2934|/docs/snap/2.7/cli/network-testing|
 |https://discourse.maas.io/t/-/2935|/docs/snap/2.7/ui/network-testing|
 |https://discourse.maas.io/t/-/2936|/docs/snap/2.8/cli/network-testing|
@@ -716,14 +708,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/2947|/docs/snap/2.7/ui/networking|
 |https://discourse.maas.io/t/-/2948|/docs/snap/2.8/cli/networking|
 |https://discourse.maas.io/t/-/2949|/docs/snap/2.8/ui/networking|
-|https://discourse.maas.io/t/-/2950|/docs/snap/2.9/cli/networking|
-|https://discourse.maas.io/t/-/2951|/docs/snap/2.9/ui/networking|
+|https://discourse.maas.io/t/-/2950|/docs/snap/2.9/cli/about-networking|
+|https://discourse.maas.io/t/-/2951|/docs/snap/2.9/ui/about-networking|
 |https://discourse.maas.io/t/-/2952|/docs/deb/2.7/cli/networking|
 |https://discourse.maas.io/t/-/2953|/docs/deb/2.7/ui/networking|
 |https://discourse.maas.io/t/-/2954|/docs/deb/2.8/cli/networking|
 |https://discourse.maas.io/t/-/2955|/docs/deb/2.8/ui/networking|
-|https://discourse.maas.io/t/-/2956|/docs/deb/2.9/cli/networking|
-|https://discourse.maas.io/t/-/2957|/docs/deb/2.9/ui/networking|
+|https://discourse.maas.io/t/-/2956|/docs/deb/2.9/cli/about-networking|
+|https://discourse.maas.io/t/-/2957|/docs/deb/2.9/ui/about-networking|
 |https://discourse.maas.io/t/-/2958|/docs/snap/2.7/cli/ntp-services|
 |https://discourse.maas.io/t/-/2959|/docs/snap/2.7/ui/ntp-services|
 |https://discourse.maas.io/t/-/2960|/docs/snap/2.8/cli/ntp-services|
@@ -862,15 +854,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3115|/docs/snap/2.7/ui/subnet-management|
 |https://discourse.maas.io/t/-/3116|/docs/snap/2.8/cli/subnet-management|
 |https://discourse.maas.io/t/-/3117|/docs/snap/2.8/ui/subnet-management|
-|https://discourse.maas.io/t/-/3118|/docs/snap/2.9/cli/subnet-management|
-|https://discourse.maas.io/t/-/3119|/docs/snap/2.9/ui/subnet-management|
 |https://discourse.maas.io/t/-/3120|/docs/deb/2.7/cli/subnet-management|
 |https://discourse.maas.io/t/-/3121|/docs/deb/2.7/ui/subnet-management|
 |https://discourse.maas.io/t/-/3122|/docs/deb/2.8/cli/subnet-management|
 |https://discourse.maas.io/t/-/3123|/docs/deb/2.8/ui/subnet-management|
-|https://discourse.maas.io/t/-/3124|/docs/deb/2.9/cli/subnet-management|
-|https://discourse.maas.io/t/-/3125|/docs/deb/2.9/ui/subnet-management|
-|https://discourse.maas.io/t/-/4110|/docs/snap/3.0/ui/subnet-management|
 |https://discourse.maas.io/t/-/3126|/docs/snap/2.7/cli/test-logs|
 |https://discourse.maas.io/t/-/3127|/docs/snap/2.7/ui/test-logs|
 |https://discourse.maas.io/t/-/3128|/docs/snap/2.8/cli/test-logs|
@@ -1160,12 +1147,9 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4037|/docs/snap/3.0/cli/managing-stp|
 |https://discourse.maas.io/t/-/4039|/docs/deb/3.0/cli/managing-stp|
 |https://discourse.maas.io/t/-/4040|/docs/deb/3.0/ui/managing-stp|
-|https://discourse.maas.io/t/-/4041|/docs/snap/3.0/cli/network-discovery|
-|https://discourse.maas.io/t/-/4043|/docs/deb/3.0/cli/network-discovery|
-|https://discourse.maas.io/t/-/4044|/docs/deb/3.0/ui/network-discovery|
-|https://discourse.maas.io/t/-/4045|/docs/snap/3.0/cli/networking|
-|https://discourse.maas.io/t/-/4047|/docs/deb/3.0/cli/networking|
-|https://discourse.maas.io/t/-/4048|/docs/deb/3.0/ui/networking|
+|https://discourse.maas.io/t/-/4045|/docs/snap/3.0/cli/about-networking|
+|https://discourse.maas.io/t/-/4047|/docs/deb/3.0/cli/about-networking|
+|https://discourse.maas.io/t/-/4048|/docs/deb/3.0/ui/about-networking|
 |https://discourse.maas.io/t/-/4053|/docs/snap/3.0/cli/ntp-services|
 |https://discourse.maas.io/t/-/4055|/docs/deb/3.0/cli/ntp-services|
 |https://discourse.maas.io/t/-/4056|/docs/deb/3.0/ui/ntp-services|
@@ -1201,9 +1185,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4105|/docs/snap/3.0/cli/storage|
 |https://discourse.maas.io/t/-/4107|/docs/deb/3.0/cli/storage|
 |https://discourse.maas.io/t/-/4108|/docs/deb/3.0/ui/storage|
-|https://discourse.maas.io/t/-/4109|/docs/snap/3.0/cli/subnet-management|
-|https://discourse.maas.io/t/-/4111|/docs/deb/3.0/cli/subnet-management|
-|https://discourse.maas.io/t/-/4112|/docs/deb/3.0/ui/subnet-management|
 |https://discourse.maas.io/t/-/4117|/docs/snap/3.0/cli/test-logs|
 |https://discourse.maas.io/t/-/4119|/docs/deb/3.0/cli/test-logs|
 |https://discourse.maas.io/t/-/4120|/docs/deb/3.0/ui/test-logs|
@@ -1304,6 +1285,30 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/deb/2.9/cli/networking|/docs/deb/2.9/cli/about-networking|
+|/docs/deb/2.9/ui/networking|/docs/deb/2.9/ui/about-networking|
+|/docs/deb/3.0/cli/networking|/docs/deb/3.0/cli/about-networking|
+|/docs/deb/3.0/ui/networking|/docs/deb/3.0/ui/about-networking|
+|/docs/snap/2.9/cli/networking|/docs/snap/2.9/cli/about-networking|
+|/docs/snap/2.9/ui/networking|/docs/snap/2.9/ui/about-networking|
+|/docs/snap/3.0/cli/networking|/docs/snap/3.0/cli/about-networking|
+|/docs/snap/3.0/ui/networking|/docs/snap/3.0/ui/about-networking|
+|/docs/deb/2.9/cli/subnet-management|/docs/deb/2.9/cli/about-networking|
+|/docs/deb/2.9/ui/subnet-management|/docs/deb/2.9/ui/about-networking|
+|/docs/deb/3.0/cli/subnet-management|/docs/deb/3.0/cli/about-networking|
+|/docs/deb/3.0/ui/subnet-management|/docs/deb/3.0/ui/about-networking|
+|/docs/snap/2.9/cli/subnet-management|/docs/snap/2.9/cli/about-networking|
+|/docs/snap/2.9/ui/subnet-management|/docs/snap/2.9/ui/about-networking|
+|/docs/snap/3.0/cli/subnet-management|/docs/snap/3.0/cli/about-networking|
+|/docs/snap/3.0/ui/subnet-management|/docs/snap/3.0/ui/about-networking|
+|/docs/deb/2.9/cli/network-discovery|/docs/deb/2.9/cli/about-networking#heading--about-network-discovery|
+|/docs/deb/2.9/ui/network-discovery|/docs/deb/2.9/ui/about-networking#heading--about-network-discovery|
+|/docs/deb/3.0/cli/network-discovery|/docs/deb/3.0/cli/about-networking#heading--about-network-discovery|
+|/docs/deb/3.0/ui/network-discovery|/docs/deb/3.0/ui/about-networking#heading--about-network-discovery|
+|/docs/snap/2.9/cli/network-discovery|/docs/snap/2.9/cli/about-networking#heading--about-network-discovery|
+|/docs/snap/2.9/ui/network-discovery|/docs/snap/2.9/ui/about-networking#heading--about-network-discovery|
+|/docs/snap/3.0/cli/network-discovery|/docs/snap/3.0/cli/about-networking#heading--about-network-discovery|
+|/docs/snap/3.0/ui/network-discovery|/docs/snap/3.0/ui/about-networking#heading--about-network-discovery|
 |/docs/about-maas|/docs/snap/3.0/ui/about-maas|
 |/docs/release-notes|/docs/snap/3.0/ui/whats-new-in-maas|
 |/docs/get-started-with-maas|/docs/snap/3.0/ui/give-me-an-example-of-maas|
@@ -1330,7 +1335,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
 |/docs/commissioning-logs|/docs/snap/3.0/ui/commissioning-logs|
 |/docs/configuration-journey|/docs/snap/3.0/ui/configuration-journey|
-|/docs/configure-networking|/docs/snap/3.0/ui/networking|
+|/docs/configure-networking|/docs/snap/3.0/ui/about-networking|
 |/docs/contributing-build|/docs/writing-guide|
 |/docs/contributing-en-GB|/docs/language-details-contributing-to-maas-docs|
 |/docs/contributing-git|/docs/working-with-git-and-github|
@@ -1416,7 +1421,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/installconfig-install|/docs/snap/3.0/ui/maas-installation|
 |/docs/installconfig-iso-install|/docs/install-from-iso|
 |/docs/installconfig-lxd-install|/docs/install-with-lxd|
-|/docs/installconfig-network-dev-discovery|/docs/network-discovery|
+|/docs/installconfig-network-dev-discovery|/docs/snap/3.0/ui/about-networking#heading--about-network-discovery|
 |/docs/installconfig-network-dhcp|/docs/snap/3.0/ui/managing-dhcp|
 |/docs/installconfig-network-ipranges|/docs/snap/3.0/ui/ip-ranges|
 |/docs/installconfig-network-ipv6|/docs/ipv6|/docs/snap/3.0/ui/ipv6-addressing|
@@ -1424,9 +1429,9 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/installconfig-network-proxy|/docs/proxy|/docs/snap/3.0/ui/proxy|
 |/docs/installconfig-network-ssl|/docs/snap/3.0/ui/configuring-tls-encryption|
 |/docs/installconfig-network-stp|/docs/snap/3.0/ui/managing-stp|
-|/docs/installconfig-network-subnet-management|/docs/snap/3.0/ui/subnet-management|
-|/docs/installconfig-networking-config|/docs/snap/3.0/ui/networking|
-|/docs/installconfig-networking|/docs/snap/3.0/ui/networking|
+|/docs/installconfig-network-subnet-management|/docs/snap/3.0/ui/about-networking|
+|/docs/installconfig-networking-config|/docs/snap/3.0/ui/about-networking|
+|/docs/installconfig-networking|/docs/snap/3.0/ui/about-networking|
 |/docs/installconfig-package-install|/docs/deb/2.9/ui/installation|
 |/docs/installconfig-partitions|/docs/snap/3.0/ui/storage|
 |/docs/installconfig-rack|/docs/snap/3.0/ui/rack-controllers
@@ -1500,9 +1505,9 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/manage-search|/docs/snap/3.0/ui/interactive-search|
 |/docs/manage-zones|/docs/snap/3.0/ui/availability-zones|
 |/docs/metadata.y|/docs/documentation-index|
-|/docs/network-discovery|/docs/snap/3.0/ui/network-discovery|
+|/docs/network-discovery|/docs/snap/3.0/ui/about-networking#heading--about-network-discovery|
 |/docs/network-testing|/docs/snap/3.0/ui/how-to-test-machines|
-|/docs/networking|/docs/snap/3.0/ui/networking|
+|/docs/networking|/docs/snap/3.0/ui/about-networking|
 |/docs/node-overview|/docs/snap/3.0/ui/machines|
 |/docs/nodes-add|/docs/snap/3.0/ui/manage-machines|
 |/docs/nodes-commission|/docs/snap/3.0/ui/how-to-commission-machines|
@@ -1590,7 +1595,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/ssl|/docs/snap/3.0/ui/configuring-tls-encryption|
 |/docs/storage|/docs/snap/3.0/ui/storage|
 |/docs/stp|/docs/snap/3.0/ui/managing-stp|
-|/docs/subnet-management|/docs/snap/3.0/ui/subnet-management|
+|/docs/subnet-management|/docs/snap/3.0/ui/about-networking|
 |/docs/syslog|/docs/snap/3.0/ui/maas-logging|
 |/docs/tags|/docs/snap/3.0/ui/maas-tags|
 |/docs/troubleshoot-faq|/docs/troubleshooting|
