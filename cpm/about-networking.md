@@ -44,3 +44,77 @@ When management is disabled for a subnet, the definition of a reserved IP range 
 <a href="#heading--about-ip-address-tracking"><h3 id="heading--about-ip-address-tracking">About IP address tracking</h3></a>
 
 When you enable IP address tracking, MAAS will keep track of all assigned addresses, regardless of whether they come from managed or unmanaged subnets.
+
+<a href="#heading--about-ipv6"><h2 id="heading--about-ipv6">About IPv6</h2></a>
+
+Support for IPv6 in MAAS is similar to support for IPv4.  A rack controller in an IPv6 context needs to have the region API server URL specified with brackets:
+
+``` nohighlight
+http://[::1]:5240/MAAS/
+```
+
+You can access the Web UI and the [MAAS CLI](/t/maas-cli/2825) (that is, logging in to the API server) in the same way on both IPv4 and IPv6. To use an IPv6 address in a URL, surround it with square brackets. For example, on the local machine (`::1`, the IPv6 equivalent of `localhost`):
+
+[note]
+MAAS can only control most BMCs using IPv4.
+[/note]
+
+<a href="#heading--about-enabling-ipv6"><h3 id="heading--about-enabling-ipv6">About enabling IPv6</h3></a>
+
+You enable IPv6 networking in the same way that you enable IPv4 networking: configure a separate rack controller interface for your IPv6 subnet. The IPv6 interface must define a static address range. Provided that you already have a functioning IPv6 network, that's all there is to it. The following sections explain requirements, supported operations, and what to do if you don't yet have a functioning IPv6 network.
+
+An IPv6 interface can use the same network interface on the rack controller as an existing IPv4 network interface. It just defines a different subnet, with IPv6 addressing. A machine that's connected to the IPv4 subnet also connected to the IPv6 subnet on the same network segment.
+
+<a href="#heading--about-ipv6-subnets"><h3 id="heading--about-ipv6-subnets">About IPv6 subnets</h3></a>
+
+If you define a reserved static IP range, then machines deployed on the subnet will get a static address in this range. Since IPv6 networks usually are 64 bits wide, you can be generous with the range size. You can typically leave the netmask and broadcast address fields blank.
+
+You may want MAAS to manage DHCP and DNS, but it's not required. Machines do not need a DHCP server at all for IPv6; MAAS configures static IPv6 addresses on a machine's network interface while deploying it. A DHCPv6 server can provide addresses for containers or virtual machines running on the machines, as well as devices on the network that are not managed by MAAS. The machines do not need DHCPv6. MAAS will not be aware of any addresses issued by DHCP, and cannot guarantee that they will stay unchanged.
+
+<a href="#heading--about-ipv6-routing"><h3 id="heading--about-ipv6-routing">About IPV6 routing</h3></a>
+
+In IPv6, clients do not discover routes through DHCP. Routers make themselves known on their networks by sending out route advertisements. These RAs also contain other configuration items:
+
+ * Switches that allow stateless configuration of their unique IP addresses, based on MAC addresses. 
+* Switches that enable them to request stateless configuration from a DHCP server.
+* Switches that In any allow them to request a stateful IP address from a DHCP server. 
+
+Since a network interface can have any number of IPv6 addresses even on a single subnet, several of these address assignment mechanisms can be combined.
+
+However, when MAAS configures IPv6 networking on a machine, it does not rely on RAs. It statically configures a machine's default IPv6 route to use the router that is set on the cluster interface, so that the machine will know their default gateway. They do not need DHCP and will not autoconfigure global addresses.
+
+You may be planning to operate DHCPv6 clients as well, for example, on machines not managed by MAAS, or on virtual machines hosted by MAAS machines.  If this is the case, you may want to configure RAs, so that those clients obtain configuration over DHCP.
+
+If you need RAs, but your gateway does not send them, you could install and configure `radvd` somewhere on the network to advertise its route.
+
+<a href="#heading--about-stp"><h3 id="heading--about-stp">About STP</h3></a>
+
+Some switches use the Spanning-Tree Protocol (STP) to negotiate a loop-free path through a root bridge. While scanning, it can cause each port to wait up to 50 seconds before sending data. This delay, in turn, can cause problems with some applications/protocols such as PXE, DHCP and DNS, of which MAAS makes extensive use.
+
+To alleviate this problem, you should enable [Portfast](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4000/8-2glx/configuration/guide/stp_enha.html#wp1019873) for Cisco switches (or its equivalent on other vendor equipment), which allows the ports to come up almost immediately.
+
+<a href="#heading--about-availability-zones"><h2 id="heading--about-availability-zones">About availability zones</h2></a>
+
+This section explains some characteristics and uses of availability zones.
+
+<a href="#heading--fault-tolerance"><h3 id="heading--fault-tolerance">About fault tolerance</h3></a>
+
+Fault tolerance is "the property that enables a system to continue operating properly in the event of the failure of (or one or more faults within) some of its components". To help create better fault tolerance, multiple MAAS zones can be employed.
+
+For this, a zone can be defined in different ways. It can be based on power supply for instance, or it can represent a portion of your network or an entire data centre location.
+
+Machines that work in tandem in order to provide an instance of a service should be allocated in the same zone. The entire service should be replicated in another zone.
+
+<a href="#heading--service-performance"><h3 id="heading--service-performance">About service performance</h3></a>
+
+Service performance is the ability of your service to operate in the most efficient manner possible where the typical criteria used is speed. Multiple MAAS zones can be used to help.
+
+Nodes should be allocated in the zone closest to the performance-critical resources they need.
+
+For example, for applications that are highly sensitive to network latency, it may make sense to design a network topology consisting of several smaller networks, and have each of those represented as a zone. The zones can then be used to allocate nodes that have the best performance depending on the service offered.
+
+<a href="#heading--power-management"><h3 id="heading--power-management">About power management</h3></a>
+
+Power management is concerned with power usage density and cooling. This topic can be addressed with the use of several MAAS zones.
+
+Nodes can be distributed in such a way that power-hungry and/or "hot" systems are located in different zones. This can help mitigate power consumption and heat problems.

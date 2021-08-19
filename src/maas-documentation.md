@@ -43,9 +43,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 ### [Networking](/t/about-networking-snap-3-0-ui/4046)
 
-- [About IPv6](/t/ipv6-addressing-snap-3-0-ui/3970)
-- [About STP](/t/managing-stp-snap-3-0-ui/4038)
-- [About availability zones (AZs)](/t/zone-examples-snap-3-0-ui/4190)
 - [How to manage networks](/t/-/4927)
 - [How to manage interfaces](/t/-/3874)
 - [How to manage DHCP](/t/managing-dhcp-snap-3-0-ui/4034)
@@ -168,12 +165,9 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4174|/docs/snap/3.0/ui/vmware-images|
 |https://discourse.maas.io/t/-/4046|/docs/snap/3.0/ui/about-networking|
 |https://discourse.maas.io/t/-/4034|/docs/snap/3.0/ui/managing-dhcp|
-|https://discourse.maas.io/t/-/3970|/docs/snap/3.0/ui/ipv6-addressing|
 |https://discourse.maas.io/t/-/4082|/docs/snap/3.0/ui/proxy|
 |https://discourse.maas.io/t/-/3890|/docs/snap/3.0/ui/configuring-tls-encryption|
 |https://discourse.maas.io/t/-/3834|/docs/snap/3.0/ui/availability-zones|
-|https://discourse.maas.io/t/-/4190|/docs/snap/3.0/ui/zone-examples|
-|https://discourse.maas.io/t/-/4038|/docs/snap/3.0/ui/managing-stp|
 |https://discourse.maas.io/t/-/4054|/docs/snap/3.0/ui/ntp-services|
 |https://discourse.maas.io/t/-/4154|/docs/snap/3.0/ui/using-maas-in-an-air-gapped-environment|
 |https://discourse.maas.io/t/-/4162|/docs/snap/3.0/ui/vm-hosting|
@@ -562,14 +556,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/2767|/docs/snap/2.7/ui/ipv6-addressing|
 |https://discourse.maas.io/t/-/2768|/docs/snap/2.8/cli/ipv6-addressing|
 |https://discourse.maas.io/t/-/2769|/docs/snap/2.8/ui/ipv6-addressing|
-|https://discourse.maas.io/t/-/2770|/docs/snap/2.9/cli/ipv6-addressing|
-|https://discourse.maas.io/t/-/2771|/docs/snap/2.9/ui/ipv6-addressing|
 |https://discourse.maas.io/t/-/2772|/docs/deb/2.7/cli/ipv6-addressing|
 |https://discourse.maas.io/t/-/2773|/docs/deb/2.7/ui/ipv6-addressing|
 |https://discourse.maas.io/t/-/2774|/docs/deb/2.8/cli/ipv6-addressing|
 |https://discourse.maas.io/t/-/2775|/docs/deb/2.8/ui/ipv6-addressing|
-|https://discourse.maas.io/t/-/2776|/docs/deb/2.9/cli/ipv6-addressing|
-|https://discourse.maas.io/t/-/2777|/docs/deb/2.9/ui/ipv6-addressing|
 |https://discourse.maas.io/t/-/2778|/docs/snap/2.7/cli/kernel-boot-options|
 |https://discourse.maas.io/t/-/2779|/docs/snap/2.7/ui/kernel-boot-options|
 |https://discourse.maas.io/t/-/2780|/docs/snap/2.8/cli/kernel-boot-options|
@@ -689,14 +679,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/2911|/docs/snap/2.7/ui/managing-stp|
 |https://discourse.maas.io/t/-/2912|/docs/snap/2.8/cli/managing-stp|
 |https://discourse.maas.io/t/-/2913|/docs/snap/2.8/ui/managing-stp|
-|https://discourse.maas.io/t/-/2914|/docs/snap/2.9/cli/managing-stp|
-|https://discourse.maas.io/t/-/2915|/docs/snap/2.9/ui/managing-stp|
 |https://discourse.maas.io/t/-/2916|/docs/deb/2.7/cli/managing-stp|
 |https://discourse.maas.io/t/-/2917|/docs/deb/2.7/ui/managing-stp|
 |https://discourse.maas.io/t/-/2918|/docs/deb/2.8/cli/managing-stp|
 |https://discourse.maas.io/t/-/2919|/docs/deb/2.8/ui/managing-stp|
-|https://discourse.maas.io/t/-/2920|/docs/deb/2.9/cli/managing-stp|
-|https://discourse.maas.io/t/-/2921|/docs/deb/2.9/ui/managing-stp|
 |https://discourse.maas.io/t/-/2922|/docs/snap/2.7/cli/network-discovery|
 |https://discourse.maas.io/t/-/2923|/docs/snap/2.7/ui/network-discovery|
 |https://discourse.maas.io/t/-/2924|/docs/snap/2.8/cli/network-discovery|
@@ -1008,14 +994,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3271|/docs/snap/2.7/ui/zone-examples|
 |https://discourse.maas.io/t/-/3272|/docs/snap/2.8/cli/zone-examples|
 |https://discourse.maas.io/t/-/3273|/docs/snap/2.8/ui/zone-examples|
-|https://discourse.maas.io/t/-/3274|/docs/snap/2.9/cli/zone-examples|
-|https://discourse.maas.io/t/-/3275|/docs/snap/2.9/ui/zone-examples|
 |https://discourse.maas.io/t/-/3276|/docs/deb/2.7/cli/zone-examples|
 |https://discourse.maas.io/t/-/3277|/docs/deb/2.7/ui/zone-examples|
 |https://discourse.maas.io/t/-/3278|/docs/deb/2.8/cli/zone-examples|
 |https://discourse.maas.io/t/-/3279|/docs/deb/2.8/ui/zone-examples|
-|https://discourse.maas.io/t/-/3280|/docs/deb/2.9/cli/zone-examples|
-|https://discourse.maas.io/t/-/3281|/docs/deb/2.9/ui/zone-examples|
 |https://discourse.maas.io/t/-/3318|/docs/snap/2.7/cli/installation|
 |https://discourse.maas.io/t/-/3319|/docs/snap/2.7/ui/installation|
 |https://discourse.maas.io/t/-/3320|/docs/snap/2.8/cli/installation|
@@ -1109,9 +1091,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3965|/docs/snap/3.0/cli/ip-ranges|
 |https://discourse.maas.io/t/-/3967|/docs/deb/3.0/cli/ip-ranges|
 |https://discourse.maas.io/t/-/3968|/docs/deb/3.0/ui/ip-ranges|
-|https://discourse.maas.io/t/-/3969|/docs/snap/3.0/cli/ipv6-addressing|
-|https://discourse.maas.io/t/-/3971|/docs/deb/3.0/cli/ipv6-addressing|
-|https://discourse.maas.io/t/-/3972|/docs/deb/3.0/ui/ipv6-addressing|
 |https://discourse.maas.io/t/-/3981|/docs/snap/3.0/cli/local-image-mirror|
 |https://discourse.maas.io/t/-/3983|/docs/deb/3.0/cli/local-image-mirror|
 |https://discourse.maas.io/t/-/3984|/docs/deb/3.0/ui/local-image-mirror|
@@ -1153,9 +1132,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4033|/docs/snap/3.0/cli/managing-dhcp|
 |https://discourse.maas.io/t/-/4035|/docs/deb/3.0/cli/managing-dhcp|
 |https://discourse.maas.io/t/-/4036|/docs/deb/3.0/ui/managing-dhcp|
-|https://discourse.maas.io/t/-/4037|/docs/snap/3.0/cli/managing-stp|
-|https://discourse.maas.io/t/-/4039|/docs/deb/3.0/cli/managing-stp|
-|https://discourse.maas.io/t/-/4040|/docs/deb/3.0/ui/managing-stp|
 |https://discourse.maas.io/t/-/4045|/docs/snap/3.0/cli/about-networking|
 |https://discourse.maas.io/t/-/4047|/docs/deb/3.0/cli/about-networking|
 |https://discourse.maas.io/t/-/4048|/docs/deb/3.0/ui/about-networking|
@@ -1230,9 +1206,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4185|/docs/snap/3.0/cli/writing-guide|
 |https://discourse.maas.io/t/-/4187|/docs/deb/3.0/cli/writing-guide|
 |https://discourse.maas.io/t/-/4188|/docs/deb/3.0/ui/writing-guide|
-|https://discourse.maas.io/t/-/4189|/docs/snap/3.0/cli/zone-examples|
-|https://discourse.maas.io/t/-/4191|/docs/deb/3.0/cli/zone-examples|
-|https://discourse.maas.io/t/-/4192|/docs/deb/3.0/ui/zone-examples|
 |https://discourse.maas.io/t/-/4195|/docs/deb/3.0/ui/maas-documentation|
 |https://discourse.maas.io/t/-/4268|/docs/deb/2.8/ui/air-gapped-maas|
 |https://discourse.maas.io/t/-/4269|/docs/deb/2.8/cli/air-gapped-maas|
@@ -1294,6 +1267,30 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/deb/2.9/cli/zone-examples|/docs/deb/2.9/cli/about-networking#heading--about-availability-zones|
+|/docs/deb/2.9/ui/zone-examples|/docs/deb/2.9/ui/about-networking#heading--about-availability-zones|
+|/docs/deb/3.0/cli/zone-examples|/docs/deb/3.0/cli/about-networking#heading--about-availability-zones|
+|/docs/deb/3.0/ui/zone-examples|/docs/deb/3.0/ui/about-networking#heading--about-availability-zones|
+|/docs/snap/2.9/cli/zone-examples|/docs/snap/2.9/cli/about-networking#heading--about-availability-zones|
+|/docs/snap/2.9/ui/zone-examples|/docs/snap/2.9/ui/about-networking#heading--about-availability-zones|
+|/docs/snap/3.0/cli/zone-examples|/docs/snap/3.0/cli/about-networking#heading--about-availability-zones|
+|/docs/snap/3.0/ui/zone-examples|/docs/snap/3.0/ui/about-networking#heading--about-availability-zones|
+|/docs/deb/2.9/cli/managing-stp|/docs/deb/2.9/cli/about-networking#heading--about-stp|
+|/docs/deb/2.9/ui/managing-stp|/docs/deb/2.9/ui/about-networking#heading--about-stp|
+|/docs/deb/3.0/cli/managing-stp|/docs/deb/3.0/cli/about-networking#heading--about-stp|
+|/docs/deb/3.0/ui/managing-stp|/docs/deb/3.0/ui/about-networking#heading--about-stp|
+|/docs/snap/2.9/cli/managing-stp|/docs/snap/2.9/cli/about-networking#heading--about-stp|
+|/docs/snap/2.9/ui/managing-stp|/docs/snap/2.9/ui/about-networking#heading--about-stp|
+|/docs/snap/3.0/cli/managing-stp|/docs/snap/3.0/cli/about-networking#heading--about-stp|
+|/docs/snap/3.0/ui/managing-stp|/docs/snap/3.0/ui/about-networking#heading--about-stp|
+|/docs/deb/2.9/cli/ipv6-addressing|/docs/deb/2.9/cli/about-networking#heading--about-ipv6|
+|/docs/deb/2.9/ui/ipv6-addressing|/docs/deb/2.9/ui/about-networking#heading--about-ipv6|
+|/docs/deb/3.0/cli/ipv6-addressing|/docs/deb/3.0/cli/about-networking#heading--about-ipv6|
+|/docs/deb/3.0/ui/ipv6-addressing|/docs/deb/3.0/ui/about-networking#heading--about-ipv6|
+|/docs/snap/2.9/cli/ipv6-addressing|/docs/snap/2.9/cli/about-networking#heading--about-ipv6|
+|/docs/snap/2.9/ui/ipv6-addressing|/docs/snap/2.9/ui/about-networking#heading--about-ipv6|
+|/docs/snap/3.0/cli/ipv6-addressing|/docs/snap/3.0/cli/about-networking#heading--about-ipv6|
+|/docs/snap/3.0/ui/ipv6-addressing|/docs/snap/3.0/ui/about-networking#heading--about-ipv6|
 |/docs/how-to-manage-networks|/docs/snap/3.0/ui/how-to-manage-networks|
 |/docs/deb/2.9/cli/networking|/docs/deb/2.9/cli/about-networking|
 |/docs/deb/2.9/ui/networking|/docs/deb/2.9/ui/about-networking|
@@ -1434,11 +1431,11 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/installconfig-network-dev-discovery|/docs/snap/3.0/ui/about-networking#heading--about-network-discovery|
 |/docs/installconfig-network-dhcp|/docs/snap/3.0/ui/managing-dhcp|
 |/docs/installconfig-network-ipranges|/docs/snap/3.0/ui/ip-ranges|
-|/docs/installconfig-network-ipv6|/docs/ipv6|/docs/snap/3.0/ui/ipv6-addressing|
+|/docs/installconfig-network-ipv6|/docs/ipv6|/docs/snap/3.0/ui/about-networking#heading--about-ipv6|
 |/docs/installconfig-network-ntp|/docs/ntp|/docs/snap/3.0/ui/ntp-services|
 |/docs/installconfig-network-proxy|/docs/proxy|/docs/snap/3.0/ui/proxy|
 |/docs/installconfig-network-ssl|/docs/snap/3.0/ui/configuring-tls-encryption|
-|/docs/installconfig-network-stp|/docs/snap/3.0/ui/managing-stp|
+|/docs/installconfig-network-stp|/docs/snap/3.0/ui/about-networking#heading--about-stp|
 |/docs/installconfig-network-subnet-management|/docs/snap/3.0/ui/about-networking|
 |/docs/installconfig-networking-config|/docs/snap/3.0/ui/about-networking|
 |/docs/installconfig-networking|/docs/snap/3.0/ui/about-networking|
@@ -1458,7 +1455,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/installconfig-webui|/docs/web-ui|
 |/docs/interactive-search|/docs/snap/3.0/ui/interactive-search|
 |/docs/intro-communication|/docs/snap/3.0/ui/maas-communication|
-|/docs/intro-concepts-zones|/docs/snap/3.0/ui/zone-examples|
+|/docs/intro-concepts-zones|/docs/snap/3.0/ui/about-networking#heading--about-availability-zones|
 |/docs/intro-concepts|/docs/concepts-and-terms|
 |/docs/intro-controllers|/docs/snap/3.0/ui/controllers|
 |/docs/intro-explore|docs/deb/2.9/ui/installation|
@@ -1467,7 +1464,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/intro-what-is-maas|/docs/snap/3.0/ui/about-maas|
 |/docs/introduction-to-controllers|/docs/snap/3.0/ui/controllers|
 |/docs/ip-ranges|/docs/snap/3.0/ui/ip-ranges|
-|/docs/ipv6|/docs/snap/3.0/ui/ipv6-addressing|
+|/docs/ipv6|/docs/snap/3.0/ui/about-networking#heading--about-ipv6|
 |/docs/kernel-boot-options|/docs/snap/3.0/ui/how-to-customise-machines|
 |/docs/kvm-host-networking|/docs/snap/3.0/ui/vm-host-storage-pools|
 |/docs/kvm-host-storage-pools|/docs/snap/3.0/ui/vm-host-storage-pools|
@@ -1604,7 +1601,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/3.0/ui/vmware-vmfs-datastores|/docs/snap/3.0/ui/storage|
 |/docs/ssl|/docs/snap/3.0/ui/configuring-tls-encryption|
 |/docs/storage|/docs/snap/3.0/ui/storage|
-|/docs/stp|/docs/snap/3.0/ui/managing-stp|
+|/docs/stp|/docs/snap/3.0/ui/about-networking#heading--about-stp|
 |/docs/subnet-management|/docs/snap/3.0/ui/about-networking|
 |/docs/syslog|/docs/snap/3.0/ui/maas-logging|
 |/docs/tags|/docs/snap/3.0/ui/maas-tags|
@@ -1618,5 +1615,5 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/vmware-vmfs-datastores|/docs/snap/3.0/ui/storage|
 |/docs/what-is-maas|/docs/snap/3.0/ui/about-maas|
 |/docs/whats-new-in-2-7||/docs/snap/2.7/ui/whats-new-in-maas|
-|/docs/zone-examples|/docs/snap/3.0/ui/zone-examples|
+|/docs/zone-examples|/docs/snap/3.0/ui/about-networking#heading--about-availability-zones|
 [/details]
