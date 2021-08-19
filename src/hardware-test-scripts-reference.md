@@ -88,4 +88,26 @@ After either commissioning, testing, or installation has started, MAAS reports i
 
 You can access the verbatim output from any test by selecting a machine, selecting the 'Hardware tests' page and clicking on the 'Log view' link in the 'Results' column for the specific test.
 
-<!-- comment -->
+<a href="#heading--hardware-test-script-example-cpu-stress-test"><h2 id="heading--hardware-test-script-example-cpu-stress-test">Hardware test script example: CPU stress test</h2></a>
+
+Here's a simple example of a functional Bash test script, replicating part of the stress-ng script bundled with MAAS:
+
+```nohighlight
+#!/bin/bash -e
+# --- Start MAAS 1.0 script metadata ---
+# name: stress-ng-cpu-test
+# title: CPU validation
+# description: Run stress-ng memory tests for 5 minutes.
+# script_type: test
+# hardware_type: cpu
+# packages: {apt: stress-ng}
+# tags: cpu
+# timeout: 00:05:00
+# --- End MAAS 1.0 script metadata ---
+
+sudo -n stress-ng --matrix 0 --ignite-cpu --log-brief --metrics-brief --times \
+    --tz --verify --timeout 2m
+```
+
+This Bash script contains comment-delineated metadata, which configures the script environment and installs any dependencies.  There is also a single line that runs **stress-ng** (a CPU stress-test utility) with various arguments.
+

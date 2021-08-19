@@ -130,3 +130,58 @@ The following seven environment variables are available when a script runs withi
 5.   `DOWNLOAD_PATH`: The path where MAAS will download all files.
 6.   `RUNTIME`: The amount of time the script has to run in seconds.
 7.   `HAS_STARTED`: When 'True', MAAS has run the script once before but not to completion. Indicates the machine has rebooted.
+
+<a href="#heading--commissioning-script-example-configure-hpa"><h2 id="heading--commissioning-script-example-configure-hpa">Commissioning script example: Configure HPA</h2></a>
+
+Below is a sample script to configure an Intel C610/X99 HPA controller on an HP system. The script will only run on systems with an Intel C610/X99 controller identified by the PCI ID 8086:8d06.
+
+Before the scrixpt runs, MAAS will download and install the [HP RESTful Interface Tool](https://downloads.linux.hpe.com/SDR/project/hprest/) package from HP. After the script completes, the built-in commissioning scripts will be re-run to capture the new configuration.
+
+```nohighlight
+#!/bin/bash -ex
+# --- Start MAAS 1.0 script metadata ---
+# name: hp_c610_x99_ahci
+# title: Configure Intel C610/X99 controller on HP systems
+# description: Configure Intel C610/X99 controller on HP systems to AHCI
+# script_type: commissioning
+# tags: configure_hpa
+# packages:
+#  url: http://downloads.linux.hpe.com/SDR/repo/hprest/pool/non-free/hprest-1.5-26_amd64.deb
+# for_hardware: pci:8086:8d06
+# recommission: True
+# --- End MAAS 1.0 script metadata ---
+output=$(sudo hprest get EmbeddedSata --selector HpBios.)
+echo $output
+if [ $(echo $output | grep -c 'EmbeddedSata=Raid') ]; then
+    echo "Server is in Dynamic Smart Array RAID mode. Changing to SATA AHCI support mode."
+    sudo hprest set EmbeddedSata=Ahci --selector HpBios. --commit
+else:
+    echo "No changes made to the system, Server is Already in AHCI Mode"
+fi
+```
+
+<a href="#heading--commissioning-script-example-update-firmware"><h2 id="heading--commissioning-script-update-firmware">Commissioning script example: Update firmware</h2></a>
+
+Below is a sample script to update the mainboard firmware on an ASUS P8P67 Pro using a vendor-provided tool. The tool is automatically downloaded and extracted by MAAS. The script reboots the system to complete the update. The system will boot back into the MAAS ephemeral environment to finish commissioning and (optionally) testing.
+
+[note]
+Currently, MAAS does not support vendor tools which use UEFI boot capsules or need to store resource files on disk while rebooting.
+[/note]
+
+```nohighlight
+#!/bin/bash -ex
+# --- Start MAAS 1.0 script metadata ---
+# name: update_asus_p8p67_firmware
+# title: Firmware update for the ASUS P8P67 mainboard
+# description: Firmware update for the ASUS P8P67 mainboard
+# script_type: commissioning
+# tags: update_firmware
+# packages:
+#  url: http://example.com/firmware.tar.gz
+# for_hardware: mainboard_product:P8P67 PRO
+# may_reboot: True
+# --- End MAAS 1.0 script metadata ---
+$DOWNLOAD_PATH/update_firmware
+reboot
+```
+
