@@ -106,6 +106,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/4030|/docs/snap/3.0/ui/about-machines|
+|https://discourse.maas.io/t/-/2734|/docs/snap/2.9/cli/about-machines|
+|https://discourse.maas.io/t/-/2735|/docs/snap/2.9/ui/about-machines|
+|https://discourse.maas.io/t/-/2740|/docs/deb/2.9/cli/about-machines|
+|https://discourse.maas.io/t/-/2741|/docs/deb/2.9/ui/about-machines|
+|https://discourse.maas.io/t/-/4029|/docs/snap/3.0/cli/about-machines|
+|https://discourse.maas.io/t/-/4031|/docs/deb/3.0/cli/about-machines|
+|https://discourse.maas.io/t/-/4032|/docs/deb/3.0/ui/about-machines|
 |https://discourse.maas.io/t/-/4920|/docs/deb/2.9/cli/how-to-manage-networks|
 |https://discourse.maas.io/t/-/4921|/docs/deb/2.9/ui/how-to-manage-networks|
 |https://discourse.maas.io/t/-/4922|/docs/deb/3.0/cli/how-to-manage-networks|
@@ -149,7 +157,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4090|/docs/snap/3.0/ui/rack-controllers|
 |https://discourse.maas.io/t/-/4094|/docs/snap/3.0/ui/region-controllers|
 |https://discourse.maas.io/t/-/3946|/docs/snap/3.0/ui/high-availability|
-|https://discourse.maas.io/t/-/4030|/docs/snap/3.0/ui/machines|
 |https://discourse.maas.io/t/-/4070|/docs/snap/3.0/ui/power-management|
 |https://discourse.maas.io/t/-/3874|/docs/snap/3.0/ui/manage-machine-interfaces|
 |https://discourse.maas.io/t/-/4106|/docs/snap/3.0/ui/storage|
@@ -520,14 +527,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/2731|/docs/snap/2.7/ui/machines|
 |https://discourse.maas.io/t/-/2732|/docs/snap/2.8/cli/machines|
 |https://discourse.maas.io/t/-/2733|/docs/snap/2.8/ui/machines|
-|https://discourse.maas.io/t/-/2734|/docs/snap/2.9/cli/machines|
-|https://discourse.maas.io/t/-/2735|/docs/snap/2.9/ui/machines|
 |https://discourse.maas.io/t/-/2736|/docs/deb/2.7/cli/machines|
 |https://discourse.maas.io/t/-/2737|/docs/deb/2.7/ui/machines|
 |https://discourse.maas.io/t/-/2738|/docs/deb/2.8/cli/machines|
 |https://discourse.maas.io/t/-/2739|/docs/deb/2.8/ui/machines|
-|https://discourse.maas.io/t/-/2740|/docs/deb/2.9/cli/machines|
-|https://discourse.maas.io/t/-/2741|/docs/deb/2.9/ui/machines|
 |https://discourse.maas.io/t/-/2742|/docs/snap/2.7/cli/vm-hosting|
 |https://discourse.maas.io/t/-/2743|/docs/snap/2.7/ui/vm-hosting|
 |https://discourse.maas.io/t/-/2744|/docs/snap/2.8/cli/vm-hosting|
@@ -1126,9 +1129,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4025|/docs/snap/3.0/cli/machine-logs|
 |https://discourse.maas.io/t/-/4027|/docs/deb/3.0/cli/machine-logs|
 |https://discourse.maas.io/t/-/4028|/docs/deb/3.0/ui/machine-logs|
-|https://discourse.maas.io/t/-/4029|/docs/snap/3.0/cli/machines|
-|https://discourse.maas.io/t/-/4031|/docs/deb/3.0/cli/machines|
-|https://discourse.maas.io/t/-/4032|/docs/deb/3.0/ui/machines|
 |https://discourse.maas.io/t/-/4033|/docs/snap/3.0/cli/managing-dhcp|
 |https://discourse.maas.io/t/-/4035|/docs/deb/3.0/cli/managing-dhcp|
 |https://discourse.maas.io/t/-/4036|/docs/deb/3.0/ui/managing-dhcp|
@@ -1267,6 +1267,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/deb/2.9/cli/machines|/docs/deb/2.9/cli/about-machines|
+|/docs/deb/2.9/ui/machines|/docs/deb/2.9/ui/about-machines|
+|/docs/deb/3.0/cli/machines|/docs/deb/3.0/cli/about-machines|
+|/docs/deb/3.0/ui/machines|/docs/deb/3.0/ui/about-machines|
+|/docs/snap/2.9/cli/machines|/docs/snap/2.9/cli/about-machines|
+|/docs/snap/2.9/ui/machines|/docs/snap/2.9/ui/about-machines|
+|/docs/snap/3.0/cli/machines|/docs/snap/3.0/cli/about-machines|
+|/docs/snap/3.0/ui/machines|/docs/snap/3.0/ui/about-machines|
 |/docs/deb/2.9/cli/zone-examples|/docs/deb/2.9/cli/about-networking#heading--about-availability-zones|
 |/docs/deb/2.9/ui/zone-examples|/docs/deb/2.9/ui/about-networking#heading--about-availability-zones|
 |/docs/deb/3.0/cli/zone-examples|/docs/deb/3.0/cli/about-networking#heading--about-availability-zones|
@@ -1479,7 +1487,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/maas-installation|/docs/snap/3.0/ui/maas-installation|
 |/docs/maas-requirements|/docs/snap/3.0/ui/maas-requirements|
 |/docs/maas-security|/docs/snap/3.0/ui/hardening-your-maas-installation|
-|/docs/machine-overview|/docs/snap/3.0/ui/machines|
+|/docs/machine-overview|/docs/snap/3.0/ui/about-machines|
 |/docs/manage-account|/docs/snap/3.0/ui/user-accounts|
 |/docs/manage-audit-events|/docs/audit-event-logs|
 |/docs/manage-backup|/docs/snap/3.0/ui/backup|
@@ -1515,7 +1523,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/network-discovery|/docs/snap/3.0/ui/about-networking#heading--about-network-discovery|
 |/docs/network-testing|/docs/snap/3.0/ui/how-to-test-machines|
 |/docs/networking|/docs/snap/3.0/ui/about-networking|
-|/docs/node-overview|/docs/snap/3.0/ui/machines|
+|/docs/node-overview|/docs/snap/3.0/ui/about-machines|
 |/docs/nodes-add|/docs/snap/3.0/ui/manage-machines|
 |/docs/nodes-commission|/docs/snap/3.0/ui/how-to-commission-machines|
 |/docs/nodes-comp-hw|/docs/snap/3.0/ui/vm-hosting|
@@ -1524,7 +1532,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/nodes-hw-testing|/docs/snap/3.0/ui/how-to-test-machines|
 |/docs/nodes-kernel-options|/docs/snap/3.0/ui/how-to-customise-machines|
 |/docs/nodes-kernels|/docs/snap/2.9/cli/how-to-customise-machines|
-|/docs/nodes-overview|/docs/snap/3.0/ui/machines|
+|/docs/nodes-overview|/docs/snap/3.0/ui/about-machines|
 |/docs/nodes-power-types|/docs/snap/3.0/ui/power-management|
 |/docs/nodes-resource-pools|/docs/snap/2.9/cli/resource-pools|
 |/docs/nodes-scripts-cli|/docs/cli-testing-scripts|
