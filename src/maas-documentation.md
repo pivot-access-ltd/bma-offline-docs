@@ -46,6 +46,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [About IPv6](/t/ipv6-addressing-snap-3-0-ui/3970)
 - [About STP](/t/managing-stp-snap-3-0-ui/4038)
 - [About availability zones (AZs)](/t/zone-examples-snap-3-0-ui/4190)
+- [How to manage networks](/t/-/4927)
 - [How to manage interfaces](/t/-/3874)
 - [How to manage DHCP](/t/managing-dhcp-snap-3-0-ui/4034)
 - [How to manage IP ranges](/t/ip-ranges-snap-3-0-ui/3966)
@@ -108,6 +109,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/4920|/docs/deb/2.9/cli/how-to-manage-networks|
+|https://discourse.maas.io/t/-/4921|/docs/deb/2.9/ui/how-to-manage-networks|
+|https://discourse.maas.io/t/-/4922|/docs/deb/3.0/cli/how-to-manage-networks|
+|https://discourse.maas.io/t/-/4923|/docs/deb/3.0/ui/how-to-manage-networks|
+|https://discourse.maas.io/t/-/4924|/docs/snap/2.9/cli/how-to-manage-networks|
+|https://discourse.maas.io/t/-/4925|/docs/snap/2.9/ui/how-to-manage-networks|
+|https://discourse.maas.io/t/-/4926|/docs/snap/3.0/cli/how-to-manage-networks|
+|https://discourse.maas.io/t/-/4927|/docs/snap/3.0/ui/how-to-manage-networks|
 |https://discourse.maas.io/t/-/3914|/docs/snap/3.0/ui/how-to-deploy-machines|
 |https://discourse.maas.io/t/-/2602|/docs/snap/2.9/cli/how-to-deploy-machines|
 |https://discourse.maas.io/t/-/2603|/docs/snap/2.9/ui/how-to-deploy-machines|
@@ -1285,6 +1294,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/how-to-manage-networks|/docs/snap/3.0/ui/how-to-manage-networks|
 |/docs/deb/2.9/cli/networking|/docs/deb/2.9/cli/about-networking|
 |/docs/deb/2.9/ui/networking|/docs/deb/2.9/ui/about-networking|
 |/docs/deb/3.0/cli/networking|/docs/deb/3.0/cli/about-networking|
