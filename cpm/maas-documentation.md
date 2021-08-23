@@ -35,10 +35,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [How to commission machines](/t/how-to-commission-machines-snap-3-0-ui/3866)
 - [How to deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
 - [How to customise machines](/t/how-to-customise-machines-snap-3-0-ui/3910)
-- [How to manage resource pools](/t/resource-pools-snap-3-0-ui/4098)
 - [How to manage tags and annotations](/t/maas-tags-snap-3-0-ui/4022)
-
-### Storage
 - [How to manage storage](/t/storage-snap-3-0-ui/4106)
 
 ### [Networking](/t/about-networking-snap-3-0-ui/4046)
@@ -1238,7 +1235,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/756/|/docs/install-from-iso|
 |https://discourse.maas.io/t/-/779/|/docs/upgrading-maas|
 |https://discourse.maas.io/t/-/782/|/docs/web-ui|
-|https://discourse.maas.io/t/-/785#heading--network-tutorial|/docs/network-tutorial|
+|https://discourse.maas.io/t/-/785/|/docs/network-tutorial|
 |https://discourse.maas.io/t/-/785/|/docs/concepts-and-terms|
 |https://discourse.maas.io/t/-/793/|/docs/advanced-cli-tasks|
 |https://discourse.maas.io/t/-/794/|/docs/common-cli-tasks|
@@ -1275,8 +1272,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/2.9/ui/machines|/docs/snap/2.9/ui/about-machines|
 |/docs/snap/3.0/cli/machines|/docs/snap/3.0/cli/about-machines|
 |/docs/snap/3.0/ui/machines|/docs/snap/3.0/ui/about-machines|
-|/docs/deb/2.9/cli/zone-examples|/docs/deb/2.9/cli/about-networking#heading--about-availability-zones|
-|/docs/deb/2.9/ui/zone-examples|/docs/deb/2.9/ui/about-networking#heading--about-availability-zones|
+|/docs/deb/2.9/cli/zone-examples|/docs/deb/2.9/cli/about-availability-zones|
 |/docs/deb/3.0/cli/zone-examples|/docs/deb/3.0/cli/about-networking#heading--about-availability-zones|
 |/docs/deb/3.0/ui/zone-examples|/docs/deb/3.0/ui/about-networking#heading--about-availability-zones|
 |/docs/snap/2.9/cli/zone-examples|/docs/snap/2.9/cli/about-networking#heading--about-availability-zones|
