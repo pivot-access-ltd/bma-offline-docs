@@ -129,6 +129,46 @@ MAAS chooses the latest Ubuntu LTS release as the default image for commissionin
 Commissioning requires 60 seconds.
 [/note]
 
+<a href="#heading--about-acquisition-and-deployment"><h2 id="heading--about-acquisition-and-deployment">About acquisition and deployment</h2></a>
+
+Once a machine has been commissioned (see [Commission machines](/t/how-to-commission-machines/nnnn)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+
+Acquiring ("allocating") a machine reserves the machine for the exclusive use of the acquiring process. The machine is no longer available to any other process, including another MAAS instance, or a process such as Juju.
+
+Before deploying a machine, MAAS must acquire it (status 'Allocated'). When deploying from the web UI, this action is performed automatically (and invisibly).
+
+The action remains useful in terms of reserving a machine for later use. To acquire a machine explicitly select the machine and apply the 'Acquire' action.
+
+The agent that triggers deployment may vary. For instance, if the machines are destined to run complex, inter-related services that scale up or down frequently, like a "cloud" resource, then [Juju](https://jaas.ai/) is the recommended deployment agent. Juju will also install and configure services on the deployed machines. If you want to use MAAS to install a base operating system and work on the machines manually, then you can deploy a machine directly with MAAS.
+
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/nnnn#heading--ssh-keys).
+
+[note]
+Juju adds SSH keys to machines under its control.
+[/note]
+
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [How to customise machines](/t/how-to-customise-machines/nnnn).
+
+To deploy, you must configure the underlying machine to netboot.  Such a machine will undergo the following process:
+
+1.  DHCP server is contacted
+2.  kernel and initrd are received over TFTP
+3.  machine boots
+4.  initrd mounts a Squashfs image ephemerally over HTTP
+5.  cloud-init triggers deployment process
+6.  curtin installation script runs
+7.  Squashfs image (same as above) is placed on disk
+
+[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [How to customise machines](/t/how-to-customise-machines/nnnn).
+[/note]
+
+Before deploying, you should take two key actions:
+
+1.   review and possibly set the [Ubuntu kernels](/t/how-to-customise-machines/nnnn#heading--about-ubuntu-kernels) and the [Kernel boot options](/t/how-to-customise-machines/nnnn#heading--about-kerel-boot-options) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/nnnn#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+
+
 rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli
 
 <a href="#heading--about-disabling-individual-boot-methods"><h3 id="heading--about-disabling-individual-boot-methods">About disabling individual boot methods</h3></a>
@@ -638,3 +678,91 @@ Tags serve to help you identify, group, and find objects easily, especially when
 <a href="#heading--about-annotations"><h2 id="heading--about-annotations">About annotations</h2></a>
 
 Annotations are descriptive, searchable phrases that apply only to machines.  There are two types of annotations: static (always present in any machine state), and dynamic (only present in allocated or deployed states).  Annotations help you identify, characterise, and inform others about your machines.
+
+<a href="#heading--about-storage"><h2 id="heading--about-storage">About storage</h2></a>
+
+You have significant latitude when choosing the final storage configuration of a deployed machine. MAAS supports traditional disk partitioning, as well as more complex options such as LVM, RAID, and bcache. MAAS also supports UEFI as a boot mechanism.  This article explains boot mechanisms and layouts, and offers some advice on how to configure layouts and manage storage.
+
+A machine's storage is dependant upon the underlying system's disks, but its configuration (i.e., disk usage) is the result of a storage template. In MAAS, this template is called a layout, and MAAS applies it to a machine during commissioning.  Once a layout is applied, a regular user can make modifications to a machine at the filesystem level to arrive at the machine's final storage configuration.  When a machine is no longer needed, a user can choose from among several disk erasure types before releasing it.
+
+[note]
+MAAS supports storage configuration for CentOS and RHEL deployments. Support includes RAID, LVM, and custom partitioning with different file systems (ZFS and bcache excluded). This support requires a newer version of Curtin, [available as a PPA](https://launchpad.net/ubuntu/+source/curtin).
+[/note]
+
+<a href="#heading--about-uefi-booting"><h3 id="heading--about-uefi-booting">About UEFI booting</h3></a>
+
+Every layout type supports a machine booting with UEFI. In such a case, MAAS automatically creates an EFI boot partition (`/boot/efi`). Other than setting the machine to boot from UEFI, the user does not need to take any additional action.
+
+[note type="negative" status="Warning"]
+UEFI must be enabled or disabled for the lifespan of the machine. For example, do not enlist a machine with UEFI enabled, and then disable it before commissioning. It won't work!
+[/note]
+
+The EFI partition, if created, will be the first partition (`sda1`) and will have a FAT32 filesystem with a size of 512 MB.
+
+<a href="#heading--final-storage-modifications"><h2 id="heading--final-storage-modifications">About final storage modifications</h2></a>
+
+Once MAAS provisions a machine with block devices, via a layout or administrator customisation, a regular user can modify the resulting storage configuration at the filesystem level.
+
+<a href="#heading--about-disk-erasure"><h2 id="heading--about-disk-erasure">About disk erasure</h2></a>
+
+Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/concepts-and-terms/785#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
+
+<a href="#heading--about-disk-erasure-types"><h2 id="heading--about-disk-erasure-types">About disk erasure types</h2></a>
+
+The three disk erasure types are:
+
+1.   Standard erasure
+2.   Secure erasure
+3.   Quick erasure
+
+Each of these are explained below.
+
+<a href="#heading--about-standard-erase"><h3 id="heading--about-standard-erase">Abot standard erasure</h3></a>
+
+Overwrites all data with zeros.
+
+<a href="#heading--about-secure-erasure"><h3 id="heading--about-secure-erasure">About secure eraseure</h3></a>
+
+Although effectively equivalent to Standard erase, Secure erase is much faster because the disk's firmware performs the operation. Because of this, however, some disks may not be able to perform this erasure type (SCSI, SAS, and FC disks in particular).
+
+<a href="#heading--about-quick-erasure"><h3 id="heading--about-quick-erasure">About quick erasure</h3></a>
+
+Same as Standard erase but only targets the first 1 MB and the last 1 MB of each disk. This removes the partition tables and/or superblock from the disk, making data recovery difficult but not impossible.
+
+<a href="#heading--about-erasure-order-of-preference"><h2 id="heading--about-erasure-order-of-preference">About erasure order of preference</h2></a>
+
+If all three options are checked when the machine is released the following order of preference is applied:
+
+1.  Use 'secure erase' if the disk supports it
+2.  If it does not then use 'quick erase'
+
+<a href="#heading--about-block-devices"><h2 id="heading--about-block-devices">About block devices</h2></a>
+
+Once the initial storage layout has been configured on a machine, you can perform many operations to view and adjust the entire storage layout for the machine. In MAAS there are two different types of block devices.
+
+**Physical**
+
+A physical block device is a physically attached block device such as a 100GB hard drive connected to a server.
+
+**Virtual**
+
+A virtual block device is a block device that is exposed by the Linux kernel when an operation is performed. Almost all the operations on a physical block device can be performed on a virtual block device, such as a RAID device exposed as md0.
+
+<a href="#heading--about-partitions"><h2 id="heading--about-partitions">About partitions</h2></a>
+
+As with block devices (see [Block devices](#heading--about-block-devices)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
+
+<a href="#heading--about-storage-restrictions"><h2 id="heading--about-storage-restrictions">About storage restrictions</h2></a>
+
+There are three restrictions for the storage configuration:
+
+1.   An EFI partition is required to be on the boot disk for UEFI.
+2.   You cannot place partitions on logical volumes.
+3.   You cannot use a logical volume as a Bcache backing device.
+
+Violating these restrictions will prevent a successful deployment.
+
+<a href="#heading--about-vmfs-datastores"><h2 id="heading--about-vmfs-datastores">About VMFS datastores</h2></a>
+
+MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/nnnn#heading--vmfs6-layout). This layout creates a VMFS Datastore named `datastore1` which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
+

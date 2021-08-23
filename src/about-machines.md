@@ -129,6 +129,46 @@ MAAS chooses the latest Ubuntu LTS release as the default image for commissionin
 Commissioning requires 60 seconds.
 [/note]
 
+<a href="#heading--about-acquisition-and-deployment"><h2 id="heading--about-acquisition-and-deployment">About acquisition and deployment</h2></a>
+
+Once a machine has been commissioned (see [Commission machines](/t/how-to-commission-machines/nnnn)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+
+Acquiring ("allocating") a machine reserves the machine for the exclusive use of the acquiring process. The machine is no longer available to any other process, including another MAAS instance, or a process such as Juju.
+
+Before deploying a machine, MAAS must acquire it (status 'Allocated'). When deploying from the web UI, this action is performed automatically (and invisibly).
+
+The action remains useful in terms of reserving a machine for later use. To acquire a machine explicitly select the machine and apply the 'Acquire' action.
+
+The agent that triggers deployment may vary. For instance, if the machines are destined to run complex, inter-related services that scale up or down frequently, like a "cloud" resource, then [Juju](https://jaas.ai/) is the recommended deployment agent. Juju will also install and configure services on the deployed machines. If you want to use MAAS to install a base operating system and work on the machines manually, then you can deploy a machine directly with MAAS.
+
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/nnnn#heading--ssh-keys).
+
+[note]
+Juju adds SSH keys to machines under its control.
+[/note]
+
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [How to customise machines](/t/how-to-customise-machines/nnnn).
+
+To deploy, you must configure the underlying machine to netboot.  Such a machine will undergo the following process:
+
+1.  DHCP server is contacted
+2.  kernel and initrd are received over TFTP
+3.  machine boots
+4.  initrd mounts a Squashfs image ephemerally over HTTP
+5.  cloud-init triggers deployment process
+6.  curtin installation script runs
+7.  Squashfs image (same as above) is placed on disk
+
+[note]
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [How to customise machines](/t/how-to-customise-machines/nnnn).
+[/note]
+
+Before deploying, you should take two key actions:
+
+1.   review and possibly set the [Ubuntu kernels](/t/how-to-customise-machines/nnnn#heading--about-ubuntu-kernels) and the [Kernel boot options](/t/how-to-customise-machines/nnnn#heading--about-kerel-boot-options) that will get used by deployed machines.
+2.   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/nnnn#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+
+
 rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli
 
 <a href="#heading--about-disabling-individual-boot-methods"><h3 id="heading--about-disabling-individual-boot-methods">About disabling individual boot methods</h3></a>
@@ -725,3 +765,4 @@ Violating these restrictions will prevent a successful deployment.
 <a href="#heading--about-vmfs-datastores"><h2 id="heading--about-vmfs-datastores">About VMFS datastores</h2></a>
 
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/nnnn#heading--vmfs6-layout). This layout creates a VMFS Datastore named `datastore1` which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
+
