@@ -32,7 +32,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 - [How to manage machines](/t/-/4844)
 - [How to test machines](/t/hardware-testing-snap-3-0-ui/3942)
-- [How to commission machines](/t/how-to-commission-machines-snap-3-0-ui/3866)
 - [How to deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
 - [How to customise machines](/t/how-to-customise-machines-snap-3-0-ui/3910)
 
