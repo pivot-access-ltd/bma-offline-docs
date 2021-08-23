@@ -620,3 +620,21 @@ Similarly, scripts selected by tag on the command line which specify the `for_ha
 <a href="#heading--about-resource-pools"><h2 id="heading--about-resource-pools">About resource pools</h2></a>
 
 Resource pools allow administrators to logically group resources -- machines and VM hosts -- into pools. Pools can help you budget machines for a particular set of functions.  For example, if you're using MAAS to manage a hospital data centre, you may want to keep a certain number of machines reserved for provider use, whether that be for the charts, documentation, or orders application.  You can use resource pools to reserve those machines, regardless of which of the three applications you end up loading onto a particular machine at any given time. 
+
+<a href="#heading--about-tags"><h2 id="heading--about-tags">About tags</h2></a>
+
+Tags are short, descriptive, searchable words that can be applied to various MAAS objects, including:
+
+* machines (physical and virtual)
+* VM hosts
+* controllers (rack and region)
+* storage (virtual and physical; block devices or partitions)
+* network interfaces
+* devices
+* nodes (in the CLI only)
+
+Tags serve to help you identify, group, and find objects easily, especially when you routinely deploy hundreds of machines.
+
+<a href="#heading--about-annotations"><h2 id="heading--about-annotations">About annotations</h2></a>
+
+Annotations are descriptive, searchable phrases that apply only to machines.  There are two types of annotations: static (always present in any machine state), and dynamic (only present in allocated or deployed states).  Annotations help you identify, characterise, and inform others about your machines.
