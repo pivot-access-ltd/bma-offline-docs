@@ -617,3 +617,6 @@ When selecting [multiple machines](/t/about-machines/nnnn), scripts which declar
 
 Similarly, scripts selected by tag on the command line which specify the `for_hardware` field will only run on matching hardware.
 
+<a href="#heading--about-resource-pools"><h2 id="heading--about-resource-pools">About resource pools</h2></a>
+
+Resource pools allow administrators to logically group resources -- machines and VM hosts -- into pools. Pools can help you budget machines for a particular set of functions.  For example, if you're using MAAS to manage a hospital data centre, you may want to keep a certain number of machines reserved for provider use, whether that be for the charts, documentation, or orders application.  You can use resource pools to reserve those machines, regardless of which of the three applications you end up loading onto a particular machine at any given time. 
