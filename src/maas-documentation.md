@@ -65,7 +65,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [Mirror images locally](/t/local-image-mirror-snap-3-0-ui/3982)
 - [Manage VMWare images](/t/vmware-images-snap-3-0-ui/4174)
 
-### [Tags](/t/tags-and-annotations-snap-3-0-ui/4022)
+### [Tags](/t/about-tags-snap-3-0-ui/4022)
+
+- [Manage tags](/t/-/4954)
+- [Use machine tags](/t/-/4958)
 
 ### Operations
 
@@ -103,6 +106,62 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/4947|/docs/deb/2.9/cli/how-to-manage-tags|
+|https://discourse.maas.io/t/-/4948|/docs/deb/2.9/ui/how-to-manage-tags|
+|https://discourse.maas.io/t/-/4949|/docs/deb/3.0/cli/how-to-manage-tags|
+|https://discourse.maas.io/t/-/4950|/docs/deb/3.0/ui/how-to-manage-tags|
+|https://discourse.maas.io/t/-/4951|/docs/snap/2.9/cli/how-to-manage-tags|
+|https://discourse.maas.io/t/-/4952|/docs/snap/2.9/ui/how-to-manage-tags|
+|https://discourse.maas.io/t/-/4953|/docs/snap/3.0/cli/how-to-manage-tags|
+|https://discourse.maas.io/t/-/4954|/docs/snap/3.0/ui/how-to-manage-tags|
+|https://discourse.maas.io/t/-/4955|/docs/deb/2.9/cli/how-to-use-machine-tags|
+|https://discourse.maas.io/t/-/4956|/docs/deb/2.9/ui/how-to-use-machine-tags|
+|https://discourse.maas.io/t/-/4957|/docs/deb/3.0/cli/how-to-use-machine-tags|
+|https://discourse.maas.io/t/-/4958|/docs/deb/3.0/ui/how-to-use-machine-tags|
+|https://discourse.maas.io/t/-/4959|/docs/snap/2.9/cli/how-to-use-machine-tags|
+|https://discourse.maas.io/t/-/4960|/docs/snap/2.9/ui/how-to-use-machine-tags|
+|https://discourse.maas.io/t/-/4961|/docs/snap/3.0/cli/how-to-use-machine-tags|
+|https://discourse.maas.io/t/-/4962|/docs/snap/3.0/ui/how-to-use-machine-tags|
+|https://discourse.maas.io/t/-/4963|/docs/deb/2.9/cli/how-to-use-controller-tags|
+|https://discourse.maas.io/t/-/4964|/docs/deb/2.9/ui/how-to-use-controller-tags|
+|https://discourse.maas.io/t/-/4965|/docs/deb/3.0/cli/how-to-use-controller-tags|
+|https://discourse.maas.io/t/-/4966|/docs/deb/3.0/ui/how-to-use-controller-tags|
+|https://discourse.maas.io/t/-/4967|/docs/snap/2.9/cli/how-to-use-controller-tags|
+|https://discourse.maas.io/t/-/4968|/docs/snap/2.9/ui/how-to-use-controller-tags|
+|https://discourse.maas.io/t/-/4969|/docs/snap/3.0/cli/how-to-use-controller-tags|
+|https://discourse.maas.io/t/-/4970|/docs/snap/3.0/ui/how-to-use-controller-tags|
+|https://discourse.maas.io/t/-/4971|/docs/deb/2.9/cli/how-to-use-storage-tags|
+|https://discourse.maas.io/t/-/4972|/docs/deb/2.9/ui/how-to-use-storage-tags|
+|https://discourse.maas.io/t/-/4973|/docs/deb/3.0/cli/how-to-use-storage-tags|
+|https://discourse.maas.io/t/-/4974|/docs/deb/3.0/ui/how-to-use-storage-tags|
+|https://discourse.maas.io/t/-/4975|/docs/snap/2.9/cli/how-to-use-storage-tags|
+|https://discourse.maas.io/t/-/4976|/docs/snap/2.9/ui/how-to-use-storage-tags|
+|https://discourse.maas.io/t/-/4977|/docs/snap/3.0/cli/how-to-use-storage-tags|
+|https://discourse.maas.io/t/-/4978|/docs/snap/3.0/ui/how-to-use-storage-tags|
+|https://discourse.maas.io/t/-/4979|/docs/deb/2.9/cli/how-to-use-network-tags|
+|https://discourse.maas.io/t/-/4980|/docs/deb/2.9/ui/how-to-use-network-tags|
+|https://discourse.maas.io/t/-/4981|/docs/deb/3.0/cli/how-to-use-network-tags|
+|https://discourse.maas.io/t/-/4982|/docs/deb/3.0/ui/how-to-use-network-tags|
+|https://discourse.maas.io/t/-/4983|/docs/snap/2.9/cli/how-to-use-network-tags|
+|https://discourse.maas.io/t/-/4984|/docs/snap/2.9/ui/how-to-use-network-tags|
+|https://discourse.maas.io/t/-/4985|/docs/snap/3.0/cli/how-to-use-network-tags|
+|https://discourse.maas.io/t/-/4986|/docs/snap/3.0/ui/how-to-use-network-tags|
+|https://discourse.maas.io/t/-/4987|/docs/deb/2.9/cli/how-to-use-device-tags|
+|https://discourse.maas.io/t/-/4988|/docs/deb/2.9/ui/how-to-use-device-tags|
+|https://discourse.maas.io/t/-/4989|/docs/deb/3.0/cli/how-to-use-device-tags|
+|https://discourse.maas.io/t/-/4990|/docs/deb/3.0/ui/how-to-use-device-tags|
+|https://discourse.maas.io/t/-/4991|/docs/snap/2.9/cli/how-to-use-device-tags|
+|https://discourse.maas.io/t/-/4992|/docs/snap/2.9/ui/how-to-use-device-tags|
+|https://discourse.maas.io/t/-/4993|/docs/snap/3.0/cli/how-to-use-device-tags|
+|https://discourse.maas.io/t/-/4994|/docs/snap/3.0/ui/how-to-use-device-tags|
+|https://discourse.maas.io/t/-/4995|/docs/deb/2.9/cli/how-to-use-node-tags|
+|https://discourse.maas.io/t/-/4996|/docs/deb/2.9/ui/how-to-use-node-tags|
+|https://discourse.maas.io/t/-/4997|/docs/deb/3.0/cli/how-to-use-node-tags|
+|https://discourse.maas.io/t/-/4998|/docs/deb/3.0/ui/how-to-use-node-tags|
+|https://discourse.maas.io/t/-/4999|/docs/snap/2.9/cli/how-to-use-node-tags|
+|https://discourse.maas.io/t/-/5000|/docs/snap/2.9/ui/how-to-use-node-tags|
+|https://discourse.maas.io/t/-/5001|/docs/snap/3.0/cli/how-to-use-node-tags|
+|https://discourse.maas.io/t/-/5002|/docs/snap/3.0/ui/how-to-use-node-tags|
 |https://discourse.maas.io/t/-/4030|/docs/snap/3.0/ui/about-machines|
 |https://discourse.maas.io/t/-/2734|/docs/snap/2.9/cli/about-machines|
 |https://discourse.maas.io/t/-/2735|/docs/snap/2.9/ui/about-machines|
@@ -159,7 +218,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4106|/docs/snap/3.0/ui/storage|
 |https://discourse.maas.io/t/-/4470|/docs/snap/3.0/ui/using-lxd-projects-with-maas|
 |https://discourse.maas.io/t/-/4098|/docs/snap/3.0/ui/resource-pools|
-|https://discourse.maas.io/t/-/4022|/docs/snap/3.0/ui/tags-and-annotations|
+|https://discourse.maas.io/t/-/4022|/docs/snap/3.0/ui/about-tags|
 |https://discourse.maas.io/t/-/3958|/docs/snap/3.0/ui/images|
 |https://discourse.maas.io/t/-/4102|/docs/snap/3.0/ui/select-and-import-images|
 |https://discourse.maas.io/t/-/3998|/docs/snap/3.0/ui/maas-image-builder|
@@ -655,14 +714,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/2887|/docs/snap/2.7/ui/tags-and-annotations|
 |https://discourse.maas.io/t/-/2888|/docs/snap/2.8/cli/tags-and-annotations|
 |https://discourse.maas.io/t/-/2889|/docs/snap/2.8/ui/tags-and-annotations|
-|https://discourse.maas.io/t/-/2890|/docs/snap/2.9/cli/tags-and-annotations|
-|https://discourse.maas.io/t/-/2891|/docs/snap/2.9/ui/tags-and-annotations|
+|https://discourse.maas.io/t/-/2890|/docs/snap/2.9/cli/about-tags|
+|https://discourse.maas.io/t/-/2891|/docs/snap/2.9/ui/about-tags|
 |https://discourse.maas.io/t/-/2892|/docs/deb/2.7/cli/tags-and-annotations|
 |https://discourse.maas.io/t/-/2893|/docs/deb/2.7/ui/tags-and-annotations|
 |https://discourse.maas.io/t/-/2894|/docs/deb/2.8/cli/tags-and-annotations|
 |https://discourse.maas.io/t/-/2895|/docs/deb/2.8/ui/tags-and-annotations|
-|https://discourse.maas.io/t/-/2896|/docs/deb/2.9/cli/tags-and-annotations|
-|https://discourse.maas.io/t/-/2897|/docs/deb/2.9/ui/tags-and-annotations|
+|https://discourse.maas.io/t/-/2896|/docs/deb/2.9/cli/about-tags|
+|https://discourse.maas.io/t/-/2897|/docs/deb/2.9/ui/about-tags|
 |https://discourse.maas.io/t/-/2898|/docs/snap/2.7/cli/managing-dhcp|
 |https://discourse.maas.io/t/-/2899|/docs/snap/2.7/ui/managing-dhcp|
 |https://discourse.maas.io/t/-/2900|/docs/snap/2.8/cli/managing-dhcp|
@@ -1120,9 +1179,9 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4013|/docs/snap/3.0/cli/maas-requirements|
 |https://discourse.maas.io/t/-/4015|/docs/deb/3.0/cli/maas-requirements|
 |https://discourse.maas.io/t/-/4016|/docs/deb/3.0/ui/maas-requirements|
-|https://discourse.maas.io/t/-/4021|/docs/snap/3.0/cli/tags-and-annotations|
-|https://discourse.maas.io/t/-/4023|/docs/deb/3.0/cli/tags-and-annotations|
-|https://discourse.maas.io/t/-/4024|/docs/deb/3.0/ui/tags-and-annotations|
+|https://discourse.maas.io/t/-/4021|/docs/snap/3.0/cli/about-tags|
+|https://discourse.maas.io/t/-/4023|/docs/deb/3.0/cli/about-tags|
+|https://discourse.maas.io/t/-/4024|/docs/deb/3.0/ui/about-tags|
 |https://discourse.maas.io/t/-/4025|/docs/snap/3.0/cli/machine-logs|
 |https://discourse.maas.io/t/-/4027|/docs/deb/3.0/cli/machine-logs|
 |https://discourse.maas.io/t/-/4028|/docs/deb/3.0/ui/machine-logs|
@@ -1264,6 +1323,15 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/maas-tags|/docs/deb/3.0/ui/about-tags|
+|/docs/deb/2.9/cli/tags-and-annotations|/docs/deb/2.9/cli/about-tags|
+|/docs/deb/2.9/ui/tags-and-annotations|/docs/deb/2.9/ui/about-tags|
+|/docs/deb/3.0/cli/tags-and-annotations|/docs/deb/3.0/cli/about-tags|
+|/docs/deb/3.0/ui/tags-and-annotations|/docs/deb/3.0/ui/about-tags|
+|/docs/snap/2.9/cli/tags-and-annotations|/docs/snap/2.9/cli/about-tags|
+|/docs/snap/2.9/ui/tags-and-annotations|/docs/snap/2.9/ui/about-tags|
+|/docs/snap/3.0/cli/tags-and-annotations|/docs/snap/3.0/cli/about-tags|
+|/docs/snap/3.0/ui/tags-and-annotations|/docs/snap/3.0/ui/about-tags|
 |/docs/deb/2.9/cli/machines|/docs/deb/2.9/cli/about-machines|
 |/docs/deb/2.9/ui/machines|/docs/deb/2.9/ui/about-machines|
 |/docs/deb/3.0/cli/machines|/docs/deb/3.0/cli/about-machines|
@@ -1341,7 +1409,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/bmc-power-types|/docs/snap/3.0/ui/power-management|
 |/docs/cli-dhcp-snippet-management|/docs/snap/2.9/cli/managing-dhcp|
 |/docs/cli-resource-pool-management|/docs/snap/2.9/cli/resource-pools|
-|/docs/cli-tag-management|/docs/snap/2.9/cli/maas-tags|
+|/docs/cli-tag-management|/docs/snap/3.0/cli/about-tags|
 |/docs/commission-nodes|/docs/snap/3.0/ui/how-to-commission-machines|
 |/docs/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
 |/docs/commissioning-logs|/docs/snap/3.0/ui/commissioning-logs|
@@ -1368,7 +1436,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/deb/2.9/cli/disk-erasure|/docs/deb/2.9/cli/storage|
 |/docs/deb/2.9/cli/hardware-testing|/docs/deb/2.9/cli/how-to-test-machines|
 |/docs/deb/2.9/cli/kernel-boot-options|/docs/deb/2.9/cli/how-to-customise-machines|
-|/docs/deb/2.9/cli/maas-tags|/docs/deb/2.9/cli/tags-and-annotations|
+|/docs/deb/2.9/cli/maas-tags|/docs/deb/2.9/cli/about-tags|
 |/docs/deb/2.9/cli/network-testing|/docs/deb/2.9/cli/how-to-test-machines|
 |/docs/deb/2.9/cli/partitions|/docs/deb/2.9/cli/storage|
 |/docs/deb/2.9/cli/ubuntu-kernels|/docs/deb/2.9/cli/how-to-customise-machines|
@@ -1381,7 +1449,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/deb/2.9/ui/disk-erasure|/docs/deb/2.9/ui/storage|
 |/docs/deb/2.9/ui/hardware-testing|/docs/deb/2.9/ui/how-to-test-machines|
 |/docs/deb/2.9/ui/kernel-boot-options|/docs/deb/2.9/ui/how-to-customise-machines|
-|/docs/deb/2.9/ui/maas-tags|/docs/deb/2.9/ui/tags-and-annotations|
+|/docs/deb/2.9/ui/maas-tags|/docs/deb/2.9/ui/about-tags|
 |/docs/deb/2.9/ui/network-testing|/docs/deb/2.9/ui/how-to-test-machines|
 |/docs/deb/2.9/ui/partitions|/docs/deb/2.9/ui/storage|
 |/docs/deb/2.9/ui/ubuntu-kernels|/docs/deb/2.9/ui/how-to-customise-machines|
@@ -1394,7 +1462,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/deb/3.0/cli/disk-erasure|/docs/deb/3.0/cli/storage|
 |/docs/deb/3.0/cli/hardware-testing|/docs/deb/3.0/cli/how-to-test-machines|
 |/docs/deb/3.0/cli/kernel-boot-options|/docs/deb/3.0/cli/how-to-customise-machines|
-|/docs/deb/3.0/cli/maas-tags|/docs/deb/3.0/cli/tags-and-annotations|
+|/docs/deb/3.0/cli/maas-tags|/docs/deb/3.0/cli/about-tags|
 |/docs/deb/3.0/cli/network-testing|/docs/deb/3.0/cli/how-to-test-machines|
 |/docs/deb/3.0/cli/partitions|/docs/deb/3.0/cli/storage|
 |/docs/deb/3.0/cli/ubuntu-kernels|/docs/deb/3.0/cli/how-to-customise-machines|
@@ -1407,7 +1475,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/deb/3.0/ui/disk-erasure|/docs/deb/3.0/ui/storage|
 |/docs/deb/3.0/ui/hardware-testing|/docs/deb/3.0/ui/how-to-test-machines|
 |/docs/deb/3.0/ui/kernel-boot-options|/docs/deb/3.0/ui/how-to-customise-machines|
-|/docs/deb/3.0/ui/maas-tags|/docs/deb/3.0/ui/tags-and-annotations|
+|/docs/deb/3.0/ui/maas-tags|/docs/deb/3.0/ui/about-tags|
 |/docs/deb/3.0/ui/network-testing|/docs/deb/3.0/ui/how-to-test-machines|
 |/docs/deb/3.0/ui/partitions|/docs/deb/3.0/ui/storage|
 |/docs/deb/3.0/ui/ubuntu-kernels|/docs/deb/3.0/ui/how-to-customise-machines|
@@ -1559,7 +1627,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/2.9/cli/disk-erasure|/docs/snap/2.9/cli/storage|
 |/docs/snap/2.9/cli/hardware-testing|/docs/snap/2.9/cli/how-to-test-machines|
 |/docs/snap/2.9/cli/kernel-boot-options|/docs/snap/2.9/cli/how-to-customise-machines|
-|/docs/snap/2.9/cli/maas-tags|/docs/snap/2.9/cli/tags-and-annotations|
+|/docs/snap/2.9/cli/maas-tags|/docs/snap/2.9/cli/about-tags|
 |/docs/snap/2.9/cli/network-testing|/docs/snap/2.9/cli/how-to-test-machines|
 |/docs/snap/2.9/cli/partitions|/docs/snap/2.9/cli/storage|
 |/docs/snap/2.9/cli/ubuntu-kernels|/docs/snap/2.9/cli/how-to-customise-machines|
@@ -1572,7 +1640,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/2.9/ui/disk-erasure|/docs/snap/2.9/ui/storage|
 |/docs/snap/2.9/ui/hardware-testing|/docs/snap/2.9/ui/how-to-test-machines|
 |/docs/snap/2.9/ui/kernel-boot-options|/docs/snap/2.9/ui/how-to-customise-machines|
-|/docs/snap/2.9/ui/maas-tags|/docs/snap/2.9/ui/tags-and-annotations|
+|/docs/snap/2.9/ui/maas-tags|/docs/snap/2.9/ui/about-tags|
 |/docs/snap/2.9/ui/network-testing|/docs/snap/2.9/ui/how-to-test-machines|
 |/docs/snap/2.9/ui/partitions|/docs/snap/2.9/ui/storage|
 |/docs/snap/2.9/ui/ubuntu-kernels|/docs/snap/2.9/ui/how-to-customise-machines|
@@ -1585,7 +1653,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/3.0/cli/disk-erasure|/docs/snap/3.0/cli/storage|
 |/docs/snap/3.0/cli/hardware-testing|/docs/snap/3.0/cli/how-to-test-machines|
 |/docs/snap/3.0/cli/kernel-boot-options|/docs/snap/3.0/cli/how-to-customise-machines|
-|/docs/snap/3.0/cli/maas-tags|/docs/snap/3.0/cli/tags-and-annotations|
+|/docs/snap/3.0/cli/maas-tags|/docs/snap/3.0/cli/about-tags|
 |/docs/snap/3.0/cli/network-testing|/docs/snap/3.0/cli/how-to-test-machines|
 |/docs/snap/3.0/cli/partitions|/docs/snap/3.0/cli/storage|
 |/docs/snap/3.0/cli/ubuntu-kernels|/docs/snap/3.0/cli/how-to-customise-machines|
@@ -1598,7 +1666,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/3.0/ui/disk-erasure|/docs/snap/3.0/ui/storage|
 |/docs/snap/3.0/ui/hardware-testing|/docs/snap/3.0/ui/how-to-test-machines|
 |/docs/snap/3.0/ui/kernel-boot-options|/docs/snap/3.0/ui/how-to-customise-machines|
-|/docs/snap/3.0/ui/maas-tags|/docs/snap/3.0/ui/tags-and-annotations|
+|/docs/snap/3.0/ui/maas-tags|/docs/snap/3.0/ui/about-tags|
 |/docs/snap/3.0/ui/network-testing|/docs/snap/3.0/ui/how-to-test-machines|
 |/docs/snap/3.0/ui/partitions|/docs/snap/3.0/ui/storage|
 |/docs/snap/3.0/ui/ubuntu-kernels|/docs/snap/3.0/ui/how-to-customise-machines|
