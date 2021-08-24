@@ -6,12 +6,12 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 - [Find out what's new in MAAS](/t/whats-new-in-maas/4182)
 - [Get started with MAAS](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)
-- [How to get professional support](https://maas.io/contact-us)
-- [How to report a bug](/t/report-a-bug/4446)
-- [How to request a feature](/t/request-a-feature/4447)
-- [How to ask questions on the forum](https://discourse.maas.io)
-- [How to push some code](https://launchpad.net/maas)
-- [How to help improve our documentation](/t/writing-guide/4186)
+- [Get professional support](https://maas.io/contact-us)
+- [Report a bug](/t/report-a-bug/4446)
+- [Request a feature](/t/request-a-feature/4447)
+- [Ask questions on the forum](https://discourse.maas.io)
+- [Push some code](https://launchpad.net/maas)
+- [Improve our documentation](/t/writing-guide/4186)
 
 ## Navigation
 
@@ -19,57 +19,61 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 - [About MAAS](/t/about-maas-snap-3-0-ui/3813)
 - [Get started with MAAS](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)
-- [How to install MAAS](/t/maas-installation-snap-3-0-ui/4002)
-- [How to use the MAAS CLI](/t/maas-cli-snap-3-0-ui/3986)
+- [Install MAAS](/t/maas-installation-snap-3-0-ui/4002)
+- [Use the MAAS CLI](/t/maas-cli-snap-3-0-ui/3986)
 
 ### [Controllers](/t/controllers-snap-3-0-ui/3898)
 
-- [How to manage racks](/t/rack-controllers-snap-3-0-ui/4090)
-- [How to manage regions](/t/region-controllers-snap-3-0-ui/4094)
-- [How to enable HA](/t/high-availability-snap-3-0-ui/3946)
+- [Manage racks](/t/rack-controllers-snap-3-0-ui/4090)
+- [Manage regions](/t/region-controllers-snap-3-0-ui/4094)
+- [Enable HA](/t/high-availability-snap-3-0-ui/3946)
 
 ### [Machines](/t/machines-snap-3-0-ui/4030)
 
-- [How to manage machines](/t/-/4844)
-- [How to deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
-- [How to customise machines](/t/how-to-customise-machines-snap-3-0-ui/3910)
+- [Manage machines](/t/-/4844)
+- [Deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
+- [Use resource pools](/t/resource-pools-snap-3-0-ui/4098)
+- [Manage storage](/t/storage-deb-3-0-cli/4107)
+- [Customise machines](/t/how-to-customise-machines-snap-3-0-ui/3910)
+
+### [Tags](/t/tags-and-annotations-snap-3-0-ui/4022)
 
 ### [Networking](/t/about-networking-snap-3-0-ui/4046)
 
-- [How to manage networks](/t/-/4927)
-- [How to manage interfaces](/t/-/3874)
-- [How to manage DHCP](/t/managing-dhcp-snap-3-0-ui/4034)
-- [How to manage IP ranges](/t/ip-ranges-snap-3-0-ui/3966)
-- [How to create proxies](/t/proxy-snap-3-0-ui/4082)
-- [How to enable TLS](/t/configuring-tls-encryption-snap-3-0-ui/3890)
-- [How to manage zones (AZs)](/t/availability-zones-snap-3-0-ui/3834)
-- [How to setup NTP](/t/ntp-services-snap-3-0-ui/4054)
-- [How to use air-gapped MAAS](/t/using-maas-in-an-air-gapped-environment-snap-3-0-ui/4154)
+- [Manage networks](/t/-/4927)
+- [Manage interfaces](/t/-/3874)
+- [Manage DHCP](/t/managing-dhcp-snap-3-0-ui/4034)
+- [Manage IP ranges](/t/ip-ranges-snap-3-0-ui/3966)
+- [Manage proxies](/t/proxy-snap-3-0-ui/4082)
+- [Enable TLS](/t/configuring-tls-encryption-snap-3-0-ui/3890)
+- [Manage zones (AZs)](/t/availability-zones-snap-3-0-ui/3834)
+- [Set up NTP](/t/ntp-services-snap-3-0-ui/4054)
+- [Use air-gapped MAAS](/t/using-maas-in-an-air-gapped-environment-snap-3-0-ui/4154)
 
 ### [Images](/t/images-snap-3-0-ui/3958)
 
-- [How to import images](/t/select-and-import-images-snap-3-0-ui/4102)
-- [How to build MAAS images](/t/maas-image-builder-snap-3-0-ui/3998)
-- [Custom Ubuntu images](/t/creating-a-custom-ubuntu-image-snap-3-0-ui/3902)
-- [How to use image streams](/t/using-image-streams-snap-3-0-ui/4150)
-- [How to mirror images locally](/t/local-image-mirror-snap-3-0-ui/3982)
-- [How to manage VMWare images](/t/vmware-images-snap-3-0-ui/4174)
+- [Import images](/t/select-and-import-images-snap-3-0-ui/4102)
+- [Build MAAS images](/t/maas-image-builder-snap-3-0-ui/3998)
+- [Create custom Ubuntu images](/t/creating-a-custom-ubuntu-image-snap-3-0-ui/3902)
+- [Use image streams](/t/using-image-streams-snap-3-0-ui/4150)
+- [Mirror images locally](/t/local-image-mirror-snap-3-0-ui/3982)
+- [Manage VMWare images](/t/vmware-images-snap-3-0-ui/4174)
 
 ### [VM hosting](/t/vm-hosting-snap-3-0-ui/4162)
 
 - [About storage pools](/t/vm-host-storage-pools-snap-3-0-ui/4170)
-- [How to network VM hosts](/t/vm-host-networking-snap-3-0-ui/4166)
-- [How to add a VM host](/t/adding-a-vm-host-snap-3-0-ui/3818)
-- [How to manage VMs](/t/creating-and-deleting-vms-snap-3-0-ui/3906)
-- [How to use LXD projects](/t/using-lxd-projects-with-maas/4470)
+- [Network VM hosts](/t/vm-host-networking-snap-3-0-ui/4166)
+- [Manage VM hosts](/t/adding-a-vm-host-snap-3-0-ui/3818)
+- [Manage VMs](/t/creating-and-deleting-vms-snap-3-0-ui/3906)
+- [Use LXD](/t/using-lxd-projects-with-maas/4470)
 
 ### Operations
 
-- [How to set up Prometheus](/t/prometheus-metrics-snap-3-0-ui/4074)
-- [How to back up MAAS](/t/backup-snap-3-0-ui/3838)
-- [How to secure MAAS](/t/hardening-your-maas-installation-snap-3-0-ui/3938)
-- [How to manage users](/t/user-accounts-snap-3-0-ui/4146)
-- [How to search MAAS](/t/interactive-search-snap-3-0-ui/3962)
+- [Set up Prometheus](/t/prometheus-metrics-snap-3-0-ui/4074)
+- [Back up MAAS](/t/backup-snap-3-0-ui/3838)
+- [Secure MAAS](/t/hardening-your-maas-installation-snap-3-0-ui/3938)
+- [Manage users](/t/user-accounts-snap-3-0-ui/4146)
+- [Search MAAS](/t/interactive-search-snap-3-0-ui/3962)
 
 ### Reference
 
@@ -84,15 +88,15 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 ### [Troubleshooting](/t/troubleshooting-snap-3-0-ui/4134)
 
-- [How to get help](/t/getting-help/838)
+- [Get help](/t/getting-help/838)
 - [Tips, tricks, and traps](/t/tips-tricks-and-traps-snap-3-0-ui/4130)
-- [How to upgrade MAAS](/t/upgrading-maas/779)
+- [Upgrade MAAS](/t/upgrading-maas/779)
 
 ### [Release notes](/t/whats-new-in-maas/4291)
 
-### [How to improve the doc](/t/writing-guide-snap-3-0-ui/4186)
+### [Improve the doc](/t/writing-guide-snap-3-0-ui/4186)
 
-### [How to contact us](/t/contact-us/743)
+### [Contact us](/t/contact-us/743)
 
 ## URLs
 

@@ -1,5 +1,16 @@
 Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers. MAAS manages their transit through a life-cycle, from adding and enlistment, through commissioning, allocation, and deployment, finally being released back to the pool, or retired altogether.  You can move them around, create redundant versions (even in other geographies you can access), and basically rearrange them to the extent that your network allows.
 
+In this article, you will learn:
+
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui
+* [About the machine list](#heading--about-the-machine-list)
+* [About the machine summary](#heading--about-the-machine-summary)
+rad-end
+* [About tags](#heading--about-tags)
+
 <a href="#heading--about-the-machine-life-cycle"><h2 id="heading--about-the-machine-life-cycle">About the machine life-cycle</h2></a>
 
 One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, acquired, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
@@ -121,7 +132,7 @@ You must recommission NUMA/SR-IOV machines that were previously commissioned und
 
 When using these nodes, you can specify a node index for interfaces and physical block devices.  MAAS will display the NUMA node index and details, depending upon your configuration, to include the count of NUMA nodes, number of CPU cores, memory, NICs, and node spaces for bonds and block devices.  You can also filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID, among others.
 
-<a href="#heading--about-maas-commissioning-scripts"><h2 id="heading--about-maas-commissioning-scripts">About MAAS commissioning scripts</h2></a>
+<a href="#heading--about-maas-commissioning-scripts"><h3 id="heading--about-maas-commissioning-scripts">About MAAS commissioning scripts</h3></a>
 
 MAAS runs scripts during enlistment, commissioning and testing to collect data about nodes. Both enlistment and commissioning run all builtin commissioning scripts, though enlistment runs only built-ins. Commissioning also runs any user-uploaded commissioning scripts by default, unless the user manually provides a list of scripts to run. MAAS uses these commissioning scripts to configure hardware and perform other tasks during commissioning, such as updating the firmware. Similarly, MAAS employs hardware testing scripts to evaluate system hardware and report its status.
 

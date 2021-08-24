@@ -5,6 +5,8 @@ This article explains:
 
 Most of the day-to-day work of managing machines is covered here. Utilising machines to do work -- for example, commissioning, testing, and deploying them -- is discussed in [How to deploy machines](/t/how-to-deploy-machines/nnnn).
 
+* How to create, delete, and configure machines
+
 <a href="#heading--how-to-create-delete-and-configure-machines"><h2 id="heading--how-to-create-delete-and-configure-machines">How to create, delete, and configure machines</h2></a>
 
 This section shows you:
@@ -17,6 +19,7 @@ rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli
 - [How to manage attached USB and PCI devices](#heading--usb-pci-devices)
 rad-end
 
+** How to add a machine manually
 <a href="#heading--how-to-add-a-machine-manually"><h3 id="heading--how-to-add-a-machine-manually">How to add a machine manually</h3></a>
 
 rad-begin   /deb/2.9/ui /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui 
@@ -28,21 +31,21 @@ Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI
 
 The fields on the "Add machine" screen include the following items:
 
-* **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
+- **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
 
-* **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
+- **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
 
-* **Architecture**: This field refers to the architecture of the machine being added.
+- **Architecture**: This field refers to the architecture of the machine being added.
 
-* **Minimum Kernel**: This field supplies a drop-down of possible kernels available for deployment on this machine.
+- **Minimum Kernel**: This field supplies a drop-down of possible kernels available for deployment on this machine.
 
-* **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
+- **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
 
-* **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
+- **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
 
-* **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
+- **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
 
-* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/nnnn) for details on the available power types and the relevant parameters for each type.
+- **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/nnnn) for details on the available power types and the relevant parameters for each type.
 rad-end
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
@@ -83,17 +86,18 @@ The variable fields in the `machines create` command (the `$...` items) are as f
 > power_parameters_power_pass=$POWER_PASSWORD
 ```
 
-* `$ARCH`: This field refers to the architecture of the machine being added, `amd64` in the local laptop example.
+- `$ARCH`: This field refers to the architecture of the machine being added, `amd64` in the local laptop example.
 
-* `$MAC_ADDRESS`: This is the MAC address of the boot-enabled NIC for the machine being added.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
+- `$MAC_ADDRESS`: This is the MAC address of the boot-enabled NIC for the machine being added.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
 
-* `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/nnnn) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+- `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/nnnn) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
 
-* `$POWER_ID`: This is generally the UUID of the machine being added.
+- `$POWER_ID`: This is generally the UUID of the machine being added.
 
-* `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types) in the API reference for details on the available power types and the relevant parameters for each type.
+- `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types) in the API reference for details on the available power types and the relevant parameters for each type.
 rad-end
 
+** how to add machines via a chassis
 rad-begin /snap/3.0/ui /deb/3.0/ui /snap/2.9/ui /deb/2.9/ui
 <a href="#heading--how-to-add-machines-via-a-chassis"><h3 id="heading--how-to-add-machines-via-a-chassis">How to add machines via a chassis</h3></a>
 
@@ -108,8 +112,9 @@ As with the manual method, the underlying machines will require netbooting.
 [/note]
 rad-end
 
+** how to manage attached usb and pci devices
 rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli
-<a href="#heading--usb-pci-devices"><h2 id="heading--usb-pci-devices">How to manage attached USB and PCI devices</h2></a>
+<a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">How to manage attached USB and PCI devices</h3></a>
 
 To delete PCI/USB devices from the machine in any machine state, via the CLI only, using the following command:
 
@@ -127,6 +132,8 @@ If the device is still present in the system, it will be recogized again (and th
 when the machine is commissioned again.
 rad-end
 
+* how to examine machines and machine details
+
 <a href="#heading--how-to-examine-machines-and-machine-details"><h2 id="heading--how-to-examine-machines-and-machine-details">How to examine machines and machine details</h2></a>
 
 This section describes the various ways you can evaluate the health and status of your MAAS machines, using the machine list.  It will show you:
@@ -143,6 +150,7 @@ rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui
 - [How to find machine configuration info](#heading--machine-config)
 rad-end
 
+* how to view the machine list
 rad-begin /snap/3.0/cli /deb/3.0/cli /snap/2.9/cli /deb/2.9/cli
 <a href="#heading--how-to-view-the-machine-list"><h2 id="heading--how-to-view-the-machine-list">How to view the machine list</h2></a>
 
@@ -205,7 +213,7 @@ libvirt-vm-4  s3sdkw  off    Ready      -      pod-console-logging  default  unt
 libvirt-vm-5  48dg8m  off    Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
 libvirt-vm-6  bacx77  on     Deployed   admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
 ```
-
+* how to view machine details
 <a href="#heading--how-to-view-machine-details"><h2 id="heading--how-to-view-machine-details">How to view machine details</h2></a>
 
 To view output similar to the MAAS UI machine details page, execute the following shell script:
@@ -247,7 +255,9 @@ NETWORK: Vendor: Red Hat, Inc.
 .........Name: enp5s0 | MAC: 00:16:3e:cc:17:58 | Link speed: 0 Mbps
 .........Fabric: fabric-5 | MAAS DHCP: true | SR-IOV: 0
 ```
-rad-begin commentedout
+
+* how to find network info for a machine
+rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui 
 <a href="#heading--machine-interfaces"><h2 id="heading--machine-interfaces">How to find network info for a machine</h2></a>
 
 To find network info for a specific machine, open that machine's "Network" tab in the machine summary:
@@ -256,6 +266,7 @@ To find network info for a specific machine, open that machine's "Network" tab i
 
 Options on this tab are described in the introduction to [Networking](/t/about-networking/nnnn) article in this documentation set.
 
+* how to find machine storage info
 <a href="#heading--how-to-find-machine-storage-info"><h2 id="heading--how-to-find-machine-storage-info">How to find machine storage info</h2></a>
 
 To view/edit machine storage info, click on the "Storage" tab in the machine summary:
@@ -264,6 +275,7 @@ To view/edit machine storage info, click on the "Storage" tab in the machine sum
 
 See the article [Storage](/t/storage/nnnn) for a detailed instructions on how to use this screen.
 
+* how to find commissioning logs
 <a href="#heading--commissioning-log"><h2 id="heading--commissioning-log">How to find commissioning logs</h2></a>
 
 The "Commissioning" tab brings up a summary log of commissioning events:
@@ -280,6 +292,7 @@ This will bring up a detailed log view for that row:
 
 These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs.  
 
+* how to find machine hardware and test logs
 <a href="#heading--hardware-tests"><h2 id="heading--hardware-tests">How to find machine hardware & test logs</h2></a>
 
 This tab presents a summary of tests run against this particular machine.  You can view the summary report, or choose the "View details" dropdown to get details on any particular tests:
@@ -288,6 +301,7 @@ This tab presents a summary of tests run against this particular machine.  You c
 
 The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/how-to-test-machines/nnnn).  
 
+* how to find raw log output for a machine
 <a href="#heading--raw-log-output"><h2 id="heading--raw-log-output">How to find raw log output for a machine</h2></a>
 
 By choosing "Installation output" on the "Logs" tab, you can see the "raw" log output:
@@ -296,6 +310,7 @@ By choosing "Installation output" on the "Logs" tab, you can see the "raw" log o
 
 Help interpreting these logs can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 
+* how to find a machine's event logs
 <a href="#heading--event-logs"><h2 id="heading--event-logs">How to find a machine's event logs</h2></a>
 
 To view the Event log for a machine, choose the "Event" tab under "Logs."  This displays a list of timestamped status updates for events and actions performed on the machine:
@@ -304,6 +319,7 @@ To view the Event log for a machine, choose the "Event" tab under "Logs."  This 
 
 There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 
+* how to find machine configuration info
 <a href="#heading--machine-config"><h2 id="heading--machine-config">How to find machine configuration info</h2></a>
 
 The final tab from the Machine menu allows you to update machine and power configuration options: 
@@ -320,6 +336,7 @@ More information on Power configuration will be found in the [Power management](
 -->
 rad-end
 
+* how to view the machine list
 rad-begin /snap/3.0/ui /deb/3.0/ui /snap/2.9/ui /deb/2.9/ui
 <a href="#heading--how-to-view-the-machine-list"><h2 id="heading--how-to-view-the-machine-list">How to view the machine list</h2></a>
 
@@ -331,6 +348,7 @@ To quickly view more details, roll the cursor over status icons:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg"></a> 
 
+* how to view machine details
 <a href="#heading--how-to-view-machine-details"><h2 id="heading--how-to-view-machine-details">How to view machine details</h2></a>
 
 To open a detailed view of a machine's status and configuration, click a machine's FQDN or MAC address:
@@ -338,6 +356,7 @@ To open a detailed view of a machine's status and configuration, click a machine
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png"></a>
 
 
+* how to find network info for a machine
 <a href="#heading--machine-interfaces"><h2 id="heading--machine-interfaces">How to find network info for a machine</h2></a>
 
 To find network info for a specific machine, open that machine's "Network" tab in the machine summary:
@@ -346,6 +365,7 @@ To find network info for a specific machine, open that machine's "Network" tab i
 
 Options on this tab are described in the introduction to [Networking](/t/about-networking/nnnn) article in this documentation set.
 
+* how to find machine storage info
 <a href="#heading--how-to-find-machine-storage-info"><h2 id="heading--how-to-find-machine-storage-info">How to find machine storage info</h2></a>
 
 To view/edit machine storage info, click on the "Storage" tab in the machine summary:
@@ -354,6 +374,7 @@ To view/edit machine storage info, click on the "Storage" tab in the machine sum
 
 See the article [Storage](/t/storage/nnnn) for a detailed instructions on how to use this screen.
 
+* how to find commissioning logs
 <a href="#heading--commissioning-log"><h2 id="heading--commissioning-log">How to find commissioning logs</h2></a>
 
 The "Commissioning" tab brings up a summary log of commissioning events:
@@ -370,6 +391,7 @@ This will bring up a detailed log view for that row:
 
 These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs.  
 
+* how to find machine hardware and test logs
 <a href="#heading--hardware-tests"><h2 id="heading--hardware-tests">How to find machine hardware & test logs</h2></a>
 
 This tab presents a summary of tests run against this particular machine.  You can view the summary report, or choose the "View details" dropdown to get details on any particular tests:
@@ -378,6 +400,7 @@ This tab presents a summary of tests run against this particular machine.  You c
 
 The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/how-to-test-machines/nnnn).  
 
+* how to find raw log output for a machine
 <a href="#heading--raw-log-output"><h2 id="heading--raw-log-output">How to find raw log output for a machine</h2></a>
 
 By choosing "Installation output" on the "Logs" tab, you can see the "raw" log output:
@@ -386,6 +409,7 @@ By choosing "Installation output" on the "Logs" tab, you can see the "raw" log o
 
 Help interpreting these logs can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 
+* how to find a machine's event logs
 <a href="#heading--event-logs"><h2 id="heading--event-logs">How to find a machine's event logs</h2></a>
 
 To view the Event log for a machine, choose the "Event" tab under "Logs."  This displays a list of timestamped status updates for events and actions performed on the machine:
@@ -394,6 +418,7 @@ To view the Event log for a machine, choose the "Event" tab under "Logs."  This 
 
 There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 
+* how to find machine configuration info
 <a href="#heading--machine-config"><h2 id="heading--machine-config">How to find machine configuration info</h2></a>
 
 The final tab from the Machine menu allows you to update machine and power configuration options: 
@@ -421,6 +446,7 @@ rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
 6. [How can I add a machine to a resource pool?](#heading--add-a-machine-to-a-resource-pool)
 7. [How can I get started with MAAS CLI?](/t/maas-cli/802)
 
+* how to create a resource pool
 <a href="#heading--creating-a-resource-pool"><h2 id="heading--creating-a-resource-pool">Creating a resource pool</h2></a>
 
 Here's an example that demonstrates how to create a new resource pool named `myresource`.
@@ -433,18 +459,20 @@ maas $PROFILE resource-pools create name=myresource description="A new resource 
 The `description` field is optional.
 [/note]
 
+* how to list available resource pools
 <a href="#heading--list-available-resource-pools"><h2 id="heading--list-available-resource-pools">List available resource pools</h2></a>
 
 ``` bash
 maas $PROFILE resource-pools read
 ```
-
+* how to list a single resource pool
 <a href="#heading--list-a-single-resource-pool"><h2 id="heading--list-a-single-resource-pool">List a single resource pool</h2></a>
 
 ``` bash
 maas $PROFILE resource-pool read $RESOURCE_POOL_ID
 ```
 
+* how to update a resource pool
 <a href="#heading--update-a-resource-pool"><h2 id="heading--update-a-resource-pool">Update a resource pool</h2></a>
 
 ``` bash
@@ -455,12 +483,14 @@ maas $PROFILE resource-pool update $RESOURCE_POOL_ID name=newname description="A
 The `name` and `description` fields are optional.
 [/note]
 
+* how to delete a resource pool
 <a href="#heading--delete-a-resource-pool"><h2 id="heading--delete-a-resource-pool">Delete a resource pool</h2></a>
 
 ``` bash
 maas $PROFILE resource-pool delete $RESOURCE_POOL_ID
 ```
 
+* how to add a machine to a resource pool
 <a href="#heading--add-a-machine-to-a-resource-pool"><h2 id="heading--add-a-machine-to-a-resource-pool">Add a machine to a resource pool</h2></a>
 
 ``` bash
@@ -481,6 +511,7 @@ rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
 
 Administrators can manage resource pools on the Machines page in the web UI, under the Resource pools tab.   Also note that all MAAS installations have a resource pool named "default." MAAS automatically adds new machines to the default resource pool.
 
+* how to add a resource pool
 <a href="#heading--add-a-resource-pool"><h2 id="heading--add-a-resource-pool">Add a resource pool</h2></a>
 
 Use the Add pool button to add a new resource pool.
@@ -489,6 +520,7 @@ After giving your new pool a name and description, click the Add pool button:
 
 <a href="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png"></a>
 
+* how to delete a resource pool
 <a href="#heading--deleting-a-resource-pool"><h2 id="heading--deleting-a-resource-pool">Deleting a resource pool</h2></a>
 
 To delete a resource pool, click the trashcan icon next to the pool.
@@ -499,22 +531,26 @@ To delete a resource pool, click the trashcan icon next to the pool.
 If you delete a resource pool, all machines that belong to that resource pool will return to the default pool.
 [/note]
 
+* how to add a node to a resource pool
 <a href="#heading--add-a-node-to-a-resource-pool"><h2 id="heading--add-a-node-to-a-resource-pool">Add a machine to a resource pool</h2></a>
 
 To add a machine to a resource pool, on the Machines page, select the machine you want to add to the resource pool. Next, select the Configuration tab. Now select the resource pool and click the Save changes button.
 
 <a href="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png"></a>
 
+* how to remove a node from a resource pool
 <a href="#heading--removing-a-node-from-a-resource-pool"><h2 id="heading--removing-a-node-from-a-resource-pool">Removing a machine from a resource pool</h2></a>
 
 To remove a machine from a resource pool, follow the same procedure you would use to add a machine, but select "default" as the new resource pool. This action will return the machine to the default resource pool.
 
+* how to add a vm host to a resource pool
 <a href="#heading--add-a-vm-host-to-a-resource-pool"><h2 id="heading--add-a-vm-host-to-a-resource-pool">Add a VM host to a resource pool</h2></a>
 
 You can add a VM host to a resource pool when you create a new VM host, or you can edit a VM host's configuration:
 
 <a href="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png"></a>
 
+* how to remove a vm host from a resource pool
 <a href="#heading--removing-a-vm-host-from-a-resource-pool"><h2 id="heading--removing-a-vm-host-from-a-resource-pool">Removing a VM host from a resource pool</h2></a>
 
 To remove a VM host from a resource pool, follow the same procedure you would use to add a VM host to a resource pool, except select "default" as the new resource pool. This action will return the machine to the default resource pool.
@@ -526,22 +562,23 @@ This article will show you how to:
 
 
 rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
-* [Work with tags](#heading--work-with-tags)
+- [Work with tags](#heading--work-with-tags)
 rad-end
 rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
-* [Work with annotations](#heading--work-with-annotations)
+- [Work with annotations](#heading--work-with-annotations)
 rad-end
 rad-begin     /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
-* [Work with tags](#heading--work-with-tags)
+- [Work with tags](#heading--work-with-tags)
 rad-end
 rad-begin     /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
-* [Work with annotations](#heading--work-with-annotations)
+- [Work with annotations](#heading--work-with-annotations)
 rad-end
 
 All headings have been hyperlinked for easy bookmarking.  Note that not all functions for tags and annotations can be accessed via one interface (UI/CLI), so you will occasionally encounter cross-links.
 
 rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
 
+* how to work with tags
 <a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a>
 
 This section is devoted to procedures for working with tags.  We begin with some general operations that apply to all tag types, such as naming conventions and basic mechanics.  We then walk through the various tag types, providing procedures that will help you create, assign, remove, delete, list, view, and filter tags, covering the nuances of each type.
@@ -551,59 +588,61 @@ Specifically, this section will show you how to:
 rad-end
 
 rad-begin /deb/2.9/ui
-* [Work with tags in general](#heading--work-with-tags-in-general)
-* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
-* [Work with controller tags](#heading--work-with-controller-tags)
-* [Work with block device tags](#heading--work-with-block-device-tags)
-* [Work with partition tags](#heading--work-with-partition-tags)
-* [Work with network tags](#heading--work-with-network-tags)
-* [Work with device tags](#heading--work-with-device-tags)
-* [Work with node tags (CLI only)](/t/-/2896#heading--work-with-node-tags)
+- [Work with tags in general](#heading--work-with-tags-in-general)
+- [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
+- [Work with controller tags](#heading--work-with-controller-tags)
+- [Work with block device tags](#heading--work-with-block-device-tags)
+- [Work with partition tags](#heading--work-with-partition-tags)
+- [Work with network tags](#heading--work-with-network-tags)
+- [Work with device tags](#heading--work-with-device-tags)
+- [Work with node tags (CLI only)](/t/-/2896#heading--work-with-node-tags)
 rad-end
 rad-begin /deb/3.0/ui
-* [Work with tags in general](#heading--work-with-tags-in-general)
-* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
-* [Work with controller tags](#heading--work-with-controller-tags)
-* [Work with block device tags](#heading--work-with-block-device-tags)
-* [Work with partition tags](#heading--work-with-partition-tags)
-* [Work with network tags](#heading--work-with-network-tags)
-* [Work with device tags](#heading--work-with-device-tags)
-* [Work with node tags (CLI only)](/t/-/4023#heading--work-with-node-tags)
+- [Work with tags in general](#heading--work-with-tags-in-general)
+- [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
+- [Work with controller tags](#heading--work-with-controller-tags)
+- [Work with block device tags](#heading--work-with-block-device-tags)
+- [Work with partition tags](#heading--work-with-partition-tags)
+- [Work with network tags](#heading--work-with-network-tags)
+- [Work with device tags](#heading--work-with-device-tags)
+- [Work with node tags (CLI only)](/t/-/4023#heading--work-with-node-tags)
 rad-end
 rad-begin /snap/2.9/ui
-* [Work with tags in general](#heading--work-with-tags-in-general)
-* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
-* [Work with controller tags](#heading--work-with-controller-tags)
-* [Work with block device tags](#heading--work-with-block-device-tags)
-* [Work with partition tags](#heading--work-with-partition-tags)
-* [Work with network tags](#heading--work-with-network-tags)
-* [Work with device tags](#heading--work-with-device-tags)
-* [Work with node tags (CLI only)](/t/-/2890#heading--work-with-node-tags)
+- [Work with tags in general](#heading--work-with-tags-in-general)
+- [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
+- [Work with controller tags](#heading--work-with-controller-tags)
+- [Work with block device tags](#heading--work-with-block-device-tags)
+- [Work with partition tags](#heading--work-with-partition-tags)
+- [Work with network tags](#heading--work-with-network-tags)
+- [Work with device tags](#heading--work-with-device-tags)
+- [Work with node tags (CLI only)](/t/-/2890#heading--work-with-node-tags)
 rad-end
 rad-begin /snap/3.0/ui
-* [Work with tags in general](#heading--work-with-tags-in-general)
-* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
-* [Work with controller tags](#heading--work-with-controller-tags)
-* [Work with block device tags](#heading--work-with-block-device-tags)
-* [Work with partition tags](#heading--work-with-partition-tags)
-* [Work with network tags](#heading--work-with-network-tags)
-* [Work with device tags](#heading--work-with-device-tags)
-* [Work with node tags (CLI only)](/t/-/4021#heading--work-with-node-tags)
+- [Work with tags in general](#heading--work-with-tags-in-general)
+- [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
+- [Work with controller tags](#heading--work-with-controller-tags)
+- [Work with block device tags](#heading--work-with-block-device-tags)
+- [Work with partition tags](#heading--work-with-partition-tags)
+- [Work with network tags](#heading--work-with-network-tags)
+- [Work with device tags](#heading--work-with-device-tags)
+- [Work with node tags (CLI only)](/t/-/4021#heading--work-with-node-tags)
 rad-end
 rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
 
 Tags for these different objects have similar purposes, but they aren't necessarily administered in the same way -- so we've included detailed sections for each tag type.
 
+** how to work with tags in general
 <a href="#heading--work-with-tags-in-general"><h3 id="heading--work-with-tags-in-general">Work with tags in general</h3></a>
 
 There are a few general procedures for working with tags, centred around naming conventions and basic mechanics.  These procedures apply to nearly all tag types.  They will be referenced often in the subsections that follow.
 
 As a general rule, you'll want to know how to:
 
-* [Name tags](#heading--name-tags)
-* [Create and assign tags](#heading--create-and-assign-tags)
-* [Delete and remove tags](#heading--delete-and-remove-tags)
+- [Name tags](#heading--name-tags)
+- [Create and assign tags](#heading--create-and-assign-tags)
+- [Delete and remove tags](#heading--delete-and-remove-tags)
 
+*** how to name tags
 <a href="#heading--name-tags"><h4 id="heading--name-tags">Name tags</h4></a>
 
 When working with tags, there are some universal rules you need to follow:
@@ -614,6 +653,7 @@ When working with tags, there are some universal rules you need to follow:
 
 In general, names that do not conform to these rules cannot be created.
 
+*** how to create and assign tags
 <a href="#heading--create-and-assign-tags"><h4 id="heading--create-and-assign-tags">Create and assign tags</h4></a>
 
 In the MAAS UI, creating and assigning tags is a combined operation; that is, you create tags as you assign them, rather than creating them first.  Creating tags in the UI is a little different user experience: there is a self-loading completion menu that collects all tags of a similar type.  This completion menu helps you avoid misspelling tags when entering them more than once; otherwise, you might not be able to group and filter tags properly. It also makes tag entry more efficient.
@@ -634,7 +674,7 @@ The process for creating and assigning tags in the UI is generally the same for 
 
 >The tag you just entered will now be added to the tag auto complete list, in alphabetical order, for re-use with other machines.
 
-
+*** how to delete and remove tags
 <a href="#heading--delete-and-remove-tags"><h4 id="heading--delete-and-remove-tags">Delete and remove tags</h4></a>
 
 With the MAAS UI, you remove tags, rather than explicitly deleting them.  Tags are "deleted" when you have removed them from all machines.   
@@ -651,45 +691,47 @@ To remove (unassign) a tag:
 
 >Note that the tag you just removed will be deleted from  the tag auto complete list when it is no longer assigned to any  machines.
 
+** how to work with machine and vm tags
 <a href="#heading--work-with-machine-and-vm-tags"><h3 id="heading--work-with-machine-and-vm-tags">Work with machine and VM tags</h3></a>
 
 This subsection will show you how to:
 rad-end
 
 rad-begin /deb/2.9/ui
-* [Create machine tags with built-in kernel options (CLI only)](/t/-/2896#heading--create-tags-with-built-in-kernel-options)
-* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
-* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
-* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
-* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
-* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
+- [Create machine tags with built-in kernel options (CLI only)](/t/-/2896#heading--create-tags-with-built-in-kernel-options)
+- [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
+- [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
+- [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
+- [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
+- [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
 rad-end
 rad-begin /deb/3.0/ui
-* [Create machine tags with built-in kernel options (CLI only)](/t/-/4023#heading--create-tags-with-built-in-kernel-options)
-* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
-* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
-* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
-* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
-* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
+- [Create machine tags with built-in kernel options (CLI only)](/t/-/4023#heading--create-tags-with-built-in-kernel-options)
+- [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
+- [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
+- [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
+- [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
+- [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
 rad-end
 rad-begin /snap/2.9/ui
-* [Create machine tags with built-in kernel options (CLI only)](/t/-/2890#heading--create-tags-with-built-in-kernel-options)
-* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
-* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
-* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
-* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
-* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
+- [Create machine tags with built-in kernel options (CLI only)](/t/-/2890#heading--create-tags-with-built-in-kernel-options)
+- [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
+- [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
+- [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
+- [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
+- [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
 rad-end
 rad-begin /snap/3.0/ui
-* [Create machine tags with built-in kernel options (CLI only)](/t/-/4021#heading--create-tags-with-built-in-kernel-options)
-* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
-* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
-* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
-* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
-* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
+- [Create machine tags with built-in kernel options (CLI only)](/t/-/4021#heading--create-tags-with-built-in-kernel-options)
+- [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
+- [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
+- [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
+- [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
+- [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
 rad-end
 rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
 
+*** how to create and assign machine tags
 <a href="#heading--create-and-assign-machine-tags-to-machines"><h4 id="heading--create-and-assign-machine-tags-to-machines">Create and assign machine tags to machines</h4></a>
 
 If you want to create a new tag, and simultaneously assign it to a machine, use the following steps:
@@ -718,6 +760,7 @@ Any tags you add in the "Tags" box will be applied to all selected machines, as 
 
 Other than the scope of the transaction (e.g., tagging three machines, in this case), everything else about this operation conforms to the [general tag assignment procedure](#heading--create-and-assign-tags).
 
+*** how to remove and delete machine tags from machines
 <a href="#heading--remove-and-delete-machine-tags-from-machines"><h4 id="heading--remove-and-delete-machine-tags-from-machines">Remove and delete machine tags from machines</h4></a>
 
 To remove machine tags from a machine:
@@ -728,7 +771,7 @@ To remove machine tags from a machine:
 
 3. Follow the [general tag removal procedure](#heading--delete-and-remove-tags).
 
-
+*** how to list machine tags for multiple machines
 <a href="#heading--list-machine-tags-for-multiple-machines"><h4 id="heading--list-machine-tags-for-multiple-machines">List machine tags for multiple machines</h4></a>
 
 In the MAAS UI, you don't explicitly list all machine tags; instead, you filter by them using the "Filter by" drop-down.  This filtered list does not distinguish between virtual machines (VMs) and physical machines, unless you've assigned tags to help with that distinction.
@@ -760,6 +803,7 @@ Below, tag 'virtual' has been selected (with the mouse), and the search field au
 
 Remove a tag from the search filter by either hitting the 'x' character alongside a tag or editing the search expression.
 
+*** how to view machine tags for one machine
 <a href="#heading--view-machine-tags-for-one-machine"><h4 id="heading--view-machine-tags-for-one-machine">View machine tags for one machine</h4></a>
 
 To view the tags assigned to a specific machine, use the following procedure:
@@ -768,6 +812,7 @@ To view the tags assigned to a specific machine, use the following procedure:
 
 2. On the machine detail screen that comes up, look for the tags on one of the cards presented there: the tags for that machine should be listed there.
 
+*** how to view machine tags for a vm host
 <a href="#heading--view-machine-tags-for-a-vm-host"><h4 id="heading--view-machine-tags-for-a-vm-host">View machine tags for a VM host</h4></a>
 
 To view the machine tags assigned to a VM host, here's the procedure you'll follow:
@@ -786,15 +831,17 @@ To view the machine tags assigned to a VM host, here's the procedure you'll foll
 
 Note that you can only see the tags for a VM host in the same place that you change it.  For a more comprehensive list of VM host tags, use the [MAAS CLI]({r3}).
 
+** how to work with controller tags
 <a href="#heading--work-with-controller-tags"><h3 id="heading--work-with-controller-tags">Work with controller tags</h3></a>
 
 This subsection will show you how to:
  
-* [Create and assign controller tags ](#heading--create-and-assign-controller-tags-)
-* [Remove and delete controller tags](#heading--remove-and-delete-controller-tags)
-* [List controller tags](#heading--list-controller-tags)
-* [View controller tags](#heading--view-controller-tags)
+- [Create and assign controller tags ](#heading--create-and-assign-controller-tags-)
+- [Remove and delete controller tags](#heading--remove-and-delete-controller-tags)
+- [List controller tags](#heading--list-controller-tags)
+- [View controller tags](#heading--view-controller-tags)
 
+*** how to create and assign controller tags
 <a href="#heading--create-and-assign-controller-tags-"><h4 id="heading--create-and-assign-controller-tags-">Create and assign controller tags </h4></a>
 
 To create and assign a controller tag, you can use the following procedure:
@@ -816,6 +863,7 @@ You'll be presented with an editing screen similar to this one:
 
 5.  Follow the [general procedure](#heading--create-and-assign-tags) to assign a tag to the controller.
 
+*** how to remove and delete controller tags
 <a href="#heading--remove-and-delete-controller-tags"><h4 id="heading--remove-and-delete-controller-tags">Remove and delete controller tags</h4></a>
 
 To remove (and possibly delete) a controller tag, you can use the following procedure:
@@ -837,6 +885,7 @@ You'll be presented with an editing screen similar to this one:
 
 5.  Follow the [general procedure](#heading--delete-and-remove-tags) to remove a tag from the controller.
 
+*** how to list controller tags
 <a href="#heading--list-controller-tags"><h4 id="heading--list-controller-tags">List controller tags</h4></a>
 rad-end
 
@@ -854,6 +903,7 @@ There is no explicit means of listing tags for all controllers in the MAAS UI; s
 rad-end
 rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
 
+*** how to view controller tags
 <a href="#heading--view-controller-tags"><h4 id="heading--view-controller-tags">View controller tags</h4></a>
 
 To view a list of tags assigned to a particular controller, you can use the following procedure:
@@ -868,16 +918,18 @@ To view a list of tags assigned to a particular controller, you can use the foll
 
 3. Find the "Tags" card; this card will list all the tags assigned to this controller.
 
+** how to work with block device tags
 <a href="#heading--work-with-block-device-tags"><h3 id="heading--work-with-block-device-tags">Work with block device tags</h3></a>
 
 In the parlance of MAAS, a block device is generally an unassigned and unpartitioned physical or virtual disk. This subsection will show you how to:
  
 
-* [Create and assign block device tags](#heading--create-and-assign-block-device-tags)
-* [Remove and delete block device tags](#heading--remove-and-delete-block-device-tags)
-* [List block device tags](#heading--list-block-device-tags)
-* [View block device tags](#heading--view-block-device-tags)
+- [Create and assign block device tags](#heading--create-and-assign-block-device-tags)
+- [Remove and delete block device tags](#heading--remove-and-delete-block-device-tags)
+- [List block device tags](#heading--list-block-device-tags)
+- [View block device tags](#heading--view-block-device-tags)
 
+*** how to create and assign block device tags
 <a href="#heading--create-and-assign-block-device-tags"><h4 id="heading--create-and-assign-block-device-tags">Create and assign block device tags</h4></a>
 
 In order to create and assign tags to a block device, the device has to be in an "available" state, with no active partitions. To create and assign tags to block devices:
@@ -902,6 +954,7 @@ In order to create and assign tags to a block device, the device has to be in an
 
 6. Be sure to click on the "Save" button when you're done.
 
+*** how to remove and delete block device tags
 <a href="#heading--remove-and-delete-block-device-tags"><h4 id="heading--remove-and-delete-block-device-tags">Remove and delete block device tags</h4></a>
 
 In order to remove tags from a block device, the device has to be in an "available" state, with no active partitions. To remove and delete tags from a block devices:
@@ -926,6 +979,7 @@ In order to remove tags from a block device, the device has to be in an "availab
 
 6. Be sure to click on the "Save" button when you're done.
 
+*** how to list block device tags
 <a href="#heading--list-block-device-tags"><h4 id="heading--list-block-device-tags">List block device tags</h4></a>
 rad-end
 
@@ -953,6 +1007,7 @@ rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
 
 Here you will see a list of all block device and partition tags currently assigned to machines in this MAAS.  If you wish to filter the machine list by a given tag, just make sure that it's checked (and other storage tags unchecked) in the filter list.
 
+*** how to view block device tags
 <a href="#heading--view-block-device-tags"><h4 id="heading--view-block-device-tags">View block device tags</h4></a>
 
 To view all tags associated with block devices on a given machine:
@@ -969,36 +1024,38 @@ To view all tags associated with block devices on a given machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png"></a>
 
+** how to work with partition tags
 <a href="#heading--work-with-partition-tags"><h3 id="heading--work-with-partition-tags">Work with partition tags</h3></a>
 
 This subsection will show you how to:
 
 rad-begin /deb/2.9/ui
-* [Assign partition tags (CLI only)](/t/-/2896#heading--assign-tags-to-a-partition)
-* [Remove partition tags (CLI only)](/t/-/2896#heading--remove-tags-from-a-partition)
-* [List partition tags](#heading--list-partition-tags)
-* [View partition tags](#heading--view-partition-tags)
+- [Assign partition tags (CLI only)](/t/-/2896#heading--assign-tags-to-a-partition)
+- [Remove partition tags (CLI only)](/t/-/2896#heading--remove-tags-from-a-partition)
+- [List partition tags](#heading--list-partition-tags)
+- [View partition tags](#heading--view-partition-tags)
 rad-end
 rad-begin /deb/3.0/ui
-* [Assign partition tags (CLI only)](/t/-/4023#heading--assign-tags-to-a-partition)
-* [Remove partition tags (CLI only)](/t/-/4023#heading--remove-tags-from-a-partition)
-* [List partition tags](#heading--list-partition-tags)
-* [View partition tags](#heading--view-partition-tags)
+- [Assign partition tags (CLI only)](/t/-/4023#heading--assign-tags-to-a-partition)
+- [Remove partition tags (CLI only)](/t/-/4023#heading--remove-tags-from-a-partition)
+- [List partition tags](#heading--list-partition-tags)
+- [View partition tags](#heading--view-partition-tags)
 rad-end
 rad-begin /snap/2.9/ui
-* [Assign partition tags (CLI only)](/t/-/2890#heading--assign-tags-to-a-partition)
-* [Remove partition tags (CLI only)](/t/-/2890#heading--remove-tags-from-a-partition)
-* [List partition tags](#heading--list-partition-tags)
-* [View partition tags](#heading--view-partition-tags)
+- [Assign partition tags (CLI only)](/t/-/2890#heading--assign-tags-to-a-partition)
+- [Remove partition tags (CLI only)](/t/-/2890#heading--remove-tags-from-a-partition)
+- [List partition tags](#heading--list-partition-tags)
+- [View partition tags](#heading--view-partition-tags)
 rad-end
 rad-begin /snap/3.0/ui
-* [Assign partition tags (CLI only)](/t/-/4021#heading--assign-tags-to-a-partition)
-* [Remove partition tags (CLI only)](/t/-/4021#heading--remove-tags-from-a-partition)
-* [List partition tags](#heading--list-partition-tags)
-* [View partition tags](#heading--view-partition-tags)
+- [Assign partition tags (CLI only)](/t/-/4021#heading--assign-tags-to-a-partition)
+- [Remove partition tags (CLI only)](/t/-/4021#heading--remove-tags-from-a-partition)
+- [List partition tags](#heading--list-partition-tags)
+- [View partition tags](#heading--view-partition-tags)
 rad-end
 rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
 
+*** how to list partition tags
 <a href="#heading--list-partition-tags"><h4 id="heading--list-partition-tags">List partition tags</h4></a>
 
 rad-end
@@ -1028,6 +1085,7 @@ You can list all storage links (block device and partition) by using the filter 
 
 Here you will see a list of all block device and partition tags currently assigned to machines in this MAAS.
 
+*** how to view partition tags
 <a href="#heading--view-partition-tags"><h4 id="heading--view-partition-tags">View partition tags</h4></a>
 
 To view all tags associated with partitions on a given machine:
@@ -1044,36 +1102,38 @@ To view all tags associated with partitions on a given machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png"></a>
 
+** how to work with network tags
 <a href="#heading--work-with-network-tags"><h3 id="heading--work-with-network-tags">Work with network tags</h3></a>
 
 This subsection will show you how to:
 rad-end
 rad-begin /deb/2.9/ui
-* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
-* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
-* [List network interface tags (CLI only)](/t/-/2896#heading--list-tags-for-all-network-interfaces)
-* [View network interface tags](#heading--view-network-interface-tags)
+- [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
+- [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
+- [List network interface tags (CLI only)](/t/-/2896#heading--list-tags-for-all-network-interfaces)
+- [View network interface tags](#heading--view-network-interface-tags)
 rad-end
 rad-begin /deb/3.0/ui
-* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
-* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
-* [List network interface tags (CLI only)](/t/-/4023#heading--list-tags-for-all-network-interfaces)
-* [View network interface tags](#heading--view-network-interface-tags)
+- [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
+- [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
+- [List network interface tags (CLI only)](/t/-/4023#heading--list-tags-for-all-network-interfaces)
+- [View network interface tags](#heading--view-network-interface-tags)
 rad-end
 rad-begin /snap/2.9/ui
-* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
-* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
-* [List network interface tags (CLI only)](/t/-/2890#heading--list-tags-for-all-network-interfaces)
-* [View network interface tags](#heading--view-network-interface-tags)
+- [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
+- [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
+- [List network interface tags (CLI only)](/t/-/2890#heading--list-tags-for-all-network-interfaces)
+- [View network interface tags](#heading--view-network-interface-tags)
 rad-end
 rad-begin /snap/3.0/ui
-* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
-* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
-* [List network interface tags (CLI only)](/t/-/4021#heading--list-tags-for-all-network-interfaces)
-* [View network interface tags](#heading--view-network-interface-tags)
+- [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
+- [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
+- [List network interface tags (CLI only)](/t/-/4021#heading--list-tags-for-all-network-interfaces)
+- [View network interface tags](#heading--view-network-interface-tags)
 rad-end
 rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
 
+*** how to create and assign network interface tags
 <a href="#heading--create-and-assign-network-interface-tags"><h4 id="heading--create-and-assign-network-interface-tags">Create and assign network interface tags</h4></a>
 
 To assign a tag to a network interface, use the following procedure:
@@ -1102,6 +1162,7 @@ To assign a tag to a network interface, use the following procedure:
 
 Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next -- so auto complete menus will be sparse or non-existent most of the time for these tag types.
 
+*** how to remove and delete network interface tags
 <a href="#heading--remove-and-delete-network-interface-tags"><h4 id="heading--remove-and-delete-network-interface-tags">Remove and delete network interface tags</h4></a>
 
 To remove a tag from a network interface, use the following procedure:
@@ -1130,6 +1191,7 @@ To remove a tag from a network interface, use the following procedure:
 
 Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next -- so auto complete menus will be sparse or non-existent most of the time for these tag types.
 
+*** how to view network interface tags
 <a href="#heading--view-network-interface-tags"><h4 id="heading--view-network-interface-tags">View network interface tags</h4></a>
 
 To view the tags associated with a network interface, use the following procedure:
@@ -1156,15 +1218,17 @@ To view the tags associated with a network interface, use the following procedur
 
 Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next.
 
+** how to work with device tags
 <a href="#heading--work-with-device-tags"><h3 id="heading--work-with-device-tags">Work with device tags</h3></a>
 
 This subsection will show you how to:
  
-* [Create and assign device tags](#heading--create-and-assign-device-tags)
-* [Remove and delete device tags](#heading--remove-and-delete-device-tags)
-* [List device tags](#heading--list-device-tags)
-* [View device tags](#heading--view-device-tags)
+- [Create and assign device tags](#heading--create-and-assign-device-tags)
+- [Remove and delete device tags](#heading--remove-and-delete-device-tags)
+- [List device tags](#heading--list-device-tags)
+- [View device tags](#heading--view-device-tags)
 
+*** how to create and assign device tags
 <a href="#heading--create-and-assign-device-tags"><h4 id="heading--create-and-assign-device-tags">Create and assign device tags</h4></a>
 
 To add a tag to a device, follow this procedure:
@@ -1189,6 +1253,7 @@ To add a tag to a device, follow this procedure:
 
 6. Be sure to hit the "Save changes" button to apply your changes to the device.
 
+*** how to remove and delete device tags
 <a href="#heading--remove-and-delete-device-tags"><h4 id="heading--remove-and-delete-device-tags">Remove and delete device tags</h4></a>
 
 To remove a tag from a device, follow this procedure:
@@ -1213,6 +1278,7 @@ To remove a tag from a device, follow this procedure:
 
 6. Be sure to hit the "Save changes" button to apply your changes to the device.
 
+*** how to list device tags
 <a href="#heading--list-device-tags"><h4 id="heading--list-device-tags">List device tags</h4></a>
 
 1. Go to the device list:
@@ -1225,6 +1291,7 @@ To remove a tag from a device, follow this procedure:
 
 Here you will see a list of all device tags currently assigned to devices in this MAAS.
 
+*** how to view device tags
 <a href="#heading--view-device-tags"><h4 id="heading--view-device-tags">View device tags</h4></a>
 
 1. Go to the device list:
@@ -1237,25 +1304,28 @@ Here you will see a list of all device tags currently assigned to devices in thi
 
 The "Tags" card on that screen with show you all the tags currently associated with this device.
 
+* how to work with annotations
 <a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a>
 
 This section will explain how to:
 rad-end
 rad-begin /snap/3.0/ui /deb/3.0/ui 
 
-* [Work with static annotations](#heading--work-with-static-annotations)
-* [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
+- [Work with static annotations](#heading--work-with-static-annotations)
+- [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
 
+** how to work with static annotations
 <a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a>
 
 This subsection will show you how to:
 rad-end
 rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
  
-* [Create and assign static annotations](#heading--create-and-assign-static-annotations)
-* [Delete static annotations](#heading--delete-static-annotations)
-* [View static annotations](#heading--view-static-annotations)
+- [Create and assign static annotations](#heading--create-and-assign-static-annotations)
+- [Delete static annotations](#heading--delete-static-annotations)
+- [View static annotations](#heading--view-static-annotations)
 
+*** how to create and assign static annotations
 <a href="#heading--create-and-assign-static-annotations"><h4 id="heading--create-and-assign-static-annotations">Create and assign static annotations</h4></a>
 
 To create and assign static annotations (a note) to a machine, follow this procedure:
@@ -1276,6 +1346,7 @@ To create and assign static annotations (a note) to a machine, follow this proce
 
 5. Click "Save changes" to update the machine's configuration.
 
+*** how to delete static annotations
 <a href="#heading--delete-static-annotations"><h4 id="heading--delete-static-annotations">Delete static annotations</h4></a>
 
 To delete static annotations (a note) from a machine, follow this procedure:
@@ -1296,6 +1367,7 @@ To delete static annotations (a note) from a machine, follow this procedure:
 
 5. Click "Save changes" to update the machine's configuration.
 
+*** how to view static annotations
 <a href="#heading--view-static-annotations"><h4 id="heading--view-static-annotations">View static annotations</h4></a>
 
 To view static annotations, you can follow this procedure:
@@ -1311,25 +1383,27 @@ To view static annotations, you can follow this procedure:
 rad-end
 
 rad-begin /snap/3.0/ui /deb/3.0/ui
+** how to work with dynamic workload annotations
 <a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</h3></a>
  
 This subsection will show you how to:
 
 rad-end
 rad-begin /deb/3.0/ui 
-* [Create dynamic (workload) annotations (CLI only)](/t/-/4023#heading--set-dynamic-annotations-for-a-machine)
-* [Delete dynamic (workload) annotations (CLI only)](/t/-/4023#heading--clear-and-change-dynamic-annotations-for-a-machine)
-* [View dynamic (workload) annotations for one machine](#heading--view-dynamic-workload-annotations-for-one-machine)
-* [Filter on dynamic (workload) annotations](#heading--filter-on-dynamic-workload-annotations)
+- [Create dynamic (workload) annotations (CLI only)](/t/-/4023#heading--set-dynamic-annotations-for-a-machine)
+- [Delete dynamic (workload) annotations (CLI only)](/t/-/4023#heading--clear-and-change-dynamic-annotations-for-a-machine)
+- [View dynamic (workload) annotations for one machine](#heading--view-dynamic-workload-annotations-for-one-machine)
+- [Filter on dynamic (workload) annotations](#heading--filter-on-dynamic-workload-annotations)
 rad-end
 rad-begin /snap/3.0/ui 
-* [Create dynamic (workload) annotations (CLI only)](/t/-/4021#heading--set-dynamic-annotations-for-a-machine)
-* [Delete dynamic (workload) annotations (CLI only)](/t/-/4021#heading--clear-and-change-dynamic-annotations-for-a-machine)
-* [View dynamic (workload) annotations for one machine](#heading--view-dynamic-workload-annotations-for-one-machine)
-* [Filter on dynamic (workload) annotations](#heading--filter-on-dynamic-workload-annotations)
+- [Create dynamic (workload) annotations (CLI only)](/t/-/4021#heading--set-dynamic-annotations-for-a-machine)
+- [Delete dynamic (workload) annotations (CLI only)](/t/-/4021#heading--clear-and-change-dynamic-annotations-for-a-machine)
+- [View dynamic (workload) annotations for one machine](#heading--view-dynamic-workload-annotations-for-one-machine)
+- [Filter on dynamic (workload) annotations](#heading--filter-on-dynamic-workload-annotations)
 rad-end
 
 rad-begin /snap/3.0/ui /deb/3.0/ui
+*** how to view dynamic workload annotations for one machine
 <a href="#heading--view-dynamic-workload-annotations-for-one-machine"><h4 id="heading--view-dynamic-workload-annotations-for-one-machine">View dynamic (workload) annotations for one machine</h4></a>
 
 To view the dynamic (workload) annotations for one machine, do the following:
@@ -1354,33 +1428,35 @@ rad-end
 
 rad-begin     /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
 
+* how to work with tags
 <a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a>
 
 This section is devoted to procedures for working with tags.  We begin with some general operations that apply to all tags types, such as naming conventions and basic mechanics.  We then walk through the various tag types, providing procedures that will help you create, assign, remove, delete, list, view, and filter tags, covering the nuances of each type.
 
 Specifically, this section will show you how to:
 
-* [Work with tags, independent of application](#heading--work-with-tags-independent-of-application)
-* [Work with machine tags](#heading--work-with-machine-tags)
-* [Work with virtual machine host tags](#heading--work-with-virtual-machine-host-tags)
-* [Work with region controller tags](#heading--work-with-region-controller-tags)
-* [Work with rack controller tags](#heading--work-with-rack-controller-tags)
-* [Work with block device tags](#heading--work-with-block-device-tags)
-* [Work with partition tags](#heading--work-with-partition-tags)
-* [Work with network tags](#heading--work-with-network-tags)
-* [Work with device tags](#heading--work-with-device-tags)
-* [Work with node tags](#heading--work-with-node-tags)
+- [Work with tags, independent of application](#heading--work-with-tags-independent-of-application)
+- [Work with machine tags](#heading--work-with-machine-tags)
+- [Work with virtual machine host tags](#heading--work-with-virtual-machine-host-tags)
+- [Work with region controller tags](#heading--work-with-region-controller-tags)
+- [Work with rack controller tags](#heading--work-with-rack-controller-tags)
+- [Work with block device tags](#heading--work-with-block-device-tags)
+- [Work with partition tags](#heading--work-with-partition-tags)
+- [Work with network tags](#heading--work-with-network-tags)
+- [Work with device tags](#heading--work-with-device-tags)
+- [Work with node tags](#heading--work-with-node-tags)
 
+** how to work with tags, independent of application
 <a href="#heading--work-with-tags-independent-of-application"><h3 id="heading--work-with-tags-independent-of-application">Work with tags, independent of application</h3></a>
 
 This subsection will explain how to:
 
-* [Create a tag](#heading--create-a-tag)
-* [Create tags with built-in kernel options](#heading--create-tags-with-built-in-kernel-options)
-* [Delete a tag](#heading--delete-a-tag)
-* [Update a tag](#heading--update-a-tag)
-* [List all tags available on this MAAS](#heading--list-all-tags-available-on-this-maas)
-* [Rebuild a tag](#heading--rebuild-a-tag)
+- [Create a tag](#heading--create-a-tag)
+- [Create tags with built-in kernel options](#heading--create-tags-with-built-in-kernel-options)
+- [Delete a tag](#heading--delete-a-tag)
+- [Update a tag](#heading--update-a-tag)
+- [List all tags available on this MAAS](#heading--list-all-tags-available-on-this-maas)
+- [Rebuild a tag](#heading--rebuild-a-tag)
 
 <a href="#heading--create-a-tag"><h4 id="heading--create-a-tag">Create a tag</h4></a>
 
@@ -1566,14 +1642,15 @@ Machine-readable output follows:
 }
 ```
 
+** how to work with machine tags
 <a href="#heading--work-with-machine-tags"><h3 id="heading--work-with-machine-tags">Work with machine tags</h3></a>
 
 This subsection will explain how to:
 
-* [Assign machine tags to a machine](#heading--assign-machine-tags-to-a-machine)
-* [Remove machine tags from a machine](#heading--remove-machine-tags-from-a-machine)
-* [List machine tags for all machines](#heading--list-machine-tags-for-all-machines)
-* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
+- [Assign machine tags to a machine](#heading--assign-machine-tags-to-a-machine)
+- [Remove machine tags from a machine](#heading--remove-machine-tags-from-a-machine)
+- [List machine tags for all machines](#heading--list-machine-tags-for-all-machines)
+- [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
 
 <a href="#heading--assign-machine-tags-to-a-machine"><h4 id="heading--assign-machine-tags-to-a-machine">Assign machine tags to a machine</h4></a>
 
@@ -1829,15 +1906,16 @@ hostname       sysid   machine_tags
 golden-martin  8fxery  pod-console-logging  virtual  barbar
 ```
 
+** how to work with virtual machine host tags
 <a href="#heading--work-with-virtual-machine-host-tags"><h3 id="heading--work-with-virtual-machine-host-tags">Work with virtual machine host tags</h3></a>
 
 This subsection will show you how to:
 
-* [Discover your virtual machine host ID](#heading--discover-your-vm-host-id)
-* [Assign tags to a virtual machine host](#heading--assign-tags-to-a-vm-host)
-* [Remove tags from a virtual machine](#heading--remove-tags-from-a-vm-host)
-* [List tags for all virtual machines](#heading--list-tags-for-all-vm-hosts)
-* [View tags for one virtual machine](#heading--view-tags-for-one-vm-host)
+- [Discover your virtual machine host ID](#heading--discover-your-vm-host-id)
+- [Assign tags to a virtual machine host](#heading--assign-tags-to-a-vm-host)
+- [Remove tags from a virtual machine](#heading--remove-tags-from-a-vm-host)
+- [List tags for all virtual machines](#heading--list-tags-for-all-vm-hosts)
+- [View tags for one virtual machine](#heading--view-tags-for-one-vm-host)
 
 <a href="#heading--discover-your-vm-host-id"><h4 id="heading--discover-your-vm-host-id">Discover your virtual machine host ID</h4></a>
 
@@ -1952,15 +2030,16 @@ name              id  tags
 my-lxd-vm-host-1  1   morkopongo  pod-console-logging
 ```
 
+** how to work with region controller tags
 <a href="#heading--work-with-region-controller-tags"><h3 id="heading--work-with-region-controller-tags">Work with region controller tags</h3></a>
 
 This subsection will show you how to:
 
-* [Discover the ID of your region controller(s)](#heading--discover-the-id-of-your-region-controllers)
-* [Assign tags to a region controller](#heading--assign-tags-to-a-region-controller)
-* [Remove tags from a region controller](#heading--remove-tags-from-a-region-controller)
-* [List tags for all region controllers](#heading--list-tags-for-all-region-controllers)
-* [View tags for one region controller](#heading--view-tags-for-one-region-controller)
+- [Discover the ID of your region controller(s)](#heading--discover-the-id-of-your-region-controllers)
+- [Assign tags to a region controller](#heading--assign-tags-to-a-region-controller)
+- [Remove tags from a region controller](#heading--remove-tags-from-a-region-controller)
+- [List tags for all region controllers](#heading--list-tags-for-all-region-controllers)
+- [View tags for one region controller](#heading--view-tags-for-one-region-controller)
 
 <a href="#heading--discover-the-id-of-your-region-controllers"><h4 id="heading--discover-the-id-of-your-region-controllers">Discover the ID of your region controller(s)</h4></a>
 
@@ -2097,15 +2176,16 @@ hostname                     sysid   tags
 bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
 ```
 
+** how to work with rack controller tags
 <a href="#heading--work-with-rack-controller-tags"><h3 id="heading--work-with-rack-controller-tags">Work with rack controller tags</h3></a>
 
 This subsection will show you how to:
 
-* [Discover the ID of your rack controller(s)](#heading--discover-the-id-of-your-rack-controllers)
-* [Assign tags to a rack controller](#heading--assign-tags-to-a-rack-controller)
-* [Remove tags from a rack controller](#heading--remove-tags-from-a-rack-controller)
-* [List tags for all rack controllers](#heading--list-tags-for-all-rack-controllers)
-* [View tags for one rack controller](#heading--view-tags-for-one-rack-controller)
+- [Discover the ID of your rack controller(s)](#heading--discover-the-id-of-your-rack-controllers)
+- [Assign tags to a rack controller](#heading--assign-tags-to-a-rack-controller)
+- [Remove tags from a rack controller](#heading--remove-tags-from-a-rack-controller)
+- [List tags for all rack controllers](#heading--list-tags-for-all-rack-controllers)
+- [View tags for one rack controller](#heading--view-tags-for-one-rack-controller)
 
 <a href="#heading--discover-the-id-of-your-rack-controllers"><h4 id="heading--discover-the-id-of-your-rack-controllers">Discover the ID of your rack controller(s)</h4></a>
 
@@ -2242,15 +2322,16 @@ hostname                     sysid   tags
 bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
 ```
 
+** how to work with block device tags
 <a href="#heading--work-with-block-device-tags"><h3 id="heading--work-with-block-device-tags">Work with block device tags</h3></a>
 
 This subsection will show you how to:
 
-* [Discover the ID of your block device](#heading--discover-the-id-of-your-block-device) 
-* [Assign tags to a block device](#heading--assign-tags-to-a-block-device)
-* [Remove tags from a block device](#heading--remove-tags-from-a-block-device)
-* [List tags for all block devices](#heading--list-tags-for-all-block-devices)
-* [View tags for one block device](#heading--view-tags-for-one-block-device)
+- [Discover the ID of your block device](#heading--discover-the-id-of-your-block-device) 
+- [Assign tags to a block device](#heading--assign-tags-to-a-block-device)
+- [Remove tags from a block device](#heading--remove-tags-from-a-block-device)
+- [List tags for all block devices](#heading--list-tags-for-all-block-devices)
+- [View tags for one block device](#heading--view-tags-for-one-block-device)
 
 <a href="#heading--discover-the-id-of-your-block-device"><h4 id="heading--discover-the-id-of-your-block-device">Discover the ID of your block device</h4></a>
 
@@ -2388,15 +2469,16 @@ id  tags
 10  250Gs  ssd
 ```
 
+** how to work with partition tags
 <a href="#heading--work-with-partition-tags"><h3 id="heading--work-with-partition-tags">Work with partition tags</h3></a>
 
 This subsection will show you how to:
 
-* [Discover the ID of your partition](#heading--discover-the-id-of-your-partition)
-* [Assign tags to a partition](#heading--assign-tags-to-a-partition)
-* [Remove tags from a partition](#heading--remove-tags-from-a-partition)
-* [List tags for all partitions](#heading--list-tags-for-all-partitions)
-* [View tags for one partition](#heading--view-tags-for-one-partition)
+- [Discover the ID of your partition](#heading--discover-the-id-of-your-partition)
+- [Assign tags to a partition](#heading--assign-tags-to-a-partition)
+- [Remove tags from a partition](#heading--remove-tags-from-a-partition)
+- [List tags for all partitions](#heading--list-tags-for-all-partitions)
+- [View tags for one partition](#heading--view-tags-for-one-partition)
 
 <a href="#heading--discover-the-id-of-your-partition"><h4 id="heading--discover-the-id-of-your-partition">Discover the ID of your partition</h4></a>
 
@@ -2531,16 +2613,16 @@ id  tags
 --  ----
 67  foobar  farquar
 ```
-
+** how to work with network tags
 <a href="#heading--work-with-network-tags"><h3 id="heading--work-with-network-tags">Work with network tags</h3></a>
 
 This subsection will show you how to:
 
-* [Discover the ID of your network interface](#heading--discover-the-id-of-your-network-interface)
-* [Assign tags to a network interface](#heading--assign-tags-to-a-network-interface)
-* [Remove tags from a network interface](#heading--remove-tags-from-a-network-interface)
-* [List tags for all network interfaces](#heading--list-tags-for-all-network-interfaces)
-* [View tags for one network interface](#heading--view-tags-for-one-network-interface)
+- [Discover the ID of your network interface](#heading--discover-the-id-of-your-network-interface)
+- [Assign tags to a network interface](#heading--assign-tags-to-a-network-interface)
+- [Remove tags from a network interface](#heading--remove-tags-from-a-network-interface)
+- [List tags for all network interfaces](#heading--list-tags-for-all-network-interfaces)
+- [View tags for one network interface](#heading--view-tags-for-one-network-interface)
 
 <a href="#heading--discover-the-id-of-your-network-interface"><h4 id="heading--discover-the-id-of-your-network-interface">Discover the ID of your network interface</h4></a>
 
@@ -2657,16 +2739,16 @@ mac_address        type      id  tags
 -----------        ----      --  ----
 00:16:3e:18:7f:ee  physical  9   andrpko  plinko  cochise
 ```
-
+** how to work with device tags
 <a href="#heading--work-with-device-tags"><h3 id="heading--work-with-device-tags">Work with device tags</h3></a>
 
 This subsection will show you how to:
 
-* [Identify your devices](#heading--identify-your-devices)
-* [Assign tags to a device](#heading--assign-tags-to-a-device)
-* [Remove tags from a device](#heading--remove-tags-from-a-device)
-* [List tags for all devices](#heading--list-tags-for-all-devices)
-* [View tags for one device](#heading--view-tags-for-one-device)
+- [Identify your devices](#heading--identify-your-devices)
+- [Assign tags to a device](#heading--assign-tags-to-a-device)
+- [Remove tags from a device](#heading--remove-tags-from-a-device)
+- [List tags for all devices](#heading--list-tags-for-all-devices)
+- [View tags for one device](#heading--view-tags-for-one-device)
 
 <a href="#heading--identify-your-devices"><h4 id="heading--identify-your-devices">Identify your devices</h4></a>
 
@@ -2813,14 +2895,14 @@ hostname     system_id  tags
 --------     ---------  ----
 better-sole  t8pmrs     farquar
 ```
-
+** how to work with node tags
 <a href="#heading--work-with-node-tags"><h3 id="heading--work-with-node-tags">Work with node tags</h3></a>
 
-* [Identify your nodes](#heading--identify-your-nodes)
-* [Assign tags to a node](#heading--assign-tags-to-a-node)
-* [Remove tags from a node](#heading--remove-tags-from-a-node)
-* [List tags for all nodes](#heading--list-tags-for-all-nodes)
-* [View tags for one node](#heading--view-tags-for-one-node)
+- [Identify your nodes](#heading--identify-your-nodes)
+- [Assign tags to a node](#heading--assign-tags-to-a-node)
+- [Remove tags from a node](#heading--remove-tags-from-a-node)
+- [List tags for all nodes](#heading--list-tags-for-all-nodes)
+- [View tags for one node](#heading--view-tags-for-one-node)
 
 <a href="#heading--identify-your-nodes"><h4 id="heading--identify-your-nodes">Identify your nodes</h4></a>
 
@@ -3031,22 +3113,24 @@ boss-satyr  xn8taa     pod-console-logging  androko
 rad-end
 rad-begin     /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
 
+* how to work with annotations
 <a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a>
 
 This section will show you how to:
 
-* [Work with static annotations](#heading--work-with-static-annotations)
-* [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
+- [Work with static annotations](#heading--work-with-static-annotations)
+- [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
 
+** how to work with static annotations
 <a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a>
 
 This subsection will show you how to:
 
-* [Identify your machines](#heading--identify-your-machines)
-* [Set a static annotation for a machine](#heading--set-a-static-annotation-for-a-machine)
-* [Change or clear a static annotation for a machine](#heading--change-or-clear-a-static-annotation-for-a-machine)
-* [List static annotations for all machines](#heading--list-static-annotations-for-all-machines)
-* [View a static annotation for one machine](#heading--view-a-static-annotation-for-one-machine)
+- [Identify your machines](#heading--identify-your-machines)
+- [Set a static annotation for a machine](#heading--set-a-static-annotation-for-a-machine)
+- [Change or clear a static annotation for a machine](#heading--change-or-clear-a-static-annotation-for-a-machine)
+- [List static annotations for all machines](#heading--list-static-annotations-for-all-machines)
+- [View a static annotation for one machine](#heading--view-a-static-annotation-for-one-machine)
 
 
 <a href="#heading--identify-your-machines"><h4 id="heading--identify-your-machines">Identify your machines</h4></a>
@@ -3196,16 +3280,16 @@ hostname     system_id  description
 --------     ---------  -----------
 driven-teal  tgaat6     tango-golf
 ```
-
+** how to work with dynamic (workload) annoations
 <a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</h3></a>
 
 This section will show you how to:
 
-* [Identify machines that can receive dynamic annotations](#heading--identify-machines-that-can-receive-dynamic-annotations)
-* [Set dynamic annotations for a machine](#heading--set-dynamic-annotations-for-a-machine)
-* [Clear and change dynamic annotations for a machine](#heading--clear-and-change-dynamic-annotations-for-a-machine)
-* [List dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines)
-* [List dynamic allocations for one machine](#heading--list-dynamic-annotations-for-one-machine)
+- [Identify machines that can receive dynamic annotations](#heading--identify-machines-that-can-receive-dynamic-annotations)
+- [Set dynamic annotations for a machine](#heading--set-dynamic-annotations-for-a-machine)
+- [Clear and change dynamic annotations for a machine](#heading--clear-and-change-dynamic-annotations-for-a-machine)
+- [List dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines)
+- [List dynamic allocations for one machine](#heading--list-dynamic-annotations-for-one-machine)
 
 <a href="#heading--identify-machines-that-can-receive-dynamic-annotations"><h4 id="heading--identify-machines-that-can-receive-dynamic-annotations">Identify machines that can receive dynamic annotations</h4></a>
 
@@ -3360,7 +3444,7 @@ driven-teal  tgaat6     farquar     foobar
 ```
 rad-end
 
-
+* how to set global storage layouts
 <a href="#heading--how-to-set-global-storage-layouts"><h2 id="heading--how-to-set-global-storage-layouts">How to set global storage layouts</h2></a>
 
 Layouts can be set globally and on a per-machine basis.
@@ -3391,7 +3475,7 @@ rad-end
 [note type="caution" status="Important"]
 The new default will only apply to newly-commissioned machines.
 [/note]
-
+** how to set per-machine storage layouts
 <a href="#heading--how-to-set-per-machine-storage-layouts"><h3 id="heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</h3></a>
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
@@ -3420,7 +3504,8 @@ rad-end
 Only an administrator can modify storage at the block device level (providing the machine has a status of 'Ready').
 [/note]
 
-rad-begin   /deb/2.9/ui  /snap/2.9/ui  /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /deb/2.9/ui  /snap/2.9/ui  /snap/3.0/ui /deb/3.0/ui
+* how to set default erasure configuration
 <a href="#heading--how-to-set-default-erasure-configuration"><h2 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h2></a>
 
 A default erasure configuration can be set on the 'Settings' page by selecting the 'Storage' tab.
@@ -3439,6 +3524,7 @@ rad-end
 
 rad-begin   /deb/2.9/cli  /snap/2.9/cli  /snap/3.0/cli /deb/3.0/cli 
 
+* how to erase disks
 <a href="#heading--how-to-erase-disks"><h2 id="heading--how-to-erase-disks">How to erase disks</h2></a>
 
 When using the [MAAS CLI](/t/maas-cli/nnnn), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
@@ -3479,6 +3565,7 @@ Secure erasure uses the drive's secure erase feature, if it has one.  In some ca
 
 Quick erasure wipes 2MB at the start and end of the drive to make recovery both inconvenient and unlikely to happen by accident.  Note, though, that quick erasure is not secure.
 
+** how to specify conditional erasure types
 <a href="#heading--how-to-specify-conditional-erasure-types"><h3 id="heading--how-to-specify-conditional-erasure-types">How to specify conditional erasure types</h3></a>
 
 If you specify both erasure types, like this:
@@ -3495,6 +3582,7 @@ maas $PROFILE machine release $SYSTEM_ID comment="some comment" erase=true
 
 rad-end
 
+** how to list block devices
 <a href="#heading--how-to-list-block-devices"><h3 id="heading--how-to-list-block-devices">How to list block devices</h3></a>
 
 To view all block devices on a machine use the read operation. This list both physical and virtual block devices, as you can see in the output from the following command:
@@ -3578,6 +3666,7 @@ Machine-readable output follows:
 ]
 ```
 
+** how to read a block device
 <a href="#heading--how-to-read-a-block-device"><h3 id="heading--how-to-read-a-block-device">How to read a block device</h3></a>
 
 If you want to read just one block device instead of listing all block devices the read operation on the block device endpoint provides that information. To display the details on device '11' from the previous output, for example, we could enter:
@@ -3631,6 +3720,7 @@ MAAS allows the name of a block device to be changed. If the block device name h
 
     Using the ID is safer as it never changes.
 
+** how to create a block device
 <a href="#heading--how-to-create-a-block-device"><h3 id="heading--how-to-create-a-block-device">How to create a block device</h3></a>
 
 MAAS gathers the required information itself on block devices when re- commissioning a machine. If this doesn't provide the required information, it is also possible - though not recommended - for an administrator to use the API to manually add a physical block device to a machine.
@@ -3670,6 +3760,7 @@ Machine-readable output follows:
 The serial number is what MAAS will use when a machine is deployed to find the specific block device. It's important that this be correct. In a rare chance that your block device does not provide a model or serial number you can provide an id_path. The id_path should be a path that is always the same, no matter the kernel version.
 [/note]
 
+** how to update a block device
 <a href="#heading--how-to-update-a-block-device"><h3 id="heading--how-to-update-a-block-device">How to update a block device</h3></a>
 
 An administrator can also update the details held on a physical block device, such as its name, from the API:
@@ -3705,6 +3796,7 @@ Machine-readable output follows:
 }
 ```
 
+** how to delete a block device
 <a href="#heading--how-to-delete-a-block-device"><h3 id="heading--how-to-delete-a-block-device">How to delete a block device</h3></a>
 
 Physical and virtual block devices can be deleted by an administrator, while ordinary users can only delete virtual block devices:
@@ -3713,6 +3805,7 @@ Physical and virtual block devices can be deleted by an administrator, while ord
 maas admin block-device delete <node-id> 12
 ```
 
+** how to format a block device
 <a href="#heading--format-block-device"><h3 id="heading--format-block-device">Format Block Device</h3></a>
 
 An entire block device can be formatted by defining a filesystem with the 'format' API call:
@@ -3758,6 +3851,7 @@ Machine-readable output follows:
 You cannot format a block device that contains partitions or is used to make another virtual block device.
 [/note]
 
+** how to unformat a block device
 <a href="#heading--how-to-unformat-a-block-device"><h3 id="heading--how-to-unformat-a-block-device">How to unformat a block device</h3></a>
 
 You can remove the filesystem from a block device with the 'unformat' API call:
@@ -3793,6 +3887,7 @@ Machine-readable output follows:
 }
 ```
 
+** how to mount a block device
 <a href="#heading--how-to-mount-a-block-device"><h3 id="heading--how-to-mount-a-block-device">How to mount a block device</h3></a>
 
 If a block device has a filesystem, you can use the 'maas' command to mount a block devices at a given mount point:
@@ -3834,6 +3929,7 @@ Machine-readable output follows:
 }
 ```
 
+** how to unmount a block device
 <a href="#heading--how-to-unmount-a-block-device"><h3 id="heading--how-to-unmount-a-block-device">How to unmount a block device</h3></a>
 
 To remove the mount point from the block device, use the 'unmount' call:
@@ -3875,6 +3971,7 @@ Machine-readable output follows:
 }
 ```
 
+** how to set a block device as a boot disk
 <a href="#heading--how-to-set-a-block-device-as-a-boot-disk"><h3 id="heading--how-to-set-a-block-device-as-a-boot-disk">How to set a block device as a boot disk</h3></a>
 
 By default, MAAS picks the first added block device to the machine as the boot disk. In most cases this works as expected as the BIOS usually enumerates the boot disk as the first block device. There are cases where this fails and the boot disk needs to be set to another disk. This API allow setting which block device on a machine MAAS should use as the boot disk.:
@@ -3887,6 +3984,7 @@ maas admin block-device set-boot-disk <node-id> 10
 Only an administrator can set which block device should be used as the boot disk and only a physical block device can be set as as the boot disk. This operation should be done before a machine is acquired or the storage layout will be applied to the previous boot disk.
 [/note]
 
+** how to list paritions
 <a href="#heading--how-to-list-partitions"><h3 id="heading--how-to-list-partitions">How to list partitions</h3></a>
 
 To view all the partitions on a block device, use the 'partitions read' API call:
@@ -3926,6 +4024,7 @@ To view the metadata for a specific partition on a block device, rather than all
 maas admin partition read <node-id> 10 9
 ```
 
+** how to create a partition
 <a href="#heading--how-to-create-a-partition"><h3 id="heading--how-to-create-a-partition">How to create a partition</h3></a>
 
 To create a new partition on a block device, use the 'create' API call:
@@ -3952,6 +4051,7 @@ Machine-readable output follows:
 }
 ```
 
+** how to delete a partition
 <a href="#heading--how-to-delete-a-partition"><h3 id="heading--how-to-delete-a-partition">How to delete a partition</h3></a>
 
 Partitions can be deleted from a block device with the 'delete' API call. Make sure you double check the partition details as the partition is deleted immediately, with no further confirmation:
@@ -3967,6 +4067,7 @@ Success.
 Machine-readable output follows:
 ```
 
+** how to format a paritition
 <a href="#heading--how-to-format-a-partition"><h3 id="heading--how-to-format-a-partition">How to format a partition</h3></a>
 
 Partitions can be formatted in a similar way to block devices:
@@ -4003,6 +4104,7 @@ Machine-readable output follows:
 You cannot format partitions that are used to make another virtual block device.
 [/note]
 
+** how to unformat a partition
 <a href="#heading--how-to-unformat-a-partition"><h3 id="heading--how-to-unformat-a-partition">How to unformat a partition</h3></a>
 
 You can also remove the filesystem from a partition with the 'unformat' API call:
@@ -4026,7 +4128,7 @@ Machine-readable output follows:
     "uuid": "3d32adbf-9943-4785-ab38-963758338c6c"
 }
 ```
-
+** how to mount a paritition
 <a href="#heading--how-to-mount-a-partition"><h3 id="heading--how-to-mount-a-partition">How to mount a partition</h3></a>
 
 A formatted partition can be mounted at a given mount point with the 'mount' command.
@@ -4058,7 +4160,7 @@ Machine-readable output follows:
     }
 }
 ```
-
+** how to unmount a partition
 <a href="#heading--how-to-unmount-a-partition"><h3 id="heading--how-to-unmount-a-partition">How to unmount a partition</h3></a>
 
 A previous mounted partition can be unmounted with the 'unmount' command:
@@ -4094,6 +4196,7 @@ Machine-readable output follows:
 }
 ```
 
+* how to list vmfs datastores
 <a href="#heading--how-to-list-vmfs-datastores"><h2 id="heading--how-to-list-vmfs-datastores">How to list VMFS datastores</h2></a>
 
 To view all VMFS Datastores on a machine, use the 'vmfs-datastores read' API call:
@@ -4162,6 +4265,7 @@ maas $PROFILE vmfs-datastores read $SYSTEM_ID
 ]
 ```
 
+* how to view a vmfs datastore
 <a href="#heading--how-to-view-a-vmfs-datastore"><h2 id="heading--how-to-view-a-vmfs-datastore">How to view a VMFS datastore</h2></a>
 
 To view a specific VMFS Datastores on a machine, use the 'vmfs-datastore read' API call:
@@ -4208,6 +4312,7 @@ maas $PROFILE vmfs-datastore read $SYSTEM_ID $VMFS_DATASTORE_ID
 }
 ```
 
+* how to create a vmfs datastore
 <a href="#heading--how-to-create-a-vmfs-datastore"><h2 id="heading--how-to-create-a-vmfs-datastore">How to create a VMFS datastore</h2></a>
 
 A VMware VMFS datastore is created on one or more [block devices](#heading--about-block-devices) or [partitions](#heading--about-partitions).
@@ -4256,6 +4361,7 @@ maas $PROFILE vmfs-datastores create $SYSTEM_ID name=$VMFS_NAME block_devices=$B
 }
 ```
 
+* how to edit a vmfs datastdore
 <a href="#heading--how-to-edit-a-vmfs-datastore"><h2 id="heading--how-to-edit-a-vmfs-datastore">How to edit a VMFS datastore</h2></a>
 
 To edit an existing VMFS Datastores on a machine use the 'vmfs-datastore update' API call:
@@ -4321,7 +4427,7 @@ maas $PROFILE vmfs-datastore update $SYSTEM_ID $VMFS_ID name=$NEW_VMFS_NAME add_
     "resource_uri": "/MAAS/api/2.0/nodes/b66fn6/vmfs-datastore/19/"
 }
 ```
-
+* how to delete a vmfs datastore
 <a href="#heading--how-to-delete-a-vmfs-datastore"><h2 id="heading--how-to-delete-a-vmfs-datastore">How to delete a VMFS datastore</h2></a>
 
 To delete a VMFS Datastores on a machine use the 'vmfs-datastore delete' API call:
@@ -4329,7 +4435,7 @@ To delete a VMFS Datastores on a machine use the 'vmfs-datastore delete' API cal
 ``` bash
 maas $PROFILE vmfs-datastore delete $SYSTEM_ID $VMFS_ID
 ```
-
+* storage layouts reference
 <a href="#heading--storage-layouts-reference"><h2 id="heading--storage-layouts-reference">Storage layouts reference</h2></a>
 
 There are three layout types:
@@ -4340,6 +4446,7 @@ There are three layout types:
 
 The layout descriptions below will include the EFI partition. If your system is not using UEFI, regard `sda2` as `sda1` (with an additional 512 MB available to it).
 
+** flat storage layout reference
 <a href="#heading--flat-storage-layout-reference"><h3 id="heading--flat-storage-layout-reference">Flat layout storage reference</h3></a>
 
 With the Flat layout, a partition spans the entire boot disk. The partition is formatted with the ext4 filesystem and uses the `/` mount point:
@@ -4358,6 +4465,7 @@ The following three options are supported:
 
 3. `root_size`: Size of the root partition. Default is 100%, meaning the entire size of the root device.
 
+** lvm storage layout reference
 <a href="#heading--lvm-storage-layout-reference"><h3 id="heading--lvm-storage-layout-reference">LVM storage layout reference</h3></a>
 
 The LVM layout creates the volume group `vgroot` on a partition that spans the entire boot disk. A logical volume `lvroot` is created for the full size of the volume group; is formatted with the ext4 filesystem; and uses the `/` mount point:
@@ -4379,6 +4487,7 @@ The following six options are supported:
 5. `lv_name`: Name of the created logical volume. Default is `lvroot`.
 6. `lv_size`: Size of the created logical volume. Default is 100%, meaning the entire size of the volume group.
 
+** bcache storage layout reference
 <a href="#heading--bcache-storage-layout-reference"><h3 id="heading--bcache-storage-layout-reference">bcache storage layout reference</h3></a>
 
 A bcache layout will create a partition that spans the entire boot disk as the backing device. It uses the smallest block device tagged with 'ssd' as the cache device. The bcache device is formatted with the ext4 filesystem and uses the `/` mount point. If there are no 'ssd' tagged block devices on the machine, then the bcache device will not be created, and the Flat layout will be used instead:
@@ -4402,6 +4511,7 @@ The following seven options are supported:
 6. `cache_size`: The size of the partition on the cache device. Default is 100%, meaning the entire size of the cache device.
 7. `cache_no_part`: Whether or not to create a partition on the cache device. Default is false, meaning to create a partition using the given `cache_size`. If set to true, no partition will be created, and the raw cache device will be used as the cache.
 
+vmfs6 storage layout reference
 <a href="#heading--vmfs6-storage-layout-reference"><h3 id="heading--vmfs6-storage-layout-reference">VMFS6 storage layout reference</h3></a>
 
 The VMFS6 layout is used for VMware ESXi deployments only. It is required when configuring VMware VMFS Datastores. This layout creates all operating system partitions, in addition to the default datastore. The datastore may be modified.  New datastores may be created or extended to include other storage devices. The base operating system partitions may not be modified because VMware ESXi requires them. Once applied another storage layout must be applied to remove the operating system partitions.
@@ -4424,6 +4534,8 @@ The following options are supported:
 1. `root_device`: The block device upon which to place the root partition. Default is the boot disk.
 
 2. `root_size`: Size of the default VMFS Datastore. Default is 100%, meaning the remaining size of the root disk.
+
+** blank storage layout reference
 
 <a href="#heading--blank-storage-layout-reference"><h3 id="heading--blank-storage-layout-reference">Blank storage layout reference</h3></a>
 
