@@ -36,7 +36,13 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [Manage storage](/t/storage-deb-3-0-cli/4107)
 - [Customise machines](/t/how-to-customise-machines-snap-3-0-ui/3910)
 
-### [Tags](/t/tags-and-annotations-snap-3-0-ui/4022)
+### [VM hosting](/t/vm-hosting-snap-3-0-ui/4162)
+
+- [About storage pools](/t/vm-host-storage-pools-snap-3-0-ui/4170)
+- [Network VM hosts](/t/vm-host-networking-snap-3-0-ui/4166)
+- [Manage VM hosts](/t/adding-a-vm-host-snap-3-0-ui/3818)
+- [Manage VMs](/t/creating-and-deleting-vms-snap-3-0-ui/3906)
+- [Use LXD](/t/using-lxd-projects-with-maas/4470)
 
 ### [Networking](/t/about-networking-snap-3-0-ui/4046)
 
@@ -59,13 +65,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [Mirror images locally](/t/local-image-mirror-snap-3-0-ui/3982)
 - [Manage VMWare images](/t/vmware-images-snap-3-0-ui/4174)
 
-### [VM hosting](/t/vm-hosting-snap-3-0-ui/4162)
-
-- [About storage pools](/t/vm-host-storage-pools-snap-3-0-ui/4170)
-- [Network VM hosts](/t/vm-host-networking-snap-3-0-ui/4166)
-- [Manage VM hosts](/t/adding-a-vm-host-snap-3-0-ui/3818)
-- [Manage VMs](/t/creating-and-deleting-vms-snap-3-0-ui/3906)
-- [Use LXD](/t/using-lxd-projects-with-maas/4470)
+### [Tags](/t/tags-and-annotations-snap-3-0-ui/4022)
 
 ### Operations
 
