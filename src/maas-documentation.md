@@ -71,6 +71,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [Use machine tags](/t/-/4958)
 - [Use controller tags](/t/-/4970)
 - [Use storage tags](/t/-/4978)
+- [Use network tags](/t/-/4986)
 
 ### Operations
 
