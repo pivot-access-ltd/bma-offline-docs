@@ -25,11 +25,11 @@ The process for creating and assigning tags in the UI is generally the same for 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png"></a>
 
->The auto complete list will re-appear after you've entered the tag, in case you'd like to enter another tag.
+The auto complete list will re-appear after you've entered the tag, in case you'd like to enter another tag.
 
 3. When you're done, click on the appropriate completion button to complete the operation.
 
->The tag you just entered will now be added to the tag auto complete list, in alphabetical order, for re-use with other machines.
+The tag you just entered will now be added to the tag auto complete list, in alphabetical order, for re-use with other machines.
 
 <a href="#heading--delete-and-remove-tags"><h2 id="heading--delete-and-remove-tags">How to delete and remove tags</h2></a>
 
