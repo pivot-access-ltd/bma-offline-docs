@@ -2,10 +2,17 @@ This article explains:
 
 - [How to create, delete, and configure machines](#heading--how-to-create-delete-and-configure-machines)
 - [How to examine machines and machine details](#heading--how-to-examine-machines-and-machine-details)
+- [How to use resource pools](#heading--how-to-use-resource-pools)
+rad-begin /snap/3.0/cli /snap/2.9/cli /deb/3.0/cli /deb/2.9/cli
+- [How to use annotations](#heading--how-to-use-annotations)
+rad-end
+- [How to use machine storage](#heading--how-to-use-machine-storage)
+
+This article also provides a:
+
+- [Storage layouts reference](#heading--storage-layouts-reference)
 
 Most of the day-to-day work of managing machines is covered here. Utilising machines to do work -- for example, commissioning, testing, and deploying them -- is discussed in [How to deploy machines](/t/how-to-deploy-machines/nnnn).
-
-* How to create, delete, and configure machines
 
 <a href="#heading--how-to-create-delete-and-configure-machines"><h2 id="heading--how-to-create-delete-and-configure-machines">How to create, delete, and configure machines</h2></a>
 
@@ -19,7 +26,6 @@ rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli
 - [How to manage attached USB and PCI devices](#heading--usb-pci-devices)
 rad-end
 
-** How to add a machine manually
 <a href="#heading--how-to-add-a-machine-manually"><h3 id="heading--how-to-add-a-machine-manually">How to add a machine manually</h3></a>
 
 rad-begin   /deb/2.9/ui /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui 
@@ -49,7 +55,7 @@ The fields on the "Add machine" screen include the following items:
 rad-end
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
-At the command line, enter the following information:
+To create a new machine at the command line, enter the following information:
 
 ```nohighlight
 stormrider@wintermute:~$ maas admin machines create \
@@ -97,7 +103,6 @@ The variable fields in the `machines create` command (the `$...` items) are as f
 - `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types) in the API reference for details on the available power types and the relevant parameters for each type.
 rad-end
 
-** how to add machines via a chassis
 rad-begin /snap/3.0/ui /deb/3.0/ui /snap/2.9/ui /deb/2.9/ui
 <a href="#heading--how-to-add-machines-via-a-chassis"><h3 id="heading--how-to-add-machines-via-a-chassis">How to add machines via a chassis</h3></a>
 
@@ -112,13 +117,12 @@ As with the manual method, the underlying machines will require netbooting.
 [/note]
 rad-end
 
-** how to manage attached usb and pci devices
 rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli
 <a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">How to manage attached USB and PCI devices</h3></a>
 
 To delete PCI/USB devices from the machine in any machine state, via the CLI only, using the following command:
 
-```
+```nohighlight
 maas $PROFILE node-device delete $SYSTEM_ID $DEVICE_ID
 ```
 
@@ -131,8 +135,6 @@ where:
 If the device is still present in the system, it will be recogized again (and thus "recreated")
 when the machine is commissioned again.
 rad-end
-
-* how to examine machines and machine details
 
 <a href="#heading--how-to-examine-machines-and-machine-details"><h2 id="heading--how-to-examine-machines-and-machine-details">How to examine machines and machine details</h2></a>
 
@@ -150,9 +152,8 @@ rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui
 - [How to find machine configuration info](#heading--machine-config)
 rad-end
 
-* how to view the machine list
 rad-begin /snap/3.0/cli /deb/3.0/cli /snap/2.9/cli /deb/2.9/cli
-<a href="#heading--how-to-view-the-machine-list"><h2 id="heading--how-to-view-the-machine-list">How to view the machine list</h2></a>
+<a href="#heading--how-to-view-the-machine-list"><h3 id="heading--how-to-view-the-machine-list">How to view the machine list</h3></a>
 
 To view the machine list, enter a command similar to this one:
 
@@ -213,13 +214,12 @@ libvirt-vm-4  s3sdkw  off    Ready      -      pod-console-logging  default  unt
 libvirt-vm-5  48dg8m  off    Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
 libvirt-vm-6  bacx77  on     Deployed   admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
 ```
-* how to view machine details
-<a href="#heading--how-to-view-machine-details"><h2 id="heading--how-to-view-machine-details">How to view machine details</h2></a>
+<a href="#heading--how-to-view-machine-details"><h3 id="heading--how-to-view-machine-details">How to view machine details</h3></a>
 
 To view output similar to the MAAS UI machine details page, execute the following shell script:
 
 ```nohighlight
-#!/bin/bash
+#!/bin/nohighlight
 
 maas admin machine read r3rd6h | jq '.' > /tmp/machine-json
 cat /tmp/machine-json | jq -r '([.hostname,.status_name,"| Power:",.power_state,"| Kernel:",.hwe_kernel,"| Owner:",.owner]) | @tsv' | column -t -o " " > /tmp/machine-details
@@ -255,90 +255,10 @@ NETWORK: Vendor: Red Hat, Inc.
 .........Name: enp5s0 | MAC: 00:16:3e:cc:17:58 | Link speed: 0 Mbps
 .........Fabric: fabric-5 | MAAS DHCP: true | SR-IOV: 0
 ```
-
-* how to find network info for a machine
-rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui 
-<a href="#heading--machine-interfaces"><h2 id="heading--machine-interfaces">How to find network info for a machine</h2></a>
-
-To find network info for a specific machine, open that machine's "Network" tab in the machine summary:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png"></a> 
-
-Options on this tab are described in the introduction to [Networking](/t/about-networking/nnnn) article in this documentation set.
-
-* how to find machine storage info
-<a href="#heading--how-to-find-machine-storage-info"><h2 id="heading--how-to-find-machine-storage-info">How to find machine storage info</h2></a>
-
-To view/edit machine storage info, click on the "Storage" tab in the machine summary:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> 
-
-See the article [Storage](/t/storage/nnnn) for a detailed instructions on how to use this screen.
-
-* how to find commissioning logs
-<a href="#heading--commissioning-log"><h2 id="heading--commissioning-log">How to find commissioning logs</h2></a>
-
-The "Commissioning" tab brings up a summary log of commissioning events:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/e98766009f32972dfe29293f9bc850b99a9a941f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e98766009f32972dfe29293f9bc850b99a9a941f.png"></a> 
-
-Click on the dropdown at the end of the row you're interested in, and click on "View details":
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/8f7b4c02ce301fb867e7af33267be62498095bb5.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8f7b4c02ce301fb867e7af33267be62498095bb5.png"></a>
-
-This will bring up a detailed log view for that row:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png"></a>
-
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs.  
-
-* how to find machine hardware and test logs
-<a href="#heading--hardware-tests"><h2 id="heading--hardware-tests">How to find machine hardware & test logs</h2></a>
-
-This tab presents a summary of tests run against this particular machine.  You can view the summary report, or choose the "View details" dropdown to get details on any particular tests:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a> 
-
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/how-to-test-machines/nnnn).  
-
-* how to find raw log output for a machine
-<a href="#heading--raw-log-output"><h2 id="heading--raw-log-output">How to find raw log output for a machine</h2></a>
-
-By choosing "Installation output" on the "Logs" tab, you can see the "raw" log output:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a> 
-
-Help interpreting these logs can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
-
-* how to find a machine's event logs
-<a href="#heading--event-logs"><h2 id="heading--event-logs">How to find a machine's event logs</h2></a>
-
-To view the Event log for a machine, choose the "Event" tab under "Logs."  This displays a list of timestamped status updates for events and actions performed on the machine:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a> 
-
-There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
-
-* how to find machine configuration info
-<a href="#heading--machine-config"><h2 id="heading--machine-config">How to find machine configuration info</h2></a>
-
-The final tab from the Machine menu allows you to update machine and power configuration options: 
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/7/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png"></a> 
-
-There are two sections to this tab.  The "Machine configuration" section, shown above, offers some general parameters, mostly related to how this machine is grouped and categorised.  More information on these options are found in the relevant sections of the documentation (e.g., tags, resource pools, and so forth). 
-
-The "Power configuration" supplies the parameters necessary for MAAS to access the machine to PXE-boot it: 
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png"></a> 
-
-More information on Power configuration will be found in the [Power management](/t/power-management/nnnn) section of this documentation.
--->
 rad-end
 
-* how to view the machine list
 rad-begin /snap/3.0/ui /deb/3.0/ui /snap/2.9/ui /deb/2.9/ui
-<a href="#heading--how-to-view-the-machine-list"><h2 id="heading--how-to-view-the-machine-list">How to view the machine list</h2></a>
+<a href="#heading--how-to-view-the-machine-list"><h3 id="heading--how-to-view-the-machine-list">How to view the machine list</h3></a>
 
 To view the machine list, select "Machines" on the top menu of the MAAS web UI:
 
@@ -348,16 +268,13 @@ To quickly view more details, roll the cursor over status icons:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg"></a> 
 
-* how to view machine details
-<a href="#heading--how-to-view-machine-details"><h2 id="heading--how-to-view-machine-details">How to view machine details</h2></a>
+<a href="#heading--how-to-view-machine-details"><h3 id="heading--how-to-view-machine-details">How to view machine details</h3></a>
 
 To open a detailed view of a machine's status and configuration, click a machine's FQDN or MAC address:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png"></a>
 
-
-* how to find network info for a machine
-<a href="#heading--machine-interfaces"><h2 id="heading--machine-interfaces">How to find network info for a machine</h2></a>
+<a href="#heading--machine-interfaces"><h3 id="heading--machine-interfaces">How to find network info for a machine</h3></a>
 
 To find network info for a specific machine, open that machine's "Network" tab in the machine summary:
 
@@ -365,8 +282,7 @@ To find network info for a specific machine, open that machine's "Network" tab i
 
 Options on this tab are described in the introduction to [Networking](/t/about-networking/nnnn) article in this documentation set.
 
-* how to find machine storage info
-<a href="#heading--how-to-find-machine-storage-info"><h2 id="heading--how-to-find-machine-storage-info">How to find machine storage info</h2></a>
+<a href="#heading--how-to-find-machine-storage-info"><h3 id="heading--how-to-find-machine-storage-info">How to find machine storage info</h3></a>
 
 To view/edit machine storage info, click on the "Storage" tab in the machine summary:
 
@@ -374,8 +290,7 @@ To view/edit machine storage info, click on the "Storage" tab in the machine sum
 
 See the article [Storage](/t/storage/nnnn) for a detailed instructions on how to use this screen.
 
-* how to find commissioning logs
-<a href="#heading--commissioning-log"><h2 id="heading--commissioning-log">How to find commissioning logs</h2></a>
+<a href="#heading--commissioning-log"><h3 id="heading--commissioning-log">How to find commissioning logs</h3></a>
 
 The "Commissioning" tab brings up a summary log of commissioning events:
 
@@ -391,8 +306,7 @@ This will bring up a detailed log view for that row:
 
 These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs.  
 
-* how to find machine hardware and test logs
-<a href="#heading--hardware-tests"><h2 id="heading--hardware-tests">How to find machine hardware & test logs</h2></a>
+<a href="#heading--hardware-tests"><h3 id="heading--hardware-tests">How to find machine hardware & test logs</h3></a>
 
 This tab presents a summary of tests run against this particular machine.  You can view the summary report, or choose the "View details" dropdown to get details on any particular tests:
 
@@ -400,8 +314,7 @@ This tab presents a summary of tests run against this particular machine.  You c
 
 The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/how-to-test-machines/nnnn).  
 
-* how to find raw log output for a machine
-<a href="#heading--raw-log-output"><h2 id="heading--raw-log-output">How to find raw log output for a machine</h2></a>
+<a href="#heading--raw-log-output"><h3 id="heading--raw-log-output">How to find raw log output for a machine</h3></a>
 
 By choosing "Installation output" on the "Logs" tab, you can see the "raw" log output:
 
@@ -409,8 +322,7 @@ By choosing "Installation output" on the "Logs" tab, you can see the "raw" log o
 
 Help interpreting these logs can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 
-* how to find a machine's event logs
-<a href="#heading--event-logs"><h2 id="heading--event-logs">How to find a machine's event logs</h2></a>
+<a href="#heading--event-logs"><h3 id="heading--event-logs">How to find a machine's event logs</h3></a>
 
 To view the Event log for a machine, choose the "Event" tab under "Logs."  This displays a list of timestamped status updates for events and actions performed on the machine:
 
@@ -418,8 +330,7 @@ To view the Event log for a machine, choose the "Event" tab under "Logs."  This 
 
 There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 
-* how to find machine configuration info
-<a href="#heading--machine-config"><h2 id="heading--machine-config">How to find machine configuration info</h2></a>
+<a href="#heading--machine-config"><h3 id="heading--machine-config">How to find machine configuration info</h3></a>
 
 The final tab from the Machine menu allows you to update machine and power configuration options: 
 
@@ -432,26 +343,27 @@ The "Power configuration" supplies the parameters necessary for MAAS to access t
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png"></a> 
 
 More information on Power configuration will be found in the [Power management](/t/power-management/nnnn) section of this documentation.
+
 rad-end
+
+<a href="#heading--how-to-use-resource-pools"><h2 id="heading--how-to-use-resource-pools">How to use resource pools</h2></a>
+
+This section will explain:
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 
-#### Seven questions you may have:
+- [How to create a resource pool](#heading--creating-a-resource-pool)
+- [How to list available resource pools](#heading--list-available-resource-pools)
+- [How to list a single resource pool](#heading--list-a-single-resource-pool)
+- [How to update a resource pool](#heading--update-a-resource-pool)
+- [How to delete a resource pool](#heading--delete-a-resource-pool)
+- [How to add a machine to a resource pool](#heading--add-a-machine-to-a-resource-pool)
 
-1. [How can I create a resource pool?](#heading--creating-a-resource-pool)
-2. [How can I list available resource pools?](#heading--list-available-resource-pools)
-3. [How can I list a single resource pool?](#heading--list-a-single-resource-pool)
-4. [How can I update a resource pool?](#heading--update-a-resource-pool)
-5. [How can I delete a resource pool?](#heading--delete-a-resource-pool)
-6. [How can I add a machine to a resource pool?](#heading--add-a-machine-to-a-resource-pool)
-7. [How can I get started with MAAS CLI?](/t/maas-cli/802)
-
-* how to create a resource pool
-<a href="#heading--creating-a-resource-pool"><h2 id="heading--creating-a-resource-pool">Creating a resource pool</h2></a>
+<a href="#heading--creating-a-resource-pool"><h3 id="heading--creating-a-resource-pool">How to create a resource pool</h3></a>
 
 Here's an example that demonstrates how to create a new resource pool named `myresource`.
 
-``` bash
+``` nohighlight
 maas $PROFILE resource-pools create name=myresource description="A new resource pool."
 ```
 
@@ -459,23 +371,20 @@ maas $PROFILE resource-pools create name=myresource description="A new resource 
 The `description` field is optional.
 [/note]
 
-* how to list available resource pools
-<a href="#heading--list-available-resource-pools"><h2 id="heading--list-available-resource-pools">List available resource pools</h2></a>
+<a href="#heading--list-available-resource-pools"><h3 id="heading--list-available-resource-pools">How to list available resource pools</h3></a>
 
-``` bash
+``` nohighlight
 maas $PROFILE resource-pools read
 ```
-* how to list a single resource pool
-<a href="#heading--list-a-single-resource-pool"><h2 id="heading--list-a-single-resource-pool">List a single resource pool</h2></a>
+<a href="#heading--list-a-single-resource-pool"><h3 id="heading--list-a-single-resource-pool">How to list a single resource pool</h3></a>
 
-``` bash
+``` nohighlight
 maas $PROFILE resource-pool read $RESOURCE_POOL_ID
 ```
 
-* how to update a resource pool
-<a href="#heading--update-a-resource-pool"><h2 id="heading--update-a-resource-pool">Update a resource pool</h2></a>
+<a href="#heading--update-a-resource-pool"><h3 id="heading--update-a-resource-pool">How to update a resource pool</h3></a>
 
-``` bash
+``` nohighlight
 maas $PROFILE resource-pool update $RESOURCE_POOL_ID name=newname description="A new description."
 ```
 
@@ -483,36 +392,30 @@ maas $PROFILE resource-pool update $RESOURCE_POOL_ID name=newname description="A
 The `name` and `description` fields are optional.
 [/note]
 
-* how to delete a resource pool
-<a href="#heading--delete-a-resource-pool"><h2 id="heading--delete-a-resource-pool">Delete a resource pool</h2></a>
+<a href="#heading--delete-a-resource-pool"><h3 id="heading--delete-a-resource-pool">How to delete a resource pool</h3></a>
 
-``` bash
+``` nohighlight
 maas $PROFILE resource-pool delete $RESOURCE_POOL_ID
 ```
 
-* how to add a machine to a resource pool
-<a href="#heading--add-a-machine-to-a-resource-pool"><h2 id="heading--add-a-machine-to-a-resource-pool">Add a machine to a resource pool</h2></a>
+<a href="#heading--add-a-machine-to-a-resource-pool"><h3 id="heading--add-a-machine-to-a-resource-pool">How to add a machine to a resource pool</h3></a>
 
-``` bash
+``` nohighlight
 maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
 ```
-
 rad-end
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
-#### Six questions you may have:
-
-1. [How can I add a resource pool?](#heading--add-a-resource-pool)
-2. [How can I delete a resource pool?](#heading--deleting-a-resource-pool)
-3. [How do I add a node to a resource pool?](#heading--add-a-node-to-a-resource-pool)
-4. [How do I remove a node from a resource pool?](#heading--removing-a-node-from-a-resource-pool)
-5. [How do I add a VM host to a resource pool?](#heading--add-a-vm-host-to-a-resource-pool)
-6. [How do I remove a VM host from a resource pool?](#heading--removing-a-vm-host-from-a-resource-pool)
+- [How to add a resource pool](#heading--add-a-resource-pool)
+- [How to delete a resource pool](#heading--deleting-a-resource-pool)
+- [How to add a node to a resource pool](#heading--add-a-node-to-a-resource-pool)
+- [How to remove a node from a resource pool](#heading--removing-a-node-from-a-resource-pool)
+- [How to add a VM host to a resource pool](#heading--add-a-vm-host-to-a-resource-pool)
+- [How to remove a VM host from a resource pool](#heading--removing-a-vm-host-from-a-resource-pool)
 
 Administrators can manage resource pools on the Machines page in the web UI, under the Resource pools tab.   Also note that all MAAS installations have a resource pool named "default." MAAS automatically adds new machines to the default resource pool.
 
-* how to add a resource pool
-<a href="#heading--add-a-resource-pool"><h2 id="heading--add-a-resource-pool">Add a resource pool</h2></a>
+<a href="#heading--add-a-resource-pool"><h3 id="heading--add-a-resource-pool">How to add a resource pool</h3></a>
 
 Use the Add pool button to add a new resource pool.
 
@@ -520,8 +423,7 @@ After giving your new pool a name and description, click the Add pool button:
 
 <a href="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png"></a>
 
-* how to delete a resource pool
-<a href="#heading--deleting-a-resource-pool"><h2 id="heading--deleting-a-resource-pool">Deleting a resource pool</h2></a>
+<a href="#heading--deleting-a-resource-pool"><h3 id="heading--deleting-a-resource-pool">How to delete a resource pool</h3></a>
 
 To delete a resource pool, click the trashcan icon next to the pool.
 
@@ -531,1868 +433,51 @@ To delete a resource pool, click the trashcan icon next to the pool.
 If you delete a resource pool, all machines that belong to that resource pool will return to the default pool.
 [/note]
 
-* how to add a node to a resource pool
-<a href="#heading--add-a-node-to-a-resource-pool"><h2 id="heading--add-a-node-to-a-resource-pool">Add a machine to a resource pool</h2></a>
+<a href="#heading--add-a-node-to-a-resource-pool"><h3 id="heading--add-a-node-to-a-resource-pool">How to add a machine to a resource pool</h3></a>
 
 To add a machine to a resource pool, on the Machines page, select the machine you want to add to the resource pool. Next, select the Configuration tab. Now select the resource pool and click the Save changes button.
 
 <a href="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png"></a>
 
-* how to remove a node from a resource pool
-<a href="#heading--removing-a-node-from-a-resource-pool"><h2 id="heading--removing-a-node-from-a-resource-pool">Removing a machine from a resource pool</h2></a>
+<a href="#heading--removing-a-node-from-a-resource-pool"><h3 id="heading--removing-a-node-from-a-resource-pool">How to remove a machine from a resource pool</h3></a>
 
 To remove a machine from a resource pool, follow the same procedure you would use to add a machine, but select "default" as the new resource pool. This action will return the machine to the default resource pool.
 
-* how to add a vm host to a resource pool
-<a href="#heading--add-a-vm-host-to-a-resource-pool"><h2 id="heading--add-a-vm-host-to-a-resource-pool">Add a VM host to a resource pool</h2></a>
+<a href="#heading--add-a-vm-host-to-a-resource-pool"><h3 id="heading--add-a-vm-host-to-a-resource-pool">How to add a VM host to a resource pool</h3></a>
 
 You can add a VM host to a resource pool when you create a new VM host, or you can edit a VM host's configuration:
 
 <a href="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png"></a>
 
-* how to remove a vm host from a resource pool
-<a href="#heading--removing-a-vm-host-from-a-resource-pool"><h2 id="heading--removing-a-vm-host-from-a-resource-pool">Removing a VM host from a resource pool</h2></a>
+<a href="#heading--removing-a-vm-host-from-a-resource-pool"><h3 id="heading--removing-a-vm-host-from-a-resource-pool">How to remove a VM host from a resource pool</h3></a>
 
 To remove a VM host from a resource pool, follow the same procedure you would use to add a VM host to a resource pool, except select "default" as the new resource pool. This action will return the machine to the default resource pool.
 
 rad-end
 
+rad-begin /snap/3.0/cli /snap/2.9/cli /deb/3.0/cli /deb/2.9/cli
+<a href="#heading--how-to-use-annotations"><h2 id="heading--how-to-use-annotations">How to use annotations</h2></a>
 
-This article will show you how to:
+This section will show you:
 
+- [How to use static annotations](#heading--work-with-static-annotations)
+- [How to use dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
 
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
-- [Work with tags](#heading--work-with-tags)
-rad-end
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
-- [Work with annotations](#heading--work-with-annotations)
-rad-end
-rad-begin     /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
-- [Work with tags](#heading--work-with-tags)
-rad-end
-rad-begin     /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
-- [Work with annotations](#heading--work-with-annotations)
-rad-end
-
-All headings have been hyperlinked for easy bookmarking.  Note that not all functions for tags and annotations can be accessed via one interface (UI/CLI), so you will occasionally encounter cross-links.
-
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
-
-* how to work with tags
-<a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a>
-
-This section is devoted to procedures for working with tags.  We begin with some general operations that apply to all tag types, such as naming conventions and basic mechanics.  We then walk through the various tag types, providing procedures that will help you create, assign, remove, delete, list, view, and filter tags, covering the nuances of each type.
-
-Specifically, this section will show you how to:
-
-rad-end
-
-rad-begin /deb/2.9/ui
-- [Work with tags in general](#heading--work-with-tags-in-general)
-- [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
-- [Work with controller tags](#heading--work-with-controller-tags)
-- [Work with block device tags](#heading--work-with-block-device-tags)
-- [Work with partition tags](#heading--work-with-partition-tags)
-- [Work with network tags](#heading--work-with-network-tags)
-- [Work with device tags](#heading--work-with-device-tags)
-- [Work with node tags (CLI only)](/t/-/2896#heading--work-with-node-tags)
-rad-end
-rad-begin /deb/3.0/ui
-- [Work with tags in general](#heading--work-with-tags-in-general)
-- [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
-- [Work with controller tags](#heading--work-with-controller-tags)
-- [Work with block device tags](#heading--work-with-block-device-tags)
-- [Work with partition tags](#heading--work-with-partition-tags)
-- [Work with network tags](#heading--work-with-network-tags)
-- [Work with device tags](#heading--work-with-device-tags)
-- [Work with node tags (CLI only)](/t/-/4023#heading--work-with-node-tags)
-rad-end
-rad-begin /snap/2.9/ui
-- [Work with tags in general](#heading--work-with-tags-in-general)
-- [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
-- [Work with controller tags](#heading--work-with-controller-tags)
-- [Work with block device tags](#heading--work-with-block-device-tags)
-- [Work with partition tags](#heading--work-with-partition-tags)
-- [Work with network tags](#heading--work-with-network-tags)
-- [Work with device tags](#heading--work-with-device-tags)
-- [Work with node tags (CLI only)](/t/-/2890#heading--work-with-node-tags)
-rad-end
-rad-begin /snap/3.0/ui
-- [Work with tags in general](#heading--work-with-tags-in-general)
-- [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
-- [Work with controller tags](#heading--work-with-controller-tags)
-- [Work with block device tags](#heading--work-with-block-device-tags)
-- [Work with partition tags](#heading--work-with-partition-tags)
-- [Work with network tags](#heading--work-with-network-tags)
-- [Work with device tags](#heading--work-with-device-tags)
-- [Work with node tags (CLI only)](/t/-/4021#heading--work-with-node-tags)
-rad-end
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
-
-Tags for these different objects have similar purposes, but they aren't necessarily administered in the same way -- so we've included detailed sections for each tag type.
-
-** how to work with tags in general
-<a href="#heading--work-with-tags-in-general"><h3 id="heading--work-with-tags-in-general">Work with tags in general</h3></a>
-
-There are a few general procedures for working with tags, centred around naming conventions and basic mechanics.  These procedures apply to nearly all tag types.  They will be referenced often in the subsections that follow.
-
-As a general rule, you'll want to know how to:
-
-- [Name tags](#heading--name-tags)
-- [Create and assign tags](#heading--create-and-assign-tags)
-- [Delete and remove tags](#heading--delete-and-remove-tags)
-
-*** how to name tags
-
-** how to work with machine and vm tags
-<a href="#heading--work-with-machine-and-vm-tags"><h3 id="heading--work-with-machine-and-vm-tags">Work with machine and VM tags</h3></a>
+<a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">How to use static annotations</h3></a>
 
 This subsection will show you how to:
-rad-end
 
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
+- [How to identify your machines](#heading--identify-your-machines)
+- [How to set a static annotation for a machine](#heading--set-a-static-annotation-for-a-machine)
+- [How to change or clear a static annotation for a machine](#heading--change-or-clear-a-static-annotation-for-a-machine)
+- [How to list static annotations for all machines](#heading--list-static-annotations-for-all-machines)
+- [How to view a static annotation for one machine](#heading--view-a-static-annotation-for-one-machine)
 
-*** how to create and assign machine tags
-
-** how to work with controller tags
-<a href="#heading--work-with-controller-tags"><h3 id="heading--work-with-controller-tags">Work with controller tags</h3></a>
-
-This subsection will show you how to:
- 
-- [Create and assign controller tags ](#heading--create-and-assign-controller-tags-)
-- [Remove and delete controller tags](#heading--remove-and-delete-controller-tags)
-- [List controller tags](#heading--list-controller-tags)
-- [View controller tags](#heading--view-controller-tags)
-
-*** how to create and assign controller tags
-<a href="#heading--create-and-assign-controller-tags-"><h4 id="heading--create-and-assign-controller-tags-">Create and assign controller tags </h4></a>
-
-To create and assign a controller tag, you can use the following procedure:
-
-1. Click on the "Controllers" tab to open the controllers page:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
-
-2. Click on the hyperlinked name of the controller to which you want to assign tags.  You will see a screen with several cards, like this one:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
-
-3. Find the "Tags" card and click on "Edit."  You will be brought to that controller's "Configuration" tab.
-
-4. Click on the "Edit" button for "Controller configuration."
-You'll be presented with an editing screen similar to this one:
- 
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png"></a>
-
-5.  Follow the [general procedure](#heading--create-and-assign-tags) to assign a tag to the controller.
-
-*** how to remove and delete controller tags
-<a href="#heading--remove-and-delete-controller-tags"><h4 id="heading--remove-and-delete-controller-tags">Remove and delete controller tags</h4></a>
-
-To remove (and possibly delete) a controller tag, you can use the following procedure:
-
-1. Click on the "Controllers" tab to open the controllers page:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
-
-2. Click on the hyperlinked name of the controller to which you want to assign tags.  You will see a screen with several cards, like this one:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
-
-3. Find the "Tags" card and click on "Edit."  You will be brought to that controller's "Configuration" tab.
-
-4. Click on the "Edit" button for "Controller configuration."
-You'll be presented with an editing screen similar to this one:
- 
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png"></a>
-
-5.  Follow the [general procedure](#heading--delete-and-remove-tags) to remove a tag from the controller.
-
-*** how to list controller tags
-<a href="#heading--list-controller-tags"><h4 id="heading--list-controller-tags">List controller tags</h4></a>
-rad-end
-
-rad-begin /deb/2.9/ui
-There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/2896#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
-rad-end
-rad-begin /deb/3.0/ui
-There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/4023#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
-rad-end
-rad-begin /snap/2.9/ui
-There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/2890#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
-rad-end
-rad-begin /snap/3.0/ui
-There is no explicit means of listing tags for all controllers in the MAAS UI; see the [relevant procedure](/t/-/4021#heading--list-tags-for-all-region-controllers) in the MAAS CLI to do this.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  
-rad-end
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
-
-*** how to view controller tags
-<a href="#heading--view-controller-tags"><h4 id="heading--view-controller-tags">View controller tags</h4></a>
-
-To view a list of tags assigned to a particular controller, you can use the following procedure:
-
-1. Click on the "Controllers" tab to open the controllers page:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
-
-2. Click on the hyperlinked name of the controller of interest..  You will see a screen with several cards, like this one:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
-
-3. Find the "Tags" card; this card will list all the tags assigned to this controller.
-
-** how to work with block device tags
-<a href="#heading--work-with-block-device-tags"><h3 id="heading--work-with-block-device-tags">Work with block device tags</h3></a>
-
-In the parlance of MAAS, a block device is generally an unassigned and unpartitioned physical or virtual disk. This subsection will show you how to:
- 
-
-- [Create and assign block device tags](#heading--create-and-assign-block-device-tags)
-- [Remove and delete block device tags](#heading--remove-and-delete-block-device-tags)
-- [List block device tags](#heading--list-block-device-tags)
-- [View block device tags](#heading--view-block-device-tags)
-
-*** how to create and assign block device tags
-<a href="#heading--create-and-assign-block-device-tags"><h4 id="heading--create-and-assign-block-device-tags">Create and assign block device tags</h4></a>
-
-In order to create and assign tags to a block device, the device has to be in an "available" state, with no active partitions. To create and assign tags to block devices:
-
-1. Go to the machine list:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
-
-2. Select that machine that has the block-device you want to tag:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png"></a>
-
-3. Click on the "Storage" tab and focus on the block labelled "Available disks and partitions:"
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png"></a>
-
-4. Click the drop-down arrow at the right end of the row containing the block device you want to tag. Choose the "Edit..." option (the wording may vary, e.g, "Edit physical..."). This will take you to an editing screen for that block device:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/2912877532c3ea0b744ff3c88c7ef2046598bebc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/2912877532c3ea0b744ff3c88c7ef2046598bebc.png"></a>
-
-5. Add tags as described in the [general procedure](#heading--create-and-assign-tags).
-
-6. Be sure to click on the "Save" button when you're done.
-
-*** how to remove and delete block device tags
-<a href="#heading--remove-and-delete-block-device-tags"><h4 id="heading--remove-and-delete-block-device-tags">Remove and delete block device tags</h4></a>
-
-In order to remove tags from a block device, the device has to be in an "available" state, with no active partitions. To remove and delete tags from a block devices:
-
-1. Go to the machine list:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
-
-2. Select that machine that has the block-device with the tag you want to remove:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png"></a>
-
-3. Click on the "Storage" tab and focus on the block labelled "Available disks and partitions:"
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png"></a>
-
-4. Click the drop-down arrow at the right end of the row containing the block device you want to tag. Choose the "Edit..." option (the wording may vary, e.g, "Edit physical..."). This will take you to an editing screen for that block device:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/2912877532c3ea0b744ff3c88c7ef2046598bebc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/2912877532c3ea0b744ff3c88c7ef2046598bebc.png"></a>
-
-5. Delete tags by clicking the "X" next to them, as described in the [general procedure](#heading--create-and-assign-tags).
-
-6. Be sure to click on the "Save" button when you're done.
-
-*** how to list block device tags
-<a href="#heading--list-block-device-tags"><h4 id="heading--list-block-device-tags">List block device tags</h4></a>
-rad-end
-
-rad-begin /deb/2.9/ui
-There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/2896#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
-rad-end
-rad-begin /deb/3.0/ui
-There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/4023#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
-rad-end
-rad-begin /snap/2.9/ui
-There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/2890#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
-rad-end
-rad-begin /snap/3.0/ui
-There is no explicit way to list all block device tags in the UI; see the [MAAS CLI](/t/-/4021#heading--list-tags-for-all-block-devices) for a more comprehensive procedure. You can list all storage links, though -- block device and partition -- by using the filter tool on the machine list.  Here's how:
-rad-end
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
-
-1. Go to the machine list:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
-
-2. Select the "Filters" drop-down and open the section titled "Storage tags:"
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c03216c0c2b6097f73b8161922b602aac4fdc3d6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c03216c0c2b6097f73b8161922b602aac4fdc3d6.png"></a>
-
-Here you will see a list of all block device and partition tags currently assigned to machines in this MAAS.  If you wish to filter the machine list by a given tag, just make sure that it's checked (and other storage tags unchecked) in the filter list.
-
-*** how to view block device tags
-<a href="#heading--view-block-device-tags"><h4 id="heading--view-block-device-tags">View block device tags</h4></a>
-
-To view all tags associated with block devices on a given machine:
-
-1. Go to the machine list:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
-
-2. Select that machine that has the block device that interests you:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png"></a>
-
-3. Click on the "Storage" tab and check the page for tags:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png"></a>
-
-** how to work with partition tags
-<a href="#heading--work-with-partition-tags"><h3 id="heading--work-with-partition-tags">Work with partition tags</h3></a>
-
-This subsection will show you how to:
-
-rad-begin /deb/2.9/ui
-- [Assign partition tags (CLI only)](/t/-/2896#heading--assign-tags-to-a-partition)
-- [Remove partition tags (CLI only)](/t/-/2896#heading--remove-tags-from-a-partition)
-- [List partition tags](#heading--list-partition-tags)
-- [View partition tags](#heading--view-partition-tags)
-rad-end
-rad-begin /deb/3.0/ui
-- [Assign partition tags (CLI only)](/t/-/4023#heading--assign-tags-to-a-partition)
-- [Remove partition tags (CLI only)](/t/-/4023#heading--remove-tags-from-a-partition)
-- [List partition tags](#heading--list-partition-tags)
-- [View partition tags](#heading--view-partition-tags)
-rad-end
-rad-begin /snap/2.9/ui
-- [Assign partition tags (CLI only)](/t/-/2890#heading--assign-tags-to-a-partition)
-- [Remove partition tags (CLI only)](/t/-/2890#heading--remove-tags-from-a-partition)
-- [List partition tags](#heading--list-partition-tags)
-- [View partition tags](#heading--view-partition-tags)
-rad-end
-rad-begin /snap/3.0/ui
-- [Assign partition tags (CLI only)](/t/-/4021#heading--assign-tags-to-a-partition)
-- [Remove partition tags (CLI only)](/t/-/4021#heading--remove-tags-from-a-partition)
-- [List partition tags](#heading--list-partition-tags)
-- [View partition tags](#heading--view-partition-tags)
-rad-end
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
-
-*** how to list partition tags
-<a href="#heading--list-partition-tags"><h4 id="heading--list-partition-tags">List partition tags</h4></a>
-
-rad-end
-rad-begin /deb/2.9/ui
-There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/2896#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
-rad-end
-rad-begin /deb/3.0/ui
-There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/4023#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
-rad-end
-rad-begin /snap/2.9/ui
-There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/2890#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
-rad-end
-rad-begin /snap/3.0/ui
-There is no explicit way to list all partition tags in the UI; see the [MAAS CLI](/t/-/4021#heading--list-tags-for-all-partitions) for a more comprehensive procedure.
-rad-end
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
-
-You can list all storage links (block device and partition) by using the filter tool on the machine list.  Here's how:
-
-1. Go to the machine list:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
-
-2. Select the "Filters" drop-down and open the section titled "Storage tags:"
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c03216c0c2b6097f73b8161922b602aac4fdc3d6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c03216c0c2b6097f73b8161922b602aac4fdc3d6.png"></a>
-
-Here you will see a list of all block device and partition tags currently assigned to machines in this MAAS.
-
-*** how to view partition tags
-<a href="#heading--view-partition-tags"><h4 id="heading--view-partition-tags">View partition tags</h4></a>
-
-To view all tags associated with partitions on a given machine:
-
-1. Go to the machine list:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
-
-2. Select that machine that has the block device that interests you:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png"></a>
-
-3. Click on the "Storage" tab and check the page for tags:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png"></a>
-
-** how to work with network tags
-<a href="#heading--work-with-network-tags"><h3 id="heading--work-with-network-tags">Work with network tags</h3></a>
-
-This subsection will show you how to:
-rad-end
-rad-begin /deb/2.9/ui
-- [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
-- [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
-- [List network interface tags (CLI only)](/t/-/2896#heading--list-tags-for-all-network-interfaces)
-- [View network interface tags](#heading--view-network-interface-tags)
-rad-end
-rad-begin /deb/3.0/ui
-- [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
-- [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
-- [List network interface tags (CLI only)](/t/-/4023#heading--list-tags-for-all-network-interfaces)
-- [View network interface tags](#heading--view-network-interface-tags)
-rad-end
-rad-begin /snap/2.9/ui
-- [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
-- [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
-- [List network interface tags (CLI only)](/t/-/2890#heading--list-tags-for-all-network-interfaces)
-- [View network interface tags](#heading--view-network-interface-tags)
-rad-end
-rad-begin /snap/3.0/ui
-- [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
-- [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
-- [List network interface tags (CLI only)](/t/-/4021#heading--list-tags-for-all-network-interfaces)
-- [View network interface tags](#heading--view-network-interface-tags)
-rad-end
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
-
-*** how to create and assign network interface tags
-<a href="#heading--create-and-assign-network-interface-tags"><h4 id="heading--create-and-assign-network-interface-tags">Create and assign network interface tags</h4></a>
-
-To assign a tag to a network interface, use the following procedure:
-
-1. Go to the machine list and select the machine where that interface resides, by clicking on that machine's name:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png"></a>
-
-2. Click on the "Network" tab:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/9aebbe5708683d937c682e64e22c72d537629cf8.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9aebbe5708683d937c682e64e22c72d537629cf8.png"></a>
-
-3. Choose the interface you'd like to tag, by selecting the checkbox next to its name:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png"></a>
-
->The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
-
-4. Select the drop-down under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png"></a>
-
-5. Edit the "Tags" field as desired, as described in the [general tagging procedure](#heading--create-and-assign-tags) above.
-
-6. Be sure to select the "Tag machine" button to apply your changes to the interface for that machine.
-
-Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next -- so auto complete menus will be sparse or non-existent most of the time for these tag types.
-
-*** how to remove and delete network interface tags
-<a href="#heading--remove-and-delete-network-interface-tags"><h4 id="heading--remove-and-delete-network-interface-tags">Remove and delete network interface tags</h4></a>
-
-To remove a tag from a network interface, use the following procedure:
-
-1. Go to the machine list and select the machine where that interface resides, by clicking on that machine's name:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png"></a>
-
-2. Click on the "Network" tab:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/9aebbe5708683d937c682e64e22c72d537629cf8.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9aebbe5708683d937c682e64e22c72d537629cf8.png"></a>
-
-3. Choose the interface you'd like to un-tag, by selecting the checkbox next to its name:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png"></a>
-
->The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
-
-4. Select the drop-down under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png"></a>
-
-5. Edit the "Tags" field as desired, as described in the [general tagging procedure](#heading--create-and-assign-tags) above.
-
-6. Be sure to select the "Tag machine" button to apply your changes to the interface for that machine.
-
-Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next -- so auto complete menus will be sparse or non-existent most of the time for these tag types.
-
-*** how to view network interface tags
-<a href="#heading--view-network-interface-tags"><h4 id="heading--view-network-interface-tags">View network interface tags</h4></a>
-
-To view the tags associated with a network interface, use the following procedure:
-
-1. Go to the machine list and select the machine where that interface resides, by clicking on that machine's name:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png"></a>
-
-2. Click on the "Network" tab:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/9aebbe5708683d937c682e64e22c72d537629cf8.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9aebbe5708683d937c682e64e22c72d537629cf8.png"></a>
-
-3. Choose the interface you'd like to see, by selecting the checkbox next to its name:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png"></a>
-
->The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
-
-4. Select the drop-down under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png"></a>
-
-5. Be sure to cancel the operation when you're done.
-
-Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next.
-
-** how to work with device tags
-<a href="#heading--work-with-device-tags"><h3 id="heading--work-with-device-tags">Work with device tags</h3></a>
-
-This subsection will show you how to:
- 
-- [Create and assign device tags](#heading--create-and-assign-device-tags)
-- [Remove and delete device tags](#heading--remove-and-delete-device-tags)
-- [List device tags](#heading--list-device-tags)
-- [View device tags](#heading--view-device-tags)
-
-*** how to create and assign device tags
-<a href="#heading--create-and-assign-device-tags"><h4 id="heading--create-and-assign-device-tags">Create and assign device tags</h4></a>
-
-To add a tag to a device, follow this procedure:
-
-1. Select the "Devices" tab; it may be in a drop-down labelled "Hardware," if your browser window is not very large:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/22b17d4827f82c103e958205011ca13934fe2f3f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/22b17d4827f82c103e958205011ca13934fe2f3f.png"></a>
-
-2. Select the device you'd like to tag, by clicking on its name:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/94717b99a4cea205099e3fdfd492daefe683e68d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/94717b99a4cea205099e3fdfd492daefe683e68d.png"></a>
-
-3. In the "Tags" card, select the "Edit" link, or choose the "Configuration" tab under the device name:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/901e7bd556f26560e44b4b74c41b506399e86375.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/901e7bd556f26560e44b4b74c41b506399e86375.png"></a>
-
-4. Select the "Edit" button on the "Configuration" tab which comes up:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/d80039410bfeba4b6feb35490ccf82b3be80904f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d80039410bfeba4b6feb35490ccf82b3be80904f.png"></a>
-
-5. Edit the "Tags" field, as explained in the [general tagging procedure](#heading--create-assign-tag-general) above.
-
-6. Be sure to hit the "Save changes" button to apply your changes to the device.
-
-*** how to remove and delete device tags
-<a href="#heading--remove-and-delete-device-tags"><h4 id="heading--remove-and-delete-device-tags">Remove and delete device tags</h4></a>
-
-To remove a tag from a device, follow this procedure:
-
-1. Select the "Devices" tab; it may be in a drop-down labelled "Hardware," if your browser window is not very large:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/22b17d4827f82c103e958205011ca13934fe2f3f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/22b17d4827f82c103e958205011ca13934fe2f3f.png"></a>
-
-2. Select the device you'd like to un-tag, by clicking on its name:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/94717b99a4cea205099e3fdfd492daefe683e68d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/94717b99a4cea205099e3fdfd492daefe683e68d.png"></a>
-
-3. In the "Tags" card, select the "Edit" link, or choose the "Configuration" tab under the device name:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/901e7bd556f26560e44b4b74c41b506399e86375.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/901e7bd556f26560e44b4b74c41b506399e86375.png"></a>
-
-4. Select the "Edit" button on the "Configuration" tab which comes up:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/d80039410bfeba4b6feb35490ccf82b3be80904f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d80039410bfeba4b6feb35490ccf82b3be80904f.png"></a>
-
-5. Edit the "Tags" field, as explained in the [general tagging procedure](#heading--create-assign-tag-general) above.
-
-6. Be sure to hit the "Save changes" button to apply your changes to the device.
-
-*** how to list device tags
-<a href="#heading--list-device-tags"><h4 id="heading--list-device-tags">List device tags</h4></a>
-
-1. Go to the device list:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/8748ed53d5a24425e808698c902a22536a08f994.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8748ed53d5a24425e808698c902a22536a08f994.png"></a>
-
-2. Select the "Filters" drop-down and open the section titled "Tags:"
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/957ff8874fb8336335ec5073c14068f36a7aeeb6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/957ff8874fb8336335ec5073c14068f36a7aeeb6.png"></a>
-
-Here you will see a list of all device tags currently assigned to devices in this MAAS.
-
-*** how to view device tags
-<a href="#heading--view-device-tags"><h4 id="heading--view-device-tags">View device tags</h4></a>
-
-1. Go to the device list:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/8748ed53d5a24425e808698c902a22536a08f994.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8748ed53d5a24425e808698c902a22536a08f994.png"></a>
-
-2. Select the device that has your interest by clicking on its name.  A device summary will appear:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/eadc32f46c714080005faa0be7f744d4143df379.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/eadc32f46c714080005faa0be7f744d4143df379.png"></a>
-
-The "Tags" card on that screen with show you all the tags currently associated with this device.
-
-* how to work with annotations
-<a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a>
-
-This section will explain how to:
-rad-end
-rad-begin /snap/3.0/ui /deb/3.0/ui 
-
-- [Work with static annotations](#heading--work-with-static-annotations)
-- [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
-
-** how to work with static annotations
-<a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a>
-
-This subsection will show you how to:
-rad-end
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
- 
-- [Create and assign static annotations](#heading--create-and-assign-static-annotations)
-- [Delete static annotations](#heading--delete-static-annotations)
-- [View static annotations](#heading--view-static-annotations)
-
-*** how to create and assign static annotations
-<a href="#heading--create-and-assign-static-annotations"><h4 id="heading--create-and-assign-static-annotations">Create and assign static annotations</h4></a>
-
-To create and assign static annotations (a note) to a machine, follow this procedure:
-
-1. Go to the machine list and click on the machine of interest:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
-
-2. This will bring up a machine summary for that machine:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a>
-
-3. Select "Configuration" and click the "Edit" button to the right of the "Machine configuration" section:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png"></a>
-
-4. Add free-form notes in the "Note" field, as desired.
-
-5. Click "Save changes" to update the machine's configuration.
-
-*** how to delete static annotations
-<a href="#heading--delete-static-annotations"><h4 id="heading--delete-static-annotations">Delete static annotations</h4></a>
-
-To delete static annotations (a note) from a machine, follow this procedure:
-
-1. Go to the machine list and click on the machine of interest:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
-
-2. This will bring up a machine summary for that machine:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a>
-
-3. Select "Configuration" and click the "Edit" button to the right of the "Machine configuration" section:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png"></a>
-
-4. Edit the free-form notes in the "Note" field, as desired.
-
-5. Click "Save changes" to update the machine's configuration.
-
-*** how to view static annotations
-<a href="#heading--view-static-annotations"><h4 id="heading--view-static-annotations">View static annotations</h4></a>
-
-To view static annotations, you can follow this procedure:
-
-1. Go to the machine list and look at the machine of interest; you should see the first few characters of a note in the bottom half of the column marked "POOL/NOTE:"
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/3286feef733f4b56a94708d3af044c1523e78369.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3286feef733f4b56a94708d3af044c1523e78369.png"></a>
-
-2. Click on the machine, which will bring up a machine summary for that machine. Switch to the configuration tab to see the full note:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png"></a>
-
-rad-end
-
-rad-begin /snap/3.0/ui /deb/3.0/ui
-** how to work with dynamic workload annotations
-<a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</h3></a>
- 
-This subsection will show you how to:
-
-rad-end
-rad-begin /deb/3.0/ui 
-- [Create dynamic (workload) annotations (CLI only)](/t/-/4023#heading--set-dynamic-annotations-for-a-machine)
-- [Delete dynamic (workload) annotations (CLI only)](/t/-/4023#heading--clear-and-change-dynamic-annotations-for-a-machine)
-- [View dynamic (workload) annotations for one machine](#heading--view-dynamic-workload-annotations-for-one-machine)
-- [Filter on dynamic (workload) annotations](#heading--filter-on-dynamic-workload-annotations)
-rad-end
-rad-begin /snap/3.0/ui 
-- [Create dynamic (workload) annotations (CLI only)](/t/-/4021#heading--set-dynamic-annotations-for-a-machine)
-- [Delete dynamic (workload) annotations (CLI only)](/t/-/4021#heading--clear-and-change-dynamic-annotations-for-a-machine)
-- [View dynamic (workload) annotations for one machine](#heading--view-dynamic-workload-annotations-for-one-machine)
-- [Filter on dynamic (workload) annotations](#heading--filter-on-dynamic-workload-annotations)
-rad-end
-
-rad-begin /snap/3.0/ui /deb/3.0/ui
-*** how to view dynamic workload annotations for one machine
-<a href="#heading--view-dynamic-workload-annotations-for-one-machine"><h4 id="heading--view-dynamic-workload-annotations-for-one-machine">View dynamic (workload) annotations for one machine</h4></a>
-
-To view the dynamic (workload) annotations for one machine, do the following:
-
-1. Go to the machine list and select the machine of interest by clicking on its hyperlinked name.
-
-2. In the machine summary that comes up, look for the "Workload Annotations" card, in the lower, right-hand corner:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/e7def7a50f9c854f7aae0efc34897338c46c32c0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e7def7a50f9c854f7aae0efc34897338c46c32c0.png"></a>
-
-<a href="#heading--filter-on-dynamic-workload-annotations"><h4 id="heading--filter-on-dynamic-workload-annotations">Filter on dynamic (workload) annotations</h4></a>
-
-To filter machines by dynamic (workload) annotations, use the following procedure:
-
-1. Go to the machine list and select the "Filter" drop-down; open the "Workload" segment:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/946fb41e9cefb10a0b59787ce22b70a91b248d01.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/946fb41e9cefb10a0b59787ce22b70a91b248d01.jpeg"></a>
-
-2. Select one or more values from this list to filter the machine list by these workload annotations.
-
-rad-end
-
-rad-begin     /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
-
-* how to work with tags
-<a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a>
-
-This section is devoted to procedures for working with tags.  We begin with some general operations that apply to all tags types, such as naming conventions and basic mechanics.  We then walk through the various tag types, providing procedures that will help you create, assign, remove, delete, list, view, and filter tags, covering the nuances of each type.
-
-Specifically, this section will show you how to:
-
-- [Work with tags, independent of application](#heading--work-with-tags-independent-of-application)
-- [Work with machine tags](#heading--work-with-machine-tags)
-- [Work with virtual machine host tags](#heading--work-with-virtual-machine-host-tags)
-- [Work with region controller tags](#heading--work-with-region-controller-tags)
-- [Work with rack controller tags](#heading--work-with-rack-controller-tags)
-- [Work with block device tags](#heading--work-with-block-device-tags)
-- [Work with partition tags](#heading--work-with-partition-tags)
-- [Work with network tags](#heading--work-with-network-tags)
-- [Work with device tags](#heading--work-with-device-tags)
-- [Work with node tags](#heading--work-with-node-tags)
-
-** how to work with tags, independent of application
-<a href="#heading--work-with-tags-independent-of-application"><h3 id="heading--work-with-tags-independent-of-application">Work with tags, independent of application</h3></a>
-
-This subsection will explain how to:
-
-- [Create a tag](#heading--create-a-tag)
-- [Create tags with built-in kernel options](#heading--create-tags-with-built-in-kernel-options)
-- [Delete a tag](#heading--delete-a-tag)
-- [Update a tag](#heading--update-a-tag)
-- [List all tags available on this MAAS](#heading--list-all-tags-available-on-this-maas)
-- [Rebuild a tag](#heading--rebuild-a-tag)
-
-
-
-** how to work with machine tags
-
-** how to work with region controller tags
-<a href="#heading--work-with-region-controller-tags"><h3 id="heading--work-with-region-controller-tags">Work with region controller tags</h3></a>
-
-This subsection will show you how to:
-
-- [Discover the ID of your region controller(s)](#heading--discover-the-id-of-your-region-controllers)
-- [Assign tags to a region controller](#heading--assign-tags-to-a-region-controller)
-- [Remove tags from a region controller](#heading--remove-tags-from-a-region-controller)
-- [List tags for all region controllers](#heading--list-tags-for-all-region-controllers)
-- [View tags for one region controller](#heading--view-tags-for-one-region-controller)
-
-<a href="#heading--discover-the-id-of-your-region-controllers"><h4 id="heading--discover-the-id-of-your-region-controllers">Discover the ID of your region controller(s)</h4></a>
-
-You can discover the ID of your region controller(s) with the following command:
-
-```bash
-maas $PROFILE region-controllers read \
-| jq -r '(["name","id"]
-|(.,map(length*"-"))),(.[]|[.hostname,.system_id])
-| @tsv' | column -t
-```
-
-For example:
-
-```bash
-maas admin region-controllers read \
-| jq -r '(["name","id"]
-|(.,map(length*"-"))),(.[]|[.hostname,.system_id])
-| @tsv' | column -t
-```
-
-Typical output would look something like this:
-
-```nohighlight
-name                         id
-----                         --
-bill-Lenovo-Yoga-C740-15IML  86xya8
-```
-
-<a href="#heading--assign-tags-to-a-region-controller"><h4 id="heading--assign-tags-to-a-region-controller">Assign tags to a region controller</h4></a>
-
-To add tags to a region controller, you can use a command of this form:
-
-```bash
-maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
-```
-
-If you need to find the ID of your region controller(s), you can [look it up](#heading--discover-the-id-of-your-region-controllers).
-
-For example:
-
-```bash
-maas admin tag update-nodes virtual add=86xya8
-```
-
-This command produces output similar to the following:
-
-```nohighlight
-Success.
-Machine-readable output follows:
-{
-    "added": 1,
-    "removed": 0
-}
-```
-
-You can check your work by [listing all tags for your region controllers](#heading--list-tags-for-all-region-controllers).
-
-<a href="#heading--remove-tags-from-a-region-controller"><h4 id="heading--remove-tags-from-a-region-controller">Remove tags from a region controller</h4></a>
-
-To remove tags from a region controller, you can use a command like this:
-
-```bash
-maas $PROFILE tag update-nodes $TAG_NAME remove=$SYSTEM_ID
-```
-
-If you need to find the ID of your region controller(s), you can [look it up](#heading--discover-the-id-of-your-region-controllers).
-
-For example:
-
-```bash
-maas admin tag update-nodes virtual remove=86xya8
-```
-
-This command produces output similar to the following:
-
-```nohighlight
-Success.
-Machine-readable output follows:
-{
-    "added": 0,
-    "removed": 1
-}
-```
-
-You can check your work by [listing all tags for your region controllers](#heading--list-tags-for-all-region-controllers).
-
-<a href="#heading--list-tags-for-all-region-controllers"><h4 id="heading--list-tags-for-all-region-controllers">List tags for all region controllers</h4></a>
-
-To list tags for all region controllers, you can use a command similar to this:
-
-```bash
-maas $PROFILE region-controllers read | jq -r '(["hostname","sysid","tags"]|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.tag_names[]]) | @tsv' | column -t
-```
-
-For example:
-
-```bash
-maas admin region-controllers read | jq -r '(["hostname","sysid","tags"]|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.tag_names[]]) | @tsv' | column -t
-```
-
-This will produce output something like this:
-
-```nohighlight
-hostname                     sysid   tags
---------                     -----   ----
-bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
-```
-
-<a href="#heading--view-tags-for-one-region-controller"><h4 id="heading--view-tags-for-one-region-controller">View tags for one region controller</h4></a>
-
-To view tags for a specific region controller, you can try a command like this:
-
-```bash
-maas $PROFILE region-controller read $SYSTEM_ID | jq -r '(["hostname","sysid","tags"]|(.,map(length*"-"))),([.hostname,.system_id,.tag_names[]]) | @tsv' | column -t
-'''
-
-If you need to find the ID of your region controller(s), you can [look it up](#heading--discover-the-id-of-your-region-controllers).
-
-For example:
-
-```bash
-maas admin region-controller read 86xya8 \
-| jq -r '(["hostname","sysid","tags"]
-|(.,map(length*"-"))),([.hostname,.system_id,.tag_names[]])
-| @tsv' | column -t
-```
-
-This should produce output similar to the following:
-
-```nohighlight
-hostname                     sysid   tags
---------                     -----   ----
-bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
-```
-
-** how to work with rack controller tags
-<a href="#heading--work-with-rack-controller-tags"><h3 id="heading--work-with-rack-controller-tags">Work with rack controller tags</h3></a>
-
-This subsection will show you how to:
-
-- [Discover the ID of your rack controller(s)](#heading--discover-the-id-of-your-rack-controllers)
-- [Assign tags to a rack controller](#heading--assign-tags-to-a-rack-controller)
-- [Remove tags from a rack controller](#heading--remove-tags-from-a-rack-controller)
-- [List tags for all rack controllers](#heading--list-tags-for-all-rack-controllers)
-- [View tags for one rack controller](#heading--view-tags-for-one-rack-controller)
-
-<a href="#heading--discover-the-id-of-your-rack-controllers"><h4 id="heading--discover-the-id-of-your-rack-controllers">Discover the ID of your rack controller(s)</h4></a>
-
-You can discover the ID of your rack controller(s) with the following command:
-
-```bash
-maas $PROFILE rack-controllers read \
-| jq -r '(["name","id"]
-|(.,map(length*"-"))),(.[]|[.hostname,.system_id])
-| @tsv' | column -t
-```
-
-For example:
-
-```bash
-maas admin rack-controllers read \
-| jq -r '(["name","id"]
-|(.,map(length*"-"))),(.[]|[.hostname,.system_id])
-| @tsv' | column -t
-```
-
-Typical output would look something like this:
-
-```nohighlight
-name                         id
-----                         --
-bill-Lenovo-Yoga-C740-15IML  86xya8
-```
-
-<a href="#heading--assign-tags-to-a-rack-controller"><h4 id="heading--assign-tags-to-a-rack-controller">Assign tags to a rack controller</h4></a>
-
-To add tags to a rack controller, you can use a command of this form:
-
-```bash
-maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
-```
-
-If you need to find the ID of your rack controller(s), you can [look it up](#heading--discover-the-id-of-your-rack-controllers).
-
-For example:
-
-```bash
-maas admin tag update-nodes virtual add=86xya8
-```
-
-This command produces output similar to the following:
-
-```nohighlight
-Success.
-Machine-readable output follows:
-{
-    "added": 1,
-    "removed": 0
-}
-```
-
-You can check your work by [listing all tags for your rack controllers](#heading--list-tags-for-all-rack-controllers).
-
-<a href="#heading--remove-tags-from-a-rack-controller"><h4 id="heading--remove-tags-from-a-rack-controller">Remove tags from a rack controller</h4></a>
-
-To remove tags from a rack controller, you can use a command like this:
-
-```bash
-maas $PROFILE tag update-nodes $TAG_NAME remove=$SYSTEM_ID
-```
-
-If you need to find the ID of your rack controller(s), you can [look it up](#heading--discover-the-id-of-your-rack-controllers).
-
-For example:
-
-```bash
-maas admin tag update-nodes virtual remove=86xya8
-```
-
-This command produces output similar to the following:
-
-```nohighlight
-Success.
-Machine-readable output follows:
-{
-    "added": 0,
-    "removed": 1
-}
-```
-
-You can check your work by [listing all tags for your rack controllers](#heading--list-tags-for-all-rack-controllers).
-
-<a href="#heading--list-tags-for-all-rack-controllers"><h4 id="heading--list-tags-for-all-rack-controllers">List tags for all rack controllers</h4></a>
-
-To list tags for all rack controllers, you can use a command similar to this:
-
-```bash
-maas $PROFILE rack-controllers read | jq -r '(["hostname","sysid","tags"]|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.tag_names[]]) | @tsv' | column -t
-```
-
-For example:
-
-```bash
-maas admin rack-controllers read | jq -r '(["hostname","sysid","tags"]|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.tag_names[]]) | @tsv' | column -t
-```
-
-This will produce output something like this:
-
-```nohighlight
-hostname                     sysid   tags
---------                     -----   ----
-bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
-```
-
-<a href="#heading--view-tags-for-one-rack-controller"><h4 id="heading--view-tags-for-one-rack-controller">View tags for one rack controller</h4></a>
-
-To view tags for a specific rack controller, you can try a command like this:
-
-```bash
-maas $PROFILE rack-controller read $SYSTEM_ID | jq -r '(["hostname","sysid","tags"]|(.,map(length*"-"))),([.hostname,.system_id,.tag_names[]]) | @tsv' | column -t
-'''
-
-If you need to find the ID of your rack controller(s), you can [look it up](#heading--discover-the-id-of-your-rack-controllers).
-
-For example:
-
-```bash
-maas admin rack-controller read 86xya8 \
-| jq -r '(["hostname","sysid","tags"]
-|(.,map(length*"-"))),([.hostname,.system_id,.tag_names[]])
-| @tsv' | column -t
-```
-
-This should produce output similar to the following:
-
-```nohighlight
-hostname                     sysid   tags
---------                     -----   ----
-bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
-```
-
-** how to work with block device tags
-<a href="#heading--work-with-block-device-tags"><h3 id="heading--work-with-block-device-tags">Work with block device tags</h3></a>
-
-This subsection will show you how to:
-
-- [Discover the ID of your block device](#heading--discover-the-id-of-your-block-device) 
-- [Assign tags to a block device](#heading--assign-tags-to-a-block-device)
-- [Remove tags from a block device](#heading--remove-tags-from-a-block-device)
-- [List tags for all block devices](#heading--list-tags-for-all-block-devices)
-- [View tags for one block device](#heading--view-tags-for-one-block-device)
-
-<a href="#heading--discover-the-id-of-your-block-device"><h4 id="heading--discover-the-id-of-your-block-device">Discover the ID of your block device</h4></a>
-
-Block devices do not exist apart from the physical or virtual machines to which they are attached.  Finding the ID of the block device that interests you requires starting with a particular machine, in a command form that looks like this:
-
-```bash
-maas $PROFILE block-devices read $SYSTEM_ID \
-| jq -r '(["system_id","block_device_id","path","avail_size"]
-|(.,map(length*"-"))),(.[]|[.system_id,.id,.path,.available_size])
-| @tsv' | column -t
-```
-
-For example:
-
-```bash
-maas admin block-devices read qk4b3g \
-| jq -r '(["system_id","block_device_id","path","avail_size"]
-|(.,map(length*"-"))),(.[]|[.system_id,.id,.path,.available_size])
-| @tsv' | column -t
-```
-
-This example would produce output that looks something like this:
-
-```nohighlight
-system_id  block_device_id  path                    avail_size
----------  ---------------  ----                    ----------
-qk4b3g     10               /dev/disk/by-dname/sda  0
-```
-
-The `path` component is printed to help you confirm that you are choosing the right block device, when there are several present.  The `avail-size` column will tell you whether you can operate on that block device at all: If the available size is "0," for example, you can't set a block device tag on any part of that drive.  Instead, you'd want to see something like this:
-
-```nohighlight
-system_id  block_device_id  path                    avail_size
----------  ---------------  ----                    ----------
-xn8taa     8                /dev/disk/by-dname/sda  1996488704
-```
-
-<a href="#heading--assign-tags-to-a-block-device"><h4 id="heading--assign-tags-to-a-block-device">Assign tags to a block device</h4></a>
-
-You can only assign tags to a block device that is available. You can find out whether the block device is available at all when you [discover its ID](#heading--discover-the-id-of-your-block-device).
-
-To assign an existing tag to a block device, you would type a command formulated like this:
-
-```bash
-maas $PROFILE block-device add-tag $SYSTEM_ID $BLOCK_DEVICE_ID tag=$TAG_NAME
-```
-
-If you're not sure about the ID of your block device, you can [look it up](#heading--discover-the-id-of-your-block-device).
-
-For example:
-
-```
-maas admin block-device add-tag xn8taa 8 tag=farquar
-```
-
-If this command succeeds, it will display `Success`, followed by a JSON sequence describing the new state of the block device.
-
-Note that if you try to add a tag to a block device that is not available, that is, to a block device that is in use, you will get a result like this:
-
-```nohighlight
-Not Found
-```
-
-<a href="#heading--remove-tags-from-a-block-device"><h4 id="heading--remove-tags-from-a-block-device">Remove tags from a block device</h4></a>
-
-You can only remove tags from a block device that is available. You can find out whether the block device is available at all when you [discover its ID](#heading--discover-the-id-of-your-block-device).
-
-To remove an assigned tag from a block device, you would type a command formulated like this:
-
-```bash
-maas $PROFILE block-device remove-tag $SYSTEM_ID $BLOCK_DEVICE_ID tag=$TAG_NAME
-```
-
-If you're not sure about the ID of your block device, you can [look it up](#heading--discover-the-id-of-your-block-device).
-
-For example:
-
-```
-maas admin block-device remove-tag xn8taa 8 tag=farquar
-```
-
-If this command succeeds, it will display `Success`, followed by a JSON sequence describing the new state of the block device.
-
-Note that if you try to remove a tag from a block device that is not available, that is, to a block device that is in use, you will get a result like this:
-
-```nohighlight
-Not Found
-```
-
-<a href="#heading--list-tags-for-all-block-devices"><h4 id="heading--list-tags-for-all-block-devices">List tags for all block devices</h4></a>
-
-To list tags for all block devices associated with a physical or virtual machine, you can use a command of this form:
-
-```bash
-maas $PROFILE block-devices read $SYSTEM_ID | jq -r '(["id","tags"]|(.,map(length*"-"))),(.[]|[.id,.tags[]]) | @tsv' | column -t
-```
-
-For example:
-
-```bash
-maas admin block-devices read xn8taa | jq -r '(["id","tags"]|(.,map(length*"-"))),(.[]|[.id,.tags[]]) | @tsv' | column -t
-```
-
-This command would produce output similar to this:
-
-```nohighlight
-id  tags
---  ----
-8   hello  ssd  trinkoplinko
-```
-
-<a href="#heading--view-tags-for-one-block-device"><h4 id="heading--view-tags-for-one-block-device">View tags for one block device</h4></a>
-
-To view tags for one specific block device, you can enter a command like this:
-
-```bash
-maas $PROFILE block-device read $SYSTEM_ID $BLOCK_DEVICE_ID | jq -r '(["id","tags"]|(.,map(length*"-"))),([.id,.tags[]]) | @tsv' | column -t
-```
-
-If you're not sure about the ID of your block device, you can [look it up](#heading--discover-the-id-of-your-block-device).
-
-For example:
-
-```bash
-maas admin block-device read xn8taa 8 | jq -r '(["id","tags"]|(.,map(length*"-"))),([.id,.tags[]]) | @tsv' | column -t
-```
-
-This command would produce output similar to this:
-
-```nohighlight
-id  tags
---  ----
-8   hello  ssd  trinkoplinko
-9   20gig  ssd
-10  250Gs  ssd
-```
-
-** how to work with partition tags
-<a href="#heading--work-with-partition-tags"><h3 id="heading--work-with-partition-tags">Work with partition tags</h3></a>
-
-This subsection will show you how to:
-
-- [Discover the ID of your partition](#heading--discover-the-id-of-your-partition)
-- [Assign tags to a partition](#heading--assign-tags-to-a-partition)
-- [Remove tags from a partition](#heading--remove-tags-from-a-partition)
-- [List tags for all partitions](#heading--list-tags-for-all-partitions)
-- [View tags for one partition](#heading--view-tags-for-one-partition)
-
-<a href="#heading--discover-the-id-of-your-partition"><h4 id="heading--discover-the-id-of-your-partition">Discover the ID of your partition</h4></a>
-
-Partitions do not exist apart from the block devices on which they reside.  Finding the ID of the partition that interests you requires starting with a particular machine and block device, similar to this command:
-
-```bash
-maas $PROFILE partitions read $SYSTEM_ID $BLOCK_DEVICE_ID \
-| jq -r '(["system_id","block_dev_id","part_id","path"]
-|(.,map(length*"-"))),(.[]|[.system_id,.device_id,.id,.path])
-|@tsv' | column -t
-```
-
-For example:
-
-```bash
-maas admin partitions read xn8taa 8 \
-| jq -r '(["system_id","block_dev_id","part_id","path"]
-|(.,map(length*"-"))),(.[]|[.system_id,.device_id,.id,.path])
-|@tsv' | column -t
- ```
-
-This example would produce output that looks something like this:
-
-```nohighlight
-system_id  block_dev_id  part_id  path
----------  ------------  -------  ----
-xn8taa     8             67       /dev/disk/by-dname/sda-part1
-```
-
-The `path` component is printed to help you confirm that you are choosing the right partition, when there are several present.  
-
-<a href="#heading--assign-tags-to-a-partition"><h4 id="heading--assign-tags-to-a-partition">Assign tags to a partition</h4></a>
-
-You can only assign tags to a partition that is available.  To assign an existing tag to a partition, you would type a command formulated like this:
-
-```bash
-maas $PROFILE partition add-tag $SYSTEM_ID $BLOCK_DEVICE_ID $PARTITION_ID tag=$TAG_NAME
-```
-
-If you're not sure about the ID of your partition, you can [look it up](#heading--discover-the-id-of-your-partition).
-
-For example:
-
-```bash
-maas admin partition add-tag xn8taa 8 67 tag=farquar
-```
-
-If this command succeeds, it will display `Success`, followed by a JSON sequence describing the new state of the partition.
-
-Note that if you try to add a tag to a partition that is not available, that is, to a partition that is in use, you will get a result like this:
-
-```nohighlight
-Not Found
-```
-
-<a href="#heading--remove-tags-from-a-partition"><h4 id="heading--remove-tags-from-a-partition">Remove tags from a partition</h4></a>
-
-You can only remove tags from a partition that is available.  To remove a existing tag from a partition, you would type a command formulated like this:
-
-```bash
-maas $PROFILE partition remove-tag $SYSTEM_ID $BLOCK_DEVICE_ID $PARTITION_ID tag=$TAG_NAME
-```
-
-If you're not sure about the ID of your partition, you can [look it up](#heading--discover-the-id-of-your-partition).
-
-For example:
-
-```bash
-maas admin partition remove-tag xn8taa 8 67 tag=farquar
-```
-
-If this command succeeds, it will display `Success`, followed by a JSON sequence describing the new state of the partition.
-
-Note that if you try to remove a tag from a partition that is not available, that is, to a partition that is in use, you will get a result like this:
-
-```nohighlight
-Not Found
-```
-
-On the other hand, if you try to remove a tag that is not assigned to the partition you've chosen, MAAS will simply return `Success`, followed by a JSON sequence describing the current state of the partition.
-
-<a href="#heading--list-tags-for-all-partitions"><h4 id="heading--list-tags-for-all-partitions">List tags for all partitions</h4></a>
-
-To list tags for all partitions of a particular block device, use a command like this one:
-
-```bash
-maas $PROFILE partitions read $SYSTEM_ID $BLOCK_DEVICE_ID \
-| jq -r '(["id","tags"]
-|(.,map(length*"-"))),(.[]|[.id,.tags[]])
-| @tsv' | column -t
-```
-
-For example:
-
-```bash
-maas admin partitions read xn8taa 8 \
-| jq -r '(["id","tags"]
-|(.,map(length*"-"))),(.[]|[.id,.tags[]])
-| @tsv' | column -t
-```
-
-A command like this should return output similar to the following:
-
-```nohighlight
-id  tags
---  ----
-54  farquar swap opendisk
-67  foobar  farquar
-97  foobar
-```
-
-<a href="#heading--view-tags-for-one-partition"><h4 id="heading--view-tags-for-one-partition">View tags for one partition</h4></a>
-
-To view tags for one partition, enter a command similar to this:
-
-```bash
-maas $PROFILE partition read $SYSTEM_ID $BLOCK_DEVICE_ID $PARTITION_ID | jq -r '(["id","tags"]|(.,map(length*"-"))),([.id,.tags[]]) | @tsv' | column -t
-```
-
-If you're not sure about the ID of your partition, you can [look it up](#heading--discover-the-id-of-your-partition).
-
-For example:
-
-```bash
-maas admin partition read xn8taa 8 67 | jq -r '(["id","tags"]|(.,map(length*"-"))),([.id,.tags[]]) | @tsv' | column -t
-```
-
-This command should produce output similar to this:
-
-```nohighlight
-id  tags
---  ----
-67  foobar  farquar
-```
-** how to work with network tags
-<a href="#heading--work-with-network-tags"><h3 id="heading--work-with-network-tags">Work with network tags</h3></a>
-
-This subsection will show you how to:
-
-- [Discover the ID of your network interface](#heading--discover-the-id-of-your-network-interface)
-- [Assign tags to a network interface](#heading--assign-tags-to-a-network-interface)
-- [Remove tags from a network interface](#heading--remove-tags-from-a-network-interface)
-- [List tags for all network interfaces](#heading--list-tags-for-all-network-interfaces)
-- [View tags for one network interface](#heading--view-tags-for-one-network-interface)
-
-<a href="#heading--discover-the-id-of-your-network-interface"><h4 id="heading--discover-the-id-of-your-network-interface">Discover the ID of your network interface</h4></a>
-
-You can use a command of the following form to identify the interfaces associated with a particular device on your MAAS:
-
-```bash
-maas $PROFILE interfaces read $SYSTEM_ID \
-| jq -r '(["mac_address","type","id","tags"]
-|(.,map(length*"-"))),(.[]|[.mac_address,.type,.id,.tags[]])
-|@tsv'| column -t
-```
-
-For example:
-
-```bash
-maas admin interfaces read xn8taa \
-| jq -r '(["mac_address","type","id","tags"]
-|(.,map(length*"-"))),(.[]|[.mac_address,.type,.id,.tags[]])
-|@tsv'| column -t
-```
-
-This would produce output similar to the following:
-
-```nohighlight
-mac_address        type      id  tags
------------        ----      --  ----
-00:16:3e:18:7f:ee  physical  9   andrpko  plinko  cochise
-```
-
-<a href="#heading--assign-tags-to-a-network-interface"><h4 id="heading--assign-tags-to-a-network-interface">Assign tags to a network interface</h4></a>
-
-To assign a tag to a network interface, using both the device system ID and the interface ID, use a command of the following form:
-
-```bash
-maas $PROFILE interface add-tag $SYSTEM_ID $INTERFACE_ID tag=$TAG_NAME
-```
-
-For example:
-
-```bash
-maas admin interface add-tag xn8taa 9 tag=farquar
-```
-
-This command, if successful, will produce a long sequence of JSON describing the interface, including the changes introduced by the command above.  You can also check your work by [listing the tags](#heading--list-tags-for-all-network-interfaces) associated with the device.
-
-<a href="#heading--remove-tags-from-a-network-interface"><h4 id="heading--remove-tags-from-a-network-interface">Remove tags from a network interface</h4></a>
-
-To remove a tag from a network interface, use both the device system ID and the interface ID in a command similar to this one:
-
-```bash
-maas $PROFILE interface remove-tag $SYSTEM_ID $INTERFACE_ID tag=$TAG_NAME
-```
-
-For example:
-
-```bash
-maas admin interface remove-tag xn8taa 9 tag=farquar
-```
-
-This command, if successful, will produce a long sequence of JSON describing the interface, including the changes introduced by the command above.  You can also check your work by [listing the tags](#heading--list-tags-for-all-network-interfaces) associated with the device.
-
-<a href="#heading--list-tags-for-all-network-interfaces"><h4 id="heading--list-tags-for-all-network-interfaces">List tags for all network interfaces</h4></a>
-
-To list all the tags for a given network interface on a given device, use a command like this one:
-
-```bash
-maas $PROFILE interfaces read $SYSTEM_ID \
-| jq -r '(["mac_address","type","id","tags"]
-|(.,map(length*"-"))),(.[]|[.mac_address,.type,.id,.tags[]])
-|@tsv'| column -t
-```
-
-For example:
-
-```bash
-maas admin interfaces read xn8taa \
-| jq -r '(["mac_address","type","id","tags"]
-|(.,map(length*"-"))),(.[]|[.mac_address,.type,.id,.tags[]])
-|@tsv'| column -t
-```
-
-This would produce output similar to the following:
-
-```nohighlight
-mac_address        type      id  tags
------------        ----      --  ----
-00:16:3e:18:7f:ee  physical  9   andrpko  plinko  cochise  farquar
-```
-
-<a href="#heading--view-tags-for-one-network-interface"><h4 id="heading--view-tags-for-one-network-interface">View tags for one network interface</h4></a>
-
-To view tags for one particular network interface on a specific device, try a command formulated like this:
-
-```bash
-maas $PROFILE interface read $SYSTEM_ID $INTERFACE_ID \
-| jq -r '(["mac_address","type","id","tags"]
-|(.,map(length*"-"))),([.mac_address,.type,.id,.tags[]])
-|@tsv'| column -t
-```
-
-For example:
-
-```bash
-maas admin interface read xn8taa 9 \
-| jq -r '(["mac_address","type","id","tags"]
-|(.,map(length*"-"))),([.mac_address,.type,.id,.tags[]])
-|@tsv'| column -t
-```
-
-Typical output might look like this:
-
-```nohighlight
-mac_address        type      id  tags
------------        ----      --  ----
-00:16:3e:18:7f:ee  physical  9   andrpko  plinko  cochise
-```
-** how to work with device tags
-<a href="#heading--work-with-device-tags"><h3 id="heading--work-with-device-tags">Work with device tags</h3></a>
-
-This subsection will show you how to:
-
-- [Identify your devices](#heading--identify-your-devices)
-- [Assign tags to a device](#heading--assign-tags-to-a-device)
-- [Remove tags from a device](#heading--remove-tags-from-a-device)
-- [List tags for all devices](#heading--list-tags-for-all-devices)
-- [View tags for one device](#heading--view-tags-for-one-device)
-
-<a href="#heading--identify-your-devices"><h4 id="heading--identify-your-devices">Identify your devices</h4></a>
-
-You can use a command similar to the following to identify your devices:
-
-```bash
-maas $PROFILE devices read \
-| jq -r '(["hostname","system_id"]
-|(.,map(length*"-"))),(.[]|[.hostname,.system_id])
-|@tsv' | column -t
-```
-
-For example:
-
-```bash
-maas admin devices read \
-| jq -r '(["hostname","system_id"]
-|(.,map(length*"-"))),(.[]|[.hostname,.system_id])
-|@tsv' | column -t
-```
-
-This command produces a result similar to the following:
-
-```nohighlight
-hostname     system_id
---------     ---------
-better-sole  t8pmrs
-light-aphid  76b6tt
-```
-
-<a href="#heading--assign-tags-to-a-device"><h4 id="heading--assign-tags-to-a-device">Assign tags to a device</h4></a>
-
-To assign tags to a device, you can use a command of the following form:
-
-```
-maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
-```
-
-For example:
-
-```bash
-maas admin tag update-nodes farquar add=t8pmrs
-```
-
-A successful command like this might produce output similar to this:
-
-```
-Success.
-Machine-readable output follows:
-{
-    "added": 1,
-    "removed": 0
-}
-```
-
-You can also check your work by [listing tags for all devices](#heading--list-tags-for-all-devices).
-
-<a href="#heading--remove-tags-from-a-device"><h4 id="heading--remove-tags-from-a-device">Remove tags from a device</h4></a>
-
-To remove tags from a device, you can use a command of the following form:
-
-```
-maas $PROFILE tag update-nodes $TAG_NAME remove=$SYSTEM_ID
-```
-
-For example:
-
-```bash
-maas admin tag update-nodes farquar remove=t8pmrs
-```
-
-A successful command like this might produce output similar to this:
-
-```nohighlight
-Success.
-Machine-readable output follows:
-{
-    "added": 0,
-    "removed": 1
-}
-```
-
-You can also check your work by [listing tags for all devices](#heading--list-tags-for-all-devices).
-
-<a href="#heading--list-tags-for-all-devices"><h4 id="heading--list-tags-for-all-devices">List tags for all devices</h4></a>
-
-If you want to list tags for all devices, you could use a command similar to this one:
-
-```bash
-maas $PROFILE devices read \
-| jq -r '(["hostname","system_id","tags"]
-|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.tag_names[]])
-|@tsv' | column -t
-```
-
-For example:
-
-```bash
-maas admin devices read \
-| jq -r '(["hostname","system_id","tags"]
-|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.tag_names[]])
-|@tsv' | column -t
-```
-
-Such a command would produce output that looks something like this:
-
-```nohighlight
-hostname     system_id  tags
---------     ---------  ----
-better-sole  t8pmrs     farquar
-light-aphid  76b6tt
-```
-
-<a href="#heading--view-tags-for-one-device"><h4 id="heading--view-tags-for-one-device">View tags for one device</h4></a>
-
-You can view the tags for a single device with the command:
-
-```bash
-maas $PROFILE device read $SYSTEM_ID \
-| jq -r '(["hostname","system_id","tags"]
-|(.,map(length*"-"))),([.hostname,.system_id,.tag_names[]])
-|@tsv' | column -t
-```
-
-If you need to know the system ID of your device, you can [look it up](#heading--identify-your-devices).
-
-[note]
-Note that this command differs in that (1) it uses the singular "device" instead of "devices;" (2) it gives the system ID of a specific device; and (3) it uses the single-record form of the ```jq``` tag list ("([.hostname,.system_id,.tag_names[]]", rather than "(.[]|[.hostname....").
-[/note]
-
-For example:
-
-```bash
-maas admin device read t8pmrs \
-| jq -r '(["hostname","system_id","tags"]
-|(.,map(length*"-"))),([.hostname,.system_id,.tag_names[]])
-|@tsv' | column -t
-```
-
-Sample output might look like this:
-
-```nohighlight
-hostname     system_id  tags
---------     ---------  ----
-better-sole  t8pmrs     farquar
-```
-** how to work with node tags
-<a href="#heading--work-with-node-tags"><h3 id="heading--work-with-node-tags">Work with node tags</h3></a>
-
-- [Identify your nodes](#heading--identify-your-nodes)
-- [Assign tags to a node](#heading--assign-tags-to-a-node)
-- [Remove tags from a node](#heading--remove-tags-from-a-node)
-- [List tags for all nodes](#heading--list-tags-for-all-nodes)
-- [View tags for one node](#heading--view-tags-for-one-node)
-
-<a href="#heading--identify-your-nodes"><h4 id="heading--identify-your-nodes">Identify your nodes</h4></a>
-
-If you need to identify the system ID of your nodes, you can do so with a command like this one:
-
-```bash
-maas $PROFILE nodes read \
-| jq -r '(["hostname","system_id"]
-|(.,map(length*"-"))),(.[]|[.hostname,.system_id])
-|@tsv'|column -t
-```
-
-For example:
-
-```bash
-```
-
-When listing nodes, you should expect a large output, similar to this or larger:
-
-```nohighlight
-hostname                     system_id
---------                     ---------
-better-sole                  t8pmrs
-light-aphid                  76b6tt
-divine-stork                 8b3ypp
-casual-prawn                 4end6r
-driven-teal                  tgaat6
-immune-beetle                43xand
-good-osprey                  napfxk
-smart-hen                    c4rwq7
-boss-satyr                   xn8taa
-golden-martin                8fxery
-crack-guinea                 qk4b3g
-finer-leech                  cy3dtr
-free-mouse                   gxtbq4
-humble-bunny                 srqnnb
-wanted-muskox                ekw7fh
-one-boa                      by477d
-great-urchin                 srnx4g
-ace-frog                     g6arwg
-alive-marlin                 gbwnfb
-picked-parrot                am77wn
-tough-kit                    ke3wc7
-legal-whale                  8nq3mt
-game-sponge                  76pdc6
-fun-ghoul                    qxfm7k
-aware-earwig                 8m8hs7
-chief-crane                  7fapx7
-select-tapir                 4ascbr
-on-slug                      snfs8d
-polite-llama                 dbqd4m
-frank-coyote                 wcmk48
-usable-condor                ed8hmy
-still-imp                    h6ra6d
-bill-Lenovo-Yoga-C740-15IML  86xya8
-```
-
-A node listing will show all the machines, controllers, and devices in the system.
-
-<a href="#heading--assign-tags-to-a-node"><h4 id="heading--assign-tags-to-a-node">Assign tags to a node</h4></a>
-
-To assign tags to any node (regardless of its type), you can use a command of this form:
-
-'''bash
-maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
-'''
-
-For example, 
-
-```
-maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
-```
-
-For example:
-
-```bash
-maas admin tag update-nodes farquar add=t8pmrs
-```
-
-A successful command like this might produce output similar to this:
-
-```
-Success.
-Machine-readable output follows:
-{
-    "added": 1,
-    "removed": 0
-}
-```
-
-You can also check your work by [listing tags for all devices](#heading--list-tags-for-all-nodes).
-
-<a href="#heading--remove-tags-from-a-node"><h4 id="heading--remove-tags-from-a-node">Remove tags from a node</h4></a>
-
-To remove tags from a node, regardless of type, you can use a command like this one:
-
-```
-maas $PROFILE tag update-nodes $TAG_NAME remove=$SYSTEM_ID
-```
-
-For example:
-
-```bash
-maas admin tag update-nodes farquar remove=t8pmrs
-```
-
-A successful command like this might produce output similar to this:
-
-```nohighlight
-Success.
-Machine-readable output follows:
-{
-    "added": 0,
-    "removed": 1
-}
-```
-
-You can also check your work by [listing tags for all devices](#heading--list-tags-for-all-nodes).
-
-<a href="#heading--list-tags-for-all-nodes"><h4 id="heading--list-tags-for-all-nodes">List tags for all nodes</h4></a>
-
-If you want to list tags for all nodes, you could use a command similar to this one:
-
-```bash
-maas $PROFILE nodes read \
-| jq -r '(["hostname","system_id","tags"]
-|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.tag_names[]])
-|@tsv' | column -t
-```
-
-For example:
-
-```bash
-maas admin nodes read \
-| jq -r '(["hostname","system_id","tags"]
-|(.,map(length*"-"))),(.[]|[.hostname,.system_id,.tag_names[]])
-|@tsv' | column -t
-```
-
-Such a command would produce output that looks something like this:
-
-```nohighlight
-hostname                     system_id  tags
---------                     ---------  ----
-better-sole                  t8pmrs     farquar
-light-aphid                  76b6tt
-divine-stork                 8b3ypp     pod-console-logging  virtual
-casual-prawn                 4end6r     pod-console-logging  virtual
-driven-teal                  tgaat6     pod-console-logging  virtual
-immune-beetle                43xand     pod-console-logging  virtual
-good-osprey                  napfxk     pod-console-logging  virtual
-smart-hen                    c4rwq7     pod-console-logging  virtual
-boss-satyr                   xn8taa     pod-console-logging  androko
-golden-martin                8fxery     pod-console-logging  virtual
-crack-guinea                 qk4b3g     pod-console-logging  virtual
-finer-leech                  cy3dtr     pod-console-logging  virtual
-free-mouse                   gxtbq4     pod-console-logging  virtual
-humble-bunny                 srqnnb     pod-console-logging  virtual
-wanted-muskox                ekw7fh     pod-console-logging  virtual
-one-boa                      by477d     pod-console-logging  virtual
-great-urchin                 srnx4g     pod-console-logging  virtual
-ace-frog                     g6arwg     pod-console-logging  virtual  farquar
-alive-marlin                 gbwnfb     pod-console-logging  virtual
-picked-parrot                am77wn     pod-console-logging  virtual
-tough-kit                    ke3wc7     pod-console-logging  virtual
-legal-whale                  8nq3mt     pod-console-logging  virtual
-game-sponge                  76pdc6     pod-console-logging  virtual
-fun-ghoul                    qxfm7k     pod-console-logging  virtual
-aware-earwig                 8m8hs7     pod-console-logging  virtual
-chief-crane                  7fapx7     pod-console-logging  virtual
-select-tapir                 4ascbr     pod-console-logging  virtual
-on-slug                      snfs8d     pod-console-logging  virtual
-polite-llama                 dbqd4m     pod-console-logging  virtual
-frank-coyote                 wcmk48     pod-console-logging  virtual
-usable-condor                ed8hmy     pod-console-logging  virtual
-still-imp                    h6ra6d     pod-console-logging  virtual
-bill-Lenovo-Yoga-C740-15IML  86xya8     lxd-vm-host
-```
-
-<a href="#heading--view-tags-for-one-node"><h4 id="heading--view-tags-for-one-node">View tags for one node</h4></a>
-
-You could use a command with a form like this to view the tags for one node:
-
-```bash
-maas $PROFILE node read $SYSTEM_ID \
-| jq -r '(["hostname","system_id","tags"]
-|(.,map(length*"-"))),([.hostname,.system_id,.tag_names[]])
-|@tsv' | column -t
-```
-
-For example:
-
-```bash
-maas admin node read xn8taa \
-| jq -r '(["hostname","system_id","tags"]
-|(.,map(length*"-"))),([.hostname,.system_id,.tag_names[]])
-|@tsv' | column -t
-```
-
-This command produces output that looks something like this:
-
-```nohighlight
-hostname    system_id  tags
---------    ---------  ----
-boss-satyr  xn8taa     pod-console-logging  androko
-```
-
-rad-end
-rad-begin     /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
-
-* how to work with annotations
-<a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a>
-
-This section will show you how to:
-
-- [Work with static annotations](#heading--work-with-static-annotations)
-- [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
-
-** how to work with static annotations
-<a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a>
-
-This subsection will show you how to:
-
-- [Identify your machines](#heading--identify-your-machines)
-- [Set a static annotation for a machine](#heading--set-a-static-annotation-for-a-machine)
-- [Change or clear a static annotation for a machine](#heading--change-or-clear-a-static-annotation-for-a-machine)
-- [List static annotations for all machines](#heading--list-static-annotations-for-all-machines)
-- [View a static annotation for one machine](#heading--view-a-static-annotation-for-one-machine)
-
-
-<a href="#heading--identify-your-machines"><h4 id="heading--identify-your-machines">Identify your machines</h4></a>
+<a href="#heading--identify-your-machines"><h4 id="heading--identify-your-machines">How to identify your machines</h4></a>
 
 To identify your available machines, use a command like this one:
 
-```bash
+```nohighlight
 maas $PROFILE machines read \
 | jq -r '(["hostname","system_id"]
 |(.,map(length*"-"))),(.[]|[.hostname,.system_id])
@@ -2401,7 +486,7 @@ maas $PROFILE machines read \
 
 For example:
 
-```bash
+```nohighlight
 maas admin machines read \
 | jq -r '(["hostname","system_id"]
 |(.,map(length*"-"))),(.[]|[.hostname,.system_id])
@@ -2445,44 +530,44 @@ usable-condor  ed8hmy
 still-imp      h6ra6d
 ```
 
-<a href="#heading--set-a-static-annotation-for-a-machine"><h4 id="heading--set-a-static-annotation-for-a-machine">Set a static annotation for a machine</h4></a>
+<a href="#heading--set-a-static-annotation-for-a-machine"><h4 id="heading--set-a-static-annotation-for-a-machine">How to set a static annotation for a machine</h4></a>
 
 If you want to set the static annotation for a given machine, you can do so with a command that looks like this:
 
-```bash
+```nohighlight
 maas $PROFILE machine update $SYSTEM_ID description="$STATIC_ANNOTATION"
 ```
 
 For example:
 
-```bash
+```nohighlight
 maas admin machine update ke3wc7 description="kilo-echo-3-whisky-charlie-7"
 ```
 
 You can check your work by [viewing the static annotations for one machine](#heading--view-a-static-annotation-for-one-machine).
 
-<a href="#heading--change-or-clear-a-static-annotation-for-a-machine"><h4 id="heading--change-or-clear-a-static-annotation-for-a-machine">Change or clear a static annotation for a machine</h4></a>
+<a href="#heading--change-or-clear-a-static-annotation-for-a-machine"><h4 id="heading--change-or-clear-a-static-annotation-for-a-machine">How to change or clear a static annotation for a machine</h4></a>
 
 If you want to set the static annotation for a given machine, use the same command you'd use to set a static annotation:
 
-```bash
+```nohighlight
 maas $PROFILE machine update $SYSTEM_ID description="$STATIC_ANNOTATION"
 ```
 
 The existing annotation will be overwritten by the new one you enter.  For example:
 
-```bash
+```nohighlight
 maas admin machine update ke3wc7 description=""
 ```
 
 You can check your work by [viewing the static annotations for one machine](#heading--view-a-static-annotation-for-one-machine).
 
 
-<a href="#heading--list-static-annotations-for-all-machines"><h4 id="heading--list-static-annotations-for-all-machines">List static annotations for all machines</h4></a>
+<a href="#heading--list-static-annotations-for-all-machines"><h4 id="heading--list-static-annotations-for-all-machines">How to list static annotations for all machines</h4></a>
 
 To list static annotations for all machines, enter a command similar to this one:
 
-```bash
+```nohighlight
 maas $PROFILE machines read \
 | jq -r '(["hostname","system_id","description"]
 |(.,map(length*"-"))),(.[]|[.hostname,.system_id,.description])
@@ -2491,7 +576,7 @@ maas $PROFILE machines read \
 
 For example:
 
-```bash
+```nohighlight
 maas admin machines read \
 | jq -r '(["hostname","system_id","description"]
 |(.,map(length*"-"))),(.[]|[.hostname,.system_id,.description])
@@ -2508,11 +593,11 @@ humble-bunny   srqnnb     sierra-romeo
 tough-kit      ke3wc7     kilo-echo
 ```
 
-<a href="#heading--view-a-static-annotation-for-one-machine"><h4 id="heading--view-a-static-annotation-for-one-machine">View a static annotation for one machine</h4></a>
+<a href="#heading--view-a-static-annotation-for-one-machine"><h4 id="heading--view-a-static-annotation-for-one-machine">How to view a static annotation for one machine</h4></a>
 
 To view a static annotation for one machine, try a command like this:
 
-```bash
+```nohighlight
  maas $PROFILE machine read $SYSTEM_ID \
 | jq -r '(["hostname","system_id","description"]
 |(.,map(length*"-"))),([.hostname,.system_id,.description])
@@ -2521,7 +606,7 @@ To view a static annotation for one machine, try a command like this:
 
 For example:
 
-```bash
+```nohighlight
  maas admin machine read tgaat6 \
 | jq -r '(["hostname","system_id","description"]
 |(.,map(length*"-"))),([.hostname,.system_id,.description])
@@ -2535,22 +620,22 @@ hostname     system_id  description
 --------     ---------  -----------
 driven-teal  tgaat6     tango-golf
 ```
-** how to work with dynamic (workload) annoations
-<a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</h3></a>
+
+<a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">How to use dynamic (workload) annotations</h3></a>
 
 This section will show you how to:
 
-- [Identify machines that can receive dynamic annotations](#heading--identify-machines-that-can-receive-dynamic-annotations)
-- [Set dynamic annotations for a machine](#heading--set-dynamic-annotations-for-a-machine)
-- [Clear and change dynamic annotations for a machine](#heading--clear-and-change-dynamic-annotations-for-a-machine)
-- [List dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines)
-- [List dynamic allocations for one machine](#heading--list-dynamic-annotations-for-one-machine)
+- [How to identify machines that can receive dynamic annotations](#heading--identify-machines-that-can-receive-dynamic-annotations)
+- [How to set dynamic annotations for a machine](#heading--set-dynamic-annotations-for-a-machine)
+- [How to clear and change dynamic annotations for a machine](#heading--clear-and-change-dynamic-annotations-for-a-machine)
+- [How to list dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines)
+- [How to list dynamic allocations for one machine](#heading--list-dynamic-annotations-for-one-machine)
 
-<a href="#heading--identify-machines-that-can-receive-dynamic-annotations"><h4 id="heading--identify-machines-that-can-receive-dynamic-annotations">Identify machines that can receive dynamic annotations</h4></a>
+<a href="#heading--identify-machines-that-can-receive-dynamic-annotations"><h4 id="heading--identify-machines-that-can-receive-dynamic-annotations">How to identify machines that can receive dynamic annotations</h4></a>
 
 You can only set dynamic annotations for machines that are in the "Allocated" or "Deployed" state.  To identify which of your machines are in these states, you can execute the following command:
 
-```bash
+```nohighlight
 maas $PROFILE machines read \
 | jq -r '(["hostname","system_id","status"]
 |(.,map(length*"-"))),(.[]|[.hostname,.system_id,.status_name])
@@ -2559,7 +644,7 @@ maas $PROFILE machines read \
 
 For example:
 
-```bash
+```nohighlight
 maas admin machines read \
 | jq -r '(["hostname","system_id","status"]
 |(.,map(length*"-"))),(.[]|[.hostname,.system_id,.status_name])
@@ -2603,45 +688,45 @@ usable-condor  ed8hmy     Deployed
 still-imp      h6ra6d     Allocated
 ```
 
-<a href="#heading--set-dynamic-annotations-for-a-machine"><h4 id="heading--set-dynamic-annotations-for-a-machine">Set dynamic annotations for a machine</h4></a>
+<a href="#heading--set-dynamic-annotations-for-a-machine"><h4 id="heading--set-dynamic-annotations-for-a-machine">How to set dynamic annotations for a machine</h4></a>
 
 Dynamic annotations, otherwise known as "workload annotations" or "owner data," can be used to keep track of the runtime status of machines that are acquired or deployed.  These annotations are set using `key=value` pairs.  You can set any `key=value` pair that you wish for any machine, although it's probably more useful if you standardise your key names.
 
 To set a dynamic annotation for a machine, you can enter a command like this:
 
-```bash
+```nohighlight
 maas $PROFILE machine set-owner-data $SYSTEM_ID $KEY=$VALUE
 ```
 
 For example:
 
-```bash
+```nohighlight
 maas admin machine set-owner-data tgaat6 owner=gsmith@zorko.com
 ```
 
 This command will return a JSON string representative of the machine's new configuration, including the dynamic annotations you've added. You can check your work by [listing the dynamic annotations for the one machine](#heading--list-dynamic-annotations-for-one-machine) you just edited, or by [listing dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines).
 
-<a href="#heading--clear-and-change-dynamic-annotations-for-a-machine"><h4 id="heading--clear-and-change-dynamic-annotations-for-a-machine">Clear and change dynamic annotations for a machine</h4></a>
+<a href="#heading--clear-and-change-dynamic-annotations-for-a-machine"><h4 id="heading--clear-and-change-dynamic-annotations-for-a-machine">How to clear and change dynamic annotations for a machine</h4></a>
 
 You can change dynamic annotations for a machine simply by executing a new `set-owner-data` command:
 
-```bash
+```nohighlight
 maas $PROFILE machine set-owner-data $SYSTEM_ID $KEY=$NEW_VALUE
 ```
 
 You can clear a dynamic annotation by entering the empty string (`""`) as the $VALUE:
 
-```bash
+```nohighlight
 maas $PROFILE machine set-owner-data $SYSTEM_ID $KEY=""
 ```
 
 These commands will return a JSON string representative of the machine's new configuration, including the dynamic annotations you've changed or cleared. You can check your work by [listing the dynamic annotations for the one machine](#heading--list-dynamic-annotations-for-one-machine) you just edited, or by [listing dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines).
 
-<a href="#heading--list-dynamic-annotations-for-all-machines"><h4 id="heading--list-dynamic-annotations-for-all-machines">List dynamic annotations for all machines</h4></a>
+<a href="#heading--list-dynamic-annotations-for-all-machines"><h4 id="heading--list-dynamic-annotations-for-all-machines">How to list dynamic annotations for all machines</h4></a>
 
 You can list the current dynamic annotations for all machines with a command like this:
 
-```bash
+```nohighlight
 maas $PROFILE machines read \
 | jq -r '(["hostname","system_id","owner_data"]
 |(.,map(length*"-"))),(.[]|[.hostname,.system_id,.owner_data[]])
@@ -2650,7 +735,7 @@ maas $PROFILE machines read \
 
 For example:
 
-```bash
+```nohighlight
 maas admin machines read \
 | jq -r '(["hostname","system_id","owner_data"]
 |(.,map(length*"-"))),(.[]|[.hostname,.system_id,.owner_data[]])
@@ -2670,11 +755,11 @@ good-osprey    napfxk
 smart-hen      c4rwq7
 ```
 
-<a href="#heading--list-dynamic-annotations-for-one-machine"><h4 id="heading--list-dynamic-annotations-for-one-machine">List dynamic allocations for one machine</h4></a>
+<a href="#heading--list-dynamic-annotations-for-one-machine"><h4 id="heading--list-dynamic-annotations-for-one-machine">How to list dynamic allocations for one machine</h4></a>
 
 You can list the dynamic annotations for one machine by entering a command of the form:
 
-```bash
+```nohighlight
 maas $PROFILE machine read $SYSTEM_ID \
 | jq -r '(["hostname","system_id","owner_data"]
 |(.,map(length*"-"))),(.[]|[.hostname,.system_id,.owner_data[]])
@@ -2683,7 +768,7 @@ maas $PROFILE machine read $SYSTEM_ID \
 
 For example:
 
-```bash
+```nohighlight
 maas admin machine read tgaat6 \
 | jq -r '(["hostname","system_id","owner_data"]
 |(.,map(length*"-"))),(.[]|[.hostname,.system_id,.owner_data[]])
@@ -2699,8 +784,21 @@ driven-teal  tgaat6     farquar     foobar
 ```
 rad-end
 
-* how to set global storage layouts
-<a href="#heading--how-to-set-global-storage-layouts"><h2 id="heading--how-to-set-global-storage-layouts">How to set global storage layouts</h2></a>
+<a href="#heading--how-to-use-machine-storage"><h2 id="heading--how-to-use-machine-storage">How to use machine storage</h2></a>
+
+This section will explain:
+
+- [How to set global storage layouts](#heading--how-to-set-global-storage-layouts)
+- [How to set per-machine storage layouts](#heading--how-to-set-per-machine-storage-layouts)
+- [How to specify conditional erasure types](#heading--how-to-specify-conditional-erasure-types)
+rad-begin /snap/3.0/cli /snap/2.9/cli /deb/3.0/cli /deb/2.9/cli
+- [How to erase disks](#heading--how-to-erase-disks)
+- [How to manage block devices](#heading--how-to-manage-block-devices)
+- [How to manage partitions](#heading--how-to-manage-partitions)
+- [How to manage VMFS datastores](#heading--how-to-manage-vmfs-datastores)
+rad-end
+
+<a href="#heading--how-to-set-global-storage-layouts"><h3 id="heading--how-to-set-global-storage-layouts">How to set global storage layouts</h3></a>
 
 Layouts can be set globally and on a per-machine basis.
 
@@ -2713,13 +811,13 @@ rad-end
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 All machines will have a default layout applied when commissioned. To set the default storage layout for all machines:
 
-```
+```nohighlight
 maas $PROFILE maas set-config name=default_storage_layout value=$LAYOUT_TYPE
 ```
 
 For example, to set the default layout to Flat:
 
-```
+```nohighlight
 maas $PROFILE maas set-config name=default_storage_layout value=flat
 ```
 
@@ -2730,7 +828,7 @@ rad-end
 [note type="caution" status="Important"]
 The new default will only apply to newly-commissioned machines.
 [/note]
-** how to set per-machine storage layouts
+
 <a href="#heading--how-to-set-per-machine-storage-layouts"><h3 id="heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</h3></a>
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
@@ -2740,16 +838,16 @@ rad-end
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 An administrator can set a storage layout for a machine with a status of ‘Ready’ like this:
 
-```
+```nohighlight
 maas $PROFILE machine set-storage-layout $SYSTEM_ID storage_layout=$LAYOUT_TYPE [$OPTIONS]
 ```
 
 For example, to set an LVM layout where the logical volume has a size of 5 GB:
 
-```
+```nohighlight
 maas $PROFILE machine set-storage-layout $SYSTEM_ID storage_layout=lvm lv_size=5368709120
 
-```
+```nohighlight
 You must specify all storage sizes in bytes.
 
 This action will remove the configuration that may exist on any block device.
@@ -2760,8 +858,8 @@ Only an administrator can modify storage at the block device level (providing th
 [/note]
 
 rad-begin   /deb/2.9/ui  /snap/2.9/ui  /snap/3.0/ui /deb/3.0/ui
-* how to set default erasure configuration
-<a href="#heading--how-to-set-default-erasure-configuration"><h2 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h2></a>
+
+<a href="#heading--how-to-set-default-erasure-configuration"><h3 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h3></a>
 
 A default erasure configuration can be set on the 'Settings' page by selecting the 'Storage' tab.
 
@@ -2779,24 +877,23 @@ rad-end
 
 rad-begin   /deb/2.9/cli  /snap/2.9/cli  /snap/3.0/cli /deb/3.0/cli 
 
-* how to erase disks
-<a href="#heading--how-to-erase-disks"><h2 id="heading--how-to-erase-disks">How to erase disks</h2></a>
+<a href="#heading--how-to-erase-disks"><h3 id="heading--how-to-erase-disks">How to erase disks</h3></a>
 
 When using the [MAAS CLI](/t/maas-cli/nnnn), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
 
-```
+```nohighlight
 maas $PROFILE machine release...
 ```
 
 and not:
 
-```
+```nohighlight
 maas $PROFILE machines release...
 ```
 
 Note the difference in singular and plural "machine/machines" in the commands.  Releasing a machine requires that you have the `system_id` of the machine to be released, which you can obtain with a command like this one:
 
-```
+```nohighlight
 maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 "OWNER", "TAGS", "POOL", "VLAN","FABRIC","SUBNET"] | (., map(length*"-"))),
 (.[] | [.hostname, .system_id, .power_state, .status_name, .owner // "-", 
@@ -2810,7 +907,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 
 The basic form of the release command, when erasing disks on releasing, is:
 
-```
+```nohighlight
 maas $PROFILE machine release $SYSTEM_ID comment="some comment" erase=true [secure_erase=true ||/&& quick_erase=true]
 ```
 
@@ -2820,29 +917,40 @@ Secure erasure uses the drive's secure erase feature, if it has one.  In some ca
 
 Quick erasure wipes 2MB at the start and end of the drive to make recovery both inconvenient and unlikely to happen by accident.  Note, though, that quick erasure is not secure.
 
-** how to specify conditional erasure types
 <a href="#heading--how-to-specify-conditional-erasure-types"><h3 id="heading--how-to-specify-conditional-erasure-types">How to specify conditional erasure types</h3></a>
 
 If you specify both erasure types, like this:
 
-```
+```nohighlight
 maas $PROFILE machine release $SYSTEM_ID comment="some comment" erase=true secure_erase=true quick_erase=true
 ```
 
 then MAAS will perform a secure erasure if the drive has that feature; if not, it will perform a quick erasure.  Of course, if you're concerned about completely erasing the drive, and you're not sure whether the disk has secure erase features, the best way to handle that is to specify nothing, and allow the full disk to be overwritten by null bytes:
 
-```
+```nohighlight
 maas $PROFILE machine release $SYSTEM_ID comment="some comment" erase=true
 ```
 
-rad-end
+<a href="#heading--how-to-manage-block-devices"><h3 id="heading--how-to-manage-block-devices">How to manage block devices</h3></a>
 
-** how to list block devices
-<a href="#heading--how-to-list-block-devices"><h3 id="heading--how-to-list-block-devices">How to list block devices</h3></a>
+This section will explain:
+
+- [How to list block devices](#heading--how-to-list-block-devices)
+- [How to read a block device](#heading--how-to-read-a-block-device)
+- [How to create a block device](#heading--how-to-create-a-block-device)
+- [How to update a block device](#heading--how-to-update-a-block-device)
+- [How to delete a block device](#heading--how-to-delete-a-block-device)
+- [How to format Block Device](#heading--format-block-device)
+- [How to unformat a block device](#heading--how-to-unformat-a-block-device)
+- [How to mount a block device](#heading--how-to-mount-a-block-device)
+- [How to unmount a block device](#heading--how-to-unmount-a-block-device)
+- [How to set a block device as a boot disk](#heading--how-to-set-a-block-device-as-a-boot-disk)
+
+<a href="#heading--how-to-list-block-devices"><h4 id="heading--how-to-list-block-devices">How to list block devices</h4></a>
 
 To view all block devices on a machine use the read operation. This list both physical and virtual block devices, as you can see in the output from the following command:
 
-``` bash
+``` nohighlight
 maas admin block-devices read <node-id>
 ```
 
@@ -2921,12 +1029,11 @@ Machine-readable output follows:
 ]
 ```
 
-** how to read a block device
-<a href="#heading--how-to-read-a-block-device"><h3 id="heading--how-to-read-a-block-device">How to read a block device</h3></a>
+<a href="#heading--how-to-read-a-block-device"><h4 id="heading--how-to-read-a-block-device">How to read a block device</h4></a>
 
 If you want to read just one block device instead of listing all block devices the read operation on the block device endpoint provides that information. To display the details on device '11' from the previous output, for example, we could enter:
 
-``` bash
+``` nohighlight
 maas admin block-device read <node-id> 11
 ```
 
@@ -2965,7 +1072,7 @@ Machine-readable output follows:
 
 It is also possible to use the name of the block device, such as 'sda' or 'vda', instead of its 'id':
 
-``` bash
+``` nohighlight
 s admin block-device read <node-id> vda
 ```
 
@@ -2975,12 +1082,11 @@ MAAS allows the name of a block device to be changed. If the block device name h
 
     Using the ID is safer as it never changes.
 
-** how to create a block device
-<a href="#heading--how-to-create-a-block-device"><h3 id="heading--how-to-create-a-block-device">How to create a block device</h3></a>
+<a href="#heading--how-to-create-a-block-device"><h4 id="heading--how-to-create-a-block-device">How to create a block device</h4></a>
 
 MAAS gathers the required information itself on block devices when re- commissioning a machine. If this doesn't provide the required information, it is also possible - though not recommended - for an administrator to use the API to manually add a physical block device to a machine.
 
-``` bash
+``` nohighlight
 maas admin block-devices create <node-id> name=vdb model="QEMU" serial="QM00001" size=21474836480 block_size=4096
 ```
 
@@ -3015,12 +1121,11 @@ Machine-readable output follows:
 The serial number is what MAAS will use when a machine is deployed to find the specific block device. It's important that this be correct. In a rare chance that your block device does not provide a model or serial number you can provide an id_path. The id_path should be a path that is always the same, no matter the kernel version.
 [/note]
 
-** how to update a block device
-<a href="#heading--how-to-update-a-block-device"><h3 id="heading--how-to-update-a-block-device">How to update a block device</h3></a>
+<a href="#heading--how-to-update-a-block-device"><h4 id="heading--how-to-update-a-block-device">How to update a block device</h4></a>
 
 An administrator can also update the details held on a physical block device, such as its name, from the API:
 
-``` bash
+``` nohighlight
 maas admin block-device update <node-id> 12 name=newroot
 ```
 
@@ -3051,21 +1156,19 @@ Machine-readable output follows:
 }
 ```
 
-** how to delete a block device
-<a href="#heading--how-to-delete-a-block-device"><h3 id="heading--how-to-delete-a-block-device">How to delete a block device</h3></a>
+<a href="#heading--how-to-delete-a-block-device"><h4 id="heading--how-to-delete-a-block-device">How to delete a block device</h4></a>
 
 Physical and virtual block devices can be deleted by an administrator, while ordinary users can only delete virtual block devices:
 
-``` bash
+``` nohighlight
 maas admin block-device delete <node-id> 12
 ```
 
-** how to format a block device
-<a href="#heading--format-block-device"><h3 id="heading--format-block-device">Format Block Device</h3></a>
+<a href="#heading--format-block-device"><h4 id="heading--format-block-device">How to format a block device</h4></a>
 
 An entire block device can be formatted by defining a filesystem with the 'format' API call:
 
-``` bash
+``` nohighlight
 maas admin block-device format <node-id> 11 fstype=ext4
 ```
 
@@ -3106,12 +1209,11 @@ Machine-readable output follows:
 You cannot format a block device that contains partitions or is used to make another virtual block device.
 [/note]
 
-** how to unformat a block device
-<a href="#heading--how-to-unformat-a-block-device"><h3 id="heading--how-to-unformat-a-block-device">How to unformat a block device</h3></a>
+<a href="#heading--how-to-unformat-a-block-device"><h4 id="heading--how-to-unformat-a-block-device">How to unformat a block device</h4></a>
 
 You can remove the filesystem from a block device with the 'unformat' API call:
 
-``` bash
+``` nohighlight
 maas admin block-device unformat <node-id> 11
 ```
 
@@ -3142,12 +1244,11 @@ Machine-readable output follows:
 }
 ```
 
-** how to mount a block device
-<a href="#heading--how-to-mount-a-block-device"><h3 id="heading--how-to-mount-a-block-device">How to mount a block device</h3></a>
+<a href="#heading--how-to-mount-a-block-device"><h4 id="heading--how-to-mount-a-block-device">How to mount a block device</h4></a>
 
 If a block device has a filesystem, you can use the 'maas' command to mount a block devices at a given mount point:
 
-``` bash
+``` nohighlight
 maas admin block-device mount <node-id> 11 mount_point=/srv
 ```
 
@@ -3184,12 +1285,11 @@ Machine-readable output follows:
 }
 ```
 
-** how to unmount a block device
-<a href="#heading--how-to-unmount-a-block-device"><h3 id="heading--how-to-unmount-a-block-device">How to unmount a block device</h3></a>
+<a href="#heading--how-to-unmount-a-block-device"><h4 id="heading--how-to-unmount-a-block-device">How to unmount a block device</h4></a>
 
 To remove the mount point from the block device, use the 'unmount' call:
 
-``` bash
+``` nohighlight
 maas admin block-device unmount <node-id> 11 mount_point=/srv
 ```
 
@@ -3226,12 +1326,11 @@ Machine-readable output follows:
 }
 ```
 
-** how to set a block device as a boot disk
-<a href="#heading--how-to-set-a-block-device-as-a-boot-disk"><h3 id="heading--how-to-set-a-block-device-as-a-boot-disk">How to set a block device as a boot disk</h3></a>
+<a href="#heading--how-to-set-a-block-device-as-a-boot-disk"><h4 id="heading--how-to-set-a-block-device-as-a-boot-disk">How to set a block device as a boot disk</h4></a>
 
 By default, MAAS picks the first added block device to the machine as the boot disk. In most cases this works as expected as the BIOS usually enumerates the boot disk as the first block device. There are cases where this fails and the boot disk needs to be set to another disk. This API allow setting which block device on a machine MAAS should use as the boot disk.:
 
-``` bash
+``` nohighlight
 maas admin block-device set-boot-disk <node-id> 10
 ```
 
@@ -3239,12 +1338,23 @@ maas admin block-device set-boot-disk <node-id> 10
 Only an administrator can set which block device should be used as the boot disk and only a physical block device can be set as as the boot disk. This operation should be done before a machine is acquired or the storage layout will be applied to the previous boot disk.
 [/note]
 
-** how to list paritions
-<a href="#heading--how-to-list-partitions"><h3 id="heading--how-to-list-partitions">How to list partitions</h3></a>
+<a href="#heading--how-to-manage-partitions"><h3 id="heading--how-to-manage-partitions">How to manage partitions</h3></a>
+
+This section will explain:
+
+- [How to list partitions](#heading--how-to-list-partitions)
+- [How to create a partition](#heading--how-to-create-a-partition)
+- [How to delete a partition](#heading--how-to-delete-a-partition)
+- [How to format a partition](#heading--how-to-format-a-partition)
+- [How to unformat a partition](#heading--how-to-unformat-a-partition)
+- [How to mount a partition](#heading--how-to-mount-a-partition)
+- [How to unmount a partition](#heading--how-to-unmount-a-partition)
+
+<a href="#heading--how-to-list-partitions"><h4 id="heading--how-to-list-partitions">How to list partitions</h4></a>
 
 To view all the partitions on a block device, use the 'partitions read' API call:
 
-``` bash
+``` nohighlight
 maas admin partitions read <node-id> 10
 ```
 
@@ -3275,16 +1385,15 @@ Machine-readable output follows:
 
 To view the metadata for a specific partition on a block device, rather than all partitions, use the singular 'partition' API call with an endpoint:
 
-``` bash
+``` nohighlight
 maas admin partition read <node-id> 10 9
 ```
 
-** how to create a partition
-<a href="#heading--how-to-create-a-partition"><h3 id="heading--how-to-create-a-partition">How to create a partition</h3></a>
+<a href="#heading--how-to-create-a-partition"><h4 id="heading--how-to-create-a-partition">How to create a partition</h4></a>
 
 To create a new partition on a block device, use the 'create' API call:
 
-``` bash
+``` nohighlight
 maas admin partitions create <node-id> 10 size=5360320512
 ```
 
@@ -3306,28 +1415,26 @@ Machine-readable output follows:
 }
 ```
 
-** how to delete a partition
-<a href="#heading--how-to-delete-a-partition"><h3 id="heading--how-to-delete-a-partition">How to delete a partition</h3></a>
+<a href="#heading--how-to-delete-a-partition"><h4 id="heading--how-to-delete-a-partition">How to delete a partition</h4></a>
 
 Partitions can be deleted from a block device with the 'delete' API call. Make sure you double check the partition details as the partition is deleted immediately, with no further confirmation:
 
-``` bash
+``` nohighlight
 maas admin partition delete <node-id> 10 9
 ```
 
 Successful output from the 'delete' command will look like this:
 
-``` bash
+``` nohighlight
 Success.
 Machine-readable output follows:
 ```
 
-** how to format a paritition
-<a href="#heading--how-to-format-a-partition"><h3 id="heading--how-to-format-a-partition">How to format a partition</h3></a>
+<a href="#heading--how-to-format-a-partition"><h4 id="heading--how-to-format-a-partition">How to format a partition</h4></a>
 
 Partitions can be formatted in a similar way to block devices:
 
-``` bash
+``` nohighlight
 maas admin partition format <node-id> 10 9 fstype=ext4
 ```
 
@@ -3359,12 +1466,11 @@ Machine-readable output follows:
 You cannot format partitions that are used to make another virtual block device.
 [/note]
 
-** how to unformat a partition
-<a href="#heading--how-to-unformat-a-partition"><h3 id="heading--how-to-unformat-a-partition">How to unformat a partition</h3></a>
+<a href="#heading--how-to-unformat-a-partition"><h4 id="heading--how-to-unformat-a-partition">How to unformat a partition</h4></a>
 
 You can also remove the filesystem from a partition with the 'unformat' API call:
 
-``` bash
+``` nohighlight
 maas admin partition unformat <node-id> 10 10 fstype=ext4
 ```
 
@@ -3383,12 +1489,12 @@ Machine-readable output follows:
     "uuid": "3d32adbf-9943-4785-ab38-963758338c6c"
 }
 ```
-** how to mount a paritition
-<a href="#heading--how-to-mount-a-partition"><h3 id="heading--how-to-mount-a-partition">How to mount a partition</h3></a>
+
+<a href="#heading--how-to-mount-a-partition"><h4 id="heading--how-to-mount-a-partition">How to mount a partition</h4></a>
 
 A formatted partition can be mounted at a given mount point with the 'mount' command.
 
-``` bash
+``` nohighlight
 maas admin partition mount <node-id> 10 10 mount_point=/srv
 ```
 
@@ -3415,12 +1521,12 @@ Machine-readable output follows:
     }
 }
 ```
-** how to unmount a partition
-<a href="#heading--how-to-unmount-a-partition"><h3 id="heading--how-to-unmount-a-partition">How to unmount a partition</h3></a>
+
+<a href="#heading--how-to-unmount-a-partition"><h4 id="heading--how-to-unmount-a-partition">How to unmount a partition</h4></a>
 
 A previous mounted partition can be unmounted with the 'unmount' command:
 
-``` bash
+``` nohighlight
 maas admin partition unmount 4y3h8a 10 10
 ```
 
@@ -3451,12 +1557,21 @@ Machine-readable output follows:
 }
 ```
 
-* how to list vmfs datastores
-<a href="#heading--how-to-list-vmfs-datastores"><h2 id="heading--how-to-list-vmfs-datastores">How to list VMFS datastores</h2></a>
+<a href="#heading--how-to-manage-vmfs-datastores"><h4 id="heading--how-to-manage-vmfs-datastores">How to manage VMFS datastores</h4></a>
+
+This section will explain:
+
+- [How to list VMFS datastores](#heading--how-to-list-vmfs-datastores)
+- [How to view a VMFS datastore](#heading--how-to-view-a-vmfs-datastore)
+- [How to create a VMFS datastore](#heading--how-to-create-a-vmfs-datastore)
+- [How to edit a VMFS datastore](#heading--how-to-edit-a-vmfs-datastore)
+- [How to delete a VMFS datastore](#heading--how-to-delete-a-vmfs-datastore)
+
+<a href="#heading--how-to-list-vmfs-datastores"><h4 id="heading--how-to-list-vmfs-datastores">How to list VMFS datastores</h4></a>
 
 To view all VMFS Datastores on a machine, use the 'vmfs-datastores read' API call:
 
-``` bash
+``` nohighlight
 maas $PROFILE vmfs-datastores read $SYSTEM_ID
 ```
 
@@ -3520,12 +1635,11 @@ maas $PROFILE vmfs-datastores read $SYSTEM_ID
 ]
 ```
 
-* how to view a vmfs datastore
-<a href="#heading--how-to-view-a-vmfs-datastore"><h2 id="heading--how-to-view-a-vmfs-datastore">How to view a VMFS datastore</h2></a>
+<a href="#heading--how-to-view-a-vmfs-datastore"><h4 id="heading--how-to-view-a-vmfs-datastore">How to view a VMFS datastore</h4></a>
 
 To view a specific VMFS Datastores on a machine, use the 'vmfs-datastore read' API call:
 
-``` bash
+``` nohighlight
 maas $PROFILE vmfs-datastore read $SYSTEM_ID $VMFS_DATASTORE_ID
 ```
 
@@ -3567,14 +1681,13 @@ maas $PROFILE vmfs-datastore read $SYSTEM_ID $VMFS_DATASTORE_ID
 }
 ```
 
-* how to create a vmfs datastore
-<a href="#heading--how-to-create-a-vmfs-datastore"><h2 id="heading--how-to-create-a-vmfs-datastore">How to create a VMFS datastore</h2></a>
+<a href="#heading--how-to-create-a-vmfs-datastore"><h4 id="heading--how-to-create-a-vmfs-datastore">How to create a VMFS datastore</h4></a>
 
 A VMware VMFS datastore is created on one or more [block devices](#heading--about-block-devices) or [partitions](#heading--about-partitions).
 
 To create a VMFS Datastores on a machine use the 'vmfs-datastores create' API call:
 
-``` bash
+``` nohighlight
 maas $PROFILE vmfs-datastores create $SYSTEM_ID name=$VMFS_NAME block_devices=$BLOCK_ID_1,$BLOCK_ID_2 partitions=$PARTITION_ID_1,$PARTITION_ID_2
 ```
 
@@ -3616,12 +1729,11 @@ maas $PROFILE vmfs-datastores create $SYSTEM_ID name=$VMFS_NAME block_devices=$B
 }
 ```
 
-* how to edit a vmfs datastdore
-<a href="#heading--how-to-edit-a-vmfs-datastore"><h2 id="heading--how-to-edit-a-vmfs-datastore">How to edit a VMFS datastore</h2></a>
+<a href="#heading--how-to-edit-a-vmfs-datastore"><h4 id="heading--how-to-edit-a-vmfs-datastore">How to edit a VMFS datastore</h4></a>
 
 To edit an existing VMFS Datastores on a machine use the 'vmfs-datastore update' API call:
 
-``` bash
+``` nohighlight
 maas $PROFILE vmfs-datastore update $SYSTEM_ID $VMFS_ID name=$NEW_VMFS_NAME add_block_devices=$NEW_BLOCK_ID_1,$NEW_BLOCK_ID_2 add_partitions=$NEW_PARTITION_ID_1,$NEW_PARTITION_ID_2 remove_partitions=$EXISTING_PARTITION_ID1,$EXISTING_PARTITION_ID2
 ```
 
@@ -3682,15 +1794,16 @@ maas $PROFILE vmfs-datastore update $SYSTEM_ID $VMFS_ID name=$NEW_VMFS_NAME add_
     "resource_uri": "/MAAS/api/2.0/nodes/b66fn6/vmfs-datastore/19/"
 }
 ```
-* how to delete a vmfs datastore
-<a href="#heading--how-to-delete-a-vmfs-datastore"><h2 id="heading--how-to-delete-a-vmfs-datastore">How to delete a VMFS datastore</h2></a>
+
+<a href="#heading--how-to-delete-a-vmfs-datastore"><h4 id="heading--how-to-delete-a-vmfs-datastore">How to delete a VMFS datastore</h4></a>
 
 To delete a VMFS Datastores on a machine use the 'vmfs-datastore delete' API call:
 
-``` bash
+``` nohighlight
 maas $PROFILE vmfs-datastore delete $SYSTEM_ID $VMFS_ID
 ```
-* storage layouts reference
+rad-end
+
 <a href="#heading--storage-layouts-reference"><h2 id="heading--storage-layouts-reference">Storage layouts reference</h2></a>
 
 There are three layout types:
@@ -3701,7 +1814,6 @@ There are three layout types:
 
 The layout descriptions below will include the EFI partition. If your system is not using UEFI, regard `sda2` as `sda1` (with an additional 512 MB available to it).
 
-** flat storage layout reference
 <a href="#heading--flat-storage-layout-reference"><h3 id="heading--flat-storage-layout-reference">Flat layout storage reference</h3></a>
 
 With the Flat layout, a partition spans the entire boot disk. The partition is formatted with the ext4 filesystem and uses the `/` mount point:
@@ -3720,7 +1832,6 @@ The following three options are supported:
 
 3. `root_size`: Size of the root partition. Default is 100%, meaning the entire size of the root device.
 
-** lvm storage layout reference
 <a href="#heading--lvm-storage-layout-reference"><h3 id="heading--lvm-storage-layout-reference">LVM storage layout reference</h3></a>
 
 The LVM layout creates the volume group `vgroot` on a partition that spans the entire boot disk. A logical volume `lvroot` is created for the full size of the volume group; is formatted with the ext4 filesystem; and uses the `/` mount point:
@@ -3742,7 +1853,6 @@ The following six options are supported:
 5. `lv_name`: Name of the created logical volume. Default is `lvroot`.
 6. `lv_size`: Size of the created logical volume. Default is 100%, meaning the entire size of the volume group.
 
-** bcache storage layout reference
 <a href="#heading--bcache-storage-layout-reference"><h3 id="heading--bcache-storage-layout-reference">bcache storage layout reference</h3></a>
 
 A bcache layout will create a partition that spans the entire boot disk as the backing device. It uses the smallest block device tagged with 'ssd' as the cache device. The bcache device is formatted with the ext4 filesystem and uses the `/` mount point. If there are no 'ssd' tagged block devices on the machine, then the bcache device will not be created, and the Flat layout will be used instead:
@@ -3789,8 +1899,6 @@ The following options are supported:
 1. `root_device`: The block device upon which to place the root partition. Default is the boot disk.
 
 2. `root_size`: Size of the default VMFS Datastore. Default is 100%, meaning the remaining size of the root disk.
-
-** blank storage layout reference
 
 <a href="#heading--blank-storage-layout-reference"><h3 id="heading--blank-storage-layout-reference">Blank storage layout reference</h3></a>
 
