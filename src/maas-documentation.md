@@ -32,8 +32,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 - [Manage machines](/t/-/4844)
 - [Deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
-- [Use resource pools](/t/resource-pools-snap-3-0-ui/4098)
-- [Manage storage](/t/storage-deb-3-0-cli/4107)
 - [Customise machines](/t/how-to-customise-machines-snap-3-0-ui/3910)
 
 ### [VM hosting](/t/vm-hosting-snap-3-0-ui/4162)
@@ -1425,7 +1423,8 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/creating-and-deleting-machines|/docs/snap/3.0/ui/creating-and-deleting-vms|
 |/docs/creating-and-deleting-new-vms|/docs/snap/3.0/ui/creating-and-deleting-vms|
 |/docs/custom-machine-setup|/docs/snap/3.0/ui/how-to-customise-machines|
-|/docs/custom-node-setup-preseed|/docs/how-to-customise-machines|
+|/docs/custom-node-setup-preseed|/docs/snap/3.0/ui/how-to-customise-machines|
+|/docs/custom-node-setup-preseed#heading--cloud-init|/docs/snap/3.0/ui/how-to-customise-machines#heading--how-to-customise-machines-with-cloud-init|
 |/docs/deb/2.7/cli/maas-tags|/docs/deb/2.7/cli/tags-and-annotations|
 |/docs/deb/2.7/ui/maas-tags|/docs/deb/2.7/ui/tags-and-annotations|
 |/docs/deb/2.8/cli/maas-tags|/docs/deb/2.8/cli/tags-and-annotations|
