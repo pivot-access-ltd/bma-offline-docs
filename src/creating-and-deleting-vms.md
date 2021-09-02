@@ -186,3 +186,55 @@ Example output:
 
 After you delete a machine, its resources will be available for other VMs.
 rad-end
+
+* How to manage VM hosts
+
+** How to examine NUMA node resources
+
+You can examine the resources of a NUMA node with the MAAS CLI. A very basic way to do so is to enter the following command for a configured VM:
+=maas $PROFILE machine read $SYSTEM\_ID=
+In the resulting JSON output, look for the array entry =numanode\_set=, which will show the NUMA details for that specific VM:
+="numanode\_set": [ { "index": 0, "memory": 16384, "cores": [ 0, 2, 1, 3, ], "hugepages\_set": [ { "page\_size": 2097152, "total": 0 } ] } ]=
+
+** How to examine resources for NUMA-node-bearing VM hosts
+
+With the MAAS CLI, you can get an overview of resource usage for an LXD host that's running NUMA VMs with the following command:
+=maas $PROFILE virtual-machines read=
+Currently, the API does not give you an aggregated usage, as provided in the UI; hence you'll have to look at the VMs and sum up the usage data yourself. You can see a list of pinned cores via this method, and we do show alignment of machines and NUMA nodes.
+
+** How to examine the alignment between VM host interfaces and NUMA nodes
+
+To see an alignment of VM host interfaces and NUMA nodes via the CLI, you can use the command mentioned above:
+=maas $PROFILE machine read $SYSTEM\_ID=
+and focus on the =interface\_block= section in the resulting JSON. This will give you the alignment information you're seeking.
+
+** How to configure and use hugepages on my VMs
+
+Configuring hugepages for VM use consists of two steps:
+1. Creating a tag which includes a kernel option to use hugepages.
+2. Composing a VM backed with hugepages, tagged with the newly-created tag.
+Here are the specific commands:
+=maas $PROFILE tags create name=use-hugepages kernel\_opts=default\_hugepagesz=1G hugepages=20" maas $PROFILE vm-host compose $VM\_HOST\_ID pinned\_cores=$CORE\_NUMBER hugepages\_backed=true=
+
+rad-end
+
+
+This section explains:
+rad-end
+
+rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
+
+rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
+[[#heading--numa-node-resources][]]
+
+*** Examine NUMA node resources
+
+Within the MAAS UI, it is possible to view NUMA node resources for VM-host-composed machines:
+[[https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png][[[https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png]]]]
+To reach this view, simply select the "KVM" item at the menu along the top, select a specific VM host, and select the "View by NUMA node" switch near the top right.
+[[#heading--numa-alignment][]]
+
+*** Examine the alignment between VM host interfaces and NUMA nodes
+
+To examine the alignment between VM host interfaces and NUMA nodes -- that is, the SR-IOV configuration -- simply consult the "Virtual Functions" section of the NUMA resources diagram shown above, noting which network interfaces are mentioned.
+rad-end
