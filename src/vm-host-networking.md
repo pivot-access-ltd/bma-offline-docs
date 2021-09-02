@@ -1,25 +1,23 @@
-In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself.  This section explains several ways of accomplishing this.
- 
-rad-begin  /snap/2.9/ui  /deb/2.9/ui  /snap/3.0/ui /deb/3.0/ui 
-#### Five questions you may have:
+In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself.  This article explains:
 
-1. [How do I set up a VM host bridge with the web UI?](#heading--maas-bridge-web-ui)
-2. [How do I set up a VM host bridge with netplan?](#heading--maas-bridge-netplan)
-3. [How do I set up a VM host bridge with libvirt?](#heading--maas-bridge-libvirt)
-4. [How do I set up SSH for use by libvirt?](#heading--set-up-ssh)
-5. [How do I make LXD available for hosting?](#heading--lxd-setup)
+rad-begin  /snap/2.9/ui  /deb/2.9/ui  /snap/3.0/ui /deb/3.0/ui 
+
+1. [How to set up a VM host bridge with the web UI](#heading--maas-bridge-web-ui)
+2. [How to set up a VM host bridge with netplan](#heading--maas-bridge-netplan)
+3. [How do set up a VM host bridge with libvirt](#heading--maas-bridge-libvirt)
+4. [How to set up SSH for use by libvirt](#heading--set-up-ssh)
+5. [How to make LXD available for hosting?](#heading--lxd-setup)
 
 LXD sets up a bridge as part of the [initialisation process](#heading--lxd-setup); note that you will have to perform a couple of additional steps to prevent LXD from offering DHCP, which will interfere with the normal operation of MAAS.  Everything you need to know is described at the initialisation link.
 rad-end
 
 rad-begin  /snap/2.9/cli  /deb/2.9/cli  /snap/3.0/cli /deb/3.0/cli 
-#### Five questions you may have:
 
-1. [How do I set up a VM host bridge with the MAAS CLI/API?](#heading--maas-bridge-cli)
-2. [How do I set up a VM host bridge with netplan?](#heading--maas-bridge-netplan)
-3. [How do I set up a VM host bridge with libvirt?](#heading--maas-bridge-libvirt)
-4. [How do I set up SSH for use by libvirt?](#heading--set-up-ssh)
-5. [How do I make LXD available for hosting?](#heading--lxd-setup)
+1. [How to set up a VM host bridge with the MAAS CLI/API](#heading--maas-bridge-cli)
+2. [How to set up a VM host bridge with netplan](#heading--maas-bridge-netplan)
+3. [How to set up a VM host bridge with libvirt](#heading--maas-bridge-libvirt)
+4. [How to set up SSH for use by libvirt](#heading--set-up-ssh)
+5. [How to make LXD available for hosting](#heading--lxd-setup)
 
 LXD sets up a bridge as part of the [initialisation process](#heading--lxd-setup); note that you will have to perform a couple of additional steps to prevent LXD from offering DHCP, which will interfere with the normal operation of MAAS.  Everything you need to know is described at the initialisation link.
 rad-end
@@ -31,7 +29,7 @@ It's essential to enforce usage of IP addresses to avoid domain name conflicts, 
 [/note]
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui  /snap/3.0/ui /deb/3.0/ui 
-<a href="#heading--maas-bridge-web-ui"><h2 id="heading--maas-bridge-web-ui">Set up VM host bridge with MAAS UI</h2></a>
+<a href="#heading--maas-bridge-web-ui"><h2 id="heading--maas-bridge-web-ui">How to set up VM host bridge with MAAS UI</h2></a>
 
 You can use the MAAS UI to configure a bridge to connect a VM host to MAAS:
 
@@ -52,7 +50,7 @@ Then you can deploy Ubuntu.
 rad-end
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli  /snap/3.0/cli /deb/3.0/cli 
-<a href="#heading--maas-bridge-cli"><h2 id="heading--maas-bridge-cli">Use the MAAS API to configure a bridge</h2></a>
+<a href="#heading--maas-bridge-cli"><h2 id="heading--maas-bridge-cli">How to use the MAAS API to configure a bridge</h2></a>
 
 You can also use the MAAS CLI/API to configure a VM host bridge, with the following procedure:
 
@@ -74,7 +72,7 @@ You can also use the MAAS CLI/API to configure a VM host bridge, with the follow
 
 rad-end
 
-<a href="#heading--maas-bridge-netplan"><h2 id="heading--maas-bridge-netplan">Use netplan to configure a bridge</h2></a>
+<a href="#heading--maas-bridge-netplan"><h2 id="heading--maas-bridge-netplan">How to use netplan to configure a bridge</h2></a>
 
 You can also use netplan to configure a VM host bridge:
 
@@ -120,7 +118,7 @@ network:
 
 Apply the new configuration with `netplan apply`.
 
-<a href="#heading--maas-bridge-libvirt"><h2 id="heading--maas-bridge-libvirt">Use libvirt to configure a bridge</h2></a>
+<a href="#heading--maas-bridge-libvirt"><h2 id="heading--maas-bridge-libvirt">How to use libvirt to configure a bridge</h2></a>
 
 It is also possible to use [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) to configure a virtual bridge.  This method will also work for LXD VM hosts running on Ubuntu.  Be aware that other methods may be required if you are configuring LXD on an OS other than Ubuntu.
 
@@ -152,7 +150,7 @@ virsh net-define maas.xml
 
 Note that this network also has NAT port forwarding enabled to allow VMs to communicate with the Internet at large. Port forwarding is very useful in test environments.
 
-<a href="#heading--set-up-ssh"><h2 id="heading--set-up-ssh">Set up SSH</h2></a>
+<a href="#heading--set-up-ssh"><h2 id="heading--set-up-ssh">How to set up SSH</h2></a>
 
 For MAAS to successfully communicate with libvirt on your VM host machine -- whether you're running from snap or package, or running rack controllers in LXD containers or on localhost -- this example command must succeed from every rack controller:
 
@@ -163,7 +161,7 @@ virsh -c qemu+ssh://$USER@$VM_HOST_IP/system list --all
 Here, `$USER` is a user on your VM host who is a member of the `libvirtd` Unix group on the VM host, and `$VM_HOST_IP` is the IP of your VM host.  **Note** that insufficient permissions for `$USER` may cause the `virsh` command to fail with an error such as `failed to connect to the hypervisor`. Check the `$USER` group membership to make sure `$USER` is a member of the `libvirtd` group.
 
 rad-begin     /deb/2.9/ui /deb/2.9/cli /deb/3.0/cli /deb/3.0/ui  
-<a href="#heading--libvirt-ssh"><h3 id="heading--libvirt-ssh">Set up SSH (libvirt only)</h3></a>
+<a href="#heading--libvirt-ssh"><h3 id="heading--libvirt-ssh">How to set up SSH (libvirt only)</h3></a>
 
 The `maas` user on your rack controllers will issue all libvirt commands. Therefore, you'll need to set up SSH public keys on every rack controller for user `maas`.  First create SSH keys on all rack controllers:
 
@@ -178,7 +176,7 @@ Next, add the contents of `~maas/.ssh/id_rsa.pub` to the VM host user's `~$USER/
 rad-end
 
 rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli 
-<a href="#heading--set-up-ssah-lv"><h3 id="heading--set-up-ssah-lv">Set up SSH (libvirt only)</h3></a>
+<a href="#heading--set-up-ssah-lv"><h3 id="heading--set-up-ssah-lv">How to set up SSH (libvirt only)</h3></a>
 
 If you installed MAAS via snap, then create the needed SSH keys this way:
 
@@ -192,11 +190,11 @@ Finally, you'll need to add `id_rsa.pub` to the `authorized_keys` file in `/home
 rad-end
 
 rad-begin     /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli /snap/3.0/cli /snap/3.0/ui /deb/3.0/cli /deb/3.0/ui
-<a href="#heading--lxd-setup"><h2 id="heading--lxd-setup">Make LXD available for VM hosting</h2></a>
+<a href="#heading--lxd-setup"><h2 id="heading--lxd-setup">How to make LXD available for VM hosting</h2></a>
 
 Assuming that you want to use LXD VM hosts, you need to install the correct version of LXD. Prior to the release of Ubuntu 20.04 LXD was installed using Debian packages. The Debian packaged version of LXD is too old to use with MAAS. If this is the case, you’ll need to remove the LXD Debian packages and install the Snap version.  Note that you cannot install both Debian and snap versions, as this creates a conflict.
 
-<a href="#heading--reinstalling-lxd"><h3 id="heading--reinstalling-lxd">Removing older versions of LXD</h3></a>
+<a href="#heading--reinstalling-lxd"><h3 id="heading--reinstalling-lxd">How to remove older versions of LXD</h3></a>
 
 If you're on a version of Ubuntu older than 20.04, or you have the Debian version of LXD, start the uninstall process with the following command:
 
@@ -336,7 +334,7 @@ $ sudo snap install lxd
 lxd 4.1 from Canonical✓ installed
 ```
 
-<a href="#heading--newer-lxd"><h3 id="heading--newer-lxd">Refreshing LXD on 20.04</h3></a>
+<a href="#heading--newer-lxd"><h3 id="heading--newer-lxd">R\How to refresh LXD on 20.04</h3></a>
 
 If you are on 20.04 or above LXD should be installed by default, but it's a good idea to make sure it's up to date:
 
@@ -345,7 +343,7 @@ $ sudo snap refresh
 All snaps up to date.
 ```
 
-<a href="#heading--lxd-init"><h3 id="heading--lxd-init">Initialise LXD prior to use</h3></a>
+<a href="#heading--lxd-init"><h3 id="heading--lxd-init">How to initialise LXD prior to use</h3></a>
 
 Once LXD is installed it needs to be configured with `lxd init` before first use:
 
