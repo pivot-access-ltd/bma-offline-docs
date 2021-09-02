@@ -4,24 +4,26 @@ In addition, the machine subnet is usually on the untagged VLAN. If not, you wil
 
 This documentation presupposes that MAAS-managed DHCP is used to enlist and commission machines.  Using an external DHCP server for enlistment and commissioning may work, but note that this is not supported. MAAS cannot manage an external DHCP server, nor can it keep leases synchronised when you return a machine to the pool.
 
-This article delves into these issues, offering guidance on setting up and managing your DHCP configuration.
+This article will tell you:
 
-####  Twelve questions you may have: 
+- [How to enable MAAS-managed DHCP](#heading--enabling-dhcp)
+- [How to resolve IP conflicts](#heading--resolving-ip-conflicts)
+- [How to extend a reserved dynamic IP range](#heading--extending-a-reserved-dynamic-ip-range)
+- [How to configure external DHCP](#heading--external-dhcp-and-a-reserved-ip-range)
+- [How to use a DHCP relay](#heading--dhcp-relay)
+- [How to customise MAAS with DHCP snippets](#heading--dhcp-snippets)
+rad-begin /snap/2.9/cli /snap/3.0/cli /deb/2.9/cli /deb/3.0/cli
+- [How to list DHCP snippets](#heading--list-snippets)
+- [How to update a DHCP snippet](#heading--update-a-snippet)
+- [How to enable or disable a DHCP snippet](#heading--enable-or-disable-a-snippet)
+- [How to delete a DHCP snippet](#heading--delete-a-snippet)
+- [How to create an A or AAAA record in DNS](#heading--create-an-a-or-aaaa-record-in-dns)
+- [How to create an alias (CNAME) record in DNS](#heading--create-an-alias-cname-record-in-dns)
+- [How to create a Mail Exchange pointer record in DNS](#heading--create-a-mail-exchange-pointer-record-in-dns)
+- [How to set a DNS forwarder](#heading--set-a-dns-forwarder)
+rad-end
 
-1. [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
-2. [What is post-commission configuration](/t/commission-machines/nnnn#heading--post-commission-configuration)
-3. [How and why should I enable MAAS-managed DHCP?](#heading--enabling-dhcp)
-4. [How do I resolve IP conflicts?](#heading--resolving-ip-conflicts)
-5. [How can I extend a reserved dynamic IP range?](#heading--extending-a-reserved-dynamic-ip-range)
-6. [How and why should I configure external  DHCP?](#heading--external-dhcp-and-a-reserved-ip-range)
-7. [How and why should I use a DHCP relay?](#heading--dhcp-relay)
-8. [How and why should I customise MAAS with DHCP snippets?](#heading--dhcp-snippets)
-9. [How do I create an A or AAAA record in DNS?](#heading--create-an-a-or-aaaa-record-in-dns)
-10. [How do I create an alias (CNAME) record in DNS?](#heading--create-an-alias-cname-record-in-dns)
-11. [How do I create a Mail Exchange pointer record in DNS?](#heading--create-a-mail-exchange-pointer-record-in-dns)
-12. [How do I set a DNS forwarder?](#heading--set-a-dns-forwarder)
-
-<a href="#heading--enabling-dhcp"><h2 id="heading--enabling-dhcp">Enabling DHCP</h2></a>
+<a href="#heading--enabling-dhcp"><h2 id="heading--enabling-dhcp">How to enable MAAS-managed DHCP</h2></a>
 
 MAAS-managed DHCP needs a reserved dynamic IP range enlist and commission machines. You should create such a range when you are enabling DHCP with the web UI.
 
@@ -41,14 +43,14 @@ rad-end
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 To enable DHCP on a VLAN on a certain fabric:
 
-``` bash
+``` nohighlight
 maas $PROFILE vlan update $FABRIC_ID $VLAN_TAG dhcp_on=True \
     primary_rack=$PRIMARY_RACK_CONTROLLER
 ```
 
 To enable DHCP HA, you will need both a primary and a secondary controller:
 
-``` bash
+``` nohighlight
 maas $PROFILE vlan update $FABRIC_ID $VLAN_TAG dhcp_on=True \
     primary_rack=$PRIMARY_RACK_CONTROLLER \
     secondary_rack=$SECONDARY_RACK_CONTROLLER 
@@ -60,13 +62,13 @@ You must enable DHCP for PXE booting on the 'untagged' VLAN.
 
 You will also need to set a default gateway:
 
-``` bash
+``` nohighlight
 maas $PROFILE subnet update $SUBNET_CIDR gateway_ip=$MY_GATEWAY
 ```
 
 rad-end
 
-<a href="#heading--resolving-ip-conflicts"><h3 id="heading--resolving-ip-conflicts">Resolving IP conflicts</h3></a>
+<a href="#heading--resolving-ip-conflicts"><h3 id="heading--resolving-ip-conflicts">How to resolve IP conflicts</h3></a>
 
 In some cases, MAAS manages a subnet that is not empty, which could result in MAAS assigning a duplicate IP address.  MAAS is capable of detecting IPs in use on a subnet.  Be aware that there are two caveats:
 
@@ -76,15 +78,15 @@ In some cases, MAAS manages a subnet that is not empty, which could result in MA
 
 MAAS also recognises when the subnet ARP cache is full, so that it can re-check the oldest IPs added to the cache to search for free IP addresses.
 
-<a href="#heading--extending-a-reserved-dynamic-ip-range"><h2 id="heading--extending-a-reserved-dynamic-ip-range">Extending a reserved dynamic IP range</h2></a>
+<a href="#heading--extending-a-reserved-dynamic-ip-range"><h2 id="heading--extending-a-reserved-dynamic-ip-range">How to extend a reserved dynamic IP range</h2></a>
 
 If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/ip-ranges/nnnn)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
 
-<a href="#heading--external-dhcp-and-a-reserved-ip-range"><h2 id="heading--external-dhcp-and-a-reserved-ip-range">External DHCP and a reserved IP range</h2></a>
+<a href="#heading--external-dhcp-and-a-reserved-ip-range"><h2 id="heading--external-dhcp-and-a-reserved-ip-range">How to configure external DHCP</h2></a>
 
 If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/ip-ranges/nnnn) to create such a range. It should correspond to the lease range of the external server.
 
-<a href="#heading--dhcp-relay"><h2 id="heading--dhcp-relay">DHCP relay</h2></a>
+<a href="#heading--dhcp-relay"><h2 id="heading--dhcp-relay">How to use a DHCP relay</h2></a>
 
 You should not enable DHCP relays in MAAS without sufficient planning.  In particular, MAAS does not provide the actual relay. It must be set up as an external service by the administrator. What MAAS does provide is the DHCP configuration that MAAS-managed DHCP requires in order to satisfy any client requests relayed from another VLAN.
 
@@ -101,19 +103,19 @@ rad-end
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
 3. To relay DHCP traffic for a VLAN (source) through another VLAN (target):
 
-``` bash
+``` nohighlight
 maas $PROFILE vlan update $FABRIC_ID $VLAN_VID_SRC relay_vlan=$VLAN_ID_TARGET
 ```
 
 For example, to relay VLAN with vid 0 (on fabric-2) through VLAN with id 5002 :
 
-``` bash
+``` nohighlight
 maas $PROFILE vlan update 2 0 relay_van=5002
 ```
 
 rad-end
 
-<a href="#heading--dhcp-snippets"><h2 id="heading--dhcp-snippets">DHCP Snippets</h2></a>
+<a href="#heading--dhcp-snippets"><h2 id="heading--dhcp-snippets">How to customise MAAS with DHCP snippets</h2></a>
 
 rad-begin     /deb/2.9/ui /deb/2.9/cli /deb/3.0/ui /deb/3.0/cli 
 When MAAS manages DHCP, you customise it through the use of DHCP snippets. These are user-defined configuration options that can be applied either globally, per subnet, or per machine. You apply a global snippet to all VLANs, subnets, and machines. All three types end up in `/var/lib/maas/dhcpd.conf` or `/var/lib/maas/dhcpd6.conf`. For information on what options to use, refer to the [`dhcpd.conf` man page](http://manpages.ubuntu.com/cgi-bin/search.py?q=dhcpd.conf).
@@ -140,7 +142,7 @@ When you create a snippet, MAAS enables it by default.
 
 To create a **global** snippet:
 
-``` bash
+``` nohighlight
 maas $PROFILE dhcpsnippets create name=$DHCP_SNIPPET_NAME \
     value=$DHCP_CONFIG description=$DHCP_SNIPPET_DESCRIPTION \
     global_snippet=true
@@ -148,7 +150,7 @@ maas $PROFILE dhcpsnippets create name=$DHCP_SNIPPET_NAME \
 
 To create a **subnet** snippet:
 
-``` bash
+``` nohighlight
 maas $PROFILE dhcpsnippets create name=$DHCP_SNIPPET_NAME \
     value=$DHCP_CONFIG description=$DHCP_SNIPPET_DESCRIPTION \
     subnet=$SUBNET_ID
@@ -158,7 +160,7 @@ You can also specify subnets in CIDR format.
 
 To create a **node** snippet:
 
-``` bash
+``` nohighlight
 maas $PROFILE dhcpsnippets create name=$DHCP_SNIPPET_NAME \
     value=$DHCP_CONFIG description=$DHCP_SNIPPET_DESCRIPTION \
     node=$NODE_ID
@@ -166,108 +168,108 @@ maas $PROFILE dhcpsnippets create name=$DHCP_SNIPPET_NAME \
 
 You can also use a hostname instead of the node ID.
 
-<a href="#heading--list-snippets"><h3 id="heading--list-snippets">List snippets</h3></a>
+<a href="#heading--list-snippets"><h3 id="heading--list-snippets">How to list DHCP snippets</h3></a>
 
 To list all snippets (and their characteristics) in the MAAS:
 
-``` bash
+``` nohighlight
 maas $PROFILE dhcpsnippets read
 ```
 
 To list a specific snippet:
 
-``` bash
+``` nohighlight
 maas $PROFILE dhcpsnippet read id=$DHCP_SNIPPET_ID
 ```
 
 The snippet name can also be used instead of its ID:
 
-``` bash
+``` nohighlight
 maas $PROFILE dhcpsnippet read name=$DHCP_SNIPPET_NAME
 ```
 
-<a href="#heading--update-a-snippet"><h3 id="heading--update-a-snippet">Update a snippet</h3></a>
+<a href="#heading--update-a-snippet"><h3 id="heading--update-a-snippet">How to update a DHCP snippet</h3></a>
 
 Update a snippet attribute:
 
-``` bash
+``` nohighlight
 maas $PROFILE dhcpsnippet update $DHCP_SNIPPET_ID <option=value>
 ```
 
 You can also use a snippet name instead of its ID.
 
-<a href="#heading--enable-or-disable-a-snippet"><h3 id="heading--enable-or-disable-a-snippet">Enable or disable a snippet</h3></a>
+<a href="#heading--enable-or-disable-a-snippet"><h3 id="heading--enable-or-disable-a-snippet">How to enable or disable a DHCP snippet</h3></a>
 
 Enabling and disabling a snippet is considered a snippet update and is done via a boolean option ('true' or 'false'). You can disable a snippet like this:
 
-``` bash
+``` nohighlight
 maas $PROFILE dhcpsnippet update $DHCP_SNIPPET_ID enabled=false
 ```
 
 When you disable a snippet, MAAS removes the text you added to the dhcpd.conf file when you created the snippet.
 
-<a href="#heading--delete-a-snippet"><h3 id="heading--delete-a-snippet">Delete a snippet</h3></a>
+<a href="#heading--delete-a-snippet"><h3 id="heading--delete-a-snippet">How to delete a DHCP snippet</h3></a>
 
 To delete a snippet:
 
-``` bash
+``` nohighlight
 maas $PROFILE dhcpsnippet delete $DHCP_SNIPPET_ID
 ```
 
 You can also use a snippet name in place of its ID.
-rad-end
 
-<a href="#heading--set-dns-parameters"><h2 id="heading--set-dns-parameters">Setting DNS parameters</h2></a>
+<a href="#heading--set-dns-parameters"><h2 id="heading--set-dns-parameters">How to set DNS parameters</h2></a>
 
 It is possible to set DNS parameters using the MAAS CLI, using the following instructions.
 
-<a href="#heading--create-an-a-or-aaaa-record-in-dns"><h3 id="heading--create-an-a-or-aaaa-record-in-dns">Create an A or AAAA record in DNS</h3></a>
+<a href="#heading--create-an-a-or-aaaa-record-in-dns"><h3 id="heading--create-an-a-or-aaaa-record-in-dns">How to create an A or AAAA record in DNS</h3></a>
 
 An administrator can create an A record when creating a DNS resource with an IPv4 address.
 
-``` bash
+``` nohighlight
 mass $PROFILE dnsresources create fqdn=$HOSTNAME.$DOMAIN ip_addresses=$IPV4ADDRESS
 ```
 
 An administrator can create an AAAA record when creating a DNS resource with an IPv6 address.
 
-``` bash
+``` nohighlight
 mass $PROFILE dnsresources create fqdn=$HOSTNAME.$DOMAIN ip_addresses=$IPV6ADDRESS
 ```
 
-<a href="#heading--create-an-alias-cname-record-in-dns"><h3 id="heading--create-an-alias-cname-record-in-dns">Create an alias (CNAME) record in DNS</h3></a>
+<a href="#heading--create-an-alias-cname-record-in-dns"><h3 id="heading--create-an-alias-cname-record-in-dns">How to create an alias (CNAME) record in DNS</h3></a>
 
 An administrator can set a DNS Alias (CNAME record) to an already existing DNS entry of a machine.
 
-``` bash
+``` nohighlight
 mass $PROFILE dnsresource-records create fqdn=$HOSTNAME.$DOMAIN rrtype=cname rrdata=$ALIAS
 ```
 
 For example, to set `webserver.maas.io` to alias to `www.maas.io`:
 
-``` bash
+``` nohighlight
 maas $PROFILE dnsresource-records create fqdn=webserver.maas.io rrtype=cname rrdata=www
 ```
 
-<a href="#heading--create-a-mail-exchange-pointer-record-in-dns"><h3 id="heading--create-a-mail-exchange-pointer-record-in-dns">Create a Mail Exchange pointer record in DNS</h3></a>
+<a href="#heading--create-a-mail-exchange-pointer-record-in-dns"><h3 id="heading--create-a-mail-exchange-pointer-record-in-dns">How to create a Mail Exchange pointer record in DNS</h3></a>
 
 An administrator can set a DNS Mail Exchange pointer record (MX and value) to a domain.
 
-``` bash
+``` nohighlight
 maas $PROFILE dnsresource-records create fqdn=$DOMAIN rrtype=mx rrdata='10 $MAIL_SERVER.$DOMAIN'
 ```
 
 For example, to set the domain.name managed by MAAS to have an MX record and that you own the domain:
 
-``` bash
+``` nohighlight
 maas $PROFILE dnsresource-records create fqdn=maas.io rrtype=mx rrdata='10 smtp.maas.io'
 ```
 
-<a href="#heading--set-a-dns-forwarder"><h2 id="heading--set-a-dns-forwarder">Set a DNS forwarder</h2></a>
+<a href="#heading--set-a-dns-forwarder"><h2 id="heading--set-a-dns-forwarder">How to set a DNS forwarder</h2></a>
 
 To set a DNS forwarder:
 
-``` bash
+``` nohighlight
 maas $PROFILE maas set-config name=upstream_dns value=$MY_UPSTREAM_DNS
 ```
 
+rad-end

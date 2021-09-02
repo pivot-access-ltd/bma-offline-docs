@@ -226,7 +226,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3982|/docs/snap/3.0/ui/local-image-mirror|
 |https://discourse.maas.io/t/-/4174|/docs/snap/3.0/ui/vmware-images|
 |https://discourse.maas.io/t/-/4046|/docs/snap/3.0/ui/about-networking|
-|https://discourse.maas.io/t/-/4034|/docs/snap/3.0/ui/managing-dhcp|
 |https://discourse.maas.io/t/-/4082|/docs/snap/3.0/ui/proxy|
 |https://discourse.maas.io/t/-/3890|/docs/snap/3.0/ui/configuring-tls-encryption|
 |https://discourse.maas.io/t/-/3834|/docs/snap/3.0/ui/availability-zones|
@@ -718,14 +717,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/2899|/docs/snap/2.7/ui/managing-dhcp|
 |https://discourse.maas.io/t/-/2900|/docs/snap/2.8/cli/managing-dhcp|
 |https://discourse.maas.io/t/-/2901|/docs/snap/2.8/ui/managing-dhcp|
-|https://discourse.maas.io/t/-/2902|/docs/snap/2.9/cli/managing-dhcp|
-|https://discourse.maas.io/t/-/2903|/docs/snap/2.9/ui/managing-dhcp|
 |https://discourse.maas.io/t/-/2904|/docs/deb/2.7/cli/managing-dhcp|
 |https://discourse.maas.io/t/-/2905|/docs/deb/2.7/ui/managing-dhcp|
 |https://discourse.maas.io/t/-/2906|/docs/deb/2.8/cli/managing-dhcp|
 |https://discourse.maas.io/t/-/2907|/docs/deb/2.8/ui/managing-dhcp|
-|https://discourse.maas.io/t/-/2908|/docs/deb/2.9/cli/managing-dhcp|
-|https://discourse.maas.io/t/-/2909|/docs/deb/2.9/ui/managing-dhcp|
 |https://discourse.maas.io/t/-/2910|/docs/snap/2.7/cli/managing-stp|
 |https://discourse.maas.io/t/-/2911|/docs/snap/2.7/ui/managing-stp|
 |https://discourse.maas.io/t/-/2912|/docs/snap/2.8/cli/managing-stp|
@@ -1172,9 +1167,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4025|/docs/snap/3.0/cli/machine-logs|
 |https://discourse.maas.io/t/-/4027|/docs/deb/3.0/cli/machine-logs|
 |https://discourse.maas.io/t/-/4028|/docs/deb/3.0/ui/machine-logs|
-|https://discourse.maas.io/t/-/4033|/docs/snap/3.0/cli/managing-dhcp|
-|https://discourse.maas.io/t/-/4035|/docs/deb/3.0/cli/managing-dhcp|
-|https://discourse.maas.io/t/-/4036|/docs/deb/3.0/ui/managing-dhcp|
+|https://discourse.maas.io/t/-/2902|/docs/snap/2.9/cli/how-to-manage-dhcp|
+|https://discourse.maas.io/t/-/2903|/docs/snap/2.9/ui/how-to-manage-dhcp|
+|https://discourse.maas.io/t/-/2908|/docs/deb/2.9/cli/how-to-manage-dhcp|
+|https://discourse.maas.io/t/-/2909|/docs/deb/2.9/ui/how-to-manage-dhcp|
+|https://discourse.maas.io/t/-/4033|/docs/snap/3.0/cli/how-to-manage-dhcp|
+|https://discourse.maas.io/t/-/4034|/docs/snap/3.0/ui/how-to-manage-dhcp|
+|https://discourse.maas.io/t/-/4035|/docs/deb/3.0/cli/how-to-manage-dhcp|
+|https://discourse.maas.io/t/-/4036|/docs/deb/3.0/ui/how-to-manage-dhcp|
 |https://discourse.maas.io/t/-/4045|/docs/snap/3.0/cli/about-networking|
 |https://discourse.maas.io/t/-/4047|/docs/deb/3.0/cli/about-networking|
 |https://discourse.maas.io/t/-/4048|/docs/deb/3.0/ui/about-networking|
@@ -1306,6 +1306,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/deb/2.9/cli/managing-dhcp|/docs/deb/2.9/cli/how-to-manage-dhcp|
+|/docs/deb/2.9/ui/managing-dhcp|/docs/deb/2.9/ui/how-to-manage-dhcp|
+|/docs/deb/3.0/cli/managing-dhcp|/docs/deb/3.0/cli/how-to-manage-dhcp|
+|/docs/deb/3.0/ui/managing-dhcp|/docs/deb/3.0/ui/how-to-manage-dhcp|
+|/docs/snap/2.9/cli/managing-dhcp|/docs/snap/2.9/cli/how-to-manage-dhcp|
+|/docs/snap/2.9/ui/managing-dhcp|/docs/snap/2.9/ui/how-to-manage-dhcp|
+|/docs/snap/3.0/cli/managing-dhcp|/docs/snap/3.0/cli/how-to-manage-dhcp|
+|/docs/snap/3.0/ui/managing-dhcp|/docs/snap/3.0/ui/how-to-manage-dhcp|
 |/docs/deb/2.9/cli/vm-host-networking|/docs/deb/2.9/cli/how-to-manage-vm-hosts|
 |/docs/deb/2.9/ui/vm-host-networking|/docs/deb/2.9/ui/how-to-manage-vm-hosts|
 |/docs/deb/3.0/cli/vm-host-networking|/docs/deb/3.0/cli/how-to-manage-vm-hosts|
@@ -1414,7 +1422,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/backup|/docs/snap/3.0/ui/backup|
 |/docs/block-devices|/docs/snap/3.0/ui/storage|
 |/docs/bmc-power-types|/docs/snap/3.0/ui/power-management|
-|/docs/cli-dhcp-snippet-management|/docs/snap/2.9/cli/managing-dhcp|
+|/docs/cli-dhcp-snippet-management|/docs/snap/2.9/cli/how-to-manage-dhcp|
 |/docs/cli-resource-pool-management|/docs/snap/2.9/cli/resource-pools|
 |/docs/cli-tag-management|/docs/snap/3.0/cli/about-tags|
 |/docs/commission-nodes|/docs/snap/3.0/ui/how-to-commission-machines|
@@ -1489,7 +1497,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/deb/3.0/ui/ubuntu-kernels|/docs/deb/3.0/ui/how-to-customise-machines|
 |/docs/deb/3.0/ui/vmware-vmfs-datastores|/docs/deb/3.0/ui/storage|
 |/docs/deploy-nodes|/docs/snap/3.0/ui/how-to-deploy-machines|
-|/docs/dhcp|/docs/snap/3.0/ui/managing-dhcp|
+|/docs/dhcp|/docs/snap/3.0/ui/how-to-manage-dhcp|
 |/docs/disk-erasure|/docs/snap/3.0/ui/storage|
 |/docs/explore-maas|/docs/snap/3.0/ui/maas-installation|
 |/docs/hardware-testing|/docs/snap/3.0/ui/how-to-test-machines|
@@ -1509,7 +1517,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/installconfig-iso-install|/docs/install-from-iso|
 |/docs/installconfig-lxd-install|/docs/install-with-lxd|
 |/docs/installconfig-network-dev-discovery|/docs/snap/3.0/ui/about-networking#heading--about-network-discovery|
-|/docs/installconfig-network-dhcp|/docs/snap/3.0/ui/managing-dhcp|
+|/docs/installconfig-network-dhcp|/docs/snap/3.0/ui/how-to-manage-dhcp|
 |/docs/installconfig-network-ipranges|/docs/snap/3.0/ui/ip-ranges|
 |/docs/installconfig-network-ipv6|/docs/ipv6|/docs/snap/3.0/ui/about-networking#heading--about-ipv6|
 |/docs/installconfig-network-ntp|/docs/ntp|/docs/snap/3.0/ui/ntp-services|
@@ -1566,7 +1574,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/manage-cli-advanced|/docs/advanced-cli-tasks|
 |/docs/manage-cli-common|/docs/common-cli-tasks|
 |/docs/manage-cli-comp-hw|/docs/snap/2.9/cli/creating-and-deleting-vms|
-|/docs/manage-cli-dhcp-snippets|/docs/snap/2.9/cli/managing-dhcp|
+|/docs/manage-cli-dhcp-snippets|/docs/snap/2.9/cli/how-to-manage-dhcp|
 |/docs/manage-cli-images|/docs/cli-image-management|
 |/docs/manage-cli-interfaces|/docs/cli-interface-management|
 |/docs/manage-cli-kernels|/docs/cli-kernel-management|
