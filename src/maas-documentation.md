@@ -235,7 +235,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4154|/docs/snap/3.0/ui/using-maas-in-an-air-gapped-environment|
 |https://discourse.maas.io/t/-/4162|/docs/snap/3.0/ui/vm-hosting|
 |https://discourse.maas.io/t/-/4166|/docs/snap/3.0/ui/vm-host-networking|
-|https://discourse.maas.io/t/-/3818|/docs/snap/3.0/ui/adding-a-vm-host|
 |https://discourse.maas.io/t/-/3906|/docs/snap/3.0/ui/creating-and-deleting-vms|
 |https://discourse.maas.io/t/-/4074|/docs/snap/3.0/ui/prometheus-metrics|
 |https://discourse.maas.io/t/-/3838|/docs/snap/3.0/ui/backup|
@@ -309,14 +308,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/2287|/docs/snap/2.7/ui/adding-a-vm-host|
 |https://discourse.maas.io/t/-/2288|/docs/snap/2.8/cli/adding-a-vm-host|
 |https://discourse.maas.io/t/-/2289|/docs/snap/2.8/ui/adding-a-vm-host|
-|https://discourse.maas.io/t/-/2290|/docs/snap/2.9/cli/adding-a-vm-host|
-|https://discourse.maas.io/t/-/2291|/docs/snap/2.9/ui/adding-a-vm-host|
 |https://discourse.maas.io/t/-/2292|/docs/deb/2.7/cli/adding-a-vm-host|
 |https://discourse.maas.io/t/-/2293|/docs/deb/2.7/ui/adding-a-vm-host|
 |https://discourse.maas.io/t/-/2294|/docs/deb/2.8/cli/adding-a-vm-host|
 |https://discourse.maas.io/t/-/2295|/docs/deb/2.8/ui/adding-a-vm-host|
-|https://discourse.maas.io/t/-/2296|/docs/deb/2.9/cli/adding-a-vm-host|
-|https://discourse.maas.io/t/-/2297|/docs/deb/2.9/ui/adding-a-vm-host|
 |https://discourse.maas.io/t/-/2298|/docs/snap/2.7/cli/api-authentication|
 |https://discourse.maas.io/t/-/2299|/docs/snap/2.7/ui/api-authentication|
 |https://discourse.maas.io/t/-/2300|/docs/snap/2.8/cli/api-authentication|
@@ -1080,9 +1075,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3814|/docs/snap/3.0/cli/about-maas|
 |https://discourse.maas.io/t/-/3815|/docs/deb/3.0/cli/about-maas|
 |https://discourse.maas.io/t/-/3816|/docs/deb/3.0/ui/about-maas|
-|https://discourse.maas.io/t/-/3817|/docs/snap/3.0/cli/adding-a-vm-host|
-|https://discourse.maas.io/t/-/3819|/docs/deb/3.0/cli/adding-a-vm-host|
-|https://discourse.maas.io/t/-/3820|/docs/deb/3.0/ui/adding-a-vm-host|
+|https://discourse.maas.io/t/-/3818|/docs/snap/3.0/ui/how-to-manage-vm-hosts|
+|https://discourse.maas.io/t/-/2290|/docs/snap/2.9/cli/how-to-manage-vm-hosts|
+|https://discourse.maas.io/t/-/2291|/docs/snap/2.9/ui/how-to-manage-vm-hosts|
+|https://discourse.maas.io/t/-/2296|/docs/deb/2.9/cli/how-to-manage-vm-hosts|
+|https://discourse.maas.io/t/-/2297|/docs/deb/2.9/ui/how-to-manage-vm-hosts|
+|https://discourse.maas.io/t/-/3817|/docs/snap/3.0/cli/how-to-manage-vm-hosts|
+|https://discourse.maas.io/t/-/3819|/docs/deb/3.0/cli/how-to-manage-vm-hosts|
+|https://discourse.maas.io/t/-/3820|/docs/deb/3.0/ui/how-to-manage-vm-hosts|
 |https://discourse.maas.io/t/-/3825|/docs/snap/3.0/cli/api-authentication|
 |https://discourse.maas.io/t/-/3827|/docs/deb/3.0/cli/api-authentication|
 |https://discourse.maas.io/t/-/3828|/docs/deb/3.0/ui/api-authentication|
@@ -1315,6 +1315,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/deb/2.9/cli/adding-a-vm-host|/docs/deb/2.9/cli/how-to-manage-vm-hosts|
+|/docs/deb/2.9/ui/adding-a-vm-host|/docs/deb/2.9/ui/how-to-manage-vm-hosts|
+|/docs/deb/3.0/cli/adding-a-vm-host|/docs/deb/3.0/cli/how-to-manage-vm-hosts|
+|/docs/deb/3.0/ui/adding-a-vm-host|/docs/deb/3.0/ui/how-to-manage-vm-hosts|
+|/docs/snap/2.9/cli/adding-a-vm-host|/docs/snap/2.9/cli/how-to-manage-vm-hosts|
+|/docs/snap/2.9/ui/adding-a-vm-host|/docs/snap/2.9/ui/how-to-manage-vm-hosts|
+|/docs/snap/3.0/cli/adding-a-vm-host|/docs/snap/3.0/cli/how-to-manage-vm-hosts|
+|/docs/snap/3.0/ui/adding-a-vm-host|/docs/snap/3.0/ui/how-to-manage-vm-hosts|
 |/docs/deb/2.9/cli/vm-host-storage-pools|/docs/deb/2.9/cli/vm-hosting#heading--about-vm-host-storage-pools|
 |/docs/deb/2.9/ui/vm-host-storage-pools|/docs/deb/2.9/ui/vm-hosting#heading--about-vm-host-storage-pools|
 |/docs/deb/3.0/cli/vm-host-storage-pools|/docs/deb/3.0/cli/vm-hosting#heading--about-vm-host-storage-pools|
