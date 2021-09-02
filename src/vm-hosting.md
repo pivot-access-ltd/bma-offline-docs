@@ -3,6 +3,7 @@ MAAS VM hosts allow for the dynamic composition of nodes from a pool of availabl
 This article will help you learn:
 
 - [About VM hosts](#heading--about-vm-hosts)
+- [About VM host storage pools](#heading--about-vm-host-storage-pools)
 rad-begin /deb/2.9/cli /deb/2.9/ui /snap/2.9/cli /snap/2.9/ui
 - [About LXD vs. libvirt](#heading--about-lxd-vs-libvirt)
 rad-end
@@ -28,6 +29,40 @@ VM hosts are particularly useful for Juju integration, allowing for dynamic allo
 -   Create VMs on multiple networks, specified by space, subnet, VLAN, or IP address
 
 Simply put, a VM host is a machine which is designated to run virtual machines (VMs). A VM host divides its resources (CPU cores, RAM, storage) among the number of VMs you want to create, based on choices that you make when creating each VM. It is also possible to overcommit resources – that is, use more resources than the VM host actually has available – as long as you use the VMs carefully. Once MAAS has enlisted, commissioned, and acquired a newly-added machine, you can deploy it as a VM host.
+
+
+<a href="#heading--about-vm-host-storage-pools"><h2 id="heading--about-vm-host-storage-pools">About VM host storage pools</h2></a>
+
+"Storage pools” are storage resources managed by a VM host. A storage pool is a given amount of storage set aside for use by VMs. A pool can be organised into storage volumes, assigned to VMs as individual block devices.
+
+[note]
+For LXD VM hosts, each VM can be assigned a single block device from the storage pool.
+[/note]
+
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+The MAAS web UI displays information about each VM host's storage pools so you can understand your resource usage at a glance:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/3387f256f9bd02f7fc2079f119377305256973c8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3387f256f9bd02f7fc2079f119377305256973c8.jpeg"></a>
+rad-end
+
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+Retrieve VM host storage pool information with the following command:
+
+```
+maas $PROFILE vm-host read $VM_HOST_ID
+```
+
+or, to get tabular output, try:
+
+```
+maas admin vm-host read 5 \
+| jq -r '(["NAME","TYPE","PATH","TOTAL","USED","AVAIL"]) 
+| (,. map(length*"-"))), (.storage_pools[] 
+| [.name, .type, .path, .total, used, .available]) | @tsv' \
+| column -t
+```
+
+rad-end
 
 rad-begin /deb/2.9/cli /deb/2.9/ui /snap/2.9/cli /snap/2.9/ui
 
