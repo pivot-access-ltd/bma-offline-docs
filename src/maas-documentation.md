@@ -37,7 +37,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 ### [VM hosting](/t/vm-hosting-snap-3-0-ui/4162)
 
 - [Network VM hosts](/t/vm-host-networking-snap-3-0-ui/4166)
-- [Manage VM hosts](/t/adding-a-vm-host-snap-3-0-ui/3818)
+- [Manage VM hosts](/t/how-to-manage-vm-hosts-snap-3-0-ui/3818)
 - [Manage VMs](/t/creating-and-deleting-vms-snap-3-0-ui/3906)
 - [Use LXD](/t/using-lxd-projects-with-maas/4470)
 

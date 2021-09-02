@@ -1,7 +1,7 @@
-[note type="caution" status="Warning"]
-You **must** [configure your network](/t/vm-host-networking/nnnn) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/nnnn#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
-[/note]
 
+[note type="caution" status="Warning"]
+You **must** [configure your network](/t/vm-host-networking/nnnn) to support a VM host before following the procedures in this article.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/nnnn#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
+[/note]
 
 <a href="#heading--adding-a-vm-host"><h2 id="heading--adding-a-vm-host">How to add a VM host</h2></a>
 
