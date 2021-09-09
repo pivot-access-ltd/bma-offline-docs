@@ -930,7 +930,7 @@ Before moving forward with MAAS, you'll want to enable DHCP.  You can do this ve
 
 <a href="#heading--networking"><h3 id="heading--networking">Networking</h3></a>
 
-The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/nnnn) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
+The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/about-networking/nnnn#heading--about-network-discovery) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
 rad-end
 
 

@@ -55,9 +55,9 @@ These criteria were fully met in the MAAS LXD tenant implementation released as 
 
 <a href="#heading--projects-big-picture"><h3 id="heading--projects-alternatives">About alternatives to LXD projects in MAAS</h3></a>
 
-You can see from the discussion above that LXD projects were used primarily to cordon off some LXD VMs from MAAS, to avoid them from being enlisted and commissioned by MAAS (and thus, essentially, destroyed, from an operational perspective).  These LXD project features provide some limited capabilities to group machines. Because LXD projects only deal with LXD VMs and VM hosts, they are not a complete or comprehensive set of project tools.  MAAS already has those machine grouping capabilities in the form of [resource pools](LINKS).
+You can see from the discussion above that LXD projects were used primarily to cordon off some LXD VMs from MAAS, to avoid them from being enlisted and commissioned by MAAS (and thus, essentially, destroyed, from an operational perspective).  These LXD project features provide some limited capabilities to group machines. Because LXD projects only deal with LXD VMs and VM hosts, they are not a complete or comprehensive set of project tools.  MAAS already has those machine grouping capabilities in the form of [resource pools](/t/how-to-manage-machines/nnnn#heading--how-to-use-resource-pools).
 
-We realised, though, as we were working with LXD projects, that we could vastly improve the documentation for resource pools in the area of projects and project management.  You'll find significant new material in the [resource pools](LINKS) section of the doc.  We also realised that it would be helpful to have "real-time tags" for machines, that is, annotations that persist only while a machine is allocated or deployed.  These new "tags" are known as [workload annotations](LINK), and they have also been given a thorough treatment, also with their own page in the left-hand navigation.
+We realised, though, as we were working with LXD projects, that we could vastly improve the documentation for resource pools in the area of projects and project management.  You'll find significant new material in the [resource pools](/t/how-to-manage-machines/nnnn#heading--how-to-use-resource-pools) section of the doc.  We also realised that it would be helpful to have "real-time tags" for machines, that is, annotations that persist only while a machine is allocated or deployed.  These new "tags" are known as [workload annotations](LINK), and they have also been given a thorough treatment, also with their own page in the left-hand navigation.
 
 <a href="#heading--projects-tutorial"><h2 id="heading--projects-tutorial">An LXD project tutorial</h2></a>
 
@@ -476,6 +476,8 @@ This subsection will show you:
 
 <a href="#heading--projects-s2-create-with-vm-host"><h3 id="heading--projects-s2-create-with-vm-host">How to create a new project for MAAS when instantiating a VM host</h3></a>
 
+rad-begin /snap/3.0/cli /deb/3.0/cli
+
 If you're using MAAS from the CLI, you'll want to make sure you've generated an API key and logged in before you attempt to create a VM host.  These steps are fairly simple; first, you'll need the MAAS URL, which for this example, is `http://192.168.33.91:5240/MAAS`.   You can find this URL by typing:
 
 ```nohighlight
@@ -730,8 +732,11 @@ $ lxc list
 ```
 
 You'll note that, since we just created the VM host, without adding any VMs, the `keystone` project will be empty.
+rad-end
 
 <a href="#heading--projects-s2-create-vm-in-vm-host-project"><h3 id="heading--projects-s2-create-vm-in-vm-host-project">How to create a new VM in the LXD project associated with a VM host</h3></a>
+
+rad-begin /snap/3.0/cli /deb/3.0/cli
 
 Let's say that you have created your VM host (called `foo`, in this case) with a new, empty project called `keystone`.  Now you want to create (that is, compose) a VM is this project.  You can accomplish this with a command similar to the following:
 
@@ -768,6 +773,8 @@ In this example, we're using the system ID returned as the `resource_uri` of the
 You can see by the several status messages that this machine was successfully commissioned, sitting now in the ready state.
 
 So from this experiment, we can see that creating (composing) a VM in a VM host causes MAAS to automatically commission the VM.
+
+rad-end
 
 <a href="#heading--projects-s2-move-vm-into-vm-host-project"><h3 id="heading--projects-s2-move-vm-into-vm-host-project">How to move an existing VM into the LXD project associated with a VM host</h3></a>
 
@@ -821,6 +828,7 @@ maas-support-info| 	node|	Passed|	Mon, 19 Apr. 2021 21:42:25|	0:00:01|
 
 This machine will sit in the "New" state until you assign it a power type, and enter the correct power parameters.
 
+rad-begin /snap/3.0/cli /deb/3.0/cli
 For example, to get this new (moved) VM ready to be fully commissioned, you'll need to first find it in the machine list:
 
 ```nohighlight
@@ -828,6 +836,8 @@ maas admin machines read
 (lots of JSON output, down to the last line)
   "resource_uri": "/MAAS/api/2.0/machines/r3mmsh/"
 '''
+
+rad-end
 
 <a href="#heading--projects-s2-delete-vm-host"><h3 id="heading--projects-s2-delete-vm-host">How to delete the VM host</h3></a>
 

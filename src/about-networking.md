@@ -20,7 +20,7 @@ rad-end
 
 <a href="#heading--about-subnet-management"><h2 id="heading--about-subnet-management">About subnet management</h2></a>
 
-Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/managing-dhcp/nnnn#heading--enabling-dhcp).  None of these options requires detailed instruction.
+Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/how-to-manage-dhcp/nnnn#heading--enabling-dhcp).  None of these options requires detailed instruction.
 
 A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS. By default, MAAS manages subnets in your configuration, but this is easily changed.
 

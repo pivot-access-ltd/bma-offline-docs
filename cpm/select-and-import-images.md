@@ -48,7 +48,7 @@ You can tell MAAS to sync images hourly, at the region level.  See [Boot image s
 
 #### Eight questions you may have:
 
-1. [How do I get started with the MAAS CLI?](/t/maas-cli/802)
+1. [How do I get started with the MAAS CLI?](/t/maas-cli/nnnn)
 2. [How do I list boot sources?](#heading--list-boot-sources)
 3. [How do I select images?](#heading--select-image)
 4. [How do I list image selections?](#heading--list-image-selections)

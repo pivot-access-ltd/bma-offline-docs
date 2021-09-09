@@ -1580,7 +1580,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/manage-cli-kernels|/docs/cli-kernel-management|
 |/docs/manage-cli-resource-pools|docs/snap/2.9/cli/resource-pools|
 |/docs/manage-cli-tags|/docs/snap/2.9/cli/maas-tags|
-|/docs/manage-cli|/docs/snap/2.9/cli/maas-cli|
+|/docs/manage-cli|/docs/snap/3.0/cli/maas-cli|
 |/docs/manage-composable-machines|/docs/snap/3.0/ui/vm-hosting|
 |/docs/manage-ha-postgresql|/docs/snap/3.0/ui/postgresql-ha-hot-standby|
 |/docs/manage-ha|/docs/snap/3.0/ui/high-availability|

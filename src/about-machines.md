@@ -345,7 +345,7 @@ With MAAS, you can easily write, upload and execute your hardware testing script
 
 MAAS logs test results and allows you to view a summary of tests run against a particular machine.  You can also example details on any particular tests:
 
-<a href="https://discourse.maas.io/uploads/default/oqriginal/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a>
+<a href="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a>
 
 You can also examine the "raw" log output:
 

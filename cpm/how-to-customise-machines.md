@@ -244,7 +244,7 @@ If you want to customise machines, you may want to know:
 
 - [How to customise machine storage](#heading--how-to-customise-machine-storage)
 - [How to pre-seed with curtin](#heading--how-to-pre-seed-with-curtin)
-- [How to pre-seed with cloud-init](#heading--how-to-pre-seed-with-cloud-init)
+- [How to pre-seed with cloud-init](#heading--cloud-init)
 - [How to choose Ubuntu kernels](#heading--how-to-choose-ubuntu-kernels)
 - [How to set global kernel boot options](#heading--how-to-set-global-kernel-boot-options)
 - [How to use resource pools](#heading--how-to-use-resource-pools)
@@ -1288,7 +1288,7 @@ late_commands:
   custom: ["curtin", "in-target", "--", "sh", "-c", "/bin/echo -en 'Installed ' > /tmp/maas_system_id"]
 ```
 
-<a href="#heading--how-to-pre-seed-with-cloud-init"><h2 id="heading--how-to-pre-seed-with-cloud-init">How to pre-seed with cloud-init</h2></a>
+<a href="#heading--cloud-init"><h2 id="heading--cloud-init">How to pre-seed with cloud-init</h2></a>
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /deb/3.0/cli /snap/3.0/cli
 Using cloud-init to customise a machine after deployment is relatively easy. After you're logged in, use the following command to deploy a machine with a custom script you've written:
