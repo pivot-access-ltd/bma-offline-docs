@@ -38,7 +38,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 - [Manage VM hosts](/t/how-to-manage-vm-hosts-snap-3-0-ui/3818)
 - [Manage VMs](/t/creating-and-deleting-vms-snap-3-0-ui/3906)
-- [Use LXD](/t/using-lxd-projects-with-maas/4470)
+- [Use LXD](/t/how-to-use-lxd/4470)
 
 ### [Networking](/t/about-networking-snap-3-0-ui/4046)
 
@@ -215,7 +215,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4070|/docs/snap/3.0/ui/power-management|
 |https://discourse.maas.io/t/-/3874|/docs/snap/3.0/ui/manage-machine-interfaces|
 |https://discourse.maas.io/t/-/4106|/docs/snap/3.0/ui/storage|
-|https://discourse.maas.io/t/-/4470|/docs/snap/3.0/ui/using-lxd-projects-with-maas|
 |https://discourse.maas.io/t/-/4098|/docs/snap/3.0/ui/resource-pools|
 |https://discourse.maas.io/t/-/4022|/docs/snap/3.0/ui/about-tags|
 |https://discourse.maas.io/t/-/3958|/docs/snap/3.0/ui/images|
@@ -258,9 +257,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4517|/docs/snap/3.0/ui/maas-installation-tutorial|
 |https://discourse.maas.io/t/-/4478|/docs/maas-project-tutorial|
 |https://discourse.maas.io/t/maas-projects/4460|/docs/maas-projects|
-|https://discourse.maas.io/t/-/4473|/docs/deb/3.0/ui/using-lxd-projects-with-maas|
-|https://discourse.maas.io/t/-/4472|/docs/deb/3.0/cli/using-lxd-projects-with-maas|
-|https://discourse.maas.io/t/-/4471|/docs/snap/3.0/cli/using-lxd-projects-with-maas|
+|https://discourse.maas.io/t/-/4473|/docs/deb/3.0/ui/how-to-use-lxd|
+|https://discourse.maas.io/t/-/4472|/docs/deb/3.0/cli/how-to-use-lxd|
+|https://discourse.maas.io/t/-/4471|/docs/snap/3.0/cli/how-to-use-lxd|
+|https://discourse.maas.io/t/-/4470|/docs/snap/3.0/ui/how-to-use-lxd|
+|https://discourse.maas.io/t/-/5054|/docs/deb/2.9/ui/how-to-use-lxd|
+|https://discourse.maas.io/t/-/5053|/docs/deb/2.9/cli/how-to-use-lxd|
+|https://discourse.maas.io/t/-/5055|/docs/snap/2.9/cli/how-to-use-lxd|
+|https://discourse.maas.io/t/-/5056|/docs/snap/2.9/ui/how-to-use-lxd|
 |https://discourse.maas.io/t/report-a-bug/4446|/docs/report-a-bug|
 |https://discourse.maas.io/t/request-a-feature/4447|/docs/request-a-feature|
 |https://discourse.maas.io/t/-/832|/docs/cli-testing-scripts|
@@ -1306,6 +1310,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/deb/2.9/cli/using-lxd-projects-with-maas|/docs/deb/2.9/cli/how-to-use-lxd|
+|/docs/deb/2.9/ui/using-lxd-projects-with-maas|/docs/deb/2.9/ui/how-to-use-lxd|
+|/docs/deb/3.0/cli/using-lxd-projects-with-maas|/docs/deb/3.0/cli/how-to-use-lxd|
+|/docs/deb/3.0/ui/using-lxd-projects-with-maas|/docs/deb/3.0/ui/how-to-use-lxd|
+|/docs/snap/2.9/cli/using-lxd-projects-with-maas|/docs/snap/2.9/cli/how-to-use-lxd|
+|/docs/snap/2.9/ui/using-lxd-projects-with-maas|/docs/snap/2.9/ui/how-to-use-lxd|
+|/docs/snap/3.0/cli/using-lxd-projects-with-maas|/docs/snap/3.0/cli/how-to-use-lxd|
+|/docs/snap/3.0/ui/using-lxd-projects-with-maas|/docs/snap/3.0/ui/how-to-use-lxd|
 |/docs/deb/2.9/cli/managing-dhcp|/docs/deb/2.9/cli/how-to-manage-dhcp|
 |/docs/deb/2.9/ui/managing-dhcp|/docs/deb/2.9/ui/how-to-manage-dhcp|
 |/docs/deb/3.0/cli/managing-dhcp|/docs/deb/3.0/cli/how-to-manage-dhcp|
@@ -1580,7 +1592,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/manage-cli-kernels|/docs/cli-kernel-management|
 |/docs/manage-cli-resource-pools|docs/snap/2.9/cli/resource-pools|
 |/docs/manage-cli-tags|/docs/snap/2.9/cli/maas-tags|
-|/docs/manage-cli|/docs/snap/3.0/cli/maas-cli|
+|/docs/manage-cli|/docs/snap/2.9/cli/maas-cli|
 |/docs/manage-composable-machines|/docs/snap/3.0/ui/vm-hosting|
 |/docs/manage-ha-postgresql|/docs/snap/3.0/ui/postgresql-ha-hot-standby|
 |/docs/manage-ha|/docs/snap/3.0/ui/high-availability|
