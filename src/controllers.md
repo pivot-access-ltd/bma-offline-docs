@@ -36,7 +36,7 @@ You can learn more about fabrics in the [Concepts and terms](/t/concepts-and-ter
 
 MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/nnnn) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
 
-<a href="#heading--machinerack"><h2 id="heading--machinerack">How machines communicate with the rack controller</h2></a>
+<a href="#heading--machinerack"><h3 id="heading--machinerack">How machines communicate with the rack controller</h3></a>
 
 All machine communication with MAAS is proxied through rack controllers, including HTTP metadata, DNS, syslog and APT (cache-and-forward proxies via Squid). 
 
@@ -52,7 +52,7 @@ Zone management and maintenance still happen within the region controller.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg"></a>
 
-<a href="#heading--rackregion"><h2 id="heading--rackregion">How region and rack controllers communicate</h2></a>
+<a href="#heading--rackregion"><h3 id="heading--rackregion">How region and rack controllers communicate</h3></a>
 
 The MAAS region and rack controllers interact in a number of different ways, depending upon the operation you've requested.  Consider the process of commissioning a machine, that is, taking over the machine and gathering information on its available resources, including CPU, RAM, storage, and MIB information (obtainable via LLDP requests).  Here's a rough idea of what that sequence looks like -- a sequence that is representative of the communication between rack and region controllers:
 
