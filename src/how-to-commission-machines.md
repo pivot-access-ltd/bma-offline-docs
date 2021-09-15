@@ -1,6 +1,6 @@
 <a ref="#heading--how-to-commission-a-machine"><h2 id="heading--how-to-commission-a-machine">How to commission a machine</h2></a>
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 To commission a machine:
 
 1. Go to the "Machines" page.
@@ -19,7 +19,7 @@ These options include:
 
 -   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/about-networking/nnnn) for more information.
 
--   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/storage/nnnn) for more details.
+-   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine.
 
 -   **Update firmware**: Runs scripts tagged with `update_firmware`.
 
@@ -27,7 +27,7 @@ These options include:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a>
 
-4. Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/how-to-test-machines/nnnn) for more information on hardware testing scripts.
+4. Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. 
 
 5. Finalise the directive by hitting "Commission machine".
 
@@ -36,7 +36,7 @@ While commissioning, the machine status will change to reflect this state (Commi
 Once commissioned, a machine's status will change to Ready, and an extra tab for the machine called "Commissioning" will become available. This tab contains the results of the scripts executed during the commissioning process.
 rad-end
 
-rad-begin   /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 To commission a machine that's in the "Ready" state, via the CLI, use the following command:
 
 ```nohighlight
@@ -352,7 +352,7 @@ Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/28
 This section explains:
 
 * [How to download built-in scripts](#heading--how-to-download-built-in-scripts)
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 * [How to upload hardware testing scripts](#heading--how-to-upload-hardware-testing-scripts)
 * [How to list all uploaded hardware testing scripts](#heading--how-to-list-all-uploaded-hardware-testing-scripts)
 * [How to update hardware testing scripts](#heading--how-to-update-hardware-testing-scripts)
@@ -362,7 +362,7 @@ rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
 * [How to filter script results](#heading--how-to-filter-script-results)
 * [How to suppress failed results](#heading--how-to-suppress-failed-results)
 rad-end
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 * [How to upload scripts](#heading--how-to-upload-scripts)
 * [How to debug script failures](#heading--how-to-debug-script-failures)
 rad-end
@@ -382,7 +382,7 @@ maas $PROFILE node-script download $SCRIPT_NAME
 
 The source code to all built-in scripts is available on [launchpad](https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts).
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 <a href="#heading--how-to-upload-hardware-testing-scripts"><h3 id="heading--how-to-upload-hardware-testing-scripts">How to upload hardware testing scripts</h3></a>
 
 To upload a hardware testing script to MAAS, enter the following:
@@ -534,12 +534,12 @@ maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
 
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 <a href="#heading--how-to-upload-scripts"><h3 id="heading--how-to-upload-scripts">How to upload scripts</h3></a>
 
 Scripts can be uploaded to MAAS using the web UI. Select the 'User scripts' tab of the 'Settings' page - the 'Commissioning scripts' section is near the top. Within the Commissioning scripts section, click the Upload script button followed by 'Choose file' to open a requester, locate the script, and select Upload to upload it to MAAS.
 
-A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](/t/how-to-test-machines/nnnn) from a machine's 'Take action' menu.
+A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting Test hardware from a machine's 'Take action' menu.
 
 <a href="https://assets.ubuntu.com/v1/50e08fdf-nodes-hw-scripts__2.4_select.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/50e08fdf-nodes-hw-scripts__2.4_select.png"></a>
 

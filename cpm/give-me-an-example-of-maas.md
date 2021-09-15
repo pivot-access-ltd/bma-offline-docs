@@ -1,10 +1,10 @@
 An evolving example may be useful to introduce you to MAAS, and it doesn't have to be comprehensive --  just coherent and plausible.  This example will continue to expand and update over time.
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui/deb/3.1/ui 
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img  src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a> 
 rad-end
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli 
 ```
 FQDN               POWER  STATUS     OWNER  TAGS     POOL       NOTE     ZONE
 ----               -----  ------     -----  ----     ----       ----     ----
@@ -45,7 +45,7 @@ You'll need to start with a little network thinking (and design).  Talking throu
 <tr><td>Food service</td><td>Instrumentation</td><td>Information technology</td></tr>
 </table>
 
-You can handle this lowest level with individual [machines](/t/machines/nnnn).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
+You can handle this lowest level with individual [machines](/t/about-machines/nnnn).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
 
 <details>
 <summary>
@@ -59,7 +59,7 @@ Open the Virtual Machine Manager application.  You'll see a screen that looks so
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/f66940a21313a27734bcaef6c539d36a720a6834.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f66940a21313a27734bcaef6c539d36a720a6834.jpeg"></a> 
 
-rad-end New Virtual Machine, which brings you to a corresponding dialog:
+Click on "New Virtual Machine," which brings you to a corresponding dialog:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/0702d9f2ab4c3659d13be553449093548a9e2f10.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0702d9f2ab4c3659d13be553449093548a9e2f10.jpeg"></a> 
 
@@ -131,7 +131,7 @@ No need to create a lot of VMs for this example (unless you just want to do so).
 
 Once you've created the necessary VMs, you'll want to [manually add machines](/t/how-to-manage-machines/nnnn#heading--how-to-add-a-machine-manually) to MAAS that correspond to your VMs.
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 ```
 FQDN               POWER  STATUS  OWNER  TAGS     POOL     NOTE  ZONE
 ----               -----  ------  -----  ----     ----     ----  ----
@@ -162,14 +162,14 @@ FQDN               POWER  STATUS  OWNER  TAGS     POOL     NOTE  ZONE
 ```
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg"></a> 
 rad-end
 
 <details>
 <summary><em>Try it!</em></summary>
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 Creating a machine from a VM requires six pieces of information:
 
 1. the machine architecture (e.g., amd64)
@@ -204,7 +204,7 @@ As you add machines, they automatically commission.
 
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 Creating a machine from a VM requires about a dozen pieces of information, most of which you can gather from the VM itself:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/bc6c18c0fd31367bd4a9909fb7d954dc06f15c40.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bc6c18c0fd31367bd4a9909fb7d954dc06f15c40.jpeg"></a> 
@@ -231,9 +231,9 @@ rad-end
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
-Assigning machines to specific functions is something you can do after you [commission](/t/how-to-commission-machines/nnnn) and [deploy](/t/how-to-deploy-machines/nnnn) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/tags-and-annotations/nnnn) to machines.  
+Assigning machines to specific functions is something you can do after you [commission](/t/how-to-deploy-machines/nnnn#heading--how-to-commission-a-machine) and [deploy](/t/how-to-deploy-machines/nnnn) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/about-tags/nnnn) to machines.  
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 ```
 FQDN               POWER  STATUS  OWNER  TAGS     POOL     NOTE  ZONE
 ----               -----  ------  -----  ----     ----     ----  ----
@@ -272,7 +272,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID"]
 </details>
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui/ /deb/3.1/ui 
 <a href="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg"></a> 
 
 <details>
@@ -325,12 +325,12 @@ As you look at the list of functions you've created, and talk more with the staf
 <tr><td>Instrumentation</td><td>Information technology</td><td></td></tr>
 </table>
 
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/nnnn) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
+You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/about-machines/nnnn#heading--about-resource-pools) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
 
 <details>
 <summary><em>Try it!</em></summary>
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli 
 Just like tags, you must first create a resource pool before assigning a machine to it.
 Here’s an example that demonstrates how to create a new resource pool named "myresource" in a single command; note that the description field is optional, but often very helpful:
 
@@ -345,7 +345,7 @@ maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
 ```
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 Notice at the top of the machine list, there is a tab labelled, "Resource pools:"
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/f7d4c52a176f53f29a0c1ac3190e7abb563dc993.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f7d4c52a176f53f29a0c1ac3190e7abb563dc993.jpeg"></a> 
@@ -375,7 +375,7 @@ rad-end
 
 Here's a snippet of the updated machine list, with all machines added to the appropriate resource pool:
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 ```
 FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
 ----               -----  ------  -----  ----     ----       ----  ----
@@ -390,7 +390,7 @@ FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
 ```
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/704b6d1603f6f90fca42891d98c3bb418458b94a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/704b6d1603f6f90fca42891d98c3bb418458b94a.jpeg"></a> 
 rad-end
 
@@ -400,11 +400,11 @@ Resource pools are mostly for your use, helping you to budget servers within a g
 
 Another optional identifier for machines is the "Note" field.  While it can be long, a portion of it shows up on the machine list, which makes it useful for adding special identifiers or groupings.  In this example, we've added a vague identifier which might help an IT admin remember server locations or access rights.
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/8724395dfe9fc4d3f4a10a05687c33c6a3dded07.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8724395dfe9fc4d3f4a10a05687c33c6a3dded07.jpeg"></a> 
 rad-end
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 ```
 FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE     ZONE
 ----               -----  ------  -----  ----     ----       ----     ----
@@ -422,7 +422,7 @@ rad-end
 <details>
 <summary><em>Try it!</em></summary>
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 To add a note to a machine, you'll first need to determine its system ID (see above).  Once you have that, you can add or change a note like this:
 
 ```
@@ -432,7 +432,7 @@ maas $PROFILE machine update $SYSTEM_ID description="note"
 It helps very much to keep your notes short, since only a few characters are visible on the machine list.
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 You can edit notes by clicking on a machine name in the machine list, switching to the "Configuration" tab, and selecting the "Edit" button.  These choices will bring you to a screen like this one:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a9d61f28a4ada7d97ff6f896d2f1e8e719ad680b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a9d61f28a4ada7d97ff6f896d2f1e8e719ad680b.jpeg"></a> 
@@ -469,7 +469,7 @@ Looking over your design, you notice that some of these resource pools must have
 
 Each of these higher-level groupings is ideal for a VLAN, so you create six of them, one for each division:
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 ```
 FABRIC    VLAN                   DHCP
 ------    ----                   ----
@@ -489,7 +489,7 @@ maas admin vlans read $FABRIC_ID | jq -r '(["FABRIC","VLAN","DHCP"] | (., map(le
 ```
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/7245ed378ce0b9000aaf6f15b16ea16dbde2fccf.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7245ed378ce0b9000aaf6f15b16ea16dbde2fccf.jpeg"></a> 
 rad-end
 
@@ -498,7 +498,7 @@ rad-end
 
 Adding a functional VLAN requires some additional (common) networking aspects, which we'll cover later.  In the meantime, though, here's the short version of adding and naming the VLAN itself.  
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 To create additional VLANs, choose the fabric where you want them to be added, and enter the following command, once for each new VLAN:
 
 ```
@@ -512,7 +512,7 @@ maas admin vlans create 0 name="Caregiver_Services" vid=100
 ```
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 From anywhere on the MAAS page, select "Subnets" from the top menu-bar, which brings you to this screen:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/befd3a3eb5987d412477d0a076d16a50e81dae30.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/befd3a3eb5987d412477d0a076d16a50e81dae30.jpeg"></a> 
@@ -551,7 +551,7 @@ Considering your network design so far, you notice that some of the VLANs need t
 
 You want to incorporate these highest-level groupings into your network, but how?  MAAS provides the answer with fabrics.  A fabric is a set of interconnected VLANs that can communicate, so you simply create three fabrics, each covering one of these top-level categories.
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 <details>
 <summary><em>Try it!</em></summary>
 
@@ -580,7 +580,7 @@ Finally, click "Save summary" to move this VLAN to the desired fabric.  The end 
 </details>
 rad-end
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 ```
 FABRIC              VLAN                   DHCP  
 ------              ----                   ----  
@@ -593,7 +593,7 @@ Patient_Management  Caregiver_Services     False
 ```
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/23c214cd6836dd783347f050f2cdba04da7bcaa1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/23c214cd6836dd783347f050f2cdba04da7bcaa1.jpeg"></a>
 rad-end
 

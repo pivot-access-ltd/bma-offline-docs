@@ -5,7 +5,7 @@ In this article, you will learn:
 * [About the machine life-cycle](#heading--about-the-machine-life-cycle)
 * [About testing hardware](#heading--about-testing-hardware)
 * [About adding machines](#heading--about-adding-machines)
-rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui
+rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui /snap/3.1/ui /deb/3.1/ui
 * [About the machine list](#heading--about-the-machine-list)
 * [About the machine summary](#heading--about-the-machine-summary)
 rad-end
@@ -136,7 +136,7 @@ When using these nodes, you can specify a node index for interfaces and physical
 
 MAAS runs scripts during enlistment, commissioning and testing to collect data about nodes. Both enlistment and commissioning run all builtin commissioning scripts, though enlistment runs only built-ins. Commissioning also runs any user-uploaded commissioning scripts by default, unless the user manually provides a list of scripts to run. MAAS uses these commissioning scripts to configure hardware and perform other tasks during commissioning, such as updating the firmware. Similarly, MAAS employs hardware testing scripts to evaluate system hardware and report its status.
 
-Scripts can be selected to run from web UI during commissioning, by [testing hardware](/t/how-to-test-machines/nnnn) or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+Scripts can be selected to run from web UI during commissioning, by testing hardware,  or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
 
 Add machine -&gt; Enlistment (runs built-in commissioning scripts MAAS) -&gt; New -&gt; Commission (runs built-in and custom commissioning scripts) -&gt; Ready -&gt; Deploy
 
@@ -166,7 +166,7 @@ rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli
 - **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need. This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
 rad-end
 
-rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli
+rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
 - **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, details about attached USB and PCI devices, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
 rad-end
 
@@ -222,8 +222,8 @@ In MAAS 3.0, it is possible to diable individual boot methods.  This must be don
 
 To allow different boot methods to be in different states on separate physical networks using the same VLAN ID configuration is done on the subnet in the UI or API. When using the API boot methods to be disabled may be specified using the MAAS internal name or [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture) in octet or hex form. 
 
-rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli
-For MAAS 3.0, the following boot method changes have been implemented:
+rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
+For MAAS 3.0 and above, the following boot method changes have been implemented:
 
 - UEFI AMD64 HTTP(00:10) has been reenabled.
 - UEFI ARM64 HTTP(00:13) has been enabled.
@@ -427,7 +427,7 @@ Additional steps will vary widely by machine type and architecture.
 
 Regardless of how MAAS adds a machine, there are no special requirements for the underlying machine itself, other than being able to netboot. In particular, there is no need to install an operating system on it.
 
-rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui
+rad-begin /snap/3.1/ui /snap/3.0/ui /snap/2.9/ui /deb/3.1/ui /deb/3.0/ui /deb/2.9/ui
 <a href="#heading--about-the-machine-list"><h2 id="heading--about-the-machine-list">About the machine list</h2></a>
 
 In the illustration below, you see the machine list for a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:
@@ -521,7 +521,7 @@ And you can watch the results under the "Tests" option in the Machine menu:
 
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option. 
 
-rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli
+rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
 
 <a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">Handling attached USB and PCI devices</h3></a>
 

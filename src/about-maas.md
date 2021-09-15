@@ -25,11 +25,11 @@ PXE stands for "Preboot Execution Environment," usually pronounced "pixie."  The
 
 MAAS can manage a large number of physical machines by merging them into user-defined resource pools. MAAS automatically provisions participating machines and makes them available for use. You can return unused machines to the assigned pool at any time.
 
-rad-begin /deb/3.0/ui /deb/3.0/cli /snap/3.0/ui /snap/3.0/cli
+rad-begin /deb/3.0/ui /deb/3.0/cli /snap/3.0/ui /snap/3.0/cli /deb/3.1/ui /deb/3.1/cli /snap/3.1/ui /snap/3.1/cli
 MAAS also discovers all of the USB and PCI devices attached to your physical or virtual machines, and allows you to delete them from the machine's visible configuration, prior to deployment, if you so desire.
 rad-end
 
-rad-begin   /deb/2.9/ui /deb/3.0/ui   /snap/2.9/ui /snap/3.0/ui 
+rad-begin   /deb/2.9/ui /deb/3.0/ui /deb/3.1/ui  /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui
 MAAS integrates all the tools you need into a smooth system-management experience. It includes the following thirteen features:
 
 1. web UI (optimised for mobile devices)
@@ -52,7 +52,7 @@ These tools can be controlled from a responsive web UI.  You can easily (re)conf
 
 rad-end
 
-rad-begin   /deb/2.9/cli /deb/3.0/cli   /snap/2.9/cli /snap/3.0/cli
+rad-begin   /deb/2.9/cli /deb/3.0/cli /deb/3.1/cli  /snap/2.9/cli /snap/3.0/cli /snap/3.1/cli
 MAAS integrates all the tools you need into a smooth system-management experience. It includes the following eleven features:
 
 1. Ubuntu, CentOS, Windows, and RHEL installation support
@@ -82,13 +82,13 @@ Please note that Windows and RHEL images require [Ubuntu Advantage](https://www.
 
 MAAS relies on two key components: the *region controller* and the *rack controller*. The region controller handles operator requests; the rack controller provides high-bandwidth services to multiple racks. In essence, rack controllers manage racks, while the region controller manages the data centre. We generally recommended installing both controllers on the same system.  The default MAAS install delivers this co-located configuration automatically. This all-in-one solution also provides DHCP. 
 
-See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability/nnnn), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/managing-dhcp/nnnn) will cause problems.
+See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/high-availability/nnnn), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/how-to-manage-dhcp/nnnn) will cause problems.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/3ad2b128fbc034e9f575f21c0415a6e6c55baea3.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3ad2b128fbc034e9f575f21c0415a6e6c55baea3.jpeg"></a>
 
 <a href="#heading--how-maas-works"><h2 id="heading--how-maas-works">How MAAS works</h2></a>
 
-When you [add a new machine](/t/how-to-manage-machines/nnnn#heading--how-to-add-a-machine-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/machines/nnnn#heading--about-enlistment), MAAS [commissions](/t/machines/nnnn#heading--about-commissioning-machines) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
+When you [add a new machine](/t/how-to-manage-machines/nnnn#heading--how-to-add-a-machine-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/about-machines/nnnn#heading--about-enlistment), MAAS [commissions](/t/about-machines/nnnn#heading--about-commissioning-machines) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
 
 <details><summary>Tell me, quickly, about enlistment and commissioning.</summary>
 
@@ -100,11 +100,11 @@ Commissioning means that MAAS has successfully booted the machine, scanned and r
 
 </details>
 
-rad-begin   /deb/2.9/ui   /snap/2.9/ui /deb/3.0/ui /snap/3.0/ui
+rad-begin   /deb/2.9/ui /snap/2.9/ui /deb/3.0/ui /snap/3.0/ui /deb/3.1/ui /snap/3.1/ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/605019de31078dd70df72ff199d812de13a30d00.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/605019de31078dd70df72ff199d812de13a30d00.jpeg"></a>
 rad-end
 
-rad-begin   /deb/2.9/cli   /snap/2.9/cli /deb/3.0/cli /snap/3.0/cli
+rad-begin   /deb/2.9/cli /snap/2.9/cli /deb/3.0/cli /snap/3.0/cli /deb/3.1/cli /snap/3.1/cli
 <a href="https://discourse.maas.io/uploads/default/original/1X/6aec9b567022216d80596411e689a14e1f594674.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/6aec9b567022216d80596411e689a14e1f594674.jpeg"></a>
 rad-end
 
@@ -116,11 +116,11 @@ MAAS controls machines through IPMI (or another BMC). It can also manage machine
 
 MAAS users allocate ("acquire") machines for use when needed. The web UI also allows you to acquire machines manually, such as when you are reserving specific hardware for certain users. You can remotely access and customise the installed operating system via SSH.
 
-rad-begin   /deb/2.9/ui   /snap/2.9/ui /deb/3.0/ui /snap/3.0/ui
+rad-begin   /deb/2.9/ui   /snap/2.9/ui /deb/3.0/ui /snap/3.0/ui /deb/3.1/ui /snap/3.1/ui
 <a href="https://discourse.maas.io/uploads/default/original/1X/8101d641c55d912cd66646bd99bbee9bb8f196ab.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8101d641c55d912cd66646bd99bbee9bb8f196ab.jpeg"></a>
 rad-end
 
-rad-begin   /deb/2.9/cli   /snap/2.9/cli /deb/3.0/cli /snap/3.0/cli
+rad-begin   /deb/2.9/cli   /snap/2.9/cli /deb/3.0/cli /snap/3.0/cli /deb/3.1/cli /snap/3.1/cli
 <a href="https://discourse.maas.io/uploads/default/original/1X/ac3b251a916bb18a7e7e463d7fa3c57ef32628da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/ac3b251a916bb18a7e7e463d7fa3c57ef32628da.jpeg"></a>
 
 When acquiring machines from the API/CLI, you can specify requirements ("constraints"). Common constraints are memory, CPU cores, connected networks, and assigned physical zone.

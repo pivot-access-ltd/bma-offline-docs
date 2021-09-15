@@ -11,7 +11,7 @@ A newly installed MAAS comes with a default zone which initially contains all no
 5. [How do I assign a machine to an availability zone?](#heading--assign-a-node-to-a-zone)
 6. [How do I allocate a machine in a particular zone?](#heading--allocate-a-node-in-a-zone)
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui 
 
 <a href="#heading--list-zones"><h2 id="heading--list-zones">List availabilty zones</h2></a>
 
@@ -52,7 +52,7 @@ After selecting a zone hit the 'Set zone...' button to apply the change.
 You can also edit a machine's 'Configuration' page to change its zone.
 rad-end
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /snap/3.1/ui 
 
 <a href="#heading--list-zones"><h2 id="heading--list-zones">List availability zones</h2></a>
 

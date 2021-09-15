@@ -1,6 +1,6 @@
 If you have already created a VM host, you will want to create and delete virtual machines (VMs); this article will explain:
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 - [How to add a VM](#heading--add-vm-from-ui)
 - [How to delete a VM](#heading--delete-a-machine)
 
@@ -25,7 +25,7 @@ To delete a VM, delete it as you would any other MAAS machine. Select the desire
 <a href="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg"></a> 
 rad-end
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli 
 - [How to add a VM](#heading--adding-a-vm-from-the-cli)
 - [How to set resources while adding a VM](#heading--set-resources)
 - [How to set the architecture while adding a VM](#heading--architecture)

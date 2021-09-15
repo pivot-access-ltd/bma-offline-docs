@@ -216,11 +216,11 @@ As mentioned above, there are a large number of Web server exploits, and this do
 
 <a href="#heading--maas-log-file-subsection"><h3 id="heading--maas-log-file-subsection">MAAS log files</h3></a>
 
-rad-begin     /deb/2.9/ui /deb/2.9/cli /deb/3.0/ui /deb/3.0/cli 
+rad-begin     /deb/2.9/ui /deb/2.9/cli /deb/3.0/ui /deb/3.0/cli /deb/3.1/cli /deb/3.1/ui
 Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/log/maas/regiond.log`.  For reference, a valid login request looks like this entry: 
 rad-end
 
-rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli
+rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli /snap/3.1/ui /snap/3.1/cli
 Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/snap/maas/common/log/regiond.log`.  For reference, a valid login request looks like this entry: 
 rad-end
 
@@ -275,7 +275,7 @@ You should pick good passwords and store them securely (e.g. in a KeePassX passw
 
 MAAS configuration files should be set to have permission `640`: readable by logins belonging to the `maas` group and writeable only by the `root` user. Currently, the `regiond.conf` file contains the login credentials for the PostgreSQL database used by MAAS to keep track of all machines, networks, and configuration.
 
-rad-begin     /deb/2.9/ui /deb/2.9/cli /deb/3.0/ui /deb/3.0/cli
+rad-begin     /deb/2.9/ui /deb/2.9/cli /deb/3.0/ui /deb/3.0/cli /deb/3.1/cli /deb/3.1/ui
 ``` bash
 chmod 640 /etc/maas/rackd.conf
 chmod 640 /etc/maas/regiond.conf
@@ -289,7 +289,7 @@ After:
 ```
 rad-end
 
-rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli
+rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli /snap/3.1/cli /snap/3.1/ui
 ``` bash
 chmod 640 /var/snap/maas/current/rackd.conf
 chmod 640 /var/snap/maas/current/regiond.conf
@@ -304,7 +304,7 @@ After:
 <a href="#heading--snaps-and-security"><h3 id="heading--snaps-and-security">About snap security</h3></a>
 
 Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-snap-snap-security-overview).
-rad-end<
+rad-end
 
 <a href="#heading--shared-secrets"><h3 id="heading--shared-secrets">Shared secrets</h2></a>
 

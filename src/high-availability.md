@@ -29,15 +29,15 @@ HA for BMC control (node power cycling) is provided out-of-the-box, once a secon
 
 DHCP HA affects the way MAAS manages node, including enlistment, commissioning and deployment. It enables primary and secondary DHCP instances to serve the same VLAN. This VLAN replicates all lease information is between rack controllers. MAAS-managed DHCP is a requirement for DHCP HA.
 
-If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/managing-dhcp/nnnn#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/how-to-manage-dhcp/nnnn#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 Access the appropriate VLAN (via the 'Subnets' page) and choose action 'Reconfigure DHCP'. There, you will see the second rack controller in the 'Secondary controller' field. All you should have to do is press the 'Reconfigure DHCP' button:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg"></a>
 rad-end
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 To reconfigure DHCP after adding a new rack controller, use the following sequence of commands:
 
 ```
@@ -55,11 +55,11 @@ rad-end
 
 <a href="#heading--multiple-region-endpoints"><h3 id="heading--multiple-region-endpoints">Configure multiple region endpoints</h3></a>
 
-rad-begin     /deb/2.9/ui /deb/2.9/cli /deb/3.0/cli /deb/3.0/ui
+rad-begin     /deb/2.9/ui /deb/2.9/cli /deb/3.0/cli /deb/3.0/ui /deb/3.1/ui /deb/3.1/cli
 MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to `/etc/maas/rackd.conf`.  For example:
 rad-end
 
-rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/cli /snap/3.0/ui
+rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/cli /snap/3.0/ui /snap/3.1/ui /snap/3.1/cli
 MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to `/var/snap/maas/current/rackd.conf`.  For example:
 rad-end
     .
@@ -87,13 +87,11 @@ Load balancing is optional, but is highly recommended.
 
 MAAS stores all state information in the PostgreSQL database. It is therefore recommended to run it in HA mode. Configuring HA for PostgreSQL is external to MAAS. You will, therefore, need to study the [PostgreSQL documentation](https://www.postgresql.org/docs/9.5/static/high-availability.html) and implement the variant of HA that makes you feel most comfortable.
 
-A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/nnnn) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
-
 Each region controller uses up to 40 connections to PostgreSQL in high load situations. Running two region controllers requires no modifications to the `max_connections` in `postgresql.conf`. More than two region controllers require that `max_connections` be adjusted to add 40 more connections per added region controller.
 
 <a href="#heading--secondary-api-servers"><h3 id="heading--secondary-api-servers">Enable highly-available API services</h3></a>
 
-rad-begin /snap/2.9/cli /snap/2.9/ui /snap/3.0/cli /snap/3.0/ui
+rad-begin /snap/2.9/cli /snap/2.9/ui /snap/3.0/cli /snap/3.0/ui /snap/3.1/cli /snap/3.1/ui 
 Setting up high-availability using snaps is relatively easy:
 
 1.  Set up PostgreSQL for high-availability as [explained above](/t/high-availability/nnnn#heading--postgresql-ha). PostgreSQL should run outside of the snap.
@@ -106,7 +104,7 @@ Setting up high-availability using snaps is relatively easy:
 4.   `--database-pass DATABASE_PASS`
 rad-end
 
-rad-begin /deb/2.9/cli /deb/2.9/ui /deb/3.0/cli /deb/3.0/ui
+rad-begin /deb/2.9/cli /deb/2.9/ui /deb/3.0/cli /deb/3.0/ui /deb/3.1/cli /deb/3.1/ui
 Please see [Region controllers](/t/region-controllers/nnnn) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
 rad-end
 
@@ -159,11 +157,11 @@ The configuration of region controller HA is now complete.
 
 <a href="#heading--move-rack-controller"><h2 id="heading--move-rack-controller">Move a rack controller from one MAAS instance to another</h2></a>
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller.  In the "Controllers" tab in the UI, select the rack controller you with to delete, choose "Take action" and select "Delete."  You will be asked to confirm with a red button, entitled "Delete 1 controller."
 rad-end
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller, with the command:
 
 ```
@@ -181,7 +179,7 @@ rad-end
 
 Next, you must register a new rack controller, which is always done from the command line.
 
-rad-begin     /deb/2.9/ui /deb/2.9/cli /deb/3.0/ui /deb/3.0/cli 
+rad-begin     /deb/2.9/ui /deb/2.9/cli /deb/3.0/ui /deb/3.0/cli /deb/3.1/cli /deb/3.1/cli
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
 ```
@@ -191,7 +189,7 @@ sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAA
 where the secret is found in `/var/lib/maas/secret`.
 rad-end
 
-rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli
+rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli /snap/3.1/cli /snap/3.1/ui
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
 ```
@@ -201,7 +199,7 @@ sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MA
 where the secret is found in `/var/snap/maas/common/maas/secret`.
 rad-end
 
-rad-begin   /deb/2.9/ui   /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /deb/2.9/ui   /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 Note that in the UI, if you go to the "Controllers" tab and press the button entitled, "Add rack controller," at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.
 rad-end
 

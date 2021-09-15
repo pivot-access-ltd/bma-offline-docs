@@ -2,7 +2,7 @@
 
 MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.
 
-<a href="#heading--maas-init-modes"><h3 id="heading--maas-init-modes">MAAS initialisation modes</h3></a>
+<a href="#heading--maas-init-modes"><h3 id="heading--maas-init-modes">MAAS initialisation modes reference</h3></a>
 
 MAAS supports the following modes, which dictate what services will run on the local system:
 
@@ -13,18 +13,18 @@ MAAS supports the following modes, which dictate what services will run on the l
 | `region+rack` | X      | X    |          | Region API server and rack controller |
 | `none`        |        |      |          | Reinitialises MAAS and stops services |
 
-<a href="#heading--ssh-keys"><h3 id="heading--ssh-keys">SSH keys</h3></a>
+<a href="#heading--ssh-keys"><h3 id="heading--ssh-keys">About SSH keys</h3></a>
 
 MAAS uses your Launchpad or Github SSH keys to access machines that have been deployed.  Normally, you enter this key during the initialisation of MAAS.  If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.
 
-<a href="#heading--maas-url"><h3 id="heading--maas-url">MAAS URL</h3></a>
+<a href="#heading--maas-url"><h3 id="heading--maas-url">About the MAAS URL</h3></a>
 
 All run modes (except `none`) prompt for a MAAS URL, interpreted differently depending on the mode:
 
 -   `region`: Used to create a new region controller.
 -   `rack`: Used to locate the region controller.
 
-<a href="#heading--shared-secret"><h3 id="heading--shared-secret">Shared secret</h3></a>
+<a href="#heading--shared-secret"><h3 id="heading--shared-secret">About the shared secret</h3></a>
 
 The 'rack' and 'region+rack' modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.
 
@@ -673,7 +673,7 @@ Configuring MAAS consists of four broad steps:
 
 This section will cover those four operations
 
-<a href="#heading--setting-dns"><h4 id="heading--setting-dns">Setting DNS</h4></a>
+<a href="#heading--setting-dns"><h4 id="heading--setting-dns">How to set upstream DNS</h4></a>
 
 After logging in for the first time, you will need to set a number of system-wide configuration options.  First up, you should configure DNS.  You can check out the help for DNS settings, known in the CLI as a "DNS forwarder":
 
@@ -683,7 +683,7 @@ maas $PROFILE maas set-config name=upstream_dns value="8.8.8.8"
 
 Here, we've set the DNS forwarder to "8.8.8.8" (Google), which is a reliable value.
 
-<a href="#heading--setting-ssh"><h4 id="heading--setting-ssh">Setting SSH for the admin user</h4></a>
+<a href="#heading--setting-ssh"><h4 id="heading--setting-ssh">How to set up SSH for the admin user</h4></a>
 
 To add a public SSH key to a MAAS user account, type the following command:
 
@@ -691,7 +691,7 @@ To add a public SSH key to a MAAS user account, type the following command:
 maas $PROFILE sshkeys create "key=$SSH_KEY"
 ```
 
-<a href="#heading--importing-images"><h4 id="heading--importing-images">Importing images</h4></a>
+<a href="#heading--importing-images"><h4 id="heading--importing-images">How to import images</h4></a>
 
 Before going any further, it's worthwhile to start the image import, as it can sometimes take a few minutes.  You can see what images you already have downloaded with this command:
 
@@ -756,7 +756,7 @@ Machine-readable output follows:
 Import of boot resources started
 ```
 
-<a href="#heading--enabling-dhcp"><h4 id="heading--enabling-dhcp">Enabling DHCP</h4></a>
+<a href="#heading--enabling-dhcp"><h4 id="heading--enabling-dhcp">How to enable DHCP</h4></a>
 
 Once your image has been imported, you'll want to get DHCP working, which means finding the untagged VLAN. In truth, it shouldn’t be too hard, because at this point, there still should only be one.
 
@@ -924,11 +924,11 @@ With this complete, you’ll see that MAAS has been successfully set up. Click �
 Note that you may have to wait a few moments for your selected images to sync locally.
 [/note]
 
-<a href="#heading--enabling-dhcp"><h3 id="heading--enabling-dhcp">Enabling DHCP</h3></a>
+<a href="#heading--enabling-dhcp"><h3 id="heading--enabling-dhcp">How to enable DHCP</h3></a>
 
 Before moving forward with MAAS, you'll want to enable DHCP.  You can do this very easily from the web UI by selecting "Subnets" from the top menu, choosing the VLAN on which you want to enable DHCP, and select the button marked, "Enable DHCP."
 
-<a href="#heading--networking"><h3 id="heading--networking">Networking</h3></a>
+<a href="#heading--networking"><h3 id="heading--networking">About network discovery</h3></a>
 
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/about-networking/nnnn#heading--about-network-discovery) process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
 rad-end
