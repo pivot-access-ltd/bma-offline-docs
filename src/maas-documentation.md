@@ -94,7 +94,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [Tips, tricks, and traps](/t/tips-tricks-and-traps-snap-3-0-ui/4130)
 - [Upgrade MAAS](/t/upgrading-maas/779)
 
-### [Release notes](/t/whats-new-in-maas/4291)
+### [Release notes](/t/whats-new-in-maas/4182)
 
 ### [Improve the doc](/t/writing-guide-snap-3-0-ui/4186)
 

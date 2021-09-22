@@ -329,7 +329,7 @@ A good understanding of LXD projects is essential for those using LXD VM hosts, 
 Before you try to manipulate projects, it's useful to understand how to list them, so that you can check your results as you go.  If you've successfully [installed and initialised lxd](https://linuxcontainers.org/lxd/getting-started-cli/), you should be able to list projects.  A basic project list can be obtained with the following command:
 
 ```nohighlight
-lxd project list
+lxc project list
 ```
 
 You should get a listing something like this:
