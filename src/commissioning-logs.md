@@ -78,7 +78,7 @@ When you click on the "Commissioning" tab under a given machine, you will see a 
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg"></a> 
 
-Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/nnnnb#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
+Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/nnnn#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
 rad-end
 
 <a href="#heading--maas-support-info"><h2 id="heading--maas-support-info">maas-support-info</h2></a>
