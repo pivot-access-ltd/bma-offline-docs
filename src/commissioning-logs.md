@@ -3,27 +3,27 @@ The command line allows you to retrieve the verbatim logs of commissioning scrip
 
 If you only want to see the latest or currently-running result, you can use `current-commissioning`, `current-testing`, or `current-installation` instead of an id:
 
-``` bash
+```nohighlight
 maas $PROFILE node-script-result read $SYSTEM_ID $RESULTS
 ```
 
 You can also limit which results are returned by type (commissioning, testing, or installation), script name, or script run:
 
-``` bash
+```nohighlight
 maas $PROFILE node-script-results read \
  $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS
 ```
 
 You can also suppress failed results, which is useful if you want to ignore a known failure:
 
-``` bash
+```nohighlight
 maas $PROFILE node-script-results update \
  $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS suppressed=$SUPPRESSED
 ```
 
 where `$SUPPRESSED` is either `True` or `False`. The JSON formatted output to the above command will include 'results' dictionary with an entry for `suppressed`:
 
-``` json
+```nohighlight
 "results": [
     {
         "id": 21,
@@ -61,7 +61,7 @@ where `$SUPPRESSED` is either `True` or `False`. The JSON formatted output to th
 
 Finally, results can be downloaded, either to stdout, stderr, as combined output or as a tar.xz:
 
-``` bash
+```nohighlight
 maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
  filetype=tar.xz > $LOCAL_FILENAME
 ```
@@ -78,7 +78,7 @@ When you click on the "Commissioning" tab under a given machine, you will see a 
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg"></a> 
 
-Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/nnnn#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
+Each of the items in the "NAME" column is the name of a [commissioning script](/t/how-to-deploy-machines/nnnn#heading--how-to-commission-a-machine).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
 rad-end
 
 <a href="#heading--maas-support-info"><h2 id="heading--maas-support-info">maas-support-info</h2></a>
@@ -89,7 +89,7 @@ This script runs in parallel with other scripts to speed commissioning. Typical 
 
 <details><summary>Typical script output</summary>
 
-````
+```nohighlight
 -----BEGIN KERNEL INFO-----
 Linux 52-54-00-0b-6d-8c 4.15.0-91-generic #92-Ubuntu SMP Fri Feb 28 11:09:48 UTC 2020 86_64 x86_64 x86_64 GNU/Linux
 -----END KERNEL INFO-----
@@ -280,7 +280,7 @@ processor-manufacturer=QEMU
 processor-version=pc-i440fx-eoan
 processor-frequency=2000 MHz
 -----END DMI KEYPAIRS-----
-````
+```
 </details>
 
 Here's a quick breakdown of what you see in the script output:
@@ -316,7 +316,7 @@ Here's a quick breakdown of what you see in the script output:
 This script pulls system BIOS and vendor info, and generates user-defined tags for later use.  `maas-lshw` runs in parallel with other scripts to speed up the commissioning process. Typical script output from a successful run looks something like the foldout below.
 
 <details><summary>Typical script output</summary>
-````
+```
 <?xml version="1.0" standalone="yes" ?>
 <list>
 <node id="52-54-00-0b-6d-8c" claimed="true" class="system" handle="DMI:0100">
@@ -935,7 +935,7 @@ This script pulls system BIOS and vendor info, and generates user-defined tags f
   </node>
 </node>
 </list>
-````
+```
 </details>
 
 This output is roughly equivalent to the output of `lshw -xml` on the machine in question.  There are many references to decode this information, so for now, here is a short glossary of most the terms (essentially, the tags) that typically appear in a listing like this:
@@ -984,7 +984,7 @@ This script figures out what hardware modules are loaded, providing a way to aut
 
 <details><summary>Typical script output</summary>
 
-````
+```nohighlight
 acpi:ACPI0010:PNP0A05:
 acpi:LNXCPU:
 acpi:LNXPWRBN:
@@ -1035,7 +1035,7 @@ usb:v1D6Bp0002d0415dc09dsc00dp00ic09isc00ip00in00
 virtio:d00000001v00001AF4
 virtio:d00000003v00001AF4
 virtio:d00000005v00001AF4
-````
+```
 </details>
 
 The output is similar to the modaliases output shown in the `00-maas-00-support-info` output.  Here, we can decode some of the fields for a PCI entry, for example, set off my one or more consecutive letters:
@@ -1066,7 +1066,7 @@ This script gathers information for the Facebook wedge power type, and it runs i
 
 <details><summary>Typical script output</summary>
 
-````
+```nohighlight
 + sleep 5
 ++ ls /sys/class/net
 + for ifname in $(ls /sys/class/net)
@@ -1075,7 +1075,7 @@ This script gathers information for the Facebook wedge power type, and it runs i
 + for ifname in $(ls /sys/class/net)
 + '[' lo '!=' lo ']'
 + exit 0
-````
+```
 </details>
 
 You will note that this output does not actually contain any specific information, but rather the echoed commands of a script to gather the information.
@@ -1085,7 +1085,7 @@ You will note that this output does not actually contain any specific informatio
 This script lists what serial ports are available on the machine; it runs in parallel to speed up commissioning.  Log output from a normal, successful run is simply a list of serial ports, something like the foldout below.
 
 <details><summary>Typical script output</summary>
-````
+```
 /sys/devices/platform/serial8250/tty/ttyS1
 /sys/devices/platform/serial8250/tty/ttyS10
 /sys/devices/platform/serial8250/tty/ttyS11
@@ -1186,7 +1186,7 @@ This script lists what serial ports are available on the machine; it runs in par
 /sys/devices/virtual/tty/tty8
 /sys/devices/virtual/tty/tty9
 /sys/devices/virtual/tty/ttyprintk
-````
+```
 </details>
 
 The output of this script may be useful when you're trying to verify that a particular serial interface is active and available on your machine.
@@ -1196,7 +1196,7 @@ rad-begin   /snap/2.9/cli   /deb/2.9/cli   /snap/2.9/ui   /deb/2.9/ui
 
 This script is just used to get the IP address, which can then be associated with a VLAN/subnet.  As you can see from the sample (successful) output below, the results are simply the output of a command similar to `ip a`.
 
-````
+```nohighlight
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
@@ -1209,7 +1209,7 @@ This script is just used to get the IP address, which can then be associated wit
        valid_lft forever preferred_lft forever
     inet6 fe80::5054:ff:fe0b:6d8c/64 scope link 
        valid_lft forever preferred_lft forever
-````
+```
 rad-end
 
 <a href="#heading--50-maas-01-commissioning"><h2 id="heading--50-maas-01-commissioning">50-maas-01-commissioning</h2></a>
@@ -1220,7 +1220,7 @@ Output from a successful run is fairly robust, and looks something like the fold
 
 <details><summary>Typical script output</summary>
 
-````
+```nohighlight
 --2020-03-23 22:02:15--  http://192.168.122.2:5248/machine-resources/amd64
 Connecting to 192.168.122.2:5248... connected.
 HTTP request sent, awaiting response... 200 OK
@@ -1446,7 +1446,7 @@ n                "device_path": "pci-0000:00:01.1-ata-1",
         "total": 2
     }
 }
-````
+```
 </details>
 
 This output represents a catalogue of the resources available on this machine, in a format readable by both humans and machines.  You can use this to verify that your configuration is what you expected.
@@ -1459,8 +1459,8 @@ This script gathers LLDP network information to be presented on the logs page; t
 
 This script is used to update the boot devices; it double-checks that the right boot interface is selected.  Successful output is the specific command that boots the machine kernel, something like this:
 
-````
+```nohighlight
 nomodeset ro root=squash:http://192.168.122.2:5248/images/ubuntu/amd64/generic/bionic/daily/squashfs ip=::::52-54-00-0b-6d-8c:BOOTIF ip6=off overlayroot=tmpfs overlayroot_cfgdisk=disabled cc:{'datasource_list': ['MAAS']}end_cc cloud-config-url=http://192-168-122-0--24.maas-internal:5248/MAAS/metadata/latest/by-id/pb6833/?op=get_preseed apparmor=0 log_host=192.168.122.2 log_port=5247 BOOTIF=01-52:54:00:0b:6d:8c
-````
+```
 
 These are the kernel command line parameters, which control the invocation of various modules built into the kernel.  The function `modprobe` parses this kernel command line and collects the relevant module parameters when it loads a module.  Note that this command line could also be used to pull in loadable modules.
