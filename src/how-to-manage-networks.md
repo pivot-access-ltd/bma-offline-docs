@@ -4,21 +4,21 @@ This section will show you:
 
 * [How to enable network discovery](#heading--how-to-enable-network-discovery)
 * [How to toggle subnet management](#heading--how-to-toggle-subnet-management)
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
+rad-begin /deb/2.9/cli /deb/3.0/cli /deb/3.1/cli /snap/2.9/cli /snap/3.0/cli /snap/3.1/cli 
 * [How to determine fabric ID](#heading--how-to-determine-fabric-id)
 * [How to set a default gateway](#heading--how-to-set-a-default-gateway)
 * [How to set a DNS server](#heading--how-to-set-a-dns-server)
 * [How to list available subnets](#heading--cli-list-available-subnets)
 * [How to view subnet details](#heading--cli-how-to-view-subnet-details)
 rad-end
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /deb/3.0/ui /snap/3.0/ui
+rad-begin /deb/2.9/ui /deb/3.0/ui /deb/3.1/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui
 * [How to access the main networking view](#heading--how-to-access-ui-main-networking-view)
 * [How to display the subnet window](#heading--ui-how-to-display-the-subnet-window)
 * [How to view the subnet summary](#heading--ui-how-to-view-the-subnet-summary)
 * [How to view utilisation](#heading--ui-how-to-view-utilisation)
 rad-end
 * [How to manage static routes between subnets](#heading--how-to-manage-static-routes)
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /deb/3.0/ui /snap/3.0/ui
+rad-begin /deb/2.9/ui /deb/3.0/ui /deb/3.1/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui
 * [How to view reserved ranges](#heading--how-to-view-reserved-ranges)
 * [How to view used IP addresses](#heading--ui-how-to-view-used-ip-addresses)
 rad-end
@@ -27,7 +27,7 @@ rad-end
 
 <a href="#heading--how-to-enable-network-discovery"><h3 id="heading--how-to-enable-network-discovery">How to enable network discovery</h3></a>
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin /deb/2.9/cli /deb/3.0/cli /deb/3.1/cli /snap/2.9/cli /snap/3.0/cli /snap/3.1/cli 
 To enable network discovery, enter the following at the command line:
 
 ```nohighlight
@@ -45,7 +45,7 @@ OK
 Network discovery can be disabled or re-enabled at any time with this CLI command.
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin /deb/2.9/ui /deb/3.0/ui /deb/3.1/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui 
 Network discovery can be disabled or re-enabled using the switch on the Network discovery dashboard.
 
 <a href="https://assets.ubuntu.com/v1/1782e4aa-installconfig-networking__2.4_discovery.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/1782e4aa-installconfig-networking__2.4_discovery.png"></a>
@@ -54,7 +54,7 @@ rad-end
 
 <a href="#heading--how-to-toggle-subnet-management"><h3 id="heading--how-to-toggle-subnet-management">How to toggle subnet management</h3></a>
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin /deb/2.9/ui /deb/3.0/ui /deb/3.1/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui 
 To disable (or re-enable) subnet management, use the following procedure:
 
 1. Navigate to the 'Subnets' page and select the subnet.
@@ -70,7 +70,7 @@ The following screenshot illustrates this process.
 <a href="https://assets.ubuntu.com/v1/e5d80c8c-installconfig-network-subnet-management__2.6-management-toggle.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/e5d80c8c-installconfig-network-subnet-management__2.6-management-toggle.png"></a>
 rad-end
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin /deb/2.9/cli /deb/3.0/cli /deb/3.1/cli /snap/2.9/cli /snap/3.0/cli /snap/3.1/cli 
 To enable or disable subnet management:
 
 ``` nohighlight
@@ -86,7 +86,7 @@ maas $PROFILE subnet update 192.168.1.0/24 managed=false
 You can use the subnet's ID in place of the CIDR address.
 rad-end
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
+rad-begin /deb/2.9/cli /deb/3.0/cli /deb/3.1/cli /snap/2.9/cli /snap/3.0/cli /snap/3.1/cli
 <a href="#heading--how-to-determine-fabric-id"><h3 id="heading--how-to-determine-fabric-id">How to determine fabric ID</h3></a>
 
 To determine a fabric ID based on a subnet address:
@@ -145,7 +145,7 @@ fabric-3      untagged  true       2600:100d:b104:94c0::/64
 ```
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /deb/3.0/ui /snap/3.0/ui
+rad-begin /deb/2.9/ui /deb/3.0/ui /deb/3.1/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui
 <a href="#heading--how-to-access-ui-main-networking-view"><h3 id="heading--how-to-access-ui-main-networking-view">How to access the main networking view</h3></a>
 
 To access the main networking view visit the 'Subnets' page:
@@ -155,7 +155,7 @@ To access the main networking view visit the 'Subnets' page:
 This main view can also be filtered either by fabrics or by spaces through the use of the 'Group by' drop-down.
 rad-end
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /deb/3.0/cli /snap/3.0/cli
+rad-begin /deb/2.9/cli /deb/3.0/cli /deb/3.1/cli /snap/2.9/cli /snap/3.0/cli /snap/3.1/cli
 <a href="#heading--cli-how-to-view-subnet-details"><h3 id="heading--cli-how-to-view-subnet-details">How to view subnet details</h3></a>
 
 You can view the details of an individual subnet with the command:
@@ -193,7 +193,7 @@ maas admin subnets read \
 ```
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin /deb/2.9/ui /deb/3.0/ui /deb/3.1/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui 
 <a href="#heading--ui-how-to-display-the-subnet-window"><h3 id="heading--ui-how-to-display-the-subnet-window">How to display the subnet window</h3></a>
 
 Clicking a subnet (here `192.168.100.0/24`) will display its detail screen, which contains several sections, described below.
@@ -241,7 +241,7 @@ rad-end
 
 <a href="#heading--how-to-manage-static-routes"><h3 id="heading--how-to-manage-static-routes">How to manage static routes between subnets</h3></a>
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
+rad-begin /deb/2.9/cli /deb/3.0/cli /deb/3.1/cli /snap/2.9/cli /snap/3.0/cli /snap/3.1/cli
 To create a static route between two subnets, use the following command:
 
 ```nohighlight
@@ -250,7 +250,7 @@ gateway_ip=$GATEWAY_IP
 ```
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
+rad-begin /deb/2.9/ui /deb/3.0/ui /deb/3.1/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui
 To create a static route:
 
 1. Click the 'Add static route' button to reveal the edit pane. 
@@ -268,7 +268,7 @@ Routes can be edited and removed using the icons to the right of each entry.
 <a href="https://assets.ubuntu.com/v1/49f5e240-installconfig-networking__2.4_subnets-routes.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/49f5e240-installconfig-networking__2.4_subnets-routes.png"></a>
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /deb/3.0/ui /snap/3.0/ui
+rad-begin /deb/2.9/ui /deb/3.0/ui /deb/3.1/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui
 <a href="#heading--how-to-view-reserved-ranges"><h3 id="heading--how-to-view-reserved-ranges">How to view reserved ranges</h3></a>
 
 The reserved ranges section of the subnet screen looks like this:
@@ -279,7 +279,7 @@ More details and instructions regarding these ranges can be found in [IP ranges]
 rad-end
 
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
+rad-begin /deb/2.9/ui /deb/3.0/ui /deb/3.1/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui
 <a href="#heading--ui-how-to-view-used-ip-addresses"><h3 id="heading--ui-how-to-view-used-ip-addresses">How to view used IP addresses</h3></a>
 
 This section displays hosts (including controllers) associated with the used addresses along with related bits of host information.
@@ -295,7 +295,7 @@ At various times in your MAAS network, you may need to set up a bridge to connec
 It's essential to enforce usage of IP addresses to avoid domain name conflicts, should different controllers resolve the same domain name with different IP addresses. You should also avoid using 127.0.0.1 when running multiple controllers, as it would confuse MAAS.
 [/note]
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
+rad-begin /deb/2.9/ui /deb/3.0/ui /deb/3.1/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui
 To configure a bridge with the MAAS UI: 
 
 1. Select the machine you want to bridge. 
@@ -319,7 +319,7 @@ Then you can deploy machines using this bridge.
 **NOTE** that you can create an "Open vSwitch" bridge if desired, and MAAS will create the netplan model for you.
 rad-end 
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
+rad-begin /deb/2.9/cli /deb/3.0/cli /deb/3.1/cli /snap/2.9/cli /snap/3.0/cli /snap/3.1/cli
 You can use the MAAS CLI/API to configure a bridge via the following procedure:
 
 1. Select the interface on which you wish to configure the bridge. This example uses the boot interface, since the boot interface must be connected to a MAAS controlled network -- but any interface is allowed:

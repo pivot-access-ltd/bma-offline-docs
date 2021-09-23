@@ -3,7 +3,7 @@ This article explains:
 - [How to create, delete, and configure machines](#heading--how-to-create-delete-and-configure-machines)
 - [How to examine machines and machine details](#heading--how-to-examine-machines-and-machine-details)
 - [How to use resource pools](#heading--how-to-use-resource-pools)
-rad-begin /snap/3.0/cli /snap/2.9/cli /deb/3.0/cli /deb/2.9/cli
+rad-begin /snap/3.0/cli /snap/2.9/cli /deb/3.0/cli /deb/2.9/cli /snap/3.1/cli /deb/3.1/cli
 - [How to use annotations](#heading--how-to-use-annotations)
 rad-end
 - [How to use machine storage](#heading--how-to-use-machine-storage)
@@ -19,16 +19,16 @@ Most of the day-to-day work of managing machines is covered here. Utilising mach
 This section shows you:
 
 - [How to add a machine manually](#heading--how-to-add-a-machine-manually)
-rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui
+rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui /snap/3.1/ui /deb/3.1/ui
 - [How to add machines via a chassis](#heading--how-to-add-machines-via-a-chassis)
 rad-end
-rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli
+rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli/snap/3.1/cli /deb/3.1/cli
 - [How to manage attached USB and PCI devices](#heading--usb-pci-devices)
 rad-end
 
 <a href="#heading--how-to-add-a-machine-manually"><h3 id="heading--how-to-add-a-machine-manually">How to add a machine manually</h3></a>
 
-rad-begin   /deb/2.9/ui /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /deb/2.9/ui /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
 
 Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI machine:
@@ -54,7 +54,7 @@ The fields on the "Add machine" screen include the following items:
 - **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/nnnn) for details on the available power types and the relevant parameters for each type.
 rad-end
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 To create a new machine at the command line, enter the following information:
 
 ```nohighlight
@@ -103,7 +103,7 @@ The variable fields in the `machines create` command (the `$...` items) are as f
 - `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types) in the API reference for details on the available power types and the relevant parameters for each type.
 rad-end
 
-rad-begin /snap/3.0/ui /deb/3.0/ui /snap/2.9/ui /deb/2.9/ui
+rad-begin /snap/3.0/ui /deb/3.0/ui /snap/2.9/ui /deb/2.9/ui /snap/3.1/ui /deb/3.1/ui
 <a href="#heading--how-to-add-machines-via-a-chassis"><h3 id="heading--how-to-add-machines-via-a-chassis">How to add machines via a chassis</h3></a>
 
 You can use the chassis feature to add multiple machines at once. To do this, instead of selecting 'Machine' as above, choose 'Chassis' from the drop-down menu. In the following example, MAAS will add all available VMs from the given  virsh address:
@@ -117,7 +117,7 @@ As with the manual method, the underlying machines will require netbooting.
 [/note]
 rad-end
 
-rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli
+rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 <a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">How to manage attached USB and PCI devices</h3></a>
 
 To delete PCI/USB devices from the machine in any machine state, via the CLI only, using the following command:
@@ -142,9 +142,9 @@ This section describes the various ways you can evaluate the health and status o
 
 - [How to view the machine list](#heading--how-to-view-the-machine-list)
 - [How to view machine details](#heading--how-to-view-machine-details)
-rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui
+rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui /snap/3.1/ui /deb/3.1/ui
 - [How to find network info for a machine](#heading--machine-interfaces)
-- [How to find storage info for a machine](#heading--machine-storage)
+- [How to find storage info for a machine](#heading--how-to-find-machine-storage-info)
 - [How to find commissioning logs](#heading--commissioning-log)
 - [How to find machine hardware & test logs](#heading--hardware-tests)
 - [How to find raw log output for a machine](#heading--raw-log-output)
@@ -152,7 +152,7 @@ rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui
 - [How to find machine configuration info](#heading--machine-config)
 rad-end
 
-rad-begin /snap/3.0/cli /deb/3.0/cli /snap/2.9/cli /deb/2.9/cli
+rad-begin /snap/3.0/cli /deb/3.0/cli /snap/2.9/cli /deb/2.9/cli /snap/3.1/cli /deb/3.1/cli
 <a href="#heading--how-to-view-the-machine-list"><h3 id="heading--how-to-view-the-machine-list">How to view the machine list</h3></a>
 
 To view the machine list, enter a command similar to this one:
@@ -257,7 +257,7 @@ NETWORK: Vendor: Red Hat, Inc.
 ```
 rad-end
 
-rad-begin /snap/3.0/ui /deb/3.0/ui /snap/2.9/ui /deb/2.9/ui
+rad-begin /snap/3.0/ui /deb/3.0/ui /snap/2.9/ui /deb/2.9/ui /snap/3.1/ui /deb/3.1/ui
 <a href="#heading--how-to-view-the-machine-list"><h3 id="heading--how-to-view-the-machine-list">How to view the machine list</h3></a>
 
 To view the machine list, select "Machines" on the top menu of the MAAS web UI:
@@ -288,7 +288,7 @@ To view/edit machine storage info, click on the "Storage" tab in the machine sum
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> 
 
-See the article [Storage](/t/storage/nnnn) for a detailed instructions on how to use this screen.
+See the section about [storage](/t/about-machines/nnnn#heading--about-storage) for more information.
 
 <a href="#heading--commissioning-log"><h3 id="heading--commissioning-log">How to find commissioning logs</h3></a>
 
@@ -312,7 +312,7 @@ This tab presents a summary of tests run against this particular machine.  You c
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a> 
 
-The format of these screens is very similar to the Configuration logs shown above.  For more information, please see the article on [Hardware testing](/t/how-to-test-machines/nnnn).  
+The format of these screens is very similar to the Configuration logs shown above.   
 
 <a href="#heading--raw-log-output"><h3 id="heading--raw-log-output">How to find raw log output for a machine</h3></a>
 
@@ -350,7 +350,7 @@ rad-end
 
 This section will explain:
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 
 - [How to create a resource pool](#heading--creating-a-resource-pool)
 - [How to list available resource pools](#heading--list-available-resource-pools)
@@ -405,7 +405,7 @@ maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
 ```
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 - [How to add a resource pool](#heading--add-a-resource-pool)
 - [How to delete a resource pool](#heading--deleting-a-resource-pool)
 - [How to add a node to a resource pool](#heading--add-a-node-to-a-resource-pool)
@@ -455,7 +455,7 @@ To remove a VM host from a resource pool, follow the same procedure you would us
 
 rad-end
 
-rad-begin /snap/3.0/cli /snap/2.9/cli /deb/3.0/cli /deb/2.9/cli
+rad-begin /snap/3.0/cli /snap/2.9/cli /deb/3.0/cli /deb/2.9/cli /snap/3.1/cli /deb/3.1/cli
 <a href="#heading--how-to-use-annotations"><h2 id="heading--how-to-use-annotations">How to use annotations</h2></a>
 
 This section will show you:
@@ -791,7 +791,7 @@ This section will explain:
 - [How to set global storage layouts](#heading--how-to-set-global-storage-layouts)
 - [How to set per-machine storage layouts](#heading--how-to-set-per-machine-storage-layouts)
 - [How to specify conditional erasure types](#heading--how-to-specify-conditional-erasure-types)
-rad-begin /snap/3.0/cli /snap/2.9/cli /deb/3.0/cli /deb/2.9/cli
+rad-begin /snap/3.0/cli /snap/2.9/cli /deb/3.0/cli /deb/2.9/cli /snap/3.1/cli /deb/3.1/cli
 - [How to erase disks](#heading--how-to-erase-disks)
 - [How to manage block devices](#heading--how-to-manage-block-devices)
 - [How to manage partitions](#heading--how-to-manage-partitions)
@@ -802,13 +802,13 @@ rad-end
 
 Layouts can be set globally and on a per-machine basis.
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 All machines will have a default layout applied when commissioned. An administrator can configure the default layout on the 'Settings' page, under the 'Storage' tab.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png"></a>
 rad-end
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 All machines will have a default layout applied when commissioned. To set the default storage layout for all machines:
 
 ```nohighlight
@@ -831,11 +831,11 @@ The new default will only apply to newly-commissioned machines.
 
 <a href="#heading--how-to-set-per-machine-storage-layouts"><h3 id="heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</h3></a>
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of 'Ready'. This is only possible via the CLI: to see how, click the "CLI" option for your version and delivery method above.
 rad-end
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 An administrator can set a storage layout for a machine with a status of ‘Ready’ like this:
 
 ```nohighlight
@@ -857,7 +857,7 @@ rad-end
 Only an administrator can modify storage at the block device level (providing the machine has a status of 'Ready').
 [/note]
 
-rad-begin   /deb/2.9/ui  /snap/2.9/ui  /snap/3.0/ui /deb/3.0/ui
+rad-begin   /deb/2.9/ui  /snap/2.9/ui  /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 
 <a href="#heading--how-to-set-default-erasure-configuration"><h3 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h3></a>
 
@@ -875,7 +875,7 @@ Where 'secure erase' and 'quick erase' can then be configured by the user.
 
 rad-end
 
-rad-begin   /deb/2.9/cli  /snap/2.9/cli  /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /deb/2.9/cli  /snap/2.9/cli  /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 
 <a href="#heading--how-to-erase-disks"><h3 id="heading--how-to-erase-disks">How to erase disks</h3></a>
 

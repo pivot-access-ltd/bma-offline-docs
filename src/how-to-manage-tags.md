@@ -10,7 +10,7 @@ When working with tags, there are some universal rules you need to follow:
 
 In general, names that do not conform to these rules cannot be created.
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
+rad-begin /deb/2.9/ui /deb/3.0/ui /deb/3.1/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui
 <a href="#heading--create-and-assign-tags"><h2 id="heading--create-and-assign-tags">How to create and assign tags</h2></a>
 
 In the MAAS UI, creating and assigning tags is a combined operation; that is, you create tags as you assign them, rather than creating them first.  Creating tags in the UI is a little different user experience: there is a self-loading completion menu that collects all tags of a similar type.  This completion menu helps you avoid misspelling tags when entering them more than once; otherwise, you might not be able to group and filter tags properly. It also makes tag entry more efficient.
@@ -48,7 +48,7 @@ To remove (unassign) a tag:
 >Note that the tag you just removed will be deleted from  the tag auto complete list when it is no longer assigned to any  machines.
 rad-end
 
-rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
+rad-begin /deb/2.9/cli /deb/3.0/cli /deb/3.1/cli /snap/2.9/cli /snap/3.0/cli /snap/3.1/cli
 <a href="#heading--create-a-tag"><h2 id="heading--create-a-tag">How to create a tag</h2></a>
 
 With the CLI, you can create a tag with the following command:
