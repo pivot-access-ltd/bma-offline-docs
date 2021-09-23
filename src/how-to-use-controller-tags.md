@@ -1,6 +1,7 @@
 This article will show you:
 
-rad-begin     /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli
+rad-begin /deb/2.9/cli /deb/3.0/cli /deb/3.1/cli /snap/2.9/cli /snap/3.0/cli /snap/3.1/cli
+
 - [How to discover the ID of your region controller(s)](#heading--discover-the-id-of-your-region-controllers)
 - [How to assign tags to a region controller](#heading--assign-tags-to-a-region-controller)
 - [How to remove tags from a region controller](#heading--remove-tags-from-a-region-controller)
@@ -284,7 +285,7 @@ hostname                     sysid   tags
 bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
 ```
 rad-end
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
+rad-begin /deb/2.9/ui /deb/3.0/ui /deb/3.1/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui
 - [How to create and assign controller tags ](#heading--create-and-assign-controller-tags-)
 - [How to remove and delete controller tags](#heading--remove-and-delete-controller-tags)
 - [How to view controller tags](#heading--view-controller-tags)
