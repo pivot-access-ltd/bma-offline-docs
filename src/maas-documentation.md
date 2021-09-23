@@ -217,6 +217,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/5173|/docs/snap/3.1/cli/rack-controllers| 
 |https://discourse.maas.io/t/-/5174|/docs/deb/3.1/ui/rack-controllers| 
 |https://discourse.maas.io/t/-/5175|/docs/deb/3.1/cli/rack-controllers| 
+|https://discourse.maas.io/t/-/4094|/docs/snap/3.0/ui/region-controllers| 
 |https://discourse.maas.io/t/-/5176|/docs/snap/3.1/ui/region-controllers| 
 |https://discourse.maas.io/t/-/5177|/docs/snap/3.1/cli/region-controllers| 
 |https://discourse.maas.io/t/-/5178|/docs/deb/3.1/ui/region-controllers| 
