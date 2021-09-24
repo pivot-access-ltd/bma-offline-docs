@@ -685,13 +685,13 @@ Here are the bugs that have been `Fix Released` in MAAS 3.0 Beta 1:
 |[#1919381](https://bugs.launchpad.net/bugs/1919381)|typo "veryiying" in info message in smartctl-validate |Undecided|
 rad-end
 
+rad-begin /snap/2.9/cli /snap/2.9/ui /deb/2.9/ui /deb/2.9/cli
 <h2 id="heading--known-issues">Known issues</h2>
 
 ### RAD LHS menu
 
 There is a known issue with the Reader Adaptive Documentation left-hand-side menu (navigation), in that the menu links cannot currently be adapted to the RAD parameters.  This means that selecting a different page in the LHS menu will take you the the RAD for the current recommended version.  Every page that is different in RAD, though, should present you with a top menu, so that you can choose the RAD parameters matching your own preferences.
 
-rad-begin /snap/2.9/cli /snap/2.9/ui /deb/2.9/ui /deb/2.9/cli
 ### Erroneous message about "missing migration"
 
 When upgrading to any release above 2.8, using packages, you may receive a warning about missing migration(s) -- specifically something that looks like this:
@@ -711,3 +711,363 @@ Running migrations:
 This warning message has no effect on the installation or operation of MAAS, so it can be safely ignored.
 rad-end
 
+rad-begin /snap/3.1/cli /snap/3.1/ui /deb/3.1/cli /deb/3.1/ui
+<h2>MAAS 3.1.0-beta1 release notes</h2>
+
+We are happy to announce the Beta 1 release of MAAS 3.1. This release provides some new (user-requested) features.
+
+<a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.1.0-beta1 features</h3></a>
+
+ - [Ability to enlist deployed machines](#heading--enlist-deployed-machines): Users can enlist deployed machines, a top feature poll request.
+
+ - [Static Ubuntu image upload and reuse](#heading--static-ubuntu-images): Users can upload, deploy and reuse a bootable ubuntu image
+
+ - [Machine configuration cloning UI](#heading--machine-cloning-ui): Extend machine cloning to UI, moving toward machine profile templates.
+
+ - [LXD authentication UX improvements](#heading--lxd-auth-ux-improvements): Easier MAAS to LXD connection that uses certificates for authentication.
+
+rad-end
+
+<a href="#heading--installing-3-1-0-beta"><h3 id="heading--installing-3-1-0-beta">How to install MAAS 3.1.0-beta1</h3></a>
+
+rad-begin /deb/3.1/ui /deb/3.1/cli
+MAAS 3.1.0-beta1 can be installed by adding the `3.1-next` PPA:
+
+```
+sudo add-apt-repository ppa:maas/3.1-next
+sudo apt update
+sudo apt install maas
+```
+
+You can then either install MAAS 3.1.0-beta1 fresh (recommended) with:
+
+```
+sudo apt-get -y install maas
+```
+
+Or, if you prefer to upgrade, you can do so with:
+
+```
+sudo apt upgrade maas
+```
+
+At this point, you may proceed with a normal installation.
+
+rad-end
+
+rad-begin /snap/3.1/cli /snap/3.1/ui
+MAAS 3.1.0-beta1 can be installed fresh (recommended) with:
+
+```
+sudo snap install maas --channel=3.1/beta
+```
+
+At this point, you may proceed with a normal installation.
+rad-end
+
+<a href="#heading--enlist-deployed-machines"><h3 id="heading--enlist-deployed-machines">Ability to enlist deployed machines</h2></a>
+
+#### Ten words or less
+Users can enlist deployed machines, a top feature poll request.
+
+#### About this feature
+In general, when adding a machine to MAAS, it network boots the machine into an ephemeral environment to collect hardware information about the machine. While this is not a destructive action, it doesn’t work if you have machines that are already running a workload.
+
+For one, you might not be able to disrupt the workload in order to network boot it. But also, the machine would be marked as Ready, which is incorrect.
+
+When adding a machine, you may specify that the machine is already deployed. In that case, it won’t be going through the normal commissioning process and will be marked as being deployed.
+
+Such machines lack hardware information. In order to update the information, a script is provided to run a subset of the commissioning scripts and send them back to MAAS.
+
+#### How to enlist a machine that’s already running a workload
+In order to add machine that’s already running a workload, there are currently two options:
+
+Via the API/CLI, you can create a machine, passing the deployed flag:
+
+```
+$ maas $profile machines create deployed=true hostname=mymachine \   
+architecture=amd64 mac_addresses=00:16:3e:df:35:bb power_type=manual
+```
+
+On the machine itself (the recommended way, if the machine is running Ubuntu), you can download a helper script from MAAS and create the machine that way:
+
+```
+$ wget http://$MAAS_IP:5240/MAAS/maas-run-scripts
+$ chmod 755 maas-run-scripts
+$ ./maas-run-scripts register-machine --hostname mymachine \
+ > http://$MAAS_IP:5240/MAAS $MAAS_API_TOKEN
+```
+
+Now you have a machine in MAAS that’s in the deployed state, with no hardware information yet.
+
+#### How to update hardware information for a deployed machine
+
+The recommended way of updating the hardware information for a deployed machine is to download the maas-run-scripts script and run it on the machine itself:
+
+```
+$ wget http://$MAAS_IP:5240/MAAS/maas-run-scripts
+$ chmod 755 maas-run-scripts
+$ ./maas-run-scripts report-results --config mymachine-creds.yaml
+```
+
+If you created the machine with the maas-run-scripts, you should have such a mymachine-creds.yaml file already. If not, it should look like this:
+
+```
+reporting:
+          maas:
+            consumer_key: $CONSUMER_KEY
+            endpoint: http://$MAAS_IP:5240/MAAS/metadata/status/$SYSTEM_ID
+            token_key: $TOKEN_KEY
+            token_secret: $TOKEN_SECRET
+```
+
+You may get the needed credentials from the MAAS API, for example:
+
+```
+$ maas $profile machine get-token wxwwga
+Success.
+Machine-readable output follows:
+{
+        "token_key": "Lyy9BS4tKsQakDQScy",
+        "token_secret": "V8vta8Azwn6FZVkfHnuTvLGLScAvEufB",
+        "consumer_key": "YGT6QKSH65aap4tGnw"
+}
+```
+
+<a href="#heading--static-ubuntu-images"><h3 id="heading--static-ubuntu-images">Static Ubuntu image upload and reuse</h2></a>
+
+#### Ten words or less
+
+Users can upload, deploy and reuse a bootable ubuntu image
+
+#### About this feature
+
+MAAS aleady supports deploying custom OS images.  Canonical provides both [lp:maas-image-builder](https://launchpad.net/maas-image-builder) and [gh:canonical/packer-maas](https://github.com/canonical/packer-maas) to support creating custom images. With 3.1.0-beta1, these custom images can include static Ubuntu images, created with whatever tool you choose, and deployed as described below. Even so, Canonical suggests customising Ubuntu using cloud-init user_data or Curtin preseed data whenever possible.
+
+#### About static Ubuntu images
+
+MAAS provides the capability for you to build an Ubuntu OS image to deploy with MAAS, using any image-building method you choose.  You can create the image once, with a fixed configuration,and deploy it to many machines.  This fixed configuration can consist of anything that a normal image would contain: users, packages, etc.
+
+#### About uploading hand-built Ubuntu images
+
+You can upload hand-built Ubuntu images, containing a kernel, bootloader, and a fixed configuration, for deployment to multiple machines.  The image can be built via a tool, such as [packer](https://github.com/canonical/packer-maas), or build with scripts. You can upload these images to the boot-resources endpoint, where it will then be available for deployment to machines.
+
+At a minimum, this image must contain a kernel, a bootloader, and a `/curtin/curtin-hooks` script that configures the network. A sample can be found in the [packer-maas repos](https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts). The image must be in raw img file format, since that is the format MAAS accepts for upload.  This is the most portable format, and the format most builders support. Upon completing the image build, you will upload this img file to the boot-resources endpoint, specifying the architecture for the image.
+
+#### About how MAAS handles these images
+
+MAAS will save the image -- in the same way it would save a `tar.gz` file -- in the database.  MAAS can differentiate between custom Ubuntu images and custom non-Ubuntu images, generating appropriate pre-seed configurations for each image type.
+
+MAAS will also recognise the base Ubuntu version, so it can apply the correct ephemeral OS version for installation.  Custom images are always deployed with the ephemeral operating system. The base_image field is used to select the appropriate version of the ephemeral OS to avoid errors. This ensures a smooth deployment later.
+
+#### About how MAAS boots these images
+
+When you decide to deploy a machine with your uploaded, custom image, MAAS ensures that the machine receives the kernel, bootloader and root file system provided in the image. The initial boot loader takes over, and boots an ephemeral OS of the same Ubuntu version as the custom image, to reduce the chances of incompatibilities.  Curtin then writes your entire custom image to disk.  Once the custom image is written to disk, it is not modified by MAAS.
+
+Note that custom non-Ubuntu images still use a standard Ubuntu ephemeral OS to boot, prior to installing the non-Ubuntu OS.
+
+#### About configuring deployed machine networking
+
+If you deploy a machine with a custom Ubuntu image, MAAS allows you to configure the deployed machine's networks just like you would for any other MAAS machine.  If you create an interface and assign it to a subnet or static address, this will be reflected in the deployed machine.
+
+For this reason, MAAS also does some initial diagnostics while installing the custom image.  MAAS will detect when a network configuration is not present and abort the installation with a warning.  Essentially, MAAS checks to be sure that `cloud-init` and `netplan` are present in the images written by `curtin`.  If not, MAAS won't deploy the machine with the image.
+
+#### About configuring deployed machine storage
+
+If you deploy a machine with a custom Ubuntu image, you will also want to be able to configure storage, just like you would do with any other machine.  MAAS facilitates changes to the storage configuration.  You can resize the root partition, as well as attaching and formatting any additional block devices you may desire.
+
+#### About static image metrics
+
+As a user, you want to keep track of how many static images are being used, and how many deployed machines are using static images.  The standard MAAS dashboard reflects both of these metrics.
+
+#### How to upload a custom Ubuntu image
+
+Currently, custom Ubuntu images can be uploaded using the MAAS CLI,by creating a boot-resource, with a command similar to this one:
+
+```nohighlight                                                                                                        	 
+	maas $PROFILE boot-resources create \
+        name='custom/ubuntu-custom'  \
+        architecture=amd64/generic \
+        title=’custom ubuntu’ \
+        base_image=ubuntu/focal \
+        filetype=ddraw \
+        content@=./custom-ubuntu.img
+ ```	 
+
+[note]
+When uploading a custom image, there is a new required field: `base_image`. This is not required for non-custom images to be uploaded, but any image with the `custom` prefix will require it.
+[/note]
+
+<a href="#heading--machine-cloning-ui"><h3 id="heading--machine-cloning-ui">Machine configuration cloning UI</h2></a>
+
+#### Ten words or less
+
+Extend machine cloning to UI, moving toward machine profile templates.
+
+#### About this feature 
+
+MAAS 3.1.0-beta1 provides the ability to quickly clone or copy configuration from one machine to one or more machines, via the MAAS UI, providing convenient access to an existing API feature.. This is a step towards machine profile templating work. 
+
+Creating a machine profile is a repetitive task. Based on the responses to our survey -- and multiple forum posts, we have learned that most users create multiple machines of the same configuration in batches. Some users create a machine profile template and loop them through the API, while some create a script to interface with the CLI. However, there is no easy way to do this in the UI except by going through each machine and configuring them individually.   
+
+MAAS API already has the cloning functionality, but it was never exposed in the UI. Hence, users may not know that this API feature exists, nor is there any current documentation about how to use this feature.  Although the current cloning API feature does not solve all machine profile templating problems, it is a great place for us to start moving in the direction of machine templates.
+
+#### About copying machine configurations
+
+As a MAAS user -- API or UI -- you may want to copy the configuration of a given machine and apply it to multiple existing machines. Assuming that at least one machine is already set to the desired configuration, you should be able to apply these same settings to a list of destination machines.  This means that a user should be able to:
+
+ - select the source machine to copy from.
+ - validate that the source machine exists.
+ - select at least 1 destination machine.
+ - validate that the destination machine(s) exist.
+ - edit the source machine or destination machines, if needed.
+ - know at all times which machines are affected.
+ - see the cloned machines when cloning is successful, or
+ - get clear failure information, if cloning fails. 
+
+#### About choosing configuration items to copy
+
+As a MAAS user, you will likey want to select whether storage, network, or both configurations should be cloned. The cloning API allows users to choose interfaces and storage separately.  Thus, this new feature shoudl allow the user to:
+
+ - clone only the interface (network) configuration.
+ - clone only the storage configuration.
+ - clone both colnfigurations.
+
+#### About cloning restrictions
+
+In order for cloning to succeed, a few restrictions must be met:
+
+1. The destination interface names must be the same source.
+2. The destination drive must be equal to or larger than the source drive.
+3. For static IPs, a new IP will be allocated to the interface on the destination machine
+
+#### How to clone a machine from the UI
+
+Assume you have two machines available, like this:
+
+![Screenshot from 2021-09-24 16-20-05|690x230](upload://fTtQPaQdvz1umqj3tP8aRn3Wftz.png)
+
+Select the machine *to which you want to clone configuration*, and select "Clone from..."
+
+![Screenshot from 2021-09-24 16-25-01|690x388](upload://pOeMMJjEjhlZwjbFSMpz4YJMO4b.png)
+
+Under "1. Select the source machine" -- choose a machine from the attached list:
+
+![Screenshot from 2021-09-24 16-26-42|497x310](upload://5M8dZhaGrSCywiV4YLR7mS0Jlfl.png)
+
+Under "2. Select what to clone", choose "Network", "Storage", or both (here, we've chosen "Storage"):
+
+![Screenshot from 2021-09-24 16-29-15|690x250](upload://e0qU4wMorc3CGpdVyJ5jYMRPRov.png)
+
+Click "Clone to machine". MAAS will report the status of the attempt.
+
+<a href="#heading--lxd-auth-ux-improvements"><h3 id="heading--lxd-auth-ux-improvements">LXD authentication UX improvements</h2></a>
+
+#### Ten words or less
+
+Easier MAAS to LXD connection that uses certificates for authentication.
+
+#### About this feature
+
+MAAS 3.1.0-beta1 provides a smoother experience when connecting an existing LXD server to MAAS, guiding the user through manual steps and providing increased connection security with use of certificates. Currently, each MAAS region/rack controller has its own certificate. To add a LXD VM host to MAAS, the user needs to either add the certificate for each controller that can reach the LXD server to the trust list in LXD, or use the trust_password (in which case the controller talking to LXD will automatically add its certificate to the trust).
+
+This doesn’t provide a great user experience, as the former process is cumbersome, and the latter is not suggested for production use for security reasons.  To improve this, MAAS 3.1.0-beta1 manages per-LXD keys/certificates, and provide a way for users to get the content of certificates, to authorize MAAS in LXD.
+
+#### About on-the-spot certificate creation
+
+As a MAAS user, you want to register a LXD host into MAAS using certificates for authentication -- to follow LXD production deployment best practices.  The standard way for clients to authenticate with LXD servers is through certificates. The use of trust_password is *only* meant as a way to interact for initial setup.
+
+While prior versions of MAAS support both ways of authentication (and automatically adds the certificate for the rack talking to LXD when registering the VM host), the user experience is lacking, since there's no control over the certificate being used.  In addition, each rack uses a different certificate, making it hard to manage scenarios where multiple racks can connect to a LXD server.
+
+For these reasons, when adding a LXD host, MAAS 3.1.0-beta1 provides a way to generate a secret key and certificate pair to use specifically for that server, and show the certificate to the user, so that they can add it to the LXD server trust list.  The user experience changes to something like the following:
+
+ - MAAS generates a secret key and certificate pair for use with a LXD server.
+ - The user can see the certificate and is guided to add it to the LXD server trust list.
+ - The user can easily complete the registration of the LXD server once the certificate is trusted in LXD.
+ - All racks use the same key when talking to the LXD server. 
+ - If a new rack controller is added, it can communicate with the LXD server out of the box.
+ - If the trust password is used, it’s not stored in MAAS persistently.
+ - It’s possible to get the certificate for a LXD server from a URL (e.g. for curl use).
+
+#### About bringing your own certificates
+
+As a MAAS user, you may want to register a LXD host into MAAS by providing a private key for a certificate that’s already trusted by the LXD server.  For example, you may already have set up certificates in the server trust for MAAS to use, MAAS should provide a way to import it, instead of generating a new one.
+
+With MAAS 3.1.0-beta1, it’s possible to import an existing key/certificate pair for use with a LXD server when registering it with MAAS.  MAAS stores the key/certificate instead of generating new ones.
+
+[note]
+The imported key must not have a passphrase; otherwise, MAAS will not be able to use it.
+[/note]
+
+#### How to get started
+
+Suppose that you're creating a new LXD KVM, beginning from the top tab in MAAS:
+
+![Screenshot from 2021-09-24 16-50-32|690x165](upload://q737CVJkVM4hGn735pCnXEqfGpR.png) 
+
+Select "Add KVM", which brings you to the definition screen:
+
+![Screenshot from 2021-09-24 16-52-41|690x257](upload://ik75TCKW0kXNgh72C4eamtkTBG0.png)
+
+From here, you'll continue by choosing your authentication method.
+
+#### How to let MAAS create a certificate for you
+
+If you choose "Generate new certificate", as shown above, you'll come to a screen like this one:
+
+![Screenshot from 2021-09-24 16-55-29|690x325](upload://1epqtxyDwz2DGf6Oe9ctVE5AAZv.png)
+
+You can still choose to use the LXD trust password (entered when you ran `lxd init` during LXD installation).  You can also, though, choose to use the certificate MAAS has just generated for you.  To do that, select the entire contents of the text box, copy it, and paste it into a terminal window -- then hit "Enter":
+
+```
+$ lxc config trust add - <<EOF
+> -----BEGIN CERTIFICATE-----
+> MIIErTCCApUCEQCGa86XdjYUGm8h8YOh4HAEMA0GCSqGSIb3DQEBDQUAMAAwHhcN
+> MjEwOTI0MjE1NDQ4WhcNMzEwOTIyMjE1NDQ4WjApMScwJQYDVQQDDB5teTBuZXh0
+> LTMuMS4wLWJldGExLWt2bUB3YWxkZW4wggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAw
+> ggIKAoICAQC1tmJbSYx3Jb5JcuqLvyO6P0RtYWCbjVYOSAIM1PKHZJRvako6QhjR
+> 6wWNcVLAjDJIMuEBysrI8mcAv9D/AfT2qLQ/5mg7anbxfrd3YXG2nc70QJazpFaw
+> INDc85wrdJD5NEd50iaka+PztIAWzoZWQr/pLb7hUDnArzSHp5J+w0dRCUh54SyW
+> Du4mLpDks5UqMeONO1o7lbaQuBdzGtR4btdmvOkJfg/Pu3i/rzFZ1vvn1JhZTX96
+> +xH7tJQiqOk0SXG7F2RmbYiYDhAkiysbMoyOHBCf/qFWq4Vtd/VMxOAT1WERrgWn
+> 8nL5kRBozV94QocJaOe+GUSWLHsRpsVa8jiAj3LS2CFQfpaEsrzLSlQOeN2rNB9z
+> DO9yGXGql4tUpgtyEvxB/zVrIGd04iTC3D4S9b1KyzTbSsyjTc/XJhUStnn49ySW
+> Iwv1eHa2jMvIjRVm5sRfpf0EOZW27HLI1AqDOXR0DmlM2mWvndjvfacX+41I8vuG
+> +RPq0ZjDhwfRmUaLiebzcExwPmSHAxqiaV+t0n6ivDWTNk6cNc38rZBh3x6I7JMR
+> /85Rc1blLSF7QBMA1HxheCUYzBPTKsdE2btygq9vShRXCdSekV0jGoL1g0n6T59r
+> +9nHShgc/Bzk42kcddQySlrqWWHrXX6Z2N1R3eYpuvSEaKsnsjqjwwIDAQABMA0G
+> CSqGSIb3DQEBDQUAA4ICAQA4d1Xqi941ssyJoiovTzBgMDSp9kqjpB83BRqbF9oZ
+> fQGkezn2jF7SnaXbTyR/K+nir5Rms8OZfUxyZJwYh/YCdnIF8hzC32mLJbP6jcJV
+> LS0OD+EipwyRLSe9g2it68TtAhhVXKPx3tGQWWiXtJOF631sJRcRUZATc9nco5H2
+> 91GKog4LdFeKD3ArOq1GkE9r95WauTV37x0c474XBt2mVcEvFW50oZbIBPaWLt8E
+> q8NG0KYkfIHkhXDGqPDkUtdPJlkiGwqXdaqghuG31a4Or9IKcNmDlli47apaWWJW
+> /gqZfFALbOrSJHg10PCqNsfoKmQr2YZzPlTjG39RA7sA1XR6y+lQZqwcXnXk2iAE
+> n62OkRUrYVXzBo99zk5jQJVEg6zhfPH9zl6Jmn/vBu0p6RqmqNLTTlMOio8VOp9e
+> 9Gyb9uRwzwZ9zgydgI4bHMvcIAq+46wTruOfXBNATWLC2YqXbc+9QqemJebcXULW
+> Wf7Sc+SHHx2cVb4OUvUD8keZN37No/2vfZ9NI2SJOI4SxlV2yf6ZRyb7MYIwpm1h
+> YTzyS+ywUN4C8p1PsU5iT8DGdcg7Kcso4/DDZeZkLKNeCKizkdMreF7qV0qHTW8z
+> PyfZHcR/xWMkjxYZoFu4rVyxpsUJYItJNUNk6vZvSnSDfC2e2JJFfMws+fntNy14
+> /w==
+> -----END CERTIFICATE-----
+> EOF
+$ 
+```
+
+The certificate will be created for you.  When you click the "Check authentication" button, you will be brought to this screen:
+
+![Screenshot from 2021-09-24 16-59-29|690x204](upload://oICvVQLdvfdK8I66qjfXHDWcJdt.png)
+
+from which you can continue with normal LXD KVM setup.
+
+#### How to use your own, existing certificate
+
+Suppose that, after identifying your LXD KVM, you choose "Provide certificate and private key".  When you do so, the screen will extend to allow you to upload these items:
+
+![Screenshot from 2021-09-24 17-05-39|690x443](upload://zG0WDZqWd0wyDkF26jbak92RmI7.png) 
+
+Paste or upload your certificate and private key, then click "Next" to validate your authentication criteria, before continuing through the normal LXD KVM creation process.  If your certificate and/or key aren't usable for some reason, MAAS will return an error (in this case, the private key was entered as gibberish, to produce an error output):
+
+![Screenshot from 2021-09-24 17-08-40|622x110](upload://5LFC5i2Et9eDHYwYEKJmtMJaop0.png) 
+
+
+rad-end

@@ -390,6 +390,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4851|/docs/deb/2.9/cli/how-to-manage-machines|
 |https://discourse.maas.io/t/-/3813|/docs/snap/3.0/ui/about-maas|
 |https://discourse.maas.io/t/-/3934|/docs/snap/3.0/ui/give-me-an-example-of-maas|
+|https://discourse.maas.io/t/-/5292|/docs/snap/3.1/ui/whats-new-in-maas|
+|https://discourse.maas.io/t/-/5291|/docs/snap/3.1/cli/whats-new-in-maas|
+|https://discourse.maas.io/t/-/5294|/docs/deb/3.1/ui/whats-new-in-maas|
+|https://discourse.maas.io/t/-/5293|/docs/deb/3.1/cli/whats-new-in-maas|
 |https://discourse.maas.io/t/-/4182|/docs/snap/3.0/ui/whats-new-in-maas|
 |https://discourse.maas.io/t/-/3986|/docs/snap/3.0/ui/maas-cli|
 |https://discourse.maas.io/t/-/3898|/docs/snap/3.0/ui/controllers|
