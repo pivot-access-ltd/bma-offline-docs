@@ -250,10 +250,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/5205|/docs/snap/3.1/cli/prometheus-metrics| 
 |https://discourse.maas.io/t/-/5206|/docs/deb/3.1/ui/prometheus-metrics| 
 |https://discourse.maas.io/t/-/5207|/docs/deb/3.1/cli/prometheus-metrics| 
-|https://discourse.maas.io/t/-/5208|/docs/snap/3.1/ui/how-to-use-lxd 
-|https://discourse.maas.io/t/-/5209|/docs/snap/3.1/cli/how-to-use-lxd 
-|https://discourse.maas.io/t/-/5210|/docs/deb/3.1/ui/how-to-use-lxd 
-|https://discourse.maas.io/t/-/5211|/docs/deb/3.1/cli/how-to-use-lxd 
+|https://discourse.maas.io/t/-/5208|/docs/snap/3.1/ui/how-to-use-lxd| 
+|https://discourse.maas.io/t/-/5209|/docs/snap/3.1/cli/how-to-use-lxd| 
+|https://discourse.maas.io/t/-/5210|/docs/deb/3.1/ui/how-to-use-lxd| 
+|https://discourse.maas.io/t/-/5211|/docs/deb/3.1/cli/how-to-use-lxd| 
 |https://discourse.maas.io/t/-/5212|/docs/snap/3.1/ui/using-maas-in-an-air-gapped-environment| 
 |https://discourse.maas.io/t/-/5213|/docs/snap/3.1/cli/using-maas-in-an-air-gapped-environment| 
 |https://discourse.maas.io/t/-/5214|/docs/deb/3.1/ui/using-maas-in-an-air-gapped-environment| 
