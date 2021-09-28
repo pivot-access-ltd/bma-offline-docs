@@ -1,6 +1,6 @@
 This article will explain:
 
-rad-begin /deb/2.9/ui /deb/3.0/ui /snap/2.9/ui /snap/3.0/ui
+rad-begin /deb/2.9/ui /deb/3.0/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui /deb/3.1/ui
 - [How to create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
 - [How to remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
 - [How to list machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
@@ -89,7 +89,7 @@ Note that you can only see the tags for a VM host in the same place that you cha
 
 rad-end
 
-rad-begin /snap/2.9/cli /snap/3.0/cli /deb/2.9/cli /deb/3.0/cli
+rad-begin /snap/2.9/cli /snap/3.0/cli /deb/2.9/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 - [How to assign machine tags to a machine](#heading--assign-machine-tags-to-a-machine)
 - [How to remove machine tags from a machine](#heading--remove-machine-tags-from-a-machine)
 - [How to list machine tags for all machines](#heading--list-machine-tags-for-all-machines)
