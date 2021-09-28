@@ -767,7 +767,7 @@ rad-end
 
 <a href="#heading--enlist-deployed-machines"><h3 id="heading--enlist-deployed-machines">Ability to enlist deployed machines</h2></a>
 
-#### Ten words or less
+#### Ten words or fewer
 Users can enlist deployed machines, a top feature poll request.
 
 #### About this feature
@@ -836,7 +836,7 @@ Machine-readable output follows:
 
 <a href="#heading--static-ubuntu-images"><h3 id="heading--static-ubuntu-images">Static Ubuntu image upload and reuse</h2></a>
 
-#### Ten words or less
+#### Ten words or fewer
 
 Users can upload, deploy and reuse a bootable ubuntu image
 
@@ -900,7 +900,7 @@ When uploading a custom image, there is a new required field: `base_image`. This
 
 <a href="#heading--machine-cloning-ui"><h3 id="heading--machine-cloning-ui">Machine configuration cloning UI</h2></a>
 
-#### Ten words or less
+#### Ten words or fewer
 
 Extend machine cloning to UI, moving toward machine profile templates.
 
@@ -963,7 +963,7 @@ Click "Clone to machine". MAAS will report the status of the attempt.
 
 <a href="#heading--lxd-auth-ux-improvements"><h3 id="heading--lxd-auth-ux-improvements">LXD authentication UX improvements</h2></a>
 
-#### Ten words or less
+#### Ten words or fewer
 
 Easier MAAS to LXD connection that uses certificates for authentication.
 
