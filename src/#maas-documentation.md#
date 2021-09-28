@@ -399,7 +399,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3898|/docs/snap/3.0/ui/controllers|
 |https://discourse.maas.io/t/-/3990|/docs/snap/3.0/ui/maas-communication|
 |https://discourse.maas.io/t/-/4090|/docs/snap/3.0/ui/rack-controllers|
-|https://discourse.maas.io/t/-/5120|/docs/snap/3.1/ui/high-availability|
 |https://discourse.maas.io/t/-/3946|/docs/snap/3.0/ui/high-availability|
 |https://discourse.maas.io/t/-/4070|/docs/snap/3.0/ui/power-management|
 |https://discourse.maas.io/t/-/3874|/docs/snap/3.0/ui/manage-machine-interfaces|
