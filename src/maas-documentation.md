@@ -1361,6 +1361,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4013|/docs/snap/3.0/cli/maas-requirements|
 |https://discourse.maas.io/t/-/4015|/docs/deb/3.0/cli/maas-requirements|
 |https://discourse.maas.io/t/-/4016|/docs/deb/3.0/ui/maas-requirements|
+|https://discourse.maas.io/t/-/5304|/docs/snap/3.1/ui/maas-requirements|
+|https://discourse.maas.io/t/-/5303|/docs/snap/3.1/cli/maas-requirements|
+|https://discourse.maas.io/t/-/5301|/docs/deb/3.1/cli/maas-requirements|
+|https://discourse.maas.io/t/-/5302|/docs/deb/3.1/ui/maas-requirements|
 |https://discourse.maas.io/t/-/4021|/docs/snap/3.0/cli/about-tags|
 |https://discourse.maas.io/t/-/4023|/docs/deb/3.0/cli/about-tags|
 |https://discourse.maas.io/t/-/4024|/docs/deb/3.0/ui/about-tags|

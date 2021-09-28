@@ -1,6 +1,9 @@
+
+rad-begin /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli /snap/3.1/ui /snap/3.1/cli
 <a href="#heading--about-installing-maas"><h2 id="heading--about-installing-maas">About installing MAAS</h2></a>
 
 MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.
+rad-end
 
 <a href="#heading--maas-init-modes"><h3 id="heading--maas-init-modes">MAAS initialisation modes reference</h3></a>
 
@@ -43,6 +46,16 @@ rad-begin /deb/3.0/ui /deb/3.0/cli
 * [How to do a fresh install of MAAS 3.0 from packages](#heading--fresh-install-3-0-packages)
 * [How to create a MAAS user](#heading--create-a-maas-user)
 rad-end
+rad-begin /snap/3.1/ui /snap/3.1/cli
+* [How to upgrade from an earlier snap version to MAAS 3.1 Beat](#heading--upgrade-from-earlier-snap-to-3-1)
+* [How to do a fresh snap install of MAAS 3.1 Beta](#heading--fresh-install-3-1-snap)
+rad-end
+rad-begin /deb/3.1/ui /deb/3.1/cli
+* [How to ugprade from MAAS 3.0 to MAAS 3.1 Beta](#heading--upgrade-from-deb-3-0-to-3-1)
+* [How to upgrade from MAAS 2.8 or lower to MAAS 3.1 Beta](#heading--upgrade-from-deb-2-8-to-3-1)
+* [How to do a fresh install of MAAS 3.1 Beta from packages](#heading--fresh-install-3-1-packages)
+* [How to create a MAAS user](#heading--create-a-maas-user)
+rad-end
 rad-begin /snap/2.9/ui /snap/2.9/cli 
 * [How to upgrade from an earlier snap version to MAAS 2.9](#heading--upgrade-from-earlier-snap-to-2-9)
 * [How to do a fresh snap install of MAAS 2.9](#heading--fresh-install-2-9-snap)
@@ -75,6 +88,18 @@ If you want to upgrade from a earlier snap version to the 3.0 snap, and you are 
     $ sudo snap refresh --channel=3.0/stable maas
 
 After entering your password, the snap will refresh from the 3.0 channel.  You will **not** need to re-initialise MAAS.
+
+If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
+rad-end
+
+rad-begin /snap/3.1/ui /snap/3.1/cli
+<a href="#heading--upgrade-from-earlier-snap-to-3-1"><h2 id="heading--upgrade-from-earlier-snap-to-3-1">How to upgrade from an earlier snap version to MAAS 3.1 Beta</h2></a>
+
+If you want to upgrade from a earlier snap version to the 3.1 Beta snap (not recommended for production), and you are using a `region+rack` configuration, use this command:
+
+    $ sudo snap refresh --channel=3.1/beta maas
+
+After entering your password, the snap will refresh from the 3.1 channel.  You will **not** need to re-initialise MAAS.
 
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 rad-end
@@ -186,6 +211,115 @@ Codename:	focal
 6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.0.
 rad-end
 
+rad-begin /deb/3.1/ui /deb/3.1/cli
+<a href="#heading--upgrade-from-deb-3-0-to-3-1"><h2 id="heading--upgrade-from-deb-3-0-to-3-1">How to ugprade from MAAS 3.0 to MAAS 3.1 Beta</h2></a>
+
+To upgrade from MAAS 3.0 to MAAS 3.1 Beta (not recommended for production):
+
+1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+
+2. Add the MAAS 3.1 Beta PPA to your repository list with the following command, ignoring any apparent error messages:
+
+```
+sudo apt-add-repository ppa:maas/3.1-next
+```
+
+3. Run the MAAS upgrade like this:
+
+```
+sudo apt update
+sudo apt upgrade maas
+```
+
+4. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 Beta release.
+
+5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1 Beta.
+
+<a href="#heading--upgrade-from-deb-2-8-to-3-1"><h2 id="heading--upgrade-from-deb-2-8-to-3-1">How to upgrade from 2.8 or lower to MAAS 3.1 Beta</h2></a>
+
+If you are running MAAS 2.8 or lower, you can upgrade directly to MAAS 3.1 Beta, though it's not recommended for production systems. You must first make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
+
+```
+lsb_release -a
+```
+
+The response should look something like this:
+
+```
+Distributor ID:	Ubuntu
+Description:	Ubuntu xx.yy
+Release:	xx.yy
+Codename:	$RELEASE_NAME
+```
+
+The minimum "xx.yy" required for MAAS 3.0 is "20.04," code-named "focal."
+
+If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:
+
+1. Upgrade the release:
+
+```
+sudo do-release-upgrade --allow-third-parties
+```
+
+2. Accept the defaults for any questions asked by the upgrade script.
+
+3. Reboot the machine when requested.
+
+4. Check whether the upgrade was successful:
+
+```
+lsb_release -a
+```
+
+A successful upgrade should respond with output similar to the following:
+
+```
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04(.nn) LTS
+Release:	20.04
+Codename:	focal
+```
+
+[note]
+If you're upgrading from MAAS version 2.8 or lower to version 3.1 Beta: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.
+[/note]
+
+1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+
+2. Add the MAAS 3.1 Beta PPA to your repository list with the following command, ignoring any apparent error messages:
+
+```
+sudo apt-add-repository ppa:maas/3.1-next
+```
+
+3. Run the release upgrade like this, answering any questions with the given default values:
+
+```
+sudo do-release-upgrade --allow-third-parties
+```
+
+4. Check whether your upgrade has been successful by entering:
+
+```
+lsb_release -a
+```
+
+If the ugprade was successful, this command should yield output similar to the following:
+
+```
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04(.nn) LTS
+Release:	20.04
+Codename:	focal
+```
+
+5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 Beta release.
+
+6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1 Beta.
+rad-end
+
 rad-begin /snap/2.9/ui /snap/2.9/cli
 <a href="#heading--upgrade-from-earlier-snap-to-2-9"><h2 id="heading--upgrade-from-earlier-snap-to-2-9">How to upgrade from an earlier snap version to MAAS 2.9</h2></a>
 
@@ -275,6 +409,22 @@ To install MAAS 3.0 from a snap, simply enter the following:
 After entering your password, the snap will download and install from the 3.0 stable channel.
 
 rad-end
+
+rad-begin /snap/3.1/ui /snap/3.1/cli
+<a href="#heading--fresh-install-3-1-snap"><h2 id="heading--fresh-install-3-1-snap">How to do a fresh snap install of MAAS 3.1 Beta</h2></a>
+
+To install MAAS 3.1 Beta from a snap, simply enter the following:
+
+    $ sudo snap install --channel=3.1/beta maas
+
+After entering your password, the snap will download and install from the 3.1 beta channel.
+
+[note]
+Note that MAAS 3.1 Beta is *not* recommended for production use.
+[/note]
+
+rad-end
+
 rad-begin /deb/3.0/ui /deb/3.0/cli
 <a href="#heading--fresh-install-3-0-packages"><h2 id="heading--fresh-install-3-0-packages">How to do a fresh install of MAAS 3.0 from packages</h2></a>
 
@@ -310,6 +460,43 @@ sudo maas-rack register
 These two steps will lead you through two similar <code>apt</code> install sequences.
 
 rad-end
+
+rad-begin /deb/3.1/ui /deb/3.1/cli
+<a href="#heading--fresh-install-3-1-packages"><h2 id="heading--fresh-install-3-1-packages">How to do a fresh install of MAAS 3.1 from packages</h2></a>
+
+The recommended way to set up an initial MAAS environment is to put everything on one machine:
+
+``` bash
+sudo apt-add-repository ppa:maas/3.0
+sudo apt update
+sudo apt-get -y install maas
+```
+
+Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
+
+Choosing "Y" proceeds with a standard <code>apt</code> package install.
+
+<h4>Distributed environment</h4> 
+
+<p>For a more distributed environment, you can place the region controller on one machine:</p>
+
+``` bash
+sudo apt install maas-region-controller
+```
+
+and the rack controller on another:
+
+``` bash
+sudo apt install maas-rack-controller
+sudo maas-rack register
+```
+
+These two steps will lead you through two similar <code>apt</code> install sequences.
+
+rad-end
+
 rad-begin /snap/2.9/ui /snap/2.9/cli 
 <a href="#heading--fresh-install-2-9-snap"><h2 id="heading--fresh-install-2-9-snap">How to do a fresh snap install of MAAS 2.9</h2></a>
 
@@ -353,7 +540,7 @@ sudo maas-rack register
 These two steps will lead you through two similar <code>apt</code> install sequences.
 rad-end
 
-rad-begin /deb/3.0/ui /deb/3.0/cli /deb/2.9/ui /deb/2.9/cli
+rad-begin /deb/3.0/ui /deb/3.0/cli /deb/2.9/ui /deb/2.9/cli /deb/3.1/ui /deb/3.1/cli
 <a href="#heading--create-a-maas-user"><h2 id="heading--create-a-maas-user">How to create a MAAS user</h2></a>
 
 You will need to create a MAAS administrator user to access the web UI:
@@ -367,7 +554,7 @@ $PROFILE is the administrative MAAS username you wish to create.  $EMAIL_ADDRESS
 The `createadmin` option will ask for an SSH key.  If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to use the associated key. For launchpad, just enter `lp:username`, and for github, enter `gh:username` at the prompt. In both cases, the actual username has to be supplied after the `lp:` or `gh:` prefix.
 rad-end
 
-rad-begin /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli
+rad-begin /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli /snap/3.1/ui /snap/3.1/cli
 <a href="#heading--init-maas-poc"><h2 id="heading--init-maas-poc">How to initialise MAAS for a test or POC environment</h2></a>
 
 You can initialise MAAS as a compact version for testing.  To achieve this, we provide a separate snap, called `maas-test-db`, which contains a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.
@@ -511,7 +698,7 @@ The `init` command can takes optional arguments. To list them, as well as read a
 
 <a href="#heading--configure-maas"><h2 id="heading--configure-maas">How to configure MAAS</h2></a>
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 Once you've successfully installed MAAS (regardless of method), you can login to the MAAS CLI via the following process.  First, generate the API-key for the user you're going to employing:
 
 ```
@@ -868,7 +1055,7 @@ If you've done everything correctly, you should see JSON output similar to this 
 
 rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui 
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 Once you've successfully installed MAAS (regardless of method), you can now login here:
 
 ```
