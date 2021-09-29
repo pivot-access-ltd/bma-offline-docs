@@ -728,9 +728,9 @@ We are happy to announce the Beta 1 release of MAAS 3.1. This release provides s
 
 rad-end
 
+rad-begin /deb/3.1/ui /deb/3.1/cli
 <a href="#heading--installing-3-1-0-beta"><h3 id="heading--installing-3-1-0-beta">How to install MAAS 3.1.0-beta1</h3></a>
 
-rad-begin /deb/3.1/ui /deb/3.1/cli
 MAAS 3.1.0-beta1 can be installed by adding the `3.1-next` PPA:
 
 ```
@@ -765,6 +765,7 @@ sudo snap install maas --channel=3.1/beta
 At this point, you may proceed with a normal installation.
 rad-end
 
+rad-begin /snap/3.1/cli /snap/3.1/ui /deb/3.1/cli /deb/3.1/cli
 <a href="#heading--enlist-deployed-machines"><h3 id="heading--enlist-deployed-machines">Ability to enlist deployed machines</h2></a>
 
 #### Ten words or fewer

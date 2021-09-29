@@ -22,11 +22,11 @@ Whenever you install the `python3-prometheus-client` library, Prometheus endpoin
 Currently, prometheus metrics are shared when rack and region controllers are running on the same machine, even though each service provides its own port.  You can safely only query one of the two ports if you're running both controllers.
 [/note]
 
-rad-begin     /snap/2.9/ui /snap/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin /snap/2.9/ui /snap/2.9/cli /snap/3.0/cli /snap/3.0/ui /snap/3.1/ui /snap/3.1/cli 
 For a snap-based MAAS installation, the libraries already included in the snap so that metrics will be available out of the box.
 rad-end
 
-rad-begin     /deb/2.9/ui /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli 
+rad-begin     /deb/2.9/ui /deb/2.9/cli /deb/3.0/ui /deb/3.0/cli /deb/3.1/ui /deb/3.1/cli
 For a Debian-based MAAS installation, install the library and restart MAAS services as follows:
 
     sudo apt install python3-prometheus-client
