@@ -454,6 +454,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4010|/docs/snap/3.0/ui/maas-logging|
 |https://discourse.maas.io/t/-/4014|/docs/snap/3.0/ui/maas-requirements|
 |https://discourse.maas.io/t/-/4026|/docs/snap/3.0/ui/machine-logs|
+|https://discourse.maas.io/t/-/5308|/docs/snap/3.1/ui/postgresql-ha-hot-standby|
+|https://discourse.maas.io/t/-/5307|/docs/snap/3.1/cli/postgresql-ha-hot-standby|
+|https://discourse.maas.io/t/-/5310|/docs/deb/3.1/cli/postgresql-ha-hot-standby|
+|https://discourse.maas.io/t/-/5309|/docs/deb/3.1/ui/postgresql-ha-hot-standby|
 |https://discourse.maas.io/t/-/4066|/docs/snap/3.0/ui/postgresql-ha-hot-standby|
 |https://discourse.maas.io/t/-/4078|/docs/snap/3.0/ui/proxy-log|
 |https://discourse.maas.io/t/-/4158|/docs/snap/3.0/ui/using-rbac-with-maas|
