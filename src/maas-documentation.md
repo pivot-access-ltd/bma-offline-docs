@@ -449,7 +449,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/5061|/docs/snap/3.1/cli/api-authentication|
 |https://discourse.maas.io/t/-/5062|/docs/deb/3.1/ui/api-authentication|
 |https://discourse.maas.io/t/-/5063|/docs/deb/3.1/cli/api-authentication|
-|https://discourse.maas.io/t/-/4134|/docs/snap/3.0/ui/troubleshooting|
 |https://discourse.maas.io/t/-/4186|/docs/snap/3.0/ui/writing-guide|
 |https://discourse.maas.io/t/-/3886|/docs/snap/3.0/ui/configuration-journey|
 |https://discourse.maas.io/t/-/3966|/docs/snap/3.0/ui/ip-ranges|
@@ -1158,6 +1157,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3171|/docs/deb/2.8/ui/troubleshooting|
 |https://discourse.maas.io/t/-/3172|/docs/deb/2.9/cli/troubleshooting|
 |https://discourse.maas.io/t/-/3173|/docs/deb/2.9/ui/troubleshooting|
+|https://discourse.maas.io/t/-/4134|/docs/snap/3.0/ui/troubleshooting|
+|https://discourse.maas.io/t/-/4133|/docs/snap/3.0/cli/troubleshooting|
+|https://discourse.maas.io/t/-/4135|/docs/deb/3.0/cli/troubleshooting|
+|https://discourse.maas.io/t/-/4136|/docs/deb/3.0/ui/troubleshooting|
+|https://discourse.maas.io/t/-/5333|/docs/snap/3.1/ui/troubleshooting|
+|https://discourse.maas.io/t/-/5332|/docs/snap/3.1/cli/troubleshooting|
+|https://discourse.maas.io/t/-/5334|/docs/deb/3.1/cli/troubleshooting|
+|https://discourse.maas.io/t/-/5335|/docs/deb/3.1/ui/troubleshooting|
 |https://discourse.maas.io/t/-/3174|/docs/snap/2.7/cli/ubuntu-kernels|
 |https://discourse.maas.io/t/-/3175|/docs/snap/2.7/ui/ubuntu-kernels|
 |https://discourse.maas.io/t/-/3176|/docs/snap/2.8/cli/ubuntu-kernels|
@@ -1435,9 +1442,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4117|/docs/snap/3.0/cli/test-logs|
 |https://discourse.maas.io/t/-/4119|/docs/deb/3.0/cli/test-logs|
 |https://discourse.maas.io/t/-/4120|/docs/deb/3.0/ui/test-logs|
-|https://discourse.maas.io/t/-/4133|/docs/snap/3.0/cli/troubleshooting|
-|https://discourse.maas.io/t/-/4135|/docs/deb/3.0/cli/troubleshooting|
-|https://discourse.maas.io/t/-/4136|/docs/deb/3.0/ui/troubleshooting|
 |https://discourse.maas.io/t/-/4145|/docs/snap/3.0/cli/user-accounts|
 |https://discourse.maas.io/t/-/4147|/docs/deb/3.0/cli/user-accounts|
 |https://discourse.maas.io/t/-/4148|/docs/deb/3.0/ui/user-accounts|
