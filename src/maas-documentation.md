@@ -450,7 +450,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/5062|/docs/deb/3.1/ui/api-authentication|
 |https://discourse.maas.io/t/-/5063|/docs/deb/3.1/cli/api-authentication|
 |https://discourse.maas.io/t/-/4134|/docs/snap/3.0/ui/troubleshooting|
-|https://discourse.maas.io/t/-/4130|/docs/snap/3.0/ui/tips-tricks-and-traps|
 |https://discourse.maas.io/t/-/4186|/docs/snap/3.0/ui/writing-guide|
 |https://discourse.maas.io/t/-/3886|/docs/snap/3.0/ui/configuration-journey|
 |https://discourse.maas.io/t/-/3966|/docs/snap/3.0/ui/ip-ranges|
@@ -1139,6 +1138,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3159|/docs/deb/2.8/ui/tips-tricks-and-traps|
 |https://discourse.maas.io/t/-/3160|/docs/deb/2.9/cli/tips-tricks-and-traps|
 |https://discourse.maas.io/t/-/3161|/docs/deb/2.9/ui/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/4130|/docs/snap/3.0/ui/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/4129|/docs/snap/3.0/cli/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/4131|/docs/deb/3.0/cli/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/4132|/docs/deb/3.0/ui/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/5329|/docs/snap/3.1/ui/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/5328|/docs/snap/3.1/cli/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/5331|/docs/deb/3.1/cli/tips-tricks-and-traps|
+|https://discourse.maas.io/t/-/5330|/docs/deb/3.1/ui/tips-tricks-and-traps|
 |https://discourse.maas.io/t/-/3162|/docs/snap/2.7/cli/troubleshooting|
 |https://discourse.maas.io/t/-/3163|/docs/snap/2.7/ui/troubleshooting|
 |https://discourse.maas.io/t/-/3164|/docs/snap/2.8/cli/troubleshooting|
@@ -1428,9 +1435,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4117|/docs/snap/3.0/cli/test-logs|
 |https://discourse.maas.io/t/-/4119|/docs/deb/3.0/cli/test-logs|
 |https://discourse.maas.io/t/-/4120|/docs/deb/3.0/ui/test-logs|
-|https://discourse.maas.io/t/-/4129|/docs/snap/3.0/cli/tips-tricks-and-traps|
-|https://discourse.maas.io/t/-/4131|/docs/deb/3.0/cli/tips-tricks-and-traps|
-|https://discourse.maas.io/t/-/4132|/docs/deb/3.0/ui/tips-tricks-and-traps|
 |https://discourse.maas.io/t/-/4133|/docs/snap/3.0/cli/troubleshooting|
 |https://discourse.maas.io/t/-/4135|/docs/deb/3.0/cli/troubleshooting|
 |https://discourse.maas.io/t/-/4136|/docs/deb/3.0/ui/troubleshooting|
