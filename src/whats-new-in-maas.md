@@ -712,12 +712,14 @@ This warning message has no effect on the installation or operation of MAAS, so 
 rad-end
 
 rad-begin /snap/3.1/cli /snap/3.1/ui /deb/3.1/cli /deb/3.1/ui
-<h2>MAAS 3.1.0-beta1 release notes</h2>
+<h2>MAAS 3.1.0 Beta release notes</h2>
 
-We are happy to announce the Beta 1 release of MAAS 3.1. This release provides some new (user-requested) features.
+We are happy to announce the Beta 2 release of MAAS 3.1. This release provides some new (user-requested) features.
 
-<a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.1.0-beta1 features</h3></a>
+<a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.1.0 Beta features and fixes</h3></a>
 
+ - [Improved image sync performance](#heading--image-sync-performance): After the region has downloaded new images, the rack controllers are now much quicker at syncing the new images.
+ 
  - [Ability to enlist deployed machines](#heading--enlist-deployed-machines): Users can enlist deployed machines, a top feature poll request.
 
  - [Static Ubuntu image upload and reuse](#heading--static-ubuntu-images): Users can upload, deploy and reuse a bootable ubuntu image
@@ -726,6 +728,8 @@ We are happy to announce the Beta 1 release of MAAS 3.1. This release provides s
 
  - [LXD authentication UX improvements](#heading--lxd-auth-ux-improvements): Easier MAAS to LXD connection that uses certificates for authentication.
 
+ - [MAAS 3.1 cumulative bug fixes](#heading--maas-3-1-cumulative-bug-fixes)
+ 
 rad-end
 
 rad-begin /deb/3.1/ui /deb/3.1/cli
@@ -765,8 +769,8 @@ sudo snap install maas --channel=3.1/beta
 At this point, you may proceed with a normal installation.
 rad-end
 
-rad-begin /snap/3.1/cli /snap/3.1/ui /deb/3.1/cli /deb/3.1/cli
-<a href="#heading--enlist-deployed-machines"><h3 id="heading--enlist-deployed-machines">Ability to enlist deployed machines</h2></a>
+rad-begin /snap/3.1/cli /snap/3.1/ui /deb/3.1/ui /deb/3.1/cli
+<a href="#heading--enlist-deployed-machines"><h3 id="heading--enlist-deployed-machines">Ability to enlist deployed machines</h3></a>
 
 #### Ten words or fewer
 Users can enlist deployed machines, a top feature poll request.
@@ -835,7 +839,7 @@ Machine-readable output follows:
 }
 ```
 
-<a href="#heading--static-ubuntu-images"><h3 id="heading--static-ubuntu-images">Static Ubuntu image upload and reuse</h2></a>
+<a href="#heading--static-ubuntu-images"><h3 id="heading--static-ubuntu-images">Static Ubuntu image upload and reuse</h3></a>
 
 #### Ten words or fewer
 
@@ -899,7 +903,7 @@ Currently, custom Ubuntu images can be uploaded using the MAAS CLI,by creating a
 When uploading a custom image, there is a new required field: `base_image`. This is not required for non-custom images to be uploaded, but any image with the `custom` prefix will require it.
 [/note]
 
-<a href="#heading--machine-cloning-ui"><h3 id="heading--machine-cloning-ui">Machine configuration cloning UI</h2></a>
+<a href="#heading--machine-cloning-ui"><h3 id="heading--machine-cloning-ui">Machine configuration cloning UI</h3></a>
 
 #### Ten words or fewer
 
@@ -962,7 +966,7 @@ Under "2. Select what to clone", choose "Network", "Storage", or both (here, we'
 
 Click "Clone to machine". MAAS will report the status of the attempt.
 
-<a href="#heading--lxd-auth-ux-improvements"><h3 id="heading--lxd-auth-ux-improvements">LXD authentication UX improvements</h2></a>
+<a href="#heading--lxd-auth-ux-improvements"><h3 id="heading--lxd-auth-ux-improvements">LXD authentication UX improvements</h3></a>
 
 #### Ten words or fewer
 
@@ -1070,5 +1074,25 @@ Paste or upload your certificate and private key, then click "Next" to validate 
 
 ![Screenshot from 2021-09-24 17-08-40|622x110](upload://5LFC5i2Et9eDHYwYEKJmtMJaop0.png) 
 
+<a href="#heading--image-sync-performance"><h3 id="heading--image-sync-performance">Improved image sync performance</h3></a>
 
+#### Ten words or fewer
+
+After downloading images, the rack controller syncs them much faster.
+
+#### About this feature
+
+Downloading and syncing images is a known delay element in MAAS.  While images aren't small, and do take some time to download, we decided to try to speed up the process as much as possible.  With the release of the MAAS 3.1 Beta2, after the region has downloaded new images, the rack controllers are now much quicker at syncing the new images.
+
+#### How to take advantage of this new feature
+
+There is nothing required of our users to experience this improved sync performance, other than upgrading to 3.1 (Beta2, in this case).
+
+<a href="#heading--maas-3-1-cumulative-bug-fixes"><h3 id="heading--maas-3-1-cumulative-bug-fixes">MAAS 3.1 cumulative bug fixes</h3></a>
+
+MAAS 3.1 beta bug fixes can be found in the following milestones:
+
+ - [MAAS 3.1 Beta2 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta2)
+ - [MAAS 3.1 Beta1 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta1)
+ 
 rad-end

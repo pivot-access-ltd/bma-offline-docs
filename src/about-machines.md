@@ -15,6 +15,10 @@ rad-end
 
 One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, acquired, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
 
+rad-begin /snap/3.1/cli /deb/3.1/cli /snap/3.1/ui /deb/3.1/ui
+In addition, already-deployed machines can be enlisted by MAAS, via the MAAS 3.1 CLI, and their operating parameters can be gathered with a special MAAS script.  Because already-deployed machines were not deployed by MAAS, most of the standard MAAS commands will not affect the machine and may, at times, return some odd results.  This is not errant behavior; the goal of enlisting deployed machines is to avoid disturbing their workload.  These unusual behaviors will be documented throughout this article and the following machine articles.
+rad-end
+
 All of these states and actions represent the possible life-cycle of a machine.  This life-cycle isn't strict or linear -- it depends on how you use a machine -- but it's useful to give a general overview of how machines tend to change states.  In the discussion that follows, states and actions are shown in **bold** type.
 
 1. Machines start as servers in your environment, attached to a network or subnet MAAS can manage.
@@ -39,6 +43,7 @@ All of these states and actions represent the possible life-cycle of a machine. 
 
 Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it's not very useful to make a state diagram or flowchart.  Instead, consider the following table:
 
+rad-begin /snap/3.0/cli /deb/3.0/cli /snap/3.0/ui /deb/3.0/ui /snap/2.9/cli /deb/2.9/cli /snap/2.9/ui /deb/2.9/ui
 | Action/State | New | Ready | Acquired | Deployed | Locked | Rescue | Broken |
 |:-------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|	
 | Commission   | X   | X     |          |          |        |        |   X    |
@@ -58,8 +63,52 @@ Since these actions are not necessarily sequential, and the available actions ch
 | Set zone     | X   | X     |   X      |    X     |        |   X    |   X    |
 | Set...pool   | X   | X     |   X      |    X     |        |   X    |   X    |
 | Delete       | X   | X     |   X      |    X     |        |   X    |   X    |
+rad-end
+rad-begin /snap/3.1/cli /deb/3.1/cli /snap/3.1/ui /deb/3.1/ui
+| Action/State | New | Ready | Acquired | Deployed | Locked | Rescue | Broken | Enlist deployed |
+|:-------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|:---------------:|	
+| Commission   | X   | X     |          |          |        |        |   X    |  X (w/scripts)  |
+| Acquire      |     | X     |          |          |        |        |        |                 |
+| Deploy       |     | X     |   X      |          |        |        |        |                 |
+| Release      |     |       |   X      |    X     |        |        |        |  X (no return)  |
+| Power on     |     |       |          |    X     |        |        |   X    |                 |
+| Power off    |     |       |          |          |        |        |        |                 |
+| Test         | X   | X     |   X      |    X     |        |        |   X    |                 |
+| Rescue mode  | X   | X     |   X      |    X     |        |        |   X    |                 |
+| Exit rescue  |     |       |          |          |        |   X    |        |                 |
+| Mark broken  |     |       |   X      |    X     |        |        |        |  X (no return)  |
+| Mark fixed   |     |       |          |          |        |        |   X    |                 |
+| Lock         |     |       |          |    X     |        |        |        |  X              |
+| Unlock       |     |       |          |          |   X    |        |        |  X              |
+| Tag          | X   | X     |   X      |    X     |        |   X    |   X    |  X              |
+| Set zone     | X   | X     |   X      |    X     |        |   X    |   X    |  X              |
+| Set...pool   | X   | X     |   X      |    X     |        |   X    |   X    |  X              |
+| Delete       | X   | X     |   X      |    X     |        |   X    |   X    |  X*             |
 
-When a machine is in the state listed in a column, it is possible to take the row actions marked with an "X."  You access these actions from the "Take action" menu in the upper right corner of the machine listing.  Note that some actions, such as "Mark broken" or "Lock," may be hidden when they are not available.
+*Machine is removed from the view of MAAS, but remains deployed with original workload.
+rad-end
+
+When a machine is in the state listed in a column, it is possible to take the row actions marked with an "X."
+
+rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
+You access these actions from the "Take action" menu in the upper right corner of the machine listing.  Note that some actions, such as "Mark broken" or "Lock," may be hidden when they are not available.
+rad-end
+
+rad-begin /snap/3.1/ui /deb/3.1/ui
+In the case of already-deployed machines enlisted by MAAS, some of the possible actions may appear to be available, but either don't work or ultimately appear to fail, without affecting the actual status of the deployed machine.
+rad-end
+rad-begin /snap/3.1/cli /deb/3.1/cli 
+In the case of already-deployed machines enlisted by MAAS, some of the possible actions may fail with unusual results, such as this exchange when attempting to turn off an already-deployed machine enlisted by MAAS:
+
+```nohighlight
+$ maas admin machine power-off t8b7cw
+Success.
+Machine-readable output follows:
+null
+```
+
+Note that the immediate return is `Success`, but the machine-readable output is `null`.  After executing this command on an already-deployed machine, you should find that the deployed machine was not affected by the `power-off` command, since the `power-type` was set to `manual`.  This is an expected behavior.
+rad-end
 
 For a better understanding of these states and actions, see [Node statuses](/t/concepts-and-terms/785#heading--node-statuses) and [Machine actions](/t/concepts-and-terms/785#heading--machine-actions).
 
@@ -96,6 +145,20 @@ After the commissioning process, MAAS places the machine in the ‘Ready’ stat
 [note]
 MAAS runs built-in commissioning scripts during the enlistment phase. When you commission a machine, any customised commissioning scripts you add will have access to data collected during enlistment. Follow the link above for more information about commissioning and commission scripts.
 [/note]
+
+rad-begin /snap/3.1/cli /deb/3.1/cli /snap/3.1/ui /deb/3.1/ui
+<a href="#heading--about-enlisting-deployed-machines"><h4 id="heading--about-enlisting-deployed-machines">About enlisting deployed machines</h4></a>
+
+In general, when adding a machine to MAAS, it network boots the machine into an ephemeral environment to collect hardware information about the machine. While this is not a destructive action, it doesn’t work if you have machines that are already running a workload.
+
+For one, you might not be able to disrupt the workload in order to network boot it. But also, the machine would be marked as Ready, which is incorrect.
+
+When adding a machine, you may specify that the machine is already deployed. In that case, it won’t be going through the normal commissioning process and will be marked as being deployed.
+
+Such machines lack hardware information. In order to update the information, a script is provided to run a subset of the commissioning scripts and send them back to MAAS.
+
+Some of the normal commands that work on deployed machines will not work on an already-deployed machine enlisted by MAAS (see the chart above for details).
+rad-end
 
 <a href="#heading--about-bmc-enlistment"><h4 id="heading--about-bmc-enlistment">About BMC enlistment</h4></a>
 
@@ -216,13 +279,13 @@ You have the option of setting some parameters to change how commissioning runs:
 
 MAAS keeps extensive logs of the commissioning process for each machine. These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.
 
+rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
 <a href="#heading--about-disabling-individual-boot-methods"><h4 id="heading--about-disabling-individual-boot-methods">About disabling individual boot methods</h4></a>
 
-In MAAS 3.0, it is possible to diable individual boot methods.  This must be done via the CLI. When a boot method is disabled MAAS will configure MAAS controlled `isc-dhcpd` to not respond to the associated [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture). External DHCP servers must be configured manually.
+It is possible to diable individual boot methods.  This must be done via the CLI. When a boot method is disabled MAAS will configure MAAS controlled `isc-dhcpd` to not respond to the associated [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture). External DHCP servers must be configured manually.
 
 To allow different boot methods to be in different states on separate physical networks using the same VLAN ID configuration is done on the subnet in the UI or API. When using the API boot methods to be disabled may be specified using the MAAS internal name or [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture) in octet or hex form. 
 
-rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
 For MAAS 3.0 and above, the following boot method changes have been implemented:
 
 - UEFI AMD64 HTTP(00:10) has been reenabled.
