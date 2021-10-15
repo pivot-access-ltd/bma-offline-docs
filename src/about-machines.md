@@ -16,7 +16,7 @@ rad-end
 One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, acquired, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
 
 rad-begin /snap/3.1/cli /deb/3.1/cli /snap/3.1/ui /deb/3.1/ui
-In addition, already-deployed machines can be enlisted by MAAS, via the MAAS 3.1 CLI, and their operating parameters can be gathered with a special MAAS script.  Because already-deployed machines were not deployed by MAAS, most of the standard MAAS commands will not affect the machine and may, at times, return some odd results.  This is not errant behavior; the goal of enlisting deployed machines is to avoid disturbing their workload.  These unusual behaviors will be documented throughout this article and the following machine articles.
+In addition, already-deployed machines can be enlisted by MAAS, via the MAAS 3.1 CLI, and their operating parameters can be gathered with a special MAAS script.  Because already-deployed machines were not deployed by MAAS, most of the standard MAAS commands will not affect the machine and may, at times, return some odd results.  This is not errant behaviour; the goal of enlisting deployed machines is to avoid disturbing their workload.  These unusual behaviours will be documented throughout this article and the following machine articles.
 rad-end
 
 All of these states and actions represent the possible life-cycle of a machine.  This life-cycle isn't strict or linear -- it depends on how you use a machine -- but it's useful to give a general overview of how machines tend to change states.  In the discussion that follows, states and actions are shown in **bold** type.
@@ -107,7 +107,7 @@ Machine-readable output follows:
 null
 ```
 
-Note that the immediate return is `Success`, but the machine-readable output is `null`.  After executing this command on an already-deployed machine, you should find that the deployed machine was not affected by the `power-off` command, since the `power-type` was set to `manual`.  This is an expected behavior.
+Note that the immediate return is `Success`, but the machine-readable output is `null`.  After executing this command on an already-deployed machine, you should find that the deployed machine was not affected by the `power-off` command, since the `power-type` was set to `manual`.  This is an expected behaviour.
 rad-end
 
 For a better understanding of these states and actions, see [Node statuses](/t/concepts-and-terms/785#heading--node-statuses) and [Machine actions](/t/concepts-and-terms/785#heading--machine-actions).
@@ -267,11 +267,11 @@ You have the option of setting some parameters to change how commissioning runs:
 
 3. `skip_networking`: Optional integer.  Controls whether to skip re-configuring the networking on the machine after the commissioning has completed. '1' == True, '0' == False. Roughly equivalent to **Retain network configuration** in the web UI.
 
-4. `skip_storage`: Optional integer.  Controls hether to skip re-configuring the storage on the machine after the commissioning has completed. '1' == True, '0' == False.  Roughly equivalent to **Retain storage configuration** in the web UI.
+4. `skip_storage`: Optional integer.  Controls whether to skip re-configuring the storage on the machine after the commissioning has completed. '1' == True, '0' == False.  Roughly equivalent to **Retain storage configuration** in the web UI.
 
 5. `commissioning_scripts`: Optional string.  A comma separated list of commissioning script names and tags to be run. By default all custom commissioning scripts are run. Built-in commissioning scripts always run. Selecting `update_firmware` or `configure_hba` will run firmware updates or configure HBA's on matching machines.
 
-6. `testing_scripts`: Optional string.  A comma seperated list of testing script names and tags to be run. By default all tests tagged `commissioning` will be run. Set to `none` to disable running tests.
+6. `testing_scripts`: Optional string.  A comma separated list of testing script names and tags to be run. By default all tests tagged `commissioning` will be run. Set to `none` to disable running tests.
 
 7. `parameters`: Optional string.  Scripts selected to run may define their own parameters. These parameters may be passed using the parameter name. Optionally a parameter may have the script name prepended to have that parameter only apply to that specific script.
 
@@ -282,13 +282,13 @@ MAAS keeps extensive logs of the commissioning process for each machine. These l
 rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
 <a href="#heading--about-disabling-individual-boot-methods"><h4 id="heading--about-disabling-individual-boot-methods">About disabling individual boot methods</h4></a>
 
-It is possible to diable individual boot methods.  This must be done via the CLI. When a boot method is disabled MAAS will configure MAAS controlled `isc-dhcpd` to not respond to the associated [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture). External DHCP servers must be configured manually.
+It is possible to disable individual boot methods.  This must be done via the CLI. When a boot method is disabled MAAS will configure MAAS controlled `isc-dhcpd` to not respond to the associated [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture). External DHCP servers must be configured manually.
 
 To allow different boot methods to be in different states on separate physical networks using the same VLAN ID configuration is done on the subnet in the UI or API. When using the API boot methods to be disabled may be specified using the MAAS internal name or [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture) in octet or hex form. 
 
 For MAAS 3.0 and above, the following boot method changes have been implemented:
 
-- UEFI AMD64 HTTP(00:10) has been reenabled.
+- UEFI AMD64 HTTP(00:10) has been re-enabled.
 - UEFI ARM64 HTTP(00:13) has been enabled.
 - UEFI ARM64 TFTP(00:0B) and UEFI ARM64 HTTP(00:13) will now provide a shim and GRUB signed with the Microsoft boot loader keys.
 - grub.cfg for all UEFI platforms has been updated to replace the deprecated `linuxefi` and `initrdefi` commands with the standard `linux` and `initrd` commands.
@@ -314,7 +314,7 @@ The YAML file must represent a dictionary with these two fields:
 
 2.`results`: A dictionary of results. The key may map to a results key defined as embedded YAML within the script. The value of each result must be a string or a list of strings.
 
-Optionally, a script may define what results to return in the YAML file in the metadat fields.. The `results` field should contain a dictionary of dictionaries. The key for each dictionary is a name which is returned by the results YAML. Each dictionary may contain the following two fields:
+Optionally, a script may define what results to return in the YAML file in the metadata fields.. The `results` field should contain a dictionary of dictionaries. The key for each dictionary is a name which is returned by the results YAML. Each dictionary may contain the following two fields:
 
 1. `title` - The title for the result, used in the UI.
 
@@ -458,7 +458,7 @@ The curtin installer uses an image-based method and is now the only installer us
 
 Before deploying, you should take two key actions:
 
-1. Review and possibly set the [Ubuntu kernels](/t/how-to-customise-machines/nnnn#heading--about-ubuntu-kernels) and the [Kernel boot options](/t/how-to-customise-machines/nnnn#heading--about-kerel-boot-options) that will get used by deployed machines.
+1. Review and possibly set the [Ubuntu kernels](/t/how-to-customise-machines/nnnn#heading--about-ubuntu-kernels) and the [Kernel boot options](/t/how-to-customise-machines/nnnn#heading--about-kernel-boot-options) that will get used by deployed machines.
 
 2. Ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/nnnn#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
 
@@ -588,7 +588,7 @@ rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli /snap/3.1/ui /snap
 
 <a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">Handling attached USB and PCI devices</h3></a>
 
-The machines in your MAAS may have devices attached to them via USB or PCI interface, such as keyboards, cameras, network cards, GPUs, etc.  MAAS will recognize these devices and make them visible to you when a machine is commissioned.
+The machines in your MAAS may have devices attached to them via USB or PCI interface, such as keyboards, cameras, network cards, GPUs, etc.  MAAS will recognise these devices and make them visible to you when a machine is commissioned.
 
 For example, the machine details presents USB and PCI devices like this:
 
@@ -614,7 +614,7 @@ src="https://discourse.maas.io/uploads/default/original/2X/8/82e1e6f8bc511047ac5
 The USB tab presents similar information in the same format.
 
 [note]
-If you are upgrading from a previous version of MAAS, PCI and USB devices aren't modeled, so you will have to recommission the machine to capture these devices.
+If you are upgrading from a previous version of MAAS, PCI and USB devices aren't modelled, so you will have to recommission the machine to capture these devices.
 [/note]
 
 
@@ -632,7 +632,7 @@ where:
 - $SYSTEM_ID = the ID of the machine in question (e.g., "ngx7ry")
 - $DEVICE_ID = the ID of the device you want to delete 
 
-If the device is still present in the system, it will be recogized again (and thus "recreated")
+If the device is still present in the system, it will be recognised again (and thus "recreated")
 when the machine is commissioned again.
 
 <a href="#heading--about-machine-interfaces-h3"><h3 id="heading--about-machine-interfaces-h3">About machine network info</h3></a>
@@ -775,7 +775,7 @@ Each of these are explained below.
 Overwrites all data with zeros.
 
 
-<a href="#heading--about-secure-erasure"><h5 id="heading--about-secure-erasure">About secure eraseure</h5></a>
+<a href="#heading--about-secure-erasure"><h5 id="heading--about-secure-erasure">About secure erasure</h5></a>
 
 Although effectively equivalent to Standard erase, Secure erase is much faster because the disk's firmware performs the operation. Because of this, however, some disks may not be able to perform this erasure type (SCSI, SAS, and FC disks in particular).
 
