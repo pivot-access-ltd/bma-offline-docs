@@ -4,8 +4,8 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 <a href="#heading--how-to-engage-with-maas"><h2 id="heading--how-to-engage-with-maas">How to engage with MAAS</h2></a>
 
-- [Find out what's new in MAAS](/t/whats-new-in-maas/4182)
-- [Get started with MAAS](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)
+- [Find out what's new in MAAS](/t/whats-new-in-maas/5292)
+- [Get started with MAAS](/t/give-me-an-example-of-maas-snap-3-0-ui/5092)
 - [Get professional support](/t/-/5448)
 - [Report a bug](/t/report-a-bug/4446)
 - [Request a feature](/t/request-a-feature/4447)
@@ -17,40 +17,40 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 ### [Introduction](/t/maas-documentation/25)
 
-- [About MAAS](/t/about-maas-snap-3-0-ui/3813)
-- [Get started with MAAS](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)
-- [Install MAAS](/t/maas-installation-snap-3-0-ui/4002)
-- [Use the MAAS CLI](/t/maas-cli-snap-3-0-ui/3986)
+- [About MAAS](/t/-/5064)
+- [Get started with MAAS](/t/-/5092)
+- [Install MAAS](/t/-/5128)
+- [Use the MAAS CLI](/t/-/5236)
 
-### [Controllers](/t/controllers-snap-3-0-ui/3898)
+### [Controllers](/t/-/5072)
 
-- [Manage racks](/t/rack-controllers-snap-3-0-ui/4090)
-- [Manage regions](/t/region-controllers-snap-3-0-ui/4094)
-- [Enable HA](/t/high-availability-snap-3-0-ui/3946)
+- [Manage racks](/t/-/5172)
+- [Manage regions](/t/-/5176)
+- [Enable HA](/t/-/5120)
 
-### [Machines](/t/machines-snap-3-0-ui/4030)
+### [Machines](/t/-/5080)
 
-- [Manage machines](/t/-/4844)
-- [Deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
-- [Customise machines](/t/how-to-customise-machines-snap-3-0-ui/3910)
+- [Manage machines](/t/-/5160)
+- [Deploy machines](/t/-/5112)
+- [Customise machines](/t/-/5108)
 
-### [VM hosting](/t/vm-hosting-snap-3-0-ui/4162)
+### [VM hosting](/t/-/5068)
 
-- [Manage VM hosts](/t/how-to-manage-vm-hosts-snap-3-0-ui/3818)
-- [Manage VMs](/t/creating-and-deleting-vms-snap-3-0-ui/3906)
-- [Use LXD](/t/how-to-use-lxd/4470)
+- [Manage VM hosts](/t/-/5140)
+- [Manage VMs](/t/-/5148)
+- [Use LXD](/t/-/5208)
 
-### [Networking](/t/about-networking-snap-3-0-ui/4046)
+### [Networking](/t/-/5084)
 
-- [Manage networks](/t/-/4927)
-- [Manage interfaces](/t/-/3874)
-- [Manage DHCP](/t/managing-dhcp-snap-3-0-ui/4034)
-- [Manage IP ranges](/t/ip-ranges-snap-3-0-ui/3966)
-- [Manage proxies](/t/proxy-snap-3-0-ui/4082)
-- [Enable TLS](/t/configuring-tls-encryption-snap-3-0-ui/3890)
-- [Manage zones (AZs)](/t/availability-zones-snap-3-0-ui/3834)
-- [Set up NTP](/t/ntp-services-snap-3-0-ui/4054)
-- [Use air-gapped MAAS](/t/using-maas-in-an-air-gapped-environment-snap-3-0-ui/4154)
+- [Manage networks](/t/-/5164)
+- [Manage interfaces](/t/-/5156)
+- [Manage DHCP](/t/-/5132)
+- [Manage IP ranges](/t/-/5136)
+- [Manage proxies](/t/-/5168)
+- [Enable TLS](/t/-/5116)
+- [Manage zones (AZs)](/t/-/5152)
+- [Set up NTP](/t/-/5200)
+- [Use air-gapped MAAS](/t/-/5212)
 
 ### [Images](/t/-/5076)
 
