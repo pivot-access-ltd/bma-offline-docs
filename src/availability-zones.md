@@ -13,7 +13,7 @@ A newly installed MAAS comes with a default zone which initially contains all no
 
 rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui 
 
-<a href="#heading--list-zones"><h2 id="heading--list-zones">List availabilty zones</h2></a>
+<a href="#heading--list-zones"><h2 id="heading--list-zones">List availability zones</h2></a>
 
 To see a list of availability zones, choose "AZs" from the top menu:
 
