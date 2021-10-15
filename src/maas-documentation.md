@@ -52,49 +52,49 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [Set up NTP](/t/ntp-services-snap-3-0-ui/4054)
 - [Use air-gapped MAAS](/t/using-maas-in-an-air-gapped-environment-snap-3-0-ui/4154)
 
-### [Images](/t/images-snap-3-0-ui/3958)
+### [Images](/t/-/5076)
 
-- [Import images](/t/select-and-import-images-snap-3-0-ui/4102)
-- [Build MAAS images](/t/maas-image-builder-snap-3-0-ui/3998)
-- [Create custom Ubuntu images](/t/creating-a-custom-ubuntu-image-snap-3-0-ui/3902)
-- [Use image streams](/t/using-image-streams-snap-3-0-ui/4150)
-- [Mirror images locally](/t/local-image-mirror-snap-3-0-ui/3982)
-- [Manage VMWare images](/t/vmware-images-snap-3-0-ui/4174)
+- [Import images](/t/-/5124)
+- [Build MAAS images](/t/-/5100)
+- [Create custom Ubuntu images](/t/-/5104)
+- [Use image streams](/t/-/5220)
+- [Mirror images locally](/t/-/5188)
+- [Manage VMWare images](/t/-/5144)
 
-### [Tags](/t/about-tags-snap-3-0-ui/4022)
+### [Tags](/t/-/5088)
 
-- [Manage tags](/t/-/4954)
-- [Use machine tags](/t/-/4958)
-- [Use controller tags](/t/-/4970)
-- [Use storage tags](/t/-/4978)
-- [Use network tags](/t/-/4986)
+- [Manage tags](/t/-/5180)
+- [Use machine tags](/t/-/5224)
+- [Use controller tags](/t/-/5216)
+- [Use storage tags](/t/-/5232)
+- [Use network tags](/t/-/5228)
 
 ### Operations
 
-- [Set up Prometheus](/t/prometheus-metrics-snap-3-0-ui/4074)
-- [Back up MAAS](/t/backup-snap-3-0-ui/3838)
-- [Secure MAAS](/t/hardening-your-maas-installation-snap-3-0-ui/3938)
-- [Manage users](/t/user-accounts-snap-3-0-ui/4146)
-- [Search MAAS](/t/interactive-search-snap-3-0-ui/3962)
+- [Set up Prometheus](/t/-/5204)
+- [Back up MAAS](/t/-/5096)
+- [Secure MAAS](/t/-/5196)
+- [Manage users](/t/-/5184)
+- [Search MAAS](/t/-/5192)
 
 ### Reference
 
-- [Power management](/t/power-management-snap-3-0-ui/4070)
+- [Power management](/t/-/5246)
 - [Commissioning scripts](/t/-/5375)
 - [Hardware test scripts](/t/-/5392)
-- [Log files](/t/maas-logging-snap-3-0-ui/4010)
+- [Log files](/t/-/5240)
 - [API documentation](https://maas.io/docs/api)
-- [API client](/t/api-client/810)
-- [API authentication](/t/api-authentication-snap-3-0-ui/3826)
+- [API client](/t/-/5404)
+- [API authentication](/t/-/5060)
 - [Concepts & terms](/t/-/5416)
 
-### [Troubleshooting](/t/troubleshooting-snap-3-0-ui/4134)
+### [Troubleshooting](/t/-/5333)
 
 - [Get help](/t/-/5428)
-- [Tips, tricks, and traps](/t/tips-tricks-and-traps-snap-3-0-ui/4130)
+- [Tips, tricks, and traps](/t/-/5329)
 - [Upgrade MAAS](/t/upgrading-maas/5436)
 
-### [Release notes](/t/whats-new-in-maas/4182)
+### [Release notes](/t/-/5292)
 
 ### [Improve the doc](/t/-/4186)
 
