@@ -11,7 +11,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 - [Request a feature](/t/request-a-feature/4447)
 - [Ask questions on the forum](https://discourse.maas.io)
 - [Push some code](https://launchpad.net/maas)
-- [Improve our documentation](/t/writing-guide/4186)
+- [Improve our documentation](/t/-/5452)
 
 ## Navigation
 
@@ -531,7 +531,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/5061|/docs/snap/3.1/cli/api-authentication|
 |https://discourse.maas.io/t/-/5062|/docs/deb/3.1/ui/api-authentication|
 |https://discourse.maas.io/t/-/5063|/docs/deb/3.1/cli/api-authentication|
-|https://discourse.maas.io/t/-/4186|/docs/snap/3.0/ui/writing-guide|
 |https://discourse.maas.io/t/-/3886|/docs/snap/3.0/ui/configuration-journey|
 |https://discourse.maas.io/t/-/3966|/docs/snap/3.0/ui/ip-ranges|
 |https://discourse.maas.io/t/-/3994|/docs/snap/3.0/ui/maas-documentation|
@@ -1338,6 +1337,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3267|/docs/deb/2.8/ui/writing-guide|
 |https://discourse.maas.io/t/-/3268|/docs/deb/2.9/cli/writing-guide|
 |https://discourse.maas.io/t/-/3269|/docs/deb/2.9/ui/writing-guide|
+|https://discourse.maas.io/t/-/4185|/docs/snap/3.0/cli/writing-guide|
+|https://discourse.maas.io/t/-/4186|/docs/snap/3.0/ui/writing-guide|
+|https://discourse.maas.io/t/-/4187|/docs/deb/3.0/cli/writing-guide|
+|https://discourse.maas.io/t/-/4188|/docs/deb/3.0/ui/writing-guide|
+|https://discourse.maas.io/t/-/5453|/docs/snap/3.1/cli/writing-guide|
+|https://discourse.maas.io/t/-/5452|/docs/snap/3.1/ui/writing-guide|
+|https://discourse.maas.io/t/-/5454|/docs/deb/3.1/cli/writing-guide|
+|https://discourse.maas.io/t/-/5455|/docs/deb/3.1/ui/writing-guide|
 |https://discourse.maas.io/t/-/3270|/docs/snap/2.7/cli/zone-examples|
 |https://discourse.maas.io/t/-/3271|/docs/snap/2.7/ui/zone-examples|
 |https://discourse.maas.io/t/-/3272|/docs/snap/2.8/cli/zone-examples|
@@ -1544,9 +1551,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4173|/docs/snap/3.0/cli/vmware-images|
 |https://discourse.maas.io/t/-/4175|/docs/deb/3.0/cli/vmware-images|
 |https://discourse.maas.io/t/-/4176|/docs/deb/3.0/ui/vmware-images|
-|https://discourse.maas.io/t/-/4185|/docs/snap/3.0/cli/writing-guide|
-|https://discourse.maas.io/t/-/4187|/docs/deb/3.0/cli/writing-guide|
-|https://discourse.maas.io/t/-/4188|/docs/deb/3.0/ui/writing-guide|
 |https://discourse.maas.io/t/-/4195|/docs/deb/3.0/ui/maas-documentation|
 |https://discourse.maas.io/t/-/4268|/docs/deb/2.8/ui/air-gapped-maas|
 |https://discourse.maas.io/t/-/4269|/docs/deb/2.8/cli/air-gapped-maas|
@@ -1762,10 +1766,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/commissioning-logs|/docs/snap/3.1/ui/commissioning-logs|
 |/docs/configuration-journey|/docs/snap/3.1/ui/configuration-journey|
 |/docs/configure-networking|/docs/snap/3.1/ui/about-networking|
-|/docs/contributing-build|/docs/writing-guide|
+|/docs/contributing-build|/docs/snap/3.1/ui/writing-guide|
 |/docs/contributing-en-GB|/docs/language-details-contributing-to-maas-docs|
 |/docs/contributing-git|/docs/working-with-git-and-github|
-|/docs/contributing-writing|/docs/writing-guide|
+|/docs/contributing-writing|/docs/snap/3.1/ui/writing-guide|
 |/docs/creating-and-deleting-machines|/docs/snap/3.1/ui/creating-and-deleting-vms|
 |/docs/creating-and-deleting-new-vms|/docs/snap/3.1/ui/creating-and-deleting-vms|
 |/docs/custom-machine-setup|/docs/snap/3.1/ui/how-to-customise-machines|
