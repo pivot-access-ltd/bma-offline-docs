@@ -6,7 +6,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 - [Find out what's new in MAAS](/t/whats-new-in-maas/4182)
 - [Get started with MAAS](/t/give-me-an-example-of-maas-snap-3-0-ui/3934)
-- [Get professional support](https://maas.io/contact-us)
+- [Get professional support](/t/-/5448)
 - [Report a bug](/t/report-a-bug/4446)
 - [Request a feature](/t/request-a-feature/4447)
 - [Ask questions on the forum](https://discourse.maas.io)
@@ -80,25 +80,25 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 ### Reference
 
 - [Power management](/t/power-management-snap-3-0-ui/4070)
-- [Commissioning scripts](/t/-/4862)
-- [Hardware test scripts](/t/-/4861)
+- [Commissioning scripts](/t/-/5375)
+- [Hardware test scripts](/t/-/5392)
 - [Log files](/t/maas-logging-snap-3-0-ui/4010)
 - [API documentation](https://maas.io/docs/api)
 - [API client](/t/api-client/810)
 - [API authentication](/t/api-authentication-snap-3-0-ui/3826)
-- [Concepts & terms](/t/concepts-and-terms/785)
+- [Concepts & terms](/t/-/5416)
 
 ### [Troubleshooting](/t/troubleshooting-snap-3-0-ui/4134)
 
-- [Get help](/t/getting-help/838)
+- [Get help](/t/-/5428)
 - [Tips, tricks, and traps](/t/tips-tricks-and-traps-snap-3-0-ui/4130)
-- [Upgrade MAAS](/t/upgrading-maas/779)
+- [Upgrade MAAS](/t/upgrading-maas/5436)
 
 ### [Release notes](/t/whats-new-in-maas/4182)
 
-### [Improve the doc](/t/writing-guide-snap-3-0-ui/4186)
+### [Improve the doc](/t/-/4186)
 
-### [Contact us](/t/contact-us/743)
+### [Contact us](/t/-/5448)
 
 ## URLs
 
@@ -462,8 +462,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3909|/docs/snap/3.0/cli/how-to-customise-machines|
 |https://discourse.maas.io/t/-/3911|/docs/deb/3.0/cli/how-to-customise-machines|
 |https://discourse.maas.io/t/-/3912|/docs/deb/3.0/ui/how-to-customise-machines|
-|https://discourse.maas.io/t/-/4862|/docs/commissioning-scripts-reference|
-|https://discourse.maas.io/t/-/4861|/docs/hardware-test-scripts|
 |https://discourse.maas.io/t/-/4844|/docs/snap/3.0/ui/how-to-manage-machines|
 |https://discourse.maas.io/t/-/4845|/docs/snap/3.0/cli/how-to-manage-machines|
 |https://discourse.maas.io/t/-/4846|/docs/snap/2.9/ui/how-to-manage-machines|
@@ -1574,22 +1572,18 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4333|/docs/deb/2.8/ui/using-image-streams|
 |https://discourse.maas.io/t/-/4334|/docs/deb/2.9/cli/using-image-streams|
 |https://discourse.maas.io/t/-/4335|/docs/deb/2.9/ui/using-image-streams|
-|https://discourse.maas.io/t/-/743/|/docs/contact-us|
 |https://discourse.maas.io/t/-/744/|/docs/building-the-docs|
 |https://discourse.maas.io/t/-/745/|/docs/language-details-contributing-to-maas-docs|
 |https://discourse.maas.io/t/-/746/|/docs/working-with-git-and-github|
 |https://discourse.maas.io/t/-/756/|/docs/install-from-iso|
-|https://discourse.maas.io/t/-/779/|/docs/upgrading-maas|
 |https://discourse.maas.io/t/-/782/|/docs/web-ui|
 |https://discourse.maas.io/t/-/785/|/docs/network-tutorial|
-|https://discourse.maas.io/t/-/785/|/docs/concepts-and-terms|
 |https://discourse.maas.io/t/-/793/|/docs/advanced-cli-tasks|
 |https://discourse.maas.io/t/-/794/|/docs/common-cli-tasks|
 |https://discourse.maas.io/t/-/795/|/docs/composable-hardware|
 |https://discourse.maas.io/t/-/797/|/docs/cli-image-management|
 |https://discourse.maas.io/t/-/798/|/docs/cli-interface-management|
 |https://discourse.maas.io/t/-/799/|/docs/cli-kernel-management|
-|https://discourse.maas.io/t/-/810/|/docs/api-client|
 |https://discourse.maas.io/t/-/815/|/docs/add-an-rsd-host|
 |https://discourse.maas.io/t/-/817/|/docs/intel-rack-scale-design-rsd-introduction|
 |https://discourse.maas.io/t/-/818/|/docs/rsd-storage|
@@ -1597,7 +1591,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/832|/docs/and/hardware.testing/scripts/cli-commissioning|
 |https://discourse.maas.io/t/-/835/ |/docs/whats-new-in-2-6|
 |https://discourse.maas.io/t/-/835/|/docs/historical-release-notes|
-|https://discourse.maas.io/t/-/838/|/docs/getting-help|
 |https://discourse.maas.io/t/-/839/|/docs/documentation-index|
 |https://discourse.maas.io/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777/|/docs/upgrade-2-3-to-2-4-from-ubuntu-16-04|
 |https://discourse.maas.io/t/upgrade-from-1-9-to-2-x/778/|/docs/upgrade-from-1-9-to-2-x|
@@ -1609,6 +1602,13 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/upgrading-maas|/docs/snap/3.1/ui/upgrading-maas|
+|/docs/getting-help|/docs/snap/3.1/ui/getting-help|
+|/docs/api-client|/docs/snap/3.1/ui/api-client|
+|/docs/commissioning-scripts-reference|/docs/snap/3.1/ui/commissioning-scripts-reference|
+|/docs/hardware-test-scripts|/docs/snap/3.1/ui/hardware-test-scripts-reference|
+|/docs/concepts-and-terms|/docs/snap/3.1/ui/concepts-and-terms|
+|/docs/contact-us|/docs/snap/3.1//ui/contact-us|
 |/docs/deb/2.9/cli/manage-machines|/docs/deb/2.9/cli/how-to-manage-machines|
 |/docs/deb/2.9/ui/manage-machines|/docs/deb/2.9/ui/how-to-manage-machines|
 |/docs/deb/3.0/cli/manage-machines|/docs/deb/3.0/cli/how-to-manage-machines|
@@ -1629,7 +1629,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/3.0/ui/how-to-commission-machines|/docs/snap/3.0/ui/how-to-deploy-machines#heading--how-to-commission-a-machine|
 |/docs/snap/3.1/cli/how-to-commission-machines|/docs/snap/3.1/cli/how-to-deploy-machines#heading--how-to-commission-a-machine|
 |/docs/snap/3.1/ui/how-to-commission-machines|/docs/snap/3.1/ui/how-to-deploy-machines#heading--how-to-commission-a-machine|
-|/docs/audit-event-logs|/docs/snap/3.0/ui/audit-event-logs|
+|/docs/audit-event-logs|/docs/snap/3.1/ui/audit-event-logs|
 |/docs/deb/2.9/cli/using-lxd-projects-with-maas|/docs/deb/2.9/cli/how-to-use-lxd|
 |/docs/deb/2.9/ui/using-lxd-projects-with-maas|/docs/deb/2.9/ui/how-to-use-lxd|
 |/docs/deb/3.0/cli/using-lxd-projects-with-maas|/docs/deb/3.0/cli/how-to-use-lxd|
@@ -1710,7 +1710,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/2.9/ui/ipv6-addressing|/docs/snap/2.9/ui/about-networking#heading--about-ipv6|
 |/docs/snap/3.0/cli/ipv6-addressing|/docs/snap/3.0/cli/about-networking#heading--about-ipv6|
 |/docs/snap/3.0/ui/ipv6-addressing|/docs/snap/3.0/ui/about-networking#heading--about-ipv6|
-|/docs/how-to-manage-networks|/docs/snap/3.0/ui/how-to-manage-networks|
+|/docs/how-to-manage-networks|/docs/snap/3.1/ui/how-to-manage-networks|
 |/docs/deb/2.9/cli/networking|/docs/deb/2.9/cli/about-networking|
 |/docs/deb/2.9/ui/networking|/docs/deb/2.9/ui/about-networking|
 |/docs/deb/3.0/cli/networking|/docs/deb/3.0/cli/about-networking|
@@ -1735,42 +1735,42 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/2.9/ui/network-discovery|/docs/snap/2.9/ui/about-networking#heading--about-network-discovery|
 |/docs/snap/3.0/cli/network-discovery|/docs/snap/3.0/cli/about-networking#heading--about-network-discovery|
 |/docs/snap/3.0/ui/network-discovery|/docs/snap/3.0/ui/about-networking#heading--about-network-discovery|
-|/docs/about-maas|/docs/snap/3.0/ui/about-maas|
-|/docs/release-notes|/docs/snap/3.0/ui/whats-new-in-maas|
-|/docs/get-started-with-maas|/docs/snap/3.0/ui/give-me-an-example-of-maas|
+|/docs/about-maas|/docs/snap/3.1/ui/about-maas|
+|/docs/release-notes|/docs/snap/3.1/ui/whats-new-in-maas|
+|/docs/get-started-with-maas|/docs/snap/3.1/ui/give-me-an-example-of-maas|
 |/docs/2.7/release-notes|/docs/snap/2.7/ui/whats-new-in-maas|
 |/docs/2.8/release-notes|/docs/snap/2.8/ui/whats-new-in-maas|
 |/docs/2.9/release-notes|/docs/snap/2.9/ui/whats-new-in-maas|
-|/docs/3.0/release-notes|/docs/snap/3.0/ui/whats-new-in-maas|
+|/docs/3.0/release-notes|/docs/snap/3.1/ui/whats-new-in-maas|
 |/docs/intro-new|/docs/whats-new-in-maas
 |/docs/release-notes-all|/docs/historical-release-notes|
-|/docs/add-a-kvm-host|/docs/snap/3.0/ui/adding-a-vm-host|
-|/docs/add-a-vm-host|/docs/snap/3.0/ui/adding-a-vm-host|
-|/docs/adding-a-vm-host|/docs/snap/3.0/ui/adding-a-vm-host|
-|/docs/manage-kvm-add-host|/docs/snap/3.0/ui/adding-a-vm-host|
-|/docs/add-machines|/docs/snap/3.0/ui/manage-machines|
-|/docs/add-nodes|/docs/snap/3.0/ui/manage-machines|
-|/docs/availability-zones|/docs/snap/3.0/ui/availability-zones|
-|/docs/backup|/docs/snap/3.0/ui/backup|
-|/docs/block-devices|/docs/snap/3.0/ui/storage|
-|/docs/bmc-power-types|/docs/snap/3.0/ui/power-management|
+|/docs/add-a-kvm-host|/docs/snap/3.1/ui/adding-a-vm-host|
+|/docs/add-a-vm-host|/docs/snap/3.1/ui/adding-a-vm-host|
+|/docs/adding-a-vm-host|/docs/snap/3.1/ui/adding-a-vm-host|
+|/docs/manage-kvm-add-host|/docs/snap/3.1/ui/adding-a-vm-host|
+|/docs/add-machines|/docs/snap/3.1/ui/manage-machines|
+|/docs/add-nodes|/docs/snap/3.1/ui/manage-machines|
+|/docs/availability-zones|/docs/snap/3.1/ui/availability-zones|
+|/docs/backup|/docs/snap/3.1/ui/backup|
+|/docs/block-devices|/docs/snap/3.1/ui/storage|
+|/docs/bmc-power-types|/docs/snap/3.1/ui/power-management|
 |/docs/cli-dhcp-snippet-management|/docs/snap/2.9/cli/how-to-manage-dhcp|
 |/docs/cli-resource-pool-management|/docs/snap/2.9/cli/resource-pools|
 |/docs/cli-tag-management|/docs/snap/3.0/cli/about-tags|
-|/docs/commission-nodes|/docs/snap/3.0/ui/how-to-commission-machines|
-|/docs/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
-|/docs/commissioning-logs|/docs/snap/3.0/ui/commissioning-logs|
-|/docs/configuration-journey|/docs/snap/3.0/ui/configuration-journey|
-|/docs/configure-networking|/docs/snap/3.0/ui/about-networking|
+|/docs/commission-nodes|/docs/snap/3.1/ui/how-to-commission-machines|
+|/docs/commissioning-and-hardware-testing-scripts|/docs/snap/3.1/ui/commissioning-scripts-reference||
+|/docs/commissioning-logs|/docs/snap/3.1/ui/commissioning-logs|
+|/docs/configuration-journey|/docs/snap/3.1/ui/configuration-journey|
+|/docs/configure-networking|/docs/snap/3.1/ui/about-networking|
 |/docs/contributing-build|/docs/writing-guide|
 |/docs/contributing-en-GB|/docs/language-details-contributing-to-maas-docs|
 |/docs/contributing-git|/docs/working-with-git-and-github|
 |/docs/contributing-writing|/docs/writing-guide|
-|/docs/creating-and-deleting-machines|/docs/snap/3.0/ui/creating-and-deleting-vms|
-|/docs/creating-and-deleting-new-vms|/docs/snap/3.0/ui/creating-and-deleting-vms|
-|/docs/custom-machine-setup|/docs/snap/3.0/ui/how-to-customise-machines|
-|/docs/custom-node-setup-preseed|/docs/snap/3.0/ui/how-to-customise-machines|
-|/docs/custom-node-setup-preseed#heading--cloud-init|/docs/snap/3.0/ui/how-to-customise-machines#heading--how-to-customise-machines-with-cloud-init|
+|/docs/creating-and-deleting-machines|/docs/snap/3.1/ui/creating-and-deleting-vms|
+|/docs/creating-and-deleting-new-vms|/docs/snap/3.1/ui/creating-and-deleting-vms|
+|/docs/custom-machine-setup|/docs/snap/3.1/ui/how-to-customise-machines|
+|/docs/custom-node-setup-preseed|/docs/snap/3.1/ui/how-to-customise-machines|
+|/docs/custom-node-setup-preseed#heading--cloud-init|/docs/snap/3.1/ui/how-to-customise-machines#heading--how-to-customise-machines-with-cloud-init|
 |/docs/deb/2.7/cli/maas-tags|/docs/deb/2.7/cli/tags-and-annotations|
 |/docs/deb/2.7/ui/maas-tags|/docs/deb/2.7/ui/tags-and-annotations|
 |/docs/deb/2.8/cli/maas-tags|/docs/deb/2.8/cli/tags-and-annotations|
@@ -1778,7 +1778,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/deb/2.8/ui/maas-tags|/docs/deb/2.8/ui/tags-and-annotations|
 |/docs/deb/2.9/cli/add-machines|/docs/deb/2.9/cli/manage-machines|
 |/docs/deb/2.9/cli/block-devices|/docs/deb/2.9/cli/storage|
-|/docs/deb/2.9/cli/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
+|/docs/deb/2.9/cli/commissioning-and-hardware-testing-scripts|/docs/deb/2.9/cli/commissioning-scripts-reference||
 |/docs/deb/2.9/cli/custom-machine-setup|/docs/deb/2.9/cli/how-to-customise-machines|
 |/docs/deb/2.9/cli/deploy-machines|/docs/deb/2.9/cli/how-to-deploy-machines|
 |/docs/deb/2.9/cli/disk-erasure|/docs/deb/2.9/cli/storage|
@@ -1791,7 +1791,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/deb/2.9/cli/vmware-vmfs-datastores|/docs/deb/2.9/cli/storage|
 |/docs/deb/2.9/ui/add-machines|/docs/deb/2.9/ui/manage-machines|
 |/docs/deb/2.9/ui/block-devices|/docs/deb/2.9/ui/storage|
-|/docs/deb/2.9/ui/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
+|/docs/deb/2.9/ui/commissioning-and-hardware-testing-scripts|/docs/deb/2.9/ui/commissioning-scripts-reference||
 |/docs/deb/2.9/ui/custom-machine-setup|/docs/deb/2.9/ui/how-to-customise-machines|
 |/docs/deb/2.9/ui/deploy-machines|/docs/deb/2.9/ui/how-to-deploy-machines|
 |/docs/deb/2.9/ui/disk-erasure|/docs/deb/2.9/ui/storage|
@@ -1804,7 +1804,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/deb/2.9/ui/vmware-vmfs-datastores|/docs/deb/2.9/ui/storage|
 |/docs/deb/3.0/cli/add-machines|/docs/deb/3.0/cli/manage-machines|
 |/docs/deb/3.0/cli/block-devices|/docs/deb/3.0/cli/storage|
-|/docs/deb/3.0/cli/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
+|/docs/deb/3.0/cli/commissioning-and-hardware-testing-scripts|/docs/deb/3.0/cli/commissioning-scripts-reference||
 |/docs/deb/3.0/cli/custom-machine-setup|/docs/deb/3.0/cli/how-to-customise-machines|
 |/docs/deb/3.0/cli/deploy-machines|/docs/deb/3.0/cli/how-to-deploy-machines|
 |/docs/deb/3.0/cli/disk-erasure|/docs/deb/3.0/cli/storage|
@@ -1817,7 +1817,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/deb/3.0/cli/vmware-vmfs-datastores|/docs/deb/3.0/cli/storage|
 |/docs/deb/3.0/ui/add-machines|/docs/deb/3.0/ui/manage-machines|
 |/docs/deb/3.0/ui/block-devices|/docs/deb/3.0/ui/storage|
-|/docs/deb/3.0/ui/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
+|/docs/deb/3.0/ui/commissioning-and-hardware-testing-scripts|/docs/deb/3.0/ui/commissioning-scripts-reference||
 |/docs/deb/3.0/ui/custom-machine-setup|/docs/deb/3.0/ui/how-to-customise-machines|
 |/docs/deb/3.0/ui/deploy-machines|/docs/deb/3.0/ui/how-to-deploy-machines|
 |/docs/deb/3.0/ui/disk-erasure|/docs/deb/3.0/ui/storage|
@@ -1828,81 +1828,81 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/deb/3.0/ui/partitions|/docs/deb/3.0/ui/storage|
 |/docs/deb/3.0/ui/ubuntu-kernels|/docs/deb/3.0/ui/how-to-customise-machines|
 |/docs/deb/3.0/ui/vmware-vmfs-datastores|/docs/deb/3.0/ui/storage|
-|/docs/deploy-nodes|/docs/snap/3.0/ui/how-to-deploy-machines|
-|/docs/dhcp|/docs/snap/3.0/ui/how-to-manage-dhcp|
-|/docs/disk-erasure|/docs/snap/3.0/ui/storage|
-|/docs/explore-maas|/docs/snap/3.0/ui/maas-installation|
-|/docs/hardware-testing|/docs/snap/3.0/ui/how-to-test-machines|
-|/docs/high-availability|/docs/snap/3.0/ui/high-availability|
-|/docs/images|/docs/snap/3.0/ui/images|
-|/docs/install-from-a-snap |/docs/snap/3.0/ui/maas-installation|
-|/docs/install-from-packages|/docs/deb/2.9/ui/installation|
-|/docs/install-with-lxd|/docs/snap/2.9/ui/how-to-manage-vm-hosts#heading--lxd-setup|
-|/docs/installation|/docs/snap/3.0/ui/maas-installation|
-|/docs/installconfig-block|/docs/snap/3.0/ui/storage|
-|/docs/installconfig-checklist|/docs/snap/3.0/ui/maas-installation|
-|/docs/installconfig-images-import|/docs/snap/3.0/ui/select-and-import-images|
-|/docs/installconfig-images-mirror|/docs/snap/3.0/ui/local-image-mirror|
-|/docs/installconfig-images-vmware|/docs/snap/3.0/ui/vmware-images|
-|/docs/installconfig-images|/docs/snap/3.0/ui/images|
-|/docs/installconfig-install|/docs/snap/3.0/ui/maas-installation|
+|/docs/deploy-nodes|/docs/snap/3.1/ui/how-to-deploy-machines|
+|/docs/dhcp|/docs/snap/3.1/ui/how-to-manage-dhcp|
+|/docs/disk-erasure|/docs/snap/3.1/ui/storage|
+|/docs/explore-maas|/docs/snap/3.1/ui/maas-installation|
+|/docs/hardware-testing|/docs/snap/3.1/ui/how-to-test-machines|
+|/docs/high-availability|/docs/snap/3.1/ui/high-availability|
+|/docs/images|/docs/snap/3.1/ui/images|
+|/docs/install-from-a-snap |/docs/snap/3.1/ui/maas-installation|
+|/docs/install-from-packages|/docs/deb/3.1/ui/installation|
+|/docs/install-with-lxd|/docs/snap/3.1/ui/how-to-manage-vm-hosts#heading--lxd-setup|
+|/docs/installation|/docs/snap/3.1/ui/maas-installation|
+|/docs/installconfig-block|/docs/snap/3.1/ui/storage|
+|/docs/installconfig-checklist|/docs/snap/3.1/ui/maas-installation|
+|/docs/installconfig-images-import|/docs/snap/3.1/ui/select-and-import-images|
+|/docs/installconfig-images-mirror|/docs/snap/3.1/ui/local-image-mirror|
+|/docs/installconfig-images-vmware|/docs/snap/3.1/ui/vmware-images|
+|/docs/installconfig-images|/docs/snap/3.1/ui/images|
+|/docs/installconfig-install|/docs/snap/3.1/ui/maas-installation|
 |/docs/installconfig-iso-install|/docs/install-from-iso|
 |/docs/installconfig-lxd-install|/docs/install-with-lxd|
-|/docs/installconfig-network-dev-discovery|/docs/snap/3.0/ui/about-networking#heading--about-network-discovery|
-|/docs/installconfig-network-dhcp|/docs/snap/3.0/ui/how-to-manage-dhcp|
-|/docs/installconfig-network-ipranges|/docs/snap/3.0/ui/ip-ranges|
-|/docs/installconfig-network-ipv6|/docs/ipv6|/docs/snap/3.0/ui/about-networking#heading--about-ipv6|
-|/docs/installconfig-network-ntp|/docs/ntp|/docs/snap/3.0/ui/ntp-services|
-|/docs/installconfig-network-proxy|/docs/proxy|/docs/snap/3.0/ui/proxy|
-|/docs/installconfig-network-ssl|/docs/snap/3.0/ui/configuring-tls-encryption|
-|/docs/installconfig-network-stp|/docs/snap/3.0/ui/about-networking#heading--about-stp|
-|/docs/installconfig-network-subnet-management|/docs/snap/3.0/ui/about-networking|
-|/docs/installconfig-networking-config|/docs/snap/3.0/ui/about-networking|
-|/docs/installconfig-networking|/docs/snap/3.0/ui/about-networking|
-|/docs/installconfig-package-install|/docs/deb/2.9/ui/installation|
-|/docs/installconfig-partitions|/docs/snap/3.0/ui/storage|
-|/docs/installconfig-rack|/docs/snap/3.0/ui/rack-controllers
-|/docs/installconfig-region|/docs/snap/3.0/ui/region-controllers|
-|/docs/installconfig-snap-install|/docs/snap/3.0/ui/maas-installation|
-|/docs/installconfig-storage-erasure|/docs/snap/3.0/ui/storage|
-|/docs/installconfig-storage|/docs/snap/3.0/ui/storage|
-|/docs/installconfig-syslog|/docs/snap/3.0/ui/maas-logging|
+|/docs/installconfig-network-dev-discovery|/docs/snap/3.1/ui/about-networking#heading--about-network-discovery|
+|/docs/installconfig-network-dhcp|/docs/snap/3.1/ui/how-to-manage-dhcp|
+|/docs/installconfig-network-ipranges|/docs/snap/3.1/ui/ip-ranges|
+|/docs/installconfig-network-ipv6|/docs/ipv6|/docs/snap/3.1/ui/about-networking#heading--about-ipv6|
+|/docs/installconfig-network-ntp|/docs/ntp|/docs/snap/3.1/ui/ntp-services|
+|/docs/installconfig-network-proxy|/docs/proxy|/docs/snap/3.1/ui/proxy|
+|/docs/installconfig-network-ssl|/docs/snap/3.1/ui/configuring-tls-encryption|
+|/docs/installconfig-network-stp|/docs/snap/3.1/ui/about-networking#heading--about-stp|
+|/docs/installconfig-network-subnet-management|/docs/snap/3.1/ui/about-networking|
+|/docs/installconfig-networking-config|/docs/snap/3.1/ui/about-networking|
+|/docs/installconfig-networking|/docs/snap/3.1/ui/about-networking|
+|/docs/installconfig-package-install|/docs/deb/3.1/ui/installation|
+|/docs/installconfig-partitions|/docs/snap/3.1/ui/storage|
+|/docs/installconfig-rack|/docs/snap/3.1/ui/rack-controllers
+|/docs/installconfig-region|/docs/snap/3.1/ui/region-controllers|
+|/docs/installconfig-snap-install|/docs/snap/3.1/ui/maas-installation|
+|/docs/installconfig-storage-erasure|/docs/snap/3.1/ui/storage|
+|/docs/installconfig-storage|/docs/snap/3.1/ui/storage|
+|/docs/installconfig-syslog|/docs/snap/3.1/ui/maas-logging|
 |/docs/installconfig-upgrade-postgres|/docs/upgrade-2-3-to-2-4-from-ubuntu-16-04|
 |/docs/installconfig-upgrade-to-2|/docs/upgrade-from-1-9-to-2-x|
-|/docs/installconfig-upgrade|/docs/upgrading-maas|
-|/docs/installconfig-vmfs-datastores|/docs/snap/3.0/ui/storage|
-|/docs/installconfig-webui-conf-journey|/docs/snap/3.0/ui/configuration-journey|
+|/docs/installconfig-upgrade|/docs/snap/3.1/ui/upgrading-maas|
+|/docs/installconfig-vmfs-datastores|/docs/snap/3.1/ui/storage|
+|/docs/installconfig-webui-conf-journey|/docs/snap/3.1/ui/configuration-journey|
 |/docs/installconfig-webui|/docs/web-ui|
-|/docs/interactive-search|/docs/snap/3.0/ui/interactive-search|
-|/docs/intro-communication|/docs/snap/3.0/ui/maas-communication|
-|/docs/intro-concepts-zones|/docs/snap/3.0/ui/about-networking#heading--about-availability-zones|
-|/docs/intro-concepts|/docs/concepts-and-terms|
-|/docs/intro-controllers|/docs/snap/3.0/ui/controllers|
-|/docs/intro-explore|docs/deb/2.9/ui/installation|
-|/docs/intro-requirements|/docs/snap/3.0/ui/about-maas|
-|/docs/intro-to-vm-hosting|/docs/snap/3.0/ui/vm-hosting|
-|/docs/intro-what-is-maas|/docs/snap/3.0/ui/about-maas|
-|/docs/introduction-to-controllers|/docs/snap/3.0/ui/controllers|
-|/docs/ip-ranges|/docs/snap/3.0/ui/ip-ranges|
-|/docs/ipv6|/docs/snap/3.0/ui/about-networking#heading--about-ipv6|
-|/docs/kernel-boot-options|/docs/snap/3.0/ui/how-to-customise-machines|
-|/docs/kvm-host-networking|/docs/snap/3.0/ui/how-to-manage-vm-hosts|
-|/docs/kvm-host-storage-pools|/docs/snap/3.0/ui/vm-hosting#heading--about-vm-host-storage-pools|
-|/docs/kvm-introduction|/docs/snap/3.0/ui/vm-hosting|
+|/docs/interactive-search|/docs/snap/3.1/ui/interactive-search|
+|/docs/intro-communication|/docs/snap/3.1/ui/maas-communication|
+|/docs/intro-concepts-zones|/docs/snap/3.1/ui/about-networking#heading--about-availability-zones|
+|/docs/intro-concepts|/docs/snap/3.1/ui/concepts-and-terms|
+|/docs/intro-controllers|/docs/snap/3.1/ui/controllers|
+|/docs/intro-explore|docs/snap/3.1/ui/installation|
+|/docs/intro-requirements|/docs/snap/3.1/ui/about-maas|
+|/docs/intro-to-vm-hosting|/docs/snap/3.1/ui/vm-hosting|
+|/docs/intro-what-is-maas|/docs/snap/3.1/ui/about-maas|
+|/docs/introduction-to-controllers|/docs/snap/3.1/ui/controllers|
+|/docs/ip-ranges|/docs/snap/3.1/ui/ip-ranges|
+|/docs/ipv6|/docs/snap/3.1/ui/about-networking#heading--about-ipv6|
+|/docs/kernel-boot-options|/docs/snap/3.1/ui/how-to-customise-machines|
+|/docs/kvm-host-networking|/docs/snap/3.1/ui/how-to-manage-vm-hosts|
+|/docs/kvm-host-storage-pools|/docs/snap/3.1/ui/vm-hosting#heading--about-vm-host-storage-pools|
+|/docs/kvm-introduction|/docs/snap/3.1/ui/vm-hosting|
 |/docs/language-details-contributing-to-juju-docs|/docs/language-details-contributing-to-maas-docs|
-|/docs/local-image-mirror|/docs/snap/3.0/ui/local-image-mirror|
-|/docs/logging|/docs/snap/3.0/ui/maas-logging|
-|/docs/maas-cli|/docs/snap/2.9/cli/maas-cli|
-|/docs/maas-communcation|/docs/snap/3.0/ui/maas-communication|
-|/docs/maas-communication|/docs/snap/3.0/ui/maas-communication|
-|/docs/maas-example-config|/docs/snap/3.0/ui/give-me-an-example-of-maas|
-|/docs/maas-installation|/docs/snap/3.0/ui/maas-installation|
-|/docs/maas-requirements|/docs/snap/3.0/ui/maas-requirements|
-|/docs/maas-security|/docs/snap/3.0/ui/hardening-your-maas-installation|
-|/docs/machine-overview|/docs/snap/3.0/ui/about-machines|
-|/docs/manage-account|/docs/snap/3.0/ui/user-accounts|
-|/docs/manage-audit-events|/docs/audit-event-logs|
-|/docs/manage-backup|/docs/snap/3.0/ui/backup|
+|/docs/local-image-mirror|/docs/snap/3.1/ui/local-image-mirror|
+|/docs/logging|/docs/snap/3.1/ui/maas-logging|
+|/docs/maas-cli|/docs/snap/3.1/cli/maas-cli|
+|/docs/maas-communcation|/docs/snap/3.1/ui/maas-communication|
+|/docs/maas-communication|/docs/snap/3.1/ui/maas-communication|
+|/docs/maas-example-config|/docs/snap/3.1/ui/give-me-an-example-of-maas|
+|/docs/maas-installation|/docs/snap/3.1/ui/maas-installation|
+|/docs/maas-requirements|/docs/snap/3.1/ui/maas-requirements|
+|/docs/maas-security|/docs/snap/3.1/ui/hardening-your-maas-installation|
+|/docs/machine-overview|/docs/snap/3.1/ui/about-machines|
+|/docs/manage-account|/docs/snap/3.1/ui/user-accounts|
+|/docs/manage-audit-events|/docs/snap/3.1/ui/audit-event-logs|
+|/docs/manage-backup|/docs/snap/3.1/ui/backup|
 |/docs/manage-cli-advanced|/docs/advanced-cli-tasks|
 |/docs/manage-cli-common|/docs/common-cli-tasks|
 |/docs/manage-cli-comp-hw|/docs/snap/2.9/cli/creating-and-deleting-vms|
@@ -1913,63 +1913,63 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/manage-cli-resource-pools|docs/snap/2.9/cli/resource-pools|
 |/docs/manage-cli-tags|/docs/snap/2.9/cli/maas-tags|
 |/docs/manage-cli|/docs/snap/2.9/cli/maas-cli|
-|/docs/manage-composable-machines|/docs/snap/3.0/ui/vm-hosting|
-|/docs/manage-ha-postgresql|/docs/snap/3.0/ui/postgresql-ha-hot-standby|
-|/docs/manage-ha|/docs/snap/3.0/ui/high-availability|
-|/docs/manage-kvm-create-vms|/docs/snap/3.0/ui/creating-and-deleting-vms|
-|/docs/manage-kvm-host-networking|/docs/snap/3.0/ui/how-to-manage-vm-hosts|
-|/docs/manage-kvm-intro|/docs/snap/3.0/ui/vm-hosting|
-|/docs/manage-kvm-storage|/docs/snap/3.0/ui/vm-hosting#heading--about-vm-host-storage-pools|
-|/docs/manage-libmaas|/docs/api-client|
-|/docs/manage-maas-security|/docs/security|/docs/snap/3.0/ui/hardening-your-maas-installation|
-|/docs/manage-pods-webui|docs/snap/3.0/ui/vm-hosting|
-|/docs/manage-prometheus-metrics|/docs/snap/3.0/ui/prometheus-metrics|
+|/docs/manage-composable-machines|/docs/snap/3.1/ui/vm-hosting|
+|/docs/manage-ha-postgresql|/docs/snap/3.1/ui/postgresql-ha-hot-standby|
+|/docs/manage-ha|/docs/snap/3.1/ui/high-availability|
+|/docs/manage-kvm-create-vms|/docs/snap/3.1/ui/creating-and-deleting-vms|
+|/docs/manage-kvm-host-networking|/docs/snap/3.1/ui/how-to-manage-vm-hosts|
+|/docs/manage-kvm-intro|/docs/snap/3.1/ui/vm-hosting|
+|/docs/manage-kvm-storage|/docs/snap/3.1/ui/vm-hosting#heading--about-vm-host-storage-pools|
+|/docs/manage-libmaas|/docs/snap/3.1/ui/api-client|
+|/docs/manage-maas-security|/docs/security|/docs/snap/3.1/ui/hardening-your-maas-installation|
+|/docs/manage-pods-webui|docs/snap/3.1/ui/vm-hosting|
+|/docs/manage-prometheus-metrics|/docs/snap/3.1/ui/prometheus-metrics|
 |/docs/manage-repos|/docs/deb/2.9/ui/package-repositories|
 |/docs/manage-rsd-add|/docs/add-an-rsd-host|
-|/docs/manage-rsd-create|/docs/snap/3.0/ui/creating-and-deleting-vms|
+|/docs/manage-rsd-create|/docs/snap/3.1/ui/creating-and-deleting-vms|
 |/docs/manage-rsd-intro|/docs/intel-rack-scale-design-rsd-introduction|
 |/docs/manage-rsd-storage|/docs/rsd-storage|
-|/docs/manage-search|/docs/snap/3.0/ui/interactive-search|
-|/docs/manage-zones|/docs/snap/3.0/ui/availability-zones|
+|/docs/manage-search|/docs/snap/3.1/ui/interactive-search|
+|/docs/manage-zones|/docs/snap/3.1/ui/availability-zones|
 |/docs/metadata.y|/docs/documentation-index|
-|/docs/network-discovery|/docs/snap/3.0/ui/about-networking#heading--about-network-discovery|
-|/docs/network-testing|/docs/snap/3.0/ui/how-to-test-machines|
-|/docs/networking|/docs/snap/3.0/ui/about-networking|
-|/docs/node-overview|/docs/snap/3.0/ui/about-machines|
-|/docs/nodes-add|/docs/snap/3.0/ui/manage-machines|
-|/docs/nodes-commission|/docs/snap/3.0/ui/how-to-commission-machines|
-|/docs/nodes-comp-hw|/docs/snap/3.0/ui/vm-hosting|
-|/docs/nodes-custom|/docs/snap/3.0/ui/how-to-customise-machines|
-|/docs/nodes-deploy|/docs/snap/3.0/ui/how-to-deploy-machines|
-|/docs/nodes-hw-testing|/docs/snap/3.0/ui/how-to-test-machines|
-|/docs/nodes-kernel-options|/docs/snap/3.0/ui/how-to-customise-machines|
-|/docs/nodes-kernels|/docs/snap/2.9/cli/how-to-customise-machines|
-|/docs/nodes-overview|/docs/snap/3.0/ui/about-machines|
-|/docs/nodes-power-types|/docs/snap/3.0/ui/power-management|
+|/docs/network-discovery|/docs/snap/3.1/ui/about-networking#heading--about-network-discovery|
+|/docs/network-testing|/docs/snap/3.1/ui/how-to-test-machines|
+|/docs/networking|/docs/snap/3.1/ui/about-networking|
+|/docs/node-overview|/docs/snap/3.1/ui/about-machines|
+|/docs/nodes-add|/docs/snap/3.1/ui/manage-machines|
+|/docs/nodes-commission|/docs/snap/3.1/ui/how-to-commission-machines|
+|/docs/nodes-comp-hw|/docs/snap/3.1/ui/vm-hosting|
+|/docs/nodes-custom|/docs/snap/3.1/ui/how-to-customise-machines|
+|/docs/nodes-deploy|/docs/snap/3.1/ui/how-to-deploy-machines|
+|/docs/nodes-hw-testing|/docs/snap/3.1/ui/how-to-test-machines|
+|/docs/nodes-kernel-options|/docs/snap/3.1/ui/how-to-customise-machines|
+|/docs/nodes-kernels|/docs/snap/3.1/cli/how-to-customise-machines|
+|/docs/nodes-overview|/docs/snap/3.1/ui/about-machines|
+|/docs/nodes-power-types|/docs/snap/3.1/ui/power-management|
 |/docs/nodes-resource-pools|/docs/snap/2.9/cli/resource-pools|
 |/docs/nodes-scripts-cli|/docs/cli-testing-scripts|
-|/docs/nodes-scripts|/docs/snap/3.0/ui/how-to-commission-machines||
+|/docs/nodes-scripts|/docs/snap/3.1/ui/how-to-commission-machines||
 |/docs/nodes-tags|/docs/tags|/docs/snap/2.9/cli/maas-tags|
 |/docs/non-snap-maas-installs|/docs/snap/2.9/ui/installation|
-|/docs/ntp|/docs/snap/3.0/ui/ntp-services|
+|/docs/ntp|/docs/snap/3.1/ui/ntp-services|
 |/docs/package-repositories|/docs/deb/2.9/ui/package-repositories|
-|/docs/partitions|/docs/snap/3.0/ui/storage|
-|/docs/pods|/docs/snap/3.0/ui/vm-hosting|
-|/docs/postgresql-ha-hot-standby|/docs/snap/3.0/ui/postgresql-ha-hot-standby|
-|/docs/prometheus-metrics|/docs/snap/3.0/ui/prometheus-metrics|
-|/docs/proxy|/docs/snap/3.0/ui/proxy|
-|/docs/rack-controller|/docs/snap/3.0/ui/rack-controllers|
-|/docs/region-controller|/docs/snap/3.0/ui/region-controllers|
+|/docs/partitions|/docs/snap/3.1/ui/storage|
+|/docs/pods|/docs/snap/3.1/ui/vm-hosting|
+|/docs/postgresql-ha-hot-standby|/docs/snap/3.1/ui/postgresql-ha-hot-standby|
+|/docs/prometheus-metrics|/docs/snap/3.1/ui/prometheus-metrics|
+|/docs/proxy|/docs/snap/3.1/ui/proxy|
+|/docs/rack-controller|/docs/snap/3.1/ui/rack-controllers|
+|/docs/region-controller|/docs/snap/3.1/ui/region-controllers|
 |/docs/resource-pools|/docs/snap/2.9/cli/resource-pools|
-|/docs/security|/docs/snap/3.0/ui/hardening-your-maas-installation|
-|/docs/select-and-import-images|/docs/snap/3.0/ui/select-and-import-images|
+|/docs/security|/docs/snap/3.1/ui/hardening-your-maas-installation|
+|/docs/select-and-import-images|/docs/snap/3.1/ui/select-and-import-images|
 |/docs/snap/2.7/cli/maas-tags|/docs/snap/2.7/cli/tags-and-annotations|
 |/docs/snap/2.7/ui/maas-tags|/docs/snap/2.7/ui/tags-and-annotations|
 |/docs/snap/2.8/cli/maas-tags|/docs/snap/2.8/cli/tags-and-annotations|
 |/docs/snap/2.8/ui/maas-tags|/docs/snap/2.8/ui/tags-and-annotations|
 |/docs/snap/2.9/cli/add-machines|/docs/snap/2.9/cli/manage-machines|
 |/docs/snap/2.9/cli/block-devices|/docs/snap/2.9/cli/storage|
-|/docs/snap/2.9/cli/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
+|/docs/snap/2.9/cli/commissioning-and-hardware-testing-scripts|/docs/snap/2.9/cli/commissioning-scripts-reference||
 |/docs/snap/2.9/cli/custom-machine-setup|/docs/snap/2.9/cli/how-to-customise-machines|
 |/docs/snap/2.9/cli/deploy-machines|/docs/snap/2.9/cli/how-to-deploy-machines|
 |/docs/snap/2.9/cli/disk-erasure|/docs/snap/2.9/cli/storage|
@@ -1982,7 +1982,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/2.9/cli/vmware-vmfs-datastores|/docs/snap/2.9/cli/storage|
 |/docs/snap/2.9/ui/add-machines|/docs/snap/2.9/ui/manage-machines|
 |/docs/snap/2.9/ui/block-devices|/docs/snap/2.9/ui/storage|
-|/docs/snap/2.9/ui/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
+|/docs/snap/2.9/ui/commissioning-and-hardware-testing-scripts|/docs/snap/2.9/ui/commissioning-scripts-reference||
 |/docs/snap/2.9/ui/custom-machine-setup|/docs/snap/2.9/ui/how-to-customise-machines|
 |/docs/snap/2.9/ui/deploy-machines|/docs/snap/2.9/ui/how-to-deploy-machines|
 |/docs/snap/2.9/ui/disk-erasure|/docs/snap/2.9/ui/storage|
@@ -1995,7 +1995,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/2.9/ui/vmware-vmfs-datastores|/docs/snap/2.9/ui/storage|
 |/docs/snap/3.0/cli/add-machines|/docs/snap/3.0/cli/manage-machines|
 |/docs/snap/3.0/cli/block-devices|/docs/snap/3.0/cli/storage|
-|/docs/snap/3.0/cli/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference||
+|/docs/snap/3.0/cli/commissioning-and-hardware-testing-scripts|/docs/snap/3.0/cli/commissioning-scripts-reference||
 |/docs/snap/3.0/cli/custom-machine-setup|/docs/snap/3.0/cli/how-to-customise-machines|
 |/docs/snap/3.0/cli/deploy-machines|/docs/snap/3.0/cli/how-to-deploy-machines|
 |/docs/snap/3.0/cli/disk-erasure|/docs/snap/3.0/cli/storage|
@@ -2008,7 +2008,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/3.0/cli/vmware-vmfs-datastores|/docs/snap/3.0/cli/storage|
 |/docs/snap/3.0/ui/add-machines|/docs/snap/3.0/ui/manage-machines|
 |/docs/snap/3.0/ui/block-devices|/docs/snap/3.0/ui/storage|
-|/docs/snap/3.0/ui/commissioning-and-hardware-testing-scripts|/docs/commissioning-scripts-reference|
+|/docs/snap/3.0/ui/commissioning-and-hardware-testing-scripts|/docs/snap/3.0/ui/commissioning-scripts-reference|
 |/docs/snap/3.0/ui/custom-machine-setup|/docs/snap/3.0/ui/how-to-customise-machines|
 |/docs/snap/3.0/ui/deploy-machines|/docs/snap/3.0/ui/how-to-deploy-machines|
 |/docs/snap/3.0/ui/disk-erasure|/docs/snap/3.0/ui/storage|
@@ -2019,21 +2019,21 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/3.0/ui/partitions|/docs/snap/3.0/ui/storage|
 |/docs/snap/3.0/ui/ubuntu-kernels|/docs/snap/3.0/ui/how-to-customise-machines|
 |/docs/snap/3.0/ui/vmware-vmfs-datastores|/docs/snap/3.0/ui/storage|
-|/docs/ssl|/docs/snap/3.0/ui/configuring-tls-encryption|
-|/docs/storage|/docs/snap/3.0/ui/storage|
-|/docs/stp|/docs/snap/3.0/ui/about-networking#heading--about-stp|
-|/docs/subnet-management|/docs/snap/3.0/ui/about-networking|
-|/docs/syslog|/docs/snap/3.0/ui/maas-logging|
-|/docs/tags|/docs/snap/3.0/ui/maas-tags|
-|/docs/troubleshoot-faq|/docs/troubleshooting|
-|/docs/troubleshoot-getting-help|/docs/getting-help|
-|/docs/ubuntu-kernels|/docs/snap/2.9/cli/how-to-customise-machines|
-|/docs/user-accounts|/docs/snap/3.0/ui/user-accounts|
-|/docs/vm-host-networking|/docs/snap/3.0/ui/how-to-manage-vm-hosts|
-|/docs/vm-host-storage-pools|/docs/snap/3.0/ui/vm-hosting#heading--about-vm-host-storage-pools|
-|/docs/vmware-images|/docs/snap/3.0/ui/vmware-images|
-|/docs/vmware-vmfs-datastores|/docs/snap/3.0/ui/storage|
-|/docs/what-is-maas|/docs/snap/3.0/ui/about-maas|
+|/docs/ssl|/docs/snap/3.1/ui/configuring-tls-encryption|
+|/docs/storage|/docs/snap/3.1/ui/storage|
+|/docs/stp|/docs/snap/3.1/ui/about-networking#heading--about-stp|
+|/docs/subnet-management|/docs/snap/3.1/ui/about-networking|
+|/docs/syslog|/docs/snap/3.1/ui/maas-logging|
+|/docs/tags|/docs/snap/3.1/ui/maas-tags|
+|/docs/troubleshoot-faq|/docs/snap/3.1/ui/troubleshooting|
+|/docs/troubleshoot-getting-help|/docs/snap/3.1/ui/getting-help|
+|/docs/ubuntu-kernels|/docs/snap/3.1/cli/how-to-customise-machines|
+|/docs/user-accounts|/docs/snap/3.1/ui/user-accounts|
+|/docs/vm-host-networking|/docs/snap/3.1/ui/how-to-manage-vm-hosts|
+|/docs/vm-host-storage-pools|/docs/snap/3.1/ui/vm-hosting#heading--about-vm-host-storage-pools|
+|/docs/vmware-images|/docs/snap/3.1/ui/vmware-images|
+|/docs/vmware-vmfs-datastores|/docs/snap/3.1/ui/storage|
+|/docs/what-is-maas|/docs/snap/3.1/ui/about-maas|
 |/docs/whats-new-in-2-7||/docs/snap/2.7/ui/whats-new-in-maas|
-|/docs/zone-examples|/docs/snap/3.0/ui/about-networking#heading--about-availability-zones|
+|/docs/zone-examples|/docs/snap/3.1/ui/about-networking#heading--about-availability-zones|
 [/details]
