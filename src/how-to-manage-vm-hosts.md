@@ -204,7 +204,7 @@ If you want to add a LXD (or [libvirt](https://ubuntu.com/server/docs/virtualiza
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg"></a>
 
-Upon selecting "Authenticate" (assuming successful authentication), you will recieve a project selection screen similar to this:
+Upon selecting "Authenticate" (assuming successful authentication), you will receive a project selection screen similar to this:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/346c8e29fc8d4b74507843a956865ebd254aad57.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/346c8e29fc8d4b74507843a956865ebd254aad57.jpeg"></a>
 
@@ -306,7 +306,7 @@ MAAS will automatically discover and store the resources your VM host contains. 
 
 rad-begin  /deb/2.9/ui  /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 
-VM hosts have several configuration options. Modify these by selecting the 'Configuration' tab and eidting options directly.  These options include a VM host's location, password, network zone, resource pool, and memory and CPU overcommit sliders.
+VM hosts have several configuration options. Modify these by selecting the 'Configuration' tab and editing options directly.  These options include a VM host's location, password, network zone, resource pool, and memory and CPU overcommit sliders.
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/8b3fc96a8f1a1e4b25413a9f60388dc04dd886c9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8b3fc96a8f1a1e4b25413a9f60388dc04dd886c9.png"></a>
 rad-end

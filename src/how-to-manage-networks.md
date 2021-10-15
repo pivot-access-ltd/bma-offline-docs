@@ -83,7 +83,7 @@ For example, to disable subnet management:
 maas $PROFILE subnet update 192.168.1.0/24 managed=false
 ```
 
-You can use the subnet's ID in place of the CIDR address.
+You can use the subnets ID in place of the CIDR address.
 rad-end
 
 rad-begin /deb/2.9/cli /deb/3.0/cli /deb/3.1/cli /snap/2.9/cli /snap/3.0/cli /snap/3.1/cli
@@ -111,7 +111,7 @@ maas $PROFILE subnet update $SUBNET_CIDR gateway_ip=$MY_GATEWAY
 To set the DNS server for a subnet:
 
 ```nohighlight
-maas $PROFILE subnet update $SUBNET_CIDR dns_servers=$MY_NAMESERVER
+maas $PROFILE subnet update $SUBNET_CIDR dns_servers=$MY_NAME SERVER
 ```
 
 <a href="#heading--cli-list-available-subnets"><h3 id="heading--cli-list-available-subnets">How to list available subnets</h3></a>
@@ -212,9 +212,9 @@ This screen presents the following configurable options:
 
 * **Gateway IP**: This is the address of the default gateway for your subnet, which is the IP address that transfers packets to other subnets or networks. Typically, this is simply the first IP address in a block of addresses (the `.1` address).
 
-* **DNS**: This is the address of a DNS (domain name server, or simply "nameserver") for your subnet.  It's optional, but can be configured if desired.
+* **DNS**: This is the address of a DNS (domain name server, or simply "name server") for your subnet.  It's optional, but can be configured if desired.
 
-* **Description**: This field represents freeform text that you can enter to describe your subnet, as needed to keep important notes attached to the definition of the subnet.
+* **Description**: This field represents free form text that you can enter to describe your subnet, as needed to keep important notes attached to the definition of the subnet.
 
 * **Managed allocation** refers to the ability of MAAS to completely [manage a subnet](#heading--about-managed-subnets).
 
@@ -224,9 +224,9 @@ This screen presents the following configurable options:
 
 * **Allow DNS resolution** allows subnet clients to use MAAS for DNS resolution.
 
-* **Fabric**: This field allows you to set the subnet's fabric.
+* **Fabric**: This field allows you to set the subnets fabric.
 
-* **VLAN**: This field allows you to set the subnet's VLAN.
+* **VLAN**: This field allows you to set the subnets VLAN.
 
 * **Space** is presented for clarity, though spaces are managed at the VLAN level.
 
@@ -316,7 +316,7 @@ When you're done, it should look something like this:
 
 Then you can deploy machines using this bridge.
 
-**NOTE** that you can create an "Open vSwitch" bridge if desired, and MAAS will create the netplan model for you.
+**NOTE** that you can create an "Open switch" bridge if desired, and MAAS will create the netplan model for you.
 rad-end 
 
 rad-begin /deb/2.9/cli /deb/3.0/cli /deb/3.1/cli /snap/2.9/cli /snap/3.0/cli /snap/3.1/cli
@@ -357,9 +357,9 @@ network:
             gateway4: 10.0.0.1
             interfaces:
             - enp1s0
-            macaddress: 52:54:00:39:9d:f9
+            mac address: 52:54:00:39:9d:f9
             mtu: 1500
-            nameservers:
+            name servers:
                 addresses:
                 - 10.0.0.2
                 search:
@@ -367,20 +367,20 @@ network:
             parameters:
                 forward-delay: 15
                 stp: false
-    ethernets:
+    Ethernet's:
         enp1s0:
             match:
-                macaddress: 52:54:00:39:9d:f9
+                mac address: 52:54:00:39:9d:f9
             mtu: 1500
             set-name: enp1s0
         enp2s0:
             match:
-                macaddress: 52:54:00:df:87:ac
+                mac address: 52:54:00:df:87:ac
             mtu: 1500
             set-name: enp2s0
         enp3s0:
             match:
-                macaddress: 52:54:00:a7:ac:46
+                mac address: 52:54:00:a7:ac:46
             mtu: 1500
             set-name: enp3s0
     version: 2
