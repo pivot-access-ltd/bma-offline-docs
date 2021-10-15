@@ -487,9 +487,9 @@ Computer memory is addressed not as raw RAM, but as virtual memory. Assisted by 
 
 Since this page table is big and slow, the CPU has a special buffer -- the Translation Lookaside Buffer (TLB) -- that caches address mapping.  This means after the first access to a page, subsequent accesses are much faster.  Since this buffer is implemented in hardware, for speed, the size is limited to, say, 4096 bytes.
 
-When the core is accessing lots of pages, the speed advantage of the TLB can be lost.  Hugepages allow one TLB entry to point to 2MB, instead of just 4096 bytes.  With 512 TLB entires, typically, you can map 1GB of memory.  Hugepages come with a catch, though: if you have to swap pages, it (obviously) takes longer.
+When the core is accessing lots of pages, the speed advantage of the TLB can be lost.  Hugepages allow one TLB entry to point to 2MB, instead of just 4096 bytes.  With 512 TLB entries, typically, you can map 1GB of memory.  Hugepages come with a catch, though: if you have to swap pages, it (obviously) takes longer.
 
-There's no tried and true formula for when to use them, but the key consideration is that you want to use most of a hugepage when you swap.  Rather than using little sections of a hugepage, which would mean losing the performance advantage from constant swapping, you want to maximize the use of each hugepage.  While there's no simple, empirical way to calculate this answer, you can do it by trial-and-error observation.
+There's no tried and true formula for when to use them, but the key consideration is that you want to use most of a hugepage when you swap.  Rather than using little sections of a hugepage, which would mean losing the performance advantage from constant swapping, you want to maximise the use of each hugepage.  While there's no simple, empirical way to calculate this answer, you can do it by trial-and-error observation.
 
 MAAS provides the dashboards and tools necessary to monitor and adjust your use of hugepages, so that you can find the right balance.
 
@@ -592,13 +592,13 @@ A router is a device that transfers packets from one network to another.  Unlike
 
 <a href="#heading--cloud-init"><h2 id="heading--cloud-init">Cloud-init</h2></a>
 
-Cloud-init is the industry-standard method for initialising cloud instances, independent of platform.  It allows you to automatically provision operating system images, bringing them to a fully running state.  It also allows you to customize networking, storage, user space, applications, and various other components of a functioning system.
+Cloud-init is the industry-standard method for initialising cloud instances, independent of platform.  It allows you to automatically provision operating system images, bringing them to a fully running state.  It also allows you to customise networking, storage, user space, applications, and various other components of a functioning system.
 
 There are four stages of cloud-init action:
 
 1. Local initialisation - this "as-early-as-possible" stage configures system elements that must be set up before the system can be made fully operational, such as networking configuration, including bridges, VLANs, bonds, and so forth.
 
-2. Initialization - this second stage runs as soon as the network connections are up and running, taking care of custom storage configurations, disk volume expansion, block device setup and filesystem allocations.
+2. Initialisation - this second stage runs as soon as the network connections are up and running, taking care of custom storage configurations, disk volume expansion, block device setup and filesystem allocations.
 
 3. Module configuration - stage three configures the necessary meta-tools to allow full system configuration, such as SSH, apt/yum, and NTP.
 
@@ -606,9 +606,9 @@ There are four stages of cloud-init action:
 
 These four steps combine (at least) four general datasources to bring an instance into being:
 
-1. Disk image - the operating system for the instance; this is a bare-bones, uncustomized version of the chosen OS.
+1. Disk image - the operating system for the instance; this is a bare-bones, uncustomised version of the chosen OS.
 
-2. Metadata - this configuration information is supplied by the cloud provider, specifying things like disk images storage, networking, default users, and other basic customizations.
+2. Metadata - this configuration information is supplied by the cloud provider, specifying things like disk images storage, networking, default users, and other basic customisations.
 
 3. User data - data provided by end users or cloud administrators to initialise the instance.  This completely optional data can be anything from shellscripts to highly-structured cloud-config data that trigger cloud-init's built-ins.
 
