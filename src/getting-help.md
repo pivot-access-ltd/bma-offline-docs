@@ -1,9 +1,6 @@
 The best place to get help with your MAAS issue is on the [MAAS Discourse forum ](https://discourse.maas.io/). There, you can interact with the MAAS team as well as search for issues similar to your own.
 
-You might also try these two channels:
-
-1.   [Ask Ubuntu ](http://askubuntu.com/questions/ask?tags=maas) web site
-2.   [Freenode #maas ](http://webchat.freenode.net/?channels=maas) IRC channel
+You might also try the [Ask Ubuntu ](http://askubuntu.com/questions/ask?tags=maas) web site.
 
 <h2 id="heading--gathering-debugging-information">Gathering debugging information</h2>
 
@@ -22,6 +19,3 @@ The last step is to make this file available by any means at your disposal (open
 
 
 
-------
-****
-------
