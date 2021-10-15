@@ -714,7 +714,7 @@ rad-end
 rad-begin /snap/3.1/cli /snap/3.1/ui /deb/3.1/cli /deb/3.1/ui
 <h2>MAAS 3.1.0 Beta release notes</h2>
 
-We are happy to announce the Beta 2 release of MAAS 3.1. This release provides some new (user-requested) features.
+We are happy to announce the Beta 3 release of MAAS 3.1. This release provides some bug fixes, on top of the new features provided by earlier Beta releases.
 
 <a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.1.0 Beta features and fixes</h3></a>
 
@@ -1092,6 +1092,7 @@ There is nothing required of our users to experience this improved sync performa
 
 MAAS 3.1 beta bug fixes can be found in the following milestones:
 
+ - [MAAS 3.1 Beta3 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta3)
  - [MAAS 3.1 Beta2 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta2)
  - [MAAS 3.1 Beta1 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta1)
  

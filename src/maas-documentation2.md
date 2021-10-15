@@ -30,7 +30,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 ### [Machines](/t/machines-snap-3-0-ui/4030)
 
-- [Manage machines](/t/-/4844)
+- [Manage machines](/t/how-to-manage-machines-snap-3-0-ui/4844)
 - [Deploy machines](/t/deploy-machines-snap-3-0-ui/3914)
 - [Customise machines](/t/how-to-customise-machines-snap-3-0-ui/3910)
 
@@ -1609,14 +1609,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
-|/docs/deb/2.9/cli/manage-machines|/docs/deb/2.9/cli/how-to-manage-machines|
-|/docs/deb/2.9/ui/manage-machines|/docs/deb/2.9/ui/how-to-manage-machines|
-|/docs/deb/3.0/cli/manage-machines|/docs/deb/3.0/cli/how-to-manage-machines|
-|/docs/deb/3.0/ui/manage-machines|/docs/deb/3.0/ui/how-to-manage-machines|
-|/docs/snap/2.9/cli/manage-machines|/docs/snap/2.9/cli/how-to-manage-machines|
-|/docs/snap/2.9/ui/manage-machines|/docs/snap/2.9/ui/how-to-manage-machines|
-|/docs/snap/3.0/cli/manage-machines|/docs/snap/3.0/cli/how-to-manage-machines|
-|/docs/snap/3.0/ui/manage-machines|/docs/snap/3.0/ui/how-to-manage-machines|
 |/docs/deb/2.9/cli/how-to-commission-machines|/docs/deb/2.9/cli/how-to-deploy-machines#heading--how-to-commission-a-machine|
 |/docs/deb/2.9/ui/how-to-commission-machines|/docs/deb/2.9/ui/how-to-deploy-machines#heading--how-to-commission-a-machine|
 |/docs/deb/3.0/cli/how-to-commission-machines|/docs/deb/3.0/cli/how-to-deploy-machines#heading--how-to-commission-a-machine|
