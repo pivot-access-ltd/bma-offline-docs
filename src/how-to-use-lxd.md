@@ -98,7 +98,7 @@ Use 'sudo apt autoremove' to remove them.
 The following packages will be REMOVED:
   liblxc-common* liblxc1* lxcfs* lxd* lxd-client*
 0 upgraded, 0 newly installed, 5 to remove and 21 not upgraded.
-pAfter this operation, 34.1 MB disk space will be freed.
+After this operation, 34.1 MB disk space will be freed.
 (Reading database ... 67032 files and directories currently installed.)
 Removing lxd (3.0.3-0ubuntu1~18.04.1) ...
 Removing lxd dnsmasq configuration
@@ -193,7 +193,7 @@ Would you like to create a new local network bridge? (yes/no) [default=yes]: no
 Would you like to configure LXD to use an existing bridge or host interface? (yes/no) [default=no]: yes
 Name of the existing bridge or host interface: br0
 Would you like LXD to be available over the network? (yes/no) [default=no]: yes
-pAddress to bind LXD to (not including port) [default=all]:
+Address to bind LXD to (not including port) [default=all]:
 Port to bind LXD to [default=8443]:
 Trust password for new clients:
 Again:
