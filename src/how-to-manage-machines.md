@@ -132,7 +132,7 @@ where:
 - $SYSTEM_ID = the ID of the machine in question (e.g., "ngx7ry")
 - $DEVICE_ID = the ID of the device you want to delete 
 
-If the device is still present in the system, it will be recogized again (and thus "recreated")
+If the device is still present in the system, it will be recognised again (and thus "recreated")
 when the machine is commissioned again.
 rad-end
 
