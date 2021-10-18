@@ -371,7 +371,7 @@ rad-end
 * [How to locate log files](#heading--how-to-locate-log-files)
 * [How to run all scripts manually](#heading--how-to-run-all-scripts-manually)
 
-You can also refer to technical details and examples for [commissioning scripts](/t/-/4862) and [testing scripts](/t/-/4861) as needed.
+You can also refer to technical details and examples for [commissioning scripts](/t/commissioning-scripts-reference/nnnn) and [testing scripts](/t/hardware-test-scripts-reference/nnnn) as needed.
 
 <a href="#heading--how-to-download-built-in-scripts"><h3 id="heading--how-to-download-built-in-scripts">How to download built-in scripts</h3></a>
 
@@ -788,7 +788,7 @@ A default test will be selected (`smartctl-validate`, a hard drive test) but you
 
 rad-end
 
-See [Commissioning Scripts Reference](/t/commissioning-scripts-reference/4862) for more details on how these scripts work and how you can write your own.
+See [Commissioning Scripts Reference](/t/commissioning-scripts-reference/nnnn) for more details on how these scripts work and how you can write your own.
 
 <a href="#heading--network-link-testing"><h2 id="heading--network-link-testing">How to test network links</h2></a>
 

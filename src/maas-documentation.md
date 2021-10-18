@@ -1612,7 +1612,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/commissioning-scripts-reference|/docs/snap/3.1/ui/commissioning-scripts-reference|
 |/docs/hardware-test-scripts|/docs/snap/3.1/ui/hardware-test-scripts-reference|
 |/docs/concepts-and-terms|/docs/snap/3.1/ui/concepts-and-terms|
-|/docs/contact-us|/docs/snap/3.1//ui/contact-us|
+|/docs/contact-us|/docs/snap/3.1/ui/contact-us|
 |/docs/deb/2.9/cli/manage-machines|/docs/deb/2.9/cli/how-to-manage-machines|
 |/docs/deb/2.9/ui/manage-machines|/docs/deb/2.9/ui/how-to-manage-machines|
 |/docs/deb/3.0/cli/manage-machines|/docs/deb/3.0/cli/how-to-manage-machines|
