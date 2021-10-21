@@ -87,7 +87,7 @@ rad-end
 <a href="#heading--api-key"><h3 id="heading--api-key">API key</h3></a>
 
 rad-begin /deb/2.9/ui /deb/3.0/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui /deb/3.1/ui
-The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/nnnn).  Other services connecting to MAAS such as Juju will also need this key.
+The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/how-to-use-the-maas-cli/nnnn).  Other services connecting to MAAS such as Juju will also need this key.
 rad-end
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
