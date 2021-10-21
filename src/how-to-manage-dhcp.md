@@ -94,7 +94,7 @@ To relay from one VLAN (source) to another VLAN (target):
 
 1.  Ensure the target VLAN has DHCP enabled.
 
-2.  Set up the external relay. This relay is set up independently from MAAS. See [DHCP relay](/t/concepts-and-terms/785#heading--dhcp-relay) for software suggestions.
+2.  Set up the external relay. This relay is set up independently from MAAS. See [DHCP relay](/t/maas-concepts-and-terms-reference/nnnn#heading--dhcp-relay) for software suggestions.
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 3.  Configure MAAS-managed DHCP. Navigate to the source VLAN page and select the 'Relay DHCP' action. Fill in the fields in the resulting form. The crucial setting is the target VLAN ('Relay VLAN'). Press the 'Relay DHCP' button to finish.

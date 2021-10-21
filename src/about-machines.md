@@ -110,7 +110,7 @@ null
 Note that the immediate return is `Success`, but the machine-readable output is `null`.  After executing this command on an already-deployed machine, you should find that the deployed machine was not affected by the `power-off` command, since the `power-type` was set to `manual`.  This is an expected behaviour.
 rad-end
 
-For a better understanding of these states and actions, see [Node statuses](/t/concepts-and-terms/785#heading--node-statuses) and [Machine actions](/t/concepts-and-terms/785#heading--machine-actions).
+For a better understanding of these states and actions, see [Node statuses](/t/maas-concepts-and-terms-reference/nnnn#heading--node-statuses) and [Machine actions](/t/maas-concepts-and-terms-reference/nnnn#heading--machine-actions).
 
 <a href="#heading--about-enlistment"><h3 id="heading--about-enlistment">About enlistment</h3></a>
 
@@ -522,7 +522,7 @@ The 'Add hardware' drop-down menu is used to add either new machines or a new ch
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/9a0747649e6aff999d3c04335eb752accedaf3de.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/9a0747649e6aff999d3c04335eb752accedaf3de.jpeg"></a>
 
-With one or more machines selected, the 'Add hardware' drop-down menu moves to the left, and is joined by the 'Take action' menu.  This menu provides access to the various [machine actions](/t/concepts-and-terms/785#node-actions) that can be applied to the selected machine(s):
+With one or more machines selected, the 'Add hardware' drop-down menu moves to the left, and is joined by the 'Take action' menu.  This menu provides access to the various [machine actions](/t/maas-concepts-and-terms-reference/nnnn#node-actions) that can be applied to the selected machine(s):
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/e03d5ac8de9ea4f4827ed057bb2dd83e241aac3b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e03d5ac8de9ea4f4827ed057bb2dd83e241aac3b.jpeg"></a>
 
@@ -756,7 +756,7 @@ Once MAAS provisions a machine with block devices, via a layout or administrator
 
 <a href="#heading--about-disk-erasure"><h4 id="heading--about-disk-erasure">About disk erasure</h4></a>
 
-Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/concepts-and-terms/785#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
+Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/maas-concepts-and-terms-reference/nnnn#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
 
 
 <a href="#heading--about-disk-erasure-types"><h5 id="heading--about-disk-erasure-types">About disk erasure types</h5></a>

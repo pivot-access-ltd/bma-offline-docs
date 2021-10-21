@@ -38,7 +38,7 @@ Sometimes the hardware can boot from PXE, but fail to load correct drivers when 
 
 <a href="#heading--node-deployment-fails"><h2 id="heading--node-deployment-fails">Node deployment fails</h2></a>
 
-When deployment fails the [Rescue mode](/t/concepts-and-terms/785#heading--rescue-mode) action can be used to boot ephemerally into the node, followed by an investigation.
+When deployment fails the [Rescue mode](/t/maas-concepts-and-terms-reference/nnnn#heading--rescue-mode) action can be used to boot ephemerally into the node, followed by an investigation.
 
 As an example, an improperly configured PPA was added to MAAS which caused nodes to fail deployment. After entering Rescue mode and connecting via SSH, the following was discovered in file `/var/log/cloud-init-output.log`:
 

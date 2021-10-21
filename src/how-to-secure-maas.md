@@ -64,7 +64,7 @@ One of the best steps you can take to improve both security and availability of 
 
 <details><summary>What is a TLS-terminated load balancer?</summary>
 
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/nnnn) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
+In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/how-to-enable-high-availability/nnnn) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
 
 A TLS-terminated load balancer is a load balancer that carries encryption and decryption as far down the pipe as possible, in this case, all the way to the load balancer itself. Note that, even though the "SSL" keyword may be used to enable operation, the term SSL is considered obsolete.  Hence we choose to use the term "TLS" instead, referring to **Transport Layer Security**.
 
@@ -132,7 +132,7 @@ Finally, restart the (already-running) load balancer so that these changes can t
 
 Note that you can also [enable HAProxy logging ](https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04) if desired.  This logging is an optional feature of the HAProxy tool and is thus left to your discretion.  
 
-If desired, you can [bypass the use of SSL](/t/high-availability/nnnn#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/nnnn) without implementing HAProxy.
+If desired, you can [bypass the use of SSL](/t/how-to-enable-high-availability/nnnn#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/nnnn) without implementing HAProxy.
 
 <a href="#heading--using-logs-for-security"><h2 id="heading--using-logs-for-security">Use logs to identify security issues</h2></a>
 

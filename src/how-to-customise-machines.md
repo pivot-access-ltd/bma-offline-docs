@@ -79,7 +79,7 @@ Once MAAS provisions a machine with block devices, via a layout or administrator
 
 <a href="#heading--about-disk-erasure"><h3 id="heading--about-disk-erasure">About disk erasure</h3></a>
 
-Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/concepts-and-terms/785#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
+Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/maas-concepts-and-terms-reference/nnnn#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
 
 <a href="#heading--about-disk-erasure-types"><h4 id="heading--about-disk-erasure-types">About disk erasure types</h4></a>
 

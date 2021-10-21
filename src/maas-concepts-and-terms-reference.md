@@ -2,48 +2,48 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 
 <details><summary>Show me an alphabetical list of terms</summary>
 
-* [Availability zones](/t/concepts-and-terms/785#heading--zones)
-* [Client](/t/concepts-and-terms/785#heading--client)
-* [cloud-init](/t/concepts-and-terms/785#heading--cloud-init)
-* [Controller](/t/concepts-and-terms/785#heading--controllers)
-* [Device](/t/concepts-and-terms/785#heading--devices)
-* [DHCP](/t/concepts-and-terms/785#heading--dhcp)
-* [DHCP relay](/t/concepts-and-terms/785#heading--dhcp-relay)
-* [Edge clouds](/t/concepts-and-terms/785#heading--edge-clouds)
-* [Fabrics](/t/concepts-and-terms/785#heading--fabrics)
-* [Hub](/t/concepts-and-terms/785#heading--hub)
-* [Images](/t/concepts-and-terms/785#heading--images)
-* [Interfaces](/t/concepts-and-terms/785#heading--interfaces)
-* [isolcpus](/t/concepts-and-terms/785#heading--isolcpus)
-* [LAN](/t/concepts-and-terms/785#heading--lan)
-* [MAC address](/t/concepts-and-terms/785#heading--mac-address)
-* [Machine](/t/concepts-and-terms/785#heading--machines)
-* [Machine actions](/t/concepts-and-terms/785#heading--machine-actions)
-* [Machine statuses](/t/concepts-and-terms/785#heading--machine-statuses)
-* [MAN](/t/concepts-and-terms/785#heading--MAN)
-* [Network cable](/t/concepts-and-terms/785#heading--network-cable)
-* [Network infrastructure](/t/concepts-and-terms/785#heading--network-infrastructure)
-* [Network interface](/t/concepts-and-terms/785#heading--network-interface)
-* [Network topology](/t/concepts-and-terms/785#heading--network-topology)
-* [NUMA](/t/concepts-and-terms/785#heading--numa)
-* [Nodes](/t/concepts-and-terms/785#heading--nodes)
-* [Package repositories](/t/concepts-and-terms/785#heading--package-repositories)
-* [Packet](/t/concepts-and-terms/785#heading--packet)
-* [Patch panel](/t/concepts-and-terms/785#heading--patch-panel)
-* [Regions](/t/concepts-and-terms/785#heading--regions)
-* [Repeater](/t/concepts-and-terms/785#heading--repeater)
-* [Router](/t/concepts-and-terms/785#heading--router)
-* [Series](/t/concepts-and-terms/785#heading--series)
-* [Server](/t/concepts-and-terms/785#heading--server)
-* [Spaces](/t/concepts-and-terms/785#heading--spaces)
-* [SR-IOV](/t/concepts-and-terms/785#heading--sr-iov)
-* [Subnets](/t/concepts-and-terms/785#heading--subnets)
-* [Switch](/t/concepts-and-terms/785#heading--switch)
-* [Tags](/t/concepts-and-terms/785#heading--tags)
-* [Ubuntu package repositories](/t/concepts-and-terms/785#heading--ubuntu-package-repositories)
-* [VLAN](/t/concepts-and-terms/785#heading--vlans)
-* [VM hosts](/t/concepts-and-terms/785#heading--vm-hosts)
-* [WAN](/t/concepts-and-terms/785#heading--WAN)
+* [Availability zones](/t/maas-concepts-and-terms-reference/nnnn#heading--zones)
+* [Client](/t/maas-concepts-and-terms-reference/nnnn#heading--client)
+* [cloud-init](/t/maas-concepts-and-terms-reference/nnnn#heading--cloud-init)
+* [Controller](/t/maas-concepts-and-terms-reference/nnnn#heading--controllers)
+* [Device](/t/maas-concepts-and-terms-reference/nnnn#heading--devices)
+* [DHCP](/t/maas-concepts-and-terms-reference/nnnn#heading--dhcp)
+* [DHCP relay](/t/maas-concepts-and-terms-reference/nnnn#heading--dhcp-relay)
+* [Edge clouds](/t/maas-concepts-and-terms-reference/nnnn#heading--edge-clouds)
+* [Fabrics](/t/maas-concepts-and-terms-reference/nnnn#heading--fabrics)
+* [Hub](/t/maas-concepts-and-terms-reference/nnnn#heading--hub)
+* [Images](/t/maas-concepts-and-terms-reference/nnnn#heading--images)
+* [Interfaces](/t/maas-concepts-and-terms-reference/nnnn#heading--interfaces)
+* [isolcpus](/t/maas-concepts-and-terms-reference/nnnn#heading--isolcpus)
+* [LAN](/t/maas-concepts-and-terms-reference/nnnn#heading--lan)
+* [MAC address](/t/maas-concepts-and-terms-reference/nnnn#heading--mac-address)
+* [Machine](/t/maas-concepts-and-terms-reference/nnnn#heading--machines)
+* [Machine actions](/t/maas-concepts-and-terms-reference/nnnn#heading--machine-actions)
+* [Machine statuses](/t/maas-concepts-and-terms-reference/nnnn#heading--machine-statuses)
+* [MAN](/t/maas-concepts-and-terms-reference/nnnn#heading--MAN)
+* [Network cable](/t/maas-concepts-and-terms-reference/nnnn#heading--network-cable)
+* [Network infrastructure](/t/maas-concepts-and-terms-reference/nnnn#heading--network-infrastructure)
+* [Network interface](/t/maas-concepts-and-terms-reference/nnnn#heading--network-interface)
+* [Network topology](/t/maas-concepts-and-terms-reference/nnnn#heading--network-topology)
+* [NUMA](/t/maas-concepts-and-terms-reference/nnnn#heading--numa)
+* [Nodes](/t/maas-concepts-and-terms-reference/nnnn#heading--nodes)
+* [Package repositories](/t/maas-concepts-and-terms-reference/nnnn#heading--package-repositories)
+* [Packet](/t/maas-concepts-and-terms-reference/nnnn#heading--packet)
+* [Patch panel](/t/maas-concepts-and-terms-reference/nnnn#heading--patch-panel)
+* [Regions](/t/maas-concepts-and-terms-reference/nnnn#heading--regions)
+* [Repeater](/t/maas-concepts-and-terms-reference/nnnn#heading--repeater)
+* [Router](/t/maas-concepts-and-terms-reference/nnnn#heading--router)
+* [Series](/t/maas-concepts-and-terms-reference/nnnn#heading--series)
+* [Server](/t/maas-concepts-and-terms-reference/nnnn#heading--server)
+* [Spaces](/t/maas-concepts-and-terms-reference/nnnn#heading--spaces)
+* [SR-IOV](/t/maas-concepts-and-terms-reference/nnnn#heading--sr-iov)
+* [Subnets](/t/maas-concepts-and-terms-reference/nnnn#heading--subnets)
+* [Switch](/t/maas-concepts-and-terms-reference/nnnn#heading--switch)
+* [Tags](/t/maas-concepts-and-terms-reference/nnnn#heading--tags)
+* [Ubuntu package repositories](/t/maas-concepts-and-terms-reference/nnnn#heading--ubuntu-package-repositories)
+* [VLAN](/t/maas-concepts-and-terms-reference/nnnn#heading--vlans)
+* [VM hosts](/t/maas-concepts-and-terms-reference/nnnn#heading--vm-hosts)
+* [WAN](/t/maas-concepts-and-terms-reference/nnnn#heading--WAN)
 
 </details>
 
@@ -534,11 +534,11 @@ A MAC or "media access control" address is a unique address or "physical address
 Network cables are special cables that connect non-wireless-based nodes.  They consist of our pairs of insulated, 24-gauge wire, colour-coded (solid/striped), usually in four colours: blue, green, orange, and brown.  The matching colour pairs are twisted together, each pair at a different turn rate to prevent electromagnetic interference between pairs.
 These twists must be maintained all the way up to the (RJ45) connector.
 
-Even with insulation, careful twisting, and connector-termination, natural losses in the cable cause the network signals to become too weak to maintain reliable data rates after a certain length.  In the case of Cat 5e cable, the maximum cable length is 100 meters to maintain 1Gb per second.  For Cat 6, the max length to maintain 10Gb per second is 55 meters.  These limits are overcome with [repeaters](/t/concepts-and-terms/785#heading--repeater), which amplify the signal and relay it to the next repeater or NIC.
+Even with insulation, careful twisting, and connector-termination, natural losses in the cable cause the network signals to become too weak to maintain reliable data rates after a certain length.  In the case of Cat 5e cable, the maximum cable length is 100 meters to maintain 1Gb per second.  For Cat 6, the max length to maintain 10Gb per second is 55 meters.  These limits are overcome with [repeaters](/t/maas-concepts-and-terms-reference/nnnn#heading--repeater), which amplify the signal and relay it to the next repeater or NIC.
 
 <a href="#heading--repeater"><h3 id="heading--repeater">Repeater</h3></a>
 
-Technically, a repeater is a network signal amplifier with two RJ45 connectors which adds one maximum length (for the cable type) to the network connection or "run."  In practice, repeaters usually come in the form of [hubs](/t/concepts-and-terms/785#heading--hub) or [switches](/t/concepts-and-terms/785#heading--switch), which can usually perform other functions as well.
+Technically, a repeater is a network signal amplifier with two RJ45 connectors which adds one maximum length (for the cable type) to the network connection or "run."  In practice, repeaters usually come in the form of [hubs](/t/maas-concepts-and-terms-reference/nnnn#heading--hub) or [switches](/t/maas-concepts-and-terms-reference/nnnn#heading--switch), which can usually perform other functions as well.
 
 <a href="#heading--packet"><h3 id="heading--packet">Packet</h3></a>
 
@@ -556,15 +556,15 @@ A switch is a "smart" device that connects cables from nodes to make networks.  
 
 Topology describes how nodes are connected to a network, specifically referring to the shapes made by the cables and the paths that packets can take.  There are probably as many topologies are there are shapes, but here are five of the most common:
 
-1. Bus topology: the most basic network topology, a group of computers connected to a single, long cable.  In this configuration, every computer sees every packet.  A [hub](/t/concepts-and-terms/785#heading--hub) network, for instance, is still a bus topology, because every machine sees every packet.
+1. Bus topology: the most basic network topology, a group of computers connected to a single, long cable.  In this configuration, every computer sees every packet.  A [hub](/t/maas-concepts-and-terms-reference/nnnn#heading--hub) network, for instance, is still a bus topology, because every machine sees every packet.
 
-2. Star or switch topology: a group of computers connected to a [switch](/t/concepts-and-terms/785#heading--switch).  As the switch learns where packets are supposed to go, the star quickly evolves so that only packets are only seen by computers that are intended to receive the packet.
+2. Star or switch topology: a group of computers connected to a [switch](/t/maas-concepts-and-terms-reference/nnnn#heading--switch).  As the switch learns where packets are supposed to go, the star quickly evolves so that only packets are only seen by computers that are intended to receive the packet.
 
 3. Backbone topology: a hybrid network configuration in which several stars are connected to a bus.
 
 4. Daisy-chain topology: stars connected to stars, or more accurately, switches connected to switches.
 
-5. Mesh topology: nodes with multiple interfaces and multiple connections.  Useful where wide-area networks ([WAN](/t/concepts-and-terms/785#heading--wan)) where there would otherwise be lots of intermediaries.  Not popular or particularly cost effective for [LAN](/t/concepts-and-terms/785#heading--lan) networks.
+5. Mesh topology: nodes with multiple interfaces and multiple connections.  Useful where wide-area networks ([WAN](/t/maas-concepts-and-terms-reference/nnnn#heading--wan)) where there would otherwise be lots of intermediaries.  Not popular or particularly cost effective for [LAN](/t/maas-concepts-and-terms-reference/nnnn#heading--lan) networks.
 
 <a href="#heading--patch-panel"><h3 id="heading--patch-panel">Patch panel</h3></a>
 

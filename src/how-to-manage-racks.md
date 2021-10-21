@@ -4,7 +4,7 @@ This article will tell you:
 
 - [How to install a rack controller](#heading--install-a-rack-controller)
 - [How to list rack controllers](#heading--list-rack-controllers)
-- [How to configure MAAS for multiple API servers](/t/high-availability/nnnn#heading--multiple-region-endpoints)
+- [How to configure MAAS for multiple API servers](/t/how-to-enable-high-availability/nnnn#heading--multiple-region-endpoints)
 - [How to unregister a rack controller](#heading--unregister-a-rack-controller)
 - [About the potential dangers of moving a rack controller](#heading--dangers-moving-rack-controller)
 - [How to move a rack controller from one MAAS instance to another](#heading--move-rack-controller)
@@ -50,11 +50,11 @@ You can also list and confirm all registered rack controllers:
 maas $PROFILE rack-controllers read | grep hostname | cut -d '"' -f 4
 ```
 
-Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/nnnn) configurations.
+Note that you will need multiple rack controllers to achieve specific [high availability](/t/how-to-enable-high-availability/nnnn) configurations.
 rad-end
 
 rad-begin /deb/2.9/ui /deb/3.0/ui /deb/3.1/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui
-You can also list and confirm all registered rack controllers via the CLI; select the link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/nnnn) configurations.
+You can also list and confirm all registered rack controllers via the CLI; select the link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](/t/how-to-enable-high-availability/nnnn) configurations.
 rad-end
 
 <div class="p-notification">

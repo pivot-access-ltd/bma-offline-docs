@@ -39,7 +39,7 @@ Click the 'Reserve' button when done.
 rad-end
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
-See [Concepts and terms](/t/concepts-and-terms/785#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
+See [Concepts and terms](/t/maas-concepts-and-terms-reference/nnnn#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
 
 To create a range of dynamic IP addresses that will be used by MAAS for node enlistment, commissioning, and possibly deployment:
 
