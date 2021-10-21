@@ -563,7 +563,7 @@ To do this, enable Allow SSH access and prevent the machine from powering off wh
 Because scripts operate within an ephemeral version of Ubuntu, enabling this option stops the machine from shutting down, allowing you to connect and probe a script's status.
 rad-end
 
-As long as you've added your [SSH key](/t/user-accounts/nnnn#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
+As long as you've added your [SSH key](/t/how-to-manage-user-accounts/nnnn#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
 
 <a href="#heading--how-to-locate-script-files"><h3 id="heading--how-to-locate-script-files">How to locate script files</h3></a>
 

@@ -392,7 +392,7 @@ If you need further details, especially when writing and running your own script
 
 Because scripts operate within an ephemeral version of Ubuntu, enabling this option stops the machine from shutting down, allowing you to connect and probe a script's status.
 
-As long as you've added your [SSH key](/t/user-accounts/nnnn#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
+As long as you've added your [SSH key](/t/how-to-manage-user-accounts/nnnn#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
 
 <a href="#heading--about-testing-hardware"><h2 id="heading--about-testing-hardware">About testing hardware</h2></a>
 
@@ -414,7 +414,7 @@ You can also examine the "raw" log output:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a>
 
-Help interpreting these logs can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
+Help interpreting these logs can be found under the [Logging](/t/maas-logging-reference/nnnn) section of this documentation.
 
 <a href="#heading--about-testing-machine-networking"><h4 id="heading--about-testing-machine-networking">About testing machine networking</h4></a>
 
@@ -434,7 +434,7 @@ Before deploying a machine, MAAS must acquire it (status 'Allocated'). Acquiring
 
 The agent that triggers deployment may vary. For instance, if the machines are destined to run complex, inter-related services that scale up or down frequently, like a "cloud" resource, then [Juju](https://jaas.ai/) is the recommended deployment agent. Juju will also install and configure services on the deployed machines. If you want to use MAAS to install a base operating system and work on the machines manually, then you can deploy a machine directly with MAAS.
 
-Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/nnnn#heading--ssh-keys).
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/how-to-manage-user-accounts/nnnn#heading--ssh-keys).
 
 [note]
 Juju adds SSH keys to machines under its control.
@@ -460,7 +460,7 @@ Before deploying, you should take two key actions:
 
 1. Review and possibly set the [Ubuntu kernels](/t/how-to-customise-machines/nnnn#heading--about-ubuntu-kernels) and the [Kernel boot options](/t/how-to-customise-machines/nnnn#heading--about-kernel-boot-options) that will get used by deployed machines.
 
-2. Ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/nnnn#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+2. Ensure any pertinent SSH keys are imported (see [SSH keys](/t/how-to-manage-user-accounts/nnnn#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
 
 <a href="#heading--event-logs-h3"><h3 id="heading--event-logs-h3">About machine event logs</h3></a>
 
@@ -468,7 +468,7 @@ Event logs display a list of timestamped status updates for events and actions p
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a>
 
-Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
+Detailed discussion of this event log can be found under the [Logging](/t/maas-logging-reference/nnnn) section of this documentation.
 
 <a href="#heading--about-adding-machines"><h2 id="heading--about-adding-machines">About adding machines</h2></a>
 
@@ -657,7 +657,7 @@ The "Power configuration" supplies the parameters necessary for MAAS to access t
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png"></a> 
 
-More information on Power configuration will be found in the [Power management](/t/power-management/nnnn) section of this documentation.
+More information on Power configuration will be found in the [Power management](/t/power-management-reference/nnnn) section of this documentation.
 rad-end
 
 <a href="#heading--about-resource-pools"><h3 id="heading--about-resource-pools">About resource pools</h3></a>

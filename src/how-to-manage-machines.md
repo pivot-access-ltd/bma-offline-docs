@@ -51,7 +51,7 @@ The fields on the "Add machine" screen include the following items:
 
 - **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
 
-- **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/nnnn) for details on the available power types and the relevant parameters for each type.
+- **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management-reference/nnnn) for details on the available power types and the relevant parameters for each type.
 rad-end
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
@@ -96,7 +96,7 @@ The variable fields in the `machines create` command (the `$...` items) are as f
 
 - `$MAC_ADDRESS`: This is the MAC address of the boot-enabled NIC for the machine being added.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
 
-- `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/nnnn) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+- `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management-reference/nnnn) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
 
 - `$POWER_ID`: This is generally the UUID of the machine being added.
 
@@ -304,7 +304,7 @@ This will bring up a detailed log view for that row:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png"></a>
 
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs.  
+These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on [Logging](/t/maas-logging-reference/nnnn) for more details on how to read and interpret these logs.  
 
 <a href="#heading--hardware-tests"><h3 id="heading--hardware-tests">How to find machine hardware & test logs</h3></a>
 
@@ -320,7 +320,7 @@ By choosing "Installation output" on the "Logs" tab, you can see the "raw" log o
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a> 
 
-Help interpreting these logs can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
+Help interpreting these logs can be found under the [Logging](/t/maas-logging-reference/nnnn) section of this documentation.
 
 <a href="#heading--event-logs"><h3 id="heading--event-logs">How to find a machine's event logs</h3></a>
 
@@ -328,7 +328,7 @@ To view the Event log for a machine, choose the "Event" tab under "Logs."  This 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a> 
 
-There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
+There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging-reference/nnnn) section of this documentation.
 
 <a href="#heading--machine-config"><h3 id="heading--machine-config">How to find machine configuration info</h3></a>
 
@@ -342,7 +342,7 @@ The "Power configuration" supplies the parameters necessary for MAAS to access t
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png"></a> 
 
-More information on Power configuration will be found in the [Power management](/t/power-management/nnnn) section of this documentation.
+More information on Power configuration will be found in the [Power management](/t/power-management-reference/nnnn) section of this documentation.
 
 rad-end
 
