@@ -275,7 +275,7 @@ The reserved ranges section of the subnet screen looks like this:
 
 <a href="https://assets.ubuntu.com/v1/5f9f50f9-installconfig-networking__2.4_subnets-reserved.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/5f9f50f9-installconfig-networking__2.4_subnets-reserved.png"></a>
 
-More details and instructions regarding these ranges can be found in [IP ranges](/t/ip-ranges/nnnn).
+More details and instructions regarding these ranges can be found in [IP ranges](/t/how-to-manage-ip-ranges/nnnn).
 rad-end
 
 

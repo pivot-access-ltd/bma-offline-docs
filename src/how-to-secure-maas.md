@@ -132,7 +132,7 @@ Finally, restart the (already-running) load balancer so that these changes can t
 
 Note that you can also [enable HAProxy logging ](https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04) if desired.  This logging is an optional feature of the HAProxy tool and is thus left to your discretion.  
 
-If desired, you can [bypass the use of SSL](/t/how-to-enable-high-availability/nnnn#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-tls-encryption/nnnn) without implementing HAProxy.
+If desired, you can [bypass the use of SSL](/t/how-to-enable-high-availability/nnnn#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/how-to-enable-tls-encryption/nnnn) without implementing HAProxy.
 
 <a href="#heading--using-logs-for-security"><h2 id="heading--using-logs-for-security">Use logs to identify security issues</h2></a>
 

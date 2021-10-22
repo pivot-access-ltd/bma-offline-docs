@@ -80,11 +80,11 @@ MAAS also recognises when the subnet ARP cache is full, so that it can re-check 
 
 <a href="#heading--extending-a-reserved-dynamic-ip-range"><h2 id="heading--extending-a-reserved-dynamic-ip-range">How to extend a reserved dynamic IP range</h2></a>
 
-If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/ip-ranges/nnnn)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
+If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/how-to-manage-ip-ranges/nnnn)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
 
 <a href="#heading--external-dhcp-and-a-reserved-ip-range"><h2 id="heading--external-dhcp-and-a-reserved-ip-range">How to configure external DHCP</h2></a>
 
-If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/ip-ranges/nnnn) to create such a range. It should correspond to the lease range of the external server.
+If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/how-to-manage-ip-ranges/nnnn) to create such a range. It should correspond to the lease range of the external server.
 
 <a href="#heading--dhcp-relay"><h2 id="heading--dhcp-relay">How to use a DHCP relay</h2></a>
 

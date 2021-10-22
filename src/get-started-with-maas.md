@@ -231,7 +231,7 @@ rad-end
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
-Assigning machines to specific functions is something you can do after you [commission](/t/how-to-deploy-machines/nnnn#heading--how-to-commission-a-machine) and [deploy](/t/how-to-deploy-machines/nnnn) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/about-tags/nnnn) to machines.  
+Assigning machines to specific functions is something you can do after you [commission](/t/how-to-deploy-machines/nnnn#heading--how-to-commission-a-machine) and [deploy](/t/how-to-deploy-machines/nnnn) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/about-tags-and-annotations/nnnn) to machines.  
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 ```

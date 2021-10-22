@@ -3,9 +3,9 @@ MAAS provides supported images for stable Ubuntu releases, and for CentOS 6.6, C
 #### Four questions you may have:
 
 1. [What are boot sources, and why do they matter?](#heading--boot-sources)
-2. [How do I select and import an image?](/t/select-and-import-images/nnnn)
-3. [How do I set up and use a local image mirror?](/t/local-image-mirror/nnnn)
-4. [How do I use and manage VMWare images?](/t/vmware-images/nnnn)
+2. [How do I select and import an image?](/t/how-to-import-images/nnnn)
+3. [How do I set up and use a local image mirror?](/t/how-to-mirror-images-locally/nnnn)
+4. [How do I use and manage VMWare images?](/t/how-to-manage-vmware-images/nnnn)
 
 MAAS stores images in the region controller's database, from where the rack controller proxies them to the individual machines.  It's important to note that for ESXi images, network configuration includes only these five parameters:
 
@@ -33,6 +33,6 @@ MAAS comes configured with a boot source that should suffice for most users:
 
 [`https://images.maas.io/ephemeral-v3/stable/`](https://images.maas.io/ephemeral-v3/stable/)
 
-The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/nnnn) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/how-to-mirror-images-locally/nnnn) for some explanation regarding the availability of other streams.
 
 Although the backend supports multiple boot sources, MAAS itself uses a single source. If multiple sources are detected, the web UI will print a warning and will be unable to manage images.

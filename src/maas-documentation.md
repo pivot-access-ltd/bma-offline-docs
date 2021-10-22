@@ -4,7 +4,7 @@ MAAS is **Metal As A Service**, a service that allows you to treat physical serv
 
 <a href="#heading--how-to-engage-with-maas"><h2 id="heading--how-to-engage-with-maas">How to engage with MAAS</h2></a>
 
-- [Find out what's new in MAAS](/t/whats-new-in-maas/5292)
+- [Find out what's new in MAAS](/t/what-is-new-with-maas/5292)
 - [Get started with MAAS](/t/give-me-an-example-of-maas-snap-3-0-ui/5092)
 - [Get professional support](/t/-/5448)
 - [Report a bug](/t/report-a-bug/4446)
@@ -92,7 +92,7 @@ MAAS is **Metal As A Service**, a service that allows you to treat physical serv
 
 - [Get help](/t/-/5428)
 - [Tips, tricks, and traps](/t/-/5329)
-- [Upgrade MAAS](/t/upgrading-maas/5436)
+- [Upgrade MAAS](/t/how-to-upgrade-maas/5436)
 
 ### [Release notes](/t/-/5292)
 

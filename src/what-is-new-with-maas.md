@@ -45,10 +45,10 @@ Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now availa
 <h4>Six other questions you may have:</h4>
 
 1. [What known issues should I be aware of?](#heading--known-issues)
-2. [How do I install MAAS 2.9?](/t/maas-installation/3323)
-3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?](/t/maas-installation/3323#heading--upgrade-maas-snap)
-4. [How do I install MAAS 2.9 from packages?](/t/maas-installation/3329#heading--install-from-packages)
-5. [How do I upgrade MAAS 2.8 to MAAS 2.9 using packages?](/t/maas-installation/3329#heading--upgrade-via-packages)
+2. [How do I install MAAS 2.9?](/t/how-to-install-maas/3323)
+3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?](/t/how-to-install-maas/3323#heading--upgrade-maas-snap)
+4. [How do I install MAAS 2.9 from packages?](/t/how-to-install-maas/3329#heading--install-from-packages)
+5. [How do I upgrade MAAS 2.8 to MAAS 2.9 using packages?](/t/how-to-install-maas/3329#heading--upgrade-via-packages)
 6. [What bugs are fixed so far in this release?](#heading--bug-fixes)
 
 <h2 id="heading--focal-default">Focal Fossa (Ubuntu 20.04 LTS) as default release</h2>
@@ -75,7 +75,7 @@ This functionality comes with an enhanced panel in the "KVM" details section:
 
 <a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
 
-See the [VM hosting](/t/vm-hosting/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
+See the [VM hosting](/t/about-vm-hosting/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
 
 <h2 id="heading--improved-perf-large-maas">Improved performance for large MAAS installations</h2>
 
