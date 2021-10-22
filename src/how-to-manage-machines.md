@@ -100,7 +100,7 @@ The variable fields in the `machines create` command (the `$...` items) are as f
 
 - `$POWER_ID`: This is generally the UUID of the machine being added.
 
-- `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types) in the API reference for details on the available power types and the relevant parameters for each type.
+- `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png) in the API reference for details on the available power types and the relevant parameters for each type.
 rad-end
 
 rad-begin /snap/3.0/ui /deb/3.0/ui /snap/2.9/ui /deb/2.9/ui /snap/3.1/ui /deb/3.1/ui
