@@ -121,7 +121,7 @@ Apply the new configuration with `netplan apply`.
 
 <a href="#heading--maas-bridge-libvirt"><h2 id="heading--maas-bridge-libvirt">How to set up a VM host bridge with libvirt</h2></a>
 
-It is also possible to use [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) to configure a virtual bridge.  This method will also work for LXD VM hosts running on Ubuntu.  Be aware that other methods may be required if you are configuring LXD on an OS other than Ubuntu.
+It is also possible to use [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png) to configure a virtual bridge.  This method will also work for LXD VM hosts running on Ubuntu.  Be aware that other methods may be required if you are configuring LXD on an OS other than Ubuntu.
 
 By default, libvirt creates a virtual bridge, `virbr0`, through which VMs communicate with each other and the Internet. DHCP, supplied by libvirt, automatically assigns an IP address to each VM.  However, to enable network booting in MAAS, you’ll need to provide DHCP in MAAS and either:
 
@@ -200,7 +200,7 @@ After installing MAAS, the 'KVM' page is typically empty:
 rad-end
  
 rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
-If you want to add a LXD (or [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt)) KVM host to a machine which is already installed, you can do so with the 'Add KVM' button:
+If you want to add a LXD (or [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt)) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png) KVM host to a machine which is already installed, you can do so with the 'Add KVM' button:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg"></a>
 
@@ -212,7 +212,7 @@ You must either enter a new project name (which cannot contain spaces or special
 rad-end
  
 rad-begin  /deb/2.9/ui  /snap/2.9/ui 
-If you want to add a [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) or LXD VM host to a machine which is already installed, you can do so with the 'Add KVM' button:
+If you want to add a [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png) or LXD VM host to a machine which is already installed, you can do so with the 'Add KVM' button:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/197ae57b89b32546cf054fff49452f9025354af8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/197ae57b89b32546cf054fff49452f9025354af8.jpeg"></a> 
 
