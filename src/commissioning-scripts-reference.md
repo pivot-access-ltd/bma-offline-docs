@@ -1,4 +1,4 @@
-This document provides technical details about commissioning scripts.  For the corresponding details about test scripts, see [Hardware testing scripts reference](/t/-/4861).
+This document provides technical details about commissioning scripts.  For the corresponding details about test scripts, see [Hardware test scripts reference](/t/hardware-test-scripts-reference/nnnn).
 
 <a href="#heading--metadata-field-reference"><h2 id="heading--metadata-field-reference">Metadata field reference</h2></a>
 
@@ -135,7 +135,7 @@ The following seven environment variables are available when a script runs withi
 
 Below is a sample script to configure an Intel C610/X99 HPA controller on an HP system. The script will only run on systems with an Intel C610/X99 controller identified by the PCI ID 8086:8d06.
 
-Before the scrixpt runs, MAAS will download and install the [HP RESTful Interface Tool](https://downloads.linux.hpe.com/SDR/project/hprest/) package from HP. After the script completes, the built-in commissioning scripts will be re-run to capture the new configuration.
+Before the scrixpt runs, MAAS will download and install the [HP RESTful Interface Tool](https://downloads.linux.hpe.com/SDR/project/hprest/) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png) package from HP. After the script completes, the built-in commissioning scripts will be re-run to capture the new configuration.
 
 ```nohighlight
 #!/bin/bash -ex
