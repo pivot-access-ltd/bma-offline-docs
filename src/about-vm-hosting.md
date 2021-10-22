@@ -17,10 +17,10 @@ rad-end
 - [About over-committed resources](#heading--overcommit-resources)
 
 rad-begin /snap/2.9/cli /snap/2.9/ui /deb/2.9/cli /deb/2.9/ui
-MAAS currently supports VM hosts and VMs created via [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt). MAAS also supports LXD VMs and VM hosts as a Beta feature.
+MAAS currently supports VM hosts and VMs created via [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png). MAAS also supports LXD VMs and VM hosts as a Beta feature.
 rad-end
 rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/cli /deb/3.0/ui /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
-MAAS currently supports VM hosts and VMs created with LXD VMs and VM hosts as the preferred VM hosting method. As a legacy offering, MAAS still supports VM hosts and VMs created via [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt).
+MAAS currently supports VM hosts and VMs created with LXD VMs and VM hosts as the preferred VM hosting method. As a legacy offering, MAAS still supports VM hosts and VMs created via [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png).
 rad-end
 
 <a href="#heading--about-vm-hosts"><h2 id="heading--about-vm-hosts">About VM hosts</h2></a>
