@@ -1,4 +1,4 @@
-MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directly deploy the VMware ESXi ISO; you must create a specialised image from an official VMWare ISO. Canonical created a [packer](https://www.packer.io/) template to automate the image creation process.
+MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directly deploy the VMware ESXi ISO; you must create a specialised image from an official VMWare ISO. Canonical created a [packer](https://www.packer.io/) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png) template to automate the image creation process.
 
 #### Five questions you may have:
 
@@ -16,8 +16,8 @@ MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directl
 2.   **CPU**: 4 2GHz cores
 3.   **Memory**: 8 GB RAM (16 GB RAM recommended)
 4.   **Disk space**: 11 GB
-5.   [The VMWare ESxi ISO](https://my.vmware.com/en/web/vmware/evalcenter?p=free-esxi6)
-6.   [Packer - https://www.packer.io/intro/getting-started/install.html](https://www.packer.io/intro/getting-started/install.html)
+5.   [The VMWare ESxi ISO](https://my.vmware.com/en/web/vmware/evalcenter?p=free-esxi6) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png)
+6.   [Packer - https://www.packer.io/intro/getting-started/install.html](https://www.packer.io/intro/getting-started/install.html) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png)
 7.   Procedure was tested with precompiled 64-bit Packer 1.3.4 Linux binaries
 8.   <a href="https://github.com/canonical/packer-maas">Packer template</a> for MAAS custom image
 
@@ -27,7 +27,7 @@ MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directl
 
 <a href="#heading--customizing-the-image"><h2 id="heading--customizing-the-image">Customizing the Image</h2></a>
 
-The image may be customized by modifying packer-maas/vmware-esxi/http/vmware-esxi-ks.cfg see Installation and Upgrade Scripts in the [VMware ESXi installation and Setup manual](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-67-installation-setup-guide.pdf) for more information.
+The image may be customized by modifying packer-maas/vmware-esxi/http/vmware-esxi-ks.cfg see Installation and Upgrade Scripts in the [VMware ESXi installation and Setup manual](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-67-installation-setup-guide.pdf) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png) for more information.
 
 <a href="#heading--building-an-image"><h2 id="heading--building-an-image">Building an Image</h2></a>
 
@@ -70,4 +70,4 @@ Custom storage configuration is not supported because VMware ESXi expects specif
 
 <a href="#heading--esxi-hardware-support"><h3 id="heading--esxi-hardware-support">ESXi Hardware Support</h3></a>
 
-VMware has [very specific hardware requirements](https://www.vmware.com/resources/compatibility/search.php). In particular, running VMware ESXi is not supported in a virtual machine or MAAS virsh Pod.
+VMware has [very specific hardware requirements](https://www.vmware.com/resources/compatibility/search.php) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png). In particular, running VMware ESXi is not supported in a virtual machine or MAAS virsh Pod.
