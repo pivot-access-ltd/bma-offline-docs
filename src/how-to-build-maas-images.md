@@ -1,7 +1,7 @@
-MAAS Image Builder is an alternative to [Packer](https://www.packer.io/) for creating MAAS images.
+MAAS Image Builder is an alternative to [Packer](https://www.packer.io/) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png) for creating MAAS images.
 
 [note]
-In order to use MAAS Image Builder, you must purchase [Ubuntu Advantage for Infrastructure](https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool).
+In order to use MAAS Image Builder, you must purchase [Ubuntu Advantage for Infrastructure](https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png).
 [/note]
 
 With the MAAS Image Builder, you can do five key operations:
@@ -16,11 +16,11 @@ You can customise most images as much or as little as you wish, then use them to
 
 <h2 id="heading--install-mib">Install MAAS Image Builder</h2></a>
 
-To get MAAS Image Builder, you must be subscribed to a private PPA provided by Canonical Support to those customers who have purchased [Ubuntu Advantage for Infrastructure](https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool).  Note that the steps below will fail if you have not purchased Ubuntu Advantage and been subscribed to the private PPA by your Canonical support rep.
+To get MAAS Image Builder, you must be subscribed to a private PPA provided by Canonical Support to those customers who have purchased [Ubuntu Advantage for Infrastructure](https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png).  Note that the steps below will fail if you have not purchased Ubuntu Advantage and been subscribed to the private PPA by your Canonical support rep.
 
 Once subscribed, you need to obtain your credentials at this external link:
 
-https://launchpad.net/~/+archivesubscriptions
+https://launchpad.net/~/+archivesubscriptions ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png)
 
 Also, you must add the repository with the <code>add-apt-repository</code> command.  Note: Be sure to substitute your unique URL in the command below:
 
@@ -41,9 +41,9 @@ MAAS already provides the latest available CentOS 6, CentOS 7, and CentOS 8 for 
 
 Access to the Internet is required, since you will need to start with one of these three sites:
 
-1. http://mirror.centos.org  - OS, updates, and extra repositories
-2. https://download.fedoraproject.org  - EPEL
-3. https://copr-be.cloud.fedoraproject.org - Canonical maintained cloud-init repository
+1. http://mirror.centos.org ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png)  - OS, updates, and extra repositories
+2. https://download.fedoraproject.org ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png)  - EPEL
+3. https://copr-be.cloud.fedoraproject.org ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png) - Canonical maintained cloud-init repository
 
 <h3 id="heading--images-behind-proxy">Creating images behind a proxy</h3>
 
