@@ -53,7 +53,7 @@ You can handle this lowest level with individual [machines](/t/about-machines/nn
 </summary>
 <h4>Creating some sample VMs</h4>
 
-Assuming you've [installed libvirt](https://help.ubuntu.com/lts/serverguide/libvirt.html) on the machine where you'll be running MAAS, you can create virtual machines like this:
+Assuming you've [installed libvirt](https://help.ubuntu.com/lts/serverguide/libvirt.html) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png) on the machine where you'll be running MAAS, you can create virtual machines like this:
 
 Open the Virtual Machine Manager application.  You'll see a screen that looks something like this:
 
