@@ -1606,6 +1606,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/deb/2.7/cli/how-to-manage-networks|/docs/deb/2.7/cli/network-discovery|
+|/docs/deb/2.7/ui/how-to-manage-networks|/docs/deb/2.7/ui/network-discovery|
+|/docs/deb/2.8/cli/how-to-manage-networks|/docs/deb/2.8/cli/network-discovery|
+|/docs/deb/2.8/ui/how-to-manage-networks|/docs/deb/2.8/ui/network-discovery|
+|/docs/snap/2.7/cli/how-to-manage-networks|/docs/snap/2.7/cli/network-discovery|
+|/docs/snap/2.7/ui/how-to-manage-networks|/docs/snap/2.7/ui/network-discovery|
+|/docs/snap/2.8/cli/how-to-manage-networks|/docs/snap/2.8/cli/network-discovery|
+|/docs/snap/2.8/ui/how-to-manage-networks|/docs/snap/2.8/ui/network-discovery|
 |/docs/deb/2.7/cli/about-networking|/docs/deb/2.7/cli/networking|
 |/docs/deb/2.7/ui/about-networking|/docs/deb/2.7/ui/networking|
 |/docs/deb/2.8/cli/about-networking|/docs/deb/2.8/cli/networking|
