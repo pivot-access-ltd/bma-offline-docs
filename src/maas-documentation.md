@@ -1606,6 +1606,22 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/deb/2.7/cli/how-to-manage-machines|/docs/deb/2.7/cli/add-machines|
+|/docs/deb/2.7/ui/how-to-manage-machines|/docs/deb/2.7/ui/add-machines|
+|/docs/deb/2.8/cli/how-to-manage-machines|/docs/deb/2.8/cli/add-machines|
+|/docs/deb/2.8/ui/how-to-manage-machines|/docs/deb/2.8/ui/add-machines|
+|/docs/snap/2.7/cli/how-to-manage-machines|/docs/snap/2.7/cli/add-machines|
+|/docs/snap/2.7/ui/how-to-manage-machines|/docs/snap/2.7/ui/add-machines|
+|/docs/snap/2.8/cli/how-to-manage-machines|/docs/snap/2.8/cli/add-machines|
+|/docs/snap/2.8/ui/how-to-manage-machines|/docs/snap/2.8/ui/add-machines|
+|/docs/deb/2.7/cli/about-machines|/docs/deb/2.7/cli/machines|
+|/docs/deb/2.7/ui/about-machines|/docs/deb/2.7/ui/machines|
+|/docs/deb/2.8/cli/about-machines|/docs/deb/2.8/cli/machines|
+|/docs/deb/2.8/ui/about-machines|/docs/deb/2.8/ui/machines|
+|/docs/snap/2.7/cli/about-machines|/docs/snap/2.7/cli/machines|
+|/docs/snap/2.7/ui/about-machines|/docs/snap/2.7/ui/machines|
+|/docs/snap/2.8/cli/about-machines|/docs/snap/2.8/cli/machines|
+|/docs/snap/2.8/ui/about-machines|/docs/snap/2.8/ui/machines|
 |/docs/snap/2.7/cli/maas-installation|/docs/snap/2.7/cli/installation|
 |/docs/snap/2.7/ui/maas-installation|/docs/snap/2.7/ui/installation|
 |/docs/snap/2.8/cli/maas-installation|/docs/snap/2.8/cli/installation|
