@@ -714,7 +714,7 @@ rad-end
 rad-begin /snap/3.1/cli /snap/3.1/ui /deb/3.1/cli /deb/3.1/ui
 <h2>MAAS 3.1.0 Beta release notes</h2>
 
-We are happy to announce the Beta 3 release of MAAS 3.1. This release provides some bug fixes, on top of the new features provided by earlier Beta releases.
+We are happy to announce the Beta 5 release of MAAS 3.1. This release provides many critical bug fixes, on top of the new features provided by earlier Beta releases.
 
 <a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.1.0 Beta features and fixes</h3></a>
 
@@ -729,6 +729,16 @@ We are happy to announce the Beta 3 release of MAAS 3.1. This release provides s
  - [LXD authentication UX improvements](#heading--lxd-auth-ux-improvements): Easier MAAS to LXD connection that uses certificates for authentication.
 
  - [MAAS 3.1 cumulative bug fixes](#heading--maas-3-1-cumulative-bug-fixes)
+
+Critical and high-priority bug fixes have also been used to extend or repair MAAS features:
+
+ - [Expanded proxies](https://bugs.launchpad.net/maas/+bug/1867394): Some proxies require authentication; MAAS now respects the username and password you give it for a peer proxy
+
+ - [Accurate storage pool sizes](https://bugs.launchpad.net/bugs/1949410): The UI now calculates storage pool sizes correctly for CEPH pools, so shared pools are no longer stacked
+
+ - [Refresh wipeout bug](https://bugs.launchpad.net/bugs/1949485): MAAS does not destroy existing VMs on a refresh, or when the memory overcommit ratio is changed
+ 
+ - [Cloning issue fixed](https://bugs.launchpad.net/bugs/1948500): UI cloning has been repaired to prevent "unsuccessful cloning" of storage
  
 rad-end
 
@@ -1086,12 +1096,14 @@ Downloading and syncing images is a known delay element in MAAS.  While images a
 
 #### How to take advantage of this new feature
 
-There is nothing required of our users to experience this improved sync performance, other than upgrading to 3.1 (Beta2, in this case).
+There is nothing required of our users to experience this improved sync performance, other than upgrading to 3.1 Beta.
 
 <a href="#heading--maas-3-1-cumulative-bug-fixes"><h3 id="heading--maas-3-1-cumulative-bug-fixes">MAAS 3.1 cumulative bug fixes</h3></a>
 
 MAAS 3.1 beta bug fixes can be found in the following milestones:
 
+ - [MAAS 3.1 Beta5 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta5)
+ - [MAAS 3.1 Beta4 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta4)
  - [MAAS 3.1 Beta3 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta3)
  - [MAAS 3.1 Beta2 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta2)
  - [MAAS 3.1 Beta1 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta1)

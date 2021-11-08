@@ -1,3 +1,10 @@
+The ultimate purpose of MAAS is to deploy and manage machines.  As explained in /t/about-machines/nnnn#heading--about-the-machine-life-cycle, machines must first be enlisted or commissioned, then acquired, then deployed.  This article will tell you:
+
+ - [How to commission a machine](#heading--how-to-commission-a-machine)
+ - [How to test machines](#heading--how-to-test-machines)
+ - [How to acquire machines](#heading--acquire-machines)
+ - [How to deploy machines](#heading--deploy)
+
 <a href="#heading--how-to-commission-a-machine"><h2 id="heading--how-to-commission-a-machine">How to commission a machine</h2></a>
 
 rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui 
@@ -347,7 +354,7 @@ rad-end
 
 Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2896) to this machine.  The next step is [deployment](/t/how-to-deploy-machines/nnnn).
 
-<a href="#heading--how-to-manage-commissioning-and-testing-scripts"><h2 id="heading--how-to-manage-commissioning-and-testing-scripts">How to manage commissioning and testing scripts</h2></a>
+<a href="#heading--how-to-test-machines"><h2 id="heading--how-to-test-machines">How to test machines</h2></a>
 
 This section explains:
 
@@ -474,7 +481,7 @@ You can also limit which results are returned by type (commissioning, testing, o
 maas $PROFILE node-script-results read \
  $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS
 ```
-<a href="#heading--how-to-suppress-failed-results"><h4 id="heading--how-to-suppress-failed-results">How to suppress failed results</h4></a>
+<a href="#heading--how-to-suppress-failed-results"><h3 id="heading--how-to-suppress-failed-results">How to suppress failed results</h3></a>
 
 You can also suppress failed results, which is useful if you want to ignore a known failure:
 
@@ -607,7 +614,7 @@ Here, all the scripts are run again after downloading from MAAS, but no output d
 /tmp/user_data.sh.*/bin/maas-run-remote-scripts --no-send /tmp/user_data.sh.*
 ```
 rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
-<a href="#heading--upload-test-scripts"><h2 id="heading--upload-test-scripts">How to upload hardware test scripts</h2></a>
+<a href="#heading--upload-test-scripts"><h3 id="heading--upload-test-scripts">How to upload hardware test scripts</h3></a>
 
 To upload a hardware testing script to MAAS, enter the following:
 
@@ -672,7 +679,7 @@ To delete a script, use `delete`:
 maas $PROFILE node-script delete $SCRIPT_NAME
 ```
 
-<a href="#heading--tags-group-scripts"><h2 id="heading--tags-group-scripts">How to use tags to group commissioning and testing scripts</h2></a>
+<a href="#heading--tags-group-scripts"><h3 id="heading--tags-group-scripts">How to use tags to group commissioning and testing scripts</h3></a>
 
 Tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
 
@@ -697,7 +704,7 @@ maas $PROFILE machine commission \
 
 Any testing scripts tagged with commissioning will also run during commissioning.
 
-<a href="#heading--results"><h2 id="heading--results">How to view testing results</h2></a>
+<a href="#heading--results"><h3 id="heading--results">How to view testing results</h3></a>
 
 The command line allows you to not only view the current script's progress but also retrieve the verbatim output from any previous runs too.
 
@@ -920,6 +927,8 @@ There are no particular restrictions on these scripts, so you can test a wide va
 
 Users can specify unique parameters using the API, override machines which fail network testing (allowing their use), and suppress individual failed network tests.  Users can also review the health status from all interface tests, even sorting them by interface name and MAC.  In addition, MAAS can report the overall status of all interfaces.
 
+<a href="#heading--acquire-machines"><h2 id="heading--acquire-machines">How to acquire machines</h2></a>
+
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 To acquire/allocate a node with the web UI, select a machine which is in the "Ready" state, and drop down the "Take action" menu:
 
@@ -954,7 +963,7 @@ rad-end
 To acquire a node, it must have a status of 'Ready'.
 [/note]
 
-<a href="#heading--deploy"><h2 id="heading--deploy">Deploy</h2></a>
+<a href="#heading--deploy"><h2 id="heading--deploy">How to deploy machines</h2></a>
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 To deploy directly from MAAS, select one or more machine(s) and press the 'Deploy' button.
@@ -994,6 +1003,63 @@ By default, when you deploy a machine, MAAS will consider the deployment a failu
 ```
 maas $PROFILE maas set-config name=node-timeout value=$NUMBER_OF_MINUTES
 ```
+
+<a href="#heading--enlisted-deployed-machines"><h3 id="heading--enlisted-deployed-machines">How to enlist a machine that’s already running a workload</h3></a>
+
+In order to add machine that’s already running a workload, there are currently two options:
+
+Via the API/CLI, you can create a machine, passing the deployed flag:
+
+```
+$ maas $profile machines create deployed=true hostname=mymachine \   
+architecture=amd64 mac_addresses=00:16:3e:df:35:bb power_type=manual
+```
+
+On the machine itself (the recommended way, if the machine is running Ubuntu), you can download a helper script from MAAS and create the machine that way:
+
+```
+$ wget http://$MAAS_IP:5240/MAAS/maas-run-scripts
+$ chmod 755 maas-run-scripts
+$ ./maas-run-scripts register-machine --hostname mymachine \
+ > http://$MAAS_IP:5240/MAAS $MAAS_API_TOKEN
+```
+
+Now you have a machine in MAAS that’s in the deployed state, with no hardware information yet.
+
+<a href="#heading--update-deployed-hw-info"><h3 id="heading--update-deployed-hw-info">How to update hardware information for a deployed machine</h3></a>
+
+The recommended way of updating the hardware information for a deployed machine is to download the maas-run-scripts script and run it on the machine itself:
+
+```
+$ wget http://$MAAS_IP:5240/MAAS/maas-run-scripts
+$ chmod 755 maas-run-scripts
+$ ./maas-run-scripts report-results --config mymachine-creds.yaml
+```
+
+If you created the machine with the maas-run-scripts, you should have such a mymachine-creds.yaml file already. If not, it should look like this:
+
+```
+reporting:
+          maas:
+            consumer_key: $CONSUMER_KEY
+            endpoint: http://$MAAS_IP:5240/MAAS/metadata/status/$SYSTEM_ID
+            token_key: $TOKEN_KEY
+            token_secret: $TOKEN_SECRET
+```
+
+You may get the needed credentials from the MAAS API, for example:
+
+```
+$ maas $profile machine get-token wxwwga
+Success.
+Machine-readable output follows:
+{
+        "token_key": "Lyy9BS4tKsQakDQScy",
+        "token_secret": "V8vta8Azwn6FZVkfHnuTvLGLScAvEufB",
+        "consumer_key": "YGT6QKSH65aap4tGnw"
+}
+```
+
 rad-end
 
 <!-- comment -->

@@ -12,6 +12,8 @@ While on VM host's details view, select 'Compose' from the 'Take action' drop-do
 
 You can choose which storage pool to use from a drop-down list. 
 
+**Note** that when adding more than one disk, the boot disk will be the last disk in the list.
+
 Click the 'Compose machine' button when you're finished. MAAS will present the VM host detail view. In a few moments, your new machine will be auto-commissioned. The 'Machines' page will reflect this as well.
 
 MAAS will deduct the new machine's resources from the VM host's resources:

@@ -5,11 +5,15 @@ In this article, you will learn:
 * [About the machine life-cycle](#heading--about-the-machine-life-cycle)
 * [About testing hardware](#heading--about-testing-hardware)
 * [About adding machines](#heading--about-adding-machines)
+rad-begin /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
+* [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
+rad-end
 rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui /snap/3.1/ui /deb/3.1/ui
 * [About the machine list](#heading--about-the-machine-list)
 * [About the machine summary](#heading--about-the-machine-summary)
 rad-end
 * [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
 
 <a href="#heading--about-the-machine-life-cycle"><h2 id="heading--about-the-machine-life-cycle">About the machine life-cycle</h2></a>
 
@@ -157,7 +161,7 @@ When adding a machine, you may specify that the machine is already deployed. In 
 
 Such machines lack hardware information. In order to update the information, a script is provided to run a subset of the commissioning scripts and send them back to MAAS.
 
-Some of the normal commands that work on deployed machines will not work on an already-deployed machine enlisted by MAAS (see the chart above for details).
+Some of the normal commands that work on deployed machines will not work on an already-deployed machine enlisted by MAAS.
 rad-end
 
 <a href="#heading--about-bmc-enlistment"><h4 id="heading--about-bmc-enlistment">About BMC enlistment</h4></a>

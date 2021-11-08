@@ -1816,7 +1816,8 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/add-nodes|/docs/snap/3.1/ui/manage-machines|
 |/docs/availability-zones|/docs/snap/3.1/ui/availability-zones|
 |/docs/backup|/docs/snap/3.1/ui/backup|
-|/docs/block-devices|/docs/snap/3.1/ui/storage|
+|/docs/block-devices|docs/snap/3.1/ui/about-machines#heading--about-storage|
+|/docs/storage|/docs/snap/3.1/ui/about-machines|
 |/docs/bmc-power-types|/docs/snap/3.1/ui/power-management|
 |/docs/cli-dhcp-snippet-management|/docs/snap/2.9/cli/how-to-manage-dhcp|
 |/docs/cli-resource-pool-management|/docs/snap/2.9/cli/resource-pools|
@@ -2084,7 +2085,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/3.0/ui/ubuntu-kernels|/docs/snap/3.0/ui/how-to-customise-machines|
 |/docs/snap/3.0/ui/vmware-vmfs-datastores|/docs/snap/3.0/ui/storage|
 |/docs/ssl|/docs/snap/3.1/ui/configuring-tls-encryption|
-|/docs/storage|/docs/snap/3.1/ui/storage|
 |/docs/stp|/docs/snap/3.1/ui/about-networking#heading--about-stp|
 |/docs/subnet-management|/docs/snap/3.1/ui/about-networking|
 |/docs/syslog|/docs/snap/3.1/ui/maas-logging|
