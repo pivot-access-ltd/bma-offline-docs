@@ -1,4 +1,4 @@
-The ultimate purpose of MAAS is to deploy and manage machines.  As explained in /t/about-machines/nnnn#heading--about-the-machine-life-cycle, machines must first be enlisted or commissioned, then acquired, then deployed.  This article will tell you:
+The ultimate purpose of MAAS is to deploy and manage machines.  As explained in [About the machine life-cycle](/t/about-machines/nnnn#heading--about-the-machine-life-cycle), machines must first be enlisted or commissioned, then acquired, then deployed.  This article will tell you:
 
  - [How to commission a machine](#heading--how-to-commission-a-machine)
  - [How to test machines](#heading--how-to-test-machines)
