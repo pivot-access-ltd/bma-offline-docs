@@ -7,6 +7,9 @@ This article will help you learn:
 rad-begin /deb/2.9/cli /deb/2.9/ui /snap/2.9/cli /snap/2.9/ui
 - [About LXD vs. libvirt](#heading--about-lxd-vs-libvirt)
 rad-end
+rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui 
+- [About LXD VM hosts](#heading--about-lxd-vm-hosts)
+rad-end
 rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 - [About LXD VM host project summaries](#heading--vm-host-project-summary)
 - [About LXD VM host resource details](#heading--vm-host-resource-details)
@@ -73,7 +76,43 @@ maas admin vm-host read 5 \
 rad-end
 
 rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+<a href="#heading--about-lxd-vm-hosts"><h2 id="heading--about-lxd-vm-hosts">About LXD VM hosts</h2></a>
 
+<a href="#heading--about-lxd-vm-host-auth"><h3 id="heading--about-lxd-vm-host-auth">About LXD VM host authentication</h3></a>
+
+MAAS 3.1 provides a smoother experience when connecting an existing LXD server to MAAS, guiding the user through manual steps and providing increased connection security with use of certificates. Currently, each MAAS region/rack controller has its own certificate. To add a LXD VM host to MAAS, the user needs to either add the certificate for each controller that can reach the LXD server to the trust list in LXD, or use the trust_password (in which case the controller talking to LXD will automatically add its certificate to the trust).
+
+This doesn’t provide a great user experience, as the former process is cumbersome, and the latter is not suggested for production use for security reasons.  To improve this, MAAS 3.1 manages per-LXD keys/certificates, and provide a way for users to get the content of certificates, to authorize MAAS in LXD.
+
+#### About on-the-spot certificate creation
+
+As a MAAS user, you want to register a LXD host into MAAS using certificates for authentication -- to follow LXD production deployment best practices.  The standard way for clients to authenticate with LXD servers is through certificates. The use of trust_password is *only* meant as a way to interact for initial setup.
+
+While prior versions of MAAS support both ways of authentication (and automatically adds the certificate for the rack talking to LXD when registering the VM host), the user experience is lacking, since there's no control over the certificate being used.  In addition, each rack uses a different certificate, making it hard to manage scenarios where multiple racks can connect to a LXD server.
+
+For these reasons, when adding a LXD host, MAAS 3.1 provides a way to generate a secret key and certificate pair to use specifically for that server, and show the certificate to the user, so that they can add it to the LXD server trust list.  The user experience changes to something like the following:
+
+ - MAAS generates a secret key and certificate pair for use with a LXD server.
+ - The user can see the certificate and is guided to add it to the LXD server trust list.
+ - The user can easily complete the registration of the LXD server once the certificate is trusted in LXD.
+ - All racks use the same key when talking to the LXD server. 
+ - If a new rack controller is added, it can communicate with the LXD server out of the box.
+ - If the trust password is used, it’s not stored in MAAS persistently.
+ - It’s possible to get the certificate for a LXD server from a URL (e.g. for curl use).
+
+#### About bringing your own certificates
+
+As a MAAS user, you may want to register a LXD host into MAAS by providing a private key for a certificate that’s already trusted by the LXD server.  For example, you may already have set up certificates in the server trust for MAAS to use, MAAS should provide a way to import it, instead of generating a new one.
+
+With MAAS 3.1, it’s possible to import an existing key/certificate pair for use with a LXD server when registering it with MAAS.  MAAS stores the key/certificate instead of generating new ones.
+
+[note]
+The imported key must not have a passphrase; otherwise, MAAS will not be able to use it.
+[/note]
+
+rad-end
+
+rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 <a href="#heading--vm-host-project-summary"><h2 id="heading--vm-host-project-summary">About LXD VM host project summaries</h2></a>
 
 Each LXD VM host provides a "Project" tab that summarizes the current state of the LXD KVM:
