@@ -6,6 +6,7 @@ In this article, you will learn:
 * [About testing hardware](#heading--about-testing-hardware)
 * [About adding machines](#heading--about-adding-machines)
 rad-begin /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
+* [About cloning machines](#heading--about-cloning-machines)
 * [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
 rad-end
 rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui /snap/3.1/ui /deb/3.1/ui
@@ -151,7 +152,44 @@ MAAS runs built-in commissioning scripts during the enlistment phase. When you c
 [/note]
 
 rad-begin /snap/3.1/cli /deb/3.1/cli /snap/3.1/ui /deb/3.1/ui
-<a href="#heading--about-enlisting-deployed-machines"><h4 id="heading--about-enlisting-deployed-machines">About enlisting deployed machines</h4></a>
+<a href="#heading--about-cloning-machines"><h2 id="heading--about-cloning-machines">About cloning machines</h2></a>
+
+MAAS 3.1 provides the ability to quickly clone or copy configuration from one machine to one or more machines, via the MAAS UI, providing convenient access to an existing API feature.. This is a step towards machine profile templating work. 
+
+Creating a machine profile is a repetitive task. Based on the responses to our survey -- and multiple forum posts, we have learned that most users create multiple machines of the same configuration in batches. Some users create a machine profile template and loop them through the API, while some create a script to interface with the CLI. However, there is no easy way to do this in the UI except by going through each machine and configuring them individually.   
+
+MAAS API already has the cloning functionality, but it was never exposed in the UI. Hence, users may not know that this API feature exists, nor is there any current documentation about how to use this feature.  Although the current cloning API feature does not solve all machine profile templating problems, it is a great place for us to start moving in the direction of machine templates.
+
+### About copying machine configurations
+
+As a MAAS user -- API or UI -- you may want to copy the configuration of a given machine and apply it to multiple existing machines. Assuming that at least one machine is already set to the desired configuration, you should be able to apply these same settings to a list of destination machines.  This means that a user should be able to:
+
+ - select the source machine to copy from.
+ - validate that the source machine exists.
+ - select at least 1 destination machine.
+ - validate that the destination machine(s) exist.
+ - edit the source machine or destination machines, if needed.
+ - know at all times which machines are affected.
+ - see the cloned machines when cloning is successful, or
+ - get clear failure information, if cloning fails. 
+
+### About choosing configuration items to copy
+
+As a MAAS user, you will likey want to select whether storage, network, or both configurations should be cloned. The cloning API allows users to choose interfaces and storage separately.  Thus, this new feature shoudl allow the user to:
+
+ - clone only the interface (network) configuration.
+ - clone only the storage configuration.
+ - clone both colnfigurations.
+
+### About cloning restrictions
+
+In order for cloning to succeed, a few restrictions must be met:
+
+1. The destination interface names must be the same source.
+2. The destination drive must be equal to or larger than the source drive.
+3. For static IPs, a new IP will be allocated to the interface on the destination machine
+
+<a href="#heading--about-enlisting-deployed-machines"><h2 id="heading--about-enlisting-deployed-machines">About enlisting deployed machines</h2></a>
 
 In general, when adding a machine to MAAS, it network boots the machine into an ephemeral environment to collect hardware information about the machine. While this is not a destructive action, it doesn’t work if you have machines that are already running a workload.
 

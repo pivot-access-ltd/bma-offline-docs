@@ -1,6 +1,9 @@
 This article explains:
 
 - [How to create, delete, and configure machines](#heading--how-to-create-delete-and-configure-machines)
+rad-begin /snap/3.1/ui /deb/3.1/ui /snap/3.1/cli /deb/3.1/cli
+- [How to clone machines](#heading--how-to-clone-machines)
+rad-end
 - [How to examine machines and machine details](#heading--how-to-examine-machines-and-machine-details)
 - [How to use resource pools](#heading--how-to-use-resource-pools)
 rad-begin /snap/3.0/cli /snap/2.9/cli /deb/3.0/cli /deb/2.9/cli /snap/3.1/cli /deb/3.1/cli
@@ -134,6 +137,29 @@ where:
 
 If the device is still present in the system, it will be recognised again (and thus "recreated")
 when the machine is commissioned again.
+rad-end
+
+rad-begin /snap/3.1/ui /deb/3.1/ui
+<a href="#heading--how-to-clone-machines"><h2 id="heading--how-to-clone-machines">How to clone machines</h2></a>
+
+Assume you have two machines available, like this:
+
+![Screenshot from 2021-09-24 16-20-05|690x230](upload://fTtQPaQdvz1umqj3tP8aRn3Wftz.png)
+
+Select the machine *to which you want to clone configuration*, and select "Clone from..."
+
+![Screenshot from 2021-09-24 16-25-01|690x388](upload://pOeMMJjEjhlZwjbFSMpz4YJMO4b.png)
+
+Under "1. Select the source machine" -- choose a machine from the attached list:
+
+![Screenshot from 2021-09-24 16-26-42|497x310](upload://5M8dZhaGrSCywiV4YLR7mS0Jlfl.png)
+
+Under "2. Select what to clone", choose "Network", "Storage", or both (here, we've chosen "Storage"):
+
+![Screenshot from 2021-09-24 16-29-15|690x250](upload://e0qU4wMorc3CGpdVyJ5jYMRPRov.png)
+
+Click "Clone to machine". MAAS will report the status of the attempt.
+
 rad-end
 
 <a href="#heading--how-to-examine-machines-and-machine-details"><h2 id="heading--how-to-examine-machines-and-machine-details">How to examine machines and machine details</h2></a>
