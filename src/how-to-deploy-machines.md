@@ -365,6 +365,7 @@ rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cl
 * [How to update hardware testing scripts](#heading--how-to-update-hardware-testing-scripts)
 * [How to revert hardware testing scripts](#heading--how-to-revert-hardware-testing-scripts)
 * [How to download a script](#heading--how-to-download-a-script)
+* [How to delete a script](#heading--how-to-delete-a-script)
 * [How to view script results](#heading--how-to-view-script-results)
 * [How to filter script results](#heading--how-to-filter-script-results)
 * [How to suppress failed results](#heading--how-to-suppress-failed-results)
@@ -376,6 +377,20 @@ rad-end
 * [How to locate script files](#heading--how-to-locate-script-files)
 * [How to locate log files](#heading--how-to-locate-log-files)
 * [How to run all scripts manually](#heading--how-to-run-all-scripts-manually)
+rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+* [How to upload hardware test scripts](#heading--upload-test-scripts)
+* [How to use tags to group commissioning and testing scripts](#heading--tags-group-scripts)
+* [How to view testing results](#heading--results)
+rad-end
+rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+* [How to apply a hardware test](#heading--apply-a-hardware-test)
+rad-end
+* [How to test network links](#heading--network-link-testing)
+* [How to detect slow network links](#heading--slow-link-detection)
+* [How to configure network validation and testing scripts](#heading--network-validation-scripts-and-testing)
+* [How to customise network testing](#heading--customisable-network-testing)
+
+
 
 You can also refer to technical details and examples for [commissioning scripts](/t/commissioning-scripts-reference/nnnn) and [testing scripts](/t/hardware-test-scripts-reference/nnnn) as needed.
 
@@ -567,9 +582,9 @@ To do this, enable Allow SSH access and prevent the machine from powering off wh
 <a href="https://assets.ubuntu.com/v1/da793c67-nodes-hw-scripts__2.4_ssh.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/da793c67-nodes-hw-scripts__2.4_ssh.png"></a>
 
 Because scripts operate within an ephemeral version of Ubuntu, enabling this option stops the machine from shutting down, allowing you to connect and probe a script's status.
-rad-end
 
 As long as you've added your [SSH key](/t/how-to-manage-user-accounts/nnnn#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
+rad-end
 
 <a href="#heading--how-to-locate-script-files"><h3 id="heading--how-to-locate-script-files">How to locate script files</h3></a>
 
@@ -578,7 +593,7 @@ Commissioning and testing script files may be found in the following directories
 1.   `/tmp/user_data.sh.*/scripts/commissioning/`: Commissioning scripts
 2.   `/tmp/user_data.sh.*/scripts/testing/`: Hardware testing scripts
 
-<a href="#heading--how-to-locate-log-files"><h4 id="heading--how-to-locate-log-files">How to locate log files</h4></a>
+<a href="#heading--how-to-locate-log-files"><h3 id="heading--how-to-locate-log-files">How to locate log files</h3></a>
 
 Commissioning and testing log files may be found in the following directories:
 
@@ -780,7 +795,7 @@ rad-end
 
 
 rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
-<a href="#heading--apply-a-hardware-test"><h2 id="heading--apply-a-hardware-test">How to apply a hardware test</h2></a>
+<a href="#heading--apply-a-hardware-test"><h3 id="heading--apply-a-hardware-test">How to apply a hardware test</h3></a>
 
 To launch a test, select the target machine from the 'Machines' page and use the 'Take action' drop-down menu to select 'Test hardware'. When ready, hit the 'Test machine' button. Here, a test is applied to a deployed machine:
 
@@ -792,13 +807,13 @@ A default test will be selected (`smartctl-validate`, a hard drive test) but you
 
 <a href="https://assets.ubuntu.com/v1/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png"></a>
 
-rad-end
-
 See [Commissioning Scripts Reference](/t/commissioning-scripts-reference/nnnn) for more details on how these scripts work and how you can write your own.
 
-<a href="#heading--network-link-testing"><h2 id="heading--network-link-testing">How to test network links</h2></a>
+rad-end
 
-MAAS can check whether links are connected or disconnected, so that you can detect unplugged cables.  If you are not running MAAS 2.7, you must first upgrade and then recommission your machines to find disconnected links.  MAAS not only reports unplugged cables, but also gives a warning when trying to configure a disconnected interface.  In addition, administrators can change the cable connection status after manually resolving the issue.
+<a href="#heading--network-link-testing"><h3 id="heading--network-link-testing">How to test network links</h3></a>
+
+MAAS can check whether links are connected or disconnected, so that you can detect unplugged cables.  If you are not running MAAS 2.7 or higher, you must first upgrade and then recommission your machines to find disconnected links.  MAAS not only reports unplugged cables, but also gives a warning when trying to configure a disconnected interface.  In addition, administrators can change the cable connection status after manually resolving the issue.
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 To check network testing results, enter the following command:
@@ -877,7 +892,7 @@ interface_speed=$NEW_INTERFACE_SPEED
 
 rad-end
 
-<a href="#heading--network-validation-scripts-and-testing"><h2 id="heading--network-validation-scripts-and-testing">How to configure network validation and testing scripts</h2></a>
+<a href="#heading--network-validation-scripts-and-testing"><h3 id="heading--network-validation-scripts-and-testing">How to configure network validation and testing scripts</h3></a>
 
 MAAS allows you to configure network connectivity testing in a number of ways. If MAAS can’t connect to the rack controller, deployment can’t complete.  MAAS can check connectivity to the rack controller and warn you if there’s no link, long before you have to try and debug it. For example, if you can’t connect to your gateway controller, traffic can’t leave your network. 
 
@@ -915,7 +930,7 @@ To test individual interfaces, for example, you could issue the following comman
 Note that in this command, we are testing internet connectivity to the single interface "br0."
 rad-end
 
-<a href="#heading--customisable-network-testing"><h2 id="heading--customisable-network-testing">How to customise network testing</h2></a>
+<a href="#heading--customisable-network-testing"><h3 id="heading--customisable-network-testing">How to customise network testing</h3></a>
 
 MAAS allow you to customise network testing according to your needs.  You can create your own commissioning scripts and tests related to networking, and you can run them during the network testing portion of the MAAS workflow.
 
