@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/how-to-manage-machine-interfaces.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/how-to-manage-machine-interfaces.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="../maas-documentation-25.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-the-maas-cli.html">
+	    Use the MAAS CLI
+	  </a>
+	</li>
+      <strong>
+	<a href="about-controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-racks.html">
+	    Manage racks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-regions.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machine-interfaces.html">
+	    Manage interfaces
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-dhcp.html">
+	    Manage DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-ranges.html">
+	    Manage IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-proxies.html">
+	    Manage proxies
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-ntp.html">
+	    Set up NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-maas-images.html">
+	    Build MAAS images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-a-custom-ubuntu-image.html">
+	    Create custom Ubuntu images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-image-streams.html">
+	    Use image streams
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-tags-and-annotations.html">
+	  Tags
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-tags.html">
+	    Manage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+	<p/>
+	<strong>
+	  Operations
+	</strong>
+	<ul>
+	  <li>
+	    <a href="how-to-set-up-prometheus-metrics.html">
+	      Set up Prometheus
+	    </a>
+	  </li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API reference
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-troubleshoot-maas.html">
+	  Troubleshooting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Get help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-and-tricks.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="what-is-new-with-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="how-to-contact-us.html">
+	  Contact us
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>How to manage machine interfaces</h1><p>This article will explain the following procedures related to machine interfaces:</p>
+<ul>
+<li><a href="#heading--how-to-edit-interfaces&quot;">How to edit machine interfaces</a></li>
+<li><a href="#heading--bond-interfaces">How to create a bond interface</a></li>
+<li><a href="#heading--bridge-interfaces">How to create a bridge interface</a></li>
+<li><a href="#heading--delete-an-interface">How to delete an interface</a></li>
+<li><a href="#heading--assign-a-network-interface-to-a-fabric">How to assign a network interface to a fabric</a></li>
+<li><a href="#heading--interface-identifiers">How to discover interface identifiers</a></li>
+<li><a href="#heading--create-a-vlan-interface">How to create a VLAN interface</a></li>
+<li><a href="#heading--delete-a-vlan-interface">How to delete a VLAN interface</a></li>
+</ul>
+<p><a href="#heading--how-to-edit-interfaces"><h2 id="heading--how-to-edit-interfaces">How to edit machines interfaces</h2></a></p>
+<p>If you want to edit the IP assignment mode of a network interface, the existing subnet link first needs to be removed.</p>
+<p>Begin by finding the interface ID as well as the interface&rsquo;s subnet link ID with the command:</p>
+<pre><code class="language-bash">maas $PROFILE node read $SYSTEM_ID
+</code></pre>
+<p>Once that&rsquo;s done, proceed to unlink and link:</p>
+<pre><code class="language-bash">maas $PROFILE interface unlink-subnet $SYSTEM_ID $INTERFACE_ID id=$SUBNET_LINK_ID
+maas $PROFILE interface link-subnet $SYSTEM_ID $INTERFACE_ID mode=$IP_MODE subnet=$SUBNET_CIDR [$OPTIONS]
+</code></pre>
+<p>For instance, to have interface <code>58</code>, with subnet link <code>146</code>, on machine <code>exqn37</code> use DHCP on subnet <code>192.168.1.0/24</code>:</p>
+<pre><code class="language-bash">maas $PROFILE interface unlink-subnet exqn37 58 id=146
+maas $PROFILE interface link-subnet exqn37 58 mode=dhcp subnet=192.168.1.0/24
+</code></pre>
+<p>If instead of DHCP, you desire a static address, then the second command would look like this:</p>
+<pre><code class="language-bash">maas $PROFILE interface link-subnet exqn37 58 mode=static subnet=192.168.1.0/24 ip_address=192.168.1.113
+</code></pre>
+<p>See <a href="maas-concepts-and-terms-reference-5409.html#heading--ip-ranges">Concepts and terms</a> for the definitions of reserved range types.</p>
+<p><a href="#heading--bond-interfaces"><h2 id="heading--bond-interfaces">How to create a bond interface</h2></a></p>
+<p>A bond can be created with the following command:</p>
+<pre><code>maas $PROFILE interfaces create-bond $SYSTEM_ID name=$BOND_NAME \
+parents=$IFACE1_ID mac_address=$MAC_ADDR \ 
+parents=$IFACE2_ID bond_mode=$BOND_MODE \
+bond_updelay=$BOND_UP bond_downdelay=$BOND_DOWN mtu=$MTU
+</code></pre>
+<p>Use the <code>parents</code> parameters to define which interfaces form the aggregate interface.</p>
+<p>The <code>bond_updelay</code> and <code>bond_downdelay</code> parameters specify the number of milliseconds to wait before either enabling or disabling a slave after a failure has been detected.</p>
+<p>The following is an example of <code>create-bond</code> in action:</p>
+<pre><code>maas admin interfaces create-bond 4efwb4 name=bond0 parents=4 \
+mac_address=52:52:00:00:00:00 parents=15 bond_mode=802.3ad \
+bond_updelay=200 bond_downdelay=200 mtu=9000
+</code></pre>
+<p>There are a wide range of bond parameters you can choose when creating a bond:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Type and description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>mac_address</code></td>
+<td align="left">Optional string.  MAC address of the interface.</td>
+</tr>
+<tr>
+<td align="left"><code>tags</code></td>
+<td align="left">Optional string.  Tags for the interface.</td>
+</tr>
+<tr>
+<td align="left"><code>vlan</code></td>
+<td align="left">Optional string.  VLAN the interface is connected to. If not provided then the interface is considered disconnected.</td>
+</tr>
+<tr>
+<td align="left"><code>parents</code></td>
+<td align="left">Required integer.  Parent interface ids that make this bond.</td>
+</tr>
+<tr>
+<td align="left"><code>bond_miimon</code></td>
+<td align="left">Optional integer.  The link monitoring freqeuncy in milliseconds. (Default: 100).</td>
+</tr>
+<tr>
+<td align="left"><code>bond_downdelay</code></td>
+<td align="left">Optional integer.  Specifies the time, in milliseconds, to wait before disabling a slave after a link failure has been detected.</td>
+</tr>
+<tr>
+<td align="left"><code>bond_updelay</code></td>
+<td align="left">Optional integer.  Specifies the time, in milliseconds, to wait before enabling a slave after a link recovery has been detected.</td>
+</tr>
+<tr>
+<td align="left"><code>bond_lacp_rate</code></td>
+<td align="left">Optional string.  Option specifying the rate at which to ask the link partner to transmit LACPDU packets in 802.3ad mode. Available options are <code>fast</code> or <code>slow</code>. (Default: <code>slow</code>).</td>
+</tr>
+<tr>
+<td align="left"><code>bond_xmit_hash_policy</code></td>
+<td align="left">Optional string.  The transmit hash policy to use for slave selection in balance-xor, 802.3ad, and tlb modes. Possible values are: <code>layer2</code>, <code>layer2+3</code>, <code>layer3+4</code>, <code>encap2+3</code>, <code>encap3+4</code>. (Default: <code>layer2</code>)</td>
+</tr>
+<tr>
+<td align="left"><code>bond_num_grat_arp</code></td>
+<td align="left">Optional integer.  The number of peer notifications (IPv4 ARP or IPv6 Neighbour Advertisements) to be issued after a failover. (Default: 1)</td>
+</tr>
+<tr>
+<td align="left"><code>mtu</code></td>
+<td align="left">Optional integer.  Maximum transmission unit.</td>
+</tr>
+<tr>
+<td align="left"><code>accept_ra</code></td>
+<td align="left">Optional boolen.  Accept router advertisements. (IPv6 only)</td>
+</tr>
+<tr>
+<td align="left"><code>autoconf</code></td>
+<td align="left">Optional boolean.  Perform stateless autoconfiguration. (IPv6 only)</td>
+</tr>
+<tr>
+<td align="left"><code>bond_mode</code></td>
+<td align="left">Optional string.  The operating mode of the bond.  (Default: active-backup).</td>
+</tr>
+</tbody>
+</table>
+<p>Supported bonding modes include:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Mode</th>
+<th align="left">Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>balance-rr</code>:</td>
+<td align="left">Transmit packets in sequential order from the first available slave through the last. This mode provides load balancing and fault tolerance.</td>
+</tr>
+<tr>
+<td align="left"><code>active-backup</code></td>
+<td align="left">Only one slave in the bond is active. A different slave becomes active if, and only if, the active slave fails. The bond&rsquo;s MAC address is externally visible on only one port (network adapter) to avoid confusing the switch.</td>
+</tr>
+<tr>
+<td align="left"><code>balance-xor</code></td>
+<td align="left">Transmit based on the selected transmit hash policy. The default policy is a simple [(source MAC address XOR&rsquo;d with destination MAC address XOR packet type ID) modulo slave count].</td>
+</tr>
+<tr>
+<td align="left"><code>broadcast</code></td>
+<td align="left">Transmits everything on all slave interfaces. This mode provides fault tolerance.</td>
+</tr>
+<tr>
+<td align="left"><code>802.3ad</code></td>
+<td align="left">IEEE 802.3ad dynamic link aggregation. Creates aggregation groups that share the same speed and duplex settings. Uses all slaves in the active aggregator according to the 802.3ad specification.</td>
+</tr>
+<tr>
+<td align="left"><code>balance-tlb</code></td>
+<td align="left">Adaptive transmit load balancing: channel bonding that does not require any special switch support.</td>
+</tr>
+<tr>
+<td align="left"><code>balance-alb</code></td>
+<td align="left">Adaptive load balancing: includes balance-tlb plus receive load balancing (rlb) for IPV4 traffic, and does not require any special switch support. The receive load balancing is achieved by ARP negotiation.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--bridge-interfaces"><h2 id="heading--bridge-interfaces">How to create a bridge interface</h2></a></p>
+<p>A bridge interface is created with the following syntax:</p>
+<pre><code>maas $PROFILE interfaces create-bridge $SYSTEM_ID name=$BRIDGE_NAME \
+parent=$IFACE_ID
+</code></pre>
+<p>Use <code>parent</code> to define the primary interface used for the bridge:</p>
+<pre><code>maas admin interfaces create-bridge 4efwb4 name=bridged0 parent=4
+</code></pre>
+<p>The following parameters may be applied when creating a bridge:</p>
+<ol>
+<li>
+<p><code>name</code>: Optional string.  Name of the interface.</p>
+</li>
+<li>
+<p><code>mac_address</code>: Optional string.  MAC address of the interface.</p>
+</li>
+<li>
+<p><code>tags</code>: Optional string.  Tags for the interface.</p>
+</li>
+<li>
+<p><code>vlan</code>: Optional string.  VLAN the interface is connected to.</p>
+</li>
+<li>
+<p><code>parent</code>: Optional integer.  Parent interface id for this bridge interface.</p>
+</li>
+<li>
+<p><code>bridge_type</code>: Optional string.  The type of bridge to create. Possible values are: <code>standard</code>, <code>ovs</code>.</p>
+</li>
+<li>
+<p><code>bridge_stp</code>: Optional boolean.  Turn spanning tree protocol on or off. (Default: False).</p>
+</li>
+<li>
+<p><code>bridge_fd</code>: Optional integer.  Set bridge forward delay to time seconds. (Default: 15).</p>
+</li>
+<li>
+<p><code>mtu</code>: Optional integer.  Maximum transmission unit.</p>
+</li>
+<li>
+<p><code>accept_ra</code>: Optional boolean.  Accept router advertisements. (IPv6 only)</p>
+</li>
+<li>
+<p><code>autoconf</code>: Optional boolean.  Perform stateless autoconfiguration. (IPv6 only)</p>
+</li>
+</ol>
+<p><a href="#heading--delete-an-interface"><h2 id="heading--delete-an-interface">How to delete an interface</h2></a></p>
+<p>The &ldquo;delete&rdquo; command can be used to delete a bridge interface, a bond interface or a physical interface:</p>
+<pre><code>maas $PROFILE interface delete $SYSTEM_ID $IFACE_ID
+</code></pre>
+<p>For example:</p>
+<pre><code>maas admin interface delete 4efwb4 15
+</code></pre>
+<p>The following is output after the successful deletion of an interface:</p>
+<pre><code>Success.
+Machine-readable output follows:
+</code></pre>
+<p>Note that while the label is presented, there is no machine-readable output expected after the successful execution of the delete command.</p>
+<p><a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">How to assign a network interface to a fabric</h2></a></p>
+<p>This task is made easier with the aid of the <code>jq</code> utility. It filters the <code>maas</code> command (JSON formatted) output and prints it in the desired way, which allows you to view and compare data quickly. Go ahead and install it:</p>
+<pre><code class="language-bash">sudo apt install jq
+</code></pre>
+<p>In summary, MAAS assigns an interface to a fabric by assigning it to a VLAN. First, we need to gather various bits of data.</p>
+<p>List some information on all machines:</p>
+<pre><code class="language-bash">maas $PROFILE machines read | jq &quot;.[] | \
+    {hostname:.hostname, system_id: .system_id, status:.status}&quot; --compact-output
+</code></pre>
+<p>Example output:</p>
+<pre><code class="language-no-highlight">{&quot;hostname&quot;:&quot;machine1&quot;,&quot;system_id&quot;:&quot;dfgnnd&quot;,&quot;status&quot;:4}
+{&quot;hostname&quot;:&quot;machine2&quot;,&quot;system_id&quot;:&quot;bkaf6e&quot;,&quot;status&quot;:6}
+{&quot;hostname&quot;:&quot;machine4&quot;,&quot;system_id&quot;:&quot;63wqky&quot;,&quot;status&quot;:6}
+{&quot;hostname&quot;:&quot;machine3&quot;,&quot;system_id&quot;:&quot;qwkmar&quot;,&quot;status&quot;:4}
+</code></pre>
+<p>[note]
+You can only edit an interface when the corresponding machine has a status of &lsquo;Ready&rsquo;. This state is numerically denoted by the integer &lsquo;4&rsquo;.
+[/note]</p>
+<p>List some information for all interfaces on the machine in question (identified by its system id &lsquo;dfgnnd&rsquo;):</p>
+<pre><code class="language-bash">maas $PROFILE interfaces read dfgnnd | jq &quot;.[] | \
+    {id:.id, name:.name, mac:.mac_address, vid:.vlan.vid, fabric:.vlan.fabric}&quot; --compact-output
+</code></pre>
+<p>Example output:</p>
+<pre><code class="language-no-highlight">{&quot;id&quot;:8,&quot;name&quot;:&quot;eth0&quot;,&quot;mac&quot;:&quot;52:54:00:01:01:01&quot;,&quot;vid&quot;:0,&quot;fabric&quot;:&quot;fabric-1&quot;}
+{&quot;id&quot;:9,&quot;name&quot;:&quot;eth1&quot;,&quot;mac&quot;:&quot;52:54:00:01:01:02&quot;,&quot;vid&quot;:null,&quot;fabric&quot;:null}
+</code></pre>
+<p>List some information for all fabrics:</p>
+<pre><code class="language-bash">maas $PROFILE fabrics read | jq &quot;.[] | \
+    {name:.name, vlans:.vlans[] | {id:.id, vid:.vid}}&quot; --compact-output
+</code></pre>
+<p>Example output:</p>
+<pre><code class="language-no-highlight">{&quot;name&quot;:&quot;fabric-0&quot;,&quot;vlans&quot;:{&quot;id&quot;:5001,&quot;vid&quot;:0}}
+{&quot;name&quot;:&quot;fabric-1&quot;,&quot;vlans&quot;:{&quot;id&quot;:5002,&quot;vid&quot;:0}}
+{&quot;name&quot;:&quot;fabric-2&quot;,&quot;vlans&quot;:{&quot;id&quot;:5003,&quot;vid&quot;:0}}
+</code></pre>
+<p>This example will show how to move interface &lsquo;8&rsquo; (on machine &lsquo;dfgnnd&rsquo;) from &lsquo;fabric-1&rsquo; to &lsquo;fabric-0&rsquo;. Based on the gathered information, this will consist of changing the interface&rsquo;s VLAN from &lsquo;5002&rsquo; to &lsquo;5001&rsquo;:</p>
+<pre><code class="language-bash">maas $PROFILE interface update dfgnnd 8 vlan=5001 &gt;/dev/null
+</code></pre>
+<p>Verify the operation by relisting information for the machine&rsquo;s interface:</p>
+<pre><code class="language-bash">maas $PROFILE interfaces read dfgnnd | jq &quot;.[] | \
+    {id:.id, name:.name, mac:.mac_address, vid:.vlan.vid, fabric:.vlan.fabric}&quot; --compact-output
+</code></pre>
+<p>The output shows that the interface is now on fabric-0:</p>
+<pre><code class="language-no-highlight">{&quot;id&quot;:8,&quot;name&quot;:&quot;eth0&quot;,&quot;mac&quot;:&quot;52:54:00:01:01:01&quot;,&quot;vid&quot;:0,&quot;fabric&quot;:&quot;fabric-0&quot;}
+{&quot;id&quot;:9,&quot;name&quot;:&quot;eth1&quot;,&quot;mac&quot;:&quot;52:54:00:01:01:02&quot;,&quot;vid&quot;:null,&quot;fabric&quot;:null}
+</code></pre>
+<p><a href="#heading--interface-identifiers"><h2 id="heading--interface-identifiers">How to discover interface identifiers</h2></a></p>
+<p>The MAAS CLI uses a numeric interface identifier for many interface operations. Use the following command to retrieve the identifier(s):</p>
+<pre><code class="language-bash">maas $PROFILE interfaces read $SYSTEM_ID
+</code></pre>
+<p>Look for either id or the number at the end of an interface&rsquo;s resource URI, such as <strong>15</strong> in the following example output:</p>
+<pre><code class="language-json">&quot;id&quot;: 15,
+&quot;mac_address&quot;: &quot;52:54:00:55:06:40&quot;,
+...
+&quot;name&quot;: &quot;ens9&quot;,
+...
+&quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4efwb4/interfaces/15/&quot;
+</code></pre>
+<p><a href="#heading--create-a-vlan-interface"><h2 id="heading--create-a-vlan-interface">How to create a VLAN interface</h2></a></p>
+<p>To create a VLAN interface, use the following syntax:</p>
+<pre><code class="language-bash">maas $PROFILE vlans create $FABRIC_ID name=$NAME vid=$VLAN_ID
+</code></pre>
+<p>For example, the following command creates a VLAN called &lsquo;Storage network:</p>
+<pre><code class="language-bash">maas admin vlans create 0 name=&quot;Storage network&quot; vid=100
+</code></pre>
+<p>The above command generates the following output:</p>
+<pre><code class="language-no-output">Success.
+Machine-readable output follows:
+{
+    &quot;vid&quot;: 100,
+    &quot;mtu&quot;: 1500,
+    &quot;dhcp_on&quot;: false,
+    &quot;external_dhcp&quot;: null,
+    &quot;relay_vlan&quot;: null,
+    &quot;name&quot;: &quot;Storage network&quot;,
+    &quot;space&quot;: &quot;undefined&quot;,
+    &quot;fabric&quot;: &quot;fabric-0&quot;,
+    &quot;id&quot;: 5004,
+    &quot;primary_rack&quot;: null,
+    &quot;fabric_id&quot;: 0,
+    &quot;secondary_rack&quot;: null,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5004/&quot;
+}
+</code></pre>
+<p>Be aware that the $VLAN_ID parameter does not indicate a VLAN ID that corresponds to the VLAN tag. You must first create the VLAN and then associate it with the interface:</p>
+<pre><code class="language-bash">maas $PROFILE interfaces create-vlan $SYSTEM_ID vlan=$OUTPUT_VLAN_ID \
+parent=$IFACE_ID
+</code></pre>
+<p>[note]
+<strong>OUTPUT_VLAN_ID</strong> corresponds to the id value output when MAAS created the VLAN.
+[/note]</p>
+<p>The following example contains values that correspond to the output above:</p>
+<pre><code class="language-bash">maas admin interfaces create-vlan 4efwb4 vlan=5004 parent=4
+</code></pre>
+<p>The above command generates the following output:</p>
+<pre><code class="language-json">Success.
+Machine-readable output follows:
+{
+    &quot;tags&quot;: [],
+    &quot;type&quot;: &quot;vlan&quot;,
+    &quot;enabled&quot;: true,
+    &quot;system_id&quot;: &quot;4efwb4&quot;,
+    &quot;id&quot;: 21,
+    &quot;children&quot;: [],
+    &quot;mac_address&quot;: &quot;52:54:00:eb:f2:29&quot;,
+    &quot;params&quot;: {},
+    &quot;vlan&quot;: {
+        &quot;vid&quot;: 100,
+        &quot;mtu&quot;: 1500,
+        &quot;dhcp_on&quot;: false,
+        &quot;external_dhcp&quot;: null,
+        &quot;relay_vlan&quot;: null,
+        &quot;id&quot;: 5004,
+        &quot;secondary_rack&quot;: null,
+        &quot;fabric_id&quot;: 0,
+        &quot;space&quot;: &quot;undefined&quot;,
+        &quot;fabric&quot;: &quot;fabric-0&quot;,
+        &quot;name&quot;: &quot;Storage network&quot;,
+        &quot;primary_rack&quot;: null,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5004/&quot;
+    },
+    &quot;parents&quot;: [
+        &quot;ens3&quot;
+    ],
+    &quot;effective_mtu&quot;: 1500,
+    &quot;links&quot;: [
+        {
+            &quot;id&quot;: 55,
+            &quot;mode&quot;: &quot;link_up&quot;
+        }
+    ],
+    &quot;discovered&quot;: null,
+    &quot;name&quot;: &quot;ens3.100&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4efwb4/interfaces/21/&quot;
+}
+</code></pre>
+<p><a href="#heading--delete-a-vlan-interface"><h2 id="heading--delete-a-vlan-interface">How to delete a VLAN interface</h2></a></p>
+<p>The following command outlines the syntax required to delete a VLAN interface from the command line:</p>
+<pre><code class="language-bash">maas $PROFILE vlan delete $FABRIC__ID $VLAN_ID
+</code></pre>
+<p>Using the values from previous examples, you executed this step as follows:</p>
+<pre><code class="language-bash">maas admin vlan delete 0 100
+</code></pre>
+    </div>
+  </body>
+</html>

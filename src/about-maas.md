@@ -13,7 +13,7 @@ MAAS expands to "Metal As A Service" -- it converts bare-metal servers into clou
 
 MAAS can act as a standalone PXE/preseed service or integrate with other technologies. It works exceptionally well with [Juju](https://juju.is/docs/olm/maas) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png), the service and model management tool. MAAS manages the machines and Juju manages the services running on those machines -- a perfect arrangement.  Virtual machines (VMs) can even act as MAAS machines if they boot from the network via PXE.
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/d19eff9ef45c554d085ee1d657e4ddd810eac6df.jpeg" target="_blank"><img width="690" src="https://discourse.maas.io/uploads/default/original/1X/d19eff9ef45c554d085ee1d657e4ddd810eac6df.jpeg"></a>
+<a href="https://discourse.maas.io/uploads/default/original/1X/d19eff9ef45c554d085ee1d657e4ddd810eac6df.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/d19eff9ef45c554d085ee1d657e4ddd810eac6df.jpeg"></a>
 
 <details><summary>Tell me about PXE booting</summary>
 

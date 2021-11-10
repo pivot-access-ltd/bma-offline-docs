@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/how-to-build-maas-images.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/how-to-build-maas-images.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="../maas-documentation-25.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-the-maas-cli.html">
+	    Use the MAAS CLI
+	  </a>
+	</li>
+      <strong>
+	<a href="about-controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-racks.html">
+	    Manage racks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-regions.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machine-interfaces.html">
+	    Manage interfaces
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-dhcp.html">
+	    Manage DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-ranges.html">
+	    Manage IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-proxies.html">
+	    Manage proxies
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-ntp.html">
+	    Set up NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-maas-images.html">
+	    Build MAAS images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-a-custom-ubuntu-image.html">
+	    Create custom Ubuntu images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-image-streams.html">
+	    Use image streams
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-tags-and-annotations.html">
+	  Tags
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-tags.html">
+	    Manage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+	<p/>
+	<strong>
+	  Operations
+	</strong>
+	<ul>
+	  <li>
+	    <a href="how-to-set-up-prometheus-metrics.html">
+	      Set up Prometheus
+	    </a>
+	  </li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API reference
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-troubleshoot-maas.html">
+	  Troubleshooting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Get help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-and-tricks.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="what-is-new-with-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="how-to-contact-us.html">
+	  Contact us
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>How to build MAAS images</h1><p>MAAS Image Builder is an alternative to <a href="https://www.packer.io/">Packer</a>&#128279; for creating MAAS images.</p>
+<p>[note]
+In order to use MAAS Image Builder, you must purchase <a href="https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool">Ubuntu Advantage for Infrastructure</a>&#128279;.
+[/note]</p>
+<p>With the MAAS Image Builder, you can do five key operations:</p>
+<ol>
+<li><a href="#imib">install MAAS Image Builder</a> via a private Canonical PPA (which you can request)</li>
+<li><a href="#bci">create custom CentOS images</a></li>
+<li><a href="#bri">create custom RHEL images</a></li>
+<li><a href="#bwi">create Windows images</a></li>
+<li><a href="#doci">create other kinds of custom images</a></li>
+</ol>
+<p>You can customise most images as much or as little as you wish, then use them to commission machines with MAAS. </p>
+<h2 id="heading--install-mib">Install MAAS Image Builder</h2>
+<p></a></p>
+<p>To get MAAS Image Builder, you must be subscribed to a private PPA provided by Canonical Support to those customers who have purchased <a href="https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool">Ubuntu Advantage for Infrastructure</a>&#128279;.  Note that the steps below will fail if you have not purchased Ubuntu Advantage and been subscribed to the private PPA by your Canonical support rep.</p>
+<p>Once subscribed, you need to obtain your credentials at this external link:</p>
+<p>https://launchpad.net/~/+archivesubscriptions&#128279;</p>
+<p>Also, you must add the repository with the <code>add-apt-repository</code> command.  Note: Be sure to substitute your unique URL in the command below:</p>
+<pre><code>$ sudo add-apt-repository \
+“https://LaunchpadID:Password@private-ppa.launchpad.net/maas-image-builder-partners/stable/ubuntu"
+</code></pre>
+<p>Once you have added the private PPA, you can install the Image Builder like this:</p>
+<pre><code>$ sudo apt-get install maas-image-builder
+</code></pre>
+<p>All done? Great!  Now you can build and customise images for MAAS machines, as shown in the sections below.</p>
+<h2 id="heading--custom-centos-images">Create custom CentOS images</h2>
+<p></a></p>
+<p>MAAS already provides the latest available CentOS 6, CentOS 7, and CentOS 8 for automatic download. If you need something else, though, MAAS Image Builder supports the ability to create various CentOS images.</p>
+<h3 id="heading--centos-nw-rqmts">Network Requirements</h3>
+
+<p>Access to the Internet is required, since you will need to start with one of these three sites:</p>
+<ol>
+<li>http://mirror.centos.org&#128279;  - OS, updates, and extra repositories</li>
+<li>https://download.fedoraproject.org&#128279;  - EPEL</li>
+<li>https://copr-be.cloud.fedoraproject.org&#128279; - Canonical maintained cloud-init repository</li>
+</ol>
+<h3 id="heading--images-behind-proxy">Creating images behind a proxy</h3>
+
+<p>MAAS Image Builder can create CentOS images behind a proxy &ndash; just set the ‘http_proxy’ environment variable to <em>your</em> particular proxy. Once deployed, <code>yum</code> will use this MAAS-configured proxy.</p>
+<h3 id="heading--centos-create-images">Creating the images</h3>
+
+<p><code>maas-image-builder</code> is designed to automate the process of generating the images for MAAS and <code>curtin</code>.  Here are some specific examples:</p>
+<pre><code>$ sudo maas-image-builder -o centos6-amd64-root-tgz --arch amd64 centos --edition 6 
+$ sudo maas-image-builder -o centos6-i386-root-tgz --arch i386 centos --edition 6
+$ sudo maas-image-builder -o centos7-amd64-root-tgz --arch amd64 centos --edition 7
+</code></pre>
+<h3 id="heading--centos-customize-images">Customising CentOS images</h3>
+
+<p>Starting from MAAS Image Builder 1.0.4, customisation of CentOS images is now supported.  You can provide a custom kickstart, in <em>addition</em> to the kickstart that MAAS Image Builder uses to create the images. You can customise your image like this:</p>
+<pre><code>$ sudo maas-image-builder -o centos7-amd64-root-tgz --arch amd64 centos --edition 7 --custom-kickstart ./custom.ks
+</code></pre>
+<h3 id="heading--centos-upload-images">Uploading the image into MAAS</h3>
+
+<p>Custom CentOS images can be uploaded to MAAS as shown in the command below.  <em>Do note</em> that the name <strong>must</strong> start with ‘centos’ and <strong>must</strong> be one line:</p>
+<pre><code>maas admin boot-resources create name=centos/centos6-custom architecture=amd64/generic content@=./build-output/centos-amd64-root-tgz
+</code></pre>
+<p>You can use the MAAS WebUI to check that your custom CentOS image is valid and selectable for deployment.</p>
+<h2 id="heading--custom-rhel-images">Building RHEL images</h2>
+<p></a></p>
+<p>Currently, MAAS <em>only</em> supports RHEL as a custom image. In future versions of MAAS, RHEL will be natively supported.</p>
+<h3 id="heading--rhel-requirements">Some Requirements</h3>
+
+<p>In order to create RHEL images, you will need access to these three sites:</p>
+<ol>
+<li>A RHEL DVD ISO - Contains all RHEL archives which are not available without a license</li>
+<li>https://download.fedoraproject.org - Access to the EPEL repository to install required deps</li>
+<li>https://copr-be.cloud.fedoraproject.org - Access to the Canonical maintained cloud-init copr repository</li>
+</ol>
+<h3 id="heading--rhel-behind-proxy">Creating images behind a proxy</h3>
+
+<p>MAAS image builder supports creating RHEL images behind a proxy. To use a proxy when building a RHEL image, just set the ‘http_proxy’ environment variable to <em>your</em> local proxy. Once deployed, <code>yum</code> will use the MAAS-configured proxy.</p>
+<h3 id="heading--rhel-create-images">Creating the images</h3>
+
+<p>To generate a usable RHEL image, <code>maas-image-builder</code> automates image generation; these images can be used by MAAS and <code>curtin</code>.</p>
+<pre><code> $ sudo maas-image-builder -a amd64 -o rhel7-amd64-root-tgz rhel --rhel-iso blah.iso
+</code></pre>
+<h3 id="heading--rhel-install">Install into MAAS</h3>
+
+<p>The custom RHEL image can be uploaded to MAAS, but note that the name <strong>must</strong> start with ‘rhel’ and <strong>must</strong> be expressed as a single line, like this:</p>
+<pre><code>maas admin boot-resources create name=rhel/7 title="RedHat Enterprise Linux 7" architecture=amd64/generic content@=rhel7-amd64-root-tgz
+</code></pre>
+<h2 id="heading--custom-windows-images">Building Windows Images</h2>
+<p></a></p>
+<p>Since Windows is a proprietary operating system, MAAS can&rsquo;t download these images. You need to manually generate images to use with MAAS.  On the upside, the end result will be much simpler, since there are CLI and WebUI tools to upload a Windows ISO &ndash; which <em>helps</em> automate the process.</p>
+<p><b>Hyper-V 2012 R2</b>
+In this example, Windows Hyper-V 2012 R2 is used, but rest assured that multiple versions are supported. Download the Hyper-V 2012 R2 ISO from Microsoft, so it can be used in the image generation process.  You can obtain the download at:</p>
+<p>http://technet.microsoft.com/en-US/evalcenter/dn205299.aspx</p>
+<p>There are six other supported versions (for &ndash;windows-edition):</p>
+<ol>
+<li>win2012</li>
+<li>win2012r2</li>
+<li>win2012hv</li>
+<li>win2012hvr2</li>
+<li>win2016</li>
+<li>win2016hv</li>
+</ol>
+<h3 id="heading--mib-windows">Image Builder</h3>
+
+<p>MAAS Image builder can automate the process of generating images for MAAS and <code>curtin</code>.  In this instance,  though, you need Windows drivers for your specific hardware.  You can obtain these windows drivers with the following command:</p>
+<pre><code>sudo maas-image-builder -o windows-win2012hvr2-amd64-root-dd  windows \
+--windows-iso ~/Downloads/2012hvr2.ISO \
+--windows-edition win2012hvr2 [--windows-updates] \
+[--windows-drivers &lt;folder/&gt;]  [--windows-language en-US]
+</code></pre>
+<p>As an example, consider:</p>
+<pre><code>sudo maas-image-builder -o windows-win2012hvr2-amd64-root-dd windows \
+--windows-iso win2012hvr2.iso  --windows-edition win2012hvr2 \
+--windows-updates --windows-drivers ~/Win2012hvr2_x64/DRIVERS/  --windows-language en-US
+</code></pre>
+<p>Please note that this will not <em>install</em> any Windows updates. In order to obtain an up-to-date image of Windows, be sure provide the <code>&ndash;windows-updates</code> flag. This requires access to a bridged connection with a DHCP server, an interface that can be specified with <code>-i</code>.</p>
+<p>Also note that you may be required to have specific Windows drivers for this image to work in your hardware. Be sure you inject those drivers when installing them. Those drivers are the default <code>*.inf</code> files.</p>
+<h3 id="heading--mib-debug-windows">Debug</h3>
+
+<p>You can debug the Windows installation process by connecting to <code>localhost:5901</code> using a VNC client.</p>
+<h3 id="heading--windows-image-install">Install into MAAS</h3>
+
+<p>The generated images need to be placed into the correct directories so MAAS can deploy them onto a node:</p>
+<pre><code>maas admin boot-resources create name=windows/win2012hvr2 \
+architecture=amd64/generic filetype=ddtgz \ 
+content@=./build-output/windows-win2012hvr2-amd64-root-dd
+</code></pre>
+<p>Now, using the MAAS WebUI, a node can be selected to use Windows Hyper-V 2012 R2. This selection gets reset when a node is stopped, so make sure to set it <em>before</em> starting nodes. You can also set the default operating system (and release) in the settings menu, which removes the need to set it per-node.</p>
+<h2 id="heading--other-custom-images">Dealing with other custom images</h2>
+<p></a></p>
+<p>To install other custom images, use the following command sequence:</p>
+<pre><code>maas &lt;user&gt; boot-resources create name=&lt;custom-image-codename&gt; title="Ubuntu Custom Image" \
+architecture=amd64/generic content@=/location/of/custom/image/ubuntu-custom-root-tgz
+</code></pre>
+<p>As an example:</p>
+<pre><code>maas admin boot-resources create name=custom1 \
+title=”Ubuntu Custom Image” architecture=amd64/generic \
+content@=/home/ubuntu/ubuntu-custom-root-tgz
+</code></pre>
+    </div>
+  </body>
+</html>

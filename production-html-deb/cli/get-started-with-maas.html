@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/get-started-with-maas.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/get-started-with-maas.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="../maas-documentation-25.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-the-maas-cli.html">
+	    Use the MAAS CLI
+	  </a>
+	</li>
+      <strong>
+	<a href="about-controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-racks.html">
+	    Manage racks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-regions.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machine-interfaces.html">
+	    Manage interfaces
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-dhcp.html">
+	    Manage DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-ranges.html">
+	    Manage IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-proxies.html">
+	    Manage proxies
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-ntp.html">
+	    Set up NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-maas-images.html">
+	    Build MAAS images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-a-custom-ubuntu-image.html">
+	    Create custom Ubuntu images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-image-streams.html">
+	    Use image streams
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-tags-and-annotations.html">
+	  Tags
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-tags.html">
+	    Manage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+	<p/>
+	<strong>
+	  Operations
+	</strong>
+	<ul>
+	  <li>
+	    <a href="how-to-set-up-prometheus-metrics.html">
+	      Set up Prometheus
+	    </a>
+	  </li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API reference
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-troubleshoot-maas.html">
+	  Troubleshooting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Get help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-and-tricks.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="what-is-new-with-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="how-to-contact-us.html">
+	  Contact us
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>Get started with MAAS</h1><p>An evolving example may be useful to introduce you to MAAS, and it doesn&rsquo;t have to be comprehensive &ndash;  just coherent and plausible.  This example will continue to expand and update over time.</p>
+<pre><code>FQDN               POWER  STATUS     OWNER  TAGS     POOL       NOTE     ZONE
+----               -----  ------     -----  ----     ----       ----     ----
+52-54-00-15-36-f2  off    Ready      -      Orders   Prescrbr   @md-all  Medications
+52-54-00-17-64-c8  off    Ready      -      HRMgmt   StaffComp  @tmclck  Payroll
+52-54-00-1d-47-95  off    Ready      -      MedSupp  SuppServ   @storag  Inventory
+52-54-00-1e-06-41  off    Ready      -      PatPrtl  BusOfc     @bzstns  BizOffice
+52-54-00-1e-a5-7e  off    Ready      -      Pharm    Prescrbr   @rxonly  Pharmacy
+52-54-00-2e-b7-1e  off    Allocated  admin  NursOrd  NurServ    @nstns   Nursing
+52-54-00-2e-c4-40  off    Allocated  admin  MedAdmn  NurServ    @rxonly  Nursing
+52-54-00-2e-ee-17  off    Deployed   admin  Charts   ProServ    @md-all  Physician
+</code></pre>
+<p>You can generate a list similar to this for your machines with the command:</p>
+<pre><code>maas admin machines read | jq -r '([&quot;FQDN&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
+&quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;NOTE&quot;, &quot;ZONE&quot;] | (., map(length*&quot;-&quot;))),
+(.[] | [.hostname, .power_state, .status_name, .owner // &quot;-&quot;, 
+.tag_names[0] // &quot;-&quot;, .pool.name, .description // &quot;-&quot;, .zone.name]) | @tsv' | column -t
+</code></pre>
+<p>Be aware that newly-created machines will only have default settings for tags, resource pools, zones, and notes, and will probably all be in the &ldquo;Ready&rdquo; state, with no owner.</p>
+<p>So imagine that you&rsquo;re the IT administrator for a new, 100-bed hospital that&rsquo;s under construction, intended to serve a suburban community of 5,000 people.  Call it &ldquo;Metaphorical General Hospital&rdquo; (MGH).   Your job is to design a flexible data centre for this facility.  You&rsquo;ve decided to start with MAAS as your tool of choice, and for this planning exercise, you&rsquo;ll use VMs in a VM host.</p>
+<p><a href="#heading--machines"><h2 id="heading--machines">Machines</h2></a></p>
+<p>You&rsquo;ll need to start with a little network thinking (and design).  Talking through requirements with the staff, you come up with a random list of functions:</p>
+<table width="100%">
+<tr><td>Charts</td><td>Provider orders</td><td>Provider documentation</td></tr>
+<tr><td>Pharmacy</td><td>Narcotics control</td><td>Insurance collections</td></tr>
+<tr><td>Housekeeping</td><td>Nursing orders</td><td>Med reconciliation</td></tr>
+<tr><td>Timeclock</td><td>Patient collections</td><td>Med/surgical supplies</td></tr>
+<tr><td>Office supplies</td><td>Patient registration</td><td>Insurance reconciliation</td></tr>
+<tr><td>Payroll</td><td>Medication admin</td><td>Continuing education</td></tr>
+<tr><td>Food service</td><td>Instrumentation</td><td>Information technology</td></tr>
+</table>
+
+<p>You can handle this lowest level with individual <a href="about-machines-5083.html">machines</a>.  With MAAS, you&rsquo;ll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let&rsquo;s assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren&rsquo;t going to name them for their functions; instead, you&rsquo;re just going to use the MAC address of each machine to uniquely identify it.</p>
+<p><details>
+<summary>
+<em>Try it!</em>
+</summary></p>
+<h4>Creating some sample VMs</h4>
+
+<p>Assuming you&rsquo;ve <a href="https://help.ubuntu.com/lts/serverguide/libvirt.html">installed libvirt</a>&#128279; on the machine where you&rsquo;ll be running MAAS, you can create virtual machines like this:</p>
+<p>Open the Virtual Machine Manager application.  You&rsquo;ll see a screen that looks something like this:</p>
+<p><a href="images/f66940a21313a27734bcaef6c539d36a720a6834.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/f66940a21313a27734bcaef6c539d36a720a6834.jpeg"></a> </p>
+<p>Click on &ldquo;New Virtual Machine,&rdquo; which brings you to a corresponding dialog:</p>
+<p><a href="images/0702d9f2ab4c3659d13be553449093548a9e2f10.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/0702d9f2ab4c3659d13be553449093548a9e2f10.jpeg"></a> </p>
+<p>Select the &ldquo;Network Boot (PXE)&rdquo; option and click the &ldquo;Forward&rdquo; button:</p>
+<p><a href="images/0000fb5f072f2b3668465753ae6a713859d8a444.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/0000fb5f072f2b3668465753ae6a713859d8a444.jpeg"></a></p>
+<p>Choose the &ldquo;Generic&hellip;&rdquo; operating system by typing the first letters of &ldquo;Generic&rdquo; in the text box and selecting the relevant choice when it becomes available, then go Forward:</p>
+<p><a href="images/041914a0718633fce685ac7919e2478da0e62c1b.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/041914a0718633fce685ac7919e2478da0e62c1b.jpeg"></a> </p>
+<p>For CPU and memory, you can usually accept the defaults:</p>
+<p><a href="images/5a46262e3573aae7252951b3331ac9e3f3ef69c4.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/5a46262e3573aae7252951b3331ac9e3f3ef69c4.jpeg"></a> </p>
+<p>The storage values have a noticeable effect on local disk usage, so note that, generally, a VM only requires about 5.0 GiB, given an example exercise like this:</p>
+<p><a href="images/15f5e344c03bd1469c00333d466027e403c00ee8.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/15f5e344c03bd1469c00333d466027e403c00ee8.jpeg"></a> </p>
+<p>In the next screen, you&rsquo;ll have the chance to set a name; here, we&rsquo;ve used a pseudo-MAC address, although you can name the machine whatever you want (and then return later to set the name to match the MAC address, if desired):</p>
+<p><a href="images/d4191b100d963032d47fed1f198aea76e8de273e.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/d4191b100d963032d47fed1f198aea76e8de273e.jpeg"></a> </p>
+<p>Selecting &ldquo;Finish&rdquo; will create the virtual machine and attempt to boot it &ndash; which will fail, since no device currently knows about this VM (and hence can&rsquo;t boot it).  Not to worry; you&rsquo;re not done yet:</p>
+<p><a href="images/09b4e50049c2a251d100113e50a241d0c4a06f51.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/09b4e50049c2a251d100113e50a241d0c4a06f51.jpeg"></a> </p>
+<p>Select the &ldquo;information&rdquo; button (blue circle, white lowercase &ldquo;i&rdquo;) to switch to the VM configuration screens, then select the &ldquo;Boot Options&rdquo; choice from the left-hand menu:</p>
+<p><a href="images/7b6cd37f7663db53571845da0159977092898fa4.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/7b6cd37f7663db53571845da0159977092898fa4.jpeg"></a> </p>
+<p>Turn off the &ldquo;IDE&rdquo; item under &ldquo;Boot device order:&rdquo;</p>
+<p><a href="images/54a8d6a77d9660e13aa1c0e278048ed1c751d65e.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/54a8d6a77d9660e13aa1c0e278048ed1c751d65e.jpeg"></a> </p>
+<p>When you select &ldquo;Apply,&rdquo; a dialog will pop up to remind you that you need to restart this VM for changes to take effect:</p>
+<p><a href="images/6f4ab26216cc2951a202851869f7c7efc5691129.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/6f4ab26216cc2951a202851869f7c7efc5691129.jpeg"></a> </p>
+<p>Switch to the &ldquo;NIC&hellip;&rdquo; option and set the &ldquo;Network source&rdquo; and &ldquo;Device model&rdquo; as shown, then select &ldquo;Apply&rdquo; and respond to the dialog:</p>
+<p><a href="images/26fe981020c03e46c81e2bceed840bea7b2f14d6.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/26fe981020c03e46c81e2bceed840bea7b2f14d6.jpeg"></a> </p>
+<p>You&rsquo;ll next select the drop-down arrow next to the &ldquo;on/off&rdquo; menu bar option and select &ldquo;Force reset,&rdquo; then answer the prompt in the affirmative:</p>
+<p><a href="images/537a485f0ff014aeb82afc71bc09b2988bf5cb56.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/537a485f0ff014aeb82afc71bc09b2988bf5cb56.jpeg"></a> </p>
+<p>You now have a VM that you can add to MAAS.  If you want more than one, you can simply right-click on the one you&rsquo;ve just created and select &ldquo;Clone:&rdquo;</p>
+<p>[Note] <strong>Pro Tip</strong>: Cloned VMs tend to use considerably less host disk space than newly-created ones. [/Note]</p>
+<p><a href="images/2348efd7dbf17ba445e3c4e6b3926fdc8cfbc888.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/2348efd7dbf17ba445e3c4e6b3926fdc8cfbc888.jpeg"></a> </p>
+<p>Another VM will instantiate, using the name of the cloned VM with an added &ldquo;-clone&rdquo; suffix:</p>
+<p><a href="images/a14b17602c2ad2465197a77c302080ca2eb59fc8.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/a14b17602c2ad2465197a77c302080ca2eb59fc8.jpeg"></a> </p>
+<p>You can create VMs as desired, remembering to mind your overall disk usage on your host system.</p>
+<p></details></p>
+<p>Let&rsquo;s assume that once you&rsquo;re done adding VMs, you have around 20 up and ready, all named after their assigned MAC address:</p>
+<p><a href="images/f9f302d8de9344908758a433dae9abfada0b0db3.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/f9f302d8de9344908758a433dae9abfada0b0db3.jpeg"></a> </p>
+<p>No need to create a lot of VMs for this example (unless you just want to do so).  </p>
+<p><a href="#heading--manually-add-machines"><h3 id="heading--manually-add-machines">Manually adding machines</h3></a></p>
+<p>Once you&rsquo;ve created the necessary VMs, you&rsquo;ll want to <a href="how-to-manage-machines-5163.html#heading--how-to-add-a-machine-manually">manually add machines</a> to MAAS that correspond to your VMs.</p>
+<pre><code>FQDN               POWER  STATUS  OWNER  TAGS     POOL     NOTE  ZONE
+----               -----  ------  -----  ----     ----     ----  ----
+52-54-00-15-36-f2  off    Ready   -      virtual  default  -     default
+52-54-00-17-64-c8  off    Ready   -      virtual  default  -     default
+52-54-00-1d-47-95  off    Ready   -      virtual  default  -     default
+52-54-00-1e-06-41  off    Ready   -      virtual  default  -     default
+52-54-00-1e-a5-7e  off    Ready   -      virtual  default  -     default
+52-54-00-2e-b7-1e  off    Ready   -      virtual  default  -     default
+52-54-00-2e-c4-40  off    Ready   -      virtual  default  -     default
+52-54-00-2e-eke-17  off    Ready   -      virtual  default  -     default
+52-54-00-2f-6d-3c  off    Ready   -      virtual  default  -     default
+52-54-00-4a-2a-30  off    Ready   -      virtual  default  -     default
+52-54-00-4e-60-b2  off    Ready   -      virtual  default  -     default
+52-54-00-52-93-10  off    Ready   -      virtual  default  -     default
+52-54-00-5d-b5-a1  off    Ready   -      virtual  default  -     default
+52-54-00-60-1e-6f  off    Ready   -      virtual  default  -     default
+52-54-00-60-8d-4b  off    Ready   -      virtual  default  -     default
+52-54-00-62-22-e3  off    Ready   -      virtual  default  -     default
+52-54-00-65-2e-20  off    Ready   -      virtual  default  -     default
+52-54-00-6a-ac-23  off    Ready   -      virtual  default  -     default
+52-54-00-6f-b4-af  off    Ready   -      virtual  default  -     default
+52-54-00-71-0c-53  off    Ready   -      virtual  default  -     default
+52-54-00-77-4e-53  off    Ready   -      virtual  default  -     default
+52-54-00-98-42-ef  off    Broken  -      -        default  -     default
+52-54-00-9b-e4-9a  off    Ready   -      virtual  default  -     default
+52-54-00-9c-51-00  off    Ready   -      virtual  default  -     default
+</code></pre>
+<p><details>
+<summary><em>Try it!</em></summary></p>
+<p>Creating a machine from a VM requires six pieces of information:</p>
+<ol>
+<li>the machine architecture (e.g., amd64)</li>
+<li>the machine&rsquo;s MAC address</li>
+<li>the power type (in this case, &ldquo;virsh&rdquo;)</li>
+<li>the power ID</li>
+<li>the power address (which also contains a username)</li>
+<li>the power password</li>
+</ol>
+<p>Once you&rsquo;ve collected this information, you&rsquo;ll want to create a new KVM like this:</p>
+<pre><code>maas admin machines create \
+architecture=amd64 hostname=52-54-00-15-36-f2 \ 
+mac_addresses=52:54:00:15:36:f2 \
+power_type=virsh power_parameters_power_id=f677a842-571c-4e65-adc9-11e2cf92d363 \
+power_parameters_power_address=qemu+ssh://stormrider@192.168.123.1/system \
+power_parameters_power_pass=xxxxxxxx
+</code></pre>
+<p>Here, we&rsquo;ve assigned a variant of the MAC address as the machine name.  Note that the machine name cannot include colons (&ldquo;:&rdquo;), we&rsquo;ve substituted dashes.  You can gather most of this information from the KVM itself:</p>
+<p><a href="images/79e135e48576bb6f455dd42fd7a09a2c7448d221.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/79e135e48576bb6f455dd42fd7a09a2c7448d221.jpeg"></a> 
+</details></p>
+<p>For default configurations, the Virsh Address is &ldquo;qemu+ssh://[your-login-id]@192.168.122.1/system;&rdquo; replace &ldquo;[your-login-id]&rdquo; with your username or login ID on the machine where you&rsquo;re hosting MAAS and the Virtual Machine Manager.  Likewise, the password is your normal login password for the same host.  Finally, you can retrieve the Virsh VM ID from the &ldquo;Overview&rdquo; screen of the VM itself:</p>
+<p><a href="images/79e135e48576bb6f455dd42fd7a09a2c7448d221.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/79e135e48576bb6f455dd42fd7a09a2c7448d221.jpeg"></a> 
+</details></p>
+<p>As you add machines, they automatically commission.</p>
+<p><a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a></p>
+<p>Assigning machines to specific functions is something you can do after you <a href="how-to-deploy-machines-5115.html#heading--how-to-commission-a-machine">commission</a> and <a href="how-to-deploy-machines-5115.html">deploy</a> them.  (Later on, we&rsquo;ll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you&rsquo;ve got machines running apps, you want to keep up-to-date about which machine is doing what, when you&rsquo;re looking at the machine list.  You&rsquo;ll want to assign <a href="about-tags-and-annotations-5091.html">tags</a> to machines.  </p>
+<pre><code>FQDN               POWER  STATUS  OWNER  TAGS     POOL     NOTE  ZONE
+----               -----  ------  -----  ----     ----     ----  ----
+52-54-00-15-36-f2  off    Ready   -      Orders   default  -     default
+52-54-00-17-64-c8  off    Ready   -      HRMgmt   default  -     default
+52-54-00-1d-47-95  off    Ready   -      MedSupp  default  -     default
+52-54-00-1e-06-41  off    Ready   -      PatPrtl  default  -     default
+52-54-00-1e-a5-7e  off    Ready   -      Pharm    default  -     default
+52-54-00-2e-b7-1e  off    Ready   admin  NursOrd  default  -     default
+52-54-00-2e-c4-40  off    Ready   admin  MedAdmn  default  -     default
+52-54-00-2e-ee-17  off    Ready   admin  Charts   default  -     default
+</code></pre>
+<p><details>
+<summary><em>Try it!</em></summary>
+Adding a tag to a machine is simple.  First, you must create the tag:</p>
+<pre><code>maas $PROFILE tags create name=$TAG_NAME comment='$TAG_COMMENT'
+</code></pre>
+<p>Next you add the tag to a machine with the following command:</p>
+<pre><code>maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
+</code></pre>
+<p>If you need to find the $SYSTEM_ID of your machines, you can use this command:</p>
+<pre><code>maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;]
+| (., map(length*&quot;-&quot;))),
+(.[] | [.hostname, .system_id]) | @tsv' | column -t
+</code></pre>
+<p></details></p>
+<p>Tags can will help you keep up with which machine(s) are covering which functions as you apply your apps.  You can search and filter by tags, and you can utilise tags from within the API, as well.</p>
+<p><a href="#heading--resource-pools"><h2 id="heading--resource-pools">Resource pools</h2></a></p>
+<p>As you look at the list of functions you&rsquo;ve created, and talk more with the staff, you discover that some of these functions fit together more closely than others.  With some effort, you work out the following update to your network design:</p>
+<table width="100%">
+<tr><td><strong>Provider services</strong></td><td></td><td></td></tr>
+<tr><td>Charts</td><td>Provider orders</td><td>Provider documentation</td></tr>
+<tr><td><strong>Nursing services</strong></td><td></td><td></td></tr>
+<tr><td>Nursing orders</td><td>Continuing education</td><td></td></tr>
+<tr><td><strong>Nursing meds</strong></td><td></td><td></td></tr>
+<tr><td>Medication administration</td><td>Narcotics control</td><td></td></tr>
+<tr><td><strong>Prescriber controls</strong></td><td></td><td></td></tr>
+<tr><td>Pharmacy</td><td>Narcotics control</td><td>Medication reconciliation</td></tr>
+<tr><td><strong>Staff compensation</strong></td><td></td><td></td></tr>
+<tr><td>Timeclock</td><td>Payroll</td><td></td></tr>
+<tr><td><strong>Supplies & services</strong></td><td></td><td></td></tr>
+<tr><td>Medical and surgical supplies</td><td>Office and general supplies</td><td></td></tr>
+<tr><td><strong>Business office</strong></td><td></td><td></td></tr>
+<tr><td>Patient registration</td><td>Insurance reconciliation</td><td></td></tr>
+<tr><td><strong>Collections</strong></td><td></td><td></td></tr>
+<tr><td>Patient collections</td><td>Insurance collections</td><td></td></tr>
+<tr><td><strong>Patient support</strong></td><td></td><td></td></tr>
+<tr><td>Housekeeping</td><td>Food service</td><td></td></tr>
+<tr><td><strong>Staff support</strong></td><td></td><td></td></tr>
+<tr><td>Instrumentation</td><td>Information technology</td><td></td></tr>
+</table>
+
+<p>You&rsquo;re aware that the number of machines you&rsquo;ll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you&rsquo;d prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating <a href="about-machines-5083.html#heading--about-resource-pools">resource pools</a> and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.</p>
+<p><details>
+<summary><em>Try it!</em></summary></p>
+<p>Just like tags, you must first create a resource pool before assigning a machine to it.
+Here’s an example that demonstrates how to create a new resource pool named &ldquo;myresource&rdquo; in a single command; note that the description field is optional, but often very helpful:</p>
+<pre><code>maas $PROFILE resource-pools create name=myresource description=&quot;A new resource pool.&quot;
+</code></pre>
+<p>Once you&rsquo;ve created the pool you want, you can add a machine that pool with the following command:</p>
+<pre><code>maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
+</code></pre>
+<p></details></p>
+<p>Here&rsquo;s a snippet of the updated machine list, with all machines added to the appropriate resource pool:</p>
+<pre><code>FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
+----               -----  ------  -----  ----     ----       ----  ----
+52-54-00-15-36-f2  off    Ready   -      Orders   Prescrbr   -     default
+52-54-00-17-64-c8  off    Ready   -      HRMgmt   StaffComp  -     default
+52-54-00-1d-47-95  off    Ready   -      MedSupp  SuppServ   -     default
+52-54-00-1e-06-41  off    Ready   -      PatPrtl  BusOfc     -     default
+52-54-00-1e-a5-7e  off    Ready   -      Pharm    Prescrbr   -     default
+52-54-00-2e-b7-1e  off    Ready   admin  NursOrd  NurServ    -     default
+52-54-00-2e-c4-40  off    Ready   admin  MedAdmn  NurServ    -     default
+52-54-00-2e-ee-17  off    Ready   admin  Charts   ProServ    -     default
+</code></pre>
+<p>Resource pools are mostly for your use, helping you to budget servers within a given category.  Untagged servers can be in a pool, so if you&rsquo;ve got five servers in the &ldquo;Prescriber controls&rdquo; resource pool, you can tag them with &ldquo;Pharmacy,&rdquo; &ldquo;Medication reconciliation,&rdquo; etc., as you use them.  It will also be obvious when you&rsquo;re running low on servers for that pool, and need to either provision more or move some unused ones from another pool.</p>
+<p><a href="#heading--notes"><h2 id="heading--notes">Notes</h2></a></p>
+<p>Another optional identifier for machines is the &ldquo;Note&rdquo; field.  While it can be long, a portion of it shows up on the machine list, which makes it useful for adding special identifiers or groupings.  In this example, we&rsquo;ve added a vague identifier which might help an IT admin remember server locations or access rights.</p>
+<pre><code>FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE     ZONE
+----               -----  ------  -----  ----     ----       ----     ----
+52-54-00-15-36-f2  off    Ready   -      Orders   Prescrbr   @md-all  default
+52-54-00-17-64-c8  off    Ready   -      HRMgmt   StaffComp  @tmclck  default
+52-54-00-1d-47-95  off    Ready   -      MedSupp  SuppServ   @storag  default
+52-54-00-1e-06-41  off    Ready   -      PatPrtl  BusOfc     @bzstns  default
+52-54-00-1e-a5-7e  off    Ready   -      Pharm    Prescrbr   @rxonly  default
+52-54-00-2e-b7-1e  off    Ready   admin  NursOrd  NurServ    @nstns   default
+52-54-00-2e-c4-40  off    Ready   admin  MedAdmn  NurServ    @rxonly  default
+52-54-00-2e-ee-17  off    Ready   admin  Charts   ProServ    @md-all  default
+</code></pre>
+<p><details>
+<summary><em>Try it!</em></summary></p>
+<p>To add a note to a machine, you&rsquo;ll first need to determine its system ID (see above).  Once you have that, you can add or change a note like this:</p>
+<pre><code>maas $PROFILE machine update $SYSTEM_ID description=&quot;note&quot;
+</code></pre>
+<p>It helps very much to keep your notes short, since only a few characters are visible on the machine list.</p>
+<p></details></p>
+<p><a href="#heading--vlans"><h2 id="heading--vlans">VLANs</h2></a></p>
+<p>Looking over your design, you notice that some of these resource pools must have their network traffic &ldquo;fire-walled&rdquo; from others &ndash; for example, Provider services and Nursing services shouldn&rsquo;t be readily visible to Staff compensation or Food service.  Likewise, the relevant monitoring agencies require that facilities manage medications as a separate activity. The traditional way to separate these networks (other than creating entirely <em>separate</em> networks) would be a VLAN.  Luckily, MAAS supports multiple VLANS.  Adding one higher level to your design, you find yourself with this updated network topology:</p>
+<table width="100%">
+<tr><td><strong>Caregiver services</strong></td><td></td></tr>
+<tr><td>Provider services</td><td>Nursing services</td></tr>
+<tr><td><strong>Medication management</strong></td><td></td></tr>
+<tr><td>Nursing meds</td><td>Prescriber controls</td></tr>
+<tr><td><strong>Accounts payable</strong></td><td></td></tr>
+<tr><td>Staff compensation</td><td>Supplies & services</td></tr>
+<tr><td><strong>Accounts receivable</strong></td><td></td></tr>
+<tr><td>Business office</td><td>Collections</td></tr>
+<tr><td><strong>Patient support</strong></td><td></td></tr>
+<tr><td>Housekeeping</td><td>Food service</td></tr>
+<tr><td><strong>Staff support</strong></td><td></td></tr>
+<tr><td>Instrumentation</td><td>Information technology</td></tr>
+</table>
+
+<p>Each of these higher-level groupings is ideal for a VLAN, so you create six of them, one for each division:</p>
+<pre><code>FABRIC    VLAN                   DHCP
+------    ----                   ----
+fabric-0  Accounts_Receivable    false
+fabric-0  Staff_Support          false
+fabric-0  Patient_Support        false
+fabric-0  Accounts_Payable       false
+fabric-0  Medication_Management  false
+fabric-0  Caregiver_Services     false
+fabric-0  untagged               false
+</code></pre>
+<p>You can generate this list with the command:</p>
+<pre><code>maas admin vlans read $FABRIC_ID | jq -r '([&quot;FABRIC&quot;,&quot;VLAN&quot;,&quot;DHCP&quot;] | (., map(length*&quot;-&quot;))), (.[] | [.fabric, .name, .dhcp_on]) | @tsv' | column -t
+</code></pre>
+<p><details>
+<summary><em>Try it!</em></summary></p>
+<p>Adding a functional VLAN requires some additional (common) networking aspects, which we&rsquo;ll cover later.  In the meantime, though, here&rsquo;s the short version of adding and naming the VLAN itself.  </p>
+<p>To create additional VLANs, choose the fabric where you want them to be added, and enter the following command, once for each new VLAN:</p>
+<pre><code>maas admin vlans create $FABRIC_ID name=$VLAN_NAME vid=$VLAN_ID
+</code></pre>
+<p>For example, to create the &ldquo;Caregiver Services&rdquo; VLAN with VID 100 on fabric 0, enter the following command:</p>
+<pre><code>maas admin vlans create 0 name=&quot;Caregiver_Services&quot; vid=100
+</code></pre>
+<p></details></p>
+<p>Ignoring the networking aspects (for now), these VLANs should help isolate major functions and provide a level of data integrity and access control for your new hospital network.</p>
+<p><a href="#heading--fabrics"><h2 id="heading--fabrics">Fabrics</h2></a></p>
+<p>Considering your network design so far, you notice that some of the VLANs need to be able to communicate with each other some of the time.  In fact, you decide on three pairs of VLANs to cover this new networking situation:</p>
+<table>
+<tr><td><strong>Patient management</strong></td><td></td></tr>
+<tr><td>Caregiver services</td><td>Medication management</td></tr>
+<tr><td><strong>Accounting</strong></td><td></td></tr>
+<tr><td>Accounts payable</td><td>Accounts receivable</td></tr>
+<tr><td><strong>Facilities</strong></td><td></td></tr>
+<tr><td>Patient support</td><td>Staff support</td></tr>
+</table>
+
+<p>You want to incorporate these highest-level groupings into your network, but how?  MAAS provides the answer with fabrics.  A fabric is a set of interconnected VLANs that can communicate, so you simply create three fabrics, each covering one of these top-level categories.</p>
+<pre><code>FABRIC              VLAN                   DHCP  
+------              ----                   ----  
+Accounting          Accounts_Receivable    False 
+                    Accounts_Payable       False
+Facilities          Patient_Support        False
+                    Staff_Support          False
+Patient_Management  Caregiver_Services     False
+                    Medication_Management  False
+</code></pre>
+<!-- comment -->
+    </div>
+  </body>
+</html>

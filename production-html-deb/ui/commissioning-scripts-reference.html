@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/commissioning-scripts-reference.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/commissioning-scripts-reference.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="../maas-documentation-25.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-the-maas-cli.html">
+	    Use the MAAS CLI
+	  </a>
+	</li>
+      <strong>
+	<a href="about-controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-racks.html">
+	    Manage racks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-regions.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machine-interfaces.html">
+	    Manage interfaces
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-dhcp.html">
+	    Manage DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-ranges.html">
+	    Manage IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-proxies.html">
+	    Manage proxies
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-ntp.html">
+	    Set up NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-maas-images.html">
+	    Build MAAS images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-a-custom-ubuntu-image.html">
+	    Create custom Ubuntu images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-image-streams.html">
+	    Use image streams
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-tags-and-annotations.html">
+	  Tags
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-tags.html">
+	    Manage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+	<p/>
+	<strong>
+	  Operations
+	</strong>
+	<ul>
+	  <li>
+	    <a href="how-to-set-up-prometheus-metrics.html">
+	      Set up Prometheus
+	    </a>
+	  </li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API reference
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-troubleshoot-maas.html">
+	  Troubleshooting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Get help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-and-tricks.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="what-is-new-with-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="how-to-contact-us.html">
+	  Contact us
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>Commissioning scripts reference</h1><p>This document provides technical details about commissioning scripts.  For the corresponding details about test scripts, see <a href="hardware-test-scripts-reference-5386.html">Hardware test scripts reference</a>.</p>
+<p><a href="#heading--metadata-field-reference"><h2 id="heading--metadata-field-reference">Metadata field reference</h2></a></p>
+<p>Metadata fields tell MAAS when to use the script, how it should run, and what information it&rsquo;s gathering. A script can employ some combination of the following seventeen fields:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>name</code></td>
+<td align="left">The name of the script.</td>
+</tr>
+<tr>
+<td align="left"><code>title</code></td>
+<td align="left">Human-friendly descriptive version of the name, used within the web UI.</td>
+</tr>
+<tr>
+<td align="left"><code>description</code></td>
+<td align="left">Brief outline of what the script does.</td>
+</tr>
+<tr>
+<td align="left"><code>tags</code></td>
+<td align="left">List of tags associated with the script.</td>
+</tr>
+<tr>
+<td align="left"><code>type</code></td>
+<td align="left">Either commissioning or testing.</td>
+</tr>
+<tr>
+<td align="left"><code>timeout</code></td>
+<td align="left">Length of time before MAAS automatically fails and kills execution of the script. The time may be specified in seconds or using the HH:MM:SS format.</td>
+</tr>
+<tr>
+<td align="left"><code>destructive</code></td>
+<td align="left">True or False, depending on whether the script will overwrite system data. You can&rsquo;t run destructive tests on a deployed machine.</td>
+</tr>
+<tr>
+<td align="left"><code>comment</code></td>
+<td align="left">Describes changes made in this revision of the script.  A comment can be passed via the API when uploading the script.  MAAS doesn’t look at the script metadata for this field.</td>
+</tr>
+<tr>
+<td align="left"><code>hardware_type</code></td>
+<td align="left">Defines the type of hardware the script configures or tests. If the script returns results, hardware types associate the results with specific hardware. The following types are valid:</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>node</code>: Not associated with any hardware type; this is the default.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>cpu</code>: Configures or tests the CPUs on the machine.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>memory</code>: Configures or tests memory on the machine.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>storage</code>: Configures or tests storage on the machine.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>network</code>: Configures or tests network on the machine.</td>
+</tr>
+<tr>
+<td align="left"><code>parallel</code></td>
+<td align="left">Enables scripts to be run in parallel and can be one of the following:</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>disabled</code>: The script will run serially on its own.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>instance</code>: Runs in parallel only with other instances of the same script.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>any</code>: Runs in parallel alongside any other scripts with parallel set to any.</td>
+</tr>
+<tr>
+<td align="left"><code>parameters</code></td>
+<td align="left">What <a href="#heading--parameters">parameters</a> the script accepts.</td>
+</tr>
+<tr>
+<td align="left"><code>results</code></td>
+<td align="left">What <a href="#heading--results">results</a> the script will return.</td>
+</tr>
+<tr>
+<td align="left"><code>packages</code></td>
+<td align="left">List of packages to be installed or extracted before running the script. Packages must be specified as a dictionary. For example, <code>packages: {apt: stress-ng}</code>, would ask <code>apt</code> to install stress-ng. Package sources can be any of the following:</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>apt</code>: Use the Ubuntu apt repositories as configured by MAAS to install a package.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>snap</code>: Installs packages using [snap][snapcraft]. May also be a list of dictionaries. The dictionary must define the name of the  package to be installed, and optionally, the <code>channel</code>, <code>mode</code> and <code>revision</code>.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>url</code>: The archive will be downloaded and, if possible, extracted or installed when a Debian package or [snap][snapcraft].</td>
+</tr>
+<tr>
+<td align="left"><code>for_hardware</code></td>
+<td align="left">Specifies the hardware that must be on the machine for the script to run. May be a single string or list of strings of the following:</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>modalias</code>: Starts with &lsquo;modalias:&rsquo; may optionally contain wild cards.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>PCI ID</code>: Must be in the format of &lsquo;pci:VVVV:PPPP&rsquo; where VVVV is the vendor ID, and PPPP is the product ID.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>USB ID</code>: Must be in the format of &lsquo;usb:VVVV:PPPP&rsquo; where VVVV is the vendor ID, and PPPP is the product ID.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>System Vendor</code>: Starts with &lsquo;system_vendor:&rsquo;.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>System Product</code>: Starts with &lsquo;system_product:&rsquo;.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>System Version</code>: Starts with &lsquo;system_version:&rsquo;.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>Mainboard Vendor</code>: Starts with &lsquo;mainboard_vendor:&rsquo;.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>Mainboard Product</code>: Starts with &lsquo;mainboard_product:&rsquo;.</td>
+</tr>
+<tr>
+<td align="left"><code>may_reboot</code></td>
+<td align="left">When True, indicates to MAAS that the script may reboot the machine. MAAS will allow up to 20 minutes between heartbeats while running a script with <code>may_reboot</code> set to True.</td>
+</tr>
+<tr>
+<td align="left"><code>recommission</code></td>
+<td align="left">After all commissioning scripts have finished running rerun</td>
+</tr>
+<tr>
+<td align="left"><code>script_type</code></td>
+<td align="left">commissioning or test. Indicates whether the script should run during commissioning or hardware testing.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--parameter-reference"><h2 id="heading--parameter-reference">Parameter reference</h2></a></p>
+<p>Scripts can accept exactly three types of parameters, and only three types:</p>
+<ol>
+<li>storage.</li>
+<li>interface.</li>
+<li>URL.</li>
+</ol>
+<p>The values of these parameters are strictly checked against existing disks (storage), working interfaces (interface), and valid URLs (URL)  No other types of information can be passed as parameters; they are not configured to pass user-specified data.</p>
+<p>Parameters are automatically switched by MAAS to match the device being tested, to allow one test to be run against multiple devices at the same time while keeping separate logs.  For this reason, you may only specify parameters within the embedded YAML of the script, and they must take the form of a dictionary of dictionaries.</p>
+<p>The key of the dictionary must be a string, and it&rsquo;s this string that&rsquo;s used by the UI and API when users are setting parameter values during commissioning or testing.  The value is a dictionary with the following five fields:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>type</code>: Every parameter must contain a type field, which describes what the parameter may accept and its default values. It may be one of the following:</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>storage</code>: Allows the selection of a storage device on the currently running machine.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>interface</code>: Allows the selection of an interface on the currently running machine.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>url</code>: Allows the the passing of a valid URL.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>runtime</code>: Specifies how long the script may run. This overrides the timeout value. It is currently only passed as the environment variable RUNTIME.</td>
+</tr>
+<tr>
+<td align="left"><code>title</code>: The title of the parameter field when displayed in the UI. The following types have the following default values:</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>storage</code>: storage device.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>interface</code>: interface specifier.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>url</code>: valid URL.</td>
+</tr>
+<tr>
+<td align="left"><code>argument-format</code>: Specifies how the argument should be passed to the script. Input is described as <code>{input}</code>. The storage type may also use <code>{name}</code>, <code>{path}</code>, <code>{model}</code> or <code>{serial}</code>. MAAS will look up the values of path, model, and serial based on user selection. For storage, <code>{input}</code> is synonymous with <code>{path}</code>. The interface type may also use <code>{name}</code>, <code>{mac_address}</code>, <code>{product}</code>, or <code>{vendor}</code>. For interface <code>{input}</code> is synonymous with <code>{name}</code>. The following types have the following default values:</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>storage</code>: <code>--storage={path}</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>interface</code>: <code>--interface={name}</code></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>url</code>: <code>--url={input}</code></td>
+</tr>
+<tr>
+<td align="left"><code>default</code>: The default value of the parameter. The following types have the following default values. Setting these to &lsquo;&rsquo; or None will override these values:</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>storage</code>: all.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><code>interface</code>: all.</td>
+</tr>
+<tr>
+<td align="left"><code>required</code>: Whether or not user input is required. A value of false sets no default, and no user input will mean no parameters passed to the script. Defaults to <code>true</code>.</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>results</code>: What results the script will return on completion. You can only define this parameter within the embedded YAML of the script. Results may be a list of strings or a dictionary of dictionaries.</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>Example script using default values:</p>
+<pre><code class="language-python">#!/usr/bin/env python3
+
+# --- Start MAAS 1.0 script metadata ---
+# name: example
+# parallel: instance
+# parameters:
+#   storage: {type: storage}
+# --- End MAAS 1.0 script metadata ---
+
+import argparse
+
+parser = argparse.ArgumentParser(description='')
+parser.add_argument(
+    '--storage', dest='storage', required=True,
+    help='path to storage device you want to test. e.g. /dev/sda')
+args = parser.parse_args()
+
+print(&quot;Testing: %s&quot; % args.storage)
+</code></pre>
+<p>Example script using customised parameters:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+# --- Start MAAS 1.0 script metadata ---
+# name: example
+# parallel: instance
+# parameters:
+#   storage:
+#     type: storage
+#     argument-format: '{model}' '{serial}'
+# --- End MAAS 1.0 script metadata ---
+
+echo &quot;Model: $1&quot;
+echo &quot;Serial: $2&quot;
+</code></pre>
+<p><a href="#heading--environment-variable-reference"><h2 id="heading--environment-variable-reference">Environment variable reference</h2></a></p>
+<p>The following seven environment variables are available when a script runs within the MAAS environment:</p>
+<ol>
+<li><code>OUTPUT_STDOUT_PATH</code>: The path to the log of STDOUT from the script.</li>
+<li><code>OUTPUT_STDERR_PATH</code>: The path to the log of STDERR from the script.</li>
+<li><code>OUTPUT_COMBINED_PATH</code>: The path to the log of the combined STDOUT and STDERR from the script.</li>
+<li><code>RESULT_PATH</code>: Path for the script to write a result YAML.</li>
+<li><code>DOWNLOAD_PATH</code>: The path where MAAS will download all files.</li>
+<li><code>RUNTIME</code>: The amount of time the script has to run in seconds.</li>
+<li><code>HAS_STARTED</code>: When &lsquo;True&rsquo;, MAAS has run the script once before but not to completion. Indicates the machine has rebooted.</li>
+</ol>
+<p><a href="#heading--commissioning-script-example-configure-hpa"><h2 id="heading--commissioning-script-example-configure-hpa">Commissioning script example: Configure HPA</h2></a></p>
+<p>Below is a sample script to configure an Intel C610/X99 HPA controller on an HP system. The script will only run on systems with an Intel C610/X99 controller identified by the PCI ID 8086:8d06.</p>
+<p>Before the scrixpt runs, MAAS will download and install the <a href="https://downloads.linux.hpe.com/SDR/project/hprest/">HP RESTful Interface Tool</a>&#128279; package from HP. After the script completes, the built-in commissioning scripts will be re-run to capture the new configuration.</p>
+<pre><code class="language-nohighlight">#!/bin/bash -ex
+# --- Start MAAS 1.0 script metadata ---
+# name: hp_c610_x99_ahci
+# title: Configure Intel C610/X99 controller on HP systems
+# description: Configure Intel C610/X99 controller on HP systems to AHCI
+# script_type: commissioning
+# tags: configure_hpa
+# packages:
+#  url: http://downloads.linux.hpe.com/SDR/repo/hprest/pool/non-free/hprest-1.5-26_amd64.deb
+# for_hardware: pci:8086:8d06
+# recommission: True
+# --- End MAAS 1.0 script metadata ---
+output=$(sudo hprest get EmbeddedSata --selector HpBios.)
+echo $output
+if [ $(echo $output | grep -c 'EmbeddedSata=Raid') ]; then
+    echo &quot;Server is in Dynamic Smart Array RAID mode. Changing to SATA AHCI support mode.&quot;
+    sudo hprest set EmbeddedSata=Ahci --selector HpBios. --commit
+else:
+    echo &quot;No changes made to the system, Server is Already in AHCI Mode&quot;
+fi
+</code></pre>
+<p><a href="#heading--commissioning-script-example-update-firmware"><h2 id="heading--commissioning-script-update-firmware">Commissioning script example: Update firmware</h2></a></p>
+<p>Below is a sample script to update the mainboard firmware on an ASUS P8P67 Pro using a vendor-provided tool. The tool is automatically downloaded and extracted by MAAS. The script reboots the system to complete the update. The system will boot back into the MAAS ephemeral environment to finish commissioning and (optionally) testing.</p>
+<p>[note]
+Currently, MAAS does not support vendor tools which use UEFI boot capsules or need to store resource files on disk while rebooting.
+[/note]</p>
+<pre><code class="language-nohighlight">#!/bin/bash -ex
+# --- Start MAAS 1.0 script metadata ---
+# name: update_asus_p8p67_firmware
+# title: Firmware update for the ASUS P8P67 mainboard
+# description: Firmware update for the ASUS P8P67 mainboard
+# script_type: commissioning
+# tags: update_firmware
+# packages:
+#  url: http://example.com/firmware.tar.gz
+# for_hardware: mainboard_product:P8P67 PRO
+# may_reboot: True
+# --- End MAAS 1.0 script metadata ---
+$DOWNLOAD_PATH/update_firmware
+reboot
+</code></pre>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/how-to-upgrade-maas.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/how-to-upgrade-maas.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="../maas-documentation-25.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-the-maas-cli.html">
+	    Use the MAAS CLI
+	  </a>
+	</li>
+      <strong>
+	<a href="about-controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-racks.html">
+	    Manage racks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-regions.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machine-interfaces.html">
+	    Manage interfaces
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-dhcp.html">
+	    Manage DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-ranges.html">
+	    Manage IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-proxies.html">
+	    Manage proxies
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-ntp.html">
+	    Set up NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-maas-images.html">
+	    Build MAAS images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-a-custom-ubuntu-image.html">
+	    Create custom Ubuntu images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-image-streams.html">
+	    Use image streams
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-tags-and-annotations.html">
+	  Tags
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-tags.html">
+	    Manage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+	<p/>
+	<strong>
+	  Operations
+	</strong>
+	<ul>
+	  <li>
+	    <a href="how-to-set-up-prometheus-metrics.html">
+	      Set up Prometheus
+	    </a>
+	  </li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API reference
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-troubleshoot-maas.html">
+	  Troubleshooting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Get help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-and-tricks.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="what-is-new-with-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="how-to-contact-us.html">
+	  Contact us
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>How to upgrade MAAS</h1><p>MAAS 2.3 is the last supported version for Ubuntu 16.04 LTS. Changes in the base dependencies of Ubuntu 18.04 LTS mean that newer versions of MAAS will not be back-portable, and consequently, to upgrade to MAAS 2.4 and all future versions, you will also need to upgrade the base operating system.</p>
+<p>[note]
+MAAS 2.3 will continue to be supported on Ubuntu 16.04 LTS until the end of its support cycle. See <a href="https://wiki.ubuntu.com/Releases">Ubuntu Releases</a> for release and EOL dates for all Ubuntu versions.
+[/note]</p>
+<p>Upgrading from MAAS 2.3 to MAAS 2.4 involves two steps:</p>
+<ol>
+<li>Update Ubuntu 16.04 LTS to Ubuntu 18.04 LTS, automatically migrating both the MAAS database and the MAAS configuration for MAAS 2.4.</li>
+<li>Upgrade the PostgreSQL database used by MAAS from version 9.x to version 10.</li>
+</ol>
+<p>Prior to the upgrade all packages should be updated. It is also strongly recommended that backups be made and that a test environment that mirrors your production environment be upgraded first, to pre-empt any issues.</p>
+<h2 id="heading--upgrade-maas">Upgrade MAAS</h2>
+
+<p>To upgrade to MAAS 2.4, simply upgrade the operating system; the process that upgrades Ubuntu will also upgrade the software, including MAAS.</p>
+<p>To upgrade Ubuntu, administrators need only type:</p>
+<pre><code class="language-bash">sudo do-release-upgrade
+</code></pre>
+<p>After the upgrade process completes and the machine is rebooted, MAAS will continue to use the PostgreSQL 9.x version that came with Ubuntu 16.04 LTS. However, because Ubuntu 18.04 LTS switches to PostgreSQL 10, it is imperative we upgrade the database as well.</p>
+<h2 id="heading--upgrade-postgresql">Upgrade PostgreSQL</h2>
+
+<p>The PostgreSQL upgrade process is fairly simple.</p>
+<p>First, use the following command to verify that both version 9.x and 10 PostgreSQL clusters are available:</p>
+<pre><code class="language-bash">pg_lsclusters
+</code></pre>
+<p>The output should look similar to the following:</p>
+<pre><code class="language-no-highlight">Ver Cluster Port Status Owner    Data directory               Log file
+9.5 main    5432 online postgres /var/lib/postgresql/9.5/main postgresql-9.5-main.log
+10  main    5433 online postgres /var/lib/postgresql/10/main  postgresql-10-main.log
+</code></pre>
+<p>With both clusters verified to be online, stop MAAS and PostgreSQL:</p>
+<pre><code class="language-bash">sudo service maas-rackd stop 
+sudo service maas-regiond stop 
+sudo service postgresql stop
+</code></pre>
+<p>Next, rename the <em>main</em> cluster created by the installation of PostgreSQL 10 so that it doesn&rsquo;t conflict with the upgrade:</p>
+<pre><code class="language-bash">sudo pg_renamecluster 10 main main_pristine
+</code></pre>
+<p>The output from <code>pg_lsclusters</code> should now look like the following:</p>
+<pre><code class="language-no-highlight">Ver Cluster       Port Status Owner    Data directory                       Log file
+9.5 main          5432 down   postgres /var/lib/postgresql/9.5/main         postgresql-9.5-main.log
+10  main_pristine 5433 down   postgres /var/lib/postgresql/10/main_pristine postgresql-10-main_pristine.log
+</code></pre>
+<p>We can now safely upgrade the 9.x cluster:</p>
+<pre><code class="language-bash">sudo pg_upgradecluster 9.5 main
+</code></pre>
+<p>The final output from the previous command should show the new PostgreSQL version 10 <em>main</em> cluster is online:</p>
+<pre><code class="language-no-highlight">Ver Cluster Port Status Owner    Data directory              Log file
+10  main    5432 online postgres /var/lib/postgresql/10/main postgresql-10-main.log
+</code></pre>
+<p>With the version 10 cluster verified as running, we can now drop the other clusters:</p>
+<pre><code class="language-bash">sudo pg_dropcluster 9.5 main
+sudo pg_dropcluster 10 main_pristine
+</code></pre>
+<p>PostgreSQL has now been upgraded and you can now either reboot your machine or restart the MAAS services we stopped earlier:</p>
+<pre><code class="language-bash">sudo service maas-rackd start
+sudo service maas-regiond start
+</code></pre>
+<h2 id="heading--upgrade-24-to-25">Upgrade 2.4 to 2.5</h2>
+
+<p>To upgrade MAAS from 2.4 to 2.5:</p>
+<pre><code class="language-bash">sudo apt upgrade
+</code></pre>
+<h2 id="heading--upgrading-from-20123-of-maas-to-25">Upgrading from 2.0/1/2/3 of MAAS to 2.5</h2>
+
+<p>If you&rsquo;re running MAAS 2.3 or older, please see <a href="upgrade-2-3-to-2-4-from-ubuntu-16-04-777.html">the following</a> for more information about an upgrade path that makes sense for your installation. MAAS 2.3 was the last version to support Ubuntu 16.04 LTS.</p>
+<h2 id="heading--upgrading-from-19">Upgrading from 1.9</h2>
+
+<p>If you&rsquo;re running MAAS 1.9, please start with <a href="upgrade-from-1-9-to-2-x-778.html">the following</a> and then see the section above. MAAS 1.9 was the last version to support Ubuntu 14.04 LTS.</p>
+<p>See the <a href="https://wiki.ubuntu.com/Releases">Releases</a> section on the Ubuntu wiki for more information about the Ubuntu release schedule.</p>
+    </div>
+  </body>
+</html>

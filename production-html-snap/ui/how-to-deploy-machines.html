@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/how-to-deploy-machines.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/how-to-deploy-machines.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="../maas-documentation-25.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-the-maas-cli.html">
+	    Use the MAAS CLI
+	  </a>
+	</li>
+      <strong>
+	<a href="about-controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-racks.html">
+	    Manage racks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-regions.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machine-interfaces.html">
+	    Manage interfaces
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-dhcp.html">
+	    Manage DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-ranges.html">
+	    Manage IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-proxies.html">
+	    Manage proxies
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-ntp.html">
+	    Set up NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-maas-images.html">
+	    Build MAAS images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-a-custom-ubuntu-image.html">
+	    Create custom Ubuntu images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-image-streams.html">
+	    Use image streams
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-tags-and-annotations.html">
+	  Tags
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-tags.html">
+	    Manage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+	<p/>
+	<strong>
+	  Operations
+	</strong>
+	<ul>
+	  <li>
+	    <a href="how-to-set-up-prometheus-metrics.html">
+	      Set up Prometheus
+	    </a>
+	  </li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API reference
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-troubleshoot-maas.html">
+	  Troubleshooting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Get help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-and-tricks.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="what-is-new-with-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="how-to-contact-us.html">
+	  Contact us
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>How to deploy machines</h1><p>The ultimate purpose of MAAS is to deploy and manage machines.  As explained in <a href="about-machines-5080.html#heading--about-the-machine-life-cycle">About the machine life-cycle</a>, machines must first be enlisted or commissioned, then acquired, then deployed.  This article will tell you:</p>
+<ul>
+<li><a href="#heading--how-to-commission-a-machine">How to commission a machine</a></li>
+<li><a href="#heading--how-to-test-machines">How to test machines</a></li>
+<li><a href="#heading--acquire-machines">How to acquire machines</a></li>
+<li><a href="#heading--deploy">How to deploy machines</a></li>
+</ul>
+<p><a href="#heading--how-to-commission-a-machine"><h2 id="heading--how-to-commission-a-machine">How to commission a machine</h2></a></p>
+<p>To commission a machine:</p>
+<ol>
+<li>
+<p>Go to the &ldquo;Machines&rdquo; page.</p>
+</li>
+<li>
+<p>Select the machine(s) you want to commission.</p>
+</li>
+<li>
+<p>Choose &ldquo;Commission&rdquo; under the &ldquo;Take action&rdquo; drop-down menu:</p>
+</li>
+</ol>
+<p><a href="images/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a></p>
+<p>You have the option of selecting some extra parameters (checkboxes) and performing hardware tests.</p>
+<p>These options include:</p>
+<ul>
+<li>
+<p><strong>Allow SSH access and prevent machine powering off</strong>: Machines are normally powered off after commissioning. This option keeps the machine on and enables SSH so you can access the machine.</p>
+</li>
+<li>
+<p><strong>Retain network configuration</strong>: When enabled, preserves any custom network settings previously configured for the machine. See <a href="about-networking-5084.html">Networking</a> for more information.</p>
+</li>
+<li>
+<p><strong>Retain storage configuration</strong>: When enabled, preserves any storage settings previously configured for the machine. See <a href="about-machines-5080.html#heading--about-storage">Storage</a> for more details.</p>
+</li>
+<li>
+<p><strong>Update firmware</strong>: Runs scripts tagged with <code>update_firmware</code>.</p>
+</li>
+<li>
+<p><strong>Configure HBA</strong>: Runs scripts tagged with <code>configure_hba</code>.</p>
+</li>
+</ul>
+<p><a href="images/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a></p>
+<ol>
+<li>
+<p>Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See <a href="about-machines-5080.html#heading--about-testing-hardware">Hardware testing</a> for more information on hardware testing scripts.</p>
+</li>
+<li>
+<p>Finalise the directive by hitting &ldquo;Commission machine&rdquo;.</p>
+</li>
+</ol>
+<p>While commissioning, the machine status will change to reflect this state (Commissioning).  MAAS discovers the machine&rsquo;s network topology.  MAAS then prompts a machine network interface to connect to the fabric, VLAN, and subnet combination for configuration. Usually, MAAS assigns a static IP address out of the reserved IP range for the subnet (&ldquo;Auto assign&rdquo; mode). The next section details several assignment modes.</p>
+<p>Once commissioned, a machine&rsquo;s status will change to Ready, and an extra tab for the machine called &ldquo;Commissioning&rdquo; will become available. This tab contains the results of the scripts executed during the commissioning process.</p>
+<p>Once commissioned, you may consider <a href="maas-tags-2896.html">creating or applying a tag</a> to this machine.  The next step is <a href="how-to-deploy-machines-5112.html">deployment</a>.</p>
+<p><a href="#heading--how-to-test-machines"><h2 id="heading--how-to-test-machines">How to test machines</h2></a></p>
+<p>This section explains:</p>
+<ul>
+<li><a href="#heading--how-to-download-built-in-scripts">How to download built-in scripts</a></li>
+<li><a href="#heading--how-to-upload-scripts">How to upload scripts</a></li>
+<li><a href="#heading--how-to-debug-script-failures">How to debug script failures</a></li>
+<li><a href="#heading--how-to-locate-script-files">How to locate script files</a></li>
+<li><a href="#heading--how-to-locate-log-files">How to locate log files</a></li>
+<li><a href="#heading--how-to-run-all-scripts-manually">How to run all scripts manually</a></li>
+<li><a href="#heading--apply-a-hardware-test">How to apply a hardware test</a></li>
+<li><a href="#heading--network-link-testing">How to test network links</a></li>
+<li><a href="#heading--slow-link-detection">How to detect slow network links</a></li>
+<li><a href="#heading--network-validation-scripts-and-testing">How to configure network validation and testing scripts</a></li>
+<li><a href="#heading--customisable-network-testing">How to customise network testing</a></li>
+</ul>
+<p>You can also refer to technical details and examples for <a href="commissioning-scripts-reference-5375.html">commissioning scripts</a> and <a href="hardware-test-scripts-reference-5392.html">testing scripts</a> as needed.</p>
+<p><a href="#heading--how-to-download-built-in-scripts"><h3 id="heading--how-to-download-built-in-scripts">How to download built-in scripts</h3></a></p>
+<p>You can download the source for all commissioning and test scripts via the API with the following command:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-script download $SCRIPT_NAME
+</code></pre>
+<p>The source code to all built-in scripts is available on <a href="https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts">launchpad</a>&#128279;.</p>
+<p><a href="#heading--how-to-upload-scripts"><h3 id="heading--how-to-upload-scripts">How to upload scripts</h3></a></p>
+<p>Scripts can be uploaded to MAAS using the web UI. Select the &lsquo;User scripts&rsquo; tab of the &lsquo;Settings&rsquo; page - the &lsquo;Commissioning scripts&rsquo; section is near the top. Within the Commissioning scripts section, click the Upload script button followed by &lsquo;Choose file&rsquo; to open a requester, locate the script, and select Upload to upload it to MAAS.</p>
+<p>A status message of Commissioning script created will appear.  You&rsquo;ll then be able to select your script after selecting <a href="about-machines-5080.html#heading--about-testing-hardware">Test hardware</a> from a machine&rsquo;s &lsquo;Take action&rsquo; menu.</p>
+<p><a href="images/50e08fdf-nodes-hw-scripts__2.4_select.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/50e08fdf-nodes-hw-scripts__2.4_select.png"></a></p>
+<p>[note]
+MAAS executes scripts in lexicographical order. This order allows you to control when your scripts execute, and whether they run before or after the standard MAAS scripts.
+[/note]</p>
+<p><a href="#heading--how-to-debug-script-failures"><h3 id="heading--how-to-debug-script-failures">How to debug script failures</h3></a></p>
+<p>Clicking on the title of a completed or failed script will reveal the output from that specific script.</p>
+<p><a href="images/855015e5-nodes-hw-scripts__2.2_fail.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/855015e5-nodes-hw-scripts__2.2_fail.png"></a></p>
+<p>If you need further details, especially when writing and running your own scripts, you can connect to a machine and examine its logs and environment.</p>
+<p>To do this, enable Allow SSH access and prevent the machine from powering off when selecting &lsquo;Test hardware&rsquo; from the machine &lsquo;Take action&rsquo; menu.</p>
+<p><a href="images/da793c67-nodes-hw-scripts__2.4_ssh.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/da793c67-nodes-hw-scripts__2.4_ssh.png"></a></p>
+<p>Because scripts operate within an ephemeral version of Ubuntu, enabling this option stops the machine from shutting down, allowing you to connect and probe a script&rsquo;s status.</p>
+<p>As long as you&rsquo;ve added your <a href="how-to-manage-user-accounts-5184.html#heading--ssh-keys">SSH key</a> to MAAS, you can connect with SSH to the machine&rsquo;s IP with a username of <code>ubuntu</code>. Type <code>sudo -i</code> to get root access.</p>
+<p><a href="#heading--how-to-locate-script-files"><h3 id="heading--how-to-locate-script-files">How to locate script files</h3></a></p>
+<p>Commissioning and testing script files may be found in the following directories:</p>
+<ol>
+<li><code>/tmp/user_data.sh.*/scripts/commissioning/</code>: Commissioning scripts</li>
+<li><code>/tmp/user_data.sh.*/scripts/testing/</code>: Hardware testing scripts</li>
+</ol>
+<p><a href="#heading--how-to-locate-log-files"><h3 id="heading--how-to-locate-log-files">How to locate log files</h3></a></p>
+<p>Commissioning and testing log files may be found in the following directories:</p>
+<ol>
+<li><code>/tmp/user_data.sh*/out/</code></li>
+<li><code>/var/log/cloud-init-output.log</code></li>
+<li><code>/var/log/cloud-init.log</code></li>
+</ol>
+<p><a href="#heading--how-to-run-all-scripts-manually"><h3 id="heading--how-to-run-all-scripts-manually">How to run all scripts manually</h3></a></p>
+<p>You can also run all commissioning and hardware-testing scripts on a machine for debugging.</p>
+<pre><code class="language-nohighlight">/tmp/user_data.sh.*/bin/maas-run-remote-scripts \
+    [--no-download] \
+    [--no-send] \
+    /tmp/user_data.sh.*
+</code></pre>
+<p>Where:</p>
+<ol>
+<li><code>--no-download</code>: Optional. Do not download the scripts from MAAS again.</li>
+<li><code>--no-send</code>: Optional. Do not send the results to MAAS.</li>
+</ol>
+<p>For example, to run all the scripts again without downloading again from MAAS:</p>
+<pre><code class="language-nohighlight">/tmp/user_data.sh.*/bin/maas-run-remote-scripts --no-download /tmp/user_data.sh.*
+</code></pre>
+<p>Here, all the scripts are run again after downloading from MAAS, but no output data is sent to MAAS:</p>
+<pre><code class="language-nohighlight">/tmp/user_data.sh.*/bin/maas-run-remote-scripts --no-send /tmp/user_data.sh.*
+</code></pre>
+<p><a href="#heading--apply-a-hardware-test"><h3 id="heading--apply-a-hardware-test">How to apply a hardware test</h3></a></p>
+<p>To launch a test, select the target machine from the &lsquo;Machines&rsquo; page and use the &lsquo;Take action&rsquo; drop-down menu to select &lsquo;Test hardware&rsquo;. When ready, hit the &lsquo;Test machine&rsquo; button. Here, a test is applied to a deployed machine:</p>
+<p><a href="images/8e876889-nodes-hw-testing__2.4_deployed.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/8e876889-nodes-hw-testing__2.4_deployed.png"></a></p>
+<p>There is the option of not powering off the machine and to allow SSH access.</p>
+<p>A default test will be selected (<code>smartctl-validate</code>, a hard drive test) but you can choose others by clicking the &lsquo;Select scripts&rsquo; label. Doing so will reveal the following choices:</p>
+<p><a href="images/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png"></a></p>
+<p>See <a href="commissioning-scripts-reference-5375.html">Commissioning Scripts Reference</a> for more details on how these scripts work and how you can write your own.</p>
+<p><a href="#heading--network-link-testing"><h3 id="heading--network-link-testing">How to test network links</h3></a></p>
+<p>MAAS can check whether links are connected or disconnected, so that you can detect unplugged cables.  If you are not running MAAS 2.7 or higher, you must first upgrade and then recommission your machines to find disconnected links.  MAAS not only reports unplugged cables, but also gives a warning when trying to configure a disconnected interface.  In addition, administrators can change the cable connection status after manually resolving the issue.</p>
+<p>When MAAS detects a broken network link, users will see a screen similar to this one: </p>
+<p><a href="images/687feb2ddea8b317f0deba239bcb1779fd5f33d3.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/687feb2ddea8b317f0deba239bcb1779fd5f33d3.jpeg"></a> </p>
+<p>If you&rsquo;re already using a version of MAAS less than 2.7, you will want to upgrade and recommission your existing machines to check link status.  Note that you will also receive a warning from MAAS when trying to configure a disconnected interface.</p>
+<p>Once you have manually repaired the broken connection, an administrator can change cable connection status:</p>
+<p><a href="images/b8b24a2e5fbc40b6469a24733a518b510cf0d955.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/b8b24a2e5fbc40b6469a24733a518b510cf0d955.jpeg"></a> </p>
+<p><a href="#heading--slow-link-detection"><h2 id="heading--slow-link-detection">How to detect slow network links</h2></a></p>
+<p>As servers and hardware get faster, the chances increase that you might encounter a speed mismatch when connecting your NIC to a network device.  MAAS can warn you if your interface is connected to a link slower than what the interface supports, by automatically detecting link and interface speed and reporting them via the UI:</p>
+<p><a href="images/e73a81df222f44c0b364eefcd0880e2a84c7303b.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/e73a81df222f44c0b364eefcd0880e2a84c7303b.jpeg"></a>  </p>
+<p>Depending on your physical hardware, the problem may not be repairable, but once you identify a slow link, you can replace a slow switch without recommissioning.  </p>
+<p><a href="#heading--network-validation-scripts-and-testing"><h3 id="heading--network-validation-scripts-and-testing">How to configure network validation and testing scripts</h3></a></p>
+<p>MAAS allows you to configure network connectivity testing in a number of ways. If MAAS can’t connect to the rack controller, deployment can’t complete.  MAAS can check connectivity to the rack controller and warn you if there’s no link, long before you have to try and debug it. For example, if you can’t connect to your gateway controller, traffic can’t leave your network. </p>
+<p>MAAS can check this link and recognise that there’s no connectivity, which alleviates hard-to-detect network issues:</p>
+<p><a href="images/c4f81cb3ef1a90f0a46fb62c893a4cc9f7e5f45a.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/c4f81cb3ef1a90f0a46fb62c893a4cc9f7e5f45a.jpeg"></a> </p>
+<p>Users can now test their network configuration to check for:</p>
+<ol>
+<li>Interfaces which have a broken network configuration</li>
+<li>Bonds that are not fully operational</li>
+<li>Broken gateways, rack controllers, and Internet links</li>
+</ol>
+<p>In addition, MAAS can comprehensively test Internet connectivity testing. You can give a list of URLs or IP addresses to check from the network testing screen:</p>
+<p><a href="images/12dd87ce0bffd54c2e459c4dea850af5fcbe14d0.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/12dd87ce0bffd54c2e459c4dea850af5fcbe14d0.jpeg"></a> </p>
+<p>In the ephemeral environment, standard DHCP is still applied, but when network testing runs, MAAS can apply your specific configuration for the duration of the test.  While all URLs / IPs are tested with all interfaces, MAAS can test each of your interfaces individually, including breaking apart bonded NICS and testing each side of your redundant interfaces. You can also run different tests on each pass, e.g., a different set of URLs, although each run would be a different testing cycle.</p>
+<p><a href="#heading--customisable-network-testing"><h3 id="heading--customisable-network-testing">How to customise network testing</h3></a></p>
+<p>MAAS allow you to customise network testing according to your needs.  You can create your own commissioning scripts and tests related to networking, and you can run them during the network testing portion of the MAAS workflow.</p>
+<p><a href="images/0dcf089dbd8efc2fc9d0782d3b15f47647e950b8.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/0dcf089dbd8efc2fc9d0782d3b15f47647e950b8.jpeg"></a> </p>
+<p>There are no particular restrictions on these scripts, so you can test a wide variety of possible conditions and situations.  Administrators can upload network tests and test scripts.  Administrators can also create tests which accept an interface parameter, or scripts which apply custom network configurations.  </p>
+<p>Users can specify unique parameters using the API, override machines which fail network testing (allowing their use), and suppress individual failed network tests.  Users can also review the health status from all interface tests, even sorting them by interface name and MAC.  In addition, MAAS can report the overall status of all interfaces.</p>
+<p><a href="#heading--acquire-machines"><h2 id="heading--acquire-machines">How to acquire machines</h2></a></p>
+<p>To acquire/allocate a node with the web UI, select a machine which is in the &ldquo;Ready&rdquo; state, and drop down the &ldquo;Take action&rdquo; menu:</p>
+<p><a href="images/3724346e052c865f4e865d1caf2778b115f0798f.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/3724346e052c865f4e865d1caf2778b115f0798f.jpeg"></a></p>
+<p>Select &ldquo;Acquire&rdquo; from the drop-down menu, which will bring you to a confirmation screen:</p>
+<p><a href="images/a0ece8bf58c03db3c89ad71afcaeb9101bd34e24.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/a0ece8bf58c03db3c89ad71afcaeb9101bd34e24.jpeg"></a></p>
+<p>MAAS will acquire the selected machine; you can now find it in the list of &ldquo;Allocated&rdquo; machines:</p>
+<p><a href="images/a2bdb8b7b7c5705daee14bdea5caed223537917d.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/a2bdb8b7b7c5705daee14bdea5caed223537917d.jpeg"></a></p>
+<p>[note]
+To acquire a node, it must have a status of &lsquo;Ready&rsquo;.
+[/note]</p>
+<p><a href="#heading--deploy"><h2 id="heading--deploy">How to deploy machines</h2></a></p>
+<p>To deploy directly from MAAS, select one or more machine(s) and press the &lsquo;Deploy&rsquo; button.</p>
+<p><a href="images/56958753-nodes-deploy__2.4_deploy.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/56958753-nodes-deploy__2.4_deploy.png"></a></p>
+<p>You then have the option of deviating from the default OS, release, and kernel. When ready, press &lsquo;Deploy X machine(s)&rsquo; (where &lsquo;X&rsquo; is the number of machines selected).</p>
+<p><a href="images/d65b9884-nodes-deploy__2.6-deploy-confirm.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/d65b9884-nodes-deploy__2.6-deploy-confirm.png"></a></p>
+<p>While a machine is deploying its status will change to Deploying to &lsquo;OS&rsquo;, where &lsquo;OS&rsquo; is the name of the OS being deployed (e.g. &lsquo;Deploying to Ubuntu 16.04 LTS&rsquo;).</p>
+<p>Once a machine has finished deploying its status will change to just the name of the OS (e.g. &lsquo;Ubuntu 18.04 LTS&rsquo;).</p>
+<!-- comment -->
+    </div>
+  </body>
+</html>

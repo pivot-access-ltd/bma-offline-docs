@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/about-tags-and-annotations.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/about-tags-and-annotations.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="../maas-documentation-25.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-the-maas-cli.html">
+	    Use the MAAS CLI
+	  </a>
+	</li>
+      <strong>
+	<a href="about-controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-racks.html">
+	    Manage racks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-regions.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machine-interfaces.html">
+	    Manage interfaces
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-dhcp.html">
+	    Manage DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-ranges.html">
+	    Manage IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-proxies.html">
+	    Manage proxies
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-ntp.html">
+	    Set up NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-maas-images.html">
+	    Build MAAS images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-a-custom-ubuntu-image.html">
+	    Create custom Ubuntu images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-image-streams.html">
+	    Use image streams
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-tags-and-annotations.html">
+	  Tags
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-tags.html">
+	    Manage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+	<p/>
+	<strong>
+	  Operations
+	</strong>
+	<ul>
+	  <li>
+	    <a href="how-to-set-up-prometheus-metrics.html">
+	      Set up Prometheus
+	    </a>
+	  </li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API reference
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-troubleshoot-maas.html">
+	  Troubleshooting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Get help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-and-tricks.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="what-is-new-with-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="how-to-contact-us.html">
+	  Contact us
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>About tags and annotations</h1><p>Tags are short, descriptive, searchable words that can be applied to various MAAS objects, including:</p>
+<ul>
+<li>machines (physical and virtual)</li>
+<li>VM hosts</li>
+<li>controllers (rack and region)</li>
+<li>storage (virtual and physical; block devices or partitions)</li>
+<li>network interfaces</li>
+<li>devices</li>
+<li>nodes (in the CLI only)</li>
+</ul>
+<p>Tags serve to help you identify, group, and find objects easily, especially when you routinely deploy hundreds of machines.</p>
+<p>Annotations are descriptive, searchable phrases that apply only to machines.  There are two types of annotations: static (always present in any machine state), and dynamic (only present in allocated or deployed states).  Annotations help you identify, characterise, and inform others about your machines.</p>
+<p>This article will show you how to:</p>
+<ul>
+<li><a href="#heading--work-with-tags">Work with tags</a></li>
+<li><a href="#heading--work-with-annotations">Work with annotations</a></li>
+</ul>
+<p>All headings have been hyperlinked for easy bookmarking.  Note that not all functions for tags and annotations can be accessed via one interface (UI/CLI), so you will occasionally encounter cross-links.</p>
+<p><a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a></p>
+<p>This section is devoted to procedures for working with tags.  We begin with some general operations that apply to all tag types, such as naming conventions and basic mechanics.  We then walk through the various tag types, providing procedures that will help you create, assign, remove, delete, list, view, and filter tags, covering the nuances of each type.</p>
+<p>Specifically, this section will show you how to:</p>
+<ul>
+<li><a href="#heading--work-with-tags-in-general">Work with tags in general</a></li>
+<li><a href="#heading--work-with-machine-and-vm-tags">Work with machine and VM tags</a></li>
+<li><a href="#heading--work-with-controller-tags">Work with controller tags</a></li>
+<li><a href="#heading--work-with-block-device-tags">Work with block device tags</a></li>
+<li><a href="#heading--work-with-partition-tags">Work with partition tags</a></li>
+<li><a href="#heading--work-with-network-tags">Work with network tags</a></li>
+<li><a href="#heading--work-with-device-tags">Work with device tags</a></li>
+<li><a href="#heading--work-with-node-tags">Work with node tags (CLI only)</a></li>
+</ul>
+<p>Tags for these different objects have similar purposes, but they aren&rsquo;t necessarily administered in the same way &ndash; so we&rsquo;ve included detailed sections for each tag type.</p>
+<p><a href="#heading--work-with-tags-in-general"><h3 id="heading--work-with-tags-in-general">Work with tags in general</h3></a></p>
+<p>There are a few general procedures for working with tags, centred around naming conventions and basic mechanics.  These procedures apply to nearly all tag types.  They will be referenced often in the subsections that follow.</p>
+<p>As a general rule, you&rsquo;ll want to know how to:</p>
+<ul>
+<li><a href="#heading--name-tags">Name tags</a></li>
+<li><a href="#heading--create-and-assign-tags">Create and assign tags</a></li>
+<li><a href="#heading--delete-and-remove-tags">Delete and remove tags</a></li>
+</ul>
+<p><a href="#heading--name-tags"><h4 id="heading--name-tags">Name tags</h4></a></p>
+<p>When working with tags, there are some universal rules you need to follow:</p>
+<ol>
+<li>Tag names can include any combination of alphabetic letters (a-zA-Z), numbers (0-9), dashes (-) and underscores (_).</li>
+<li>Tag names can be a maximum of 256 characters in length.</li>
+<li>Tag names <em>cannot</em> include spaces.</li>
+</ol>
+<p>In general, names that do not conform to these rules cannot be created.</p>
+<p><a href="#heading--create-and-assign-tags"><h4 id="heading--create-and-assign-tags">Create and assign tags</h4></a></p>
+<p>In the MAAS UI, creating and assigning tags is a combined operation; that is, you create tags as you assign them, rather than creating them first.  Creating tags in the UI is a little different user experience: there is a self-loading completion menu that collects all tags of a similar type.  This completion menu helps you avoid misspelling tags when entering them more than once; otherwise, you might not be able to group and filter tags properly. It also makes tag entry more efficient.</p>
+<p>The process for creating and assigning tags in the UI is generally the same for all tag types:</p>
+<ol>
+<li>Place the cursor in the &ldquo;Tags&rdquo; box, wherever it is located on the screen, and type the name of the new tag:</li>
+</ol>
+<p><a href="images/7be5f2bebbba9a09f70a7dea092d091ef45228e2.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/7be5f2bebbba9a09f70a7dea092d091ef45228e2.png"></a></p>
+<ol>
+<li>Hit the return key to add the new tag:</li>
+</ol>
+<p><a href="images/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png"></a></p>
+<blockquote>
+<p>The auto complete list will re-appear after you&rsquo;ve entered the tag, in case you&rsquo;d like to enter another tag.</p>
+</blockquote>
+<ol>
+<li>When you&rsquo;re done, click on the appropriate completion button to complete the operation.</li>
+</ol>
+<blockquote>
+<p>The tag you just entered will now be added to the tag auto complete list, in alphabetical order, for re-use with other machines.</p>
+</blockquote>
+<p><a href="#heading--delete-and-remove-tags"><h4 id="heading--delete-and-remove-tags">Delete and remove tags</h4></a></p>
+<p>With the MAAS UI, you remove tags, rather than explicitly deleting them.  Tags are &ldquo;deleted&rdquo; when you have removed them from all machines.   </p>
+<p>To remove (unassign) a tag:</p>
+<ol>
+<li>Find the &ldquo;Tags&rdquo; box, wherever it is located on the screen:</li>
+</ol>
+<p><a href="images/7be5f2bebbba9a09f70a7dea092d091ef45228e2.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/7be5f2bebbba9a09f70a7dea092d091ef45228e2.png"></a></p>
+<ol>
+<li>
+<p>Click the &ldquo;X&rdquo; next to the tag you wish to remove.</p>
+</li>
+<li>
+<p>When you&rsquo;re done, click on the appropriate completion button to complete the operation.</p>
+</li>
+</ol>
+<blockquote>
+<p>Note that the tag you just removed will be deleted from  the tag auto complete list when it is no longer assigned to any  machines.</p>
+</blockquote>
+<p><a href="#heading--work-with-machine-and-vm-tags"><h3 id="heading--work-with-machine-and-vm-tags">Work with machine and VM tags</h3></a></p>
+<p>This subsection will show you how to:</p>
+<ul>
+<li><a href="#heading--create-tags-with-built-in-kernel-options">Create machine tags with built-in kernel options (CLI only)</a></li>
+<li><a href="#heading--create-and-assign-machine-tags-to-machines">Create and assign machine tags to machines</a></li>
+<li><a href="#heading--remove-and-delete-machine-tags-from-machines">Remove and delete machine tags from machines</a></li>
+<li><a href="#heading--list-machine-tags-for-multiple-machines">List machine tags for multiple machines</a></li>
+<li><a href="#heading--view-machine-tags-for-one-machine">View machine tags for one machine</a></li>
+<li><a href="#heading--view-machine-tags-for-a-vm-host">View machine tags for a VM host</a></li>
+</ul>
+<p><a href="#heading--create-and-assign-machine-tags-to-machines"><h4 id="heading--create-and-assign-machine-tags-to-machines">Create and assign machine tags to machines</h4></a></p>
+<p>If you want to create a new tag, and simultaneously assign it to a machine, use the following steps:</p>
+<ol>
+<li>Go to the machine list and select the machine you&rsquo;re interested in modifying, by checking the box next to the machine name:</li>
+</ol>
+<p><a href="images/86ee8529206fcfa297865198a55b976e1002b6bf.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/86ee8529206fcfa297865198a55b976e1002b6bf.png"></a></p>
+<ol>
+<li>Select the &ldquo;Take action&rdquo; drop-down menu and select &ldquo;Tag&rdquo;:</li>
+</ol>
+<p><a href="images/f77f19b7aef9f880c12a4d710b91cc3abdc03154.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/f77f19b7aef9f880c12a4d710b91cc3abdc03154.png"></a></p>
+<ol>
+<li>
+<p>Create and/or assign the desired tag, as described in the <a href="#heading--create-and-assign-tags">general tagging procedure</a> above.</p>
+</li>
+<li>
+<p>Don&rsquo;t forget to hit the &ldquo;Tag machine&rdquo; button when you&rsquo;re done, to apply your changes to the machine.</p>
+</li>
+</ol>
+<p><a href="#heading--tag-multiple-machines"><h5 id="heading--tag-multiple-machines">Tagging multiple machines at once</h5></a></p>
+<p>In the first step of the above procedure, you can select more than one machine:</p>
+<p><a href="images/0c04973e76012c780035a4ea11a588f341148445.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/0c04973e76012c780035a4ea11a588f341148445.png"></a></p>
+<p>Any tags you add in the &ldquo;Tags&rdquo; box will be applied to all selected machines, as noted by the change in the &ldquo;Tag machine&rdquo; button:</p>
+<p><a href="images/a503261eb7faa17478b09aa70f48f838b4b0fb87.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/a503261eb7faa17478b09aa70f48f838b4b0fb87.png"></a></p>
+<p>Other than the scope of the transaction (e.g., tagging three machines, in this case), everything else about this operation conforms to the <a href="#heading--create-and-assign-tags">general tag assignment procedure</a>.</p>
+<p><a href="#heading--remove-and-delete-machine-tags-from-machines"><h4 id="heading--remove-and-delete-machine-tags-from-machines">Remove and delete machine tags from machines</h4></a></p>
+<p>To remove machine tags from a machine:</p>
+<ol>
+<li>
+<p>View a machine&rsquo;s currently assigned tags: stay on the &lsquo;Machines&rsquo; page and click on the machine in question. MAAS will display currently-assigned tags in the <em>Tags</em> pane of the &lsquo;Machine summary&rsquo;.</p>
+</li>
+<li>
+<p>Select the &lsquo;Configuration&rsquo; tab and then the &lsquo;Edit&rsquo; button alongside &lsquo;Machine configuration&rsquo; to edit tags:</p>
+</li>
+<li>
+<p>Follow the <a href="#heading--delete-and-remove-tags">general tag removal procedure</a>.</p>
+</li>
+</ol>
+<p><a href="#heading--list-machine-tags-for-multiple-machines"><h4 id="heading--list-machine-tags-for-multiple-machines">List machine tags for multiple machines</h4></a></p>
+<p>In the MAAS UI, you don&rsquo;t explicitly list all machine tags; instead, you filter by them using the &ldquo;Filter by&rdquo; drop-down.  This filtered list does not distinguish between virtual machines (VMs) and physical machines, unless you&rsquo;ve assigned tags to help with that distinction.</p>
+<p>Of course, if you need to do so, you can see a list of all the tags assigned to machines by opening the &ldquo;tags&rdquo; section of the filter drop-down.  With the UI, you can&rsquo;t see a list of tags assigned to all virtual machine hosts (VM hosts), or filter VM hosts by tag. It is possible to get a more comprehensive list of machine tags and retrieve a list of VM host tags using the CLI; choose the CLI link from the menu on the top of this page to explore these options.</p>
+<p>Here&rsquo;s how you can filter the machine list by machine tags, using the MAAS UI:</p>
+<ol>
+<li>
+<p>To list all tags, visit the &lsquo;Machines&rsquo; tab and expand the &lsquo;Tags&rsquo; subsection in the left pane. In this view, you can use tags as machine search filters.</p>
+</li>
+<li>
+<p>Select one or several tags. The machines that satisfy all selected tags will display on the right pane. Notice there is a search field at the top of the right pane. You can type a search expression into this field.</p>
+</li>
+</ol>
+<p>Below, tag &lsquo;virtual&rsquo; has been selected (with the mouse), and the search field automatically reflects this. Five machines satisfy this search filter.</p>
+<p><a href="images/69aa9997-nodes-tags__2.6-tags-filter.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/69aa9997-nodes-tags__2.6-tags-filter.png"></a></p>
+<p>Remove a tag from the search filter by either hitting the &lsquo;x&rsquo; character alongside a tag or editing the search expression.</p>
+<p><a href="#heading--view-machine-tags-for-one-machine"><h4 id="heading--view-machine-tags-for-one-machine">View machine tags for one machine</h4></a></p>
+<p>To view the tags assigned to a specific machine, use the following procedure:</p>
+<ol>
+<li>
+<p>On the machine list, select the machine of interest by clicking on its name.</p>
+</li>
+<li>
+<p>On the machine detail screen that comes up, look for the tags on one of the cards presented there: the tags for that machine should be listed there.</p>
+</li>
+</ol>
+<p><a href="#heading--view-machine-tags-for-a-vm-host"><h4 id="heading--view-machine-tags-for-a-vm-host">View machine tags for a VM host</h4></a></p>
+<p>To view the machine tags assigned to a VM host, here&rsquo;s the procedure you&rsquo;ll follow:</p>
+<ol>
+<li>Click on the KVM tab at the top of the screen.  This will bring you to a list of active KVMs for your system:</li>
+</ol>
+<p><a href="images/559f0ed9250524792fda93457bc1876304915599.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/559f0ed9250524792fda93457bc1876304915599.png"></a></p>
+<ol>
+<li>On the detail screen that comes up, choose the &ldquo;Settings&rdquo; tab at the top:</li>
+</ol>
+<p><a href="images/8c8454d576b4b49dd99c3f6c6bb2735252591010.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/8c8454d576b4b49dd99c3f6c6bb2735252591010.png"></a></p>
+<ol>
+<li>In the settings tab, you&rsquo;ll see a box labelled &ldquo;Tags.&rdquo;  You can use this box to view, assign, edit, or remove tags for the KVM:</li>
+</ol>
+<p><a href="images/e7953d2c5d153b82eac3cb1a3ba105ec194eb077.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/e7953d2c5d153b82eac3cb1a3ba105ec194eb077.png"></a></p>
+<p>Note that you can only see the tags for a VM host in the same place that you change it.  For a more comprehensive list of VM host tags, use the <a href="{r3}">MAAS CLI</a>.</p>
+<p><a href="#heading--work-with-controller-tags"><h3 id="heading--work-with-controller-tags">Work with controller tags</h3></a></p>
+<p>This subsection will show you how to:</p>
+<ul>
+<li><a href="#heading--create-and-assign-controller-tags-">Create and assign controller tags </a></li>
+<li><a href="#heading--remove-and-delete-controller-tags">Remove and delete controller tags</a></li>
+<li><a href="#heading--list-controller-tags">List controller tags</a></li>
+<li><a href="#heading--view-controller-tags">View controller tags</a></li>
+</ul>
+<p><a href="#heading--create-and-assign-controller-tags-"><h4 id="heading--create-and-assign-controller-tags-">Create and assign controller tags </h4></a></p>
+<p>To create and assign a controller tag, you can use the following procedure:</p>
+<ol>
+<li>Click on the &ldquo;Controllers&rdquo; tab to open the controllers page:</li>
+</ol>
+<p><a href="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
+<ol>
+<li>Click on the hyperlinked name of the controller to which you want to assign tags.  You will see a screen with several cards, like this one:</li>
+</ol>
+<p><a href="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
+<ol>
+<li>
+<p>Find the &ldquo;Tags&rdquo; card and click on &ldquo;Edit.&rdquo;  You will be brought to that controller&rsquo;s &ldquo;Configuration&rdquo; tab.</p>
+</li>
+<li>
+<p>Click on the &ldquo;Edit&rdquo; button for &ldquo;Controller configuration.&rdquo;
+You&rsquo;ll be presented with an editing screen similar to this one:</p>
+</li>
+</ol>
+<p><a href="images/37401271d0ab3aa130127a251222e5eaf557b20c.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/37401271d0ab3aa130127a251222e5eaf557b20c.png"></a></p>
+<ol>
+<li>Follow the <a href="#heading--create-and-assign-tags">general procedure</a> to assign a tag to the controller.</li>
+</ol>
+<p><a href="#heading--remove-and-delete-controller-tags"><h4 id="heading--remove-and-delete-controller-tags">Remove and delete controller tags</h4></a></p>
+<p>To remove (and possibly delete) a controller tag, you can use the following procedure:</p>
+<ol>
+<li>Click on the &ldquo;Controllers&rdquo; tab to open the controllers page:</li>
+</ol>
+<p><a href="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
+<ol>
+<li>Click on the hyperlinked name of the controller to which you want to assign tags.  You will see a screen with several cards, like this one:</li>
+</ol>
+<p><a href="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
+<ol>
+<li>
+<p>Find the &ldquo;Tags&rdquo; card and click on &ldquo;Edit.&rdquo;  You will be brought to that controller&rsquo;s &ldquo;Configuration&rdquo; tab.</p>
+</li>
+<li>
+<p>Click on the &ldquo;Edit&rdquo; button for &ldquo;Controller configuration.&rdquo;
+You&rsquo;ll be presented with an editing screen similar to this one:</p>
+</li>
+</ol>
+<p><a href="images/37401271d0ab3aa130127a251222e5eaf557b20c.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/37401271d0ab3aa130127a251222e5eaf557b20c.png"></a></p>
+<ol>
+<li>Follow the <a href="#heading--delete-and-remove-tags">general procedure</a> to remove a tag from the controller.</li>
+</ol>
+<p><a href="#heading--list-controller-tags"><h4 id="heading--list-controller-tags">List controller tags</h4></a></p>
+<p>There is no explicit means of listing tags for all controllers in the MAAS UI; see the in the MAAS CLI to do this, by choosing the CLI link from the menu on the top of this page.  If you click on a tag assigned to a controller, though,  you will see a filtered list of machines with that matching tag.  </p>
+<p><a href="#heading--view-controller-tags"><h4 id="heading--view-controller-tags">View controller tags</h4></a></p>
+<p>To view a list of tags assigned to a particular controller, you can use the following procedure:</p>
+<ol>
+<li>Click on the &ldquo;Controllers&rdquo; tab to open the controllers page:</li>
+</ol>
+<p><a href="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
+<ol>
+<li>Click on the hyperlinked name of the controller of interest..  You will see a screen with several cards, like this one:</li>
+</ol>
+<p><a href="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
+<ol>
+<li>Find the &ldquo;Tags&rdquo; card; this card will list all the tags assigned to this controller.</li>
+</ol>
+<p><a href="#heading--work-with-block-device-tags"><h3 id="heading--work-with-block-device-tags">Work with block device tags</h3></a></p>
+<p>In the parlance of MAAS, a block device is generally an unassigned and unpartitioned physical or virtual disk. This subsection will show you how to:</p>
+<ul>
+<li><a href="#heading--create-and-assign-block-device-tags">Create and assign block device tags</a></li>
+<li><a href="#heading--remove-and-delete-block-device-tags">Remove and delete block device tags</a></li>
+<li><a href="#heading--list-block-device-tags">List block device tags</a></li>
+<li><a href="#heading--view-block-device-tags">View block device tags</a></li>
+</ul>
+<p><a href="#heading--create-and-assign-block-device-tags"><h4 id="heading--create-and-assign-block-device-tags">Create and assign block device tags</h4></a></p>
+<p>In order to create and assign tags to a block device, the device has to be in an &ldquo;available&rdquo; state, with no active partitions. To create and assign tags to block devices:</p>
+<ol>
+<li>Go to the machine list:</li>
+</ol>
+<p><a href="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a></p>
+<ol>
+<li>Select that machine that has the block-device you want to tag:</li>
+</ol>
+<p><a href="images/9dc953000f245311b4e3f4751adb1d2973d0fe38.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/9dc953000f245311b4e3f4751adb1d2973d0fe38.png"></a></p>
+<ol>
+<li>Click on the &ldquo;Storage&rdquo; tab and focus on the block labelled &ldquo;Available disks and partitions:&rdquo;</li>
+</ol>
+<p><a href="images/0b78891d0933af01489304c778c6168f2c6776f9.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/0b78891d0933af01489304c778c6168f2c6776f9.png"></a></p>
+<ol>
+<li>Click the drop-down arrow at the right end of the row containing the block device you want to tag. Choose the &ldquo;Edit&hellip;&rdquo; option (the wording may vary, e.g, &ldquo;Edit physical&hellip;&rdquo;). This will take you to an editing screen for that block device:</li>
+</ol>
+<p><a href="images/2912877532c3ea0b744ff3c88c7ef2046598bebc.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/2912877532c3ea0b744ff3c88c7ef2046598bebc.png"></a></p>
+<ol>
+<li>
+<p>Add tags as described in the <a href="#heading--create-and-assign-tags">general procedure</a>.</p>
+</li>
+<li>
+<p>Be sure to click on the &ldquo;Save&rdquo; button when you&rsquo;re done.</p>
+</li>
+</ol>
+<p><a href="#heading--remove-and-delete-block-device-tags"><h4 id="heading--remove-and-delete-block-device-tags">Remove and delete block device tags</h4></a></p>
+<p>In order to remove tags from a block device, the device has to be in an &ldquo;available&rdquo; state, with no active partitions. To remove and delete tags from a block devices:</p>
+<ol>
+<li>Go to the machine list:</li>
+</ol>
+<p><a href="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a></p>
+<ol>
+<li>Select that machine that has the block-device with the tag you want to remove:</li>
+</ol>
+<p><a href="images/9dc953000f245311b4e3f4751adb1d2973d0fe38.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/9dc953000f245311b4e3f4751adb1d2973d0fe38.png"></a></p>
+<ol>
+<li>Click on the &ldquo;Storage&rdquo; tab and focus on the block labelled &ldquo;Available disks and partitions:&rdquo;</li>
+</ol>
+<p><a href="images/0b78891d0933af01489304c778c6168f2c6776f9.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/0b78891d0933af01489304c778c6168f2c6776f9.png"></a></p>
+<ol>
+<li>Click the drop-down arrow at the right end of the row containing the block device you want to tag. Choose the &ldquo;Edit&hellip;&rdquo; option (the wording may vary, e.g, &ldquo;Edit physical&hellip;&rdquo;). This will take you to an editing screen for that block device:</li>
+</ol>
+<p><a href="images/2912877532c3ea0b744ff3c88c7ef2046598bebc.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/2912877532c3ea0b744ff3c88c7ef2046598bebc.png"></a></p>
+<ol>
+<li>
+<p>Delete tags by clicking the &ldquo;X&rdquo; next to them, as described in the <a href="#heading--create-and-assign-tags">general procedure</a>.</p>
+</li>
+<li>
+<p>Be sure to click on the &ldquo;Save&rdquo; button when you&rsquo;re done.</p>
+</li>
+</ol>
+<p><a href="#heading--list-block-device-tags"><h4 id="heading--list-block-device-tags">List block device tags</h4></a></p>
+<p>There is no explicit way to list all block device tags in the UI; check the CLI version of this page for a more comprehensive procedure. You can list all storage links, though &ndash; block device and partition &ndash; by using the filter tool on the machine list.  Here&rsquo;s how:</p>
+<ol>
+<li>Go to the machine list:</li>
+</ol>
+<p><a href="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a></p>
+<ol>
+<li>Select the &ldquo;Filters&rdquo; drop-down and open the section titled &ldquo;Storage tags:&rdquo;</li>
+</ol>
+<p><a href="images/c03216c0c2b6097f73b8161922b602aac4fdc3d6.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/c03216c0c2b6097f73b8161922b602aac4fdc3d6.png"></a></p>
+<p>Here you will see a list of all block device and partition tags currently assigned to machines in this MAAS.  If you wish to filter the machine list by a given tag, just make sure that it&rsquo;s checked (and other storage tags unchecked) in the filter list.</p>
+<p><a href="#heading--view-block-device-tags"><h4 id="heading--view-block-device-tags">View block device tags</h4></a></p>
+<p>To view all tags associated with block devices on a given machine:</p>
+<ol>
+<li>Go to the machine list:</li>
+</ol>
+<p><a href="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a></p>
+<ol>
+<li>Select that machine that has the block device that interests you:</li>
+</ol>
+<p><a href="images/9dc953000f245311b4e3f4751adb1d2973d0fe38.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/9dc953000f245311b4e3f4751adb1d2973d0fe38.png"></a></p>
+<ol>
+<li>Click on the &ldquo;Storage&rdquo; tab and check the page for tags:</li>
+</ol>
+<p><a href="images/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png"></a></p>
+<p><a href="#heading--work-with-partition-tags"><h3 id="heading--work-with-partition-tags">Work with partition tags</h3></a></p>
+<p>This subsection will show you how to:</p>
+<ul>
+<li><a href="#heading--list-partition-tags">List partition tags</a></li>
+<li><a href="#heading--view-partition-tags">View partition tags</a></li>
+</ul>
+<p><a href="#heading--list-partition-tags"><h4 id="heading--list-partition-tags">List partition tags</h4></a></p>
+<p>There is no explicit way to list all partition tags in the UI; check the CLI version of this page (via the menu above) for a more comprehensive procedure. You can list all storage links (block device and partition) by using the filter tool on the machine list.  Here&rsquo;s how:</p>
+<ol>
+<li>Go to the machine list:</li>
+</ol>
+<p><a href="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a></p>
+<ol>
+<li>Select the &ldquo;Filters&rdquo; drop-down and open the section titled &ldquo;Storage tags:&rdquo;</li>
+</ol>
+<p><a href="images/c03216c0c2b6097f73b8161922b602aac4fdc3d6.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/c03216c0c2b6097f73b8161922b602aac4fdc3d6.png"></a></p>
+<p>Here you will see a list of all block device and partition tags currently assigned to machines in this MAAS.</p>
+<p><a href="#heading--view-partition-tags"><h4 id="heading--view-partition-tags">View partition tags</h4></a></p>
+<p>To view all tags associated with partitions on a given machine:</p>
+<ol>
+<li>Go to the machine list:</li>
+</ol>
+<p><a href="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a></p>
+<ol>
+<li>Select that machine that has the block device that interests you:</li>
+</ol>
+<p><a href="images/9dc953000f245311b4e3f4751adb1d2973d0fe38.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/9dc953000f245311b4e3f4751adb1d2973d0fe38.png"></a></p>
+<ol>
+<li>Click on the &ldquo;Storage&rdquo; tab and check the page for tags:</li>
+</ol>
+<p><a href="images/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png"></a></p>
+<p><a href="#heading--work-with-network-tags"><h3 id="heading--work-with-network-tags">Work with network tags</h3></a></p>
+<p>This subsection will show you how to:</p>
+<ul>
+<li><a href="#heading--create-and-assign-network-interface-tags">Create and assign network interface tags</a></li>
+<li><a href="#heading--remove-and-delete-network-interface-tags">Remove and delete network interface tags</a></li>
+<li><a href="#heading--view-network-interface-tags">View network interface tags</a></li>
+</ul>
+<p><a href="#heading--create-and-assign-network-interface-tags"><h4 id="heading--create-and-assign-network-interface-tags">Create and assign network interface tags</h4></a></p>
+<p>To assign a tag to a network interface, use the following procedure:</p>
+<ol>
+<li>Go to the machine list and select the machine where that interface resides, by clicking on that machine&rsquo;s name:</li>
+</ol>
+<p><a href="images/1030782316875c112b9e56586a79478a566fe33a.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/1030782316875c112b9e56586a79478a566fe33a.png"></a></p>
+<ol>
+<li>Click on the &ldquo;Network&rdquo; tab:</li>
+</ol>
+<p><a href="images/9aebbe5708683d937c682e64e22c72d537629cf8.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/9aebbe5708683d937c682e64e22c72d537629cf8.png"></a></p>
+<ol>
+<li>Choose the interface you&rsquo;d like to tag, by selecting the checkbox next to its name:</li>
+</ol>
+<p><a href="images/fb2fb338372ac16229dd9acf00aae545660865f2.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/fb2fb338372ac16229dd9acf00aae545660865f2.png"></a></p>
+<blockquote>
+<p>The checkbox isn&rsquo;t strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.</p>
+</blockquote>
+<ol>
+<li>Select the drop-down under &ldquo;ACTIONS&rdquo; at the end of the row, and select &ldquo;Edit Physical&rdquo; to edit the parameters of the physical interface:</li>
+</ol>
+<p><a href="images/8694d71a49ae8171ac2088005af8b71101894abb.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/8694d71a49ae8171ac2088005af8b71101894abb.png"></a></p>
+<ol>
+<li>
+<p>Edit the &ldquo;Tags&rdquo; field as desired, as described in the <a href="#heading--create-and-assign-tags">general tagging procedure</a> above.</p>
+</li>
+<li>
+<p>Be sure to select the &ldquo;Tag machine&rdquo; button to apply your changes to the interface for that machine.</p>
+</li>
+</ol>
+<p>Note that different machines may have the same physical interface name, but different MAC addresses, so it&rsquo;s not typical that interface tags carry over from one machine to the next &ndash; so auto complete menus will be sparse or non-existent most of the time for these tag types.</p>
+<p><a href="#heading--remove-and-delete-network-interface-tags"><h4 id="heading--remove-and-delete-network-interface-tags">Remove and delete network interface tags</h4></a></p>
+<p>To remove a tag from a network interface, use the following procedure:</p>
+<ol>
+<li>Go to the machine list and select the machine where that interface resides, by clicking on that machine&rsquo;s name:</li>
+</ol>
+<p><a href="images/1030782316875c112b9e56586a79478a566fe33a.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/1030782316875c112b9e56586a79478a566fe33a.png"></a></p>
+<ol>
+<li>Click on the &ldquo;Network&rdquo; tab:</li>
+</ol>
+<p><a href="images/9aebbe5708683d937c682e64e22c72d537629cf8.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/9aebbe5708683d937c682e64e22c72d537629cf8.png"></a></p>
+<ol>
+<li>Choose the interface you&rsquo;d like to un-tag, by selecting the checkbox next to its name:</li>
+</ol>
+<p><a href="images/fb2fb338372ac16229dd9acf00aae545660865f2.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/fb2fb338372ac16229dd9acf00aae545660865f2.png"></a></p>
+<blockquote>
+<p>The checkbox isn&rsquo;t strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.</p>
+</blockquote>
+<ol>
+<li>Select the drop-down under &ldquo;ACTIONS&rdquo; at the end of the row, and select &ldquo;Edit Physical&rdquo; to edit the parameters of the physical interface:</li>
+</ol>
+<p><a href="images/8694d71a49ae8171ac2088005af8b71101894abb.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/8694d71a49ae8171ac2088005af8b71101894abb.png"></a></p>
+<ol>
+<li>
+<p>Edit the &ldquo;Tags&rdquo; field as desired, as described in the <a href="#heading--create-and-assign-tags">general tagging procedure</a> above.</p>
+</li>
+<li>
+<p>Be sure to select the &ldquo;Tag machine&rdquo; button to apply your changes to the interface for that machine.</p>
+</li>
+</ol>
+<p>Note that different machines may have the same physical interface name, but different MAC addresses, so it&rsquo;s not typical that interface tags carry over from one machine to the next &ndash; so auto complete menus will be sparse or non-existent most of the time for these tag types.</p>
+<p><a href="#heading--view-network-interface-tags"><h4 id="heading--view-network-interface-tags">View network interface tags</h4></a></p>
+<p>To view the tags associated with a network interface, use the following procedure:</p>
+<ol>
+<li>Go to the machine list and select the machine where that interface resides, by clicking on that machine&rsquo;s name:</li>
+</ol>
+<p><a href="images/1030782316875c112b9e56586a79478a566fe33a.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/1030782316875c112b9e56586a79478a566fe33a.png"></a></p>
+<ol>
+<li>Click on the &ldquo;Network&rdquo; tab:</li>
+</ol>
+<p><a href="images/9aebbe5708683d937c682e64e22c72d537629cf8.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/9aebbe5708683d937c682e64e22c72d537629cf8.png"></a></p>
+<ol>
+<li>Choose the interface you&rsquo;d like to see, by selecting the checkbox next to its name:</li>
+</ol>
+<p><a href="images/fb2fb338372ac16229dd9acf00aae545660865f2.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/fb2fb338372ac16229dd9acf00aae545660865f2.png"></a></p>
+<blockquote>
+<p>The checkbox isn&rsquo;t strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.</p>
+</blockquote>
+<ol>
+<li>Select the drop-down under &ldquo;ACTIONS&rdquo; at the end of the row, and select &ldquo;Edit Physical&rdquo; to edit the parameters of the physical interface:</li>
+</ol>
+<p><a href="images/8694d71a49ae8171ac2088005af8b71101894abb.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/8694d71a49ae8171ac2088005af8b71101894abb.png"></a></p>
+<ol>
+<li>Be sure to cancel the operation when you&rsquo;re done.</li>
+</ol>
+<p>Note that different machines may have the same physical interface name, but different MAC addresses, so it&rsquo;s not typical that interface tags carry over from one machine to the next.</p>
+<p><a href="#heading--work-with-device-tags"><h3 id="heading--work-with-device-tags">Work with device tags</h3></a></p>
+<p>This subsection will show you how to:</p>
+<ul>
+<li><a href="#heading--create-and-assign-device-tags">Create and assign device tags</a></li>
+<li><a href="#heading--remove-and-delete-device-tags">Remove and delete device tags</a></li>
+<li><a href="#heading--list-device-tags">List device tags</a></li>
+<li><a href="#heading--view-device-tags">View device tags</a></li>
+</ul>
+<p><a href="#heading--create-and-assign-device-tags"><h4 id="heading--create-and-assign-device-tags">Create and assign device tags</h4></a></p>
+<p>To add a tag to a device, follow this procedure:</p>
+<ol>
+<li>Select the &ldquo;Devices&rdquo; tab; it may be in a drop-down labelled &ldquo;Hardware,&rdquo; if your browser window is not very large:</li>
+</ol>
+<p><a href="images/22b17d4827f82c103e958205011ca13934fe2f3f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/22b17d4827f82c103e958205011ca13934fe2f3f.png"></a></p>
+<ol>
+<li>Select the device you&rsquo;d like to tag, by clicking on its name:</li>
+</ol>
+<p><a href="images/94717b99a4cea205099e3fdfd492daefe683e68d.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/94717b99a4cea205099e3fdfd492daefe683e68d.png"></a></p>
+<ol>
+<li>In the &ldquo;Tags&rdquo; card, select the &ldquo;Edit&rdquo; link, or choose the &ldquo;Configuration&rdquo; tab under the device name:</li>
+</ol>
+<p><a href="images/901e7bd556f26560e44b4b74c41b506399e86375.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/901e7bd556f26560e44b4b74c41b506399e86375.png"></a></p>
+<ol>
+<li>Select the &ldquo;Edit&rdquo; button on the &ldquo;Configuration&rdquo; tab which comes up:</li>
+</ol>
+<p><a href="images/d80039410bfeba4b6feb35490ccf82b3be80904f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/d80039410bfeba4b6feb35490ccf82b3be80904f.png"></a></p>
+<ol>
+<li>
+<p>Edit the &ldquo;Tags&rdquo; field, as explained in the <a href="#heading--create-assign-tag-general">general tagging procedure</a> above.</p>
+</li>
+<li>
+<p>Be sure to hit the &ldquo;Save changes&rdquo; button to apply your changes to the device.</p>
+</li>
+</ol>
+<p><a href="#heading--remove-and-delete-device-tags"><h4 id="heading--remove-and-delete-device-tags">Remove and delete device tags</h4></a></p>
+<p>To remove a tag from a device, follow this procedure:</p>
+<ol>
+<li>Select the &ldquo;Devices&rdquo; tab; it may be in a drop-down labelled &ldquo;Hardware,&rdquo; if your browser window is not very large:</li>
+</ol>
+<p><a href="images/22b17d4827f82c103e958205011ca13934fe2f3f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/22b17d4827f82c103e958205011ca13934fe2f3f.png"></a></p>
+<ol>
+<li>Select the device you&rsquo;d like to un-tag, by clicking on its name:</li>
+</ol>
+<p><a href="images/94717b99a4cea205099e3fdfd492daefe683e68d.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/94717b99a4cea205099e3fdfd492daefe683e68d.png"></a></p>
+<ol>
+<li>In the &ldquo;Tags&rdquo; card, select the &ldquo;Edit&rdquo; link, or choose the &ldquo;Configuration&rdquo; tab under the device name:</li>
+</ol>
+<p><a href="images/901e7bd556f26560e44b4b74c41b506399e86375.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/901e7bd556f26560e44b4b74c41b506399e86375.png"></a></p>
+<ol>
+<li>Select the &ldquo;Edit&rdquo; button on the &ldquo;Configuration&rdquo; tab which comes up:</li>
+</ol>
+<p><a href="images/d80039410bfeba4b6feb35490ccf82b3be80904f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/d80039410bfeba4b6feb35490ccf82b3be80904f.png"></a></p>
+<ol>
+<li>
+<p>Edit the &ldquo;Tags&rdquo; field, as explained in the <a href="#heading--create-assign-tag-general">general tagging procedure</a> above.</p>
+</li>
+<li>
+<p>Be sure to hit the &ldquo;Save changes&rdquo; button to apply your changes to the device.</p>
+</li>
+</ol>
+<p><a href="#heading--list-device-tags"><h4 id="heading--list-device-tags">List device tags</h4></a></p>
+<ol>
+<li>Go to the device list:</li>
+</ol>
+<p><a href="images/8748ed53d5a24425e808698c902a22536a08f994.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/8748ed53d5a24425e808698c902a22536a08f994.png"></a></p>
+<ol>
+<li>Select the &ldquo;Filters&rdquo; drop-down and open the section titled &ldquo;Tags:&rdquo;</li>
+</ol>
+<p><a href="images/957ff8874fb8336335ec5073c14068f36a7aeeb6.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/957ff8874fb8336335ec5073c14068f36a7aeeb6.png"></a></p>
+<p>Here you will see a list of all device tags currently assigned to devices in this MAAS.</p>
+<p><a href="#heading--view-device-tags"><h4 id="heading--view-device-tags">View device tags</h4></a></p>
+<ol>
+<li>Go to the device list:</li>
+</ol>
+<p><a href="images/8748ed53d5a24425e808698c902a22536a08f994.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/8748ed53d5a24425e808698c902a22536a08f994.png"></a></p>
+<ol>
+<li>Select the device that has your interest by clicking on its name.  A device summary will appear:</li>
+</ol>
+<p><a href="images/eadc32f46c714080005faa0be7f744d4143df379.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/eadc32f46c714080005faa0be7f744d4143df379.png"></a></p>
+<p>The &ldquo;Tags&rdquo; card on that screen with show you all the tags currently associated with this device.</p>
+<p><a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a></p>
+<p>This section will explain how to:</p>
+<ul>
+<li><a href="#heading--work-with-static-annotations">Work with static annotations</a></li>
+<li><a href="#heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</a></li>
+</ul>
+<p><a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a></p>
+<p>This subsection will show you how to:</p>
+<ul>
+<li><a href="#heading--create-and-assign-static-annotations">Create and assign static annotations</a></li>
+<li><a href="#heading--delete-static-annotations">Delete static annotations</a></li>
+<li><a href="#heading--view-static-annotations">View static annotations</a></li>
+</ul>
+<p><a href="#heading--create-and-assign-static-annotations"><h4 id="heading--create-and-assign-static-annotations">Create and assign static annotations</h4></a></p>
+<p>To create and assign static annotations (a note) to a machine, follow this procedure:</p>
+<ol>
+<li>Go to the machine list and click on the machine of interest:</li>
+</ol>
+<p><a href="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a></p>
+<ol>
+<li>This will bring up a machine summary for that machine:</li>
+</ol>
+<p><a href="images/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a></p>
+<ol>
+<li>Select &ldquo;Configuration&rdquo; and click the &ldquo;Edit&rdquo; button to the right of the &ldquo;Machine configuration&rdquo; section:</li>
+</ol>
+<p><a href="images/e9fda18183c567e62dea80fce01497227727e7bb.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/e9fda18183c567e62dea80fce01497227727e7bb.png"></a></p>
+<ol>
+<li>
+<p>Add free-form notes in the &ldquo;Note&rdquo; field, as desired.</p>
+</li>
+<li>
+<p>Click &ldquo;Save changes&rdquo; to update the machine&rsquo;s configuration.</p>
+</li>
+</ol>
+<p><a href="#heading--delete-static-annotations"><h4 id="heading--delete-static-annotations">Delete static annotations</h4></a></p>
+<p>To delete static annotations (a note) from a machine, follow this procedure:</p>
+<ol>
+<li>Go to the machine list and click on the machine of interest:</li>
+</ol>
+<p><a href="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a></p>
+<ol>
+<li>This will bring up a machine summary for that machine:</li>
+</ol>
+<p><a href="images/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a></p>
+<ol>
+<li>Select &ldquo;Configuration&rdquo; and click the &ldquo;Edit&rdquo; button to the right of the &ldquo;Machine configuration&rdquo; section:</li>
+</ol>
+<p><a href="images/e9fda18183c567e62dea80fce01497227727e7bb.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/e9fda18183c567e62dea80fce01497227727e7bb.png"></a></p>
+<ol>
+<li>
+<p>Edit the free-form notes in the &ldquo;Note&rdquo; field, as desired.</p>
+</li>
+<li>
+<p>Click &ldquo;Save changes&rdquo; to update the machine&rsquo;s configuration.</p>
+</li>
+</ol>
+<p><a href="#heading--view-static-annotations"><h4 id="heading--view-static-annotations">View static annotations</h4></a></p>
+<p>To view static annotations, you can follow this procedure:</p>
+<ol>
+<li>Go to the machine list and look at the machine of interest; you should see the first few characters of a note in the bottom half of the column marked &ldquo;POOL/NOTE:&rdquo;</li>
+</ol>
+<p><a href="images/3286feef733f4b56a94708d3af044c1523e78369.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/3286feef733f4b56a94708d3af044c1523e78369.png"></a></p>
+<ol>
+<li>Click on the machine, which will bring up a machine summary for that machine. Switch to the configuration tab to see the full note:</li>
+</ol>
+<p><a href="images/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png"></a></p>
+<p><a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</h3></a></p>
+<p>This subsection will show you how to:</p>
+<ul>
+<li><a href="#heading--view-dynamic-workload-annotations-for-one-machine">View dynamic (workload) annotations for one machine</a></li>
+<li><a href="#heading--filter-on-dynamic-workload-annotations">Filter on dynamic (workload) annotations</a></li>
+</ul>
+<p><a href="#heading--view-dynamic-workload-annotations-for-one-machine"><h4 id="heading--view-dynamic-workload-annotations-for-one-machine">View dynamic (workload) annotations for one machine</h4></a></p>
+<p>To view the dynamic (workload) annotations for one machine, do the following:</p>
+<ol>
+<li>
+<p>Go to the machine list and select the machine of interest by clicking on its hyperlinked name.</p>
+</li>
+<li>
+<p>In the machine summary that comes up, look for the &ldquo;Workload Annotations&rdquo; card, in the lower, right-hand corner:</p>
+</li>
+</ol>
+<p><a href="images/e7def7a50f9c854f7aae0efc34897338c46c32c0.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/e7def7a50f9c854f7aae0efc34897338c46c32c0.png"></a></p>
+<p><a href="#heading--filter-on-dynamic-workload-annotations"><h4 id="heading--filter-on-dynamic-workload-annotations">Filter on dynamic (workload) annotations</h4></a></p>
+<p>To filter machines by dynamic (workload) annotations, use the following procedure:</p>
+<ol>
+<li>Go to the machine list and select the &ldquo;Filter&rdquo; drop-down; open the &ldquo;Workload&rdquo; segment:</li>
+</ol>
+<p><a href="images/946fb41e9cefb10a0b59787ce22b70a91b248d01.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/946fb41e9cefb10a0b59787ce22b70a91b248d01.jpeg"></a></p>
+<ol>
+<li>Select one or more values from this list to filter the machine list by these workload annotations.</li>
+</ol>
+    </div>
+  </body>
+</html>

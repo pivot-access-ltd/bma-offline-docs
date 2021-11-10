@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/how-to-install-maas.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/how-to-install-maas.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="../maas-documentation-25.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-the-maas-cli.html">
+	    Use the MAAS CLI
+	  </a>
+	</li>
+      <strong>
+	<a href="about-controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-racks.html">
+	    Manage racks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-regions.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machine-interfaces.html">
+	    Manage interfaces
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-dhcp.html">
+	    Manage DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-ranges.html">
+	    Manage IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-proxies.html">
+	    Manage proxies
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-ntp.html">
+	    Set up NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-maas-images.html">
+	    Build MAAS images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-a-custom-ubuntu-image.html">
+	    Create custom Ubuntu images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-image-streams.html">
+	    Use image streams
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-tags-and-annotations.html">
+	  Tags
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-tags.html">
+	    Manage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+	<p/>
+	<strong>
+	  Operations
+	</strong>
+	<ul>
+	  <li>
+	    <a href="how-to-set-up-prometheus-metrics.html">
+	      Set up Prometheus
+	    </a>
+	  </li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API reference
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-troubleshoot-maas.html">
+	  Troubleshooting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Get help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-and-tricks.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="what-is-new-with-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="how-to-contact-us.html">
+	  Contact us
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>How to install MAAS</h1><p><a href="#heading--about-installing-maas"><h2 id="heading--about-installing-maas">About installing MAAS</h2></a></p>
+<p>MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.</p>
+<p><a href="#heading--maas-init-modes"><h3 id="heading--maas-init-modes">MAAS initialisation modes reference</h3></a></p>
+<p>MAAS supports the following modes, which dictate what services will run on the local system:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Mode</th>
+<th align="center">Region</th>
+<th align="center">Rack</th>
+<th align="center">Database</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>region</code></td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="left">Region API server only</td>
+</tr>
+<tr>
+<td align="left"><code>rack</code></td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="left">Rack controller only</td>
+</tr>
+<tr>
+<td align="left"><code>region+rack</code></td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="left">Region API server and rack controller</td>
+</tr>
+<tr>
+<td align="left"><code>none</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="left">Reinitialises MAAS and stops services</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--ssh-keys"><h3 id="heading--ssh-keys">About SSH keys</h3></a></p>
+<p>MAAS uses your Launchpad or Github SSH keys to access machines that have been deployed.  Normally, you enter this key during the initialisation of MAAS.  If you don&rsquo;t have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you&rsquo;ve started MAAS for the first time as part of the welcome screens.</p>
+<p><a href="#heading--maas-url"><h3 id="heading--maas-url">About the MAAS URL</h3></a></p>
+<p>All run modes (except <code>none</code>) prompt for a MAAS URL, interpreted differently depending on the mode:</p>
+<ul>
+<li><code>region</code>: Used to create a new region controller.</li>
+<li><code>rack</code>: Used to locate the region controller.</li>
+</ul>
+<p><a href="#heading--shared-secret"><h3 id="heading--shared-secret">About the shared secret</h3></a></p>
+<p>The &lsquo;rack&rsquo; and &lsquo;region+rack&rsquo; modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.</p>
+<p><a href="#heading--how-to-install-maas-main"><h2 id="heading--how-to-install-maas-main">How to install MAAS</h2></a></p>
+<p>This article will show you:</p>
+<ul>
+<li><a href="#heading--check-system-requirements-for-maas">How to check system requirements for MAAS</a></li>
+<li><a href="#heading--upgrade-from-earlier-snap-to-3-1">How to upgrade from an earlier snap version to MAAS 3.1 Beat</a></li>
+<li><a href="#heading--fresh-install-3-1-snap">How to do a fresh snap install of MAAS 3.1 Beta</a></li>
+<li><a href="#heading--service-status">How to check the status of MAAS services</a></li>
+<li><a href="#heading--reinitialising-maas">How to re-initialise MAAS</a></li>
+<li><a href="#heading--additional-init-options">How to list additional MAAS initialisation options</a></li>
+<li><a href="#heading--configure-maas">How to configure MAAS</a></li>
+</ul>
+<p>Note that all headings are hyperlinks for bookmarking.</p>
+<p><a href="#heading--check-system-requirements-for-maas"><h2 id="heading--check-system-requirements-for-maas">How to check system requirements for MAAS</h2></a></p>
+<p>Before installing MAAS for the first time, you should make sure that the target system meets the minimum requirements for the machines that run MAAS, which vary widely depending on local implementation and usage.  Below, you will find resource estimates based on MAAS components and operating system (Ubuntu Server). We consider both a test configuration (for proof of concept) and a production environment.</p>
+<p><a href="#heading--test-environment"><h2 id="heading--test-environment">Requirements for a test environment</h2></a></p>
+<p>Here is a proof-of-concept scenario, with all MAAS components installed on a single host. This scenario assumes two complete sets of images (latest two Ubuntu LTS releases) for a single architecture (amd64).</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="right">Memory (MB)</th>
+<th align="right">CPU (GHz)</th>
+<th align="right">Disk (GB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="concepts-and-terms-785.html#heading--controllers">Region controller</a> (minus PostgreSQL)</td>
+<td align="right">512</td>
+<td align="right">0.5</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td align="left">PostgreSQL</td>
+<td align="right">512</td>
+<td align="right">0.5</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td align="left"><a href="concepts-and-terms-785.html#heading--controllers&quot;">Rack controller</a></td>
+<td align="right">512</td>
+<td align="right">0.5</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td align="left">Ubuntu Server (including logs)</td>
+<td align="right">512</td>
+<td align="right">0.5</td>
+<td align="right">5</td>
+</tr>
+</tbody>
+</table>
+<p>Based on this table, the approximate requirements for this scenario are 2 GB memory, 2 GHz CPU, and 20 GB of disk space.</p>
+<p><a href="#heading--production-environment"><h2 id="heading--production-environment">Requirements for a production environment</h2></a></p>
+<p>Here is a production scenario designed to handle a high number of sustained client connections. This scenario implements both high availability (region and rack) and load balancing (region). MAAS reserves extra space for images (database and rack controller), while some images, such as those for Microsoft Windows, may require a lot more &ndash; so plan accordingly.</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="right">Memory (MB)</th>
+<th align="right">CPU (GHz)</th>
+<th align="right">Disk (GB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="concepts-and-terms-785.html#heading--controllers">Region controller</a> (minus PostgreSQL)</td>
+<td align="right">2048</td>
+<td align="right">2.0</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td align="left">PostgreSQL</td>
+<td align="right">2048</td>
+<td align="right">2.0</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td align="left"><a href="concepts-and-terms-785.html#heading--controllers&quot;">Rack controller</a></td>
+<td align="right">2048</td>
+<td align="right">2.0</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td align="left">Ubuntu Server (including logs)</td>
+<td align="right">512</td>
+<td align="right">0.5</td>
+<td align="right">5</td>
+</tr>
+</tbody>
+</table>
+<p>So, based on the above, the approximate requirements for this scenario are:</p>
+<ol>
+<li>A region controller (including PostgreSQL) installed on one host, with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.</li>
+<li>A duplicate region controller (including PostgreSQL) on a second host, also with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.</li>
+<li>A rack controller installed on a third host, with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.</li>
+<li>A duplicate rack controller on a fourth host, also with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.</li>
+</ol>
+<p>The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see <a href="power-management-5247.html">Power management</a> for more details.</p>
+<p>Some examples of factors that influence hardware specifications include:</p>
+<ol>
+<li>the number of connecting clients (client activity)</li>
+<li>how you decide to distribute services</li>
+<li>whether or not you use <a href="high-availability-5123.html">high availability/load balancing</a>.</li>
+<li>the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)</li>
+</ol>
+<p>Also, this discussion does not take into account a possible local image mirror, which would be a large consumer of disk space.</p>
+<p>One rack controller should only service 1000 machines or less, regardless of how you distribute them across subnets. There is no load balancing at the rack level, so you will need additional, independent rack controllers. Each controller must service its own subnet(s).</p>
+<p><a href="#heading--upgrade-from-earlier-snap-to-3-1"><h2 id="heading--upgrade-from-earlier-snap-to-3-1">How to upgrade from an earlier snap version to MAAS 3.1 Beta</h2></a></p>
+<p>If you want to upgrade from a earlier snap version to the 3.1 Beta snap (not recommended for production), and you are using a <code>region+rack</code> configuration, use this command:</p>
+<pre><code>$ sudo snap refresh --channel=3.1/beta maas
+</code></pre>
+<p>After entering your password, the snap will refresh from the 3.1 channel.  You will <strong>not</strong> need to re-initialise MAAS.</p>
+<p>If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.</p>
+<p><a href="#heading--fresh-install-3-1-snap"><h2 id="heading--fresh-install-3-1-snap">How to do a fresh snap install of MAAS 3.1 Beta</h2></a></p>
+<p>To install MAAS 3.1 Beta from a snap, simply enter the following:</p>
+<pre><code>$ sudo snap install --channel=3.1/beta maas
+</code></pre>
+<p>After entering your password, the snap will download and install from the 3.1 beta channel.</p>
+<p>[note]
+Note that MAAS 3.1 Beta is <em>not</em> recommended for production use.
+[/note]</p>
+<p><a href="#heading--init-maas-poc"><h2 id="heading--init-maas-poc">How to initialise MAAS for a test or POC environment</h2></a></p>
+<p>You can initialise MAAS as a compact version for testing.  To achieve this, we provide a separate snap, called <code>maas-test-db</code>, which contains a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.</p>
+<p>Once MAAS is installed, you can use the <code>--help</code> flag with <code>maas init</code> to get relevant instructions:</p>
+<pre><code>$ sudo maas init --help
+usage: maas init [-h] {region+rack,region,rack} . . .
+
+Initialise MAAS in the specified run mode.
+
+optional arguments:
+  -h, --help            show this help message and exit
+
+run modes:
+  {region+rack,region,rack}
+    region+rack         Both region and rack controllers
+    region              Region controller only
+    rack                Rack controller only
+
+When installing region or rack+region modes, MAAS needs a
+PostgreSQL database to connect to.
+
+If you want to set up PostgreSQL for a non-production deployment on
+this machine, and configure it for use with MAAS, you can install
+the maas-test-db snap before running 'maas init':
+    sudo snap install maas-test-db
+    sudo maas init region+rack --database-uri maas-test-db:///
+</code></pre>
+<p>We&rsquo;ll quickly walk through these instructions to confirm your understanding.  First, install the <code>maas-test-db</code> snap:</p>
+<pre><code>sudo snap install maas-test-db
+</code></pre>
+<p>Note that this step installs a a running PostgreSQL and a MAAS-ready database instantiation.  When it&rsquo;s done, you can double check with a built-in PostgreSQL shell:</p>
+<pre><code>$ maas-test-db.psql
+psql (10.6)
+Type "help" for help.
+
+postgres=# \l
+</code></pre>
+<p>This will produce a list of databases, one of which will be <code>maasdb</code>, owned by <code>maas</code>.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the <code>maas init</code> command:</p>
+<pre><code>sudo maas init region+rack --database-uri maas-test-db:///
+</code></pre>
+<p>After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:</p>
+<pre><code>MAAS URL [default=http://10.45.222.159:5240/MAAS]:
+</code></pre>
+<p>When you&rsquo;ve entered a suitable URL, or accepted the default, the following prompt will appear:</p>
+<pre><code>MAAS has been set up.
+
+If you want to configure external authentication or use
+MAAS with Canonical RBAC, please run
+
+  sudo maas configauth
+
+To create admins when not using external authentication, run
+
+  sudo maas createadmin
+</code></pre>
+<p>Let&rsquo;s assume you just want a local testing user named <code>admin</code>:</p>
+<pre><code>$ sudo maas createadmin
+Username: admin
+Password: ******
+Again: ******
+Email: admin@example.com
+Import SSH keys [] (lp:user-id or gh:user-id): gh:yourusername
+</code></pre>
+<p>At this point, MAAS is basically set up and running.  You can confirm this with <code>sudo maas status</code>.  If you need an API key, you can obtain this with <code>sudo maas apikey --username yourusername</code>.  Now you will be able to test and evaluate MAAS by going to the URL you entered or accepted above and entering your <code>admin</code> username and password.</p>
+<p><a href="#heading--init-maas-production"><h2 id="heading--init-maas-production">Initialise MAAS for a production configuration</h2></a></p>
+<p>To install MAAS in a production configuration, you need to setup PostgreSQL, as described below.</p>
+<p><a href="#heading--pg-setup"><h4 id="heading--pg-setup">Setting up PostgreSQL from scratch</h4></a></p>
+<p>To set up PostgreSQL, even if it&rsquo;s running on a different machine, you can use the following procedure:</p>
+<ol>
+<li>
+<p>You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 10 or better) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:</p>
+<pre><code>sudo apt update -y
+sudo apt install -y postgresql
+</code></pre>
+</li>
+<li>
+<p>You want to make sure you have a suitable PostgreSQL user, which can be accomplished with the following command, where <code>$MAAS_DBUSER</code> is your desired database username, and <code>$MAAS_DBPASS</code> is the intended password for that username.  Note that if you&rsquo;re executing this step in a LXD container (as root, which is the default), you may get a minor error, but the operation will still complete correctly.</p>
+<pre><code>sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
+</code></pre>
+</li>
+<li>
+<p>Create the MAAS database with the following command, where <code>$MAAS_DBNAME</code> is your desired name for the MAAS database (typically known as <code>maas</code>). Again, if you&rsquo;re executing this step in a LXD container as root, you can ignore the minor error that results.</p>
+<pre><code>sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
+</code></pre>
+</li>
+<li>
+<p>Edit <code>/etc/postgresql/10/main/pg_hba.conf</code> and add a line for the newly created database, replacing the variables with actual  names. You can limit access to a specific network by using a different CIDR than <code>0/0</code>.</p>
+<pre><code>host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
+</code></pre>
+</li>
+<li>
+<p>You can then initialise MAAS via the following command:</p>
+<pre><code>sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
+</code></pre>
+</li>
+</ol>
+<p>[note] You should use <code>localhost</code> for <code>$HOSTNAME</code> if you&rsquo;re running PostgreSQL on the same box as MAAS.[/note]</p>
+<p>Don&rsquo;t worry; if you leave out any of the database parameters, you&rsquo;ll be prompted for those details.</p>
+<p><a href="#heading--service-status"><h2 id="heading--service-status">How to check the status of MAAS services</h2></a></p>
+<p>You can check the status of running services with:</p>
+<pre><code>sudo maas status
+</code></pre>
+<p>Typically, the output looks something like this:</p>
+<pre><code>bind9                            RUNNING   pid 7999, uptime 0:09:17
+dhcpd                            STOPPED   Not started
+dhcpd6                           STOPPED   Not started
+ntp                              RUNNING   pid 8598, uptime 0:05:42
+postgresql                       RUNNING   pid 8001, uptime 0:09:17
+proxy                            STOPPED   Not started
+rackd                            RUNNING   pid 8000, uptime 0:09:17
+regiond:regiond-0                RUNNING   pid 8003, uptime 0:09:17
+regiond:regiond-1                RUNNING   pid 8008, uptime 0:09:17
+regiond:regiond-2                RUNNING   pid 8005, uptime 0:09:17
+regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
+tgt                              RUNNING   pid 8040, uptime 0:09:15
+</code></pre>
+<p><a href="#heading--reinitialising-maas"><h3 id="heading--reinitialising-maas">How to re-initialise MAAS</h3></a></p>
+<p>It is also possible to re-initialise MAAS to switch modes.  For example, to switch from <code>rack</code> to <code>region</code>:</p>
+<pre><code>sudo maas init region
+</code></pre>
+<p><a href="#heading--additional-init-options"><h2 id="heading--additional-init-options">How to list additional MAAS initialisation options</h2></a></p>
+<p>The <code>init</code> command can takes optional arguments. To list them, as well as read a brief description of each, you can enter:</p>
+<pre><code>sudo maas init --help
+</code></pre>
+<p><a href="#heading--configure-maas"><h2 id="heading--configure-maas">How to configure MAAS</h2></a></p>
+<p>Once you&rsquo;ve successfully installed MAAS (regardless of method), you can now login here:</p>
+<pre><code>http://${API_HOST}:5240/MAAS
+</code></pre>
+<p>where $API_HOST is the hostname or IP address of the region API server, which was set during installation.  You will see a screen like this:</p></p>
+<p><a href="images/efd8e3f150dfec28114c452c12e24e320848e075.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/efd8e3f150dfec28114c452c12e24e320848e075.jpeg"></a> </p>
+<p>Log in at the prompts, with the login information you created when initialising MAAS.</p>
+<p><a href="#heading--configuration"><h3 id="heading--configuration">Configuration</h3></a></p>
+<p>After a fresh MAAS installation, the web UI presents a couple of welcome  screens.  From these screens, you can set many system-wide options, including connectivity, image downloads, and authentication keys.</p>
+<p><a href="images/337aa15e178b14b0ba9a0646953268bf7adac0bb.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/337aa15e178b14b0ba9a0646953268bf7adac0bb.jpeg"></a>  </p>
+<p>Your main concerns for this experiment are the DNS forwarder, the Ubuntu image import section, and the SSH public key, though you might want to set the region name to something memorable, since this text will appear at the bottom of every MAAS screen in this install domain. Set the DNS forwarder to something obvious, e.g., <code>8.8.8.8</code>, Google’s DNS server.  Set this to your own internal DNS server if you know the IP address.</p>
+<p><a href="images/f9751eb857dcd0c124783edeb1aaf87b8b538127.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/f9751eb857dcd0c124783edeb1aaf87b8b538127.jpeg"></a>  </p>
+<p>Select an Ubuntu image to import, noting that you may be required to select at least one LTS version, depending upon the version of MAAS that snap installed.  In this example, we&rsquo;ve already chosen an image, and downloading is partially complete.</p>
+<p><a href="images/6445cde5ffc1e237a1e6d85d280f451bc0b2ab92.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/6445cde5ffc1e237a1e6d85d280f451bc0b2ab92.jpeg"></a>  </p>
+<p>When you click on “Continue,” the screen will shift to a screen labelled, “SSH keys for admin:”  </p>
+<p><a href="images/dbdcdce7c8f3b7181f894bdfe987758e0c8635fc.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/dbdcdce7c8f3b7181f894bdfe987758e0c8635fc.jpeg"></a> </p>
+<p>In the source drop-down, select “Launchpad,” “Github,” or “Upload.”  If you choose one of the first two, you will need to enter your username for that service.  For example, if you want to upload your SSH public key from Launchpad, you would enter:</p>
+<pre><code>lp:&lt;username&gt;
+</code></pre>
+<p><a href="images/0e4cbf7c8fae3f21664a4d5fe8d0f90785dd6859.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/0e4cbf7c8fae3f21664a4d5fe8d0f90785dd6859.jpeg"></a> </p>
+<p>Likewise, if you want to upload your github public SSH key, you would enter:</p>
+<pre><code>gh:&lt;username&gt;
+</code></pre>
+<p>If you want to use your existing public key from your home directory, you can select “Upload”and then copy your entire public key from <code>.ssh/id_rsa.pub</code> (or wherever you may have stored the key):</p>
+<p><a href="images/a94f1f68db07dd9be9e8eaed50f22828c7bb51e0.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/a94f1f68db07dd9be9e8eaed50f22828c7bb51e0.jpeg"></a> </p>
+<p>and paste it into the block labelled “Public key.”  Finally, press the “Import” button to import this key:</p>
+<p><a href="images/ab62bf22308343988016189fbbb851c44caf2e33.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/ab62bf22308343988016189fbbb851c44caf2e33.jpeg"></a> </p>
+<p>With this complete, you’ll see that MAAS has been successfully set up. Click ‘Go to the Dashboard’ to proceed.</p>
+<p>[note]
+Note that you may have to wait a few moments for your selected images to sync locally.
+[/note]</p>
+<p><a href="#heading--enabling-dhcp"><h3 id="heading--enabling-dhcp">How to enable DHCP</h3></a></p>
+<p>Before moving forward with MAAS, you&rsquo;ll want to enable DHCP.  You can do this very easily from the web UI by selecting &ldquo;Subnets&rdquo; from the top menu, choosing the VLAN on which you want to enable DHCP, and select the button marked, &ldquo;Enable DHCP.&rdquo;</p>
+<p><a href="#heading--networking"><h3 id="heading--networking">About network discovery</h3></a></p>
+<p>The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This <a href="about-networking-5084.html#heading--about-network-discovery">network discovery</a> process allows you to easily add or map devices already connected to your network &ndash; devices that you may not necessarily want to manage with MAAS.</p>
+<!-- comment -->
+    </div>
+  </body>
+</html>

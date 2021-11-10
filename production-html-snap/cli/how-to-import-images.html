@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/how-to-import-images.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/how-to-import-images.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="../maas-documentation-25.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-the-maas-cli.html">
+	    Use the MAAS CLI
+	  </a>
+	</li>
+      <strong>
+	<a href="about-controllers.html">
+	  Controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-racks.html">
+	    Manage racks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-regions.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-machines.html">
+	  Machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-vm-hosting.html">
+	  VM hosting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-networking.html">
+	  Networking
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machine-interfaces.html">
+	    Manage interfaces
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-dhcp.html">
+	    Manage DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-ranges.html">
+	    Manage IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-proxies.html">
+	    Manage proxies
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-ntp.html">
+	    Set up NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-images.html">
+	  Images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-maas-images.html">
+	    Build MAAS images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-a-custom-ubuntu-image.html">
+	    Create custom Ubuntu images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-image-streams.html">
+	    Use image streams
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="about-tags-and-annotations.html">
+	  Tags
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-tags.html">
+	    Manage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+	<p/>
+	<strong>
+	  Operations
+	</strong>
+	<ul>
+	  <li>
+	    <a href="how-to-set-up-prometheus-metrics.html">
+	      Set up Prometheus
+	    </a>
+	  </li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API reference
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-troubleshoot-maas.html">
+	  Troubleshooting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Get help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-and-tricks.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="what-is-new-with-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="how-to-contact-us.html">
+	  Contact us
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>How to import images</h1><p>MAAS is only useful once it has images available to provision its nodes. Therefore, one key post-install task is to select and import images from the boot source. Once MAAS imports images, it will update them on an hourly basis, via a default synch mechanism.  This page explains how to select and import the images that MAAS requires to provision its nodes.</p>
+<p>Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See <a href="how-to-mirror-images-locally-5189.html">Local image mirror</a> for instructions.</p>
+<p>You can tell MAAS to sync images hourly, at the region level.  See <a href="about-images-5077.html#boot-image-sources">Boot image sources</a>) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.</p>
+<h4>Eight questions you may have:</h4>
+<ol>
+<li><a href="how-to-use-the-maas-cli-5237.html">How do I get started with the MAAS CLI?</a></li>
+<li><a href="#heading--list-boot-sources">How do I list boot sources?</a></li>
+<li><a href="#heading--select-image">How do I select images?</a></li>
+<li><a href="#heading--list-image-selections">How do I list image selections?</a></li>
+<li><a href="#heading--import-newly-selected-images">How do I import newly-selected images?</a></li>
+<li><a href="#heading--list-currently-available-images">How do I list currently available images?</a></li>
+<li><a href="#heading--delete-a-boot-source">How do I delete a boot source?</a></li>
+<li><a href="#heading--edit-a-boot-source">How do I edit a boot source?</a></li>
+</ol>
+<p><a href="#heading--list-boot-sources"><h2 id="heading--list-boot-sources">List boot sources</h2></a></p>
+<p>If you want to download boot sources, i.e., the locations from which you may download images, try the following:</p>
+<pre><code class="language-bash">maas $PROFILE boot-sources read
+</code></pre>
+<p>[note]
+Although multiple boot sources may be listed, MAAS can only practically work with a single boot source.
+[/note]</p>
+<p><a href="#heading--select-images"><h2 id="heading--select-images">Select images</h2></a></p>
+<p>Use the <code>boot-source-selections</code> command to select images from a boot source. After selecting new images, you will need to <a href="#heading--import-newly-selected-images">import</a> them.</p>
+<pre><code class="language-bash">maas $PROFILE boot-source-selections create $SOURCE_ID \
+    os=&quot;ubuntu&quot; release=&quot;$SERIES&quot; arches=&quot;$ARCH&quot; \
+    subarches=&quot;$KERNEL&quot; labels=&quot;*&quot;
+</code></pre>
+<p>For example, to select all kernels for 64-bit Trusty from a boot source with an id of &lsquo;1&rsquo;:</p>
+<pre><code class="language-bash">maas $PROFILE boot-source-selections create 1 \
+    os=&quot;ubuntu&quot; release=&quot;trusty&quot; arches=&quot;amd64&quot; \
+    subarches=&quot;*&quot; labels=&quot;*&quot;
+</code></pre>
+<p><a href="#heading--hardware-enablement-hwe"><h3 id="heading--hardware-enablement-hwe">Hardware enablement (HWE)</h3></a></p>
+<p>For example, to get just the latest amd64 HWE kernel available for Trusty, which, at time of writing, is from Xenial:</p>
+<pre><code class="language-bash">maas $PROFILE boot-source-selections create 1 \
+    os=&quot;ubuntu&quot; release=&quot;trusty&quot; arches=&quot;amd64&quot; \
+    subarches=&quot;hwe-x&quot; labels=&quot;*&quot;
+</code></pre>
+<p>For Xenial kernels (and starting with MAAS 2.1), notation has changed. To select the latest amd64 HWE kernel available for Xenial:</p>
+<pre><code class="language-bash">maas $PROFILE boot-source-selections create 1 \
+    os=&quot;ubuntu&quot; release=&quot;xenial&quot; arches=&quot;amd64&quot; \
+    subarches=&quot;hwe-16.04&quot; labels=&quot;*&quot;
+</code></pre>
+<p><a href="#heading--list-image-selections"><h2 id="heading--list-image-selections">List image selections</h2></a></p>
+<p>To list image selections for a boot source:</p>
+<pre><code class="language-bash">maas $PROFILE boot-source-selections read $SOURCE_ID
+</code></pre>
+<p><a href="#heading--import-newly-selected-images"><h2 id="heading--import-newly-selected-images">Import newly-selected images</h2></a></p>
+<p>To import newly-selected images (boot resources):</p>
+<pre><code class="language-bash">maas $PROFILE boot-resources import
+</code></pre>
+<p>Once newly-selected images are imported, a sync mechanism is enabled (by default) to keep them up to date. The refresh time interval is 60 minutes.</p>
+<p>Available images resulting from this action are reflected in the web UI.</p>
+<p><a href="#heading--list-currently-available-images"><h2 id="heading--list-currently-available-images">List currently available images</h2></a></p>
+<p>To list currently available/imported images (boot resources):</p>
+<pre><code class="language-bash">maas $PROFILE boot-resources read
+</code></pre>
+<p><a href="#heading--delete-a-boot-source"><h2 id="heading--delete-a-boot-source">Delete a boot source</h2></a></p>
+<p>To delete a boot source (the location from which you can download images): </p>
+<pre><code class="language-bash">maas $PROFILE boot-source delete $SOURCE_ID
+</code></pre>
+<p>If you delete the sole boot source, then the fields &lsquo;Sync URL&rsquo; and &lsquo;Keyring Path&rsquo; in the web UI will take on null values.</p>
+<p><a href="#heading--edit-a-boot-source"><h2 id="heading--edit-a-boot-source">Edit a boot source</h2></a></p>
+<p>You can edit an existing boot source by changing the GPG keyring file ($KEYRING_FILE) and the location ($URL).</p>
+<p>Update the boot source:</p>
+<pre><code class="language-bash">maas $PROFILE boot-source update $SOURCE_ID \
+    url=$URL keyring_filename=$KEYRING_FILE
+</code></pre>
+<p>At this time MAAS only supports a boot source containing official MAAS images. As a result, you can only edit a boot source if you have set up a mirror of its images. The location can change, but the keyring remains constant:</p>
+<p>KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg</p>
+<p><a href="#heading--add-a-boot-source"><h2 id="heading--add-a-boot-source">Add a boot source</h2></a></p>
+<p>[note]
+To avoid unnecessary complexity, you should probably delete any existing boot sources before adding a new one.
+[/note]</p>
+<p>Presented below are two use cases for adding a boot source:</p>
+<ol>
+<li>Use a local image mirror (official images)</li>
+<li>If you deleted the default image, recreate it</li>
+</ol>
+<p>The general syntax is:</p>
+<pre><code class="language-bash">maas $PROFILE boot-sources create \
+    url=$URL keyring_filename=$KEYRING_FILE
+</code></pre>
+<p>The output will include a new numeric ID that identifies the boot source ($SOURCE_ID).</p>
+<p>Since MAAS can only practically work with a single boot source, so you will need to delete any existing sources. Note that the location (URL) is the only variable. The only supported keyring is:</p>
+<p>KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg</p>
+<p>If you added a sole boot source, then the fields &lsquo;Sync URL&rsquo; and &lsquo;Keyring Path&rsquo; in the web UI will reflect its values.</p>
+<p><a href="#heading--using-a-local-image-mirror"><h3 id="heading--using-a-local-image-mirror">Using a local image mirror</h3></a></p>
+<p>Once the mirror is set up according to <a href="how-to-mirror-images-locally-5189.html">Local image mirror</a> it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:</p>
+<ol>
+<li>URL=https://$MIRROR/maas/images/ephemeral-v3/stable/</li>
+<li>KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg</li>
+</ol>
+<p>Where $MIRROR is the mirror server&rsquo;s hostname or IP address.</p>
+<p><a href="#heading--recreate-the-default-boot-source"><h3 id="heading--recreate-the-default-boot-source">Recreate the default boot source</h3></a></p>
+<p>Recreate the default boot source if it was ever deleted using the following variable values:</p>
+<ol>
+<li>URL=https://images.maas.io/ephemeral-v3/stable/</li>
+<li>KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg</li>
+</ol>
+    </div>
+  </body>
+</html>
