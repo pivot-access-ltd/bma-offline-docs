@@ -712,12 +712,14 @@ This warning message has no effect on the installation or operation of MAAS, so 
 rad-end
 
 rad-begin /snap/3.1/cli /snap/3.1/ui /deb/3.1/cli /deb/3.1/ui
-<h2>MAAS 3.1.0 Beta release notes</h2>
+<h2>MAAS 3.1 release notes</h2>
 
-We are happy to announce the Beta 5 release of MAAS 3.1. This release provides many critical bug fixes, on top of the new features provided by earlier Beta releases.
+We are happy to announce that MAAS 3.1 is now available. This release provides several new features, as well as a number of critical bug fixes.
 
-<a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.1.0 Beta features and fixes</h3></a>
+<a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.1 features and fixes</h3></a>
 
+ - [Support for LXD clusters](#heading--lxd-clusters): MAAS 3.1 allows you to use LXD clusters with MAAS KVMs.
+ 
  - [Improved image sync performance](#heading--image-sync-performance): After the region has downloaded new images, the rack controllers are now much quicker at syncing the new images.
  
  - [Ability to enlist deployed machines](#heading--enlist-deployed-machines): Users can enlist deployed machines, a top feature poll request.
@@ -743,17 +745,17 @@ Critical and high-priority bug fixes have also been used to extend or repair MAA
 rad-end
 
 rad-begin /deb/3.1/ui /deb/3.1/cli
-<a href="#heading--installing-3-1-0-beta"><h3 id="heading--installing-3-1-0-beta">How to install MAAS 3.1.0-beta1</h3></a>
+<a href="#heading--installing-3-1-0"><h3 id="heading--installing-3-1-0">How to install MAAS 3.1</h3></a>
 
-MAAS 3.1.0-beta1 can be installed by adding the `3.1-next` PPA:
+MAAS 3.1 can be installed by adding the `3.1` PPA:
 
 ```
-sudo add-apt-repository ppa:maas/3.1-next
+sudo add-apt-repository ppa:maas/3.1
 sudo apt update
 sudo apt install maas
 ```
 
-You can then either install MAAS 3.1.0-beta1 fresh (recommended) with:
+You can then either install MAAS 3.1 fresh (recommended) with:
 
 ```
 sudo apt-get -y install maas
@@ -770,16 +772,64 @@ At this point, you may proceed with a normal installation.
 rad-end
 
 rad-begin /snap/3.1/cli /snap/3.1/ui
-MAAS 3.1.0-beta1 can be installed fresh (recommended) with:
+MAAS 3.1 can be installed fresh (recommended) with:
 
 ```
-sudo snap install maas --channel=3.1/beta
+sudo snap install maas --channel=3.1/stable maas
 ```
 
 At this point, you may proceed with a normal installation.
 rad-end
 
 rad-begin /snap/3.1/cli /snap/3.1/ui /deb/3.1/ui /deb/3.1/cli
+<a href="#heading--lxd-clusters"><h3 id="heading--lxd-clusters">LXD clusters</h3></a>
+
+MAAS 3.1 allows MAAS to take advantage of the existing LXD clustering capability.
+
+<a href="#heading--about-lxd-clusters"><h4 id="heading--about-lxd-clusters">About LXD clusters</h4></a>
+
+LXD clusters within the context of MAAS are a way of viewing and managing existing VM host clusters and composing VMs within said cluster.  MAAS will not create a new cluster, but will discover an existing cluster when you provide the info for adding a single clustered host.
+
+<a href="#heading--how-to-add-lxd-clusters"><h4 id="heading--how-to-add-lxd-clusters">How to add LXD clusters</h4></a>
+
+MAAS assumes you have already configured a cluster within the context of LXD. You then need to configure said cluster with a single trust MAAS will use to communicate with said cluster. Adding a LXD cluster is similar to adding a single LXD host, in that you provide authentication the same way for a single host within the cluster, and then select a project. The only difference is the name you provide will be used for the cluster instead of the individual host. MAAS will then connect to the provided host and discover the other hosts within the cluster, and rename the initially defined host with the cluster member name configured in LXD.
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/3/3aba7d6e30eda61623f66cb162ca85814128864a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3aba7d6e30eda61623f66cb162ca85814128864a.png"></a>
+
+First, add an LXD KVM:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/c/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png"></a>
+
+Next, set up credentials and get your MAAS certificate trusted by LXD:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/b/b3ea7559edc066e899e41f41846a268b2459b1a5.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b3ea7559edc066e899e41f41846a268b2459b1a5.png"></a>
+
+Once it is connected, you can select the project in that cluster:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/b/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png"></a>
+
+If the KVM host address is part of a cluster, it will show as a Cluster on the listing page. 
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/0/069bae193cbb09ead3c811fd1a1d28582b946ff4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/069bae193cbb09ead3c811fd1a1d28582b946ff4.png"></a>
+
+<a href="#heading--how-to-compose-vms-in-lxd-clusters"><h4 id="heading--how-to-compose-vms-in-lxd-clusters">How to compose VMs in LXD clusters</h4></a>
+
+Composing a VM in a LXD cluster via MAAS is similar to composing a VM for a single VM host. MAAS does not provide any sort of scheduling of said VM, and will instead target the host you select for composing the VM.
+
+From the KVM host listing page, click on the `+` icon to add a VM to a specific host:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a>
+
+If you are in a specific KVM host page, you can click `+ add virtual machine`:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a>
+
+<a href="#heading--how-to-delete-lxd-clusters"><h3 id="heading--how-to-delete-lxd-clusters">How to delete LXD clusters</h3></a>
+
+To delete a LXD cluster, delete any one VM host within the cluster, this will delete the cluster and all members within the cluster:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/e/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png"></a>
+
 <a href="#heading--enlist-deployed-machines"><h3 id="heading--enlist-deployed-machines">Ability to enlist deployed machines</h3></a>
 
 #### Ten words or fewer
@@ -857,7 +907,7 @@ Users can upload, deploy and reuse a bootable ubuntu image
 
 #### About this feature
 
-MAAS aleady supports deploying custom OS images.  Canonical provides both [lp:maas-image-builder](https://launchpad.net/maas-image-builder) and [gh:canonical/packer-maas](https://github.com/canonical/packer-maas) to support creating custom images. With 3.1.0-beta1, these custom images can include static Ubuntu images, created with whatever tool you choose, and deployed as described below. Even so, Canonical suggests customising Ubuntu using cloud-init user_data or Curtin preseed data whenever possible.
+MAAS aleady supports deploying custom OS images.  Canonical provides both [lp:maas-image-builder](https://launchpad.net/maas-image-builder) and [gh:canonical/packer-maas](https://github.com/canonical/packer-maas) to support creating custom images. With 3.1, these custom images can include static Ubuntu images, created with whatever tool you choose, and deployed as described below. Even so, Canonical suggests customising Ubuntu using cloud-init user_data or Curtin preseed data whenever possible.
 
 #### About static Ubuntu images
 
@@ -921,7 +971,7 @@ Extend machine cloning to UI, moving toward machine profile templates.
 
 #### About this feature 
 
-MAAS 3.1.0-beta1 provides the ability to quickly clone or copy configuration from one machine to one or more machines, via the MAAS UI, providing convenient access to an existing API feature.. This is a step towards machine profile templating work. 
+MAAS 3.1 provides the ability to quickly clone or copy configuration from one machine to one or more machines, via the MAAS UI, providing convenient access to an existing API feature.. This is a step towards machine profile templating work. 
 
 Creating a machine profile is a repetitive task. Based on the responses to our survey -- and multiple forum posts, we have learned that most users create multiple machines of the same configuration in batches. Some users create a machine profile template and loop them through the API, while some create a script to interface with the CLI. However, there is no easy way to do this in the UI except by going through each machine and configuring them individually.   
 
@@ -960,19 +1010,19 @@ In order for cloning to succeed, a few restrictions must be met:
 
 Assume you have two machines available, like this:
 
-![Screenshot from 2021-09-24 16-20-05|690x230](upload://fTtQPaQdvz1umqj3tP8aRn3Wftz.png)
+<a href="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png">
 
 Select the machine *to which you want to clone configuration*, and select "Clone from..."
 
-![Screenshot from 2021-09-24 16-25-01|690x388](upload://pOeMMJjEjhlZwjbFSMpz4YJMO4b.png)
+<a href="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png">
 
 Under "1. Select the source machine" -- choose a machine from the attached list:
 
-![Screenshot from 2021-09-24 16-26-42|497x310](upload://5M8dZhaGrSCywiV4YLR7mS0Jlfl.png)
+<a href="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png">
 
 Under "2. Select what to clone", choose "Network", "Storage", or both (here, we've chosen "Storage"):
 
-![Screenshot from 2021-09-24 16-29-15|690x250](upload://e0qU4wMorc3CGpdVyJ5jYMRPRov.png)
+<a href="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png">
 
 Click "Clone to machine". MAAS will report the status of the attempt.
 
@@ -984,9 +1034,9 @@ Easier MAAS to LXD connection that uses certificates for authentication.
 
 #### About this feature
 
-MAAS 3.1.0-beta1 provides a smoother experience when connecting an existing LXD server to MAAS, guiding the user through manual steps and providing increased connection security with use of certificates. Currently, each MAAS region/rack controller has its own certificate. To add a LXD VM host to MAAS, the user needs to either add the certificate for each controller that can reach the LXD server to the trust list in LXD, or use the trust_password (in which case the controller talking to LXD will automatically add its certificate to the trust).
+MAAS 3.1 provides a smoother experience when connecting an existing LXD server to MAAS, guiding the user through manual steps and providing increased connection security with use of certificates. Currently, each MAAS region/rack controller has its own certificate. To add a LXD VM host to MAAS, the user needs to either add the certificate for each controller that can reach the LXD server to the trust list in LXD, or use the trust_password (in which case the controller talking to LXD will automatically add its certificate to the trust).
 
-This doesn’t provide a great user experience, as the former process is cumbersome, and the latter is not suggested for production use for security reasons.  To improve this, MAAS 3.1.0-beta1 manages per-LXD keys/certificates, and provide a way for users to get the content of certificates, to authorize MAAS in LXD.
+This doesn’t provide a great user experience, as the former process is cumbersome, and the latter is not suggested for production use for security reasons.  To improve this, MAAS 3.1 manages per-LXD keys/certificates, and provide a way for users to get the content of certificates, to authorize MAAS in LXD.
 
 #### About on-the-spot certificate creation
 
@@ -994,7 +1044,7 @@ As a MAAS user, you want to register a LXD host into MAAS using certificates for
 
 While prior versions of MAAS support both ways of authentication (and automatically adds the certificate for the rack talking to LXD when registering the VM host), the user experience is lacking, since there's no control over the certificate being used.  In addition, each rack uses a different certificate, making it hard to manage scenarios where multiple racks can connect to a LXD server.
 
-For these reasons, when adding a LXD host, MAAS 3.1.0-beta1 provides a way to generate a secret key and certificate pair to use specifically for that server, and show the certificate to the user, so that they can add it to the LXD server trust list.  The user experience changes to something like the following:
+For these reasons, when adding a LXD host, MAAS 3.1 provides a way to generate a secret key and certificate pair to use specifically for that server, and show the certificate to the user, so that they can add it to the LXD server trust list.  The user experience changes to something like the following:
 
  - MAAS generates a secret key and certificate pair for use with a LXD server.
  - The user can see the certificate and is guided to add it to the LXD server trust list.
@@ -1008,7 +1058,7 @@ For these reasons, when adding a LXD host, MAAS 3.1.0-beta1 provides a way to ge
 
 As a MAAS user, you may want to register a LXD host into MAAS by providing a private key for a certificate that’s already trusted by the LXD server.  For example, you may already have set up certificates in the server trust for MAAS to use, MAAS should provide a way to import it, instead of generating a new one.
 
-With MAAS 3.1.0-beta1, it’s possible to import an existing key/certificate pair for use with a LXD server when registering it with MAAS.  MAAS stores the key/certificate instead of generating new ones.
+With MAAS 3.1, it’s possible to import an existing key/certificate pair for use with a LXD server when registering it with MAAS.  MAAS stores the key/certificate instead of generating new ones.
 
 [note]
 The imported key must not have a passphrase; otherwise, MAAS will not be able to use it.
@@ -1018,11 +1068,11 @@ The imported key must not have a passphrase; otherwise, MAAS will not be able to
 
 Suppose that you're creating a new LXD KVM, beginning from the top tab in MAAS:
 
-![Screenshot from 2021-09-24 16-50-32|690x165](upload://q737CVJkVM4hGn735pCnXEqfGpR.png) 
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png"></a>
 
 Select "Add KVM", which brings you to the definition screen:
 
-![Screenshot from 2021-09-24 16-52-41|690x257](upload://ik75TCKW0kXNgh72C4eamtkTBG0.png)
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png"></a>
 
 From here, you'll continue by choosing your authentication method.
 
@@ -1030,7 +1080,7 @@ From here, you'll continue by choosing your authentication method.
 
 If you choose "Generate new certificate", as shown above, you'll come to a screen like this one:
 
-![Screenshot from 2021-09-24 16-55-29|690x325](upload://1epqtxyDwz2DGf6Oe9ctVE5AAZv.png)
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png"></a>
 
 You can still choose to use the LXD trust password (entered when you ran `lxd init` during LXD installation).  You can also, though, choose to use the certificate MAAS has just generated for you.  To do that, select the entire contents of the text box, copy it, and paste it into a terminal window -- then hit "Enter":
 
@@ -1070,7 +1120,7 @@ $
 
 The certificate will be created for you.  When you click the "Check authentication" button, you will be brought to this screen:
 
-![Screenshot from 2021-09-24 16-59-29|690x204](upload://oICvVQLdvfdK8I66qjfXHDWcJdt.png)
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png"></a>
 
 from which you can continue with normal LXD KVM setup.
 
@@ -1078,11 +1128,11 @@ from which you can continue with normal LXD KVM setup.
 
 Suppose that, after identifying your LXD KVM, you choose "Provide certificate and private key".  When you do so, the screen will extend to allow you to upload these items:
 
-![Screenshot from 2021-09-24 17-05-39|690x443](upload://zG0WDZqWd0wyDkF26jbak92RmI7.png) 
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png"></a>
 
 Paste or upload your certificate and private key, then click "Next" to validate your authentication criteria, before continuing through the normal LXD KVM creation process.  If your certificate and/or key aren't usable for some reason, MAAS will return an error (in this case, the private key was entered as gibberish, to produce an error output):
 
-![Screenshot from 2021-09-24 17-08-40|622x110](upload://5LFC5i2Et9eDHYwYEKJmtMJaop0.png) 
+<a href="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png"></a>
 
 <a href="#heading--image-sync-performance"><h3 id="heading--image-sync-performance">Improved image sync performance</h3></a>
 
@@ -1092,15 +1142,15 @@ After downloading images, the rack controller syncs them much faster.
 
 #### About this feature
 
-Downloading and syncing images is a known delay element in MAAS.  While images aren't small, and do take some time to download, we decided to try to speed up the process as much as possible.  With the release of the MAAS 3.1 Beta2, after the region has downloaded new images, the rack controllers are now much quicker at syncing the new images.
+Downloading and syncing images is a known delay element in MAAS.  While images aren't small, and do take some time to download, we decided to try to speed up the process as much as possible.  After the region has downloaded new images, the rack controllers are now much quicker at syncing the new images.
 
 #### How to take advantage of this new feature
 
-There is nothing required of our users to experience this improved sync performance, other than upgrading to 3.1 Beta.
+There is nothing required of our users to experience this improved sync performance, other than upgrading to 3.1.
 
 <a href="#heading--maas-3-1-cumulative-bug-fixes"><h3 id="heading--maas-3-1-cumulative-bug-fixes">MAAS 3.1 cumulative bug fixes</h3></a>
 
-MAAS 3.1 beta bug fixes can be found in the following milestones:
+MAAS 3.1 bug fixes can be found in the following milestones:
 
  - [MAAS 3.1 Beta5 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta5)
  - [MAAS 3.1 Beta4 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta4)

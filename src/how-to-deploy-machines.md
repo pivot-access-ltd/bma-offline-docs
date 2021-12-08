@@ -352,7 +352,7 @@ maas $PROFILE machines read | jq '.[] | .hostname, .system_id'
 ```
 rad-end
 
-Once commissioned, you may consider [creating or applying a tag](/t/maas-tags/2896) to this machine.  The next step is [deployment](/t/how-to-deploy-machines/nnnn).
+Once commissioned, you may consider adding a tag to this machine.  The next step is [deployment](/t/how-to-deploy-machines/nnnn).
 
 <a href="#heading--how-to-test-machines"><h2 id="heading--how-to-test-machines">How to test machines</h2></a>
 
@@ -402,7 +402,7 @@ You can download the source for all commissioning and test scripts via the API w
 maas $PROFILE node-script download $SCRIPT_NAME
 ```
 
-The source code to all built-in scripts is available on [launchpad](https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png).
+The source code to all built-in scripts is available on [launchpad](https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts).
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 <a href="#heading--how-to-upload-hardware-testing-scripts"><h3 id="heading--how-to-upload-hardware-testing-scripts">How to upload hardware testing scripts</h3></a>

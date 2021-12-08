@@ -1,6 +1,6 @@
-The MAAS API uses [OAuth](http://en.wikipedia.org/wiki/OAuth) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png) as its authentication mechanism. This isn't third-party (3-legged) OAuth, so the process used is what's commonly referred to as 0-legged OAuth: the consumer accesses protected resources by submitting OAuth signed requests.
+The MAAS API uses [OAuth](http://en.wikipedia.org/wiki/OAuth) as its authentication mechanism. This isn't third-party (3-legged) OAuth, so the process used is what's commonly referred to as 0-legged OAuth: the consumer accesses protected resources by submitting OAuth signed requests.
 
-Note that some API endpoints support unauthenticated requests (i.e. anonymous access). See the [API documentation](https://maas.io/docs/api) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png) for details. 
+Note that some API endpoints support unauthenticated requests (i.e. anonymous access). See the [API documentation](https://maas.io/docs/api) for details. 
 
 #### Two questions you may have:
 

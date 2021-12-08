@@ -103,7 +103,7 @@ The variable fields in the `machines create` command (the `$...` items) are as f
 
 - `$POWER_ID`: This is generally the UUID of the machine being added.
 
-- `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png) in the API reference for details on the available power types and the relevant parameters for each type.
+- `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types) in the API reference for details on the available power types and the relevant parameters for each type.
 rad-end
 
 rad-begin /snap/3.0/ui /deb/3.0/ui /snap/2.9/ui /deb/2.9/ui /snap/3.1/ui /deb/3.1/ui
@@ -144,19 +144,19 @@ rad-begin /snap/3.1/ui /deb/3.1/ui
 
 Assume you have two machines available, like this:
 
-![Screenshot from 2021-09-24 16-20-05|690x230](upload://fTtQPaQdvz1umqj3tP8aRn3Wftz.png)
+<a href="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png">
 
 Select the machine *to which you want to clone configuration*, and select "Clone from..."
 
-![Screenshot from 2021-09-24 16-25-01|690x388](upload://pOeMMJjEjhlZwjbFSMpz4YJMO4b.png)
+<a href="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png">
 
 Under "1. Select the source machine" -- choose a machine from the attached list:
 
-![Screenshot from 2021-09-24 16-26-42|497x310](upload://5M8dZhaGrSCywiV4YLR7mS0Jlfl.png)
+<a href="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png">
 
 Under "2. Select what to clone", choose "Network", "Storage", or both (here, we've chosen "Storage"):
 
-![Screenshot from 2021-09-24 16-29-15|690x250](upload://e0qU4wMorc3CGpdVyJ5jYMRPRov.png)
+<a href="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png">
 
 Click "Clone to machine". MAAS will report the status of the attempt.
 

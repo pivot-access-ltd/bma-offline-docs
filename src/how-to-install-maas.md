@@ -46,13 +46,13 @@ rad-begin /deb/3.0/ui /deb/3.0/cli
 * [How to create a MAAS user](#heading--create-a-maas-user)
 rad-end
 rad-begin /snap/3.1/ui /snap/3.1/cli
-* [How to upgrade from an earlier snap version to MAAS 3.1 Beat](#heading--upgrade-from-earlier-snap-to-3-1)
-* [How to do a fresh snap install of MAAS 3.1 Beta](#heading--fresh-install-3-1-snap)
+* [How to upgrade from an earlier snap version to MAAS 3.1](#heading--upgrade-from-earlier-snap-to-3-1)
+* [How to do a fresh snap install of MAAS 3.1](#heading--fresh-install-3-1-snap)
 rad-end
 rad-begin /deb/3.1/ui /deb/3.1/cli
-* [How to ugprade from MAAS 3.0 to MAAS 3.1 Beta](#heading--upgrade-from-deb-3-0-to-3-1)
-* [How to upgrade from MAAS 2.8 or lower to MAAS 3.1 Beta](#heading--upgrade-from-deb-2-8-to-3-1)
-* [How to do a fresh install of MAAS 3.1 Beta from packages](#heading--fresh-install-3-1-packages)
+* [How to ugprade from MAAS 3.0 to MAAS 3.1](#heading--upgrade-from-deb-3-0-to-3-1)
+* [How to upgrade from MAAS 2.8 or lower to MAAS 3.1](#heading--upgrade-from-deb-2-8-to-3-1)
+* [How to do a fresh install of MAAS 3.1 from packages](#heading--fresh-install-3-1-packages)
 * [How to create a MAAS user](#heading--create-a-maas-user)
 rad-end
 rad-begin /snap/2.9/ui /snap/2.9/cli 
@@ -85,9 +85,9 @@ Here is a proof-of-concept scenario, with all MAAS components installed on a sin
 
 | | Memory (MB) | CPU (GHz) | Disk (GB) |
 |:---|----:|----:|----:|
-| [Region controller](/t/concepts-and-terms/785#heading--controllers) (minus PostgreSQL) | 512 | 0.5 | 5 |
+| [Region controller](/t/maas-concepts-and-terms-reference/785#heading--controllers) (minus PostgreSQL) | 512 | 0.5 | 5 |
 | PostgreSQL | 512 | 0.5 | 5 |
-| [Rack controller](/t/concepts-and-terms/785#heading--controllers") | 512 | 0.5 | 5 |
+| [Rack controller](/t/maas-concepts-and-terms-reference/785#heading--controllers") | 512 | 0.5 | 5 |
 | Ubuntu Server (including logs)| 512 | 0.5 | 5 |
 
 Based on this table, the approximate requirements for this scenario are 2 GB memory, 2 GHz CPU, and 20 GB of disk space.
@@ -98,9 +98,9 @@ Here is a production scenario designed to handle a high number of sustained clie
 
 | | Memory (MB) | CPU (GHz) | Disk (GB) |
 |:---|----:|----:|----:|
-| [Region controller](/t/concepts-and-terms/785#heading--controllers) (minus PostgreSQL) | 2048 | 2.0 | 5 |
+| [Region controller](/t/maas-concepts-and-terms-reference/785#heading--controllers) (minus PostgreSQL) | 2048 | 2.0 | 5 |
 | PostgreSQL | 2048 | 2.0 | 20 |
-| [Rack controller](/t/concepts-and-terms/785#heading--controllers") | 2048 | 2.0 | 20 |
+| [Rack controller](/t/maas-concepts-and-terms-reference/785#heading--controllers") | 2048 | 2.0 | 20 |
 | Ubuntu Server (including logs)| 512 | 0.5 | 5 |
 
 So, based on the above, the approximate requirements for this scenario are:
@@ -110,13 +110,13 @@ So, based on the above, the approximate requirements for this scenario are:
 3. A rack controller installed on a third host, with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
 4. A duplicate rack controller on a fourth host, also with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
 
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/5247) for more details.
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management-reference/5247) for more details.
 
 Some examples of factors that influence hardware specifications include:
 
 1. the number of connecting clients (client activity)
 2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/high-availability/5123).
+3. whether or not you use [high availability/load balancing](/t/how-to-enable-high-availability/5123).
 4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
 
 Also, this discussion does not take into account a possible local image mirror, which would be a large consumer of disk space.
@@ -136,11 +136,11 @@ If you are using a multi-node maas deployment with separate regions and racks, y
 rad-end
 
 rad-begin /snap/3.1/ui /snap/3.1/cli
-<a href="#heading--upgrade-from-earlier-snap-to-3-1"><h2 id="heading--upgrade-from-earlier-snap-to-3-1">How to upgrade from an earlier snap version to MAAS 3.1 Beta</h2></a>
+<a href="#heading--upgrade-from-earlier-snap-to-3-1"><h2 id="heading--upgrade-from-earlier-snap-to-3-1">How to upgrade from an earlier snap version to MAAS 3.1</h2></a>
 
-If you want to upgrade from a earlier snap version to the 3.1 Beta snap (not recommended for production), and you are using a `region+rack` configuration, use this command:
+If you want to upgrade from a earlier snap version to the 3.1 snap, and you are using a `region+rack` configuration, use this command:
 
-    $ sudo snap refresh --channel=3.1/beta maas
+    $ sudo snap refresh --channel=3.1/stable maas
 
 After entering your password, the snap will refresh from the 3.1 channel.  You will **not** need to re-initialise MAAS.
 
@@ -255,16 +255,16 @@ Codename:	focal
 rad-end
 
 rad-begin /deb/3.1/ui /deb/3.1/cli
-<a href="#heading--upgrade-from-deb-3-0-to-3-1"><h2 id="heading--upgrade-from-deb-3-0-to-3-1">How to ugprade from MAAS 3.0 to MAAS 3.1 Beta</h2></a>
+<a href="#heading--upgrade-from-deb-3-0-to-3-1"><h2 id="heading--upgrade-from-deb-3-0-to-3-1">How to ugprade from MAAS 3.0 to MAAS 3.1</h2></a>
 
-To upgrade from MAAS 3.0 to MAAS 3.1 Beta (not recommended for production):
+To upgrade from MAAS 3.0 to MAAS 3.1:
 
 1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
 
-2. Add the MAAS 3.1 Beta PPA to your repository list with the following command, ignoring any apparent error messages:
+2. Add the MAAS 3.1 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```
-sudo apt-add-repository ppa:maas/3.1-next
+sudo apt-add-repository ppa:maas/3.1
 ```
 
 3. Run the MAAS upgrade like this:
@@ -274,13 +274,13 @@ sudo apt update
 sudo apt upgrade maas
 ```
 
-4. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 Beta release.
+4. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 release.
 
-5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1 Beta.
+5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1.
 
-<a href="#heading--upgrade-from-deb-2-8-to-3-1"><h2 id="heading--upgrade-from-deb-2-8-to-3-1">How to upgrade from 2.8 or lower to MAAS 3.1 Beta</h2></a>
+<a href="#heading--upgrade-from-deb-2-8-to-3-1"><h2 id="heading--upgrade-from-deb-2-8-to-3-1">How to upgrade from 2.8 or lower to MAAS 3.1</h2></a>
 
-If you are running MAAS 2.8 or lower, you can upgrade directly to MAAS 3.1 Beta, though it's not recommended for production systems. You must first make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
+If you are running MAAS 2.8 or lower, you can upgrade directly to MAAS 3.1. You must first make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
 
 ```
 lsb_release -a
@@ -325,15 +325,15 @@ Codename:	focal
 ```
 
 [note]
-If you're upgrading from MAAS version 2.8 or lower to version 3.1 Beta: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.
+If you're upgrading from MAAS version 2.8 or lower to version 3.1: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.
 [/note]
 
 1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
 
-2. Add the MAAS 3.1 Beta PPA to your repository list with the following command, ignoring any apparent error messages:
+2. Add the MAAS 3.1 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```
-sudo apt-add-repository ppa:maas/3.1-next
+sudo apt-add-repository ppa:maas/3.1
 ```
 
 3. Run the release upgrade like this, answering any questions with the given default values:
@@ -358,9 +358,9 @@ Release:	20.04
 Codename:	focal
 ```
 
-5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 Beta release.
+5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 release.
 
-6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1 Beta.
+6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1.
 rad-end
 
 rad-begin /snap/2.9/ui /snap/2.9/cli
@@ -454,17 +454,13 @@ After entering your password, the snap will download and install from the 3.0 st
 rad-end
 
 rad-begin /snap/3.1/ui /snap/3.1/cli
-<a href="#heading--fresh-install-3-1-snap"><h2 id="heading--fresh-install-3-1-snap">How to do a fresh snap install of MAAS 3.1 Beta</h2></a>
+<a href="#heading--fresh-install-3-1-snap"><h2 id="heading--fresh-install-3-1-snap">How to do a fresh snap install of MAAS 3.1</h2></a>
 
-To install MAAS 3.1 Beta from a snap, simply enter the following:
+To install MAAS 3.1 from a snap, simply enter the following:
 
-    $ sudo snap install --channel=3.1/beta maas
+    $ sudo snap install --channel=3.1/stable maas
 
-After entering your password, the snap will download and install from the 3.1 beta channel.
-
-[note]
-Note that MAAS 3.1 Beta is *not* recommended for production use.
-[/note]
+After entering your password, the snap will download and install from the 3.1 channel.
 
 rad-end
 

@@ -1,7 +1,7 @@
 An evolving example may be useful to introduce you to MAAS, and it doesn't have to be comprehensive --  just coherent and plausible.  This example will continue to expand and update over time.
 
 rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui/deb/3.1/ui 
-<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img  src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a> 
+<a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a> 
 rad-end
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli 
@@ -53,7 +53,7 @@ You can handle this lowest level with individual [machines](/t/about-machines/nn
 </summary>
 <h4>Creating some sample VMs</h4>
 
-Assuming you've [installed libvirt](https://help.ubuntu.com/lts/serverguide/libvirt.html) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png) on the machine where you'll be running MAAS, you can create virtual machines like this:
+Assuming you've [installed libvirt](https://help.ubuntu.com/lts/serverguide/libvirt.html) on the machine where you'll be running MAAS, you can create virtual machines like this:
 
 Open the Virtual Machine Manager application.  You'll see a screen that looks something like this:
 

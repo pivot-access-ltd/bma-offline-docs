@@ -161,7 +161,7 @@ Another example tells MAAS to assign unallocated IP addresses:
 
 MAAS automatically converts the `ip` constraint to a VLAN constraint (matching the VLAN which corresponds to the subnet can be found -- e.g. `172.16.99.0/24`.) and assigns the IP address to the newly-composed machine upon allocation.
 
-See the Machines [MAAS API documentation](https://maas.io/docs/api#machines) ![external-link-icon|15x15](upload://AsoQHBzEFT6NuSK3ZYyhp7S6BMi.png) for a list of all constraint keys.
+See the Machines [MAAS API documentation](https://maas.io/docs/api#machines) for a list of all constraint keys.
 
 <a href="#heading--find-vm-host-ids"><h3 id="heading--find-vm-host-ids">How to find a VM host ID</h3></a>
 

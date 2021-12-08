@@ -85,7 +85,7 @@ To view the machine tags assigned to a VM host, here's the procedure you'll foll
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e7953d2c5d153b82eac3cb1a3ba105ec194eb077.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e7953d2c5d153b82eac3cb1a3ba105ec194eb077.png"></a>
 
-Note that you can only see the tags for a VM host in the same place that you change it.  For a more comprehensive list of VM host tags, use the [MAAS CLI]({r3}).
+Note that you can only see the tags for a VM host in the same place that you change it.  For a more comprehensive list of VM host tags, use the MAAS CLI.
 
 rad-end
 

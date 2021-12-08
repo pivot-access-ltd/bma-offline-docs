@@ -4,14 +4,14 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 <a href="#heading--how-to-engage-with-maas"><h2 id="heading--how-to-engage-with-maas">How to engage with MAAS</h2></a>
 
-- [Find out what's new in MAAS](/t/whats-new-in-maas/5292)
-- [Get started with MAAS](/t/give-me-an-example-of-maas-snap-3-0-ui/5092)
-- [Get professional support](/t/-/5448)
-- [Report a bug](/t/report-a-bug/4446)
-- [Request a feature](/t/request-a-feature/4447)
+- [Find out what's new in MAAS](/t/what-is-new-with-maas/5292)
+- [Get started with MAAS](/t/get-started-with-maas/5092)
+- [Get professional support](/t/how-to-contact-us/5448)
+- [Report a bug](https://maas.io/docs/report-a-bug)
+- [Request a feature](https://maas.io/docs/request-a-feature)
 - [Ask questions on the forum](https://discourse.maas.io)
 - [Push some code](https://launchpad.net/maas)
-- [Improve our documentation](/t/-/5452)
+- [Improve our documentation](/t/how-to-help-improve-the-doc/5452)
 
 ## Navigation
 

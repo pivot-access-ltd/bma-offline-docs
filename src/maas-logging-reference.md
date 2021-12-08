@@ -7,7 +7,6 @@ MAAS has a robust logging capability, which presents several different views, in
 3. [What are commissioning logs?](/t/commissioning-log-reference/nnnn)
 4. [What are test logs?](/t/test-log-reference/nnnn)
 5. [What are event logs?](/t/event-log-reference/nnnn)
-6. [What are audit event logs?](t/audit-event-log-reference/nnnn)
 
 The discussion of these logs and their contents can be very extensive, so each type of logging has its own documentation section, reachable from the left-hand menu -- or from the list of questions above.
 
