@@ -193,7 +193,7 @@ If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 2
 1. Upgrade the release:
 
 ```
-sudo do-release-upgrade --allow-third-parties
+sudo do-release-upgrade --allow-third-party
 ```
 
 2. Accept the defaults for any questions asked by the upgrade script.
@@ -230,7 +230,7 @@ sudo apt-add-repository ppa:maas/3.0
 3. Run the release upgrade like this, answering any questions with the given default values:
 
 ```
-sudo do-release-upgrade --allow-third-parties
+sudo do-release-upgrade --allow-third-party
 ```
 
 4. Check whether your upgrade has been successful by entering:
@@ -302,7 +302,7 @@ If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 2
 1. Upgrade the release:
 
 ```
-sudo do-release-upgrade --allow-third-parties
+sudo do-release-upgrade --allow-third-party
 ```
 
 2. Accept the defaults for any questions asked by the upgrade script.
@@ -339,7 +339,7 @@ sudo apt-add-repository ppa:maas/3.1
 3. Run the release upgrade like this, answering any questions with the given default values:
 
 ```
-sudo do-release-upgrade --allow-third-parties
+sudo do-release-upgrade --allow-third-party
 ```
 
 4. Check whether your upgrade has been successful by entering:
@@ -420,7 +420,7 @@ deb http://ppa.launchpad.net/maas/2.9/ubuntu bionic main
 Still, that's enough for `do-release-upgrade` to figure out that there is a 2.9 PPA, and when it checks, it will find a Focal version of MAAS, which it will bring over and install in place of 2.8.  It isn't necessary to stop MAAS or do anything else, except go ahead and run the upgrade:
 
 ```
-sudo do-release-upgrade --allow-third-parties
+sudo do-release-upgrade --allow-third-party
 ```
 
 This command will produce a lot of output, ask you a few questions (for which the defaults are usually fine), and eventually ask you to reboot.  Once your machine has come back up, you can check whether your upgrade has been successful by entering:
