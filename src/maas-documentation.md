@@ -1,17 +1,17 @@
-MAAS is **Metal As A Service**, a service that lets you treat physical servers like virtual machines -- instances -- in the cloud.  No need for you to manage servers individually: MAAS turns your bare metal into an elastic, cloud-like resource.
+MAAS is **Metal As A Service**, a service that treats physical servers like virtual machines (instances) in the cloud.  No need to manage servers individually: MAAS turns bare metal into an elastic, cloud-like resource.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
 <a href="#heading--how-to-engage-with-maas"><h2 id="heading--how-to-engage-with-maas">How to engage with MAAS</h2></a>
 
-- [Find out what's new in MAAS](/t/what-is-new-with-maas/5292)
+- [What's new in MAAS?](/t/what-is-new-with-maas/5292)
 - [Get started with MAAS](/t/get-started-with-maas/5092)
 - [Get professional support](/t/how-to-contact-us/5448)
 - [Report a bug](https://maas.io/docs/report-a-bug)
 - [Request a feature](https://maas.io/docs/request-a-feature)
-- [Ask questions on the forum](https://discourse.maas.io)
+- [Ask questions (forum)](https://discourse.maas.io)
 - [Push some code](https://launchpad.net/maas)
-- [Improve our documentation](/t/how-to-help-improve-the-doc/5452)
+- [Improve our doc](/t/how-to-help-improve-the-doc/5452)
 
 ## Navigation
 
@@ -56,7 +56,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 - [Import images](/t/-/5124)
 - [Build MAAS images](/t/-/5100)
-- [Create custom Ubuntu images](/t/-/5104)
+- [Create custom images](/t/-/5104)
 - [Use image streams](/t/-/5220)
 - [Mirror images locally](/t/-/5188)
 - [Manage VMWare images](/t/-/5144)
@@ -92,7 +92,8 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 
 - [Get help](/t/-/5428)
 - [Tips, tricks, and traps](/t/-/5329)
-- [Upgrade MAAS](/t/upgrading-maas/5436)
+- [Upgrade MAAS](/t/how-to-upgrade-maas/5436)
+- [Upgrade older MAAS installs](t/upgrading-older-maas-installs/5706)
 
 ### [Release notes](/t/-/5292)
 
@@ -121,10 +122,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3814|/docs/snap/3.0/cli/about-maas|
 |https://discourse.maas.io/t/-/3815|/docs/deb/3.0/cli/about-maas|
 |https://discourse.maas.io/t/-/3816|/docs/deb/3.0/ui/about-maas|
-|https://discourse.maas.io/t/-/5064|/docs/snap/3.1/ui/about-maas| 
-|https://discourse.maas.io/t/-/5065|/docs/snap/3.1/cli/about-maas| 
-|https://discourse.maas.io/t/-/5066|/docs/deb/3.1/ui/about-maas| 
-|https://discourse.maas.io/t/-/5067|/docs/deb/3.1/cli/about-maas| 
+|https://discourse.maas.io/t/-/5064|/docs/snap/3.1/ui/about-maas|
+|https://discourse.maas.io/t/-/5065|/docs/snap/3.1/cli/about-maas|
+|https://discourse.maas.io/t/-/5066|/docs/deb/3.1/ui/about-maas|
+|https://discourse.maas.io/t/-/5067|/docs/deb/3.1/cli/about-maas|
 |https://discourse.maas.io/t/-/2734|/docs/snap/2.9/cli/about-machines|
 |https://discourse.maas.io/t/-/2735|/docs/snap/2.9/ui/about-machines|
 |https://discourse.maas.io/t/-/2740|/docs/deb/2.9/cli/about-machines|
@@ -133,10 +134,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4030|/docs/snap/3.0/ui/about-machines|
 |https://discourse.maas.io/t/-/4031|/docs/deb/3.0/cli/about-machines|
 |https://discourse.maas.io/t/-/4032|/docs/deb/3.0/ui/about-machines|
-|https://discourse.maas.io/t/-/5080|/docs/snap/3.1/ui/about-machines| 
-|https://discourse.maas.io/t/-/5081|/docs/snap/3.1/cli/about-machines| 
-|https://discourse.maas.io/t/-/5082|/docs/deb/3.1/ui/about-machines| 
-|https://discourse.maas.io/t/-/5083|/docs/deb/3.1/cli/about-machines| 
+|https://discourse.maas.io/t/-/5080|/docs/snap/3.1/ui/about-machines|
+|https://discourse.maas.io/t/-/5081|/docs/snap/3.1/cli/about-machines|
+|https://discourse.maas.io/t/-/5082|/docs/deb/3.1/ui/about-machines|
+|https://discourse.maas.io/t/-/5083|/docs/deb/3.1/cli/about-machines|
 |https://discourse.maas.io/t/-/2950|/docs/snap/2.9/cli/about-networking|
 |https://discourse.maas.io/t/-/2951|/docs/snap/2.9/ui/about-networking|
 |https://discourse.maas.io/t/-/2956|/docs/deb/2.9/cli/about-networking|
@@ -145,10 +146,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4046|/docs/snap/3.0/ui/about-networking|
 |https://discourse.maas.io/t/-/4047|/docs/deb/3.0/cli/about-networking|
 |https://discourse.maas.io/t/-/4048|/docs/deb/3.0/ui/about-networking|
-|https://discourse.maas.io/t/-/5084|/docs/snap/3.1/ui/about-networking| 
-|https://discourse.maas.io/t/-/5085|/docs/snap/3.1/cli/about-networking| 
-|https://discourse.maas.io/t/-/5086|/docs/deb/3.1/ui/about-networking| 
-|https://discourse.maas.io/t/-/5087|/docs/deb/3.1/cli/about-networking| 
+|https://discourse.maas.io/t/-/5084|/docs/snap/3.1/ui/about-networking|
+|https://discourse.maas.io/t/-/5085|/docs/snap/3.1/cli/about-networking|
+|https://discourse.maas.io/t/-/5086|/docs/deb/3.1/ui/about-networking|
+|https://discourse.maas.io/t/-/5087|/docs/deb/3.1/cli/about-networking|
 |https://discourse.maas.io/t/-/2890|/docs/snap/2.9/cli/about-tags|
 |https://discourse.maas.io/t/-/2891|/docs/snap/2.9/ui/about-tags|
 |https://discourse.maas.io/t/-/2896|/docs/deb/2.9/cli/about-tags|
@@ -157,16 +158,16 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4022|/docs/snap/3.0/ui/about-tags|
 |https://discourse.maas.io/t/-/4023|/docs/deb/3.0/cli/about-tags|
 |https://discourse.maas.io/t/-/4024|/docs/deb/3.0/ui/about-tags|
-|https://discourse.maas.io/t/-/5088|/docs/snap/3.1/ui/about-tags| 
-|https://discourse.maas.io/t/-/5089|/docs/snap/3.1/cli/about-tags| 
-|https://discourse.maas.io/t/-/5090|/docs/deb/3.1/ui/about-tags| 
-|https://discourse.maas.io/t/-/5091|/docs/deb/3.1/cli/about-tags| 
+|https://discourse.maas.io/t/-/5088|/docs/snap/3.1/ui/about-tags|
+|https://discourse.maas.io/t/-/5089|/docs/snap/3.1/cli/about-tags|
+|https://discourse.maas.io/t/-/5090|/docs/deb/3.1/ui/about-tags|
+|https://discourse.maas.io/t/-/5091|/docs/deb/3.1/cli/about-tags|
 |https://discourse.maas.io/t/-/2286|/docs/snap/2.7/cli/adding-a-vm-host|
 |https://discourse.maas.io/t/-/2287|/docs/snap/2.7/ui/adding-a-vm-host|
 |https://discourse.maas.io/t/-/2288|/docs/snap/2.8/cli/adding-a-vm-host|
 |https://discourse.maas.io/t/-/2289|/docs/snap/2.8/ui/adding-a-vm-host|
 |https://discourse.maas.io/t/-/2292|/docs/deb/2.7/cli/adding-a-vm-host|
-|https://discourse.maas.io/t/-/2293|/docs/deb/2.7/ui/adding-a-vm-host|
+|https://discourse.maas.io/t/-/2293|/docs/deb/2.7/ui/addupgraing-a-vm-host|
 |https://discourse.maas.io/t/-/2294|/docs/deb/2.8/cli/adding-a-vm-host|
 |https://discourse.maas.io/t/-/2295|/docs/deb/2.8/ui/adding-a-vm-host|
 |https://discourse.maas.io/t/-/2274|/docs/snap/2.7/cli/add-machines|
@@ -254,10 +255,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3834|/docs/snap/3.0/ui/availability-zones|
 |https://discourse.maas.io/t/-/3835|/docs/deb/3.0/cli/availability-zones|
 |https://discourse.maas.io/t/-/3836|/docs/deb/3.0/ui/availability-zones|
-|https://discourse.maas.io/t/-/5152|/docs/snap/3.1/ui/availability-zones| 
-|https://discourse.maas.io/t/-/5153|/docs/snap/3.1/cli/availability-zones| 
-|https://discourse.maas.io/t/-/5154|/docs/deb/3.1/ui/availability-zones| 
-|https://discourse.maas.io/t/-/5155|/docs/deb/3.1/cli/availability-zones| 
+|https://discourse.maas.io/t/-/5152|/docs/snap/3.1/ui/availability-zones|
+|https://discourse.maas.io/t/-/5153|/docs/snap/3.1/cli/availability-zones|
+|https://discourse.maas.io/t/-/5154|/docs/deb/3.1/ui/availability-zones|
+|https://discourse.maas.io/t/-/5155|/docs/deb/3.1/cli/availability-zones|
 |https://discourse.maas.io/t/-/2334|/docs/snap/2.7/cli/backup|
 |https://discourse.maas.io/t/-/2335|/docs/snap/2.7/ui/backup|
 |https://discourse.maas.io/t/-/2336|/docs/snap/2.8/cli/backup|
@@ -274,10 +275,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3838|/docs/snap/3.0/ui/backup|
 |https://discourse.maas.io/t/-/3839|/docs/deb/3.0/cli/backup|
 |https://discourse.maas.io/t/-/3840|/docs/deb/3.0/ui/backup|
-|https://discourse.maas.io/t/-/5096|/docs/snap/3.1/ui/backup| 
-|https://discourse.maas.io/t/-/5097|/docs/snap/3.1/cli/backup| 
-|https://discourse.maas.io/t/-/5098|/docs/deb/3.1/ui/backup| 
-|https://discourse.maas.io/t/-/5099|/docs/deb/3.1/cli/backup| 
+|https://discourse.maas.io/t/-/5096|/docs/snap/3.1/ui/backup|
+|https://discourse.maas.io/t/-/5097|/docs/snap/3.1/cli/backup|
+|https://discourse.maas.io/t/-/5098|/docs/deb/3.1/ui/backup|
+|https://discourse.maas.io/t/-/5099|/docs/deb/3.1/cli/backup|
 |https://discourse.maas.io/t/-/2346|/docs/snap/2.7/cli/block-devices|
 |https://discourse.maas.io/t/-/2347|/docs/snap/2.7/ui/block-devices|
 |https://discourse.maas.io/t/-/2348|/docs/snap/2.8/cli/block-devices|
@@ -370,10 +371,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3890|/docs/snap/3.0/ui/configuring-tls-encryption|
 |https://discourse.maas.io/t/-/3891|/docs/deb/3.0/cli/configuring-tls-encryption|
 |https://discourse.maas.io/t/-/3892|/docs/deb/3.0/ui/configuring-tls-encryption|
-|https://discourse.maas.io/t/-/5116|/docs/snap/3.1/ui/configuring-tls-encryption| 
-|https://discourse.maas.io/t/-/5117|/docs/snap/3.1/cli/configuring-tls-encryption| 
-|https://discourse.maas.io/t/-/5118|/docs/deb/3.1/ui/configuring-tls-encryption| 
-|https://discourse.maas.io/t/-/5119|/docs/deb/3.1/cli/configuring-tls-encryption| 
+|https://discourse.maas.io/t/-/5116|/docs/snap/3.1/ui/configuring-tls-encryption|
+|https://discourse.maas.io/t/-/5117|/docs/snap/3.1/cli/configuring-tls-encryption|
+|https://discourse.maas.io/t/-/5118|/docs/deb/3.1/ui/configuring-tls-encryption|
+|https://discourse.maas.io/t/-/5119|/docs/deb/3.1/cli/configuring-tls-encryption|
 |https://discourse.maas.io/t/-/5437|/docs/deb/2.9/cli/contact-us|
 |https://discourse.maas.io/t/-/5438|/docs/deb/2.9/ui/contact-us|
 |https://discourse.maas.io/t/-/5439|/docs/deb/3.0/cli/contact-us|
@@ -402,10 +403,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3898|/docs/snap/3.0/ui/controllers|
 |https://discourse.maas.io/t/-/3899|/docs/deb/3.0/cli/controllers|
 |https://discourse.maas.io/t/-/3900|/docs/deb/3.0/ui/controllers|
-|https://discourse.maas.io/t/-/5072|/docs/snap/3.1/ui/controllers| 
-|https://discourse.maas.io/t/-/5073|/docs/snap/3.1/cli/controllers| 
-|https://discourse.maas.io/t/-/5074|/docs/deb/3.1/ui/controllers| 
-|https://discourse.maas.io/t/-/5075|/docs/deb/3.1/cli/controllers| 
+|https://discourse.maas.io/t/-/5072|/docs/snap/3.1/ui/controllers|
+|https://discourse.maas.io/t/-/5073|/docs/snap/3.1/cli/controllers|
+|https://discourse.maas.io/t/-/5074|/docs/deb/3.1/ui/controllers|
+|https://discourse.maas.io/t/-/5075|/docs/deb/3.1/cli/controllers|
 |https://discourse.maas.io/t/-/2562|/docs/snap/2.7/cli/creating-a-custom-ubuntu-image|
 |https://discourse.maas.io/t/-/2563|/docs/snap/2.7/ui/creating-a-custom-ubuntu-image|
 |https://discourse.maas.io/t/-/2564|/docs/snap/2.8/cli/creating-a-custom-ubuntu-image|
@@ -422,10 +423,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3902|/docs/snap/3.0/ui/creating-a-custom-ubuntu-image|
 |https://discourse.maas.io/t/-/3903|/docs/deb/3.0/cli/creating-a-custom-ubuntu-image|
 |https://discourse.maas.io/t/-/3904|/docs/deb/3.0/ui/creating-a-custom-ubuntu-image|
-|https://discourse.maas.io/t/-/5104|/docs/snap/3.1/ui/creating-a-custom-ubuntu-image| 
-|https://discourse.maas.io/t/-/5105|/docs/snap/3.1/cli/creating-a-custom-ubuntu-image| 
-|https://discourse.maas.io/t/-/5106|/docs/deb/3.1/ui/creating-a-custom-ubuntu-image| 
-|https://discourse.maas.io/t/-/5107|/docs/deb/3.1/cli/creating-a-custom-ubuntu-image| 
+|https://discourse.maas.io/t/-/5104|/docs/snap/3.1/ui/creating-a-custom-ubuntu-image|
+|https://discourse.maas.io/t/-/5105|/docs/snap/3.1/cli/creating-a-custom-ubuntu-image|
+|https://discourse.maas.io/t/-/5106|/docs/deb/3.1/ui/creating-a-custom-ubuntu-image|
+|https://discourse.maas.io/t/-/5107|/docs/deb/3.1/cli/creating-a-custom-ubuntu-image|
 |https://discourse.maas.io/t/-/2574|/docs/snap/2.7/cli/creating-and-deleting-vms|
 |https://discourse.maas.io/t/-/2575|/docs/snap/2.7/ui/creating-and-deleting-vms|
 |https://discourse.maas.io/t/-/2576|/docs/snap/2.8/cli/creating-and-deleting-vms|
@@ -442,10 +443,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3906|/docs/snap/3.0/ui/creating-and-deleting-vms|
 |https://discourse.maas.io/t/-/3907|/docs/deb/3.0/cli/creating-and-deleting-vms|
 |https://discourse.maas.io/t/-/3908|/docs/deb/3.0/ui/creating-and-deleting-vms|
-|https://discourse.maas.io/t/-/5148|/docs/snap/3.1/ui/creating-and-deleting-vms| 
-|https://discourse.maas.io/t/-/5149|/docs/snap/3.1/cli/creating-and-deleting-vms| 
-|https://discourse.maas.io/t/-/5150|/docs/deb/3.1/ui/creating-and-deleting-vms| 
-|https://discourse.maas.io/t/-/5151|/docs/deb/3.1/cli/creating-and-deleting-vms| 
+|https://discourse.maas.io/t/-/5148|/docs/snap/3.1/ui/creating-and-deleting-vms|
+|https://discourse.maas.io/t/-/5149|/docs/snap/3.1/cli/creating-and-deleting-vms|
+|https://discourse.maas.io/t/-/5150|/docs/deb/3.1/ui/creating-and-deleting-vms|
+|https://discourse.maas.io/t/-/5151|/docs/deb/3.1/cli/creating-and-deleting-vms|
 |https://discourse.maas.io/t/-/2586|/docs/snap/2.7/cli/custom-machine-setup|
 |https://discourse.maas.io/t/-/2587|/docs/snap/2.7/ui/custom-machine-setup|
 |https://discourse.maas.io/t/-/2588|/docs/snap/2.8/cli/custom-machine-setup|
@@ -530,10 +531,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3934|/docs/snap/3.0/ui/give-me-an-example-of-maas|
 |https://discourse.maas.io/t/-/3935|/docs/deb/3.0/cli/give-me-an-example-of-maas|
 |https://discourse.maas.io/t/-/3936|/docs/deb/3.0/ui/give-me-an-example-of-maas|
-|https://discourse.maas.io/t/-/5092|/docs/snap/3.1/ui/give-me-an-example-of-maas| 
-|https://discourse.maas.io/t/-/5093|/docs/snap/3.1/cli/give-me-an-example-of-maas| 
-|https://discourse.maas.io/t/-/5094|/docs/deb/3.1/ui/give-me-an-example-of-maas| 
-|https://discourse.maas.io/t/-/5095|/docs/deb/3.1/cli/give-me-an-example-of-maas| 
+|https://discourse.maas.io/t/-/5092|/docs/snap/3.1/ui/give-me-an-example-of-maas|
+|https://discourse.maas.io/t/-/5093|/docs/snap/3.1/cli/give-me-an-example-of-maas|
+|https://discourse.maas.io/t/-/5094|/docs/deb/3.1/ui/give-me-an-example-of-maas|
+|https://discourse.maas.io/t/-/5095|/docs/deb/3.1/cli/give-me-an-example-of-maas|
 |https://discourse.maas.io/t/-/2658|/docs/snap/2.7/cli/hardening-your-maas-installation|
 |https://discourse.maas.io/t/-/2659|/docs/snap/2.7/ui/hardening-your-maas-installation|
 |https://discourse.maas.io/t/-/2660|/docs/snap/2.8/cli/hardening-your-maas-installation|
@@ -550,10 +551,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3938|/docs/snap/3.0/ui/hardening-your-maas-installation|
 |https://discourse.maas.io/t/-/3939|/docs/deb/3.0/cli/hardening-your-maas-installation|
 |https://discourse.maas.io/t/-/3940|/docs/deb/3.0/ui/hardening-your-maas-installation|
-|https://discourse.maas.io/t/-/5196|/docs/snap/3.1/ui/hardening-your-maas-installation| 
-|https://discourse.maas.io/t/-/5197|/docs/snap/3.1/cli/hardening-your-maas-installation| 
-|https://discourse.maas.io/t/-/5198|/docs/deb/3.1/ui/hardening-your-maas-installation| 
-|https://discourse.maas.io/t/-/5199|/docs/deb/3.1/cli/hardening-your-maas-installation| 
+|https://discourse.maas.io/t/-/5196|/docs/snap/3.1/ui/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/5197|/docs/snap/3.1/cli/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/5198|/docs/deb/3.1/ui/hardening-your-maas-installation|
+|https://discourse.maas.io/t/-/5199|/docs/deb/3.1/cli/hardening-your-maas-installation|
 |https://discourse.maas.io/t/-/2670|/docs/snap/2.7/cli/hardware-testing|
 |https://discourse.maas.io/t/-/2671|/docs/snap/2.7/ui/hardware-testing|
 |https://discourse.maas.io/t/-/2672|/docs/snap/2.8/cli/hardware-testing|
@@ -590,10 +591,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3946|/docs/snap/3.0/ui/high-availability|
 |https://discourse.maas.io/t/-/3947|/docs/deb/3.0/cli/high-availability|
 |https://discourse.maas.io/t/-/3948|/docs/deb/3.0/ui/high-availability|
-|https://discourse.maas.io/t/-/5120|/docs/snap/3.1/ui/high-availability| 
-|https://discourse.maas.io/t/-/5121|/docs/snap/3.1/cli/high-availability| 
-|https://discourse.maas.io/t/-/5122|/docs/deb/3.1/ui/high-availability| 
-|https://discourse.maas.io/t/-/5123|/docs/deb/3.1/cli/high-availability| 
+|https://discourse.maas.io/t/-/5120|/docs/snap/3.1/ui/high-availability|
+|https://discourse.maas.io/t/-/5121|/docs/snap/3.1/cli/high-availability|
+|https://discourse.maas.io/t/-/5122|/docs/deb/3.1/ui/high-availability|
+|https://discourse.maas.io/t/-/5123|/docs/deb/3.1/cli/high-availability|
 |https://discourse.maas.io/t/-/2590|/docs/snap/2.9/cli/how-to-customise-machines|
 |https://discourse.maas.io/t/-/2591|/docs/snap/2.9/ui/how-to-customise-machines|
 |https://discourse.maas.io/t/-/2596|/docs/deb/2.9/cli/how-to-customise-machines|
@@ -602,10 +603,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3910|/docs/snap/3.0/ui/how-to-customise-machines|
 |https://discourse.maas.io/t/-/3911|/docs/deb/3.0/cli/how-to-customise-machines|
 |https://discourse.maas.io/t/-/3912|/docs/deb/3.0/ui/how-to-customise-machines|
-|https://discourse.maas.io/t/-/5108|/docs/snap/3.1/ui/how-to-customise-machines| 
-|https://discourse.maas.io/t/-/5109|/docs/snap/3.1/cli/how-to-customise-machines| 
-|https://discourse.maas.io/t/-/5110|/docs/deb/3.1/ui/how-to-customise-machines| 
-|https://discourse.maas.io/t/-/5111|/docs/deb/3.1/cli/how-to-customise-machines| 
+|https://discourse.maas.io/t/-/5108|/docs/snap/3.1/ui/how-to-customise-machines|
+|https://discourse.maas.io/t/-/5109|/docs/snap/3.1/cli/how-to-customise-machines|
+|https://discourse.maas.io/t/-/5110|/docs/deb/3.1/ui/how-to-customise-machines|
+|https://discourse.maas.io/t/-/5111|/docs/deb/3.1/cli/how-to-customise-machines|
 |https://discourse.maas.io/t/-/2602|/docs/snap/2.9/cli/how-to-deploy-machines|
 |https://discourse.maas.io/t/-/2603|/docs/snap/2.9/ui/how-to-deploy-machines|
 |https://discourse.maas.io/t/-/2608|/docs/deb/2.9/cli/how-to-deploy-machines|
@@ -614,10 +615,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3914|/docs/snap/3.0/ui/how-to-deploy-machines|
 |https://discourse.maas.io/t/-/3915|/docs/deb/3.0/cli/how-to-deploy-machines|
 |https://discourse.maas.io/t/-/3916|/docs/deb/3.0/ui/how-to-deploy-machines|
-|https://discourse.maas.io/t/-/5112|/docs/snap/3.1/ui/how-to-deploy-machines| 
-|https://discourse.maas.io/t/-/5113|/docs/snap/3.1/cli/how-to-deploy-machines| 
-|https://discourse.maas.io/t/-/5114|/docs/deb/3.1/ui/how-to-deploy-machines| 
-|https://discourse.maas.io/t/-/5115|/docs/deb/3.1/cli/how-to-deploy-machines| 
+|https://discourse.maas.io/t/-/5112|/docs/snap/3.1/ui/how-to-deploy-machines|
+|https://discourse.maas.io/t/-/5113|/docs/snap/3.1/cli/how-to-deploy-machines|
+|https://discourse.maas.io/t/-/5114|/docs/deb/3.1/ui/how-to-deploy-machines|
+|https://discourse.maas.io/t/-/5115|/docs/deb/3.1/cli/how-to-deploy-machines|
 |https://discourse.maas.io/t/-/2902|/docs/snap/2.9/cli/how-to-manage-dhcp|
 |https://discourse.maas.io/t/-/2903|/docs/snap/2.9/ui/how-to-manage-dhcp|
 |https://discourse.maas.io/t/-/2908|/docs/deb/2.9/cli/how-to-manage-dhcp|
@@ -626,10 +627,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4034|/docs/snap/3.0/ui/how-to-manage-dhcp|
 |https://discourse.maas.io/t/-/4035|/docs/deb/3.0/cli/how-to-manage-dhcp|
 |https://discourse.maas.io/t/-/4036|/docs/deb/3.0/ui/how-to-manage-dhcp|
-|https://discourse.maas.io/t/-/5132|/docs/snap/3.1/ui/how-to-manage-dhcp| 
-|https://discourse.maas.io/t/-/5133|/docs/snap/3.1/cli/how-to-manage-dhcp| 
-|https://discourse.maas.io/t/-/5134|/docs/deb/3.1/ui/how-to-manage-dhcp| 
-|https://discourse.maas.io/t/-/5135|/docs/deb/3.1/cli/how-to-manage-dhcp| 
+|https://discourse.maas.io/t/-/5132|/docs/snap/3.1/ui/how-to-manage-dhcp|
+|https://discourse.maas.io/t/-/5133|/docs/snap/3.1/cli/how-to-manage-dhcp|
+|https://discourse.maas.io/t/-/5134|/docs/deb/3.1/ui/how-to-manage-dhcp|
+|https://discourse.maas.io/t/-/5135|/docs/deb/3.1/cli/how-to-manage-dhcp|
 |https://discourse.maas.io/t/-/4844|/docs/snap/3.0/ui/how-to-manage-machines|
 |https://discourse.maas.io/t/-/4845|/docs/snap/3.0/cli/how-to-manage-machines|
 |https://discourse.maas.io/t/-/4846|/docs/snap/2.9/ui/how-to-manage-machines|
@@ -638,10 +639,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4849|/docs/deb/3.0/cli/how-to-manage-machines|
 |https://discourse.maas.io/t/-/4850|/docs/deb/2.9/ui/how-to-manage-machines|
 |https://discourse.maas.io/t/-/4851|/docs/deb/2.9/cli/how-to-manage-machines|
-|https://discourse.maas.io/t/-/5160|/docs/snap/3.1/ui/how-to-manage-machines| 
-|https://discourse.maas.io/t/-/5161|/docs/snap/3.1/cli/how-to-manage-machines| 
-|https://discourse.maas.io/t/-/5162|/docs/deb/3.1/ui/how-to-manage-machines| 
-|https://discourse.maas.io/t/-/5163|/docs/deb/3.1/cli/how-to-manage-machines| 
+|https://discourse.maas.io/t/-/5160|/docs/snap/3.1/ui/how-to-manage-machines|
+|https://discourse.maas.io/t/-/5161|/docs/snap/3.1/cli/how-to-manage-machines|
+|https://discourse.maas.io/t/-/5162|/docs/deb/3.1/ui/how-to-manage-machines|
+|https://discourse.maas.io/t/-/5163|/docs/deb/3.1/cli/how-to-manage-machines|
 |https://discourse.maas.io/t/-/4920|/docs/deb/2.9/cli/how-to-manage-networks|
 |https://discourse.maas.io/t/-/4921|/docs/deb/2.9/ui/how-to-manage-networks|
 |https://discourse.maas.io/t/-/4922|/docs/deb/3.0/cli/how-to-manage-networks|
@@ -650,10 +651,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4925|/docs/snap/2.9/ui/how-to-manage-networks|
 |https://discourse.maas.io/t/-/4926|/docs/snap/3.0/cli/how-to-manage-networks|
 |https://discourse.maas.io/t/-/4927|/docs/snap/3.0/ui/how-to-manage-networks|
-|https://discourse.maas.io/t/-/5164|/docs/snap/3.1/ui/how-to-manage-networks| 
-|https://discourse.maas.io/t/-/5165|/docs/snap/3.1/cli/how-to-manage-networks| 
-|https://discourse.maas.io/t/-/5166|/docs/deb/3.1/ui/how-to-manage-networks| 
-|https://discourse.maas.io/t/-/5167|/docs/deb/3.1/cli/how-to-manage-networks| 
+|https://discourse.maas.io/t/-/5164|/docs/snap/3.1/ui/how-to-manage-networks|
+|https://discourse.maas.io/t/-/5165|/docs/snap/3.1/cli/how-to-manage-networks|
+|https://discourse.maas.io/t/-/5166|/docs/deb/3.1/ui/how-to-manage-networks|
+|https://discourse.maas.io/t/-/5167|/docs/deb/3.1/cli/how-to-manage-networks|
 |https://discourse.maas.io/t/-/4947|/docs/deb/2.9/cli/how-to-manage-tags|
 |https://discourse.maas.io/t/-/4948|/docs/deb/2.9/ui/how-to-manage-tags|
 |https://discourse.maas.io/t/-/4949|/docs/deb/3.0/cli/how-to-manage-tags|
@@ -662,10 +663,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4952|/docs/snap/2.9/ui/how-to-manage-tags|
 |https://discourse.maas.io/t/-/4953|/docs/snap/3.0/cli/how-to-manage-tags|
 |https://discourse.maas.io/t/-/4954|/docs/snap/3.0/ui/how-to-manage-tags|
-|https://discourse.maas.io/t/-/5180|/docs/snap/3.1/ui/how-to-manage-tags| 
-|https://discourse.maas.io/t/-/5181|/docs/snap/3.1/cli/how-to-manage-tags| 
-|https://discourse.maas.io/t/-/5182|/docs/deb/3.1/ui/how-to-manage-tags| 
-|https://discourse.maas.io/t/-/5183|/docs/deb/3.1/cli/how-to-manage-tags| 
+|https://discourse.maas.io/t/-/5180|/docs/snap/3.1/ui/how-to-manage-tags|
+|https://discourse.maas.io/t/-/5181|/docs/snap/3.1/cli/how-to-manage-tags|
+|https://discourse.maas.io/t/-/5182|/docs/deb/3.1/ui/how-to-manage-tags|
+|https://discourse.maas.io/t/-/5183|/docs/deb/3.1/cli/how-to-manage-tags|
 |https://discourse.maas.io/t/-/2290|/docs/snap/2.9/cli/how-to-manage-vm-hosts|
 |https://discourse.maas.io/t/-/2291|/docs/snap/2.9/ui/how-to-manage-vm-hosts|
 |https://discourse.maas.io/t/-/2296|/docs/deb/2.9/cli/how-to-manage-vm-hosts|
@@ -674,10 +675,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3818|/docs/snap/3.0/ui/how-to-manage-vm-hosts|
 |https://discourse.maas.io/t/-/3819|/docs/deb/3.0/cli/how-to-manage-vm-hosts|
 |https://discourse.maas.io/t/-/3820|/docs/deb/3.0/ui/how-to-manage-vm-hosts|
-|https://discourse.maas.io/t/-/5140|/docs/snap/3.1/ui/how-to-manage-vm-hosts| 
-|https://discourse.maas.io/t/-/5141|/docs/snap/3.1/cli/how-to-manage-vm-hosts| 
-|https://discourse.maas.io/t/-/5142|/docs/deb/3.1/ui/how-to-manage-vm-hosts| 
-|https://discourse.maas.io/t/-/5143|/docs/deb/3.1/cli/how-to-manage-vm-hosts| 
+|https://discourse.maas.io/t/-/5140|/docs/snap/3.1/ui/how-to-manage-vm-hosts|
+|https://discourse.maas.io/t/-/5141|/docs/snap/3.1/cli/how-to-manage-vm-hosts|
+|https://discourse.maas.io/t/-/5142|/docs/deb/3.1/ui/how-to-manage-vm-hosts|
+|https://discourse.maas.io/t/-/5143|/docs/deb/3.1/cli/how-to-manage-vm-hosts|
 |https://discourse.maas.io/t/-/2674|/docs/snap/2.9/cli/how-to-test-machines|
 |https://discourse.maas.io/t/-/2675|/docs/snap/2.9/ui/how-to-test-machines|
 |https://discourse.maas.io/t/-/2680|/docs/deb/2.9/cli/how-to-test-machines|
@@ -694,10 +695,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4968|/docs/snap/2.9/ui/how-to-use-controller-tags|
 |https://discourse.maas.io/t/-/4969|/docs/snap/3.0/cli/how-to-use-controller-tags|
 |https://discourse.maas.io/t/-/4970|/docs/snap/3.0/ui/how-to-use-controller-tags|
-|https://discourse.maas.io/t/-/5216|/docs/snap/3.1/ui/how-to-use-controller-tags| 
-|https://discourse.maas.io/t/-/5217|/docs/snap/3.1/cli/how-to-use-controller-tags| 
-|https://discourse.maas.io/t/-/5218|/docs/deb/3.1/ui/how-to-use-controller-tags| 
-|https://discourse.maas.io/t/-/5219|/docs/deb/3.1/cli/how-to-use-controller-tags| 
+|https://discourse.maas.io/t/-/5216|/docs/snap/3.1/ui/how-to-use-controller-tags|
+|https://discourse.maas.io/t/-/5217|/docs/snap/3.1/cli/how-to-use-controller-tags|
+|https://discourse.maas.io/t/-/5218|/docs/deb/3.1/ui/how-to-use-controller-tags|
+|https://discourse.maas.io/t/-/5219|/docs/deb/3.1/cli/how-to-use-controller-tags|
 |https://discourse.maas.io/t/-/4987|/docs/deb/2.9/cli/how-to-use-device-tags|
 |https://discourse.maas.io/t/-/4988|/docs/deb/2.9/ui/how-to-use-device-tags|
 |https://discourse.maas.io/t/-/4989|/docs/deb/3.0/cli/how-to-use-device-tags|
@@ -714,10 +715,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/5054|/docs/deb/2.9/ui/how-to-use-lxd|
 |https://discourse.maas.io/t/-/5055|/docs/snap/2.9/cli/how-to-use-lxd|
 |https://discourse.maas.io/t/-/5056|/docs/snap/2.9/ui/how-to-use-lxd|
-|https://discourse.maas.io/t/-/5208|/docs/snap/3.1/ui/how-to-use-lxd| 
-|https://discourse.maas.io/t/-/5209|/docs/snap/3.1/cli/how-to-use-lxd| 
-|https://discourse.maas.io/t/-/5210|/docs/deb/3.1/ui/how-to-use-lxd| 
-|https://discourse.maas.io/t/-/5211|/docs/deb/3.1/cli/how-to-use-lxd| 
+|https://discourse.maas.io/t/-/5208|/docs/snap/3.1/ui/how-to-use-lxd|
+|https://discourse.maas.io/t/-/5209|/docs/snap/3.1/cli/how-to-use-lxd|
+|https://discourse.maas.io/t/-/5210|/docs/deb/3.1/ui/how-to-use-lxd|
+|https://discourse.maas.io/t/-/5211|/docs/deb/3.1/cli/how-to-use-lxd|
 |https://discourse.maas.io/t/-/4955|/docs/deb/2.9/cli/how-to-use-machine-tags|
 |https://discourse.maas.io/t/-/4956|/docs/deb/2.9/ui/how-to-use-machine-tags|
 |https://discourse.maas.io/t/-/4957|/docs/deb/3.0/cli/how-to-use-machine-tags|
@@ -726,10 +727,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4960|/docs/snap/2.9/ui/how-to-use-machine-tags|
 |https://discourse.maas.io/t/-/4961|/docs/snap/3.0/cli/how-to-use-machine-tags|
 |https://discourse.maas.io/t/-/4962|/docs/snap/3.0/ui/how-to-use-machine-tags|
-|https://discourse.maas.io/t/-/5224|/docs/snap/3.1/ui/how-to-use-machine-tags| 
-|https://discourse.maas.io/t/-/5225|/docs/snap/3.1/cli/how-to-use-machine-tags| 
-|https://discourse.maas.io/t/-/5226|/docs/deb/3.1/ui/how-to-use-machine-tags| 
-|https://discourse.maas.io/t/-/5227|/docs/deb/3.1/cli/how-to-use-machine-tags| 
+|https://discourse.maas.io/t/-/5224|/docs/snap/3.1/ui/how-to-use-machine-tags|
+|https://discourse.maas.io/t/-/5225|/docs/snap/3.1/cli/how-to-use-machine-tags|
+|https://discourse.maas.io/t/-/5226|/docs/deb/3.1/ui/how-to-use-machine-tags|
+|https://discourse.maas.io/t/-/5227|/docs/deb/3.1/cli/how-to-use-machine-tags|
 |https://discourse.maas.io/t/-/4979|/docs/deb/2.9/cli/how-to-use-network-tags|
 |https://discourse.maas.io/t/-/4980|/docs/deb/2.9/ui/how-to-use-network-tags|
 |https://discourse.maas.io/t/-/4981|/docs/deb/3.0/cli/how-to-use-network-tags|
@@ -738,10 +739,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4984|/docs/snap/2.9/ui/how-to-use-network-tags|
 |https://discourse.maas.io/t/-/4985|/docs/snap/3.0/cli/how-to-use-network-tags|
 |https://discourse.maas.io/t/-/4986|/docs/snap/3.0/ui/how-to-use-network-tags|
-|https://discourse.maas.io/t/-/5228|/docs/snap/3.1/ui/how-to-use-network-tags| 
-|https://discourse.maas.io/t/-/5229|/docs/snap/3.1/cli/how-to-use-network-tags| 
-|https://discourse.maas.io/t/-/5230|/docs/deb/3.1/ui/how-to-use-network-tags| 
-|https://discourse.maas.io/t/-/5231|/docs/deb/3.1/cli/how-to-use-network-tags| 
+|https://discourse.maas.io/t/-/5228|/docs/snap/3.1/ui/how-to-use-network-tags|
+|https://discourse.maas.io/t/-/5229|/docs/snap/3.1/cli/how-to-use-network-tags|
+|https://discourse.maas.io/t/-/5230|/docs/deb/3.1/ui/how-to-use-network-tags|
+|https://discourse.maas.io/t/-/5231|/docs/deb/3.1/cli/how-to-use-network-tags|
 |https://discourse.maas.io/t/-/4995|/docs/deb/2.9/cli/how-to-use-node-tags|
 |https://discourse.maas.io/t/-/4996|/docs/deb/2.9/ui/how-to-use-node-tags|
 |https://discourse.maas.io/t/-/4997|/docs/deb/3.0/cli/how-to-use-node-tags|
@@ -758,10 +759,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4976|/docs/snap/2.9/ui/how-to-use-storage-tags|
 |https://discourse.maas.io/t/-/4977|/docs/snap/3.0/cli/how-to-use-storage-tags|
 |https://discourse.maas.io/t/-/4978|/docs/snap/3.0/ui/how-to-use-storage-tags|
-|https://discourse.maas.io/t/-/5232|/docs/snap/3.1/ui/how-to-use-storage-tags| 
-|https://discourse.maas.io/t/-/5233|/docs/snap/3.1/cli/how-to-use-storage-tags| 
-|https://discourse.maas.io/t/-/5234|/docs/deb/3.1/ui/how-to-use-storage-tags| 
-|https://discourse.maas.io/t/-/5235|/docs/deb/3.1/cli/how-to-use-storage-tags| 
+|https://discourse.maas.io/t/-/5232|/docs/snap/3.1/ui/how-to-use-storage-tags|
+|https://discourse.maas.io/t/-/5233|/docs/snap/3.1/cli/how-to-use-storage-tags|
+|https://discourse.maas.io/t/-/5234|/docs/deb/3.1/ui/how-to-use-storage-tags|
+|https://discourse.maas.io/t/-/5235|/docs/deb/3.1/cli/how-to-use-storage-tags|
 |https://discourse.maas.io/t/-/785/|/docs/network-tutorial|
 |https://discourse.maas.io/t/-/745/|/docs/language-details-contributing-to-maas-docs|
 |https://discourse.maas.io/t/-/2694|/docs/snap/2.7/cli/images|
@@ -780,10 +781,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3958|/docs/snap/3.0/ui/images|
 |https://discourse.maas.io/t/-/3959|/docs/deb/3.0/cli/images|
 |https://discourse.maas.io/t/-/3960|/docs/deb/3.0/ui/images|
-|https://discourse.maas.io/t/-/5076|/docs/snap/3.1/ui/images| 
-|https://discourse.maas.io/t/-/5077|/docs/snap/3.1/cli/images| 
-|https://discourse.maas.io/t/-/5078|/docs/deb/3.1/ui/images| 
-|https://discourse.maas.io/t/-/5079|/docs/deb/3.1/cli/images| 
+|https://discourse.maas.io/t/-/5076|/docs/snap/3.1/ui/images|
+|https://discourse.maas.io/t/-/5077|/docs/snap/3.1/cli/images|
+|https://discourse.maas.io/t/-/5078|/docs/deb/3.1/ui/images|
+|https://discourse.maas.io/t/-/5079|/docs/deb/3.1/cli/images|
 |https://discourse.maas.io/t/-/839/|/docs/documentation-index|
 |https://discourse.maas.io/t/-/3318|/docs/snap/2.7/cli/installation|
 |https://discourse.maas.io/t/-/3319|/docs/snap/2.7/ui/installation|
@@ -829,10 +830,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3962|/docs/snap/3.0/ui/interactive-search|
 |https://discourse.maas.io/t/-/3963|/docs/deb/3.0/cli/interactive-search|
 |https://discourse.maas.io/t/-/3964|/docs/deb/3.0/ui/interactive-search|
-|https://discourse.maas.io/t/-/5192|/docs/snap/3.1/ui/interactive-search| 
-|https://discourse.maas.io/t/-/5193|/docs/snap/3.1/cli/interactive-search| 
-|https://discourse.maas.io/t/-/5194|/docs/deb/3.1/ui/interactive-search| 
-|https://discourse.maas.io/t/-/5195|/docs/deb/3.1/cli/interactive-search| 
+|https://discourse.maas.io/t/-/5192|/docs/snap/3.1/ui/interactive-search|
+|https://discourse.maas.io/t/-/5193|/docs/snap/3.1/cli/interactive-search|
+|https://discourse.maas.io/t/-/5194|/docs/deb/3.1/ui/interactive-search|
+|https://discourse.maas.io/t/-/5195|/docs/deb/3.1/cli/interactive-search|
 |https://discourse.maas.io/t/-/2754|/docs/snap/2.7/cli/ip-ranges|
 |https://discourse.maas.io/t/-/2755|/docs/snap/2.7/ui/ip-ranges|
 |https://discourse.maas.io/t/-/2756|/docs/snap/2.8/cli/ip-ranges|
@@ -849,10 +850,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3966|/docs/snap/3.0/ui/ip-ranges|
 |https://discourse.maas.io/t/-/3967|/docs/deb/3.0/cli/ip-ranges|
 |https://discourse.maas.io/t/-/3968|/docs/deb/3.0/ui/ip-ranges|
-|https://discourse.maas.io/t/-/5136|/docs/snap/3.1/ui/ip-ranges| 
-|https://discourse.maas.io/t/-/5137|/docs/snap/3.1/cli/ip-ranges| 
-|https://discourse.maas.io/t/-/5138|/docs/deb/3.1/ui/ip-ranges| 
-|https://discourse.maas.io/t/-/5139|/docs/deb/3.1/cli/ip-ranges| 
+|https://discourse.maas.io/t/-/5136|/docs/snap/3.1/ui/ip-ranges|
+|https://discourse.maas.io/t/-/5137|/docs/snap/3.1/cli/ip-ranges|
+|https://discourse.maas.io/t/-/5138|/docs/deb/3.1/ui/ip-ranges|
+|https://discourse.maas.io/t/-/5139|/docs/deb/3.1/cli/ip-ranges|
 |https://discourse.maas.io/t/-/2766|/docs/snap/2.7/cli/ipv6-addressing|
 |https://discourse.maas.io/t/-/2767|/docs/snap/2.7/ui/ipv6-addressing|
 |https://discourse.maas.io/t/-/2768|/docs/snap/2.8/cli/ipv6-addressing|
@@ -886,10 +887,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3982|/docs/snap/3.0/ui/local-image-mirror|
 |https://discourse.maas.io/t/-/3983|/docs/deb/3.0/cli/local-image-mirror|
 |https://discourse.maas.io/t/-/3984|/docs/deb/3.0/ui/local-image-mirror|
-|https://discourse.maas.io/t/-/5188|/docs/snap/3.1/ui/local-image-mirror| 
-|https://discourse.maas.io/t/-/5189|/docs/snap/3.1/cli/local-image-mirror| 
-|https://discourse.maas.io/t/-/5190|/docs/deb/3.1/ui/local-image-mirror| 
-|https://discourse.maas.io/t/-/5191|/docs/deb/3.1/cli/local-image-mirror| 
+|https://discourse.maas.io/t/-/5188|/docs/snap/3.1/ui/local-image-mirror|
+|https://discourse.maas.io/t/-/5189|/docs/snap/3.1/cli/local-image-mirror|
+|https://discourse.maas.io/t/-/5190|/docs/deb/3.1/ui/local-image-mirror|
+|https://discourse.maas.io/t/-/5191|/docs/deb/3.1/cli/local-image-mirror|
 |https://discourse.maas.io/t/-/2814|/docs/snap/2.7/cli/maas-cli|
 |https://discourse.maas.io/t/-/2815|/docs/snap/2.7/ui/maas-cli|
 |https://discourse.maas.io/t/-/2816|/docs/snap/2.8/cli/maas-cli|
@@ -906,10 +907,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3986|/docs/snap/3.0/ui/maas-cli|
 |https://discourse.maas.io/t/-/3987|/docs/deb/3.0/cli/maas-cli|
 |https://discourse.maas.io/t/-/3988|/docs/deb/3.0/ui/maas-cli|
-|https://discourse.maas.io/t/-/5236|/docs/snap/3.1/ui/maas-cli| 
-|https://discourse.maas.io/t/-/5237|/docs/snap/3.1/cli/maas-cli| 
-|https://discourse.maas.io/t/-/5238|/docs/deb/3.1/ui/maas-cli| 
-|https://discourse.maas.io/t/-/5239|/docs/deb/3.1/cli/maas-cli| 
+|https://discourse.maas.io/t/-/5236|/docs/snap/3.1/ui/maas-cli|
+|https://discourse.maas.io/t/-/5237|/docs/snap/3.1/cli/maas-cli|
+|https://discourse.maas.io/t/-/5238|/docs/deb/3.1/ui/maas-cli|
+|https://discourse.maas.io/t/-/5239|/docs/deb/3.1/cli/maas-cli|
 |https://discourse.maas.io/t/-/2826|/docs/snap/2.7/cli/maas-communication|
 |https://discourse.maas.io/t/-/2827|/docs/snap/2.7/ui/maas-communication|
 |https://discourse.maas.io/t/-/2828|/docs/snap/2.8/cli/maas-communication|
@@ -958,10 +959,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3998|/docs/snap/3.0/ui/maas-image-builder|
 |https://discourse.maas.io/t/-/3999|/docs/deb/3.0/cli/maas-image-builder|
 |https://discourse.maas.io/t/-/4000|/docs/deb/3.0/ui/maas-image-builder|
-|https://discourse.maas.io/t/-/5100|/docs/snap/3.1/ui/maas-image-builder| 
-|https://discourse.maas.io/t/-/5101|/docs/snap/3.1/cli/maas-image-builder| 
-|https://discourse.maas.io/t/-/5102|/docs/deb/3.1/ui/maas-image-builder| 
-|https://discourse.maas.io/t/-/5103|/docs/deb/3.1/cli/maas-image-builder| 
+|https://discourse.maas.io/t/-/5100|/docs/snap/3.1/ui/maas-image-builder|
+|https://discourse.maas.io/t/-/5101|/docs/snap/3.1/cli/maas-image-builder|
+|https://discourse.maas.io/t/-/5102|/docs/deb/3.1/ui/maas-image-builder|
+|https://discourse.maas.io/t/-/5103|/docs/deb/3.1/cli/maas-image-builder|
 |https://discourse.maas.io/t/-/3322|/docs/snap/2.9/cli/maas-installation|
 |https://discourse.maas.io/t/-/3323|/docs/snap/2.9/ui/maas-installation|
 |https://discourse.maas.io/t/-/3328|/docs/deb/2.9/cli/maas-installation|
@@ -970,10 +971,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4002|/docs/snap/3.0/ui/maas-installation|
 |https://discourse.maas.io/t/-/4003|/docs/deb/3.0/cli/maas-installation|
 |https://discourse.maas.io/t/-/4004|/docs/deb/3.0/ui/maas-installation|
-|https://discourse.maas.io/t/-/5128|/docs/snap/3.1/ui/maas-installation| 
-|https://discourse.maas.io/t/-/5129|/docs/snap/3.1/cli/maas-installation| 
-|https://discourse.maas.io/t/-/5130|/docs/deb/3.1/ui/maas-installation| 
-|https://discourse.maas.io/t/-/5131|/docs/deb/3.1/cli/maas-installation| 
+|https://discourse.maas.io/t/-/5128|/docs/snap/3.1/ui/maas-installation|
+|https://discourse.maas.io/t/-/5129|/docs/snap/3.1/cli/maas-installation|
+|https://discourse.maas.io/t/-/5130|/docs/deb/3.1/ui/maas-installation|
+|https://discourse.maas.io/t/-/5131|/docs/deb/3.1/cli/maas-installation|
 |https://discourse.maas.io/t/-/4517|/docs/snap/3.0/ui/maas-installation-tutorial|
 |https://discourse.maas.io/t/-/2862|/docs/snap/2.7/cli/maas-logging|
 |https://discourse.maas.io/t/-/2863|/docs/snap/2.7/ui/maas-logging|
@@ -991,10 +992,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4010|/docs/snap/3.0/ui/maas-logging|
 |https://discourse.maas.io/t/-/4011|/docs/deb/3.0/cli/maas-logging|
 |https://discourse.maas.io/t/-/4012|/docs/deb/3.0/ui/maas-logging|
-|https://discourse.maas.io/t/-/5240|/docs/snap/3.1/ui/maas-logging| 
-|https://discourse.maas.io/t/-/5241|/docs/snap/3.1/cli/maas-logging| 
-|https://discourse.maas.io/t/-/5242|/docs/deb/3.1/ui/maas-logging| 
-|https://discourse.maas.io/t/-/5243|/docs/deb/3.1/cli/maas-logging| 
+|https://discourse.maas.io/t/-/5240|/docs/snap/3.1/ui/maas-logging|
+|https://discourse.maas.io/t/-/5241|/docs/snap/3.1/cli/maas-logging|
+|https://discourse.maas.io/t/-/5242|/docs/deb/3.1/ui/maas-logging|
+|https://discourse.maas.io/t/-/5243|/docs/deb/3.1/cli/maas-logging|
 |https://discourse.maas.io/t/-/2874|/docs/snap/2.7/cli/maas-requirements|
 |https://discourse.maas.io/t/-/2875|/docs/snap/2.7/ui/maas-requirements|
 |https://discourse.maas.io/t/-/2876|/docs/snap/2.8/cli/maas-requirements|
@@ -1043,10 +1044,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3874|/docs/snap/3.0/ui/manage-machine-interfaces|
 |https://discourse.maas.io/t/-/3875|/docs/deb/3.0/cli/manage-machine-interfaces|
 |https://discourse.maas.io/t/-/3876|/docs/deb/3.0/ui/manage-machine-interfaces|
-|https://discourse.maas.io/t/-/5156|/docs/snap/3.1/ui/manage-machine-interfaces| 
-|https://discourse.maas.io/t/-/5157|/docs/snap/3.1/cli/manage-machine-interfaces| 
-|https://discourse.maas.io/t/-/5158|/docs/deb/3.1/ui/manage-machine-interfaces| 
-|https://discourse.maas.io/t/-/5159|/docs/deb/3.1/cli/manage-machine-interfaces| 
+|https://discourse.maas.io/t/-/5156|/docs/snap/3.1/ui/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/5157|/docs/snap/3.1/cli/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/5158|/docs/deb/3.1/ui/manage-machine-interfaces|
+|https://discourse.maas.io/t/-/5159|/docs/deb/3.1/cli/manage-machine-interfaces|
 |https://discourse.maas.io/t/-/2898|/docs/snap/2.7/cli/managing-dhcp|
 |https://discourse.maas.io/t/-/2899|/docs/snap/2.7/ui/managing-dhcp|
 |https://discourse.maas.io/t/-/2900|/docs/snap/2.8/cli/managing-dhcp|
@@ -1103,10 +1104,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4054|/docs/snap/3.0/ui/ntp-services|
 |https://discourse.maas.io/t/-/4055|/docs/deb/3.0/cli/ntp-services|
 |https://discourse.maas.io/t/-/4056|/docs/deb/3.0/ui/ntp-services|
-|https://discourse.maas.io/t/-/5200|/docs/snap/3.1/ui/ntp-services| 
-|https://discourse.maas.io/t/-/5201|/docs/snap/3.1/cli/ntp-services| 
-|https://discourse.maas.io/t/-/5202|/docs/deb/3.1/ui/ntp-services| 
-|https://discourse.maas.io/t/-/5203|/docs/deb/3.1/cli/ntp-services| 
+|https://discourse.maas.io/t/-/5200|/docs/snap/3.1/ui/ntp-services|
+|https://discourse.maas.io/t/-/5201|/docs/snap/3.1/cli/ntp-services|
+|https://discourse.maas.io/t/-/5202|/docs/deb/3.1/ui/ntp-services|
+|https://discourse.maas.io/t/-/5203|/docs/deb/3.1/cli/ntp-services|
 |https://discourse.maas.io/t/-/2976|/docs/deb/2.7/cli/package-repositories|
 |https://discourse.maas.io/t/-/2977|/docs/deb/2.7/ui/package-repositories|
 |https://discourse.maas.io/t/-/2978|/docs/deb/2.8/cli/package-repositories|
@@ -1159,10 +1160,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4070|/docs/snap/3.0/ui/power-management|
 |https://discourse.maas.io/t/-/4071|/docs/deb/3.0/cli/power-management|
 |https://discourse.maas.io/t/-/4072|/docs/deb/3.0/ui/power-management|
-|https://discourse.maas.io/t/-/5244|/docs/snap/3.1/ui/power-management| 
-|https://discourse.maas.io/t/-/5245|/docs/snap/3.1/cli/power-management| 
-|https://discourse.maas.io/t/-/5246|/docs/deb/3.1/ui/power-management| 
-|https://discourse.maas.io/t/-/5247|/docs/deb/3.1/cli/power-management| 
+|https://discourse.maas.io/t/-/5244|/docs/snap/3.1/ui/power-management|
+|https://discourse.maas.io/t/-/5245|/docs/snap/3.1/cli/power-management|
+|https://discourse.maas.io/t/-/5246|/docs/deb/3.1/ui/power-management|
+|https://discourse.maas.io/t/-/5247|/docs/deb/3.1/cli/power-management|
 |https://discourse.maas.io/t/-/3018|/docs/snap/2.7/cli/prometheus-metrics|
 |https://discourse.maas.io/t/-/3019|/docs/snap/2.7/ui/prometheus-metrics|
 |https://discourse.maas.io/t/-/3020|/docs/snap/2.8/cli/prometheus-metrics|
@@ -1179,10 +1180,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4074|/docs/snap/3.0/ui/prometheus-metrics|
 |https://discourse.maas.io/t/-/4075|/docs/deb/3.0/cli/prometheus-metrics|
 |https://discourse.maas.io/t/-/4076|/docs/deb/3.0/ui/prometheus-metrics|
-|https://discourse.maas.io/t/-/5204|/docs/snap/3.1/ui/prometheus-metrics| 
-|https://discourse.maas.io/t/-/5205|/docs/snap/3.1/cli/prometheus-metrics| 
-|https://discourse.maas.io/t/-/5206|/docs/deb/3.1/ui/prometheus-metrics| 
-|https://discourse.maas.io/t/-/5207|/docs/deb/3.1/cli/prometheus-metrics| 
+|https://discourse.maas.io/t/-/5204|/docs/snap/3.1/ui/prometheus-metrics|
+|https://discourse.maas.io/t/-/5205|/docs/snap/3.1/cli/prometheus-metrics|
+|https://discourse.maas.io/t/-/5206|/docs/deb/3.1/ui/prometheus-metrics|
+|https://discourse.maas.io/t/-/5207|/docs/deb/3.1/cli/prometheus-metrics|
 |https://discourse.maas.io/t/-/3030|/docs/snap/2.7/cli/proxy|
 |https://discourse.maas.io/t/-/3031|/docs/snap/2.7/ui/proxy|
 |https://discourse.maas.io/t/-/3032|/docs/snap/2.8/cli/proxy|
@@ -1199,10 +1200,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4082|/docs/snap/3.0/ui/proxy|
 |https://discourse.maas.io/t/-/4083|/docs/deb/3.0/cli/proxy|
 |https://discourse.maas.io/t/-/4084|/docs/deb/3.0/ui/proxy|
-|https://discourse.maas.io/t/-/5168|/docs/snap/3.1/ui/proxy| 
-|https://discourse.maas.io/t/-/5169|/docs/snap/3.1/cli/proxy| 
-|https://discourse.maas.io/t/-/5170|/docs/deb/3.1/ui/proxy| 
-|https://discourse.maas.io/t/-/5171|/docs/deb/3.1/cli/proxy| 
+|https://discourse.maas.io/t/-/5168|/docs/snap/3.1/ui/proxy|
+|https://discourse.maas.io/t/-/5169|/docs/snap/3.1/cli/proxy|
+|https://discourse.maas.io/t/-/5170|/docs/deb/3.1/ui/proxy|
+|https://discourse.maas.io/t/-/5171|/docs/deb/3.1/cli/proxy|
 |https://discourse.maas.io/t/-/4077|/docs/snap/3.0/cli/proxy-log|
 |https://discourse.maas.io/t/-/4078|/docs/snap/3.0/ui/proxy-log|
 |https://discourse.maas.io/t/-/4079|/docs/deb/3.0/cli/proxy-log|
@@ -1223,10 +1224,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4090|/docs/snap/3.0/ui/rack-controllers|
 |https://discourse.maas.io/t/-/4091|/docs/deb/3.0/cli/rack-controllers|
 |https://discourse.maas.io/t/-/4092|/docs/deb/3.0/ui/rack-controllers|
-|https://discourse.maas.io/t/-/5172|/docs/snap/3.1/ui/rack-controllers| 
-|https://discourse.maas.io/t/-/5173|/docs/snap/3.1/cli/rack-controllers| 
-|https://discourse.maas.io/t/-/5174|/docs/deb/3.1/ui/rack-controllers| 
-|https://discourse.maas.io/t/-/5175|/docs/deb/3.1/cli/rack-controllers| 
+|https://discourse.maas.io/t/-/5172|/docs/snap/3.1/ui/rack-controllers|
+|https://discourse.maas.io/t/-/5173|/docs/snap/3.1/cli/rack-controllers|
+|https://discourse.maas.io/t/-/5174|/docs/deb/3.1/ui/rack-controllers|
+|https://discourse.maas.io/t/-/5175|/docs/deb/3.1/cli/rack-controllers|
 |https://discourse.maas.io/t/-/3066|/docs/snap/2.7/cli/region-controllers|
 |https://discourse.maas.io/t/-/3067|/docs/snap/2.7/ui/region-controllers|
 |https://discourse.maas.io/t/-/3068|/docs/snap/2.8/cli/region-controllers|
@@ -1242,11 +1243,11 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4093|/docs/snap/3.0/cli/region-controllers|
 |https://discourse.maas.io/t/-/4095|/docs/deb/3.0/cli/region-controllers|
 |https://discourse.maas.io/t/-/4096|/docs/deb/3.0/ui/region-controllers|
-|https://discourse.maas.io/t/-/4094|/docs/snap/3.0/ui/region-controllers| 
-|https://discourse.maas.io/t/-/5176|/docs/snap/3.1/ui/region-controllers| 
-|https://discourse.maas.io/t/-/5177|/docs/snap/3.1/cli/region-controllers| 
-|https://discourse.maas.io/t/-/5178|/docs/deb/3.1/ui/region-controllers| 
-|https://discourse.maas.io/t/-/5179|/docs/deb/3.1/cli/region-controllers| 
+|https://discourse.maas.io/t/-/4094|/docs/snap/3.0/ui/region-controllers|
+|https://discourse.maas.io/t/-/5176|/docs/snap/3.1/ui/region-controllers|
+|https://discourse.maas.io/t/-/5177|/docs/snap/3.1/cli/region-controllers|
+|https://discourse.maas.io/t/-/5178|/docs/deb/3.1/ui/region-controllers|
+|https://discourse.maas.io/t/-/5179|/docs/deb/3.1/cli/region-controllers|
 |https://discourse.maas.io/t/-/3078|/docs/snap/2.7/cli/resource-pools|
 |https://discourse.maas.io/t/-/3079|/docs/snap/2.7/ui/resource-pools|
 |https://discourse.maas.io/t/-/3080|/docs/snap/2.8/cli/resource-pools|
@@ -1279,10 +1280,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4102|/docs/snap/3.0/ui/select-and-import-images|
 |https://discourse.maas.io/t/-/4103|/docs/deb/3.0/cli/select-and-import-images|
 |https://discourse.maas.io/t/-/4104|/docs/deb/3.0/ui/select-and-import-images|
-|https://discourse.maas.io/t/-/5124|/docs/snap/3.1/ui/select-and-import-images| 
-|https://discourse.maas.io/t/-/5125|/docs/snap/3.1/cli/select-and-import-images| 
-|https://discourse.maas.io/t/-/5126|/docs/deb/3.1/ui/select-and-import-images| 
-|https://discourse.maas.io/t/-/5127|/docs/deb/3.1/cli/select-and-import-images| 
+|https://discourse.maas.io/t/-/5124|/docs/snap/3.1/ui/select-and-import-images|
+|https://discourse.maas.io/t/-/5125|/docs/snap/3.1/cli/select-and-import-images|
+|https://discourse.maas.io/t/-/5126|/docs/deb/3.1/ui/select-and-import-images|
+|https://discourse.maas.io/t/-/5127|/docs/deb/3.1/cli/select-and-import-images|
 |https://discourse.maas.io/t/-/3102|/docs/snap/2.7/cli/storage|
 |https://discourse.maas.io/t/-/3103|/docs/snap/2.7/ui/storage|
 |https://discourse.maas.io/t/-/3104|/docs/snap/2.8/cli/storage|
@@ -1383,28 +1384,29 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3181|/docs/deb/2.7/ui/ubuntu-kernels|
 |https://discourse.maas.io/t/-/3182|/docs/deb/2.8/cli/ubuntu-kernels|
 |https://discourse.maas.io/t/-/3183|/docs/deb/2.8/ui/ubuntu-kernels|
-|https://discourse.maas.io/t/-/3186|/docs/snap/2.7/cli/upgrading-maas|
-|https://discourse.maas.io/t/-/3187|/docs/snap/2.7/ui/upgrading-maas|
-|https://discourse.maas.io/t/-/3188|/docs/snap/2.8/cli/upgrading-maas|
-|https://discourse.maas.io/t/-/3189|/docs/snap/2.8/ui/upgrading-maas|
-|https://discourse.maas.io/t/-/3190|/docs/snap/2.9/cli/upgrading-maas|
-|https://discourse.maas.io/t/-/3191|/docs/snap/2.9/ui/upgrading-maas|
-|https://discourse.maas.io/t/-/3192|/docs/deb/2.7/cli/upgrading-maas|
-|https://discourse.maas.io/t/-/3193|/docs/deb/2.7/ui/upgrading-maas|
-|https://discourse.maas.io/t/-/3194|/docs/deb/2.8/cli/upgrading-maas|
-|https://discourse.maas.io/t/-/3195|/docs/deb/2.8/ui/upgrading-maas|
-|https://discourse.maas.io/t/-/3196|/docs/deb/2.9/cli/upgrading-maas|
-|https://discourse.maas.io/t/-/3196|/docs/deb/2.9/cli/upgrading-maas|
-|https://discourse.maas.io/t/-/3197|/docs/deb/2.9/ui/upgrading-maas|
-|https://discourse.maas.io/t/-/3197|/docs/deb/2.9/ui/upgrading-maas|
-|https://discourse.maas.io/t/-/5429|/docs/deb/3.0/cli/upgrading-maas|
-|https://discourse.maas.io/t/-/5430|/docs/deb/3.0/ui/upgrading-maas|
-|https://discourse.maas.io/t/-/5431|/docs/snap/3.0/cli/upgrading-maas|
-|https://discourse.maas.io/t/-/5432|/docs/snap/3.0/ui/upgrading-maas|
-|https://discourse.maas.io/t/-/5433|/docs/deb/3.1/cli/upgrading-maas|
-|https://discourse.maas.io/t/-/5434|/docs/deb/3.1/ui/upgrading-maas|
-|https://discourse.maas.io/t/-/5435|/docs/snap/3.1/cli/upgrading-maas|
-|https://discourse.maas.io/t/-/5436|/docs/snap/3.1/ui/upgrading-maas|
+|https://discourse.maas.io/t/-/3186|/docs/snap/2.7/cli/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/3187|/docs/snap/2.7/ui/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/3188|/docs/snap/2.8/cli/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/3189|/docs/snap/2.8/ui/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/3190|/docs/snap/2.9/cli/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/3191|/docs/snap/2.9/ui/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/3192|/docs/deb/2.7/cli/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/3193|/docs/deb/2.7/ui/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/3194|/docs/deb/2.8/cli/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/3195|/docs/deb/2.8/ui/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/3196|/docs/deb/2.9/cli/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/3196|/docs/deb/2.9/cli/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/3197|/docs/deb/2.9/ui/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/3197|/docs/deb/2.9/ui/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/5429|/docs/deb/3.0/cli/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/5430|/docs/deb/3.0/ui/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/5431|/docs/snap/3.0/cli/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/5432|/docs/snap/3.0/ui/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/5433|/docs/deb/3.1/cli/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/5434|/docs/deb/3.1/ui/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/5435|/docs/snap/3.1/cli/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/5436|/docs/snap/3.1/ui/how-to-upgrade-maas|
+|https://discourse.maas.io/t/-/5706|/docs/upgrading-older-maas-installs|
 |https://discourse.maas.io/t/-/3198|/docs/snap/2.7/cli/user-accounts|
 |https://discourse.maas.io/t/-/3199|/docs/snap/2.7/ui/user-accounts|
 |https://discourse.maas.io/t/-/3200|/docs/snap/2.8/cli/user-accounts|
@@ -1421,10 +1423,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4146|/docs/snap/3.0/ui/user-accounts|
 |https://discourse.maas.io/t/-/4147|/docs/deb/3.0/cli/user-accounts|
 |https://discourse.maas.io/t/-/4148|/docs/deb/3.0/ui/user-accounts|
-|https://discourse.maas.io/t/-/5184|/docs/snap/3.1/ui/user-accounts| 
-|https://discourse.maas.io/t/-/5185|/docs/snap/3.1/cli/user-accounts| 
-|https://discourse.maas.io/t/-/5186|/docs/deb/3.1/ui/user-accounts| 
-|https://discourse.maas.io/t/-/5187|/docs/deb/3.1/cli/user-accounts| 
+|https://discourse.maas.io/t/-/5184|/docs/snap/3.1/ui/user-accounts|
+|https://discourse.maas.io/t/-/5185|/docs/snap/3.1/cli/user-accounts|
+|https://discourse.maas.io/t/-/5186|/docs/deb/3.1/ui/user-accounts|
+|https://discourse.maas.io/t/-/5187|/docs/deb/3.1/cli/user-accounts|
 |https://discourse.maas.io/t/-/4149|/docs/snap/3.0/cli/using-image-streams|
 |https://discourse.maas.io/t/-/4150|/docs/snap/3.0/ui/using-image-streams|
 |https://discourse.maas.io/t/-/4151|/docs/deb/3.0/cli/using-image-streams|
@@ -1441,10 +1443,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4333|/docs/deb/2.8/ui/using-image-streams|
 |https://discourse.maas.io/t/-/4334|/docs/deb/2.9/cli/using-image-streams|
 |https://discourse.maas.io/t/-/4335|/docs/deb/2.9/ui/using-image-streams|
-|https://discourse.maas.io/t/-/5220|/docs/snap/3.1/ui/using-image-streams| 
-|https://discourse.maas.io/t/-/5221|/docs/snap/3.1/cli/using-image-streams| 
-|https://discourse.maas.io/t/-/5222|/docs/deb/3.1/ui/using-image-streams| 
-|https://discourse.maas.io/t/-/5223|/docs/deb/3.1/cli/using-image-streams| 
+|https://discourse.maas.io/t/-/5220|/docs/snap/3.1/ui/using-image-streams|
+|https://discourse.maas.io/t/-/5221|/docs/snap/3.1/cli/using-image-streams|
+|https://discourse.maas.io/t/-/5222|/docs/deb/3.1/ui/using-image-streams|
+|https://discourse.maas.io/t/-/5223|/docs/deb/3.1/cli/using-image-streams|
 |https://discourse.maas.io/t/-/4153|/docs/snap/3.0/cli/using-maas-in-an-air-gapped-environment|
 |https://discourse.maas.io/t/-/4154|/docs/snap/3.0/ui/using-maas-in-an-air-gapped-environment|
 |https://discourse.maas.io/t/-/4155|/docs/deb/3.0/cli/using-maas-in-an-air-gapped-environment|
@@ -1453,10 +1455,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4273|/docs/snap/2.9/ui/using-maas-in-an-air-gapped-environment|
 |https://discourse.maas.io/t/-/4274|/docs/snap/2.9/cli/using-maas-in-an-air-gapped-environment|
 |https://discourse.maas.io/t/-/4275|/docs/deb/2.9/ui/using-maas-in-an-air-gapped-environment|
-|https://discourse.maas.io/t/-/5212|/docs/snap/3.1/ui/using-maas-in-an-air-gapped-environment| 
-|https://discourse.maas.io/t/-/5213|/docs/snap/3.1/cli/using-maas-in-an-air-gapped-environment| 
-|https://discourse.maas.io/t/-/5214|/docs/deb/3.1/ui/using-maas-in-an-air-gapped-environment| 
-|https://discourse.maas.io/t/-/5215|/docs/deb/3.1/cli/using-maas-in-an-air-gapped-environment| 
+|https://discourse.maas.io/t/-/5212|/docs/snap/3.1/ui/using-maas-in-an-air-gapped-environment|
+|https://discourse.maas.io/t/-/5213|/docs/snap/3.1/cli/using-maas-in-an-air-gapped-environment|
+|https://discourse.maas.io/t/-/5214|/docs/deb/3.1/ui/using-maas-in-an-air-gapped-environment|
+|https://discourse.maas.io/t/-/5215|/docs/deb/3.1/cli/using-maas-in-an-air-gapped-environment|
 |https://discourse.maas.io/t/-/4157|/docs/snap/3.0/cli/using-rbac-with-maas|
 |https://discourse.maas.io/t/-/4158|/docs/snap/3.0/ui/using-rbac-with-maas|
 |https://discourse.maas.io/t/-/4159|/docs/deb/3.0/cli/using-rbac-with-maas|
@@ -1477,10 +1479,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4162|/docs/snap/3.0/ui/vm-hosting|
 |https://discourse.maas.io/t/-/4163|/docs/deb/3.0/cli/vm-hosting|
 |https://discourse.maas.io/t/-/4164|/docs/deb/3.0/ui/vm-hosting|
-|https://discourse.maas.io/t/-/5068|/docs/snap/3.1/ui/vm-hosting| 
-|https://discourse.maas.io/t/-/5069|/docs/snap/3.1/cli/vm-hosting| 
-|https://discourse.maas.io/t/-/5070|/docs/deb/3.1/ui/vm-hosting| 
-|https://discourse.maas.io/t/-/5071|/docs/deb/3.1/cli/vm-hosting| 
+|https://discourse.maas.io/t/-/5068|/docs/snap/3.1/ui/vm-hosting|
+|https://discourse.maas.io/t/-/5069|/docs/snap/3.1/cli/vm-hosting|
+|https://discourse.maas.io/t/-/5070|/docs/deb/3.1/ui/vm-hosting|
+|https://discourse.maas.io/t/-/5071|/docs/deb/3.1/cli/vm-hosting|
 |https://discourse.maas.io/t/-/3210|/docs/snap/2.7/cli/vm-host-networking|
 |https://discourse.maas.io/t/-/3211|/docs/snap/2.7/ui/vm-host-networking|
 |https://discourse.maas.io/t/-/3212|/docs/snap/2.8/cli/vm-host-networking|
@@ -1513,10 +1515,10 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/4174|/docs/snap/3.0/ui/vmware-images|
 |https://discourse.maas.io/t/-/4175|/docs/deb/3.0/cli/vmware-images|
 |https://discourse.maas.io/t/-/4176|/docs/deb/3.0/ui/vmware-images|
-|https://discourse.maas.io/t/-/5144|/docs/snap/3.1/ui/vmware-images| 
-|https://discourse.maas.io/t/-/5145|/docs/snap/3.1/cli/vmware-images| 
-|https://discourse.maas.io/t/-/5146|/docs/deb/3.1/ui/vmware-images| 
-|https://discourse.maas.io/t/-/5147|/docs/deb/3.1/cli/vmware-images| 
+|https://discourse.maas.io/t/-/5144|/docs/snap/3.1/ui/vmware-images|
+|https://discourse.maas.io/t/-/5145|/docs/snap/3.1/cli/vmware-images|
+|https://discourse.maas.io/t/-/5146|/docs/deb/3.1/ui/vmware-images|
+|https://discourse.maas.io/t/-/5147|/docs/deb/3.1/cli/vmware-images|
 |https://discourse.maas.io/t/-/3246|/docs/snap/2.7/cli/vmware-vmfs-datastores|
 |https://discourse.maas.io/t/-/3247|/docs/snap/2.7/ui/vmware-vmfs-datastores|
 |https://discourse.maas.io/t/-/3248|/docs/snap/2.8/cli/vmware-vmfs-datastores|
@@ -1573,7 +1575,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/3277|/docs/deb/2.7/ui/zone-examples|
 |https://discourse.maas.io/t/-/3278|/docs/deb/2.8/cli/zone-examples|
 |https://discourse.maas.io/t/-/3279|/docs/deb/2.8/ui/zone-examples|
-|https://discourse.maas.io/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777/|/docs/upgrade-2-3-to-2-4-from-ubuntu-16-04|
 |https://discourse.maas.io/t/report-a-bug/4446|/docs/report-a-bug|
 |https://discourse.maas.io/t/request-a-feature/4447|/docs/request-a-feature|
 |https://discourse.maas.io/t/-/25/|/docs|
@@ -1591,10 +1592,9 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |https://discourse.maas.io/t/-/795/|/docs/composable-hardware|
 |https://discourse.maas.io/t/-/3771/|/docs/supported-versions|
 |https://discourse.maas.io/t/-/782/|/docs/web-ui|
-|https://discourse.maas.io/t/-/835/ |/docs/whats-new-in-2-6|
+|https://discourse.maas.io/t/-/835/|/docs/whats-new-in-2-6|
 |https://discourse.maas.io/t/-/746/|/docs/working-with-git-and-github|
 |https://discourse.maas.io/t/whats-new-in-2-6/788/|/docs/whats-new-in-2-6|
-|https://discourse.maas.io/t/upgrade-from-1-9-to-2-x/778/|/docs/upgrade-from-1-9-to-2-x|
 |https://discourse.maas.io/t/maas-projects/4460|/docs/maas-projects|
 |https://discourse.maas.io/t/-/818/|/docs/rsd-storage|
 |https://discourse.maas.io/t/-/1112|/docs/image-builder|
@@ -1606,6 +1606,19 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/upgrading-maas|/docs/snap/3.1/ui/how-to-upgrade-maas|
+|/docs/snap/3.1/ui/upgrading-maas|/docs/snap/3.1/ui/how-to-upgrade-maas|
+|/docs/snap/3.1/cli/upgrading-maas|/docs/snap/3.1/cli/how-to-upgrade-maas|
+|/docs/deb/3.1/ui/upgrading-maas|/docs/deb/3.1/ui/how-to-upgrade-maas|
+|/docs/deb/3.1/cli/upgrading-maas|/docs/deb/3.1/cli/how-to-upgrade-maas|
+|/docs/snap/3.0/ui/upgrading-maas|/docs/snap/3.0/ui/how-to-upgrade-maas|
+|/docs/snap/3.0/cli/upgrading-maas|/docs/snap/3.0/cli/how-to-upgrade-maas|
+|/docs/deb/3.0/ui/upgrading-maas|/docs/deb/3.0/ui/how-to-upgrade-maas|
+|/docs/deb/3.0/cli/upgrading-maas|/docs/deb/3.0/cli/how-to-upgrade-maas|
+|/docs/snap/2.9/ui/upgrading-maas|/docs/snap/2.9/ui/how-to-upgrade-maas|
+|/docs/snap/2.9/cli/upgrading-maas|/docs/snap/2.9/cli/how-to-upgrade-maas|
+|/docs/deb/2.9/ui/upgrading-maas|/docs/deb/2.9/ui/how-to-upgrade-maas|
+|/docs/deb/2.9/cli/upgrading-maas|/docs/deb/2.9/cli/how-to-upgrade-maas|
 |/docs/deb/2.7/cli/how-to-manage-networks|/docs/deb/2.7/cli/network-discovery|
 |/docs/deb/2.7/ui/how-to-manage-networks|/docs/deb/2.7/ui/network-discovery|
 |/docs/deb/2.8/cli/how-to-manage-networks|/docs/deb/2.8/cli/network-discovery|
@@ -1666,7 +1679,6 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/snap/2.7/ui/maas-installation|/docs/snap/2.7/ui/installation|
 |/docs/snap/2.8/cli/maas-installation|/docs/snap/2.8/cli/installation|
 |/docs/snap/2.8/ui/maas-installation|/docs/snap/2.8/ui/installation|
-|/docs/upgrading-maas|/docs/snap/3.1/ui/upgrading-maas|
 |/docs/getting-help|/docs/snap/3.1/ui/getting-help|
 |/docs/api-client|/docs/snap/3.1/ui/api-client|
 |/docs/commissioning-scripts-reference|/docs/snap/3.1/ui/commissioning-scripts-reference|
@@ -1816,7 +1828,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/add-nodes|/docs/snap/3.1/ui/manage-machines|
 |/docs/availability-zones|/docs/snap/3.1/ui/availability-zones|
 |/docs/backup|/docs/snap/3.1/ui/backup|
-|/docs/block-devices|docs/snap/3.1/ui/about-machines#heading--about-storage|
+|/docs/block-devices|/docs/snap/3.1/ui/about-machines#heading--about-storage|
 |/docs/storage|/docs/snap/3.1/ui/about-machines|
 |/docs/bmc-power-types|/docs/snap/3.1/ui/power-management|
 |/docs/cli-dhcp-snippet-management|/docs/snap/2.9/cli/how-to-manage-dhcp|
@@ -1900,7 +1912,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/hardware-testing|/docs/snap/3.1/ui/how-to-test-machines|
 |/docs/high-availability|/docs/snap/3.1/ui/high-availability|
 |/docs/images|/docs/snap/3.1/ui/images|
-|/docs/install-from-a-snap |/docs/snap/3.1/ui/maas-installation|
+|/docs/install-from-a-snap|/docs/snap/3.1/ui/maas-installation|
 |/docs/install-from-packages|/docs/deb/3.1/ui/installation|
 |/docs/install-with-lxd|/docs/snap/3.1/ui/how-to-manage-vm-hosts#heading--lxd-setup|
 |/docs/installation|/docs/snap/3.1/ui/maas-installation|
@@ -1943,7 +1955,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/intro-concepts-zones|/docs/snap/3.1/ui/about-networking#heading--about-availability-zones|
 |/docs/intro-concepts|/docs/snap/3.1/ui/concepts-and-terms|
 |/docs/intro-controllers|/docs/snap/3.1/ui/controllers|
-|/docs/intro-explore|docs/snap/3.1/ui/installation|
+|/docs/intro-explore|/docs/snap/3.1/ui/installation|
 |/docs/intro-requirements|/docs/snap/3.1/ui/about-maas|
 |/docs/intro-to-vm-hosting|/docs/snap/3.1/ui/vm-hosting|
 |/docs/intro-what-is-maas|/docs/snap/3.1/ui/about-maas|
@@ -1975,7 +1987,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/manage-cli-images|/docs/cli-image-management|
 |/docs/manage-cli-interfaces|/docs/cli-interface-management|
 |/docs/manage-cli-kernels|/docs/cli-kernel-management|
-|/docs/manage-cli-resource-pools|docs/snap/2.9/cli/resource-pools|
+|/docs/manage-cli-resource-pools|/docs/snap/2.9/cli/resource-pools|
 |/docs/manage-cli-tags|/docs/snap/2.9/cli/maas-tags|
 |/docs/manage-cli|/docs/snap/2.9/cli/maas-cli|
 |/docs/manage-composable-machines|/docs/snap/3.1/ui/vm-hosting|
@@ -1987,7 +1999,7 @@ MAAS is **Metal As A Service**, a service that lets you treat physical servers l
 |/docs/manage-kvm-storage|/docs/snap/3.1/ui/vm-hosting#heading--about-vm-host-storage-pools|
 |/docs/manage-libmaas|/docs/snap/3.1/ui/api-client|
 |/docs/manage-maas-security|/docs/security|/docs/snap/3.1/ui/hardening-your-maas-installation|
-|/docs/manage-pods-webui|docs/snap/3.1/ui/vm-hosting|
+|/docs/manage-pods-webui|/docs/snap/3.1/ui/vm-hosting|
 |/docs/manage-prometheus-metrics|/docs/snap/3.1/ui/prometheus-metrics|
 |/docs/manage-repos|/docs/deb/2.9/ui/package-repositories|
 |/docs/manage-rsd-add|/docs/add-an-rsd-host|

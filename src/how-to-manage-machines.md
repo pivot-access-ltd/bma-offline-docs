@@ -54,7 +54,7 @@ The fields on the "Add machine" screen include the following items:
 
 - **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
 
-- **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management-reference/nnnn) for details on the available power types and the relevant parameters for each type.
+- **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/nnnn) for details on the available power types and the relevant parameters for each type.
 rad-end
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
@@ -99,7 +99,7 @@ The variable fields in the `machines create` command (the `$...` items) are as f
 
 - `$MAC_ADDRESS`: This is the MAC address of the boot-enabled NIC for the machine being added.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
 
-- `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management-reference/nnnn) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+- `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/nnnn) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
 
 - `$POWER_ID`: This is generally the UUID of the machine being added.
 
@@ -330,7 +330,7 @@ This will bring up a detailed log view for that row:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png"></a>
 
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on [Logging](/t/maas-logging-reference/nnnn) for more details on how to read and interpret these logs.  
+These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on [Logging](/t/maas-logging/nnnn) for more details on how to read and interpret these logs.  
 
 <a href="#heading--hardware-tests"><h3 id="heading--hardware-tests">How to find machine hardware & test logs</h3></a>
 
@@ -346,7 +346,7 @@ By choosing "Installation output" on the "Logs" tab, you can see the "raw" log o
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a> 
 
-Help interpreting these logs can be found under the [Logging](/t/maas-logging-reference/nnnn) section of this documentation.
+Help interpreting these logs can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 
 <a href="#heading--event-logs"><h3 id="heading--event-logs">How to find a machine's event logs</h3></a>
 
@@ -354,7 +354,7 @@ To view the Event log for a machine, choose the "Event" tab under "Logs."  This 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a> 
 
-There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging-reference/nnnn) section of this documentation.
+There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [Logging](/t/maas-logging/nnnn) section of this documentation.
 
 <a href="#heading--machine-config"><h3 id="heading--machine-config">How to find machine configuration info</h3></a>
 
@@ -368,7 +368,7 @@ The "Power configuration" supplies the parameters necessary for MAAS to access t
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png"></a> 
 
-More information on Power configuration will be found in the [Power management](/t/power-management-reference/nnnn) section of this documentation.
+More information on Power configuration will be found in the [Power management](/t/power-management/nnnn) section of this documentation.
 
 rad-end
 
@@ -823,6 +823,9 @@ rad-begin /snap/3.0/cli /snap/2.9/cli /deb/3.0/cli /deb/2.9/cli /snap/3.1/cli /d
 - [How to manage partitions](#heading--how-to-manage-partitions)
 - [How to manage VMFS datastores](#heading--how-to-manage-vmfs-datastores)
 rad-end
+rad-begin /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
+- [How to define custom storage layouts](#heading--how-to-define-custom-storage-layouts)
+rad-end
 
 <a href="#heading--how-to-set-global-storage-layouts"><h3 id="heading--how-to-set-global-storage-layouts">How to set global storage layouts</h3></a>
 
@@ -905,7 +908,7 @@ rad-begin   /deb/2.9/cli  /snap/2.9/cli  /snap/3.0/cli /deb/3.0/cli /snap/3.1/cl
 
 <a href="#heading--how-to-erase-disks"><h3 id="heading--how-to-erase-disks">How to erase disks</h3></a>
 
-When using the [MAAS CLI](/t/how-to-use-the-maas-cli/nnnn), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+When using the [MAAS CLI](/t/maas-cli/nnnn), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
 
 ```nohighlight
 maas $PROFILE machine release...
@@ -1830,6 +1833,383 @@ maas $PROFILE vmfs-datastore delete $SYSTEM_ID $VMFS_ID
 ```
 rad-end
 
+rad-begin /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
+<a href="#heading--how-to-define-custom-storage-layouts"><h2 id="heading--how-to-define-custom-storage-layouts">How to define custom storage layouts</h2></a>
+
+MAAS 3.1 allows you to define a custom storage layout for a machine, via a custom commissioning script.  You must upload a script which conforms to the following rules:
+
+ * it must run after the `40-maas-01-machine-resources` script and before the `50-maas-01-commissioning` one, so it should have a name that starts with anything between `41-` and `49-`. This ensures the script can access the JSON file created by the former which provides info about the machine hardware and network resources. In addition, the custom script can directly inspect the machine it's running on to determine how to configure storage.
+* it can read machine hardware/network information from the JSON file at the path specified by `$MAAS_RESOURCES_FILE`
+* it must output a JSON file at the path specified by `$MAAS_STORAGE_CONFIG_FILE
+` with the desired storage layout
+* names of disks provided in the custom layout must match the ones detected by MAAS and provided in the resources file.
+
+### Configuration format
+
+The configuration contains two main sections:
+- `layout`, which lists the desired storage layout in terms of disks and volumes, along with their setup (partitions, volumes, ...).
+  This consists of a dictionary of device names and their configuration. Each device must have a `type` property (see below for supported types).
+- `mounts`, which lists the desired filesystem mount points.
+  As an example:
+
+```json
+"mounts": {
+  "/": {
+    "device": "sda2",
+    "options": "noatime"
+  },
+  "/boot/efi": {
+    "device": "sda1"
+  },
+  "/data": {
+    "device": "raid0"
+  }     
+}
+```
+
+A complete `$MAAS_STORAGE_CONFIG_FILE` would look like this:
+
+```json
+{
+    "layouts": {
+        "sda": {
+           ...
+        },
+        "raid0": {
+           ...
+        },
+        ...
+    },
+    "mounts": {
+       "/": {
+           ...
+       },
+       ...
+    }
+}
+```
+
+
+
+The following device types are supported in the `"layout"` section:
+
+#### Disk
+
+```json
+"sda": {
+  "type": "disk",
+  "ptable": "gpt",
+  "boot": true,
+  "partitions": [
+    {
+      "name": "sda1",
+      "fs": "vfat",
+      "size": "100M"
+      "bootable": true,
+    }
+  ]
+}
+```
+A `disk` entry defines a physical disk.
+The following details can be specified:
+- the partition table type (`ptable`), which can be `gpt` or `mbr`
+- whether it should be selected as `boot` disk
+- optionally, a list of partitions to create, with their `size` and filesystem type (`fs`)
+
+#### LVM
+
+```json
+"lvm0": {
+  "type": "lvm",
+  "members": [
+    "sda1",
+    "sdb1",
+  ],
+  "volumes": [
+    {
+      "name": "data1",
+      "size": "5G",
+      "fs": "ext4"
+    },
+    {
+      "name": "data2",
+      "size": "7G",
+      "fs": "btrfs"
+    }
+  ]
+}
+```
+
+An `lvm` entry defines a VG (volume group) composed by a set of disks or partitions (listed as `members`). Optionally it's possible to specify the the LVs (logical volumes) to create.
+Those are defined similarly to partitions, with a name and size (and optionally the filesystem).
+
+#### Bcache
+
+```json
+"bcache0": {
+  "type": "bcache",
+  "cache-device": "sda",
+  "backing-device": "sdf3",
+  "cache-mode": "writeback",
+  "fs": "ext4"
+}
+```
+
+A `bcache`  entry must specify a device to use as cache and one to use as storage. Both can be either a partition or a disk.
+Optionally the `cache-mode` for the Bcache can be specified.
+
+#### RAID
+
+```json
+"myraid": {
+  "type": "raid",
+  "level": 5,
+  "members": [
+    "sda",
+    "sdb",
+    "sdc",
+  ],
+  "spares": [
+    "sdd",
+    "sde"
+  ],
+  "fs": "btrfs"
+```
+
+A `raid` entry defines a RAID with a set of member devices.
+Spare devices can also be specified.
+
+
+
+### Configuration examples
+
+Here's a few examples of custom storage layout configurations that a script could output to the `$MAAS_STORAGE_CONFIG_FILE`. The examples assumes that the machine has 5 disks (named `sda` to `sde`).
+
+Note that there's no need to add entries for those devices in the `layout` section if the disks are not explicitly partitioned, but just used by other devices (e.g. RAID or LVM).
+
+#### Simple single-disk layout with GPT partitioning
+```json
+{
+  "layout": {
+    "sda": {
+      "type": "disk",
+      "ptable": "gpt",
+      "boot": true,
+      "partitions": [
+        {
+          "name": "sda1",
+          "fs": "vfat",
+          "size": "500M",
+          "bootable": true
+        },
+        {
+          "name": "sda2",
+          "size": "5G",
+          "fs": "ext4"
+        },
+        {
+          "name": "sda3",
+          "size": "2G",
+          "fs": "swap"
+        },
+        {
+          "name": "sda4",
+          "size": "120G",
+          "fS": "ext4"
+        }
+      ]
+    }
+  },
+  "mounts": {
+    "/": {
+      "device": "sda2",
+      "options": "noatime"
+    },
+    "/boot/efi": {
+      "device": "sda1"
+    },
+    "/data": {
+      "device": "sda4"
+    },
+    "none": {
+      "device": "sda3"
+    }
+  }
+}
+```
+In the `mounts` section, options for mountpoints can be specified. For swap, an entry must be present (with any unique name that doesn't start with a `/`), otherwise the swap will be created but not activated.
+
+#### RAID 5 setup (with spare devices)
+```json
+{
+  "layout": {
+    "storage": {
+      "type": "raid",
+      "level": 5,
+      "members": [
+        "sda",
+        "sdb",
+        "sdc"
+      ],
+      "spares": [
+        "sdd",
+        "sde"
+      ],
+      "fs": "btrfs"
+    }
+  },
+  "mounts": {
+    "/data": {
+      "device": "storage"
+    }
+  }
+}
+```
+Both full disks and partitions can be used as RAID members.
+
+#### LVM with pre-defined volumes
+```json
+{
+  "layout": {
+    "storage": {
+      "type": "lvm",
+      "members": [
+        "sda",
+        "sdb",
+        "sdc",
+        "sdd"
+      ],
+      "volumes": [
+        {
+          "name": "data1",
+          "size": "1T",
+          "fs": "ext4"
+        },
+        {
+          "name": "data2",
+          "size": "2.5T",
+          "fs": "btrfs"
+        }
+      ]
+    }
+  },
+  "mounts": {
+    "/data1": {
+      "device": "data1"
+    },
+    "/data2": {
+      "device": "data2"
+    }
+  }
+}
+```
+If no volumes are specified, the volume group is still created.
+
+#### Bcache
+```json
+{
+  "layout": {
+     "data1": {
+      "type": "bcache",
+      "cache-device": "sda",
+      "backing-device": "sdb",
+      "cache-mode": "writeback",
+      "fs": "ext4"
+    },
+    "data2": {
+      "type": "bcache",
+      "cache-device": "sda",
+      "backing-device": "sdc",
+      "fs": "btrfs"
+    }
+  },
+  "mounts": {
+    "/data1": {
+      "device": "data1"
+    },
+    "/data2": {
+      "device": "data2"
+    }
+  }
+}
+```
+The same cacheset can be used by different bcaches by specifing the same `backing-device` for them.
+
+#### LVM on top of RAID with Bcache
+```json
+{
+  "layout": {
+    "bcache0": {
+      "type": "bcache",
+      "backing-device": "sda",
+      "cache-device": "sdf"
+    },
+    "bcache1": {
+      "type": "bcache",
+      "backing-device": "sdb",
+      "cache-device": "sdf"
+    },
+    "bcache2": {
+      "type": "bcache",
+      "backing-device": "sdc",
+      "cache-device": "sdf"
+    },
+    "bcache3": {
+      "type": "bcache",
+      "backing-device": "sdd",
+      "cache-device": "sdf"
+    },
+    "bcache4": {
+      "type": "bcache",
+      "backing-device": "sde",
+      "cache-device": "sdf"
+    },
+    "raid": {
+      "type": "raid",
+      "level": 5,
+      "members": [
+        "bcache0",
+        "bcache1",
+        "bcache2"
+      ],
+      "spares": [
+        "bcache3",
+        "bcache4"
+      ]
+    },
+    "lvm": {
+      "type": "lvm",
+      "members": [
+        "raid"
+      ],
+      "volumes": [
+        {
+          "name": "root",
+          "size": "10G",
+          "fs": "ext4"
+        },
+        {
+          "name": "data",
+          "size": "3T",
+          "fs": "btrfs"
+        }
+      ]
+    }
+  },
+  "mounts": {
+   "/": {
+      "device": "root"
+    },
+    "/data": {
+      "device": "data"
+    }
+  }
+}
+```
+The RAID is created by using 5 bcache devices, each one using a different disk and the same SSD cache device. LVM is created on top of the RAID device and volumes are then created in it, to provide partitions.
+
+rad-end
+
 <a href="#heading--storage-layouts-reference"><h2 id="heading--storage-layouts-reference">Storage layouts reference</h2></a>
 
 There are three layout types:
@@ -1933,3 +2313,4 @@ The blank layout removes all storage configuration from all storage devices. It 
 [note type="negative" status="Warning"]
 Machines with the blank layout applied are not deployable; you must first configure storage manually.
 [/note]
+
