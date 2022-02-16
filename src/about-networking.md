@@ -1,4 +1,65 @@
-<a href="#heading--about-bond-and-bridge-interfaces"><h2 id="heading--about-bond-and-bridge-interfaces">About bond and bridge interfaces</h2></a>
+It's difficult to work effectively with MAAS without a solid understanding of networks.   This page provides opportunities for you to learn:
+
+ - [About TCP/IP networks](#heading--about-tcp-ip-networks)
+ - [About cloud networks](#heading--about-cloud-networks)
+ - [About MAAS networks](#heading--about-maas-networks)
+
+Most of the examples are related to MAAS, but links are provided for further study, if desired.
+
+<a href="#heading--about-tcp-ip-networks"><h2 id="heading--about-tcp-ip-networks">About TCP/IP networks</h2></a>
+
+TCP/IP networks, and the underlying structure, evolved to meet a specific need: How can we keep a computer network functioning in the event of a catastrophic failure of communications infrastructure?  When nodes go offline, randomly, how can surviving nodes keep the network usable?  The Internet, which relies heavily on TCP/IP networks, has proven over time that it can adapt to changing loads, handle significant failures, and strictly limit the network blast radius when things go wrong.   
+
+Experience has shown us that you will probably have a much easier time working with MAAS if you ensure a solid understanding of network fundamentals.  Rather than bury this basic material, we've decided to included it in the mainstream MAAS networking discussion. Later sections, which help you learn how to design and troubleshoot MAAS networks, will depend heavily on principles explained here.
+
+This section is designed to help you understand:
+
+ - [The OSI model](#heading--about-the-osi-model)
+ - [Layer 1: the physical layer](#heading--about-the-physical-layer)
+ - [Layer 2: the datalink layer](#heading--about-the-datalink-layer)
+ - [Layer 3: the network layer](#heading--about-the-network-layer)
+ - [How ARP works](#heading--about-arp)
+ - [Layer 4: the transport layer](#heading--about-the-transport-layer)
+
+This material can be read from beginning to end, or you can skip to sections where you feel you might need more clarity.  Just remember that a good understanding of these fundamentals will make it much easier for you to efficiently lay out and debug MAAS networks.
+
+<a href="#heading--about-the-osi-model"><h3 id="heading--about-the-osi-model">About the OSI model</h3></a>
+
+Suppose we want to connect two computers, "SanDiego" and "Bangor", located at opposite corners of the country.  They should communicate via a network.  How do we make that happen?  We could simply hook up a wire between SanDiego and Bangor.  In fact, that's essentially how it was done in the beginning. It worked, but there wereat least two drawbacks:
+
+1. A long wire has lots of impedance.  Signals can disappear into the noise long before they get traverse the wire.  Said differently, the signal-to-noise ratio drops critically low before completing the connection.  Repeaters can fix that problem by amplifying the signal while it's still readable.  Repeaters are physical hardware, which has to reside at intervals along the path.  You'd need places to put repeaters, which means you'd have to lease or own real estate in specific locations, at specific distances.  Cost becomes a factor at that point.
+
+2. A long wire is a single point of failure.  If someone cuts the wire, there's no alternative way for the two computers to communicate.  Obviously, you could run multiple wires, trunk them in separate cables, have backup repeater hardware, and even use different geographical paths for each trumk.  Again, cost is a significant factor here.  
+
+We could solve this by dreaming up all sorts of network architectures, but the easiest way is to create and use the Internet.  As the Internet became "the network", it evolved into what some call the "access-aggregation-core" (AAC) network, which looks something like this: 
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg"></a>
+
+In this model, *SanDiego* sends a message, labelled for *Bangor*, to some router on the Internet (which one doesn't matter so much).  If this router doesn't know where *Bangor* is, it just sends it on to another router, until the message finds a router that knows where to forward the message. Theoretically, this works great, but from a practical standpoint, there are "short circuits" all over the Interne.
+
+These "sideways paths" are there mostly for performance reasons, like latency, redundancy, and so on.  Sometimes they're there because someone can get a better deal, so the reasoning is financial, too.  Some parts of the Internet look like string art, as in the picture above.  Other places only maintain connections between routers on the same level, so they look more like ladders.
+
+Either way, the AAC network can be very complicated and incorporate lots of redundant loops where network packets can get trapped, trying to find a way out.  We'll discover later that TCP/IP has a dedicated way to prevent these infinite loops called the "Time To Live" field.  We'll also talk about how these issues have driven us to design cloud network architectures (known as Clos architectures), which address both the financial and performance impacts of large networks in a much simpler way.
+
+<a href="#heading--internet-infrastructure"><h3 id="heading--internet-infrastructure">About the infrastructure of the Internet</h3></a>
+
+A very old meme explains that the Internet is survivable because every computer can connect every other computer.  While that might be possible, that's not generally how it works.  There's actually a hierarchy which we refer to as the *Internet Infrastructure*:
+
+- Internet Infrastructure :: a hierarchy of computers used to transfer messages from one computer to another.
+
+High-level networks, known as Network Service Providers (NSPs), connect to at least three top level nodes called Network Access Points (NAPs).  An NAP is just a way for packets to jump from one NSP to another. NAPs are public access points, but there are also privately-owned access points (at the same level) known as Metropolitan Area Exchanges; these act just like a NAP for the purposes of this discussion.  We can simplify the string-art picture above by resolving it into something like this:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/b/b8da34432dd443cd3592487f53887f12889cef06.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b8da34432dd443cd3592487f53887f12889cef06.jpeg"></a>
+
+In theory, the Internet infrastructure and a cloud network should be very similar, but in practice, they diverge greatly.  The real Internet has horizontal connections running everywhere, based on drivers like cost, security, and performance.
+
+<a href="#heading--about-network-traffic"><h3 id="heading--about-network-traffic">About network traffic</h3></a>
+
+As implied by the discussion above, these networks can become very complicated.  There's rarely a reason to even want to know how many hops a message takes, or where it hops, unless you're trying to debug a broken route with, say, [traceroute]([https://linux.die.net/man/8/traceroute).  From a TCP/IP point of view, it's much easier to ignore the specific network, since it gets built on-the-fly, so to speak; and it can change every time a message is sent, even between the same two computers.
+
+In other words, when it comes to designing and troubleshooting networks, knowing the specific route (almost) never helps.  Instead, what we want to know about is the /network traffic/ that travels between computers.  That means we have to understand what /kind/ of traffic travels between computers, besides just the data we send. 
+
+<a href="#heading--about-bond-and-bridge-interfaces"><h3 id="heading--about-bond-and-bridge-interfaces">About bond and bridge interfaces</h3></a>
 
 A bond interface is used to aggregate two or more physical interfaces into a single logical interface. Combining multiple network connections in parallel can increase network throughput beyond what a single NIC will allow.  It also provides some redundancy in case one of the NICs should fail.  More information about the theory behind bonded NICs is found in the [relevant IEEE standard](https://1.ieee802.org/tsn/802-1ax-rev/).
 
