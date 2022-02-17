@@ -361,7 +361,207 @@ The router typically assigns a unique port number to the outbound message, and r
 
 <a href="#heading--about-bridge-interfaces"><h3 id="heading--about-bridge-interfaces">About bridge interfaces</h3></a>
 
-A network bridge may be useful if you intend to use virtual machines or containers with MAAS. You can create a network bridge with MAAS; via netplan; or by any other established method to create a network bridge.
+Let's take a short diversion to talk about bridge interfaces.  These will be important when we discuss ARP a little further down.
+
+A network bridge may be useful if you intend to use virtual machines or containers with MAAS.  Bridges are, to some extent, artifacts of the AAC network.  Frequently, people ask about the difference between a switch and a bridge.  The core answer lies in the number of ports: switches have as many ports as you can afford; bridges usually have fewer ports, often only have two.
+
+Switches traditionally forward packets, without storing them, to a specific host on a specific port, building up a table of host vs. port in the process to reduce broadcast transmissions. Switches traditionally use ASICs (Application Specific Integrated Circuits), otherwise known as "merchant silicon", designed especially for that purpose.
+
+Bridges, on the other hand, provide store and forward packets between two LANs, generally using software.  They might still integrate merchant silicon, or even start as an ODM (original design manufacturer) box with no NOS (network operating system), similar to the way some mid-range switches are built.  Software added on top, plus the low port count and the store-and-forward approach.
+
+Bridges can use MAC addresses (L2) to direct packets, can essentially emulate L3 routing (recording IP addresses of bridged messages for correct return trips), or some combination of both.  Switches usually just route packets between ports.
+
+You can create a network bridge with MAAS; via netplan; or by any other established method to create a network bridge.  For example, when you're using LXD, you typically create a virtual bridge, called `lxdbr0` by default, that bridges between the MAAS host and the LXD instance.  On the host side, the LXD bridge looks like this:
+
+``` nohighlight
+7: lxdbr0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 00:16:3e:e4:2b:fe brd ff:ff:ff:ff:ff:ff
+    inet 10.90.194.1/24 scope global lxdbr0
+       valid_lft forever preferred_lft forever
+    inet6 fd42:1fc6:f588:d0b8::1/64 scope global 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::216:3eff:fee4:2bfe/64 scope link 
+       valid_lft forever preferred_lft forever
+```
+
+On the MAAS side, the virtual bridge looks like this:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/f/fbdef2010657939f5f25ee2f157ba5a92af72090.png" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fbdef2010657939f5f25ee2f157ba5a92af72090.png"></a>
+
+Where the 10.190.94.0/24 network is usually part of a VLAN offering MAAS-provided DHCP:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/1/1067a379ba9411713ed1a67e78e249535771b08c.png" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1067a379ba9411713ed1a67e78e249535771b08c.png"></a>
+
+There are other DHCP configurations possible with MAAS (we'll cover this later).  The important point here is not to get overly hung up on the terms "switch", "bridge", and "router".  Instead, figure out whether you want to forward messages based on port numbers, MAC addresses, or IP addresses -- or some combination -- and then find real or virtual devices that will do this for you.
+
+<a href="#heading--about-arp"><h3 id="heading--about-arp">About ARP</h3></a>
+ 
+In theory, every NIC card in the world has a unique identifier, called a /MAC address/.  "MAC" stands for "Media Access Control" -- you can find a [little history of this](https://en.wikipedia.org/wiki/Medium_access_control]) on Wikipedia, if you're interested.
+
+When you're assigning MAC addresses with virtual machines, of course, you may be re-using one that's actually assigned to a network device out there somewhere.  Inside your Layer 2 network, that isn't a problem, because only devices connected to a physical switch -- that's actually connected to the physical Internet -- care about unique MAC addresses.  Inside your network, the only conflicts you need to worry about are the ones you create by hand-assigning MAC addresses.
+
+The shorter answer to that implied question is this: MAC addresses must be unique across the domain where they're used.  
+
+<a href="#heading--tcp-ip-does-not-use-mac-addresses"><h4 id="heading--tcp-ip-does-not-use-mac-addresses">TCP/IP does not use MAC addresses</h4></a>
+
+If we look at the IP datagram again, we see that it doesn't know about MAC addresses at all:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/f/fc349972f6b7509b5b2459bf3bb44419961f0bcd.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fc349972f6b7509b5b2459bf3bb44419961f0bcd.jpeg"></a>
+
+TCP, UDP, and a number of other protocol stacks are written to use IP addresses.  Routers depend on IP addresses, as we've already seen. This creates a bit of a conundrum: How do we map between MAC and IP addresses, and what does the mapping?  Is it a layer 2 or layer 3 operation?
+
+The first thing to remember is that the MAC address is "ROM-burned" into the NIC card.  IP addresses, on the other hand, are assigned to a NIC by a DHCP server or an administrator.  This intentional separation of addressing schemes is what makes the Internet flexible.
+
+<a href="#heading--fixed-versus-assigned-addressing"><h4 id="heading--fixed-versus-assigned-addressing">Fixed versus assigned addressing</h4></a>
+
+Here's an analogy.  Your postal address doesn't /actually/ define where your house is located.  There are two layers of other addressing schemes that are actually used by government organizations, like your county tax assessor or the local air ambulance company.
+
+One is your land survey location.  Depending on where you live, this is defined by a series of coordinates that go something like this: county, township, section, plat, lot, etc.  If you've ever looked at your property tax bill, it will have your postal address on it, but it will not actually use your postal address to define the taxable property.  Instead, it uses this unique set of (rather obscure) coordinates to place you exactly on land survey maps.
+
+But that's not good enough for the air ambulance, for two reasons.  First, the survey maps are huge, complex, and hard to interpret, and they change somewhat as property is bought or sold.  Second, helicopter navigation is intentionally independent of political boundaries.  Instead, the air ambulance will use your latitude and longitude, which allows them to uniquely locate you on the earth.  Granted, the ambulance company has a tool somewhere that automatically does the math of translating your postal address to lat/long coordinates, but the principle holds.
+
+In terms of your local network, each of these "address levels" applies.  Your postal address corresponds to the IP address of a machine.  That IP address may or may not be unique, depending on the domain.  For example, you can use Google Maps to try and locate something like "20 Main Street", and you'll get a really long list of responses that vary by city.
+
+Likewise, there are probably hundreds of thousands of local networks using addresses in the "192.168...." subnet, since it's so common for local IP addressing.  As mentioned above, routers at the network layer take care of protecting these unique local addresses when going out on the Internet. On the other hand, your NIC's MAC address is like the GPS lat/long coordinates; it's unique across the entire world.
+
+What about the analogue of survey maps?  Well, it's not hard to argue that these are more like the MAC addresses that you assign to your VMs.  Every county in a state like, say, Mississippi has the coordinates Township 1, Section 1, Parcel 1 -- but the outer domain (the county) makes those coordinates unique.  Granted, we don't use a different format for MAC addresses for VMs than we do for Internet-connected NICs, but you get the idea.
+
+<a href="#heading--address-resolution"><h4 id="heading--address-resolution">Address resolution</h4></a>
+
+Address resolution is what we call the process of mapping between IP addresses and MAC addresses.  It's done with something called ARP, which stands for "Address Resolution Protocol".  Oddly enough, ARP takes on a life of its own, so you may hear it discussed in unusual ways.  Some people call it "the ARP", others speak of "arpd" (the ARP daemon), although if you look at [the man page for arpd](https://linux.die.net/man/8/arpd), you'll see those characterizations are not precisely correct.
+
+A frequent question is, "Where does ARP take place?"  Maybe the better question is, "Where is ARP implemented?"  As always with Internet-related things, the answer can vary, but normally, ARP is implemented as part of the embedded code in the NIC.  Technically, this means that ARP operates at Layer 2.  More often, you'll see vendors hedge their bets on this, with phrases such as "operates below the Network Layer", as in [this explanation](https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-c00686597#:~:text=ARP%20is%20a%20protocol%20used,network%20and%20OSI%20link%20layer).
+
+In reality, in order to work correctly, ARP has to map IP and MAC addresses, since the ARP message looks something like this:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/1/18a95f7ed64b83ec1302c92e41696d137783e7bc.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/18a95f7ed64b83ec1302c92e41696d137783e7bc.jpeg"></a>
+
+To better understand, let's walk an ARP call.  It begins in say, a Web browser, when the browser makes a call to parse the URL.  In most cases, that URL contains a hostname (not an IP address), so the following sort of dance takes place:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/1/1365006a1692e4788df733c58e1435e67da57536.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1365006a1692e4788df733c58e1435e67da57536.jpeg"></a>
+
+We won't go into this in much detail now, just know that the browser is able to gather an IP address, if it exists.  To make the walkthrough less confusing, let's assume that we're looking for a host with IP 192.168.17.4.
+
+Next, the browser requests a connection with 192.168.17.4, using the TCP protocol, which sends a connection request, as an IP packet, to 192.168.17.4.  Along the way, there is probably more than one router hop.  
+
+ARP sends a broadcast request to everything on the relevant subnet.  This request looks like the ARP message above, but it's encoded as a MAC frame, which helps to answer the often-fuzzy question, "Is ARP Layer 2 or Layer 3?"  As you see, this is an L2 message.  Incidentally, ARP only works as a broadcast, by the way; that is, it only works on a broadcast network.
+
+A very important note for some systems like MAAS: ARP requests don't typically span VLANs.  
+
+Essentially, this ARP message contains the IP address 192.168.17.4, but no corresponding MAC address in the message.  This tells the owner of 192.168.17.4 that it should reply with a similar ARP message, including its MAC address.  When the sender receives the ARP reply, it can send the datagram directly to the destination host, embeeded in an Ethernet frame, using the MAC address.
+
+By the way, for efficiency, the sending host and the intermediate routers are all doing ARP caching.  They copy down the mapping between IP and MAC addresses, holding onto it for about twenty minutes.  In terms of most network transactions, twenty minutes is an eternity.
+
+<a href="#heading--messages-sent-to-mac-addresses"><h4 id="heading--messages-sent-to-mac-addresses">Messages are sent to MAC addresses</h4></a>
+
+We often speak of TCP/IP as if messages are sent from one IP address to another, but that's actually not strictly true.  Messages are sent to MAC addresses.  IP addresses are only used to get MAC addresses, so the message can go through.
+
+We can return to the air ambulance company to see a practical analogy.  A 911 call comes in for "20 Main Street, Yourtown, Yourstate, Yourpostalcode".  The address is sent to the pilot of the helicopter, who punches the address into his GPS.  The GPS uses the postal address to retrieve the lat/long coordinates, which are then used to guide the helicopter, via satellite navigation.
+
+The same sort of thing happens when you use the GPS navigator in your car.  The navigator is translating a logical (postal) address to a physical (lat/long) address on the surface of the earth, calculating a route, and translating that route back to logical landmarks (street names) to let you know how to get there.
+
+By the way, You should also note that ARP only works with IPv4.  Certain other protocols, like Point-to-Point Protocol (PPP), don't make use of ARP at all.
+
+<a href="#heading--about-the-arp-frame"><h4 id="heading--about-the-arp-frame">About the ARP frame</h4></a>
+
+ARP sends requests as an Ethernet frame, using the MAC address.  If you remember the MAC frame from earlier:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/1/14f6847ed92339061eb4515c12ac2b6117d5cd7c.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/14f6847ed92339061eb4515c12ac2b6117d5cd7c.jpeg"></a>
+
+The ARP frame is just a special case of the MAC frame, replacing everything the DSAP, SSAP, control bits, and data with the ARP message shown above.  The resulting ARP frame looks something like this:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/f/f430da9c144bda4cf2e2901181988f3444d335f8.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f430da9c144bda4cf2e2901181988f3444d335f8.jpeg"></a>
+
+Based on the above diagram, you can see how the ARP request fits into the Ethernet frame to make an ARP frame.
+
+<a href="#heading--about-the-arp-cache"><h4 id="heading--about-the-arp-cache">About the ARP cache</h4></a>
+
+Let's take a look at the ARP cache on a local system, ~cloudburst~. We can do that like this:
+
+``` nohighlight
+stormrider@cloudburst:~$ arp
+Address                  HWtype  HWaddress           Flags Mask            Iface
+192.168.1.24             ether   0c:8b:7d:f1:51:d3   C                     wlo1
+10.250.204.17                    (incomplete)                              mpqemubr0
+192.168.1.24             ether   0c:8b:7d:f1:51:d3   C                     enx606d3c645a57
+192.168.117.16                   (incomplete)                              virbr0
+```
+
+The columns are mostly obvious, but just in case:
+
+- **Address**: the IP address that's been cached.
+- **HWtype**: the Hardware Type field, which is blank when there's no MAC address (as is the case in a number of these entries).
+- **HWaddress**: the MAC address of the device.  The "incomplete" entires are meant to indicate that an ARP request was sent for that address, but no response was received.
+- **Flags Mask**: this field can have three values: "C" indicates that ARP learned this on its own, based on ARP responses; "M" means that the data was manually entered in the ARP table by a user; and "P" means "Publish," which just tells the host how to respond to incoming ARP packets.
+- **Iface**: the interface name.
+
+In this case, ~virbr0~ and ~mpqemubr0~ are virtual bridges used for different sets of libvirsh VMs that haven't been used for anything in a while. Also note that something called ~lxdbr0~, which is an LXD bridge, doesn't even show up.
+
+Let's see if we can influence that.  First, let's take a look using ~ip a~:
+
+``` nohighlight
+stormrider@cloudburst:~$ ip a show up
+5: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 52:54:00:d6:70:6c brd ff:ff:ff:ff:ff:ff
+    inet 192.168.117.1/24 brd 192.168.117.255 scope global virbr0
+       valid_lft forever preferred_lft forever
+6: mpqemubr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 52:54:00:84:0a:4c brd ff:ff:ff:ff:ff:ff
+    inet 10.250.204.1/24 brd 10.250.204.255 scope global mpqemubr0
+       valid_lft forever preferred_lft forever
+7: lxdbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 00:16:3e:e4:2b:fe brd ff:ff:ff:ff:ff:ff
+    inet 10.90.195.1/24 scope global lxdbr0
+       valid_lft forever preferred_lft forever
+    inet6 fd42:1fc6:f588:d0b8::1/64 scope global 
+       valid_lft forever preferred_lft forever
+```
+
+You'll see that all three bridges are in a DOWN state, and again, ~lxdbr0~ is so cold that it doesn't even show up in the ARP table.  Let's bring up a LXD VM connected to ~lxdbr0~ and look at the ARP table again:
+
+``` nohighlight
+stormrider@cloudburst:~$ arp
+Address                  HWtype  HWaddress           Flags Mask            Iface
+192.168.1.24             ether   0c:8b:7d:f1:51:d3   C                     wlo1
+10.250.204.17                    (incomplete)                              mpqemubr0
+192.168.1.24             ether   0c:8b:7d:f1:51:d3   C                     enx606d3c645a57
+192.168.117.16                   (incomplete)                              virbr0
+10.90.195.16             ether   00:16:3e:fc:71:98   C                     lxdbr0
+```
+
+Note that the ~lxdbr0~ bridge now shows up and has a MAC address, too -- no incomplete entry here.  If we look at the MAC address of ~lxdbr0~ in the ~ip~ listing, we'll see it matches up.
+
+Those "(incomplete)" entries are old.  They've been cached, but no traffic has passed through those bridges in a really long time.  The cache is just persistent in holding onto the IP addresses, but not the MAC addresses (since they could be stale).  We can prove this to ourselves by clearing the cache:
+
+``` nohighlight
+stormrider@cloudburst:~$ sudo ip -s neigh flush all
+[sudo] password for stormrider: 
+
+*Round 1, deleting 18 entries ***
+*Flush is complete after 1 round ***
+```
+
+...and rebuilding the ARP table:
+
+``` nohighlight
+stormrider@cloudburst:~$ arp
+Address                  HWtype  HWaddress           Flags Mask            Iface
+192.168.1.24             ether   0c:8b:7d:f1:51:d3   C                     wlo1
+192.168.1.24             ether   0c:8b:7d:f1:51:d3   C                     enx606d3c645a57
+10.90.195.16             ether   00:16:3e:fc:71:98   C                     lxdbr0
+```
+
+<a href="#heading--more-about-arp"><h4 id="heading--more-about--arp">More about ARP</h4></a>
+
+Another form of ARP is promiscuous ARP, in which some proxy host pretends to be the destination host and provides an ARP response on behalf of the actual destination host.  You shouldn't use this form of ARP unless there's no other choice.  You can Google it (and use it at your own risk), but it won't be described here.
+
+There is also gratuitous ARP, when the source and destination IP addresses are the same.  This can be used for at least two purposes:
+
+1. To find out if someone else already has the source machine's IPv4 address, a technique called Address Conflict Detection by some references.
+
+2. To update the source machine's new MAC address (e.g., a new NIC card was installed) in upstream ARP cache entries.  This is something akin to pre-caching MAC addresses before they're actually needed.
+
+You can [read more about](https://en.wikipedia.org/wiki/Address_Resolution_Protocol) these (and many more) nuances of ARP, but this introduction should answer most of the immediate questions. 
 
 <a href="#heading--about-maas-networks"><h2 id="heading--about-maas-networks">About MAAS networks</h2></a>
 
