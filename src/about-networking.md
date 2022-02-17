@@ -10,7 +10,7 @@ Most of the examples are related to MAAS, but links are provided for further stu
 
 TCP/IP networks, and the underlying structure, evolved to meet a specific need: How can we keep a computer network functioning in the event of a catastrophic failure of communications infrastructure?  When nodes go offline, randomly, how can surviving nodes keep the network usable?  The Internet, which relies heavily on TCP/IP networks, has proven over time that it can adapt to changing loads, handle significant failures, and strictly limit the network blast radius when things go wrong.   
 
-Experience has shown us that you will probably have a much easier time working with MAAS if you ensure a solid understanding of network fundamentals.  Rather than bury this basic material, we've decided to include it in the mainstream MAAS networking discussion. Later sections, which help you learn how to design and troubleshoot MAAS networks, will depend heavily on principles explained here.
+Experience has shown us that you will probably have a much easier time working with MAAS if you ensure that you have a solid understanding of network fundamentals.  Rather than bury this basic material, we've decided to include it in the mainstream MAAS networking discussion. Later sections, which help you learn how to design and troubleshoot MAAS networks, will depend heavily on principles explained here.
 
 This section is designed to help you understand:
 
@@ -58,13 +58,13 @@ In theory, the Internet infrastructure and a cloud network should be very simila
 
 As implied by the discussion above, these networks can become very complicated.  There's rarely a reason to even want to know how many hops a message takes, or where it hops, unless you're trying to debug a broken route with, say, [traceroute]([https://linux.die.net/man/8/traceroute).  From a TCP/IP point of view, it's much easier to ignore the specific network, since it gets built on-the-fly, so to speak; and it can change every time a message is sent, even between the same two computers.
 
-In other words, when it comes to designing and troubleshooting networks, knowing the specific route (almost) never helps.  Instead, what we want to know about is the /network traffic/ that travels between computers.  That means we have to understand what /kind/ of traffic travels between computers, besides just the data we send.   The next few sections will explain these concepts.
+In other words, when it comes to designing and troubleshooting networks, knowing the specific route (almost) never helps.  Instead, what we want to know about is the network traffic that travels between computers.  That means we have to understand what kind of traffic travels between computers, besides just the data we send.   The next few sections will explain these concepts.
 
 <a href="#heading--about-the-osi-model"><h3 id="heading--about-the-osi-model">About the OSI model</h3></a>
 
 When we begin to look at networks as a continuous wire, we need to understand what travels on that wire from one host to the other.  But that depends on our perspective, that is, our level of magnification.  If we look at the highest "zoom" level, all we'll see are electrons travelling down the wire.  That's not very useful for debugging purposes.  We can use that information to determine whether anything's being sent, but if the message isn't going out on the wire, we can't guess why not.
 
-The [Open Systems Interconnection model](https://en.wikipedia.org/wiki/OSI_model) was created to standardize on a few different levels.  The OSI model looks something like this:
+The [Open Systems Interconnection model](https://en.wikipedia.org/wiki/OSI_model) was created to standardise on a few different levels.  The OSI model looks something like this:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/7/765cd90cffcecfcc83593cde0483e64977a48223.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/765cd90cffcecfcc83593cde0483e64977a48223.jpeg"></a>
 
@@ -140,15 +140,15 @@ The only purpose of the link layer -- at least from a TCP/IP perspective -- is t
 
 At first, that may seem a little weird.  L2 is not without error checking and recovery code, but it functions efficiently precisely because it isn't concerned with the data or the message containing the data.  That fact can be surprising, since L3 packets, like unique bit-groupings are several layers, are called "datagrams".
 
-A datagram is a basic network transfer unit.  It's the indivisible unit for a given layer.  If we're talking about the data-link layer (aka the "link" layer), it's an IEEE 802.xx frame.  At the network layer, it's a data packet.  For the transport layer, it would be called a segment.  Indivisible units in the physical layer are called chips, which are spread-spectrum pulses in the CDMA, noise-utilizing transmission system that operates at that layer.
+A datagram is a basic network transfer unit.  It's the indivisible unit for a given layer.  If we're talking about the data-link layer (aka the "link" layer), it's an IEEE 802.xx frame.  At the network layer, it's a data packet.  For the transport layer, it would be called a segment.  Indivisible units in the physical layer are called chips, which are spread-spectrum pulses in the CDMA, noise-utilising transmission system that operates at that layer.
 
-Since datagram isn't carefully used by everyone (think of User Datagram Protocol), we agree to call these indivisible laye units PDUs (protocol data units).  This avoids conflation with other uses and reminds you that it's the atomic unit at the current network layer.  At the link layer, it's a frame.
+Since datagram isn't carefully used by everyone (think of User Datagram Protocol), we agree to call these indivisible layer units PDUs (protocol data units).  This avoids conflation with other uses and reminds you that it's the atomic unit at the current network layer.  At the link layer, it's a frame.
 
 <a href="#heading--about-frames"><h4 id="heading--about-frames">About MAC frames</h4></a>
 
 A MAC frame, or just "frame", encapsulates the packets from the network layer so that they can be transmitted on the physical layer.  A frame can be small or big, anywhere from 5 bytes up to the kilobyte range.  The upper size limit is called the maximum transmission unit (MTU) or maximum frame size.  This size is set by the particular network technology in use.
 
-This last observation brings up a good point: In order to talk sensibly about frames, we'd need to say what kind of frame.  In that case, we're talking about packet-switched networks, so there are about four frame types to consider: Ethernet, fiber channel, V.42, and PPP (point-to-point protocol).  MAAS networks almost exclusively use Ethernet, as defined in the [IEEE 802 standards](https://www.ieee802.org/).  
+This last observation brings up a good point: In order to talk sensibly about frames, we'd need to say what kind of frame.  In that case, we're talking about packet-switched networks, so there are about four frame types to consider: Ethernet, fibre channel, V.42, and PPP (point-to-point protocol).  MAAS networks almost exclusively use Ethernet, as defined in the [IEEE 802 standards](https://www.ieee802.org/).  
 
 <a href="#heading--about-ethernet"><h4 id="heading--about-ethernet">About Ethernet</h4></a>
 
@@ -162,13 +162,13 @@ Remember earlier, when we talked about voice radio, and the need to say "over"? 
 
 <a href="#heading--about-media-access-control"><h4 id="heading--about-media-access-control">About Media Access Control (MAC)</h4></a>
 
-Systems like CSMA/CD are a subset of the Media Access Control (MAC) protocol kit.  MAC is one-half of the link layer, with Logical Link Control (LLC) being the other half.  These are sometimes called sublayers. LLC mostly just defines the frame format for the 802.xx protocols, like WiFi, so we can safely ignore it for the purposes of MAAS networking.
+Systems like CSMA/CD are a subset of the Media Access Control (MAC) protocol kit.  MAC is one-half of the link layer, with Logical Link Control (LLC) being the other half.  These are sometimes called sub-layers. LLC mostly just defines the frame format for the 802.xx protocols, like WiFi, so we can safely ignore it for the purposes of MAAS networking.
 
 If you've worked with networks at all, you've heard of MAC addresses.  Those are basically unique, serial numbers assigned to network interface devices (like NICs) at the time of manufacture.  Theoretically, they are unique in the world, not counting virtual NICs in virtual machine environments.  [MAC address collisions](https://kb.vmware.com/s/article/219) do happen when using VMs, and there are ways to fix it, assuming that your VMs are confined to a subnet.
 
-The MAC sublayer is connected to the physical layer by a media-independent interface (MII), independent of the actual link protocol (e.g, cellular broadband, Wi-Fi radio, Bluetooth, Cat5e, ...).  You can learn more about the [MII](https://en.wikipedia.org/wiki/Media-independent_interface) if you're so inclined, but we won't address it again in the context of MAAS networks.
+The MAC sub-layer is connected to the physical layer by a media-independent interface (MII), independent of the actual link protocol (e.g, cellular broadband, Wi-Fi radio, Bluetooth, Cat5e, ...).  You can learn more about the [MII](https://en.wikipedia.org/wiki/Media-independent_interface) if you're so inclined, but we won't address it again in the context of MAAS networks.
 
-Essentially, the MAC sublayer grabs higher-level frames and makes them digestible by the physical layer, by encoding them into an MII format.  It adds some synchronization info and pads the message (if needed).   The MAC sublayer also adds a frame check sequence that makes it easier to identify errors.
+Essentially, the MAC sub-layer grabs higher-level frames and makes them digestible by the physical layer, by encoding them into an MII format.  It adds some synchronization info and pads the message (if needed).   The MAC sub-layer also adds a frame check sequence that makes it easier to identify errors.
 
 In conventional Ethernet networks, all this looks something like the following:
 
@@ -176,11 +176,11 @@ In conventional Ethernet networks, all this looks something like the following:
 
 Let's decode those blocks of bits.
 
-The Preamble is 7 bytes of clock sync, basically just zeroes and ones like this: ...0101010101....  This gives the receiving station a chance to catch up and sync their clock, so the following data isn't out of sync (and thus misinterpreted).  To delve just a little deeper, the Preamble helps the receiving NIC figure out the exact amount of time between encoded bits (it's called clock recovery).  NTP is nice, but Ethernet is an asynchronous LAN protocol, meaning it doesn't expect perfectly synchronized clocks between any two NICs.  The Preamble is similar to the way an orchestra conductor might "count the players in" so they all get the same rhythm to start.
+The Preamble is 7 bytes of clock sync, basically just zeroes and ones like this: ...0101010101....  This gives the receiving station a chance to catch up and sync their clock, so the following data isn't out of sync (and thus misinterpreted).  To delve just a little deeper, the Preamble helps the receiving NIC figure out the exact amount of time between encoded bits (it's called clock recovery).  NTP is nice, but Ethernet is an asynchronous LAN protocol, meaning it doesn't expect perfectly synchronised clocks between any two NICs.  The Preamble is similar to the way an orchestra conductor might "count the players in" so they all get the same rhythm to start.
 
 <details><summary>Before clock recovery, there was MPE</summary>
 
-Clock recovery is much more reliable than trying to get computers all over the world synced up to the same clock frequency and the same downbeat (starting point).  Ethernet actually started out that way with something called Manchester Encoding or Manchester Phase Encoding (MPE).  This was important because electrical frequency varies not only across the world, but also from moment to moment when the power is slightly "dirty".  MPE involved bouncing a bit between two fractional voltages using a 20MHz oscillator to generate a reference square wave.  It works, but it's not very efficient, so MPE was scrapped in favor of using the Preamble, the way that projectionists use alignment marks on reels of movie film.
+Clock recovery is much more reliable than trying to get computers all over the world synced up to the same clock frequency and the same downbeat (starting point).  Ethernet actually started out that way with something called Manchester Encoding or Manchester Phase Encoding (MPE).  This was important because electrical frequency varies not only across the world, but also from moment to moment when the power is slightly "dirty".  MPE involved bouncing a bit between two fractional voltages using a 20MHz oscillator to generate a reference square wave.  It works, but it's not very efficient, so MPE was scrapped in favour of using the Preamble, the way that projectionists use alignment marks on reels of movie film.
    
 </details>
 
@@ -219,7 +219,7 @@ As you can see in the modified P/Q frame, the following fields replace part of t
 This matters when we're building complex MAAS networks with lots of VLANS that probably cross over switches.  After all, VLANs were initially controlled with ports and switches, although they more commonly use tags now.  When more than one VLAN spans multiple switches, frames need to carry VLAN information that can be used by switches to sort or "trunk" the traffic.
 
 <details><summary>The origin of "trunking"</summary>
-The word /trunking/ is derived from the telephone network term trunk lines, which are lines connecting switchboards.
+The word "trunking" is derived from the telephone network term trunk lines, which are lines connecting switchboards.
 
 In the original telephone company model, each telephone had a subscriber line, which was a wire that went straight from the local Central Office (CO) to that subscriber's telephone.  Each CO had one switchboard, though it might have many seats.
 
@@ -231,7 +231,7 @@ At the CO, the wires would "branch" and run all over the place: First to junctio
 
 In the parlance of networks, especially VLANs, the term "trunking" is used to indicate the sharing of network routes.  This sharing is made possible by the Ethernet VLAN tags, which make the VLAN-bound messages less dependent on switches and routers to get the traffic to the right place.  Otherwise, you'd have to designate complicated port configurations for switches, which is particularly easy to misconfigure.
 
-Note that the MAC sublayer is responsible for managing CDMA/CD, that is, detecting a clear line, initiating retransmission if there's a jam signal, etc.  On the way in, the MAC sublayer verifies the CRC/FCS and removes frame elements before passing the data up to the higher layers.  Basically, anything that some other MAC layer did to encapsulate the message for sending, the receiving MAC layer un-does on the way in.
+Note that the MAC sub-layer is responsible for managing CDMA/CD, that is, detecting a clear line, initiating re-transmission if there's a jam signal, etc.  On the way in, the MAC sub-layer verifies the CRC/FCS and removes frame elements before passing the data up to the higher layers.  Basically, anything that some other MAC layer did to encapsulate the message for sending, the receiving MAC layer un-does on the way in.
 
 <a href="#heading--about-vlans-subnets-and-fabrics"><h4 id="heading--about-vlans-subnets-and-fabrics">About VLANs, subnets, and fabrics</h4></a>
 
@@ -271,13 +271,13 @@ A fabric just collects VLANs together.  If you stick to the clean fan-out, that 
 
 Consider a MAAS-centric example.  Suppose you have one VLAN for HR, and one VLAN for payroll, so that nobody else can see HR's private files, and likewise you've got payroll data limited to just those people who should see it.
 
-Some executives are entitled to see anything and everything about the corporation.  An "executive" fabric would group all VLANs together, so that people admitted to that fabric can access the VLANs without having to be explicitly added to each one.  That's very handy in really large organizations, saving a lot of time and effort.
+Some executives are entitled to see anything and everything about the corporation.  An "executive" fabric would group all VLANs together, so that people admitted to that fabric can access the VLANs without having to be explicitly added to each one.  That's very handy in really large organisations, saving a lot of time and effort.
 
 <a href="#heading--visualising-the-link-layer"><h4 id="heading--visualising-the-link-layer">Visualising the link layer</h4></a>
 
 Let's start with a message coming on Layer 1 from SanDiego to Bangor. When the message comes in, the link layer does the following things:
 
-1. It synchronizes the NIC, so that bits will indeed be recognized as bits and the message can be properly decoded.
+1. It synchronises the NIC, so that bits will indeed be recognised as bits and the message can be properly decoded.
 
 2. It handles the source and destination addresses, using ARP as necessary. 
 
@@ -305,7 +305,7 @@ It's also a connectionless layer, meaning the packets making up a message aren't
 
 <details><summary>Network byte order</summary>
 
-A rarely needed (but useful) fact is that the network sends bytes in /big endian/ order.  That means bytes are transmitted starting with bit 0 and working down to bit 31, usually eight bits at a time.  A lot of the computers on the Internet use little endian encoding, which starts at the other end of the word.  In those cases, the byte order has to be reversed somewhere between the computer's memory and Layer 3.
+A rarely needed (but useful) fact is that the network sends bytes in big endian order.  That means bytes are transmitted starting with bit 0 and working down to bit 31, usually eight bits at a time.  A lot of the computers on the Internet use little endian encoding, which starts at the other end of the word.  In those cases, the byte order has to be reversed somewhere between the computer's memory and Layer 3.
 
 For most situations, that fact isn't particularly useful, but there is the occasional fault that involves failure to reverse byte order along the path from RAM to NIC.
 
@@ -341,15 +341,15 @@ Note that IPv6 headers have only the version field in common with IPv4 headers; 
 - **Internet Header Length** The number of 32-bit words in the header, including the options (but not including the data, since it's just the header).  Most of the time, this will have the value "5", but options do exist and are sometimes included.
 - **Differentiated Services Code Point** This is used to specify special classes of service.  Normally, IP packets are delivered on a "best-effort" basis, that is, Layer 3 will try everything possible to make sure a packet gets delivered.  You can cause L3 to deliver packets with higher priority (implying more certainty) by using a different DSCP.
 - **ECN = Explicit Congestion Notification** These bits are both set by an ECN-capable router when that router is above a certain traffic threshold.  They are there to alert a sender to slow down (or expect delays) when the network segment in use is particularly congested.
-- **Total Length of IP Packet** This field indicates the length of the entire packet, /including/ the data.  This makes it possible to calculate the byte offset of the data within the datagram.
+- **Total Length of IP Packet** This field indicates the length of the entire packet, including the data.  This makes it possible to calculate the byte offset of the data within the datagram.
 - **Identification**  This is a serial number, generated by the sending NIC, that helps the participants uniquely identify the datagram.  In a sense, it works like the little "take-a-number" tickets you get at the hamburger stand: Eventually, the number will repeat, but the repeat cycle is so long that there's no chance of confusing packets.  The sequential nature of this field, when used in concert with the Flags and Fragmentation Offset field, helps the protocol stack correctly reassemble the message.
 - **Flags**  This field is basically used to indicate that a packet is a fragment of a longer message.
 - **Fragmentation Offset**  Used with the Identification sequence number, this field allows the system to know which packets precede or follow this one when re-assembling the message.
 - **Time to Live (TTL)**  This indicates the number of routers that a datagram can pass through before it's discarded.  Since routers function by replacing their own destination address with the IP address of the next hop, this essentially limits the number of times a packet's destination IP can be changed.  Most RFC documents suggest keeping this number at 64, it's more often set to something like 255 without any real bottlenecks.
 - **Protocol** This field indicates the higher level protocol (the protocol stack) that generated this message.  Examples are given for TCP and UDP in the figure.
 - **Header Checksum** This calculates a checksum for the header only.  It's only used in IPv4.  Doing integrity-checking on the data is the responsibility of Layer 4.
-- **Source Address** This is the IP address of the sender of the packet, /for this hop only/.  As shown in the figure below, routers will change this address so they can get the answer back.
-- **Destination Address**  This is the IP address of the destination, /for this hop only/.  As shown below, routers change this address to act as brokers in the IP chain.
+- **Source Address** This is the IP address of the sender of the packet, for this hop only.  As shown in the figure below, routers will change this address so they can get the answer back.
+- **Destination Address**  This is the IP address of the destination, for this hop only.  As shown below, routers change this address to act as brokers in the IP chain.
 
 <a href="#heading--about-routing"><h4 id="heading--about-routing">About routing</h3></a>
 
