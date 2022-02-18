@@ -14,17 +14,18 @@ Experience has shown us that you will probably have a much easier time working w
 
 This section is designed to help you understand:
 
- - [Internet infrastructure](#heading--about-the-internet-infrastructure)
+ - [Internet infrastructure](#heading--about-the-internet-about-the-internet)
  - [The OSI model](#heading--about-the-osi-model)
  - [Layer 1: the physical layer](#heading--about-the-physical-layer)
  - [Layer 2: the datalink layer](#heading--about-the-datalink-layer)
  - [Layer 3: the network layer](#heading--about-the-network-layer)
  - [How ARP works](#heading--about-arp)
- - [Layer 4: the transport layer](#heading--about-the-transport-layer)
+ - [A little about TCP](#heading--about-tcp)
+ - [DHCP, multiple DHCP servers, and DHCP relays](#heading--about-dhcp)
 
 This material can be read from beginning to end, or you can skip to sections where you feel you might need more clarity.  Just remember that a good understanding of these fundamentals will make it much easier for you to efficiently lay out and debug MAAS networks.
 
-<a href="#heading--about-the-internet-infrastructure"><h3 id="heading--internet-infrastructure">About the Internet infrastructure</h3></a>
+<a href="#heading--about-the-internet"><h3 id="heading--about-the-internet">About the Internet</h3></a>
 
 Suppose we want to connect two computers, "SanDiego" and "Bangor", located at opposite corners of the country.  They should communicate via a network.  How do we make that happen?  We could simply hook up a wire between SanDiego and Bangor.  In fact, that's essentially how it was done in the beginning. It worked, but there were at least two drawbacks:
 
@@ -42,6 +43,11 @@ These "sideways paths" are there mostly for performance reasons, like latency, r
 
 Either way, the AAC network can be very complicated and incorporate lots of redundant loops where network packets can get trapped, trying to find a way out.  We'll discover later that TCP/IP has a dedicated way to prevent these infinite loops called the "Time To Live" field.  We'll also talk about how these issues have driven us to design cloud network architectures (known as Clos architectures), which address both the financial and performance impacts of large networks in a much simpler way.
 
+This subsection will help you learn:
+
+- [About the infrastructure of the Internet](#heading--internet-infrastructure)
+- [About Internet network traffice](#heading--about-network-traffic)
+
 <a href="#heading--internet-infrastructure"><h4 id="heading--internet-infrastructure">About the infrastructure of the Internet</h4></a>
 
 A very old meme explains that the Internet is survivable because every computer can connect to every other computer.  While that might be possible, that's not generally how it works.  There's actually a hierarchy which we refer to as the *Internet Infrastructure*:
@@ -54,13 +60,24 @@ High-level networks, known as Network Service Providers (NSPs), connect to at le
 
 In theory, the Internet infrastructure and a cloud network should be very similar, but in practice, they diverge greatly.  The real Internet has horizontal connections running everywhere, based on drivers like cost, security, and performance.
 
-<a href="#heading--about-network-traffic"><h4 id="heading--about-network-traffic">About network traffic</h4></a>
+<a href="#heading--about-network-traffic"><h4 id="heading--about-network-traffic">About Internet network traffic</h4></a>
 
-As implied by the discussion above, these networks can become very complicated.  There's rarely a reason to even want to know how many hops a message takes, or where it hops, unless you're trying to debug a broken route with, say, [traceroute]([https://linux.die.net/man/8/traceroute).  From a TCP/IP point of view, it's much easier to ignore the specific network, since it gets built on-the-fly, so to speak; and it can change every time a message is sent, even between the same two computers.
+As implied by the discussion above, these networks can become very complicated.  There's rarely a reason to even count how many hops a message takes, or where it hops, unless you're trying to debug a broken route with, say, [traceroute]([https://linux.die.net/man/8/traceroute).  From a TCP/IP point of view, it's much easier to ignore the specific network, since it gets built on-the-fly, so to speak; and it can change every time a message is sent, even between the same two computers.
 
 In other words, when it comes to designing and troubleshooting networks, knowing the specific route (almost) never helps.  Instead, what we want to know about is the network traffic that travels between computers.  That means we have to understand what kind of traffic travels between computers, besides just the data we send.   The next few sections will explain these concepts.
 
 <a href="#heading--about-the-osi-model"><h3 id="heading--about-the-osi-model">About the OSI model</h3></a>
+
+This subsection will help you learn about the OSI model and:
+
+- [The physical layer](#heading--the-physical-layer)
+- [The datalink layer](#heading--the-datalink-layer)
+- [Interlayer addressing: ARP](#heading--arp)
+- [The network layer](#heading--the-network-layer)
+- [The transport layer](#heading--the-transport-layer)
+- [The session layer](#heading--the-session-layer)
+- [The presentation layer](#heading--the-presentation-layer)
+- [The application layer](#heading--the-application-layer)
 
 When we begin to look at networks as a continuous wire, we need to understand what travels on that wire from one host to the other.  But that depends on our perspective, that is, our level of magnification.  If we look at the highest "zoom" level, all we'll see are electrons travelling down the wire.  That's not very useful for debugging purposes.  We can use that information to determine whether anything's being sent, but if the message isn't going out on the wire, we can't guess why not.
 
@@ -113,7 +130,12 @@ The top layer, layer 7, is totally the province of the application(s) involved i
 <a href="#heading--about-the-physical-layer"><h3 id="heading--about-the-physical-layer">About the physical layer (L1)</h3></a>
 
 The phrase "physical layer" may conjure up notions of physics, but don't worry -- 
-at the physical layer, we don't look at electrons flowing.  We do look at signals.  Specifically, we're looking for binary (on/off) signals, set to the cadence of a clock.  Every computer brings its own clock to the party, so we need a way to "synchronise our watches".  That method is [NPT](https://en.wikipedia.org/wiki/Network_Time_Protocol) , the network time protocol.  
+at the physical layer, we don't look at electrons flowing.  We do look at signals.  This subsection will help you learn the basics of the physical layer, and also:
+
+- [About variable latency](#heading--about-variable-latency)
+- [That the physical layer is not very interesting](#heading--physical-layer-uninteresting)
+
+Specifically, here we're looking for binary (on/off) signals, set to the cadence of a clock.  Every computer brings its own clock to the party, so we need a way to "synchronise our watches".  That method is [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) , the network time protocol.  
 
 <a href="#heading--about-variable-latency"><h4 id="heading--about-variable-latency">About variable latency</h4></a>
 
@@ -136,9 +158,16 @@ Other than verifying that traffic is flowing on the wire, the physical layer doe
 
 <a href="#heading--about-the-datalink-layer"><h3 id="heading--about-the-datalink-layer">About the datalink layer (L2)</h3></a>
 
-The only purpose of the link layer -- at least from a TCP/IP perspective -- is to send and receive IP datagrams.  L2 generally doesn't try to maintain a connection with the host on the other end (it's "connectionless"), and it doesn't guarantee delivery or integrity of packets.  All it does is ship them between source and destination.
+The only purpose of the link layer -- at least from a TCP/IP perspective -- is to send and receive IP datagrams.  L2 generally doesn't try to maintain a connection with the host on the other end (it's "connectionless"), and it doesn't guarantee delivery or integrity of packets.  All it does is ship them between source and destination.  This subsection will help you learn:
 
-At first, that may seem a little weird.  L2 is not without error checking and recovery code, but it functions efficiently precisely because it isn't concerned with the data or the message containing the data.  That fact can be surprising, since L3 packets, like unique bit-groupings are several layers, are called "datagrams".
+- [About frames](#heading--about-frames)
+- [About Ethernet](#heading--about-ethernet)
+- [About Media Access Control (MAC)](#heading--about-media-access-control)
+- [About Trunking VLANs](#heading--about-trunking-vlans)
+- [About VLANs, subnets, and fabrics](#heading--about-vlans-subnets-and-fabrics)
+- [How to visualise the link layer](#heading--visualising-the-link-layer)
+
+At first, the message-agnostic state of the link layer may seem a little weird.  L2 is not without error checking and recovery code, but it functions efficiently precisely because it isn't concerned with the data or the message containing the data.  That fact can be surprising, since L3 packets, like unique bit-groupings are several layers, are called "datagrams".
 
 A datagram is a basic network transfer unit.  It's the indivisible unit for a given layer.  If we're talking about the data-link layer (aka the "link" layer), it's an IEEE 802.xx frame.  At the network layer, it's a data packet.  For the transport layer, it would be called a segment.  Indivisible units in the physical layer are called chips, which are spread-spectrum pulses in the CDMA, noise-utilising transmission system that operates at that layer.
 
@@ -363,7 +392,7 @@ The router typically assigns a unique port number to the outbound message, and r
 
 Let's take a short diversion to talk about bridge interfaces.  These will be important when we discuss ARP a little further down.
 
-A network bridge may be useful if you intend to use virtual machines or containers with MAAS.  Bridges are, to some extent, artifacts of the AAC network.  Frequently, people ask about the difference between a switch and a bridge.  The core answer lies in the number of ports: switches have as many ports as you can afford; bridges usually have fewer ports, often only have two.
+A network bridge may be useful if you intend to use virtual machines or containers with MAAS.  Bridges are, to some extent, artefacts of the AAC network.  Frequently, people ask about the difference between a switch and a bridge.  The core answer lies in the number of ports: switches have as many ports as you can afford; bridges usually have fewer ports, often only two.
 
 Switches traditionally forward packets, without storing them, to a specific host on a specific port, building up a table of host vs. port in the process to reduce broadcast transmissions. Switches traditionally use ASICs (Application Specific Integrated Circuits), otherwise known as "merchant silicon", designed especially for that purpose.
 
@@ -414,7 +443,7 @@ The first thing to remember is that the MAC address is "ROM-burned" into the NIC
 
 <a href="#heading--fixed-versus-assigned-addressing"><h4 id="heading--fixed-versus-assigned-addressing">Fixed versus assigned addressing</h4></a>
 
-Here's an analogy.  Your postal address doesn't /actually/ define where your house is located.  There are two layers of other addressing schemes that are actually used by government organizations, like your county tax assessor or the local air ambulance company.
+Here's an analogy.  Your postal address doesn't /actually/ define where your house is located.  There are two layers of other addressing schemes that are actually used by government organisations, like your county tax assessor or the local air ambulance company.
 
 One is your land survey location.  Depending on where you live, this is defined by a series of coordinates that go something like this: county, township, section, plat, lot, etc.  If you've ever looked at your property tax bill, it will have your postal address on it, but it will not actually use your postal address to define the taxable property.  Instead, it uses this unique set of (rather obscure) coordinates to place you exactly on land survey maps.
 
@@ -428,7 +457,7 @@ What about the analogue of survey maps?  Well, it's not hard to argue that these
 
 <a href="#heading--address-resolution"><h4 id="heading--address-resolution">Address resolution</h4></a>
 
-Address resolution is what we call the process of mapping between IP addresses and MAC addresses.  It's done with something called ARP, which stands for "Address Resolution Protocol".  Oddly enough, ARP takes on a life of its own, so you may hear it discussed in unusual ways.  Some people call it "the ARP", others speak of "arpd" (the ARP daemon), although if you look at [the man page for arpd](https://linux.die.net/man/8/arpd), you'll see those characterizations are not precisely correct.
+Address resolution is what we call the process of mapping between IP addresses and MAC addresses.  It's done with something called ARP, which stands for "Address Resolution Protocol".  Oddly enough, ARP takes on a life of its own, so you may hear it discussed in unusual ways.  Some people call it "the ARP", others speak of "arpd" (the ARP daemon), although if you look at [the man page for arpd](https://linux.die.net/man/8/arpd), you'll see those characterisations are not precisely correct.
 
 A frequent question is, "Where does ARP take place?"  Maybe the better question is, "Where is ARP implemented?"  As always with Internet-related things, the answer can vary, but normally, ARP is implemented as part of the embedded code in the NIC.  Technically, this means that ARP operates at Layer 2.  More often, you'll see vendors hedge their bets on this, with phrases such as "operates below the Network Layer", as in [this explanation](https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-c00686597#:~:text=ARP%20is%20a%20protocol%20used,network%20and%20OSI%20link%20layer).
 
@@ -440,7 +469,7 @@ To better understand, let's walk an ARP call.  It begins in say, a Web browser, 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/1365006a1692e4788df733c58e1435e67da57536.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1365006a1692e4788df733c58e1435e67da57536.jpeg"></a>
 
-We won't go into this in much detail now, just know that the browser is able to gather an IP address, if it exists.  To make the walkthrough less confusing, let's assume that we're looking for a host with IP 192.168.17.4.
+We won't go into this in much detail now, just know that the browser is able to gather an IP address, if it exists.  To make the walk-through less confusing, let's assume that we're looking for a host with IP 192.168.17.4.
 
 Next, the browser requests a connection with 192.168.17.4, using the TCP protocol, which sends a connection request, as an IP packet, to 192.168.17.4.  Along the way, there is probably more than one router hop.  
 
@@ -448,7 +477,7 @@ ARP sends a broadcast request to everything on the relevant subnet.  This reques
 
 A very important note for some systems like MAAS: ARP requests don't typically span VLANs.  
 
-Essentially, this ARP message contains the IP address 192.168.17.4, but no corresponding MAC address in the message.  This tells the owner of 192.168.17.4 that it should reply with a similar ARP message, including its MAC address.  When the sender receives the ARP reply, it can send the datagram directly to the destination host, embeeded in an Ethernet frame, using the MAC address.
+Essentially, this ARP message contains the IP address 192.168.17.4, but no corresponding MAC address in the message.  This tells the owner of 192.168.17.4 that it should reply with a similar ARP message, including its MAC address.  When the sender receives the ARP reply, it can send the datagram directly to the destination host, embedded in an Ethernet frame, using the MAC address.
 
 By the way, for efficiency, the sending host and the intermediate routers are all doing ARP caching.  They copy down the mapping between IP and MAC addresses, holding onto it for about twenty minutes.  In terms of most network transactions, twenty minutes is an eternity.
 
@@ -551,7 +580,7 @@ Address                  HWtype  HWaddress           Flags Mask            Iface
 10.90.195.16             ether   00:16:3e:fc:71:98   C                     lxdbr0
 ```
 
-<a href="#heading--more-about-arp"><h4 id="heading--more-about--arp">More about ARP</h4></a>
+<a href="#heading--more-about-arp"><h4 id="heading--more-about-arp">More about ARP</h4></a>
 
 Another form of ARP is promiscuous ARP, in which some proxy host pretends to be the destination host and provides an ARP response on behalf of the actual destination host.  You shouldn't use this form of ARP unless there's no other choice.  You can Google it (and use it at your own risk), but it won't be described here.
 
@@ -562,6 +591,242 @@ There is also gratuitous ARP, when the source and destination IP addresses are t
 2. To update the source machine's new MAC address (e.g., a new NIC card was installed) in upstream ARP cache entries.  This is something akin to pre-caching MAC addresses before they're actually needed.
 
 You can [read more about](https://en.wikipedia.org/wiki/Address_Resolution_Protocol) these (and many more) nuances of ARP, but this introduction should answer most of the immediate questions. 
+
+<a href="#heading--about-tcp"><h3 id="heading--about-tcp">About TCP</h3></a>
+
+If the Internet Protocol (IP) is connectionless, the transport layer is all about connections.  The transport-layer protocol in use -- we'll talk exclusively about Transmission Control Protocol or TCP here -- the L4 protocol is the last place in the stack where the entire message exists in one piece.  L4 breaks up larger messages into segments.  Each segment gets a TCP header, and gets passed on to L3 where it becomes an IP packet.
+
+<a href="#heading--about-the-tcp-header"><h4 id="heading--about-the-tcp-header">About the TCP header</h4></a>
+
+Here's a diagram of the L4-to-L3 hand-off:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/a/a8f2aba29b1299bba2630177c0301dd518cacb57.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8f2aba29b1299bba2630177c0301dd518cacb57.jpeg"></a>
+
+We can get a pretty good idea what happens at Layer 4 just by decoding the contents of the TCP header. It contains the following fields:
+
+- **Source port**: the application port number of the host sending the data.  For example, if this is an FTP message, the source port would probably be 21.
+
+- **Destination port**: the port number of the application requested on the destination host.  If this is FTP, again this port would likely be 21.
+
+- **Sequence number**: the sequence number of this segment of data, to help the other end put the data back together in the correct order, as well as help Level 4 on the receiving end know whether a packet's been dropped or lost.
+
+- **Acknowledgement number**: essentially, the next sequence number the destination host is expecting; used to "gate" packets through the connection.
+
+- **TCP header length**: given to know where the data begins.
+
+- **Reserved**: reserved for future use, basically; currently always set to 0.
+
+- **Code bits**: essentially a set of flags; see the list below.
+
+- **Window**: used to negotiate the "window" size, that is, how many bytes the destination host is willing to receive at once; this allows for the most efficient transmission possible, based on the characteristics of the two communicating hosts.
+
+- **Checksum (CRC)**: used to check the integrity of the segment.
+
+- **Urgent pointer**: data byte count where urgent data ends; used if the urgent flag is set (see below).
+
+
+The code bits can indicate the following things:
+
+- **URG**: indicates that the urgent pointer field is meaningful, used to prioritise this message over other messages.
+
+- **ACK**: used to acknowledge successful delivery of the previous segment.
+
+- **PSH**: push notification; tells the receiving host the message is complete, you can push the data to the application.
+
+- **RST**: request a connection reset when the error level reaches a certain threshold; basically, "let's try that again from the top."  This is considered an abnormal termination of the TCP connection.
+
+- **SYN**: used for a three-way TCP handshake; this handshake is how sender and receiver sync up; it serves a purpose similar to the preamble in a MAC frame, but at a different level of synchronization.
+
+- **FIN**: we're done, close the connection.  This is considered a normal termination of a TCP connection.
+
+- **NS/CWR/ECE**: used to provide Explicit Congestion Notification; note that OSI provides several methods for endpoints to know that the network is congested.
+
+<details><summary>TCP is like a phone call</summary>
+
+As you can see from the bytes above, TCP is all about the state of a connection, which is basically the same as a phone call.  When you pick up the receiver, you and the caller exchange information.  You say "bye" when the call is over.  If it's a bad connection or one end suddenly gets noisy (think jack-hammers outside), one of you can reset the connection by saying, "Let me call you back in a minute."  Take a minute and try to see how the other header bytes fit this analogy.
+
+Also like a telephone call, TCP provides a connection (the call, however long it lasts), flow control (provided by the two parties on the call), multiplexing (handled by the two handsets, basically letting through multiple frequencies and sounds, so that you can get the tone and breath sounds of the other person, not just their raw words).  Likewise, the two parties try to handle the reliability of the connection by making sure you understand each other.
+
+The analogy spreads a little because some of the items (connection, multiplexing) are handled by the telephone, and some are handled by the people operating the telephone (flow control, reliability).  In the network, the Level 4 protocol stack handles it all.
+
+</details>
+
+There is a lot more to know about TCP, but most of it isn't directly relevant for MAAS networking.  Instead, we direct you to the excellent [Wikipedia article about TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol).  Going forward, we'll only bring up specific transport layer elements as we need them.
+
+<a href="#heading--about-dhcp"><h3 id="heading--about-dhcp">About DHCP</h3></a>
+
+Next, we turn our attention to the Dynamic Host Control Protocol or DHCP.  Many issues with MAAS revolve around misunderstanding or unintentional misuse of DHCP, so it's worth it to take an in-depth look.
+
+Consider the analogy of assigning a street address to your house, which we've already used earlier. Usually, this is done by the local 911 dispatch office, or some other central authority. They typically use either a survey map or a latitude/longitude pair to locate you, before they assign your house numbers from a pool of available addresses, compatible with other addresses in the area.
+
+Let’s assume that you’re not sure who to call, so you just broadcast a message to everyone in range — your neighbours, the local authorities, etc. You explain that you’re at a given latitude and longitude, and that you want to REQUEST an address.
+
+“Hello. My LatLong is 80.0, 35.7. I need a street address! Can someone out there help me?”
+
+It’s a long shot, you know, but it’s the only thing you can think of at the moment. And — surprise — someone authoritative answers you with an OFFER.
+
+“Hello, LatLong 80.0, 35.7! I have a unique address of 62 Wimberly Place, here are the details. By the way, I am at 46 Reardon Lane if you need to reach me.”
+
+You’re not going to miss this chance, so you let the authority know that, yes, you do want that address, just as they gave it to you. In fact, just to make sure, you formally REQUEST the address.
+
+"Hello? 46 Reardon Lane? I’d like to formally request that 62 Wimberly Place address. Is it still available?"
+
+Happily, the authority ACKNOWLEDGES that the address is yours, or at least, for a while, anyway.
+
+"LatLong 80.0, 35.7, that address is still available. I’m marking it down to you! Enjoy, but be aware that you'll need to reclaim this address every three years."
+
+We used “LatLong 80.0, 35.7” because this particular negotiation is basically carried out by shouting across the fences. Even so, the two participants have to know for sure they’re talking to the right party, so identifiers have to be used that are guaranteed to be unique. 62 Reardon Lane has their address, so they’re already unique. 80.0, 35.7 has no address, so they have to use something else that uniquely identifies them.
+
+<a href="#heading--about-dora"><h4 id="heading--about-dora">About DORA</h4></a>
+
+The DHCP negotiation process is known as DORA: Discover, Offer, Request, Acknowledge. Just like the exchange above, it’s carried out by the network equivalent of shouting, that is, broadcast exchanges. While the payloads for the messages carry unique addressing information (after the first DISCOVER message), the Destination IP (DIP) is always 255.255.255.255 — broadcast mode. Every machine on the network will see the packet, but they will ignore it when they look at the payload.
+
+By the way, there are several other possible responses at various points in the exchange, such as NACK (from the DHCP server, when the client has waited too long to make the request) and DECLINE (e.g., when the IP address configuration offered isn’t usable by the client).
+
+The network version of the shouting match above looks something like this:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/a/a8c1756c1f0a9309fa01f1f5ccc0573e33e436fa.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8c1756c1f0a9309fa01f1f5ccc0573e33e436fa.jpeg"></a>
+
+Message 1 ("DISCOVER") is the only one that carries no destination info in its payload.  The
+entire exchange takes place in broadcasts, rather than addressed packets. Said differently, the DIP (Destination IP address) is always 255.255.255.255, the broadcast address. The exchange becomes semi-private with the first OFFER, via the use of message payloads.
+
+<a href="#heading--about-dhcp-traffic"><h4 id="heading--about-dhcp-traffic">About DHCP traffic</h4></a>
+
+In fact, it’s worthwhile to (very briefly) consider a DHCP packet exchange. Typically, it looks something like this:
+
+``` nohighlight
+# DHCP Discover
+Ethernet Header: DA=FF-FF-FF-FF-FF-FF, SA=<client MAC>
+IP Header: SIP=0.0.0.0, DIP=255.255.255.255
+DHCP Payload: Client MAC=<client MAC>
+
+# DHCP Offer
+Ethernet Header: DA=FF-FF-FF-FF-FF-FF, SA=<DHCP server MAC>
+IP Header: SIP=<DHCP server IP address>, DIP=255.255.255.255
+DHCP Payload: Offered IP=<offered IP>, Client MAC=<client MAC>,
+Subnet Mask=<Subnet mask>, Router IP=<router IP>, 
+DNS=<DNS server1 IP, DNS server2 IP>, IP Lease Time=<time>s,
+DHCP Server Identifier=<DHCP server IP address>
+
+# DHCP Request
+Ethernet Header: DA=FF-FF-FF-FF-FF-FF, SA=<client MAC>
+IP Header: SIP=0.0.0.0, DIP=255.255.255.255
+DHCP Payload: Client MAC=<client MAC>, 
+Requested IP Address=<offered IP>, 
+DHCP Server Identifier=<DHCP server IP address>
+
+# DHCP Ack
+Ethernet Header: DA=FF-FF-FF-FF-FF-FF, SA=<DHCP server MAC>
+IP Header: SIP=<DHCP server IP address>, DIP=255.255.255.255
+DHCP Payload: Offered IP=<offered IP>, Client MAC=<client MAC>,
+Subnet Mask=<Subnet mask>, Router IP=<router IP>, 
+DNS=<DNS server1 IP, DNS server2 IP>, IP Lease Time=<time>s,
+DHCP Server Identifier=<DHCP server IP address>
+```
+
+A couple of clarifications can come in handy here:
+
+1. The DHCP server provides all the needed configuration parameters in both the OFFER and the ACK messages. Nothing is left out: the client receives an IP address, a subnet mask, a router location, the IPs of both DNS servers, the lease time limit, and the identity of the DHCP server. Nothing else is necessary for the requesting client to begin operating independently on the network.
+
+2. The requesting client does not start using the offered IP address until it has received the ACK message. Note that in the DHCP Request, above, the SIP (Source IP) is still 0.0.0.0, even though the client knows the offered IP (it sends it back in the request to confirm).
+
+With that very basic view of DHCP, we can now talk about how multiple DHCP servers and multiple requesting clients can keep things straight.
+
+<a href="#heading--about-dhcp-standard-message-types"><h4 id="heading--about-dhcp-standard-message-types">About DHCP standard message types</h4></a>
+
+DHCP is, technically, a network management protocol. In other words, it’s part of a collection of hardware and software tools that help to manage network traffic. DHCP is designed to automatically assign IP addresses and other communication parameters, such as default gateway, domain name, name server IPs, or time server IPs to clients. 
+
+There are (at least) two participants in a DHCP transaction: a server and a client, but the client has to meet some requirements to participate. Specifically, the client has to implement an instance of the DHCP protocol stack; without that, it has no idea how to formulate Discovery and Request packets, nor can it recognise Offers or Acknowledgements (or NAKs, for that matter).
+
+For what it’s worth, the “DHCP protocol stack” just means that a device can handle at least the following standard message types:
+
+- **DHCPDiscover**: a broadcast message sent in the hopes of finding a DHCP server.  Note that clients that don’t get a DHCP response may be able to assign themselves an Automatic Private IPv4 address (APIPA), which should always be in the range 169.254.0.0/16. This is good to know, because you want to pretty much always leave that scope (that range of IP addresses) unused by anything else in your system.
+
+- **DHCPOffer**: also a broadcast message, one that offers an IPv4 address lease; the lease is more than just an IP address, as we saw in the last DHCP blog.
+
+- **DHCPRequest**: If you haven’t noticed by now, DHCP exchanges are little like rolling snowballs: they pick up more protocol information as they go and keep it for the duration of the transaction, sending it back and forth. In this case, the client sends back everything the DHCP server sent, along with a request to actually take the offered lease.
+
+- **DHCPAcknowlegement**: If everything matches up when the DHCP server gets the Request, it responds with an Acknowledgement, which basically says, “Okay, you can lease this IP address for a set period of time.”
+
+- **DHCPNak**: If the client waits too long to Request an Offer (generally, if a different server has already claimed the offered IP address), the DHCP server may respond with a Nak. This requires the client to start over again at Discover.
+
+- **DHCPDecline**: If the client determines that, for some reason, the Offer has a configuration that won’t work for it, it can Decline the offer — that this also means it has to start again at Discover.
+
+- **DHCPRelease**: When a client is done with an IP address, it can send a Release message to cancel the rest of the lease and return the IP address to the server’s available pool.
+
+- **DHCPInform**: This is a relatively new message, which allows a client that already has an IP address to easily get other configuration parameters (related to that IP address) from a DHCP server.
+
+Note that, shortly before a lease expires, most DHCP clients will renew the lease, often with a shortened form of the exchange (Request/Acknowledge) which does not require a full DORA exchange. Also, this renewal exchange takes place directly between the client and the DHCP server, rather than being broadcast across the entire network.
+
+<a href="#heading--about-dhcp-address-allocation"><h4 id="heading--about-dhcp-address-allocation">About DHCP address allocation</h4></a>
+
+There are (at least) three ways that a DHCP server can assign addresses to requesting clients:
+
+- **Manual or static allocation** essentially means that the client receives a specifically-chosen IP address, or, at a minimum, keeps the first one that it’s assigned until the client decides to release it.
+
+- **Dynamic allocation** means that a DHCP server assigns IP addresses from an available pool (scope) of addresses, which can change to another available address in that scope at any time, depending on the network dynamics.
+
+- **Automatic allocation** is sort of a cross between the other two types. The DHCP server assigns an address from its defined scope, but then remembers which client got what address, and re-assigns that address to the same client when a new request is made.
+
+Regardless of the allocation method, the DHCP server’s scope — its range of IP addresses that it controls (and can assign) — is something that must be user-configured.
+
+DHCP is “connectionless,” meaning that basically everything takes place via UDP, usually by broadcast packets — that is, packets not overtly addressed to a specific device. The messages become targeted pretty quickly, using the payload to specify the IP address of the DHCP server and the MAC address of the requesting client, to avoid requiring every other device on the network to completely decode every DHCP message. Note that it is possible to target a UDP packet at a specific server by choosing a unicast message type.
+
+A DHCP client can request its previous IP address, if it had one, but whether it gets that address or not depends on four things: scope, allocation, topology, and authority. Specifically:
+
+- The larger the DHCP server’s scope of addresses, the more likely it is that the requested address will be available again.
+
+- The chances of getting the same IP address again also depend on how the server is allocating addresses (see above). Static allocation guarantees the same address; automatic allocation makes it very likely; with dynamic allocation, it’s impossible to predict.
+
+- Topology also plays into this process: if the DHCP server is using one or more DHCP relays to get some or all of its addresses, the chances of re-using the same IP address go down.
+
+- Authority also affects the probability. An authoritative DHCP server will definitely answer any unanswered DHCPDiscover message, but that server is pulling only from its own scope.
+
+<a href="#heading--about-multiple-dhcp-servers-diff-ips"><h4 id="heading--about-multiple-dhcp-servers-diff-ips">About multiple DHCP servers serving different IP ranges</h4></a>
+
+It’s possible to have more than one DHCP server on the same network segment and still have everything work right, with no conflicts and no dropped packets or IP requests. There are three possible scopes for IP ranges to consider:
+
+- **Adjacent scopes**: In this configuration, IP addresses are assigned from portions of the same subnet. For example, one server might control scope 192.168.14.2 – 192.168.14.187, and another server might manage scope 192.168.14.200 – 192.168.14.247. This is the most common (and most reliable) setup for multiple DHCP servers.
+
+- **Heterogeneous scopes**: This arrangement basically has DHCP servers on different subnets, such as 192.168.14.2 – .253 for one server, and 10.17.22.3 – .98 for the other. This can be made to work, but it’s extremely difficult to set up and not so easy to manage. 
+
+- **Overlapping scopes**: In this situation, more than one server can offer the same IP address. There is a way to make this work, by setting up the DHCP servers to talk to one another, but for most applications, this configuration can be avoided. 
+
+Adjacent and heterogeneous scopes are really the same thing. The two servers do not work together; they may not ever be aware of one another. The servers and clients operate independently on a first-come, first-served basis, serving from their specific pool of IP addresses.
+
+A client makes a DHCPRequest. One or both of the servers may answer, depending on load and spare IP addresses. It’s also possible that neither will answer, because they’re both out of IP addresses, but with good network planning — and making one of those servers authoritative — those situations will be kept to a minimum or eliminated entirely.
+
+<a href="#heading--about-multiple-dhcp-servers-overlapping-ranges"><h4 id="heading--about-multiple-dhcp-servers-overlapping-ranges">About multiple DHCP servers serving overlapping IP ranges</h4></a>
+
+Some DHCP implementations offer a feature called server conflict detection or SCD. In short, DHCP SCD uses ICMP Echo messages (pings) — with an appropriate wait time — to see if an IP address is in use before trying to lease it to a client. If all the DHCP servers on a given subnet have SCD enabled, you don’t have to worry about whether the DHCP server scopes overlap. You can assign whatever set of IP addresses you want to whichever DHCP server -- even identical IP ranges -- and they will work together without causing any IP conflict errors.
+
+Oddly, SCD is assumed by the creators of DHCP.  In RFC 2131, ping checks are recommended on both ends, in all cases, by the DHCP server and the client:
+
+"As a consistency check, the allocating server SHOULD probe the reused address before allocating the address, e.g., with an ICMP echo request, and the client SHOULD probe the newly received address, e.g., with ARP."
+
+The capital letters there came from the spec itself. Essentially, DHCP servers really should check to make sure the addresses they send out aren’t already in use — and clients that get them should make sure they’re actually free before they use them.
+
+From an architectural perspective, it might make more sense for DHCP servers to be enabled to talk to each other and coordinate assignment of IP addresses. It is possible to build and configure such DHCP servers, but that type of coordination usually isn't possible in a MAAS networking environment.  Usually, in MAAS networks, there is an external source of DHCP outside the control of the MAAS administrator, one which can't be isolated from the MAAS network.  
+
+As a protocol, DHCP is designed to be loosely coupled. Specifically, any client that has the DHCP protocol stack can discover any DHCP server or servers; any server can make an offer; and a client can take whichever offer it wants (though it’s typically coded to take the first DHCP offer that it can accept). Keeping that loosely-coupled architecture intact means letting DHCP servers check to see if the address they’re sending is in use before offering it, and letting clients check to see if an IP address is in use before they request to accept the offer.
+
+There’s no exact count, but it’s fair to say that a non-trivial number of MAAS installation and configuration issues revolve around competing DHCP servers, that is, multiple DHCP servers on the same subnet, using the same scope (or overlapping scopes), colliding with each other and preventing machines from getting IP addresses. This collision usually shows up as an ability to power on a machine, but not to commission it, since it can’t manage to complete the process of getting an IP address via DHCP.
+
+MAAS already has some conflict detection built in.  If MAAS manages a subnet that is not empty -- which could result in MAAS assigning a duplicate IP address -- MAAS is capable of detecting IPs in use on a subnet. Be aware that there are two caveats
+
+1. If a previously-assigned NIC is in a quiescent state or turned off, MAAS may not detect it before duplicating an IP address.
+
+2. At least one rack controller must have access to the IP-assigned machine in order for this feature to work.
+
+MAAS also recognises when the subnet ARP cache is full, so that it can re-check the oldest IPs added to the cache to search for free IP addresses.
+
+If you want your configuration to run more smoothly, it’s useful to enable SCD on every DHCP provider on your network, if you can. It doesn’t hurt anything, and it really doesn’t cost that much (beside a little extra delay when assigning addresses). There are plenty of network issues associated with a large, bare-metal network. There’s no reason why DHCP conflicts need to be one of those issues.
+
+<a href="#heading--about-dhcp-relays"><h4 id="heading--about-dhcp-relays">About DHCP relays</h4></a>
+
+A DHCP relay is really just a specialized router.  Like all routers, it replaces source and destination addresses of packets crossing its domain so that every server gets the intended messages.  
+
+The only substantial difference is that DHCP relay knows the IP address of the DHCP server.  When a DHCPRequest reaches the relay from a requesting server, for example, the relay absorbs the broadcast packet and creates a routed unicast packet, bound directly for the DHCP server.  On the way back, the relay converts the DHCPOffer back to a broadcast packet.
 
 <a href="#heading--about-maas-networks"><h2 id="heading--about-maas-networks">About MAAS networks</h2></a>
 
@@ -679,3 +944,4 @@ For example, for applications that are highly sensitive to network latency, it m
 Power management is concerned with power usage density and cooling. This topic can be addressed with the use of several MAAS zones.
 
 Nodes can be distributed in such a way that power-hungry and/or "hot" systems are located in different zones. This can help mitigate power consumption and heat problems.
+
