@@ -7,6 +7,21 @@ The ultimate purpose of MAAS is to deploy and manage machines.  As explained in 
 
 <a href="#heading--how-to-commission-a-machine"><h2 id="heading--how-to-commission-a-machine">How to commission a machine</h2></a>
 
+Note that if you are using your own commissioning scripts, and you do not want them to automatically run every time, you must specify `noauto`, as in this script snippet:
+
+```
+#!/bin/bash
+#
+# --- Start MAAS 1.0 script metadata ---
+# name: 50-dummy-example
+# title: Dummy example
+# description: Just an example
+# script_type: commissioning
+# tags: noauto
+```
+
+If you do not specify `noauto`, your custom commisioning scripts will run every time commissioning is attempted.
+
 rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui 
 To commission a machine:
 
@@ -583,7 +598,7 @@ To do this, enable Allow SSH access and prevent the machine from powering off wh
 
 Because scripts operate within an ephemeral version of Ubuntu, enabling this option stops the machine from shutting down, allowing you to connect and probe a script's status.
 
-As long as you've added your [SSH key](/t/how-to-manage-user-accounts/nnnn#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
+As long as you've added your [SSH key](/t/how-to-manage-user-accounts/nnnn) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
 rad-end
 
 <a href="#heading--how-to-locate-script-files"><h3 id="heading--how-to-locate-script-files">How to locate script files</h3></a>
