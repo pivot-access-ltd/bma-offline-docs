@@ -43,7 +43,13 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 - [Manage VMs](/t/-/5148)
 - [Use LXD](/t/-/5208)
 
-### Networking with MAAS
+### Networking fundamentals
+
+- [About TCP/IP networks](/t/-/5806)
+- [About cloud networks](/t/-/5808)
+- [About DHCP](/t/-/5807)
+
+### MAAS Networking
 
 - [About MAAS networks](/t/-/5084)
 - [Manage networks](/t/-/5164)
@@ -112,6 +118,9 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/about-tcp-ip-networks/5806|/docs/about-tcp-ip-networks|
+|https://discourse.maas.io/t/about-dhcp/5807|/docs/about-dhcp|
+|https://discourse.maas.io/t/about-cloud-networks/5808|/docs/about-cloud-networks|
 |https://discourse.maas.io/t/-/2262|/docs/snap/2.7/cli/about-maas|
 |https://discourse.maas.io/t/-/2263|/docs/snap/2.7/ui/about-maas|
 |https://discourse.maas.io/t/-/2268|/docs/deb/2.7/cli/about-maas|
