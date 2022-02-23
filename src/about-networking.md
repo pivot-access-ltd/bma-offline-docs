@@ -12,72 +12,89 @@ TCP/IP networks, and the underlying structure, evolved to meet a specific need: 
 
 Experience has shown us that you will probably have a much easier time working with MAAS if you ensure that you have a solid understanding of network fundamentals.  Rather than bury this basic material, we've decided to include it in the mainstream MAAS networking discussion. Later sections, which help you learn how to design and troubleshoot MAAS networks, will depend heavily on principles explained here.
 
-This section is designed to help you understand:
+This section is designed to help you learn:
 
- - [Internet infrastructure](#heading--about-the-internet-about-the-internet)
- - [The OSI model](#heading--about-the-osi-model)
- - [Layer 1: the physical layer](#heading--about-the-physical-layer)
- - [Layer 2: the datalink layer](#heading--about-the-datalink-layer)
- - [Layer 3: the network layer](#heading--about-the-network-layer)
- - [How ARP works](#heading--about-arp)
- - [A little about TCP](#heading--about-tcp)
- - [DHCP, multiple DHCP servers, and DHCP relays](#heading--about-dhcp)
+ - [About the Internet](#heading--about-the-internet)
+ - [About the OSI model](#heading--about-the-osi-model)
+ - [About the physical layer (L1)](#heading--about-the-physical-layer)
+ - [About the datalink layer (L2)](#heading--about-the-datalink-layer)
+ - [About bond interfaces](#heading--about-bond-interfaces)
+ - [About the network layer](#heading--about-the-network-layer)
+ - [About bridge interfaces](#heading--about-bridge-interfaces)
+ - [About ARP](#heading--about-arp)
+ - [About TCP](#heading--about-tcp)
+ - [About DHCP](#heading--about-dhcp)
 
 This material can be read from beginning to end, or you can skip to sections where you feel you might need more clarity.  Just remember that a good understanding of these fundamentals will make it much easier for you to efficiently lay out and debug MAAS networks.
 
 <a href="#heading--about-the-internet"><h3 id="heading--about-the-internet">About the Internet</h3></a>
 
-Suppose we want to connect two computers, "SanDiego" and "Bangor", located at opposite corners of the country.  They should communicate via a network.  How do we make that happen?  We could simply hook up a wire between SanDiego and Bangor.  In fact, that's essentially how it was done in the beginning. It worked, but there were at least two drawbacks:
-
-1. A long wire has lots of impedance.  Signals can disappear into the noise long before they traverse the wire.  Said differently, the signal-to-noise ratio drops critically low before completing the connection.  Repeaters can fix that problem by amplifying the signal while it's still readable.  Repeaters are physical hardware, which has to reside at intervals along the path.  You'd need places to put repeaters, which means you'd have to lease or own real estate in specific locations, at specific distances.  Cost becomes a factor at that point.
-
-2. A long wire is a single point of failure.  If someone cuts the wire, there's no alternative way for the two computers to communicate.  Obviously, you could run multiple wires, trunk them in separate cables, have backup repeater hardware, and even use different geographical paths for each trunk.  Again, cost is a significant factor here.  
-
-We could solve this by dreaming up all sorts of network architectures, but the easiest way is to create and use the Internet.  As the Internet became "the network", it evolved into what some call the "access-aggregation-core" (AAC) network, which looks something like this: 
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg"></a>
-
-In this model, *SanDiego* sends a message, labelled for *Bangor*, to some router on the Internet (which one doesn't matter so much).  If this router doesn't know where *Bangor* is, it just sends it on to another router, until the message finds a router that knows where to forward the message. Theoretically, this works great, but from a practical standpoint, there are "short circuits" all over the Internet.
-
-These "sideways paths" are there mostly for performance reasons, like latency, redundancy, and so on.  Sometimes they're there because someone can get a better deal, so the reasoning is financial, too.  Some parts of the Internet look like string art, as in the picture above.  Other places only maintain connections between routers on the same level, so they look more like ladders.
-
-Either way, the AAC network can be very complicated and incorporate lots of redundant loops where network packets can get trapped, trying to find a way out.  We'll discover later that TCP/IP has a dedicated way to prevent these infinite loops called the "Time To Live" field.  We'll also talk about how these issues have driven us to design cloud network architectures (known as Clos architectures), which address both the financial and performance impacts of large networks in a much simpler way.
+Suppose we want to connect two computers, "SanDiego" and "Bangor", located at opposite corners of the country.  They should communicate via a network.  How do we make that happen?
 
 This subsection will help you learn:
 
-- [About the infrastructure of the Internet](#heading--internet-infrastructure)
-- [About Internet network traffice](#heading--about-network-traffic)
+ - [About the infrastructure of the Internet](#heading--internet-infrastructure)
+ - [About Internet network traffic](#heading--about-network-traffic)
+
+We could simply hook up a wire between SanDiego and Bangor.  In fact, that's essentially how it was done in the beginning. It worked, but there were at least two drawbacks:
+
+1. A long wire has lots of impedance.  Signals can disappear into the noise long before they traverse the wire.  Said differently, the signal-to-noise ratio drops critically low before completing the connection.  Repeaters can fix that problem by amplifying the signal while it's still readable.  Repeaters are physical hardware, which has to reside at intervals along the path.  You'd need places to put repeaters, which means you'd have to lease or own real estate in specific locations, at specific distances.  Cost becomes a factor at that point.
+
+<details id="heading--t1-lines"><summary>T1 lines and the early Internet</summary>
+
+In the very early days of long-haul networking, most of the repeaters were owned by the local telephone companies. T1 lines, as they were called, couldn't compete with today's fibre connections, but they did provide a speedy (at the time) 1.5Mbps connection.  For example, in the oil and gas industry of the early 1990s, many of the city offices had wall after wall of T1 lines wired directly into the building.
+
+T1 wasn't designed for network traffic, exactly,  The idea was to multiplex phone calls on one line via Time-Division Multiplexing.  TDM split up the call traffic into little digital packets that were sent on a rotating basis.  The first T1 lines, which showed up around 1962, could handle about 24 calls without the average telephone user noticing.  Telephone linemen generally could tell by the "clipped" nature of the call, as there is a distinctive flatness to the conversation over a digital TDM circuit.
+
+The T1 lines used ordinary, double-twisted-pair copper wiring, with repeaters at roughly one-mile intervals.  Those repeaters were part of the larger greyish-green "cans" (pedestals) that still dot the roadsides today in the US.  When WAN and MAN networking became a thing, the phone company just repurposed some of those pairs to carry data traffic.
+
+Some of the key elements of TCP/IP, like twisted-pair Ethernet cables, packet-based messaging, and multiplexing, are all just holdovers of the original T1 digital subscriber system -- repurposed for computer networking.
+</details>
+
+2. A long wire is a single point of failure.  If someone cuts the wire, there's no alternative way for the two computers to communicate.  Obviously, you could run multiple wires, trunk them in separate cables, have backup repeater hardware, and even use different geographical paths for each trunk.  Again, cost is a significant factor here.  
+
+We could solve this by dreaming up all sorts of network architectures, but the easiest way is to create and use something known as the "Internet infrastructure".  As the Internet became "the network", it evolved into what some call an "access-aggregation-core" (AAC) network, which looks something like this: 
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg"></a>
+
+In this model, **SanDiego** sends a message, labelled for **Bangor**, to some router on the Internet (doesn't matter which one).  If this router doesn't know where **Bangor** is, it just sends it on to another router, until the message finds a router that knows where to forward the message. Theoretically, this works great, but from a practical standpoint, there are "short circuits" all over the Internet.
+
+These "sideways paths" are there mostly for performance reasons, like latency, redundancy, and so on.  Sometimes they're there because someone can get a better deal, so the reasoning is financial, too.  Some parts of the Internet look like string art, as in the picture above.  Other places only maintain connections between routers on the same level, so they look more like ladders.
+
+Either way, the AAC network can be very complicated and incorporate lots of redundant loops where network packets can get trapped, trying to find a way out.  We'll discover [later](#heading--about-ip-packets) that TCP/IP has a dedicated way to prevent these infinite loops called the "Time To Live" field.  We'll also talk about how these issues have driven us to design [cloud network architectures](#heading--about-cloud-networks) (known as Clos architectures), which address both the financial and performance impacts of large networks in a much simpler way.
 
 <a href="#heading--internet-infrastructure"><h4 id="heading--internet-infrastructure">About the infrastructure of the Internet</h4></a>
 
 A very old meme explains that the Internet is survivable because every computer can connect to every other computer.  While that might be possible, that's not generally how it works.  There's actually a hierarchy which we refer to as the *Internet Infrastructure*:
 
-- Internet Infrastructure :: a hierarchy of computers used to transfer messages from one computer to another.
+ - Internet Infrastructure :: a hierarchy of computers used to transfer messages from one computer to another.
 
-High-level networks, known as Network Service Providers (NSPs), connect to at least three top level nodes called Network Access Points (NAPs).  An NAP is just a way for packets to jump from one NSP to another. NAPs are public access points, but there are also privately-owned access points (at the same level) known as Metropolitan Area Exchanges; these act just like a NAP for the purposes of this discussion.  We can simplify the string-art picture above by resolving it into something like this:
+High-level networks, known as Network Service Providers (NSPs), connect to at least three top level nodes called Network Access Points (NAPs).  An NAP is just a way for packets to jump from one NSP to another. NAPs are public access points, but there are also privately-owned access points (at the same level) known as Metropolitan Area Exchanges.  Many of the MAEs are the residue of the phone company's [early T1 lines](#heading--t1-lines), which was the initial backbone for the Internet.  These MAEs act just like a NAP for the purposes of this discussion.
+
+We can simplify the string-art picture above by resolving it into something like this:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/b/b8da34432dd443cd3592487f53887f12889cef06.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b8da34432dd443cd3592487f53887f12889cef06.jpeg"></a>
 
-In theory, the Internet infrastructure and a cloud network should be very similar, but in practice, they diverge greatly.  The real Internet has horizontal connections running everywhere, based on drivers like cost, security, and performance.
+In theory, the Internet infrastructure and a cloud network should be very similar, but in practice, they diverge greatly.  The real Internet has horizontal connections running everywhere, based on drivers like cost, security, and performance.  Those vertical connections introduce an interface cost (heterogeneous hardware), a performance hit (varying network speeds), and bandwidth variance (differing node architectures).  Contracts for lateral connections change daily, which changes the routing, which changes the way the Internet behaves for users.
 
 <a href="#heading--about-network-traffic"><h4 id="heading--about-network-traffic">About Internet network traffic</h4></a>
 
-As implied by the discussion above, these networks can become very complicated.  There's rarely a reason to even count how many hops a message takes, or where it hops, unless you're trying to debug a broken route with, say, [traceroute]([https://linux.die.net/man/8/traceroute).  From a TCP/IP point of view, it's much easier to ignore the specific network, since it gets built on-the-fly, so to speak; and it can change every time a message is sent, even between the same two computers.
+As implied by the discussion above, these networks can become very complicated and somewhat unpredictable.  As a result, there's rarely a reason to even count how many hops a message takes, or where it hops, unless you're trying to debug a broken route with, say, [traceroute]([https://linux.die.net/man/8/traceroute).  From a TCP/IP point of view, it's much easier to ignore the specific network, since it gets built on-the-fly, so to speak; and it can change every time a message is sent, even between the same two computers.
 
-In other words, when it comes to designing and troubleshooting networks, knowing the specific route (almost) never helps.  Instead, what we want to know about is the network traffic that travels between computers.  That means we have to understand what kind of traffic travels between computers, besides just the data we send.   The next few sections will explain these concepts.
+In other words, when it comes to designing and troubleshooting networks, knowing the specific route (almost) never helps.  Instead, what we want to know about is the network traffic that travels between computers.  That means we have to understand what kind of traffic travels between computers, besides just the data we send.   The next few sections will explain these fundamentals.
 
 <a href="#heading--about-the-osi-model"><h3 id="heading--about-the-osi-model">About the OSI model</h3></a>
 
 This subsection will help you learn about the OSI model and:
 
-- [The physical layer](#heading--the-physical-layer)
-- [The datalink layer](#heading--the-datalink-layer)
-- [Interlayer addressing: ARP](#heading--arp)
-- [The network layer](#heading--the-network-layer)
-- [The transport layer](#heading--the-transport-layer)
-- [The session layer](#heading--the-session-layer)
-- [The presentation layer](#heading--the-presentation-layer)
-- [The application layer](#heading--the-application-layer)
+ - [The physical layer](#heading--the-physical-layer)
+ - [The datalink layer](#heading--the-datalink-layer)
+ - [Interlayer addressing: ARP](#heading--arp)
+ - [The network layer](#heading--the-network-layer)
+ - [The transport layer](#heading--the-transport-layer)
+ - [The session layer](#heading--the-session-layer)
+ - [The presentation layer](#heading--the-presentation-layer)
+ - [The application layer](#heading--the-application-layer)
 
 When we begin to look at networks as a continuous wire, we need to understand what travels on that wire from one host to the other.  But that depends on our perspective, that is, our level of magnification.  If we look at the highest "zoom" level, all we'll see are electrons travelling down the wire.  That's not very useful for debugging purposes.  We can use that information to determine whether anything's being sent, but if the message isn't going out on the wire, we can't guess why not.
 
@@ -87,9 +104,9 @@ The [Open Systems Interconnection model](https://en.wikipedia.org/wiki/OSI_model
 
 In the OSI model, we start just above the raw physics, with what we'd call the physical layer, also known as Layer 1.  The choice of "1" makes sense, because this is the lowest level we consider.
 
-Layers are normally added on top of each other.  For example, if you put six coats of varnish on a piece of furniture, you're going to have six layers.  The first layer you put on wouldn't sensibly be called "layer 6".  Neither does the layering model work that way in networks.
+Layers are normally added on top of each other.  For example, if you put six coats of varnish on a piece of furniture, you're going to have six layers.  The first layer you put on wouldn't sensibly be called "layer 6"; neither does the network layering model work that way.
 
-Here's a quick rundown of what each layer does.  Most likely, we won't get into details about all the layers.  The higher you go, the more widely they vary with the user application, so it really doesn't help us understand MAAS networking better.
+Here's a quick rundown of what each layer does.  Most likely, we won't get into details about all the layers, because the higher you go, the more widely they vary with the user application.  Higher layers don't really help us understand MAAS networking better.
 
 <a href="#heading--the-physical-layer"><h4 id="heading--the-physical-layer">The physical layer</h4></a>
 
@@ -97,13 +114,28 @@ At the physical layer, we're essentially using binary on/off transitions (clock 
 
 <a href="#heading--the-datalink-layer"><h4 id="heading--the-datalink-layer">The datalink layer</h4></a>
 
-Layer 2 is the datalink layer, which links two devices that share the same medium (e.g., two routers connected to the same network cable).  Some of these link-layer networks, like Digital Subscriber Lines (DSL), can only connect two devices, but for all practical purposes, most of the modern L2 interfaces are multi-access, meaning more than two stations on the same medium can communicate directly.  Examples of this include Wi-Fi and Ethernet networks.
+Layer 2 is the datalink layer, which links two devices that share the same medium (e.g., two routers connected to the same network cable).  Some of these link-layer networks, like Digital Subscriber Lines (DSL), can only connect two devices, but for all practical purposes, most of the modern L2 interfaces are multi-access, meaning more than two stations on the same medium can communicate directly.
+
+Examples of this include Wi-Fi and Ethernet networks. These networks multiplex not by TDM, like the [old T1 networks](#heading--t1-lines), but by shared management of the medium.  As we'll see, communication is self-managed, similar to motorists negotiating a four-way stop: The first device to grab the wire gets to send a little bit, and there are rules for handling simultaneous "grabs".  This type of multiplexing is called packet-division multiplexing.
+
+<details><summary>PDM v. TDM</summary>
+
+The term "packet-division multiplexing" isn't as descriptive as "time-division multiplexing".  Both use fixed transmission units which could be called "packets".  But PDM differs from TDM in one important way: it has better latency.
+
+TDM sets specific timing for each of 24 conversations.  If only one conversation is going on, it only uses the network 1/24th of the time.  In other words, the latency of a conversation on the (original) TDM lines would have been around 96%, meaning that only 4% of the time was any single conversation taking place.
+
+While that worked fine for voice calls for a really long time, it's terrible in terms of network utilisation.  PDM solves this by using the wire when it's free.  As you'll see [a little later on](#heading--about-ethernet), something called "Carrier Sense Multiple Access with Collision Detection" (CSMA/CD) makes the network perform statistically near it's maximum bandwidth when necessary.
+
+CSMA/CD allows any sender to commandeer the wire when it's free, but only for very short, fixed-length packets.  You can't hog the connection to send a giant JPEG file, unless you just happen to be the only device currently active on the network.  Even then, your image must be broken up into packets, sent as short bursts, and very likely surrounded by routine network traffic such as keepalives, cache sends, and DHCP offers.
+
+In short, both methods involve devices taking turns.  TDM turns were originally based on a stopwatch.  PDM turns are based on the four-way stop model.  Better network utilisation means better bandwidth, which means lower cost.
+</details>
 
 There are things built into the protocols which manage the conversation, much like the military radio term "over" -- meaning "I'm done talking until I hear something back from you, go ahead." This is the layer where you'd be talking about things like MAC frames, point-to-point protocol, token ring, and Ethernet.
 
 <a href="#heading--arp"><h4 id="heading--arp">Interlayer addressing: ARP</h4></a>
 
-One frequently asked question is this: Is ARP a layer 2 or layer 3 protocol?  Actually, it's both, as you'll discover later, but it does all of its work at L2.  One way to distinguish L2 from L3 is to find out what happens inside the firmware of the Network Interface Card (NIC), and that's usually where ARP takes place.   ARP maps MAC addresses, which is how things are addressed in L2, into other addresses (e.g., IP addresses), which is how L3 finds things.
+One frequently asked question is this: Is ARP a layer 2 or layer 3 protocol?  Actually, it's both, as you'll [discover later](#heading--about-arp), but it does all of its work at L2.  One way to distinguish L2 from L3 is to find out what happens inside the firmware of the Network Interface Card (NIC), and that's usually where ARP takes place.   ARP maps MAC addresses, which is how things are addressed in L2, into other addresses (e.g., IP addresses), which is how L3 finds things.
 
 <a href="#heading--the-network-layer"><h4 id="heading--the-network-layer">The network layer</h4></a>
 
@@ -132,10 +164,10 @@ The top layer, layer 7, is totally the province of the application(s) involved i
 The phrase "physical layer" may conjure up notions of physics, but don't worry -- 
 at the physical layer, we don't look at electrons flowing.  We do look at signals.  This subsection will help you learn the basics of the physical layer, and also:
 
-- [About variable latency](#heading--about-variable-latency)
-- [That the physical layer is not very interesting](#heading--physical-layer-uninteresting)
+ - [About variable latency](#heading--about-variable-latency)
+ - [Why the physical layer is not very interesting](#heading--physical-layer-uninteresting)
 
-Specifically, here we're looking for binary (on/off) signals, set to the cadence of a clock.  Every computer brings its own clock to the party, so we need a way to "synchronise our watches".  That method is [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) , the network time protocol.  
+At the physical layer, we're looking for binary (on/off) signals, set to the cadence of a clock.  Every computer brings its own clock to the party, so we need a way to "synchronise our watches".  That method is [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) , the network time protocol.  
 
 <a href="#heading--about-variable-latency"><h4 id="heading--about-variable-latency">About variable latency</h4></a>
 
@@ -148,9 +180,9 @@ In order to understand variable latency, we need to understand network latency. 
 3. Transmission delay - how long does it take layer 1 to push the packet's bits onto the link?
 4. Propagation delay - how long does it take the bits to travel through the wire to the other end?
 
-The size of the queue directly influences how fast data can get onto the link.  The processing and transmission delays are real, though relatively constant.  The propagation delay depends on network architecture, network congestion, and the number of hops (how many routers between source and destination).  As we'll see later on, within your enterprise, the Clos architecture usually causes significantly less propagation delay.
+The size of the queue directly influences how fast data can get onto the link.  The processing and transmission delays are real, though relatively constant.  The propagation delay depends on network architecture, network congestion, and the number of hops (how many routers between source and destination).  [As we'll see later on](#heading--clos-architecture), within your enterprise, the Clos architecture usually causes significantly less propagation delay.
 
-A variable-latency network is "variable" because of the density of network traffic and the complexity of the route between hosts.  We can't predict congestion or routing (although we can influence local routing with the Clos architecture).  Nor can we predict transmission delays; thus "variable-latency".
+A variable-latency network is "variable" because of the density of network traffic and the complexity of the route between hosts.  We can't predict congestion or routing, although we can influence local routing with the by the choice of network architecture.  We can't predict transmission delays, although we can statistically put some bounds on them.  Thus almost all digital networks are considered "variable-latency".
 
 <a href="#heading--physical-layer-uninteresting"><h4 id="heading--physical-layer-uninteresting">The physical layer is not very interesting</h4></a>
 
@@ -160,24 +192,26 @@ Other than verifying that traffic is flowing on the wire, the physical layer doe
 
 The only purpose of the link layer -- at least from a TCP/IP perspective -- is to send and receive IP datagrams.  L2 generally doesn't try to maintain a connection with the host on the other end (it's "connectionless"), and it doesn't guarantee delivery or integrity of packets.  All it does is ship them between source and destination.  This subsection will help you learn:
 
-- [About frames](#heading--about-frames)
-- [About Ethernet](#heading--about-ethernet)
-- [About Media Access Control (MAC)](#heading--about-media-access-control)
-- [About Trunking VLANs](#heading--about-trunking-vlans)
-- [About VLANs, subnets, and fabrics](#heading--about-vlans-subnets-and-fabrics)
-- [How to visualise the link layer](#heading--visualising-the-link-layer)
+ - [About MAC frames](#heading--about-frames)
+ - [About Ethernet](#heading--about-ethernet)
+ - [About Media Access Control (MAC)](#heading--about-media-access-control)
+ - [About trunking VLANs](#heading--about-trunking-vlans)
+ - [About VLANs, subnets, and fabrics](#heading--about-vlans-subnets-and-fabrics)
+ - [How to visualise the link layer](#heading--visualising-the-link-layer)
 
-At first, the message-agnostic state of the link layer may seem a little weird.  L2 is not without error checking and recovery code, but it functions efficiently precisely because it isn't concerned with the data or the message containing the data.  That fact can be surprising, since L3 packets, like unique bit-groupings are several layers, are called "datagrams".
+At first, the message-agnostic state of the link layer may seem a little weird.  L2 is not without error-checking and recovery code, but it functions efficiently because it isn't concerned with the data or the message containing the data.  That fact can be surprising, since L3 packets are called "datagrams".
 
-A datagram is a basic network transfer unit.  It's the indivisible unit for a given layer.  If we're talking about the data-link layer (aka the "link" layer), it's an IEEE 802.xx frame.  At the network layer, it's a data packet.  For the transport layer, it would be called a segment.  Indivisible units in the physical layer are called chips, which are spread-spectrum pulses in the CDMA, noise-utilising transmission system that operates at that layer.
+A datagram is just a basic network transfer unit.  It's the indivisible unit for a given layer.  If we're talking about the data-link layer (aka the "link" layer), it's an IEEE 802.xx frame.  At the network layer, it's a data packet.  For the transport layer, it would be called a segment.  Indivisible units in the physical layer are called chips, which are spread-spectrum pulses in the CDMA, noise-utilising transmission system that operates at that layer.
 
-Since datagram isn't carefully used by everyone (think of User Datagram Protocol), we agree to call these indivisible layer units PDUs (protocol data units).  This avoids conflation with other uses and reminds you that it's the atomic unit at the current network layer.  At the link layer, it's a frame.
+Since datagram isn't carefully used by everyone (think of User Datagram Protocol), we'll agree to call these indivisible layer units PDUs (protocol data units).  This avoids conflation with other uses and reminds you that it's the atomic unit at the current network layer.  At the link layer, it's a frame.
 
 <a href="#heading--about-frames"><h4 id="heading--about-frames">About MAC frames</h4></a>
 
 A MAC frame, or just "frame", encapsulates the packets from the network layer so that they can be transmitted on the physical layer.  A frame can be small or big, anywhere from 5 bytes up to the kilobyte range.  The upper size limit is called the maximum transmission unit (MTU) or maximum frame size.  This size is set by the particular network technology in use.
 
-This last observation brings up a good point: In order to talk sensibly about frames, we'd need to say what kind of frame.  In that case, we're talking about packet-switched networks, so there are about four frame types to consider: Ethernet, fibre channel, V.42, and PPP (point-to-point protocol).  MAAS networks almost exclusively use Ethernet, as defined in the [IEEE 802 standards](https://www.ieee802.org/).  
+This last observation brings up a good point: In order to talk sensibly about frames, we'd need to say what kind of frame.  With MAAS, we're always talking about packet-switched networks, so there are potentially four frame types to consider: Ethernet, fibre channel, V.42, and PPP (point-to-point protocol).
+
+Happily, MAAS networks almost exclusively use Ethernet, as defined in the [IEEE 802 standards](https://www.ieee802.org/), so we'll stick to that particular frame type for this discussion.  Where other frame types may come into play, we'll discuss those as special cases.  
 
 <a href="#heading--about-ethernet"><h4 id="heading--about-ethernet">About Ethernet</h4></a>
 
@@ -193,9 +227,9 @@ Remember earlier, when we talked about voice radio, and the need to say "over"? 
 
 Systems like CSMA/CD are a subset of the Media Access Control (MAC) protocol kit.  MAC is one-half of the link layer, with Logical Link Control (LLC) being the other half.  These are sometimes called sub-layers. LLC mostly just defines the frame format for the 802.xx protocols, like WiFi, so we can safely ignore it for the purposes of MAAS networking.
 
-If you've worked with networks at all, you've heard of MAC addresses.  Those are basically unique, serial numbers assigned to network interface devices (like NICs) at the time of manufacture.  Theoretically, they are unique in the world, not counting virtual NICs in virtual machine environments.  [MAC address collisions](https://kb.vmware.com/s/article/219) do happen when using VMs, and there are ways to fix it, assuming that your VMs are confined to a subnet.
+If you've worked with networks at all, you've heard of MAC addresses.  Those are basically unique serial numbers assigned to network interface devices (like NICs) at the time of manufacture.  Theoretically, they are unique in the world, not counting virtual NICs in virtual machine environments.  [MAC address collisions](https://kb.vmware.com/s/article/219) do happen when using VMs, and there are ways to fix it, assuming that your VMs are confined to a subnet.
 
-The MAC sub-layer is connected to the physical layer by a media-independent interface (MII), independent of the actual link protocol (e.g, cellular broadband, Wi-Fi radio, Bluetooth, Cat5e, ...).  You can learn more about the [MII](https://en.wikipedia.org/wiki/Media-independent_interface) if you're so inclined, but we won't address it again in the context of MAAS networks.
+The MAC sub-layer is connected to the physical layer by a media-independent interface (MII), independent of the actual link protocol (e.g, cellular broadband, Wi-Fi radio, Bluetooth, Cat5e, T1, ...).  You can learn more about the [MII](https://en.wikipedia.org/wiki/Media-independent_interface) if you're so inclined, but we won't address it again in the context of MAAS networks.
 
 Essentially, the MAC sub-layer grabs higher-level frames and makes them digestible by the physical layer, by encoding them into an MII format.  It adds some synchronization info and pads the message (if needed).   The MAC sub-layer also adds a frame check sequence that makes it easier to identify errors.
 
@@ -203,9 +237,9 @@ In conventional Ethernet networks, all this looks something like the following:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/14f6847ed92339061eb4515c12ac2b6117d5cd7c.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/14f6847ed92339061eb4515c12ac2b6117d5cd7c.jpeg"></a>
 
-Let's decode those blocks of bits.
+Let's decode those blocks of bits:
 
-The Preamble is 7 bytes of clock sync, basically just zeroes and ones like this: ...0101010101....  This gives the receiving station a chance to catch up and sync their clock, so the following data isn't out of sync (and thus misinterpreted).  To delve just a little deeper, the Preamble helps the receiving NIC figure out the exact amount of time between encoded bits (it's called clock recovery).  NTP is nice, but Ethernet is an asynchronous LAN protocol, meaning it doesn't expect perfectly synchronised clocks between any two NICs.  The Preamble is similar to the way an orchestra conductor might "count the players in" so they all get the same rhythm to start.
+ - The **Preamble** is 7 bytes of clock sync, basically just zeroes and ones like this: ...0101010101....  This gives the receiving station a chance to catch up and sync their clock, so the following data isn't out of sync (and thus misinterpreted).  To delve just a little deeper, the Preamble helps the receiving NIC figure out the exact amount of time between encoded bits (it's called clock recovery).  NTP is nice, but Ethernet is an asynchronous LAN protocol, meaning it doesn't expect perfectly synchronised clocks between any two NICs.  The Preamble is similar to the way an orchestra conductor might "count the players in" so they all get the same rhythm to start.
 
 <details><summary>Before clock recovery, there was MPE</summary>
 
@@ -213,19 +247,19 @@ Clock recovery is much more reliable than trying to get computers all over the w
    
 </details>
 
-The Start Frame Delimiter is the last chance for clock sync.  It is exactly 10101011, where the "11" tells the receiving station that the real header content starts next.  The receiving NIC has to recover the clock by the time it hits the SFD, or abandon the frame to the bit bucket.
+ - The **Start Frame Delimiter (SFD)** is the last chance for clock sync.  It is exactly 10101011, where the "11" tells the receiving station that the real header content starts next.  The receiving NIC has to recover the clock by the time it hits the SFD, or abandon the frame to the bit bucket.
 
-The Destination Address is six bytes long, and gives the physical address -- the MAC address -- of the next hop.  Be aware that the next hop might be the destination, but it's also possible that the next hop might be a NAP, MAE, NSP, or intermediate ISP.  It's basically the next address in the direction of the destination that the sender knows about.  Unlike the Source Address, the Destination Address can be in a broadcast format (similar to a subnet like 192.18.0.0, but using MAC addresses).
+ - The **Destination Address (DAddr)** is six bytes long, and gives the physical address -- the MAC address -- of the next hop.  Be aware that the next hop might be the destination, but it's also possible that the next hop might be a NAP, MAE, NSP, or intermediate ISP.  It's basically the next address in the direction of the destination that the sender knows about.  Unlike the Source Address, the Destination Address can be in a broadcast format (similar to a subnet like 192.18.0.0, but using MAC addresses).
 
-The Source Address is also a six-byte MAC address, this time the MAC address of the sender, which does not change as long as the message is traversing only layer-2 (Ethernet) switches and routers.
+ - The **Source Address (SAddr)** is also a six-byte MAC address, this time the MAC address of the sender, which does not change as long as the message is traversing only layer-2 (Ethernet) switches and routers.
 
-The PDU Length gives the byte length of the entire frame, assuming that it's 1500 or less.  If it's longer than that, it indicates a message type, like IPv4, ARP, or a "q-tagged" frame, which carries a VLAN ID.
+ - The **PDU Length (PDULen)** gives the byte length of the entire frame, assuming that it's 1500 or less.  If it's longer than that, it indicates a message type, like IPv4, ARP, or a "q-tagged" frame, which carries a VLAN ID.
 
-The DSAP, SSAP, and Control elements are each one byte in length, and help define devices and protocols.  For the most part, we won't be worried about these with MAAS networks.  Just know that as more and more 802 point-standards come out (e.g., 802.11, WiFi), these elements get longer and more complex.
+ - The **DSAP**, **SSAP**, and **Control** elements are each one byte in length, and help define devices and protocols.  For the most part, we won't be worried about these with MAAS networks.  Just know that as more and more 802 point-standards come out (e.g., 802.11, WiFi), these elements get longer and more complex.
 
-The Data or Payload is the actual packet being sent, passed on from the layer above.  It cannot be less than 46 bytes, and in conventional Ethernet, it cannot be larger than 1500 bytes.  If the actual data is too small, it's padded out to 46 bytes.
+ - The **Data** or "Payload" is the actual packet being sent, which in the case of TCP/IP, is just a TCP header attached to a fixed-length chunk of the application's data.  It's passed on from the layer above.  It cannot be less than 46 bytes, and in conventional Ethernet, it cannot be larger than 1500 bytes.  If the actual data is too small, it's padded out to 46 bytes.
 
-The CRC or Frame Checksum (FCS) is a standard checksum, used to verify that the message hasn't been corrupted along the way.
+ - The **CRC** or "Frame Checksum" (FCS) is a standard checksum, used to verify that the message hasn't been corrupted along the way.
 
 The Preamble and SFD are often considered to be part of the IEEE "packet", so some people start counting the "frame" at the Destination Address.  That distinction shouldn't affect anything we do with MAAS networks, but it's nice to keep in mind, in case you run into someone who groups packets differently than you do.
 
@@ -256,6 +290,7 @@ Connections between Central Offices were handled by trunk lines, because they ra
 
 At the CO, the wires would "branch" and run all over the place: First to junction points (those five-foot-tall boxes you see from time to time on the road), then to interface points (the square cans beside the road every half mile or so, also called "pedestals") and from there to subscriber homes.  When you draw out this network, it looks like a tree, where the bundles of cables between COs look like the trunks of trees.
 
+With VLAN trunking, by the way, we're not just multiplexing packets, we're actually multiplexing LAN channels, so to speak.  
 </details>
 
 In the parlance of networks, especially VLANs, the term "trunking" is used to indicate the sharing of network routes.  This sharing is made possible by the Ethernet VLAN tags, which make the VLAN-bound messages less dependent on switches and routers to get the traffic to the right place.  Otherwise, you'd have to designate complicated port configurations for switches, which is particularly easy to misconfigure.
@@ -328,6 +363,13 @@ Bonded interfaces use a special frame format called LACPDU, or "Link Aggregation
 
 You might have noticed in the original OSI model that "IP" was part of Layer 3, and protocol stacks like UDP and TCP were part of Layer 4.  It's a little bit confusing that we say "TCP/IP" when the "IP" really applies to so many other protocols like UDP and ICMP.  There are certainly other protocols and protocol stacks, but for the purposes of MAAS networks, we're talking almost exclusively about TCP/IP.
 
+This subsection will help you learn:
+
+ - [About packets](#heading--about-packets)
+ - [About fixed packet lengths and segmented messaging](#heading--about-fixed-packet-lengths)
+ - [About IP packets](#heading--about-ip-packets)
+ - [About routing](#heading--about-routing)
+
 The network layer does not guarantee delivery.  Essentially, it makes every effort to deliver IP datagrams (packets) to the destination, but it's error-handling is pretty simple: just toss the packet into the bit-bucket.
 
 It's also a connectionless layer, meaning the packets making up a message aren't part of an ongoing conversation.  They can be split up, encoded, and sent separately, by different routes, and arrive completely out of order.  And packets can get duplicated or corrupted.  Figuring all this out is the job of the protocol stack (e.g., TCP) in layer 4.  The network layer, L3, just delivers packets.  
@@ -366,19 +408,19 @@ The IP datagram (packet) is the backbone of most modern networks.  The following
 
 Note that IPv6 headers have only the version field in common with IPv4 headers; otherwise, they are completely different.  Here are the header fields and what information they carry:
 
-- **IP Protocol Version**  This is "4" for IPv4 and "6" for IPv6.  There are [lots of others](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml), but they generally don't touch a MAAS network.
-- **Internet Header Length** The number of 32-bit words in the header, including the options (but not including the data, since it's just the header).  Most of the time, this will have the value "5", but options do exist and are sometimes included.
-- **Differentiated Services Code Point** This is used to specify special classes of service.  Normally, IP packets are delivered on a "best-effort" basis, that is, Layer 3 will try everything possible to make sure a packet gets delivered.  You can cause L3 to deliver packets with higher priority (implying more certainty) by using a different DSCP.
-- **ECN = Explicit Congestion Notification** These bits are both set by an ECN-capable router when that router is above a certain traffic threshold.  They are there to alert a sender to slow down (or expect delays) when the network segment in use is particularly congested.
-- **Total Length of IP Packet** This field indicates the length of the entire packet, including the data.  This makes it possible to calculate the byte offset of the data within the datagram.
-- **Identification**  This is a serial number, generated by the sending NIC, that helps the participants uniquely identify the datagram.  In a sense, it works like the little "take-a-number" tickets you get at the hamburger stand: Eventually, the number will repeat, but the repeat cycle is so long that there's no chance of confusing packets.  The sequential nature of this field, when used in concert with the Flags and Fragmentation Offset field, helps the protocol stack correctly reassemble the message.
-- **Flags**  This field is basically used to indicate that a packet is a fragment of a longer message.
-- **Fragmentation Offset**  Used with the Identification sequence number, this field allows the system to know which packets precede or follow this one when re-assembling the message.
-- **Time to Live (TTL)**  This indicates the number of routers that a datagram can pass through before it's discarded.  Since routers function by replacing their own destination address with the IP address of the next hop, this essentially limits the number of times a packet's destination IP can be changed.  Most RFC documents suggest keeping this number at 64, it's more often set to something like 255 without any real bottlenecks.
-- **Protocol** This field indicates the higher level protocol (the protocol stack) that generated this message.  Examples are given for TCP and UDP in the figure.
-- **Header Checksum** This calculates a checksum for the header only.  It's only used in IPv4.  Doing integrity-checking on the data is the responsibility of Layer 4.
-- **Source Address** This is the IP address of the sender of the packet, for this hop only.  As shown in the figure below, routers will change this address so they can get the answer back.
-- **Destination Address**  This is the IP address of the destination, for this hop only.  As shown below, routers change this address to act as brokers in the IP chain.
+ - **IP Protocol Version**  This is "4" for IPv4 and "6" for IPv6.  There are [lots of others](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml), but they generally don't touch a MAAS network.
+ - **Internet Header Length** The number of 32-bit words in the header, including the options (but not including the data, since it's just the header).  Most of the time, this will have the value "5", but options do exist and are sometimes included.
+ - **Differentiated Services Code Point** This is used to specify special classes of service.  Normally, IP packets are delivered on a "best-effort" basis, that is, Layer 3 will try everything possible to make sure a packet gets delivered.  You can cause L3 to deliver packets with higher priority (implying more certainty) by using a different DSCP.
+ - **ECN = Explicit Congestion Notification** These bits are both set by an ECN-capable router when that router is above a certain traffic threshold.  They are there to alert a sender to slow down (or expect delays) when the network segment in use is particularly congested.
+ - **Total Length of IP Packet** This field indicates the length of the entire packet, including the data.  This makes it possible to calculate the byte offset of the data within the datagram.
+ - **Identification**  This is a serial number, generated by the sending NIC, that helps the participants uniquely identify the datagram.  In a sense, it works like the little "take-a-number" tickets you get at the hamburger stand: Eventually, the number will repeat, but the repeat cycle is so long that there's no chance of confusing packets.  The sequential nature of this field, when used in concert with the Flags and Fragmentation Offset field, helps the protocol stack correctly reassemble the message.
+ - **Flags**  This field is basically used to indicate that a packet is a fragment of a longer message.
+ - **Fragmentation Offset**  Used with the Identification sequence number, this field allows the system to know which packets precede or follow this one when re-assembling the message.
+ - **Time to Live (TTL)**  This indicates the number of routers that a datagram can pass through before it's discarded.  Since routers function by replacing their own destination address with the IP address of the next hop, this essentially limits the number of times a packet's destination IP can be changed.  Most RFC documents suggest keeping this number at 64, it's more often set to something like 255 without any real bottlenecks.
+ - **Protocol** This field indicates the higher level protocol (the protocol stack) that generated this message.  Examples are given for TCP and UDP in the figure.
+ - **Header Checksum** This calculates a checksum for the header only.  It's only used in IPv4.  Doing integrity-checking on the data is the responsibility of Layer 4.
+ - **Source Address** This is the IP address of the sender of the packet, for this hop only.  As shown in the figure below, routers will change this address so they can get the answer back.
+ - **Destination Address**  This is the IP address of the destination, for this hop only.  As shown below, routers change this address to act as brokers in the IP chain.
 
 <a href="#heading--about-routing"><h4 id="heading--about-routing">About routing</h3></a>
 
@@ -426,6 +468,16 @@ There are other DHCP configurations possible with MAAS (we'll cover this later).
 <a href="#heading--about-arp"><h3 id="heading--about-arp">About ARP</h3></a>
  
 In theory, every NIC card in the world has a unique identifier, called a /MAC address/.  "MAC" stands for "Media Access Control" -- you can find a [little history of this](https://en.wikipedia.org/wiki/Medium_access_control]) on Wikipedia, if you're interested.
+
+This subsection will help you learn:
+
+ - [About TCP/IP vs. MAC addresses](#heading--tcp-ip-does-not-use-mac-addresses)
+ - [About fixed versus assigned addressing](#heading--fixed-versus-assigned-addressing)
+ - [About address resolution](#heading--address-resolution)
+ - [That messages are sent to MAC addresses](#heading--messages-sent-to-mac-addresses)
+ - [About the ARP frame](#heading--about-the-arp-frame)
+ - [About the ARP cache](#heading--about-the-arp-cache)
+ - [More about ARP](#heading--more-about-arp)
 
 When you're assigning MAC addresses with virtual machines, of course, you may be re-using one that's actually assigned to a network device out there somewhere.  Inside your Layer 2 network, that isn't a problem, because only devices connected to a physical switch -- that's actually connected to the physical Internet -- care about unique MAC addresses.  Inside your network, the only conflicts you need to worry about are the ones you create by hand-assigning MAC addresses.
 
@@ -518,11 +570,11 @@ Address                  HWtype  HWaddress           Flags Mask            Iface
 
 The columns are mostly obvious, but just in case:
 
-- **Address**: the IP address that's been cached.
-- **HWtype**: the Hardware Type field, which is blank when there's no MAC address (as is the case in a number of these entries).
-- **HWaddress**: the MAC address of the device.  The "incomplete" entires are meant to indicate that an ARP request was sent for that address, but no response was received.
-- **Flags Mask**: this field can have three values: "C" indicates that ARP learned this on its own, based on ARP responses; "M" means that the data was manually entered in the ARP table by a user; and "P" means "Publish," which just tells the host how to respond to incoming ARP packets.
-- **Iface**: the interface name.
+ - **Address**: the IP address that's been cached.
+ - **HWtype**: the Hardware Type field, which is blank when there's no MAC address (as is the case in a number of these entries).
+ - **HWaddress**: the MAC address of the device.  The "incomplete" entires are meant to indicate that an ARP request was sent for that address, but no response was received.
+ - **Flags Mask**: this field can have three values: "C" indicates that ARP learned this on its own, based on ARP responses; "M" means that the data was manually entered in the ARP table by a user; and "P" means "Publish," which just tells the host how to respond to incoming ARP packets.
+ - **Iface**: the interface name.
 
 In this case, ~virbr0~ and ~mpqemubr0~ are virtual bridges used for different sets of libvirsh VMs that haven't been used for anything in a while. Also note that something called ~lxdbr0~, which is an LXD bridge, doesn't even show up.
 
@@ -604,42 +656,42 @@ Here's a diagram of the L4-to-L3 hand-off:
 
 We can get a pretty good idea what happens at Layer 4 just by decoding the contents of the TCP header. It contains the following fields:
 
-- **Source port**: the application port number of the host sending the data.  For example, if this is an FTP message, the source port would probably be 21.
+ - **Source port**: the application port number of the host sending the data.  For example, if this is an FTP message, the source port would probably be 21.
 
-- **Destination port**: the port number of the application requested on the destination host.  If this is FTP, again this port would likely be 21.
+ - **Destination port**: the port number of the application requested on the destination host.  If this is FTP, again this port would likely be 21.
 
-- **Sequence number**: the sequence number of this segment of data, to help the other end put the data back together in the correct order, as well as help Level 4 on the receiving end know whether a packet's been dropped or lost.
+ - **Sequence number**: the sequence number of this segment of data, to help the other end put the data back together in the correct order, as well as help Level 4 on the receiving end know whether a packet's been dropped or lost.
 
-- **Acknowledgement number**: essentially, the next sequence number the destination host is expecting; used to "gate" packets through the connection.
+ - **Acknowledgement number**: essentially, the next sequence number the destination host is expecting; used to "gate" packets through the connection.
 
-- **TCP header length**: given to know where the data begins.
+ - **TCP header length**: given to know where the data begins.
 
-- **Reserved**: reserved for future use, basically; currently always set to 0.
+ - **Reserved**: reserved for future use, basically; currently always set to 0.
 
-- **Code bits**: essentially a set of flags; see the list below.
+ - **Code bits**: essentially a set of flags; see the list below.
 
-- **Window**: used to negotiate the "window" size, that is, how many bytes the destination host is willing to receive at once; this allows for the most efficient transmission possible, based on the characteristics of the two communicating hosts.
+ - **Window**: used to negotiate the "window" size, that is, how many bytes the destination host is willing to receive at once; this allows for the most efficient transmission possible, based on the characteristics of the two communicating hosts.
 
-- **Checksum (CRC)**: used to check the integrity of the segment.
+ - **Checksum (CRC)**: used to check the integrity of the segment.
 
-- **Urgent pointer**: data byte count where urgent data ends; used if the urgent flag is set (see below).
+ - **Urgent pointer**: data byte count where urgent data ends; used if the urgent flag is set (see below).
 
 
 The code bits can indicate the following things:
 
-- **URG**: indicates that the urgent pointer field is meaningful, used to prioritise this message over other messages.
+ - **URG**: indicates that the urgent pointer field is meaningful, used to prioritise this message over other messages.
 
-- **ACK**: used to acknowledge successful delivery of the previous segment.
+ - **ACK**: used to acknowledge successful delivery of the previous segment.
 
-- **PSH**: push notification; tells the receiving host the message is complete, you can push the data to the application.
+ - **PSH**: push notification; tells the receiving host the message is complete, you can push the data to the application.
 
-- **RST**: request a connection reset when the error level reaches a certain threshold; basically, "let's try that again from the top."  This is considered an abnormal termination of the TCP connection.
+ - **RST**: request a connection reset when the error level reaches a certain threshold; basically, "let's try that again from the top."  This is considered an abnormal termination of the TCP connection.
 
-- **SYN**: used for a three-way TCP handshake; this handshake is how sender and receiver sync up; it serves a purpose similar to the preamble in a MAC frame, but at a different level of synchronization.
+ - **SYN**: used for a three-way TCP handshake; this handshake is how sender and receiver sync up; it serves a purpose similar to the preamble in a MAC frame, but at a different level of synchronization.
 
-- **FIN**: we're done, close the connection.  This is considered a normal termination of a TCP connection.
+ - **FIN**: we're done, close the connection.  This is considered a normal termination of a TCP connection.
 
-- **NS/CWR/ECE**: used to provide Explicit Congestion Notification; note that OSI provides several methods for endpoints to know that the network is congested.
+ - **NS/CWR/ECE**: used to provide Explicit Congestion Notification; note that OSI provides several methods for endpoints to know that the network is congested.
 
 <details><summary>TCP is like a phone call</summary>
 
@@ -655,7 +707,15 @@ There is a lot more to know about TCP, but most of it isn't directly relevant fo
 
 <a href="#heading--about-dhcp"><h3 id="heading--about-dhcp">About DHCP</h3></a>
 
-Next, we turn our attention to the Dynamic Host Control Protocol or DHCP.  Many issues with MAAS revolve around misunderstanding or unintentional misuse of DHCP, so it's worth it to take an in-depth look.
+Next, we turn our attention to the Dynamic Host Control Protocol or DHCP.  Many issues with MAAS revolve around misunderstanding or unintentional misuse of DHCP, so it's worth it to take an in-depth look.  This section will help you learn:
+
+ - [About DORA](#heading--about-dora)
+ - [About DHCP traffic](#heading--about-dhcp-traffic)
+ - [About DHCP standard message types](#heading--about-dhcp-standard-message-types)
+ - [About DHCP address allocation](#heading--about-dhcp-address-allocation)
+ - [About multiple DHCP servers serving different IP ranges](#heading--about-multiple-dhcp-servers-diff-ips)
+ - [About multiple DHCP servers serving overlapping IP ranges](#heading--about-multiple-dhcp-servers-overlapping-ranges)
+ - [About DHCP relays](#heading--about-dhcp-relays)
 
 Consider the analogy of assigning a street address to your house, which we've already used earlier. Usually, this is done by the local 911 dispatch office, or some other central authority. They typically use either a survey map or a latitude/longitude pair to locate you, before they assign your house numbers from a pool of available addresses, compatible with other addresses in the area.
 
@@ -740,21 +800,21 @@ There are (at least) two participants in a DHCP transaction: a server and a clie
 
 For what it’s worth, the “DHCP protocol stack” just means that a device can handle at least the following standard message types:
 
-- **DHCPDiscover**: a broadcast message sent in the hopes of finding a DHCP server.  Note that clients that don’t get a DHCP response may be able to assign themselves an Automatic Private IPv4 address (APIPA), which should always be in the range 169.254.0.0/16. This is good to know, because you want to pretty much always leave that scope (that range of IP addresses) unused by anything else in your system.
+ - **DHCPDiscover**: a broadcast message sent in the hopes of finding a DHCP server.  Note that clients that don’t get a DHCP response may be able to assign themselves an Automatic Private IPv4 address (APIPA), which should always be in the range 169.254.0.0/16. This is good to know, because you want to pretty much always leave that scope (that range of IP addresses) unused by anything else in your system.
 
-- **DHCPOffer**: also a broadcast message, one that offers an IPv4 address lease; the lease is more than just an IP address, as we saw in the last DHCP blog.
+ - **DHCPOffer**: also a broadcast message, one that offers an IPv4 address lease; the lease is more than just an IP address, as we saw in the last DHCP blog.
 
-- **DHCPRequest**: If you haven’t noticed by now, DHCP exchanges are little like rolling snowballs: they pick up more protocol information as they go and keep it for the duration of the transaction, sending it back and forth. In this case, the client sends back everything the DHCP server sent, along with a request to actually take the offered lease.
+ - **DHCPRequest**: If you haven’t noticed by now, DHCP exchanges are little like rolling snowballs: they pick up more protocol information as they go and keep it for the duration of the transaction, sending it back and forth. In this case, the client sends back everything the DHCP server sent, along with a request to actually take the offered lease.
 
-- **DHCPAcknowlegement**: If everything matches up when the DHCP server gets the Request, it responds with an Acknowledgement, which basically says, “Okay, you can lease this IP address for a set period of time.”
+ - **DHCPAcknowlegement**: If everything matches up when the DHCP server gets the Request, it responds with an Acknowledgement, which basically says, “Okay, you can lease this IP address for a set period of time.”
 
-- **DHCPNak**: If the client waits too long to Request an Offer (generally, if a different server has already claimed the offered IP address), the DHCP server may respond with a Nak. This requires the client to start over again at Discover.
+ - **DHCPNak**: If the client waits too long to Request an Offer (generally, if a different server has already claimed the offered IP address), the DHCP server may respond with a Nak. This requires the client to start over again at Discover.
 
-- **DHCPDecline**: If the client determines that, for some reason, the Offer has a configuration that won’t work for it, it can Decline the offer — that this also means it has to start again at Discover.
+ - **DHCPDecline**: If the client determines that, for some reason, the Offer has a configuration that won’t work for it, it can Decline the offer — that this also means it has to start again at Discover.
 
-- **DHCPRelease**: When a client is done with an IP address, it can send a Release message to cancel the rest of the lease and return the IP address to the server’s available pool.
+ - **DHCPRelease**: When a client is done with an IP address, it can send a Release message to cancel the rest of the lease and return the IP address to the server’s available pool.
 
-- **DHCPInform**: This is a relatively new message, which allows a client that already has an IP address to easily get other configuration parameters (related to that IP address) from a DHCP server.
+ - **DHCPInform**: This is a relatively new message, which allows a client that already has an IP address to easily get other configuration parameters (related to that IP address) from a DHCP server.
 
 Note that, shortly before a lease expires, most DHCP clients will renew the lease, often with a shortened form of the exchange (Request/Acknowledge) which does not require a full DORA exchange. Also, this renewal exchange takes place directly between the client and the DHCP server, rather than being broadcast across the entire network.
 
@@ -762,11 +822,11 @@ Note that, shortly before a lease expires, most DHCP clients will renew the leas
 
 There are (at least) three ways that a DHCP server can assign addresses to requesting clients:
 
-- **Manual or static allocation** essentially means that the client receives a specifically-chosen IP address, or, at a minimum, keeps the first one that it’s assigned until the client decides to release it.
+ - **Manual or static allocation** essentially means that the client receives a specifically-chosen IP address, or, at a minimum, keeps the first one that it’s assigned until the client decides to release it.
 
-- **Dynamic allocation** means that a DHCP server assigns IP addresses from an available pool (scope) of addresses, which can change to another available address in that scope at any time, depending on the network dynamics.
+ - **Dynamic allocation** means that a DHCP server assigns IP addresses from an available pool (scope) of addresses, which can change to another available address in that scope at any time, depending on the network dynamics.
 
-- **Automatic allocation** is sort of a cross between the other two types. The DHCP server assigns an address from its defined scope, but then remembers which client got what address, and re-assigns that address to the same client when a new request is made.
+ - **Automatic allocation** is sort of a cross between the other two types. The DHCP server assigns an address from its defined scope, but then remembers which client got what address, and re-assigns that address to the same client when a new request is made.
 
 Regardless of the allocation method, the DHCP server’s scope — its range of IP addresses that it controls (and can assign) — is something that must be user-configured.
 
@@ -774,23 +834,23 @@ DHCP is “connectionless,” meaning that basically everything takes place via 
 
 A DHCP client can request its previous IP address, if it had one, but whether it gets that address or not depends on four things: scope, allocation, topology, and authority. Specifically:
 
-- The larger the DHCP server’s scope of addresses, the more likely it is that the requested address will be available again.
+ - The larger the DHCP server’s scope of addresses, the more likely it is that the requested address will be available again.
 
-- The chances of getting the same IP address again also depend on how the server is allocating addresses (see above). Static allocation guarantees the same address; automatic allocation makes it very likely; with dynamic allocation, it’s impossible to predict.
+ - The chances of getting the same IP address again also depend on how the server is allocating addresses (see above). Static allocation guarantees the same address; automatic allocation makes it very likely; with dynamic allocation, it’s impossible to predict.
 
-- Topology also plays into this process: if the DHCP server is using one or more DHCP relays to get some or all of its addresses, the chances of re-using the same IP address go down.
+ - Topology also plays into this process: if the DHCP server is using one or more DHCP relays to get some or all of its addresses, the chances of re-using the same IP address go down.
 
-- Authority also affects the probability. An authoritative DHCP server will definitely answer any unanswered DHCPDiscover message, but that server is pulling only from its own scope.
+ - Authority also affects the probability. An authoritative DHCP server will definitely answer any unanswered DHCPDiscover message, but that server is pulling only from its own scope.
 
 <a href="#heading--about-multiple-dhcp-servers-diff-ips"><h4 id="heading--about-multiple-dhcp-servers-diff-ips">About multiple DHCP servers serving different IP ranges</h4></a>
 
 It’s possible to have more than one DHCP server on the same network segment and still have everything work right, with no conflicts and no dropped packets or IP requests. There are three possible scopes for IP ranges to consider:
 
-- **Adjacent scopes**: In this configuration, IP addresses are assigned from portions of the same subnet. For example, one server might control scope 192.168.14.2 – 192.168.14.187, and another server might manage scope 192.168.14.200 – 192.168.14.247. This is the most common (and most reliable) setup for multiple DHCP servers.
+ - **Adjacent scopes**: In this configuration, IP addresses are assigned from portions of the same subnet. For example, one server might control scope 192.168.14.2 – 192.168.14.187, and another server might manage scope 192.168.14.200 – 192.168.14.247. This is the most common (and most reliable) setup for multiple DHCP servers.
 
-- **Heterogeneous scopes**: This arrangement basically has DHCP servers on different subnets, such as 192.168.14.2 – .253 for one server, and 10.17.22.3 – .98 for the other. This can be made to work, but it’s extremely difficult to set up and not so easy to manage. 
+ - **Heterogeneous scopes**: This arrangement basically has DHCP servers on different subnets, such as 192.168.14.2 – .253 for one server, and 10.17.22.3 – .98 for the other. This can be made to work, but it’s extremely difficult to set up and not so easy to manage. 
 
-- **Overlapping scopes**: In this situation, more than one server can offer the same IP address. There is a way to make this work, by setting up the DHCP servers to talk to one another, but for most applications, this configuration can be avoided. 
+ - **Overlapping scopes**: In this situation, more than one server can offer the same IP address. There is a way to make this work, by setting up the DHCP servers to talk to one another, but for most applications, this configuration can be avoided. 
 
 Adjacent and heterogeneous scopes are really the same thing. The two servers do not work together; they may not ever be aware of one another. The servers and clients operate independently on a first-come, first-served basis, serving from their specific pool of IP addresses.
 
@@ -820,15 +880,68 @@ MAAS already has some conflict detection built in.  If MAAS manages a subnet tha
 
 MAAS also recognises when the subnet ARP cache is full, so that it can re-check the oldest IPs added to the cache to search for free IP addresses.
 
-If you want your configuration to run more smoothly, it’s useful to enable SCD on every DHCP provider on your network, if you can. It doesn’t hurt anything, and it really doesn’t cost that much (beside a little extra delay when assigning addresses). There are plenty of network issues associated with a large, bare-metal network. There’s no reason why DHCP conflicts need to be one of those issues.
+If you want your configuration to run more smoothly, it’s useful to enable SCD on every DHCP provider on your network, if you can. It doesn’t hurt anything, and it really doesn’t cost that much (besides a little extra delay when assigning addresses). There are plenty of network issues associated with a large, bare-metal network. There’s no reason why DHCP conflicts need to be one of those issues.
 
 <a href="#heading--about-dhcp-relays"><h4 id="heading--about-dhcp-relays">About DHCP relays</h4></a>
 
-A DHCP relay is really just a specialized router.  Like all routers, it replaces source and destination addresses of packets crossing its domain so that every server gets the intended messages.  
+A DHCP relay is really just a specialised router.  Like all routers, it replaces source and destination addresses of packets crossing its domain so that every server gets the intended messages.  
 
-The only substantial difference is that DHCP relay knows the IP address of the DHCP server.  When a DHCPRequest reaches the relay from a requesting server, for example, the relay absorbs the broadcast packet and creates a routed unicast packet, bound directly for the DHCP server.  On the way back, the relay converts the DHCPOffer back to a broadcast packet.
+The only substantial difference is that the DHCP relay knows the IP address of the DHCP server.  When a DHCPRequest reaches the relay from a requesting server, for example, the relay absorbs the broadcast packet and creates a routed unicast packet, bound directly for the DHCP server.  On the way back, the relay converts the DHCPOffer back to a broadcast packet.
+
+<a href="#heading--about-cloud-networks"><h2 id="heading--about-cloud-networks">About cloud networks</h2></a>
+
+Cloud network architectures deviate significantly from the architecture of the Internet infrastructure.  These deviations are driven mostly by economics, simplicity, and scalability.  This section will help you learn:
+
+ - [About the Clos architecture](#heading--clos-architecture)
+ - [About STP](#heading--about-stp)
+
+
+<a href="#heading--clos-architecture"><h3 id="heading--clos-architecture">About the Clos architecture</h3></a>
+
+You [may remember](#heading--internet-infrastructure) that the Internet infrastructure is riddled with side-channels to improve various measures, such as cost and throughput.  Earlier, we saw a fairly pessimistic picture of this infrastructure which helps to explain the variability:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg"></a>
+
+Because of this variability, network performance is uneven and constantly morphing, as different groups of LANs seek better "numbers".  Given that various nodes are constantly upgrading bandwidth, devices, and network speeds to compete for customers, the churn isn't a surprise.  Regulating this churn helps nothing in the long run, of course, but changing the "atomic structure" of the network itself can make things a lot better.   
+
+The structure of the Internet backbone is something like a dirty snowball.  On the way downhill, the snowball picks up rocks, sticks, abandoned shoes, trash, insects, and anything else that gets in its path.  In other words, the Internet infrastructure grows by incorporating anything and everything that helps it move forward.  Differing protocols, link speeds, formats, hardware, software, bandwidth, and media are all added to the infrastructure, almost randomly.
+
+At scale -- that is, considered from the perspective of the global village -- this rolling snowball does pretty well.  Enterprise clouds, though, feel the effects of this variability much more strongly.  Over time, enterprises have learned to heavily standardise their networks, at the lowest level, for more scalable, consistent, and reliable performance.  
+
+The resulting architecture, drawn from the fractal topology created by [Charles Clos](https://en.wikipedia.org/wiki/Clos_network) in a 1952 paper about telephone switching.  "Fractal" is the key word here, in the sense of a simple, repeating pattern.  Where the AAC network is made up of all sorts of devices with different characteristics, the Clos topology can be built from just two basic devices: one type of switch, and one type of server:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/f/fd86954e48538ce9ba8fc6e02df23b0a2337ef12.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fd86954e48538ce9ba8fc6e02df23b0a2337ef12.jpeg"></a>
+
+All the switches in the diagram can be the same unit of hardware, if desired.  The designation "TOR" (for "Top of Rack") simply shows the terminal switch in this network topology, known as a **leaf** switch.  The higher-level switches are referred to as **spine** switches.  The ghosted objects are meant to show how this architecture is (theoretically) infinitely scalable.  
+
+Several inherent characteristics make a Clos ("fractal") architecture more suitable for MAAS networks:
+
+ - Every leaf connects to every spine, or at the very least, every leaf connects to many spines.  By creating many paths through the network, this architecture increases both bandwidth and capacity, with the primary cost being the cabling.
+
+ - The spines only connect leaves, so all functionality is pushed to the racks (some would say "the edges of the network").
+
+ - Networks can be easily scaled with simple, fixed-form-factor switches.
+
+ - The network does not use bridging via the [Spanning Tree Protocol](https://en.wikipedia.org/wiki/Spanning_Tree_Protocol) to interconnect the switches, in this arrangement. Instead, [Equal-Cost Multipath routing](https://en.wikipedia.org/wiki/Equal-cost_multi-path_routing) is used.
+
+ - The network tends to be nonblocking because the oversubscription ratio tends toward 1:1, meaning that the bandwidth between the TOR leaf switches and the servers can easily be adjusted to be roughly equal to the bandwidth between the leaf switch and every other spine switch.  It depends on how interconnect link speeds are defined, but with homogeneous hardware the relative settings and calculations are much simpler and more constant.
+
+ - Networks have a small blast radius, meaning that the loss of a single link does not have a significant effect on the performance of the overall network.  For example, if every leaf switch is connected to each of five spine switches, the loss of one link (or one spine switch) would probably not noticeably degrade network performance.
+
+<a href="#heading--about-stp"><h3 id="heading--about-stp">About STP</h3></a>
+
+Some switches use the Spanning-Tree Protocol (STP) to negotiate a loop-free path through a root bridge. While scanning, it can cause each port to wait up to 50 seconds before sending data. This delay, in turn, can cause problems with some applications/protocols such as PXE, DHCP and DNS, of which MAAS makes extensive use.
+
+To alleviate this problem, you should enable the [Rapid Spanning Tree Protocol](https://en.wikipedia.org/wiki/Spanning_Tree_Protocol) (known as [Portfast](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4000/8-2glx/configuration/guide/stp_enha.html#wp1019873) for Cisco switches), which allows the ports to come up almost immediately.
 
 <a href="#heading--about-maas-networks"><h2 id="heading--about-maas-networks">About MAAS networks</h2></a>
+
+There are elements of MAAS networking that are unique to the product.  This section will help you learn:
+
+ - [About network discovery](#heading--about-network-discovery)
+ - [About subnet management](#heading--about-subnet-management)
+ - [About IPv6](#heading--about-ipv6)
+ - [About availability zones](#heading--about-availability-zones)
 
 <a href="#heading--about-network-discovery"><h3 id="heading--about-network-discovery">About network discovery</h3></a>
 
@@ -844,15 +957,21 @@ MAAS constantly listens to the network and reports any discovered devices. Devic
 Using the Dashboard, an unknown discovered device can be added to MAAS as a device or as a network interface belonging to a machine or device. Clicking the down arrow to the right of a new device allows values such as 'Type', 'Domain', 'IP Assignment' and 'Parent' to be changed prior to the device being added. Selecting a Parent device is optional.
 rad-end
 
-<a href="#heading--about-subnet-management"><h2 id="heading--about-subnet-management">About subnet management</h2></a>
+<a href="#heading--about-subnet-management"><h3 id="heading--about-subnet-management">About subnet management</h3></a>
 
 Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/how-to-manage-dhcp/nnnn#heading--enabling-dhcp).  None of these options requires detailed instruction.
+
+This subsection will help you learn:
+
+ - [About managed subnets](#heading--about-managed-subnets)
+ - [About unmanaged subnets](#heading--about-unmanaged-subnets)
+ - [About IP address tracking](#heading--about-ip-address-tracking)
 
 A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS. By default, MAAS manages subnets in your configuration, but this is easily changed.
 
 When a subnet is managed, MAAS handles all aspects of IP address allocation. This process includes managing DHCP leases and assigned static addresses. Typically MAAS would have one managed subnet, with any additional subnets unmanaged. This arrangement allows for more control over which subnet gets used for DHCP. Additionally, as detailed below, an unmanaged subnet treats reserved IP ranges differently, in a way that some administrators find more intuitive.
 
-<a href="#heading--about-managed-subnets"><h3 id="heading--about-managed-subnets">About managed subnets</h3></a>
+<a href="#heading--about-managed-subnets"><h4 id="heading--about-managed-subnets">About managed subnets</h4></a>
 
 When you enable management for a subnet, MAAS will:
 
@@ -863,17 +982,23 @@ See [Concepts and terms](/t/maas-concepts-and-terms-reference/nnnn#heading--ip-r
 
 If needed, you can also define a static route between two subnets. A static route is defined on a per-subnet basis to use a particular gateway, using a configured destination.
 
-<a href="#heading--about-unmanaged-subnets"><h3 id="heading--about-unmanaged-subnets">About unmanaged subnets</h3></a>
+<a href="#heading--about-unmanaged-subnets"><h4 id="heading--about-unmanaged-subnets">About unmanaged subnets</h4></a>
 
 When management is disabled for a subnet, the definition of a reserved IP range differs from the managed mode. Here, a reserved IP range tells MAAS to **only allocate addresses from this range** (via 'Auto assign'). Also, DHCP will never lease addresses from an unmanaged subnet.
 
-<a href="#heading--about-ip-address-tracking"><h3 id="heading--about-ip-address-tracking">About IP address tracking</h3></a>
+<a href="#heading--about-ip-address-tracking"><h4 id="heading--about-ip-address-tracking">About IP address tracking</h4></a>
 
 When you enable IP address tracking, MAAS will keep track of all assigned addresses, regardless of whether they come from managed or unmanaged subnets.
 
-<a href="#heading--about-ipv6"><h2 id="heading--about-ipv6">About IPv6</h2></a>
+<a href="#heading--about-ipv6"><h3 id="heading--about-ipv6">About IPv6</h3></a>
 
-Support for IPv6 in MAAS is similar to support for IPv4.  A rack controller in an IPv6 context needs to have the region API server URL specified with brackets:
+Support for IPv6 in MAAS is similar to support for IPv4.  This subsection will help you learn:
+
+ - [About enabling IPv6](#heading--about-enabling-ipv6)
+ - [About IPv6 subnets](#heading--about-ipv6-subnets)
+ - [About IPV6 routing](#heading--about-ipv6-routing)
+
+A rack controller in an IPv6 context needs to have the region API server URL specified with brackets:
 
 ``` nohighlight
 http://[::1]:5240/MAAS/
@@ -885,19 +1010,19 @@ You can access the Web UI and the [MAAS CLI](/t/how-to-use-the-maas-cli/nnnn) (t
 MAAS can only control most BMCs using IPv4.
 [/note]
 
-<a href="#heading--about-enabling-ipv6"><h3 id="heading--about-enabling-ipv6">About enabling IPv6</h3></a>
+<a href="#heading--about-enabling-ipv6"><h4 id="heading--about-enabling-ipv6">About enabling IPv6</h4></a>
 
 You enable IPv6 networking in the same way that you enable IPv4 networking: configure a separate rack controller interface for your IPv6 subnet. The IPv6 interface must define a static address range. Provided that you already have a functioning IPv6 network, that's all there is to it. The following sections explain requirements, supported operations, and what to do if you don't yet have a functioning IPv6 network.
 
 An IPv6 interface can use the same network interface on the rack controller as an existing IPv4 network interface. It just defines a different subnet, with IPv6 addressing. A machine that's connected to the IPv4 subnet also connected to the IPv6 subnet on the same network segment.
 
-<a href="#heading--about-ipv6-subnets"><h3 id="heading--about-ipv6-subnets">About IPv6 subnets</h3></a>
+<a href="#heading--about-ipv6-subnets"><h4 id="heading--about-ipv6-subnets">About IPv6 subnets</h4></a>
 
 If you define a reserved static IP range, then machines deployed on the subnet will get a static address in this range. Since IPv6 networks usually are 64 bits wide, you can be generous with the range size. You can typically leave the netmask and broadcast address fields blank.
 
 You may want MAAS to manage DHCP and DNS, but it's not required. Machines do not need a DHCP server at all for IPv6; MAAS configures static IPv6 addresses on a machine's network interface while deploying it. A DHCPv6 server can provide addresses for containers or virtual machines running on the machines, as well as devices on the network that are not managed by MAAS. The machines do not need DHCPv6. MAAS will not be aware of any addresses issued by DHCP, and cannot guarantee that they will stay unchanged.
 
-<a href="#heading--about-ipv6-routing"><h3 id="heading--about-ipv6-routing">About IPV6 routing</h3></a>
+<a href="#heading--about-ipv6-routing"><h4 id="heading--about-ipv6-routing">About IPV6 routing</h4></a>
 
 In IPv6, clients do not discover routes through DHCP. Routers make themselves known on their networks by sending out route advertisements. These RAs also contain other configuration items:
 
@@ -913,17 +1038,16 @@ You may be planning to operate DHCPv6 clients as well, for example, on machines 
 
 If you need RAs, but your gateway does not send them, you could install and configure `radvd` somewhere on the network to advertise its route.
 
-<a href="#heading--about-stp"><h3 id="heading--about-stp">About STP</h3></a>
 
-Some switches use the Spanning-Tree Protocol (STP) to negotiate a loop-free path through a root bridge. While scanning, it can cause each port to wait up to 50 seconds before sending data. This delay, in turn, can cause problems with some applications/protocols such as PXE, DHCP and DNS, of which MAAS makes extensive use.
+<a href="#heading--about-availability-zones"><h3 id="heading--about-availability-zones">About availability zones</h3></a>
 
-To alleviate this problem, you should enable the [Rapid Spanning Tree Protocol](https://en.wikipedia.org/wiki/Spanning_Tree_Protocol) (known as [Portfast](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4000/8-2glx/configuration/guide/stp_enha.html#wp1019873) for Cisco switches), which allows the ports to come up almost immediately.
+This subsection explains some characteristics and uses of availability zones.  Here you have the opportunity to learn:
 
-<a href="#heading--about-availability-zones"><h2 id="heading--about-availability-zones">About availability zones</h2></a>
+ - [About fault tolerance](#heading--fault-tolerance)
+ - [About service performance](#heading--service-performance)
+ - [About power management](#heading--power-management)
 
-This section explains some characteristics and uses of availability zones.
-
-<a href="#heading--fault-tolerance"><h3 id="heading--fault-tolerance">About fault tolerance</h3></a>
+<a href="#heading--fault-tolerance"><h4 id="heading--fault-tolerance">About fault tolerance</h4></a>
 
 Fault tolerance is "the property that enables a system to continue operating properly in the event of the failure of (or one or more faults within) some of its components". To help create better fault tolerance, multiple MAAS zones can be employed.
 
@@ -931,7 +1055,7 @@ For this, a zone can be defined in different ways. It can be based on power supp
 
 Machines that work in tandem in order to provide an instance of a service should be allocated in the same zone. The entire service should be replicated in another zone.
 
-<a href="#heading--service-performance"><h3 id="heading--service-performance">About service performance</h3></a>
+<a href="#heading--service-performance"><h4 id="heading--service-performance">About service performance</h4></a>
 
 Service performance is the ability of your service to operate in the most efficient manner possible where the typical criteria used is speed. Multiple MAAS zones can be used to help.
 
@@ -939,9 +1063,10 @@ Nodes should be allocated in the zone closest to the performance-critical resour
 
 For example, for applications that are highly sensitive to network latency, it may make sense to design a network topology consisting of several smaller networks, and have each of those represented as a zone. The zones can then be used to allocate nodes that have the best performance depending on the service offered.
 
-<a href="#heading--power-management"><h3 id="heading--power-management">About power management</h3></a>
+<a href="#heading--power-management"><h4 id="heading--power-management">About power management</h4></a>
 
 Power management is concerned with power usage density and cooling. This topic can be addressed with the use of several MAAS zones.
 
 Nodes can be distributed in such a way that power-hungry and/or "hot" systems are located in different zones. This can help mitigate power consumption and heat problems.
+
 
