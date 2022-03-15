@@ -1,5 +1,27 @@
 This section covers some of the most commonly encountered problems and attempts to resolve them.
 
+<a href="#heading--commissioning-script-file-not-found"><h2 id="heading--commissioning-script-file-not-found">\"File not found\" when creating commissioning or node script with MAAS CLI</h2></a>
+
+When creating a commissioning script with the MAAS CLI, like this:
+
+```nohighlight
+maas $PROFILE commissioning-scripts create name=scriptname content@=/tmp/filename
+```
+
+you may receive a "file not found" error:
+
+```nohighlight
+[Errno 2] No such file or directory: '/tmp/filename'
+```
+
+There are two possible sources of the error:
+
+1. You did not actually type the filename correctly, or the file does not exist in `/tmp`.  Check the spelling and make sure the file is actually present in `/tmp` (for example).
+
+2. You are using the snap version of MAAS.  When using the MAAS snap, you may not use `/tmp` due to confinement rules.  Move the file to `/opt` or `/home/myhomdir` and try again.
+
+Also note that `commissioning-scripts` is deprecated and may be removed at some future time.  Use the form `node-scripts` instead; consult the MAAS CLI built-in help for details.
+
 <a href="#heading--machine-login-issues"><h2 id="heading--machine-login-issues">Can't login to machine after deployment</h2></a>
 
 When everything seems to be right about your machine deployment, but you can't login, there's a chance you might not be using the right username.  You may have added your personal SSH key to MAAS, but your corresponding login doesn't seem to work; that's because the logins for the machines are generally related to the operating system, e.g.:
