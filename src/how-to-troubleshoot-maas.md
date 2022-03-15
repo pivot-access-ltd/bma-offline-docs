@@ -1,5 +1,20 @@
 This section covers some of the most commonly encountered problems and attempts to resolve them.
 
+<a href="#heading--overlapping-subnets-can-break-deployments"><h2 id="heading--overlapping-subnets-can-break-deployments">Adding overlapping subnets in fabric can break deployments</h2></a>
+
+**Characteristic failure**: A machine performs PXE boot, then gets trapped in a boot loop, causing deployment to fail.
+
+MAAS does not currently prevent you from creating overlapping subnets, for example:
+
+ - subnet 1 = 192.168.48.0/24
+ - subnet 2 = 192.168.48.0/22
+
+This can break deployments, because the controllers can't reliably determine which subnet should get a packet destined for one of the overlapping addresses. The IP range of one subnet should be unique compared to every other subnet on the same segment.
+
+At least one way to cause this error is to edit a subnet in the `netplan` file.  MAAS will add the updated subnet, but may not drop the existing subnet, causing overlap.  You can fix this by deleting the subnet you do not want from the Web UI.
+
+If you have a machine that PXE boots, but then fails deployment, either in an infinite boot loop or some unspecified failure, check your subnets to be sure you do not have overlap.  If so, delete the outdated subnet.
+
 <a href="#heading--commissioning-script-file-not-found"><h2 id="heading--commissioning-script-file-not-found">\"File not found\" when creating commissioning or node script with MAAS CLI</h2></a>
 
 When creating a commissioning script with the MAAS CLI, like this:
