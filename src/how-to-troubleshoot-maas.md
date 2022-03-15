@@ -20,6 +20,8 @@ There are two possible sources of the error:
 
 2. You are using the snap version of MAAS.  When using the MAAS snap, you may not use `/tmp` due to confinement rules.  Move the file to `/opt` or `/home/myhomdir` and try again.
 
+In fact, trying to upload the script from any directory owned by `root` will give a similar error.
+
 Also note that `commissioning-scripts` is deprecated and may be removed at some future time.  Use the form `node-scripts` instead; consult the MAAS CLI built-in help for details.
 
 <a href="#heading--machine-login-issues"><h2 id="heading--machine-login-issues">Can't login to machine after deployment</h2></a>
