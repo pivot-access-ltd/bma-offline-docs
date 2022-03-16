@@ -506,7 +506,7 @@ rad-begin /deb/3.1/ui /deb/3.1/cli
 The recommended way to set up an initial MAAS environment is to put everything on one machine:
 
 ``` bash
-sudo apt-add-repository ppa:maas/3.0
+sudo apt-add-repository ppa:maas/3.1
 sudo apt update
 sudo apt-get -y install maas
 ```

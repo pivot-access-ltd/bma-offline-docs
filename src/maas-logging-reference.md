@@ -12,22 +12,30 @@ The discussion of these logs and their contents can be very extensive, so each t
 
 <a href="#heading--path"><h2 id="heading--path">The syslog logging path</h2></a>
 
-rad-begin /deb/2.9/ui /deb/2.9/cli /deb/3.0/ui /deb/3.0/cli /deb/3.1/ui /deb/3.1/cli
+[tabs]
+[tab version="deb"] 
 Syslog data is kept in `/var/log/maas/rsyslog/<machine-name><yyyy-mm-dd>/messages`.  Every machine known to MAAS will have corresponding syslogs.
-rad-end
-
-rad-begin /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli /snap/3.1/ui /snap/3.1/cli
+[/tab]
+[tab version="snap"] 
 Syslog data is kept in `/var/snap/maas/common/log/rsyslog/<machine-name><yyyy-mm-dd>/messages`. Every machine known to MAAS will have corresponding syslogs.
-rad-end
+[/tab]
+[/tabs]
 
 <a href="#heading--using-a-remote-syslog-server"><h2 id="heading--using-a-remote-syslog-server">Using a remote syslog server</h2></a>
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui  /deb/3.0/ui /snap/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tabs]
+[tab version="ui"] 
 To add a remote syslog server, click the Settings tab and then click the Network services tab. Scroll down to the Syslog section, where you can add a syslog URL or IP:
 
 <a href="https://assets.ubuntu.com/v1/e139d4e9-installconfig-syslog__2.6-remote-syslog.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/e139d4e9-installconfig-syslog__2.6-remote-syslog.png"></a>
 
 Click the Save button to save your changes.
+[/tab]
+[tab version="snap"] 
+Syslog data is kept in `/var/snap/maas/common/log/rsyslog/<machine-name><yyyy-mm-dd>/messages`. Every machine known to MAAS will have corresponding syslogs.
+[/tab]
+[/tabs]
+rad-begin   /snap/2.9/ui   /deb/2.9/ui  /deb/3.0/ui /snap/3.0/ui /snap/3.1/ui /deb/3.1/ui
 rad-end
 
 rad-begin   /snap/2.9/cli   /deb/2.9/cli  /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
