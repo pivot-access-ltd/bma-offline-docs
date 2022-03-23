@@ -1,16 +1,7 @@
 To manage a machine, MAAS must be able to power cycle it, usually through the machine's [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller) card.  Until you configure the power type, a newly-added machine can't be enlisted and used by MAAS.
 
-
-rad-begin   /snap/2.9/ui   /deb/2.9/ui   /snap/2.9/cli   /deb/2.9/cli
-#### Four questions you may have:
-
-1. [How do I configure a machine's power type?](#heading--config-power-type)
-2. [Show me a catalogue of power parameters, by type.](#heading--power-catalogue)
-3. [Can you give me an example of the virsh power type?](#heading--example-virsh-kvm-power-type)
-4. [Which BMC drivers are supported?](#heading--bmc-driver-support)
-rad-end
-
-rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli /snap/3.1/ui /snap/3.1/cli /deb/3.1/cli /deb/3.1/ui
+[tabs]
+[tab version="snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="CLI,UI"]
 #### Five questions you may have:
 
 1. [How do I configure a machine's power type?](#heading--config-power-type)
@@ -18,9 +9,19 @@ rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli /snap/3.1/ui /snap
 3. [Can you give me an example of the virsh power type?](#heading--example-virsh-kvm-power-type)
 4. [Which BMC drivers are supported?](#heading--bmc-driver-support)
 5. [How do I configure and use IBM Z with MAAS?](#heading--configure-use-ibm-z)
-rad-end
+[/tab]
+[tab version="snap-2.9,deb-2.9" view="CLI,UI"]
+#### Four questions you may have:
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+1. [How do I configure a machine's power type?](#heading--config-power-type)
+2. [Show me a catalogue of power parameters, by type.](#heading--power-catalogue)
+3. [Can you give me an example of the virsh power type?](#heading--example-virsh-kvm-power-type)
+4. [Which BMC drivers are supported?](#heading--bmc-driver-support)
+[/tab]
+[/tabs]
+
+[tabs]
+[tab version="snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
 
 To configure a machine's power type, click on the machine from the 'Machines' page of the web UI, then select its 'Configuration' tab. Scroll down until you find the Power configuration. If the power type is undefined, the following will be displayed:
@@ -32,9 +33,7 @@ Choose a type in the drop-down menu that corresponds to the machine's underlying
 <a href="https://assets.ubuntu.com/v1/b53c6613-nodes-power-types__2.4_selection.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/b53c6613-nodes-power-types__2.4_selection.png"></a>
 
 Fill in the resulting form; the information required will depends on the power type:
-rad-end
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 | CLI power_type code | Description |
 |:--------------------|:------------|
 | [amt](#heading--amt) |Intel AMT |
@@ -58,9 +57,7 @@ rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.
 | [vmware](#heading--vmware) | VMware |
 | [webhook](#heading--webhook) | Webhook |
 | [wedge](#heading--wedge) | Facebook's Wedge |
-rad-end
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 Click 'Save changes' to finish. Once that's done, MAAS performs a power check on the machine. A successful power check is a good indication that MAAS can properly communicate with the machine, that is, it should quickly result in a power status of "Power off". A failed attempt will show:
 
 <a href="https://assets.ubuntu.com/v1/3bd5e93b-nodes-power-types__2.4_power-error.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/3bd5e93b-nodes-power-types__2.4_power-error.png"></a>
@@ -106,9 +103,7 @@ The following catalogue helps to explain the fields in the "create machine" dial
 | HMC password | Password to access unit | Optional |
 | HMC Managed System server name | HMC managed server name | Required |
 | HMC logical partition | HMC logical partition of unit | Required |
-rad-end
 
-rad-begin  /snap/2.9/ui  /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 <a href="#heading--lxd"><h3 id="heading--lxd">LXD VMs</h3></a>
 
 | Form field | Description | Required |
@@ -116,15 +111,8 @@ rad-begin  /snap/2.9/ui  /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/
 | LXD address | IP address of unit | Required |
 | Instance name | LXD container instance name | Required |
 | LXD password | Password to access unit | Optional |
-rad-end
-
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 
 <a href="#heading--ipmi"><h3 id="heading--ipmi">IPMI</h3></a>
-
-rad-end
-
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
 
@@ -148,15 +136,12 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | Privilege level | IPMI privilege level | `User` | Optional (BETA) |
 | | | `Operator` | |
 | | | `Administrator` | |
-rad-end
-
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 
 <a href="#heading--manual"><h3 id="heading--manual">Manual power configuration</h3></a>
 
 Manual power configuration means exactly that -- manually configured at the unit -- hence there are no parameters to set in the "create machine" UI.
-
-rad-end
+[/tab]
+[/tabs]
 
 <a href="#heading--moonshot"><h3 id="heading--moonshot">HP Moonshot - iLO4 (IPMI)</h3></a>
 
@@ -198,7 +183,8 @@ rad-end
 | Password | Password to access unit | Required |
 | Auth URL | URL to access unit | Required |
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tabs]
+[tab version="snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="#heading--proxmox"><h3 id="heading--proxmox">Proxmox</h3></a>
 
 | Form field | Description | Required |
@@ -211,8 +197,6 @@ rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.
 | API token secret | Token secret | Provisional |
 | Node ID | VM name or ID | Optional |
 | Verify SSL connections... | Boolean, whether or not to verify SSL connections with the system's root CA certificate | Required |
-
-rad-end
 
 <a href="#heading--openbmc"><h3 id="heading--openbmc">OpenBMC Power Driver</h3></a>
 
@@ -292,7 +276,7 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | Power user | Username to access unit | Optional |
 | Power password | Password to access unit | Optional |
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui  /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="#heading--example-virsh-kvm-power-type"><h2 id="heading--example-virsh-kvm-power-type">An example: the Virsh power type</h2></a>
 
 Consider a machine backed by VM. Below, a 'Power type' of `Virsh` has been selected, and the 'Power address' of `qemu+ssh://ubuntu@192.168.1.2/system` has been entered (replace values as appropriate).  The value of 'Power ID' is the VM domain (guest) name, here `node2`.
@@ -302,9 +286,7 @@ Consider a machine backed by VM. Below, a 'Power type' of `Virsh` has been selec
 [note]
 The machine's hostname -- according to MAAS -- is a randomly chosen string (here `dear.ant`). You should change this hostname to something descriptive, that helps you remember why this machine is in your MAAS network.
 [/note]
-rad-end
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 <a href="#heading--webhook"><h3 id="heading--webhook">Webhook</h3></a>
 
 It's important to understand that the Webhook power driver is more generic than other drivers, so it has some flexibility that the underlying power driver may not support.  For example, Webhook doesn't require a username or password for the power driver, because not all power drivers work that way.  Nevertheless, the power driver you're connecting to Webhook may actually require a username and/or password.  Understanding and implementing these fields correctly for the chosen back-end power driver is the user's responsibility.
@@ -323,10 +305,11 @@ To that end, the "Required" column for this driver refers only to whether Webhoo
 | Power password | Password to access unit | Optional |
 | Power token | Power driver API token (used instead of user and password, if set) | Optional |
 | Verify SSL connections... | Boolean, whether or not to verify SSL connections with the system's root CA certificate | Required |
+[/tab]
+[/tabs]
 
-rad-end
- 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tabs]
+[tab version="snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
 
 To (re)configure a machine's power type, first find the machine's $SYSTEM_ID with the following recipe:
@@ -341,9 +324,7 @@ Next, use the [MAAS CLI](/t/how-to-use-the-maas-cli/nnnn) command `maas machines
     maas $PROFILE machine update $SYSTEM_ID power_type="$POWER_TYPE"
 
 where $POWER_TYPE can have the following values:
-rad-end
 
-rad-begin   /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 | CLI power_type code | Description |
 |:-----|:-----|
 | [amt](#heading--amt) |Intel AMT |
@@ -366,9 +347,7 @@ rad-begin   /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli 
 | [virsh](#heading--virsh) | libvirt KVM |
 | [vmware](#heading--vmware) | VMware |
 | [wedge](#heading--wedge) | Facebook's Wedge |
-rad-end
 
-rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 | CLI power_type code | Description |
 |:-----|:-----|
 | [amt](#heading--amt) |Intel AMT |
@@ -391,9 +370,7 @@ rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /d
 | [virsh](#heading--virsh) | libvirt KVM |
 | [vmware](#heading--vmware) | VMware |
 | [wedge](#heading--wedge) | Facebook's Wedge |
-rad-end
 
-rad-begin   /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 Note the required and optional parameters associated with each power type.
 
 Once you've successfully processed the command (as indicated by a stream of JSON, headed by "Success!"), MAAS performs a power check on the machine. A successful power check is a good indication that MAAS can properly communicate with the machine, that is, it should quickly result in a power status of "Power off". A failed attempt will return errors that should guide you to fix your power_parameters.
@@ -456,9 +433,7 @@ All parameters are entered as `key=value`, e.g., `power_type=hmc`.  The MAAS CLI
 | `lpar` | HMC logical partition of unit | Required |
 | `power_user` | Username to login | Optional |
 | `power_pass` | Password to access unit | Optional |
-rad-end
 
-rad-begin  /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 <a href="#heading--lxd"><h3 id="heading--lxd">LXD VMs</h3></a>
 
 All parameters are entered as `key=value`, e.g., `power_type=lxd`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
@@ -469,15 +444,9 @@ All parameters are entered as `key=value`, e.g., `power_type=lxd`.  The MAAS CLI
 | `power_address` | IP address of unit | Required |
 | `instance_name` | LXD container instance name | Required |
 | `power_pass` | Password to access unit | Optional |
-rad-end
-
-rad-begin   /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 
 <a href="#heading--ipmi"><h3 id="heading--ipmi">IPMI</h3></a>
 
-rad-end
-
-rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
 
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
@@ -504,9 +473,6 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | | | `Operator` | |
 | | | `Administrator` | |
 | `mac_address` | MAC address of unit || Optional |
-rad-end
-
-rad-begin   /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
 
 <a href="#heading--manual"><h3 id="heading--manual">Manual power configuration</h3></a>
 
@@ -866,7 +832,8 @@ Machine-readable output follows this announcement.  The JSON generated by this c
 ```
 </details>
 
-rad-end
+[/tab]
+[/tabs]
 
 <a href="#heading--bmc-driver-support"><h2 id="heading--bmc-driver-support">Which BMC drivers are supported</h2></a>
 
@@ -1041,7 +1008,8 @@ In the context of MAAS, the BMC is generally controlled by SNMP commands.  Any g
 
 `*` The 'Facebook's Wedge' OpenBMC power driver is considered experimental at this time.
 
-rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
+[tabs]
+[tab version="snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="CLI,UI"]
 <a href="#heading--configure-use-ibm-z"><h2 id="heading--configure-use-ibm-z">How do I configure and use IBM Z with MAAS?</h2></a>
 
 The IBM Z or LinuxONE system can host MAAS controllers and is able to deploy predefined logical partitions (LPARs) KVM host(s), and virtual machines, if the mainframe is set up properly for MAAS.
@@ -1202,7 +1170,6 @@ Change any settings as necessary to support your planned MAAS deployment.
 <a href="#heading--set-up-ibm-z-enlistment"><h3 id="heading--set-up-ibm-z-enlistment">Set up your IBM Z virtual machine for enlistment</h3></a>
 
 To cause IBM Z KVM partition guests to enlist, it’s necessary to manually put in the BMC information for each guest. MAAS can then detect the guest, enlist it, and boot it as necessary.
+[/tab]
+[/tabs]
 
-rad-end
-
-<!-- comment -->

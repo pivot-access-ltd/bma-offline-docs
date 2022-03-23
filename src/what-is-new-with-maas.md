@@ -1,275 +1,447 @@
-rad-begin /snap/2.9/cli /snap/2.9/ui /deb/2.9/ui /deb/2.9/cli
+[tabs]
+[tab version="snap-3.2,deb-3.2" view="UI,CLI"]
+<h2>MAAS 3.2 Beta 1 release notes</h2>
+These release notes are pending announcement.  Please stand by.
 
-<h2>MAAS 2.9.2 release notes</h2>
+[/tab]
+[tab version="snap-3.1,deb-3.1" view="UI,CLI"]
+<h2>MAAS 3.1 release notes</h2>
 
-We have released MAAS 2.9.2, which contains two new features, and some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.2). The two new features are:
+We are happy to announce that MAAS 3.1 is now available. This release provides new features and critical bug fixes.
 
-1. Proxmox driver: A driver has been added to MAAS 2.9.2 which intereacts with the Proxmox API.  Only one URL is needed, though a username and credentials are required.  Credentials can be either a password or an API token.  Note that if you use a token, you have to configure the permissions for the token.  Newly-created Proxmox tokens don't assign any permissions by default, so you must add `power on`, `power off`, and `query power` permissions to the token before using it.
+<a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.1 features and fixes</h3></a>
 
-2. Power driver Webhook:  A webhook was added to 2.9.2, which allows MAAS to interface with another web service that's running the power commands.  This webhook is provided for interacting with objects that MAAS does not support, that is, the MAAS team supports the driver itself, but whatever is interfacing to the driver is not supported.  This webhook as three URLs, one each for power on, power off, and power query.  Optionally, this webhook also supports a power user and password or token (RFC 6717).  This gives you a way to add your own power drivers without waiting for the driver to be added to MAAS.  There is a [video tutorial](https://discourse.maas.io/t/maas-show-and-tell-proxmox-and-webhook/3754/3) available on this new feature.
+ - [Support for LXD clusters](#heading--lxd-clusters): MAAS 3.1 can use LXD clusters with MAAS KVMs.
+ 
+ - [Improved image sync performance](#heading--image-sync-performance): After images are downloaded, rack controllers sync new images more quickly.
+ 
+ - [Ability to enlist deployed machines](#heading--enlist-deployed-machines): Users can enlist deployed machines, a top feature poll request.
 
-You can also find a [digest](#heading--bug-fixes-2-9-2) of the 2.9.2 bug fixes below.
+ - [Static Ubuntu image upload and reuse](#heading--static-ubuntu-images): Users can upload, deploy and reuse a bootable ubuntu image
 
-<h2>MAAS 2.9.1 release notes</h2>
+ - [Machine configuration cloning UI](#heading--machine-cloning-ui): We have xtended machine cloning to the UI.
 
-Building upon MAAS 2.9, we have released 2.9.1, which contains some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.1).  You can find a [digest](#heading--bug-fixes-2-9-1) of these fixes below.
+ - [LXD authentication UX improvements](#heading--lxd-auth-ux-improvements): LXD certificates are easier to use.
 
-<h2>MAAS 2.9 release notes</h2>
+ - [MAAS 3.1 cumulative bug fixes](#heading--maas-3-1-cumulative-bug-fixes)
 
-Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now available.
+Critical and high-priority also extend or repair MAAS features:
 
-#### What are the new features & fixes for MAAS 2.9 and MAAS 2.9.1?
+ - [Expanded proxies](https://bugs.launchpad.net/maas/+bug/1867394): Some proxies require authentication; MAAS now respects peer proxy username and password
 
-1. [Focal Fossa (20.04) as default commissioning/deployment release](#heading--focal-default)
-2. [Support for OpenVswitch bridge type](#heading--openvswitch)
-3. [Support for NUMA, SR-IOV, and hugepages](#heading--numa)
-4. [Improved performance for large MAAS installations](#heading--improved-perf-large-maas)
-5. [New release notifications](#heading--new-release-notifications)
-6. [IPMI configuration screens](#heading--ipmi-config-screens)
-7. [Descriptions when marking machines broken](#heading--descrip-mark-mach-broken)
-8. [Curtin 20.2 now included](#heading--curtin-20-2-included)
-9. [HTTP boot disabled](#heading--http-boot-disabled)
-10. [BMC/IPMI default parameter additions](#heading--bmc-param-additions)
-11. [New global IPMI configuration options](#heading--new-config-options)
-12. [Addition of IPMI config options to UI](#heading--global-config-settings)
-13. [New MAAS CLI power command](#heading--maas-power)
-14. [Commissioning speed improvements](#heading--commissioning-speed)
-15. [BMC improvements](#heading--bmc-improve)
-16. [IPMI power driver upgrades](#heading--ipmi-driver)
-17. [Enlistment script improvements](#heading--enlistment-scripts)
-18. [Commissioning script improvements](#heading--commissioning-scripts)
-19. [Commissioning script reordering](#heading--commissioning-reorder)
-20. [Reader Adaptive Documentation](#heading--rad)
-21. [Offline documentation](#heading--offline-docs)
+ - [Accurate storage pool sizes](https://bugs.launchpad.net/bugs/1949410): The UI now calculates storage pool sizes correctly for CEPH pools; shared pools are no longer stacked
 
-<h4>Six other questions you may have:</h4>
+ - [Refresh wipeout bug](https://bugs.launchpad.net/bugs/1949485): MAAS does not destroy existing VMs on a refresh, or when the memory overcommit ratio is changed
+ 
+ - [Cloning issue fixed](https://bugs.launchpad.net/bugs/1948500): UI cloning has been repaired to prevent "unsuccessful cloning" of storage
 
-1. [What known issues should I be aware of?](#heading--known-issues)
-2. [How do I install MAAS 2.9?](/t/how-to-install-maas/3323)
-3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?](/t/how-to-install-maas/3323#heading--upgrade-maas-snap)
-4. [How do I install MAAS 2.9 from packages?](/t/how-to-install-maas/3329#heading--install-from-packages)
-5. [How do I upgrade MAAS 2.8 to MAAS 2.9 using packages?](/t/how-to-install-maas/3329#heading--upgrade-via-packages)
-6. [What bugs are fixed so far in this release?](#heading--bug-fixes)
+<a href="#heading--installing-3-1-0"><h3 id="heading--installing-3-1-0">How to install MAAS 3.1</h3></a>
 
-<h2 id="heading--focal-default">Focal Fossa (Ubuntu 20.04 LTS) as default release</h2>
+[tabs]
+[tab version="snap-3.1" view="UI,CLI"]
+MAAS 3.0 can be installed fresh (recommended) with:
 
-Ubuntu 20.04 LTS (Focal Fossa) is now the default commissioning and deployment release for new MAAS installations.  Machines deployed with Focal may now be registered as KVM hosts.
+```
+sudo snap install --channel=3.1 maas
+```
 
-<h2 id="heading--openvswitch">Support for OpenVswitch bridge type</h2>
+[/tab]
+[tab version="deb-3.1" view="UI,CLI"]
+MAAS 3.1 can be installed by adding the `3.1` PPA:
 
-MAAS 2.9 allows you to create an OpenVswitch bridge type when creating a bridge.
+```
+sudo add-apt-repository ppa:maas/3.1
+sudo apt update
+sudo apt install maas
+```
 
-<h2 id="heading--numa">Support for NUMA, SR-IOV, and hugepages</h2>
+You can then install MAAS 3.1 fresh (recommended) with:
 
-MAAS 2.9 adds extensive optimisation tools for using NUMA with virtual machines. You can now see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory. You can quickly spot a VM running in multiple NUMA nodes, and optimise accordingly, with instant updates on pinning and allocations. You can also tell which VMs are currently running.  Using the CLI, you can also pin nodes to specific cores, and configure hugepages for use by VMs.
+```
+sudo apt-get -y install maas
+```
 
-Specifically, there are five new features available to support NUMA, SR-IOV, and hugepages:
+Or, if you prefer to upgrade, you can:
 
-1. You can examine resources on a per-NUMA-node basis.
-2. You can pin nodes to specific cores (CLI only).
-3. You can see resources for VM hosts supporting NUMA nodes.
-4. You can see the alignment between VM host interfaces and NUMA nodes.
-5. You can configure and use hugepages (configurable in CLI only).
+```
+sudo apt upgrade maas
+```
 
-This functionality comes with an enhanced panel in the "KVM" details section:
+[/tab]
+[/tabs]
+At this point, proceed with a normal installation.
 
-<a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
+<a href="#heading--lxd-clusters"><h3 id="heading--lxd-clusters">LXD clusters</h3></a>
 
-See the [VM hosting](/t/about-vm-hosting/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
+MAAS 3.1 takes advantage of the existing LXD clustering capability.
 
-<h2 id="heading--improved-perf-large-maas">Improved performance for large MAAS installations</h2>
+<a href="#heading--about-lxd-clusters"><h4 id="heading--about-lxd-clusters">About LXD clusters</h4></a>
 
-MAAS 2.9 includes changes to the machine batch size that the UI loads. Previously the UI loaded machines in batches of 25; it now pulls in 25 for the first call, then 100 at a time in subsequent batches.
+LXD clusters in MAAS allow you to view and manage existing VM host clusters and compose VMs within clusters.  MAAS will not create a cluster, but it will discover existing clusters.
 
-You can see the results of the investigation in [this video podcast](https://discourse.maas.io/t/maas-show-and-tell-improving-ui-performance-for-large-maas-installs/3515).
+<a href="#heading--how-to-add-lxd-clusters"><h4 id="heading--how-to-add-lxd-clusters">How to add LXD clusters</h4></a>
 
-<h2 id="heading--new-release-notifications">New release notifications</h2>
+MAAS assumes you have already configured an LXD cluster. You then need to configure the cluster with a single trust which MAAS uses to communicate it. Adding a LXD cluster is like adding a single LXD host: you provide authentication in a similar way, and then select a project. MAAS then connects to the provided host to discover other hosts within the cluster, renaming the cluster host with a name you supply.
 
-MAAS now includes new release notifications for users and administrators.  These appear when a new release is available:
+<a href="https://discourse.maas.io/uploads/default/original/2X/3/3aba7d6e30eda61623f66cb162ca85814128864a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3aba7d6e30eda61623f66cb162ca85814128864a.png"></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/c4f426b9f493a970efcc59c4d948d24fa5f12860.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c4f426b9f493a970efcc59c4d948d24fa5f12860.png"></a>
+First, add an LXD KVM:
 
-Both regular and administrative users can snooze these notifications for two weeks at a time.  Administrative users can opt out of new release notifications completely, preventing notifications for any user of that MAAS.
+<a href="https://discourse.maas.io/uploads/default/original/2X/c/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png"></a>
 
-<h2 id="heading--ipmi-config-screens">IPMI configuration screens</h2>
+Next, set up credentials and let LXD trust your MAAS certificate:
 
-MAAS now includes UI panels corresponding to the [IPMI power driver upgrades](#heading--ipmi-driver) mentioned earlier:
+<a href="https://discourse.maas.io/uploads/default/original/2X/b/b3ea7559edc066e899e41f41846a268b2459b1a5.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b3ea7559edc066e899e41f41846a268b2459b1a5.png"></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/433b28f5dd807caef7c7382f9a877607c2ea2dac.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/433b28f5dd807caef7c7382f9a877607c2ea2dac.png"></a>
+Once connected, you can select the project in that cluster:
 
-This screen can be reached from `Settings | Configuration | Commissioning`.
+<a href="https://discourse.maas.io/uploads/default/original/2X/b/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png"></a>
 
-<h2 id="heading--descrip-mark-mach-broken">Descriptions when marking machines broken</h2>
+If the KVM host address is part of a cluster, it will show as a cluster on the listing page. 
 
-When marking a machine broken, a description can now be included:
+<a href="https://discourse.maas.io/uploads/default/original/2X/0/069bae193cbb09ead3c811fd1a1d28582b946ff4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/069bae193cbb09ead3c811fd1a1d28582b946ff4.png"></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png?" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png?"></a>
+<a href="#heading--how-to-compose-vms-in-lxd-clusters"><h4 id="heading--how-to-compose-vms-in-lxd-clusters">How to compose VMs in LXD clusters</h4></a>
 
-This description appears in that machine's row on the machine list.
+Composing a VM in a LXD cluster via MAAS is similar to composing a VM for a single VM host. MAAS does not provide any sort of scheduling of said VM, and will instead target the host you select for composing the VM.
 
-<h2 id="heading--curtin-20-2-included">Curtin 20.2 now included</h2>
+From the KVM host listing page, click on the `+` icon to add a VM to a specific host:
 
-A number of MAAS issues have actually been issues with an older version of Curtin.  MAAS now includes Curtin 20.2, which fixes many of these issues, including [MAAS is changing my boot order!](https://discourse.maas.io/t/maas-is-changing-my-boot-order/3491).
+<a href="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a>
 
-<h2 id="heading--http-boot-disabled">HTTP boot disabled</h2>
+If you are in a specific KVM host page, you can click `+ add virtual machine`:
 
-MAAS 2.9 disables HTTP boot. There are known issues with HTTP boot in MAAS, as well as known issues for HTTP boot with grub (e.g. https://bugs.launchpad.net/maas/+bug/1899581)  This shouldn’t affect machine boot, as machines will normally try PXE as a fallback boot method if HTTP boot fails.  Be aware, though, that machine boot will fail if the BIOS is configured to boot only over HTTP; those machines need to be reconfigured to use PXE.
+<a href="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a>
 
-<h2 id="heading--bmc-param-additions">30-maas-01-bmc-config parameter additions</h2>
+<a href="#heading--how-to-delete-lxd-clusters"><h3 id="heading--how-to-delete-lxd-clusters">How to delete LXD clusters</h3></a>
 
-Four new parameters have been added for IPMI BMC configuration.  These parameters will pull from the global defaults, eliminating the need to set the corresponding parameter in each instance.
+To delete an LXD cluster, simply delete any VM host within the cluster:
 
-1. maas_auto_ipmi_user - The username for the MAAS created IPMI user. Default comes from the global configuration setting.
-2. maas_auto_ipmi_user_password - The password for the MAAS created IPMI user, by default a random password is generated.
-3. maas_auto_ipmi_k_g_bmc_key - he IPMI K_g pre-shared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting. If an IPMI K_g key is set but the key is rejected by the BMC MAAS will automatically retry without the K_g key. This works around an edge case where some BMCs will allow you to set an K_g key but don’t allow it to be used.
-4. maas_auto_ipmi_user_privilege_level - The IPMI user privilege level to use when adding the MAAS IPMI user. Possible options are USER, OPERATOR, or ADMIN. Default comes from the global configuration setting.
+<a href="https://discourse.maas.io/uploads/default/original/2X/e/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png"></a>
 
-Note that MAAS will not capture the BMC MAC address when detecting IPMI BMCs.
+<a href="#heading--enlist-deployed-machines"><h3 id="heading--enlist-deployed-machines">Ability to enlist deployed machines</h3></a>
 
-<h2 id="heading--new-config-options">New global IPMI configuration options</h2>
+#### Ten words or fewer
+Users can enlist deployed machines, a top feature poll request.
 
-Two new global IPMI configuration options have been added:
+#### About this feature
+When adding machines to MAAS, MAAS (non-destructively) boots them into an ephemeral environment to gather hardware information.  Previously, this didn't work for deployed machines, since you don't want to disrupt deployed workloads or mark deployed machines as ready.
 
-1. maas_auto_ipmi_k_g_bmc_key - sets a global default IPMI BMC key.
-2. maas_auto_ipmi_user_privilege_level - sets a global default IPMI BMC user privilege level.
-    
-<h2 id="heading--global-config-settings">Addition of IPMI config options to UI</h2>
+Now you may add deployed machines, without normal commissioning process or relabeling the machine. In order to update the information, a script is provided to run minimal commissioning scripts and update to MAAS.
 
-You may now set the global configuration options `maas_auto_ipmi_user`, `maas_auto_ipmi_k_g_bmc_key`, and `maas_auto_ipmi_user_privilege_level` on the "Settings" page in the UI under "Commissioning."
+#### How to enlist a machine that’s already running a workload
+In order to enlist a deployed machine, you have two options:
 
-<h2 id="heading--maas-power">New maas.power CLI command</h2>
+Via the API/CLI, you can create a machine, passing the deployed flag:
 
-Available in all MAAS 2.9 releases is the new `maas.power` CLI command. This command interfaces directly with the supported MAAS power drivers. This command can be used to control the power on a machine before it has been added to MAAS, for all maas supported power drivers.  You can get power status, turn machines on or off, and cycle power.  The `maas.power --help` shows usage details, including syntax for naming each power type (consistent with other MAAS CLI commands).
+```
+$ maas $profile machines create deployed=true hostname=mymachine \   
+architecture=amd64 mac_addresses=00:16:3e:df:35:bb power_type=manual
+```
 
-<h2 id="heading--rad">IPMI BMC detection improvements (RAD)</h2>
+On the machine itself (the recommended way, if the machine is running Ubuntu), you can download and run a helper script from MAAS:
 
-This release adds two improvements to IPMI BMC detection capability:
+```
+$ wget http://$MAAS_IP:5240/MAAS/maas-run-scripts
+$ chmod 755 maas-run-scripts
+$ ./maas-run-scripts register-machine --hostname mymachine \
+ > http://$MAAS_IP:5240/MAAS $MAAS_API_TOKEN
+```
 
-1. The IPMI cipher suite ID will now be automatically detected. MAAS tries to find the most secure cipher suite available. Preference order is 17, 3, 8, 12. If detection fails MAAS will fall back to using freeipmi-tool default, 3, which is what previous versions of MAAS use.
-2. The IPMI K_g BMC key will now be automatically detected if previously set. 
+Now you have enlisted a deployed machine, with no hardware information yet.
 
-<h3 id="heading--rad">Reader Adaptive Documentation (RAD)</h3>
+#### How to update hardware information for a deployed machine
 
-This release features Reader Adaptive Documentation, which allows you to adapt individual pages to your install method (Snap vs. Deb), version (2.7/2.8/2.9), and preferred interface (CLI/UI). 
+To update hardware information for a deployed machine, we recommend that you download and run the maas-run-scripts script on the machine:
 
-<h2 id="heading--offline-docs">Offline documentation</h2>
+```
+$ wget http://$MAAS_IP:5240/MAAS/maas-run-scripts
+$ chmod 755 maas-run-scripts
+$ ./maas-run-scripts report-results --config mymachine-creds.yaml
+```
 
-This release will include offline documentation for those users whose MAAS installations reside behind firewalls, unable to access the online documentation.
+If you created the machine with the maas-run-scripts, you should have such a mymachine-creds.yaml file already. If not, it should look like this:
 
-<h2 id="heading--bmc-improve">BMC improvements</h2>
+```
+reporting:
+          maas:
+            consumer_key: $CONSUMER_KEY
+            endpoint: http://$MAAS_IP:5240/MAAS/metadata/status/$SYSTEM_ID
+            token_key: $TOKEN_KEY
+            token_secret: $TOKEN_SECRET
+```
 
-Three substantial improvements to BMC usage have been released:
+You may get the needed credentials from the MAAS API, for example:
 
-1. IPMI, HP Moonshot, and Facebook Wedge BMC detection and configuration scripts have been migrated to the commissioning script `30-maas-01-bmc-config `.
-2. BMC detection and configuration are now logged to commissioning results.
-3. If BMC configuration is skipped a ScriptResult will log this result, and indicate which user chose to skip the configuration step.
+```
+$ maas $profile machine get-token wxwwga
+Success.
+Machine-readable output follows:
+{
+        "token_key": "Lyy9BS4tKsQakDQScy",
+        "token_secret": "V8vta8Azwn6FZVkfHnuTvLGLScAvEufB",
+        "consumer_key": "YGT6QKSH65aap4tGnw"
+}
+```
 
-<h3 id="heading--ipmi-driver">IPMI power driver upgrades</h3>
+<a href="#heading--static-ubuntu-images"><h3 id="heading--static-ubuntu-images">Static Ubuntu image upload and reuse</h3></a>
 
-Three new configuration options have been added to the IPMI power driver:
+#### Ten words or fewer
 
-1. K_g - The BMC Key of the IPMI device. Used to encrypt all traffic to and from the device during communication.
-2. Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
-3. Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
+Users can upload, deploy and reuse a bootable ubuntu image
 
-See the [2.9 UI](https://maas.io/docs/snap/2.9/ui/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docs/snap/2.9/cli/power-management#heading--ipmi) power management pages for details.
+#### About this feature
 
-<h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
+MAAS supports deploying custom OS images.  Canonical provides both [lp:maas-image-builder](https://launchpad.net/maas-image-builder) and [gh:canonical/packer-maas](https://github.com/canonical/packer-maas) to create custom images. With 3.1, these custom images can include static Ubuntu images, created with whatever tool you choose, deployed as described below. Canonical still suggests customising Ubuntu using cloud-init user_data or Curtin preseed data, if possible.
 
-Script flow and capabilities have been improved in three ways:
+#### About static Ubuntu images
 
-<ol>
-<li>`maas-run-remote-scripts` can now enlist machines.</li>
-<li>Enlistment `user_data` scripts have been removed.</li>
-<li> The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.</li>
-</ol>
+MAAS allows you to build an Ubuntu image to deploy with MAAS, using any chosen image-building tool.  You can create the image with a fixed configuration and deploy it to many machines.  This fixed configuration can contain anything a normal image would contain: users, packages, etc.
 
-<h2 id="heading--commissioning-scripts">Major improvements to commissioning script capabilities</h2>
+#### About uploading hand-built Ubuntu images
 
-Seven major improvements were made to commissioning script flow and capabilities:
+You can upload and deploy hand-built Ubuntu images, containing kernel, bootloader, and fixed configuration.  The image can be built by tool, e.g., [packer](https://github.com/canonical/packer-maas), or by scripts. You can upload these images to the boot-resources endpoint, where they will be available for deployment.
 
-<ol>
-<li>Commissioning scripts can now send BMC configuration data</li>
-<li>Commissioning scripts can now be used to configure BMC data. </li>
-<li>The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts. </li>
-<li>These scripts may write BMC power credentials to BMC_CONFIG_PATH in a YAML format where each key is the power parameter. </li>
-<li>If the commissioning script returns 0, it will be sent to MAAS. </li>
-<li>The first script to write BMC_CONFIG_PATH is the only script that may configure the BMC, allowing you to override MAAS's builtin BMC detection.</li>
-<li>All builtin commissioning scripts have been migrated into the database.</li>
-</ol>
+The minimum image must contain a kernel, bootloader, and `/curtin/curtin-hooks` script that configures the network. Samples can be found in the [packer-maas repos](https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts). The image must be in raw img file format so MAAS will accept the upload.  When built, you will upload this img file to the boot-resources endpoint, specifying the image architecture.
 
-<h2 id="heading--commissioning-reorder">Commissioning script reordering</h2>
+#### About how MAAS handles these images
 
-Commissioning scripts have been reordered and some are now set to run in parallel. You can now easily set a script to run before the builtin MAAS commissioning scripts. There are nine significant changes:
+MAAS will save the image as a `tar.gz` file in the database.  MAAS can differentiate between image types and generate appropriate pre-seed configurations.  MAAS also recognises the base Ubuntu version, so it can apply the correct ephemeral OS for installation.  Custom images are always deployed with the ephemeral OS, where the `base_image` field indicates the appropriate ephemeral version to avoid errors, ensuring smooth deployment later.
 
-<ol>
-<li>00-maas-03-install-lldpd -> 20-maas-01-install-lldpd</li>
+#### About how MAAS boots these images
 
-<li>00-maas-05-dhcp-unconfigured-ifaces -> 20-maas-02-dhcp-unconfigured-ifaces</li>
+When you deploy a machine with your custom image, MAAS ensures that the machine receives the kernel, bootloader and root file system provided in the image. The initial boot loader then boots an ephemeral OS matching the Ubuntu version of the custom image, reducing compatibility issues.  Curtin then writes your entire custom image to disk, after which it is not modified by MAAS.
 
-<li>99-maas-05-kernel-cmdline -> maas -kernel-cmdline</li>
+Note that custom non-Ubuntu images still use a standard Ubuntu ephemeral OS to boot.
 
-<li>00-maas-00-support-info -> maas-support-info(now runs in parallel)</li>
+#### About configuring deployed machine networking
 
-<li>00-maas-01-lshw -> maas-lshw(now runs in parallel)</li>
+If you deploy a machine with a custom Ubuntu image, MAAS allows you to configure the deployed machine's networks just like any other MAAS machine.  If you create an interface and assign it to a subnet or static address, this will be reflected in the deployed machine.
 
-<li>00-maas-04-list-modaliases -> maas-list-modaliases(now runs in parallel)</li>
+For this reason, MAAS also does some initial diagnostics while installing the custom image.  MAAS will warn you about a missing network configuration, by checking for `cloud-init` and `netplan` in the `curtin` images. MAAS won't deploy machine with such images.
 
-<li>00-maas-06-get-fruid-api-data -> maas-get-fruid-api-data(now runs in parallel)</li>
+#### About configuring deployed machine storage
 
-<li>00-maas-08-serial-ports -> maas-serial-ports(now runs in parallel)</li>
+If you deploy a machine with a custom Ubuntu image, you will also want to be able to configure storage, just like any other machine.  MAAS facilitates changes to the storage configuration, such as resizing `/root`, attaching and formatting block devices, etc.
 
-<li>99-maas-01-capture-lldp -> maas-capture-lldp(now runs in parallel)</li>
-</ol>
+#### About static image metrics
 
-See the [commissioning logs page](https://maas.io/docs/snap/2.9/ui/commissioning-logs) for more details on these changes.
+As a user, you want to track of deployed static images. The standard MAAS dashboard now reflects these metrics.
 
-<h2 id="heading--commissioning-speed">Improvements in commissioning speed and logging</h2>
+#### How to upload a custom Ubuntu image
 
-Four improvements have been made to speed up the commissioning process, mostly by running scripts in parallel (see above):
+Custom Ubuntu images can be uploaded with the MAAS CLI by creating a boot-resource:
 
-<ol>
-<li>Commissioning should now take 60s.</li>
-<li>Logging has been added to 20-maas-01-install-lldpd  (commissioning log output).</li>
-<li>Logging added to 20-maas-02-dhcp-unconfigured-ifaces (commissioning log output).</li>
-<li>`user_data` can now be input directly into the UI.</li>
-</ol>
+```nohighlight                                                                                                        	 
+	maas $PROFILE boot-resources create \
+        name='custom/ubuntu-custom'  \
+        architecture=amd64/generic \
+        title=’custom ubuntu’ \
+        base_image=ubuntu/focal \
+        filetype=ddraw \
+        content@=./custom-ubuntu.img
+ ```	 
 
-<a href="#heading--bug-fixes"><h2 id="heading--bug-fixes">Bug fixes</h2></a>
+[note]
+When uploading a custom image, there is a new required field: `base_image`. This is not required for non-custom images; any image with the `custom` prefix will require it.
+[/note]
 
-<a href="#heading--bug-fixes-2-9-2"><h3 id="heading--bug-fixes-2-9-2">Bugs fixed in 2.9.2 release</h3></a>
+<a href="#heading--machine-cloning-ui"><h3 id="heading--machine-cloning-ui">Machine configuration cloning UI</h3></a>
 
-1. In the MAAS UI, ARM servers based on the [Hi1620 ARM SoC appear as an "Unknown model"](https://bugs.launchpad.net/maas/+bug/1897946).  A fix was added to [lxd-4.11]( https://discuss.linuxcontainers.org/t/lxd-4-11-has-been-released/10135), released 2021-02-05.
+#### Ten words or fewer
 
-2. Debian package installs of MAAS [reached an "impossible situation"](https://bugs.launchpad.net/maas/+bug/1910910) trying to install the MAAS region controller. This is caused because of an unsupported move from the transitional MAAS PPA to the latest PPA.  The workaround is to purge the MAAS packages (and the snap, if installed), and install clean with the latest PPA enabled, which will install the correct versions.
+Extend machine cloning to UI, moving toward machine profile templates.
 
-3. CentOS/RHEL 7+ ship with an unsigned version of GRUB [which breaks UEFI secure boot](https://bugs.launchpad.net/curtin/+bug/1895067).  This bug is believed to be fixed in curtin version 21.1, which is now supported by MAAS 2.9.2.
+#### About this feature 
 
-4. Debug [could not be properly enabled for MAAS snap version 2.9.1](https://bugs.launchpad.net/maas/+bug/1914588).  This has been remedied.
+MAAS 3.1 allows you to quickly clone or copy a configurationbetween machines, via the MAAS UI -- a step towards machine templating. 
 
-5. The MAAS [Backup doc article](https://maas.io/docs/snap/2.9/ui/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
+Creating a machine profile is repetitive. We've learned that most users create multiple machines of the same configuration in batches. Some users loop a template through the API, while others rely on scripts. MAAS API cloning functionality is now being exposed in the UI.
 
-6. Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue.
+#### About copying machine configurations
 
-7. MAAS does not allow [FQDNs to be used in place of IPs](https://bugs.launchpad.net/maas/+bug/1911825) when a BMC extracts the address from the `power_address`.  This incorrect behaviour was changed in 2.9.2.
+As a MAAS user, you may want to copy a machine configuration to multiple existing machines. Assuming that at least one machine is already configur3d, you should be able to apply these settings to a list of machines.  This means that a user should be able to:
 
-8. The Proxmox driver [uses a hard-coded port that cannot be customised](https://bugs.launchpad.net/maas/+bug/1914165).  This port is now customisable in 2.9.2.
+ - select the source machine to copy from.
+ - validate that the source machine exists.
+ - select at least 1 destination machine.
+ - validate that the destination machine(s) exist.
+ - edit the source machine or destination machines, if needed.
+ - know at all times which machines are affected.
+ - see the cloned machines when cloning is successful, or
+ - get clear failure information, if cloning fails. 
 
-<a href="#heading--bug-fixes-2-9-1"><h3 id="heading--bug-fixes-2-9-1">Bugs fixed in 2.9.1 release</h3></a>
+#### About choosing configuration items to copy
 
-1. It is now possible to [delete an LXD VM in an offline state](https://bugs.launchpad.net/maas/+bug/1908434).
-2. MAAS now handles multiple NUMA nodes even when there are [gaps in the numbering](https://bugs.launchpad.net/maas/+bug/1910473).
-3. A [snap install issue](https://bugs.launchpad.net/maas/+bug/1910909) was fixed.
-4. The way MAAS handles [gateways WRT DHCP](https://bugs.launchpad.net/maas/+bug/1910909) was adjusted.
-5. A majority of the document [headings have been converted to links](https://bugs.launchpad.net/maas/+bug/1900010) for easy bookmarking.
+As a MAAS user, you likely want to select whether storage, network, or both configurations should be cloned. The cloning API allows users to choose interfaces and storage separately.  Thus, this new feature also allows you to:
 
-<a href="#heading--bug-fixes-2-9"><h3 id="heading--bug-fixes-2-9">Bugs fixed in 2.9 release</h3></a>
+ - clone only the interface (network) configuration.
+ - clone only the storage configuration.
+ - clone both colnfigurations.
 
-1. MAAS 2.9 includes a fix for [Bug #1894727: Admin uses cannot change other user's passwords via the UI](https://bugs.launchpad.net/maas/+bug/1894727).
-rad-end
+#### About cloning restrictions
 
-rad-begin /snap/3.0/cli /snap/3.0/ui /deb/3.0/cli /deb/3.0/ui
-<h3>MAAS 3.0 release notes</h3>
+In order for cloning to succeed, a few restrictions must be met:
+
+1. The destination interface names must be the same source.
+2. The destination drive must be equal to or larger than the source drive.
+3. For static IPs, a new IP will be allocated to the interface on the destination machine
+
+#### How to clone a machine from the UI
+
+Assume you have two machines available, like this:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png">
+
+Select the machine *to which you want to clone configuration*, and select "Clone from..."
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png">
+
+Under "1. Select the source machine" -- choose a machine from the attached list:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png">
+
+Under "2. Select what to clone", choose "Network", "Storage", or both (here, we've chosen "Storage"):
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png">
+
+Click "Clone to machine". MAAS will report the status of the attempt.
+
+<a href="#heading--lxd-auth-ux-improvements"><h3 id="heading--lxd-auth-ux-improvements">LXD authentication UX improvements</h3></a>
+
+#### Ten words or fewer
+
+Easier MAAS to LXD connection that uses certificates for authentication.
+
+#### About this feature
+
+MAAS 3.1 provides a smoother experience when connecting an existing LXD server to MAAS, guiding the user through manual steps and providing increased connection security with use of certificates. Currently, each MAAS region/rack controller has its own certificate. To add a LXD VM host to MAAS, the user needs to either add the certificate for each controller that can reach the LXD server to the trust list in LXD, or use the trust_password (in which case the controller talking to LXD will automatically add its certificate to the trust).
+
+This doesn’t provide a great user experience, as the former process is cumbersome, and the latter is not suggested for production use for security reasons.  To improve this, MAAS 3.1 manages per-LXD keys/certificates, and provide a way for users to get the content of certificates, to authorize MAAS in LXD.
+
+#### About on-the-spot certificate creation
+
+As a MAAS user, you want to register a LXD host into MAAS using certificates for authentication -- to follow LXD production deployment best practices.  The standard way for clients to authenticate with LXD servers is through certificates. The use of trust_password is *only* meant as a way to interact for initial setup.
+
+While prior versions of MAAS support both ways of authentication (and automatically adds the certificate for the rack talking to LXD when registering the VM host), the user experience is lacking, since there's no control over the certificate being used.  In addition, each rack uses a different certificate, making it hard to manage scenarios where multiple racks can connect to a LXD server.
+
+For these reasons, when adding a LXD host, MAAS 3.1 provides a way to generate a secret key and certificate pair to use specifically for that server, and show the certificate to the user, so that they can add it to the LXD server trust list.  The user experience changes to something like the following:
+
+ - MAAS generates a secret key and certificate pair for use with a LXD server.
+ - The user can see the certificate and is guided to add it to the LXD server trust list.
+ - The user can easily complete the registration of the LXD server once the certificate is trusted in LXD.
+ - All racks use the same key when talking to the LXD server. 
+ - If a new rack controller is added, it can communicate with the LXD server out of the box.
+ - If the trust password is used, it’s not stored in MAAS persistently.
+ - It’s possible to get the certificate for a LXD server from a URL (e.g. for curl use).
+
+#### About bringing your own certificates
+
+As a MAAS user, you may want to register a LXD host into MAAS by providing a private key for a certificate that’s already trusted by the LXD server.  For example, you may already have set up certificates in the server trust for MAAS to use, MAAS should provide a way to import it, instead of generating a new one.
+
+With MAAS 3.1, it’s possible to import an existing key/certificate pair for use with a LXD server when registering it with MAAS.  MAAS stores the key/certificate instead of generating new ones.
+
+[note]
+The imported key must not have a passphrase; otherwise, MAAS will not be able to use it.
+[/note]
+
+#### How to get started
+
+Suppose that you're creating a new LXD KVM, beginning from the top tab in MAAS:
+
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png"></a>
+
+Select "Add KVM", which brings you to the definition screen:
+
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png"></a>
+
+From here, you'll continue by choosing your authentication method.
+
+#### How to let MAAS create a certificate for you
+
+If you choose "Generate new certificate", as shown above, you'll come to a screen like this one:
+
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png"></a>
+
+You can still choose to use the LXD trust password (entered when you ran `lxd init` during LXD installation).  You can also, though, choose to use the certificate MAAS has just generated for you.  To do that, select the entire contents of the text box, copy it, and paste it into a terminal window -- then hit "Enter":
+
+```
+$ lxc config trust add - <<EOF
+> -----BEGIN CERTIFICATE-----
+> MIIErTCCApUCEQCGa86XdjYUGm8h8YOh4HAEMA0GCSqGSIb3DQEBDQUAMAAwHhcN
+> MjEwOTI0MjE1NDQ4WhcNMzEwOTIyMjE1NDQ4WjApMScwJQYDVQQDDB5teTBuZXh0
+> LTMuMS4wLWJldGExLWt2bUB3YWxkZW4wggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAw
+> ggIKAoICAQC1tmJbSYx3Jb5JcuqLvyO6P0RtYWCbjVYOSAIM1PKHZJRvako6QhjR
+> 6wWNcVLAjDJIMuEBysrI8mcAv9D/AfT2qLQ/5mg7anbxfrd3YXG2nc70QJazpFaw
+> INDc85wrdJD5NEd50iaka+PztIAWzoZWQr/pLb7hUDnArzSHp5J+w0dRCUh54SyW
+> Du4mLpDks5UqMeONO1o7lbaQuBdzGtR4btdmvOkJfg/Pu3i/rzFZ1vvn1JhZTX96
+> +xH7tJQiqOk0SXG7F2RmbYiYDhAkiysbMoyOHBCf/qFWq4Vtd/VMxOAT1WERrgWn
+> 8nL5kRBozV94QocJaOe+GUSWLHsRpsVa8jiAj3LS2CFQfpaEsrzLSlQOeN2rNB9z
+> DO9yGXGql4tUpgtyEvxB/zVrIGd04iTC3D4S9b1KyzTbSsyjTc/XJhUStnn49ySW
+> Iwv1eHa2jMvIjRVm5sRfpf0EOZW27HLI1AqDOXR0DmlM2mWvndjvfacX+41I8vuG
+> +RPq0ZjDhwfRmUaLiebzcExwPmSHAxqiaV+t0n6ivDWTNk6cNc38rZBh3x6I7JMR
+> /85Rc1blLSF7QBMA1HxheCUYzBPTKsdE2btygq9vShRXCdSekV0jGoL1g0n6T59r
+> +9nHShgc/Bzk42kcddQySlrqWWHrXX6Z2N1R3eYpuvSEaKsnsjqjwwIDAQABMA0G
+> CSqGSIb3DQEBDQUAA4ICAQA4d1Xqi941ssyJoiovTzBgMDSp9kqjpB83BRqbF9oZ
+> fQGkezn2jF7SnaXbTyR/K+nir5Rms8OZfUxyZJwYh/YCdnIF8hzC32mLJbP6jcJV
+> LS0OD+EipwyRLSe9g2it68TtAhhVXKPx3tGQWWiXtJOF631sJRcRUZATc9nco5H2
+> 91GKog4LdFeKD3ArOq1GkE9r95WauTV37x0c474XBt2mVcEvFW50oZbIBPaWLt8E
+> q8NG0KYkfIHkhXDGqPDkUtdPJlkiGwqXdaqghuG31a4Or9IKcNmDlli47apaWWJW
+> /gqZfFALbOrSJHg10PCqNsfoKmQr2YZzPlTjG39RA7sA1XR6y+lQZqwcXnXk2iAE
+> n62OkRUrYVXzBo99zk5jQJVEg6zhfPH9zl6Jmn/vBu0p6RqmqNLTTlMOio8VOp9e
+> 9Gyb9uRwzwZ9zgydgI4bHMvcIAq+46wTruOfXBNATWLC2YqXbc+9QqemJebcXULW
+> Wf7Sc+SHHx2cVb4OUvUD8keZN37No/2vfZ9NI2SJOI4SxlV2yf6ZRyb7MYIwpm1h
+> YTzyS+ywUN4C8p1PsU5iT8DGdcg7Kcso4/DDZeZkLKNeCKizkdMreF7qV0qHTW8z
+> PyfZHcR/xWMkjxYZoFu4rVyxpsUJYItJNUNk6vZvSnSDfC2e2JJFfMws+fntNy14
+> /w==
+> -----END CERTIFICATE-----
+> EOF
+$ 
+```
+
+The certificate will be created for you.  When you click the "Check authentication" button, you will be brought to this screen:
+
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png"></a>
+
+from which you can continue with normal LXD KVM setup.
+
+#### How to use your own, existing certificate
+
+Suppose that, after identifying your LXD KVM, you choose "Provide certificate and private key".  When you do so, the screen will extend to allow you to upload these items:
+
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png"></a>
+
+Paste or upload your certificate and private key, then click "Next" to validate your authentication criteria, before continuing through the normal LXD KVM creation process.  If your certificate and/or key aren't usable for some reason, MAAS will return an error (in this case, the private key was entered as gibberish, to produce an error output):
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png"></a>
+
+<a href="#heading--image-sync-performance"><h3 id="heading--image-sync-performance">Improved image sync performance</h3></a>
+
+#### Ten words or fewer
+
+After downloading images, the rack controller syncs them much faster.
+
+#### About this feature
+
+Downloading and syncing images is a known delay element in MAAS.  While images aren't small, and do take some time to download, we decided to try to speed up the process as much as possible.  After the region has downloaded new images, the rack controllers are now much quicker at syncing the new images.
+
+#### How to take advantage of this new feature
+
+There is nothing required of our users to experience this improved sync performance, other than upgrading to 3.1.
+
+<a href="#heading--maas-3-1-cumulative-bug-fixes"><h3 id="heading--maas-3-1-cumulative-bug-fixes">MAAS 3.1 cumulative bug fixes</h3></a>
+
+MAAS 3.1 bug fixes can be found in the following milestones:
+
+ - [MAAS 3.1 Beta5 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta5)
+ - [MAAS 3.1 Beta4 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta4)
+ - [MAAS 3.1 Beta3 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta3)
+ - [MAAS 3.1 Beta2 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta2)
+ - [MAAS 3.1 Beta1 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta1)
+ 
+[/tab]
+[tab version="snap-3.0,deb-3.0" view="UI,CLI"] 
+<h2>MAAS 3.0 release notes</h2>
 
 We are happy to announce the release of MAAS 3.0. This release provides new features, along with critical and high-priority [bug fixes](#heading--maas-3-bug-fixes).
 
@@ -285,9 +457,16 @@ We are happy to announce the release of MAAS 3.0. This release provides new feat
 9. [Improvements to MAAS CLI help UX](#heading--maas-cli-ux-improved-help)
 10. [Disabling boot methods](#heading--disabling-boot-methods)
 11. [Consolidation of logs and events](#heading--log-consolidation)
-rad-end
 
-rad-begin /deb/3.0/ui /deb/3.0/cli
+[tabs]
+[tab version="snap-3.0" view="UI,CLI"]
+MAAS 3.0 can be installed fresh (recommended) with:
+
+```
+sudo snap install --channel=3.0/stable maas
+```
+[/tab]
+[tab version="deb-3.0" view="UI,CLI"]
 MAAS 3.0 can be installed by adding the `3.0` PPA:
 
 ```
@@ -307,22 +486,11 @@ Or, if you prefer to upgrade, you can do so with:
 ```
 sudo apt upgrade maas
 ```
+[/tab]
+[/tabs]
 
 At this point, you may proceed with a normal installation.
 
-rad-end
-
-rad-begin /snap/3.0/cli /snap/3.0/ui
-MAAS 3.0 can be installed fresh (recommended) with:
-
-```
-sudo snap install --channel=3.0/stable maas
-```
-
-At this point, you may proceed with a normal installation.
-rad-end
-
-rad-begin /snap/3.0/cli /snap/3.0/ui /deb/3.0/cli /deb/3.0/ui
 <h2>Significant changes</h2>
 
 With the advent of MAAS 3.0, we are removing support for RSD pods.  Registered pods and their machines will be removed by MAAS upon upgrading to MAAS 3.0.
@@ -683,9 +851,542 @@ Here are the bugs that have been `Fix Released` in MAAS 3.0 Beta 1:
 |[#1916073](https://bugs.launchpad.net/bugs/1916073)|MAAS should install qemu-efi-aarch64 on arm64 KVM pods |Undecided| 
 |[#1916317](https://bugs.launchpad.net/bugs/1916317)|UI is using API to request scripts with full content |Undecided| 
 |[#1919381](https://bugs.launchpad.net/bugs/1919381)|typo "veryiying" in info message in smartctl-validate |Undecided|
-rad-end
+[/tab]
+[tab version="snap-2.9,deb-2.9" view="CLI,UI"] 
+<h2>MAAS 2.9.2 release notes</h2>
 
-rad-begin /snap/2.9/cli /snap/2.9/ui /deb/2.9/ui /deb/2.9/cli
+We have released MAAS 2.9.2, which contains two new features, and some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.2). The two new features are:
+
+1. Proxmox driver: A driver has been added to MAAS 2.9.2 which intereacts with the Proxmox API.  Only one URL is needed, though a username and credentials are required.  Credentials can be either a password or an API token.  Note that if you use a token, you have to configure the permissions for the token.  Newly-created Proxmox tokens don't assign any permissions by default, so you must add `power on`, `power off`, and `query power` permissions to the token before using it.
+
+2. Power driver Webhook:  A webhook was added to 2.9.2, which allows MAAS to interface with another web service that's running the power commands.  This webhook is provided for interacting with objects that MAAS does not support, that is, the MAAS team supports the driver itself, but whatever is interfacing to the driver is not supported.  This webhook as three URLs, one each for power on, power off, and power query.  Optionally, this webhook also supports a power user and password or token (RFC 6717).  This gives you a way to add your own power drivers without waiting for the driver to be added to MAAS.  There is a [video tutorial](https://discourse.maas.io/t/maas-show-and-tell-proxmox-and-webhook/3754/3) available on this new feature.
+
+You can also find a [digest](#heading--bug-fixes-2-9-2) of the 2.9.2 bug fixes below.
+
+<h2>MAAS 2.9.1 release notes</h2>
+
+Building upon MAAS 2.9, we have released 2.9.1, which contains some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.1).  You can find a [digest](#heading--bug-fixes-2-9-1) of these fixes below.
+
+<h2>MAAS 2.9 release notes</h2>
+
+Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now available.
+
+#### What are the new features & fixes for MAAS 2.9 and MAAS 2.9.1?
+
+1. [Focal Fossa (20.04) as default commissioning/deployment release](#heading--focal-default)
+2. [Support for OpenVswitch bridge type](#heading--openvswitch)
+3. [Support for NUMA, SR-IOV, and hugepages](#heading--numa)
+4. [Improved performance for large MAAS installations](#heading--improved-perf-large-maas)
+5. [New release notifications](#heading--new-release-notifications)
+6. [IPMI configuration screens](#heading--ipmi-config-screens)
+7. [Descriptions when marking machines broken](#heading--descrip-mark-mach-broken)
+8. [Curtin 20.2 now included](#heading--curtin-20-2-included)
+9. [HTTP boot disabled](#heading--http-boot-disabled)
+10. [BMC/IPMI default parameter additions](#heading--bmc-param-additions)
+11. [New global IPMI configuration options](#heading--new-config-options)
+12. [Addition of IPMI config options to UI](#heading--global-config-settings)
+13. [New MAAS CLI power command](#heading--maas-power)
+14. [Commissioning speed improvements](#heading--commissioning-speed)
+15. [BMC improvements](#heading--bmc-improve)
+16. [IPMI power driver upgrades](#heading--ipmi-driver)
+17. [Enlistment script improvements](#heading--enlistment-scripts)
+18. [Commissioning script improvements](#heading--commissioning-scripts)
+19. [Commissioning script reordering](#heading--commissioning-reorder)
+20. [Reader Adaptive Documentation](#heading--rad)
+21. [Offline documentation](#heading--offline-docs)
+
+<h4>Six other questions you may have:</h4>
+
+1. [What known issues should I be aware of?](#heading--known-issues)
+2. [How do I install MAAS 2.9?](/t/how-to-install-maas/3323)
+3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?](/t/how-to-install-maas/3323#heading--upgrade-maas-snap)
+4. [How do I install MAAS 2.9 from packages?](/t/how-to-install-maas/3329#heading--install-from-packages)
+5. [How do I upgrade MAAS 2.8 to MAAS 2.9 using packages?](/t/how-to-install-maas/3329#heading--upgrade-via-packages)
+6. [What bugs are fixed so far in this release?](#heading--bug-fixes)
+
+<h2 id="heading--focal-default">Focal Fossa (Ubuntu 20.04 LTS) as default release</h2>
+
+Ubuntu 20.04 LTS (Focal Fossa) is now the default commissioning and deployment release for new MAAS installations.  Machines deployed with Focal may now be registered as KVM hosts.
+
+<h2 id="heading--openvswitch">Support for OpenVswitch bridge type</h2>
+
+MAAS 2.9 allows you to create an OpenVswitch bridge type when creating a bridge.
+
+<h2 id="heading--numa">Support for NUMA, SR-IOV, and hugepages</h2>
+
+MAAS 2.9 adds extensive optimisation tools for using NUMA with virtual machines. You can now see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory. You can quickly spot a VM running in multiple NUMA nodes, and optimise accordingly, with instant updates on pinning and allocations. You can also tell which VMs are currently running.  Using the CLI, you can also pin nodes to specific cores, and configure hugepages for use by VMs.
+
+Specifically, there are five new features available to support NUMA, SR-IOV, and hugepages:
+
+1. You can examine resources on a per-NUMA-node basis.
+2. You can pin nodes to specific cores (CLI only).
+3. You can see resources for VM hosts supporting NUMA nodes.
+4. You can see the alignment between VM host interfaces and NUMA nodes.
+5. You can configure and use hugepages (configurable in CLI only).
+
+This functionality comes with an enhanced panel in the "KVM" details section:
+
+<a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
+
+See the [VM hosting](/t/about-vm-hosting/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
+
+<h2 id="heading--improved-perf-large-maas">Improved performance for large MAAS installations</h2>
+
+MAAS 2.9 includes changes to the machine batch size that the UI loads. Previously the UI loaded machines in batches of 25; it now pulls in 25 for the first call, then 100 at a time in subsequent batches.
+
+You can see the results of the investigation in [this video podcast](https://discourse.maas.io/t/maas-show-and-tell-improving-ui-performance-for-large-maas-installs/3515).
+
+<h2 id="heading--new-release-notifications">New release notifications</h2>
+
+MAAS now includes new release notifications for users and administrators.  These appear when a new release is available:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/c4f426b9f493a970efcc59c4d948d24fa5f12860.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c4f426b9f493a970efcc59c4d948d24fa5f12860.png"></a>
+
+Both regular and administrative users can snooze these notifications for two weeks at a time.  Administrative users can opt out of new release notifications completely, preventing notifications for any user of that MAAS.
+
+<h2 id="heading--ipmi-config-screens">IPMI configuration screens</h2>
+
+MAAS now includes UI panels corresponding to the [IPMI power driver upgrades](#heading--ipmi-driver) mentioned earlier:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/433b28f5dd807caef7c7382f9a877607c2ea2dac.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/433b28f5dd807caef7c7382f9a877607c2ea2dac.png"></a>
+
+This screen can be reached from `Settings | Configuration | Commissioning`.
+
+<h2 id="heading--descrip-mark-mach-broken">Descriptions when marking machines broken</h2>
+
+When marking a machine broken, a description can now be included:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png?" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png?"></a>
+
+This description appears in that machine's row on the machine list.
+
+<h2 id="heading--curtin-20-2-included">Curtin 20.2 now included</h2>
+
+A number of MAAS issues have actually been issues with an older version of Curtin.  MAAS now includes Curtin 20.2, which fixes many of these issues, including [MAAS is changing my boot order!](https://discourse.maas.io/t/maas-is-changing-my-boot-order/3491).
+
+<h2 id="heading--http-boot-disabled">HTTP boot disabled</h2>
+
+MAAS 2.9 disables HTTP boot. There are known issues with HTTP boot in MAAS, as well as known issues for HTTP boot with grub (e.g. https://bugs.launchpad.net/maas/+bug/1899581)  This shouldn’t affect machine boot, as machines will normally try PXE as a fallback boot method if HTTP boot fails.  Be aware, though, that machine boot will fail if the BIOS is configured to boot only over HTTP; those machines need to be reconfigured to use PXE.
+
+<h2 id="heading--bmc-param-additions">30-maas-01-bmc-config parameter additions</h2>
+
+Four new parameters have been added for IPMI BMC configuration.  These parameters will pull from the global defaults, eliminating the need to set the corresponding parameter in each instance.
+
+1. maas_auto_ipmi_user - The username for the MAAS created IPMI user. Default comes from the global configuration setting.
+2. maas_auto_ipmi_user_password - The password for the MAAS created IPMI user, by default a random password is generated.
+3. maas_auto_ipmi_k_g_bmc_key - he IPMI K_g pre-shared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting. If an IPMI K_g key is set but the key is rejected by the BMC MAAS will automatically retry without the K_g key. This works around an edge case where some BMCs will allow you to set an K_g key but don’t allow it to be used.
+4. maas_auto_ipmi_user_privilege_level - The IPMI user privilege level to use when adding the MAAS IPMI user. Possible options are USER, OPERATOR, or ADMIN. Default comes from the global configuration setting.
+
+Note that MAAS will not capture the BMC MAC address when detecting IPMI BMCs.
+
+<h2 id="heading--new-config-options">New global IPMI configuration options</h2>
+
+Two new global IPMI configuration options have been added:
+
+1. maas_auto_ipmi_k_g_bmc_key - sets a global default IPMI BMC key.
+2. maas_auto_ipmi_user_privilege_level - sets a global default IPMI BMC user privilege level.
+    
+<h2 id="heading--global-config-settings">Addition of IPMI config options to UI</h2>
+
+You may now set the global configuration options `maas_auto_ipmi_user`, `maas_auto_ipmi_k_g_bmc_key`, and `maas_auto_ipmi_user_privilege_level` on the "Settings" page in the UI under "Commissioning."
+
+<h2 id="heading--maas-power">New maas.power CLI command</h2>
+
+Available in all MAAS 2.9 releases is the new `maas.power` CLI command. This command interfaces directly with the supported MAAS power drivers. This command can be used to control the power on a machine before it has been added to MAAS, for all maas supported power drivers.  You can get power status, turn machines on or off, and cycle power.  The `maas.power --help` shows usage details, including syntax for naming each power type (consistent with other MAAS CLI commands).
+
+<h2 id="heading--rad">IPMI BMC detection improvements (RAD)</h2>
+
+This release adds two improvements to IPMI BMC detection capability:
+
+1. The IPMI cipher suite ID will now be automatically detected. MAAS tries to find the most secure cipher suite available. Preference order is 17, 3, 8, 12. If detection fails MAAS will fall back to using freeipmi-tool default, 3, which is what previous versions of MAAS use.
+2. The IPMI K_g BMC key will now be automatically detected if previously set. 
+
+<h3 id="heading--rad">Reader Adaptive Documentation (RAD)</h3>
+
+This release features Reader Adaptive Documentation, which allows you to adapt individual pages to your install method (Snap vs. Deb), version (2.7/2.8/2.9), and preferred interface (CLI/UI). 
+
+<h2 id="heading--offline-docs">Offline documentation</h2>
+
+This release will include offline documentation for those users whose MAAS installations reside behind firewalls, unable to access the online documentation.
+
+<h2 id="heading--bmc-improve">BMC improvements</h2>
+
+Three substantial improvements to BMC usage have been released:
+
+1. IPMI, HP Moonshot, and Facebook Wedge BMC detection and configuration scripts have been migrated to the commissioning script `30-maas-01-bmc-config `.
+2. BMC detection and configuration are now logged to commissioning results.
+3. If BMC configuration is skipped a ScriptResult will log this result, and indicate which user chose to skip the configuration step.
+
+<h3 id="heading--ipmi-driver">IPMI power driver upgrades</h3>
+
+Three new configuration options have been added to the IPMI power driver:
+
+1. K_g - The BMC Key of the IPMI device. Used to encrypt all traffic to and from the device during communication.
+2. Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
+3. Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
+
+See the [2.9 UI](https://maas.io/docs/snap/2.9/ui/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docs/snap/2.9/cli/power-management#heading--ipmi) power management pages for details.
+
+<h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
+
+Script flow and capabilities have been improved in three ways:
+
+<ol>
+<li>`maas-run-remote-scripts` can now enlist machines.</li>
+<li>Enlistment `user_data` scripts have been removed.</li>
+<li> The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.</li>
+</ol>
+
+<h2 id="heading--commissioning-scripts">Major improvements to commissioning script capabilities</h2>
+
+Seven major improvements were made to commissioning script flow and capabilities:
+
+<ol>
+<li>Commissioning scripts can now send BMC configuration data</li>
+<li>Commissioning scripts can now be used to configure BMC data. </li>
+<li>The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts. </li>
+<li>These scripts may write BMC power credentials to BMC_CONFIG_PATH in a YAML format where each key is the power parameter. </li>
+<li>If the commissioning script returns 0, it will be sent to MAAS. </li>
+<li>The first script to write BMC_CONFIG_PATH is the only script that may configure the BMC, allowing you to override MAAS's builtin BMC detection.</li>
+<li>All builtin commissioning scripts have been migrated into the database.</li>
+</ol>
+
+<h2 id="heading--commissioning-reorder">Commissioning script reordering</h2>
+
+Commissioning scripts have been reordered and some are now set to run in parallel. You can now easily set a script to run before the builtin MAAS commissioning scripts. There are nine significant changes:
+
+<ol>
+<li>00-maas-03-install-lldpd -> 20-maas-01-install-lldpd</li>
+
+<li>00-maas-05-dhcp-unconfigured-ifaces -> 20-maas-02-dhcp-unconfigured-ifaces</li>
+
+<li>99-maas-05-kernel-cmdline -> maas -kernel-cmdline</li>
+
+<li>00-maas-00-support-info -> maas-support-info(now runs in parallel)</li>
+
+<li>00-maas-01-lshw -> maas-lshw(now runs in parallel)</li>
+
+<li>00-maas-04-list-modaliases -> maas-list-modaliases(now runs in parallel)</li>
+
+<li>00-maas-06-get-fruid-api-data -> maas-get-fruid-api-data(now runs in parallel)</li>
+
+<li>00-maas-08-serial-ports -> maas-serial-ports(now runs in parallel)</li>
+
+<li>99-maas-01-capture-lldp -> maas-capture-lldp(now runs in parallel)</li>
+</ol>
+
+See the [commissioning logs page](https://maas.io/docs/snap/2.9/ui/commissioning-logs) for more details on these changes.
+
+<h2 id="heading--commissioning-speed">Improvements in commissioning speed and logging</h2>
+
+Four improvements have been made to speed up the commissioning process, mostly by running scripts in parallel (see above):
+
+<ol>
+<li>Commissioning should now take 60s.</li>
+<li>Logging has been added to 20-maas-01-install-lldpd  (commissioning log output).</li>
+<li>Logging added to 20-maas-02-dhcp-unconfigured-ifaces (commissioning log output).</li>
+<li>`user_data` can now be input directly into the UI.</li>
+</ol>
+
+<a href="#heading--bug-fixes"><h2 id="heading--bug-fixes">Bug fixes</h2></a>
+
+<a href="#heading--bug-fixes-2-9-2"><h3 id="heading--bug-fixes-2-9-2">Bugs fixed in 2.9.2 release</h3></a>
+
+1. In the MAAS UI, ARM servers based on the [Hi1620 ARM SoC appear as an "Unknown model"](https://bugs.launchpad.net/maas/+bug/1897946).  A fix was added to [lxd-4.11]( https://discuss.linuxcontainers.org/t/lxd-4-11-has-been-released/10135), released 2021-02-05.
+
+2. Debian package installs of MAAS [reached an "impossible situation"](https://bugs.launchpad.net/maas/+bug/1910910) trying to install the MAAS region controller. This is caused because of an unsupported move from the transitional MAAS PPA to the latest PPA.  The workaround is to purge the MAAS packages (and the snap, if installed), and install clean with the latest PPA enabled, which will install the correct versions.
+
+3. CentOS/RHEL 7+ ship with an unsigned version of GRUB [which breaks UEFI secure boot](https://bugs.launchpad.net/curtin/+bug/1895067).  This bug is believed to be fixed in curtin version 21.1, which is now supported by MAAS 2.9.2.
+
+4. Debug [could not be properly enabled for MAAS snap version 2.9.1](https://bugs.launchpad.net/maas/+bug/1914588).  This has been remedied.
+
+5. The MAAS [Backup doc article](https://maas.io/docs/snap/2.9/ui/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
+
+6. Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue.
+
+7. MAAS does not allow [FQDNs to be used in place of IPs](https://bugs.launchpad.net/maas/+bug/1911825) when a BMC extracts the address from the `power_address`.  This incorrect behaviour was changed in 2.9.2.
+
+8. The Proxmox driver [uses a hard-coded port that cannot be customised](https://bugs.launchpad.net/maas/+bug/1914165).  This port is now customisable in 2.9.2.
+
+<a href="#heading--bug-fixes-2-9-1"><h3 id="heading--bug-fixes-2-9-1">Bugs fixed in 2.9.1 release</h3></a>
+
+1. It is now possible to [delete an LXD VM in an offline state](https://bugs.launchpad.net/maas/+bug/1908434).
+2. MAAS now handles multiple NUMA nodes even when there are [gaps in the numbering](https://bugs.launchpad.net/maas/+bug/1910473).
+3. A [snap install issue](https://bugs.launchpad.net/maas/+bug/1910909) was fixed.
+4. The way MAAS handles [gateways WRT DHCP](https://bugs.launchpad.net/maas/+bug/1910909) was adjusted.
+5. A majority of the document [headings have been converted to links](https://bugs.launchpad.net/maas/+bug/1900010) for easy bookmarking.
+
+<a href="#heading--bug-fixes-2-9"><h3 id="heading--bug-fixes-2-9">Bugs fixed in 2.9 release</h3></a>
+
+1. MAAS 2.9 includes a fix for [Bug #1894727: Admin uses cannot change other user's passwords via the UI](https://bugs.launchpad.net/maas/+bug/1894727).
+
+<h2>MAAS 2.9.2 release notes</h2>
+
+We have released MAAS 2.9.2, which contains two new features, and some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.2). The two new features are:
+
+1. Proxmox driver: A driver has been added to MAAS 2.9.2 which intereacts with the Proxmox API.  Only one URL is needed, though a username and credentials are required.  Credentials can be either a password or an API token.  Note that if you use a token, you have to configure the permissions for the token.  Newly-created Proxmox tokens don't assign any permissions by default, so you must add `power on`, `power off`, and `query power` permissions to the token before using it.
+
+2. Power driver Webhook:  A webhook was added to 2.9.2, which allows MAAS to interface with another web service that's running the power commands.  This webhook is provided for interacting with objects that MAAS does not support, that is, the MAAS team supports the driver itself, but whatever is interfacing to the driver is not supported.  This webhook as three URLs, one each for power on, power off, and power query.  Optionally, this webhook also supports a power user and password or token (RFC 6717).  This gives you a way to add your own power drivers without waiting for the driver to be added to MAAS.  There is a [video tutorial](https://discourse.maas.io/t/maas-show-and-tell-proxmox-and-webhook/3754/3) available on this new feature.
+
+You can also find a [digest](#heading--bug-fixes-2-9-2) of the 2.9.2 bug fixes below.
+
+<h2>MAAS 2.9.1 release notes</h2>
+
+Building upon MAAS 2.9, we have released 2.9.1, which contains some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.1).  You can find a [digest](#heading--bug-fixes-2-9-1) of these fixes below.
+
+<h2>MAAS 2.9 release notes</h2>
+
+Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now available.
+
+#### What are the new features & fixes for MAAS 2.9 and MAAS 2.9.1?
+
+1. [Focal Fossa (20.04) as default commissioning/deployment release](#heading--focal-default)
+2. [Support for OpenVswitch bridge type](#heading--openvswitch)
+3. [Support for NUMA, SR-IOV, and hugepages](#heading--numa)
+4. [Improved performance for large MAAS installations](#heading--improved-perf-large-maas)
+5. [New release notifications](#heading--new-release-notifications)
+6. [IPMI configuration screens](#heading--ipmi-config-screens)
+7. [Descriptions when marking machines broken](#heading--descrip-mark-mach-broken)
+8. [Curtin 20.2 now included](#heading--curtin-20-2-included)
+9. [HTTP boot disabled](#heading--http-boot-disabled)
+10. [BMC/IPMI default parameter additions](#heading--bmc-param-additions)
+11. [New global IPMI configuration options](#heading--new-config-options)
+12. [Addition of IPMI config options to UI](#heading--global-config-settings)
+13. [New MAAS CLI power command](#heading--maas-power)
+14. [Commissioning speed improvements](#heading--commissioning-speed)
+15. [BMC improvements](#heading--bmc-improve)
+16. [IPMI power driver upgrades](#heading--ipmi-driver)
+17. [Enlistment script improvements](#heading--enlistment-scripts)
+18. [Commissioning script improvements](#heading--commissioning-scripts)
+19. [Commissioning script reordering](#heading--commissioning-reorder)
+20. [Reader Adaptive Documentation](#heading--rad)
+21. [Offline documentation](#heading--offline-docs)
+
+<h4>Six other questions you may have:</h4>
+
+1. [What known issues should I be aware of?](#heading--known-issues)
+2. [How do I install MAAS 2.9?](/t/how-to-install-maas/3323)
+3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?](/t/how-to-install-maas/3323#heading--upgrade-maas-snap)
+4. [How do I install MAAS 2.9 from packages?](/t/how-to-install-maas/3329#heading--install-from-packages)
+5. [How do I upgrade MAAS 2.8 to MAAS 2.9 using packages?](/t/how-to-install-maas/3329#heading--upgrade-via-packages)
+6. [What bugs are fixed so far in this release?](#heading--bug-fixes)
+
+<h2 id="heading--focal-default">Focal Fossa (Ubuntu 20.04 LTS) as default release</h2>
+
+Ubuntu 20.04 LTS (Focal Fossa) is now the default commissioning and deployment release for new MAAS installations.  Machines deployed with Focal may now be registered as KVM hosts.
+
+<h2 id="heading--openvswitch">Support for OpenVswitch bridge type</h2>
+
+MAAS 2.9 allows you to create an OpenVswitch bridge type when creating a bridge.
+
+<h2 id="heading--numa">Support for NUMA, SR-IOV, and hugepages</h2>
+
+MAAS 2.9 adds extensive optimisation tools for using NUMA with virtual machines. You can now see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory. You can quickly spot a VM running in multiple NUMA nodes, and optimise accordingly, with instant updates on pinning and allocations. You can also tell which VMs are currently running.  Using the CLI, you can also pin nodes to specific cores, and configure hugepages for use by VMs.
+
+Specifically, there are five new features available to support NUMA, SR-IOV, and hugepages:
+
+1. You can examine resources on a per-NUMA-node basis.
+2. You can pin nodes to specific cores (CLI only).
+3. You can see resources for VM hosts supporting NUMA nodes.
+4. You can see the alignment between VM host interfaces and NUMA nodes.
+5. You can configure and use hugepages (configurable in CLI only).
+
+This functionality comes with an enhanced panel in the "KVM" details section:
+
+<a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
+
+See the [VM hosting](/t/about-vm-hosting/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
+
+<h2 id="heading--improved-perf-large-maas">Improved performance for large MAAS installations</h2>
+
+MAAS 2.9 includes changes to the machine batch size that the UI loads. Previously the UI loaded machines in batches of 25; it now pulls in 25 for the first call, then 100 at a time in subsequent batches.
+
+You can see the results of the investigation in [this video podcast](https://discourse.maas.io/t/maas-show-and-tell-improving-ui-performance-for-large-maas-installs/3515).
+
+<h2 id="heading--new-release-notifications">New release notifications</h2>
+
+MAAS now includes new release notifications for users and administrators.  These appear when a new release is available:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/c4f426b9f493a970efcc59c4d948d24fa5f12860.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c4f426b9f493a970efcc59c4d948d24fa5f12860.png"></a>
+
+Both regular and administrative users can snooze these notifications for two weeks at a time.  Administrative users can opt out of new release notifications completely, preventing notifications for any user of that MAAS.
+
+<h2 id="heading--ipmi-config-screens">IPMI configuration screens</h2>
+
+MAAS now includes UI panels corresponding to the [IPMI power driver upgrades](#heading--ipmi-driver) mentioned earlier:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/433b28f5dd807caef7c7382f9a877607c2ea2dac.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/433b28f5dd807caef7c7382f9a877607c2ea2dac.png"></a>
+
+This screen can be reached from `Settings | Configuration | Commissioning`.
+
+<h2 id="heading--descrip-mark-mach-broken">Descriptions when marking machines broken</h2>
+
+When marking a machine broken, a description can now be included:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png?" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/69df48044c964d27caf59b60dcf5bf5210894c15.png?"></a>
+
+This description appears in that machine's row on the machine list.
+
+<h2 id="heading--curtin-20-2-included">Curtin 20.2 now included</h2>
+
+A number of MAAS issues have actually been issues with an older version of Curtin.  MAAS now includes Curtin 20.2, which fixes many of these issues, including [MAAS is changing my boot order!](https://discourse.maas.io/t/maas-is-changing-my-boot-order/3491).
+
+<h2 id="heading--http-boot-disabled">HTTP boot disabled</h2>
+
+MAAS 2.9 disables HTTP boot. There are known issues with HTTP boot in MAAS, as well as known issues for HTTP boot with grub (e.g. https://bugs.launchpad.net/maas/+bug/1899581)  This shouldn’t affect machine boot, as machines will normally try PXE as a fallback boot method if HTTP boot fails.  Be aware, though, that machine boot will fail if the BIOS is configured to boot only over HTTP; those machines need to be reconfigured to use PXE.
+
+<h2 id="heading--bmc-param-additions">30-maas-01-bmc-config parameter additions</h2>
+
+Four new parameters have been added for IPMI BMC configuration.  These parameters will pull from the global defaults, eliminating the need to set the corresponding parameter in each instance.
+
+1. maas_auto_ipmi_user - The username for the MAAS created IPMI user. Default comes from the global configuration setting.
+2. maas_auto_ipmi_user_password - The password for the MAAS created IPMI user, by default a random password is generated.
+3. maas_auto_ipmi_k_g_bmc_key - he IPMI K_g pre-shared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting. If an IPMI K_g key is set but the key is rejected by the BMC MAAS will automatically retry without the K_g key. This works around an edge case where some BMCs will allow you to set an K_g key but don’t allow it to be used.
+4. maas_auto_ipmi_user_privilege_level - The IPMI user privilege level to use when adding the MAAS IPMI user. Possible options are USER, OPERATOR, or ADMIN. Default comes from the global configuration setting.
+
+Note that MAAS will not capture the BMC MAC address when detecting IPMI BMCs.
+
+<h2 id="heading--new-config-options">New global IPMI configuration options</h2>
+
+Two new global IPMI configuration options have been added:
+
+1. maas_auto_ipmi_k_g_bmc_key - sets a global default IPMI BMC key.
+2. maas_auto_ipmi_user_privilege_level - sets a global default IPMI BMC user privilege level.
+    
+<h2 id="heading--global-config-settings">Addition of IPMI config options to UI</h2>
+
+You may now set the global configuration options `maas_auto_ipmi_user`, `maas_auto_ipmi_k_g_bmc_key`, and `maas_auto_ipmi_user_privilege_level` on the "Settings" page in the UI under "Commissioning."
+
+<h2 id="heading--maas-power">New maas.power CLI command</h2>
+
+Available in all MAAS 2.9 releases is the new `maas.power` CLI command. This command interfaces directly with the supported MAAS power drivers. This command can be used to control the power on a machine before it has been added to MAAS, for all maas supported power drivers.  You can get power status, turn machines on or off, and cycle power.  The `maas.power --help` shows usage details, including syntax for naming each power type (consistent with other MAAS CLI commands).
+
+<h2 id="heading--rad">IPMI BMC detection improvements (RAD)</h2>
+
+This release adds two improvements to IPMI BMC detection capability:
+
+1. The IPMI cipher suite ID will now be automatically detected. MAAS tries to find the most secure cipher suite available. Preference order is 17, 3, 8, 12. If detection fails MAAS will fall back to using freeipmi-tool default, 3, which is what previous versions of MAAS use.
+2. The IPMI K_g BMC key will now be automatically detected if previously set. 
+
+<h3 id="heading--rad">Reader Adaptive Documentation (RAD)</h3>
+
+This release features Reader Adaptive Documentation, which allows you to adapt individual pages to your install method (Snap vs. Deb), version (2.7/2.8/2.9), and preferred interface (CLI/UI). 
+
+<h2 id="heading--offline-docs">Offline documentation</h2>
+
+This release will include offline documentation for those users whose MAAS installations reside behind firewalls, unable to access the online documentation.
+
+<h2 id="heading--bmc-improve">BMC improvements</h2>
+
+Three substantial improvements to BMC usage have been released:
+
+1. IPMI, HP Moonshot, and Facebook Wedge BMC detection and configuration scripts have been migrated to the commissioning script `30-maas-01-bmc-config `.
+2. BMC detection and configuration are now logged to commissioning results.
+3. If BMC configuration is skipped a ScriptResult will log this result, and indicate which user chose to skip the configuration step.
+
+<h3 id="heading--ipmi-driver">IPMI power driver upgrades</h3>
+
+Three new configuration options have been added to the IPMI power driver:
+
+1. K_g - The BMC Key of the IPMI device. Used to encrypt all traffic to and from the device during communication.
+2. Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
+3. Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
+
+See the [2.9 UI](https://maas.io/docs/snap/2.9/ui/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docs/snap/2.9/cli/power-management#heading--ipmi) power management pages for details.
+
+<h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
+
+Script flow and capabilities have been improved in three ways:
+
+<ol>
+<li>`maas-run-remote-scripts` can now enlist machines.</li>
+<li>Enlistment `user_data` scripts have been removed.</li>
+<li> The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.</li>
+</ol>
+
+<h2 id="heading--commissioning-scripts">Major improvements to commissioning script capabilities</h2>
+
+Seven major improvements were made to commissioning script flow and capabilities:
+
+<ol>
+<li>Commissioning scripts can now send BMC configuration data</li>
+<li>Commissioning scripts can now be used to configure BMC data. </li>
+<li>The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts. </li>
+<li>These scripts may write BMC power credentials to BMC_CONFIG_PATH in a YAML format where each key is the power parameter. </li>
+<li>If the commissioning script returns 0, it will be sent to MAAS. </li>
+<li>The first script to write BMC_CONFIG_PATH is the only script that may configure the BMC, allowing you to override MAAS's builtin BMC detection.</li>
+<li>All builtin commissioning scripts have been migrated into the database.</li>
+</ol>
+
+<h2 id="heading--commissioning-reorder">Commissioning script reordering</h2>
+
+Commissioning scripts have been reordered and some are now set to run in parallel. You can now easily set a script to run before the builtin MAAS commissioning scripts. There are nine significant changes:
+
+<ol>
+<li>00-maas-03-install-lldpd -> 20-maas-01-install-lldpd</li>
+
+<li>00-maas-05-dhcp-unconfigured-ifaces -> 20-maas-02-dhcp-unconfigured-ifaces</li>
+
+<li>99-maas-05-kernel-cmdline -> maas -kernel-cmdline</li>
+
+<li>00-maas-00-support-info -> maas-support-info(now runs in parallel)</li>
+
+<li>00-maas-01-lshw -> maas-lshw(now runs in parallel)</li>
+
+<li>00-maas-04-list-modaliases -> maas-list-modaliases(now runs in parallel)</li>
+
+<li>00-maas-06-get-fruid-api-data -> maas-get-fruid-api-data(now runs in parallel)</li>
+
+<li>00-maas-08-serial-ports -> maas-serial-ports(now runs in parallel)</li>
+
+<li>99-maas-01-capture-lldp -> maas-capture-lldp(now runs in parallel)</li>
+</ol>
+
+See the [commissioning logs page](https://maas.io/docs/snap/2.9/ui/commissioning-logs) for more details on these changes.
+
+<h2 id="heading--commissioning-speed">Improvements in commissioning speed and logging</h2>
+
+Four improvements have been made to speed up the commissioning process, mostly by running scripts in parallel (see above):
+
+<ol>
+<li>Commissioning should now take 60s.</li>
+<li>Logging has been added to 20-maas-01-install-lldpd  (commissioning log output).</li>
+<li>Logging added to 20-maas-02-dhcp-unconfigured-ifaces (commissioning log output).</li>
+<li>`user_data` can now be input directly into the UI.</li>
+</ol>
+
+<a href="#heading--bug-fixes"><h2 id="heading--bug-fixes">Bug fixes</h2></a>
+
+<a href="#heading--bug-fixes-2-9-2"><h3 id="heading--bug-fixes-2-9-2">Bugs fixed in 2.9.2 release</h3></a>
+
+1. In the MAAS UI, ARM servers based on the [Hi1620 ARM SoC appear as an "Unknown model"](https://bugs.launchpad.net/maas/+bug/1897946).  A fix was added to [lxd-4.11]( https://discuss.linuxcontainers.org/t/lxd-4-11-has-been-released/10135), released 2021-02-05.
+
+2. Debian package installs of MAAS [reached an "impossible situation"](https://bugs.launchpad.net/maas/+bug/1910910) trying to install the MAAS region controller. This is caused because of an unsupported move from the transitional MAAS PPA to the latest PPA.  The workaround is to purge the MAAS packages (and the snap, if installed), and install clean with the latest PPA enabled, which will install the correct versions.
+
+3. CentOS/RHEL 7+ ship with an unsigned version of GRUB [which breaks UEFI secure boot](https://bugs.launchpad.net/curtin/+bug/1895067).  This bug is believed to be fixed in curtin version 21.1, which is now supported by MAAS 2.9.2.
+
+4. Debug [could not be properly enabled for MAAS snap version 2.9.1](https://bugs.launchpad.net/maas/+bug/1914588).  This has been remedied.
+
+5. The MAAS [Backup doc article](https://maas.io/docs/snap/2.9/ui/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
+
+6. Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue.
+
+7. MAAS does not allow [FQDNs to be used in place of IPs](https://bugs.launchpad.net/maas/+bug/1911825) when a BMC extracts the address from the `power_address`.  This incorrect behaviour was changed in 2.9.2.
+
+8. The Proxmox driver [uses a hard-coded port that cannot be customised](https://bugs.launchpad.net/maas/+bug/1914165).  This port is now customisable in 2.9.2.
+
+<a href="#heading--bug-fixes-2-9-1"><h3 id="heading--bug-fixes-2-9-1">Bugs fixed in 2.9.1 release</h3></a>
+
+1. It is now possible to [delete an LXD VM in an offline state](https://bugs.launchpad.net/maas/+bug/1908434).
+2. MAAS now handles multiple NUMA nodes even when there are [gaps in the numbering](https://bugs.launchpad.net/maas/+bug/1910473).
+3. A [snap install issue](https://bugs.launchpad.net/maas/+bug/1910909) was fixed.
+4. The way MAAS handles [gateways WRT DHCP](https://bugs.launchpad.net/maas/+bug/1910909) was adjusted.
+5. A majority of the document [headings have been converted to links](https://bugs.launchpad.net/maas/+bug/1900010) for easy bookmarking.
+
+<a href="#heading--bug-fixes-2-9"><h3 id="heading--bug-fixes-2-9">Bugs fixed in 2.9 release</h3></a>
+
+1. MAAS 2.9 includes a fix for [Bug #1894727: Admin uses cannot change other user's passwords via the UI](https://bugs.launchpad.net/maas/+bug/1894727).
+
 <h2 id="heading--known-issues">Known issues</h2>
 
 ### RAD LHS menu
@@ -709,453 +1410,5 @@ Running migrations:
 ```
 
 This warning message has no effect on the installation or operation of MAAS, so it can be safely ignored.
-rad-end
-
-rad-begin /snap/3.1/cli /snap/3.1/ui /deb/3.1/cli /deb/3.1/ui
-<h2>MAAS 3.1 release notes</h2>
-
-We are happy to announce that MAAS 3.1 is now available. This release provides several new features, as well as a number of critical bug fixes.
-
-<a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.1 features and fixes</h3></a>
-
- - [Support for LXD clusters](#heading--lxd-clusters): MAAS 3.1 allows you to use LXD clusters with MAAS KVMs.
- 
- - [Improved image sync performance](#heading--image-sync-performance): After the region has downloaded new images, the rack controllers are now much quicker at syncing the new images.
- 
- - [Ability to enlist deployed machines](#heading--enlist-deployed-machines): Users can enlist deployed machines, a top feature poll request.
-
- - [Static Ubuntu image upload and reuse](#heading--static-ubuntu-images): Users can upload, deploy and reuse a bootable ubuntu image
-
- - [Machine configuration cloning UI](#heading--machine-cloning-ui): Extend machine cloning to UI, moving toward machine profile templates.
-
- - [LXD authentication UX improvements](#heading--lxd-auth-ux-improvements): Easier MAAS to LXD connection that uses certificates for authentication.
-
- - [MAAS 3.1 cumulative bug fixes](#heading--maas-3-1-cumulative-bug-fixes)
-
-Critical and high-priority bug fixes have also been used to extend or repair MAAS features:
-
- - [Expanded proxies](https://bugs.launchpad.net/maas/+bug/1867394): Some proxies require authentication; MAAS now respects the username and password you give it for a peer proxy
-
- - [Accurate storage pool sizes](https://bugs.launchpad.net/bugs/1949410): The UI now calculates storage pool sizes correctly for CEPH pools, so shared pools are no longer stacked
-
- - [Refresh wipeout bug](https://bugs.launchpad.net/bugs/1949485): MAAS does not destroy existing VMs on a refresh, or when the memory overcommit ratio is changed
- 
- - [Cloning issue fixed](https://bugs.launchpad.net/bugs/1948500): UI cloning has been repaired to prevent "unsuccessful cloning" of storage
- 
-rad-end
-
-rad-begin /deb/3.1/ui /deb/3.1/cli
-<a href="#heading--installing-3-1-0"><h3 id="heading--installing-3-1-0">How to install MAAS 3.1</h3></a>
-
-MAAS 3.1 can be installed by adding the `3.1` PPA:
-
-```
-sudo add-apt-repository ppa:maas/3.1
-sudo apt update
-sudo apt install maas
-```
-
-You can then either install MAAS 3.1 fresh (recommended) with:
-
-```
-sudo apt-get -y install maas
-```
-
-Or, if you prefer to upgrade, you can do so with:
-
-```
-sudo apt upgrade maas
-```
-
-At this point, you may proceed with a normal installation.
-
-rad-end
-
-rad-begin /snap/3.1/cli /snap/3.1/ui
-MAAS 3.1 can be installed fresh (recommended) with:
-
-```
-sudo snap install maas --channel=3.1/stable maas
-```
-
-At this point, you may proceed with a normal installation.
-rad-end
-
-rad-begin /snap/3.1/cli /snap/3.1/ui /deb/3.1/ui /deb/3.1/cli
-<a href="#heading--lxd-clusters"><h3 id="heading--lxd-clusters">LXD clusters</h3></a>
-
-MAAS 3.1 allows MAAS to take advantage of the existing LXD clustering capability.
-
-<a href="#heading--about-lxd-clusters"><h4 id="heading--about-lxd-clusters">About LXD clusters</h4></a>
-
-LXD clusters within the context of MAAS are a way of viewing and managing existing VM host clusters and composing VMs within said cluster.  MAAS will not create a new cluster, but will discover an existing cluster when you provide the info for adding a single clustered host.
-
-<a href="#heading--how-to-add-lxd-clusters"><h4 id="heading--how-to-add-lxd-clusters">How to add LXD clusters</h4></a>
-
-MAAS assumes you have already configured a cluster within the context of LXD. You then need to configure said cluster with a single trust MAAS will use to communicate with said cluster. Adding a LXD cluster is similar to adding a single LXD host, in that you provide authentication the same way for a single host within the cluster, and then select a project. The only difference is the name you provide will be used for the cluster instead of the individual host. MAAS will then connect to the provided host and discover the other hosts within the cluster, and rename the initially defined host with the cluster member name configured in LXD.
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/3aba7d6e30eda61623f66cb162ca85814128864a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3aba7d6e30eda61623f66cb162ca85814128864a.png"></a>
-
-First, add an LXD KVM:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png"></a>
-
-Next, set up credentials and get your MAAS certificate trusted by LXD:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/b/b3ea7559edc066e899e41f41846a268b2459b1a5.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b3ea7559edc066e899e41f41846a268b2459b1a5.png"></a>
-
-Once it is connected, you can select the project in that cluster:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/b/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png"></a>
-
-If the KVM host address is part of a cluster, it will show as a Cluster on the listing page. 
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/069bae193cbb09ead3c811fd1a1d28582b946ff4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/069bae193cbb09ead3c811fd1a1d28582b946ff4.png"></a>
-
-<a href="#heading--how-to-compose-vms-in-lxd-clusters"><h4 id="heading--how-to-compose-vms-in-lxd-clusters">How to compose VMs in LXD clusters</h4></a>
-
-Composing a VM in a LXD cluster via MAAS is similar to composing a VM for a single VM host. MAAS does not provide any sort of scheduling of said VM, and will instead target the host you select for composing the VM.
-
-From the KVM host listing page, click on the `+` icon to add a VM to a specific host:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a>
-
-If you are in a specific KVM host page, you can click `+ add virtual machine`:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a>
-
-<a href="#heading--how-to-delete-lxd-clusters"><h3 id="heading--how-to-delete-lxd-clusters">How to delete LXD clusters</h3></a>
-
-To delete a LXD cluster, delete any one VM host within the cluster, this will delete the cluster and all members within the cluster:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png"></a>
-
-<a href="#heading--enlist-deployed-machines"><h3 id="heading--enlist-deployed-machines">Ability to enlist deployed machines</h3></a>
-
-#### Ten words or fewer
-Users can enlist deployed machines, a top feature poll request.
-
-#### About this feature
-In general, when adding a machine to MAAS, it network boots the machine into an ephemeral environment to collect hardware information about the machine. While this is not a destructive action, it doesn’t work if you have machines that are already running a workload.
-
-For one, you might not be able to disrupt the workload in order to network boot it. But also, the machine would be marked as Ready, which is incorrect.
-
-When adding a machine, you may specify that the machine is already deployed. In that case, it won’t be going through the normal commissioning process and will be marked as being deployed.
-
-Such machines lack hardware information. In order to update the information, a script is provided to run a subset of the commissioning scripts and send them back to MAAS.
-
-#### How to enlist a machine that’s already running a workload
-In order to add machine that’s already running a workload, there are currently two options:
-
-Via the API/CLI, you can create a machine, passing the deployed flag:
-
-```
-$ maas $profile machines create deployed=true hostname=mymachine \   
-architecture=amd64 mac_addresses=00:16:3e:df:35:bb power_type=manual
-```
-
-On the machine itself (the recommended way, if the machine is running Ubuntu), you can download a helper script from MAAS and create the machine that way:
-
-```
-$ wget http://$MAAS_IP:5240/MAAS/maas-run-scripts
-$ chmod 755 maas-run-scripts
-$ ./maas-run-scripts register-machine --hostname mymachine \
- > http://$MAAS_IP:5240/MAAS $MAAS_API_TOKEN
-```
-
-Now you have a machine in MAAS that’s in the deployed state, with no hardware information yet.
-
-#### How to update hardware information for a deployed machine
-
-The recommended way of updating the hardware information for a deployed machine is to download the maas-run-scripts script and run it on the machine itself:
-
-```
-$ wget http://$MAAS_IP:5240/MAAS/maas-run-scripts
-$ chmod 755 maas-run-scripts
-$ ./maas-run-scripts report-results --config mymachine-creds.yaml
-```
-
-If you created the machine with the maas-run-scripts, you should have such a mymachine-creds.yaml file already. If not, it should look like this:
-
-```
-reporting:
-          maas:
-            consumer_key: $CONSUMER_KEY
-            endpoint: http://$MAAS_IP:5240/MAAS/metadata/status/$SYSTEM_ID
-            token_key: $TOKEN_KEY
-            token_secret: $TOKEN_SECRET
-```
-
-You may get the needed credentials from the MAAS API, for example:
-
-```
-$ maas $profile machine get-token wxwwga
-Success.
-Machine-readable output follows:
-{
-        "token_key": "Lyy9BS4tKsQakDQScy",
-        "token_secret": "V8vta8Azwn6FZVkfHnuTvLGLScAvEufB",
-        "consumer_key": "YGT6QKSH65aap4tGnw"
-}
-```
-
-<a href="#heading--static-ubuntu-images"><h3 id="heading--static-ubuntu-images">Static Ubuntu image upload and reuse</h3></a>
-
-#### Ten words or fewer
-
-Users can upload, deploy and reuse a bootable ubuntu image
-
-#### About this feature
-
-MAAS aleady supports deploying custom OS images.  Canonical provides both [lp:maas-image-builder](https://launchpad.net/maas-image-builder) and [gh:canonical/packer-maas](https://github.com/canonical/packer-maas) to support creating custom images. With 3.1, these custom images can include static Ubuntu images, created with whatever tool you choose, and deployed as described below. Even so, Canonical suggests customising Ubuntu using cloud-init user_data or Curtin preseed data whenever possible.
-
-#### About static Ubuntu images
-
-MAAS provides the capability for you to build an Ubuntu OS image to deploy with MAAS, using any image-building method you choose.  You can create the image once, with a fixed configuration,and deploy it to many machines.  This fixed configuration can consist of anything that a normal image would contain: users, packages, etc.
-
-#### About uploading hand-built Ubuntu images
-
-You can upload hand-built Ubuntu images, containing a kernel, bootloader, and a fixed configuration, for deployment to multiple machines.  The image can be built via a tool, such as [packer](https://github.com/canonical/packer-maas), or build with scripts. You can upload these images to the boot-resources endpoint, where it will then be available for deployment to machines.
-
-At a minimum, this image must contain a kernel, a bootloader, and a `/curtin/curtin-hooks` script that configures the network. A sample can be found in the [packer-maas repos](https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts). The image must be in raw img file format, since that is the format MAAS accepts for upload.  This is the most portable format, and the format most builders support. Upon completing the image build, you will upload this img file to the boot-resources endpoint, specifying the architecture for the image.
-
-#### About how MAAS handles these images
-
-MAAS will save the image -- in the same way it would save a `tar.gz` file -- in the database.  MAAS can differentiate between custom Ubuntu images and custom non-Ubuntu images, generating appropriate pre-seed configurations for each image type.
-
-MAAS will also recognise the base Ubuntu version, so it can apply the correct ephemeral OS version for installation.  Custom images are always deployed with the ephemeral operating system. The base_image field is used to select the appropriate version of the ephemeral OS to avoid errors. This ensures a smooth deployment later.
-
-#### About how MAAS boots these images
-
-When you decide to deploy a machine with your uploaded, custom image, MAAS ensures that the machine receives the kernel, bootloader and root file system provided in the image. The initial boot loader takes over, and boots an ephemeral OS of the same Ubuntu version as the custom image, to reduce the chances of incompatibilities.  Curtin then writes your entire custom image to disk.  Once the custom image is written to disk, it is not modified by MAAS.
-
-Note that custom non-Ubuntu images still use a standard Ubuntu ephemeral OS to boot, prior to installing the non-Ubuntu OS.
-
-#### About configuring deployed machine networking
-
-If you deploy a machine with a custom Ubuntu image, MAAS allows you to configure the deployed machine's networks just like you would for any other MAAS machine.  If you create an interface and assign it to a subnet or static address, this will be reflected in the deployed machine.
-
-For this reason, MAAS also does some initial diagnostics while installing the custom image.  MAAS will detect when a network configuration is not present and abort the installation with a warning.  Essentially, MAAS checks to be sure that `cloud-init` and `netplan` are present in the images written by `curtin`.  If not, MAAS won't deploy the machine with the image.
-
-#### About configuring deployed machine storage
-
-If you deploy a machine with a custom Ubuntu image, you will also want to be able to configure storage, just like you would do with any other machine.  MAAS facilitates changes to the storage configuration.  You can resize the root partition, as well as attaching and formatting any additional block devices you may desire.
-
-#### About static image metrics
-
-As a user, you want to keep track of how many static images are being used, and how many deployed machines are using static images.  The standard MAAS dashboard reflects both of these metrics.
-
-#### How to upload a custom Ubuntu image
-
-Currently, custom Ubuntu images can be uploaded using the MAAS CLI,by creating a boot-resource, with a command similar to this one:
-
-```nohighlight                                                                                                        	 
-	maas $PROFILE boot-resources create \
-        name='custom/ubuntu-custom'  \
-        architecture=amd64/generic \
-        title=’custom ubuntu’ \
-        base_image=ubuntu/focal \
-        filetype=ddraw \
-        content@=./custom-ubuntu.img
- ```	 
-
-[note]
-When uploading a custom image, there is a new required field: `base_image`. This is not required for non-custom images to be uploaded, but any image with the `custom` prefix will require it.
-[/note]
-
-<a href="#heading--machine-cloning-ui"><h3 id="heading--machine-cloning-ui">Machine configuration cloning UI</h3></a>
-
-#### Ten words or fewer
-
-Extend machine cloning to UI, moving toward machine profile templates.
-
-#### About this feature 
-
-MAAS 3.1 provides the ability to quickly clone or copy configuration from one machine to one or more machines, via the MAAS UI, providing convenient access to an existing API feature.. This is a step towards machine profile templating work. 
-
-Creating a machine profile is a repetitive task. Based on the responses to our survey -- and multiple forum posts, we have learned that most users create multiple machines of the same configuration in batches. Some users create a machine profile template and loop them through the API, while some create a script to interface with the CLI. However, there is no easy way to do this in the UI except by going through each machine and configuring them individually.   
-
-MAAS API already has the cloning functionality, but it was never exposed in the UI. Hence, users may not know that this API feature exists, nor is there any current documentation about how to use this feature.  Although the current cloning API feature does not solve all machine profile templating problems, it is a great place for us to start moving in the direction of machine templates.
-
-#### About copying machine configurations
-
-As a MAAS user -- API or UI -- you may want to copy the configuration of a given machine and apply it to multiple existing machines. Assuming that at least one machine is already set to the desired configuration, you should be able to apply these same settings to a list of destination machines.  This means that a user should be able to:
-
- - select the source machine to copy from.
- - validate that the source machine exists.
- - select at least 1 destination machine.
- - validate that the destination machine(s) exist.
- - edit the source machine or destination machines, if needed.
- - know at all times which machines are affected.
- - see the cloned machines when cloning is successful, or
- - get clear failure information, if cloning fails. 
-
-#### About choosing configuration items to copy
-
-As a MAAS user, you will likey want to select whether storage, network, or both configurations should be cloned. The cloning API allows users to choose interfaces and storage separately.  Thus, this new feature shoudl allow the user to:
-
- - clone only the interface (network) configuration.
- - clone only the storage configuration.
- - clone both colnfigurations.
-
-#### About cloning restrictions
-
-In order for cloning to succeed, a few restrictions must be met:
-
-1. The destination interface names must be the same source.
-2. The destination drive must be equal to or larger than the source drive.
-3. For static IPs, a new IP will be allocated to the interface on the destination machine
-
-#### How to clone a machine from the UI
-
-Assume you have two machines available, like this:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png">
-
-Select the machine *to which you want to clone configuration*, and select "Clone from..."
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png">
-
-Under "1. Select the source machine" -- choose a machine from the attached list:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png">
-
-Under "2. Select what to clone", choose "Network", "Storage", or both (here, we've chosen "Storage"):
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png">
-
-Click "Clone to machine". MAAS will report the status of the attempt.
-
-<a href="#heading--lxd-auth-ux-improvements"><h3 id="heading--lxd-auth-ux-improvements">LXD authentication UX improvements</h3></a>
-
-#### Ten words or fewer
-
-Easier MAAS to LXD connection that uses certificates for authentication.
-
-#### About this feature
-
-MAAS 3.1 provides a smoother experience when connecting an existing LXD server to MAAS, guiding the user through manual steps and providing increased connection security with use of certificates. Currently, each MAAS region/rack controller has its own certificate. To add a LXD VM host to MAAS, the user needs to either add the certificate for each controller that can reach the LXD server to the trust list in LXD, or use the trust_password (in which case the controller talking to LXD will automatically add its certificate to the trust).
-
-This doesn’t provide a great user experience, as the former process is cumbersome, and the latter is not suggested for production use for security reasons.  To improve this, MAAS 3.1 manages per-LXD keys/certificates, and provide a way for users to get the content of certificates, to authorize MAAS in LXD.
-
-#### About on-the-spot certificate creation
-
-As a MAAS user, you want to register a LXD host into MAAS using certificates for authentication -- to follow LXD production deployment best practices.  The standard way for clients to authenticate with LXD servers is through certificates. The use of trust_password is *only* meant as a way to interact for initial setup.
-
-While prior versions of MAAS support both ways of authentication (and automatically adds the certificate for the rack talking to LXD when registering the VM host), the user experience is lacking, since there's no control over the certificate being used.  In addition, each rack uses a different certificate, making it hard to manage scenarios where multiple racks can connect to a LXD server.
-
-For these reasons, when adding a LXD host, MAAS 3.1 provides a way to generate a secret key and certificate pair to use specifically for that server, and show the certificate to the user, so that they can add it to the LXD server trust list.  The user experience changes to something like the following:
-
- - MAAS generates a secret key and certificate pair for use with a LXD server.
- - The user can see the certificate and is guided to add it to the LXD server trust list.
- - The user can easily complete the registration of the LXD server once the certificate is trusted in LXD.
- - All racks use the same key when talking to the LXD server. 
- - If a new rack controller is added, it can communicate with the LXD server out of the box.
- - If the trust password is used, it’s not stored in MAAS persistently.
- - It’s possible to get the certificate for a LXD server from a URL (e.g. for curl use).
-
-#### About bringing your own certificates
-
-As a MAAS user, you may want to register a LXD host into MAAS by providing a private key for a certificate that’s already trusted by the LXD server.  For example, you may already have set up certificates in the server trust for MAAS to use, MAAS should provide a way to import it, instead of generating a new one.
-
-With MAAS 3.1, it’s possible to import an existing key/certificate pair for use with a LXD server when registering it with MAAS.  MAAS stores the key/certificate instead of generating new ones.
-
-[note]
-The imported key must not have a passphrase; otherwise, MAAS will not be able to use it.
-[/note]
-
-#### How to get started
-
-Suppose that you're creating a new LXD KVM, beginning from the top tab in MAAS:
-
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png"></a>
-
-Select "Add KVM", which brings you to the definition screen:
-
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png"></a>
-
-From here, you'll continue by choosing your authentication method.
-
-#### How to let MAAS create a certificate for you
-
-If you choose "Generate new certificate", as shown above, you'll come to a screen like this one:
-
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png"></a>
-
-You can still choose to use the LXD trust password (entered when you ran `lxd init` during LXD installation).  You can also, though, choose to use the certificate MAAS has just generated for you.  To do that, select the entire contents of the text box, copy it, and paste it into a terminal window -- then hit "Enter":
-
-```
-$ lxc config trust add - <<EOF
-> -----BEGIN CERTIFICATE-----
-> MIIErTCCApUCEQCGa86XdjYUGm8h8YOh4HAEMA0GCSqGSIb3DQEBDQUAMAAwHhcN
-> MjEwOTI0MjE1NDQ4WhcNMzEwOTIyMjE1NDQ4WjApMScwJQYDVQQDDB5teTBuZXh0
-> LTMuMS4wLWJldGExLWt2bUB3YWxkZW4wggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAw
-> ggIKAoICAQC1tmJbSYx3Jb5JcuqLvyO6P0RtYWCbjVYOSAIM1PKHZJRvako6QhjR
-> 6wWNcVLAjDJIMuEBysrI8mcAv9D/AfT2qLQ/5mg7anbxfrd3YXG2nc70QJazpFaw
-> INDc85wrdJD5NEd50iaka+PztIAWzoZWQr/pLb7hUDnArzSHp5J+w0dRCUh54SyW
-> Du4mLpDks5UqMeONO1o7lbaQuBdzGtR4btdmvOkJfg/Pu3i/rzFZ1vvn1JhZTX96
-> +xH7tJQiqOk0SXG7F2RmbYiYDhAkiysbMoyOHBCf/qFWq4Vtd/VMxOAT1WERrgWn
-> 8nL5kRBozV94QocJaOe+GUSWLHsRpsVa8jiAj3LS2CFQfpaEsrzLSlQOeN2rNB9z
-> DO9yGXGql4tUpgtyEvxB/zVrIGd04iTC3D4S9b1KyzTbSsyjTc/XJhUStnn49ySW
-> Iwv1eHa2jMvIjRVm5sRfpf0EOZW27HLI1AqDOXR0DmlM2mWvndjvfacX+41I8vuG
-> +RPq0ZjDhwfRmUaLiebzcExwPmSHAxqiaV+t0n6ivDWTNk6cNc38rZBh3x6I7JMR
-> /85Rc1blLSF7QBMA1HxheCUYzBPTKsdE2btygq9vShRXCdSekV0jGoL1g0n6T59r
-> +9nHShgc/Bzk42kcddQySlrqWWHrXX6Z2N1R3eYpuvSEaKsnsjqjwwIDAQABMA0G
-> CSqGSIb3DQEBDQUAA4ICAQA4d1Xqi941ssyJoiovTzBgMDSp9kqjpB83BRqbF9oZ
-> fQGkezn2jF7SnaXbTyR/K+nir5Rms8OZfUxyZJwYh/YCdnIF8hzC32mLJbP6jcJV
-> LS0OD+EipwyRLSe9g2it68TtAhhVXKPx3tGQWWiXtJOF631sJRcRUZATc9nco5H2
-> 91GKog4LdFeKD3ArOq1GkE9r95WauTV37x0c474XBt2mVcEvFW50oZbIBPaWLt8E
-> q8NG0KYkfIHkhXDGqPDkUtdPJlkiGwqXdaqghuG31a4Or9IKcNmDlli47apaWWJW
-> /gqZfFALbOrSJHg10PCqNsfoKmQr2YZzPlTjG39RA7sA1XR6y+lQZqwcXnXk2iAE
-> n62OkRUrYVXzBo99zk5jQJVEg6zhfPH9zl6Jmn/vBu0p6RqmqNLTTlMOio8VOp9e
-> 9Gyb9uRwzwZ9zgydgI4bHMvcIAq+46wTruOfXBNATWLC2YqXbc+9QqemJebcXULW
-> Wf7Sc+SHHx2cVb4OUvUD8keZN37No/2vfZ9NI2SJOI4SxlV2yf6ZRyb7MYIwpm1h
-> YTzyS+ywUN4C8p1PsU5iT8DGdcg7Kcso4/DDZeZkLKNeCKizkdMreF7qV0qHTW8z
-> PyfZHcR/xWMkjxYZoFu4rVyxpsUJYItJNUNk6vZvSnSDfC2e2JJFfMws+fntNy14
-> /w==
-> -----END CERTIFICATE-----
-> EOF
-$ 
-```
-
-The certificate will be created for you.  When you click the "Check authentication" button, you will be brought to this screen:
-
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png"></a>
-
-from which you can continue with normal LXD KVM setup.
-
-#### How to use your own, existing certificate
-
-Suppose that, after identifying your LXD KVM, you choose "Provide certificate and private key".  When you do so, the screen will extend to allow you to upload these items:
-
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png"></a>
-
-Paste or upload your certificate and private key, then click "Next" to validate your authentication criteria, before continuing through the normal LXD KVM creation process.  If your certificate and/or key aren't usable for some reason, MAAS will return an error (in this case, the private key was entered as gibberish, to produce an error output):
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png"></a>
-
-<a href="#heading--image-sync-performance"><h3 id="heading--image-sync-performance">Improved image sync performance</h3></a>
-
-#### Ten words or fewer
-
-After downloading images, the rack controller syncs them much faster.
-
-#### About this feature
-
-Downloading and syncing images is a known delay element in MAAS.  While images aren't small, and do take some time to download, we decided to try to speed up the process as much as possible.  After the region has downloaded new images, the rack controllers are now much quicker at syncing the new images.
-
-#### How to take advantage of this new feature
-
-There is nothing required of our users to experience this improved sync performance, other than upgrading to 3.1.
-
-<a href="#heading--maas-3-1-cumulative-bug-fixes"><h3 id="heading--maas-3-1-cumulative-bug-fixes">MAAS 3.1 cumulative bug fixes</h3></a>
-
-MAAS 3.1 bug fixes can be found in the following milestones:
-
- - [MAAS 3.1 Beta5 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta5)
- - [MAAS 3.1 Beta4 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta4)
- - [MAAS 3.1 Beta3 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta3)
- - [MAAS 3.1 Beta2 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta2)
- - [MAAS 3.1 Beta1 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta1)
- 
-rad-end
+[/tab]
+[/tabs]
