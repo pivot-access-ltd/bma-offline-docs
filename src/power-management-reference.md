@@ -1,7 +1,23 @@
 To manage a machine, MAAS must be able to power cycle it, usually through the machine's [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller) card.  Until you configure the power type, a newly-added machine can't be enlisted and used by MAAS.
 
+
 [tabs]
-[tab version="snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="CLI,UI"]
+[tab version="snap-3.2,deb-3.2" view="UI,CLI"]
+<a href="#heading--about-ipmi-cipher-suites"><h2 id="heading--about-ipmi-cipher-suites">About IPMI cipher suites</h2></a>
+
+You can explicitly select which cipher suite to use when interacting with a BMC. You do this by selecting the cipher suite in power configuration.  By default, the cipher suite is 3. This is the least secure suite. It is up to you to select a more secure suite if supported and desired.
+[/tab]
+[tab version="snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI,CLI"]
+<a href="#heading--about-ipmi-cipher-suites"><h2 id="heading--about-ipmi-cipher-suites">About IPMI cipher suites</h2></a>
+
+When using IPMI, MAAS will attempt to automatically detect the correct cipher suite. MAAS tries to find the most secure cipher suite available. Preference order is 17, 3, 8, 12. If auto-detection fails MAAS will fall back to using freeipmi-tool default, 3, which is what previous versions of MAAS use.
+[/tab]
+[/tabs]
+
+<a href="#heading--power-management-reference"><h2 id="heading--power-management-reference">Power management reference guide</h2></a>
+
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="CLI,UI"]
 #### Five questions you may have:
 
 1. [How do I configure a machine's power type?](#heading--config-power-type)
@@ -21,7 +37,7 @@ To manage a machine, MAAS must be able to power cycle it, usually through the ma
 [/tabs]
 
 [tabs]
-[tab version="snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
 
 To configure a machine's power type, click on the machine from the 'Machines' page of the web UI, then select its 'Configuration' tab. Scroll down until you find the Power configuration. If the power type is undefined, the following will be displayed:
@@ -127,13 +143,13 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | Power user | Username to login || Optional |
 | Power password | Password to access unit || Optional |
 | Power MAC | MAC address of unit || Optional |
-| K_g | K_g BMC key | | Optional (BETA) |
-| Cipher suite | Cipher suite ID | - `17` <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small> | Optional (BETA) |
+| K_g | K_g BMC key | | Optional |
+| Cipher suite | Cipher suite ID | - `17` <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small> | Optional |
 | | |`3` <small>(3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128)</small> | |
 | | |` ` (blank) <small>(freeipmi-tools default)</small> | |
 | | |`8` <small>(8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128)</small> | |
 | | |`12` <small>(12 - HMAC-MD5::MD5-128::AES-CBC-128)</small> | |
-| Privilege level | IPMI privilege level | `User` | Optional (BETA) |
+| Privilege level | IPMI privilege level | `User` | Optional  |
 | | | `Operator` | |
 | | | `Administrator` | |
 
@@ -183,8 +199,6 @@ Manual power configuration means exactly that -- manually configured at the unit
 | Password | Password to access unit | Required |
 | Auth URL | URL to access unit | Required |
 
-[tabs]
-[tab version="snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="#heading--proxmox"><h3 id="heading--proxmox">Proxmox</h3></a>
 
 | Form field | Description | Required |
@@ -276,7 +290,7 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | Power user | Username to access unit | Optional |
 | Power password | Password to access unit | Optional |
 
-[tab version="snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="#heading--example-virsh-kvm-power-type"><h2 id="heading--example-virsh-kvm-power-type">An example: the Virsh power type</h2></a>
 
 Consider a machine backed by VM. Below, a 'Power type' of `Virsh` has been selected, and the 'Power address' of `qemu+ssh://ubuntu@192.168.1.2/system` has been entered (replace values as appropriate).  The value of 'Power ID' is the VM domain (guest) name, here `node2`.
@@ -309,7 +323,7 @@ To that end, the "Required" column for this driver refers only to whether Webhoo
 [/tabs]
 
 [tabs]
-[tab version="snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
 
 To (re)configure a machine's power type, first find the machine's $SYSTEM_ID with the following recipe:
@@ -1009,7 +1023,7 @@ In the context of MAAS, the BMC is generally controlled by SNMP commands.  Any g
 `*` The 'Facebook's Wedge' OpenBMC power driver is considered experimental at this time.
 
 [tabs]
-[tab version="snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="CLI,UI"]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="CLI,UI"]
 <a href="#heading--configure-use-ibm-z"><h2 id="heading--configure-use-ibm-z">How do I configure and use IBM Z with MAAS?</h2></a>
 
 The IBM Z or LinuxONE system can host MAAS controllers and is able to deploy predefined logical partitions (LPARs) KVM host(s), and virtual machines, if the mainframe is set up properly for MAAS.
@@ -1170,6 +1184,9 @@ Change any settings as necessary to support your planned MAAS deployment.
 <a href="#heading--set-up-ibm-z-enlistment"><h3 id="heading--set-up-ibm-z-enlistment">Set up your IBM Z virtual machine for enlistment</h3></a>
 
 To cause IBM Z KVM partition guests to enlist, it’s necessary to manually put in the BMC information for each guest. MAAS can then detect the guest, enlist it, and boot it as necessary.
+[/tab]
+[tab version="snap-2.9,deb-2.9" view="CLI,UI"]
+MAAS 2.9 does not support IBM-Z.  To obtain IBM-Z support, please upgrade to MAAS version 3.0 or greater.
 [/tab]
 [/tabs]
 

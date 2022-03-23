@@ -1,8 +1,13 @@
 [tabs]
 [tab version="snap-3.2,deb-3.2" view="UI,CLI"]
 <h2>MAAS 3.2 Beta 1 release notes</h2>
-These release notes are pending announcement.  Please stand by.
+We are happy to announce that MAAS 3.2 Beta 1 is soon to be available.  This release provides new features and critical bug fixes.
 
+<a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.2 features and fixes</h3></a>
+
+ - [Support for observability (O11y) in MAAS](#heading--maas-o11y): MAAS 
+
+ - [Ability for user to specify IPMI cipher suite](#heading--specify-cipher-suite): 
 [/tab]
 [tab version="snap-3.1,deb-3.1" view="UI,CLI"]
 <h2>MAAS 3.1 release notes</h2>

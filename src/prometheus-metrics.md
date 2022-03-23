@@ -222,10 +222,8 @@ unzip /tmp/agent.zip -d /opt/agent
 chmod a+x /opt/agent/agent-linux-amd64
 ```
 
-Copy the agent example configuration from MAAS and start the agent. Adapt the environment variable values to your setup.
+Copy the agent example configuration from MAAS and start the agent. Adapt the environment variable values to your setup.  For example, if you're using a snap, the `MAAS_LOGS` variable would be as shown (`/var/snap/maas/common/log`):
 
-[tabs]
-[tab version="snap-3.2" view="UI,CLI"]
 ```bash
 mkdir -p /var/lib/grafana-agent/positions \
          /var/lib/grafana-agent/wal
@@ -245,31 +243,18 @@ systemd-run -u telemetry \
         -config.expand-env \
         -config.file=/opt/agent/agent.yml
 ```
-[/tab]
-[tab version="deb-3.2" view="UI,CLI"]
+
+On the other hand, if you're using packages, the `MAAS_LOGS` would be `/var/log/maas`, as shown below:
+
 ```bash
-mkdir -p /var/lib/grafana-agent/positions \
-         /var/lib/grafana-agent/wal
-cp /snap/maas/current/usr/share/maas/grafana_agent/agent.yaml.example /opt/agent/agent.yml
-
-systemd-run -u telemetry \
-    -E HOSTNAME="$(hostname)" \
-    -E AGENT_WAL_DIR="/var/lib/grafana-agent/wal" \
-    -E AGENT_POS_DIR="/var/lib/grafana-agent/positions" \
-    -E PROMETHEUS_REMOTE_WRITE_URL="http://${O11y_IP}:9090/api/v1/write" \
-    -E LOKI_API_URL="http://${O11y_IP}:3100/loki/api/v1/push" \
-    -E MAAS_LOGS="/var/log/" \
-    -E MAAS_IS_REGION="true" \
-    -E MAAS_IS_RACK="true" \
-    -E MAAS_AZ="default" \
-    /opt/agent/agent-linux-amd64 \
-        -config.expand-env \
-        -config.file=/opt/agent/agent.yml
+    ...
+    -E MAAS_LOGS="/var/log/maas" \
+    ...
 ```
-[/tab]
-[/tabs]
 
-Enable log forwarding in MAAS.
+Be sure to adjust the values of the other environment variables to suit your situation, where applicable.
+
+Next, enable log forwarding in MAAS.
 
 ```bash
 # set the TCP port the Grafana Agent is listening for syslog messages
@@ -316,7 +301,7 @@ Currently, prometheus metrics are shared when rack and region controllers are ru
 [tabs]
 [tab version="snap-3.1,snap-3.0,snap-2.9" view="UI,CLI"]
 For a snap-based MAAS installation, the libraries already included in the snap so that metrics will be available out of the box.
-[/tab'
+[/tab]
 [tab version="deb-3.1,deb-3.0,deb-2.9" view="UI,CLI"]
 For a Debian-based MAAS installation, install the library and restart MAAS services as follows:
 
