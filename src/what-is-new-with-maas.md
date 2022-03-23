@@ -5,9 +5,46 @@ We are happy to announce that MAAS 3.2 Beta 1 is soon to be available.  This rel
 
 <a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.2 features and fixes</h3></a>
 
- - [Support for observability (O11y) in MAAS](#heading--maas-o11y): MAAS 
+ - [Support for observability (O11y) in MAAS](#heading--maas-o11y): MAAS now supports the ability to estimate the internal state using only telemetry data.
 
- - [Ability for user to specify IPMI cipher suite](#heading--specify-cipher-suite): 
+ - [Ability for user to specify IPMI cipher suite](#heading--specify-cipher-suite): You can explicitly select which cipher suite to use when interacting with a BMC.
+
+[tabs]
+[tab version="snap-3.2" view="UI,CLI"]
+MAAS 3.2 can be installed fresh (recommended) with:
+
+```
+sudo snap install --channel=3.2/beta maas
+```
+
+[/tab]
+[tab version="deb-3.2" view="UI,CLI"]
+MAAS 3.2 can be installed by adding the `TBD` PPA:
+
+```
+sudo add-apt-repository ppa:maas/TBD
+sudo apt update
+sudo apt install maas
+```
+
+You can then install MAAS 3.2 fresh (recommended) with:
+
+```
+sudo apt-get -y install maas
+```
+
+Or, if you prefer to upgrade, you can:
+
+```
+sudo apt upgrade maas
+```
+
+[/tab]
+[/tabs]
+At this point, proceed with a normal installation.
+
+
+
 [/tab]
 [tab version="snap-3.1,deb-3.1" view="UI,CLI"]
 <h2>MAAS 3.1 release notes</h2>
@@ -30,7 +67,7 @@ We are happy to announce that MAAS 3.1 is now available. This release provides n
 
  - [MAAS 3.1 cumulative bug fixes](#heading--maas-3-1-cumulative-bug-fixes)
 
-Critical and high-priority also extend or repair MAAS features:
+Critical and high-priority fixes also extend or repair MAAS features:
 
  - [Expanded proxies](https://bugs.launchpad.net/maas/+bug/1867394): Some proxies require authentication; MAAS now respects peer proxy username and password
 
