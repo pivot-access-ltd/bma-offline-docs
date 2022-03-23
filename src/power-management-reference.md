@@ -1,6 +1,5 @@
 To manage a machine, MAAS must be able to power cycle it, usually through the machine's [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller) card.  Until you configure the power type, a newly-added machine can't be enlisted and used by MAAS.
 
-
 [tabs]
 [tab version="snap-3.2,deb-3.2" view="UI,CLI"]
 <a href="#heading--about-ipmi-cipher-suites"><h2 id="heading--about-ipmi-cipher-suites">About IPMI cipher suites</h2></a>
@@ -156,8 +155,6 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 <a href="#heading--manual"><h3 id="heading--manual">Manual power configuration</h3></a>
 
 Manual power configuration means exactly that -- manually configured at the unit -- hence there are no parameters to set in the "create machine" UI.
-[/tab]
-[/tabs]
 
 <a href="#heading--moonshot"><h3 id="heading--moonshot">HP Moonshot - iLO4 (IPMI)</h3></a>
 
@@ -290,7 +287,6 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | Power user | Username to access unit | Optional |
 | Power password | Password to access unit | Optional |
 
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="#heading--example-virsh-kvm-power-type"><h2 id="heading--example-virsh-kvm-power-type">An example: the Virsh power type</h2></a>
 
 Consider a machine backed by VM. Below, a 'Power type' of `Virsh` has been selected, and the 'Power address' of `qemu+ssh://ubuntu@192.168.1.2/system` has been entered (replace values as appropriate).  The value of 'Power ID' is the VM domain (guest) name, here `node2`.
@@ -320,9 +316,6 @@ To that end, the "Required" column for this driver refers only to whether Webhoo
 | Power token | Power driver API token (used instead of user and password, if set) | Optional |
 | Verify SSL connections... | Boolean, whether or not to verify SSL connections with the system's root CA certificate | Required |
 [/tab]
-[/tabs]
-
-[tabs]
 [tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
 
@@ -1186,7 +1179,7 @@ Change any settings as necessary to support your planned MAAS deployment.
 To cause IBM Z KVM partition guests to enlist, it’s necessary to manually put in the BMC information for each guest. MAAS can then detect the guest, enlist it, and boot it as necessary.
 [/tab]
 [tab version="snap-2.9,deb-2.9" view="CLI,UI"]
-MAAS 2.9 does not support IBM-Z.  To obtain IBM-Z support, please upgrade to MAAS version 3.0 or greater.
+MAAS 2.9 does not support IBM-Z.  To obtain a version of MAAS which supports IBM-Z, please upgrade to MAAS version 3.0 or greater.
 [/tab]
 [/tabs]
 
