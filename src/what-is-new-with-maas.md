@@ -5,9 +5,14 @@ We are happy to announce that MAAS 3.2 Beta 1 is soon to be available.  This rel
 
 <a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.2 features and fixes</h3></a>
 
- - [Support for observability (O11y) in MAAS](#heading--maas-o11y): MAAS now supports the ability to estimate the internal state using only telemetry data.
+ - [Support for observability (O11y) in MAAS](/t/how-to-set-up-maas-metrics/5204): MAAS now supports integration with FOSS Observability stacks.
 
- - [Ability for user to specify IPMI cipher suite](#heading--specify-cipher-suite): You can explicitly select which cipher suite to use when interacting with a BMC.
+ - [Ability for user to specify IPMI cipher suite](/t/power-management-reference/5246): You can explicitly select which cipher suite to use when interacting with a BMC.
+
+ - Roll-out of our new tabbed Reader Adaptive Documentation (incremental across the release cycle).
+
+
+<a href="#heading--how-to-install-maas-3-2"><h2 id="heading--how-to-install-maas-3-2">How to install MAAS 3.2</h2></a>
 
 [tabs]
 [tab version="snap-3.2" view="UI,CLI"]
@@ -22,7 +27,7 @@ sudo snap install --channel=3.2/beta maas
 MAAS 3.2 can be installed by adding the `TBD` PPA:
 
 ```
-sudo add-apt-repository ppa:maas/TBD
+sudo add-apt-repository ppa:maas/3.2-next
 sudo apt update
 sudo apt install maas
 ```
@@ -43,6 +48,49 @@ sudo apt upgrade maas
 [/tabs]
 At this point, proceed with a normal installation.
 
+<a href="#heading--bugs-fixed-in-maas-3-2-beta-1"><h2 id="heading--bugs-fixed-in-maas-3-2-beta-1">Bugs fixed in MAAS 3.2 Beta 1</h2></a>
+
+ * [Notify messages not sent when static routes are created](https://bugs.launchpad.net/bugs/1960462)
+
+ * [API does not prefetch boot_disk](https://bugs.launchpad.net/bugs/1840491)
+
+ * [VLAN with the specified VID already exists error when updating the fabric attribute](https://bugs.launchpad.net/bugs/1853047)
+
+ * [2.9.2 enlist/power-on fail cipher suite unabailabe for Lenovo x3650 M5](https://bugs.launchpad.net/bugs/1916860)
+
+ * [MaaS 3.0 incorrectly calculates the amount of free space on drive](https://bugs.launchpad.net/bugs/1938296)
+
+ * [commissioning-scripts create fails from the API](https://bugs.launchpad.net/bugs/1951398)
+
+ * [Making a subnet unmanaged doesn't affect DHCP configuration](https://bugs.launchpad.net/bugs/1953625)
+
+ * [Unable to apply changes to power configuration after upgrading from 3.0.0 to 3.1.0](https://bugs.launchpad.net/bugs/1954868)
+
+ * [Spurious test failure in TestPrivateCacheBootSources.test__doesnt_have_env_http_and_https_proxy_set_if_disabled](https://bugs.launchpad.net/bugs/1546235)
+
+ * [IPMI power control lost after recommissioning w/ 2.9.3-beta1 "Error:Access denied while performing power action: cipher suite unavailable. Check BMC configuration and try again."](https://bugs.launchpad.net/bugs/1940319)
+
+ * [ipmipower workaround opensesspriv causing username error on Cisco X-series](https://bugs.launchpad.net/bugs/1947788)
+
+ * [Lack of any return message on command that required admin privs](https://bugs.launchpad.net/bugs/1952672)
+
+ * [bootresource.poll and .fetch methods double json-encode result](https://bugs.launchpad.net/bugs/1959183)
+
+ * [API doesn't correctly handle partition/blockdevice names in parameters](https://bugs.launchpad.net/bugs/1964755)
+
+ * [Can't unset a VLAN name via the websocket API](https://bugs.launchpad.net/bugs/1959739)
+
+ * [IPMI access lost (not just maas user) after commissioning](https://bugs.launchpad.net/bugs/1944605)
+
+ * [Cannot use LXD password auth in UI (3.1)](https://bugs.launchpad.net/bugs/1952482)
+
+ * [MultipleChoiceField power parameter support in the UI](https://bugs.launchpad.net/bugs/1953395)
+
+ * [Some redirections don't work on redfish power configuration](https://bugs.launchpad.net/bugs/1956052)
+
+ * ["Different channel detected" error with an air-gapped deployment](https://bugs.launchpad.net/bugs/1961008)
+
+ * [Creation of DNS record with underscore sign in FQDN leads to the zone outage](https://bugs.launchpad.net/bugs/1961843)
 
 
 [/tab]

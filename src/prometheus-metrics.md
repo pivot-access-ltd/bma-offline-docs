@@ -1,6 +1,6 @@
 [tabs]
 [tab version="snap-3.2,deb-3.2" view="UI,CLI"]
-We aim to make MAAS observable, a system in which the internal state can be estimated using only telemetry data. This data should be consumed by a stack composed of off-the-shelf open source software, provided by either Juju (for example with the Canonical Observability Stack) or third-parties (SaaS, self-managed).
+We aim to make MAAS observable, a system in which the internal state can be estimated using only telemetry data. We now offer easier integration with Prometheus and Loki, which are the data ingestion components of the popular Grafana / Prometheus / Loki / AlarmManager stack. This data should be consumed by a stack composed of off-the-shelf open source software, provided by either Juju (for example with the Canonical Observability Stack) or third-parties (SaaS, self-managed).
 
 In this document, you will learn:
 

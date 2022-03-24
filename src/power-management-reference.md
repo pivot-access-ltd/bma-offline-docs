@@ -4,7 +4,7 @@ To manage a machine, MAAS must be able to power cycle it, usually through the ma
 [tab version="snap-3.2,deb-3.2" view="UI,CLI"]
 <a href="#heading--about-ipmi-cipher-suites"><h2 id="heading--about-ipmi-cipher-suites">About IPMI cipher suites</h2></a>
 
-You can explicitly select which cipher suite to use when interacting with a BMC. You do this by selecting the cipher suite in power configuration.  By default, the cipher suite is 3. This is the least secure suite. It is up to you to select a more secure suite if supported and desired.
+We require the user to explicitly set the cipher suite due to the fact that one BMC’s order is different from another, leading to erroneous discovery. You can explicitly select which cipher suite to use when interacting with a BMC. You do this by selecting the cipher suite in power configuration.  By default, the cipher suite is 3. This is the least secure suite. It is up to you to select a more secure suite if supported and desired.
 [/tab]
 [tab version="snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI,CLI"]
 <a href="#heading--about-ipmi-cipher-suites"><h2 id="heading--about-ipmi-cipher-suites">About IPMI cipher suites</h2></a>
