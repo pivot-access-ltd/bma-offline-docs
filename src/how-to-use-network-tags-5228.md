@@ -1,6 +1,7 @@
 This article will show you:
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 - [How to create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
 - [How to remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
 - [How to view network interface tags](#heading--view-network-interface-tags)
@@ -87,8 +88,7 @@ The checkbox isn't strictly needed to apply the tag, but it helps prevent you fr
 
 Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next.
 [/tab]
-
-[tab version="snap-3.0#cli,snap-2.9#cli,deb-3.0#cli,deb-2.9#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 - [How to discover the ID of your network interface](#heading--discover-the-id-of-your-network-interface)
 - [How to assign tags to a network interface](#heading--assign-tags-to-a-network-interface)
 - [How to remove tags from a network interface](#heading--remove-tags-from-a-network-interface)
@@ -211,3 +211,4 @@ mac_address        type      id  tags
 00:16:3e:18:7f:ee  physical  9   andrpko  plinko  cochise
 ```
 [/tab]
+[/tabs]
