@@ -13,32 +13,25 @@ The discussion of these logs and their contents can be very extensive, so each t
 <a href="#heading--path"><h2 id="heading--path">The syslog logging path</h2></a>
 
 [tabs]
-[tab version="deb"] 
-Syslog data is kept in `/var/log/maas/rsyslog/<machine-name><yyyy-mm-dd>/messages`.  Every machine known to MAAS will have corresponding syslogs.
-[/tab]
-[tab version="snap"] 
+[tab version="snap-3.2,snap-3.1,snap-3.0,snap-2.9" view="UI,CLI"] 
 Syslog data is kept in `/var/snap/maas/common/log/rsyslog/<machine-name><yyyy-mm-dd>/messages`. Every machine known to MAAS will have corresponding syslogs.
+[/tab]
+[tab version="deb-3.2,deb-3.1,deb-3.0,deb-2.9" view="UI,CLI"] 
+Syslog data is kept in `/var/log/maas/rsyslog/<machine-name><yyyy-mm-dd>/messages`.  Every machine known to MAAS will have corresponding syslogs.
 [/tab]
 [/tabs]
 
 <a href="#heading--using-a-remote-syslog-server"><h2 id="heading--using-a-remote-syslog-server">Using a remote syslog server</h2></a>
 
 [tabs]
-[tab version="ui"] 
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"] 
 To add a remote syslog server, click the Settings tab and then click the Network services tab. Scroll down to the Syslog section, where you can add a syslog URL or IP:
 
 <a href="https://assets.ubuntu.com/v1/e139d4e9-installconfig-syslog__2.6-remote-syslog.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/e139d4e9-installconfig-syslog__2.6-remote-syslog.png"></a>
 
 Click the Save button to save your changes.
 [/tab]
-[tab version="snap"] 
-Syslog data is kept in `/var/snap/maas/common/log/rsyslog/<machine-name><yyyy-mm-dd>/messages`. Every machine known to MAAS will have corresponding syslogs.
-[/tab]
-[/tabs]
-[tab version="snap-2.9#ui,deb-2.9#ui,deb-3.0#ui,snap-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-[/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 To add or update a remote syslog server in your MAAS environment:
 
 ``` bash
@@ -63,3 +56,4 @@ maas $PROFILE maas set-config name="remote_syslog" value=""
 Note that MAAS controllers' syslogs are not forwarded to the external syslog server -- only machine syslog information is forwarded.
 [/note]
 [/tab]
+[/tabs]
