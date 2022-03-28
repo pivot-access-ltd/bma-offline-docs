@@ -6,7 +6,8 @@ The region controller configures the NTP service to keep its time synchronised f
 
 External sites, such as an existing NTP infrastructure, can be used directly as a time source for both rack controllers and machines.
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 You can specify an external site by choosing the NTP server(s) and selecting the 'External Only' option. The region controller always uses an external site.
 
 On the 'Settings' page, select the 'Network services' tab and scroll down to the 'NTP' section:
@@ -15,8 +16,7 @@ On the 'Settings' page, select the 'Network services' tab and scroll down to the
 
 Enter the address of the desired NTP server. Apply any changes by pressing the 'Save' button.
 [/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 You can specify an external NTP server with two successive commands:
 
 ```
@@ -30,3 +30,4 @@ maas admin maas set-config name=ntp_external_only value=true
 ```
 
 [/tab]
+[/tabs]
