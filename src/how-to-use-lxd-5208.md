@@ -1,11 +1,16 @@
 LXD and MAAS are separate products, and it's useful to allow them to interact as equals, covering a much wider range of use cases.  To allow each of them to follow their own operational models, but still allow them to work together, we've taken advantage of LXD projects.
 
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI,CLI"]
 - [How to make LXD available for hosting](#heading--lxd-setup)
-[tab version="snap-3.0#cli,deb-3.0#cli,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui,snap-3.1#cli,deb-3.1" view=""]
 - [About LXD projects and MAAS](#heading--projects-explanation)
 - [An LXD project tutorial](#heading--projects-tutorial)
 - [How to use LXD projects with MAAS](#heading--projects-step-2-lxd-and-maas)
 [/tab]
+[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
+- [How to make LXD available for hosting](#heading--lxd-setup)
+[/tab]
+[/tabs]
 
 <a href="#heading--lxd-setup"><h2 id="heading--lxd-setup">How to make LXD available for VM hosting</h2></a>
 
@@ -264,7 +269,8 @@ Once that's done, the LXD host is now ready to be added to MAAS as an LXD VM hos
 
 When composing a virtual machine with LXD, MAAS uses either the 'maas' LXD profile, or (if that doesn't exist) the 'default' LXD profile. The profile is used to determine which bridge to use. Users may also add additional LXD options to the profile which are not yet supported in MAAS.
 
-[tab version="snap-3.0#cli,deb-3.0#cli,snap-3.0#ui,deb-3.0#ui,snap-3.1#cli,deb-3.1#cli,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI,CLI"]
 <a href="#heading--projects-explanation"><h2 id="heading--projects-explanation">About LXD projects and MAAS</h2></a>
 
 It may be beneficial to understand how LXD projects fit into the overall MAAS ecosystem.  LXD projects are not intended to be MAAS projects; they are only intended to limit which LXD containers and VMs are available to MAAS. This section will tell you:
@@ -1197,3 +1203,8 @@ $ lxc list
 
 The move succeeds this time -- with an important distinction: the compartment `upward-stallion` was `STOPPED` by `lxc` during the move.  This is an important planning consideration when you're trying to create MAAS VMs & VM hosts in an already-active LXD instantiation. 
 [/tab]
+[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
+
+MAAS 2.9 does not support LXD projects; you must upgrade to MAAS version 3.0 or greater to access this feature.
+[/tab]
+[/tabs]
