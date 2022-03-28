@@ -1,6 +1,7 @@
 This article explains:
 
-[tab version="snap-3.0#ui,snap-2.9#ui,deb-3.0#ui,deb-2.9#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 - [How to create and assign block device tags](#heading--create-and-assign-block-device-tags)
 - [How to remove and delete block device tags](#heading--remove-and-delete-block-device-tags)
 - [How to list block device and partition tags](#heading--list-block-device-and-partition-tags)
@@ -102,8 +103,7 @@ To view all tags associated with partitions on a given machine:
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png"></a>
 
 [/tab]
-
-[tab version="snap-3.0#cli,snap-2.9#cli,deb-3.0#cli,deb-2.9#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 
 - [How to discover the ID of your block device](#heading--discover-the-id-of-your-block-device) 
 - [How to assign tags to a block device](#heading--assign-tags-to-a-block-device)
@@ -388,3 +388,4 @@ id  tags
 ```
 
 [/tab]
+[/tabs]
