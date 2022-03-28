@@ -1,6 +1,7 @@
 This article will explain:
 
-[tab version="deb-2.9#ui,deb-3.0#ui,snap-2.9#ui,snap-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 - [How to create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
 - [How to remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
 - [How to list machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
@@ -88,8 +89,7 @@ To view the machine tags assigned to a VM host, here's the procedure you'll foll
 Note that you can only see the tags for a VM host in the same place that you change it.  For a more comprehensive list of VM host tags, use the MAAS CLI.
 
 [/tab]
-
-[tab version="snap-2.9#cli,snap-3.0#cli,deb-2.9#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 - [How to assign machine tags to a machine](#heading--assign-machine-tags-to-a-machine)
 - [How to remove machine tags from a machine](#heading--remove-machine-tags-from-a-machine)
 - [How to list machine tags for all machines](#heading--list-machine-tags-for-all-machines)
@@ -467,3 +467,4 @@ name              id  tags
 my-lxd-vm-host-1  1   morkopongo  pod-console-logging
 ```
 [/tab]
+[/tabs]
