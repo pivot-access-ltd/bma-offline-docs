@@ -11,7 +11,7 @@ This article will tell you:
 
 <a href="#heading--install-a-rack-controller"><h2 id="heading--install-a-rack-controller">How to install a rack controller</h2></a>
 
-rad-begin /deb/2.9/ui /deb/2.9/cli /deb/3.0/ui /deb/3.0/cli /deb/3.1/ui /deb/3.1/cli
+[tab version="deb-2.9#ui,deb-2.9#cli,deb-3.0#ui,deb-3.0#cli,deb-3.1#ui,deb-3.1" view=""]
 To install and register a rack controller with the MAAS:
 
 ``` bash
@@ -24,9 +24,9 @@ The register command is not required when you are adding a rack controller to a 
 [/note]
 
 The $SECRET is stored in file `/var/lib/maas/secret` on the API server.
-rad-end
+[/tab]
 
-rad-begin /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli /snap/3.1/ui /snap/3.1/cli
+[tab version="snap-2.9#ui,snap-2.9#cli,snap-3.0#ui,snap-3.0#cli,snap-3.1#ui,snap-3.1" view=""]
 To install and register a rack controller with the MAAS:
 
 ``` bash
@@ -35,15 +35,15 @@ sudo maas init rack --maas-url $MAAS_URL --secret $SECRET
 ```
 
 The $SECRET is stored in file `/var/lib/maas/secret` on the API server.
-rad-end
+[/tab]
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 Note that on the UI, you can find complete instructions for adding a rack controller under the "Controllers" tab.  Simply click on the button labeled, "Add rack controller" and choose the instructions relevant to your build model (snap or packages).  The commands there will already include the correct MAAS URL and secret, so you can cut and paste them at the command line.
-rad-end
+[/tab]
 
 <a href="#heading--list-rack-controllers"><h2 id="heading--list-rack-controllers">How to list rack controllers</h2></a>
 
-rad-begin /deb/2.9/cli /deb/3.0/cli /deb/3.1/cli /snap/2.9/cli /snap/3.0/cli /snap/3.1/cli
+[tab version="deb-2.9#cli,deb-3.0#cli,deb-3.1#cli,snap-2.9#cli,snap-3.0#cli,snap-3.1" view=""]
 You can also list and confirm all registered rack controllers:
 
 ``` bash
@@ -51,11 +51,11 @@ maas $PROFILE rack-controllers read | grep hostname | cut -d '"' -f 4
 ```
 
 Note that you will need multiple rack controllers to achieve specific [high availability](/t/how-to-enable-high-availability/nnnn) configurations.
-rad-end
+[/tab]
 
-rad-begin /deb/2.9/ui /deb/3.0/ui /deb/3.1/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui
+[tab version="deb-2.9#ui,deb-3.0#ui,deb-3.1#ui,snap-2.9#ui,snap-3.0#ui,snap-3.1#ui," view=""]
 You can also list and confirm all registered rack controllers via the CLI; select the link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific [high availability](/t/how-to-enable-high-availability/nnnn) configurations.
-rad-end
+[/tab]
 
 <div class="p-notification">
 <p class="p-notification__response">If you are using VM nodes, you must ensure that the new rack controller can communicate with the VM host.</p>
@@ -87,11 +87,11 @@ Take these warnings to heart.  It may seem like a faster approach to "bridge" yo
 
 <a href="#heading--move-rack-controller"><h2 id="heading--move-rack-controller">How to move a rack controller from one MAAS instance to another</h2></a>
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller.  In the "Controllers" tab in the UI, select the rack controller you with to delete, choose "Take action" and select "Delete."  You will be asked to confirm with a red button, entitled "Delete 1 controller."
-rad-end
+[/tab]
 
-rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller, with the command:
 
 ```
@@ -105,11 +105,11 @@ maas $PROFILE rack-controllers read
 ```
 
 There is no confirmation step, so make sure you have the right rack controller before proceeding.
-rad-end
+[/tab]
 
 Next, you must register a new rack controller, which is always done from the command line.
 
-rad-begin  /deb/2.9/ui /deb/2.9/cli /deb/3.0/ui /deb/3.0/cli /deb/3.1/ui /deb/3.1/cli
+[tab version="deb-2.9#ui,deb-2.9#cli,deb-3.0#ui,deb-3.0#cli,deb-3.1#ui,deb-3.1" view=""]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
 ```
@@ -117,9 +117,9 @@ sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAA
 ```
 
 where the secret is found in `/var/lib/maas/secret`.
-rad-end
+[/tab]
 
-rad-begin /snap/2.9/ui /snap/2.9/cli /snap/3.0/ui /snap/3.0/cli /snap/3.1/ui /snap/3.1/cli
+[tab version="snap-2.9#ui,snap-2.9#cli,snap-3.0#ui,snap-3.0#cli,snap-3.1#ui,snap-3.1" view=""]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
 ```
@@ -127,11 +127,11 @@ sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MA
 ```
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
-rad-end
+[/tab]
 
-rad-begin /deb/2.9/ui /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="deb-2.9#ui,snap-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 Note that in the UI, if you go to the "Controllers" tab and press the button entitled, "Add rack controller," at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.
-rad-end
+[/tab]
 
 <a href="#heading--about-moving-rack-controller"><h3 id="heading--about-moving-rack-controller">About moving a rack controller from one MAAS instance to another</h3></a>
 
@@ -139,11 +139,11 @@ In the course of normal operations, you may wish to move a device acting as a ra
 
 <h3>How to move the controller</h3>
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 To move a rack controller using the MAAS UI, first, delete the rack controller.  In the "Controllers" tab in the UI, select the rack controller you with to delete, choose "Take action" and select "Delete."  You will be asked to confirm with a red button, entitled "Delete 1 controller."
-rad-end
+[/tab]
 
-rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller, with the command:
 
 ```
@@ -157,11 +157,11 @@ maas $PROFILE rack-controllers read
 ```
 
 There is no confirmation step, so make sure you have the right rack controller before proceeding.
-rad-end
+[/tab]
 
 Next, you must register a new rack controller, which is always done from the command line.
 
-rad-begin /deb/2.9/cli /deb/2.9/ui /deb/3.0/cli /deb/3.0/ui /deb/3.1/cli /deb/3.1/ui
+[tab version="deb-2.9#cli,deb-2.9#ui,deb-3.0#cli,deb-3.0#ui,deb-3.1#cli,deb-3.1#ui," view=""]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
 ```
@@ -169,9 +169,9 @@ sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAA
 ```
 
 where the secret is found in `/var/lib/maas/secret`.
-rad-end
+[/tab]
 
-rad-begin /snap/2.9/ui /snap/2.9/cli /snap/3.0/cli /snap/3.0/ui /snap/3.1/ui /snap/3.1/cli 
+[tab version="snap-2.9#ui,snap-2.9#cli,snap-3.0#cli,snap-3.0#ui,snap-3.1#ui,snap-3.1" view=""]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
 ```
@@ -179,9 +179,9 @@ sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MA
 ```
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
-rad-end
+[/tab]
 
-rad-begin /deb/2.9/ui /snap/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="deb-2.9#ui,snap-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 Note that in the UI, if you go to the "Controllers" tab and press the button entitled, "Add rack controller," at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.
-rad-end
+[/tab]
 

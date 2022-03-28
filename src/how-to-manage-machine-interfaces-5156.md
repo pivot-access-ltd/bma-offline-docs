@@ -11,7 +11,7 @@ This article will explain the following procedures related to machine interfaces
 
 <a href="#heading--how-to-edit-interfaces"><h2 id="heading--how-to-edit-interfaces">How to edit machines interfaces</h2></a>
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 From a machine's "Interfaces" page, click the menu icon for the interface to be edited and select "Edit Physical" from the resulting menu:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/438475b8906736b45fc809cd105a56be5052397d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/438475b8906736b45fc809cd105a56be5052397d.png"></a>
@@ -31,9 +31,9 @@ Four modes determine how a subnet address is assigned when MAAS deploys the mach
 -   **Unconfigured**: The interface is not configured.
 
 Press the "Save" button to apply the changes.
-rad-end
+[/tab]
 
-rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 If you want to edit the IP assignment mode of a network interface, the existing subnet link first needs to be removed.
 
 Begin by finding the interface ID as well as the interface's subnet link ID with the command:
@@ -61,13 +61,13 @@ If instead of DHCP, you desire a static address, then the second command would l
 ``` bash
 maas $PROFILE interface link-subnet exqn37 58 mode=static subnet=192.168.1.0/24 ip_address=192.168.1.113
 ```
-rad-end
+[/tab]
 
 See [Concepts and terms](/t/maas-concepts-and-terms-reference/nnnn#heading--ip-ranges) for the definitions of reserved range types.
 
 <a href="#heading--bond-interfaces"><h2 id="heading--bond-interfaces">How to create a bond interface</h2></a>
 
-rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 A bond can be created with the following command:
 
 ```
@@ -120,9 +120,9 @@ Supported bonding modes include:
 |  `balance-tlb`| Adaptive transmit load balancing: channel bonding that does not require any special switch support. |
 |  `balance-alb`| Adaptive load balancing: includes balance-tlb plus receive load balancing (rlb) for IPV4 traffic, and does not require any special switch support. The receive load balancing is achieved by ARP negotiation. |
 
-rad-end
+[/tab]
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 A bond is created by selecting more than one interface and clicking the now-active "Create bond" button:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png"></a>
@@ -156,11 +156,11 @@ Press the "Save" button when you're done.
 [note]
 The MAC address defaults to the MAC address of the primary interface.
 [/note]
-rad-end
+[/tab]
 
 <a href="#heading--bridge-interfaces"><h2 id="heading--bridge-interfaces">How to create a bridge interface</h2></a>
 
-rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 A bridge interface is created with the following syntax:
 
 ```
@@ -197,19 +197,19 @@ The following parameters may be applied when creating a bridge:
 10. `accept_ra`: Optional boolean.  Accept router advertisements. (IPv6 only)
 
 11. `autoconf`: Optional boolean.  Perform stateless autoconfiguration. (IPv6 only)
-rad-end
+[/tab]
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 <a href="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png"></a>
 
 Press the "Save" button when you're done.
-rad-end
+[/tab]
 
 <a href="#heading--delete-an-interface"><h2 id="heading--delete-an-interface">How to delete an interface</h2></a>
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /snap/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,snap-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 An interface can only be deleted via the MAAS CLI.
-rad-end
+[/tab]
 
 The "delete" command can be used to delete a bridge interface, a bond interface or a physical interface:
 
@@ -234,9 +234,9 @@ Note that while the label is presented, there is no machine-readable output expe
 
 <a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">How to assign a network interface to a fabric</h2></a>
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /snap/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,snap-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 A network interface may be assigned to a fabric with the MAAS CLI only.
-rad-end
+[/tab]
 
 This task is made easier with the aid of the `jq` utility. It filters the `maas` command (JSON formatted) output and prints it in the desired way, which allows you to view and compare data quickly. Go ahead and install it:
 
@@ -317,9 +317,9 @@ The output shows that the interface is now on fabric-0:
 
 <a href="#heading--interface-identifiers"><h2 id="heading--interface-identifiers">How to discover interface identifiers</h2></a>
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui  /snap/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,snap-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 Interface identifiers can only be discovered via the MAAS CLI.
-rad-end
+[/tab]
 
 The MAAS CLI uses a numeric interface identifier for many interface operations. Use the following command to retrieve the identifier(s):
 
@@ -340,9 +340,9 @@ Look for either id or the number at the end of an interface's resource URI, such
 
 <a href="#heading--create-a-vlan-interface"><h2 id="heading--create-a-vlan-interface">How to create a VLAN interface</h2></a>
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui  /snap/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,snap-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 VLAN interfaces can only be created via the MAAS CLI.
-rad-end
+[/tab]
 
 To create a VLAN interface, use the following syntax:
 
@@ -442,9 +442,9 @@ Machine-readable output follows:
 
 <a href="#heading--delete-a-vlan-interface"><h2 id="heading--delete-a-vlan-interface">How to delete a VLAN interface</h2></a>
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui  /snap/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,snap-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 VLAN interfaces can only be deleted via the MAAS CLI.
-rad-end
+[/tab]
 
 The following command outlines the syntax required to delete a VLAN interface from the command line:
 

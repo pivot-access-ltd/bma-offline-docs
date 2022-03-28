@@ -19,19 +19,19 @@ MAAS provides an internal proxy server. Although it is set up to work well with 
 
 By default, the proxy is available to all hosts residing in any subnet detected by MAAS, not just MAAS-managed machines. It is therefore recommended to disable access to those subnets that represent untrusted networks.
 
-rad-begin     /deb/2.9/ui /deb/2.9/cli  /deb/3.0/ui /deb/3.0/cli /deb/3.1/ui /deb/3.1/cli
+[tab version="deb-2.9#ui,deb-2.9#cli,deb-3.0#ui,deb-3.0#cli,deb-3.1#ui,deb-3.1" view=""]
 MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
 
 You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
-rad-end
+[/tab]
 
-rad-begin /snap/2.9/ui /snap/2.9/cli /snap/3.0/cli /snap/3.0/ui /snap/3.1/ui /snap/3.1/cli 
+[tab version="snap-2.9#ui,snap-2.9#cli,snap-3.0#cli,snap-3.0#ui,snap-3.1#ui,snap-3.1" view=""]
 MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
-rad-end
+[/tab]
 
 <a href="#heading--configure-proxy"><h2 id="heading--configure-proxy">Configuring an external proxy</h2></a>
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 Enabling and disabling proxying, in general, is done via a boolean option ('true' or 'false'). The following command will disable proxying completely:
 
 ``` bash
@@ -63,9 +63,9 @@ For example,
 maas $PROFILE subnet update 192.168.0.0/22 allow_proxy=false
 ```
 
-rad-end
+[/tab]
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 In the web UI, visit the 'Settings' page and select the 'Network services' tab. The 'Proxy' section is at the top. You can apply your changes by pressing the 'Save' button.
 
 <a href="https://assets.ubuntu.com/v1/55800a33-installconfig-network-proxy__2.4_configure-proxy.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/55800a33-installconfig-network-proxy__2.4_configure-proxy.png"></a>
@@ -77,6 +77,6 @@ To enable an external proxy, activate the 'External' checkbox and use the new fi
 An upstream cache peer can be defined by enabling the 'Peer' checkbox and entering the external proxy URL into the field. With this enabled, machines will be configured to use the MAAS built-in proxy to download cached APT packages.
 
 To prevent MAAS machines from using a proxy, enable the 'Don't use a proxy' checkbox.
-rad-end
+[/tab]
 
 **NOTE** that the proxy service will still be running.

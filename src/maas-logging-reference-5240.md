@@ -35,10 +35,10 @@ Click the Save button to save your changes.
 Syslog data is kept in `/var/snap/maas/common/log/rsyslog/<machine-name><yyyy-mm-dd>/messages`. Every machine known to MAAS will have corresponding syslogs.
 [/tab]
 [/tabs]
-rad-begin   /snap/2.9/ui   /deb/2.9/ui  /deb/3.0/ui /snap/3.0/ui /snap/3.1/ui /deb/3.1/ui
-rad-end
+[tab version="snap-2.9#ui,deb-2.9#ui,deb-3.0#ui,snap-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[/tab]
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli  /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 To add or update a remote syslog server in your MAAS environment:
 
 ``` bash
@@ -62,4 +62,4 @@ maas $PROFILE maas set-config name="remote_syslog" value=""
 [note]
 Note that MAAS controllers' syslogs are not forwarded to the external syslog server -- only machine syslog information is forwarded.
 [/note]
-rad-end
+[/tab]

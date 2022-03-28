@@ -15,18 +15,18 @@ Annotations are descriptive, searchable phrases that apply only to machines.  Th
 This article will show you how to:
 
 
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 * [Work with tags](#heading--work-with-tags)
 * [Work with annotations](#heading--work-with-annotations)
-rad-end
-rad-begin     /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[/tab]
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 * [Work with tags](#heading--work-with-tags)
 * [Work with annotations](#heading--work-with-annotations)
-rad-end
+[/tab]
 
 All headings have been hyperlinked for easy bookmarking.  Note that not all functions for tags and annotations can be accessed via one interface (UI/CLI), so you will occasionally encounter cross-links.
 
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 
 <a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a>
 
@@ -34,7 +34,7 @@ This section is devoted to procedures for working with tags.  We begin with some
 
 Specifically, this section will show you how to:
 
-rad-end
+[/tab]
 
 * [Work with tags in general](#heading--work-with-tags-in-general)
 * [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
@@ -45,7 +45,7 @@ rad-end
 * [Work with device tags](#heading--work-with-device-tags)
 * [Work with node tags (CLI only)](#heading--work-with-node-tags)
 
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 
 Tags for these different objects have similar purposes, but they aren't necessarily administered in the same way -- so we've included detailed sections for each tag type.
 
@@ -568,8 +568,8 @@ The "Tags" card on that screen with show you all the tags currently associated w
 <a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a>
 
 This section will explain how to:
-rad-end
-rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[/tab]
+[tab version="snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 
 * [Work with static annotations](#heading--work-with-static-annotations)
 * [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
@@ -577,8 +577,8 @@ rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
 <a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a>
 
 This subsection will show you how to:
-rad-end
-rad-begin     /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[/tab]
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
  
 * [Create and assign static annotations](#heading--create-and-assign-static-annotations)
 * [Delete static annotations](#heading--delete-static-annotations)
@@ -636,9 +636,9 @@ To view static annotations, you can follow this procedure:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png"></a>
 
-rad-end
+[/tab]
 
-rad-begin /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 <a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</h3></a>
  
 This subsection will show you how to:
@@ -666,9 +666,9 @@ To filter machines by dynamic (workload) annotations, use the following procedur
 
 2. Select one or more values from this list to filter the machine list by these workload annotations.
 
-rad-end
+[/tab]
 
-rad-begin     /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 
 <a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a>
 
@@ -2671,4 +2671,4 @@ hostname     system_id  owner_data
 --------     ---------  ----------
 driven-teal  tgaat6     farquar     foobar
 ```
-rad-end
+[/tab]

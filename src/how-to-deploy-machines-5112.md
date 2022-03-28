@@ -22,7 +22,7 @@ Note that if you are using your own commissioning scripts, and you do not want t
 
 If you do not specify `noauto`, your custom commisioning scripts will run every time commissioning is attempted.
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui 
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 To commission a machine:
 
 1. Go to the "Machines" page.
@@ -56,9 +56,9 @@ These options include:
 While commissioning, the machine status will change to reflect this state (Commissioning).  MAAS discovers the machine's network topology.  MAAS then prompts a machine network interface to connect to the fabric, VLAN, and subnet combination for configuration. Usually, MAAS assigns a static IP address out of the reserved IP range for the subnet ("Auto assign" mode). The next section details several assignment modes.
 
 Once commissioned, a machine's status will change to Ready, and an extra tab for the machine called "Commissioning" will become available. This tab contains the results of the scripts executed during the commissioning process.
-rad-end
+[/tab]
 
-rad-begin   /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 To commission a machine that's in the "Ready" state, via the CLI, use the following command:
 
 ```nohighlight
@@ -365,7 +365,7 @@ maas $PROFILE machines read | jq '.[] | .hostname, .system_id'
 "ace-swan"
 "bhxws3"
 ```
-rad-end
+[/tab]
 
 Once commissioned, you may consider adding a tag to this machine.  The next step is [deployment](/t/how-to-deploy-machines/nnnn).
 
@@ -374,7 +374,7 @@ Once commissioned, you may consider adding a tag to this machine.  The next step
 This section explains:
 
 * [How to download built-in scripts](#heading--how-to-download-built-in-scripts)
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 * [How to upload hardware testing scripts](#heading--how-to-upload-hardware-testing-scripts)
 * [How to list all uploaded hardware testing scripts](#heading--how-to-list-all-uploaded-hardware-testing-scripts)
 * [How to update hardware testing scripts](#heading--how-to-update-hardware-testing-scripts)
@@ -384,22 +384,22 @@ rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cl
 * [How to view script results](#heading--how-to-view-script-results)
 * [How to filter script results](#heading--how-to-filter-script-results)
 * [How to suppress failed results](#heading--how-to-suppress-failed-results)
-rad-end
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[/tab]
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 * [How to upload scripts](#heading--how-to-upload-scripts)
 * [How to debug script failures](#heading--how-to-debug-script-failures)
-rad-end
+[/tab]
 * [How to locate script files](#heading--how-to-locate-script-files)
 * [How to locate log files](#heading--how-to-locate-log-files)
 * [How to run all scripts manually](#heading--how-to-run-all-scripts-manually)
-rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 * [How to upload hardware test scripts](#heading--upload-test-scripts)
 * [How to use tags to group commissioning and testing scripts](#heading--tags-group-scripts)
 * [How to view testing results](#heading--results)
-rad-end
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[/tab]
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 * [How to apply a hardware test](#heading--apply-a-hardware-test)
-rad-end
+[/tab]
 * [How to test network links](#heading--network-link-testing)
 * [How to detect slow network links](#heading--slow-link-detection)
 * [How to configure network validation and testing scripts](#heading--network-validation-scripts-and-testing)
@@ -419,7 +419,7 @@ maas $PROFILE node-script download $SCRIPT_NAME
 
 The source code to all built-in scripts is available on [launchpad](https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts).
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 <a href="#heading--how-to-upload-hardware-testing-scripts"><h3 id="heading--how-to-upload-hardware-testing-scripts">How to upload hardware testing scripts</h3></a>
 
 To upload a hardware testing script to MAAS, enter the following:
@@ -569,9 +569,9 @@ maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
 **$RUN_ID** is labelled `id` in the verbose result output.
 [/note]
 
-rad-end
+[/tab]
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 <a href="#heading--how-to-upload-scripts"><h3 id="heading--how-to-upload-scripts">How to upload scripts</h3></a>
 
 Scripts can be uploaded to MAAS using the web UI. Select the 'User scripts' tab of the 'Settings' page - the 'Commissioning scripts' section is near the top. Within the Commissioning scripts section, click the Upload script button followed by 'Choose file' to open a requester, locate the script, and select Upload to upload it to MAAS.
@@ -599,7 +599,7 @@ To do this, enable Allow SSH access and prevent the machine from powering off wh
 Because scripts operate within an ephemeral version of Ubuntu, enabling this option stops the machine from shutting down, allowing you to connect and probe a script's status.
 
 As long as you've added your [SSH key](/t/how-to-manage-user-accounts/nnnn) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
-rad-end
+[/tab]
 
 <a href="#heading--how-to-locate-script-files"><h3 id="heading--how-to-locate-script-files">How to locate script files</h3></a>
 
@@ -643,7 +643,7 @@ Here, all the scripts are run again after downloading from MAAS, but no output d
 ```nohighlight
 /tmp/user_data.sh.*/bin/maas-run-remote-scripts --no-send /tmp/user_data.sh.*
 ```
-rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 <a href="#heading--upload-test-scripts"><h3 id="heading--upload-test-scripts">How to upload hardware test scripts</h3></a>
 
 To upload a hardware testing script to MAAS, enter the following:
@@ -806,10 +806,10 @@ maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
 [note]
 **$RUN_ID** is labelled `id` in the verbose result output.
 [/note]
-rad-end
+[/tab]
 
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 <a href="#heading--apply-a-hardware-test"><h3 id="heading--apply-a-hardware-test">How to apply a hardware test</h3></a>
 
 To launch a test, select the target machine from the 'Machines' page and use the 'Take action' drop-down menu to select 'Test hardware'. When ready, hit the 'Test machine' button. Here, a test is applied to a deployed machine:
@@ -824,13 +824,13 @@ A default test will be selected (`smartctl-validate`, a hard drive test) but you
 
 See [Commissioning Scripts Reference](/t/commissioning-scripts-reference/nnnn) for more details on how these scripts work and how you can write your own.
 
-rad-end
+[/tab]
 
 <a href="#heading--network-link-testing"><h3 id="heading--network-link-testing">How to test network links</h3></a>
 
 MAAS can check whether links are connected or disconnected, so that you can detect unplugged cables.  If you are not running MAAS 2.7 or higher, you must first upgrade and then recommission your machines to find disconnected links.  MAAS not only reports unplugged cables, but also gives a warning when trying to configure a disconnected interface.  In addition, administrators can change the cable connection status after manually resolving the issue.
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 To check network testing results, enter the following command:
 
 ```
@@ -849,31 +849,31 @@ ens3       false            -           1 Gpbs
 ```
 
 From this screen, you can see that the `ens3` link is not connected (hence an unreported link speed). 
-rad-end
+[/tab]
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 When MAAS detects a broken network link, users will see a screen similar to this one: 
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/687feb2ddea8b317f0deba239bcb1779fd5f33d3.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/687feb2ddea8b317f0deba239bcb1779fd5f33d3.jpeg"></a> 
 
 If you're already using a version of MAAS less than 2.7, you will want to upgrade and recommission your existing machines to check link status.  Note that you will also receive a warning from MAAS when trying to configure a disconnected interface.
-rad-end
+[/tab]
 
 Once you have manually repaired the broken connection, an administrator can change cable connection status:
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 ```
 maas $PROFILE interface update $SYSTEM_ID $INTERFACE_ID link_connected=true
 ```
-rad-end
+[/tab]
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 <a href="https://discourse.maas.io/uploads/default/original/1X/b8b24a2e5fbc40b6469a24733a518b510cf0d955.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/b8b24a2e5fbc40b6469a24733a518b510cf0d955.jpeg"></a> 
-rad-end
+[/tab]
 
 <a href="#heading--slow-link-detection"><h2 id="heading--slow-link-detection">How to detect slow network links</h2></a>
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 As servers and hardware get faster, the chances increase that you might encounter a speed mismatch when connecting your NIC to a network device.  MAAS can warn you if your interface is connected to a link slower than what the interface supports, when you run the above command:
 
 ```
@@ -885,17 +885,17 @@ maas $PROFILE interfaces read $SYSTEM_ID \
 
 From the resulting output, you can detect when your link/interface speeds are slower than expected. Depending on your physical hardware, the problem may not be repairable, but once you identify a slow link, you can replace a slow switch without recommissioning.  
 
-rad-end
+[/tab]
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 As servers and hardware get faster, the chances increase that you might encounter a speed mismatch when connecting your NIC to a network device.  MAAS can warn you if your interface is connected to a link slower than what the interface supports, by automatically detecting link and interface speed and reporting them via the UI:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/e73a81df222f44c0b364eefcd0880e2a84c7303b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e73a81df222f44c0b364eefcd0880e2a84c7303b.jpeg"></a>  
 
 Depending on your physical hardware, the problem may not be repairable, but once you identify a slow link, you can replace a slow switch without recommissioning.  
-rad-end
+[/tab]
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 
 Administrators can change or update the link and interface speeds after manual changes
 to the connection:
@@ -905,17 +905,17 @@ maas $PROFILE interface update $SYSTEM_ID $INTERFACE_ID link_speed=$NEW_LINK_SPE
 interface_speed=$NEW_INTERFACE_SPEED
 ```
 
-rad-end
+[/tab]
 
 <a href="#heading--network-validation-scripts-and-testing"><h3 id="heading--network-validation-scripts-and-testing">How to configure network validation and testing scripts</h3></a>
 
 MAAS allows you to configure network connectivity testing in a number of ways. If MAAS can’t connect to the rack controller, deployment can’t complete.  MAAS can check connectivity to the rack controller and warn you if there’s no link, long before you have to try and debug it. For example, if you can’t connect to your gateway controller, traffic can’t leave your network. 
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 MAAS can check this link and recognise that there’s no connectivity, which alleviates hard-to-detect network issues:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/c4f81cb3ef1a90f0a46fb62c893a4cc9f7e5f45a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c4f81cb3ef1a90f0a46fb62c893a4cc9f7e5f45a.jpeg"></a> 
-rad-end
+[/tab]
 
 Users can now test their network configuration to check for:
 
@@ -923,35 +923,35 @@ Users can now test their network configuration to check for:
 2. Bonds that are not fully operational
 3. Broken gateways, rack controllers, and Internet links
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 In addition, MAAS can comprehensively test Internet connectivity testing. You can give a list of URLs or IP addresses to check:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/b92a8ca1821bc1ccf60cf7fddcb57f3fbeda4408.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/b92a8ca1821bc1ccf60cf7fddcb57f3fbeda4408.jpeg"></a> 
-rad-end
+[/tab]
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 In addition, MAAS can comprehensively test Internet connectivity testing. You can give a list of URLs or IP addresses to check from the network testing screen:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/12dd87ce0bffd54c2e459c4dea850af5fcbe14d0.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/12dd87ce0bffd54c2e459c4dea850af5fcbe14d0.jpeg"></a> 
-rad-end
+[/tab]
 
 In the ephemeral environment, standard DHCP is still applied, but when network testing runs, MAAS can apply your specific configuration for the duration of the test.  While all URLs / IPs are tested with all interfaces, MAAS can test each of your interfaces individually, including breaking apart bonded NICS and testing each side of your redundant interfaces. You can also run different tests on each pass, e.g., a different set of URLs, although each run would be a different testing cycle.
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 To test individual interfaces, for example, you could issue the following command:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/7fadb56a2939f7a781510a55813141de03521e0d.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7fadb56a2939f7a781510a55813141de03521e0d.jpeg"></a> 
 
 Note that in this command, we are testing internet connectivity to the single interface "br0."
-rad-end
+[/tab]
 
 <a href="#heading--customisable-network-testing"><h3 id="heading--customisable-network-testing">How to customise network testing</h3></a>
 
 MAAS allow you to customise network testing according to your needs.  You can create your own commissioning scripts and tests related to networking, and you can run them during the network testing portion of the MAAS workflow.
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 <a href="https://discourse.maas.io/uploads/default/original/1X/0dcf089dbd8efc2fc9d0782d3b15f47647e950b8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0dcf089dbd8efc2fc9d0782d3b15f47647e950b8.jpeg"></a> 
-rad-end
+[/tab]
 
 There are no particular restrictions on these scripts, so you can test a wide variety of possible conditions and situations.  Administrators can upload network tests and test scripts.  Administrators can also create tests which accept an interface parameter, or scripts which apply custom network configurations.  
 
@@ -959,7 +959,7 @@ Users can specify unique parameters using the API, override machines which fail 
 
 <a href="#heading--acquire-machines"><h2 id="heading--acquire-machines">How to acquire machines</h2></a>
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 To acquire/allocate a node with the web UI, select a machine which is in the "Ready" state, and drop down the "Take action" menu:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/3724346e052c865f4e865d1caf2778b115f0798f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3724346e052c865f4e865d1caf2778b115f0798f.jpeg"></a>
@@ -971,9 +971,9 @@ Select "Acquire" from the drop-down menu, which will bring you to a confirmation
 MAAS will acquire the selected machine; you can now find it in the list of "Allocated" machines:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a2bdb8b7b7c5705daee14bdea5caed223537917d.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a2bdb8b7b7c5705daee14bdea5caed223537917d.jpeg"></a>
-rad-end
+[/tab]
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 
 To acquire/allocate a random node:
 
@@ -987,7 +987,7 @@ To acquire/allocate a specific node:
 maas $PROFILE machines allocate system_id=$SYSTEM_ID
 ```
 
-rad-end
+[/tab]
 
 [note]
 To acquire a node, it must have a status of 'Ready'.
@@ -995,7 +995,7 @@ To acquire a node, it must have a status of 'Ready'.
 
 <a href="#heading--deploy"><h2 id="heading--deploy">How to deploy machines</h2></a>
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 To deploy directly from MAAS, select one or more machine(s) and press the 'Deploy' button.
 
 <a href="https://assets.ubuntu.com/v1/56958753-nodes-deploy__2.4_deploy.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/56958753-nodes-deploy__2.4_deploy.png"></a>
@@ -1007,9 +1007,9 @@ You then have the option of deviating from the default OS, release, and kernel. 
 While a machine is deploying its status will change to Deploying to 'OS', where 'OS' is the name of the OS being deployed (e.g. 'Deploying to Ubuntu 16.04 LTS').
 
 Once a machine has finished deploying its status will change to just the name of the OS (e.g. 'Ubuntu 18.04 LTS').
-rad-end
+[/tab]
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 To deploy a node:
 
 ``` bash
@@ -1090,6 +1090,6 @@ Machine-readable output follows:
 }
 ```
 
-rad-end
+[/tab]
 
 <!-- comment -->

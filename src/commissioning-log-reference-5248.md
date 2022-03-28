@@ -1,4 +1,4 @@
-rad-begin /snap/2.9/cli /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 The command line allows you to retrieve the verbatim logs of commissioning script runs, including those that are currently in progress.
 
 If you only want to see the latest or currently-running result, you can use `current-commissioning`, `current-testing`, or `current-installation` instead of an id:
@@ -69,9 +69,9 @@ maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
 [note]
 **$RUN_ID** is labelled `id` in the verbose result output.
 [/note]
-rad-end
+[/tab]
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 Commissioning logs, which are presented on the "Commissioning" tab for any machine in the "Ready" state, contain a list of commissioning scripts with a timestamp and result.  You can view the detailed logs for each of these scripts from this tab.
 
 When you click on the "Commissioning" tab under a given machine, you will see a screen similar to this one:
@@ -79,7 +79,7 @@ When you click on the "Commissioning" tab under a given machine, you will see a 
 <a href="https://discourse.maas.io/uploads/default/original/1X/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg"></a> 
 
 Each of the items in the "NAME" column is the name of a [commissioning script](/t/how-to-deploy-machines/nnnn#heading--how-to-commission-a-machine).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
-rad-end
+[/tab]
 
 <a href="#heading--maas-support-info"><h2 id="heading--maas-support-info">maas-support-info</h2></a>
 
@@ -251,8 +251,8 @@ X1NNXycfAghSAAAAAAAAAF9ETUlfnXkBIAAAAAkAKAAAGAAAAQIA6AMACAAAAAAAAAAABAAA//9T
 ZWFCSU9TADEuMTIuMC0xADA0LzAxLzIwMTQAAAEbAAEBAgMAk8WKR96p60KI/jQ+QB9PUAYAAFFF
 TVUAU3RhbmRhcmQgUEMgKGk0NDBGWCArIFBJSVgsIDE5OTYpAHBjLWk0NDBmeC1lb2FuAAADFgAD
 AQECAAADAwMCAAAAAAAAAAAAUUVNVQBwYy1pNDQwZngtZW9hbgAABCoABAEDAQLjBgUA//uLDwMA
-AADQB9AHQQH///////8AAAABAQECAAEAQ1BVIDAAUUVNVQBwYy1pNDQwZngtZW9hbgAAEBcAEAED
-BgAAEAD+/wEAAAAAAAAAAAAAABEoABEAEP7//////wAECQABAAcCAAAAAgAAAAAAAAAAAAAAAAAA
+AADQB9AHQQH-#,-#,/8AAAABAQECAAEAQ1BVIDAAUUVNVQBwYy1pNDQwZngtZW9hbgAAEBcAEAED
+BgAAEAD+/wEAAAAAAAAAAAAAABEoABEAEP7-#,-#,wAECQABAAcCAAAAAgAAAAAAAAAAAAAAAAAA
 AABESU1NIDAAUUVNVQAAEx8AEwAAAAD//w8AABABAAAAAAAAAAAAAAAAAAAAAAAAIAsAIAAAAAAA
 AAAAAH8EAH8AAA==
 -----END DMI DATA-----
@@ -1191,7 +1191,7 @@ This script lists what serial ports are available on the machine; it runs in par
 
 The output of this script may be useful when you're trying to verify that a particular serial interface is active and available on your machine.
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli   /snap/2.9/ui   /deb/2.9/ui
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-2.9#ui,deb-2.9#ui," view=""]
 <a href="#heading--40-maas-01-network-interfaces"><h2 id="heading--40-maas-01-network-interfaces">40-maas-01-network-interfaces</h2></a>
 
 This script is just used to get the IP address, which can then be associated with a VLAN/subnet.  As you can see from the sample (successful) output below, the results are simply the output of a command similar to `ip a`.
@@ -1210,7 +1210,7 @@ This script is just used to get the IP address, which can then be associated wit
     inet6 fe80::5054:ff:fe0b:6d8c/64 scope link 
        valid_lft forever preferred_lft forever
 ```
-rad-end
+[/tab]
 
 <a href="#heading--50-maas-01-commissioning"><h2 id="heading--50-maas-01-commissioning">50-maas-01-commissioning</h2></a>
 

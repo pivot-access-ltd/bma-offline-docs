@@ -10,7 +10,7 @@ Additionally, in order for a user to log into a MAAS-deployed machine that user 
 4. [How do I add an API key for a user?](#heading--api-key)
 5. [How do users change their password?](#heading--change-password)
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 You can manage user accounts from the 'Users' tab of the 'Settings' page.
 
 <a href="https://assets.ubuntu.com/v1/76402e4b-manage-user-accounts__2.4_current-users.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/76402e4b-manage-user-accounts__2.4_current-users.png"></a>
@@ -18,9 +18,9 @@ You can manage user accounts from the 'Users' tab of the 'Settings' page.
 [note]
 A currently logged in user cannot delete themselves from the web UI.
 [/note]
-rad-end
+[/tab]
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 ```
 USERNAME        EMAIL                     ADMIN?
 --------        -----                     ------
@@ -41,11 +41,11 @@ maas admin users read \
 ```
 
 Note that you do not need line continuations within the `jq` command because it's quoted for the shell.
-rad-end
+[/tab]
 
 <a href="#heading--add-a-user"><h2 id="heading--add-a-user">Add a user</h2></a>
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 To add a regular user, enter the following command:
 
 ```
@@ -54,9 +54,9 @@ maas $PROFILE users create username=$USERNAME \
 ```
 
 All the options are necessary. Note that stipulating a password on the CLI may be a security hazard, depending on your environment.
-rad-end
+[/tab]
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 Clicking the 'Add user' button will result in a form to be displayed:
 
 <a href="https://assets.ubuntu.com/v1/1c59c2c5-manage-user-accounts__2.4_add-user.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/1c59c2c5-manage-user-accounts__2.4_add-user.png"></a>
@@ -66,7 +66,7 @@ Fill in the fields and hit 'Add user' when done.
 <a href="#heading--user-preferences"><h2 id="heading--user-preferences">User preferences</h2></a>
 
 Clicking the MAAS username in the top right corner will show that user's preferences.
-rad-end
+[/tab]
 
 <a href="#heading--ssh-keys"><h3 id="heading--ssh-keys">SSH keys</h3></a>
 
@@ -76,31 +76,31 @@ Before a user can deploy a machine, they must import at least one public SSH key
 The user normally imports their initial SSH key on the first login to the web UI.
 [/note]
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 To add a locally-generated public key, select 'Upload' from the 'Source' menu and paste the complete contents of your key file, usually called `id_rsa.pub`, into the 'Public key' field. Click 'Import' to add the key to MAAS.
 
 Public keys residing on either [Launchpad](https://help.launchpad.net/YourAccount) or [GitHub](https://help.github.com/articles/connecting-to-github-with-ssh/) can also be added. Select either from the 'Source' menu and specify the user ID associated with the key(s). Press the 'Import' button to add any keys MAAS discovers to the current user's MAAS account.
 
 <a href="https://assets.ubuntu.com/v1/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png"></a>
-rad-end
+[/tab]
 
 <a href="#heading--api-key"><h3 id="heading--api-key">API key</h3></a>
 
-rad-begin /deb/2.9/ui /deb/3.0/ui /snap/2.9/ui /snap/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="deb-2.9#ui,deb-3.0#ui,snap-2.9#ui,snap-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/how-to-use-the-maas-cli/nnnn).  Other services connecting to MAAS such as Juju will also need this key.
-rad-end
+[/tab]
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 We recommend that you use the web UI to set or change a user's API key.  To see how, select the "UI" choice for your version and delivery method at the top of this page.
-rad-end
+[/tab]
 
 <a href="#heading--change-password"><h3 id="heading--change-password">Change password</h3></a>
 
-rad-begin   /snap/2.9/cli   /deb/2.9/cli /snap/3.0/cli /deb/3.0/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 We recommend that you use the web UI to change user passwords.  To see how, select the "UI" choice for your version and delivery method at the top of this page.
-rad-end
+[/tab]
 
-rad-begin   /snap/2.9/ui   /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 The current user can change their password at the bottom of the page by entering the old password and entering the new password twice. Click 'Save password' to finish.
 
 <a href="https://assets.ubuntu.com/v1/289ef578-manage-user-accounts__2.4_change-user-password.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/289ef578-manage-user-accounts__2.4_change-user-password.png"></a>
@@ -108,4 +108,4 @@ The current user can change their password at the bottom of the page by entering
 [note]
 An administrator can change any user's password from within the 'Users' tab of the 'Settings' page.
 [/note]
-rad-end
+[/tab]

@@ -5,14 +5,14 @@ In this article, you will learn:
 * [About the machine life-cycle](#heading--about-the-machine-life-cycle)
 * [About testing hardware](#heading--about-testing-hardware)
 * [About adding machines](#heading--about-adding-machines)
-rad-begin /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
+[tab version="snap-3.1#ui,snap-3.1#cli,deb-3.1#ui,deb-3.1" view=""]
 * [About cloning machines](#heading--about-cloning-machines)
 * [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
-rad-end
-rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui /snap/3.1/ui /deb/3.1/ui
+[/tab]
+[tab version="snap-3.0#ui,snap-2.9#ui,deb-3.0#ui,deb-2.9#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 * [About the machine list](#heading--about-the-machine-list)
 * [About the machine summary](#heading--about-the-machine-summary)
-rad-end
+[/tab]
 * [About tags](#heading--about-tags)
 * [About storage](#heading--about-storage)
 
@@ -20,9 +20,9 @@ rad-end
 
 One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, acquired, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
 
-rad-begin /snap/3.1/cli /deb/3.1/cli /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-3.1#cli,deb-3.1#cli,snap-3.1#ui,deb-3.1#ui," view=""]
 In addition, already-deployed machines can be enlisted by MAAS, via the MAAS 3.1 CLI, and their operating parameters can be gathered with a special MAAS script.  Because already-deployed machines were not deployed by MAAS, most of the standard MAAS commands will not affect the machine and may, at times, return some odd results.  This is not errant behaviour; the goal of enlisting deployed machines is to avoid disturbing their workload.  These unusual behaviours will be documented throughout this article and the following machine articles.
-rad-end
+[/tab]
 
 All of these states and actions represent the possible life-cycle of a machine.  This life-cycle isn't strict or linear -- it depends on how you use a machine -- but it's useful to give a general overview of how machines tend to change states.  In the discussion that follows, states and actions are shown in **bold** type.
 
@@ -48,7 +48,7 @@ All of these states and actions represent the possible life-cycle of a machine. 
 
 Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it's not very useful to make a state diagram or flowchart.  Instead, consider the following table:
 
-rad-begin /snap/3.0/cli /deb/3.0/cli /snap/3.0/ui /deb/3.0/ui /snap/2.9/cli /deb/2.9/cli /snap/2.9/ui /deb/2.9/ui
+[tab version="snap-3.0#cli,deb-3.0#cli,snap-3.0#ui,deb-3.0#ui,snap-2.9#cli,deb-2.9#cli,snap-2.9#ui,deb-2.9#ui," view=""]
 | Action/State | New | Ready | Acquired | Deployed | Locked | Rescue | Broken |
 |:-------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|	
 | Commission   | X   | X     |          |          |        |        |   X    |
@@ -68,8 +68,8 @@ rad-begin /snap/3.0/cli /deb/3.0/cli /snap/3.0/ui /deb/3.0/ui /snap/2.9/cli /deb
 | Set zone     | X   | X     |   X      |    X     |        |   X    |   X    |
 | Set...pool   | X   | X     |   X      |    X     |        |   X    |   X    |
 | Delete       | X   | X     |   X      |    X     |        |   X    |   X    |
-rad-end
-rad-begin /snap/3.1/cli /deb/3.1/cli /snap/3.1/ui /deb/3.1/ui
+[/tab]
+[tab version="snap-3.1#cli,deb-3.1#cli,snap-3.1#ui,deb-3.1#ui," view=""]
 | Action/State | New | Ready | Acquired | Deployed | Locked | Rescue | Broken | Enlist deployed |
 |:-------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|:---------------:|	
 | Commission   | X   | X     |          |          |        |        |   X    |  X (w/scripts)  |
@@ -91,18 +91,18 @@ rad-begin /snap/3.1/cli /deb/3.1/cli /snap/3.1/ui /deb/3.1/ui
 | Delete       | X   | X     |   X      |    X     |        |   X    |   X    |  X*             |
 
 *Machine is removed from the view of MAAS, but remains deployed with original workload.
-rad-end
+[/tab]
 
 When a machine is in the state listed in a column, it is possible to take the row actions marked with an "X."
 
-rad-begin /snap/2.9/ui /deb/2.9/ui /snap/3.0/ui /deb/3.0/ui
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui," view=""]
 You access these actions from the "Take action" menu in the upper right corner of the machine listing.  Note that some actions, such as "Mark broken" or "Lock," may be hidden when they are not available.
-rad-end
+[/tab]
 
-rad-begin /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-3.1#ui,deb-3.1#ui," view=""]
 In the case of already-deployed machines enlisted by MAAS, some of the possible actions may appear to be available, but either don't work or ultimately appear to fail, without affecting the actual status of the deployed machine.
-rad-end
-rad-begin /snap/3.1/cli /deb/3.1/cli 
+[/tab]
+[tab version="snap-3.1#cli,deb-3.1" view=""]
 In the case of already-deployed machines enlisted by MAAS, some of the possible actions may fail with unusual results, such as this exchange when attempting to turn off an already-deployed machine enlisted by MAAS:
 
 ```nohighlight
@@ -113,7 +113,7 @@ null
 ```
 
 Note that the immediate return is `Success`, but the machine-readable output is `null`.  After executing this command on an already-deployed machine, you should find that the deployed machine was not affected by the `power-off` command, since the `power-type` was set to `manual`.  This is an expected behaviour.
-rad-end
+[/tab]
 
 For a better understanding of these states and actions, see [Node statuses](/t/maas-concepts-and-terms-reference/nnnn#heading--node-statuses) and [Machine actions](/t/maas-concepts-and-terms-reference/nnnn#heading--machine-actions).
 
@@ -151,7 +151,7 @@ After the commissioning process, MAAS places the machine in the ‘Ready’ stat
 MAAS runs built-in commissioning scripts during the enlistment phase. When you commission a machine, any customised commissioning scripts you add will have access to data collected during enlistment. Follow the link above for more information about commissioning and commission scripts.
 [/note]
 
-rad-begin /snap/3.1/cli /deb/3.1/cli /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-3.1#cli,deb-3.1#cli,snap-3.1#ui,deb-3.1#ui," view=""]
 <a href="#heading--about-cloning-machines"><h2 id="heading--about-cloning-machines">About cloning machines</h2></a>
 
 MAAS 3.1 provides the ability to quickly clone or copy configuration from one machine to one or more machines, via the MAAS UI, providing convenient access to an existing API feature.. This is a step towards machine profile templating work. 
@@ -200,7 +200,7 @@ When adding a machine, you may specify that the machine is already deployed. In 
 Such machines lack hardware information. In order to update the information, a script is provided to run a subset of the commissioning scripts and send them back to MAAS.
 
 Some of the normal commands that work on deployed machines will not work on an already-deployed machine enlisted by MAAS.
-rad-end
+[/tab]
 
 <a href="#heading--about-bmc-enlistment"><h4 id="heading--about-bmc-enlistment">About BMC enlistment</h4></a>
 
@@ -263,17 +263,17 @@ When a machine boots, MAAS first instructs it to run cloud-init to set up SSH ke
 
 - **maas-serial-ports:** this script lists what serial ports are available on the machine.  **Runs in parallel with other scripts.**
 
-rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli
+[tab version="snap-2.9#ui,snap-2.9#cli,deb-2.9#ui,deb-2.9" view=""]
 - **40-maas-01-network-interfaces:** this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
-rad-end
+[/tab]
 
-rad-begin /snap/2.9/ui /snap/2.9/cli /deb/2.9/ui /deb/2.9/cli 
+[tab version="snap-2.9#ui,snap-2.9#cli,deb-2.9#ui,deb-2.9" view=""]
 - **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need. This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
-rad-end
+[/tab]
 
-rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
+[tab version="snap-3.0#ui,snap-3.0#cli,deb-3.0#ui,deb-3.0#cli,snap-3.1#ui,snap-3.1#cli,deb-3.1#ui,deb-3.1" view=""]
 - **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, details about attached USB and PCI devices, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
-rad-end
+[/tab]
 
 - **maas-capture-lldp:** this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  **Runs in parallel with other scripts.**
 
@@ -321,7 +321,7 @@ You have the option of setting some parameters to change how commissioning runs:
 
 MAAS keeps extensive logs of the commissioning process for each machine. These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.
 
-rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
+[tab version="snap-3.0#ui,snap-3.0#cli,deb-3.0#ui,deb-3.0#cli,snap-3.1#ui,snap-3.1#cli,deb-3.1#ui,deb-3.1" view=""]
 <a href="#heading--about-disabling-individual-boot-methods"><h4 id="heading--about-disabling-individual-boot-methods">About disabling individual boot methods</h4></a>
 
 It is possible to disable individual boot methods.  This must be done via the CLI. When a boot method is disabled MAAS will configure MAAS controlled `isc-dhcpd` to not respond to the associated [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture). External DHCP servers must be configured manually.
@@ -336,7 +336,7 @@ For MAAS 3.0 and above, the following boot method changes have been implemented:
 - grub.cfg for all UEFI platforms has been updated to replace the deprecated `linuxefi` and `initrdefi` commands with the standard `linux` and `initrd` commands.
 - GRUB debug may now be enabled by enabling [rackd debug logging](https://discourse.maas.io/t/running-installed-maas-in-debug-logging-mode/168).
 
-rad-end
+[/tab]
 
 <a href="#heading--about-automatic-script-selection-by-hardware-type"><h4 id="heading--about-automatic-script-selection-by-hardware-type">About automatic script selection by hardware type</h4></a>
 
@@ -532,7 +532,7 @@ Additional steps will vary widely by machine type and architecture.
 
 Regardless of how MAAS adds a machine, there are no special requirements for the underlying machine itself, other than being able to netboot. In particular, there is no need to install an operating system on it.
 
-rad-begin /snap/3.1/ui /snap/3.0/ui /snap/2.9/ui /deb/3.1/ui /deb/3.0/ui /deb/2.9/ui
+[tab version="snap-3.1#ui,snap-3.0#ui,snap-2.9#ui,deb-3.1#ui,deb-3.0#ui,deb-2.9#ui," view=""]
 <a href="#heading--about-the-machine-list"><h2 id="heading--about-the-machine-list">About the machine list</h2></a>
 
 In the illustration below, you see the machine list for a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:
@@ -626,7 +626,7 @@ And you can watch the results under the "Tests" option in the Machine menu:
 
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option. 
 
-rad-begin /snap/3.0/ui /snap/3.0/cli /deb/3.0/ui /deb/3.0/cli /snap/3.1/ui /snap/3.1/cli /deb/3.1/ui /deb/3.1/cli
+[tab version="snap-3.0#ui,snap-3.0#cli,deb-3.0#ui,deb-3.0#cli,snap-3.1#ui,snap-3.1#cli,deb-3.1#ui,deb-3.1" view=""]
 
 <a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">Handling attached USB and PCI devices</h3></a>
 
@@ -697,7 +697,7 @@ The "Power configuration" supplies the parameters necessary for MAAS to access t
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png"></a> 
 
 More information on Power configuration will be found in the [Power management](/t/power-management-reference/nnnn) section of this documentation.
-rad-end
+[/tab]
 
 <a href="#heading--about-resource-pools"><h3 id="heading--about-resource-pools">About resource pools</h3></a>
 

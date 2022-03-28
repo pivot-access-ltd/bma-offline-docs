@@ -1,6 +1,6 @@
 This article explains:
 
-rad-begin /snap/3.0/ui /snap/2.9/ui /deb/3.0/ui /deb/2.9/ui /snap/3.1/ui /deb/3.1/ui
+[tab version="snap-3.0#ui,snap-2.9#ui,deb-3.0#ui,deb-2.9#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 - [How to create and assign block device tags](#heading--create-and-assign-block-device-tags)
 - [How to remove and delete block device tags](#heading--remove-and-delete-block-device-tags)
 - [How to list block device and partition tags](#heading--list-block-device-and-partition-tags)
@@ -101,9 +101,9 @@ To view all tags associated with partitions on a given machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png"></a>
 
-rad-end
+[/tab]
 
-rad-begin /snap/3.0/cli /snap/2.9/cli /deb/3.0/cli /deb/2.9/cli /snap/3.1/cli /deb/3.1/cli
+[tab version="snap-3.0#cli,snap-2.9#cli,deb-3.0#cli,deb-2.9#cli,snap-3.1#cli,deb-3.1" view=""]
 
 - [How to discover the ID of your block device](#heading--discover-the-id-of-your-block-device) 
 - [How to assign tags to a block device](#heading--assign-tags-to-a-block-device)
@@ -387,4 +387,4 @@ id  tags
 67  foobar  farquar
 ```
 
-rad-end
+[/tab]

@@ -11,6 +11,17 @@ We are happy to announce that MAAS 3.2 Beta 1 is soon to be available.  This rel
 
  - Roll-out of our new tabbed Reader Adaptive Documentation (incremental across the release cycle).
 
+[note]
+This is a Beta release, so you may encounter bugs and incomplete features.  We strongly recommend that you take the necessary precautions, which include (but are not limited to) the following steps:
+
+ - Install Beta versions on a system specifically designated for testing; Beta is not recommended for production.
+ - Take a backup of any unrecoverable data on your test system prior to installing Beta versions.
+ - More specifically, if you use a system for testing MAAS releases, back up the MAAS database and any unique configuration files related to your use of MAAS prior to installing Beta versions.
+
+Essentially, expect that the Beta may not function properly under all conditions, possibly overwriting data and configuration information on the test machine.  Beta versions usually behave fairly well, but be warned that across-the-board, error-free performance isn't something we expect from Beta releases.
+ 
+As you encounter failures, please take the time to [file a bug](https://maas.io/docs/report-a-bug) or let us know your thoughts [on the discourse user forum](https://discourse.maas.io/c/users/8).
+[/note]
 
 <a href="#heading--how-to-install-maas-3-2"><h2 id="heading--how-to-install-maas-3-2">How to install MAAS 3.2</h2></a>
 
@@ -48,50 +59,12 @@ sudo apt upgrade maas
 [/tabs]
 At this point, proceed with a normal installation.
 
-<a href="#heading--bugs-fixed-in-maas-3-2-beta-1"><h2 id="heading--bugs-fixed-in-maas-3-2-beta-1">Bugs fixed in MAAS 3.2 Beta 1</h2></a>
+<a href="#heading--bugs-fixed-in-maas-3-2"><h2 id="heading--bugs-fixed-in-maas-3-2">Bugs fixed in MAAS 3.2</h2></a>
 
- * [Notify messages not sent when static routes are created](https://bugs.launchpad.net/bugs/1960462)
+Here is the breakdown of bugs fixed across the MAAS 3.2 release:
 
- * [API does not prefetch boot_disk](https://bugs.launchpad.net/bugs/1840491)
-
- * [VLAN with the specified VID already exists error when updating the fabric attribute](https://bugs.launchpad.net/bugs/1853047)
-
- * [2.9.2 enlist/power-on fail cipher suite unabailabe for Lenovo x3650 M5](https://bugs.launchpad.net/bugs/1916860)
-
- * [MaaS 3.0 incorrectly calculates the amount of free space on drive](https://bugs.launchpad.net/bugs/1938296)
-
- * [commissioning-scripts create fails from the API](https://bugs.launchpad.net/bugs/1951398)
-
- * [Making a subnet unmanaged doesn't affect DHCP configuration](https://bugs.launchpad.net/bugs/1953625)
-
- * [Unable to apply changes to power configuration after upgrading from 3.0.0 to 3.1.0](https://bugs.launchpad.net/bugs/1954868)
-
- * [Spurious test failure in TestPrivateCacheBootSources.test__doesnt_have_env_http_and_https_proxy_set_if_disabled](https://bugs.launchpad.net/bugs/1546235)
-
- * [IPMI power control lost after recommissioning w/ 2.9.3-beta1 "Error:Access denied while performing power action: cipher suite unavailable. Check BMC configuration and try again."](https://bugs.launchpad.net/bugs/1940319)
-
- * [ipmipower workaround opensesspriv causing username error on Cisco X-series](https://bugs.launchpad.net/bugs/1947788)
-
- * [Lack of any return message on command that required admin privs](https://bugs.launchpad.net/bugs/1952672)
-
- * [bootresource.poll and .fetch methods double json-encode result](https://bugs.launchpad.net/bugs/1959183)
-
- * [API doesn't correctly handle partition/blockdevice names in parameters](https://bugs.launchpad.net/bugs/1964755)
-
- * [Can't unset a VLAN name via the websocket API](https://bugs.launchpad.net/bugs/1959739)
-
- * [IPMI access lost (not just maas user) after commissioning](https://bugs.launchpad.net/bugs/1944605)
-
- * [Cannot use LXD password auth in UI (3.1)](https://bugs.launchpad.net/bugs/1952482)
-
- * [MultipleChoiceField power parameter support in the UI](https://bugs.launchpad.net/bugs/1953395)
-
- * [Some redirections don't work on redfish power configuration](https://bugs.launchpad.net/bugs/1956052)
-
- * ["Different channel detected" error with an air-gapped deployment](https://bugs.launchpad.net/bugs/1961008)
-
- * [Creation of DNS record with underscore sign in FQDN leads to the zone outage](https://bugs.launchpad.net/bugs/1961843)
-
+ * [MAAS 3.2 Beta 1](https://launchpad.net/maas/3.2/3.2.0-beta1)
+ 
 
 [/tab]
 [tab version="snap-3.1,deb-3.1" view="UI,CLI"]
@@ -1115,7 +1088,7 @@ Three new configuration options have been added to the IPMI power driver:
 2. Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
 3. Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
 
-See the [2.9 UI](https://maas.io/docs/snap/2.9/ui/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docs/snap/2.9/cli/power-management#heading--ipmi) power management pages for details.
+See the [2.9 UI](https://maas.io/docssnap-2.9#ui,/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docssnap-2.9#cli,/power-management#heading--ipmi) power management pages for details.
 
 <h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
 
@@ -1165,7 +1138,7 @@ Commissioning scripts have been reordered and some are now set to run in paralle
 <li>99-maas-01-capture-lldp -> maas-capture-lldp(now runs in parallel)</li>
 </ol>
 
-See the [commissioning logs page](https://maas.io/docs/snap/2.9/ui/commissioning-logs) for more details on these changes.
+See the [commissioning logs page](https://maas.io/docssnap-2.9#ui,/commissioning-logs) for more details on these changes.
 
 <h2 id="heading--commissioning-speed">Improvements in commissioning speed and logging</h2>
 
@@ -1190,7 +1163,7 @@ Four improvements have been made to speed up the commissioning process, mostly b
 
 4. Debug [could not be properly enabled for MAAS snap version 2.9.1](https://bugs.launchpad.net/maas/+bug/1914588).  This has been remedied.
 
-5. The MAAS [Backup doc article](https://maas.io/docs/snap/2.9/ui/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
+5. The MAAS [Backup doc article](https://maas.io/docssnap-2.9#ui,/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
 
 6. Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue.
 
@@ -1382,7 +1355,7 @@ Three new configuration options have been added to the IPMI power driver:
 2. Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
 3. Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
 
-See the [2.9 UI](https://maas.io/docs/snap/2.9/ui/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docs/snap/2.9/cli/power-management#heading--ipmi) power management pages for details.
+See the [2.9 UI](https://maas.io/docssnap-2.9#ui,/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docssnap-2.9#cli,/power-management#heading--ipmi) power management pages for details.
 
 <h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
 
@@ -1432,7 +1405,7 @@ Commissioning scripts have been reordered and some are now set to run in paralle
 <li>99-maas-01-capture-lldp -> maas-capture-lldp(now runs in parallel)</li>
 </ol>
 
-See the [commissioning logs page](https://maas.io/docs/snap/2.9/ui/commissioning-logs) for more details on these changes.
+See the [commissioning logs page](https://maas.io/docssnap-2.9#ui,/commissioning-logs) for more details on these changes.
 
 <h2 id="heading--commissioning-speed">Improvements in commissioning speed and logging</h2>
 
@@ -1457,7 +1430,7 @@ Four improvements have been made to speed up the commissioning process, mostly b
 
 4. Debug [could not be properly enabled for MAAS snap version 2.9.1](https://bugs.launchpad.net/maas/+bug/1914588).  This has been remedied.
 
-5. The MAAS [Backup doc article](https://maas.io/docs/snap/2.9/ui/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
+5. The MAAS [Backup doc article](https://maas.io/docssnap-2.9#ui,/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
 
 6. Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue.
 

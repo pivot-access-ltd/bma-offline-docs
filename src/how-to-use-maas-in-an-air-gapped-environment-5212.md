@@ -41,14 +41,14 @@ You may wish to create a [transparent proxy](#heading--transparent-proxy) to mak
 
 <h2 id="heading--local-image-mirroring"><a href="#heading--local-image-mirroring">Local image mirrors</a></h2>
  
-MAAS has an [established process](https://maas.io/docs/snap/2.9/ui/local-image-mirror) for mirroring images locally.   The steps are relatively simple:
+MAAS has an [established process](https://maas.io/docssnap-2.9#ui,/local-image-mirror) for mirroring images locally.   The steps are relatively simple:
 
 1. Install the `simplestreams` package.
 2. Define some variables to simplify CLI usage.
 3. Create the desired mirrors, specifying where you want your images stored.
 4. Set up a new boot source on your local server, referring to the local mirror.
 
-See the [local image mirror](https://maas.io/docs/snap/2.9/ui/local-image-mirror) for details.  Note that you can use the menu at the top of that page to switch to specific instructions for the version, build-type, and interface you prefer.
+See the [local image mirror](https://maas.io/docssnap-2.9#ui,/local-image-mirror) for details.  Note that you can use the menu at the top of that page to switch to specific instructions for the version, build-type, and interface you prefer.
 
 <h2 id="heading--non-maas-images"><a href="#heading--non-maas-images">Using other OS images in an air-gapped environment</a></h2>
 
@@ -63,11 +63,11 @@ Here's a thumbnail sketch of both of these methods.
 
 <h3 id="heading--other-os-user-data"><a href="#heading--other-os-user-data">Using user_data to access non-MAAS-maintained images</a></h3>
 
-A user can create custom `user_data` which will configure CentOS or RHEL to use a specific mirror.  Check out the [custom machine setup](https://maas.io/docs/snap/2.9/ui/custom-machine-setup) page for details on how to make this work.
+A user can create custom `user_data` which will configure CentOS or RHEL to use a specific mirror.  Check out the [custom machine setup](https://maas.io/docssnap-2.9#ui,/custom-machine-setup) page for details on how to make this work.
 
 <h3 id="heading--store-custom-images"><a href="#heading--store-custom-images">Storing customer images for non-MAAS-maintained images</a></h3>
 
-You can also create custom images and store them in your local mirror.  Use the [MAAS Image Builder](https://maas.io/docs/image-builder) to create custom images as desired.  Once you have the image built, consult the page on [local image mirrors](https://maas.io/docs/snap/2.9/ui/local-image-mirror) to see how to incorporate your newly-built image into the local stash.
+You can also create custom images and store them in your local mirror.  Use the [MAAS Image Builder](https://maas.io/docs/image-builder) to create custom images as desired.  Once you have the image built, consult the page on [local image mirrors](https://maas.io/docssnap-2.9#ui,/local-image-mirror) to see how to incorporate your newly-built image into the local stash.
 
 <h2 id="heading--transparent-proxy"><a href="#heading--transparent-proxy">Creating a transparent proxy</a></h2>
 
