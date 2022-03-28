@@ -1,6 +1,7 @@
 This article will show you:
 
-[tab version="deb-2.9#cli,deb-3.0#cli,deb-3.1#cli,snap-2.9#cli,snap-3.0#cli,snap-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 
 - [How to discover the ID of your region controller(s)](#heading--discover-the-id-of-your-region-controllers)
 - [How to assign tags to a region controller](#heading--assign-tags-to-a-region-controller)
@@ -285,7 +286,7 @@ hostname                     sysid   tags
 bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
 ```
 [/tab]
-[tab version="deb-2.9#ui,deb-3.0#ui,deb-3.1#ui,snap-2.9#ui,snap-3.0#ui,snap-3.1#ui," view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 - [How to create and assign controller tags ](#heading--create-and-assign-controller-tags-)
 - [How to remove and delete controller tags](#heading--remove-and-delete-controller-tags)
 - [How to view controller tags](#heading--view-controller-tags)
@@ -347,3 +348,4 @@ To view a list of tags assigned to a particular controller, you can use the foll
 3. Find the "Tags" card; this card will list all the tags assigned to this controller.
 
 [/tab]
+[/tabs]
