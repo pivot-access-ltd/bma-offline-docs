@@ -4,9 +4,9 @@ MAAS has a robust logging capability, which presents several different views, in
 
 1. [What is the syslog logging path?](#heading--path)
 2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](/t/commissioning-log-reference/nnnn)
-4. [What are test logs?](/t/test-log-reference/nnnn)
-5. [What are event logs?](/t/event-log-reference/nnnn)
+3. [What are commissioning logs?](/t/commissioning-log-reference/5248)
+4. [What are test logs?](/t/test-log-reference/5314)
+5. [What are event logs?](/t/event-log-reference/5252)
 
 The discussion of these logs and their contents can be very extensive, so each type of logging has its own documentation section, reachable from the left-hand menu -- or from the list of questions above.
 

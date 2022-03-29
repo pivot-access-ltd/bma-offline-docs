@@ -1,6 +1,7 @@
 MAAS is only useful once it has images available to provision its nodes. Therefore, one key post-install task is to select and import images from the boot source. Once MAAS imports images, it will update them on an hourly basis, via a default synch mechanism.  This page explains how to select and import the images that MAAS requires to provision its nodes.
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 
 #### Three questions you may have:
 
@@ -8,7 +9,7 @@ MAAS is only useful once it has images available to provision its nodes. Therefo
 2. [How do I use other image mirrors to download images?](#heading--image-mirrors)
 3. [How do I import and provision non-Ubuntu images?](#heading--other-images)
 
-Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/how-to-build-maas-images/nnnn).
+Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/how-to-build-maas-images/5100).
 
 <a href="#heading--import-maasio-image-ui"><h2 id="heading--import-maasio-image-ui">Importing images from maas.io</h2></a>
 
@@ -16,7 +17,7 @@ The 'Images' page shows what images and architectures have been selected and dow
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png"></a>
 
-You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/about-images/nnnn#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
+You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/about-images/5076#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
 
 Click the 'Save selection' button to initiate the import. MAAS will present existing images along with the newly-selected ones. The latter will have their status updated as the import is processed:
 
@@ -31,24 +32,21 @@ You can also host Ubuntu images on a mirror. Configure this mirror by selecting 
 Advanced options, such as using a GPG key or keyring to validate the mirror path (snap installation location: /snap/maas/current/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg), are revealed by clicking 'Show advanced options':
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/dbe44a827e70e318a6139c3e335019a6a27c4374.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/dbe44a827e70e318a6139c3e335019a6a27c4374.png"></a>
-[/tab]
 
-Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/how-to-mirror-images-locally/nnnn) for instructions.
+Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/how-to-mirror-images-locally/5188) for instructions.
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 <a href="#heading--other-images"><h2 id="heading--other-images">Other images</h2></a>
 
 It is also possible to import and provision images other than Ubuntu. Images supported and provided by MAAS will appear beneath the 'Other Images' section. Currently, images for CentOS 6.6, CentOS 7.0, and CentOS 8.0 are available. These images can be imported and used just like the Ubuntu images above.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png"></a>
 [/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
-You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/about-images/nnnn#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/about-images/5076#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
 
 #### Eight questions you may have:
 
-1. [How do I get started with the MAAS CLI?](/t/how-to-use-the-maas-cli/nnnn)
+1. [How do I get started with the MAAS CLI?](/t/how-to-use-the-maas-cli/5236)
 2. [How do I list boot sources?](#heading--list-boot-sources)
 3. [How do I select images?](#heading--select-image)
 4. [How do I list image selections?](#heading--list-image-selections)
@@ -186,7 +184,7 @@ If you added a sole boot source, then the fields 'Sync URL' and 'Keyring Path' i
 
 <a href="#heading--using-a-local-image-mirror"><h3 id="heading--using-a-local-image-mirror">Using a local image mirror</h3></a>
 
-Once the mirror is set up according to [Local image mirror](/t/how-to-mirror-images-locally/nnnn) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
+Once the mirror is set up according to [Local image mirror](/t/how-to-mirror-images-locally/5188) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
 
 1.   URL=https://$MIRROR/maas/images/ephemeral-v3/stable/
 2.   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
@@ -200,3 +198,4 @@ Recreate the default boot source if it was ever deleted using the following vari
 1.   URL=https://images.maas.io/ephemeral-v3/stable/
 2.   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
 [/tab]
+[/tabs]

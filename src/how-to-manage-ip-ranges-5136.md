@@ -14,7 +14,8 @@ This article gives specific instructions about creating and managing IP ranges.
 
 <a href="#heading--create-a-range"><h2 id="heading--create-a-range">Create a range</h2></a>
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 To create a range with the web UI, choose the "Subnets" option across the top:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/2bc3b241b917325dac57a42771a0f9cfeb411bde.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/2bc3b241b917325dac57a42771a0f9cfeb411bde.jpeg"></a>
@@ -37,9 +38,8 @@ Below is an example window when creating a 'reserved range' (the windows are ide
 
 Click the 'Reserve' button when done.
 [/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
-See [Concepts and terms](/t/maas-concepts-and-terms-reference/nnnn#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+See [Concepts and terms](/t/maas-concepts-and-terms-reference/5416#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
 
 To create a range of dynamic IP addresses that will be used by MAAS for node enlistment, commissioning, and possibly deployment:
 
@@ -73,7 +73,16 @@ maas $PROFILE ipaddresses release ip=$IP_STATIC_SINGLE
 
 <a href="#heading--edit-a-range"><h2 id="heading--edit-a-range">Edit a range</h2></a>
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+Click the 'Menu' button at the far right of the row corresponding to the subnet in question and select 'Edit reserved range' from the menu that appears. Edit the fields as desired and click the 'Save' button.
+
+<a href="#heading--delete-a-range"><h2 id="heading--delete-a-range">Delete a range</h2></a>
+
+Select 'Remove range' from the menu that appears when clicking the 'Menu' button at the far right of the row corresponding to the subnet in question.
+
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 To edit an IP range, first find the ID of the desired IP range with the command:
 
 ```
@@ -88,12 +97,4 @@ maas admin iprange update $ID start_ip="<start ip>" end_ip="<end ip>" comment="f
 
 This command will update the IP range associated with $ID.
 [/tab]
-
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-Click the 'Menu' button at the far right of the row corresponding to the subnet in question and select 'Edit reserved range' from the menu that appears. Edit the fields as desired and click the 'Save' button.
-
-<a href="#heading--delete-a-range"><h2 id="heading--delete-a-range">Delete a range</h2></a>
-
-Select 'Remove range' from the menu that appears when clicking the 'Menu' button at the far right of the row corresponding to the subnet in question.
-
-[/tab]
+[/tabs]
