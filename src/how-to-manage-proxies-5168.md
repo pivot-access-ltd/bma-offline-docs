@@ -20,10 +20,10 @@ MAAS provides an internal proxy server. Although it is set up to work well with 
 By default, the proxy is available to all hosts residing in any subnet detected by MAAS, not just MAAS-managed machines. It is therefore recommended to disable access to those subnets that represent untrusted networks.
 
 [tabs]
-[tab version="snap-3.2,snap-3.1,snap-3.0,snap-2.9" view="UI,CLI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"]
 MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
 [/tab]
-[tab version="deb-3.2,deb-3.1,deb-3.0,deb-2.9" view="UI,CLI"]
+[tab version="v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages"]
 MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
 
 You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
@@ -33,7 +33,7 @@ You must install the proxy on the same host as the region controller (via the 'm
 <a href="#heading--configure-proxy"><h2 id="heading--configure-proxy">Configuring an external proxy</h2></a>
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 In the web UI, visit the 'Settings' page and select the 'Network services' tab. The 'Proxy' section is at the top. You can apply your changes by pressing the 'Save' button.
 
 <a href="https://assets.ubuntu.com/v1/55800a33-installconfig-network-proxy__2.4_configure-proxy.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/55800a33-installconfig-network-proxy__2.4_configure-proxy.png"></a>
@@ -46,7 +46,7 @@ An upstream cache peer can be defined by enabling the 'Peer' checkbox and enteri
 
 To prevent MAAS machines from using a proxy, enable the 'Don't use a proxy' checkbox.
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 Enabling and disabling proxying, in general, is done via a boolean option ('true' or 'false'). The following command will disable proxying completely:
 
 ``` bash

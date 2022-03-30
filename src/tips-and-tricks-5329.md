@@ -12,7 +12,7 @@ This section contains a collection of tips, tricks, and traps which may help sol
 
 If you're currently running MAAS from a snap in `all` mode, you can easily migrate your database to a local PostgreSQL server with the following command:
 
-    sudo /snap/maas/current/helpers/migrate-snap-database
+    sudo /snap/maas/current/helpers/migrate-vd Snapatabase
 
 This will install PostgreSQL from the archive and migrate the MAAS database to it. 
 

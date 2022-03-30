@@ -1,7 +1,7 @@
 This article explains:
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1" view="UI,CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
 - [How to create, delete, and configure machines](#heading--how-to-create-delete-and-configure-machines)
 - [How to clone machines](#heading--how-to-clone-machines)
 - [How to examine machines and machine details](#heading--how-to-examine-machines-and-machine-details)
@@ -9,7 +9,7 @@ This article explains:
 - [How to use annotations](#heading--how-to-use-annotations)
 - [How to use machine storage](#heading--how-to-use-machine-storage)
 [/tab]
-[tab version="snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI,CLI"]
+[tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
 - [How to create, delete, and configure machines](#heading--how-to-create-delete-and-configure-machines)
 - [How to examine machines and machine details](#heading--how-to-examine-machines-and-machine-details)
 - [How to use resource pools](#heading--how-to-use-resource-pools)
@@ -27,12 +27,12 @@ Most of the day-to-day work of managing machines is covered here. Utilising mach
 This section shows you:
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI,CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 - [How to add a machine manually](#heading--how-to-add-a-machine-manually)
 - [How to add machines via a chassis](#heading--how-to-add-machines-via-a-chassis)
 - [How to manage attached USB and PCI devices](#heading--usb-pci-devices)
 [/tab]
-[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
+[tab version="v2.9 Snap,v2.9 Packages"]
 - [How to add a machine manually](#heading--how-to-add-a-machine-manually)
 - [How to add machines via a chassis](#heading--how-to-add-machines-via-a-chassis)
 [/tab]
@@ -41,7 +41,7 @@ This section shows you:
 <a href="#heading--how-to-add-a-machine-manually"><h3 id="heading--how-to-add-a-machine-manually">How to add a machine manually</h3></a>
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
 
 Fill in the form and hit 'Save machine'. In this example, you are adding an IPMI machine:
@@ -79,7 +79,7 @@ As with the manual method, the underlying machines will require netbooting.
 [/note]
 
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To create a new machine at the command line, enter the following information:
 
 ```nohighlight
@@ -130,7 +130,7 @@ The variable fields in the `machines create` command (the `$...` items) are as f
 [/tabs]
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI,CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 <a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">How to manage attached USB and PCI devices</h3></a>
 
 To delete PCI/USB devices from the machine in any machine state, via the CLI only, using the following command:
@@ -147,13 +147,13 @@ where:
 
 If the device is still present in the system, it will be recognised again (and thus "recreated") when the machine is commissioned again.
 [/tab]
-[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
+[tab version="v2.9 Snap,v2.9 Packages"]
 MAAS version 2.9 does not recognize PCI and USB devices.  Please upgrade to MAAS version 3.0 or greater to obtain this capability.
 [/tab]
 [/tabs]
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1" view="UI,CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
 <a href="#heading--how-to-clone-machines"><h2 id="heading--how-to-clone-machines">How to clone machines</h2></a>
 
 Assume you have two machines available, like this:
@@ -175,7 +175,7 @@ Under "2. Select what to clone", choose "Network", "Storage", or both (here, we'
 Click "Clone to machine". MAAS will report the status of the attempt.
 
 [/tab]
-[tab version="snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI,CLI"]
+[tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
 Cloning capability is available in MAAS from version 3.1 forward.
 [/tab]
 [/tabs]
@@ -195,7 +195,7 @@ This section describes the various ways you can evaluate the health and status o
 - [How to find machine configuration info](#heading--machine-config)
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--how-to-view-the-machine-list"><h3 id="heading--how-to-view-the-machine-list">How to view the machine list</h3></a>
 
 To view the machine list, enter a command similar to this one:
@@ -299,7 +299,7 @@ NETWORK: Vendor: Red Hat, Inc.
 .........Fabric: fabric-5 | MAAS DHCP: true | SR-IOV: 0
 ```
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--how-to-view-the-machine-list"><h3 id="heading--how-to-view-the-machine-list">How to view the machine list</h3></a>
 
 To view the machine list, select "Machines" on the top menu of the MAAS web UI:
@@ -394,7 +394,7 @@ More information on Power configuration will be found in the [Power management](
 This section will explain:
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 - [How to add a resource pool](#heading--add-a-resource-pool)
 - [How to delete a resource pool](#heading--deleting-a-resource-pool)
 - [How to add a node to a resource pool](#heading--add-a-node-to-a-resource-pool)
@@ -443,7 +443,7 @@ You can add a VM host to a resource pool when you create a new VM host, or you c
 To remove a VM host from a resource pool, follow the same procedure you would use to add a VM host to a resource pool, except select "default" as the new resource pool. This action will return the machine to the default resource pool.
 
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 - [How to create a resource pool](#heading--creating-a-resource-pool)
 - [How to list available resource pools](#heading--list-available-resource-pools)
 - [How to list a single resource pool](#heading--list-a-single-resource-pool)
@@ -830,7 +830,7 @@ driven-teal  tgaat6     farquar     foobar
 This section will explain:
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1" view="UI,CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
 - [How to set global storage layouts](#heading--how-to-set-global-storage-layouts)
 - [How to set per-machine storage layouts](#heading--how-to-set-per-machine-storage-layouts)
 - [How to specify conditional erasure types](#heading--how-to-specify-conditional-erasure-types)
@@ -840,7 +840,7 @@ This section will explain:
 - [How to manage VMFS datastores](#heading--how-to-manage-vmfs-datastores)
 - [How to define custom storage layouts](#heading--how-to-define-custom-storage-layouts)
 [/tab]
-[tab version="snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI,CLI"]
+[tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
 - [How to set global storage layouts](#heading--how-to-set-global-storage-layouts)
 - [How to set per-machine storage layouts](#heading--how-to-set-per-machine-storage-layouts)
 - [How to specify conditional erasure types](#heading--how-to-specify-conditional-erasure-types)
@@ -856,12 +856,12 @@ This section will explain:
 Layouts can be set globally and on a per-machine basis.
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view=UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view=UI"]
 All machines will have a default layout applied when commissioned. An administrator can configure the default layout on the 'Settings' page, under the 'Storage' tab.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png"></a>
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 All machines will have a default layout applied when commissioned. To set the default storage layout for all machines:
 
 ```nohighlight
@@ -886,10 +886,10 @@ The new default will only apply to newly-commissioned machines.
 <a href="#heading--how-to-set-per-machine-storage-layouts"><h3 id="heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</h3></a>
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of 'Ready'. This is only possible via the CLI: to see how, click the "CLI" option for your version and delivery method above.
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 An administrator can set a storage layout for a machine with a status of ‘Ready’ like this:
 
 ```nohighlight
@@ -913,7 +913,7 @@ Only an administrator can modify storage at the block device level (providing th
 [/note]
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--how-to-set-default-erasure-configuration"><h3 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h3></a>
 
 A default erasure configuration can be set on the 'Settings' page by selecting the 'Storage' tab.
@@ -929,7 +929,7 @@ With the above defaults, the machine's view will look like this when the Release
 Where 'secure erase' and 'quick erase' can then be configured by the user.
 
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 
 <a href="#heading--how-to-erase-disks"><h3 id="heading--how-to-erase-disks">How to erase disks</h3></a>
 
@@ -1862,7 +1862,7 @@ maas $PROFILE vmfs-datastore delete $SYSTEM_ID $VMFS_ID
 <a href="#heading--how-to-define-custom-storage-layouts"><h2 id="heading--how-to-define-custom-storage-layouts">How to define custom storage layouts</h2></a>
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1" view="UI,CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
 MAAS 3.1 allows you to define a custom storage layout for a machine, via a custom commissioning script.  You must upload a script which conforms to the following rules:
 
  * it must run after the `40-maas-01-machine-resources` script and before the `50-maas-01-commissioning` one, so it should have a name that starts with anything between `41-` and `49-`. This ensures the script can access the JSON file created by the former which provides info about the machine hardware and network resources. In addition, the custom script can directly inspect the machine it's running on to determine how to configure storage.
@@ -2236,7 +2236,7 @@ The same cacheset can be used by different bcaches by specifing the same `backin
 The RAID is created by using 5 bcache devices, each one using a different disk and the same SSD cache device. LVM is created on top of the RAID device and volumes are then created in it, to provide partitions.
 
 [/tab]
-[tab version="snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI,CLI"]
+[tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
 Custom storage layouts are available in MAAS version 3.1 and greater.
 [/tab]
 [/tabs]

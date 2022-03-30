@@ -15,11 +15,11 @@ Annotations are descriptive, searchable phrases that apply only to machines.  Th
 This article will show you how to:
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 - [Work with tags](#heading--work-with-tags)
 - [Work with annotations](#heading--work-with-annotations)
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 - [Work with tags](#heading--work-with-tags)
 - [Work with annotations](#heading--work-with-annotations)
 [/tab]
@@ -44,7 +44,7 @@ Specifically, this section will show you how to:
 - [Work with node tags (CLI only)](#heading--work-with-node-tags)
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 
 Tags for these different objects have similar purposes, but they aren't necessarily administered in the same way -- so we've included detailed sections for each tag type.
 
@@ -568,13 +568,13 @@ The "Tags" card on that screen with show you all the tags currently associated w
 <a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a>
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI,CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 This section will explain how to:
 
 - [Work with static annotations](#heading--work-with-static-annotations)
 - [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
 [/tab]
-[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
+[tab version="v2.9 Snap,v2.9 Packages"]
 This section explains how to work with notes, also known as "static annotations".  MAAS 2.9 does not support dynamic annotations; you must upgrade to MAAS version 3.0 or greater to obtain that capability.
 [/tab]
 [/tabs]
@@ -582,7 +582,7 @@ This section explains how to work with notes, also known as "static annotations"
 <a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a>
 This subsection will show you how to:
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tab version="v2.9 Snap#ui,v2.9 Packages#ui,v3.0 Snap#ui,v3.0 Packages#ui,v3.1 Snap#ui,v3.1 Packages#ui," view=""]
  
 - [Create and assign static annotations](#heading--create-and-assign-static-annotations)
 - [Delete static annotations](#heading--delete-static-annotations)
@@ -642,7 +642,7 @@ To view static annotations, you can follow this procedure:
 
 [/tab]
 
-[tab version="snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tab version="v3.0 Snap#ui,v3.0 Packages#ui,v3.1 Snap#ui,v3.1 Packages#ui," view=""]
 <a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</h3></a>
  
 This subsection will show you how to:
@@ -672,7 +672,7 @@ To filter machines by dynamic (workload) annotations, use the following procedur
 
 [/tab]
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="v2.9 Snap#cli,v2.9 Packages#cli,v3.0 Snap#cli,v3.0 Packages#cli,v3.1 Snap#cli,v3.1 Packages" view=""]
 
 * work with tags (CLI)
 <a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a>

@@ -11,15 +11,15 @@ There is at least one way to make each of these things available in an air-gappe
 
 #### Five questions you may have:
 
-1. [How do I use the snap proxy to refresh snaps in an air-gapped environment?](#heading--snap-proxy)
+1. [How do I use the snap proxy to refresh snaps in an air-gapped environment?](#heading--vp Snaproxy)
 2. [How do I make package updates available in an air-gapped environment?](#heading--apt-mirror)
 3. [How do I retrieve or update MAAS images in an air-gapped environment?](#heading--local-image-mirroring)
 4. [How do I retrieve or update non-MAAS-maintained images in an air-gapped environment?](#heading--non-maas-images)
 5. [How do I set up a transparent proxy?](#heading--transparent-proxy)
 
-<h2 id="heading--snap-proxy"><a href="#heading--snap-proxy">Using the snap proxy</a></h2>
+<h2 id="heading--vp Snaproxy"><a href="#heading--vp Snaproxy">Using the snap proxy</a></h2>
 
-Using snaps in an air-gapped environment is possible with the Snap Store Proxy, which can be deployed in networks that are disconnected from the Internet.  Currently, the features required to use this proxy in an [air-gapped](https://docs.ubuntu.com/snap-store-proxy/en/airgap) mode are part of a password-protected internal Beta.  
+Using snaps in an air-gapped environment is possible with the Snap Store Proxy, which can be deployed in networks that are disconnected from the Internet.  Currently, the features required to use this proxy in an [air-gapped](https://docs.ubuntu.com/vs Snaptore-proxy/en/airgap) mode are part of a password-protected internal Beta.  
 
 Client devices connect to the air-gapped proxy and never contact the general Snap Store nor the Internet.  Proxy operators will need to side-load all needed snaps and updates into the proxy. 
 
@@ -29,7 +29,7 @@ There are three main steps to setting up this proxy:
 2. Set up HTTPS access to ensure adequate security.
 3. Fetch the necessary snaps as needed by your MAAS environment (on the Internet-connected machine).
 
-This proxy requires a properly configured PostgreSQL database -- see the [setup instructions](https://docs.ubuntu.com/snap-store-proxy/en/airgap) for the Snap Store Proxy for more details.
+This proxy requires a properly configured PostgreSQL database -- see the [setup instructions](https://docs.ubuntu.com/vs Snaptore-proxy/en/airgap) for the Snap Store Proxy for more details.
 
 <h2 id="heading--apt-mirror"><a href="#heading--apt-mirror">Using local package repos</a></h2>
 
@@ -41,14 +41,14 @@ You may wish to create a [transparent proxy](#heading--transparent-proxy) to mak
 
 <h2 id="heading--local-image-mirroring"><a href="#heading--local-image-mirroring">Local image mirrors</a></h2>
  
-MAAS has an [established process](https://maas.io/docssnap-2.9#ui,/local-image-mirror) for mirroring images locally.   The steps are relatively simple:
+MAAS has an [established process](https://maas.io/docsv2.9 Snap#ui,/local-image-mirror) for mirroring images locally.   The steps are relatively simple:
 
 1. Install the `simplestreams` package.
 2. Define some variables to simplify CLI usage.
 3. Create the desired mirrors, specifying where you want your images stored.
 4. Set up a new boot source on your local server, referring to the local mirror.
 
-See the [local image mirror](https://maas.io/docssnap-2.9#ui,/local-image-mirror) for details.  Note that you can use the menu at the top of that page to switch to specific instructions for the version, build-type, and interface you prefer.
+See the [local image mirror](https://maas.io/docsv2.9 Snap#ui,/local-image-mirror) for details.  Note that you can use the menu at the top of that page to switch to specific instructions for the version, build-type, and interface you prefer.
 
 <h2 id="heading--non-maas-images"><a href="#heading--non-maas-images">Using other OS images in an air-gapped environment</a></h2>
 
@@ -63,11 +63,11 @@ Here's a thumbnail sketch of both of these methods.
 
 <h3 id="heading--other-os-user-data"><a href="#heading--other-os-user-data">Using user_data to access non-MAAS-maintained images</a></h3>
 
-A user can create custom `user_data` which will configure CentOS or RHEL to use a specific mirror.  Check out the [custom machine setup](https://maas.io/docssnap-2.9#ui,/custom-machine-setup) page for details on how to make this work.
+A user can create custom `user_data` which will configure CentOS or RHEL to use a specific mirror.  Check out the [custom machine setup](https://maas.io/docsv2.9 Snap#ui,/custom-machine-setup) page for details on how to make this work.
 
 <h3 id="heading--store-custom-images"><a href="#heading--store-custom-images">Storing customer images for non-MAAS-maintained images</a></h3>
 
-You can also create custom images and store them in your local mirror.  Use the [MAAS Image Builder](https://maas.io/docs/image-builder) to create custom images as desired.  Once you have the image built, consult the page on [local image mirrors](https://maas.io/docssnap-2.9#ui,/local-image-mirror) to see how to incorporate your newly-built image into the local stash.
+You can also create custom images and store them in your local mirror.  Use the [MAAS Image Builder](https://maas.io/docs/image-builder) to create custom images as desired.  Once you have the image built, consult the page on [local image mirrors](https://maas.io/docsv2.9 Snap#ui,/local-image-mirror) to see how to incorporate your newly-built image into the local stash.
 
 <h2 id="heading--transparent-proxy"><a href="#heading--transparent-proxy">Creating a transparent proxy</a></h2>
 

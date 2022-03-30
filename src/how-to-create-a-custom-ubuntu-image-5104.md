@@ -1,5 +1,5 @@
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1" view="UI,CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
 MAAS supports deploying custom OS images.  Canonical provides both [lp:maas-image-builder](https://launchpad.net/maas-image-builder) and [gh:canonical/packer-maas](https://github.com/canonical/packer-maas) to support creating custom images. These custom images can include static Ubuntu images, created with whatever tool you choose, and deployed as described below. Even so, Canonical suggests [customising Ubuntu](/t/-/5108) using cloud-init user_data or Curtin preseed data whenever possible.
 
 ## About static Ubuntu images
@@ -54,7 +54,7 @@ Currently, custom Ubuntu images can be uploaded using the MAAS CLI,by creating a
 
 When uploading a custom image, there is a new required field: `base_image`. This is not required for non-custom images to be uploaded, but any image with the `custom` prefix will require it.
 [/tab]
-[tab version="snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI,CLI"]
+[tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
 MAAS supports deploying custom DD or TGZ images. Canonical provides both [lp:maas-image-builder](https://launchpad.net/maas-image-builder) and [gh:canonical/packer-maas](https://github.com/canonical/packer-maas) to support creating custom images; however, these tools do not currently support Ubuntu. Instead Canonical suggests [customising Ubuntu](/t/5108) using cloud-init user_data or Curtin preseed data.
 
 ## Why customised Ubuntu deployments aren't supported

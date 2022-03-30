@@ -3,7 +3,7 @@ MAAS VM hosts allow for the dynamic composition of nodes from a pool of availabl
 This article will help you learn:
 
 [tabs]
-[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
+[tab version="v2.9 Snap,v2.9 Packages"]
 - [About VM hosts](#heading--about-vm-hosts)
 - [About VM host storage pools](#heading--about-vm-host-storage-pools)
 - [About LXD vs. libvirt](#heading--about-lxd-vs-libvirt)
@@ -11,7 +11,7 @@ This article will help you learn:
 - [About support for NUMA, SR-IOV, and hugepages](#heading--about-support-for-numa-et-al)
 - [About over-committed resources](#heading--overcommit-resources)
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" view="UI"]
 - [About VM hosts](#heading--about-vm-hosts)
 - [About VM host storage pools](#heading--about-vm-host-storage-pools)
 - [About LXD VM hosts](#heading--about-lxd-vm-hosts)
@@ -22,7 +22,7 @@ This article will help you learn:
 - [About support for NUMA, SR-IOV, and hugepages](#heading--about-support-for-numa-et-al)
 - [About over-committed resources](#heading--overcommit-resources)
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" view="CLI"]
 - [About VM hosts](#heading--about-vm-hosts)
 - [About VM host storage pools](#heading--about-vm-host-storage-pools)
 - [About VMs and NUMA](#heading--about-vms-and-numa)
@@ -32,10 +32,10 @@ This article will help you learn:
 [/tabs]
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI,CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 MAAS currently supports VM hosts and VMs created with LXD VMs and VM hosts as the preferred VM hosting method. As a legacy offering, MAAS still supports VM hosts and VMs created via [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt).
 [/tab]
-[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
+[tab version="v2.9 Snap,v2.9 Packages"]
 MAAS currently supports VM hosts and VMs created via [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt). MAAS also supports LXD VMs and VM hosts as a Beta feature.
 [/tab]
 [/tabs]
@@ -65,12 +65,12 @@ For LXD VM hosts, each VM can be assigned a single block device from the storage
 [/note]
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 The MAAS web UI displays information about each VM host's storage pools so you can understand your resource usage at a glance:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/3387f256f9bd02f7fc2079f119377305256973c8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3387f256f9bd02f7fc2079f119377305256973c8.jpeg"></a>
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 Retrieve VM host storage pool information with the following command:
 
 ```
@@ -93,7 +93,7 @@ maas admin vm-host read 5 \
 <a href="#heading--about-lxd-vm-hosts"><h2 id="heading--about-lxd-vm-hosts">About LXD VM hosts</h2></a>
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" view="UI"]
 <a href="#heading--about-lxd-vm-host-auth"><h3 id="heading--about-lxd-vm-host-auth">About LXD VM host authentication</h3></a>
 
 MAAS 3.1 provides a smoother experience when connecting an existing LXD server to MAAS, guiding the user through manual steps and providing increased connection security with use of certificates. Currently, each MAAS region/rack controller has its own certificate. To add a LXD VM host to MAAS, the user needs to either add the certificate for each controller that can reach the LXD server to the trust list in LXD, or use the trust_password (in which case the controller talking to LXD will automatically add its certificate to the trust).
@@ -148,10 +148,10 @@ VM hosts have several settings. Modify these by selecting the 'Settings' tab and
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/2/253afc122d61145be656bb5c3811f9b6c6caa708.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/253afc122d61145be656bb5c3811f9b6c6caa708.png"></a>
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" view="CLI"]
 Please use the UI interface to interact with LXD VM hosts, by selecting "UI" from the dropdown above.
 [/tab]
-[tab version="deb-2.9#cli,deb-2.9#ui,snap-2.9#cli,snap-2.9#ui," view=""]
+[tab version="v2.9 Packages#cli,v2.9 Packages#ui,v2.9 Snap#cli,v2.9 Snap#ui," view=""]
 LXD VM hosts are not available in MAAS version 2.9.  Please upgrade to MAAS version 3.0 or greater to access this functionality.
 
 <a href="#heading--about-lxd-vs-libvirt"><h2 id="heading--about-lxd-vs-libvirt">About LXD (Beta) vs. libvirt</h2></a>
@@ -177,7 +177,7 @@ MAAS also shows hugepages information (if they are in use) and prevents overcomm
 <a href="#heading--about-support-for-numa-et-al"><h2 id="heading--about-support-for-numa-et-al">About support for NUMA, SR-IOV, and hugepages</h2></a>
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 VM host management has been redesigned to support NUMA/SR-IOV configurations and hugepages from the API/CLI. Users can:
 
 1.  See resources per NUMA node.
@@ -186,7 +186,7 @@ VM host management has been redesigned to support NUMA/SR-IOV configurations and
 
 Via the CLI, users can see more details about NUMA-bearing VM host resources and configure hugepages. Select the relevant "CLI" link in the top menu to access this information.
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 VM host management has been redesigned to support NUMA/SR-IOV configurations and hugepages from the API/CLI. Users can:
 
 1.  See resources per NUMA node.
@@ -209,10 +209,10 @@ The following shows four theoretical examples of these ratios and how they affec
 4.  `128GB physical memory  * 5.5 multiplier  = 704G virtual Memory`
 
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg"></a> 
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 Please use the MAAS UI to view overcommit ratios for NUMA resources.
 [/tab]
 [/tabs]

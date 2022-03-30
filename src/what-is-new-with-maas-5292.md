@@ -1,5 +1,5 @@
 [tabs]
-[tab version="snap-3.2,deb-3.2" view="UI,CLI"]
+[tab version="v3.2 Snap,v3.2 Packages"]
 <h2>MAAS 3.2 Beta 1 release notes</h2>
 We are happy to announce that MAAS 3.2 Beta 1 is soon to be available.  This release provides new features and critical bug fixes.
 
@@ -28,7 +28,7 @@ As you encounter failures, please take the time to [file a bug](https://maas.io/
 <a href="#heading--how-to-install-maas-3-2"><h2 id="heading--how-to-install-maas-3-2">How to install MAAS 3.2</h2></a>
 
 [tabs]
-[tab version="snap-3.2" view="UI,CLI"]
+[tab version="v3.2 Snap"]
 MAAS 3.2 can be installed fresh (recommended) with:
 
 ```
@@ -36,7 +36,7 @@ sudo snap install --channel=3.2/beta maas
 ```
 
 [/tab]
-[tab version="deb-3.2" view="UI,CLI"]
+[tab version="v3.2 Packages"]
 MAAS 3.2 can be installed by adding the `TBD` PPA:
 
 ```
@@ -69,7 +69,7 @@ Here is the breakdown of bugs fixed across the MAAS 3.2 release:
  
 
 [/tab]
-[tab version="snap-3.1,deb-3.1" view="UI,CLI"]
+[tab version="v3.1 Snap,v3.1 Packages"]
 <h2>MAAS 3.1 release notes</h2>
 
 We are happy to announce that MAAS 3.1 is now available. This release provides new features and critical bug fixes.
@@ -103,7 +103,7 @@ Critical and high-priority fixes also extend or repair MAAS features:
 <a href="#heading--installing-3-1-0"><h3 id="heading--installing-3-1-0">How to install MAAS 3.1</h3></a>
 
 [tabs]
-[tab version="snap-3.1" view="UI,CLI"]
+[tab version="v3.1 Snap"]
 MAAS 3.0 can be installed fresh (recommended) with:
 
 ```
@@ -111,7 +111,7 @@ sudo snap install --channel=3.1 maas
 ```
 
 [/tab]
-[tab version="deb-3.1" view="UI,CLI"]
+[tab version="v3.1 Packages"]
 MAAS 3.1 can be installed by adding the `3.1` PPA:
 
 ```
@@ -505,7 +505,7 @@ MAAS 3.1 bug fixes can be found in the following milestones:
  - [MAAS 3.1 Beta1 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta1)
  
 [/tab]
-[tab version="snap-3.0,deb-3.0" view="UI,CLI"] 
+[tab version="v3.0 Snap,v3.0 Packages"] 
 <h2>MAAS 3.0 release notes</h2>
 
 We are happy to announce the release of MAAS 3.0. This release provides new features, along with critical and high-priority [bug fixes](#heading--maas-3-bug-fixes).
@@ -524,14 +524,14 @@ We are happy to announce the release of MAAS 3.0. This release provides new feat
 11. [Consolidation of logs and events](#heading--log-consolidation)
 
 [tabs]
-[tab version="snap-3.0" view="UI,CLI"]
+[tab version="v3.0 Snap"]
 MAAS 3.0 can be installed fresh (recommended) with:
 
 ```
 sudo snap install --channel=3.0/stable maas
 ```
 [/tab]
-[tab version="deb-3.0" view="UI,CLI"]
+[tab version="v3.0 Packages"]
 MAAS 3.0 can be installed by adding the `3.0` PPA:
 
 ```
@@ -917,7 +917,7 @@ Here are the bugs that have been `Fix Released` in MAAS 3.0 Beta 1:
 |[#1916317](https://bugs.launchpad.net/bugs/1916317)|UI is using API to request scripts with full content |Undecided| 
 |[#1919381](https://bugs.launchpad.net/bugs/1919381)|typo "veryiying" in info message in smartctl-validate |Undecided|
 [/tab]
-[tab version="snap-2.9,deb-2.9" view="CLI,UI"] 
+[tab version="v2.9 Snap,v2.9 Packages"] 
 <h2>MAAS 2.9.2 release notes</h2>
 
 We have released MAAS 2.9.2, which contains two new features, and some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.2). The two new features are:
@@ -1090,7 +1090,7 @@ Three new configuration options have been added to the IPMI power driver:
 2. Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
 3. Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
 
-See the [2.9 UI](https://maas.io/docssnap-2.9#ui,/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docssnap-2.9#cli,/power-management#heading--ipmi) power management pages for details.
+See the [2.9 UI](https://maas.io/docsv2.9 Snap#ui,/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docsv2.9 Snap#cli,/power-management#heading--ipmi) power management pages for details.
 
 <h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
 
@@ -1140,7 +1140,7 @@ Commissioning scripts have been reordered and some are now set to run in paralle
 <li>99-maas-01-capture-lldp -> maas-capture-lldp(now runs in parallel)</li>
 </ol>
 
-See the [commissioning logs page](https://maas.io/docssnap-2.9#ui,/commissioning-logs) for more details on these changes.
+See the [commissioning logs page](https://maas.io/docsv2.9 Snap#ui,/commissioning-logs) for more details on these changes.
 
 <h2 id="heading--commissioning-speed">Improvements in commissioning speed and logging</h2>
 
@@ -1165,7 +1165,7 @@ Four improvements have been made to speed up the commissioning process, mostly b
 
 4. Debug [could not be properly enabled for MAAS snap version 2.9.1](https://bugs.launchpad.net/maas/+bug/1914588).  This has been remedied.
 
-5. The MAAS [Backup doc article](https://maas.io/docssnap-2.9#ui,/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
+5. The MAAS [Backup doc article](https://maas.io/docsv2.9 Snap#ui,/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
 
 6. Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue.
 
@@ -1357,7 +1357,7 @@ Three new configuration options have been added to the IPMI power driver:
 2. Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
 3. Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
 
-See the [2.9 UI](https://maas.io/docssnap-2.9#ui,/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docssnap-2.9#cli,/power-management#heading--ipmi) power management pages for details.
+See the [2.9 UI](https://maas.io/docsv2.9 Snap#ui,/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docsv2.9 Snap#cli,/power-management#heading--ipmi) power management pages for details.
 
 <h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
 
@@ -1407,7 +1407,7 @@ Commissioning scripts have been reordered and some are now set to run in paralle
 <li>99-maas-01-capture-lldp -> maas-capture-lldp(now runs in parallel)</li>
 </ol>
 
-See the [commissioning logs page](https://maas.io/docssnap-2.9#ui,/commissioning-logs) for more details on these changes.
+See the [commissioning logs page](https://maas.io/docsv2.9 Snap#ui,/commissioning-logs) for more details on these changes.
 
 <h2 id="heading--commissioning-speed">Improvements in commissioning speed and logging</h2>
 
@@ -1432,7 +1432,7 @@ Four improvements have been made to speed up the commissioning process, mostly b
 
 4. Debug [could not be properly enabled for MAAS snap version 2.9.1](https://bugs.launchpad.net/maas/+bug/1914588).  This has been remedied.
 
-5. The MAAS [Backup doc article](https://maas.io/docssnap-2.9#ui,/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
+5. The MAAS [Backup doc article](https://maas.io/docsv2.9 Snap#ui,/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
 
 6. Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue.
 

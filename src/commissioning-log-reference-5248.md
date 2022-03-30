@@ -1,5 +1,5 @@
 [tabs]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 The command line allows you to retrieve the verbatim logs of commissioning script runs, including those that are currently in progress.
 
 If you only want to see the latest or currently-running result, you can use `current-commissioning`, `current-testing`, or `current-installation` instead of an id:
@@ -71,7 +71,7 @@ maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
 **$RUN_ID** is labelled `id` in the verbose result output.
 [/note]
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 Commissioning logs, which are presented on the "Commissioning" tab for any machine in the "Ready" state, contain a list of commissioning scripts with a timestamp and result.  You can view the detailed logs for each of these scripts from this tab.
 
 When you click on the "Commissioning" tab under a given machine, you will see a screen similar to this one:
@@ -122,19 +122,19 @@ nomodeset ro root=squash:http://192.168.122.2:5248/images/ubuntu/amd64/generic/b
 apt: {preserve_sources_list: false, proxy: 'http://192-168-122-0--24.maas-internal:8000/',
   sources_list: 'deb http://archive.ubuntu.com/ubuntu $RELEASE multiverse universe
     restricted main
-    # deb-src http://archive.ubuntu.com/ubuntu $RELEASE multiverse universe restricted
+    # vs Packagesrc http://archive.ubuntu.com/ubuntu $RELEASE multiverse universe restricted
     main
     deb http://archive.ubuntu.com/ubuntu $RELEASE-updates multiverse universe restricted
     main
-    # deb-src http://archive.ubuntu.com/ubuntu $RELEASE-updates multiverse universe
+    # vs Packagesrc http://archive.ubuntu.com/ubuntu $RELEASE-updates multiverse universe
     restricted main
     deb http://archive.ubuntu.com/ubuntu $RELEASE-security multiverse universe restricted
     main
-    # deb-src http://archive.ubuntu.com/ubuntu $RELEASE-security multiverse universe
+    # vs Packagesrc http://archive.ubuntu.com/ubuntu $RELEASE-security multiverse universe
     restricted main
     deb http://archive.ubuntu.com/ubuntu $RELEASE-backports multiverse universe restricted
     main
-    # deb-src http://archive.ubuntu.com/ubuntu $RELEASE-backports multiverse universe
+    # vs Packagesrc http://archive.ubuntu.com/ubuntu $RELEASE-backports multiverse universe
     restricted main
     '}
 datasource:
@@ -1195,7 +1195,7 @@ The output of this script may be useful when you're trying to verify that a part
 <a href="#heading--40-maas-01-network-interfaces"><h2 id="heading--40-maas-01-network-interfaces">40-maas-01-network-interfaces</h2></a>
 
 [tabs]
-[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
+[tab version="v2.9 Snap,v2.9 Packages"]
 This script is just used to get the IP address, which can then be associated with a VLAN/subnet.  As you can see from the sample (successful) output below, the results are simply the output of a command similar to `ip a`.
 
 ```nohighlight
@@ -1213,7 +1213,7 @@ This script is just used to get the IP address, which can then be associated wit
        valid_lft forever preferred_lft forever
 ```
 [/tab]
-[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" version="UI,CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" version="UI,CLI"]
 The commissioning script `40-maas-01-network-interfaces` is no longer used in MAAS versions 3.0 and higher.
 [/tab]
 [/tabs]

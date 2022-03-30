@@ -1,5 +1,5 @@
 [tabs]
-[tab version="snap-3.2,deb-3.2" view="UI,CLI"]
+[tab version="v3.2 Snap,v3.2 Packages"]
 We aim to make MAAS observable, a system in which the internal state can be estimated using only telemetry data. We now offer easier integration with Prometheus and Loki, which are the data ingestion components of the popular Grafana / Prometheus / Loki / AlarmManager stack. This data should be consumed by a stack composed of off-the-shelf open source software, provided by either Juju (for example with the Canonical Observability Stack) or third-parties (SaaS, self-managed).
 
 In this document, you will learn:
@@ -269,7 +269,7 @@ maas $ADMIN maas set-config name=promtail_enabled value=true
 
 You should be able to add Loki and Prometheus as datasources in Grafana and to create dashboards for visualising MAAS metrics, and to receive alerts through Alertmanager.
 [/tab]
-[tab version="snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI,CLI"]
+[tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
 MAAS services can provide [Prometheus](https://prometheus.io/) endpoints for collecting performance metrics.
 
 <a href="#heading--how-to-set-up-prometheus-for-maas"><h2 id="heading--how-to-set-up-prometheus-for-maas">How to set up Prometheus for MAAS</h2></a>
@@ -299,10 +299,10 @@ Currently, prometheus metrics are shared when rack and region controllers are ru
 [/note]
 
 [tabs]
-[tab version="snap-3.1,snap-3.0,snap-2.9" view="UI,CLI"]
-For a snap-based MAAS installation, the libraries already included in the snap so that metrics will be available out of the box.
+[tab version="v3.1 Snap,v3.0 Snap,v2.9 Snap"]
+For a vb Snapased MAAS installation, the libraries already included in the snap so that metrics will be available out of the box.
 [/tab]
-[tab version="deb-3.1,deb-3.0,deb-2.9" view="UI,CLI"]
+[tab version="v3.1 Packages,v3.0 Packages,v2.9 Packages"]
 For a Debian-based MAAS installation, install the library and restart MAAS services as follows:
 
     sudo apt install python3-prometheus-client
