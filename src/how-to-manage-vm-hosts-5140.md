@@ -1,18 +1,47 @@
 In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself. Once that's done, you can add and manage VM hosts -- and subsequently, create VMs to act as MAAS machines.  This article explains:
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1" view="UI"]
 - [How to set up a VM host bridge with the web UI](#heading--maas-bridge-web-ui)
-[/tab]
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
-- [How to set up a VM host bridge with the MAAS CLI/API](#heading--maas-bridge-cli)
-[/tab]
 - [How to set up a VM host bridge with netplan](#heading--maas-bridge-netplan)
 - [How to set up a VM host bridge with libvirt](#heading--maas-bridge-libvirt)
 - [How to set up SSH for use by libvirt](#heading--set-up-ssh)
 - [How to add a VM host](#heading--adding-a-vm-host)
 - [How to configure a VM host](#heading--configuration)
-[tab version="deb-2.9#cli,snap-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+ - [How to use LXD clusters](#heading--lxd-clusters)
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1" view="CLI"]
+- [How to set up a VM host bridge with the MAAS CLI/API](#heading--maas-bridge-cli)
+- [How to set up a VM host bridge with netplan](#heading--maas-bridge-netplan)
+- [How to set up a VM host bridge with libvirt](#heading--maas-bridge-libvirt)
+- [How to set up SSH for use by libvirt](#heading--set-up-ssh)
+- [How to add a VM host](#heading--adding-a-vm-host)
+- [How to configure a VM host](#heading--configuration)
+- [How to list VM-hosts](#heading--list-vm-hosts)
+- [How to list configurable VM host parameters](#heading--list-config-params)
+- [How to change a VM host's name](#heading--change-vm-host-name)
+- [How to change a VM host's pool](#heading--change-vm-host-pool)
+- [How to list the resources of all VM hosts](#heading--list-resources-of-all-vm-hosts)
+- [How to list the resources of a single VM host](#heading--list-resources-of-a-vm-host)
+- [How to update a VM host's configuration](#heading--update-vm-host-configuration)
+- [How to list a VM host's connection parameters](#heading--list-vm-host-connection-parameters)
+ - [How to use LXD clusters](#heading--lxd-clusters)
+[/tab]
+[tab version="snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+- [How to set up a VM host bridge with the web UI](#heading--maas-bridge-web-ui)
+- [How to set up a VM host bridge with netplan](#heading--maas-bridge-netplan)
+- [How to set up a VM host bridge with libvirt](#heading--maas-bridge-libvirt)
+- [How to set up SSH for use by libvirt](#heading--set-up-ssh)
+- [How to add a VM host](#heading--adding-a-vm-host)
+- [How to configure a VM host](#heading--configuration)
+[/tab]
+[tab version="snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+- [How to set up a VM host bridge with the MAAS CLI/API](#heading--maas-bridge-cli)
+- [How to set up a VM host bridge with netplan](#heading--maas-bridge-netplan)
+- [How to set up a VM host bridge with libvirt](#heading--maas-bridge-libvirt)
+- [How to set up SSH for use by libvirt](#heading--set-up-ssh)
+- [How to add a VM host](#heading--adding-a-vm-host)
+- [How to configure a VM host](#heading--configuration)
 - [How to list VM-hosts](#heading--list-vm-hosts)
 - [How to list configurable VM host parameters](#heading--list-config-params)
 - [How to change a VM host's name](#heading--change-vm-host-name)
@@ -22,9 +51,7 @@ In order to  deploy a VM host in your MAAS network, you first need to set up a b
 - [How to update a VM host's configuration](#heading--update-vm-host-configuration)
 - [How to list a VM host's connection parameters](#heading--list-vm-host-connection-parameters)
 [/tab]
-[tab version="snap-3.1#cli,snap-3.1#ui,deb-3.1#ui,deb-3.1" view=""]
- - [How to use LXD clusters](#heading--lxd-clusters)
-[/tab]
+[/tabs]
 
 To enable VM host networking features, MAAS must match the VM host IP address of a potential VM host with a known device (a machine or controller). For example, if a machine not known to MAAS is set up as a VM host, enhanced interface selection features will not be available.
 
@@ -32,7 +59,8 @@ To enable VM host networking features, MAAS must match the VM host IP address of
 It's essential to enforce usage of IP addresses to avoid domain name conflicts, should different controllers resolve the same domain name with different IP addresses. You should also avoid using 127.0.0.1 when running multiple controllers, as it would confuse MAAS.
 [/note]
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="#heading--maas-bridge-web-ui"><h2 id="heading--maas-bridge-web-ui">How to set up a VM host bridge with the web UI</h2></a>
 
 You can use the MAAS UI to configure a bridge to connect a VM host to MAAS:
@@ -52,8 +80,7 @@ When you're done, it should look something like this:
 Then you can deploy Ubuntu.
 
 [/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 <a href="#heading--maas-bridge-cli"><h2 id="heading--maas-bridge-cli">How to use the MAAS API to configure a bridge</h2></a>
 
 You can also use the MAAS CLI/API to configure a VM host bridge, with the following procedure:
@@ -75,6 +102,7 @@ You can also use the MAAS CLI/API to configure a VM host bridge, with the follow
           maas $PROFILE interface link-subnet $SYSTEM_ID $BRIDGE_ID subnet=$SUBNET_ID mode="STATIC" ip_address="10.0.0.101"
 
 [/tab]
+[/tabs]
 
 <a href="#heading--maas-bridge-netplan"><h2 id="heading--maas-bridge-netplan">How to set up a VM host bridge with netplan</h2></a>
 
@@ -164,7 +192,8 @@ virsh -c qemu+ssh://$USER@$VM_HOST_IP/system list --all
 
 Here, `$USER` is a user on your VM host who is a member of the `libvirtd` Unix group on the VM host, and `$VM_HOST_IP` is the IP of your VM host.  **Note** that insufficient permissions for `$USER` may cause the `virsh` command to fail with an error such as `failed to connect to the hypervisor`. Check the `$USER` group membership to make sure `$USER` is a member of the `libvirtd` group.
 
-[tab version="deb-2.9#ui,deb-2.9#cli,deb-3.0#cli,deb-3.0#ui,deb-3.1#ui,deb-3.1" view=""]
+[tabs]
+[tab version="deb-3.2,deb-3.1,deb-3.0,deb-2.9" view="UI,CLI"]
 <a href="#heading--libvirt-ssh"><h3 id="heading--libvirt-ssh">How to set up SSH (libvirt only)</h3></a>
 
 The `maas` user on your rack controllers will issue all libvirt commands. Therefore, you'll need to set up SSH public keys on every rack controller for user `maas`.  First create SSH keys on all rack controllers:
@@ -178,8 +207,7 @@ root@maas:~$ ssh-keygen -f id_rsa
 
 Next, add the contents of `~maas/.ssh/id_rsa.pub` to the VM host user's `~$USER/.ssh/authorized_keys`. To accomplish this, log into your VM host node, via SSH, from a host for which MAAS has a matching public SSH key.
 [/tab]
-
-[tab version="snap-2.9#ui,snap-2.9#cli,snap-3.0#ui,snap-3.0#cli,snap-3.1#ui,snap-3.1" view=""]
+[tab version="snap-3.2,snap-3.1,snap-3.0,snap-2.9" view="UI,CLI"]
 <a href="#heading--set-up-ssah-lv"><h3 id="heading--set-up-ssah-lv">How to set up SSH (libvirt only)</h3></a>
 
 If you installed MAAS via snap, then create the needed SSH keys this way:
@@ -192,22 +220,19 @@ sudo ssh-keygen -f id_rsa
 
 Finally, on the VM host, you'll need to add `id_rsa.pub` to the `authorized_keys` file in `/home/<vm-host-user-homedir-name>/.ssh/`,  where `<vm-host-user-homedir-name>` is the name of your VM host user.
 [/tab]
+[/tabs]
 
 <a href="#heading--adding-a-vm-host"><h2 id="heading--adding-a-vm-host">How to add a VM host</h2></a>
 
-[tab version="deb-2.9#ui,snap-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1" view="UI"]
 After installing MAAS, the 'KVM' page is typically empty:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/883a61d38dea2c04010bf9286f0c68700b14975c.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/883a61d38dea2c04010bf9286f0c68700b14975c.png"></a>
 
-[/tab]
- 
-[tab version="snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 If you want to add a LXD (or [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt)) KVM host to a machine which is already installed, you can do so with the 'Add KVM' button:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg"></a>
 
-[tab version="snap-3.1#ui,deb-3.1#ui," view=""]
 ### How to authenticate LXD VM hosts via certficates
 
 Suppose that you're creating a new LXD KVM, beginning from the top tab in MAAS:
@@ -278,16 +303,27 @@ Paste or upload your certificate and private key, then click "Next" to validate 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png"></a>
 
-[/tab]
-
 Upon selecting "Authenticate" (assuming successful authentication), you will receive a project selection screen similar to this:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/346c8e29fc8d4b74507843a956865ebd254aad57.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/346c8e29fc8d4b74507843a956865ebd254aad57.jpeg"></a>
 
 You must either enter a new project name (which cannot contain spaces or special characters), or you must select an existing project.  If you're not really planning on using projects, selecting the "default" project will allow you to continue working as you have in the past.
 [/tab]
- 
-[tab version="deb-2.9#ui,snap-2.9#ui," view=""]
+[tab version="snap-3.0,deb-3.0" view="UI"]
+After installing MAAS, the 'KVM' page is typically empty:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/8/883a61d38dea2c04010bf9286f0c68700b14975c.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/883a61d38dea2c04010bf9286f0c68700b14975c.png"></a>
+
+If you want to add a LXD (or [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt)) KVM host to a machine which is already installed, you can do so with the 'Add KVM' button:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg"></a>
+
+[/tab]
+[tab version="snap-2.9,deb-2.9" view="UI"]
+After installing MAAS, the 'KVM' page is typically empty:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/8/883a61d38dea2c04010bf9286f0c68700b14975c.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/883a61d38dea2c04010bf9286f0c68700b14975c.png"></a>
+
 If you want to add a [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) or LXD VM host to a machine which is already installed, you can do so with the 'Add KVM' button:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/197ae57b89b32546cf054fff49452f9025354af8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/197ae57b89b32546cf054fff49452f9025354af8.jpeg"></a> 
@@ -299,9 +335,9 @@ Here, 'Virsh address' typically looks like the following for libvirt:
 of like this for LXD (Beta):
 
     https://10.0.0.100:8443
+
 [/tab]
-    
-[tab version="snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="CLI"]
 To add a VM host:
 
 ```nohighlight
@@ -333,8 +369,7 @@ maas $PROFILE vm-hosts create type=lxd power_address=$LXD_BRIDGE_ADDRESS \
 
 Note that for LXD VM hosts, a project name is not optional.  Project names cannot contain spaces or special characters. If you enter a project name which doesn't exist, MAAS will create the LXD project for you.
 [/tab]
- 
-[tab version="deb-2.9#cli,snap-2.9" view=""]
+[tab version="snap-2.9,deb-2.9" view="CLI"]
 To add a VM host:
 
 ```nohighlight
@@ -372,22 +407,20 @@ To create a KVM host, enter the following:
 maas $PROFILE vm-hosts create type=virsh power_address=qemu+ssh://ubuntu@192.168.1.2/system
 ```
 [/tab]
+[/tabs]
 
 [note]
 MAAS will automatically discover and store the resources your VM host contains. Any existing machines will also appear on the 'Machines' page, and MAAS will automatically attempt to commission them.
 [/note]
 
-
 <a href="#heading--configuration"><h2 id="heading--configuration">How to configure a VM host</h2></a>
 
-[tab version="deb-2.9#ui,snap-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 VM hosts have several configuration options. Modify these by selecting the 'Configuration' tab and editing options directly.  These options include a VM host's location, password, network zone, resource pool, and memory and CPU overcommit sliders.
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/8b3fc96a8f1a1e4b25413a9f60388dc04dd886c9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8b3fc96a8f1a1e4b25413a9f60388dc04dd886c9.png"></a>
 [/tab]
-
-[tab version="deb-2.9#cli,snap-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 Using the CLI, it's possible to update the configuration of a VM host.  You can change these configurable parameters with an `update` command -- but first, you'll want to know how to check the values of configurable parameters, both before and after the change.
 
 <a href="#heading--list-vm-hosts"><h3 id="heading--list-vm-hosts">How to list VM-hosts</h3></a>
@@ -457,9 +490,7 @@ maas admin resource-pools create name=$NEW_POOL_NAME
 ```
 
 Then double-check it with `catvmpools`, and assign your VM host to it using the earlier command. 
-[/tab]
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 <a href="#heading--list-resources-of-all-vm-hosts"><h2 id="heading--list-resources-of-all-vm-hosts">How to list the resources of all VM hosts</h2></a>
 
 ```nohighlight
@@ -519,12 +550,11 @@ Example output:
     "power_user": "admin"
 }
 ```
-
 [/tab]
 
-[tab version="snap-3.1#cli,snap-3.1#ui,deb-3.1#ui,deb-3.1" view=""]
 <a href="#heading--lxd-clusters"><h3 id="heading--lxd-clusters">LXD clusters</h3></a>
 
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1" view="UI,CLI"]
 MAAS 3.1 allows MAAS to take advantage of the existing LXD clustering capability.
 
 <a href="#heading--about-lxd-clusters"><h4 id="heading--about-lxd-clusters">About LXD clusters</h4></a>
@@ -572,3 +602,7 @@ To delete a LXD cluster, delete any one VM host within the cluster, this will de
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png"></a>
 
 [/tab]
+[tab version="snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI,CLI"]
+LXD clusters are available to MAAS starting with MAAS version 3.1.
+[/tab]
+[/tabs]

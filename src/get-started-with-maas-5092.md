@@ -1,10 +1,10 @@
 An evolving example may be useful to introduce you to MAAS, and it doesn't have to be comprehensive --  just coherent and plausible.  This example will continue to expand and update over time.
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a> 
 [/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 ```
 FQDN               POWER  STATUS     OWNER  TAGS     POOL       NOTE     ZONE
 ----               -----  ------     -----  ----     ----       ----     ----
@@ -29,6 +29,7 @@ maas admin machines read | jq -r '(["FQDN","POWER","STATUS",
 
 Be aware that newly-created machines will only have default settings for tags, resource pools, zones, and notes, and will probably all be in the "Ready" state, with no owner.
 [/tab]
+[/tabs]
 
 So imagine that you're the IT administrator for a new, 100-bed hospital that's under construction, intended to serve a suburban community of 5,000 people.  Call it "Metaphorical General Hospital" (MGH).   Your job is to design a flexible data centre for this facility.  You've decided to start with MAAS as your tool of choice, and for this planning exercise, you'll use VMs in a VM host.
 
@@ -45,7 +46,7 @@ You'll need to start with a little network thinking (and design).  Talking throu
 <tr><td>Food service</td><td>Instrumentation</td><td>Information technology</td></tr>
 </table>
 
-You can handle this lowest level with individual [machines](/t/about-machines/nnnn).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
+You can handle this lowest level with individual [machines](/t/about-machines/5080).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
 
 <details>
 <summary>
@@ -129,9 +130,13 @@ No need to create a lot of VMs for this example (unless you just want to do so).
 
 <a href="#heading--manually-add-machines"><h3 id="heading--manually-add-machines">Manually adding machines</h3></a>
 
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/how-to-manage-machines/nnnn#heading--how-to-add-a-machine-manually) to MAAS that correspond to your VMs.
+Once you've created the necessary VMs, you'll want to [manually add machines](/t/how-to-manage-machines/5160#heading--how-to-add-a-machine-manually) to MAAS that correspond to your VMs.
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+<a href="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg"></a> 
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 ```
 FQDN               POWER  STATUS  OWNER  TAGS     POOL     NOTE  ZONE
 ----               -----  ------  -----  ----     ----     ----  ----
@@ -161,15 +166,37 @@ FQDN               POWER  STATUS  OWNER  TAGS     POOL     NOTE  ZONE
 52-54-00-9c-51-00  off    Ready   -      virtual  default  -     default
 ```
 [/tab]
-
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-<a href="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg"></a> 
-[/tab]
+[/tabs]
 
 <details>
 <summary><em>Try it!</em></summary>
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+Creating a machine from a VM requires about a dozen pieces of information, most of which you can gather from the VM itself:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/bc6c18c0fd31367bd4a9909fb7d954dc06f15c40.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bc6c18c0fd31367bd4a9909fb7d954dc06f15c40.jpeg"></a> 
+
+In the left column, you're only required to enter a machine name and the machine's MAC address:  
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/1de8d7afae996292d71e9787641bf0317b2327c9.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/1de8d7afae996292d71e9787641bf0317b2327c9.jpeg"></a> 
+
+Here, we've assigned a variant of the MAC address as the machine name.  Note that the machine name cannot include colons (":"), we've substituted dashes.  In the right column, it's necessary to choose the power type.  When enlisting VMs, the correct power type is "Virsh," as shown below:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/aa076ee437ce481808bb5f41320a45e60f3676de.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/aa076ee437ce481808bb5f41320a45e60f3676de.jpeg"></a> 
+
+For default configurations, the Virsh Address is "qemu+ssh://[your-login-id]@192.168.122.1/system;" replace "[your-login-id]" with your username or login ID on the machine where you're hosting MAAS and the Virtual Machine Manager.  Likewise, the password is your normal login password for the same host.  Finally, you can retrieve the Virsh VM ID from the "Overview" screen of the VM itself:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/79e135e48576bb6f455dd42fd7a09a2c7448d221.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/79e135e48576bb6f455dd42fd7a09a2c7448d221.jpeg"></a> 
+</details>
+
+As you add machines, they automatically commission:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/37f1df9e4072b29c7183d4ae8ec1768504c4f66f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/37f1df9e4072b29c7183d4ae8ec1768504c4f66f.jpeg"></a> 
+
+When finished, the commissioned machines with be at the "Ready" state.
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 Creating a machine from a VM requires six pieces of information:
 
 1. the machine architecture (e.g., amd64)
@@ -203,37 +230,38 @@ For default configurations, the Virsh Address is "qemu+ssh://[your-login-id]@192
 As you add machines, they automatically commission.
 
 [/tab]
+[/tabs]
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-Creating a machine from a VM requires about a dozen pieces of information, most of which you can gather from the VM itself:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/bc6c18c0fd31367bd4a9909fb7d954dc06f15c40.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bc6c18c0fd31367bd4a9909fb7d954dc06f15c40.jpeg"></a> 
-
-In the left column, you're only required to enter a machine name and the machine's MAC address:  
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/1de8d7afae996292d71e9787641bf0317b2327c9.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/1de8d7afae996292d71e9787641bf0317b2327c9.jpeg"></a> 
-
-Here, we've assigned a variant of the MAC address as the machine name.  Note that the machine name cannot include colons (":"), we've substituted dashes.  In the right column, it's necessary to choose the power type.  When enlisting VMs, the correct power type is "Virsh," as shown below:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/aa076ee437ce481808bb5f41320a45e60f3676de.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/aa076ee437ce481808bb5f41320a45e60f3676de.jpeg"></a> 
-
-For default configurations, the Virsh Address is "qemu+ssh://[your-login-id]@192.168.122.1/system;" replace "[your-login-id]" with your username or login ID on the machine where you're hosting MAAS and the Virtual Machine Manager.  Likewise, the password is your normal login password for the same host.  Finally, you can retrieve the Virsh VM ID from the "Overview" screen of the VM itself:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/79e135e48576bb6f455dd42fd7a09a2c7448d221.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/79e135e48576bb6f455dd42fd7a09a2c7448d221.jpeg"></a> 
-</details>
-
-As you add machines, they automatically commission:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/37f1df9e4072b29c7183d4ae8ec1768504c4f66f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/37f1df9e4072b29c7183d4ae8ec1768504c4f66f.jpeg"></a> 
-
-When finished, the commissioned machines with be at the "Ready" state.
-[/tab]
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
-Assigning machines to specific functions is something you can do after you [commission](/t/how-to-deploy-machines/nnnn#heading--how-to-commission-a-machine) and [deploy](/t/how-to-deploy-machines/nnnn) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/about-tags-and-annotations/nnnn) to machines.  
+Assigning machines to specific functions is something you can do after you [commission](/t/how-to-deploy-machines/5112#heading--how-to-commission-a-machine) and [deploy](/t/how-to-deploy-machines/5112) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/about-tags-and-annotations/5088) to machines.  
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tabs]
+[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,/deb-3.1#ui," view=""]
+<a href="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg"></a> 
+
+<details>
+<summary><em>Try it!</em></summary>
+Adding a tag to a machine is simple.  Just decide which machine you want to tag:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/4f32fb8105ecee30afd0f3ca226b265dffe6e11b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/4f32fb8105ecee30afd0f3ca226b265dffe6e11b.jpeg"></a> 
+
+You'll want to click on the machine name (in this case, the MAC address), and then choose "Configuration" on the next screen that comes up.  This will bring you to a screen from which you can edit some parameters about the machine:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/c31a50cebf68c8c5fbfbbe0115bb5c1daeb84ae8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c31a50cebf68c8c5fbfbbe0115bb5c1daeb84ae8.jpeg"></a> 
+
+Click on "Edit," and then add a tag name to the "Tags" field.  Tags are automatically remembered by MAAS, so the next time you want to enter the same tag, an auto-complete field will appear, as shown below:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/39a0e2f01ba7f3dc141bcf57c09b4e62f737525d.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/39a0e2f01ba7f3dc141bcf57c09b4e62f737525d.jpeg"></a> 
+
+Select "Save changes" to add the tag(s) to the machine.  When you return to the machine list, you'll note that the tag is now associated with that machine:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/8a21ca291aa800440d9074270ab9d9108cff9be1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8a21ca291aa800440d9074270ab9d9108cff9be1.jpeg"></a> 
+
+</details>
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 ```
 FQDN               POWER  STATUS  OWNER  TAGS     POOL     NOTE  ZONE
 ----               -----  ------  -----  ----     ----     ----  ----
@@ -271,30 +299,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID"]
 
 </details>
 [/tab]
-
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,/deb-3.1#ui," view=""]
-<a href="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg"></a> 
-
-<details>
-<summary><em>Try it!</em></summary>
-Adding a tag to a machine is simple.  Just decide which machine you want to tag:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/4f32fb8105ecee30afd0f3ca226b265dffe6e11b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/4f32fb8105ecee30afd0f3ca226b265dffe6e11b.jpeg"></a> 
-
-You'll want to click on the machine name (in this case, the MAC address), and then choose "Configuration" on the next screen that comes up.  This will bring you to a screen from which you can edit some parameters about the machine:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/c31a50cebf68c8c5fbfbbe0115bb5c1daeb84ae8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c31a50cebf68c8c5fbfbbe0115bb5c1daeb84ae8.jpeg"></a> 
-
-Click on "Edit," and then add a tag name to the "Tags" field.  Tags are automatically remembered by MAAS, so the next time you want to enter the same tag, an auto-complete field will appear, as shown below:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/39a0e2f01ba7f3dc141bcf57c09b4e62f737525d.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/39a0e2f01ba7f3dc141bcf57c09b4e62f737525d.jpeg"></a> 
-
-Select "Save changes" to add the tag(s) to the machine.  When you return to the machine list, you'll note that the tag is now associated with that machine:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/8a21ca291aa800440d9074270ab9d9108cff9be1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8a21ca291aa800440d9074270ab9d9108cff9be1.jpeg"></a> 
-
-</details>
-[/tab]
+[/tabs]
 
 Tags can will help you keep up with which machine(s) are covering which functions as you apply your apps.  You can search and filter by tags, and you can utilise tags from within the API, as well.
 
@@ -325,27 +330,13 @@ As you look at the list of functions you've created, and talk more with the staf
 <tr><td>Instrumentation</td><td>Information technology</td><td></td></tr>
 </table>
 
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/about-machines/nnnn#heading--about-resource-pools) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
+You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/about-machines/5080#heading--about-resource-pools) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
 
 <details>
 <summary><em>Try it!</em></summary>
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
-Just like tags, you must first create a resource pool before assigning a machine to it.
-Here’s an example that demonstrates how to create a new resource pool named "myresource" in a single command; note that the description field is optional, but often very helpful:
-
-```
-maas $PROFILE resource-pools create name=myresource description="A new resource pool."
-```
-
-Once you've created the pool you want, you can add a machine that pool with the following command:
-
-```
-maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
-```
-[/tab]
-
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view=""]
 Notice at the top of the machine list, there is a tab labelled, "Resource pools:"
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/f7d4c52a176f53f29a0c1ac3190e7abb563dc993.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f7d4c52a176f53f29a0c1ac3190e7abb563dc993.jpeg"></a> 
@@ -370,12 +361,31 @@ Just choose the one you want for this machine (in our example, ProServ) and you'
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/0cff1cf26f28236dbabc89b14a92c69435934933.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0cff1cf26f28236dbabc89b14a92c69435934933.jpeg"></a> 
 [/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+Just like tags, you must first create a resource pool before assigning a machine to it.
+Here’s an example that demonstrates how to create a new resource pool named "myresource" in a single command; note that the description field is optional, but often very helpful:
+
+```
+maas $PROFILE resource-pools create name=myresource description="A new resource pool."
+```
+
+Once you've created the pool you want, you can add a machine that pool with the following command:
+
+```
+maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
+```
+[/tab]
+[/tabs]
 
 </details>
 
 Here's a snippet of the updated machine list, with all machines added to the appropriate resource pool:
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+<a href="https://discourse.maas.io/uploads/default/original/1X/704b6d1603f6f90fca42891d98c3bb418458b94a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/704b6d1603f6f90fca42891d98c3bb418458b94a.jpeg"></a> 
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 ```
 FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
 ----               -----  ------  -----  ----     ----       ----  ----
@@ -389,10 +399,7 @@ FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
 52-54-00-2e-ee-17  off    Ready   admin  Charts   ProServ    -     default
 ```
 [/tab]
-
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-<a href="https://discourse.maas.io/uploads/default/original/1X/704b6d1603f6f90fca42891d98c3bb418458b94a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/704b6d1603f6f90fca42891d98c3bb418458b94a.jpeg"></a> 
-[/tab]
+[/tabs]
 
 Resource pools are mostly for your use, helping you to budget servers within a given category.  Untagged servers can be in a pool, so if you've got five servers in the "Prescriber controls" resource pool, you can tag them with "Pharmacy," "Medication reconciliation," etc., as you use them.  It will also be obvious when you're running low on servers for that pool, and need to either provision more or move some unused ones from another pool.
 
@@ -400,11 +407,11 @@ Resource pools are mostly for your use, helping you to budget servers within a g
 
 Another optional identifier for machines is the "Note" field.  While it can be long, a portion of it shows up on the machine list, which makes it useful for adding special identifiers or groupings.  In this example, we've added a vague identifier which might help an IT admin remember server locations or access rights.
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/8724395dfe9fc4d3f4a10a05687c33c6a3dded07.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8724395dfe9fc4d3f4a10a05687c33c6a3dded07.jpeg"></a> 
 [/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 ```
 FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE     ZONE
 ----               -----  ------  -----  ----     ----       ----     ----
@@ -418,21 +425,13 @@ FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE     ZONE
 52-54-00-2e-ee-17  off    Ready   admin  Charts   ProServ    @md-all  default
 ```
 [/tab]
+[/tabs]
 
 <details>
 <summary><em>Try it!</em></summary>
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
-To add a note to a machine, you'll first need to determine its system ID (see above).  Once you have that, you can add or change a note like this:
-
-```
-maas $PROFILE machine update $SYSTEM_ID description="note"
-```
-
-It helps very much to keep your notes short, since only a few characters are visible on the machine list.
-[/tab]
-
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 You can edit notes by clicking on a machine name in the machine list, switching to the "Configuration" tab, and selecting the "Edit" button.  These choices will bring you to a screen like this one:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a9d61f28a4ada7d97ff6f896d2f1e8e719ad680b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a9d61f28a4ada7d97ff6f896d2f1e8e719ad680b.jpeg"></a> 
@@ -445,6 +444,16 @@ When you save the changes and return to the machine list, you'll notice that the
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/46cf42808ef44829f1c610e479d6dfb62af2d898.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/46cf42808ef44829f1c610e479d6dfb62af2d898.jpeg"></a> 
 [/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+To add a note to a machine, you'll first need to determine its system ID (see above).  Once you have that, you can add or change a note like this:
+
+```
+maas $PROFILE machine update $SYSTEM_ID description="note"
+```
+
+It helps very much to keep your notes short, since only a few characters are visible on the machine list.
+[/tab]
+[/tabs]
 
 </details>
 
@@ -469,7 +478,11 @@ Looking over your design, you notice that some of these resource pools must have
 
 Each of these higher-level groupings is ideal for a VLAN, so you create six of them, one for each division:
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+<a href="https://discourse.maas.io/uploads/default/original/1X/7245ed378ce0b9000aaf6f15b16ea16dbde2fccf.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7245ed378ce0b9000aaf6f15b16ea16dbde2fccf.jpeg"></a> 
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 ```
 FABRIC    VLAN                   DHCP
 ------    ----                   ----
@@ -488,31 +501,15 @@ You can generate this list with the command:
 maas admin vlans read $FABRIC_ID | jq -r '(["FABRIC","VLAN","DHCP"] | (., map(length*"-"))), (.[] | [.fabric, .name, .dhcp_on]) | @tsv' | column -t
 ```
 [/tab]
-
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-<a href="https://discourse.maas.io/uploads/default/original/1X/7245ed378ce0b9000aaf6f15b16ea16dbde2fccf.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7245ed378ce0b9000aaf6f15b16ea16dbde2fccf.jpeg"></a> 
-[/tab]
+[/tabs]
 
 <details>
 <summary><em>Try it!</em></summary>
 
 Adding a functional VLAN requires some additional (common) networking aspects, which we'll cover later.  In the meantime, though, here's the short version of adding and naming the VLAN itself.  
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
-To create additional VLANs, choose the fabric where you want them to be added, and enter the following command, once for each new VLAN:
-
-```
-maas admin vlans create $FABRIC_ID name=$VLAN_NAME vid=$VLAN_ID
-```
-
-For example, to create the "Caregiver Services" VLAN with VID 100 on fabric 0, enter the following command:
-
-```
-maas admin vlans create 0 name="Caregiver_Services" vid=100
-```
-[/tab]
-
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 From anywhere on the MAAS page, select "Subnets" from the top menu-bar, which brings you to this screen:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/befd3a3eb5987d412477d0a076d16a50e81dae30.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/befd3a3eb5987d412477d0a076d16a50e81dae30.jpeg"></a> 
@@ -531,6 +528,20 @@ Enter the Name and ID of the VLAN, and select the fabric to enclose it (in this 
 
 When you're satisfied with your choices, select "Add VLAN" to complete the operation.
 [/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+To create additional VLANs, choose the fabric where you want them to be added, and enter the following command, once for each new VLAN:
+
+```
+maas admin vlans create $FABRIC_ID name=$VLAN_NAME vid=$VLAN_ID
+```
+
+For example, to create the "Caregiver Services" VLAN with VID 100 on fabric 0, enter the following command:
+
+```
+maas admin vlans create 0 name="Caregiver_Services" vid=100
+```
+[/tab]
+[/tabs]
 
 </details>
 
@@ -551,7 +562,6 @@ Considering your network design so far, you notice that some of the VLANs need t
 
 You want to incorporate these highest-level groupings into your network, but how?  MAAS provides the answer with fabrics.  A fabric is a set of interconnected VLANs that can communicate, so you simply create three fabrics, each covering one of these top-level categories.
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 <details>
 <summary><em>Try it!</em></summary>
 
@@ -578,9 +588,12 @@ You can click "Edit" and choose the desired fabric from the drop-down list:
 Finally, click "Save summary" to move this VLAN to the desired fabric.  The end result of assigning our example VLANs to the three fabrics is shown below.
 
 </details>
-[/tab]
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+<a href="https://discourse.maas.io/uploads/default/original/1X/23c214cd6836dd783347f050f2cdba04da7bcaa1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/23c214cd6836dd783347f050f2cdba04da7bcaa1.jpeg"></a>
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 ```
 FABRIC              VLAN                   DHCP  
 ------              ----                   ----  
@@ -592,9 +605,6 @@ Patient_Management  Caregiver_Services     False
                     Medication_Management  False
 ```
 [/tab]
+[/tabs]
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-<a href="https://discourse.maas.io/uploads/default/original/1X/23c214cd6836dd783347f050f2cdba04da7bcaa1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/23c214cd6836dd783347f050f2cdba04da7bcaa1.jpeg"></a>
-[/tab]
 
-<!-- comment -->

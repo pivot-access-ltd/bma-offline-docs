@@ -2,27 +2,60 @@ Machines are the heart of MAAS. They are the backbone of your data centre applic
 
 In this article, you will learn:
 
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI"]
 * [About the machine life-cycle](#heading--about-the-machine-life-cycle)
 * [About testing hardware](#heading--about-testing-hardware)
 * [About adding machines](#heading--about-adding-machines)
-[tab version="snap-3.1#ui,snap-3.1#cli,deb-3.1#ui,deb-3.1" view=""]
 * [About cloning machines](#heading--about-cloning-machines)
 * [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
-[/tab]
-[tab version="snap-3.0#ui,snap-2.9#ui,deb-3.0#ui,deb-2.9#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 * [About the machine list](#heading--about-the-machine-list)
 * [About the machine summary](#heading--about-the-machine-summary)
-[/tab]
 * [About tags](#heading--about-tags)
 * [About storage](#heading--about-storage)
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="CLI"]
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="snap-2.9,deb-2.9" view="UI"]
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About the machine list](#heading--about-the-machine-list)
+* [About the machine summary](#heading--about-the-machine-summary)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="snap-2.9,deb-2.9" view="CLI"]
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[/tabs]
 
-<a href="#heading--about-the-machine-life-cycle"><h2 id="heading--about-the-machine-life-cycle">About the machine life-cycle</h2></a>
+ <a href="#heading--about-the-machine-life-cycle"><h2 id="heading--about-the-machine-life-cycle">About the machine life-cycle</h2></a>
 
 One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, acquired, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
 
-[tab version="snap-3.1#cli,deb-3.1#cli,snap-3.1#ui,deb-3.1#ui," view=""]
+<a href="#heading--enlisting-deployed-machines"><h3 id="heading--enlisting-deployed-machines">About enlisting deployed machines</h3></a>
+
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1" view="UI,CLI"]
 In addition, already-deployed machines can be enlisted by MAAS, via the MAAS 3.1 CLI, and their operating parameters can be gathered with a special MAAS script.  Because already-deployed machines were not deployed by MAAS, most of the standard MAAS commands will not affect the machine and may, at times, return some odd results.  This is not errant behaviour; the goal of enlisting deployed machines is to avoid disturbing their workload.  These unusual behaviours will be documented throughout this article and the following machine articles.
 [/tab]
+[tab version="snap-3.0,deb-3.0" view="UI,CLI"]
+MAAS version 3.0 cannot enlist deployed machines. Please upgrade to MAAS version 3.1 or greater to gain this capability.
+[/tab]
+[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
+MAAS version 2.9 cannot enlist deployed machines. Please upgrade to MAAS version 3.1 or greater to gain this capability.
+[/tab]
+[/tabs]
 
 All of these states and actions represent the possible life-cycle of a machine.  This life-cycle isn't strict or linear -- it depends on how you use a machine -- but it's useful to give a general overview of how machines tend to change states.  In the discussion that follows, states and actions are shown in **bold** type.
 
@@ -48,28 +81,8 @@ All of these states and actions represent the possible life-cycle of a machine. 
 
 Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it's not very useful to make a state diagram or flowchart.  Instead, consider the following table:
 
-[tab version="snap-3.0#cli,deb-3.0#cli,snap-3.0#ui,deb-3.0#ui,snap-2.9#cli,deb-2.9#cli,snap-2.9#ui,deb-2.9#ui," view=""]
-| Action/State | New | Ready | Acquired | Deployed | Locked | Rescue | Broken |
-|:-------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|	
-| Commission   | X   | X     |          |          |        |        |   X    |
-| Acquire      |     | X     |          |          |        |        |        |
-| Deploy       |     | X     |   X      |          |        |        |        |
-| Release      |     |       |   X      |    X     |        |        |        |
-| Power on     |     |       |          |    X     |        |        |   X    |
-| Power off    |     |       |          |          |        |        |        |
-| Test         | X   | X     |   X      |    X     |        |        |   X    |
-| Rescue mode  | X   | X     |   X      |    X     |        |        |   X    |
-| Exit rescue  |     |       |          |          |        |   X    |        |
-| Mark broken  |     |       |   X      |    X     |        |        |        |
-| Mark fixed   |     |       |          |          |        |        |   X    |
-| Lock         |     |       |          |    X     |        |        |        |
-| Unlock       |     |       |          |          |   X    |        |        |
-| Tag          | X   | X     |   X      |    X     |        |   X    |   X    |
-| Set zone     | X   | X     |   X      |    X     |        |   X    |   X    |
-| Set...pool   | X   | X     |   X      |    X     |        |   X    |   X    |
-| Delete       | X   | X     |   X      |    X     |        |   X    |   X    |
-[/tab]
-[tab version="snap-3.1#cli,deb-3.1#cli,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1" view="UI,CLI"]
 | Action/State | New | Ready | Acquired | Deployed | Locked | Rescue | Broken | Enlist deployed |
 |:-------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|:---------------:|	
 | Commission   | X   | X     |          |          |        |        |   X    |  X (w/scripts)  |
@@ -92,17 +105,93 @@ Since these actions are not necessarily sequential, and the available actions ch
 
 *Machine is removed from the view of MAAS, but remains deployed with original workload.
 [/tab]
+[tab version="snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI,CLI"]
+| Action/State | New | Ready | Acquired | Deployed | Locked | Rescue | Broken |
+|:-------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|	
+| Commission   | X   | X     |          |          |        |        |   X    |
+| Acquire      |     | X     |          |          |        |        |        |
+| Deploy       |     | X     |   X      |          |        |        |        |
+| Release      |     |       |   X      |    X     |        |        |        |
+| Power on     |     |       |          |    X     |        |        |   X    |
+| Power off    |     |       |          |          |        |        |        |
+| Test         | X   | X     |   X      |    X     |        |        |   X    |
+| Rescue mode  | X   | X     |   X      |    X     |        |        |   X    |
+| Exit rescue  |     |       |          |          |        |   X    |        |
+| Mark broken  |     |       |   X      |    X     |        |        |        |
+| Mark fixed   |     |       |          |          |        |        |   X    |
+| Lock         |     |       |          |    X     |        |        |        |
+| Unlock       |     |       |          |          |   X    |        |        |
+| Tag          | X   | X     |   X      |    X     |        |   X    |   X    |
+| Set zone     | X   | X     |   X      |    X     |        |   X    |   X    |
+| Set...pool   | X   | X     |   X      |    X     |        |   X    |   X    |
+| Delete       | X   | X     |   X      |    X     |        |   X    |   X    |
+[/tab]
+[/tabs]
 
 When a machine is in the state listed in a column, it is possible to take the row actions marked with an "X."
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui," view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1" view="UI"]
 You access these actions from the "Take action" menu in the upper right corner of the machine listing.  Note that some actions, such as "Mark broken" or "Lock," may be hidden when they are not available.
-[/tab]
 
-[tab version="snap-3.1#ui,deb-3.1#ui," view=""]
 In the case of already-deployed machines enlisted by MAAS, some of the possible actions may appear to be available, but either don't work or ultimately appear to fail, without affecting the actual status of the deployed machine.
 [/tab]
-[tab version="snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-2.9,deb-2.9,snap-3.0,deb-3.0" view="UI"]
+You access these actions from the "Take action" menu in the upper right corner of the machine listing.  Note that some actions, such as "Mark broken" or "Lock," may be hidden when they are not available.
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1" view="CLI"]
+You can change machine state, via the CLI, with the `machine` command, which offers the following options:
+
+```nohighlight
+$ maas admin machine -h
+usage: maas admin machine [-h] COMMAND ...
+
+Manage an individual machine.
+
+optional arguments:
+  -h, --help            show this help message and exit
+
+drill down:
+  COMMAND
+    details             Get system details
+    power-parameters    Get power parameters
+    set-workload-annotations
+			Set key=value data
+    set-owner-data      Deprecated, use set-workload-annotations.
+    query-power-state   Get the power state of a node
+    power-on            Turn on a node
+    power-off           Power off a node
+    test                Begin testing process for a node
+    override-failed-testing
+			Ignore failed tests
+    abort               Abort a node operation
+    deploy              Deploy a machine
+    release             Release a machine
+    commission          Commission a machine
+    set-storage-layout  Change storage layout
+    mount-special       Mount a special-purpose filesystem
+    unmount-special     Unmount a special-purpose filesystem
+    clear-default-gateways
+			Clear set default gateways
+    get-curtin-config   Get curtin configuration
+    restore-networking-configuration
+			Restore networking options
+    restore-storage-configuration
+			Restore storage configuration
+    restore-default-configuration
+			Restore default configuration
+    mark-broken         Mark a machine as Broken
+    mark-fixed          Mark a machine as Fixed
+    rescue-mode         Enter rescue mode
+    exit-rescue-mode    Exit rescue mode
+    lock                Lock a machine
+    unlock              Unlock a machine
+    read                Read a node
+    update              Update a machine
+    delete              Delete a machine
+
+A machine is identified by its system_id.
+```
+
 In the case of already-deployed machines enlisted by MAAS, some of the possible actions may fail with unusual results, such as this exchange when attempting to turn off an already-deployed machine enlisted by MAAS:
 
 ```nohighlight
@@ -114,8 +203,63 @@ null
 
 Note that the immediate return is `Success`, but the machine-readable output is `null`.  After executing this command on an already-deployed machine, you should find that the deployed machine was not affected by the `power-off` command, since the `power-type` was set to `manual`.  This is an expected behaviour.
 [/tab]
+[tab version="snap-2.9,deb-2.9,snap-3.0,deb-3.0" view="CLI"]
+You can change machine state, via the CLI, with the `machine` command, which offers the following options:
 
-For a better understanding of these states and actions, see [Node statuses](/t/maas-concepts-and-terms-reference/nnnn#heading--node-statuses) and [Machine actions](/t/maas-concepts-and-terms-reference/nnnn#heading--machine-actions).
+```nohighlight
+$ maas admin machine -h
+usage: maas admin machine [-h] COMMAND ...
+
+Manage an individual machine.
+
+optional arguments:
+  -h, --help            show this help message and exit
+
+drill down:
+  COMMAND
+    details             Get system details
+    power-parameters    Get power parameters
+    set-workload-annotations
+			Set key=value data
+    set-owner-data      Deprecated, use set-workload-annotations.
+    query-power-state   Get the power state of a node
+    power-on            Turn on a node
+    power-off           Power off a node
+    test                Begin testing process for a node
+    override-failed-testing
+			Ignore failed tests
+    abort               Abort a node operation
+    deploy              Deploy a machine
+    release             Release a machine
+    commission          Commission a machine
+    set-storage-layout  Change storage layout
+    mount-special       Mount a special-purpose filesystem
+    unmount-special     Unmount a special-purpose filesystem
+    clear-default-gateways
+			Clear set default gateways
+    get-curtin-config   Get curtin configuration
+    restore-networking-configuration
+			Restore networking options
+    restore-storage-configuration
+			Restore storage configuration
+    restore-default-configuration
+			Restore default configuration
+    mark-broken         Mark a machine as Broken
+    mark-fixed          Mark a machine as Fixed
+    rescue-mode         Enter rescue mode
+    exit-rescue-mode    Exit rescue mode
+    lock                Lock a machine
+    unlock              Unlock a machine
+    read                Read a node
+    update              Update a machine
+    delete              Delete a machine
+
+A machine is identified by its system_id.
+```
+[/tab]
+[/tabs]
+
+For a better understanding of these states and actions, see [Node statuses](/t/maas-concepts-and-terms-reference/5416#heading--node-statuses) and [Machine actions](/t/maas-concepts-and-terms-reference/5416#heading--machine-actions).
 
 <a href="#heading--about-enlistment"><h3 id="heading--about-enlistment">About enlistment</h3></a>
 
@@ -125,7 +269,7 @@ Enlistment happens when MAAS starts; it reaches out on connected subnets to loca
 
 Since MAAS doesn't know whether you might intend to actually include these discovered machines in your cloud configuration, it won't automatically take them over, but it will read them to get an idea how they're set up. MAAS then presents these machines to you with a MAAS state of "New." This allows you to examine them and decide whether or not you want MAAS to manage them.
 
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/how-to-manage-machines/nnnn#heading--how-to-add-a-machine-manually). In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run custom commissioning scripts to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/how-to-manage-machines/5160#heading--how-to-add-a-machine-manually). In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run custom commissioning scripts to meet your specific needs.
 
 <a href="#heading--about-the-enlistment-process"><h4 id="heading--about-the-enlistment-process">About the enlistment process</h4></a>
 
@@ -141,7 +285,7 @@ Finally, cloud-init runs enlistment and setup scripts:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg"></a>
 
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/about-networking/nnnn#heading--about-network-discovery).
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/about-networking/5084#heading--about-network-discovery).
 
 Typically, the next step will be to commission the machine. As an alternative to enlistment, an administrator can add a machine manually. Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
 
@@ -151,9 +295,10 @@ After the commissioning process, MAAS places the machine in the ‘Ready’ stat
 MAAS runs built-in commissioning scripts during the enlistment phase. When you commission a machine, any customised commissioning scripts you add will have access to data collected during enlistment. Follow the link above for more information about commissioning and commission scripts.
 [/note]
 
-[tab version="snap-3.1#cli,deb-3.1#cli,snap-3.1#ui,deb-3.1#ui," view=""]
 <a href="#heading--about-cloning-machines"><h2 id="heading--about-cloning-machines">About cloning machines</h2></a>
 
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1" view="UI,CLI"]
 MAAS 3.1 provides the ability to quickly clone or copy configuration from one machine to one or more machines, via the MAAS UI, providing convenient access to an existing API feature.. This is a step towards machine profile templating work. 
 
 Creating a machine profile is a repetitive task. Based on the responses to our survey -- and multiple forum posts, we have learned that most users create multiple machines of the same configuration in batches. Some users create a machine profile template and loop them through the API, while some create a script to interface with the CLI. However, there is no easy way to do this in the UI except by going through each machine and configuring them individually.   
@@ -201,6 +346,10 @@ Such machines lack hardware information. In order to update the information, a s
 
 Some of the normal commands that work on deployed machines will not work on an already-deployed machine enlisted by MAAS.
 [/tab]
+[tab version="snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI,CLI"]
+Cloning machines is only available in MAAS versions 3.1 and greater.
+[/tab]
+[/tabs]
 
 <a href="#heading--about-bmc-enlistment"><h4 id="heading--about-bmc-enlistment">About BMC enlistment</h4></a>
 
@@ -263,17 +412,25 @@ When a machine boots, MAAS first instructs it to run cloud-init to set up SSH ke
 
 - **maas-serial-ports:** this script lists what serial ports are available on the machine.  **Runs in parallel with other scripts.**
 
-[tab version="snap-2.9#ui,snap-2.9#cli,deb-2.9#ui,deb-2.9" view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI,CLI"]
+[note]
+As of MAAS version 3.0, **40-maas-01-network-interfaces** is no longer used by MAAS.
+[/note]
+[/tab]
+[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
 - **40-maas-01-network-interfaces:** this script is just used to get the IP address, which can then be associated with a VLAN/subnet.
 [/tab]
+[/tabs]
 
-[tab version="snap-2.9#ui,snap-2.9#cli,deb-2.9#ui,deb-2.9" view=""]
-- **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need. This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
-[/tab]
-
-[tab version="snap-3.0#ui,snap-3.0#cli,deb-3.0#ui,deb-3.0#cli,snap-3.1#ui,snap-3.1#cli,deb-3.1#ui,deb-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI,CLI"]
 - **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, details about attached USB and PCI devices, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
 [/tab]
+[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
+- **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need. This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
+[/tab]
+[/tabs]
 
 - **maas-capture-lldp:** this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  **Runs in parallel with other scripts.**
 
@@ -321,9 +478,10 @@ You have the option of setting some parameters to change how commissioning runs:
 
 MAAS keeps extensive logs of the commissioning process for each machine. These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.
 
-[tab version="snap-3.0#ui,snap-3.0#cli,deb-3.0#ui,deb-3.0#cli,snap-3.1#ui,snap-3.1#cli,deb-3.1#ui,deb-3.1" view=""]
 <a href="#heading--about-disabling-individual-boot-methods"><h4 id="heading--about-disabling-individual-boot-methods">About disabling individual boot methods</h4></a>
 
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI,CLI"]
 It is possible to disable individual boot methods.  This must be done via the CLI. When a boot method is disabled MAAS will configure MAAS controlled `isc-dhcpd` to not respond to the associated [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture). External DHCP servers must be configured manually.
 
 To allow different boot methods to be in different states on separate physical networks using the same VLAN ID configuration is done on the subnet in the UI or API. When using the API boot methods to be disabled may be specified using the MAAS internal name or [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture) in octet or hex form. 
@@ -337,10 +495,15 @@ For MAAS 3.0 and above, the following boot method changes have been implemented:
 - GRUB debug may now be enabled by enabling [rackd debug logging](https://discourse.maas.io/t/running-installed-maas-in-debug-logging-mode/168).
 
 [/tab]
+[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
+Disabling boot methods is available in MAAS version 3.0 or greater.
+[/tab]
+[/tabs]
+
 
 <a href="#heading--about-automatic-script-selection-by-hardware-type"><h4 id="heading--about-automatic-script-selection-by-hardware-type">About automatic script selection by hardware type</h4></a>
 
-When selecting [multiple machines](/t/about-machines/nnnn), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+When selecting multiple machines, scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
 
 Similarly, scripts selected by tag on the command line which specify the `for_hardware` field will only run on matching hardware.
 
@@ -434,7 +597,7 @@ If you need further details, especially when writing and running your own script
 
 Because scripts operate within an ephemeral version of Ubuntu, enabling this option stops the machine from shutting down, allowing you to connect and probe a script's status.
 
-As long as you've added your [SSH key](/t/how-to-manage-user-accounts/nnnn#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
+As long as you've added your [SSH key](/t/how-to-manage-user-accounts/5184#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
 
 <a href="#heading--about-testing-hardware"><h2 id="heading--about-testing-hardware">About testing hardware</h2></a>
 
@@ -456,7 +619,7 @@ You can also examine the "raw" log output:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a>
 
-Help interpreting these logs can be found under the [Logging](/t/maas-logging-reference/nnnn) section of this documentation.
+Help interpreting these logs can be found under the [Logging](/t/maas-logging-reference/5240) section of this documentation.
 
 <a href="#heading--about-testing-machine-networking"><h4 id="heading--about-testing-machine-networking">About testing machine networking</h4></a>
 
@@ -476,13 +639,13 @@ Before deploying a machine, MAAS must acquire it (status 'Allocated'). Acquiring
 
 The agent that triggers deployment may vary. For instance, if the machines are destined to run complex, inter-related services that scale up or down frequently, like a "cloud" resource, then [Juju](https://jaas.ai/) is the recommended deployment agent. Juju will also install and configure services on the deployed machines. If you want to use MAAS to install a base operating system and work on the machines manually, then you can deploy a machine directly with MAAS.
 
-Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/how-to-manage-user-accounts/nnnn#heading--ssh-keys).
+Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/how-to-manage-user-accounts/5183#heading--ssh-keys).
 
 [note]
 Juju adds SSH keys to machines under its control.
 [/note]
 
-MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [How to customise machines](/t/how-to-customise-machines/nnnn).
+MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [How to customise machines](/t/how-to-customise-machines/5108).
 
 To deploy, you must configure the underlying machine to netboot.  Such a machine will undergo the following process:
 
@@ -495,14 +658,14 @@ To deploy, you must configure the underlying machine to netboot.  Such a machine
 7.  Squashfs image (same as above) is placed on disk
 
 [note]
-The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [How to customise machines](/t/how-to-customise-machines/nnnn).
+The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [How to customise machines](/t/how-to-customise-machines/5108).
 [/note]
 
 Before deploying, you should take two key actions:
 
-1. Review and possibly set the [Ubuntu kernels](/t/how-to-customise-machines/nnnn#heading--about-ubuntu-kernels) and the [Kernel boot options](/t/how-to-customise-machines/nnnn#heading--about-kernel-boot-options) that will get used by deployed machines.
+1. Review and possibly set the [Ubuntu kernels](/t/how-to-customise-machines/5108#heading--about-ubuntu-kernels) and the [Kernel boot options](/t/how-to-customise-machines/5108#heading--about-kernel-boot-options) that will get used by deployed machines.
 
-2. Ensure any pertinent SSH keys are imported (see [SSH keys](/t/how-to-manage-user-accounts/nnnn#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+2. Ensure any pertinent SSH keys are imported (see [SSH keys](/t/how-to-manage-user-accounts/5184#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
 
 <a href="#heading--event-logs-h3"><h3 id="heading--event-logs-h3">About machine event logs</h3></a>
 
@@ -510,7 +673,7 @@ Event logs display a list of timestamped status updates for events and actions p
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a>
 
-Detailed discussion of this event log can be found under the [Logging](/t/maas-logging-reference/nnnn) section of this documentation.
+Detailed discussion of this event log can be found under the [Logging](/t/maas-logging-reference/5240) section of this documentation.
 
 <a href="#heading--about-adding-machines"><h2 id="heading--about-adding-machines">About adding machines</h2></a>
 
@@ -532,29 +695,13 @@ Additional steps will vary widely by machine type and architecture.
 
 Regardless of how MAAS adds a machine, there are no special requirements for the underlying machine itself, other than being able to netboot. In particular, there is no need to install an operating system on it.
 
-[tab version="snap-3.1#ui,snap-3.0#ui,snap-2.9#ui,deb-3.1#ui,deb-3.0#ui,deb-2.9#ui," view=""]
 <a href="#heading--about-the-machine-list"><h2 id="heading--about-the-machine-list">About the machine list</h2></a>
 
 In the illustration below, you see the machine list for a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:
 
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg"></a>
-
-These example machines would typically be duplicated in several different geographies, with a quick way to switch to a redundant node, should anything go wrong (e.g., high availability).  We used the word node there because, In the network language of MAAS, machines are one of several different types of nodes.  A node is simply a network-connected object or, more specifically, an object that can independently communicate on a network. MAAS nodes include controllers, network devices, and of course, machines.
-
-Looking back at the example above, you can see that there are several columns in the machine list:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e6339dd1439b3b54be7a75f7239d1981754a07f6.jpeg"></a>
-
-The columns list eight details for each machine:
-
-1.   **FQDN | MAC**: The fully qualified domain name or the MAC address of the machine.
-2.   **Power**: 'On', 'Off' or 'Error' to highlight an error state.
-3.   **Status**: The current status of the machine, such as 'Ready', 'Commissioning' or 'Failed testing'.
-4.   **Owner**: The MAAS account responsible for the machine.
-5.   **Cores**: The number of CPU cores detected on the machine.
-6.   **RAM**: The amount of RAM, in GiB, discovered on the machine.
-7.   **Disks**: The number of drives detected on the machine.
-8.   **Storage**: The amount of storage, in GB, identified on the machine.
 
 Rolling the cursor over status icons often reveals more details. For example, a failed hardware test script will place a warning icon alongside the hardware type tested by the script. Rolling the cursor over this will reveal which test failed.  Likewise, you can find some immediate options by rolling over the column data items in the machines table.
 
@@ -564,13 +711,52 @@ The 'Add hardware' drop-down menu is used to add either new machines or a new ch
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/9a0747649e6aff999d3c04335eb752accedaf3de.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/9a0747649e6aff999d3c04335eb752accedaf3de.jpeg"></a>
 
-With one or more machines selected, the 'Add hardware' drop-down menu moves to the left, and is joined by the 'Take action' menu.  This menu provides access to the various [machine actions](/t/maas-concepts-and-terms-reference/nnnn#node-actions) that can be applied to the selected machine(s):
+With one or more machines selected, the 'Add hardware' drop-down menu moves to the left, and is joined by the 'Take action' menu.  This menu provides access to the various [machine actions](/t/maas-concepts-and-terms-reference/5416#node-actions) that can be applied to the selected machine(s):
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/e03d5ac8de9ea4f4827ed057bb2dd83e241aac3b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e03d5ac8de9ea4f4827ed057bb2dd83e241aac3b.jpeg"></a>
 
 [note]
 The 'Filter by' section limits the machines listed in the table to selected keywords and machine attributes.
 [/note]
+
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+```nohighlight
+FQDN               POWER  STATUS     OWNER  TAGS     POOL       NOTE     ZONE
+----               -----  ------     -----  ----     ----       ----     ----
+52-54-00-15-36-f2  off    Ready      -      Orders   Prescrbr   @md-all  Medications
+52-54-00-17-64-c8  off    Ready      -      HRMgmt   StaffComp  @tmclck  Payroll
+52-54-00-1d-47-95  off    Ready      -      MedSupp  SuppServ   @storag  Inventory
+52-54-00-1e-06-41  off    Ready      -      PatPrtl  BusOfc     @bzstns  BizOffice
+52-54-00-1e-a5-7e  off    Ready      -      Pharm    Prescrbr   @rxonly  Pharmacy
+52-54-00-2e-b7-1e  off    Allocated  admin  NursOrd  NurServ    @nstns   Nursing
+52-54-00-2e-c4-40  off    Allocated  admin  MedAdmn  NurServ    @rxonly  Nursing
+52-54-00-2e-ee-17  off    Deployed   admin  Charts   ProServ    @md-all  Physician
+```
+
+You can generate a list similar to this for your machines with the command:
+
+```nohighlight
+maas admin machines read | jq -r '(["FQDN","POWER","STATUS",
+"OWNER", "TAGS", "POOL", "NOTE", "ZONE"] | (., map(length*"-"))),
+(.[] | [.hostname, .power_state, .status_name, .owner // "-", 
+.tag_names[0] // "-", .pool.name, .description // "-", .zone.name]) | @tsv' | column -t
+```
+[/tab]
+[/tabs]
+
+These example machines would typically be duplicated in several different geographies, with a quick way to switch to a redundant node, should anything go wrong (e.g., high availability).  We used the word node there because, In the network language of MAAS, machines are one of several different types of nodes.  A node is simply a network-connected object or, more specifically, an object that can independently communicate on a network. MAAS nodes include controllers, network devices, and of course, machines.
+
+Looking back at the example above, you can see that there are several columns in the machine list, depending on your view:
+
+1.   **FQDN | MAC**: The fully qualified domain name or the MAC address of the machine.
+2.   **Power**: 'On', 'Off' or 'Error' to highlight an error state.
+3.   **Status**: The current status of the machine, such as 'Ready', 'Commissioning' or 'Failed testing'.
+4.   **Owner**: The MAAS account responsible for the machine.
+5.   **Cores**: The number of CPU cores detected on the machine.
+6.   **RAM**: The amount of RAM, in GiB, discovered on the machine.
+7.   **Disks**: The number of drives detected on the machine.
+8.   **Storage**: The amount of storage, in GB, identified on the machine.
 
 <a href="#heading--about-the-machine-summary"><h2 id="heading--about-the-machine-summary">About the machine summary</h2></a>
 
@@ -626,10 +812,10 @@ And you can watch the results under the "Tests" option in the Machine menu:
 
 The rest of the cards on the Machine summary are either self-explanatory, or they're covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu's "Machines" option. 
 
-[tab version="snap-3.0#ui,snap-3.0#cli,deb-3.0#ui,deb-3.0#cli,snap-3.1#ui,snap-3.1#cli,deb-3.1#ui,deb-3.1" view=""]
-
 <a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">Handling attached USB and PCI devices</h3></a>
 
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI,CLI"]
 The machines in your MAAS may have devices attached to them via USB or PCI interface, such as keyboards, cameras, network cards, GPUs, etc.  MAAS will recognise these devices and make them visible to you when a machine is commissioned.
 
 For example, the machine details presents USB and PCI devices like this:
@@ -682,7 +868,7 @@ The Network "tab" provides you with a way to view/edit the network and interface
 
 In the case of this deployed machine, there are not many editing options.  If the machine is in a 'Ready' state, though, altering the network configuration is possible, as shown in the screenshot above.
 
-Options on this tab are described in the introduction to [Networking](/t/about-networking/nnnn) article in this documentation set.
+Options on this tab are described in the introduction to [Networking](/t/about-networking/5084) article in this documentation set.
 
 <a href="#heading--machine-config-h3"><h3 id="heading--machine-config-h3">About machine configuration info</h3></a>
 
@@ -696,8 +882,12 @@ The "Power configuration" supplies the parameters necessary for MAAS to access t
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png"></a> 
 
-More information on Power configuration will be found in the [Power management](/t/power-management-reference/nnnn) section of this documentation.
+More information on Power configuration will be found in the [Power management](/t/power-management-reference/5246) section of this documentation.
 [/tab]
+[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
+USB and PCI devices are supported in MAAS version 3.0 and greater.
+[/tab]
+[/tabs]
 
 <a href="#heading--about-resource-pools"><h3 id="heading--about-resource-pools">About resource pools</h3></a>
 
@@ -795,7 +985,7 @@ Once MAAS provisions a machine with block devices, via a layout or administrator
 
 <a href="#heading--about-disk-erasure"><h4 id="heading--about-disk-erasure">About disk erasure</h4></a>
 
-Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/maas-concepts-and-terms-reference/nnnn#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
+Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/maas-concepts-and-terms-reference/5416#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
 
 
 <a href="#heading--about-disk-erasure-types"><h5 id="heading--about-disk-erasure-types">About disk erasure types</h5></a>

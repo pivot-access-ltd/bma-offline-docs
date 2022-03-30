@@ -77,7 +77,7 @@ Once MAAS provisions a machine with block devices, via a layout or administrator
 
 <a href="#heading--about-disk-erasure"><h3 id="heading--about-disk-erasure">About disk erasure</h3></a>
 
-Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/maas-concepts-and-terms-reference/nnnn#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
+Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/maas-concepts-and-terms-reference/5416#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
 
 <a href="#heading--about-disk-erasure-types"><h4 id="heading--about-disk-erasure-types">About disk erasure types</h4></a>
 
@@ -96,7 +96,7 @@ It is very important to pay close attention to your selections when erasing disk
 
 <a href="#heading--about-pre-seeding"><h2 id="heading--about-pre-seeding">About pre-seeding</h2></a>
 
-During machine [enlistment](/t/about-machines/nnnn), [deployment](/t/how-to-deploy-machines/nnnn), commissioning and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**. These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+During machine [enlistment](/t/about-machines/5080), [deployment](/t/how-to-deploy-machines/5112), commissioning and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**. These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
 
 Preseeding in MAAS can be achieved in two ways:
 
@@ -106,13 +106,14 @@ Preseeding in MAAS can be achieved in two ways:
 
 <a href="#heading--templates"><h3 id="heading--templates">About templates</h3></a>
 
-[tab version="snap-2.9#ui,snap-2.9#cli,snap-3.0#ui,snap-3.0#cli,snap-3.1#ui,snap-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 The [Tempita](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) template files are found in the `/var/snap/maas/current/preseeds/` directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:
 [/tab]
-
-[tab version="deb-2.9#ui,deb-2.9#cli,deb-3.0#ui,deb-3.0#cli,deb-3.1#cli,deb-3.1#ui," view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 The [Tempita](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) template files are found in the `/etc/maas/preseeds/` directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:
 [/tab]
+[/tabs]
 
 
 |       Phase       |                 Filename prefix                 |
@@ -251,12 +252,15 @@ If you want to customise machines, you may want to know:
 
 This section will show you:
 
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 - [How to set global storage layouts](#heading--how-to-set-global-storage-layouts)
 - [How to set per-machine storage layouts](#heading--how-to-set-per-machine-storage-layouts)
-[tab version="deb-2.9#ui,snap-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 - [How to set the default erasure configuration](#heading--how-to-set-default-erasure-configuration)
 [/tab]
-[tab version="deb-2.9#cli,snap-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+- [How to set global storage layouts](#heading--how-to-set-global-storage-layouts)
+- [How to set per-machine storage layouts](#heading--how-to-set-per-machine-storage-layouts)
 - [How to erase disks](#heading--how-to-erase-disks)
 - [How to specify conditional erasure types](#heading--how-to-specify-conditional-erasure-types)
 - [How to list block devices](#heading--how-to-list-block-devices)
@@ -280,20 +284,20 @@ This section will show you:
 - [How to view a VMFS datastore](#heading--how-to-view-a-vmfs-datastore)
 - [How to create a VMFS datastore](#heading--how-to-create-a-vmfs-datastore)
 - [How to edit a VMFS datastore](#heading--how-to-edit-a-vmfs-datastore)
-- [How to delete a VMFS datastore](#heading--how-to-delete-a-vmfs-datastore)
-[/tab]
+- [How to delete a VMFS datastore](#heading--how-to-delete-a-vmfs-datas[/tab]
+[/tabs]
 
 Note that layouts can be set globally and on a per-machine basis.  For additional information on storage layouts, see the [Storage layouts reference](#heading--storage-layouts-reference) section at the end of this article.
 
 <a href="#heading--how-to-set-global-storage-layouts"><h3 id="heading--how-to-set-global-storage-layouts">How to set global storage layouts</h3></a>
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 All machines will have a default layout applied when commissioned. An administrator can configure the default layout on the 'Settings' page, under the 'Storage' tab.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png"></a>
 [/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 All machines will have a default layout applied when commissioned. To set the default storage layout for all machines:
 
 ```
@@ -309,6 +313,7 @@ maas $PROFILE maas set-config name=default_storage_layout value=flat
 Important: The new default will only apply to newly-commissioned machines.
 
 [/tab]
+[/tabs]
 
 [note type="caution" status="Important"]
 The new default will only apply to newly-commissioned machines.
@@ -316,11 +321,11 @@ The new default will only apply to newly-commissioned machines.
 
 <a href="#heading--how-to-set-per-machine-storage-layouts"><h3 id="heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</h3></a>
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of 'Ready'. This is only possible via the CLI: to see how, click the "CLI" option for your version and delivery method above.
 [/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 An administrator can set a storage layout for a machine with a status of ‘Ready’ like this:
 
 ```
@@ -337,12 +342,14 @@ You must specify all storage sizes in bytes.
 
 This action will remove the configuration that may exist on any block device.
 [/tab]
+[/tabs]
 
 [note]
 Only an administrator can modify storage at the block device level (providing the machine has a status of 'Ready').
 [/note]
 
-[tab version="deb-2.9#ui,snap-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="#heading--how-to-set-default-erasure-configuration"><h3 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h3></a>
 
 A default erasure configuration can be set on the 'Settings' page by selecting the 'Storage' tab.
@@ -358,9 +365,7 @@ With the above defaults, the machine's view will look like this when the Release
 Where 'secure erase' and 'quick erase' can then be configured by the user.
 
 [/tab]
-
-[tab version="deb-2.9#cli,snap-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
-
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 <a href="#heading--how-to-erase-disks"><h3 id="heading--how-to-erase-disks">How to erase disks</h3></a>
 
 When using the MAAS CLI, you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
@@ -1250,6 +1255,7 @@ To delete a VMFS Datastores on a machine use the 'vmfs-datastore delete' API cal
 maas $PROFILE vmfs-datastore delete $SYSTEM_ID $VMFS_ID
 ```
 [/tab]
+[/tabs]
 
 <a href="#heading--how-to-pre-seed-with-curtin"><h2 id="heading--how-to-pre-seed-with-curtin">How to pre-seed with curtin</h2></a>
 
@@ -1288,7 +1294,31 @@ late_commands:
 
 <a href="#heading--cloud-init"><h2 id="heading--cloud-init">How to pre-seed with cloud-init</h2></a>
 
-[tab version="snap-2.9#cli,deb-2.9#cli,deb-3.0#cli,snap-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+It's easy to customise cloud-init via the web UI.  When you've selected a machine and choose 'Take action >> Deploy,' you'll be presented with the following screen:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"><img src="https://discourse.maas.io/uploads/default/original/1X/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"></a>
+
+Select a viable release (in this case, "Ubuntu 18.04...") and check the box labelled "Cloud-init user-data...":
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg"><img src="https://discourse.maas.io/uploads/default/original/1X/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg"></a>
+
+Paste the desired script directly into the box, and select "Start deployment for machine."  For example, to import an SSH key immediately after your machine deployment, you could paste this script:
+
+``` bash
+#!/bin/bash
+(
+echo === $date ===
+ssh-import-id foobar_user
+) | tee /ssh-key-import.log
+```
+
+[note]
+No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-init scripts.
+[/note]
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 Using cloud-init to customise a machine after deployment is relatively easy. After you're logged in, use the following command to deploy a machine with a custom script you've written:
 
     maas $PROFILE machine deploy $SYSTEM_ID user_data=<base-64-encoded-script>
@@ -1332,30 +1362,8 @@ Putting it together:
 
 After MAAS deploys the machine, you'll find `/ssh-key-import.log` on the machine you deployed.
 [/tab]
+[/tabs]
 
-[tab version="snap-2.9#ui,deb-2.9#ui,deb-3.0#ui,snap-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-It's easy to customise cloud-init via the web UI.  When you've selected a machine and choose 'Take action >> Deploy,' you'll be presented with the following screen:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"><img src="https://discourse.maas.io/uploads/default/original/1X/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"></a>
-
-Select a viable release (in this case, "Ubuntu 18.04...") and check the box labelled "Cloud-init user-data...":
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg"><img src="https://discourse.maas.io/uploads/default/original/1X/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg"></a>
-
-Paste the desired script directly into the box, and select "Start deployment for machine."  For example, to import an SSH key immediately after your machine deployment, you could paste this script:
-
-``` bash
-#!/bin/bash
-(
-echo === $date ===
-ssh-import-id foobar_user
-) | tee /ssh-key-import.log
-```
-
-[note]
-No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-init scripts.
-[/note]
-[/tab]
 
 <a href="#heading--how-to-choose-ubuntu-kernels"><h2 id="heading--how-to-choose-ubuntu-kernels">How to choose Ubuntu kernels</h2></a>
 
@@ -1368,8 +1376,8 @@ This section will show you:
 
 <a href="#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning"><h3 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">How to set a default minimum kernel for enlistment and commissioning</h3></a>
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 To set the default minimum enlistment and commissioning kernel (based on Ubuntu release: GA kernel) for all machines visit the 'General' tab of the 'Settings' page and select a kernel in the 'Default Minimum Kernel Version' field of the *Commissioning* section. Don't forget to click 'Save'.
 
 <a href="https://assets.ubuntu.com/v1/e0c7f298-nodes-kernels__2.6-default-minimum-kernel.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/e0c7f298-nodes-kernels__2.6-default-minimum-kernel.png"></a>
@@ -1388,8 +1396,7 @@ To set a specific kernel during deployment, select a machine from the 'Machines'
 
 MAAS verifies that the specified kernel is available for the given Ubuntu release (series) before deploying the machine.
 [/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 
 To set a default minimum kernel for all new and commissioned machines:
 
@@ -1445,51 +1452,89 @@ maas $PROFILE machine deploy $SYSTEM_ID distro_series=xenial hwe_kernel=hwe-16.0
 The command option `hwe_kernel` appears to apply to only HWE kernels but this is not the case.
 [/note]
 [/tab]
+[/tabs]
 
 <a href="#heading--how-to-set-global-kernel-boot-options"><h2 id="heading--how-to-set-global-kernel-boot-options">How to set global kernel boot options</h2></a>
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-
-
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 To set kernel boot options globally, as an admin, open the 'Settings' page and on the 'General' tab scroll down to the 'Global Kernel Parameters' section:
 
 <a href="https://assets.ubuntu.com/v1/8b793b6d-nodes-kernel-options__2.2_global.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/8b793b6d-nodes-kernel-options__2.2_global.png"></a>
 
 Type in the desired (space separated) options and click 'Save'. The contents of the field will be used as-is. Do not use extra characters.
 [/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 You can set kernel boot options and apply them to all machines with the CLI command:
 
 ``` bash
 maas $PROFILE maas set-config name=kernel_opts value='$KERNEL_OPTIONS'
 ```
 [/tab]
+[/tabs]
 
-See [How can I set kernel boot options for a specific machine?](/t/how-to-manage-tags/nnnn) to set per-machine kernel boot options.
+See [How can I set kernel boot options for a specific machine?](/t/how-to-manage-tags/5180) to set per-machine kernel boot options.
 
 <a href="#heading--how-to-use-resource-pools"><h2 id="heading--how-to-use-resource-pools">How to use resource pools</h2></a>
 
 This section will explain:
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
-- [How to create a resource pool](#heading--creating-a-resource-pool)
-- [How to list available resource pools](#heading--list-available-resource-pools)
-- [How to list a single resource pool](#heading--list-a-single-resource-pool)
-- [How to update a resource pool](#heading--update-a-resource-pool)
-- [How to delete a resource pool](#heading--delete-a-resource-pool)
-- [How to add a machine to a resource pool](#heading--add-a-machine-to-a-resource-pool)
-[/tab]
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 - [How to add a resource pool](#heading--add-a-resource-pool)
 - [How to delete a resource pool](#heading--deleting-a-resource-pool)
 - [How to add a node to a resource pool](#heading--add-a-node-to-a-resource-pool)
 - [How to remove a node from a resource pool](#heading--removing-a-node-from-a-resource-pool)
 - [How to add a VM host to a resource pool](#heading--add-a-vm-host-to-a-resource-pool)
 - [How to remove a VM host from a resource pool](#heading--removing-a-vm-host-from-a-resource-pool)
-[/tab]
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+
+<a href="#heading--add-a-resource-pool"><h3 id="heading--add-a-resource-pool">How to add a resource pool</h3></a>
+
+Use the Add pool button to add a new resource pool.
+
+After giving your new pool a name and description, click the Add pool button:
+
+<a href="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png"></a>
+
+<a href="#heading--deleting-a-resource-pool"><h3 id="heading--deleting-a-resource-pool">How to delete a resource pool</h3></a>
+
+To delete a resource pool, click the trashcan icon next to the pool.
+
+<a href="https://assets.ubuntu.com/v1/630ed938-nodes-resource-pools__2.5_delete-pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/630ed938-nodes-resource-pools__2.5_delete-pool.png"></a>
+
+[note]
+If you delete a resource pool, all machines that belong to that resource pool will return to the default pool.
+[/note]
+
+<a href="#heading--add-a-node-to-a-resource-pool"><h3 id="heading--add-a-node-to-a-resource-pool">How to add a machine to a resource pool</h3></a>
+
+To add a machine to a resource pool, on the Machines page, select the machine you want to add to the resource pool. Next, select the Configuration tab. Now select the resource pool and click the Save changes button.
+
+<a href="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png"></a>
+
+<a href="#heading--removing-a-node-from-a-resource-pool"><h3 id="heading--removing-a-node-from-a-resource-pool">How to remove a machine from a resource pool</h3></a>
+
+To remove a machine from a resource pool, follow the same procedure you would use to add a machine, but select "default" as the new resource pool. This action will return the machine to the default resource pool.
+
+<a href="#heading--add-a-vm-host-to-a-resource-pool"><h3 id="heading--add-a-vm-host-to-a-resource-pool">How to add a VM host to a resource pool</h3></a>
+
+You can add a VM host to a resource pool when you create a new VM host, or you can edit a VM host's configuration:
+
+<a href="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png"></a>
+
+<a href="#heading--removing-a-vm-host-from-a-resource-pool"><h3 id="heading--removing-a-vm-host-from-a-resource-pool">How to remove a VM host from a resource pool</h3></a>
+
+To remove a VM host from a resource pool, follow the same procedure you would use to add a VM host to a resource pool, except select "default" as the new resource pool. This action will return the machine to the default resource pool.
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+- [How to create a resource pool](#heading--creating-a-resource-pool)
+- [How to list available resource pools](#heading--list-available-resource-pools)
+- [How to list a single resource pool](#heading--list-a-single-resource-pool)
+- [How to update a resource pool](#heading--update-a-resource-pool)
+- [How to delete a resource pool](#heading--delete-a-resource-pool)
+- [How to add a machine to a resource pool](#heading--add-a-machine-to-a-resource-pool)
+
 <a href="#heading--creating-a-resource-pool"><h3 id="heading--creating-a-resource-pool">How to create a resource pool</h3></a>
 
 Here's an example that demonstrates how to create a new resource pool named `myresource`.
@@ -1537,47 +1582,7 @@ maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
 ```
 
 [/tab]
-
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-<a href="#heading--add-a-resource-pool"><h3 id="heading--add-a-resource-pool">How to add a resource pool</h3></a>
-
-Use the Add pool button to add a new resource pool.
-
-After giving your new pool a name and description, click the Add pool button:
-
-<a href="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png"></a>
-
-<a href="#heading--deleting-a-resource-pool"><h3 id="heading--deleting-a-resource-pool">How to delete a resource pool</h3></a>
-
-To delete a resource pool, click the trashcan icon next to the pool.
-
-<a href="https://assets.ubuntu.com/v1/630ed938-nodes-resource-pools__2.5_delete-pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/630ed938-nodes-resource-pools__2.5_delete-pool.png"></a>
-
-[note]
-If you delete a resource pool, all machines that belong to that resource pool will return to the default pool.
-[/note]
-
-<a href="#heading--add-a-node-to-a-resource-pool"><h3 id="heading--add-a-node-to-a-resource-pool">How to add a machine to a resource pool</h3></a>
-
-To add a machine to a resource pool, on the Machines page, select the machine you want to add to the resource pool. Next, select the Configuration tab. Now select the resource pool and click the Save changes button.
-
-<a href="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png"></a>
-
-<a href="#heading--removing-a-node-from-a-resource-pool"><h3 id="heading--removing-a-node-from-a-resource-pool">How to remove a machine from a resource pool</h3></a>
-
-To remove a machine from a resource pool, follow the same procedure you would use to add a machine, but select "default" as the new resource pool. This action will return the machine to the default resource pool.
-
-<a href="#heading--add-a-vm-host-to-a-resource-pool"><h3 id="heading--add-a-vm-host-to-a-resource-pool">How to add a VM host to a resource pool</h3></a>
-
-You can add a VM host to a resource pool when you create a new VM host, or you can edit a VM host's configuration:
-
-<a href="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png"></a>
-
-<a href="#heading--removing-a-vm-host-from-a-resource-pool"><h3 id="heading--removing-a-vm-host-from-a-resource-pool">How to remove a VM host from a resource pool</h3></a>
-
-To remove a VM host from a resource pool, follow the same procedure you would use to add a VM host to a resource pool, except select "default" as the new resource pool. This action will return the machine to the default resource pool.
-
-[/tab]
+[/tabs]
 
 <a href="#heading--storage-layouts-reference"><h2 id="heading--storage-layouts-reference">Storage layouts reference</h2></a>
 

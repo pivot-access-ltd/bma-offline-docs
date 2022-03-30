@@ -1,33 +1,45 @@
-You can easily manage the basic networking elements of MAAS, including subnets, fabrics, VLANs, spaces, and IP ranges.  This section shows how to access and edit these elements. See [Concepts and terms](/t/maas-concepts-and-terms-reference/nnnn) for the definitions of these networking components.
+You can easily manage the basic networking elements of MAAS, including subnets, fabrics, VLANs, spaces, and IP ranges.  This section shows how to access and edit these elements. See [Concepts and terms](/t/maas-concepts-and-terms-reference/5146) for the definitions of these networking components.
 
 This section will show you:
 
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI]
 * [How to enable network discovery](#heading--how-to-enable-network-discovery)
 * [How to toggle subnet management](#heading--how-to-toggle-subnet-management)
-[tab version="deb-2.9#cli,deb-3.0#cli,deb-3.1#cli,snap-2.9#cli,snap-3.0#cli,snap-3.1" view=""]
+* [How to access the main networking view](#heading--how-to-access-ui-main-networking-view)
+* [How to display the subnet window](#heading--ui-how-to-display-the-subnet-window)
+* [How to view the subnet summary](#heading--ui-how-to-view-the-subnet-summary)
+* [How to view utilisation](#heading--ui-how-to-view-utilisation)
+* [How to manage static routes between subnets](#heading--how-to-manage-static-routes)
+* [How to view reserved ranges](#heading--how-to-view-reserved-ranges)
+* [How to view used IP addresses](#heading--ui-how-to-view-used-ip-addresses)
+* [How to set up a bridge with MAAS](#heading--how-to-set-up-a-bridge-with-maas)
+* [How to set up a bridge with netplan](#heading--how-to-set-up-a-bridge-with-netplan)
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI]
+* [How to enable network discovery](#heading--how-to-enable-network-discovery)
+* [How to toggle subnet management](#heading--how-to-toggle-subnet-management)
 * [How to determine fabric ID](#heading--how-to-determine-fabric-id)
 * [How to set a default gateway](#heading--how-to-set-a-default-gateway)
 * [How to set a DNS server](#heading--how-to-set-a-dns-server)
 * [How to list available subnets](#heading--cli-list-available-subnets)
 * [How to view subnet details](#heading--cli-how-to-view-subnet-details)
-[/tab]
-[tab version="deb-2.9#ui,deb-3.0#ui,deb-3.1#ui,snap-2.9#ui,snap-3.0#ui,snap-3.1#ui," view=""]
-* [How to access the main networking view](#heading--how-to-access-ui-main-networking-view)
-* [How to display the subnet window](#heading--ui-how-to-display-the-subnet-window)
-* [How to view the subnet summary](#heading--ui-how-to-view-the-subnet-summary)
-* [How to view utilisation](#heading--ui-how-to-view-utilisation)
-[/tab]
 * [How to manage static routes between subnets](#heading--how-to-manage-static-routes)
-[tab version="deb-2.9#ui,deb-3.0#ui,deb-3.1#ui,snap-2.9#ui,snap-3.0#ui,snap-3.1#ui," view=""]
-* [How to view reserved ranges](#heading--how-to-view-reserved-ranges)
-* [How to view used IP addresses](#heading--ui-how-to-view-used-ip-addresses)
-[/tab]
 * [How to set up a bridge with MAAS](#heading--how-to-set-up-a-bridge-with-maas)
 * [How to set up a bridge with netplan](#heading--how-to-set-up-a-bridge-with-netplan)
+[/tab]
+[/tabs]
 
 <a href="#heading--how-to-enable-network-discovery"><h3 id="heading--how-to-enable-network-discovery">How to enable network discovery</h3></a>
 
-[tab version="deb-2.9#cli,deb-3.0#cli,deb-3.1#cli,snap-2.9#cli,snap-3.0#cli,snap-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+Network discovery can be disabled or re-enabled using the switch on the Network discovery dashboard.
+
+<a href="https://assets.ubuntu.com/v1/1782e4aa-installconfig-networking__2.4_discovery.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/1782e4aa-installconfig-networking__2.4_discovery.png"></a>
+
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 To enable network discovery, enter the following at the command line:
 
 ```nohighlight
@@ -44,17 +56,12 @@ OK
 
 Network discovery can be disabled or re-enabled at any time with this CLI command.
 [/tab]
-
-[tab version="deb-2.9#ui,deb-3.0#ui,deb-3.1#ui,snap-2.9#ui,snap-3.0#ui,snap-3.1#ui," view=""]
-Network discovery can be disabled or re-enabled using the switch on the Network discovery dashboard.
-
-<a href="https://assets.ubuntu.com/v1/1782e4aa-installconfig-networking__2.4_discovery.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/1782e4aa-installconfig-networking__2.4_discovery.png"></a>
-
-[/tab]
+[/tabs]
 
 <a href="#heading--how-to-toggle-subnet-management"><h3 id="heading--how-to-toggle-subnet-management">How to toggle subnet management</h3></a>
 
-[tab version="deb-2.9#ui,deb-3.0#ui,deb-3.1#ui,snap-2.9#ui,snap-3.0#ui,snap-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 To disable (or re-enable) subnet management, use the following procedure:
 
 1. Navigate to the 'Subnets' page and select the subnet.
@@ -68,9 +75,16 @@ To disable (or re-enable) subnet management, use the following procedure:
 The following screenshot illustrates this process.
 
 <a href="https://assets.ubuntu.com/v1/e5d80c8c-installconfig-network-subnet-management__2.6-management-toggle.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/e5d80c8c-installconfig-network-subnet-management__2.6-management-toggle.png"></a>
-[/tab]
 
-[tab version="deb-2.9#cli,deb-3.0#cli,deb-3.1#cli,snap-2.9#cli,snap-3.0#cli,snap-3.1" view=""]
+<a href="#heading--how-to-access-ui-main-networking-view"><h3 id="heading--how-to-access-ui-main-networking-view">How to access the main networking view</h3></a>
+
+To access the main networking view visit the 'Subnets' page:
+
+<a href="https://assets.ubuntu.com/v1/657bb332-installconfig-networking__2.4_subnets.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/657bb332-installconfig-networking__2.4_subnets.png"></a>
+
+This main view can also be filtered either by fabrics or by spaces through the use of the 'Group by' drop-down.
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 To enable or disable subnet management:
 
 ``` nohighlight
@@ -84,9 +98,7 @@ maas $PROFILE subnet update 192.168.1.0/24 managed=false
 ```
 
 You can use the subnets ID in place of the CIDR address.
-[/tab]
 
-[tab version="deb-2.9#cli,deb-3.0#cli,deb-3.1#cli,snap-2.9#cli,snap-3.0#cli,snap-3.1" view=""]
 <a href="#heading--how-to-determine-fabric-id"><h3 id="heading--how-to-determine-fabric-id">How to determine fabric ID</h3></a>
 
 To determine a fabric ID based on a subnet address:
@@ -144,56 +156,10 @@ fabric-3      untagged  true       2600:100d:b109:dee0::/64
 fabric-3      untagged  true       2600:100d:b104:94c0::/64
 ```
 [/tab]
+[/tabs]
 
-[tab version="deb-2.9#ui,deb-3.0#ui,deb-3.1#ui,snap-2.9#ui,snap-3.0#ui,snap-3.1#ui," view=""]
-<a href="#heading--how-to-access-ui-main-networking-view"><h3 id="heading--how-to-access-ui-main-networking-view">How to access the main networking view</h3></a>
-
-To access the main networking view visit the 'Subnets' page:
-
-<a href="https://assets.ubuntu.com/v1/657bb332-installconfig-networking__2.4_subnets.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/657bb332-installconfig-networking__2.4_subnets.png"></a>
-
-This main view can also be filtered either by fabrics or by spaces through the use of the 'Group by' drop-down.
-[/tab]
-
-[tab version="deb-2.9#cli,deb-3.0#cli,deb-3.1#cli,snap-2.9#cli,snap-3.0#cli,snap-3.1" view=""]
-<a href="#heading--cli-how-to-view-subnet-details"><h3 id="heading--cli-how-to-view-subnet-details">How to view subnet details</h3></a>
-
-You can view the details of an individual subnet with the command:
-
-```nohighlight
-maas $PROFILE subnet read $SUBNET_ID \
-| jq -r '(["NAME","CIDR","GATEWAY","DNS","DISCOVERY","FABRIC","VLAN"]
-| (., map(length*"-"))), ([.name,.cidr,.gateway_ip // "-", .allow_dns,.active_discovery,.vlan.name,.vlan.fabric]) | @tsv' | column -t
-```
-
-This command retrieves output similar to this:
-
-```nohighlight
-NAME              CIDR              GATEWAY  DNS   DISCOVERY  FABRIC    VLAN
-----              ----              -------  ---   ---------  ------    ----
-192.168.123.0/24  192.168.123.0/24  -        true  false      untagged  default
-```
-
-If you don't know the subnet ID, you can look it up like this:
-
-```nohighlight
-maas $PROFILE subnets read \
-| jq -r '(["NAME", "SUBNET_ID"]
-| (., map(length*"-"))), (.[] | [.name, .id]) | @tsv' \
-| column -t | grep $SUBNET_NAME
-```
-
-For example, if you're using the "admin" profile, and your subnet name contains "192.168.123," you could find the subnet ID with this command:
-
-```nohighlight
-maas admin subnets read \
-| jq -r '(["NAME", "SUBNET_ID"]
-| (., map(length*"-"))), (.[] | [.name, .id]) | @tsv' \
-| column -t | grep 192.168.123
-```
-[/tab]
-
-[tab version="deb-2.9#ui,deb-3.0#ui,deb-3.1#ui,snap-2.9#ui,snap-3.0#ui,snap-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="#heading--ui-how-to-display-the-subnet-window"><h3 id="heading--ui-how-to-display-the-subnet-window">How to display the subnet window</h3></a>
 
 Clicking a subnet (here `192.168.100.0/24`) will display its detail screen, which contains several sections, described below.
@@ -237,20 +203,51 @@ This section of the subnet page presents metrics regarding address usage by this
 <a href="https://assets.ubuntu.com/v1/3d3e4b61-installconfig-networking__2.4_subnets-utilisation.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/3d3e4b61-installconfig-networking__2.4_subnets-utilisation.png"></a>
 
 'Subnet addresses' shows the total number of addresses associated with the subnet, here 254. 'Availability' shows how many of those addresses are unused, and therefore "available", here 189, which corresponds to a percentage of roughly 74% of the total. Finally, 'Used' shows the percentage that is used, here roughly 26%.
-[/tab] 
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+<a href="#heading--cli-how-to-view-subnet-details"><h3 id="heading--cli-how-to-view-subnet-details">How to view subnet details</h3></a>
 
-<a href="#heading--how-to-manage-static-routes"><h3 id="heading--how-to-manage-static-routes">How to manage static routes between subnets</h3></a>
-
-[tab version="deb-2.9#cli,deb-3.0#cli,deb-3.1#cli,snap-2.9#cli,snap-3.0#cli,snap-3.1" view=""]
-To create a static route between two subnets, use the following command:
+You can view the details of an individual subnet with the command:
 
 ```nohighlight
-maas admin static-routes create source=$SOURCE_SUBNET destination=$DEST_SUBNET \
-gateway_ip=$GATEWAY_IP
+maas $PROFILE subnet read $SUBNET_ID \
+| jq -r '(["NAME","CIDR","GATEWAY","DNS","DISCOVERY","FABRIC","VLAN"]
+| (., map(length*"-"))), ([.name,.cidr,.gateway_ip // "-", .allow_dns,.active_discovery,.vlan.name,.vlan.fabric]) | @tsv' | column -t
+```
+
+This command retrieves output similar to this:
+
+```nohighlight
+NAME              CIDR              GATEWAY  DNS   DISCOVERY  FABRIC    VLAN
+----              ----              -------  ---   ---------  ------    ----
+192.168.123.0/24  192.168.123.0/24  -        true  false      untagged  default
+```
+
+If you don't know the subnet ID, you can look it up like this:
+
+```nohighlight
+maas $PROFILE subnets read \
+| jq -r '(["NAME", "SUBNET_ID"]
+| (., map(length*"-"))), (.[] | [.name, .id]) | @tsv' \
+| column -t | grep $SUBNET_NAME
+```
+
+For example, if you're using the "admin" profile, and your subnet name contains "192.168.123," you could find the subnet ID with this command:
+
+```nohighlight
+maas admin subnets read \
+| jq -r '(["NAME", "SUBNET_ID"]
+| (., map(length*"-"))), (.[] | [.name, .id]) | @tsv' \
+| column -t | grep 192.168.123
 ```
 [/tab]
+[/tabs]
 
-[tab version="deb-2.9#ui,deb-3.0#ui,deb-3.1#ui,snap-2.9#ui,snap-3.0#ui,snap-3.1#ui," view=""]
+ 
+<a href="#heading--how-to-manage-static-routes"><h3 id="heading--how-to-manage-static-routes">How to manage static routes between subnets</h3></a>
+
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 To create a static route:
 
 1. Click the 'Add static route' button to reveal the edit pane. 
@@ -267,25 +264,34 @@ Routes can be edited and removed using the icons to the right of each entry.
 
 <a href="https://assets.ubuntu.com/v1/49f5e240-installconfig-networking__2.4_subnets-routes.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/49f5e240-installconfig-networking__2.4_subnets-routes.png"></a>
 [/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+To create a static route between two subnets, use the following command:
 
-[tab version="deb-2.9#ui,deb-3.0#ui,deb-3.1#ui,snap-2.9#ui,snap-3.0#ui,snap-3.1#ui," view=""]
+```nohighlight
+maas admin static-routes create source=$SOURCE_SUBNET destination=$DEST_SUBNET \
+gateway_ip=$GATEWAY_IP
+```
+[/tab]
+[/tabs]
+
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="#heading--how-to-view-reserved-ranges"><h3 id="heading--how-to-view-reserved-ranges">How to view reserved ranges</h3></a>
 
 The reserved ranges section of the subnet screen looks like this:
 
 <a href="https://assets.ubuntu.com/v1/5f9f50f9-installconfig-networking__2.4_subnets-reserved.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/5f9f50f9-installconfig-networking__2.4_subnets-reserved.png"></a>
 
-More details and instructions regarding these ranges can be found in [IP ranges](/t/how-to-manage-ip-ranges/nnnn).
+More details and instructions regarding these ranges can be found in [IP ranges](/t/how-to-manage-ip-ranges/5136).
 [/tab]
-
-
-[tab version="deb-2.9#ui,deb-3.0#ui,deb-3.1#ui,snap-2.9#ui,snap-3.0#ui,snap-3.1#ui," view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="#heading--ui-how-to-view-used-ip-addresses"><h3 id="heading--ui-how-to-view-used-ip-addresses">How to view used IP addresses</h3></a>
 
 This section displays hosts (including controllers) associated with the used addresses along with related bits of host information.
 
 <a href="https://assets.ubuntu.com/v1/b9e69b0b-installconfig-networking__2.4_subnets-used.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/b9e69b0b-installconfig-networking__2.4_subnets-used.png"></a>
 [/tab]
+[/tabs]
 
 <a href="#heading--how-to-set-up-a-bridge-with-maas"><h3 id="heading--how-to-set-up-a-bridge-with-maas">How to set up a bridge with MAAS</h3></a>
 
@@ -295,7 +301,8 @@ At various times in your MAAS network, you may need to set up a bridge to connec
 It's essential to enforce usage of IP addresses to avoid domain name conflicts, should different controllers resolve the same domain name with different IP addresses. You should also avoid using 127.0.0.1 when running multiple controllers, as it would confuse MAAS.
 [/note]
 
-[tab version="deb-2.9#ui,deb-3.0#ui,deb-3.1#ui,snap-2.9#ui,snap-3.0#ui,snap-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 To configure a bridge with the MAAS UI: 
 
 1. Select the machine you want to bridge. 
@@ -318,8 +325,7 @@ Then you can deploy machines using this bridge.
 
 **NOTE** that you can create an "Open switch" bridge if desired, and MAAS will create the netplan model for you.
 [/tab] 
-
-[tab version="deb-2.9#cli,deb-3.0#cli,deb-3.1#cli,snap-2.9#cli,snap-3.0#cli,snap-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 You can use the MAAS CLI/API to configure a bridge via the following procedure:
 
 1. Select the interface on which you wish to configure the bridge. This example uses the boot interface, since the boot interface must be connected to a MAAS controlled network -- but any interface is allowed:
@@ -339,6 +345,7 @@ You can use the MAAS CLI/API to configure a bridge via the following procedure:
           maas $PROFILE interface link-subnet $SYSTEM_ID $BRIDGE_ID subnet=$SUBNET_ID mode="STATIC" ip_address="10.0.0.101"
 
 [/tab]
+[/tabs]
 
 <a href="#heading--how-to-set-up-a-bridge-with-netplan"><h3 id="heading--how-to-set-up-a-bridge-with-netplan">How to set up a bridge with netplan</h3></a>
 

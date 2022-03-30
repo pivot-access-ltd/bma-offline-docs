@@ -2,29 +2,43 @@ MAAS VM hosts allow for the dynamic composition of nodes from a pool of availabl
 
 This article will help you learn:
 
+[tabs]
+[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
 - [About VM hosts](#heading--about-vm-hosts)
 - [About VM host storage pools](#heading--about-vm-host-storage-pools)
-[tab version="deb-2.9#cli,deb-2.9#ui,snap-2.9#cli,snap-2.9#ui," view=""]
 - [About LXD vs. libvirt](#heading--about-lxd-vs-libvirt)
-[/tab]
-[tab version="snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-- [About LXD VM hosts](#heading--about-lxd-vm-hosts)
-[/tab]
-[tab version="snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-- [About LXD VM host project summaries](#heading--vm-host-project-summary)
-- [About LXD VM host resource details](#heading--vm-host-resource-details)
-- [About VM host settings](#heading--configuration)
-[/tab]
 - [About VMs and NUMA](#heading--about-vms-and-numa)
 - [About support for NUMA, SR-IOV, and hugepages](#heading--about-support-for-numa-et-al)
 - [About over-committed resources](#heading--overcommit-resources)
-
-[tab version="snap-2.9#cli,snap-2.9#ui,deb-2.9#cli,deb-2.9#ui," view=""]
-MAAS currently supports VM hosts and VMs created via [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt). MAAS also supports LXD VMs and VM hosts as a Beta feature.
 [/tab]
-[tab version="snap-3.0#ui,snap-3.0#cli,deb-3.0#cli,deb-3.0#ui,snap-3.1#ui,snap-3.1#cli,deb-3.1#ui,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI"]
+- [About VM hosts](#heading--about-vm-hosts)
+- [About VM host storage pools](#heading--about-vm-host-storage-pools)
+- [About LXD VM hosts](#heading--about-lxd-vm-hosts)
+- [About LXD VM host project summaries](#heading--vm-host-project-summary)
+- [About LXD VM host resource details](#heading--vm-host-resource-details)
+- [About VM host settings](#heading--configuration)
+- [About VMs and NUMA](#heading--about-vms-and-numa)
+- [About support for NUMA, SR-IOV, and hugepages](#heading--about-support-for-numa-et-al)
+- [About over-committed resources](#heading--overcommit-resources)
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="CLI"]
+- [About VM hosts](#heading--about-vm-hosts)
+- [About VM host storage pools](#heading--about-vm-host-storage-pools)
+- [About VMs and NUMA](#heading--about-vms-and-numa)
+- [About support for NUMA, SR-IOV, and hugepages](#heading--about-support-for-numa-et-al)
+- [About over-committed resources](#heading--overcommit-resources)
+[/tab]
+[/tabs]
+
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI,CLI"]
 MAAS currently supports VM hosts and VMs created with LXD VMs and VM hosts as the preferred VM hosting method. As a legacy offering, MAAS still supports VM hosts and VMs created via [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt).
 [/tab]
+[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
+MAAS currently supports VM hosts and VMs created via [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt). MAAS also supports LXD VMs and VM hosts as a Beta feature.
+[/tab]
+[/tabs]
 
 <a href="#heading--about-vm-hosts"><h2 id="heading--about-vm-hosts">About VM hosts</h2></a>
 
@@ -50,13 +64,13 @@ Simply put, a VM host is a machine which is designated to run virtual machines (
 For LXD VM hosts, each VM can be assigned a single block device from the storage pool.
 [/note]
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,/deb/3.1.ui
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 The MAAS web UI displays information about each VM host's storage pools so you can understand your resource usage at a glance:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/3387f256f9bd02f7fc2079f119377305256973c8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3387f256f9bd02f7fc2079f119377305256973c8.jpeg"></a>
 [/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 Retrieve VM host storage pool information with the following command:
 
 ```
@@ -74,10 +88,12 @@ maas admin vm-host read 5 \
 ```
 
 [/tab]
+[/tabs]
 
-[tab version="snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 <a href="#heading--about-lxd-vm-hosts"><h2 id="heading--about-lxd-vm-hosts">About LXD VM hosts</h2></a>
 
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI"]
 <a href="#heading--about-lxd-vm-host-auth"><h3 id="heading--about-lxd-vm-host-auth">About LXD VM host authentication</h3></a>
 
 MAAS 3.1 provides a smoother experience when connecting an existing LXD server to MAAS, guiding the user through manual steps and providing increased connection security with use of certificates. Currently, each MAAS region/rack controller has its own certificate. To add a LXD VM host to MAAS, the user needs to either add the certificate for each controller that can reach the LXD server to the trust list in LXD, or use the trust_password (in which case the controller talking to LXD will automatically add its certificate to the trust).
@@ -110,9 +126,6 @@ With MAAS 3.1, it’s possible to import an existing key/certificate pair for us
 The imported key must not have a passphrase; otherwise, MAAS will not be able to use it.
 [/note]
 
-[/tab]
-
-[tab version="snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 <a href="#heading--vm-host-project-summary"><h2 id="heading--vm-host-project-summary">About LXD VM host project summaries</h2></a>
 
 Each LXD VM host provides a "Project" tab that summarizes the current state of the LXD KVM:
@@ -135,13 +148,17 @@ VM hosts have several settings. Modify these by selecting the 'Settings' tab and
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/2/253afc122d61145be656bb5c3811f9b6c6caa708.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/253afc122d61145be656bb5c3811f9b6c6caa708.png"></a>
 [/tab]
-
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="CLI"]
+Please use the UI interface to interact with LXD VM hosts, by selecting "UI" from the dropdown above.
+[/tab]
 [tab version="deb-2.9#cli,deb-2.9#ui,snap-2.9#cli,snap-2.9#ui," view=""]
+LXD VM hosts are not available in MAAS version 2.9.  Please upgrade to MAAS version 3.0 or greater to access this functionality.
 
 <a href="#heading--about-lxd-vs-libvirt"><h2 id="heading--about-lxd-vs-libvirt">About LXD (Beta) vs. libvirt</h2></a>
 
 Libvirt KVMs and LXD VMs are both based on the same underlying virtualisation technology, QEMU. Unlike libvirt KVMs, though, LXD VMs can be managed without requiring SSH access to the VM host. LXD are remotely accessed via secure HTTP transport, which provides better security for LXD-based VMs. In addition, LXD has a better API, and is part of a much larger constellation of enterprise software, offering a wider range of future features and use cases.
 [/tab]
+[/tabs
 
 <a href="#heading--about-vms-and-numa"><h2 id="heading--about-vms-and-numa">About VMs and NUMA</h2></a>
 
@@ -159,16 +176,8 @@ MAAS also shows hugepages information (if they are in use) and prevents overcomm
 
 <a href="#heading--about-support-for-numa-et-al"><h2 id="heading--about-support-for-numa-et-al">About support for NUMA, SR-IOV, and hugepages</h2></a>
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
-VM host management has been redesigned to support NUMA/SR-IOV configurations and hugepages from the API/CLI. Users can:
-
-1.  See resources per NUMA node.
-2.  See resources for VM hosts bearing NUMA nodes.
-3.  See the alignment between VM host interfaces and NUMA nodes.
-4.  Configure and use hugepages.
-
-[/tab]
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 VM host management has been redesigned to support NUMA/SR-IOV configurations and hugepages from the API/CLI. Users can:
 
 1.  See resources per NUMA node.
@@ -177,6 +186,16 @@ VM host management has been redesigned to support NUMA/SR-IOV configurations and
 
 Via the CLI, users can see more details about NUMA-bearing VM host resources and configure hugepages. Select the relevant "CLI" link in the top menu to access this information.
 [/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+VM host management has been redesigned to support NUMA/SR-IOV configurations and hugepages from the API/CLI. Users can:
+
+1.  See resources per NUMA node.
+2.  See resources for VM hosts bearing NUMA nodes.
+3.  See the alignment between VM host interfaces and NUMA nodes.
+4.  Configure and use hugepages.
+
+[/tab]
+[/tabs]
 
 <a href="#heading--overcommit-resources"><h3 id="heading--overcommit-resources">About over-committed resources</h3></a>
 
@@ -189,9 +208,14 @@ The following shows four theoretical examples of these ratios and how they affec
 3.  `32 physical CPU cores * 10.0 multiplier  = 320 virtual CPU cores`
 4.  `128GB physical memory  * 5.5 multiplier  = 704G virtual Memory`
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg"></a> 
 [/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+Please use the MAAS UI to view overcommit ratios for NUMA resources.
+[/tab]
+[/tabs]
 
 Over-committing resources allows a user to compose many MAAS-managed machines without worrying about the physical limitations of the host. For example, on a physical host with four cores and 12 GB of memory, you could compose four libvirt machines, each using two cores and 4 GB of memory.  This arrangement over commits the available physical resources. Provided you never run all four VMs simultaneously, you would have all the benefits of MAAS-managed VMs without over-taxing your host.
 

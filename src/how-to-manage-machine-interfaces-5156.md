@@ -11,7 +11,8 @@ This article will explain the following procedures related to machine interfaces
 
 <a href="#heading--how-to-edit-interfaces"><h2 id="heading--how-to-edit-interfaces">How to edit machines interfaces</h2></a>
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 From a machine's "Interfaces" page, click the menu icon for the interface to be edited and select "Edit Physical" from the resulting menu:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/438475b8906736b45fc809cd105a56be5052397d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/438475b8906736b45fc809cd105a56be5052397d.png"></a>
@@ -22,7 +23,7 @@ The following window will appear:
 
 Four modes determine how a subnet address is assigned when MAAS deploys the machine. You can select one of these modes by clicking on the "IP mode" drop-down menu.
 
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/how-to-manage-networks/nnnn#heading--how-to-toggle-subnet-management)).
+-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/how-to-manage-networks/5164#heading--how-to-toggle-subnet-management)).
 
 -   **Static assign**: The administrator will specify a static address using a secondary field.
 
@@ -32,8 +33,7 @@ Four modes determine how a subnet address is assigned when MAAS deploys the mach
 
 Press the "Save" button to apply the changes.
 [/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 If you want to edit the IP assignment mode of a network interface, the existing subnet link first needs to be removed.
 
 Begin by finding the interface ID as well as the interface's subnet link ID with the command:
@@ -62,12 +62,49 @@ If instead of DHCP, you desire a static address, then the second command would l
 maas $PROFILE interface link-subnet exqn37 58 mode=static subnet=192.168.1.0/24 ip_address=192.168.1.113
 ```
 [/tab]
+[/tabs]
 
-See [Concepts and terms](/t/maas-concepts-and-terms-reference/nnnn#heading--ip-ranges) for the definitions of reserved range types.
+See [Concepts and terms](/t/maas-concepts-and-terms-reference/5146#heading--ip-ranges) for the definitions of reserved range types.
 
 <a href="#heading--bond-interfaces"><h2 id="heading--bond-interfaces">How to create a bond interface</h2></a>
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+A bond is created by selecting more than one interface and clicking the now-active "Create bond" button:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png"></a>
+
+After clicking the "Create bond" button, the bond configuration pane will appear.
+
+From the bond configuration pane, you can rename the bond, select a bond mode (see below), assign a MAC address to the aggregate device and attach one or more tags.
+
+The interfaces aggregated into the bond interface are listed below the "Tags" field. Use the "Primary" column to select the interface to act as the primary device.
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png"></a>
+
+You can select from the following bonding modes on the "Bond mode" drop-down menu:
+
+-   **balance-rr**: Transmit packets in sequential order from the first available slave through to the last. This mode provides load balancing and fault tolerance.
+
+-   **active-backup**: Only one slave in the bond is active. A different slave becomes active if, and only if, the active slave fails. The bond's MAC address is externally visible on only one port (network adaptor) to avoid confusing the switch.
+
+-   **balance-xor**: Transmit based on the selected transmit hash policy. The default policy is simple, which means that an XOR operation selects packages.  This XOR compares the source MAC address and the resultant XOR between the destination MAC address, the packet type identifier, and the modulo slave count.
+
+-   **broadcast**: Transmit everything on all slave interfaces. This mode provides fault tolerance.
+
+-   **802.3ad**: Creates aggregation groups that share the same speed and duplex settings. This mode utilises all slaves in the active aggregation, following the IEEE 802.3ad specification.
+
+-   **balance-tlb**: Adaptive transmit load balancing, channel bonding that does not require any special switch support.
+
+-   **balance-alb**: Adaptive load balancing, includes balance-tlb plus receive load balancing (rlb) for IPV4 traffic. This mode does not require any special switch support.  ARP negotiation achieves load balancing in this case.
+
+Press the "Save" button when you're done.
+
+[note]
+The MAC address defaults to the MAC address of the primary interface.
+[/note]
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 A bond can be created with the following command:
 
 ```
@@ -119,48 +156,29 @@ Supported bonding modes include:
 |  `802.3ad`| IEEE 802.3ad dynamic link aggregation. Creates aggregation groups that share the same speed and duplex settings. Uses all slaves in the active aggregator according to the 802.3ad specification. |
 |  `balance-tlb`| Adaptive transmit load balancing: channel bonding that does not require any special switch support. |
 |  `balance-alb`| Adaptive load balancing: includes balance-tlb plus receive load balancing (rlb) for IPV4 traffic, and does not require any special switch support. The receive load balancing is achieved by ARP negotiation. |
-
 [/tab]
-
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-A bond is created by selecting more than one interface and clicking the now-active "Create bond" button:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png"></a>
-
-After clicking the "Create bond" button, the bond configuration pane will appear.
-
-From the bond configuration pane, you can rename the bond, select a bond mode (see below), assign a MAC address to the aggregate device and attach one or more tags.
-
-The interfaces aggregated into the bond interface are listed below the "Tags" field. Use the "Primary" column to select the interface to act as the primary device.
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png"></a>
-
-You can select from the following bonding modes on the "Bond mode" drop-down menu:
-
--   **balance-rr**: Transmit packets in sequential order from the first available slave through to the last. This mode provides load balancing and fault tolerance.
-
--   **active-backup**: Only one slave in the bond is active. A different slave becomes active if, and only if, the active slave fails. The bond's MAC address is externally visible on only one port (network adaptor) to avoid confusing the switch.
-
--   **balance-xor**: Transmit based on the selected transmit hash policy. The default policy is simple, which means that an XOR operation selects packages.  This XOR compares the source MAC address and the resultant XOR between the destination MAC address, the packet type identifier, and the modulo slave count.
-
--   **broadcast**: Transmit everything on all slave interfaces. This mode provides fault tolerance.
-
--   **802.3ad**: Creates aggregation groups that share the same speed and duplex settings. This mode utilises all slaves in the active aggregation, following the IEEE 802.3ad specification.
-
--   **balance-tlb**: Adaptive transmit load balancing, channel bonding that does not require any special switch support.
-
--   **balance-alb**: Adaptive load balancing, includes balance-tlb plus receive load balancing (rlb) for IPV4 traffic. This mode does not require any special switch support.  ARP negotiation achieves load balancing in this case.
-
-Press the "Save" button when you're done.
-
-[note]
-The MAC address defaults to the MAC address of the primary interface.
-[/note]
-[/tab]
+[/tabs]
 
 <a href="#heading--bridge-interfaces"><h2 id="heading--bridge-interfaces">How to create a bridge interface</h2></a>
 
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+<a href="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png"></a>
+
+Press the "Save" button when you're done.
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+Please use the UI interface to create a bridge interface.  Select the "UI" dropdown above to see how.
+[/tab]
+[/tabs]
+
+<a href="#heading--delete-an-interface"><h2 id="heading--delete-an-interface">How to delete an interface</h2></a>
+
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+An interface can only be deleted via the MAAS CLI.  Choose the "CLI" dropdown above to see how.
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 A bridge interface is created with the following syntax:
 
 ```
@@ -198,18 +216,7 @@ The following parameters may be applied when creating a bridge:
 
 11. `autoconf`: Optional boolean.  Perform stateless autoconfiguration. (IPv6 only)
 [/tab]
-
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-<a href="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png"></a>
-
-Press the "Save" button when you're done.
-[/tab]
-
-<a href="#heading--delete-an-interface"><h2 id="heading--delete-an-interface">How to delete an interface</h2></a>
-
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,snap-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-An interface can only be deleted via the MAAS CLI.
-[/tab]
+[/tabs]
 
 The "delete" command can be used to delete a bridge interface, a bond interface or a physical interface:
 
@@ -234,10 +241,11 @@ Note that while the label is presented, there is no machine-readable output expe
 
 <a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">How to assign a network interface to a fabric</h2></a>
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,snap-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-A network interface may be assigned to a fabric with the MAAS CLI only.
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+A network interface may be assigned to a fabric with the MAAS CLI only.  Choose the "CLI" dropdown above to see how.
 [/tab]
-
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 This task is made easier with the aid of the `jq` utility. It filters the `maas` command (JSON formatted) output and prints it in the desired way, which allows you to view and compare data quickly. Go ahead and install it:
 
 ``` bash
@@ -314,13 +322,16 @@ The output shows that the interface is now on fabric-0:
 {"id":8,"name":"eth0","mac":"52:54:00:01:01:01","vid":0,"fabric":"fabric-0"}
 {"id":9,"name":"eth1","mac":"52:54:00:01:01:02","vid":null,"fabric":null}
 ```
+[/tab]
+[/tabs]
 
 <a href="#heading--interface-identifiers"><h2 id="heading--interface-identifiers">How to discover interface identifiers</h2></a>
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,snap-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-Interface identifiers can only be discovered via the MAAS CLI.
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+Interface identifiers can only be discovered via the MAAS CLI.  Choose the "CLI" dropdown above to see how.
 [/tab]
-
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 The MAAS CLI uses a numeric interface identifier for many interface operations. Use the following command to retrieve the identifier(s):
 
 ``` bash
@@ -337,13 +348,15 @@ Look for either id or the number at the end of an interface's resource URI, such
 ...
 "resource_uri": "/MAAS/api/2.0/nodes/4efwb4/interfaces/15/"
 ```
+[/tab]
+[/tabs]
 
 <a href="#heading--create-a-vlan-interface"><h2 id="heading--create-a-vlan-interface">How to create a VLAN interface</h2></a>
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,snap-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-VLAN interfaces can only be created via the MAAS CLI.
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+VLAN interfaces can only be created via the MAAS CLI. Select the "CLI" dropdown above to see how.
 [/tab]
-
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 To create a VLAN interface, use the following syntax:
 
 ``` bash
@@ -439,13 +452,16 @@ Machine-readable output follows:
     "resource_uri": "/MAAS/api/2.0/nodes/4efwb4/interfaces/21/"
 }
 ```
+[/tab]
+[/tabs]
 
 <a href="#heading--delete-a-vlan-interface"><h2 id="heading--delete-a-vlan-interface">How to delete a VLAN interface</h2></a>
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,snap-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-VLAN interfaces can only be deleted via the MAAS CLI.
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+VLAN interfaces can only be deleted via the MAAS CLI. Select the "CLI" dropdown above to see how.
 [/tab]
-
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 The following command outlines the syntax required to delete a VLAN interface from the command line:
 
 ``` bash
@@ -457,3 +473,5 @@ Using the values from previous examples, you executed this step as follows:
 ``` bash
 maas admin vlan delete 0 100
 ```
+[/tab]
+[/tabs]

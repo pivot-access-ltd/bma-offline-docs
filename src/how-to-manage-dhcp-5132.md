@@ -6,13 +6,22 @@ This documentation presupposes that MAAS-managed DHCP is used to enlist and comm
 
 This article will tell you:
 
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" version="UI"]
 - [How to enable MAAS-managed DHCP](#heading--enabling-dhcp)
 - [How to resolve IP conflicts](#heading--resolving-ip-conflicts)
 - [How to extend a reserved dynamic IP range](#heading--extending-a-reserved-dynamic-ip-range)
 - [How to configure external DHCP](#heading--external-dhcp-and-a-reserved-ip-range)
 - [How to use a DHCP relay](#heading--dhcp-relay)
 - [How to customise MAAS with DHCP snippets](#heading--dhcp-snippets)
-[tab version="snap-2.9#cli,snap-3.0#cli,deb-2.9#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[/tab]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+- [How to enable MAAS-managed DHCP](#heading--enabling-dhcp)
+- [How to resolve IP conflicts](#heading--resolving-ip-conflicts)
+- [How to extend a reserved dynamic IP range](#heading--extending-a-reserved-dynamic-ip-range)
+- [How to configure external DHCP](#heading--external-dhcp-and-a-reserved-ip-range)
+- [How to use a DHCP relay](#heading--dhcp-relay)
+- [How to customise MAAS with DHCP snippets](#heading--dhcp-snippets)
 - [How to list DHCP snippets](#heading--list-snippets)
 - [How to update a DHCP snippet](#heading--update-a-snippet)
 - [How to enable or disable a DHCP snippet](#heading--enable-or-disable-a-snippet)
@@ -22,12 +31,14 @@ This article will tell you:
 - [How to create a Mail Exchange pointer record in DNS](#heading--create-a-mail-exchange-pointer-record-in-dns)
 - [How to set a DNS forwarder](#heading--set-a-dns-forwarder)
 [/tab]
+[/tabs]
 
 <a href="#heading--enabling-dhcp"><h2 id="heading--enabling-dhcp">How to enable MAAS-managed DHCP</h2></a>
 
 MAAS-managed DHCP needs a reserved dynamic IP range enlist and commission machines. You should create such a range when you are enabling DHCP with the web UI.
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 To enable MAAS-managed DHCP, under the 'Subnets' page select the desired VLAN and then:
 
 1.  Under the 'Take action' button select 'Provide DHCP'. A new window will appear.
@@ -39,8 +50,7 @@ To enable MAAS-managed DHCP, under the 'Subnets' page select the desired VLAN an
 
 Now, addresses in this range will get assigned to machines that are being either enlisted or commissioned.  In addition, if you are deploying a machine that has an interface connected to the untagged VLAN, and it has an IP assignment mode set to 'DHCP,' then it will also get an address in this range.
 [/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 To enable DHCP on a VLAN on a certain fabric:
 
 ``` nohighlight
@@ -67,6 +77,7 @@ maas $PROFILE subnet update $SUBNET_CIDR gateway_ip=$MY_GATEWAY
 ```
 
 [/tab]
+[/tabs]
 
 <a href="#heading--resolving-ip-conflicts"><h3 id="heading--resolving-ip-conflicts">How to resolve IP conflicts</h3></a>
 
@@ -80,11 +91,11 @@ MAAS also recognises when the subnet ARP cache is full, so that it can re-check 
 
 <a href="#heading--extending-a-reserved-dynamic-ip-range"><h2 id="heading--extending-a-reserved-dynamic-ip-range">How to extend a reserved dynamic IP range</h2></a>
 
-If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/how-to-manage-ip-ranges/nnnn)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
+If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/how-to-manage-ip-ranges/5136)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
 
 <a href="#heading--external-dhcp-and-a-reserved-ip-range"><h2 id="heading--external-dhcp-and-a-reserved-ip-range">How to configure external DHCP</h2></a>
 
-If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/how-to-manage-ip-ranges/nnnn) to create such a range. It should correspond to the lease range of the external server.
+If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/how-to-manage-ip-ranges/5136) to create such a range. It should correspond to the lease range of the external server.
 
 <a href="#heading--dhcp-relay"><h2 id="heading--dhcp-relay">How to use a DHCP relay</h2></a>
 
@@ -94,13 +105,13 @@ To relay from one VLAN (source) to another VLAN (target):
 
 1.  Ensure the target VLAN has DHCP enabled.
 
-2.  Set up the external relay. This relay is set up independently from MAAS. See [DHCP relay](/t/maas-concepts-and-terms-reference/nnnn#heading--dhcp-relay) for software suggestions.
+2.  Set up the external relay. This relay is set up independently from MAAS. See [DHCP relay](/t/maas-concepts-and-terms-reference/5246#heading--dhcp-relay) for software suggestions.
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 3.  Configure MAAS-managed DHCP. Navigate to the source VLAN page and select the 'Relay DHCP' action. Fill in the fields in the resulting form. The crucial setting is the target VLAN ('Relay VLAN'). Press the 'Relay DHCP' button to finish.
 [/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 3. To relay DHCP traffic for a VLAN (source) through another VLAN (target):
 
 ``` nohighlight
@@ -114,30 +125,32 @@ maas $PROFILE vlan update 2 0 relay_van=5002
 ```
 
 [/tab]
+[/tabs]
 
 <a href="#heading--dhcp-snippets"><h2 id="heading--dhcp-snippets">How to customise MAAS with DHCP snippets</h2></a>
 
-[tab version="deb-2.9#ui,deb-2.9#cli,deb-3.0#ui,deb-3.0#cli,deb-3.1#cli,deb-3.1#ui," view=""]
-When MAAS manages DHCP, you customise it through the use of DHCP snippets. These are user-defined configuration options that can be applied either globally, per subnet, or per machine. You apply a global snippet to all VLANs, subnets, and machines. All three types end up in `/var/lib/maas/dhcpd.conf` or `/var/lib/maas/dhcpd6.conf`. For information on what options to use, refer to the [`dhcpd.conf` man page](http://manpages.ubuntu.com/cgi-bin/search.py?q=dhcpd.conf).
-[/tab]
-
-[tab version="snap-2.9#ui,snap-2.9#cli,snap-3.0#ui,snap-3.0#cli,snap-3.1#ui,snap-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,snap-3.1,snap-3.0,snap-2.9" view="UI"]
 When MAAS manages DHCP, you customise it through the use of DHCP snippets. These are user-defined configuration options that can be applied either globally, per subnet, or per machine. You apply a global snippet to all VLANs, subnets, and machines. All three types end up in `/var/snap/maas/common/maas/dhcpd.conf` or `/var/snap/maas/common/maas/dhcpd6.conf`. Be aware that if you edit these files directly, you will need to `sudo` to `root`, as there is no `maas` user in the snap (all relevant files are owned by `root`). For information on what options to use, refer to the [`dhcpd.conf` man page](http://manpages.ubuntu.com/cgi-bin/search.py?q=dhcpd.conf).
 [/tab]
+[tab version="deb-3.2,deb-3.1,deb-3.0,deb-2.9" view="CLI"]
+When MAAS manages DHCP, you customise it through the use of DHCP snippets. These are user-defined configuration options that can be applied either globally, per subnet, or per machine. You apply a global snippet to all VLANs, subnets, and machines. All three types end up in `/var/lib/maas/dhcpd.conf` or `/var/lib/maas/dhcpd6.conf`. For information on what options to use, refer to the [`dhcpd.conf` man page](http://manpages.ubuntu.com/cgi-bin/search.py?q=dhcpd.conf).
+[/tab]
+[/tabs]
 
 [note]
 Modifications made directly to `dhcpd.conf.template` or `dhcpd6.conf.template` are not supported.
 [/note]
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 To manage snippets, as an admin, open the 'Settings' page and click on the 'DHCP snippets' tab.
 
 For example, to create a new snippet press 'Add custom snippet'. In the resulting window, choose a name and type for it and enter its associated DHCP configuration. Click 'Save snippet' to apply the change, and make sure to activate the checkbox in the 'Enabled' column of the snippets list.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a3247c726ed9e3e5d7a99becd89920e81aaa86f7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a3247c726ed9e3e5d7a99becd89920e81aaa86f7.png"></a>
 [/tab]
-
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
 When you create a snippet, MAAS enables it by default.
 
 To create a **global** snippet:
@@ -273,3 +286,4 @@ maas $PROFILE maas set-config name=upstream_dns value=$MY_UPSTREAM_DNS
 ```
 
 [/tab]
+[/tabs]

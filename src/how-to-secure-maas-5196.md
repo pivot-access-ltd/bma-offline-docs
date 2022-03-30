@@ -64,7 +64,7 @@ One of the best steps you can take to improve both security and availability of 
 
 <details><summary>What is a TLS-terminated load balancer?</summary>
 
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/how-to-enable-high-availability/nnnn) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
+In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/how-to-enable-high-availability/5120) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
 
 A TLS-terminated load balancer is a load balancer that carries encryption and decryption as far down the pipe as possible, in this case, all the way to the load balancer itself. Note that, even though the "SSL" keyword may be used to enable operation, the term SSL is considered obsolete.  Hence we choose to use the term "TLS" instead, referring to **Transport Layer Security**.
 
@@ -132,7 +132,7 @@ Finally, restart the (already-running) load balancer so that these changes can t
 
 Note that you can also [enable HAProxy logging ](https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04) if desired.  This logging is an optional feature of the HAProxy tool and is thus left to your discretion.  
 
-If desired, you can [bypass the use of SSL](/t/how-to-enable-high-availability/nnnn#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/how-to-enable-tls-encryption/nnnn) without implementing HAProxy.
+If desired, you can [bypass the use of SSL](/t/how-to-enable-high-availability/5120#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/how-to-enable-tls-encryption/5116) without implementing HAProxy.
 
 <a href="#heading--using-logs-for-security"><h2 id="heading--using-logs-for-security">Use logs to identify security issues</h2></a>
 
@@ -216,13 +216,15 @@ As mentioned above, there are a large number of Web server exploits, and this do
 
 <a href="#heading--maas-log-file-subsection"><h3 id="heading--maas-log-file-subsection">MAAS log files</h3></a>
 
-[tab version="deb-2.9#ui,deb-2.9#cli,deb-3.0#ui,deb-3.0#cli,deb-3.1#cli,deb-3.1#ui," view=""]
-Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/log/maas/regiond.log`.  For reference, a valid login request looks like this entry: 
-[/tab]
-
-[tab version="snap-2.9#ui,snap-2.9#cli,snap-3.0#ui,snap-3.0#cli,snap-3.1#ui,snap-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,snap-3.1,snap-3.0,snap-2.9" view="UI,CLI"]
 Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/snap/maas/common/log/regiond.log`.  For reference, a valid login request looks like this entry: 
 [/tab]
+[tab version="deb-3.2,deb-3.1,deb-3.0,deb-2.9" view="UI,CLI"]
+Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/log/maas/regiond.log`.  For reference, a valid login request looks like this entry: 
+[/tab]
+[/tabs]
+
 
     2020-03-31 21:17:56 regiond: [info] 10.132.172.1 GET /MAAS/accounts/login/ HTTP/1.1
     --> 200 OK (referrer: http://10.132.172.231:5240/MAAS/r/; agent: Mozilla/5.0 (X11;
@@ -275,21 +277,8 @@ You should pick good passwords and store them securely (e.g. in a KeePassX passw
 
 MAAS configuration files should be set to have permission `640`: readable by logins belonging to the `maas` group and writeable only by the `root` user. Currently, the `regiond.conf` file contains the login credentials for the PostgreSQL database used by MAAS to keep track of all machines, networks, and configuration.
 
-[tab version="deb-2.9#ui,deb-2.9#cli,deb-3.0#ui,deb-3.0#cli,deb-3.1#cli,deb-3.1#ui," view=""]
-``` bash
-chmod 640 /etc/maas/rackd.conf
-chmod 640 /etc/maas/regiond.conf
-```
-
-After:
-
-``` no-highlight
--rw-r----- 1 root maas   90 Sep 27 14:13 rackd.conf
--rw-r----- 1 root maas  157 Sep 27 14:14 regiond.conf
-```
-[/tab]
-
-[tab version="snap-2.9#ui,snap-2.9#cli,snap-3.0#ui,snap-3.0#cli,snap-3.1#cli,snap-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,snap-3.1,snap-3.0,snap-2.9" view="UI,CLI"]
 ``` bash
 chmod 640 /var/snap/maas/current/rackd.conf
 chmod 640 /var/snap/maas/current/regiond.conf
@@ -305,6 +294,20 @@ After:
 
 Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-snap-snap-security-overview).
 [/tab]
+[tab version="deb-3.2,deb-3.1,deb-3.0,deb-2.9" view="UI,CLI"]
+``` bash
+chmod 640 /etc/maas/rackd.conf
+chmod 640 /etc/maas/regiond.conf
+```
+
+After:
+
+``` no-highlight
+-rw-r----- 1 root maas   90 Sep 27 14:13 rackd.conf
+-rw-r----- 1 root maas  157 Sep 27 14:14 regiond.conf
+```
+[/tab]
+[/tabs]
 
 <a href="#heading--shared-secrets"><h3 id="heading--shared-secrets">Shared secrets</h2></a>
 
@@ -312,4 +315,4 @@ When you add a new rack or region controller, MAAS asks for a shared secret it w
 
 <a href="#heading--security-consulting"><h2 id="heading--security-consulting">Whom to contact about MAAS security consulting</h2></a>
 
-If you need help implementing MAAS security, please [contact us](/t/how-to-contact-us/nnnn).  We will be happy to assist you in arranging security consulting appropriate to your needs.
+If you need help implementing MAAS security, please [contact us](/t/how-to-contact-us/5448).  We will be happy to assist you in arranging security consulting appropriate to your needs.

@@ -15,21 +15,22 @@ This article will tell you:
 
 The following three MAAS components need to be backed-up and restored, on each region and rack controller, to recreate a working environment:
 
-[tab version="deb-2.9#ui,deb-2.9#cli,deb-3.0#ui,deb-3.0#cli,deb-3.1#ui,deb-3.1" view=""]
-1.  The PostgreSQL database
-2.  The configuration files in `/etc/maas`
-3.  The configuration files in `/var/lib/maas`
-
-`/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
-[/tab]
-
-[tab version="snap-2.9#ui,snap-2.9#cli,snap-3.0#ui,snap-3.0#cli,snap-3.1#ui,snap-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,snap-3.1,snap-3.0,snap-2.9" view="UI,CLI"]
 1.  The PostgreSQL database
 2.  The configuration files in `/snap/maas/current/etc/maas`
 3.  The configuration files in `/var/snap/maas/common/maas/`
 
 `/var/snap/maas/common/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
 [/tab]
+[tab version="deb-3.2,deb-3.1,deb-3.0,deb-2.9" view="UI,CLI"]
+1.  The PostgreSQL database
+2.  The configuration files in `/etc/maas`
+3.  The configuration files in `/var/lib/maas`
+
+`/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
+[/tab]
+[/tabs]
 
 Other configuration files, such as those used by your network configuration (`/etc/network/interfaces`, for example) will need to be backed-up and restored according to your specific deployment requirements.
 
@@ -70,17 +71,18 @@ Stopping these services will avoid conflicting updates during the remaining back
 
 Archive the database and the required configuration files with a command similar to the following:
 
-[tab version="deb-2.9#ui,deb-2.9#cli,deb-3.0#ui,deb-3.0#cli,deb-3.1#cli,deb-3.1#ui," view=""]
-``` bash
-sudo tar cvpzf ~/backup.tgz --exclude=/var/lib/maas/boot-resources /etc/maas /var/lib/maas ~/dump.sql
-```
-[/tab]
-
-[tab version="snap-2.9#ui,snap-2.9#cli,snap-3.0#ui,snap-3.0#cli,snap-3.1#ui,snap-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,snap-3.1,snap-3.0,snap-2.9" view="UI,CLI"]
 ``` bash
 sudo tar cvpzf ~/backup.tgz --exclude=/var/snap/maas/common/maas/boot-resources /snap/maas/current/etc/maas /var/snap/maas/common/maas ~/dump.sql
 ```
 [/tab]
+[tab version="deb-3.2,deb-3.1,deb-3.0,deb-2.9" view="UI,CLI"]
+``` bash
+sudo tar cvpzf ~/backup.tgz --exclude=/var/lib/maas/boot-resources /etc/maas /var/lib/maas ~/dump.sql
+```
+[/tab]
+[/tabs]
 
 Make sure you move the resulting `backup.tgz` to some external storage you can access when restoring the system.  Also, make sure to restart the services you stopped prior to completing the backup.
 
@@ -104,16 +106,8 @@ sudo -u postgres psql -f dump.sql postgres
 
 Next, copy across the old configuration files to their new locations, taking care to move the originals aside just in case:
 
-[tab version="deb-2.9#ui,deb-2.9#cli,deb-3.0#ui,deb-3.0#cli,deb-3.1#ui,deb-3.1" view=""]
-``` bash
-sudo sh -c "mv /etc/maas /etc/_maas; mv /var/lib/maas /var/lib/_maas"
-sudo sh -c "cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/"
-```
-
-If your restore process regenerated the `/var/lib/maas/secret` file, make sure update this secret on any additional rack controllers.
-[/tab]
-
-[tab version="snap-2.9#ui,snap-2.9#cli,snap-3.0#ui,snap-3.0#cli,snap-3.1#ui,snap-3.1" view=""]
+[tabs]
+[tab version="snap-3.2,snap-3.1,snap-3.0,snap-2.9" view="UI,CLI"]
 ``` bash
 sudo mv /snap/maas/current/etc/maas /snap/maas/current/etc/_maas
 sudo mv /var/snap/maas/common/maas /var/snap/maas/common/_maas
@@ -123,6 +117,15 @@ sudo cp -prf /var/snap/maas/common/maas /var/snap/maas/common/
 
 If your restore process regenerated the `/var/snap/maas/common/maas/secret` file, make sure update this secret on any additional rack controllers.
 [/tab]
+[tab version="deb-3.2,deb-3.1,deb-3.0,deb-2.9" view="UI,CLI"]
+``` bash
+sudo sh -c "mv /etc/maas /etc/_maas; mv /var/lib/maas /var/lib/_maas"
+sudo sh -c "cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/"
+```
+
+If your restore process regenerated the `/var/lib/maas/secret` file, make sure update this secret on any additional rack controllers.
+[/tab]
+[/tabs]
 
 [note]
 Take care to preserve the correct permissions when restoring files and directories.

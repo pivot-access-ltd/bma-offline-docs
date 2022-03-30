@@ -1,12 +1,12 @@
 Tags are short, descriptive, searchable words that can be applied to various MAAS objects, including:
 
-* machines (physical and virtual)
-* VM hosts
-* controllers (rack and region)
-* storage (virtual and physical; block devices or partitions)
-* network interfaces
-* devices
-* nodes (in the CLI only)
+- machines (physical and virtual)
+- VM hosts
+- controllers (rack and region)
+- storage (virtual and physical; block devices or partitions)
+- network interfaces
+- devices
+- nodes (in the CLI only)
 
 Tags serve to help you identify, group, and find objects easily, especially when you routinely deploy hundreds of machines.
 
@@ -14,38 +14,37 @@ Annotations are descriptive, searchable phrases that apply only to machines.  Th
 
 This article will show you how to:
 
-
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-* [Work with tags](#heading--work-with-tags)
-* [Work with annotations](#heading--work-with-annotations)
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
+- [Work with tags](#heading--work-with-tags)
+- [Work with annotations](#heading--work-with-annotations)
 [/tab]
-[tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
-* [Work with tags](#heading--work-with-tags)
-* [Work with annotations](#heading--work-with-annotations)
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="CLI"]
+- [Work with tags](#heading--work-with-tags)
+- [Work with annotations](#heading--work-with-annotations)
 [/tab]
+[/tabs]
 
 All headings have been hyperlinked for easy bookmarking.  Note that not all functions for tags and annotations can be accessed via one interface (UI/CLI), so you will occasionally encounter cross-links.
 
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
-
+* work with tags (UI)
 <a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a>
 
 This section is devoted to procedures for working with tags.  We begin with some general operations that apply to all tag types, such as naming conventions and basic mechanics.  We then walk through the various tag types, providing procedures that will help you create, assign, remove, delete, list, view, and filter tags, covering the nuances of each type.
 
 Specifically, this section will show you how to:
 
-[/tab]
+- [Work with tags in general](#heading--work-with-tags-in-general)
+- [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
+- [Work with controller tags](#heading--work-with-controller-tags)
+- [Work with block device tags](#heading--work-with-block-device-tags)
+- [Work with partition tags](#heading--work-with-partition-tags)
+- [Work with network tags](#heading--work-with-network-tags)
+- [Work with device tags](#heading--work-with-device-tags)
+- [Work with node tags (CLI only)](#heading--work-with-node-tags)
 
-* [Work with tags in general](#heading--work-with-tags-in-general)
-* [Work with machine and VM tags](#heading--work-with-machine-and-vm-tags)
-* [Work with controller tags](#heading--work-with-controller-tags)
-* [Work with block device tags](#heading--work-with-block-device-tags)
-* [Work with partition tags](#heading--work-with-partition-tags)
-* [Work with network tags](#heading--work-with-network-tags)
-* [Work with device tags](#heading--work-with-device-tags)
-* [Work with node tags (CLI only)](#heading--work-with-node-tags)
-
-[tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0,snap-2.9,deb-2.9" view="UI"]
 
 Tags for these different objects have similar purposes, but they aren't necessarily administered in the same way -- so we've included detailed sections for each tag type.
 
@@ -55,9 +54,9 @@ There are a few general procedures for working with tags, centred around naming 
 
 As a general rule, you'll want to know how to:
 
-* [Name tags](#heading--name-tags)
-* [Create and assign tags](#heading--create-and-assign-tags)
-* [Delete and remove tags](#heading--delete-and-remove-tags)
+- [Name tags](#heading--name-tags)
+- [Create and assign tags](#heading--create-and-assign-tags)
+- [Delete and remove tags](#heading--delete-and-remove-tags)
 
 <a href="#heading--name-tags"><h4 id="heading--name-tags">Name tags</h4></a>
 
@@ -110,12 +109,12 @@ To remove (unassign) a tag:
 
 This subsection will show you how to:
 
-* [Create machine tags with built-in kernel options (CLI only)](#heading--create-tags-with-built-in-kernel-options)
-* [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
-* [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
-* [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
-* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
-* [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
+- [Create machine tags with built-in kernel options (CLI only)](#heading--create-tags-with-built-in-kernel-options)
+- [Create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
+- [Remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
+- [List machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
+- [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
+- [View machine tags for a VM host](#heading--view-machine-tags-for-a-vm-host)
 
 <a href="#heading--create-and-assign-machine-tags-to-machines"><h4 id="heading--create-and-assign-machine-tags-to-machines">Create and assign machine tags to machines</h4></a>
 
@@ -204,10 +203,10 @@ Note that you can only see the tags for a VM host in the same place that you cha
 
 This subsection will show you how to:
  
-* [Create and assign controller tags ](#heading--create-and-assign-controller-tags-)
-* [Remove and delete controller tags](#heading--remove-and-delete-controller-tags)
-* [List controller tags](#heading--list-controller-tags)
-* [View controller tags](#heading--view-controller-tags)
+- [Create and assign controller tags ](#heading--create-and-assign-controller-tags-)
+- [Remove and delete controller tags](#heading--remove-and-delete-controller-tags)
+- [List controller tags](#heading--list-controller-tags)
+- [View controller tags](#heading--view-controller-tags)
 
 <a href="#heading--create-and-assign-controller-tags-"><h4 id="heading--create-and-assign-controller-tags-">Create and assign controller tags </h4></a>
 
@@ -274,10 +273,10 @@ To view a list of tags assigned to a particular controller, you can use the foll
 In the parlance of MAAS, a block device is generally an unassigned and unpartitioned physical or virtual disk. This subsection will show you how to:
  
 
-* [Create and assign block device tags](#heading--create-and-assign-block-device-tags)
-* [Remove and delete block device tags](#heading--remove-and-delete-block-device-tags)
-* [List block device tags](#heading--list-block-device-tags)
-* [View block device tags](#heading--view-block-device-tags)
+- [Create and assign block device tags](#heading--create-and-assign-block-device-tags)
+- [Remove and delete block device tags](#heading--remove-and-delete-block-device-tags)
+- [List block device tags](#heading--list-block-device-tags)
+- [View block device tags](#heading--view-block-device-tags)
 
 <a href="#heading--create-and-assign-block-device-tags"><h4 id="heading--create-and-assign-block-device-tags">Create and assign block device tags</h4></a>
 
@@ -361,8 +360,8 @@ To view all tags associated with block devices on a given machine:
 
 This subsection will show you how to:
 
-* [List partition tags](#heading--list-partition-tags)
-* [View partition tags](#heading--view-partition-tags)
+- [List partition tags](#heading--list-partition-tags)
+- [View partition tags](#heading--view-partition-tags)
 
 <a href="#heading--list-partition-tags"><h4 id="heading--list-partition-tags">List partition tags</h4></a>
 
@@ -398,9 +397,9 @@ To view all tags associated with partitions on a given machine:
 
 This subsection will show you how to:
 
-* [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
-* [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
-* [View network interface tags](#heading--view-network-interface-tags)
+- [Create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
+- [Remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
+- [View network interface tags](#heading--view-network-interface-tags)
 
 <a href="#heading--create-and-assign-network-interface-tags"><h4 id="heading--create-and-assign-network-interface-tags">Create and assign network interface tags</h4></a>
 
@@ -488,10 +487,10 @@ Note that different machines may have the same physical interface name, but diff
 
 This subsection will show you how to:
  
-* [Create and assign device tags](#heading--create-and-assign-device-tags)
-* [Remove and delete device tags](#heading--remove-and-delete-device-tags)
-* [List device tags](#heading--list-device-tags)
-* [View device tags](#heading--view-device-tags)
+- [Create and assign device tags](#heading--create-and-assign-device-tags)
+- [Remove and delete device tags](#heading--remove-and-delete-device-tags)
+- [List device tags](#heading--list-device-tags)
+- [View device tags](#heading--view-device-tags)
 
 <a href="#heading--create-and-assign-device-tags"><h4 id="heading--create-and-assign-device-tags">Create and assign device tags</h4></a>
 
@@ -565,24 +564,29 @@ Here you will see a list of all device tags currently assigned to devices in thi
 
 The "Tags" card on that screen with show you all the tags currently associated with this device.
 
+* work with annotations (UI)
 <a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a>
 
+[tabs]
+[tab version="snap-3.2,deb-3.2,snap-3.1,deb-3.1,snap-3.0,deb-3.0" view="UI,CLI"]
 This section will explain how to:
-[/tab]
-[tab version="snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
 
-* [Work with static annotations](#heading--work-with-static-annotations)
-* [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
+- [Work with static annotations](#heading--work-with-static-annotations)
+- [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
+[/tab]
+[tab version="snap-2.9,deb-2.9" view="UI,CLI"]
+This section explains how to work with notes, also known as "static annotations".  MAAS 2.9 does not support dynamic annotations; you must upgrade to MAAS version 3.0 or greater to obtain that capability.
+[/tab]
+[/tabs]
 
 <a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a>
-
 This subsection will show you how to:
-[/tab]
+
 [tab version="snap-2.9#ui,deb-2.9#ui,snap-3.0#ui,deb-3.0#ui,snap-3.1#ui,deb-3.1#ui," view=""]
  
-* [Create and assign static annotations](#heading--create-and-assign-static-annotations)
-* [Delete static annotations](#heading--delete-static-annotations)
-* [View static annotations](#heading--view-static-annotations)
+- [Create and assign static annotations](#heading--create-and-assign-static-annotations)
+- [Delete static annotations](#heading--delete-static-annotations)
+- [View static annotations](#heading--view-static-annotations)
 
 <a href="#heading--create-and-assign-static-annotations"><h4 id="heading--create-and-assign-static-annotations">Create and assign static annotations</h4></a>
 
@@ -643,8 +647,8 @@ To view static annotations, you can follow this procedure:
  
 This subsection will show you how to:
 
-* [View dynamic (workload) annotations for one machine](#heading--view-dynamic-workload-annotations-for-one-machine)
-* [Filter on dynamic (workload) annotations](#heading--filter-on-dynamic-workload-annotations)
+- [View dynamic (workload) annotations for one machine](#heading--view-dynamic-workload-annotations-for-one-machine)
+- [Filter on dynamic (workload) annotations](#heading--filter-on-dynamic-workload-annotations)
 
 <a href="#heading--view-dynamic-workload-annotations-for-one-machine"><h4 id="heading--view-dynamic-workload-annotations-for-one-machine">View dynamic (workload) annotations for one machine</h4></a>
 
@@ -670,33 +674,34 @@ To filter machines by dynamic (workload) annotations, use the following procedur
 
 [tab version="snap-2.9#cli,deb-2.9#cli,snap-3.0#cli,deb-3.0#cli,snap-3.1#cli,deb-3.1" view=""]
 
+* work with tags (CLI)
 <a href="#heading--work-with-tags"><h2 id="heading--work-with-tags">Work with tags</h2></a>
 
 This section is devoted to procedures for working with tags.  We begin with some general operations that apply to all tags types, such as naming conventions and basic mechanics.  We then walk through the various tag types, providing procedures that will help you create, assign, remove, delete, list, view, and filter tags, covering the nuances of each type.
 
 Specifically, this section will show you how to:
 
-* [Work with tags, independent of application](#heading--work-with-tags-independent-of-application)
-* [Work with machine tags](#heading--work-with-machine-tags)
-* [Work with virtual machine host tags](#heading--work-with-virtual-machine-host-tags)
-* [Work with region controller tags](#heading--work-with-region-controller-tags)
-* [Work with rack controller tags](#heading--work-with-rack-controller-tags)
-* [Work with block device tags](#heading--work-with-block-device-tags)
-* [Work with partition tags](#heading--work-with-partition-tags)
-* [Work with network tags](#heading--work-with-network-tags)
-* [Work with device tags](#heading--work-with-device-tags)
-* [Work with node tags](#heading--work-with-node-tags)
+- [Work with tags, independent of application](#heading--work-with-tags-independent-of-application)
+- [Work with machine tags](#heading--work-with-machine-tags)
+- [Work with virtual machine host tags](#heading--work-with-virtual-machine-host-tags)
+- [Work with region controller tags](#heading--work-with-region-controller-tags)
+- [Work with rack controller tags](#heading--work-with-rack-controller-tags)
+- [Work with block device tags](#heading--work-with-block-device-tags)
+- [Work with partition tags](#heading--work-with-partition-tags)
+- [Work with network tags](#heading--work-with-network-tags)
+- [Work with device tags](#heading--work-with-device-tags)
+- [Work with node tags](#heading--work-with-node-tags)
 
 <a href="#heading--work-with-tags-independent-of-application"><h3 id="heading--work-with-tags-independent-of-application">Work with tags, independent of application</h3></a>
 
 This subsection will explain how to:
 
-* [Create a tag](#heading--create-a-tag)
-* [Create tags with built-in kernel options](#heading--create-tags-with-built-in-kernel-options)
-* [Delete a tag](#heading--delete-a-tag)
-* [Update a tag](#heading--update-a-tag)
-* [List all tags available on this MAAS](#heading--list-all-tags-available-on-this-maas)
-* [Rebuild a tag](#heading--rebuild-a-tag)
+- [Create a tag](#heading--create-a-tag)
+- [Create tags with built-in kernel options](#heading--create-tags-with-built-in-kernel-options)
+- [Delete a tag](#heading--delete-a-tag)
+- [Update a tag](#heading--update-a-tag)
+- [List all tags available on this MAAS](#heading--list-all-tags-available-on-this-maas)
+- [Rebuild a tag](#heading--rebuild-a-tag)
 
 <a href="#heading--create-a-tag"><h4 id="heading--create-a-tag">Create a tag</h4></a>
 
@@ -886,10 +891,10 @@ Machine-readable output follows:
 
 This subsection will explain how to:
 
-* [Assign machine tags to a machine](#heading--assign-machine-tags-to-a-machine)
-* [Remove machine tags from a machine](#heading--remove-machine-tags-from-a-machine)
-* [List machine tags for all machines](#heading--list-machine-tags-for-all-machines)
-* [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
+- [Assign machine tags to a machine](#heading--assign-machine-tags-to-a-machine)
+- [Remove machine tags from a machine](#heading--remove-machine-tags-from-a-machine)
+- [List machine tags for all machines](#heading--list-machine-tags-for-all-machines)
+- [View machine tags for one machine](#heading--view-machine-tags-for-one-machine)
 
 <a href="#heading--assign-machine-tags-to-a-machine"><h4 id="heading--assign-machine-tags-to-a-machine">Assign machine tags to a machine</h4></a>
 
@@ -1149,11 +1154,11 @@ golden-martin  8fxery  pod-console-logging  virtual  barbar
 
 This subsection will show you how to:
 
-* [Discover your virtual machine host ID](#heading--discover-your-vm-host-id)
-* [Assign tags to a virtual machine host](#heading--assign-tags-to-a-vm-host)
-* [Remove tags from a virtual machine](#heading--remove-tags-from-a-vm-host)
-* [List tags for all virtual machines](#heading--list-tags-for-all-vm-hosts)
-* [View tags for one virtual machine](#heading--view-tags-for-one-vm-host)
+- [Discover your virtual machine host ID](#heading--discover-your-vm-host-id)
+- [Assign tags to a virtual machine host](#heading--assign-tags-to-a-vm-host)
+- [Remove tags from a virtual machine](#heading--remove-tags-from-a-vm-host)
+- [List tags for all virtual machines](#heading--list-tags-for-all-vm-hosts)
+- [View tags for one virtual machine](#heading--view-tags-for-one-vm-host)
 
 <a href="#heading--discover-your-vm-host-id"><h4 id="heading--discover-your-vm-host-id">Discover your virtual machine host ID</h4></a>
 
@@ -1272,11 +1277,11 @@ my-lxd-vm-host-1  1   morkopongo  pod-console-logging
 
 This subsection will show you how to:
 
-* [Discover the ID of your region controller(s)](#heading--discover-the-id-of-your-region-controllers)
-* [Assign tags to a region controller](#heading--assign-tags-to-a-region-controller)
-* [Remove tags from a region controller](#heading--remove-tags-from-a-region-controller)
-* [List tags for all region controllers](#heading--list-tags-for-all-region-controllers)
-* [View tags for one region controller](#heading--view-tags-for-one-region-controller)
+- [Discover the ID of your region controller(s)](#heading--discover-the-id-of-your-region-controllers)
+- [Assign tags to a region controller](#heading--assign-tags-to-a-region-controller)
+- [Remove tags from a region controller](#heading--remove-tags-from-a-region-controller)
+- [List tags for all region controllers](#heading--list-tags-for-all-region-controllers)
+- [View tags for one region controller](#heading--view-tags-for-one-region-controller)
 
 <a href="#heading--discover-the-id-of-your-region-controllers"><h4 id="heading--discover-the-id-of-your-region-controllers">Discover the ID of your region controller(s)</h4></a>
 
@@ -1417,11 +1422,11 @@ bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
 
 This subsection will show you how to:
 
-* [Discover the ID of your rack controller(s)](#heading--discover-the-id-of-your-rack-controllers)
-* [Assign tags to a rack controller](#heading--assign-tags-to-a-rack-controller)
-* [Remove tags from a rack controller](#heading--remove-tags-from-a-rack-controller)
-* [List tags for all rack controllers](#heading--list-tags-for-all-rack-controllers)
-* [View tags for one rack controller](#heading--view-tags-for-one-rack-controller)
+- [Discover the ID of your rack controller(s)](#heading--discover-the-id-of-your-rack-controllers)
+- [Assign tags to a rack controller](#heading--assign-tags-to-a-rack-controller)
+- [Remove tags from a rack controller](#heading--remove-tags-from-a-rack-controller)
+- [List tags for all rack controllers](#heading--list-tags-for-all-rack-controllers)
+- [View tags for one rack controller](#heading--view-tags-for-one-rack-controller)
 
 <a href="#heading--discover-the-id-of-your-rack-controllers"><h4 id="heading--discover-the-id-of-your-rack-controllers">Discover the ID of your rack controller(s)</h4></a>
 
@@ -1562,11 +1567,11 @@ bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
 
 This subsection will show you how to:
 
-* [Discover the ID of your block device](#heading--discover-the-id-of-your-block-device) 
-* [Assign tags to a block device](#heading--assign-tags-to-a-block-device)
-* [Remove tags from a block device](#heading--remove-tags-from-a-block-device)
-* [List tags for all block devices](#heading--list-tags-for-all-block-devices)
-* [View tags for one block device](#heading--view-tags-for-one-block-device)
+- [Discover the ID of your block device](#heading--discover-the-id-of-your-block-device) 
+- [Assign tags to a block device](#heading--assign-tags-to-a-block-device)
+- [Remove tags from a block device](#heading--remove-tags-from-a-block-device)
+- [List tags for all block devices](#heading--list-tags-for-all-block-devices)
+- [View tags for one block device](#heading--view-tags-for-one-block-device)
 
 <a href="#heading--discover-the-id-of-your-block-device"><h4 id="heading--discover-the-id-of-your-block-device">Discover the ID of your block device</h4></a>
 
@@ -1708,11 +1713,11 @@ id  tags
 
 This subsection will show you how to:
 
-* [Discover the ID of your partition](#heading--discover-the-id-of-your-partition)
-* [Assign tags to a partition](#heading--assign-tags-to-a-partition)
-* [Remove tags from a partition](#heading--remove-tags-from-a-partition)
-* [List tags for all partitions](#heading--list-tags-for-all-partitions)
-* [View tags for one partition](#heading--view-tags-for-one-partition)
+- [Discover the ID of your partition](#heading--discover-the-id-of-your-partition)
+- [Assign tags to a partition](#heading--assign-tags-to-a-partition)
+- [Remove tags from a partition](#heading--remove-tags-from-a-partition)
+- [List tags for all partitions](#heading--list-tags-for-all-partitions)
+- [View tags for one partition](#heading--view-tags-for-one-partition)
 
 <a href="#heading--discover-the-id-of-your-partition"><h4 id="heading--discover-the-id-of-your-partition">Discover the ID of your partition</h4></a>
 
@@ -1852,11 +1857,11 @@ id  tags
 
 This subsection will show you how to:
 
-* [Discover the ID of your network interface](#heading--discover-the-id-of-your-network-interface)
-* [Assign tags to a network interface](#heading--assign-tags-to-a-network-interface)
-* [Remove tags from a network interface](#heading--remove-tags-from-a-network-interface)
-* [List tags for all network interfaces](#heading--list-tags-for-all-network-interfaces)
-* [View tags for one network interface](#heading--view-tags-for-one-network-interface)
+- [Discover the ID of your network interface](#heading--discover-the-id-of-your-network-interface)
+- [Assign tags to a network interface](#heading--assign-tags-to-a-network-interface)
+- [Remove tags from a network interface](#heading--remove-tags-from-a-network-interface)
+- [List tags for all network interfaces](#heading--list-tags-for-all-network-interfaces)
+- [View tags for one network interface](#heading--view-tags-for-one-network-interface)
 
 <a href="#heading--discover-the-id-of-your-network-interface"><h4 id="heading--discover-the-id-of-your-network-interface">Discover the ID of your network interface</h4></a>
 
@@ -1978,11 +1983,11 @@ mac_address        type      id  tags
 
 This subsection will show you how to:
 
-* [Identify your devices](#heading--identify-your-devices)
-* [Assign tags to a device](#heading--assign-tags-to-a-device)
-* [Remove tags from a device](#heading--remove-tags-from-a-device)
-* [List tags for all devices](#heading--list-tags-for-all-devices)
-* [View tags for one device](#heading--view-tags-for-one-device)
+- [Identify your devices](#heading--identify-your-devices)
+- [Assign tags to a device](#heading--assign-tags-to-a-device)
+- [Remove tags from a device](#heading--remove-tags-from-a-device)
+- [List tags for all devices](#heading--list-tags-for-all-devices)
+- [View tags for one device](#heading--view-tags-for-one-device)
 
 <a href="#heading--identify-your-devices"><h4 id="heading--identify-your-devices">Identify your devices</h4></a>
 
@@ -2132,11 +2137,11 @@ better-sole  t8pmrs     farquar
 
 <a href="#heading--work-with-node-tags"><h3 id="heading--work-with-node-tags">Work with node tags</h3></a>
 
-* [Identify your nodes](#heading--identify-your-nodes)
-* [Assign tags to a node](#heading--assign-tags-to-a-node)
-* [Remove tags from a node](#heading--remove-tags-from-a-node)
-* [List tags for all nodes](#heading--list-tags-for-all-nodes)
-* [View tags for one node](#heading--view-tags-for-one-node)
+- [Identify your nodes](#heading--identify-your-nodes)
+- [Assign tags to a node](#heading--assign-tags-to-a-node)
+- [Remove tags from a node](#heading--remove-tags-from-a-node)
+- [List tags for all nodes](#heading--list-tags-for-all-nodes)
+- [View tags for one node](#heading--view-tags-for-one-node)
 
 <a href="#heading--identify-your-nodes"><h4 id="heading--identify-your-nodes">Identify your nodes</h4></a>
 
@@ -2344,22 +2349,23 @@ hostname    system_id  tags
 boss-satyr  xn8taa     pod-console-logging  androko
 ```
 
+* work with annotations (CLI)
 <a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a>
 
 This section will show you how to:
 
-* [Work with static annotations](#heading--work-with-static-annotations)
-* [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
+- [Work with static annotations](#heading--work-with-static-annotations)
+- [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
 
 <a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a>
 
 This subsection will show you how to:
 
-* [Identify your machines](#heading--identify-your-machines)
-* [Set a static annotation for a machine](#heading--set-a-static-annotation-for-a-machine)
-* [Change or clear a static annotation for a machine](#heading--change-or-clear-a-static-annotation-for-a-machine)
-* [List static annotations for all machines](#heading--list-static-annotations-for-all-machines)
-* [View a static annotation for one machine](#heading--view-a-static-annotation-for-one-machine)
+- [Identify your machines](#heading--identify-your-machines)
+- [Set a static annotation for a machine](#heading--set-a-static-annotation-for-a-machine)
+- [Change or clear a static annotation for a machine](#heading--change-or-clear-a-static-annotation-for-a-machine)
+- [List static annotations for all machines](#heading--list-static-annotations-for-all-machines)
+- [View a static annotation for one machine](#heading--view-a-static-annotation-for-one-machine)
 
 
 <a href="#heading--identify-your-machines"><h4 id="heading--identify-your-machines">Identify your machines</h4></a>
@@ -2514,11 +2520,11 @@ driven-teal  tgaat6     tango-golf
 
 This section will show you how to:
 
-* [Identify machines that can receive dynamic annotations](#heading--identify-machines-that-can-receive-dynamic-annotations)
-* [Set dynamic annotations for a machine](#heading--set-dynamic-annotations-for-a-machine)
-* [Clear and change dynamic annotations for a machine](#heading--clear-and-change-dynamic-annotations-for-a-machine)
-* [List dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines)
-* [List dynamic allocations for one machine](#heading--list-dynamic-annotations-for-one-machine)
+- [Identify machines that can receive dynamic annotations](#heading--identify-machines-that-can-receive-dynamic-annotations)
+- [Set dynamic annotations for a machine](#heading--set-dynamic-annotations-for-a-machine)
+- [Clear and change dynamic annotations for a machine](#heading--clear-and-change-dynamic-annotations-for-a-machine)
+- [List dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines)
+- [List dynamic allocations for one machine](#heading--list-dynamic-annotations-for-one-machine)
 
 <a href="#heading--identify-machines-that-can-receive-dynamic-annotations"><h4 id="heading--identify-machines-that-can-receive-dynamic-annotations">Identify machines that can receive dynamic annotations</h4></a>
 
