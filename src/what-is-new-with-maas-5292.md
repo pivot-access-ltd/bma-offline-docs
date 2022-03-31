@@ -963,10 +963,10 @@ Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now availa
 <h4>Six other questions you may have:</h4>
 
 1. [What known issues should I be aware of?](#heading--known-issues)
-2. [How do I install MAAS 2.9?](/t/how-to-install-maas/3323)
-3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?](/t/how-to-install-maas/3323#heading--upgrade-maas-snap)
-4. [How do I install MAAS 2.9 from packages?](/t/how-to-install-maas/3329#heading--install-from-packages)
-5. [How do I upgrade MAAS 2.8 to MAAS 2.9 using packages?](/t/how-to-install-maas/3329#heading--upgrade-via-packages)
+2. [How do I install MAAS 2.9?](/t/how-to-install-maas/5128)
+3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?](/t/how-to-install-maas/5128#heading--upgrade-maas-snap)
+4. [How do I install MAAS 2.9 from packages?](/t/how-to-install-maas/5128#heading--install-from-packages)
+5. [How do I upgrade MAAS 2.8 to MAAS 2.9 using packages?](/t/how-to-install-maas/5128#heading--upgrade-via-packages)
 6. [What bugs are fixed so far in this release?](#heading--bug-fixes)
 
 <h2 id="heading--focal-default">Focal Fossa (Ubuntu 20.04 LTS) as default release</h2>
@@ -993,7 +993,7 @@ This functionality comes with an enhanced panel in the "KVM" details section:
 
 <a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
 
-See the [VM hosting](/t/about-vm-hosting/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
+See the [VM hosting](/t/about-vm-hosting/5068) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
 
 <h2 id="heading--improved-perf-large-maas">Improved performance for large MAAS installations</h2>
 
@@ -1090,7 +1090,7 @@ Three new configuration options have been added to the IPMI power driver:
 2. Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
 3. Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
 
-See the [2.9 UI](https://maas.io/docsv2.9 Snap#ui,/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docsv2.9 Snap#cli,/power-management#heading--ipmi) power management pages for details.
+See the [Power management reference](/t/-/5246#heading--ipmi) for details.
 
 <h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
 
@@ -1140,7 +1140,7 @@ Commissioning scripts have been reordered and some are now set to run in paralle
 <li>99-maas-01-capture-lldp -> maas-capture-lldp(now runs in parallel)</li>
 </ol>
 
-See the [commissioning logs page](https://maas.io/docsv2.9 Snap#ui,/commissioning-logs) for more details on these changes.
+See the [commissioning logs page](https://maas.io/docs/commissioning-logs) for more details on these changes.
 
 <h2 id="heading--commissioning-speed">Improvements in commissioning speed and logging</h2>
 
@@ -1165,7 +1165,7 @@ Four improvements have been made to speed up the commissioning process, mostly b
 
 4. Debug [could not be properly enabled for MAAS snap version 2.9.1](https://bugs.launchpad.net/maas/+bug/1914588).  This has been remedied.
 
-5. The MAAS [Backup doc article](https://maas.io/docsv2.9 Snap#ui,/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
+5. The MAAS [Backup doc article](https://maas.io/docs/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
 
 6. Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue.
 
@@ -1230,10 +1230,10 @@ Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now availa
 <h4>Six other questions you may have:</h4>
 
 1. [What known issues should I be aware of?](#heading--known-issues)
-2. [How do I install MAAS 2.9?](/t/how-to-install-maas/3323)
-3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?](/t/how-to-install-maas/3323#heading--upgrade-maas-snap)
-4. [How do I install MAAS 2.9 from packages?](/t/how-to-install-maas/3329#heading--install-from-packages)
-5. [How do I upgrade MAAS 2.8 to MAAS 2.9 using packages?](/t/how-to-install-maas/3329#heading--upgrade-via-packages)
+2. [How do I install MAAS 2.9?](/t/how-to-install-maas/5128)
+3. [How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?](/t/how-to-install-maas/5128#heading--upgrade-maas-snap)
+4. [How do I install MAAS 2.9 from packages?](/t/how-to-install-maas/5128#heading--install-from-packages)
+5. [How do I upgrade MAAS 2.8 to MAAS 2.9 using packages?](/t/how-to-install-maas/5128#heading--upgrade-via-packages)
 6. [What bugs are fixed so far in this release?](#heading--bug-fixes)
 
 <h2 id="heading--focal-default">Focal Fossa (Ubuntu 20.04 LTS) as default release</h2>
@@ -1260,7 +1260,7 @@ This functionality comes with an enhanced panel in the "KVM" details section:
 
 <a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
 
-See the [VM hosting](/t/about-vm-hosting/2747) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
+See the [VM hosting](/t/about-vm-hosting/5068) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
 
 <h2 id="heading--improved-perf-large-maas">Improved performance for large MAAS installations</h2>
 
@@ -1357,7 +1357,7 @@ Three new configuration options have been added to the IPMI power driver:
 2. Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
 3. Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
 
-See the [2.9 UI](https://maas.io/docsv2.9 Snap#ui,/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/docsv2.9 Snap#cli,/power-management#heading--ipmi) power management pages for details.
+See the [2.9 UI](https://maas.io/docs/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/doc/power-management#heading--ipmi) power management pages for details.
 
 <h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
 
@@ -1407,7 +1407,7 @@ Commissioning scripts have been reordered and some are now set to run in paralle
 <li>99-maas-01-capture-lldp -> maas-capture-lldp(now runs in parallel)</li>
 </ol>
 
-See the [commissioning logs page](https://maas.io/docsv2.9 Snap#ui,/commissioning-logs) for more details on these changes.
+See the [commissioning logs page](https://maas.io/docs/commissioning-logs) for more details on these changes.
 
 <h2 id="heading--commissioning-speed">Improvements in commissioning speed and logging</h2>
 
@@ -1432,7 +1432,7 @@ Four improvements have been made to speed up the commissioning process, mostly b
 
 4. Debug [could not be properly enabled for MAAS snap version 2.9.1](https://bugs.launchpad.net/maas/+bug/1914588).  This has been remedied.
 
-5. The MAAS [Backup doc article](https://maas.io/docsv2.9 Snap#ui,/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
+5. The MAAS [Backup doc article](https://maas.io/docs/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
 
 6. Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue.
 

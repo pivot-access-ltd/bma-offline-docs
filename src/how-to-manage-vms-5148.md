@@ -153,7 +153,7 @@ Consider the following interfaces constraint:
 
     interfaces=eth0:space=maas;eth1:space=storage
 
-Assuming you deploy the VM host on a machine or controller with access to the `maas` and `storage` [spaces](/t/maas-concepts-and-terms-reference/nnnn#heading--spaces), MAAS will create an `eth0` interface bound to the `maas` space and an `eth1` interface bound to the `storage` space.
+Assuming you deploy the VM host on a machine or controller with access to the `maas` and `storage` [spaces](/t/maas-concepts-and-terms-reference/5416#heading--spaces), MAAS will create an `eth0` interface bound to the `maas` space and an `eth1` interface bound to the `storage` space.
 
 Another example tells MAAS to assign unallocated IP addresses:
 

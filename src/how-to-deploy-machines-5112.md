@@ -42,7 +42,7 @@ These options include:
 
 -   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/about-networking/5084) for more information.
 
--   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/about-machines/t080#heading--about-storage) for more details.
+-   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/about-machines/5080#heading--about-storage) for more details.
 
 -   **Update firmware**: Runs scripts tagged with `update_firmware`.
 

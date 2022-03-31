@@ -20,7 +20,7 @@ At this time, the client library supports these eight endpoints:
 
 There are two resources that will help you better understand the above terms and how they are used:
 
-1.   [Concepts and terms](/t/maas-concepts-and-terms-reference/nnnn)
+1.   [Concepts and terms](/t/maas-concepts-and-terms-reference/5416)
 2.   [API documentation](https://maas.io/docs/api)
 
 <a href="#heading--installation-and-usage-of-python-libmaas"><h2 id="heading--installation-and-usage-of-python-libmaas">Installation and usage of python-libmaas</h2></a>

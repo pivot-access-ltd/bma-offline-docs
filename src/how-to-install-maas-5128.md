@@ -154,13 +154,13 @@ So, based on the above, the approximate requirements for this scenario are:
 3. A rack controller installed on a third host, with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
 4. A duplicate rack controller on a fourth host, also with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
 
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management-reference/5247) for more details.
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management-reference/5246) for more details.
 
 Some examples of factors that influence hardware specifications include:
 
 1. the number of connecting clients (client activity)
 2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/how-to-enable-high-availability/5123).
+3. whether or not you use [high availability/load balancing](/t/how-to-enable-high-availability/5120).
 4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
 
 Also, this discussion does not take into account a possible local image mirror, which would be a large consumer of disk space.

@@ -64,7 +64,7 @@ maas $PROFILE interface link-subnet exqn37 58 mode=static subnet=192.168.1.0/24 
 [/tab]
 [/tabs]
 
-See [Concepts and terms](/t/maas-concepts-and-terms-reference/5146#heading--ip-ranges) for the definitions of reserved range types.
+See [Concepts and terms](/t/maas-concepts-and-terms-reference/5416#heading--ip-ranges) for the definitions of reserved range types.
 
 <a href="#heading--bond-interfaces"><h2 id="heading--bond-interfaces">How to create a bond interface</h2></a>
 

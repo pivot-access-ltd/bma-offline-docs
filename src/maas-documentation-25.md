@@ -11,7 +11,7 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 - [Request a feature](https://maas.io/docs/request-a-feature)
 - [Ask questions (forum)](https://discourse.maas.io)
 - [Push some code](https://launchpad.net/maas)
-- [Improve our doc](/t/how-to-help-improve-the-doc/5452)
+- [Improve our doc](/t/how-to-help-improve-the-doc/4186)
 
 ## Navigation
 
@@ -69,7 +69,7 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 - [Build MAAS images](/t/-/5100)
 - [Create custom images](/t/-/5104)
 - [Use image streams](/t/-/5220)
-- [Mirror images locally](/t/-/5188)
+- [Mirror images locally](/t/-/5927)
 - [Manage VMWare images](/t/-/5144)
 
 ### Tags
@@ -157,8 +157,8 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 |https://discourse.maas.io/t/-/4288|/docs/deb/2.7/ui/air-gapped-maas|
 |https://discourse.maas.io/t/-/5212|/docs/how-to-use-maas-in-an-air-gapped-environment|
 |https://discourse.maas.io/t/-/5144|/docs/how-to-manage-vmware-images|
-|https://discourse.maas.io/t/-/5188|/doc/how-to-mirror-images-locally|
 |https://discourse.maas.io/t/-/5333|/doc/how-to-troubleshoot-maas|
+|https://discourse.maas.io/t/-/5927|/doc/how-to-mirror-images-locally|
 |https://discourse.maas.io/t/-/5220|/docs/how-to-use-image-streams|
 |https://discourse.maas.io/t/-/5416|/docs/maas-concepts-and-terms-reference|
 |https://discourse.maas.io/t/-/5236|/docs/how-to-use-the-maas-cli|
@@ -171,7 +171,7 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 |https://discourse.maas.io/t/-/5116|/docs/how-to-enable-tls-encryption|
 |https://discourse.maas.io/t/-/5448|/docs/how-to-contact-us|
 |https://discourse.maas.io/t/-/5100|/docs/how-to-build-maas-images|
-|https://discourse.maas.io/t/-/5392|/docs/hardware-test-scripts-reference|
+|https://discourse.maas.io/t/-/5092|/docs/hardware-test-scripts-reference|
 |https://discourse.maas.io/t/-/5256|/docs/audit-event-log-reference|
 |https://discourse.maas.io/t/-/5375|/docs/commissioning-script-reference|
 |https://discourse.maas.io/t/-/817/|/docs/intel-rack-scale-design-rsd-introduction|
@@ -397,7 +397,6 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 |https://discourse.maas.io/t/-/2809|/docs/deb/2.7/ui/local-image-mirror|
 |https://discourse.maas.io/t/-/2810|/docs/deb/2.8/cli/local-image-mirror|
 |https://discourse.maas.io/t/-/2811|/docs/deb/2.8/ui/local-image-mirror|
-|https://discourse.maas.io/t/-/5188|/docs/how-to-mirror-images-locally|
 |https://discourse.maas.io/t/-/2814|/docs/snap/2.7/cli/maas-cli|
 |https://discourse.maas.io/t/-/2815|/docs/snap/2.7/ui/maas-cli|
 |https://discourse.maas.io/t/-/2816|/docs/snap/2.8/cli/maas-cli|
@@ -776,6 +775,7 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 |https://discourse.maas.io/t/-/815/|/docs/add-an-rsd-host|
 |https://discourse.maas.io/t/-/793/|/docs/advanced-cli-tasks|
 |https://discourse.maas.io/t/-/832|/docs/hardware-test-scripts-reference|
+|https://discourse.maas.io/t/-/5392|/docs/hardware-test-scripts-reference|
 |https://discourse.maas.io/t/-/744/|/docs/building-the-docs|
 |https://discourse.maas.io/t/-/2218/|/docs/cli-cookbook|
 |https://discourse.maas.io/t/-/797/|/docs/cli-image-management|
