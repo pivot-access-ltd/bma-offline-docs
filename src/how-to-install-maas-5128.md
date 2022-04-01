@@ -666,8 +666,8 @@ We'll quickly walk through these instructions to confirm your understanding.  Fi
 
 Note that this step installs a a running PostgreSQL and a MAAS-ready database instantiation.  When it's done, you can double check with a built-in PostgreSQL shell:
 
-    $ maas-test-db.psql
-    psql (10.6)
+    $ sudo maas-test-db.psql
+    psql (12.4)
     Type "help" for help.
 
     postgres=# \l

@@ -208,11 +208,7 @@ this is yet another hidden level
 </details>
 </details>
 
-<h2 id="heading--capitalization">Capitalisation</h2>
+<h2 id="heading--capitalisation">Capitalisation</h2>
 
 Do not use a "Caps Everywhere" style. It is only used in level one headers and the title metadata. References (visible text) to these page titles (including the navigation) should just capitalise the first letter. Obviously, this does not pertain to words that should always be capitalised according to basic grammar rules (e.g. acronyms, proper nouns).
 
-
-------
-****
-------

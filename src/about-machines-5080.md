@@ -320,11 +320,11 @@ As a MAAS user -- API or UI -- you may want to copy the configuration of a given
 
 ### About choosing configuration items to copy
 
-As a MAAS user, you will likey want to select whether storage, network, or both configurations should be cloned. The cloning API allows users to choose interfaces and storage separately.  Thus, this new feature shoudl allow the user to:
+As a MAAS user, you will likely want to select whether storage, network, or both configurations should be cloned. The cloning API allows users to choose interfaces and storage separately.  Thus, this new feature should allow the user to:
 
  - clone only the interface (network) configuration.
  - clone only the storage configuration.
- - clone both colnfigurations.
+ - clone both configurations.
 
 ### About cloning restrictions
 

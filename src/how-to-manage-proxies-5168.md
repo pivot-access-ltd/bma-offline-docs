@@ -47,7 +47,7 @@ An upstream cache peer can be defined by enabling the 'Peer' checkbox and enteri
 To prevent MAAS machines from using a proxy, enable the 'Don't use a proxy' checkbox.
 [/tab]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-Enabling and disabling proxying, in general, is done via a boolean option ('true' or 'false'). The following command will disable proxying completely:
+Enabling and disabling proxying, in general, is done via a Boolean option ('true' or 'false'). The following command will disable proxying completely:
 
 ``` bash
 maas $PROFILE maas set-config name=enable_http_proxy value=false
@@ -66,7 +66,7 @@ maas $PROFILE maas set-config name=enable_http_proxy value=true
 maas $PROFILE maas set-config name=http_proxy value=http://squid.example.com:3128/
 ```
 
-Enabling and disabling proxying per subnet is done via a boolean option ('true' or 'false'). Here is how you can disable proxying on a per-subnet basis:
+Enabling and disabling proxying per subnet is done via a Boolean option ('true' or 'false'). Here is how you can disable proxying on a per-subnet basis:
 
 ``` bash
 maas $PROFILE subnet update $SUBNET_CIDR allow_proxy=false

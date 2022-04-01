@@ -84,7 +84,7 @@ We are happy to announce that MAAS 3.1 is now available. This release provides n
 
  - [Static Ubuntu image upload and reuse](#heading--static-ubuntu-images): Users can upload, deploy and reuse a bootable ubuntu image
 
- - [Machine configuration cloning UI](#heading--machine-cloning-ui): We have xtended machine cloning to the UI.
+ - [Machine configuration cloning UI](#heading--machine-cloning-ui): We have extended machine cloning to the UI.
 
  - [LXD authentication UX improvements](#heading--lxd-auth-ux-improvements): LXD certificates are easier to use.
 
@@ -192,7 +192,7 @@ Users can enlist deployed machines, a top feature poll request.
 #### About this feature
 When adding machines to MAAS, MAAS (non-destructively) boots them into an ephemeral environment to gather hardware information.  Previously, this didn't work for deployed machines, since you don't want to disrupt deployed workloads or mark deployed machines as ready.
 
-Now you may add deployed machines, without normal commissioning process or relabeling the machine. In order to update the information, a script is provided to run minimal commissioning scripts and update to MAAS.
+Now you may add deployed machines, without normal commissioning process or relabelling the machine. In order to update the information, a script is provided to run minimal commissioning scripts and update to MAAS.
 
 #### How to enlist a machine that’s already running a workload
 In order to enlist a deployed machine, you have two options:
@@ -319,13 +319,13 @@ Extend machine cloning to UI, moving toward machine profile templates.
 
 #### About this feature 
 
-MAAS 3.1 allows you to quickly clone or copy a configurationbetween machines, via the MAAS UI -- a step towards machine templating. 
+MAAS 3.1 allows you to quickly clone or copy a configuration between machines, via the MAAS UI -- a step towards machine templating. 
 
 Creating a machine profile is repetitive. We've learned that most users create multiple machines of the same configuration in batches. Some users loop a template through the API, while others rely on scripts. MAAS API cloning functionality is now being exposed in the UI.
 
 #### About copying machine configurations
 
-As a MAAS user, you may want to copy a machine configuration to multiple existing machines. Assuming that at least one machine is already configur3d, you should be able to apply these settings to a list of machines.  This means that a user should be able to:
+As a MAAS user, you may want to copy a machine configuration to multiple existing machines. Assuming that at least one machine is already configured, you should be able to apply these settings to a list of machines.  This means that a user should be able to:
 
  - select the source machine to copy from.
  - validate that the source machine exists.
@@ -342,7 +342,7 @@ As a MAAS user, you likely want to select whether storage, network, or both conf
 
  - clone only the interface (network) configuration.
  - clone only the storage configuration.
- - clone both colnfigurations.
+ - clone both configurations.
 
 #### About cloning restrictions
 
@@ -382,7 +382,7 @@ Easier MAAS to LXD connection that uses certificates for authentication.
 
 MAAS 3.1 provides a smoother experience when connecting an existing LXD server to MAAS, guiding the user through manual steps and providing increased connection security with use of certificates. Currently, each MAAS region/rack controller has its own certificate. To add a LXD VM host to MAAS, the user needs to either add the certificate for each controller that can reach the LXD server to the trust list in LXD, or use the trust_password (in which case the controller talking to LXD will automatically add its certificate to the trust).
 
-This doesn’t provide a great user experience, as the former process is cumbersome, and the latter is not suggested for production use for security reasons.  To improve this, MAAS 3.1 manages per-LXD keys/certificates, and provide a way for users to get the content of certificates, to authorize MAAS in LXD.
+This doesn’t provide a great user experience, as the former process is cumbersome, and the latter is not suggested for production use for security reasons.  To improve this, MAAS 3.1 manages per-LXD keys/certificates, and provide a way for users to get the content of certificates, to authorise MAAS in LXD.
 
 #### About on-the-spot certificate creation
 
@@ -560,7 +560,7 @@ At this point, you may proceed with a normal installation.
 
 With the advent of MAAS 3.0, we are removing support for RSD pods.  Registered pods and their machines will be removed by MAAS upon upgrading to MAAS 3.0.
 
-Note that new features are categorized by the level of release at which they became accessible to users.
+Note that new features are categorised by the level of release at which they became accessible to users.
 
 <h2>New features in MAAS 3.0 RC1</h2>
 
@@ -700,7 +700,7 @@ On the API using the allocate operation on the machines endpoint a machine may a
 
 <h3 id="heading--ibm-z-dpm">IBM Z DPM partition support</h3>
 
-IBM Z14 GA2 (LinuxOne II) and above mainframe partitions are supported in MAAS 3.0.  Note that partitions (LPARS) must pre-configured and use qeth-based network devices (use HyperV sockets and properly-defined storage groupslike Hipersockets or OSA adapters) and properly-defined (FCP) storage groups..  IBM Z DPM Partitions can be added as a chassis, which allows you to add all partitions at once.
+IBM Z14 GA2 (LinuxOne II) and above mainframe partitions are supported in MAAS 3.0.  Note that partitions (LPARS) must pre-configured and use qeth-based network devices (use HyperV sockets and properly-defined storage groups like Hipersockets or OSA adaptors) and properly-defined (FCP) storage groups..  IBM Z DPM Partitions can be added as a chassis, which allows you to add all partitions at once.
 
 <h3 id="heading--proxmox-support">Proxmox support</h3>
 
@@ -922,7 +922,7 @@ Here are the bugs that have been `Fix Released` in MAAS 3.0 Beta 1:
 
 We have released MAAS 2.9.2, which contains two new features, and some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.2). The two new features are:
 
-1. Proxmox driver: A driver has been added to MAAS 2.9.2 which intereacts with the Proxmox API.  Only one URL is needed, though a username and credentials are required.  Credentials can be either a password or an API token.  Note that if you use a token, you have to configure the permissions for the token.  Newly-created Proxmox tokens don't assign any permissions by default, so you must add `power on`, `power off`, and `query power` permissions to the token before using it.
+1. Proxmox driver: A driver has been added to MAAS 2.9.2 which interacts with the Proxmox API.  Only one URL is needed, though a username and credentials are required.  Credentials can be either a password or an API token.  Note that if you use a token, you have to configure the permissions for the token.  Newly-created Proxmox tokens don't assign any permissions by default, so you must add `power on`, `power off`, and `query power` permissions to the token before using it.
 
 2. Power driver Webhook:  A webhook was added to 2.9.2, which allows MAAS to interface with another web service that's running the power commands.  This webhook is provided for interacting with objects that MAAS does not support, that is, the MAAS team supports the driver itself, but whatever is interfacing to the driver is not supported.  This webhook as three URLs, one each for power on, power off, and power query.  Optionally, this webhook also supports a power user and password or token (RFC 6717).  This gives you a way to add your own power drivers without waiting for the driver to be added to MAAS.  There is a [video tutorial](https://discourse.maas.io/t/maas-show-and-tell-proxmox-and-webhook/3754/3) available on this new feature.
 
@@ -1189,7 +1189,7 @@ Four improvements have been made to speed up the commissioning process, mostly b
 
 We have released MAAS 2.9.2, which contains two new features, and some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.2). The two new features are:
 
-1. Proxmox driver: A driver has been added to MAAS 2.9.2 which intereacts with the Proxmox API.  Only one URL is needed, though a username and credentials are required.  Credentials can be either a password or an API token.  Note that if you use a token, you have to configure the permissions for the token.  Newly-created Proxmox tokens don't assign any permissions by default, so you must add `power on`, `power off`, and `query power` permissions to the token before using it.
+1. Proxmox driver: A driver has been added to MAAS 2.9.2 which interacts with the Proxmox API.  Only one URL is needed, though a username and credentials are required.  Credentials can be either a password or an API token.  Note that if you use a token, you have to configure the permissions for the token.  Newly-created Proxmox tokens don't assign any permissions by default, so you must add `power on`, `power off`, and `query power` permissions to the token before using it.
 
 2. Power driver Webhook:  A webhook was added to 2.9.2, which allows MAAS to interface with another web service that's running the power commands.  This webhook is provided for interacting with objects that MAAS does not support, that is, the MAAS team supports the driver itself, but whatever is interfacing to the driver is not supported.  This webhook as three URLs, one each for power on, power off, and power query.  Optionally, this webhook also supports a power user and password or token (RFC 6717).  This gives you a way to add your own power drivers without waiting for the driver to be added to MAAS.  There is a [video tutorial](https://discourse.maas.io/t/maas-show-and-tell-proxmox-and-webhook/3754/3) available on this new feature.
 

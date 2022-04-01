@@ -74,6 +74,12 @@ All the options are necessary. Note that stipulating a password on the CLI may b
 
 Before a user can deploy a machine, they must import at least one public SSH key into MAAS. This key allows the user to access the deployed machine with the corresponding private key, which the user must possess. See [Public key authentication](https://www.ssh.com/ssh/public-key-authentication) (ssh.com) if you're not familiar with SSH keys.
 
+Assuming a public key exists in `/home/ubuntu/.ssh/id_rsa.pub` - add a key with the following command:
+```
+ubuntu@maas:~$ maas $PROFILE sshkeys create key="$(cat /home/ubuntu/.ssh/id_rsa.pub)"
+Success.
+```
+
 [note]
 The user normally imports their initial SSH key on the first login to the web UI.
 [/note]

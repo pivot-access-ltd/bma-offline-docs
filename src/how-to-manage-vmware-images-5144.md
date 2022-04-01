@@ -3,7 +3,7 @@ MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directl
 #### Five questions you may have:
 
 1. [What are the prerequisite requirements for creating an image?](#heading--prerequisites-to-create-the-images)
-2. [How can I customise these images?](#heading--customizing-the-image)
+2. [How can I customise these images?](#heading--customising-the-image)
 3. [How do I build an image?](#heading--building-an-image)
 4. [How do I upload an image?](#heading--uploading-an-image)
 5. [What are the features and limitations of VMWare images in MAAS?](#heading--features-and-limitations)
@@ -25,9 +25,9 @@ MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directl
 
 1.   MAAS 2.5.0+
 
-<a href="#heading--customizing-the-image"><h2 id="heading--customizing-the-image">Customizing the Image</h2></a>
+<a href="#heading--customising-the-image"><h2 id="heading--customising-the-image">Customising the Image</h2></a>
 
-The image may be customized by modifying packer-maas/vmware-esxi/http/vmware-esxi-ks.cfg see Installation and Upgrade Scripts in the [VMware ESXi installation and Setup manual](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-67-installation-setup-guide.pdf) for more information.
+The image may be customize by modifying packer-maas/vmware-esxi/http/vmware-esxi-ks.cfg see Installation and Upgrade Scripts in the [VMware ESXi installation and Setup manual](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-67-installation-setup-guide.pdf) for more information.
 
 <a href="#heading--building-an-image"><h2 id="heading--building-an-image">Building an Image</h2></a>
 

@@ -175,7 +175,7 @@ $ sudo lxd init
 
 Your interactive output should look something like the following. Note a few points important points about these questions:
 
-1. `Would you like to use LXD clustering? (yes/no) [default=no]: no` - MAAS does not currently support LXD clusters.
+1. `Would you like to use LXD clustering? (yes/no) [default=no]: no` - support for LXD clusters was added in MAAS v3.1.
 
 2. `Name of the storage back-end to use (btrfs, dir, lvm, zfs, ceph) [default=zfs]: dir` - testing has primarily been with dir; other options should work, but less testing has been done, so use at your own risk.
 
@@ -583,7 +583,7 @@ $ lxc list
 
 It's good practice to always switch projects carefully, so you're not operating in some other project and creating chaos by accident.
 
-<a href="#heading--projects-s1-resource"><h3 id="heading--projects-s1-resource">How to et a summary of LXD project resources</h3></a>
+<a href="#heading--projects-s1-resource"><h3 id="heading--projects-s1-resource">How to get a summary of LXD project resources</h3></a>
 
 We said that `lxc` commands operate on the current project most of the time.  We gave that caveat because of commands like `lxc project info`, which requires a project name to get any usable output.  For example, if you just type `lxc project info`, you'll just get some "help" output:
 

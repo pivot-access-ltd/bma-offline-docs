@@ -134,23 +134,23 @@ There are a wide range of bond parameters you can choose when creating a bond:
 | `tags`| Optional string.  Tags for the interface. |
 | `vlan`| Optional string.  VLAN the interface is connected to. If not provided then the interface is considered disconnected. |
 | `parents`| Required integer.  Parent interface ids that make this bond. |
-| `bond_miimon`| Optional integer.  The link monitoring freqeuncy in milliseconds. (Default: 100). |
+| `bond_miimon`| Optional integer.  The link monitoring frequency in milliseconds. (Default: 100). |
 | `bond_downdelay`| Optional integer.  Specifies the time, in milliseconds, to wait before disabling a slave after a link failure has been detected. |
 | `bond_updelay`| Optional integer.  Specifies the time, in milliseconds, to wait before enabling a slave after a link recovery has been detected. |
 | `bond_lacp_rate`| Optional string.  Option specifying the rate at which to ask the link partner to transmit LACPDU packets in 802.3ad mode. Available options are ``fast`` or ``slow``. (Default: ``slow``). |
 | `bond_xmit_hash_policy`| Optional string.  The transmit hash policy to use for slave selection in balance-xor, 802.3ad, and tlb modes. Possible values are: ``layer2``, ``layer2+3``, ``layer3+4``, ``encap2+3``, ``encap3+4``. (Default: ``layer2``) |
 | `bond_num_grat_arp`| Optional integer.  The number of peer notifications (IPv4 ARP or IPv6 Neighbour Advertisements) to be issued after a failover. (Default: 1) |
 | `mtu`| Optional integer.  Maximum transmission unit. |
-| `accept_ra`| Optional boolen.  Accept router advertisements. (IPv6 only) |
-| `autoconf`| Optional boolean.  Perform stateless autoconfiguration. (IPv6 only) |
+| `accept_ra`| Optional Boolean.  Accept router advertisements. (IPv6 only) |
+| `autoconf`| Optional Boolean.  Perform stateless autoconfiguration. (IPv6 only) |
 | `bond_mode`| Optional string.  The operating mode of the bond.  (Default: active-backup). |
 
 Supported bonding modes include:
 
-| Mode | Behavior |
+| Mode | Behaviour |
 |:-----|:---------|
 |  `balance-rr`:| Transmit packets in sequential order from the first available slave through the last. This mode provides load balancing and fault tolerance. |
-|  `active-backup`| Only one slave in the bond is active. A different slave becomes active if, and only if, the active slave fails. The bond's MAC address is externally visible on only one port (network adapter) to avoid confusing the switch. |
+|  `active-backup`| Only one slave in the bond is active. A different slave becomes active if, and only if, the active slave fails. The bond's MAC address is externally visible on only one port (network adaptor) to avoid confusing the switch. |
 |  `balance-xor`| Transmit based on the selected transmit hash policy. The default policy is a simple [(source MAC address XOR'd with destination MAC address XOR packet type ID) modulo slave count]. |
 |  `broadcast`| Transmits everything on all slave interfaces. This mode provides fault tolerance. |
 |  `802.3ad`| IEEE 802.3ad dynamic link aggregation. Creates aggregation groups that share the same speed and duplex settings. Uses all slaves in the active aggregator according to the 802.3ad specification. |
@@ -206,15 +206,15 @@ The following parameters may be applied when creating a bridge:
 
 6. `bridge_type`: Optional string.  The type of bridge to create. Possible values are: ``standard``, ``ovs``.
 
-7. `bridge_stp`: Optional boolean.  Turn spanning tree protocol on or off. (Default: False).
+7. `bridge_stp`: Optional Boolean.  Turn spanning tree protocol on or off. (Default: False).
 
 8. `bridge_fd`: Optional integer.  Set bridge forward delay to time seconds. (Default: 15).
 
 9. `mtu`: Optional integer.  Maximum transmission unit.
 
-10. `accept_ra`: Optional boolean.  Accept router advertisements. (IPv6 only)
+10. `accept_ra`: Optional Boolean.  Accept router advertisements. (IPv6 only)
 
-11. `autoconf`: Optional boolean.  Perform stateless autoconfiguration. (IPv6 only)
+11. `autoconf`: Optional Boolean.  Perform stateless autoconfiguration. (IPv6 only)
 [/tab]
 [/tabs]
 

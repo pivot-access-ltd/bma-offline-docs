@@ -20,7 +20,7 @@ Note that if you are using your own commissioning scripts, and you do not want t
 # tags: noauto
 ```
 
-If you do not specify `noauto`, your custom commisioning scripts will run every time commissioning is attempted.
+If you do not specify `noauto`, your custom commissioning scripts will run every time commissioning is attempted.
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]

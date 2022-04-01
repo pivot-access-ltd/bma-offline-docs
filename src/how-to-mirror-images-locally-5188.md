@@ -23,7 +23,7 @@ The stable stream contains images and bootloaders which have been tested with th
 
 <a href="#heading--daily-stream"><h2 id="heading--daily-stream">Sunset of "daily" stream</h2></a>
 
-Previously there was only one MAAS stream available, daily. This stream has been replaced by the stable stream. Any client using this stream will be automtically redirected to the stable stream.
+Previously there was only one MAAS stream available, daily. This stream has been replaced by the stable stream. Any client using this stream will be automatically redirected to the stable stream.
 
 <a href="#heading--changing-the-stream"><h2 id="heading--changing-the-stream">Changing the stream - UI</h2></a>
 

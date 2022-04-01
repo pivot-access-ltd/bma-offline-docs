@@ -233,7 +233,7 @@ If you want to add a LXD (or [libvirt](https://ubuntu.com/server/docs/virtualiza
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg"></a>
 
-### How to authenticate LXD VM hosts via certficates
+### How to authenticate LXD VM hosts via certificates
 
 Suppose that you're creating a new LXD KVM, beginning from the top tab in MAAS:
 

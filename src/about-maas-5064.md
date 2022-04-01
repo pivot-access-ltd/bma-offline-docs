@@ -104,7 +104,7 @@ There are two ways to add a machine to MAAS.  Assuming it's on the network and c
 
 Enlistment just means that MAAS discovers a machine when you turn it on, and presents it to the MAAS administrator, so that they can choose whether or not to commission it.  Machines that have only been enlisted will show up in the machine list as "New."
 
-Commissioning means that MAAS has successfully booted the machine, scanned and recorded its resources, and prepared it for eventual deployment.  Machines that you explicitly dd are automatically commissioned.  MAAS marks a successfully-commissioned machine as "Ready" in the machine list.
+Commissioning means that MAAS has successfully booted the machine, scanned and recorded its resources, and prepared it for eventual deployment.  Machines that you explicitly add are automatically commissioned.  MAAS marks a successfully-commissioned machine as "Ready" in the machine list.
 
 </details>
 

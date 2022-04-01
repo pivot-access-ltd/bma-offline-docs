@@ -35,6 +35,8 @@ When using IPMI, MAAS will attempt to automatically detect the correct cipher su
 [/tab]
 [/tabs]
 
+You may also like to try **[maaspower](https://gilesknap.github.io/maaspower/main/index.html)** which is a community project designed to be used with the MAAS webhook driver. It is a pluggable system that accepts MAAS webhooks and can translate them to other external systems. Note: it is not supported by Canonical.
+
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>

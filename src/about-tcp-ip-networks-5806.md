@@ -151,7 +151,7 @@ Happily, MAAS networks almost exclusively use Ethernet, as defined in the [IEEE 
 
 Before explaining an Ethernet Frame, we need to give a little background information about how Ethernet works.  Otherwise a lot of the frame components either won't make sense, or you'll wonder how it works at all.
 
-Remember earlier, when we talked about voice radio, and the need to say "over"?  Well, Ethernet at the link layer is all about controlling the conversation, so that computers don't "talk over each other".  Ethernet implements an algorithm called CSMA/CD, which stands for "carrier sense multiple access with collision detection."  This algorithm controls which computers can access the shared medium (an Ethernet cable) without any special synchronization requirements.
+Remember earlier, when we talked about voice radio, and the need to say "over"?  Well, Ethernet at the link layer is all about controlling the conversation, so that computers don't "talk over each other".  Ethernet implements an algorithm called CSMA/CD, which stands for "carrier sense multiple access with collision detection."  This algorithm controls which computers can access the shared medium (an Ethernet cable) without any special synchronisation requirements.
 
 "Carrier sense" means that every NIC does what humans do when we're talking: it waits for quiet.  In this case, it's waiting for the network to be quiet, that is, when no signal is being sent on the network.
 
@@ -165,7 +165,7 @@ If you've worked with networks at all, you've heard of MAC addresses.  Those are
 
 The MAC sub-layer is connected to the physical layer by a media-independent interface (MII), independent of the actual link protocol (e.g, cellular broadband, Wi-Fi radio, Bluetooth, Cat5e, T1, ...).  You can learn more about the [MII](https://en.wikipedia.org/wiki/Media-independent_interface) if you're so inclined, but we won't address it again in the context of MAAS networks.
 
-Essentially, the MAC sub-layer grabs higher-level frames and makes them digestible by the physical layer, by encoding them into an MII format.  It adds some synchronization info and pads the message (if needed).   The MAC sub-layer also adds a frame check sequence that makes it easier to identify errors.
+Essentially, the MAC sub-layer grabs higher-level frames and makes them digestible by the physical layer, by encoding them into an MII format.  It adds some synchronisation info and pads the message (if needed).   The MAC sub-layer also adds a frame check sequence that makes it easier to identify errors.
 
 In conventional Ethernet networks, all this looks something like the following:
 
@@ -454,7 +454,7 @@ Here's an analogy.  Your postal address doesn't /actually/ define where your hou
 
 One is your land survey location.  Depending on where you live, this is defined by a series of coordinates that go something like this: county, township, section, plat, lot, etc.  If you've ever looked at your property tax bill, it will have your postal address on it, but it will not actually use your postal address to define the taxable property.  Instead, it uses this unique set of (rather obscure) coordinates to place you exactly on land survey maps.
 
-But that's not good enough for the air ambulance, for two reasons.  First, the survey maps are huge, complex, and hard to interpret, and they change somewhat as property is bought or sold.  Second, helicopter navigation is intentionally independent of political boundaries.  Instead, the air ambulance will use your latitude and longitude, which allows them to uniquely locate you on the earth.  Granted, the ambulance company has a tool somewhere that automatically does the math of translating your postal address to lat/long coordinates, but the principle holds.
+But that's not good enough for the air ambulance, for two reasons.  First, the survey maps are huge, complex, and hard to interpret, and they change somewhat as property is bought or sold.  Second, helicopter navigation is intentionally independent of political boundaries.  Instead, the air ambulance will use your latitude and longitude, which allows them to uniquely locate you on the earth.  Granted, the ambulance company has a tool somewhere that automatically does the maths of translating your postal address to lat/long coordinates, but the principle holds.
 
 In terms of your local network, each of these "address levels" applies.  Your postal address corresponds to the IP address of a machine.  That IP address may or may not be unique, depending on the domain.  For example, you can use Google Maps to try and locate something like "20 Main Street", and you'll get a really long list of responses that vary by city.
 
@@ -527,7 +527,7 @@ The columns are mostly obvious, but just in case:
 
  - **Address**: the IP address that's been cached.
  - **HWtype**: the Hardware Type field, which is blank when there's no MAC address (as is the case in a number of these entries).
- - **HWaddress**: the MAC address of the device.  The "incomplete" entires are meant to indicate that an ARP request was sent for that address, but no response was received.
+ - **HWaddress**: the MAC address of the device.  The "incomplete" entries are meant to indicate that an ARP request was sent for that address, but no response was received.
  - **Flags Mask**: this field can have three values: "C" indicates that ARP learned this on its own, based on ARP responses; "M" means that the data was manually entered in the ARP table by a user; and "P" means "Publish," which just tells the host how to respond to incoming ARP packets.
  - **Iface**: the interface name.
 
@@ -642,7 +642,7 @@ The code bits can indicate the following things:
 
  - **RST**: request a connection reset when the error level reaches a certain threshold; basically, "let's try that again from the top."  This is considered an abnormal termination of the TCP connection.
 
- - **SYN**: used for a three-way TCP handshake; this handshake is how sender and receiver sync up; it serves a purpose similar to the preamble in a MAC frame, but at a different level of synchronization.
+ - **SYN**: used for a three-way TCP handshake; this handshake is how sender and receiver sync up; it serves a purpose similar to the preamble in a MAC frame, but at a different level of synchronisation.
 
  - **FIN**: we're done, close the connection.  This is considered a normal termination of a TCP connection.
 

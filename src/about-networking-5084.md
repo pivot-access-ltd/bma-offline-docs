@@ -95,7 +95,7 @@ In IPv6, clients do not discover routes through DHCP. Routers make themselves kn
 
 Since a network interface can have any number of IPv6 addresses even on a single subnet, several of these address assignment mechanisms can be combined.
 
-However, when MAAS configures IPv6 networking on a machine, it does not rely on RAs. It statically configures a machine's default IPv6 route to use the router that is set on the cluster interface, so that the machine will know their default gateway. They do not need DHCP and will not autoconfigure global addresses.
+However, when MAAS configures IPv6 networking on a machine, it does not rely on RAs. It statically configures a machine's default IPv6 route to use the router that is set on the cluster interface, so that the machine will know their default gateway. They do not need DHCP and will not auto-configure global addresses.
 
 You may be planning to operate DHCPv6 clients as well, for example, on machines not managed by MAAS, or on virtual machines hosted by MAAS machines.  If this is the case, you may want to configure RAs, so that those clients obtain configuration over DHCP.
 

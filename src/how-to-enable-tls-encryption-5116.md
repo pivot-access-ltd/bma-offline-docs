@@ -5,7 +5,7 @@ Note that MAAS doesn't bind to port 80; instead, MAAS binds to port 5240.
 <a href="#heading--nginx"><h2 id="heading--nginx">nginx example config</h2></a>
 
     server {
-     listen 443 ssl;
+     listen 443 SQL;
 
      server_name _;
      ssl_certificate /etc/nginx/ssl/nginx.crt;

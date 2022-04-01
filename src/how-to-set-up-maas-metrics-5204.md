@@ -300,7 +300,7 @@ Currently, prometheus metrics are shared when rack and region controllers are ru
 
 [tabs]
 [tab version="v3.1 Snap,v3.0 Snap,v2.9 Snap"]
-For a vb Snapased MAAS installation, the libraries already included in the snap so that metrics will be available out of the box.
+For a vb Snap-based MAAS installation, the libraries already included in the snap so that metrics will be available out of the box.
 [/tab]
 [tab version="v3.1 Packages,v3.0 Packages,v2.9 Packages"]
 For a Debian-based MAAS installation, install the library and restart MAAS services as follows:

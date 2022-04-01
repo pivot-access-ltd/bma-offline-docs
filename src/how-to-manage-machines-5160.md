@@ -148,7 +148,7 @@ where:
 If the device is still present in the system, it will be recognised again (and thus "recreated") when the machine is commissioned again.
 [/tab]
 [tab version="v2.9 Snap,v2.9 Packages"]
-MAAS version 2.9 does not recognize PCI and USB devices.  Please upgrade to MAAS version 3.0 or greater to obtain this capability.
+MAAS version 2.9 does not recognise PCI and USB devices.  Please upgrade to MAAS version 3.0 or greater to obtain this capability.
 [/tab]
 [/tabs]
 
@@ -2160,7 +2160,7 @@ If no volumes are specified, the volume group is still created.
   }
 }
 ```
-The same cacheset can be used by different bcaches by specifing the same `backing-device` for them.
+The same cache set can be used by different bcaches by specifying the same `backing-device` for them.
 
 #### LVM on top of RAID with Bcache
 ```json

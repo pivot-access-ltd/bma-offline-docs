@@ -15,7 +15,7 @@ For additional MAAS CLI commands, you can consult the MAAS CLI help or access th
 * [How to obtain the administrator's API key](#heading--obtain-an-api-key)
 * [How to obtain a user's API key](#heading--obtain-a-users-api-key)
 * [How to login to the MAAS CLI](#heading--log-in)
-* [How to create a MAAS CLI login shellscript](#heading--cli-login-shellscript)
+* [How to create a MAAS CLI login shell script](#heading--cli-login-shellscript)
 * [How to get help from the MAAS CLI](#heading--get-help)
 * [How to log out of the MAAS CLI](#heading--log-out)
 
@@ -63,7 +63,7 @@ $PROFILE is the administrator username you're using to log in.  The $MAAS_URL is
 
 <a href="#heading--cli-login-shellscript"><h2 id="heading--cli-login-shellscript">How to create a MAAS CLI login shellscript</h2></a>
 
-To create a MAAS login shellscript, say `maas-login.sh`, enter the following into a file with your favorite text editor:
+To create a MAAS login shellscript, say `maas-login.sh`, enter the following into a file with your favourite text editor:
 
 ``` no-highlight
 #!/bin/sh
