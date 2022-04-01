@@ -74,8 +74,8 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 
 ### Tags
 
-- [About tags](/t/-/5088)
-- [Manage tags](/t/-/5180)
+- [Work with tags](/t/-/5928)
+- [Work with annotations](/t/-/5929)
 - [Use machine tags](/t/-/5224)
 - [Use controller tags](/t/-/5216)
 - [Use storage tags](/t/-/5232)
@@ -801,7 +801,8 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 |https://discourse.maas.io/t/-/5084|/docs/about-networking|
 |https://discourse.maas.io/t/-/5104|/docs/how-to-create-a-custom-ubuntu-image|
 |https://discourse.maas.io/t/-/5152|/docs/how-to-manage-availability-zones|
-|https://discourse.maas.io/t/-/5180|/docs/how-to-manage-tags|
+|https://discourse.maas.io/t/-/5928|/docs/how-to-work-with-tags|
+|https://discourse.maas.io/t/-/5929|/docs/how-to-work-with-annotations|
 |https://discourse.maas.io/t/-/5200|/docs/how-to-set-up-ntp-services|
 |https://discourse.maas.io/t/-/5216|/docs/how-to-use-controller-tags|
 |https://discourse.maas.io/t/-/5208|/docs/how-to-use-lxd|
@@ -1289,18 +1290,18 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 |/docs/snap/3.1/cli/ntp-services|/docs/how-to-set-up-ntp-services|
 |/docs/deb/3.1/ui/ntp-services|/docs/how-to-set-up-ntp-services|
 |/docs/deb/3.1/cli/ntp-services|/docs/how-to-set-up-ntp-services|
-|/docs/deb/2.9/cli/how-to-manage-tags|/docs/how-to-manage-tags|
-|/docs/deb/2.9/ui/how-to-manage-tags|/docs/how-to-manage-tags|
-|/docs/deb/3.0/cli/how-to-manage-tags|/docs/how-to-manage-tags|
-|/docs/deb/3.0/ui/how-to-manage-tags|/docs/how-to-manage-tags|
-|/docs/snap/2.9/cli/how-to-manage-tags|/docs/how-to-manage-tags|
-|/docs/snap/2.9/ui/how-to-manage-tags|/docs/how-to-manage-tags|
-|/docs/snap/3.0/cli/how-to-manage-tags|/docs/how-to-manage-tags|
-|/docs/snap/3.0/ui/how-to-manage-tags|/docs/how-to-manage-tags|
-|/docs/snap/3.1/ui/how-to-manage-tags|/docs/how-to-manage-tags|
-|/docs/snap/3.1/cli/how-to-manage-tags|/docs/how-to-manage-tags|
-|/docs/deb/3.1/ui/how-to-manage-tags|/docs/how-to-manage-tags|
-|/docs/deb/3.1/cli/how-to-manage-tags|/docs/how-to-manage-tags|
+|/docs/deb/2.9/cli/how-to-manage-tags|/docs/how-to-work-with-tags|
+|/docs/deb/2.9/ui/how-to-manage-tags|/docs/how-to-work-with-tags|
+|/docs/deb/3.0/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
+|/docs/deb/3.0/ui/how-to-work-with-tags|/docs/how-to-work-with-tags|
+|/docs/snap/2.9/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
+|/docs/snap/2.9/ui/how-to-work-with-tags|/docs/how-to-work-with-tags|
+|/docs/snap/3.0/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
+|/docs/snap/3.0/ui/how-to-work-with-tags|/docs/how-to-work-with-tags|
+|/docs/snap/3.1/ui/how-to-work-with-tags|/docs/how-to-work-with-tags|
+|/docs/snap/3.1/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
+|/docs/deb/3.1/ui/how-to-work-with-tags|/docs/how-to-work-with-tags|
+|/docs/deb/3.1/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
 |/docs/snap/2.9/cli/availability-zones|/docs/how-to-manage-availability-zones|
 |/docs/snap/2.9/ui/availability-zones|/docs/how-to-manage-availability-zones|
 |/docs/deb/2.9/cli/availability-zones|/docs/how-to-manage-availability-zones|
