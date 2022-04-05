@@ -12,7 +12,7 @@ A newly installed MAAS comes with a default zone which initially contains all no
 6. [How do I allocate a machine in a particular zone?](#heading--allocate-a-node-in-a-zone)
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
 <a href="#heading--list-zones"><h2 id="heading--list-zones">List availability zones</h2></a>
 
 To see a list of availability zones, choose "AZs" from the top menu:
@@ -51,7 +51,7 @@ After selecting a zone hit the 'Set zone...' button to apply the change.
 
 You can also edit a machine's 'Configuration' page to change its zone.
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
 
 <a href="#heading--list-zones"><h2 id="heading--list-zones">List availability zones</h2></a>
 

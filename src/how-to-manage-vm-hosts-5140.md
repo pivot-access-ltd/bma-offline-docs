@@ -60,7 +60,7 @@ It's essential to enforce usage of IP addresses to avoid domain name conflicts, 
 [/note]
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
 <a href="#heading--maas-bridge-web-ui"><h2 id="heading--maas-bridge-web-ui">How to set up a VM host bridge with the web UI</h2></a>
 
 You can use the MAAS UI to configure a bridge to connect a VM host to MAAS:
@@ -80,7 +80,7 @@ When you're done, it should look something like this:
 Then you can deploy Ubuntu.
 
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
 <a href="#heading--maas-bridge-cli"><h2 id="heading--maas-bridge-cli">How to use the MAAS API to configure a bridge</h2></a>
 
 You can also use the MAAS CLI/API to configure a VM host bridge, with the following procedure:
@@ -224,6 +224,7 @@ Finally, on the VM host, you'll need to add `id_rsa.pub` to the `authorized_keys
 
 <a href="#heading--adding-a-vm-host"><h2 id="heading--adding-a-vm-host">How to add a VM host</h2></a>
 
+[tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages" view="UI"]
 After installing MAAS, the 'KVM' page is typically empty:
 
@@ -415,12 +416,13 @@ MAAS will automatically discover and store the resources your VM host contains. 
 
 <a href="#heading--configuration"><h2 id="heading--configuration">How to configure a VM host</h2></a>
 
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tabs]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
 VM hosts have several configuration options. Modify these by selecting the 'Configuration' tab and editing options directly.  These options include a VM host's location, password, network zone, resource pool, and memory and CPU overcommit sliders.
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/8b3fc96a8f1a1e4b25413a9f60388dc04dd886c9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8b3fc96a8f1a1e4b25413a9f60388dc04dd886c9.png"></a>
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
 Using the CLI, it's possible to update the configuration of a VM host.  You can change these configurable parameters with an `update` command -- but first, you'll want to know how to check the values of configurable parameters, both before and after the change.
 
 <a href="#heading--list-vm-hosts"><h3 id="heading--list-vm-hosts">How to list VM-hosts</h3></a>
@@ -551,9 +553,11 @@ Example output:
 }
 ```
 [/tab]
+[/tabs]
 
 <a href="#heading--lxd-clusters"><h3 id="heading--lxd-clusters">LXD clusters</h3></a>
 
+[tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
 MAAS 3.1 allows MAAS to take advantage of the existing LXD clustering capability.
 

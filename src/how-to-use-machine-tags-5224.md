@@ -1,7 +1,7 @@
 This article will explain:
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
 - [How to create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
 - [How to remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
 - [How to list machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
@@ -89,7 +89,7 @@ To view the machine tags assigned to a VM host, here's the procedure you'll foll
 Note that you can only see the tags for a VM host in the same place that you change it.  For a more comprehensive list of VM host tags, use the MAAS CLI.
 
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
 - [How to assign machine tags to a machine](#heading--assign-machine-tags-to-a-machine)
 - [How to remove machine tags from a machine](#heading--remove-machine-tags-from-a-machine)
 - [How to list machine tags for all machines](#heading--list-machine-tags-for-all-machines)

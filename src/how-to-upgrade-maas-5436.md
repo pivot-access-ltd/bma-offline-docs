@@ -127,7 +127,7 @@ Codename:	focal
 
 5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 release.
 
-6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1.[/tab]
+6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1.
 [/tab]
 [tab version="v3.1 Packages" view="CLI"] 
 <a href="#heading--upgrade-from-v3-0 Packages-to-3-1"><h2 id="heading--upgrade-from-v3-0 Packages-to-3-1">How to ugprade from MAAS 3.0 to MAAS 3.1</h2></a>

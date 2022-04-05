@@ -3,7 +3,7 @@ Machines are the heart of MAAS. They are the backbone of your data centre applic
 In this article, you will learn:
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap" view="UI"]
 * [About the machine life-cycle](#heading--about-the-machine-life-cycle)
 * [About testing hardware](#heading--about-testing-hardware)
 * [About adding machines](#heading--about-adding-machines)
@@ -14,14 +14,14 @@ In this article, you will learn:
 * [About tags](#heading--about-tags)
 * [About storage](#heading--about-storage)
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap" view="CLI"]
 * [About the machine life-cycle](#heading--about-the-machine-life-cycle)
 * [About testing hardware](#heading--about-testing-hardware)
 * [About adding machines](#heading--about-adding-machines)
 * [About tags](#heading--about-tags)
 * [About storage](#heading--about-storage)
 [/tab]
-[tab version="v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v2.9 Snap" view="UI"]
 * [About the machine life-cycle](#heading--about-the-machine-life-cycle)
 * [About testing hardware](#heading--about-testing-hardware)
 * [About adding machines](#heading--about-adding-machines)
@@ -30,7 +30,41 @@ In this article, you will learn:
 * [About tags](#heading--about-tags)
 * [About storage](#heading--about-storage)
 [/tab]
-[tab version="v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v2.9 Snap" view="CLI"]
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="v3.2 Packages,v3.1 Packages,v3.0 Packages" view="UI"]
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About cloning machines](#heading--about-cloning-machines)
+* [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
+* [About the machine list](#heading--about-the-machine-list)
+* [About the machine summary](#heading--about-the-machine-summary)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="v3.2 Packages,v3.1 Packages,v3.0 Packages" view="CLI"]
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="v2.9 Packages" view="UI"]
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About the machine list](#heading--about-the-machine-list)
+* [About the machine summary](#heading--about-the-machine-summary)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="v2.9 Packages" view="CLI"]
 * [About the machine life-cycle](#heading--about-the-machine-life-cycle)
 * [About testing hardware](#heading--about-testing-hardware)
 * [About adding machines](#heading--about-adding-machines)
@@ -130,6 +164,7 @@ Since these actions are not necessarily sequential, and the available actions ch
 
 When a machine is in the state listed in a column, it is possible to take the row actions marked with an "X."
 
+[tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages" view="UI"]
 You access these actions from the "Take action" menu in the upper right corner of the machine listing.  Note that some actions, such as "Mark broken" or "Lock," may be hidden when they are not available.
 
@@ -700,7 +735,7 @@ Regardless of how MAAS adds a machine, there are no special requirements for the
 In the illustration below, you see the machine list for a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg"></a>
 
 Rolling the cursor over status icons often reveals more details. For example, a failed hardware test script will place a warning icon alongside the hardware type tested by the script. Rolling the cursor over this will reveal which test failed.  Likewise, you can find some immediate options by rolling over the column data items in the machines table.
@@ -720,7 +755,7 @@ The 'Filter by' section limits the machines listed in the table to selected keyw
 [/note]
 
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
 ```nohighlight
 FQDN               POWER  STATUS     OWNER  TAGS     POOL       NOTE     ZONE
 ----               -----  ------     -----  ----     ----       ----     ----

@@ -163,7 +163,7 @@ To filter machines by dynamic (workload) annotations, use the following procedur
 2. Select one or more values from this list to filter the machine list by these workload annotations.
 
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
 This section will show you how to:
 
 - [Work with static annotations](#heading--work-with-static-annotations)

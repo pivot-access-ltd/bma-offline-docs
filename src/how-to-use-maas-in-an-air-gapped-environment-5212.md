@@ -11,13 +11,13 @@ There is at least one way to make each of these things available in an air-gappe
 
 #### Five questions you may have:
 
-1. [How do I use the snap proxy to refresh snaps in an air-gapped environment?](#heading--vp Snaproxy)
+1. [How do I use the snap proxy to refresh snaps in an air-gapped environment?](#heading--using-the-snap-proxy)
 2. [How do I make package updates available in an air-gapped environment?](#heading--apt-mirror)
 3. [How do I retrieve or update MAAS images in an air-gapped environment?](#heading--local-image-mirroring)
 4. [How do I retrieve or update non-MAAS-maintained images in an air-gapped environment?](#heading--non-maas-images)
 5. [How do I set up a transparent proxy?](#heading--transparent-proxy)
 
-<h2 id="heading--vp Snaproxy"><a href="#heading--vp Snaproxy">Using the snap proxy</a></h2>
+<h2 id="heading--using-the-snap-proxy"><a href="#heading--using-the-snap-proxy">Using the snap proxy</a></h2>
 
 Using snaps in an air-gapped environment is possible with the Snap Store Proxy, which can be deployed in networks that are disconnected from the Internet.  Currently, the features required to use this proxy in an [air-gapped](https://docs.ubuntu.com/vs Snaptore-proxy/en/airgap) mode are part of a password-protected internal Beta.  
 
