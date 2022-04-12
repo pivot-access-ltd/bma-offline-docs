@@ -1,15 +1,16 @@
 <!-- "How to search MAAS" -->
 The Machines and Devices pages contain a powerful interactive search bar that lets you filter machines and devices.  This article is designed to help you understand how to use this resource. 
 
-#### This article will answer a few questions:
+#### This article will explain:
 
-1. [How can I do simple searches?](#heading--simple-searches)
-2. [How can I do filtered searches?](#heading--filtered-searches)
-3. [How can I create manual filters?](#heading--manual-filters)
-4. [How do I set up exact matching?](#heading--exact-matching)
-5. [How do I set up partial matching?](#heading--partial-matching)
-6. [How can I include multiple search terms?](#heading--multiple-search-terms)
-7. [What filter properties are available to me?](#heading--filter-properties)
+* [How to do simple searches](#heading--simple-searches)
+* [How to do filtered searches](#heading--filtered-searches)
+* [How to create manual filters](#heading--manual-filters)
+* [How to set up exact matching](#heading--exact-matching)
+* [How to set up partial matching](#heading--partial-matching)
+* [How to include multiple search terms](#heading--multiple-search-terms)
+
+This article also includes a [filter properties reference](#heading--filter-properties)
 
 <a href="#heading--simple-searches"><h2 id="heading--simple-searches">Simple searches</h2></a>
 
@@ -57,7 +58,7 @@ pod:able,cattle
 
 MAAS uses Boolean AND logic to evaluate multiple search terms. For example, when you type `pod:able,cattle cpu:=5`, MAAS displays machines that belong to pods with names containing `able` OR `cattle` AND having 5 CPU cores. Similarly, if you enter multiple words into the search tool, e.g., `steady able`, MAAS will display machines matching both terms (e.g., `steady` AND `able`).
 
-<h4 id="heading--filter-properties">Filter properties</h4>
+<h4 id="heading--filter-properties">Filter properties reference</h4>
 
 In addition to the major filtering categories available in the Filter drop-down menu, twenty-one machine properties are available as filters:
 
