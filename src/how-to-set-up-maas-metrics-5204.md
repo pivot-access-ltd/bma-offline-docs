@@ -12,7 +12,7 @@ In this document, you will learn:
 
 Depicted below we have a reference observability stack composed of Prometheus (metrics ingestion and alerting based on metrics), Loki (log ingestion and alerting based on logs), Grafana (visualisation), Alertmanager (notification routing and dispatching) and Grafana Agent (telemetry collector).
 
-![MAAS O11y - Agent|690x437](upload://uFE8KT07Kr1VASO1qcLVSP20l7s.png) 
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/d/d6f66cbb3ea314818894b4f07ca8037628993ae2_2_690x437.png" target = "_blank"><src img="https://discourse.maas.io/uploads/default/optimized/2X/d/d6f66cbb3ea314818894b4f07ca8037628993ae2_2_690x437.png"></a>
 
 This document shows how to configure this stack to consume telemetry and to raise alerts of failures.
 

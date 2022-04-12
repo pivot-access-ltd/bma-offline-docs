@@ -1,7 +1,7 @@
 <!-- "How to search MAAS" -->
 The Machines and Devices pages contain a powerful interactive search bar that lets you filter machines and devices.  This article is designed to help you understand how to use this resource. 
 
-#### Eight questions you may have:
+#### This article will answer a few questions:
 
 1. [How can I do simple searches?](#heading--simple-searches)
 2. [How can I do filtered searches?](#heading--filtered-searches)
@@ -10,7 +10,6 @@ The Machines and Devices pages contain a powerful interactive search bar that le
 5. [How do I set up partial matching?](#heading--partial-matching)
 6. [How can I include multiple search terms?](#heading--multiple-search-terms)
 7. [What filter properties are available to me?](#heading--filter-properties)
-8. [How can I search with the CLI?](#heading--cli)
 
 <a href="#heading--simple-searches"><h2 id="heading--simple-searches">Simple searches</h2></a>
 
