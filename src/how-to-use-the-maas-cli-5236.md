@@ -1,3 +1,4 @@
+<!-- "How to use the MAAS CLI" -->
 <a href="#heading--about-the-maas-cli"><h2 id="heading--about-the-maas-cli">About the MAAS CLI</h2></a>
 
 The MAAS CLI can do everything that the web UI can do, and more. The CLI uses the `maas` command exclusively which, in turn, connects to the API.  This page explains what is needed to get started with the CLI. You can obtain the MAAS CLI from the `maas-cli` Ubuntu package installed on every region API server and rack controller.

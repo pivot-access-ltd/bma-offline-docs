@@ -1,3 +1,4 @@
+<!-- "MAAS logging reference" -->
 MAAS has a robust logging capability, which presents several different views, including a number of node-specific log files and several syslogd-style text logs.  Each of these logs provides different information, or at the very least, different views of the same information.  MAAS gathers logging information about the various MAAS states and records both automated and user-driven actions.
 
 #### Five questions you may have:

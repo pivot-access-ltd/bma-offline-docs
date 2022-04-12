@@ -1,3 +1,4 @@
+<!-- "How to build MAAS images" -->
 MAAS Image Builder is an alternative to [Packer](https://www.packer.io/) for creating MAAS images.
 
 [note]

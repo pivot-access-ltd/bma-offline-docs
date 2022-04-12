@@ -1,3 +1,4 @@
+<!-- "Tips and tricks" -->
 This section contains a collection of tips, tricks, and traps which may help solve unusual or infrequent issues that come up.
 
 #### What would you like to do?

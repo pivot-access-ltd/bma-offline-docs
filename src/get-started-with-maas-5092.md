@@ -1,3 +1,4 @@
+<!-- "Get started with MAAS" -->
 An evolving example may be useful to introduce you to MAAS, and it doesn't have to be comprehensive --  just coherent and plausible.
 
 [tabs]

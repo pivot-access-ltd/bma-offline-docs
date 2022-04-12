@@ -1,3 +1,4 @@
+<!-- "How to use LXD" -->
 LXD and MAAS are separate products, and it's useful to allow them to interact as equals, covering a much wider range of use cases.  To allow each of them to follow their own operational models, but still allow them to work together, we've taken advantage of LXD projects.
 
 [tabs]

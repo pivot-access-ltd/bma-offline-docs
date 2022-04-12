@@ -1,3 +1,4 @@
+<!-- "How to manage networks" -->
 You can easily manage the basic networking elements of MAAS, including subnets, fabrics, VLANs, spaces, and IP ranges.  This section shows how to access and edit these elements. See [Concepts and terms](/t/maas-concepts-and-terms-reference/5416) for the definitions of these networking components.
 
 This section will show you:

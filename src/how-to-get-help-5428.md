@@ -1,3 +1,4 @@
+<!-- "How to get help" -->
 The best place to get help with your MAAS issue is on the [MAAS Discourse forum ](https://discourse.maas.io/). There, you can interact with the MAAS team as well as search for issues similar to your own.
 
 You might also try the [Ask Ubuntu ](http://askubuntu.com/questions/ask?tags=maas) web site.

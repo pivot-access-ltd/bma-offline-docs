@@ -1,3 +1,4 @@
+<!-- "Hardware test scripts reference" -->
 <a href="#heading--included-scripts"><h2 id="heading--included-scripts">Available test scripts reference</h2></a>
 
 The following hardware testing scripts are available during machine commissioning:

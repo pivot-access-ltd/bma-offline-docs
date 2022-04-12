@@ -1,3 +1,4 @@
+<!-- "MAAS documentation" -->
 MAAS is **Metal As A Service**, a service that treats physical servers like virtual machines (instances) in the cloud.  No need to manage servers individually: MAAS turns bare metal into an elastic, cloud-like resource.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>

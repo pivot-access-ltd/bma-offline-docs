@@ -1,3 +1,4 @@
+<!-- "How to customise machines" -->
 MAAS machines can be customised in a number of ways, including:
 
 - machine storage.

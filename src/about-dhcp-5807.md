@@ -1,3 +1,4 @@
+<!-- "About DHCP" -->
 The Dynamic Host Control Protocol or DHCP is a key part of how MAAS is able to manage bare-metal servers.  Many issues with MAAS revolve around misunderstanding -- or unintentional misuse -- of DHCP, so it's worth it to take an in-depth look.  This section will help you learn:
 
  - [About DORA](#heading--about-dora)

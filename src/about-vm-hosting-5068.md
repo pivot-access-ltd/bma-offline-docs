@@ -1,3 +1,4 @@
+<!-- "About VM hosting" -->
 MAAS VM hosts allow for the dynamic composition of nodes from a pool of available hardware resources (e.g. disk space, memory, cores). You can create virtual machines (VMs) as needed within the limits of your resources, without concern for physical hardware.
 
 This article will help you learn:

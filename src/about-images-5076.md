@@ -1,3 +1,4 @@
+<!-- "About images" -->
 MAAS provides supported images for stable Ubuntu releases, and for CentOS 6.6, CentOS 7, and CentOS 8.0 releases.  [Ubuntu Advantage](https://www.ubuntu.com/support) is needed to build customer Windows, RHEL and ESXi images.
 
 #### Four questions you may have:

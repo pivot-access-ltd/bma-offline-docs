@@ -1,3 +1,4 @@
+<!-- "Commissioning log reference" -->
 [tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
 The command line allows you to retrieve the verbatim logs of commissioning script runs, including those that are currently in progress.

@@ -1,3 +1,4 @@
+<!-- "About TCP/IP networks" -->
 TCP/IP networks, and the underlying structure, evolved to meet a specific need: How can we keep a computer network functioning in the event of a catastrophic failure of communications infrastructure?  When nodes go offline, randomly, how can surviving nodes keep the network usable?  The Internet, which relies heavily on TCP/IP networks, has proven over time that it can adapt to changing loads, handle significant failures, and strictly limit the network blast radius when things go wrong.   
 
 Experience has shown us that you will probably have a much easier time working with MAAS if you ensure that you have a solid understanding of network fundamentals.  Rather than bury this basic material, we've decided to include it in the mainstream MAAS networking discussion. Later sections, which help you learn how to design and troubleshoot MAAS networks, will depend heavily on principles explained here.

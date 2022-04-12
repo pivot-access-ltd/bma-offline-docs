@@ -1,3 +1,4 @@
+<!-- "How to manage racks" -->
 A rack controller can connect to multiple VLANs, each from a different network interface. A rack controller can only connect to one MAAS instance at any given time, and must connect to an instance that matches its MAAS version (major and minor).  This configuration provides a scaling factor that can help as a network architecture grows in size.
 
 This article will tell you:

@@ -1,3 +1,4 @@
+<!-- "How to enable high availability" -->
 This page describes how to provide high availability (HA) for MAAS at both region and rack levels.  In the context of MAAS, there are four types of HA:
 
 1. BMC (node power cycling)

@@ -1,3 +1,4 @@
+<!-- "How to upgrade MAAS" -->
 [tabs]
 [tab version="v3.1 Snap" view="UI"] 
 <a href="#heading--upgrade-from-earlier-vt Snapo-3-1"><h2 id="heading--upgrade-from-earlier-vt Snapo-3-1">How to upgrade a snap to MAAS 3.1</h2></a>

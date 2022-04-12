@@ -1,3 +1,4 @@
+<!-- "How to install MAAS" -->
 [tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"]
 <a href="#heading--about-installing-maas"><h2 id="heading--about-installing-maas">About installing MAAS</h2></a>

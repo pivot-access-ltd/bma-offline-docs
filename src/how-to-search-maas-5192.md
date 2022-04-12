@@ -1,3 +1,4 @@
+<!-- "How to search MAAS" -->
 The Machines and Devices pages contain a powerful interactive search bar that lets you filter machines and devices.  This article is designed to help you understand how to use this resource. 
 
 #### Eight questions you may have:

@@ -1,3 +1,4 @@
+<!-- "How to manage machines" -->
 This article explains:
 
 [tabs]

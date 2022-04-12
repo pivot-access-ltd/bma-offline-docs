@@ -1,3 +1,4 @@
+<!-- "How to work with tags" -->
 Tags for different objects have similar purposes, but they aren't necessarily administered in the same way -- so we've included detailed articles for each tag type.  That said, many of the common operations regarding tags are performed in the same way.  This article will present some general, explanatory information, and then look at tag management steps that are the same (or very similar) across all types of MAAS tags.
 
 <a href="#heading--automatic-tags"><h2 id="heading--automatic-tags">About automatic tags</h2></a>

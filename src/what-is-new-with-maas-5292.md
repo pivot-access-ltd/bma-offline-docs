@@ -1,3 +1,4 @@
+<!-- "What's new with MAAS" -->
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages"]
 <h2>MAAS 3.2 Beta 2 release notes</h2>

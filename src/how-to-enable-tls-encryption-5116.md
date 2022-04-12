@@ -1,3 +1,4 @@
+<!-- "How to enable TLS encryption" -->
 MAAS doesn't support TLS encryption natively.  If you are not interested in [setting up an HAProxy](/t/how-to-enable-high-availability/5120#heading--load-balancing-with-haproxy-optional), you can enable TLS independently in the web server software (e.g. Apache, Nginx) which users access directly.  The examples below explain how to create this configuration.
 
 Note that MAAS doesn't bind to port 80; instead, MAAS binds to port 5240.

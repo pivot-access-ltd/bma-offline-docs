@@ -1,3 +1,4 @@
+<!-- "How to create a custom Ubuntu image" -->
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
 MAAS supports deploying custom OS images.  Canonical provides both [lp:maas-image-builder](https://launchpad.net/maas-image-builder) and [gh:canonical/packer-maas](https://github.com/canonical/packer-maas) to support creating custom images. These custom images can include static Ubuntu images, created with whatever tool you choose, and deployed as described below. Even so, Canonical suggests [customising Ubuntu](/t/-/5108) using cloud-init user_data or Curtin preseed data whenever possible.

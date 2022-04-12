@@ -1,3 +1,4 @@
+<!-- "How to help improve the doc" -->
 This page contains detailed information on how to become a successful MAAS documentation writer. Welcome to the club.
 
 <h2 id="heading--contribution-overview">Contribution overview</h2>

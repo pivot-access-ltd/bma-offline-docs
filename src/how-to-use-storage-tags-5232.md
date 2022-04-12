@@ -1,3 +1,4 @@
+<!-- "How to use storage tags" -->
 This article explains:
 
 [tabs]
