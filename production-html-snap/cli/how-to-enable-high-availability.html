@@ -26,13 +26,13 @@
 	  UI-only
 	</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/how-to-enable-high-availability.html">
-	  CLI-only
-	</a>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation-25.html">
 	  Introduction
 	</a>
       </strong>
@@ -57,12 +57,16 @@
 	    Use the MAAS CLI
 	  </a>
 	</li>
+      </ul>
       <strong>
-	<a href="about-controllers.html">
-	  Controllers
-	</a>
+	Controllers
       </strong>
       <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-racks.html">
 	    Manage racks
@@ -80,11 +84,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-machines.html">
-	  Machines
-	</a>
+	Machines
       </strong>
       <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-machines.html">
 	    Manage machines
@@ -102,11 +109,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-vm-hosting.html">
-	  VM hosting
-	</a>
+	VM hosting
       </strong>
       <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-vm-hosts.html">
 	    Manage VM hosts
@@ -124,11 +134,34 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-networking.html">
-	  Networking
-	</a>
+	Networking fundamentals
       </strong>
       <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-networks.html">
 	    Manage networks
@@ -176,11 +209,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-images.html">
-	  Images
-	</a>
+	Images
       </strong>
       <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-import-images.html">
 	    Select and import images
@@ -193,7 +229,7 @@
 	</li>
 	<li>
 	  <a href="how-to-create-a-custom-ubuntu-image.html">
-	    Create custom Ubuntu images
+	    Create custom images
 	  </a>
 	</li>
 	<li>
@@ -213,14 +249,17 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-tags-and-annotations.html">
-	  Tags
-	</a>
+	Tags
       </strong>
       <ul>
 	<li>
-	  <a href="how-to-manage-tags.html">
-	    Manage tags
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
 	  </a>
 	</li>
 	<li>
@@ -250,8 +289,8 @@
 	</strong>
 	<ul>
 	  <li>
-	    <a href="how-to-set-up-prometheus-metrics.html">
-	      Set up Prometheus
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
 	    </a>
 	  </li>
 	  <li>
@@ -301,7 +340,7 @@
 	</li>
 	<li>
 	  <a href="api.html">
-	    API reference
+	    API documentation
 	  </a>
 	</li>
 	<li>
@@ -355,7 +394,8 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>How to enable high availability</h1><p>This page describes how to provide high availability (HA) for MAAS at both region and rack levels.  In the context of MAAS, there are four types of HA:</p>
+  <h1>How to enable high availability</h1><!-- "How to enable high availability" -->
+<p>This page describes how to provide high availability (HA) for MAAS at both region and rack levels.  In the context of MAAS, there are four types of HA:</p>
 <ol>
 <li>BMC (node power cycling)</li>
 <li>DHCP</li>
@@ -375,12 +415,12 @@
 <li><a href="#heading--dangers-moving-rack-controller">What are the potential dangers of moving a rack controller?</a></li>
 </ol>
 <p><a href="#heading--rack-controller-ha"><h2 id="heading--rack-controller-ha">Make rack controllers highly available</h2></a></p>
-<p>You need to <a href="how-to-manage-racks-5173.html#heading--install-a-rack-controller">install multiple rack controllers</a> to achieve real high availability.  Once that&rsquo;s done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.</p>
+<p>You need to <a href="how-to-manage-racks.html#heading--install-a-rack-controller">install multiple rack controllers</a> to achieve real high availability.  Once that&rsquo;s done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.</p>
 <p><a href="#heading--bmc-ha"><h3 id="heading--bmc-ha">Enable highly-available BMC</h3></a></p>
 <p>HA for BMC control (node power cycling) is provided out-of-the-box, once a second rack controller is present. MAAS will automatically identify which rack controller is responsible for a BMC and set up communication accordingly.</p>
 <p><a href="#heading--dhcp-ha"><h3 id="heading--dhcp-ha">Enable highly-available DHCP services</h3></a></p>
 <p>DHCP HA affects the way MAAS manages node, including enlistment, commissioning and deployment. It enables primary and secondary DHCP instances to serve the same VLAN. This VLAN replicates all lease information is between rack controllers. MAAS-managed DHCP is a requirement for DHCP HA.</p>
-<p>If you are enabling DHCP for the first time after adding a second rack controller, please read <a href="how-to-manage-dhcp-5133.html#heading--enabling-dhcp">Enabling DHCP</a>.  On the other hand, if you have already enabled DHCP on your initial rack controller, you&rsquo;ll need to reconfigure DHCP.</p>
+<p>If you are enabling DHCP for the first time after adding a second rack controller, please read <a href="how-to-manage-dhcp.html#heading--enabling-dhcp">Enabling DHCP</a>.  On the other hand, if you have already enabled DHCP on your initial rack controller, you&rsquo;ll need to reconfigure DHCP.</p>
 <p>To reconfigure DHCP after adding a new rack controller, use the following sequence of commands:</p>
 <pre><code>vid=$(maas maas subnets read | jq -r '.[] | select(.cidr == &quot;10.0.0.0/24&quot;) | .vlan.vid')
 fabric_name=$(maas maas subnets read | jq -r '.[] | select(.cidr == &quot;10.0.0.0/24&quot;) | .vlan.fabric')
@@ -392,16 +432,17 @@ maas maas vlan update ${fabric_id} ${vid} primary_rack=$(hostname) dhcp_on=true
 </code></pre>
 <p>Be sure to substitute the sample values for those of your own environment.</p>
 <p><a href="#heading--multiple-region-endpoints"><h3 id="heading--multiple-region-endpoints">Configure multiple region endpoints</h3></a></p>
-<p>MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to <code>/var/snap/maas/current/rackd.conf</code>.  For example:
-    .
-    .
-    .
-    maas_url:
-      - http://<ip 1>:<port>/MAAS/
-      - http://<ip 2>:<port>/MAAS/
-    .
-    .
-    .</p>
+<p>MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to <code>/var/snap/maas/current/rackd.conf</code>.  For example:</p>
+<pre><code>.
+.
+.
+maas_url:
+  - http://&lt;ip 1&gt;:&lt;port&gt;/MAAS/
+  - http://&lt;ip 2&gt;:&lt;port&gt;/MAAS/
+.
+.
+.
+</code></pre>
 <p>The setup of highly-available DHCP is now complete.  Note that, for HA purposes, DHCP provisioning will take into account multiple DNS services when there is more than one region controller on a single region.</p>
 <p><a href="#heading--region-controller-ha"><h2 id="heading--region-controller-ha">Make region controllers highly available</h2></a></p>
 <p>Implementing highly-available region control involves setting up two highly-available services:</p>
@@ -411,15 +452,15 @@ maas maas vlan update ${fabric_id} ${vid} primary_rack=$(hostname) dhcp_on=true
 </ol>
 <p>Load balancing is optional, but is highly recommended.</p>
 <p><a href="#heading--postgresql-ha"><h3 id="heading--postgresql-ha">Enable highly-available PostgreSQL</h3></a></p>
-<p>MAAS stores all state information in the PostgreSQL database. It is therefore recommended to run it in HA mode. Configuring HA for PostgreSQL is external to MAAS. You will, therefore, need to study the <a href="https://www.postgresql.org/docs/9.5/static/high-availability.html">PostgreSQL documentation</a>&#128279; and implement the variant of HA that makes you feel most comfortable.</p>
+<p>MAAS stores all state information in the PostgreSQL database. It is therefore recommended to run it in HA mode. Configuring HA for PostgreSQL is external to MAAS. You will, therefore, need to study the <a href="https://www.postgresql.org/docs/9.5/static/high-availability.html">PostgreSQL documentation</a> and implement the variant of HA that makes you feel most comfortable.</p>
 <p>Each region controller uses up to 40 connections to PostgreSQL in high load situations. Running two region controllers requires no modifications to the <code>max_connections</code> in <code>postgresql.conf</code>. More than two region controllers require that <code>max_connections</code> be adjusted to add 40 more connections per added region controller.</p>
 <p><a href="#heading--secondary-api-servers"><h3 id="heading--secondary-api-servers">Enable highly-available API services</h3></a></p>
 <p>Setting up high-availability using snaps is relatively easy:</p>
 <ol>
-<li>Set up PostgreSQL for high-availability as <a href="how-to-enable-high-availability-5121.html#heading--postgresql-ha">explained above</a>. PostgreSQL should run outside of the snap.</li>
-<li><a href="how-to-install-maas-5129.html#heading--install-from-snap">Install</a> the MAAS snap on each machine you intend to use as a rack or region controller. You&rsquo;ll need the MAAS shared secret, located here, <code>/var/snap/maas/common/maas/secret</code>, on the first region controller you set up.</li>
+<li>Set up PostgreSQL for high-availability as <a href="#heading--postgresql-ha">explained above</a>. PostgreSQL should run outside of the snap.</li>
+<li><a href="how-to-install-maas.html#heading--install-from-snap">Install</a> the MAAS snap on each machine you intend to use as a rack or region controller. You&rsquo;ll need the MAAS shared secret, located here, <code>/var/snap/maas/common/maas/secret</code>, on the first region controller you set up.</li>
 <li>
-<p><a href="how-to-install-maas-5129.html#heading--initialisation">Initialise the snap</a> as a <code>rack</code> or <code>region</code> controller. Note that if you intend to use a machine as a region controller, you&rsquo;ll need to tell MAAS how to access your PostgreSQL database host with the following four arguments:</p>
+<p><a href="how-to-install-maas.html#heading--initialisation">Initialise the snap</a> as a <code>rack</code> or <code>region</code> controller. Note that if you intend to use a machine as a region controller, you&rsquo;ll need to tell MAAS how to access your PostgreSQL database host with the following four arguments:</p>
 </li>
 <li>
 <p><code>--database-host DATABASE_HOST</code></p>
@@ -430,9 +471,8 @@ maas maas vlan update ${fabric_id} ${vid} primary_rack=$(hostname) dhcp_on=true
 </ol>
 <p><a href="#heading--load-balancing-with-haproxy-optional"><h3 id="heading--load-balancing-with-haproxy-optional">Load balancing with HAProxy (optional)</h3></a></p>
 <p>You can add load balancing with <a href="http://www.haproxy.org/">HAProxy</a> load-balancing software to support multiple API servers. In this setup, HAProxy provides access to the MAAS web UI and API.</p>
-<p>[note]
-If you happen to have Apache running on the same server where you intend to install HAProxy, you will need to stop and disable <code>apache2</code>, because HAProxy binds to port 80.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+If you happen to have Apache running on the same server where you intend to install HAProxy, you will need to stop and disable <code>apache2</code>, because HAProxy binds to port 80.</p>
 <p><a href="#heading--install"><h4 id="heading--install">Install</h4></a></p>
 <pre><code class="language-bash">sudo apt install haproxy
 </code></pre>
