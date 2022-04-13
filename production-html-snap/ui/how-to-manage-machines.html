@@ -405,7 +405,7 @@
 <li><a href="#heading--how-to-use-machine-storage">How to use machine storage</a></li>
 </ul>
 <p>This article also provides a <a href="#heading--storage-layouts-reference">storage layouts reference</a>.</p>
-<p>Most of the day-to-day work of managing machines is covered here. Utilising machines to do work &ndash; for example, commissioning, testing, and deploying them &ndash; is discussed in <a href="how-to-deploy-machines-5112.html">How to deploy machines</a>.</p>
+<p>Most of the day-to-day work of managing machines is covered here. Utilising machines to do work &ndash; for example, commissioning, testing, and deploying them &ndash; is discussed in <a href="how-to-deploy-machines.html">How to deploy machines</a>.</p>
 <p><a href="#heading--how-to-create-delete-and-configure-machines"><h2 id="heading--how-to-create-delete-and-configure-machines">How to create, delete, and configure machines</h2></a></p>
 <p>This section shows you:</p>
 <ul>
@@ -416,7 +416,7 @@
 <p><a href="#heading--how-to-add-a-machine-manually"><h3 id="heading--how-to-add-a-machine-manually">How to add a machine manually</h3></a></p>
 <p>On the &lsquo;Machines&rsquo; page of the web UI, click the &lsquo;Add hardware&rsquo; button and then select &lsquo;Machine&rsquo;.</p>
 <p>Fill in the form and hit &lsquo;Save machine&rsquo;. In this example, you are adding an IPMI machine:</p>
-<p><a href="images/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg"></a></p>
+<p><a href="../images/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg"></a></p>
 <p>The fields on the &ldquo;Add machine&rdquo; screen include the following items:</p>
 <ul>
 <li>
@@ -441,12 +441,12 @@
 <p><strong>MAC Address</strong>: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (&ldquo;:&rdquo;) separator, although some MAC addresses are written with dash (&ldquo;-&ldquo;) separators.</p>
 </li>
 <li>
-<p><strong>Power type</strong>: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See <a href="power-management-5246.html">Power management reference</a> for details on the available power types and the relevant parameters for each type.</p>
+<p><strong>Power type</strong>: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See <a href="power-management-reference.html">Power management reference</a> for details on the available power types and the relevant parameters for each type.</p>
 </li>
 </ul>
 <p><a href="#heading--how-to-add-machines-via-a-chassis"><h3 id="heading--how-to-add-machines-via-a-chassis">How to add machines via a chassis</h3></a></p>
 <p>You can use the chassis feature to add multiple machines at once. To do this, instead of selecting &lsquo;Machine&rsquo; as above, choose &lsquo;Chassis&rsquo; from the drop-down menu. In the following example, MAAS will add all available VMs from the given  virsh address:</p>
-<p><a href="images/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg"></a></p>
+<p><a href="../images/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg"></a></p>
 <p>The required fields will change based on the type of chassis you choose.</p>
 <p>[note]
 As with the manual method, the underlying machines will require netbooting.
@@ -486,7 +486,7 @@ As with the manual method, the underlying machines will require netbooting.
 <p><code>$MAC_ADDRESS</code>: This is the MAC address of the boot-enabled NIC for the machine being added.  Note that the MAC address entered here must use a colon (&ldquo;:&rdquo;) separator, although some MAC addresses are written with dash (&ldquo;-&ldquo;) separators.</p>
 </li>
 <li>
-<p><code>$POWER_TYPE</code>: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See <a href="power-management-5246.html">Power management reference</a> for details on the available power types and the relevant parameters for each type. In this example, we&rsquo;ve used a &ldquo;virsh&rdquo; power type (a libvirt KVM), but your choice will depend on your hardware.</p>
+<p><code>$POWER_TYPE</code>: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See <a href="power-management.html">Power management reference</a> for details on the available power types and the relevant parameters for each type. In this example, we&rsquo;ve used a &ldquo;virsh&rdquo; power type (a libvirt KVM), but your choice will depend on your hardware.</p>
 </li>
 <li>
 <p><code>$POWER_ID</code>: This is generally the UUID of the machine being added.</p>
@@ -508,13 +508,13 @@ As with the manual method, the underlying machines will require netbooting.
 <p>If the device is still present in the system, it will be recognised again (and thus &ldquo;recreated&rdquo;) when the machine is commissioned again.</p>
 <p><a href="#heading--how-to-clone-machines"><h2 id="heading--how-to-clone-machines">How to clone machines</h2></a></p>
 <p>Assume you have two machines available, like this:</p>
-<p><a href="images/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png"></a></p>
+<p><a href="../images/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png"></a></p>
 <p>Select the machine <em>to which you want to clone configuration</em>, and select &ldquo;Clone from&hellip;&rdquo;</p>
-<p><a href="images/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png"></a></p>
+<p><a href="../images/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png"></a></p>
 <p>Under &ldquo;1. Select the source machine&rdquo; &ndash; choose a machine from the attached list:</p>
-<p><a href="images/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png"></a></p>
+<p><a href="../images/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png"></a></p>
 <p>Under &ldquo;2. Select what to clone&rdquo;, choose &ldquo;Network&rdquo;, &ldquo;Storage&rdquo;, or both (here, we&rsquo;ve chosen &ldquo;Storage&rdquo;):</p>
-<p><a href="images/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png"></a></p>
+<p><a href="../images/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png"></a></p>
 <p>Click &ldquo;Clone to machine&rdquo;. MAAS will report the status of the attempt.</p>
 <p><a href="#heading--how-to-examine-machines-and-machine-details"><h2 id="heading--how-to-examine-machines-and-machine-details">How to examine machines and machine details</h2></a></p>
 <p>This section describes the various ways you can evaluate the health and status of your MAAS machines, using the machine list.  It will show you:</p>
@@ -618,47 +618,47 @@ NETWORK: Vendor: Red Hat, Inc.
 </code></pre>
 <p><a href="#heading--how-to-view-the-machine-list"><h3 id="heading--how-to-view-the-machine-list">How to view the machine list</h3></a></p>
 <p>To view the machine list, select &ldquo;Machines&rdquo; on the top menu of the MAAS web UI:</p>
-<p><a href="images/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg"></a> </p>
+<p><a href="../images/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg"></a> </p>
 <p>To quickly view more details, roll the cursor over status icons:</p>
-<p><a href="images/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg"></a> </p>
+<p><a href="../images/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg"></a> </p>
 <p><a href="#heading--how-to-view-machine-details"><h3 id="heading--how-to-view-machine-details">How to view machine details</h3></a></p>
 <p>To open a detailed view of a machine&rsquo;s status and configuration, click a machine&rsquo;s FQDN or MAC address:</p>
-<p><a href="images/a8ff4caf6362a3d695682499a74d64cb189dfc37.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/a8ff4caf6362a3d695682499a74d64cb189dfc37.png"></a></p>
+<p><a href="../images/a8ff4caf6362a3d695682499a74d64cb189dfc37.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/a8ff4caf6362a3d695682499a74d64cb189dfc37.png"></a></p>
 <p><a href="#heading--machine-interfaces"><h3 id="heading--machine-interfaces">How to find network info for a machine</h3></a></p>
 <p>To find network info for a specific machine, open that machine&rsquo;s &ldquo;Network&rdquo; tab in the machine summary:</p>
-<p><a href="images/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png"></a> </p>
-<p>Options on this tab are described in the introduction to <a href="about-networking-5084.html">Networking</a> article in this documentation set.</p>
+<p><a href="../images/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png"></a> </p>
+<p>Options on this tab are described in the introduction to <a href="about-networking.html">Networking</a> article in this documentation set.</p>
 <p><a href="#heading--how-to-find-machine-storage-info"><h3 id="heading--how-to-find-machine-storage-info">How to find machine storage info</h3></a></p>
 <p>To view/edit machine storage info, click on the &ldquo;Storage&rdquo; tab in the machine summary:</p>
-<p><a href="images/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> </p>
-<p>See the section about <a href="about-machines-5080.html#heading--about-storage">storage</a> for more information.</p>
+<p><a href="../images/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> </p>
+<p>See the section about <a href="about-machines.html#heading--about-storage">storage</a> for more information.</p>
 <p><a href="#heading--commissioning-log"><h3 id="heading--commissioning-log">How to find commissioning logs</h3></a></p>
 <p>The &ldquo;Commissioning&rdquo; tab brings up a summary log of commissioning events:</p>
-<p><a href="images/e98766009f32972dfe29293f9bc850b99a9a941f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/e98766009f32972dfe29293f9bc850b99a9a941f.png"></a> </p>
+<p><a href="../images/e98766009f32972dfe29293f9bc850b99a9a941f.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/e98766009f32972dfe29293f9bc850b99a9a941f.png"></a> </p>
 <p>Click on the dropdown at the end of the row you&rsquo;re interested in, and click on &ldquo;View details&rdquo;:</p>
-<p><a href="images/8f7b4c02ce301fb867e7af33267be62498095bb5.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/8f7b4c02ce301fb867e7af33267be62498095bb5.png"></a></p>
+<p><a href="../images/8f7b4c02ce301fb867e7af33267be62498095bb5.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/8f7b4c02ce301fb867e7af33267be62498095bb5.png"></a></p>
 <p>This will bring up a detailed log view for that row:</p>
-<p><a href="images/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png"></a></p>
-<p>These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on <a href="maas-logging-5240.html">Logging</a> for more details on how to read and interpret these logs.  </p>
+<p><a href="../images/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png"></a></p>
+<p>These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on <a href="maas-logging.html">Logging</a> for more details on how to read and interpret these logs.  </p>
 <p><a href="#heading--hardware-tests"><h3 id="heading--hardware-tests">How to find machine hardware &amp; test logs</h3></a></p>
 <p>This tab presents a summary of tests run against this particular machine.  You can view the summary report, or choose the &ldquo;View details&rdquo; dropdown to get details on any particular tests:</p>
-<p><a href="images/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a> </p>
+<p><a href="../images/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a> </p>
 <p>The format of these screens is very similar to the Configuration logs shown above.   </p>
 <p><a href="#heading--raw-log-output"><h3 id="heading--raw-log-output">How to find raw log output for a machine</h3></a></p>
 <p>By choosing &ldquo;Installation output&rdquo; on the &ldquo;Logs&rdquo; tab, you can see the &ldquo;raw&rdquo; log output:</p>
-<p><a href="images/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a> </p>
-<p>Help interpreting these logs can be found under the <a href="maas-logging-5240.html">Logging</a> section of this documentation.</p>
+<p><a href="../images/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a> </p>
+<p>Help interpreting these logs can be found under the <a href="maas-logging.html">Logging</a> section of this documentation.</p>
 <p><a href="#heading--event-logs"><h3 id="heading--event-logs">How to find a machine&rsquo;s event logs</h3></a></p>
 <p>To view the Event log for a machine, choose the &ldquo;Event&rdquo; tab under &ldquo;Logs.&rdquo;  This displays a list of timestamped status updates for events and actions performed on the machine:</p>
-<p><a href="images/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a> </p>
-<p>There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the <a href="maas-logging-5240.html">Logging</a> section of this documentation.</p>
+<p><a href="../images/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a> </p>
+<p>There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the <a href="maas-logging.html">Logging</a> section of this documentation.</p>
 <p><a href="#heading--machine-config"><h3 id="heading--machine-config">How to find machine configuration info</h3></a></p>
 <p>The final tab from the Machine menu allows you to update machine and power configuration options: </p>
-<p><a href="images/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png"></a> </p>
+<p><a href="../images/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png"></a> </p>
 <p>There are two sections to this tab.  The &ldquo;Machine configuration&rdquo; section, shown above, offers some general parameters, mostly related to how this machine is grouped and categorised.  More information on these options are found in the relevant sections of the documentation (e.g., tags, resource pools, and so forth). </p>
 <p>The &ldquo;Power configuration&rdquo; supplies the parameters necessary for MAAS to access the machine to PXE-boot it: </p>
-<p><a href="images/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/198898362285e4a1308535a4aa701156a67c9616.png"></a> </p>
-<p>More information on Power configuration will be found in the <a href="power-management-5246.html">Power management</a> section of this documentation.</p>
+<p><a href="../images/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/198898362285e4a1308535a4aa701156a67c9616.png"></a> </p>
+<p>More information on Power configuration will be found in the <a href="power-management.html">Power management</a> section of this documentation.</p>
 <p><a href="#heading--how-to-use-resource-pools"><h2 id="heading--how-to-use-resource-pools">How to use resource pools</h2></a></p>
 <p>This section will explain:</p>
 <ul>
@@ -673,21 +673,21 @@ NETWORK: Vendor: Red Hat, Inc.
 <p><a href="#heading--add-a-resource-pool"><h3 id="heading--add-a-resource-pool">How to add a resource pool</h3></a></p>
 <p>Use the Add pool button to add a new resource pool.</p>
 <p>After giving your new pool a name and description, click the Add pool button:</p>
-<p><a href="images/2f010325-nodes-resource-pools__2.5_add-pool.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/2f010325-nodes-resource-pools__2.5_add-pool.png"></a></p>
+<p><a href="../images/2f010325-nodes-resource-pools__2.5_add-pool.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/2f010325-nodes-resource-pools__2.5_add-pool.png"></a></p>
 <p><a href="#heading--deleting-a-resource-pool"><h3 id="heading--deleting-a-resource-pool">How to delete a resource pool</h3></a></p>
 <p>To delete a resource pool, click the trashcan icon next to the pool.</p>
-<p><a href="images/630ed938-nodes-resource-pools__2.5_delete-pool.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/630ed938-nodes-resource-pools__2.5_delete-pool.png"></a></p>
+<p><a href="../images/630ed938-nodes-resource-pools__2.5_delete-pool.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/630ed938-nodes-resource-pools__2.5_delete-pool.png"></a></p>
 <p>[note]
 If you delete a resource pool, all machines that belong to that resource pool will return to the default pool.
 [/note]</p>
 <p><a href="#heading--add-a-node-to-a-resource-pool"><h3 id="heading--add-a-node-to-a-resource-pool">How to add a machine to a resource pool</h3></a></p>
 <p>To add a machine to a resource pool, on the Machines page, select the machine you want to add to the resource pool. Next, select the Configuration tab. Now select the resource pool and click the Save changes button.</p>
-<p><a href="images/648e7a8e-nodes-resource-pools__2.5_add-machine.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/648e7a8e-nodes-resource-pools__2.5_add-machine.png"></a></p>
+<p><a href="../images/648e7a8e-nodes-resource-pools__2.5_add-machine.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/648e7a8e-nodes-resource-pools__2.5_add-machine.png"></a></p>
 <p><a href="#heading--removing-a-node-from-a-resource-pool"><h3 id="heading--removing-a-node-from-a-resource-pool">How to remove a machine from a resource pool</h3></a></p>
 <p>To remove a machine from a resource pool, follow the same procedure you would use to add a machine, but select &ldquo;default&rdquo; as the new resource pool. This action will return the machine to the default resource pool.</p>
 <p><a href="#heading--add-a-vm-host-to-a-resource-pool"><h3 id="heading--add-a-vm-host-to-a-resource-pool">How to add a VM host to a resource pool</h3></a></p>
 <p>You can add a VM host to a resource pool when you create a new VM host, or you can edit a VM host&rsquo;s configuration:</p>
-<p><a href="images/84a89952-nodes-resource-pools__2.5_pod_to_pool.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/84a89952-nodes-resource-pools__2.5_pod_to_pool.png"></a></p>
+<p><a href="../images/84a89952-nodes-resource-pools__2.5_pod_to_pool.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/84a89952-nodes-resource-pools__2.5_pod_to_pool.png"></a></p>
 <p><a href="#heading--removing-a-vm-host-from-a-resource-pool"><h3 id="heading--removing-a-vm-host-from-a-resource-pool">How to remove a VM host from a resource pool</h3></a></p>
 <p>To remove a VM host from a resource pool, follow the same procedure you would use to add a VM host to a resource pool, except select &ldquo;default&rdquo; as the new resource pool. This action will return the machine to the default resource pool.</p>
 <p><a href="#heading--how-to-use-machine-storage"><h2 id="heading--how-to-use-machine-storage">How to use machine storage</h2></a></p>
@@ -705,7 +705,7 @@ If you delete a resource pool, all machines that belong to that resource pool wi
 <p><a href="#heading--how-to-set-global-storage-layouts"><h3 id="heading--how-to-set-global-storage-layouts">How to set global storage layouts</h3></a></p>
 <p>Layouts can be set globally and on a per-machine basis.</p>
 <p>All machines will have a default layout applied when commissioned. An administrator can configure the default layout on the &lsquo;Settings&rsquo; page, under the &lsquo;Storage&rsquo; tab.</p>
-<p><a href="images/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/80de3bc701552cd00bec707830accf380c214b17.png"></a></p>
+<p><a href="../images/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/80de3bc701552cd00bec707830accf380c214b17.png"></a></p>
 <p>[note type=&rdquo;caution&rdquo; status=&rdquo;Important&rdquo;]
 The new default will only apply to newly-commissioned machines.
 [/note]</p>
@@ -716,10 +716,10 @@ Only an administrator can modify storage at the block device level (providing th
 [/note]</p>
 <p><a href="#heading--how-to-set-default-erasure-configuration"><h3 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h3></a></p>
 <p>A default erasure configuration can be set on the &lsquo;Settings&rsquo; page by selecting the &lsquo;Storage&rsquo; tab.</p>
-<p><a href="images/4e90c4c7-installconfig-storage-erasure__defaults.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/4e90c4c7-installconfig-storage-erasure__defaults.png"></a></p>
+<p><a href="../images/4e90c4c7-installconfig-storage-erasure__defaults.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/4e90c4c7-installconfig-storage-erasure__defaults.png"></a></p>
 <p>If option &lsquo;Erase machines&rsquo; disks prior to releasing&rsquo; is chosen then users will be compelled to use disk erasure. That option will be pre-filled in the machine&rsquo;s view and the user will be unable to remove the option.</p>
 <p>With the above defaults, the machine&rsquo;s view will look like this when the Release action is chosen:</p>
-<p><a href="images/66e1dcc2-installconfig-storage-erasure__defaults-node.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/66e1dcc2-installconfig-storage-erasure__defaults-node.png"></a></p>
+<p><a href="../images/66e1dcc2-installconfig-storage-erasure__defaults-node.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/66e1dcc2-installconfig-storage-erasure__defaults-node.png"></a></p>
 <p>Where &lsquo;secure erase&rsquo; and &lsquo;quick erase&rsquo; can then be configured by the user.</p>
 <p><a href="#heading--how-to-define-custom-storage-layouts"><h2 id="heading--how-to-define-custom-storage-layouts">How to define custom storage layouts</h2></a></p>
 <p>MAAS 3.1 allows you to define a custom storage layout for a machine, via a custom commissioning script.  You must upload a script which conforms to the following rules:</p>
@@ -891,7 +891,7 @@ Spare devices can also be specified.</p>
   }
 }
 </code></pre>
-<p>In the <code>mounts</code> section, options for mountpoints can be specified. For swap, an entry must be present (with any unique name that doesn&rsquo;t start with a <code>/</code>), otherwise the swap will be created but not activated.</p>
+<p>In the <code>mounts</code> section, options for mount points can be specified. For swap, an entry must be present (with any unique name that doesn&rsquo;t start with a <code>/</code>), otherwise the swap will be created but not activated.</p>
 <h4>RAID 5 setup (with spare devices)</h4>
 <pre><code class="language-json">{
   &quot;layout&quot;: {

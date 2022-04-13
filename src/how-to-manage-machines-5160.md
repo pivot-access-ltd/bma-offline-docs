@@ -65,7 +65,7 @@ The fields on the "Add machine" screen include the following items:
 
 - **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
 
-- **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management reference](/t/power-management/5246) for details on the available power types and the relevant parameters for each type.
+- **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management reference](/t/power-management-reference/5246) for details on the available power types and the relevant parameters for each type.
 
 <a href="#heading--how-to-add-machines-via-a-chassis"><h3 id="heading--how-to-add-machines-via-a-chassis">How to add machines via a chassis</h3></a>
 
@@ -2065,7 +2065,7 @@ Note that there's no need to add entries for those devices in the `layout` secti
   }
 }
 ```
-In the `mounts` section, options for mountpoints can be specified. For swap, an entry must be present (with any unique name that doesn't start with a `/`), otherwise the swap will be created but not activated.
+In the `mounts` section, options for mount points can be specified. For swap, an entry must be present (with any unique name that doesn't start with a `/`), otherwise the swap will be created but not activated.
 
 #### RAID 5 setup (with spare devices)
 ```json
