@@ -22,9 +22,9 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../ui/how-to-manage-availability-zones.html">
-	  UI-only
-	</a>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;UI-only&nbsp;
+      </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<a href="../cli/how-to-manage-availability-zones.html">
 	  CLI-only
@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation-25.html">
 	  Introduction
 	</a>
       </strong>
@@ -57,12 +57,16 @@
 	    Use the MAAS CLI
 	  </a>
 	</li>
+      </ul>
       <strong>
-	<a href="about-controllers.html">
-	  Controllers
-	</a>
+	Controllers
       </strong>
       <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-racks.html">
 	    Manage racks
@@ -80,11 +84,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-machines.html">
-	  Machines
-	</a>
+	Machines
       </strong>
       <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-machines.html">
 	    Manage machines
@@ -102,11 +109,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-vm-hosting.html">
-	  VM hosting
-	</a>
+	VM hosting
       </strong>
       <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-vm-hosts.html">
 	    Manage VM hosts
@@ -124,11 +134,34 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-networking.html">
-	  Networking
-	</a>
+	Networking fundamentals
       </strong>
       <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-networks.html">
 	    Manage networks
@@ -176,11 +209,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-images.html">
-	  Images
-	</a>
+	Images
       </strong>
       <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-import-images.html">
 	    Select and import images
@@ -193,7 +229,7 @@
 	</li>
 	<li>
 	  <a href="how-to-create-a-custom-ubuntu-image.html">
-	    Create custom Ubuntu images
+	    Create custom images
 	  </a>
 	</li>
 	<li>
@@ -213,14 +249,17 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-tags-and-annotations.html">
-	  Tags
-	</a>
+	Tags
       </strong>
       <ul>
 	<li>
-	  <a href="how-to-manage-tags.html">
-	    Manage tags
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
 	  </a>
 	</li>
 	<li>
@@ -250,8 +289,8 @@
 	</strong>
 	<ul>
 	  <li>
-	    <a href="how-to-set-up-prometheus-metrics.html">
-	      Set up Prometheus
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
 	    </a>
 	  </li>
 	  <li>
@@ -301,7 +340,7 @@
 	</li>
 	<li>
 	  <a href="api.html">
-	    API reference
+	    API documentation
 	  </a>
 	</li>
 	<li>
@@ -355,7 +394,8 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>How to manage availability zones</h1><p>An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See <a href="about-networking-5086.html#heading--about-availability-zones">Zone examples</a> for more details.</p>
+  <h1>How to manage availability zones</h1><!-- "How to manage availability zones" -->
+<p>An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See <a href="about-networking.html#heading--about-availability-zones">Zone examples</a> for more details.</p>
 <p>A newly installed MAAS comes with a default zone which initially contains all nodes. You cannot remove the &lsquo;default&rsquo; zone or change its name, but you can create new zones and assign machine to them.  You can safely ignore this article if you&rsquo;re not interested in leveraging zones.</p>
 <h4>Six questions you may have:</h4>
 <ol>
@@ -368,21 +408,21 @@
 </ol>
 <p><a href="#heading--list-zones"><h2 id="heading--list-zones">List availability zones</h2></a></p>
 <p>To see a list of availability zones, choose &ldquo;AZs&rdquo; from the top menu:</p>
-<p><a href="images/5ac446f2bda76276069fe5a1c302ff2acbf425a2.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/5ac446f2bda76276069fe5a1c302ff2acbf425a2.jpeg"></a></p>
+<p><a href="../images/5ac446f2bda76276069fe5a1c302ff2acbf425a2.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/5ac446f2bda76276069fe5a1c302ff2acbf425a2.jpeg"></a></p>
 <p><a href="#heading--add-a-zone"><h2 id="heading--add-a-zone">Add a zone</h2></a></p>
 <p>To create a zone, navigate to the &lsquo;AZs&rsquo; page of the web UI and use the &lsquo;Add AZ&rsquo; button. Enter a name for the zone and click &lsquo;Add AZ&rsquo;.</p>
-<p><a href="images/f4032f39-manage-zones__2.4_add-zone.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/f4032f39-manage-zones__2.4_add-zone.png"></a></p>
+<p><a href="../images/f4032f39-manage-zones__2.4_add-zone.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/f4032f39-manage-zones__2.4_add-zone.png"></a></p>
 <p><a href="#heading--edit-a-zone"><h2 id="heading--edit-a-zone">Edit a zone</h2></a></p>
 <p>To edit a zone, on the &lsquo;AZs&rsquo; page, select a zone and use the &lsquo;Edit&rsquo; button:</p>
-<p><a href="images/cf5c2b91e0c3e97ec3f5a813c8a2ed85e9139e19.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/cf5c2b91e0c3e97ec3f5a813c8a2ed85e9139e19.jpeg"></a></p>
+<p><a href="../images/cf5c2b91e0c3e97ec3f5a813c8a2ed85e9139e19.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/cf5c2b91e0c3e97ec3f5a813c8a2ed85e9139e19.jpeg"></a></p>
 <p>This selection allows you to change the name and description for the added (or edited) zone:</p>
-<p><a href="images/11fb5b6c13609a7ef976aa301e02f43422080066.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/11fb5b6c13609a7ef976aa301e02f43422080066.jpeg"></a></p>
+<p><a href="../images/11fb5b6c13609a7ef976aa301e02f43422080066.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/11fb5b6c13609a7ef976aa301e02f43422080066.jpeg"></a></p>
 <p><a href="#heading--delete-a-zone"><h2 id="heading--delete-a-zone">Delete a zone</h2></a></p>
 <p>To delete a zone, on the &lsquo;AZs&rsquo; page, select a zone and use the &lsquo;Delete AZ&rsquo; button. Doing so will also move any potential machine associations to the default zone.</p>
-<p><a href="images/afb0576940f2e20266dc907911f837378958a64a.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/afb0576940f2e20266dc907911f837378958a64a.jpeg"></a></p>
+<p><a href="../images/afb0576940f2e20266dc907911f837378958a64a.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/afb0576940f2e20266dc907911f837378958a64a.jpeg"></a></p>
 <p><a href="#heading--assign-a-node-to-a-zone"><h2 id="heading--assign-a-node-to-a-zone">Assign a machine to a zone</h2></a></p>
 <p>To assign a machine to a zone, from the &lsquo;Machines&rsquo; page, select a machine (or multiple machines) and choose &lsquo;Set zone&rsquo; using the &lsquo;Take action&rsquo; button:</p>
-<p><a href="images/97db7cbfd8059d2c67566a065e08c56a20b58071.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/97db7cbfd8059d2c67566a065e08c56a20b58071.jpeg"></a></p>
+<p><a href="../images/97db7cbfd8059d2c67566a065e08c56a20b58071.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/97db7cbfd8059d2c67566a065e08c56a20b58071.jpeg"></a></p>
 <p>After selecting a zone hit the &lsquo;Set zone&hellip;&rsquo; button to apply the change.</p>
 <p>You can also edit a machine&rsquo;s &lsquo;Configuration&rsquo; page to change its zone.</p>
 <p><a href="#heading--allocate-a-node-in-a-zone"><h2 id="heading--allocate-a-node-in-a-zone">Allocate a machine in a zone</h2></a></p>
