@@ -1056,4 +1056,3 @@ If all three options are checked when the machine is released the following orde
 
 1.  Use 'secure erase' if the disk supports it
 2.  If it does not then use 'quick erase'
-
