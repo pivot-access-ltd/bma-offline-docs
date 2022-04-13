@@ -20,7 +20,7 @@ For additional MAAS CLI commands, you can consult the MAAS CLI help or access th
 * [How to get help from the MAAS CLI](#heading--get-help)
 * [How to log out of the MAAS CLI](#heading--log-out)
 
-<a href="#heading--the-maas-command"><h2 id="heading--install-the-maas-cli">How do install the MAAS CLI</h2></a>
+<a href="#heading--the-maas-command"><h2 id="heading--install-the-maas-cli">How to install the MAAS CLI</h2></a>
 
 To install the MAAS CLI, execute this command:
 
@@ -100,7 +100,7 @@ maas $PROFILE tags --help
 To get help on creating a tag, enter:
 
 ``` nohighlight
-maas admin tags create --help
+maas $PROFILE tags create --help
 ```
 
 To continue refining your help request, keep adding more elements as they become visible in the latest help output.
