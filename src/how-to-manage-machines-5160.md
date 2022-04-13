@@ -19,7 +19,7 @@ This article explains:
 [/tab]
 [/tabs]
 
-This article also provides a storage layouts reference](#heading--storage-layouts-reference).
+This article also provides a [storage layouts reference](#heading--storage-layouts-reference).
 
 Most of the day-to-day work of managing machines is covered here. Utilising machines to do work -- for example, commissioning, testing, and deploying them -- is discussed in [How to deploy machines](/t/how-to-deploy-machines/5112).
 
