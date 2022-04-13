@@ -22,9 +22,9 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../ui/api-authentication-reference.html">
-	  UI-only
-	</a>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;UI-only&nbsp;
+      </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<a href="../cli/api-authentication-reference.html">
 	  CLI-only
@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation-25.html">
 	  Introduction
 	</a>
       </strong>
@@ -57,12 +57,16 @@
 	    Use the MAAS CLI
 	  </a>
 	</li>
+      </ul>
       <strong>
-	<a href="about-controllers.html">
-	  Controllers
-	</a>
+	Controllers
       </strong>
       <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-racks.html">
 	    Manage racks
@@ -80,11 +84,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-machines.html">
-	  Machines
-	</a>
+	Machines
       </strong>
       <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-machines.html">
 	    Manage machines
@@ -102,11 +109,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-vm-hosting.html">
-	  VM hosting
-	</a>
+	VM hosting
       </strong>
       <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-vm-hosts.html">
 	    Manage VM hosts
@@ -124,11 +134,34 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-networking.html">
-	  Networking
-	</a>
+	Networking fundamentals
       </strong>
       <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-networks.html">
 	    Manage networks
@@ -176,11 +209,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-images.html">
-	  Images
-	</a>
+	Images
       </strong>
       <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-import-images.html">
 	    Select and import images
@@ -193,7 +229,7 @@
 	</li>
 	<li>
 	  <a href="how-to-create-a-custom-ubuntu-image.html">
-	    Create custom Ubuntu images
+	    Create custom images
 	  </a>
 	</li>
 	<li>
@@ -213,14 +249,17 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-tags-and-annotations.html">
-	  Tags
-	</a>
+	Tags
       </strong>
       <ul>
 	<li>
-	  <a href="how-to-manage-tags.html">
-	    Manage tags
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
 	  </a>
 	</li>
 	<li>
@@ -250,8 +289,8 @@
 	</strong>
 	<ul>
 	  <li>
-	    <a href="how-to-set-up-prometheus-metrics.html">
-	      Set up Prometheus
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
 	    </a>
 	  </li>
 	  <li>
@@ -301,7 +340,7 @@
 	</li>
 	<li>
 	  <a href="api.html">
-	    API reference
+	    API documentation
 	  </a>
 	</li>
 	<li>
@@ -355,40 +394,29 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>API authentication reference</h1><p>The MAAS API uses <a href="http://en.wikipedia.org/wiki/OAuth">OAuth</a>&#128279; as its authentication mechanism. This isn&rsquo;t third-party (3-legged) OAuth, so the process used is what&rsquo;s commonly referred to as 0-legged OAuth: the consumer accesses protected resources by submitting OAuth signed requests.</p>
-<p>Note that some API endpoints support unauthenticated requests (i.e. anonymous access). See the <a href="https://maas.io/docs/api">API documentation</a>&#128279; for details. </p>
+  <h1>API authentication reference</h1><!-- "API authentication reference" -->
+<p>The MAAS API uses <a href="http://en.wikipedia.org/wiki/OAuth">OAuth</a> as its authentication mechanism. This isn&rsquo;t third-party (3-legged) OAuth, so the process used is what&rsquo;s commonly referred to as 0-legged OAuth: the consumer accesses protected resources by submitting OAuth signed requests.</p>
+<p>Note that some API endpoints support unauthenticated requests (i.e. anonymous access). See the <a href="https://maas.io/docs/api">API documentation</a> for details. </p>
 <h4>Two questions you may have:</h4>
 <ol>
 <li><a href="#heading--python">How can I perform authenticated requests in python?</a></li>
 <li><a href="#heading--ruby">How can I perform authenticated requests in ruby?</a></li>
 </ol>
-<p>Here are two examples on how to perform an authenticated GET request to retrieve the list of nodes. The &lt;key&gt;, &lt;secret&gt;, &lt;consumer_key&gt; tokens are the three elements that compose the API key (API key = &lsquo;&lt;consumer_key&gt;:&lt;key&gt;:&lt;secret&gt;&lsquo;).</p>
+<p>Here are two examples on how to perform an authenticated GET request to retrieve the list of nodes. The &lt;consumer_key&gt;, &lt;consumer_token&gt;, &lt;secret&gt; tokens are the three elements that compose the API key (API key = &lsquo;&lt;consumer_key&gt;:&lt;consumer_token&gt;:&lt;secret&gt;&lsquo;).</p>
 <p><a href="#heading--python"><h2 id="heading--python">Python</h2></a></p>
-<pre><code class="language-python">import oauth.oauth as oauth
-import httplib2
-import uuid
+<p>Note: the below example uses <a href="https://fades.readthedocs.io/en/stable/">fades</a>, but you can also install the <code>requests_oauthlib</code> (<a href="https://pypi.org/project/requests-oauthlib/">pypi link</a>) and <code>oauthlib</code> (<a href="https://pypi.org/project/oauthlib/">pypi link</a>) packages with <code>pip</code>. Replace <code>&lt;MAAS_SERVER_IP&gt;</code> with your server&rsquo;s IP address, and <code>&lt;API-KEY&gt;</code> with your API key.</p>
+<pre><code class="language-python">from oauthlib.oauth1 import SIGNATURE_PLAINTEXT # fades
+from requests_oauthlib import OAuth1Session # fades
 
-def perform_API_request(site, uri, method, key, secret, consumer_key):
-    resource_tok_string = &quot;oauth_token_secret=%s&amp;oauth_token=%s&quot; % (
-        secret, key)
-    resource_token = oauth.OAuthToken.from_string(resource_tok_string)
-    consumer_token = oauth.OAuthConsumer(consumer_key, &quot;&quot;)
+MAAS_HOST = &quot;http://&lt;MAAS_SERVER_IP&gt;:5240/MAAS&quot;
+CONSUMER_KEY, CONSUMER_TOKEN, SECRET = &quot;&lt;API-KEY&gt;&quot;.split(&quot;:&quot;)
 
-    oauth_request = oauth.OAuthRequest.from_consumer_and_token(
-        consumer_token, token=resource_token, http_url=site,
-        parameters={'oauth_nonce': uuid.uuid4().hex})
-    oauth_request.sign_request(
-        oauth.OAuthSignatureMethod_PLAINTEXT(), consumer_token,
-        resource_token)
-    headers = oauth_request.to_header()
-    url = &quot;%s%s&quot; % (site, uri)
-    http = httplib2.Http()
-    return http.request(url, method, body=None, headers=headers)
+maas = OAuth1Session(CONSUMER_KEY, resource_owner_key=CONSUMER_TOKEN, resource_owner_secret=SECRET, signature_method=SIGNATURE_PLAINTEXT)
 
-# API key = '&lt;consumer_key&gt;:&lt;key&gt;:&lt;secret&gt;'
-response = perform_API_request(
-    'http://server/MAAS/api/1.0', '/nodes/?op=list', 'GET', '&lt;key&gt;', '&lt;secret&gt;',
-    '&lt;consumer_key&gt;')
+nodes = maas.get(f&quot;{MAAS_HOST}/api/2.0/machines/&quot;, params={&quot;op&quot;: &quot;list_allocated&quot;})
+nodes.raise_for_status()
+
+print(nodes.json())
 </code></pre>
 <p><a href="#heading--ruby"><h2 id="heading--ruby">Ruby</h2></a></p>
 <pre><code class="language-ruby">require 'oauth'
@@ -397,7 +425,7 @@ require 'oauth/signature/plaintext'
 def perform_API_request(site, uri, key, secret, consumer_key)
     consumer = OAuth::Consumer.new(
         consumer_key, &quot;&quot;,
-        { :site =&gt; &quot;http://localhost/MAAS/api/1.0&quot;,
+        { :site =&gt; &quot;http://localhost:5240/MAAS/api/2.0&quot;,
           :scheme =&gt; :header, :signature_method =&gt; &quot;PLAINTEXT&quot;})
     access_token = OAuth::AccessToken.new(consumer, key, secret)
     return access_token.request(:get, &quot;/nodes/?op=list&quot;)
@@ -405,7 +433,7 @@ end
 
 # API key = &quot;&lt;consumer_key&gt;:&lt;key&gt;:&lt;secret&gt;&quot;
 response = perform_API_request(
-     &quot;http://server/MAAS/api/1.0&quot;, &quot;/nodes/?op=list&quot;, &quot;&lt;key&gt;&quot;, &quot;&lt;secret&gt;&quot;,
+     &quot;http://server:5240/MAAS/api/2.0&quot;, &quot;/nodes/?op=list&quot;, &quot;&lt;key&gt;&quot;, &quot;&lt;secret&gt;&quot;,
      &quot;consumer_key&gt;&quot;)
 </code></pre>
     </div>
