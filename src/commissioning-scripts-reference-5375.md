@@ -185,4 +185,3 @@ Currently, MAAS does not support vendor tools which use UEFI boot capsules or ne
 $DOWNLOAD_PATH/update_firmware
 reboot
 ```
-
