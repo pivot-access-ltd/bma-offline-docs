@@ -1,32 +1,423 @@
-<!-- "About TCP/IP networks" -->
-TCP/IP networks, and the underlying structure, evolved to meet a specific need: How can we keep a computer network functioning in the event of a catastrophic failure of communications infrastructure?  When nodes go offline, randomly, how can surviving nodes keep the network usable?  The Internet, which relies heavily on TCP/IP networks, has proven over time that it can adapt to changing loads, handle significant failures, and strictly limit the network blast radius when things go wrong.   
-
-Experience has shown us that you will probably have a much easier time working with MAAS if you ensure that you have a solid understanding of network fundamentals.  Rather than bury this basic material, we've decided to include it in the mainstream MAAS networking discussion. Later sections, which help you learn how to design and troubleshoot MAAS networks, will depend heavily on principles explained here.
-
-This section is designed to help you learn:
-
- - [About the Internet](#heading--about-the-internet)
- - [About the OSI model](#heading--about-the-osi-model)
- - [About bond interfaces](#heading--about-bond-interfaces)
- - [About bridge interfaces](#heading--about-bridge-interfaces)
- - [About ARP](#heading--about-arp)
- - [About TCP](#heading--about-tcp)
-
-This material can be read from beginning to end, or you can skip to sections where you feel you might need more clarity.  Just remember that a good understanding of these fundamentals will make it much easier for you to efficiently lay out and debug MAAS networks.
-
-<a href="#heading--about-the-internet"><h2 id="heading--about-the-internet">About the Internet</h2></a>
-
-Suppose we want to connect two computers, "SanDiego" and "Bangor", located at opposite corners of the country.  They should communicate via a network.  How do we make that happen?
-
-This subsection will help you learn:
-
- - [About the infrastructure of the Internet](#heading--internet-infrastructure)
- - [About Internet network traffic](#heading--about-network-traffic)
-
-We could simply hook up a wire between SanDiego and Bangor.  In fact, that's essentially how it was done in the beginning. It worked, but there were at least two drawbacks:
-
-1. A long wire has lots of impedance.  Signals can disappear into the noise long before they traverse the wire.  Said differently, the signal-to-noise ratio drops critically low before completing the connection.  Repeaters can fix that problem by amplifying the signal while it's still readable.  Repeaters are physical hardware, which has to reside at intervals along the path.  You'd need places to put repeaters, which means you'd have to lease or own real estate in specific locations, at specific distances.  Cost becomes a factor at that point.
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;UI-only&nbsp;
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/about-tcp-ip-networks.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation-25.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-the-maas-cli.html">
+	    Use the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Controllers
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-racks.html">
+	    Manage racks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-regions.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Machines
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	VM hosting
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Networking fundamentals
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machine-interfaces.html">
+	    Manage interfaces
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-dhcp.html">
+	    Manage DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-ranges.html">
+	    Manage IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-proxies.html">
+	    Manage proxies
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-ntp.html">
+	    Set up NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Images
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-maas-images.html">
+	    Build MAAS images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-a-custom-ubuntu-image.html">
+	    Create custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-image-streams.html">
+	    Use image streams
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Tags
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+	<p/>
+	<strong>
+	  Operations
+	</strong>
+	<ul>
+	  <li>
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
+	    </a>
+	  </li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-troubleshoot-maas.html">
+	  Troubleshooting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Get help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-and-tricks.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="what-is-new-with-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="how-to-contact-us.html">
+	  Contact us
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>About TCP/IP networks</h1><!-- "About TCP/IP networks" -->
+<p>TCP/IP networks, and the underlying structure, evolved to meet a specific need: How can we keep a computer network functioning in the event of a catastrophic failure of communications infrastructure?  When nodes go offline, randomly, how can surviving nodes keep the network usable?  The Internet, which relies heavily on TCP/IP networks, has proven over time that it can adapt to changing loads, handle significant failures, and strictly limit the network blast radius when things go wrong.   </p>
+<p>Experience has shown us that you will probably have a much easier time working with MAAS if you ensure that you have a solid understanding of network fundamentals.  Rather than bury this basic material, we&rsquo;ve decided to include it in the mainstream MAAS networking discussion. Later sections, which help you learn how to design and troubleshoot MAAS networks, will depend heavily on principles explained here.</p>
+<p>This section is designed to help you learn:</p>
+<ul>
+<li><a href="#heading--about-the-internet">About the Internet</a></li>
+<li><a href="#heading--about-the-osi-model">About the OSI model</a></li>
+<li><a href="#heading--about-bond-interfaces">About bond interfaces</a></li>
+<li><a href="#heading--about-bridge-interfaces">About bridge interfaces</a></li>
+<li><a href="#heading--about-arp">About ARP</a></li>
+<li><a href="#heading--about-tcp">About TCP</a></li>
+</ul>
+<p>This material can be read from beginning to end, or you can skip to sections where you feel you might need more clarity.  Just remember that a good understanding of these fundamentals will make it much easier for you to efficiently lay out and debug MAAS networks.</p>
+<p><a href="#heading--about-the-internet"><h2 id="heading--about-the-internet">About the Internet</h2></a></p>
+<p>Suppose we want to connect two computers, &ldquo;SanDiego&rdquo; and &ldquo;Bangor&rdquo;, located at opposite corners of the country.  They should communicate via a network.  How do we make that happen?</p>
+<p>This subsection will help you learn:</p>
+<ul>
+<li><a href="#heading--internet-infrastructure">About the infrastructure of the Internet</a></li>
+<li><a href="#heading--about-network-traffic">About Internet network traffic</a></li>
+</ul>
+<p>We could simply hook up a wire between SanDiego and Bangor.  In fact, that&rsquo;s essentially how it was done in the beginning. It worked, but there were at least two drawbacks:</p>
+<ol>
+<li>A long wire has lots of impedance.  Signals can disappear into the noise long before they traverse the wire.  Said differently, the signal-to-noise ratio drops critically low before completing the connection.  Repeaters can fix that problem by amplifying the signal while it&rsquo;s still readable.  Repeaters are physical hardware, which has to reside at intervals along the path.  You&rsquo;d need places to put repeaters, which means you&rsquo;d have to lease or own real estate in specific locations, at specific distances.  Cost becomes a factor at that point.</li>
+</ol>
 <details id="heading--t1-lines"><summary>T1 lines and the early Internet</summary>
 
 In the very early days of long-haul networking, most of the repeaters were owned by the local telephone companies. T1 lines, as they were called, couldn't compete with today's fibre connections, but they did provide a speedy (at the time) 1.5Mbps connection.  For example, in the oil and gas industry of the early 1990s, many of the city offices had wall after wall of T1 lines wired directly into the building.
@@ -42,7 +433,7 @@ Some of the key elements of TCP/IP, like twisted-pair Ethernet cables, packet-ba
 
 We could solve this by dreaming up all sorts of network architectures, but the easiest way is to create and use something known as the "Internet infrastructure".  As the Internet became "the network", it evolved into what some call an "access-aggregation-core" (AAC) network, which looks something like this: 
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg"></a>
+<a href="../images/e15a35da43b2788883ec014efb1832b8f641e872.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/e15a35da43b2788883ec014efb1832b8f641e872.jpeg"></a>
 
 In this model, **SanDiego** sends a message, labelled for **Bangor**, to some router on the Internet (doesn't matter which one).  If this router doesn't know where **Bangor** is, it just sends it on to another router, until the message finds a router that knows where to forward the message. Theoretically, this works great, but from a practical standpoint, there are "short circuits" all over the Internet.
 
@@ -60,7 +451,7 @@ High-level networks, known as Network Service Providers (NSPs), connect to at le
 
 We can simplify the string-art picture above by resolving it into something like this:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/b/b8da34432dd443cd3592487f53887f12889cef06.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b8da34432dd443cd3592487f53887f12889cef06.jpeg"></a>
+<a href="../images/b8da34432dd443cd3592487f53887f12889cef06.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/b8da34432dd443cd3592487f53887f12889cef06.jpeg"></a>
 
 In theory, the Internet infrastructure and a cloud network should be very similar, but in practice, they diverge greatly.  The real Internet has horizontal connections running everywhere, based on drivers like cost, security, and performance.  Those vertical connections introduce an interface cost (heterogeneous hardware), a performance hit (varying network speeds), and bandwidth variance (differing node architectures).  Contracts for lateral connections change daily, which changes the routing, which changes the way the Internet behaves for users.
 
@@ -86,7 +477,7 @@ When we begin to look at networks as a continuous wire, we need to understand wh
 
 The [Open Systems Interconnection model](https://en.wikipedia.org/wiki/OSI_model) was created to standardise on a few different levels.  The OSI model looks something like this:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/7/765cd90cffcecfcc83593cde0483e64977a48223.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/765cd90cffcecfcc83593cde0483e64977a48223.jpeg"></a>
+<a href="../images/765cd90cffcecfcc83593cde0483e64977a48223.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/765cd90cffcecfcc83593cde0483e64977a48223.jpeg"></a>
 
 In the OSI model, we start just above the raw physics, with what we'd call the physical layer, also known as Layer 1.  The choice of "1" makes sense, because this is the lowest level we consider.
 
@@ -170,7 +561,7 @@ Essentially, the MAC sub-layer grabs higher-level frames and makes them digestib
 
 In conventional Ethernet networks, all this looks something like the following:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/14f6847ed92339061eb4515c12ac2b6117d5cd7c.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/14f6847ed92339061eb4515c12ac2b6117d5cd7c.jpeg"></a>
+<a href="../images/14f6847ed92339061eb4515c12ac2b6117d5cd7c.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/14f6847ed92339061eb4515c12ac2b6117d5cd7c.jpeg"></a>
 
 Let's decode those blocks of bits:
 
@@ -179,7 +570,7 @@ Let's decode those blocks of bits:
 <details><summary>Before clock recovery, there was MPE</summary>
 
 Clock recovery is much more reliable than trying to get computers all over the world synced up to the same clock frequency and the same downbeat (starting point).  Ethernet actually started out that way with something called Manchester Encoding or Manchester Phase Encoding (MPE).  This was important because electrical frequency varies not only across the world, but also from moment to moment when the power is slightly "dirty".  MPE involved bouncing a bit between two fractional voltages using a 20MHz oscillator to generate a reference square wave.  It works, but it's not very efficient, so MPE was scrapped in favour of using the Preamble, the way that projectionists use alignment marks on reels of movie film.
-   
+
 </details>
 
  - The **Start Frame Delimiter (SFD)** is the last chance for clock sync.  It is exactly 10101011, where the "11" tells the receiving station that the real header content starts next.  The receiving NIC has to recover the clock by the time it hits the SFD, or abandon the frame to the bit bucket.
@@ -202,7 +593,7 @@ The Preamble and SFD are often considered to be part of the IEEE "packet", so so
 
 There is a crucial modification to the basic frame format called a P/Q or VLAN Tag.  This allows something called VLAN trunking, which means sending all the VLAN data over the same wire and port, but giving the NICs a field (the P/Q tag) to control access.  On paper, it looks something like this:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/6/6e58930520fe4ed38d5ea49fab7a337627a88a55.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6e58930520fe4ed38d5ea49fab7a337627a88a55.jpeg"></a>
+<a href="../images/6e58930520fe4ed38d5ea49fab7a337627a88a55.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/6e58930520fe4ed38d5ea49fab7a337627a88a55.jpeg"></a>
 
 As you can see in the modified P/Q frame, the following fields replace part of the frame:
 
@@ -237,7 +628,7 @@ Note that the MAC sub-layer is responsible for managing CDMA/CD, that is, detect
 When working with MAAS networks, you will frequently be concerned with VLANs, subnets, and fabrics, which are all network groupings:
 
 1. Subnets define (group) a range of IP addresses.
-   
+
 2. VLANs group subnets.
 
 3. Fabrics group VLANs.
@@ -337,7 +728,7 @@ Messages are split into packets of consistent length before they're passed to L3
 
 The IP datagram (packet) is the backbone of most modern networks.  The following diagram depicts an IPv4 header, which attaches to the front of data packets up to about 65K long:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/fc349972f6b7509b5b2459bf3bb44419961f0bcd.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fc349972f6b7509b5b2459bf3bb44419961f0bcd.jpeg"></a>
+<a href="../images/fc349972f6b7509b5b2459bf3bb44419961f0bcd.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/fc349972f6b7509b5b2459bf3bb44419961f0bcd.jpeg"></a>
 
 Note that IPv6 headers have only the version field in common with IPv4 headers; otherwise, they are completely different.  Here are the header fields and what information they carry:
 
@@ -359,7 +750,7 @@ Note that IPv6 headers have only the version field in common with IPv4 headers; 
 
 We now have enough concepts in play to talk about routing.  Routing takes place at the network layer, by changing the source and destination addresses (without losing track of the replaced address).  The process looks something like this:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/7/73c49cb76573e42036c59832f5f16b6383fbc0bd.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/73c49cb76573e42036c59832f5f16b6383fbc0bd.jpeg"></a>
+<a href="../images/73c49cb76573e42036c59832f5f16b6383fbc0bd.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/73c49cb76573e42036c59832f5f16b6383fbc0bd.jpeg"></a>
 
 The router typically assigns a unique port number to the outbound message, and records the source IP against that port number.  When the message comes back to it on that port number, it can look up the IP address of the NIC that sent the packet and route the answer back.
 
@@ -400,8 +791,8 @@ Bridges can use MAC addresses (L2) to direct packets, can essentially emulate L3
 
 You can create a network bridge with MAAS; via netplan; or by any other established method to create a network bridge.  For example, when you're using LXD, you typically create a virtual bridge, called `lxdbr0` by default, that bridges between the MAAS host and the LXD instance.  On the host side, the LXD bridge looks like this:
 
-``` nohighlight
-7: lxdbr0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+
+<pre><code class="language-nohighlight">7: lxdbr0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
     link/ether 00:16:3e:e4:2b:fe brd ff:ff:ff:ff:ff:ff
     inet 10.90.194.1/24 scope global lxdbr0
        valid_lft forever preferred_lft forever
@@ -409,20 +800,21 @@ You can create a network bridge with MAAS; via netplan; or by any other establis
        valid_lft forever preferred_lft forever
     inet6 fe80::216:3eff:fee4:2bfe/64 scope link 
        valid_lft forever preferred_lft forever
-```
+</code></pre>
+
 
 On the MAAS side, the virtual bridge looks like this:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/fbdef2010657939f5f25ee2f157ba5a92af72090.png" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fbdef2010657939f5f25ee2f157ba5a92af72090.png"></a>
+<a href="../images/fbdef2010657939f5f25ee2f157ba5a92af72090.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/fbdef2010657939f5f25ee2f157ba5a92af72090.png"></a>
 
 Where the 10.190.94.0/24 network is usually part of a VLAN offering MAAS-provided DHCP:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/1067a379ba9411713ed1a67e78e249535771b08c.png" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1067a379ba9411713ed1a67e78e249535771b08c.png"></a>
+<a href="../images/1067a379ba9411713ed1a67e78e249535771b08c.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/1067a379ba9411713ed1a67e78e249535771b08c.png"></a>
 
 There are other DHCP configurations possible with MAAS (we'll cover this later).  The important point here is not to get overly hung up on the terms "switch", "bridge", and "router".  Instead, figure out whether you want to forward messages based on port numbers, MAC addresses, or IP addresses -- or some combination -- and then find real or virtual devices that will do this for you.
 
 <a href="#heading--about-arp"><h2 id="heading--about-arp">About ARP</h2></a>
- 
+
 In theory, every NIC card in the world has a unique identifier, called a /MAC address/.  "MAC" stands for "Media Access Control" -- you can find a [little history of this](https://en.wikipedia.org/wiki/Medium_access_control]) on Wikipedia, if you're interested.
 
 This subsection will help you learn:
@@ -443,7 +835,7 @@ The shorter answer to that implied question is this: MAC addresses must be uniqu
 
 If we look at the IP datagram again, we see that it doesn't know about MAC addresses at all:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/fc349972f6b7509b5b2459bf3bb44419961f0bcd.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fc349972f6b7509b5b2459bf3bb44419961f0bcd.jpeg"></a>
+<a href="../images/fc349972f6b7509b5b2459bf3bb44419961f0bcd.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/fc349972f6b7509b5b2459bf3bb44419961f0bcd.jpeg"></a>
 
 TCP, UDP, and a number of other protocol stacks are written to use IP addresses.  Routers depend on IP addresses, as we've already seen. This creates a bit of a conundrum: How do we map between MAC and IP addresses, and what does the mapping?  Is it a layer 2 or layer 3 operation?
 
@@ -471,11 +863,11 @@ A frequent question is, "Where does ARP take place?"  Maybe the better question 
 
 In reality, in order to work correctly, ARP has to map IP and MAC addresses, since the ARP message looks something like this:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/18a95f7ed64b83ec1302c92e41696d137783e7bc.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/18a95f7ed64b83ec1302c92e41696d137783e7bc.jpeg"></a>
+<a href="../images/18a95f7ed64b83ec1302c92e41696d137783e7bc.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/18a95f7ed64b83ec1302c92e41696d137783e7bc.jpeg"></a>
 
 To better understand, let's walk an ARP call.  It begins in say, a Web browser, when the browser makes a call to parse the URL.  In most cases, that URL contains a hostname (not an IP address), so the following sort of dance takes place:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/1365006a1692e4788df733c58e1435e67da57536.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1365006a1692e4788df733c58e1435e67da57536.jpeg"></a>
+<a href="../images/1365006a1692e4788df733c58e1435e67da57536.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/1365006a1692e4788df733c58e1435e67da57536.jpeg"></a>
 
 We won't go into this in much detail now, just know that the browser is able to gather an IP address, if it exists.  To make the walk-through less confusing, let's assume that we're looking for a host with IP 192.168.17.4.
 
@@ -503,11 +895,11 @@ By the way, You should also note that ARP only works with IPv4.  Certain other p
 
 ARP sends requests as an Ethernet frame, using the MAC address.  If you remember the MAC frame from earlier:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/14f6847ed92339061eb4515c12ac2b6117d5cd7c.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/14f6847ed92339061eb4515c12ac2b6117d5cd7c.jpeg"></a>
+<a href="../images/14f6847ed92339061eb4515c12ac2b6117d5cd7c.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/14f6847ed92339061eb4515c12ac2b6117d5cd7c.jpeg"></a>
 
 The ARP frame is just a special case of the MAC frame, replacing everything the DSAP, SSAP, control bits, and data with the ARP message shown above.  The resulting ARP frame looks something like this:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/f430da9c144bda4cf2e2901181988f3444d335f8.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f430da9c144bda4cf2e2901181988f3444d335f8.jpeg"></a>
+<a href="../images/f430da9c144bda4cf2e2901181988f3444d335f8.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/f430da9c144bda4cf2e2901181988f3444d335f8.jpeg"></a>
 
 Based on the above diagram, you can see how the ARP request fits into the Ethernet frame to make an ARP frame.
 
@@ -515,14 +907,15 @@ Based on the above diagram, you can see how the ARP request fits into the Ethern
 
 Let's take a look at the ARP cache on a local system, ~cloudburst~. We can do that like this:
 
-``` nohighlight
-stormrider@cloudburst:~$ arp
+
+<pre><code class="language-nohighlight">stormrider@cloudburst:~$ arp
 Address                  HWtype  HWaddress           Flags Mask            Iface
 192.168.1.24             ether   0c:8b:7d:f1:51:d3   C                     wlo1
 10.250.204.17                    (incomplete)                              mpqemubr0
 192.168.1.24             ether   0c:8b:7d:f1:51:d3   C                     enx606d3c645a57
 192.168.117.16                   (incomplete)                              virbr0
-```
+</code></pre>
+
 
 The columns are mostly obvious, but just in case:
 
@@ -536,57 +929,61 @@ In this case, ~virbr0~ and ~mpqemubr0~ are virtual bridges used for different se
 
 Let's see if we can influence that.  First, let's take a look using ~ip a~:
 
-``` nohighlight
-stormrider@cloudburst:~$ ip a show up
-5: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+
+<pre><code class="language-nohighlight">stormrider@cloudburst:~$ ip a show up
+5: virbr0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc noqueue state DOWN group default qlen 1000
     link/ether 52:54:00:d6:70:6c brd ff:ff:ff:ff:ff:ff
     inet 192.168.117.1/24 brd 192.168.117.255 scope global virbr0
        valid_lft forever preferred_lft forever
-6: mpqemubr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+6: mpqemubr0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc noqueue state DOWN group default qlen 1000
     link/ether 52:54:00:84:0a:4c brd ff:ff:ff:ff:ff:ff
     inet 10.250.204.1/24 brd 10.250.204.255 scope global mpqemubr0
        valid_lft forever preferred_lft forever
-7: lxdbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+7: lxdbr0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc noqueue state DOWN group default qlen 1000
     link/ether 00:16:3e:e4:2b:fe brd ff:ff:ff:ff:ff:ff
     inet 10.90.195.1/24 scope global lxdbr0
        valid_lft forever preferred_lft forever
     inet6 fd42:1fc6:f588:d0b8::1/64 scope global 
        valid_lft forever preferred_lft forever
-```
+</code></pre>
+
 
 You'll see that all three bridges are in a DOWN state, and again, ~lxdbr0~ is so cold that it doesn't even show up in the ARP table.  Let's bring up a LXD VM connected to ~lxdbr0~ and look at the ARP table again:
 
-``` nohighlight
-stormrider@cloudburst:~$ arp
+
+<pre><code class="language-nohighlight">stormrider@cloudburst:~$ arp
 Address                  HWtype  HWaddress           Flags Mask            Iface
 192.168.1.24             ether   0c:8b:7d:f1:51:d3   C                     wlo1
 10.250.204.17                    (incomplete)                              mpqemubr0
 192.168.1.24             ether   0c:8b:7d:f1:51:d3   C                     enx606d3c645a57
 192.168.117.16                   (incomplete)                              virbr0
 10.90.195.16             ether   00:16:3e:fc:71:98   C                     lxdbr0
-```
+</code></pre>
+
 
 Note that the ~lxdbr0~ bridge now shows up and has a MAC address, too -- no incomplete entry here.  If we look at the MAC address of ~lxdbr0~ in the ~ip~ listing, we'll see it matches up.
 
 Those "(incomplete)" entries are old.  They've been cached, but no traffic has passed through those bridges in a really long time.  The cache is just persistent in holding onto the IP addresses, but not the MAC addresses (since they could be stale).  We can prove this to ourselves by clearing the cache:
 
-``` nohighlight
-stormrider@cloudburst:~$ sudo ip -s neigh flush all
+
+<pre><code class="language-nohighlight">stormrider@cloudburst:~$ sudo ip -s neigh flush all
 [sudo] password for stormrider: 
 
 *Round 1, deleting 18 entries ***
 *Flush is complete after 1 round ***
-```
+</code></pre>
+
 
 ...and rebuilding the ARP table:
 
-``` nohighlight
-stormrider@cloudburst:~$ arp
+
+<pre><code class="language-nohighlight">stormrider@cloudburst:~$ arp
 Address                  HWtype  HWaddress           Flags Mask            Iface
 192.168.1.24             ether   0c:8b:7d:f1:51:d3   C                     wlo1
 192.168.1.24             ether   0c:8b:7d:f1:51:d3   C                     enx606d3c645a57
 10.90.195.16             ether   00:16:3e:fc:71:98   C                     lxdbr0
-```
+</code></pre>
+
 
 <a href="#heading--more-about-arp"><h4 id="heading--more-about-arp">More about ARP</h4></a>
 
@@ -608,7 +1005,7 @@ If the Internet Protocol (IP) is connectionless, the transport layer is all abou
 
 Here's a diagram of the L4-to-L3 hand-off:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/a/a8f2aba29b1299bba2630177c0301dd518cacb57.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8f2aba29b1299bba2630177c0301dd518cacb57.jpeg"></a>
+<a href="../images/a8f2aba29b1299bba2630177c0301dd518cacb57.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/a8f2aba29b1299bba2630177c0301dd518cacb57.jpeg"></a>
 
 We can get a pretty good idea what happens at Layer 4 just by decoding the contents of the TCP header. It contains the following fields:
 
@@ -660,3 +1057,6 @@ The analogy spreads a little because some of the items (connection, multiplexing
 </details>
 
 There is a lot more to know about TCP, but most of it isn't directly relevant for MAAS networking.  Instead, we direct you to the excellent [Wikipedia article about TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol).  Going forward, we'll only bring up specific transport layer elements as we need them.
+    </div>
+  </body>
+</html>
