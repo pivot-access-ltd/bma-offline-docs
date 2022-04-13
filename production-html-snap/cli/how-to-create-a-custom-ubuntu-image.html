@@ -26,13 +26,13 @@
 	  UI-only
 	</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/how-to-create-a-custom-ubuntu-image.html">
-	  CLI-only
-	</a>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation-25.html">
 	  Introduction
 	</a>
       </strong>
@@ -57,12 +57,16 @@
 	    Use the MAAS CLI
 	  </a>
 	</li>
+      </ul>
       <strong>
-	<a href="about-controllers.html">
-	  Controllers
-	</a>
+	Controllers
       </strong>
       <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-racks.html">
 	    Manage racks
@@ -80,11 +84,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-machines.html">
-	  Machines
-	</a>
+	Machines
       </strong>
       <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-machines.html">
 	    Manage machines
@@ -102,11 +109,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-vm-hosting.html">
-	  VM hosting
-	</a>
+	VM hosting
       </strong>
       <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-vm-hosts.html">
 	    Manage VM hosts
@@ -124,11 +134,34 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-networking.html">
-	  Networking
-	</a>
+	Networking fundamentals
       </strong>
       <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-networks.html">
 	    Manage networks
@@ -176,11 +209,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-images.html">
-	  Images
-	</a>
+	Images
       </strong>
       <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-import-images.html">
 	    Select and import images
@@ -193,7 +229,7 @@
 	</li>
 	<li>
 	  <a href="how-to-create-a-custom-ubuntu-image.html">
-	    Create custom Ubuntu images
+	    Create custom images
 	  </a>
 	</li>
 	<li>
@@ -213,14 +249,17 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-tags-and-annotations.html">
-	  Tags
-	</a>
+	Tags
       </strong>
       <ul>
 	<li>
-	  <a href="how-to-manage-tags.html">
-	    Manage tags
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
 	  </a>
 	</li>
 	<li>
@@ -250,8 +289,8 @@
 	</strong>
 	<ul>
 	  <li>
-	    <a href="how-to-set-up-prometheus-metrics.html">
-	      Set up Prometheus
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
 	    </a>
 	  </li>
 	  <li>
@@ -301,7 +340,7 @@
 	</li>
 	<li>
 	  <a href="api.html">
-	    API reference
+	    API documentation
 	  </a>
 	</li>
 	<li>
@@ -355,12 +394,14 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>How to create a custom Ubuntu image</h1><p>MAAS supports deploying custom OS images.  Canonical provides both <a href="https://launchpad.net/maas-image-builder">lp:maas-image-builder</a>&#128279; and <a href="https://github.com/canonical/packer-maas">gh:canonical/packer-maas</a>&#128279; to support creating custom images. These custom images can include static Ubuntu images, created with whatever tool you choose, and deployed as described below. Even so, Canonical suggests <a href="how-to-customise-machines-5109.html">customising Ubuntu</a> using cloud-init user_data or Curtin preseed data whenever possible.</p>
+  <h1>How to create a custom Ubuntu image</h1><!-- "How to create a custom Ubuntu image" -->
+
+<p>MAAS supports deploying custom OS images.  Canonical provides both <a href="https://launchpad.net/maas-image-builder">lp:maas-image-builder</a> and <a href="https://github.com/canonical/packer-maas">gh:canonical/packer-maas</a> to support creating custom images. These custom images can include static Ubuntu images, created with whatever tool you choose, and deployed as described below. Even so, Canonical suggests <a href="-.html">customising Ubuntu</a> using cloud-init user_data or Curtin preseed data whenever possible.</p>
 <h2>About static Ubuntu images</h2>
 <p>MAAS provides the capability for you to build an Ubuntu OS image to deploy with MAAS, using any image-building method you choose.  You can create the image once, with a fixed configuration,and deploy it to many machines.  This fixed configuration can consist of anything that a normal image would contain: users, packages, etc.</p>
 <h3>About uploading hand-built Ubuntu images</h3>
-<p>You can upload hand-built Ubuntu images, containing a kernel, bootloader, and a fixed configuration, for deployment to multiple machines.  The image can be built via a tool, such as <a href="https://github.com/canonical/packer-maas">packer</a>&#128279;, or build with scripts. You can upload these images to the boot-resources endpoint, where it will then be available for deployment to machines.</p>
-<p>At a minimum, this image must contain a kernel, a bootloader, and a <code>/curtin/curtin-hooks</code> script that configures the network. A sample can be found in the <a href="https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts">packer-maas repos</a>&#128279;. The image must be in raw img file format, since that is the format MAAS accepts for upload.  This is the most portable format, and the format most builders support. Upon completing the image build, you will upload this img file to the boot-resources endpoint, specifying the architecture for the image.</p>
+<p>You can upload hand-built Ubuntu images, containing a kernel, bootloader, and a fixed configuration, for deployment to multiple machines.  The image can be built via a tool, such as <a href="https://github.com/canonical/packer-maas">packer</a>, or build with scripts. You can upload these images to the boot-resources endpoint, where it will then be available for deployment to machines.</p>
+<p>At a minimum, this image must contain a kernel, a bootloader, and a <code>/curtin/curtin-hooks</code> script that configures the network. A sample can be found in the <a href="https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts">packer-maas repos</a>. The image must be in raw img file format, since that is the format MAAS accepts for upload.  This is the most portable format, and the format most builders support. Upon completing the image build, you will upload this img file to the boot-resources endpoint, specifying the architecture for the image.</p>
 <h3>About how MAAS handles these images</h3>
 <p>MAAS will save the image &ndash; in the same way it would save a <code>tar.gz</code> file &ndash; in the database.  MAAS can differentiate between custom Ubuntu images and custom non-Ubuntu images, generating appropriate pre-seed configurations for each image type.</p>
 <p>MAAS will also recognise the base Ubuntu version, so it can apply the correct ephemeral OS version for installation.  Custom images are always deployed with the ephemeral operating system. The base_image field is used to select the appropriate version of the ephemeral OS to avoid errors. This ensures a smooth deployment later.</p>
