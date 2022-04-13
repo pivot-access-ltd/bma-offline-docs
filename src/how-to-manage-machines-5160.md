@@ -122,7 +122,7 @@ The variable fields in the `machines create` command (the `$...` items) are as f
 
 - `$MAC_ADDRESS`: This is the MAC address of the boot-enabled NIC for the machine being added.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
 
-- `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management reference](/t/power-management/5246) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
+- `$POWER_TYPE`: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management reference](/t/power-management-reference/5246) for details on the available power types and the relevant parameters for each type. In this example, we've used a "virsh" power type (a libvirt KVM), but your choice will depend on your hardware.
 
 - `$POWER_ID`: This is generally the UUID of the machine being added.
 
@@ -385,7 +385,7 @@ The "Power configuration" supplies the parameters necessary for MAAS to access t
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png"></a> 
 
-More information on Power configuration will be found in the [Power management](/t/power-management/5246) section of this documentation.
+More information on Power configuration will be found in the [Power management](/t/power-management-reference/5246) section of this documentation.
 
 [/tab]
 [/tabs]
