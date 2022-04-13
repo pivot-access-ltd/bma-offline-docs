@@ -14,6 +14,7 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 - [Push some code](https://launchpad.net/maas)
 - [Improve our doc](/t/how-to-help-improve-the-doc/4186)
 
+<!-- nohtml begin-nohtml -->
 ## Navigation
 
 ### [Introduction](/t/maas-documentation/25)
@@ -887,3 +888,4 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 |/docs/snap/3.1/ui/how-to-work-with-tags|/docs/how-to-work-with-tags|
 |/docs/snap/3.1/ui/troubleshooting|/docs/how-to-troubleshoot-maas|
 [/details]
+<!-- nohtml end-nohtml -->
