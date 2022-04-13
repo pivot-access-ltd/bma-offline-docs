@@ -114,4 +114,3 @@ maas logout $PROFILE
 ```
 
 Substitute $PROFILE for the name of the administrative user who is logging off.
-
