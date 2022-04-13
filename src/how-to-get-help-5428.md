@@ -17,6 +17,3 @@ sudo sosreport -o maas
 This will create a tarball containing MAAS log files, MAAS configuration files and a dump of the MAAS database. By default, the tarball will end up in /tmp but you can change the location. See the [sosreport man page ](http://manpages.ubuntu.com/cgi-bin/search.py?q=sosreport) for details. If there are things you do not wish to share publicly, feel free to edit the tarball.
 
 The last step is to make this file available by any means at your disposal (openly accessible FTP server, Dropbox, etc.) in order for helpers to be able to get their hands on it.
-
-
-
