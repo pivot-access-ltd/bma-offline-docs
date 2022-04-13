@@ -26,13 +26,13 @@
 	  UI-only
 	</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/how-to-manage-dhcp.html">
-	  CLI-only
-	</a>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation-25.html">
 	  Introduction
 	</a>
       </strong>
@@ -57,12 +57,16 @@
 	    Use the MAAS CLI
 	  </a>
 	</li>
+      </ul>
       <strong>
-	<a href="about-controllers.html">
-	  Controllers
-	</a>
+	Controllers
       </strong>
       <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-racks.html">
 	    Manage racks
@@ -80,11 +84,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-machines.html">
-	  Machines
-	</a>
+	Machines
       </strong>
       <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-machines.html">
 	    Manage machines
@@ -102,11 +109,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-vm-hosting.html">
-	  VM hosting
-	</a>
+	VM hosting
       </strong>
       <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-vm-hosts.html">
 	    Manage VM hosts
@@ -124,11 +134,34 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-networking.html">
-	  Networking
-	</a>
+	Networking fundamentals
       </strong>
       <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-networks.html">
 	    Manage networks
@@ -176,11 +209,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-images.html">
-	  Images
-	</a>
+	Images
       </strong>
       <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-import-images.html">
 	    Select and import images
@@ -193,7 +229,7 @@
 	</li>
 	<li>
 	  <a href="how-to-create-a-custom-ubuntu-image.html">
-	    Create custom Ubuntu images
+	    Create custom images
 	  </a>
 	</li>
 	<li>
@@ -213,14 +249,17 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-tags-and-annotations.html">
-	  Tags
-	</a>
+	Tags
       </strong>
       <ul>
 	<li>
-	  <a href="how-to-manage-tags.html">
-	    Manage tags
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
 	  </a>
 	</li>
 	<li>
@@ -250,8 +289,8 @@
 	</strong>
 	<ul>
 	  <li>
-	    <a href="how-to-set-up-prometheus-metrics.html">
-	      Set up Prometheus
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
 	    </a>
 	  </li>
 	  <li>
@@ -301,7 +340,7 @@
 	</li>
 	<li>
 	  <a href="api.html">
-	    API reference
+	    API documentation
 	  </a>
 	</li>
 	<li>
@@ -355,7 +394,8 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>How to manage DHCP</h1><p>MAAS enlists and commissions machines through the use of its DHCP server running on an untagged VLAN. Although this MAAS-managed DHCP can also be part of the deploy phase, an external DHCP server can optionally be used instead for this purpose. If MAAS detects an external DHCP server, it will display it on the rack controller&rsquo;s page, accessible by selecting &lsquo;Controllers&rsquo; from the top menu in the web UI.</p>
+  <h1>How to manage DHCP</h1><!-- "How to manage DHCP" -->
+<p>MAAS enlists and commissions machines through the use of its DHCP server running on an untagged VLAN. Although this MAAS-managed DHCP can also be part of the deploy phase, an external DHCP server can optionally be used instead for this purpose. If MAAS detects an external DHCP server, it will display it on the rack controller&rsquo;s page, accessible by selecting &lsquo;Controllers&rsquo; from the top menu in the web UI.</p>
 <p>In addition, the machine subnet is usually on the untagged VLAN. If not, you will need to route DHCP packets between the subnet and the MAAS-provided DHCP subnet. It is also possible to forward DHCP traffic from one VLAN to another using an external DHCP relay service.</p>
 <p>This documentation presupposes that MAAS-managed DHCP is used to enlist and commission machines.  Using an external DHCP server for enlistment and commissioning may work, but note that this is not supported. MAAS cannot manage an external DHCP server, nor can it keep leases synchronised when you return a machine to the pool.</p>
 <p>This article will tell you:</p>
@@ -386,23 +426,26 @@
     primary_rack=$PRIMARY_RACK_CONTROLLER \
     secondary_rack=$SECONDARY_RACK_CONTROLLER 
 </code></pre>
-<p>[note]
-You must enable DHCP for PXE booting on the &lsquo;untagged&rsquo; VLAN.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+You must enable DHCP for PXE booting on the &lsquo;untagged&rsquo; VLAN.</p>
 <p>You will also need to set a default gateway:</p>
 <pre><code class="language-nohighlight">maas $PROFILE subnet update $SUBNET_CIDR gateway_ip=$MY_GATEWAY
 </code></pre>
 <p><a href="#heading--resolving-ip-conflicts"><h3 id="heading--resolving-ip-conflicts">How to resolve IP conflicts</h3></a></p>
 <p>In some cases, MAAS manages a subnet that is not empty, which could result in MAAS assigning a duplicate IP address.  MAAS is capable of detecting IPs in use on a subnet.  Be aware that there are two caveats:</p>
 <ol>
-<li>If a previously-assigned NIC is in a quiescent state or turned off, MAAS may not detect it before duplicating an IP address.</li>
+<li>
+<p>If a previously-assigned NIC is in a quiescent state or turned off, MAAS may not detect it before duplicating an IP address.</p>
+</li>
+<li>
+<p>At least one rack controller must have access to the IP-assigned machine in order for this feature to work.</p>
+</li>
 </ol>
-<p>2/ At least one rack controller must have access to the IP-assigned machine in order for this feature to work.</p>
 <p>MAAS also recognises when the subnet ARP cache is full, so that it can re-check the oldest IPs added to the cache to search for free IP addresses.</p>
 <p><a href="#heading--extending-a-reserved-dynamic-ip-range"><h2 id="heading--extending-a-reserved-dynamic-ip-range">How to extend a reserved dynamic IP range</h2></a></p>
-<p>If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see <a href="how-to-manage-ip-ranges-5137.html">IP ranges</a>). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the &lsquo;Subnets&rsquo; page and reserve a dynamic range. DHCP will be enabled automatically.</p>
+<p>If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see <a href="how-to-manage-ip-ranges.html">IP ranges</a>). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the &lsquo;Subnets&rsquo; page and reserve a dynamic range. DHCP will be enabled automatically.</p>
 <p><a href="#heading--external-dhcp-and-a-reserved-ip-range"><h2 id="heading--external-dhcp-and-a-reserved-ip-range">How to configure external DHCP</h2></a></p>
-<p>If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine&rsquo;s IP assignment mode to &lsquo;Auto assign&rsquo; in the context of an external DHCP server. See <a href="how-to-manage-ip-ranges-5137.html">IP ranges</a> to create such a range. It should correspond to the lease range of the external server.</p>
+<p>If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine&rsquo;s IP assignment mode to &lsquo;Auto assign&rsquo; in the context of an external DHCP server. See <a href="how-to-manage-ip-ranges.html">IP ranges</a> to create such a range. It should correspond to the lease range of the external server.</p>
 <p><a href="#heading--dhcp-relay"><h2 id="heading--dhcp-relay">How to use a DHCP relay</h2></a></p>
 <p>You should not enable DHCP relays in MAAS without sufficient planning.  In particular, MAAS does not provide the actual relay. It must be set up as an external service by the administrator. What MAAS does provide is the DHCP configuration that MAAS-managed DHCP requires in order to satisfy any client requests relayed from another VLAN.</p>
 <p>To relay from one VLAN (source) to another VLAN (target):</p>
@@ -411,7 +454,7 @@ You must enable DHCP for PXE booting on the &lsquo;untagged&rsquo; VLAN.
 <p>Ensure the target VLAN has DHCP enabled.</p>
 </li>
 <li>
-<p>Set up the external relay. This relay is set up independently from MAAS. See <a href="maas-concepts-and-terms-reference-5415.html#heading--dhcp-relay">DHCP relay</a> for software suggestions.</p>
+<p>Set up the external relay. This relay is set up independently from MAAS. See <a href="maas-concepts-and-terms-reference.html#heading--dhcp-relay">DHCP relay</a> for software suggestions.</p>
 </li>
 <li>
 <p>To relay DHCP traffic for a VLAN (source) through another VLAN (target):</p>
@@ -423,10 +466,8 @@ You must enable DHCP for PXE booting on the &lsquo;untagged&rsquo; VLAN.
 <pre><code class="language-nohighlight">maas $PROFILE vlan update 2 0 relay_van=5002
 </code></pre>
 <p><a href="#heading--dhcp-snippets"><h2 id="heading--dhcp-snippets">How to customise MAAS with DHCP snippets</h2></a></p>
-<p>When MAAS manages DHCP, you customise it through the use of DHCP snippets. These are user-defined configuration options that can be applied either globally, per subnet, or per machine. You apply a global snippet to all VLANs, subnets, and machines. All three types end up in <code>/var/snap/maas/common/maas/dhcpd.conf</code> or <code>/var/snap/maas/common/maas/dhcpd6.conf</code>. Be aware that if you edit these files directly, you will need to <code>sudo</code> to <code>root</code>, as there is no <code>maas</code> user in the snap (all relevant files are owned by <code>root</code>). For information on what options to use, refer to the <a href="http://manpages.ubuntu.com/cgi-bin/search.py?q=dhcpd.conf"><code>dhcpd.conf</code> man page</a>.</p>
-<p>[note]
-Modifications made directly to <code>dhcpd.conf.template</code> or <code>dhcpd6.conf.template</code> are not supported.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+Modifications made directly to <code>dhcpd.conf.template</code> or <code>dhcpd6.conf.template</code> are not supported.</p>
 <p>When you create a snippet, MAAS enables it by default.</p>
 <p>To create a <strong>global</strong> snippet:</p>
 <pre><code class="language-nohighlight">maas $PROFILE dhcpsnippets create name=$DHCP_SNIPPET_NAME \
@@ -461,7 +502,7 @@ Modifications made directly to <code>dhcpd.conf.template</code> or <code>dhcpd6.
 </code></pre>
 <p>You can also use a snippet name instead of its ID.</p>
 <p><a href="#heading--enable-or-disable-a-snippet"><h3 id="heading--enable-or-disable-a-snippet">How to enable or disable a DHCP snippet</h3></a></p>
-<p>Enabling and disabling a snippet is considered a snippet update and is done via a boolean option (&lsquo;true&rsquo; or &lsquo;false&rsquo;). You can disable a snippet like this:</p>
+<p>Enabling and disabling a snippet is considered a snippet update and is done via a Boolean option (&lsquo;true&rsquo; or &lsquo;false&rsquo;). You can disable a snippet like this:</p>
 <pre><code class="language-nohighlight">maas $PROFILE dhcpsnippet update $DHCP_SNIPPET_ID enabled=false
 </code></pre>
 <p>When you disable a snippet, MAAS removes the text you added to the dhcpd.conf file when you created the snippet.</p>

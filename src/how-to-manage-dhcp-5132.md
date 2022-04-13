@@ -214,7 +214,7 @@ You can also use a snippet name instead of its ID.
 
 <a href="#heading--enable-or-disable-a-snippet"><h3 id="heading--enable-or-disable-a-snippet">How to enable or disable a DHCP snippet</h3></a>
 
-Enabling and disabling a snippet is considered a snippet update and is done via a boolean option ('true' or 'false'). You can disable a snippet like this:
+Enabling and disabling a snippet is considered a snippet update and is done via a Boolean option ('true' or 'false'). You can disable a snippet like this:
 
 ``` nohighlight
 maas $PROFILE dhcpsnippet update $DHCP_SNIPPET_ID enabled=false
