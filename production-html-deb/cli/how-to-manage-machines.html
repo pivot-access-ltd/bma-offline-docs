@@ -549,9 +549,8 @@
 <p>Here&rsquo;s an example that demonstrates how to create a new resource pool named <code>myresource</code>.</p>
 <pre><code class="language-nohighlight">maas $PROFILE resource-pools create name=myresource description=&quot;A new resource pool.&quot;
 </code></pre>
-<p>[note]
-The <code>description</code> field is optional.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+The <code>description</code> field is optional.</p>
 <p><a href="#heading--list-available-resource-pools"><h3 id="heading--list-available-resource-pools">How to list available resource pools</h3></a></p>
 <pre><code class="language-nohighlight">maas $PROFILE resource-pools read
 </code></pre>
@@ -561,9 +560,8 @@ The <code>description</code> field is optional.
 <p><a href="#heading--update-a-resource-pool"><h3 id="heading--update-a-resource-pool">How to update a resource pool</h3></a></p>
 <pre><code class="language-nohighlight">maas $PROFILE resource-pool update $RESOURCE_POOL_ID name=newname description=&quot;A new description.&quot;
 </code></pre>
-<p>[note]
-The <code>name</code> and <code>description</code> fields are optional.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+The <code>name</code> and <code>description</code> fields are optional.</p>
 <p><a href="#heading--delete-a-resource-pool"><h3 id="heading--delete-a-resource-pool">How to delete a resource pool</h3></a></p>
 <pre><code class="language-nohighlight">maas $PROFILE resource-pool delete $RESOURCE_POOL_ID
 </code></pre>
@@ -822,8 +820,7 @@ driven-teal  tgaat6     farquar     foobar
 </code></pre>
 <p>Important: The new default will only apply to newly-commissioned machines.</p>
 <p>[note type=&rdquo;caution&rdquo; status=&rdquo;Important&rdquo;]
-The new default will only apply to newly-commissioned machines.
-[/note]</p>
+The new default will only apply to newly-commissioned machines.</p>
 <p><a href="#heading--how-to-set-per-machine-storage-layouts"><h3 id="heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</h3></a></p>
 <p>An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of &lsquo;Ready&rsquo;. This is only possible via the CLI: to see how, click the &ldquo;CLI&rdquo; option for your version and delivery method above.</p>
 <p>An administrator can set a storage layout for a machine with a status of ‘Ready’ like this:</p>
@@ -839,9 +836,9 @@ This action will remove the configuration that may exist on any block device.
 
 
 
-[note]
+**NOTE:** 
 Only an administrator can modify storage at the block device level (providing the machine has a status of 'Ready').
-[/note]
+
 
 
 
@@ -1007,9 +1004,8 @@ Machine-readable output follows:
 <p>It is also possible to use the name of the block device, such as &lsquo;sda&rsquo; or &lsquo;vda&rsquo;, instead of its &lsquo;id&rsquo;:</p>
 <pre><code class="language-nohighlight">s admin block-device read &lt;node-id&gt; vda
 </code></pre>
-<p>[note]
-MAAS allows the name of a block device to be changed. If the block device name has changed then the API call needs to use the new name.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+MAAS allows the name of a block device to be changed. If the block device name has changed then the API call needs to use the new name.</p>
 <pre><code>Using the ID is safer as it never changes.
 </code></pre>
 <p><a href="#heading--how-to-create-a-block-device"><h4 id="heading--how-to-create-a-block-device">How to create a block device</h4></a></p>
@@ -1040,9 +1036,8 @@ Machine-readable output follows:
     &quot;model&quot;: &quot;QEMU&quot;
 }
 </code></pre>
-<p>[note]
-The serial number is what MAAS will use when a machine is deployed to find the specific block device. It&rsquo;s important that this be correct. In a rare chance that your block device does not provide a model or serial number you can provide an id_path. The id_path should be a path that is always the same, no matter the kernel version.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+The serial number is what MAAS will use when a machine is deployed to find the specific block device. It&rsquo;s important that this be correct. In a rare chance that your block device does not provide a model or serial number you can provide an id_path. The id_path should be a path that is always the same, no matter the kernel version.</p>
 <p><a href="#heading--how-to-update-a-block-device"><h4 id="heading--how-to-update-a-block-device">How to update a block device</h4></a></p>
 <p>An administrator can also update the details held on a physical block device, such as its name, from the API:</p>
 <pre><code class="language-nohighlight">maas admin block-device update &lt;node-id&gt; 12 name=newroot
@@ -1109,9 +1104,8 @@ Machine-readable output follows:
     &quot;serial&quot;: null
 }
 </code></pre>
-<p>[note]
-You cannot format a block device that contains partitions or is used to make another virtual block device.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+You cannot format a block device that contains partitions or is used to make another virtual block device.</p>
 <p><a href="#heading--how-to-unformat-a-block-device"><h4 id="heading--how-to-unformat-a-block-device">How to unformat a block device</h4></a></p>
 <p>You can remove the filesystem from a block device with the &lsquo;unformat&rsquo; API call:</p>
 <pre><code class="language-nohighlight">maas admin block-device unformat &lt;node-id&gt; 11
@@ -1212,9 +1206,8 @@ Machine-readable output follows:
 <p>By default, MAAS picks the first added block device to the machine as the boot disk. In most cases this works as expected as the BIOS usually enumerates the boot disk as the first block device. There are cases where this fails and the boot disk needs to be set to another disk. This API allow setting which block device on a machine MAAS should use as the boot disk.:</p>
 <pre><code class="language-nohighlight">maas admin block-device set-boot-disk &lt;node-id&gt; 10
 </code></pre>
-<p>[note]
-Only an administrator can set which block device should be used as the boot disk and only a physical block device can be set as as the boot disk. This operation should be done before a machine is acquired or the storage layout will be applied to the previous boot disk.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+Only an administrator can set which block device should be used as the boot disk and only a physical block device can be set as as the boot disk. This operation should be done before a machine is acquired or the storage layout will be applied to the previous boot disk.</p>
 <p><a href="#heading--how-to-manage-partitions"><h3 id="heading--how-to-manage-partitions">How to manage partitions</h3></a></p>
 <p>This section will explain:</p>
 <ul>
@@ -1308,9 +1301,8 @@ Machine-readable output follows:
     }
 }
 </code></pre>
-<p>[note]
-You cannot format partitions that are used to make another virtual block device.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+You cannot format partitions that are used to make another virtual block device.</p>
 <p><a href="#heading--how-to-unformat-a-partition"><h4 id="heading--how-to-unformat-a-partition">How to unformat a partition</h4></a></p>
 <p>You can also remove the filesystem from a partition with the &lsquo;unformat&rsquo; API call:</p>
 <pre><code class="language-nohighlight">maas admin partition unformat &lt;node-id&gt; 10 10 fstype=ext4
@@ -2199,8 +2191,7 @@ Spare devices can also be specified.</p>
 <p><a href="#heading--blank-storage-layout-reference"><h3 id="heading--blank-storage-layout-reference">Blank storage layout reference</h3></a></p>
 <p>The blank layout removes all storage configuration from all storage devices. It is useful when needing to apply a custom storage configuration.</p>
 <p>[note type=&rdquo;negative&rdquo; status=&rdquo;Warning&rdquo;]
-Machines with the blank layout applied are not deployable; you must first configure storage manually.
-[/note]</p>
+Machines with the blank layout applied are not deployable; you must first configure storage manually.</p>
     </div>
   </body>
 </html>
