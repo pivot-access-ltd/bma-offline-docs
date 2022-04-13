@@ -26,13 +26,13 @@
 	  UI-only
 	</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/how-to-manage-vm-hosts.html">
-	  CLI-only
-	</a>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation-25.html">
 	  Introduction
 	</a>
       </strong>
@@ -57,12 +57,16 @@
 	    Use the MAAS CLI
 	  </a>
 	</li>
+      </ul>
       <strong>
-	<a href="about-controllers.html">
-	  Controllers
-	</a>
+	Controllers
       </strong>
       <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-racks.html">
 	    Manage racks
@@ -80,11 +84,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-machines.html">
-	  Machines
-	</a>
+	Machines
       </strong>
       <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-machines.html">
 	    Manage machines
@@ -102,11 +109,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-vm-hosting.html">
-	  VM hosting
-	</a>
+	VM hosting
       </strong>
       <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-vm-hosts.html">
 	    Manage VM hosts
@@ -124,11 +134,34 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-networking.html">
-	  Networking
-	</a>
+	Networking fundamentals
       </strong>
       <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-networks.html">
 	    Manage networks
@@ -176,11 +209,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-images.html">
-	  Images
-	</a>
+	Images
       </strong>
       <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-import-images.html">
 	    Select and import images
@@ -193,7 +229,7 @@
 	</li>
 	<li>
 	  <a href="how-to-create-a-custom-ubuntu-image.html">
-	    Create custom Ubuntu images
+	    Create custom images
 	  </a>
 	</li>
 	<li>
@@ -213,14 +249,17 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-tags-and-annotations.html">
-	  Tags
-	</a>
+	Tags
       </strong>
       <ul>
 	<li>
-	  <a href="how-to-manage-tags.html">
-	    Manage tags
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
 	  </a>
 	</li>
 	<li>
@@ -250,8 +289,8 @@
 	</strong>
 	<ul>
 	  <li>
-	    <a href="how-to-set-up-prometheus-metrics.html">
-	      Set up Prometheus
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
 	    </a>
 	  </li>
 	  <li>
@@ -301,7 +340,7 @@
 	</li>
 	<li>
 	  <a href="api.html">
-	    API reference
+	    API documentation
 	  </a>
 	</li>
 	<li>
@@ -355,7 +394,8 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>How to manage VM hosts</h1><p>In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself. Once that&rsquo;s done, you can add and manage VM hosts &ndash; and subsequently, create VMs to act as MAAS machines.  This article explains:</p>
+  <h1>How to manage VM hosts</h1><!-- "How to manage VM hosts" -->
+<p>In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself. Once that&rsquo;s done, you can add and manage VM hosts &ndash; and subsequently, create VMs to act as MAAS machines.  This article explains:</p>
 <ul>
 <li><a href="#heading--maas-bridge-cli">How to set up a VM host bridge with the MAAS CLI/API</a></li>
 <li><a href="#heading--maas-bridge-netplan">How to set up a VM host bridge with netplan</a></li>
@@ -371,11 +411,11 @@
 <li><a href="#heading--list-resources-of-a-vm-host">How to list the resources of a single VM host</a></li>
 <li><a href="#heading--update-vm-host-configuration">How to update a VM host&rsquo;s configuration</a></li>
 <li><a href="#heading--list-vm-host-connection-parameters">How to list a VM host&rsquo;s connection parameters</a></li>
+<li><a href="#heading--lxd-clusters">How to use LXD clusters</a></li>
 </ul>
 <p>To enable VM host networking features, MAAS must match the VM host IP address of a potential VM host with a known device (a machine or controller). For example, if a machine not known to MAAS is set up as a VM host, enhanced interface selection features will not be available.</p>
-<p>[note]
-It&rsquo;s essential to enforce usage of IP addresses to avoid domain name conflicts, should different controllers resolve the same domain name with different IP addresses. You should also avoid using 127.0.0.1 when running multiple controllers, as it would confuse MAAS.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+It&rsquo;s essential to enforce usage of IP addresses to avoid domain name conflicts, should different controllers resolve the same domain name with different IP addresses. You should also avoid using 127.0.0.1 when running multiple controllers, as it would confuse MAAS.</p>
 <p><a href="#heading--maas-bridge-cli"><h2 id="heading--maas-bridge-cli">How to use the MAAS API to configure a bridge</h2></a></p>
 <p>You can also use the MAAS CLI/API to configure a VM host bridge, with the following procedure:</p>
 <ol>
@@ -441,7 +481,7 @@ It&rsquo;s essential to enforce usage of IP addresses to avoid domain name confl
 </code></pre>
 <p>Apply the new configuration with <code>netplan apply</code>.</p>
 <p><a href="#heading--maas-bridge-libvirt"><h2 id="heading--maas-bridge-libvirt">How to set up a VM host bridge with libvirt</h2></a></p>
-<p>It is also possible to use <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a>&#128279; to configure a virtual bridge.  This method will also work for LXD VM hosts running on Ubuntu.  Be aware that other methods may be required if you are configuring LXD on an OS other than Ubuntu.</p>
+<p>It is also possible to use <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a> to configure a virtual bridge.  This method will also work for LXD VM hosts running on Ubuntu.  Be aware that other methods may be required if you are configuring LXD on an OS other than Ubuntu.</p>
 <p>By default, libvirt creates a virtual bridge, <code>virbr0</code>, through which VMs communicate with each other and the Internet. DHCP, supplied by libvirt, automatically assigns an IP address to each VM.  However, to enable network booting in MAAS, you’ll need to provide DHCP in MAAS and either:</p>
 <ol>
 <li>Disable DHCP on libvirt’s <code>default</code> network, or</li>
@@ -480,9 +520,6 @@ root@maas:~$ ssh-keygen -f id_rsa
 </code></pre>
 <p>Next, add the contents of <code>~maas/.ssh/id_rsa.pub</code> to the VM host user&rsquo;s <code>~$USER/.ssh/authorized_keys</code>. To accomplish this, log into your VM host node, via SSH, from a host for which MAAS has a matching public SSH key.</p>
 <p><a href="#heading--adding-a-vm-host"><h2 id="heading--adding-a-vm-host">How to add a VM host</h2></a></p>
-<p>Upon selecting &ldquo;Authenticate&rdquo; (assuming successful authentication), you will receive a project selection screen similar to this:</p>
-<p><a href="images/346c8e29fc8d4b74507843a956865ebd254aad57.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/346c8e29fc8d4b74507843a956865ebd254aad57.jpeg"></a></p>
-<p>You must either enter a new project name (which cannot contain spaces or special characters), or you must select an existing project.  If you&rsquo;re not really planning on using projects, selecting the &ldquo;default&rdquo; project will allow you to continue working as you have in the past.</p>
 <p>To add a VM host:</p>
 <pre><code class="language-nohighlight">maas $PROFILE vm-host create type=$VM_HOST_TYPE power_address=$POWER_ADDRESS \
     [power_user=$USERNAME] power_pass=$PASSWORD {project=$PROJECT} \
@@ -502,9 +539,8 @@ root@maas:~$ ssh-keygen -f id_rsa
    power_pass=$LXD_TRUST_PASSWORD project=$PROJECT_NAME
 </code></pre>
 <p>Note that for LXD VM hosts, a project name is not optional.  Project names cannot contain spaces or special characters. If you enter a project name which doesn&rsquo;t exist, MAAS will create the LXD project for you.</p>
-<p>[note]
-MAAS will automatically discover and store the resources your VM host contains. Any existing machines will also appear on the &lsquo;Machines&rsquo; page, and MAAS will automatically attempt to commission them.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+MAAS will automatically discover and store the resources your VM host contains. Any existing machines will also appear on the &lsquo;Machines&rsquo; page, and MAAS will automatically attempt to commission them.</p>
 <p><a href="#heading--configuration"><h2 id="heading--configuration">How to configure a VM host</h2></a></p>
 <p>Using the CLI, it&rsquo;s possible to update the configuration of a VM host.  You can change these configurable parameters with an <code>update</code> command &ndash; but first, you&rsquo;ll want to know how to check the values of configurable parameters, both before and after the change.</p>
 <p><a href="#heading--list-vm-hosts"><h3 id="heading--list-vm-hosts">How to list VM-hosts</h3></a></p>
@@ -588,6 +624,30 @@ MAAS will automatically discover and store the resources your VM host contains. 
     &quot;power_user&quot;: &quot;admin&quot;
 }
 </code></pre>
+<p><a href="#heading--lxd-clusters"><h3 id="heading--lxd-clusters">LXD clusters</h3></a></p>
+<p>MAAS 3.1 allows MAAS to take advantage of the existing LXD clustering capability.</p>
+<p><a href="#heading--about-lxd-clusters"><h4 id="heading--about-lxd-clusters">About LXD clusters</h4></a></p>
+<p>LXD clusters within the context of MAAS are a way of viewing and managing existing VM host clusters and composing VMs within said cluster.  MAAS will not create a new cluster, but will discover an existing cluster when you provide the info for adding a single clustered host.</p>
+<p><a href="#heading--how-to-add-lxd-clusters"><h4 id="heading--how-to-add-lxd-clusters">How to add LXD clusters</h4></a></p>
+<p>MAAS assumes you have already configured a cluster within the context of LXD. You then need to configure said cluster with a single trust MAAS will use to communicate with said cluster. Adding a LXD cluster is similar to adding a single LXD host, in that you provide authentication the same way for a single host within the cluster, and then select a project. The only difference is the name you provide will be used for the cluster instead of the individual host. MAAS will then connect to the provided host and discover the other hosts within the cluster, and rename the initially defined host with the cluster member name configured in LXD.</p>
+<p><a href="../images/3aba7d6e30eda61623f66cb162ca85814128864a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/3aba7d6e30eda61623f66cb162ca85814128864a.png"></a></p>
+<p>First, add an LXD KVM:</p>
+<p><a href="../images/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png"></a></p>
+<p>Next, set up credentials and get your MAAS certificate trusted by LXD:</p>
+<p><a href="../images/b3ea7559edc066e899e41f41846a268b2459b1a5.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/b3ea7559edc066e899e41f41846a268b2459b1a5.png"></a></p>
+<p>Once it is connected, you can select the project in that cluster:</p>
+<p><a href="../images/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png"></a></p>
+<p>If the KVM host address is part of a cluster, it will show as a Cluster on the listing page. </p>
+<p><a href="../images/069bae193cbb09ead3c811fd1a1d28582b946ff4.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/069bae193cbb09ead3c811fd1a1d28582b946ff4.png"></a></p>
+<p><a href="#heading--how-to-compose-vms-in-lxd-clusters"><h4 id="heading--how-to-compose-vms-in-lxd-clusters">How to compose VMs in LXD clusters</h4></a></p>
+<p>Composing a VM in a LXD cluster via MAAS is similar to composing a VM for a single VM host. MAAS does not provide any sort of scheduling of said VM, and will instead target the host you select for composing the VM.</p>
+<p>From the KVM host listing page, click on the <code>+</code> icon to add a VM to a specific host:</p>
+<p><a href="../images/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a></p>
+<p>If you are in a specific KVM host page, you can click <code>+ add virtual machine</code>:</p>
+<p><a href="../images/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a></p>
+<p><a href="#heading--how-to-delete-lxd-clusters"><h3 id="heading--how-to-delete-lxd-clusters">How to delete LXD clusters</h3></a></p>
+<p>To delete a LXD cluster, delete any one VM host within the cluster, this will delete the cluster and all members within the cluster:</p>
+<p><a href="../images/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png"></a></p>
     </div>
   </body>
 </html>
