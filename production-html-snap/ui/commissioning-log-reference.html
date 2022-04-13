@@ -22,9 +22,9 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../ui/commissioning-log-reference.html">
-	  UI-only
-	</a>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;UI-only&nbsp;
+      </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<a href="../cli/commissioning-log-reference.html">
 	  CLI-only
@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation-25.html">
 	  Introduction
 	</a>
       </strong>
@@ -57,12 +57,16 @@
 	    Use the MAAS CLI
 	  </a>
 	</li>
+      </ul>
       <strong>
-	<a href="about-controllers.html">
-	  Controllers
-	</a>
+	Controllers
       </strong>
       <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-racks.html">
 	    Manage racks
@@ -80,11 +84,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-machines.html">
-	  Machines
-	</a>
+	Machines
       </strong>
       <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-machines.html">
 	    Manage machines
@@ -102,11 +109,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-vm-hosting.html">
-	  VM hosting
-	</a>
+	VM hosting
       </strong>
       <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-vm-hosts.html">
 	    Manage VM hosts
@@ -124,11 +134,34 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-networking.html">
-	  Networking
-	</a>
+	Networking fundamentals
       </strong>
       <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-networks.html">
 	    Manage networks
@@ -176,11 +209,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-images.html">
-	  Images
-	</a>
+	Images
       </strong>
       <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-import-images.html">
 	    Select and import images
@@ -193,7 +229,7 @@
 	</li>
 	<li>
 	  <a href="how-to-create-a-custom-ubuntu-image.html">
-	    Create custom Ubuntu images
+	    Create custom images
 	  </a>
 	</li>
 	<li>
@@ -213,14 +249,17 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-tags-and-annotations.html">
-	  Tags
-	</a>
+	Tags
       </strong>
       <ul>
 	<li>
-	  <a href="how-to-manage-tags.html">
-	    Manage tags
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
 	  </a>
 	</li>
 	<li>
@@ -250,8 +289,8 @@
 	</strong>
 	<ul>
 	  <li>
-	    <a href="how-to-set-up-prometheus-metrics.html">
-	      Set up Prometheus
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
 	    </a>
 	  </li>
 	  <li>
@@ -301,7 +340,7 @@
 	</li>
 	<li>
 	  <a href="api.html">
-	    API reference
+	    API documentation
 	  </a>
 	</li>
 	<li>
@@ -355,10 +394,12 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>Commissioning log reference</h1><p>Commissioning logs, which are presented on the &ldquo;Commissioning&rdquo; tab for any machine in the &ldquo;Ready&rdquo; state, contain a list of commissioning scripts with a timestamp and result.  You can view the detailed logs for each of these scripts from this tab.</p>
+  <h1>Commissioning log reference</h1><!-- "Commissioning log reference" -->
+
+<p>Commissioning logs, which are presented on the &ldquo;Commissioning&rdquo; tab for any machine in the &ldquo;Ready&rdquo; state, contain a list of commissioning scripts with a timestamp and result.  You can view the detailed logs for each of these scripts from this tab.</p>
 <p>When you click on the &ldquo;Commissioning&rdquo; tab under a given machine, you will see a screen similar to this one:</p>
-<p><a href="images/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg"></a> </p>
-<p>Each of the items in the &ldquo;NAME&rdquo; column is the name of a <a href="how-to-deploy-machines-5112.html#heading--how-to-commission-a-machine">commissioning script</a>.  Each entry gives a timestamp and a result (e.g. passed, failed, &hellip;). At the end of each line is a link to view the log. It&rsquo;s worth taking a look at each of the script logs and their typical output.</p>
+<p><a href="../images/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg"></a> </p>
+<p>Each of the items in the &ldquo;NAME&rdquo; column is the name of a <a href="how-to-deploy-machines.html#heading--how-to-commission-a-machine">commissioning script</a>.  Each entry gives a timestamp and a result (e.g. passed, failed, &hellip;). At the end of each line is a link to view the log. It&rsquo;s worth taking a look at each of the script logs and their typical output.</p>
 <p><a href="#heading--maas-support-info"><h2 id="heading--maas-support-info">maas-support-info</h2></a></p>
 <p>MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  This script gathers this information, mostly as a bundle to be provided to a support specialist to help get the baseline for the machine in question.</p>
 <p>This script runs in parallel with other scripts to speed commissioning. Typical output, generated when a machine passes this script, is shown in the foldout below.</p>
@@ -394,19 +435,19 @@ nomodeset ro root=squash:http://192.168.122.2:5248/images/ubuntu/amd64/generic/b
 apt: {preserve_sources_list: false, proxy: 'http://192-168-122-0--24.maas-internal:8000/',
   sources_list: 'deb http://archive.ubuntu.com/ubuntu $RELEASE multiverse universe
     restricted main
-    # deb-src http://archive.ubuntu.com/ubuntu $RELEASE multiverse universe restricted
+    # vs Packagesrc http://archive.ubuntu.com/ubuntu $RELEASE multiverse universe restricted
     main
     deb http://archive.ubuntu.com/ubuntu $RELEASE-updates multiverse universe restricted
     main
-    # deb-src http://archive.ubuntu.com/ubuntu $RELEASE-updates multiverse universe
+    # vs Packagesrc http://archive.ubuntu.com/ubuntu $RELEASE-updates multiverse universe
     restricted main
     deb http://archive.ubuntu.com/ubuntu $RELEASE-security multiverse universe restricted
     main
-    # deb-src http://archive.ubuntu.com/ubuntu $RELEASE-security multiverse universe
+    # vs Packagesrc http://archive.ubuntu.com/ubuntu $RELEASE-security multiverse universe
     restricted main
     deb http://archive.ubuntu.com/ubuntu $RELEASE-backports multiverse universe restricted
     main
-    # deb-src http://archive.ubuntu.com/ubuntu $RELEASE-backports multiverse universe
+    # vs Packagesrc http://archive.ubuntu.com/ubuntu $RELEASE-backports multiverse universe
     restricted main
     '}
 datasource:
@@ -524,8 +565,8 @@ X1NNXycfAghSAAAAAAAAAF9ETUlfnXkBIAAAAAkAKAAAGAAAAQIA6AMACAAAAAAAAAAABAAA//9T
 ZWFCSU9TADEuMTIuMC0xADA0LzAxLzIwMTQAAAEbAAEBAgMAk8WKR96p60KI/jQ+QB9PUAYAAFFF
 TVUAU3RhbmRhcmQgUEMgKGk0NDBGWCArIFBJSVgsIDE5OTYpAHBjLWk0NDBmeC1lb2FuAAADFgAD
 AQECAAADAwMCAAAAAAAAAAAAUUVNVQBwYy1pNDQwZngtZW9hbgAABCoABAEDAQLjBgUA//uLDwMA
-AADQB9AHQQH///////8AAAABAQECAAEAQ1BVIDAAUUVNVQBwYy1pNDQwZngtZW9hbgAAEBcAEAED
-BgAAEAD+/wEAAAAAAAAAAAAAABEoABEAEP7//////wAECQABAAcCAAAAAgAAAAAAAAAAAAAAAAAA
+AADQB9AHQQH-#,-#,/8AAAABAQECAAEAQ1BVIDAAUUVNVQBwYy1pNDQwZngtZW9hbgAAEBcAEAED
+BgAAEAD+/wEAAAAAAAAAAAAAABEoABEAEP7-#,-#,wAECQABAAcCAAAAAgAAAAAAAAAAAAAAAAAA
 AABESU1NIDAAUUVNVQAAEx8AEwAAAAD//w8AABABAAAAAAAAAAAAAAAAAAAAAAAAIAsAIAAAAAAA
 AAAAAH8EAH8AAA==
 -----END DMI DATA-----
@@ -1476,6 +1517,8 @@ virtio:d00000005v00001AF4
 </code></pre>
 <p></details></p>
 <p>The output of this script may be useful when you&rsquo;re trying to verify that a particular serial interface is active and available on your machine.</p>
+<p><a href="#heading--40-maas-01-network-interfaces"><h2 id="heading--40-maas-01-network-interfaces">40-maas-01-network-interfaces</h2></a></p>
+<p>The commissioning script <code>40-maas-01-network-interfaces</code> is no longer used in MAAS versions 3.0 and higher.</p>
 <p><a href="#heading--50-maas-01-commissioning"><h2 id="heading--50-maas-01-commissioning">50-maas-01-commissioning</h2></a></p>
 <p>This script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc. We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.</p>
 <p>Output from a successful run is fairly robust, and looks something like the foldout below:</p>
