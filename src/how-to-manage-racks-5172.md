@@ -185,4 +185,3 @@ where the secret is found in `/var/lib/maas/secret`.
 [/tabs]
 
 Note that in the UI, if you go to the "Controllers" tab and press the button entitled, "Add rack controller," at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.
-

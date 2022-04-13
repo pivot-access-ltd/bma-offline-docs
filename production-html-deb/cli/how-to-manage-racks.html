@@ -26,13 +26,13 @@
 	  UI-only
 	</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/how-to-manage-racks.html">
-	  CLI-only
-	</a>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation-25.html">
 	  Introduction
 	</a>
       </strong>
@@ -57,12 +57,16 @@
 	    Use the MAAS CLI
 	  </a>
 	</li>
+      </ul>
       <strong>
-	<a href="about-controllers.html">
-	  Controllers
-	</a>
+	Controllers
       </strong>
       <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-racks.html">
 	    Manage racks
@@ -80,11 +84,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-machines.html">
-	  Machines
-	</a>
+	Machines
       </strong>
       <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-machines.html">
 	    Manage machines
@@ -102,11 +109,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-vm-hosting.html">
-	  VM hosting
-	</a>
+	VM hosting
       </strong>
       <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-vm-hosts.html">
 	    Manage VM hosts
@@ -124,11 +134,34 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-networking.html">
-	  Networking
-	</a>
+	Networking fundamentals
       </strong>
       <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-networks.html">
 	    Manage networks
@@ -176,11 +209,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-images.html">
-	  Images
-	</a>
+	Images
       </strong>
       <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-import-images.html">
 	    Select and import images
@@ -193,7 +229,7 @@
 	</li>
 	<li>
 	  <a href="how-to-create-a-custom-ubuntu-image.html">
-	    Create custom Ubuntu images
+	    Create custom images
 	  </a>
 	</li>
 	<li>
@@ -213,14 +249,17 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-tags-and-annotations.html">
-	  Tags
-	</a>
+	Tags
       </strong>
       <ul>
 	<li>
-	  <a href="how-to-manage-tags.html">
-	    Manage tags
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
 	  </a>
 	</li>
 	<li>
@@ -250,8 +289,8 @@
 	</strong>
 	<ul>
 	  <li>
-	    <a href="how-to-set-up-prometheus-metrics.html">
-	      Set up Prometheus
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
 	    </a>
 	  </li>
 	  <li>
@@ -301,7 +340,7 @@
 	</li>
 	<li>
 	  <a href="api.html">
-	    API reference
+	    API documentation
 	  </a>
 	</li>
 	<li>
@@ -355,12 +394,13 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>How to manage racks</h1><p>A rack controller can connect to multiple VLANs, each from a different network interface. A rack controller can only connect to one MAAS instance at any given time, and must connect to an instance that matches its MAAS version (major and minor).  This configuration provides a scaling factor that can help as a network architecture grows in size.</p>
+  <h1>How to manage racks</h1><!-- "How to manage racks" -->
+<p>A rack controller can connect to multiple VLANs, each from a different network interface. A rack controller can only connect to one MAAS instance at any given time, and must connect to an instance that matches its MAAS version (major and minor).  This configuration provides a scaling factor that can help as a network architecture grows in size.</p>
 <p>This article will tell you:</p>
 <ul>
 <li><a href="#heading--install-a-rack-controller">How to install a rack controller</a></li>
 <li><a href="#heading--list-rack-controllers">How to list rack controllers</a></li>
-<li><a href="how-to-enable-high-availability-5123.html#heading--multiple-region-endpoints">How to configure MAAS for multiple API servers</a></li>
+<li><a href="how-to-enable-high-availability.html#heading--multiple-region-endpoints">How to configure MAAS for multiple API servers</a></li>
 <li><a href="#heading--unregister-a-rack-controller">How to unregister a rack controller</a></li>
 <li><a href="#heading--dangers-moving-rack-controller">About the potential dangers of moving a rack controller</a></li>
 <li><a href="#heading--move-rack-controller">How to move a rack controller from one MAAS instance to another</a></li>
@@ -370,15 +410,16 @@
 <pre><code class="language-bash">sudo apt install maas-rack-controller
 sudo maas-rack register --url $MAAS_URL --secret $SECRET
 </code></pre>
-<p>[note]
-The register command is not required when you are adding a rack controller to a system that already houses an API server.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+The register command is not required when you are adding a rack controller to a system that already houses an API server.</p>
 <p>The $SECRET is stored in file <code>/var/lib/maas/secret</code> on the API server.</p>
+<p>Note that on the UI, you can find complete instructions for adding a rack controller under the &ldquo;Controllers&rdquo; tab.  Simply click on the button labelled, &ldquo;Add rack controller&rdquo; and choose the instructions relevant to your build model (snap or packages).  The commands there will already include the correct MAAS URL and secret, so you can cut and paste them at the command line.</p>
 <p><a href="#heading--list-rack-controllers"><h2 id="heading--list-rack-controllers">How to list rack controllers</h2></a></p>
+<p>You can also list and confirm all registered rack controllers via the CLI; select the link at the top of the page to find out how.  Note that you will need multiple rack controllers to achieve specific <a href="how-to-enable-high-availability.html">high availability</a> configurations.</p>
 <p>You can also list and confirm all registered rack controllers:</p>
 <pre><code class="language-bash">maas $PROFILE rack-controllers read | grep hostname | cut -d '&quot;' -f 4
 </code></pre>
-<p>Note that you will need multiple rack controllers to achieve specific <a href="how-to-enable-high-availability-5123.html">high availability</a> configurations.</p>
+<p>Note that you will need multiple rack controllers to achieve specific <a href="how-to-enable-high-availability.html">high availability</a> configurations.</p>
 <div class="p-notification">
 <p class="p-notification__response">If you are using VM nodes, you must ensure that the new rack controller can communicate with the VM host.</p>
 </div>
@@ -401,7 +442,7 @@ The register command is not required when you are adding a rack controller to a 
 <p><strong>Moving a rack controller from one version of MAAS to another:</strong> MAAS rack controller software is an integral part of each version of MAAS.  If you delete a rack controller from, say, a 2.6 version of MAAS, and attempt to register that 2.6 version of the rack controller code to, say, a 2.9 version of MAAS, you may experience errors and potential data loss.  Using the above example, if you are running both a VM host and a rack controller for MAAS 2.6 on one system, and you suddenly decide to delete that rack controller from 2.6 and attempt to register the same code to a 2.9 MAAS, the VM host may fail or disappear.  This will possibly delete all the VMs you have created or connected to that VM host &ndash; which may result in data loss.  This action is not supported.</p>
 </li>
 <li>
-<p><strong>Connecting one instance of a rack controller to two instances of MAAS, regardless of version:</strong> Trying to connect a single rack controller to two different instances of MAAS can result in all sorts of unpredictable (and potentially catastrophic) behavior.  It is not a supported configuration.</p>
+<p><strong>Connecting one instance of a rack controller to two instances of MAAS, regardless of version:</strong> Trying to connect a single rack controller to two different instances of MAAS can result in all sorts of unpredictable (and potentially catastrophic) behaviour.  It is not a supported configuration.</p>
 </li>
 </ul>
 <p>Take these warnings to heart.  It may seem like a faster approach to &ldquo;bridge&rdquo; your existing rack controllers from one MAAS to another &ndash; or from one version of MAAS to another &ndash; while they&rsquo;re running.  Ultimately, though, it will probably result in more work than just following the recommended approach.</p>
@@ -418,6 +459,7 @@ The register command is not required when you are adding a rack controller to a 
 <pre><code>sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 </code></pre>
 <p>where the secret is found in <code>/var/lib/maas/secret</code>.</p>
+<p>Note that in the UI, if you go to the &ldquo;Controllers&rdquo; tab and press the button entitled, &ldquo;Add rack controller,&rdquo; at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.</p>
 <p><a href="#heading--about-moving-rack-controller"><h3 id="heading--about-moving-rack-controller">About moving a rack controller from one MAAS instance to another</h3></a></p>
 <p>In the course of normal operations, you may wish to move a device acting as a rack controller from one MAAS instance to another.  From the point of view of MAAS, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance. From your perspective, of course, you are moving one box performing rack controller functions, either physically or network-wise, from one MAAS to another. </p>
 <h3>How to move the controller</h3>
@@ -434,6 +476,7 @@ The register command is not required when you are adding a rack controller to a 
 <pre><code>sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 </code></pre>
 <p>where the secret is found in <code>/var/lib/maas/secret</code>.</p>
+<p>Note that in the UI, if you go to the &ldquo;Controllers&rdquo; tab and press the button entitled, &ldquo;Add rack controller,&rdquo; at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.</p>
     </div>
   </body>
 </html>
