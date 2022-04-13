@@ -132,5 +132,3 @@ For example, for applications that are highly sensitive to network latency, it m
 Power management is concerned with power usage density and cooling. This topic can be addressed with the use of several MAAS zones.
 
 Nodes can be distributed in such a way that power-hungry and/or "hot" systems are located in different zones. This can help mitigate power consumption and heat problems.
-
-
