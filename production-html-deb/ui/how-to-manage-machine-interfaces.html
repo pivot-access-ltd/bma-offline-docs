@@ -22,9 +22,9 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../ui/how-to-manage-machine-interfaces.html">
-	  UI-only
-	</a>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;UI-only&nbsp;
+      </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<a href="../cli/how-to-manage-machine-interfaces.html">
 	  CLI-only
@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation-25.html">
 	  Introduction
 	</a>
       </strong>
@@ -57,12 +57,16 @@
 	    Use the MAAS CLI
 	  </a>
 	</li>
+      </ul>
       <strong>
-	<a href="about-controllers.html">
-	  Controllers
-	</a>
+	Controllers
       </strong>
       <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-racks.html">
 	    Manage racks
@@ -80,11 +84,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-machines.html">
-	  Machines
-	</a>
+	Machines
       </strong>
       <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-machines.html">
 	    Manage machines
@@ -102,11 +109,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-vm-hosting.html">
-	  VM hosting
-	</a>
+	VM hosting
       </strong>
       <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-vm-hosts.html">
 	    Manage VM hosts
@@ -124,11 +134,34 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-networking.html">
-	  Networking
-	</a>
+	Networking fundamentals
       </strong>
       <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-networks.html">
 	    Manage networks
@@ -176,11 +209,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-images.html">
-	  Images
-	</a>
+	Images
       </strong>
       <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-import-images.html">
 	    Select and import images
@@ -193,7 +229,7 @@
 	</li>
 	<li>
 	  <a href="how-to-create-a-custom-ubuntu-image.html">
-	    Create custom Ubuntu images
+	    Create custom images
 	  </a>
 	</li>
 	<li>
@@ -213,14 +249,17 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-tags-and-annotations.html">
-	  Tags
-	</a>
+	Tags
       </strong>
       <ul>
 	<li>
-	  <a href="how-to-manage-tags.html">
-	    Manage tags
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
 	  </a>
 	</li>
 	<li>
@@ -250,8 +289,8 @@
 	</strong>
 	<ul>
 	  <li>
-	    <a href="how-to-set-up-prometheus-metrics.html">
-	      Set up Prometheus
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
 	    </a>
 	  </li>
 	  <li>
@@ -301,7 +340,7 @@
 	</li>
 	<li>
 	  <a href="api.html">
-	    API reference
+	    API documentation
 	  </a>
 	</li>
 	<li>
@@ -355,7 +394,8 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>How to manage machine interfaces</h1><p>This article will explain the following procedures related to machine interfaces:</p>
+  <h1>How to manage machine interfaces</h1><!-- "How to manage machine interfaces" -->
+<p>This article will explain the following procedures related to machine interfaces:</p>
 <ul>
 <li><a href="#heading--how-to-edit-interfaces&quot;">How to edit machine interfaces</a></li>
 <li><a href="#heading--bond-interfaces">How to create a bond interface</a></li>
@@ -368,13 +408,13 @@
 </ul>
 <p><a href="#heading--how-to-edit-interfaces"><h2 id="heading--how-to-edit-interfaces">How to edit machines interfaces</h2></a></p>
 <p>From a machine&rsquo;s &ldquo;Interfaces&rdquo; page, click the menu icon for the interface to be edited and select &ldquo;Edit Physical&rdquo; from the resulting menu:</p>
-<p><a href="images/438475b8906736b45fc809cd105a56be5052397d.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/438475b8906736b45fc809cd105a56be5052397d.png"></a></p>
+<p><a href="../images/438475b8906736b45fc809cd105a56be5052397d.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/438475b8906736b45fc809cd105a56be5052397d.png"></a></p>
 <p>The following window will appear:</p>
-<p><a href="images/70b21d256df52399ac7ab09c3051f4bf011da55e.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/70b21d256df52399ac7ab09c3051f4bf011da55e.png"></a></p>
+<p><a href="../images/70b21d256df52399ac7ab09c3051f4bf011da55e.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/70b21d256df52399ac7ab09c3051f4bf011da55e.png"></a></p>
 <p>Four modes determine how a subnet address is assigned when MAAS deploys the machine. You can select one of these modes by clicking on the &ldquo;IP mode&rdquo; drop-down menu.</p>
 <ul>
 <li>
-<p><strong>Auto assign</strong>: MAAS will assign a random static address (<code>iface eth0 inet static</code>). The pool of available addresses depends on whether the subnet is managed or unmanaged (see <a href="how-to-manage-networks-5166.html#heading--how-to-toggle-subnet-management">Subnet management</a>).</p>
+<p><strong>Auto assign</strong>: MAAS will assign a random static address (<code>iface eth0 inet static</code>). The pool of available addresses depends on whether the subnet is managed or unmanaged (see <a href="how-to-manage-networks.html#heading--how-to-toggle-subnet-management">Subnet management</a>).</p>
 </li>
 <li>
 <p><strong>Static assign</strong>: The administrator will specify a static address using a secondary field.</p>
@@ -387,14 +427,14 @@
 </li>
 </ul>
 <p>Press the &ldquo;Save&rdquo; button to apply the changes.</p>
-<p>See <a href="maas-concepts-and-terms-reference-5410.html#heading--ip-ranges">Concepts and terms</a> for the definitions of reserved range types.</p>
+<p>See <a href="maas-concepts-and-terms-reference.html#heading--ip-ranges">Concepts and terms</a> for the definitions of reserved range types.</p>
 <p><a href="#heading--bond-interfaces"><h2 id="heading--bond-interfaces">How to create a bond interface</h2></a></p>
 <p>A bond is created by selecting more than one interface and clicking the now-active &ldquo;Create bond&rdquo; button:</p>
-<p><a href="images/7dd772c961c9f6f871f657b0397646446a4e23e7.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/7dd772c961c9f6f871f657b0397646446a4e23e7.png"></a></p>
+<p><a href="../images/7dd772c961c9f6f871f657b0397646446a4e23e7.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/7dd772c961c9f6f871f657b0397646446a4e23e7.png"></a></p>
 <p>After clicking the &ldquo;Create bond&rdquo; button, the bond configuration pane will appear.</p>
 <p>From the bond configuration pane, you can rename the bond, select a bond mode (see below), assign a MAC address to the aggregate device and attach one or more tags.</p>
 <p>The interfaces aggregated into the bond interface are listed below the &ldquo;Tags&rdquo; field. Use the &ldquo;Primary&rdquo; column to select the interface to act as the primary device.</p>
-<p><a href="images/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png"></a></p>
+<p><a href="../images/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png"></a></p>
 <p>You can select from the following bonding modes on the &ldquo;Bond mode&rdquo; drop-down menu:</p>
 <ul>
 <li>
@@ -420,14 +460,14 @@
 </li>
 </ul>
 <p>Press the &ldquo;Save&rdquo; button when you&rsquo;re done.</p>
-<p>[note]
-The MAC address defaults to the MAC address of the primary interface.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+The MAC address defaults to the MAC address of the primary interface.</p>
 <p><a href="#heading--bridge-interfaces"><h2 id="heading--bridge-interfaces">How to create a bridge interface</h2></a></p>
-<p><a href="images/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png"></a></p>
+<p><a href="../images/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png"></a></p>
 <p>Press the &ldquo;Save&rdquo; button when you&rsquo;re done.</p>
+<p>Please use the UI interface to create a bridge interface.  Select the &ldquo;UI&rdquo; dropdown above to see how.</p>
 <p><a href="#heading--delete-an-interface"><h2 id="heading--delete-an-interface">How to delete an interface</h2></a></p>
-<p>An interface can only be deleted via the MAAS CLI.</p>
+<p>An interface can only be deleted via the MAAS CLI.  Choose the &ldquo;CLI&rdquo; dropdown above to see how.</p>
 <p>The &ldquo;delete&rdquo; command can be used to delete a bridge interface, a bond interface or a physical interface:</p>
 <pre><code>maas $PROFILE interface delete $SYSTEM_ID $IFACE_ID
 </code></pre>
@@ -440,152 +480,13 @@ Machine-readable output follows:
 </code></pre>
 <p>Note that while the label is presented, there is no machine-readable output expected after the successful execution of the delete command.</p>
 <p><a href="#heading--assign-a-network-interface-to-a-fabric"><h2 id="heading--assign-a-network-interface-to-a-fabric">How to assign a network interface to a fabric</h2></a></p>
-<p>A network interface may be assigned to a fabric with the MAAS CLI only.</p>
-<p>This task is made easier with the aid of the <code>jq</code> utility. It filters the <code>maas</code> command (JSON formatted) output and prints it in the desired way, which allows you to view and compare data quickly. Go ahead and install it:</p>
-<pre><code class="language-bash">sudo apt install jq
-</code></pre>
-<p>In summary, MAAS assigns an interface to a fabric by assigning it to a VLAN. First, we need to gather various bits of data.</p>
-<p>List some information on all machines:</p>
-<pre><code class="language-bash">maas $PROFILE machines read | jq &quot;.[] | \
-    {hostname:.hostname, system_id: .system_id, status:.status}&quot; --compact-output
-</code></pre>
-<p>Example output:</p>
-<pre><code class="language-no-highlight">{&quot;hostname&quot;:&quot;machine1&quot;,&quot;system_id&quot;:&quot;dfgnnd&quot;,&quot;status&quot;:4}
-{&quot;hostname&quot;:&quot;machine2&quot;,&quot;system_id&quot;:&quot;bkaf6e&quot;,&quot;status&quot;:6}
-{&quot;hostname&quot;:&quot;machine4&quot;,&quot;system_id&quot;:&quot;63wqky&quot;,&quot;status&quot;:6}
-{&quot;hostname&quot;:&quot;machine3&quot;,&quot;system_id&quot;:&quot;qwkmar&quot;,&quot;status&quot;:4}
-</code></pre>
-<p>[note]
-You can only edit an interface when the corresponding machine has a status of &lsquo;Ready&rsquo;. This state is numerically denoted by the integer &lsquo;4&rsquo;.
-[/note]</p>
-<p>List some information for all interfaces on the machine in question (identified by its system id &lsquo;dfgnnd&rsquo;):</p>
-<pre><code class="language-bash">maas $PROFILE interfaces read dfgnnd | jq &quot;.[] | \
-    {id:.id, name:.name, mac:.mac_address, vid:.vlan.vid, fabric:.vlan.fabric}&quot; --compact-output
-</code></pre>
-<p>Example output:</p>
-<pre><code class="language-no-highlight">{&quot;id&quot;:8,&quot;name&quot;:&quot;eth0&quot;,&quot;mac&quot;:&quot;52:54:00:01:01:01&quot;,&quot;vid&quot;:0,&quot;fabric&quot;:&quot;fabric-1&quot;}
-{&quot;id&quot;:9,&quot;name&quot;:&quot;eth1&quot;,&quot;mac&quot;:&quot;52:54:00:01:01:02&quot;,&quot;vid&quot;:null,&quot;fabric&quot;:null}
-</code></pre>
-<p>List some information for all fabrics:</p>
-<pre><code class="language-bash">maas $PROFILE fabrics read | jq &quot;.[] | \
-    {name:.name, vlans:.vlans[] | {id:.id, vid:.vid}}&quot; --compact-output
-</code></pre>
-<p>Example output:</p>
-<pre><code class="language-no-highlight">{&quot;name&quot;:&quot;fabric-0&quot;,&quot;vlans&quot;:{&quot;id&quot;:5001,&quot;vid&quot;:0}}
-{&quot;name&quot;:&quot;fabric-1&quot;,&quot;vlans&quot;:{&quot;id&quot;:5002,&quot;vid&quot;:0}}
-{&quot;name&quot;:&quot;fabric-2&quot;,&quot;vlans&quot;:{&quot;id&quot;:5003,&quot;vid&quot;:0}}
-</code></pre>
-<p>This example will show how to move interface &lsquo;8&rsquo; (on machine &lsquo;dfgnnd&rsquo;) from &lsquo;fabric-1&rsquo; to &lsquo;fabric-0&rsquo;. Based on the gathered information, this will consist of changing the interface&rsquo;s VLAN from &lsquo;5002&rsquo; to &lsquo;5001&rsquo;:</p>
-<pre><code class="language-bash">maas $PROFILE interface update dfgnnd 8 vlan=5001 &gt;/dev/null
-</code></pre>
-<p>Verify the operation by relisting information for the machine&rsquo;s interface:</p>
-<pre><code class="language-bash">maas $PROFILE interfaces read dfgnnd | jq &quot;.[] | \
-    {id:.id, name:.name, mac:.mac_address, vid:.vlan.vid, fabric:.vlan.fabric}&quot; --compact-output
-</code></pre>
-<p>The output shows that the interface is now on fabric-0:</p>
-<pre><code class="language-no-highlight">{&quot;id&quot;:8,&quot;name&quot;:&quot;eth0&quot;,&quot;mac&quot;:&quot;52:54:00:01:01:01&quot;,&quot;vid&quot;:0,&quot;fabric&quot;:&quot;fabric-0&quot;}
-{&quot;id&quot;:9,&quot;name&quot;:&quot;eth1&quot;,&quot;mac&quot;:&quot;52:54:00:01:01:02&quot;,&quot;vid&quot;:null,&quot;fabric&quot;:null}
-</code></pre>
+<p>A network interface may be assigned to a fabric with the MAAS CLI only.  Choose the &ldquo;CLI&rdquo; dropdown above to see how.</p>
 <p><a href="#heading--interface-identifiers"><h2 id="heading--interface-identifiers">How to discover interface identifiers</h2></a></p>
-<p>Interface identifiers can only be discovered via the MAAS CLI.</p>
-<p>The MAAS CLI uses a numeric interface identifier for many interface operations. Use the following command to retrieve the identifier(s):</p>
-<pre><code class="language-bash">maas $PROFILE interfaces read $SYSTEM_ID
-</code></pre>
-<p>Look for either id or the number at the end of an interface&rsquo;s resource URI, such as <strong>15</strong> in the following example output:</p>
-<pre><code class="language-json">&quot;id&quot;: 15,
-&quot;mac_address&quot;: &quot;52:54:00:55:06:40&quot;,
-...
-&quot;name&quot;: &quot;ens9&quot;,
-...
-&quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4efwb4/interfaces/15/&quot;
-</code></pre>
+<p>Interface identifiers can only be discovered via the MAAS CLI.  Choose the &ldquo;CLI&rdquo; dropdown above to see how.</p>
 <p><a href="#heading--create-a-vlan-interface"><h2 id="heading--create-a-vlan-interface">How to create a VLAN interface</h2></a></p>
-<p>VLAN interfaces can only be created via the MAAS CLI.</p>
-<p>To create a VLAN interface, use the following syntax:</p>
-<pre><code class="language-bash">maas $PROFILE vlans create $FABRIC_ID name=$NAME vid=$VLAN_ID
-</code></pre>
-<p>For example, the following command creates a VLAN called &lsquo;Storage network:</p>
-<pre><code class="language-bash">maas admin vlans create 0 name=&quot;Storage network&quot; vid=100
-</code></pre>
-<p>The above command generates the following output:</p>
-<pre><code class="language-no-output">Success.
-Machine-readable output follows:
-{
-    &quot;vid&quot;: 100,
-    &quot;mtu&quot;: 1500,
-    &quot;dhcp_on&quot;: false,
-    &quot;external_dhcp&quot;: null,
-    &quot;relay_vlan&quot;: null,
-    &quot;name&quot;: &quot;Storage network&quot;,
-    &quot;space&quot;: &quot;undefined&quot;,
-    &quot;fabric&quot;: &quot;fabric-0&quot;,
-    &quot;id&quot;: 5004,
-    &quot;primary_rack&quot;: null,
-    &quot;fabric_id&quot;: 0,
-    &quot;secondary_rack&quot;: null,
-    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5004/&quot;
-}
-</code></pre>
-<p>Be aware that the $VLAN_ID parameter does not indicate a VLAN ID that corresponds to the VLAN tag. You must first create the VLAN and then associate it with the interface:</p>
-<pre><code class="language-bash">maas $PROFILE interfaces create-vlan $SYSTEM_ID vlan=$OUTPUT_VLAN_ID \
-parent=$IFACE_ID
-</code></pre>
-<p>[note]
-<strong>OUTPUT_VLAN_ID</strong> corresponds to the id value output when MAAS created the VLAN.
-[/note]</p>
-<p>The following example contains values that correspond to the output above:</p>
-<pre><code class="language-bash">maas admin interfaces create-vlan 4efwb4 vlan=5004 parent=4
-</code></pre>
-<p>The above command generates the following output:</p>
-<pre><code class="language-json">Success.
-Machine-readable output follows:
-{
-    &quot;tags&quot;: [],
-    &quot;type&quot;: &quot;vlan&quot;,
-    &quot;enabled&quot;: true,
-    &quot;system_id&quot;: &quot;4efwb4&quot;,
-    &quot;id&quot;: 21,
-    &quot;children&quot;: [],
-    &quot;mac_address&quot;: &quot;52:54:00:eb:f2:29&quot;,
-    &quot;params&quot;: {},
-    &quot;vlan&quot;: {
-        &quot;vid&quot;: 100,
-        &quot;mtu&quot;: 1500,
-        &quot;dhcp_on&quot;: false,
-        &quot;external_dhcp&quot;: null,
-        &quot;relay_vlan&quot;: null,
-        &quot;id&quot;: 5004,
-        &quot;secondary_rack&quot;: null,
-        &quot;fabric_id&quot;: 0,
-        &quot;space&quot;: &quot;undefined&quot;,
-        &quot;fabric&quot;: &quot;fabric-0&quot;,
-        &quot;name&quot;: &quot;Storage network&quot;,
-        &quot;primary_rack&quot;: null,
-        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5004/&quot;
-    },
-    &quot;parents&quot;: [
-        &quot;ens3&quot;
-    ],
-    &quot;effective_mtu&quot;: 1500,
-    &quot;links&quot;: [
-        {
-            &quot;id&quot;: 55,
-            &quot;mode&quot;: &quot;link_up&quot;
-        }
-    ],
-    &quot;discovered&quot;: null,
-    &quot;name&quot;: &quot;ens3.100&quot;,
-    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4efwb4/interfaces/21/&quot;
-}
-</code></pre>
+<p>VLAN interfaces can only be created via the MAAS CLI. Select the &ldquo;CLI&rdquo; dropdown above to see how.</p>
 <p><a href="#heading--delete-a-vlan-interface"><h2 id="heading--delete-a-vlan-interface">How to delete a VLAN interface</h2></a></p>
-<p>VLAN interfaces can only be deleted via the MAAS CLI.</p>
-<p>The following command outlines the syntax required to delete a VLAN interface from the command line:</p>
-<pre><code class="language-bash">maas $PROFILE vlan delete $FABRIC__ID $VLAN_ID
-</code></pre>
-<p>Using the values from previous examples, you executed this step as follows:</p>
-<pre><code class="language-bash">maas admin vlan delete 0 100
-</code></pre>
+<p>VLAN interfaces can only be deleted via the MAAS CLI. Select the &ldquo;CLI&rdquo; dropdown above to see how.</p>
     </div>
   </body>
 </html>

@@ -354,6 +354,7 @@ Look for either id or the number at the end of an interface's resource URI, such
 
 <a href="#heading--create-a-vlan-interface"><h2 id="heading--create-a-vlan-interface">How to create a VLAN interface</h2></a>
 
+[tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
 VLAN interfaces can only be created via the MAAS CLI. Select the "CLI" dropdown above to see how.
 [/tab]
