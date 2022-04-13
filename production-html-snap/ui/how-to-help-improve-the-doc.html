@@ -22,9 +22,9 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../ui/how-to-help-improve-the-doc.html">
-	  UI-only
-	</a>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;UI-only&nbsp;
+      </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<a href="../cli/how-to-help-improve-the-doc.html">
 	  CLI-only
@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation-25.html">
 	  Introduction
 	</a>
       </strong>
@@ -57,12 +57,16 @@
 	    Use the MAAS CLI
 	  </a>
 	</li>
+      </ul>
       <strong>
-	<a href="about-controllers.html">
-	  Controllers
-	</a>
+	Controllers
       </strong>
       <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-racks.html">
 	    Manage racks
@@ -80,11 +84,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-machines.html">
-	  Machines
-	</a>
+	Machines
       </strong>
       <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-machines.html">
 	    Manage machines
@@ -102,11 +109,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-vm-hosting.html">
-	  VM hosting
-	</a>
+	VM hosting
       </strong>
       <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-vm-hosts.html">
 	    Manage VM hosts
@@ -124,11 +134,34 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-networking.html">
-	  Networking
-	</a>
+	Networking fundamentals
       </strong>
       <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-networks.html">
 	    Manage networks
@@ -176,11 +209,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-images.html">
-	  Images
-	</a>
+	Images
       </strong>
       <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-import-images.html">
 	    Select and import images
@@ -193,7 +229,7 @@
 	</li>
 	<li>
 	  <a href="how-to-create-a-custom-ubuntu-image.html">
-	    Create custom Ubuntu images
+	    Create custom images
 	  </a>
 	</li>
 	<li>
@@ -213,14 +249,17 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-tags-and-annotations.html">
-	  Tags
-	</a>
+	Tags
       </strong>
       <ul>
 	<li>
-	  <a href="how-to-manage-tags.html">
-	    Manage tags
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
 	  </a>
 	</li>
 	<li>
@@ -250,8 +289,8 @@
 	</strong>
 	<ul>
 	  <li>
-	    <a href="how-to-set-up-prometheus-metrics.html">
-	      Set up Prometheus
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
 	    </a>
 	  </li>
 	  <li>
@@ -301,7 +340,7 @@
 	</li>
 	<li>
 	  <a href="api.html">
-	    API reference
+	    API documentation
 	  </a>
 	</li>
 	<li>
@@ -355,7 +394,8 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>How to help improve the documentation</h1><p>This page contains detailed information on how to become a successful MAAS documentation writer. Welcome to the club.</p>
+  <h1>How to help improve the doc</h1><!-- "How to help improve the doc" -->
+<p>This page contains detailed information on how to become a successful MAAS documentation writer. Welcome to the club.</p>
 <h2 id="heading--contribution-overview">Contribution overview</h2>
 
 <p>Once you have permission to edit the doc, you can modify any article by choosing the link at the bottom, entitled, &ldquo;Help improve this document in the forum.&rdquo;  Recognise that what you change will be posted instantly.  Check your work carefully before saving your edits!</p>
@@ -383,7 +423,7 @@
 <li>Resist being overly formal.</li>
 <li>Verify hyperlinks and examples.</li>
 <li>Target audience: intermediate system administrator, not a developer.</li>
-<li>Use British English (en-GB). See <a href="language-details-contributing-to-maas-docs-745.html">language details</a>, including a comparison with American English (en-US).</li>
+<li>Use British English (en-GB).</li>
 <li>Never break a hyperlink with a carriage return. </li>
 </ul>
 <p>Note that the document markup is not particularly complicated.  For the most part, if you rely on the formatting bar just above the editor window &ndash; or use standard HTML &ndash; you shouldn&rsquo;t have much difficulty.</p>
@@ -425,10 +465,9 @@ maas command do something else
 </code></pre>
 <h2 id="heading--notes">Admonishments</h2>
 
-<p>An admonishment distinguishes information from the rest of the text. The syntax begins with the markup tag <code>[note]</code> and ends with the corresponding closure <code>[/note]</code>:</p>
+<p>An admonishment distinguishes information from the rest of the text. The syntax begins with the markup tag <code><strong>NOTE:</strong> </code> and ends with the corresponding closure <code> </code>:</p>
 <pre><code>[note type="admonishment-type" status="Admonishment title"]
 Admonishment text.
-[/note]
 </code></pre>
 <p>Where:</p>
 <ul>
@@ -444,42 +483,38 @@ Admonishment text.
 If KVM-backed nodes are used, ensure that the 'maas' user on the rack
 controller can connect to the KVM host using a passphraseless private SSH
 key.
-[/note]
+
 </code></pre>
 <p>And it will appear as:
 [note status=&rdquo;Note&rdquo;]
-If KVM-backed nodes are used, ensure that the &lsquo;maas&rsquo; user on the rack controller can connect to the KVM host using a passphraseless private SSH key.
-[/note]</p>
+If KVM-backed nodes are used, ensure that the &lsquo;maas&rsquo; user on the rack controller can connect to the KVM host using a passphraseless private SSH key.</p>
 <p><strong><em>Warning Admonishment</em></strong></p>
 <p>Mark up a standard &lsquo;Warning&rsquo; type admonishment this way:</p>
 <pre><code class="language-no-highlight">[note type=&quot;caution&quot; status=&quot;Warning&quot;]
 Data will be lost unless you do the right thing.
-[/note]
+
 </code></pre>
 <p>And it will appear like this:</p>
 <p>[note type=&rdquo;caution&rdquo; status=&rdquo;Warning&rdquo;]
-Data will be lost unless you do the right thing.
-[/note]</p>
+Data will be lost unless you do the right thing.</p>
 <p><strong><em>Positive Admonishment</em></strong></p>
 <p>A &lsquo;Positive&rsquo; type admonishment should be entered as follows:</p>
 <pre><code>[note type=&quot;positive&quot; status=&quot;High score&quot;]
 A positive note that should include a title.
-[/note]
+
 </code></pre>
 <p>It will show up in the document like this:</p>
 <p>[note type=&rdquo;positive&rdquo; status=&rdquo;High score&rdquo;]
-A positive note that should include a title.
-[/note]</p>
+A positive note that should include a title.</p>
 <p><strong><em>Negative Admonishment</em></strong></p>
 <p>Finally, a &lsquo;Negative&rsquo; type admonishment, with its title, could be marked up like this:</p>
 <pre><code>[note type=&quot;negative&quot; status=&quot;Game over&quot;]
 A negative note that should include a title.
-[/note]
+
 </code></pre>
 <p>And will look this way to the reader:</p>
 <p>[note type=&rdquo;negative&rdquo; status=&rdquo;Game over&rdquo;]
-A negative note that should include a title.
-[/note]</p>
+A negative note that should include a title.</p>
 <h2 id="heading--comments">Comments</h2>
 
 <p>Occasionally it may be appropriate to include a comment to explain or organise some text. This ends up as an HTML comment &ndash; which can be read online, even if only in the browser inspection window &ndash; so take it seriously:</p>
@@ -500,10 +535,10 @@ The below text may be removed soon.
 
 <p>An image should not be overly cropped - allow for context. When ready, place the image file in the <code>uploads</code> directory.</p>
 <p>In terms of linking, they are managed very similarly to hyperlinks. However, they are placed on their own line; are preceded by an exclamation point; and both the label and destination have a specific naming convention:</p>
-<pre><code>&lt;a href=&quot;images/1f2e6cf2879e391e7ae1ad537cc9ce1baa119f86.png&quot; target = &quot;_blank&quot;&gt;&lt;img alt=&quot;unlabeled image&quot; width=&quot;690&quot; src=&quot;images/1f2e6cf2879e391e7ae1ad537cc9ce1baa119f86.png&quot;&gt;&lt;/a&gt;
+<pre><code>&lt;a href=&quot;../images/1f2e6cf2879e391e7ae1ad537cc9ce1baa119f86.png&quot; target = &quot;_blank&quot;&gt;&lt;img alt=&quot;unlabeled image&quot; width=&quot;690&quot; src=&quot;../images/1f2e6cf2879e391e7ae1ad537cc9ce1baa119f86.png&quot;&gt;&lt;/a&gt;
 </code></pre>
 <p>This image would appear in this way:</p>
-<p><a href="images/1f2e6cf2879e391e7ae1ad537cc9ce1baa119f86.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/1f2e6cf2879e391e7ae1ad537cc9ce1baa119f86.png"></a></p>
+<p><a href="../images/1f2e6cf2879e391e7ae1ad537cc9ce1baa119f86.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/1f2e6cf2879e391e7ae1ad537cc9ce1baa119f86.png"></a></p>
 <h2 id="heading--tiered-sections">Tiered sections</h2>
 
 <p>You can create optional detail sections (something like and &ldquo;in-line sidebar&rdquo;) by using these constructions:</p>
@@ -525,11 +560,9 @@ this text toggles when you click on the arrow
 this is yet another hidden level
 </details>
 </details></p>
-<h2 id="heading--capitalization">Capitalisation</h2>
+<h2 id="heading--capitalisation">Capitalisation</h2>
 
 <p>Do not use a &ldquo;Caps Everywhere&rdquo; style. It is only used in level one headers and the title metadata. References (visible text) to these page titles (including the navigation) should just capitalise the first letter. Obviously, this does not pertain to words that should always be capitalised according to basic grammar rules (e.g. acronyms, proper nouns).</p>
-<hr>
-<h2>****</h2>
     </div>
   </body>
 </html>
