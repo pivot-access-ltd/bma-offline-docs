@@ -26,13 +26,13 @@
 	  UI-only
 	</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/about-vm-hosting.html">
-	  CLI-only
-	</a>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation-25.html">
 	  Introduction
 	</a>
       </strong>
@@ -57,12 +57,16 @@
 	    Use the MAAS CLI
 	  </a>
 	</li>
+      </ul>
       <strong>
-	<a href="about-controllers.html">
-	  Controllers
-	</a>
+	Controllers
       </strong>
       <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-racks.html">
 	    Manage racks
@@ -80,11 +84,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-machines.html">
-	  Machines
-	</a>
+	Machines
       </strong>
       <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-machines.html">
 	    Manage machines
@@ -102,11 +109,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-vm-hosting.html">
-	  VM hosting
-	</a>
+	VM hosting
       </strong>
       <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-vm-hosts.html">
 	    Manage VM hosts
@@ -124,11 +134,34 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-networking.html">
-	  Networking
-	</a>
+	Networking fundamentals
       </strong>
       <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-networks.html">
 	    Manage networks
@@ -176,11 +209,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-images.html">
-	  Images
-	</a>
+	Images
       </strong>
       <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-import-images.html">
 	    Select and import images
@@ -193,7 +229,7 @@
 	</li>
 	<li>
 	  <a href="how-to-create-a-custom-ubuntu-image.html">
-	    Create custom Ubuntu images
+	    Create custom images
 	  </a>
 	</li>
 	<li>
@@ -213,14 +249,17 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-tags-and-annotations.html">
-	  Tags
-	</a>
+	Tags
       </strong>
       <ul>
 	<li>
-	  <a href="how-to-manage-tags.html">
-	    Manage tags
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
 	  </a>
 	</li>
 	<li>
@@ -250,8 +289,8 @@
 	</strong>
 	<ul>
 	  <li>
-	    <a href="how-to-set-up-prometheus-metrics.html">
-	      Set up Prometheus
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
 	    </a>
 	  </li>
 	  <li>
@@ -301,7 +340,7 @@
 	</li>
 	<li>
 	  <a href="api.html">
-	    API reference
+	    API documentation
 	  </a>
 	</li>
 	<li>
@@ -355,7 +394,8 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>About VM hosting</h1><p>MAAS VM hosts allow for the dynamic composition of nodes from a pool of available hardware resources (e.g. disk space, memory, cores). You can create virtual machines (VMs) as needed within the limits of your resources, without concern for physical hardware.</p>
+  <h1>About VM hosting</h1><!-- "About VM hosting" -->
+<p>MAAS VM hosts allow for the dynamic composition of nodes from a pool of available hardware resources (e.g. disk space, memory, cores). You can create virtual machines (VMs) as needed within the limits of your resources, without concern for physical hardware.</p>
 <p>This article will help you learn:</p>
 <ul>
 <li><a href="#heading--about-vm-hosts">About VM hosts</a></li>
@@ -364,7 +404,7 @@
 <li><a href="#heading--about-support-for-numa-et-al">About support for NUMA, SR-IOV, and hugepages</a></li>
 <li><a href="#heading--overcommit-resources">About over-committed resources</a></li>
 </ul>
-<p>MAAS currently supports VM hosts and VMs created with LXD VMs and VM hosts as the preferred VM hosting method. As a legacy offering, MAAS still supports VM hosts and VMs created via <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a>&#128279;.</p>
+<p>MAAS currently supports VM hosts and VMs created with LXD VMs and VM hosts as the preferred VM hosting method. As a legacy offering, MAAS still supports VM hosts and VMs created via <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a>.</p>
 <p><a href="#heading--about-vm-hosts"><h2 id="heading--about-vm-hosts">About VM hosts</h2></a></p>
 <p>A VM host is simply a machine which can run virtual machines (VMs) by allocating  resources across the VMs you want to create.  If needed, you can over-commit resources, allocating more resources than actually available, so long as you don&rsquo;t try to use more than the VM host has available at any one time. Once MAAS has enlisted, commissioned, and acquired a newly-added machine, you can deploy it as a VM host.  Alternatively, you can create a VM host from a machine you&rsquo;ve already got running.</p>
 <p>VM hosts are particularly useful for Juju integration, allowing for dynamic allocation of VMs with custom interface constraints. Alternatively, if you would like to use MAAS to manage a collection of VMs, the robust web UI allows you to easily create and manage VMs, logically grouped by VM host. Six conspicuous features include:</p>
@@ -379,9 +419,8 @@
 <p>Simply put, a VM host is a machine which is designated to run virtual machines (VMs). A VM host divides its resources (CPU cores, RAM, storage) among the number of VMs you want to create, based on choices that you make when creating each VM. It is also possible to overcommit resources – that is, use more resources than the VM host actually has available – as long as you use the VMs carefully. Once MAAS has enlisted, commissioned, and acquired a newly-added machine, you can deploy it as a VM host.</p>
 <p><a href="#heading--about-vm-host-storage-pools"><h2 id="heading--about-vm-host-storage-pools">About VM host storage pools</h2></a></p>
 <p>&ldquo;Storage pools” are storage resources managed by a VM host. A storage pool is a given amount of storage set aside for use by VMs. A pool can be organised into storage volumes, assigned to VMs as individual block devices.</p>
-<p>[note]
-For LXD VM hosts, each VM can be assigned a single block device from the storage pool.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+For LXD VM hosts, each VM can be assigned a single block device from the storage pool.</p>
 <p>Retrieve VM host storage pool information with the following command:</p>
 <pre><code>maas $PROFILE vm-host read $VM_HOST_ID
 </code></pre>
@@ -392,6 +431,8 @@ For LXD VM hosts, each VM can be assigned a single block device from the storage
 | [.name, .type, .path, .total, used, .available]) | @tsv' \
 | column -t
 </code></pre>
+<p><a href="#heading--about-lxd-vm-hosts"><h2 id="heading--about-lxd-vm-hosts">About LXD VM hosts</h2></a></p>
+<p>Please use the UI interface to interact with LXD VM hosts, by selecting &ldquo;UI&rdquo; from the dropdown above.</p>
 <p><a href="#heading--about-vms-and-numa"><h2 id="heading--about-vms-and-numa">About VMs and NUMA</h2></a></p>
 <p>MAAS provides extensive optimisation tools for using NUMA with virtual machines. Earlier versions of MAAS guarantee that machines are assigned to a single NUMA node that contains all the machine&rsquo;s resources. As of 2.9, MAAS now allows you to see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory. You can quickly spot a VM running in multiple NUMA nodes, and optimise accordingly, with instant updates on pinning and allocations. You can also tell which VMs are currently running.
 In addition, you can get a bird&rsquo;s-eye view of network configuration:</p>
@@ -410,6 +451,13 @@ In addition, you can get a bird&rsquo;s-eye view of network configuration:</p>
 <li>See resources per NUMA node.</li>
 <li>See resources for VM hosts bearing NUMA nodes.</li>
 <li>See the alignment between VM host interfaces and NUMA nodes.</li>
+</ol>
+<p>Via the CLI, users can see more details about NUMA-bearing VM host resources and configure hugepages. Select the relevant &ldquo;CLI&rdquo; link in the top menu to access this information.</p>
+<p>VM host management has been redesigned to support NUMA/SR-IOV configurations and hugepages from the API/CLI. Users can:</p>
+<ol>
+<li>See resources per NUMA node.</li>
+<li>See resources for VM hosts bearing NUMA nodes.</li>
+<li>See the alignment between VM host interfaces and NUMA nodes.</li>
 <li>Configure and use hugepages.</li>
 </ol>
 <p><a href="#heading--overcommit-resources"><h3 id="heading--overcommit-resources">About over-committed resources</h3></a></p>
@@ -421,6 +469,7 @@ In addition, you can get a bird&rsquo;s-eye view of network configuration:</p>
 <li><code>32 physical CPU cores * 10.0 multiplier  = 320 virtual CPU cores</code></li>
 <li><code>128GB physical memory  * 5.5 multiplier  = 704G virtual Memory</code></li>
 </ol>
+<p>Please use the MAAS UI to view overcommit ratios for NUMA resources.</p>
 <p>Over-committing resources allows a user to compose many MAAS-managed machines without worrying about the physical limitations of the host. For example, on a physical host with four cores and 12 GB of memory, you could compose four libvirt machines, each using two cores and 4 GB of memory.  This arrangement over commits the available physical resources. Provided you never run all four VMs simultaneously, you would have all the benefits of MAAS-managed VMs without over-taxing your host.</p>
     </div>
   </body>
