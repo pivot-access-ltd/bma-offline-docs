@@ -2345,4 +2345,3 @@ The blank layout removes all storage configuration from all storage devices. It 
 [note type="negative" status="Warning"]
 Machines with the blank layout applied are not deployable; you must first configure storage manually.
 [/note]
-
