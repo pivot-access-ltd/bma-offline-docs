@@ -165,10 +165,10 @@ To filter machines by dynamic (workload) annotations, use the following procedur
 
 [/tab]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
-This section will show you how to:
+This section will help you learn:
 
-- [Work with static annotations](#heading--work-with-static-annotations)
-- [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
+- [How to work with static annotations](#heading--work-with-static-annotations)
+- [How to work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
 
 <a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">How to work with static annotations</h3></a>
 
@@ -331,7 +331,7 @@ driven-teal  tgaat6     tango-golf
 
 <a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">How to work with dynamic (workload) annotations</h3></a>
 
-This section will show you how to:
+This section will help you learn:
 
 - [How to identify machines that can receive dynamic annotations](#heading--identify-machines-that-can-receive-dynamic-annotations)
 - [How to set dynamic annotations for a machine](#heading--set-dynamic-annotations-for-a-machine)
