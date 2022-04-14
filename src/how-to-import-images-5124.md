@@ -4,15 +4,15 @@ MAAS is only useful once it has images available to provision its nodes. Therefo
 [tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
 
-#### Three questions you may have:
+This article will help you learn:
 
-1. [How do I import standard images from maas.io?](#heading--import-maasio-image-ui)
-2. [How do I use other image mirrors to download images?](#heading--image-mirrors)
-3. [How do I import and provision non-Ubuntu images?](#heading--other-images)
+* [How to import standard images from maas.io](#heading--import-maasio-image-ui)
+* [How to use other image mirrors to download images](#heading--image-mirrors)
+* [How to import and provision non-Ubuntu images](#heading--other-images)
 
 Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/how-to-build-maas-images/5100).
 
-<a href="#heading--import-maasio-image-ui"><h2 id="heading--import-maasio-image-ui">Importing images from maas.io</h2></a>
+<a href="#heading--import-maasio-image-ui"><h2 id="heading--import-maasio-image-ui">How to import standard images from maas.io</h2></a>
 
 The 'Images' page shows what images and architectures have been selected and downloaded. By default, MAAS will automatically grab the most recent Ubuntu LTS releases (and amd64 architecture). Below, we have selected two additional releases:
 
@@ -26,7 +26,7 @@ Click the 'Save selection' button to initiate the import. MAAS will present exis
 
 To remove an image, un-select it and click 'Save selection'.
 
-<a href="#heading--image-mirrors"><h2 id="heading--image-mirrors">Image mirrors</h2></a>
+<a href="#heading--image-mirrors"><h2 id="heading--image-mirrors">How to use other image mirrors to download images</h2></a>
 
 You can also host Ubuntu images on a mirror. Configure this mirror by selecting 'Custom' beneath 'Choose source'. Enter the mirror URL and click 'Connect'.
 
@@ -36,7 +36,7 @@ Advanced options, such as using a GPG key or keyring to validate the mirror path
 
 Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/how-to-mirror-images-locally/5188) for instructions.
 
-<a href="#heading--other-images"><h2 id="heading--other-images">Other images</h2></a>
+<a href="#heading--other-images"><h2 id="heading--other-images">How to import and provision non-Ubuntu images</h2></a>
 
 It is also possible to import and provision images other than Ubuntu. Images supported and provided by MAAS will appear beneath the 'Other Images' section. Currently, images for CentOS 6.6, CentOS 7.0, and CentOS 8.0 are available. These images can be imported and used just like the Ubuntu images above.
 
@@ -45,18 +45,18 @@ It is also possible to import and provision images other than Ubuntu. Images sup
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
 You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/about-images/5076#boot-image-sources)) for more details. We highly recommended syncing images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
 
-#### Eight questions you may have:
+This article will help you learn:
 
-1. [How do I get started with the MAAS CLI?](/t/how-to-use-the-maas-cli/5236)
-2. [How do I list boot sources?](#heading--list-boot-sources)
-3. [How do I select images?](#heading--select-image)
-4. [How do I list image selections?](#heading--list-image-selections)
-5. [How do I import newly-selected images?](#heading--import-newly-selected-images)
-6. [How do I list currently available images?](#heading--list-currently-available-images)
-7. [How do I delete a boot source?](#heading--delete-a-boot-source)
-8. [How do I edit a boot source?](#heading--edit-a-boot-source)
+* [How to get started with the MAAS CLI](/t/how-to-use-the-maas-cli/5236)
+* [How to list boot sources](#heading--list-boot-sources)
+* [How to select images](#heading--select-image)
+* [How to list image selections](#heading--list-image-selections)
+* [How to import newly-selected images](#heading--import-newly-selected-images)
+* [How to list currently available images](#heading--list-currently-available-images)
+* [How to delete a boot source](#heading--delete-a-boot-source)
+* [How to edit a boot source](#heading--edit-a-boot-source)
 
-<a href="#heading--list-boot-sources"><h2 id="heading--list-boot-sources">List boot sources</h2></a>
+<a href="#heading--list-boot-sources"><h2 id="heading--list-boot-sources">How to list boot sources</h2></a>
 
 If you want to download boot sources, i.e., the locations from which you may download images, try the following:
 
@@ -68,7 +68,7 @@ maas $PROFILE boot-sources read
 Although multiple boot sources may be listed, MAAS can only practically work with a single boot source.
 [/note]
 
-<a href="#heading--select-images"><h2 id="heading--select-images">Select images</h2></a>
+<a href="#heading--select-image"><h2 id="heading--select-image">How to select images</h2></a>
 
 Use the `boot-source-selections` command to select images from a boot source. After selecting new images, you will need to [import](#heading--import-newly-selected-images) them.
 
@@ -104,7 +104,7 @@ maas $PROFILE boot-source-selections create 1 \
     subarches="hwe-16.04" labels="*"
 ```
 
-<a href="#heading--list-image-selections"><h2 id="heading--list-image-selections">List image selections</h2></a>
+<a href="#heading--list-image-selections"><h2 id="heading--list-image-selections">How to list image selections</h2></a>
 
 To list image selections for a boot source:
 
@@ -112,7 +112,7 @@ To list image selections for a boot source:
 maas $PROFILE boot-source-selections read $SOURCE_ID
 ```
 
-<a href="#heading--import-newly-selected-images"><h2 id="heading--import-newly-selected-images">Import newly-selected images</h2></a>
+<a href="#heading--import-newly-selected-images"><h2 id="heading--import-newly-selected-images">How to import newly-selected images</h2></a>
 
 To import newly-selected images (boot resources):
 
@@ -124,7 +124,7 @@ Once newly-selected images are imported, a sync mechanism is enabled (by default
 
 Available images resulting from this action are reflected in the web UI.
 
-<a href="#heading--list-currently-available-images"><h2 id="heading--list-currently-available-images">List currently available images</h2></a>
+<a href="#heading--list-currently-available-images"><h2 id="heading--list-currently-available-images">How to list currently available images</h2></a>
 
 To list currently available/imported images (boot resources):
 
@@ -132,7 +132,7 @@ To list currently available/imported images (boot resources):
 maas $PROFILE boot-resources read
 ```
 
-<a href="#heading--delete-a-boot-source"><h2 id="heading--delete-a-boot-source">Delete a boot source</h2></a>
+<a href="#heading--delete-a-boot-source"><h2 id="heading--delete-a-boot-source">How to delete a boot source</h2></a>
 
 To delete a boot source (the location from which you can download images): 
 
@@ -142,7 +142,7 @@ maas $PROFILE boot-source delete $SOURCE_ID
 
 If you delete the sole boot source, then the fields 'Sync URL' and 'Keyring Path' in the web UI will take on null values.
 
-<a href="#heading--edit-a-boot-source"><h2 id="heading--edit-a-boot-source">Edit a boot source</h2></a>
+<a href="#heading--edit-a-boot-source"><h2 id="heading--edit-a-boot-source">How to edit a boot source</h2></a>
 
 You can edit an existing boot source by changing the GPG keyring file ($KEYRING_FILE) and the location ($URL).
 
@@ -157,7 +157,7 @@ At this time MAAS only supports a boot source containing official MAAS images. A
 
 KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
 
-<a href="#heading--add-a-boot-source"><h2 id="heading--add-a-boot-source">Add a boot source</h2></a>
+<a href="#heading--add-a-boot-source"><h2 id="heading--add-a-boot-source">How to add a boot source</h2></a>
 
 [note]
 To avoid unnecessary complexity, you should probably delete any existing boot sources before adding a new one.
@@ -183,7 +183,7 @@ KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
 
 If you added a sole boot source, then the fields 'Sync URL' and 'Keyring Path' in the web UI will reflect its values.
 
-<a href="#heading--using-a-local-image-mirror"><h3 id="heading--using-a-local-image-mirror">Using a local image mirror</h3></a>
+<a href="#heading--using-a-local-image-mirror"><h3 id="heading--using-a-local-image-mirror">How to use a local image mirror</h3></a>
 
 Once the mirror is set up according to [Local image mirror](/t/how-to-mirror-images-locally/5188) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
 
@@ -192,7 +192,7 @@ Once the mirror is set up according to [Local image mirror](/t/how-to-mirror-ima
 
 Where $MIRROR is the mirror server's hostname or IP address.
 
-<a href="#heading--recreate-the-default-boot-source"><h3 id="heading--recreate-the-default-boot-source">Recreate the default boot source</h3></a>
+<a href="#heading--recreate-the-default-boot-source"><h3 id="heading--recreate-the-default-boot-source">How to recreate the default boot source</h3></a>
 
 Recreate the default boot source if it was ever deleted using the following variable values:
 
