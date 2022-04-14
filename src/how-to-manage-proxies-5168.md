@@ -7,14 +7,12 @@ There are three possible options:
 2.   external proxy
 3.   no proxy
 
-Configuring a proxy with MAAS consists of enabling/disabling one of the above three options and enabling/disabling proxying on a specific subnet.
+Configuring a proxy with MAAS consists of enabling/disabling one of the above three options and enabling/disabling proxying on a specific subnet. This article will help you learn:
 
-#### Two questions you may have:
+* [About the MAAS internal proxy](#heading--internal-proxy-maas-proxy)
+* [How to create an external proxy](#heading--configure-proxy)
 
-1. [How and why should I create an internal proxy?](#heading--internal-proxy-maas-proxy)
-2. [How and why should I create an external proxy?](#heading--configure-proxy)
-
-<a href="#heading--internal-proxy-maas-proxy"><h2 id="heading--internal-proxy-maas-proxy">Internal proxy (MAAS proxy)</h2></a>
+<a href="#heading--internal-proxy-maas-proxy"><h2 id="heading--internal-proxy-maas-proxy">About the MAAS internal proxy</h2></a>
 
 MAAS provides an internal proxy server. Although it is set up to work well with APT/package requests, it is effectively an HTTP caching proxy server. If you configure the MAAS region controller as the default gateway for the machines it manages then the proxy will work transparently (on TCP port 3128). Otherwise, machines will need to access it on TCP port 8000.
 
@@ -31,7 +29,7 @@ You must install the proxy on the same host as the region controller (via the 'm
 [/tab]
 [/tabs]
 
-<a href="#heading--configure-proxy"><h2 id="heading--configure-proxy">Configuring an external proxy</h2></a>
+<a href="#heading--configure-proxy"><h2 id="heading--configure-proxy">How to create an external proxy</h2></a>
 
 [tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]

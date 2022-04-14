@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -402,17 +402,16 @@
 <li>external proxy</li>
 <li>no proxy</li>
 </ol>
-<p>Configuring a proxy with MAAS consists of enabling/disabling one of the above three options and enabling/disabling proxying on a specific subnet.</p>
-<h4>Two questions you may have:</h4>
-<ol>
-<li><a href="#heading--internal-proxy-maas-proxy">How and why should I create an internal proxy?</a></li>
-<li><a href="#heading--configure-proxy">How and why should I create an external proxy?</a></li>
-</ol>
-<p><a href="#heading--internal-proxy-maas-proxy"><h2 id="heading--internal-proxy-maas-proxy">Internal proxy (MAAS proxy)</h2></a></p>
+<p>Configuring a proxy with MAAS consists of enabling/disabling one of the above three options and enabling/disabling proxying on a specific subnet. This article will help you learn:</p>
+<ul>
+<li><a href="#heading--internal-proxy-maas-proxy">About the MAAS internal proxy</a></li>
+<li><a href="#heading--configure-proxy">How to create an external proxy</a></li>
+</ul>
+<p><a href="#heading--internal-proxy-maas-proxy"><h2 id="heading--internal-proxy-maas-proxy">About the MAAS internal proxy</h2></a></p>
 <p>MAAS provides an internal proxy server. Although it is set up to work well with APT/package requests, it is effectively an HTTP caching proxy server. If you configure the MAAS region controller as the default gateway for the machines it manages then the proxy will work transparently (on TCP port 3128). Otherwise, machines will need to access it on TCP port 8000.</p>
 <p>By default, the proxy is available to all hosts residing in any subnet detected by MAAS, not just MAAS-managed machines. It is therefore recommended to disable access to those subnets that represent untrusted networks.</p>
 <p>MAAS manages its proxy. So although the active configuration, located in file <code>/var/snap/maas/current/proxy</code>, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.</p>
-<p><a href="#heading--configure-proxy"><h2 id="heading--configure-proxy">Configuring an external proxy</h2></a></p>
+<p><a href="#heading--configure-proxy"><h2 id="heading--configure-proxy">How to create an external proxy</h2></a></p>
 <p>Enabling and disabling proxying, in general, is done via a Boolean option (&lsquo;true&rsquo; or &lsquo;false&rsquo;). The following command will disable proxying completely:</p>
 <pre><code class="language-bash">maas $PROFILE maas set-config name=enable_http_proxy value=false
 </code></pre>
