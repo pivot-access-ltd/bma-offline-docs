@@ -26,9 +26,9 @@
 	  UI-only
 	</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/maas-documentation.html">
-	  CLI-only
-	</a>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
@@ -57,12 +57,16 @@
 	    Use the MAAS CLI
 	  </a>
 	</li>
+      </ul>
       <strong>
-	<a href="about-controllers.html">
-	  Controllers
-	</a>
+	Controllers
       </strong>
       <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-racks.html">
 	    Manage racks
@@ -80,11 +84,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-machines.html">
-	  Machines
-	</a>
+	Machines
       </strong>
       <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-machines.html">
 	    Manage machines
@@ -102,11 +109,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-vm-hosting.html">
-	  VM hosting
-	</a>
+	VM hosting
       </strong>
       <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-vm-hosts.html">
 	    Manage VM hosts
@@ -124,11 +134,34 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-networking.html">
-	  Networking
-	</a>
+	Networking fundamentals
       </strong>
       <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-networks.html">
 	    Manage networks
@@ -176,11 +209,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-images.html">
-	  Images
-	</a>
+	Images
       </strong>
       <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-import-images.html">
 	    Select and import images
@@ -193,7 +229,7 @@
 	</li>
 	<li>
 	  <a href="how-to-create-a-custom-ubuntu-image.html">
-	    Create custom Ubuntu images
+	    Create custom images
 	  </a>
 	</li>
 	<li>
@@ -213,14 +249,17 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-tags-and-annotations.html">
-	  Tags
-	</a>
+	Tags
       </strong>
       <ul>
 	<li>
-	  <a href="how-to-manage-tags.html">
-	    Manage tags
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
 	  </a>
 	</li>
 	<li>
@@ -250,8 +289,8 @@
 	</strong>
 	<ul>
 	  <li>
-	    <a href="how-to-set-up-prometheus-metrics.html">
-	      Set up Prometheus
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
 	    </a>
 	  </li>
 	  <li>
@@ -301,7 +340,7 @@
 	</li>
 	<li>
 	  <a href="api.html">
-	    API reference
+	    API documentation
 	  </a>
 	</li>
 	<li>
@@ -355,18 +394,19 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>MAAS Documentation</h1><p>MAAS is <strong>Metal As A Service</strong>, a service that lets you treat physical servers like virtual machines &ndash; instances &ndash; in the cloud.  No need for you to manage servers individually: MAAS turns your bare metal into an elastic, cloud-like resource.</p>
-<p><a href="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a></p>
+  <h1>MAAS documentation</h1><!-- "MAAS documentation" -->
+<p>MAAS is <strong>Metal As A Service</strong>, a service that treats physical servers like virtual machines (instances) in the cloud.  No need to manage servers individually: MAAS turns bare metal into an elastic, cloud-like resource.</p>
+<p><a href="../images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a></p>
 <p><a href="#heading--how-to-engage-with-maas"><h2 id="heading--how-to-engage-with-maas">How to engage with MAAS</h2></a></p>
 <ul>
-<li><a href="whats-new-in-maas-5292.html">Find out what&rsquo;s new in MAAS</a></li>
-<li><a href="give-me-an-example-of-maas-snap-3-0-ui-5092.html">Get started with MAAS</a></li>
-<li><a href="--5448.html">Get professional support</a></li>
-<li><a href="report-a-bug-4446.html">Report a bug</a></li>
-<li><a href="request-a-feature-4447.html">Request a feature</a></li>
-<li><a href="https://discourse.maas.io">Ask questions on the forum</a></li>
+<li><a href="what-is-new-with-maas.html">What&rsquo;s new in MAAS?</a></li>
+<li><a href="get-started-with-maas.html">Get started with MAAS</a></li>
+<li><a href="how-to-contact-us.html">Get professional support</a></li>
+<li><a href="https://maas.io/docs/report-a-bug">Report a bug</a></li>
+<li><a href="https://maas.io/docs/request-a-feature">Request a feature</a></li>
+<li><a href="https://discourse.maas.io">Ask questions (forum)</a></li>
 <li><a href="https://launchpad.net/maas">Push some code</a></li>
-<li><a href="--5452.html">Improve our documentation</a></li>
+<li><a href="how-to-help-improve-the-doc.html">Improve our doc</a></li>
 </ul>
     </div>
   </body>
