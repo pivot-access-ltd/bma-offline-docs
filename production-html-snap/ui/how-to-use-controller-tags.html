@@ -22,9 +22,9 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../ui/how-to-use-controller-tags.html">
-	  UI-only
-	</a>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;UI-only&nbsp;
+      </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<a href="../cli/how-to-use-controller-tags.html">
 	  CLI-only
@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation-25.html">
 	  Introduction
 	</a>
       </strong>
@@ -57,12 +57,16 @@
 	    Use the MAAS CLI
 	  </a>
 	</li>
+      </ul>
       <strong>
-	<a href="about-controllers.html">
-	  Controllers
-	</a>
+	Controllers
       </strong>
       <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-racks.html">
 	    Manage racks
@@ -80,11 +84,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-machines.html">
-	  Machines
-	</a>
+	Machines
       </strong>
       <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-machines.html">
 	    Manage machines
@@ -102,11 +109,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-vm-hosting.html">
-	  VM hosting
-	</a>
+	VM hosting
       </strong>
       <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-vm-hosts.html">
 	    Manage VM hosts
@@ -124,11 +134,34 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-networking.html">
-	  Networking
-	</a>
+	Networking fundamentals
       </strong>
       <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-networks.html">
 	    Manage networks
@@ -176,11 +209,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-images.html">
-	  Images
-	</a>
+	Images
       </strong>
       <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-import-images.html">
 	    Select and import images
@@ -193,7 +229,7 @@
 	</li>
 	<li>
 	  <a href="how-to-create-a-custom-ubuntu-image.html">
-	    Create custom Ubuntu images
+	    Create custom images
 	  </a>
 	</li>
 	<li>
@@ -213,14 +249,17 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-tags-and-annotations.html">
-	  Tags
-	</a>
+	Tags
       </strong>
       <ul>
 	<li>
-	  <a href="how-to-manage-tags.html">
-	    Manage tags
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
 	  </a>
 	</li>
 	<li>
@@ -250,8 +289,8 @@
 	</strong>
 	<ul>
 	  <li>
-	    <a href="how-to-set-up-prometheus-metrics.html">
-	      Set up Prometheus
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
 	    </a>
 	  </li>
 	  <li>
@@ -301,7 +340,7 @@
 	</li>
 	<li>
 	  <a href="api.html">
-	    API reference
+	    API documentation
 	  </a>
 	</li>
 	<li>
@@ -355,7 +394,8 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>How to use controller tags</h1><p>This article will show you:</p>
+  <h1>How to use controller tags</h1><!-- "How to use controller tags" -->
+<p>This article will show you:</p>
 <ul>
 <li><a href="#heading--create-and-assign-controller-tags-">How to create and assign controller tags </a></li>
 <li><a href="#heading--remove-and-delete-controller-tags">How to remove and delete controller tags</a></li>
@@ -366,11 +406,11 @@
 <ol>
 <li>Click on the &ldquo;Controllers&rdquo; tab to open the controllers page:</li>
 </ol>
-<p><a href="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
+<p><a href="../images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
 <ol>
 <li>Click on the hyperlinked name of the controller to which you want to assign tags.  You will see a screen with several cards, like this one:</li>
 </ol>
-<p><a href="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
+<p><a href="../images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
 <ol>
 <li>
 <p>Find the &ldquo;Tags&rdquo; card and click on &ldquo;Edit.&rdquo;  You will be brought to that controller&rsquo;s &ldquo;Configuration&rdquo; tab.</p>
@@ -380,7 +420,7 @@
 You&rsquo;ll be presented with an editing screen similar to this one:</p>
 </li>
 </ol>
-<p><a href="images/37401271d0ab3aa130127a251222e5eaf557b20c.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/37401271d0ab3aa130127a251222e5eaf557b20c.png"></a></p>
+<p><a href="../images/37401271d0ab3aa130127a251222e5eaf557b20c.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/37401271d0ab3aa130127a251222e5eaf557b20c.png"></a></p>
 <ol>
 <li>Follow the <a href="#heading--create-and-assign-tags">general procedure</a> to assign a tag to the controller.</li>
 </ol>
@@ -389,11 +429,11 @@ You&rsquo;ll be presented with an editing screen similar to this one:</p>
 <ol>
 <li>Click on the &ldquo;Controllers&rdquo; tab to open the controllers page:</li>
 </ol>
-<p><a href="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
+<p><a href="../images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
 <ol>
 <li>Click on the hyperlinked name of the controller to which you want to assign tags.  You will see a screen with several cards, like this one:</li>
 </ol>
-<p><a href="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
+<p><a href="../images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
 <ol>
 <li>
 <p>Find the &ldquo;Tags&rdquo; card and click on &ldquo;Edit.&rdquo;  You will be brought to that controller&rsquo;s &ldquo;Configuration&rdquo; tab.</p>
@@ -403,7 +443,7 @@ You&rsquo;ll be presented with an editing screen similar to this one:</p>
 You&rsquo;ll be presented with an editing screen similar to this one:</p>
 </li>
 </ol>
-<p><a href="images/37401271d0ab3aa130127a251222e5eaf557b20c.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/37401271d0ab3aa130127a251222e5eaf557b20c.png"></a></p>
+<p><a href="../images/37401271d0ab3aa130127a251222e5eaf557b20c.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/37401271d0ab3aa130127a251222e5eaf557b20c.png"></a></p>
 <ol>
 <li>Follow the <a href="#heading--delete-and-remove-tags">general procedure</a> to remove a tag from the controller.</li>
 </ol>
@@ -412,11 +452,11 @@ You&rsquo;ll be presented with an editing screen similar to this one:</p>
 <ol>
 <li>Click on the &ldquo;Controllers&rdquo; tab to open the controllers page:</li>
 </ol>
-<p><a href="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
+<p><a href="../images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
 <ol>
 <li>Click on the hyperlinked name of the controller of interest..  You will see a screen with several cards, like this one:</li>
 </ol>
-<p><a href="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
+<p><a href="../images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a></p>
 <ol>
 <li>Find the &ldquo;Tags&rdquo; card; this card will list all the tags assigned to this controller.</li>
 </ol>

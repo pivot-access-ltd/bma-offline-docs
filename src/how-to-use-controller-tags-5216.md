@@ -1,3 +1,4 @@
+<!-- "How to use controller tags" -->
 This article will show you:
 
 [tabs]
