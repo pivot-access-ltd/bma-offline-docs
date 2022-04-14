@@ -1,4 +1,5 @@
 <h2>MAAS 3.2 Beta 2 release notes</h2>
+
 We are happy to announce that MAAS 3.2 Beta 2 is now available.  This release provides a new features -- tag management --  and more bug fixes.
 
 <a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.2 features and fixes</h3></a>
