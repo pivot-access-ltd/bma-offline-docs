@@ -1,4 +1,9 @@
-<h2>MAAS 3.1 release notes</h2>
+Here you will find release notes for:
+
+* [The current version of MAAS](#heading--current-maas-release-notes)
+* [Other MAAS versions](#heading--other-maas-versions)
+
+<a href="#heading--current-maas-release-notes"><h2 id="heading--current-maas-release-notes">MAAS 3.1 release notes</h2></a>
 
 We are happy to announce that MAAS 3.1 is now available. This release provides new features and critical bug fixes.
 
@@ -426,3 +431,14 @@ MAAS 3.1 bug fixes can be found in the following milestones:
  - [MAAS 3.1 Beta2 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta2)
  - [MAAS 3.1 Beta1 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta1)
  
+<a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a>
+
+Currently, you can find release notes for the following additional MAAS versions:
+
+* [MAAS 3.2 Beta](/t/whats-new-in-maas-snap-2-8-ui/5962)
+* [MAAS 3.0](/t/whats-new-in-maas-snap-2-8-ui/5963)
+* [MAAS 2.9](/t/whats-new-in-maas-snap-2-8-ui/5961)
+* [MAAS 2.8](/t/whats-new-in-maas-snap-2-8-ui/4299)
+* [MAAS 2.7](/t/whats-new-in-maas-snap-2-7-ui/4301)
+* [MAAS 2.6](/t/whats-new-in-2-6/788)
+* [Older versions](/t/historical-release-notes/835) (some overlap)
