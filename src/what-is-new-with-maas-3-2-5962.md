@@ -33,7 +33,7 @@ MAAS 3.2 can be installed fresh from snaps (recommended) with:
 sudo snap install --channel=3.2/beta maas
 ```
 
-MAAS 3.2 can be installed from packages by adding the `TBD` PPA:
+MAAS 3.2 can be installed from packages by adding the `ppa:maas/3.2-next` PPA:
 
 ```
 sudo add-apt-repository ppa:maas/3.2-next
@@ -67,4 +67,3 @@ Here is the breakdown of bugs fixed across the MAAS 3.2 release:
 The following known issues are associated with MAAS 3.2 at its current release state:
 
  * The offline documentation is not yet fully updated as of MAAS 3.2 Beta 2.  Please use the [online documentation](https://maas.io/docs) to get the correct operating information for Beta 2.
-
