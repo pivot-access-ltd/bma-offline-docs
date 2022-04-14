@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;UI-only&nbsp;
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/how-to-work-with-annotations.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation-25.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-the-maas-cli.html">
+	    Use the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Controllers
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-racks.html">
+	    Manage racks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-regions.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Machines
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	VM hosting
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Networking fundamentals
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machine-interfaces.html">
+	    Manage interfaces
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-dhcp.html">
+	    Manage DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-ranges.html">
+	    Manage IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-proxies.html">
+	    Manage proxies
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-ntp.html">
+	    Set up NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Images
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-maas-images.html">
+	    Build MAAS images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-a-custom-ubuntu-image.html">
+	    Create custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-image-streams.html">
+	    Use image streams
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Tags
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+	<p/>
+	<strong>
+	  Operations
+	</strong>
+	<ul>
+	  <li>
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
+	    </a>
+	  </li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-troubleshoot-maas.html">
+	  Troubleshooting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Get help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-and-tricks.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="what-is-new-with-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="how-to-contact-us.html">
+	  Contact us
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>How to work with annotations</h1><!-- "How to work with annotations" -->
+
+<p>Annotations are descriptive, searchable phrases that apply only to machines.  There are two types of annotations: static (always present in any machine state), and dynamic (only present in allocated or deployed states).  Annotations help you identify, characterise, and inform others about your machines.</p>
+<p><a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a></p>
+<p>This section will help you learn:</p>
+<ul>
+<li><a href="#heading--work-with-static-annotations">How to work with static annotations</a></li>
+<li><a href="#heading--work-with-dynamic-workload-annotations">How to work with dynamic (workload) annotations</a></li>
+</ul>
+<p><a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">How to work with static annotations</h3></a></p>
+<p>This subsection will help you learn:</p>
+<ul>
+<li><a href="#heading--create-and-assign-static-annotations">How to create and assign static annotations</a></li>
+<li><a href="#heading--delete-static-annotations">How to delete static annotations</a></li>
+<li><a href="#heading--view-static-annotations">How to view static annotations</a></li>
+<li><a href="#heading--work-with-dynamic-workload-annotations">How to work with with dynamic (workload) annotations</a></li>
+</ul>
+<p><a href="#heading--create-and-assign-static-annotations"><h4 id="heading--create-and-assign-static-annotations">How to create and assign static annotations</h4></a></p>
+<p>To create and assign static annotations (a note) to a machine, follow this procedure:</p>
+<ol>
+<li>Go to the machine list and click on the machine of interest:</li>
+</ol>
+<p><a href="../images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a></p>
+<ol>
+<li>This will bring up a machine summary for that machine:</li>
+</ol>
+<p><a href="../images/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a></p>
+<ol>
+<li>Select &ldquo;Configuration&rdquo; and click the &ldquo;Edit&rdquo; button to the right of the &ldquo;Machine configuration&rdquo; section:</li>
+</ol>
+<p><a href="../images/e9fda18183c567e62dea80fce01497227727e7bb.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/e9fda18183c567e62dea80fce01497227727e7bb.png"></a></p>
+<ol>
+<li>
+<p>Add free-form notes in the &ldquo;Note&rdquo; field, as desired.</p>
+</li>
+<li>
+<p>Click &ldquo;Save changes&rdquo; to update the machine&rsquo;s configuration.</p>
+</li>
+</ol>
+<p><a href="#heading--delete-static-annotations"><h4 id="heading--delete-static-annotations">How to delete static annotations</h4></a></p>
+<p>To delete static annotations (a note) from a machine, follow this procedure:</p>
+<ol>
+<li>Go to the machine list and click on the machine of interest:</li>
+</ol>
+<p><a href="../images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a></p>
+<ol>
+<li>This will bring up a machine summary for that machine:</li>
+</ol>
+<p><a href="../images/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a></p>
+<ol>
+<li>Select &ldquo;Configuration&rdquo; and click the &ldquo;Edit&rdquo; button to the right of the &ldquo;Machine configuration&rdquo; section:</li>
+</ol>
+<p><a href="../images/e9fda18183c567e62dea80fce01497227727e7bb.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/e9fda18183c567e62dea80fce01497227727e7bb.png"></a></p>
+<ol>
+<li>
+<p>Edit the free-form notes in the &ldquo;Note&rdquo; field, as desired.</p>
+</li>
+<li>
+<p>Click &ldquo;Save changes&rdquo; to update the machine&rsquo;s configuration.</p>
+</li>
+</ol>
+<p><a href="#heading--view-static-annotations"><h4 id="heading--view-static-annotations">How to view static annotations</h4></a></p>
+<p>To view static annotations, you can follow this procedure:</p>
+<ol>
+<li>Go to the machine list and look at the machine of interest; you should see the first few characters of a note in the bottom half of the column marked &ldquo;POOL/NOTE:&rdquo;</li>
+</ol>
+<p><a href="../images/3286feef733f4b56a94708d3af044c1523e78369.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/3286feef733f4b56a94708d3af044c1523e78369.png"></a></p>
+<ol>
+<li>Click on the machine, which will bring up a machine summary for that machine. Switch to the configuration tab to see the full note:</li>
+</ol>
+<p><a href="../images/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png"></a></p>
+<p><a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">How to work with dynamic (workload) annotations</h3></a></p>
+<p>This subsection will help you learn:</p>
+<ul>
+<li><a href="#heading--view-dynamic-workload-annotations-for-one-machine">How to view dynamic (workload) annotations for one machine</a></li>
+<li><a href="#heading--filter-on-dynamic-workload-annotations">How to filter on dynamic (workload) annotations</a></li>
+</ul>
+<p><a href="#heading--view-dynamic-workload-annotations-for-one-machine"><h4 id="heading--view-dynamic-workload-annotations-for-one-machine">How to view dynamic (workload) annotations for one machine</h4></a></p>
+<p>To view the dynamic (workload) annotations for one machine, do the following:</p>
+<ol>
+<li>
+<p>Go to the machine list and select the machine of interest by clicking on its hyperlinked name.</p>
+</li>
+<li>
+<p>In the machine summary that comes up, look for the &ldquo;Workload Annotations&rdquo; card, in the lower, right-hand corner:</p>
+</li>
+</ol>
+<p><a href="../images/e7def7a50f9c854f7aae0efc34897338c46c32c0.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/e7def7a50f9c854f7aae0efc34897338c46c32c0.png"></a></p>
+<p><a href="#heading--filter-on-dynamic-workload-annotations"><h4 id="heading--filter-on-dynamic-workload-annotations">How to filter on dynamic (workload) annotations</h4></a></p>
+<p>To filter machines by dynamic (workload) annotations, use the following procedure:</p>
+<ol>
+<li>Go to the machine list and select the &ldquo;Filter&rdquo; drop-down; open the &ldquo;Workload&rdquo; segment:</li>
+</ol>
+<p><a href="../images/946fb41e9cefb10a0b59787ce22b70a91b248d01.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/946fb41e9cefb10a0b59787ce22b70a91b248d01.jpeg"></a></p>
+<ol>
+<li>Select one or more values from this list to filter the machine list by these workload annotations.</li>
+</ol>
+    </div>
+  </body>
+</html>

@@ -1,3 +1,4 @@
+<!-- "How to work with annotations" -->
 
 Annotations are descriptive, searchable phrases that apply only to machines.  There are two types of annotations: static (always present in any machine state), and dynamic (only present in allocated or deployed states).  Annotations help you identify, characterise, and inform others about your machines.
 
@@ -5,26 +6,26 @@ Annotations are descriptive, searchable phrases that apply only to machines.  Th
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
-This section will explain how to:
+This section will help you learn:
 
-- [Work with static annotations](#heading--work-with-static-annotations)
-- [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
+- [How to work with static annotations](#heading--work-with-static-annotations)
+- [How to work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
 [/tab]
 [tab version="v2.9 Snap,v2.9 Packages"]
 This section explains how to work with notes, also known as "static annotations".  MAAS 2.9 does not support dynamic annotations; you must upgrade to MAAS version 3.0 or greater to obtain that capability.
 [/tab]
 [/tabs]
 
-<a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a>
+<a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">How to work with static annotations</h3></a>
 
-This subsection will show you how to:
+This subsection will help you learn:
 
 [tab version="v2.9 Snap,v2.9 Packages" view="UI"]
-- [Create and assign static annotations](#heading--create-and-assign-static-annotations)
-- [Delete static annotations](#heading--delete-static-annotations)
-- [View static annotations](#heading--view-static-annotations)
+- [How to create and assign static annotations](#heading--create-and-assign-static-annotations)
+- [How to delete static annotations](#heading--delete-static-annotations)
+- [How to view static annotations](#heading--view-static-annotations)
 
-<a href="#heading--create-and-assign-static-annotations"><h4 id="heading--create-and-assign-static-annotations">Create and assign static annotations</h4></a>
+<a href="#heading--create-and-assign-static-annotations"><h4 id="heading--create-and-assign-static-annotations">How to create and assign static annotations</h4></a>
 
 To create and assign static annotations (a note) to a machine, follow this procedure:
 
@@ -44,7 +45,7 @@ To create and assign static annotations (a note) to a machine, follow this proce
 
 5. Click "Save changes" to update the machine's configuration.
 
-<a href="#heading--delete-static-annotations"><h4 id="heading--delete-static-annotations">Delete static annotations</h4></a>
+<a href="#heading--delete-static-annotations"><h4 id="heading--delete-static-annotations">How to delete static annotations</h4></a>
 
 To delete static annotations (a note) from a machine, follow this procedure:
 
@@ -64,7 +65,7 @@ To delete static annotations (a note) from a machine, follow this procedure:
 
 5. Click "Save changes" to update the machine's configuration.
 
-<a href="#heading--view-static-annotations"><h4 id="heading--view-static-annotations">View static annotations</h4></a>
+<a href="#heading--view-static-annotations"><h4 id="heading--view-static-annotations">How to view static annotations</h4></a>
 
 To view static annotations, you can follow this procedure:
 
@@ -78,12 +79,12 @@ To view static annotations, you can follow this procedure:
 
 [/tab]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" view="UI"]
-- [Create and assign static annotations](#heading--create-and-assign-static-annotations)
-- [Delete static annotations](#heading--delete-static-annotations)
-- [View static annotations](#heading--view-static-annotations)
-- [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
+- [How to create and assign static annotations](#heading--create-and-assign-static-annotations)
+- [How to delete static annotations](#heading--delete-static-annotations)
+- [How to view static annotations](#heading--view-static-annotations)
+- [How to work with with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
 
-<a href="#heading--create-and-assign-static-annotations"><h4 id="heading--create-and-assign-static-annotations">Create and assign static annotations</h4></a>
+<a href="#heading--create-and-assign-static-annotations"><h4 id="heading--create-and-assign-static-annotations">How to create and assign static annotations</h4></a>
 
 To create and assign static annotations (a note) to a machine, follow this procedure:
 
@@ -103,7 +104,7 @@ To create and assign static annotations (a note) to a machine, follow this proce
 
 5. Click "Save changes" to update the machine's configuration.
 
-<a href="#heading--delete-static-annotations"><h4 id="heading--delete-static-annotations">Delete static annotations</h4></a>
+<a href="#heading--delete-static-annotations"><h4 id="heading--delete-static-annotations">How to delete static annotations</h4></a>
 
 To delete static annotations (a note) from a machine, follow this procedure:
 
@@ -123,7 +124,7 @@ To delete static annotations (a note) from a machine, follow this procedure:
 
 5. Click "Save changes" to update the machine's configuration.
 
-<a href="#heading--view-static-annotations"><h4 id="heading--view-static-annotations">View static annotations</h4></a>
+<a href="#heading--view-static-annotations"><h4 id="heading--view-static-annotations">How to view static annotations</h4></a>
 
 To view static annotations, you can follow this procedure:
 
@@ -135,14 +136,14 @@ To view static annotations, you can follow this procedure:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png"></a>
 
-<a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</h3></a>
+<a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">How to work with dynamic (workload) annotations</h3></a>
  
-This subsection will show you how to:
+This subsection will help you learn:
 
-- [View dynamic (workload) annotations for one machine](#heading--view-dynamic-workload-annotations-for-one-machine)
-- [Filter on dynamic (workload) annotations](#heading--filter-on-dynamic-workload-annotations)
+- [How to view dynamic (workload) annotations for one machine](#heading--view-dynamic-workload-annotations-for-one-machine)
+- [How to filter on dynamic (workload) annotations](#heading--filter-on-dynamic-workload-annotations)
 
-<a href="#heading--view-dynamic-workload-annotations-for-one-machine"><h4 id="heading--view-dynamic-workload-annotations-for-one-machine">View dynamic (workload) annotations for one machine</h4></a>
+<a href="#heading--view-dynamic-workload-annotations-for-one-machine"><h4 id="heading--view-dynamic-workload-annotations-for-one-machine">How to view dynamic (workload) annotations for one machine</h4></a>
 
 To view the dynamic (workload) annotations for one machine, do the following:
 
@@ -152,7 +153,7 @@ To view the dynamic (workload) annotations for one machine, do the following:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e7def7a50f9c854f7aae0efc34897338c46c32c0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e7def7a50f9c854f7aae0efc34897338c46c32c0.png"></a>
 
-<a href="#heading--filter-on-dynamic-workload-annotations"><h4 id="heading--filter-on-dynamic-workload-annotations">Filter on dynamic (workload) annotations</h4></a>
+<a href="#heading--filter-on-dynamic-workload-annotations"><h4 id="heading--filter-on-dynamic-workload-annotations">How to filter on dynamic (workload) annotations</h4></a>
 
 To filter machines by dynamic (workload) annotations, use the following procedure:
 
@@ -169,18 +170,18 @@ This section will show you how to:
 - [Work with static annotations](#heading--work-with-static-annotations)
 - [Work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
 
-<a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">Work with static annotations</h3></a>
+<a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">How to work with static annotations</h3></a>
 
-This subsection will show you how to:
+This subsection will help you learn:
 
-- [Identify your machines](#heading--identify-your-machines)
-- [Set a static annotation for a machine](#heading--set-a-static-annotation-for-a-machine)
-- [Change or clear a static annotation for a machine](#heading--change-or-clear-a-static-annotation-for-a-machine)
-- [List static annotations for all machines](#heading--list-static-annotations-for-all-machines)
-- [View a static annotation for one machine](#heading--view-a-static-annotation-for-one-machine)
+- [How to identify your machines](#heading--identify-your-machines)
+- [How to set a static annotation for a machine](#heading--set-a-static-annotation-for-a-machine)
+- [How to change or clear a static annotation for a machine](#heading--change-or-clear-a-static-annotation-for-a-machine)
+- [How to list static annotations for all machines](#heading--list-static-annotations-for-all-machines)
+- [How to view a static annotation for one machine](#heading--view-a-static-annotation-for-one-machine)
 
 
-<a href="#heading--identify-your-machines"><h4 id="heading--identify-your-machines">Identify your machines</h4></a>
+<a href="#heading--identify-your-machines"><h4 id="heading--identify-your-machines">How to identify your machines</h4></a>
 
 To identify your available machines, use a command like this one:
 
@@ -237,7 +238,7 @@ usable-condor  ed8hmy
 still-imp      h6ra6d
 ```
 
-<a href="#heading--set-a-static-annotation-for-a-machine"><h4 id="heading--set-a-static-annotation-for-a-machine">Set a static annotation for a machine</h4></a>
+<a href="#heading--set-a-static-annotation-for-a-machine"><h4 id="heading--set-a-static-annotation-for-a-machine">How to set a static annotation for a machine</h4></a>
 
 If you want to set the static annotation for a given machine, you can do so with a command that looks like this:
 
@@ -253,7 +254,7 @@ maas admin machine update ke3wc7 description="kilo-echo-3-whisky-charlie-7"
 
 You can check your work by [viewing the static annotations for one machine](#heading--view-a-static-annotation-for-one-machine).
 
-<a href="#heading--change-or-clear-a-static-annotation-for-a-machine"><h4 id="heading--change-or-clear-a-static-annotation-for-a-machine">Change or clear a static annotation for a machine</h4></a>
+<a href="#heading--change-or-clear-a-static-annotation-for-a-machine"><h4 id="heading--change-or-clear-a-static-annotation-for-a-machine">How to change or clear a static annotation for a machine</h4></a>
 
 If you want to set the static annotation for a given machine, use the same command you'd use to set a static annotation:
 
@@ -270,7 +271,7 @@ maas admin machine update ke3wc7 description=""
 You can check your work by [viewing the static annotations for one machine](#heading--view-a-static-annotation-for-one-machine).
 
 
-<a href="#heading--list-static-annotations-for-all-machines"><h4 id="heading--list-static-annotations-for-all-machines">List static annotations for all machines</h4></a>
+<a href="#heading--list-static-annotations-for-all-machines"><h4 id="heading--list-static-annotations-for-all-machines">How to list static annotations for all machines</h4></a>
 
 To list static annotations for all machines, enter a command similar to this one:
 
@@ -300,7 +301,7 @@ humble-bunny   srqnnb     sierra-romeo
 tough-kit      ke3wc7     kilo-echo
 ```
 
-<a href="#heading--view-a-static-annotation-for-one-machine"><h4 id="heading--view-a-static-annotation-for-one-machine">View a static annotation for one machine</h4></a>
+<a href="#heading--view-a-static-annotation-for-one-machine"><h4 id="heading--view-a-static-annotation-for-one-machine">How to view a static annotation for one machine</h4></a>
 
 To view a static annotation for one machine, try a command like this:
 
@@ -328,17 +329,17 @@ hostname     system_id  description
 driven-teal  tgaat6     tango-golf
 ```
 
-<a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">Work with dynamic (workload) annotations</h3></a>
+<a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">How to work with dynamic (workload) annotations</h3></a>
 
 This section will show you how to:
 
-- [Identify machines that can receive dynamic annotations](#heading--identify-machines-that-can-receive-dynamic-annotations)
-- [Set dynamic annotations for a machine](#heading--set-dynamic-annotations-for-a-machine)
-- [Clear and change dynamic annotations for a machine](#heading--clear-and-change-dynamic-annotations-for-a-machine)
-- [List dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines)
-- [List dynamic allocations for one machine](#heading--list-dynamic-annotations-for-one-machine)
+- [How to identify machines that can receive dynamic annotations](#heading--identify-machines-that-can-receive-dynamic-annotations)
+- [How to set dynamic annotations for a machine](#heading--set-dynamic-annotations-for-a-machine)
+- [How to clear and change dynamic annotations for a machine](#heading--clear-and-change-dynamic-annotations-for-a-machine)
+- [How to list dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines)
+- [How to list dynamic allocations for one machine](#heading--list-dynamic-annotations-for-one-machine)
 
-<a href="#heading--identify-machines-that-can-receive-dynamic-annotations"><h4 id="heading--identify-machines-that-can-receive-dynamic-annotations">Identify machines that can receive dynamic annotations</h4></a>
+<a href="#heading--identify-machines-that-can-receive-dynamic-annotations"><h4 id="heading--identify-machines-that-can-receive-dynamic-annotations">How to identify machines that can receive dynamic annotations</h4></a>
 
 You can only set dynamic annotations for machines that are in the "Allocated" or "Deployed" state.  To identify which of your machines are in these states, you can execute the following command:
 
@@ -395,7 +396,7 @@ usable-condor  ed8hmy     Deployed
 still-imp      h6ra6d     Allocated
 ```
 
-<a href="#heading--set-dynamic-annotations-for-a-machine"><h4 id="heading--set-dynamic-annotations-for-a-machine">Set dynamic annotations for a machine</h4></a>
+<a href="#heading--set-dynamic-annotations-for-a-machine"><h4 id="heading--set-dynamic-annotations-for-a-machine">How to set dynamic annotations for a machine</h4></a>
 
 Dynamic annotations, otherwise known as "workload annotations" or "owner data," can be used to keep track of the runtime status of machines that are acquired or deployed.  These annotations are set using `key=value` pairs.  You can set any `key=value` pair that you wish for any machine, although it's probably more useful if you standardise your key names.
 
@@ -413,7 +414,7 @@ maas admin machine set-owner-data tgaat6 owner=gsmith@zorko.com
 
 This command will return a JSON string representative of the machine's new configuration, including the dynamic annotations you've added. You can check your work by [listing the dynamic annotations for the one machine](#heading--list-dynamic-annotations-for-one-machine) you just edited, or by [listing dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines).
 
-<a href="#heading--clear-and-change-dynamic-annotations-for-a-machine"><h4 id="heading--clear-and-change-dynamic-annotations-for-a-machine">Clear and change dynamic annotations for a machine</h4></a>
+<a href="#heading--clear-and-change-dynamic-annotations-for-a-machine"><h4 id="heading--clear-and-change-dynamic-annotations-for-a-machine">How to clear and change dynamic annotations for a machine</h4></a>
 
 You can change dynamic annotations for a machine simply by executing a new `set-owner-data` command:
 
@@ -429,7 +430,7 @@ maas $PROFILE machine set-owner-data $SYSTEM_ID $KEY=""
 
 These commands will return a JSON string representative of the machine's new configuration, including the dynamic annotations you've changed or cleared. You can check your work by [listing the dynamic annotations for the one machine](#heading--list-dynamic-annotations-for-one-machine) you just edited, or by [listing dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines).
 
-<a href="#heading--list-dynamic-annotations-for-all-machines"><h4 id="heading--list-dynamic-annotations-for-all-machines">List dynamic annotations for all machines</h4></a>
+<a href="#heading--list-dynamic-annotations-for-all-machines"><h4 id="heading--list-dynamic-annotations-for-all-machines">How to list dynamic annotations for all machines</h4></a>
 
 You can list the current dynamic annotations for all machines with a command like this:
 
@@ -462,7 +463,7 @@ good-osprey    napfxk
 smart-hen      c4rwq7
 ```
 
-<a href="#heading--list-dynamic-annotations-for-one-machine"><h4 id="heading--list-dynamic-annotations-for-one-machine">List dynamic allocations for one machine</h4></a>
+<a href="#heading--list-dynamic-annotations-for-one-machine"><h4 id="heading--list-dynamic-annotations-for-one-machine">How to list dynamic allocations for one machine</h4></a>
 
 You can list the dynamic annotations for one machine by entering a command of the form:
 
