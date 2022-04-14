@@ -1,3 +1,4 @@
+<!-- "How to work with tags" -->
 Tags for different objects have similar purposes, but they aren't necessarily administered in the same way -- so we've included detailed articles for each tag type.  That said, many of the common operations regarding tags are performed in the same way.  This article will present some general, explanatory information, and then look at tag management steps that are the same (or very similar) across all types of MAAS tags.
 
 <a href="#heading--automatic-tags"><h2 id="heading--automatic-tags">About automatic tags</h2></a>
@@ -128,7 +129,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="sysrq_always_enabled dyndbg='file drivers/usb/* +p' 
 
 Here are some examples of tag definitions -- [more examples are available](https://github.com/canonical/mxt).
 
-Commonly used XPath functions usually include:
+Commonly used Xpath functions usually include:
 
 * contains
 * starts-with
