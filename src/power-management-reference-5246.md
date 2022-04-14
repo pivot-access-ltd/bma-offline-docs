@@ -15,31 +15,29 @@ When using IPMI, MAAS will attempt to automatically detect the correct cipher su
 
 <a href="#heading--power-management-reference"><h2 id="heading--power-management-reference">Power management reference guide</h2></a>
 
+#### This article will help you learn:
+
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
-#### Five questions you may have:
-
-1. [How do I configure a machine's power type?](#heading--config-power-type)
-2. [Show me a catalogue of power parameters, by type.](#heading--power-catalogue)
-3. [Can you give me an example of the virsh power type?](#heading--example-virsh-kvm-power-type)
-4. [Which BMC drivers are supported?](#heading--bmc-driver-support)
-5. [How do I configure and use IBM Z with MAAS?](#heading--configure-use-ibm-z)
+* [How to configure a machine's power type](#heading--config-power-type)
+* [How to configure and use IBM Z with MAAS](#heading--configure-use-ibm-z)
+* [How to use the virsh power type](#heading--example-virsh-kvm-power-type)
+* [Which BMC drivers are supported](#heading--bmc-driver-support)
 [/tab]
 [tab version="v2.9 Snap,v2.9 Packages"]
-#### Four questions you may have:
-
-1. [How do I configure a machine's power type?](#heading--config-power-type)
-2. [Show me a catalogue of power parameters, by type.](#heading--power-catalogue)
-3. [Can you give me an example of the virsh power type?](#heading--example-virsh-kvm-power-type)
-4. [Which BMC drivers are supported?](#heading--bmc-driver-support)
+* [How to configure a machine's power type](#heading--config-power-type)
+* [How to use the virsh power type](#heading--example-virsh-kvm-power-type)
+* [Which BMC drivers are supported](#heading--bmc-driver-support)
 [/tab]
 [/tabs]
+
+In addition, this article provides a [complete catalogue of power parameters, by type](#heading--power-catalogue).
 
 You may also like to try **[maaspower](https://gilesknap.github.io/maaspower/main/index.html)** which is a community project designed to be used with the MAAS webhook driver. It is a pluggable system that accepts MAAS webhooks and can translate them to other external systems. Note: it is not supported by Canonical.
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-<a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
+<a href="#heading--config-power-type"><h2 id="heading--config-power-type">How to configure a machine's power type</h2></a>
 
 To configure a machine's power type, click on the machine from the 'Machines' page of the web UI, then select its 'Configuration' tab. Scroll down until you find the Power configuration. If the power type is undefined, the following will be displayed:
 
@@ -289,7 +287,7 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | Power user | Username to access unit | Optional |
 | Power password | Password to access unit | Optional |
 
-<a href="#heading--example-virsh-kvm-power-type"><h2 id="heading--example-virsh-kvm-power-type">An example: the Virsh power type</h2></a>
+<a href="#heading--example-virsh-kvm-power-type"><h2 id="heading--example-virsh-kvm-power-type">How to use the virsh power type</h2></a>
 
 Consider a machine backed by VM. Below, a 'Power type' of `Virsh` has been selected, and the 'Power address' of `qemu+ssh://ubuntu@192.168.1.2/system` has been entered (replace values as appropriate).  The value of 'Power ID' is the VM domain (guest) name, here `node2`.
 
@@ -319,7 +317,7 @@ To that end, the "Required" column for this driver refers only to whether Webhoo
 | Verify SSL connections... | Boolean, whether or not to verify SSL connections with the system's root CA certificate | Required |
 [/tab]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-<a href="#heading--config-power-type"><h2 id="heading--config-power-type">Configure a machine's power type</h2></a>
+<a href="#heading--config-power-type"><h2 id="heading--config-power-type">How to configure a machine's power type</h2></a>
 
 To (re)configure a machine's power type, first find the machine's $SYSTEM_ID with the following recipe:
 
@@ -643,7 +641,7 @@ All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI
 
 
 
-<a href="#heading--example-virsh-kvm-power-type"><h2 id="heading--example-virsh-kvm-power-type">An example: the Virsh power type</h2></a>
+<a href="#heading--example-virsh-kvm-power-type"><h2 id="heading--example-virsh-kvm-power-type">How to use the virsh power type</h2></a>
 
 Consider a machine backed by a KVM, accessed via `virsh`.  You can create a corresponding MAAS machine and set its power parameters with a command like this one:
 
@@ -1019,7 +1017,7 @@ In the context of MAAS, the BMC is generally controlled by SNMP commands.  Any g
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
-<a href="#heading--configure-use-ibm-z"><h2 id="heading--configure-use-ibm-z">How do I configure and use IBM Z with MAAS?</h2></a>
+<a href="#heading--configure-use-ibm-z"><h2 id="heading--configure-use-ibm-z">How to configure and use IBM Z with MAAS</h2></a>
 
 The IBM Z or LinuxONE system can host MAAS controllers and is able to deploy predefined logical partitions (LPARs) KVM host(s), and virtual machines, if the mainframe is set up properly for MAAS.
 
