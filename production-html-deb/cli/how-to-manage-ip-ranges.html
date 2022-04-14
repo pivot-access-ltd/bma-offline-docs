@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -398,14 +398,13 @@
 <p>In MAAS-managed networks, you can further manage your subnets with a reserved range of IP addresses.  You can reserve IP addresses by adding one or more reserved ranges to a subnet configuration. You can define two types of ranges: reserved ranges and reserved dynamic ranges.  </p>
 <p>A reserved range operates differently depending on whether the subnet is managed or unmanaged.  For a managed (subnet), MAAS will never assign IP addresses inside this range.  You can use this range for anything, such as infrastructure systems, network hardware, external DHCP, or an OpenStack namespace.  For an unmanaged (subnet), MAAS will only assign IP addresses inside this range &ndash; but MAAS can assign any IP within this range.</p>
 <p>A reserved dynamic range is used by MAAS for enlisting, commissioning and, if enabled, MAAS-managed DHCP on the machine&rsquo;s VLAN during commissioning and deployment. If created with the Web UI, an initial range is created as part of the DHCP enablement process. MAAS never uses IP addresses from this range for an unmanaged subnet.</p>
-<p>This article gives specific instructions about creating and managing IP ranges.</p>
-<h4>Three questions you may have:</h4>
-<ol>
-<li><a href="#heading--create-a-range">How do I create an IP range?</a></li>
-<li><a href="#heading--edit-a-range">How do I edit an existing IP range?</a></li>
-<li><a href="#heading--delete-a-range">How do I delete an existing IP range?</a></li>
-</ol>
-<p><a href="#heading--create-a-range"><h2 id="heading--create-a-range">Create a range</h2></a></p>
+<p>This article gives specific instructions about creating and managing IP ranges; it will help you learn:</p>
+<ul>
+<li><a href="#heading--create-a-range">How to create an IP range</a></li>
+<li><a href="#heading--edit-a-range">How to edit an existing IP range</a></li>
+<li><a href="#heading--delete-a-range">How to delete an existing IP range</a></li>
+</ul>
+<p><a href="#heading--create-a-range"><h2 id="heading--create-a-range">How to create an IP range</h2></a></p>
 <p>See <a href="maas-concepts-and-terms-reference.html#heading--ip-ranges">Concepts and terms</a> for an explanation of the two kinds of reserved IP ranges MAAS uses.</p>
 <p>To create a range of dynamic IP addresses that will be used by MAAS for node enlistment, commissioning, and possibly deployment:</p>
 <pre><code class="language-bash">maas $PROFILE ipranges create type=dynamic \
@@ -423,7 +422,7 @@
 <p>To remove such a single reserved IP address:</p>
 <pre><code class="language-bash">maas $PROFILE ipaddresses release ip=$IP_STATIC_SINGLE
 </code></pre>
-<p><a href="#heading--edit-a-range"><h2 id="heading--edit-a-range">Edit a range</h2></a></p>
+<p><a href="#heading--edit-a-range"><h2 id="heading--edit-a-range">How to edit an existing IP range</h2></a></p>
 <p>To edit an IP range, first find the ID of the desired IP range with the command:</p>
 <pre><code>maas admin ipranges read
 </code></pre>

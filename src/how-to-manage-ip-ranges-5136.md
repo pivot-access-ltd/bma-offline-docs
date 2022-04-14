@@ -5,15 +5,13 @@ A reserved range operates differently depending on whether the subnet is managed
 
 A reserved dynamic range is used by MAAS for enlisting, commissioning and, if enabled, MAAS-managed DHCP on the machine's VLAN during commissioning and deployment. If created with the Web UI, an initial range is created as part of the DHCP enablement process. MAAS never uses IP addresses from this range for an unmanaged subnet.
 
-This article gives specific instructions about creating and managing IP ranges.
+This article gives specific instructions about creating and managing IP ranges; it will help you learn:
 
-#### Three questions you may have:
+* [How to create an IP range](#heading--create-a-range)
+* [How to edit an existing IP range](#heading--edit-a-range)
+* [How to delete an existing IP range](#heading--delete-a-range)
 
-1. [How do I create an IP range?](#heading--create-a-range)
-2. [How do I edit an existing IP range?](#heading--edit-a-range)
-3. [How do I delete an existing IP range?](#heading--delete-a-range)
-
-<a href="#heading--create-a-range"><h2 id="heading--create-a-range">Create a range</h2></a>
+<a href="#heading--create-a-range"><h2 id="heading--create-a-range">How to create an IP range</h2></a>
 
 [tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
@@ -73,13 +71,13 @@ maas $PROFILE ipaddresses release ip=$IP_STATIC_SINGLE
 [/tab]
 [/tabs]
 
-<a href="#heading--edit-a-range"><h2 id="heading--edit-a-range">Edit a range</h2></a>
+<a href="#heading--edit-a-range"><h2 id="heading--edit-a-range">How to edit an existing IP range</h2></a>
 
 [tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
 Click the 'Menu' button at the far right of the row corresponding to the subnet in question and select 'Edit reserved range' from the menu that appears. Edit the fields as desired and click the 'Save' button.
 
-<a href="#heading--delete-a-range"><h2 id="heading--delete-a-range">Delete a range</h2></a>
+<a href="#heading--delete-a-range"><h2 id="heading--delete-a-range">How to delete an existing IP range</h2></a>
 
 Select 'Remove range' from the menu that appears when clicking the 'Menu' button at the far right of the row corresponding to the subnet in question.
 
