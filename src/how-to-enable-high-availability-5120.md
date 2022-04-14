@@ -1,32 +1,32 @@
 <!-- "How to enable high availability" -->
-This page describes how to provide high availability (HA) for MAAS at both region and rack levels.  In the context of MAAS, there are four types of HA:
+This article describes how to provide high availability (HA) for MAAS at both region and rack levels.  In the context of MAAS, there are four types of HA:
 
 1. BMC (node power cycling)
 2. DHCP
 3. PostgreSQL
 4. API services
 
-#### Nine questions you might have:
+#### This article will help you learn:
 
-1. [How do I make rack controllers highly available?](#heading--rack-controller-ha)
-2. [How do I enable highly-available BMC?](#heading--bmc-ha)
-3. [How do I enable highly-available DHCP services?](#heading--dhcp-ha)
-4. [How do I make region controllers highly available?](#heading--region-controller-ha)
-5. [How do I enable highly-available PostgreSQL?](#heading--postgresql-ha)
-6. [How do I enable highly-available API services?](#heading--secondary-api-servers)
-7. [How do I enable load balancing for API services?](#heading--load-balancing-with-haproxy-optional)
-8. [How do I move a rack controller from one MAAS instance to another?](#heading--move-rack-controller)
-9. [What are the potential dangers of moving a rack controller?](#heading--dangers-moving-rack-controller)
+* [How to make rack controllers highly available](#heading--rack-controller-ha)
+* [How to enable highly-available BMC](#heading--bmc-ha)
+* [How to enable highly-available DHCP services](#heading--dhcp-ha)
+* [How to make region controllers highly available](#heading--region-controller-ha)
+* [How to enable highly-available PostgreSQL](#heading--postgresql-ha)
+* [How to enable highly-available API services](#heading--secondary-api-servers)
+* [How to enable load balancing for API services](#heading--load-balancing-with-haproxy-optional)
+* [How to move a rack controller from one MAAS instance to another](#heading--move-rack-controller)
+* [How to avoid the potential pitfalls of moving a rack controller](#heading--dangers-moving-rack-controller)
 
-<a href="#heading--rack-controller-ha"><h2 id="heading--rack-controller-ha">Make rack controllers highly available</h2></a>
+<a href="#heading--rack-controller-ha"><h2 id="heading--rack-controller-ha">How to make rack controllers highly available</h2></a>
 
 You need to [install multiple rack controllers](/t/how-to-manage-racks/5172#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
 
-<a href="#heading--bmc-ha"><h3 id="heading--bmc-ha">Enable highly-available BMC</h3></a>
+<a href="#heading--bmc-ha"><h3 id="heading--bmc-ha">How to enable highly-available BMC</h3></a>
 
 HA for BMC control (node power cycling) is provided out-of-the-box, once a second rack controller is present. MAAS will automatically identify which rack controller is responsible for a BMC and set up communication accordingly.
 
-<a href="#heading--dhcp-ha"><h3 id="heading--dhcp-ha">Enable highly-available DHCP services</h3></a>
+<a href="#heading--dhcp-ha"><h3 id="heading--dhcp-ha">How to enable highly-available DHCP services</h3></a>
 
 DHCP HA affects the way MAAS manages node, including enlistment, commissioning and deployment. It enables primary and secondary DHCP instances to serve the same VLAN. This VLAN replicates all lease information is between rack controllers. MAAS-managed DHCP is a requirement for DHCP HA.
 
@@ -55,7 +55,7 @@ Be sure to substitute the sample values for those of your own environment.
 [/tab]
 [/tabs]
 
-<a href="#heading--multiple-region-endpoints"><h3 id="heading--multiple-region-endpoints">Configure multiple region endpoints</h3></a>
+<a href="#heading--multiple-region-endpoints"><h3 id="heading--multiple-region-endpoints">How to configure multiple region endpoints</h3></a>
 
 [tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
@@ -77,22 +77,23 @@ MAAS will automatically discover and track all reachable region controllers in a
 
 The setup of highly-available DHCP is now complete.  Note that, for HA purposes, DHCP provisioning will take into account multiple DNS services when there is more than one region controller on a single region.
 
-<a href="#heading--region-controller-ha"><h2 id="heading--region-controller-ha">Make region controllers highly available</h2></a>
+<a href="#heading--region-controller-ha"><h2 id="heading--region-controller-ha">How to make region controllers highly available</h2></a>
 
-Implementing highly-available region control involves setting up two highly-available services:
+Implementing highly-available region control is possible when you learn:
 
-1.   PostgreSQL HA
-2.   Secondary API server(s)
+[How to enable highly-available PostgreSQL](#heading--postgresql-ha)
+[How to enable highly-available API services](#heading--secondary-api-servers)
+[How to set up load balancing with HAProxy (optional)](#heading--load-balancing-with-haproxy-optional)
 
 Load balancing is optional, but is highly recommended.
 
-<a href="#heading--postgresql-ha"><h3 id="heading--postgresql-ha">Enable highly-available PostgreSQL</h3></a>
+<a href="#heading--postgresql-ha"><h3 id="heading--postgresql-ha">How to enable highly-available PostgreSQL</h3></a>
 
 MAAS stores all state information in the PostgreSQL database. It is therefore recommended to run it in HA mode. Configuring HA for PostgreSQL is external to MAAS. You will, therefore, need to study the [PostgreSQL documentation](https://www.postgresql.org/docs/9.5/static/high-availability.html) and implement the variant of HA that makes you feel most comfortable.
 
 Each region controller uses up to 40 connections to PostgreSQL in high load situations. Running two region controllers requires no modifications to the `max_connections` in `postgresql.conf`. More than two region controllers require that `max_connections` be adjusted to add 40 more connections per added region controller.
 
-<a href="#heading--secondary-api-servers"><h3 id="heading--secondary-api-servers">Enable highly-available API services</h3></a>
+<a href="#heading--secondary-api-servers"><h3 id="heading--secondary-api-servers">How to enable highly-available API services</h3></a>
 
 [tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"]
@@ -112,7 +113,7 @@ Please see [Region controllers](/t/how-to-manage-regions/5176) and [Multiple reg
 [/tab]
 [/tabs]
 
-<a href="#heading--load-balancing-with-haproxy-optional"><h3 id="heading--load-balancing-with-haproxy-optional">Load balancing with HAProxy (optional)</h3></a>
+<a href="#heading--load-balancing-with-haproxy-optional"><h3 id="heading--load-balancing-with-haproxy-optional">How to enable load balancing for API services</h3></a>
 
 You can add load balancing with [HAProxy](http://www.haproxy.org/) load-balancing software to support multiple API servers. In this setup, HAProxy provides access to the MAAS web UI and API.
 
@@ -120,13 +121,13 @@ You can add load balancing with [HAProxy](http://www.haproxy.org/) load-balancin
 If you happen to have Apache running on the same server where you intend to install HAProxy, you will need to stop and disable `apache2`, because HAProxy binds to port 80.
 [/note]
 
-<a href="#heading--install"><h4 id="heading--install">Install</h4></a>
+<a href="#heading--install"><h4 id="heading--install">How to install HAProxy</h4></a>
 
 ``` bash
 sudo apt install haproxy
 ```
 
-<a href="#heading--configure"><h4 id="heading--configure">Configure</h4></a>
+<a href="#heading--configure"><h4 id="heading--configure">How to configure HAProxy</h4></a>
 
 Configure each API server's load balancer by copying the following into `/etc/haproxy/haproxy.cfg` (see the [upstream configuration manual (external link)](http://cbonte.github.io/haproxy-dconv/1.6/configuration.html) as a reference). Replace $PRIMARY_API_SERVER_IP and $SECONDARY_API_SERVER_IP with their respective IP addresses:
 
@@ -207,7 +208,7 @@ where the secret is found in `/var/snap/maas/common/maas/secret`.
 [/tab]
 [/tabs]
 
-<a href="#heading--move-rack-controller"><h3 id="heading--dangers-moving-rack-controller">Dangers of moving a rack controller</h3></a>
+<a href="#heading--move-rack-controller"><h3 id="heading--dangers-moving-rack-controller">How to avoid the potential pitfalls of moving a rack controller</h3></a>
 
 There are dangers associate with moving a rack controller -- dangers that may generate errors, get you into a non-working state, or cause you significant data loss.  These dangers are precipitated by one caveat and two potential mistakes:
 
