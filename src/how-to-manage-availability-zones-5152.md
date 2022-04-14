@@ -1,32 +1,30 @@
 <!-- "How to manage availability zones" -->
 An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](/t/about-networking/5084#heading--about-availability-zones) for more details.
 
-A newly installed MAAS comes with a default zone which initially contains all nodes. You cannot remove the 'default' zone or change its name, but you can create new zones and assign machine to them.  You can safely ignore this article if you're not interested in leveraging zones.
+A newly installed MAAS comes with a default zone which initially contains all nodes. You cannot remove the 'default' zone or change its name, but you can create new zones and assign machine to them. This article will help you learn:
 
-#### Six questions you may have:
-
-1. [How do I list availability zones?](#heading--list-zones)
-2. [How do I add an availability zone?](#heading--add-a-zone)
-3. [How do I edit an existing availability zone?](#heading--edit-a-zone)
-4. [How do I delete an existing availability zone?](#heading--delete-a-zone)
-5. [How do I assign a machine to an availability zone?](#heading--assign-a-node-to-a-zone)
-6. [How do I allocate a machine in a particular zone?](#heading--allocate-a-node-in-a-zone)
+* [How to list availability zones](#heading--list-zones)
+* [How to add an availability zone](#heading--add-a-zone)
+* [How to edit an existing availability zone](#heading--edit-a-zone)
+* [How to delete an existing availability zone](#heading--delete-a-zone)
+* [How to assign a machine to an availability zone](#heading--assign-a-node-to-a-zone)
+* [How to allocate a machine in a particular zone](#heading--allocate-a-node-in-a-zone)
 
 [tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
-<a href="#heading--list-zones"><h2 id="heading--list-zones">List availability zones</h2></a>
+<a href="#heading--list-zones"><h2 id="heading--list-zones">How to list availability zones</h2></a>
 
 To see a list of availability zones, choose "AZs" from the top menu:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/5ac446f2bda76276069fe5a1c302ff2acbf425a2.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5ac446f2bda76276069fe5a1c302ff2acbf425a2.jpeg"></a>
 
-<a href="#heading--add-a-zone"><h2 id="heading--add-a-zone">Add a zone</h2></a>
+<a href="#heading--add-a-zone"><h2 id="heading--add-a-zone">How to add an availability zone</h2></a>
 
 To create a zone, navigate to the 'AZs' page of the web UI and use the 'Add AZ' button. Enter a name for the zone and click 'Add AZ'.
 
 <a href="https://assets.ubuntu.com/v1/f4032f39-manage-zones__2.4_add-zone.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/f4032f39-manage-zones__2.4_add-zone.png"></a>
 
-<a href="#heading--edit-a-zone"><h2 id="heading--edit-a-zone">Edit a zone</h2></a>
+<a href="#heading--edit-a-zone"><h2 id="heading--edit-a-zone">How to edit an existing availability zone</h2></a>
 
 To edit a zone, on the 'AZs' page, select a zone and use the 'Edit' button:
 
@@ -36,13 +34,13 @@ This selection allows you to change the name and description for the added (or e
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/11fb5b6c13609a7ef976aa301e02f43422080066.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/11fb5b6c13609a7ef976aa301e02f43422080066.jpeg"></a>
 
-<a href="#heading--delete-a-zone"><h2 id="heading--delete-a-zone">Delete a zone</h2></a>
+<a href="#heading--delete-a-zone"><h2 id="heading--delete-a-zone">How to delete an existing availability zone</h2></a>
 
 To delete a zone, on the 'AZs' page, select a zone and use the 'Delete AZ' button. Doing so will also move any potential machine associations to the default zone.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/afb0576940f2e20266dc907911f837378958a64a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/afb0576940f2e20266dc907911f837378958a64a.jpeg"></a>
 
-<a href="#heading--assign-a-node-to-a-zone"><h2 id="heading--assign-a-node-to-a-zone">Assign a machine to a zone</h2></a>
+<a href="#heading--assign-a-node-to-a-zone"><h2 id="heading--assign-a-node-to-a-zone">How to assign a machine to an availability zone</h2></a>
 
 To assign a machine to a zone, from the 'Machines' page, select a machine (or multiple machines) and choose 'Set zone' using the 'Take action' button:
 
@@ -54,7 +52,7 @@ You can also edit a machine's 'Configuration' page to change its zone.
 [/tab]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
 
-<a href="#heading--list-zones"><h2 id="heading--list-zones">List availability zones</h2></a>
+<a href="#heading--list-zones"><h2 id="heading--list-zones">How to list availability zones</h2></a>
 
 To see a list of availability zones, enter the following command:
 
@@ -78,7 +76,7 @@ ZONE  NAME         DESCRIPTION
 6     ProServ
 ```
 
-<a href="#heading--add-a-zone"><h2 id="heading--add-a-zone">Add a zone</h2></a>
+<a href="#heading--add-a-zone"><h2 id="heading--add-a-zone">How to add an availability zone</h2></a>
 
 To create a zone, enter the following command:
 
@@ -86,7 +84,7 @@ To create a zone, enter the following command:
 maas $PROFILE zones create name=$ZONE_NAME description=$ZONE_DESCRIPTION
 ```
 
-<a href="#heading--edit-a-zone"><h2 id="heading--edit-a-zone">Edit a zone</h2></a>
+<a href="#heading--edit-a-zone"><h2 id="heading--edit-a-zone">How to edit an existing availability zone</h2></a>
 
 To edit a zone, enter a command similar to the following:
 
@@ -95,7 +93,7 @@ maas $PROFILE zone update $OLD_ZONE_NAME name=$NEW_ZONE_NAME \
 description=$ZONE_DESCRIPTION
 ```
 
-<a href="#heading--delete-a-zone"><h2 id="heading--delete-a-zone">Delete a zone</h2></a>
+<a href="#heading--delete-a-zone"><h2 id="heading--delete-a-zone">How to delete an existing availability zone</h2></a>
 
 To delete a zone, enter a command like this:
 
@@ -103,7 +101,7 @@ To delete a zone, enter a command like this:
 maas $PROFILE zone delete $ZONE_NAME
 ```
 
-<a href="#heading--assign-a-node-to-a-zone"><h2 id="heading--assign-a-node-to-a-zone">Assign a machine to a zone</h2></a>
+<a href="#heading--assign-a-node-to-a-zone"><h2 id="heading--assign-a-node-to-a-zone">How to assign a machine to an availability zone</h2></a>
 
 To assign a machine to a zone, first retrieve the machine's system ID like this:
 
@@ -119,7 +117,7 @@ maas admin machine update $SYSTEM_ID zone=$ZONE_NAME
 [/tab]
 [/tabs]
 
-<a href="#heading--allocate-a-node-in-a-zone"><h2 id="heading--allocate-a-node-in-a-zone">Allocate a machine in a zone</h2></a>
+<a href="#heading--allocate-a-node-in-a-zone"><h2 id="heading--allocate-a-node-in-a-zone">How to allocate a machine in a particular zone</h2></a>
 
 Allocating a machine in a particular zone can only be done via the MAAS CLI.
 
