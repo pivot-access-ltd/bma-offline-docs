@@ -1,3 +1,4 @@
+<!-- "Tips and tricks" -->
 This section contains a collection of tips, tricks, and traps which may help solve unusual or infrequent issues that come up.
 
 #### What would you like to do?
@@ -58,7 +59,7 @@ Using a local PostgreSQL server is a little bit of work, but it provides great b
 
 <h2 id="heading--ibm-power-server-pxe-boot">Network booting IBM Power servers</h2>
 
-Some IBM Power server servers have OPAL firmware which uses an embedded Linux distribution as the boot environment. All the PXE interactions are handled by **Petitboot**, which runs in the userspace of this embedded Linux rather than a PXE ROM on the NIC itself.
+Some IBM Power server servers have OPAL firmware which uses an embedded Linux distribution as the boot environment. All the PXE interactions are handled by **Petitboot**, which runs in the user space of this embedded Linux rather than a PXE ROM on the NIC itself.
 
 When no specific interface is assigned as the network boot device, petitboot has a known issue which is detailed in [LP#1852678](https://bugs.launchpad.net/ubuntu-power-systems/+bug/1852678), specifically comment #24, that can cause issues when deploying systems using MAAS, since in this case all active NICs are used for PXE boot with the same address.
 
