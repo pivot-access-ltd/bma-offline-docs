@@ -1,16 +1,21 @@
+<!-- "MAAS logging reference" -->
 MAAS has a robust logging capability, which presents several different views, including a number of node-specific log files and several syslogd-style text logs.  Each of these logs provides different information, or at the very least, different views of the same information.  MAAS gathers logging information about the various MAAS states and records both automated and user-driven actions.
 
-#### Five questions you may have:
+#### This document will help you learn:
 
-1. [What is the syslog logging path?](#heading--path)
-2. [How do I use a remote syslog server?](#heading--using-a-remote-syslog-server)
-3. [What are commissioning logs?](/t/commissioning-log-reference/5248)
-4. [What are test logs?](/t/test-log-reference/5314)
-5. [What are event logs?](/t/event-log-reference/5252)
+* [About the syslog logging path](#heading--path)
+* [How to use a remote syslog server](#heading--using-a-remote-syslog-server)
+
+It also links to reference material for:
+
+* [Commissioning logs](/t/commissioning-log-reference/5248)
+* [Test logs](/t/test-log-reference/5314)
+* [Event logs](/t/event-log-reference/5252)
+* [Audit event logs](/t/audit-event-log-reference/5256)
 
 The discussion of these logs and their contents can be very extensive, so each type of logging has its own documentation section, reachable from the left-hand menu -- or from the list of questions above.
 
-<a href="#heading--path"><h2 id="heading--path">The syslog logging path</h2></a>
+<a href="#heading--path"><h2 id="heading--path">About the syslog logging path</h2></a>
 
 [tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"] 
@@ -21,7 +26,7 @@ Syslog data is kept in `/var/log/maas/rsyslog/<machine-name><yyyy-mm-dd>/message
 [/tab]
 [/tabs]
 
-<a href="#heading--using-a-remote-syslog-server"><h2 id="heading--using-a-remote-syslog-server">Using a remote syslog server</h2></a>
+<a href="#heading--using-a-remote-syslog-server"><h2 id="heading--using-a-remote-syslog-server">How to use a remote syslog server</h2></a>
 
 [tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"] 
