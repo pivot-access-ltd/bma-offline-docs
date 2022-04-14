@@ -1,3 +1,4 @@
+<!-- "How to use MAAS in an air-gapped environment" -->
 Many MAAS users maintain their data centres in an air-gapped environment that does not have an external Internet connection. MAAS runs well in this configuration, though keeping MAAS supplied with updates and images requires a bit of extra effort.
 
 There are essentially four things that must be available to an air-gapped MAAS for smooth operation:
@@ -9,15 +10,16 @@ There are essentially four things that must be available to an air-gapped MAAS f
 
 There is at least one way to make each of these things available in an air-gapped environment.  Some of these can be set up to use a transparent proxy, which minimises changes to other components of the MAAS environment.
 
-#### Five questions you may have:
+#### This article will help you learn:
 
-1. [How do I use the snap proxy to refresh snaps in an air-gapped environment?](#heading--using-the-snap-proxy)
-2. [How do I make package updates available in an air-gapped environment?](#heading--apt-mirror)
-3. [How do I retrieve or update MAAS images in an air-gapped environment?](#heading--local-image-mirroring)
-4. [How do I retrieve or update non-MAAS-maintained images in an air-gapped environment?](#heading--non-maas-images)
-5. [How do I set up a transparent proxy?](#heading--transparent-proxy)
+* [How to use the snap proxy to refresh snaps in an air-gapped environment](#heading--using-the-snap-proxy)
+* [How to make package updates available in an air-gapped environment](#heading--apt-mirror)
+* [How to retrieve or update MAAS images in an air-gapped environment](#heading--local-image-mirroring)
+* [How to retrieve or update non-MAAS-maintained images in an air-gapped environment](#heading--non-maas-images)
+* [How to use user_data to access non-MAAS-maintained images](#heading--other-os-user-data)
+* [How to set up a transparent proxy](#heading--transparent-proxy)
 
-<h2 id="heading--using-the-snap-proxy"><a href="#heading--using-the-snap-proxy">Using the snap proxy</a></h2>
+<h2 id="heading--using-the-snap-proxy"><a href="#heading--using-the-snap-proxy">How to use the snap proxy to refresh snaps in an air-gapped environment</a></h2>
 
 Using snaps in an air-gapped environment is possible with the Snap Store Proxy, which can be deployed in networks that are disconnected from the Internet.  Currently, the features required to use this proxy in an [air-gapped](https://docs.ubuntu.com/vs Snaptore-proxy/en/airgap) mode are part of a password-protected internal Beta.  
 
@@ -31,7 +33,7 @@ There are three main steps to setting up this proxy:
 
 This proxy requires a properly configured PostgreSQL database -- see the [setup instructions](https://docs.ubuntu.com/vs Snaptore-proxy/en/airgap) for the Snap Store Proxy for more details.
 
-<h2 id="heading--apt-mirror"><a href="#heading--apt-mirror">Using local package repos</a></h2>
+<a href="#heading--apt-mirror"><h2 id="heading--apt-mirror">How to make package updates available in an air-gapped environment</h2></a>
 
 The simplest way to use local package repos is via the [reprepro](http://manpages.ubuntu.com/manpages/focal/man1/reprepro.1.html) command.  There is an older command, `apt-mirror`, which is no longer maintained; it's not recommended.
 
@@ -39,7 +41,7 @@ The `reprepro` command manages a local repository of Debian packages.  You can a
 
 You may wish to create a [transparent proxy](#heading--transparent-proxy) to make using your local repo easier.
 
-<h2 id="heading--local-image-mirroring"><a href="#heading--local-image-mirroring">Local image mirrors</a></h2>
+<a href="#heading--local-image-mirroring"><h2 id="heading--local-image-mirroring">How to retrieve or update MAAS images in an air-gapped environment</h2></a>
  
 MAAS has an [established process](https://maas.io/docs/local-image-mirror) for mirroring images locally.   The steps are relatively simple:
 
@@ -50,7 +52,7 @@ MAAS has an [established process](https://maas.io/docs/local-image-mirror) for m
 
 See the [local image mirror](https://maas.io/docs/local-image-mirror) for details.  Note that you can use the menu at the top of that page to switch to specific instructions for the version, build-type, and interface you prefer.
 
-<h2 id="heading--non-maas-images"><a href="#heading--non-maas-images">Using other OS images in an air-gapped environment</a></h2>
+<a href="#heading--non-maas-images"><h2 id="heading--non-maas-images">How to retrieve or update non-MAAS-maintained images in an air-gapped environment</h2></a>
 
 MAAS allows you to deploy many types of OSes, and, once deployed, install specific software.  MAAS can configure a user specified repository for Ubuntu, so a user can mirror the Ubuntu apt repositories and point MAAS at those repos. When Ubuntu deploys apt will automatically be configured to use the user defined apt mirrors. 
 
@@ -61,7 +63,7 @@ MAAS only does this for Ubuntu, not CentOS or RHEL. If you deploy CentOS or RHEL
 
 Here's a thumbnail sketch of both of these methods.
 
-<h3 id="heading--other-os-user-data"><a href="#heading--other-os-user-data">Using user_data to access non-MAAS-maintained images</a></h3>
+<h3 id="heading--other-os-user-data"><a href="#heading--other-os-user-data">How to use user_data to access non-MAAS-maintained images</a></h3>
 
 A user can create custom `user_data` which will configure CentOS or RHEL to use a specific mirror.  Check out the [custom machine setup](https://maas.io/docs/custom-machine-setup) page for details on how to make this work.
 
@@ -69,7 +71,7 @@ A user can create custom `user_data` which will configure CentOS or RHEL to use 
 
 You can also create custom images and store them in your local mirror.  Use the [MAAS Image Builder](https://maas.io/docs/image-builder) to create custom images as desired.  Once you have the image built, consult the page on [local image mirrors](https://maas.io/docs/local-image-mirror) to see how to incorporate your newly-built image into the local stash.
 
-<h2 id="heading--transparent-proxy"><a href="#heading--transparent-proxy">Creating a transparent proxy</a></h2>
+<a href="#heading--transparent-proxy"><h2 id="heading--transparent-proxy">How to set up a transparent proxy</h2></a>
 
 If you don't wish to disturb the default configurations for Ubuntu and MAAS, you can create a transparent proxy for Debian packages and images, via the following general steps:
 
