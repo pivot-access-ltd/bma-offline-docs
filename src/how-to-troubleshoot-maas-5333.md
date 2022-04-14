@@ -1,5 +1,18 @@
 <!-- "How to troubleshoot MAAS" -->
-This section covers some of the most commonly encountered problems and attempts to resolve them.
+This section may help you deal with some common problems:
+
+* [Adding overlapping subnets in fabric can break deployments](#heading--overlapping-subnets-can-break-deployments)
+* [\"File not found\" when creating commissioning or node script with MAAS CLI](#heading--commissioning-script-file-not-found)
+* [Can't login to machine after deployment](#heading--machine-login-issues)
+* [Subarchitecture error thrown by django](#heading--django-subarch-error)
+* [Nodes hang on "Commissioning"](#heading--nodes-hang-on-commissioning)
+* [Node deployment fails](#heading--node-deployment-fails)
+* [Nodes fail to PXE boot](#heading--nodes-fail-to-pxe-boot)
+* [Can't log in to node](#heading--cant-log-in-to-node)
+* [Forgot MAAS administrator password](#heading--forgot-maas-administrator-password)
+* [Need to reconfigure server IP address](#heading--need-to-reconfigure-server-ip-address)
+* [Can't find MAAS web UI](#heading--cant-find-maas-web-ui)
+* [Backdoor image login](#heading--backdoor-image-login)
 
 <a href="#heading--overlapping-subnets-can-break-deployments"><h2 id="heading--overlapping-subnets-can-break-deployments">Adding overlapping subnets in fabric can break deployments</h2></a>
 

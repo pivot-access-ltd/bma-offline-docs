@@ -22,9 +22,9 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../ui/how-to-troubleshoot-maas.html">
-	  UI-only
-	</a>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;UI-only&nbsp;
+      </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<a href="../cli/how-to-troubleshoot-maas.html">
 	  CLI-only
@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation-25.html">
 	  Introduction
 	</a>
       </strong>
@@ -57,12 +57,16 @@
 	    Use the MAAS CLI
 	  </a>
 	</li>
+      </ul>
       <strong>
-	<a href="about-controllers.html">
-	  Controllers
-	</a>
+	Controllers
       </strong>
       <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-racks.html">
 	    Manage racks
@@ -80,11 +84,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-machines.html">
-	  Machines
-	</a>
+	Machines
       </strong>
       <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-machines.html">
 	    Manage machines
@@ -102,11 +109,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-vm-hosting.html">
-	  VM hosting
-	</a>
+	VM hosting
       </strong>
       <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-vm-hosts.html">
 	    Manage VM hosts
@@ -124,11 +134,34 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-networking.html">
-	  Networking
-	</a>
+	Networking fundamentals
       </strong>
       <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-networks.html">
 	    Manage networks
@@ -176,11 +209,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-images.html">
-	  Images
-	</a>
+	Images
       </strong>
       <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-import-images.html">
 	    Select and import images
@@ -193,7 +229,7 @@
 	</li>
 	<li>
 	  <a href="how-to-create-a-custom-ubuntu-image.html">
-	    Create custom Ubuntu images
+	    Create custom images
 	  </a>
 	</li>
 	<li>
@@ -213,14 +249,17 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-tags-and-annotations.html">
-	  Tags
-	</a>
+	Tags
       </strong>
       <ul>
 	<li>
-	  <a href="how-to-manage-tags.html">
-	    Manage tags
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
 	  </a>
 	</li>
 	<li>
@@ -250,8 +289,8 @@
 	</strong>
 	<ul>
 	  <li>
-	    <a href="how-to-set-up-prometheus-metrics.html">
-	      Set up Prometheus
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
 	    </a>
 	  </li>
 	  <li>
@@ -301,7 +340,7 @@
 	</li>
 	<li>
 	  <a href="api.html">
-	    API reference
+	    API documentation
 	  </a>
 	</li>
 	<li>
@@ -355,7 +394,50 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>How to troubleshoot MAAS</h1><p>This section covers some of the most commonly encountered problems and attempts to resolve them.</p>
+  <h1>How to troubleshoot MAAS</h1><!-- "How to troubleshoot MAAS" -->
+<p>This section may help you deal with some common problems:</p>
+<ul>
+<li><a href="#heading--overlapping-subnets-can-break-deployments">Adding overlapping subnets in fabric can break deployments</a></li>
+<li><a href="#heading--commissioning-script-file-not-found">"File not found" when creating commissioning or node script with MAAS CLI</a></li>
+<li><a href="#heading--machine-login-issues">Can&rsquo;t login to machine after deployment</a></li>
+<li><a href="#heading--django-subarch-error">Subarchitecture error thrown by django</a></li>
+<li><a href="#heading--nodes-hang-on-commissioning">Nodes hang on &ldquo;Commissioning&rdquo;</a></li>
+<li><a href="#heading--node-deployment-fails">Node deployment fails</a></li>
+<li><a href="#heading--nodes-fail-to-pxe-boot">Nodes fail to PXE boot</a></li>
+<li><a href="#heading--cant-log-in-to-node">Can&rsquo;t log in to node</a></li>
+<li><a href="#heading--forgot-maas-administrator-password">Forgot MAAS administrator password</a></li>
+<li><a href="#heading--need-to-reconfigure-server-ip-address">Need to reconfigure server IP address</a></li>
+<li><a href="#heading--cant-find-maas-web-ui">Can&rsquo;t find MAAS web UI</a></li>
+<li><a href="#heading--backdoor-image-login">Backdoor image login</a></li>
+</ul>
+<p><a href="#heading--overlapping-subnets-can-break-deployments"><h2 id="heading--overlapping-subnets-can-break-deployments">Adding overlapping subnets in fabric can break deployments</h2></a></p>
+<p><strong>Characteristic failure</strong>: A machine performs PXE boot, then gets trapped in a boot loop, causing deployment to fail.</p>
+<p>MAAS does not currently prevent you from creating overlapping subnets, for example:</p>
+<ul>
+<li>subnet 1 = 192.168.48.0/24</li>
+<li>subnet 2 = 192.168.48.0/22</li>
+</ul>
+<p>This can break deployments, because the controllers can&rsquo;t reliably determine which subnet should get a packet destined for one of the overlapping addresses. The IP range of one subnet should be unique compared to every other subnet on the same segment.</p>
+<p>At least one way to cause this error is to edit a subnet in the <code>netplan</code> file.  MAAS will add the updated subnet, but may not drop the existing subnet, causing overlap.  You can fix this by deleting the subnet you do not want from the Web UI.</p>
+<p>If you have a machine that PXE boots, but then fails deployment, either in an infinite boot loop or some unspecified failure, check your subnets to be sure you do not have overlap.  If so, delete the outdated subnet.</p>
+<p><a href="#heading--commissioning-script-file-not-found"><h2 id="heading--commissioning-script-file-not-found">"File not found" when creating commissioning or node script with MAAS CLI</h2></a></p>
+<p>When creating a commissioning script with the MAAS CLI, like this:</p>
+<pre><code class="language-nohighlight">maas $PROFILE commissioning-scripts create name=scriptname content@=/tmp/filename
+</code></pre>
+<p>you may receive a &ldquo;file not found&rdquo; error:</p>
+<pre><code class="language-nohighlight">[Errno 2] No such file or directory: '/tmp/filename'
+</code></pre>
+<p>There are two possible sources of the error:</p>
+<ol>
+<li>
+<p>You did not actually type the filename correctly, or the file does not exist in <code>/tmp</code>.  Check the spelling and make sure the file is actually present in <code>/tmp</code> (for example).</p>
+</li>
+<li>
+<p>You are using the snap version of MAAS.  When using the MAAS snap, you may not use <code>/tmp</code> due to confinement rules.  Move the file to <code>/opt</code> or <code>/home/myhomdir</code> and try again.</p>
+</li>
+</ol>
+<p>In fact, trying to upload the script from any directory owned by <code>root</code> will give a similar error.</p>
+<p>Also note that <code>commissioning-scripts</code> is deprecated and may be removed at some future time.  Use the form <code>node-scripts</code> instead; consult the MAAS CLI built-in help for details.</p>
 <p><a href="#heading--machine-login-issues"><h2 id="heading--machine-login-issues">Can&rsquo;t login to machine after deployment</h2></a></p>
 <p>When everything seems to be right about your machine deployment, but you can&rsquo;t login, there&rsquo;s a chance you might not be using the right username.  You may have added your personal SSH key to MAAS, but your corresponding login doesn&rsquo;t seem to work; that&rsquo;s because the logins for the machines are generally related to the operating system, e.g.:</p>
 <ul>
@@ -383,7 +465,7 @@
 <p>Sometimes the hardware can boot from PXE, but fail to load correct drivers when booting the received image. This is sometimes the case when no open source drivers are available for the network hardware.</p>
 <p><strong>SOLUTION:</strong> The best fix for this problem is to install a Linux-friendly network adaptor. It <em>is</em> theoretically possible to modify the boot image to include proprietary drivers, but it is not a straightforward task.</p>
 <p><a href="#heading--node-deployment-fails"><h2 id="heading--node-deployment-fails">Node deployment fails</h2></a></p>
-<p>When deployment fails the <a href="maas-concepts-and-terms-reference-5416.html#heading--rescue-mode">Rescue mode</a> action can be used to boot ephemerally into the node, followed by an investigation.</p>
+<p>When deployment fails the <a href="maas-concepts-and-terms-reference.htmlnnnn#heading--rescue-mode">Rescue mode</a> action can be used to boot ephemerally into the node, followed by an investigation.</p>
 <p>As an example, an improperly configured PPA was added to MAAS which caused nodes to fail deployment. After entering Rescue mode and connecting via SSH, the following was discovered in file <code>/var/log/cloud-init-output.log</code>:</p>
 <pre><code class="language-no-highlight">2016-11-28 18:21:48,982 - cc_apt_configure.py[ERROR]: failed to add apt GPG Key
 to apt keyring
@@ -432,7 +514,7 @@ Stderr: 'gpg: no valid OpenPGP data found.\n'
 <p>As images are constantly updated and refreshed, the backdoor will only ever be temporary, but it should help you login to see what may be going wrong with your node.</p>
 <p><a href="#heading--extract-the-cloud-image"><h3 id="heading--extract-the-cloud-image">Extract the cloud image</h3></a></p>
 <p>First, download the cloud image that corresponds to the architecture of your node. The <em>Images</em> page of the web UI lists the images currently being cached by MAAS:</p>
-<p><a href="images/130aa580-troulbeshoot-faq__2.3_images.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/130aa580-troulbeshoot-faq__2.3_images.png"></a></p>
+<p><a href="../images/130aa580-troulbeshoot-faq__2.3_images.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/130aa580-troulbeshoot-faq__2.3_images.png"></a></p>
 <p>Images can be downloaded from <a href="https://cloud-images.ubuntu.com/">https://cloud-images.ubuntu.com/</a>.</p>
 <p>For example:</p>
 <pre><code class="language-bash">wget https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-root.tar.gz
@@ -441,9 +523,8 @@ Stderr: 'gpg: no valid OpenPGP data found.\n'
 <pre><code class="language-bash">mkdir xenial
 sudo tar -C xenial -xpSf xenial-server-cloudimg-amd64-root.tar.gz --numeric-owner --xattrs &quot;--xattrs-include=*&quot;
 </code></pre>
-<p>[note]
-<code>sudo</code> is required when extracting the image filesystem and when making changes to the files extracted from the image filesystem.
-[/note]</p>
+<p><strong>NOTE:</strong> 
+<code>sudo</code> is required when extracting the image filesystem and when making changes to the files extracted from the image filesystem.</p>
 <p><a href="#heading--generate-password-hash"><h3 id="heading--generate-password-hash">Generate password hash</h3></a></p>
 <p>Now generate a hashed password. Use the following Python 3 command, replacing <strong>ubuntu</strong> with the password you wish to use:</p>
 <pre><code class="language-bash">python3 -c 'import crypt; print(crypt.crypt(&quot;ubuntu&quot;, crypt.mksalt(crypt.METHOD_SHA512)))'
@@ -476,7 +557,7 @@ cp /home/ubuntu/xenial-customized.squashfs .
 chown maas:maas squashfs
 </code></pre>
 <p>You can now use this image to commission or deploy a node and access the root account with the backdoor password, such as by deploying the same specific image from the web UI to the node you wish to troubleshoot.</p>
-<p><a href="images/f622d104-troulbeshoot-faq__2.3_deploy.png" target = "_blank"><img alt="unlabeled image" width="690" src="images/f622d104-troulbeshoot-faq__2.3_deploy.png"></a></p>
+<p><a href="../images/f622d104-troulbeshoot-faq__2.3_deploy.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/f622d104-troulbeshoot-faq__2.3_deploy.png"></a></p>
     </div>
   </body>
 </html>
