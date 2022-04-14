@@ -22,9 +22,9 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../ui/how-to-secure-maas.html">
-	  UI-only
-	</a>
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;UI-only&nbsp;
+      </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<a href="../cli/how-to-secure-maas.html">
 	  CLI-only
@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="../maas-documentation-25.html">
+	<a href="maas-documentation-25.html">
 	  Introduction
 	</a>
       </strong>
@@ -57,12 +57,16 @@
 	    Use the MAAS CLI
 	  </a>
 	</li>
+      </ul>
       <strong>
-	<a href="about-controllers.html">
-	  Controllers
-	</a>
+	Controllers
       </strong>
       <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-racks.html">
 	    Manage racks
@@ -80,11 +84,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-machines.html">
-	  Machines
-	</a>
+	Machines
       </strong>
       <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-machines.html">
 	    Manage machines
@@ -102,11 +109,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-vm-hosting.html">
-	  VM hosting
-	</a>
+	VM hosting
       </strong>
       <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-vm-hosts.html">
 	    Manage VM hosts
@@ -124,11 +134,34 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-networking.html">
-	  Networking
-	</a>
+	Networking fundamentals
       </strong>
       <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-manage-networks.html">
 	    Manage networks
@@ -176,11 +209,14 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-images.html">
-	  Images
-	</a>
+	Images
       </strong>
       <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
 	<li>
 	  <a href="how-to-import-images.html">
 	    Select and import images
@@ -193,7 +229,7 @@
 	</li>
 	<li>
 	  <a href="how-to-create-a-custom-ubuntu-image.html">
-	    Create custom Ubuntu images
+	    Create custom images
 	  </a>
 	</li>
 	<li>
@@ -213,14 +249,17 @@
 	</li>
       </ul>
       <strong>
-	<a href="about-tags-and-annotations.html">
-	  Tags
-	</a>
+	Tags
       </strong>
       <ul>
 	<li>
-	  <a href="how-to-manage-tags.html">
-	    Manage tags
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
 	  </a>
 	</li>
 	<li>
@@ -250,8 +289,8 @@
 	</strong>
 	<ul>
 	  <li>
-	    <a href="how-to-set-up-prometheus-metrics.html">
-	      Set up Prometheus
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
 	    </a>
 	  </li>
 	  <li>
@@ -301,7 +340,7 @@
 	</li>
 	<li>
 	  <a href="api.html">
-	    API reference
+	    API documentation
 	  </a>
 	</li>
 	<li>
@@ -355,17 +394,18 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>How to secure MAAS</h1><p>As a MAAS administrator, you have the critical responsibility of hardening your installation to help repudiate attacks and malicious actors.  While there are too many variables to make meaningful suggestions for your deployed machines, there are a number of steps you can take to improve the overall security of your MASS setup.  This article provides a few suggestions.</p>
-<h4>Six questions you may have:</h4>
-<ol>
-<li><a href="#heading--firewalls">How do I setup a firewall for MAAS?</a></li>
-<li><a href="#heading--tls">How do I configure a TLS-terminating load balancer (and what&rsquo;s the impact on my MAAS setup?)</a></li>
-<li><a href="#heading--using-logs-for-security">How do I use logs to identify security issues?</a></li>
-<li><a href="#heading--postgres-security">How do I implement PostgreSQL security?</a></li>
-<li><a href="#heading--what-else-to-do">What else can I do to harden MAAS?</a></li>
-<li><a href="#heading--security-consulting">Whom do I contact for MAAS security consulting?</a></li>
-</ol>
-<p><a href="#heading--firewalls"><h2 id="heading--firewalls">Use a firewall</h2></a></p>
+  <h1>How to secure MAAS</h1><!-- "How to secure MAAS" -->
+<p>As a MAAS administrator, you have the critical responsibility of hardening your installation to help repudiate attacks and malicious actors.  While there are too many variables to make meaningful suggestions for your deployed machines, there are a number of steps you can take to improve the overall security of your MASS setup.  This article provides a few suggestions.</p>
+<h4>This article will help you learn:</h4>
+<ul>
+<li><a href="#heading--firewalls">How to set up a firewall for MAAS</a></li>
+<li><a href="#heading--tls">How to configure a TLS-terminating load balancer</a></li>
+<li><a href="#heading--using-logs-for-security">How to use logs to identify security issues</a></li>
+<li><a href="#heading--postgres-security">How to implement PostgreSQL security</a></li>
+<li><a href="#heading--what-else-to-do">About other things you can do to harden MAAS</a></li>
+<li><a href="#heading--security-consulting">Whom to contact for MAAS security consulting</a></li>
+</ul>
+<p><a href="#heading--firewalls"><h2 id="heading--firewalls">How to set up a firewall for MAAS</h2></a></p>
 <p>Each rack controller must be able to initiate TCP connections on the following ports:</p>
 <table>
 <thead>
@@ -398,7 +438,7 @@
 </tbody>
 </table>
 
-<p>Consider setting your <a href="https://help.ubuntu.com/lts/serverguide/firewall.html#firewall-logs">firewall </a>&#128279; on your rack and region controllers to disallow communication on all ports except those used by MAAS. For example, assuming you have installed <code>ufw</code>, you could execute:</p>
+<p>Consider setting your <a href="https://help.ubuntu.com/lts/serverguide/firewall.html#firewall-logs">firewall </a> on your rack and region controllers to disallow communication on all ports except those used by MAAS. For example, assuming you have installed <code>ufw</code>, you could execute:</p>
 <pre><code>sudo ufw enable
 sudo ufw default deny incoming
 </code></pre>
@@ -411,12 +451,12 @@ sudo ufw allow 5250:5270/tcp
 sudo ufw allow 5250:5270/udp
 </code></pre>
 <p>Recognise that your particular configuration and version may vary, so consult the appropriate firewall manual pages for your specific MAAS host system.</p>
-<p><a href="#heading--tls"><h2 id="heading--tls">Configure a TLS-terminating load balancer</h2></a></p>
-<p>One of the best steps you can take to improve both security and availability of your MAAS installation is to install TLS-terminating load balancer.  For MAAS, we recommend using <a href="https://www.haproxy.com">HAProxy </a>&#128279;.  This section explains how to set one up.</p>
+<p><a href="#heading--tls"><h2 id="heading--tls">How to configure a TLS-terminating load balancer</h2></a></p>
+<p>One of the best steps you can take to improve both security and availability of your MAAS installation is to install TLS-terminating load balancer.  For MAAS, we recommend using <a href="https://www.haproxy.com">HAProxy </a>.  This section explains how to set one up.</p>
 <p><details><summary>What is a TLS-terminated load balancer?</summary></p>
-<p>In the context of MAAS, a <a href="https://www.nginx.com/resources/glossary/load-balancing/">load balancer </a>&#128279; distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other <a href="how-to-enable-high-availability-5122.html">HA configurations</a> that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.</p>
+<p>In the context of MAAS, a <a href="https://www.nginx.com/resources/glossary/load-balancing/">load balancer </a> distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other <a href="how-to-enable-high-availability.html">HA configurations</a> that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.</p>
 <p>A TLS-terminated load balancer is a load balancer that carries encryption and decryption as far down the pipe as possible, in this case, all the way to the load balancer itself. Note that, even though the &ldquo;SSL&rdquo; keyword may be used to enable operation, the term SSL is considered obsolete.  Hence we choose to use the term &ldquo;TLS&rdquo; instead, referring to <strong>Transport Layer Security</strong>.</p>
-<p>TLS is meant to provide privacy and data integrity between two or more applications.  Privacy is provided by <a href="https://en.wikipedia.org/wiki/Symmetric-key_algorithm">symmetric cryptography </a>&#128279;, based on a shared secret and uniquely-generated keys negotiated at the start of a session (during the <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_handshake">TLS handshake </a>&#128279;).  Identity of each app can be authenticated, though this feature can be optional.  Authenticity of messages is ensured by using <a href="https://en.wikipedia.org/wiki/Message_authentication_code">message authentication codes </a>&#128279; to detect tampering.</p>
+<p>TLS is meant to provide privacy and data integrity between two or more applications.  Privacy is provided by <a href="https://en.wikipedia.org/wiki/Symmetric-key_algorithm">symmetric cryptography </a>, based on a shared secret and uniquely-generated keys negotiated at the start of a session (during the <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_handshake">TLS handshake </a>).  Identity of each app can be authenticated, though this feature can be optional.  Authenticity of messages is ensured by using <a href="https://en.wikipedia.org/wiki/Message_authentication_code">message authentication codes </a> to detect tampering.</p>
 <p></details></p>
 <p><a href="#heading--pem-file"><h3 id="heading--pem-file">PEM file</h3></a></p>
 <p>As a first step, you&rsquo;ll need an SSL certificate (<code>mysite.com.crt</code>) with a key pair (<code>mysite.com.key</code>), combined into a PEM file:</p>
@@ -462,9 +502,9 @@ option http-server-close
 <p>Finally, restart the (already-running) load balancer so that these changes can take effect and the HAProxy will begin to forward requests:</p>
 <pre><code>sudo systemctl restart haproxy
 </code></pre>
-<p>Note that you can also <a href="https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04">enable HAProxy logging </a>&#128279; if desired.  This logging is an optional feature of the HAProxy tool and is thus left to your discretion.  </p>
-<p>If desired, you can <a href="how-to-enable-high-availability-5122.html#heading--load-balancing-with-haproxy-optional">bypass the use of SSL</a> in your HAProxy.  Alternatively, you can <a href="how-to-enable-tls-encryption-5118.html">set up TLS encryption on your MAAS web UI</a> without implementing HAProxy.</p>
-<p><a href="#heading--using-logs-for-security"><h2 id="heading--using-logs-for-security">Use logs to identify security issues</h2></a></p>
+<p>Note that you can also <a href="https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04">enable HAProxy logging </a> if desired.  This logging is an optional feature of the HAProxy tool and is thus left to your discretion.  </p>
+<p>If desired, you can <a href="how-to-enable-high-availability.html#heading--load-balancing-with-haproxy-optional">bypass the use of SSL</a> in your HAProxy.  Alternatively, you can <a href="how-to-enable-tls-encryption.html">set up TLS encryption on your MAAS web UI</a> without implementing HAProxy.</p>
+<p><a href="#heading--using-logs-for-security"><h2 id="heading--using-logs-for-security">How to use logs to identify security issues</h2></a></p>
 <p>There are four categories of log files that you can use to help identify security issues:</p>
 <ol>
 <li>firewall logs</li>
@@ -474,7 +514,7 @@ option http-server-close
 </ol>
 <p>This section will offer some advice, as well as links to more detailed information on these categories.</p>
 <p><a href="#heading--firewall-logs-subsection"><h3 id="heading--firewall-logs-subsection">Firewall logs</h3></a></p>
-<p>The Ubuntu firewall, <a href="https://wiki.ubuntu.com/UncomplicatedFirewall">UFW </a>&#128279;, is a front-end for <a href="https://help.ubuntu.com/community/IptablesHowTo">iptables </a>&#128279;, so the UFW log output is very similar to what you&rsquo;ll encounter in iptables itself.  If you want to secure your MAAS installation, it&rsquo;s very important to periodically review your UFW logs, found in <code>/var/log/ufw*</code>.</p>
+<p>The Ubuntu firewall, <a href="https://wiki.ubuntu.com/UncomplicatedFirewall">UFW </a>, is a front-end for <a href="https://help.ubuntu.com/community/IptablesHowTo">iptables </a>, so the UFW log output is very similar to what you&rsquo;ll encounter in iptables itself.  If you want to secure your MAAS installation, it&rsquo;s very important to periodically review your UFW logs, found in <code>/var/log/ufw*</code>.</p>
 <p>Learning to recognise issues in the UFW/iptables log is an art form, so we&rsquo;re not going to give an extended tutorial here.  Still, there are some key indicators that might help you spot security issues.</p>
 <p>You might look for something probing a port that&rsquo;s not supporting an application service.  Attackers use port scanners to look for openings.  You might see entries like these:</p>
 <pre><code>blocked incoming tcp connection request from 96.39.208.43:8240 to 128.17.92.85:6002
@@ -565,10 +605,10 @@ Jun 06 13:45:35 router sshd[2487]: Failed password for root from 234.19.184.6 po
 Jun 06 13:45:48 router sshd[2487]: Failed password for root from 234.19.184.6 port 35444 ssh2
 </code></pre>
 <p>From here, you can either use <code>whois</code> to locate the attacker and work with the ISP to block them, or simply use your UFW firewall to block them directly.</p>
-<p>As mentioned, this subject is far too complex for a detailed tutorial in this section.  For more information, try the <a href="http://manpages.ubuntu.com/manpages/cosmic/man1/journalctl.1.html">Ubuntu journalctl manpage </a> or <a href="https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs">another, similar source </a>&#128279;.  </p>
-<p><a href="#heading--postgres-security"><h2 id="heading--postgres-security">Implement PostgreSQL security</h2></a></p>
-<p>PostgreSQL contains secrets, and should be encrypted for maximum protection.  You should consider <a href="https://help.ubuntu.com/community/Full_Disk_Encryption_Howto_2019">full disk encryption </a>&#128279;.  Also recommended is <a href="https://www.postgresql.org/docs/current/ssl-tcp.html">TLS encryption between MAAS and PostgreSQL </a>&#128279;.</p>
-<p><a href="#heading--what-else-to-do"><h2 id="heading--what-else-to-do">Other things you can do to harden MAAS</h2></a></p>
+<p>As mentioned, this subject is far too complex for a detailed tutorial in this section.  For more information, try the <a href="http://manpages.ubuntu.com/manpages/cosmic/man1/journalctl.1.html">Ubuntu journalctl manpage </a> or <a href="https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs">another, similar source </a>.  </p>
+<p><a href="#heading--postgres-security"><h2 id="heading--postgres-security">How to implement PostgreSQL security</h2></a></p>
+<p>PostgreSQL contains secrets, and should be encrypted for maximum protection.  You should consider <a href="https://help.ubuntu.com/community/Full_Disk_Encryption_Howto_2019">full disk encryption </a>.  Also recommended is <a href="https://www.postgresql.org/docs/current/ssl-tcp.html">TLS encryption between MAAS and PostgreSQL </a>.</p>
+<p><a href="#heading--what-else-to-do"><h2 id="heading--what-else-to-do">About other things you can do to harden MAAS</h2></a></p>
 <p>In addition to the items mentioned above, you should be aware of a few other points about hardening MAAS.</p>
 <p><a href="#heading--maas-and-root-users"><h3 id="heading--maas-and-root-users">Good passwords</h2></a></p>
 <p>You should pick good passwords and store them securely (e.g. in a KeePassX password database). Perform user administration only via the web UI. Only share the <code>maas</code> and <code>root</code> user passwords with administrators.</p>
@@ -583,8 +623,8 @@ chmod 640 /etc/maas/regiond.conf
 </code></pre>
 <p><a href="#heading--shared-secrets"><h3 id="heading--shared-secrets">Shared secrets</h2></a></p>
 <p>When you add a new rack or region controller, MAAS asks for a shared secret it will use to communicate with the rest of MAAS. This secret is also exposed in the web UI when you click the &lsquo;Add rack controller&rsquo; button on the Controllers page.  MAAS automatically generates this secret when your first region controller installed, and stores the secret in a plain text file.  This file is automatically protected with the correct permissions, so there is no need for any action on your part.</p>
-<p><a href="#heading--security-consulting"><h2 id="heading--security-consulting">Whom to contact about MAAS security consulting</h2></a></p>
-<p>If you need help implementing MAAS security, please <a href="how-to-contact-us-5442.html">contact us</a>.  We will be happy to assist you in arranging security consulting appropriate to your needs.</p>
+<p><a href="#heading--security-consulting"><h2 id="heading--security-consulting">Whom to contact for MAAS security consulting</h2></a></p>
+<p>If you need help implementing MAAS security, please <a href="how-to-contact-us.html">contact us</a>.  We will be happy to assist you in arranging security consulting appropriate to your needs.</p>
     </div>
   </body>
 </html>

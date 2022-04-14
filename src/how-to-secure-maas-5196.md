@@ -1,16 +1,17 @@
 <!-- "How to secure MAAS" -->
 As a MAAS administrator, you have the critical responsibility of hardening your installation to help repudiate attacks and malicious actors.  While there are too many variables to make meaningful suggestions for your deployed machines, there are a number of steps you can take to improve the overall security of your MASS setup.  This article provides a few suggestions.
 
-#### Six questions you may have:
+#### This article will help you learn:
 
-1. [How do I setup a firewall for MAAS?](#heading--firewalls)
-2. [How do I configure a TLS-terminating load balancer (and what's the impact on my MAAS setup?)](#heading--tls)
-3. [How do I use logs to identify security issues?](#heading--using-logs-for-security)
-4. [How do I implement PostgreSQL security?](#heading--postgres-security)
-5. [What else can I do to harden MAAS?](#heading--what-else-to-do)
-6. [Whom do I contact for MAAS security consulting?](#heading--security-consulting)
+* [How to set up a firewall for MAAS](#heading--firewalls)
+* [How to configure a TLS-terminating load balancer](#heading--tls)
+* [How to use logs to identify security issues](#heading--using-logs-for-security)
+* [How to implement PostgreSQL security](#heading--postgres-security)
+* [About other things you can do to harden MAAS](#heading--what-else-to-do)
+* [Whom to contact for MAAS security consulting](#heading--security-consulting)
 
-<a href="#heading--firewalls"><h2 id="heading--firewalls">Use a firewall</h2></a>
+<a href="#heading--firewalls"><h2 id="heading--firewalls">How to set up a firewall for MAAS</h2></a>
+
 <p>Each rack controller must be able to initiate TCP connections on the following ports:</p>
 <table>
 <thead>
@@ -59,7 +60,7 @@ You could then follow that with commands similar to these:
 
 Recognise that your particular configuration and version may vary, so consult the appropriate firewall manual pages for your specific MAAS host system.
 
-<a href="#heading--tls"><h2 id="heading--tls">Configure a TLS-terminating load balancer</h2></a>
+<a href="#heading--tls"><h2 id="heading--tls">How to configure a TLS-terminating load balancer</h2></a>
 
 One of the best steps you can take to improve both security and availability of your MAAS installation is to install TLS-terminating load balancer.  For MAAS, we recommend using [HAProxy ](https://www.haproxy.com).  This section explains how to set one up.
 
@@ -135,7 +136,7 @@ Note that you can also [enable HAProxy logging ](https://www.digitalocean.com/co
 
 If desired, you can [bypass the use of SSL](/t/how-to-enable-high-availability/5120#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/how-to-enable-tls-encryption/5116) without implementing HAProxy.
 
-<a href="#heading--using-logs-for-security"><h2 id="heading--using-logs-for-security">Use logs to identify security issues</h2></a>
+<a href="#heading--using-logs-for-security"><h2 id="heading--using-logs-for-security">How to use logs to identify security issues</h2></a>
 
 There are four categories of log files that you can use to help identify security issues:
 
@@ -262,11 +263,11 @@ From here, you can either use `whois` to locate the attacker and work with the I
 
 As mentioned, this subject is far too complex for a detailed tutorial in this section.  For more information, try the [Ubuntu journalctl manpage ](http://manpages.ubuntu.com/manpages/cosmic/man1/journalctl.1.html) or [another, similar source ](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs).  
 
-<a href="#heading--postgres-security"><h2 id="heading--postgres-security">Implement PostgreSQL security</h2></a>
+<a href="#heading--postgres-security"><h2 id="heading--postgres-security">How to implement PostgreSQL security</h2></a>
 
 PostgreSQL contains secrets, and should be encrypted for maximum protection.  You should consider [full disk encryption ](https://help.ubuntu.com/community/Full_Disk_Encryption_Howto_2019).  Also recommended is [TLS encryption between MAAS and PostgreSQL ]( https://www.postgresql.org/docs/current/ssl-tcp.html).
 
-<a href="#heading--what-else-to-do"><h2 id="heading--what-else-to-do">Other things you can do to harden MAAS</h2></a>
+<a href="#heading--what-else-to-do"><h2 id="heading--what-else-to-do">About other things you can do to harden MAAS</h2></a>
 
 In addition to the items mentioned above, you should be aware of a few other points about hardening MAAS.
 
@@ -314,6 +315,6 @@ After:
 
 When you add a new rack or region controller, MAAS asks for a shared secret it will use to communicate with the rest of MAAS. This secret is also exposed in the web UI when you click the 'Add rack controller' button on the Controllers page.  MAAS automatically generates this secret when your first region controller installed, and stores the secret in a plain text file.  This file is automatically protected with the correct permissions, so there is no need for any action on your part.
 
-<a href="#heading--security-consulting"><h2 id="heading--security-consulting">Whom to contact about MAAS security consulting</h2></a>
+<a href="#heading--security-consulting"><h2 id="heading--security-consulting">Whom to contact for MAAS security consulting</h2></a>
 
 If you need help implementing MAAS security, please [contact us](/t/how-to-contact-us/5448).  We will be happy to assist you in arranging security consulting appropriate to your needs.
