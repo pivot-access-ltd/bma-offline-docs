@@ -1,4 +1,5 @@
-This article will explain:
+<!-- "How to use machine tags" -->
+This article will help you learn:
 
 [tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
