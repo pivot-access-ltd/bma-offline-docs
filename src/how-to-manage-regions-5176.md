@@ -1,13 +1,13 @@
 <!-- "How to manage regions" -->
 A region controller manages communication with the user, via the Web UI/API, as well as managing the rack controller(s) in your system.  The MAAS postgres database is also managed by the region controller.  Typical region-level responsibilities include requesting that a rack controller boot a machine, and providing the ephemeral Ubuntu image needed to commission or enlist a machine.  
 
-#### Three questions you might have:
+#### This article will help you learn:
 
-1. [How do I set up PostgreSQL for the region?](#heading--postgresql-setup)
-2. [How do I add a new region host?](#heading--adding-a-new-region-host)
-3. [How can I improve region controller performance?](#heading--increasing-regiond-daemon-workers)
+1. [How to set up PostgreSQL for the region](#heading--postgresql-setup)
+2. [How to add a new region host](#heading--adding-a-new-region-host)
+3. [How to improve region controller performance](#heading--increasing-regiond-daemon-workers)
 
-<a href="#heading--postgresql-setup"><h2 id="heading--postgresql-setup">Set up PostgreSQL for the region</h2></a>
+<a href="#heading--postgresql-setup"><h2 id="heading--postgresql-setup">How to set up PostgreSQL for the region</h2></a>
 
 Any number of API servers (region controllers) can be present as long as each connects to the same PostgreSQL database and allows the required number of connections.
 
@@ -24,7 +24,7 @@ Apply this change by restarting the database:
 
     sudo systemctl restart postgresql
 
-<a href="#heading--adding-a-new-region-host"><h2 id="heading--adding-a-new-region-host">Add a new region host</h2></a>
+<a href="#heading--adding-a-new-region-host"><h2 id="heading--adding-a-new-region-host">How to add a new region host</h2></a>
 
 On a secondary host, add the new region controller by installing <code>maas-region-api</code>:
 
@@ -46,7 +46,7 @@ Check three log files for any errors:
 2. <code>/var/log/maas/maas.log</code></li>
 3. <code>/var/log/syslog</code></li>
 
-<a href="#heading--increasing-regiond-daemon-workers"><h2 id="heading--increasing-regiond-daemon-workers">Improving region controller performance</h2></a>
+<a href="#heading--increasing-regiond-daemon-workers"><h2 id="heading--increasing-regiond-daemon-workers">How to improve region controller performance</h2></a>
 
 [note]
 This functionality is available starting from MAAS 2.4.

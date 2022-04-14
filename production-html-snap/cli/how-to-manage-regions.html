@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -396,13 +396,13 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to manage regions</h1><!-- "How to manage regions" -->
 <p>A region controller manages communication with the user, via the Web UI/API, as well as managing the rack controller(s) in your system.  The MAAS postgres database is also managed by the region controller.  Typical region-level responsibilities include requesting that a rack controller boot a machine, and providing the ephemeral Ubuntu image needed to commission or enlist a machine.  </p>
-<h4>Three questions you might have:</h4>
+<h4>This article will help you learn:</h4>
 <ol>
-<li><a href="#heading--postgresql-setup">How do I set up PostgreSQL for the region?</a></li>
-<li><a href="#heading--adding-a-new-region-host">How do I add a new region host?</a></li>
-<li><a href="#heading--increasing-regiond-daemon-workers">How can I improve region controller performance?</a></li>
+<li><a href="#heading--postgresql-setup">How to set up PostgreSQL for the region</a></li>
+<li><a href="#heading--adding-a-new-region-host">How to add a new region host</a></li>
+<li><a href="#heading--increasing-regiond-daemon-workers">How to improve region controller performance</a></li>
 </ol>
-<p><a href="#heading--postgresql-setup"><h2 id="heading--postgresql-setup">Set up PostgreSQL for the region</h2></a></p>
+<p><a href="#heading--postgresql-setup"><h2 id="heading--postgresql-setup">How to set up PostgreSQL for the region</h2></a></p>
 <p>Any number of API servers (region controllers) can be present as long as each connects to the same PostgreSQL database and allows the required number of connections.</p>
 <p>On the primary database host, edit file <code>/etc/postgresql/9.5/main/pg_hba.conf</code> to allow the eventual secondary API server to contact the primary PostgreSQL database. Include the below line, replacing
 <code>$SECONDARY_API_SERVER_IP</code> with the IP address of the host that will contain the secondary API server:</p>
@@ -413,7 +413,7 @@ The primary database and API servers often reside on the same host.</p>
 <p>Apply this change by restarting the database:</p>
 <pre><code>sudo systemctl restart postgresql
 </code></pre>
-<p><a href="#heading--adding-a-new-region-host"><h2 id="heading--adding-a-new-region-host">Add a new region host</h2></a></p>
+<p><a href="#heading--adding-a-new-region-host"><h2 id="heading--adding-a-new-region-host">How to add a new region host</h2></a></p>
 <p>On a secondary host, add the new region controller by installing <code>maas-region-api</code>:</p>
 <pre><code>sudo apt install maas-region-api
 </code></pre>
@@ -432,7 +432,7 @@ sudo systemctl start maas-regiond
 <li><code>/var/log/maas/maas.log</code></li></li>
 <li><code>/var/log/syslog</code></li></li>
 </ol>
-<p><a href="#heading--increasing-regiond-daemon-workers"><h2 id="heading--increasing-regiond-daemon-workers">Improving region controller performance</h2></a></p>
+<p><a href="#heading--increasing-regiond-daemon-workers"><h2 id="heading--increasing-regiond-daemon-workers">How to improve region controller performance</h2></a></p>
 <p><strong>NOTE:</strong> 
 This functionality is available starting from MAAS 2.4.</p>
 <p>The MAAS Region Controller is a daemon collection of 4 workers that are in charge of handling all the internals of MAAS. The regiond workers handle the UI, API and the internal communication between Region and Rack controllers.</p>
