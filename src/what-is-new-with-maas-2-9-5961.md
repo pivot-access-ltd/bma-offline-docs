@@ -1,4 +1,3 @@
-<!-- "What's new with MAAS" -->
 <h2>MAAS 2.9.2 release notes</h2>
 
 We have released MAAS 2.9.2, which contains two new features, and some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.2). The two new features are:
