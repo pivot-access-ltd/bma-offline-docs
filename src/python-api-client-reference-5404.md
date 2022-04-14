@@ -1,4 +1,3 @@
-<!-- "Python API client reference" -->
 The `python-libmaas` client library is an asyncio-based client library whose purpose is to allow developers, integrators and administrators to better interact with MAAS.  This software is in development and does not yet support all MAAS endpoints (nor all operations). It currently supports MAAS versions 2.1 and 2.2-beta3.
 
 #### Two questions you may have:
