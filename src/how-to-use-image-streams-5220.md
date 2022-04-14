@@ -1,4 +1,3 @@
-<!-- "How to use image streams" -->
 Canonical provides two SimpleStreams for MAAS images: candidate and stable. Both streams contain Ubuntu images, CentOS images, bootloaders extracted from the Ubuntu archive, and release notifications. Either stream can be used in any version of MAAS greater than 2.1 -- but not all images are supported in older versions.
 
 #### Five questions you may have:
