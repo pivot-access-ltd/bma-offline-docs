@@ -30,13 +30,13 @@ Critical and high-priority fixes also extend or repair MAAS features:
 
 <a href="#heading--installing-3-1-0"><h3 id="heading--installing-3-1-0">How to install MAAS 3.1</h3></a>
 
-MAAS 3.0 can be installed fresh (recommended) with:
+MAAS 3.1 can be installed fresh from snaps (recommended) with:
 
 ```
 sudo snap install --channel=3.1 maas
 ```
 
-MAAS 3.1 can be installed by adding the `3.1` PPA:
+MAAS 3.1 can also be installed via packages, by adding the `3.1` PPA:
 
 ```
 sudo add-apt-repository ppa:maas/3.1
