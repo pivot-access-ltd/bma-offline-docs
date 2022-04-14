@@ -8,10 +8,9 @@ As a security measure, MAAS generates an API key when creating your MAAS account
 
 For additional MAAS CLI commands, you can consult the MAAS CLI help or access the CLI versions of the pages listed in the left-hand navigation. MAAS has a thorough built-in help reference, which you can access in stages to understand how to build commands. The `maas` command accepts the `-h` or `--help` argument after every keyword and will display results with increasing detail as you add elements to the help request.
 
+#### This article will help you learn:
 
-#### This article will show you:
-
-* [How to install the MAAS CLI?](#heading--install-the-maas-cli)
+* [How to install the MAAS CLI](#heading--install-the-maas-cli)
 * [How to create an administrator account](#heading--create-an-administrator)
 * [How to obtain the administrator's API key](#heading--obtain-an-api-key)
 * [How to obtain a user's API key](#heading--obtain-a-users-api-key)
