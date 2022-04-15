@@ -4,7 +4,7 @@ Machines are the heart of MAAS. They are the backbone of your data centre applic
 In this article, you will learn:
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap" view="UI"]
+[tab version="v3.2 Snap" view="UI"]
 * [About the machine life-cycle](#heading--about-the-machine-life-cycle)
 * [About testing hardware](#heading--about-testing-hardware)
 * [About adding machines](#heading--about-adding-machines)
@@ -15,7 +15,97 @@ In this article, you will learn:
 * [About tags](#heading--about-tags)
 * [About storage](#heading--about-storage)
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap" view="CLI"]
+[tab version="v3.2 Snap" view="CLI"
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="v3.2 Packages" view="UI"]
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About cloning machines](#heading--about-cloning-machines)
+* [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
+* [About the machine list](#heading--about-the-machine-list)
+* [About the machine summary](#heading--about-the-machine-summary)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="v3.2 Packages" view="CLI"]
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="v3.1 Snap" view="UI"]
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About cloning machines](#heading--about-cloning-machines)
+* [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
+* [About the machine list](#heading--about-the-machine-list)
+* [About the machine summary](#heading--about-the-machine-summary)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="v3.1 Snap" view="CLI"
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="v3.1 Packages" view="UI"]
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About cloning machines](#heading--about-cloning-machines)
+* [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
+* [About the machine list](#heading--about-the-machine-list)
+* [About the machine summary](#heading--about-the-machine-summary)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="v3.1 Packages" view="CLI"]
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="v3.0 Snap" view="UI"]
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About cloning machines](#heading--about-cloning-machines)
+* [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
+* [About the machine list](#heading--about-the-machine-list)
+* [About the machine summary](#heading--about-the-machine-summary)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="v3.0 Snap" view="CLI"
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="v3.0 Packages" view="UI"]
+* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+* [About testing hardware](#heading--about-testing-hardware)
+* [About adding machines](#heading--about-adding-machines)
+* [About cloning machines](#heading--about-cloning-machines)
+* [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
+* [About the machine list](#heading--about-the-machine-list)
+* [About the machine summary](#heading--about-the-machine-summary)
+* [About tags](#heading--about-tags)
+* [About storage](#heading--about-storage)
+[/tab]
+[tab version="v3.0 Packages" view="CLI"]
 * [About the machine life-cycle](#heading--about-the-machine-life-cycle)
 * [About testing hardware](#heading--about-testing-hardware)
 * [About adding machines](#heading--about-adding-machines)
@@ -31,25 +121,7 @@ In this article, you will learn:
 * [About tags](#heading--about-tags)
 * [About storage](#heading--about-storage)
 [/tab]
-[tab version="v2.9 Snap" view="CLI"]
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v3.2 Packages,v3.1 Packages,v3.0 Packages" view="UI"]
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About cloning machines](#heading--about-cloning-machines)
-* [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
-* [About the machine list](#heading--about-the-machine-list)
-* [About the machine summary](#heading--about-the-machine-summary)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v3.2 Packages,v3.1 Packages,v3.0 Packages" view="CLI"]
+[tab version="v2.9 Snap" view="CLI"
 * [About the machine life-cycle](#heading--about-the-machine-life-cycle)
 * [About testing hardware](#heading--about-testing-hardware)
 * [About adding machines](#heading--about-adding-machines)
@@ -74,7 +146,7 @@ In this article, you will learn:
 [/tab]
 [/tabs]
 
- <a href="#heading--about-the-machine-life-cycle"><h2 id="heading--about-the-machine-life-cycle">About the machine life-cycle</h2></a>
+<a href="#heading--about-the-machine-life-cycle"><h2 id="heading--about-the-machine-life-cycle">About the machine life-cycle</h2></a>
 
 One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, acquired, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
 
@@ -171,9 +243,6 @@ You access these actions from the "Take action" menu in the upper right corner o
 
 In the case of already-deployed machines enlisted by MAAS, some of the possible actions may appear to be available, but either don't work or ultimately appear to fail, without affecting the actual status of the deployed machine.
 [/tab]
-[tab version="v2.9 Snap,v2.9 Packages,v3.0 Snap,v3.0 Packages" view="UI"]
-You access these actions from the "Take action" menu in the upper right corner of the machine listing.  Note that some actions, such as "Mark broken" or "Lock," may be hidden when they are not available.
-[/tab]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages" view="CLI"]
 You can change machine state, via the CLI, with the `machine` command, which offers the following options:
 
@@ -239,7 +308,10 @@ null
 
 Note that the immediate return is `Success`, but the machine-readable output is `null`.  After executing this command on an already-deployed machine, you should find that the deployed machine was not affected by the `power-off` command, since the `power-type` was set to `manual`.  This is an expected behaviour.
 [/tab]
-[tab version="v2.9 Snap,v2.9 Packages,v3.0 Snap,v3.0 Packages" view="CLI"]
+[tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+You access these actions from the "Take action" menu in the upper right corner of the machine listing.  Note that some actions, such as "Mark broken" or "Lock," may be hidden when they are not available.
+[/tab]
+[tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 You can change machine state, via the CLI, with the `machine` command, which offers the following options:
 
 ```nohighlight
@@ -736,7 +808,7 @@ Regardless of how MAAS adds a machine, there are no special requirements for the
 In the illustration below, you see the machine list for a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg"></a>
 
 Rolling the cursor over status icons often reveals more details. For example, a failed hardware test script will place a warning icon alongside the hardware type tested by the script. Rolling the cursor over this will reveal which test failed.  Likewise, you can find some immediate options by rolling over the column data items in the machines table.
@@ -756,7 +828,7 @@ The 'Filter by' section limits the machines listed in the table to selected keyw
 [/note]
 
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 ```nohighlight
 FQDN               POWER  STATUS     OWNER  TAGS     POOL       NOTE     ZONE
 ----               -----  ------     -----  ----     ----       ----     ----
