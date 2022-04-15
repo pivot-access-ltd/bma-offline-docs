@@ -395,11 +395,11 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to deploy machines</h1><!-- "How to deploy machines" -->
-<p>The ultimate purpose of MAAS is to deploy and manage machines.  As explained in <a href="about-machines.html#heading--about-the-machine-life-cycle">About the machine life-cycle</a>, machines must first be enlisted or commissioned, then acquired, then deployed.  This article will tell you:</p>
+<p>The ultimate purpose of MAAS is to deploy and manage machines.  As explained in <a href="about-machines.html#heading--about-the-machine-life-cycle">About the machine life-cycle</a>, machines must first be enlisted or commissioned, then allocated, then deployed.  This article will tell you:</p>
 <ul>
 <li><a href="#heading--how-to-commission-a-machine">How to commission a machine</a></li>
 <li><a href="#heading--how-to-test-machines">How to test machines</a></li>
-<li><a href="#heading--acquire-machines">How to acquire machines</a></li>
+<li><a href="#heading--allocate-machines">How to allocate machines</a></li>
 <li><a href="#heading--deploy">How to deploy machines</a></li>
 </ul>
 <p><a href="#heading--how-to-commission-a-machine"><h2 id="heading--how-to-commission-a-machine">How to commission a machine</h2></a></p>
@@ -572,15 +572,15 @@ interface_speed=$NEW_INTERFACE_SPEED
 <p><a href="../images/0dcf089dbd8efc2fc9d0782d3b15f47647e950b8.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/0dcf089dbd8efc2fc9d0782d3b15f47647e950b8.jpeg"></a> </p>
 <p>There are no particular restrictions on these scripts, so you can test a wide variety of possible conditions and situations.  Administrators can upload network tests and test scripts.  Administrators can also create tests which accept an interface parameter, or scripts which apply custom network configurations.  </p>
 <p>Users can specify unique parameters using the API, override machines which fail network testing (allowing their use), and suppress individual failed network tests.  Users can also review the health status from all interface tests, even sorting them by interface name and MAC.  In addition, MAAS can report the overall status of all interfaces.</p>
-<p><a href="#heading--acquire-machines"><h2 id="heading--acquire-machines">How to acquire machines</h2></a></p>
-<p>To acquire/allocate a node with the web UI, select a machine which is in the &ldquo;Ready&rdquo; state, and drop down the &ldquo;Take action&rdquo; menu:</p>
+<p><a href="#heading--allocate-machines"><h2 id="heading--allocate-machines">How to allocate machines</h2></a></p>
+<p>To allocate a node with the web UI, select a machine which is in the &ldquo;Ready&rdquo; state, and drop down the &ldquo;Take action&rdquo; menu:</p>
 <p><a href="../images/3724346e052c865f4e865d1caf2778b115f0798f.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/3724346e052c865f4e865d1caf2778b115f0798f.jpeg"></a></p>
-<p>Select &ldquo;Acquire&rdquo; from the drop-down menu, which will bring you to a confirmation screen:</p>
+<p>Select &ldquo;Allocate&rdquo; from the drop-down menu, which will bring you to a confirmation screen:</p>
 <p><a href="../images/a0ece8bf58c03db3c89ad71afcaeb9101bd34e24.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/a0ece8bf58c03db3c89ad71afcaeb9101bd34e24.jpeg"></a></p>
-<p>MAAS will acquire the selected machine; you can now find it in the list of &ldquo;Allocated&rdquo; machines:</p>
+<p>MAAS will allocate the selected machine; you can now find it in the list of &ldquo;Allocated&rdquo; machines:</p>
 <p><a href="../images/a2bdb8b7b7c5705daee14bdea5caed223537917d.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/a2bdb8b7b7c5705daee14bdea5caed223537917d.jpeg"></a></p>
 <p><strong>NOTE:</strong> 
-To acquire a node, it must have a status of &lsquo;Ready&rsquo;.</p>
+To allocate a node, it must have a status of &lsquo;Ready&rsquo;.</p>
 <p><a href="#heading--deploy"><h2 id="heading--deploy">How to deploy machines</h2></a></p>
 <p>To deploy directly from MAAS, select one or more machine(s) and press the &lsquo;Deploy&rsquo; button.</p>
 <p><a href="../images/56958753-nodes-deploy__2.4_deploy.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/56958753-nodes-deploy__2.4_deploy.png"></a></p>

@@ -1,9 +1,9 @@
 <!-- "How to deploy machines" -->
-The ultimate purpose of MAAS is to deploy and manage machines.  As explained in [About the machine life-cycle](/t/about-machines/5080#heading--about-the-machine-life-cycle), machines must first be enlisted or commissioned, then acquired, then deployed.  This article will tell you:
+The ultimate purpose of MAAS is to deploy and manage machines.  As explained in [About the machine life-cycle](/t/about-machines/5080#heading--about-the-machine-life-cycle), machines must first be enlisted or commissioned, then allocated, then deployed.  This article will tell you:
 
  - [How to commission a machine](#heading--how-to-commission-a-machine)
  - [How to test machines](#heading--how-to-test-machines)
- - [How to acquire machines](#heading--acquire-machines)
+ - [How to allocate machines](#heading--allocate-machines)
  - [How to deploy machines](#heading--deploy)
 
 <a href="#heading--how-to-commission-a-machine"><h2 id="heading--how-to-commission-a-machine">How to commission a machine</h2></a>
@@ -957,31 +957,31 @@ There are no particular restrictions on these scripts, so you can test a wide va
 
 Users can specify unique parameters using the API, override machines which fail network testing (allowing their use), and suppress individual failed network tests.  Users can also review the health status from all interface tests, even sorting them by interface name and MAC.  In addition, MAAS can report the overall status of all interfaces.
 
-<a href="#heading--acquire-machines"><h2 id="heading--acquire-machines">How to acquire machines</h2></a>
+<a href="#heading--allocate-machines"><h2 id="heading--allocate-machines">How to allocate machines</h2></a>
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-To acquire/allocate a node with the web UI, select a machine which is in the "Ready" state, and drop down the "Take action" menu:
+To allocate a node with the web UI, select a machine which is in the "Ready" state, and drop down the "Take action" menu:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/3724346e052c865f4e865d1caf2778b115f0798f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3724346e052c865f4e865d1caf2778b115f0798f.jpeg"></a>
 
-Select "Acquire" from the drop-down menu, which will bring you to a confirmation screen:
+Select "Allocate" from the drop-down menu, which will bring you to a confirmation screen:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a0ece8bf58c03db3c89ad71afcaeb9101bd34e24.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a0ece8bf58c03db3c89ad71afcaeb9101bd34e24.jpeg"></a>
 
-MAAS will acquire the selected machine; you can now find it in the list of "Allocated" machines:
+MAAS will allocate the selected machine; you can now find it in the list of "Allocated" machines:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a2bdb8b7b7c5705daee14bdea5caed223537917d.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a2bdb8b7b7c5705daee14bdea5caed223537917d.jpeg"></a>
 [/tab]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 
-To acquire/allocate a random node:
+To allocate a random node:
 
 ``` bash
 maas $PROFILE machines allocate
 ```
 
-To acquire/allocate a specific node:
+To allocate a specific node:
 
 ``` bash
 maas $PROFILE machines allocate system_id=$SYSTEM_ID
@@ -991,7 +991,7 @@ maas $PROFILE machines allocate system_id=$SYSTEM_ID
 [/tabs]
 
 [note]
-To acquire a node, it must have a status of 'Ready'.
+To allocate a node, it must have a status of 'Ready'.
 [/note]
 
 <a href="#heading--deploy"><h2 id="heading--deploy">How to deploy machines</h2></a>
@@ -1024,7 +1024,7 @@ maas $PROFILE machine deploy $SYSTEM_ID install_kvm=True
 ```
 
 [note]
-To deploy with the CLI, the node must have a status of 'Allocated'. See 'Acquire a node' above.
+To deploy with the CLI, the node must have a status of 'Allocated'. See 'Allocate a node' above.
 [/note]
 
 <a href="#heading--configure-deployment-timeout"><h3 id="heading--configure-deployment-timeout">Configure deployment timeout</h3></a>
