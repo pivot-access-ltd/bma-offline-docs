@@ -42,9 +42,48 @@ You will need the <code>/etc/maas/regiond.conf</code> file from the primary API 
 
 Check three log files for any errors:
 
-1. <code>/var/log/maas/regiond.log</code></li>
-2. <code>/var/log/maas/maas.log</code></li>
-3. <code>/var/log/syslog</code></li>
+[tabs]
+[tab version="v3.2 Snap"]
+1. <code>/var/snap/maas/common/log/regiond.log</code>
+2. <code>/var/snap/maas/common/log/maas.log</code>
+3. <code>/var/snap/maas/common/log/rsyslog/</code>
+[/tab]
+[tab version="v3.2 Packages"]
+1. <code>/var/log/maas/regiond.log</code>
+2. <code>/var/log/maas/maas.log</code>
+3. <code>/var/log/syslog</code>
+[/tab]
+[tab version="v3.1 Snap"]
+1. <code>/var/snap/maas/common/log/regiond.log</code>
+2. <code>/var/snap/maas/common/log/maas.log</code>
+3. <code>/var/snap/maas/common/log/rsyslog/</code>
+[/tab]
+[tab version="v3.1 Packages"]
+1. <code>/var/log/maas/regiond.log</code>
+2. <code>/var/log/maas/maas.log</code>
+3. <code>/var/log/syslog</code>
+[/tab]
+[tab version="v3.0 Snap"]
+1. <code>/var/snap/maas/common/log/regiond.log</code>
+2. <code>/var/snap/maas/common/log/maas.log</code>
+3. <code>/var/snap/maas/common/log/rsyslog/</code>
+[/tab]
+[tab version="v3.0 Packages"]
+1. <code>/var/log/maas/regiond.log</code>
+2. <code>/var/log/maas/maas.log</code>
+3. <code>/var/log/syslog</code>
+[/tab]
+[tab version="v2.9 Snap"]
+1. <code>/var/snap/maas/common/log/regiond.log</code>
+2. <code>/var/snap/maas/common/log/maas.log</code>
+3. <code>/var/snap/maas/common/log/rsyslog/</code>
+[/tab]
+[tab version="v2.9 Packages"]
+1. <code>/var/log/maas/regiond.log</code>
+2. <code>/var/log/maas/maas.log</code>
+3. <code>/var/log/syslog</code>
+[/tab]
+[/tabs]
 
 <a href="#heading--increasing-regiond-daemon-workers"><h2 id="heading--increasing-regiond-daemon-workers">How to improve region controller performance</h2></a>
 
