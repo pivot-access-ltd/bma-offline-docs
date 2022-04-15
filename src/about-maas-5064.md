@@ -27,26 +27,18 @@ PXE stands for "Preboot Execution Environment," usually pronounced "pixie."  The
 MAAS can manage a large number of physical machines by merging them into user-defined resource pools. MAAS automatically provisions participating machines and makes them available for use. You can return unused machines to the assigned pool at any time.
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 MAAS also discovers all of the USB and PCI devices attached to your physical or virtual machines, and allows you to delete them from the machine's visible configuration, prior to deployment, if you so desire.
 [/tab]
-[tab version="v2.9 Snap"]
+[tab version="v2.9 Snap,v2.9 Packages"]
 [note]
-MAAS 2.9 does not discover USB and PCI devices.  For this discovery capability, you must upgrade to MAAS version 3.0 or greater.
-[/note]
-[/tab]
-[tab version="v3.2 Packages,v3.1 Packages,v3.0 Packages"]
-MAAS also discovers all of the USB and PCI devices attached to your physical or virtual machines, and allows you to delete them from the machine's visible configuration, prior to deployment, if you so desire.
-[/tab]
-[tab version="v2.9 Packages"]
-[note]
-MAAS 2.9 does not discover USB and PCI devices.  For this discovery capability, you must upgrade to MAAS version 3.0 or greater.
+MAAS 2.9 does not discover USB and PCI devices.  This feature is available from MAAS version 3.0.
 [/note]
 [/tab]
 [/tabs]
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 MAAS integrates all the tools you need into a smooth system-management experience. It includes the following thirteen features:
 
 1. web UI (optimised for mobile devices)
@@ -68,7 +60,7 @@ These tools can be controlled from a responsive web UI.  You can easily (re)conf
 <a href="https://discourse.maas.io/uploads/default/original/1X/00968a71b82ce01c45ae3b345ed6b1270d0927bf.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/00968a71b82ce01c45ae3b345ed6b1270d0927bf.jpeg"></a> 
 
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 MAAS integrates all the tools you need into a smooth system-management experience. It includes the following eleven features:
 
 1. Ubuntu, CentOS, Windows, and RHEL installation support
@@ -118,10 +110,10 @@ Commissioning means that MAAS has successfully booted the machine, scanned and r
 </details>
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/605019de31078dd70df72ff199d812de13a30d00.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/605019de31078dd70df72ff199d812de13a30d00.jpeg"></a>
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/6aec9b567022216d80596411e689a14e1f594674.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/6aec9b567022216d80596411e689a14e1f594674.jpeg"></a>
 [/tab]
 [/tabs]
@@ -135,10 +127,10 @@ MAAS controls machines through IPMI (or another BMC). It can also manage machine
 MAAS users allocate ("acquire") machines for use when needed. The web UI also allows you to acquire machines manually, such as when you are reserving specific hardware for certain users. You can remotely access and customise the installed operating system via SSH.
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/8101d641c55d912cd66646bd99bbee9bb8f196ab.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8101d641c55d912cd66646bd99bbee9bb8f196ab.jpeg"></a>
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/ac3b251a916bb18a7e7e463d7fa3c57ef32628da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/ac3b251a916bb18a7e7e463d7fa3c57ef32628da.jpeg"></a>
 
 When acquiring machines from the API/CLI, you can specify requirements ("constraints"). Common constraints are memory, CPU cores, connected networks, and assigned physical zone.
