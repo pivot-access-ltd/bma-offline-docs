@@ -450,7 +450,7 @@
 <pre><code>maas $PROFILE vm-host compose $VM_HOST_ID "storage=mylabel:32(pool1),mylabel:64(pool2)"
 </code></pre>
 <p>Note that the labels, here <code>mylabel</code>, are an ephemeral convenience that you might find useful in scripting MAAS actions.</p>
-<p>MAAS will create a VM with 2 disks, <code>/dev/vda</code> (32 GB) and <code>/dev/vdb</code> (64 GB). After MAAS enlists, commissions and acquires the machine, you can edit the disks before deploying to suit your needs. For example, we&rsquo;ll set a boot, root, and home partition.</p>
+<p>MAAS will create a VM with 2 disks, <code>/dev/vda</code> (32 GB) and <code>/dev/vdb</code> (64 GB). After MAAS enlists, commissions and allocates the machine, you can edit the disks before deploying to suit your needs. For example, we&rsquo;ll set a boot, root, and home partition.</p>
 <p>We&rsquo;ll start by deleting the <code>/</code> partition MAAS created because we want a separate <code>/boot</code> partition to demonstrate how yo.</p>
 <pre><code>maas admin partition delete $VM_HOST_ID $DISK1_ID $PARTITION_ID
 </code></pre>

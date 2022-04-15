@@ -96,7 +96,7 @@ First, create the VM:
 
 Note that the labels, here `mylabel`, are an ephemeral convenience that you might find useful in scripting MAAS actions.
 
-MAAS will create a VM with 2 disks, `/dev/vda` (32 GB) and `/dev/vdb` (64 GB). After MAAS enlists, commissions and acquires the machine, you can edit the disks before deploying to suit your needs. For example, we'll set a boot, root, and home partition.
+MAAS will create a VM with 2 disks, `/dev/vda` (32 GB) and `/dev/vdb` (64 GB). After MAAS enlists, commissions and allocates the machine, you can edit the disks before deploying to suit your needs. For example, we'll set a boot, root, and home partition.
 
 We'll start by deleting the `/` partition MAAS created because we want a separate `/boot` partition to demonstrate how yo.
 
