@@ -24,7 +24,7 @@ Note that if you are using your own commissioning scripts, and you do not want t
 If you do not specify `noauto`, your custom commissioning scripts will run every time commissioning is attempted.
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To commission a machine:
 
 1. Go to the "Machines" page.
@@ -59,7 +59,7 @@ While commissioning, the machine status will change to reflect this state (Commi
 
 Once commissioned, a machine's status will change to Ready, and an extra tab for the machine called "Commissioning" will become available. This tab contains the results of the scripts executed during the commissioning process.
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To commission a machine that's in the "Ready" state, via the CLI, use the following command:
 
 ```nohighlight
@@ -376,7 +376,7 @@ Once commissioned, you may consider adding a tag to this machine.  The next step
 This section explains:
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 * [How to download built-in scripts](#heading--how-to-download-built-in-scripts)
 * [How to upload scripts](#heading--how-to-upload-scripts)
 * [How to debug script failures](#heading--how-to-debug-script-failures)
@@ -389,7 +389,7 @@ This section explains:
 * [How to detect slow network links](#heading--slow-link-detection)
 * [How to configure network validation and testing scripts](#heading--network-validation-scripts-and-testing)
 * [How to customise network testing](#heading--customisable-network-testing)
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 * [How to download built-in scripts](#heading--how-to-download-built-in-scripts)
 * [How to upload hardware testing scripts](#heading--how-to-upload-hardware-testing-scripts)
 * [How to list all uploaded hardware testing scripts](#heading--how-to-list-all-uploaded-hardware-testing-scripts)
@@ -423,7 +423,7 @@ maas $PROFILE node-script download $SCRIPT_NAME
 The source code to all built-in scripts is available on [launchpad](https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts).
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--how-to-upload-scripts"><h3 id="heading--how-to-upload-scripts">How to upload scripts</h3></a>
 
 Scripts can be uploaded to MAAS using the web UI. Select the 'User scripts' tab of the 'Settings' page - the 'Commissioning scripts' section is near the top. Within the Commissioning scripts section, click the Upload script button followed by 'Choose file' to open a requester, locate the script, and select Upload to upload it to MAAS.
@@ -452,7 +452,7 @@ Because scripts operate within an ephemeral version of Ubuntu, enabling this opt
 
 As long as you've added your [SSH key](/t/how-to-manage-user-accounts/5184) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--how-to-upload-hardware-testing-scripts"><h3 id="heading--how-to-upload-hardware-testing-scripts">How to upload hardware testing scripts</h3></a>
 
 To upload a hardware testing script to MAAS, enter the following:
@@ -649,7 +649,7 @@ Here, all the scripts are run again after downloading from MAAS, but no output d
 ```
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--apply-a-hardware-test"><h3 id="heading--apply-a-hardware-test">How to apply a hardware test</h3></a>
 
 To launch a test, select the target machine from the 'Machines' page and use the 'Take action' drop-down menu to select 'Test hardware'. When ready, hit the 'Test machine' button. Here, a test is applied to a deployed machine:
@@ -665,7 +665,7 @@ A default test will be selected (`smartctl-validate`, a hard drive test) but you
 See [Commissioning Scripts Reference](/t/commissioning-scripts-reference/5375) for more details on how these scripts work and how you can write your own.
 
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--upload-test-scripts"><h3 id="heading--upload-test-scripts">How to upload hardware test scripts</h3></a>
 
 To upload a hardware testing script to MAAS, enter the following:
@@ -836,14 +836,14 @@ maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
 MAAS can check whether links are connected or disconnected, so that you can detect unplugged cables.  If you are not running MAAS 2.7 or higher, you must first upgrade and then recommission your machines to find disconnected links.  MAAS not only reports unplugged cables, but also gives a warning when trying to configure a disconnected interface.  In addition, administrators can change the cable connection status after manually resolving the issue.
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 When MAAS detects a broken network link, users will see a screen similar to this one: 
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/687feb2ddea8b317f0deba239bcb1779fd5f33d3.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/687feb2ddea8b317f0deba239bcb1779fd5f33d3.jpeg"></a> 
 
 If you're already using a version of MAAS less than 2.7, you will want to upgrade and recommission your existing machines to check link status.  Note that you will also receive a warning from MAAS when trying to configure a disconnected interface.
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To check network testing results, enter the following command:
 
 ```
@@ -868,10 +868,10 @@ From this screen, you can see that the `ens3` link is not connected (hence an un
 Once you have manually repaired the broken connection, an administrator can change cable connection status:
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/b8b24a2e5fbc40b6469a24733a518b510cf0d955.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/b8b24a2e5fbc40b6469a24733a518b510cf0d955.jpeg"></a> 
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 ```
 maas $PROFILE interface update $SYSTEM_ID $INTERFACE_ID link_connected=true
 ```
@@ -881,14 +881,14 @@ maas $PROFILE interface update $SYSTEM_ID $INTERFACE_ID link_connected=true
 <a href="#heading--slow-link-detection"><h2 id="heading--slow-link-detection">How to detect slow network links</h2></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 As servers and hardware get faster, the chances increase that you might encounter a speed mismatch when connecting your NIC to a network device.  MAAS can warn you if your interface is connected to a link slower than what the interface supports, by automatically detecting link and interface speed and reporting them via the UI:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/e73a81df222f44c0b364eefcd0880e2a84c7303b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e73a81df222f44c0b364eefcd0880e2a84c7303b.jpeg"></a>  
 
 Depending on your physical hardware, the problem may not be repairable, but once you identify a slow link, you can replace a slow switch without recommissioning.  
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 As servers and hardware get faster, the chances increase that you might encounter a speed mismatch when connecting your NIC to a network device.  MAAS can warn you if your interface is connected to a link slower than what the interface supports, when you run the above command:
 
 ```
@@ -927,12 +927,12 @@ Users can now test their network configuration to check for:
 3. Broken gateways, rack controllers, and Internet links
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 In addition, MAAS can comprehensively test Internet connectivity testing. You can give a list of URLs or IP addresses to check from the network testing screen:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/12dd87ce0bffd54c2e459c4dea850af5fcbe14d0.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/12dd87ce0bffd54c2e459c4dea850af5fcbe14d0.jpeg"></a> 
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 In addition, MAAS can comprehensively test Internet connectivity testing. You can give a list of URLs or IP addresses to check:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/b92a8ca1821bc1ccf60cf7fddcb57f3fbeda4408.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/b92a8ca1821bc1ccf60cf7fddcb57f3fbeda4408.jpeg"></a> 
@@ -960,7 +960,7 @@ Users can specify unique parameters using the API, override machines which fail 
 <a href="#heading--acquire-machines"><h2 id="heading--acquire-machines">How to acquire machines</h2></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To acquire/allocate a node with the web UI, select a machine which is in the "Ready" state, and drop down the "Take action" menu:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/3724346e052c865f4e865d1caf2778b115f0798f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3724346e052c865f4e865d1caf2778b115f0798f.jpeg"></a>
@@ -973,7 +973,7 @@ MAAS will acquire the selected machine; you can now find it in the list of "Allo
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a2bdb8b7b7c5705daee14bdea5caed223537917d.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a2bdb8b7b7c5705daee14bdea5caed223537917d.jpeg"></a>
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 
 To acquire/allocate a random node:
 
@@ -997,7 +997,7 @@ To acquire a node, it must have a status of 'Ready'.
 <a href="#heading--deploy"><h2 id="heading--deploy">How to deploy machines</h2></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To deploy directly from MAAS, select one or more machine(s) and press the 'Deploy' button.
 
 <a href="https://assets.ubuntu.com/v1/56958753-nodes-deploy__2.4_deploy.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/56958753-nodes-deploy__2.4_deploy.png"></a>
@@ -1010,7 +1010,7 @@ While a machine is deploying its status will change to Deploying to 'OS', where 
 
 Once a machine has finished deploying its status will change to just the name of the OS (e.g. 'Ubuntu 18.04 LTS').
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To deploy a node:
 
 ``` bash
