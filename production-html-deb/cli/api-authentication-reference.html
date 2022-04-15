@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -396,14 +396,13 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>API authentication reference</h1><!-- "API authentication reference" -->
 <p>The MAAS API uses <a href="http://en.wikipedia.org/wiki/OAuth">OAuth</a> as its authentication mechanism. This isn&rsquo;t third-party (3-legged) OAuth, so the process used is what&rsquo;s commonly referred to as 0-legged OAuth: the consumer accesses protected resources by submitting OAuth signed requests.</p>
-<p>Note that some API endpoints support unauthenticated requests (i.e. anonymous access). See the <a href="https://maas.io/docs/api">API documentation</a> for details. </p>
-<h4>Two questions you may have:</h4>
-<ol>
-<li><a href="#heading--python">How can I perform authenticated requests in python?</a></li>
-<li><a href="#heading--ruby">How can I perform authenticated requests in ruby?</a></li>
-</ol>
+<p>Note that some API endpoints support unauthenticated requests (i.e. anonymous access). See the <a href="https://maas.io/docs/api">API documentation</a> for details. This article will help you learn:</p>
+<ul>
+<li><a href="#heading--python">How to perform authenticated requests in Python</a></li>
+<li><a href="#heading--ruby">How to perform authenticated requests in Ruby</a></li>
+</ul>
 <p>Here are two examples on how to perform an authenticated GET request to retrieve the list of nodes. The &lt;consumer_key&gt;, &lt;consumer_token&gt;, &lt;secret&gt; tokens are the three elements that compose the API key (API key = &lsquo;&lt;consumer_key&gt;:&lt;consumer_token&gt;:&lt;secret&gt;&lsquo;).</p>
-<p><a href="#heading--python"><h2 id="heading--python">Python</h2></a></p>
+<p><a href="#heading--python"><h2 id="heading--python">How to perform authenticated requests in Python</h2></a></p>
 <p>Note: the below example uses <a href="https://fades.readthedocs.io/en/stable/">fades</a>, but you can also install the <code>requests_oauthlib</code> (<a href="https://pypi.org/project/requests-oauthlib/">pypi link</a>) and <code>oauthlib</code> (<a href="https://pypi.org/project/oauthlib/">pypi link</a>) packages with <code>pip</code>. Replace <code>&lt;MAAS_SERVER_IP&gt;</code> with your server&rsquo;s IP address, and <code>&lt;API-KEY&gt;</code> with your API key.</p>
 <pre><code class="language-python">from oauthlib.oauth1 import SIGNATURE_PLAINTEXT # fades
 from requests_oauthlib import OAuth1Session # fades
@@ -418,7 +417,7 @@ nodes.raise_for_status()
 
 print(nodes.json())
 </code></pre>
-<p><a href="#heading--ruby"><h2 id="heading--ruby">Ruby</h2></a></p>
+<p><a href="#heading--ruby"><h2 id="heading--ruby">How to perform authenticated requests in Ruby</h2></a></p>
 <pre><code class="language-ruby">require 'oauth'
 require 'oauth/signature/plaintext'
 
