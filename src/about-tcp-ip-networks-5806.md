@@ -14,6 +14,10 @@ This section is designed to help you learn:
 
 This material can be read from beginning to end, or you can skip to sections where you feel you might need more clarity.  Just remember that a good understanding of these fundamentals will make it much easier for you to efficiently lay out and debug MAAS networks.
 
+[note]
+While some standard networking concepts, such as PXE booting, RPC, subnets, power drivers, and proxies are not unique to MAAS, they are used in a unique way by MAAS.  You can find this customized introductory material about these concepts in the article entitled "[About MAAS networking](/t/about-networking/5084)".
+[/note]
+
 <a href="#heading--about-the-internet"><h2 id="heading--about-the-internet">About the Internet</h2></a>
 
 Suppose we want to connect two computers, "SanDiego" and "Bangor", located at opposite corners of the country.  They should communicate via a network.  How do we make that happen?
