@@ -1,6 +1,16 @@
 <!-- "How to work with tags" -->
 Tags for different objects have similar purposes, but they aren't necessarily administered in the same way -- so we've included detailed articles for each tag type.  That said, many of the common operations regarding tags are performed in the same way.  This article will present some general, explanatory information, and then look at tag management steps that are the same (or very similar) across all types of MAAS tags.
 
+<a href="#heading--name-tags"><h2 id="heading--name-tags">How to name tags</h2></a>
+
+When working with tags, there are some universal rules you need to follow:
+
+1. Tag names can include any combination of alphabetic letters (a-zA-Z), numbers (0-9), dashes (-) and underscores (_).
+2. Tag names can be a maximum of 256 characters in length.
+3. Tag names *cannot* include spaces.
+
+In general, names that do not conform to these rules cannot be created.
+
 <a href="#heading--automatic-tags"><h2 id="heading--automatic-tags">About automatic tags</h2></a>
 
 [tabs]
@@ -221,23 +231,13 @@ definition='//node[@id="cpu:0"]/capabilities/capability/@id = "svm" and //node[@
 ```
 
 [/tab]
-[tab version="v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.1 Packages,v3.0 Packages,v2.9 Packages"]
+[tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
 
 [note]
 Tag management UI is available starting in MAAS v3.2.
 [/note]
 [/tab]
 [/tabs]
-
-<a href="#heading--name-tags"><h2 id="heading--name-tags">How to name tags</h2></a>
-
-When working with tags, there are some universal rules you need to follow:
-
-1. Tag names can include any combination of alphabetic letters (a-zA-Z), numbers (0-9), dashes (-) and underscores (_).
-2. Tag names can be a maximum of 256 characters in length.
-3. Tag names *cannot* include spaces.
-
-In general, names that do not conform to these rules cannot be created.
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages" view="UI"]
@@ -296,7 +296,7 @@ Click the trash can icon ("Remove") next to the tags you with to remove from the
 The tag will be removed from the selected machines.
 
 [/tab]
-[tab version="v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--create-and-assign-tags"><h2 id="heading--create-and-assign-tags">How to create and assign tags</h2></a>
 
 In the MAAS UI, creating and assigning tags is a combined operation; that is, you create tags as you assign them, rather than creating them first.  Creating tags in the UI is a little different user experience: there is a self-loading completion menu that collects all tags of a similar type.  This completion menu helps you avoid misspelling tags when entering them more than once; otherwise, you might not be able to group and filter tags properly. It also makes tag entry more efficient.
@@ -333,7 +333,7 @@ To remove (unassign) a tag:
 
 >Note that the tag you just removed will be deleted from  the tag auto complete list when it is no longer assigned to any  machines.
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--create-a-tag"><h2 id="heading--create-a-tag">How to create a tag</h2></a>
 
 With the CLI, you can create a tag with the following command:
