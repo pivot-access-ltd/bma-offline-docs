@@ -1,15 +1,13 @@
 <!-- "How to manage user accounts" -->
 Presumably, you have already created an administrative user, but MAAS can also have regular users (who log in to the interface or use the CLI). What users you create depends on how you intend to use MAAS.  An administrator can manage all aspects of MAAS, whereas a non-administrator user can perform a subset of tasks on machines they acquire and deploy.  MAAS limits the details a non-admin user can view, such as nodes allocated to other users. Also, non-admin users cannot access the global settings page in the web UI, nor any of the equivalent API calls from the command line.
 
-Additionally, in order for a user to log into a MAAS-deployed machine that user must have their public SSH key installed on it.  This article explains how to create users and add their public SSH keys to MAAS, so that every deployed machine will automatically have that key installed.
+Additionally, in order for a user to log into a MAAS-deployed machine that user must have their public SSH key installed on it.  This article explains how to create users and add their public SSH keys to MAAS, so that every deployed machine will automatically have that key installed.  This article will help you learn:
 
-#### Five questions you may have:
-
-1. [How do I add a user?](#heading--add-a-user)
-2. [How do I change a user's preferences?](#heading--user-preferences)
-3. [How do I add an SSH key for a user?](#heading--ssh-keys)
-4. [How do I add an API key for a user?](#heading--api-key)
-5. [How do users change their password?](#heading--change-password)
+* [How to add a user](#heading--add-a-user)
+* [How to change a user's preferences](#heading--user-preferences)
+* [How to add an SSH key for a user](#heading--ssh-keys)
+* [How to add an API key for a user](#heading--api-key)
+* [How users can change their password](#heading--change-password)
 
 [tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
@@ -45,7 +43,7 @@ Note that you do not need line continuations within the `jq` command because it'
 [/tab]
 [/tabs]
 
-<a href="#heading--add-a-user"><h2 id="heading--add-a-user">Add a user</h2></a>
+<a href="#heading--add-a-user"><h2 id="heading--add-a-user">How to add a user</h2></a>
 
 [tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
@@ -55,7 +53,7 @@ Clicking the 'Add user' button will result in a form to be displayed:
 
 Fill in the fields and hit 'Add user' when done.
 
-<a href="#heading--user-preferences"><h2 id="heading--user-preferences">User preferences</h2></a>
+<a href="#heading--user-preferences"><h2 id="heading--user-preferences">How to change a user's preferences</h2></a>
 
 Clicking the MAAS username in the top right corner will show that user's preferences.
 [/tab]
@@ -71,7 +69,7 @@ All the options are necessary. Note that stipulating a password on the CLI may b
 [/tab]
 [/tabs]
 
-<a href="#heading--ssh-keys"><h3 id="heading--ssh-keys">SSH keys</h3></a>
+<a href="#heading--ssh-keys"><h3 id="heading--ssh-keys">How to add an SSH key for a user</h3></a>
 
 Before a user can deploy a machine, they must import at least one public SSH key into MAAS. This key allows the user to access the deployed machine with the corresponding private key, which the user must possess. See [Public key authentication](https://www.ssh.com/ssh/public-key-authentication) (ssh.com) if you're not familiar with SSH keys.
 
@@ -93,7 +91,7 @@ Public keys residing on either [Launchpad](https://help.launchpad.net/YourAccoun
 
 <a href="https://assets.ubuntu.com/v1/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png"></a>
 
-<a href="#heading--api-key"><h3 id="heading--api-key">API key</h3></a>
+<a href="#heading--api-key"><h3 id="heading--api-key">How to add an API key for a user</h3></a>
 
 The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/how-to-use-the-maas-cli/5236).  Other services connecting to MAAS such as Juju will also need this key.
 [/tab]
@@ -102,7 +100,7 @@ We recommend that you use the web UI to set or change a user's API key.  To see 
 [/tab]
 [/tabs]
 
-<a href="#heading--change-password"><h3 id="heading--change-password">Change password</h3></a>
+<a href="#heading--change-password"><h3 id="heading--change-password">How users can change their password</h3></a>
 
 [tabs]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
