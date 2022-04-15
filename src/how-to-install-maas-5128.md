@@ -777,7 +777,7 @@ The `init` command can takes optional arguments. To list them, as well as read a
 <a href="#heading--configure-maas"><h2 id="heading--configure-maas">How to configure MAAS</h2></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 Once you've successfully installed MAAS (regardless of method), you can login to the MAAS CLI via the following process.  First, generate the API-key for the user you're going to employing:
 
 ```
@@ -1133,7 +1133,7 @@ If you've done everything correctly, you should see JSON output similar to this 
     }
 
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 Once you've successfully installed MAAS (regardless of method), you can now login here:
 
 ```

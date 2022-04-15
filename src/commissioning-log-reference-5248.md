@@ -1,6 +1,6 @@
 <!-- "Commissioning log reference" -->
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 The command line allows you to retrieve the verbatim logs of commissioning script runs, including those that are currently in progress.
 
 If you only want to see the latest or currently-running result, you can use `current-commissioning`, `current-testing`, or `current-installation` instead of an id:
@@ -72,7 +72,7 @@ maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
 **$RUN_ID** is labelled `id` in the verbose result output.
 [/note]
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 Commissioning logs, which are presented on the "Commissioning" tab for any machine in the "Ready" state, contain a list of commissioning scripts with a timestamp and result.  You can view the detailed logs for each of these scripts from this tab.
 
 When you click on the "Commissioning" tab under a given machine, you will see a screen similar to this one:

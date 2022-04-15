@@ -4,7 +4,7 @@ You can easily manage the basic networking elements of MAAS, including subnets, 
 This section will show you:
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 * [How to enable network discovery](#heading--how-to-enable-network-discovery)
 * [How to toggle subnet management](#heading--how-to-toggle-subnet-management)
 * [How to access the main networking view](#heading--how-to-access-ui-main-networking-view)
@@ -17,7 +17,7 @@ This section will show you:
 * [How to set up a bridge with MAAS](#heading--how-to-set-up-a-bridge-with-maas)
 * [How to set up a bridge with netplan](#heading--how-to-set-up-a-bridge-with-netplan)
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 * [How to enable network discovery](#heading--how-to-enable-network-discovery)
 * [How to toggle subnet management](#heading--how-to-toggle-subnet-management)
 * [How to determine fabric ID](#heading--how-to-determine-fabric-id)
@@ -34,13 +34,13 @@ This section will show you:
 <a href="#heading--how-to-enable-network-discovery"><h3 id="heading--how-to-enable-network-discovery">How to enable network discovery</h3></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 Network discovery can be disabled or re-enabled using the switch on the Network discovery dashboard.
 
 <a href="https://assets.ubuntu.com/v1/1782e4aa-installconfig-networking__2.4_discovery.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/1782e4aa-installconfig-networking__2.4_discovery.png"></a>
 
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To enable network discovery, enter the following at the command line:
 
 ```nohighlight
@@ -62,7 +62,7 @@ Network discovery can be disabled or re-enabled at any time with this CLI comman
 <a href="#heading--how-to-toggle-subnet-management"><h3 id="heading--how-to-toggle-subnet-management">How to toggle subnet management</h3></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To disable (or re-enable) subnet management, use the following procedure:
 
 1. Navigate to the 'Subnets' page and select the subnet.
@@ -85,7 +85,7 @@ To access the main networking view visit the 'Subnets' page:
 
 This main view can also be filtered either by fabrics or by spaces through the use of the 'Group by' drop-down.
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To enable or disable subnet management:
 
 ``` nohighlight
@@ -160,7 +160,7 @@ fabric-3      untagged  true       2600:100d:b104:94c0::/64
 [/tabs]
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--ui-how-to-display-the-subnet-window"><h3 id="heading--ui-how-to-display-the-subnet-window">How to display the subnet window</h3></a>
 
 Clicking a subnet (here `192.168.100.0/24`) will display its detail screen, which contains several sections, described below.
@@ -205,7 +205,7 @@ This section of the subnet page presents metrics regarding address usage by this
 
 'Subnet addresses' shows the total number of addresses associated with the subnet, here 254. 'Availability' shows how many of those addresses are unused, and therefore "available", here 189, which corresponds to a percentage of roughly 74% of the total. Finally, 'Used' shows the percentage that is used, here roughly 26%.
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--cli-how-to-view-subnet-details"><h3 id="heading--cli-how-to-view-subnet-details">How to view subnet details</h3></a>
 
 You can view the details of an individual subnet with the command:
@@ -248,7 +248,7 @@ maas admin subnets read \
 <a href="#heading--how-to-manage-static-routes"><h3 id="heading--how-to-manage-static-routes">How to manage static routes between subnets</h3></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To create a static route:
 
 1. Click the 'Add static route' button to reveal the edit pane. 
@@ -265,7 +265,7 @@ Routes can be edited and removed using the icons to the right of each entry.
 
 <a href="https://assets.ubuntu.com/v1/49f5e240-installconfig-networking__2.4_subnets-routes.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/49f5e240-installconfig-networking__2.4_subnets-routes.png"></a>
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To create a static route between two subnets, use the following command:
 
 ```nohighlight
@@ -276,7 +276,7 @@ gateway_ip=$GATEWAY_IP
 [/tabs]
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--how-to-view-reserved-ranges"><h3 id="heading--how-to-view-reserved-ranges">How to view reserved ranges</h3></a>
 
 The reserved ranges section of the subnet screen looks like this:
@@ -285,7 +285,7 @@ The reserved ranges section of the subnet screen looks like this:
 
 More details and instructions regarding these ranges can be found in [IP ranges](/t/how-to-manage-ip-ranges/5136).
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--ui-how-to-view-used-ip-addresses"><h3 id="heading--ui-how-to-view-used-ip-addresses">How to view used IP addresses</h3></a>
 
 This section displays hosts (including controllers) associated with the used addresses along with related bits of host information.
@@ -303,7 +303,7 @@ It's essential to enforce usage of IP addresses to avoid domain name conflicts, 
 [/note]
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To configure a bridge with the MAAS UI: 
 
 1. Select the machine you want to bridge. 
@@ -326,7 +326,7 @@ Then you can deploy machines using this bridge.
 
 **NOTE** that you can create an "Open switch" bridge if desired, and MAAS will create the netplan model for you.
 [/tab] 
-[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 You can use the MAAS CLI/API to configure a bridge via the following procedure:
 
 1. Select the interface on which you wish to configure the bridge. This example uses the boot interface, since the boot interface must be connected to a MAAS controlled network -- but any interface is allowed:
