@@ -17,14 +17,56 @@ This article will tell you:
 The following three MAAS components need to be backed-up and restored, on each region and rack controller, to recreate a working environment:
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"]
+[tab version="v3.2 Snap"]
 1.  The PostgreSQL database
 2.  The configuration files in `/snap/maas/current/etc/maas`
 3.  The configuration files in `/var/snap/maas/common/maas/`
 
 `/var/snap/maas/common/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
 [/tab]
-[tab version="v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages"]
+[tab version="v3.2 Packages"]
+1.  The PostgreSQL database
+2.  The configuration files in `/etc/maas`
+3.  The configuration files in `/var/lib/maas`
+
+`/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
+[/tab]
+[tab version="v3.1 Snap"]
+1.  The PostgreSQL database
+2.  The configuration files in `/snap/maas/current/etc/maas`
+3.  The configuration files in `/var/snap/maas/common/maas/`
+
+`/var/snap/maas/common/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
+[/tab]
+[tab version="v3.1 Packages"]
+1.  The PostgreSQL database
+2.  The configuration files in `/etc/maas`
+3.  The configuration files in `/var/lib/maas`
+
+`/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
+[/tab]
+[tab version="v3.0 Snap"]
+1.  The PostgreSQL database
+2.  The configuration files in `/snap/maas/current/etc/maas`
+3.  The configuration files in `/var/snap/maas/common/maas/`
+
+`/var/snap/maas/common/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
+[/tab]
+[tab version="v3.0 Packages"]
+1.  The PostgreSQL database
+2.  The configuration files in `/etc/maas`
+3.  The configuration files in `/var/lib/maas`
+
+`/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
+[/tab]
+[tab version="v2.9 Snap"]
+1.  The PostgreSQL database
+2.  The configuration files in `/snap/maas/current/etc/maas`
+3.  The configuration files in `/var/snap/maas/common/maas/`
+
+`/var/snap/maas/common/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
+[/tab]
+[tab version="v2.9 Packages"]
 1.  The PostgreSQL database
 2.  The configuration files in `/etc/maas`
 3.  The configuration files in `/var/lib/maas`
@@ -73,12 +115,42 @@ Stopping these services will avoid conflicting updates during the remaining back
 Archive the database and the required configuration files with a command similar to the following:
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"]
+[tab version="v3.2 Snap"]
 ``` bash
 sudo tar cvpzf ~/backup.tgz --exclude=/var/snap/maas/common/maas/boot-resources /snap/maas/current/etc/maas /var/snap/maas/common/maas ~/dump.sql
 ```
 [/tab]
-[tab version="v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages"]
+[tab version="v3.2 Packages"]
+``` bash
+sudo tar cvpzf ~/backup.tgz --exclude=/var/lib/maas/boot-resources /etc/maas /var/lib/maas ~/dump.sql
+```
+[/tab]
+[tab version="v3.1 Snap"]
+``` bash
+sudo tar cvpzf ~/backup.tgz --exclude=/var/snap/maas/common/maas/boot-resources /snap/maas/current/etc/maas /var/snap/maas/common/maas ~/dump.sql
+```
+[/tab]
+[tab version="v3.1 Packages"]
+``` bash
+sudo tar cvpzf ~/backup.tgz --exclude=/var/lib/maas/boot-resources /etc/maas /var/lib/maas ~/dump.sql
+```
+[/tab]
+[tab version="v3.0 Snap"]
+``` bash
+sudo tar cvpzf ~/backup.tgz --exclude=/var/snap/maas/common/maas/boot-resources /snap/maas/current/etc/maas /var/snap/maas/common/maas ~/dump.sql
+```
+[/tab]
+[tab version="v3.0 Packages"]
+``` bash
+sudo tar cvpzf ~/backup.tgz --exclude=/var/lib/maas/boot-resources /etc/maas /var/lib/maas ~/dump.sql
+```
+[/tab]
+[tab version="v2.9 Snap"]
+``` bash
+sudo tar cvpzf ~/backup.tgz --exclude=/var/snap/maas/common/maas/boot-resources /snap/maas/current/etc/maas /var/snap/maas/common/maas ~/dump.sql
+```
+[/tab]
+[tab version="v2.9 Packages"]
 ``` bash
 sudo tar cvpzf ~/backup.tgz --exclude=/var/lib/maas/boot-resources /etc/maas /var/lib/maas ~/dump.sql
 ```
@@ -108,7 +180,7 @@ sudo -u postgres psql -f dump.sql postgres
 Next, copy across the old configuration files to their new locations, taking care to move the originals aside just in case:
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"]
+[tab version="v3.2 Snap"]
 ``` bash
 sudo mv /snap/maas/current/etc/maas /snap/maas/current/etc/_maas
 sudo mv /var/snap/maas/common/maas /var/snap/maas/common/_maas
@@ -118,7 +190,61 @@ sudo cp -prf /var/snap/maas/common/maas /var/snap/maas/common/
 
 If your restore process regenerated the `/var/snap/maas/common/maas/secret` file, make sure update this secret on any additional rack controllers.
 [/tab]
-[tab version="v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages"]
+[tab version="v3.2 Packages"]
+``` bash
+sudo sh -c "mv /etc/maas /etc/_maas; mv /var/lib/maas /var/lib/_maas"
+sudo sh -c "cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/"
+```
+
+If your restore process regenerated the `/var/lib/maas/secret` file, make sure update this secret on any additional rack controllers.
+[/tab]
+[tab version="v3.1 Snap"]
+``` bash
+sudo mv /snap/maas/current/etc/maas /snap/maas/current/etc/_maas
+sudo mv /var/snap/maas/common/maas /var/snap/maas/common/_maas
+sudo cp -prf /snap/maas/current/etc/maas /snap/maas/current/etc/
+sudo cp -prf /var/snap/maas/common/maas /var/snap/maas/common/
+```
+
+If your restore process regenerated the `/var/snap/maas/common/maas/secret` file, make sure update this secret on any additional rack controllers.
+[/tab]
+[tab version="v3.1 Packages"]
+``` bash
+sudo sh -c "mv /etc/maas /etc/_maas; mv /var/lib/maas /var/lib/_maas"
+sudo sh -c "cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/"
+```
+
+If your restore process regenerated the `/var/lib/maas/secret` file, make sure update this secret on any additional rack controllers.
+[/tab]
+[tab version="v3.0 Snap"]
+``` bash
+sudo mv /snap/maas/current/etc/maas /snap/maas/current/etc/_maas
+sudo mv /var/snap/maas/common/maas /var/snap/maas/common/_maas
+sudo cp -prf /snap/maas/current/etc/maas /snap/maas/current/etc/
+sudo cp -prf /var/snap/maas/common/maas /var/snap/maas/common/
+```
+
+If your restore process regenerated the `/var/snap/maas/common/maas/secret` file, make sure update this secret on any additional rack controllers.
+[/tab]
+[tab version="v3.0 Packages"]
+``` bash
+sudo sh -c "mv /etc/maas /etc/_maas; mv /var/lib/maas /var/lib/_maas"
+sudo sh -c "cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/"
+```
+
+If your restore process regenerated the `/var/lib/maas/secret` file, make sure update this secret on any additional rack controllers.
+[/tab]
+[tab version="v2.9 Snap"]
+``` bash
+sudo mv /snap/maas/current/etc/maas /snap/maas/current/etc/_maas
+sudo mv /var/snap/maas/common/maas /var/snap/maas/common/_maas
+sudo cp -prf /snap/maas/current/etc/maas /snap/maas/current/etc/
+sudo cp -prf /var/snap/maas/common/maas /var/snap/maas/common/
+```
+
+If your restore process regenerated the `/var/snap/maas/common/maas/secret` file, make sure update this secret on any additional rack controllers.
+[/tab]
+[tab version="v2.9 Packages"]
 ``` bash
 sudo sh -c "mv /etc/maas /etc/_maas; mv /var/lib/maas /var/lib/_maas"
 sudo sh -c "cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/"
