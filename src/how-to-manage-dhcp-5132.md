@@ -8,7 +8,7 @@ This documentation presupposes that MAAS-managed DHCP is used to enlist and comm
 This article will tell you:
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 - [How to enable MAAS-managed DHCP](#heading--enabling-dhcp)
 - [How to resolve IP conflicts](#heading--resolving-ip-conflicts)
 - [How to extend a reserved dynamic IP range](#heading--extending-a-reserved-dynamic-ip-range)
@@ -16,7 +16,7 @@ This article will tell you:
 - [How to use a DHCP relay](#heading--dhcp-relay)
 - [How to customise MAAS with DHCP snippets](#heading--dhcp-snippets)
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 - [How to enable MAAS-managed DHCP](#heading--enabling-dhcp)
 - [How to resolve IP conflicts](#heading--resolving-ip-conflicts)
 - [How to extend a reserved dynamic IP range](#heading--extending-a-reserved-dynamic-ip-range)
@@ -39,7 +39,7 @@ This article will tell you:
 MAAS-managed DHCP needs a reserved dynamic IP range enlist and commission machines. You should create such a range when you are enabling DHCP with the web UI.
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To enable MAAS-managed DHCP, under the 'Subnets' page select the desired VLAN and then:
 
 1.  Under the 'Take action' button select 'Provide DHCP'. A new window will appear.
@@ -51,7 +51,7 @@ To enable MAAS-managed DHCP, under the 'Subnets' page select the desired VLAN an
 
 Now, addresses in this range will get assigned to machines that are being either enlisted or commissioned.  In addition, if you are deploying a machine that has an interface connected to the untagged VLAN, and it has an IP assignment mode set to 'DHCP,' then it will also get an address in this range.
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To enable DHCP on a VLAN on a certain fabric:
 
 ``` nohighlight
@@ -109,10 +109,10 @@ To relay from one VLAN (source) to another VLAN (target):
 2.  Set up the external relay. This relay is set up independently from MAAS. See [DHCP relay](/t/maas-concepts-and-terms-reference/5246#heading--dhcp-relay) for software suggestions.
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 3.  Configure MAAS-managed DHCP. Navigate to the source VLAN page and select the 'Relay DHCP' action. Fill in the fields in the resulting form. The crucial setting is the target VLAN ('Relay VLAN'). Press the 'Relay DHCP' button to finish.
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 3. To relay DHCP traffic for a VLAN (source) through another VLAN (target):
 
 ``` nohighlight
@@ -144,14 +144,14 @@ Modifications made directly to `dhcpd.conf.template` or `dhcpd6.conf.template` a
 [/note]
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To manage snippets, as an admin, open the 'Settings' page and click on the 'DHCP snippets' tab.
 
 For example, to create a new snippet press 'Add custom snippet'. In the resulting window, choose a name and type for it and enter its associated DHCP configuration. Click 'Save snippet' to apply the change, and make sure to activate the checkbox in the 'Enabled' column of the snippets list.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a3247c726ed9e3e5d7a99becd89920e81aaa86f7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a3247c726ed9e3e5d7a99becd89920e81aaa86f7.png"></a>
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages.v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 When you create a snippet, MAAS enables it by default.
 
 To create a **global** snippet:
