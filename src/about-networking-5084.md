@@ -1,12 +1,30 @@
 <!-- "About networking" -->
-<a href="#heading--about-maas-networks"><h2 id="heading--about-maas-networks">About MAAS networks</h2></a>
+Some elements of MAAS networking are unique to the product, while others are standard networking concepts that are uniquely applied to MAAS.  This section will help you learn:
 
-There are elements of MAAS networking that are unique to the product.  This section will help you learn:
-
+ - [About PXE booting](#heading--about-pxe-booting)
+ - [About power drivers](#heading--about-power-drivers)
+ - [About proxies](#heading--about-proxies)
+ - [About RPC](#heading--about-RPC)
  - [About network discovery](#heading--about-network-discovery)
  - [About subnet management](#heading--about-subnet-management)
  - [About IPv6](#heading--about-ipv6)
  - [About availability zones](#heading--about-availability-zones)
+
+<a href="#heading--about-pxe-booting"><h3 id="heading--about-pxe-booting">About PXE booting</h3></a>
+
+PXE booting, or [Preboot eXecution Environment](https://en.wikipedia.org/wiki/Preboot_Execution_Environment), refers to the ability to boot a machine via a Network Interface Card (NIC), even though the machine may currently be in an "off" state.
+
+<a href="#heading--about-power-drivers"><h3 id="heading--about-power-drivers">About power drivers</h3></a>
+
+Power drivers are units of software that interface with the [IPMI](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface) (typically, the [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller)) to power-cycle a machine remotely.  Different machines use different BMC configurations.  Typically, these vary by manufacturer, although there are some standard IPMI drivers that can be used.  In addition, it is sometimes possible to control a machine with a specialised BMC via a generic IPMI driver.
+
+<a href="#heading--about-proxies"><h3 id="heading--about-proxies">About proxies</h3></a>
+
+A [proxy server](https://en.wikipedia.org/wiki/Proxy_server) ("proxy service" or just "proxy") is an intermediary application that serves to broker network transactions between two hosts.  Proxies provide several benefits, including privacy (protecting internal IP addresses from discovery by those on other networks), security (performing some checks against incoming packets), and load-balancing (routing packets to multiple servers, based on actual load or some statistical algorithm).  
+
+<a href="#heading--about-rpc"><h3 id="heading--about-rpc">About RPC</h3></a>
+
+A [Remote Procedure Call](https://en.wikipedia.org/wiki/Remote_procedure_call), or RPC, is a method by which one computer can execute a subroutine sent by another process or system.  These procedures run as if they were native to the machine executing them, even though they may have been prepared or coded on the requesting machine.
 
 <a href="#heading--about-network-discovery"><h3 id="heading--about-network-discovery">About network discovery</h3></a>
 

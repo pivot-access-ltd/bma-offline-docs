@@ -395,14 +395,25 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>About networking</h1><!-- "About networking" -->
-<p><a href="#heading--about-maas-networks"><h2 id="heading--about-maas-networks">About MAAS networks</h2></a></p>
-<p>There are elements of MAAS networking that are unique to the product.  This section will help you learn:</p>
+<p>Some elements of MAAS networking are unique to the product, while others are standard networking concepts that are uniquely applied to MAAS.  This section will help you learn:</p>
 <ul>
+<li><a href="#heading--about-pxe-booting">About PXE booting</a></li>
+<li><a href="#heading--about-power-drivers">About power drivers</a></li>
+<li><a href="#heading--about-proxies">About proxies</a></li>
+<li><a href="#heading--about-RPC">About RPC</a></li>
 <li><a href="#heading--about-network-discovery">About network discovery</a></li>
 <li><a href="#heading--about-subnet-management">About subnet management</a></li>
 <li><a href="#heading--about-ipv6">About IPv6</a></li>
 <li><a href="#heading--about-availability-zones">About availability zones</a></li>
 </ul>
+<p><a href="#heading--about-pxe-booting"><h3 id="heading--about-pxe-booting">About PXE booting</h3></a></p>
+<p>PXE booting, or <a href="https://en.wikipedia.org/wiki/Preboot_Execution_Environment">Preboot eXecution Environment</a>, refers to the ability to boot a machine via a Network Interface Card (NIC), even though the machine may currently be in an &ldquo;off&rdquo; state.</p>
+<p><a href="#heading--about-power-drivers"><h3 id="heading--about-power-drivers">About power drivers</h3></a></p>
+<p>Power drivers are units of software that interface with the <a href="https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface">IPMI</a> (typically, the <a href="https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller">BMC</a>) to power-cycle a machine remotely.  Different machines use different BMC configurations.  Typically, these vary by manufacturer, although there are some standard IPMI drivers that can be used.  In addition, it is sometimes possible to control a machine with a specialised BMC via a generic IPMI driver.</p>
+<p><a href="#heading--about-proxies"><h3 id="heading--about-proxies">About proxies</h3></a></p>
+<p>A <a href="https://en.wikipedia.org/wiki/Proxy_server">proxy server</a> (&ldquo;proxy service&rdquo; or just &ldquo;proxy&rdquo;) is an intermediary application that serves to broker network transactions between two hosts.  Proxies provide several benefits, including privacy (protecting internal IP addresses from discovery by those on other networks), security (performing some checks against incoming packets), and load-balancing (routing packets to multiple servers, based on actual load or some statistical algorithm).  </p>
+<p><a href="#heading--about-rpc"><h3 id="heading--about-rpc">About RPC</h3></a></p>
+<p>A <a href="https://en.wikipedia.org/wiki/Remote_procedure_call">Remote Procedure Call</a>, or RPC, is a method by which one computer can execute a subroutine sent by another process or system.  These procedures run as if they were native to the machine executing them, even though they may have been prepared or coded on the requesting machine.</p>
 <p><a href="#heading--about-network-discovery"><h3 id="heading--about-network-discovery">About network discovery</h3></a></p>
 <p>MAAS constantly listens to the network and reports any discovered devices. Devices are identified when the rack controller observes them communicating on an attached IPv4 subnet. Discovered devices that do not correspond to machines and devices already known to MAAS can be listed via the CLI. If a device advertises a hostname using <code>mDNS</code> (such as with <code>avahi</code> or <code>Bonjour</code>), MAAS will also present the discovered hostname when listing devices.</p>
 <p>Using the Dashboard, an unknown discovered device can be added to MAAS as a device or as a network interface belonging to a machine or device. Clicking the down arrow to the right of a new device allows values such as &lsquo;Type&rsquo;, &lsquo;Domain&rsquo;, &lsquo;IP Assignment&rsquo; and &lsquo;Parent&rsquo; to be changed prior to the device being added. Selecting a Parent device is optional.</p>
