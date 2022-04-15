@@ -8,7 +8,7 @@ The region controller configures the NTP service to keep its time synchronised f
 External sites, such as an existing NTP infrastructure, can be used directly as a time source for both rack controllers and machines.
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
 You can specify an external site by choosing the NTP server(s) and selecting the 'External Only' option. The region controller always uses an external site.
 
 On the 'Settings' page, select the 'Network services' tab and scroll down to the 'NTP' section:
@@ -17,7 +17,7 @@ On the 'Settings' page, select the 'Network services' tab and scroll down to the
 
 Enter the address of the desired NTP server. Apply any changes by pressing the 'Save' button.
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
 You can specify an external NTP server with two successive commands:
 
 ```
