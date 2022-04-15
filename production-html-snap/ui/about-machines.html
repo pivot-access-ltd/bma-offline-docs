@@ -409,7 +409,7 @@
 <li><a href="#heading--about-storage">About storage</a></li>
 </ul>
 <p><a href="#heading--about-the-machine-life-cycle"><h2 id="heading--about-the-machine-life-cycle">About the machine life-cycle</h2></a></p>
-<p>One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, acquired, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.</p>
+<p>One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, allocated, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.</p>
 <p><a href="#heading--enlisting-deployed-machines"><h3 id="heading--enlisting-deployed-machines">About enlisting deployed machines</h3></a></p>
 <p>In addition, already-deployed machines can be enlisted by MAAS, via the MAAS 3.1 CLI, and their operating parameters can be gathered with a special MAAS script.  Because already-deployed machines were not deployed by MAAS, most of the standard MAAS commands will not affect the machine and may, at times, return some odd results.  This is not errant behaviour; the goal of enlisting deployed machines is to avoid disturbing their workload.  These unusual behaviours will be documented throughout this article and the following machine articles.</p>
 <p>All of these states and actions represent the possible life-cycle of a machine.  This life-cycle isn&rsquo;t strict or linear &ndash; it depends on how you use a machine &ndash; but it&rsquo;s useful to give a general overview of how machines tend to change states.  In the discussion that follows, states and actions are shown in <strong>bold</strong> type.</p>
@@ -424,7 +424,7 @@
 <p>When you select a machine that is marked <strong>New</strong>, you can choose to <strong>commission</strong> it.  If you add a machine manually, it is automatically <strong>commissioned</strong>.</p>
 </li>
 <li>
-<p>Machines that have successfully commissioned can be <strong>acquired</strong> and <strong>deployed</strong>.  Machines that don&rsquo;t successfully commission can be <strong>marked broken</strong> (and later recovered when the issues are resolved).</p>
+<p>Machines that have successfully commissioned can be <strong>allocated</strong> and <strong>deployed</strong>.  Machines that don&rsquo;t successfully commission can be <strong>marked broken</strong> (and later recovered when the issues are resolved).</p>
 </li>
 <li>
 <p>Resolving problems with machines usually involve <strong>testing</strong> the machine.</p>
@@ -452,7 +452,7 @@
 <th align="left">Action/State</th>
 <th align="center">New</th>
 <th align="center">Ready</th>
-<th align="center">Acquired</th>
+<th align="center">Allocated</th>
 <th align="center">Deployed</th>
 <th align="center">Locked</th>
 <th align="center">Rescue</th>
@@ -473,7 +473,7 @@
 <td align="center">X (w/scripts)</td>
 </tr>
 <tr>
-<td align="left">Acquire</td>
+<td align="left">Allocate</td>
 <td align="center"></td>
 <td align="center">X</td>
 <td align="center"></td>
@@ -924,9 +924,9 @@ The majority of testing scripts only work with machines that are backed by physi
 <p>Network testing also includes customisable network testing and commissioning scripts. There are no particular restrictions on these scripts, allowing you to test a wide variety of possible conditions and situations.</p>
 <p><a href="#heading--about-post-commission-configuration"><h3 id="heading--about-post-commission-configuration">About post-commission configuration</h3></a></p>
 <p>Once commissioned, you can configure the machine&rsquo;s network interface(s). Specifically, when a machine&rsquo;s status is either &ldquo;Ready&rdquo; or &ldquo;Broken&rdquo;, interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces.</p>
-<p><a href="#heading--about-acquisition-and-deployment"><h3 id="heading--about-acquisition-and-deployment">About acquisition and deployment</h3></a></p>
+<p><a href="#heading--about-allocation-and-deployment"><h3 id="heading--about-allocation-and-deployment">About allocation and deployment</h3></a></p>
 <p>Once a machine has been commissioned, the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it, along with any other application loads you wish to run on that machine.</p>
-<p>Before deploying a machine, MAAS must acquire it (status &lsquo;Allocated&rsquo;). Acquiring (&ldquo;allocating&rdquo;) a machine reserves the machine for the exclusive use of the acquiring process. The machine is no longer available to any other process, including another MAAS instance, or a process such as Juju.</p>
+<p>Before deploying a machine, MAAS must allocate it (status &lsquo;Allocated&rsquo;). Allocating a machine reserves the machine for the exclusive use of the allocation process. The machine is no longer available to any other process, including another MAAS instance, or a process such as Juju.</p>
 <p>The agent that triggers deployment may vary. For instance, if the machines are destined to run complex, inter-related services that scale up or down frequently, like a &ldquo;cloud&rdquo; resource, then <a href="https://jaas.ai/">Juju</a> is the recommended deployment agent. Juju will also install and configure services on the deployed machines. If you want to use MAAS to install a base operating system and work on the machines manually, then you can deploy a machine directly with MAAS.</p>
 <p>Machines deployed with MAAS will also be ready to accept connections via SSH, to the &lsquo;ubuntu&rsquo; user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in <a href="how-to-manage-user-accounts.html#heading--ssh-keys">SSH keys</a>.</p>
 <p><strong>NOTE:</strong> 

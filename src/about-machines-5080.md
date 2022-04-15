@@ -148,7 +148,7 @@ In this article, you will learn:
 
 <a href="#heading--about-the-machine-life-cycle"><h2 id="heading--about-the-machine-life-cycle">About the machine life-cycle</h2></a>
 
-One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, acquired, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
+One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, allocated, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
 
 <a href="#heading--enlisting-deployed-machines"><h3 id="heading--enlisting-deployed-machines">About enlisting deployed machines</h3></a>
 
@@ -172,7 +172,7 @@ All of these states and actions represent the possible life-cycle of a machine. 
 
 3. When you select a machine that is marked **New**, you can choose to **commission** it.  If you add a machine manually, it is automatically **commissioned**.
 
-4. Machines that have successfully commissioned can be **acquired** and **deployed**.  Machines that don't successfully commission can be **marked broken** (and later recovered when the issues are resolved).
+4. Machines that have successfully commissioned can be **allocated** and **deployed**.  Machines that don't successfully commission can be **marked broken** (and later recovered when the issues are resolved).
 
 5. Resolving problems with machines usually involve **testing** the machine.
 
@@ -190,10 +190,10 @@ Since these actions are not necessarily sequential, and the available actions ch
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
-| Action/State | New | Ready | Acquired | Deployed | Locked | Rescue | Broken | Enlist deployed |
+| Action/State | New | Ready | Allocated | Deployed | Locked | Rescue | Broken | Enlist deployed |
 |:-------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|:---------------:|	
 | Commission   | X   | X     |          |          |        |        |   X    |  X (w/scripts)  |
-| Acquire      |     | X     |          |          |        |        |        |                 |
+| Allocate      |     | X     |          |          |        |        |        |                 |
 | Deploy       |     | X     |   X      |          |        |        |        |                 |
 | Release      |     |       |   X      |    X     |        |        |        |  X (no return)  |
 | Power on     |     |       |          |    X     |        |        |   X    |                 |
@@ -213,10 +213,10 @@ Since these actions are not necessarily sequential, and the available actions ch
 *Machine is removed from the view of MAAS, but remains deployed with original workload.
 [/tab]
 [tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
-| Action/State | New | Ready | Acquired | Deployed | Locked | Rescue | Broken |
+| Action/State | New | Ready | Allocated | Deployed | Locked | Rescue | Broken |
 |:-------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|	
 | Commission   | X   | X     |          |          |        |        |   X    |
-| Acquire      |     | X     |          |          |        |        |        |
+| Allocated     |     | X     |          |          |        |        |        |
 | Deploy       |     | X     |   X      |          |        |        |        |
 | Release      |     |       |   X      |    X     |        |        |        |
 | Power on     |     |       |          |    X     |        |        |   X    |
@@ -739,11 +739,11 @@ Network testing also includes customisable network testing and commissioning scr
 
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces.
 
-<a href="#heading--about-acquisition-and-deployment"><h3 id="heading--about-acquisition-and-deployment">About acquisition and deployment</h3></a>
+<a href="#heading--about-allocation-and-deployment"><h3 id="heading--about-allocation-and-deployment">About allocation and deployment</h3></a>
 
 Once a machine has been commissioned, the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it, along with any other application loads you wish to run on that machine.
 
-Before deploying a machine, MAAS must acquire it (status 'Allocated'). Acquiring ("allocating") a machine reserves the machine for the exclusive use of the acquiring process. The machine is no longer available to any other process, including another MAAS instance, or a process such as Juju.
+Before deploying a machine, MAAS must allocate it (status 'Allocated'). Allocating a machine reserves the machine for the exclusive use of the allocation process. The machine is no longer available to any other process, including another MAAS instance, or a process such as Juju.
 
 The agent that triggers deployment may vary. For instance, if the machines are destined to run complex, inter-related services that scale up or down frequently, like a "cloud" resource, then [Juju](https://jaas.ai/) is the recommended deployment agent. Juju will also install and configure services on the deployed machines. If you want to use MAAS to install a base operating system and work on the machines manually, then you can deploy a machine directly with MAAS.
 
