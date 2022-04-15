@@ -741,7 +741,7 @@ usable-condor  ed8hmy     Deployed
 still-imp      h6ra6d     Allocated
 </code></pre>
 <p><a href="#heading--set-dynamic-annotations-for-a-machine"><h4 id="heading--set-dynamic-annotations-for-a-machine">How to set dynamic annotations for a machine</h4></a></p>
-<p>Dynamic annotations, otherwise known as &ldquo;workload annotations&rdquo; or &ldquo;owner data,&rdquo; can be used to keep track of the runtime status of machines that are acquired or deployed.  These annotations are set using <code>key=value</code> pairs.  You can set any <code>key=value</code> pair that you wish for any machine, although it&rsquo;s probably more useful if you standardise your key names.</p>
+<p>Dynamic annotations, otherwise known as &ldquo;workload annotations&rdquo; or &ldquo;owner data,&rdquo; can be used to keep track of the runtime status of machines that are allocated or deployed.  These annotations are set using <code>key=value</code> pairs.  You can set any <code>key=value</code> pair that you wish for any machine, although it&rsquo;s probably more useful if you standardise your key names.</p>
 <p>To set a dynamic annotation for a machine, you can enter a command like this:</p>
 <pre><code class="language-nohighlight">maas $PROFILE machine set-owner-data $SYSTEM_ID $KEY=$VALUE
 </code></pre>
@@ -1207,7 +1207,7 @@ Machine-readable output follows:
 <pre><code class="language-nohighlight">maas admin block-device set-boot-disk &lt;node-id&gt; 10
 </code></pre>
 <p><strong>NOTE:</strong> 
-Only an administrator can set which block device should be used as the boot disk and only a physical block device can be set as as the boot disk. This operation should be done before a machine is acquired or the storage layout will be applied to the previous boot disk.</p>
+Only an administrator can set which block device should be used as the boot disk and only a physical block device can be set as as the boot disk. This operation should be done before a machine is allocated or the storage layout will be applied to the previous boot disk.</p>
 <p><a href="#heading--how-to-manage-partitions"><h3 id="heading--how-to-manage-partitions">How to manage partitions</h3></a></p>
 <p>This section will explain:</p>
 <ul>

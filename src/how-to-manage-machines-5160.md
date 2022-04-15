@@ -731,7 +731,7 @@ still-imp      h6ra6d     Allocated
 
 <a href="#heading--set-dynamic-annotations-for-a-machine"><h4 id="heading--set-dynamic-annotations-for-a-machine">How to set dynamic annotations for a machine</h4></a>
 
-Dynamic annotations, otherwise known as "workload annotations" or "owner data," can be used to keep track of the runtime status of machines that are acquired or deployed.  These annotations are set using `key=value` pairs.  You can set any `key=value` pair that you wish for any machine, although it's probably more useful if you standardise your key names.
+Dynamic annotations, otherwise known as "workload annotations" or "owner data," can be used to keep track of the runtime status of machines that are allocated or deployed.  These annotations are set using `key=value` pairs.  You can set any `key=value` pair that you wish for any machine, although it's probably more useful if you standardise your key names.
 
 To set a dynamic annotation for a machine, you can enter a command like this:
 
@@ -1390,7 +1390,7 @@ maas admin block-device set-boot-disk <node-id> 10
 ```
 
 [note]
-Only an administrator can set which block device should be used as the boot disk and only a physical block device can be set as as the boot disk. This operation should be done before a machine is acquired or the storage layout will be applied to the previous boot disk.
+Only an administrator can set which block device should be used as the boot disk and only a physical block device can be set as as the boot disk. This operation should be done before a machine is allocated or the storage layout will be applied to the previous boot disk.
 [/note]
 
 <a href="#heading--how-to-manage-partitions"><h3 id="heading--how-to-manage-partitions">How to manage partitions</h3></a>
