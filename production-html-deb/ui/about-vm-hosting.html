@@ -410,7 +410,7 @@
 </ul>
 <p>MAAS currently supports VM hosts and VMs created with LXD VMs and VM hosts as the preferred VM hosting method. As a legacy offering, MAAS still supports VM hosts and VMs created via <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a>.</p>
 <p><a href="#heading--about-vm-hosts"><h2 id="heading--about-vm-hosts">About VM hosts</h2></a></p>
-<p>A VM host is simply a machine which can run virtual machines (VMs) by allocating  resources across the VMs you want to create.  If needed, you can over-commit resources, allocating more resources than actually available, so long as you don&rsquo;t try to use more than the VM host has available at any one time. Once MAAS has enlisted, commissioned, and acquired a newly-added machine, you can deploy it as a VM host.  Alternatively, you can create a VM host from a machine you&rsquo;ve already got running.</p>
+<p>A VM host is simply a machine which can run virtual machines (VMs) by allocating  resources across the VMs you want to create.  If needed, you can over-commit resources, allocating more resources than actually available, so long as you don&rsquo;t try to use more than the VM host has available at any one time. Once MAAS has enlisted, commissioned, and allocated a newly-added machine, you can deploy it as a VM host.  Alternatively, you can create a VM host from a machine you&rsquo;ve already got running.</p>
 <p>VM hosts are particularly useful for Juju integration, allowing for dynamic allocation of VMs with custom interface constraints. Alternatively, if you would like to use MAAS to manage a collection of VMs, the robust web UI allows you to easily create and manage VMs, logically grouped by VM host. Six conspicuous features include:</p>
 <ul>
 <li>Juju integration</li>
@@ -420,7 +420,7 @@
 <li>Track VM host storage pool usage and assign default storage pools</li>
 <li>Create VMs on multiple networks, specified by space, subnet, VLAN, or IP address</li>
 </ul>
-<p>Simply put, a VM host is a machine which is designated to run virtual machines (VMs). A VM host divides its resources (CPU cores, RAM, storage) among the number of VMs you want to create, based on choices that you make when creating each VM. It is also possible to overcommit resources – that is, use more resources than the VM host actually has available – as long as you use the VMs carefully. Once MAAS has enlisted, commissioned, and acquired a newly-added machine, you can deploy it as a VM host.</p>
+<p>Simply put, a VM host is a machine which is designated to run virtual machines (VMs). A VM host divides its resources (CPU cores, RAM, storage) among the number of VMs you want to create, based on choices that you make when creating each VM. It is also possible to overcommit resources – that is, use more resources than the VM host actually has available – as long as you use the VMs carefully. Once MAAS has enlisted, commissioned, and allocated a newly-added machine, you can deploy it as a VM host.</p>
 <p><a href="#heading--about-vm-host-storage-pools"><h2 id="heading--about-vm-host-storage-pools">About VM host storage pools</h2></a></p>
 <p>&ldquo;Storage pools” are storage resources managed by a VM host. A storage pool is a given amount of storage set aside for use by VMs. A pool can be organised into storage volumes, assigned to VMs as individual block devices.</p>
 <p><strong>NOTE:</strong> 
