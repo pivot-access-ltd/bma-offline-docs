@@ -219,10 +219,28 @@ As mentioned above, there are a large number of Web server exploits, and this do
 <a href="#heading--maas-log-file-subsection"><h3 id="heading--maas-log-file-subsection">MAAS log files</h3></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"]
+[tab version="v3.2 Snap"]
 Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/snap/maas/common/log/regiond.log`.  For reference, a valid login request looks like this entry: 
 [/tab]
-[tab version="v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages"]
+[tab version="v3.2 Packages"]
+Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/log/maas/regiond.log`.  For reference, a valid login request looks like this entry: 
+[/tab]
+[tab version="v3.1 Snap"]
+Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/snap/maas/common/log/regiond.log`.  For reference, a valid login request looks like this entry: 
+[/tab]
+[tab version="v3.1 Packages"]
+Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/log/maas/regiond.log`.  For reference, a valid login request looks like this entry: 
+[/tab]
+[tab version="v3.0 Snap"]
+Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/snap/maas/common/log/regiond.log`.  For reference, a valid login request looks like this entry: 
+[/tab]
+[tab version="v3.0 Packages"]
+Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/log/maas/regiond.log`.  For reference, a valid login request looks like this entry: 
+[/tab]
+[tab version="v2.9 Snap"]
+Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/snap/maas/common/log/regiond.log`.  For reference, a valid login request looks like this entry: 
+[/tab]
+[tab version="v2.9 Packages"]
 Presently, your primary use of MAAS log files to improve security is to periodically check log files for login failures.  You can check for this activity in the `regiond.log` file, found at `/var/log/maas/regiond.log`.  For reference, a valid login request looks like this entry: 
 [/tab]
 [/tabs]
@@ -280,7 +298,7 @@ You should pick good passwords and store them securely (e.g. in a KeePassX passw
 MAAS configuration files should be set to have permission `640`: readable by logins belonging to the `maas` group and writeable only by the `root` user. Currently, the `regiond.conf` file contains the login credentials for the PostgreSQL database used by MAAS to keep track of all machines, networks, and configuration.
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"]
+[tab version="v3.2 Snap"]
 ``` bash
 chmod 640 /var/snap/maas/current/rackd.conf
 chmod 640 /var/snap/maas/current/regiond.conf
@@ -296,7 +314,94 @@ After:
 
 Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-vs Snapnap-security-overview).
 [/tab]
-[tab version="v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages"]
+[tab version="v3.2 Packages"]
+``` bash
+chmod 640 /etc/maas/rackd.conf
+chmod 640 /etc/maas/regiond.conf
+```
+
+After:
+
+``` no-highlight
+-rw-r----- 1 root maas   90 Sep 27 14:13 rackd.conf
+-rw-r----- 1 root maas  157 Sep 27 14:14 regiond.conf
+```
+[/tab]
+[tab version="v3.1 Snap"]
+``` bash
+chmod 640 /var/snap/maas/current/rackd.conf
+chmod 640 /var/snap/maas/current/regiond.conf
+```
+
+After:
+
+``` no-highlight
+-rw-r----- 1 root maas   90 Sep 27 14:13 rackd.conf
+-rw-r----- 1 root maas  157 Sep 27 14:14 regiond.conf
+```
+<a href="#heading--snaps-and-security"><h3 id="heading--snaps-and-security">About snap security</h3></a>
+
+Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-vs Snapnap-security-overview).
+[/tab]
+[tab version="v3.1 Packages"]
+``` bash
+chmod 640 /etc/maas/rackd.conf
+chmod 640 /etc/maas/regiond.conf
+```
+
+After:
+
+``` no-highlight
+-rw-r----- 1 root maas   90 Sep 27 14:13 rackd.conf
+-rw-r----- 1 root maas  157 Sep 27 14:14 regiond.conf
+```
+[/tab]
+[tab version="v3.0 Snap"]
+``` bash
+chmod 640 /var/snap/maas/current/rackd.conf
+chmod 640 /var/snap/maas/current/regiond.conf
+```
+
+After:
+
+``` no-highlight
+-rw-r----- 1 root maas   90 Sep 27 14:13 rackd.conf
+-rw-r----- 1 root maas  157 Sep 27 14:14 regiond.conf
+```
+<a href="#heading--snaps-and-security"><h3 id="heading--snaps-and-security">About snap security</h3></a>
+
+Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-vs Snapnap-security-overview).
+[/tab]
+[tab version="v3.0 Packages"]
+``` bash
+chmod 640 /etc/maas/rackd.conf
+chmod 640 /etc/maas/regiond.conf
+```
+
+After:
+
+``` no-highlight
+-rw-r----- 1 root maas   90 Sep 27 14:13 rackd.conf
+-rw-r----- 1 root maas  157 Sep 27 14:14 regiond.conf
+```
+[/tab]
+[tab version="v2.9 Snap"]
+``` bash
+chmod 640 /var/snap/maas/current/rackd.conf
+chmod 640 /var/snap/maas/current/regiond.conf
+```
+
+After:
+
+``` no-highlight
+-rw-r----- 1 root maas   90 Sep 27 14:13 rackd.conf
+-rw-r----- 1 root maas  157 Sep 27 14:14 regiond.conf
+```
+<a href="#heading--snaps-and-security"><h3 id="heading--snaps-and-security">About snap security</h3></a>
+
+Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-vs Snapnap-security-overview).
+[/tab]
+[tab version="v2.9 Packages"]
 ``` bash
 chmod 640 /etc/maas/rackd.conf
 chmod 640 /etc/maas/regiond.conf
