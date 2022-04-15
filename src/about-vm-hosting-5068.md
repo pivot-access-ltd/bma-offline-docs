@@ -66,12 +66,12 @@ For LXD VM hosts, each VM can be assigned a single block device from the storage
 [/note]
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 The MAAS web UI displays information about each VM host's storage pools so you can understand your resource usage at a glance:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/3387f256f9bd02f7fc2079f119377305256973c8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3387f256f9bd02f7fc2079f119377305256973c8.jpeg"></a>
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 Retrieve VM host storage pool information with the following command:
 
 ```
@@ -152,7 +152,7 @@ VM hosts have several settings. Modify these by selecting the 'Settings' tab and
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" view="CLI"]
 Please use the UI interface to interact with LXD VM hosts, by selecting "UI" from the dropdown above.
 [/tab]
-[tab version="v2.9 Packages#cli,v2.9 Packages#ui,v2.9 Snap#cli,v2.9 Snap#ui," view=""]
+[tab version="v2.9 Snap,v2.9 Packages view="UI,CLI"]
 LXD VM hosts are not available in MAAS version 2.9.  Please upgrade to MAAS version 3.0 or greater to access this functionality.
 
 <a href="#heading--about-lxd-vs-libvirt"><h2 id="heading--about-lxd-vs-libvirt">About LXD (Beta) vs. libvirt</h2></a>
@@ -178,7 +178,7 @@ MAAS also shows hugepages information (if they are in use) and prevents overcomm
 <a href="#heading--about-support-for-numa-et-al"><h2 id="heading--about-support-for-numa-et-al">About support for NUMA, SR-IOV, and hugepages</h2></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 VM host management has been redesigned to support NUMA/SR-IOV configurations and hugepages from the API/CLI. Users can:
 
 1.  See resources per NUMA node.
@@ -187,7 +187,7 @@ VM host management has been redesigned to support NUMA/SR-IOV configurations and
 
 Via the CLI, users can see more details about NUMA-bearing VM host resources and configure hugepages. Select the relevant "CLI" link in the top menu to access this information.
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 VM host management has been redesigned to support NUMA/SR-IOV configurations and hugepages from the API/CLI. Users can:
 
 1.  See resources per NUMA node.
@@ -210,10 +210,10 @@ The following shows four theoretical examples of these ratios and how they affec
 4.  `128GB physical memory  * 5.5 multiplier  = 704G virtual Memory`
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg"></a> 
 [/tab]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 Please use the MAAS UI to view overcommit ratios for NUMA resources.
 [/tab]
 [/tabs]
