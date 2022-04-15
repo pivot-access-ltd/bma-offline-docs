@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -504,7 +504,7 @@
 <p><a href="../images/46177305128bf7f3190f8a7bbd037c33e96f6a9e.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/46177305128bf7f3190f8a7bbd037c33e96f6a9e.png"></a></p>
 <p><a href="#heading--spaces"><h2 id="heading--spaces">Spaces</h2></a></p>
 <p>A space is a logical grouping of subnets that can communicate with one another. Spaces can be arranged to group subnets according to various parameters.  One of the most common examples is a DMZ space, which might group subnets presenting a web interface to the public Internet.  Behind this DMZ would be specific applications that aren&rsquo;t allowed to interact directly with the user, but instead must interact with a Web UI in the DMZ space.  MAAS does not create a default space during installation.</p>
-<p>Spaces facilitate machine acquisition for <a href="https://jaas.ai/">Juju</a>. See <a href="https://jaas.ai/docs/spaces">Juju network spaces</a> for more details.</p>
+<p>Spaces facilitate machine allocation for <a href="https://jaas.ai/">Juju</a>. See <a href="https://jaas.ai/docs/spaces">Juju network spaces</a> for more details.</p>
 <p><a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a></p>
 <p>A tag (not to be confused with VLAN tags) is user-created and associated with nodes based on their physical properties. These can then be used to identify nodes with particular abilities which can be useful during the deployment of services.</p>
 <p><a href="#heading--subnets"><h2 id="heading--subnets">Subnets</h2></a></p>
@@ -547,9 +547,9 @@
 <p>Machine actions are essentially &ldquo;things you can do with nodes&rdquo;. You can trigger them via the web UI or the MAAS CLI. In the web UI, you manage them with the &lsquo;Take action&rsquo; button in the top right corner. An action usually changes the status (see next section) of a node. Below is the full list of possible actions and their meaning, arranged alphabetically.</p>
 <p><a href="#heading--abort"><h3 id="heading--abort">Abort</h3></a></p>
 <p>You can abort any action that permits retries. Currently, only commissioning and deployment permit retries.</p>
-<p><a href="#heading--acquire"><h3 id="heading--acquire">Acquire</h3></a></p>
+<p><a href="#heading--allocate"><h3 id="heading--allocate">Allocate</h3></a></p>
 <p>Allocates (reserves) a node to the MAAS user performing the action (and currently logged in). Changes a node&rsquo;s status from &lsquo;Ready&rsquo; to &lsquo;Allocated&rsquo;.</p>
-<p>With the CLI, it is necessary to perform this action before deploying. With the web UI, it is done automatically for the user. Acquiring in the web UI is used for machine reservation.</p>
+<p>With the CLI, it is necessary to perform this action before deploying. With the web UI, it is done automatically for the user. Allocating in the web UI is used for machine reservation.</p>
 <p><a href="#heading--commission"><h3 id="heading--commission">Commission</h3></a></p>
 <p>This action commissions a node, changing a node&rsquo;s status from &lsquo;New&rsquo; to &lsquo;Commissioning&rsquo; to &lsquo;Ready&rsquo;.</p>
 <p>Commissioning enables MAAS to build a detailed inventory of RAM, CPU, storage, NICs and accelerators like GPUs. These are itemised and usable as constraints for machine selection.</p>
@@ -602,7 +602,7 @@
 <li>you cannot modify storage unless the node has a status of either &lsquo;Ready&rsquo; or &lsquo;Allocated&rsquo;.</li>
 </ol>
 <p><a href="#heading--allocated"><h3 id="heading--allocated">Allocated</h3></a></p>
-<p>The node is allocated (reserved) to a MAAS user. See node action &lsquo;Acquire&rsquo;.</p>
+<p>The node is allocated (reserved) to a MAAS user. See node action &lsquo;Allocate&rsquo;.</p>
 <p><a href="#heading--broken"><h3 id="heading--broken">Broken</h3></a></p>
 <p>The node is broken. See node action &lsquo;Mark broken&rsquo;.</p>
 <p><a href="#heading--commissioning"><h3 id="heading--commissioning">Commissioning</h3></a></p>

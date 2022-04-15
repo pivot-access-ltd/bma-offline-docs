@@ -153,7 +153,7 @@ The following conceptual diagram shows two fabrics in the same data centre or re
 
 A space is a logical grouping of subnets that can communicate with one another. Spaces can be arranged to group subnets according to various parameters.  One of the most common examples is a DMZ space, which might group subnets presenting a web interface to the public Internet.  Behind this DMZ would be specific applications that aren't allowed to interact directly with the user, but instead must interact with a Web UI in the DMZ space.  MAAS does not create a default space during installation.
 
-Spaces facilitate machine acquisition for [Juju](https://jaas.ai/). See [Juju network spaces](https://jaas.ai/docs/spaces) for more details.
+Spaces facilitate machine allocation for [Juju](https://jaas.ai/). See [Juju network spaces](https://jaas.ai/docs/spaces) for more details.
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
@@ -225,11 +225,11 @@ Machine actions are essentially "things you can do with nodes". You can trigger 
 
 You can abort any action that permits retries. Currently, only commissioning and deployment permit retries.
 
-<a href="#heading--acquire"><h3 id="heading--acquire">Acquire</h3></a>
+<a href="#heading--allocate"><h3 id="heading--allocate">Allocate</h3></a>
 
 Allocates (reserves) a node to the MAAS user performing the action (and currently logged in). Changes a node's status from 'Ready' to 'Allocated'.
 
-With the CLI, it is necessary to perform this action before deploying. With the web UI, it is done automatically for the user. Acquiring in the web UI is used for machine reservation.
+With the CLI, it is necessary to perform this action before deploying. With the web UI, it is done automatically for the user. Allocating in the web UI is used for machine reservation.
 
 <a href="#heading--commission"><h3 id="heading--commission">Commission</h3></a>
 
@@ -330,7 +330,7 @@ Some aspects of a node can only be modified when a node has a certain status. He
 
 <a href="#heading--allocated"><h3 id="heading--allocated">Allocated</h3></a>
 
-The node is allocated (reserved) to a MAAS user. See node action 'Acquire'.
+The node is allocated (reserved) to a MAAS user. See node action 'Allocate'.
 
 <a href="#heading--broken"><h3 id="heading--broken">Broken</h3></a>
 
