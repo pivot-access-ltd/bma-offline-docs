@@ -990,7 +990,7 @@ Machine-readable output follows:
 <pre><code class="language-bash">maas admin block-device set-boot-disk &lt;node-id&gt; 10
 </code></pre>
 <p><strong>NOTE:</strong> 
-Only an administrator can set which block device should be used as the boot disk and only a physical block device can be set as as the boot disk. This operation should be done before a machine is acquired or the storage layout will be applied to the previous boot disk.</p>
+Only an administrator can set which block device should be used as the boot disk and only a physical block device can be set as as the boot disk. This operation should be done before a machine is allocated or the storage layout will be applied to the previous boot disk.</p>
 <p><a href="#heading--how-to-list-partitions"><h3 id="heading--how-to-list-partitions">How to list partitions</h3></a></p>
 <p>To view all the partitions on a block device, use the &lsquo;partitions read&rsquo; API call:</p>
 <pre><code class="language-bash">maas admin partitions read &lt;node-id&gt; 10
