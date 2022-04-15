@@ -280,7 +280,7 @@ This section will help you learn:
 - [How to set dynamic annotations for a machine](#heading--set-dynamic-annotations-for-a-machine)
 - [How to clear and change dynamic annotations for a machine](#heading--clear-and-change-dynamic-annotations-for-a-machine)
 - [How to list dynamic annotations for all machines](#heading--list-dynamic-annotations-for-all-machines)
-- [How to list dynamic allocations for one machine](#heading--list-dynamic-annotations-for-one-machine)
+- [How to list dynamic annotations for one machine](#heading--list-dynamic-annotations-for-one-machine)
 
 <a href="#heading--identify-machines-that-can-receive-dynamic-annotations"><h4 id="heading--identify-machines-that-can-receive-dynamic-annotations">How to identify machines that can receive dynamic annotations</h4></a>
 
@@ -341,7 +341,7 @@ still-imp      h6ra6d     Allocated
 
 <a href="#heading--set-dynamic-annotations-for-a-machine"><h4 id="heading--set-dynamic-annotations-for-a-machine">How to set dynamic annotations for a machine</h4></a>
 
-Dynamic annotations, otherwise known as "workload annotations" or "owner data," can be used to keep track of the runtime status of machines that are acquired or deployed.  These annotations are set using `key=value` pairs.  You can set any `key=value` pair that you wish for any machine, although it's probably more useful if you standardise your key names.
+Dynamic annotations, otherwise known as "workload annotations" or "owner data," can be used to keep track of the runtime status of machines that are allocated or deployed.  These annotations are set using `key=value` pairs.  You can set any `key=value` pair that you wish for any machine, although it's probably more useful if you standardise your key names.
 
 To set a dynamic annotation for a machine, you can enter a command like this:
 
@@ -406,7 +406,7 @@ good-osprey    napfxk
 smart-hen      c4rwq7
 ```
 
-<a href="#heading--list-dynamic-annotations-for-one-machine"><h4 id="heading--list-dynamic-annotations-for-one-machine">How to list dynamic allocations for one machine</h4></a>
+<a href="#heading--list-dynamic-annotations-for-one-machine"><h4 id="heading--list-dynamic-annotations-for-one-machine">How to list dynamic annotations for one machine</h4></a>
 
 You can list the dynamic annotations for one machine by entering a command of the form:
 

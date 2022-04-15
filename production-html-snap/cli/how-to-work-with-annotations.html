@@ -527,7 +527,7 @@ driven-teal  tgaat6     tango-golf
 <li><a href="#heading--set-dynamic-annotations-for-a-machine">How to set dynamic annotations for a machine</a></li>
 <li><a href="#heading--clear-and-change-dynamic-annotations-for-a-machine">How to clear and change dynamic annotations for a machine</a></li>
 <li><a href="#heading--list-dynamic-annotations-for-all-machines">How to list dynamic annotations for all machines</a></li>
-<li><a href="#heading--list-dynamic-annotations-for-one-machine">How to list dynamic allocations for one machine</a></li>
+<li><a href="#heading--list-dynamic-annotations-for-one-machine">How to list dynamic annotations for one machine</a></li>
 </ul>
 <p><a href="#heading--identify-machines-that-can-receive-dynamic-annotations"><h4 id="heading--identify-machines-that-can-receive-dynamic-annotations">How to identify machines that can receive dynamic annotations</h4></a></p>
 <p>You can only set dynamic annotations for machines that are in the &ldquo;Allocated&rdquo; or &ldquo;Deployed&rdquo; state.  To identify which of your machines are in these states, you can execute the following command:</p>
@@ -577,7 +577,7 @@ usable-condor  ed8hmy     Deployed
 still-imp      h6ra6d     Allocated
 </code></pre>
 <p><a href="#heading--set-dynamic-annotations-for-a-machine"><h4 id="heading--set-dynamic-annotations-for-a-machine">How to set dynamic annotations for a machine</h4></a></p>
-<p>Dynamic annotations, otherwise known as &ldquo;workload annotations&rdquo; or &ldquo;owner data,&rdquo; can be used to keep track of the runtime status of machines that are acquired or deployed.  These annotations are set using <code>key=value</code> pairs.  You can set any <code>key=value</code> pair that you wish for any machine, although it&rsquo;s probably more useful if you standardise your key names.</p>
+<p>Dynamic annotations, otherwise known as &ldquo;workload annotations&rdquo; or &ldquo;owner data,&rdquo; can be used to keep track of the runtime status of machines that are allocated or deployed.  These annotations are set using <code>key=value</code> pairs.  You can set any <code>key=value</code> pair that you wish for any machine, although it&rsquo;s probably more useful if you standardise your key names.</p>
 <p>To set a dynamic annotation for a machine, you can enter a command like this:</p>
 <pre><code class="language-bash">maas $PROFILE machine set-owner-data $SYSTEM_ID $KEY=$VALUE
 </code></pre>
@@ -616,7 +616,7 @@ immune-beetle  43xand
 good-osprey    napfxk
 smart-hen      c4rwq7
 </code></pre>
-<p><a href="#heading--list-dynamic-annotations-for-one-machine"><h4 id="heading--list-dynamic-annotations-for-one-machine">How to list dynamic allocations for one machine</h4></a></p>
+<p><a href="#heading--list-dynamic-annotations-for-one-machine"><h4 id="heading--list-dynamic-annotations-for-one-machine">How to list dynamic annotations for one machine</h4></a></p>
 <p>You can list the dynamic annotations for one machine by entering a command of the form:</p>
 <pre><code class="language-bash">maas $PROFILE machine read $SYSTEM_ID \
 | jq -r '([&quot;hostname&quot;,&quot;system_id&quot;,&quot;owner_data&quot;]
