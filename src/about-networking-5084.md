@@ -44,6 +44,8 @@ IPMI provides many other functions and capabilities besides power-cycling the ma
 
 A [proxy server](https://en.wikipedia.org/wiki/Proxy_server) ("proxy service" or just "proxy") is an intermediary application that serves to broker network transactions between two hosts.  Proxies provide several benefits, including privacy (protecting internal IP addresses from discovery by those on other networks), security (performing some checks against incoming packets), and load-balancing (routing packets to multiple servers, based on actual load or some statistical algorithm).  
 
+MAAS provides an [internal proxy](https://maas.io/docs/how-to-manage-proxies#heading--internal-proxy-maas-proxy), which is an HTTP caching proxy server that is availble to all hosts residing in any subnet managed by MAAS.  MAAS also allows you to define an [external proxy](https://maas.io/docs/how-to-manage-proxies#heading--configure-proxy) if desired.
+
 <a href="#heading--about-rpc"><h3 id="heading--about-rpc">About RPC</h3></a>
 
 A [Remote Procedure Call](https://en.wikipedia.org/wiki/Remote_procedure_call), or RPC, is a method by which one computer can execute a subroutine sent by another process or system.  These procedures run as if they were native to the machine executing them, even though they may have been prepared or coded on the requesting machine.
