@@ -612,31 +612,31 @@ This text is provisional, pending release of this feature in MAAS 3.2.</p>
 <li>sync_interval: (Int) - indicating the interval, in seconds, that should be set at time of deployment</li>
 </ul>
 <p>With respect to <code>machine.read</code>, both the RESTful API and Websocket API add the following fields to a response:</p>
-<p>{
-        enable_hw_sync: Bool indicating whether hardware sync is enabled on the machine, 
-        last_sync: Timestamp of the last time MAAS received hardware sync data for the machine,
-        next_sync: Timestamp of the computed estimation of when the next sync should happen,
-        sync_interval:  Int the interval, in seconds, that was set at time of deployment
-       is_sync_healthy: Bool indicating the sync is working normally when true, false when a sync is late or missing,
-}</p>
+<ul>
+<li>enable_hw_sync: Bool indicating whether hardware sync is enabled on the machine, </li>
+<li>last_sync: Timestamp of the last time MAAS received hardware sync data for the machine,</li>
+<li>next_sync: Timestamp of the computed estimation of when the next sync should happen,</li>
+<li>sync_interval:  Int the interval, in seconds, that was set at time of deployment</li>
+<li>is_sync_healthy: Bool indicating the sync is working normally when true, false when a sync is late or missing,</li>
+</ul>
 <p>With respect to <code>config.list</code>, there is a new WebSocket Response result (new “hardware_sync_interval” option):</p>
-<p>[{
-    name: &ldquo;hardware_sync_interval&rdquo;,
+<pre><code class="language-nohighlight">[{
+    name: &quot;hardware_sync_interval&quot;,
     value: String in systemd time span format  e.g. “15m”
             (only hours, minutes and seconds are recognised)
-},…]</p>
-<ul>
-<li>hardware_sync_interval is set to <code>15m</code> by default
+},…]
+
+  -  hardware_sync_interval is set to `15m` by default
 config.update
-WebSocket Request params - new “hardware_sync_interval” param</li>
-</ul>
-<p>params: {
-   name: &ldquo;hardware_sync_interval&rdquo;,
+WebSocket Request params - new “hardware_sync_interval” param
+
+params: {
+   name: &quot;hardware_sync_interval&quot;,
    value: String in systemd time span format, e.g. “15m”
-  }</p>
+  }
+</code></pre>
 <p><strong>NOTE:</strong> 
-The API does not throw errors when an invalid string is provided for these parameters.
-[/note&rsquo;</p>
+The API does not throw errors when an invalid string is provided for these parameters.</p>
 <p><a href="#heading--about-hardware-sync"><h3 id="heading--about-hardware-sync">About hardware sync</h3></a></p>
 <p>Hardware sync updates the machine’s blockdevice, interface and device sets.  BMC configuration and tags can also be updated on the machine itself. The timestamps of the last sync and the next scheduled sync can be seen in the machine&rsquo;s data.</p>
 <p><a href="#heading--how-to-customise-machines-prior-to-deployment"><h2 id="heading--how-to-customise-machines-prior-to-deployment">How to customise machines</h2></a></p>

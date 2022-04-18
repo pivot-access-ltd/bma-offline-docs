@@ -299,16 +299,15 @@ When using the API, there are two additional fields in the request:
 
 With respect to `machine.read`, both the RESTful API and Websocket API add the following fields to a response:
 
-{
-        enable_hw_sync: Bool indicating whether hardware sync is enabled on the machine, 
-        last_sync: Timestamp of the last time MAAS received hardware sync data for the machine,
-        next_sync: Timestamp of the computed estimation of when the next sync should happen,
-        sync_interval:  Int the interval, in seconds, that was set at time of deployment
-	   is_sync_healthy: Bool indicating the sync is working normally when true, false when a sync is late or missing,
-}
+* enable_hw_sync: Bool indicating whether hardware sync is enabled on the machine, 
+* last_sync: Timestamp of the last time MAAS received hardware sync data for the machine,
+* next_sync: Timestamp of the computed estimation of when the next sync should happen,
+* sync_interval:  Int the interval, in seconds, that was set at time of deployment
+* is_sync_healthy: Bool indicating the sync is working normally when true, false when a sync is late or missing,
 
 With respect to `config.list`, there is a new WebSocket Response result (new “hardware_sync_interval” option):
 
+```nohighlight
 [{
     name: "hardware_sync_interval",
     value: String in systemd time span format  e.g. “15m”
@@ -323,10 +322,11 @@ params: {
    name: "hardware_sync_interval",
    value: String in systemd time span format, e.g. “15m”
   }
+```
 
 [note]
 The API does not throw errors when an invalid string is provided for these parameters.
-[/note'
+[/note]
 
 <a href="#heading--about-hardware-sync"><h3 id="heading--about-hardware-sync">About hardware sync</h3></a>
 
@@ -387,7 +387,7 @@ This section will show you:
 - [How to view a VMFS datastore](#heading--how-to-view-a-vmfs-datastore)
 - [How to create a VMFS datastore](#heading--how-to-create-a-vmfs-datastore)
 - [How to edit a VMFS datastore](#heading--how-to-edit-a-vmfs-datastore)
-- [How to delete a VMFS datastore](#heading--how-to-delete-a-vmfs-datas
+- [How to delete a VMFS datastore](#heading--how-to-delete-a-vmfs-datastore)
 [/tab]
 [/tabs]
 
