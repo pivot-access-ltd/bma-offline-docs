@@ -73,7 +73,7 @@ This subsection will help you learn:
  - [About unmanaged subnets](#heading--about-unmanaged-subnets)
  - [About IP address tracking](#heading--about-ip-address-tracking)
 
-A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS. By default, MAAS manages subnets in your configuration, but this is easily changed.
+A [subnet](https://en.wikipedia.org/wiki/Subnetwork), on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS. By default, MAAS manages subnets in your configuration, but this is easily changed.
 
 When a subnet is managed, MAAS handles all aspects of IP address allocation. This process includes managing DHCP leases and assigned static addresses. Typically MAAS would have one managed subnet, with any additional subnets unmanaged. This arrangement allows for more control over which subnet gets used for DHCP. Additionally, as detailed below, an unmanaged subnet treats reserved IP ranges differently, in a way that some administrators find more intuitive.
 
