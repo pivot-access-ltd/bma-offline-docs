@@ -32,7 +32,13 @@ If you still have questions about PXE booting, please consider posting a questio
 
 <a href="#heading--about-power-drivers"><h3 id="heading--about-power-drivers">About power drivers</h3></a>
 
-Power drivers are units of software that interface with the [IPMI](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface) (typically, the [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller)) to power-cycle a machine remotely.  Different machines use different BMC configurations.  Typically, these vary by manufacturer, although there are some standard IPMI drivers that can be used.  In addition, it is sometimes possible to control a machine with a specialised BMC via a generic IPMI driver.
+Power drivers are units of software, embedded in MAAS, that interface with the [IPMI](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface) (typically, the [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller)) to power-cycle a machine remotely.  Different machines use different BMC configurations.  Typically, these vary by manufacturer, although there are some standard IPMI drivers that can be used.  In addition, it is sometimes possible to control a machine with a specialised BMC via a generic IPMI driver.
+
+IPMI is designed as a set of protocols that bypass the system's CPU, BIOS, UEFI, and/or OS.  Essentially, IPMI provides a network connection directly to the hardware, allowing a number of management and monitoring functions.  From the perspective of MAAS, the main use of IPMI is to access the machine's BMC to power-cycle the machine.  In order for [PXE-booting](#heading--about-pxe-booting) to start, the machine itself must send a PXE-enabled DHCPDISCOVER, which requires the machine to be powered on.
+
+Specific machine models have different IPMI parameters that can or must be used to successfully power on a machine, although many models respond reasonably well to standard IPMI or [Redfish](https://en.wikipedia.org/wiki/Redfish_(specification)) commands, MAAS includes customised power drivers for all of the machines listed in the [power catalogue](https://maas.io/docs/power-management-reference#heading--power-catalogue).
+
+IPMI has many other functions and capabilities besides power-cycling the machine, such as monitoring system state (e.g., temperature) and possibly adjusting some parameters remote.  MAAS generally does not avail itself of these additional features.
 
 <a href="#heading--about-proxies"><h3 id="heading--about-proxies">About proxies</h3></a>
 
