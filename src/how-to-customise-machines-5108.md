@@ -1,5 +1,5 @@
 <!-- "How to customise machines" -->
-MAAS machines can be customised in a number of ways, including:
+Prior to deployment, MAAS machines can be customised in a number of ways, including:
 
 - machine storage.
 - commissioning and deployment configurations (known as "pre-seeding").
@@ -7,14 +7,41 @@ MAAS machines can be customised in a number of ways, including:
 - kernel boot options.
 - resource pools.
 
-In this article, you can learn:
+[tabs]
+[tab version="v3.2 Snap,v3.2 Packages"]
+Machines can also be customised post-deployment, while running, allowing you to:
 
-- [About customising machines](#heading--about-customising-machines)
-- [How to customise machines](#heading--how-to-customise-machines)
+- Add or remove disks
+- Add or remove network interfaces
+- Add or remove PCI devices
+- Add or remove USB devices
+
+While deploying a machine, you can configure that machine to periodically sync its hardware configuration.  Deployed machines will passively update changes to the BMC and tags for that machine, on-the-fly, as these changes are made.
+
+This article will help you learn:
+
+- [About customising machines prior to deployment](#heading--about-customising-machines-prior-to-deployment)
+- [About customising deployed machines](#heading--about-customising-deployed-machines)
+- [How to customise machines prior to deployment](#heading--how-to-customise-machines-prior-to-deployment)
+- [How to customise deployed machines](#heading--how-to-customise-machines-post-deployment)
+
+In short, this article will explain these possible customisations, and provide detailed instructions on how to customise your own machines as desired.
+[/tab]
+[tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
+This article will help you learn:
+
+- [About customising machines](#heading--about-customising-machines-prior-to-deployment)
+- [How to customise machines prior to deployment](#heading--how-to-customise-machines-prior-to-deployment)
 
 In short, this article will explain these possible customisations, and provide detailed instructions on how to customise your own machines as desired.
 
-<a href="#heading--about-customising-machines"><h2 id="heading--about-customising-machines">About customising machines</h2></a>
+[note]
+MAAS version 3.2 also provides the capability to customise deployed machines.
+[/note]
+[/tab]
+[/tabs]
+
+<a href="#heading--about-customising-machines-prior-to-deployment"><h2 id="heading--about-customising-machines-prior-to-deployment">About customising machines prior to deployment</h2></a>
 
 In this section, you'll learn:
 
@@ -24,7 +51,7 @@ In this section, you'll learn:
 - [About kernel boot options](#heading--about-kernel-boot-options)
 - [About resource pools](#heading--about-resource-pools)
 
-<a href="#heading--about-customising-machine-storage"><h2 id="heading--about-customising-machine-storage">About customising machine storage</h2></a>
+<a href="#heading--about-customising-machine-storage"><h3 id="heading--about-customising-machine-storage">About customising machine storage</h3></a>
 
 You have significant latitude when choosing the final storage configuration of a deployed machine. MAAS supports traditional disk partitioning, as well as more complex options such as LVM, RAID, and bcache. MAAS also supports UEFI as a boot mechanism.  This article explains boot mechanisms and layouts, and offers some advice on how to configure layouts and manage storage.
 
@@ -32,7 +59,7 @@ A machine's storage is dependant upon the underlying system's disks, but its con
 
 MAAS supports storage configuration for CentOS and RHEL deployments. Support includes RAID, LVM, and custom partitioning with different file systems (ZFS and bcache excluded). This support requires a newer version of Curtin, [available as a PPA](https://launchpad.net/ubuntu/+source/curtin).
 
-<a href="#heading--about-uefi-booting"><h3 id="heading--about-uefi-booting">About UEFI booting</h3></a>
+<a href="#heading--about-uefi-booting"><h4 id="heading--about-uefi-booting">About UEFI booting</h4></a>
 
 Every layout type supports a machine booting with UEFI. In such a case, MAAS automatically creates an EFI boot partition (`/boot/efi`). Other than setting the machine to boot from UEFI, the user does not need to take any additional action.
 
@@ -42,7 +69,7 @@ UEFI must be enabled or disabled for the lifespan of the machine. For example, d
 
 The EFI partition, if created, will be the first partition (`sda1`) and will have a FAT32 filesystem with a size of 512 MB.
 
-<a href="#heading--about-block-devices"><h3 id="heading--about-block-devices">About block devices</h3></a>
+<a href="#heading--about-block-devices"><h4 id="heading--about-block-devices">About block devices</h4></a>
 
 Once the initial storage layout has been configured on a machine, you can perform many operations to view and adjust the entire storage layout for the machine. In MAAS there are two different types of block devices.
 
@@ -54,11 +81,11 @@ A physical block device is a physically attached block device such as a 100GB ha
 
 A virtual block device is a block device that is exposed by the Linux kernel when an operation is performed. Almost all the operations on a physical block device can be performed on a virtual block device, such as a RAID device exposed as md0.
 
-<a href="#heading--about-partitions"><h3 id="heading--about-partitions">About partitions</h3></a>
+<a href="#heading--about-partitions"><h4 id="heading--about-partitions">About partitions</h4></a>
 
 As with block devices (see [Block devices](#heading--about-block-devices)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
 
-<a href="#heading--about-storage-restrictions"><h3 id="heading--about-storage-restrictions">About storage restrictions</h3></a>
+<a href="#heading--about-storage-restrictions"><h4 id="heading--about-storage-restrictions">About storage restrictions</h4></a>
 
 There are three restrictions for the storage configuration:
 
@@ -68,15 +95,15 @@ There are three restrictions for the storage configuration:
 
 Violating these restrictions will prevent a successful deployment.
 
-<a href="#heading--about-vmfs-datastores"><h3 id="heading--about-vmfs-datastores">About VMFS datastores</h3></a>
+<a href="#heading--about-vmfs-datastores"><h4 id="heading--about-vmfs-datastores">About VMFS datastores</h4></a>
 
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the VMFS6 storage layout. This layout creates a VMFS Datastore named `datastore1` which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
 
-<a href="#heading--final-storage-modifications"><h3 id="heading--final-storage-modifications">About final storage modifications</h3></a>
+<a href="#heading--final-storage-modifications"><h4 id="heading--final-storage-modifications">About final storage modifications</h4></a>
 
 Once MAAS provisions a machine with block devices, via a layout or administrator customisation, a regular user can modify the resulting storage configuration at the filesystem level.
 
-<a href="#heading--about-disk-erasure"><h3 id="heading--about-disk-erasure">About disk erasure</h3></a>
+<a href="#heading--about-disk-erasure"><h4 id="heading--about-disk-erasure">About disk erasure</h4></a>
 
 Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/maas-concepts-and-terms-reference/5416#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
 
@@ -238,7 +265,82 @@ Resource pools allow administrators to logically group resources -- machines and
 
 Administrators can manage resource pools on the Machines page in the web UI, under the Resource pools tab, or with the MAAS CLI.   Also note that all MAAS installations have a resource pool named "default." MAAS automatically adds new machines to the default resource pool.
 
-<a href="#heading--how-to-customise-machines"><h2 id="heading--how-to-customise-machines">How to customise machines</h2></a>
+<a href="#heading--about-customising-deployed-machines"><h2 id="heading--about-customising-deployed-machines">About customising deployed machines</h2></a>
+
+[tabs]
+[tab version="v3.2 Snap,v3.2 Packages"]
+[note]
+This text is provisional, pending release of this feature in MAAS 3.2.
+[/note]
+
+MAAS 3.2 provides the capability to customise deployed machines, in that you can update hardware for a running machine on-the-fly.  Specifically, MAAS will update a deployed machine’s data when you do any of the following things:
+
+- Add or remove disks
+- Add or remove network interfaces
+- Add or remove PCI devices
+- Add or remove USB devices
+
+In addition, while deploying a machine, you can configure that machine to periodically sync its [hardware configuration](#heading--about-hardware-sync).  Deployed machines will also  passively update changes to the BMC and tags for that machine, as these changes are made.
+
+<a href="#heading--about-updating-hardware"><h2 id="heading--about-about-updating-hardware">About updating hardware</h2></a>
+
+Updating hardware on a deployed machine works by installing a special binary on the deployed machine.   This binary is configured at a given interval and push hardware info to the MAAS metadata endpoint.  By setting “enable_hw_sync” to true on a machine prior to deployment, MAAS will add configuration to install a systemd service and timer that will download the hardware sync binary.  This binary then authenticates the machine, reads the hardware info from the machine and pushes it to MAAS. The interval is set globally in the MAAS settings.
+
+Any changes in hardware are written to the machine’s configuration.  Physical hardware changes will be preserved upon release, while virtual changes, such as a SR-IOV interface, will be dropped.
+
+When deploying a machine from the UI, there is a new “enable_hw_sync” flag available for each machine. This flag marks a machine to be configured with live hardware updates.
+
+When deployoing from the CLI, there is an additional `enable_hw_sync` flag on `maas $PROFILE machine deploy`. This flag also marks a machine to be configured with live hardware updates. 
+
+When using the API, there are two additional fields in the request:
+
+* enable_hw_sync: (Boolean) - indicating whether hardware sync should be enabled on the machine, 
+* sync_interval: (Int) - indicating the interval, in seconds, that should be set at time of deployment
+
+With respect to `machine.read`, both the RESTful API and Websocket API add the following fields to a response:
+
+{
+        enable_hw_sync: Bool indicating whether hardware sync is enabled on the machine, 
+        last_sync: Timestamp of the last time MAAS received hardware sync data for the machine,
+        next_sync: Timestamp of the computed estimation of when the next sync should happen,
+        sync_interval:  Int the interval, in seconds, that was set at time of deployment
+	   is_sync_healthy: Bool indicating the sync is working normally when true, false when a sync is late or missing,
+}
+
+With respect to `config.list`, there is a new WebSocket Response result (new “hardware_sync_interval” option):
+
+[{
+    name: "hardware_sync_interval",
+    value: String in systemd time span format  e.g. “15m”
+	        (only hours, minutes and seconds are recognised)
+},…]
+
+  -  hardware_sync_interval is set to `15m` by default
+config.update
+WebSocket Request params - new “hardware_sync_interval” param
+
+params: {
+   name: "hardware_sync_interval",
+   value: String in systemd time span format, e.g. “15m”
+  }
+
+[note]
+The API does not throw errors when an invalid string is provided for these parameters.
+[/note'
+
+<a href="#heading--about-hardware-sync"><h3 id="heading--about-hardware-sync">About hardware sync</h3></a>
+
+Hardware sync updates the machine’s blockdevice, interface and device sets.  BMC configuration and tags can also be updated on the machine itself. The timestamps of the last sync and the next scheduled sync can be seen in the machine's data.
+
+[/tab]
+[tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
+[note]
+The capability to customise deployed machines is available starting with MAAS version 3.2.
+[/note]
+[/tab]
+[/tabs]
+
+<a href="#heading--how-to-customise-machines-prior-to-deployment"><h2 id="heading--how-to-customise-machines-prior-to-deployment">How to customise machines</h2></a>
 
 If you want to customise machines, you may want to know:
 
