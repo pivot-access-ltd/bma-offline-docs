@@ -48,7 +48,7 @@ MAAS provides an [internal proxy](https://maas.io/docs/how-to-manage-proxies#hea
 
 <a href="#heading--about-rpc"><h3 id="heading--about-rpc">About RPC</h3></a>
 
-A [Remote Procedure Call](https://en.wikipedia.org/wiki/Remote_procedure_call), or RPC, is a method by which one computer can execute a subroutine sent by another process or system.  These procedures run as if they were native to the machine executing them, even though they may have been prepared or coded on the requesting machine.
+A [Remote Procedure Call](https://www.ibm.com/docs/en/aix/7.1?topic=concepts-remote-procedure-call), or RPC, is a method by which one computer can execute a subroutine sent by another process or system.  These procedures run as if they were native to the machine executing them, even though they may have been prepared or coded on the requesting machine.  In the case of MAAS, [RPC is used for communication between the region and rack controllers](https://maas.io/docs/about-controllers#heading--rackregion), specifically to transfer the PXE configuration from region to rack.  This allows the relevant MAAS rack to answer the machine's DHCPDISCOVER with a DHCPOFFER that contains the correct PXE booting information to bring the machine to an ephemeral Ubuntu instance. 
 
 <a href="#heading--about-network-discovery"><h3 id="heading--about-network-discovery">About network discovery</h3></a>
 
