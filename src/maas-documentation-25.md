@@ -845,26 +845,10 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
-|/docs/deb/2.9/cli/how-to-manage-tags|/docs/how-to-work-with-tags|
-|/docs/deb/2.9/cli/local-image-mirror|/docs/how-to-mirror-images-locally|
-|/docs/deb/2.9/cli/troubleshooting|/docs/how-to-troubleshoot-maas|
-|/docs/deb/2.9/ui/how-to-manage-tags|/docs/how-to-work-with-tags|
-|/docs/deb/2.9/ui/local-image-mirror|/docs/how-to-mirror-images-locally|
-|/docs/deb/2.9/ui/troubleshooting|/docs/how-to-troubleshoot-maas|
 |/docs/deb/3.0/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
-|/docs/deb/3.0/cli/local-image-mirror|/docs/how-to-mirror-images-locally|
-|/docs/deb/3.0/cli/troubleshooting|/docs/how-to-troubleshoot-maas|
 |/docs/deb/3.0/ui/how-to-work-with-tags|/docs/how-to-work-with-tags|
-|/docs/deb/3.0/ui/local-image-mirror|/docs/how-to-mirror-images-locally|
-|/docs/deb/3.0/ui/troubleshooting|/docs/how-to-troubleshoot-maas|
 |/docs/deb/3.1/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
-|/docs/deb/3.1/cli/local-image-mirror|/docs/how-to-mirror-images-locally|
-|/docs/deb/3.1/cli/troubleshooting|/docs/how-to-troubleshoot-maas|
-|/docs/deb/3.1/cli/upgrading-maas|/docs/deb/3.1/cli/how-to-upgrade-maas|
 |/docs/deb/3.1/ui/how-to-work-with-tags|/docs/how-to-work-with-tags|
-|/docs/deb/3.1/ui/local-image-mirror|/docs/how-to-mirror-images-locally|
-|/docs/deb/3.1/ui/troubleshooting|/docs/how-to-troubleshoot-maas|
-|/docs/deb/3.1/ui/upgrading-maas|/docs/deb/3.1/ui/how-to-upgrade-maas|
 |/docs/snap/2.7/cli/how-to-upgrade-maas|/docs/how-to-upgrade-maas|
 |/docs/snap/2.7/cli/installation-tech-reference|/docs/how-to-install-maas|
 |/docs/snap/2.7/cli/interactive-search|/docs/how-to-search-maas|
@@ -878,18 +862,10 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 |/docs/snap/2.8/ui/installation-tech-reference|/docs/how-to-install-maas|
 |/docs/snap/2.8/ui/interactive-search|/docs/how-to-search-maas|
 |/docs/snap/2.9/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
-|/docs/snap/2.9/cli/local-image-mirror|/docs/how-to-mirror-images-locally|
-|/docs/snap/2.9/cli/troubleshooting|/docs/how-to-troubleshoot-maas|
 |/docs/snap/2.9/ui/how-to-work-with-tags|/docs/how-to-work-with-tags|
-|/docs/snap/2.9/ui/troubleshooting|/docs/how-to-troubleshoot-maas|
 |/docs/snap/3.0/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
 |/docs/snap/3.0/ui/how-to-work-with-tags|/docs/how-to-work-with-tags|
-|/docs/snap/3.0/ui/local-image-mirror|/docs/how-to-mirror-images-locally|
-|/docs/snap/3.0/ui/troubleshooting|/docs/how-to-troubleshoot-maas|
 |/docs/snap/3.1/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
-|/docs/snap/3.1/cli/local-image-mirror|/docs/how-to-mirror-images-locally|
-|/docs/snap/3.1/cli/troubleshooting|/docs/how-to-troubleshoot-maas|
 |/docs/snap/3.1/ui/how-to-work-with-tags|/docs/how-to-work-with-tags|
-|/docs/snap/3.1/ui/troubleshooting|/docs/how-to-troubleshoot-maas|
 [/details]
 <!-- nohtml end-nohtml -->
