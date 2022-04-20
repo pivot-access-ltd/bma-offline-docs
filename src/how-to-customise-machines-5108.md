@@ -1,16 +1,8 @@
 <!-- "How to customise machines" -->
-[tabs]
-[tab version="v3.2 Snap,v3.2 Packages"]
 MAAS provides the capability to customise machines.  This article will help you learn:
 
-- [How to customise machine storage](#heading--how-to-customise-machine-storage)
-- [How to pre-seed with curtin](#heading--how-to-pre-seed-with-curtin)
-- [How to pre-seed with cloud-init](#heading--cloud-init)
-- [How to choose Ubuntu kernels](#heading--how-to-choose-ubuntu-kernels)
-- [How to set global kernel boot options](#heading--how-to-set-global-kernel-boot-options)
-- [How to use resource pools](#heading--how-to-use-resource-pools)
-[/tab]
-[tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
+[tabs]
+[tab version="v3.2 Snap,v3.2 Packages"]
 - [How to customise machine storage](#heading--how-to-customise-machine-storage)
 - [How to pre-seed with curtin](#heading--how-to-pre-seed-with-curtin)
 - [How to pre-seed with cloud-init](#heading--cloud-init)
@@ -20,6 +12,14 @@ MAAS provides the capability to customise machines.  This article will help you 
 - [How to enable hardware sync on a machine](#heading--how-to-enable-hardware-sync-on-a-machine)
 - [How to configure hardware sync interval](#heading--how-to-configure-hardware-sync-interval)
 - [How to view updates from hardware sync](#heading--how-to-view-updates-from-hardware-sync)
+[/tab]
+[tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
+- [How to customise machine storage](#heading--how-to-customise-machine-storage)
+- [How to pre-seed with curtin](#heading--how-to-pre-seed-with-curtin)
+- [How to pre-seed with cloud-init](#heading--cloud-init)
+- [How to choose Ubuntu kernels](#heading--how-to-choose-ubuntu-kernels)
+- [How to set global kernel boot options](#heading--how-to-set-global-kernel-boot-options)
+- [How to use resource pools](#heading--how-to-use-resource-pools)
 [/tab]
 [/tabs]
 
