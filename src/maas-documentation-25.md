@@ -97,6 +97,7 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 - [Commissioning scripts](/t/-/5375)
 - [Hardware test scripts](/t/-/5392)
 - [Log files](/t/-/5240)
+- [Storage layouts](/t/-/5973)
 - [API documentation](https://maas.io/docs/api)
 - [API client](/t/-/5404)
 - [API authentication](/t/-/5060)
@@ -120,6 +121,7 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/5973|/docs/storage-layouts-reference|
 |https://discourse.maas.io/t/-/777|/docs/upgrade-2-3-to-2-4-from-ubuntu-16-04|
 |https://discourse.maas.io/t/-/778|/docs/upgrade-from-1-9-to-2-x|
 |https://discourse.maas.io/t/about-tcp-ip-networks/5806|/docs/about-tcp-ip-networks|
