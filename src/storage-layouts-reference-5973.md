@@ -1,5 +1,3 @@
-<a href="#heading--storage-layouts-reference"><h2 id="heading--storage-layouts-reference">Storage layouts reference</h2></a>
-
 There are several possible MAAS storage layouts:
 
 - [Flat layout storage](#heading--flat-storage-layout-reference)
