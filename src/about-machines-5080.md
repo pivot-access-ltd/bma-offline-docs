@@ -1031,6 +1031,7 @@ A machine's storage is dependant upon the underlying system's disks, but its con
 MAAS supports storage configuration for CentOS and RHEL deployments. Support includes RAID, LVM, and custom partitioning with different file systems (ZFS and bcache excluded). This support requires a newer version of Curtin, [available as a PPA](https://launchpad.net/ubuntu/+source/curtin).
 [/note]
 
+
 <a href="#heading--machine-storage-h3"><h4 id="heading--machine-storage-h3">About machine storage info</h4></a>
 
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
@@ -1038,6 +1039,7 @@ The Storage tab on the machine list brings up a form that allows you to view/edi
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> 
 
 This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  
+
 
 <a href="#heading--about-block-devices"><h4 id="heading--about-block-devices">About block devices</h4></a>
 
@@ -1087,6 +1089,7 @@ The EFI partition, if created, will be the first partition (`sda1`) and will hav
 <a href="#heading--final-storage-modifications"><h4 id="heading--final-storage-modifications">About final storage modifications</h4></a>
 
 Once MAAS provisions a machine with block devices, via a layout or administrator customisation, a regular user can modify the resulting storage configuration at the filesystem level.
+
 
 <a href="#heading--about-disk-erasure"><h4 id="heading--about-disk-erasure">About disk erasure</h4></a>
 
