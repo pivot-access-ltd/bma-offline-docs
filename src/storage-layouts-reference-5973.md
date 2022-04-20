@@ -2,13 +2,13 @@
 
 There are several possible MAAS storage layouts:
 
-- [Flat layout storage reference](#heading--flat-storage-layout-reference)
-- [LVM storage layout reference](#heading--lvm-storage-layout-reference)
-- [bcache storage layout reference](#heading--bcache-storage-layout-reference)
-- [VMFS6 storage layout reference](#heading--vmfs6-storage-layout-reference)
-- [Blank storage layout reference](#heading--blank-storage-layout-reference)
+- [Flat layout storage](#heading--flat-storage-layout-reference)
+- [LVM storage layout](#heading--lvm-storage-layout-reference)
+- [bcache storage layout](#heading--bcache-storage-layout-reference)
+- [VMFS6 storage layout](#heading--vmfs6-storage-layout-reference)
+- [Blank storage layout](#heading--blank-storage-layout-reference)
 
-The layout descriptions below will include the EFI partition. If your system is not using UEFI, regard `sda2` as `sda1` (with an additional 512 MB available to it).
+The reference descriptions below include the EFI partition. If your system is not using UEFI, regard `sda2` as `sda1` (with an additional 512 MB available to it).
 
 <a href="#heading--flat-storage-layout-reference"><h3 id="heading--flat-storage-layout-reference">Flat layout storage reference</h3></a>
 
