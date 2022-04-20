@@ -394,32 +394,7 @@
       </strong>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>* About customising machines prior to deployment</h1><ul>
-<li>About customising machines prior to deployment
-<strong> About customising machine storage
-</strong><em> About UEFI booting
-</em><strong> About block devices
-</strong><em> About partitions
-</em><strong> About storage restrictions
-</strong><em> About VMFS datastores
-</em><strong> About final storage modifications
-</strong><em> About disk erasure
-</em><strong> About disk erasure types
-</strong> About pre-seeding
-<strong><em> About templates
-</em></strong> About template naming
-<strong> About Ubuntu kernels
-</strong><em> About general availability kernels
-</em><strong> About hardware enablement kernels
-</strong><em> About pre-release hardware enablement kernels
-</em><strong> About low latency kernels
-</strong><em> About choosing a kernel
-</em><em> About kernel boot options
-</em>* About resource pools</li>
-<li>About customising deployed machines
-<strong> About updating hardware
-</strong>* About hardware sync</li>
-</ul>
+  <h1>About customising machines</h1><!-- "About customising machines" -->
 <p>Prior to deployment, MAAS machines can be customised in a number of ways, including:</p>
 <ul>
 <li>machine storage.</li>
@@ -440,14 +415,6 @@
 <ul>
 <li><a href="#heading--about-customising-machines-prior-to-deployment">About customising machines prior to deployment</a></li>
 <li><a href="#heading--about-customising-deployed-machines">About customising deployed machines</a></li>
-<li><a href="#heading--how-to-customise-machines-prior-to-deployment">How to customise machines prior to deployment</a></li>
-<li><a href="#heading--how-to-customise-machines-post-deployment">How to customise deployed machines</a></li>
-</ul>
-<p>In short, this article will explain these possible customisations, and provide detailed instructions on how to customise your own machines as desired.</p>
-<p>This article will help you learn:</p>
-<ul>
-<li><a href="#heading--about-customising-machines-prior-to-deployment">About customising machines</a></li>
-<li><a href="#heading--how-to-customise-machines-prior-to-deployment">How to customise machines prior to deployment</a></li>
 </ul>
 <p>In short, this article will explain these possible customisations, and provide detailed instructions on how to customise your own machines as desired.</p>
 <p><a href="#heading--about-customising-machines-prior-to-deployment"><h2 id="heading--about-customising-machines-prior-to-deployment">About customising machines prior to deployment</h2></a></p>
@@ -503,7 +470,7 @@ UEFI must be enabled or disabled for the lifespan of the machine. For example, d
 <li>If it does not then use &lsquo;quick erase&rsquo;</li>
 </ol>
 <p>It is very important to pay close attention to your selections when erasing disks.</p>
-<p><a href="#heading--about-pre-seeding"><h2 id="heading--about-pre-seeding">About pre-seeding</h2></a></p>
+<p><a href="#heading--about-pre-seeding"><h3 id="heading--about-pre-seeding">About pre-seeding</h3></a></p>
 <p>During machine <a href="about-machines.html">enlistment</a>, <a href="how-to-deploy-machines.html">deployment</a>, commissioning and machine installation, MAAS sends <a href="https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt">Tempita-derived</a> configuration files to the <a href="https://launchpad.net/cloud-init">cloud-init</a> process running on the target machine. MAAS refers to this process as <strong>preseeding</strong>. These preseed files are used to configure a machine&rsquo;s ephemeral and installation environments and can be modified or augmented to a custom machine configuration.</p>
 <p>Preseeding in MAAS can be achieved in two ways:</p>
 <ol>
@@ -575,7 +542,7 @@ Tempita’s inheritance mechanism is the reverse of what you might expect. Inher
 <p>To create the equivalent template for curtin_userdata, the file would be called <code>curtin_userdata_ubuntu_amd64_generic_xenial_node</code>.</p>
 <p><strong>NOTE:</strong> 
 Any file targeting a specific machine will replace the values and configuration held within any generic files. If those values are needed, you will need to copy these generic template values into your new file.</p>
-<p><a href="#heading--about-ubuntu-kernels"><h2 id="heading--about-ubuntu-kernels">About Ubuntu kernels</h2></a></p>
+<p><a href="#heading--about-ubuntu-kernels"><h3 id="heading--about-ubuntu-kernels">About Ubuntu kernels</h3></a></p>
 <p>MAAS supports four types of kernels for its Ubuntu machines:</p>
 <ol>
 <li>General availability kernels</li>
@@ -616,14 +583,12 @@ There is the notion of an HWE <em>stack</em>, which refers to the window manager
 <li>per machine (minimum deploy kernel)</li>
 <li>per machine during deployment (specific deploy kernel)</li>
 </ol>
-<p><a href="#heading--about-kernel-boot-options"><h2 id="heading--about-kernel-boot-options">About kernel boot options</h2></a></p>
+<p><a href="#heading--about-kernel-boot-options"><h3 id="heading--about-kernel-boot-options">About kernel boot options</h3></a></p>
 <p>MAAS can specify kernel boot options to machines on both a global basis (UI and CLI) and a per-machine basis (CLI-only). A full catalogue of available options can be found in the <a href="https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html">Linux kernel parameters list</a> at <a href="https://www.kernel.org">kernel.org</a>.</p>
-<p><a href="#heading--about-resource-pools"><h2 id="heading--about-resource-pools">About resource pools</h2></a></p>
+<p><a href="#heading--about-resource-pools"><h3 id="heading--about-resource-pools">About resource pools</h3></a></p>
 <p>Resource pools allow administrators to logically group resources &ndash; machines and VM hosts &ndash; into pools. Pools can help you budget machines for a particular set of functions.  For example, if you&rsquo;re using MAAS to manage a hospital data centre, you may want to keep a certain number of machines reserved for provider use, whether that be for the charts, documentation, or orders application.  You can use resource pools to reserve those machines, regardless of which of the three applications you end up loading onto a particular machine at any given time. </p>
 <p>Administrators can manage resource pools on the Machines page in the web UI, under the Resource pools tab, or with the MAAS CLI.   Also note that all MAAS installations have a resource pool named &ldquo;default.&rdquo; MAAS automatically adds new machines to the default resource pool.</p>
 <p><a href="#heading--about-customising-deployed-machines"><h2 id="heading--about-customising-deployed-machines">About customising deployed machines</h2></a></p>
-<p><strong>NOTE:</strong> 
-This text is provisional, pending release of this feature in MAAS 3.2.</p>
 <p>MAAS 3.2 provides the capability to customise deployed machines, in that you can update hardware for a running machine on-the-fly.  Specifically, MAAS will update a deployed machine’s data when you do any of the following things:</p>
 <ul>
 <li>Add or remove disks</li>
@@ -632,7 +597,7 @@ This text is provisional, pending release of this feature in MAAS 3.2.</p>
 <li>Add or remove USB devices</li>
 </ul>
 <p>In addition, while deploying a machine, you can configure that machine to periodically sync its <a href="#heading--about-hardware-sync">hardware configuration</a>.  Deployed machines will also  passively update changes to the BMC and tags for that machine, as these changes are made.</p>
-<p><a href="#heading--about-updating-hardware"><h2 id="heading--about-about-updating-hardware">About updating hardware</h2></a></p>
+<p><a href="#heading--about-updating-hardware"><h3 id="heading--about-about-updating-hardware">About updating hardware</h3></a></p>
 <p>Updating hardware on a deployed machine works by installing a special binary on the deployed machine.   This binary is configured at a given interval and push hardware info to the MAAS metadata endpoint.  By setting “enable_hw_sync” to true on a machine prior to deployment, MAAS will add configuration to install a systemd service and timer that will download the hardware sync binary.  This binary then authenticates the machine, reads the hardware info from the machine and pushes it to MAAS. The interval is set globally in the MAAS settings.</p>
 <p>Any changes in hardware are written to the machine’s configuration.  Physical hardware changes will be preserved upon release, while virtual changes, such as a SR-IOV interface, will be dropped.</p>
 <p>When deploying a machine from the UI, there is a new “enable_hw_sync” flag available for each machine. This flag marks a machine to be configured with live hardware updates.</p>
@@ -652,19 +617,19 @@ This text is provisional, pending release of this feature in MAAS 3.2.</p>
 </ul>
 <p>With respect to <code>config.list</code>, there is a new WebSocket Response result (new “hardware_sync_interval” option):</p>
 <pre><code class="language-nohighlight">[{
-    name: &quot;hardware_sync_interval&quot;,
-    value: String in systemd time span format  e.g. “15m”
+   name: &quot;hardware_sync_interval&quot;,
+   value: String in systemd time span format  e.g. “15m”
             (only hours, minutes and seconds are recognised)
 },…]
 
-  -  hardware_sync_interval is set to `15m` by default
+ -  hardware_sync_interval is set to `15m` by default
 config.update
 WebSocket Request params - new “hardware_sync_interval” param
 
 params: {
-   name: &quot;hardware_sync_interval&quot;,
-   value: String in systemd time span format, e.g. “15m”
-  }
+  name: &quot;hardware_sync_interval&quot;,
+  value: String in systemd time span format, e.g. “15m”
+ }
 </code></pre>
 <p><strong>NOTE:</strong> 
 The API does not throw errors when an invalid string is provided for these parameters.</p>
