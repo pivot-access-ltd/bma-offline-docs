@@ -1,9 +1,11 @@
-<h2>MAAS 3.2 Beta 2 release notes</h2>
+<h2>MAAS 3.2 Beta 3 release notes</h2>
 
-We are happy to announce that MAAS 3.2 Beta 2 is now available.  This release provides a new features -- tag management --  and more bug fixes.
+We are happy to announce that MAAS 3.2 Beta 3 is now available.  This release provides a new feature -- hardware sync --  and more bug fixes.
 
 <a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.2 features and fixes</h3></a>
 
+ - [Hardware sync for deployed machines](https://maas.io/docs/how-to-customise-machines#heading--how-to-enable-hardware-sync-on-a-machine): MAAS allows you to sync hardware changes for a deployed and running machine.
+ 
  - [Tag management](/t/how-to-work-with-tags/5928): MAAS now provides greatly expanded tagging capability.
  
  - [Support for observability (O11y) in MAAS](/t/how-to-set-up-maas-metrics/5204): MAAS now supports integration with FOSS Observability stacks.
@@ -60,6 +62,7 @@ At this point, proceed with a normal installation.
 
 Here is the breakdown of bugs fixed across the MAAS 3.2 release:
 
+ * [MAAS 3.2 Beta 3](https://launchpad.net/maas/3.2/3.2.0-beta3)
  * [MAAS 3.2 Beta 2](https://launchpad.net/maas/+milestone/3.2.0-beta2)
  * [MAAS 3.2 Beta 1](https://launchpad.net/maas/3.2/3.2.0-beta1)
  
@@ -67,4 +70,4 @@ Here is the breakdown of bugs fixed across the MAAS 3.2 release:
 
 The following known issues are associated with MAAS 3.2 at its current release state:
 
- * The offline documentation is not yet fully updated as of MAAS 3.2 Beta 2.  Please use the [online documentation](https://maas.io/docs) to get the correct operating information for Beta 2.
+ * The offline documentation is catching up, but is not yet fully updated as of MAAS 3.2 Beta 3.  Please use the [online documentation](https://maas.io/docs) to get the correct operating information for Beta 3.
