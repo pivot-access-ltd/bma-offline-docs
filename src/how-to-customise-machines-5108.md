@@ -1,7 +1,7 @@
 <!-- "How to customise machines" -->
-<a href="#heading--how-to-customise-machines-prior-to-deployment"><h2 id="heading--how-to-customise-machines-prior-to-deployment">How to customise machines</h2></a>
-
-If you want to customise machines, you may want to know:
+[tabs]
+[tab version="v3.2 Snap,v3.2 Packages"]
+MAAS provides the capability to customise machines.  This article will help you learn:
 
 - [How to customise machine storage](#heading--how-to-customise-machine-storage)
 - [How to pre-seed with curtin](#heading--how-to-pre-seed-with-curtin)
@@ -9,6 +9,19 @@ If you want to customise machines, you may want to know:
 - [How to choose Ubuntu kernels](#heading--how-to-choose-ubuntu-kernels)
 - [How to set global kernel boot options](#heading--how-to-set-global-kernel-boot-options)
 - [How to use resource pools](#heading--how-to-use-resource-pools)
+[/tab]
+[tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
+- [How to customise machine storage](#heading--how-to-customise-machine-storage)
+- [How to pre-seed with curtin](#heading--how-to-pre-seed-with-curtin)
+- [How to pre-seed with cloud-init](#heading--cloud-init)
+- [How to choose Ubuntu kernels](#heading--how-to-choose-ubuntu-kernels)
+- [How to set global kernel boot options](#heading--how-to-set-global-kernel-boot-options)
+- [How to use resource pools](#heading--how-to-use-resource-pools)
+- [How to enable hardware sync on a machine](#heading--how-to-enable-hardware-sync-on-a-machine)
+- [How to configure hardware sync interval](#heading--how-to-configure-hardware-sync-interval)
+- [How to view updates from hardware sync](#heading--how-to-view-updates-from-hardware-sync)
+[/tab]
+[/tabs]
 
 <a href="#heading--how-to-customise-machine-storage"><h2 id="heading--how-to-customise-machine-storage">How to customise machine storage</h2></a>
 
@@ -1347,105 +1360,56 @@ maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
 [/tab]
 [/tabs]
 
-<a href="#heading--storage-layouts-reference"><h2 id="heading--storage-layouts-reference">Storage layouts reference</h2></a>
+[tabs]
+[tab version="v3.2 Snap,v3.2 Packages" view="UI"]
+<a href="#heading--how-to-enable-hardware-sync-on-a-machine"><h2 id="heading--how-to-enable-hardware-sync-on-a-machine">How to enable hardware sync on a machine</h2></a>
 
-There are three layout types:
+To enable Hardware sync on a machine, select a machine from the machine listd and choose deploy from the "Take action" dropdown menu:
 
-1.   Flat layout
-2.   LVM layout
-3.   bcache layout
+<a href="https://discourse.maas.io/uploads/default/original/2X/f/f1ba7cedf91f4cfec9e55300ff7f651473343d99.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f1ba7cedf91f4cfec9e55300ff7f651473343d99.png"></a>
 
-The layout descriptions below will include the EFI partition. If your system is not using UEFI, regard `sda2` as `sda1` (with an additional 512 MB available to it).
+Set the parameters as indicated below, and choose "Start deployment for machine":
 
-<a href="#heading--flat-storage-layout-reference"><h3 id="heading--flat-storage-layout-reference">Flat layout storage reference</h3></a>
+<a href="https://discourse.maas.io/uploads/default/original/2X/e/ef2c94f6f87aa8979b79f1140aac654ebcdc8a79.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ef2c94f6f87aa8979b79f1140aac654ebcdc8a79.png"></a>
 
-With the Flat layout, a partition spans the entire boot disk. The partition is formatted with the ext4 filesystem and uses the `/` mount point:
+<a href="#heading--how-to-view-updates-from-hardware-sync"><h2 id="heading--how-to-view-updates-from-hardware-sync">How to view updates from hardware sync</h2></a>
 
-| Name | Size        | Type | Filesystem | Mount point |
-|:----:|------------:|:----:|:----------:|:------------|
-| sda  | -           | disk |            |             |
-| sda1 | 512 MB      | part | FAT32      | /boot/efi   |
-| sda2 | rest of sda | part | ext4       | /           |
+Hardware sync updates the machine’s blockdevice, interface and device sets on a periodic basis. These can be viewed in machine details:
 
-The following three options are supported:
+<a href="https://discourse.maas.io/uploads/default/original/2X/d/de259546ce6810ea6dd8aae52d096051ec31b784.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/de259546ce6810ea6dd8aae52d096051ec31b784.png"></a>
 
-1. `boot_size`: Size of the boot partition on the boot disk. Default is 0, meaning not to create the boot partition. The '/boot' will be placed on the root filesystem.
+Updated BMC configuration and tags can also be viewed on the machine itself.  The timestamps of the last time data was synced and the estimated next time the machine will be synced can be seen in the `last_sync` and `next_sync` fields respectively.
 
-2. `root_device`: The block device on which to place the root partition. The default is the boot disk.
+<a href="#heading--how-to-configure-hardware-sync-interval"><h2 id="heading--how-to-configure-hardware-sync-interval">How to configure hardware sync interval</h2></a>
 
-3. `root_size`: Size of the root partition. Default is 100%, meaning the entire size of the root device.
+The hardware sync interval is configured globally in MAAS settings:
 
-<a href="#heading--lvm-storage-layout-reference"><h3 id="heading--lvm-storage-layout-reference">LVM storage layout reference</h3></a>
+<a href="https://discourse.maas.io/uploads/default/original/2X/4/45cba7386928c38a3f4ae36da4ea80bf4b0c4949.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/45cba7386928c38a3f4ae36da4ea80bf4b0c4949.png">
 
-The LVM layout creates the volume group `vgroot` on a partition that spans the entire boot disk. A logical volume `lvroot` is created for the full size of the volume group; is formatted with the ext4 filesystem; and uses the `/` mount point:
+This value is then applied to the machine at time of deployment. You cannot modify a deployed machine’s sync interval.  You can view a machine’s specific sync interval via the `sync_interval` field on a given machine.
 
-| Name   | Size        | Type | Filesystem     | Mount point |
-|:----:|------------:|:----:|:----------:|:------------|
-| sda    | -           | disk |                |             |
-| sda1   | 512 MB      | part | FAT32          | /boot/efi   |
-| sda2   | rest of sda | part | lvm-pv(vgroot) |             |
-| lvroot | rest of sda | lvm  | ext4           | /           |
-| vgroot | rest of sda | lvm  |                |             |
+[/tab]
+[tab version="v3.2 Snap,v3.2 Packages" view="CLI"]
+<a href="#heading--how-to-enable-hardware-sync-on-a-machine"><h2 id="heading--how-to-enable-hardware-sync-on-a-machine">How to enable hardware sync on a machine</h2></a>
 
-The following six options are supported:
+To enable Hardware sync on a machine, deploy the machine from the command line, adding `enable_hw_sync=true`:
 
-1. `boot_size`: Size of the boot partition on the boot disk. Default is 0, meaning not to create the boot partition. The '/boot' will be placed on the root filesystem.
-2. `root_device`: The block device on which to place the root partition. The default is the boot disk.
-3. `root_size`: Size of the root partition. Default is 100%, meaning the entire size of the root device.
-4. `vg_name`: Name of the created volume group. Default is `vgroot`.
-5. `lv_name`: Name of the created logical volume. Default is `lvroot`.
-6. `lv_size`: Size of the created logical volume. Default is 100%, meaning the entire size of the volume group.
+```nohighlight
+maas $PROFILE machine deploy $SYSTEM_ID osystem=$OSYSTEM distro_series=$VERSION enable_hw_sync=true
+```
 
-<a href="#heading--bcache-storage-layout-reference"><h3 id="heading--bcache-storage-layout-reference">bcache storage layout reference</h3></a>
+<a href="#heading--how-to-view-updates-from-hardware-sync"><h2 id="heading--how-to-view-updates-from-hardware-sync">How to view updates from hardware sync</h2></a>
 
-A bcache layout will create a partition that spans the entire boot disk as the backing device. It uses the smallest block device tagged with 'ssd' as the cache device. The bcache device is formatted with the ext4 filesystem and uses the `/` mount point. If there are no 'ssd' tagged block devices on the machine, then the bcache device will not be created, and the Flat layout will be used instead:
+Hardware sync updates the machine’s blockdevice, interface and device sets on a periodic basis. These can be viewed with the CLI command:
 
-| Name      | Size        | Type | Filesystem | Mount point |
-|:----:|------------:|:----:|:----------:|:------------|
-| sda       | -           | disk |            |             |
-| sda1      | 512 MB      | part | FAT32      | /boot/efi   |
-| sda2      | rest of sda | part | bc-backing |             |
-| sdb (ssd) | -           | disk |            |             |
-| sdb1      | 100% of sdb | part | bc-cache   |             |
-| bcache0   | per sda2    | disk | ext4       | /           |
+```nohighlight
+maas $PROFILE machine read $SYSTEM_ID
+```
 
-The following seven options are supported:
+The timestamps of the last time data was synced and the estimated next time the machine will be synced can be seen in the `last_sync` and `next_sync` fields respectively.
 
-1. `boot_size`: Size of the boot partition on the boot disk. Default is 0, meaning not to create the boot partition. The '/boot' will be placed on the root filesystem.
-2. `root_device`: The block device upon which to place the root partition. The default is the boot disk.
-3. `root_size`: Size of the root partition. Default is 100%, meaning the entire size of the root device.
-4. `cache_device`: The block device to use as the cache device. Default is the smallest block device tagged ssd.
-5. `cache_mode`: The cache mode to which MAAS should set the created bcache device. The default is `writethrough`.
-6. `cache_size`: The size of the partition on the cache device. Default is 100%, meaning the entire size of the cache device.
-7. `cache_no_part`: Whether or not to create a partition on the cache device. Default is false, meaning to create a partition using the given `cache_size`. If set to true, no partition will be created, and the raw cache device will be used as the cache.
-
-<a href="#heading--vmfs6-storage-layout-reference"><h3 id="heading--vmfs6-storage-layout-reference">VMFS6 storage layout reference</h3></a>
-
-The VMFS6 layout is used for VMware ESXi deployments only. It is required when configuring VMware VMFS Datastores. This layout creates all operating system partitions, in addition to the default datastore. The datastore may be modified.  New datastores may be created or extended to include other storage devices. The base operating system partitions may not be modified because VMware ESXi requires them. Once applied another storage layout must be applied to remove the operating system partitions.
-
-| Name | Size      | Type    | Use               |
-|:-----|------------:|:----:|:----------|
-| sda  | -         | disk    |                   |
-| sda1 | 3 MB      | part    | EFI               |
-| sda2 | 4 GB      | part    | Basic Data        |
-| sda3 | Remaining | part    | VMFS Datastore 1  |
-| sda4 | -         | skipped |                   |
-| sda5 | 249 MB    | part    | Basic Data        |
-| sda6 | 249 MB    | part    | Basic Data        |
-| sda7 | 109 MB    | part    | VMware Diagnostic |
-| sda8 | 285 MB    | part    | Basic Data        |
-| sda9 | 2.5 GB    | part    | VMware Diagnostic |
-
-The following options are supported:
-
-1. `root_device`: The block device upon which to place the root partition. Default is the boot disk.
-
-2. `root_size`: Size of the default VMFS Datastore. Default is 100%, meaning the remaining size of the root disk.
-
-<a href="#heading--blank-storage-layout-reference"><h3 id="heading--blank-storage-layout-reference">Blank storage layout reference</h3></a>
-
-The blank layout removes all storage configuration from all storage devices. It is useful when needing to apply a custom storage configuration.
-
-[note type="negative" status="Warning"]
-Machines with the blank layout applied are not deployable; you must first configure storage manually.
-[/note]
+[/tab]
+[tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI,CLI"]
+Note that MAAS version 3.2 introduces the capability to sync and update hardware configuration on deployed, running machines.
+[/tab]
+[/tabs]
