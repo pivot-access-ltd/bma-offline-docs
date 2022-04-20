@@ -1,10 +1,12 @@
 <a href="#heading--storage-layouts-reference"><h2 id="heading--storage-layouts-reference">Storage layouts reference</h2></a>
 
-There are three layout types:
+There are several possible MAAS storage layouts:
 
-1.   Flat layout
-2.   LVM layout
-3.   bcache layout
+- [Flat layout storage reference](#heading--flat-storage-layout-reference)
+- [LVM storage layout reference](#heading--lvm-storage-layout-reference)
+- [bcache storage layout reference](#heading--bcache-storage-layout-reference)
+- [VMFS6 storage layout reference](#heading--vmfs6-storage-layout-reference)
+- [Blank storage layout reference](#heading--blank-storage-layout-reference)
 
 The layout descriptions below will include the EFI partition. If your system is not using UEFI, regard `sda2` as `sda1` (with an additional 512 MB available to it).
 
