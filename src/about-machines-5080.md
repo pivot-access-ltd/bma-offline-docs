@@ -3,154 +3,108 @@ Machines are the heart of MAAS. They are the backbone of your data centre applic
 
 In this article, you will learn:
 
-[tabs]
-[tab version="v3.2 Snap" view="UI"]
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About cloning machines](#heading--about-cloning-machines)
-* [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
-* [About the machine list](#heading--about-the-machine-list)
-* [About the machine summary](#heading--about-the-machine-summary)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v3.2 Snap" view="CLI"
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v3.2 Packages" view="UI"]
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About cloning machines](#heading--about-cloning-machines)
-* [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
-* [About the machine list](#heading--about-the-machine-list)
-* [About the machine summary](#heading--about-the-machine-summary)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v3.2 Packages" view="CLI"]
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v3.1 Snap" view="UI"]
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About cloning machines](#heading--about-cloning-machines)
-* [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
-* [About the machine list](#heading--about-the-machine-list)
-* [About the machine summary](#heading--about-the-machine-summary)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v3.1 Snap" view="CLI"
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v3.1 Packages" view="UI"]
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About cloning machines](#heading--about-cloning-machines)
-* [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
-* [About the machine list](#heading--about-the-machine-list)
-* [About the machine summary](#heading--about-the-machine-summary)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v3.1 Packages" view="CLI"]
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v3.0 Snap" view="UI"]
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About cloning machines](#heading--about-cloning-machines)
-* [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
-* [About the machine list](#heading--about-the-machine-list)
-* [About the machine summary](#heading--about-the-machine-summary)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v3.0 Snap" view="CLI"
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v3.0 Packages" view="UI"]
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About cloning machines](#heading--about-cloning-machines)
-* [About enlisting deployed machines](#heading--about-enlisting-deployed-machines)
-* [About the machine list](#heading--about-the-machine-list)
-* [About the machine summary](#heading--about-the-machine-summary)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v3.0 Packages" view="CLI"]
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v2.9 Snap" view="UI"]
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About the machine list](#heading--about-the-machine-list)
-* [About the machine summary](#heading--about-the-machine-summary)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v2.9 Snap" view="CLI"
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v2.9 Packages" view="UI"]
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About the machine list](#heading--about-the-machine-list)
-* [About the machine summary](#heading--about-the-machine-summary)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[tab version="v2.9 Packages" view="CLI"]
-* [About the machine life-cycle](#heading--about-the-machine-life-cycle)
-* [About testing hardware](#heading--about-testing-hardware)
-* [About adding machines](#heading--about-adding-machines)
-* [About tags](#heading--about-tags)
-* [About storage](#heading--about-storage)
-[/tab]
-[/tabs]
-
 <a href="#heading--about-the-machine-life-cycle"><h2 id="heading--about-the-machine-life-cycle">About the machine life-cycle</h2></a>
 
 One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, allocated, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
 
-<a href="#heading--enlisting-deployed-machines"><h3 id="heading--enlisting-deployed-machines">About enlisting deployed machines</h3></a>
+<a href="#heading--about-enlistment"><h3 id="heading--about-enlistment">About enlistment</h3></a>
+
+MAAS is built to manage machines, including the operating systems on those machines. Enlistment and commissioning are features that make it easier to start managing a machine -- as long as that machine has been configured to netboot. Enlistment enables users to simply connect a machine, configure the firmware properly, and power it on so that MAAS can find it and add it.
+
+Enlistment happens when MAAS starts; it reaches out on connected subnets to locate any nodes -- that is, devices and machines -- that reside on those subnets. MAAS finds a machine that's configured to netboot (e.g., via PXE), boots that machine into Ubuntu, and then sends cloud-init user data which runs standard (i.e., built-in) commissioning scripts. The machine actually adds itself over the MAAS API, and then requests permission to send commissioning data.
+
+Since MAAS doesn't know whether you might intend to actually include these discovered machines in your cloud configuration, it won't automatically take them over, but it will read them to get an idea how they're set up. MAAS then presents these machines to you with a MAAS state of "New." This allows you to examine them and decide whether or not you want MAAS to manage them.
+
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/how-to-manage-machines/5160#heading--how-to-add-a-machine-manually). In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run custom commissioning scripts to meet your specific needs.
+
+<a href="#heading--about-the-enlistment-process"><h4 id="heading--about-the-enlistment-process">About the enlistment process</h4></a>
+
+When MAAS enlists a machine, it first contacts the DHCP server, so that the machine can be assigned an IP address.  An IP address is necessary to download a kernel and initrd via TFTP, since these functions can't accept domain names.  Once the machine has a bootable kernel, MAAS boots it:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg"></a>
+
+Next, initrd mounts a Squashfs image, ephemerally via HTTP, so that cloud-init can execute:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg"></a>
+
+Finally, cloud-init runs enlistment and setup scripts:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg"></a>
+
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/about-networking/5084#heading--about-network-discovery).
+
+Typically, the next step will be to commission the machine. As an alternative to enlistment, an administrator can add a machine manually. Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+
+After the commissioning process, MAAS places the machine in the ‘Ready’ state. ‘Ready’ is a holding state for machines that are commissioned, waiting to be deployed when needed.
+
+[note]
+MAAS runs built-in commissioning scripts during the enlistment phase. When you commission a machine, any customised commissioning scripts you add will have access to data collected during enlistment. Follow the link above for more information about commissioning and commission scripts.
+[/note]
+
+<a href="#heading--about-bmc-enlistment"><h4 id="heading--about-bmc-enlistment">About BMC enlistment</h4></a>
+
+For IPMI machines, you only need to provide IPMI credentials. MAAS automatically discovers the machine and runs enlistment configuration by matching the BMC address.  For non-IPMI machines, you must specify a non-PXE MAC address. MAAS automatically discovers the machine and runs enlistment configuration by matching the non-PXE MAC address.
+
+<a href="#heading--about-adding-machines"><h4 id="heading--about-adding-machines">About adding machines</h4></a>
+
+There are two ways to add a machine to MAAS:
+
+1. If you place the machine on a connected network, and the machine is configured to netboot, MAAS will automatically enlist it.
+
+2. If you add a machine manually, MAAS will automatically commission it.  There are also ways to turn off this automatic commissioning, should you desire to do so.
+
+MAAS typically adds a machine via a combination of DHCP, TFTP, and PXE. By now, you should have enabled MAAS to automatically add devices and machines to your environment. This unattended method of adding machines is called enlistment.
+
+Configuring a computer to boot over PXE is done via its BIOS, often referred to as "netboot" or "network boot". Normally, when you add a machine manually, MAAS will immediately attempt to commission the machine. Note that you will need to configure the underlying machine to netboot, or commissioning will fail. MAAS cannot handle this configuration for you.  While the correct method for configuring network boot depends heavily on your server, there are two common elements:
+
+1. The network card on your server must be able to support PXE, i.e., your NIC -- whether independent or integrated on a motherboard -- must have a boot PROM that supports network booting.  You'll need to consult the documentation for the machine in question to determine this. Note that in MAAS versions before 2.5, you are required to provide the MAC address of the PXE interface when adding a new machine manually.
+
+2. You usually have to interrupt the boot process and enter the BIOS/UEFI menu to configure the network card's PXE stack.  Again, you may need to consult your machine's documentation to pin down this step.
+
+Additional steps will vary widely by machine type and architecture.
+
+Regardless of how MAAS adds a machine, there are no special requirements for the underlying machine itself, other than being able to netboot. In particular, there is no need to install an operating system on it.
+
+<a href="#heading--about-cloning-machines"><h4 id="heading--about-cloning-machines">About cloning machines</h4></a>
+
+[tabs]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
+MAAS 3.1 provides the ability to quickly clone or copy configuration from one machine to one or more machines, via the MAAS UI, providing convenient access to an existing API feature.. This is a step towards machine profile templating work. 
+
+Creating a machine profile is a repetitive task. Based on the responses to our survey -- and multiple forum posts, we have learned that most users create multiple machines of the same configuration in batches. Some users create a machine profile template and loop them through the API, while some create a script to interface with the CLI. However, there is no easy way to do this in the UI except by going through each machine and configuring them individually.   
+
+MAAS API already has the cloning functionality, but it was never exposed in the UI. Hence, users may not know that this API feature exists, nor is there any current documentation about how to use this feature.  Although the current cloning API feature does not solve all machine profile templating problems, it is a great place for us to start moving in the direction of machine templates.
+
+### About copying machine configurations
+
+As a MAAS user -- API or UI -- you may want to copy the configuration of a given machine and apply it to multiple existing machines. Assuming that at least one machine is already set to the desired configuration, you should be able to apply these same settings to a list of destination machines.  This means that a user should be able to:
+
+- select the source machine to copy from.
+- validate that the source machine exists.
+- select at least 1 destination machine.
+- validate that the destination machine(s) exist.
+- edit the source machine or destination machines, if needed.
+- know at all times which machines are affected.
+- see the cloned machines when cloning is successful, or
+- get clear failure information, if cloning fails. 
+
+### About choosing configuration items to copy
+
+As a MAAS user, you will likely want to select whether storage, network, or both configurations should be cloned. The cloning API allows users to choose interfaces and storage separately.  Thus, this new feature should allow the user to:
+
+- clone only the interface (network) configuration.
+- clone only the storage configuration.
+- clone both configurations.
+
+### About cloning restrictions
+
+In order for cloning to succeed, a few restrictions must be met:
+
+1. The destination interface names must be the same source.
+2. The destination drive must be equal to or larger than the source drive.
+3. For static IPs, a new IP will be allocated to the interface on the destination machine
+
+<a href="#heading--enlisting-deployed-machines"><h4 id="heading--enlisting-deployed-machines">About enlisting deployed machines</h4></a>
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
@@ -253,46 +207,46 @@ usage: maas admin machine [-h] COMMAND ...
 Manage an individual machine.
 
 optional arguments:
-  -h, --help            show this help message and exit
+ -h, --help            show this help message and exit
 
 drill down:
-  COMMAND
-    details             Get system details
-    power-parameters    Get power parameters
-    set-workload-annotations
+ COMMAND
+   details             Get system details
+   power-parameters    Get power parameters
+   set-workload-annotations
 			Set key=value data
-    set-owner-data      Deprecated, use set-workload-annotations.
-    query-power-state   Get the power state of a node
-    power-on            Turn on a node
-    power-off           Power off a node
-    test                Begin testing process for a node
-    override-failed-testing
+   set-owner-data      Deprecated, use set-workload-annotations.
+   query-power-state   Get the power state of a node
+   power-on            Turn on a node
+   power-off           Power off a node
+   test                Begin testing process for a node
+   override-failed-testing
 			Ignore failed tests
-    abort               Abort a node operation
-    deploy              Deploy a machine
-    release             Release a machine
-    commission          Commission a machine
-    set-storage-layout  Change storage layout
-    mount-special       Mount a special-purpose filesystem
-    unmount-special     Unmount a special-purpose filesystem
-    clear-default-gateways
+   abort               Abort a node operation
+   deploy              Deploy a machine
+   release             Release a machine
+   commission          Commission a machine
+   set-storage-layout  Change storage layout
+   mount-special       Mount a special-purpose filesystem
+   unmount-special     Unmount a special-purpose filesystem
+   clear-default-gateways
 			Clear set default gateways
-    get-curtin-config   Get curtin configuration
-    restore-networking-configuration
+   get-curtin-config   Get curtin configuration
+   restore-networking-configuration
 			Restore networking options
-    restore-storage-configuration
+   restore-storage-configuration
 			Restore storage configuration
-    restore-default-configuration
+   restore-default-configuration
 			Restore default configuration
-    mark-broken         Mark a machine as Broken
-    mark-fixed          Mark a machine as Fixed
-    rescue-mode         Enter rescue mode
-    exit-rescue-mode    Exit rescue mode
-    lock                Lock a machine
-    unlock              Unlock a machine
-    read                Read a node
-    update              Update a machine
-    delete              Delete a machine
+   mark-broken         Mark a machine as Broken
+   mark-fixed          Mark a machine as Fixed
+   rescue-mode         Enter rescue mode
+   exit-rescue-mode    Exit rescue mode
+   lock                Lock a machine
+   unlock              Unlock a machine
+   read                Read a node
+   update              Update a machine
+   delete              Delete a machine
 
 A machine is identified by its system_id.
 ```
@@ -321,46 +275,46 @@ usage: maas admin machine [-h] COMMAND ...
 Manage an individual machine.
 
 optional arguments:
-  -h, --help            show this help message and exit
+ -h, --help            show this help message and exit
 
 drill down:
-  COMMAND
-    details             Get system details
-    power-parameters    Get power parameters
-    set-workload-annotations
+ COMMAND
+   details             Get system details
+   power-parameters    Get power parameters
+   set-workload-annotations
 			Set key=value data
-    set-owner-data      Deprecated, use set-workload-annotations.
-    query-power-state   Get the power state of a node
-    power-on            Turn on a node
-    power-off           Power off a node
-    test                Begin testing process for a node
-    override-failed-testing
+   set-owner-data      Deprecated, use set-workload-annotations.
+   query-power-state   Get the power state of a node
+   power-on            Turn on a node
+   power-off           Power off a node
+   test                Begin testing process for a node
+   override-failed-testing
 			Ignore failed tests
-    abort               Abort a node operation
-    deploy              Deploy a machine
-    release             Release a machine
-    commission          Commission a machine
-    set-storage-layout  Change storage layout
-    mount-special       Mount a special-purpose filesystem
-    unmount-special     Unmount a special-purpose filesystem
-    clear-default-gateways
+   abort               Abort a node operation
+   deploy              Deploy a machine
+   release             Release a machine
+   commission          Commission a machine
+   set-storage-layout  Change storage layout
+   mount-special       Mount a special-purpose filesystem
+   unmount-special     Unmount a special-purpose filesystem
+   clear-default-gateways
 			Clear set default gateways
-    get-curtin-config   Get curtin configuration
-    restore-networking-configuration
+   get-curtin-config   Get curtin configuration
+   restore-networking-configuration
 			Restore networking options
-    restore-storage-configuration
+   restore-storage-configuration
 			Restore storage configuration
-    restore-default-configuration
+   restore-default-configuration
 			Restore default configuration
-    mark-broken         Mark a machine as Broken
-    mark-fixed          Mark a machine as Fixed
-    rescue-mode         Enter rescue mode
-    exit-rescue-mode    Exit rescue mode
-    lock                Lock a machine
-    unlock              Unlock a machine
-    read                Read a node
-    update              Update a machine
-    delete              Delete a machine
+   mark-broken         Mark a machine as Broken
+   mark-fixed          Mark a machine as Fixed
+   rescue-mode         Enter rescue mode
+   exit-rescue-mode    Exit rescue mode
+   lock                Lock a machine
+   unlock              Unlock a machine
+   read                Read a node
+   update              Update a machine
+   delete              Delete a machine
 
 A machine is identified by its system_id.
 ```
@@ -369,80 +323,7 @@ A machine is identified by its system_id.
 
 For a better understanding of these states and actions, see [Node statuses](/t/maas-concepts-and-terms-reference/5416#heading--node-statuses) and [Machine actions](/t/maas-concepts-and-terms-reference/5416#heading--machine-actions).
 
-<a href="#heading--about-enlistment"><h3 id="heading--about-enlistment">About enlistment</h3></a>
-
-MAAS is built to manage machines, including the operating systems on those machines. Enlistment and commissioning are features that make it easier to start managing a machine -- as long as that machine has been configured to netboot. Enlistment enables users to simply connect a machine, configure the firmware properly, and power it on so that MAAS can find it and add it.
-
-Enlistment happens when MAAS starts; it reaches out on connected subnets to locate any nodes -- that is, devices and machines -- that reside on those subnets. MAAS finds a machine that's configured to netboot (e.g., via PXE), boots that machine into Ubuntu, and then sends cloud-init user data which runs standard (i.e., built-in) commissioning scripts. The machine actually adds itself over the MAAS API, and then requests permission to send commissioning data.
-
-Since MAAS doesn't know whether you might intend to actually include these discovered machines in your cloud configuration, it won't automatically take them over, but it will read them to get an idea how they're set up. MAAS then presents these machines to you with a MAAS state of "New." This allows you to examine them and decide whether or not you want MAAS to manage them.
-
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/how-to-manage-machines/5160#heading--how-to-add-a-machine-manually). In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run custom commissioning scripts to meet your specific needs.
-
-<a href="#heading--about-the-enlistment-process"><h4 id="heading--about-the-enlistment-process">About the enlistment process</h4></a>
-
-When MAAS enlists a machine, it first contacts the DHCP server, so that the machine can be assigned an IP address.  An IP address is necessary to download a kernel and initrd via TFTP, since these functions can't accept domain names.  Once the machine has a bootable kernel, MAAS boots it:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg"></a>
-
-Next, initrd mounts a Squashfs image, ephemerally via HTTP, so that cloud-init can execute:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg"></a>
-
-Finally, cloud-init runs enlistment and setup scripts:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg"></a>
-
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/about-networking/5084#heading--about-network-discovery).
-
-Typically, the next step will be to commission the machine. As an alternative to enlistment, an administrator can add a machine manually. Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
-
-After the commissioning process, MAAS places the machine in the ‘Ready’ state. ‘Ready’ is a holding state for machines that are commissioned, waiting to be deployed when needed.
-
-[note]
-MAAS runs built-in commissioning scripts during the enlistment phase. When you commission a machine, any customised commissioning scripts you add will have access to data collected during enlistment. Follow the link above for more information about commissioning and commission scripts.
-[/note]
-
-<a href="#heading--about-cloning-machines"><h2 id="heading--about-cloning-machines">About cloning machines</h2></a>
-
-[tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
-MAAS 3.1 provides the ability to quickly clone or copy configuration from one machine to one or more machines, via the MAAS UI, providing convenient access to an existing API feature.. This is a step towards machine profile templating work. 
-
-Creating a machine profile is a repetitive task. Based on the responses to our survey -- and multiple forum posts, we have learned that most users create multiple machines of the same configuration in batches. Some users create a machine profile template and loop them through the API, while some create a script to interface with the CLI. However, there is no easy way to do this in the UI except by going through each machine and configuring them individually.   
-
-MAAS API already has the cloning functionality, but it was never exposed in the UI. Hence, users may not know that this API feature exists, nor is there any current documentation about how to use this feature.  Although the current cloning API feature does not solve all machine profile templating problems, it is a great place for us to start moving in the direction of machine templates.
-
-### About copying machine configurations
-
-As a MAAS user -- API or UI -- you may want to copy the configuration of a given machine and apply it to multiple existing machines. Assuming that at least one machine is already set to the desired configuration, you should be able to apply these same settings to a list of destination machines.  This means that a user should be able to:
-
- - select the source machine to copy from.
- - validate that the source machine exists.
- - select at least 1 destination machine.
- - validate that the destination machine(s) exist.
- - edit the source machine or destination machines, if needed.
- - know at all times which machines are affected.
- - see the cloned machines when cloning is successful, or
- - get clear failure information, if cloning fails. 
-
-### About choosing configuration items to copy
-
-As a MAAS user, you will likely want to select whether storage, network, or both configurations should be cloned. The cloning API allows users to choose interfaces and storage separately.  Thus, this new feature should allow the user to:
-
- - clone only the interface (network) configuration.
- - clone only the storage configuration.
- - clone both configurations.
-
-### About cloning restrictions
-
-In order for cloning to succeed, a few restrictions must be met:
-
-1. The destination interface names must be the same source.
-2. The destination drive must be equal to or larger than the source drive.
-3. For static IPs, a new IP will be allocated to the interface on the destination machine
-
-<a href="#heading--about-enlisting-deployed-machines"><h2 id="heading--about-enlisting-deployed-machines">About enlisting deployed machines</h2></a>
+<a href="#heading--about-enlisting-deployed-machines"><h4 id="heading--about-enlisting-deployed-machines">About enlisting deployed machines</h4></a>
 
 In general, when adding a machine to MAAS, it network boots the machine into an ephemeral environment to collect hardware information about the machine. While this is not a destructive action, it doesn’t work if you have machines that are already running a workload.
 
@@ -458,10 +339,6 @@ Some of the normal commands that work on deployed machines will not work on an a
 Cloning machines is only available in MAAS versions 3.1 and greater.
 [/tab]
 [/tabs]
-
-<a href="#heading--about-bmc-enlistment"><h4 id="heading--about-bmc-enlistment">About BMC enlistment</h4></a>
-
-For IPMI machines, you only need to provide IPMI credentials. MAAS automatically discovers the machine and runs enlistment configuration by matching the BMC address.  For non-IPMI machines, you must specify a non-PXE MAC address. MAAS automatically discovers the machine and runs enlistment configuration by matching the non-PXE MAC address.
 
 <a href="#heading--about-commissioning-machines"><h3 id="heading--about-commissioning-machines">About commissioning machines</h3></a>
 
@@ -482,7 +359,7 @@ MAAS chooses the latest Ubuntu LTS release as the default image for commissionin
 Commissioning requires 60 seconds.
 [/note]
 
-<a href="#heading--about-numa-sriov-commissioning"><h3 id="heading--about-numa-sriov-commissioning">About commissioning NUMA and SR-IOV nodes</h3></a>
+<a href="#heading--about-numa-sriov-commissioning"><h4 id="heading--about-numa-sriov-commissioning">About commissioning NUMA and SR-IOV nodes</h4></a>
 
 If you are using the NUMA architecture, MAAS versions 2.7 and higher guarantee that machines are assigned to a single NUMA node that contains all the machine's resources. Node boundaries are critical, especially in vNUMA situations.  Splitting nodes can create unnecessary latency.  You want the NUMA node boundaries to match VM boundaries if at all possible.
 
@@ -494,7 +371,7 @@ You must recommission NUMA/SR-IOV machines that were previously commissioned und
 
 When using these nodes, you can specify a node index for interfaces and physical block devices.  MAAS will display the NUMA node index and details, depending upon your configuration, to include the count of NUMA nodes, number of CPU cores, memory, NICs, and node spaces for bonds and block devices.  You can also filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID, among others.
 
-<a href="#heading--about-maas-commissioning-scripts"><h3 id="heading--about-maas-commissioning-scripts">About MAAS commissioning scripts</h3></a>
+<a href="#heading--about-maas-commissioning-scripts"><h4 id="heading--about-maas-commissioning-scripts">About MAAS commissioning scripts</h4></a>
 
 MAAS runs scripts during enlistment, commissioning and testing to collect data about nodes. Both enlistment and commissioning run all builtin commissioning scripts, though enlistment runs only built-ins. Commissioning also runs any user-uploaded commissioning scripts by default, unless the user manually provides a list of scripts to run. MAAS uses these commissioning scripts to configure hardware and perform other tasks during commissioning, such as updating the firmware. Similarly, MAAS employs hardware testing scripts to evaluate system hardware and report its status.
 
@@ -653,18 +530,18 @@ memspeed = some_test()
 
 print('Memspeed: %s' % memspeed)
 results = {
-    'results': {
-        'memspeed': memspeed,
-    }
+   'results': {
+       'memspeed': memspeed,
+   }
 }
 if memspeed < 100:
-    print('WARN: Memory test passed but performance is low!')
-    results['status'] = 'degraded'
+   print('WARN: Memory test passed but performance is low!')
+   results['status'] = 'degraded'
 
 result_path = os.environ.get("RESULT_PATH")
 if result_path is not None:
-    with open(result_path, 'w') as results_file:
-        yaml.safe_dump(results, results_file)
+   with open(result_path, 'w') as results_file:
+       yaml.safe_dump(results, results_file)
 ```
 
 
@@ -681,14 +558,14 @@ MAAS runs all commissioning scripts by default. However, you can select which cu
 
 ``` bash
 maas $PROFILE machine commission \
- commissioning_scripts=$SCRIPT_NAME,$SCRIPT_TAG
+commissioning_scripts=$SCRIPT_NAME,$SCRIPT_TAG
 ```
 
 You can also select which testing scripts to run by name or tag:
 
 ``` bash
 maas $PROFILE machine commission \
- testing_scripts=$SCRIPT_NAME,$SCRIPT_TAG
+testing_scripts=$SCRIPT_NAME,$SCRIPT_TAG
 ```
 
 Any testing scripts tagged with commissioning will also run during commissioning.
@@ -707,7 +584,7 @@ Because scripts operate within an ephemeral version of Ubuntu, enabling this opt
 
 As long as you've added your [SSH key](/t/how-to-manage-user-accounts/5184#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
 
-<a href="#heading--about-testing-hardware"><h2 id="heading--about-testing-hardware">About testing hardware</h2></a>
+<a href="#heading--about-testing-hardware"><h4 id="heading--about-testing-hardware">About testing hardware</h4></a>
 
 If you wish, you can tell MAAS to test machine hardware using well-known Linux utilities.  MAAS can test machines that have a status of **Ready**, **Broken**, or **Deployed**.  You can include testing as part of the commissioning process. When you choose the 'Commission' action, MAAS will display the dialog described below.  Be aware, though, that if the hardware tests fail, the machine will become unavailable for Deployment.
 
@@ -735,7 +612,7 @@ MAAS provides a comprehensive suite of network and link testing capabilities.  M
 
 Network testing also includes customisable network testing and commissioning scripts. There are no particular restrictions on these scripts, allowing you to test a wide variety of possible conditions and situations.
 
-<a href="#heading--about-post-commission-configuration"><h3 id="heading--about-post-commission-configuration">About post-commission configuration</h3></a>
+<a href="#heading--about-post-commission-configuration"><h4 id="heading--about-post-commission-configuration">About post-commission configuration</h4></a>
 
 Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either "Ready" or "Broken", interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces.
 
@@ -775,33 +652,13 @@ Before deploying, you should take two key actions:
 
 2. Ensure any pertinent SSH keys are imported (see [SSH keys](/t/how-to-manage-user-accounts/5184#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
 
-<a href="#heading--event-logs-h3"><h3 id="heading--event-logs-h3">About machine event logs</h3></a>
+<a href="#heading--event-logs"><h2 id="heading--event-logs">About machine event logs</h2></a>
 
 Event logs display a list of timestamped status updates for events and actions performed on the machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a>
 
 Detailed discussion of this event log can be found under the [Logging](/t/maas-logging-reference/5240) section of this documentation.
-
-<a href="#heading--about-adding-machines"><h2 id="heading--about-adding-machines">About adding machines</h2></a>
-
-There are two ways to add a machine to MAAS:
-
-1. If you place the machine on a connected network, and the machine is configured to netboot, MAAS will automatically enlist it.
-
-2. If you add a machine manually, MAAS will automatically commission it.  There are also ways to turn off this automatic commissioning, should you desire to do so.
-
-MAAS typically adds a machine via a combination of DHCP, TFTP, and PXE. By now, you should have enabled MAAS to automatically add devices and machines to your environment. This unattended method of adding machines is called enlistment.
-
-Configuring a computer to boot over PXE is done via its BIOS, often referred to as "netboot" or "network boot". Normally, when you add a machine manually, MAAS will immediately attempt to commission the machine. Note that you will need to configure the underlying machine to netboot, or commissioning will fail. MAAS cannot handle this configuration for you.  While the correct method for configuring network boot depends heavily on your server, there are two common elements:
-
-1. The network card on your server must be able to support PXE, i.e., your NIC -- whether independent or integrated on a motherboard -- must have a boot PROM that supports network booting.  You'll need to consult the documentation for the machine in question to determine this. Note that in MAAS versions before 2.5, you are required to provide the MAC address of the PXE interface when adding a new machine manually.
-
-2. You usually have to interrupt the boot process and enter the BIOS/UEFI menu to configure the network card's PXE stack.  Again, you may need to consult your machine's documentation to pin down this step.
-
-Additional steps will vary widely by machine type and architecture.
-
-Regardless of how MAAS adds a machine, there are no special requirements for the underlying machine itself, other than being able to netboot. In particular, there is no need to install an operating system on it.
 
 <a href="#heading--about-the-machine-list"><h2 id="heading--about-the-machine-list">About the machine list</h2></a>
 
@@ -866,7 +723,7 @@ Looking back at the example above, you can see that there are several columns in
 7.   **Disks**: The number of drives detected on the machine.
 8.   **Storage**: The amount of storage, in GB, identified on the machine.
 
-<a href="#heading--about-the-machine-summary"><h2 id="heading--about-the-machine-summary">About the machine summary</h2></a>
+<a href="#heading--about-the-machine-summary"><h3 id="heading--about-the-machine-summary">About the machine summary</h3></a>
 
 Click a machine's FQDN or MAC address to open a detailed view of a machine's status and configuration.
 
@@ -968,7 +825,7 @@ where:
 If the device is still present in the system, it will be recognised again (and thus "recreated")
 when the machine is commissioned again.
 
-<a href="#heading--about-machine-interfaces-h3"><h3 id="heading--about-machine-interfaces-h3">About machine network info</h3></a>
+<a href="#heading--about-machine-interfaces"><h3 id="heading--about-machine-interfaces">About machine network info</h3></a>
 
 The Network "tab" provides you with a way to view/edit the network and interface configuration for a machine: 
 
@@ -978,7 +835,7 @@ In the case of this deployed machine, there are not many editing options.  If th
 
 Options on this tab are described in the introduction to [Networking](/t/about-networking/5084) article in this documentation set.
 
-<a href="#heading--machine-config-h3"><h3 id="heading--machine-config-h3">About machine configuration info</h3></a>
+<a href="#heading--machine-config"><h3 id="heading--machine-config">About machine configuration info</h3></a>
 
 The final tab from the Machine menu allows you to update machine and power configuration options: 
 
@@ -1001,7 +858,7 @@ USB and PCI devices are supported in MAAS version 3.0 and greater.
 
 Resource pools allow administrators to logically group resources -- machines and VM hosts -- into pools. Pools can help you budget machines for a particular set of functions.  For example, if you're using MAAS to manage a hospital data centre, you may want to keep a certain number of machines reserved for provider use, whether that be for the charts, documentation, or orders application.  You can use resource pools to reserve those machines, regardless of which of the three applications you end up loading onto a particular machine at any given time. 
 
-<a href="#heading--about-tags"><h2 id="heading--about-tags">About tags</h2></a>
+<a href="#heading--about-tags"><h3 id="heading--about-tags">About tags</h3></a>
 
 Tags are short, descriptive, searchable words that can be applied to various MAAS objects, including:
 
@@ -1032,7 +889,7 @@ MAAS supports storage configuration for CentOS and RHEL deployments. Support inc
 [/note]
 
 
-<a href="#heading--machine-storage-h3"><h4 id="heading--machine-storage-h3">About machine storage info</h4></a>
+<a href="#heading--machine-storage"><h2 id="heading--machine-storage">About machine storage info</h2></a>
 
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
 
@@ -1041,7 +898,7 @@ The Storage tab on the machine list brings up a form that allows you to view/edi
 This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  
 
 
-<a href="#heading--about-block-devices"><h4 id="heading--about-block-devices">About block devices</h4></a>
+<a href="#heading--about-block-devices"><h3 id="heading--about-block-devices">About block devices</h3></a>
 
 Once the initial storage layout has been configured on a machine, you can perform many operations to view and adjust the entire storage layout for the machine. In MAAS there are two different types of block devices.
 
@@ -1054,12 +911,12 @@ A physical block device is a physically attached block device such as a 100GB ha
 A virtual block device is a block device that is exposed by the Linux kernel when an operation is performed. Almost all the operations on a physical block device can be performed on a virtual block device, such as a RAID device exposed as md0.
 
 
-<a href="#heading--about-partitions"><h4 id="heading--about-partitions">About partitions</h4></a>
+<a href="#heading--about-partitions"><h3 id="heading--about-partitions">About partitions</h3></a>
 
 As with block devices (see [Block devices](#heading--about-block-devices)), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
 
 
-<a href="#heading--about-storage-restrictions"><h4 id="heading--about-storage-restrictions">About storage restrictions</h4></a>
+<a href="#heading--about-storage-restrictions"><h3 id="heading--about-storage-restrictions">About storage restrictions</h3></a>
 
 There are three restrictions for the storage configuration:
 
@@ -1070,12 +927,12 @@ There are three restrictions for the storage configuration:
 Violating these restrictions will prevent a successful deployment.
 
 
-<a href="#heading--about-vmfs-datastores"><h4 id="heading--about-vmfs-datastores">About VMFS datastores</h4></a>
+<a href="#heading--about-vmfs-datastores"><h3 id="heading--about-vmfs-datastores">About VMFS datastores</h3></a>
 
 MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the VMFS6 storage layout. This layout creates a VMFS Datastore named `datastore1` which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
 
 
-<a href="#heading--about-uefi-booting"><h4 id="heading--about-uefi-booting">About UEFI booting</h4></a>
+<a href="#heading--about-uefi-booting"><h3 id="heading--about-uefi-booting">About UEFI booting</h3></a>
 
 Every layout type supports a machine booting with UEFI. In such a case, MAAS automatically creates an EFI boot partition (`/boot/efi`). Other than setting the machine to boot from UEFI, the user does not need to take any additional action.
 
@@ -1086,17 +943,17 @@ UEFI must be enabled or disabled for the lifespan of the machine. For example, d
 The EFI partition, if created, will be the first partition (`sda1`) and will have a FAT32 filesystem with a size of 512 MB.
 
 
-<a href="#heading--final-storage-modifications"><h4 id="heading--final-storage-modifications">About final storage modifications</h4></a>
+<a href="#heading--final-storage-modifications"><h3 id="heading--final-storage-modifications">About final storage modifications</h3></a>
 
 Once MAAS provisions a machine with block devices, via a layout or administrator customisation, a regular user can modify the resulting storage configuration at the filesystem level.
 
 
-<a href="#heading--about-disk-erasure"><h4 id="heading--about-disk-erasure">About disk erasure</h4></a>
+<a href="#heading--about-disk-erasure"><h2 id="heading--about-disk-erasure">About disk erasure</h2></a>
 
 Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/maas-concepts-and-terms-reference/5416#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
 
 
-<a href="#heading--about-disk-erasure-types"><h5 id="heading--about-disk-erasure-types">About disk erasure types</h5></a>
+<a href="#heading--about-disk-erasure-types"><h3 id="heading--about-disk-erasure-types">About disk erasure types</h3></a>
 
 The three disk erasure types are:
 
@@ -1107,22 +964,22 @@ The three disk erasure types are:
 Each of these are explained below.
 
 
-<a href="#heading--about-standard-erase"><h5 id="heading--about-standard-erase">About standard erasure</h5></a>
+<a href="#heading--about-standard-erase"><h3 id="heading--about-standard-erase">About standard erasure</h3></a>
 
 Overwrites all data with zeros.
 
 
-<a href="#heading--about-secure-erasure"><h5 id="heading--about-secure-erasure">About secure erasure</h5></a>
+<a href="#heading--about-secure-erasure"><h3 id="heading--about-secure-erasure">About secure erasure</h3></a>
 
 Although effectively equivalent to Standard erase, Secure erase is much faster because the disk's firmware performs the operation. Because of this, however, some disks may not be able to perform this erasure type (SCSI, SAS, and FC disks in particular).
 
 
-<a href="#heading--about-quick-erasure"><h5 id="heading--about-quick-erasure">About quick erasure</h5></a>
+<a href="#heading--about-quick-erasure"><h3 id="heading--about-quick-erasure">About quick erasure</h3></a>
 
 Same as Standard erase but only targets the first 1 MB and the last 1 MB of each disk. This removes the partition tables and/or superblock from the disk, making data recovery difficult but not impossible.
 
 
-<a href="#heading--about-erasure-order-of-preference"><h5 id="heading--about-erasure-order-of-preference">About erasure order of preference</h5></a>
+<a href="#heading--about-erasure-order-of-preference"><h3 id="heading--about-erasure-order-of-preference">About erasure order of preference</h3></a>
 
 If all three options are checked when the machine is released the following order of preference is applied:
 
