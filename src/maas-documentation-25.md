@@ -34,6 +34,7 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 ### Machines
 
 - [About machines](/t/-/5080)
+- [About customising machines](/t/-/5976)
 - [Manage machines](/t/-/5160)
 - [Deploy machines](/t/-/5112)
 - [Customise machines](/t/-/5108)
@@ -121,6 +122,7 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/5976|/docs/about-customising-machines|
 |https://discourse.maas.io/t/-/5973|/docs/storage-layouts-reference|
 |https://discourse.maas.io/t/-/777|/docs/upgrade-2-3-to-2-4-from-ubuntu-16-04|
 |https://discourse.maas.io/t/-/778|/docs/upgrade-from-1-9-to-2-x|
