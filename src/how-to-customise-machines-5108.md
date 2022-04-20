@@ -63,7 +63,7 @@ This section will show you:
 [/tab]
 [/tabs]
 
-Note that layouts can be set globally and on a per-machine basis.  For additional information on storage layouts, see the [Storage layouts reference](#heading--storage-layouts-reference) section at the end of this article.
+Note that layouts can be set globally and on a per-machine basis.  For additional information on storage layouts, see the [Storage layouts reference](/t/-/5973) article.
 
 <a href="#heading--how-to-set-global-storage-layouts"><h3 id="heading--how-to-set-global-storage-layouts">How to set global storage layouts</h3></a>
 
