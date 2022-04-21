@@ -9,12 +9,16 @@ Prior to deployment, MAAS machines can be customised in a number of ways, includ
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages"]
-Machines can also be customised post-deployment, while running, allowing you to:
+Machines can also be customised post-deployment, while running, either by changing out the physical hardware, or by altering the VM from the VM host side.  This will allow you to:
 
 - Add or remove disks
 - Add or remove network interfaces
 - Add or remove PCI devices
 - Add or remove USB devices
+
+[note]
+You cannot update these parameters from within MAAS on a deployed machine.
+[/note]
 
 While deploying a machine, you can configure that machine to periodically sync its hardware configuration.  Deployed machines will passively update changes to the BMC and tags for that machine, on-the-fly, as these changes are made.
 

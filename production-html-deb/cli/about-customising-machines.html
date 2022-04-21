@@ -403,13 +403,15 @@
 <li>kernel boot options. </li>
 <li>resource pools.</li>
 </ul>
-<p>Machines can also be customised post-deployment, while running, allowing you to:</p>
+<p>Machines can also be customised post-deployment, while running, either by changing out the physical hardware, or by altering the VM from the VM host side.  This will allow you to:</p>
 <ul>
 <li>Add or remove disks</li>
 <li>Add or remove network interfaces</li>
 <li>Add or remove PCI devices</li>
 <li>Add or remove USB devices</li>
 </ul>
+<p><strong>NOTE:</strong> 
+You cannot update these parameters from within MAAS on a deployed machine.</p>
 <p>While deploying a machine, you can configure that machine to periodically sync its hardware configuration.  Deployed machines will passively update changes to the BMC and tags for that machine, on-the-fly, as these changes are made.</p>
 <p>This article will help you learn:</p>
 <ul>
