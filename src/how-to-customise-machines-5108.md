@@ -1372,6 +1372,8 @@ Set the parameters as indicated below, and choose "Start deployment for machine"
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/ef2c94f6f87aa8979b79f1140aac654ebcdc8a79.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ef2c94f6f87aa8979b79f1140aac654ebcdc8a79.png"></a>
 
+Once you've enabled hardware sync, any changes you make to the physical device, or to the VM through the VM host, will show up in the appropriate page for the deployed machine as soon as the sync interval has passed.
+
 <a href="#heading--how-to-view-updates-from-hardware-sync"><h2 id="heading--how-to-view-updates-from-hardware-sync">How to view updates from hardware sync</h2></a>
 
 Hardware sync updates the machine’s blockdevice, interface and device sets on a periodic basis. These can be viewed in machine details:
@@ -1397,6 +1399,8 @@ To enable Hardware sync on a machine, deploy the machine from the command line, 
 ```nohighlight
 maas $PROFILE machine deploy $SYSTEM_ID osystem=$OSYSTEM distro_series=$VERSION enable_hw_sync=true
 ```
+
+Once you've enabled hardware sync, any changes you make to the physical device, or to the VM through the VM host, will show up in the appropriate page for the deployed machine as soon as the sync interval has passed.
 
 <a href="#heading--how-to-view-updates-from-hardware-sync"><h2 id="heading--how-to-view-updates-from-hardware-sync">How to view updates from hardware sync</h2></a>
 

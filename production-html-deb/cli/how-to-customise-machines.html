@@ -1300,6 +1300,7 @@ The <code>name</code> and <code>description</code> fields are optional.</p>
 <p>To enable Hardware sync on a machine, deploy the machine from the command line, adding <code>enable_hw_sync=true</code>:</p>
 <pre><code class="language-nohighlight">maas $PROFILE machine deploy $SYSTEM_ID osystem=$OSYSTEM distro_series=$VERSION enable_hw_sync=true
 </code></pre>
+<p>Once you&rsquo;ve enabled hardware sync, any changes you make to the physical device, or to the VM through the VM host, will show up in the appropriate page for the deployed machine as soon as the sync interval has passed.</p>
 <p><a href="#heading--how-to-view-updates-from-hardware-sync"><h2 id="heading--how-to-view-updates-from-hardware-sync">How to view updates from hardware sync</h2></a></p>
 <p>Hardware sync updates the machine’s blockdevice, interface and device sets on a periodic basis. These can be viewed with the CLI command:</p>
 <pre><code class="language-nohighlight">maas $PROFILE machine read $SYSTEM_ID
