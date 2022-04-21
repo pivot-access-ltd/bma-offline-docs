@@ -117,13 +117,6 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 
 ### [Contact us](/t/-/5448)
 
-### Second level navigation test
-
-#### Next level of nav this way?
-
-- Get help
- -- Second level of nav this way?
-
 ## URLs
 
 [details=Mapping table]
