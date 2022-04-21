@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;UI-only&nbsp;
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/how-to-work-with-audit-event-logs.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation.html">
+	  Introduction
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-the-maas-cli.html">
+	    Use the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Controllers
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-racks.html">
+	    Manage racks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-regions.html">
+	    Region controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Machines
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	VM hosting
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    About VM hosting
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Networking fundamentals
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    About TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    About cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    About DHCP
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	MAAS Networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-networking.html">
+	    About MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machine-interfaces.html">
+	    Manage interfaces
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-dhcp.html">
+	    Manage DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-ranges.html">
+	    Manage IP ranges
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-proxies.html">
+	    Manage proxies
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-ntp.html">
+	    Set up NTP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Images
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Select and import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-maas-images.html">
+	    Build MAAS images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-a-custom-ubuntu-image.html">
+	    Create custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-image-streams.html">
+	    Use image streams
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Tags
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+	<p/>
+	<strong>
+	  Operations
+	</strong>
+	<ul>
+	  <li>
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
+	    </a>
+	  </li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-troubleshoot-maas.html">
+	  Troubleshooting
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Get help
+	  </a>
+	</li>
+	<li>
+	  <a href="tips-and-tricks.html">
+	    Tips, tricks, and traps
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="what-is-new-with-maas.html">
+	  Release notes
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	<a href="how-to-contact-us.html">
+	  Contact us
+	</a>
+      </strong>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>How to work with audit event logs</h1><!-- "How to work with audit event logs" -->
+<p>There are many user-initiated events in MAAS that an administrator or a user may want to audit. These include someone updating the settings or changing a user&rsquo;s permissions. This page details how to query these events and includes examples of how to perform a query, and the type of data logs can provide.</p>
+<p>This article will help you learn:</p>
+<ul>
+<li><a href="#heading--list-audit-events-for-all-users">How to list audit events for all users</a></li>
+<li><a href="#heading--list-audit-events-for-a-specific-user">How to list audit events for a specific user</a></li>
+</ul>
+<p><a href="#heading--list-audit-events-for-all-users"><h2 id="heading--list-audit-events-for-all-users">How to list audit events for all users</h2></a></p>
+<p>To list events for all users, use the following syntax:</p>
+<pre><code class="language-bash">maas $PROFILE events query level=AUDIT
+</code></pre>
+<p>Note: Non-administrators will only see their own audit event logs listed.</p>
+<p>The following is example output from the previous command, using admin as the MAAS profile:</p>
+<pre><code class="language-no-highlight">Success.
+Machine-readable output follows:
+{
+    &quot;count&quot;: 1,
+    &quot;events&quot;: [
+        {
+            &quot;username&quot;: &quot;admin&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;&quot;,
+            &quot;id&quot;: 2569,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Thu, 01 Feb. 2018 22:28:18&quot;,
+            &quot;type&quot;: &quot;Authorisation&quot;,
+            &quot;description&quot;: &quot;User admin logged in.&quot;
+        }
+    ],
+    &quot;next_uri&quot;: &quot;/MAAS/api/2.0/events/?op=query&amp;level=AUDIT&amp;after=2569&quot;,
+    &quot;prev_uri&quot;: &quot;/MAAS/api/2.0/events/?op=query&amp;level=AUDIT&amp;before=2558&quot;
+}
+</code></pre>
+<p>The above output shows that there is currently only one audit event log for the user <code>admin</code>, and that MAAS created this log when they logged into the web UI.</p>
+<p><a href="#heading--list-audit-events-for-a-specific-user"><h2 id="heading--list-audit-events-for-a-specific-user">How to list audit events for a specific user</h2></a></p>
+<p>To list the audit event logs for a specific user that you have permissions for, supply the <code>owner=$USERNAME</code> parameter to the query command:</p>
+<pre><code class="language-bash">maas $PROFILE events query level=AUDIT owner=$USERNAME
+</code></pre>
+<p>As there is only one audit event log in the database (as seen above), generate some more by performing these four actions:</p>
+<ol>
+<li>Create new non-administrator user <code>johnnybegood</code> with <code>admin</code> user</li>
+<li>Logout of web UI as <code>admin</code> user and login with <code>johnnybegood</code> user</li>
+<li>Change password of the <code>johnnybegood</code> user</li>
+<li>Log back into the web UI (Django forces a re-login when currently logged in user changes their password).</li>
+</ol>
+<p>Let&rsquo;s take a look and see what type of audit event logs we have now, filtering with <code>owner=johnnybegood</code> as shown in the following command:</p>
+<pre><code class="language-bash">maas admin events query level=AUDIT owner=johnnybegood
+</code></pre>
+<pre><code class="language-bash">Success.
+Machine-readable output follows:
+{
+    &quot;count&quot;: 3,
+    &quot;events&quot;: [
+        {
+            &quot;username&quot;: &quot;johnnybegood&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;&quot;,
+            &quot;id&quot;: 2877,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Mon, 12 Feb. 2018 22:34:46&quot;,
+            &quot;type&quot;: &quot;Authorisation&quot;,
+            &quot;description&quot;: &quot;User 'johnnybegood' logged in.&quot;
+        },
+        {
+            &quot;username&quot;: &quot;johnnybegood&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;&quot;,
+            &quot;id&quot;: 2876,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Mon, 12 Feb. 2018 22:34:35&quot;,
+            &quot;type&quot;: &quot;Authorisation&quot;,
+            &quot;description&quot;: &quot;Password changed for 'johnnybegood'.&quot;
+        },
+        {
+            &quot;username&quot;: &quot;johnnybegood&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;&quot;,
+            &quot;id&quot;: 2875,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Mon, 12 Feb. 2018 22:33:56&quot;,
+            &quot;type&quot;: &quot;Authorisation&quot;,
+            &quot;description&quot;: &quot;User 'johnnybegood' logged in.&quot;
+        }
+    ],
+    &quot;next_uri&quot;: &quot;/MAAS/api/2.0/events/?op=query&amp;level=AUDIT&amp;owner=johnnybegood&amp;after=2877&quot;,
+    &quot;prev_uri&quot;: &quot;/MAAS/api/2.0/events/?op=query&amp;level=AUDIT&amp;owner=johnnybegood&amp;before=2875&quot;
+}
+</code></pre>
+<p>As we can see above, only audit event logs for the user <code>johnnybegood</code> are generated. These events show the following eight items:</p>
+<ol>
+<li>The user for the event</li>
+<li>Whether or not the event is associated with a particular node</li>
+<li>The node&rsquo;s hostname</li>
+<li>The event id</li>
+<li>The level of the event</li>
+<li>when MAAS created the event</li>
+<li>The event type</li>
+<li>The event description</li>
+</ol>
+    </div>
+  </body>
+</html>
