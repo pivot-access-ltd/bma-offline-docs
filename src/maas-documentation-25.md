@@ -90,6 +90,7 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 - [Back up MAAS](/t/-/5096)
 - [Secure MAAS](/t/-/5196)
 - [Manage users](/t/-/5184)
+- [Work with audit event logs)(/t/-/5987)
 - [Search MAAS](/t/-/5192)
 
 ### Reference
@@ -98,6 +99,7 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 - [Commissioning scripts](/t/-/5375)
 - [Hardware test scripts](/t/-/5392)
 - [Log files](/t/-/5240)
+- [Audit event logs](/t/-/5256)
 - [Storage layouts](/t/-/5973)
 - [API documentation](https://maas.io/docs/api)
 - [API client](/t/-/5404)
