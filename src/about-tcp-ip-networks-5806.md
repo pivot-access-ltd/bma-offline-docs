@@ -31,17 +31,6 @@ We could simply hook up a wire between SanDiego and Bangor.  In fact, that's ess
 
 1. A long wire has lots of impedance.  Signals can disappear into the noise long before they traverse the wire.  Said differently, the signal-to-noise ratio drops critically low before completing the connection.  Repeaters can fix that problem by amplifying the signal while it's still readable.  Repeaters are physical hardware, which has to reside at intervals along the path.  You'd need places to put repeaters, which means you'd have to lease or own real estate in specific locations, at specific distances.  Cost becomes a factor at that point.
 
-<details id="heading--t1-lines"><summary>T1 lines and the early Internet</summary>
-
-In the very early days of long-haul networking, most of the repeaters were owned by the local telephone companies. T1 lines, as they were called, couldn't compete with today's fibre connections, but they did provide a speedy (at the time) 1.5Mbps connection.  For example, in the oil and gas industry of the early 1990s, many of the city offices had wall after wall of T1 lines wired directly into the building.
-
-T1 wasn't designed for network traffic, exactly,  The idea was to multiplex phone calls on one line via Time-Division Multiplexing.  TDM split up the call traffic into little digital packets that were sent on a rotating basis.  The first T1 lines, which showed up around 1962, could handle about 24 calls without the average telephone user noticing.  Telephone linemen generally could tell by the "clipped" nature of the call, as there is a distinctive flatness to the conversation over a digital TDM circuit.
-
-The T1 lines used ordinary, double-twisted-pair copper wiring, with repeaters at roughly one-mile intervals.  Those repeaters were part of the larger greyish-green "cans" (pedestals) that still dot the roadsides today in the US.  When WAN and MAN networking became a thing, the phone company just repurposed some of those pairs to carry data traffic.
-
-Some of the key elements of TCP/IP, like twisted-pair Ethernet cables, packet-based messaging, and multiplexing, are all just holdovers of the original T1 digital subscriber system -- repurposed for computer networking.
-</details>
-
 2. A long wire is a single point of failure.  If someone cuts the wire, there's no alternative way for the two computers to communicate.  Obviously, you could run multiple wires, trunk them in separate cables, have backup repeater hardware, and even use different geographical paths for each trunk.  Again, cost is a significant factor here.  
 
 We could solve this by dreaming up all sorts of network architectures, but the easiest way is to create and use something known as the "Internet infrastructure".  As the Internet became "the network", it evolved into what some call an "access-aggregation-core" (AAC) network, which looks something like this: 
@@ -53,6 +42,17 @@ In this model, **SanDiego** sends a message, labelled for **Bangor**, to some ro
 These "sideways paths" are there mostly for performance reasons, like latency, redundancy, and so on.  Sometimes they're there because someone can get a better deal, so the reasoning is financial, too.  Some parts of the Internet look like string art, as in the picture above.  Other places only maintain connections between routers on the same level, so they look more like ladders.
 
 Either way, the AAC network can be very complicated and incorporate lots of redundant loops where network packets can get trapped, trying to find a way out.  We'll discover [later](#heading--about-ip-packets) that TCP/IP has a dedicated way to prevent these infinite loops called the "Time To Live" field.  We'll also talk about how these issues have driven us to design [cloud network architectures](#heading--about-cloud-networks) (known as Clos architectures), which address both the financial and performance impacts of large networks in a much simpler way.
+
+<details id="heading--t1-lines"><summary>T1 lines and the early Internet</summary>
+
+In the very early days of long-haul networking, most of the repeaters were owned by the local telephone companies. T1 lines, as they were called, couldn't compete with today's fibre connections, but they did provide a speedy (at the time) 1.5Mbps connection.  For example, in the oil and gas industry of the early 1990s, many of the city offices had wall after wall of T1 lines wired directly into the building.
+
+T1 wasn't designed for network traffic, exactly,  The idea was to multiplex phone calls on one line via Time-Division Multiplexing.  TDM split up the call traffic into little digital packets that were sent on a rotating basis.  The first T1 lines, which showed up around 1962, could handle about 24 calls without the average telephone user noticing.  Telephone linemen generally could tell by the "clipped" nature of the call, as there is a distinctive flatness to the conversation over a digital TDM circuit.
+
+The T1 lines used ordinary, double-twisted-pair copper wiring, with repeaters at roughly one-mile intervals.  Those repeaters were part of the larger greyish-green "cans" (pedestals) that still dot the roadsides today in the US.  When WAN and MAN networking became a thing, the phone company just repurposed some of those pairs to carry data traffic.
+
+Some of the key elements of TCP/IP, like twisted-pair Ethernet cables, packet-based messaging, and multiplexing, are all just holdovers of the original T1 digital subscriber system -- repurposed for computer networking.
+</details>
 
 <a href="#heading--internet-infrastructure"><h3 id="heading--internet-infrastructure">About the infrastructure of the Internet</h3></a>
 
