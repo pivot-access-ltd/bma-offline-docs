@@ -880,7 +880,7 @@ Important: The new default will only apply to newly-commissioned machines.
 [/tab]
 [/tabs]
 
-[note type="caution" status="Important"]
+[note]
 The new default will only apply to newly-commissioned machines.
 [/note]
 
@@ -2342,6 +2342,6 @@ The following options are supported:
 
 The blank layout removes all storage configuration from all storage devices. It is useful when needing to apply a custom storage configuration.
 
-[note type="negative" status="Warning"]
+[note]
 Machines with the blank layout applied are not deployable; you must first configure storage manually.
 [/note]
