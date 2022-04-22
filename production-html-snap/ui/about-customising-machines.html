@@ -434,7 +434,7 @@ You cannot update these parameters from within MAAS on a deployed machine.</p>
 <p>MAAS supports storage configuration for CentOS and RHEL deployments. Support includes RAID, LVM, and custom partitioning with different file systems (ZFS and bcache excluded). This support requires a newer version of Curtin, <a href="https://launchpad.net/ubuntu/+source/curtin">available as a PPA</a>.</p>
 <p><a href="#heading--about-uefi-booting"><h4 id="heading--about-uefi-booting">About UEFI booting</h4></a></p>
 <p>Every layout type supports a machine booting with UEFI. In such a case, MAAS automatically creates an EFI boot partition (<code>/boot/efi</code>). Other than setting the machine to boot from UEFI, the user does not need to take any additional action.</p>
-<p>[note type=&rdquo;negative&rdquo; status=&rdquo;Warning&rdquo;]
+<p><strong>NOTE:</strong> 
 UEFI must be enabled or disabled for the lifespan of the machine. For example, do not enlist a machine with UEFI enabled, and then disable it before commissioning. It won&rsquo;t work!</p>
 <p>The EFI partition, if created, will be the first partition (<code>sda1</code>) and will have a FAT32 filesystem with a size of 512 MB.</p>
 <p><a href="#heading--about-block-devices"><h4 id="heading--about-block-devices">About block devices</h4></a></p>
