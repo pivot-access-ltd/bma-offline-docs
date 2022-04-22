@@ -43,7 +43,7 @@ These "sideways paths" are there mostly for performance reasons, like latency, r
 
 Either way, the AAC network can be very complicated and incorporate lots of redundant loops where network packets can get trapped, trying to find a way out.  We'll discover [later](#heading--about-ip-packets) that TCP/IP has a dedicated way to prevent these infinite loops called the "Time To Live" field.  We'll also talk about how these issues have driven us to design [cloud network architectures](#heading--about-cloud-networks) (known as Clos architectures), which address both the financial and performance impacts of large networks in a much simpler way.
 
-<details id="heading--t1-lines"><summary>T1 lines and the early Internet</summary>
+<details><summary>T1 lines and the early Internet</summary>
 
 In the very early days of long-haul networking, most of the repeaters were owned by the local telephone companies. T1 lines, as they were called, couldn't compete with today's fibre connections, but they did provide a speedy (at the time) 1.5Mbps connection.  For example, in the oil and gas industry of the early 1990s, many of the city offices had wall after wall of T1 lines wired directly into the building.
 
@@ -60,7 +60,7 @@ A very old meme explains that the Internet is survivable because every computer 
 
 - Internet Infrastructure - a hierarchy of computers used to transfer messages from one computer to another.
 
-High-level networks, known as Network Service Providers (NSPs), connect to at least three top level nodes called Network Access Points (NAPs).  An NAP is just a way for packets to jump from one NSP to another. NAPs are public access points, but there are also privately-owned access points (at the same level) known as Metropolitan Area Exchanges.  Many of the MAEs are the residue of the phone company's [early T1 lines](#heading--t1-lines), which was the initial backbone for the Internet.  These MAEs act just like a NAP for the purposes of this discussion.
+High-level networks, known as Network Service Providers (NSPs), connect to at least three top level nodes called Network Access Points (NAPs).  An NAP is just a way for packets to jump from one NSP to another. NAPs are public access points, but there are also privately-owned access points (at the same level) known as Metropolitan Area Exchanges.  Many of the MAEs are the residue of the phone company's early T1 lines, which was the initial backbone for the Internet.  These MAEs act just like a NAP for the purposes of this discussion.
 
 We can simplify the string-art picture above by resolving it into something like this:
 
