@@ -47,12 +47,12 @@ A VM host is simply a machine which can run virtual machines (VMs) by allocating
 
 VM hosts are particularly useful for Juju integration, allowing for dynamic allocation of VMs with custom interface constraints. Alternatively, if you would like to use MAAS to manage a collection of VMs, the robust web UI allows you to easily create and manage VMs, logically grouped by VM host. Six conspicuous features include:
 
--   Juju integration
--   At-a-glance visual tools for easy resource management
--   Set overcommit ratios for physical resources such as CPU and RAM
--   Assign VMs to resource pools to segregate your VMs into logical groupings
--   Track VM host storage pool usage and assign default storage pools
--   Create VMs on multiple networks, specified by space, subnet, VLAN, or IP address
+- Juju integration
+- At-a-glance visual tools for easy resource management
+- Set overcommit ratios for physical resources such as CPU and RAM
+- Assign VMs to resource pools to segregate your VMs into logical groupings
+- Track VM host storage pool usage and assign default storage pools
+- Create VMs on multiple networks, specified by space, subnet, VLAN, or IP address
 
 Simply put, a VM host is a machine which is designated to run virtual machines (VMs). A VM host divides its resources (CPU cores, RAM, storage) among the number of VMs you want to create, based on choices that you make when creating each VM. It is also possible to overcommit resources – that is, use more resources than the VM host actually has available – as long as you use the VMs carefully. Once MAAS has enlisted, commissioned, and allocated a newly-added machine, you can deploy it as a VM host.
 
@@ -109,13 +109,13 @@ While prior versions of MAAS support both ways of authentication (and automatica
 
 For these reasons, when adding a LXD host, MAAS 3.1 provides a way to generate a secret key and certificate pair to use specifically for that server, and show the certificate to the user, so that they can add it to the LXD server trust list.  The user experience changes to something like the following:
 
- - MAAS generates a secret key and certificate pair for use with a LXD server.
- - The user can see the certificate and is guided to add it to the LXD server trust list.
- - The user can easily complete the registration of the LXD server once the certificate is trusted in LXD.
- - All racks use the same key when talking to the LXD server. 
- - If a new rack controller is added, it can communicate with the LXD server out of the box.
- - If the trust password is used, it’s not stored in MAAS persistently.
- - It’s possible to get the certificate for a LXD server from a URL (e.g. for curl use).
+- MAAS generates a secret key and certificate pair for use with a LXD server.
+- The user can see the certificate and is guided to add it to the LXD server trust list.
+- The user can easily complete the registration of the LXD server once the certificate is trusted in LXD.
+- All racks use the same key when talking to the LXD server. 
+- If a new rack controller is added, it can communicate with the LXD server out of the box.
+- If the trust password is used, it’s not stored in MAAS persistently.
+- It’s possible to get the certificate for a LXD server from a URL (e.g. for curl use).
 
 #### About bringing your own certificates
 
@@ -164,14 +164,15 @@ Libvirt KVMs and LXD VMs are both based on the same underlying virtualisation te
 <a href="#heading--about-vms-and-numa"><h2 id="heading--about-vms-and-numa">About VMs and NUMA</h2></a>
 
 MAAS provides extensive optimisation tools for using NUMA with virtual machines. Earlier versions of MAAS guarantee that machines are assigned to a single NUMA node that contains all the machine's resources. As of 2.9, MAAS now allows you to see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory. You can quickly spot a VM running in multiple NUMA nodes, and optimise accordingly, with instant updates on pinning and allocations. You can also tell which VMs are currently running.
+
 In addition, you can get a bird's-eye view of network configuration:
 
-1.  You can see which VM NIC/bond is connected to which NUMA node.
-2.  You can tell when a NIC is connected to a different NUMA node.
-3.  You can tell if one of multiple NICs is not in the correct node.
-4.  You can confirm the subnet and space connecting to a VM.
-5.  You can confirm that a VM has the desired network properties, such as latency and throughput.
-6.  You can identify NICs that support SR-IOV and tell how many VFs are available.
+- You can see which VM NIC/bond is connected to which NUMA node.
+- You can tell when a NIC is connected to a different NUMA node.
+- You can tell if one of multiple NICs is not in the correct node.
+- You can confirm the subnet and space connecting to a VM.
+- You can confirm that a VM has the desired network properties, such as latency and throughput.
+- You can identify NICs that support SR-IOV and tell how many VFs are available.
 
 MAAS also shows hugepages information (if they are in use) and prevents overcommit when using them. Hugepages essentially allow a much larger memory cache associated with the core. This obviously reduces the number of times a core has to access memory, but because the core must swap entire hugepages, optimising usage of them can be complex. MAAS helps you create these optimisations by giving you a discrete view of hugepages associated with your VM, helping you decide whether you need to use them or not.
 
@@ -181,19 +182,19 @@ MAAS also shows hugepages information (if they are in use) and prevents overcomm
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 VM host management has been redesigned to support NUMA/SR-IOV configurations and hugepages from the API/CLI. Users can:
 
-1.  See resources per NUMA node.
-2.  See resources for VM hosts bearing NUMA nodes.
-3.  See the alignment between VM host interfaces and NUMA nodes.
+- See resources per NUMA node.
+- See resources for VM hosts bearing NUMA nodes.
+- See the alignment between VM host interfaces and NUMA nodes.
 
 Via the CLI, users can see more details about NUMA-bearing VM host resources and configure hugepages. Select the relevant "CLI" link in the top menu to access this information.
 [/tab]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 VM host management has been redesigned to support NUMA/SR-IOV configurations and hugepages from the API/CLI. Users can:
 
-1.  See resources per NUMA node.
-2.  See resources for VM hosts bearing NUMA nodes.
-3.  See the alignment between VM host interfaces and NUMA nodes.
-4.  Configure and use hugepages.
+- See resources per NUMA node.
+- See resources for VM hosts bearing NUMA nodes.
+- See the alignment between VM host interfaces and NUMA nodes.
+- Configure and use hugepages.
 
 [/tab]
 [/tabs]
