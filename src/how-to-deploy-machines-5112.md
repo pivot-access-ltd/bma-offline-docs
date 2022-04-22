@@ -508,7 +508,7 @@ MAAS keeps a history of all uploaded script versions, allowing you to easily rev
 maas $PROFILE node-script revert $SCRIPT_NAME to=$VERSION_ID
 ```
 
-[note type="negative" status="Warning"]
+[note]
 The history for later modifications will be lost when reverting to an earlier version of the script.
 [/note]
 
@@ -715,7 +715,7 @@ MAAS keeps a history of all uploaded script versions, allowing you to easily rev
 maas $PROFILE node-script revert $SCRIPT_NAME to=$VERSION_ID
 ```
 
-[note type="negative" status="Warning"]
+[note]
 The history for later modifications will be lost when reverting to an earlier version of the script.
 [/note]
 

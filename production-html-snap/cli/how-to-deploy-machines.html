@@ -786,7 +786,7 @@ Machine-readable output follows:
 <p>MAAS keeps a history of all uploaded script versions, allowing you to easily revert to a previous version, using the <code>id</code> of the desired version:</p>
 <pre><code class="language-nohighlight">maas $PROFILE node-script revert $SCRIPT_NAME to=$VERSION_ID
 </code></pre>
-<p>[note type=&rdquo;negative&rdquo; status=&rdquo;Warning&rdquo;]
+<p><strong>NOTE:</strong> 
 The history for later modifications will be lost when reverting to an earlier version of the script.</p>
 <p><a href="#heading--how-to-download-a-script"><h3 id="heading--how-to-download-a-script">How to download a script</h3></a></p>
 <p>To download a script, enter the following:</p>
@@ -914,7 +914,7 @@ The history for later modifications will be lost when reverting to an earlier ve
 <p>MAAS keeps a history of all uploaded script versions, allowing you to easily revert to a previous version using the <code>id</code> of the version you wish to revert to:</p>
 <pre><code class="language-bash">maas $PROFILE node-script revert $SCRIPT_NAME to=$VERSION_ID
 </code></pre>
-<p>[note type=&rdquo;negative&rdquo; status=&rdquo;Warning&rdquo;]
+<p><strong>NOTE:</strong> 
 The history for later modifications will be lost when reverting to an earlier version of the script.</p>
 <p>To download a script, enter the following:</p>
 <pre><code class="language-bash">maas $PROFILE node-script download $SCRIPT_NAME &gt; $LOCAL_FILENAME
