@@ -3,8 +3,8 @@ The MAAS API uses [OAuth](http://en.wikipedia.org/wiki/OAuth) as its authenticat
 
 Note that some API endpoints support unauthenticated requests (i.e. anonymous access). See the [API documentation](https://maas.io/docs/api) for details. This article will help you learn:
 
-* [How to perform authenticated requests in Python](#heading--python)
-* [How to perform authenticated requests in Ruby](#heading--ruby)
+- [How to perform authenticated requests in Python](#heading--python)
+- [How to perform authenticated requests in Ruby](#heading--ruby)
 
 Here are two examples on how to perform an authenticated GET request to retrieve the list of nodes. The &lt;consumer_key&gt;, &lt;consumer_token&gt;, &lt;secret&gt; tokens are the three elements that compose the API key (API key = '&lt;consumer_key&gt;:&lt;consumer_token&gt;:&lt;secret&gt;').
 
