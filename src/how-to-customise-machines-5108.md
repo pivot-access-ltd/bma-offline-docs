@@ -91,7 +91,7 @@ Important: The new default will only apply to newly-commissioned machines.
 [/tab]
 [/tabs]
 
-[note type="caution" status="Important"]
+[note]
 The new default will only apply to newly-commissioned machines.
 [/note]
 
