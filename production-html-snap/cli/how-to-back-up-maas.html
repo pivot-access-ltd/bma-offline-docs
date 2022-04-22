@@ -398,7 +398,7 @@
 <p><a href="#heading--about-maas-backup"><h2 id="heading--about-maas-backup">About MAAS backup</h2></a></p>
 <p>MAAS currently does not provide specific tools to back up and restore a working MAAS configuration. MAAS servers are part of your data centre, just like other Linux-based servers, so your current backup and disaster recovery solution should be sufficient to back up your MAAS environment.  Even so, you should know which files and actions are critical &ndash; to ensure that you get a clean backup, and further ensure that you can restore it cleanly.</p>
 <p>This article will tell you:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--configuration-files">How to choose configuration files for backup</a></li>
 <li><a href="#heading--postgresql-export">How to prepare PostgreSQL data for backup</a></li>
 <li><a href="#heading--stop-critical-services">How to stop specific services before backing up</a></li>
@@ -408,20 +408,20 @@
 </ul>
 <p><a href="#heading--configuration-files"><h2 id="heading--configuration-files">How to choose configuration files for backup</h2></a></p>
 <p>The following three MAAS components need to be backed-up and restored, on each region and rack controller, to recreate a working environment:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>The PostgreSQL database</li>
 <li>The configuration files in <code>/snap/maas/current/etc/maas</code></li>
 <li>The configuration files in <code>/var/snap/maas/common/maas/</code></li>
-</ol>
+</ul>
 <p><code>/var/snap/maas/common/maas/boot-resources</code> can safely be excluded as this contains images easily re-downloaded within MAAS.</p>
 <p>Other configuration files, such as those used by your network configuration (<code>/etc/network/interfaces</code>, for example) will need to be backed-up and restored according to your specific deployment requirements.</p>
 <p><a href="#heading--postgresql-export"><h2 id="heading--postgresql-export">How to prepare PostgreSQL data for backup</h2></a></p>
-<p>Prior to stopping services (as described in the next section), export your PostgreSQL database with a database dump.  This process is described in the following procedure, which involves three assumptions: </p>
-<ol>
+<p>Prior to stopping services (as described in the next section), export your PostgreSQL database with a database dump.  This process is described in the following procedure, which involves some assumptions: </p>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>you have installed region and rack controllers on the same machine. </li>
 <li>you have installed MAAS on Ubuntu 18.04 LTS (Bionic).</li>
 <li>you are restoring software an identical hardware and network configuration.</li>
-</ol>
+</ul>
 <p>To backup your PostgreSQL database to a file called <code>dump.sql</code> in your home directories, enter the following:</p>
 <pre><code class="language-bash">sudo -u postgres pg_dumpall -c &gt; ~/dump.sql
 </code></pre>
@@ -430,13 +430,13 @@
 </code></pre>
 <p>Running sessions, such as pg_dumpall, will appear in the <code>application_name</code> column of the output alongside <code>psql</code> running the above <code>pg_stat_activity</code> query. Excepting psql, if <code>application_name</code> is empty, you can safely stop the database service.</p>
 <p><a href="#heading--stop-critical-services"><h2 id="heading--stop-critical-services">How to stop specific services before backing up</h2></a></p>
-<p>After you have dumped your PostgreSQL database, and verified that the dump has finished, you should stop the following four services with the <code>sudo systemctl stop &lt;service&gt;</code> command:</p>
-<ol>
+<p>After you have dumped your PostgreSQL database, and verified that the dump has finished, you should stop the following services with the <code>sudo systemctl stop &lt;service&gt;</code> command:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>postgresql.service</li>
 <li>maas-dhcpd.service</li>
 <li>maas-rackd.service</li>
 <li>maas-regiond.service</li>
-</ol>
+</ul>
 <p>Stopping these services will avoid conflicting updates during the remaining backup steps.</p>
 <p><a href="#heading--archive-configuration-files"><h2 id="heading--archive-configuration-files">How to archive files to make the backup more efficient</h2></a></p>
 <p>Archive the database and the required configuration files with a command similar to the following:</p>
@@ -445,12 +445,12 @@
 <p>Make sure you move the resulting <code>backup.tgz</code> to some external storage you can access when restoring the system.  Also, make sure to restart the services you stopped prior to completing the backup.</p>
 <p>We&rsquo;ve now backed up all the components necessary to recreate a MAAS deployment. Next, we&rsquo;ll discuss how to restore this configuration.</p>
 <p><a href="#heading--restore-files"><h2 id="heading--restore-files">How to restore the system when needed</h2></a></p>
-<p>Start with a freshly-updated installation of Ubuntu on identical hardware. Reinstall MAAS via the standard procedure (<code>sudo apt install maas</code>), then stop the following three services (PostgreSQL needs to keep running):</p>
-<ol>
+<p>Start with a freshly-updated installation of Ubuntu on identical hardware. Reinstall MAAS via the standard procedure (<code>sudo apt install maas</code>), then stop the following services (PostgreSQL needs to keep running):</p>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>maas-dhcpd.service</li>
 <li>maas-rackd.service</li>
 <li>maas-regiond.service</li>
-</ol>
+</ul>
 <p>Copy the backup file to the new machine and untar its contents (<code>sudo tar xvzpf backup.tgz</code>).</p>
 <p>To restore the state of the database, enter the following from the backup directory:</p>
 <pre><code class="language-bash">sudo -u postgres psql -f dump.sql postgres

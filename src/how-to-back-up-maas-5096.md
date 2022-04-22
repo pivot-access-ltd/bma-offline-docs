@@ -18,44 +18,44 @@ The following three MAAS components need to be backed-up and restored, on each r
 
 [tabs]
 [tab version="v3.2 Snap"]
-1.  The PostgreSQL database
-2.  The configuration files in `/snap/maas/current/etc/maas`
-3.  The configuration files in `/var/snap/maas/common/maas/`
+- The PostgreSQL database
+- The configuration files in `/snap/maas/current/etc/maas`
+- The configuration files in `/var/snap/maas/common/maas/`
 
 `/var/snap/maas/common/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
 [/tab]
 [tab version="v3.2 Packages"]
-1.  The PostgreSQL database
-2.  The configuration files in `/etc/maas`
-3.  The configuration files in `/var/lib/maas`
+- The PostgreSQL database
+- The configuration files in `/etc/maas`
+- The configuration files in `/var/lib/maas`
 
 `/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
 [/tab]
 [tab version="v3.1 Snap"]
-1.  The PostgreSQL database
-2.  The configuration files in `/snap/maas/current/etc/maas`
-3.  The configuration files in `/var/snap/maas/common/maas/`
+- The PostgreSQL database
+- The configuration files in `/snap/maas/current/etc/maas`
+- The configuration files in `/var/snap/maas/common/maas/`
 
 `/var/snap/maas/common/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
 [/tab]
 [tab version="v3.1 Packages"]
-1.  The PostgreSQL database
-2.  The configuration files in `/etc/maas`
-3.  The configuration files in `/var/lib/maas`
+- The PostgreSQL database
+- The configuration files in `/etc/maas`
+- The configuration files in `/var/lib/maas`
 
 `/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
 [/tab]
 [tab version="v3.0 Snap"]
-1.  The PostgreSQL database
-2.  The configuration files in `/snap/maas/current/etc/maas`
-3.  The configuration files in `/var/snap/maas/common/maas/`
+- The PostgreSQL database
+- The configuration files in `/snap/maas/current/etc/maas`
+- The configuration files in `/var/snap/maas/common/maas/`
 
 `/var/snap/maas/common/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
 [/tab]
 [tab version="v3.0 Packages"]
-1.  The PostgreSQL database
-2.  The configuration files in `/etc/maas`
-3.  The configuration files in `/var/lib/maas`
+- The PostgreSQL database
+- The configuration files in `/etc/maas`
+- The configuration files in `/var/lib/maas`
 
 `/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
 [/tab]
@@ -67,9 +67,9 @@ The following three MAAS components need to be backed-up and restored, on each r
 `/var/snap/maas/common/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
 [/tab]
 [tab version="v2.9 Packages"]
-1.  The PostgreSQL database
-2.  The configuration files in `/etc/maas`
-3.  The configuration files in `/var/lib/maas`
+- The PostgreSQL database
+- The configuration files in `/etc/maas`
+- The configuration files in `/var/lib/maas`
 
 `/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
 [/tab]
@@ -79,11 +79,11 @@ Other configuration files, such as those used by your network configuration (`/e
 
 <a href="#heading--postgresql-export"><h2 id="heading--postgresql-export">How to prepare PostgreSQL data for backup</h2></a>
 
-Prior to stopping services (as described in the next section), export your PostgreSQL database with a database dump.  This process is described in the following procedure, which involves three assumptions: 
+Prior to stopping services (as described in the next section), export your PostgreSQL database with a database dump.  This process is described in the following procedure, which involves some assumptions: 
 
-1. you have installed region and rack controllers on the same machine. 
-2. you have installed MAAS on Ubuntu 18.04 LTS (Bionic).
-3. you are restoring software an identical hardware and network configuration.
+- you have installed region and rack controllers on the same machine. 
+- you have installed MAAS on Ubuntu 18.04 LTS (Bionic).
+- you are restoring software an identical hardware and network configuration.
 
 To backup your PostgreSQL database to a file called `dump.sql` in your home directories, enter the following:
 
@@ -101,12 +101,12 @@ Running sessions, such as pg_dumpall, will appear in the `application_name` colu
 
 <a href="#heading--stop-critical-services"><h2 id="heading--stop-critical-services">How to stop specific services before backing up</h2></a>
 
-After you have dumped your PostgreSQL database, and verified that the dump has finished, you should stop the following four services with the `sudo systemctl stop <service>` command:
+After you have dumped your PostgreSQL database, and verified that the dump has finished, you should stop the following services with the `sudo systemctl stop <service>` command:
 
-1.   postgresql.service
-2.   maas-dhcpd.service
-3.   maas-rackd.service
-4.   maas-regiond.service
+- postgresql.service
+- maas-dhcpd.service
+- maas-rackd.service
+- maas-regiond.service
 
 Stopping these services will avoid conflicting updates during the remaining backup steps.
 
@@ -163,11 +163,11 @@ We've now backed up all the components necessary to recreate a MAAS deployment. 
 
 <a href="#heading--restore-files"><h2 id="heading--restore-files">How to restore the system when needed</h2></a>
 
-Start with a freshly-updated installation of Ubuntu on identical hardware. Reinstall MAAS via the standard procedure (`sudo apt install maas`), then stop the following three services (PostgreSQL needs to keep running):
+Start with a freshly-updated installation of Ubuntu on identical hardware. Reinstall MAAS via the standard procedure (`sudo apt install maas`), then stop the following services (PostgreSQL needs to keep running):
 
-1.   maas-dhcpd.service
-2.   maas-rackd.service
-3.   maas-regiond.service
+- maas-dhcpd.service
+- maas-rackd.service
+- maas-regiond.service
 
 Copy the backup file to the new machine and untar its contents (`sudo tar xvzpf backup.tgz`).
 
