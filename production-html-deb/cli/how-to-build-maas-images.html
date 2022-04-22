@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -398,17 +398,16 @@
 <p>MAAS Image Builder is an alternative to <a href="https://www.packer.io/">Packer</a> for creating MAAS images.</p>
 <p><strong>NOTE:</strong> 
 In order to use MAAS Image Builder, you must purchase <a href="https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool">Ubuntu Advantage for Infrastructure</a>.</p>
-<p>With the MAAS Image Builder, you can do five key operations:</p>
-<ol>
-<li><a href="#imib">install MAAS Image Builder</a> via a private Canonical PPA (which you can request)</li>
-<li><a href="#bci">create custom CentOS images</a></li>
-<li><a href="#bri">create custom RHEL images</a></li>
-<li><a href="#bwi">create Windows images</a></li>
-<li><a href="#doci">create other kinds of custom images</a></li>
-</ol>
+<p>This article will help you learn:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--install-mib">How to install MAAS Image Builder</a> via a private Canonical PPA (which you can request)</li>
+<li><a href="#heading--custom-centos-images">How to create custom CentOS images</a></li>
+<li><a href="#heading--custom-rhel-images">How to create custom RHEL images</a></li>
+<li><a href="#heading--custom-windows-images">How to create Windows images</a></li>
+<li><a href="heading--other-custom-images">How to create other kinds of custom images</a></li>
+</ul>
 <p>You can customise most images as much or as little as you wish, then use them to commission machines with MAAS. </p>
-<h2 id="heading--install-mib">Install MAAS Image Builder</h2>
-<p></a></p>
+<p><a href="#heading--install-mib"><h2 id="heading--install-mib">How to install MAAS Image Builder</h2></a></p>
 <p>To get MAAS Image Builder, you must be subscribed to a private PPA provided by Canonical Support to those customers who have purchased <a href="https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool">Ubuntu Advantage for Infrastructure</a>.  Note that the steps below will fail if you have not purchased Ubuntu Advantage and been subscribed to the private PPA by your Canonical support rep.</p>
 <p>Once subscribed, you need to obtain your credentials at this external link:</p>
 <p>https://launchpad.net/~/+archivesubscriptions</p>
@@ -420,17 +419,16 @@ In order to use MAAS Image Builder, you must purchase <a href="https://support.c
 <pre><code>$ sudo apt-get install maas-image-builder
 </code></pre>
 <p>All done? Great!  Now you can build and customise images for MAAS machines, as shown in the sections below.</p>
-<h2 id="heading--custom-centos-images">Create custom CentOS images</h2>
-<p></a></p>
+<p><a href="#heading--custom-centos-images"><h2 id="heading--custom-centos-images">How to create custom CentOS images</h2></a></p>
 <p>MAAS already provides the latest available CentOS 6, CentOS 7, and CentOS 8 for automatic download. If you need something else, though, MAAS Image Builder supports the ability to create various CentOS images.</p>
 <h3 id="heading--centos-nw-rqmts">Network Requirements</h3>
 
-<p>Access to the Internet is required, since you will need to start with one of these three sites:</p>
-<ol>
+<p>Access to the Internet is required, since you will need to start with one of these sites:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>http://mirror.centos.org - OS, updates, and extra repositories</li>
 <li>https://download.fedoraproject.org - EPEL</li>
 <li>https://copr-be.cloud.fedoraproject.org - Canonical maintained cloud-init repository</li>
-</ol>
+</ul>
 <h3 id="heading--images-behind-proxy">Creating images behind a proxy</h3>
 
 <p>MAAS Image Builder can create CentOS images behind a proxy &ndash; just set the ‘http_proxy’ environment variable to <em>your</em> particular proxy. Once deployed, <code>yum</code> will use this MAAS-configured proxy.</p>
@@ -452,17 +450,16 @@ $ sudo maas-image-builder -o centos7-amd64-root-tgz --arch amd64 centos --editio
 <pre><code>maas admin boot-resources create name=centos/centos6-custom architecture=amd64/generic content@=./build-output/centos-amd64-root-tgz
 </code></pre>
 <p>You can use the MAAS WebUI to check that your custom CentOS image is valid and selectable for deployment.</p>
-<h2 id="heading--custom-rhel-images">Building RHEL images</h2>
-<p></a></p>
+<p><a href="#heading--custom-rhel-images"><h2 id="heading--custom-rhel-images">How to create custom RHEL images</h2></a></p>
 <p>Currently, MAAS <em>only</em> supports RHEL as a custom image. In future versions of MAAS, RHEL will be natively supported.</p>
 <h3 id="heading--rhel-requirements">Some Requirements</h3>
 
-<p>In order to create RHEL images, you will need access to these three sites:</p>
-<ol>
+<p>In order to create RHEL images, you will need access to these sites:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>A RHEL DVD ISO - Contains all RHEL archives which are not available without a license</li>
 <li>https://download.fedoraproject.org - Access to the EPEL repository to install required deps</li>
 <li>https://copr-be.cloud.fedoraproject.org - Access to the Canonical maintained cloud-init copr repository</li>
-</ol>
+</ul>
 <h3 id="heading--rhel-behind-proxy">Creating images behind a proxy</h3>
 
 <p>MAAS image builder supports creating RHEL images behind a proxy. To use a proxy when building a RHEL image, just set the ‘http_proxy’ environment variable to <em>your</em> local proxy. Once deployed, <code>yum</code> will use the MAAS-configured proxy.</p>
@@ -476,21 +473,20 @@ $ sudo maas-image-builder -o centos7-amd64-root-tgz --arch amd64 centos --editio
 <p>The custom RHEL image can be uploaded to MAAS, but note that the name <strong>must</strong> start with ‘rhel’ and <strong>must</strong> be expressed as a single line, like this:</p>
 <pre><code>maas admin boot-resources create name=rhel/7 title="RedHat Enterprise Linux 7" architecture=amd64/generic content@=rhel7-amd64-root-tgz
 </code></pre>
-<h2 id="heading--custom-windows-images">Building Windows Images</h2>
-<p></a></p>
+<p><a href="#heading--custom-windows-images"><h2 id="heading--custom-windows-images">How to create Windows images</h2></a></p>
 <p>Since Windows is a proprietary operating system, MAAS can&rsquo;t download these images. You need to manually generate images to use with MAAS.  On the upside, the end result will be much simpler, since there are CLI and WebUI tools to upload a Windows ISO &ndash; which <em>helps</em> automate the process.</p>
 <p><b>Hyper-V 2012 R2</b>
 In this example, Windows Hyper-V 2012 R2 is used, but rest assured that multiple versions are supported. Download the Hyper-V 2012 R2 ISO from Microsoft, so it can be used in the image generation process.  You can obtain the download at:</p>
 <p>http://technet.microsoft.com/en-US/evalcenter/dn205299.aspx</p>
-<p>There are six other supported versions (for &ndash;windows-edition):</p>
-<ol>
+<p>There are several other supported versions (for &ndash;windows-edition):</p>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>win2012</li>
 <li>win2012r2</li>
 <li>win2012hv</li>
 <li>win2012hvr2</li>
 <li>win2016</li>
 <li>win2016hv</li>
-</ol>
+</ul>
 <h3 id="heading--mib-windows">Image Builder</h3>
 
 <p>MAAS Image builder can automate the process of generating images for MAAS and <code>curtin</code>.  In this instance,  though, you need Windows drivers for your specific hardware.  You can obtain these windows drivers with the following command:</p>
@@ -517,8 +513,7 @@ architecture=amd64/generic filetype=ddtgz \
 content@=./build-output/windows-win2012hvr2-amd64-root-dd
 </code></pre>
 <p>Now, using the MAAS WebUI, a node can be selected to use Windows Hyper-V 2012 R2. This selection gets reset when a node is stopped, so make sure to set it <em>before</em> starting nodes. You can also set the default operating system (and release) in the settings menu, which removes the need to set it per-node.</p>
-<h2 id="heading--other-custom-images">Dealing with other custom images</h2>
-<p></a></p>
+<p><a href="#heading--other-custom-images"><h2 id="heading--other-custom-images">How to create other kinds of custom images</h2></a></p>
 <p>To install other custom images, use the following command sequence:</p>
 <pre><code>maas &lt;user&gt; boot-resources create name=&lt;custom-image-codename&gt; title="Ubuntu Custom Image" \
 architecture=amd64/generic content@=/location/of/custom/image/ubuntu-custom-root-tgz

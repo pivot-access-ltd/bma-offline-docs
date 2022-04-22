@@ -5,17 +5,17 @@ MAAS Image Builder is an alternative to [Packer](https://www.packer.io/) for cre
 In order to use MAAS Image Builder, you must purchase [Ubuntu Advantage for Infrastructure](https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool).
 [/note]
 
-With the MAAS Image Builder, you can do five key operations:
+This article will help you learn:
 
-1. <a href="#imib">install MAAS Image Builder</a> via a private Canonical PPA (which you can request)
-2. <a href="#bci">create custom CentOS images</a>
-3. <a href="#bri">create custom RHEL images</a>
-4. <a href="#bwi">create Windows images</a>
-5. <a href="#doci">create other kinds of custom images</a>
+- [How to install MAAS Image Builder](#heading--install-mib) via a private Canonical PPA (which you can request)
+- [How to create custom CentOS images](#heading--custom-centos-images)
+- [How to create custom RHEL images](#heading--custom-rhel-images)
+- [How to create Windows images](#heading--custom-windows-images)
+- [How to create other kinds of custom images](heading--other-custom-images)
 
 You can customise most images as much or as little as you wish, then use them to commission machines with MAAS. 
 
-<h2 id="heading--install-mib">Install MAAS Image Builder</h2></a>
+<a href="#heading--install-mib"><h2 id="heading--install-mib">How to install MAAS Image Builder</h2></a>
 
 To get MAAS Image Builder, you must be subscribed to a private PPA provided by Canonical Support to those customers who have purchased [Ubuntu Advantage for Infrastructure](https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool).  Note that the steps below will fail if you have not purchased Ubuntu Advantage and been subscribed to the private PPA by your Canonical support rep.
 
@@ -34,17 +34,17 @@ Once you have added the private PPA, you can install the Image Builder like this
 
 All done? Great!  Now you can build and customise images for MAAS machines, as shown in the sections below.
 
-<h2 id="heading--custom-centos-images">Create custom CentOS images</h2></a>
+<a href="#heading--custom-centos-images"><h2 id="heading--custom-centos-images">How to create custom CentOS images</h2></a>
 
 MAAS already provides the latest available CentOS 6, CentOS 7, and CentOS 8 for automatic download. If you need something else, though, MAAS Image Builder supports the ability to create various CentOS images.
 
 <h3 id="heading--centos-nw-rqmts">Network Requirements</h3>
 
-Access to the Internet is required, since you will need to start with one of these three sites:
+Access to the Internet is required, since you will need to start with one of these sites:
 
-1. http://mirror.centos.org - OS, updates, and extra repositories
-2. https://download.fedoraproject.org - EPEL
-3. https://copr-be.cloud.fedoraproject.org - Canonical maintained cloud-init repository
+- http://mirror.centos.org - OS, updates, and extra repositories
+- https://download.fedoraproject.org - EPEL
+- https://copr-be.cloud.fedoraproject.org - Canonical maintained cloud-init repository
 
 <h3 id="heading--images-behind-proxy">Creating images behind a proxy</h3>
 
@@ -72,17 +72,17 @@ Custom CentOS images can be uploaded to MAAS as shown in the command below.  _Do
 
 You can use the MAAS WebUI to check that your custom CentOS image is valid and selectable for deployment.
 
-<h2 id="heading--custom-rhel-images">Building RHEL images</h2></a>
+<a href="#heading--custom-rhel-images"><h2 id="heading--custom-rhel-images">How to create custom RHEL images</h2></a>
 
 Currently, MAAS _only_ supports RHEL as a custom image. In future versions of MAAS, RHEL will be natively supported.
 
 <h3 id="heading--rhel-requirements">Some Requirements</h3>
 
-In order to create RHEL images, you will need access to these three sites:
+In order to create RHEL images, you will need access to these sites:
 
-1. A RHEL DVD ISO - Contains all RHEL archives which are not available without a license
-2. https://download.fedoraproject.org - Access to the EPEL repository to install required deps
-3. https://copr-be.cloud.fedoraproject.org - Access to the Canonical maintained cloud-init copr repository
+- A RHEL DVD ISO - Contains all RHEL archives which are not available without a license
+- https://download.fedoraproject.org - Access to the EPEL repository to install required deps
+- https://copr-be.cloud.fedoraproject.org - Access to the Canonical maintained cloud-init copr repository
 
 <h3 id="heading--rhel-behind-proxy">Creating images behind a proxy</h3>
 
@@ -100,7 +100,7 @@ The custom RHEL image can be uploaded to MAAS, but note that the name **must** s
 
     maas admin boot-resources create name=rhel/7 title="RedHat Enterprise Linux 7" architecture=amd64/generic content@=rhel7-amd64-root-tgz
 
-<h2 id="heading--custom-windows-images">Building Windows Images</h2></a>
+<a href="#heading--custom-windows-images"><h2 id="heading--custom-windows-images">How to create Windows images</h2></a>
 
 Since Windows is a proprietary operating system, MAAS can't download these images. You need to manually generate images to use with MAAS.  On the upside, the end result will be much simpler, since there are CLI and WebUI tools to upload a Windows ISO -- which _helps_ automate the process.
 
@@ -109,14 +109,14 @@ In this example, Windows Hyper-V 2012 R2 is used, but rest assured that multiple
 
 http://technet.microsoft.com/en-US/evalcenter/dn205299.aspx
 
-There are six other supported versions (for --windows-edition):
+There are several other supported versions (for --windows-edition):
 
-1. win2012
-2. win2012r2
-3. win2012hv
-4. win2012hvr2
-5. win2016
-6. win2016hv
+- win2012
+- win2012r2
+- win2012hv
+- win2012hvr2
+- win2016
+- win2016hv
 
 <h3 id="heading--mib-windows">Image Builder</h3>
 
@@ -151,7 +151,7 @@ The generated images need to be placed into the correct directories so MAAS can 
 
 Now, using the MAAS WebUI, a node can be selected to use Windows Hyper-V 2012 R2. This selection gets reset when a node is stopped, so make sure to set it _before_ starting nodes. You can also set the default operating system (and release) in the settings menu, which removes the need to set it per-node.
 
-<h2 id="heading--other-custom-images">Dealing with other custom images</h2></a>
+<a href="#heading--other-custom-images"><h2 id="heading--other-custom-images">How to create other kinds of custom images</h2></a>
 
 To install other custom images, use the following command sequence:
 
