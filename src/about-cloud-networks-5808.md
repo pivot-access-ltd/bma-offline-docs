@@ -1,8 +1,8 @@
 <!-- "About cloud networks" -->
 Cloud network architectures deviate significantly from the architecture of the Internet infrastructure.  These deviations are driven mostly by economics, simplicity, and scalability.  This section will help you learn:
 
- - [About the Clos architecture](#heading--clos-architecture)
- - [About STP](#heading--about-stp)
+- [About the Clos architecture](#heading--clos-architecture)
+- [About STP](#heading--about-stp)
 
 <a href="#heading--clos-architecture"><h2 id="heading--clos-architecture">About the Clos architecture</h2></a>
 
@@ -24,17 +24,17 @@ All the switches in the diagram can be the same unit of hardware, if desired.  T
 
 Several inherent characteristics make a Clos ("fractal") architecture more suitable for MAAS networks:
 
- - Every leaf connects to every spine, or at the very least, every leaf connects to many spines.  By creating many paths through the network, this architecture increases both bandwidth and capacity, with the primary cost being the cabling.
+- Every leaf connects to every spine, or at the very least, every leaf connects to many spines.  By creating many paths through the network, this architecture increases both bandwidth and capacity, with the primary cost being the cabling.
 
- - The spines only connect leaves, so all functionality is pushed to the racks (some would say "the edges of the network").
+- The spines only connect leaves, so all functionality is pushed to the racks (some would say "the edges of the network").
 
- - Networks can be easily scaled with simple, fixed-form-factor switches.
+- Networks can be easily scaled with simple, fixed-form-factor switches.
 
- - The network does not use bridging via the [Spanning Tree Protocol](https://en.wikipedia.org/wiki/Spanning_Tree_Protocol) to interconnect the switches, in this arrangement. Instead, [Equal-Cost Multipath routing](https://en.wikipedia.org/wiki/Equal-cost_multi-path_routing) is used.
+- The network does not use bridging via the [Spanning Tree Protocol](https://en.wikipedia.org/wiki/Spanning_Tree_Protocol) to interconnect the switches, in this arrangement. Instead, [Equal-Cost Multipath routing](https://en.wikipedia.org/wiki/Equal-cost_multi-path_routing) is used.
 
- - The network tends to be nonblocking because the oversubscription ratio tends toward 1:1, meaning that the bandwidth between the TOR leaf switches and the servers can easily be adjusted to be roughly equal to the bandwidth between the leaf switch and every other spine switch.  It depends on how interconnect link speeds are defined, but with homogeneous hardware the relative settings and calculations are much simpler and more constant.
+- The network tends to be nonblocking because the oversubscription ratio tends toward 1:1, meaning that the bandwidth between the TOR leaf switches and the servers can easily be adjusted to be roughly equal to the bandwidth between the leaf switch and every other spine switch.  It depends on how interconnect link speeds are defined, but with homogeneous hardware the relative settings and calculations are much simpler and more constant.
 
- - Networks have a small blast radius, meaning that the loss of a single link does not have a significant effect on the performance of the overall network.  For example, if every leaf switch is connected to each of five spine switches, the loss of one link (or one spine switch) would probably not noticeably degrade network performance.
+- Networks have a small blast radius, meaning that the loss of a single link does not have a significant effect on the performance of the overall network.  For example, if every leaf switch is connected to each of five spine switches, the loss of one link (or one spine switch) would probably not noticeably degrade network performance.
 
 <a href="#heading--about-stp"><h2 id="heading--about-stp">About STP</h2></a>
 
