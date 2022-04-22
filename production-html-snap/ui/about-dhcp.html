@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -396,7 +396,7 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>About DHCP</h1><!-- "About DHCP" -->
 <p>The Dynamic Host Control Protocol or DHCP is a key part of how MAAS is able to manage bare-metal servers.  Many issues with MAAS revolve around misunderstanding &ndash; or unintentional misuse &ndash; of DHCP, so it&rsquo;s worth it to take an in-depth look.  This section will help you learn:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--about-dora">About DORA</a></li>
 <li><a href="#heading--about-dhcp-traffic">About DHCP traffic</a></li>
 <li><a href="#heading--about-dhcp-standard-message-types">About DHCP standard message types</a></li>
@@ -453,20 +453,20 @@ DNS=&lt;DNS server1 IP, DNS server2 IP&gt;, IP Lease Time=&lt;time&gt;s,
 DHCP Server Identifier=&lt;DHCP server IP address&gt;
 </code></pre>
 <p>A couple of clarifications can come in handy here:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>The DHCP server provides all the needed configuration parameters in both the OFFER and the ACK messages. Nothing is left out: the client receives an IP address, a subnet mask, a router location, the IPs of both DNS servers, the lease time limit, and the identity of the DHCP server. Nothing else is necessary for the requesting client to begin operating independently on the network.</p>
 </li>
 <li>
 <p>The requesting client does not start using the offered IP address until it has received the ACK message. Note that in the DHCP Request, above, the SIP (Source IP) is still 0.0.0.0, even though the client knows the offered IP (it sends it back in the request to confirm).</p>
 </li>
-</ol>
+</ul>
 <p>With that very basic view of DHCP, we can now talk about how multiple DHCP servers and multiple requesting clients can keep things straight.</p>
 <p><a href="#heading--about-dhcp-standard-message-types"><h2 id="heading--about-dhcp-standard-message-types">About DHCP standard message types</h2></a></p>
 <p>DHCP is, technically, a network management protocol. In other words, it’s part of a collection of hardware and software tools that help to manage network traffic. DHCP is designed to automatically assign IP addresses and other communication parameters, such as default gateway, domain name, name server IPs, or time server IPs to clients. </p>
 <p>There are (at least) two participants in a DHCP transaction: a server and a client, but the client has to meet some requirements to participate. Specifically, the client has to implement an instance of the DHCP protocol stack; without that, it has no idea how to formulate Discovery and Request packets, nor can it recognise Offers or Acknowledgements (or NAKs, for that matter).</p>
 <p>For what it’s worth, the “DHCP protocol stack” just means that a device can handle at least the following standard message types:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p><strong>DHCPDiscover</strong>: a broadcast message sent in the hopes of finding a DHCP server.  Note that clients that don’t get a DHCP response may be able to assign themselves an Automatic Private IPv4 address (APIPA), which should always be in the range 169.254.0.0/16. This is good to know, because you want to pretty much always leave that scope (that range of IP addresses) unused by anything else in your system.</p>
 </li>
@@ -495,7 +495,7 @@ DHCP Server Identifier=&lt;DHCP server IP address&gt;
 <p>Note that, shortly before a lease expires, most DHCP clients will renew the lease, often with a shortened form of the exchange (Request/Acknowledge) which does not require a full DORA exchange. Also, this renewal exchange takes place directly between the client and the DHCP server, rather than being broadcast across the entire network.</p>
 <p><a href="#heading--about-dhcp-address-allocation"><h2 id="heading--about-dhcp-address-allocation">About DHCP address allocation</h2></a></p>
 <p>There are (at least) three ways that a DHCP server can assign addresses to requesting clients:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p><strong>Manual or static allocation</strong> essentially means that the client receives a specifically-chosen IP address, or, at a minimum, keeps the first one that it’s assigned until the client decides to release it.</p>
 </li>
@@ -509,7 +509,7 @@ DHCP Server Identifier=&lt;DHCP server IP address&gt;
 <p>Regardless of the allocation method, the DHCP server’s scope — its range of IP addresses that it controls (and can assign) — is something that must be user-configured.</p>
 <p>DHCP is “connectionless,” meaning that basically everything takes place via UDP, usually by broadcast packets — that is, packets not overtly addressed to a specific device. The messages become targeted pretty quickly, using the payload to specify the IP address of the DHCP server and the MAC address of the requesting client, to avoid requiring every other device on the network to completely decode every DHCP message. Note that it is possible to target a UDP packet at a specific server by choosing a unicast message type.</p>
 <p>A DHCP client can request its previous IP address, if it had one, but whether it gets that address or not depends on four things: scope, allocation, topology, and authority. Specifically:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>The larger the DHCP server’s scope of addresses, the more likely it is that the requested address will be available again.</p>
 </li>
@@ -525,7 +525,7 @@ DHCP Server Identifier=&lt;DHCP server IP address&gt;
 </ul>
 <p><a href="#heading--about-multiple-dhcp-servers-diff-ips"><h2 id="heading--about-multiple-dhcp-servers-diff-ips">About multiple DHCP servers serving different IP ranges</h2></a></p>
 <p>It’s possible to have more than one DHCP server on the same network segment and still have everything work right, with no conflicts and no dropped packets or IP requests. There are three possible scopes for IP ranges to consider:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p><strong>Adjacent scopes</strong>: In this configuration, IP addresses are assigned from portions of the same subnet. For example, one server might control scope 192.168.14.2 – 192.168.14.187, and another server might manage scope 192.168.14.200 – 192.168.14.247. This is the most common (and most reliable) setup for multiple DHCP servers.</p>
 </li>
