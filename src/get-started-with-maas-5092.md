@@ -111,7 +111,9 @@ You'll next select the drop-down arrow next to the "on/off" menu bar option and 
 
 You now have a VM that you can add to MAAS.  If you want more than one, you can simply right-click on the one you've just created and select "Clone:"
 
-[Note] **Pro Tip**: Cloned VMs tend to use considerably less host disk space than newly-created ones. [/Note]
+[note]
+**Pro Tip**: Cloned VMs tend to use considerably less host disk space than newly-created ones.
+[/note]
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/2348efd7dbf17ba445e3c4e6b3926fdc8cfbc888.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/2348efd7dbf17ba445e3c4e6b3926fdc8cfbc888.jpeg"></a> 
 
