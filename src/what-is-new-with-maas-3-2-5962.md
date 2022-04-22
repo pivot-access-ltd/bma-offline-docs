@@ -1,3 +1,4 @@
+<!-- "MAAS 3.2 Beta release notes" -->
 We are happy to announce that MAAS 3.2 Beta 3 is now available.  This release provides a new feature -- hardware sync --  and more bug fixes.
 
 <a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.2 features and fixes</h3></a>
