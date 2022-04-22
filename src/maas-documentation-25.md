@@ -844,6 +844,8 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 |https://discourse.maas.io/t/-/5963|/docs/what-is-new-with-maas-3-0|
 |https://discourse.maas.io/t/-/5964|/docs/what-is-new-with-maas-3-1|
 |https://discourse.maas.io/t/-/5962|/docs/what-is-new-with-maas-3-2|
+|https://discourse.maas.io/t/-/5993|/docs/what-is-new-with-maas-2-7|
+|https://discourse.maas.io/t/-/5994|/docs/what-is-new-with-maas-2-8|
 [/details]
 
 ## Redirects
