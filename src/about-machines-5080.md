@@ -320,9 +320,9 @@ As a MAAS user, you will likely want to select whether storage, network, or both
 
 In order for cloning to succeed, a few restrictions must be met:
 
-1. The destination interface names must be the same source.
-2. The destination drive must be equal to or larger than the source drive.
-3. For static IPs, a new IP will be allocated to the interface on the destination machine
+- The destination interface names must be the same source.
+- The destination drive must be equal to or larger than the source drive.
+- For static IPs, a new IP will be allocated to the interface on the destination machine
 [/tab]
 [tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
 Cloning machines is available starting with MAAS version 3.1.
@@ -433,21 +433,21 @@ As of MAAS version 3.0, **40-maas-01-network-interfaces** is no longer used by M
 
 - **maas-kernel-cmdline:** this script is used to update the boot devices; it double-checks that the right boot interface is selected.
 
-Commissioning runs the same dozen or so scripts as enlistment, gathering all the same information, but with these seven caveats:
+Commissioning runs the same dozen or so scripts as enlistment, gathering all the same information, but with these caveats:
 
-1. Commissioning also runs user-supplied commissioning scripts, if present.  Be aware that these scripts run as root, so they can execute any system command.
+- Commissioning also runs user-supplied commissioning scripts, if present.  Be aware that these scripts run as root, so they can execute any system command.
 
-2. Commissioning runs test scripts which are not run during enlistment.
+- Commissioning runs test scripts which are not run during enlistment.
 
-3. Commissioning scripts can send BMC configuration data, and can be used to configure BMC data.
+- Commissioning scripts can send BMC configuration data, and can be used to configure BMC data.
 
-4. The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts; these scripts may write BMC power credentials to BMC_CONFIG_PATH in YAML format, where each key is a power parameter.  The first script to write BMC_CONFIG_PATH is the only script allowed to configure the BMC, allowing you to override MAAS' built-in BMC detection.  If the script returns 0, that value will be send to MAAS.
+- The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts; these scripts may write BMC power credentials to BMC_CONFIG_PATH in YAML format, where each key is a power parameter.  The first script to write BMC_CONFIG_PATH is the only script allowed to configure the BMC, allowing you to override MAAS' built-in BMC detection.  If the script returns 0, that value will be send to MAAS.
 
-5. All built-in commissioning scripts have been migrated into the database.
+- All built-in commissioning scripts have been migrated into the database.
 
-6. `maas-run-remote-scripts` is capable of enlisting machines, so enlistment `user-data` scripts have been removed.
+- `maas-run-remote-scripts` is capable of enlisting machines, so enlistment `user-data` scripts have been removed.
 
-7. The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.
+- The metadata endpoints `http://<MAAS>:5240/<latest or 2012-03-01>/` and `http://<MAAS>:5240/<latest or 2012-03-01>/meta-data/` are now available anonymously for use during enlistment.
 
 In both enlistment and commissioning, MAAS uses either the MAC address or the UUID to identify machines.  Currently, because some machine types encountered by MAAS do **not** use unique MAC addresses, we are trending toward using the UUID.
 
@@ -457,19 +457,19 @@ To commission a node, it must have a status of "New".
 
 You have the option of setting some parameters to change how commissioning runs:
 
-1. `enable_ssh`: Optional integer. Controls whether to enable SSH for the commissioning environment using the user's SSH key(s). '1' == True, '0' == False. Roughly equivalent to the **Allow SSH access and prevent machine powering off** in the web UI.
+- `enable_ssh`: Optional integer. Controls whether to enable SSH for the commissioning environment using the user's SSH key(s). '1' == True, '0' == False. Roughly equivalent to the **Allow SSH access and prevent machine powering off** in the web UI.
 
-2. `skip_bmc_config`: Optional integer.  Controls whether to skip re-configuration of the BMC for IPMI based machines. '1' == True, '0' == False.
+- `skip_bmc_config`: Optional integer.  Controls whether to skip re-configuration of the BMC for IPMI based machines. '1' == True, '0' == False.
 
-3. `skip_networking`: Optional integer.  Controls whether to skip re-configuring the networking on the machine after the commissioning has completed. '1' == True, '0' == False. Roughly equivalent to **Retain network configuration** in the web UI.
+- `skip_networking`: Optional integer.  Controls whether to skip re-configuring the networking on the machine after the commissioning has completed. '1' == True, '0' == False. Roughly equivalent to **Retain network configuration** in the web UI.
 
-4. `skip_storage`: Optional integer.  Controls whether to skip re-configuring the storage on the machine after the commissioning has completed. '1' == True, '0' == False.  Roughly equivalent to **Retain storage configuration** in the web UI.
+- `skip_storage`: Optional integer.  Controls whether to skip re-configuring the storage on the machine after the commissioning has completed. '1' == True, '0' == False.  Roughly equivalent to **Retain storage configuration** in the web UI.
 
-5. `commissioning_scripts`: Optional string.  A comma separated list of commissioning script names and tags to be run. By default all custom commissioning scripts are run. Built-in commissioning scripts always run. Selecting `update_firmware` or `configure_hba` will run firmware updates or configure HBA's on matching machines.
+- `commissioning_scripts`: Optional string.  A comma separated list of commissioning script names and tags to be run. By default all custom commissioning scripts are run. Built-in commissioning scripts always run. Selecting `update_firmware` or `configure_hba` will run firmware updates or configure HBA's on matching machines.
 
-6. `testing_scripts`: Optional string.  A comma separated list of testing script names and tags to be run. By default all tests tagged `commissioning` will be run. Set to `none` to disable running tests.
+- `testing_scripts`: Optional string.  A comma separated list of testing script names and tags to be run. By default all tests tagged `commissioning` will be run. Set to `none` to disable running tests.
 
-7. `parameters`: Optional string.  Scripts selected to run may define their own parameters. These parameters may be passed using the parameter name. Optionally a parameter may have the script name prepended to have that parameter only apply to that specific script.
+- `parameters`: Optional string.  Scripts selected to run may define their own parameters. These parameters may be passed using the parameter name. Optionally a parameter may have the script name prepended to have that parameter only apply to that specific script.
 
 <a href="#heading--commissioning-log"><h4 id="heading--commissioning-log">About machine commissioning logs</h4></a>
 
@@ -737,14 +737,14 @@ These example machines would typically be duplicated in several different geogra
 
 Looking back at the example above, you can see that there are several columns in the machine list, depending on your view:
 
-1.   **FQDN | MAC**: The fully qualified domain name or the MAC address of the machine.
-2.   **Power**: 'On', 'Off' or 'Error' to highlight an error state.
-3.   **Status**: The current status of the machine, such as 'Ready', 'Commissioning' or 'Failed testing'.
-4.   **Owner**: The MAAS account responsible for the machine.
-5.   **Cores**: The number of CPU cores detected on the machine.
-6.   **RAM**: The amount of RAM, in GiB, discovered on the machine.
-7.   **Disks**: The number of drives detected on the machine.
-8.   **Storage**: The amount of storage, in GB, identified on the machine.
+- **FQDN | MAC**: The fully qualified domain name or the MAC address of the machine.
+- **Power**: 'On', 'Off' or 'Error' to highlight an error state.
+- **Status**: The current status of the machine, such as 'Ready', 'Commissioning' or 'Failed testing'.
+- **Owner**: The MAAS account responsible for the machine.
+- **Cores**: The number of CPU cores detected on the machine.
+- **RAM**: The amount of RAM, in GiB, discovered on the machine.
+- **Disks**: The number of drives detected on the machine.
+- **Storage**: The amount of storage, in GB, identified on the machine.
 
 <a href="#heading--about-the-machine-summary"><h3 id="heading--about-the-machine-summary">About the machine summary</h3></a>
 
@@ -1018,7 +1018,7 @@ Same as Standard erase but only targets the first 1 MB and the last 1 MB of each
 
 <a href="#heading--about-erasure-order-of-preference"><h3 id="heading--about-erasure-order-of-preference">About erasure order of preference</h3></a>
 
-If all three options are checked when the machine is released the following order of preference is applied:
+If all three options are checked when the machine is released, the following order of preference is applied:
 
 1.  Use 'secure erase' if the disk supports it
-2.  If it does not then use 'quick erase'
+2.  If it does not, then use 'quick erase'
