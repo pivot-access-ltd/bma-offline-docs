@@ -3,9 +3,24 @@ Machines are the heart of MAAS. They are the backbone of your data centre applic
 
 In this article, you will learn:
 
+- [About the machine life-cycle](#heading--about-the-machine-life-cycle)
+- [About machine event logs](#heading--event-logs)
+- [About the machine list](#heading--about-the-machine-list)
+- [About machine storage info](#heading--machine-storage)
+- [About disk erasure](#heading--about-disk-erasure)
+
 <a href="#heading--about-the-machine-life-cycle"><h2 id="heading--about-the-machine-life-cycle">About the machine life-cycle</h2></a>
 
-One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, allocated, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
+One of the most important things to understand about machines is their life-cycle. In this subsection, you will learn:
+
+- [About machine states](#heading--about-machine-states)
+- [About enlistment](#heading--about-enlistment)
+- [About commissioning machines](#heading--about-commissioning-machines)
+- [About allocation and deployment](#heading--about-allocation-and-deployment)
+
+<a href="#heading--about-machine-states"><h3 id="heading--about-machine-states">About machine states</h3></a>
+
+Machines can be discovered or added, commissioned by MAAS, allocated, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
 
 All of these states and actions represent the possible life-cycle of a machine.  This life-cycle isn't strict or linear -- it depends on how you use a machine -- but it's useful to give a general overview of how machines tend to change states.  In the discussion that follows, states and actions are shown in **bold** type.
 
@@ -29,7 +44,7 @@ All of these states and actions represent the possible life-cycle of a machine. 
 
 10. You also have the option to set tags, availability zone, or resource pool at various stages along the way.
 
-Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it's not very useful to make a state diagram or flowchart.  Instead, consider the following table:
+Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it's not very useful to make a state diagram or flowchart.  Instead, consider the following tables.
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
@@ -659,6 +674,17 @@ Detailed discussion of this event log can be found under the [Logging](/t/maas-l
 
 <a href="#heading--about-the-machine-list"><h2 id="heading--about-the-machine-list">About the machine list</h2></a>
 
+The machine list is the basic dashboard for many MAAS operations.  In this subsection, you will learn:
+
+- [About the machine summary](#heading--about-the-machine-summary)
+- [Handling attached USB and PCI devices](#heading--usb-pci-devices)
+- [About machine network info](#heading--about-machine-interfaces)
+- [About machine configuration info](#heading--machine-config)
+- [About resource pools](#heading--about-resource-pools)
+- [About tags](#heading--about-tags)
+- [About annotations](#heading--about-annotations)
+- [About storage](#heading--about-storage)
+  
 In the illustration below, you see the machine list for a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:
 
 [tabs]
@@ -888,6 +914,15 @@ MAAS supports storage configuration for CentOS and RHEL deployments. Support inc
 
 <a href="#heading--machine-storage"><h2 id="heading--machine-storage">About machine storage info</h2></a>
 
+One of the key elements of managing machines is configuring and managing their storage space.  This subsection will help you learn:
+
+- [About block devices](#heading--about-block-devices)
+- [About partitions](#heading--about-partitions)
+- [About storage restrictions](#heading--about-storage-restrictions)
+- [About VMFS datastores](#heading--about-vmfs-datastores)
+- [About UEFI booting](#heading--about-uefi-booting)
+- [About final storage modifications](#heading--final-storage-modifications)
+
 The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> 
@@ -947,8 +982,13 @@ Once MAAS provisions a machine with block devices, via a layout or administrator
 
 <a href="#heading--about-disk-erasure"><h2 id="heading--about-disk-erasure">About disk erasure</h2></a>
 
-Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/maas-concepts-and-terms-reference/5416#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
+Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/maas-concepts-and-terms-reference/5416#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action, and a default erasure configuration can also be set.  This section will help you learn:
 
+- [About disk erasure types](#heading--about-disk-erasure-types)
+- [About standard erasure](#heading--about-standard-erase)
+- [About secure erasure](#heading--about-secure-erasure)
+- [About quick erasure](#heading--about-quick-erasure)
+- [About erasure order of preference](#heading--about-erasure-order-of-preference)
 
 <a href="#heading--about-disk-erasure-types"><h3 id="heading--about-disk-erasure-types">About disk erasure types</h3></a>
 
