@@ -398,7 +398,7 @@
 <p>Most of the functionality of MAAS is contained in a series of controllers.  There are two basic types: a region controller and one or more rack controllers. The region controller deals with operator requests, while the rack controller(s) provides high-bandwidth services to the individual machines.  In essence, the region controller interacts with the user, while the rack controllers manage the bare metal.</p>
 <p><a href="#heading--region-controller"><h2 id="heading--region-controller">About region controllers</h2></a></p>
 <p>A region controller consists of the following components:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>REST API server (TCP port 5240)</li>
 <li>PostgreSQL database</li>
 <li>DNS</li>
@@ -408,7 +408,7 @@
 <p>Region controllers are responsible for either a data centre or a single region. Multiple fabrics are used by MAAS to accommodate subdivisions within a single region, such as multiple floors in a data centre.</p>
 <p><a href="#heading--rack-controllers"><h2 id="heading--rack-controllers">About rack controllers</h2></a></p>
 <p>A rack controller provides four services:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>DHCP</li>
 <li>TFTP</li>
 <li>HTTP (for images)</li>
@@ -431,7 +431,7 @@ Zone management and maintenance still happen within the region controller.</p>
 <p><a href="../images/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg"></a></p>
 <p><a href="#heading--rackregion"><h3 id="heading--rackregion">How region and rack controllers communicate</h3></a></p>
 <p>The MAAS region and rack controllers interact in a number of different ways, depending upon the operation you&rsquo;ve requested.  Consider the process of commissioning a machine, that is, taking over the machine and gathering information on its available resources, including CPU, RAM, storage, and MIB information (obtainable via LLDP requests).  Here&rsquo;s a rough idea of what that sequence looks like &ndash; a sequence that is representative of the communication between rack and region controllers:</p>
-<ul>
+<ol>
 <li>An operator makes a request of MAAS, either via the Web UI or the API.  </li>
 <li>MAAS translates this to an API request to the region controller.</li>
 <li>The region controller locates the rack controller that has BMC access to the machine in question, that is, the rack controller that can power on that machine.</li>
@@ -444,7 +444,7 @@ Zone management and maintenance still happen within the region controller.</p>
 <li>The booted machine pulls cloud-init metadata from the region controller, proxying through the rackd.</li>
 <li>cloud-init uses this metadata to gather resource information about the machine and pass it back to the region controller, again proxied by the rackd.</li>
 <li>The region controller (regiond or &ldquo;region daemon&rdquo;) stores this machine information in a postgres database that is accessible only to the regiond, making MAAS truly stateless with respect to machines.</li>
-</ul>
+</ol>
 <p>Again, this list doesn&rsquo;t represent every interaction between the controllers and machines, but it gives you a good idea of how MAAS works.</p>
 <p><details><summary>Tell me about the DHCP &ldquo;next-server&rdquo; statement</summary></p>
 <p>The <code>next-server</code> directive is used to specify the host address from which an initial boot file is to be loaded, usually a TFTP server.  In the case of MAAS, the rack controller providing DHCP actually inserts itself, since it can proxy (broker) the delivery of boot bits to the machine in question.
