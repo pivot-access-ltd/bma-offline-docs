@@ -97,6 +97,6 @@ The following options are supported:
 
 The blank layout removes all storage configuration from all storage devices. It is useful when needing to apply a custom storage configuration.
 
-[note type="negative" status="Warning"]
+[note]
 Machines with the blank layout applied are not deployable; you must first configure storage manually.
 [/note]
