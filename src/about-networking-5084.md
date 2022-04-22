@@ -1,14 +1,14 @@
 <!-- "About networking" -->
 Some elements of MAAS networking are unique to the product, while others are standard networking concepts that are uniquely applied to MAAS.  This section will help you learn:
 
- - [About PXE booting](#heading--about-pxe-booting)
- - [About power drivers](#heading--about-power-drivers)
- - [About proxies](#heading--about-proxies)
- - [About RPC](#heading--about-RPC)
- - [About network discovery](#heading--about-network-discovery)
- - [About subnet management](#heading--about-subnet-management)
- - [About IPv6](#heading--about-ipv6)
- - [About availability zones](#heading--about-availability-zones)
+- [About PXE booting](#heading--about-pxe-booting)
+- [About power drivers](#heading--about-power-drivers)
+- [About proxies](#heading--about-proxies)
+- [About RPC](#heading--about-RPC)
+- [About network discovery](#heading--about-network-discovery)
+- [About subnet management](#heading--about-subnet-management)
+- [About IPv6](#heading--about-ipv6)
+- [About availability zones](#heading--about-availability-zones)
 
 <a href="#heading--about-pxe-booting"><h3 id="heading--about-pxe-booting">About PXE booting</h3></a>
 
@@ -69,9 +69,9 @@ Fabrics, VLANs, and spaces do not require much configuration beyond names and de
 
 This subsection will help you learn:
 
- - [About managed subnets](#heading--about-managed-subnets)
- - [About unmanaged subnets](#heading--about-unmanaged-subnets)
- - [About IP address tracking](#heading--about-ip-address-tracking)
+- [About managed subnets](#heading--about-managed-subnets)
+- [About unmanaged subnets](#heading--about-unmanaged-subnets)
+- [About IP address tracking](#heading--about-ip-address-tracking)
 
 A [subnet](https://en.wikipedia.org/wiki/Subnetwork), on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS. By default, MAAS manages subnets in your configuration, but this is easily changed.
 
@@ -81,8 +81,8 @@ When a subnet is managed, MAAS handles all aspects of IP address allocation. Thi
 
 When you enable management for a subnet, MAAS will:
 
-1.   Lease addresses for DHCP from a reserved dynamic IP range
-2.   Assign static addresses not included in a reserved IP range, typically via 'Auto assign' IP allocation mode for a node.
+- Lease addresses for DHCP from a reserved dynamic IP range
+- Assign static addresses not included in a reserved IP range, typically via 'Auto assign' IP allocation mode for a node.
 
 See [Concepts and terms](/t/maas-concepts-and-terms-reference/5416#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
 
@@ -100,9 +100,9 @@ When you enable IP address tracking, MAAS will keep track of all assigned addres
 
 Support for IPv6 in MAAS is similar to support for IPv4.  This subsection will help you learn:
 
- - [About enabling IPv6](#heading--about-enabling-ipv6)
- - [About IPv6 subnets](#heading--about-ipv6-subnets)
- - [About IPV6 routing](#heading--about-ipv6-routing)
+- [About enabling IPv6](#heading--about-enabling-ipv6)
+- [About IPv6 subnets](#heading--about-ipv6-subnets)
+- [About IPV6 routing](#heading--about-ipv6-routing)
 
 A rack controller in an IPv6 context needs to have the region API server URL specified with brackets:
 
@@ -132,9 +132,9 @@ You may want MAAS to manage DHCP and DNS, but it's not required. Machines do not
 
 In IPv6, clients do not discover routes through DHCP. Routers make themselves known on their networks by sending out route advertisements. These RAs also contain other configuration items:
 
- * Switches that allow stateless configuration of their unique IP addresses, based on MAC addresses. 
-* Switches that enable them to request stateless configuration from a DHCP server.
-* Switches that In any allow them to request a stateful IP address from a DHCP server. 
+- Switches that allow stateless configuration of their unique IP addresses, based on MAC addresses. 
+- Switches that enable them to request stateless configuration from a DHCP server.
+- Switches that In any allow them to request a stateful IP address from a DHCP server. 
 
 Since a network interface can have any number of IPv6 addresses even on a single subnet, several of these address assignment mechanisms can be combined.
 
@@ -149,9 +149,9 @@ If you need RAs, but your gateway does not send them, you could install and conf
 
 This subsection explains some characteristics and uses of availability zones.  Here you have the opportunity to learn:
 
- - [About fault tolerance](#heading--fault-tolerance)
- - [About service performance](#heading--service-performance)
- - [About power management](#heading--power-management)
+- [About fault tolerance](#heading--fault-tolerance)
+- [About service performance](#heading--service-performance)
+- [About power management](#heading--power-management)
 
 <a href="#heading--fault-tolerance"><h4 id="heading--fault-tolerance">About fault tolerance</h4></a>
 
