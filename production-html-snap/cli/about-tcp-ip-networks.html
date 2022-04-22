@@ -398,7 +398,7 @@
 <p>TCP/IP networks, and the underlying structure, evolved to meet a specific need: How can we keep a computer network functioning in the event of a catastrophic failure of communications infrastructure?  When nodes go offline, randomly, how can surviving nodes keep the network usable?  The Internet, which relies heavily on TCP/IP networks, has proven over time that it can adapt to changing loads, handle significant failures, and strictly limit the network blast radius when things go wrong.   </p>
 <p>Experience has shown us that you will probably have a much easier time working with MAAS if you ensure that you have a solid understanding of network fundamentals.  Rather than bury this basic material, we&rsquo;ve decided to include it in the mainstream MAAS networking discussion. Later sections, which help you learn how to design and troubleshoot MAAS networks, will depend heavily on principles explained here.</p>
 <p>This section is designed to help you learn:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--about-the-internet">About the Internet</a></li>
 <li><a href="#heading--about-the-osi-model">About the OSI model</a></li>
 <li><a href="#heading--about-bond-interfaces">About bond interfaces</a></li>
@@ -412,7 +412,7 @@ While some standard networking concepts, such as PXE booting, RPC, subnets, powe
 <p><a href="#heading--about-the-internet"><h2 id="heading--about-the-internet">About the Internet</h2></a></p>
 <p>Suppose we want to connect two computers, &ldquo;SanDiego&rdquo; and &ldquo;Bangor&rdquo;, located at opposite corners of the country.  They should communicate via a network.  How do we make that happen?</p>
 <p>This subsection will help you learn:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--internet-infrastructure">About the infrastructure of the Internet</a></li>
 <li><a href="#heading--about-network-traffic">About Internet network traffic</a></li>
 </ul>
@@ -445,7 +445,7 @@ Some of the key elements of TCP/IP, like twisted-pair Ethernet cables, packet-ba
 
 A very old meme explains that the Internet is survivable because every computer can connect to every other computer.  While that might be possible, that's not generally how it works.  There's actually a hierarchy which we refer to as the *Internet Infrastructure*:
 
- - Internet Infrastructure :: a hierarchy of computers used to transfer messages from one computer to another.
+- Internet Infrastructure - a hierarchy of computers used to transfer messages from one computer to another.
 
 High-level networks, known as Network Service Providers (NSPs), connect to at least three top level nodes called Network Access Points (NAPs).  An NAP is just a way for packets to jump from one NSP to another. NAPs are public access points, but there are also privately-owned access points (at the same level) known as Metropolitan Area Exchanges.  Many of the MAEs are the residue of the phone company's [early T1 lines](#heading--t1-lines), which was the initial backbone for the Internet.  These MAEs act just like a NAP for the purposes of this discussion.
 
@@ -465,13 +465,13 @@ In other words, when it comes to designing and troubleshooting networks, knowing
 
 This subsection will help you learn about the OSI model and:
 
- - [About the physical layer (L1)](#heading--about-the-physical-layer)
- - [About the datalink layer (L2)](#heading--about-the-datalink-layer)
- - [About the network layer (L3)](#heading--about-the-network-layer)
- - [About the transport layer (L4)](#heading--about-the-transport-layer)
- - [About the session layer (L5)](#heading--the-session-layer)
- - [About the presentation layer (L6)](#heading--the-presentation-layer)
- - [About the application layer (L7)](#heading--the-application-layer)
+- [About the physical layer (L1)](#heading--about-the-physical-layer)
+- [About the datalink layer (L2)](#heading--about-the-datalink-layer)
+- [About the network layer (L3)](#heading--about-the-network-layer)
+- [About the transport layer (L4)](#heading--about-the-transport-layer)
+- [About the session layer (L5)](#heading--the-session-layer)
+- [About the presentation layer (L6)](#heading--the-presentation-layer)
+- [About the application layer (L7)](#heading--the-application-layer)
 
 When we begin to look at networks as a continuous wire, we need to understand what travels on that wire from one host to the other.  But that depends on our perspective, that is, our level of magnification.  If we look at the highest "zoom" level, all we'll see are electrons travelling down the wire.  That's not very useful for debugging purposes.  We can use that information to determine whether anything's being sent, but if the message isn't going out on the wire, we can't guess why not.
 
@@ -490,8 +490,8 @@ Here's a quick rundown of what each layer does.  Most likely, we won't get into 
 The phrase "physical layer" may conjure up notions of physics, but don't worry -- 
 at the physical layer, we don't look at electrons flowing.  We do look at signals.  This subsection will help you learn the basics of the physical layer, and also:
 
- - [About variable latency](#heading--about-variable-latency)
- - [Why the physical layer is not very interesting](#heading--physical-layer-uninteresting)
+- [About variable latency](#heading--about-variable-latency)
+- [Why the physical layer is not very interesting](#heading--physical-layer-uninteresting)
 
 At the physical layer, we're looking for binary (on/off) signals, set to the cadence of a clock.  Every computer brings its own clock to the party, so we need a way to "synchronise our watches".  That method is [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) , the network time protocol.  
 
@@ -518,12 +518,12 @@ Other than verifying that traffic is flowing on the wire, the physical layer doe
 
 The only purpose of the link layer -- at least from a TCP/IP perspective -- is to send and receive IP datagrams.  L2 generally doesn't try to maintain a connection with the host on the other end (it's "connectionless"), and it doesn't guarantee delivery or integrity of packets.  All it does is ship them between source and destination.  This subsection will help you learn:
 
- - [About MAC frames](#heading--about-frames)
- - [About Ethernet](#heading--about-ethernet)
- - [About Media Access Control (MAC)](#heading--about-media-access-control)
- - [About trunking VLANs](#heading--about-trunking-vlans)
- - [About VLANs, subnets, and fabrics](#heading--about-vlans-subnets-and-fabrics)
- - [How to visualise the link layer](#heading--visualising-the-link-layer)
+- [About MAC frames](#heading--about-frames)
+- [About Ethernet](#heading--about-ethernet)
+- [About Media Access Control (MAC)](#heading--about-media-access-control)
+- [About trunking VLANs](#heading--about-trunking-vlans)
+- [About VLANs, subnets, and fabrics](#heading--about-vlans-subnets-and-fabrics)
+- [How to visualise the link layer](#heading--visualising-the-link-layer)
 
 At first, the message-agnostic state of the link layer may seem a little weird.  L2 is not without error-checking and recovery code, but it functions efficiently because it isn't concerned with the data or the message containing the data.  That fact can be surprising, since L3 packets are called "datagrams".
 
@@ -565,7 +565,7 @@ In conventional Ethernet networks, all this looks something like the following:
 
 Let's decode those blocks of bits:
 
- - The **Preamble** is 7 bytes of clock sync, basically just zeroes and ones like this: ...0101010101....  This gives the receiving station a chance to catch up and sync their clock, so the following data isn't out of sync (and thus misinterpreted).  To delve just a little deeper, the Preamble helps the receiving NIC figure out the exact amount of time between encoded bits (it's called clock recovery).  NTP is nice, but Ethernet is an asynchronous LAN protocol, meaning it doesn't expect perfectly synchronised clocks between any two NICs.  The Preamble is similar to the way an orchestra conductor might "count the players in" so they all get the same rhythm to start.
+- The **Preamble** is 7 bytes of clock sync, basically just zeroes and ones like this: ...0101010101....  This gives the receiving station a chance to catch up and sync their clock, so the following data isn't out of sync (and thus misinterpreted).  To delve just a little deeper, the Preamble helps the receiving NIC figure out the exact amount of time between encoded bits (it's called clock recovery).  NTP is nice, but Ethernet is an asynchronous LAN protocol, meaning it doesn't expect perfectly synchronised clocks between any two NICs.  The Preamble is similar to the way an orchestra conductor might "count the players in" so they all get the same rhythm to start.
 
 <details><summary>Before clock recovery, there was MPE</summary>
 
@@ -573,19 +573,19 @@ Clock recovery is much more reliable than trying to get computers all over the w
 
 </details>
 
- - The **Start Frame Delimiter (SFD)** is the last chance for clock sync.  It is exactly 10101011, where the "11" tells the receiving station that the real header content starts next.  The receiving NIC has to recover the clock by the time it hits the SFD, or abandon the frame to the bit bucket.
+- The **Start Frame Delimiter (SFD)** is the last chance for clock sync.  It is exactly 10101011, where the "11" tells the receiving station that the real header content starts next.  The receiving NIC has to recover the clock by the time it hits the SFD, or abandon the frame to the bit bucket.
 
- - The **Destination Address (DAddr)** is six bytes long, and gives the physical address -- the MAC address -- of the next hop.  Be aware that the next hop might be the destination, but it's also possible that the next hop might be a NAP, MAE, NSP, or intermediate ISP.  It's basically the next address in the direction of the destination that the sender knows about.  Unlike the Source Address, the Destination Address can be in a broadcast format (similar to a subnet like 192.18.0.0, but using MAC addresses).
+- The **Destination Address (DAddr)** is six bytes long, and gives the physical address -- the MAC address -- of the next hop.  Be aware that the next hop might be the destination, but it's also possible that the next hop might be a NAP, MAE, NSP, or intermediate ISP.  It's basically the next address in the direction of the destination that the sender knows about.  Unlike the Source Address, the Destination Address can be in a broadcast format (similar to a subnet like 192.18.0.0, but using MAC addresses).
 
- - The **Source Address (SAddr)** is also a six-byte MAC address, this time the MAC address of the sender, which does not change as long as the message is traversing only layer-2 (Ethernet) switches and routers.
+- The **Source Address (SAddr)** is also a six-byte MAC address, this time the MAC address of the sender, which does not change as long as the message is traversing only layer-2 (Ethernet) switches and routers.
 
- - The **PDU Length (PDULen)** gives the byte length of the entire frame, assuming that it's 1500 or less.  If it's longer than that, it indicates a message type, like IPv4, ARP, or a "q-tagged" frame, which carries a VLAN ID.
+- The **PDU Length (PDULen)** gives the byte length of the entire frame, assuming that it's 1500 or less.  If it's longer than that, it indicates a message type, like IPv4, ARP, or a "q-tagged" frame, which carries a VLAN ID.
 
- - The **DSAP**, **SSAP**, and **Control** elements are each one byte in length, and help define devices and protocols.  For the most part, we won't be worried about these with MAAS networks.  Just know that as more and more 802 point-standards come out (e.g., 802.11, WiFi), these elements get longer and more complex.
+- The **DSAP**, **SSAP**, and **Control** elements are each one byte in length, and help define devices and protocols.  For the most part, we won't be worried about these with MAAS networks.  Just know that as more and more 802 point-standards come out (e.g., 802.11, WiFi), these elements get longer and more complex.
 
- - The **Data** or "Payload" is the actual packet being sent, which in the case of TCP/IP, is just a TCP header attached to a fixed-length chunk of the application's data.  It's passed on from the layer above.  It cannot be less than 46 bytes, and in conventional Ethernet, it cannot be larger than 1500 bytes.  If the actual data is too small, it's padded out to 46 bytes.
+- The **Data** or "Payload" is the actual packet being sent, which in the case of TCP/IP, is just a TCP header attached to a fixed-length chunk of the application's data.  It's passed on from the layer above.  It cannot be less than 46 bytes, and in conventional Ethernet, it cannot be larger than 1500 bytes.  If the actual data is too small, it's padded out to 46 bytes.
 
- - The **CRC** or "Frame Checksum" (FCS) is a standard checksum, used to verify that the message hasn't been corrupted along the way.
+- The **CRC** or "Frame Checksum" (FCS) is a standard checksum, used to verify that the message hasn't been corrupted along the way.
 
 The Preamble and SFD are often considered to be part of the IEEE "packet", so some people start counting the "frame" at the Destination Address.  That distinction shouldn't affect anything we do with MAAS networks, but it's nice to keep in mind, in case you run into someone who groups packets differently than you do.
 
@@ -597,13 +597,13 @@ There is a crucial modification to the basic frame format called a P/Q or VLAN T
 
 As you can see in the modified P/Q frame, the following fields replace part of the frame:
 
- - Sixteen bits of tags or a protocol ID.
+- Sixteen bits of tags or a protocol ID.
 
- - Three bits representing a priority.
+- Three bits representing a priority.
 
- - One bit is used as a Canonical Format Indicator (CFI), which is 0 if the following VLAN ID is in Ethernet format, or 1 if it's in Token Ring format.
+- One bit is used as a Canonical Format Indicator (CFI), which is 0 if the following VLAN ID is in Ethernet format, or 1 if it's in Token Ring format.
 
- - Twelve bits of VLAN ID.
+- Twelve bits of VLAN ID.
 
 This matters when we're building complex MAAS networks with lots of VLANS that probably cross over switches.  After all, VLANs were initially controlled with ports and switches, although they more commonly use tags now.  When more than one VLAN spans multiple switches, frames need to carry VLAN information that can be used by switches to sort or "trunk" the traffic.
 
@@ -627,11 +627,11 @@ Note that the MAC sub-layer is responsible for managing CDMA/CD, that is, detect
 
 When working with MAAS networks, you will frequently be concerned with VLANs, subnets, and fabrics, which are all network groupings:
 
-1. Subnets define (group) a range of IP addresses.
+- Subnets define (group) a range of IP addresses.
 
-2. VLANs group subnets.
+- VLANs group subnets.
 
-3. Fabrics group VLANs.
+- Fabrics group VLANs.
 
 Let's give each of these terms a MAAS context.
 
@@ -689,10 +689,10 @@ You might have noticed in the original OSI model that "IP" was part of Layer 3, 
 
 This subsection will help you learn:
 
- - [About packets](#heading--about-packets)
- - [About fixed packet lengths and segmented messaging](#heading--about-fixed-packet-lengths)
- - [About IP packets](#heading--about-ip-packets)
- - [About routing](#heading--about-routing)
+- [About packets](#heading--about-packets)
+- [About fixed packet lengths and segmented messaging](#heading--about-fixed-packet-lengths)
+- [About IP packets](#heading--about-ip-packets)
+- [About routing](#heading--about-routing)
 
 The network layer does not guarantee delivery.  Essentially, it makes every effort to deliver IP datagrams (packets) to the destination, but it's error-handling is pretty simple: just toss the packet into the bit-bucket.
 
@@ -732,19 +732,19 @@ The IP datagram (packet) is the backbone of most modern networks.  The following
 
 Note that IPv6 headers have only the version field in common with IPv4 headers; otherwise, they are completely different.  Here are the header fields and what information they carry:
 
- - **IP Protocol Version**  This is "4" for IPv4 and "6" for IPv6.  There are [lots of others](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml), but they generally don't touch a MAAS network.
- - **Internet Header Length** The number of 32-bit words in the header, including the options (but not including the data, since it's just the header).  Most of the time, this will have the value "5", but options do exist and are sometimes included.
- - **Differentiated Services Code Point** This is used to specify special classes of service.  Normally, IP packets are delivered on a "best-effort" basis, that is, Layer 3 will try everything possible to make sure a packet gets delivered.  You can cause L3 to deliver packets with higher priority (implying more certainty) by using a different DSCP.
- - **ECN = Explicit Congestion Notification** These bits are both set by an ECN-capable router when that router is above a certain traffic threshold.  They are there to alert a sender to slow down (or expect delays) when the network segment in use is particularly congested.
- - **Total Length of IP Packet** This field indicates the length of the entire packet, including the data.  This makes it possible to calculate the byte offset of the data within the datagram.
- - **Identification**  This is a serial number, generated by the sending NIC, that helps the participants uniquely identify the datagram.  In a sense, it works like the little "take-a-number" tickets you get at the hamburger stand: Eventually, the number will repeat, but the repeat cycle is so long that there's no chance of confusing packets.  The sequential nature of this field, when used in concert with the Flags and Fragmentation Offset field, helps the protocol stack correctly reassemble the message.
- - **Flags**  This field is basically used to indicate that a packet is a fragment of a longer message.
- - **Fragmentation Offset**  Used with the Identification sequence number, this field allows the system to know which packets precede or follow this one when re-assembling the message.
- - **Time to Live (TTL)**  This indicates the number of routers that a datagram can pass through before it's discarded.  Since routers function by replacing their own destination address with the IP address of the next hop, this essentially limits the number of times a packet's destination IP can be changed.  Most RFC documents suggest keeping this number at 64, it's more often set to something like 255 without any real bottlenecks.
- - **Protocol** This field indicates the higher level protocol (the protocol stack) that generated this message.  Examples are given for TCP and UDP in the figure.
- - **Header Checksum** This calculates a checksum for the header only.  It's only used in IPv4.  Doing integrity-checking on the data is the responsibility of Layer 4.
- - **Source Address** This is the IP address of the sender of the packet, for this hop only.  As shown in the figure below, routers will change this address so they can get the answer back.
- - **Destination Address**  This is the IP address of the destination, for this hop only.  As shown below, routers change this address to act as brokers in the IP chain.
+- **IP Protocol Version**  This is "4" for IPv4 and "6" for IPv6.  There are [lots of others](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml), but they generally don't touch a MAAS network.
+- **Internet Header Length** The number of 32-bit words in the header, including the options (but not including the data, since it's just the header).  Most of the time, this will have the value "5", but options do exist and are sometimes included.
+- **Differentiated Services Code Point** This is used to specify special classes of service.  Normally, IP packets are delivered on a "best-effort" basis, that is, Layer 3 will try everything possible to make sure a packet gets delivered.  You can cause L3 to deliver packets with higher priority (implying more certainty) by using a different DSCP.
+- **ECN = Explicit Congestion Notification** These bits are both set by an ECN-capable router when that router is above a certain traffic threshold.  They are there to alert a sender to slow down (or expect delays) when the network segment in use is particularly congested.
+- **Total Length of IP Packet** This field indicates the length of the entire packet, including the data.  This makes it possible to calculate the byte offset of the data within the datagram.
+- **Identification**  This is a serial number, generated by the sending NIC, that helps the participants uniquely identify the datagram.  In a sense, it works like the little "take-a-number" tickets you get at the hamburger stand: Eventually, the number will repeat, but the repeat cycle is so long that there's no chance of confusing packets.  The sequential nature of this field, when used in concert with the Flags and Fragmentation Offset field, helps the protocol stack correctly reassemble the message.
+- **Flags**  This field is basically used to indicate that a packet is a fragment of a longer message.
+- **Fragmentation Offset**  Used with the Identification sequence number, this field allows the system to know which packets precede or follow this one when re-assembling the message.
+- **Time to Live (TTL)**  This indicates the number of routers that a datagram can pass through before it's discarded.  Since routers function by replacing their own destination address with the IP address of the next hop, this essentially limits the number of times a packet's destination IP can be changed.  Most RFC documents suggest keeping this number at 64, it's more often set to something like 255 without any real bottlenecks.
+- **Protocol** This field indicates the higher level protocol (the protocol stack) that generated this message.  Examples are given for TCP and UDP in the figure.
+- **Header Checksum** This calculates a checksum for the header only.  It's only used in IPv4.  Doing integrity-checking on the data is the responsibility of Layer 4.
+- **Source Address** This is the IP address of the sender of the packet, for this hop only.  As shown in the figure below, routers will change this address so they can get the answer back.
+- **Destination Address**  This is the IP address of the destination, for this hop only.  As shown below, routers change this address to act as brokers in the IP chain.
 
 <a href="#heading--about-routing"><h4 id="heading--about-routing">About routing</h3></a>
 
@@ -819,13 +819,13 @@ In theory, every NIC card in the world has a unique identifier, called a /MAC ad
 
 This subsection will help you learn:
 
- - [About TCP/IP vs. MAC addresses](#heading--tcp-ip-does-not-use-mac-addresses)
- - [About fixed versus assigned addressing](#heading--fixed-versus-assigned-addressing)
- - [About address resolution](#heading--address-resolution)
- - [That messages are sent to MAC addresses](#heading--messages-sent-to-mac-addresses)
- - [About the ARP frame](#heading--about-the-arp-frame)
- - [About the ARP cache](#heading--about-the-arp-cache)
- - [More about ARP](#heading--more-about-arp)
+- [About TCP/IP vs. MAC addresses](#heading--tcp-ip-does-not-use-mac-addresses)
+- [About fixed versus assigned addressing](#heading--fixed-versus-assigned-addressing)
+- [About address resolution](#heading--address-resolution)
+- [That messages are sent to MAC addresses](#heading--messages-sent-to-mac-addresses)
+- [About the ARP frame](#heading--about-the-arp-frame)
+- [About the ARP cache](#heading--about-the-arp-cache)
+- [More about ARP](#heading--more-about-arp)
 
 When you're assigning MAC addresses with virtual machines, of course, you may be re-using one that's actually assigned to a network device out there somewhere.  Inside your Layer 2 network, that isn't a problem, because only devices connected to a physical switch -- that's actually connected to the physical Internet -- care about unique MAC addresses.  Inside your network, the only conflicts you need to worry about are the ones you create by hand-assigning MAC addresses.
 
@@ -919,11 +919,11 @@ Address                  HWtype  HWaddress           Flags Mask            Iface
 
 The columns are mostly obvious, but just in case:
 
- - **Address**: the IP address that's been cached.
- - **HWtype**: the Hardware Type field, which is blank when there's no MAC address (as is the case in a number of these entries).
- - **HWaddress**: the MAC address of the device.  The "incomplete" entries are meant to indicate that an ARP request was sent for that address, but no response was received.
- - **Flags Mask**: this field can have three values: "C" indicates that ARP learned this on its own, based on ARP responses; "M" means that the data was manually entered in the ARP table by a user; and "P" means "Publish," which just tells the host how to respond to incoming ARP packets.
- - **Iface**: the interface name.
+- **Address**: the IP address that's been cached.
+- **HWtype**: the Hardware Type field, which is blank when there's no MAC address (as is the case in a number of these entries).
+- **HWaddress**: the MAC address of the device.  The "incomplete" entries are meant to indicate that an ARP request was sent for that address, but no response was received.
+- **Flags Mask**: this field can have three values: "C" indicates that ARP learned this on its own, based on ARP responses; "M" means that the data was manually entered in the ARP table by a user; and "P" means "Publish," which just tells the host how to respond to incoming ARP packets.
+- **Iface**: the interface name.
 
 In this case, ~virbr0~ and ~mpqemubr0~ are virtual bridges used for different sets of libvirsh VMs that haven't been used for anything in a while. Also note that something called ~lxdbr0~, which is an LXD bridge, doesn't even show up.
 
@@ -1009,42 +1009,42 @@ Here's a diagram of the L4-to-L3 hand-off:
 
 We can get a pretty good idea what happens at Layer 4 just by decoding the contents of the TCP header. It contains the following fields:
 
- - **Source port**: the application port number of the host sending the data.  For example, if this is an FTP message, the source port would probably be 21.
+- **Source port**: the application port number of the host sending the data.  For example, if this is an FTP message, the source port would probably be 21.
 
- - **Destination port**: the port number of the application requested on the destination host.  If this is FTP, again this port would likely be 21.
+- **Destination port**: the port number of the application requested on the destination host.  If this is FTP, again this port would likely be 21.
 
- - **Sequence number**: the sequence number of this segment of data, to help the other end put the data back together in the correct order, as well as help Level 4 on the receiving end know whether a packet's been dropped or lost.
+- **Sequence number**: the sequence number of this segment of data, to help the other end put the data back together in the correct order, as well as help Level 4 on the receiving end know whether a packet's been dropped or lost.
 
- - **Acknowledgement number**: essentially, the next sequence number the destination host is expecting; used to "gate" packets through the connection.
+- **Acknowledgement number**: essentially, the next sequence number the destination host is expecting; used to "gate" packets through the connection.
 
- - **TCP header length**: given to know where the data begins.
+- **TCP header length**: given to know where the data begins.
 
- - **Reserved**: reserved for future use, basically; currently always set to 0.
+- **Reserved**: reserved for future use, basically; currently always set to 0.
 
- - **Code bits**: essentially a set of flags; see the list below.
+- **Code bits**: essentially a set of flags; see the list below.
 
- - **Window**: used to negotiate the "window" size, that is, how many bytes the destination host is willing to receive at once; this allows for the most efficient transmission possible, based on the characteristics of the two communicating hosts.
+- **Window**: used to negotiate the "window" size, that is, how many bytes the destination host is willing to receive at once; this allows for the most efficient transmission possible, based on the characteristics of the two communicating hosts.
 
- - **Checksum (CRC)**: used to check the integrity of the segment.
+- **Checksum (CRC)**: used to check the integrity of the segment.
 
- - **Urgent pointer**: data byte count where urgent data ends; used if the urgent flag is set (see below).
+- **Urgent pointer**: data byte count where urgent data ends; used if the urgent flag is set (see below).
 
 
 The code bits can indicate the following things:
 
- - **URG**: indicates that the urgent pointer field is meaningful, used to prioritise this message over other messages.
+- **URG**: indicates that the urgent pointer field is meaningful, used to prioritise this message over other messages.
 
- - **ACK**: used to acknowledge successful delivery of the previous segment.
+- **ACK**: used to acknowledge successful delivery of the previous segment.
 
- - **PSH**: push notification; tells the receiving host the message is complete, you can push the data to the application.
+- **PSH**: push notification; tells the receiving host the message is complete, you can push the data to the application.
 
- - **RST**: request a connection reset when the error level reaches a certain threshold; basically, "let's try that again from the top."  This is considered an abnormal termination of the TCP connection.
+- **RST**: request a connection reset when the error level reaches a certain threshold; basically, "let's try that again from the top."  This is considered an abnormal termination of the TCP connection.
 
- - **SYN**: used for a three-way TCP handshake; this handshake is how sender and receiver sync up; it serves a purpose similar to the preamble in a MAC frame, but at a different level of synchronisation.
+- **SYN**: used for a three-way TCP handshake; this handshake is how sender and receiver sync up; it serves a purpose similar to the preamble in a MAC frame, but at a different level of synchronisation.
 
- - **FIN**: we're done, close the connection.  This is considered a normal termination of a TCP connection.
+- **FIN**: we're done, close the connection.  This is considered a normal termination of a TCP connection.
 
- - **NS/CWR/ECE**: used to provide Explicit Congestion Notification; note that OSI provides several methods for endpoints to know that the network is congested.
+- **NS/CWR/ECE**: used to provide Explicit Congestion Notification; note that OSI provides several methods for endpoints to know that the network is congested.
 
 <details><summary>TCP is like a phone call</summary>
 
