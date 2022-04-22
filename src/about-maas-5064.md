@@ -1,4 +1,4 @@
-<!-- Document Title: "About MAAS" -->
+<!-- "About MAAS" -->
 MAAS is an open-source tool that lets you create a data centre from bare-metal servers. You can discover, commission, deploy, and dynamically reconfigure a large network of individual units.  MAAS converts your hardware investment into a cohesive, flexible, distributed data centre, with a minimum of time and effort.
 
 This section will answer a few questions:
@@ -120,7 +120,7 @@ Commissioning means that MAAS has successfully booted the machine, scanned and r
 
 MAAS controls machines through IPMI (or another BMC). It can also manage machines through a converged chassis controller, such as Cisco UCS.  You can choose how you want to control power on your machines based on what is available.  MAAS overwrites the machine's disk space with your chosen, pre-cached OS images.
 
-[note type="negative" status="Warning"]
+[note]
 *The above comment about disk space bears repeating: MAAS will overwrite the disk space of all machines it enlists. All pool machines are under the control of MAAS; you should provision them using other methods.*
 [/note]
 
