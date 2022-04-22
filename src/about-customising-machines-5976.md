@@ -11,10 +11,10 @@ Prior to deployment, MAAS machines can be customised in a number of ways, includ
 [tab version="v3.2 Snap,v3.2 Packages"]
 Machines can also be customised post-deployment, while running, either by changing out the physical hardware, or by altering the VM from the VM host side.  This will allow you to:
 
-- Add or remove disks
-- Add or remove network interfaces
-- Add or remove PCI devices
-- Add or remove USB devices
+- add or remove disks
+- add or remove network interfaces
+- add or remove PCI devices
+- add or remove USB devices
 
 [note]
 You cannot update these parameters from within MAAS on a deployed machine.
@@ -110,10 +110,10 @@ The three disk erasure types are:
 2.   Secure erasure - Although effectively equivalent to Standard erase, Secure erase is much faster because the disk's firmware performs the operation. Because of this, however, some disks may not be able to perform this erasure type (SCSI, SAS, and FC disks in particular).
 3.   Quick erasure - Same as Standard erase but only targets the first 1 MB and the last 1 MB of each disk. This removes the partition tables and/or superblock from the disk, making data recovery difficult but not impossible.
 
-If all three options are checked when the machine is released the following order of preference is applied:
+If all three options are checked when the machine is released, the following order of preference is applied:
 
 1.  Use 'secure erase' if the disk supports it
-2.  If it does not then use 'quick erase'
+2.  If it does not, then use 'quick erase'
 
 It is very important to pay close attention to your selections when erasing disks.
 
@@ -191,10 +191,10 @@ Any file targeting a specific machine will replace the values and configuration 
 
 MAAS supports four types of kernels for its Ubuntu machines:
 
-1.   General availability kernels
-2.   Hardware enablement kernels
-3.   Hardware enablement kernels (pre-release)
-4.   Low latency kernels
+- General availability kernels
+- Hardware enablement kernels
+- Hardware enablement kernels (pre-release)
+- Low latency kernels
 
 <a href="#heading--general-availability-kernels"><h3 id="heading--general-availability-kernels">About general availability kernels</h3></a>
 
@@ -266,10 +266,10 @@ Administrators can manage resource pools on the Machines page in the web UI, und
 [tab version="v3.2 Snap,v3.2 Packages"]
 MAAS 3.2 provides the capability to customise deployed machines, in that you can update hardware for a running machine on-the-fly.  Specifically, MAAS will update a deployed machine’s data when you do any of the following things:
 
-- Add or remove disks
-- Add or remove network interfaces
-- Add or remove PCI devices
-- Add or remove USB devices
+- add or remove disks
+- add or remove network interfaces
+- add or remove PCI devices
+- add or remove USB devices
 
 In addition, while deploying a machine, you can configure that machine to periodically sync its [hardware configuration](#heading--about-hardware-sync).  Deployed machines will also  passively update changes to the BMC and tags for that machine, as these changes are made.
 

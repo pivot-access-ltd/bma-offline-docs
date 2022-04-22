@@ -396,7 +396,7 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>About customising machines</h1><!-- "About customising machines" -->
 <p>Prior to deployment, MAAS machines can be customised in a number of ways, including:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>machine storage.</li>
 <li>commissioning and deployment configurations (known as &ldquo;pre-seeding&rdquo;).</li>
 <li>custom Ubuntu kernels.</li>
@@ -404,24 +404,24 @@
 <li>resource pools.</li>
 </ul>
 <p>Machines can also be customised post-deployment, while running, either by changing out the physical hardware, or by altering the VM from the VM host side.  This will allow you to:</p>
-<ul>
-<li>Add or remove disks</li>
-<li>Add or remove network interfaces</li>
-<li>Add or remove PCI devices</li>
-<li>Add or remove USB devices</li>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>add or remove disks</li>
+<li>add or remove network interfaces</li>
+<li>add or remove PCI devices</li>
+<li>add or remove USB devices</li>
 </ul>
 <p><strong>NOTE:</strong> 
 You cannot update these parameters from within MAAS on a deployed machine.</p>
 <p>While deploying a machine, you can configure that machine to periodically sync its hardware configuration.  Deployed machines will passively update changes to the BMC and tags for that machine, on-the-fly, as these changes are made.</p>
 <p>This article will help you learn:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--about-customising-machines-prior-to-deployment">About customising machines prior to deployment</a></li>
 <li><a href="#heading--about-customising-deployed-machines">About customising deployed machines</a></li>
 </ul>
 <p>In short, this article will explain these possible customisations, and provide detailed instructions on how to customise your own machines as desired.</p>
 <p><a href="#heading--about-customising-machines-prior-to-deployment"><h2 id="heading--about-customising-machines-prior-to-deployment">About customising machines prior to deployment</h2></a></p>
 <p>In this section, you&rsquo;ll learn:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--about-customising-machine-storage">About customising machine storage</a></li>
 <li><a href="#heading--about-pre-seeding">About pre-seeding</a> (customising commissioning and deployment)</li>
 <li><a href="#heading--about-ubuntu-kernels">About Ubuntu kernels</a></li>
@@ -466,10 +466,10 @@ UEFI must be enabled or disabled for the lifespan of the machine. For example, d
 <li>Secure erasure - Although effectively equivalent to Standard erase, Secure erase is much faster because the disk&rsquo;s firmware performs the operation. Because of this, however, some disks may not be able to perform this erasure type (SCSI, SAS, and FC disks in particular).</li>
 <li>Quick erasure - Same as Standard erase but only targets the first 1 MB and the last 1 MB of each disk. This removes the partition tables and/or superblock from the disk, making data recovery difficult but not impossible.</li>
 </ol>
-<p>If all three options are checked when the machine is released the following order of preference is applied:</p>
+<p>If all three options are checked when the machine is released, the following order of preference is applied:</p>
 <ol>
 <li>Use &lsquo;secure erase&rsquo; if the disk supports it</li>
-<li>If it does not then use &lsquo;quick erase&rsquo;</li>
+<li>If it does not, then use &lsquo;quick erase&rsquo;</li>
 </ol>
 <p>It is very important to pay close attention to your selections when erasing disks.</p>
 <p><a href="#heading--about-pre-seeding"><h3 id="heading--about-pre-seeding">About pre-seeding</h3></a></p>
@@ -546,12 +546,12 @@ Tempita’s inheritance mechanism is the reverse of what you might expect. Inher
 Any file targeting a specific machine will replace the values and configuration held within any generic files. If those values are needed, you will need to copy these generic template values into your new file.</p>
 <p><a href="#heading--about-ubuntu-kernels"><h3 id="heading--about-ubuntu-kernels">About Ubuntu kernels</h3></a></p>
 <p>MAAS supports four types of kernels for its Ubuntu machines:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>General availability kernels</li>
 <li>Hardware enablement kernels</li>
 <li>Hardware enablement kernels (pre-release)</li>
 <li>Low latency kernels</li>
-</ol>
+</ul>
 <p><a href="#heading--general-availability-kernels"><h3 id="heading--general-availability-kernels">About general availability kernels</h3></a></p>
 <p>The <em>general availability</em> (GA) kernel is based on the <em>generic</em> kernel that ships with a new Ubuntu version. Subsequent fixes are applied regularly by the &lsquo;stable&rsquo; <em>stream</em> used when setting up the global image source for MAAS.</p>
 <p>MAAS denotes a GA kernel like this:</p>
@@ -592,11 +592,11 @@ There is the notion of an HWE <em>stack</em>, which refers to the window manager
 <p>Administrators can manage resource pools on the Machines page in the web UI, under the Resource pools tab, or with the MAAS CLI.   Also note that all MAAS installations have a resource pool named &ldquo;default.&rdquo; MAAS automatically adds new machines to the default resource pool.</p>
 <p><a href="#heading--about-customising-deployed-machines"><h2 id="heading--about-customising-deployed-machines">About customising deployed machines</h2></a></p>
 <p>MAAS 3.2 provides the capability to customise deployed machines, in that you can update hardware for a running machine on-the-fly.  Specifically, MAAS will update a deployed machine’s data when you do any of the following things:</p>
-<ul>
-<li>Add or remove disks</li>
-<li>Add or remove network interfaces</li>
-<li>Add or remove PCI devices</li>
-<li>Add or remove USB devices</li>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>add or remove disks</li>
+<li>add or remove network interfaces</li>
+<li>add or remove PCI devices</li>
+<li>add or remove USB devices</li>
 </ul>
 <p>In addition, while deploying a machine, you can configure that machine to periodically sync its <a href="#heading--about-hardware-sync">hardware configuration</a>.  Deployed machines will also  passively update changes to the BMC and tags for that machine, as these changes are made.</p>
 <p><a href="#heading--about-updating-hardware"><h3 id="heading--about-about-updating-hardware">About updating hardware</h3></a></p>
@@ -605,12 +605,12 @@ There is the notion of an HWE <em>stack</em>, which refers to the window manager
 <p>When deploying a machine from the UI, there is a new “enable_hw_sync” flag available for each machine. This flag marks a machine to be configured with live hardware updates.</p>
 <p>When deployoing from the CLI, there is an additional <code>enable_hw_sync</code> flag on <code>maas $PROFILE machine deploy</code>. This flag also marks a machine to be configured with live hardware updates. </p>
 <p>When using the API, there are two additional fields in the request:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>enable_hw_sync: (Boolean) - indicating whether hardware sync should be enabled on the machine, </li>
 <li>sync_interval: (Int) - indicating the interval, in seconds, that should be set at time of deployment</li>
 </ul>
 <p>With respect to <code>machine.read</code>, both the RESTful API and Websocket API add the following fields to a response:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>enable_hw_sync: Bool indicating whether hardware sync is enabled on the machine, </li>
 <li>last_sync: Timestamp of the last time MAAS received hardware sync data for the machine,</li>
 <li>next_sync: Timestamp of the computed estimation of when the next sync should happen,</li>
