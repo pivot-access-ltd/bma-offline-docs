@@ -968,7 +968,7 @@ MAAS can configure custom local VMware VMFS Datastore layouts to maximise the us
 
 Every layout type supports a machine booting with UEFI. In such a case, MAAS automatically creates an EFI boot partition (`/boot/efi`). Other than setting the machine to boot from UEFI, the user does not need to take any additional action.
 
-[note type="negative" status="Warning"]
+[note]
 UEFI must be enabled or disabled for the lifespan of the machine. For example, do not enlist a machine with UEFI enabled, and then disable it before commissioning. It won't work!
 [/note]
 

@@ -397,8 +397,23 @@
   <h1>About machines</h1><!-- "About machines" -->
 <p>Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers. MAAS manages their transit through a life-cycle, from adding and enlistment, through commissioning, allocation, and deployment, finally being released back to the pool, or retired altogether.  You can move them around, create redundant versions (even in other geographies you can access), and basically rearrange them to the extent that your network allows.</p>
 <p>In this article, you will learn:</p>
+<ul>
+<li><a href="#heading--about-the-machine-life-cycle">About the machine life-cycle</a></li>
+<li><a href="#heading--event-logs">About machine event logs</a></li>
+<li><a href="#heading--about-the-machine-list">About the machine list</a></li>
+<li><a href="#heading--machine-storage">About machine storage info</a></li>
+<li><a href="#heading--about-disk-erasure">About disk erasure</a></li>
+</ul>
 <p><a href="#heading--about-the-machine-life-cycle"><h2 id="heading--about-the-machine-life-cycle">About the machine life-cycle</h2></a></p>
-<p>One of the most important things to understand about machines is their life-cycle.  Machines can be discovered or added, commissioned by MAAS, allocated, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.</p>
+<p>One of the most important things to understand about machines is their life-cycle. In this subsection, you will learn:</p>
+<ul>
+<li><a href="#heading--about-machine-states">About machine states</a></li>
+<li><a href="#heading--about-enlistment">About enlistment</a></li>
+<li><a href="#heading--about-commissioning-machines">About commissioning machines</a></li>
+<li><a href="#heading--about-allocation-and-deployment">About allocation and deployment</a></li>
+</ul>
+<p><a href="#heading--about-machine-states"><h3 id="heading--about-machine-states">About machine states</h3></a></p>
+<p>Machines can be discovered or added, commissioned by MAAS, allocated, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.</p>
 <p>All of these states and actions represent the possible life-cycle of a machine.  This life-cycle isn&rsquo;t strict or linear &ndash; it depends on how you use a machine &ndash; but it&rsquo;s useful to give a general overview of how machines tend to change states.  In the discussion that follows, states and actions are shown in <strong>bold</strong> type.</p>
 <ol>
 <li>
@@ -432,7 +447,7 @@
 <p>You also have the option to set tags, availability zone, or resource pool at various stages along the way.</p>
 </li>
 </ol>
-<p>Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it&rsquo;s not very useful to make a state diagram or flowchart.  Instead, consider the following table:</p>
+<p>Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it&rsquo;s not very useful to make a state diagram or flowchart.  Instead, consider the following tables.</p>
 <table>
 <thead>
 <tr>
@@ -967,6 +982,17 @@ The curtin installer uses an image-based method and is now the only installer us
 <p><a href="../images/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a></p>
 <p>Detailed discussion of this event log can be found under the <a href="maas-logging-reference.html">Logging</a> section of this documentation.</p>
 <p><a href="#heading--about-the-machine-list"><h2 id="heading--about-the-machine-list">About the machine list</h2></a></p>
+<p>The machine list is the basic dashboard for many MAAS operations.  In this subsection, you will learn:</p>
+<ul>
+<li><a href="#heading--about-the-machine-summary">About the machine summary</a></li>
+<li><a href="#heading--usb-pci-devices">Handling attached USB and PCI devices</a></li>
+<li><a href="#heading--about-machine-interfaces">About machine network info</a></li>
+<li><a href="#heading--machine-config">About machine configuration info</a></li>
+<li><a href="#heading--about-resource-pools">About resource pools</a></li>
+<li><a href="#heading--about-tags">About tags</a></li>
+<li><a href="#heading--about-annotations">About annotations</a></li>
+<li><a href="#heading--about-storage">About storage</a></li>
+</ul>
 <p>In the illustration below, you see the machine list for a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:</p>
 <p><a href="../images/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg"></a></p>
 <p>Rolling the cursor over status icons often reveals more details. For example, a failed hardware test script will place a warning icon alongside the hardware type tested by the script. Rolling the cursor over this will reveal which test failed.  Likewise, you can find some immediate options by rolling over the column data items in the machines table.</p>
@@ -1104,6 +1130,15 @@ when the machine is commissioned again.</p>
 <p><strong>NOTE:</strong> 
 MAAS supports storage configuration for CentOS and RHEL deployments. Support includes RAID, LVM, and custom partitioning with different file systems (ZFS and bcache excluded). This support requires a newer version of Curtin, <a href="https://launchpad.net/ubuntu/+source/curtin">available as a PPA</a>.</p>
 <p><a href="#heading--machine-storage"><h2 id="heading--machine-storage">About machine storage info</h2></a></p>
+<p>One of the key elements of managing machines is configuring and managing their storage space.  This subsection will help you learn:</p>
+<ul>
+<li><a href="#heading--about-block-devices">About block devices</a></li>
+<li><a href="#heading--about-partitions">About partitions</a></li>
+<li><a href="#heading--about-storage-restrictions">About storage restrictions</a></li>
+<li><a href="#heading--about-vmfs-datastores">About VMFS datastores</a></li>
+<li><a href="#heading--about-uefi-booting">About UEFI booting</a></li>
+<li><a href="#heading--final-storage-modifications">About final storage modifications</a></li>
+</ul>
 <p>The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:</p>
 <p><a href="../images/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> </p>
 <p>This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  </p>
@@ -1127,13 +1162,20 @@ MAAS supports storage configuration for CentOS and RHEL deployments. Support inc
 <p>MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the VMFS6 storage layout. This layout creates a VMFS Datastore named <code>datastore1</code> which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.</p>
 <p><a href="#heading--about-uefi-booting"><h3 id="heading--about-uefi-booting">About UEFI booting</h3></a></p>
 <p>Every layout type supports a machine booting with UEFI. In such a case, MAAS automatically creates an EFI boot partition (<code>/boot/efi</code>). Other than setting the machine to boot from UEFI, the user does not need to take any additional action.</p>
-<p>[note type=&rdquo;negative&rdquo; status=&rdquo;Warning&rdquo;]
+<p><strong>NOTE:</strong> 
 UEFI must be enabled or disabled for the lifespan of the machine. For example, do not enlist a machine with UEFI enabled, and then disable it before commissioning. It won&rsquo;t work!</p>
 <p>The EFI partition, if created, will be the first partition (<code>sda1</code>) and will have a FAT32 filesystem with a size of 512 MB.</p>
 <p><a href="#heading--final-storage-modifications"><h3 id="heading--final-storage-modifications">About final storage modifications</h3></a></p>
 <p>Once MAAS provisions a machine with block devices, via a layout or administrator customisation, a regular user can modify the resulting storage configuration at the filesystem level.</p>
 <p><a href="#heading--about-disk-erasure"><h2 id="heading--about-disk-erasure">About disk erasure</h2></a></p>
-<p>Disk erasure pertains to the erasing of data on each of a machine&rsquo;s disks when the machine has been released (see <a href="maas-concepts-and-terms-reference.html#heading--release">Release action</a>) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.</p>
+<p>Disk erasure pertains to the erasing of data on each of a machine&rsquo;s disks when the machine has been released (see <a href="maas-concepts-and-terms-reference.html#heading--release">Release action</a>) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action, and a default erasure configuration can also be set.  This section will help you learn:</p>
+<ul>
+<li><a href="#heading--about-disk-erasure-types">About disk erasure types</a></li>
+<li><a href="#heading--about-standard-erase">About standard erasure</a></li>
+<li><a href="#heading--about-secure-erasure">About secure erasure</a></li>
+<li><a href="#heading--about-quick-erasure">About quick erasure</a></li>
+<li><a href="#heading--about-erasure-order-of-preference">About erasure order of preference</a></li>
+</ul>
 <p><a href="#heading--about-disk-erasure-types"><h3 id="heading--about-disk-erasure-types">About disk erasure types</h3></a></p>
 <p>The three disk erasure types are:</p>
 <ol>
