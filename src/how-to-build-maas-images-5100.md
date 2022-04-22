@@ -11,7 +11,7 @@ This article will help you learn:
 - [How to create custom CentOS images](#heading--custom-centos-images)
 - [How to create custom RHEL images](#heading--custom-rhel-images)
 - [How to create Windows images](#heading--custom-windows-images)
-- [How to create other kinds of custom images](heading--other-custom-images)
+- [How to create other kinds of custom images](#heading--other-custom-images)
 
 You can customise most images as much or as little as you wish, then use them to commission machines with MAAS. 
 
