@@ -923,9 +923,13 @@ To commission a node, it must have a status of &ldquo;New&rdquo;.</p>
 <p>If the hardware type is storage, for example, and the script accepts a storage type parameter, the result will be associated with a specific storage device.</p>
 <p>The YAML file must represent a dictionary with these two fields:</p>
 <ol>
-<li><code>result</code>: The completion status of the script. This status can be <code>passed</code>, <code>failed</code>, <code>degraded</code>, or <code>skipped</code>. If no status is defined, an exit code of <code>0</code> indicates a pass while a non-zero value indicates a failure.</li>
+<li>
+<p><code>result</code>: The completion status of the script. This status can be <code>passed</code>, <code>failed</code>, <code>degraded</code>, or <code>skipped</code>. If no status is defined, an exit code of <code>0</code> indicates a pass while a non-zero value indicates a failure.</p>
+</li>
+<li>
+<p><code>results</code>: A dictionary of results. The key may map to a results key defined as embedded YAML within the script. The value of each result must be a string or a list of strings.</p>
+</li>
 </ol>
-<p>2.<code>results</code>: A dictionary of results. The key may map to a results key defined as embedded YAML within the script. The value of each result must be a string or a list of strings.</p>
 <p>Optionally, a script may define what results to return in the YAML file in the metadata fields.. The <code>results</code> field should contain a dictionary of dictionaries. The key for each dictionary is a name which is returned by the results YAML. Each dictionary may contain the following two fields:</p>
 <ol>
 <li>
