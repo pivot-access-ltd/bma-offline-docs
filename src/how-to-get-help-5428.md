@@ -275,5 +275,3 @@ When you're done, simply choose "Submit Bug Report" and check your work on the s
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a2d7f7207d92891d237b852fc67f201a37993973.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a2d7f7207d92891d237b852fc67f201a37993973.png"></a>
 
 If you want, you can view a [sample bug](https://bugs.launchpad.net/maas/+bug/1923516) with precisely these parameters.
-
-
