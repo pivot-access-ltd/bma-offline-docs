@@ -41,3 +41,5 @@ Note that MAAS doesn't bind to port 80; instead, MAAS binds to port 5240.
             ProxyPass / http://localhost:5240/
             ProxyPassReverse / http://localhost:5240/
     </VirtualHost>
+
+<a href="#heading--renew-your-tls-certificate"><h2 id="heading--renew-your-tls-certificate">How to renew your TLS certificate</h2></a>
