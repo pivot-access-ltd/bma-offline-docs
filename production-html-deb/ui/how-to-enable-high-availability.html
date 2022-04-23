@@ -395,15 +395,15 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to enable high availability</h1><!-- "How to enable high availability" -->
-<p>This article describes how to provide high availability (HA) for MAAS at both region and rack levels.  In the context of MAAS, there are four types of HA:</p>
-<ol>
+<p>This article describes how to provide high availability (HA) for MAAS at both region and rack levels.  In the context of MAAS, there are several types of HA:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>BMC (node power cycling)</li>
 <li>DHCP</li>
 <li>PostgreSQL</li>
 <li>API services</li>
-</ol>
+</ul>
 <h4>This article will help you learn:</h4>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--rack-controller-ha">How to make rack controllers highly available</a></li>
 <li><a href="#heading--bmc-ha">How to enable highly-available BMC</a></li>
 <li><a href="#heading--dhcp-ha">How to enable highly-available DHCP services</a></li>
@@ -438,9 +438,11 @@ maas_url:
 <p>The setup of highly-available DHCP is now complete.  Note that, for HA purposes, DHCP provisioning will take into account multiple DNS services when there is more than one region controller on a single region.</p>
 <p><a href="#heading--region-controller-ha"><h2 id="heading--region-controller-ha">How to make region controllers highly available</h2></a></p>
 <p>Implementing highly-available region control is possible when you learn:</p>
-<p><a href="#heading--postgresql-ha">How to enable highly-available PostgreSQL</a>
-<a href="#heading--secondary-api-servers">How to enable highly-available API services</a>
-<a href="#heading--load-balancing-with-haproxy-optional">How to set up load balancing with HAProxy (optional)</a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--postgresql-ha">How to enable highly-available PostgreSQL</a></li>
+<li><a href="#heading--secondary-api-servers">How to enable highly-available API services</a></li>
+<li><a href="#heading--load-balancing-with-haproxy-optional">How to set up load balancing with HAProxy (optional)</a></li>
+</ul>
 <p>Load balancing is optional, but is highly recommended.</p>
 <p><a href="#heading--postgresql-ha"><h3 id="heading--postgresql-ha">How to enable highly-available PostgreSQL</h3></a></p>
 <p>MAAS stores all state information in the PostgreSQL database. It is therefore recommended to run it in HA mode. Configuring HA for PostgreSQL is external to MAAS. You will, therefore, need to study the <a href="https://www.postgresql.org/docs/9.5/static/high-availability.html">PostgreSQL documentation</a> and implement the variant of HA that makes you feel most comfortable.</p>
@@ -487,7 +489,7 @@ backend maas
 <p>Note that in the UI, if you go to the &ldquo;Controllers&rdquo; tab and press the button entitled, &ldquo;Add rack controller,&rdquo; at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.</p>
 <p><a href="#heading--move-rack-controller"><h3 id="heading--dangers-moving-rack-controller">How to avoid the potential pitfalls of moving a rack controller</h3></a></p>
 <p>There are dangers associate with moving a rack controller &ndash; dangers that may generate errors, get you into a non-working state, or cause you significant data loss.  These dangers are precipitated by one caveat and two potential mistakes:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p><strong>Using the same system as a rack controller and a VM host:</strong> While not forbidden or inherently dangerous, using the same machine as both a rack controller and a VM host may cause resource contention and poor performance.  If the resources on the system are not more than adequate to cover both tasks, you may see slowdowns (or even apparent &ldquo;freeze&rdquo; events) on the system.</p>
 </li>
