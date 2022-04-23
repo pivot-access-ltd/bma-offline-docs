@@ -17,13 +17,13 @@ Note that in the examples that follow, a `>>` symbol indicates the newest line a
 
 You need to gather or prepare some information before you file your bug report.  Here is the short list of pre-filing tasks that will smooth the process:
 
-* [Prepare a concise summary](#heading--concise-summary)
-* [Identify your version and build first](#heading--version-and-build)
-* [Explain whether you're using the UI, CLI, or API](#heading--which-interface)
-* [Explain what happens](#heading--what-happens)
-* [Explain how to reproduce your issue](#heading--reproducing-your-issue)
-* [Take screenshots, if relevant](#heading--screenshots)
-* [Locate and capture logfiles, if at all possible](#heading--logfiles)
+- [Prepare a concise summary](#heading--concise-summary)
+- [Identify your version and build first](#heading--version-and-build)
+- [Explain whether you're using the UI, CLI, or API](#heading--which-interface)
+- [Explain what happens](#heading--what-happens)
+- [Explain how to reproduce your issue](#heading--reproducing-your-issue)
+- [Take screenshots, if relevant](#heading--screenshots)
+- [Locate and capture logfiles, if at all possible](#heading--logfiles)
 
 Open a text editor with a new file, so you can capture and refine this information in advance.
 
@@ -168,24 +168,24 @@ If you think it will help -- especially when using the UI -- try and capture scr
 
 If at all possible, capture at least the following logfiles, for the time period surrounding your error situation:
 
-1. maas.log
-2. regiond.log
-3. rackd.log
-4. the rsyslog file of the affected machine(s), if it exists.
+- maas.log
+- regiond.log
+- rackd.log
+- the rsyslog file of the affected machine(s), if it exists.
 
 On snap, these files are located as follows:
 
-* /var/snap/maas/common/log/maas.log
-* /var/snap/maas/common/log/regiond.log
-* /var/snap/maas/common/log/rackd.log
-* /var/snap/maas/common/log/rsyslog/$MACHINE_NAME/$RELEVANT_DATE/messages
+- /var/snap/maas/common/log/maas.log
+- /var/snap/maas/common/log/regiond.log
+- /var/snap/maas/common/log/rackd.log
+- /var/snap/maas/common/log/rsyslog/$MACHINE_NAME/$RELEVANT_DATE/messages
 
 If you're using packages, you'll find the files in these locations:
 
-* /var/log/maas/maas.log
-* /var/log/maas/regiond.log
-* /var/log/maas/rackd.log
-* /var/log/maas/rsyslog/$MACHINE_NAME/$RELEVANT_DATE/messages
+- /var/log/maas/maas.log
+- /var/log/maas/regiond.log
+- /var/log/maas/rackd.log
+- /var/log/maas/rsyslog/$MACHINE_NAME/$RELEVANT_DATE/messages
 
 The [sosreport ](https://github.com/sosreport/sosreport) tool is a potential shortcut.  It's an automated information-gathering utility that will create a tarball containing MAAS log files, MAAS configuration files and a dump of the MAAS database. It is available in the Ubuntu archives:
 
@@ -275,3 +275,5 @@ When you're done, simply choose "Submit Bug Report" and check your work on the s
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a2d7f7207d92891d237b852fc67f201a37993973.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a2d7f7207d92891d237b852fc67f201a37993973.png"></a>
 
 If you want, you can view a [sample bug](https://bugs.launchpad.net/maas/+bug/1923516) with precisely these parameters.
+
+
