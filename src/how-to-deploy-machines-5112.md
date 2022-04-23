@@ -1,10 +1,10 @@
 <!-- "How to deploy machines" -->
 The ultimate purpose of MAAS is to deploy and manage machines.  As explained in [About the machine life-cycle](/t/about-machines/5080#heading--about-the-machine-life-cycle), machines must first be enlisted or commissioned, then allocated, then deployed.  This article will tell you:
 
- - [How to commission a machine](#heading--how-to-commission-a-machine)
- - [How to test machines](#heading--how-to-test-machines)
- - [How to allocate machines](#heading--allocate-machines)
- - [How to deploy machines](#heading--deploy)
+- [How to commission a machine](#heading--how-to-commission-a-machine)
+- [How to test machines](#heading--how-to-test-machines)
+- [How to allocate machines](#heading--allocate-machines)
+- [How to deploy machines](#heading--deploy)
 
 <a href="#heading--how-to-commission-a-machine"><h2 id="heading--how-to-commission-a-machine">How to commission a machine</h2></a>
 
@@ -27,11 +27,11 @@ If you do not specify `noauto`, your custom commissioning scripts will run every
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To commission a machine:
 
-1. Go to the "Machines" page.
+- Go to the "Machines" page.
 
-2. Select the machine(s) you want to commission.
+- Select the machine(s) you want to commission.
 
-3. Choose "Commission" under the "Take action" drop-down menu:
+- Choose "Commission" under the "Take action" drop-down menu:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a>
 
@@ -39,21 +39,21 @@ You have the option of selecting some extra parameters (checkboxes) and performi
 
 These options include:
 
--   **Allow SSH access and prevent machine powering off**: Machines are normally powered off after commissioning. This option keeps the machine on and enables SSH so you can access the machine.
+- **Allow SSH access and prevent machine powering off**: Machines are normally powered off after commissioning. This option keeps the machine on and enables SSH so you can access the machine.
 
--   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/about-networking/5084) for more information.
+- **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/about-networking/5084) for more information.
 
--   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/about-machines/5080#heading--about-storage) for more details.
+- **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/about-machines/5080#heading--about-storage) for more details.
 
--   **Update firmware**: Runs scripts tagged with `update_firmware`.
+- **Update firmware**: Runs scripts tagged with `update_firmware`.
 
--   **Configure HBA**: Runs scripts tagged with `configure_hba`.
+- **Configure HBA**: Runs scripts tagged with `configure_hba`.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a>
 
-4. Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/about-machines/5080#heading--about-testing-hardware) for more information on hardware testing scripts.
+- Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/about-machines/5080#heading--about-testing-hardware) for more information on hardware testing scripts.
 
-5. Finalise the directive by hitting "Commission machine".
+- Finalise the directive by hitting "Commission machine".
 
 While commissioning, the machine status will change to reflect this state (Commissioning).  MAAS discovers the machine's network topology.  MAAS then prompts a machine network interface to connect to the fabric, VLAN, and subnet combination for configuration. Usually, MAAS assigns a static IP address out of the reserved IP range for the subnet ("Auto assign" mode). The next section details several assignment modes.
 
@@ -377,36 +377,36 @@ This section explains:
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-* [How to download built-in scripts](#heading--how-to-download-built-in-scripts)
-* [How to upload scripts](#heading--how-to-upload-scripts)
-* [How to debug script failures](#heading--how-to-debug-script-failures)
+- [How to download built-in scripts](#heading--how-to-download-built-in-scripts)
+- [How to upload scripts](#heading--how-to-upload-scripts)
+- [How to debug script failures](#heading--how-to-debug-script-failures)
 [/tab]
-* [How to locate script files](#heading--how-to-locate-script-files)
-* [How to locate log files](#heading--how-to-locate-log-files)
-* [How to run all scripts manually](#heading--how-to-run-all-scripts-manually)
-* [How to apply a hardware test](#heading--apply-a-hardware-test)
-* [How to test network links](#heading--network-link-testing)
-* [How to detect slow network links](#heading--slow-link-detection)
-* [How to configure network validation and testing scripts](#heading--network-validation-scripts-and-testing)
-* [How to customise network testing](#heading--customisable-network-testing)
+- [How to locate script files](#heading--how-to-locate-script-files)
+- [How to locate log files](#heading--how-to-locate-log-files)
+- [How to run all scripts manually](#heading--how-to-run-all-scripts-manually)
+- [How to apply a hardware test](#heading--apply-a-hardware-test)
+- [How to test network links](#heading--network-link-testing)
+- [How to detect slow network links](#heading--slow-link-detection)
+- [How to configure network validation and testing scripts](#heading--network-validation-scripts-and-testing)
+- [How to customise network testing](#heading--customisable-network-testing)
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-* [How to download built-in scripts](#heading--how-to-download-built-in-scripts)
-* [How to upload hardware testing scripts](#heading--how-to-upload-hardware-testing-scripts)
-* [How to list all uploaded hardware testing scripts](#heading--how-to-list-all-uploaded-hardware-testing-scripts)
-* [How to update hardware testing scripts](#heading--how-to-update-hardware-testing-scripts)
-* [How to revert hardware testing scripts](#heading--how-to-revert-hardware-testing-scripts)
-* [How to download a script](#heading--how-to-download-a-script)
-* [How to delete a script](#heading--how-to-delete-a-script)
-* [How to view script results](#heading--how-to-view-script-results)
-* [How to filter script results](#heading--how-to-filter-script-results)
-* [How to suppress failed results](#heading--how-to-suppress-failed-results)
-* [How to upload hardware test scripts](#heading--upload-test-scripts)
-* [How to use tags to group commissioning and testing scripts](#heading--tags-group-scripts)
-* [How to view testing results](#heading--results)
-* [How to test network links](#heading--network-link-testing)
-* [How to detect slow network links](#heading--slow-link-detection)
-* [How to configure network validation and testing scripts](#heading--network-validation-scripts-and-testing)
-* [How to customise network testing](#heading--customisable-network-testing)
+- [How to download built-in scripts](#heading--how-to-download-built-in-scripts)
+- [How to upload hardware testing scripts](#heading--how-to-upload-hardware-testing-scripts)
+- [How to list all uploaded hardware testing scripts](#heading--how-to-list-all-uploaded-hardware-testing-scripts)
+- [How to update hardware testing scripts](#heading--how-to-update-hardware-testing-scripts)
+- [How to revert hardware testing scripts](#heading--how-to-revert-hardware-testing-scripts)
+- [How to download a script](#heading--how-to-download-a-script)
+- [How to delete a script](#heading--how-to-delete-a-script)
+- [How to view script results](#heading--how-to-view-script-results)
+- [How to filter script results](#heading--how-to-filter-script-results)
+- [How to suppress failed results](#heading--how-to-suppress-failed-results)
+- [How to upload hardware test scripts](#heading--upload-test-scripts)
+- [How to use tags to group commissioning and testing scripts](#heading--tags-group-scripts)
+- [How to view testing results](#heading--results)
+- [How to test network links](#heading--network-link-testing)
+- [How to detect slow network links](#heading--slow-link-detection)
+- [How to configure network validation and testing scripts](#heading--network-validation-scripts-and-testing)
+- [How to customise network testing](#heading--customisable-network-testing)
 [/tab]
 [/tabs]
 
@@ -609,16 +609,16 @@ maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
 
 Commissioning and testing script files may be found in the following directories:
 
-1.   `/tmp/user_data.sh.*/scripts/commissioning/`: Commissioning scripts
-2.   `/tmp/user_data.sh.*/scripts/testing/`: Hardware testing scripts
+- `/tmp/user_data.sh.*/scripts/commissioning/`: Commissioning scripts
+- `/tmp/user_data.sh.*/scripts/testing/`: Hardware testing scripts
 
 <a href="#heading--how-to-locate-log-files"><h3 id="heading--how-to-locate-log-files">How to locate log files</h3></a>
 
 Commissioning and testing log files may be found in the following directories:
 
-1.   `/tmp/user_data.sh*/out/`
-2.   `/var/log/cloud-init-output.log`
-3.   `/var/log/cloud-init.log`
+- `/tmp/user_data.sh*/out/`
+- `/var/log/cloud-init-output.log`
+- `/var/log/cloud-init.log`
 
 <a href="#heading--how-to-run-all-scripts-manually"><h3 id="heading--how-to-run-all-scripts-manually">How to run all scripts manually</h3></a>
 
@@ -633,8 +633,8 @@ You can also run all commissioning and hardware-testing scripts on a machine for
 
 Where:
 
-1.   `--no-download`: Optional. Do not download the scripts from MAAS again.
-2.   `--no-send`: Optional. Do not send the results to MAAS.
+- `--no-download`: Optional. Do not download the scripts from MAAS again.
+- `--no-send`: Optional. Do not send the results to MAAS.
 
 For example, to run all the scripts again without downloading again from MAAS:
 
@@ -922,9 +922,9 @@ Via the Web UI only, MAAS can check this link and recognise that there’s no co
 
 Users can now test their network configuration to check for:
 
-1. Interfaces which have a broken network configuration
-2. Bonds that are not fully operational
-3. Broken gateways, rack controllers, and Internet links
+- Interfaces which have a broken network configuration
+- Bonds that are not fully operational
+- Broken gateways, rack controllers, and Internet links
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]

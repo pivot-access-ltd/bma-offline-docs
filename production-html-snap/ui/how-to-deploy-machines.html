@@ -396,7 +396,7 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to deploy machines</h1><!-- "How to deploy machines" -->
 <p>The ultimate purpose of MAAS is to deploy and manage machines.  As explained in <a href="about-machines.html#heading--about-the-machine-life-cycle">About the machine life-cycle</a>, machines must first be enlisted or commissioned, then allocated, then deployed.  This article will tell you:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--how-to-commission-a-machine">How to commission a machine</a></li>
 <li><a href="#heading--how-to-test-machines">How to test machines</a></li>
 <li><a href="#heading--allocate-machines">How to allocate machines</a></li>
@@ -415,7 +415,7 @@
 </code></pre>
 <p>If you do not specify <code>noauto</code>, your custom commissioning scripts will run every time commissioning is attempted.</p>
 <p>To commission a machine:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>Go to the &ldquo;Machines&rdquo; page.</p>
 </li>
@@ -425,11 +425,11 @@
 <li>
 <p>Choose &ldquo;Commission&rdquo; under the &ldquo;Take action&rdquo; drop-down menu:</p>
 </li>
-</ol>
+</ul>
 <p><a href="../images/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a></p>
 <p>You have the option of selecting some extra parameters (checkboxes) and performing hardware tests.</p>
 <p>These options include:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p><strong>Allow SSH access and prevent machine powering off</strong>: Machines are normally powered off after commissioning. This option keeps the machine on and enables SSH so you can access the machine.</p>
 </li>
@@ -447,20 +447,20 @@
 </li>
 </ul>
 <p><a href="../images/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a></p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See <a href="about-machines.html#heading--about-testing-hardware">Hardware testing</a> for more information on hardware testing scripts.</p>
 </li>
 <li>
 <p>Finalise the directive by hitting &ldquo;Commission machine&rdquo;.</p>
 </li>
-</ol>
+</ul>
 <p>While commissioning, the machine status will change to reflect this state (Commissioning).  MAAS discovers the machine&rsquo;s network topology.  MAAS then prompts a machine network interface to connect to the fabric, VLAN, and subnet combination for configuration. Usually, MAAS assigns a static IP address out of the reserved IP range for the subnet (&ldquo;Auto assign&rdquo; mode). The next section details several assignment modes.</p>
 <p>Once commissioned, a machine&rsquo;s status will change to Ready, and an extra tab for the machine called &ldquo;Commissioning&rdquo; will become available. This tab contains the results of the scripts executed during the commissioning process.</p>
 <p>Once commissioned, you may consider adding a tag to this machine.  The next step is testing and deployment.</p>
 <p><a href="#heading--how-to-test-machines"><h2 id="heading--how-to-test-machines">How to test machines</h2></a></p>
 <p>This section explains:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--how-to-download-built-in-scripts">How to download built-in scripts</a></li>
 <li><a href="#heading--how-to-upload-scripts">How to upload scripts</a></li>
 <li>
@@ -499,17 +499,17 @@ MAAS executes scripts in lexicographical order. This order allows you to control
 <p>As long as you&rsquo;ve added your <a href="how-to-manage-user-accounts.html">SSH key</a> to MAAS, you can connect with SSH to the machine&rsquo;s IP with a username of <code>ubuntu</code>. Type <code>sudo -i</code> to get root access.</p>
 <p><a href="#heading--how-to-locate-script-files"><h3 id="heading--how-to-locate-script-files">How to locate script files</h3></a></p>
 <p>Commissioning and testing script files may be found in the following directories:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><code>/tmp/user_data.sh.*/scripts/commissioning/</code>: Commissioning scripts</li>
 <li><code>/tmp/user_data.sh.*/scripts/testing/</code>: Hardware testing scripts</li>
-</ol>
+</ul>
 <p><a href="#heading--how-to-locate-log-files"><h3 id="heading--how-to-locate-log-files">How to locate log files</h3></a></p>
 <p>Commissioning and testing log files may be found in the following directories:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><code>/tmp/user_data.sh*/out/</code></li>
 <li><code>/var/log/cloud-init-output.log</code></li>
 <li><code>/var/log/cloud-init.log</code></li>
-</ol>
+</ul>
 <p><a href="#heading--how-to-run-all-scripts-manually"><h3 id="heading--how-to-run-all-scripts-manually">How to run all scripts manually</h3></a></p>
 <p>You can also run all commissioning and hardware-testing scripts on a machine for debugging.</p>
 <pre><code class="language-nohighlight">/tmp/user_data.sh.*/bin/maas-run-remote-scripts \
@@ -518,10 +518,10 @@ MAAS executes scripts in lexicographical order. This order allows you to control
     /tmp/user_data.sh.*
 </code></pre>
 <p>Where:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><code>--no-download</code>: Optional. Do not download the scripts from MAAS again.</li>
 <li><code>--no-send</code>: Optional. Do not send the results to MAAS.</li>
-</ol>
+</ul>
 <p>For example, to run all the scripts again without downloading again from MAAS:</p>
 <pre><code class="language-nohighlight">/tmp/user_data.sh.*/bin/maas-run-remote-scripts --no-download /tmp/user_data.sh.*
 </code></pre>
@@ -556,11 +556,11 @@ interface_speed=$NEW_INTERFACE_SPEED
 <p>Via the Web UI only, MAAS can check this link and recognise that there’s no connectivity, which alleviates hard-to-detect network issues:</p>
 <p><a href="../images/c4f81cb3ef1a90f0a46fb62c893a4cc9f7e5f45a.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/c4f81cb3ef1a90f0a46fb62c893a4cc9f7e5f45a.jpeg"></a> </p>
 <p>Users can now test their network configuration to check for:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>Interfaces which have a broken network configuration</li>
 <li>Bonds that are not fully operational</li>
 <li>Broken gateways, rack controllers, and Internet links</li>
-</ol>
+</ul>
 <p>In addition, MAAS can comprehensively test Internet connectivity testing. You can give a list of URLs or IP addresses to check from the network testing screen:</p>
 <p><a href="../images/12dd87ce0bffd54c2e459c4dea850af5fcbe14d0.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/12dd87ce0bffd54c2e459c4dea850af5fcbe14d0.jpeg"></a> </p>
 <p>In the ephemeral environment, standard DHCP is still applied, but when network testing runs, MAAS can apply your specific configuration for the duration of the test.  While all URLs / IPs are tested with all interfaces, MAAS can test each of your interfaces individually, including breaking apart bonded NICS and testing each side of your redundant interfaces. You can also run different tests on each pass, e.g., a different set of URLs, although each run would be a different testing cycle.</p>
