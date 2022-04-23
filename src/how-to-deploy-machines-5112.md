@@ -380,7 +380,6 @@ This section explains:
 - [How to download built-in scripts](#heading--how-to-download-built-in-scripts)
 - [How to upload scripts](#heading--how-to-upload-scripts)
 - [How to debug script failures](#heading--how-to-debug-script-failures)
-[/tab]
 - [How to locate script files](#heading--how-to-locate-script-files)
 - [How to locate log files](#heading--how-to-locate-log-files)
 - [How to run all scripts manually](#heading--how-to-run-all-scripts-manually)
@@ -389,7 +388,16 @@ This section explains:
 - [How to detect slow network links](#heading--slow-link-detection)
 - [How to configure network validation and testing scripts](#heading--network-validation-scripts-and-testing)
 - [How to customise network testing](#heading--customisable-network-testing)
+[/tab]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+- [How to locate script files](#heading--how-to-locate-script-files)
+- [How to locate log files](#heading--how-to-locate-log-files)
+- [How to run all scripts manually](#heading--how-to-run-all-scripts-manually)
+- [How to apply a hardware test](#heading--apply-a-hardware-test)
+- [How to test network links](#heading--network-link-testing)
+- [How to detect slow network links](#heading--slow-link-detection)
+- [How to configure network validation and testing scripts](#heading--network-validation-scripts-and-testing)
+- [How to customise network testing](#heading--customisable-network-testing)
 - [How to download built-in scripts](#heading--how-to-download-built-in-scripts)
 - [How to upload hardware testing scripts](#heading--how-to-upload-hardware-testing-scripts)
 - [How to list all uploaded hardware testing scripts](#heading--how-to-list-all-uploaded-hardware-testing-scripts)
