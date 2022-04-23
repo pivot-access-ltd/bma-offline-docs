@@ -460,16 +460,15 @@ maas_url:
 <ol>
 <li>Set up PostgreSQL for high-availability as <a href="#heading--postgresql-ha">explained above</a>. PostgreSQL should run outside of the snap.</li>
 <li><a href="how-to-install-maas.html#heading--install-from-snap">Install</a> the MAAS snap on each machine you intend to use as a rack or region controller. You&rsquo;ll need the MAAS shared secret, located here, <code>/var/snap/maas/common/maas/secret</code>, on the first region controller you set up.</li>
-<li>
-<p><a href="how-to-install-maas.html#heading--initialisation">Initialise the snap</a> as a <code>rack</code> or <code>region</code> controller. Note that if you intend to use a machine as a region controller, you&rsquo;ll need to tell MAAS how to access your PostgreSQL database host with the following arguments:</p>
-</li>
-<li>
-<p><code>--database-host DATABASE_HOST</code></p>
-</li>
+<li><a href="how-to-install-maas.html#heading--initialisation">Initialise the snap</a> as a <code>rack</code> or <code>region</code> controller.</li>
+</ol>
+<p>Note that if you intend to use a machine as a region controller, you&rsquo;ll need to tell MAAS how to access your PostgreSQL database host with the following arguments:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><code>--database-host DATABASE_HOST</code></li>
 <li><code>--database-name DATABASE_NAME</code></li>
 <li><code>--database-user DATABASE_USER</code></li>
 <li><code>--database-pass DATABASE_PASS</code></li>
-</ol>
+</ul>
 <p><a href="#heading--load-balancing-with-haproxy-optional"><h3 id="heading--load-balancing-with-haproxy-optional">How to enable load balancing for API services</h3></a></p>
 <p>You can add load balancing with <a href="http://www.haproxy.org/">HAProxy</a> load-balancing software to support multiple API servers. In this setup, HAProxy provides access to the MAAS web UI and API.</p>
 <p><strong>NOTE:</strong> 
