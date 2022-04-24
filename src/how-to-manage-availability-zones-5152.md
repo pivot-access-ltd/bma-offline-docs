@@ -3,12 +3,12 @@ An availability zone is an organisational unit containing nodes, where each node
 
 A newly installed MAAS comes with a default zone which initially contains all nodes. You cannot remove the 'default' zone or change its name, but you can create new zones and assign machine to them. This article will help you learn:
 
-* [How to list availability zones](#heading--list-zones)
-* [How to add an availability zone](#heading--add-a-zone)
-* [How to edit an existing availability zone](#heading--edit-a-zone)
-* [How to delete an existing availability zone](#heading--delete-a-zone)
-* [How to assign a machine to an availability zone](#heading--assign-a-node-to-a-zone)
-* [How to allocate a machine in a particular zone](#heading--allocate-a-node-in-a-zone)
+- [How to list availability zones](#heading--list-zones)
+- [How to add an availability zone](#heading--add-a-zone)
+- [How to edit an existing availability zone](#heading--edit-a-zone)
+- [How to delete an existing availability zone](#heading--delete-a-zone)
+- [How to assign a machine to an availability zone](#heading--assign-a-node-to-a-zone)
+- [How to allocate a machine in a particular zone](#heading--allocate-a-node-in-a-zone)
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
