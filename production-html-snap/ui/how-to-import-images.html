@@ -397,7 +397,7 @@
   <h1>How to import images</h1><!-- "How to import images" -->
 <p>MAAS is only useful once it has images available to provision its nodes. Therefore, one key post-install task is to select and import images from the boot source. Once MAAS imports images, it will update them on an hourly basis, via a default sync mechanism.  This page explains how to select and import the images that MAAS requires to provision its nodes.</p>
 <p>This article will help you learn:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--import-maasio-image-ui">How to import standard images from maas.io</a></li>
 <li><a href="#heading--image-mirrors">How to use other image mirrors to download images</a></li>
 <li><a href="#heading--other-images">How to import and provision non-Ubuntu images</a></li>
@@ -420,7 +420,7 @@
 <p><a href="../images/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png"></a></p>
 <p>You can tell MAAS to sync images hourly, at the region level.  See <a href="about-images.html#boot-image-sources">Boot image sources</a>) for more details. We highly recommended syncing images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.</p>
 <p>This article will help you learn:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="how-to-use-the-maas-cli.html">How to get started with the MAAS CLI</a></li>
 <li><a href="#heading--list-boot-sources">How to list boot sources</a></li>
 <li><a href="#heading--select-image">How to select images</a></li>
@@ -488,11 +488,11 @@ Although multiple boot sources may be listed, MAAS can only practically work wit
 <p><a href="#heading--add-a-boot-source"><h2 id="heading--add-a-boot-source">How to add a boot source</h2></a></p>
 <p><strong>NOTE:</strong> 
 To avoid unnecessary complexity, you should probably delete any existing boot sources before adding a new one.</p>
-<p>Presented below are two use cases for adding a boot source:</p>
-<ol>
+<p>Presented below are a couple of use cases for adding a boot source:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>Use a local image mirror (official images)</li>
 <li>If you deleted the default image, recreate it</li>
-</ol>
+</ul>
 <p>The general syntax is:</p>
 <pre><code class="language-bash">maas $PROFILE boot-sources create \
     url=$URL keyring_filename=$KEYRING_FILE
@@ -503,17 +503,17 @@ To avoid unnecessary complexity, you should probably delete any existing boot so
 <p>If you added a sole boot source, then the fields &lsquo;Sync URL&rsquo; and &lsquo;Keyring Path&rsquo; in the web UI will reflect its values.</p>
 <p><a href="#heading--using-a-local-image-mirror"><h3 id="heading--using-a-local-image-mirror">How to use a local image mirror</h3></a></p>
 <p>Once the mirror is set up according to <a href="how-to-mirror-images-locally.html">Local image mirror</a> it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>URL=https://$MIRROR/maas/images/ephemeral-v3/stable/</li>
 <li>KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg</li>
-</ol>
+</ul>
 <p>Where $MIRROR is the mirror server&rsquo;s hostname or IP address.</p>
 <p><a href="#heading--recreate-the-default-boot-source"><h3 id="heading--recreate-the-default-boot-source">How to recreate the default boot source</h3></a></p>
 <p>Recreate the default boot source if it was ever deleted using the following variable values:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>URL=https://images.maas.io/ephemeral-v3/stable/</li>
 <li>KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg</li>
-</ol>
+</ul>
     </div>
   </body>
 </html>

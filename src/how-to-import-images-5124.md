@@ -6,9 +6,9 @@ MAAS is only useful once it has images available to provision its nodes. Therefo
 
 This article will help you learn:
 
-* [How to import standard images from maas.io](#heading--import-maasio-image-ui)
-* [How to use other image mirrors to download images](#heading--image-mirrors)
-* [How to import and provision non-Ubuntu images](#heading--other-images)
+- [How to import standard images from maas.io](#heading--import-maasio-image-ui)
+- [How to use other image mirrors to download images](#heading--image-mirrors)
+- [How to import and provision non-Ubuntu images](#heading--other-images)
 
 Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/how-to-build-maas-images/5100).
 
@@ -47,14 +47,14 @@ You can tell MAAS to sync images hourly, at the region level.  See [Boot image s
 
 This article will help you learn:
 
-* [How to get started with the MAAS CLI](/t/how-to-use-the-maas-cli/5236)
-* [How to list boot sources](#heading--list-boot-sources)
-* [How to select images](#heading--select-image)
-* [How to list image selections](#heading--list-image-selections)
-* [How to import newly-selected images](#heading--import-newly-selected-images)
-* [How to list currently available images](#heading--list-currently-available-images)
-* [How to delete a boot source](#heading--delete-a-boot-source)
-* [How to edit a boot source](#heading--edit-a-boot-source)
+- [How to get started with the MAAS CLI](/t/how-to-use-the-maas-cli/5236)
+- [How to list boot sources](#heading--list-boot-sources)
+- [How to select images](#heading--select-image)
+- [How to list image selections](#heading--list-image-selections)
+- [How to import newly-selected images](#heading--import-newly-selected-images)
+- [How to list currently available images](#heading--list-currently-available-images)
+- [How to delete a boot source](#heading--delete-a-boot-source)
+- [How to edit a boot source](#heading--edit-a-boot-source)
 
 <a href="#heading--list-boot-sources"><h2 id="heading--list-boot-sources">How to list boot sources</h2></a>
 
@@ -163,10 +163,10 @@ KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
 To avoid unnecessary complexity, you should probably delete any existing boot sources before adding a new one.
 [/note]
 
-Presented below are two use cases for adding a boot source:
+Presented below are a couple of use cases for adding a boot source:
 
-1.  Use a local image mirror (official images)
-2.  If you deleted the default image, recreate it
+- Use a local image mirror (official images)
+- If you deleted the default image, recreate it
 
 The general syntax is:
 
@@ -187,8 +187,8 @@ If you added a sole boot source, then the fields 'Sync URL' and 'Keyring Path' i
 
 Once the mirror is set up according to [Local image mirror](/t/how-to-mirror-images-locally/5188) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
 
-1.   URL=https://$MIRROR/maas/images/ephemeral-v3/stable/
-2.   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
+- URL=https://$MIRROR/maas/images/ephemeral-v3/stable/
+- KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
 
 Where $MIRROR is the mirror server's hostname or IP address.
 
@@ -196,7 +196,7 @@ Where $MIRROR is the mirror server's hostname or IP address.
 
 Recreate the default boot source if it was ever deleted using the following variable values:
 
-1.   URL=https://images.maas.io/ephemeral-v3/stable/
-2.   KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
+- URL=https://images.maas.io/ephemeral-v3/stable/
+- KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
 [/tab]
 [/tabs]
