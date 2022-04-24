@@ -7,13 +7,13 @@ Once you have permission to edit the doc, you can modify any article by choosing
 
 Some questions to ask yourself as you are contributing:
 
-* Does your reply improve the conversation in some way?
+- Does your reply improve the conversation in some way?
 
-* Is your contribution kind to fellow community members?
+- Is your contribution kind to fellow community members?
 
-* Is your constructive criticism focused on ideas, and not people?
+- Is your constructive criticism focused on ideas, and not people?
 
-* Are you certain of the technical accuracy of your contribution?
+- Are you certain of the technical accuracy of your contribution?
 
 If you can answer these questions in the affirmative, your edits should be welcome.
 
@@ -59,10 +59,10 @@ A code block (or pre-formatted text) is inserted by indenting four spaces:
     ```
 You can use this style anytime you want to present:
 
- - a command line sequence,
- - a pre-formatted block of text,
- - a block of text in which you need to escape markup sequences (as above),
- - a code listing where indentation and monospace font are important.
+- a command line sequence,
+- a pre-formatted block of text,
+- a block of text in which you need to escape markup sequences (as above),
+- a code listing where indentation and monospace font are important.
 
 <h2 id="heading--inline-code">Inline code</h2>
 
