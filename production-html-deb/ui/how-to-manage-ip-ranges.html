@@ -399,7 +399,7 @@
 <p>A reserved range operates differently depending on whether the subnet is managed or unmanaged.  For a managed (subnet), MAAS will never assign IP addresses inside this range.  You can use this range for anything, such as infrastructure systems, network hardware, external DHCP, or an OpenStack namespace.  For an unmanaged (subnet), MAAS will only assign IP addresses inside this range &ndash; but MAAS can assign any IP within this range.</p>
 <p>A reserved dynamic range is used by MAAS for enlisting, commissioning and, if enabled, MAAS-managed DHCP on the machine&rsquo;s VLAN during commissioning and deployment. If created with the Web UI, an initial range is created as part of the DHCP enablement process. MAAS never uses IP addresses from this range for an unmanaged subnet.</p>
 <p>This article gives specific instructions about creating and managing IP ranges; it will help you learn:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--create-a-range">How to create an IP range</a></li>
 <li><a href="#heading--edit-a-range">How to edit an existing IP range</a></li>
 <li><a href="#heading--delete-a-range">How to delete an existing IP range</a></li>
