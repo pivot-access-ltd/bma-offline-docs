@@ -396,7 +396,7 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to manage machine interfaces</h1><!-- "How to manage machine interfaces" -->
 <p>This article will explain the following procedures related to machine interfaces:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--how-to-edit-interfaces&quot;">How to edit machine interfaces</a></li>
 <li><a href="#heading--bond-interfaces">How to create a bond interface</a></li>
 <li><a href="#heading--bridge-interfaces">How to create a bridge interface</a></li>
@@ -555,7 +555,7 @@ parent=$IFACE_ID
 <pre><code>maas admin interfaces create-bridge 4efwb4 name=bridged0 parent=4
 </code></pre>
 <p>The following parameters may be applied when creating a bridge:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p><code>name</code>: Optional string.  Name of the interface.</p>
 </li>
@@ -589,7 +589,7 @@ parent=$IFACE_ID
 <li>
 <p><code>autoconf</code>: Optional Boolean.  Perform stateless autoconfiguration. (IPv6 only)</p>
 </li>
-</ol>
+</ul>
 <p>The &ldquo;delete&rdquo; command can be used to delete a bridge interface, a bond interface or a physical interface:</p>
 <pre><code>maas $PROFILE interface delete $SYSTEM_ID $IFACE_ID
 </code></pre>

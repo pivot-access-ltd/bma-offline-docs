@@ -1,14 +1,14 @@
 <!-- "How to manage machine interfaces" -->
 This article will explain the following procedures related to machine interfaces:
 
-* [How to edit machine interfaces](#heading--how-to-edit-interfaces")
-* [How to create a bond interface](#heading--bond-interfaces)
-* [How to create a bridge interface](#heading--bridge-interfaces)
-* [How to delete an interface](#heading--delete-an-interface)
-* [How to assign a network interface to a fabric](#heading--assign-a-network-interface-to-a-fabric)
-* [How to discover interface identifiers](#heading--interface-identifiers)
-* [How to create a VLAN interface](#heading--create-a-vlan-interface)
-* [How to delete a VLAN interface](#heading--delete-a-vlan-interface)
+- [How to edit machine interfaces](#heading--how-to-edit-interfaces")
+- [How to create a bond interface](#heading--bond-interfaces)
+- [How to create a bridge interface](#heading--bridge-interfaces)
+- [How to delete an interface](#heading--delete-an-interface)
+- [How to assign a network interface to a fabric](#heading--assign-a-network-interface-to-a-fabric)
+- [How to discover interface identifiers](#heading--interface-identifiers)
+- [How to create a VLAN interface](#heading--create-a-vlan-interface)
+- [How to delete a VLAN interface](#heading--delete-a-vlan-interface)
 
 <a href="#heading--how-to-edit-interfaces"><h2 id="heading--how-to-edit-interfaces">How to edit machines interfaces</h2></a>
 
@@ -195,27 +195,27 @@ maas admin interfaces create-bridge 4efwb4 name=bridged0 parent=4
 
 The following parameters may be applied when creating a bridge:
 
-1. `name`: Optional string.  Name of the interface.
+- `name`: Optional string.  Name of the interface.
 
-2. `mac_address`: Optional string.  MAC address of the interface.
+- `mac_address`: Optional string.  MAC address of the interface.
 
-3. `tags`: Optional string.  Tags for the interface.
+- `tags`: Optional string.  Tags for the interface.
 
-4. `vlan`: Optional string.  VLAN the interface is connected to.
+- `vlan`: Optional string.  VLAN the interface is connected to.
 
-5. `parent`: Optional integer.  Parent interface id for this bridge interface.
+- `parent`: Optional integer.  Parent interface id for this bridge interface.
 
-6. `bridge_type`: Optional string.  The type of bridge to create. Possible values are: ``standard``, ``ovs``.
+- `bridge_type`: Optional string.  The type of bridge to create. Possible values are: ``standard``, ``ovs``.
 
-7. `bridge_stp`: Optional Boolean.  Turn spanning tree protocol on or off. (Default: False).
+- `bridge_stp`: Optional Boolean.  Turn spanning tree protocol on or off. (Default: False).
 
-8. `bridge_fd`: Optional integer.  Set bridge forward delay to time seconds. (Default: 15).
+- `bridge_fd`: Optional integer.  Set bridge forward delay to time seconds. (Default: 15).
 
-9. `mtu`: Optional integer.  Maximum transmission unit.
+- `mtu`: Optional integer.  Maximum transmission unit.
 
-10. `accept_ra`: Optional Boolean.  Accept router advertisements. (IPv6 only)
+- `accept_ra`: Optional Boolean.  Accept router advertisements. (IPv6 only)
 
-11. `autoconf`: Optional Boolean.  Perform stateless autoconfiguration. (IPv6 only)
+- `autoconf`: Optional Boolean.  Perform stateless autoconfiguration. (IPv6 only)
 [/tab]
 [/tabs]
 
