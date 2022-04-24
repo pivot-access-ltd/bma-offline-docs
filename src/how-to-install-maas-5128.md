@@ -66,81 +66,81 @@ This article will show you:
 
 [tabs]
 [tab version="v3.2 Snap"]
-* [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
-* [How to install MAAS 3.2 Beta](/t/what-is-new-in-maas/5292)
+- [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
+- [How to install MAAS 3.2 Beta](/t/what-is-new-in-maas/5292)
 [/tab]
 [tab version="v3.2 Packages"]
-* [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
-* [How to install MAAS 3.2 Beta](/t/what-is-new-in-maas/5292)
-* [How to check the status of MAAS services](#heading--service-status)
-* [How to re-initialise MAAS](#heading--reinitialising-maas)
-* [How to list additional MAAS initialisation options](#heading--additional-init-options)
-* [How to configure MAAS](#heading--configure-maas)
+- [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
+- [How to install MAAS 3.2 Beta](/t/what-is-new-in-maas/5292)
+- [How to check the status of MAAS services](#heading--service-status)
+- [How to re-initialise MAAS](#heading--reinitialising-maas)
+- [How to list additional MAAS initialisation options](#heading--additional-init-options)
+- [How to configure MAAS](#heading--configure-maas)
 [/tab]
 [tab version="v3.1 Snap"]
-* [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
-* [How to upgrade from an earlier snap version to MAAS 3.1](#heading--upgrade-from-earlier-version-to-snap-3-1)
-* [How to do a fresh snap install of MAAS 3.1](#heading--fresh-install-3-1-snap)
-* [How to initialise MAAS for a test or POC environment](#heading--init-maas-poc)
-* [How to initialise MAAS for a production configuration](#heading--init-maas-production)
-* [How to check the status of MAAS services](#heading--service-status)
-* [How to re-initialise MAAS](#heading--reinitialising-maas)
-* [How to list additional MAAS initialisation options](#heading--additional-init-options)
-* [How to configure MAAS](#heading--configure-maas)
+- [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
+- [How to upgrade from an earlier snap version to MAAS 3.1](#heading--upgrade-from-earlier-version-to-snap-3-1)
+- [How to do a fresh snap install of MAAS 3.1](#heading--fresh-install-3-1-snap)
+- [How to initialise MAAS for a test or POC environment](#heading--init-maas-poc)
+- [How to initialise MAAS for a production configuration](#heading--init-maas-production)
+- [How to check the status of MAAS services](#heading--service-status)
+- [How to re-initialise MAAS](#heading--reinitialising-maas)
+- [How to list additional MAAS initialisation options](#heading--additional-init-options)
+- [How to configure MAAS](#heading--configure-maas)
 [/tab]
 [tab version="v3.1 Packages"]
-* [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
-* [How to ugprade from MAAS 3.0 to MAAS 3.1](#heading--upgrade-from-3-0-to-3-1)
-* [How to upgrade from MAAS 2.8 or lower to MAAS 3.1](#heading--upgrade-from-2-8-to-3-1)
-* [How to do a fresh install of MAAS 3.1 from packages](#heading--fresh-install-3-1-packages)
-* [How to create a MAAS user](#heading--create-a-maas-user)
-* [How to check the status of MAAS services](#heading--service-status)
-* [How to re-initialise MAAS](#heading--reinitialising-maas)
-* [How to list additional MAAS initialisation options](#heading--additional-init-options)
-* [How to configure MAAS](#heading--configure-maas)
+- [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
+- [How to ugprade from MAAS 3.0 to MAAS 3.1](#heading--upgrade-from-3-0-to-3-1)
+- [How to upgrade from MAAS 2.8 or lower to MAAS 3.1](#heading--upgrade-from-2-8-to-3-1)
+- [How to do a fresh install of MAAS 3.1 from packages](#heading--fresh-install-3-1-packages)
+- [How to create a MAAS user](#heading--create-a-maas-user)
+- [How to check the status of MAAS services](#heading--service-status)
+- [How to re-initialise MAAS](#heading--reinitialising-maas)
+- [How to list additional MAAS initialisation options](#heading--additional-init-options)
+- [How to configure MAAS](#heading--configure-maas)
 [/tab]
 [tab version="v3.0 Snap"]
-* [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
-* [How to upgrade from an earlier snap version to MAAS 3.0](#heading--upgrade-from-earlier-version-to-snap-3-0)
-* [How to do a fresh snap install of MAAS 3.0](#heading--fresh-install-3-0-snap)
-* [How to initialise MAAS for a test or POC environment](#heading--init-maas-poc)
-* [How to initialise MAAS for a production configuration](#heading--init-maas-production)
-* [How to check the status of MAAS services](#heading--service-status)
-* [How to re-initialise MAAS](#heading--reinitialising-maas)
-* [How to list additional MAAS initialisation options](#heading--additional-init-options)
-* [How to configure MAAS](#heading--configure-maas)
+- [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
+- [How to upgrade from an earlier snap version to MAAS 3.0](#heading--upgrade-from-earlier-version-to-snap-3-0)
+- [How to do a fresh snap install of MAAS 3.0](#heading--fresh-install-3-0-snap)
+- [How to initialise MAAS for a test or POC environment](#heading--init-maas-poc)
+- [How to initialise MAAS for a production configuration](#heading--init-maas-production)
+- [How to check the status of MAAS services](#heading--service-status)
+- [How to re-initialise MAAS](#heading--reinitialising-maas)
+- [How to list additional MAAS initialisation options](#heading--additional-init-options)
+- [How to configure MAAS](#heading--configure-maas)
 [/tab]
 [tab version="v3.0 Packages"]
-* [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
-* [How to ugprade from MAAS 2.9 to MAAS 3.0](#heading--upgrade-from-2-9-to-3-0)
-* [How to upgrade from MAAS 2.8 or lower to MAAS 3.0](#heading--upgrade-from-2-8-to-3-0)
-* [How to do a fresh install of MAAS 3.0 from packages](#heading--fresh-install-3-0-packages)
-* [How to create a MAAS user](#heading--create-a-maas-user)
-* [How to check the status of MAAS services](#heading--service-status)
-* [How to re-initialise MAAS](#heading--reinitialising-maas)
-* [How to list additional MAAS initialisation options](#heading--additional-init-options)
-* [How to configure MAAS](#heading--configure-maas)
+- [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
+- [How to ugprade from MAAS 2.9 to MAAS 3.0](#heading--upgrade-from-2-9-to-3-0)
+- [How to upgrade from MAAS 2.8 or lower to MAAS 3.0](#heading--upgrade-from-2-8-to-3-0)
+- [How to do a fresh install of MAAS 3.0 from packages](#heading--fresh-install-3-0-packages)
+- [How to create a MAAS user](#heading--create-a-maas-user)
+- [How to check the status of MAAS services](#heading--service-status)
+- [How to re-initialise MAAS](#heading--reinitialising-maas)
+- [How to list additional MAAS initialisation options](#heading--additional-init-options)
+- [How to configure MAAS](#heading--configure-maas)
 [/tab]
 [tab version="v2.9 Snap"]
-* [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
-* [How to upgrade from an earlier snap version to MAAS 2.9](#heading--upgrade-from-earlier-version-to-snap-2-9)
-* [How to do a fresh snap install of MAAS 2.9](#heading--fresh-install-2-9-snap)
-* [How to initialise MAAS for a test or POC environment](#heading--init-maas-poc)
-* [How to initialise MAAS for a production configuration](#heading--init-maas-production)
-* [How to check the status of MAAS services](#heading--service-status)
-* [How to re-initialise MAAS](#heading--reinitialising-maas)
-* [How to list additional MAAS initialisation options](#heading--additional-init-options)
-* [How to configure MAAS](#heading--configure-maas)
+- [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
+- [How to upgrade from an earlier snap version to MAAS 2.9](#heading--upgrade-from-earlier-version-to-snap-2-9)
+- [How to do a fresh snap install of MAAS 2.9](#heading--fresh-install-2-9-snap)
+- [How to initialise MAAS for a test or POC environment](#heading--init-maas-poc)
+- [How to initialise MAAS for a production configuration](#heading--init-maas-production)
+- [How to check the status of MAAS services](#heading--service-status)
+- [How to re-initialise MAAS](#heading--reinitialising-maas)
+- [How to list additional MAAS initialisation options](#heading--additional-init-options)
+- [How to configure MAAS](#heading--configure-maas)
 [/tab]
 [tab version="v2.9 Packages"]
-* [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
-* [How to upgrade from MAAS 2.8 or lower to MAAS 2.9](#heading--upgrade-from-2-8-to-2-9)
-* [How to do a fresh install of MAAS 2.9 from packages](#heading--fresh-install-2-9-packages)
-* [How to create a MAAS user](#heading--create-a-maas-user)
-* [How to check the status of MAAS services](#heading--service-status)
-* [How to re-initialise MAAS](#heading--reinitialising-maas)
-* [How to list additional MAAS initialisation options](#heading--additional-init-options)
-* [How to configure MAAS](#heading--configure-maas)
+- [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
+- [How to upgrade from MAAS 2.8 or lower to MAAS 2.9](#heading--upgrade-from-2-8-to-2-9)
+- [How to do a fresh install of MAAS 2.9 from packages](#heading--fresh-install-2-9-packages)
+- [How to create a MAAS user](#heading--create-a-maas-user)
+- [How to check the status of MAAS services](#heading--service-status)
+- [How to re-initialise MAAS](#heading--reinitialising-maas)
+- [How to list additional MAAS initialisation options](#heading--additional-init-options)
+- [How to configure MAAS](#heading--configure-maas)
 [/tab]
 [/tabs]
 
@@ -174,19 +174,19 @@ Here is a production scenario designed to handle a high number of sustained clie
 
 So, based on the above, the approximate requirements for this scenario are:
 
-1. A region controller (including PostgreSQL) installed on one host, with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.
-2. A duplicate region controller (including PostgreSQL) on a second host, also with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.
-3. A rack controller installed on a third host, with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
-4. A duplicate rack controller on a fourth host, also with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
+- A region controller (including PostgreSQL) installed on one host, with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.
+- A duplicate region controller (including PostgreSQL) on a second host, also with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.
+- A rack controller installed on a third host, with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
+- A duplicate rack controller on a fourth host, also with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
 
 The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management-reference/5246) for more details.
 
 Some examples of factors that influence hardware specifications include:
 
-1. the number of connecting clients (client activity)
-2. how you decide to distribute services
-3. whether or not you use [high availability/load balancing](/t/how-to-enable-high-availability/5120).
-4. the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
+- the number of connecting clients (client activity)
+- how you decide to distribute services
+- whether or not you use [high availability/load balancing](/t/how-to-enable-high-availability/5120).
+- the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)
 
 Also, this discussion does not take into account a possible local image mirror, which would be a large consumer of disk space.
 

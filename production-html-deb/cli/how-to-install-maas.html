@@ -444,7 +444,7 @@
 <p>MAAS uses your Launchpad or Github SSH keys to access machines that have been deployed.  Normally, you enter this key during the initialisation of MAAS.  If you don&rsquo;t have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you&rsquo;ve started MAAS for the first time as part of the welcome screens.</p>
 <p><a href="#heading--maas-url"><h3 id="heading--maas-url">About the MAAS URL</h3></a></p>
 <p>All run modes (except <code>none</code>) prompt for a MAAS URL, interpreted differently depending on the mode:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><code>region</code>: Used to create a new region controller.</li>
 <li><code>rack</code>: Used to locate the region controller.</li>
 </ul>
@@ -452,7 +452,7 @@
 <p>The &lsquo;rack&rsquo; and &lsquo;region+rack&rsquo; modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.</p>
 <p><a href="#heading--how-to-install-maas-main"><h2 id="heading--how-to-install-maas-main">How to install MAAS</h2></a></p>
 <p>This article will show you:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--check-system-requirements-for-maas">How to check system requirements for MAAS</a></li>
 <li><a href="what-is-new-in-maas.html">How to install MAAS 3.2 Beta</a></li>
 <li><a href="#heading--service-status">How to check the status of MAAS services</a></li>
@@ -540,20 +540,20 @@
 </tbody>
 </table>
 <p>So, based on the above, the approximate requirements for this scenario are:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>A region controller (including PostgreSQL) installed on one host, with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.</li>
 <li>A duplicate region controller (including PostgreSQL) on a second host, also with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.</li>
 <li>A rack controller installed on a third host, with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.</li>
 <li>A duplicate rack controller on a fourth host, also with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.</li>
-</ol>
+</ul>
 <p>The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see <a href="power-management-reference.html">Power management</a> for more details.</p>
 <p>Some examples of factors that influence hardware specifications include:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>the number of connecting clients (client activity)</li>
 <li>how you decide to distribute services</li>
 <li>whether or not you use <a href="how-to-enable-high-availability.html">high availability/load balancing</a>.</li>
 <li>the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)</li>
-</ol>
+</ul>
 <p>Also, this discussion does not take into account a possible local image mirror, which would be a large consumer of disk space.</p>
 <p>One rack controller should only service 1000 machines or less, regardless of how you distribute them across subnets. There is no load balancing at the rack level, so you will need additional, independent rack controllers. Each controller must service its own subnet(s).</p>
 <p>Please see the release notes, as directed above, to install MAAS 3.2 Beta.</p>
