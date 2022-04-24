@@ -2334,9 +2334,9 @@ The VMFS6 layout is used for VMware ESXi deployments only. It is required when c
 
 The following options are supported:
 
-1. `root_device`: The block device upon which to place the root partition. Default is the boot disk.
+- `root_device`: The block device upon which to place the root partition. Default is the boot disk.
 
-2. `root_size`: Size of the default VMFS Datastore. Default is 100%, meaning the remaining size of the root disk.
+- `root_size`: Size of the default VMFS Datastore. Default is 100%, meaning the remaining size of the root disk.
 
 <a href="#heading--blank-storage-layout-reference"><h3 id="heading--blank-storage-layout-reference">Blank storage layout reference</h3></a>
 
