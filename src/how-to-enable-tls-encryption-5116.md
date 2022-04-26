@@ -1,4 +1,149 @@
 <!-- "How to enable TLS encryption" -->
+[tabs]
+[tab version="v3.2 Snap,v3.2 Packages"]
+<a href="#heading--about-maas-native-tls"><h2 id="heading--about-maas-native-tls">About MAAS Native TLS</h2></a>
+
+MAAS version 3.2 has built-in TLS support for communicating with the UI and API over HTTPS. This eliminates the need to deploy a separate TLS-terminating reverse-proxy solution in front of MAAS to provide secure access to API and UI.
+
+TLS versions 1.2 and 1.3 are supported by MAAS. For TLSv1.2, the following cyphers are accepted:
+
+- AES256+EECDH
+- AES256+EDH
+
+You will need to obtain your own certificates via some provider, e.g., [small step](https://smallstep.com/docs/step-ca).
+
+<a href="#heading--how-to-use-maas-native-tls"><h2 id="heading--how-to-use-maas-native-tls">How to use MAAS native TLS</h2></a>
+
+TLS can be enabled/disabled with the new `maas config-tls` command:
+
+```nohighlight
+usage: maas config-tls [-h] COMMAND ...
+
+Configure MAAS Region TLS.
+
+optional arguments:
+  -h, --help  show this help message and exit
+
+drill down:
+  COMMAND
+    enable    Enable TLS and switch to a secured mode (https).
+    disable   Disable TLS and switch to a non-secured mode (http).
+
+the following arguments are required: COMMAND
+```
+
+<a href="#heading--how-to-enable-tls"><h3 id="heading--how-to-enable-tls">How to enable TLS</h3></a>
+
+To enable TLS in MAAS, a private key and a X509 certificate containing the corresponding public key are required. Both key and certificate must be encoded in PEM format.
+
+```nohighlight
+usage: maas config-tls enable [-h] [--cacert CACERT] [-p PORT] key cert
+
+positional arguments:
+  key                   path to the private key
+  cert                  path to certificate in PEM format
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --cacert CACERT       path to CA certificates chain in PEM format (default: None)
+  -p PORT, --port PORT  HTTPS port (default: 5443)
+
+the following arguments are required: key, cert
+```
+
+By default, the port for HTTPS traffic will be 5443. It’s possible to specify a different one via the `–port` option.  If your certificate is not self-signed, you can pass a cacert.pem, so that the full chain will be included in the certificate served by MAAS.
+
+If you have HA setup, please note that every MAAS instance will use the same certificate, so you need to create one certificate with multiple domain names or IP addresses; for example:
+
+```nohighlight
+X509v3 Subject Alternative Name:
+                DNS:example.com, IP Address:10.211.55.9
+```
+
+<a href="#heading--how-to-disable-tls"><h3 id="heading--how-to-disable-tls">How to disable TLS</h3></a>
+
+If for some reason you want to disable TLS, you can do it using the following command:
+
+```nohighlight
+usage: maas config-tls disable [-h]
+
+optional arguments:
+  -h, --help  show this help message and exit
+```
+
+After this, MAAS API and UI will be again reachable on port 5240, over plain HTTP.
+
+<a href="#heading--using-the-cli-with-a-tls-enabled-maas"><h2 id="heading--using-the-cli-with-a-tls-enabled-maas">Using the CLI with a TLS-enabled MAAS</h2></a>
+
+To connect to the MAAS API when TLS is enabled, an https URL must be provided to the maas login command, e.g.:
+
+```nohighlight
+maas login <profile_name> https://mymaas:5443/MAAS <api_key>
+
+usage: maas login [-h] [--cacerts CACERTS] [-k] profile-name url [credentials]
+
+Log in to a remote API, and remember its description and credentials.
+
+positional arguments:
+  profile-name       The name with which you will later refer to this remote server and credentials within this tool.
+  url                The URL of the remote API, e.g. http://example.com/MAAS/ or http://example.com/MAAS/api/2.0/ if you wish to specify the API
+                     version.
+  credentials        The credentials, also known as the API key, for the remote MAAS server. These can be found in the user preferences page in
+                     the web UI; they take the form of a long random-looking string composed of three parts, separated by colons.
+
+optional arguments:
+  -h, --help         show this help message and exit
+  --cacerts CACERTS  Certificate CA file in PEM format
+  -k, --insecure     Disable SSL certificate check
+
+If credentials are not provided on the command-line, they will be prompted
+for interactively.
+
+the following arguments are required: profile-name, url
+```
+
+Certificates provided via `--cacerts` will be stored as a part of your profile and used for next CLI commands invocations.
+
+<a href="#heading--certificate-renewal"><h2 id="heading--certificate-renewal">Certificate renewal</h2></a>
+
+Once a certificate has expired, you can update it by running the same command used for enabling TLS:
+
+``` nohighlight
+$ ​​sudo maas config-tls enable new-server-key.pem new-server.pem --port 5443
+```
+
+If you’re using the snap, the certificate and key must be placed in a directory that’s readable by the CLI, such as `/var/snap/maas/common` (e.g., if you're using the snap version).
+
+<a href="#heading--ui-changes"><h2 id="#heading--ui-changes">UI Changes</h2></a>
+
+There is a new "Security" subsection under "Configuration" that will indicate the status of TLS in the specific server (enabled or disabled).
+
+<a href="#heading--tls-enabled"><h3 id="heading--tls-enabled">TLS enabled</h3></a>
+
+When TLS is enabled, the following certificate information is displayed:
+
+- CN 
+- Expiration date
+- Fingerprint
+- Certificate
+
+It is also possible to download certificate and configure notification reminder settings. Once the notification reminder is enabled, MAAS administrators will be notified about certificate expiration.
+
+<a href="#heading--tls-disabled"><h3 id="heading--tls-disabled">TLS disabled</h3></a>
+
+We recommend that you enable TLS for secure communication.
+
+<a href="#heading--notifications"><h3 id="heading--notifications">Notifications</h3></a>
+
+When the specified number of days remain until certificate expiration (as defined in the notification reminder), all administrators will see the certificate expirationnotification. This notification is dismissible, but once it is dismissed, it won't appear again.
+
+A certificate expiration check runs every twelve hours.  When the certificate has expired, the notification will change to “certificate has expired”.
+
+<a href="#heading--how-to-set-up-auto-renew-for-certificates"><h3 id="heading--how-to-set-up-auto-renew-for-certificates">How to set up auto-renew for certificates</h3></a>
+
+At the moment we don’t support automatic certificate renewal, because it depends on the PKI used at the organization level. 
+[/tab]
+[tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
 MAAS doesn't support TLS encryption natively.  If you are not interested in [setting up an HAProxy](/t/how-to-enable-high-availability/5120#heading--load-balancing-with-haproxy-optional), you can enable TLS independently in the web server software (e.g. Apache, Nginx) which users access directly.  The examples below explain how to create this configuration.
 
 Note that MAAS doesn't bind to port 80; instead, MAAS binds to port 5240.
@@ -41,5 +186,5 @@ Note that MAAS doesn't bind to port 80; instead, MAAS binds to port 5240.
             ProxyPass / http://localhost:5240/
             ProxyPassReverse / http://localhost:5240/
     </VirtualHost>
-
-<a href="#heading--renew-your-tls-certificate"><h2 id="heading--renew-your-tls-certificate">How to renew your TLS certificate</h2></a>
+[/tab]
+[/tabs]
