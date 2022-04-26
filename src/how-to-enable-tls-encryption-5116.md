@@ -5,12 +5,16 @@
 
 MAAS version 3.2 has built-in TLS support for communicating with the UI and API over HTTPS. This eliminates the need to deploy a separate TLS-terminating reverse-proxy solution in front of MAAS to provide secure access to API and UI.
 
-TLS versions 1.2 and 1.3 are supported by MAAS. For TLSv1.2, the following cyphers are accepted:
+TLS versions 1.2 and 1.3 are supported by MAAS. For TLSv1.2, the following ciphers are accepted:
 
 - AES256+EECDH
 - AES256+EDH
 
 You will need to obtain your own certificates via some provider, e.g., [small step](https://smallstep.com/docs/step-ca).
+
+<a href="#heading--about-auto-renewal-for-certificates"><h3 id="heading--about-auto-renewal-for-certificates">About certificate auto-renewal</h3></a>
+
+At the moment we don’t support automatic certificate renewal, because it depends on the PKI used at the organisation level. 
 
 <a href="#heading--how-to-use-maas-native-tls"><h2 id="heading--how-to-use-maas-native-tls">How to use MAAS native TLS</h2></a>
 
@@ -135,13 +139,10 @@ We recommend that you enable TLS for secure communication.
 
 <a href="#heading--notifications"><h3 id="heading--notifications">Notifications</h3></a>
 
-When the specified number of days remain until certificate expiration (as defined in the notification reminder), all administrators will see the certificate expirationnotification. This notification is dismissible, but once it is dismissed, it won't appear again.
+When the specified number of days remain until certificate expiration (as defined in the notification reminder), all administrators will see the certificate expiration notification. This notification is dismissible, but once it is dismissed, it won't appear again.
 
 A certificate expiration check runs every twelve hours.  When the certificate has expired, the notification will change to “certificate has expired”.
 
-<a href="#heading--how-to-set-up-auto-renew-for-certificates"><h3 id="heading--how-to-set-up-auto-renew-for-certificates">How to set up auto-renew for certificates</h3></a>
-
-At the moment we don’t support automatic certificate renewal, because it depends on the PKI used at the organization level. 
 [/tab]
 [tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
 MAAS doesn't support TLS encryption natively.  If you are not interested in [setting up an HAProxy](/t/how-to-enable-high-availability/5120#heading--load-balancing-with-haproxy-optional), you can enable TLS independently in the web server software (e.g. Apache, Nginx) which users access directly.  The examples below explain how to create this configuration.

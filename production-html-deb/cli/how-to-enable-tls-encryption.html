@@ -398,12 +398,14 @@
 
 <p><a href="#heading--about-maas-native-tls"><h2 id="heading--about-maas-native-tls">About MAAS Native TLS</h2></a></p>
 <p>MAAS version 3.2 has built-in TLS support for communicating with the UI and API over HTTPS. This eliminates the need to deploy a separate TLS-terminating reverse-proxy solution in front of MAAS to provide secure access to API and UI.</p>
-<p>TLS versions 1.2 and 1.3 are supported by MAAS. For TLSv1.2, the following cyphers are accepted:</p>
+<p>TLS versions 1.2 and 1.3 are supported by MAAS. For TLSv1.2, the following ciphers are accepted:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>AES256+EECDH</li>
 <li>AES256+EDH</li>
 </ul>
 <p>You will need to obtain your own certificates via some provider, e.g., <a href="https://smallstep.com/docs/step-ca">small step</a>.</p>
+<p><a href="#heading--about-auto-renewal-for-certificates"><h3 id="heading--about-auto-renewal-for-certificates">About certificate auto-renewal</h3></a></p>
+<p>At the moment we don’t support automatic certificate renewal, because it depends on the PKI used at the organisation level. </p>
 <p><a href="#heading--how-to-use-maas-native-tls"><h2 id="heading--how-to-use-maas-native-tls">How to use MAAS native TLS</h2></a></p>
 <p>TLS can be enabled/disabled with the new <code>maas config-tls</code> command:</p>
 <pre><code class="language-nohighlight">usage: maas config-tls [-h] COMMAND ...
@@ -493,10 +495,8 @@ the following arguments are required: profile-name, url
 <p><a href="#heading--tls-disabled"><h3 id="heading--tls-disabled">TLS disabled</h3></a></p>
 <p>We recommend that you enable TLS for secure communication.</p>
 <p><a href="#heading--notifications"><h3 id="heading--notifications">Notifications</h3></a></p>
-<p>When the specified number of days remain until certificate expiration (as defined in the notification reminder), all administrators will see the certificate expirationnotification. This notification is dismissible, but once it is dismissed, it won&rsquo;t appear again.</p>
+<p>When the specified number of days remain until certificate expiration (as defined in the notification reminder), all administrators will see the certificate expiration notification. This notification is dismissible, but once it is dismissed, it won&rsquo;t appear again.</p>
 <p>A certificate expiration check runs every twelve hours.  When the certificate has expired, the notification will change to “certificate has expired”.</p>
-<p><a href="#heading--how-to-set-up-auto-renew-for-certificates"><h3 id="heading--how-to-set-up-auto-renew-for-certificates">How to set up auto-renew for certificates</h3></a></p>
-<p>At the moment we don’t support automatic certificate renewal, because it depends on the PKI used at the organization level. </p>
     </div>
   </body>
 </html>
