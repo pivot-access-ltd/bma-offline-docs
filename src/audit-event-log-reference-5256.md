@@ -50,5 +50,3 @@ Audit-level events, or MAAS audit events, are those events whose `type_id` corre
  NODE_HARDWARE_SYNC_USB_DEVICE   | Node USB Device hardware sync state chage
 (9 rows)
 ```
-
-
