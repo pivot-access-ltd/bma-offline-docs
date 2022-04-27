@@ -14,7 +14,7 @@ You will need to obtain your own certificates via some provider, e.g., [small st
 
 <a href="#heading--about-auto-renewal-for-certificates"><h3 id="heading--about-auto-renewal-for-certificates">About certificate auto-renewal</h3></a>
 
-At the moment we don’t support automatic certificate renewal, because it depends on the PKI used at the organisation level. 
+At the moment we don’t support automatic certificate renewal, because it depends on the PKI used at the organisation level.  We [do provide some examples](#heading--how-to-auto-renew-certificates) of how to set this up, as long as you understand that these are just gratuitous helps, not supported configurations.
 
 <a href="#heading--how-to-use-maas-native-tls"><h2 id="heading--how-to-use-maas-native-tls">How to use MAAS native TLS</h2></a>
 
@@ -150,6 +150,45 @@ When the specified number of days remain until certificate expiration (as define
 A certificate expiration check runs every twelve hours.  When the certificate has expired, the notification will change to “certificate has expired”.
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/6dd9ff4905bd256f53557d1828192bc5459ea7b6.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6dd9ff4905bd256f53557d1828192bc5459ea7b6.jpeg"></a>
+
+<a href="#heading--how-to-auto-renew-certificates"><h3 id="heading--how-to-auto-renew-certificates">How to auto-renew certificates</h3></a>
+
+MAAS does not auto-renew certificates, but there's no reason why we cannot provide a gratuitous example.  Use at your own risk.
+
+You can setup your own Certificate Authority (CA) server that supports the ACME protocol with these components:
+
+- [step-ca from Smallstep](https://smallstep.com/docs/step-ca)
+- [Caddy server with ACME support](https://caddyserver.com/docs/caddyfile/directives/acme_server)  (available since version 2.5)
+
+If you have a CA server with ACME protocol support, you can use any ACME client for an automated certificate renewal and use crontab to renew on a desired time interval.  Consider [acme.sh](https://github.com/acmesh-official/acme.sh): 
+
+```nohighlight
+$> acme.sh --issue -d mymaas.internal --standalone --server https://ca.internal/acme/acme/directory
+
+Your cert is in: /root/.acme.sh/mymaas.internal/mymaas.internal.cer
+Your cert key is in: /root/.acme.sh/mymaas.internal/mymaas.internal.key
+The intermediate CA cert is in: /root/.acme.sh/mymaas.internal/ca.cer
+And the full chain certs is there: /root/.acme.sh/foo/fullchain.cer
+```
+
+Once the certificate is issued, you can install it. 
+
+```nohighlight
+$> acme.sh --installcert -d maas.internal \
+   --certpath /var/snap/maas/certs/server.pem \
+   --keypath /var/snap/maas/certs/server-key.pem  \
+   --capath  /var/snap/maas/certs/cacerts.pem  \
+   --reloadcmd  "(echo y) | maas config-tls enable /var/snap/maas/certs/server-key.pem /var/snap/maas/certs/server.pem --port 5443"
+```
+
+Please note that if you have MAAS installed via snap, you need to run above command as root, in order to place cert and key under `/var/snap/maas`.
+
+Another approach would be to write a bash script and pass it to a [`--renew-hook`](https://github.com/acmesh-official/acme.sh/wiki/Using-pre-hook-post-hook-renew-hook-reloadcmd).
+
+<!--
+certbot https://certbot.eff.org
+-->
+
 
 [/tab]
 [tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]

@@ -405,7 +405,7 @@
 </ul>
 <p>You will need to obtain your own certificates via some provider, e.g., <a href="https://smallstep.com/docs/step-ca">small step</a>.</p>
 <p><a href="#heading--about-auto-renewal-for-certificates"><h3 id="heading--about-auto-renewal-for-certificates">About certificate auto-renewal</h3></a></p>
-<p>At the moment we don’t support automatic certificate renewal, because it depends on the PKI used at the organisation level. </p>
+<p>At the moment we don’t support automatic certificate renewal, because it depends on the PKI used at the organisation level.  We <a href="#heading--how-to-auto-renew-certificates">do provide some examples</a> of how to set this up, as long as you understand that these are just gratuitous helps, not supported configurations.</p>
 <p><a href="#heading--how-to-use-maas-native-tls"><h2 id="heading--how-to-use-maas-native-tls">How to use MAAS native TLS</h2></a></p>
 <p>TLS can be enabled/disabled with the new <code>maas config-tls</code> command:</p>
 <pre><code class="language-nohighlight">usage: maas config-tls [-h] COMMAND ...
@@ -501,6 +501,33 @@ the following arguments are required: profile-name, url
 <p><a href="../images/ea8d6c4a84adb581d4eb664b1d6d917bea9ed783.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/ea8d6c4a84adb581d4eb664b1d6d917bea9ed783.png"></a></p>
 <p>A certificate expiration check runs every twelve hours.  When the certificate has expired, the notification will change to “certificate has expired”.</p>
 <p><a href="../images/6dd9ff4905bd256f53557d1828192bc5459ea7b6.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/6dd9ff4905bd256f53557d1828192bc5459ea7b6.jpeg"></a></p>
+<p><a href="#heading--how-to-auto-renew-certificates"><h3 id="heading--how-to-auto-renew-certificates">How to auto-renew certificates</h3></a></p>
+<p>MAAS does not auto-renew certificates, but there&rsquo;s no reason why we cannot provide a gratuitous example.  Use at your own risk.</p>
+<p>You can setup your own Certificate Authority (CA) server that supports the ACME protocol with these components:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="https://smallstep.com/docs/step-ca">step-ca from Smallstep</a></li>
+<li><a href="https://caddyserver.com/docs/caddyfile/directives/acme_server">Caddy server with ACME support</a>  (available since version 2.5)</li>
+</ul>
+<p>If you have a CA server with ACME protocol support, you can use any ACME client for an automated certificate renewal and use crontab to renew on a desired time interval.  Consider <a href="https://github.com/acmesh-official/acme.sh">acme.sh</a>: </p>
+<pre><code class="language-nohighlight">$&gt; acme.sh --issue -d mymaas.internal --standalone --server https://ca.internal/acme/acme/directory
+
+Your cert is in: /root/.acme.sh/mymaas.internal/mymaas.internal.cer
+Your cert key is in: /root/.acme.sh/mymaas.internal/mymaas.internal.key
+The intermediate CA cert is in: /root/.acme.sh/mymaas.internal/ca.cer
+And the full chain certs is there: /root/.acme.sh/foo/fullchain.cer
+</code></pre>
+<p>Once the certificate is issued, you can install it. </p>
+<pre><code class="language-nohighlight">$&gt; acme.sh --installcert -d maas.internal \
+   --certpath /var/snap/maas/certs/server.pem \
+   --keypath /var/snap/maas/certs/server-key.pem  \
+   --capath  /var/snap/maas/certs/cacerts.pem  \
+   --reloadcmd  &quot;(echo y) | maas config-tls enable /var/snap/maas/certs/server-key.pem /var/snap/maas/certs/server.pem --port 5443&quot;
+</code></pre>
+<p>Please note that if you have MAAS installed via snap, you need to run above command as root, in order to place cert and key under <code>/var/snap/maas</code>.</p>
+<p>Another approach would be to write a bash script and pass it to a <a href="https://github.com/acmesh-official/acme.sh/wiki/Using-pre-hook-post-hook-renew-hook-reloadcmd"><code>--renew-hook</code></a>.</p>
+<!--
+certbot https://certbot.eff.org
+-->
     </div>
   </body>
 </html>
