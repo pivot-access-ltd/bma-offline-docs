@@ -124,6 +124,7 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/5987|/docs/how-to-work-with-audit-event-logs|
 |https://discourse.maas.io/t/-/5976|/docs/about-customising-machines|
 |https://discourse.maas.io/t/-/5973|/docs/storage-layouts-reference|
 |https://discourse.maas.io/t/-/777|/docs/upgrade-2-3-to-2-4-from-ubuntu-16-04|
