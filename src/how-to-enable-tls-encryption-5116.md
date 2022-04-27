@@ -155,6 +155,8 @@ A certificate expiration check runs every twelve hours.  When the certificate ha
 
 MAAS does not auto-renew certificates, but there's no reason why we cannot provide a gratuitous example.  Use at your own risk.
 
+<a href="#heading--set-up-your-own-certificate-authority"><h4 id="heading--set-up-your-own-certificate-authority">Set up your own certificate authority</h4></a>
+
 You can setup your own Certificate Authority (CA) server that supports the ACME protocol with these components:
 
 - [step-ca from Smallstep](https://smallstep.com/docs/step-ca)
@@ -185,10 +187,49 @@ Please note that if you have MAAS installed via snap, you need to run above comm
 
 Another approach would be to write a bash script and pass it to a [`--renew-hook`](https://github.com/acmesh-official/acme.sh/wiki/Using-pre-hook-post-hook-renew-hook-reloadcmd).
 
-<!--
-certbot https://certbot.eff.org
--->
+<a href="#heading--using-certbot"><h4 id="heading--using-certbot">Using certbot</h4></a>
 
+[certbot](https://certbot.eff.org) can be used to renew certificates and execute a post-renewal hook.  We can use this hook to re-configure MAAS to use fresh certificates.
+
+To create a post-renewal hook, you can put this sample script under `/etc/letsencrypt/renewal-hooks/post/001-update-maas.sh`.
+
+```nohighlight
+#!/bin/bash -e
+
+DOMAIN="maas.internal"
+CERTSDIR="/etc/letsencrypt/live/$DOMAIN"
+
+cd /var/snap/maas/common
+
+# need to copy certs where the snap can read them
+cp "$CERTSDIR"/{privkey,cert,chain}.pem .
+yes | maas config-tls enable privkey.pem cert.pem --cacert chain.pem --port 5443
+
+# we don’t want to keep private key and certs around
+rm {privkey,cert,chain}.pem
+```
+
+Don’t forget to make the script executable:
+
+```nohighlight
+chmod +x /etc/letsencrypt/renewal-hooks/post/001-update-maas.sh
+```
+
+Of course, you'll first need to obtain a new certificate.  
+
+```nohighlight
+sudo REQUESTS_CA_BUNDLE=ca.pem certbot certonly --standalone -d maas.internal     --server https://ca.internal/acme/acme/directory
+```
+
+Don't worry, new certs will not run the hook, since hooks are run only on renewal.
+
+To test the renewal process and verify that the hook is executed correctly, you can use the following command with a `--dry-run flag`. Please note, that the hook will be executed and existing certificates will be removed (if you are using an example hook script):
+
+```nohighlight
+sudo REQUESTS_CA_BUNDLE=ca.pem certbot renew --standalone --server https://ca.internal/acme/acme/directory --dry-run
+```
+
+Please refer to the [cerbot documentation](https://certbot.eff.org/instructions?ws=other&os=ubuntufocal) for more information.
 
 [/tab]
 [tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]

@@ -503,6 +503,7 @@ the following arguments are required: profile-name, url
 <p><a href="../images/6dd9ff4905bd256f53557d1828192bc5459ea7b6.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/6dd9ff4905bd256f53557d1828192bc5459ea7b6.jpeg"></a></p>
 <p><a href="#heading--how-to-auto-renew-certificates"><h3 id="heading--how-to-auto-renew-certificates">How to auto-renew certificates</h3></a></p>
 <p>MAAS does not auto-renew certificates, but there&rsquo;s no reason why we cannot provide a gratuitous example.  Use at your own risk.</p>
+<p><a href="#heading--set-up-your-own-certificate-authority"><h4 id="heading--set-up-your-own-certificate-authority">Set up your own certificate authority</h4></a></p>
 <p>You can setup your own Certificate Authority (CA) server that supports the ACME protocol with these components:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="https://smallstep.com/docs/step-ca">step-ca from Smallstep</a></li>
@@ -525,9 +526,34 @@ And the full chain certs is there: /root/.acme.sh/foo/fullchain.cer
 </code></pre>
 <p>Please note that if you have MAAS installed via snap, you need to run above command as root, in order to place cert and key under <code>/var/snap/maas</code>.</p>
 <p>Another approach would be to write a bash script and pass it to a <a href="https://github.com/acmesh-official/acme.sh/wiki/Using-pre-hook-post-hook-renew-hook-reloadcmd"><code>--renew-hook</code></a>.</p>
-<!--
-certbot https://certbot.eff.org
--->
+<p><a href="#heading--using-certbot"><h4 id="heading--using-certbot">Using certbot</h4></a></p>
+<p><a href="https://certbot.eff.org">certbot</a> can be used to renew certificates and execute a post-renewal hook.  We can use this hook to re-configure MAAS to use fresh certificates.</p>
+<p>To create a post-renewal hook, you can put this sample script under <code>/etc/letsencrypt/renewal-hooks/post/001-update-maas.sh</code>.</p>
+<pre><code class="language-nohighlight">#!/bin/bash -e
+
+DOMAIN=&quot;maas.internal&quot;
+CERTSDIR=&quot;/etc/letsencrypt/live/$DOMAIN&quot;
+
+cd /var/snap/maas/common
+
+# need to copy certs where the snap can read them
+cp &quot;$CERTSDIR&quot;/{privkey,cert,chain}.pem .
+yes | maas config-tls enable privkey.pem cert.pem --cacert chain.pem --port 5443
+
+# we don’t want to keep private key and certs around
+rm {privkey,cert,chain}.pem
+</code></pre>
+<p>Don’t forget to make the script executable:</p>
+<pre><code class="language-nohighlight">chmod +x /etc/letsencrypt/renewal-hooks/post/001-update-maas.sh
+</code></pre>
+<p>Of course, you&rsquo;ll first need to obtain a new certificate.  </p>
+<pre><code class="language-nohighlight">sudo REQUESTS_CA_BUNDLE=ca.pem certbot certonly --standalone -d maas.internal     --server https://ca.internal/acme/acme/directory
+</code></pre>
+<p>Don&rsquo;t worry, new certs will not run the hook, since hooks are run only on renewal.</p>
+<p>To test the renewal process and verify that the hook is executed correctly, you can use the following command with a <code>--dry-run flag</code>. Please note, that the hook will be executed and existing certificates will be removed (if you are using an example hook script):</p>
+<pre><code class="language-nohighlight">sudo REQUESTS_CA_BUNDLE=ca.pem certbot renew --standalone --server https://ca.internal/acme/acme/directory --dry-run
+</code></pre>
+<p>Please refer to the <a href="https://certbot.eff.org/instructions?ws=other&amp;os=ubuntufocal">cerbot documentation</a> for more information.</p>
     </div>
   </body>
 </html>
