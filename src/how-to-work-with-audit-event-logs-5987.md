@@ -116,7 +116,7 @@ Machine-readable output follows:
 By default, this list is limited to 100 events; that can be changed by specifying the `limit` parameter:
 
 ```nohighlight
-tormrider@neuromancer:~$ maas admin events query level=AUDIT limit=3
+stormrider@neuromancer:~$ maas $PROFILE events query level=AUDIT limit=3
 Success.
 Machine-readable output follows:
 {
@@ -158,18 +158,128 @@ Machine-readable output follows:
 }
 ```
 
+The `limit` parameter can be changed up to a maximum of 1000 entries.
+
 [note]
 Non-administrative users will only see their own audit event logs listed.
 [/note]
 
-Currently, there is no parameter which will filter on `type_id`.
+<a href="#heading--how-to-filter-audit-event-records"><h2 id="heading--how-to-filter-audit-event-records">How to filter audit event records</h2></a>
+
+You can filter audit event records by hostname, mac_address, system id, zone, and owner.  For example, if you want to know what actions the user `admin` took on hostname `valued-moth`, you could enter a command such as this one:
+
+```nohighlight
+maas $PROFILE events query level=AUDIT owner=admin hostname=valued-moth
+```
+
+which might produce output similar to the following:
+
+```nohighlight
+{
+    "count": 14,
+    "events": [
+        {
+            "username": "admin",
+            "node": "e86c7h",
+            "hostname": "valued-moth",
+            "id": 12729,
+            "level": "AUDIT",
+            "created": "Mon, 25 Apr. 2022 21:51:23",
+            "type": "Node",
+            "description": "Started deploying 'valued-moth'."
+        },
+        {
+            "username": "admin",
+            "node": "e86c7h",
+            "hostname": "valued-moth",
+            "id": 12725,
+            "level": "AUDIT",
+            "created": "Mon, 25 Apr. 2022 21:51:18",
+            "type": "Node",
+            "description": "Acquired 'valued-moth'."
+        },
+        {
+            "username": "admin",
+            "node": null,
+            "hostname": "valued-moth",
+            "id": 12502,
+            "level": "AUDIT",
+            "created": "Mon, 25 Apr. 2022 21:44:51",
+            "type": "Node",
+            "description": "Aborted 'commissioning' on 'valued-moth'."
+        },
+        {
+            "username": "admin",
+            "node": null,
+            "hostname": "valued-moth",
+            "id": 12497,
+            "level": "AUDIT",
+            "created": "Mon, 25 Apr. 2022 21:41:52",
+            "type": "Node",
+            "description": "Started commissioning on 'valued-moth'."
+        },
+        {
+            "username": "admin",
+            "node": null,
+            "hostname": "valued-moth",
+            "id": 12493,
+            "level": "AUDIT",
+            "created": "Mon, 25 Apr. 2022 21:41:18",
+            "type": "Node",
+            "description": "Started releasing 'valued-moth'."
+        },
+        {
+            "username": "admin",
+            "node": null,
+            "hostname": "valued-moth",
+            "id": 12486,
+            "level": "AUDIT",
+            "created": "Mon, 25 Apr. 2022 21:40:42",
+            "type": "Node",
+            "description": "Acquired 'valued-moth'."
+        },
+        {
+            "username": "admin",
+            "node": null,
+            "hostname": "valued-moth",
+            "id": 12479,
+            "level": "AUDIT",
+            "created": "Mon, 25 Apr. 2022 21:40:34",
+            "type": "Node",
+            "description": "Started releasing 'valued-moth'."
+        },
+        {
+            "username": "admin",
+            "node": null,
+            "hostname": "valued-moth",
+            "id": 134,
+            "level": "AUDIT",
+            "created": "Thu, 21 Apr. 2022 19:36:48",
+            "type": "Node",
+            "description": "Started deploying 'valued-moth'."
+        },
+        {
+            "username": "admin",
+            "node": null,
+            "hostname": "valued-moth",
+            "id": 130,
+            "level": "AUDIT",
+            "created": "Thu, 21 Apr. 2022 19:36:21",
+            "type": "Node",
+            "description": "Acquired 'valued-moth'."
+        },
+    ],
+    "next_uri": "/MAAS/api/2.0/events/?op=query&level=AUDIT&hostname=valued-moth&owner=admin&after=12729",
+    "prev_uri": "/MAAS/api/2.0/events/?op=query&level=AUDIT&hostname=valued-moth&owner=admin&before=11"
+}
+```
 
 <a href="#heading--how-to-pretty-print-audit-reports-with-jq"><h2 id="heading--how-to-pretty-print-audit-reports-with-jq">How to pretty-print audit reports with jq</h2></a>
 
 A long stream of JSON is not the most efficient means of reporting audit events.  You can use `jq` to create more concise audit reports.  For example, you can try this command:
 
 ```nohighlight
-maas admin events query level=AUDIT limit=20 | jq -r '.events[] | [.created, .username, .hostname,.description] | @tsv'
+maas $PROFILE events query level=AUDIT limit=20 | jq -r '.events[] | [.created, .username, .hostname,.description] | @tsv'
 ```
 
 This produces a table of the first 20 audit events, filtering out the less interesting fields:
@@ -222,121 +332,38 @@ Thu, 21 Apr. 2022 19:20:47	admin	unknown	Updated configuration setting 'http_pro
 Thu, 21 Apr. 2022 19:20:24	admin	unknown	Logged in admin.
 ```
 
-<!--
+<a id="#heading--using-audit-events-to-audit-maas"><h2 id="heading--using-audit-events-to-audit-maas">Using audit events to audit MAAS</h2></a>
 
-There are many user-initiated events in MAAS that an administrator or a user may want to audit. These include someone updating the settings or changing a user's permissions. This page details how to query these events and includes examples of how to perform a query, and the type of data logs can provide.
+Given the procedures above, you can use audit events to answer questions about a particular MAAS instance.  We will only offer a couple of examples here.  You can certainly extrapolate to suit your own particular needs.
 
-This article will help you learn:
+<a id="#heading--auditing-machine-actions"><h3 id="heading--using-auditing-machine-actions">Auditing machine actions</h2></a>
 
-* [How to list audit events for all users](#heading--list-audit-events-for-all-users)
-* [How to list audit events for a specific user](#heading--list-audit-events-for-a-specific-user)
+For example, suppose you were trying to discover who deployed a specific machine (say, `valued-moth`) and when it was deployed.  You could enter a command sequence like this one:
 
-<a href="#heading--list-audit-events-for-all-users"><h2 id="heading--list-audit-events-for-all-users">How to list audit events for all users</h2></a>
-
-To list events for all users, use the following syntax:
-
-``` bash
-maas $PROFILE events query level=AUDIT
+```nohighlight
+maas admin events query level=AUDIT owner="admin" hostname="valued-moth" limit=1000 | jq -r '.events[] | [.created, .username, .hostname,.description] | @tsv' | grep valued-moth | grep deploy
 ```
 
+Such a command might yield results such as these:
 
-The following is example output from the previous command, using admin as the MAAS profile:
-
-``` no-highlight
-Success.
-Machine-readable output follows:
-{
-    "count": 1,
-    "events": [
-        {
-            "username": "admin",
-            "node": null,
-            "hostname": "",
-            "id": 2569,
-            "level": "AUDIT",
-            "created": "Thu, 01 Feb. 2018 22:28:18",
-            "type": "Authorisation",
-            "description": "User admin logged in."
-        }
-    ],
-    "next_uri": "/MAAS/api/2.0/events/?op=query&level=AUDIT&after=2569",
-    "prev_uri": "/MAAS/api/2.0/events/?op=query&level=AUDIT&before=2558"
-}
+```nohighlight
+Mon, 25 Apr. 2022 21:51:23	admin	valued-moth	Started deploying 'valued-moth'.
+Thu, 21 Apr. 2022 19:36:48	admin	valued-moth	Started deploying 'valued-moth'.
 ```
 
-The above output shows that there is currently only one audit event log for the user `admin`, and that MAAS created this log when they logged into the web UI.
+Or as another example, imagine trying to isolate recent changes to MAAS settings made by `admin`.  You could enter a command similar to this one:
 
-<a href="#heading--list-audit-events-for-a-specific-user"><h2 id="heading--list-audit-events-for-a-specific-user">How to list audit events for a specific user</h2></a>
-
-To list the audit event logs for a specific user that you have permissions for, supply the `owner=$USERNAME` parameter to the query command:
-
-``` bash
-maas $PROFILE events query level=AUDIT owner=$USERNAME
+```nohighlight
+maas admin events query level=AUDIT owner="admin" limit=1000 | jq -r '.events[] | [.created, .username, .hostname,.description] | @tsv' | grep setting
 ```
 
-As there is only one audit event log in the database (as seen above), generate some more by performing these four actions:
+which might give you results like these:
 
-1. Create new non-administrator user `johnnybegood` with `admin` user
-2. Logout of web UI as `admin` user and login with `johnnybegood` user
-3. Change password of the `johnnybegood` user
-4. Log back into the web UI (Django forces a re-login when currently logged in user changes their password).
+```nohighlight
+Thu, 21 Apr. 2022 19:21:46	admin	unknown	Updated configuration setting 'completed_intro' to 'True'.
+Thu, 21 Apr. 2022 19:20:49	admin	unknown	Updated configuration setting 'upstream_dns' to '8.8.8.8'.
+Thu, 21 Apr. 2022 19:20:49	admin	unknown	Updated configuration setting 'maas_name' to 'neuromancer'.
+Thu, 21 Apr. 2022 19:20:47	admin	unknown	Updated configuration setting 'http_proxy' to ''.
+````
 
-Let's take a look and see what type of audit event logs we have now, filtering with `owner=johnnybegood` as shown in the following command:
-
-``` bash
-maas admin events query level=AUDIT owner=johnnybegood
-```
-
-``` bash
-Success.
-Machine-readable output follows:
-{
-    "count": 3,
-    "events": [
-        {
-            "username": "johnnybegood",
-            "node": null,
-            "hostname": "",
-            "id": 2877,
-            "level": "AUDIT",
-            "created": "Mon, 12 Feb. 2018 22:34:46",
-            "type": "Authorisation",
-            "description": "User 'johnnybegood' logged in."
-        },
-        {
-            "username": "johnnybegood",
-            "node": null,
-            "hostname": "",
-            "id": 2876,
-            "level": "AUDIT",
-            "created": "Mon, 12 Feb. 2018 22:34:35",
-            "type": "Authorisation",
-            "description": "Password changed for 'johnnybegood'."
-        },
-        {
-            "username": "johnnybegood",
-            "node": null,
-            "hostname": "",
-            "id": 2875,
-            "level": "AUDIT",
-            "created": "Mon, 12 Feb. 2018 22:33:56",
-            "type": "Authorisation",
-            "description": "User 'johnnybegood' logged in."
-        }
-    ],
-    "next_uri": "/MAAS/api/2.0/events/?op=query&level=AUDIT&owner=johnnybegood&after=2877",
-    "prev_uri": "/MAAS/api/2.0/events/?op=query&level=AUDIT&owner=johnnybegood&before=2875"
-}
-```
-
-As we can see above, only audit event logs for the user `johnnybegood` are generated. These events show the following eight items:
-
-1. The user for the event
-2. Whether or not the event is associated with a particular node
-3. The node's hostname
-4. The event id
-5. The level of the event
-6. when MAAS created the event
-7. The event type
-8. The event description
--->
+Using `jq` along with `grep` and other command line utilities, you can quickly produce reports that answer a wide range of audit questions about the current MAAS instance.
