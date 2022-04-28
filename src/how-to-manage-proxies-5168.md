@@ -9,8 +9,8 @@ There are three possible options:
 
 Configuring a proxy with MAAS consists of enabling/disabling one of the above three options and enabling/disabling proxying on a specific subnet. This article will help you learn:
 
-* [About the MAAS internal proxy](#heading--internal-proxy-maas-proxy)
-* [How to create an external proxy](#heading--configure-proxy)
+- [About the MAAS internal proxy](#heading--internal-proxy-maas-proxy)
+- [How to create an external proxy](#heading--configure-proxy)
 
 <a href="#heading--internal-proxy-maas-proxy"><h2 id="heading--internal-proxy-maas-proxy">About the MAAS internal proxy</h2></a>
 
