@@ -670,7 +670,7 @@ Once MAAS is installed, you can use the `--help` flag with `maas init` to get re
     this machine, and configure it for use with MAAS, you can install
     the maas-test-db snap before running 'maas init':
         sudo snap install maas-test-db
-        sudo maas init region+rack --database-uri maas-test-db:-#,
+        sudo maas init region+rack --database-uri maas-test-db:///
 
 We'll quickly walk through these instructions to confirm your understanding.  First, install the `maas-test-db` snap:
  
