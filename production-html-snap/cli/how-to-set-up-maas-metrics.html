@@ -398,7 +398,7 @@
 
 <p>We aim to make MAAS observable, a system in which the internal state can be estimated using only telemetry data. We now offer easier integration with Prometheus and Loki, which are the data ingestion components of the popular Grafana / Prometheus / Loki / AlarmManager stack. This data should be consumed by a stack composed of off-the-shelf open source software, provided by either Juju (for example with the Canonical Observability Stack) or third-parties (SaaS, self-managed).</p>
 <p>In this document, you will learn:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--about-maas-observability">About MAAS observability</a></li>
 <li><a href="#heading--how-to-use-maas-observability-features">How to configure and use MAAS observability features</a></li>
 </ul>
@@ -407,14 +407,14 @@
 <p><a href="../images/d6f66cbb3ea314818894b4f07ca8037628993ae2_2_690x437.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/d6f66cbb3ea314818894b4f07ca8037628993ae2_2_690x437.png"></a></p>
 <p>This document shows how to configure this stack to consume telemetry and to raise alerts of failures.</p>
 <p><a href="#heading--maas-observability-requirements"><h3 id="heading--maas-observability-requirements">MAAS observability requirements</h3></a></p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>a Ubuntu host with MAAS 3.2+ running</li>
 <li>a Ubuntu host with enough storage capacity to hold logs and metrics&rsquo; time-series</li>
 </ul>
 <p>Both hosts require Internet access during the install process. We use LXD to create this setup in a single host, but it&rsquo;s optional. When configuring the stack for a production environment, we advise you to read the Prometheus and Loki documentation to improve security and performance.</p>
 <p><a href="#heading--how-to-use-maas-observability-features"><h2 id="heading--how-to-use-maas-observability-features">How to use MAAS observability features</h2></a></p>
 <p>Observing MAAS requires three steps: configuring the tool stack, exporting the telemetry, and then verifying that everything is working properly.  This section will show you:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--configuring-the--observability-stack">How to configure the observability stack</a></li>
 <li><a href="#heading--how-to-export-maas-controller-telemetry">How to export MAAS controller telemetry</a></li>
 <li><a href="#heading--how-to-verify-correct-operation">How to verify correct operation</a></li>
@@ -466,7 +466,7 @@ EOF
 lxc shell 011y
 </code></pre>
 <p>Next, you have to configure and start four services, include Prometheus, Loki, AlertManager, and Grafana.  This subsection will teach you:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--how-to-configure-and-start-the-prometheus-service">How to configure and start the Prometheus service</a></li>
 <li><a href="#heading--how-to-configure-and-start-the-loki-service">How to configure and start the Loki service</a></li>
 <li><a href="#heading--how-to-start-the-alertmanager">How to start the AlertManager</a></li>

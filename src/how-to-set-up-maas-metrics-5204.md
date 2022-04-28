@@ -5,14 +5,14 @@ We aim to make MAAS observable, a system in which the internal state can be esti
 
 In this document, you will learn:
 
- - [About MAAS observability](#heading--about-maas-observability)
- - [How to configure and use MAAS observability features](#heading--how-to-use-maas-observability-features)
+- [About MAAS observability](#heading--about-maas-observability)
+- [How to configure and use MAAS observability features](#heading--how-to-use-maas-observability-features)
  
 <a href="#heading--about-maas-observability"><h2 id="heading--about-maas-observability">About MAAS observability</h2></a>
 
 Depicted below we have a reference observability stack composed of Prometheus (metrics ingestion and alerting based on metrics), Loki (log ingestion and alerting based on logs), Grafana (visualisation), Alertmanager (notification routing and dispatching) and Grafana Agent (telemetry collector).
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/d/d6f66cbb3ea314818894b4f07ca8037628993ae2_2_690x437.png" target = "_blank">![](upload://eGnGAB4W9qzA8wgGzGaWozgmMTl.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/d/d6f66cbb3ea314818894b4f07ca8037628993ae2_2_690x437.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/d/d6f66cbb3ea314818894b4f07ca8037628993ae2_2_690x437.png"></a>
 
 This document shows how to configure this stack to consume telemetry and to raise alerts of failures.
 
@@ -27,9 +27,9 @@ Both hosts require Internet access during the install process. We use LXD to cre
 
 Observing MAAS requires three steps: configuring the tool stack, exporting the telemetry, and then verifying that everything is working properly.  This section will show you:
 
- - [How to configure the observability stack](#heading--configuring-the--observability-stack)
- - [How to export MAAS controller telemetry](#heading--how-to-export-maas-controller-telemetry)
- - [How to verify correct operation](#heading--how-to-verify-correct-operation)
+- [How to configure the observability stack](#heading--configuring-the--observability-stack)
+- [How to export MAAS controller telemetry](#heading--how-to-export-maas-controller-telemetry)
+- [How to verify correct operation](#heading--how-to-verify-correct-operation)
 
 <a href="#heading--configuring-the--observability-stack"><h3 id="heading--configuring-the--observability-stack">How to configure the observability stack</h3></a>
 
@@ -83,10 +83,10 @@ lxc shell 011y
 
 Next, you have to configure and start four services, include Prometheus, Loki, AlertManager, and Grafana.  This subsection will teach you:
 
- - [How to configure and start the Prometheus service](#heading--how-to-configure-and-start-the-prometheus-service)
- - [How to configure and start the Loki service](#heading--how-to-configure-and-start-the-loki-service)
- - [How to start the AlertManager](#heading--how-to-start-the-alertmanager)
- - [How to start Grafana](#heading--how-to-start-grafana)
+- [How to configure and start the Prometheus service](#heading--how-to-configure-and-start-the-prometheus-service)
+- [How to configure and start the Loki service](#heading--how-to-configure-and-start-the-loki-service)
+- [How to start the AlertManager](#heading--how-to-start-the-alertmanager)
+- [How to start Grafana](#heading--how-to-start-grafana)
 
 Once these services are started, you can proceed to export telemetry data and see how your observability tools are working.
 
@@ -285,11 +285,11 @@ MAAS can provide five endpoints of particular interest to MAAS users:
 
 All available metrics are prefixed with `maas_`, to make it easier to look them up in Prometheus and Grafana UIs.
 
-#### Three questions you may have:
+#### This article will help you learn:
 
-1. [How do I enable Prometheus endpoints?](#heading--enabling-prometheus-endpoints)
-2. [How do I configure Prometheus endpoints?](#heading--configuring-prometheus)
-3. [How can I deploy Prometheus and Grafana?](#heading--deploying-prometheus-and-grafana)
+- [How do I enable Prometheus endpoints?](#heading--enabling-prometheus-endpoints)
+- [How do I configure Prometheus endpoints?](#heading--configuring-prometheus)
+- [How can I deploy Prometheus and Grafana?](#heading--deploying-prometheus-and-grafana)
 
 <a href="#heading--enabling-prometheus-endpoints"><h3 id="heading--enabling-prometheus-endpoints">Enabling Prometheus endpoints</h3></a>
 
