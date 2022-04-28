@@ -397,11 +397,11 @@
   <h1>How to manage regions</h1><!-- "How to manage regions" -->
 <p>A region controller manages communication with the user, via the Web UI/API, as well as managing the rack controller(s) in your system.  The MAAS postgres database is also managed by the region controller.  Typical region-level responsibilities include requesting that a rack controller boot a machine, and providing the ephemeral Ubuntu image needed to commission or enlist a machine.  </p>
 <h4>This article will help you learn:</h4>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--postgresql-setup">How to set up PostgreSQL for the region</a></li>
 <li><a href="#heading--adding-a-new-region-host">How to add a new region host</a></li>
 <li><a href="#heading--increasing-regiond-daemon-workers">How to improve region controller performance</a></li>
-</ol>
+</ul>
 <p><a href="#heading--postgresql-setup"><h2 id="heading--postgresql-setup">How to set up PostgreSQL for the region</h2></a></p>
 <p>Any number of API servers (region controllers) can be present as long as each connects to the same PostgreSQL database and allows the required number of connections.</p>
 <p>On the primary database host, edit file <code>/etc/postgresql/9.5/main/pg_hba.conf</code> to allow the eventual secondary API server to contact the primary PostgreSQL database. Include the below line, replacing

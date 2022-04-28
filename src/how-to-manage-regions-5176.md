@@ -3,9 +3,9 @@ A region controller manages communication with the user, via the Web UI/API, as 
 
 #### This article will help you learn:
 
-1. [How to set up PostgreSQL for the region](#heading--postgresql-setup)
-2. [How to add a new region host](#heading--adding-a-new-region-host)
-3. [How to improve region controller performance](#heading--increasing-regiond-daemon-workers)
+- [How to set up PostgreSQL for the region](#heading--postgresql-setup)
+- [How to add a new region host](#heading--adding-a-new-region-host)
+- [How to improve region controller performance](#heading--increasing-regiond-daemon-workers)
 
 <a href="#heading--postgresql-setup"><h2 id="heading--postgresql-setup">How to set up PostgreSQL for the region</h2></a>
 
