@@ -5,12 +5,12 @@ Canonical provides two SimpleStreams for MAAS images: candidate and stable. Both
 
 #### This article will tell you:
 
-1. [About the candidate stream](#heading--candidate-stream)
-2. [About the stable stream](#heading--stable-stream)
-3. [About the retired daily stream](#heading--daily-stream)
-4. [How to change the stream with the UI](#heading--changing-the-stream)
-5. [How to change the stream with the CLI](#heading--changing-stream-with-cli)
-6. [How to set up a local image mirror](#heading--set-up-local-mirror)
+- [About the candidate stream](#heading--candidate-stream)
+- [About the stable stream](#heading--stable-stream)
+- [About the retired daily stream](#heading--daily-stream)
+- [How to change the stream with the UI](#heading--changing-the-stream)
+- [How to change the stream with the CLI](#heading--changing-stream-with-cli)
+- [How to set up a local image mirror](#heading--set-up-local-mirror)
 
 <a href="#heading--candidate-stream"><h2 id="heading--candidate-stream">About the candidate stream</h2></a>
 
