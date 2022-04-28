@@ -11,27 +11,27 @@ This article will show you:
 
 To assign a tag to a network interface, use the following procedure:
 
-1. Go to the machine list and select the machine where that interface resides, by clicking on that machine's name:
+- Go to the machine list and select the machine where that interface resides, by clicking on that machine's name:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png"></a>
 
-2. Click on the "Network" tab:
+- Click on the "Network" tab:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/9aebbe5708683d937c682e64e22c72d537629cf8.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9aebbe5708683d937c682e64e22c72d537629cf8.png"></a>
 
-3. Choose the interface you'd like to tag, by selecting the checkbox next to its name:
+- Choose the interface you'd like to tag, by selecting the checkbox next to its name:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png"></a>
 
 The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
 
-4. Select the drop-down under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
+- Select the drop-down under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png"></a>
 
-5. Edit the "Tags" field as desired.
+- Edit the "Tags" field as desired.
 
-6. Be sure to select the "Tag machine" button to apply your changes to the interface for that machine.
+- Be sure to select the "Tag machine" button to apply your changes to the interface for that machine.
 
 Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next -- so auto complete menus will be sparse or non-existent most of the time for these tag types.
 
@@ -39,27 +39,27 @@ Note that different machines may have the same physical interface name, but diff
 
 To remove a tag from a network interface, use the following procedure:
 
-1. Go to the machine list and select the machine where that interface resides, by clicking on that machine's name:
+- Go to the machine list and select the machine where that interface resides, by clicking on that machine's name:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png"></a>
 
-2. Click on the "Network" tab:
+- Click on the "Network" tab:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/9aebbe5708683d937c682e64e22c72d537629cf8.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9aebbe5708683d937c682e64e22c72d537629cf8.png"></a>
 
-3. Choose the interface you'd like to un-tag, by selecting the checkbox next to its name:
+- Choose the interface you'd like to un-tag, by selecting the checkbox next to its name:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png"></a>
 
 The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
 
-4. Select the drop-down under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
+- Select the drop-down under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png"></a>
 
-5. Edit the "Tags" field as desired.
+- Edit the "Tags" field as desired.
 
-6. Be sure to select the "Tag machine" button to apply your changes to the interface for that machine.
+- Be sure to select the "Tag machine" button to apply your changes to the interface for that machine.
 
 Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next -- so auto complete menus will be sparse or non-existent most of the time for these tag types.
 
@@ -67,25 +67,25 @@ Note that different machines may have the same physical interface name, but diff
 
 To view the tags associated with a network interface, use the following procedure:
 
-1. Go to the machine list and select the machine where that interface resides, by clicking on that machine's name:
+- Go to the machine list and select the machine where that interface resides, by clicking on that machine's name:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1030782316875c112b9e56586a79478a566fe33a.png"></a>
 
-2. Click on the "Network" tab:
+- Click on the "Network" tab:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/9aebbe5708683d937c682e64e22c72d537629cf8.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9aebbe5708683d937c682e64e22c72d537629cf8.png"></a>
 
-3. Choose the interface you'd like to see, by selecting the checkbox next to its name:
+- Choose the interface you'd like to see, by selecting the checkbox next to its name:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fb2fb338372ac16229dd9acf00aae545660865f2.png"></a>
 
 The checkbox isn't strictly needed to apply the tag, but it helps prevent you from choosing the wrong one when multiple interfaces are available.
 
-4. Select the drop-down under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
+- Select the drop-down under "ACTIONS" at the end of the row, and select "Edit Physical" to edit the parameters of the physical interface:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8694d71a49ae8171ac2088005af8b71101894abb.png"></a>
 
-5. Be sure to cancel the operation when you're done.
+- Be sure to cancel the operation when you're done.
 
 Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next.
 [/tab]
