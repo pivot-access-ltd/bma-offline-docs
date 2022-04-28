@@ -6,7 +6,7 @@ Audit events are a subset of the MAAS event logs.  This article will provide ref
 MAAS audit events can be viewed via the CLI with a command similar to the following:
 
 ```nohighlight
-maas admin events query level=AUDIT
+maas $PROFILE events query level=AUDIT
 ```
 
 Such a command would produce JSON output like this:
@@ -240,3 +240,4 @@ You will notice that these audit event logs are essentially state changes:
 - **NODE_HARDWARE_SYNC_USB_DEVICE**: Node USB Device hardware sync state changes.
 
 For infomrmation on how to use these audit events to answer specific questions, see [How to work with audit event logs](/t/how-to-work-with-audit-event-logs/5987).
+
