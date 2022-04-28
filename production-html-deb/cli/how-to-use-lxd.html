@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -396,7 +396,7 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to use LXD</h1><!-- "How to use LXD" -->
 <p>LXD and MAAS are separate products, and it&rsquo;s useful to allow them to interact as equals, covering a much wider range of use cases.  To allow each of them to follow their own operational models, but still allow them to work together, we&rsquo;ve taken advantage of LXD projects.</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--lxd-setup">How to make LXD available for hosting</a></li>
 <li><a href="#heading--projects-explanation">About LXD projects and MAAS</a></li>
 <li><a href="#heading--projects-tutorial">An LXD project tutorial</a></li>
@@ -625,7 +625,7 @@ locations:
 <p>When composing a virtual machine with LXD, MAAS uses either the &lsquo;maas&rsquo; LXD profile, or (if that doesn&rsquo;t exist) the &lsquo;default&rsquo; LXD profile. The profile is used to determine which bridge to use. Users may also add additional LXD options to the profile which are not yet supported in MAAS.</p>
 <p><a href="#heading--projects-explanation"><h2 id="heading--projects-explanation">About LXD projects and MAAS</h2></a></p>
 <p>It may be beneficial to understand how LXD projects fit into the overall MAAS ecosystem.  LXD projects are not intended to be MAAS projects; they are only intended to limit which LXD containers and VMs are available to MAAS. This section will tell you:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--projects-big-picture">About LXD projects</a></li>
 <li><a href="#heading--projects-history">About design choices</a></li>
 <li><a href="#heading--projects-alternatives">About alternatives to LXD projects in MAAS</a></li>
@@ -642,7 +642,7 @@ locations:
 <p><a href="#heading--maas-control-at-project-level"><h4 id="heading--maas-control-at-project-level">MAAS now controls VMs at a project level</h4></a></p>
 <p>Essentially, MAAS still commissions any VMs it discovers within a VM host, but the scope of the discovery is now limited to a single project.  That project can contain any subset of the existing VMs, from zero to all of them.  Any VM that&rsquo;s already in a project assigned to MAAS will still be re-commissioned, which is the normal behaviour of MAAS upon network discovery.</p>
 <p>Here are the criteria which drove this decision:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>It should be possible for an administrator to select which project(s) MAAS manages, and thus which machines will be automatically enlisted and commissioned.</li>
 <li>It should be possible for MAAS to create and self-assign a new (empty) project, so that the user can compose new VMs within LXD from within the MAAS interface.</li>
 <li>No per-project features should be enabled by default in MAAS-created projects.</li>
@@ -653,7 +653,7 @@ locations:
 <li>When a VM is composed in MAAS, it&rsquo;s created in the target LXD project.</li>
 </ul>
 <p>In addition, a MAAS administrator should be able to:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>refresh information about a specific LXD VM host, and receive correct, up-to-date, and timely status.</li>
 <li>explicitly specify connections between networks and VM interfaces.</li>
 <li>deploy a machine directly as an LXD VM host, connected to MAAS from the outset.</li>
@@ -983,7 +983,7 @@ used_by:
 <p>Here you can see that the non-default project contains only a default profile for itself, and the 15 VMs added there.  The other entities aren&rsquo;t needed here, or can be accessed in the <code>default</code> project if required.</p>
 <p><a href="#heading--projects-step-2-lxd-and-maas"><h3 id="heading--projects-step-2-lxd-and-maas">How to use LXD projects with MAAS</h3></a></p>
 <p>This subsection will show you:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--projects-s2-create-with-vm-host">How to create a new project for MAAS when instantiating a VM host</a></li>
 <li><a href="#heading--projects-s2-create-vm-in-vm-host-project">How to create a new VM in the LXD project associated with a VM host</a></li>
 <li><a href="#heading--projects-s2-move-vm-into-vm-host-project">How to move an existing VM into the LXD project associated with a VM host</a></li>

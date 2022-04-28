@@ -304,20 +304,20 @@ Essentially, MAAS still commissions any VMs it discovers within a VM host, but t
 
 Here are the criteria which drove this decision:
 
-* It should be possible for an administrator to select which project(s) MAAS manages, and thus which machines will be automatically enlisted and commissioned.
-* It should be possible for MAAS to create and self-assign a new (empty) project, so that the user can compose new VMs within LXD from within the MAAS interface.
-* No per-project features should be enabled by default in MAAS-created projects.
-* The project must be explicitly specified when creating the LXD VM host.
-* When a LXD VM host is added, only the existing VMs assigned to the selected project (if any) should be visible to MAAS (and thus, automatically commissioned), and VMs in non-MAAS projects are not affected in any way.
-* When a LXD VM host is deleted, the default behaviour should be for MAAS to leave existing VMs, rather than automatically deleting them; VMs in non-MAAS projects are not affected in any way.
-* MAAS will not create VMs in projects that it doesn't own.
-* When a VM is composed in MAAS, it's created in the target LXD project.
+- It should be possible for an administrator to select which project(s) MAAS manages, and thus which machines will be automatically enlisted and commissioned.
+- It should be possible for MAAS to create and self-assign a new (empty) project, so that the user can compose new VMs within LXD from within the MAAS interface.
+- No per-project features should be enabled by default in MAAS-created projects.
+- The project must be explicitly specified when creating the LXD VM host.
+- When a LXD VM host is added, only the existing VMs assigned to the selected project (if any) should be visible to MAAS (and thus, automatically commissioned), and VMs in non-MAAS projects are not affected in any way.
+- When a LXD VM host is deleted, the default behaviour should be for MAAS to leave existing VMs, rather than automatically deleting them; VMs in non-MAAS projects are not affected in any way.
+- MAAS will not create VMs in projects that it doesn't own.
+- When a VM is composed in MAAS, it's created in the target LXD project.
 
 In addition, a MAAS administrator should be able to:
 
-* refresh information about a specific LXD VM host, and receive correct, up-to-date, and timely status.
-* explicitly specify connections between networks and VM interfaces.
-* deploy a machine directly as an LXD VM host, connected to MAAS from the outset.
+- refresh information about a specific LXD VM host, and receive correct, up-to-date, and timely status.
+- explicitly specify connections between networks and VM interfaces.
+- deploy a machine directly as an LXD VM host, connected to MAAS from the outset.
 
 These criteria were fully met in the MAAS LXD tenant implementation released as part of MAAS 3.0.
 
@@ -736,11 +736,11 @@ Here you can see that the non-default project contains only a default profile fo
 
 This subsection will show you:
 
-* [How to create a new project for MAAS when instantiating a VM host](#heading--projects-s2-create-with-vm-host)
-* [How to create a new VM in the LXD project associated with a VM host](#heading--projects-s2-create-vm-in-vm-host-project)
-* [How to move an existing VM into the LXD project associated with a VM host](#heading--projects-s2-move-vm-into-vm-host-project)
-* [How to delete the VM host](#heading--projects-s2-delete-vm-host)
-* [How to move LXD entities to another project to hide them from MAAS](#heading--projects-s2-move-non-maas-items)
+- [How to create a new project for MAAS when instantiating a VM host](#heading--projects-s2-create-with-vm-host)
+- [How to create a new VM in the LXD project associated with a VM host](#heading--projects-s2-create-vm-in-vm-host-project)
+- [How to move an existing VM into the LXD project associated with a VM host](#heading--projects-s2-move-vm-into-vm-host-project)
+- [How to delete the VM host](#heading--projects-s2-delete-vm-host)
+- [How to move LXD entities to another project to hide them from MAAS](#heading--projects-s2-move-non-maas-items)
 
 <a href="#heading--projects-s2-create-with-vm-host"><h3 id="heading--projects-s2-create-with-vm-host">How to create a new project for MAAS when instantiating a VM host</h3></a>
 
