@@ -296,57 +296,57 @@ bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
 
 To create and assign a controller tag, you can use the following procedure:
 
-1. Click on the "Controllers" tab to open the controllers page:
+- Click on the "Controllers" tab to open the controllers page:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
 
-2. Click on the hyperlinked name of the controller to which you want to assign tags.  You will see a screen with several cards, like this one:
+- Click on the hyperlinked name of the controller to which you want to assign tags.  You will see a screen with several cards, like this one:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
 
-3. Find the "Tags" card and click on "Edit."  You will be brought to that controller's "Configuration" tab.
+- Find the "Tags" card and click on "Edit."  You will be brought to that controller's "Configuration" tab.
 
-4. Click on the "Edit" button for "Controller configuration."
+- Click on the "Edit" button for "Controller configuration."
 You'll be presented with an editing screen similar to this one:
  
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png"></a>
 
-5.  Follow the [general procedure](#heading--create-and-assign-tags) to assign a tag to the controller.
+- Follow the [general procedure](#heading--create-and-assign-tags) to assign a tag to the controller.
 
 <a href="#heading--remove-and-delete-controller-tags"><h2 id="heading--remove-and-delete-controller-tags">How to remove and delete controller tags</h2></a>
 
 To remove (and possibly delete) a controller tag, you can use the following procedure:
 
-1. Click on the "Controllers" tab to open the controllers page:
+- Click on the "Controllers" tab to open the controllers page:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
 
-2. Click on the hyperlinked name of the controller to which you want to assign tags.  You will see a screen with several cards, like this one:
+- Click on the hyperlinked name of the controller to which you want to assign tags.  You will see a screen with several cards, like this one:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
 
-3. Find the "Tags" card and click on "Edit."  You will be brought to that controller's "Configuration" tab.
+- Find the "Tags" card and click on "Edit."  You will be brought to that controller's "Configuration" tab.
 
-4. Click on the "Edit" button for "Controller configuration."
+- Click on the "Edit" button for "Controller configuration."
 You'll be presented with an editing screen similar to this one:
  
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png"></a>
 
-5.  Follow the [general procedure](#heading--delete-and-remove-tags) to remove a tag from the controller.
+- Follow the [general procedure](#heading--delete-and-remove-tags) to remove a tag from the controller.
 
 <a href="#heading--view-controller-tags"><h2 id="heading--view-controller-tags">How to view controller tags</h2></a>
 
 To view a list of tags assigned to a particular controller, you can use the following procedure:
 
-1. Click on the "Controllers" tab to open the controllers page:
+- Click on the "Controllers" tab to open the controllers page:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
 
-2. Click on the hyperlinked name of the controller of interest..  You will see a screen with several cards, like this one:
+- Click on the hyperlinked name of the controller of interest..  You will see a screen with several cards, like this one:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
 
-3. Find the "Tags" card; this card will list all the tags assigned to this controller.
+- Find the "Tags" card; this card will list all the tags assigned to this controller.
 
 [/tab]
 [/tabs]
