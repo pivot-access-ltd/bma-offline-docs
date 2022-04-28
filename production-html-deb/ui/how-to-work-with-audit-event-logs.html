@@ -395,7 +395,6 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to work with audit event logs</h1><!-- "How to work with audit event logs" -->
-<p><a href="#heading--how-to-use-the-cli-to-report-audit-events"><h2>How to report audit events</h2></a></p>
 <p>You can display and filter audit events via the CLI.  The basic command to report events is:</p>
 <pre><code class="language-nohighlight">usage: maas $PROFILE events query [--help] [-d] [-k] [data [data ...]]
 
@@ -542,7 +541,7 @@ Machine-readable output follows:
 </code></pre>
 <p>The <code>limit</code> parameter can be changed up to a maximum of 1000 entries.</p>
 <p><strong>NOTE:</strong> 
-Non-administrative users will only see their own audit event logs listed.</p>
+Non-administrative users will only see their own audit events listed.</p>
 <p><a href="#heading--how-to-filter-audit-event-records"><h2 id="heading--how-to-filter-audit-event-records">How to filter audit event records</h2></a></p>
 <p>You can filter audit event records by hostname, mac_address, system id, zone, and owner.  For example, if you want to know what actions the user <code>admin</code> took on hostname <code>valued-moth</code>, you could enter a command such as this one:</p>
 <pre><code class="language-nohighlight">maas $PROFILE events query level=AUDIT owner=admin hostname=valued-moth
@@ -701,6 +700,7 @@ Thu, 21 Apr. 2022 19:20:24  admin   unknown Logged in admin.
 <pre><code class="language-nohighlight">Mon, 25 Apr. 2022 21:51:23  admin   valued-moth Started deploying 'valued-moth'.
 Thu, 21 Apr. 2022 19:36:48  admin   valued-moth Started deploying 'valued-moth'.
 </code></pre>
+<p><a id="#heading--auditing-settings-changes"><h3 id="heading--using-auditing-settings-changes">Auditing settings changes</h2></a></p>
 <p>Or as another example, imagine trying to isolate recent changes to MAAS settings made by <code>admin</code>.  You could enter a command similar to this one:</p>
 <pre><code class="language-nohighlight">maas admin events query level=AUDIT owner=&quot;admin&quot; limit=1000 | jq -r '.events[] | [.created, .username, .hostname,.description] | @tsv' | grep setting
 </code></pre>

@@ -1,6 +1,4 @@
 <!-- "How to work with audit event logs" -->
-<a href="#heading--how-to-use-the-cli-to-report-audit-events"><h2>How to report audit events</h2></a>
-
 You can display and filter audit events via the CLI.  The basic command to report events is:
 
 ```nohighlight
@@ -161,7 +159,7 @@ Machine-readable output follows:
 The `limit` parameter can be changed up to a maximum of 1000 entries.
 
 [note]
-Non-administrative users will only see their own audit event logs listed.
+Non-administrative users will only see their own audit events listed.
 [/note]
 
 <a href="#heading--how-to-filter-audit-event-records"><h2 id="heading--how-to-filter-audit-event-records">How to filter audit event records</h2></a>
@@ -350,6 +348,8 @@ Such a command might yield results such as these:
 Mon, 25 Apr. 2022 21:51:23	admin	valued-moth	Started deploying 'valued-moth'.
 Thu, 21 Apr. 2022 19:36:48	admin	valued-moth	Started deploying 'valued-moth'.
 ```
+
+<a id="#heading--auditing-settings-changes"><h3 id="heading--using-auditing-settings-changes">Auditing settings changes</h2></a>
 
 Or as another example, imagine trying to isolate recent changes to MAAS settings made by `admin`.  You could enter a command similar to this one:
 
