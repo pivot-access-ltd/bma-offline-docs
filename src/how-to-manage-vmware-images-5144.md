@@ -3,40 +3,39 @@ MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directl
 
 #### This article will tell you:
 
-* [About the prerequisites for creating a VMWare image](#heading--prerequisites-to-create-the-images)
-* [About the features and limitations of VMWare images in MAAS](#heading--features-and-limitations)
-* [How to customise VMWare images](#heading--customising-the-image)
-* [How to build a VMWare image](#heading--building-an-image)
-* [How to upload a VMWare image](#heading--uploading-an-image)
+- [About the rerequisites for creating a VMWare image](#heading--prerequisites-to-create-the-images)
+- [About the features and limitations of VMWare images in MAAS](#heading--features-and-limitations)
+- [How to customise VMWare images](#heading--customising-the-image)
+- [How to build a VMWare image](#heading--building-an-image)
+- [How to upload a VMWare image](#heading--uploading-an-image)
 
 <a href="#heading--prerequisites-to-create-the-images"><h2 id="heading--prerequisites-to-create-the-images">About the prerequisites for creating a VMWare image</h2></a>
 
-<a href="#heading--image-creation"><h3 id="heading--image-creation">About VMWare image creation</h3></a>
+The following are required in order to create and deploy a VMWare image:
 
-1.   A physical machine running Ubuntu 18.04+
-2.   **CPU**: 4 2GHz cores
-3.   **Memory**: 8 GB RAM (16 GB RAM recommended)
-4.   **Disk space**: 11 GB
-5.   [The VMWare ESXi ISO](https://my.vmware.com/en/web/vmware/evalcenter?p=free-esxi6)
-6.   [Packer - https://www.packer.io/intro/getting-started/install.html](https://www.packer.io/intro/getting-started/install.html)
-7.   Procedure was tested with precompiled 64-bit Packer 1.3.4 Linux binaries
-8.   <a href="https://github.com/canonical/packer-maas">Packer template</a> for MAAS custom image
-
-<a href="#heading--image-deployment"><h3 id="heading--image-deployment">About VMWare image deployment</h3></a>
-
-1.   MAAS 2.5.0+
+- MAAS 2.5.0+
+- A physical machine running Ubuntu 18.04+
+- **CPU**: 4 2GHz cores
+- **Memory**: 8 GB RAM (16 GB RAM recommended)
+- **Disk space**: 11 GB
+- [The VMWare ESXi ISO](https://my.vmware.com/en/web/vmware/evalcenter?p=free-esxi6)
+- [Packer - https://www.packer.io/intro/getting-started/install.html](https://www.packer.io/intro/getting-started/install.html)
+- Procedure was tested with precompiled 64-bit Packer 1.3.4 Linux binaries
+- <a href="https://github.com/canonical/packer-maas">Packer template</a> for MAAS custom image
 
 <a href="#heading--features-and-limitations"><h2 id="heading--features-and-limitations">About the features and limitations of VMWare images in MAAS</h2></a>
 
 <a href="#heading--networking"><h3 id="heading--networking">About VMWare images and MAAS networking</h3></a>
 
-1.   VMware ESXi does not support Linux bridges
-2.   Bonds - MAAS maps the following bond modes to VMware ESXi NIC team sharing with load balancing as follows:
-3.   balance-rr - portid
-4.   active-backup - explicit
-5.   802.3ad - iphash, LACP rate and XMIT hash policy settings are ignored.
-6.   No other bond modes are currently supported.
-7.   VMware ESXi does not allow VMs to use a PortGroup that has a VMK attached to it. All configured devices will have a VMK attached. To use a vSwitch with VMs, you must leave a device or alias unconfigured in MAAS.
+The following apply to VMWare image creation, with respect to MAAS networking:
+
+- VMware ESXi does not support Linux bridges
+- Bonds - MAAS maps the following bond modes to VMware ESXi NIC team sharing with load balancing as follows:
+- balance-rr - portid
+- active-backup - explicit
+- 802.3ad - iphash, LACP rate and XMIT hash policy settings are ignored.
+- No other bond modes are currently supported.
+- VMware ESXi does not allow VMs to use a PortGroup that has a VMK attached to it. All configured devices will have a VMK attached. To use a vSwitch with VMs, you must leave a device or alias unconfigured in MAAS.
 
 <a href="#heading--storage"><h3 id="heading--storage">About VMWare images and MAAS storage</h3></a>
 
