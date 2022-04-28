@@ -10,14 +10,14 @@ For additional MAAS CLI commands, you can consult the MAAS CLI help or access th
 
 #### This article will help you learn:
 
-* [How to install the MAAS CLI](#heading--install-the-maas-cli)
-* [How to create an administrator account](#heading--create-an-administrator)
-* [How to obtain the administrator's API key](#heading--obtain-an-api-key)
-* [How to obtain a user's API key](#heading--obtain-a-users-api-key)
-* [How to login to the MAAS CLI](#heading--log-in)
-* [How to create a MAAS CLI login shell script](#heading--cli-login-shellscript)
-* [How to get help from the MAAS CLI](#heading--get-help)
-* [How to log out of the MAAS CLI](#heading--log-out)
+- [How to install the MAAS CLI](#heading--install-the-maas-cli)
+- [How to create an administrator account](#heading--create-an-administrator)
+- [How to obtain the administrator's API key](#heading--obtain-an-api-key)
+- [How to obtain a user's API key](#heading--obtain-a-users-api-key)
+- [How to login to the MAAS CLI](#heading--log-in)
+- [How to create a MAAS CLI login shell script](#heading--cli-login-shellscript)
+- [How to get help from the MAAS CLI](#heading--get-help)
+- [How to log out of the MAAS CLI](#heading--log-out)
 
 <a href="#heading--the-maas-command"><h2 id="heading--install-the-maas-cli">How to install the MAAS CLI</h2></a>
 
