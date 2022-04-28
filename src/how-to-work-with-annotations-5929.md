@@ -16,12 +16,12 @@ This section explains how to work with notes, also known as "static annotations"
 [/tab]
 [/tabs]
 
+[tabs]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" view="UI"]
 <a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">How to work with static annotations</h3></a>
 
 This subsection will help you learn:
 
-[tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" view="UI"]
 - [How to create and assign static annotations](#heading--create-and-assign-static-annotations)
 - [How to delete static annotations](#heading--delete-static-annotations)
 - [How to view static annotations](#heading--view-static-annotations)
@@ -31,51 +31,51 @@ This subsection will help you learn:
 
 To create and assign static annotations (a note) to a machine, follow this procedure:
 
-1. Go to the machine list and click on the machine of interest:
+- Go to the machine list and click on the machine of interest:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
 
-2. This will bring up a machine summary for that machine:
+- This will bring up a machine summary for that machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a>
 
-3. Select "Configuration" and click the "Edit" button to the right of the "Machine configuration" section:
+- Select "Configuration" and click the "Edit" button to the right of the "Machine configuration" section:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png"></a>
 
-4. Add free-form notes in the "Note" field, as desired.
+- Add free-form notes in the "Note" field, as desired.
 
-5. Click "Save changes" to update the machine's configuration.
+- Click "Save changes" to update the machine's configuration.
 
 <a href="#heading--delete-static-annotations"><h4 id="heading--delete-static-annotations">How to delete static annotations</h4></a>
 
 To delete static annotations (a note) from a machine, follow this procedure:
 
-1. Go to the machine list and click on the machine of interest:
+- Go to the machine list and click on the machine of interest:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
 
-2. This will bring up a machine summary for that machine:
+- This will bring up a machine summary for that machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a>
 
-3. Select "Configuration" and click the "Edit" button to the right of the "Machine configuration" section:
+- Select "Configuration" and click the "Edit" button to the right of the "Machine configuration" section:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png"></a>
 
-4. Edit the free-form notes in the "Note" field, as desired.
+- Edit the free-form notes in the "Note" field, as desired.
 
-5. Click "Save changes" to update the machine's configuration.
+- Click "Save changes" to update the machine's configuration.
 
 <a href="#heading--view-static-annotations"><h4 id="heading--view-static-annotations">How to view static annotations</h4></a>
 
 To view static annotations, you can follow this procedure:
 
-1. Go to the machine list and look at the machine of interest; you should see the first few characters of a note in the bottom half of the column marked "POOL/NOTE:"
+- Go to the machine list and look at the machine of interest; you should see the first few characters of a note in the bottom half of the column marked "POOL/NOTE:"
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/3286feef733f4b56a94708d3af044c1523e78369.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3286feef733f4b56a94708d3af044c1523e78369.png"></a>
 
-2. Click on the machine, which will bring up a machine summary for that machine. Switch to the configuration tab to see the full note:
+- Click on the machine, which will bring up a machine summary for that machine. Switch to the configuration tab to see the full note:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png"></a>
 
@@ -90,9 +90,9 @@ This subsection will help you learn:
 
 To view the dynamic (workload) annotations for one machine, do the following:
 
-1. Go to the machine list and select the machine of interest by clicking on its hyperlinked name.
+- Go to the machine list and select the machine of interest by clicking on its hyperlinked name.
 
-2. In the machine summary that comes up, look for the "Workload Annotations" card, in the lower, right-hand corner:
+- In the machine summary that comes up, look for the "Workload Annotations" card, in the lower, right-hand corner:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e7def7a50f9c854f7aae0efc34897338c46c32c0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e7def7a50f9c854f7aae0efc34897338c46c32c0.png"></a>
 
@@ -100,17 +100,14 @@ To view the dynamic (workload) annotations for one machine, do the following:
 
 To filter machines by dynamic (workload) annotations, use the following procedure:
 
-1. Go to the machine list and select the "Filter" drop-down; open the "Workload" segment:
+- Go to the machine list and select the "Filter" drop-down; open the "Workload" segment:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/946fb41e9cefb10a0b59787ce22b70a91b248d01.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/946fb41e9cefb10a0b59787ce22b70a91b248d01.jpeg"></a>
 
-2. Select one or more values from this list to filter the machine list by these workload annotations.
+- Select one or more values from this list to filter the machine list by these workload annotations.
 
 [/tab]
 [tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
-- [How to work with static annotations](#heading--work-with-static-annotations)
-- [How to work with dynamic (workload) annotations](#heading--work-with-dynamic-workload-annotations)
-
 <a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">How to work with static annotations</h3></a>
 
 This subsection will help you learn:
@@ -441,51 +438,51 @@ driven-teal  tgaat6     farquar     foobar
 
 To create and assign static annotations (a note) to a machine, follow this procedure:
 
-1. Go to the machine list and click on the machine of interest:
+- Go to the machine list and click on the machine of interest:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
 
-2. This will bring up a machine summary for that machine:
+- This will bring up a machine summary for that machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a>
 
-3. Select "Configuration" and click the "Edit" button to the right of the "Machine configuration" section:
+- Select "Configuration" and click the "Edit" button to the right of the "Machine configuration" section:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png"></a>
 
-4. Add free-form notes in the "Note" field, as desired.
+- Add free-form notes in the "Note" field, as desired.
 
-5. Click "Save changes" to update the machine's configuration.
+- Click "Save changes" to update the machine's configuration.
 
 <a href="#heading--delete-static-annotations"><h4 id="heading--delete-static-annotations">How to delete static annotations</h4></a>
 
 To delete static annotations (a note) from a machine, follow this procedure:
 
-1. Go to the machine list and click on the machine of interest:
+- Go to the machine list and click on the machine of interest:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
 
-2. This will bring up a machine summary for that machine:
+- This will bring up a machine summary for that machine:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a>
 
-3. Select "Configuration" and click the "Edit" button to the right of the "Machine configuration" section:
+- Select "Configuration" and click the "Edit" button to the right of the "Machine configuration" section:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png"></a>
 
-4. Edit the free-form notes in the "Note" field, as desired.
+- Edit the free-form notes in the "Note" field, as desired.
 
-5. Click "Save changes" to update the machine's configuration.
+- Click "Save changes" to update the machine's configuration.
 
 <a href="#heading--view-static-annotations"><h4 id="heading--view-static-annotations">How to view static annotations</h4></a>
 
 To view static annotations, you can follow this procedure:
 
-1. Go to the machine list and look at the machine of interest; you should see the first few characters of a note in the bottom half of the column marked "POOL/NOTE:"
+- Go to the machine list and look at the machine of interest; you should see the first few characters of a note in the bottom half of the column marked "POOL/NOTE:"
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/3286feef733f4b56a94708d3af044c1523e78369.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3286feef733f4b56a94708d3af044c1523e78369.png"></a>
 
-2. Click on the machine, which will bring up a machine summary for that machine. Switch to the configuration tab to see the full note:
+- Click on the machine, which will bring up a machine summary for that machine. Switch to the configuration tab to see the full note:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png"></a>
 
