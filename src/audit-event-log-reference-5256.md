@@ -105,5 +105,4 @@ You will notice that these audit event logs are essentially state changes:
 - **NODE_HARDWARE_SYNC_CPU**: Node CPU hardware sync state changes.
 - **NODE_HARDWARE_SYNC_USB_DEVICE**: Node USB Device hardware sync state changes.
 
-Obviously, the MAAS database can be queried to examine audit events, as shown above.  In some cases, this method may be the most efficient.  
-
+Obviously, the MAAS database can be queried to examine audit events, as shown above.  In some cases, this method may be the most efficient.
