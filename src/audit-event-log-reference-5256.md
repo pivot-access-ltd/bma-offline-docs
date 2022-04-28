@@ -240,4 +240,3 @@ You will notice that these audit event logs are essentially state changes:
 - **NODE_HARDWARE_SYNC_USB_DEVICE**: Node USB Device hardware sync state changes.
 
 For infomrmation on how to use these audit events to answer specific questions, see [How to work with audit event logs](/t/how-to-work-with-audit-event-logs/5987).
-
