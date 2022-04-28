@@ -5,29 +5,29 @@ This section will show you:
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-* [How to enable network discovery](#heading--how-to-enable-network-discovery)
-* [How to toggle subnet management](#heading--how-to-toggle-subnet-management)
-* [How to access the main networking view](#heading--how-to-access-ui-main-networking-view)
-* [How to display the subnet window](#heading--ui-how-to-display-the-subnet-window)
-* [How to view the subnet summary](#heading--ui-how-to-view-the-subnet-summary)
-* [How to view utilisation](#heading--ui-how-to-view-utilisation)
-* [How to manage static routes between subnets](#heading--how-to-manage-static-routes)
-* [How to view reserved ranges](#heading--how-to-view-reserved-ranges)
-* [How to view used IP addresses](#heading--ui-how-to-view-used-ip-addresses)
-* [How to set up a bridge with MAAS](#heading--how-to-set-up-a-bridge-with-maas)
-* [How to set up a bridge with netplan](#heading--how-to-set-up-a-bridge-with-netplan)
+- [How to enable network discovery](#heading--how-to-enable-network-discovery)
+- [How to toggle subnet management](#heading--how-to-toggle-subnet-management)
+- [How to access the main networking view](#heading--how-to-access-ui-main-networking-view)
+- [How to display the subnet window](#heading--ui-how-to-display-the-subnet-window)
+- [How to view the subnet summary](#heading--ui-how-to-view-the-subnet-summary)
+- [How to view utilisation](#heading--ui-how-to-view-utilisation)
+- [How to manage static routes between subnets](#heading--how-to-manage-static-routes)
+- [How to view reserved ranges](#heading--how-to-view-reserved-ranges)
+- [How to view used IP addresses](#heading--ui-how-to-view-used-ip-addresses)
+- [How to set up a bridge with MAAS](#heading--how-to-set-up-a-bridge-with-maas)
+- [How to set up a bridge with netplan](#heading--how-to-set-up-a-bridge-with-netplan)
 [/tab]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-* [How to enable network discovery](#heading--how-to-enable-network-discovery)
-* [How to toggle subnet management](#heading--how-to-toggle-subnet-management)
-* [How to determine fabric ID](#heading--how-to-determine-fabric-id)
-* [How to set a default gateway](#heading--how-to-set-a-default-gateway)
-* [How to set a DNS server](#heading--how-to-set-a-dns-server)
-* [How to list available subnets](#heading--cli-list-available-subnets)
-* [How to view subnet details](#heading--cli-how-to-view-subnet-details)
-* [How to manage static routes between subnets](#heading--how-to-manage-static-routes)
-* [How to set up a bridge with MAAS](#heading--how-to-set-up-a-bridge-with-maas)
-* [How to set up a bridge with netplan](#heading--how-to-set-up-a-bridge-with-netplan)
+- [How to enable network discovery](#heading--how-to-enable-network-discovery)
+- [How to toggle subnet management](#heading--how-to-toggle-subnet-management)
+- [How to determine fabric ID](#heading--how-to-determine-fabric-id)
+- [How to set a default gateway](#heading--how-to-set-a-default-gateway)
+- [How to set a DNS server](#heading--how-to-set-a-dns-server)
+- [How to list available subnets](#heading--cli-list-available-subnets)
+- [How to view subnet details](#heading--cli-how-to-view-subnet-details)
+- [How to manage static routes between subnets](#heading--how-to-manage-static-routes)
+- [How to set up a bridge with MAAS](#heading--how-to-set-up-a-bridge-with-maas)
+- [How to set up a bridge with netplan](#heading--how-to-set-up-a-bridge-with-netplan)
 [/tab]
 [/tabs]
 
@@ -173,29 +173,29 @@ The **Subnet summary** section is the largest and most complex of the subnet con
 
 This screen presents the following configurable options:
 
-* **Name**: Subnet names can be any valid text string. By default, they are named with the CIDR of the subnet itself.
+- **Name**: Subnet names can be any valid text string. By default, they are named with the CIDR of the subnet itself.
 
-* **CIDR**: This is the address parameter for the subnet.  In keeping with standard CIDR notation, the number of bits of the prefix are indicated after the slash.
+- **CIDR**: This is the address parameter for the subnet.  In keeping with standard CIDR notation, the number of bits of the prefix are indicated after the slash.
 
-* **Gateway IP**: This is the address of the default gateway for your subnet, which is the IP address that transfers packets to other subnets or networks. Typically, this is simply the first IP address in a block of addresses (the `.1` address).
+- **Gateway IP**: This is the address of the default gateway for your subnet, which is the IP address that transfers packets to other subnets or networks. Typically, this is simply the first IP address in a block of addresses (the `.1` address).
 
-* **DNS**: This is the address of a DNS (domain name server, or simply "name server") for your subnet.  It's optional, but can be configured if desired.
+- **DNS**: This is the address of a DNS (domain name server, or simply "name server") for your subnet.  It's optional, but can be configured if desired.
 
-* **Description**: This field represents free form text that you can enter to describe your subnet, as needed to keep important notes attached to the definition of the subnet.
+- **Description**: This field represents free form text that you can enter to describe your subnet, as needed to keep important notes attached to the definition of the subnet.
 
-* **Managed allocation** refers to the ability of MAAS to completely [manage a subnet](#heading--about-managed-subnets).
+- **Managed allocation** refers to the ability of MAAS to completely [manage a subnet](#heading--about-managed-subnets).
 
-* **Active mapping** instructs MAAS to scan the subnet every 3 hours to discover hosts that have not been discovered passively.
+- **Active mapping** instructs MAAS to scan the subnet every 3 hours to discover hosts that have not been discovered passively.
 
-* **Proxy access** instructs MAAS to allow clients from this subnet to access the MAAS proxy.
+- **Proxy access** instructs MAAS to allow clients from this subnet to access the MAAS proxy.
 
-* **Allow DNS resolution** allows subnet clients to use MAAS for DNS resolution.
+- **Allow DNS resolution** allows subnet clients to use MAAS for DNS resolution.
 
-* **Fabric**: This field allows you to set the subnets fabric.
+- **Fabric**: This field allows you to set the subnets fabric.
 
-* **VLAN**: This field allows you to set the subnets VLAN.
+- **VLAN**: This field allows you to set the subnets VLAN.
 
-* **Space** is presented for clarity, though spaces are managed at the VLAN level.
+- **Space** is presented for clarity, though spaces are managed at the VLAN level.
 
 <a href="#heading--ui-how-to-view-utilisation"><h3 id="heading--ui-how-to-view-utilisation">How to view utilisation</h3></a>
 
