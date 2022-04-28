@@ -396,7 +396,7 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to manage VM hosts</h1><!-- "How to manage VM hosts" -->
 <p>In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself. Once that&rsquo;s done, you can add and manage VM hosts &ndash; and subsequently, create VMs to act as MAAS machines.  This article explains:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--maas-bridge-web-ui">How to set up a VM host bridge with the web UI</a></li>
 <li><a href="#heading--maas-bridge-netplan">How to set up a VM host bridge with netplan</a></li>
 <li><a href="#heading--maas-bridge-libvirt">How to set up a VM host bridge with libvirt</a></li>
@@ -460,10 +460,10 @@ It&rsquo;s essential to enforce usage of IP addresses to avoid domain name confl
 <p><a href="#heading--maas-bridge-libvirt"><h2 id="heading--maas-bridge-libvirt">How to set up a VM host bridge with libvirt</h2></a></p>
 <p>It is also possible to use <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a> to configure a virtual bridge.  This method will also work for LXD VM hosts running on Ubuntu.  Be aware that other methods may be required if you are configuring LXD on an OS other than Ubuntu.</p>
 <p>By default, libvirt creates a virtual bridge, <code>virbr0</code>, through which VMs communicate with each other and the Internet. DHCP, supplied by libvirt, automatically assigns an IP address to each VM.  However, to enable network booting in MAAS, you’ll need to provide DHCP in MAAS and either:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>Disable DHCP on libvirt’s <code>default</code> network, or</li>
 <li>Create a new libvirt network <code>maas</code> with DHCP disabled.</li>
-</ol>
+</ul>
 <p>You can set up such a <code>maas</code> network like this:</p>
 <pre><code class="language-nohighlight">cat &lt;&lt; EOF &gt; maas.xml
 &lt;network&gt;
