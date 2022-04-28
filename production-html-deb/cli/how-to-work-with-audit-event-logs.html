@@ -395,13 +395,8 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to work with audit event logs</h1><!-- "How to work with audit event logs" -->
-<p><a href="#heading--how-to-use-the-cli-to-report-audit-events"><h2>How to use the CLI to report audit events</h2></a></p>
-<p>There is currently no reasonably convenient way to isolate audit events using the MAAS UI.  It is possible to download all events from the &ldquo;Events&rdquo; tab, perhaps in multiple stages, and apply command-line utilities to that data to get a comprehensible report.</p>
-<p>You will probably find it much more efficient to filter audit events and report on them using the MAAS CLI, though. This article will show you how to:</p>
-<p><a href="#heading--how-to-report-events-as-json-using-the-maas-cli"><h2 id="heading--how-to-report-events-as-json-using-the-maas-cli">How to report events as JSON using the MAAS CLI</h2></a>
-<a href="#heading--how-to-report-audit-events-as-json-using-the-maas-cli"><h2 id="heading--how-to-report-audit-events-as-json-using-the-maas-cli">How to report audit events as JSON using the MAAS CLI</h2></a></p>
-<p><a href="#heading--how-to-report-events-as-json-using-the-maas-cli"><h2 id="heading--how-to-report-events-as-json-using-the-maas-cli">How to report events as JSON using the MAAS CLI</h2></a></p>
-<p>The basic command to report events using the MAAS CLI is:</p>
+<p><a href="#heading--how-to-use-the-cli-to-report-audit-events"><h2>How to report audit events</h2></a></p>
+<p>You can display and filter audit events via the CLI.  The basic command to report events is:</p>
 <pre><code class="language-nohighlight">usage: maas $PROFILE events query [--help] [-d] [-k] [data [data ...]]
 
 List node events
@@ -467,8 +462,8 @@ Common command-line options:
     -k, --insecure
     Disable SSL certificate check
 </code></pre>
-<p><a href="#heading--how-to-report-audit-events-as-json-using-the-maas-cli"><h2 id="heading--how-to-report-audit-events-as-json-using-the-maas-cli">How to report audit events as JSON using the MAAS CLI</h2></a></p>
-<p>To report on audit-level events, you just have to add the <code>level</code> parameter, like this:</p>
+<p><a href="#heading--how-to-report-audit-events"><h2 id="heading--how-to-report-audit-events">How to report audit events</h2></a></p>
+<p>To report on audit-level events, you just have to add the <code>level</code> parameter to the previous command, like this:</p>
 <pre><code class="language-nohighlight">maas $PROFILE events query level=AUDIT
 </code></pre>
 <p>This produces a stream of JSON representing only the audit events:</p>

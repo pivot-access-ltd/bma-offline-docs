@@ -1,17 +1,7 @@
 <!-- "How to work with audit event logs" -->
-<a href="#heading--how-to-use-the-cli-to-report-audit-events"><h2>How to use the CLI to report audit events</h2></a>
+<a href="#heading--how-to-use-the-cli-to-report-audit-events"><h2>How to report audit events</h2></a>
 
-There is currently no reasonably convenient way to isolate audit events using the MAAS UI.  It is possible to download all events from the "Events" tab, perhaps in multiple stages, and apply command-line utilities to that data to get a comprehensible report.
-
-You will probably find it much more efficient to filter audit events and report on them using the MAAS CLI, though. This article will show you how to:
-
-<a href="#heading--how-to-report-events-as-json-using-the-maas-cli"><h2 id="heading--how-to-report-events-as-json-using-the-maas-cli">How to report events as JSON using the MAAS CLI</h2></a>
-<a href="#heading--how-to-report-audit-events-as-json-using-the-maas-cli"><h2 id="heading--how-to-report-audit-events-as-json-using-the-maas-cli">How to report audit events as JSON using the MAAS CLI</h2></a>
-
-
-<a href="#heading--how-to-report-events-as-json-using-the-maas-cli"><h2 id="heading--how-to-report-events-as-json-using-the-maas-cli">How to report events as JSON using the MAAS CLI</h2></a>
-
-The basic command to report events using the MAAS CLI is:
+You can display and filter audit events via the CLI.  The basic command to report events is:
 
 ```nohighlight
 usage: maas $PROFILE events query [--help] [-d] [-k] [data [data ...]]
@@ -80,9 +70,9 @@ Common command-line options:
 	Disable SSL certificate check
 ```
 
-<a href="#heading--how-to-report-audit-events-as-json-using-the-maas-cli"><h2 id="heading--how-to-report-audit-events-as-json-using-the-maas-cli">How to report audit events as JSON using the MAAS CLI</h2></a>
+<a href="#heading--how-to-report-audit-events"><h2 id="heading--how-to-report-audit-events">How to report audit events</h2></a>
 
-To report on audit-level events, you just have to add the `level` parameter, like this:
+To report on audit-level events, you just have to add the `level` parameter to the previous command, like this:
 
 ```nohighlight
 maas $PROFILE events query level=AUDIT
