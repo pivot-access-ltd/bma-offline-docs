@@ -397,7 +397,7 @@
   <h1>How to manage racks</h1><!-- "How to manage racks" -->
 <p>A rack controller can connect to multiple VLANs, each from a different network interface. A rack controller can only connect to one MAAS instance at any given time, and must connect to an instance that matches its MAAS version (major and minor).  This configuration provides a scaling factor that can help as a network architecture grows in size.</p>
 <p>This article will tell you:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--install-a-rack-controller">How to install a rack controller</a></li>
 <li><a href="#heading--list-rack-controllers">How to list rack controllers</a></li>
 <li><a href="how-to-enable-high-availability.html#heading--multiple-region-endpoints">How to configure MAAS for multiple API servers</a></li>
@@ -430,7 +430,7 @@ The register command is not required when you are adding a rack controller to a 
 
 <p><a href="#heading--dangers-moving-rack-controller"><h2 id="heading--dangers-moving-rack-controller">About the potential dangers of moving a rack controller</h2></a></p>
 <p>There are dangers associate with moving a rack controller &ndash; dangers that may generate errors, get you into a non-working state, or cause you significant data loss.  These dangers are precipitated by one caveat and two potential mistakes:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p><strong>Using the same system as a rack controller and a VM host:</strong> While not forbidden or inherently dangerous, using the same machine as both a rack controller and a VM host may cause resource contention and poor performance.  If the resources on the system are not more than adequate to cover both tasks, you may see slowdowns (or even apparent &ldquo;freeze&rdquo; events) on the system.</p>
 </li>
