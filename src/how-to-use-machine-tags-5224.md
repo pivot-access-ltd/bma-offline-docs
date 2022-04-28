@@ -13,17 +13,17 @@ This article will help you learn:
 
 If you want to create a new tag, and simultaneously assign it to a machine, use the following steps:
 
-1. Go to the machine list and select the machine you're interested in modifying, by checking the box next to the machine name:
+- Go to the machine list and select the machine you're interested in modifying, by checking the box next to the machine name:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/86ee8529206fcfa297865198a55b976e1002b6bf.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/86ee8529206fcfa297865198a55b976e1002b6bf.png"></a>
 
-2. Select the "Take action" drop-down menu and select "Tag":
+- Select the "Take action" drop-down menu and select "Tag":
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/f77f19b7aef9f880c12a4d710b91cc3abdc03154.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f77f19b7aef9f880c12a4d710b91cc3abdc03154.png"></a>
 
-3. Create and/or assign the desired tag, as described in the [general tagging procedure](#heading--create-and-assign-tags) above.
+- Create and/or assign the desired tag, as described in the [general tagging procedure](#heading--create-and-assign-tags) above.
 
-4. Don't forget to hit the "Tag machine" button when you're done, to apply your changes to the machine.
+- Don't forget to hit the "Tag machine" button when you're done, to apply your changes to the machine.
 
 <a href="#heading--tag-multiple-machines"><h3 id="heading--tag-multiple-machines">How to tag multiple machines at once</h3></a>
 
@@ -41,11 +41,11 @@ Other than the scope of the transaction (e.g., tagging three machines, in this c
 
 To remove machine tags from a machine:
 
-1. View a machine's currently assigned tags: stay on the 'Machines' page and click on the machine in question. MAAS will display currently-assigned tags in the *Tags* pane of the 'Machine summary'.
+- View a machine's currently assigned tags: stay on the 'Machines' page and click on the machine in question. MAAS will display currently-assigned tags in the *Tags* pane of the 'Machine summary'.
 
-2. Select the 'Configuration' tab and then the 'Edit' button alongside 'Machine configuration' to edit tags:
+- Select the 'Configuration' tab and then the 'Edit' button alongside 'Machine configuration' to edit tags:
 
-3. Follow the [general tag removal procedure](#heading--delete-and-remove-tags).
+- Follow the [general tag removal procedure](#heading--delete-and-remove-tags).
 
 <a href="#heading--list-machine-tags-for-multiple-machines"><h2 id="heading--list-machine-tags-for-multiple-machines">How to list machine tags for multiple machines</h2></a>
 
@@ -53,9 +53,9 @@ In the MAAS UI, you don't explicitly list all machine tags; instead, you filter 
 
 Here's how you can filter the machine list by machine tags, using the MAAS UI:
 
-1. To list all tags, visit the 'Machines' tab and expand the 'Tags' subsection in the left pane. In this view, you can use tags as machine search filters.
+- To list all tags, visit the 'Machines' tab and expand the 'Tags' subsection in the left pane. In this view, you can use tags as machine search filters.
 
-2. Select one or several tags. The machines that satisfy all selected tags will display on the right pane. Notice there is a search field at the top of the right pane. You can type a search expression into this field.
+- Select one or several tags. The machines that satisfy all selected tags will display on the right pane. Notice there is a search field at the top of the right pane. You can type a search expression into this field.
 
 Below, tag 'virtual' has been selected (with the mouse), and the search field automatically reflects this. Five machines satisfy this search filter.
 
@@ -67,23 +67,23 @@ Remove a tag from the search filter by either hitting the 'x' character alongsid
 
 To view the tags assigned to a specific machine, use the following procedure:
 
-1. On the machine list, select the machine of interest by clicking on its name.
+- On the machine list, select the machine of interest by clicking on its name.
 
-2. On the machine detail screen that comes up, look for the tags on one of the cards presented there: the tags for that machine should be listed there.
+- On the machine detail screen that comes up, look for the tags on one of the cards presented there: the tags for that machine should be listed there.
 
 <a href="#heading--view-machine-tags-for-a-vm-host"><h2 id="heading--view-machine-tags-for-a-vm-host">How to view machine tags for a VM host</h2></a>
 
 To view the machine tags assigned to a VM host, here's the procedure you'll follow:
 
-1. Click on the KVM tab at the top of the screen.  This will bring you to a list of active KVMs for your system:
+- Click on the KVM tab at the top of the screen.  This will bring you to a list of active KVMs for your system:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/5/559f0ed9250524792fda93457bc1876304915599.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/559f0ed9250524792fda93457bc1876304915599.png"></a>
 
-2. On the detail screen that comes up, choose the "Settings" tab at the top:
+- On the detail screen that comes up, choose the "Settings" tab at the top:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/8/8c8454d576b4b49dd99c3f6c6bb2735252591010.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8c8454d576b4b49dd99c3f6c6bb2735252591010.png"></a>
 
-3. In the settings tab, you'll see a box labelled "Tags."  You can use this box to view, assign, edit, or remove tags for the KVM:
+- In the settings tab, you'll see a box labelled "Tags."  You can use this box to view, assign, edit, or remove tags for the KVM:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e7953d2c5d153b82eac3cb1a3ba105ec194eb077.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e7953d2c5d153b82eac3cb1a3ba105ec194eb077.png"></a>
 
