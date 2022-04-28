@@ -12,12 +12,12 @@ There is at least one way to make each of these things available in an air-gappe
 
 #### This article will help you learn:
 
-* [How to use the snap proxy to refresh snaps in an air-gapped environment](#heading--using-the-snap-proxy)
-* [How to make package updates available in an air-gapped environment](#heading--apt-mirror)
-* [How to retrieve or update MAAS images in an air-gapped environment](#heading--local-image-mirroring)
-* [How to retrieve or update non-MAAS-maintained images in an air-gapped environment](#heading--non-maas-images)
-* [How to use user_data to access non-MAAS-maintained images](#heading--other-os-user-data)
-* [How to set up a transparent proxy](#heading--transparent-proxy)
+- [How to use the snap proxy to refresh snaps in an air-gapped environment](#heading--using-the-snap-proxy)
+- [How to make package updates available in an air-gapped environment](#heading--apt-mirror)
+- [How to retrieve or update MAAS images in an air-gapped environment](#heading--local-image-mirroring)
+- [How to retrieve or update non-MAAS-maintained images in an air-gapped environment](#heading--non-maas-images)
+- [How to use user_data to access non-MAAS-maintained images](#heading--other-os-user-data)
+- [How to set up a transparent proxy](#heading--transparent-proxy)
 
 <h2 id="heading--using-the-snap-proxy"><a href="#heading--using-the-snap-proxy">How to use the snap proxy to refresh snaps in an air-gapped environment</a></h2>
 
@@ -58,8 +58,8 @@ MAAS allows you to deploy many types of OSes, and, once deployed, install specif
 
 MAAS only does this for Ubuntu, not CentOS or RHEL. If you deploy CentOS or RHEL with MAAS, the repos that built the image will be deployed.  But this won't work in an air \-gapped environment. To access non-MAAS-maintained images in an air-gapped environment, you will need to use one of two methods:
 
-1. Use `user_data`.
-2. Create custom images and store them in your local mirror.
+- Use `user_data`.
+- Create custom images and store them in your local mirror.
 
 Here's a thumbnail sketch of both of these methods.
 

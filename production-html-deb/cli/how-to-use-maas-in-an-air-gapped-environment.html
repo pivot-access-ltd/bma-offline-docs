@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -405,7 +405,7 @@
 </ol>
 <p>There is at least one way to make each of these things available in an air-gapped environment.  Some of these can be set up to use a transparent proxy, which minimises changes to other components of the MAAS environment.</p>
 <h4>This article will help you learn:</h4>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--using-the-snap-proxy">How to use the snap proxy to refresh snaps in an air-gapped environment</a></li>
 <li><a href="#heading--apt-mirror">How to make package updates available in an air-gapped environment</a></li>
 <li><a href="#heading--local-image-mirroring">How to retrieve or update MAAS images in an air-gapped environment</a></li>
@@ -440,10 +440,10 @@
 <p><a href="#heading--non-maas-images"><h2 id="heading--non-maas-images">How to retrieve or update non-MAAS-maintained images in an air-gapped environment</h2></a></p>
 <p>MAAS allows you to deploy many types of OSes, and, once deployed, install specific software.  MAAS can configure a user specified repository for Ubuntu, so a user can mirror the Ubuntu apt repositories and point MAAS at those repos. When Ubuntu deploys apt will automatically be configured to use the user defined apt mirrors. </p>
 <p>MAAS only does this for Ubuntu, not CentOS or RHEL. If you deploy CentOS or RHEL with MAAS, the repos that built the image will be deployed.  But this won&rsquo;t work in an air -gapped environment. To access non-MAAS-maintained images in an air-gapped environment, you will need to use one of two methods:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>Use <code>user_data</code>.</li>
 <li>Create custom images and store them in your local mirror.</li>
-</ol>
+</ul>
 <p>Here&rsquo;s a thumbnail sketch of both of these methods.</p>
 <h3 id="heading--other-os-user-data"><a href="#heading--other-os-user-data">How to use user_data to access non-MAAS-maintained images</a></h3>
 
