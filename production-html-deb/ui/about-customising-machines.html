@@ -598,7 +598,8 @@ There is the notion of an HWE <em>stack</em>, which refers to the window manager
 <li>add or remove PCI devices</li>
 <li>add or remove USB devices</li>
 </ul>
-<p>In addition, while deploying a machine, you can configure that machine to periodically sync its <a href="#heading--about-hardware-sync">hardware configuration</a>.  Deployed machines will also  passively update changes to the BMC and tags for that machine, as these changes are made.</p>
+<p>You can find the <a href="how-to-customise-machines.html#heading--how-to-enable-hardware-sync-on-a-machine">procedure here</a>.</p>
+<p>While deploying a machine, you can configure that machine to periodically sync its <a href="#heading--about-hardware-sync">hardware configuration</a>.  Deployed machines will also  passively update changes to the BMC and tags for that machine, as these changes are made.</p>
 <p><a href="#heading--about-updating-hardware"><h3 id="heading--about-about-updating-hardware">About updating hardware</h3></a></p>
 <p>Updating hardware on a deployed machine works by installing a special binary on the deployed machine.   This binary is configured at a given interval and push hardware info to the MAAS metadata endpoint.  By setting “enable_hw_sync” to true on a machine prior to deployment, MAAS will add configuration to install a systemd service and timer that will download the hardware sync binary.  This binary then authenticates the machine, reads the hardware info from the machine and pushes it to MAAS. The interval is set globally in the MAAS settings.</p>
 <p>Any changes in hardware are written to the machine’s configuration.  Physical hardware changes will be preserved upon release, while virtual changes, such as a SR-IOV interface, will be dropped.</p>

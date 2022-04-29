@@ -271,7 +271,9 @@ MAAS 3.2 provides the capability to customise deployed machines, in that you can
 - add or remove PCI devices
 - add or remove USB devices
 
-In addition, while deploying a machine, you can configure that machine to periodically sync its [hardware configuration](#heading--about-hardware-sync).  Deployed machines will also  passively update changes to the BMC and tags for that machine, as these changes are made.
+You can find the [procedure here](/t/how-to-customise-machines/5108#heading--how-to-enable-hardware-sync-on-a-machine).
+
+While deploying a machine, you can configure that machine to periodically sync its [hardware configuration](#heading--about-hardware-sync).  Deployed machines will also  passively update changes to the BMC and tags for that machine, as these changes are made.
 
 <a href="#heading--about-updating-hardware"><h3 id="heading--about-about-updating-hardware">About updating hardware</h3></a>
 
