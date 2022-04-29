@@ -3,11 +3,11 @@ Presumably, you have already created an administrative user, but MAAS can also h
 
 Additionally, in order for a user to log into a MAAS-deployed machine that user must have their public SSH key installed on it.  This article explains how to create users and add their public SSH keys to MAAS, so that every deployed machine will automatically have that key installed.  This article will help you learn:
 
-* [How to add a user](#heading--add-a-user)
-* [How to change a user's preferences](#heading--user-preferences)
-* [How to add an SSH key for a user](#heading--ssh-keys)
-* [How to add an API key for a user](#heading--api-key)
-* [How users can change their password](#heading--change-password)
+- [How to add a user](#heading--add-a-user)
+- [How to change a user's preferences](#heading--user-preferences)
+- [How to add an SSH key for a user](#heading--ssh-keys)
+- [How to add an API key for a user](#heading--api-key)
+- [How users can change their password](#heading--change-password)
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
