@@ -400,7 +400,7 @@
 <p>We require the user to explicitly set the cipher suite due to the fact that one BMC’s order is different from another, leading to erroneous discovery. You can explicitly select which cipher suite to use when interacting with a BMC. You do this by selecting the cipher suite in power configuration.  By default, the cipher suite is 3. This is the least secure suite. It is up to you to select a more secure suite if supported and desired.</p>
 <p><a href="#heading--power-management-reference"><h2 id="heading--power-management-reference">Power management reference guide</h2></a></p>
 <h4>This article will help you learn:</h4>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--config-power-type">How to configure a machine&rsquo;s power type</a></li>
 <li><a href="#heading--configure-use-ibm-z">How to configure and use IBM Z with MAAS</a></li>
 <li><a href="#heading--example-virsh-kvm-power-type">How to use the virsh power type</a></li>
@@ -661,26 +661,126 @@
 </table>
 <p><a href="#heading--ipmi"><h3 id="heading--ipmi">IPMI</h3></a></p>
 <p>Some of the fields for this power type have fixed choices, indicated in the &ldquo;Choices&rdquo; column.</p>
-<p>| Form field | Description | Choices | Required |
-|:-----|:-----|:-----|:-----|:-----|
-| Power driver | Power driver |<code>LAN [IPMI 1.5]</code> | Required |
-| | | <code>LAN_2_0 [IPMI 2.0]</code>|
-| Power boot type | Boot type | <code>Automatic</code> | Required |
-| | | <code>Legacy boot</code> | |
-| | | <code>EFI boot</code> | |
-| IP address | IP address of unit || Required |
-| Power user | Username to login || Optional |
-| Power password | Password to access unit || Optional |
-| Power MAC | MAC address of unit || Optional |
-| K_g | K_g BMC key | | Optional |
-| Cipher suite | Cipher suite ID | - <code>17</code> <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small> | Optional |
-| | |<code>3</code> <small>(3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128)</small> | |
-| | |<code></code> (blank) <small>(freeipmi-tools default)</small> | |
-| | |<code>8</code> <small>(8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128)</small> | |
-| | |<code>12</code> <small>(12 - HMAC-MD5::MD5-128::AES-CBC-128)</small> | |
-| Privilege level | IPMI privilege level | <code>User</code> | Optional  |
-| | | <code>Operator</code> | |
-| | | <code>Administrator</code> | |</p>
+<table>
+<thead>
+<tr>
+<th align="left">Form field</th>
+<th align="left">Description</th>
+<th align="left">Choices</th>
+<th align="left">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Power driver</td>
+<td align="left">Power driver</td>
+<td align="left"><code>LAN [IPMI 1.5]</code></td>
+<td align="left">Required</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>LAN_2_0 [IPMI 2.0]</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Power boot type</td>
+<td align="left">Boot type</td>
+<td align="left"><code>Automatic</code></td>
+<td align="left">Required</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>Legacy boot</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>EFI boot</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">IP address</td>
+<td align="left">IP address of unit</td>
+<td align="left"></td>
+<td align="left">Required</td>
+</tr>
+<tr>
+<td align="left">Power user</td>
+<td align="left">Username to login</td>
+<td align="left"></td>
+<td align="left">Optional</td>
+</tr>
+<tr>
+<td align="left">Power password</td>
+<td align="left">Password to access unit</td>
+<td align="left"></td>
+<td align="left">Optional</td>
+</tr>
+<tr>
+<td align="left">Power MAC</td>
+<td align="left">MAC address of unit</td>
+<td align="left"></td>
+<td align="left">Optional</td>
+</tr>
+<tr>
+<td align="left">K_g</td>
+<td align="left">K_g BMC key</td>
+<td align="left"></td>
+<td align="left">Optional</td>
+</tr>
+<tr>
+<td align="left">Cipher suite</td>
+<td align="left">Cipher suite ID</td>
+<td align="left">- <code>17</code> <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small></td>
+<td align="left">Optional</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>3</code> <small>(3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128)</small></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code></code> (blank) <small>(freeipmi-tools default)</small></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>8</code> <small>(8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128)</small></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>12</code> <small>(12 - HMAC-MD5::MD5-128::AES-CBC-128)</small></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Privilege level</td>
+<td align="left">IPMI privilege level</td>
+<td align="left"><code>User</code></td>
+<td align="left">Optional</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>Operator</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>Administrator</code></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 <p><a href="#heading--manual"><h3 id="heading--manual">Manual power configuration</h3></a></p>
 <p>Manual power configuration means exactly that &ndash; manually configured at the unit &ndash; hence there are no parameters to set in the &ldquo;create machine&rdquo; UI.</p>
 <p><a href="#heading--moonshot"><h3 id="heading--moonshot">HP Moonshot - iLO4 (IPMI)</h3></a></p>
@@ -2545,7 +2645,7 @@ power_parameters_power_pass=xxxxxxxx
 </ol>
 <p>MAAS will automatically configure option 1 for you, in case an LPAR is deployed as KVM host (the bridge names may differ).</p>
 <p>In order to achieve this configuration, there are a number of steps that must be executed; specifically, you must know how to:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--ibm-z-requirements">Evaluate IBM Z requirements</a></li>
 <li><a href="#heading--ibm-z-login">Login to the IBM Z</a></li>
 <li><a href="#heading--set-up-ibm-z-partition">Set up a suitable partition for MAAS</a></li>
@@ -2560,7 +2660,7 @@ power_parameters_power_pass=xxxxxxxx
 <p>There are several constraints on the definition and setup of the &lsquo;machine&rsquo; LPARs - please see below.</p>
 <p><a href="#heading--ibm-z-requirements"><h3 id="heading--ibm-z-requirements">Evaluate IBM Z requirements</h3></a></p>
 <p>The system requirements to host MAAS and its virtual machines on the IBM Z platform are as follows:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>IBM z14 GA2 (or newer) or IBM LinuxONE III (or newer)</li>
 <li>HMC running in DPM mode (mandatory, traditional mode is not supported!)</li>
 <li>HMC firmware level H39 - (HMC at H40 and SE at S55) </li>

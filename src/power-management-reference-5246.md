@@ -20,15 +20,15 @@ When using IPMI, MAAS will attempt to automatically detect the correct cipher su
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
-* [How to configure a machine's power type](#heading--config-power-type)
-* [How to configure and use IBM Z with MAAS](#heading--configure-use-ibm-z)
-* [How to use the virsh power type](#heading--example-virsh-kvm-power-type)
-* [Which BMC drivers are supported](#heading--bmc-driver-support)
+- [How to configure a machine's power type](#heading--config-power-type)
+- [How to configure and use IBM Z with MAAS](#heading--configure-use-ibm-z)
+- [How to use the virsh power type](#heading--example-virsh-kvm-power-type)
+- [Which BMC drivers are supported](#heading--bmc-driver-support)
 [/tab]
 [tab version="v2.9 Snap,v2.9 Packages"]
-* [How to configure a machine's power type](#heading--config-power-type)
-* [How to use the virsh power type](#heading--example-virsh-kvm-power-type)
-* [Which BMC drivers are supported](#heading--bmc-driver-support)
+- [How to configure a machine's power type](#heading--config-power-type)
+- [How to use the virsh power type](#heading--example-virsh-kvm-power-type)
+- [Which BMC drivers are supported](#heading--bmc-driver-support)
 [/tab]
 [/tabs]
 
@@ -133,9 +133,9 @@ The following catalogue helps to explain the fields in the "create machine" dial
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
 
 | Form field | Description | Choices | Required |
-|:-----|:-----|:-----|:-----|:-----|
+|:-----------|:------------|:--------|:---------|
 | Power driver | Power driver |`LAN [IPMI 1.5]` | Required |
-| | | `LAN_2_0 [IPMI 2.0]`|
+| | | `LAN_2_0 [IPMI 2.0]`| |
 | Power boot type | Boot type | `Automatic` | Required |
 | | | `Legacy boot` | |
 | | | `EFI boot` | |
