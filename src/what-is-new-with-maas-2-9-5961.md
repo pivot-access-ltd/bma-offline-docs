@@ -70,7 +70,7 @@ Specifically, there are five new features available to support NUMA, SR-IOV, and
 
 This functionality comes with an enhanced panel in the "KVM" details section:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
+<a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank">![](upload://5qDhxTUUitJxRzlVYIhaxShZXS9.png)</a>
 
 See the [VM hosting](/t/about-vm-hosting/5068) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
 
@@ -337,7 +337,7 @@ Specifically, there are five new features available to support NUMA, SR-IOV, and
 
 This functionality comes with an enhanced panel in the "KVM" details section:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
+<a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank">![](upload://5qDhxTUUitJxRzlVYIhaxShZXS9.png)</a>
 
 See the [VM hosting](/t/about-vm-hosting/5068) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
 
