@@ -1,32 +1,30 @@
-<h2>MAAS 3.1 release notes</h2>
-
 We are happy to announce that MAAS 3.1 is now available. This release provides new features and critical bug fixes.
 
 <a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.1 features and fixes</h3></a>
 
- - [Support for LXD clusters](#heading--lxd-clusters): MAAS 3.1 can use LXD clusters with MAAS KVMs.
+- [Support for LXD clusters](#heading--lxd-clusters): MAAS 3.1 can use LXD clusters with MAAS KVMs.
  
- - [Improved image sync performance](#heading--image-sync-performance): After images are downloaded, rack controllers sync new images more quickly.
+- [Improved image sync performance](#heading--image-sync-performance): After images are downloaded, rack controllers sync new images more quickly.
  
- - [Ability to enlist deployed machines](#heading--enlist-deployed-machines): Users can enlist deployed machines, a top feature poll request.
+- [Ability to enlist deployed machines](#heading--enlist-deployed-machines): Users can enlist deployed machines, a top feature poll request.
 
- - [Static Ubuntu image upload and reuse](#heading--static-ubuntu-images): Users can upload, deploy and reuse a bootable ubuntu image
+- [Static Ubuntu image upload and reuse](#heading--static-ubuntu-images): Users can upload, deploy and reuse a bootable ubuntu image
 
- - [Machine configuration cloning UI](#heading--machine-cloning-ui): We have extended machine cloning to the UI.
+- [Machine configuration cloning UI](#heading--machine-cloning-ui): We have extended machine cloning to the UI.
 
- - [LXD authentication UX improvements](#heading--lxd-auth-ux-improvements): LXD certificates are easier to use.
+- [LXD authentication UX improvements](#heading--lxd-auth-ux-improvements): LXD certificates are easier to use.
 
- - [MAAS 3.1 cumulative bug fixes](#heading--maas-3-1-cumulative-bug-fixes)
+- [MAAS 3.1 cumulative bug fixes](#heading--maas-3-1-cumulative-bug-fixes)
 
 Critical and high-priority fixes also extend or repair MAAS features:
 
- - [Expanded proxies](https://bugs.launchpad.net/maas/+bug/1867394): Some proxies require authentication; MAAS now respects peer proxy username and password
+- [Expanded proxies](https://bugs.launchpad.net/maas/+bug/1867394): Some proxies require authentication; MAAS now respects peer proxy username and password
 
- - [Accurate storage pool sizes](https://bugs.launchpad.net/bugs/1949410): The UI now calculates storage pool sizes correctly for CEPH pools; shared pools are no longer stacked
+- [Accurate storage pool sizes](https://bugs.launchpad.net/bugs/1949410): The UI now calculates storage pool sizes correctly for CEPH pools; shared pools are no longer stacked
 
- - [Refresh wipeout bug](https://bugs.launchpad.net/bugs/1949485): MAAS does not destroy existing VMs on a refresh, or when the memory overcommit ratio is changed
+- [Refresh wipeout bug](https://bugs.launchpad.net/bugs/1949485): MAAS does not destroy existing VMs on a refresh, or when the memory overcommit ratio is changed
  
- - [Cloning issue fixed](https://bugs.launchpad.net/bugs/1948500): UI cloning has been repaired to prevent "unsuccessful cloning" of storage
+- [Cloning issue fixed](https://bugs.launchpad.net/bugs/1948500): UI cloning has been repaired to prevent "unsuccessful cloning" of storage
 
 <a href="#heading--installing-3-1-0"><h3 id="heading--installing-3-1-0">How to install MAAS 3.1</h3></a>
 
@@ -227,7 +225,7 @@ Custom Ubuntu images can be uploaded with the MAAS CLI by creating a boot-resour
         base_image=ubuntu/focal \
         filetype=ddraw \
         content@=./custom-ubuntu.img
- ```	 
+```	 
 
 [note]
 When uploading a custom image, there is a new required field: `base_image`. This is not required for non-custom images; any image with the `custom` prefix will require it.
@@ -420,8 +418,8 @@ There is nothing required of our users to experience this improved sync performa
 
 MAAS 3.1 bug fixes can be found in the following milestones:
 
- - [MAAS 3.1 Beta5 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta5)
- - [MAAS 3.1 Beta4 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta4)
- - [MAAS 3.1 Beta3 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta3)
- - [MAAS 3.1 Beta2 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta2)
- - [MAAS 3.1 Beta1 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta1)
+- [MAAS 3.1 Beta5 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta5)
+- [MAAS 3.1 Beta4 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta4)
+- [MAAS 3.1 Beta3 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta3)
+- [MAAS 3.1 Beta2 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta2)
+- [MAAS 3.1 Beta1 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta1)
