@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -397,7 +397,7 @@
   <h1>How to search MAAS</h1><!-- "How to search MAAS" -->
 <p>The Machines and Devices pages contain a powerful interactive search bar that lets you filter machines and devices.  This article is designed to help you understand how to use this resource. </p>
 <h4>This article will explain:</h4>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--simple-searches">How to do simple searches</a></li>
 <li><a href="#heading--filtered-searches">How to do filtered searches</a></li>
 <li><a href="#heading--manual-filters">How to create manual filters</a></li>
@@ -443,9 +443,10 @@ MAAS uses Boolean AND logic to evaluate multiple search terms. For example, when
 
 <a href="#heading--filter-properties"><h2 id="heading--filter-properties">Filter properties reference</h2></a>
 
-In addition to the major filtering categories available in the Filter drop-down menu, twenty-one machine properties are available as filters:
+In addition to the major filtering categories available in the Filter drop-down menu, the following machine properties are available as filters:
 
-1.   architecture
+
+<pre><code class="language-nohighlight">1.   architecture
 2.   cores
 3.   cpu
 4.   distro_series
@@ -466,6 +467,8 @@ In addition to the major filtering categories available in the Filter drop-down 
 19.   storage_tags
 20.   tags
 21.   zone
+</code></pre>
+
 
 For example, the following will search for a machine that has an interface with a specific MAC address marked for PXE booting:
 

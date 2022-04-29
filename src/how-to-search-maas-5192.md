@@ -3,12 +3,12 @@ The Machines and Devices pages contain a powerful interactive search bar that le
 
 #### This article will explain:
 
-* [How to do simple searches](#heading--simple-searches)
-* [How to do filtered searches](#heading--filtered-searches)
-* [How to create manual filters](#heading--manual-filters)
-* [How to set up exact matching](#heading--exact-matching)
-* [How to set up partial matching](#heading--partial-matching)
-* [How to include multiple search terms](#heading--multiple-search-terms)
+- [How to do simple searches](#heading--simple-searches)
+- [How to do filtered searches](#heading--filtered-searches)
+- [How to create manual filters](#heading--manual-filters)
+- [How to set up exact matching](#heading--exact-matching)
+- [How to set up partial matching](#heading--partial-matching)
+- [How to include multiple search terms](#heading--multiple-search-terms)
 
 This article also includes a [filter properties reference](#heading--filter-properties)
 
@@ -60,8 +60,9 @@ MAAS uses Boolean AND logic to evaluate multiple search terms. For example, when
 
 <a href="#heading--filter-properties"><h2 id="heading--filter-properties">Filter properties reference</h2></a>
 
-In addition to the major filtering categories available in the Filter drop-down menu, twenty-one machine properties are available as filters:
+In addition to the major filtering categories available in the Filter drop-down menu, the following machine properties are available as filters:
 
+```nohighlight
 1.   architecture
 2.   cores
 3.   cpu
@@ -83,6 +84,7 @@ In addition to the major filtering categories available in the Filter drop-down 
 19.   storage_tags
 20.   tags
 21.   zone
+```
 
 For example, the following will search for a machine that has an interface with a specific MAC address marked for PXE booting:
 
