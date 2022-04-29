@@ -1,3 +1,5 @@
+<!-- "MAAS 3.1 release notes" -->
+
 We are happy to announce that MAAS 3.1 is now available. This release provides new features and critical bug fixes.
 
 <a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.1 features and fixes</h3></a>
