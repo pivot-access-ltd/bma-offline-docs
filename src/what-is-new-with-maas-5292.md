@@ -1,7 +1,7 @@
 Here you will find release notes for:
 
-* [The current version of MAAS](#heading--current-maas-release-notes)
-* [Other MAAS versions](#heading--other-maas-versions)
+- [The current version of MAAS](#heading--current-maas-release-notes)
+- [Other MAAS versions](#heading--other-maas-versions)
 
 <a href="#heading--current-maas-release-notes"><h2 id="heading--current-maas-release-notes">MAAS 3.1 release notes</h2></a>
 
@@ -9,29 +9,29 @@ We are happy to announce that MAAS 3.1 is now available. This release provides n
 
 <a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.1 features and fixes</h3></a>
 
- - [Support for LXD clusters](#heading--lxd-clusters): MAAS 3.1 can use LXD clusters with MAAS KVMs.
+- [Support for LXD clusters](#heading--lxd-clusters): MAAS 3.1 can use LXD clusters with MAAS KVMs.
  
- - [Improved image sync performance](#heading--image-sync-performance): After images are downloaded, rack controllers sync new images more quickly.
+- [Improved image sync performance](#heading--image-sync-performance): After images are downloaded, rack controllers sync new images more quickly.
  
- - [Ability to enlist deployed machines](#heading--enlist-deployed-machines): Users can enlist deployed machines, a top feature poll request.
+- [Ability to enlist deployed machines](#heading--enlist-deployed-machines): Users can enlist deployed machines, a top feature poll request.
 
- - [Static Ubuntu image upload and reuse](#heading--static-ubuntu-images): Users can upload, deploy and reuse a bootable ubuntu image
+- [Static Ubuntu image upload and reuse](#heading--static-ubuntu-images): Users can upload, deploy and reuse a bootable ubuntu image
 
- - [Machine configuration cloning UI](#heading--machine-cloning-ui): We have extended machine cloning to the UI.
+- [Machine configuration cloning UI](#heading--machine-cloning-ui): We have extended machine cloning to the UI.
 
- - [LXD authentication UX improvements](#heading--lxd-auth-ux-improvements): LXD certificates are easier to use.
+- [LXD authentication UX improvements](#heading--lxd-auth-ux-improvements): LXD certificates are easier to use.
 
- - [MAAS 3.1 cumulative bug fixes](#heading--maas-3-1-cumulative-bug-fixes)
+- [MAAS 3.1 cumulative bug fixes](#heading--maas-3-1-cumulative-bug-fixes)
 
 Critical and high-priority fixes also extend or repair MAAS features:
 
- - [Expanded proxies](https://bugs.launchpad.net/maas/+bug/1867394): Some proxies require authentication; MAAS now respects peer proxy username and password
+- [Expanded proxies](https://bugs.launchpad.net/maas/+bug/1867394): Some proxies require authentication; MAAS now respects peer proxy username and password
 
- - [Accurate storage pool sizes](https://bugs.launchpad.net/bugs/1949410): The UI now calculates storage pool sizes correctly for CEPH pools; shared pools are no longer stacked
+- [Accurate storage pool sizes](https://bugs.launchpad.net/bugs/1949410): The UI now calculates storage pool sizes correctly for CEPH pools; shared pools are no longer stacked
 
- - [Refresh wipeout bug](https://bugs.launchpad.net/bugs/1949485): MAAS does not destroy existing VMs on a refresh, or when the memory overcommit ratio is changed
+- [Refresh wipeout bug](https://bugs.launchpad.net/bugs/1949485): MAAS does not destroy existing VMs on a refresh, or when the memory overcommit ratio is changed
  
- - [Cloning issue fixed](https://bugs.launchpad.net/bugs/1948500): UI cloning has been repaired to prevent "unsuccessful cloning" of storage
+- [Cloning issue fixed](https://bugs.launchpad.net/bugs/1948500): UI cloning has been repaired to prevent "unsuccessful cloning" of storage
 
 <a href="#heading--installing-3-1-0"><h3 id="heading--installing-3-1-0">How to install MAAS 3.1</h3></a>
 
@@ -232,7 +232,7 @@ Custom Ubuntu images can be uploaded with the MAAS CLI by creating a boot-resour
         base_image=ubuntu/focal \
         filetype=ddraw \
         content@=./custom-ubuntu.img
- ```	 
+```	 
 
 [note]
 When uploading a custom image, there is a new required field: `base_image`. This is not required for non-custom images; any image with the `custom` prefix will require it.
@@ -254,22 +254,22 @@ Creating a machine profile is repetitive. We've learned that most users create m
 
 As a MAAS user, you may want to copy a machine configuration to multiple existing machines. Assuming that at least one machine is already configured, you should be able to apply these settings to a list of machines.  This means that a user should be able to:
 
- - select the source machine to copy from.
- - validate that the source machine exists.
- - select at least 1 destination machine.
- - validate that the destination machine(s) exist.
- - edit the source machine or destination machines, if needed.
- - know at all times which machines are affected.
- - see the cloned machines when cloning is successful, or
- - get clear failure information, if cloning fails. 
+- select the source machine to copy from.
+- validate that the source machine exists.
+- select at least 1 destination machine.
+- validate that the destination machine(s) exist.
+- edit the source machine or destination machines, if needed.
+- know at all times which machines are affected.
+- see the cloned machines when cloning is successful, or
+- get clear failure information, if cloning fails. 
 
 #### About choosing configuration items to copy
 
 As a MAAS user, you likely want to select whether storage, network, or both configurations should be cloned. The cloning API allows users to choose interfaces and storage separately.  Thus, this new feature also allows you to:
 
- - clone only the interface (network) configuration.
- - clone only the storage configuration.
- - clone both configurations.
+- clone only the interface (network) configuration.
+- clone only the storage configuration.
+- clone both configurations.
 
 #### About cloning restrictions
 
@@ -319,13 +319,13 @@ While prior versions of MAAS support both ways of authentication (and automatica
 
 For these reasons, when adding a LXD host, MAAS 3.1 provides a way to generate a secret key and certificate pair to use specifically for that server, and show the certificate to the user, so that they can add it to the LXD server trust list.  The user experience changes to something like the following:
 
- - MAAS generates a secret key and certificate pair for use with a LXD server.
- - The user can see the certificate and is guided to add it to the LXD server trust list.
- - The user can easily complete the registration of the LXD server once the certificate is trusted in LXD.
- - All racks use the same key when talking to the LXD server. 
- - If a new rack controller is added, it can communicate with the LXD server out of the box.
- - If the trust password is used, it’s not stored in MAAS persistently.
- - It’s possible to get the certificate for a LXD server from a URL (e.g. for curl use).
+- MAAS generates a secret key and certificate pair for use with a LXD server.
+- The user can see the certificate and is guided to add it to the LXD server trust list.
+- The user can easily complete the registration of the LXD server once the certificate is trusted in LXD.
+- All racks use the same key when talking to the LXD server. 
+- If a new rack controller is added, it can communicate with the LXD server out of the box.
+- If the trust password is used, it’s not stored in MAAS persistently.
+- It’s possible to get the certificate for a LXD server from a URL (e.g. for curl use).
 
 #### About bringing your own certificates
 
@@ -341,11 +341,11 @@ The imported key must not have a passphrase; otherwise, MAAS will not be able to
 
 Suppose that you're creating a new LXD KVM, beginning from the top tab in MAAS:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png" target = "_blank">![](upload://5Rn9eea7n648iKo1sjohP7r5ARY.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png"></a>
 
 Select "Add KVM", which brings you to the definition screen:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png" target = "_blank">![](upload://2uPyI3yDteiWizFUhOM95C5B1Hg.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png"></a>
 
 From here, you'll continue by choosing your authentication method.
 
@@ -353,7 +353,7 @@ From here, you'll continue by choosing your authentication method.
 
 If you choose "Generate new certificate", as shown above, you'll come to a screen like this one:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png" target = "_blank">![](upload://vc5IuTP53xKYzCDYkkPhLxcZFUE.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png"></a>
 
 You can still choose to use the LXD trust password (entered when you ran `lxd init` during LXD installation).  You can also, though, choose to use the certificate MAAS has just generated for you.  To do that, select the entire contents of the text box, copy it, and paste it into a terminal window -- then hit "Enter":
 
@@ -393,7 +393,7 @@ $
 
 The certificate will be created for you.  When you click the "Check authentication" button, you will be brought to this screen:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png" target = "_blank">![](upload://5J5yTzf8p1wHMmyaB8Af6rRBTPC.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png"></a>
 
 from which you can continue with normal LXD KVM setup.
 
@@ -401,7 +401,7 @@ from which you can continue with normal LXD KVM setup.
 
 Suppose that, after identifying your LXD KVM, you choose "Provide certificate and private key".  When you do so, the screen will extend to allow you to upload these items:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png" target = "_blank">![](upload://rQ83izglHaGONtR03yUSYuDY9Sc.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png"></a>
 
 Paste or upload your certificate and private key, then click "Next" to validate your authentication criteria, before continuing through the normal LXD KVM creation process.  If your certificate and/or key aren't usable for some reason, MAAS will return an error (in this case, the private key was entered as gibberish, to produce an error output):
 
@@ -425,18 +425,18 @@ There is nothing required of our users to experience this improved sync performa
 
 MAAS 3.1 bug fixes can be found in the following milestones:
 
- - [MAAS 3.1 Beta5 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta5)
- - [MAAS 3.1 Beta4 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta4)
- - [MAAS 3.1 Beta3 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta3)
- - [MAAS 3.1 Beta2 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta2)
- - [MAAS 3.1 Beta1 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta1)
+- [MAAS 3.1 Beta5 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta5)
+- [MAAS 3.1 Beta4 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta4)
+- [MAAS 3.1 Beta3 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta3)
+- [MAAS 3.1 Beta2 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta2)
+- [MAAS 3.1 Beta1 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta1)
  
 <a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a>
 
 Here are release notes for other relatively recent MAAS versions:
 
-* [MAAS 3.2 Beta](/t/what-is-new-with-maas-3-2/5962)
-* [MAAS 3.0](/t/what-is-new-with-maas-3-0/5963)
-* [MAAS 2.9](/t/what-is-new-with-maas-2-9/5961)
-* [MAAS 2.8](/t/what-is-new-with-maas-2-8/5994)
-* [MAAS 2.7](/t/what-is-new-with-maas-2-7/5993)
+- [MAAS 3.2 Beta](/t/what-is-new-with-maas-3-2/5962)
+- [MAAS 3.0](/t/what-is-new-with-maas-3-0/5963)
+- [MAAS 2.9](/t/what-is-new-with-maas-2-9/5961)
+- [MAAS 2.8](/t/what-is-new-with-maas-2-8/5994)
+- [MAAS 2.7](/t/what-is-new-with-maas-2-7/5993)
