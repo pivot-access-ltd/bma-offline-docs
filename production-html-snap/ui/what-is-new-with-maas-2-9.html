@@ -412,7 +412,7 @@
 
 <p>Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now available.</p>
 <h4>What are the new features &amp; fixes for MAAS 2.9 and MAAS 2.9.1?</h4>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--focal-default">Focal Fossa (20.04) as default commissioning/deployment release</a></li>
 <li><a href="#heading--openvswitch">Support for OpenVswitch bridge type</a></li>
 <li><a href="#heading--numa">Support for NUMA, SR-IOV, and hugepages</a></li>
@@ -434,17 +434,17 @@
 <li><a href="#heading--commissioning-reorder">Commissioning script reordering</a></li>
 <li><a href="#heading--rad">Reader Adaptive Documentation</a></li>
 <li><a href="#heading--offline-docs">Offline documentation</a></li>
-</ol>
-<h4>Six other questions you may have:</h4>
+</ul>
+<h4>Other questions you may have:</h4>
 
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--known-issues">What known issues should I be aware of?</a></li>
 <li><a href="how-to-install-maas.html">How do I install MAAS 2.9?</a></li>
 <li><a href="how-to-install-maas.html#heading--upgrade-maas-snap">How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?</a></li>
 <li><a href="how-to-install-maas.html#heading--install-from-packages">How do I install MAAS 2.9 from packages?</a></li>
 <li><a href="how-to-install-maas.html#heading--upgrade-via-packages">How do I upgrade MAAS 2.8 to MAAS 2.9 using packages?</a></li>
 <li><a href="#heading--bug-fixes">What bugs are fixed so far in this release?</a></li>
-</ol>
+</ul>
 <h2 id="heading--focal-default">Focal Fossa (Ubuntu 20.04 LTS) as default release</h2>
 
 <p>Ubuntu 20.04 LTS (Focal Fossa) is now the default commissioning and deployment release for new MAAS installations.  Machines deployed with Focal may now be registered as KVM hosts.</p>
@@ -455,13 +455,13 @@
 
 <p>MAAS 2.9 adds extensive optimisation tools for using NUMA with virtual machines. You can now see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory. You can quickly spot a VM running in multiple NUMA nodes, and optimise accordingly, with instant updates on pinning and allocations. You can also tell which VMs are currently running.  Using the CLI, you can also pin nodes to specific cores, and configure hugepages for use by VMs.</p>
 <p>Specifically, there are five new features available to support NUMA, SR-IOV, and hugepages:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>You can examine resources on a per-NUMA-node basis.</li>
 <li>You can pin nodes to specific cores (CLI only).</li>
 <li>You can see resources for VM hosts supporting NUMA nodes.</li>
 <li>You can see the alignment between VM host interfaces and NUMA nodes.</li>
 <li>You can configure and use hugepages (configurable in CLI only).</li>
-</ol>
+</ul>
 <p>This functionality comes with an enhanced panel in the &ldquo;KVM&rdquo; details section:</p>
 <p><a href="../images/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a></p>
 <p>See the <a href="about-vm-hosting.html">VM hosting</a> page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you&rsquo;ll see the most relevant instructions.</p>
@@ -493,20 +493,20 @@
 <h2 id="heading--bmc-param-additions">30-maas-01-bmc-config parameter additions</h2>
 
 <p>Four new parameters have been added for IPMI BMC configuration.  These parameters will pull from the global defaults, eliminating the need to set the corresponding parameter in each instance.</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>maas_auto_ipmi_user - The username for the MAAS created IPMI user. Default comes from the global configuration setting.</li>
 <li>maas_auto_ipmi_user_password - The password for the MAAS created IPMI user, by default a random password is generated.</li>
 <li>maas_auto_ipmi_k_g_bmc_key - he IPMI K_g pre-shared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting. If an IPMI K_g key is set but the key is rejected by the BMC MAAS will automatically retry without the K_g key. This works around an edge case where some BMCs will allow you to set an K_g key but don’t allow it to be used.</li>
 <li>maas_auto_ipmi_user_privilege_level - The IPMI user privilege level to use when adding the MAAS IPMI user. Possible options are USER, OPERATOR, or ADMIN. Default comes from the global configuration setting.</li>
-</ol>
+</ul>
 <p>Note that MAAS will not capture the BMC MAC address when detecting IPMI BMCs.</p>
 <h2 id="heading--new-config-options">New global IPMI configuration options</h2>
 
 <p>Two new global IPMI configuration options have been added:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>maas_auto_ipmi_k_g_bmc_key - sets a global default IPMI BMC key.</li>
 <li>maas_auto_ipmi_user_privilege_level - sets a global default IPMI BMC user privilege level.</li>
-</ol>
+</ul>
 <h2 id="heading--global-config-settings">Addition of IPMI config options to UI</h2>
 
 <p>You may now set the global configuration options <code>maas_auto_ipmi_user</code>, <code>maas_auto_ipmi_k_g_bmc_key</code>, and <code>maas_auto_ipmi_user_privilege_level</code> on the &ldquo;Settings&rdquo; page in the UI under &ldquo;Commissioning.&rdquo;</p>
@@ -516,10 +516,10 @@
 <h2 id="heading--rad">IPMI BMC detection improvements (RAD)</h2>
 
 <p>This release adds two improvements to IPMI BMC detection capability:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>The IPMI cipher suite ID will now be automatically detected. MAAS tries to find the most secure cipher suite available. Preference order is 17, 3, 8, 12. If detection fails MAAS will fall back to using freeipmi-tool default, 3, which is what previous versions of MAAS use.</li>
 <li>The IPMI K_g BMC key will now be automatically detected if previously set. </li>
-</ol>
+</ul>
 <h3 id="heading--rad">Reader Adaptive Documentation (RAD)</h3>
 
 <p>This release features Reader Adaptive Documentation, which allows you to adapt individual pages to your install method (Snap vs. Deb), version (2.7/2.8/2.9), and preferred interface (CLI/UI). </p>
@@ -529,19 +529,19 @@
 <h2 id="heading--bmc-improve">BMC improvements</h2>
 
 <p>Three substantial improvements to BMC usage have been released:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>IPMI, HP Moonshot, and Facebook Wedge BMC detection and configuration scripts have been migrated to the commissioning script <code>30-maas-01-bmc-config</code>.</li>
 <li>BMC detection and configuration are now logged to commissioning results.</li>
 <li>If BMC configuration is skipped a ScriptResult will log this result, and indicate which user chose to skip the configuration step.</li>
-</ol>
+</ul>
 <h3 id="heading--ipmi-driver">IPMI power driver upgrades</h3>
 
 <p>Three new configuration options have been added to the IPMI power driver:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>K_g - The BMC Key of the IPMI device. Used to encrypt all traffic to and from the device during communication.</li>
 <li>Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.</li>
 <li>Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.</li>
-</ol>
+</ul>
 <p>See the <a href="-.html#heading--ipmi">Power management reference</a> for details.</p>
 <h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
 
@@ -601,7 +601,7 @@
 
 <p><a href="#heading--bug-fixes"><h2 id="heading--bug-fixes">Bug fixes</h2></a></p>
 <p><a href="#heading--bug-fixes-2-9-2"><h3 id="heading--bug-fixes-2-9-2">Bugs fixed in 2.9.2 release</h3></a></p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>In the MAAS UI, ARM servers based on the <a href="https://bugs.launchpad.net/maas/+bug/1897946">Hi1620 ARM SoC appear as an &ldquo;Unknown model&rdquo;</a>.  A fix was added to <a href="https://discuss.linuxcontainers.orglxd-4-11-has-been-released.html">lxd-4.11</a>, released 2021-02-05.</p>
 </li>
@@ -626,30 +626,30 @@
 <li>
 <p>The Proxmox driver <a href="https://bugs.launchpad.net/maas/+bug/1914165">uses a hard-coded port that cannot be customised</a>.  This port is now customisable in 2.9.2.</p>
 </li>
-</ol>
+</ul>
 <p><a href="#heading--bug-fixes-2-9-1"><h3 id="heading--bug-fixes-2-9-1">Bugs fixed in 2.9.1 release</h3></a></p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>It is now possible to <a href="https://bugs.launchpad.net/maas/+bug/1908434">delete an LXD VM in an offline state</a>.</li>
 <li>MAAS now handles multiple NUMA nodes even when there are <a href="https://bugs.launchpad.net/maas/+bug/1910473">gaps in the numbering</a>.</li>
 <li>A <a href="https://bugs.launchpad.net/maas/+bug/1910909">snap install issue</a> was fixed.</li>
 <li>The way MAAS handles <a href="https://bugs.launchpad.net/maas/+bug/1910909">gateways WRT DHCP</a> was adjusted.</li>
 <li>A majority of the document <a href="https://bugs.launchpad.net/maas/+bug/1900010">headings have been converted to links</a> for easy bookmarking.</li>
-</ol>
+</ul>
 <p><a href="#heading--bug-fixes-2-9"><h3 id="heading--bug-fixes-2-9">Bugs fixed in 2.9 release</h3></a></p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>MAAS 2.9 includes a fix for <a href="https://bugs.launchpad.net/maas/+bug/1894727">Bug #1894727: Admin uses cannot change other user&rsquo;s passwords via the UI</a>.</li>
-</ol>
+</ul>
 <h2>MAAS 2.9.2 release notes</h2>
 
 <p>We have released MAAS 2.9.2, which contains two new features, and some notable <a href="https://launchpad.net/maas/+milestone/2.9.2">bug fixes</a>. The two new features are:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>Proxmox driver: A driver has been added to MAAS 2.9.2 which interacts with the Proxmox API.  Only one URL is needed, though a username and credentials are required.  Credentials can be either a password or an API token.  Note that if you use a token, you have to configure the permissions for the token.  Newly-created Proxmox tokens don&rsquo;t assign any permissions by default, so you must add <code>power on</code>, <code>power off</code>, and <code>query power</code> permissions to the token before using it.</p>
 </li>
 <li>
 <p>Power driver Webhook:  A webhook was added to 2.9.2, which allows MAAS to interface with another web service that&rsquo;s running the power commands.  This webhook is provided for interacting with objects that MAAS does not support, that is, the MAAS team supports the driver itself, but whatever is interfacing to the driver is not supported.  This webhook as three URLs, one each for power on, power off, and power query.  Optionally, this webhook also supports a power user and password or token (RFC 6717).  This gives you a way to add your own power drivers without waiting for the driver to be added to MAAS.  There is a <a href="maas-show-and-tell-proxmox-and-webhook.html/3">video tutorial</a> available on this new feature.</p>
 </li>
-</ol>
+</ul>
 <p>You can also find a <a href="#heading--bug-fixes-2-9-2">digest</a> of the 2.9.2 bug fixes below.</p>
 <h2>MAAS 2.9.1 release notes</h2>
 
@@ -658,7 +658,7 @@
 
 <p>Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now available.</p>
 <h4>What are the new features &amp; fixes for MAAS 2.9 and MAAS 2.9.1?</h4>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--focal-default">Focal Fossa (20.04) as default commissioning/deployment release</a></li>
 <li><a href="#heading--openvswitch">Support for OpenVswitch bridge type</a></li>
 <li><a href="#heading--numa">Support for NUMA, SR-IOV, and hugepages</a></li>
@@ -680,17 +680,17 @@
 <li><a href="#heading--commissioning-reorder">Commissioning script reordering</a></li>
 <li><a href="#heading--rad">Reader Adaptive Documentation</a></li>
 <li><a href="#heading--offline-docs">Offline documentation</a></li>
-</ol>
+</ul>
 <h4>Six other questions you may have:</h4>
 
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--known-issues">What known issues should I be aware of?</a></li>
 <li><a href="how-to-install-maas.html">How do I install MAAS 2.9?</a></li>
 <li><a href="how-to-install-maas.html#heading--upgrade-maas-snap">How do I upgrade my MAAS 2.8 snap to a MAAS 2.9 snap?</a></li>
 <li><a href="how-to-install-maas.html#heading--install-from-packages">How do I install MAAS 2.9 from packages?</a></li>
 <li><a href="how-to-install-maas.html#heading--upgrade-via-packages">How do I upgrade MAAS 2.8 to MAAS 2.9 using packages?</a></li>
 <li><a href="#heading--bug-fixes">What bugs are fixed so far in this release?</a></li>
-</ol>
+</ul>
 <h2 id="heading--focal-default">Focal Fossa (Ubuntu 20.04 LTS) as default release</h2>
 
 <p>Ubuntu 20.04 LTS (Focal Fossa) is now the default commissioning and deployment release for new MAAS installations.  Machines deployed with Focal may now be registered as KVM hosts.</p>
@@ -701,13 +701,13 @@
 
 <p>MAAS 2.9 adds extensive optimisation tools for using NUMA with virtual machines. You can now see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory. You can quickly spot a VM running in multiple NUMA nodes, and optimise accordingly, with instant updates on pinning and allocations. You can also tell which VMs are currently running.  Using the CLI, you can also pin nodes to specific cores, and configure hugepages for use by VMs.</p>
 <p>Specifically, there are five new features available to support NUMA, SR-IOV, and hugepages:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>You can examine resources on a per-NUMA-node basis.</li>
 <li>You can pin nodes to specific cores (CLI only).</li>
 <li>You can see resources for VM hosts supporting NUMA nodes.</li>
 <li>You can see the alignment between VM host interfaces and NUMA nodes.</li>
 <li>You can configure and use hugepages (configurable in CLI only).</li>
-</ol>
+</ul>
 <p>This functionality comes with an enhanced panel in the &ldquo;KVM&rdquo; details section:</p>
 <p><a href="../images/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a></p>
 <p>See the <a href="about-vm-hosting.html">VM hosting</a> page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you&rsquo;ll see the most relevant instructions.</p>
@@ -739,20 +739,20 @@
 <h2 id="heading--bmc-param-additions">30-maas-01-bmc-config parameter additions</h2>
 
 <p>Four new parameters have been added for IPMI BMC configuration.  These parameters will pull from the global defaults, eliminating the need to set the corresponding parameter in each instance.</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>maas_auto_ipmi_user - The username for the MAAS created IPMI user. Default comes from the global configuration setting.</li>
 <li>maas_auto_ipmi_user_password - The password for the MAAS created IPMI user, by default a random password is generated.</li>
 <li>maas_auto_ipmi_k_g_bmc_key - he IPMI K_g pre-shared encryption key to be set when adding the MAAS IPMI user. Note not all IPMI BMCs support setting the k_g key, if MAAS is unable to set the key commissioning will fail. Default comes from the global configuration setting. If an IPMI K_g key is set but the key is rejected by the BMC MAAS will automatically retry without the K_g key. This works around an edge case where some BMCs will allow you to set an K_g key but don’t allow it to be used.</li>
 <li>maas_auto_ipmi_user_privilege_level - The IPMI user privilege level to use when adding the MAAS IPMI user. Possible options are USER, OPERATOR, or ADMIN. Default comes from the global configuration setting.</li>
-</ol>
+</ul>
 <p>Note that MAAS will not capture the BMC MAC address when detecting IPMI BMCs.</p>
 <h2 id="heading--new-config-options">New global IPMI configuration options</h2>
 
 <p>Two new global IPMI configuration options have been added:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>maas_auto_ipmi_k_g_bmc_key - sets a global default IPMI BMC key.</li>
 <li>maas_auto_ipmi_user_privilege_level - sets a global default IPMI BMC user privilege level.</li>
-</ol>
+</ul>
 <h2 id="heading--global-config-settings">Addition of IPMI config options to UI</h2>
 
 <p>You may now set the global configuration options <code>maas_auto_ipmi_user</code>, <code>maas_auto_ipmi_k_g_bmc_key</code>, and <code>maas_auto_ipmi_user_privilege_level</code> on the &ldquo;Settings&rdquo; page in the UI under &ldquo;Commissioning.&rdquo;</p>
@@ -762,10 +762,10 @@
 <h2 id="heading--rad">IPMI BMC detection improvements (RAD)</h2>
 
 <p>This release adds two improvements to IPMI BMC detection capability:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>The IPMI cipher suite ID will now be automatically detected. MAAS tries to find the most secure cipher suite available. Preference order is 17, 3, 8, 12. If detection fails MAAS will fall back to using freeipmi-tool default, 3, which is what previous versions of MAAS use.</li>
 <li>The IPMI K_g BMC key will now be automatically detected if previously set. </li>
-</ol>
+</ul>
 <h3 id="heading--rad">Reader Adaptive Documentation (RAD)</h3>
 
 <p>This release features Reader Adaptive Documentation, which allows you to adapt individual pages to your install method (Snap vs. Deb), version (2.7/2.8/2.9), and preferred interface (CLI/UI). </p>
@@ -775,19 +775,19 @@
 <h2 id="heading--bmc-improve">BMC improvements</h2>
 
 <p>Three substantial improvements to BMC usage have been released:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>IPMI, HP Moonshot, and Facebook Wedge BMC detection and configuration scripts have been migrated to the commissioning script <code>30-maas-01-bmc-config</code>.</li>
 <li>BMC detection and configuration are now logged to commissioning results.</li>
 <li>If BMC configuration is skipped a ScriptResult will log this result, and indicate which user chose to skip the configuration step.</li>
-</ol>
+</ul>
 <h3 id="heading--ipmi-driver">IPMI power driver upgrades</h3>
 
 <p>Three new configuration options have been added to the IPMI power driver:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>K_g - The BMC Key of the IPMI device. Used to encrypt all traffic to and from the device during communication.</li>
 <li>Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.</li>
 <li>Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.</li>
-</ol>
+</ul>
 <p>See the <a href="https://maas.io/docs/power-management#heading--ipmi">2.9 UI</a> or <a href="https://maas.io/doc/power-management#heading--ipmi">2.9 CLI</a> power management pages for details.</p>
 <h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
 
@@ -847,7 +847,7 @@
 
 <p><a href="#heading--bug-fixes"><h2 id="heading--bug-fixes">Bug fixes</h2></a></p>
 <p><a href="#heading--bug-fixes-2-9-2"><h3 id="heading--bug-fixes-2-9-2">Bugs fixed in 2.9.2 release</h3></a></p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>In the MAAS UI, ARM servers based on the <a href="https://bugs.launchpad.net/maas/+bug/1897946">Hi1620 ARM SoC appear as an &ldquo;Unknown model&rdquo;</a>.  A fix was added to <a href="https://discuss.linuxcontainers.orglxd-4-11-has-been-released.html">lxd-4.11</a>, released 2021-02-05.</p>
 </li>
@@ -872,19 +872,19 @@
 <li>
 <p>The Proxmox driver <a href="https://bugs.launchpad.net/maas/+bug/1914165">uses a hard-coded port that cannot be customised</a>.  This port is now customisable in 2.9.2.</p>
 </li>
-</ol>
+</ul>
 <p><a href="#heading--bug-fixes-2-9-1"><h3 id="heading--bug-fixes-2-9-1">Bugs fixed in 2.9.1 release</h3></a></p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>It is now possible to <a href="https://bugs.launchpad.net/maas/+bug/1908434">delete an LXD VM in an offline state</a>.</li>
 <li>MAAS now handles multiple NUMA nodes even when there are <a href="https://bugs.launchpad.net/maas/+bug/1910473">gaps in the numbering</a>.</li>
 <li>A <a href="https://bugs.launchpad.net/maas/+bug/1910909">snap install issue</a> was fixed.</li>
 <li>The way MAAS handles <a href="https://bugs.launchpad.net/maas/+bug/1910909">gateways WRT DHCP</a> was adjusted.</li>
 <li>A majority of the document <a href="https://bugs.launchpad.net/maas/+bug/1900010">headings have been converted to links</a> for easy bookmarking.</li>
-</ol>
+</ul>
 <p><a href="#heading--bug-fixes-2-9"><h3 id="heading--bug-fixes-2-9">Bugs fixed in 2.9 release</h3></a></p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>MAAS 2.9 includes a fix for <a href="https://bugs.launchpad.net/maas/+bug/1894727">Bug #1894727: Admin uses cannot change other user&rsquo;s passwords via the UI</a>.</li>
-</ol>
+</ul>
 <h2 id="heading--known-issues">Known issues</h2>
 
 <h3>RAD LHS menu</h3>
