@@ -2,17 +2,18 @@
 We are happy to announce the release of MAAS 3.0. This release provides new features, along with critical and high-priority [bug fixes](#heading--maas-3-bug-fixes).
 
 #### Cumulative summary of new features in MAAS 3.0
-1. [PCI and USB devices are now modelled in MAAS](#heading--pci-usb-devices)
-2. [IBM Z DPM partition support](#heading--ibm-z-dpm)
-3. [Proxmox support](#heading--proxmox-support)
-4. [LXD projects support](#heading--lxd-projects-support)
-5. [PCI and USB device tabs in machine details](#heading--pci-usb-device-tabs)
-6. [Workload annotations](#heading--workload-annotations)
-7. [Fixed status bar](#heading--fixed-status-bar)
-8. [Registering a machine as a VM host during deployment](#heading--machine-register-vm-host-on-deployment)
-9. [Improvements to MAAS CLI help UX](#heading--maas-cli-ux-improved-help)
-10. [Disabling boot methods](#heading--disabling-boot-methods)
-11. [Consolidation of logs and events](#heading--log-consolidation)
+
+- [PCI and USB devices are now modelled in MAAS](#heading--pci-usb-devices)
+- [IBM Z DPM partition support](#heading--ibm-z-dpm)
+- [Proxmox support](#heading--proxmox-support)
+- [LXD projects support](#heading--lxd-projects-support)
+- [PCI and USB device tabs in machine details](#heading--pci-usb-device-tabs)
+- [Workload annotations](#heading--workload-annotations)
+- [Fixed status bar](#heading--fixed-status-bar)
+- [Registering a machine as a VM host during deployment](#heading--machine-register-vm-host-on-deployment)
+- [Improvements to MAAS CLI help UX](#heading--maas-cli-ux-improved-help)
+- [Disabling boot methods](#heading--disabling-boot-methods)
+- [Consolidation of logs and events](#heading--log-consolidation)
 
 MAAS 3.0 can be installed fresh (recommended) with:
 
@@ -54,13 +55,13 @@ Note that new features are categorised by the level of release at which they bec
 
 The logs and events tabs have combined and now live under "Logs". In addition to a number of small improvements, navigating and displaying events has been made easier.
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/4/497fd5d03ece0308648db33cf144f4cfefc6e5ed_2_690x465.png" target = "_blank">![](upload://zvQSdbcenjYrkYsq2mtDx8UCGgS.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/4/497fd5d03ece0308648db33cf144f4cfefc6e5ed_2_690x465.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/4/497fd5d03ece0308648db33cf144f4cfefc6e5ed_2_690x465.png"></a>
 
 #### Downloading logs
 
 A helpful new feature is the ability to download the machine and installation output, and if a machine has failed deployment you can now download a full tar of the curtain logs.
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fe9df81b810fa3dd502b303b08978d1c60bff933_2_690x465.png" target = "_blank">![](upload://m0CtHR0E4GvNFqRQkcfcFpeSCId.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fe9df81b810fa3dd502b303b08978d1c60bff933_2_690x465.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/f/fe9df81b810fa3dd502b303b08978d1c60bff933_2_690x465.png"></a>
 
 <h3 id="heading--disabling-boot-methods">Disabling boot methods</h3>
 
@@ -74,11 +75,11 @@ maas $PROFILE subnet update $SUBNET disabled_boot_architectures="0x00 uefi_amd64
 
 #### GRUB
 
-* UEFI AMD64 HTTP(00:10) has been re-enabled.
-* UEFI ARM64 HTTP(00:13) has been enabled.
-* UEFI ARM64 TFTP(00:0B) and UEFI ARM64 HTTP(00:13) will now provide a shim and GRUB signed with the Microsoft boot loader keys.
-* grub.cfg for all UEFI platforms has been updated to replace the deprecated `linuxefi` and `initrdefi` commands with the standard `linux` and `initrd` commands.
-* GRUB debug may now be enabled by enabling [rackd debug logging](https://discourse.maas.io/t/running-installed-maas-in-debug-logging-mode/168).
+- UEFI AMD64 HTTP(00:10) has been re-enabled.
+- UEFI ARM64 HTTP(00:13) has been enabled.
+- UEFI ARM64 TFTP(00:0B) and UEFI ARM64 HTTP(00:13) will now provide a shim and GRUB signed with the Microsoft boot loader keys.
+- grub.cfg for all UEFI platforms has been updated to replace the deprecated `linuxefi` and `initrdefi` commands with the standard `linux` and `initrd` commands.
+- GRUB debug may now be enabled by enabling [rackd debug logging](https://discourse.maas.io/t/running-installed-maas-in-debug-logging-mode/168).
 
 <h2>New feature in MAAS 3.0 Beta 4</h2>
 
@@ -178,9 +179,9 @@ When deploying a machine through the API, it’s now possible to specify `regist
 
 MAAS 3.0 models all PCI and USB devices detected during commissioning:
 
-* Existing machines will have to be recommissioned to have PCI and USB devices modelled
-* PCI and USB devices are shown in the UI and on the API using the node-devices endpoint
-* Node devices may be deleted on the API only
+- Existing machines will have to be recommissioned to have PCI and USB devices modelled
+- PCI and USB devices are shown in the UI and on the API using the node-devices endpoint
+- Node devices may be deleted on the API only
 
 On the API using the allocate operation on the machines endpoint a machine may allocated by a device vendor_id, product_id, vendor_name, product_name, or commissioning_driver.
 
@@ -192,10 +193,10 @@ IBM Z14 GA2 (LinuxOne II) and above mainframe partitions are supported in MAAS 3
 
 MAAS 3.0 supports Proxmox as a power driver:
 
-* Only Proxmox VMs are supported
-* You may authenticate with Proxmox using a username and password or a username and API token
-* If an API token is used, it must be given permission to query, start and stop VMs.
-* Proxmox VMs can be added as a chassis; this allows you to add all VMs in Proxmox at once.
+- Only Proxmox VMs are supported
+- You may authenticate with Proxmox using a username and password or a username and API token
+- If an API token is used, it must be given permission to query, start and stop VMs.
+- Proxmox VMs can be added as a chassis; this allows you to add all VMs in Proxmox at once.
 
 Note that proxmox support has also been back-ported to MAAS 2.9
 
@@ -203,11 +204,11 @@ Note that proxmox support has also been back-ported to MAAS 2.9
 
 MAAS 3.0 supports the use of LXD projects:
 
-* LXD VM hosts registered in MAAS are now tied to a specific LXD project which MAAS uses to manage VMs
-* MAAS doesn’t create or manage machines for VMs in other projects
-* MAAS creates the specified project when the VM host is registered, if it doesn't exist
-* All existing VMs in the specified project are commissioned on registration
-* Resource usage is reported at both project and global levels
+- LXD VM hosts registered in MAAS are now tied to a specific LXD project which MAAS uses to manage VMs
+- MAAS doesn’t create or manage machines for VMs in other projects
+- MAAS creates the specified project when the VM host is registered, if it doesn't exist
+- All existing VMs in the specified project are commissioned on registration
+- Resource usage is reported at both project and global levels
 
 <h3 id="heading--pci-usb-device-tabs">PCI and USB device tabs in UI machine details</h3>
 

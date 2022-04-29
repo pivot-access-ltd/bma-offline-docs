@@ -397,7 +397,7 @@
   <h1>What is new with MAAS 3.0</h1><!-- "What is new with MAAS 3.0" -->
 <p>We are happy to announce the release of MAAS 3.0. This release provides new features, along with critical and high-priority <a href="#heading--maas-3-bug-fixes">bug fixes</a>.</p>
 <h4>Cumulative summary of new features in MAAS 3.0</h4>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--pci-usb-devices">PCI and USB devices are now modelled in MAAS</a></li>
 <li><a href="#heading--ibm-z-dpm">IBM Z DPM partition support</a></li>
 <li><a href="#heading--proxmox-support">Proxmox support</a></li>
@@ -409,7 +409,7 @@
 <li><a href="#heading--maas-cli-ux-improved-help">Improvements to MAAS CLI help UX</a></li>
 <li><a href="#heading--disabling-boot-methods">Disabling boot methods</a></li>
 <li><a href="#heading--log-consolidation">Consolidation of logs and events</a></li>
-</ol>
+</ul>
 <p>MAAS 3.0 can be installed fresh (recommended) with:</p>
 <pre><code>sudo snap install --channel=3.0/stable maas
 </code></pre>
@@ -445,7 +445,7 @@ sudo apt install maas
 <pre><code>maas $PROFILE subnet update $SUBNET disabled_boot_architectures=&quot;0x00 uefi_amd64_tftp 00:10&quot;
 </code></pre>
 <h4>GRUB</h4>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>UEFI AMD64 HTTP(00:10) has been re-enabled.</li>
 <li>UEFI ARM64 HTTP(00:13) has been enabled.</li>
 <li>UEFI ARM64 TFTP(00:0B) and UEFI ARM64 HTTP(00:13) will now provide a shim and GRUB signed with the Microsoft boot loader keys.</li>
@@ -528,7 +528,7 @@ $ maas $PROFILE node read $SYSTEM_ID
 <h3 id="heading--pci-usb-devices">PCI and USB devices are now modelled in MAAS</h3>
 
 <p>MAAS 3.0 models all PCI and USB devices detected during commissioning:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>Existing machines will have to be recommissioned to have PCI and USB devices modelled</li>
 <li>PCI and USB devices are shown in the UI and on the API using the node-devices endpoint</li>
 <li>Node devices may be deleted on the API only</li>
@@ -540,7 +540,7 @@ $ maas $PROFILE node read $SYSTEM_ID
 <h3 id="heading--proxmox-support">Proxmox support</h3>
 
 <p>MAAS 3.0 supports Proxmox as a power driver:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>Only Proxmox VMs are supported</li>
 <li>You may authenticate with Proxmox using a username and password or a username and API token</li>
 <li>If an API token is used, it must be given permission to query, start and stop VMs.</li>
@@ -550,7 +550,7 @@ $ maas $PROFILE node read $SYSTEM_ID
 <h3 id="heading--lxd-projects-support">LXD projects support</h3>
 
 <p>MAAS 3.0 supports the use of LXD projects:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>LXD VM hosts registered in MAAS are now tied to a specific LXD project which MAAS uses to manage VMs</li>
 <li>MAAS doesn’t create or manage machines for VMs in other projects</li>
 <li>MAAS creates the specified project when the VM host is registered, if it doesn&rsquo;t exist</li>
