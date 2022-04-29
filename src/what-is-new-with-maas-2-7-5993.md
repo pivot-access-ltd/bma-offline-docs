@@ -69,9 +69,9 @@ MAAS 2.7 allows you to configure network connectivity testing in a number of way
 
 Users can now test their network configuration to check for:
 
-1. Interfaces which have a broken network configuration
-2. Bonds that are not fully operational
-3. Broken gateways, rack controllers, and Internet links
+- Interfaces which have a broken network configuration
+- Bonds that are not fully operational
+- Broken gateways, rack controllers, and Internet links
 
 In addition, Internet connectivity testing has been greatly expanded. Previously, MAAS gave a yes/no link check during network testing. Now you can give a list of URLs or IP addresses to check. In the ephemeral environment, standard DHCP is still applied, but when network testing runs, we can apply your specific configuration for the duration of the test. While all URLs / IPs are tested with all interfaces, we do test each of your interfaces individually, including breaking apart bonded NICS and testing each side of your redundant interfaces. You can also run different tests on each pass, e.g., a different set of URLs, although each run would be a different testing cycle. For testing individual interfaces, you can use the API.
 
