@@ -3,39 +3,37 @@ The `python-libmaas` client library is an asyncio-based client library whose pur
 
 #### This article will help you learn:
 
-1. [About library endpoints](#heading--library-endpoints)
-2. [How to install and use python-libmaas](#heading--installation-and-usage-of-python-libmaas)
+- [About library endpoints](#heading--library-endpoints)
+- [How to install and use python-libmaas](#heading--installation-and-usage-of-python-libmaas)
 
 <a href="#heading--library-endpoints"><h2 id="heading--library-endpoints">About library endpoints</h2></a>
 
 At this time, the client library supports these eight endpoints:
 
-1.   account
-2.   boot-sources, boot-resources
-3.   machines, devices, region controllers, rack controllers
-4.   events
-5.   configuration
-6.   tags
-7.   version
-8.   zones
+- account
+- boot-sources, boot-resources
+- machines, devices, region controllers, rack controllers
+- events
+- configuration
+- tags
+- version
+- zones
 
 There are two resources that will help you better understand the above terms and how they are used:
 
-1.   [Concepts and terms](/t/maas-concepts-and-terms-reference/5416)
-2.   [API documentation](https://maas.io/docs/api)
+- [Concepts and terms](/t/maas-concepts-and-terms-reference/5416)
+- [API documentation](https://maas.io/docs/api)
 
 <a href="#heading--installation-and-usage-of-python-libmaas"><h2 id="heading--installation-and-usage-of-python-libmaas">How to install and use python-libmaas</h2></a>
 
 For installation and initial steps, see these external links:
 
-1.   `https://github.com/maas/python-libmaas`
-2.   `http://maas.github.io/python-libmaas/index.html`
+- [Python libmaas on github](https://github.com/maas/python-libmaas)
+- [Python libmass in the MAAS github](http://maas.github.io/python-libmaas/index.html)
 
 For examples, see these external links:
 
-1.   `http://maas.github.io/python-libmaas/client/index.html`
-2.   `http://maas.github.io/python-libmaas/client/nodes/index.html`
+- [Python libmaas client guide](http://maas.github.io/python-libmaas/client/index.html)
+- [Python libmass client node guide](http://maas.github.io/python-libmaas/client/nodes/index.html)
 
-For pypi information, see this external link:
-
-`https://pypi.python.org/pypi/python-libmaas`
+For pypi information, see [this external link](https://pypi.python.org/pypi/python-libmaas).
