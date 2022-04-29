@@ -11,29 +11,29 @@ After entering your password, the snap will refresh from the 3.1 channel.  You w
 
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 [/tab]
-[tab version="v3.1 Packages"] 
+[tab version="v3.2 Packages"] 
 <a href="#heading--upgrade-from-v3-1-packages-to-3-2"><h2 id="heading--upgrade-from-v3-1-packages-to-3-2">How to ugprade from MAAS 3.1 to MAAS 3.2 Beta</h2></a>
 
 To upgrade from MAAS 3.1 to MAAS 3.2 Beta:
 
-1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+- Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
 
-2. Add the MAAS 3.2 Beta PPA to your repository list with the following command, ignoring any apparent error messages:
+- Add the MAAS 3.2 Beta PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```
 sudo apt-add-repository ppa:maas/3.2-next
 ```
 
-3. Run the MAAS upgrade like this:
+- Run the MAAS upgrade like this:
 
 ```
 sudo apt update
 sudo apt upgrade maas
 ```
 
-4. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 release.
+- Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 release.
 
-5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1.
+- If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1.
 
 <a href="#heading--upgrade-from-v2-8-packages-to-3-2"><h2 id="heading--upgrade-from-v2-8-packages-to-3-2">How to upgrade from 2.8 or lower to MAAS 3.2 Beta</h2></a>
 
@@ -56,17 +56,17 @@ The minimum "xx.yy" required for MAAS 3.2 is "20.04," code-named "focal."
 
 If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:
 
-1. Upgrade the release:
+- Upgrade the release:
 
 ```
 sudo do-release-upgrade --allow-third-party
 ```
 
-2. Accept the defaults for any questions asked by the upgrade script.
+- Accept the defaults for any questions asked by the upgrade script.
 
-3. Reboot the machine when requested.
+- Reboot the machine when requested.
 
-4. Check whether the upgrade was successful:
+- Check whether the upgrade was successful:
 
 ```
 lsb_release -a
@@ -85,21 +85,21 @@ Codename:	focal
 If you're upgrading from MAAS version 2.8 or lower to version 3.2: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.
 [/note]
 
-1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+- Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
 
-2. Add the MAAS 3.2 PPA to your repository list with the following command, ignoring any apparent error messages:
+- Add the MAAS 3.2 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```
 sudo apt-add-repository ppa:maas/3.2-next
 ```
 
-3. Run the release upgrade like this, answering any questions with the given default values:
+- Run the release upgrade like this, answering any questions with the given default values:
 
 ```
 sudo do-release-upgrade --allow-third-party
 ```
 
-4. Check whether your upgrade has been successful by entering:
+- Check whether your upgrade has been successful by entering:
 
 ```
 lsb_release -a
@@ -115,9 +115,9 @@ Release:	20.04
 Codename:	focal
 ```
 
-5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 release.
+- Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 release.
 
-6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.2 Beta.
+- If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.2 Beta.
 [/tab]
 [tab version="v3.1 Snap"] 
 <a href="#heading--upgrade-from-earlier-version-to-snap-3-1"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-1">How to upgrade a snap to MAAS 3.1</h2></a>
@@ -135,24 +135,24 @@ If you are using a multi-node maas deployment with separate regions and racks, y
 
 To upgrade from MAAS 3.0 to MAAS 3.1:
 
-1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+- Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
 
-2. Add the MAAS 3.1 PPA to your repository list with the following command, ignoring any apparent error messages:
+- Add the MAAS 3.1 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```
 sudo apt-add-repository ppa:maas/3.1
 ```
 
-3. Run the MAAS upgrade like this:
+- Run the MAAS upgrade like this:
 
 ```
 sudo apt update
 sudo apt upgrade maas
 ```
 
-4. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 release.
+- Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 release.
 
-5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1.
+- If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1.
 
 <a href="#heading--upgrade-from-v2- Packages8-to-3-1"><h2 id="heading--upgrade-from-v2- Packages8-to-3-1">How to upgrade from 2.8 or lower to MAAS 3.1</h2></a>
 
@@ -175,17 +175,17 @@ The minimum "xx.yy" required for MAAS 3.0 is "20.04," code-named "focal."
 
 If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:
 
-1. Upgrade the release:
+- Upgrade the release:
 
 ```
 sudo do-release-upgrade --allow-third-party
 ```
 
-2. Accept the defaults for any questions asked by the upgrade script.
+- Accept the defaults for any questions asked by the upgrade script.
 
-3. Reboot the machine when requested.
+- Reboot the machine when requested.
 
-4. Check whether the upgrade was successful:
+- Check whether the upgrade was successful:
 
 ```
 lsb_release -a
@@ -204,21 +204,21 @@ Codename:	focal
 If you're upgrading from MAAS version 2.8 or lower to version 3.1: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.
 [/note]
 
-1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+- Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
 
-2. Add the MAAS 3.1 PPA to your repository list with the following command, ignoring any apparent error messages:
+- Add the MAAS 3.1 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```
 sudo apt-add-repository ppa:maas/3.1
 ```
 
-3. Run the release upgrade like this, answering any questions with the given default values:
+- Run the release upgrade like this, answering any questions with the given default values:
 
 ```
 sudo do-release-upgrade --allow-third-party
 ```
 
-4. Check whether your upgrade has been successful by entering:
+- Check whether your upgrade has been successful by entering:
 
 ```
 lsb_release -a
@@ -234,9 +234,9 @@ Release:	20.04
 Codename:	focal
 ```
 
-5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 release.
+- Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 release.
 
-6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1.
+- If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1.
 [/tab]
 [tab version="v3.0 Snap"] 
 <a href="#heading--upgrade-from-earlier-version-to-snap-3-0"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-0">How to upgrade a snap to MAAS 3.0</h2></a>
@@ -252,24 +252,24 @@ If you are using a multi-node maas deployment with separate regions and racks, y
 [tab version="v3.0 Packages"] 
 <a href="#heading--upgrade-from-v2-9-packages-to-3-0"><h2 id="heading--upgrade-from-v2-9-packages-to-3-0">How to ugprade from MAAS 2.9 to MAAS 3.0</h2></a>
 
-1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+- Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
 
-2. Add the MAAS 3.0 PPA to your repository list with the following command, ignoring any apparent error messages:
+- Add the MAAS 3.0 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```
 sudo apt-add-repository ppa:maas/3.0
 ```
 
-3. Run the MAAS upgrade like this:
+- Run the MAAS upgrade like this:
 
 ```
 sudo apt update
 sudo apt upgrade maas
 ```
 
-4. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.0 release.
+- Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.0 release.
 
-5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.0.
+- If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.0.
 
 <a href="#heading--upgrade-from-v2- Packages8-to-3-0"><h2 id="heading--upgrade-from-v2- Packages8-to-3-0">How to upgrade from 2.8 or lower to MAAS 3.0</h2></a>
 
@@ -292,17 +292,17 @@ The minimum "xx.yy" required for MAAS 3.0 is "20.04," code-named "focal."
 
 If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:
 
-1. Upgrade the release:
+- Upgrade the release:
 
 ```
 sudo do-release-upgrade --allow-third-party
 ```
 
-2. Accept the defaults for any questions asked by the upgrade script.
+- Accept the defaults for any questions asked by the upgrade script.
 
-3. Reboot the machine when requested.
+- Reboot the machine when requested.
 
-4. Check whether the upgrade was successful:
+- Check whether the upgrade was successful:
 
 ```
 lsb_release -a
@@ -321,21 +321,21 @@ Codename:	focal
 If you're upgrading from MAAS version 2.8 or lower to version 3.0: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.
 [/note]
 
-1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+- Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
 
-2. Add the MAAS 3.0 PPA to your repository list with the following command, ignoring any apparent error messages:
+- Add the MAAS 3.0 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```
 sudo apt-add-repository ppa:maas/3.0
 ```
 
-3. Run the release upgrade like this, answering any questions with the given default values:
+- Run the release upgrade like this, answering any questions with the given default values:
 
 ```
 sudo do-release-upgrade --allow-third-party
 ```
 
-4. Check whether your upgrade has been successful by entering:
+- Check whether your upgrade has been successful by entering:
 
 ```
 lsb_release -a
@@ -351,9 +351,9 @@ Release:	20.04
 Codename:	focal
 ```
 
-5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.0 release.
+- Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.0 release.
 
-6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.0.
+- If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.0.
 [/tab]
 [tab version="v2.9 Snap"] 
 <a href="#heading--upgrade-from-earlier-version-to-snap-2-9"><h2 id="heading--upgrade-from-earlier-version-to-snap-2-9">How to upgrade from a snap to MAAS 2.9</h2></a>
