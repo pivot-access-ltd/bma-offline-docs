@@ -196,12 +196,6 @@ sudo sosreport -o maas
 
 The tarball will end up in /tmp but you can change the location. See the [sosreport man page ](http://manpages.ubuntu.com/cgi-bin/search.py?q=sosreport) for details. If there are things you do not wish to share publicly, feel free to edit the tarball.
 
-<a href="#heading--compress-logfiles"><h4>How to compress these logfiles into a tar.gz file for efficient upload</h4></a>
-
-The following animation shows a recommended process for creating a `tar.gz` file.  The mistakes are intentional, so that you'll know what to do if you forget an option now and then, or forget to use `sudo` in a step or two:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c8e05533fc4f076774d26e592fe02418bc70ecf7.gif" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c8e05533fc4f076774d26e592fe02418bc70ecf7.gif"></a>
-
 <a href="#heading--filing-bug"><h2 id="heading--filing-bug">Step 2: Filing your bug</h2></a>
 
 Have your prepared text file handy.  In our example, it looks like this:
