@@ -397,7 +397,7 @@
   <h1>MAAS concepts and terms reference</h1><!-- "MAAS concepts and terms reference" -->
 <p>Built on a foundation of networking knowledge, MAAS introduces a number of new terms, and adds some nuances to common terms.  Some of these terms may be common networking terms you never looked up; others represent more complex concepts that may be unique to MAAS.  This article presents and explains some of these important terms.</p>
 <p><details><summary>Show me an alphabetical list of terms</summary></p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="maas-concepts-and-terms-reference.html#heading--zones">Availability zones</a></li>
 <li><a href="maas-concepts-and-terms-reference.html#heading--client">Client</a></li>
 <li><a href="maas-concepts-and-terms-reference.html#heading--cloud-init">cloud-init</a></li>
@@ -444,31 +444,31 @@
 <p></details></p>
 <p><a href="#heading--nodes"><h2 id="heading--nodes">Nodes</h2></a></p>
 <p>A node is a general term that refers to multiple, more specific objects. Nodes are managed by MAAS through a life cycle, from adding and enlistment into MAAS, through commissioning, allocation and deployment. Nodes are then either released back into the pool of nodes or retired.</p>
-<p>Nodes include three classes of objects:</p>
-<ol>
+<p>Nodes include the following classes of objects:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>Controllers</li>
 <li>Machines</li>
 <li>Devices</li>
-</ol>
+</ul>
 <p>See <a href="#heading--machine-actions">Machine actions</a> and <a href="#heading--machine-statuses">Machine statuses</a> below for an overview of a node&rsquo;s life cycle.</p>
 <p><a href="#heading--controllers"><h3 id="heading--controllers">Controllers</h3></a></p>
 <p>There are two types of controllers: a region controller and a rack controller. The region controller deals with operator requests while one or more rack controllers provide the high-bandwidth services to multiple server racks, as typically found in a data centre.</p>
-<p>A region controller consists of five components:</p>
-<ol>
+<p>A region controller consists of the following components:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>REST API server (TCP port 5240)</li>
 <li>PostgreSQL database</li>
 <li>DNS</li>
 <li>caching HTTP proxy</li>
 <li>web UI</li>
-</ol>
+</ul>
 <p>Think of a region controller can as being responsible for a data centre, or a single region. Multiple fabrics are used by MAAS to accommodate subdivisions within a single region, such as multiple floors in a data centre.</p>
-<p>A rack controller provides four services:</p>
-<ol>
+<p>A rack controller provides the following services:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>DHCP</li>
 <li>TFTP</li>
 <li>HTTP (for images)</li>
 <li>power management</li>
-</ol>
+</ul>
 <p>A rack controller is attached to each &ldquo;fabric&rdquo;. As the name implies, a typical setup is to have a rack controller in each data centre server rack. The rack controller will cache large items for performance, such as operating system install images, but maintains no independent state other than the credentials required to talk to the region controller.</p>
 <p>Both the region controller and the rack controller can be scaled-out as well as made highly available.</p>
 <p><a href="#heading--machines"><h3 id="heading--machines">Machines</h3></a></p>
@@ -510,15 +510,15 @@
 <p>A tag (not to be confused with VLAN tags) is user-created and associated with nodes based on their physical properties. These can then be used to identify nodes with particular abilities which can be useful during the deployment of services.</p>
 <p><a href="#heading--subnets"><h2 id="heading--subnets">Subnets</h2></a></p>
 <p>A subnet is a &ldquo;layer 3&rdquo; network, defined by a network address and a network mask length (in bits) and usually written in &ldquo;CIDR&rdquo; format. MAAS supports IPv4 and IPv6 subnets. Examples include:</p>
-<pre><code class="language-no-highlight">10.0.0.0/8
-172.16.0.0/12
-192.168.0.0/16
+<pre><code class="language-no-highlight">- 0.0.0/8
+- 16.0.0/12
+- 168.0.0/16
 2001:db8:4d41:4153::/64
 </code></pre>
 <p><a href="#heading--ip-ranges"><h3 id="heading--ip-ranges">IP ranges</h3></a></p>
 <p>You can reserve IP addresses by adding one or more reserved ranges to a subnet configuration. You can define two types of ranges:</p>
-<ul>
-<li><strong>Reserved range</strong> Mode operates differently depending on whether the subnet is managed or unmanaged:<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><strong>Reserved range</strong> Mode operates differently depending on whether the subnet is managed or unmanaged:<ul style="margin-left:4px; list-style-type:disc;">
 <li><strong>Managed (subnet)</strong>: MAAS will never assign IP addresses inside this range.  You can use this range for anything, such as infrastructure systems, network hardware, external DHCP, or an OpenStack namespace.</li>
 <li><strong>Unmanaged (subnet)</strong>: MAAS will only assign IP addresses inside this range.</li>
 </ul>
@@ -598,10 +598,10 @@
 <p><a href="#heading--machine-statuses"><h2 id="heading--machine-statuses">Machine statuses</h2></a></p>
 <p>Node statuses are labels used to describe the general state of a node as known to MAAS. A node will undergo various manipulations during their time spent in MAAS, and its status will change accordingly. Actions applied to a node are the most common cause of a status change (see section above.)  Below is the full list of status values and their meaning, arranged alphabetically.</p>
 <p>Some aspects of a node can only be modified when a node has a certain status. Here are two typical examples:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>you cannot modify a network interfaces unless the node has a status of either &lsquo;Ready&rsquo; or &lsquo;Broken&rsquo;.</li>
 <li>you cannot modify storage unless the node has a status of either &lsquo;Ready&rsquo; or &lsquo;Allocated&rsquo;.</li>
-</ol>
+</ul>
 <p><a href="#heading--allocated"><h3 id="heading--allocated">Allocated</h3></a></p>
 <p>The node is allocated (reserved) to a MAAS user. See node action &lsquo;Allocate&rsquo;.</p>
 <p><a href="#heading--broken"><h3 id="heading--broken">Broken</h3></a></p>
@@ -632,10 +632,10 @@
 <p>The node is in rescue mode and is ready to accept SSH connections. See node action &lsquo;Rescue mode&rsquo;.</p>
 <p><a href="#heading--package-repositories"><h2 id="heading--package-repositories">Package repositories</h2></a></p>
 <p>Package repositories managed within MAAS can be of two types:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>Ubuntu package repositories</li>
 <li>Personal Package Archives (PPA)</li>
-</ol>
+</ul>
 <p>You can configure repositories in the &lsquo;Package repositories&rsquo; tab on the &lsquo;Settings&rsquo; page. Any enabled repository listed on this page will become automatically available to any subsequently deployed nodes.</p>
 <p>MAAS further simplifies the addition of third-party repositories by also allowing the administrator to input their respective GPG keys here. This arrangement means that nodes will have instant access to these repositories (i.e. no need to import the keys into APT).</p>
 <p>An added repository can be disabled and re-enabled using a toggle switch to the right of it.</p>
@@ -692,7 +692,7 @@
 <p><a href="#heading--dhcp"><h3 id="heading--dhcp">DHCP</h3></a></p>
 <p>The Dynamic Host Control Protocol is a network management system in which a server (or group of servers) dynamically assigns IP addresses and other network parameters to a network device.  This network device may or may not have the capability to provide its own IP address, although to take advantage of DHCP, the device must have been configured to seek out a DHCP server and accept an assigned IP address.  Typically, a network administrator defines a range of reserved IP addresses from which the DHCP server can pull when assigning addresses.</p>
 <p>DHCP operates using the four-step &ldquo;DORA&rdquo; model &ndash; Discovery, Offer, Request, and Acknowledge:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>Potential DHCP clients broadcast a DHCPDISCOVER message on its attached subnet using destination address 255.255.255.255.</p>
 </li>
@@ -705,7 +705,7 @@
 <li>
 <p>The DHCP server responds with a DHCPACK (acknowledgement) which includes various important configuration parameters, such as the lease duration.</p>
 </li>
-</ol>
+</ul>
 <p>Of course, there is <a href="https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol">much more to DHCP</a>, but what&rsquo;s covered here should be sufficient understanding for using MAAS.</p>
 <p><a href="#heading--client"><h3 id="heading--client">Client</h3></a></p>
 <p>In the client/server age, the lines between client and server are blurred and sometimes reversible.  For the purposes of MAAS and general networking principles, we can define a &ldquo;client&rdquo; as a node that uses shared resources via a network.  If that same client provides shared resources to other nodes, it could also be considered a server.  </p>
@@ -728,8 +728,8 @@ These twists must be maintained all the way up to the (RJ45) connector.</p>
 <p><a href="#heading--switch"><h3 id="heading--switch">Switch</h3></a></p>
 <p>A switch is a &ldquo;smart&rdquo; device that connects cables from nodes to make networks.  Like a hub, a switch amplifies signals, that is, it acts as a repeater.  Switches learn by induction which cables receive which IP addresses.  Over time a switch will direct each packet only to devices which indicate that they will accept the addresses associated with those packets.</p>
 <p><a href="#heading--network-topology"><h3 id="heading--network-topology">Network topology</h3></a></p>
-<p>Topology describes how nodes are connected to a network, specifically referring to the shapes made by the cables and the paths that packets can take.  There are probably as many topologies are there are shapes, but here are five of the most common:</p>
-<ol>
+<p>Topology describes how nodes are connected to a network, specifically referring to the shapes made by the cables and the paths that packets can take.  There are probably as many topologies are there are shapes, but here are some of the most common:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>Bus topology: the most basic network topology, a group of computers connected to a single, long cable.  In this configuration, every computer sees every packet.  A <a href="maas-concepts-and-terms-reference.html#heading--hub">hub</a> network, for instance, is still a bus topology, because every machine sees every packet.</p>
 </li>
@@ -745,7 +745,7 @@ These twists must be maintained all the way up to the (RJ45) connector.</p>
 <li>
 <p>Mesh topology: nodes with multiple interfaces and multiple connections.  Useful where wide-area networks (<a href="maas-concepts-and-terms-reference.html#heading--wan">WAN</a>) where there would otherwise be lots of intermediaries.  Not popular or particularly cost effective for <a href="maas-concepts-and-terms-reference.html#heading--lan">LAN</a> networks.</p>
 </li>
-</ol>
+</ul>
 <p><a href="#heading--patch-panel"><h3 id="heading--patch-panel">Patch panel</h3></a></p>
 <p>A patch panel is simply a 24- to 48-port panel of connectors that can link together three- to ten-foot cables.  A patch panel allows jumpers from network runs to devices in racks, without putting strain and &ldquo;cable creep&rdquo; on long runs.</p>
 <p><a href="#heading--lan"><h3 id="heading--lan">LAN</h3></a></p>
@@ -761,7 +761,7 @@ These twists must be maintained all the way up to the (RJ45) connector.</p>
 <p><a href="#heading--cloud-init"><h2 id="heading--cloud-init">Cloud-init</h2></a></p>
 <p>Cloud-init is the industry-standard method for initialising cloud instances, independent of platform.  It allows you to automatically provision operating system images, bringing them to a fully running state.  It also allows you to customise networking, storage, user space, applications, and various other components of a functioning system.</p>
 <p>There are four stages of cloud-init action:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>Local initialisation - this &ldquo;as-early-as-possible&rdquo; stage configures system elements that must be set up before the system can be made fully operational, such as networking configuration, including bridges, VLANs, bonds, and so forth.</p>
 </li>
@@ -774,9 +774,9 @@ These twists must be maintained all the way up to the (RJ45) connector.</p>
 <li>
 <p>Module finalisation - stage four is the very end of the boot process, installing packages and executing any user-supplied configuration scripts.</p>
 </li>
-</ol>
+</ul>
 <p>These four steps combine (at least) four general datasources to bring an instance into being:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>Disk image - the operating system for the instance; this is a bare-bones, uncustomised version of the chosen OS.</p>
 </li>
@@ -789,7 +789,7 @@ These twists must be maintained all the way up to the (RJ45) connector.</p>
 <li>
 <p>Vendor data - data provided by cloud platform vendors; this is identical (in principle) to user data, but derived from a different source.  In practice, vendor data usually handle things that users wouldn&rsquo;t normally specify, such as mirror setup, NTP service management, etc.</p>
 </li>
-</ol>
+</ul>
     </div>
   </body>
 </html>

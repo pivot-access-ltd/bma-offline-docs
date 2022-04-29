@@ -3,48 +3,48 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 
 <details><summary>Show me an alphabetical list of terms</summary>
 
-* [Availability zones](/t/maas-concepts-and-terms-reference/5416#heading--zones)
-* [Client](/t/maas-concepts-and-terms-reference/5416#heading--client)
-* [cloud-init](/t/maas-concepts-and-terms-reference/5416#heading--cloud-init)
-* [Controller](/t/maas-concepts-and-terms-reference/5416#heading--controllers)
-* [Device](/t/maas-concepts-and-terms-reference/5416#heading--devices)
-* [DHCP](/t/maas-concepts-and-terms-reference/5416#heading--dhcp)
-* [DHCP relay](/t/maas-concepts-and-terms-reference/5416#heading--dhcp-relay)
-* [Edge clouds](/t/maas-concepts-and-terms-reference/5416#heading--edge-clouds)
-* [Fabrics](/t/maas-concepts-and-terms-reference/5416#heading--fabrics)
-* [Hub](/t/maas-concepts-and-terms-reference/5416#heading--hub)
-* [Images](/t/maas-concepts-and-terms-reference/5416#heading--images)
-* [Interfaces](/t/maas-concepts-and-terms-reference/5416#heading--interfaces)
-* [isolcpus](/t/maas-concepts-and-terms-reference/5416#heading--isolcpus)
-* [LAN](/t/maas-concepts-and-terms-reference/5416#heading--lan)
-* [MAC address](/t/maas-concepts-and-terms-reference/5416#heading--mac-address)
-* [Machine](/t/maas-concepts-and-terms-reference/5416#heading--machines)
-* [Machine actions](/t/maas-concepts-and-terms-reference/5416#heading--machine-actions)
-* [Machine statuses](/t/maas-concepts-and-terms-reference/5416#heading--machine-statuses)
-* [MAN](/t/maas-concepts-and-terms-reference/5416#heading--MAN)
-* [Network cable](/t/maas-concepts-and-terms-reference/5416#heading--network-cable)
-* [Network infrastructure](/t/maas-concepts-and-terms-reference/5416#heading--network-infrastructure)
-* [Network interface](/t/maas-concepts-and-terms-reference/5416#heading--network-interface)
-* [Network topology](/t/maas-concepts-and-terms-reference/5416#heading--network-topology)
-* [NUMA](/t/maas-concepts-and-terms-reference/5416#heading--numa)
-* [Nodes](/t/maas-concepts-and-terms-reference/5416#heading--nodes)
-* [Package repositories](/t/maas-concepts-and-terms-reference/5416#heading--package-repositories)
-* [Packet](/t/maas-concepts-and-terms-reference/5416#heading--packet)
-* [Patch panel](/t/maas-concepts-and-terms-reference/5416#heading--patch-panel)
-* [Regions](/t/maas-concepts-and-terms-reference/5416#heading--regions)
-* [Repeater](/t/maas-concepts-and-terms-reference/5416#heading--repeater)
-* [Router](/t/maas-concepts-and-terms-reference/5416#heading--router)
-* [Series](/t/maas-concepts-and-terms-reference/5416#heading--series)
-* [Server](/t/maas-concepts-and-terms-reference/5416#heading--server)
-* [Spaces](/t/maas-concepts-and-terms-reference/5416#heading--spaces)
-* [SR-IOV](/t/maas-concepts-and-terms-reference/5416#heading--sr-iov)
-* [Subnets](/t/maas-concepts-and-terms-reference/5416#heading--subnets)
-* [Switch](/t/maas-concepts-and-terms-reference/5416#heading--switch)
-* [Tags](/t/maas-concepts-and-terms-reference/5416#heading--tags)
-* [Ubuntu package repositories](/t/maas-concepts-and-terms-reference/5416#heading--ubuntu-package-repositories)
-* [VLAN](/t/maas-concepts-and-terms-reference/5416#heading--vlans)
-* [VM hosts](/t/maas-concepts-and-terms-reference/5416#heading--vm-hosts)
-* [WAN](/t/maas-concepts-and-terms-reference/5416#heading--WAN)
+- [Availability zones](/t/maas-concepts-and-terms-reference/5416#heading--zones)
+- [Client](/t/maas-concepts-and-terms-reference/5416#heading--client)
+- [cloud-init](/t/maas-concepts-and-terms-reference/5416#heading--cloud-init)
+- [Controller](/t/maas-concepts-and-terms-reference/5416#heading--controllers)
+- [Device](/t/maas-concepts-and-terms-reference/5416#heading--devices)
+- [DHCP](/t/maas-concepts-and-terms-reference/5416#heading--dhcp)
+- [DHCP relay](/t/maas-concepts-and-terms-reference/5416#heading--dhcp-relay)
+- [Edge clouds](/t/maas-concepts-and-terms-reference/5416#heading--edge-clouds)
+- [Fabrics](/t/maas-concepts-and-terms-reference/5416#heading--fabrics)
+- [Hub](/t/maas-concepts-and-terms-reference/5416#heading--hub)
+- [Images](/t/maas-concepts-and-terms-reference/5416#heading--images)
+- [Interfaces](/t/maas-concepts-and-terms-reference/5416#heading--interfaces)
+- [isolcpus](/t/maas-concepts-and-terms-reference/5416#heading--isolcpus)
+- [LAN](/t/maas-concepts-and-terms-reference/5416#heading--lan)
+- [MAC address](/t/maas-concepts-and-terms-reference/5416#heading--mac-address)
+- [Machine](/t/maas-concepts-and-terms-reference/5416#heading--machines)
+- [Machine actions](/t/maas-concepts-and-terms-reference/5416#heading--machine-actions)
+- [Machine statuses](/t/maas-concepts-and-terms-reference/5416#heading--machine-statuses)
+- [MAN](/t/maas-concepts-and-terms-reference/5416#heading--MAN)
+- [Network cable](/t/maas-concepts-and-terms-reference/5416#heading--network-cable)
+- [Network infrastructure](/t/maas-concepts-and-terms-reference/5416#heading--network-infrastructure)
+- [Network interface](/t/maas-concepts-and-terms-reference/5416#heading--network-interface)
+- [Network topology](/t/maas-concepts-and-terms-reference/5416#heading--network-topology)
+- [NUMA](/t/maas-concepts-and-terms-reference/5416#heading--numa)
+- [Nodes](/t/maas-concepts-and-terms-reference/5416#heading--nodes)
+- [Package repositories](/t/maas-concepts-and-terms-reference/5416#heading--package-repositories)
+- [Packet](/t/maas-concepts-and-terms-reference/5416#heading--packet)
+- [Patch panel](/t/maas-concepts-and-terms-reference/5416#heading--patch-panel)
+- [Regions](/t/maas-concepts-and-terms-reference/5416#heading--regions)
+- [Repeater](/t/maas-concepts-and-terms-reference/5416#heading--repeater)
+- [Router](/t/maas-concepts-and-terms-reference/5416#heading--router)
+- [Series](/t/maas-concepts-and-terms-reference/5416#heading--series)
+- [Server](/t/maas-concepts-and-terms-reference/5416#heading--server)
+- [Spaces](/t/maas-concepts-and-terms-reference/5416#heading--spaces)
+- [SR-IOV](/t/maas-concepts-and-terms-reference/5416#heading--sr-iov)
+- [Subnets](/t/maas-concepts-and-terms-reference/5416#heading--subnets)
+- [Switch](/t/maas-concepts-and-terms-reference/5416#heading--switch)
+- [Tags](/t/maas-concepts-and-terms-reference/5416#heading--tags)
+- [Ubuntu package repositories](/t/maas-concepts-and-terms-reference/5416#heading--ubuntu-package-repositories)
+- [VLAN](/t/maas-concepts-and-terms-reference/5416#heading--vlans)
+- [VM hosts](/t/maas-concepts-and-terms-reference/5416#heading--vm-hosts)
+- [WAN](/t/maas-concepts-and-terms-reference/5416#heading--WAN)
 
 </details>
 
@@ -52,11 +52,11 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 
 A node is a general term that refers to multiple, more specific objects. Nodes are managed by MAAS through a life cycle, from adding and enlistment into MAAS, through commissioning, allocation and deployment. Nodes are then either released back into the pool of nodes or retired.
 
-Nodes include three classes of objects:
+Nodes include the following classes of objects:
 
-1.   Controllers
-2.   Machines
-3.   Devices
+- Controllers
+- Machines
+- Devices
 
 See [Machine actions](#heading--machine-actions) and [Machine statuses](#heading--machine-statuses) below for an overview of a node's life cycle.
 
@@ -64,22 +64,22 @@ See [Machine actions](#heading--machine-actions) and [Machine statuses](#heading
 
 There are two types of controllers: a region controller and a rack controller. The region controller deals with operator requests while one or more rack controllers provide the high-bandwidth services to multiple server racks, as typically found in a data centre.
 
-A region controller consists of five components:
+A region controller consists of the following components:
 
-1.   REST API server (TCP port 5240)
-2.   PostgreSQL database
-3.   DNS
-4.   caching HTTP proxy
-5.   web UI
+- REST API server (TCP port 5240)
+- PostgreSQL database
+- DNS
+- caching HTTP proxy
+- web UI
 
 Think of a region controller can as being responsible for a data centre, or a single region. Multiple fabrics are used by MAAS to accommodate subdivisions within a single region, such as multiple floors in a data centre.
 
-A rack controller provides four services:
+A rack controller provides the following services:
 
-1.   DHCP
-2.   TFTP
-3.   HTTP (for images)
-4.   power management
+- DHCP
+- TFTP
+- HTTP (for images)
+- power management
 
 A rack controller is attached to each "fabric". As the name implies, a typical setup is to have a rack controller in each data centre server rack. The rack controller will cache large items for performance, such as operating system install images, but maintains no independent state other than the credentials required to talk to the region controller.
 
@@ -165,9 +165,9 @@ A tag (not to be confused with VLAN tags) is user-created and associated with no
 A subnet is a "layer 3" network, defined by a network address and a network mask length (in bits) and usually written in "CIDR" format. MAAS supports IPv4 and IPv6 subnets. Examples include:
 
 ``` no-highlight
-10.0.0.0/8
-172.16.0.0/12
-192.168.0.0/16
+- 0.0.0/8
+- 16.0.0/12
+- 168.0.0/16
 2001:db8:4d41:4153::/64
 ```
 
@@ -326,8 +326,8 @@ Node statuses are labels used to describe the general state of a node as known t
 
 Some aspects of a node can only be modified when a node has a certain status. Here are two typical examples:
 
-1.   you cannot modify a network interfaces unless the node has a status of either 'Ready' or 'Broken'.
-2.   you cannot modify storage unless the node has a status of either 'Ready' or 'Allocated'.
+- you cannot modify a network interfaces unless the node has a status of either 'Ready' or 'Broken'.
+- you cannot modify storage unless the node has a status of either 'Ready' or 'Allocated'.
 
 <a href="#heading--allocated"><h3 id="heading--allocated">Allocated</h3></a>
 
@@ -389,8 +389,8 @@ The node is in rescue mode and is ready to accept SSH connections. See node acti
 
 Package repositories managed within MAAS can be of two types:
 
-1.   Ubuntu package repositories
-2.   Personal Package Archives (PPA)
+- Ubuntu package repositories
+- Personal Package Archives (PPA)
 
 You can configure repositories in the 'Package repositories' tab on the 'Settings' page. Any enabled repository listed on this page will become automatically available to any subsequently deployed nodes.
 
@@ -504,13 +504,13 @@ The Dynamic Host Control Protocol is a network management system in which a serv
 
 DHCP operates using the four-step "DORA" model -- Discovery, Offer, Request, and Acknowledge:
 
-1. Potential DHCP clients broadcast a DHCPDISCOVER message on its attached subnet using destination address 255.255.255.255.
+- Potential DHCP clients broadcast a DHCPDISCOVER message on its attached subnet using destination address 255.255.255.255.
 
-2. A connected DHCP server receives the DHCPDISCOVER message and sends a DHCPOFFER message, containing an IP address that the client may use.
+- A connected DHCP server receives the DHCPDISCOVER message and sends a DHCPOFFER message, containing an IP address that the client may use.
 
-3. The client replies with a DHCPREQUEST message, requesting the offered address.
+- The client replies with a DHCPREQUEST message, requesting the offered address.
 
-4. The DHCP server responds with a DHCPACK (acknowledgement) which includes various important configuration parameters, such as the lease duration.
+- The DHCP server responds with a DHCPACK (acknowledgement) which includes various important configuration parameters, such as the lease duration.
 
 Of course, there is [much more to DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol), but what's covered here should be sufficient understanding for using MAAS.
 
@@ -555,17 +555,17 @@ A switch is a "smart" device that connects cables from nodes to make networks.  
 
 <a href="#heading--network-topology"><h3 id="heading--network-topology">Network topology</h3></a>
 
-Topology describes how nodes are connected to a network, specifically referring to the shapes made by the cables and the paths that packets can take.  There are probably as many topologies are there are shapes, but here are five of the most common:
+Topology describes how nodes are connected to a network, specifically referring to the shapes made by the cables and the paths that packets can take.  There are probably as many topologies are there are shapes, but here are some of the most common:
 
-1. Bus topology: the most basic network topology, a group of computers connected to a single, long cable.  In this configuration, every computer sees every packet.  A [hub](/t/maas-concepts-and-terms-reference/5416#heading--hub) network, for instance, is still a bus topology, because every machine sees every packet.
+- Bus topology: the most basic network topology, a group of computers connected to a single, long cable.  In this configuration, every computer sees every packet.  A [hub](/t/maas-concepts-and-terms-reference/5416#heading--hub) network, for instance, is still a bus topology, because every machine sees every packet.
 
-2. Star or switch topology: a group of computers connected to a [switch](/t/maas-concepts-and-terms-reference/5416#heading--switch).  As the switch learns where packets are supposed to go, the star quickly evolves so that only packets are only seen by computers that are intended to receive the packet.
+- Star or switch topology: a group of computers connected to a [switch](/t/maas-concepts-and-terms-reference/5416#heading--switch).  As the switch learns where packets are supposed to go, the star quickly evolves so that only packets are only seen by computers that are intended to receive the packet.
 
-3. Backbone topology: a hybrid network configuration in which several stars are connected to a bus.
+- Backbone topology: a hybrid network configuration in which several stars are connected to a bus.
 
-4. Daisy-chain topology: stars connected to stars, or more accurately, switches connected to switches.
+- Daisy-chain topology: stars connected to stars, or more accurately, switches connected to switches.
 
-5. Mesh topology: nodes with multiple interfaces and multiple connections.  Useful where wide-area networks ([WAN](/t/maas-concepts-and-terms-reference/5416#heading--wan)) where there would otherwise be lots of intermediaries.  Not popular or particularly cost effective for [LAN](/t/maas-concepts-and-terms-reference/5416#heading--lan) networks.
+- Mesh topology: nodes with multiple interfaces and multiple connections.  Useful where wide-area networks ([WAN](/t/maas-concepts-and-terms-reference/5416#heading--wan)) where there would otherwise be lots of intermediaries.  Not popular or particularly cost effective for [LAN](/t/maas-concepts-and-terms-reference/5416#heading--lan) networks.
 
 <a href="#heading--patch-panel"><h3 id="heading--patch-panel">Patch panel</h3></a>
 
@@ -597,20 +597,20 @@ Cloud-init is the industry-standard method for initialising cloud instances, ind
 
 There are four stages of cloud-init action:
 
-1. Local initialisation - this "as-early-as-possible" stage configures system elements that must be set up before the system can be made fully operational, such as networking configuration, including bridges, VLANs, bonds, and so forth.
+- Local initialisation - this "as-early-as-possible" stage configures system elements that must be set up before the system can be made fully operational, such as networking configuration, including bridges, VLANs, bonds, and so forth.
 
-2. Initialisation - this second stage runs as soon as the network connections are up and running, taking care of custom storage configurations, disk volume expansion, block device setup and filesystem allocations.
+- Initialisation - this second stage runs as soon as the network connections are up and running, taking care of custom storage configurations, disk volume expansion, block device setup and filesystem allocations.
 
-3. Module configuration - stage three configures the necessary meta-tools to allow full system configuration, such as SSH, apt/yum, and NTP.
+- Module configuration - stage three configures the necessary meta-tools to allow full system configuration, such as SSH, apt/yum, and NTP.
 
-4. Module finalisation - stage four is the very end of the boot process, installing packages and executing any user-supplied configuration scripts.
+- Module finalisation - stage four is the very end of the boot process, installing packages and executing any user-supplied configuration scripts.
 
 These four steps combine (at least) four general datasources to bring an instance into being:
 
-1. Disk image - the operating system for the instance; this is a bare-bones, uncustomised version of the chosen OS.
+- Disk image - the operating system for the instance; this is a bare-bones, uncustomised version of the chosen OS.
 
-2. Metadata - this configuration information is supplied by the cloud provider, specifying things like disk images storage, networking, default users, and other basic customisations.
+- Metadata - this configuration information is supplied by the cloud provider, specifying things like disk images storage, networking, default users, and other basic customisations.
 
-3. User data - data provided by end users or cloud administrators to initialise the instance.  This completely optional data can be anything from shell scripts to highly-structured cloud-config data that trigger cloud-init's built-ins.
+- User data - data provided by end users or cloud administrators to initialise the instance.  This completely optional data can be anything from shell scripts to highly-structured cloud-config data that trigger cloud-init's built-ins.
 
-4. Vendor data - data provided by cloud platform vendors; this is identical (in principle) to user data, but derived from a different source.  In practice, vendor data usually handle things that users wouldn't normally specify, such as mirror setup, NTP service management, etc.
+- Vendor data - data provided by cloud platform vendors; this is identical (in principle) to user data, but derived from a different source.  In practice, vendor data usually handle things that users wouldn't normally specify, such as mirror setup, NTP service management, etc.
