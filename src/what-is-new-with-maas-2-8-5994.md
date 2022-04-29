@@ -17,48 +17,48 @@ or by using the aforementioned PPA.  The focus for this release has been [bugfix
 
 Here's a summary of the bugs that were fixed in 2.8.3:
 
-* [DNS Servers not set as expected](https://bugs.launchpad.net/maas/+bug/1881133): MAAS was using the region controller IP in dhcpd.conf when other DNS servers are present, effectively bypassing the rack controller proxy to machines.  The code was updated to use the region controller IP for DNS only if no other DNS servers are found.
+- [DNS Servers not set as expected](https://bugs.launchpad.net/maas/+bug/1881133): MAAS was using the region controller IP in dhcpd.conf when other DNS servers are present, effectively bypassing the rack controller proxy to machines.  The code was updated to use the region controller IP for DNS only if no other DNS servers are found.
 
-* [not able to import new image after MAAS upgrade](https://bugs.launchpad.net/maas/+bug/1890468): After upgrading from MAAS 2.6.2 to snap-MAAS 2.8.1, it is impossible to import a new image.  This was fixed in MAAS 2.8.3.
+- [not able to import new image after MAAS upgrade](https://bugs.launchpad.net/maas/+bug/1890468): After upgrading from MAAS 2.6.2 to snap-MAAS 2.8.1, it is impossible to import a new image.  This was fixed in MAAS 2.8.3.
 
-* [an unlogged chown permission error leaves a temporary file behind](https://bugs.launchpad.net/maas/+bug/1883748): Fixed in MAAS 2.8.3.
+- [an unlogged chown permission error leaves a temporary file behind](https://bugs.launchpad.net/maas/+bug/1883748): Fixed in MAAS 2.8.3.
 
-* [smartctl-validate fails to detect that NVME device is SMART-capable](https://bugs.launchpad.net/maas/+bug/1904329): MAAS 2.8.2 fails to realize that WD Black gaming NVMEs are smart devices, hence MAAS doesn't display attributes.  This is fixed in 2.8.3.
+- [smartctl-validate fails to detect that NVME device is SMART-capable](https://bugs.launchpad.net/maas/+bug/1904329): MAAS 2.8.2 fails to realize that WD Black gaming NVMEs are smart devices, hence MAAS doesn't display attributes.  This is fixed in 2.8.3.
 
-* [cannot use release API on stuck observed IPs](https://bugs.launchpad.net/maas/+bug/1898122): The CLI/API provide commands for forcing the release of an IP, but MAAS 2.8.2 was not allowing these commands to run successfully.  This was fixed.  There is also a workaround for those who cannot upgrade to 2.8.3 right away:
+- [cannot use release API on stuck observed IPs](https://bugs.launchpad.net/maas/+bug/1898122): The CLI/API provide commands for forcing the release of an IP, but MAAS 2.8.2 was not allowing these commands to run successfully.  This was fixed.  There is also a workaround for those who cannot upgrade to 2.8.3 right away:
 
 ```
     $ sudo -u postgres psql $MAAS_DB -c "UPDATE maasserver_staticipaddress SET alloc_type=5 WHERE ip = '$IP_ADDRESS' AND alloc_type=6;"
     $ maas $PROFILE ipaddresses release ip='$IP_ADDRESS' force=true
 ```
-* [MAAS is unable to handle duplicate UUIDs](https://bugs.launchpad.net/maas/+bug/1893690): The firmware for Dell servers (and possibly others) has a bug whereby they use the service number for the UUID, which is not guaranteed to be unique.  This caused MAAS commissioning to fail. The code was modified in 2.8.3 to detect and remove duplicate UUIDs, allowing MAAS to fall back to the MAC address.  There is also a database workaround for those who cannot upgrade to 2.8.3 right away:
+- [MAAS is unable to handle duplicate UUIDs](https://bugs.launchpad.net/maas/+bug/1893690): The firmware for Dell servers (and possibly others) has a bug whereby they use the service number for the UUID, which is not guaranteed to be unique.  This caused MAAS commissioning to fail. The code was modified in 2.8.3 to detect and remove duplicate UUIDs, allowing MAAS to fall back to the MAC address.  There is also a database workaround for those who cannot upgrade to 2.8.3 right away:
 ```
      $ sudo -u postgres psql $MAAS_DB -c "UPDATE maasserver_node SET hardware_uuid=NULL where hardware_uuid='$DUPLICATE_UUID'";
 ```
-* [Ubuntu 20.04 pxe installation fails...](https://bugs.launchpad.net/curtin/+bug/1876258):
+- [Ubuntu 20.04 pxe installation fails...](https://bugs.launchpad.net/curtin/+bug/1876258):
 When trying to PXE install Ubuntu 20.04, the installation fails with "no such file or directory, /dev/disk/by-id exception." This was an issue with block devices being created without serial numbers, bug fixed in curtin and released with 2.8.3.
 
-* [Failed to allocate the required AUTO IP addresses after 2 retries](https://bugs.launchpad.net/maas/+bug/1902425): MAAS incorrectly perceives that there are no available IP addresses, when in fact, there are plenty still available.  This is fixed in 2.8.3.
+- [Failed to allocate the required AUTO IP addresses after 2 retries](https://bugs.launchpad.net/maas/+bug/1902425): MAAS incorrectly perceives that there are no available IP addresses, when in fact, there are plenty still available.  This is fixed in 2.8.3.
 
-* [maas 2.9 rc1 machines create error (backport)](https://bugs.launchpad.net/maas/+bug/1904398): Adding `commission=true` to a CLI machine creation command produces an error.  This was fixed in 2.9 and backported to 2.8.3.
+- [maas 2.9 rc1 machines create error (backport)](https://bugs.launchpad.net/maas/+bug/1904398): Adding `commission=true` to a CLI machine creation command produces an error.  This was fixed in 2.9 and backported to 2.8.3.
 
-* [Lists of LXD nodes are represented in an incompatible data structure](https://bugs.launchpad.net/maas/+bug/1910473): Fixed in 2.8.3.
+- [Lists of LXD nodes are represented in an incompatible data structure](https://bugs.launchpad.net/maas/+bug/1910473): Fixed in 2.8.3.
 
-* Deselecting all architectures in the Ubuntu extra archtectures repo [blocks all deployments (backport)](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue. This was fixed in 2.9 and backported to 2.8.3.
+- Deselecting all architectures in the Ubuntu extra archtectures repo [blocks all deployments (backport)](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue. This was fixed in 2.9 and backported to 2.8.3.
 
-* [Can't commission without a test (backport)](https://bugs.launchpad.net/maas/+bug/1884278): MAAS 2.8 does not allow machines to be commissioned with zero tests selected; this occurs only for multiple machines, and only when commissioning from the UI.  This was fixed in 2.9 and backported to 2.8.3.
+- [Can't commission without a test (backport)](https://bugs.launchpad.net/maas/+bug/1884278): MAAS 2.8 does not allow machines to be commissioned with zero tests selected; this occurs only for multiple machines, and only when commissioning from the UI.  This was fixed in 2.9 and backported to 2.8.3.
 
 Note that there is a workaround for those not ready to upgrade to 2.8.3, specifically, using the CLI to commission machines without testing them:
 
     maas $PROFILE machine commission $SYSTEM_ID testing_scripts=none
 
-* [UI should not autoselect noauto commissioning scripts (backport)](https://bugs.launchpad.net/maas/+bug/1884827): Previously, users gained the ability to upload commissioning scripts which do not automatically run, but the UI ignores the "noauto" tag and runs the script anyway.  This was fixed in 2.9 and backported to 2.8.3.
+- [UI should not autoselect noauto commissioning scripts (backport)](https://bugs.launchpad.net/maas/+bug/1884827): Previously, users gained the ability to upload commissioning scripts which do not automatically run, but the UI ignores the "noauto" tag and runs the script anyway.  This was fixed in 2.9 and backported to 2.8.3.
 
-* [ipmi-config command not found in snap (backport)](https://bugs.launchpad.net/maas/+bug/1891331): The `ipmi-config` cannot be found in a MAAS snap, due to path confusion in the wrapper script. This was fixed in 2.9 and backported to 2.8.3.
+- [ipmi-config command not found in snap (backport)](https://bugs.launchpad.net/maas/+bug/1891331): The `ipmi-config` cannot be found in a MAAS snap, due to path confusion in the wrapper script. This was fixed in 2.9 and backported to 2.8.3.
 
-* [Admin users cannot change other user's passwords via UI (backport)](https://bugs.launchpad.net/maas/+bug/1894727): An administrator is unable to change users passwords via the UI.  This was fixed in 2.9 and backported to 2.8.3.
+- [Admin users cannot change other user's passwords via UI (backport)](https://bugs.launchpad.net/maas/+bug/1894727): An administrator is unable to change users passwords via the UI.  This was fixed in 2.9 and backported to 2.8.3.
 
-* [all rack addresses in vlan are included in list of nameservers sent to deployed server (backport)](https://bugs.launchpad.net/maas/+bug/1896684): From the Bug Description: "MAAS forces all rack addresses for all subnets in a single vlan to any system deployed into any of those subnets. If the deployed systems are isolated, with no gateway configured, they may end up with broken DNS due to having nameservers configured which are not reachable."
+- [all rack addresses in vlan are included in list of nameservers sent to deployed server (backport)](https://bugs.launchpad.net/maas/+bug/1896684): From the Bug Description: "MAAS forces all rack addresses for all subnets in a single vlan to any system deployed into any of those subnets. If the deployed systems are isolated, with no gateway configured, they may end up with broken DNS due to having nameservers configured which are not reachable."
 This was fixed in 2.9 and backported to 2.8.3.
 
 <h3>MAAS 2.8.2 released</h3>
@@ -75,14 +75,14 @@ Thanks to everyone who reported the issues with previous 2.7 releases and helped
 
 Following on from MAAS 2.7, we are happy to announce that MAAS 2.8 is now available. This release features some critical bug fixes, along with some exciting new features.
 
-<h4>Six questions you may have:</h4>
+<h4>Some questions you may have:</h4>
 
-1. [What are the new features & fixes for 2.8?](#heading--2-8-release-notes)
-2. [What known issues should I be aware of?](#heading--2-8-known-issues)
-3. [How do I install MAAS 2.8 as a snap?](/t/maas-installation/3312)
-4. [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](/t/maas-installation/3312#heading--upgrade-maas-snap)
-5. [How do I install MAAS 2.8 from packages?](/t/maas-installation/3327)
-6. [What bugs were fixed in this release?](#heading--bug-fixes)
+- [What are the new features & fixes for 2.8?](#heading--2-8-release-notes)
+- [What known issues should I be aware of?](#heading--2-8-known-issues)
+- [How do I install MAAS 2.8 as a snap?](/t/maas-installation/3312)
+- [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](/t/maas-installation/3312#heading--upgrade-maas-snap)
+- [How do I install MAAS 2.8 from packages?](/t/maas-installation/3327)
+- [What bugs were fixed in this release?](#heading--bug-fixes)
 
 <h2 id="heading--2-8-release-notes">LXD-based VM host support (Beta)</h2>
 
@@ -120,9 +120,9 @@ We've also fixed number of bugs (see the [list in Launchpad](https://bugs.launch
 
 <h2 id="heading--2-8-known-issues">Known issues</h2>
 
-* **Browser caching issue:** There is a known issue with browser caching on some MAAS pages.  If you initially encounter a page which does not appear to be correctly formatted, please manually clear your browser cache (**not Ctrl-F5**) and it should restore the page to normal.  You manually clear your browser cache, for example, in the "History" section of the menu on a Chrome browser.
+- **Browser caching issue:** There is a known issue with browser caching on some MAAS pages.  If you initially encounter a page which does not appear to be correctly formatted, please manually clear your browser cache (**not Ctrl-F5**) and it should restore the page to normal.  You manually clear your browser cache, for example, in the "History" section of the menu on a Chrome browser.
 
-* **Extra power types when adding chassis:** ([see bug report](https://bugs.launchpad.net/maas/+bug/1883743)) When adding a chassis, the "Power type" drop-down will show power types not supported by a chassis.  Selecting one of the non-supported power types will result in the UI blocking the action.  Here is a list of power types supported for chassis creation:
+- **Extra power types when adding chassis:** ([see bug report](https://bugs.launchpad.net/maas/+bug/1883743)) When adding a chassis, the "Power type" drop-down will show power types not supported by a chassis.  Selecting one of the non-supported power types will result in the UI blocking the action.  Here is a list of power types supported for chassis creation:
   * `mscm` - Moonshot Chassis Manager
   * `msftocs` - Microsoft OCS Chassis Manager
   * `powerkvm` - Virtual Machines on Power KVM, managed by Virsh
@@ -132,6 +132,6 @@ We've also fixed number of bugs (see the [list in Launchpad](https://bugs.launch
   * `virsh` - virtual machines managed by Virsh
   * `vmware` - virtual machines managed by VMware
 
-* **MAAS keys count in user list is bogus:** ([see bug report](https://bugs.launchpad.net/maas/+bug/1884112)) The count of keys shown in the User list in the UI is wrong.
+- **MAAS keys count in user list is bogus:** ([see bug report](https://bugs.launchpad.net/maas/+bug/1884112)) The count of keys shown in the User list in the UI is wrong.
 
-* **Leftover lock files may be present under some conditions:** Even if you purge an old MAAS Debian package, it can leave lock files in `/run/lock/maas*`.  This can cause issues if you later reinstall MAAS, and the previous MAAS user UID has been reassigned.  At that point, MAAS can't remove those files and create new ones.  If this occurs, it is easily fixed by removing those files manually before reinstalling.
+- **Leftover lock files may be present under some conditions:** Even if you purge an old MAAS Debian package, it can leave lock files in `/run/lock/maas*`.  This can cause issues if you later reinstall MAAS, and the previous MAAS user UID has been reassigned.  At that point, MAAS can't remove those files and create new ones.  If this occurs, it is easily fixed by removing those files manually before reinstalling.

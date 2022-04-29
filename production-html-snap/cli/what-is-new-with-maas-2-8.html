@@ -408,7 +408,7 @@
 </code></pre>
 <p>or by using the aforementioned PPA.  The focus for this release has been <a href="https://bugs.launchpad.net/maas/+milestone/2.8.3rc1">bugfixing</a> and <a href="https://bugs.launchpad.net/maas/+milestone/2.8.3">more bugfixing</a>.  No other changes have been made to MAAS with this release.</p>
 <p>Here&rsquo;s a summary of the bugs that were fixed in 2.8.3:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p><a href="https://bugs.launchpad.net/maas/+bug/1881133">DNS Servers not set as expected</a>: MAAS was using the region controller IP in dhcpd.conf when other DNS servers are present, effectively bypassing the rack controller proxy to machines.  The code was updated to use the region controller IP for DNS only if no other DNS servers are found.</p>
 </li>
@@ -428,12 +428,12 @@
 <pre><code>    $ sudo -u postgres psql $MAAS_DB -c &quot;UPDATE maasserver_staticipaddress SET alloc_type=5 WHERE ip = '$IP_ADDRESS' AND alloc_type=6;&quot;
     $ maas $PROFILE ipaddresses release ip='$IP_ADDRESS' force=true
 </code></pre>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="https://bugs.launchpad.net/maas/+bug/1893690">MAAS is unable to handle duplicate UUIDs</a>: The firmware for Dell servers (and possibly others) has a bug whereby they use the service number for the UUID, which is not guaranteed to be unique.  This caused MAAS commissioning to fail. The code was modified in 2.8.3 to detect and remove duplicate UUIDs, allowing MAAS to fall back to the MAC address.  There is also a database workaround for those who cannot upgrade to 2.8.3 right away:</li>
 </ul>
 <pre><code>     $ sudo -u postgres psql $MAAS_DB -c &quot;UPDATE maasserver_node SET hardware_uuid=NULL where hardware_uuid='$DUPLICATE_UUID'&quot;;
 </code></pre>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p><a href="https://bugs.launchpad.net/curtin/+bug/1876258">Ubuntu 20.04 pxe installation fails&hellip;</a>:
 When trying to PXE install Ubuntu 20.04, the installation fails with &ldquo;no such file or directory, /dev/disk/by-id exception.&rdquo; This was an issue with block devices being created without serial numbers, bug fixed in curtin and released with 2.8.3.</p>
@@ -457,7 +457,7 @@ When trying to PXE install Ubuntu 20.04, the installation fails with &ldquo;no s
 <p>Note that there is a workaround for those not ready to upgrade to 2.8.3, specifically, using the CLI to commission machines without testing them:</p>
 <pre><code>maas $PROFILE machine commission $SYSTEM_ID testing_scripts=none
 </code></pre>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p><a href="https://bugs.launchpad.net/maas/+bug/1884827">UI should not autoselect noauto commissioning scripts (backport)</a>: Previously, users gained the ability to upload commissioning scripts which do not automatically run, but the UI ignores the &ldquo;noauto&rdquo; tag and runs the script anyway.  This was fixed in 2.9 and backported to 2.8.3.</p>
 </li>
@@ -482,16 +482,16 @@ This was fixed in 2.9 and backported to 2.8.3.</p>
 <h3>MAAS 2.8 released</h3>
 
 <p>Following on from MAAS 2.7, we are happy to announce that MAAS 2.8 is now available. This release features some critical bug fixes, along with some exciting new features.</p>
-<h4>Six questions you may have:</h4>
+<h4>Some questions you may have:</h4>
 
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--2-8-release-notes">What are the new features &amp; fixes for 2.8?</a></li>
 <li><a href="#heading--2-8-known-issues">What known issues should I be aware of?</a></li>
 <li><a href="maas-installation.html">How do I install MAAS 2.8 as a snap?</a></li>
 <li><a href="maas-installation.html#heading--upgrade-maas-snap">How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?</a></li>
 <li><a href="maas-installation.html">How do I install MAAS 2.8 from packages?</a></li>
 <li><a href="#heading--bug-fixes">What bugs were fixed in this release?</a></li>
-</ol>
+</ul>
 <h2 id="heading--2-8-release-notes">LXD-based VM host support (Beta)</h2>
 
 <p>MAAS 2.8 adds the beta capability to use LXD-based VM hosts and virtual machines (VMs), in addition to the <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a>-based VM hosts/VMs already available.  These new LXD VM hosts use the same underlying technology as libvirt (QEMU). Unlike libvirt KVMs, though, LXD VMs can be managed without requiring SSH access to the VM host. LXD are remotely accessed via secure HTTP transport, which provides better security for LXD-based VMs. In addition, LXD has a better API, and is part of a much larger constellation of enterprise software, offering a wider range of future features and use cases.</p>
@@ -504,7 +504,7 @@ This was fixed in 2.9 and backported to 2.8.3.</p>
 <h2 id="heading--bug-fixes">Bug fixes</h2>
 
 <p>We&rsquo;ve also fixed number of bugs (see the <a href="https://bugs.launchpad.net/bugs/+bugs?field.milestone%3Alist=89978&amp;field.milestone%3Alist=90576&amp;field.milestone%3Alist=90599&amp;field.milestone%3Alist=90640&amp;field.milestone%3Alist=90645&amp;field.milestone%3Alist=90722&amp;field.milestone%3Alist=91005&amp;field.milestone%3Alist=91123&amp;field.milestone%3Alist=91124&amp;field.milestone%3Alist=91180&amp;field.status%3Alist=FIXRELEASED">list in Launchpad</a>).  Notable among these are the following:</p>
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p><a href="https://bugs.launchpad.net/maas/+bug/1860619">MAAS event table</a>: Power events are now being logged differently to reduce log sizes and improve performance.</p>
 </li>
@@ -529,7 +529,7 @@ This was fixed in 2.9 and backported to 2.8.3.</p>
 </ul>
 <h2 id="heading--2-8-known-issues">Known issues</h2>
 
-<ul>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p><strong>Browser caching issue:</strong> There is a known issue with browser caching on some MAAS pages.  If you initially encounter a page which does not appear to be correctly formatted, please manually clear your browser cache (<strong>not Ctrl-F5</strong>) and it should restore the page to normal.  You manually clear your browser cache, for example, in the &ldquo;History&rdquo; section of the menu on a Chrome browser.</p>
 </li>
