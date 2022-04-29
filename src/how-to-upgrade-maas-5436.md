@@ -1,6 +1,6 @@
 <!-- "How to upgrade MAAS" -->
 [tabs]
-[tab version="v3.2 Snap"] 
+[tab version="v3.2 Snap" view="CLI"] 
 <a href="#heading--upgrade-from-earlier-version-to-snap-3-2"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-2">How to upgrade a snap to MAAS 3.2 Beta</h2></a>
 
 If you want to upgrade from a earlier snap version to the 3.2 Beta snap, and you are using a `region+rack` configuration, use this command:
