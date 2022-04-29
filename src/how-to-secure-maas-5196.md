@@ -3,12 +3,12 @@ As a MAAS administrator, you have the critical responsibility of hardening your 
 
 #### This article will help you learn:
 
-* [How to set up a firewall for MAAS](#heading--firewalls)
-* [How to configure a TLS-terminating load balancer](#heading--tls)
-* [How to use logs to identify security issues](#heading--using-logs-for-security)
-* [How to implement PostgreSQL security](#heading--postgres-security)
-* [About other things you can do to harden MAAS](#heading--what-else-to-do)
-* [Whom to contact for MAAS security consulting](#heading--security-consulting)
+- [How to set up a firewall for MAAS](#heading--firewalls)
+- [How to configure a TLS-terminating load balancer](#heading--tls)
+- [How to use logs to identify security issues](#heading--using-logs-for-security)
+- [How to implement PostgreSQL security](#heading--postgres-security)
+- [About other things you can do to harden MAAS](#heading--what-else-to-do)
+- [Whom to contact for MAAS security consulting](#heading--security-consulting)
 
 <a href="#heading--firewalls"><h2 id="heading--firewalls">How to set up a firewall for MAAS</h2></a>
 
@@ -194,13 +194,13 @@ Detecting malicious activity directed toward your Web server is best done with a
 
 Web server log analysis is also an art form, so we don't plan to offer a comprehensive tutorial here, but here are few examples of things to look for in your logs:
 
-1. multiple requests in less than one second, or some other appropriate time-frame.
+- multiple requests in less than one second, or some other appropriate time-frame.
 
-2. multiple secure/login page accesses in a one-minute window, especially when they fail.
+- multiple secure/login page accesses in a one-minute window, especially when they fail.
 
-3. attempts to access non-existent pages using different paths or query parameters (e.g., `135.25.48.19:5250/maas/index.html`).
+- attempts to access non-existent pages using different paths or query parameters (e.g., `135.25.48.19:5250/maas/index.html`).
 
-4. look out for SQL injection attacks, for example:
+- look out for SQL injection attacks, for example:
 
     84.55.41.57- - [14/Apr/2016:08:22:13 0100]
     "GET /wordpress/wp-content/plugins/custom_plugin/check_user.php?userid=1 
@@ -210,7 +210,7 @@ Web server log analysis is also an art form, so we don't plan to offer a compreh
     (Windows; U; Windows NT 6.1; ru; rv:1.9.2.3) Gecko/20100401 Firefox/4.0 (.NET CLR 
     3.5.30729)"
 
-5. attempts to run a Web shell, for instance:
+- attempts to run a Web shell, for instance:
 
     192.168.1.102 29/Oct/2018:14:52:16 GET /b374k.php HTTP/1.1 200 2125 Mozilla/5.0
 
