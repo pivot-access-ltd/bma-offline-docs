@@ -1,18 +1,18 @@
 <!-- "How to troubleshoot MAAS" -->
 This section may help you deal with some common problems:
 
-* [Adding overlapping subnets in fabric can break deployments](#heading--overlapping-subnets-can-break-deployments)
-* [\"File not found\" when creating commissioning or node script with MAAS CLI](#heading--commissioning-script-file-not-found)
-* [Can't login to machine after deployment](#heading--machine-login-issues)
-* [Subarchitecture error thrown by django](#heading--django-subarch-error)
-* [Nodes hang on "Commissioning"](#heading--nodes-hang-on-commissioning)
-* [Node deployment fails](#heading--node-deployment-fails)
-* [Nodes fail to PXE boot](#heading--nodes-fail-to-pxe-boot)
-* [Can't log in to node](#heading--cant-log-in-to-node)
-* [Forgot MAAS administrator password](#heading--forgot-maas-administrator-password)
-* [Need to reconfigure server IP address](#heading--need-to-reconfigure-server-ip-address)
-* [Can't find MAAS web UI](#heading--cant-find-maas-web-ui)
-* [Backdoor image login](#heading--backdoor-image-login)
+- [Adding overlapping subnets in fabric can break deployments](#heading--overlapping-subnets-can-break-deployments)
+- [\"File not found\" when creating commissioning or node script with MAAS CLI](#heading--commissioning-script-file-not-found)
+- [Can't login to machine after deployment](#heading--machine-login-issues)
+- [Subarchitecture error thrown by django](#heading--django-subarch-error)
+- [Nodes hang on "Commissioning"](#heading--nodes-hang-on-commissioning)
+- [Node deployment fails](#heading--node-deployment-fails)
+- [Nodes fail to PXE boot](#heading--nodes-fail-to-pxe-boot)
+- [Can't log in to node](#heading--cant-log-in-to-node)
+- [Forgot MAAS administrator password](#heading--forgot-maas-administrator-password)
+- [Need to reconfigure server IP address](#heading--need-to-reconfigure-server-ip-address)
+- [Can't find MAAS web UI](#heading--cant-find-maas-web-ui)
+- [Backdoor image login](#heading--backdoor-image-login)
 
 <a href="#heading--overlapping-subnets-can-break-deployments"><h2 id="heading--overlapping-subnets-can-break-deployments">Adding overlapping subnets in fabric can break deployments</h2></a>
 
@@ -20,8 +20,8 @@ This section may help you deal with some common problems:
 
 MAAS does not currently prevent you from creating overlapping subnets, for example:
 
- - subnet 1 = 192.168.48.0/24
- - subnet 2 = 192.168.48.0/22
+- subnet 1 = 192.168.48.0/24
+- subnet 2 = 192.168.48.0/22
 
 This can break deployments, because the controllers can't reliably determine which subnet should get a packet destined for one of the overlapping addresses. The IP range of one subnet should be unique compared to every other subnet on the same segment.
 
@@ -45,9 +45,9 @@ you may receive a "file not found" error:
 
 There are two possible sources of the error:
 
-1. You did not actually type the filename correctly, or the file does not exist in `/tmp`.  Check the spelling and make sure the file is actually present in `/tmp` (for example).
+- You did not actually type the filename correctly, or the file does not exist in `/tmp`.  Check the spelling and make sure the file is actually present in `/tmp` (for example).
 
-2. You are using the snap version of MAAS.  When using the MAAS snap, you may not use `/tmp` due to confinement rules.  Move the file to `/opt` or `/home/myhomdir` and try again.
+- You are using the snap version of MAAS.  When using the MAAS snap, you may not use `/tmp` due to confinement rules.  Move the file to `/opt` or `/home/myhomdir` and try again.
 
 In fact, trying to upload the script from any directory owned by `root` will give a similar error.
 
@@ -57,11 +57,11 @@ Also note that `commissioning-scripts` is deprecated and may be removed at some 
 
 When everything seems to be right about your machine deployment, but you can't login, there's a chance you might not be using the right username.  You may have added your personal SSH key to MAAS, but your corresponding login doesn't seem to work; that's because the logins for the machines are generally related to the operating system, e.g.:
 
-* For machines deploying Ubuntu, the username is `ubuntu`, and the login would be `ubuntu@$MACHINE_IP`.
+- For machines deploying Ubuntu, the username is `ubuntu`, and the login would be `ubuntu@$MACHINE_IP`.
 
-* For machines deploying CentOS 7, the username is `centos`, and the login would be `centos@$MACHINE_IP`.
+- For machines deploying CentOS 7, the username is `centos`, and the login would be `centos@$MACHINE_IP`.
 
-* For machines deploying CentOS 8, the username is `cloud-user`, and the login would be `cloud-user@$MACHINE_IP`.
+- For machines deploying CentOS 8, the username is `cloud-user`, and the login would be `cloud-user@$MACHINE_IP`.
 
 Note there is a trick for determining the correct machine login, which works on many different versions of Linux.  If you attempt to `ssh root@$MACHINE_IP`, this will fail, but often tells you which user you should be using. 
 
@@ -154,9 +154,9 @@ sudo dpkg-reconfigure maas-region-controller
 
 By default, the web UI is located at `http://<hostname>:5240/MAAS/`. If you can't access it, there are a few things to try:
 
-1.  Check that the webserver is running - By default the web interface uses Apache, which runs under the service name *apache2*. To check it, on the MAAS server box you can run `sudo /etc/init.d/apache2 status`.
-2.  Check that the hostname is correct - It may seem obvious, but check that the hostname is being resolved properly. Try running a browser (even a text mode one like `elinks`) on the same box as the MAAS server and navigating to the page. If that doesn't work, try `http://127.0.0.1:5240/MAAS/`, which will always point at the local server.
-3.  If you are still getting "404 - Page not found" errors, check that the MAAS web interface has been installed in the right place. There should be a file present called `/usr/share/maas/maas/urls.py`.
+- Check that the webserver is running - By default the web interface uses Apache, which runs under the service name *apache2*. To check it, on the MAAS server box you can run `sudo /etc/init.d/apache2 status`.
+- Check that the hostname is correct - It may seem obvious, but check that the hostname is being resolved properly. Try running a browser (even a text mode one like `elinks`) on the same box as the MAAS server and navigating to the page. If that doesn't work, try `http://127.0.0.1:5240/MAAS/`, which will always point at the local server.
+- If you are still getting "404 - Page not found" errors, check that the MAAS web interface has been installed in the right place. There should be a file present called `/usr/share/maas/maas/urls.py`.
 
 <a href="#heading--backdoor-image-login"><h2 id="heading--backdoor-image-login">Backdoor image login</h2></a>
 
