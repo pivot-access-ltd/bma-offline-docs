@@ -3,11 +3,11 @@ This section contains a collection of tips, tricks, and traps which may help sol
 
 #### What would you like to do?
 
-1. [Migrate an existing snap installation to use a local PostgreSQL server](#heading--migrating-maas)
-2. [Manually export the MAAS database](#heading--manual-export)
-3. [Network boot an IBM Power server](#heading--ibm-power-server-pxe-boot)
-4. [Try jq recipes using the CLI](#heading--jq-machine-list)
-5. [Resolve MAAS/LXD DNS & DHCP conflicts/network issues](#heading--maas-lxd-network-conflicts)
+- [Migrate an existing snap installation to use a local PostgreSQL server](#heading--migrating-maas)
+- [Manually export the MAAS database](#heading--manual-export)
+- [Network boot an IBM Power server](#heading--ibm-power-server-pxe-boot)
+- [Try jq recipes using the CLI](#heading--jq-machine-list)
+- [Resolve MAAS/LXD DNS & DHCP conflicts/network issues](#heading--maas-lxd-network-conflicts)
 
 <h2 id="heading--migrating-maas">Migrating an existing snap installation</h2>
 
@@ -52,8 +52,8 @@ Be sure to replace `0/0`, above, with the proper CIDR to restrict access to a sp
 
 To finish the process, you'll need to update the MAAS snap config to:
 
-1. update the database config in `/var/snap/maas/current/regiond.conf` with the proper `database_host` and `database_pass`
-2. change the content of `/var/snap/maas/common/snap_mode` from `all` to `region+rack`
+- update the database config in `/var/snap/maas/current/regiond.conf` with the proper `database_host` and `database_pass`
+- change the content of `/var/snap/maas/common/snap_mode` from `all` to `region+rack`
 
 Using a local PostgreSQL server is a little bit of work, but it provides great benefits in terms of MAAS scalability and performance.
 

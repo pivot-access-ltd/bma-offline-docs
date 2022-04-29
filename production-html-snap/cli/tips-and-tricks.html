@@ -32,7 +32,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation-25.html">
+	<a href="maas-documentation.html">
 	  Introduction
 	</a>
       </strong>
@@ -397,13 +397,13 @@
   <h1>Tips and tricks</h1><!-- "Tips and tricks" -->
 <p>This section contains a collection of tips, tricks, and traps which may help solve unusual or infrequent issues that come up.</p>
 <h4>What would you like to do?</h4>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--migrating-maas">Migrate an existing snap installation to use a local PostgreSQL server</a></li>
 <li><a href="#heading--manual-export">Manually export the MAAS database</a></li>
 <li><a href="#heading--ibm-power-server-pxe-boot">Network boot an IBM Power server</a></li>
 <li><a href="#heading--jq-machine-list">Try jq recipes using the CLI</a></li>
 <li><a href="#heading--maas-lxd-network-conflicts">Resolve MAAS/LXD DNS &amp; DHCP conflicts/network issues</a></li>
-</ol>
+</ul>
 <h2 id="heading--migrating-maas">Migrating an existing snap installation</h2>
 
 <p>If you&rsquo;re currently running MAAS from a snap in <code>all</code> mode, you can easily migrate your database to a local PostgreSQL server with the following command:</p>
@@ -435,10 +435,10 @@ sudo -u postgres createdb maasdb -O maas
 <pre><code>sudo -u postgres pg_restore -d maasdb maasdb-dump.tar
 </code></pre>
 <p>To finish the process, you&rsquo;ll need to update the MAAS snap config to:</p>
-<ol>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li>update the database config in <code>/var/snap/maas/current/regiond.conf</code> with the proper <code>database_host</code> and <code>database_pass</code></li>
 <li>change the content of <code>/var/snap/maas/common/snap_mode</code> from <code>all</code> to <code>region+rack</code></li>
-</ol>
+</ul>
 <p>Using a local PostgreSQL server is a little bit of work, but it provides great benefits in terms of MAAS scalability and performance.</p>
 <h2 id="heading--ibm-power-server-pxe-boot">Network booting IBM Power servers</h2>
 
