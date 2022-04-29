@@ -3,22 +3,22 @@ We are happy to announce that MAAS 3.2 Beta 3 is now available.  This release pr
 
 <a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.2 features and fixes</h3></a>
 
- - [Hardware sync for deployed machines](https://maas.io/docs/how-to-customise-machines#heading--how-to-enable-hardware-sync-on-a-machine): MAAS allows you to sync hardware changes for a deployed and running machine.
+- [Hardware sync for deployed machines](https://maas.io/docs/how-to-customise-machines#heading--how-to-enable-hardware-sync-on-a-machine): MAAS allows you to sync hardware changes for a deployed and running machine.
  
- - [Tag management](/t/how-to-work-with-tags/5928): MAAS now provides greatly expanded tagging capability.
+- [Tag management](/t/how-to-work-with-tags/5928): MAAS now provides greatly expanded tagging capability.
  
- - [Support for observability (O11y) in MAAS](/t/how-to-set-up-maas-metrics/5204): MAAS now supports integration with FOSS Observability stacks.
+- [Support for observability (O11y) in MAAS](/t/how-to-set-up-maas-metrics/5204): MAAS now supports integration with FOSS Observability stacks.
 
- - [Ability for user to specify IPMI cipher suite](/t/power-management-reference/5246): You can explicitly select which cipher suite to use when interacting with a BMC.
+- [Ability for user to specify IPMI cipher suite](/t/power-management-reference/5246): You can explicitly select which cipher suite to use when interacting with a BMC.
 
- - Roll-out of our new tabbed Reader Adaptive Documentation (incremental across the release cycle).
+- Roll-out of our new tabbed Reader Adaptive Documentation (incremental across the release cycle).
 
 [note]
 This is a Beta release, so you may encounter bugs and incomplete features.  We strongly recommend that you take the necessary precautions, which include (but are not limited to) the following steps:
 
- - Install Beta versions on a system specifically designated for testing; Beta is not recommended for production.
- - Take a backup of any unrecoverable data on your test system prior to installing Beta versions.
- - More specifically, if you use a system for testing MAAS releases, back up the MAAS database and any unique configuration files related to your use of MAAS prior to installing Beta versions.
+- Install Beta versions on a system specifically designated for testing; Beta is not recommended for production.
+- Take a backup of any unrecoverable data on your test system prior to installing Beta versions.
+- More specifically, if you use a system for testing MAAS releases, back up the MAAS database and any unique configuration files related to your use of MAAS prior to installing Beta versions.
 
 Also, you should make sure that you are using the latest version of PostgreSQL.  [Here's how you can upgrade that](https://discourse.maas.io/t/upgrading-postgresql-to-version-12/5913).
 
@@ -61,12 +61,12 @@ At this point, proceed with a normal installation.
 
 Here is the breakdown of bugs fixed across the MAAS 3.2 release:
 
- * [MAAS 3.2 Beta 3](https://launchpad.net/maas/3.2/3.2.0-beta3)
- * [MAAS 3.2 Beta 2](https://launchpad.net/maas/+milestone/3.2.0-beta2)
- * [MAAS 3.2 Beta 1](https://launchpad.net/maas/3.2/3.2.0-beta1)
+- [MAAS 3.2 Beta 3](https://launchpad.net/maas/3.2/3.2.0-beta3)
+- [MAAS 3.2 Beta 2](https://launchpad.net/maas/+milestone/3.2.0-beta2)
+- [MAAS 3.2 Beta 1](https://launchpad.net/maas/3.2/3.2.0-beta1)
  
 <a href="#heading--known-issues-maas-3-2"><h2 id="heading--known-issues-maas-3-2">Known issues for MAAS 3.2</h2></a>
 
 The following known issues are associated with MAAS 3.2 at its current release state:
 
- * The offline documentation is catching up, but is not yet fully updated as of MAAS 3.2 Beta 3.  Please use the [online documentation](https://maas.io/docs) to get the correct operating information for Beta 3.
+- The offline documentation is catching up, but is not yet fully updated as of MAAS 3.2 Beta 3.  Please use the [online documentation](https://maas.io/docs) to get the correct operating information for Beta 3.
