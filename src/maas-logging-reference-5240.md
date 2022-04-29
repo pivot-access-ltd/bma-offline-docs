@@ -3,15 +3,15 @@ MAAS has a robust logging capability, which presents several different views, in
 
 #### This document will help you learn:
 
-* [About the syslog logging path](#heading--path)
-* [How to use a remote syslog server](#heading--using-a-remote-syslog-server)
+- [About the syslog logging path](#heading--path)
+- [How to use a remote syslog server](#heading--using-a-remote-syslog-server)
 
 It also links to reference material for:
 
-* [Commissioning logs](/t/commissioning-log-reference/5248)
-* [Test logs](/t/test-log-reference/5314)
-* [Event logs](/t/event-log-reference/5252)
-* [Audit event logs](/t/audit-event-log-reference/5256)
+- [Commissioning logs](/t/commissioning-log-reference/5248)
+- [Test logs](/t/test-log-reference/5314)
+- [Event logs](/t/event-log-reference/5252)
+- [Audit event logs](/t/audit-event-log-reference/5256)
 
 The discussion of these logs and their contents can be very extensive, so each type of logging has its own documentation section, reachable from the left-hand menu -- or from the list of questions above.
 
