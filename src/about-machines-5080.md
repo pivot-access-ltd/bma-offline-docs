@@ -489,7 +489,7 @@ For MAAS 3.0 and above, the following boot method changes have been implemented:
 - UEFI ARM64 HTTP(00:13) has been enabled.
 - UEFI ARM64 TFTP(00:0B) and UEFI ARM64 HTTP(00:13) will now provide a shim and GRUB signed with the Microsoft boot loader keys.
 - grub.cfg for all UEFI platforms has been updated to replace the deprecated `linuxefi` and `initrdefi` commands with the standard `linux` and `initrd` commands.
-- GRUB debug may now be enabled by enabling [rackd debug logging](https://discourse.maas.io/t/running-installed-maas-in-debug-logging-mode/168).
+- GRUB debug may now be enabled by enabling rackd debug logging.
 
 [/tab]
 [tab version="v2.9 Snap,v2.9 Packages"]

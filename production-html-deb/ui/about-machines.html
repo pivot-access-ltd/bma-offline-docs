@@ -858,7 +858,7 @@ To commission a node, it must have a status of &ldquo;New&rdquo;.</p>
 <li>UEFI ARM64 HTTP(00:13) has been enabled.</li>
 <li>UEFI ARM64 TFTP(00:0B) and UEFI ARM64 HTTP(00:13) will now provide a shim and GRUB signed with the Microsoft boot loader keys.</li>
 <li>grub.cfg for all UEFI platforms has been updated to replace the deprecated <code>linuxefi</code> and <code>initrdefi</code> commands with the standard <code>linux</code> and <code>initrd</code> commands.</li>
-<li>GRUB debug may now be enabled by enabling <a href="running-installed-maas-in-debug-logging-mode.html">rackd debug logging</a>.</li>
+<li>GRUB debug may now be enabled by enabling rackd debug logging.</li>
 </ul>
 <p><a href="#heading--about-automatic-script-selection-by-hardware-type"><h4 id="heading--about-automatic-script-selection-by-hardware-type">About automatic script selection by hardware type</h4></a></p>
 <p>When selecting multiple machines, scripts which declare the <code>for_hardware</code> field will only run on machines with matching hardware. To automatically run a script when &lsquo;Update firmware&rsquo; or &lsquo;Configure HBA&rsquo; is selected, you must tag the script with &lsquo;update_firmware&rsquo; or &lsquo;configure_hba&rsquo;.</p>
