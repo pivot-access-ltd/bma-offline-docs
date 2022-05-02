@@ -465,7 +465,7 @@
 <p>Sometimes the hardware can boot from PXE, but fail to load correct drivers when booting the received image. This is sometimes the case when no open source drivers are available for the network hardware.</p>
 <p><strong>SOLUTION:</strong> The best fix for this problem is to install a Linux-friendly network adaptor. It <em>is</em> theoretically possible to modify the boot image to include proprietary drivers, but it is not a straightforward task.</p>
 <p><a href="#heading--node-deployment-fails"><h2 id="heading--node-deployment-fails">Node deployment fails</h2></a></p>
-<p>When deployment fails the <a href="maas-concepts-and-terms-reference.htmlnnnn#heading--rescue-mode">Rescue mode</a> action can be used to boot ephemerally into the node, followed by an investigation.</p>
+<p>When deployment fails the <a href="maas-concepts-and-terms-reference.html#heading--rescue-mode">Rescue mode</a> action can be used to boot ephemerally into the node, followed by an investigation.</p>
 <p>As an example, an improperly configured PPA was added to MAAS which caused nodes to fail deployment. After entering Rescue mode and connecting via SSH, the following was discovered in file <code>/var/log/cloud-init-output.log</code>:</p>
 <pre><code class="language-no-highlight">2016-11-28 18:21:48,982 - cc_apt_configure.py[ERROR]: failed to add apt GPG Key
 to apt keyring
