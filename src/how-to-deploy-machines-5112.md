@@ -670,7 +670,7 @@ A default test will be selected (`smartctl-validate`, a hard drive test) but you
 
 <a href="https://assets.ubuntu.com/v1/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/ccfefe25-nodes-hw-testing__2.4_deployed-choices.png"></a>
 
-See [Commissioning Scripts Reference](/t/commissioning-scripts-reference/5375) for more details on how these scripts work and how you can write your own.
+See [Commissioning scripts reference](/t/commissioning-scripts-reference/5375) for more details on how these scripts work and how you can write your own.
 
 [/tab]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
