@@ -74,79 +74,9 @@ Use a &lt;code&gt; tag to mark <code>inline filenames and other literals</code> 
 
 An admonishment distinguishes information from the rest of the text. The syntax begins with the markup tag <code>[note]</code> and ends with the corresponding closure <code>[/note]</code>:
 
-    [note type="admonishment-type" status="Admonishment title"]
+    [note]
     Admonishment text.
     [/note]
-
-Where:
-
--   `admonishment-type` can be 'Note', 'Warning', 'Positive', or 'Negative'.
--   `Admonishment title` is an optional title, formatted with whatever markups you desire.
--   `Admonishment text` is the text you wish to convey.
-
-<h3 id="heading--admonishment-examples">Admonishment examples</h3>
-
-<strong><em>Note Admonishment</em></strong>
-
-A 'Note' type admonishment is marked up like this:
-
-```
-[note status="Note"]
-If KVM-backed nodes are used, ensure that the 'maas' user on the rack
-controller can connect to the KVM host using a passphraseless private SSH
-key.
-[/note]
-```
-
-And it will appear as:
-[note status="Note"]
-If KVM-backed nodes are used, ensure that the 'maas' user on the rack controller can connect to the KVM host using a passphraseless private SSH key.
-[/note]
-
-<strong><em>Warning Admonishment</em></strong>
-
-Mark up a standard 'Warning' type admonishment this way:
-
-``` no-highlight
-[note type="caution" status="Warning"]
-Data will be lost unless you do the right thing.
-[/note]
-```
-And it will appear like this:
-
-[note type="caution" status="Warning"]
-Data will be lost unless you do the right thing.
-[/note]
-
-<strong><em>Positive Admonishment</em></strong>
-
-A 'Positive' type admonishment should be entered as follows:
-
-```
-[note type="positive" status="High score"]
-A positive note that should include a title.
-[/note]
-```
-It will show up in the document like this:
-
-[note type="positive" status="High score"]
-A positive note that should include a title.
-[/note]
-
-<strong><em>Negative Admonishment</em></strong>
-
-Finally, a 'Negative' type admonishment, with its title, could be marked up like this:
-
-```
-[note type="negative" status="Game over"]
-A negative note that should include a title.
-[/note]
-```
-And will look this way to the reader:
-
-[note type="negative" status="Game over"]
-A negative note that should include a title.
-[/note]
 
 <h2 id="heading--comments">Comments</h2>
 
