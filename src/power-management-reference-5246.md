@@ -459,28 +459,26 @@ All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI
 
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
 
-| Parameter | Description | Choices | Required |
-|:-----|:-----|:-----|
-| `power_type` | `ipmi` | | Required |
-| `power_driver` | Power driver |`LAN [IPMI 1.5]` | Required |
-| | | `LAN_2_0 [IPMI 2.0]`|
-| `power_boot_type` | Boot type | `Automatic` | Required |
+| Form field | Description | Choices | Required |
+|:-----------|:------------|:--------|:---------|
+| Power driver | Power driver |`LAN [IPMI 1.5]` | Required |
+| | | `LAN_2_0 [IPMI 2.0]`| |
+| Power boot type | Boot type | `Automatic` | Required |
 | | | `Legacy boot` | |
 | | | `EFI boot` | |
-| `power_address` | IP address of unit || Required |
-| `power_user` | Username to login || Optional |
-| `power_pass` | Password to access unit || Optional |
-| `mac_address` | MAC address of unit || Optional |
-| `k_g` | K_g BMC key | | Optional |
-| `cipher_suite_id` | Cipher suite ID | - `17` <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small> | Optional |
+| IP address | IP address of unit || Required |
+| Power user | Username to login || Optional |
+| Power password | Password to access unit || Optional |
+| Power MAC | MAC address of unit || Optional |
+| K_g | K_g BMC key | | Optional |
+| Cipher suite | Cipher suite ID | - `17` <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small> | Optional |
 | | |`3` <small>(3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128)</small> | |
 | | |` ` (blank) <small>(freeipmi-tools default)</small> | |
 | | |`8` <small>(8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128)</small> | |
 | | |`12` <small>(12 - HMAC-MD5::MD5-128::AES-CBC-128)</small> | |
-| `privilege_level` | IPMI privilege level | `User` | Optional |
+| Privilege level | IPMI privilege level | `User` | Optional  |
 | | | `Operator` | |
 | | | `Administrator` | |
-| `mac_address` | MAC address of unit || Optional |
 
 <a href="#heading--manual"><h3 id="heading--manual">Manual power configuration</h3></a>
 

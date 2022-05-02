@@ -1740,28 +1740,126 @@ The machine&rsquo;s hostname &ndash; according to MAAS &ndash; is a randomly cho
 <p><a href="#heading--ipmi"><h3 id="heading--ipmi">IPMI</h3></a></p>
 <p>All parameters are entered as <code>key=value</code>, e.g., <code>power_type=amt</code>.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.</p>
 <p>Some of the fields for this power type have fixed choices, indicated in the &ldquo;Choices&rdquo; column.</p>
-<p>| Parameter | Description | Choices | Required |
-|:-----|:-----|:-----|
-| <code>power_type</code> | <code>ipmi</code> | | Required |
-| <code>power_driver</code> | Power driver |<code>LAN [IPMI 1.5]</code> | Required |
-| | | <code>LAN_2_0 [IPMI 2.0]</code>|
-| <code>power_boot_type</code> | Boot type | <code>Automatic</code> | Required |
-| | | <code>Legacy boot</code> | |
-| | | <code>EFI boot</code> | |
-| <code>power_address</code> | IP address of unit || Required |
-| <code>power_user</code> | Username to login || Optional |
-| <code>power_pass</code> | Password to access unit || Optional |
-| <code>mac_address</code> | MAC address of unit || Optional |
-| <code>k_g</code> | K_g BMC key | | Optional |
-| <code>cipher_suite_id</code> | Cipher suite ID | - <code>17</code> <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small> | Optional |
-| | |<code>3</code> <small>(3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128)</small> | |
-| | |<code></code> (blank) <small>(freeipmi-tools default)</small> | |
-| | |<code>8</code> <small>(8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128)</small> | |
-| | |<code>12</code> <small>(12 - HMAC-MD5::MD5-128::AES-CBC-128)</small> | |
-| <code>privilege_level</code> | IPMI privilege level | <code>User</code> | Optional |
-| | | <code>Operator</code> | |
-| | | <code>Administrator</code> | |
-| <code>mac_address</code> | MAC address of unit || Optional |</p>
+<table>
+<thead>
+<tr>
+<th align="left">Form field</th>
+<th align="left">Description</th>
+<th align="left">Choices</th>
+<th align="left">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Power driver</td>
+<td align="left">Power driver</td>
+<td align="left"><code>LAN [IPMI 1.5]</code></td>
+<td align="left">Required</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>LAN_2_0 [IPMI 2.0]</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Power boot type</td>
+<td align="left">Boot type</td>
+<td align="left"><code>Automatic</code></td>
+<td align="left">Required</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>Legacy boot</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>EFI boot</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">IP address</td>
+<td align="left">IP address of unit</td>
+<td align="left"></td>
+<td align="left">Required</td>
+</tr>
+<tr>
+<td align="left">Power user</td>
+<td align="left">Username to login</td>
+<td align="left"></td>
+<td align="left">Optional</td>
+</tr>
+<tr>
+<td align="left">Power password</td>
+<td align="left">Password to access unit</td>
+<td align="left"></td>
+<td align="left">Optional</td>
+</tr>
+<tr>
+<td align="left">Power MAC</td>
+<td align="left">MAC address of unit</td>
+<td align="left"></td>
+<td align="left">Optional</td>
+</tr>
+<tr>
+<td align="left">K_g</td>
+<td align="left">K_g BMC key</td>
+<td align="left"></td>
+<td align="left">Optional</td>
+</tr>
+<tr>
+<td align="left">Cipher suite</td>
+<td align="left">Cipher suite ID</td>
+<td align="left">- <code>17</code> <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small></td>
+<td align="left">Optional</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>3</code> <small>(3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128)</small></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code></code> (blank) <small>(freeipmi-tools default)</small></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>8</code> <small>(8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128)</small></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>12</code> <small>(12 - HMAC-MD5::MD5-128::AES-CBC-128)</small></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Privilege level</td>
+<td align="left">IPMI privilege level</td>
+<td align="left"><code>User</code></td>
+<td align="left">Optional</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>Operator</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><code>Administrator</code></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 <p><a href="#heading--manual"><h3 id="heading--manual">Manual power configuration</h3></a></p>
 <p>Manual power configuration means exactly that &ndash; manually configured at the unit.  The only MAAS CLI parameter is <code>power_type=amt</code>. </p>
 <p><a href="#heading--moonshot"><h3 id="heading--moonshot">HP Moonshot - iLO4 (IPMI)</h3></a></p>
