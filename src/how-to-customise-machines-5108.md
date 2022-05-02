@@ -63,7 +63,7 @@ This section will show you:
 [/tab]
 [/tabs]
 
-Note that layouts can be set globally and on a per-machine basis.  For additional information on storage layouts, see the [Storage layouts reference](/t/-/5973) article.
+Note that layouts can be set globally and on a per-machine basis.  For additional information on storage layouts, see the [Storage layouts reference](/t/storage-layouts-reference/5973) article.
 
 <a href="#heading--how-to-set-global-storage-layouts"><h3 id="heading--how-to-set-global-storage-layouts">How to set global storage layouts</h3></a>
 
@@ -1386,7 +1386,7 @@ Updated BMC configuration and tags can also be viewed on the machine itself.  Th
 
 The hardware sync interval is configured globally in MAAS settings:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/4/45cba7386928c38a3f4ae36da4ea80bf4b0c4949.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/45cba7386928c38a3f4ae36da4ea80bf4b0c4949.png">
+<a href="https://discourse.maas.io/uploads/default/original/2X/4/45cba7386928c38a3f4ae36da4ea80bf4b0c4949.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/45cba7386928c38a3f4ae36da4ea80bf4b0c4949.png"></a>
 
 This value is then applied to the machine at time of deployment. You cannot modify a deployed machine’s sync interval.  You can view a machine’s specific sync interval via the `sync_interval` field on a given machine.
 
