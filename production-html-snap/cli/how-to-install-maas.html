@@ -309,6 +309,11 @@
 	  </a>
 	</li>
 	<li>
+	  <a href="how-to-work-with-audit-event-logs.html">
+	    Work with audit event logs
+	  </a>
+	</li>
+	<li>
 	  <a href="how-to-search-maas.html">
 	    Search MAAS
 	  </a>
@@ -336,6 +341,11 @@
 	<li>
 	  <a href="maas-logging-reference.html">
 	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event log reference
 	  </a>
 	</li>
 	<li>
@@ -578,7 +588,7 @@ If you want to set up PostgreSQL for a non-production deployment on
 this machine, and configure it for use with MAAS, you can install
 the maas-test-db snap before running 'maas init':
     sudo snap install maas-test-db
-    sudo maas init region+rack --database-uri maas-test-db:-#,
+    sudo maas init region+rack --database-uri maas-test-db:///
 </code></pre>
 <p>We&rsquo;ll quickly walk through these instructions to confirm your understanding.  First, install the <code>maas-test-db</code> snap:</p>
 <pre><code>sudo snap install maas-test-db
