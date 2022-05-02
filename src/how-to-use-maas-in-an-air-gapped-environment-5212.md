@@ -43,14 +43,14 @@ You may wish to create a [transparent proxy](#heading--transparent-proxy) to mak
 
 <a href="#heading--local-image-mirroring"><h2 id="heading--local-image-mirroring">How to retrieve or update MAAS images in an air-gapped environment</h2></a>
  
-MAAS has an [established process](https://maas.io/docs/local-image-mirror) for mirroring images locally.   The steps are relatively simple:
+MAAS has an [established process](/t/how-to-mirror-images-locally/5927) for mirroring images locally.   The steps are relatively simple:
 
 1. Install the `simplestreams` package.
 2. Define some variables to simplify CLI usage.
 3. Create the desired mirrors, specifying where you want your images stored.
 4. Set up a new boot source on your local server, referring to the local mirror.
 
-See the [local image mirror](https://maas.io/docs/local-image-mirror) for details.  Note that you can use the menu at the top of that page to switch to specific instructions for the version, build-type, and interface you prefer.
+See the [local image mirror](/t/how-to-mirror-images-locally/5927) for details.  Note that you can use the menu at the top of that page to switch to specific instructions for the version, build-type, and interface you prefer.
 
 <a href="#heading--non-maas-images"><h2 id="heading--non-maas-images">How to retrieve or update non-MAAS-maintained images in an air-gapped environment</h2></a>
 
@@ -65,11 +65,11 @@ Here's a thumbnail sketch of both of these methods.
 
 <h3 id="heading--other-os-user-data"><a href="#heading--other-os-user-data">How to use user_data to access non-MAAS-maintained images</a></h3>
 
-A user can create custom `user_data` which will configure CentOS or RHEL to use a specific mirror.  Check out the [custom machine setup](https://maas.io/docs/custom-machine-setup) page for details on how to make this work.
+A user can create custom `user_data` which will configure CentOS or RHEL to use a specific mirror.  Check out the [machine customisation](/t/how-to-customise-machines/5108) page for details on how to make this work.
 
 <h3 id="heading--store-custom-images"><a href="#heading--store-custom-images">Storing customer images for non-MAAS-maintained images</a></h3>
 
-You can also create custom images and store them in your local mirror.  Use the [MAAS Image Builder](https://maas.io/docs/image-builder) to create custom images as desired.  Once you have the image built, consult the page on [local image mirrors](https://maas.io/docs/local-image-mirror) to see how to incorporate your newly-built image into the local stash.
+You can also create custom images and store them in your local mirror.  Use the [MAAS Image Builder](/t/how-to-build-maas-images/5100) to create custom images as desired.  Once you have the image built, consult the page on [local image mirrors](/t/how-to-mirror-images-locally/5927) to see how to incorporate your newly-built image into the local stash.
 
 <a href="#heading--transparent-proxy"><h2 id="heading--transparent-proxy">How to set up a transparent proxy</h2></a>
 

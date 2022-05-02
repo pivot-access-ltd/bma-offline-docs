@@ -429,14 +429,14 @@
 <p>The <code>reprepro</code> command manages a local repository of Debian packages.  You can add files manually or download them from some other repository.  It does not require an external database.  This command also handles signatures of mirrored repos, and can create signatures for the generated package indices, if desired.  </p>
 <p>You may wish to create a <a href="#heading--transparent-proxy">transparent proxy</a> to make using your local repo easier.</p>
 <p><a href="#heading--local-image-mirroring"><h2 id="heading--local-image-mirroring">How to retrieve or update MAAS images in an air-gapped environment</h2></a></p>
-<p>MAAS has an <a href="https://maas.io/docs/local-image-mirror">established process</a> for mirroring images locally.   The steps are relatively simple:</p>
+<p>MAAS has an <a href="how-to-mirror-images-locally.html">established process</a> for mirroring images locally.   The steps are relatively simple:</p>
 <ol>
 <li>Install the <code>simplestreams</code> package.</li>
 <li>Define some variables to simplify CLI usage.</li>
 <li>Create the desired mirrors, specifying where you want your images stored.</li>
 <li>Set up a new boot source on your local server, referring to the local mirror.</li>
 </ol>
-<p>See the <a href="https://maas.io/docs/local-image-mirror">local image mirror</a> for details.  Note that you can use the menu at the top of that page to switch to specific instructions for the version, build-type, and interface you prefer.</p>
+<p>See the <a href="how-to-mirror-images-locally.html">local image mirror</a> for details.  Note that you can use the menu at the top of that page to switch to specific instructions for the version, build-type, and interface you prefer.</p>
 <p><a href="#heading--non-maas-images"><h2 id="heading--non-maas-images">How to retrieve or update non-MAAS-maintained images in an air-gapped environment</h2></a></p>
 <p>MAAS allows you to deploy many types of OSes, and, once deployed, install specific software.  MAAS can configure a user specified repository for Ubuntu, so a user can mirror the Ubuntu apt repositories and point MAAS at those repos. When Ubuntu deploys apt will automatically be configured to use the user defined apt mirrors. </p>
 <p>MAAS only does this for Ubuntu, not CentOS or RHEL. If you deploy CentOS or RHEL with MAAS, the repos that built the image will be deployed.  But this won&rsquo;t work in an air -gapped environment. To access non-MAAS-maintained images in an air-gapped environment, you will need to use one of two methods:</p>
@@ -447,10 +447,10 @@
 <p>Here&rsquo;s a thumbnail sketch of both of these methods.</p>
 <h3 id="heading--other-os-user-data"><a href="#heading--other-os-user-data">How to use user_data to access non-MAAS-maintained images</a></h3>
 
-<p>A user can create custom <code>user_data</code> which will configure CentOS or RHEL to use a specific mirror.  Check out the <a href="https://maas.io/docs/custom-machine-setup">custom machine setup</a> page for details on how to make this work.</p>
+<p>A user can create custom <code>user_data</code> which will configure CentOS or RHEL to use a specific mirror.  Check out the <a href="how-to-customise-machines.html">machine customisation</a> page for details on how to make this work.</p>
 <h3 id="heading--store-custom-images"><a href="#heading--store-custom-images">Storing customer images for non-MAAS-maintained images</a></h3>
 
-<p>You can also create custom images and store them in your local mirror.  Use the <a href="https://maas.io/docs/image-builder">MAAS Image Builder</a> to create custom images as desired.  Once you have the image built, consult the page on <a href="https://maas.io/docs/local-image-mirror">local image mirrors</a> to see how to incorporate your newly-built image into the local stash.</p>
+<p>You can also create custom images and store them in your local mirror.  Use the <a href="how-to-build-maas-images.html">MAAS Image Builder</a> to create custom images as desired.  Once you have the image built, consult the page on <a href="how-to-mirror-images-locally.html">local image mirrors</a> to see how to incorporate your newly-built image into the local stash.</p>
 <p><a href="#heading--transparent-proxy"><h2 id="heading--transparent-proxy">How to set up a transparent proxy</h2></a></p>
 <p>If you don&rsquo;t wish to disturb the default configurations for Ubuntu and MAAS, you can create a transparent proxy for Debian packages and images, via the following general steps:</p>
 <ol>
