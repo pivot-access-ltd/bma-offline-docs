@@ -22,11 +22,9 @@ This section will help you learn:
 
 - [How to install packer](#heading--how-to-install-packer)
 - [How to obtain templates](#heading--how-to-obtain-templates)
+- [How to create and use packer images](#heading--how-to-create-a-packer-image)
 
 Note that additional templates will be made available from time to time.
-
-- [How to install packer](#heading--how-to-install-packer)
-- [How to obtain templates](#heading--how-to-obtain-templates)
 
 <a href="#heading--how-to-install-packer"><h3 id="heading--how-to-install-packer">How to install packer</h3></a>
 
