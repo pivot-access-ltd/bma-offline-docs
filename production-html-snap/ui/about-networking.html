@@ -412,6 +412,7 @@
 <li><a href="#heading--about-proxies">About proxies</a></li>
 <li><a href="#heading--about-RPC">About RPC</a></li>
 <li><a href="#heading--about-network-discovery">About network discovery</a></li>
+<li><a href="#heading--vlans">About VLANs</a></li>
 <li><a href="#heading--about-subnet-management">About subnet management</a></li>
 <li><a href="#heading--about-ipv6">About IPv6</a></li>
 <li><a href="#heading--about-availability-zones">About availability zones</a></li>
@@ -443,6 +444,11 @@
 <p><a href="#heading--about-network-discovery"><h3 id="heading--about-network-discovery">About network discovery</h3></a></p>
 <p>MAAS constantly listens to the network and reports any discovered devices. Devices are identified when the rack controller observes them communicating on an attached IPv4 subnet. Discovered devices that do not correspond to machines and devices already known to MAAS can be listed via the CLI. If a device advertises a hostname using <code>mDNS</code> (such as with <code>avahi</code> or <code>Bonjour</code>), MAAS will also present the discovered hostname when listing devices.</p>
 <p>Using the Dashboard, an unknown discovered device can be added to MAAS as a device or as a network interface belonging to a machine or device. Clicking the down arrow to the right of a new device allows values such as &lsquo;Type&rsquo;, &lsquo;Domain&rsquo;, &lsquo;IP Assignment&rsquo; and &lsquo;Parent&rsquo; to be changed prior to the device being added. Selecting a Parent device is optional.</p>
+<p><a href="#heading--vlans"><h2 id="heading--vlans">About VLANs</h2></a></p>
+<p>VLANs (Virtual LANs) are a common way to create logically separate networks using the same physical infrastructure.</p>
+<p>Managed switches can assign VLANs to each port in either a &ldquo;tagged&rdquo; or an &ldquo;untagged&rdquo; manner. A VLAN is said to be &ldquo;untagged&rdquo; on a particular port when it is the default VLAN for that port and requires no special configuration to access it.</p>
+<p>You can use also use tagged VLANs with MAAS nodes. If a switch port is configured to allow tagged VLAN frames from a MAAS node, that node can automatically access interfaces on that VLAN.</p>
+<p>A &ldquo;Default VLAN&rdquo; is created for every fabric, to which every new VLAN-aware object in the fabric will be associated with by default (unless specified otherwise).</p>
 <p><a href="#heading--about-subnet-management"><h3 id="heading--about-subnet-management">About subnet management</h3></a></p>
 <p>Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as <a href="how-to-manage-dhcp.html#heading--enabling-dhcp">enable DHCP</a>.  None of these options requires detailed instruction.</p>
 <p>This subsection will help you learn:</p>

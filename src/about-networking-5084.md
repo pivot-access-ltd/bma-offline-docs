@@ -6,6 +6,7 @@ Some elements of MAAS networking are unique to the product, while others are sta
 - [About proxies](#heading--about-proxies)
 - [About RPC](#heading--about-RPC)
 - [About network discovery](#heading--about-network-discovery)
+- [About VLANs](#heading--vlans)
 - [About subnet management](#heading--about-subnet-management)
 - [About IPv6](#heading--about-ipv6)
 - [About availability zones](#heading--about-availability-zones)
@@ -62,6 +63,16 @@ Using the Dashboard, an unknown discovered device can be added to MAAS as a devi
 An unknown discovered device can be added to MAAS as a device, or as a network interface belonging to a machine or device. You can specify values such as 'Type', 'Domain', 'IP Assignment' and 'Parent' to be changed prior to the device being added. Indicating a Parent device is optional.
 [/tab]
 [/tabs]
+
+<a href="#heading--vlans"><h2 id="heading--vlans">About VLANs</h2></a>
+
+VLANs (Virtual LANs) are a common way to create logically separate networks using the same physical infrastructure.
+
+Managed switches can assign VLANs to each port in either a "tagged" or an "untagged" manner. A VLAN is said to be "untagged" on a particular port when it is the default VLAN for that port and requires no special configuration to access it.
+
+You can use also use tagged VLANs with MAAS nodes. If a switch port is configured to allow tagged VLAN frames from a MAAS node, that node can automatically access interfaces on that VLAN.
+
+A "Default VLAN" is created for every fabric, to which every new VLAN-aware object in the fabric will be associated with by default (unless specified otherwise).
 
 <a href="#heading--about-subnet-management"><h3 id="heading--about-subnet-management">About subnet management</h3></a>
 
