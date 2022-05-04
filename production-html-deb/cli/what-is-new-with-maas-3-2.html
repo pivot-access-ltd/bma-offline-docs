@@ -405,9 +405,12 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>MAAS 3.2 Beta release notes</h1><!-- "MAAS 3.2 Beta release notes" -->
-<p>We are happy to announce that MAAS 3.2 Beta 3 is now available.  This release provides a new feature &ndash; hardware sync &ndash;  and more bug fixes.</p>
+<p>We are happy to announce that MAAS 3.2 Beta 4 is now available.  This release provides a new feature &ndash; MAAS native TLS &ndash;  and more bug fixes.</p>
 <p><a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.2 features and fixes</h3></a></p>
 <ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><a href="how-to-enable-tls-encryption.html#heading--about-maas-native-tls">MAAS native TLS</a>: MAAS now has built-in TLS support for communicating with the UI and API over HTTPS. This eliminates the need to deploy a separate TLS-terminating reverse-proxy solution in front of MAAS to provide secure access to API and UI.</p>
+</li>
 <li>
 <p><a href="https://maas.io/docs/how-to-customise-machines#heading--how-to-enable-hardware-sync-on-a-machine">Hardware sync for deployed machines</a>: MAAS allows you to sync hardware changes for a deployed and running machine.</p>
 </li>
@@ -453,15 +456,13 @@ sudo apt install maas
 <p><a href="#heading--bugs-fixed-in-maas-3-2"><h2 id="heading--bugs-fixed-in-maas-3-2">Bugs fixed in MAAS 3.2</h2></a></p>
 <p>Here is the breakdown of bugs fixed across the MAAS 3.2 release:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="https://launchpad.net/maas/3.2/3.2.0-beta4">MAAS 3.2 Beta 4</a></li>
 <li><a href="https://launchpad.net/maas/3.2/3.2.0-beta3">MAAS 3.2 Beta 3</a></li>
 <li><a href="https://launchpad.net/maas/+milestone/3.2.0-beta2">MAAS 3.2 Beta 2</a></li>
 <li><a href="https://launchpad.net/maas/3.2/3.2.0-beta1">MAAS 3.2 Beta 1</a></li>
 </ul>
 <p><a href="#heading--known-issues-maas-3-2"><h2 id="heading--known-issues-maas-3-2">Known issues for MAAS 3.2</h2></a></p>
-<p>The following known issues are associated with MAAS 3.2 at its current release state:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>The offline documentation is catching up, but is not yet fully updated as of MAAS 3.2 Beta 3.  Please use the <a href="https://maas.io/docs">online documentation</a> to get the correct operating information for Beta 3.</li>
-</ul>
+<p>Currently, there are no known issues associated with MAAS 3.2.0.</p>
     </div>
   </body>
 </html>

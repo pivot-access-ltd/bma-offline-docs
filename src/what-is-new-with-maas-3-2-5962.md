@@ -1,7 +1,9 @@
 <!-- "MAAS 3.2 Beta release notes" -->
-We are happy to announce that MAAS 3.2 Beta 3 is now available.  This release provides a new feature -- hardware sync --  and more bug fixes.
+We are happy to announce that MAAS 3.2 Beta 4 is now available.  This release provides a new feature -- MAAS native TLS --  and more bug fixes.
 
 <a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.2 features and fixes</h3></a>
+
+- [MAAS native TLS](/t/how-to-enable-tls-encryption/5116#heading--about-maas-native-tls): MAAS now has built-in TLS support for communicating with the UI and API over HTTPS. This eliminates the need to deploy a separate TLS-terminating reverse-proxy solution in front of MAAS to provide secure access to API and UI.
 
 - [Hardware sync for deployed machines](https://maas.io/docs/how-to-customise-machines#heading--how-to-enable-hardware-sync-on-a-machine): MAAS allows you to sync hardware changes for a deployed and running machine.
  
@@ -61,12 +63,11 @@ At this point, proceed with a normal installation.
 
 Here is the breakdown of bugs fixed across the MAAS 3.2 release:
 
+- [MAAS 3.2 Beta 4](https://launchpad.net/maas/3.2/3.2.0-beta4)
 - [MAAS 3.2 Beta 3](https://launchpad.net/maas/3.2/3.2.0-beta3)
 - [MAAS 3.2 Beta 2](https://launchpad.net/maas/+milestone/3.2.0-beta2)
 - [MAAS 3.2 Beta 1](https://launchpad.net/maas/3.2/3.2.0-beta1)
  
 <a href="#heading--known-issues-maas-3-2"><h2 id="heading--known-issues-maas-3-2">Known issues for MAAS 3.2</h2></a>
 
-The following known issues are associated with MAAS 3.2 at its current release state:
-
-- The offline documentation is catching up, but is not yet fully updated as of MAAS 3.2 Beta 3.  Please use the [online documentation](https://maas.io/docs) to get the correct operating information for Beta 3.
+Currently, there are no known issues associated with MAAS 3.2.0.
