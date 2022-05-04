@@ -6,6 +6,7 @@ Some elements of MAAS networking are unique to the product, while others are sta
 - [About proxies](#heading--about-proxies)
 - [About RPC](#heading--about-RPC)
 - [About network discovery](#heading--about-network-discovery)
+- [About subnets](#heading--subnets)
 - [About VLANs](#heading--vlans)
 - [About subnet management](#heading--about-subnet-management)
 - [About IPv6](#heading--about-ipv6)
@@ -64,9 +65,20 @@ An unknown discovered device can be added to MAAS as a device, or as a network i
 [/tab]
 [/tabs]
 
+<a href="#heading--subnets"><h2 id="heading--subnets">About subnets</h2></a>
+
+A [subnet](https://en.wikipedia.org/wiki/Subnetwork#firstHeading) is a "layer 3" network, defined by a network address and a network mask length (in bits) and usually written in "CIDR" format. MAAS supports IPv4 and IPv6 subnets. Examples include:
+
+``` no-highlight
+- 0.0.0/8
+- 16.0.0/12
+- 168.0.0/16
+2001:db8:4d41:4153::/64
+```
+
 <a href="#heading--vlans"><h2 id="heading--vlans">About VLANs</h2></a>
 
-VLANs (Virtual LANs) are a common way to create logically separate networks using the same physical infrastructure.
+[VLANs](https://en.wikipedia.org/wiki/Virtual_LAN#firstHeading) (Virtual LANs) are a common way to create logically separate networks using the same physical infrastructure.
 
 Managed switches can assign VLANs to each port in either a "tagged" or an "untagged" manner. A VLAN is said to be "untagged" on a particular port when it is the default VLAN for that port and requires no special configuration to access it.
 
