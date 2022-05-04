@@ -42,7 +42,6 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 - [Switch](/t/maas-concepts-and-terms-reference/5416#heading--switch)
 - [Tags](/t/maas-concepts-and-terms-reference/5416#heading--tags)
 - [Ubuntu package repositories](/t/maas-concepts-and-terms-reference/5416#heading--ubuntu-package-repositories)
-- [VLAN](/t/maas-concepts-and-terms-reference/5416#heading--vlans)
 - [VM hosts](/t/maas-concepts-and-terms-reference/5416#heading--vm-hosts)
 - [WAN](/t/maas-concepts-and-terms-reference/5416#heading--WAN)
 
@@ -179,16 +178,6 @@ You can reserve IP addresses by adding one or more reserved ranges to a subnet c
     -   **Managed (subnet)**: MAAS will never assign IP addresses inside this range.  You can use this range for anything, such as infrastructure systems, network hardware, external DHCP, or an OpenStack namespace.
     -   **Unmanaged (subnet)**: MAAS will only assign IP addresses inside this range.
 -   **Reserved dynamic range** An IP range that MAAS will use for enlisting, commissioning and, if enabled, MAAS-managed DHCP on the node's VLAN during commissioning, deploying. An initial range is created as part of the DHCP enablement process if done with the web UI. MAAS never uses IP addresses from this range for an unmanaged subnet.
-
-<a href="#heading--vlans"><h2 id="heading--vlans">VLANs</h2></a>
-
-VLANs (Virtual LANs) are a common way to create logically separate networks using the same physical infrastructure.
-
-Managed switches can assign VLANs to each port in either a "tagged" or an "untagged" manner. A VLAN is said to be "untagged" on a particular port when it is the default VLAN for that port and requires no special configuration to access it.
-
-You can use also use tagged VLANs with MAAS nodes. If a switch port is configured to allow tagged VLAN frames from a MAAS node, that node can automatically access interfaces on that VLAN.
-
-A "Default VLAN" is created for every fabric, to which every new VLAN-aware object in the fabric will be associated with by default (unless specified otherwise).
 
 <a href="#heading--dhcp-relay"><h2 id="heading--dhcp-relay">DHCP relay</h2></a>
 

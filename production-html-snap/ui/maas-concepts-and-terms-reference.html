@@ -447,7 +447,6 @@
 <li><a href="maas-concepts-and-terms-reference.html#heading--switch">Switch</a></li>
 <li><a href="maas-concepts-and-terms-reference.html#heading--tags">Tags</a></li>
 <li><a href="maas-concepts-and-terms-reference.html#heading--ubuntu-package-repositories">Ubuntu package repositories</a></li>
-<li><a href="maas-concepts-and-terms-reference.html#heading--vlans">VLAN</a></li>
 <li><a href="maas-concepts-and-terms-reference.html#heading--vm-hosts">VM hosts</a></li>
 <li><a href="maas-concepts-and-terms-reference.html#heading--WAN">WAN</a></li>
 </ul>
@@ -535,11 +534,6 @@
 </li>
 <li><strong>Reserved dynamic range</strong> An IP range that MAAS will use for enlisting, commissioning and, if enabled, MAAS-managed DHCP on the node&rsquo;s VLAN during commissioning, deploying. An initial range is created as part of the DHCP enablement process if done with the web UI. MAAS never uses IP addresses from this range for an unmanaged subnet.</li>
 </ul>
-<p><a href="#heading--vlans"><h2 id="heading--vlans">VLANs</h2></a></p>
-<p>VLANs (Virtual LANs) are a common way to create logically separate networks using the same physical infrastructure.</p>
-<p>Managed switches can assign VLANs to each port in either a &ldquo;tagged&rdquo; or an &ldquo;untagged&rdquo; manner. A VLAN is said to be &ldquo;untagged&rdquo; on a particular port when it is the default VLAN for that port and requires no special configuration to access it.</p>
-<p>You can use also use tagged VLANs with MAAS nodes. If a switch port is configured to allow tagged VLAN frames from a MAAS node, that node can automatically access interfaces on that VLAN.</p>
-<p>A &ldquo;Default VLAN&rdquo; is created for every fabric, to which every new VLAN-aware object in the fabric will be associated with by default (unless specified otherwise).</p>
 <p><a href="#heading--dhcp-relay"><h2 id="heading--dhcp-relay">DHCP relay</h2></a></p>
 <p>A DHCP relay, or relay agent, is a network device that forwards requests and replies between a DHCP client and a DHCP server when both are not on the same physical subnet.</p>
 <p>Two common software implementations are <a href="http://packages.ubuntu.com/xenial/isc-dhcp-relay">isc-dhcp-relay</a> and <a href="http://packages.ubuntu.com/xenial/dhcp-helper">dhcp-helper</a>.</p>
