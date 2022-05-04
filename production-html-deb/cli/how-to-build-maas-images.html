@@ -450,7 +450,7 @@
 <li><a href="#heading--how-to-upload-packer-images-to-maas">How to upload packer images to MAAS</a></li>
 <li><a href="#heading--about-the-default-image-username">About the default image username</a></li>
 </ul>
-<p><a href="#heading--about-packer-prequisites"><h4 id="#heading--about-packer-prequisites">About packer prequisites</h4></a></p>
+<p><a href="#heading--about-packer-prequisites"><h4 id="heading--about-packer-prequisites">About packer prequisites</h4></a></p>
 <p>The following are required to to create a packer MAAS image:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>A machine running Ubuntu 18.04+ with the ability to run KVM virtual machines.</li>
@@ -459,17 +459,17 @@
 <li>cloud-image-utils</li>
 <li><a href="https://www.packer.io/intro/getting-started/install.html">Packer</a></li>
 </ul>
-<p><a href="#heading--about-packer-deployment-requirements"><h4 id="#heading--about-packer-deployment-requirements">About packer deployment requirements</h4></a></p>
+<p><a href="#heading--about-packer-deployment-requirements"><h4 id="heading--about-packer-deployment-requirements">About packer deployment requirements</h4></a></p>
 <p>The following are required to deploy a packer MAAS image:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="https://maas.io">MAAS</a> 3.0+</li>
 <li><a href="https://launchpad.net/curtin">Curtin</a> 21.0+</li>
 </ul>
-<p><a href="#heading--about-customising-images"><h4 id="#heading--about-customising-images">About customising images</h4></a></p>
+<p><a href="#heading--about-customising-images"><h4 id="heading--about-customising-images">About customising images</h4></a></p>
 <p>It is possible to customize the image either during the Ubuntu installation, or afterwards (before packing the final image). The former is done by providing <a href="https://ubuntu.com/server/docs/install/autoinstall">autoinstall config</a>, editing the <em>user-data-flat</em> and <em>user-data-lvm</em> files. The latter is performed by the <em>install-custom-packages</em> script.</p>
-<p><a href="#heading--about-building-images-via-a-proxy"><h4 id="#heading--about-building-images-via-a-proxy">About building images via a proxy</h4></a></p>
+<p><a href="#heading--about-building-images-via-a-proxy"><h4 id="heading--about-building-images-via-a-proxy">About building images via a proxy</h4></a></p>
 <p>The Packer template downloads the Ubuntu net installer from the Internet. To tell Packer to use a proxy, set the HTTP_PROXY environment variable to your proxy server. Alternatively, you may redefine iso_url to a local file, set iso_checksum_type to none to disable the checksums, and remove iso_checksum_url.</p>
-<p><a href="#heading--how-to-build-a-packer-image"><h4 id="#heading--how-to-build-a-packer-image">How to build a packer image</h4></a></p>
+<p><a href="#heading--how-to-build-a-packer-image"><h4 id="heading--how-to-build-a-packer-image">How to build a packer image</h4></a></p>
 <p>You can easily build a raw image with LVM, using the Makefile:</p>
 <pre><code class="language-nohighlight">$ make custom-ubuntu-lvm.dd.gz
 </code></pre>
@@ -485,7 +485,7 @@
 <p><strong>NOTE:</strong> 
 ubuntu-lvm.json and ubuntu-flat.json are configured to run Packer in headless mode. Only Packer output will be seen. If you wish to see the installation output connect to the VNC port given in the Packer output or change the value of headless to false in the JSON file.</p>
 <p>This process is non-interactive.</p>
-<p><a href="#heading--how-to-upload-packer-images-to-maas"><h4 id="#heading--how-to-upload-packer-images-to-maas">How to upload packer images to MAAS</h4></a></p>
+<p><a href="#heading--how-to-upload-packer-images-to-maas"><h4 id="heading--how-to-upload-packer-images-to-maas">How to upload packer images to MAAS</h4></a></p>
 <p>You can upload a LVM raw image with the following command:</p>
 <pre><code class="language-nohighlight">$ maas admin boot-resources create \
     name='custom/ubuntu-raw' \
@@ -502,7 +502,7 @@ ubuntu-lvm.json and ubuntu-flat.json are configured to run Packer in headless mo
     filetype='tgz' \
     content@=custom-ubuntu.tar.gz
 </code></pre>
-<p><a href="#heading--about-the-default-image-username"><h4 id="#heading--about-the-default-image-username">About the default image username</h4></a></p>
+<p><a href="#heading--about-the-default-image-username"><h4 id="heading--about-the-default-image-username">About the default image username</h4></a></p>
 <p>The default username for packer-created images is <code>ubuntu</code>, the same as the default username for other MAAS images.</p>
 <p><a href="#heading--how-to-use-maas-image-builder-to-build-maas-images"><h2 id="heading--how-to-use-maas-image-builder-to-build-maas-images">How to use MAAS Image Builder to build MAAS images</h2></a></p>
 <p><strong>NOTE:</strong> 

@@ -58,7 +58,7 @@ This subsection will help you learn:
 - [How to upload packer images to MAAS](#heading--how-to-upload-packer-images-to-maas)
 - [About the default image username](#heading--about-the-default-image-username)
 
-<a href="#heading--about-packer-prequisites"><h4 id="#heading--about-packer-prequisites">About packer prequisites</h4></a>
+<a href="#heading--about-packer-prequisites"><h4 id="heading--about-packer-prequisites">About packer prequisites</h4></a>
 
 The following are required to to create a packer MAAS image:
 
@@ -68,22 +68,22 @@ The following are required to to create a packer MAAS image:
 * cloud-image-utils
 * [Packer](https://www.packer.io/intro/getting-started/install.html)
 
-<a href="#heading--about-packer-deployment-requirements"><h4 id="#heading--about-packer-deployment-requirements">About packer deployment requirements</h4></a>
+<a href="#heading--about-packer-deployment-requirements"><h4 id="heading--about-packer-deployment-requirements">About packer deployment requirements</h4></a>
 
 The following are required to deploy a packer MAAS image:
 
 * [MAAS](https://maas.io) 3.0+
 * [Curtin](https://launchpad.net/curtin) 21.0+
 
-<a href="#heading--about-customising-images"><h4 id="#heading--about-customising-images">About customising images</h4></a>
+<a href="#heading--about-customising-images"><h4 id="heading--about-customising-images">About customising images</h4></a>
 
 It is possible to customize the image either during the Ubuntu installation, or afterwards (before packing the final image). The former is done by providing [autoinstall config](https://ubuntu.com/server/docs/install/autoinstall), editing the _user-data-flat_ and _user-data-lvm_ files. The latter is performed by the _install-custom-packages_ script.
 
-<a href="#heading--about-building-images-via-a-proxy"><h4 id="#heading--about-building-images-via-a-proxy">About building images via a proxy</h4></a>
+<a href="#heading--about-building-images-via-a-proxy"><h4 id="heading--about-building-images-via-a-proxy">About building images via a proxy</h4></a>
 
 The Packer template downloads the Ubuntu net installer from the Internet. To tell Packer to use a proxy, set the HTTP_PROXY environment variable to your proxy server. Alternatively, you may redefine iso_url to a local file, set iso_checksum_type to none to disable the checksums, and remove iso_checksum_url.
 
-<a href="#heading--how-to-build-a-packer-image"><h4 id="#heading--how-to-build-a-packer-image">How to build a packer image</h4></a>
+<a href="#heading--how-to-build-a-packer-image"><h4 id="heading--how-to-build-a-packer-image">How to build a packer image</h4></a>
 
 You can easily build a raw image with LVM, using the Makefile:
 
@@ -115,7 +115,7 @@ ubuntu-lvm.json and ubuntu-flat.json are configured to run Packer in headless mo
 
 This process is non-interactive.
 
-<a href="#heading--how-to-upload-packer-images-to-maas"><h4 id="#heading--how-to-upload-packer-images-to-maas">How to upload packer images to MAAS</h4></a>
+<a href="#heading--how-to-upload-packer-images-to-maas"><h4 id="heading--how-to-upload-packer-images-to-maas">How to upload packer images to MAAS</h4></a>
 
 You can upload a LVM raw image with the following command:
 
@@ -139,7 +139,7 @@ $ maas admin boot-resources create \
     content@=custom-ubuntu.tar.gz
 ```
 
-<a href="#heading--about-the-default-image-username"><h4 id="#heading--about-the-default-image-username">About the default image username</h4></a>
+<a href="#heading--about-the-default-image-username"><h4 id="heading--about-the-default-image-username">About the default image username</h4></a>
 
 The default username for packer-created images is `ubuntu`, the same as the default username for other MAAS images.
 
