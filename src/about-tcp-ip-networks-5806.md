@@ -15,7 +15,7 @@ This section is designed to help you learn:
 This material can be read from beginning to end, or you can skip to sections where you feel you might need more clarity.  Just remember that a good understanding of these fundamentals will make it much easier for you to efficiently lay out and debug MAAS networks.
 
 [note]
-While some standard networking concepts, such as PXE booting, RPC, subnets, power drivers, and proxies are not unique to MAAS, they are used in a unique way by MAAS.  You can find this customized introductory material about these concepts in the article entitled "[About MAAS networking](/t/about-networking/5084)".
+While some standard networking concepts, such as PXE booting, RPC, subnets, power drivers, and proxies are not unique to MAAS, they are used in a unique way by MAAS.  You can find this customised introductory material about these concepts in the article entitled "[About MAAS networking](/t/about-networking/5084)".
 [/note]
 
 <a href="#heading--about-the-internet"><h2 id="heading--about-the-internet">About the Internet</h2></a>
@@ -24,9 +24,19 @@ We could simply create a hardwired network of computers with wires connecting th
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg"></a>
 
-The multiplexing element in such a network is the router.  The lateral paths aren't theoretical; they exist mostly for performance reasons, like latency, redundancy, cost, and so on.  This means an AAC network can incorporate lots of redundant loops, informally known a "packet-traps"., trying to find a way out.  TCP/IP has a dedicated solution for this problem, called ["Time To Live"](https://en.wikipedia.org/wiki/Time_to_live#firstHeading).  These issues have driven the design of [cloud network architectures](#heading--about-cloud-networks) (known as Clos architectures), which address financial and performance impacts of large networks in a much simpler way.
+The multiplexing element in such a network is the router.  The lateral paths aren't theoretical; they exist mostly for performance reasons, like latency, redundancy, cost, and so on.  This means an AAC network can incorporate lots of redundant loops, informally known a "packet-traps".  TCP/IP has a dedicated solution for this problem, called ["Time To Live"](https://en.wikipedia.org/wiki/Time_to_live#firstHeading).  These issues have driven the design of [cloud network architectures](#heading--about-cloud-networks) (known as Clos architectures), which address financial and performance impacts of large networks in a much simpler way.
 
-<details><summary>Network Lore: T1 lines and the early Internet</summary>
+[Network switching](https://en.wikipedia.org/wiki/Network_switch#firstHeading) is a very large topic unto itself -- but it's worth catching up if you're weak in this area, since some elements of switching are exposed in MAAS networks.  Also important to review are [routers](https://en.wikipedia.org/wiki/Router_%28computing%29#firstHeading), [bridges](https://en.wikipedia.org/wiki/Network_bridge#firstHeading), and bonded NICs, aka (link aggregation)[https://en.wikipedia.org/wiki/Link_aggregation#firstHeading].  All of these come into play every time a MAAS network is modified.
+
+<details><summary>Network Lore: We borrowed it all from the phone system</summary>
+
+Most of today's modern networking is a direct translation of the landline telephone system into the digital space.  Network switching is really just an outgrowth of [crossbar](https://en.wikipedia.org/wiki/Crossbar#firstHeading), which is how local phone calls were "switched" or "routed" to the correct telephone line.  In most cases, every number dialled closed one more relay, with all seven relays making a connection to the target phone line.
+
+Small exchanges often "swallowed" dialled digits. For example, if every local phone number had the exchange "881", those numbers wouldn't trigger any relays beyond just sending the call to the "881" [frameset](https://en.wikipedia.org/wiki/Distribution_frame#firstHeading).  In some small exchanges, it wasn't even necessary to dial the exchange -- just the four digits of the phone number -- if the called had the same exchange.  Essentially, these were the early [subnets](https://en.wikipedia.org/wiki/Subnetwork#firstHeading).
+
+Over time, the increasing density of telephone coverage and self-service long-distance changed all this.  More wires had to be installed, and repeaters were needed to get signals across longer distances as local exchanges were replaced by centralised exchanges called "central offices" (CO).  A CO would have frames for 8 or 10 exchanges, essentially serving the same function as today's network routers.
+
+Repeaters had to be installed at regular intervals to overcome the impedance associated with longer wires.  Those color-camouflaged, "go-away-grey" metal cans called pedestals popped up everywhere, partly for easy re-routing of wires, and partly to house repeaters.  We still have those in today's networks, but they're called racks or patch-panels.
 
 In the very early days of long-haul networking, most of the repeaters were owned by the local telephone companies. T1 lines, as they were called, couldn't compete with today's fibre connections, but they did provide a speedy (at the time) 1.5Mbps connection.  For example, in the oil and gas industry of the early 1990s, many of the city offices had wall after wall of T1 lines wired directly into the building.
 
@@ -39,7 +49,9 @@ Some of the key elements of TCP/IP, like twisted-pair Ethernet cables, packet-ba
 
 <a href="#heading--internet-infrastructure"><h3 id="heading--internet-infrastructure">More about Internet infrastructure</h3></a>
 
-The Internet is survivable because every computer can connect to every other computer, that's not standard operating procedure.  High-level networks [(Network Service Providers, NSPs)](https://en.wikipedia.org/wiki/Internet_service_provider#firstHeading) connect to at least three top level nodes called Network Access Points (NAPs), aka [Internet Exchange Points](https://en.wikipedia.org/wiki/Internet_exchange_point#firstHeading).  At these points, packets to jump from one NSP to another. NAPs are public access points, Metropolitan Area Exchanges are private. These are virtually indistinguishable for the purposes of this discussion.  As an aside, many of the MAEs are the residue of the phone company's early T1 lines, which was the initial backbone for the Internet.  These MAEs act just like a NAP for the purposes of this discussion.
+The Internet is survivable because every computer can connect to every other computer, but that's not standard operating procedure.  High-level networks [(Network Service Providers, NSPs)](https://en.wikipedia.org/wiki/Internet_service_provider#firstHeading) connect to at least three top level nodes called Network Access Points (NAPs), aka [Internet Exchange Points](https://en.wikipedia.org/wiki/Internet_exchange_point#firstHeading).  At these points, packets to jump from one NSP to another. NAPs are public access points, Metropolitan Area Exchanges are private. These are virtually indistinguishable for the purposes of this discussion.
+
+As an aside, many of the MAEs are the residue of the phone company's early T1 lines, which was the initial backbone for the Internet.  These MAEs act just like a NAP for the purposes of this discussion.
 
 A simpler picture of the Internet infrastructure looks like this:
 
@@ -193,7 +205,7 @@ As you can see in the modified P/Q frame, the following fields replace part of t
 
 This matters when we're building complex MAAS networks with lots of VLANS that probably cross over switches.  After all, VLANs were initially controlled with ports and switches, although they more commonly use tags now.  When more than one VLAN spans multiple switches, frames need to carry VLAN information that can be used by switches to sort or "trunk" the traffic.
 
-<details><summary>The origin of "trunking"</summary>
+<details><summary>Network Lore: The origin of "trunking"</summary>
 The word "trunking" is derived from the telephone network term trunk lines, which are lines connecting switchboards.
 
 In the original telephone company model, each telephone had a subscriber line, which was a wire that went straight from the local Central Office (CO) to that subscriber's telephone.  Each CO had one switchboard, though it might have many seats.
@@ -227,7 +239,7 @@ A subnet is a range or collection of IP addresses.  A subnet just means "sub-net
 
 Subnets are defined in CIDR (Classless Inter-Domain Routing) notation. If you want to use the addresses from 192.168.13.0 to 192.168.13.255 in a subnet, you can specify that with 192.168.13.0/24.  The "24" refers to the number of bits in the subnet address, with the remainder out of 32 bits free to address hosts.  Since 8 bits can represent 256 things, that means /24 gives you the last octet, or 255 host IP addresses.
 
-<details><summary>Whatever happened to subnet classes?</summary>
+<details><summary>Network Lore: Whatever happened to subnet classes?</summary>
 
 Subnets used to be defined in terms of subnet classes, like A, B, and C. That got to be a limitation, because those three classes define a fixed number of bits of the IP address that represent the split between subnet addresses and host addresses.  In other words, the class defined how many hosts could be in the network, and three classes wasn't really adequate to address all the possible permutations that network architects needed.  The change to CIDR notation made subnets more granular, allowing many more subnets from the same network.
 
@@ -284,7 +296,7 @@ The network layer does not guarantee delivery.  Essentially, it makes every effo
 
 It's also a connectionless layer, meaning the packets making up a message aren't part of an ongoing conversation.  They can be split up, encoded, and sent separately, by different routes, and arrive completely out of order.  And packets can get duplicated or corrupted.  Figuring all this out is the job of the protocol stack (e.g., TCP) in layer 4.  The network layer, L3, just delivers packets.  
 
-<details><summary>Network byte order</summary>
+<details><summary>Network Lore: Network byte order</summary>
 
 A rarely needed (but useful) fact is that the network sends bytes in big endian order.  That means bytes are transmitted starting with bit 0 and working down to bit 31, usually eight bits at a time.  A lot of the computers on the Internet use little endian encoding, which starts at the other end of the word.  In those cases, the byte order has to be reversed somewhere between the computer's memory and Layer 3.
 
@@ -626,7 +638,7 @@ The code bits can indicate the following things:
 
 - **NS/CWR/ECE**: used to provide Explicit Congestion Notification; note that OSI provides several methods for endpoints to know that the network is congested.
 
-<details><summary>TCP is like a phone call</summary>
+<details><summary>Network Lore: TCP is like a phone call</summary>
 
 As you can see from the bytes above, TCP is all about the state of a connection, which is basically the same as a phone call.  When you pick up the receiver, you and the caller exchange information.  You say "bye" when the call is over.  If it's a bad connection or one end suddenly gets noisy (think jack-hammers outside), one of you can reset the connection by saying, "Let me call you back in a minute."  Take a minute and try to see how the other header bytes fit this analogy.
 
@@ -640,4 +652,4 @@ There is a lot more to know about TCP, but most of it isn't directly relevant fo
 
 <a href="#heading--about-dns"><h2 id="heading--about-dns">About DNS</h2></a>
 
-Because IP addresses are hard for humans to remember, the Internet supports the use of hostnames to identify hosts.  These hostnames are associated with the host's actual IP address in a server known as a Domain Name server.  The overall protocol is known as the [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System).
+Because IP addresses are hard for humans to remember, the Internet supports the use of host names to identify hosts.  These host names are associated with the host's actual IP address in a server known as a Domain Name server.  The overall protocol is known as the [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System).  
