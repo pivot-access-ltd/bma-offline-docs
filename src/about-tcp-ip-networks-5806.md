@@ -656,7 +656,7 @@ There is a lot more to know about TCP, but most of it isn't directly relevant fo
 
 Because IP addresses are hard for humans to remember, the Internet supports the use of host names to identify hosts.  These host names are associated with the host's actual IP address in a server known as a Domain Name server.  The overall protocol is known as the [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System).  
 
-<a href="#heading--other-network-elements"><h2 id="heading--other-network-elements">About other network elements</h2><a>
+<a href="#heading--other-network-elements"><h2 id="heading--other-network-elements">About other network elements</h2></a>
 
 This section summarizes a number of other networking elements that may occasionally come up when working with MAAS networks.  These include:
 
@@ -738,3 +738,4 @@ A [metro area network or MAN](https://en.wikipedia.org/wiki/Metropolitan_area_ne
 <a href="#heading--router"><h3 id="heading--router">Router</h3></a>
 
 A [router](https://en.wikipedia.org/wiki/Router_%28computing%29#firstHeading) is a device that transfers packets from one network to another.  Unlike switches, which only ensure that pre-addressed packets get to the correct recipient machines, routers actually modify or encapsulate packets to ensure that they can travel on other networks to reach a remote destination.
+
