@@ -737,4 +737,3 @@ A metro area network or MAN connects LANs over a smaller area, like a city or ur
 <a href="#heading--router"><h3 id="heading--router">Router</h3></a>
 
 A router is a device that transfers packets from one network to another.  Unlike switches, which only ensure that pre-addressed packets get to the correct recipient machines, routers actually modify or encapsulate packets to ensure that they can travel on other networks to reach a remote destination.
-
