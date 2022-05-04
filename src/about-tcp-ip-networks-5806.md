@@ -640,4 +640,4 @@ There is a lot more to know about TCP, but most of it isn't directly relevant fo
 
 <a href="#heading--about-dns"><h2 id="heading--about-dns">About DNS</h2></a>
 
-Because IP addresses are hard for humans to remember, the Internet supports the use of hostnames to identify hosts.  These hostnames are associated with the host's actual IP address in a server known as a Domain Name server.  The overall protocol is known as the [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System).  
+Because IP addresses are hard for humans to remember, the Internet supports the use of hostnames to identify hosts.  These hostnames are associated with the host's actual IP address in a server known as a Domain Name server.  The overall protocol is known as the [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System).
