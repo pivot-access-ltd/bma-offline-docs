@@ -2,9 +2,7 @@
 Built on a foundation of networking knowledge, MAAS introduces a number of new terms, and adds some nuances to common terms.  Some of these terms may be common networking terms you never looked up; others represent more complex concepts that may be unique to MAAS.  This article presents and explains some of these important terms.
 
 <details><summary>Show me an alphabetical list of terms</summary>
-
 - [Availability zones](/t/maas-concepts-and-terms-reference/5416#heading--zones)
-- [Client](/t/maas-concepts-and-terms-reference/5416#heading--client)
 - [cloud-init](/t/maas-concepts-and-terms-reference/5416#heading--cloud-init)
 - [Controller](/t/maas-concepts-and-terms-reference/5416#heading--controllers)
 - [Device](/t/maas-concepts-and-terms-reference/5416#heading--devices)
@@ -12,17 +10,12 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 - [DHCP relay](/t/maas-concepts-and-terms-reference/5416#heading--dhcp-relay)
 - [Edge clouds](/t/maas-concepts-and-terms-reference/5416#heading--edge-clouds)
 - [Fabrics](/t/maas-concepts-and-terms-reference/5416#heading--fabrics)
-- [Hub](/t/maas-concepts-and-terms-reference/5416#heading--hub)
 - [Images](/t/maas-concepts-and-terms-reference/5416#heading--images)
 - [Interfaces](/t/maas-concepts-and-terms-reference/5416#heading--interfaces)
 - [isolcpus](/t/maas-concepts-and-terms-reference/5416#heading--isolcpus)
-- [LAN](/t/maas-concepts-and-terms-reference/5416#heading--lan)
-- [MAC address](/t/maas-concepts-and-terms-reference/5416#heading--mac-address)
 - [Machine](/t/maas-concepts-and-terms-reference/5416#heading--machines)
 - [Machine actions](/t/maas-concepts-and-terms-reference/5416#heading--machine-actions)
 - [Machine statuses](/t/maas-concepts-and-terms-reference/5416#heading--machine-statuses)
-- [MAN](/t/maas-concepts-and-terms-reference/5416#heading--MAN)
-- [Network cable](/t/maas-concepts-and-terms-reference/5416#heading--network-cable)
 - [Network infrastructure](/t/maas-concepts-and-terms-reference/5416#heading--network-infrastructure)
 - [Network interface](/t/maas-concepts-and-terms-reference/5416#heading--network-interface)
 - [Network topology](/t/maas-concepts-and-terms-reference/5416#heading--network-topology)
@@ -30,21 +23,13 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 - [Nodes](/t/maas-concepts-and-terms-reference/5416#heading--nodes)
 - [Package repositories](/t/maas-concepts-and-terms-reference/5416#heading--package-repositories)
 - [Packet](/t/maas-concepts-and-terms-reference/5416#heading--packet)
-- [Patch panel](/t/maas-concepts-and-terms-reference/5416#heading--patch-panel)
 - [Regions](/t/maas-concepts-and-terms-reference/5416#heading--regions)
-- [Repeater](/t/maas-concepts-and-terms-reference/5416#heading--repeater)
-- [Router](/t/maas-concepts-and-terms-reference/5416#heading--router)
 - [Series](/t/maas-concepts-and-terms-reference/5416#heading--series)
-- [Server](/t/maas-concepts-and-terms-reference/5416#heading--server)
 - [Spaces](/t/maas-concepts-and-terms-reference/5416#heading--spaces)
 - [SR-IOV](/t/maas-concepts-and-terms-reference/5416#heading--sr-iov)
-- [Subnets](/t/maas-concepts-and-terms-reference/5416#heading--subnets)
-- [Switch](/t/maas-concepts-and-terms-reference/5416#heading--switch)
 - [Tags](/t/maas-concepts-and-terms-reference/5416#heading--tags)
 - [Ubuntu package repositories](/t/maas-concepts-and-terms-reference/5416#heading--ubuntu-package-repositories)
 - [VM hosts](/t/maas-concepts-and-terms-reference/5416#heading--vm-hosts)
-- [WAN](/t/maas-concepts-and-terms-reference/5416#heading--WAN)
-
 </details>
 
 <a href="#heading--nodes"><h2 id="heading--nodes">Nodes</h2></a>
