@@ -854,6 +854,7 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/storage|/docs/about-machines#heading--machine-storage|
 |/docs/deb/3.0/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
 |/docs/deb/3.0/ui/how-to-work-with-tags|/docs/how-to-work-with-tags|
 |/docs/deb/3.1/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
