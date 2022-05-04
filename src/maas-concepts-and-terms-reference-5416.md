@@ -22,7 +22,6 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 - [NUMA](/t/maas-concepts-and-terms-reference/5416#heading--numa)
 - [Nodes](/t/maas-concepts-and-terms-reference/5416#heading--nodes)
 - [Package repositories](/t/maas-concepts-and-terms-reference/5416#heading--package-repositories)
-- [Packet](/t/maas-concepts-and-terms-reference/5416#heading--packet)
 - [Regions](/t/maas-concepts-and-terms-reference/5416#heading--regions)
 - [Series](/t/maas-concepts-and-terms-reference/5416#heading--series)
 - [Spaces](/t/maas-concepts-and-terms-reference/5416#heading--spaces)
@@ -488,82 +487,14 @@ DHCP operates using the four-step "DORA" model -- Discovery, Offer, Request, and
 
 Of course, there is [much more to DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol), but what's covered here should be sufficient understanding for using MAAS.
 
-<a href="#heading--client"><h3 id="heading--client">Client</h3></a>
-
-In the client/server age, the lines between client and server are blurred and sometimes reversible.  For the purposes of MAAS and general networking principles, we can define a "client" as a node that uses shared resources via a network.  If that same client provides shared resources to other nodes, it could also be considered a server.  
-
-<a href="#heading--server"><h3 id="heading--server">Server</h3></a>
-
-A server is a node that provides shared resources to clients via a network.  If that same server uses shared resources from other nodes, it could also be considered a client, but only in that context.  
-
 <a href="#heading--network-interface"><h3 id="heading--network-interface">Network interface</h3></a>
 
 A network interface, often referred to as a "network interface card" or NIC, is either a separate physical card connected to a node, a set of circuits embedded on a node's motherboard, or a radio transceiver attached to a node in some way.  All network connections require a NIC.  The terms "port" and "adaptor" are also used to refer to a network interface.
 
-<a href="#heading--mac-address"><h3 id="heading--mac-address">MAC address</h3></a>
-
-A MAC or "media access control" address is a unique address or "physical address" associated with a network interface.  They are 48 bits in length, which allows for 280 trillion devices, arranged into six hexadecimal octets, separated by colons or dashes.  Every computer in the world theoretically has a unique MAC address.  You can identify a node's IP address with the command `ipconfig /all`.
-
-<a href="#heading--network-cable"><h3 id="heading--network-cable">Network cable</h3></a>
-
-Network cables are special cables that connect non-wireless-based nodes.  They consist of our pairs of insulated, 24-gauge wire, colour-coded (solid/striped), usually in four colours: blue, green, orange, and brown.  The matching colour pairs are twisted together, each pair at a different turn rate to prevent electromagnetic interference between pairs.
-These twists must be maintained all the way up to the (RJ45) connector.
-
-Even with insulation, careful twisting, and connector-termination, natural losses in the cable cause the network signals to become too weak to maintain reliable data rates after a certain length.  In the case of Cat 5e cable, the maximum cable length is 100 meters to maintain 1Gb per second.  For Cat 6, the max length to maintain 10Gb per second is 55 meters.  These limits are overcome with [repeaters](/t/maas-concepts-and-terms-reference/5416#heading--repeater), which amplify the signal and relay it to the next repeater or NIC.
-
-<a href="#heading--repeater"><h3 id="heading--repeater">Repeater</h3></a>
-
-Technically, a repeater is a network signal amplifier with two RJ45 connectors which adds one maximum length (for the cable type) to the network connection or "run."  In practice, repeaters usually come in the form of [hubs](/t/maas-concepts-and-terms-reference/5416#heading--hub) or [switches](/t/maas-concepts-and-terms-reference/5416#heading--switch), which can usually perform other functions as well.
-
-<a href="#heading--packet"><h3 id="heading--packet">Packet</h3></a>
-
-A packet is a unit of network traffic.  It may or may not represent a complete message.
-
-<a href="#heading--hub"><h3 id="heading--hub">Hub</h3></a>
-
-Hubs essentially started as repeaters.  While they may be able to connect more than two computers together (i.e., multiple RJ45 ports), they provide no improvement over simple bus networks, since every connected NIC must examine every packet.  They are rarely used anymore.
-
-<a href="#heading--switch"><h3 id="heading--switch">Switch</h3></a>
-
-A switch is a "smart" device that connects cables from nodes to make networks.  Like a hub, a switch amplifies signals, that is, it acts as a repeater.  Switches learn by induction which cables receive which IP addresses.  Over time a switch will direct each packet only to devices which indicate that they will accept the addresses associated with those packets.
-
-<a href="#heading--network-topology"><h3 id="heading--network-topology">Network topology</h3></a>
-
-Topology describes how nodes are connected to a network, specifically referring to the shapes made by the cables and the paths that packets can take.  There are probably as many topologies are there are shapes, but here are some of the most common:
-
-- Bus topology: the most basic network topology, a group of computers connected to a single, long cable.  In this configuration, every computer sees every packet.  A [hub](/t/maas-concepts-and-terms-reference/5416#heading--hub) network, for instance, is still a bus topology, because every machine sees every packet.
-
-- Star or switch topology: a group of computers connected to a [switch](/t/maas-concepts-and-terms-reference/5416#heading--switch).  As the switch learns where packets are supposed to go, the star quickly evolves so that only packets are only seen by computers that are intended to receive the packet.
-
-- Backbone topology: a hybrid network configuration in which several stars are connected to a bus.
-
-- Daisy-chain topology: stars connected to stars, or more accurately, switches connected to switches.
-
-- Mesh topology: nodes with multiple interfaces and multiple connections.  Useful where wide-area networks ([WAN](/t/maas-concepts-and-terms-reference/5416#heading--wan)) where there would otherwise be lots of intermediaries.  Not popular or particularly cost effective for [LAN](/t/maas-concepts-and-terms-reference/5416#heading--lan) networks.
-
-<a href="#heading--patch-panel"><h3 id="heading--patch-panel">Patch panel</h3></a>
-
-A patch panel is simply a 24- to 48-port panel of connectors that can link together three- to ten-foot cables.  A patch panel allows jumpers from network runs to devices in racks, without putting strain and "cable creep" on long runs.
-
-<a href="#heading--lan"><h3 id="heading--lan">LAN</h3></a>
-
-Besides topology, networks can also be classified by their size, range, or "reach."  One such classification is the Local Area Network (LAN), which connects computers in close proximity (about 300 feet).
-
-<a href="#heading--WAN"><h3 id="heading--WAN">WAN</h3></a>
-
-A WAN (wide area network) is a network which connects LANs across large geographic distances, e.g., thousands of miles.
-
-<a href="#heading--MAN"><h3 id="heading--MAN">MAN</h3></a>
-
-A metro area network or MAN connects LANs over a smaller area, like a city or urban footprint.  Basically, if it isn't really a WAN, but you can't connect it with cables, it's usually considered a MAN.
 
 <a href="#heading--network-infrastructure"><h3 id="heading--network-infrastructure">Network infrastructure</h3></a>
 
 Network infrastructure is a catch-all term covering the physical components of a network, include cables, patch panels, switches, routers, hubs, and other associated network gear.
-
-<a href="#heading--router"><h3 id="heading--router">Router</h3></a>
-
-A router is a device that transfers packets from one network to another.  Unlike switches, which only ensure that pre-addressed packets get to the correct recipient machines, routers actually modify or encapsulate packets to ensure that they can travel on other networks to reach a remote destination.
 
 <a href="#heading--cloud-init"><h2 id="heading--cloud-init">Cloud-init</h2></a>
 
