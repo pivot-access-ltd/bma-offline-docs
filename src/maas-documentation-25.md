@@ -1,18 +1,24 @@
 <!-- "MAAS documentation" -->
-MAAS is **Metal As A Service**, a service that treats physical servers like virtual machines (instances) in the cloud.  No need to manage servers individually: MAAS turns bare metal into an elastic, cloud-like resource.
+MAAS is **Metal As A Service**, a service that treats physical servers like virtual machines (instances) in the cloud.
+
+No need to manage servers individually: MAAS turns bare metal into an elastic, cloud-like resource. Enlist and deploy standard or customised operating systems to hardware and virtual machines -- remotely.  Monitor, manage, and secure your metal infrastructure easily and efficiently.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
-<a href="#heading--how-to-engage-with-maas"><h2 id="heading--how-to-engage-with-maas">How to engage with MAAS</h2></a>
+MAAS comprehensively meets the need to rapidly deploy, destroy, and reconfigure constellations of bare metal.  Any application that requires frequently rearranging the server topology will benefit.
 
-- [What's new in MAAS?](/t/what-is-new-with-maas/5292)
-- [Get started with MAAS](/t/get-started-with-maas/5092)
-- [Get professional support](/t/how-to-contact-us/5448)
-- [Report a bug](https://maas.io/docs/report-a-bug)
-- [Request a feature](https://maas.io/docs/request-a-feature)
-- [Ask questions (forum)](https://discourse.maas.io)
-- [Push some code](https://launchpad.net/maas)
+MAAS is applicable to nearly any situation.  It is currently deployed in banking, telecom, and industrial environments, as well as niche uses as diverse as national lotteries, supercomputer front-end validation, streaming music services, disaster recovery, and computer security risk analysis.
+
+MAAS is a member of the Ubuntu family. It’s an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.
+
+- [Get support](/t/how-to-contact-us/5448)
+- [Join our online chat](https://discourse.maas.io)
+- [Contribute code](https://launchpad.net/maas)
 - [Improve our doc](/t/how-to-help-improve-the-doc/4186)
+- [Request a feature](https://maas.io/docs/request-a-feature)
+- [Report a bug](https://maas.io/docs/report-a-bug)
+
+Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-contact-us/5448).
 
 <!-- nohtml begin-nohtml -->
 ## Navigation
@@ -854,7 +860,6 @@ MAAS is **Metal As A Service**, a service that treats physical servers like virt
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
-|/docs/storage|/docs/about-machines#heading--machine-storage|
 |/docs/deb/3.0/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
 |/docs/deb/3.0/ui/how-to-work-with-tags|/docs/how-to-work-with-tags|
 |/docs/deb/3.1/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
