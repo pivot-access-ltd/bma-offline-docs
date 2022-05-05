@@ -35,7 +35,6 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [Upgrades](/t/how-to-upgrade-maas/5436)
 - [The MAAS CLI](/t/-/5236)
 - [Troubleshooting](/t/-/5333)
-- [Tips, tricks, and traps](/t/-/5329)
 - [Getting help](/t/-/5428)
 
 ### How to deploy
