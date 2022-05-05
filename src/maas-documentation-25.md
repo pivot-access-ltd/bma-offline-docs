@@ -39,8 +39,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 ### How to configure networking
 
 - [Manage networks](/t/-/5164)
-- [Manage DHCP](/t/-/5132)
-- [Manage IP ranges](/t/-/5136)
+- [Manage IP addresses](/t/-/5132)
 - [Enable TLS](/t/-/5116)
 - [Manage zones (AZs)](/t/-/5152)
 
@@ -812,7 +811,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 |https://discourse.maas.io/t/-/5208|/docs/how-to-use-lxd|
 |https://discourse.maas.io/t/-/5224|/docs/how-to-use-machine-tags|
 |https://discourse.maas.io/t/-/5148|/docs/how-to-manage-vms|
-|https://discourse.maas.io/t/-/5136|/docs/how-to-manage-ip-ranges|
+|https://discourse.maas.io/t/-/5132|/docs/how-to-manage-ip-addresses|
 |https://discourse.maas.io/t/-/5064|/docs/about-maas|
 |https://discourse.maas.io/t/-/5080|/docs/about-machines|
 |https://discourse.maas.io/t/-/5088|/docs/about-tags|
@@ -824,7 +823,6 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 |https://discourse.maas.io/t/-/5120|/docs/how-to-enable-high-availability|
 |https://discourse.maas.io/t/-/5108|/docs/how-to-customise-machines|
 |https://discourse.maas.io/t/-/5112|/docs/how-to-deploy-machines|
-|https://discourse.maas.io/t/-/5132|/docs/how-to-manage-dhcp|
 |https://discourse.maas.io/t/-/5160|/docs/how-to-manage-machines|
 |https://discourse.maas.io/t/-/5164|/docs/how-to-manage-networks|
 |https://discourse.maas.io/t/-/5140|/docs/how-to-manage-vm-hosts|
@@ -847,6 +845,8 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/how-to-manage-dhcp|/docs/how-to-manage-ip-addresses|
+|/docs/how-to-manage-ip-ranges|/docs/how-to-manage-ip-addresses|
 |/docs/how-to-set-up-ntp-services|/docs/how-to-manage-networks|
 |/docs/how-to-manage-machine-interfaces|/docs/how-to-manage-networks|
 |/docs/how-to-manage-proxies|/docs/how-to-manage-networks|
