@@ -43,7 +43,6 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [Manage IP ranges](/t/-/5136)
 - [Enable TLS](/t/-/5116)
 - [Manage zones (AZs)](/t/-/5152)
-- [Set up NTP](/t/-/5200)
 
 ### How to choose images
 
@@ -809,7 +808,6 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 |https://discourse.maas.io/t/-/5152|/docs/how-to-manage-availability-zones|
 |https://discourse.maas.io/t/-/5928|/docs/how-to-work-with-tags|
 |https://discourse.maas.io/t/-/5929|/docs/how-to-work-with-annotations|
-|https://discourse.maas.io/t/-/5200|/docs/how-to-set-up-ntp-services|
 |https://discourse.maas.io/t/-/5216|/docs/how-to-use-controller-tags|
 |https://discourse.maas.io/t/-/5208|/docs/how-to-use-lxd|
 |https://discourse.maas.io/t/-/5224|/docs/how-to-use-machine-tags|
@@ -849,6 +847,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/how-to-set-up-ntp-services|/docs/how-to-manage-networks|
 |/docs/how-to-manage-machine-interfaces|/docs/how-to-manage-networks|
 |/docs/how-to-manage-proxies|/docs/how-to-manage-networks|
 |/docs/deb/3.0/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
