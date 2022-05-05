@@ -25,8 +25,6 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 
 ### [Home](/t/maas-documentation/25)
 
-- [Release notes](/t/-/5292)
-
 ### Tutorials
 
 - [Get started with MAAS](/t/-/5092)
@@ -40,19 +38,19 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [Tips, tricks, and traps](/t/-/5329)
 - [Getting help](/t/-/5428)
 
-### How to work with machines
+### How to deploy
 
 - [Manage racks](/t/-/5172)
 - [Manage regions](/t/-/5176)
 - [Enable HA](/t/-/5120)
 - [Manage machines](/t/-/5160)
-- [Deploy machines](/t/-/5112)
+- [Commission and deploy machines](/t/-/5112)
 - [Customise machines](/t/-/5108)
 - [Manage VM hosts](/t/-/5140)
 - [Manage VMs](/t/-/5148)
 - [Use LXD](/t/-/5208)
 
-### How to work with networks
+### How to configure networking
 
 - [Manage networks](/t/-/5164)
 - [Manage interfaces](/t/-/5156)
@@ -64,7 +62,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [Set up NTP](/t/-/5200)
 - [Use air-gapped MAAS](/t/-/5212)
 
-### How to work with images
+### How to choose images
 
 - [Import images](/t/-/5124)
 - [Build MAAS images](/t/-/5100)
@@ -82,7 +80,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [Use storage tags](/t/-/5232)
 - [Use network tags](/t/-/5228)
 
-### Advanced playbooks
+### How to operate MAAS
 
 - [Set up MAAS metrics](/t/-/5204)
 - [Back up MAAS](/t/-/5096)
@@ -93,6 +91,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 
 ### Reference
 
+- [Release notes](/t/-/5292)
 - [Power management](/t/-/5246)
 - [Commissioning scripts](/t/-/5375)
 - [Hardware test scripts](/t/-/5392)
