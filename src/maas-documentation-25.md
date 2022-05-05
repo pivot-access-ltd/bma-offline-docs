@@ -39,10 +39,8 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 ### How to configure networking
 
 - [Manage networks](/t/-/5164)
-- [Manage interfaces](/t/-/5156)
 - [Manage DHCP](/t/-/5132)
 - [Manage IP ranges](/t/-/5136)
-- [Manage proxies](/t/-/5168)
 - [Enable TLS](/t/-/5116)
 - [Manage zones (AZs)](/t/-/5152)
 - [Set up NTP](/t/-/5200)
