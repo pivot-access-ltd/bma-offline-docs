@@ -1,5 +1,4 @@
-## jq tricks
-Looking above, it is very evident that the JSON output from the allocate and deploy commands isvery lengthy for even one machine. You can imagine how large a list of 10 or 12 or 600 machines might be. Traditional JSON output is both consistent and comprehensive, but it's sometimes hard for humans to process.
+The JSON output from the MAAS CLI can be very lengthy for even one machine. You can imagine how large a listing 10 or 12 or 600 machines might present. Traditional JSON output is both consistent and comprehensive, but it's sometimes hard for humans to process.
 
 Enter `jq`, a command-line tool dedicated to filtering and formatting JSON output, so that you can more easily summarize data. For instance, consider a small MAAS install with 12 virtual machines. Six of these machines are LXD VMs, and six are libvirt VMs. Suppose we enter the MAAS command to list all those machines:
 
@@ -39,7 +38,7 @@ HOSTNAME      SYSID   POWER  STATUS     OWNER  TAGS                 POOL     VLA
 
 Here we have a clean text table listing the machine hostnames, along with the system IDs, power states, machines statuses, tags, pools, and networking information. These parameters represent only a small fraction of the available JSON output, of course. Let's break this command down, piece by piece, and see how it works.
 
-### Basic jq usage
+## Basic jq usage
 
 First, we'll just pull the hostnames from these machines, with no qualifiers or formatting rules, like this:
 
@@ -102,7 +101,7 @@ maas admin machines read | jq '(.[]
 | [.hostname])'
 ```
 
-Second, notice the structure of the jq instructions. The .[] tells jq that it's decoding an array of data sets — in this case, an array of machine data sets — and that it should iterate through each of the outer data sets (each machine) individually. The pipe symbol (|) completes the “for each” construct, so this command basically says, “for each set of machine data you get, pull out (and return) the value associated with the JSON key hostname. The return value reflects this structure:
+Second, notice the structure of the jq instructions. The .[] tells jq that it's decoding an array of data sets — in this case, an array of machine data sets — and that it should iterate through each of the outer data sets (each machine) individually. The pipe symbol (|) completes the “for each” construct, so this command basically says, “for each set of machine data you get, pull out (and return) the value associated with the JSON key hostname". The return value reflects this structure:
 
 ```nohighlight
 
@@ -122,7 +121,7 @@ For practice let's try pulling the value of the key that holds machine status, a
 maas admin machines read | jq '(.[] | [.hostname, .status_name])'
 ```
 
-This command essentially tells jq to do the same thing as last time, but also collect the value of the key “status<sub>name</sub>” for each machine. The results looks something like this:
+This command essentially tells jq to do the same thing as last time, but also collect the value of the key “status_name” for each machine. The results looks something like this:
 
 ```nohighlight
 
@@ -178,7 +177,7 @@ This command essentially tells jq to do the same thing as last time, but also co
 
 So much for printing the values of JSON keys. There are still some nuances (arrays, nested keys, …), but this is the lion's share of the syntax. Let's divert for a minute and look at how to format the output in a more human-readable way.
 
-**** Improved formatting
+##  Improved formatting
 
 Most of the Ubuntu text-processing commands use tabs as field delimiters, which is a trait inherited from grandfather UNIX. Currently, the output is clean, but relatively hard to format into lines. Luckily jq has a filter for this: the “tab-separated values” filter, known as @tsv. This filter transforms the output records into individual lines with values separated by tabs.
 
@@ -251,7 +250,7 @@ libvirt-vm-5  Ready
 libvirt-vm-6  Deployed
 ```
 
-**** Making real tables
+## Making real tables
 
 So far, so good, but this still isn't a presentable data table. First of all, there are no headings. These can be added by passing a literal row to jq, like this:
 
@@ -303,9 +302,9 @@ libvirt-vm-5  Ready
 libvirt-vm-6  Deployed
 ```
 
-**** Extending the list
+## Extending the list
 
-Let's add a couple more fields, owner (which is sometimes blank), and system<sub>id</sub> (which is never blank), to the output:
+Let's add a couple more fields, owner (which is sometimes blank), and system_id (which is never blank), to the output:
 
 ```nohighlight
 maas admin machines read | jq -r '(["HOSTNAME","STATUS", "OWNER", "SYSTEM-ID"] 
@@ -360,7 +359,7 @@ libvirt-vm-6  Deployed   admin  bacx77
 ```
 
 
-**** Nested arrays
+## Nested arrays
 
 Machines have a nested array (of indeterminate length) for machine tags. In JSON terms, instead of having a single key-value pair at the top level, like this:
 
@@ -431,7 +430,7 @@ libvirt-vm-5  Ready      -      48dg8m     pod-console-logging
 libvirt-vm-6  Deployed   admin  bacx77     pod-console-logging
 ```
 
-**** Nested keys
+## Nested keys
 
 These aren't all the routine key-value pairs we want in the table, though. It would also be nice to print the pool to which each machine is assigned. Just asking for .pool as a single key-value pair:
 
@@ -560,7 +559,7 @@ There's just one more (deeply nested) value we want to retrieve, and that's the 
 		 "name": "10.124.141.0/24",
 ```
 
-So the value we want is in the nested key boot<sub>interface</sub>, in a nested array links[], which contains the doubly-nested key subnet.name. We can finish our basic CLI machine list — the one we started with — by adding this complex formulation to the command:
+So the value we want is in the nested key boot_interface, in a nested array links[], which contains the doubly-nested key subnet.name. We can finish our basic CLI machine list — the one we started with — by adding this complex formulation to the command:
 
 ```nohighlight
 maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
@@ -590,7 +589,7 @@ libvirt-vm-5  48dg8m  off    Ready      -      pod-console-logging  default  unt
 libvirt-vm-6  bacx77  on     Deployed   admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
 ```
 
-**** Chaining Ubuntu CLI commands
+## Chaining Ubuntu CLI commands
 
 Although the machine list above looks fairly neat, it's actually not sorted by hostname, exactly. To accomplish this, we'd need to add a couple of Ubuntu CLI commands to the mix. Sorting on hostname means we want to sort on field 1 of the current command's output. We can try just feeding that to sort like this:
 
@@ -683,6 +682,6 @@ lxd-vm-3      grwpwc  off    Ready      -      pod-console-logging  default  unt
 libvirt-vm-3  r44hr6  error  Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
 ```
 
-**** Summary
+## Summary
 
-At this point, it should be clear that jq is a relatively simple, powerful tool for formatting output from the MAAS CLI. You should also remember that, like any Ubuntu CLI command, jq simply outputs text — so anything you can do with text output, you can do with the output from jq.
+At this point, it should be clear that jq is a relatively simple, powerful tool for formatting output from the MAAS CLI. You should also remember that, like any Ubuntu CLI command, jq simply outputs text — so anything you can do with text output, you can do with the output from jq. 
