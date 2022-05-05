@@ -25,42 +25,34 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 
 ### [Home](/t/maas-documentation/25)
 
+- [Release notes](/t/-/5292)
+
 ### Tutorials
 
 - [Get started with MAAS](/t/-/5092)
 
-### Getting started
+### How to get MAAS running
 
-- [Release notes](/t/-/5292)
-- [Install MAAS](/t/-/5128)
-- [Upgrade MAAS](/t/how-to-upgrade-maas/5436)
-- [Use the MAAS CLI](/t/-/5236)
-- [Get help](/t/-/5428)
-- [Contact us](/t/-/5448)
+- [Installation](/t/-/5128)
+- [Upgrades](/t/how-to-upgrade-maas/5436)
+- [The MAAS CLI](/t/-/5236)
+- [Troubleshooting](/t/-/5333)
 - [Tips, tricks, and traps](/t/-/5329)
-- [Troubleshoot MAAS](/t/-/5333)
-- [Upgrade older MAAS installs](/t/-/5706)
-- [Improve the doc](/t/-/4186)
+- [Getting help](/t/-/5428)
 
-### Controllers
+### How to work with machines
 
 - [Manage racks](/t/-/5172)
 - [Manage regions](/t/-/5176)
 - [Enable HA](/t/-/5120)
-
-### Machines
-
 - [Manage machines](/t/-/5160)
 - [Deploy machines](/t/-/5112)
 - [Customise machines](/t/-/5108)
-
-### VM hosting
-
 - [Manage VM hosts](/t/-/5140)
 - [Manage VMs](/t/-/5148)
 - [Use LXD](/t/-/5208)
 
-### Networking
+### How to work with networks
 
 - [Manage networks](/t/-/5164)
 - [Manage interfaces](/t/-/5156)
@@ -72,7 +64,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [Set up NTP](/t/-/5200)
 - [Use air-gapped MAAS](/t/-/5212)
 
-### Images
+### How to work with images
 
 - [Import images](/t/-/5124)
 - [Build MAAS images](/t/-/5100)
@@ -81,7 +73,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [Mirror images locally](/t/-/5927)
 - [Manage VMWare images](/t/-/5144)
 
-### Tags
+### How to use tags
 
 - [Work with tags](/t/-/5928)
 - [Work with annotations](/t/-/5929)
@@ -90,7 +82,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [Use storage tags](/t/-/5232)
 - [Use network tags](/t/-/5228)
 
-### Operations
+### Advanced playbooks
 
 - [Set up MAAS metrics](/t/-/5204)
 - [Back up MAAS](/t/-/5096)
