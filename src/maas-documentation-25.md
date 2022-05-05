@@ -34,9 +34,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 ### How to get MAAS running
 
 - [Installation](/t/-/5128)
-- [Upgrades](/t/how-to-upgrade-maas/5436)
 - [Troubleshooting](/t/-/5333)
-- [Getting help](/t/-/5428)
 
 ### How to configure networking
 
@@ -102,6 +100,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [API client](/t/-/5404)
 - [API authentication](/t/-/5060)
 - [Concepts & terms](/t/-/5416)
+- [Getting help](/t/-/5428)
 
 ### Explanation
 
