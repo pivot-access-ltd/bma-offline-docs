@@ -37,18 +37,6 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [Troubleshooting](/t/-/5333)
 - [Getting help](/t/-/5428)
 
-### How to deploy
-
-- [Manage racks](/t/-/5172)
-- [Manage regions](/t/-/5176)
-- [Enable HA](/t/-/5120)
-- [Manage machines](/t/-/5160)
-- [Commission and deploy machines](/t/-/5112)
-- [Customise machines](/t/-/5108)
-- [Manage VM hosts](/t/-/5140)
-- [Manage VMs](/t/-/5148)
-- [Use LXD](/t/-/5208)
-
 ### How to configure networking
 
 - [Manage networks](/t/-/5164)
@@ -69,6 +57,18 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [Use image streams](/t/-/5220)
 - [Mirror images locally](/t/-/5927)
 - [Manage VMWare images](/t/-/5144)
+
+### How to deploy MAAS
+
+- [Manage racks](/t/-/5172)
+- [Manage regions](/t/-/5176)
+- [Enable HA](/t/-/5120)
+- [Manage machines](/t/-/5160)
+- [Commission and deploy machines](/t/-/5112)
+- [Customise machines](/t/-/5108)
+- [Manage VM hosts](/t/-/5140)
+- [Manage VMs](/t/-/5148)
+- [Use LXD](/t/-/5208)
 
 ### How to use tags
 
