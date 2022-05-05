@@ -23,44 +23,45 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 <!-- nohtml begin-nohtml -->
 ## Navigation
 
-### [Introduction](/t/maas-documentation/25)
+### [Home](/t/maas-documentation/25)
 
-- [About MAAS](/t/-/5064)
+### Tutorials
+
 - [Get started with MAAS](/t/-/5092)
+
+### Getting started
+
+- [Release notes](/t/-/5292)
 - [Install MAAS](/t/-/5128)
+- [Upgrade MAAS](/t/how-to-upgrade-maas/5436)
 - [Use the MAAS CLI](/t/-/5236)
+- [Get help](/t/-/5428)
+- [Contact us](/t/-/5448)
+- [Tips, tricks, and traps](/t/-/5329)
+- [Troubleshoot MAAS](/t/-/5333)
+- [Upgrade older MAAS installs](/t/-/5706)
+- [Improve the doc](/t/-/4186)
 
 ### Controllers
 
-- [About controllers](/t/-/5072)
 - [Manage racks](/t/-/5172)
 - [Manage regions](/t/-/5176)
 - [Enable HA](/t/-/5120)
 
 ### Machines
 
-- [About machines](/t/-/5080)
-- [About customising machines](/t/-/5976)
 - [Manage machines](/t/-/5160)
 - [Deploy machines](/t/-/5112)
 - [Customise machines](/t/-/5108)
 
 ### VM hosting
 
-- [About VM hosting](/t/-/5068)
 - [Manage VM hosts](/t/-/5140)
 - [Manage VMs](/t/-/5148)
 - [Use LXD](/t/-/5208)
 
-### Networking fundamentals
+### Networking
 
-- [About TCP/IP networks](/t/-/5806)
-- [About cloud networks](/t/-/5808)
-- [About DHCP](/t/-/5807)
-
-### MAAS Networking
-
-- [About MAAS networks](/t/-/5084)
 - [Manage networks](/t/-/5164)
 - [Manage interfaces](/t/-/5156)
 - [Manage DHCP](/t/-/5132)
@@ -73,7 +74,6 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 
 ### Images
 
-- [About images](/t/-/5076)
 - [Import images](/t/-/5124)
 - [Build MAAS images](/t/-/5100)
 - [Create custom images](/t/-/5104)
@@ -112,18 +112,19 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [API authentication](/t/-/5060)
 - [Concepts & terms](/t/-/5416)
 
-### [Troubleshooting](/t/-/5333)
+### Explanation
 
-- [Get help](/t/-/5428)
-- [Tips, tricks, and traps](/t/-/5329)
-- [Upgrade MAAS](/t/how-to-upgrade-maas/5436)
-- [Upgrade older MAAS installs](/t/-/5706)
+- [About MAAS](/t/-/5064)
+- [About controllers](/t/-/5072)
+- [About machines](/t/-/5080)
+- [About customising machines](/t/-/5976)
+- [About VM hosting](/t/-/5068)
+- [About TCP/IP networks](/t/-/5806)
+- [About cloud networks](/t/-/5808)
+- [About DHCP](/t/-/5807)
+- [About MAAS networks](/t/-/5084)
+- [About images](/t/-/5076)
 
-### [Release notes](/t/-/5292)
-
-### [Improve the doc](/t/-/4186)
-
-### [Contact us](/t/-/5448)
 
 ## URLs
 
