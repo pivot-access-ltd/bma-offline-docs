@@ -1,3 +1,4 @@
+<!-- "Using jq with the MAAS CLI" -->
 The JSON output from the MAAS CLI can be very lengthy for even one machine. You can imagine how large a listing 10 or 12 or 600 machines might present. Traditional JSON output is both consistent and comprehensive, but it's sometimes hard for humans to process.
 
 Enter `jq`, a command-line tool dedicated to filtering and formatting JSON output, so that you can more easily summarize data. For instance, consider a small MAAS install with 12 virtual machines. Six of these machines are LXD VMs, and six are libvirt VMs. Suppose we enter the MAAS command to list all those machines:
