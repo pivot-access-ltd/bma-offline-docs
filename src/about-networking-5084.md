@@ -46,7 +46,7 @@ IPMI provides many other functions and capabilities besides power-cycling the ma
 
 A [proxy server](https://en.wikipedia.org/wiki/Proxy_server) ("proxy service" or just "proxy") is an intermediary application that serves to broker network transactions between two hosts.  Proxies provide several benefits, including privacy (protecting internal IP addresses from discovery by those on other networks), security (performing some checks against incoming packets), and load-balancing (routing packets to multiple servers, based on actual load or some statistical algorithm).  
 
-MAAS provides an [internal proxy](/t/how-to-manage-proxies/5168#heading--internal-proxy-maas-proxy), which is an HTTP caching proxy server that is availble to all hosts residing in any subnet managed by MAAS.  In addition, MAAS allows you to define an [external proxy](/t/how-to-manage-proxies/5168#heading--configure-proxy) if desired.
+MAAS provides an [internal proxy](/t/how-to-manage-networks/5164#heading--internal-proxy-maas-proxy), which is an HTTP caching proxy server that is availble to all hosts residing in any subnet managed by MAAS.  In addition, MAAS allows you to define an [external proxy](/t/how-to-manage-networks/5164#heading--configure-proxy) if desired.
 
 <a href="#heading--about-rpc"><h3 id="heading--about-rpc">About RPC</h3></a>
 
