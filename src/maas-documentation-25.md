@@ -28,12 +28,12 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 ### Tutorials
 
 - [Get started with MAAS](/t/-/5092)
+- [Try out the MAAS CLI](/t/-/5236)
 
 ### How to get MAAS running
 
 - [Installation](/t/-/5128)
 - [Upgrades](/t/how-to-upgrade-maas/5436)
-- [The MAAS CLI](/t/-/5236)
 - [Troubleshooting](/t/-/5333)
 - [Getting help](/t/-/5428)
 
