@@ -86,6 +86,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [Manage users](/t/-/5184)
 - [Work with audit event logs](/t/-/5987)
 - [Search MAAS](/t/-/5192)
+- [Upgrade older versions](/t/how-to-upgrade-maas/5436)
 
 ### Reference
 
