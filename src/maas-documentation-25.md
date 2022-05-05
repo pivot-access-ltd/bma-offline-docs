@@ -29,6 +29,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 
 - [Get started with MAAS](/t/-/5092)
 - [Try out the MAAS CLI](/t/-/5236)
+- [Using jq with the MAAS CLI](/t/-/6027)
 
 ### How to get MAAS running
 
@@ -121,6 +122,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6027|/docs/using-jq-with-the-maas-cli|
 |https://discourse.maas.io/t/-/5987|/docs/how-to-work-with-audit-event-logs|
 |https://discourse.maas.io/t/-/5976|/docs/about-customising-machines|
 |https://discourse.maas.io/t/-/5973|/docs/storage-layouts-reference|
