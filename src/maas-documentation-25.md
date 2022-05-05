@@ -44,7 +44,6 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [Enable TLS](/t/-/5116)
 - [Manage zones (AZs)](/t/-/5152)
 - [Set up NTP](/t/-/5200)
-- [Use air-gapped MAAS](/t/-/5212)
 
 ### How to choose images
 
@@ -79,10 +78,11 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 ### How to operate MAAS
 
 - [Set up MAAS metrics](/t/-/5204)
+- [Work with audit event logs](/t/-/5987)
+- [Use air-gapped MAAS](/t/-/5212)
 - [Back up MAAS](/t/-/5096)
 - [Secure MAAS](/t/-/5196)
 - [Manage users](/t/-/5184)
-- [Work with audit event logs](/t/-/5987)
 - [Search MAAS](/t/-/5192)
 - [Upgrade older versions](/t/how-to-upgrade-maas/5436)
 
