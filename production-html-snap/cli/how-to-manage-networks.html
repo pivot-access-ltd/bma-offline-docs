@@ -411,6 +411,7 @@
 <li><a href="#heading--how-to-manage-MAAS-network-elements">How to manage MAAS network elements</a></li>
 <li><a href="#heading--how-to-manage-machine-interfaces">How to manage machine interfaces</a></li>
 <li><a href="#heading--how-to-manage-proxies">How to manage proxies</a></li>
+<li><a href="#heading--how-to-set-up-ntp">How to set up Network Time Protocol (NTP)</a></li>
 </ul>
 <p><a href="#heading--how-to-manage-MAAS-network-elements"><h2 id="heading--how-to-manage-MAAS-network-elements">How to manage MAAS network elements</h2></a></p>
 <p>This section will show you:</p>
@@ -973,6 +974,17 @@ maas $PROFILE maas set-config name=http_proxy value=http://squid.example.com:312
 <pre><code class="language-bash">maas $PROFILE subnet update 192.168.0.0/22 allow_proxy=false
 </code></pre>
 <p><strong>NOTE</strong> that the proxy service will still be running.</p>
+<p><a href="#heading--how-to-set-up-ntp"><h2 id="heading--how-to-set-up-ntp">How to set up Network Time Protocol (NTP)</h2></a></p>
+<p>MAAS provides managed NTP services (with <a href="https://chrony.tuxfamily.org/">Chrony</a>) for all region and rack controllers. This arrangement allows MAAS to both keep its controllers synchronised, and keep deployed machines synchronised as well. You can configure NTP on the &lsquo;Network services&rsquo; tab of the &lsquo;Settings&rsquo; page.</p>
+<p>The region controller configures the NTP service to keep its time synchronised from one or more external sources. By default, the MAAS region controller uses <code>ntp.ubuntu.com</code>. Rack controllers also configure the NTP service, synchronising their time with the region controllers.  Rack controllers also configure DHCP with the correct NTP information. Any machine on the network that obtains a DHCP lease from MA/snap/3AS will benefit from NTP support.</p>
+<p><a href="#heading--setting-ntp-server"><h2 id="heading--setting-ntp-server">Setting an external NTP server</h2></a></p>
+<p>External sites, such as an existing NTP infrastructure, can be used directly as a time source for both rack controllers and machines.</p>
+<p>You can specify an external NTP server with two successive commands:</p>
+<pre><code>maas $PROFILE maas set-config name=ntp_servers value=$NTP_IP_ADDRESS
+</code></pre>
+<p>followed by:</p>
+<pre><code>maas admin maas set-config name=ntp_external_only value=true
+</code></pre>
     </div>
   </body>
 </html>
