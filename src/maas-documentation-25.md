@@ -86,6 +86,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [Manage users](/t/-/5184)
 - [Work with audit event logs](/t/-/5987)
 - [Search MAAS](/t/-/5192)
+- [Upgrade older versions](/t/how-to-upgrade-maas/5436)
 
 ### Reference
 
@@ -815,7 +816,6 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 |https://discourse.maas.io/t/-/5208|/docs/how-to-use-lxd|
 |https://discourse.maas.io/t/-/5224|/docs/how-to-use-machine-tags|
 |https://discourse.maas.io/t/-/5148|/docs/how-to-manage-vms|
-|https://discourse.maas.io/t/-/5168|/docs/how-to-manage-proxies|
 |https://discourse.maas.io/t/-/5136|/docs/how-to-manage-ip-ranges|
 |https://discourse.maas.io/t/-/5064|/docs/about-maas|
 |https://discourse.maas.io/t/-/5080|/docs/about-machines|
@@ -834,7 +834,6 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 |https://discourse.maas.io/t/-/5140|/docs/how-to-manage-vm-hosts|
 |https://discourse.maas.io/t/-/5128|/docs/how-to-install-maas|
 |https://discourse.maas.io/t/-/5240|/docs/maas-logging-reference|
-|https://discourse.maas.io/t/-/5156|/docs/how-to-manage-machine-interfaces|
 |https://discourse.maas.io/t/-/5172|/docs/how-to-manage-racks|
 |https://discourse.maas.io/t/-/5124|/docs/how-to-import-images|
 |https://discourse.maas.io/t/-/5184|/docs/how-to-manage-user-accounts|
@@ -852,6 +851,8 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/how-to-manage-machine-interfaces|/docs/how-to-manage-networks|
+|/docs/how-to-manage-proxies|/docs/how-to-manage-networks|
 |/docs/deb/3.0/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
 |/docs/deb/3.0/ui/how-to-work-with-tags|/docs/how-to-work-with-tags|
 |/docs/deb/3.1/cli/how-to-work-with-tags|/docs/how-to-work-with-tags|
