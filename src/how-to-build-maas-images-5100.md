@@ -109,7 +109,7 @@ The Packer template downloads the Ubuntu net installer from the Internet. To tel
 
 <a href="#heading--how-to-build-a-packer-image"><h4 id="heading--how-to-build-a-packer-image">How to build a packer image</h4></a>
 
-You can easily build a raw image with LVM, using the Makefile:
+To build a packer image, you must change to the template repository directory, then to the subdirectory for the image you want to build.  From that subdirectory, you can easily build a raw image with LVM, using the Makefile:
 
 ```nohighlight
 $ make custom-ubuntu-lvm.dd.gz
