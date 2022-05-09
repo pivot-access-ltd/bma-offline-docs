@@ -1,19 +1,31 @@
 <!-- "MAAS 3.2 Beta release notes" -->
-We are happy to announce that MAAS 3.2 Beta 4 is now available.  This release provides a new feature -- MAAS native TLS --  and more bug fixes.
+We are happy to announce that MAAS 3.2 Beta 4 is now available.
 
-<a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.2 features and fixes</h3></a>
+<a href="#heading--new-features"><h2 id="heading--new-features">New MAAS 3.2 features</h2></a>
 
-- [MAAS native TLS](/t/how-to-enable-tls-encryption/5116#heading--about-maas-native-tls): MAAS now has built-in TLS support for communicating with the UI and API over HTTPS. This eliminates the need to deploy a separate TLS-terminating reverse-proxy solution in front of MAAS to provide secure access to API and UI.
+MAAS 3.2 provides several new features, as well as the usual cadre of bug fixes.
 
-- [Hardware sync for deployed machines](https://maas.io/docs/how-to-customise-machines#heading--how-to-enable-hardware-sync-on-a-machine): MAAS allows you to sync hardware changes for a deployed and running machine.
+<a href="#heading--maas-native-tls"><h3 id="heading--maas-native-tls">MAAS native TLS</h3></a>
+
+MAAS 3.2 provides [native TLS](/t/how-to-enable-tls-encryption/5116#heading--about-maas-native-tls). MAAS now has built-in TLS support for communicating with the UI and API over HTTPS. This eliminates the need to deploy a separate TLS-terminating reverse-proxy solution in front of MAAS to provide secure access to API and UI.  Note that you can still set up an HA proxy if you are using multiple controllers.
+
+<a href="#heading--hardware-sync-for-deployed-machines"><h3 id="heading--hardware-sync-for-deployed-machines">Hardware sync for deployed machines</h3></a>
+
+MAAS 3.2 allows you to [sync hardware changes for deployed machines](https://maas.io/docs/how-to-customise-machines#heading--how-to-enable-hardware-sync-on-a-machine).  You can see real-time updates to storage, etc., for a running machine.  This feature requires a special parameter be set prior to deployment.  Coupled with the existing ability to commission deployed machines, MAAS 3.2 moves a step closer to real-time reconfiguration of active, deployed, bare-metal.
+
+<a href="#heading--expanded-tagging-capability"><h3 id="heading--expanded-tagging-capability">Expanded tagging capability</h3></a>
  
-- [Tag management](/t/how-to-work-with-tags/5928): MAAS now provides greatly expanded tagging capability.
- 
+MAAS 3.2 provides greatly [expanded tagging capability](/t/how-to-work-with-tags/5928#heading--automatic-tags).  You can auto-apply tags to machines that match a custom XPath expression. Setting up an automatic tag lets you recognise special hardware characteristics and settings, e.g., the gpu passthrough.
+
+<a href="#heading--more-new-features"><h3 id="heading--more-new-features">More new features</h3></a>
+
+MAAS 3.2 rounds out the feature set with a few more items:
+
 - [Support for observability (O11y) in MAAS](/t/how-to-set-up-maas-metrics/5204): MAAS now supports integration with FOSS Observability stacks.
 
 - [Ability for user to specify IPMI cipher suite](/t/power-management-reference/5246): You can explicitly select which cipher suite to use when interacting with a BMC.
 
-- Roll-out of our new tabbed Reader Adaptive Documentation (incremental across the release cycle).
+- Roll-out of our new tabbed Reader Adaptive Documentation (incremental across the release cycle): We've eliminated the top menus; each page now contains information for all versions, selectable by dropdowns above the relevant sections.
 
 [note]
 This is a Beta release, so you may encounter bugs and incomplete features.  We strongly recommend that you take the necessary precautions, which include (but are not limited to) the following steps:
