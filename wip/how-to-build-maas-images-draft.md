@@ -83,6 +83,75 @@ It is possible to customize the image either during the Ubuntu installation, or 
 
 The Packer template downloads the Ubuntu net installer from the Internet. To tell Packer to use a proxy, set the HTTP_PROXY environment variable to your proxy server. Alternatively, you may redefine iso_url to a local file, set iso_checksum_type to none to disable the checksums, and remove iso_checksum_url.
 
+<a href="#heading--how-to-install-qemu-utils"><h4 id="heading--how-to-install-qemu-utils">How to install qemu-utils</h4></a>
+
+You can install `qemu-utils` from Debian packages as follows:
+
+```nohighlight
+sudo apt install qemu-utils
+```
+
+If you need it, typical installation output is shown in the detail block, below.
+
+<details><summary>Typical `qemu-utils` install</summary>
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  fonts-dejavu-extra gcc-10-base gir1.2-gnomebluetooth-1.0
+  gnome-getting-started-docs ippusbxd java-common libatk-wrapper-java
+  libatk-wrapper-java-jni libboost-date-time1.71.0 libboost-iostreams1.67.0
+  libboost-thread1.71.0 libbrlapi0.7 libcamel-1.2-62 libcbor0.6 libcdio18
+  libcmis-0.5-5v5 libedataserver-1.2-24 libedataserverui-1.2-2 libhandy-0.0-0
+  libhogweed5 libidn11 libisl22 libjson-c4 libllvm12 libmozjs-68-0 libmpdec2
+  libneon27-gnutls libnettle7 libntfs-3g883 libperl5.30 libpoppler97
+  libprotobuf17 libpython3.8 libpython3.8-minimal libpython3.8-stdlib libraw19
+  libtracker-control-2.0-0 libtracker-sparql-2.0-0 libunoloader-java libvpx6
+  libwmf0.2-7 linux-image-generic-hwe-20.04 ltrace mysql-common ncal
+  perl-modules-5.30 pigz pkg-config popularity-contest python-pip-whl
+  python3-entrypoints python3-requests-unixsocket python3-simplejson python3.8
+  python3.8-minimal qemu
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  ibverbs-providers libaio1 libdaxctl1 libgfapi0 libgfrpc0 libgfxdr0
+  libglusterfs0 libibverbs1 libiscsi7 libndctl6 libpmem1 libpmemobj1 librados2
+  librbd1 librdmacm1 liburing2 qemu-block-extra
+Suggested packages:
+  debootstrap
+The following NEW packages will be installed:
+  ibverbs-providers libaio1 libdaxctl1 libgfapi0 libgfrpc0 libgfxdr0
+  libglusterfs0 libibverbs1 libiscsi7 libndctl6 libpmem1 libpmemobj1 librados2
+  librbd1 librdmacm1 liburing2 qemu-block-extra qemu-utils
+0 upgraded, 18 newly installed, 0 to remove and 0 not upgraded.
+Need to get 9,962 kB of archives.
+After this operation, 41.1 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 libibverbs1 amd64 39.0-1 [69.3 kB]
+Get:2 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 ibverbs-providers amd64 39.0-1 [341 kB]
+Get:3 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 libaio1 amd64 0.3.112-13build1 [7,176 B]
+Get:4 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 libdaxctl1 amd64 72.1-1 [19.8 kB]
+Get:5 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 libgfxdr0 amd64 10.1-1 [22.1 kB]
+Get:6 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 libglusterfs0 amd64 10.1-1 [288 kB]
+Get:7 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 libgfrpc0 amd64 10.1-1 [47.1 kB]
+Get:8 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 libgfapi0 amd64 10.1-1 [77.3 kB]
+Get:9 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 librdmacm1 amd64 39.0-1 [71.2 kB]
+Get:10 http://de.archive.ubuntu.com/ubuntu jammy/main amd64 libiscsi7 amd64 1.19.0Setting up liburing2:amd64 (2.1-2build1) ...###########.......................] 
+Setting up libaio1:amd64 (0.3.112-13build1) ...##########.....................] 
+Setting up libpmem1:amd64 (1.11.1-3build1) ...#############...................] 
+Setting up libgfxdr0:amd64 (10.1-1) ...#####################..................] 
+Setting up librdmacm1:amd64 (39.0-1) ...######################................] 
+Setting up librados2 (17.1.0-0ubuntu3) ...######################..............] 
+Setting up libpmemobj1:amd64 (1.11.1-3build1) ...################.............] 
+Setting up librbd1 (17.1.0-0ubuntu3) ...###########################...........] 
+Setting up qemu-utils (1:6.2+dfsg-2ubuntu6) ...#####################..........] 
+Setting up libiscsi7:amd64 (1.19.0-3build2) ...#######################........] 
+Setting up libgfrpc0:amd64 (10.1-1) ...#################################......] 
+Setting up libgfapi0:amd64 (10.1-1) ...##################################.....] 
+Setting up qemu-block-extra (1:6.2+dfsg-2ubuntu6) ...######################...] 
+Created symlink /etc/systemd/system/multi-user.target.wants/run-qemu.mount → /lib/systemd/system/run-qemu.mount.
+Processing triggers for man-db (2.10.2-1) ...################################.] 
+</details>
+
 <a href="#heading--how-to-build-a-packer-image"><h4 id="heading--how-to-build-a-packer-image">How to build a packer image</h4></a>
 
 You can easily build a raw image with LVM, using the Makefile:
@@ -158,7 +227,7 @@ This article will help you learn:
 - [How to create Windows images](#heading--custom-windows-images)
 - [How to create other kinds of custom images](#heading--other-custom-images)
 
-You can customise most images as much or as little as you wish, then use them to deploy machines with MAAS. 
+You can customise most images as much or as little as you wish, then use them to commission machines with MAAS. 
 
 <a href="#heading--install-mib"><h3 id="heading--install-mib">How to install MAAS Image Builder</h3></a>
 
