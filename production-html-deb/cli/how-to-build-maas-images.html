@@ -490,7 +490,7 @@ tcp        0      0 localhost:46134         localhost:2281          TIME_WAIT
 tcp        0      0 localhost:46130         localhost:2281          TIME_WAIT  
 tcp        0      0 localhost:46124         localhost:2281          TIME_WAIT
 </code></pre>
-<p>This <code>ESTABLISHED</code> connection may not hold the first few times, but eventually, the SSH connection will be made, and the provisioning process will finish.  If you want to walk away and come back, be advised that the Makefile clears the terminal buffer at the end, but echoing one final instruction:</p>
+<p>This <code>ESTABLISHED</code> connection may not hold the first few times, but eventually, the SSH connection will be made, and the provisioning process will finish.  If you want to walk away and come back, be advised that the Makefile clears the terminal buffer at the end, but echoes one final instruction:</p>
 <pre><code class="language-nohighlight">rm OVMF_VARS.fd
 </code></pre>
 <p>You can check the validity of the operation with <code>ls</code>, like this:</p>
@@ -516,17 +516,15 @@ ubuntu-lvm.json is configured to run Packer in headless mode. Only Packer output
     content@=custom-ubuntu-lvm.dd.gz
 </code></pre>
 <p>Before relying on it in production, you should test your custom image by deploying it to a test (virtual) machine.  It&rsquo;s the machine named <code>open-gannet</code> in this listing:</p>
-<pre><code class="language-nohighlight">maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,
-&quot;POWER&quot;,&quot;STATUS&quot;,&quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;,&quot;VLAN&quot;,&quot;FABRIC&quot;,
-&quot;SUBNET&quot;, &quot;OS&quot;, &quot;DISTRO&quot;] | (., map(length*&quot;-&quot;))),(.[] | [.hostname, .system_id, 
-.power_state, .status_name, .owner // &quot;-&quot;,.tag_names[0] // &quot;-&quot;, 
-.pool.name,.boot_interface.vlan.name,.boot_interface.vlan.fabric,
-.boot_interface.links[0].subnet.name, .osystem, .distro_series]) | @tsv' | column -t
+<pre><code class="language-nohighlight">maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
+&quot;OWNER&quot;, &quot;OS&quot;, &quot;DISTRO&quot;] | (., map(length*&quot;-&quot;))),
+(.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;,
+.osystem, .distro_series]) | @tsv' | column -t
 
-HOSTNAME     SYSID   POWER  STATUS    OWNER  TAGS     POOL     VLAN      FABRIC    SUBNET           OS      DISTRO
---------     -----   -----  ------    -----  ----     ----     ----      ------    ------           --      ------
-valued-moth  e86c7h  on     Deployed  admin  virtual  default  untagged  fabric-1  10.254.134.0/24  ubuntu  focal
-open-gannet  nk7x8y  on     Deployed  admin  virtual  default  untagged  fabric-1  10.254.134.0/24  custom  ubuntu-raw
+HOSTNAME     SYSID   POWER  STATUS    OWNER  OS      DISTRO
+--------     -----   -----  ------    -----  --      ------
+valued-moth  e86c7h  on     Deployed  admin  ubuntu  focal
+open-gannet  nk7x8y  on     Deployed  admin  custom  ubuntu-raw
 </code></pre>
 <p><a href="#heading--about-the-default-image-username"><h4 id="heading--about-the-default-image-username">About the default image username</h4></a></p>
 <p>The default username for packer-created images is <code>ubuntu</code>, the same as the default username for other MAAS images.</p>

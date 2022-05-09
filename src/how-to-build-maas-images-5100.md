@@ -164,7 +164,7 @@ tcp        0      0 localhost:46130         localhost:2281          TIME_WAIT
 tcp        0      0 localhost:46124         localhost:2281          TIME_WAIT
 ```
 
-This `ESTABLISHED` connection may not hold the first few times, but eventually, the SSH connection will be made, and the provisioning process will finish.  If you want to walk away and come back, be advised that the Makefile clears the terminal buffer at the end, but echoing one final instruction:
+This `ESTABLISHED` connection may not hold the first few times, but eventually, the SSH connection will be made, and the provisioning process will finish.  If you want to walk away and come back, be advised that the Makefile clears the terminal buffer at the end, but echoes one final instruction:
 
 ```nohighlight
 rm OVMF_VARS.fd
@@ -208,17 +208,15 @@ $ maas admin boot-resources create \
 Before relying on it in production, you should test your custom image by deploying it to a test (virtual) machine.  It's the machine named `open-gannet` in this listing:
 
 ```nohighlight
-maas admin machines read | jq -r '(["HOSTNAME","SYSID",
-"POWER","STATUS","OWNER", "TAGS", "POOL","VLAN","FABRIC",
-"SUBNET", "OS", "DISTRO"] | (., map(length*"-"))),(.[] | [.hostname, .system_id, 
-.power_state, .status_name, .owner // "-",.tag_names[0] // "-", 
-.pool.name,.boot_interface.vlan.name,.boot_interface.vlan.fabric,
-.boot_interface.links[0].subnet.name, .osystem, .distro_series]) | @tsv' | column -t
+maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
+"OWNER", "OS", "DISTRO"] | (., map(length*"-"))),
+(.[] | [.hostname, .system_id, .power_state, .status_name, .owner // "-",
+.osystem, .distro_series]) | @tsv' | column -t
 
-HOSTNAME     SYSID   POWER  STATUS    OWNER  TAGS     POOL     VLAN      FABRIC    SUBNET           OS      DISTRO
---------     -----   -----  ------    -----  ----     ----     ----      ------    ------           --      ------
-valued-moth  e86c7h  on     Deployed  admin  virtual  default  untagged  fabric-1  10.254.134.0/24  ubuntu  focal
-open-gannet  nk7x8y  on     Deployed  admin  virtual  default  untagged  fabric-1  10.254.134.0/24  custom  ubuntu-raw
+HOSTNAME     SYSID   POWER  STATUS    OWNER  OS      DISTRO
+--------     -----   -----  ------    -----  --      ------
+valued-moth  e86c7h  on     Deployed  admin  ubuntu  focal
+open-gannet  nk7x8y  on     Deployed  admin  custom  ubuntu-raw
 ```
 
 <a href="#heading--about-the-default-image-username"><h4 id="heading--about-the-default-image-username">About the default image username</h4></a>
