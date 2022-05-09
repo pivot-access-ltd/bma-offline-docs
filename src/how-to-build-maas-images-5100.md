@@ -52,6 +52,14 @@ You can install `ovmf` from Debian packages as follows:
 sudo apt install ovmf
 ```
 
+<a href="#heading--how-to-install-cloud-image-utils"><h4 id="heading--how-to-install-cloud-image-utils">How to install cloud-image-utils</h4></a>
+
+You can install `cloud-image-utils` from Debian packages as follows:
+
+```nohighlight
+sudo apt install cloud-image-utils
+```
+
 <a href="#heading--how-to-obtain-templates"><h3 id="heading--how-to-obtain-templates">How to obtain templates</h3></a>
 
 You can obtain the packer templates by cloning the [packer-maas github repository](https://github.com/canonical/packer-maas.git), like this:
