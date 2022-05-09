@@ -44,6 +44,14 @@ You can install `qemu-utils` from Debian packages as follows:
 sudo apt install qemu-utils
 ```
 
+<a href="#heading--how-to-install-ovmf"><h4 id="heading--how-to-install-ovmf">How to install ovmf</h4></a>
+
+You can install `ovmf` from Debian packages as follows:
+
+```nohighlight
+sudo apt install ovmf
+```
+
 <a href="#heading--how-to-obtain-templates"><h3 id="heading--how-to-obtain-templates">How to obtain templates</h3></a>
 
 You can obtain the packer templates by cloning the [packer-maas github repository](https://github.com/canonical/packer-maas.git), like this:
