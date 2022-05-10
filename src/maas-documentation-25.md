@@ -56,7 +56,6 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 
 - [Manage racks](/t/-/5172)
 - [Manage regions](/t/-/5176)
-- [Enable HA](/t/-/5120)
 - [Manage machines](/t/-/5160)
 - [Commission and deploy machines](/t/-/5112)
 - [Customise machines](/t/-/5108)
@@ -75,6 +74,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 
 ### How to operate MAAS
 
+- [Enable HA](/t/-/5120)
 - [Set up MAAS metrics](/t/-/5204)
 - [Work with audit event logs](/t/-/5987)
 - [Use air-gapped MAAS](/t/-/5212)
