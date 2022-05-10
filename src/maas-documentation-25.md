@@ -48,7 +48,6 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [Import images](/t/-/5124)
 - [Build MAAS images](/t/-/5100)
 - [Create custom images](/t/-/5104)
-- [Use image streams](/t/-/5220)
 - [Mirror images locally](/t/-/5927)
 - [Manage VMWare images](/t/-/5144)
 
