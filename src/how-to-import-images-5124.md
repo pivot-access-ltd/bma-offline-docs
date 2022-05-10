@@ -13,7 +13,7 @@ This article will help you learn:
 
 Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/how-to-build-maas-images/5100).
 
-<a href="#heading--maas-image-streams><h2 id="heading--maas-image-streams">How to use MAAS image streams</h2></a>
+<a href="#heading--maas-image-streams"><h2 id="heading--maas-image-streams">How to use MAAS image streams</h2></a>
 
 Canonical provides two SimpleStreams for MAAS images: candidate and stable. Both streams contain Ubuntu images, CentOS images, bootloaders extracted from the Ubuntu archive, and release notifications. Either stream can be used in any version of MAAS greater than 2.1 -- but not all images are supported in older versions.
 
