@@ -160,7 +160,6 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 |https://discourse.maas.io/t/-/5144|/docs/how-to-manage-vmware-images|
 |https://discourse.maas.io/t/-/5333|/docs/how-to-troubleshoot-maas|
 |https://discourse.maas.io/t/-/5927|/docs/how-to-mirror-images-locally|
-|https://discourse.maas.io/t/-/5220|/docs/how-to-use-image-streams|
 |https://discourse.maas.io/t/-/5416|/docs/maas-concepts-and-terms-reference|
 |https://discourse.maas.io/t/-/5236|/docs/how-to-use-the-maas-cli|
 |https://discourse.maas.io/t/-/5314|/docs/test-log-reference|
@@ -842,6 +841,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/how-to-use-image-streams|/docs/how-to-import-images|
 |/docs/how-to-manage-dhcp|/docs/how-to-manage-ip-addresses|
 |/docs/how-to-manage-ip-ranges|/docs/how-to-manage-ip-addresses|
 |/docs/how-to-set-up-ntp-services|/docs/how-to-manage-networks|
