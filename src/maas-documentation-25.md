@@ -170,7 +170,6 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 |https://discourse.maas.io/t/-/5428|/docs/how-to-get-help|
 |https://discourse.maas.io/t/-/5116|/docs/how-to-enable-tls-encryption|
 |https://discourse.maas.io/t/-/5448|/docs/how-to-contact-us|
-|https://discourse.maas.io/t/-/5100|/docs/how-to-build-maas-images|
 |https://discourse.maas.io/t/-/5092|/docs/hardware-test-scripts-reference|
 |https://discourse.maas.io/t/-/5256|/docs/audit-event-log-reference|
 |https://discourse.maas.io/t/-/5375|/docs/commissioning-script-reference|
@@ -799,7 +798,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 |https://discourse.maas.io/t/-/5252|/docs/event-log-reference|
 |https://discourse.maas.io/t/-/5228|/docs/how-to-use-network-tags|
 |https://discourse.maas.io/t/-/5084|/docs/about-networking|
-|https://discourse.maas.io/t/-/5104|/docs/how-to-create-a-custom-ubuntu-image|
+|https://discourse.maas.io/t/-/5104|/docs/how-to-create-custom-images|
 |https://discourse.maas.io/t/-/5152|/docs/how-to-manage-availability-zones|
 |https://discourse.maas.io/t/-/5928|/docs/how-to-work-with-tags|
 |https://discourse.maas.io/t/-/5929|/docs/how-to-work-with-annotations|
@@ -841,6 +840,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/how-to-build-maas-images|/docs/how-to-create-custom-images|
 |/docs/how-to-use-image-streams|/docs/how-to-import-images|
 |/docs/how-to-manage-dhcp|/docs/how-to-manage-ip-addresses|
 |/docs/how-to-manage-ip-ranges|/docs/how-to-manage-ip-addresses|
