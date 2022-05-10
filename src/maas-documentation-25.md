@@ -165,7 +165,6 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 |https://discourse.maas.io/t/-/5314|/docs/test-log-reference|
 |https://discourse.maas.io/t/-/5329|/docs/tips-and-tricks|
 |https://discourse.maas.io/t/-/5404|/docs/python-api-client-reference|
-|https://discourse.maas.io/t/-/5176|/docs/how-to-manage-regions|
 |https://discourse.maas.io/t/-/4186|/docs/how-to-help-improve-the-doc|
 |https://discourse.maas.io/t/-/5428|/docs/how-to-get-help|
 |https://discourse.maas.io/t/-/5116|/docs/how-to-enable-tls-encryption|
@@ -823,7 +822,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 |https://discourse.maas.io/t/-/5140|/docs/how-to-manage-vm-hosts|
 |https://discourse.maas.io/t/-/5128|/docs/how-to-install-maas|
 |https://discourse.maas.io/t/-/5240|/docs/maas-logging-reference|
-|https://discourse.maas.io/t/-/5172|/docs/how-to-manage-racks|
+|https://discourse.maas.io/t/-/5172|/docs/how-to-manage-controllers|
 |https://discourse.maas.io/t/-/5124|/docs/how-to-import-images|
 |https://discourse.maas.io/t/-/5184|/docs/how-to-manage-user-accounts|
 |https://discourse.maas.io/t/-/5068|/docs/about-vm-hosting|
@@ -840,6 +839,9 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/how-to-manage-regions|/docs/how-to-manage-controllers|
+|/docs/how-to-manage-racks|/docs/how-to-manage-controllers|
+|/docs/how-to-create-a-custom-ubuntu-image|/docs/how-to-create-custom-images|
 |/docs/how-to-build-maas-images|/docs/how-to-create-custom-images|
 |/docs/how-to-use-image-streams|/docs/how-to-import-images|
 |/docs/how-to-manage-dhcp|/docs/how-to-manage-ip-addresses|
