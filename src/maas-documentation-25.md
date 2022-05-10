@@ -52,10 +52,9 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 
 ### How to deploy MAAS
 
-- [Manage racks](/t/-/5172)
-- [Manage regions](/t/-/5176)
+- [Manage controllers](/t/-/5172)
 - [Manage machines](/t/-/5160)
-- [Commission and deploy machines](/t/-/5112)
+- [Deploy machines](/t/-/5112)
 - [Customise machines](/t/-/5108)
 - [Manage VM hosts](/t/-/5140)
 - [Manage VMs](/t/-/5148)
