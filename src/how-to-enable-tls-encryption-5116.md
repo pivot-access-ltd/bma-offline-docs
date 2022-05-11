@@ -118,7 +118,7 @@ $ ​​sudo maas config-tls enable new-server-key.pem new-server.pem --port 544
 
 If you’re using the snap, the certificate and key must be placed in a directory that’s readable by the CLI, such as `/var/snap/maas/common` (e.g., if you're using the snap version).
 
-<a href="#heading--ui-changes"><h2 id="#heading--ui-changes">UI Changes</h2></a>
+<a href="#heading--ui-changes"><h2 id="heading--ui-changes">UI Changes</h2></a>
 
 There is a new "Security" subsection under "Configuration" that will indicate the status of TLS in the specific server (enabled or disabled).
 
