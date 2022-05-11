@@ -395,7 +395,7 @@
 <p>You can add kernel options when creating both manual and automatic tags. Kernel options will be automatically applied at boot time or when the machine with that tag is commissioned or deployed. </p>
 <p>When updating kernel options on a tag that matches Deployed machines, be aware that the new kernel option will be applied during boot time, so you will need to release and re-deploy them to pick up the change. Otherwise, these deployed machines will have the old kernel options.</p>
 <p>If there are multiple tags associated with a machine, the kernel options will be concatenated from all the tags combined, sorted alphabetically .</p>
-<p><a href="#heading--how-to-create-automatic-tags"><h2 id="how-to-create-automatic-tags">How to create automatic tags</h1></a></p>
+<p><a href="#heading--how-to-create-automatic-tags"><h2 id="heading--how-to-create-automatic-tags">How to create automatic tags</h1></a></p>
 <p>You can create an automatic tag by going to the <code>Tag</code> tab and click <code>Create new tag</code>. A tag is considered automatic when the definition field is filled with an XPath expression. The current version of our UI will only validate if your XPath expression is valid or not, but it will not show you which machines it will apply to before you create the tag.</p>
 <p>Here is a thumbnail sketch of how automatic tags work:</p>
 <p><a href="../images/fb003af31284581af931868daff1d735b6a52336.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/fb003af31284581af931868daff1d735b6a52336.png"></a></p>

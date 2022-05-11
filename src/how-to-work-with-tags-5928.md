@@ -59,7 +59,7 @@ When updating kernel options on a tag that matches Deployed machines, be aware t
 
 If there are multiple tags associated with a machine, the kernel options will be concatenated from all the tags combined, sorted alphabetically .
 
-<a href="#heading--how-to-create-automatic-tags"><h2 id="how-to-create-automatic-tags">How to create automatic tags</h1></a>
+<a href="#heading--how-to-create-automatic-tags"><h2 id="heading--how-to-create-automatic-tags">How to create automatic tags</h1></a>
 
 You can create an automatic tag by going to the `Tag` tab and click `Create new tag`. A tag is considered automatic when the definition field is filled with an XPath expression. The current version of our UI will only validate if your XPath expression is valid or not, but it will not show you which machines it will apply to before you create the tag.
 
