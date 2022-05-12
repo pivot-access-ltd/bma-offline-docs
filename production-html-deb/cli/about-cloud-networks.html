@@ -362,42 +362,16 @@
   <h1>About cloud networks</h1><!-- "About cloud networks" -->
 <p>Cloud network architectures deviate significantly from the architecture of the Internet infrastructure.  These deviations are driven mostly by economics, simplicity, and scalability.  This section will help you learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--clos-architecture">About the Clos architecture</a></li>
-<li><a href="#heading--about-stp">About STP</a></li>
+<li><a href="#heading--clos-architecture">About old and new network architectures</a></li>
 </ul>
-<p><a href="#heading--clos-architecture"><h2 id="heading--clos-architecture">About the Clos architecture</h2></a></p>
-<p>You may remember that the Internet infrastructure is riddled with side-channels to improve various measures, such as cost and throughput.  Earlier, we saw a fairly pessimistic picture of this infrastructure which helps to explain the variability:</p>
+<p><a href="#heading--clos-architecture"><h2 id="heading--clos-architecture">About old and new network architectures</h2></a></p>
+<p>Before there were networks, monolithic applications ran on a mainframe with hardwired I/O devices.  As CPUs proliferated in separate enclosures, LANs like <a href="https://en.wikipedia.org/wiki/Banyan_VINES">Banyan Vines</a> grew up.  Proprietary mismatch led to the <a href="https://maas.io/docs/about-tcp-ip-networks#heading--about-the-osi-model">OSI model</a>.  Next came the Web, which distributed processing to client devices.  Now, we have the idea of generic switches and servers in cloud and bare-metal clusters.  Servers have shifted from dedicated applications to being completely <a href="https://en.wikipedia.org/wiki/Virtualization">virtualised</a>.</p>
+<p>A traditional AAC architecture looks like this:</p>
 <p><a href="../images/e15a35da43b2788883ec014efb1832b8f641e872.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/e15a35da43b2788883ec014efb1832b8f641e872.jpeg"></a></p>
-<p>Because of this variability, network performance is uneven and constantly morphing, as different groups of LANs seek better &ldquo;numbers&rdquo;.  Given that various nodes are constantly upgrading bandwidth, devices, and network speeds to compete for customers, the churn isn&rsquo;t a surprise.  Regulating this churn helps nothing in the long run, of course, but changing the &ldquo;atomic structure&rdquo; of the network itself can make things a lot better.   </p>
-<p>The structure of the Internet backbone is something like a dirty snowball.  On the way downhill, the snowball picks up rocks, sticks, abandoned shoes, trash, insects, and anything else that gets in its path.  In other words, the Internet infrastructure grows by incorporating anything and everything that helps it move forward.  Differing protocols, link speeds, formats, hardware, software, bandwidth, and media are all added to the infrastructure, almost randomly.</p>
-<p>At scale &ndash; that is, considered from the perspective of the global village &ndash; this rolling snowball does pretty well.  Enterprise clouds, though, feel the effects of this variability much more strongly.  Over time, enterprises have learned to heavily standardise their networks, at the lowest level, for more scalable, consistent, and reliable performance.  </p>
-<p>The resulting architecture, drawn from the fractal topology created by <a href="https://en.wikipedia.org/wiki/Clos_network">Charles Clos</a> in a 1952 paper about telephone switching.  &ldquo;Fractal&rdquo; is the key word here, in the sense of a simple, repeating pattern.  Where the AAC network is made up of all sorts of devices with different characteristics, the Clos topology can be built from just two basic devices: one type of switch, and one type of server:</p>
+<p>It’s heavy on network hardware; that is, the radio of switches to servers is (too) high.  Switch-driven networks used hardware packet switching (<a href="https://etherealmind.com/analysis-merchant-custom-silicon">merchant silicon</a>) to serve proprietary network configurations.  In theory, bridges needed no configuration, although <a href="https://en.wikipedia.org/wiki/Network_congestion">congestion</a> and <a href="https://en.wikipedia.org/wiki/IP_address#Addressing_conflicts">mistaken identity</a> led to the need for <a href="https://en.wikipedia.org/wiki/Spanning_Tree_Protocol">STP</a>, <a href="https://networklessons.com/spanning-tree/per-vlan-spanning-tree-pvst">per-VLAN trees</a>, and IP address redundancy management techniques.</p>
+<p>A cloud architecture simplifies these networks:</p>
 <p><a href="../images/fd86954e48538ce9ba8fc6e02df23b0a2337ef12.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/fd86954e48538ce9ba8fc6e02df23b0a2337ef12.jpeg"></a></p>
-<p>All the switches in the diagram can be the same unit of hardware, if desired.  The designation &ldquo;TOR&rdquo; (for &ldquo;Top of Rack&rdquo;) simply shows the terminal switch in this network topology, known as a <strong>leaf</strong> switch.  The higher-level switches are referred to as <strong>spine</strong> switches.  The ghosted objects are meant to show how this architecture is (theoretically) infinitely scalable.  </p>
-<p>Several inherent characteristics make a Clos (&ldquo;fractal&rdquo;) architecture more suitable for MAAS networks:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>
-<p>Every leaf connects to every spine, or at the very least, every leaf connects to many spines.  By creating many paths through the network, this architecture increases both bandwidth and capacity, with the primary cost being the cabling.</p>
-</li>
-<li>
-<p>The spines only connect leaves, so all functionality is pushed to the racks (some would say &ldquo;the edges of the network&rdquo;).</p>
-</li>
-<li>
-<p>Networks can be easily scaled with simple, fixed-form-factor switches.</p>
-</li>
-<li>
-<p>The network does not use bridging via the <a href="https://en.wikipedia.org/wiki/Spanning_Tree_Protocol">Spanning Tree Protocol</a> to interconnect the switches, in this arrangement. Instead, <a href="https://en.wikipedia.org/wiki/Equal-cost_multi-path_routing">Equal-Cost Multipath routing</a> is used.</p>
-</li>
-<li>
-<p>The network tends to be nonblocking because the oversubscription ratio tends toward 1:1, meaning that the bandwidth between the TOR leaf switches and the servers can easily be adjusted to be roughly equal to the bandwidth between the leaf switch and every other spine switch.  It depends on how interconnect link speeds are defined, but with homogeneous hardware the relative settings and calculations are much simpler and more constant.</p>
-</li>
-<li>
-<p>Networks have a small blast radius, meaning that the loss of a single link does not have a significant effect on the performance of the overall network.  For example, if every leaf switch is connected to each of five spine switches, the loss of one link (or one spine switch) would probably not noticeably degrade network performance.</p>
-</li>
-</ul>
-<p><a href="#heading--about-stp"><h2 id="heading--about-stp">About STP</h2></a></p>
-<p>Some switches use the Spanning-Tree Protocol (STP) to negotiate a loop-free path through a root bridge. While scanning, it can cause each port to wait up to 50 seconds before sending data. This delay, in turn, can cause problems with some applications/protocols such as PXE, DHCP and DNS, of which MAAS makes extensive use.</p>
-<p>To alleviate this problem, you should enable the <a href="https://en.wikipedia.org/wiki/Spanning_Tree_Protocol">Rapid Spanning Tree Protocol</a> (known as <a href="https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4000/8-2glx/configuration/guide/stp_enha.html#wp1019873">Portfast</a> for Cisco switches), which allows the ports to come up almost immediately.</p>
+<p>Cloud architecture is a simple <a href="https://networklessons.com/cisco/ccna-200-301/spine-and-leaf-architecture">spine-and-leaf network</a>, built from cheap, identical switches connecting cheap, identical servers.  Every switch has a path to every other switch, mitigating congestion.  Any switch can route any traffic anywhere, and any server can do any job (at any time).  This architecture moves the developer’s focus from metal to actual computing problems.</p>
     </div>
   </body>
 </html>
