@@ -686,7 +686,7 @@ Note that this step installs a a running PostgreSQL and a MAAS-ready database in
 
 This will produce a list of databases, one of which will be `maasdb`, owned by `maas`.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the `maas init` command:
 
-    sudo maas init region+rack --database-uri maas-test-db:-#,
+    sudo maas init region+rack --database-uri maas-test-db:///
 
 After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:
  
@@ -790,7 +790,7 @@ Once MAAS is installed, you can use the `--help` flag with `maas init` to get re
     this machine, and configure it for use with MAAS, you can install
     the maas-test-db snap before running 'maas init':
         sudo snap install maas-test-db
-        sudo maas init region+rack --database-uri maas-test-db:-#,
+        sudo maas init region+rack --database-uri maas-test-db:///
 
 We'll quickly walk through these instructions to confirm your understanding.  First, install the `maas-test-db` snap:
  
@@ -806,7 +806,7 @@ Note that this step installs a a running PostgreSQL and a MAAS-ready database in
 
 This will produce a list of databases, one of which will be `maasdb`, owned by `maas`.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the `maas init` command:
 
-    sudo maas init region+rack --database-uri maas-test-db:-#,
+    sudo maas init region+rack --database-uri maas-test-db:///
 
 After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:
  
@@ -910,7 +910,7 @@ Once MAAS is installed, you can use the `--help` flag with `maas init` to get re
     this machine, and configure it for use with MAAS, you can install
     the maas-test-db snap before running 'maas init':
         sudo snap install maas-test-db
-        sudo maas init region+rack --database-uri maas-test-db:-#,
+        sudo maas init region+rack --database-uri maas-test-db:///
 
 We'll quickly walk through these instructions to confirm your understanding.  First, install the `maas-test-db` snap:
  
@@ -926,7 +926,7 @@ Note that this step installs a a running PostgreSQL and a MAAS-ready database in
 
 This will produce a list of databases, one of which will be `maasdb`, owned by `maas`.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the `maas init` command:
 
-    sudo maas init region+rack --database-uri maas-test-db:-#,
+    sudo maas init region+rack --database-uri maas-test-db:///
 
 After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:
  
@@ -1030,7 +1030,7 @@ Once MAAS is installed, you can use the `--help` flag with `maas init` to get re
     this machine, and configure it for use with MAAS, you can install
     the maas-test-db snap before running 'maas init':
         sudo snap install maas-test-db
-        sudo maas init region+rack --database-uri maas-test-db:-#,
+        sudo maas init region+rack --database-uri maas-test-db:///
 
 We'll quickly walk through these instructions to confirm your understanding.  First, install the `maas-test-db` snap:
  
@@ -1046,7 +1046,7 @@ Note that this step installs a a running PostgreSQL and a MAAS-ready database in
 
 This will produce a list of databases, one of which will be `maasdb`, owned by `maas`.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the `maas init` command:
 
-    sudo maas init region+rack --database-uri maas-test-db:-#,
+    sudo maas init region+rack --database-uri maas-test-db:///
 
 After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:
  
