@@ -839,7 +839,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
-|/docs/storage|/docs/about-machines#heading--machine-storage|
+|/docs/storage|/docs/about-machines#heading-\-machine-storage|
 |/docs/how-to-manage-regions|/docs/how-to-manage-controllers|
 |/docs/how-to-manage-racks|/docs/how-to-manage-controllers|
 |/docs/how-to-create-a-custom-ubuntu-image|/docs/how-to-create-custom-images|
