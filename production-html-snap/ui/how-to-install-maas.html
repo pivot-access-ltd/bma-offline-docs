@@ -556,7 +556,7 @@ Type "help" for help.
 postgres=# \l
 </code></pre>
 <p>This will produce a list of databases, one of which will be <code>maasdb</code>, owned by <code>maas</code>.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the <code>maas init</code> command:</p>
-<pre><code>sudo maas init region+rack --database-uri maas-test-db:-#,
+<pre><code>sudo maas init region+rack --database-uri maas-test-db:///
 </code></pre>
 <p>After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:</p>
 <pre><code>MAAS URL [default=http://10.45.222.159:5240/MAAS]:
