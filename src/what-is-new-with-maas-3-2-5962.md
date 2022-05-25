@@ -1,5 +1,62 @@
 <!-- "MAAS 3.2 Beta release notes" -->
-We are happy to announce that MAAS 3.2 Beta 4 is now available.
+<!-- "MAAS 3.2 Beta release notes" -->
+We are happy to announce that MAAS 3.2 Beta 5 is now available.
+
+It's unusual for the MAAS team to release a Beta without a new feature, but we decided to make an important exception. We've spent a lot of time recently focusing on a collection of life-cycle and controller bugs.  Fixing these bugs should improve user experience with respect to controller startup, communication, and operation; enlistment; commissioning; and deployment.  To that end, we've released a special Beta that's restricted to some high-profile bugs in those areas.
+
+Below, you'll find a list of what we've fixed in Beta 5 -- and we'd really like to have your help in testing these fixes.
+
+## Controller issues
+
+We focused on conspicuous controller issues in three areas: startup, communication, and user operations.
+
+### Controller startup issues
+
+ * [Controllers can't refresh their networking configuration with PCI devices](https://bugs.launchpad.net/bugs/1973304): the VPD file could not be read from within a container; fixed.
+
+ * MAAS 3.1 can't configure DHCP because the controllers can't detect network and storage layout (private bug): the bond interface was being created too early in the cycle under certain unusual conditions; the code was adjusted to fix this.
+
+ * [MAAS 3.0 fails to initialize regiond when an IPoIB (e.g., Infiniband) device is present](https://bugs.launchpad.net/maas/+bug/1939456): fixed by skipping over IP addresses for long-MAC NICs like Infiniband, during controller startup.
+ 
+ * [MAAS server startup fails because of missing GPU information](https://bugs.launchpad.net/maas/+bug/1970435): fixed by a soliciting a fix for a related LXD bug.
+ 
+### Controller communication issues
+
+ * [Wrong preseed metadata URL provided when using multiple rack controllers](https://bugs.launchpad.net/bugs/1972865): minor port issue; fixed.
+
+ * [No rack controllers can access the BMC of a node](https://bugs.launchpad.net/bugs/1938573): fixed an corner case where MAAS fails to make sure it's got the right rack controller.
+
+### Controller operational issues
+
+ * [Can't delete a rack controller with the UI](https://bugs.launchpad.net/bugs/1971742): fixed a UX<-->core asynch I/O bug.
+
+## Life-cycle issues
+
+We also tried to cherry-pick some of the most important life-cycle issues, mostly around enlistment, commissioning, and deployment.
+
+### Enlistment issues
+
+ * [IPMI power_driver parameter is not preserved from enlistment to commissioning](https://bugs.launchpad.net/bugs/1958451): extended BMC code to update IPMI 1.5 handling.
+ 
+ * [Enlist step fails with latest Beta of MAAS 3.2](https://bugs.launchpad.net/maas/+bug/1974031): relatively minor bug fix.
+ 
+### Commissioning issues
+
+ * [iPXE is not detected properly on derivatives of vanilla iPXE (Mellanox Flexboot)](https://bugs.launchpad.net/bugs/1939608): fixed MAAS to properly detect iPXE in an outlier scenario; note that applying DHCP snippets won't work because of the way the iPXE bootloader is hardcoded. 
+
+ * [Power9 PowerVM LPAR fails to commission properly](https://bugs.launchpad.net/bugs/1971754): compensated for a syntax issue with Power9 LPAR power driver.
+
+ * [Websocket produces an error with diskless machines](https://bugs.launchpad.net/bugs/1952216): fixed a previously-unnoticed bootdisk ID error for diskless machines.
+
+### Deployment issues
+
+ * [Calling vm-host update fails when resetting overcommit ratios](https://bugs.launchpad.net/bugs/1972052): fixed a unique index violation in the overcommit ratio code.
+ 
+ * ['maas-run-scripts report-results' is not distro-agnostic](https://bugs.launchpad.net/bugs/1962519): eliminated use of `dpkg` by `maas-run-scripts` script.
+
+ * [Cannot deploy Centos7 with xfs when using Focal as commissioning image](https://bugs.launchpad.net/bugs/1958433): mitigated incompatible changes to xfs between Bionic and Focal releases.
+ 
+ * [Deployment fails when trying to register a VM host](https://bugs.launchpad.net/bugs/1970962): fixed a minor bug related to Jammy updates.
 
 <a href="#heading--new-features"><h2 id="heading--new-features">New MAAS 3.2 features</h2></a>
 
