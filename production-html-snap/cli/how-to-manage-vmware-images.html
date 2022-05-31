@@ -369,6 +369,8 @@
 <li><a href="#heading--building-an-image">How to build a VMWare image</a></li>
 <li><a href="#heading--uploading-an-image">How to upload a VMWare image</a></li>
 </ul>
+<p><strong>NOTE:</strong> 
+VMware <a href="https://kb.vmware.com/s/article/84280">does not support cloning boot devices</a> - you may run into issues triggered by non-unique UUID.  <a href="https://kb.vmware.com/s/article/84349">One such issue</a> may lead to data corruption on VMFS datastores when using cloned boot devices.</p>
 <p><a href="#heading--prerequisites-to-create-the-images"><h2 id="heading--prerequisites-to-create-the-images">About the prerequisites for creating a VMWare image</h2></a></p>
 <p>The following are required in order to create and deploy a VMWare image:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -383,6 +385,8 @@
 <li><a href="https://github.com/canonical/packer-maas">Packer template</a> for MAAS custom image</li>
 </ul>
 <p><a href="#heading--features-and-limitations"><h2 id="heading--features-and-limitations">About the features and limitations of VMWare images in MAAS</h2></a></p>
+<p><a href="#heading--no-cloning-support"><h3 id="heading--no-cloning-support">About cloning VMWare images</h3></a></p>
+<p>VMware <a href="https://kb.vmware.com/s/article/84280">does not support cloning boot devices</a> - you may run into issues triggered by non-unique UUID.  <a href="https://kb.vmware.com/s/article/84349">One such issue</a> may lead to data corruption on VMFS datastores when using cloned boot devices.</p>
 <p><a href="#heading--networking"><h3 id="heading--networking">About VMWare images and MAAS networking</h3></a></p>
 <p>The following apply to VMWare image creation, with respect to MAAS networking:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
