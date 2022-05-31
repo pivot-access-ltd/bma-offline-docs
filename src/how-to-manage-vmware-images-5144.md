@@ -1,5 +1,5 @@
 <!-- "How to manage VMWare images" -->
-MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directly deploy the VMware ESXi ISO; you must create a specialised image from an official VMWare ISO. To automate the image creation process, Canonical hosts a repository with community-contributed [packer](https://www.packer.io/) templates.
+MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directly deploy the VMware ESXi ISO; you must create a specialised image from an official VMWare ISO. To automate the image creation process, Canonical [hosts a repository](https://github.com/canonical/packer-maas) with community-contributed [packer](https://www.packer.io/) templates.
 
 #### This article will tell you:
 
