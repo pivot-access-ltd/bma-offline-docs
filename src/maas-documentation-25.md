@@ -96,25 +96,26 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 - [Concepts & terms](/t/-/5416)
 - [Getting help](/t/-/5428)
 
-### Explanation
+### Technical explanations
 
-- [About MAAS](/t/-/5064)
-- [About controllers](/t/-/5072)
-- [About machines](/t/-/5080)
-- [About customising machines](/t/-/5976)
-- [About VM hosting](/t/-/5068)
-- [About TCP/IP networks](/t/-/5806)
-- [About cloud networks](/t/-/5808)
-- [About DHCP](/t/-/5807)
-- [About MAAS networks](/t/-/5084)
-- [About images](/t/-/5076)
-
+- [MAAS](/t/-/5064)
+- [TCP/IP networks](/t/-/5806)
+- [Cloud networks](/t/-/5808)
+- [DHCP](/t/-/5807)
+- [MAAS networking](/t/-/5084)
+- [Images](/t/-/5076)
+- [Custom images](/t/-/6099)
+- [Controllers](/t/-/5072)
+- [Machines](/t/-/5080)
+- [Customising machines](/t/-/5976)
+- [VM hosting](/t/-/5068)
 
 ## URLs
 
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6099|/docs/about-creating-packer-images|
 |https://discourse.maas.io/t/-/6027|/docs/using-jq-with-the-maas-cli|
 |https://discourse.maas.io/t/-/5987|/docs/how-to-work-with-audit-event-logs|
 |https://discourse.maas.io/t/-/5976|/docs/about-customising-machines|
