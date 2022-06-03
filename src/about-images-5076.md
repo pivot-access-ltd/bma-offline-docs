@@ -1,5 +1,5 @@
 <!-- "About images" -->
-MAAS provides supported images for stable Ubuntu releases, and for CentOS 6.6, CentOS 7, and CentOS 8.0 releases.  [Ubuntu Advantage](https://www.ubuntu.com/support) is needed to build customer Windows, RHEL and ESXi images.  This article will help you learn:
+MAAS provides supported images for stable Ubuntu releases, and for CentOS 6.6, CentOS 7, and CentOS 8.0 releases.  You can also is needed to build customer Windows, RHEL and ESXi images.  This article will help you learn:
 
 - [About boot sources and why they matter](#heading--boot-sources)
 - [How to select and import an image](/t/how-to-import-images/5124)
