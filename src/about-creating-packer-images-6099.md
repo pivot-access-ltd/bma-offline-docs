@@ -2,57 +2,48 @@
 
 <a href="#heading--about-creating-packer-images-for-maas"><h2 id="heading--about-creating-packer-images-for-maas">About creating packer images for MAAS</h2></a>
 
+You can create and customize your own images for MAAS using [packer](https://www.packer.io), with [Canonical-provided templates](https://github.com/canonical/packer-maas).  It is also possible to create your own templates, using the [packer documentation](https://www.packer.io/docs), although that effort might be completely unsupported.
+
+[note]
+While it may be possible to deploy a certain image with MAAS, the particular use case may not be supported by that image’s vendor due to licensing or technical reasons. Canonical recommends that, whenever possible, you should customise machines using cloud-init user_data or Curtin preseed data, instead of creating a custom image.
+[/note]
+
+This article gives a thumbnail sketch of how packer works, and explains how packer can be used to create custom images for deployment with MAAS.
+
 <a href="#heading--about-packer"><h3 id="heading--about-packer">About packer</h3></a>
 
-The packer code itself: what it does, how it works, and what it provides.
+The [packer documentation](https://www.packer.io/docs) has an excellent, in-depth discussion of what packer does, how it works, and where it is limited.  Simply put, packer creates OS images that can be uploaded and deployed using MAAS. We can summarize packer with the following linearised flowchart:
 
-Packer is an open source tool that enables you to create identical machine images for multiple platforms from a single source template. A common use case is creating "golden images" that teams across an organization can use in cloud infrastructure.
+<a href="https://discourse.maas.io/uploads/default/original/2X/9/93663433436e5e03eb072d7c641d5304c4893bdf.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/93663433436e5e03eb072d7c641d5304c4893bdf.jpeg"></a>
 
-Packer is a tool for building identical machine images for multiple platforms from a single source configuration.
+We can walk through packer operation like this:
 
-Packer is lightweight, runs on every major operating system, and is highly performant, creating machine images for multiple platforms in parallel. Packer comes out of the box with support for many platforms, the full list of which can be found at https://www.packer.io/docs/builders.
+ - A template is created or obtained which drives the packer build.  The [packer-maas](https://github.com/canonical/packer-maas) repository uses JSON templates.
 
-Support for other platforms can be added via plugins.
+ - The template specifies packer commands and data sources.
 
-The images that Packer creates can easily be turned into Vagrant boxes.
+ - The template specifies a builder, which creates the MAAS-consumable images.
 
-There are a handful of terms used throughout the Packer documentation where the meaning may not be immediately obvious if you haven't used Packer before. Luckily, there are relatively few. This page documents all the terminology required to understand and use Packer. The terminology is in alphabetical order for quick referencing.
+ - Multiple builds can run in parallel.  Within the MAAS domain, we typically don't set templates up that way, but it is possible to do so.
 
-    Artifacts are the results of a single build, and are usually a set of IDs or files to represent a machine image. Every builder produces a single artifact. As an example, in the case of the Amazon EC2 builder, the artifact is a set of AMI IDs (one per region). For the VMware builder, the artifact is a directory of files comprising the created virtual machine.
+ - Post-processors do things to the built image to make it usable, e.g., compressing the file into a `tar.gz` image.
 
-    Builds are a single task that eventually produces an image for a single platform. Multiple builds run in parallel. Example usage in a sentence: "The Packer build produced an AMI to run our web application." Or: "Packer is running the builds now for VMware, AWS, and VirtualBox."
+ - Provisioners spin up a running version of the image and install additional software, before collapsing the entire image into an upload package.
 
-    Builders are components of Packer that are able to create a machine image for a single platform. Builders read in some configuration and use that to run and generate a machine image. A builder is invoked as part of a build in order to create the actual resulting images. Example builders include VirtualBox, VMware, and Amazon EC2.
+ - Because packer creates a wide-range of load packages, the results are called "artifacts" in packer terminology.  MAAS simply refers to these as "images".
 
-    Commands are sub-commands for the packer program that perform some job. An example command is "build", which is invoked as packer build. Packer ships with a set of commands out of the box in order to define its command-line interface.
-
-    Data Sources are components of Packer that fetch data from outside Packer and make it available to use within the template. Example of data sources include Amazon AMI, and Amazon Secrets Manager.
-
-    Post-processors are components of Packer that take the result of a builder or another post-processor and process that to create a new artifact. Examples of post-processors are compress to compress artifacts, upload to upload artifacts, etc.
-
-    Provisioners are components of Packer that install and configure software within a running machine prior to that machine being turned into a static image. They perform the major work of making the image contain useful software. Example provisioners include shell scripts, Chef, Puppet, etc.
-
-    Templates are either HCL or JSON files which define one or more builds by configuring the various components of Packer. Packer is able to read a template and use that information to create multiple machine images in parallel.
+Note that we said this flow is linearised.  You can see that provisioners might need to run before a post-processor creates an uploadable `tar.gz` image.  The actual flow depends on the template, which depends on the OS being customised into an image.
     
 <a href="#heading--about-packer-dependencies"><h3 id="heading--about-packer-dependencies">About packer dependencies</h3></a>
 
-The four main packer dependencies, and what they do.
+Depending upon which image you are building, packer-maas may require various dependencies.  For example, when customising an Ubuntu image, you'd need to install the following dependencies:
 
-<a href="#heading--About the qemu-About the qemu-utils-package"><h3 id="heading--About the qemu-About the qemu-utils-package">utils package</h3></a>
+ - qemu-utils
+ - qemu-system
+ - ovmf
+ - cloud-image-utils
 
-What functionality is provided by the qemu-utils package?
-
-<a href="#heading--About the qemu-About the qemu-system-package"><h3 id="heading--About the qemu-About the qemu-system-package">system package</h3></a>
-
-What functionality is provided by the qemu-system package?
-
-<a href="#heading--about-the-ovmf-packages"><h3 id="heading--about-the-ovmf-packages">About the ovmf packages</h3></a>
-
-What functionality is provided by the ovmf packages?
-
-<a href="#heading--About the cloud-image-About the cloud-image-utils-package"><h3 id="heading--About the cloud-image-About the cloud-image-utils-package">utils package</h3></a>
-
-What functionality is provided by the cloud-image-utils package?
+These dependencies -- and the functionality they provide -- will be explained in the specific image sections which follow.
 
 <a href="#heading--about-packer-templates"><h3 id="heading--about-packer-templates">About packer templates</h3></a>
 
