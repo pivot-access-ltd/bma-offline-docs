@@ -919,7 +919,9 @@ VMware ESXi has no support for libvirt drivers.  Instead an emulated IDE disk an
 
 Only datastores may be configured using the devices available on the system. The first 9 partitions of the disk are reserved for VMware ESXi operating system usage.
 
-Also, VMware does not support cloning boot devices - you may run into issues triggered by non-unique UUID. This may lead to data corruption on VMFS datastores when using cloned boot devices.
+[note]
+**WARNING**: VMware does not support cloning boot devices - you may run into issues triggered by non-unique UUID. This may lead to data corruption on VMFS datastores when using cloned boot devices.
+[/note]
 
 #### Known networking limitations
 

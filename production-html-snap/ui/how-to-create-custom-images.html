@@ -901,7 +901,8 @@ open-gannet  nk7x8y  on     Deployed  admin  custom  centos8-raw
 <p>VMware ESXi has no support for libvirt drivers.  Instead an emulated IDE disk and an emulated e1000 NIC must be used.</p>
 <h4>Known storage limitations</h4>
 <p>Only datastores may be configured using the devices available on the system. The first 9 partitions of the disk are reserved for VMware ESXi operating system usage.</p>
-<p>Also, VMware does not support cloning boot devices - you may run into issues triggered by non-unique UUID. This may lead to data corruption on VMFS datastores when using cloned boot devices.</p>
+<p><strong>NOTE:</strong> 
+<strong>WARNING</strong>: VMware does not support cloning boot devices - you may run into issues triggered by non-unique UUID. This may lead to data corruption on VMFS datastores when using cloned boot devices.</p>
 <h4>Known networking limitations</h4>
 <p>Bridges are not supported in VMware ESXi. In addition, certain MAAS bond modes are mapped to VMware ESXi NIC team sharing with load balancing, as follows:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
