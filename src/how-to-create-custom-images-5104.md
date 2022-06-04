@@ -486,7 +486,11 @@ The packer template in the directory `rhel7` subdirectory creates a RHEL 7 AMD64
 
 ### Obtain the RHEL7 DVD ISO
 
-Download the [RHEL7 DVD ISO](https://developers.redhat.com/products/rhel/download) to your `rhel7` subdirectory. 
+Download the [RHEL7 DVD ISO](https://developers.redhat.com/products/rhel/download) to your `rhel7` subdirectory.
+
+[note]
+You may have to scroll down the page at the above link to find the RHEL7 version.
+[/note]
 
 ### Customizing the image, if desired
 
@@ -541,6 +545,122 @@ HOSTNAME     SYSID   POWER  STATUS    OWNER  OS      DISTRO
 --------     -----   -----  ------    -----  --      ------
 valued-moth  e86c7h  on     Deployed  admin  ubuntu  focal
 open-gannet  nk7x8y  on     Deployed  admin  custom  rhel7-raw
+```
+
+### Log into your deployed image and verify that it's right
+
+You should log into your newly-deployed image and verify that it has all the customisations you added to the build process.  The default username for packer-created RHEL images is `cloud-user`.
+
+<a href="#heading--how-to-pack-a-rhel8-image-for-maas-deployment"><h2 id="heading--how-to-pack-a-rhel8-image-for-maas-deployment">How to pack a RHEL8 image for MAAS deployment</h2></a>
+
+You can create a RHEL8 image for MAAS deployment via the following procedure.
+
+### Verify the requirements
+
+To create a RHEL8 image to upload to MAAS, you must have a machine running Ubuntu 18.04+ or higher with the ability to run KVM virtual machines.  You must also aquire the following items, as described in later instructions:
+
+- qemu-utils
+- packer
+- The RHEL 8 DVD ISO
+
+To deploy the image to MAAS, you must also have:
+
+- MAAS 2.3+
+- Curtin 18.1-59+
+
+### Install packer
+
+Packer is easily installed from its Debian package:
+
+```nohighlight
+sudo apt install packer
+```
+
+This should install with no additional prompts.
+
+### Install RHEL8 template dependencies
+
+```nohighlight
+sudo apt install qemu-utils
+```
+
+### Get the available packer templates
+
+You can obtain the packer templates by cloning the [packer-maas github repository](https://github.com/canonical/packer-maas.git), like this:
+
+```nohighlight
+git clone https://github.com/canonical/packer-maas.git
+```
+
+Make sure to pay attention to where the repository is cloned.  The Packer template in this cloned repository creates a Ubuntu AMD64 image for use with MAAS.
+
+This package should install with no additional prompts.
+
+### Locate the RHEL8 template
+
+The packer template in the directory `rhel8` subdirectory creates a RHEL 8 AMD64 image for use with MAAS.
+
+### Obtain the RHEL8 DVD ISO
+
+Download the [RHEL8 DVD ISO](https://developers.redhat.com/products/rhel/download) to your `rhel8` subdirectory.
+
+[note]
+You may have to scroll down the page at the above link to find the RHEL8 version.
+[/note]
+
+### Customizing the image, if desired
+
+The deployment image may be customized by modifying http/rhel8.ks. See the CentOS kickstart documentation for more information.
+
+### Set up a proxy for building the image, if desired
+
+The Packer template pulls all packages from the DVD except for Canonical's cloud-init repository. To use a proxy during the installation add the --proxy=$HTTP_PROXY flag to every line starting with url or repo in http/rhel8.ks. Alternatively you may set the --mirrorlist values to a local mirror.
+
+### Build the RHEL8 image
+
+You can easily build the image using the Makefile:
+
+```nohighlight
+$ make ISO=/PATH/TO/rhel-server-8.6-x86_64-dvd.iso
+```
+
+This process is non-interactive and may take some time (3-5 minutes) to successfully boot the image and complete the build.  Do not be concerned about SSH errors while the builder is attempting to establish an SSH connection with the running VM; this is normal.
+
+### Alternative: Run packer manually
+
+Alternatively, you can manually run packer. Your current working directory must be in `packer-maas/rhel8`, where this file is located. Once in `packer-maas/rhel8`, you can generate an image with:
+
+```nohighlight
+$ sudo PACKER_LOG=1 packer build -var 'rhel8_iso_path=/PATH/TO/rhel-server-8.6-x86_64-dvd.iso' rhel8.json
+```
+
+[note]
+`rhel8.json` is configured to run Packer in headless mode. Only Packer output will be seen. If you wish to see the installation output, connect to the VNC port given in the Packer output or change the value of headless to false in `rhel8.json`.
+[/note]
+
+### Upload the RHEL8 image to MAAS
+
+You can upload the RHEL8 raw packer image with the following command:
+
+```nohighlight
+$ maas $PROFILE boot-resources create
+name='rhel/8-custom' title='RHEL 8 Custom' architecture='amd64/generic' filetype='tgz' content@=rhel8.tar.gz
+```
+
+### Verify your custom image
+
+Before relying on it in production, you should test your custom image by deploying it to a test (virtual) machine.  It's the machine named `open-gannet` in this listing:
+
+```nohighlight
+maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
+"OWNER", "OS", "DISTRO"] | (., map(length*"-"))),
+(.[] | [.hostname, .system_id, .power_state, .status_name, .owner // "-",
+.osystem, .distro_series]) | @tsv' | column -t
+
+HOSTNAME     SYSID   POWER  STATUS    OWNER  OS      DISTRO
+--------     -----   -----  ------    -----  --      ------
+valued-moth  e86c7h  on     Deployed  admin  ubuntu  focal
+open-gannet  nk7x8y  on     Deployed  admin  custom  rhel8-raw
 ```
 
 ### Log into your deployed image and verify that it's right
@@ -642,13 +762,13 @@ MAAS image builder supports creating RHEL images behind a proxy. To use a proxy 
 
 To generate a usable RHEL image, <code>maas-image-builder</code> automates image generation; these images can be used by MAAS and <code>curtin</code>.
 
-     $ sudo maas-image-builder -a amd64 -o rhel7-amd64-root-tgz rhel --rhel-iso blah.iso
+     $ sudo maas-image-builder -a amd64 -o rhel8-amd64-root-tgz rhel --rhel-iso blah.iso
 
 <h5 id="heading--rhel-install">Install into MAAS</h5>
 
 The custom RHEL image can be uploaded to MAAS, but note that the name **must** start with ‘rhel’ and **must** be expressed as a single line, like this:
 
-    maas admin boot-resources create name=rhel/7 title="RedHat Enterprise Linux 7" architecture=amd64/generic content@=rhel7-amd64-root-tgz
+    maas admin boot-resources create name=rhel/8 title="RedHat Enterprise Linux 8" architecture=amd64/generic content@=rhel8-amd64-root-tgz
 
 <a href="#heading--custom-windows-images"><h4 id="heading--custom-windows-images">How to create Windows images</h4></a>
 
