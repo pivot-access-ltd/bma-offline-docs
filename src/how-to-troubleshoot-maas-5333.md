@@ -178,8 +178,64 @@ Note there is a trick for determining the correct machine login, which works on 
 
 You may have experienced these errors when trying to create custom images for MAAS:
 
+<a href="#heading--packer-not-found"><h3 id="heading--packer-not-found">Command 'packer' not found</h3></a>
+<a href="#heading--no-rule-for-ovmf"><h3 id="heading--no-rule-for-ovmf">No rule to make target ...OVMF_VARS.fd</h3></a>
+<a href="#heading--failed-creating-qemu-driver"><h3 id="heading--failed-creating-qemu-driver">Failure to create QEMU driver</h3></a>
 
 Please feel free to add other issues and solutions, if you have them.
+
+<a href="#heading--packer-not-found"><h3 id="heading--packer-not-found">Command 'packer' not found</h3></a>
+
+You might attempt to run `packer` and receive the following error:
+
+```nohighlight
+stormrider@neuromancer:~$ packer
+Command 'packer' not found, but can be installed with:
+sudo snap install packer  # version 1.0.0-2, or
+sudo apt  install packer  # version 1.6.6+ds1-4
+See 'snap info packer' for additional versions.
+```
+
+More likely, you attempt a `make` and receive this error:
+
+```nohighlight
+stormrider@neuromancer:~/mnt/Dropbox/src/git/packer-maas/ubuntu$ make
+sudo rm -f -rf output-qemu custom-ubuntu*.gz
+cp -v /usr/share/OVMF/OVMF_VARS.fd OVMF_VARS.fd
+'/usr/share/OVMF/OVMF_VARS.fd' -> 'OVMF_VARS.fd'
+sudo PACKER_LOG=1 packer build ubuntu-lvm.json && reset
+sudo: packer: command not found
+make: *** [Makefile:21: custom-ubuntu-lvm.dd.gz] Error 1
+rm OVMF_VARS.fd
+```
+
+In both cases, the problem is the same: `packer` has not been installed. You can fix it by [following these instructions](https://maas.io/docs/how-to-create-custom-images#heading--how-to-install-packer).
+
+<a href="#heading--no-rule-for-ovmf"><h3 id="heading--no-rule-for-ovmf">No rule to make target ...OVMF_VARS.fd</h3></a>
+
+If you encounter an error like this:
+
+```nohighlight
+stormrider@neuromancer:~/mnt/Dropbox/src/git/packer-maas/ubuntu$ make
+sudo rm -f -rf output-qemu custom-ubuntu*.gz
+make: *** No rule to make target '/usr/share/OVMF/OVMF_VARS.fd', needed by 'OVMF_VARS.fd'.  Stop.
+```
+
+then you have forgotten to [install a needed dependency](https://maas.io/docs/how-to-create-custom-images#heading--how-to-install-packer).
+
+<a href="#heading--failed-creating-qemu-driver"><h3 id="heading--failed-creating-qemu-driver">Failure to create QEMU driver</h3></a>
+
+If you encounter an error such as this one:
+
+```nohighlight
+2022/06/04 17:04:47 machine readable: error-count []string{"1"}
+==> Some builds didn't complete successfully and had errors:
+2022/06/04 17:04:47 machine readable: qemu,error []string{"Failed creating Qemu driver: exec: \"qemu-img\": executable file not found in $PATH"}
+==> Builds finished but no artifacts were created.
+Build 'qemu' errored after 880 microseconds: Failed creating Qemu driver: exec: "qemu-img": executable file not found in $PATH
+```
+
+then you have forgotten to [install a needed dependency](https://maas.io/docs/how-to-create-custom-images#heading--how-to-install-packer).
 
 <a href="#heading--misc-problems"><h2 id="heading--misc-problems">Miscellaneous issues</h2></a>
 
