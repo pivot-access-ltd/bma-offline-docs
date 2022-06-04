@@ -399,7 +399,7 @@ While it may be possible to deploy a certain image with MAAS, the particular use
 <li>cloud-image-utils</li>
 </ul>
 <p>Note that these requirements may vary by template and target image.</p>
-<p><a href="#heading--how-to-verify-packer-deployment-requirements"><h3 id="heading--how-to-verify-packer-deployment-requirements">How to verfiy packer deployment requirements</h3></a></p>
+<p><a href="#heading--how-to-verify-packer-deployment-requirements"><h3 id="heading--how-to-verify-packer-deployment-requirements">How to verify packer deployment requirements</h3></a></p>
 <p>The following are required to deploy a packer MAAS image:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="https://maas.io">MAAS</a> 3.0+</li>
@@ -594,7 +594,7 @@ meta-data                scripts       user-data-flat
 <p><strong>NOTE:</strong> 
 ubuntu-lvm.json is configured to run Packer in headless mode. Only Packer output will be seen. If you wish to see the installation output connect to the VNC port given in the Packer output, or change the value of headless to false in the JSON file.</p>
 <p>This process is non-interactive.</p>
-<h3>Upload the ubuntu image to MAAS</h3>
+<h3>Upload the Ubuntu image to MAAS</h3>
 <p>You can upload an Ubuntu raw packer image with the following command:</p>
 <pre><code class="language-nohighlight">$ maas admin boot-resources create \
     name='custom/ubuntu-raw' \

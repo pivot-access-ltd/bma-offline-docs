@@ -107,7 +107,7 @@ As an example for this article, we will be building a custom Ubuntu image from t
 
 Note that these requirements may vary by template and target image.
 
-<a href="#heading--how-to-verify-packer-deployment-requirements"><h3 id="heading--how-to-verify-packer-deployment-requirements">How to verfiy packer deployment requirements</h3></a>
+<a href="#heading--how-to-verify-packer-deployment-requirements"><h3 id="heading--how-to-verify-packer-deployment-requirements">How to verify packer deployment requirements</h3></a>
 
 The following are required to deploy a packer MAAS image:
 
@@ -401,7 +401,7 @@ ubuntu-lvm.json is configured to run Packer in headless mode. Only Packer output
 
 This process is non-interactive.
 
-### Upload the ubuntu image to MAAS
+### Upload the Ubuntu image to MAAS
 
 You can upload an Ubuntu raw packer image with the following command:
 
