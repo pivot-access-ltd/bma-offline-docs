@@ -385,6 +385,37 @@
 <li><a href="#heading--maas-lxd-network-conflicts">Resolve MAAS/LXD DNS &amp; DHCP conflicts/network issues</a></li>
 </ul>
 <p>Please feel free to add other issues and solutions, if you have them.</p>
+<p><a href="#heading--overlapping-subnets-can-break-deployments"><h3 id="heading--overlapping-subnets-can-break-deployments">Adding overlapping subnets in fabric can break deployments</h3></a></p>
+<p><strong>Characteristic failure</strong>: A machine performs PXE boot, then gets trapped in a boot loop, causing deployment to fail.</p>
+<p>MAAS does not currently prevent you from creating overlapping subnets, for example:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>subnet 1 = 192.168.48.0/24</li>
+<li>subnet 2 = 192.168.48.0/22</li>
+</ul>
+<p>This can break deployments, because the controllers can&rsquo;t reliably determine which subnet should get a packet destined for one of the overlapping addresses. The IP range of one subnet should be unique compared to every other subnet on the same segment.</p>
+<p>At least one way to cause this error is to edit a subnet in the <code>netplan</code> file.  MAAS will add the updated subnet, but may not drop the existing subnet, causing overlap.  You can fix this by deleting the subnet you do not want from the Web UI.</p>
+<p>If you have a machine that PXE boots, but then fails deployment, either in an infinite boot loop or some unspecified failure, check your subnets to be sure you do not have overlap.  If so, delete the outdated subnet.</p>
+<p><a href="#heading--need-to-reconfigure-server-ip-address"><h3 id="heading--need-to-reconfigure-server-ip-address">Need to reconfigure server IP address</h3></a></p>
+<p>If you made a mistake during setup or you just need to reconfigure your MAAS server, you can simply run the setup again:</p>
+<pre><code class="language-bash">sudo dpkg-reconfigure maas-region-controller
+</code></pre>
+<h3 id="heading--ibm-power-server-pxe-boot">Network booting IBM Power servers</h3>
+
+<p>Some IBM Power server servers have OPAL firmware which uses an embedded Linux distribution as the boot environment. All the PXE interactions are handled by <strong>Petitboot</strong>, which runs in the user space of this embedded Linux rather than a PXE ROM on the NIC itself.</p>
+<p>When no specific interface is assigned as the network boot device, petitboot has a known issue which is detailed in <a href="https://bugs.launchpad.net/ubuntu-power-systems/+bug/1852678">LP#1852678</a>, specifically comment #24, that can cause issues when deploying systems using MAAS, since in this case all active NICs are used for PXE boot with the same address.</p>
+<p>So, when using IBM Power servers with multiple NICs that can network boot, it&rsquo;s strongly recommended to configure just a single <specific> NIC as the network boot device via <strong>Petitboot</strong>.</p>
+<h3 id="heading--maas-lxd-network-conflicts">Resolve DNS conflicts between LXD and MAAS</h3>
+
+<p>If you get into a situation where MAAS and LXD are both managing DNS on your MAAS network, there&rsquo;s a simple fix. You can turn off LXD&rsquo;s DNS management with the following command:</p>
+<pre><code class="language-bash">lxc network set $LXD_BRIDGE_NAME dns.mode=none
+</code></pre>
+<p>You should also disable DHCP on IPv4 and IPv6 withing LXD:</p>
+<pre><code class="language-bash">lxc network set $LXD_BRIDGE_NAME ipv4.dncp=false
+lxc network set $LXD_BRIDGE_NAME ipv6.dhcp=false
+</code></pre>
+<p>Once you&rsquo;ve done this, you can check your work with the following command:</p>
+<pre><code class="language-bash">lxc network show $LXD_BRIDGE_NAME
+</code></pre>
 <p><a href="#heading--machine-life-cycle-failures"><h2 id="heading--machine-life-cycle-failures">Machine life-cycle failures</h2></a></p>
 <p>When attempting to run a machine through its life-cycle, you may have encountered one of these issues:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -396,76 +427,14 @@
 <li><a href="#heading--machine-login-issues">Can&rsquo;t login to machine after deployment</a></li>
 </ul>
 <p>Please feel free to add other issues and solutions, if you have them.</p>
-<p><a href="#heading--custom-image-creation-problems"><h2 id="heading--custom-image-creation-problems">Custom image creation problems</h2></a></p>
-<p>You may have experienced these errors when trying to create custom images for MAAS:</p>
-<p>Please feel free to add other issues and solutions, if you have them.</p>
-<p><a href="#heading--misc-problems"><h2 id="heading--misc-problems">Miscellaneous issues</h2></a></p>
-<p>Finally, you may be facing an issue which doesn&rsquo;t fit into any category, such as one of these:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--django-subarch-error">Subarchitecture error thrown by django</a></li>
-<li><a href="#heading--forgot-maas-administrator-password">Forgot MAAS administrator password</a></li>
-<li><a href="#heading--cant-find-maas-web-ui">Can&rsquo;t find MAAS web UI</a></li>
-<li><a href="#heading--backdoor-image-login">Backdoor image login</a></li>
-<li><a href="#heading--migrating-maas">Migrate an existing snap installation to use a local PostgreSQL server</a></li>
-<li><a href="#heading--manual-export">Manually export the MAAS database</a></li>
-<li><a href="#heading--jq-machine-list">Try jq recipes using the CLI</a></li>
-</ul>
-<p>Please feel free to add other issues and solutions, if you have them.</p>
-<p><a href="#heading--overlapping-subnets-can-break-deployments"><h2 id="heading--overlapping-subnets-can-break-deployments">Adding overlapping subnets in fabric can break deployments</h2></a></p>
-<p><strong>Characteristic failure</strong>: A machine performs PXE boot, then gets trapped in a boot loop, causing deployment to fail.</p>
-<p>MAAS does not currently prevent you from creating overlapping subnets, for example:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>subnet 1 = 192.168.48.0/24</li>
-<li>subnet 2 = 192.168.48.0/22</li>
-</ul>
-<p>This can break deployments, because the controllers can&rsquo;t reliably determine which subnet should get a packet destined for one of the overlapping addresses. The IP range of one subnet should be unique compared to every other subnet on the same segment.</p>
-<p>At least one way to cause this error is to edit a subnet in the <code>netplan</code> file.  MAAS will add the updated subnet, but may not drop the existing subnet, causing overlap.  You can fix this by deleting the subnet you do not want from the Web UI.</p>
-<p>If you have a machine that PXE boots, but then fails deployment, either in an infinite boot loop or some unspecified failure, check your subnets to be sure you do not have overlap.  If so, delete the outdated subnet.</p>
-<p><a href="#heading--commissioning-script-file-not-found"><h2 id="heading--commissioning-script-file-not-found">"File not found" when creating commissioning or node script with MAAS CLI</h2></a></p>
-<p>When creating a commissioning script with the MAAS CLI, like this:</p>
-<pre><code class="language-nohighlight">maas $PROFILE commissioning-scripts create name=scriptname content@=/tmp/filename
-</code></pre>
-<p>you may receive a &ldquo;file not found&rdquo; error:</p>
-<pre><code class="language-nohighlight">[Errno 2] No such file or directory: '/tmp/filename'
-</code></pre>
-<p>There are two possible sources of the error:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>
-<p>You did not actually type the filename correctly, or the file does not exist in <code>/tmp</code>.  Check the spelling and make sure the file is actually present in <code>/tmp</code> (for example).</p>
-</li>
-<li>
-<p>You are using the snap version of MAAS.  When using the MAAS snap, you may not use <code>/tmp</code> due to confinement rules.  Move the file to <code>/opt</code> or <code>/home/myhomdir</code> and try again.</p>
-</li>
-</ul>
-<p>In fact, trying to upload the script from any directory owned by <code>root</code> will give a similar error.</p>
-<p>Also note that <code>commissioning-scripts</code> is deprecated and may be removed at some future time.  Use the form <code>node-scripts</code> instead; consult the MAAS CLI built-in help for details.</p>
-<p><a href="#heading--machine-login-issues"><h2 id="heading--machine-login-issues">Can&rsquo;t login to machine after deployment</h2></a></p>
-<p>When everything seems to be right about your machine deployment, but you can&rsquo;t login, there&rsquo;s a chance you might not be using the right username.  You may have added your personal SSH key to MAAS, but your corresponding login doesn&rsquo;t seem to work; that&rsquo;s because the logins for the machines are generally related to the operating system, e.g.:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>
-<p>For machines deploying Ubuntu, the username is <code>ubuntu</code>, and the login would be <code>ubuntu@$MACHINE_IP</code>.</p>
-</li>
-<li>
-<p>For machines deploying CentOS 7, the username is <code>centos</code>, and the login would be <code>centos@$MACHINE_IP</code>.</p>
-</li>
-<li>
-<p>For machines deploying CentOS 8, the username is <code>cloud-user</code>, and the login would be <code>cloud-user@$MACHINE_IP</code>.</p>
-</li>
-</ul>
-<p>Note there is a trick for determining the correct machine login, which works on many different versions of Linux.  If you attempt to <code>ssh root@$MACHINE_IP</code>, this will fail, but often tells you which user you should be using. </p>
-<p><a href="#heading--django-subarch-error"><h2 id="heading--django-subarch-error">Subarchitecture error thrown by django</h2></a></p>
-<p>Occassionally, you may encounter an error similar to this one:</p>
-<pre><code>django.core.exceptions.ValidationError: ['Subarchitecture(&lt;value&gt;) must be generic when setting hwe_kernel.']
-</code></pre>
-<p>One potential solution for this problem is to specify a different commissioning kernel, such as upgrading from Xenial to Focal, etc.  </p>
-<p><a href="#heading--nodes-hang-on-commissioning"><h2 id="heading--nodes-hang-on-commissioning">Nodes hang on &ldquo;Commissioning&rdquo;</h2></a></p>
-<p><a href="#heading--possible-cause-timing-issues"><h3 id="heading--possible-cause-timing-issues">Possible Cause: Timing issues</h3></a></p>
+<p><a href="#heading--nodes-hang-on-commissioning"><h3 id="heading--nodes-hang-on-commissioning">Nodes hang on &ldquo;Commissioning&rdquo;</h3></a></p>
+<p><a href="#heading--possible-cause-timing-issues"><h4 id="heading--possible-cause-timing-issues">Possible Cause: Timing issues</h4></a></p>
 <p>Various parts of MAAS rely on OAuth to negotiate a connection to nodes. If the current time reported by the hardware clock on your node differs significantly from that on the MAAS server, the connection will not be made.</p>
 <p><strong>SOLUTION:</strong> Check that the hardware clocks are consistent, and if necessary, adjust them. This can usually be done from within the system BIOS, without needing to install an OS.</p>
-<p><a href="#heading--possible-cause-network-drivers"><h3 id="heading--possible-cause-network-drivers">Possible Cause: Network drivers</h3></a></p>
+<p><a href="#heading--possible-cause-network-drivers"><h4 id="heading--possible-cause-network-drivers">Possible Cause: Network drivers</h4></a></p>
 <p>Sometimes the hardware can boot from PXE, but fail to load correct drivers when booting the received image. This is sometimes the case when no open source drivers are available for the network hardware.</p>
 <p><strong>SOLUTION:</strong> The best fix for this problem is to install a Linux-friendly network adaptor. It <em>is</em> theoretically possible to modify the boot image to include proprietary drivers, but it is not a straightforward task.</p>
-<p><a href="#heading--node-deployment-fails"><h2 id="heading--node-deployment-fails">Node deployment fails</h2></a></p>
+<p><a href="#heading--node-deployment-fails"><h3 id="heading--node-deployment-fails">Node deployment fails</h3></a></p>
 <p>When deployment fails the <a href="maas-concepts-and-terms-reference.html#heading--rescue-mode">Rescue mode</a> action can be used to boot ephemerally into the node, followed by an investigation.</p>
 <p>As an example, an improperly configured PPA was added to MAAS which caused nodes to fail deployment. After entering Rescue mode and connecting via SSH, the following was discovered in file <code>/var/log/cloud-init-output.log</code>:</p>
 <pre><code class="language-no-highlight">2016-11-28 18:21:48,982 - cc_apt_configure.py[ERROR]: failed to add apt GPG Key
@@ -484,36 +453,84 @@ Stdout: ''
 Stderr: 'gpg: no valid OpenPGP data found.\n'
 </code></pre>
 <p>In this instance, the GPG fingerprint was used instead of the GPG key. After rectifying this oversight, nodes were again able to successfully deploy.</p>
-<p><a href="#heading--nodes-fail-to-pxe-boot"><h2 id="heading--nodes-fail-to-pxe-boot">Nodes fail to PXE boot</h2></a></p>
-<p><a href="#heading--possible-cause-using-an-incorrectly-configured-vm"><h3 id="heading--possible-cause-using-an-incorrectly-configured-vm">Possible Cause: Using an incorrectly</a> configured VM</h3></p>
+<p><a href="#heading--nodes-fail-to-pxe-boot"><h3 id="heading--nodes-fail-to-pxe-boot">Nodes fail to PXE boot</h3></a></p>
+<p><a href="#heading--possible-cause-using-an-incorrectly-configured-vm"><h4 id="heading--possible-cause-using-an-incorrectly-configured-vm">Possible Cause: Using an incorrectly</a> configured VM</h4></p>
 <p>Some virtual machine setups include emulation of network hardware that does not support PXE booting, and in most setups, you will need to explicitly set the VM to boot via PXE.</p>
 <p><strong>SOLUTION</strong>: Consult the VM docs for details on PXE booting.</p>
-<p><a href="#heading--possible-cause-dhcp-conflict"><h3 id="heading--possible-cause-dhcp-conflict">Possible Cause: DHCP conflict</h3></a></p>
+<p><a href="#heading--possible-cause-dhcp-conflict"><h4 id="heading--possible-cause-dhcp-conflict">Possible Cause: DHCP conflict</h4></a></p>
 <p>If you are using MAAS in a setup with an existing DHCP, <em>DO NOT SET UP THE MAAS DHCP SERVER</em> as this will cause no end of confusion to the rest of your network and most likely won&rsquo;t discover any nodes either.</p>
 <p><strong>SOLUTION</strong>: You will need to configure your existing DHCP server to point to the MAAS server.</p>
-<p><a href="#heading--cant-log-in-to-node"><h2 id="heading--cant-log-in-to-node">Can&rsquo;t log in to node</h2></a></p>
+<p><a href="#heading--cant-log-in-to-node"><h3 id="heading--cant-log-in-to-node">Can&rsquo;t log in to node</h3></a></p>
 <p>Sometimes you may wish to log in directly to a node on your system. If you have set up Juju and MAAS, the node will automatically have SSH authentication enabled (and public keys installed) allowing you to log in. There is also an option in the MAAS web interface to add new SSH keys to the nodes (via Preferences in the drop down menu which appears when clicking your username in the top-right of the page).</p>
-<p><a href="#heading--forgot-maas-administrator-password"><h2 id="heading--forgot-maas-administrator-password">Forgot MAAS administrator password</h2></a></p>
+<p><a href="#heading--commissioning-script-file-not-found"><h3 id="heading--commissioning-script-file-not-found">"File not found" when creating commissioning or node script with MAAS CLI</h3></a></p>
+<p>When creating a commissioning script with the MAAS CLI, like this:</p>
+<pre><code class="language-nohighlight">maas $PROFILE commissioning-scripts create name=scriptname content@=/tmp/filename
+</code></pre>
+<p>you may receive a &ldquo;file not found&rdquo; error:</p>
+<pre><code class="language-nohighlight">[Errno 2] No such file or directory: '/tmp/filename'
+</code></pre>
+<p>There are two possible sources of the error:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>You did not actually type the filename correctly, or the file does not exist in <code>/tmp</code>.  Check the spelling and make sure the file is actually present in <code>/tmp</code> (for example).</p>
+</li>
+<li>
+<p>You are using the snap version of MAAS.  When using the MAAS snap, you may not use <code>/tmp</code> due to confinement rules.  Move the file to <code>/opt</code> or <code>/home/myhomdir</code> and try again.</p>
+</li>
+</ul>
+<p>In fact, trying to upload the script from any directory owned by <code>root</code> will give a similar error.</p>
+<p>Also note that <code>commissioning-scripts</code> is deprecated and may be removed at some future time.  Use the form <code>node-scripts</code> instead; consult the MAAS CLI built-in help for details.</p>
+<p><a href="#heading--machine-login-issues"><h3 id="heading--machine-login-issues">Can&rsquo;t login to machine after deployment</h3></a></p>
+<p>When everything seems to be right about your machine deployment, but you can&rsquo;t login, there&rsquo;s a chance you might not be using the right username.  You may have added your personal SSH key to MAAS, but your corresponding login doesn&rsquo;t seem to work; that&rsquo;s because the logins for the machines are generally related to the operating system, e.g.:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>For machines deploying Ubuntu, the username is <code>ubuntu</code>, and the login would be <code>ubuntu@$MACHINE_IP</code>.</p>
+</li>
+<li>
+<p>For machines deploying CentOS 7, the username is <code>centos</code>, and the login would be <code>centos@$MACHINE_IP</code>.</p>
+</li>
+<li>
+<p>For machines deploying CentOS 8, the username is <code>cloud-user</code>, and the login would be <code>cloud-user@$MACHINE_IP</code>.</p>
+</li>
+</ul>
+<p>Note there is a trick for determining the correct machine login, which works on many different versions of Linux.  If you attempt to <code>ssh root@$MACHINE_IP</code>, this will fail, but often tells you which user you should be using. </p>
+<p><a href="#heading--custom-image-creation-problems"><h2 id="heading--custom-image-creation-problems">Custom image creation problems</h2></a></p>
+<p>You may have experienced these errors when trying to create custom images for MAAS:</p>
+<p>Please feel free to add other issues and solutions, if you have them.</p>
+<p><a href="#heading--misc-problems"><h2 id="heading--misc-problems">Miscellaneous issues</h2></a></p>
+<p>Finally, you may be facing an issue which doesn&rsquo;t fit into any category, such as one of these:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--django-subarch-error">Subarchitecture error thrown by django</a></li>
+<li><a href="#heading--forgot-maas-administrator-password">Forgot MAAS administrator password</a></li>
+<li><a href="#heading--cant-find-maas-web-ui">Can&rsquo;t find MAAS web UI</a></li>
+<li><a href="#heading--backdoor-image-login">Backdoor image login</a></li>
+<li><a href="#heading--migrating-maas">Migrate an existing snap installation to use a local PostgreSQL server</a></li>
+<li><a href="#heading--manual-export">Manually export the MAAS database</a></li>
+<li><a href="#heading--jq-machine-list">Try jq recipes using the CLI</a></li>
+</ul>
+<p>Please feel free to add other issues and solutions, if you have them.</p>
+<p><a href="#heading--django-subarch-error"><h3 id="heading--django-subarch-error">Subarchitecture error thrown by django</h3></a></p>
+<p>Occassionally, you may encounter an error similar to this one:</p>
+<pre><code>django.core.exceptions.ValidationError: ['Subarchitecture(&lt;value&gt;) must be generic when setting hwe_kernel.']
+</code></pre>
+<p>One potential solution for this problem is to specify a different commissioning kernel, such as upgrading from Xenial to Focal, etc.  </p>
+<p><a href="#heading--forgot-maas-administrator-password"><h3 id="heading--forgot-maas-administrator-password">Forgot MAAS administrator password</h3></a></p>
 <p>As long as you have sudo privileges the <code>maas</code> command can be used to change the password for a MAAS administrator on the MAAS region controller:</p>
 <pre><code class="language-bash">sudo maas changepassword $PROFILE
 </code></pre>
 <p>where $PROFILE is the name of the user.</p>
-<p><a href="#heading--need-to-reconfigure-server-ip-address"><h2 id="heading--need-to-reconfigure-server-ip-address">Need to reconfigure server IP address</h2></a></p>
-<p>If you made a mistake during setup or you just need to reconfigure your MAAS server, you can simply run the setup again:</p>
-<pre><code class="language-bash">sudo dpkg-reconfigure maas-region-controller
-</code></pre>
-<p><a href="#heading--cant-find-maas-web-ui"><h2 id="heading--cant-find-maas-web-ui">Can&rsquo;t find MAAS web UI</h2></a></p>
+<p><a href="#heading--cant-find-maas-web-ui"><h3 id="heading--cant-find-maas-web-ui">Can&rsquo;t find MAAS web UI</h3></a></p>
 <p>By default, the web UI is located at <code>http://&lt;hostname&gt;:5240/MAAS/</code>. If you can&rsquo;t access it, there are a few things to try:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>Check that the webserver is running - By default the web interface uses Apache, which runs under the service name <em>apache2</em>. To check it, on the MAAS server box you can run <code>sudo /etc/init.d/apache2 status</code>.</li>
 <li>Check that the hostname is correct - It may seem obvious, but check that the hostname is being resolved properly. Try running a browser (even a text mode one like <code>elinks</code>) on the same box as the MAAS server and navigating to the page. If that doesn&rsquo;t work, try <code>http://127.0.0.1:5240/MAAS/</code>, which will always point at the local server.</li>
 <li>If you are still getting &ldquo;404 - Page not found&rdquo; errors, check that the MAAS web interface has been installed in the right place. There should be a file present called <code>/usr/share/maas/maas/urls.py</code>.</li>
 </ul>
-<p><a href="#heading--backdoor-image-login"><h2 id="heading--backdoor-image-login">Backdoor image login</h2></a></p>
+<p><a href="#heading--backdoor-image-login"><h3 id="heading--backdoor-image-login">Backdoor image login</h3></a></p>
 <p>Ephemeral images are used by MAAS to boot nodes during commissioning, as well as during deployment. By design, these images are not built to be edited or tampered with, instead they&rsquo;re used to probe the hardware and launch <a href="https://launchpad.net/cloud-init">cloud-init</a>.</p>
 <p>However, if you find yourself with no other way to access a node, especially if a node fails during commissioning, Linux-based ephemeral images can be modified to enable a <em>backdoor</em> that adds or resets a user&rsquo;s password. You can then login to check the <strong>cloud-init</strong> logs, for example, and troubleshoot the problem.</p>
 <p>As images are constantly updated and refreshed, the backdoor will only ever be temporary, but it should help you login to see what may be going wrong with your node.</p>
-<p><a href="#heading--extract-the-cloud-image"><h3 id="heading--extract-the-cloud-image">Extract the cloud image</h3></a></p>
+<p><a href="#heading--extract-the-cloud-image"><h4 id="heading--extract-the-cloud-image">Extract the cloud image</h4></a></p>
 <p>First, download the cloud image that corresponds to the architecture of your node. The <em>Images</em> page of the web UI lists the images currently being cached by MAAS:</p>
 <p><a href="../images/130aa580-troulbeshoot-faq__2.3_images.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/130aa580-troulbeshoot-faq__2.3_images.png"></a></p>
 <p>Images can be downloaded from <a href="https://cloud-images.ubuntu.com/">https://cloud-images.ubuntu.com/</a>.</p>
@@ -526,7 +543,7 @@ sudo tar -C xenial -xpSf xenial-server-cloudimg-amd64-root.tar.gz --numeric-owne
 </code></pre>
 <p><strong>NOTE:</strong> 
 <code>sudo</code> is required when extracting the image filesystem and when making changes to the files extracted from the image filesystem.</p>
-<p><a href="#heading--generate-password-hash"><h3 id="heading--generate-password-hash">Generate password hash</h3></a></p>
+<p><a href="#heading--generate-password-hash"><h4 id="heading--generate-password-hash">Generate password hash</h4></a></p>
 <p>Now generate a hashed password. Use the following Python 3 command, replacing <strong>ubuntu</strong> with the password you wish to use:</p>
 <pre><code class="language-bash">python3 -c 'import crypt; print(crypt.crypt(&quot;ubuntu&quot;, crypt.mksalt(crypt.METHOD_SHA512)))'
 </code></pre>
@@ -537,7 +554,7 @@ sudo tar -C xenial -xpSf xenial-server-cloudimg-amd64-root.tar.gz --numeric-owne
 <pre><code class="language-no-highlight">root:$6$AaHblHl5KGrWBmPV$20ssynyY0EhcT9AwZgA2sTdYt4Bvd97bX7PjeyqVLKun2Hk3NBa8r7efM2duK7pi2dlnd5tG76I0dTUvjb6hx0:17445:0:99999:7:::
 </code></pre>
 <p>Save the file and exit the text editor.</p>
-<p><a href="#heading--rebuild-squashfs-image"><h3 id="heading--rebuild-squashfs-image">Rebuild SquashFS image</h3></a></p>
+<p><a href="#heading--rebuild-squashfs-image"><h4 id="heading--rebuild-squashfs-image">Rebuild SquashFS image</h4></a></p>
 <p>Recent versions of MAAS use SquashFS to hold the ephemeral image filesystem. The final step is to use the following command to create a SquashFS file called <code>xenial-customized.squashfs</code> that contains the modified shadow file:</p>
 <pre><code class="language-bash">sudo mksquashfs xenial/ xenial-customized.squashfs -xattrs -comp xz
 </code></pre>
@@ -547,7 +564,7 @@ Creating 4.0 filesystem on xenial-customized.squashfs, block size 131072.
 [=======]  2516/26975   9%
 </code></pre>
 <p>You now have an ephemeral image with a working root login that can replace an image locally cached by MAAS.</p>
-<p><a href="#heading--use-the-custom-image"><h3 id="heading--use-the-custom-image">Use the custom image</h3></a></p>
+<p><a href="#heading--use-the-custom-image"><h4 id="heading--use-the-custom-image">Use the custom image</h4></a></p>
 <p>Images are synchronised by the region controller and stored on the rack controller in <code>/var/lib/maas/boot-resources/</code>, with the <em>current</em> directory linking to the latest synchronised images.</p>
 <p>For example, the latest low-latency Ubuntu 16.04 image can be found in the following directory:</p>
 <pre><code class="language-bash">cd /var/lib/maas/boot-resources/current/ubuntu/amd64/ga-16.04-lowlatency/xenial/stable
@@ -559,7 +576,7 @@ chown maas:maas squashfs
 </code></pre>
 <p>You can now use this image to commission or deploy a node and access the root account with the backdoor password, such as by deploying the same specific image from the web UI to the node you wish to troubleshoot.</p>
 <p><a href="../images/f622d104-troulbeshoot-faq__2.3_deploy.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/f622d104-troulbeshoot-faq__2.3_deploy.png"></a></p>
-<h2 id="heading--migrating-maas">Migrating an existing snap installation</h2>
+<h3 id="heading--migrating-maas">Migrating an existing snap installation</h3>
 
 <p>If you&rsquo;re currently running MAAS from a snap in <code>all</code> mode, you can easily migrate your database to a local PostgreSQL server with the following command:</p>
 <pre><code>sudo /snap/maas/current/helpers/migrate-vd Snapatabase
@@ -567,7 +584,7 @@ chown maas:maas squashfs
 <p>This will install PostgreSQL from the archive and migrate the MAAS database to it. </p>
 <p><strong>Note</strong> that if PostgreSQL is already installed on the machine, the script will move the current datadir out of the way and replace it with the one from the snap, after  confirmation with the user. If you want to keep the current database set and just import the MAAS database, you&rsquo;ll need to perform a manual dump/restore of the MAAS database, explained below.</p>
 <p>The migration script will automatically adjust the snap configuration to use the new database.  Note, though, that the target database must be at least the same version level as the one currently used in the snap (PostgreSQL 10).  Consequently, the migration script only supports Ubuntu 18.04 (bionic) or later.</p>
-<h2 id="heading--manual-export">Manually exporting the MAAS database</h2>
+<h3 id="heading--manual-export">Manually exporting the MAAS database</h3>
 
 <p>If you want to export the database from the snap to an already setup PostgreSQL server, possibly on a different machine, you can manually export it from MAAS as follows. With MAAS running (as this ensures access to the database), run:</p>
 <pre><code>export PGPASS=$(sudo awk -F':\\s+' '$1 == "database_pass" {print $2}' \
@@ -595,27 +612,10 @@ sudo -u postgres createdb maasdb -O maas
 <li>change the content of <code>/var/snap/maas/common/snap_mode</code> from <code>all</code> to <code>region+rack</code></li>
 </ul>
 <p>Using a local PostgreSQL server is a little bit of work, but it provides great benefits in terms of MAAS scalability and performance.</p>
-<h2 id="heading--ibm-power-server-pxe-boot">Network booting IBM Power servers</h2>
-
-<p>Some IBM Power server servers have OPAL firmware which uses an embedded Linux distribution as the boot environment. All the PXE interactions are handled by <strong>Petitboot</strong>, which runs in the user space of this embedded Linux rather than a PXE ROM on the NIC itself.</p>
-<p>When no specific interface is assigned as the network boot device, petitboot has a known issue which is detailed in <a href="https://bugs.launchpad.net/ubuntu-power-systems/+bug/1852678">LP#1852678</a>, specifically comment #24, that can cause issues when deploying systems using MAAS, since in this case all active NICs are used for PXE boot with the same address.</p>
-<p>So, when using IBM Power servers with multiple NICs that can network boot, it&rsquo;s strongly recommended to configure just a single <specific> NIC as the network boot device via <strong>Petitboot</strong>.</p>
-<h2 id="heading--maas-lxd-network-conflicts">Resolve DNS conflicts between LXD and MAAS</h2>
-
-<p>If you get into a situation where MAAS and LXD are both managing DNS on your MAAS network, there&rsquo;s a simple fix. You can turn off LXD&rsquo;s DNS management with the following command:</p>
-<pre><code class="language-bash">lxc network set $LXD_BRIDGE_NAME dns.mode=none
-</code></pre>
-<p>You should also disable DHCP on IPv4 and IPv6 withing LXD:</p>
-<pre><code class="language-bash">lxc network set $LXD_BRIDGE_NAME ipv4.dncp=false
-lxc network set $LXD_BRIDGE_NAME ipv6.dhcp=false
-</code></pre>
-<p>Once you&rsquo;ve done this, you can check your work with the following command:</p>
-<pre><code class="language-bash">lxc network show $LXD_BRIDGE_NAME
-</code></pre>
-<h2 id="heading--jq-machine-list">jq recipes using the CLI</h2>
+<h3 id="heading--jq-machine-list">jq recipes using the CLI</h3>
 
 <p>Here are some <code>jq</code> recipes to get some human-readable output from the MAAS CLI.</p>
-<h3 id="heading--jqml-sh">Basic machine list</h3>
+<h4 id="heading--jqml-sh">Basic machine list</h4>
 
 <p>This recipe, which we keep in a file called <code>jqml.sh</code>, prints a basic machine list</p>
 <pre><code>#!/bin/bash
@@ -626,7 +626,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 .boot_interface.links[0].subnet.name]) | @tsv' | column -t
 </code></pre>
 <p>For this to work, you need to <strong>only</strong> break lines in the jq string (&lsquo;&hellip;&rsquo;) or add backslashes if you break outside that boundary.</p>
-<h3 id="heading--jqmltag-sh">Machine list with first tag added</h3>
+<h4 id="heading--jqmltag-sh">Machine list with first tag added</h4>
 
 <p>It&rsquo;s a good idea to keep your most important machine tag first, as it&rsquo;s the first one you&rsquo;ll see.  It makes scanning your list (UI or CLI/jq) much more efficient.  Here&rsquo;s a recipe that adds the first tag to the console-printed machine list.  We keep it in <code>jqmltag.sh</code>, but of course, you can call it whatever you want.</p>
 <pre><code> #!/bin/bash
