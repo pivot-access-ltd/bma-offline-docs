@@ -7,26 +7,6 @@ MAAS supports deploying custom OS images.  Canonical provides both [lp:maas-imag
 While it may be possible to deploy a certain image with MAAS, the particular use case may not be supported by that image’s vendor due to licensing or technical reasons. Canonical recommends that, whenever possible, you should customise machines using cloud-init user_data or Curtin preseed data, instead of creating a custom image.
 [/note]
 
-This article will help you learn:
-
-- [How to upload a custom Ubuntu image](#heading--how-to-upload-a-custom-ubuntu-image)
-- [How to build MAAS images](#heading--how-to-build-maas-images)
-
-<a href="#heading--how-to-upload-a-custom-ubuntu-image"><h2 id="heading--how-to-upload-a-custom-ubuntu-image">How to upload a custom Ubuntu image</h2></a>
-
-Currently, custom Ubuntu images can be uploaded using the MAAS CLI,by creating a boot-resource, with a command similar to this one:
-
-```nohighlight                                                                                                        	 
-	maas $PROFILE boot-resources create \
-        name='custom/ubuntu-custom'  \
-        architecture=amd64/generic \
-        title=’custom ubuntu’ \
-        base_image=ubuntu/focal \
-        filetype=ddraw \
-        content@=./custom-ubuntu.img
- ```	 
-
-When uploading a custom image, there is a new required field: `base_image`. This is not required for non-custom images to be uploaded, but any image with the `custom` prefix will require it.
 [/tab]
 [tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
 MAAS supports deploying custom DD or TGZ images. Canonical provides both [lp:maas-image-builder](https://launchpad.net/maas-image-builder) and [gh:canonical/packer-maas](https://github.com/canonical/packer-maas) to support creating custom images; however, these tools do not currently support Ubuntu. Instead Canonical suggests [customising Ubuntu](/t/5108) using cloud-init user_data or Curtin preseed data.
@@ -36,6 +16,7 @@ This section will help you learn:
 - [Why customised Ubuntu deployments aren't supported](#heading--why-customised-ubuntu-deployments-arent-supported)
 - [Warnings on creating a custom Ubuntu image](#heading--warnings-on-creating-a-custom-ubuntu-image)
 - [How to create a custom Ubuntu image for MAAS](#heading--how-to-create-a-custom-ubuntu-image-for-maas)
+- [How to build MAAS images](#heading--how-to-build-maas-images)
 
 <a href="#heading--why-customised-ubuntu-deployments-arent-supported"><h3 id="heading--why-customised-ubuntu-deployments-arent-supported">Why customised Ubuntu deployments aren't supported</h3></a>
 

@@ -374,92 +374,58 @@
 <p>MAAS supports deploying custom OS images.  Canonical provides both <a href="https://launchpad.net/maas-image-builder">lp:maas-image-builder</a> and <a href="https://github.com/canonical/packer-maas">gh:canonical/packer-maas</a> to support creating custom images. These custom images can include static Ubuntu images, created with whatever tool you choose, as well as other OS images.</p>
 <p><strong>NOTE:</strong> 
 While it may be possible to deploy a certain image with MAAS, the particular use case may not be supported by that image’s vendor due to licensing or technical reasons. Canonical recommends that, whenever possible, you should customise machines using cloud-init user_data or Curtin preseed data, instead of creating a custom image.</p>
-<p>This article will help you learn:</p>
+<p><a href="#heading--how-to-build-maas-images"><h2 id="heading--how-to-build-maas-images">How to build MAAS images</h2></a></p>
+<p>There are two methods for building custom images to be deployed to MAAS machines: MAAS Image Builder, and <a href="https://www.packer.io/">packer</a>.  This section will help you learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--how-to-upload-a-custom-ubuntu-image">How to upload a custom Ubuntu image</a></li>
-<li><a href="#heading--how-to-build-maas-images">How to build MAAS images</a></li>
+<li><a href="#heading--about-packer-prequisites">About packer prequisites</a></li>
+<li><a href="#heading--about-packer-deployment-requirements">About packer deployment requirements</a></li>
+<li><a href="#heading--about-customising-images">About customising images</a></li>
+<li><a href="#heading--about-building-images-via-a-proxy">About building images via a proxy</a></li>
+<li><a href="#heading--how-to-use-packer-to-build-maas-images">How to use packer to build MAAS images</a></li>
+<li><a href="#heading--how-to-use-maas-image-builder-to-build-maas-images">How to use MAAS Image Builder to build MAAS images</a></li>
 </ul>
-<p><a href="#heading--how-to-upload-a-custom-ubuntu-image"><h2 id="heading--how-to-upload-a-custom-ubuntu-image">How to upload a custom Ubuntu image</h2></a></p>
-<p>Currently, custom Ubuntu images can be uploaded using the MAAS CLI,by creating a boot-resource, with a command similar to this one:</p>
-<pre><code class="language-nohighlight">    maas $PROFILE boot-resources create \
-        name='custom/ubuntu-custom'  \
-        architecture=amd64/generic \
-        title=’custom ubuntu’ \
-        base_image=ubuntu/focal \
-        filetype=ddraw \
-        content@=./custom-ubuntu.img
- ```     
-
-When uploading a custom image, there is a new required field: `base_image`. This is not required for non-custom images to be uploaded, but any image with the `custom` prefix will require it.
-
-
-
-
-&lt;a href=&quot;#heading--how-to-build-maas-images&quot;&gt;&lt;h2 id=&quot;heading--how-to-build-maas-images&quot;&gt;How to build MAAS images&lt;/h2&gt;&lt;/a&gt;
-
-There are two methods for building custom images to be deployed to MAAS machines: MAAS Image Builder, and [packer](https://www.packer.io/).  This section will help you learn:
-
-- [About packer prequisites](#heading--about-packer-prequisites)
-- [About packer deployment requirements](#heading--about-packer-deployment-requirements)
-- [About customising images](#heading--about-customising-images)
-- [About building images via a proxy](#heading--about-building-images-via-a-proxy)
-- [How to use packer to build MAAS images](#heading--how-to-use-packer-to-build-maas-images)
-- [How to use MAAS Image Builder to build MAAS images](#heading--how-to-use-maas-image-builder-to-build-maas-images)
-
-&lt;a href=&quot;#heading--about-packer-prequisites&quot;&gt;&lt;h3 id=&quot;heading--about-packer-prequisites&quot;&gt;About packer prequisites&lt;/h3&gt;&lt;/a&gt;
-
-The following are required to to create a packer MAAS image:
-
-* A machine running Ubuntu 18.04+ with the ability to run KVM virtual machines.
-* qemu-utils
-* qemu-system
-* ovmf
-* cloud-image-utils
-* [Packer](https://www.packer.io/intro/getting-started/install.html)
-
-&lt;a href=&quot;#heading--about-packer-deployment-requirements&quot;&gt;&lt;h3 id=&quot;heading--about-packer-deployment-requirements&quot;&gt;About packer deployment requirements&lt;/h3&gt;&lt;/a&gt;
-
-The following are required to deploy a packer MAAS image:
-
-* [MAAS](https://maas.io) 3.0+
-* [Curtin](https://launchpad.net/curtin) 21.0+
-
-&lt;a href=&quot;#heading--about-customising-images&quot;&gt;&lt;h3 id=&quot;heading--about-customising-images&quot;&gt;About customising images&lt;/h3&gt;&lt;/a&gt;
-
-It is possible to customize the image either during the Ubuntu installation, or afterwards (before packing the final image). The former is done by providing [autoinstall config](https://ubuntu.com/server/docs/install/autoinstall), editing the _user-data-flat_ and _user-data-lvm_ files. The latter is performed by the _install-custom-packages_ script.
-
-&lt;a href=&quot;#heading--about-building-images-via-a-proxy&quot;&gt;&lt;h3 id=&quot;heading--about-building-images-via-a-proxy&quot;&gt;About building images via a proxy&lt;/h3&gt;&lt;/a&gt;
-
-The Packer template downloads the Ubuntu net installer from the Internet. To tell Packer to use a proxy, set the HTTP_PROXY environment variable to your proxy server. Alternatively, you may redefine iso_url to a local file, set iso_checksum_type to none to disable the checksums, and remove iso_checksum_url.
-
-&lt;a href=&quot;#heading--how-to-use-packer-to-build-maas-images&quot;&gt;&lt;h3 id=&quot;heading--how-to-use-packer-to-build-maas-images&quot;&gt;How to use packer to build MAAS images&lt;/h3&gt;&lt;/a&gt;
-
-[Packer](https://www.packer.io/) can be used to build images to be deployed by MAAS.  In order to use packer, you must have a [packer template](https://github.com/canonical/packer-maas) for the OS version you intend to build.
-
-Currently, templates are available for:
-
-- CentOS6
-- CentOS7
-- CentOS8
-- RHEL7
-- RHEL8
-- Ubuntu custom images
-- VMWare EXSi
-
-This section will help you learn:
-
-- [How to install packer](#heading--how-to-install-packer)
-- [How to obtain templates](#heading--how-to-obtain-templates)
-- [How to create and use packer images](#heading--how-to-create-a-packer-image)
-
-Note that additional templates will be made available from time to time.
-
-&lt;a href=&quot;#heading--how-to-install-packer&quot;&gt;&lt;h4 id=&quot;heading--how-to-install-packer&quot;&gt;How to install packer&lt;/h4&gt;&lt;/a&gt;
-
-Packer is easily installed from its Debian package:
-
-```nohighlight
-sudo apt install packer
+<p><a href="#heading--about-packer-prequisites"><h3 id="heading--about-packer-prequisites">About packer prequisites</h3></a></p>
+<p>The following are required to to create a packer MAAS image:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>A machine running Ubuntu 18.04+ with the ability to run KVM virtual machines.</li>
+<li>qemu-utils</li>
+<li>qemu-system</li>
+<li>ovmf</li>
+<li>cloud-image-utils</li>
+<li><a href="https://www.packer.io/intro/getting-started/install.html">Packer</a></li>
+</ul>
+<p><a href="#heading--about-packer-deployment-requirements"><h3 id="heading--about-packer-deployment-requirements">About packer deployment requirements</h3></a></p>
+<p>The following are required to deploy a packer MAAS image:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="https://maas.io">MAAS</a> 3.0+</li>
+<li><a href="https://launchpad.net/curtin">Curtin</a> 21.0+</li>
+</ul>
+<p><a href="#heading--about-customising-images"><h3 id="heading--about-customising-images">About customising images</h3></a></p>
+<p>It is possible to customize the image either during the Ubuntu installation, or afterwards (before packing the final image). The former is done by providing <a href="https://ubuntu.com/server/docs/install/autoinstall">autoinstall config</a>, editing the <em>user-data-flat</em> and <em>user-data-lvm</em> files. The latter is performed by the <em>install-custom-packages</em> script.</p>
+<p><a href="#heading--about-building-images-via-a-proxy"><h3 id="heading--about-building-images-via-a-proxy">About building images via a proxy</h3></a></p>
+<p>The Packer template downloads the Ubuntu net installer from the Internet. To tell Packer to use a proxy, set the HTTP_PROXY environment variable to your proxy server. Alternatively, you may redefine iso_url to a local file, set iso_checksum_type to none to disable the checksums, and remove iso_checksum_url.</p>
+<p><a href="#heading--how-to-use-packer-to-build-maas-images"><h3 id="heading--how-to-use-packer-to-build-maas-images">How to use packer to build MAAS images</h3></a></p>
+<p><a href="https://www.packer.io/">Packer</a> can be used to build images to be deployed by MAAS.  In order to use packer, you must have a <a href="https://github.com/canonical/packer-maas">packer template</a> for the OS version you intend to build.</p>
+<p>Currently, templates are available for:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>CentOS6</li>
+<li>CentOS7</li>
+<li>CentOS8</li>
+<li>RHEL7</li>
+<li>RHEL8</li>
+<li>Ubuntu custom images</li>
+<li>VMWare EXSi</li>
+</ul>
+<p>This section will help you learn:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--how-to-install-packer">How to install packer</a></li>
+<li><a href="#heading--how-to-obtain-templates">How to obtain templates</a></li>
+<li><a href="#heading--how-to-create-a-packer-image">How to create and use packer images</a></li>
+</ul>
+<p>Note that additional templates will be made available from time to time.</p>
+<p><a href="#heading--how-to-install-packer"><h4 id="heading--how-to-install-packer">How to install packer</h4></a></p>
+<p>Packer is easily installed from its Debian package:</p>
+<pre><code class="language-nohighlight">sudo apt install packer
 </code></pre>
 <p>It should install without additional prompts.</p>
 <p><a href="#heading--how-to-install-qemu-utils"><h5 id="heading--how-to-install-qemu-utils">How to install qemu-utils</h5></a></p>
