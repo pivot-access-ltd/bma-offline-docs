@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;UI-only&nbsp;
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/about-creating-custom-images.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation.html">
+	  Home
+	</a>
+      </strong>
+      <p/>
+      <strong>
+	  Tutorials
+      </strong>
+      <ul>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-cli-tutorial.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="using-jq-with-the-maas-cli.html">
+	    Using jq with the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to get MAAS running
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshooting
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to configure networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-addresses.html">
+	    Manage IP addresses
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to choose images
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-custom-images.html">
+	    Create custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to deploy MAAS
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-controllers.html">
+	    Manage controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Commission and deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to use tags
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to operate MAAS
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+	  <li>
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
+	    </a>
+	  </li>
+	  <li>
+	    <a href="how-to-work-with-audit-event-logs.html">
+	      Work with audit event logs
+	    </a>
+	  </li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade older versions
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event log reference
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Getting help
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  Explanations
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    Cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="about-networking.html">
+	    MAAS networking
+	  </a>
+	</li>
+	<li>
+	  <a href="about-images.html">
+	    Images
+	  </a>
+	</li>
+	<li>
+	  <a href="about-creating-packer-images.html">
+	    Custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="about-controllers.html">
+	    Controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="about-machines.html">
+	    Machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-customising-machines.html">
+	    Customising machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    VM hosting
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>About creating custom images</h1><!-- "About creating custom images" -->
+<p>You can create and customise your own images for MAAS using <a href="https://www.packer.io">packer</a>, with <a href="https://github.com/canonical/packer-maas">Canonical-provided templates</a>.  It is also possible to create your own templates, using the <a href="https://www.packer.io/docs">packer documentation</a>, although that effort might be completely unsupported.</p>
+<p><strong>NOTE:</strong> 
+While it may be possible to deploy a certain image with MAAS, the particular use case may not be supported by that image’s vendor due to licensing or technical reasons. Canonical recommends that, whenever possible, you should customise machines using cloud-init user_data or Curtin preseed data, instead of creating a custom image.</p>
+<p>This article gives a thumbnail sketch of how packer works, and explains how packer can be used to create custom images for deployment with MAAS.</p>
+<p><a href="#heading--about-packer"><h2 id="heading--about-packer">About packer</h2></a></p>
+<p>The <a href="https://www.packer.io/docs">packer documentation</a> has an excellent, in-depth discussion of what packer does, how it works, and where it is limited.  Simply put, packer creates OS images that can be uploaded and deployed using MAAS. We can summarise packer with the following linearised flowchart:</p>
+<p><a href="../images/47cb177f4ee2f52ac00c877449770a23cfa0c9b4.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/47cb177f4ee2f52ac00c877449770a23cfa0c9b4.jpeg"></a></p>
+<p>We can walk through packer operation like this:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>A template is created or obtained which drives the packer build.  The <a href="https://github.com/canonical/packer-maas">packer-maas</a> repository uses JSON templates.</p>
+</li>
+<li>
+<p>The template specifies packer commands and data sources.</p>
+</li>
+<li>
+<p>The template specifies a builder, which creates the MAAS-consumable images.</p>
+</li>
+<li>
+<p>Multiple builds can run in parallel.  Within the MAAS domain, we typically don&rsquo;t set templates up that way, but it is possible to do so.</p>
+</li>
+<li>
+<p>Post-processors do things to the built image to make it usable, e.g., compressing the file into a <code>tar.gz</code> image.</p>
+</li>
+<li>
+<p>Provisioners spin up a running version of the image and install additional software, before collapsing the entire image into an upload package.</p>
+</li>
+<li>
+<p>Because packer creates a wide-range of load packages, the results are called &ldquo;artefacts&rdquo; in packer terminology.  MAAS simply refers to these as &ldquo;images&rdquo;.</p>
+</li>
+</ul>
+<p>Note that we said this flow is linearised.  You can see that provisioners might need to run before a post-processor creates an uploadable <code>tar.gz</code> image.  The actual flow depends on the template, which depends on the OS being customised into an image.  In the parlance of packer, all of these components &ndash; builders, post-processors, provisioners &ndash; are sometimes referred to collectively as &ldquo;plugins&rdquo;.</p>
+<p><a href="#heading--about-packer-dependencies"><h2 id="heading--about-packer-dependencies">About packer dependencies</h2></a></p>
+<p>Depending upon which image you are building, packer-maas may require various dependencies.  For example, when customising an Ubuntu image, you&rsquo;d need to install the following dependencies:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>qemu-utils</li>
+<li>qemu-system</li>
+<li>ovmf</li>
+<li>cloud-image-utils</li>
+</ul>
+<p>These dependencies &ndash; and the functionality they provide &ndash; will be explained in the specific image sections which follow.</p>
+<p><a href="#heading--about-packer-templates"><h2 id="heading--about-packer-templates">About packer templates</h2></a></p>
+<p>A <a href="https://www.packer.io/docs/templates">packer template</a> could just as easily be called a &ldquo;packer script&rdquo;.  It contains declarations and commands that sequence and configure plugins.  Templates also have built-in functions to help you customise your artefacts. While packer is slowly transitioning to a dedicated language called HCL2, packer-maas still depends on JSON templates.</p>
+<p>Templates are run by the packer <code>build</code> command.  Within packer-maas, packer commands (like <code>build</code>) are collected into makefiles that prevent you from having to know a lot about how packer works.  Even so, it&rsquo;s beneficial to take a quick tour of how a typical packer template works.  Let&rsquo;s use the <a href="https://github.com/canonical/packer-maas/blob/master/ubuntu/ubuntu-flat.json">ubuntu-flat</a> template as a simple example.</p>
+<p><strong>NOTE:</strong> 
+Building workable templates is extremely difficult. This section is intended to familiarise you with templates and their components so that you can possibly pinpoint bugs in community-provided templates.  If you want to build your own template, you should rely on the <a href="https://www.packer.io/docs">packer documentation</a> as your guide.</p>
+<p>This template builds a customised Ubuntu image with packer:</p>
+<pre><code class="language-nohighlight">{
+    &quot;variables&quot;: {
+        &quot;name&quot;: &quot;ubuntu-20.04&quot;,
+        &quot;http_directory&quot;: &quot;http&quot;,
+        &quot;http_proxy&quot;: &quot;{{env `http_proxy`}}&quot;,
+        &quot;https_proxy&quot;: &quot;{{env `https_proxy`}}&quot;,
+        &quot;no_proxy&quot;: &quot;{{env `no_proxy`}}&quot;,
+        &quot;ssh_username&quot;: &quot;ubuntu&quot;,
+        &quot;ssh_password&quot;: &quot;ubuntu&quot;
+    },
+    &quot;builders&quot;: [
+        {
+            &quot;boot_command&quot;: [
+                &quot;&lt;wait&gt;e&lt;wait5&gt;&quot;,
+                &quot;&lt;down&gt;&lt;wait&gt;&lt;down&gt;&lt;wait&gt;&lt;down&gt;&lt;wait2&gt;&lt;end&gt;&lt;wait5&gt;&quot;,
+                &quot;&lt;bs&gt;&lt;bs&gt;&lt;bs&gt;&lt;bs&gt;&lt;wait&gt;autoinstall ---&lt;wait&gt;&lt;f10&gt;&quot;
+            ],
+            &quot;boot_wait&quot;: &quot;2s&quot;,
+            &quot;cpus&quot;: 2,
+            &quot;disk_size&quot;: &quot;4G&quot;,
+            &quot;headless&quot;: true,
+            &quot;http_directory&quot;: &quot;{{user `http_directory`}}&quot;,
+            &quot;iso_checksum&quot;: &quot;file:http://releases.ubuntu.com/20.04/SHA256SUMS&quot;,
+            &quot;iso_url&quot;: &quot;https://releases.ubuntu.com/focal/ubuntu-20.04.4-live-server-amd64.iso&quot;,
+            &quot;iso_target_path&quot;: &quot;packer_cache/ubuntu.iso&quot;,
+            &quot;memory&quot;: 1024,
+            &quot;type&quot;: &quot;qemu&quot;,
+            &quot;format&quot;: &quot;raw&quot;,
+            &quot;qemuargs&quot;: [
+                [ &quot;-vga&quot;, &quot;qxl&quot;],
+                [ &quot;-device&quot;, &quot;virtio-blk-pci,drive=drive0,bootindex=0&quot; ],
+                [ &quot;-device&quot;, &quot;virtio-blk-pci,drive=cdrom0,bootindex=1&quot; ],
+                [ &quot;-device&quot;, &quot;virtio-blk-pci,drive=drive1,bootindex=2&quot; ],
+                [ &quot;-drive&quot;, &quot;if=pflash,format=raw,readonly=on,file=/usr/share/OVMF/OVMF_CODE.fd&quot;],
+                [ &quot;-drive&quot;, &quot;if=pflash,format=raw,file=OVMF_VARS.fd&quot;],
+                [ &quot;-drive&quot;, &quot;file=output-qemu/packer-qemu,if=none,id=drive0,cache=writeback,discard=ignore,format=raw&quot;],
+                [ &quot;-drive&quot;, &quot;file=seeds-flat.iso,format=raw,cache=none,if=none,id=drive1&quot;],
+                [ &quot;-drive&quot;, &quot;file=packer_cache/ubuntu.iso,if=none,id=cdrom0,media=cdrom&quot; ]
+            ],
+            &quot;shutdown_command&quot;: &quot;sudo -S shutdown -P now&quot;,
+            &quot;ssh_username&quot;: &quot;{{user `ssh_username`}}&quot;,
+            &quot;ssh_password&quot;: &quot;{{user `ssh_password`}}&quot;,
+            &quot;ssh_handshake_attempts&quot;: 500,
+            &quot;ssh_wait_timeout&quot;: &quot;45m&quot;,
+            &quot;ssh_timeout&quot;: &quot;45m&quot;
+        }
+    ],
+    &quot;provisioners&quot;: [
+        {
+            &quot;type&quot;: &quot;file&quot;,
+            &quot;sources&quot;: [
+                &quot;{{template_dir}}/scripts/curtin-hooks&quot;,
+                &quot;{{template_dir}}/scripts/install-custom-packages&quot;,
+                &quot;{{template_dir}}/scripts/setup-bootloader&quot;,
+                &quot;{{template_dir}}/packages/custom-packages.tar.gz&quot;
+            ],
+            &quot;destination&quot;: &quot;/tmp/&quot;
+        },
+        {
+            &quot;environment_vars&quot;: [
+                &quot;HOME_DIR=/home/ubuntu&quot;,
+                &quot;http_proxy={{user `http_proxy`}}&quot;,
+                &quot;https_proxy={{user `https_proxy`}}&quot;,
+                &quot;no_proxy={{user `no_proxy`}}&quot;
+            ],
+            &quot;execute_command&quot;: &quot;echo 'ubuntu' | {{.Vars}} sudo -S -E sh -eux '{{.Path}}'&quot;,
+            &quot;expect_disconnect&quot;: true,
+            &quot;scripts&quot;: [
+                &quot;{{template_dir}}/scripts/curtin.sh&quot;,
+                &quot;{{template_dir}}/scripts/networking.sh&quot;,
+                &quot;{{template_dir}}/scripts/cleanup.sh&quot;
+            ],
+            &quot;type&quot;: &quot;shell&quot;
+        }
+    ],
+    &quot;post-processors&quot;: [
+        {
+            &quot;type&quot;: &quot;shell-local&quot;,
+            &quot;inline_shebang&quot;: &quot;/bin/bash -e&quot;,
+            &quot;inline&quot;: [
+                &quot;IMG_FMT=raw&quot;,
+                &quot;source ../scripts/setup-nbd&quot;,
+                &quot;OUTPUT=${OUTPUT:-custom-ubuntu.tar.gz}&quot;,
+                &quot;source ./scripts/tar-rootfs&quot;
+            ]
+        }
+    ]
+}
+</code></pre>
+<p>You can see that the sections match the general flow of a <code>packer</code> session: declarations (variables); builders; provisioners; and post-processors.  We can deconstruct these briefly to understand what the template is doing.  This will help explain the image creation process.</p>
+<p><a href="#heading--variables"><h3 id="heading--variables">Variables (declaration section)</h3></a></p>
+<p>The variables section of this template looks like this:</p>
+<pre><code class="language-nohighlight">    &quot;variables&quot;: {
+        &quot;name&quot;: &quot;ubuntu-20.04&quot;,
+        &quot;http_directory&quot;: &quot;http&quot;,
+        &quot;http_proxy&quot;: &quot;{{env `http_proxy`}}&quot;,
+        &quot;https_proxy&quot;: &quot;{{env `https_proxy`}}&quot;,
+        &quot;no_proxy&quot;: &quot;{{env `no_proxy`}}&quot;,
+        &quot;ssh_username&quot;: &quot;ubuntu&quot;,
+        &quot;ssh_password&quot;: &quot;ubuntu&quot;
+    },
+</code></pre>
+<p>Most of this is straightforward.  We&rsquo;re going to use a base image of Ubuntu 20.04, keeping the HTTP files in directory <code>http</code> and making three possible proxy options available: HTTP, HTTPS, or no proxy.  The produced image will have an SSH username and password of &ldquo;ubuntu&rdquo;.  It&rsquo;s that simple.</p>
+<p>These declaration sections can get a lot more complicated, depending upon what&rsquo;s needed to make a clean image.  Note that most of the packer-maas templates are kept as simple as possible.</p>
+<p><a href="#heading--builders"><h3 id="heading--builders">Builder section</h3></a></p>
+<p>The builders section of this template is a little more robust:</p>
+<pre><code class="language-nohighlight">    &quot;builders&quot;: [
+        {
+            &quot;boot_command&quot;: [
+                &quot;&lt;wait&gt;e&lt;wait5&gt;&quot;,
+                &quot;&lt;down&gt;&lt;wait&gt;&lt;down&gt;&lt;wait&gt;&lt;down&gt;&lt;wait2&gt;&lt;end&gt;&lt;wait5&gt;&quot;,
+                &quot;&lt;bs&gt;&lt;bs&gt;&lt;bs&gt;&lt;bs&gt;&lt;wait&gt;autoinstall ---&lt;wait&gt;&lt;f10&gt;&quot;
+            ],
+            &quot;boot_wait&quot;: &quot;2s&quot;,
+            &quot;cpus&quot;: 2,
+            &quot;disk_size&quot;: &quot;4G&quot;,
+            &quot;headless&quot;: true,
+            &quot;http_directory&quot;: &quot;{{user `http_directory`}}&quot;,
+            &quot;iso_checksum&quot;: &quot;file:http://releases.ubuntu.com/20.04/SHA256SUMS&quot;,
+            &quot;iso_url&quot;: &quot;https://releases.ubuntu.com/focal/ubuntu-20.04.4-live-server-amd64.iso&quot;,
+            &quot;iso_target_path&quot;: &quot;packer_cache/ubuntu.iso&quot;,
+            &quot;memory&quot;: 1024,
+            &quot;type&quot;: &quot;qemu&quot;,
+            &quot;format&quot;: &quot;raw&quot;,
+            &quot;qemuargs&quot;: [
+                [ &quot;-vga&quot;, &quot;qxl&quot;],
+                [ &quot;-device&quot;, &quot;virtio-blk-pci,drive=drive0,bootindex=0&quot; ],
+                [ &quot;-device&quot;, &quot;virtio-blk-pci,drive=cdrom0,bootindex=1&quot; ],
+                [ &quot;-device&quot;, &quot;virtio-blk-pci,drive=drive1,bootindex=2&quot; ],
+                [ &quot;-drive&quot;, &quot;if=pflash,format=raw,readonly=on,file=/usr/share/OVMF/OVMF_CODE.fd&quot;],
+                [ &quot;-drive&quot;, &quot;if=pflash,format=raw,file=OVMF_VARS.fd&quot;],
+                [ &quot;-drive&quot;, &quot;file=output-qemu/packer-qemu,if=none,id=drive0,cache=writeback,discard=ignore,format=raw&quot;],
+                [ &quot;-drive&quot;, &quot;file=seeds-flat.iso,format=raw,cache=none,if=none,id=drive1&quot;],
+                [ &quot;-drive&quot;, &quot;file=packer_cache/ubuntu.iso,if=none,id=cdrom0,media=cdrom&quot; ]
+            ],
+            &quot;shutdown_command&quot;: &quot;sudo -S shutdown -P now&quot;,
+            &quot;ssh_username&quot;: &quot;{{user `ssh_username`}}&quot;,
+            &quot;ssh_password&quot;: &quot;{{user `ssh_password`}}&quot;,
+            &quot;ssh_handshake_attempts&quot;: 500,
+            &quot;ssh_wait_timeout&quot;: &quot;45m&quot;,
+            &quot;ssh_timeout&quot;: &quot;45m&quot;
+        }
+    ],
+</code></pre>
+<p>Note that the builders section is a JSON array, so it can contain multiple tools, as needed.  A few of these we can run through rather quickly, as their purpose is obvious on inspection:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><code>"cpus": 2,</code>: sets up the image for a two-CPU virtual/machine.</li>
+<li><code>"disk_size": "4G",</code> : sets up the image to expect a 4Gb disk.</li>
+<li><code>"headless": true,</code> : the image expects to run headless, that is, without a console.</li>
+<li><code>"http_directory": "{{user</code>http_directory<code>}}",</code>: the HTTP directory will be the user&rsquo;s HTTP directory.</li>
+<li><code>"iso_checksum": "file:http://releases.ubuntu.com/20.04/SHA256SUMS",</code>: the checksum for the ISO image will be found here.</li>
+<li><code>"iso_url": "https://releases.ubuntu.com/focal/ubuntu-20.04.4-live-server-amd64.iso",</code>: the ISO image itself will be found at this URL.</li>
+<li><code>"iso_target_path": "packer_cache/ubuntu.iso",</code>: the packer artefact will be stored at this path.</li>
+<li><code>"memory": 1024,</code>: the image should expect this much memory.</li>
+<li><code>"format": "raw",</code>: the image should be written in raw (<code>dd</code>) format.</li>
+<li><code>"shutdown_command": "sudo -S shutdown -P now",</code>: here&rsquo;s the shutdown command to user.</li>
+<li><code>"ssh_username": "{{user</code>ssh_username<code>}}",</code>: here&rsquo;s how you gather the SSH username.</li>
+<li><code>"ssh_password": "{{user</code>ssh_password<code>}}",</code>: here&rsquo;s how you gather the SSH password.</li>
+<li><code>"ssh_handshake_attempts": 500,</code>: here&rsquo;s how many times you try SSH.</li>
+<li><code>"ssh_wait_timeout": "45m",</code>: use a really long SSH wait timeout.</li>
+<li><code>"ssh_timeout": "45m"</code>: use a really long SSH timeout, too.</li>
+</ul>
+<p>The high number of SSH handshake attempts &ndash; and the really long timeouts &ndash; have to do with trying to catch the system after it has successfully booted.  Because of the way packer works, it has no direct way to be informed that the system has booted.  As a consequence, to finish the build and run provisioners and post-processors, packer has to keep trying for a while until an SSH connection is successful.  In practice, this should only take 2-3 minutes, but this template uses a very long value, just to be sure.</p>
+<p>The values we skipped over tell packer how to build the OS; <code>"type": "qemu",</code> tells us that we&rsquo;re using QEMU to build this image.  The arguments to QEMU are as follows:</p>
+<pre><code class="language-nohighlight">&quot;qemuargs&quot;: [
+[ &quot;-vga&quot;, &quot;qxl&quot;],
+[ &quot;-device&quot;, &quot;virtio-blk-pci,drive=drive0,bootindex=0&quot; ],
+[ &quot;-device&quot;, &quot;virtio-blk-pci,drive=cdrom0,bootindex=1&quot; ],
+[ &quot;-device&quot;, &quot;virtio-blk-pci,drive=drive1,bootindex=2&quot; ],
+[ &quot;-drive&quot;, &quot;if=pflash,format=raw,readonly=on,file=/usr/share/OVMF/OVMF_CODE.fd&quot;],
+[ &quot;-drive&quot;, &quot;if=pflash,format=raw,file=OVMF_VARS.fd&quot;],
+[ &quot;-drive&quot;, &quot;file=output-qemu/packer-qemu,if=none,id=drive0,cache=writeback,discard=ignore,format=raw&quot;],
+[ &quot;-drive&quot;, &quot;file=seeds-flat.iso,format=raw,cache=none,if=none,id=drive1&quot;],
+[ &quot;-drive&quot;, &quot;file=packer_cache/ubuntu.iso,if=none,id=cdrom0,media=cdrom&quot; ]
+],
+</code></pre>
+<p>If you study the QEMU documentation, it&rsquo;s easy to see what these commands are doing.  Essentially, we&rsquo;re using QEMU to create an image as a raw <code>dd</code> file, putting it in a specific location.</p>
+<p>You may also notice that some of the QEMU options require additional dependencies, including <code>ovmf</code> (being used to flash the UEFI bootloader), <code>qemu-utils</code> (a fast processor emulator), and <code>qemu-system</code> (which is a machine architecture emulator.  Every template has different dependency requirements, just like any script.</p>
+<p>Finally, there is the &ldquo;boot section&rdquo; of the builder template:</p>
+<pre><code class="language-nohighlight">&quot;boot_command&quot;: [
+    &quot;&lt;wait&gt;e&lt;wait5&gt;&quot;,
+    &quot;&lt;down&gt;&lt;wait&gt;&lt;down&gt;&lt;wait&gt;&lt;down&gt;&lt;wait2&gt;&lt;end&gt;&lt;wait5&gt;&quot;,
+    &quot;&lt;bs&gt;&lt;bs&gt;&lt;bs&gt;&lt;bs&gt;&lt;wait&gt;autoinstall ---&lt;wait&gt;&lt;f10&gt;&quot;
+],
+&quot;boot_wait&quot;: &quot;2s&quot;,
+</code></pre>
+<p>These two elements control how packer will attempt to boot the newly-built image.  Notice that the boot command, in particular, is extremely complex.  Getting a packer-generated image to boot for provisioning is one of the most difficult elements of template design.</p>
+<p><a href="#heading--provisioners"><h3 id="heading--provisioners">Provisioner section</h3></a></p>
+<p>The provisioner section of this simple template looks something like this:</p>
+<pre><code class="language-nohighlight">&quot;provisioners&quot;: [
+    {
+        &quot;type&quot;: &quot;file&quot;,
+        &quot;sources&quot;: [
+            &quot;{{template_dir}}/scripts/curtin-hooks&quot;,
+            &quot;{{template_dir}}/scripts/install-custom-packages&quot;,
+            &quot;{{template_dir}}/scripts/setup-bootloader&quot;,
+            &quot;{{template_dir}}/packages/custom-packages.tar.gz&quot;
+        ],
+        &quot;destination&quot;: &quot;/tmp/&quot;
+    },
+    {
+        &quot;environment_vars&quot;: [
+            &quot;HOME_DIR=/home/ubuntu&quot;,
+            &quot;http_proxy={{user `http_proxy`}}&quot;,
+            &quot;https_proxy={{user `https_proxy`}}&quot;,
+            &quot;no_proxy={{user `no_proxy`}}&quot;
+        ],
+        &quot;execute_command&quot;: &quot;echo 'ubuntu' | {{.Vars}} sudo -S -E sh -eux '{{.Path}}'&quot;,
+        &quot;expect_disconnect&quot;: true,
+        &quot;scripts&quot;: [
+            &quot;{{template_dir}}/scripts/curtin.sh&quot;,
+            &quot;{{template_dir}}/scripts/networking.sh&quot;,
+            &quot;{{template_dir}}/scripts/cleanup.sh&quot;
+        ],
+        &quot;type&quot;: &quot;shell&quot;
+    }
+],
+</code></pre>
+<p>Rather than walking through each of these lines individually, we can just note that this JSON causes packer to:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>retrieve scripts that set up the bootloader, configure curtin hooks, and install custom packages from a named gzip source.</li>
+<li>set the homedir and proxy options for the image.</li>
+<li>set up curtin and networking for the image.</li>
+<li>clean up the image prior to post-processing.</li>
+</ul>
+<p>If you are interested in more details, you can <a href="https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts">examine the scripts</a> to see what they do.</p>
+<p><a href="#heading--post-processing"><h3 id="heading--post-processing">Post-processing section</h3></a></p>
+<p>The post-processing section of this template prepares the image for use:</p>
+<pre><code class="language-nohighlight">&quot;post-processors&quot;: [
+    {
+        &quot;type&quot;: &quot;shell-local&quot;,
+        &quot;inline_shebang&quot;: &quot;/bin/bash -e&quot;,
+        &quot;inline&quot;: [
+            &quot;IMG_FMT=raw&quot;,
+            &quot;source ../scripts/setup-nbd&quot;,
+            &quot;OUTPUT=${OUTPUT:-custom-ubuntu.tar.gz}&quot;,
+            &quot;source ./scripts/tar-rootfs&quot;
+        ]
+    }
+]
+</code></pre>
+<p>You can see right away that this template has one post-processor (only one JSON array entry).  This post-processor is a local shell, invoked with the <code>-e</code> option, which causes the shell to terminate if there&rsquo;s an error (rather than continuing with the next command).  In this case, we can see that the shell runs four commands:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>sets <code>$IMG_FMT</code> to &ldquo;raw&rdquo;</li>
+<li>runs the script <code>setup-nbd</code></li>
+<li>sets $OUTPUT to &ldquo;<name of image>-custom-ubuntu.tar.gz&rdquo;</li>
+<li>runs the script <code>tar-rootfs</code></li>
+</ul>
+<p>In this case, it&rsquo;s worth a quick look at the two scripts to see what this post-processor does. First, let&rsquo;s glance at <code>setup-nbd</code>:</p>
+<pre><code class="language-highlight">#!/bin/bash -e
+#
+# setup-nbd - Bind Packer qemu output to a free /dev/nbd device.
+#
+# Author: Lee Trager &lt;lee.trager@canonical.com&gt;
+#
+# Copyright (C) 2020 Canonical
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+if [ $UID -ne 0 ]; then
+    echo &quot;ERROR: Must be run as root!&quot; &gt;&amp;2
+    exit 1
+fi
+
+if [ ! -f output-qemu/packer-qemu ]; then
+    echo &quot;ERROR: Not in the same path as template!&quot; &gt;&amp;2
+    exit
+fi
+
+echo 'Loading nbd...'
+shopt -s extglob
+modprobe nbd
+for nbd in /sys/class/block/nbd+([0-9]); do
+    if [ &quot;$(cat ${nbd}/size)&quot; -eq 0 ]; then
+    nbd=&quot;/dev/$(basename $nbd)&quot;
+    echo &quot;Using $nbd&quot;
+    break
+    fi
+done
+
+if [ -z &quot;${nbd}&quot; ] || ! echo $nbd | grep -q &quot;/dev&quot;; then
+    echo &quot;ERROR: Unable to find nbd device to mount image!&quot; &gt;&amp;2
+    exit 1
+fi
+
+echo &quot;Binding image to $nbd...&quot;
+qemu-nbd -d $nbd
+if [ -n &quot;$IMG_FMT&quot; ]; then
+    qemu-nbd -c $nbd -f &quot;$IMG_FMT&quot; -n output-qemu/packer-qemu
+else
+    qemu-nbd -c $nbd -n output-qemu/packer-qemu
+fi
+echo 'Waiting for partitions to be created...'
+tries=0
+while [ ! -e &quot;${nbd}p1&quot; -a $tries -lt 60 ]; do
+    sleep 1
+    tries=$((tries+1))
+done
+</code></pre>
+<p>As you can see, this is just a well-structured script to export a QEMU image as a Network Block Device, binding it to a <code>/dev/nbd</code> directory.  This is first step in creating MAAS-loadable Ubuntu image.  The second step comes in <code>tar-rootfs</code>:</p>
+<pre><code class="language-nohighlight">#!/bin/bash -e
+#
+# tar-rootfs - Create a tar.gz from a binded /dev/nbd device
+#
+# Author: Alexsander de Souza &lt;alexsander.souza@canonical.com&gt;
+#
+# Copyright (C) 2021 Canonical
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+cleanup() {
+    qemu-nbd -d &quot;$nbd&quot;
+    [ -d &quot;${TMP_DIR}&quot; ] &amp;&amp; rm -rf &quot;${TMP_DIR}&quot;
+}
+trap cleanup EXIT
+
+if [ ${UID} -ne 0 ]; then
+    echo &quot;ERROR: Must be run as root!&quot; &gt;&amp;2
+    exit 1
+fi
+
+TMP_DIR=$(mktemp -d /tmp/packer-maas-XXXX)
+
+echo 'Mounting root partition...'
+mount &quot;${nbd}p2&quot; &quot;${TMP_DIR}&quot;
+mount &quot;${nbd}p1&quot; &quot;${TMP_DIR}/boot/efi&quot;
+
+echo &quot;Creating MAAS image $OUTPUT...&quot;
+tar -Sczpf &quot;$OUTPUT&quot; --acls --selinux --xattrs -C &quot;${TMP_DIR}&quot; .
+
+echo 'Unmounting image...'
+umount &quot;${TMP_DIR}/boot/efi&quot;
+umount &quot;${TMP_DIR}&quot;
+</code></pre>
+<p>This script just creates a <code>.tar.gz</code> from a bound <code>/dev/nbd</code> device (where the QEMU image was initially stored by the last script.</p>
+<p>As you can see, the process of creating a customised packer image is not overly complex.  Nevertheless, it&rsquo;s a difficult process to get right, hence our community-contributed templates.</p>
+<p><a href="#heading--about-the-image-installation-process"><h2 id="heading--about-the-image-installation-process">About the image installation process</h2></a></p>
+<p>Installing a packer-created image is highly dependent on the application.  In the case of MAAS, we use the CLI <code>boot-resources</code> command to upload the image to MAAS, something like this:</p>
+<pre><code class="language-nohighlight">$ maas admin boot-resources create \
+    name='custom/ubuntu-tgz' \
+    title='Ubuntu Custom TGZ' \
+    architecture='amd64/generic' \
+    filetype='tgz' \
+    content@=custom-ubuntu.tar.gz
+</code></pre>
+<p>At this point, the image shows up in MAAS, synced to the controller, the same as any other image.</p>
+<p><a href="#heading--about-packer-created-images"><h2 id="heading--about-packer-created-images">About packer-created images</h2></a></p>
+<p>If you&rsquo;re interested in the anatomy of a packer-created image, for example, an ISO image, you can use <code>isoinfo</code> to explore the image file.  The image should be found in the packer git repository, under <code>&lt;imagename&gt;/packer-cache</code>.  Ideally, it shouldn&rsquo;t differ too much from any other customised ISO image.  You can explore with a few of the <code>isoinfo</code> commands.  For example, you can read the primary volume descriptor like this:</p>
+<pre><code class="language-nohighlight">stormrider@neuromancer:~/mnt/Dropbox/src/git/packer-maas/ubuntu/packer_cache$ isoinfo -d -i ubuntu.iso | more                                                         
+CD-ROM is in ISO 9660 format
+System id: 
+Volume id: Ubuntu-Server 20.04.4 LTS amd64
+Volume set id: 
+Publisher id: 
+Data preparer id: XORRISO-1.2.4 2012.07.20.130001, LIBISOBURN-1.2.4, LIBISOFS-1.2.4, LIBBURN-1.2.4
+Application id: 
+Copyright File id: 
+Abstract File id: 
+Bibliographic File id: 
+Volume set size is: 1
+Volume set sequence number is: 1
+Logical block size is: 2048
+Volume size is: 650240
+El Torito VD version 1 found, boot catalog is in sector 250
+Joliet with UCS level 3 found
+Rock Ridge signatures version 1 found
+Eltorito validation header:
+    Hid 1
+    Arch 0 (x86)
+    ID ''
+    Key 55 AA
+    Eltorito defaultboot header:
+        Bootid 88 (bootable)
+        Boot media 0 (No Emulation Boot)
+        Load segment 0
+        Sys type 0
+        Nsect 4
+        Bootoff 8EC04 584708
+</code></pre>
+<p>You could also generate an exhaustive directory listing with <code>isoinfo -f -i &lt;isoname&gt;</code>, and possibly pipe that through <code>grep</code> to ensure that your desired packages have been added to the image.  Or, if you prefer to sweep the image directories manually, you can use <code>isoinfo -l -i &lt;isoname&gt;</code>.  The larger point, of course, is that a packer-generated image is essentially identical to any prepared ISO image, including, of course, any customisations (e.g., extra software) that the template loads before finalising the image.</p>
+    </div>
+  </body>
+</html>
