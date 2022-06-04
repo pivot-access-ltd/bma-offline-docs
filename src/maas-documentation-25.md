@@ -115,7 +115,7 @@ Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-conta
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
-|https://discourse.maas.io/t/-/6099|/docs/about-creating-packer-images|
+|https://discourse.maas.io/t/-/6099|/docs/about-creating-custom-images|
 |https://discourse.maas.io/t/-/6027|/docs/using-jq-with-the-maas-cli|
 |https://discourse.maas.io/t/-/5987|/docs/how-to-work-with-audit-event-logs|
 |https://discourse.maas.io/t/-/5976|/docs/about-customising-machines|
