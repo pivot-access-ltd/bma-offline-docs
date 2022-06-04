@@ -91,6 +91,7 @@ There are two methods for building custom images to be deployed to MAAS machines
 - [How to pack a RHEL7 image for MAAS deployment](#heading--how-to-pack-a-rhel7-image-for-maas-deployment)
 - [How to pack a RHEL8 image for MAAS deployment](#heading--how-to-pack-a-rhel8-image-for-maas-deployment)
 - [How to pack a CentOS 7 image for MAAS deployment](#heading--how-to-pack-a-centos7-image-for-maas-deployment)
+- [How to pack a CentOS 8 image for MAAS deployment](#heading--how-to-pack-a-centos8-image-for-maas-deployment)
 - [How to use MAAS Image Builder to build MAAS images](#heading--how-to-use-maas-image-builder-to-build-maas-images)
 
 <a href="#heading--how-to-verify-packer-prequisites"><h3 id="heading--how-to-verify-packer-prequisites">How to verify packer prequisites</h3></a>
