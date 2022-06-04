@@ -14,7 +14,7 @@ This article will help you learn:
 - [About configuring deployed machine networking](#heading--about-configuring-deployed-machine-networking)
 - [About configuring deployed machine storage](#heading--about-configuring-deployed-machine-storage)
 - [About static image metrics](#heading--about-static-image-metrics)
-- [About packer](#heading--about-packer")
+- [About packer](#heading--about-packer)
 - [About packer dependencies](#heading--about-packer-dependencies)
 - [About packer templates](#heading--about-packer-templates)
 - [About the image installation process](#heading--about-the-image-installation-process)
