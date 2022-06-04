@@ -90,6 +90,7 @@ There are two methods for building custom images to be deployed to MAAS machines
 - [How to pack an Ubuntu image for MAAS deployment](#heading--how-to-pack-an-ubuntu-image-for-maas-deployment)
 - [How to pack a RHEL7 image for MAAS deployment](#heading--how-to-pack-a-rhel7-image-for-maas-deployment)
 - [How to pack a RHEL8 image for MAAS deployment](#heading--how-to-pack-a-rhel8-image-for-maas-deployment)
+- [How to pack a CentOS 7 image for MAAS deployment](#heading--how-to-pack-a-centos7-image-for-maas-deployment)
 - [How to use MAAS Image Builder to build MAAS images](#heading--how-to-use-maas-image-builder-to-build-maas-images)
 
 <a href="#heading--how-to-verify-packer-prequisites"><h3 id="heading--how-to-verify-packer-prequisites">How to verify packer prequisites</h3></a>
@@ -477,7 +478,7 @@ You can obtain the packer templates by cloning the [packer-maas github repositor
 git clone https://github.com/canonical/packer-maas.git
 ```
 
-Make sure to pay attention to where the repository is cloned.  The Packer template in this cloned repository creates a Ubuntu AMD64 image for use with MAAS.
+Make sure to pay attention to where the repository is cloned.  The Packer template in this cloned repository creates a RHEL7 AMD64 image for use with MAAS.
 
 This package should install with no additional prompts.
 
@@ -593,7 +594,7 @@ You can obtain the packer templates by cloning the [packer-maas github repositor
 git clone https://github.com/canonical/packer-maas.git
 ```
 
-Make sure to pay attention to where the repository is cloned.  The Packer template in this cloned repository creates a Ubuntu AMD64 image for use with MAAS.
+Make sure to pay attention to where the repository is cloned.  The Packer template in this cloned repository creates a RHEL8 AMD64 image for use with MAAS.
 
 This package should install with no additional prompts.
 
@@ -668,7 +669,233 @@ open-gannet  nk7x8y  on     Deployed  admin  custom  rhel8-raw
 
 You should log into your newly-deployed image and verify that it has all the customisations you added to the build process.  The default username for packer-created RHEL images is `cloud-user`.
 
-<a href="#heading--how-to-use-maas-image-builder-to-build-maas-images"><h3 id="heading--how-to-use-maas-image-builder-to-build-maas-images">How to use MAAS Image Builder to build MAAS images</h3></a>
+<a href="#heading--how-to-pack-a-centos7-image-for-maas-deployment"><h2 id="heading--how-to-pack-a-centos7-image-for-maas-deployment">How to pack a CentOS 7 image for MAAS deployment</h2></a>
+
+You can create a CentOS 7 image for MAAS deployment via the following procedure.
+
+### Verify the requirements
+
+To create a CentOS 7 image to upload to MAAS, you must have a machine running Ubuntu 18.04+ or higher with the ability to run KVM virtual machines.  You must also aquire the following items, as described in later instructions:
+
+- qemu-utils
+- packer
+
+Note that a suitable CentOS 7 image is downloaded as part of the template.
+
+To deploy the image to MAAS, you must also have:
+
+- MAAS 2.3+
+- Curtin 18.1-59+
+
+### Install packer
+
+Packer is easily installed from its Debian package:
+
+```nohighlight
+sudo apt install packer
+```
+
+This should install with no additional prompts.
+
+### Install CentOS 7 template dependencies
+
+```nohighlight
+sudo apt install qemu-utils
+```
+
+### Get the available packer templates
+
+You can obtain the packer templates by cloning the [packer-maas github repository](https://github.com/canonical/packer-maas.git), like this:
+
+```nohighlight
+git clone https://github.com/canonical/packer-maas.git
+```
+
+Make sure to pay attention to where the repository is cloned.  The Packer template in this cloned repository creates a CentOS 7 AMD64 image for use with MAAS.
+
+This package should install with no additional prompts.
+
+### Locate the CentOS 7 template
+
+The packer template in the directory `centos7` subdirectory creates a CentOS 7 AMD64 image for use with MAAS.
+
+### Customizing the image, if desired
+
+The deployment image may be customized by modifying http/centos7.ks. See the CentOS kickstart documentation for more information.
+
+### Set up a proxy for building the image, if desired
+
+The Packer template downloads the CentOS net installer from the Internet. To tell Packer to use a proxy set the HTTP_PROXY environment variable to your proxy server. Alternatively you may redefine iso_url to a local file, set iso_checksum_type to none to disable checksuming, and remove iso_checksum_url.
+
+To use a proxy during the installation add the --proxy=$HTTP_PROXY flag to every line starting with url or repo in http/centos7.ks. Alternatively you may set the --mirrorlist values to a local mirror.
+
+### Build the CentOS 7 image
+
+You can easily build the image using the Makefile:
+
+```nohighlight
+$ make
+```
+
+This process is non-interactive and may take some time (3-5 minutes) to successfully boot the image and complete the build.  Do not be concerned about SSH errors while the builder is attempting to establish an SSH connection with the running VM; this is normal.
+
+### Alternative: Run packer manually
+
+Alternatively you can manually run packer. Your current working directory must be in packer-maas/centos7, where this file is located. Once in packer-maas/centos7 you can generate an image with:
+
+```nohighlight
+$ sudo PACKER_LOG=1 packer build centos7.json
+```
+
+[note]
+centos7.json is configured to run Packer in headless mode. Only Packer output will be seen. If you wish to see the installation output connect to the VNC port given in the Packer output or change the value of headless to false in centos7.json.
+[/note]
+
+Installation is non-interactive.
+
+### Upload the CentOS 7 image to MAAS
+
+You can upload the CentOS 7 raw packer image with the following command:
+
+```nohighlight
+$ maas $PROFILE boot-resources create
+name='centos/7-custom' title='CentOS 7 Custom' architecture='amd64/generic' filetype='tgz' content@=centos7.tar.gz
+```
+
+### Verify your custom image
+
+Before relying on it in production, you should test your custom image by deploying it to a test (virtual) machine.  It's the machine named `open-gannet` in this listing:
+
+```nohighlight
+maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
+"OWNER", "OS", "DISTRO"] | (., map(length*"-"))),
+(.[] | [.hostname, .system_id, .power_state, .status_name, .owner // "-",
+.osystem, .distro_series]) | @tsv' | column -t
+
+HOSTNAME     SYSID   POWER  STATUS    OWNER  OS      DISTRO
+--------     -----   -----  ------    -----  --      ------
+valued-moth  e86c7h  on     Deployed  admin  ubuntu  focal
+open-gannet  nk7x8y  on     Deployed  admin  custom  centos7-raw
+```
+
+### Log into your deployed image and verify that it's right
+
+You should log into your newly-deployed image and verify that it has all the customisations you added to the build process.  The default username for packer-created CentOS 7 images is `centos`.
+
+<a href="#heading--how-to-pack-a-centos8-image-for-maas-deployment"><h2 id="heading--how-to-pack-a-centos8-image-for-maas-deployment">How to pack a CentOS 8 image for MAAS deployment</h2></a>
+
+You can create a CentOS 8 image for MAAS deployment via the following procedure.
+
+### Verify the requirements
+
+To create a CentOS 8 image to upload to MAAS, you must have a machine running Ubuntu 18.04+ or higher with the ability to run KVM virtual machines.  You must also aquire the following items, as described in later instructions:
+
+- qemu-utils
+- packer
+
+Note that a suitable CentOS 8 image is downloaded as part of the template.
+
+To deploy the image to MAAS, you must also have:
+
+- MAAS 2.3+
+- Curtin 18.1-59+
+
+### Install packer
+
+Packer is easily installed from its Debian package:
+
+```nohighlight
+sudo apt install packer
+```
+
+This should install with no additional prompts.
+
+### Install CentOS 8 template dependencies
+
+```nohighlight
+sudo apt install qemu-utils
+```
+
+### Get the available packer templates
+
+You can obtain the packer templates by cloning the [packer-maas github repository](https://github.com/canonical/packer-maas.git), like this:
+
+```nohighlight
+git clone https://github.com/canonical/packer-maas.git
+```
+
+Make sure to pay attention to where the repository is cloned.  The Packer template in this cloned repository creates a CentOS 8 AMD64 image for use with MAAS.
+
+This package should install with no additional prompts.
+
+### Locate the CentOS 8 template
+
+The packer template in the directory `centos8` subdirectory creates a CentOS 8 AMD64 image for use with MAAS.
+
+### Customizing the image, if desired
+
+The deployment image may be customized by modifying http/centos8.ks. See the CentOS kickstart documentation for more information.
+
+### Set up a proxy for building the image, if desired
+
+The Packer template downloads the CentOS net installer from the Internet. To tell Packer to use a proxy set the HTTP_PROXY environment variable to your proxy server. Alternatively you may redefine iso_url to a local file, set iso_checksum_type to none to disable checksuming, and remove iso_checksum_url.
+
+To use a proxy during the installation add the --proxy=$HTTP_PROXY flag to every line starting with url or repo in http/centos8.ks. Alternatively you may set the --mirrorlist values to a local mirror.
+
+### Build the CentOS 8 image
+
+You can easily build the image using the Makefile:
+
+```nohighlight
+$ make
+```
+
+This process is non-interactive and may take some time (3-5 minutes) to successfully boot the image and complete the build.  Do not be concerned about SSH errors while the builder is attempting to establish an SSH connection with the running VM; this is normal.
+
+### Alternative: Run packer manually
+
+Alternatively you can manually run packer. Your current working directory must be in packer-maas/centos8, where this file is located. Once in packer-maas/centos8 you can generate an image with:
+
+```nohighlight
+$ sudo PACKER_LOG=1 packer build centos8.json
+```
+
+[note]
+centos8.json is configured to run Packer in headless mode. Only Packer output will be seen. If you wish to see the installation output connect to the VNC port given in the Packer output or change the value of headless to false in centos8.json.
+[/note]
+
+Installation is non-interactive.
+
+### Upload the CentOS 8 image to MAAS
+
+You can upload the CentOS 8 raw packer image with the following command:
+
+```nohighlight
+$ maas $PROFILE boot-resources create
+name='centos/8-custom' title='CentOS 8 Custom' architecture='amd64/generic' filetype='tgz' content@=centos8.tar.gz
+```
+
+### Verify your custom image
+
+Before relying on it in production, you should test your custom image by deploying it to a test (virtual) machine.  It's the machine named `open-gannet` in this listing:
+
+```nohighlight
+maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
+"OWNER", "OS", "DISTRO"] | (., map(length*"-"))),
+(.[] | [.hostname, .system_id, .power_state, .status_name, .owner // "-",
+.osystem, .distro_series]) | @tsv' | column -t
+
+HOSTNAME     SYSID   POWER  STATUS    OWNER  OS      DISTRO
+--------     -----   -----  ------    -----  --      ------
+valued-moth  e86c7h  on     Deployed  admin  ubuntu  focal
+open-gannet  nk7x8y  on     Deployed  admin  custom  centos8-raw
+```
+
+### Log into your deployed image and verify that it's right
+
+You should log into your newly-deployed image and verify that it has all the customisations you added to the build process.  The default username for packer-created CentOS 8 images is `centos`.
+
+<a href="#heading--how-to-use-maas-image-builder-to-build-maas-images"><h2 id="heading--how-to-use-maas-image-builder-to-build-maas-images">How to use MAAS Image Builder to build MAAS images</h2></a>
 
 MAAS Image Builder is an older tool, still required to build some images (e.g., Windows images).  Wherever possible, we recommend you use `packer`, as described above.
 
@@ -686,7 +913,7 @@ This article will help you learn:
 
 You can customise most images as much or as little as you wish, then use them to commission machines with MAAS. 
 
-<a href="#heading--install-mib"><h4 id="heading--install-mib">How to install MAAS Image Builder</h4></a>
+<a href="#heading--install-mib"><h3 id="heading--install-mib">How to install MAAS Image Builder</h3></a>
 
 To get MAAS Image Builder, you must be subscribed to a private PPA provided by Canonical Support to those customers who have purchased [Ubuntu Advantage for Infrastructure](https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool).  Note that the steps below will fail if you have not purchased Ubuntu Advantage and been subscribed to the private PPA by your Canonical support rep.
 
@@ -705,11 +932,11 @@ Once you have added the private PPA, you can install the Image Builder like this
 
 All done? Great!  Now you can build and customise images for MAAS machines, as shown in the sections below.
 
-<a href="#heading--custom-centos-images"><h4 id="heading--custom-centos-images">How to create custom CentOS images</h4></a>
+<a href="#heading--custom-centos-images"><h3 id="heading--custom-centos-images">How to create custom CentOS images</h3></a>
 
-MAAS already provides the latest available CentOS 6, CentOS 7, and CentOS 8 for automatic download. If you need something else, though, MAAS Image Builder supports the ability to create various CentOS images.
+MAAS already provides the latest available CentOS 7 and CentOS 8 for automatic download. If you need something else, though, MAAS Image Builder supports the ability to create various CentOS images.
 
-<h5 id="heading--centos-nw-rqmts">Network Requirements</h5>
+<h4 id="heading--centos-nw-rqmts">Network Requirements</h4>
 
 Access to the Internet is required, since you will need to start with one of these sites:
 
@@ -717,11 +944,11 @@ Access to the Internet is required, since you will need to start with one of the
 - https://download.fedoraproject.org - EPEL
 - https://copr-be.cloud.fedoraproject.org - Canonical maintained cloud-init repository
 
-<h5 id="heading--images-behind-proxy">Creating images behind a proxy</h5>
+<h4 id="heading--images-behind-proxy">Creating images behind a proxy</h4>
 
 MAAS Image Builder can create CentOS images behind a proxy -- just set the ‘http_proxy’ environment variable to _your_ particular proxy. Once deployed, <code>yum</code> will use this MAAS-configured proxy.
 
-<h5 id="heading--centos-create-images">Creating the images</h5>
+<h4 id="heading--centos-create-images">Creating the images</h4>
 
 <code>maas-image-builder</code> is designed to automate the process of generating the images for MAAS and <code>curtin</code>.  Here are some specific examples:
 
@@ -729,13 +956,13 @@ MAAS Image Builder can create CentOS images behind a proxy -- just set the ‘ht
     $ sudo maas-image-builder -o centos6-i386-root-tgz --arch i386 centos --edition 6
     $ sudo maas-image-builder -o centos7-amd64-root-tgz --arch amd64 centos --edition 7
 
-<h5 id="heading--centos-customize-images">Customising CentOS images</h5>
+<h4 id="heading--centos-customize-images">Customising CentOS images</h4>
 
 Starting from MAAS Image Builder 1.0.4, customisation of CentOS images is now supported.  You can provide a custom kickstart, in _addition_ to the kickstart that MAAS Image Builder uses to create the images. You can customise your image like this:
 
     $ sudo maas-image-builder -o centos7-amd64-root-tgz --arch amd64 centos --edition 7 --custom-kickstart ./custom.ks
 
-<h5 id="heading--centos-upload-images">Uploading the image into MAAS</h5>
+<h4 id="heading--centos-upload-images">Uploading the image into MAAS</h4>
 
 Custom CentOS images can be uploaded to MAAS as shown in the command below.  _Do note_ that the name **must** start with ‘centos’ and **must** be one line:
 
@@ -743,11 +970,11 @@ Custom CentOS images can be uploaded to MAAS as shown in the command below.  _Do
 
 You can use the MAAS WebUI to check that your custom CentOS image is valid and selectable for deployment.
 
-<a href="#heading--custom-rhel-images"><h4 id="heading--custom-rhel-images">How to create custom RHEL images</h4></a>
+<a href="#heading--custom-rhel-images"><h3 id="heading--custom-rhel-images">How to create custom RHEL images</h3></a>
 
 Currently, MAAS _only_ supports RHEL as a custom image. In future versions of MAAS, RHEL will be natively supported.
 
-<h5 id="heading--rhel-requirements">Some Requirements</h5>
+<h4 id="heading--rhel-requirements">Some Requirements</h4>
 
 In order to create RHEL images, you will need access to these sites:
 
@@ -755,23 +982,23 @@ In order to create RHEL images, you will need access to these sites:
 - https://download.fedoraproject.org - Access to the EPEL repository to install required deps
 - https://copr-be.cloud.fedoraproject.org - Access to the Canonical maintained cloud-init copr repository
 
-<h5 id="heading--rhel-behind-proxy">Creating images behind a proxy</h5>
+<h4 id="heading--rhel-behind-proxy">Creating images behind a proxy</h4>
 
 MAAS image builder supports creating RHEL images behind a proxy. To use a proxy when building a RHEL image, just set the ‘http_proxy’ environment variable to _your_ local proxy. Once deployed, <code>yum</code> will use the MAAS-configured proxy.
 
-<h5 id="heading--rhel-create-images">Creating the images</h5>
+<h4 id="heading--rhel-create-images">Creating the images</h4>
 
 To generate a usable RHEL image, <code>maas-image-builder</code> automates image generation; these images can be used by MAAS and <code>curtin</code>.
 
      $ sudo maas-image-builder -a amd64 -o rhel8-amd64-root-tgz rhel --rhel-iso blah.iso
 
-<h5 id="heading--rhel-install">Install into MAAS</h5>
+<h4 id="heading--rhel-install">Install into MAAS</h4>
 
 The custom RHEL image can be uploaded to MAAS, but note that the name **must** start with ‘rhel’ and **must** be expressed as a single line, like this:
 
     maas admin boot-resources create name=rhel/8 title="RedHat Enterprise Linux 8" architecture=amd64/generic content@=rhel8-amd64-root-tgz
 
-<a href="#heading--custom-windows-images"><h4 id="heading--custom-windows-images">How to create Windows images</h4></a>
+<a href="#heading--custom-windows-images"><h3 id="heading--custom-windows-images">How to create Windows images</h3></a>
 
 Since Windows is a proprietary operating system, MAAS can't download these images. You need to manually generate images to use with MAAS.  On the upside, the end result will be much simpler, since there are CLI and WebUI tools to upload a Windows ISO -- which _helps_ automate the process.
 
@@ -789,7 +1016,7 @@ There are several other supported versions (for --windows-edition):
 - win2016
 - win2016hv
 
-<h5 id="heading--mib-windows">Image Builder</h5>
+<h4 id="heading--mib-windows">Image Builder</h4>
 
 MAAS Image builder can automate the process of generating images for MAAS and <code>curtin</code>.  In this instance,  though, you need Windows drivers for your specific hardware.  You can obtain these windows drivers with the following command:
 
@@ -808,11 +1035,11 @@ Please note that this will not <em>install</em> any Windows updates. In order to
 
 Also note that you may be required to have specific Windows drivers for this image to work in your hardware. Be sure you inject those drivers when installing them. Those drivers are the default <code>*.inf</code> files.
 
-<h5 id="heading--mib-debug-windows">Debug</h5>
+<h4 id="heading--mib-debug-windows">Debug</h4>
 
 You can debug the Windows installation process by connecting to <code>localhost:5901</code> using a VNC client.
 
-<h5 id="heading--windows-image-install">Install into MAAS</h5>
+<h4 id="heading--windows-image-install">Install into MAAS</h4>
 
 The generated images need to be placed into the correct directories so MAAS can deploy them onto a node:
 
@@ -822,7 +1049,7 @@ The generated images need to be placed into the correct directories so MAAS can 
 
 Now, using the MAAS WebUI, a node can be selected to use Windows Hyper-V 2012 R2. This selection gets reset when a node is stopped, so make sure to set it _before_ starting nodes. You can also set the default operating system (and release) in the settings menu, which removes the need to set it per-node.
 
-<a href="#heading--other-custom-images"><h4 id="heading--other-custom-images">How to create other kinds of custom images</h4></a>
+<a href="#heading--other-custom-images"><h3 id="heading--other-custom-images">How to create other kinds of custom images</h3></a>
 
 To install other custom images, use the following command sequence:
 
