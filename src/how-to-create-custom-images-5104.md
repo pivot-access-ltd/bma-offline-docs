@@ -82,14 +82,14 @@ Note: LXD may prevent device files from being created when extracting the rootfs
 
 There are two methods for building custom images to be deployed to MAAS machines: MAAS Image Builder, and [packer](https://www.packer.io/).  This section will help you learn:
 
-- [About packer prequisites](#heading--about-packer-prequisites)
-- [About packer deployment requirements](#heading--about-packer-deployment-requirements)
-- [About customising images](#heading--about-customising-images)
-- [About building images via a proxy](#heading--about-building-images-via-a-proxy)
+- [How to verify packer prequisites](#heading--how-to-verify-packer-prequisites)
+- [How to verify packer deployment requirements](#heading--how-to-verify-packer-deployment-requirements)
+- [How to customise images](#heading--how-to-customise-images)
+- [How to build images via a proxy](#heading--how-to-build-images-via-a-proxy)
 - [How to use packer to build MAAS images](#heading--how-to-use-packer-to-build-maas-images)
 - [How to use MAAS Image Builder to build MAAS images](#heading--how-to-use-maas-image-builder-to-build-maas-images)
 
-<a href="#heading--about-packer-prequisites"><h3 id="heading--about-packer-prequisites">About packer prequisites</h3></a>
+<a href="#heading--how-to-verify-packer-prequisites"><h3 id="heading--how-to-verify-packer-prequisites">How to verify packer prequisites</h3></a>
 
 The following are required to to create a packer MAAS image:
 
@@ -97,18 +97,27 @@ The following are required to to create a packer MAAS image:
 * Various dependencies required by the chosen template (see the template directory for details)
 * [Packer](https://www.packer.io/intro/getting-started/install.html)
 
-<a href="#heading--about-packer-deployment-requirements"><h3 id="heading--about-packer-deployment-requirements">About packer deployment requirements</h3></a>
+As an example for this article, we will be building a custom Ubuntu image from the default template, which has the following prerequisites:
+
+- qemu-utils
+- qemu-system
+- ovmf
+- cloud-image-utils
+
+Note that these requirements may vary by template and target image.
+
+<a href="#heading--how-to-verify-packer-deployment-requirements"><h3 id="heading--how-to-verify-packer-deployment-requirements">How to verfiy packer deployment requirements</h3></a>
 
 The following are required to deploy a packer MAAS image:
 
 * [MAAS](https://maas.io) 3.0+
 * [Curtin](https://launchpad.net/curtin) 21.0+
 
-<a href="#heading--about-customising-images"><h3 id="heading--about-customising-images">About customising images</h3></a>
+<a href="#heading--how-to-customise-images"><h3 id="heading--heading--how-to-customise-images">How to customise images</h3></a>
 
 It is possible to customize the image either during the Ubuntu installation, or afterwards (before packing the final image). The former is done by providing [autoinstall config](https://ubuntu.com/server/docs/install/autoinstall), editing the _user-data-flat_ and _user-data-lvm_ files. The latter is performed by the _install-custom-packages_ script.
 
-<a href="#heading--about-building-images-via-a-proxy"><h3 id="heading--about-building-images-via-a-proxy">About building images via a proxy</h3></a>
+<a href="#heading--how-to-build-images-via-a-proxy"><h3 id="heading--how-to-build-images-via-a-proxy">How to build images via a proxy</h3></a>
 
 The Packer template downloads the Ubuntu net installer from the Internet. To tell Packer to use a proxy, set the HTTP_PROXY environment variable to your proxy server. Alternatively, you may redefine iso_url to a local file, set iso_checksum_type to none to disable the checksums, and remove iso_checksum_url.
 
@@ -118,12 +127,12 @@ The Packer template downloads the Ubuntu net installer from the Internet. To tel
 
 Currently, templates are available for:
 
+- Ubuntu custom images
 - CentOS6
 - CentOS7
 - CentOS8
 - RHEL7
 - RHEL8
-- Ubuntu custom images
 - VMWare EXSi
 
 This section will help you learn:
@@ -142,7 +151,16 @@ Packer is easily installed from its Debian package:
 sudo apt install packer
 ```
 
-It should install without additional prompts.  You should also install any dependencies required by the template you've chosen.
+For this example Ubuntu template, the following dependencies should also be installed -- but note that these dependencies may vary by template and/or target image:
+
+```nohighlight
+sudo apt install qemu-utils
+sudo apt install qemu-system
+sudo apt install ovmf
+sudo apt install cloud-image-utils
+```
+
+All of these should install without additional prompts.
 
 <a href="#heading--how-to-obtain-templates"><h4 id="heading--how-to-obtain-templates">How to obtain templates</h4></a>
 

@@ -376,40 +376,48 @@
 While it may be possible to deploy a certain image with MAAS, the particular use case may not be supported by that image’s vendor due to licensing or technical reasons. Canonical recommends that, whenever possible, you should customise machines using cloud-init user_data or Curtin preseed data, instead of creating a custom image.</p>
 <p>There are two methods for building custom images to be deployed to MAAS machines: MAAS Image Builder, and <a href="https://www.packer.io/">packer</a>.  This section will help you learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--about-packer-prequisites">About packer prequisites</a></li>
-<li><a href="#heading--about-packer-deployment-requirements">About packer deployment requirements</a></li>
-<li><a href="#heading--about-customising-images">About customising images</a></li>
-<li><a href="#heading--about-building-images-via-a-proxy">About building images via a proxy</a></li>
+<li><a href="#heading--how-to-verify-packer-prequisites">How to verify packer prequisites</a></li>
+<li><a href="#heading--how-to-verify-packer-deployment-requirements">How to verify packer deployment requirements</a></li>
+<li><a href="#heading--how-to-customise-images">How to customise images</a></li>
+<li><a href="#heading--how-to-build-images-via-a-proxy">How to build images via a proxy</a></li>
 <li><a href="#heading--how-to-use-packer-to-build-maas-images">How to use packer to build MAAS images</a></li>
 <li><a href="#heading--how-to-use-maas-image-builder-to-build-maas-images">How to use MAAS Image Builder to build MAAS images</a></li>
 </ul>
-<p><a href="#heading--about-packer-prequisites"><h3 id="heading--about-packer-prequisites">About packer prequisites</h3></a></p>
+<p><a href="#heading--how-to-verify-packer-prequisites"><h3 id="heading--how-to-verify-packer-prequisites">How to verify packer prequisites</h3></a></p>
 <p>The following are required to to create a packer MAAS image:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>A machine running Ubuntu 18.04+ or higher with the ability to run KVM virtual machines.</li>
 <li>Various dependencies required by the chosen template (see the template directory for details)</li>
 <li><a href="https://www.packer.io/intro/getting-started/install.html">Packer</a></li>
 </ul>
-<p><a href="#heading--about-packer-deployment-requirements"><h3 id="heading--about-packer-deployment-requirements">About packer deployment requirements</h3></a></p>
+<p>As an example for this article, we will be building a custom Ubuntu image from the default template, which has the following prerequisites:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>qemu-utils</li>
+<li>qemu-system</li>
+<li>ovmf</li>
+<li>cloud-image-utils</li>
+</ul>
+<p>Note that these requirements may vary by template and target image.</p>
+<p><a href="#heading--how-to-verify-packer-deployment-requirements"><h3 id="heading--how-to-verify-packer-deployment-requirements">How to verfiy packer deployment requirements</h3></a></p>
 <p>The following are required to deploy a packer MAAS image:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="https://maas.io">MAAS</a> 3.0+</li>
 <li><a href="https://launchpad.net/curtin">Curtin</a> 21.0+</li>
 </ul>
-<p><a href="#heading--about-customising-images"><h3 id="heading--about-customising-images">About customising images</h3></a></p>
+<p><a href="#heading--how-to-customise-images"><h3 id="heading--heading--how-to-customise-images">How to customise images</h3></a></p>
 <p>It is possible to customize the image either during the Ubuntu installation, or afterwards (before packing the final image). The former is done by providing <a href="https://ubuntu.com/server/docs/install/autoinstall">autoinstall config</a>, editing the <em>user-data-flat</em> and <em>user-data-lvm</em> files. The latter is performed by the <em>install-custom-packages</em> script.</p>
-<p><a href="#heading--about-building-images-via-a-proxy"><h3 id="heading--about-building-images-via-a-proxy">About building images via a proxy</h3></a></p>
+<p><a href="#heading--how-to-build-images-via-a-proxy"><h3 id="heading--how-to-build-images-via-a-proxy">How to build images via a proxy</h3></a></p>
 <p>The Packer template downloads the Ubuntu net installer from the Internet. To tell Packer to use a proxy, set the HTTP_PROXY environment variable to your proxy server. Alternatively, you may redefine iso_url to a local file, set iso_checksum_type to none to disable the checksums, and remove iso_checksum_url.</p>
 <p><a href="#heading--how-to-use-packer-to-build-maas-images"><h3 id="heading--how-to-use-packer-to-build-maas-images">How to use packer to build MAAS images</h3></a></p>
 <p><a href="https://www.packer.io/">Packer</a> can be used to build images to be deployed by MAAS.  In order to use packer, you must have a <a href="https://github.com/canonical/packer-maas">packer template</a> for the OS version you intend to build.</p>
 <p>Currently, templates are available for:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
+<li>Ubuntu custom images</li>
 <li>CentOS6</li>
 <li>CentOS7</li>
 <li>CentOS8</li>
 <li>RHEL7</li>
 <li>RHEL8</li>
-<li>Ubuntu custom images</li>
 <li>VMWare EXSi</li>
 </ul>
 <p>This section will help you learn:</p>
@@ -423,7 +431,13 @@ While it may be possible to deploy a certain image with MAAS, the particular use
 <p>Packer is easily installed from its Debian package:</p>
 <pre><code class="language-nohighlight">sudo apt install packer
 </code></pre>
-<p>It should install without additional prompts.  You should also install any dependencies required by the template you&rsquo;ve chosen.</p>
+<p>For this example Ubuntu template, the following dependencies should also be installed &ndash; but note that these dependencies may vary by template and/or target image:</p>
+<pre><code class="language-nohighlight">sudo apt install qemu-utils
+sudo apt install qemu-system
+sudo apt install ovmf
+sudo apt install cloud-image-utils
+</code></pre>
+<p>All of these should install without additional prompts.</p>
 <p><a href="#heading--how-to-obtain-templates"><h4 id="heading--how-to-obtain-templates">How to obtain templates</h4></a></p>
 <p>You can obtain the packer templates by cloning the <a href="https://github.com/canonical/packer-maas.git">packer-maas github repository</a>, like this:</p>
 <pre><code class="language-nohighlight">git clone https://github.com/canonical/packer-maas.git
