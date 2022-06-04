@@ -992,7 +992,7 @@ The appropriate packer template can be found in the subdirectory `vmware-esxi` i
 
 The deployment image may be customized by modifying `packer-maas/vmware-esxi/KS.CFG` see Installation and Upgrade Scripts in the [VMware ESXi installation and Setup manual](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-67-installation-setup-guide.pdf) for more information.
 
-# Build the ESXi image
+### Build the ESXi image
 
 You can easily build the image using the Makefile:
 
