@@ -92,6 +92,7 @@ There are two methods for building custom images to be deployed to MAAS machines
 - [How to pack a RHEL8 image for MAAS deployment](#heading--how-to-pack-a-rhel8-image-for-maas-deployment)
 - [How to pack a CentOS 7 image for MAAS deployment](#heading--how-to-pack-a-centos7-image-for-maas-deployment)
 - [How to pack a CentOS 8 image for MAAS deployment](#heading--how-to-pack-a-centos8-image-for-maas-deployment)
+- [How to pack an ESXi image for MAAS deployment](#heading--how-to-pack-an-exsi-image-for-maas-deployment)
 - [How to use MAAS Image Builder to build MAAS images](#heading--how-to-use-maas-image-builder-to-build-maas-images)
 
 <a href="#heading--how-to-verify-packer-prequisites"><h3 id="heading--how-to-verify-packer-prequisites">How to verify packer prequisites</h3></a>
@@ -720,7 +721,7 @@ This package should install with no additional prompts.
 
 The packer template in the directory `centos7` subdirectory creates a CentOS 7 AMD64 image for use with MAAS.
 
-### Customizing the image, if desired
+### Customise the image, if desired
 
 The deployment image may be customized by modifying http/centos7.ks. See the CentOS kickstart documentation for more information.
 
@@ -895,6 +896,131 @@ open-gannet  nk7x8y  on     Deployed  admin  custom  centos8-raw
 ### Log into your deployed image and verify that it's right
 
 You should log into your newly-deployed image and verify that it has all the customisations you added to the build process.  The default username for packer-created CentOS 8 images is `centos`.
+
+<a href="#heading--how-to-pack-an-exsi-image-for-maas-deployment"><h2 id="heading--how-to-pack-an-exsi-image-for-maas-deployment">How to pack an ESXi image for MAAS deployment</h2></a>
+
+You can create an ESXi image for MAAS deployment via the following procedure. MAAS cannot directly deploy the VMware ESXi ISO; a specialized image must be created from the ISO. Canonical has created a Packer template to automatically do this for you.
+
+### Verify the requirements and accept the limitations
+
+VMware ESXi has a specific set of requirements and limitations which are more stringent than MAAS.
+
+#### Basic requirements
+
+The machine building the deployment image must be a GNU/Linux host with a dual core x86_64 processor supporting hardware virtualization with at least 4GB of RAM and 10GB of disk space available. Additionally the qemu-kvm and qemu-utils packages must be installed on the build system.
+
+#### libvirt testing
+
+While VMware ESXi does not support running in any virtual machine it is possible to deploy to one. The libvirt machine must be a KVM instance with at least CPU 2 cores and 4GB of RAM. To give VMware ESXi access to hardware virtualization go into machine settings, CPUs, and select 'copy host CPU configuration.'
+
+VMware ESXi has no support for libvirt drivers.  Instead an emulated IDE disk and an emulated e1000 NIC must be used.
+
+#### Known storage limitations
+
+Only datastores may be configured using the devices available on the system. The first 9 partitions of the disk are reserved for VMware ESXi operating system usage.
+
+Also, VMware does not support cloning boot devices - you may run into issues triggered by non-unique UUID. This may lead to data corruption on VMFS datastores when using cloned boot devices.
+
+#### Known networking limitations
+
+Bridges are not supported in VMware ESXi. In addition, certain MAAS bond modes are mapped to VMware ESXi NIC team sharing with load balancing, as follows:
+
+- balance-rr - portid
+- active-backup - explicit
+- 802.3ad - iphash, LACP rate and XMIT hash policy settings are ignored.
+
+No other bond modes are currently supported.
+
+[note]
+**WARNING**: VMware ESXi does not allow VMs to use a PortGroup that has a VMK attached to it. All configured devices will have a VMK attached. To use a vSwitch with VMs you must leave a device or alias unconfigured in MAAS.
+[/note]
+
+#### Image fails to build due to qemu-nbd error
+
+If the image fails to build due to a `qemu-nbd` error, try disconnecting the device with: 
+
+```nohighlight
+$ sudo qemu-nbd -d /dev/nbd4
+```
+
+#### Prerequisites to create and deploy images
+
+- A machine running Ubuntu 18.04+ with the ability to run KVM virtual machines.
+- qemu-utils
+- Python Pip
+- Packer
+- The VMware ESXi installation ISO must be [downloaded manually](https://www.vmware.com/go/get-free-esxi).
+- MAAS 2.5 or above, MAAS 2.6 required for storage configuration
+
+### Install packer
+
+Packer is easily installed from its Debian package:
+
+```nohighlight
+sudo apt install packer
+```
+
+This should install with no additional prompts.
+
+### Install ESXi template dependencies
+
+```nohighlight
+sudo apt install qemu-utils
+```
+
+### Install Python `pip`, if not installed
+
+```nohighlight
+sudo apt install pip
+```
+
+### Get the available packer templates
+
+You can obtain the packer templates by cloning the [packer-maas github repository](https://github.com/canonical/packer-maas.git), like this:
+
+```nohighlight
+git clone https://github.com/canonical/packer-maas.git
+```
+
+Make sure to pay attention to where the repository is cloned. This package should install with no additional prompts.
+
+### Locate the ESXi template
+
+The appropriate packer template can be found in the subdirectory `vmware-esxi` in the packer repository.
+
+### Customise the image, if desired
+
+The deployment image may be customized by modifying `packer-maas/vmware-esxi/KS.CFG` see Installation and Upgrade Scripts in the [VMware ESXi installation and Setup manual](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-67-installation-setup-guide.pdf) for more information.
+
+# Build the ESXi image
+
+You can easily build the image using the Makefile:
+
+```nohighlight
+$ make ISO=/path/to/VMware-VMvisor-Installer-6.7.0.update03-14320388.x86_64.iso
+````
+
+### Alternative: Run packer manually
+
+Alternatively, you can manually run packer. Your current working directory must be in `packer-maas/vmware-esxi`, where this file is located. Once in `packer-maas/vmware-esxi`, you can generate an image with:
+
+```nohighlight
+$ sudo PACKER_LOG=1 packer build -var 'vmware_esxi_iso_path=/path/to/VMware-VMvisor-Installer-6.7.0.update03-14320388.x86_64.iso' vmware-esxi.json
+```
+
+[note]
+`vmware-esxi.json` is configured to runpPacker in headless mode. Only packer output will be seen. If you wish to see the installation outputj, connect to the VNC port given in the packer output, or remove the line containing "headless" in `vmware-esxi.json`.
+[/note]
+
+Installation is non-interactive.
+
+### Upload the ESXi image to MAAS
+
+You can upload the ESXi image to MAAS with the following command:
+
+```nohighlight
+$ maas $PROFILE boot-resources create name='esxi/6.7' title='VMware ESXi 6.7' architecture='amd64/generic' filetype='ddgz' content@=vmware-esxi.dd.gz
+```
 
 <a href="#heading--how-to-use-maas-image-builder-to-build-maas-images"><h2 id="heading--how-to-use-maas-image-builder-to-build-maas-images">How to use MAAS Image Builder to build MAAS images</h2></a>
 
