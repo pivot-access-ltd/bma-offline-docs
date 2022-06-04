@@ -382,6 +382,7 @@ While it may be possible to deploy a certain image with MAAS, the particular use
 <li><a href="#heading--how-to-build-images-via-a-proxy">How to build images via a proxy</a></li>
 <li><a href="#heading--how-to-use-packer-to-build-maas-images">How to use packer to build MAAS images</a></li>
 <li><a href="#heading--how-to-pack-an-ubuntu-image-for-maas-deployment">How to pack an Ubuntu image for MAAS deployment</a></li>
+<li><a href="#heading--how-to-pack-a-rhel7-image-for-maas-deployment">How to pack a RHEL7 image for MAAS deployment</a></li>
 <li><a href="#heading--how-to-use-maas-image-builder-to-build-maas-images">How to use MAAS Image Builder to build MAAS images</a></li>
 </ul>
 <p><a href="#heading--how-to-verify-packer-prequisites"><h3 id="heading--how-to-verify-packer-prequisites">How to verify packer prequisites</h3></a></p>
@@ -617,6 +618,72 @@ open-gannet  nk7x8y  on     Deployed  admin  custom  ubuntu-raw
 </code></pre>
 <h3>Log into your deployed image and verify that it&rsquo;s right</h3>
 <p>You should log into your newly-deployed image and verify that it has all the customisations you added to the build process.  The default username for packer-created images is <code>ubuntu</code>, the same as the default username for other MAAS images.</p>
+<p><a href="#heading--how-to-pack-a-rhel7-image-for-maas-deployment"><h2 id="heading--how-to-pack-a-rhel7-image-for-maas-deployment">How to pack a RHEL7 image for MAAS deployment</h2></a></p>
+<p>You can create a RHEL7 image for MAAS deployment via the following procedure.</p>
+<h3>Verify the requirements</h3>
+<p>To create a RHEL7 image to upload to MAAS, you must have a machine running Ubuntu 18.04+ or higher with the ability to run KVM virtual machines.  You must also aquire the following items, as described in later instructions:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>qemu-utils</li>
+<li>packer</li>
+<li>The RHEL 7 DVD ISO</li>
+</ul>
+<p>To deploy the image to MAAS, you must also have:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>MAAS 2.3+</li>
+<li>Curtin 18.1-59+</li>
+</ul>
+<h3>Install packer</h3>
+<p>Packer is easily installed from its Debian package:</p>
+<pre><code class="language-nohighlight">sudo apt install packer
+</code></pre>
+<p>This should install with no additional prompts.</p>
+<h3>Install RHEL7 template dependencies</h3>
+<pre><code class="language-nohighlight">sudo apt install qemu-utils
+</code></pre>
+<h3>Get the available packer templates</h3>
+<p>You can obtain the packer templates by cloning the <a href="https://github.com/canonical/packer-maas.git">packer-maas github repository</a>, like this:</p>
+<pre><code class="language-nohighlight">git clone https://github.com/canonical/packer-maas.git
+</code></pre>
+<p>Make sure to pay attention to where the repository is cloned.  The Packer template in this cloned repository creates a Ubuntu AMD64 image for use with MAAS.</p>
+<p>This package should install with no additional prompts.</p>
+<h3>Locate the RHEL7 template</h3>
+<p>The packer template in the directory <code>rhel7</code> subdirectory creates a RHEL 7 AMD64 image for use with MAAS.</p>
+<h3>Obtain the RHEL7 DVD ISO</h3>
+<p>Download the <a href="https://developers.redhat.com/products/rhel/download">RHEL7 DVD ISO</a> to your <code>rhel7</code> subdirectory. </p>
+<h3>Customizing the image, if desired</h3>
+<p>The deployment image may be customized by modifying http/rhel7.ks. See the CentOS kickstart documentation for more information.</p>
+<h3>Set up a proxy for building the image, if desired</h3>
+<p>The Packer template pulls all packages from the DVD except for Canonical&rsquo;s cloud-init repository. To use a proxy during the installation add the &ndash;proxy=$HTTP_PROXY flag to every line starting with url or repo in http/rhel7.ks. Alternatively you may set the &ndash;mirrorlist values to a local mirror.</p>
+<h3>Build the RHEL7 image</h3>
+<p>You can easily build the image using the Makefile:</p>
+<pre><code class="language-nohighlight">$ make ISO=/PATH/TO/rhel-server-7.9-x86_64-dvd.iso
+</code></pre>
+<p>This process is non-interactive and may take some time (3-5 minutes) to successfully boot the image and complete the build.  Do not be concerned about SSH errors while the builder is attempting to establish an SSH connection with the running VM; this is normal.</p>
+<h3>Alternative: Run packer manually</h3>
+<p>Alternatively, you can manually run packer. Your current working directory must be in <code>packer-maas/rhel7</code>, where this file is located. Once in <code>packer-maas/rhel7</code>, you can generate an image with:</p>
+<pre><code class="language-nohighlight">$ sudo PACKER_LOG=1 packer build -var 'rhel7_iso_path=/PATH/TO/rhel-server-7.9-x86_64-dvd.iso' rhel7.json
+</code></pre>
+<p><strong>NOTE:</strong> 
+<code>rhel7.json</code> is configured to run Packer in headless mode. Only Packer output will be seen. If you wish to see the installation output, connect to the VNC port given in the Packer output or change the value of headless to false in <code>rhel7.json</code>.</p>
+<h3>Upload the RHEL7 image to MAAS</h3>
+<p>You can upload the RHEL7 raw packer image with the following command:</p>
+<pre><code class="language-nohighlight">$ maas $PROFILE boot-resources create
+name='rhel/7-custom' title='RHEL 7 Custom' architecture='amd64/generic' filetype='tgz' content@=rhel7.tar.gz
+</code></pre>
+<h3>Verify your custom image</h3>
+<p>Before relying on it in production, you should test your custom image by deploying it to a test (virtual) machine.  It&rsquo;s the machine named <code>open-gannet</code> in this listing:</p>
+<pre><code class="language-nohighlight">maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
+&quot;OWNER&quot;, &quot;OS&quot;, &quot;DISTRO&quot;] | (., map(length*&quot;-&quot;))),
+(.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;,
+.osystem, .distro_series]) | @tsv' | column -t
+
+HOSTNAME     SYSID   POWER  STATUS    OWNER  OS      DISTRO
+--------     -----   -----  ------    -----  --      ------
+valued-moth  e86c7h  on     Deployed  admin  ubuntu  focal
+open-gannet  nk7x8y  on     Deployed  admin  custom  rhel7-raw
+</code></pre>
+<h3>Log into your deployed image and verify that it&rsquo;s right</h3>
+<p>You should log into your newly-deployed image and verify that it has all the customisations you added to the build process.  The default username for packer-created RHEL images is <code>cloud-user</code>.</p>
 <p><a href="#heading--how-to-use-maas-image-builder-to-build-maas-images"><h3 id="heading--how-to-use-maas-image-builder-to-build-maas-images">How to use MAAS Image Builder to build MAAS images</h3></a></p>
 <p>MAAS Image Builder is an older tool, still required to build some images (e.g., Windows images).  Wherever possible, we recommend you use <code>packer</code>, as described above.</p>
 <p><strong>NOTE:</strong> 
