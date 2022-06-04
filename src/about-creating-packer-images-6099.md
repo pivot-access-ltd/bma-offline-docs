@@ -1,7 +1,4 @@
-<!-- "About creating packer images" -->
-
-<a href="#heading--about-creating-packer-images-for-maas"><h2 id="heading--about-creating-packer-images-for-maas">About creating packer images for MAAS</h2></a>
-
+<!-- "About creating custom images" -->
 You can create and customize your own images for MAAS using [packer](https://www.packer.io), with [Canonical-provided templates](https://github.com/canonical/packer-maas).  It is also possible to create your own templates, using the [packer documentation](https://www.packer.io/docs), although that effort might be completely unsupported.
 
 [note]
@@ -10,7 +7,7 @@ While it may be possible to deploy a certain image with MAAS, the particular use
 
 This article gives a thumbnail sketch of how packer works, and explains how packer can be used to create custom images for deployment with MAAS.
 
-<a href="#heading--about-packer"><h3 id="heading--about-packer">About packer</h3></a>
+<a href="#heading--about-packer"><h2 id="heading--about-packer">About packer</h2></a>
 
 The [packer documentation](https://www.packer.io/docs) has an excellent, in-depth discussion of what packer does, how it works, and where it is limited.  Simply put, packer creates OS images that can be uploaded and deployed using MAAS. We can summarise packer with the following linearised flowchart:
 
@@ -34,7 +31,7 @@ We can walk through packer operation like this:
 
 Note that we said this flow is linearised.  You can see that provisioners might need to run before a post-processor creates an uploadable `tar.gz` image.  The actual flow depends on the template, which depends on the OS being customised into an image.  In the parlance of packer, all of these components -- builders, post-processors, provisioners -- are sometimes referred to collectively as "plugins".
     
-<a href="#heading--about-packer-dependencies"><h3 id="heading--about-packer-dependencies">About packer dependencies</h3></a>
+<a href="#heading--about-packer-dependencies"><h2 id="heading--about-packer-dependencies">About packer dependencies</h2></a>
 
 Depending upon which image you are building, packer-maas may require various dependencies.  For example, when customising an Ubuntu image, you'd need to install the following dependencies:
 
@@ -45,7 +42,7 @@ Depending upon which image you are building, packer-maas may require various dep
 
 These dependencies -- and the functionality they provide -- will be explained in the specific image sections which follow.
 
-<a href="#heading--about-packer-templates"><h3 id="heading--about-packer-templates">About packer templates</h3></a>
+<a href="#heading--about-packer-templates"><h2 id="heading--about-packer-templates">About packer templates</h2></a>
 
 A [packer template](https://www.packer.io/docs/templates) could just as easily be called a "packer script".  It contains declarations and commands that sequence and configure plugins.  Templates also have built-in functions to help you customise your artefacts. While packer is slowly transitioning to a dedicated language called HCL2, packer-maas still depends on JSON templates.
 
@@ -150,7 +147,7 @@ This template builds a customised Ubuntu image with packer:
 
 You can see that the sections match the general flow of a `packer` session: declarations (variables); builders; provisioners; and post-processors.  We can deconstruct these briefly to understand what the template is doing.  This will help explain the image creation process.
 
-<a href="#heading--variables"><h4 id="heading--variables">Variables (declaration section)</h4></a>
+<a href="#heading--variables"><h3 id="heading--variables">Variables (declaration section)</h3></a>
 
 The variables section of this template looks like this:
 
@@ -170,7 +167,7 @@ Most of this is straightforward.  We're going to use a base image of Ubuntu 20.0
 
 These declaration sections can get a lot more complicated, depending upon what's needed to make a clean image.  Note that most of the packer-maas templates are kept as simple as possible.
 
-<a href="#heading--builders"><h4 id="heading--builders">Builder section</h4></a>
+<a href="#heading--builders"><h3 id="heading--builders">Builder section</h3></a>
 
 The builders section of this template is a little more robust:
 
@@ -267,7 +264,7 @@ Finally, there is the "boot section" of the builder template:
 
 These two elements control how packer will attempt to boot the newly-built image.  Notice that the boot command, in particular, is extremely complex.  Getting a packer-generated image to boot for provisioning is one of the most difficult elements of template design.
 
-<a href="#heading--provisioners"><h4 id="heading--provisioners">Provisioner section</h4></a>
+<a href="#heading--provisioners"><h3 id="heading--provisioners">Provisioner section</h3></a>
 
 The provisioner section of this simple template looks something like this:
 
@@ -311,7 +308,7 @@ Rather than walking through each of these lines individually, we can just note t
 
 If you are interested in more details, you can [examine the scripts](https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts) to see what they do.
 
-<a href="#heading--post-processing"><h4 id="heading--post-processing">Post-processing section</h4></a>
+<a href="#heading--post-processing"><h3 id="heading--post-processing">Post-processing section</h3></a>
 
 The post-processing section of this template prepares the image for use:
 
@@ -455,7 +452,7 @@ This script just creates a `.tar.gz` from a bound `/dev/nbd` device (where the Q
 
 As you can see, the process of creating a customised packer image is not overly complex.  Nevertheless, it's a difficult process to get right, hence our community-contributed templates.
 
-<a href="#heading--about-the-image-installation-process"><h3 id="heading--about-the-image-installation-process">About the image installation process</h3></a>
+<a href="#heading--about-the-image-installation-process"><h2 id="heading--about-the-image-installation-process">About the image installation process</h2></a>
 
 Installing a packer-created image is highly dependent on the application.  In the case of MAAS, we use the CLI `boot-resources` command to upload the image to MAAS, something like this:
 
@@ -470,7 +467,7 @@ $ maas admin boot-resources create \
 
 At this point, the image shows up in MAAS, synced to the controller, the same as any other image.
 
-<a href="#heading--about-packer-created-images"><h3 id="heading--about-packer-created-images">About packer-created images</h3></a>
+<a href="#heading--about-packer-created-images"><h2 id="heading--about-packer-created-images">About packer-created images</h2></a>
 
 If you're interested in the anatomy of a packer-created image, for example, an ISO image, you can use `isoinfo` to explore the image file.  The image should be found in the packer git repository, under `<imagename>/packer-cache`.  Ideally, it shouldn't differ too much from any other customised ISO image.  You can explore with a few of the `isoinfo` commands.  For example, you can read the primary volume descriptor like this:
 
