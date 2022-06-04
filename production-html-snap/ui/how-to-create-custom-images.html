@@ -374,7 +374,6 @@
 <p>MAAS supports deploying custom OS images.  Canonical provides both <a href="https://launchpad.net/maas-image-builder">lp:maas-image-builder</a> and <a href="https://github.com/canonical/packer-maas">gh:canonical/packer-maas</a> to support creating custom images. These custom images can include static Ubuntu images, created with whatever tool you choose, as well as other OS images.</p>
 <p><strong>NOTE:</strong> 
 While it may be possible to deploy a certain image with MAAS, the particular use case may not be supported by that image’s vendor due to licensing or technical reasons. Canonical recommends that, whenever possible, you should customise machines using cloud-init user_data or Curtin preseed data, instead of creating a custom image.</p>
-<p><a href="#heading--how-to-build-maas-images"><h2 id="heading--how-to-build-maas-images">How to build MAAS images</h2></a></p>
 <p>There are two methods for building custom images to be deployed to MAAS machines: MAAS Image Builder, and <a href="https://www.packer.io/">packer</a>.  This section will help you learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--about-packer-prequisites">About packer prequisites</a></li>
@@ -387,11 +386,8 @@ While it may be possible to deploy a certain image with MAAS, the particular use
 <p><a href="#heading--about-packer-prequisites"><h3 id="heading--about-packer-prequisites">About packer prequisites</h3></a></p>
 <p>The following are required to to create a packer MAAS image:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li>A machine running Ubuntu 18.04+ with the ability to run KVM virtual machines.</li>
-<li>qemu-utils</li>
-<li>qemu-system</li>
-<li>ovmf</li>
-<li>cloud-image-utils</li>
+<li>A machine running Ubuntu 18.04+ or higher with the ability to run KVM virtual machines.</li>
+<li>Various dependencies required by the chosen template (see the template directory for details)</li>
 <li><a href="https://www.packer.io/intro/getting-started/install.html">Packer</a></li>
 </ul>
 <p><a href="#heading--about-packer-deployment-requirements"><h3 id="heading--about-packer-deployment-requirements">About packer deployment requirements</h3></a></p>
@@ -427,23 +423,7 @@ While it may be possible to deploy a certain image with MAAS, the particular use
 <p>Packer is easily installed from its Debian package:</p>
 <pre><code class="language-nohighlight">sudo apt install packer
 </code></pre>
-<p>It should install without additional prompts.</p>
-<p><a href="#heading--how-to-install-qemu-utils"><h5 id="heading--how-to-install-qemu-utils">How to install qemu-utils</h5></a></p>
-<p>You can install <code>qemu-utils</code> from Debian packages as follows:</p>
-<pre><code class="language-nohighlight">sudo apt install qemu-utils
-</code></pre>
-<p><a href="#heading--how-to-install-qemu-system"><h5 id="heading--how-to-install-qemu-system">How to install qemu-system</h5></a></p>
-<p>You can install <code>qemu-system</code> from Debian packages as follows:</p>
-<pre><code class="language-nohighlight">sudo apt install qemu-system
-</code></pre>
-<p><a href="#heading--how-to-install-ovmf"><h5 id="heading--how-to-install-ovmf">How to install ovmf</h5></a></p>
-<p>You can install <code>ovmf</code> from Debian packages as follows:</p>
-<pre><code class="language-nohighlight">sudo apt install ovmf
-</code></pre>
-<p><a href="#heading--how-to-install-cloud-image-utils"><h5 id="heading--how-to-install-cloud-image-utils">How to install cloud-image-utils</h5></a></p>
-<p>You can install <code>cloud-image-utils</code> from Debian packages as follows:</p>
-<pre><code class="language-nohighlight">sudo apt install cloud-image-utils
-</code></pre>
+<p>It should install without additional prompts.  You should also install any dependencies required by the template you&rsquo;ve chosen.</p>
 <p><a href="#heading--how-to-obtain-templates"><h4 id="heading--how-to-obtain-templates">How to obtain templates</h4></a></p>
 <p>You can obtain the packer templates by cloning the <a href="https://github.com/canonical/packer-maas.git">packer-maas github repository</a>, like this:</p>
 <pre><code class="language-nohighlight">git clone https://github.com/canonical/packer-maas.git

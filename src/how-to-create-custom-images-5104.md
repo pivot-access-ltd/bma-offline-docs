@@ -74,10 +74,11 @@ Note: LXD may prevent device files from being created when extracting the rootfs
     Note: Ubuntu release names and versions are reserved
     `maas $PROFILE boot-resources create name='custom/focal-custom' title='Ubuntu 20.04 Custom Image' architecture='amd64/generic' filetype='tgz' content@=~/focal-custom.tgz`
 - Configure and deploy as normal
-[/tab]
-[/tabs]
 
 <a href="#heading--how-to-build-maas-images"><h2 id="heading--how-to-build-maas-images">How to build MAAS images</h2></a>
+
+[/tab]
+[/tabs]
 
 There are two methods for building custom images to be deployed to MAAS machines: MAAS Image Builder, and [packer](https://www.packer.io/).  This section will help you learn:
 
@@ -92,11 +93,8 @@ There are two methods for building custom images to be deployed to MAAS machines
 
 The following are required to to create a packer MAAS image:
 
-* A machine running Ubuntu 18.04+ with the ability to run KVM virtual machines.
-* qemu-utils
-* qemu-system
-* ovmf
-* cloud-image-utils
+* A machine running Ubuntu 18.04+ or higher with the ability to run KVM virtual machines.
+* Various dependencies required by the chosen template (see the template directory for details)
 * [Packer](https://www.packer.io/intro/getting-started/install.html)
 
 <a href="#heading--about-packer-deployment-requirements"><h3 id="heading--about-packer-deployment-requirements">About packer deployment requirements</h3></a>
@@ -144,39 +142,7 @@ Packer is easily installed from its Debian package:
 sudo apt install packer
 ```
 
-It should install without additional prompts.
-
-<a href="#heading--how-to-install-qemu-utils"><h5 id="heading--how-to-install-qemu-utils">How to install qemu-utils</h5></a>
-
-You can install `qemu-utils` from Debian packages as follows:
-
-```nohighlight
-sudo apt install qemu-utils
-```
-
-<a href="#heading--how-to-install-qemu-system"><h5 id="heading--how-to-install-qemu-system">How to install qemu-system</h5></a>
-
-You can install `qemu-system` from Debian packages as follows:
-
-```nohighlight
-sudo apt install qemu-system
-```
-
-<a href="#heading--how-to-install-ovmf"><h5 id="heading--how-to-install-ovmf">How to install ovmf</h5></a>
-
-You can install `ovmf` from Debian packages as follows:
-
-```nohighlight
-sudo apt install ovmf
-```
-
-<a href="#heading--how-to-install-cloud-image-utils"><h5 id="heading--how-to-install-cloud-image-utils">How to install cloud-image-utils</h5></a>
-
-You can install `cloud-image-utils` from Debian packages as follows:
-
-```nohighlight
-sudo apt install cloud-image-utils
-```
+It should install without additional prompts.  You should also install any dependencies required by the template you've chosen.
 
 <a href="#heading--how-to-obtain-templates"><h4 id="heading--how-to-obtain-templates">How to obtain templates</h4></a>
 
@@ -195,7 +161,6 @@ This subsection will help you learn:
 - [How to build a packer image](#heading--how-to-build-a-packer-image)
 - [How to upload packer images to MAAS](#heading--how-to-upload-packer-images-to-maas)
 - [About the default image username](#heading--about-the-default-image-username)
-
 
 <a href="#heading--how-to-build-a-packer-raw-image"><h5 id="heading--how-to-build-a-packer-raw-image">How to build a packer raw image</h5></a>
 
