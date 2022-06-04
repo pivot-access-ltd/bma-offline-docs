@@ -370,26 +370,47 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to troubleshoot MAAS</h1><!-- "How to troubleshoot MAAS" -->
-<p>This section may help you deal with some common problems:</p>
+<p>This article may help you deal with some common problems.  It is organized by topic:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--networking-issues">Networking issues</a></li>
+<li><a href="#headiing--machine-life-cycle-failures">Machine life-cycle failures</a></li>
+<li><a href="#heading--custom-image-creation-problems">Custom image creation problems</a></li>
+</ul>
+<p><a href="#heading--networking-issues"><h2 id="heading--networking-issues">Networking issues</h2></a></p>
+<p>The following networking issues may be creating problems for you:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--overlapping-subnets-can-break-deployments">Adding overlapping subnets in fabric can break deployments</a></li>
-<li><a href="#heading--commissioning-script-file-not-found">"File not found" when creating commissioning or node script with MAAS CLI</a></li>
-<li><a href="#heading--machine-login-issues">Can&rsquo;t login to machine after deployment</a></li>
-<li><a href="#heading--django-subarch-error">Subarchitecture error thrown by django</a></li>
+<li><a href="#heading--need-to-reconfigure-server-ip-address">Need to reconfigure server IP address</a></li>
+<li><a href="#heading--ibm-power-server-pxe-boot">Network boot an IBM Power server</a></li>
+<li><a href="#heading--maas-lxd-network-conflicts">Resolve MAAS/LXD DNS &amp; DHCP conflicts/network issues</a></li>
+</ul>
+<p>Please feel free to add other issues and solutions, if you have them.</p>
+<p><a href="#heading--machine-life-cycle-failures"><h2 id="heading--machine-life-cycle-failures">Machine life-cycle failures</h2></a></p>
+<p>When attempting to run a machine through its life-cycle, you may have encountered one of these issues:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--nodes-hang-on-commissioning">Nodes hang on &ldquo;Commissioning&rdquo;</a></li>
 <li><a href="#heading--node-deployment-fails">Node deployment fails</a></li>
 <li><a href="#heading--nodes-fail-to-pxe-boot">Nodes fail to PXE boot</a></li>
 <li><a href="#heading--cant-log-in-to-node">Can&rsquo;t log in to node</a></li>
+<li><a href="#heading--commissioning-script-file-not-found">"File not found" when creating commissioning or node script with MAAS CLI</a></li>
+<li><a href="#heading--machine-login-issues">Can&rsquo;t login to machine after deployment</a></li>
+</ul>
+<p>Please feel free to add other issues and solutions, if you have them.</p>
+<p><a href="#heading--custom-image-creation-problems"><h2 id="heading--custom-image-creation-problems">Custom image creation problems</h2></a></p>
+<p>You may have experienced these errors when trying to create custom images for MAAS:</p>
+<p>Please feel free to add other issues and solutions, if you have them.</p>
+<p><a href="#heading--misc-problems"><h2 id="heading--misc-problems">Miscellaneous issues</h2></a></p>
+<p>Finally, you may be facing an issue which doesn&rsquo;t fit into any category, such as one of these:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--django-subarch-error">Subarchitecture error thrown by django</a></li>
 <li><a href="#heading--forgot-maas-administrator-password">Forgot MAAS administrator password</a></li>
-<li><a href="#heading--need-to-reconfigure-server-ip-address">Need to reconfigure server IP address</a></li>
 <li><a href="#heading--cant-find-maas-web-ui">Can&rsquo;t find MAAS web UI</a></li>
 <li><a href="#heading--backdoor-image-login">Backdoor image login</a></li>
 <li><a href="#heading--migrating-maas">Migrate an existing snap installation to use a local PostgreSQL server</a></li>
 <li><a href="#heading--manual-export">Manually export the MAAS database</a></li>
-<li><a href="#heading--ibm-power-server-pxe-boot">Network boot an IBM Power server</a></li>
 <li><a href="#heading--jq-machine-list">Try jq recipes using the CLI</a></li>
-<li><a href="#heading--maas-lxd-network-conflicts">Resolve MAAS/LXD DNS &amp; DHCP conflicts/network issues</a></li>
 </ul>
+<p>Please feel free to add other issues and solutions, if you have them.</p>
 <p><a href="#heading--overlapping-subnets-can-break-deployments"><h2 id="heading--overlapping-subnets-can-break-deployments">Adding overlapping subnets in fabric can break deployments</h2></a></p>
 <p><strong>Characteristic failure</strong>: A machine performs PXE boot, then gets trapped in a boot loop, causing deployment to fail.</p>
 <p>MAAS does not currently prevent you from creating overlapping subnets, for example:</p>

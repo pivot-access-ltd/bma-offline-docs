@@ -1,23 +1,54 @@
 <!-- "How to troubleshoot MAAS" -->
-This section may help you deal with some common problems:
+This article may help you deal with some common problems.  It is organized by topic:
+
+- [Networking issues](#heading--networking-issues)
+- [Machine life-cycle failures](#headiing--machine-life-cycle-failures)
+- [Custom image creation problems](#heading--custom-image-creation-problems)
+
+<a href="#heading--networking-issues"><h2 id="heading--networking-issues">Networking issues</h2></a>
+
+The following networking issues may be creating problems for you:
 
 - [Adding overlapping subnets in fabric can break deployments](#heading--overlapping-subnets-can-break-deployments)
-- [\"File not found\" when creating commissioning or node script with MAAS CLI](#heading--commissioning-script-file-not-found)
-- [Can't login to machine after deployment](#heading--machine-login-issues)
-- [Subarchitecture error thrown by django](#heading--django-subarch-error)
+- [Need to reconfigure server IP address](#heading--need-to-reconfigure-server-ip-address)
+- [Network boot an IBM Power server](#heading--ibm-power-server-pxe-boot)
+- [Resolve MAAS/LXD DNS & DHCP conflicts/network issues](#heading--maas-lxd-network-conflicts)
+
+Please feel free to add other issues and solutions, if you have them.
+
+<a href="#heading--machine-life-cycle-failures"><h2 id="heading--machine-life-cycle-failures">Machine life-cycle failures</h2></a>
+
+When attempting to run a machine through its life-cycle, you may have encountered one of these issues:
+
 - [Nodes hang on "Commissioning"](#heading--nodes-hang-on-commissioning)
 - [Node deployment fails](#heading--node-deployment-fails)
 - [Nodes fail to PXE boot](#heading--nodes-fail-to-pxe-boot)
 - [Can't log in to node](#heading--cant-log-in-to-node)
+- [\"File not found\" when creating commissioning or node script with MAAS CLI](#heading--commissioning-script-file-not-found)
+- [Can't login to machine after deployment](#heading--machine-login-issues)
+
+Please feel free to add other issues and solutions, if you have them.
+
+<a href="#heading--custom-image-creation-problems"><h2 id="heading--custom-image-creation-problems">Custom image creation problems</h2></a>
+
+You may have experienced these errors when trying to create custom images for MAAS:
+
+
+Please feel free to add other issues and solutions, if you have them.
+
+<a href="#heading--misc-problems"><h2 id="heading--misc-problems">Miscellaneous issues</h2></a>
+
+Finally, you may be facing an issue which doesn't fit into any category, such as one of these:
+
+- [Subarchitecture error thrown by django](#heading--django-subarch-error)
 - [Forgot MAAS administrator password](#heading--forgot-maas-administrator-password)
-- [Need to reconfigure server IP address](#heading--need-to-reconfigure-server-ip-address)
 - [Can't find MAAS web UI](#heading--cant-find-maas-web-ui)
 - [Backdoor image login](#heading--backdoor-image-login)
 - [Migrate an existing snap installation to use a local PostgreSQL server](#heading--migrating-maas)
 - [Manually export the MAAS database](#heading--manual-export)
-- [Network boot an IBM Power server](#heading--ibm-power-server-pxe-boot)
 - [Try jq recipes using the CLI](#heading--jq-machine-list)
-- [Resolve MAAS/LXD DNS & DHCP conflicts/network issues](#heading--maas-lxd-network-conflicts)
+
+Please feel free to add other issues and solutions, if you have them.
 
 <a href="#heading--overlapping-subnets-can-break-deployments"><h2 id="heading--overlapping-subnets-can-break-deployments">Adding overlapping subnets in fabric can break deployments</h2></a>
 
