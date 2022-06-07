@@ -672,11 +672,7 @@ You may have to scroll down the page at the above link to find the RHEL7 version
 <p>Almost immediately, the terminal will prompt you for your user password (to access <code>sudo</code> rights).  Then, for a few minutes, you will encounter a stream <code>qemu</code> text similar to this:</p>
 <pre><code class="language-nohighlight">2022/06/07 13:28:00 packer-builder-qemu plugin: Qemu path: /usr/bin/qemu-system-x86_64, Qemu Image page: /usr/bin/qemu-img
 ==&gt; qemu: Retrieving ISO
-==&gt; qemu: Trying ./rhel-8.6-x86_64-dvd.iso
-2022/06/07 13:28:00 packer-builder-qemu plugin: Acquiring lock for: ./rhel-8.6-x86_64-dvd.iso (/home/stormrider/mnt/Dropbox/src/git/packer-maas/rhel8/packer_cache/4142f50427ed611570687aee099b796c00359ae6.iso.lock)
-==&gt; qemu: Trying ./rhel-8.6-x86_64-dvd.iso
 2022/06/07 13:28:00 packer-builder-qemu plugin: Leaving retrieve loop for ISO
-==&gt; qemu: ./rhel-8.6-x86_64-dvd.iso =&gt; /home/stormrider/mnt/Dropbox/src/git/packer-maas/rhel8/rhel-8.6-x86_64-dvd.iso
 2022/06/07 13:28:00 packer-builder-qemu plugin: No floppy files specified. Floppy disk will not be made.
 2022/06/07 13:28:00 packer-builder-qemu plugin: No CD files specified. CD disk will not be made.
 2022/06/07 13:28:00 packer-builder-qemu plugin: [INFO] Creating disk with Path: output-qemu/packer-qemu and Size: 4G
@@ -700,7 +696,7 @@ You may have to scroll down the page at the above link to find the RHEL7 version
     qemu: The VM will be run headless, without a GUI. If you want to
     qemu: view the screen of the VM, connect via VNC without a password to
     qemu: vnc://127.0.0.1:70
-2022/06/07 13:28:00 packer-builder-qemu plugin: Executing /usr/bin/qemu-system-x86_64: []string{&quot;-netdev&quot;, &quot;user,id=user.0&quot;, &quot;-vnc&quot;, &quot;127.0.0.1:70&quot;, &quot;-serial&quot;, &quot;stdio&quot;, &quot;-device&quot;, &quot;virtio-net,netdev=user.0&quot;, &quot;-drive&quot;, &quot;file=output-qemu/packer-qemu,if=virtio,cache=writeback,discard=ignore,format=qcow2&quot;, &quot;-drive&quot;, &quot;file=/home/stormrider/mnt/Dropbox/src/git/packer-maas/rhel8/rhel-8.6-x86_64-dvd.iso,media=cdrom&quot;, &quot;-boot&quot;, &quot;once=d&quot;, &quot;-name&quot;, &quot;packer-qemu&quot;, &quot;-machine&quot;, &quot;type=pc,accel=kvm&quot;, &quot;-m&quot;, &quot;2048M&quot;}
+2022/06/07 13:28:00 packer-builder-qemu plugin: Executing /usr/bin/qemu-system-x86_64: []string{&quot;-netdev&quot;, &quot;user,id=user.0&quot;, &quot;-vnc&quot;, &quot;127.0.0.1:70&quot;, &quot;-serial&quot;, &quot;stdio&quot;, &quot;-device&quot;, &quot;virtio-net,netdev=user.0&quot;, &quot;-drive&quot;, &quot;file=output-qemu/packer-qemu,if=virtio,cache=writeback,discard=ignore,format=qcow2&quot;, &quot;-drive&quot;, &quot;file=/home/stormrider/mnt/Dropbox/src/git/packer-maas/...
 ==&gt; qemu: Overriding default Qemu arguments with qemuargs template option...
 2022/06/07 13:28:00 packer-builder-qemu plugin: Started Qemu. Pid: 7970
 2022/06/07 13:28:00 packer-builder-qemu plugin: Qemu stderr: qemu-system-x86_64: warning: host doesn't support requested feature: CPUID.80000001H:ECX.svm [bit 2]
@@ -950,7 +946,77 @@ open-gannet  nk7x8y  on     Deployed  admin  custom  rhel8-raw
 <p>You can easily build the image using the Makefile:</p>
 <pre><code class="language-nohighlight">$ make
 </code></pre>
-<p>This process is non-interactive and may take some time (3-5 minutes) to successfully boot the image and complete the build.  Do not be concerned about SSH errors while the builder is attempting to establish an SSH connection with the running VM; this is normal.</p>
+<p>For a few minutes, you will encounter a stream <code>qemu</code> text similar to this:</p>
+<pre><code class="language-nohighlight">2022/06/07 13:28:00 packer-builder-qemu plugin: Qemu path: /usr/bin/qemu-system-x86_64, Qemu Image page: /usr/bin/qemu-img
+==&gt; qemu: Retrieving ISO
+2022/06/07 13:28:00 packer-builder-qemu plugin: Leaving retrieve loop for ISO
+2022/06/07 13:28:00 packer-builder-qemu plugin: No floppy files specified. Floppy disk will not be made.
+2022/06/07 13:28:00 packer-builder-qemu plugin: No CD files specified. CD disk will not be made.
+2022/06/07 13:28:00 packer-builder-qemu plugin: [INFO] Creating disk with Path: output-qemu/packer-qemu and Size: 4G
+2022/06/07 13:28:00 packer-builder-qemu plugin: Executing qemu-img: []string{&quot;create&quot;, &quot;-f&quot;, &quot;qcow2&quot;, &quot;output-qemu/packer-qemu&quot;, &quot;4G&quot;}
+2022/06/07 13:28:00 packer-builder-qemu plugin: stdout: Formatting 'output-qemu/packer-qemu', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=4294967296 lazy_refcounts=off refcount_bits=16
+2022/06/07 13:28:00 packer-builder-qemu plugin: stderr:
+2022/06/07 13:28:00 packer-builder-qemu plugin: Found available port: 8144 on IP: 0.0.0.0
+==&gt; qemu: Starting HTTP server on port 8144
+    qemu: No communicator is set; skipping port forwarding setup.
+==&gt; qemu: Looking for available port between 5900 and 6000 on 127.0.0.1
+2022/06/07 13:28:00 packer-builder-qemu plugin: Looking for available port between 5900 and 6000 on 127.0.0.1
+2022/06/07 13:28:00 packer-builder-qemu plugin: Found available port: 5970 on IP: 127.0.0.1
+2022/06/07 13:28:00 packer-builder-qemu plugin: Found available VNC port: 5970 on IP: 127.0.0.1
+2022/06/07 13:28:00 packer-builder-qemu plugin: Qemu --version output: QEMU emulator version 6.2.0 (Debian 1:6.2+dfsg-2ubuntu6)
+2022/06/07 13:28:00 packer-builder-qemu plugin: Copyright (c) 2003-2021 Fabrice Bellard and the QEMU Project developers
+2022/06/07 13:28:00 packer-builder-qemu plugin: Qemu version: 6.2.0
+==&gt; qemu: Starting VM, booting from CD-ROM
+    qemu: view the screen of the VM, connect via VNC without a password to
+    qemu: vnc://127.0.0.1:70
+2022/06/07 13:28:00 packer-builder-qemu plugin: Qemu Builder has no floppy files, not attaching a floppy.
+    qemu: The VM will be run headless, without a GUI. If you want to
+    qemu: view the screen of the VM, connect via VNC without a password to
+    qemu: vnc://127.0.0.1:70
+2022/06/07 13:28:00 packer-builder-qemu plugin: Executing /usr/bin/qemu-system-x86_64: []string{&quot;-netdev&quot;, &quot;user,id=user.0&quot;, &quot;-vnc&quot;, &quot;127.0.0.1:70&quot;, &quot;-serial&quot;, &quot;stdio&quot;, &quot;-device&quot;, &quot;virtio-net,netdev=user.0&quot;, &quot;-drive&quot;, &quot;file=output-qemu/packer-qemu,if=virtio,cache=writeback,discard=ignore,format=qcow2&quot;, &quot;-drive&quot;, &quot;file=/home/stormrider/mnt/Dropbox/src/git/packer-maas/...
+==&gt; qemu: Overriding default Qemu arguments with qemuargs template option...
+2022/06/07 13:28:00 packer-builder-qemu plugin: Started Qemu. Pid: 7970
+2022/06/07 13:28:00 packer-builder-qemu plugin: Qemu stderr: qemu-system-x86_64: warning: host doesn't support requested feature: CPUID.80000001H:ECX.svm [bit 2]
+==&gt; qemu: Waiting 3s for boot...
+==&gt; qemu: Connecting to VM via VNC (127.0.0.1:5970)
+2022/06/07 13:28:05 packer-builder-qemu plugin: Connected to VNC desktop: QEMU (packer-qemu)
+==&gt; qemu: Typing the boot command over VNC...
+2022/06/07 13:28:05 packer-builder-qemu plugin: Special code '&lt;up&gt;' found, replacing with: 0xFF52
+2022/06/07 13:28:06 packer-builder-qemu plugin: Special code '&lt;tab&gt;' found, replacing with: 0xFF09
+2022/06/07 13:28:06 packer-builder-qemu plugin: Sending char ' ', code 0x20, shift false
+2022/06/07 13:28:06 packer-builder-qemu plugin: Sending char 'i', code 0x69, shift false
+2022/06/07 13:28:06 packer-builder-qemu plugin: Sending char 'n', code 0x6E, shift false
+2022/06/07 13:28:06 packer-builder-qemu plugin: Sending char 's', code 0x73, shift false
+2022/06/07 13:28:07 packer-builder-qemu plugin: Sending char 't', code 0x74, shift false
+2022/06/07 13:28:07 packer-builder-qemu plugin: Sending char '.', code 0x2E, shift false
+</code></pre>
+<p>Eventually, the screen will clear and you will see an <code>anaconda</code> window.  Anaconda is the RedHat installer tool, which is preparing your custom image:</p>
+<pre><code class="language-nohighlight">7) [x] Network configuration             8) [ ] User creation
+       (Wired (ens3) connected)                 (No user will be created)
+2022/06/07 13:29:19 packer-builder-qemu plugin: Qemu stdout: 
+================================================================================
+================================================================================
+Progress07 13:29:19 packer-builder-qemu plugin: Qemu stdout: 
+2022/06/07 13:29:19 packer-builder-qemu plugin: Qemu stdout: 
+.022/06/07 13:29:20 packer-builder-qemu plugin: Qemu stdout: 
+2022/06/07 13:29:20 packer-builder-qemu plugin: Qemu stdout: Setting up the installation environment
+2022/06/07 13:29:20 packer-builder-qemu plugin: Qemu stdout: Setting up com_redhat_kdump addon
+2022/06/07 13:29:20 packer-builder-qemu plugin: Qemu stdout: Setting up org_fedora_oscap addon
+2022/06/07 13:29:20 packer-builder-qemu plugin: Qemu stdout: ..
+2022/06/07 13:29:23 packer-builder-qemu plugin: Qemu stdout: Configuring storage
+...2/06/07 13:29:20 packer-builder-qemu plugin: Qemu stdout: 
+Running pre-installation scriptser-qemu plugin: Qemu stdout:
+.022/06/07 13:29:23 packer-builder-qemu plugin: Qemu stdout: 
+Running pre-installation taskslder-qemu plugin: Qemu stdout:
+...2/06/07 13:29:24 packer-builder-qemu plugin: Qemu stdout: 
+2022/06/07 13:29:24 packer-builder-qemu plugin: Qemu stdout: Installing.
+2022/06/07 13:29:25 packer-builder-qemu plugin: Qemu stdout: Starting package installation process
+Downloading packagespacker-builder-qemu plugin: Qemu stdout: 
+2022/06/07 13:29:29 packer-builder-qemu plugin: Qemu stdout: 
+
+[anaconda]1:main* 2:shell  3:log  4:storage-log &gt;Switch tab: Alt+Tab | Help: F1 :shell  3:log  4:sto&gt;&lt;'echo -n &quot;Switch tab: Alt+Tab | Help: F
+</code></pre>
+<p>Anaconda will run for three to five minutes.  When it finishes, it will clear the screen and return you to the shell prompt.</p>
 <h3>Alternative: Run packer manually</h3>
 <p>Alternatively you can manually run packer. Your current working directory must be in packer-maas/centos7, where this file is located. Once in packer-maas/centos7 you can generate an image with:</p>
 <pre><code class="language-nohighlight">$ sudo PACKER_LOG=1 packer build centos7.json
@@ -1016,7 +1082,77 @@ open-gannet  nk7x8y  on     Deployed  admin  custom  centos7-raw
 <p>You can easily build the image using the Makefile:</p>
 <pre><code class="language-nohighlight">$ make
 </code></pre>
-<p>This process is non-interactive and may take some time (3-5 minutes) to successfully boot the image and complete the build.  Do not be concerned about SSH errors while the builder is attempting to establish an SSH connection with the running VM; this is normal.</p>
+<p>For a few minutes, you will encounter a stream <code>qemu</code> text similar to this:</p>
+<pre><code class="language-nohighlight">2022/06/07 13:28:00 packer-builder-qemu plugin: Qemu path: /usr/bin/qemu-system-x86_64, Qemu Image page: /usr/bin/qemu-img
+==&gt; qemu: Retrieving ISO
+2022/06/07 13:28:00 packer-builder-qemu plugin: Leaving retrieve loop for ISO
+2022/06/07 13:28:00 packer-builder-qemu plugin: No floppy files specified. Floppy disk will not be made.
+2022/06/07 13:28:00 packer-builder-qemu plugin: No CD files specified. CD disk will not be made.
+2022/06/07 13:28:00 packer-builder-qemu plugin: [INFO] Creating disk with Path: output-qemu/packer-qemu and Size: 4G
+2022/06/07 13:28:00 packer-builder-qemu plugin: Executing qemu-img: []string{&quot;create&quot;, &quot;-f&quot;, &quot;qcow2&quot;, &quot;output-qemu/packer-qemu&quot;, &quot;4G&quot;}
+2022/06/07 13:28:00 packer-builder-qemu plugin: stdout: Formatting 'output-qemu/packer-qemu', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=4294967296 lazy_refcounts=off refcount_bits=16
+2022/06/07 13:28:00 packer-builder-qemu plugin: stderr:
+2022/06/07 13:28:00 packer-builder-qemu plugin: Found available port: 8144 on IP: 0.0.0.0
+==&gt; qemu: Starting HTTP server on port 8144
+    qemu: No communicator is set; skipping port forwarding setup.
+==&gt; qemu: Looking for available port between 5900 and 6000 on 127.0.0.1
+2022/06/07 13:28:00 packer-builder-qemu plugin: Looking for available port between 5900 and 6000 on 127.0.0.1
+2022/06/07 13:28:00 packer-builder-qemu plugin: Found available port: 5970 on IP: 127.0.0.1
+2022/06/07 13:28:00 packer-builder-qemu plugin: Found available VNC port: 5970 on IP: 127.0.0.1
+2022/06/07 13:28:00 packer-builder-qemu plugin: Qemu --version output: QEMU emulator version 6.2.0 (Debian 1:6.2+dfsg-2ubuntu6)
+2022/06/07 13:28:00 packer-builder-qemu plugin: Copyright (c) 2003-2021 Fabrice Bellard and the QEMU Project developers
+2022/06/07 13:28:00 packer-builder-qemu plugin: Qemu version: 6.2.0
+==&gt; qemu: Starting VM, booting from CD-ROM
+    qemu: view the screen of the VM, connect via VNC without a password to
+    qemu: vnc://127.0.0.1:70
+2022/06/07 13:28:00 packer-builder-qemu plugin: Qemu Builder has no floppy files, not attaching a floppy.
+    qemu: The VM will be run headless, without a GUI. If you want to
+    qemu: view the screen of the VM, connect via VNC without a password to
+    qemu: vnc://127.0.0.1:70
+2022/06/07 13:28:00 packer-builder-qemu plugin: Executing /usr/bin/qemu-system-x86_64: []string{&quot;-netdev&quot;, &quot;user,id=user.0&quot;, &quot;-vnc&quot;, &quot;127.0.0.1:70&quot;, &quot;-serial&quot;, &quot;stdio&quot;, &quot;-device&quot;, &quot;virtio-net,netdev=user.0&quot;, &quot;-drive&quot;, &quot;file=output-qemu/packer-qemu,if=virtio,cache=writeback,discard=ignore,format=qcow2&quot;, &quot;-drive&quot;, &quot;file=/home/stormrider/mnt/Dropbox/src/git/packer-maas/...
+==&gt; qemu: Overriding default Qemu arguments with qemuargs template option...
+2022/06/07 13:28:00 packer-builder-qemu plugin: Started Qemu. Pid: 7970
+2022/06/07 13:28:00 packer-builder-qemu plugin: Qemu stderr: qemu-system-x86_64: warning: host doesn't support requested feature: CPUID.80000001H:ECX.svm [bit 2]
+==&gt; qemu: Waiting 3s for boot...
+==&gt; qemu: Connecting to VM via VNC (127.0.0.1:5970)
+2022/06/07 13:28:05 packer-builder-qemu plugin: Connected to VNC desktop: QEMU (packer-qemu)
+==&gt; qemu: Typing the boot command over VNC...
+2022/06/07 13:28:05 packer-builder-qemu plugin: Special code '&lt;up&gt;' found, replacing with: 0xFF52
+2022/06/07 13:28:06 packer-builder-qemu plugin: Special code '&lt;tab&gt;' found, replacing with: 0xFF09
+2022/06/07 13:28:06 packer-builder-qemu plugin: Sending char ' ', code 0x20, shift false
+2022/06/07 13:28:06 packer-builder-qemu plugin: Sending char 'i', code 0x69, shift false
+2022/06/07 13:28:06 packer-builder-qemu plugin: Sending char 'n', code 0x6E, shift false
+2022/06/07 13:28:06 packer-builder-qemu plugin: Sending char 's', code 0x73, shift false
+2022/06/07 13:28:07 packer-builder-qemu plugin: Sending char 't', code 0x74, shift false
+2022/06/07 13:28:07 packer-builder-qemu plugin: Sending char '.', code 0x2E, shift false
+</code></pre>
+<p>Eventually, the screen will clear and you will see an <code>anaconda</code> window.  Anaconda is the RedHat installer tool, which is preparing your custom image:</p>
+<pre><code class="language-nohighlight">7) [x] Network configuration             8) [ ] User creation
+       (Wired (ens3) connected)                 (No user will be created)
+2022/06/07 13:29:19 packer-builder-qemu plugin: Qemu stdout: 
+================================================================================
+================================================================================
+Progress07 13:29:19 packer-builder-qemu plugin: Qemu stdout: 
+2022/06/07 13:29:19 packer-builder-qemu plugin: Qemu stdout: 
+.022/06/07 13:29:20 packer-builder-qemu plugin: Qemu stdout: 
+2022/06/07 13:29:20 packer-builder-qemu plugin: Qemu stdout: Setting up the installation environment
+2022/06/07 13:29:20 packer-builder-qemu plugin: Qemu stdout: Setting up com_redhat_kdump addon
+2022/06/07 13:29:20 packer-builder-qemu plugin: Qemu stdout: Setting up org_fedora_oscap addon
+2022/06/07 13:29:20 packer-builder-qemu plugin: Qemu stdout: ..
+2022/06/07 13:29:23 packer-builder-qemu plugin: Qemu stdout: Configuring storage
+...2/06/07 13:29:20 packer-builder-qemu plugin: Qemu stdout: 
+Running pre-installation scriptser-qemu plugin: Qemu stdout:
+.022/06/07 13:29:23 packer-builder-qemu plugin: Qemu stdout: 
+Running pre-installation taskslder-qemu plugin: Qemu stdout:
+...2/06/07 13:29:24 packer-builder-qemu plugin: Qemu stdout: 
+2022/06/07 13:29:24 packer-builder-qemu plugin: Qemu stdout: Installing.
+2022/06/07 13:29:25 packer-builder-qemu plugin: Qemu stdout: Starting package installation process
+Downloading packagespacker-builder-qemu plugin: Qemu stdout: 
+2022/06/07 13:29:29 packer-builder-qemu plugin: Qemu stdout: 
+
+[anaconda]1:main* 2:shell  3:log  4:storage-log &gt;Switch tab: Alt+Tab | Help: F1 :shell  3:log  4:sto&gt;&lt;'echo -n &quot;Switch tab: Alt+Tab | Help: F
+</code></pre>
+<p>Anaconda will run for three to five minutes.  When it finishes, it will clear the screen and return you to the shell prompt.</p>
 <h3>Alternative: Run packer manually</h3>
 <p>Alternatively you can manually run packer. Your current working directory must be in packer-maas/centos8, where this file is located. Once in packer-maas/centos8 you can generate an image with:</p>
 <pre><code class="language-nohighlight">$ sudo PACKER_LOG=1 packer build centos8.json
