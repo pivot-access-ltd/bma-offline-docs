@@ -178,9 +178,9 @@ Note there is a trick for determining the correct machine login, which works on 
 
 You may have experienced these errors when trying to create custom images for MAAS:
 
-<a href="#heading--packer-not-found"><h3 id="heading--packer-not-found">Command 'packer' not found</h3></a>
-<a href="#heading--no-rule-for-ovmf"><h3 id="heading--no-rule-for-ovmf">No rule to make target ...OVMF_VARS.fd</h3></a>
-<a href="#heading--failed-creating-qemu-driver"><h3 id="heading--failed-creating-qemu-driver">Failure to create QEMU driver</h3></a>
+- [Command 'packer' not found](#heading--packer-not-found)
+- [No rule to make target ...OVMF_VARS.fd](#heading--no-rule-for-ovmf)
+- [Failure to create QEMU driver](#heading--failed-creating-qemu-driver)
 
 Please feel free to add other issues and solutions, if you have them.
 

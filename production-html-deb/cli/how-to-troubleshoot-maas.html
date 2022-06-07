@@ -501,9 +501,11 @@ Stderr: 'gpg: no valid OpenPGP data found.\n'
 <p>Note there is a trick for determining the correct machine login, which works on many different versions of Linux.  If you attempt to <code>ssh root@$MACHINE_IP</code>, this will fail, but often tells you which user you should be using. </p>
 <p><a href="#heading--custom-image-creation-problems"><h2 id="heading--custom-image-creation-problems">Custom image creation problems</h2></a></p>
 <p>You may have experienced these errors when trying to create custom images for MAAS:</p>
-<p><a href="#heading--packer-not-found"><h3 id="heading--packer-not-found">Command &lsquo;packer&rsquo; not found</h3></a>
-<a href="#heading--no-rule-for-ovmf"><h3 id="heading--no-rule-for-ovmf">No rule to make target &hellip;OVMF_VARS.fd</h3></a>
-<a href="#heading--failed-creating-qemu-driver"><h3 id="heading--failed-creating-qemu-driver">Failure to create QEMU driver</h3></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--packer-not-found">Command &lsquo;packer&rsquo; not found</a></li>
+<li><a href="#heading--no-rule-for-ovmf">No rule to make target &hellip;OVMF_VARS.fd</a></li>
+<li><a href="#heading--failed-creating-qemu-driver">Failure to create QEMU driver</a></li>
+</ul>
 <p>Please feel free to add other issues and solutions, if you have them.</p>
 <p><a href="#heading--packer-not-found"><h3 id="heading--packer-not-found">Command &lsquo;packer&rsquo; not found</h3></a></p>
 <p>You might attempt to run <code>packer</code> and receive the following error:</p>
