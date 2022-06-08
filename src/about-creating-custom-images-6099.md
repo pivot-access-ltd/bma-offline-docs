@@ -1,6 +1,8 @@
 <!-- "About creating custom images" -->
 You can create and customise your own images for MAAS using [packer](https://www.packer.io), with [Canonical-provided templates](https://github.com/canonical/packer-maas).  It is also possible to create your own templates, using the [packer documentation](https://www.packer.io/docs), although that effort might be completely unsupported.
 
+<figure><a href="https://discourse.maas.io/uploads/default/original/2X/a/a80ed5eb191a798d049cb82fade4ee117f5128fd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a80ed5eb191a798d049cb82fade4ee117f5128fd.png"></a><caption>A large MAAS instance deploying multiple custom OS images</caption></figure>
+
 [note]
 While it may be possible to deploy a certain image with MAAS, the particular use case may not be supported by that image’s vendor due to licensing or technical reasons. Canonical recommends that, whenever possible, you should customise machines using cloud-init user_data or Curtin preseed data, instead of creating a custom image.
 [/note]
