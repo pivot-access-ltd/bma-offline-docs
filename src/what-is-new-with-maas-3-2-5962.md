@@ -96,6 +96,7 @@ At this point, proceed with a normal installation.
 
 Here is the breakdown of bugs fixed across the MAAS 3.2 release:
 
+- [MAAS 3.2 RC 1](https://launchpad.net/maas/+milestone/3.2.0-rc1)
 - [MAAS 3.2 Beta 6](https://launchpad.net/maas/3.2/3.2.0-beta6)
 - [MAAS 3.2 Beta 5](https://launchpad.net/maas/3.2/3.2.0-beta5)
 - [MAAS 3.2 Beta 4](https://launchpad.net/maas/3.2/3.2.0-beta4)
