@@ -1,7 +1,7 @@
 <!-- "How to install MAAS" -->
 [tabs]
 [tab version="v3.2 Snap"]
-<a href="#heading--about-installing-maas"><h2 id="heading--about-installing-maas">About installing MAAS 3.2 Beta</h2></a>
+<a href="#heading--about-installing-maas"><h2 id="heading--about-installing-maas">About installing MAAS 3.2 RC1</h2></a>
 
 MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.
 [/tab]
@@ -67,11 +67,11 @@ This article will show you:
 [tabs]
 [tab version="v3.2 Snap"]
 - [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
-- [How to install MAAS 3.2 Beta](/t/what-is-new-in-maas/5292)
+- [How to install MAAS 3.2 RC1](/t/what-is-new-in-maas/5292)
 [/tab]
 [tab version="v3.2 Packages"]
 - [How to check system requirements for MAAS](#heading--check-system-requirements-for-maas)
-- [How to install MAAS 3.2 Beta](/t/what-is-new-in-maas/5292)
+- [How to install MAAS 3.2 RC1](/t/what-is-new-in-maas/5292)
 - [How to check the status of MAAS services](#heading--service-status)
 - [How to re-initialise MAAS](#heading--reinitialising-maas)
 - [How to list additional MAAS initialisation options](#heading--additional-init-options)
@@ -194,10 +194,10 @@ One rack controller should only service 1000 machines or less, regardless of how
 
 [tabs]
 [tab version="v3.2 Snap"]
-Please see the release notes, as directed above, to install MAAS 3.2 Beta.
+Please see the release notes, as directed above, to install MAAS 3.2 RC1.
 [/tab]
 [tab version="v3.2 Packages"]
-Please see the release notes, as directed above, to install MAAS 3.2 Beta.
+Please see the release notes, as directed above, to install MAAS 3.2 RC1.
 [/tab]
 [tab version="v3.1 Snap"]
 <a href="#heading--upgrade-from-earlier-version-to-snap-3-1"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-1">How to upgrade from an earlier snap version to MAAS 3.1</h2></a>
@@ -643,7 +643,7 @@ These two steps will lead you through two similar <code>apt</code> install seque
 
 [tabs]
 [tab version="v3.2 Snap"]
-<a href="#heading--init-maas-poc"><h2 id="heading--init-maas-poc">How to initialise MAAS 3.2 Beta snap for a test or POC environment</h2></a>
+<a href="#heading--init-maas-poc"><h2 id="heading--init-maas-poc">How to initialise MAAS 3.2 RC1 snap for a test or POC environment</h2></a>
 
 You can initialise MAAS as a compact version for testing.  To achieve this, we provide a separate snap, called `maas-test-db`, which contains a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.
 
@@ -750,7 +750,7 @@ To set up PostgreSQL, even if it's running on a different machine, you can use t
 Don't worry; if you leave out any of the database parameters, you'll be prompted for those details.
 [/tab]
 [tab version="v3.2 Packages"]
-<a href="#heading--create-a-maas-user"><h2 id="heading--create-a-maas-user">How to create a MAAS 3.2 Beta user</h2></a>
+<a href="#heading--create-a-maas-user"><h2 id="heading--create-a-maas-user">How to create a MAAS 3.2 RC1 user</h2></a>
 
 You will need to create a MAAS administrator user to access the web UI:
 
