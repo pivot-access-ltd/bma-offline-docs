@@ -67,13 +67,13 @@ As you encounter failures, please take the time to [file a bug](https://maas.io/
 MAAS 3.2 can be installed fresh from snaps (recommended) with:
 
 ```
-sudo snap install --channel=3.2/beta maas
+sudo snap install --channel=3.2/candidate maas
 ```
 
-MAAS 3.2 can be installed from packages by adding the `ppa:maas/3.2-next` PPA:
+MAAS 3.2 can be installed from packages by adding the `ppa:maas/3.2-rc1` PPA:
 
 ```
-sudo add-apt-repository ppa:maas/3.2-next
+sudo add-apt-repository ppa:maas/3.2-rc1
 sudo apt update
 sudo apt install maas
 ```
