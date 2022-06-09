@@ -374,81 +374,23 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>MAAS 3.2 Beta release notes</h1><!-- "MAAS 3.2 Beta release notes" -->
-<!-- "MAAS 3.2 Beta release notes" -->
-<p>We are happy to announce that MAAS 3.2 Beta 5 is now available.</p>
-<p>It&rsquo;s unusual for the MAAS team to release a Beta without a new feature, but we decided to make an important exception. We&rsquo;ve spent a lot of time recently focusing on a collection of life-cycle and controller bugs.  Fixing these bugs should improve user experience with respect to controller startup, communication, and operation; enlistment; commissioning; and deployment.  To that end, we&rsquo;ve released a special Beta that&rsquo;s restricted to some high-profile bugs in those areas.</p>
-<p>Below, you&rsquo;ll find a list of what we&rsquo;ve fixed in Beta 5 &ndash; and we&rsquo;d really like to have your help in testing these fixes.</p>
-<h2>Controller issues</h2>
-<p>We focused on conspicuous controller issues in three areas: startup, communication, and user operations.</p>
-<h3>Controller startup issues</h3>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>
-<p><a href="https://bugs.launchpad.net/bugs/1973304">Controllers can&rsquo;t refresh their networking configuration with PCI devices</a>: the VPD file could not be read from within a container; fixed.</p>
-</li>
-<li>
-<p>MAAS 3.1 can&rsquo;t configure DHCP because the controllers can&rsquo;t detect network and storage layout (private bug): the bond interface was being created too early in the cycle under certain unusual conditions; the code was adjusted to fix this.</p>
-</li>
-<li>
-<p><a href="https://bugs.launchpad.net/maas/+bug/1939456">MAAS 3.0 fails to initialize regiond when an IPoIB (e.g., Infiniband) device is present</a>: fixed by skipping over IP addresses for long-MAC NICs like Infiniband, during controller startup.</p>
-</li>
-<li>
-<p><a href="https://bugs.launchpad.net/maas/+bug/1970435">MAAS server startup fails because of missing GPU information</a>: fixed by a soliciting a fix for a related LXD bug.</p>
-</li>
-</ul>
-<h3>Controller communication issues</h3>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>
-<p><a href="https://bugs.launchpad.net/bugs/1972865">Wrong preseed metadata URL provided when using multiple rack controllers</a>: minor port issue; fixed.</p>
-</li>
-<li>
-<p><a href="https://bugs.launchpad.net/bugs/1938573">No rack controllers can access the BMC of a node</a>: fixed an corner case where MAAS fails to make sure it&rsquo;s got the right rack controller.</p>
-</li>
-</ul>
-<h3>Controller operational issues</h3>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="https://bugs.launchpad.net/bugs/1971742">Can&rsquo;t delete a rack controller with the UI</a>: fixed a UX&lt;&ndash;&gt;core asynch I/O bug.</li>
-</ul>
-<h2>Life-cycle issues</h2>
-<p>We also tried to cherry-pick some of the most important life-cycle issues, mostly around enlistment, commissioning, and deployment.</p>
-<h3>Enlistment issues</h3>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>
-<p><a href="https://bugs.launchpad.net/bugs/1958451">IPMI power_driver parameter is not preserved from enlistment to commissioning</a>: extended BMC code to update IPMI 1.5 handling.</p>
-</li>
-<li>
-<p><a href="https://bugs.launchpad.net/maas/+bug/1974031">Enlist step fails with latest Beta of MAAS 3.2</a>: relatively minor bug fix.</p>
-</li>
-</ul>
-<h3>Commissioning issues</h3>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>
-<p><a href="https://bugs.launchpad.net/bugs/1939608">iPXE is not detected properly on derivatives of vanilla iPXE (Mellanox Flexboot)</a>: fixed MAAS to properly detect iPXE in an outlier scenario; note that applying DHCP snippets won&rsquo;t work because of the way the iPXE bootloader is hardcoded. </p>
-</li>
-<li>
-<p><a href="https://bugs.launchpad.net/bugs/1971754">Power9 PowerVM LPAR fails to commission properly</a>: compensated for a syntax issue with Power9 LPAR power driver.</p>
-</li>
-<li>
-<p><a href="https://bugs.launchpad.net/bugs/1952216">Websocket produces an error with diskless machines</a>: fixed a previously-unnoticed bootdisk ID error for diskless machines.</p>
-</li>
-</ul>
-<h3>Deployment issues</h3>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>
-<p><a href="https://bugs.launchpad.net/bugs/1972052">Calling vm-host update fails when resetting overcommit ratios</a>: fixed a unique index violation in the overcommit ratio code.</p>
-</li>
-<li>
-<p><a href="https://bugs.launchpad.net/bugs/1962519">&lsquo;maas-run-scripts report-results&rsquo; is not distro-agnostic</a>: eliminated use of <code>dpkg</code> by <code>maas-run-scripts</code> script.</p>
-</li>
-<li>
-<p><a href="https://bugs.launchpad.net/bugs/1958433">Cannot deploy Centos7 with xfs when using Focal as commissioning image</a>: mitigated incompatible changes to xfs between Bionic and Focal releases.</p>
-</li>
-<li>
-<p><a href="https://bugs.launchpad.net/bugs/1970962">Deployment fails when trying to register a VM host</a>: fixed a minor bug related to Jammy updates.</p>
-</li>
-</ul>
+  <h1>MAAS 3.2 RC1 release notes</h1><!-- "MAAS 3.2 RC1 release notes" -->
+<p>We are happy to announce that MAAS 3.2 RC1 is now available.</p>
 <p><a href="#heading--new-features"><h2 id="heading--new-features">New MAAS 3.2 features</h2></a></p>
 <p>MAAS 3.2 provides several new features, as well as the usual cadre of bug fixes.</p>
+<p><a href="#heading--better-redfish-support"><h3 id="heading--better-redfish-support">Better Redfish support</h3></a></p>
+<p>MAAS has previously supported the Redfish protocol for some time, but as an option, preferring IPMI over all others if a choice of protocol was possible.  In contrast, MAAS 3.2 supports Redfish as a BMC protocol by preferring Redfish over IPMI, provided that:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>The BMC has a Redfish Host Interface enabled</li>
+<li>That host interface can be accessed by the MAAS host</li>
+</ul>
+<p>MAAS already supports Redfish, but with MAAS 3.2 we’re trying to auto-detect Redfish and use it if it&rsquo;s available.</p>
+<p>You may know that Redfish is an alternative to the IPMI protocol for connecting with machine BMCs.  It provides additional features above and beyond those provided by IPMI.  Eventually, Redfish should supplant IPMI as the default BMC interface.</p>
+<p>Prior to MAAS 3.2, all BMC connections were made via IPMI.  With the release of 3.2, if the machine uses either IPMI or Redfish for its BMC, the ephemeral environment will automatically detect it, create a separate user for MAAS and configure the machine, so that MAAS may check and control the machine’s power status. Note that the name of the user that MAAS creates in the BMC is controlled by the <code>maas_auto_ipmi_user</code> config setting, both for IPMI and Redfish; nothing has changed in this regard with MAAS 3.2.</p>
+<p>You can check whether or not a machine can communicate via Redfish, with the command: </p>
+<pre><code class="language-nohighlight">dmidecode -t 42
+</code></pre>
+<p>If the machine has been enlisted by MAAS, you can also check the output of the <code>30-maas-01-bmc-config</code> commissioning script to discover this.</p>
 <p><a href="#heading--maas-native-tls"><h3 id="heading--maas-native-tls">MAAS native TLS</h3></a></p>
 <p>MAAS 3.2 provides <a href="how-to-enable-tls-encryption.html#heading--about-maas-native-tls">native TLS</a>. MAAS now has built-in TLS support for communicating with the UI and API over HTTPS. This eliminates the need to deploy a separate TLS-terminating reverse-proxy solution in front of MAAS to provide secure access to API and UI.  Note that you can still set up an HA proxy if you are using multiple controllers.</p>
 <p><a href="#heading--hardware-sync-for-deployed-machines"><h3 id="heading--hardware-sync-for-deployed-machines">Hardware sync for deployed machines</h3></a></p>
@@ -469,14 +411,14 @@
 </li>
 </ul>
 <p><strong>NOTE:</strong> 
-This is a Beta release, so you may encounter bugs and incomplete features.  We strongly recommend that you take the necessary precautions, which include (but are not limited to) the following steps:</p>
+This is an RC (release candidate) release, so you may still encounter some minor bugs.  We strongly recommend that you take the necessary precautions, which include (but are not limited to) the following steps:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li>Install Beta versions on a system specifically designated for testing; Beta is not recommended for production.</li>
-<li>Take a backup of any unrecoverable data on your test system prior to installing Beta versions.</li>
-<li>More specifically, if you use a system for testing MAAS releases, back up the MAAS database and any unique configuration files related to your use of MAAS prior to installing Beta versions.</li>
+<li>Install RC versions on a system specifically designated for testing; RC is not strongly recommended for production.</li>
+<li>Take a backup of any unrecoverable data on your test system prior to installing RC versions.</li>
+<li>More specifically, if you use a system for testing MAAS releases, back up the MAAS database and any unique configuration files related to your use of MAAS prior to installing RC versions.</li>
 </ul>
 <p>Also, you should make sure that you are using the latest version of PostgreSQL.  <a href="upgrading-postgresql-to-version-12.html">Here&rsquo;s how you can upgrade that</a>.</p>
-<p>Essentially, expect that the Beta may not function properly under all conditions, possibly overwriting data and configuration information on the test machine.  Beta versions usually behave fairly well, but be warned that across-the-board, error-free performance isn&rsquo;t something we expect from Beta releases.</p>
+<p>Essentially, the RC should be production-ready, but has not had extensive testing yet &ndash; so it may not function properly under all conditions, possibly overwriting data and configuration information on the test machine.  RC versions usually behave fairly well, but be warned that across-the-board, perfect performance isn&rsquo;t always the case with an RC releases.</p>
 <p>As you encounter failures, please take the time to <a href="https://maas.io/docs/report-a-bug">file a bug</a> or let us know your thoughts <a href="https://discourse.maas.io/c/users/8">on the discourse user forum</a>.</p>
 <p><a href="#heading--how-to-install-maas-3-2"><h2 id="heading--how-to-install-maas-3-2">How to install MAAS 3.2</h2></a></p>
 <p>MAAS 3.2 can be installed fresh from snaps (recommended) with:</p>
@@ -497,6 +439,8 @@ sudo apt install maas
 <p><a href="#heading--bugs-fixed-in-maas-3-2"><h2 id="heading--bugs-fixed-in-maas-3-2">Bugs fixed in MAAS 3.2</h2></a></p>
 <p>Here is the breakdown of bugs fixed across the MAAS 3.2 release:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="https://launchpad.net/maas/3.2/3.2.0-beta6">MAAS 3.2 Beta 6</a></li>
+<li><a href="https://launchpad.net/maas/3.2/3.2.0-beta5">MAAS 3.2 Beta 5</a></li>
 <li><a href="https://launchpad.net/maas/3.2/3.2.0-beta4">MAAS 3.2 Beta 4</a></li>
 <li><a href="https://launchpad.net/maas/3.2/3.2.0-beta3">MAAS 3.2 Beta 3</a></li>
 <li><a href="https://launchpad.net/maas/+milestone/3.2.0-beta2">MAAS 3.2 Beta 2</a></li>

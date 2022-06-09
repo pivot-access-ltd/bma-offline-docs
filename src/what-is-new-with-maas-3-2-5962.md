@@ -1,68 +1,30 @@
-<!-- "MAAS 3.2 Beta release notes" -->
-<!-- "MAAS 3.2 Beta release notes" -->
-We are happy to announce that MAAS 3.2 Beta 6 is now available.
-
-It's unusual for the MAAS team to release a Beta without a new feature, but we decided to make an important exception. We've spent a lot of time recently focusing on a collection of life-cycle and controller bugs.  Fixing these bugs should improve user experience with respect to controller startup, communication, and operation; enlistment; commissioning; and deployment.  To that end, we've released a special Beta that's restricted to some high-profile bugs in those areas.
-
-Below, you'll find a list of what we've fixed in Beta 6 -- and we'd really like to have your help in testing these fixes.
-
-## Controller issues
-
-We focused on conspicuous controller issues in three areas: startup, communication, and user operations.
-
-### Controller startup issues
-
- * [Controllers can't refresh their networking configuration with PCI devices](https://bugs.launchpad.net/bugs/1973304): the VPD file could not be read from within a container; fixed.
-
- * MAAS 3.1 can't configure DHCP because the controllers can't detect network and storage layout (private bug): the bond interface was being created too early in the cycle under certain unusual conditions; the code was adjusted to fix this.
-
- * [MAAS 3.0 fails to initialize regiond when an IPoIB (e.g., Infiniband) device is present](https://bugs.launchpad.net/maas/+bug/1939456): fixed by skipping over IP addresses for long-MAC NICs like Infiniband, during controller startup.
- 
- * [MAAS server startup fails because of missing GPU information](https://bugs.launchpad.net/maas/+bug/1970435): fixed by a soliciting a fix for a related LXD bug.
- 
-### Controller communication issues
-
- * [Wrong preseed metadata URL provided when using multiple rack controllers](https://bugs.launchpad.net/bugs/1972865): minor port issue; fixed.
-
- * [No rack controllers can access the BMC of a node](https://bugs.launchpad.net/bugs/1938573): fixed an corner case where MAAS fails to make sure it's got the right rack controller.
-
-### Controller operational issues
-
- * [Can't delete a rack controller with the UI](https://bugs.launchpad.net/bugs/1971742): fixed a UX<-->core asynch I/O bug.
-
-* [Controllers reporting neighbours creates duplicate vlan](https://bugs.launchpad.net/maas/+bug/1975477): finds existing VLAN and updates the fabric now.
-
-## Life-cycle issues
-
-We also tried to cherry-pick some of the most important life-cycle issues, mostly around enlistment, commissioning, and deployment.
-
-### Enlistment issues
-
- * [IPMI power_driver parameter is not preserved from enlistment to commissioning](https://bugs.launchpad.net/bugs/1958451): extended BMC code to update IPMI 1.5 handling.
- 
- * [Enlist step fails with latest Beta of MAAS 3.2](https://bugs.launchpad.net/maas/+bug/1974031): relatively minor bug fix.
- 
-### Commissioning issues
-
- * [iPXE is not detected properly on derivatives of vanilla iPXE (Mellanox Flexboot)](https://bugs.launchpad.net/bugs/1939608): fixed MAAS to properly detect iPXE in an outlier scenario; note that applying DHCP snippets won't work because of the way the iPXE bootloader is hardcoded. 
-
- * [Power9 PowerVM LPAR fails to commission properly](https://bugs.launchpad.net/bugs/1971754): compensated for a syntax issue with Power9 LPAR power driver.
-
- * [Websocket produces an error with diskless machines](https://bugs.launchpad.net/bugs/1952216): fixed a previously-unnoticed bootdisk ID error for diskless machines.
-
-### Deployment issues
-
- * [Calling vm-host update fails when resetting overcommit ratios](https://bugs.launchpad.net/bugs/1972052): fixed a unique index violation in the overcommit ratio code.
- 
- * ['maas-run-scripts report-results' is not distro-agnostic](https://bugs.launchpad.net/bugs/1962519): eliminated use of `dpkg` by `maas-run-scripts` script.
-
- * [Cannot deploy Centos7 with xfs when using Focal as commissioning image](https://bugs.launchpad.net/bugs/1958433): mitigated incompatible changes to xfs between Bionic and Focal releases.
- 
- * [Deployment fails when trying to register a VM host](https://bugs.launchpad.net/bugs/1970962): fixed a minor bug related to Jammy updates.
+<!-- "MAAS 3.2 RC1 release notes" -->
+We are happy to announce that MAAS 3.2 RC1 is now available.
 
 <a href="#heading--new-features"><h2 id="heading--new-features">New MAAS 3.2 features</h2></a>
 
 MAAS 3.2 provides several new features, as well as the usual cadre of bug fixes.
+
+<a href="#heading--better-redfish-support"><h3 id="heading--better-redfish-support">Better Redfish support</h3></a>
+
+MAAS has previously supported the Redfish protocol for some time, but as an option, preferring IPMI over all others if a choice of protocol was possible.  In contrast, MAAS 3.2 supports Redfish as a BMC protocol by preferring Redfish over IPMI, provided that:
+
+- The BMC has a Redfish Host Interface enabled
+- That host interface can be accessed by the MAAS host
+
+MAAS already supports Redfish, but with MAAS 3.2 we’re trying to auto-detect Redfish and use it if it's available.
+
+You may know that Redfish is an alternative to the IPMI protocol for connecting with machine BMCs.  It provides additional features above and beyond those provided by IPMI.  Eventually, Redfish should supplant IPMI as the default BMC interface.
+
+Prior to MAAS 3.2, all BMC connections were made via IPMI.  With the release of 3.2, if the machine uses either IPMI or Redfish for its BMC, the ephemeral environment will automatically detect it, create a separate user for MAAS and configure the machine, so that MAAS may check and control the machine’s power status. Note that the name of the user that MAAS creates in the BMC is controlled by the `maas_auto_ipmi_user` config setting, both for IPMI and Redfish; nothing has changed in this regard with MAAS 3.2.
+
+You can check whether or not a machine can communicate via Redfish, with the command: 
+
+```nohighlight
+dmidecode -t 42
+```
+
+If the machine has been enlisted by MAAS, you can also check the output of the `30-maas-01-bmc-config` commissioning script to discover this.
 
 <a href="#heading--maas-native-tls"><h3 id="heading--maas-native-tls">MAAS native TLS</h3></a>
 
@@ -87,15 +49,15 @@ MAAS 3.2 rounds out the feature set with a few more items:
 - Roll-out of our new tabbed Reader Adaptive Documentation (incremental across the release cycle): We've eliminated the top menus; each page now contains information for all versions, selectable by dropdowns above the relevant sections.
 
 [note]
-This is a Beta release, so you may encounter bugs and incomplete features.  We strongly recommend that you take the necessary precautions, which include (but are not limited to) the following steps:
+This is an RC (release candidate) release, so you may still encounter some minor bugs.  We strongly recommend that you take the necessary precautions, which include (but are not limited to) the following steps:
 
-- Install Beta versions on a system specifically designated for testing; Beta is not recommended for production.
-- Take a backup of any unrecoverable data on your test system prior to installing Beta versions.
-- More specifically, if you use a system for testing MAAS releases, back up the MAAS database and any unique configuration files related to your use of MAAS prior to installing Beta versions.
+- Install RC versions on a system specifically designated for testing; RC is not strongly recommended for production.
+- Take a backup of any unrecoverable data on your test system prior to installing RC versions.
+- More specifically, if you use a system for testing MAAS releases, back up the MAAS database and any unique configuration files related to your use of MAAS prior to installing RC versions.
 
 Also, you should make sure that you are using the latest version of PostgreSQL.  [Here's how you can upgrade that](https://discourse.maas.io/t/upgrading-postgresql-to-version-12/5913).
 
-Essentially, expect that the Beta may not function properly under all conditions, possibly overwriting data and configuration information on the test machine.  Beta versions usually behave fairly well, but be warned that across-the-board, error-free performance isn't something we expect from Beta releases.
+Essentially, the RC should be production-ready, but has not had extensive testing yet -- so it may not function properly under all conditions, possibly overwriting data and configuration information on the test machine.  RC versions usually behave fairly well, but be warned that across-the-board, perfect performance isn't always the case with an RC releases.
  
 As you encounter failures, please take the time to [file a bug](https://maas.io/docs/report-a-bug) or let us know your thoughts [on the discourse user forum](https://discourse.maas.io/c/users/8).
 [/note]
