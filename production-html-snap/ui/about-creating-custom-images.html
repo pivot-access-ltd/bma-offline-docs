@@ -388,9 +388,8 @@
 That warning bears repeating: While it may be possible to deploy a certain image with MAAS, the particular use case may not be supported by that image’s vendor due to licensing or technical reasons. Canonical recommends that, whenever possible, you should customise machines using <code>cloud-init</code> user_data or <code>curtin</code> preseed data, instead of creating a custom image.</p>
 <p>There are two types of custom images we&rsquo;ll explain here: static Ubuntu images (just below) and <a href="#heading--about-packer">packer images</a>.</p>
 <p><a href="#heading--about-static-ubuntu-images"><h2 id="heading--about-static-ubuntu-images">About static Ubuntu images</h2></a></p>
-<p>This article will help you learn:</p>
-<p>MAAS provides the capability for you to build a static Ubuntu OS image to deploy with MAAS, using any image-building method you choose.  You can create the image once, with a fixed configuration,and deploy it to many machines.  This fixed configuration can consist of anything that a normal image would contain: users, packages, etc.  This capability is really targeted at older versions of MAAS, but it should work with MAAS of any vintage.</p>
-<p>There are three five things that we should explain about static Ubuntu images: </p>
+<p>MAAS provides the capability for you to build a static Ubuntu OS image to deploy with MAAS, using any image-building method you choose.  You can create the image once, with a fixed configuration, and deploy it to many machines.  This fixed configuration can consist of anything that a normal image would contain: users, packages, etc.  This capability is really targeted at older versions of MAAS, but it should work with MAAS of any vintage.</p>
+<p>There are five things that we should explain about static Ubuntu images: </p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--about-uploading-hand-built-ubuntu-images">About uploading hand-built Ubuntu images</a></li>
 <li><a href="#heading--about-how-maas-handles-these-images">How MAAS handles static Ubuntu images</a></li>

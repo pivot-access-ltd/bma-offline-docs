@@ -25,11 +25,9 @@ There are two types of custom images we'll explain here: static Ubuntu images (j
 
 <a href="#heading--about-static-ubuntu-images"><h2 id="heading--about-static-ubuntu-images">About static Ubuntu images</h2></a>
 
-This article will help you learn:
+MAAS provides the capability for you to build a static Ubuntu OS image to deploy with MAAS, using any image-building method you choose.  You can create the image once, with a fixed configuration, and deploy it to many machines.  This fixed configuration can consist of anything that a normal image would contain: users, packages, etc.  This capability is really targeted at older versions of MAAS, but it should work with MAAS of any vintage.
 
-MAAS provides the capability for you to build a static Ubuntu OS image to deploy with MAAS, using any image-building method you choose.  You can create the image once, with a fixed configuration,and deploy it to many machines.  This fixed configuration can consist of anything that a normal image would contain: users, packages, etc.  This capability is really targeted at older versions of MAAS, but it should work with MAAS of any vintage.
-
-There are three five things that we should explain about static Ubuntu images: 
+There are five things that we should explain about static Ubuntu images: 
 
 - [About uploading hand-built Ubuntu images](#heading--about-uploading-hand-built-ubuntu-images)
 - [How MAAS handles static Ubuntu images](#heading--about-how-maas-handles-these-images)
