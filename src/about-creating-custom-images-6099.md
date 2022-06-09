@@ -1,32 +1,44 @@
 <!-- "About creating custom images" -->
-You can create and customise your own images for MAAS using [packer](https://www.packer.io), with [Canonical-provided templates](https://github.com/canonical/packer-maas).  It is also possible to create your own templates, using the [packer documentation](https://www.packer.io/docs), although that effort might be completely unsupported.
+MAAS is much more useful when you can upload images that aren't gathered from [the MAAS image repository](http://images.maas.io/), deploy them to MAAS-managed machines, and count on them to work properly. But there's a problem: the typical, off-the-shelf ISO image can't just be uploaded to MAAS and deployed to a machine.  For one thing, the machines couldn't write the image to their disks or boot the images once they're there.  For another, any non-standard configuration items (networking, storage, users, added software) wouldn't be loaded.
 
-The following illustration depicts a large MAAS instance deploying multiple custom OS images:
+We can help guide you in preparing ISO images to run on MAAS machines. Usable MAAS images need both a `curtin` hook script (to write and boot the image), and some `cloud-init` meta-data (to configure the image beyond the out-of-the-box experience).  As long as a prepared image meets these requirements, you can successfully upload it to MAAS, deploy it to a machine, and expect it to run properly on that machine.
+
+This article explains a little more about how MAAS images differ from a standard ISO, and what has to happen to make those off-the-shelf ISOs deployable and usable by MAAS.
+
+<a href="#heading--about-transforming-an-iso"><h2 id="heading--about-transforming-an-iso">About transforming an ISO</h2></a>
+
+When it comes to creating images for MAAS machines, you can hand-build images, as long as they meet the `curtin` and `cloud-init` requirements; or you can use a third-party tool called  [packer](https://www.packer.io) to prepare special versions of these images that will work with MAAS.  There are also static Ubuntu images targeted at older MAAS versions (<3.1).  Beyond providing a bit of technical detail here, we won't shepherd you through hand-building images: you're pretty much on your own there.  We will try to help you understand how to create and customise MAAS-friendly images, mostly focusing on packer templates.
+
+We maintain a git repo of templates for a few popular operating systems.  You can check out this graphic of a real, running lab MAAS instance to get an idea:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a80ed5eb191a798d049cb82fade4ee117f5128fd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a80ed5eb191a798d049cb82fade4ee117f5128fd.png"></a>
 
+Packer uses templates (essentially JSON meta-data) to run different build, provisioning, and post-processing tools that produce an image MAAS can deploy, and that you can successfully access and use. These tools might be as simple as a shell command, or as specialized as the RedHat `anaconda` installer.  It really just depends on what's needed to prepare an image so that MAAS can deploy it.
+
+We encourage and document custom images -- and help informally as much as we can -- but we're really not able to offer much support.  After all, other OS images are built from code we don't own, and licensed in ways that may or may not be compatible with a MAAS deployment.  For those reasons, among others, we recommend you customise machines using `cloud-init` user_data and/or `curtin` preseed data, whenever you can, instead of creating a custom image.
+
 [note]
-While it may be possible to deploy a certain image with MAAS, the particular use case may not be supported by that image’s vendor due to licensing or technical reasons. Canonical recommends that, whenever possible, you should customise machines using cloud-init user_data or Curtin preseed data, instead of creating a custom image.
+That warning bears repeating: While it may be possible to deploy a certain image with MAAS, the particular use case may not be supported by that image’s vendor due to licensing or technical reasons. Canonical recommends that, whenever possible, you should customise machines using `cloud-init` user_data or `curtin` preseed data, instead of creating a custom image.
 [/note]
 
-This article will help you learn:
-
-- [About static Ubuntu images](#heading--about-static-ubuntu-images)
-- [About uploading hand-built Ubuntu images](#heading--about-uploading-hand-built-ubuntu-images)
-- [About how MAAS handles these images](#heading--about-how-maas-handles-these-images)
-- [About how MAAS boots these images](#heading--about-how-maas-boots-these-images)
-- [About configuring deployed machine networking](#heading--about-configuring-deployed-machine-networking)
-- [About configuring deployed machine storage](#heading--about-configuring-deployed-machine-storage)
-- [About static image metrics](#heading--about-static-image-metrics)
-- [About packer](#heading--about-packer)
-- [About packer dependencies](#heading--about-packer-dependencies)
-- [About packer templates](#heading--about-packer-templates)
-- [About the image installation process](#heading--about-the-image-installation-process)
-- [About packer-created images](#heading--about-packer-created-images)
+There are two types of custom images we'll explain here: static Ubuntu images (just below) and [packer images](#heading--about-packer).
 
 <a href="#heading--about-static-ubuntu-images"><h2 id="heading--about-static-ubuntu-images">About static Ubuntu images</h2></a>
 
-MAAS provides the capability for you to build an Ubuntu OS image to deploy with MAAS, using any image-building method you choose.  You can create the image once, with a fixed configuration,and deploy it to many machines.  This fixed configuration can consist of anything that a normal image would contain: users, packages, etc.
+This article will help you learn:
+
+MAAS provides the capability for you to build a static Ubuntu OS image to deploy with MAAS, using any image-building method you choose.  You can create the image once, with a fixed configuration,and deploy it to many machines.  This fixed configuration can consist of anything that a normal image would contain: users, packages, etc.  This capability is really targeted at older versions of MAAS, but it should work with MAAS of any vintage.
+
+There are three five things that we should explain about static Ubuntu images: 
+
+- [About uploading hand-built Ubuntu images](#heading--about-uploading-hand-built-ubuntu-images)
+- [How MAAS handles static Ubuntu images](#heading--about-how-maas-handles-these-images)
+- [How MAAS boots static Ubuntu images](#heading--about-how-maas-boots-these-images)
+- [About configuring deployed machine networking](#heading--about-configuring-deployed-machine-networking)
+- [About configuring deployed machine storage](#heading--about-configuring-deployed-machine-storage)
+- [About static image metrics](#heading--about-static-image-metrics)
+
+If you're using newer versions of MAAS (>3.0), we recommend choosing packer, since the packer-maas repository already has a built-in Ubuntu image you can customise -- but the choice is yours.
 
 <a href="#heading--about-uploading-hand-built-ubuntu-images"><h3 id="heading--about-uploading-hand-built-ubuntu-images">About uploading hand-built Ubuntu images</h3></a>
 
@@ -34,13 +46,13 @@ You can upload hand-built Ubuntu images, containing a kernel, bootloader, and a 
 
 At a minimum, this image must contain a kernel, a bootloader, and a `/curtin/curtin-hooks` script that configures the network. A sample can be found in the [packer-maas repos](https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts). The image must be in raw img file format, since that is the format MAAS accepts for upload.  This is the most portable format, and the format most builders support. Upon completing the image build, you will upload this img file to the boot-resources endpoint, specifying the architecture for the image.
 
-<a href="#heading--about-how-maas-handles-these-images"><h3 id="heading--about-how-maas-handles-these-images">About how MAAS handles these images</h3></a>
+<a href="#heading--about-how-maas-handles-these-images"><h3 id="heading--about-how-maas-handles-these-images">How MAAS handles static Ubuntu images</h3></a>
 
 MAAS will save the image -- in the same way it would save a `tar.gz` file -- in the database.  MAAS can differentiate between custom Ubuntu images and custom non-Ubuntu images, generating appropriate pre-seed configurations for each image type.
 
 MAAS will also recognise the base Ubuntu version, so it can apply the correct ephemeral OS version for installation.  Custom images are always deployed with the ephemeral operating system. The base_image field is used to select the appropriate version of the ephemeral OS to avoid errors. This ensures a smooth deployment later.
 
-<a href="#heading--about-how-maas-boots-these-images"><h3 id="heading--about-how-maas-boots-these-images">About how MAAS boots these images</h3></a>
+<a href="#heading--about-how-maas-boots-these-images"><h3 id="heading--about-how-maas-boots-these-images">How MAAS boots static Ubuntu images</h3></a>
 
 When you decide to deploy a machine with your uploaded, custom image, MAAS ensures that the machine receives the kernel, bootloader and root file system provided in the image. The initial boot loader takes over, and boots an ephemeral OS of the same Ubuntu version as the custom image, to reduce the chances of incompatibilities.  Curtin then writes your entire custom image to disk.  Once the custom image is written to disk, it is not modified by MAAS.
 
@@ -62,6 +74,11 @@ As a user, you want to keep track of how many static images are being used, and 
 
 <a href="#heading--about-packer"><h2 id="heading--about-packer">About packer</h2></a>
 
+- [About packer dependencies](#heading--about-packer-dependencies)
+- [About packer templates](#heading--about-packer-templates)
+- [About the image installation process](#heading--about-the-image-installation-process)
+- [About packer-created images](#heading--about-packer-created-images)
+
 The [packer documentation](https://www.packer.io/docs) has an excellent, in-depth discussion of what packer does, how it works, and where it is limited.  Simply put, packer creates OS images that can be uploaded and deployed using MAAS. We can summarise packer with the following linearised flowchart:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/4/47cb177f4ee2f52ac00c877449770a23cfa0c9b4.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/47cb177f4ee2f52ac00c877449770a23cfa0c9b4.jpeg"></a>
@@ -76,9 +93,9 @@ We can walk through packer operation like this:
 
  - Multiple builds can run in parallel.  Within the MAAS domain, we typically don't set templates up that way, but it is possible to do so.
 
- - Post-processors do things to the built image to make it usable, e.g., compressing the file into a `tar.gz` image.
+ - Provisioners spin up a running version of the image and add things that make it usable, like `curtin` hooks, `cloud-init` meta-data to install custom packages, and so on.
 
- - Provisioners spin up a running version of the image and install additional software, before collapsing the entire image into an upload package.
+ - Post-processors do things to the built image to make it usable, e.g., compressing the file into a `tar.gz` image.
 
  - Because packer creates a wide-range of load packages, the results are called "artefacts" in packer terminology.  MAAS simply refers to these as "images".
 
@@ -356,7 +373,7 @@ Rather than walking through each of these lines individually, we can just note t
 
  - retrieve scripts that set up the bootloader, configure curtin hooks, and install custom packages from a named gzip source.
  - set the homedir and proxy options for the image.
- - set up curtin and networking for the image.
+ - set up curtin, networking, and maybe storage for the image.
  - clean up the image prior to post-processing.
 
 If you are interested in more details, you can [examine the scripts](https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts) to see what they do.
@@ -522,7 +539,16 @@ At this point, the image shows up in MAAS, synced to the controller, the same as
 
 <a href="#heading--about-packer-created-images"><h2 id="heading--about-packer-created-images">About packer-created images</h2></a>
 
-If you're interested in the anatomy of a packer-created image, for example, an ISO image, you can use `isoinfo` to explore the image file.  The image should be found in the packer git repository, under `<imagename>/packer-cache`.  Ideally, it shouldn't differ too much from any other customised ISO image.  You can explore with a few of the `isoinfo` commands.  For example, you can read the primary volume descriptor like this:
+Essentially, a packer image contains the things shown in this diagram:
+
+```nohighlight
+-----------------------
+OS image ISO
+-----------------------
+
+Note that they aren't necessarily packed in this order.
+
+If you're more interested in the anatomy of a packer-created image, for example, an ISO image, you can use `isoinfo` to explore the image file.  The image should be found in the packer git repository, under `<imagename>/packer-cache`.  Ideally, it shouldn't differ too much from any other customised ISO image.  You can explore with a few of the `isoinfo` commands.  For example, you can read the primary volume descriptor like this:
 
 ```nohighlight
 stormrider@neuromancer:~/mnt/Dropbox/src/git/packer-maas/ubuntu/packer_cache$ isoinfo -d -i ubuntu.iso | more                                                         
