@@ -13,7 +13,7 @@ We maintain a git repo of templates for a few popular operating systems.  You ca
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a80ed5eb191a798d049cb82fade4ee117f5128fd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a80ed5eb191a798d049cb82fade4ee117f5128fd.png"></a>
 
-Packer uses templates (essentially JSON meta-data) to run different build, provisioning, and post-processing tools that produce an image MAAS can deploy, and that you can successfully access and use. These tools might be as simple as a shell command, or as specialized as the RedHat `anaconda` installer.  It really just depends on what's needed to prepare an image so that MAAS can deploy it.
+Packer uses templates (essentially JSON meta-data) to run different build, provisioning, and post-processing tools that produce an image MAAS can deploy, and that you can successfully access and use. These tools might be as simple as a shell command, or as specialised as the RedHat `anaconda` installer.  It really just depends on what's needed to prepare an image so that MAAS can deploy it.
 
 We encourage and document custom images -- and help informally as much as we can -- but we're really not able to offer much support.  After all, other OS images are built from code we don't own, and licensed in ways that may or may not be compatible with a MAAS deployment.  For those reasons, among others, we recommend you customise machines using `cloud-init` user_data and/or `curtin` preseed data, whenever you can, instead of creating a custom image.
 
@@ -543,8 +543,27 @@ Essentially, a packer image contains the things shown in this diagram:
 
 ```nohighlight
 -----------------------
-OS image ISO
+ OS image ISO
 -----------------------
+ curtin hooks
+- - - - - - - - - - - -
+        installation
+- - - - - - - - - - - -
+        bootloader
+-----------------------
+ cloud-init meta-data
+- - - - - - - - - - - -
+  network configuration
+- - - - - - - - - - - -
+  storage configuration
+- - - - - - - - - - - -
+  user/homedir creation
+- - - - - - - - - - - -
+  pkg install scripts
+- - - - - - - - - - - -
+  snap install scripts
+-----------------------
+```
 
 Note that they aren't necessarily packed in this order.
 
