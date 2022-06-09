@@ -376,9 +376,9 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to upgrade MAAS</h1><!-- "How to upgrade MAAS" -->
 
-<p><a href="#heading--upgrade-from-earlier-version-to-snap-3-2"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-2">How to upgrade a snap to MAAS 3.2 Beta</h2></a></p>
-<p>If you want to upgrade from a earlier snap version to the 3.2 Beta snap, and you are using a <code>region+rack</code> configuration, use this command:</p>
-<pre><code>$ sudo snap refresh --channel=3.2/beta maas
+<p><a href="#heading--upgrade-from-earlier-version-to-snap-3-2"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-2">How to upgrade a snap to MAAS 3.2 RC1</h2></a></p>
+<p>If you want to upgrade from a earlier snap version to the 3.2 RC1 snap, and you are using a <code>region+rack</code> configuration, use this command:</p>
+<pre><code>$ sudo snap refresh --channel=3.2-rc1 maas
 </code></pre>
 <p>After entering your password, the snap will refresh from the 3.1 channel.  You will <strong>not</strong> need to re-initialise MAAS.</p>
 <p>If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.</p>
