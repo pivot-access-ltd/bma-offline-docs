@@ -5,7 +5,7 @@
 
 If you want to upgrade from a earlier snap version to the 3.2 RC1 snap, and you are using a `region+rack` configuration, use this command:
 
-    $ sudo snap refresh --channel=3.2-rc1 maas
+    $ sudo snap refresh --channel=3.2/candidate maas
 
 After entering your password, the snap will refresh from the 3.1 channel.  You will **not** need to re-initialise MAAS.
 
@@ -90,7 +90,7 @@ If you're upgrading from MAAS version 2.8 or lower to version 3.2: While the fol
 - Add the MAAS 3.2 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```
-sudo apt-add-repository ppa:maas/3.2-next
+sudo apt-add-repository ppa:maas/3.2-rc1
 ```
 
 - Run the release upgrade like this, answering any questions with the given default values:
