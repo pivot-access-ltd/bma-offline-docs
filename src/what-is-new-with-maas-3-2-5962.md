@@ -1,10 +1,10 @@
 <!-- "MAAS 3.2 Beta release notes" -->
 <!-- "MAAS 3.2 Beta release notes" -->
-We are happy to announce that MAAS 3.2 Beta 5 is now available.
+We are happy to announce that MAAS 3.2 Beta 6 is now available.
 
 It's unusual for the MAAS team to release a Beta without a new feature, but we decided to make an important exception. We've spent a lot of time recently focusing on a collection of life-cycle and controller bugs.  Fixing these bugs should improve user experience with respect to controller startup, communication, and operation; enlistment; commissioning; and deployment.  To that end, we've released a special Beta that's restricted to some high-profile bugs in those areas.
 
-Below, you'll find a list of what we've fixed in Beta 5 -- and we'd really like to have your help in testing these fixes.
+Below, you'll find a list of what we've fixed in Beta 6 -- and we'd really like to have your help in testing these fixes.
 
 ## Controller issues
 
@@ -29,6 +29,8 @@ We focused on conspicuous controller issues in three areas: startup, communicati
 ### Controller operational issues
 
  * [Can't delete a rack controller with the UI](https://bugs.launchpad.net/bugs/1971742): fixed a UX<-->core asynch I/O bug.
+
+* [Controllers reporting neighbours creates duplicate vlan](https://bugs.launchpad.net/maas/+bug/1975477): finds existing VLAN and updates the fabric now.
 
 ## Life-cycle issues
 
@@ -132,6 +134,8 @@ At this point, proceed with a normal installation.
 
 Here is the breakdown of bugs fixed across the MAAS 3.2 release:
 
+- [MAAS 3.2 Beta 6](https://launchpad.net/maas/3.2/3.2.0-beta6)
+- [MAAS 3.2 Beta 5](https://launchpad.net/maas/3.2/3.2.0-beta5)
 - [MAAS 3.2 Beta 4](https://launchpad.net/maas/3.2/3.2.0-beta4)
 - [MAAS 3.2 Beta 3](https://launchpad.net/maas/3.2/3.2.0-beta3)
 - [MAAS 3.2 Beta 2](https://launchpad.net/maas/+milestone/3.2.0-beta2)
