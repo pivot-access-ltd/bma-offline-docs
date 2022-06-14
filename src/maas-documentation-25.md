@@ -18,7 +18,7 @@ MAAS is a member of the Ubuntu family. It’s an open source project that warmly
 - [Request a feature](https://maas.io/docs/request-a-feature)
 - [Report a bug](https://maas.io/docs/report-a-bug)
 
-Thinking about using MAAS for your next project? [Get in touch!](/t/how-to-contact-us/5448).
+Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448).
 
 <!-- nohtml begin-nohtml -->
 ## Navigation
