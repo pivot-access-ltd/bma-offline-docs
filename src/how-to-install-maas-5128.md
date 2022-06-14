@@ -219,7 +219,7 @@ To upgrade from MAAS 3.1 to MAAS 3.2:
 
 1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
 
-2. Add the MAAS 3.1 PPA to your repository list with the following command, ignoring any apparent error messages:
+2. Add the MAAS 3.2 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```
 sudo apt-add-repository ppa:maas/3.2
