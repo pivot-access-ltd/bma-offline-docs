@@ -374,8 +374,9 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>How to install MAAS</h1><!-- "How to install MAAS" -->
-
+  <h1>How to install MAAS</h1><blockquote>
+<!-- "How to install MAAS" -->
+</blockquote>
 <p>MAAS is relatively easy to install and configure using Debian packages.</p>
 <p><a href="#heading--maas-init-modes"><h3 id="heading--maas-init-modes">MAAS initialisation modes reference</h3></a></p>
 <p>MAAS supports the following modes, which dictate what services will run on the local system:</p>
@@ -434,7 +435,10 @@
 <p>This article will show you:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--check-system-requirements-for-maas">How to check system requirements for MAAS</a></li>
-<li><a href="what-is-new-in-maas.html">How to install MAAS 3.2 RC1</a></li>
+<li><a href="#heading--upgrade-from-3-1-to-3-2">How to ugprade from MAAS 3.1 to MAAS 3.2</a></li>
+<li><a href="#heading--upgrade-from-2-8-to-3-2">How to upgrade from MAAS 2.8 or lower to MAAS 3.2</a></li>
+<li><a href="#heading--fresh-install-3-2-packages">How to do a fresh install of MAAS 3.2 from packages</a></li>
+<li><a href="#heading--create-a-maas-user">How to create a MAAS user</a></li>
 <li><a href="#heading--service-status">How to check the status of MAAS services</a></li>
 <li><a href="#heading--reinitialising-maas">How to re-initialise MAAS</a></li>
 <li><a href="#heading--additional-init-options">How to list additional MAAS initialisation options</a></li>
@@ -536,7 +540,114 @@
 </ul>
 <p>Also, this discussion does not take into account a possible local image mirror, which would be a large consumer of disk space.</p>
 <p>One rack controller should only service 1000 machines or less, regardless of how you distribute them across subnets. There is no load balancing at the rack level, so you will need additional, independent rack controllers. Each controller must service its own subnet(s).</p>
-<p>Please see the release notes, as directed above, to install MAAS 3.2 RC1.</p>
+<p><a href="#heading--upgrade-from-3-1-to-3-2"><h2 id="heading--upgrade-from-3-1-to-3-2">How to ugprade from MAAS 3.1 to MAAS 3.2</h2></a></p>
+<p>To upgrade from MAAS 3.1 to MAAS 3.2:</p>
+<ol>
+<li>
+<p>Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.</p>
+</li>
+<li>
+<p>Add the MAAS 3.1 PPA to your repository list with the following command, ignoring any apparent error messages:</p>
+</li>
+</ol>
+<pre><code>sudo apt-add-repository ppa:maas/3.2
+</code></pre>
+<ol>
+<li>Run the MAAS upgrade like this:</li>
+</ol>
+<pre><code>sudo apt update
+sudo apt upgrade maas
+</code></pre>
+<ol>
+<li>
+<p>Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you&rsquo;re running the 3.2 release.</p>
+</li>
+<li>
+<p>If this didn&rsquo;t work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.2.</p>
+</li>
+</ol>
+<p><a href="#heading--upgrade-from-2-8-to-3-2"><h2 id="heading--upgrade-from-2-8-to-3-2">How to upgrade from MAAS 2.8 or lower to MAAS 3.2</h2></a></p>
+<p>If you are running MAAS 2.8 or lower, you can upgrade directly to MAAS 3.2. You must first make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:</p>
+<pre><code>lsb_release -a
+</code></pre>
+<p>The response should look something like this:</p>
+<pre><code>Distributor ID: Ubuntu
+Description:    Ubuntu xx.yy
+Release:    xx.yy
+Codename:   $RELEASE_NAME
+</code></pre>
+<p>The minimum &ldquo;xx.yy&rdquo; required for MAAS 3.2 is &ldquo;20.04,&rdquo; code-named &ldquo;focal.&rdquo;</p>
+<p>If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:</p>
+<ol>
+<li>Upgrade the release:</li>
+</ol>
+<pre><code>sudo do-release-upgrade --allow-third-party
+</code></pre>
+<ol>
+<li>
+<p>Accept the defaults for any questions asked by the upgrade script.</p>
+</li>
+<li>
+<p>Reboot the machine when requested.</p>
+</li>
+<li>
+<p>Check whether the upgrade was successful:</p>
+</li>
+</ol>
+<pre><code>lsb_release -a
+</code></pre>
+<p>A successful upgrade should respond with output similar to the following:</p>
+<pre><code>Distributor ID: Ubuntu
+Description:    Ubuntu 20.04(.nn) LTS
+Release:    20.04
+Codename:   focal
+</code></pre>
+<p><strong>NOTE:</strong> 
+If you&rsquo;re upgrading from MAAS version 2.8 or lower to version 3.2: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.</p>
+<ol>
+<li>
+<p>Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.</p>
+</li>
+<li>
+<p>Add the MAAS 3.2 PPA to your repository list with the following command, ignoring any apparent error messages:</p>
+</li>
+</ol>
+<pre><code>sudo apt-add-repository ppa:maas/3.2
+</code></pre>
+<ol>
+<li>Run the release upgrade like this, answering any questions with the given default values:</li>
+</ol>
+<pre><code>sudo do-release-upgrade --allow-third-party
+</code></pre>
+<ol>
+<li>Check whether your upgrade has been successful by entering:</li>
+</ol>
+<pre><code>lsb_release -a
+</code></pre>
+<p>If the ugprade was successful, this command should yield output similar to the following:</p>
+<pre><code>No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 20.04(.nn) LTS
+Release:    20.04
+Codename:   focal
+</code></pre>
+<ol>
+<li>
+<p>Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you&rsquo;re running the 3.2 release.</p>
+</li>
+<li>
+<p>If this didn&rsquo;t work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.2.</p>
+</li>
+</ol>
+<p><a href="#heading--fresh-install-3-2-packages"><h2 id="heading--fresh-install-3-2-packages">How to do a fresh install of MAAS 3.2 from packages</h2></a></p>
+<p>MAAS 3.2 can be installed from packages by adding the <code>ppa:maas/3.2</code> PPA:</p>
+<pre><code>sudo add-apt-repository ppa:maas/3.2
+sudo apt update
+sudo apt install maas
+</code></pre>
+<p>You can then install MAAS 3.2 fresh (recommended) with:</p>
+<pre><code>sudo apt-get -y install maas
+</code></pre>
 <p><a href="#heading--create-a-maas-user"><h2 id="heading--create-a-maas-user">How to create a MAAS 3.2 RC1 user</h2></a></p>
 <p>You will need to create a MAAS administrator user to access the web UI:</p>
 <pre><code class="language-nohighlight">sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
