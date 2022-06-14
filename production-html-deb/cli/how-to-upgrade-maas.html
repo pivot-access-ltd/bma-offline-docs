@@ -376,14 +376,14 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to upgrade MAAS</h1><!-- "How to upgrade MAAS" -->
 
-<p><a href="#heading--upgrade-from-v3-1-packages-to-3-2"><h2 id="heading--upgrade-from-v3-1-packages-to-3-2">How to ugprade from MAAS 3.1 to MAAS 3.2 RC1</h2></a></p>
-<p>To upgrade from MAAS 3.1 to MAAS 3.2 RC1:</p>
+<p><a href="#heading--upgrade-from-v3-1-packages-to-3-2"><h2 id="heading--upgrade-from-v3-1-packages-to-3-2">How to ugprade from MAAS 3.1 to MAAS 3.2</h2></a></p>
+<p>To upgrade from MAAS 3.1 to MAAS 3.2:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.</p>
 </li>
 <li>
-<p>Add the MAAS 3.2 RC1 PPA to your repository list with the following command, ignoring any apparent error messages:</p>
+<p>Add the MAAS 3.2 PPA to your repository list with the following command, ignoring any apparent error messages:</p>
 </li>
 </ul>
 <pre><code>sudo apt-add-repository ppa:maas/3.2
@@ -402,7 +402,7 @@ sudo apt upgrade maas
 <p>If this didn&rsquo;t work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.2.</p>
 </li>
 </ul>
-<p><a href="#heading--upgrade-from-v2-8-packages-to-3-2"><h2 id="heading--upgrade-from-v2-8-packages-to-3-2">How to upgrade from 2.8 or lower to MAAS 3.2 RC1</h2></a></p>
+<p><a href="#heading--upgrade-from-v2-8-packages-to-3-2"><h2 id="heading--upgrade-from-v2-8-packages-to-3-2">How to upgrade from 2.8 or lower to MAAS 3.2</h2></a></p>
 <p>If you are running MAAS 2.8 or lower, you can upgrade directly to MAAS 3.2. You must first make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:</p>
 <pre><code>lsb_release -a
 </code></pre>
