@@ -5,6 +5,10 @@ We are happy to announce that MAAS 3.2 RC1 is now available.
 
 MAAS 3.2 provides several new features, as well as the usual cadre of bug fixes.
 
+<a href="#heading--improved-performance"><h3 id="heading--improved-performance">Improved performance</h3></a>
+
+As part of the MAAS 3.2 development effort, we have taken steps to improve the performance of machine listings.  To date, we have measured the list of a large number (100-1000) machines via the REST API to be 32% faster, on average.  During the next cycle, we will be actively working to improve MAAS performance for other operations (such as search).
+
 <a href="#heading--better-redfish-support"><h3 id="heading--better-redfish-support">Better Redfish support</h3></a>
 
 MAAS has previously supported the Redfish protocol for some time, but as an option, preferring IPMI over all others if a choice of protocol was possible.  In contrast, MAAS 3.2 supports Redfish as a BMC protocol by preferring Redfish over IPMI, provided that:
