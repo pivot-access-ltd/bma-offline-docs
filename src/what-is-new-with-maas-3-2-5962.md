@@ -7,7 +7,7 @@ MAAS 3.2 provides several new features, as well as the usual cadre of bug fixes.
 
 <a href="#heading--improved-performance"><h3 id="heading--improved-performance">Improved performance</h3></a>
 
-As part of the MAAS 3.2 development effort, we have taken steps to improve the performance of machine listings.  To date, we have measured the list of a large number (100-1000) machines via the REST API to be 32% faster, on average.  During the next cycle, we will be actively working to improve MAAS performance for other operations (such as search).
+As part of the MAAS 3.2 development effort, we have taken steps to improve the performance of machine listings.  To date, we have measured the speed of listing a large number (100-1000) of machines via the REST API to be 32% faster, on average.  During the next cycle, we will be actively working to improve MAAS performance for other operations (such as search).
 
 <a href="#heading--better-redfish-support"><h3 id="heading--better-redfish-support">Better Redfish support</h3></a>
 
