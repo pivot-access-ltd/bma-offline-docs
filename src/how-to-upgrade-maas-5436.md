@@ -5,7 +5,7 @@
 
 If you want to upgrade from a earlier snap version to the 3.2 RC1 snap, and you are using a `region+rack` configuration, use this command:
 
-    $ sudo snap refresh --channel=3.2/candidate maas
+    $ sudo snap refresh --channel=3.2 maas
 
 After entering your password, the snap will refresh from the 3.1 channel.  You will **not** need to re-initialise MAAS.
 
@@ -21,7 +21,7 @@ To upgrade from MAAS 3.1 to MAAS 3.2 RC1:
 - Add the MAAS 3.2 RC1 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```
-sudo apt-add-repository ppa:maas/3.2-rc1
+sudo apt-add-repository ppa:maas/3.2
 ```
 
 - Run the MAAS upgrade like this:
@@ -31,13 +31,13 @@ sudo apt update
 sudo apt upgrade maas
 ```
 
-- Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 release.
+- Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.2 release.
 
-- If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1.
+- If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.2.
 
 <a href="#heading--upgrade-from-v2-8-packages-to-3-2"><h2 id="heading--upgrade-from-v2-8-packages-to-3-2">How to upgrade from 2.8 or lower to MAAS 3.2 RC1</h2></a>
 
-If you are running MAAS 2.8 or lower, you can upgrade directly to MAAS 3.2 RC1. You must first make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
+If you are running MAAS 2.8 or lower, you can upgrade directly to MAAS 3.2. You must first make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
 
 ```
 lsb_release -a
@@ -90,7 +90,7 @@ If you're upgrading from MAAS version 2.8 or lower to version 3.2: While the fol
 - Add the MAAS 3.2 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```
-sudo apt-add-repository ppa:maas/3.2-rc1
+sudo apt-add-repository ppa:maas/3.2
 ```
 
 - Run the release upgrade like this, answering any questions with the given default values:
@@ -115,9 +115,9 @@ Release:	20.04
 Codename:	focal
 ```
 
-- Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.1 release.
+- Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.2 release.
 
-- If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.2 RC1.
+- If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.2.
 [/tab]
 [tab version="v3.1 Snap"] 
 <a href="#heading--upgrade-from-earlier-version-to-snap-3-1"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-1">How to upgrade a snap to MAAS 3.1</h2></a>
