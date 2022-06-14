@@ -1,0 +1,1 @@
+This is placeholder text to allow the document to be created, because the system won't create an empty document.
