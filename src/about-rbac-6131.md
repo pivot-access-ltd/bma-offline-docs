@@ -63,6 +63,6 @@ Users should have a clear understanding of RBAC roles, permissions, and domains,
 
 A user must have a clear understanding of the various defined roles, permissions, rights, and permitted actions when using RBAC with MAAS.  Explain clearly how RBAC controls the actions (access) of each role across normal MAAS operations, using a suitable example (Navy fleet management, example MAAS already created).
 
-<a href="#heading--rbac-logging"><h3 id="heading--rbac-logging">RBAC logging</h3><a>
+<a href="#heading--rbac-logging"><h3 id="heading--rbac-logging">RBAC logging</h3></a>
 
 Users should understand logging and how it helps to audit and review actions taken by MAAS users. Explain clearly how RBAC logs help to establish an audit trail across the MAAS instance over time.
