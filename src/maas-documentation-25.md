@@ -27,7 +27,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 
 ### [Home](/t/maas-documentation/25)
 
-### Tutorials
+### [Tutorials](/t/-/6140)
 
 - [Get started with MAAS](/t/-/5092)
 - [Try out the MAAS CLI](/t/-/5236)
@@ -84,7 +84,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 - [Search MAAS](/t/-/5192)
 - [Upgrade older versions](/t/how-to-upgrade-maas/5436)
 
-### Reference
+### [Reference](/t/-/6143)
 
 - [Release notes](/t/-/5292)
 - [Power management](/t/-/5246)
@@ -99,7 +99,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 - [Concepts & terms](/t/-/5416)
 - [Getting help](/t/-/5428)
 
-### Technical explanations
+### [Explanations](/t/-/6141)
 
 - [MAAS](/t/-/5064)
 - [TCP/IP networks](/t/-/5806)
@@ -118,6 +118,10 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6140|/docs/tutorials|
+|https://discourse.maas.io/t/-/6141|/docs/explanation|
+|https://discourse.maas.io/t/-/6142|/docs/how-to-guides|
+|https://discourse.maas.io/t/-/6143|/docs/reference|
 |https://discourse.maas.io/t/-/6102|/docs/create-a-custom-image|
 |https://discourse.maas.io/t/-/6099|/docs/about-creating-custom-images|
 |https://discourse.maas.io/t/-/6027|/docs/using-jq-with-the-maas-cli|
