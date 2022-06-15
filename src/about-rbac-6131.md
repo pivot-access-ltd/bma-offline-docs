@@ -7,13 +7,46 @@ This work is not yet published, and thus cannot be relied upon by MAAS users.
 
 As a MAAS RBAC administrator, you need to understand multi-tenancy, because it will help you design and maintain useful and functional MAAS RBAC instances.  This means that you need an understanding of groups, roles, and resource pools – and how they connect via RBAC.
 
+<a href="#heading--what-is-multi-tenancy"><h3 id="heading--what-is-multi-tenancy">What is multi-tenancy?</h3></a>
+
+Multi-tenancy means that groups of users own a group of resources (machines) without knowing about other groups of users -- or their machines.  A common multi-tenancy use case provides different sets of machines for different users or groups of users. MAAS can achieve this, to some degree, by allowing users to allocate machines, but this approach has some drawbacks:
+
+- Other administrative users can still see the allocated machines, as well as release and reallocate someone else's machines for themselves.
+- Other administrative users can take administrative actions on someone else's machines (e.g., deployment).
+
+To allow better machine access control, MAAS version 2.4 created resource pools.  By themselves, resource pools don't prevent one administrative user from manipulating someone else's machines.  Resource pools are integrated into the Canonical RBAC tool, making separation of privilege possible.
+
 <a href="#heading--how-resource-pools-link-to-rbac"><h3 id="heading--how-resource-pools-link-to-rbac">How resource pools are integrated into RBAC</h3></a>
 
-Explain why resource pools form the basis of the MAAS privilege model.
+Resource pools are just a way of grouping machines.  Any given machine can be in exactly one resource pool.  This means that if you can control access to (and visibility of) resource pools, you can effectively control user access.
+
+Note that just using resource pools to hide machines is a flawed access control approach, known as "security by obscurity."  What users don't know will hurt you when the users figure it out, and more often than not, they figure these things out entirely by accident.  There must also be some means of active authorisation that allows access to a resource pool, based on user identity, and there must be some way of controlling what the user can do with that resource pool.  In the parlance of standard security model, "what the user can do" would be called "privileges", but for the purposes of MAAS, we simply call them "permissions."  
 
 <a href="#heading--the-rbac-permissions-model"><h3 id="heading--the-rbac-permissions-model">The RBAC permissions model</h3></a>
 
-Explain the permissions model across MAAS, RBAC, and Candid, 
+RBAC (Role-based access control) does not authenticate users or verify their identity; that depends on upstream tools.  RBAC does associate a given role with a properly-authenticated user identity.  With RBAC, permissions are associated with roles, not individual users, so the role assigned to a user when they authenticate controls what they can and cannot do.
+
+This may seem like an unnecessary distinction, but it some key advantages:
+
+- should a user wish to downgrade their privileges, e.g., so they won't accidentally do something destructive, this is possible without change the user's identity information.
+- should a user's role change, requiring a change in privilege, the user account does not have to be modified to make this change.
+
+From the point of view of MAAS, here is a thumbnail sketch of the permissions model:
+
+- MAAS maintains resource pools, which are a machine attribute.  Every machine can be in one and only one resource pool.  Control access to a resource pool, and you control access to a machine.
+- RBAC maintains roles, which are associated with user identities and permissions.  For a given user identity to carry out a particular operation in MAAS, that user identity must correspond to a role that has permission to carry out that operation.
+- Some other tool (in this case, Candid) verifies the user identity.  If roles are to be effective, the user identity must be correct, and that identity must be verified before reaching RBAC.
+
+The relationship between permissions and MAAS operations is hard coded into MAAS.  If RBAC is used, the code controlling each operation will verify with RBAC that the requesting user has a role that is permitted to perform that operation.
+
+Over 400 permissions exist within MAAS that control whether or not the user can view, add, change, or delete anything from machines to partitions to script sets.  RBAC collects these permissions into four roles:
+
+- Administrator: all permissions for all resource pools.
+- Operator: all permissions for a specific resource pool, but not others.
+- User: limited permissions, corresponding to the normal rights of a MAAS users.
+- Auditor: permission to view data, only (i.e., read-only access).
+
+MAAS code and RBAC code must work together to ensure that only users with the correct permissions are able to perform a specific operation; i.e., the MAAS/RBAC permissions model is hard-coded with respect to the above roles.
 
 <a href="#heading--the-rbac-maas-security-architecture"><h3 id="heading--the-rbac-maas-security-architecture">The MAAS/RBAC security architecture</h3></a>
 
