@@ -3076,5 +3076,3 @@ On my machine, it didn't copy the permissions precisely, but it is executable by
 ## Summary
 
 As you see, it's not that difficult to install MAAS, deploy a machine, and then load usable software on it. Now you can go through the MAAS documenation to learn more about what you just did.
-
-
