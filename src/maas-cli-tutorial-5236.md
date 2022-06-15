@@ -521,7 +521,7 @@ This produces a quick list of the images we've successfully downloaded:<br />
 
 That definitely confirms that we have some images.  But what are those three or four on top?  Looking at the massive JSON output, notice that they have names like "open-firmware," "uefi," and "pxe."  Those are images that can PXE-boot machines, basically.  But how can we sort this information out in a neat way?
 
-Well, if you're going to use anything with JSON-based output, you'll want to consider learning the command line tool [[https://stedolan.github.io/jq/][jq]].  It's quite handy for parsing the JSON output of the MAAS CLI.  So, for example, if we want a lightly formatted table of names and architectures, we can run that last command through `jq` like this:
+Well, if you're going to use anything with JSON-based output, you'll want to consider learning the command line tool [jq](https://stedolan.github.io/jq/).  It's quite handy for parsing the JSON output of the MAAS CLI.  So, for example, if we want a lightly formatted table of names and architectures, we can run that last command through `jq` like this:
 
 ```nohighlight
 maas admin boot-resources read | jq -r '.[] | "\(.name)\t\(.architecture)"'
@@ -3076,3 +3076,5 @@ On my machine, it didn't copy the permissions precisely, but it is executable by
 ## Summary
 
 As you see, it's not that difficult to install MAAS, deploy a machine, and then load usable software on it. Now you can go through the MAAS documenation to learn more about what you just did.
+
+
