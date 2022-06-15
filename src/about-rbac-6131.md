@@ -48,6 +48,21 @@ Over 400 permissions exist within MAAS that control whether or not the user can 
 
 MAAS code and RBAC code must work together to ensure that only users with the correct permissions are able to perform a specific operation; i.e., the MAAS/RBAC permissions model is hard-coded with respect to the above roles.
 
+<a href="#heading--a-little-about-candid"><h3 id="heading--a-little-about-candid">A little about Candid</h3></a>
+
+Candid is the [Canonical Identity service](https://github.com/mhilton/canonical-candid), an open-source [macaroon](https://en.wikipedia.org/wiki/Macaroons_(computer_science))-based authentication service. Candid is not an [identity server](https://en.wikipedia.org/wiki/Identity_provider), it just manages the users on a specified identity server.  An example of such an identity server could be LDAP, for example.
+
+Candid can do the following things:
+
+- find users by various identity parameters, such as e-mail, full name, last login time, etc.
+- show details for a user, based on e-mail or username.
+- add or remove users from ACLs (access control lists), or list members of an ACL.
+- add or remove users from arbitrary groups.
+- clear the multi-factor authentication (MFA) credentials for a specific user.
+- manage Candid agents.
+
+Candid can use certificates and agents, if desired.  You specify the identity provider by URL when instantiating the program.
+
 <a href="#heading--the-rbac-maas-security-architecture"><h3 id="heading--the-rbac-maas-security-architecture">The MAAS/RBAC security architecture</h3></a>
 
 Explain clearly, with graphics, the joint architecture of MAAS, Candid, and RBAC, including the specific function of each piece and any limitations introduced by the fact that MAAS use of RBAC is hard-coded to resource pools (thus not infinitely flexible).

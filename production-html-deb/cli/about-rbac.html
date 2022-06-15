@@ -412,6 +412,18 @@
 <li>Auditor: permission to view data, only (i.e., read-only access).</li>
 </ul>
 <p>MAAS code and RBAC code must work together to ensure that only users with the correct permissions are able to perform a specific operation; i.e., the MAAS/RBAC permissions model is hard-coded with respect to the above roles.</p>
+<p><a href="#heading--a-little-about-candid"><h3 id="heading--a-little-about-candid">A little about Candid</h3></a></p>
+<p>Candid is the <a href="https://github.com/mhilton/canonical-candid">Canonical Identity service</a>, an open-source <a href="https://en.wikipedia.org/wiki/Macaroons_(computer_science)">macaroon</a>-based authentication service. Candid is not an <a href="https://en.wikipedia.org/wiki/Identity_provider">identity server</a>, it just manages the users on a specified identity server.  An example of such an identity server could be LDAP, for example.</p>
+<p>Candid can do the following things:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>find users by various identity parameters, such as e-mail, full name, last login time, etc.</li>
+<li>show details for a user, based on e-mail or username.</li>
+<li>add or remove users from ACLs (access control lists), or list members of an ACL.</li>
+<li>add or remove users from arbitrary groups.</li>
+<li>clear the multi-factor authentication (MFA) credentials for a specific user.</li>
+<li>manage Candid agents.</li>
+</ul>
+<p>Candid can use certificates and agents, if desired.  You specify the identity provider by URL when instantiating the program.</p>
 <p><a href="#heading--the-rbac-maas-security-architecture"><h3 id="heading--the-rbac-maas-security-architecture">The MAAS/RBAC security architecture</h3></a></p>
 <p>Explain clearly, with graphics, the joint architecture of MAAS, Candid, and RBAC, including the specific function of each piece and any limitations introduced by the fact that MAAS use of RBAC is hard-coded to resource pools (thus not infinitely flexible).</p>
 <p><a href="#heading--rbac-users-and-groups"><h3 id="heading--rbac-users-and-groups">RBAC users and groups vs. MAAS resource pools</h3></a></p>
