@@ -9,6 +9,14 @@ MAAS comprehensively meets the need to rapidly deploy, destroy, and reconfigure 
 
 MAAS is applicable to nearly any situation.  It is currently deployed in banking, telecom, and industrial environments, as well as niche uses as diverse as national lotteries, supercomputer front-end validation, streaming music services, disaster recovery, and computer security risk analysis.
 
+## In this documentation
+
+|                                                                                                      |                                                                                             |
+|------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| [Tutorials](/t/6140)</br>  Get started - a hands-on introduction to MAAS for new users </br> | [How-to guides](/t/6142) </br> Step-by-step guides covering key operations and common tasks |
+| [Explanation](/t/6141) </br> Discussion and clarification of key topics                   | [Reference](/t/6143) </br> Technical information - specifications, APIs, architecture       |
+
+
 ## Project and community
 
 MAAS is a member of the Ubuntu family. It’s an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.
