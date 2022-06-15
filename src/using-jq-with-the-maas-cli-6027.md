@@ -1,7 +1,6 @@
-<!-- "Using jq with the MAAS CLI" -->
 The JSON output from the MAAS CLI can be very lengthy for even one machine. You can imagine how large a listing 10 or 12 or 600 machines might present. Traditional JSON output is both consistent and comprehensive, but it's sometimes hard for humans to process.
 
-Enter `jq`, a command-line tool dedicated to filtering and formatting JSON output, so that you can more easily summarize data. For instance, consider a small MAAS install with 12 virtual machines. Six of these machines are LXD VMs, and six are libvirt VMs. Suppose we enter the MAAS command to list all those machines:
+Enter `jq`, a command-line tool dedicated to filtering and formatting JSON output, so that you can more easily summarise data. For instance, consider a small MAAS install with 12 virtual machines. Six of these machines are LXD VMs, and six are libvirt VMs. Suppose we enter the MAAS command to list all those machines:
 
 ```nohighlight
 maas admin machines read
@@ -228,13 +227,13 @@ libvirt-vm-5	Ready
 libvirt-vm-6	Deployed
 ```
 
-This is tabulated, but the number of spaces between the columns is a little big, and, if there's an unusually long value in one of the fields, it may throw the tabulation off for that line. Something could have been added to jq for that, but there is no need, since Ubuntu already has the column utility. Piping the output of the command so far to column -t (-t for “tabs”) will normalize the tab spacing to the data and ensure that each column is exactly long enough for the longest value in that column:
+This is tabulated, but the number of spaces between the columns is a little big, and, if there's an unusually long value in one of the fields, it may throw the tabulation off for that line. Something could have been added to jq for that, but there is no need, since Ubuntu already has the column utility. Piping the output of the command so far to column -t (-t for “tabs”) will normalise the tab spacing to the data and ensure that each column is exactly long enough for the longest value in that column:
 
 ```nohighlight
 maas admin machines read | jq -r '(.[] | [.hostname, .status_name]) | @tsv' | column -t
 ```
 
-This command result is very similar to the previous output, though you'll notice that the field spacing is neatly optimized to the data itself:
+This command result is very similar to the previous output, though you'll notice that the field spacing is neatly optimised to the data itself:
 
 ```nohighlight
 lxd-vm-1      Deployed
@@ -685,4 +684,4 @@ libvirt-vm-3  r44hr6  error  Ready      -      pod-console-logging  default  unt
 
 ## Summary
 
-At this point, it should be clear that jq is a relatively simple, powerful tool for formatting output from the MAAS CLI. You should also remember that, like any Ubuntu CLI command, jq simply outputs text — so anything you can do with text output, you can do with the output from jq. 
+At this point, it should be clear that jq is a relatively simple, powerful tool for formatting output from the MAAS CLI. You should also remember that, like any Ubuntu CLI command, jq simply outputs text — so anything you can do with text output, you can do with the output from jq.
