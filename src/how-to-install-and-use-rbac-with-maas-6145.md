@@ -1,5 +1,8 @@
 <!-- "How to install and use RBAC with MAAS" -->
 
+Prologue text that explains what this document is about.
+
+* How to set up identity management for RBAC 
 [4] As a MAAS RBAC administrator, I want to properly set up the environment for Candid and RBAC to be used.
 As an RBAC administrator, I need step-by-step procedures that guide me through pre-installation configuration.
 Acceptance criteria
@@ -8,6 +11,8 @@ A user has detailed instructions for ensuring that valid certificates can be gen
 Work items:
 Provide detailed instructions about which authentication systems are compatible with RBAC, how they must be configured, and how to verify that they are properly configured.  
 Provide detailed instructions regarding the CA and certificates needed, as well as instructions for verifying that they are properly configured.
+
+* How to install and configure RBAC
 [5] As a MAAS RBAC administrator, I want to properly install and configure RBAC and Candid.
 As an RBAC administrator, I need step-by-step procedures that guide me through the process of installing RBAC and Candid.
 Acceptance criteria
@@ -22,6 +27,8 @@ Provide detailed instructions for configuring Candid via /var/snap/candid/curren
 Provide detailed instructions for obtaining PPA credentials, including necessary contact information and/or links.
 Provide indirect instructions on how to login to Launchpad, visit your private PPA, set the necessary credentials, add your private PPA, and install the RBAC package.
 Provide detailed instructions about how to pass the Candid cert to RBAC; define RBAC cert, public key, and CA via SSL; create the appropriate credentials; configure RBAC to use these credentials; verify correct operation of the service-URL; and create an RBAC administrative user.
+
+* How to connect MAAS and RBAC
 [6] As a MAAS RBAC administrator, I want to properly connect MAAS to RBAC and establish baseline test users.
 As an RBAC administrator, I need step-by-step procedures that guide me through the process of making MAAS talk to RBAC successfully.
 Acceptance criteria
@@ -36,6 +43,8 @@ Provide detailed instructions for creating new resource pools, or provide a proc
 Provide detailed instructions for creating test users, or provide a procedure for using existing test users already established.
 Provide instructions on how to associate test users with resource pools.
 Provide detailed instructions for using the RBAC test cases created thus far to verify that RBAC is working correctly with MAAS.
+
+* How to operate and maintain RBAC
 [7] As a MAAS RBAC administrator, I want to understand how to operate and maintain RBAC.
 As an RBAC administrator, I need step-by-step procedures that guide me through the various day-to-day aspects of RBAC components, services, groups, roles, and permissions.
 Acceptance criteria
@@ -52,6 +61,8 @@ Provide detailed instructions about scopes, and how they should be configured an
 Provide detailed instructions about the way RBAC tabulates roles, services, etc., including the way the hierarchy flows from left to right, how to change views, and how to manipulate items in those views.
 Provide detailed procedures for managing the relationships between roles, permissions, users, groups, and resource pools, including how to add, edit, remove, and reassign them; explain how changes are “buffered”, i.e., not implemented until a separate choice is made.
 Provide detailed instructions for addressing the various non-machine-related components of MAAS that are exposed in RBAC.
+
+* How to audit user actions
 [8] As a MAAS RBAC administrator, operator, or auditor, I want to understand how to use RBAC logging to review user actions.
 As an RBAC administrator, operator, or auditor, I need step-by-step procedures that guide me through the process of reviewing, analyzing, and correlating log entries.
 Acceptance criteria
