@@ -93,6 +93,7 @@ Here is a quick breakdown of how the four roles experience MAAS:
 
 - User: a user can do just what a normal MAAS user can do.  They can only view and allocate machines that aren't allocated to someone else, even if that someone else is another user in the same resource pool.  Users can't change or access settings at all.
 
-- Auditor: an auditor can view anything about machines in the resource pool(s) for which they are permitted.  Auditors cannot or access settings.
+- Auditor: an auditor can view anything about machines in the resource pool(s) for which they are permitted.  Auditors cannot change or access settings.
 
 MAAS makes no assumptions about how these roles might be used in the day-to-day operation of your MAAS instance.  The capabilities listed above form the complete set of what these roles can do.
+
