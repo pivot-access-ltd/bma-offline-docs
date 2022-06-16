@@ -1,7 +1,24 @@
 <!-- "About RBAC" -->
 
+[note]
 # Work in progress
 This work is not yet published, and thus cannot be relied upon by MAAS users.
+
+Explanations to add to this document, based on operational doc outline:
+
+- process of installing and configuring id provider and candid
+- candid certficates
+- process of getting rbac ppa and credentials
+- process of install / setup / configure candid
+- process of connecting maas to candid
+- services, scopes, and users (not convered in other material, sadly)
+- process of navigating, changing views
+- process of MAC users
+- how RBAC deals with dns, azs, images, settings, etc. (currently just guessing, need to verify)
+- where user action data is stored for auditors to review
+- how auditors get access to that data and where filtering tools are
+- process of using filtering tools
+[/note]
 
 Role-based access control (RBAC) restricts user actions based on four roles:
 
