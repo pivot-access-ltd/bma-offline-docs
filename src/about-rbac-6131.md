@@ -37,16 +37,16 @@ From the point of view of MAAS, here is a thumbnail sketch of the permissions mo
 - RBAC maintains roles, which are associated with user identities and permissions.  For a given user identity to carry out a particular operation in MAAS, that user identity must correspond to a role that has permission to carry out that operation.
 - Some other tool (in this case, Candid) verifies the user identity.  If roles are to be effective, the user identity must be correct, and that identity must be verified before reaching RBAC.
 
-The relationship between permissions and MAAS operations is hard coded into MAAS.  If RBAC is used, the code controlling each operation will verify with RBAC that the requesting user has a role that is permitted to perform that operation.
+The relationship between permissions and MAAS operations is mediated by RBAC.  If RBAC is used, the code controlling each operation will verify with RBAC that the requesting user has the correct combination of roles and permissions.
 
-Over 400 permissions exist within MAAS that control whether or not the user can view, add, change, or delete anything from machines to partitions to script sets.  RBAC collects these permissions into four roles:
+RBAC maintains a database that maps users to roles and resources; there are four roles:
 
 - Administrator: all permissions for all resource pools.
 - Operator: all permissions for a specific resource pool, but not others.
 - User: limited permissions, corresponding to the normal rights of a MAAS users.
 - Auditor: permission to view data, only (i.e., read-only access).
 
-MAAS code and RBAC code must work together to ensure that only users with the correct permissions are able to perform a specific operation; i.e., the MAAS/RBAC permissions model is hard-coded with respect to the above roles.
+MAAS code and RBAC code must work together to ensure that only users with the correct permissions are able to perform a specific operation.
 
 <a href="#heading--a-little-about-candid"><h3 id="heading--a-little-about-candid">A little about Candid</h3></a>
 
@@ -63,54 +63,42 @@ Candid can do the following things:
 
 Candid can use certificates and agents, if desired.  You specify the identity provider by URL when instantiating the program.
 
+When a user tries to log into a MAAS which is working with RBAC, MAAS redirects that login to the RBAC server.  RBAC, in turn, requests authentication via Candid, which then consults the specified identity server (at the URL provided on startup).  If the user is autenticated, Candid constructs a macaroon, which is then passed to RBAC and on to MAAS.  This macaroon serves as the user's authentication token until it expires.
+
 <a href="#heading--the-rbac-maas-security-architecture"><h3 id="heading--the-rbac-maas-security-architecture">The MAAS/RBAC security architecture</h3></a>
 
-Explain clearly, with graphics, the joint architecture of MAAS, Candid, and RBAC, including the specific function of each piece and any limitations introduced by the fact that MAAS use of RBAC is hard-coded to resource pools (thus not infinitely flexible).
+The following diagram will give you a graphical view of how MAAS, RBAC, and Candid work together to control access to MAAS resources:
 
-<a href="#heading--rbac-users-and-groups"><h3 id="heading--rbac-users-and-groups">RBAC users and groups vs. MAAS resource pools</h3></a>
+<a href="https://discourse.maas.io/uploads/default/original/2X/4/4433c6995c342efebe565f4888a46d7107d1525f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/4433c6995c342efebe565f4888a46d7107d1525f.png"></a>
 
-Explain clearly how RBAC users and groups are managed across the MAAS/RBAC architecture, and how these attributes control access to resource pools.
+The step-by-step walkthrough of the MAAS/RBAC realtionship goes like this:
 
-<a href="#heading--maas-rbac-roles"><h3 id="heading--maas-rbac-roles">MAAS RBAC roles</h3></a>
+- When MAAS is initiated with RBAC connected, MAAS pushes a list of resource pools and a global resource key to RBAC.  The global resource key covers things that are not added to resource pools, such as devices.
+- When a user tries to login, MAAS redirects that login request to RBAC.
+- RBAC, in turn, requests an auth check from Candid.
+- Candid attempts to authenticate the user via whatever identity provider was configured when Candid was started (e.g., SSO).
+- If Candid successfully authenticates the user, Candid creates a macaroon as a temporary identity token for the user.
+- Candid passes the macaroon back to RBAC.
+- RBAC passes the macaroon, in turn, the MAAS, along with a dictionary of groups, role(s) and resource pools corresponding to that user.
+- As needed, MAAS then mediates access to resource pools, using the macaroon to recognize the user and their group(s), and the role/resource pool pairs to adjudicate access.
 
-A user needs to understand the MAAS RBAC roles (user, administrator, operator, and auditor).  Explain clearly how each of these roles work; what actions each role is capable of performing; and how these roles are limited by the MAAS RBAC architecture.
+Though it sometimes sounds complicated, the process is fairly straightforward when viewed in this way.
+
+Note that RBAC does not adjudicate individual permissions against resource pools. RBAC only sends MAAS the combination of users, roles, and related resource pools.  The MAAS code has a built-in understanding of the four roles (user, administrator, operator, and auditor) and what those roles can and cannot do with a given item.  
 
 <a href="#heading--how-the-four-maas-roles-protect-maas-resources"><h3 id="heading--how-the-four-maas-roles-protect-maas-resource">How the four MAAS RBAC roles protect MAAS resources</h3></a>
 
-Users need to understanding how the four MAAS RBAC roles manage the correspondence of users, groups, and resource pools to protect MAAS resources.  Explain clearly, with graphics, the typical experience of each of the four MAAS RBAC groups over a range of typical scenarios.
+The most important thing to understand about MAAS RBAC roles is that restricted users cannot see or interact with machines in resource pools that aren't permitted for them. This is more than just "security by obscurity," because even if a user knows the name or system ID of a machine in a non-permitted resource pool, that user can't access it.  Removing non-permitted machines from view, though, prevents confusion about what the user can and can't do.
 
-<a href="#heading--about-candid"><h2 id="heading--about-candid">About Candid</h2></a>
+Here is a quick breakdown of how the four users experience MAAS:
 
-In order to properly design your MAAS/RBAC instance, you need to understand Candid -- not only what it provides, but how it works.  Knowing the underlying features and operational parameters of Candid will help you better plan your use of RBAC with MAAS.
+- Administrator: an administrator can do anything that a normal MAAS administrator can do in the absence of RBAC.  This means an admin can see all resource pools, take any action against any machine, and change any MAAS settings.
 
-<a href="#heading--what-candid-does-and-doesnt-do"><h3 id="heading--what-candid-does-and-doesnt-do">What Candid does and doesn't do</h3></a>
+- Operator: an operator can do almost anything that a normal MAAS administrator can do, but only against machines in their permitted resource pools.  An operator cannot see or change system settings.
 
-Users need a clear understanding of what Candid does (e.g., creates macaroons) and doesn’t do (e.g., provide identity, authenticate users).  Explain, with graphics, a more detailed view of how Candid fits into the MAAS RBAC ecosystem, specifically which services it does and doesn’t provide.
+- User: a user can do just what a normal MAAS user can do.  They can only view and allocate machines that aren't allocated to someone else, even if that someone else is another user in the same resource pool.  Users can't change or access settings at all.
 
-<a href="#heading--how-candid-interfaces-to-security-tools"><h3 id="heading--how-candid-interfaces-to-security-tools">How Candid interfaces with authentication and identity tools</h3></a>
+- Auditor: an auditor can view anything about machines in the resource pool(s) for which they are permitted.  Auditors cannot or access settings.
 
-A user needs a clear understanding of how Candid supports integration with underlying authentication systems and identity providers, including conspicuous examples related to using Candid with RBAC and MAAS.  Explain clearly, in simple terms, how Candid integrates with underlying auth systems and identity provides, and what Candid generates for RBAC.
+MAAS makes no assumptions about how these roles might be used in the day-to-day operation of your MAAS instance.  The capabilities listed above form the complete set of what these roles can do.
 
-<a href="#heading--the-candid-api"><h3 id="heading--the-candid-api">The Candid API</h3></a>
-
-A user needs a clear understanding of the Candid API, what it does, and how it assists RBAC in managing user actions for MAAS.  Explain clearly how the Candid API works, what services it provides, and how RBAC accesses this API to integrate Candid into the MAAS ecosystem.
-
-<a href="#heading--about-designing-maas-security-with-rbac"><h2 id="heading--about-designing-maas-security-with-rbac">Designing MAAS security with RBAC</h2></a>
-
-As a MAAS RBAC administrator, you need to design strong, properly-configured, role-based access controls for MAAS, using RBAC.  Understanding the gap that RBAC fills – and how it fills it – will better equip you to do this.
-
-<a href="#heading--the-unique-function-of-rbac"><h3 id="heading--the-unique-function-of-rbac">The unique function of RBAC</h3></a>
-
-Users need clear understanding of what RBAC does that Candid and MAAS do not do, and how it is integrated with both Candid and MAAS to fill these gaps.  Explain, with graphics, a more detailed view of how RBAC fits into the MAAS RBAC ecosystem, specifically which services it does and doesn’t provide, and how it interfaces with Candid and MAAS to provide these services.  
-
-<a href="#heading--roles-permissions-and-domains"><h3 id="heading--roles-permissions-and-domains">Roles, permissions, and domains</h3></a>
-
-Users should have a clear understanding of RBAC roles, permissions, and domains, and the way in which they are implemented in MAAS (resource pools, users, etc).  Explain clearly, in simple terms, how RBAC accesses and manages roles, permissions, and domains (resource pools), and how it mediates access by role.
-
-<a href="#heading--permissions-and-permitted-actions"><h3 id="heading--permissions-and-permitted-actions">Permissions and permitted actions</h3></a>
-
-A user must have a clear understanding of the various defined roles, permissions, rights, and permitted actions when using RBAC with MAAS.  Explain clearly how RBAC controls the actions (access) of each role across normal MAAS operations, using a suitable example (Navy fleet management, example MAAS already created).
-
-<a href="#heading--rbac-logging"><h3 id="heading--rbac-logging">RBAC logging</h3></a>
-
-Users should understand logging and how it helps to audit and review actions taken by MAAS users. Explain clearly how RBAC logs help to establish an audit trail across the MAAS instance over time.
