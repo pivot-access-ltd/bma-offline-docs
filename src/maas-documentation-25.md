@@ -120,12 +120,14 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 - [Machines](/t/-/5080)
 - [Customising machines](/t/-/5976)
 - [VM hosting](/t/-/5068)
+- [About RBAC](/t/-/6131)
 
 ## URLs
 
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6131|/docs/about-rbac|
 |https://discourse.maas.io/t/-/6140|/docs/tutorials|
 |https://discourse.maas.io/t/-/6141|/docs/explanation|
 |https://discourse.maas.io/t/-/6142|/docs/how-to-guides|
