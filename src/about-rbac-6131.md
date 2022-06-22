@@ -1,46 +1,26 @@
 <!-- "About RBAC" -->
 
-[note]
-# Work in progress
-This work is not yet published, and thus cannot be relied upon by MAAS users.
-
-Explanations to add to this document, based on operational doc outline:
-
-- process of installing and configuring id provider and candid
-- candid certficates
-- process of getting rbac ppa and credentials
-- process of install / setup / configure candid
-- process of connecting maas to candid
-- services, scopes, and users (not convered in other material, sadly)
-- process of navigating, changing views
-- process of MAC users
-- how RBAC deals with dns, azs, images, settings, etc. (currently just guessing, need to verify)
-- where user action data is stored for auditors to review
-- how auditors get access to that data and where filtering tools are
-- process of using filtering tools
-[/note]
-
-Role-based access control (RBAC) restricts user actions based on four roles:
+MAAS can restrict user access and actions based on four roles:
 
 - Administrator: can access all settings and perform any operation on any machine in any resource pool; equivalent to a MAAS administrator.
 - Operator: can act as a MAAS administrator, but only within an assigned resource pool.  Machines in other resource pools -- and system settings -- are not accessible.
 - User: can access and manipulate machines that are not currently allocated to other users, within the confines of an assigned resource pool; equivalent to a MAAS user, but only over the resource pool.  Users cannot access any settings.
 - Auditor: can view information for all machines within an assigned resource pool; cannot make any changes or alter any settings.
 
-You can design a carefully-controlled MAAS environment using RBAC.
+MAAS controls access with the help of RBAC (Role-Based Access Control), Candid (Canonical Identity Manager), and an identity service of your choice, such as SSO (Single Sign-On).  From this point on, we'll refer to this solution as MAAS/RBAC, even though it uses more than two tools.  You can design and deploy a carefully-controlled MAAS environment using MAAS/RBAC.
 
 <a href="#heading--multi-tenancy-in-maas"><h2 id="heading--multi-tenancy-in-maas">Multi-tenancy in MAAS</h2></a>
 
-As a MAAS RBAC administrator or designer, you should understand the concept of multi-tenancy.
+As a MAAS/RBAC administrator or designer, you should understand the concept of multi-tenancy.
 
-Multi-tenancy means that groups of users own a group of resources (machines), but without knowing about other groups of users -- or their machines.  A common multi-tenancy use case provides different sets of machines for different users or groups of users. MAAS can achieve this, to some degree, by allowing users to allocate machines, but this approach has some drawbacks:
+Multi-tenancy means that groups of users own a group of resources (machines), but without knowing about other groups of users -- or their machines.  A common multi-tenancy use case provides different sets of machines for different users or groups of users. MAAS alone can achieve this, to some degree, by allowing users to allocate machines, but this approach has some drawbacks:
 
 - Other administrative users can still see the allocated machines, as well as release and reallocate someone else's machines for themselves.
 - Other administrative users can take administrative actions on someone else's machines (e.g., deployment).
 
-With RBAC, an operator can act as administrator for one resource pool, without the ability to manipulate someone else's machines. Resource pools are integrated into the Canonical RBAC tool, making separation of privilege possible.
+With MAAS/RBAC, an operator can act as administrator for one resource pool, without the ability to manipulate someone else's machines. Users can only operate within the confines of their resource pool, and auditors can review actions without making any changes.
 
-<a href="#heading--how-resource-pools-link-to-rbac"><h3 id="heading--how-resource-pools-link-to-rbac">How resource pools are integrated into RBAC</h3></a>
+<a href="#heading--how-resource-pools-link-to-rbac"><h3 id="heading--how-resource-pools-link-to-rbac">How resource pools are integrated into MAAS/RBAC</h3></a>
 
 Resource pools are just a way of grouping machines.  Any given machine can be assigned to exactly one resource pool.  If you control access to resource pools, and you assign roles properly, you can effectively control user access.
 
@@ -48,23 +28,21 @@ Note that just using resource pools to hide machines is a flawed access control 
 
 Consequently, there must also be some means of active authorisation that allows access to a resource pool.  That authorisation must be based on user identity. There must be some way of controlling what the user can do with that resource pool.  In the parlance of standard security model, "what the user can do" would be called "privilege", but for the purposes of MAAS, we simply call them "permissions."  
 
-<a href="#heading--the-rbac-permissions-model"><h3 id="heading--the-rbac-permissions-model">The RBAC permissions model</h3></a>
+<a href="#heading--about-identity-services"><h3 id="heading--about-identity-services">About identity services</h3></a>
 
-RBAC (Role-based access control) does not authenticate users or verify their identity; that depends on upstream tools.  RBAC does associate a given role with a properly-authenticated user identity.  With RBAC, permissions are associated with roles, not individual users. Within a given resource pool, the role assigned to a user when they authenticate controls what they can and cannot do within that pool.
+MAAS/RBAC will interface with many identity services, using Candid as a mediator.  While the choice of identity service is up to you, we should cover some general principles of identity servers as they relate to MAAS/RBAC.  Let's take a closer look at [Ubuntu Single Sign-On (SSO)](https://help.ubuntu.com/community/SingleSignOn).
 
-It is possible for a given user to be an operator for one resource pool, a user for another, and an auditor for still another.  Nothing about RBAC prohibits this arrangement.
+SSO permits users to log in once to access many network services.  SSO centralizes authentication (via Kerberos), account management (via LDAP), resource-sharing (via `pam_mount`), and limited authorization through group memberships in LDAP, coupled with file system permissions.
 
-Here is a thumbnail sketch of the permissions model:
+RBAC (Role-based access control) does not authenticate users or verify their identity; that function is assigned to the identity service you choose.  RBAC does recieve an identity token or "macaroon" (via Candid) that RBAC uses to assign user roles.  MAAS uses these roles, in turn, to control user access and actions.
 
-- MAAS maintains resource pools, which are a machine attribute.  Every machine can be assigned to one and only one resource pool.  
-- RBAC maintains roles, which are associated with user identities.  For a given user identity to carry out a particular operation in MAAS, that user identity must correspond to a role that has permission to carry out that operation in a given resource pool.
-- Some other tool (in this case, Candid) verifies the user identity.  If roles are to be effective, the user identity must be correct, and that identity must be verified before reaching RBAC.
+<a href="#heading--about-candid"><h2 id="heading--about-candid">How Candid fits into the picture</h2></a>
 
-Relationships between roles, resource pools, and users is maintained by RBAC as a source of truth.  MAAS mediates access to resource pools, based on user roles, using information obtained from RBAC. 
+Direct authentication involves a user entering something unique in response to a challenge, in order to gain access.  "Something unique" means "something you know, something you have, or something you are", e.g., a password, a hardware key, or a fingerprint, respectively.  Authentication can be automated with private/public key exchanges, protected with a password on the first exchange.  Adding another access point (another trusted client) usually means providing a public key, setting a password, or registering some biometric data.  Direct authentication works well when there are a limited number of clients and not a lot of user turnover.
 
-<a href="#heading--a-little-about-candid"><h3 id="heading--a-little-about-candid">A little about Candid</h3></a>
+Increase the number of users and services that need to authenticate, and direct authentication becomes an IT nightmare: generating access requests; validating requests; setting up authentication; and then managing access as users move around the organization.  [Candid](https://github.com/canonical/candid), the Canonical identity service, was designed to meet this need.  Candid acts as an authentication gateway that connects a service like RBAC to your chosen identity service.
 
-Candid is the [Canonical Identity service](https://github.com/mhilton/canonical-candid), an open-source [macaroon](https://en.wikipedia.org/wiki/Macaroons_(computer_science))-based authentication service. Candid is not an [identity server](https://en.wikipedia.org/wiki/Identity_provider), it just manages the users on a specified identity server.
+Candid manages authenticated users via special access tokens ([macaroons](https://askubuntu.com/questions/940640/what-is-a-macaroon)) that confirm user identity.  Unlike standard access tokens, macaroons can be verified independently, in a standard way, so they reduce the network traffic and delays of repeatedly querying the identity server.  Traditional access tokens must be short-lived; macaroons are valid for much longer and they can be refreshed easily.  Macaroons can also be bound to TLS certificates.  And macaroons can be used by multiple clients and services with no loss of securityl.
 
 Candid can do the following things:
 
@@ -79,9 +57,35 @@ Candid can use certificates and agents, if desired.  You specify the identity pr
 
 When a user tries to log into a MAAS which is working with RBAC, MAAS redirects that login to the RBAC server.  RBAC, in turn, requests authentication via Candid, which then consults the specified identity server (at the URL provided on startup).  If the user is authenticated, Candid constructs a macaroon, which is then passed to RBAC and on to MAAS.  This macaroon serves as the user's authentication token until it expires.
 
+<a href="#heading--about-rbac"><h2 id="heading--about-rbac">About RBAC</h2></a>
+
+RBAC uses a database to associate a given role with a properly-authenticated user identity.  With RBAC, permissions are associated with roles, not individual users. Within a given resource pool, the role assigned to a properly authenticated user controls what they can and cannot do within that pool.
+
+In the parlance of RBAC, MAAS would be a service, while each resource pool would be considered a separate scope. RBAC/MAAS also recognizes scopes that are not tied to machines, including:
+
+- DNS
+- Availability zones
+- Images
+- System settings
+
+RBAC can help MAAS also control access to these "non-machine resources".
+
+Note that it is possible for a given user to be an operator for one resource pool, a user for another, and an auditor for still another, but have no ability to change system settings or manipulate images.  Nothing about RBAC prohibits this arrangement.
+
+<a href="#heading--the-rbac-permissions-model"><h3 id="heading--the-rbac-permissions-model">The MAAS/RBAC permissions model</h3></a>
+
+Here is a thumbnail sketch of the permissions model:
+
+- MAAS maintains resource pools, which are a machine attribute.  Every machine can be assigned to one and only one resource pool.  
+- RBAC maintains roles, which are associated with user identities.  For a given user identity to carry out a particular operation in MAAS, that user identity must correspond to a role that has permission to carry out that operation in a given resource pool.
+- Candid vouches for the user with a macaroon.
+- Some identity service (e.g., SSO) authenticates the user to Candid, so that macaroons are not generated for unrecognized users.
+
+Relationships between roles, resource pools, and users is maintained by RBAC as a source of truth.  MAAS mediates access to resource pools, based on user roles, using information obtained from RBAC. 
+
 <a href="#heading--the-rbac-maas-security-architecture"><h3 id="heading--the-rbac-maas-security-architecture">The MAAS/RBAC security architecture</h3></a>
 
-The following diagram will give you a graphical view of how MAAS, RBAC, and Candid work together to control access to MAAS resources:
+The following diagram will give you a graphical view of how MAAS, RBAC, Candid, and an identity provider work together to control access to MAAS resources:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/4/4433c6995c342efebe565f4888a46d7107d1525f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/4433c6995c342efebe565f4888a46d7107d1525f.png"></a>
 
