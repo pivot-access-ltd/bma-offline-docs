@@ -1,35 +1,9 @@
 <!-- "How to install MAAS" -->
 [tabs]
-[tab version="v3.2 Snap"]
-<a href="#heading--about-installing-maas"><h2 id="heading--about-installing-maas">About installing MAAS 3.2 RC1</h2></a>
-
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"]
 MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.
 [/tab]
-[tab version="v3.2 Packages"]
-MAAS is relatively easy to install and configure using Debian packages.
-[/tab]
-[tab version="v3.1 Snap"]
-<a href="#heading--about-installing-maas"><h2 id="heading--about-installing-maas">About installing MAAS 3.1</h2></a>
-
-MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.
-[/tab]
-[tab version="v3.1 Packages"]
-MAAS is relatively easy to install and configure using Debian packages.
-[/tab]
-[tab version="v3.0 Snap"]
-<a href="#heading--about-installing-maas"><h2 id="heading--about-installing-maas">About installing MAAS 3.0</h2></a>
-
-MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.
-[/tab]
-[tab version="v3.0 Packages"]
-MAAS is relatively easy to install and configure using Debian packages.
-[/tab]
-[tab version="v2.9 Snap"]
-<a href="#heading--about-installing-maas"><h2 id="heading--about-installing-maas">About installing MAAS 2.9</h2></a>
-
-MAAS can be installed in either of two configurations:  test or production.  The test configuration uses a small PostgreSQL database (in a separate snap), designed for use with MAAS. The full-up production configuration uses a separate PostgreSQL database for performance and scalability.
-[/tab]
-[tab version="v2.9 Packages"]
+[tab version="v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages"]
 MAAS is relatively easy to install and configure using Debian packages.
 [/tab]
 [/tabs]
