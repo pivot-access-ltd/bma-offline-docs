@@ -1405,7 +1405,7 @@ ubuntu/bionic           amd64/hwe-18.04-lowlatency-edge
 Suppose you also want a version called "Trusty" -- you can import a new image by first selecting it for download, like this:
 
 ```
-maas $PROFILE boot-source-selections create 1 \ > os="ubuntu" release="trusty" arches="amd64" subarches="*" \ > labels="*"
+maas $PROFILE boot-source-selections create 1 os="ubuntu" release="trusty" arches="amd64" subarches="*"  labels="*"
 ```
 
 which returns some JSON confirming your action:
