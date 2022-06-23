@@ -60,20 +60,6 @@ MAAS 3.2 rounds out the feature set with a few more items:
 
 - Roll-out of our new tabbed Reader Adaptive Documentation (incremental across the release cycle): We've eliminated the top menus; each page now contains information for all versions, selectable by dropdowns above the relevant sections.
 
-[note]
-This is an RC (release candidate) release, so you may still encounter some minor bugs.  We strongly recommend that you take the necessary precautions, which include (but are not limited to) the following steps:
-
-- Install RC versions on a system specifically designated for testing; RC is not strongly recommended for production.
-- Take a backup of any unrecoverable data on your test system prior to installing RC versions.
-- More specifically, if you use a system for testing MAAS releases, back up the MAAS database and any unique configuration files related to your use of MAAS prior to installing RC versions.
-
-Also, you should make sure that you are using the latest version of PostgreSQL.  [Here's how you can upgrade that](https://discourse.maas.io/t/upgrading-postgresql-to-version-12/5913).
-
-Essentially, the RC should be production-ready, but has not had extensive testing yet -- so it may not function properly under all conditions, possibly overwriting data and configuration information on the test machine.  RC versions usually behave fairly well, but be warned that across-the-board, perfect performance isn't always the case with an RC releases.
- 
-As you encounter failures, please take the time to [file a bug](https://maas.io/docs/report-a-bug) or let us know your thoughts [on the discourse user forum](https://discourse.maas.io/c/users/8).
-[/note]
-
 <a href="#heading--how-to-install-maas-3-2"><h2 id="heading--how-to-install-maas-3-2">How to install MAAS 3.2</h2></a>
 
 MAAS 3.2 can be installed fresh from snaps (recommended) with:
