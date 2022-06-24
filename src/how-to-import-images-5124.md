@@ -79,7 +79,7 @@ Advanced options, such as using a GPG key or keyring to validate the mirror path
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/dbe44a827e70e318a6139c3e335019a6a27c4374.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/dbe44a827e70e318a6139c3e335019a6a27c4374.png"></a>
 
-Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/how-to-mirror-images-locally/5188) for instructions.
+Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/how-to-mirror-images-locally/5927) for instructions.
 
 <a href="#heading--other-images"><h2 id="heading--other-images">How to import and provision non-Ubuntu images</h2></a>
 
@@ -230,7 +230,7 @@ If you added a sole boot source, then the fields 'Sync URL' and 'Keyring Path' i
 
 <a href="#heading--using-a-local-image-mirror"><h3 id="heading--using-a-local-image-mirror">How to use a local image mirror</h3></a>
 
-Once the mirror is set up according to [Local image mirror](/t/how-to-mirror-images-locally/5188) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
+Once the mirror is set up according to [Local image mirror](/t/how-to-mirror-images-locally/5927) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
 
 - URL=https://$MIRROR/maas/images/ephemeral-v3/stable/
 - KEYRING_FILE=/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg
