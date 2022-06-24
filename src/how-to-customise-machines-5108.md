@@ -8,6 +8,7 @@ MAAS provides the capability to customise machines.  This article will help you 
 - [How to pre-seed with cloud-init](#heading--cloud-init)
 - [How to choose Ubuntu kernels](#heading--how-to-choose-ubuntu-kernels)
 - [How to set global kernel boot options](#heading--how-to-set-global-kernel-boot-options)
+- [How to create tags with built-in kernel options](#heading--create-tags-with-built-in-kernel-options")
 - [How to use resource pools](#heading--how-to-use-resource-pools)
 - [How to enable hardware sync on a machine](#heading--how-to-enable-hardware-sync-on-a-machine)
 - [How to configure hardware sync interval](#heading--how-to-configure-hardware-sync-interval)
@@ -19,6 +20,7 @@ MAAS provides the capability to customise machines.  This article will help you 
 - [How to pre-seed with cloud-init](#heading--cloud-init)
 - [How to choose Ubuntu kernels](#heading--how-to-choose-ubuntu-kernels)
 - [How to set global kernel boot options](#heading--how-to-set-global-kernel-boot-options)
+- [How to create tags with built-in kernel options](#heading--create-tags-with-built-in-kernel-options")
 - [How to use resource pools](#heading--how-to-use-resource-pools)
 [/tab]
 [/tabs]
@@ -1249,7 +1251,57 @@ maas $PROFILE maas set-config name=kernel_opts value='$KERNEL_OPTIONS'
 [/tab]
 [/tabs]
 
-See [How can I set kernel boot options for a specific machine?](/t/how-to-manage-tags/5180) to set per-machine kernel boot options.
+<a href="#heading--create-tags-with-built-in-kernel-options"><h2 id="heading--create-tags-with-built-in-kernel-options">How to create tags with built-in kernel options</h2></a>
+
+You can create tags with embedded kernel boot options.  When you apply such tags to a machine, those kernel boot options will be applied to that machine on the next deployment.
+
+To create a tag with embedded kernel boot options, use the following command:
+
+```nohighlight
+maas $PROFILE tags create name='$TAG_NAME' \
+    comment='$TAG_COMMENT' kernel_opts='$KERNEL_OPTIONS'
+```
+
+For example:
+
+```nohighlight
+maas admin tags create name='nomodeset_tag' \
+    comment='nomodeset_kernel_option' kernel_opts='nomodeset vga'
+```
+
+This command yields the following results:
+
+```nohighlight
+Success.
+Machine-readable output follows:
+{
+    "name": "nomodeset_tag",
+    "definition": "",
+    "comment": "nomodeset_kernel_option",
+    "kernel_opts": "nomodeset vga",
+    "resource_uri": "/MAAS/api/2.0/tags/nomodeset_tag/"
+}
+```
+
+You can check your work with a modified form of the listing command:
+
+```nohighlight
+maas admin tags read | jq -r \
+'(["tag_name","tag_comment","kernel_options"]
+|(.,map(length*"-"))),(.[]|[.name,.comment,.kernel_opts]) 
+| @tsv' | column -t
+```
+
+This should give you results something like this:
+
+```nohighlight
+tag_name             tag_comment                  kernel_options                     
+--------             -----------                  --------------                     
+virtual                                                                              
+new_tag              a-new-tag-for-test-purposes                                     
+pod-console-logging  console=tty1                 console=ttyS0                      
+nomodeset_tag        nomodeset_kernel_option      nomodeset       vga
+```
 
 <a href="#heading--how-to-use-resource-pools"><h2 id="heading--how-to-use-resource-pools">How to use resource pools</h2></a>
 
