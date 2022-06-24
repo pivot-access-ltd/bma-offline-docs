@@ -312,7 +312,7 @@ After:
 ```
 <a href="#heading--snaps-and-security"><h3 id="heading--snaps-and-security">About snap security</h3></a>
 
-Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  
+Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-snap-a-closer-look).
 [/tab]
 [tab version="v3.2 Packages"]
 ``` bash
@@ -341,7 +341,7 @@ After:
 ```
 <a href="#heading--snaps-and-security"><h3 id="heading--snaps-and-security">About snap security</h3></a>
 
-Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  
+Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-snap-a-closer-look).
 [/tab]
 [tab version="v3.1 Packages"]
 ``` bash
@@ -370,7 +370,7 @@ After:
 ```
 <a href="#heading--snaps-and-security"><h3 id="heading--snaps-and-security">About snap security</h3></a>
 
-Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application. 
+Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-snap-a-closer-look).
 [/tab]
 [tab version="v3.0 Packages"]
 ``` bash
@@ -399,7 +399,7 @@ After:
 ```
 <a href="#heading--snaps-and-security"><h3 id="heading--snaps-and-security">About snap security</h3></a>
 
-Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  
+Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-snap-a-closer-look).
 [/tab]
 [tab version="v2.9 Packages"]
 ``` bash
