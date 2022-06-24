@@ -8,7 +8,7 @@ MAAS provides the capability to customise machines.  This article will help you 
 - [How to pre-seed with cloud-init](#heading--cloud-init)
 - [How to choose Ubuntu kernels](#heading--how-to-choose-ubuntu-kernels)
 - [How to set global kernel boot options](#heading--how-to-set-global-kernel-boot-options)
-- [How to create tags with built-in kernel options](#heading--create-tags-with-built-in-kernel-options")
+- [How to create tags with built-in kernel options](#heading--create-tags-with-built-in-kernel-options)
 - [How to use resource pools](#heading--how-to-use-resource-pools)
 - [How to enable hardware sync on a machine](#heading--how-to-enable-hardware-sync-on-a-machine)
 - [How to configure hardware sync interval](#heading--how-to-configure-hardware-sync-interval)
@@ -20,7 +20,7 @@ MAAS provides the capability to customise machines.  This article will help you 
 - [How to pre-seed with cloud-init](#heading--cloud-init)
 - [How to choose Ubuntu kernels](#heading--how-to-choose-ubuntu-kernels)
 - [How to set global kernel boot options](#heading--how-to-set-global-kernel-boot-options)
-- [How to create tags with built-in kernel options](#heading--create-tags-with-built-in-kernel-options")
+- [How to create tags with built-in kernel options](#heading--create-tags-with-built-in-kernel-options)
 - [How to use resource pools](#heading--how-to-use-resource-pools)
 [/tab]
 [/tabs]
