@@ -3,7 +3,7 @@ MAAS provides supported images for stable Ubuntu releases, and for CentOS 6.6, C
 
 - [About boot sources and why they matter](#heading--boot-sources)
 - [How to select and import an image](/t/how-to-import-images/5124)
-- [How to set up and use a local image mirror](/t/how-to-mirror-images-locally/5188)
+- [How to set up and use a local image mirror](/t/how-to-mirror-images-locally/5927)
 - [How to use and manage VMWare images](/t/how-to-manage-vmware-images/5144)
 
 MAAS stores images in the region controller's database, from where the rack controller proxies them to the individual machines.  It's important to note that for ESXi images, network configuration includes only these five parameters:
