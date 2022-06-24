@@ -111,7 +111,7 @@ Note that if you intend to use a machine as a region controller, you'll need to 
 - `--database-pass DATABASE_PASS`
 [/tab]
 [tab version="v3.2 Packages"]
-Please see [Region controllers](/t/how-to-manage-regions/5176) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
+Please see [Region controllers](/t/how-to-manage-controllers/5172) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
 [/tab]
 [tab version="v3.1 Snap"]
 Setting up high-availability using snaps is relatively easy:
@@ -128,7 +128,7 @@ Note that if you intend to use a machine as a region controller, you'll need to 
 - `--database-pass DATABASE_PASS`
 [/tab]
 [tab version="v3.1 Packages"]
-Please see [Region controllers](/t/how-to-manage-regions/5176) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
+Please see [Region controllers](/t/how-to-manage-controllers/5172) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
 [/tab]
 [tab version="v3.0 Snap"]
 Setting up high-availability using snaps is relatively easy:
@@ -145,7 +145,7 @@ Note that if you intend to use a machine as a region controller, you'll need to 
 - `--database-pass DATABASE_PASS`
 [/tab]
 [tab version="v3.0 Packages"]
-Please see [Region controllers](/t/how-to-manage-regions/5176) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
+Please see [Region controllers](/t/how-to-manage-controllers/5172) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
 [/tab]
 [tab version="v2.9 Snap"]
 Setting up high-availability using snaps is relatively easy:
@@ -162,7 +162,7 @@ Note that if you intend to use a machine as a region controller, you'll need to 
 - `--database-pass DATABASE_PASS`
 [/tab]
 [tab version="v2.9 Packages"]
-Please see [Region controllers](/t/how-to-manage-regions/5176) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
+Please see [Region controllers](/t/how-to-manage-controllers/5172) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
 [/tab]
 [/tabs]
 
