@@ -1,5 +1,5 @@
 <!-- "About images" -->
-MAAS provides supported images for stable Ubuntu releases, and for CentOS 6.6, CentOS 7, and CentOS 8.0 releases.  You can also is needed to build customer Windows, RHEL and ESXi images.  This article will help you learn:
+MAAS provides supported images for stable Ubuntu releases, and for CentOS 6.6, CentOS 7, and CentOS 8.0 releases.  [Ubuntu Advantage](https://www.ubuntu.com/support) is needed to build customer Windows, RHEL and ESXi images.  This article will help you learn:
 
 - [About boot sources and why they matter](#heading--boot-sources)
 - [How to select and import an image](/t/how-to-import-images/5124)
@@ -32,6 +32,6 @@ MAAS comes configured with a boot source that should suffice for most users:
 
 [`https://images.maas.io/ephemeral-v3/stable/`](https://images.maas.io/ephemeral-v3/stable/)
 
-The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/how-to-mirror-images-locally/5188) for some explanation regarding the availability of other streams.
+The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/how-to-mirror-images-locally/5927) for some explanation regarding the availability of other streams.
 
 Although the backend supports multiple boot sources, MAAS itself uses a single source. If multiple sources are detected, the web UI will print a warning and will be unable to manage images.
