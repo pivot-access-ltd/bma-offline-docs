@@ -11,7 +11,7 @@ This article will help you learn:
 - [How to use other image mirrors to download images](#heading--image-mirrors)
 - [How to import and provision non-Ubuntu images](#heading--other-images)
 
-Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/how-to-build-maas-images/5100).
+Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/how-to-create-custom-images/5104#heading--how-to-build-maas-images).
 
 <a href="#heading--maas-image-streams"><h2 id="heading--maas-image-streams">How to use MAAS image streams</h2></a>
 
