@@ -1,9 +1,9 @@
 <!-- "About TCP/IP networks" -->
-TCP/IP networks, and the underlying structure, evolved to meet a specific need: How can we keep a computer network functioning in the event of a catastrophic failure of communications infrastructure?  When nodes go offline, randomly, how can surviving nodes keep the network usable?  The Internet, which relies heavily on TCP/IP networks, has proven over time that it can adapt to changing loads, handle significant failures, and strictly limit the network blast radius when things go wrong.   
+Good understanding of networking fundamentals makes it much easier to design, operate, and debug MAAS networks. You may have a good grasp of these fundamentals, but not everyone does.  No problem.  Here's a quick refresher on TCP/IP networking, with references.  Feel free to pick and choose sections as you need them.
 
-Experience has shown us that you will probably have a much easier time working with MAAS if you ensure that you have a solid understanding of network fundamentals.  Rather than bury this basic material, we've decided to summarise and reference it in the mainstream MAAS networking discussion. Later sections, which help you learn how to design and troubleshoot MAAS networks, will depend heavily on principles explained here.
+TCP/IP networks evolved to meet a specific need: How can we keep a network functioning if important nodes go offline?  Well, you build the ARPAnet -- now called the Internet -- which relies heavily on TCP/IP networks.  The OSI model underlying TCP/IP can adapt to changing loads, handle significant failures, and strictly limit the network "blast radius" (yes, that's what it's called) when things go wrong.   
 
-This section is designed to help you learn:
+This article is designed to help you learn:
 
 - [About the Internet](#heading--about-the-internet)
 - [About the OSI model](#heading--about-the-osi-model)
@@ -14,27 +14,27 @@ This section is designed to help you learn:
 - [About DNS](#heading--about-dns)
 - [About other network elements](#heading--other-network-elements)
 
-This material can be read from beginning to end, or you can skip to sections where you feel you might need more clarity.  Just remember that a good understanding of these fundamentals will make it much easier for you to efficiently lay out and debug MAAS networks.
-
 [note]
-While some standard networking concepts, such as PXE booting, RPC, subnets, power drivers, and proxies are not unique to MAAS, they are used in a unique way by MAAS.  You can find this customised introductory material about these concepts in the article entitled "[About MAAS networking](/t/about-networking/5084)".
+While some standard networking concepts, such as PXE booting, RPC, subnets, power drivers, and proxies are not unique to MAAS, they are sometimes used in a unique way by MAAS -- so we explain these concepts in the article entitled "[About MAAS networking](/t/about-networking/5084)".
 [/note]
 
 <a href="#heading--about-the-internet"><h2 id="heading--about-the-internet">About the Internet</h2></a>
 
-We could simply create a hardwired network of computers with wires connecting them, but this isn't efficient.  The obvious problem is the number of wires; the less obvious problem is the impedance of the wires, which would dampen the signals beyond recognition after a relatively short run of wire.  The easiest way we've found so far is the Internet infrastructure, more commonly known as an [access-aggregation-core (AAC)](https://www.cisco.com/c/en/us/td/docs/solutions/Enterprise/Data_Center/DC_Infra2_5/DCInfra_2.html) network.  In practice, AAC looks something like this: 
+A network could be nothing more than a bunch of computers connected with wires. This isn't efficient or affordable.  Obviously, many wires are hard to keep straight. Also, impedance would dampen the signals after a relatively short run of wire.  An easier way is the Internet infrastructure, which is an [access-aggregation-core (AAC)](https://www.cisco.com/c/en/us/td/docs/solutions/Enterprise/Data_Center/DC_Infra2_5/DCInfra_2.html) network.  AAC looks something like this: 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg"></a>
 
-The multiplexing element in such a network is the router.  The lateral paths aren't theoretical; they exist mostly for performance reasons, like latency, redundancy, cost, and so on.  This means an AAC network can incorporate lots of redundant loops, informally known a "packet-traps".  TCP/IP has a dedicated solution for this problem, called ["Time To Live"](https://en.wikipedia.org/wiki/Time_to_live#firstHeading).  These issues have driven the design of [cloud network architectures](/t/about-cloud-networks/5808) (known as Clos architectures), which address financial and performance impacts of large networks in a much simpler way.
+Routers are the multiplexing elements in AAC networks.  Ladders of lateral paths aren't theoretical; they exist mostly for performance reasons, like latency, redundancy, cost, and so on.  This means an AAC network incorporates redundant loops or "packet-traps".  TCP/IP has a dedicated solution for this problem, called ["Time To Live"](https://en.wikipedia.org/wiki/Time_to_live#firstHeading).
 
-[Network switching](https://en.wikipedia.org/wiki/Network_switch#firstHeading) is a very large topic unto itself -- but it's worth catching up if you're weak in this area, since some elements of switching are exposed in MAAS networks.  Also important to review are [routers](https://en.wikipedia.org/wiki/Router_%28computing%29#firstHeading), [bridges](https://en.wikipedia.org/wiki/Network_bridge#firstHeading), and bonded NICs, aka [link aggregation](https://en.wikipedia.org/wiki/Link_aggregation#firstHeading).  All of these come into play every time a MAAS network is modified.
+Issues with ladder networks drove the development of cloud network architectures (also known as Clos architectures), which address financial and performance impacts of large networks in a much simpler way. [Cloud networking](/t/about-cloud-networks/5808) is covered elsewhere, and should be next on your reading list.
+
+[Network switching](https://en.wikipedia.org/wiki/Network_switch#firstHeading) is a very large topic unto itself.  It's worth catching up if you're weak in this area, since some elements of switching are exposed in MAAS networks.  Also important to review are [routers](https://en.wikipedia.org/wiki/Router_%28computing%29#firstHeading), [bridges](https://en.wikipedia.org/wiki/Network_bridge#firstHeading), and bonded NICs, aka [link aggregation](https://en.wikipedia.org/wiki/Link_aggregation#firstHeading).  All of these come into play every time a MAAS network is modified.
 
 <details><summary>Network Lore: We borrowed it all from the phone system</summary>
 
 Most of today's modern networking is a direct translation of the landline telephone system into the digital space.  Network switching is really just an outgrowth of [crossbar](https://en.wikipedia.org/wiki/Number_Five_Crossbar_Switching_System#firstHeading), which is how local phone calls were "switched" or "routed" to the correct telephone line.  In most cases, every number dialled closed one more relay, with all seven relays making a connection to the target phone line.
 
-Small exchanges often "swallowed" dialled digits. For example, if every local phone number had the exchange "881", those numbers wouldn't trigger any relays beyond just sending the call to the "881" [frameset](https://en.wikipedia.org/wiki/Distribution_frame#firstHeading).  In some small exchanges, it wasn't even necessary to dial the exchange -- just the four digits of the phone number -- if the caller had the same exchange.  Essentially, these were the early [subnets](https://en.wikipedia.org/wiki/Subnetwork#firstHeading).
+Small exchanges often "swallowed" dialled digits. For example, if every local phone number had the exchange "881", those numbers wouldn't trigger any relays beyond just sending the call to the "881" [frameset](https://en.wikipedia.org/wiki/Distribution_frame#firstHeading).  In some small exchanges, it wasn't even necessary to dial the exchange, just the four digits of the phone number, if the caller had the same exchange.  Essentially, these were the early [subnets](https://en.wikipedia.org/wiki/Subnetwork#firstHeading).
 
 Over time, the increasing density of telephone coverage and self-service long-distance changed all this.  More wires had to be installed, and repeaters were needed to get signals across longer distances as local exchanges were replaced by centralised exchanges called "central offices" (CO).  A CO would have frames for 8 or 10 exchanges, essentially serving the same function as today's network routers.
 
@@ -42,16 +42,14 @@ Repeaters had to be installed at regular intervals to overcome the impedance ass
 
 In the very early days of long-haul networking, most of the repeaters were owned by the local telephone companies. T1 lines, as they were called, couldn't compete with today's fibre connections, but they did provide a speedy (at the time) 1.5Mbps connection.  For example, in the oil and gas industry of the early 1990s, many of the city offices had wall after wall of T1 lines wired directly into the building.
 
-T1 wasn't designed for network traffic, exactly,  The idea was to multiplex phone calls on one line via Time-Division Multiplexing.  TDM split up the call traffic into little digital packets that were sent on a rotating basis.  The first T1 lines, which showed up around 1962, could handle about 24 calls without the average telephone user noticing.  Telephone linemen generally could tell by the "clipped" nature of the call, as there is a distinctive flatness to the conversation over a digital TDM circuit.
+T1 wasn't designed for network traffic, exactly,  The idea was to multiplex phone calls on one line via Time-Division Multiplexing.  TDM split up the call traffic into little digital packets that were sent on a rotating basis.  The first T1 lines, which showed up around 1962, could handle about 24 calls without the average telephone user noticing.  Telephone linemen generally could tell by the "clipped" nature of the call, as there is a distinctive flatness to the conversation over a digital TDM circuit.  These "little digital packets" formed the model for the packet networking we have today.
 
-The T1 lines used ordinary, double-twisted-pair copper wiring, with repeaters at roughly one-mile intervals (about every fourth pedestal). When WAN and MAN networking became a thing, the phone company just repurposed some of those pairs to carry data traffic.
-
-Many other key elements of TCP/IP, like twisted-pair Ethernet cables, packet-based messaging, and multiplexing, are all just holdovers of the original telephone system, repurposed for computer networking.
+The T1 lines used ordinary, double-twisted-pair copper wiring, with repeaters at roughly one-mile intervals (about every fourth pedestal). When WAN and MAN networking became a thing, the phone company just repurposed some of those pairs to carry data traffic.  Many other key elements of TCP/IP, like twisted-pair Ethernet cables, packet-based messaging, and multiplexing, are all just holdovers of the original telephone system, repurposed for computer networking.
 </details>
 
 <a href="#heading--internet-infrastructure"><h3 id="heading--internet-infrastructure">More about Internet infrastructure</h3></a>
 
-The Internet is survivable because every computer can connect to every other computer, but that's not standard operating procedure.  High-level networks [(Network Service Providers, NSPs)](https://en.wikipedia.org/wiki/Internet_service_provider#firstHeading) connect to at least three top level nodes called Network Access Points (NAPs), aka [Internet Exchange Points](https://en.wikipedia.org/wiki/Internet_exchange_point#firstHeading).  At these points, packets to jump from one NSP to another. NAPs are public access points, Metropolitan Area Exchanges are private. These are virtually indistinguishable for the purposes of this discussion.
+The Internet is theoretically survivable because every computer can connect to every other computer.  That's not standard operating procedure.  High-level networks [(Network Service Providers, NSPs)](https://en.wikipedia.org/wiki/Internet_service_provider#firstHeading) connect to at least three top level nodes called Network Access Points (NAPs), aka [Internet Exchange Points](https://en.wikipedia.org/wiki/Internet_exchange_point#firstHeading).  At these points, packets to jump from one NSP to another. NAPs are public access points, Metropolitan Area Exchanges are private. These are virtually indistinguishable for the purposes of this discussion.
 
 As an aside, many of the MAEs are the residue of the phone company's early T1 lines, which was the initial backbone for the Internet.  These MAEs act just like a NAP for the purposes of this discussion.
 
@@ -59,13 +57,13 @@ A simpler picture of the Internet infrastructure looks like this:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/b/b8da34432dd443cd3592487f53887f12889cef06.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b8da34432dd443cd3592487f53887f12889cef06.jpeg"></a>
 
-In theory, the Internet infrastructure and a cloud network should be very similar, but in practice, they diverge greatly.  The real Internet has horizontal connections running everywhere, based on drivers like cost, security, and performance.  Those vertical connections introduce an interface cost (heterogeneous hardware), a performance hit (varying network speeds), and bandwidth variance (differing node architectures).  Contracts for lateral connections change daily, which changes the routing, which changes the way the Internet behaves for users.
+In theory, the Internet infrastructure and a cloud network should be very similar.  In practice, they diverge greatly.  The real Internet has horizontal connections running everywhere, based on drivers like cost, security, and performance.  Those vertical connections introduce an interface cost (heterogeneous hardware), a performance hit (varying network speeds), and bandwidth variance (differing node architectures).  Contracts for lateral connections change daily, which changes the routing, which changes the way the Internet behaves for users.
 
 <a href="#heading--about-network-traffic"><h3 id="heading--about-network-traffic">About Internet network traffic</h3></a>
 
-As implied by the discussion above, these networks can become very complicated and somewhat unpredictable.  As a result, there's rarely a reason to even count how many hops a message takes, or where it hops, unless you're trying to debug a broken route with, say, [traceroute]([https://linux.die.net/man/8/traceroute).  From a TCP/IP point of view, it's much easier to ignore the specific network, since it gets built on-the-fly, so to speak; and it can change every time a message is sent, even between the same two computers.
+On-the-fly, Internet network paths can become very complicated and somewhat unpredictable.  As a result, there's rarely a reason to even count how many hops a message takes, or where it hops, unless you're trying to debug a broken route with, say, [traceroute]([https://linux.die.net/man/8/traceroute).  From a TCP/IP point of view, it's much easier to ignore the specific network, since each one is custom built, so to speak.  The path can theoretically change every time a message is sent, even between the same two computers.
 
-In other words, when it comes to designing and troubleshooting networks, knowing the specific route (almost) never helps.  Instead, what we want to know about is the network traffic that travels between computers.  That means we have to understand what kind of traffic travels between computers, besides just the data we send.   The next few sections will explain these fundamentals.
+When it comes to designing and troubleshooting networks, knowing the specific route (almost) never helps.  What we do want to know about is the network traffic between computers.  We have to understand what kind of data travels between computers, besides just the data we send.  Internet data flows are governed by the OSI model.   
 
 <a href="#heading--about-the-osi-model"><h2 id="heading--about-the-osi-model">About the OSI model</h2></a>
 
@@ -79,50 +77,49 @@ This subsection will help you learn about the OSI model and:
 - [About the presentation layer (L6)](#heading--the-presentation-layer)
 - [About the application layer (L7)](#heading--the-application-layer)
 
-When we begin to look at networks as a continuous wire, we need to understand what travels on that wire from one host to the other.  But that depends on our perspective, that is, our level of magnification.  If we look at the highest "zoom" level, all we'll see are electrons travelling down the wire.  That's not very useful for debugging purposes.  We can use that information to determine whether anything's being sent, but if the message isn't going out on the wire, we can't guess why not.
+Networks are really just continuous wires.  We need to understand what travels on those wires, which depends on our perspective -- our level of magnification.  At the highest "zoom" level, all we'll see are electrons travelling down the wire; that's a level of abstraction that isn't comprehensible for debugging purposes.  About all we can tell is whether or not the circuit's dead.
 
 The [Open Systems Interconnection model](https://en.wikipedia.org/wiki/OSI_model) was created to standardise on a few different levels.  The OSI model looks something like this:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/7/765cd90cffcecfcc83593cde0483e64977a48223.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/765cd90cffcecfcc83593cde0483e64977a48223.jpeg"></a>
 
-In the OSI model, we start just above the raw physics, with what we'd call the physical layer, also known as Layer 1.  The choice of "1" makes sense, because this is the lowest level we consider.
+The OSI model starts just above the raw physics, with the physical layer, also known as Layer 1.
 
-Layers are normally added on top of each other.  For example, if you put six coats of varnish on a piece of furniture, you're going to have six layers.  The first layer you put on wouldn't sensibly be called "layer 6"; neither does the network layering model work that way.
+The choice of "1" makes sense, because this is the lowest level we consider. Layers are normally added on top of each other.  For example, if you put six coats of varnish on a piece of furniture, you're going to have six layers.  The first layer you put on wouldn't sensibly be called "layer 6"; neither network layering work that way.
 
-Here's a quick rundown of what each layer does.  Most likely, we won't get into details about all the layers, because the higher you go, the more widely they vary with the user application.  Higher layers don't really help us understand MAAS networking better.
+Here's a quick rundown of what each layer does.  Most likely, we won't get into details about all the layers, because the higher you go, the more widely they vary with the user application.  Higher layers don't really help us better understand MAAS networking, any more than watching electrons travel through a wire help us debug a missing packet.
 
 <a href="#heading--about-the-physical-layer"><h3 id="heading--about-the-physical-layer">About the physical layer (L1)</h3></a>
 
-The phrase "physical layer" may conjure up notions of physics, but don't worry -- 
-at the physical layer, we don't look at electrons flowing.  We do look at signals.  This subsection will help you learn the basics of the physical layer, and also:
+The phrase "physical layer" may conjure up notions of physics, but don't worry: we look at signals, not electrons.  Here you can learn about the basics of the physical layer, and also:
 
 - [About variable latency](#heading--about-variable-latency)
 - [Why the physical layer is not very interesting](#heading--physical-layer-uninteresting)
 
-At the physical layer, we're looking for binary (on/off) signals, set to the cadence of a clock.  Every computer brings its own clock to the party, so we need a way to "synchronise our watches".  That method is [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) , the network time protocol.  
+At the physical layer, we're looking for binary (on/off) signals, set to the cadence of a clock.  Every computer brings its own clock to the party, so we definitely need a way to "synchronise our watches".  [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol), the network time protocol, does the trick.  
 
 <a href="#heading--about-variable-latency"><h4 id="heading--about-variable-latency">About variable latency</h4></a>
 
-The most important thing to know about the physical layer is this: It introduces variable latency into the timing of network traffic.
+Variable latency is the important thing to know about the physical layer, because it affects the timing of network traffic.
 
-In order to understand variable latency, we need to understand network latency.  Essentially, there's a delay from the time you send a packet until it reaches its destination.  It's like the travel time for a packet (or a bit, matters not) from point to point.  It usually consists of four things:
+In order to understand variable latency, we need to understand network latency.  Packets aren't sent without some delay, becuase of:
 
-1. The processing delay - how long does it take the router to process the packet header?
-2. A queuing delay - how long does the packet sit idle in routing queues?
-3. Transmission delay - how long does it take layer 1 to push the packet's bits onto the link?
-4. Propagation delay - how long does it take the bits to travel through the wire to the other end?
+1. The processing delay - how long it takes the router to process the packet header.
+2. A queuing delay - how long the packet sits idle in routing queues.
+3. Transmission delay - how long it takes layer 1 to push the packet's bits onto the link.
+4. Propagation delay - how long it takes the bits to travel through the wire to the other end.
 
-The size of the queue directly influences how fast data can get onto the link.  The processing and transmission delays are real, though relatively constant.  The propagation delay depends on network architecture, network congestion, and the number of hops (how many routers between source and destination).  [As we'll see later on](#heading--clos-architecture), within your enterprise, the Clos architecture usually causes significantly less propagation delay.
+The size of the queue directly influences how fast data can get onto the link.  The processing and transmission delays are real, though relatively constant.  The propagation delay doesn't just depend on the speed of light, because there may be lots of other "relay" computers in the link.  Propagation depends on network architecture, network congestion, and the number of hops (how many routers between source and destination), among other things.  [As we'll see later on](#heading--clos-architecture), within your enterprise, the Clos architecture usually causes significantly less propagation delay.
 
-A variable-latency network is "variable" because of the density of network traffic and the complexity of the route between hosts.  We can't predict congestion or routing, although we can influence local routing with the by the choice of network architecture.  We can't predict transmission delays, although we can statistically put some bounds on them.  Thus almost all digital networks are considered "variable-latency".
+Variable-latency networks are "variable" because of the density of network traffic and the complexity of the route between hosts.  We can't predict congestion or routing, although we can influence local routing by choosing the right network architecture.  We can't predict transmission delays, though we can statistically bound them.  Almost all digital networks are considered "variable-latency".
 
 <a href="#heading--physical-layer-uninteresting"><h4 id="heading--physical-layer-uninteresting">The physical layer is not very interesting</h4></a>
 
-Other than verifying that traffic is flowing on the wire, the physical layer doesn't usually tell us much about what happened to that DHCP request that never made it to the router.  Consequently, we really won't talk that much about the physical layer.  Just know that it's the thing that's passing bits back and forth between hosts, and very occasionally, we need to scan it to debug network issues.
+Other than verifying that signals are flowing, the physical layer doesn't usually tell us much about what happened to that DHCP request that never made it to the router.  Consequently, we really won't talk that much about the physical layer.  Just know that it's the thing that's passing bits back and forth between hosts, and very occasionally, we need to scan it to debug network issues.
 
 <a href="#heading--about-the-datalink-layer"><h3 id="heading--about-the-datalink-layer">About the datalink layer (L2)</h3></a>
 
-The only purpose of the link layer -- at least from a TCP/IP perspective -- is to send and receive IP datagrams.  L2 generally doesn't try to maintain a connection with the host on the other end (it's "connectionless"), and it doesn't guarantee delivery or integrity of packets.  All it does is ship them between source and destination.  This subsection will help you learn:
+The datalink layer (the "link" layer, layer 2 or "L2") has one purpose: send and receive IP datagrams.  L2 doesn't maintain a connection with the target host; it's intentionally "connectionless", and it doesn't guarantee delivery or integrity of packets.  It just ships them between source and destination.  This subsection will help you learn:
 
 - [About MAC frames](#heading--about-frames)
 - [About Ethernet](#heading--about-ethernet)
