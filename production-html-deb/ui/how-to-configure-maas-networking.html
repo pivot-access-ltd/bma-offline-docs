@@ -375,11 +375,11 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to configure MAAS networking</h1><!-- "How to configure MAAS networking" -->
-<p>Congratulations!  Now that you&rsquo;ve <a href="how-to-install-maas.html">installed and configured MAAS</a>, configuring your MAAS networks is an important next step.  This article will help you learn about the theory and practice of MAAS networking.  You can search for <a href="#heading--networking-the-big-picture">big picture topics</a>, or <a href="#heading--networking-specific-topics">get down to the details</a> right away.</p>
+<p>Congratulations!  Now that you&rsquo;ve <a href="how-to-install-maas.html">installed and configured MAAS</a>, configuring your MAAS networks is an important next step.  This major section will help you learn about the theory and practice of MAAS networking.  You can search for <a href="#heading--networking-the-big-picture">big picture topics</a>, or <a href="#heading--networking-specific-topics">get down to the details</a> right away.</p>
 <p><a href="#heading--networking-the-big-picture"><h2 id="heading--networking-the-big-picture">Networking: the big picture</h2></a></p>
 <p>If you&rsquo;re uncertain about your relevant networking knowledge, you can take a few minutes to learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="about-tcp-ip-networks.html">About TCP/IP networks</a>: Enjoy reading a little about the history of the Internet, a lot about the OSI model and TCP/IP, along with key topics like bonds, bridges, ARP, and DNS &ndash; with some network lore thrown to help you appreciate the way TCP/IP networks evolved from the POTS (plain old telephone system).</li>
+<li><a href="about-tcp-ip-networks.html">About TCP/IP networks</a>: Enjoy reading a little about the history of the Internet, and a lot about the OSI model and TCP/IP, along with key topics like bonds, bridges, ARP, and DNS &ndash; with some network lore thrown to help you appreciate the way TCP/IP networks evolved from the POTS (plain old telephone system).</li>
 <li><a href="about-cloud-networks.html">About cloud networks</a>: The original Internet infrastructure is the backbone, but cloud networking calls for a different, more performant and scalable architecture.</li>
 <li><a href="about-dhcp.html">About DHCP</a>: DHCP is the most misunderstood aspect of MAAS, hence deserving of a separate theory section.</li>
 <li><a href="about-maas-networking.html">About MAAS networking</a>: Most of the MAAS networking terminology is not unique to MAAS, but it&rsquo;s used in somewhat unique ways.</li>
@@ -393,11 +393,16 @@
 </ul>
 <p>These broader topics cover a lot of material, so if you&rsquo;re looking for something in particular, try the longer list of specific topics below.</p>
 <p><a href="#heading--networking-specific-topics"><h2 id="heading--networking-specific-topics">Networking: specific topics</h2></a></p>
-<p>Nobody knows everything, of course, but some folks are only vexed by a couple of bits of network theory.  If that&rsquo;s the case, you can use this detailed list to pinpoint the topic you want to learn:</p>
+<p>Nobody knows everything, of course, but some folks are only vexed by a couple of bits of network theory.  If that&rsquo;s the case, you can use this detailed list to pinpoint the topics you want to brush up on:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="about-tcp-ip-networks.html#heading--about-the-internet">About the Internet</a>: the Access-Aggregation-Core ladder infrastructure that is the World-Wide Web.</li>
-<li><a href="about-tcp-ip-networks.html#heading--internet-infrastructure">More about the Internet infrastructure</a>: a little cleaner picture of how people think it looks.</li>
-<li><a href="about-tcp-ip-networks.html#heading--about-network-traffic">About Internet network traffic</a>: Network paths on the Internet aren&rsquo;t guaranteed to be deterministic, because they aren&rsquo;t supposed to be.</li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-internet">About the Internet</a>: the Access-Aggregation-Core ladder that is the World-Wide Web.
+&ndash; <a href="about-tcp-ip-networks.html#heading--internet-infrastructure">More about the Internet infrastructure</a>: a little cleaner picture of how people think it looks.
+&ndash; <a href="about-tcp-ip-networks.html#heading--about-network-traffic">About Internet network traffic</a>: Network paths on the Internet aren&rsquo;t guaranteed to be deterministic, because they aren&rsquo;t supposed to be.</li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-osi-model">About the OSI model</a>: You can take in the whole Open Systems Interconnect model, or you can focus on the individual layers listed just below.</li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-physical-layer">About the physical layer (L1)</a>: the signals that network cards exchange to send data, like the Morse Code of the Internet; this is where <a href="about-tcp-ip-networks.html#heading--about-variable-latency">variable latency</a> can cause packets to get out of order.</li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-datalink-layer">About the datalink layer (L2)</a>: where IP datagrams, or more precisely, IEEE 802.xx frames, get passed around.  This layer really couldn&rsquo;t care less whether the message gets there, or whether the datagrams are delivered in order.  All that&rsquo;s taken care of by the frames themselves.</li>
+<li><a href="about-tcp-ip-networks.html#heading--about-frames">About MAC, MAC frames and Ethernet</a>: Everything you wanted to know about Protocol Data Units (PDUs), what&rsquo;s in them, and why the contents permit layer 2 to be so careless and sloppy.</li>
+<li><a href="about-tcp-ip-networks.html#heading--about-trunking-vlans">VLANs, subnets, fabrics, and trunking</a>: From P/Q tags in the MAC frame, we get to VLANs, which gets us to subnets and fabrics, which are the fundamental building blocks for MAAS networks.</li>
 </ul>
     </div>
   </body>
