@@ -217,7 +217,7 @@ Bus 002 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
       1 platform:i8042
       1 platform:pcspkr
       1 platform:platform-framebuffer
-      1 platform:reg-dummy
+      1 platform:reg-placeholder
       1 platform:serial8250
       1 scsi:t-0x00
       1 serio:ty01pr00id00ex00
@@ -1026,7 +1026,7 @@ platform:alarmtimer
 platform:i8042
 platform:pcspkr
 platform:platform-framebuffer
-platform:reg-dummy
+platform:reg-placeholder
 platform:serial8250
 scsi:t-0x00
 serio:ty01pr00id00ex00

@@ -376,10 +376,6 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>Commissioning log reference</h1><!-- "Commissioning log reference" -->
 
-<p>Commissioning logs, which are presented on the &ldquo;Commissioning&rdquo; tab for any machine in the &ldquo;Ready&rdquo; state, contain a list of commissioning scripts with a timestamp and result.  You can view the detailed logs for each of these scripts from this tab.</p>
-<p>When you click on the &ldquo;Commissioning&rdquo; tab under a given machine, you will see a screen similar to this one:</p>
-<p><a href="../images/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg"></a> </p>
-<p>Each of the items in the &ldquo;NAME&rdquo; column is the name of a <a href="how-to-deploy-machines.html#heading--how-to-commission-a-machine">commissioning script</a>.  Each entry gives a timestamp and a result (e.g. passed, failed, &hellip;). At the end of each line is a link to view the log. It&rsquo;s worth taking a look at each of the script logs and their typical output.</p>
 <p><a href="#heading--maas-support-info"><h2 id="heading--maas-support-info">maas-support-info</h2></a></p>
 <p>MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  This script gathers this information, mostly as a bundle to be provided to a support specialist to help get the baseline for the machine in question.</p>
 <p>This script runs in parallel with other scripts to speed commissioning. Typical output, generated when a machine passes this script, is shown in the foldout below.</p>
@@ -509,7 +505,7 @@ Bus 002 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
       1 platform:i8042
       1 platform:pcspkr
       1 platform:platform-framebuffer
-      1 platform:reg-dummy
+      1 platform:reg-placeholder
       1 platform:serial8250
       1 scsi:t-0x00
       1 serio:ty01pr00id00ex00
@@ -1337,7 +1333,7 @@ platform:alarmtimer
 platform:i8042
 platform:pcspkr
 platform:platform-framebuffer
-platform:reg-dummy
+platform:reg-placeholder
 platform:serial8250
 scsi:t-0x00
 serio:ty01pr00id00ex00
@@ -1498,7 +1494,6 @@ virtio:d00000005v00001AF4
 <p></details></p>
 <p>The output of this script may be useful when you&rsquo;re trying to verify that a particular serial interface is active and available on your machine.</p>
 <p><a href="#heading--40-maas-01-network-interfaces"><h2 id="heading--40-maas-01-network-interfaces">40-maas-01-network-interfaces</h2></a></p>
-<p>The commissioning script <code>40-maas-01-network-interfaces</code> is no longer used in MAAS versions 3.0 and higher.</p>
 <p><a href="#heading--50-maas-01-commissioning"><h2 id="heading--50-maas-01-commissioning">50-maas-01-commissioning</h2></a></p>
 <p>This script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc. We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.</p>
 <p>Output from a successful run is fairly robust, and looks something like the foldout below:</p>
