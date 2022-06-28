@@ -36,6 +36,8 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 
 ### [Home](/t/maas-documentation/25)
 
+- [Release notes](/t/-/5292)
+
 ### [Tutorials](/t/-/6140)
 
 - [Get started with MAAS](/t/-/5092)
@@ -95,7 +97,6 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 
 ### [Reference](/t/-/6143)
 
-- [Release notes](/t/-/5292)
 - [Power management](/t/-/5246)
 - [Commissioning scripts](/t/-/5375)
 - [Hardware test scripts](/t/-/5392)
