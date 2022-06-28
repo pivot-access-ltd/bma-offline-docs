@@ -100,16 +100,14 @@ At the physical layer, we're looking for binary (on/off) signals, set to the cad
 
 <a href="#heading--about-variable-latency"><h4 id="heading--about-variable-latency">About variable latency</h4></a>
 
-Variable latency is the important thing to know about the physical layer, because it affects the timing of network traffic.
-
-In order to understand variable latency, we need to understand network latency.  Packets aren't sent without some delay, becuase of:
+Variable latency is the important thing to know about the physical layer, because it affects the timing of network traffic. In order to understand variable latency, we need to understand network latency.  Packets aren't sent without some delay, becuase of:
 
 1. The processing delay - how long it takes the router to process the packet header.
 2. A queuing delay - how long the packet sits idle in routing queues.
 3. Transmission delay - how long it takes layer 1 to push the packet's bits onto the link.
 4. Propagation delay - how long it takes the bits to travel through the wire to the other end.
 
-The size of the queue directly influences how fast data can get onto the link.  The processing and transmission delays are real, though relatively constant.  The propagation delay doesn't just depend on the speed of light, because there may be lots of other "relay" computers in the link.  Propagation depends on network architecture, network congestion, and the number of hops (how many routers between source and destination), among other things.  [As we'll see later on](#heading--clos-architecture), within your enterprise, the Clos architecture usually causes significantly less propagation delay.
+The size of the queue directly influences how fast data can get onto the link.  The processing and transmission delays are real, though relatively constant.  The propagation delay doesn't just depend on the speed of light, because there may be lots of other "relay" computers in the link.  Propagation depends on network architecture, network congestion, and the number of hops (how many routers between source and destination), among other things.  As we'll see later on, within your enterprise, [modern cloud architectures](/t/about-cloud-networks/5808) usually create significantly less propagation delay.
 
 Variable-latency networks are "variable" because of the density of network traffic and the complexity of the route between hosts.  We can't predict congestion or routing, although we can influence local routing by choosing the right network architecture.  We can't predict transmission delays, though we can statistically bound them.  Almost all digital networks are considered "variable-latency".
 
@@ -130,9 +128,9 @@ The datalink layer (the "link" layer, layer 2 or "L2") has one purpose: send and
 
 At first, the message-agnostic state of the link layer may seem a little weird.  L2 is not without error-checking and recovery code, but it functions efficiently because it isn't concerned with the data or the message containing the data.  That fact can be surprising, since L3 packets are called "datagrams".
 
-A datagram is just a basic network transfer unit.  It's the indivisible unit for a given layer.  If we're talking about the data-link layer (aka the "link" layer), it's an IEEE 802.xx frame.  At the network layer, it's a data packet.  For the transport layer, it would be called a segment.  Indivisible units in the physical layer are called chips, which are spread-spectrum pulses in the CDMA, noise-utilising transmission system that operates at that layer.
+A datagram is just a basic network transfer unit -- the indivisible unit for a given layer.  If we're talking about the data-link layer (aka the "link" layer), it's an IEEE 802.xx frame.  At the network layer, it's a data packet.  For the transport layer, it would be called a segment.  Indivisible units in the physical layer are called chips, which are spread-spectrum pulses in the CDMA, noise-utilising transmission system that operates at that layer.
 
-Since datagram isn't carefully used by everyone (think of User Datagram Protocol), we'll agree to call these indivisible layer units PDUs (protocol data units).  This avoids conflation with other uses and reminds you that it's the atomic unit at the current network layer.  At the link layer, it's a frame.
+Since datagram isn't carefully used by everyone (think of User Datagram Protocol), we'll agree to call these indivisible layer units PDUs (protocol data units).  This avoids conflation with other uses and reminds you that it's the atomic unit at the current network layer.  Just remember that, at the link layer (L2), it's a frame.
 
 <a href="#heading--about-frames"><h4 id="heading--about-frames">About MAC frames</h4></a>
 
@@ -144,7 +142,7 @@ Happily, MAAS networks almost exclusively use Ethernet, as defined in the [IEEE 
 
 <a href="#heading--about-ethernet"><h4 id="heading--about-ethernet">About Ethernet</h4></a>
 
-Before explaining an Ethernet Frame, we need to give a little background information about how Ethernet works.  Otherwise a lot of the frame components either won't make sense, or you'll wonder how it works at all.
+Before explaining an Ethernet Frame, we need to give a little background information about how Ethernet works; otherwise a lot of the frame components either won't make sense, or you'll wonder how it works at all.
 
 Remember earlier, when we talked about voice radio, and the need to say "over"?  Well, Ethernet at the link layer is all about controlling the conversation, so that computers don't "talk over each other".  Ethernet implements an algorithm called CSMA/CD, which stands for "carrier sense multiple access with collision detection."  This algorithm controls which computers can access the shared medium (an Ethernet cable) without any special synchronisation requirements.
 
@@ -154,7 +152,7 @@ Remember earlier, when we talked about voice radio, and the need to say "over"? 
 
 <a href="#heading--about-media-access-control"><h4 id="heading--about-media-access-control">About Media Access Control (MAC)</h4></a>
 
-Systems like CSMA/CD are a subset of the Media Access Control (MAC) protocol kit.  MAC is one-half of the link layer, with Logical Link Control (LLC) being the other half.  These are sometimes called sub-layers. LLC mostly just defines the frame format for the 802.xx protocols, like WiFi, so we can safely ignore it for the purposes of MAAS networking.
+Systems like CSMA/CD are a subset of the Media Access Control (MAC) protocol kit.  MAC is one-half of the link layer, with Logical Link Control (LLC) being the other half -- though these are sometimes called sub-layers. LLC mostly just defines the frame format for the 802.xx protocols, like WiFi, so we can safely ignore it for the purposes of MAAS networking.
 
 If you've worked with networks at all, you've heard of MAC addresses.  Those are basically unique serial numbers assigned to network interface devices (like NICs) at the time of manufacture.  Theoretically, they are unique in the world, not counting virtual NICs in virtual machine environments.  [MAC address collisions](https://kb.vmware.com/s/article/219) do happen when using VMs, and there are ways to fix it, assuming that your VMs are confined to a subnet.
 
