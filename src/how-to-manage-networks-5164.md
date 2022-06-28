@@ -493,15 +493,15 @@ The interfaces aggregated into the bond interface are listed below the "Tags" fi
 
 You can select from the following bonding modes on the "Bond mode" drop-down menu:
 
--   **balance-rr**: Transmit packets in sequential order from the first available slave through to the last. This mode provides load balancing and fault tolerance.
+-   **balance-rr**: Transmit packets in sequential order from the first available follower through to the last. This mode provides load balancing and fault tolerance.
 
--   **active-backup**: Only one slave in the bond is active. A different slave becomes active if, and only if, the active slave fails. The bond's MAC address is externally visible on only one port (network adaptor) to avoid confusing the switch.
+-   **active-backup**: Only one follower in the bond is active. A different follower becomes active if, and only if, the active follower fails. The bond's MAC address is externally visible on only one port (network adaptor) to avoid confusing the switch.
 
--   **balance-xor**: Transmit based on the selected transmit hash policy. The default policy is simple, which means that an XOR operation selects packages.  This XOR compares the source MAC address and the resultant XOR between the destination MAC address, the packet type identifier, and the modulo slave count.
+-   **balance-xor**: Transmit based on the selected transmit hash policy. The default policy is simple, which means that an XOR operation selects packages.  This XOR compares the source MAC address and the resultant XOR between the destination MAC address, the packet type identifier, and the modulo follower count.
 
--   **broadcast**: Transmit everything on all slave interfaces. This mode provides fault tolerance.
+-   **broadcast**: Transmit everything on all follower interfaces. This mode provides fault tolerance.
 
--   **802.3ad**: Creates aggregation groups that share the same speed and duplex settings. This mode utilises all slaves in the active aggregation, following the IEEE 802.3ad specification.
+-   **802.3ad**: Creates aggregation groups that share the same speed and duplex settings. This mode utilises all followers in the active aggregation, following the IEEE 802.3ad specification.
 
 -   **balance-tlb**: Adaptive transmit load balancing, channel bonding that does not require any special switch support.
 
@@ -525,7 +525,7 @@ bond_updelay=$BOND_UP bond_downdelay=$BOND_DOWN mtu=$MTU
 
 Use the `parents` parameters to define which interfaces form the aggregate interface.
 
-The `bond_updelay` and `bond_downdelay` parameters specify the number of milliseconds to wait before either enabling or disabling a slave after a failure has been detected.
+The `bond_updelay` and `bond_downdelay` parameters specify the number of milliseconds to wait before either enabling or disabling a follower after a failure has been detected.
 
 The following is an example of `create-bond` in action:
 
@@ -544,10 +544,10 @@ There are a wide range of bond parameters you can choose when creating a bond:
 | `vlan`| Optional string.  VLAN the interface is connected to. If not provided then the interface is considered disconnected. |
 | `parents`| Required integer.  Parent interface ids that make this bond. |
 | `bond_miimon`| Optional integer.  The link monitoring frequency in milliseconds. (Default: 100). |
-| `bond_downdelay`| Optional integer.  Specifies the time, in milliseconds, to wait before disabling a slave after a link failure has been detected. |
-| `bond_updelay`| Optional integer.  Specifies the time, in milliseconds, to wait before enabling a slave after a link recovery has been detected. |
+| `bond_downdelay`| Optional integer.  Specifies the time, in milliseconds, to wait before disabling a follower after a link failure has been detected. |
+| `bond_updelay`| Optional integer.  Specifies the time, in milliseconds, to wait before enabling a follower after a link recovery has been detected. |
 | `bond_lacp_rate`| Optional string.  Option specifying the rate at which to ask the link partner to transmit LACPDU packets in 802.3ad mode. Available options are ``fast`` or ``slow``. (Default: ``slow``). |
-| `bond_xmit_hash_policy`| Optional string.  The transmit hash policy to use for slave selection in balance-xor, 802.3ad, and tlb modes. Possible values are: ``layer2``, ``layer2+3``, ``layer3+4``, ``encap2+3``, ``encap3+4``. (Default: ``layer2``) |
+| `bond_xmit_hash_policy`| Optional string.  The transmit hash policy to use for follower selection in balance-xor, 802.3ad, and tlb modes. Possible values are: ``layer2``, ``layer2+3``, ``layer3+4``, ``encap2+3``, ``encap3+4``. (Default: ``layer2``) |
 | `bond_num_grat_arp`| Optional integer.  The number of peer notifications (IPv4 ARP or IPv6 Neighbour Advertisements) to be issued after a failover. (Default: 1) |
 | `mtu`| Optional integer.  Maximum transmission unit. |
 | `accept_ra`| Optional Boolean.  Accept router advertisements. (IPv6 only) |
@@ -558,11 +558,11 @@ Supported bonding modes include:
 
 | Mode | Behaviour |
 |:-----|:---------|
-|  `balance-rr`:| Transmit packets in sequential order from the first available slave through the last. This mode provides load balancing and fault tolerance. |
-|  `active-backup`| Only one slave in the bond is active. A different slave becomes active if, and only if, the active slave fails. The bond's MAC address is externally visible on only one port (network adaptor) to avoid confusing the switch. |
-|  `balance-xor`| Transmit based on the selected transmit hash policy. The default policy is a simple [(source MAC address XOR'd with destination MAC address XOR packet type ID) modulo slave count]. |
-|  `broadcast`| Transmits everything on all slave interfaces. This mode provides fault tolerance. |
-|  `802.3ad`| IEEE 802.3ad dynamic link aggregation. Creates aggregation groups that share the same speed and duplex settings. Uses all slaves in the active aggregator according to the 802.3ad specification. |
+|  `balance-rr`:| Transmit packets in sequential order from the first available follower through the last. This mode provides load balancing and fault tolerance. |
+|  `active-backup`| Only one follower in the bond is active. A different follower becomes active if, and only if, the active follower fails. The bond's MAC address is externally visible on only one port (network adaptor) to avoid confusing the switch. |
+|  `balance-xor`| Transmit based on the selected transmit hash policy. The default policy is a simple [(source MAC address XOR'd with destination MAC address XOR packet type ID) modulo follower count]. |
+|  `broadcast`| Transmits everything on all follower interfaces. This mode provides fault tolerance. |
+|  `802.3ad`| IEEE 802.3ad dynamic link aggregation. Creates aggregation groups that share the same speed and duplex settings. Uses all followers in the active aggregator according to the 802.3ad specification. |
 |  `balance-tlb`| Adaptive transmit load balancing: channel bonding that does not require any special switch support. |
 |  `balance-alb`| Adaptive load balancing: includes balance-tlb plus receive load balancing (rlb) for IPV4 traffic, and does not require any special switch support. The receive load balancing is achieved by ARP negotiation. |
 [/tab]
