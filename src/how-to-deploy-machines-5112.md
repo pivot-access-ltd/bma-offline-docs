@@ -14,8 +14,8 @@ Note that if you are using your own commissioning scripts, and you do not want t
 #!/bin/bash
 #
 # --- Start MAAS 1.0 script metadata ---
-# name: 50-dummy-example
-# title: Dummy example
+# name: 50-script-example
+# title: Example
 # description: Just an example
 # script_type: commissioning
 # tags: noauto
