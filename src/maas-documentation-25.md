@@ -21,6 +21,7 @@ MAAS is applicable to nearly any situation.  It is currently deployed in banking
 
 MAAS is a member of the Ubuntu family. It’s an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.
 
+- [Code of conduct](https://ubuntu.com/community/code-of-conduct)
 - [Get support](/t/how-to-contact-us/5448)
 - [Join our online chat](https://discourse.maas.io)
 - [Contribute code](https://launchpad.net/maas)
