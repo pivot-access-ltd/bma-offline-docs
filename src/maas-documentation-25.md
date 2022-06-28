@@ -21,8 +21,9 @@ MAAS is applicable to nearly any situation.  It is currently deployed in banking
 
 MAAS is a member of the Ubuntu family. It’s an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.
 
-- [Code of conduct](https://ubuntu.com/community/code-of-conduct)
+- [Read our code of conduct](https://ubuntu.com/community/code-of-conduct)
 - [Get support](/t/how-to-contact-us/5448)
+- [Learn about MAAS performance](/t/-/6178)
 - [Join our online chat](https://discourse.maas.io)
 - [Contribute code](https://launchpad.net/maas)
 - [Improve our doc](/t/how-to-help-improve-the-doc/4186)
@@ -106,6 +107,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 - [Getting help](/t/-/5428)
 - [Hardware test scripts](/t/-/5392)
 - [Log files](/t/-/5240)
+- [MAAS performance](/t/-/6178)
 - [Power management](/t/-/5246)
 - [Storage layouts](/t/-/5973)
 
@@ -129,6 +131,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6178|/docs/maas-performance|
 |https://discourse.maas.io/t/-/6131|/docs/about-rbac|
 |https://discourse.maas.io/t/-/6140|/docs/tutorials|
 |https://discourse.maas.io/t/-/6141|/docs/explanation|
