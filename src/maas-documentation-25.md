@@ -51,7 +51,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 - [Installation](/t/-/5128)
 - [Troubleshooting](/t/-/5333)
 
-### How to configure networking
+### [How to configure networking](/t/-/6174)
 
 - [Manage networks](/t/-/5164)
 - [Manage IP addresses](/t/-/5132)
@@ -131,6 +131,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6174|/docs/how-to-configure-networking|
 |https://discourse.maas.io/t/-/6178|/docs/maas-performance|
 |https://discourse.maas.io/t/-/6131|/docs/about-rbac|
 |https://discourse.maas.io/t/-/6140|/docs/tutorials|
