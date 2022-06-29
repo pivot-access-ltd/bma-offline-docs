@@ -19,7 +19,7 @@ On the other hand, if you're ready to get right down to business, you can invest
 
 These broader topics cover a lot of material, so if you're looking for something in particular, try the longer list of specific topics below.
 
-<a href="#heading--networking-specific-topics"><h2 id="heading--networking-specific-topics">Network topical index</h2></a>
+<a href="#heading--networking-specific-topics"><h2 id="heading--networking-specific-topics">Networking topical index</h2></a>
 
 <a href="#heading--a-topics"><h3 id="heading--a-topics">A</h3></a>
 
