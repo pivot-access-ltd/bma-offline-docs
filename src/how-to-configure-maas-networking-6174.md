@@ -1,5 +1,5 @@
 <!-- "How to configure MAAS networking" -->
-Congratulations!  Now that you've [installed and configured MAAS](/t/how-to-install-maas/5128), configuring your MAAS networks is an important next step.  This major section will help you learn about the theory and practice of MAAS networking.  You can search for [big picture topics](#heading--networking-the-big-picture), or [get down to the details](#heading--networking-specific-topics) right away.
+Congratulations!  Now that you've [installed and configured MAAS](/t/how-to-install-maas/5128), configuring your MAAS networks is an important next step.  This major section will help you learn about the theory and practice of MAAS networking.  You can search for [big picture topics](#heading--networking-the-big-picture), or consult the [networking topical index](#heading--networking-specific-topics).
 
 <a href="#heading--networking-the-big-picture"><h2 id="heading--networking-the-big-picture">Networking: the big picture</h2></a>
 
@@ -19,24 +19,76 @@ On the other hand, if you're ready to get right down to business, you can invest
 
 These broader topics cover a lot of material, so if you're looking for something in particular, try the longer list of specific topics below.
 
-<a href="#heading--networking-specific-topics"><h2 id="heading--networking-specific-topics">Networking: specific topics</h2></a>
+<a href="#heading--networking-specific-topics"><h2 id="heading--networking-specific-topics">Network topical index</h2></a>
 
-Nobody knows everything, of course, but some folks are only vexed by a couple of bits of network theory.  If that's the case, you can use this detailed list to pinpoint the topics you want to brush up on:
-
-- [About the Internet](/t/about-tcp-ip-networks/5806#heading--about-the-internet): the Access-Aggregation-Core ladder that is the World-Wide Web.
--- [More about the Internet infrastructure](/t/about-tcp-ip-networks/5806#heading--internet-infrastructure): a little cleaner picture of how people think it looks.
--- [About Internet network traffic](/t/about-tcp-ip-networks/5806#heading--about-network-traffic): Network paths on the Internet aren't guaranteed to be deterministic, because they aren't supposed to be.
-- [About the OSI model](/t/about-tcp-ip-networks/5806#heading--about-the-osi-model): You can take in the whole Open Systems Interconnect model, or you can focus on the individual layers listed just below.
-- [About the physical layer (L1)](https://discourse.maas.io/t/about-tcp-ip-networks/5806#heading--about-the-physical-layer): the signals that network cards exchange to send data, like the Morse Code of the Internet; this is where [variable latency](https://discourse.maas.io/t/about-tcp-ip-networks/5806#heading--about-variable-latency) can cause packets to get out of order.
-- [About the datalink layer (L2)](https://discourse.maas.io/t/about-tcp-ip-networks/5806#heading--about-the-datalink-layer): where IP datagrams, or more precisely, IEEE 802.xx frames, get passed around.  This layer really couldn't care less whether the message gets there, or whether the datagrams are delivered in order.  All that's taken care of by the frames themselves.
--- [About MAC, MAC frames and Ethernet](https://discourse.maas.io/t/about-tcp-ip-networks/5806#heading--about-frames): Everything you wanted to know about Protocol Data Units (PDUs), what's in them, and why the contents permit layer 2 to be so careless and sloppy.
--- [VLANs, subnets, fabrics, and trunking](https://discourse.maas.io/t/about-tcp-ip-networks/5806#heading--about-trunking-vlans): From P/Q tags in the MAC frame, we get to VLANs, which gets us to subnets and fabrics, which are the fundamental building blocks for MAAS networks.  This lets us start to visualise the link layer.
-- [About the networking layer (L3)](https://discourse.maas.io/t/about-tcp-ip-networks/5806#heading--about-the-network-layer): The core of TCP/IP networking happens at this layer, with units of data called "IP packets" -- but as we learn here, IP can exist perfectly well without TCP.
--- [About packets](https://discourse.maas.io/t/about-tcp-ip-networks/5806#heading--about-packets): Packets are the IP message units, pieces of TCP messages split apart for efficient transmission.
--- [Fixed packet lengths and segment messaging](https://discourse.maas.io/t/about-tcp-ip-networks/5806#heading--about-fixed-packet-lengths): why you can't just send the whole message at once.
--- [What's in an IP packet?](https://discourse.maas.io/t/about-tcp-ip-networks/5806#heading--about-ip-packets): a microscopic look at an IP datagram (packet) that makes it much easier to understand what's happening.  TCP/IP really isn't mystical, there's just a lot that has to be done to send messages reliably.
--- [About routing](https://discourse.maas.io/t/about-tcp-ip-networks/5806#heading--about-routing): Once you've tackled IP packets, routing is a snap to understand.
-- [Transport, session, presentation, application](https://discourse.maas.io/t/about-tcp-ip-networks/5806#heading--about-the-transport-layer): brief summaries of the top four layers, which just aren't that interesting from a MAAS perspective.
-- [Bonds and bridges](https://discourse.maas.io/t/about-tcp-ip-networks/5806#heading--about-bond-interfaces): You can gang two NICs together; you can also create a pathway between two networks with a bridge.
-- [About ARP](https://discourse.maas.io/t/about-tcp-ip-networks/5806#heading--about-arp): ARP (address resolution protocol) allows L3 to speak in numbers and L4 to speak in domain names.
-- [About TCP](https://discourse.maas.io/t/about-tcp-ip-networks/5806#heading--about-tcp): TCP, an L4 protocol, is the opposite of IP in many ways: TCP speaks in complete messages, but segments them for the IP layer (L3); where IP is connectionless, TCP is all about connections; and where IP doesn't care whether a PDU gets delivered or in what order, TCP is fastidious about making sure the whole message gets delivered reliably.
+- [ARP cache](/t/about-tcp-ip-networks/5806#heading--about-the-arp-cache)
+- [ARP frame](/t/about-tcp-ip-networks/5806#heading--about-the-arp-frame)
+- [ARP](/t/about-tcp-ip-networks/5806#heading--about-arp)
+- [Address resolution](/t/about-tcp-ip-networks/5806#heading--address-resolution)
+- [Client](/t/about-tcp-ip-networks/5806#heading--client)
+- [DNS](/t/about-tcp-ip-networks/5806#heading--about-dns)
+- [Ethernet](/t/about-tcp-ip-networks/5806#heading--about-ethernet)
+- [Fixed versus assigned addressing](/t/about-tcp-ip-networks/5806#heading--fixed-versus-assigned-addressing)
+- [Hub](/t/about-tcp-ip-networks/5806#heading--hub)
+- [IP address tracking](/t/about-networking/5084#heading--about-ip-address-tracking)
+- [IP packets](/t/about-tcp-ip-networks/5806#heading--about-ip-packets)
+- [IPV6 routing](/t/about-networking/5084#heading--about-ipv6-routing)
+- [IPv6 subnets](/t/about-networking/5084#heading--about-ipv6-subnets)
+- [IPv6](/t/about-networking/5084#heading--about-ipv6)
+- [Interlayer addressing: ARP](/t/about-tcp-ip-networks/5806#heading--arp)
+- [Internet network traffic](/t/about-tcp-ip-networks/5806#heading--about-network-traffic)
+- [Internet](/t/about-tcp-ip-networks/5806#heading--about-the-internet)
+- [LAN](/t/about-tcp-ip-networks/5806#heading--lan)
+- [MAC address](/t/about-tcp-ip-networks/5806#heading--mac-address)
+- [MAC frames](/t/about-tcp-ip-networks/5806#heading--about-frames)
+- [MAN](/t/about-tcp-ip-networks/5806#heading--MAN)
+- [Media Access Control (MAC)](/t/about-tcp-ip-networks/5806#heading--about-media-access-control)
+- [Messages are sent to MAC addresses](/t/about-tcp-ip-networks/5806#heading--messages-sent-to-mac-addresses)
+- [More ARP](/t/about-tcp-ip-networks/5806#heading--more-about-arp)
+- [More Internet infrastructure](/t/about-tcp-ip-networks/5806#heading--internet-infrastructure)
+- [Network cable](/t/about-tcp-ip-networks/5806#heading--network-cable)
+- [Network topology](/t/about-tcp-ip-networks/5806#heading--network-topology)
+- [OSI model](/t/about-tcp-ip-networks/5806#heading--about-the-osi-model)
+- [PXE booting](/t/about-networking/5084#heading--about-pxe-booting)
+- [Patch panel](/t/about-tcp-ip-networks/5806#heading--patch-panel)
+- [RPC](/t/about-networking/5084#heading--about-rpc)
+- [Repeater](/t/about-tcp-ip-networks/5806#heading--repeater)
+- [Router](/t/about-tcp-ip-networks/5806#heading--router)
+- [Server](/t/about-tcp-ip-networks/5806#heading--server)
+- [Switch](/t/about-tcp-ip-networks/5806#heading--switch)
+- [TCP header](/t/about-tcp-ip-networks/5806#heading--about-the-tcp-header)
+- [TCP/IP does not use MAC addresses](/t/about-tcp-ip-networks/5806#heading--tcp-ip-does-not-use-mac-addresses)
+- [TCP](/t/about-tcp-ip-networks/5806#heading--about-tcp)
+- [Trunking VLANs](/t/about-tcp-ip-networks/5806#heading--about-trunking-vlans)
+- [VLANs, subnets, and fabrics](/t/about-tcp-ip-networks/5806#heading--about-vlans-subnets-and-fabrics)
+- [VLANs](/t/about-networking/5084#heading--vlans)
+- [Visualising link layer](/t/about-tcp-ip-networks/5806#heading--visualising-the-link-layer)
+- [WAN](/t/about-tcp-ip-networks/5806#heading--WAN)
+- [application layer](/t/about-tcp-ip-networks/5806#heading--about-the-application-layer)
+- [availability zones](/t/about-networking/5084#heading--about-availability-zones)
+- [bond interfaces](/t/about-tcp-ip-networks/5806#heading--about-bond-interfaces)
+- [bridge interfaces](/t/about-tcp-ip-networks/5806#heading--about-bridge-interfaces)
+- [datalink layer (L2)](/t/about-tcp-ip-networks/5806#heading--about-the-datalink-layer)
+- [enabling IPv6](/t/about-networking/5084#heading--about-enabling-ipv6)
+- [fault tolerance](/t/about-networking/5084#heading--fault-tolerance)
+- [fixed packet lengths and segmented messaging](/t/about-tcp-ip-networks/5806#heading--about-fixed-packet-lengths)
+- [managed subnets](/t/about-networking/5084#heading--about-managed-subnets)
+- [network discovery](/t/about-networking/5084#heading--about-network-discovery)
+- [network layer](/t/about-tcp-ip-networks/5806#heading--about-the-network-layer)
+- [old and new network architectures](/t/about-cloud-networks/5808#heading--clos-architecture)
+- [other network elements](/t/about-tcp-ip-networks/5806#heading--other-network-elements)
+- [packets](/t/about-tcp-ip-networks/5806#heading--about-packets)
+- [physical layer (L1)](/t/about-tcp-ip-networks/5806#heading--about-the-physical-layer)
+- [physical layer is not very interesting](/t/about-tcp-ip-networks/5806#heading--physical-layer-uninteresting)
+- [power drivers](/t/about-networking/5084#heading--about-power-drivers)
+- [power management](/t/about-networking/5084#heading--power-management)
+- [presentation layer](/t/about-tcp-ip-networks/5806#heading--about-the-presentation-layer)
+- [proxies](/t/about-networking/5084#heading--about-proxies)
+- [routing](/t/about-tcp-ip-networks/5806#heading--about-routing)
+- [service performance](/t/about-networking/5084#heading--service-performance)
+- [session layer](/t/about-tcp-ip-networks/5806#heading--about-the-session-layer)
+- [subnet management](/t/about-networking/5084#heading--about-subnet-management)
+- [subnets](/t/about-networking/5084#heading--subnets)
+- [transport layer](/t/about-tcp-ip-networks/5806#heading--about-the-transport-layer)
+- [unmanaged subnets](/t/about-networking/5084#heading--about-unmanaged-subnets)
+- [variable latency](/t/about-tcp-ip-networks/5806#heading--about-variable-latency)

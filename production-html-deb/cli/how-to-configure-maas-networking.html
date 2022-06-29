@@ -375,7 +375,7 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to configure MAAS networking</h1><!-- "How to configure MAAS networking" -->
-<p>Congratulations!  Now that you&rsquo;ve <a href="how-to-install-maas.html">installed and configured MAAS</a>, configuring your MAAS networks is an important next step.  This major section will help you learn about the theory and practice of MAAS networking.  You can search for <a href="#heading--networking-the-big-picture">big picture topics</a>, or <a href="#heading--networking-specific-topics">get down to the details</a> right away.</p>
+<p>Congratulations!  Now that you&rsquo;ve <a href="how-to-install-maas.html">installed and configured MAAS</a>, configuring your MAAS networks is an important next step.  This major section will help you learn about the theory and practice of MAAS networking.  You can search for <a href="#heading--networking-the-big-picture">big picture topics</a>, or consult the <a href="#heading--networking-specific-topics">networking topical index</a>.</p>
 <p><a href="#heading--networking-the-big-picture"><h2 id="heading--networking-the-big-picture">Networking: the big picture</h2></a></p>
 <p>If you&rsquo;re uncertain about your relevant networking knowledge, you can take a few minutes to learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -392,26 +392,79 @@
 <li><a href="how-to-manage-availability-zones.html">How to manage availability zones</a>: Just in case you want to optimise the performance of your networks (and your MAAS instance), you can enable availability zones to polish things up.</li>
 </ul>
 <p>These broader topics cover a lot of material, so if you&rsquo;re looking for something in particular, try the longer list of specific topics below.</p>
-<p><a href="#heading--networking-specific-topics"><h2 id="heading--networking-specific-topics">Networking: specific topics</h2></a></p>
-<p>Nobody knows everything, of course, but some folks are only vexed by a couple of bits of network theory.  If that&rsquo;s the case, you can use this detailed list to pinpoint the topics you want to brush up on:</p>
+<p><a href="#heading--networking-specific-topics"><h2 id="heading--networking-specific-topics">Network topical index</h2></a></p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="about-tcp-ip-networks.html#heading--about-the-internet">About the Internet</a>: the Access-Aggregation-Core ladder that is the World-Wide Web.
-&ndash; <a href="about-tcp-ip-networks.html#heading--internet-infrastructure">More about the Internet infrastructure</a>: a little cleaner picture of how people think it looks.
-&ndash; <a href="about-tcp-ip-networks.html#heading--about-network-traffic">About Internet network traffic</a>: Network paths on the Internet aren&rsquo;t guaranteed to be deterministic, because they aren&rsquo;t supposed to be.</li>
-<li><a href="about-tcp-ip-networks.html#heading--about-the-osi-model">About the OSI model</a>: You can take in the whole Open Systems Interconnect model, or you can focus on the individual layers listed just below.</li>
-<li><a href="about-tcp-ip-networks.html#heading--about-the-physical-layer">About the physical layer (L1)</a>: the signals that network cards exchange to send data, like the Morse Code of the Internet; this is where <a href="about-tcp-ip-networks.html#heading--about-variable-latency">variable latency</a> can cause packets to get out of order.</li>
-<li><a href="about-tcp-ip-networks.html#heading--about-the-datalink-layer">About the datalink layer (L2)</a>: where IP datagrams, or more precisely, IEEE 802.xx frames, get passed around.  This layer really couldn&rsquo;t care less whether the message gets there, or whether the datagrams are delivered in order.  All that&rsquo;s taken care of by the frames themselves.
-&ndash; <a href="about-tcp-ip-networks.html#heading--about-frames">About MAC, MAC frames and Ethernet</a>: Everything you wanted to know about Protocol Data Units (PDUs), what&rsquo;s in them, and why the contents permit layer 2 to be so careless and sloppy.
-&ndash; <a href="about-tcp-ip-networks.html#heading--about-trunking-vlans">VLANs, subnets, fabrics, and trunking</a>: From P/Q tags in the MAC frame, we get to VLANs, which gets us to subnets and fabrics, which are the fundamental building blocks for MAAS networks.  This lets us start to visualise the link layer.</li>
-<li><a href="about-tcp-ip-networks.html#heading--about-the-network-layer">About the networking layer (L3)</a>: The core of TCP/IP networking happens at this layer, with units of data called &ldquo;IP packets&rdquo; &ndash; but as we learn here, IP can exist perfectly well without TCP.
-&ndash; <a href="about-tcp-ip-networks.html#heading--about-packets">About packets</a>: Packets are the IP message units, pieces of TCP messages split apart for efficient transmission.
-&ndash; <a href="about-tcp-ip-networks.html#heading--about-fixed-packet-lengths">Fixed packet lengths and segment messaging</a>: why you can&rsquo;t just send the whole message at once.
-&ndash; <a href="about-tcp-ip-networks.html#heading--about-ip-packets">What&rsquo;s in an IP packet?</a>: a microscopic look at an IP datagram (packet) that makes it much easier to understand what&rsquo;s happening.  TCP/IP really isn&rsquo;t mystical, there&rsquo;s just a lot that has to be done to send messages reliably.
-&ndash; <a href="about-tcp-ip-networks.html#heading--about-routing">About routing</a>: Once you&rsquo;ve tackled IP packets, routing is a snap to understand.</li>
-<li><a href="about-tcp-ip-networks.html#heading--about-the-transport-layer">Transport, session, presentation, application</a>: brief summaries of the top four layers, which just aren&rsquo;t that interesting from a MAAS perspective.</li>
-<li><a href="about-tcp-ip-networks.html#heading--about-bond-interfaces">Bonds and bridges</a>: You can gang two NICs together; you can also create a pathway between two networks with a bridge.</li>
-<li><a href="about-tcp-ip-networks.html#heading--about-arp">About ARP</a>: ARP (address resolution protocol) allows L3 to speak in numbers and L4 to speak in domain names.</li>
-<li><a href="about-tcp-ip-networks.html#heading--about-tcp">About TCP</a>: TCP, an L4 protocol, is the opposite of IP in many ways: TCP speaks in complete messages, but segments them for the IP layer (L3); where IP is connectionless, TCP is all about connections; and where IP doesn&rsquo;t care whether a PDU gets delivered or in what order, TCP is fastidious about making sure the whole message gets delivered reliably.</li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-arp-cache">ARP cache</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-arp-frame">ARP frame</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-arp">ARP</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--address-resolution">Address resolution</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--client">Client</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-dns">DNS</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-ethernet">Ethernet</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--fixed-versus-assigned-addressing">Fixed versus assigned addressing</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--hub">Hub</a></li>
+<li><a href="about-networking.html#heading--about-ip-address-tracking">IP address tracking</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-ip-packets">IP packets</a></li>
+<li><a href="about-networking.html#heading--about-ipv6-routing">IPV6 routing</a></li>
+<li><a href="about-networking.html#heading--about-ipv6-subnets">IPv6 subnets</a></li>
+<li><a href="about-networking.html#heading--about-ipv6">IPv6</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--arp">Interlayer addressing: ARP</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-network-traffic">Internet network traffic</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-internet">Internet</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--lan">LAN</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--mac-address">MAC address</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-frames">MAC frames</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--MAN">MAN</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-media-access-control">Media Access Control (MAC)</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--messages-sent-to-mac-addresses">Messages are sent to MAC addresses</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--more-about-arp">More ARP</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--internet-infrastructure">More Internet infrastructure</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--network-cable">Network cable</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--network-topology">Network topology</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-osi-model">OSI model</a></li>
+<li><a href="about-networking.html#heading--about-pxe-booting">PXE booting</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--patch-panel">Patch panel</a></li>
+<li><a href="about-networking.html#heading--about-rpc">RPC</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--repeater">Repeater</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--router">Router</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--server">Server</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--switch">Switch</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-tcp-header">TCP header</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--tcp-ip-does-not-use-mac-addresses">TCP/IP does not use MAC addresses</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-tcp">TCP</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-trunking-vlans">Trunking VLANs</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-vlans-subnets-and-fabrics">VLANs, subnets, and fabrics</a></li>
+<li><a href="about-networking.html#heading--vlans">VLANs</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--visualising-the-link-layer">Visualising link layer</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--WAN">WAN</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-application-layer">application layer</a></li>
+<li><a href="about-networking.html#heading--about-availability-zones">availability zones</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-bond-interfaces">bond interfaces</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-bridge-interfaces">bridge interfaces</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-datalink-layer">datalink layer (L2)</a></li>
+<li><a href="about-networking.html#heading--about-enabling-ipv6">enabling IPv6</a></li>
+<li><a href="about-networking.html#heading--fault-tolerance">fault tolerance</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-fixed-packet-lengths">fixed packet lengths and segmented messaging</a></li>
+<li><a href="about-networking.html#heading--about-managed-subnets">managed subnets</a></li>
+<li><a href="about-networking.html#heading--about-network-discovery">network discovery</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-network-layer">network layer</a></li>
+<li><a href="about-cloud-networks.html#heading--clos-architecture">old and new network architectures</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--other-network-elements">other network elements</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-packets">packets</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-physical-layer">physical layer (L1)</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--physical-layer-uninteresting">physical layer is not very interesting</a></li>
+<li><a href="about-networking.html#heading--about-power-drivers">power drivers</a></li>
+<li><a href="about-networking.html#heading--power-management">power management</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-presentation-layer">presentation layer</a></li>
+<li><a href="about-networking.html#heading--about-proxies">proxies</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-routing">routing</a></li>
+<li><a href="about-networking.html#heading--service-performance">service performance</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-session-layer">session layer</a></li>
+<li><a href="about-networking.html#heading--about-subnet-management">subnet management</a></li>
+<li><a href="about-networking.html#heading--subnets">subnets</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-the-transport-layer">transport layer</a></li>
+<li><a href="about-networking.html#heading--about-unmanaged-subnets">unmanaged subnets</a></li>
+<li><a href="about-tcp-ip-networks.html#heading--about-variable-latency">variable latency</a></li>
 </ul>
     </div>
   </body>
