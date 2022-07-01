@@ -375,6 +375,13 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>MAAS 3.2 release notes</h1><!-- "MAAS 3.2 release notes" -->
+
+<p>Here you will find release notes for:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--current-maas-release-notes">The current version of MAAS</a></li>
+<li><a href="#heading--other-maas-versions">Other MAAS versions</a></li>
+</ul>
+<p><a href="#heading--current-maas-release-notes"><h2 id="heading--current-maas-release-notes">MAAS 3.2 release notes</h2></a></p>
 <p>We are happy to announce that MAAS 3.2 is now available.</p>
 <p><a href="#heading--new-features"><h2 id="heading--new-features">New MAAS 3.2 features</h2></a></p>
 <p>MAAS 3.2 provides several new features, as well as the usual cadre of bug fixes.</p>
@@ -412,16 +419,6 @@
 <p>Roll-out of our new tabbed Reader Adaptive Documentation (incremental across the release cycle): We&rsquo;ve eliminated the top menus; each page now contains information for all versions, selectable by dropdowns above the relevant sections.</p>
 </li>
 </ul>
-<p><strong>NOTE:</strong> 
-This is an RC (release candidate) release, so you may still encounter some minor bugs.  We strongly recommend that you take the necessary precautions, which include (but are not limited to) the following steps:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>Install RC versions on a system specifically designated for testing; RC is not strongly recommended for production.</li>
-<li>Take a backup of any unrecoverable data on your test system prior to installing RC versions.</li>
-<li>More specifically, if you use a system for testing MAAS releases, back up the MAAS database and any unique configuration files related to your use of MAAS prior to installing RC versions.</li>
-</ul>
-<p>Also, you should make sure that you are using the latest version of PostgreSQL.  <a href="upgrading-postgresql-to-version-12.html">Here&rsquo;s how you can upgrade that</a>.</p>
-<p>Essentially, the RC should be production-ready, but has not had extensive testing yet &ndash; so it may not function properly under all conditions, possibly overwriting data and configuration information on the test machine.  RC versions usually behave fairly well, but be warned that across-the-board, perfect performance isn&rsquo;t always the case with an RC releases.</p>
-<p>As you encounter failures, please take the time to <a href="https://maas.io/docs/report-a-bug">file a bug</a> or let us know your thoughts <a href="https://discourse.maas.io/c/users/8">on the discourse user forum</a>.</p>
 <p><a href="#heading--how-to-install-maas-3-2"><h2 id="heading--how-to-install-maas-3-2">How to install MAAS 3.2</h2></a></p>
 <p>MAAS 3.2 can be installed fresh from snaps (recommended) with:</p>
 <pre><code>sudo snap install --channel=3.2 maas
@@ -441,6 +438,8 @@ sudo apt install maas
 <p><a href="#heading--bugs-fixed-in-maas-3-2"><h2 id="heading--bugs-fixed-in-maas-3-2">Bugs fixed in MAAS 3.2</h2></a></p>
 <p>Here is the breakdown of bugs fixed across the MAAS 3.2 release:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="https://launchpad.net/maas/3.2/3.2.0">MAAS 3.2</a></li>
+<li><a href="https://launchpad.net/maas/3.2/3.2.0-rc2">MAAS 3.2 RC 2</a></li>
 <li><a href="https://launchpad.net/maas/+milestone/3.2.0-rc1">MAAS 3.2 RC 1</a></li>
 <li><a href="https://launchpad.net/maas/3.2/3.2.0-beta6">MAAS 3.2 Beta 6</a></li>
 <li><a href="https://launchpad.net/maas/3.2/3.2.0-beta5">MAAS 3.2 Beta 5</a></li>
@@ -455,6 +454,15 @@ sudo apt install maas
 
 <p>If you attempt to update a list of tags of a device with an automatic tag, you get an error: &ldquo;Cannot add tag tag-name to node because it has a definition&rdquo;.</p>
 <p>If you attempt to manually make the same API request, but send a list of tags with the automatic tag filtered out, the automatic tag will be removed from the device.</p>
+<p><a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a></p>
+<p>Here are release notes for other relatively recent MAAS versions:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="what-is-new-with-maas-3-1.html">MAAS 3.1</a></li>
+<li><a href="what-is-new-with-maas-3-0.html">MAAS 3.0</a></li>
+<li><a href="what-is-new-with-maas-2-9.html">MAAS 2.9</a></li>
+<li><a href="what-is-new-with-maas-2-8.html">MAAS 2.8</a></li>
+<li><a href="what-is-new-with-maas-2-7.html">MAAS 2.7</a></li>
+</ul>
     </div>
   </body>
 </html>

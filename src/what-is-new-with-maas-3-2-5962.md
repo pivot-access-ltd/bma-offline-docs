@@ -1,5 +1,13 @@
-<!-- "MAAS 3.2 RC1 release notes" -->
-We are happy to announce that MAAS 3.2 RC1 is now available.
+<!-- "MAAS 3.2 release notes" -->
+
+Here you will find release notes for:
+
+- [The current version of MAAS](#heading--current-maas-release-notes)
+- [Other MAAS versions](#heading--other-maas-versions)
+
+<a href="#heading--current-maas-release-notes"><h2 id="heading--current-maas-release-notes">MAAS 3.2 release notes</h2></a>
+
+We are happy to announce that MAAS 3.2 is now available.
 
 <a href="#heading--new-features"><h2 id="heading--new-features">New MAAS 3.2 features</h2></a>
 
@@ -52,32 +60,18 @@ MAAS 3.2 rounds out the feature set with a few more items:
 
 - Roll-out of our new tabbed Reader Adaptive Documentation (incremental across the release cycle): We've eliminated the top menus; each page now contains information for all versions, selectable by dropdowns above the relevant sections.
 
-[note]
-This is an RC (release candidate) release, so you may still encounter some minor bugs.  We strongly recommend that you take the necessary precautions, which include (but are not limited to) the following steps:
-
-- Install RC versions on a system specifically designated for testing; RC is not strongly recommended for production.
-- Take a backup of any unrecoverable data on your test system prior to installing RC versions.
-- More specifically, if you use a system for testing MAAS releases, back up the MAAS database and any unique configuration files related to your use of MAAS prior to installing RC versions.
-
-Also, you should make sure that you are using the latest version of PostgreSQL.  [Here's how you can upgrade that](https://discourse.maas.io/t/upgrading-postgresql-to-version-12/5913).
-
-Essentially, the RC should be production-ready, but has not had extensive testing yet -- so it may not function properly under all conditions, possibly overwriting data and configuration information on the test machine.  RC versions usually behave fairly well, but be warned that across-the-board, perfect performance isn't always the case with an RC releases.
- 
-As you encounter failures, please take the time to [file a bug](https://maas.io/docs/report-a-bug) or let us know your thoughts [on the discourse user forum](https://discourse.maas.io/c/users/8).
-[/note]
-
 <a href="#heading--how-to-install-maas-3-2"><h2 id="heading--how-to-install-maas-3-2">How to install MAAS 3.2</h2></a>
 
 MAAS 3.2 can be installed fresh from snaps (recommended) with:
 
 ```
-sudo snap install --channel=3.2/candidate maas
+sudo snap install --channel=3.2 maas
 ```
 
-MAAS 3.2 can be installed from packages by adding the `ppa:maas/3.2-rc1` PPA:
+MAAS 3.2 can be installed from packages by adding the `ppa:maas/3.2` PPA:
 
 ```
-sudo add-apt-repository ppa:maas/3.2-rc1
+sudo add-apt-repository ppa:maas/3.2
 sudo apt update
 sudo apt install maas
 ```
@@ -100,6 +94,8 @@ At this point, proceed with a normal installation.
 
 Here is the breakdown of bugs fixed across the MAAS 3.2 release:
 
+- [MAAS 3.2](https://launchpad.net/maas/3.2/3.2.0)
+- [MAAS 3.2 RC 2](https://launchpad.net/maas/3.2/3.2.0-rc2)
 - [MAAS 3.2 RC 1](https://launchpad.net/maas/+milestone/3.2.0-rc1)
 - [MAAS 3.2 Beta 6](https://launchpad.net/maas/3.2/3.2.0-beta6)
 - [MAAS 3.2 Beta 5](https://launchpad.net/maas/3.2/3.2.0-beta5)
@@ -117,3 +113,13 @@ The following known issues exist for MAAS 3.2:
 If you attempt to update a list of tags of a device with an automatic tag, you get an error: "Cannot add tag tag-name to node because it has a definition".
 
 If you attempt to manually make the same API request, but send a list of tags with the automatic tag filtered out, the automatic tag will be removed from the device.
+
+<a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a>
+
+Here are release notes for other relatively recent MAAS versions:
+
+- [MAAS 3.1](/t/what-is-new-with-maas-3-1/5964)
+- [MAAS 3.0](/t/what-is-new-with-maas-3-0/5963)
+- [MAAS 2.9](/t/what-is-new-with-maas-2-9/5961)
+- [MAAS 2.8](/t/what-is-new-with-maas-2-8/5994)
+- [MAAS 2.7](/t/what-is-new-with-maas-2-7/5993)
