@@ -30,6 +30,12 @@ MAAS is a member of the Ubuntu family. It’s an open source project that warmly
 - [Request a feature](https://maas.io/docs/request-a-feature)
 - [Report a bug](https://maas.io/docs/report-a-bug)
 
+### Our roadmap
+
+Here's a view of our current roadmap:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/f/f8868975a017fbc387892a5a57f07f5c0943291e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f8868975a017fbc387892a5a57f07f5c0943291e.jpeg"></a>
+
 Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448).
 
 <!-- nohtml begin-nohtml -->
