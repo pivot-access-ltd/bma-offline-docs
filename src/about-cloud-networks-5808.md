@@ -40,7 +40,7 @@ An effective cloud architecture breaks routers and bridges into separate hardwar
 
 Either way, the effect is to have switchgear which is (1) less likely to be proprietary, and (2) easier to upgrade as the hardware advances.  Switch disaggregation effectively commoditizes the switching elements, effectively eliminating them from network throughput calculations.  In other words, the bridges and routers in a modern cloud network are essentially invisible, uninteresting, and inexpensive, which facilitates the cloud-network buildout model.
 
-<a href="#heading--routing-still-rules"><h2 id="#heading--routing-still-rules">Routing still rules</h2></a>
+<a href="#heading--routing-still-rules"><h2 id="heading--routing-still-rules">Routing still rules</h2></a>
 
 Regardless of your network vintage, packet routing is still the fundamental algorithm that gates throughput.  If you're familiar with routing, this section can be skipped. If you're trying to level up your cloud networking knowledge, this section should help quite a bit.
 
