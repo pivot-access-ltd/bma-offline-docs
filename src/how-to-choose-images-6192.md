@@ -1,1 +1,1 @@
-Obligatory 20 chars.
+Placeholder for "How to choose images" top-level headline on navigation.
