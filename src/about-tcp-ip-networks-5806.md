@@ -30,7 +30,9 @@ Issues with ladder networks drove the development of cloud network architectures
 
 [Network switching](https://en.wikipedia.org/wiki/Network_switch#firstHeading) is a very large topic unto itself.  It's worth catching up if you're weak in this area, since some elements of switching are exposed in MAAS networks.  Also important to review are [routers](https://en.wikipedia.org/wiki/Router_%28computing%29#firstHeading), [bridges](https://en.wikipedia.org/wiki/Network_bridge#firstHeading), and bonded NICs, aka [link aggregation](https://en.wikipedia.org/wiki/Link_aggregation#firstHeading).  All of these come into play every time a MAAS network is modified.
 
-<details><summary>Network Lore: We borrowed it all from the phone system</summary>
+<a href="#heading--borrowed-from-ma-bell"><h3 id="heading--borrowed-from-ma-bell">Network Lore: We borrowed it all from the phone system</h3></a>
+
+<details><summary>Yesterday's phone network is today's Internet</summary>
 
 Most of today's modern networking is a direct translation of the landline telephone system into the digital space.  Network switching is really just an outgrowth of [crossbar](https://en.wikipedia.org/wiki/Number_Five_Crossbar_Switching_System#firstHeading), which is how local phone calls were "switched" or "routed" to the correct telephone line.  In most cases, every number dialled closed one more relay, with all seven relays making a connection to the target phone line.
 
@@ -732,4 +734,4 @@ A [metro area network or MAN](https://en.wikipedia.org/wiki/Metropolitan_area_ne
 
 <a href="#heading--router"><h3 id="heading--router">Router</h3></a>
 
-A [router](https://en.wikipedia.org/wiki/Router_%28computing%29#firstHeading) is a device that transfers packets from one network to another.  Unlike switches, which only ensure that pre-addressed packets get to the correct recipient machines, routers actually modify or encapsulate packets to ensure that they can travel on other networks to reach a remote destination.
+A [router](https://en.wikipedia.org/wiki/Router_%28computing%29#firstHeading) is a device that transfers packets from one network to another.  Unlike switches, which only ensure that pre-addressed packets get to the correct recipient machines, routers actually modify or encapsulate packets to ensure that they can travel on other networks to reach a remote destination.  Choices about routing are so important that we'll spend a [great deal of time on the subject](/t/about-cloud-networks/5808#heading--routing-still-rules) when we learn about cloud networking.
