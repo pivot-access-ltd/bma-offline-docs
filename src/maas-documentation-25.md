@@ -64,7 +64,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 - [Enable TLS](/t/-/5116)
 - [Manage zones (AZs)](/t/-/5152)
 
-### How to choose images
+### [How to choose images](/t/-/6192)
 
 - [Import images](/t/-/5124)
 - [Create custom images](/t/-/5104)
@@ -137,6 +137,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6192|/docs/how-to-choose-images|
 |https://discourse.maas.io/t/-/6174|/docs/how-to-configure-networking|
 |https://discourse.maas.io/t/-/6178|/docs/maas-performance|
 |https://discourse.maas.io/t/-/6131|/docs/about-rbac|
